@@ -1,13 +1,11 @@
-# First section {specific basename="section1"}
+# First section {#specific basename="section1.md"}
 
 # Second section
 
 some content
 
-![Alt text](image.png)
 
-
-~~~~{specific basename="codeblock1"}
+~~~~{#specific basename="codeblock1.md"}
 Something about this codeblock
 ~~~~
 
