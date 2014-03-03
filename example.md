@@ -5,7 +5,7 @@
 some content
 
 
-~~~~{#specific basename="codeblock1.md"}
+~~~~{#specific basename="codeblock1.sh"}
 Something about this codeblock
 ~~~~
 

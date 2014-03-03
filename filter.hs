@@ -16,6 +16,10 @@ inline h@(Header n attr text) = do
       (Pandoc meta blocks) <- return $ readMarkdown def string
       return blocks
 
+inline cb@(CodeBlock (id, classes, namevals) contents) = do
+  case lookup "basename" namevals of
+      Just f     -> return . return . (CodeBlock (id, classes, namevals)) =<< readFile f
+      Nothing    -> return [cb]
 
 inline x = return [x]
 
