@@ -1,6 +1,3 @@
-# Testing includes
+# Ghent Specific Section
 
-
-normally this should get included
-
-## this as well
+This is a Ghent specific section

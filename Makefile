@@ -12,3 +12,5 @@ leuven: all
 antwerpen: site := antwerpen
 antwerpen: all
 
+clean:
+	rm example.pdf
