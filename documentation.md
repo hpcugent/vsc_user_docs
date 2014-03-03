@@ -1,11 +1,10 @@
-# First section {#site-specific basename="section1.md"}
+# First section {#site-specific basename="ch1_section1.md"}
 
-# Second section {basename="section2.md"}
+# Second section {basename="ch1_section2.md"}
 
-~~~~{#site-specific basename="codeblock1.sh"}
+~~~~{#site-specific basename="ch2_codeblock1.sh"}
 Something about this codeblock
 ~~~~
-
 
 # Example features
 
