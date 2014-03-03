@@ -15,8 +15,8 @@ inline h@(Header n attr text) = do
   where
     (identifiers, classes, variables) = attr
     include f = do
-      test <- getEnv "VSC_SITE"
-      string <- readFile (test ++ "/" ++ f)
+      siteDir <- getEnv "VSC_SITE"
+      string <- readFile (siteDir ++ "/" ++ f)
       (Pandoc meta blocks) <- return $ readMarkdown def string
       return blocks
 
