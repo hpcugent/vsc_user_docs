@@ -3,6 +3,9 @@
 import Text.Pandoc.JSON
 import Text.Pandoc
 
+import Debug.Trace
+import System.Environment
+
 
 inline :: Block -> IO [Block]
 inline h@(Header n attr text) = do
@@ -12,7 +15,8 @@ inline h@(Header n attr text) = do
   where
     (identifiers, classes, variables) = attr
     include f = do
-      string <- readFile f
+      test <- getEnv "VSC_SITE"
+      string <- readFile (test ++ "/" ++ f)
       (Pandoc meta blocks) <- return $ readMarkdown def string
       return blocks
 
