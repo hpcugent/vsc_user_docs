@@ -1,16 +1,16 @@
-all: example.pdf
+pdf: clean documentation.pdf
 
-example.pdf: example.md filter.hs
-	VSC_SITE=$(site) pandoc --filter ./filter.hs example.md -o example.pdf -f markdown+header_attributes
+documentation.pdf: documentation.md scripts/filter.hs
+	VSC_SITE=$(site) pandoc --filter scripts/filter.hs documentation.md -o documentation.pdf -f markdown+header_attributes+simple_tables+table_captions+grid_tables+multiline_tables
 
 gent: site := gent
-gent: all
+gent: pdf
 
 leuven: site := leuven
-leuven: all
+leuven: pdf
 
 antwerpen: site := antwerpen
-antwerpen: all
+antwerpen: pdf
 
 clean:
-	rm example.pdf
+	rm -f documentation.pdf
