@@ -2,6 +2,6 @@
 
 This is a generic section.
 
-~~~~~{basename="ch1_generic.sh"}
+~~~~~{include="ch1_generic.sh"}
 Generic Codeblock
 ~~~~~

@@ -1,8 +1,8 @@
-# First section {#site-specific basename="ch1_section1.md"}
+# First section {#site-specific include="ch1_section1.md"}
 
-# Second section {basename="ch1_section2.md"}
+# Second section {include="ch1_section2.md"}
 
-~~~~{#site-specific basename="ch2_codeblock1.sh"}
+~~~~{#site-specific include="ch1_codeblock1.sh"}
 Something about this codeblock
 ~~~~
 

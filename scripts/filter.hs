@@ -19,7 +19,7 @@ filename False basename = return basename
 -- | replaces Header's and Codeblock's if they have a basename variable
 inline :: Block -> IO [Block]
 inline h@(Header n attr text) = do
-  case lookup "basename" variables of
+  case lookup "include" variables of
     Just v -> include v
     Nothing -> return [h]
   where
@@ -34,7 +34,7 @@ inline h@(Header n attr text) = do
       return blocks
 
 inline cb@(CodeBlock (identifier, classes, variables) contents) = do
-    case lookup "basename" variables of
+    case lookup "include" variables of
       -- Here we just read the contents of the file as is, no parsing is done
       Just f     -> return . return . (CodeBlock (identifier, classes, variables)) =<< readFile' f
       Nothing    -> return [cb]
