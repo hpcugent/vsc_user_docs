@@ -2,189 +2,243 @@
 \label{ch:getting-a-hpc-account}
 
 \section{Getting ready to request an account}
+\label{sec:getting-ready-to-request-an-account}
 
-All users of Antwerp University Association (AUHA) can request an account on the UA-HPC, which is part of the Flemish Supercomputing Center (VSC).
+All users of Antwerp University Association (AUHA) can request an account on
+the UA-HPC, which is part of the Flemish Supercomputing Center (VSC).
 
-The VSC, abbreviation of Flemish Supercomputer Center, is a virtual supercomputer center. It is a partnership between the five Flemish associations: the Association KULeuven,  Ghent University Association, Brussels University Association, Antwerp University Association and the University Colleges-Limburg. The VSC is funded by the Flemish Government.
+The VSC, abbreviation of Flemish Supercomputer Center, is a virtual
+supercomputer center. It is a partnership between the five Flemish
+associations: the Association KULeuven,  Ghent University Association, Brussels
+University Association, Antwerp University Association and the University
+Colleges-Limburg. The VSC is funded by the Flemish Government.
 
-The UA-HPC clusters use public/private key pairs for user authentication (rather than passwords). Technically, the private key is stored on your local computer and always stays there; the public key is stored on the UA-HPC.  Access to the UA-HPC is granted to anyone who can prove to have access to the corresponding private key on his local computer.
+The UA-HPC clusters use public/private key pairs for user authentication
+(rather than passwords). Technically, the private key is stored on your local
+computer and always stays there; the public key is stored on the UA-HPC.
+Access to the UA-HPC is granted to anyone who can prove to have access to the
+corresponding private key on his local computer.
 
-\includegraphics*[width=5.75in, height=3.01in, keepaspectratio=false]{img0200}
+\includegraphics*[width=5.75in, height=3.01in, keepaspectratio=false]{ch2-authentication-general}
 
 % IFDEF WINDOWS
-\iftoggle{windows} {
+\iftoggleverb{windows}
 
-Since all UA-HPC clusters use Linux as their main operating system, you will need to get acquainted with using the command-line interface and using the Terminal. A typical Windows environment does not come with pre-installed software to connect and run command-line executables on a HPC. Some tools needs to be installed on your Windows machine first, before we can start the actual work.
+  Since all UA-HPC clusters use Linux as their main operating system, you will
+  need to get acquainted with using the command-line interface and using the
+  Terminal. A typical Windows environment does not come with pre-installed
+  software to connect and run command-line executables on a HPC. Some tools
+  needs to be installed on your Windows machine first, before we can start the
+  actual work.
 
-\subsection{Install Putty: A free Telnet/SSH client}
+  \subsection{Install Putty: A free Telnet/SSH client}
+  \label{subsec:install-putty}
 
-We recommend to use the PuTTY tools package, which is freely available. You do not even need to install; just download the executable and run it! Alternatively, an installation package is also available.
+  We recommend to use the PuTTY tools package, which is freely available. You
+  do not even need to install; just download the executable and run it!
+  Alternatively, an installation package is also available.
 
-Download PuTTY and install it in the C:/Program Files (x86)/PuTTY directory.
+  Download PuTTY and install it in the C:/Program Files (x86)/PuTTY directory.
 
-Google ``\textit{PuTTY download}'' or go directly to the official download address:
-http://www.chiark.greenend.org.uk/\~sgtatham/putty/
+  Google ``\textit{PuTTY download}'' or go directly to the official download
+  address: http://www.chiark.greenend.org.uk/\~sgtatham/putty/
 
-The PuTTY package consists of several components:
+  The PuTTY package consists of several components:
 
-\begin{enumerate}
-\item  \textbf{PuTTY}: the Telnet and SSH client itself
-\item  \textbf{PSCP}: an SCP client, i.e. command-line secure file copy
-\item  \textbf{PSFTP}: an SFTP client, i.e. general file transfer sessions much like FTP
-\item  \textbf{Plink}: a command-line interface to the PuTTY back ends
-\item  \textbf{Pageant}: an SSH authentication agent for PuTTY, PSCP and Plink
-\item  \textbf{PuTTYgen}: an RSA and DSA key generation utility
-\item  \textbf{pterm}: a standalone terminal emulator
-\end{enumerate}
+  \begin{enumerate}
+    \item  \textbf{PuTTY}: the Telnet and SSH client itself
+    \item  \textbf{PSCP}: an SCP client, i.e. command-line secure file copy
+    \item  \textbf{PSFTP}: an SFTP client, i.e. general file transfer sessions much like FTP
+    \item  \textbf{Plink}: a command-line interface to the PuTTY back ends
+    \item  \textbf{Pageant}: an SSH authentication agent for PuTTY, PSCP and Plink
+    \item  \textbf{PuTTYgen}: an RSA and DSA key generation utility
+    \item  \textbf{pterm}: a standalone terminal emulator
+  \end{enumerate}
 
-\subsection{Generating a public/private key pair}
+  \subsection{Generating a public/private key pair}
+  \label{subsec:generate-key-pair}
 
-Before requesting a VSC account, you need to generate a pair of \textit{ssh}
-keys. By default, there is no \textbf{\textit{ssh}} client software available
-on Windows, so you will typically have to install one yourself. One popular and
-recommended way to do this on Windows is using the freely available
-\textbf{\textit{PuTTY}} client, which you can then also use to log on to the
-clusters.
+  Before requesting a VSC account, you need to generate a pair of \textit{ssh}
+  keys. By default, there is no \textbf{\textit{ssh}} client software available
+  on Windows, so you will typically have to install one yourself. One popular and
+  recommended way to do this on Windows is using the freely available
+  \textbf{\textit{PuTTY}} client, which you can then also use to log on to the
+  clusters.
 
-To generate a public/private key pair, you can use the PuTTYgen key generator.
+  To generate a public/private key pair, you can use the PuTTYgen key generator.
 
-Start \textbf{\textit{PuTTYgen.exe}} it and follow these steps:
+  Start \textbf{\textit{PuTTYgen.exe}} it and follow these steps:
 
-\begin{enumerate}
-\item  In $<$\textit{Parameters}$>$ (at the bottom of the window), choose 'SSH-2 RSA' and set the number of bits in the key to 2048:
-\end{enumerate}
+  \begin{enumerate}
+    \item  In $<$\textit{Parameters}$>$ (at the bottom of the window), choose 'SSH-2 RSA' and set the number of bits in the key to 2048:
+  \end{enumerate}
 
-\includegraphics*[width=3.49in, height=3.38in, keepaspectratio=false]{img0201}
+  \includegraphics*[width=3.49in, height=3.38in, keepaspectratio=false]{ch2-puttygen-bits}
 
-\begin{enumerate}
-\item  Click on $<$\textit{Generate}$>$. To generate the key, you must move the mouse cursor over the PuTTYgen window (this generates some random data that PuTTYgen uses to generate the key pair). Once the key pair is generated, your public key is shown in the field $<$\textit{Public key for pasting into OpenSSH authorized\_keys file}$>$.
-\item  Next, it is advised to fill in the $<$\textit{Key comment}$>$ field to make it easier identifiable afterwards.
-\item  Next, you should specify a passphrase in the $<$\textit{Key passphrase}$>$ field and retype it in the $<$\textit{Confirm passphrase}$>$ field.  Remember, the passphrase protects the private key against unauthorized use, so it is best to choose one that is not too easy to guess but that you can still remember.
-\end{enumerate}
+  \begin{enumerate}
+    \item  Click on $<$\textit{Generate}$>$. To generate the key, you must move
+      the mouse cursor over the PuTTYgen window (this generates some random
+      data that PuTTYgen uses to generate the key pair). Once the key pair is
+      generated, your public key is shown in the field $<$\textit{Public key for pasting into OpenSSH authorized\_keys file}$>$.
+    \item  Next, it is advised to fill in the $<$\textit{Key comment}$>$ field
+      to make it easier identifiable afterwards.
+    \item  Next, you should specify a passphrase in the $<$\textit{Key passphrase}$>$
+      field and retype it in the $<$\textit{Confirm passphrase}$>$ field.
+      Remember, the passphrase protects the private key against unauthorized
+      use, so it is best to choose one that is not too easy to guess but that
+      you can still remember.
+  \end{enumerate}
 
-\includegraphics*[width=3.39in, height=3.28in, keepaspectratio=false]{img0202}
+  \includegraphics*[width=3.39in, height=3.28in, keepaspectratio=false]{ch2-puttygen-password}
 
-\begin{enumerate}
-\item  Finally, save both the public and private keys in a folder on your personal computer (We recommend to create and put them in the folder ``C:\textbackslash Users\textbackslash \%USERNAME\%\textbackslash AppData\textbackslash Local\textbackslash PuTTY\textbackslash .ssh'') with the buttons $<$\textit{Save public key}$>$ and $<$\textit{Save private key}$>$. We recommend using the name "\textbf{id\_rsa.pub}" for the public key, and "\textbf{id\_rsa.ppk}" for the private key.
-\end{enumerate}
+  \begin{enumerate}
+    \item  Finally, save both the public and private keys in a folder on your
+      personal computer (We recommend to create and put them in the folder
+      ``C:\textbackslash Users\textbackslash \%USERNAME\%\textbackslash
+      AppData\textbackslash Local\textbackslash PuTTY\textbackslash .ssh'')
+      with the buttons $<$\textit{Save public key}$>$ and $<$\textit{Save private key}$>$.
+      We recommend using the name "\textbf{id\_rsa.pub}" for the public key,
+      and "\textbf{id\_rsa.ppk}" for the private key.
+  \end{enumerate}
 
-If you use another program to generate a key pair, please remember that they need to be in the OpenSSH format to access the UA-HPC clusters.
-} %ENDIFDEF WINDOWS
+  If you use another program to generate a key pair, please remember that they need to be in the OpenSSH format to access the UA-HPC clusters.
 
-\textbf{\#IFDEF MAC}
+%iftoggle WINDOWS
+\fi
 
+%IFDEF MAC
 
-\subsection{Open a Terminal}
+\iftoggleverb{mac}
 
-Since all VSC clusters use Linux as their main operating system, you will need to get acquainted with using the command-line interface and using the Terminal.
+  \subsection{Open a Terminal}
+  \label{subsec:open-a-terminal}
 
+  Since all VSC clusters use Linux as their main operating system, you will
+  need to get acquainted with using the command-line interface and using the
+  Terminal.
 
+  To open a Terminal window in OS X, open the Finder and choose
 
-To open a Terminal window in OS X, open the Finder and choose
+  \textit{$>$$>$ Applications $>$ Utilities $>$ Terminal}
 
-\textit{$>$$>$ Applications $>$ Utilities $>$ Terminal}
+  Before requesting an account, you need to generate a pair of ssh keys. One
+  popular way to do this on OS X is using the OpenSSH client included with OS
+  X, which you can then also use to log on to the clusters.
 
+  \subsection{Test OpenSSH}
+  \label{subsec:test-openssh}
 
+  Secure Shell (ssh) is a cryptographic network protocol for secure data
+  communication, remote command-line login, remote command execution, and other
+  secure network services between two networked computers. In short, ssh
+  provides a secure connection between 2 computers via insecure channels
+  (Network, Internet, telephone lines, \ldots).
 
-Before requesting an account, you need to generate a pair of ssh keys. One popular way to do this on OS X is using the OpenSSH client included with OS X, which you can then also use to log on to the clusters.
+  ``Secure'' means that:
 
+  \begin{enumerate}
+    \item  the User is authenticated to the System; and
+    \item  the System is authenticated to the User; and
+    \item  all data is encrypted during transfer.
+  \end{enumerate}
 
-\subsection{Test OpenSSH}
+  OpenSSH is a FREE implementation of the SSH connectivity protocol. OS X comes
+  with its own implementation of OpenSSH, so you don't need to install any
+  third-party software to use it. Just open a Terminal window and jump in!
 
-Secure Shell (ssh) is a cryptographic network protocol for secure data communication, remote command-line login, remote command execution, and other secure network services between two networked computers. In short, ssh provides a secure connection between 2 computers via insecure channels (Network, Internet, telephone lines, \ldots).
+  On all popular Linux distributions, the OpenSSH software is readily
+  available, and most often installed by default. You can check whether the
+  OpenSSH software is installed by opening a terminal and typing:
 
+  \begin{prompt}
+  $ %\shellcmd{ssh -V}%
+  OpenSSH\_4.3p2, OpenSSL 0.9.8e-fips-rhel5 01 Jul 2008
+  \end{prompt}
 
+  To access the clusters and transfer your files, you will use the following commands:
 
-``Secure'' means that:
+  \begin{enumerate}
+    \item  ssh-keygen: to generate the ssh keys
+    \item  ssh: to open a shell on a remote machine;
+    \item  sftp: a secure equivalent of ftp;
+    \item  scp: a secure equivalent of the remote copy command rcp.
+  \end{enumerate}
 
-\begin{enumerate}
-\item  the User is authenticated to the System; and
-\item  the System is authenticated to the User; and
-\item  all data is encrypted during transfer.
-\end{enumerate}
+  \subsection{Generate a public/private key pair with OpenSSH}
+  \label{subsec:generate-key-pair-with-openssh}
 
-OpenSSH is a FREE implementation of the SSH connectivity protocol. OS X comes with its own implementation of OpenSSH, so you don't need to install any third-party software to use it. Just open a Terminal window and jump in!
+  A key pair might already be present in the default location inside your home
+  directory. Therefore, we first check if a key is available with the ``list
+  short'' (``ls'')  command:
 
-On all popular Linux distributions, the OpenSSH software is readily available, and most often installed by default. You can check whether the OpenSSH software is installed by opening a terminal and typing:
-
-\begin{prompt}
-$ %\textbf{ssh -V}%
-OpenSSH\_4.3p2, OpenSSL 0.9.8e-fips-rhel5 01 Jul 2008
-\end{prompt}
-
-To access the clusters and transfer your files, you will use the following commands:
-
-\begin{enumerate}
-\item  ssh-keygen: to generate the ssh keys
-\item  ssh: to open a shell on a remote machine;
-\item  sftp: a secure equivalent of ftp;
-\item  scp: a secure equivalent of the remote copy command rcp.
-\end{enumerate}
-
-\subsection{Generate a public/private key pair with OpenSSH}
-
-A key pair might already be present in the default location inside your home directory. Therefore, we first check if a key is available with the ``list short'' (``ls'')  command:
-
-\begin{prompt}
-$ %\textbf{ls  \~/.ssh}%
-\end{prompt}
-
-
-If a key-pair is already available, you would normally get:
-\begin{prompt}
-authorized\_keys2    id\_rsa            id\_rsa.pub         known\_hosts
-\end{prompt}
-
-Otherwise, the command will show:
-
-\begin{prompt}
-ls: .ssh: No such file or directory
-\end{prompt}
-
-You can recognize a public/private key pair when a pair of files has the same name except for the extension ".pub" added to one of them. In this particular case, the private key is "id\_rsa" and public key is "id\_rsa.pub". You may have multiple keys (not necessarily in the directory "\~/.ssh") if you or your operating system requires this.
-
-
-You will need to generate a new key pair, when:
-\begin{enumerate}
-\item  you don't have a key pair yet,
-\item  you forgot the passphrase protecting your private key,
-\item  or your private key was compromised.
-\end{enumerate}
-
-
-For extra security, the private key itself is encrypted using a 'passphrase', to prevent anyone from using your private key even when they manage to copy it. You have to 'unlock' the private key by typing the passphrase.
-
-
-\begin{prompt}
-$ %\textbf{ssh-keygen}%
-Generating public/private rsa key pair.
-Enter file in which to save the key (/home/user/.ssh/id\_rsa):
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /home/user/.ssh/id\_rsa.
-Your public key has been saved in /home/user/.ssh/id\_rsa.pub.
-\end{prompt}
-
-This will ask you for a file name to store the private and public key, and a passphrase to protect your private key. It needs to be emphasized that you really should choose the passphrase wisely! The system will ask you for it every time you want to use the private key that is every time you want to access the cluster or transfer your files.
+  \begin{prompt}
+  $ %\shellcmd{ls  \~/.ssh}%
+  \end{prompt}
 
 
-\textbf{Without your key pair, you won't be able to apply for a personal VSC account.}
+  If a key-pair is already available, you would normally get:
+  \begin{prompt}
+  authorized\_keys2    id\_rsa            id\_rsa.pub         known\_hosts
+  \end{prompt}
 
-\textbf{\#ENDIF MAC}
+  Otherwise, the command will show:
 
+  \begin{prompt}
+  ls: .ssh: No such file or directory
+  \end{prompt}
+
+  You can recognize a public/private key pair when a pair of files has the same
+  name except for the extension ".pub" added to one of them. In this particular
+  case, the private key is "id\_rsa" and public key is "id\_rsa.pub". You may
+  have multiple keys (not necessarily in the directory "\~/.ssh") if you or
+  your operating system requires this.
+
+  You will need to generate a new key pair, when:
+  \begin{enumerate}
+    \item  you don't have a key pair yet,
+    \item  you forgot the passphrase protecting your private key,
+    \item  or your private key was compromised.
+  \end{enumerate}
+
+  For extra security, the private key itself is encrypted using a 'passphrase',
+  to prevent anyone from using your private key even when they manage to copy
+  it. You have to 'unlock' the private key by typing the passphrase.
+
+  \begin{prompt}
+  $ %\shellcmd{ssh-keygen}%
+  Generating public/private rsa key pair.
+  Enter file in which to save the key (/home/user/.ssh/id\_rsa):
+  Enter passphrase (empty for no passphrase):
+  Enter same passphrase again:
+  Your identification has been saved in /home/user/.ssh/id\_rsa.
+  Your public key has been saved in /home/user/.ssh/id\_rsa.pub.
+  \end{prompt}
+
+  This will ask you for a file name to store the private and public key, and a
+  passphrase to protect your private key. It needs to be emphasized that you
+  really should choose the passphrase wisely! The system will ask you for it
+  every time you want to use the private key that is every time you want to
+  access the cluster or transfer your files.
+
+  \textbf{Without your key pair, you won't be able to apply for a personal VSC account.}
+
+%iftoggle mac
+\fi
 
 \section{Applying for the account}
+\label{sec:applying-for-the-account}
 
+Users of the UA need to follow the instructions in \autoref{subsec:users-of-ua}.
 
-Users of the UA need to follow the instructions in Section 2.2.1.
-
-Other users of the Antwerp University Association (AUHA), need to follow the instructions in Section 2.2.2.
-
+Other users of the Antwerp University Association (AUHA), need to follow the
+instructions in \autoref{subsec:other-users-of-antwerp-university}.
 
 \subsection{Users of UA}
+\label{subsec:users-of-ua}
 
-Open the following webpage from within the UA campus network (or using a UA-VPN connection) https://account.vscentrum.be/req and choose `antwerpen' as your VSC site.
-
+Open the following webpage from within the UA campus network (or using a UA-VPN
+connection) https://account.vscentrum.be/req and choose `antwerpen' as your VSC
+site.
 
 Browse to https://account.vscentrum.be/req
 
@@ -192,209 +246,225 @@ Choose `antwerpen' as your VSC site.
 
 Click $<$Submit$>$
 
-
-\includegraphics*[width=5.77in, height=3.51in, keepaspectratio=false]{img0203}
-
+\includegraphics*[width=5.77in, height=3.51in, keepaspectratio=false]{ch2-browser-select-site}
 
 You will now be taken to a website of BELNET, where you must authenticate yourself.
 
-\includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{img0204}
-
+\includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate}
 
 Select `Universiteit Antwerpen' in the dropdown box.
 
 Click $<$Select$>$
 
-
-
 You will now be taken to the authentification page of your Institute.
 
+\includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate-institute}
 
+After you log in using your UA login and password (the one you also use for
+Webmail, BlackBoard, \dots ), you will be asked to upload the file that
+contains your public key, i.e. the file `id\_rsa.pub' which you should already
+have generated.
 
-\includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{img0205}
+\iftoggleverb{windows}
 
+  This file should have been stored in the directory
+  `\textit{/Users/$<$Username$>$/PuTTY/.ssh/}'.
 
-
-After you log in using your UA login and password (the one you also use for Webmail, BlackBoard, \dots ), you will be asked to upload the file that contains your public key, i.e. the file `id\_rsa.pub' which you should already have generated.
-
-
-
-\#IFDEF WINDOWS
-
-This file should have been stored in the directory `\textit{/Users/$<$Username$>$/PuTTY/.ssh/}'.
-
-\#ENDIF WINDOWS
-
-
-
-\#IFDEF MAC
-
-This file has been stored in the directory `\~/.ssh/'.
-
-\textbf{\underbar{Tip:}} As ".ssh" is an invisible directory, the Finder will not show it by default. The easiest way to access the folder, is by pressing Apple-Shift--G, which will allow you to enter the name of a directory, which you would like to open in Finder. Here, type "\~/.ssh" and press enter.
-
-\#ENDIF MAC
+\fi
 
 
 
-You will get an e-mail to confirm your account request. After the VSC staff has approved the account, your account will be created and you will get confirmation e-mail.
+\iftoggleverb{mac}
 
+  This file has been stored in the directory `\~/.ssh/'.
 
+  \textbf{\underbar{Tip:}} As ".ssh" is an invisible directory, the Finder will
+  not show it by default. The easiest way to access the folder, is by pressing
+  Apple-Shift--G, which will allow you to enter the name of a directory, which
+  you would like to open in Finder. Here, type "\~/.ssh" and press enter.
 
-\#IFDEF UANTWERP
+\fi
 
-\textbf{The site is only accessible from within the University of Antwerp domain}, so the page won't load from (e.g.) home. However, you can also get external access to the UA domain using VPN. We refer to the UA ICT infocenter (http://www.ua.ac.be/main.aspx?c=.INFOCENTER) for more information.
+You will get an e-mail to confirm your account request. After the VSC staff has
+approved the account, your account will be created and you will get
+confirmation e-mail.
 
-\#ENDIF UANTWERP
-
+\textbf{The site is only accessible from within the University of Antwerp
+domain}, so the page won't load from (e.g.) home. However, you can also get
+external access to the UA domain using VPN. We refer to the UA ICT infocenter
+(http://www.ua.ac.be/main.aspx?c=.INFOCENTER) for more information.
 
 \subsection{Other users of the Antwerp University Association (AUHA)}
+\label{subsec:other-users-of-antwerp-university}
 
-All users (researchers, academic staff, etc.) from the higher education institutions associated with UA can get a VSC account via the UA. There is not yet an automated form to request for your personal VSC account.
+All users (researchers, academic staff, etc.) from the higher education
+institutions associated with UA can get a VSC account via the UA. There is not
+yet an automated form to request for your personal VSC account.
 
-Please e-mail the UA-HPC staff to get an account (see Contacts information). You will have to provide a public \textit{ssh} key generated as described above. Please attach your public key (i.e., the file named `id\_rsa.pub'), which you will normally find in your .ssh subdirectory within your HOME Directory. (i.e. /Users/$<$username$>$/.ssh/id\_rsa.pub).
+Please e-mail the UA-HPC staff to get an account (see Contacts information).
+You will have to provide a public \textit{ssh} key generated as described
+above. Please attach your public key (i.e., the file named `id\_rsa.pub'),
+which you will normally find in your .ssh subdirectory within your HOME
+Directory. (i.e. /Users/$<$username$>$/.ssh/id\_rsa.pub).
 
 
-\#IFDEF MAC
+\iftoggleverb{mac}
 
-\textbf{\underbar{Tip:}} As ".ssh" is an invisible directory, the Finder will not show it by default. The easiest way to access the folder, is by pressing Apple-Shift-G, which will allow you to enter the name of a directory, which you would like to open in Finder. Here, type "\~/.ssh" and press enter.
+  \textbf{\underbar{Tip:}} As ".ssh" is an invisible directory, the Finder will
+  not show it by default. The easiest way to access the folder, is by pressing
+  Apple-Shift-G, which will allow you to enter the name of a directory, which
+  you would like to open in Finder. Here, type "\~/.ssh" and press enter.
 
-\#ENDIF MAC
-
+\fi
 
 \subsection{Welcome e-mail}
+\label{subsec:welcome-email}
 
 Within one day, you should receive a Welcome e-mail with your VSC account details.
 
-
-
+\begin{verbatim}
 Welcome xxx,
 * Your vsc-username is vsc20yyy
 * You can view your profile details at https://account.vscentrum.be/req
 * For further info please visit https://vscentrum.be/neutral/documentation
 Your VSC-admin
+\end{verbatim}
 
 Now, you can start using the UA-HPC.
 
-
 \section{First Time connection to the UA-HPC}
+\label{sec:first-time-connection-to-the-hpc}
 
+\iftoggleverb{windows}
 
+  \subsection{Open a Terminal}
+  \label{subsec:windows-open-a-terminal}
 
-\#IFDEF WINDOWS
+  You've generated a public/private key pair with PuTTYgen and have an approved
+  account on the VSC clusters.  The next step is to setup the connection to (one
+  of) the UA-HPC.
 
+  In the screenshots, we show the setup for user ``\textbf{\textit{vsc20167}}''
+  to the HPC cluster in Antwerp via the loginnode
+  ``\textbf{\textit{login.turing.calcua.ua.ac.be}}''.
 
-\subsection{Open a Terminal}
+  \begin{enumerate}
+    \item  Start the PuTTY executable $<$\textbf{\textit{putty.exe}}$>$ in your
+      directory `\textbf{\textit{C:/Program Files (x86)/PuTTY}}' and the
+      configuration screen will pop up. As you will often use the PuTTY tool,
+      we recommend adding a shortcut on your desktop.
+    \item  Within the category $<$\textbf{\textit{Session}}$>$, in the field
+      $<$\textbf{\textit{Host Name}}$>$, enter the name of the loginnode of the
+      UA-HPC cluster (i.e., ``\textbf{\textit{login.turing.calcua.ua.ac.be}}'')
+      you want to connect to.
+  \end{enumerate}
 
-You've generated a public/private key pair with PuTTYgen and have an approved account on the VSC clusters.  The next step is to setup the connection to (one of) the UA-HPC.
+  \includegraphics*[width=3.59in, height=3.45in, keepaspectratio=false]{ch2-putty-configuration}
 
+  \begin{enumerate}
+    \item  In the category $<$\textit{Connection}$>$ $<$\textit{Data}$>$, in
+      the field $<$\textit{Auto-login username}$>$, put in
+      $<$\textit{vsc-account}$>$, which is your VSC username that you have
+      received by mail after your request was approved.
+  \end{enumerate}
 
+  \includegraphics*[width=3.11in, height=2.99in, keepaspectratio=false]{ch2-putty-confirmation2}
 
-In the screenshots, we show the setup for user ``\textbf{\textit{vsc20167}}'' to the HPC cluster in Antwerp via the loginnode ``\textbf{\textit{login.turing.calcua.ua.ac.be}}''.
+  \begin{enumerate}
+    \item  In the category $<$\textit{Connection$>$$<$SSH$>$$<$Auth$>$}, in the
+      field $<$\textit{Private key file for authentication}$>$ click on
+      $<$\textit{Browse}$>$ and select the private key (i.e., `id\_rsa.ppk')
+      that you generated and saved above.
+  \end{enumerate}
 
+  \includegraphics*[width=3.25in, height=3.13in, keepaspectratio=false]{ch2-putty-key-setup}
 
+  \begin{enumerate}
+    \item  In the category $<$\textit{Connection$>$$<$SSH $>$$<$X11$>$}, click
+      the $<$\textit{Enable X11 Forwarding}$>$ checkbox.
+  \end{enumerate}
 
-\begin{enumerate}
-\item  Start the PuTTY executable $<$\textbf{\textit{putty.exe}}$>$ in your directory `\textbf{\textit{C:/Program Files (x86)/PuTTY}}' and the configuration screen will pop up. As you will often use the PuTTY tool, we recommend adding a shortcut on your desktop.
-\item  Within the category $<$\textbf{\textit{Session}}$>$, in the field $<$\textbf{\textit{Host Name}}$>$, enter the name of the loginnode of the UA-HPC cluster (i.e., ``\textbf{\textit{login.turing.calcua.ua.ac.be}}'') you want to connect to.
-\end{enumerate}
+  \includegraphics*[width=3.54in, height=3.41in, keepaspectratio=false]{ch2-putty-x-forwarding}
 
-\includegraphics*[width=3.59in, height=3.45in, keepaspectratio=false]{img0206}
+  \begin{enumerate}
+    \item  Now go back to $<$Session$>$, and fill in ``\textit{Turing}'' in the
+      $<$\textit{Saved Sessions}$>$ field and press $<$\textit{Save}$>$ to
+      store the session information.
+  \end{enumerate}
 
-\begin{enumerate}
-\item  In the category $<$\textit{Connection}$>$ $<$\textit{Data}$>$, in the field $<$\textit{Auto-login username}$>$, put in $<$\textit{vsc-account}$>$, which is your VSC username that you have received by mail after your request was approved.
-\end{enumerate}
+  \includegraphics*[width=3.30in, height=3.17in, keepaspectratio=false]{ch2-putty-saved-session}
 
-\includegraphics*[width=3.11in, height=2.99in, keepaspectratio=false]{img0207}
+  \begin{enumerate}
+    \item  Now pressing $<$\textit{Open}$>$, will open a terminal window and
+      asks for you passphrase.
+  \end{enumerate}
 
-\begin{enumerate}
-\item  In the category $<$\textit{Connection$>$$<$SSH$>$$<$Auth$>$}, in the field $<$\textit{Private key file for authentication}$>$ click on $<$\textit{Browse}$>$ and select the private key (i.e., `id\_rsa.ppk') that you generated and saved above.
-\end{enumerate}
+  \includegraphics*[width=3.94in, height=2.47in, keepaspectratio=false]{ch2-putty-enter-password}
 
-\includegraphics*[width=3.25in, height=3.13in, keepaspectratio=false]{img0209}
+  \begin{enumerate}
+    \item  The first time you make a connection to the loginnode, a Security
+      Alert will appear and you will be asked to verify the authenticity of the
+      loginnode.
+  \end{enumerate}
 
-\begin{enumerate}
-\item  In the category $<$\textit{Connection$>$$<$SSH $>$$<$X11$>$}, click the $<$\textit{Enable X11 Forwarding}$>$ checkbox.
-\end{enumerate}
+  \includegraphics*[width=3.91in, height=2.42in, keepaspectratio=false]{ch2-putty-verify-authenticity}
 
-\includegraphics*[width=3.54in, height=3.41in, keepaspectratio=false]{img0210}
+  \begin{enumerate}
+    \item  After entering your correct password, you will be connected to the
+      login-node of the UA-HPC.
+    \item  To check you can now ``Print the Working Directory'' (pwd) and check
+      the name of the computer, where you have logged in (hostname):
+  \end{enumerate}
 
+  \begin{prompt}
+  $ %\shellcmd{pwd}%
+  /user/antwerpen/201/vsc20167
+  $ %\shellcmd{hostname --f}%
+  ln01.turing.antwerpen.vsc
+  \end{prompt}
 
+  \begin{enumerate}
+    \item  For future PuTTY sessions, just select your saved session (i.e.
+      ``\textit{Turing}'') from the list, $<$\textit{Load}$>$ it and press
+      $<$\textit{Open}$>$.
+  \end{enumerate}
 
-\begin{enumerate}
-\item  Now go back to $<$Session$>$, and fill in ``\textit{Turing}'' in the $<$\textit{Saved Sessions}$>$ field and press $<$\textit{Save}$>$ to store the session information.
-\end{enumerate}
-
-\includegraphics*[width=3.30in, height=3.17in, keepaspectratio=false]{img0211}
-
-\begin{enumerate}
-\item  Now pressing $<$\textit{Open}$>$, will open a terminal window and asks for you passphrase.
-\end{enumerate}
-
-
-
-\includegraphics*[width=3.94in, height=2.47in, keepaspectratio=false]{img0212}
-
-
-
-\begin{enumerate}
-\item  The first time you make a connection to the loginnode, a Security Alert will appear and you will be asked to verify the authenticity of the loginnode.
-\end{enumerate}
-
-\includegraphics*[width=3.91in, height=2.42in, keepaspectratio=false]{img0213}
-
-\begin{enumerate}
-\item  After entering your correct password, you will be connected to the login-node of the UA-HPC.
-\item  To check you can now ``Print the Working Directory'' (pwd) and check the name of the computer, where you have logged in (hostname):
-\end{enumerate}
-
-\begin{prompt}
-$ %\textbf{pwd}%
-/user/antwerpen/201/vsc20167
-$ %\textbf{hostname --f}%
-ln01.turing.antwerpen.vsc
-\end{prompt}
-
-\begin{enumerate}
-\item  For future PuTTY sessions, just select your saved session (i.e. ``\textit{Turing}'') from the list, $<$\textit{Load}$>$ it and press $<$\textit{Open}$>$.
-\end{enumerate}
-
+%ENDIF windos
+\fi
 
 \subsection{Connect}
+\label{subsec:connect}
 
-
-
-\#ENDIF WINDOWS
-
-
-
-The UA-HPC is only accessible from within the UA campus network, but you can get external access (e.g., from home) by using a UA-VPN connection.
-
-
+The UA-HPC is only accessible from within the UA campus network, but you can
+get external access (e.g., from home) by using a UA-VPN connection.
 
 To make a connection to the UA-HPC cluster, the ssh command is used:
 
 \begin{prompt}
-$ %\textbf{ssh $<$vsc-account$>$@login.turing.calcua.ua.ac.be}%
+$ %\shellcmd{ssh $<$vsc-account$>$@login.turing.calcua.ua.ac.be}%
 \end{prompt}
 
 Here,
 
 \begin{enumerate}
-\item  \textit{$<$vsc-account$>$} is your VSC username that you have received by mail after your request was approved,
-\item  \textit{``login.turing.calcua.ua.ac.be''} is the name of the login node of the UA-HPC cluster you want to connect to.
+  \item  \textit{$<$vsc-account$>$} is your VSC username that you have received
+    by mail after your request was approved,
+  \item  \textit{``login.turing.calcua.ua.ac.be''} is the name of the login
+    node of the UA-HPC cluster you want to connect to.
 \end{enumerate}
 
-The first time you make a connection to the login node, you will be asked to verify the authenticity of the login node, e.g.,
+The first time you make a connection to the login node, you will be asked to
+verify the authenticity of the login node, e.g.,
 
 \begin{prompt}
-$ %\textbf{ssh vsc20167@login.turing.calcua.ua.ac.be}%
+$ %\shellcmd{ssh vsc20167@login.turing.calcua.ua.ac.be}%
 The authenticity of host 'login.turing.calcua.ua.ac.be (143.169.237.11)' can't be established.
 RSA key fingerprint is b7:66:42:23:5c:d9:43:e8:b8:48:6f:2c:70:de:02:eb.
 Are you sure you want to continue connecting (yes/no)?   \textbf{\textit{yes}}
 \end{prompt}
 
-Here, user vsc20167 wants to make a connection to the `Turing' cluster at UA via the login node 'login.turing.calcua.ua.ac.be'.
+Here, user vsc20167 wants to make a connection to the `Turing' cluster at UA
+via the login node 'login.turing.calcua.ua.ac.be'.
 
 \textbf{Congratulations, you're on the UA Super-Computer now !!!}
 
@@ -402,25 +472,34 @@ Okay, I am on the supercomputer, but where am I?
 
 So, print the current working directory:
 \begin{prompt}
-$ %\textbf{pwd}%
+\$ %\shellcmd{pwd}%
 /user/antwerpen/201/vsc20167
 \end{prompt}
 
-Your new private home-directory is ``/user/antwerpen/201/$<$vsc-account$>$''. Here you can create your own sub-directory structure, copy and prepare your applications, compile and test them and submit your jobs on the UA-HPC.
+Your new private home-directory is ``/user/antwerpen/201/$<$vsc-account$>$''.
+Here you can create your own sub-directory structure, copy and prepare your
+applications, compile and test them and submit your jobs on the UA-HPC.
 
-For now, we already have created a symbolic link to the tutorials (including all the exercises) for you, which you can explore with the ``ls --l'' (\textbf{l}ist\textbf{s} \textbf{l}ong) and the ``cd'' (\textbf{c}hange \textbf{d}irectory) commands:
+For now, we already have created a symbolic link to the tutorials (including
+all the exercises) for you, which you can explore with the ``ls --l''
+(\textbf{l}ist\textbf{s} \textbf{l}ong) and the ``cd'' (\textbf{c}hange
+\textbf{d}irectory) commands:
 
 \begin{prompt}
-$ %\textbf{ls -l}%
+\$ %\shellcmd{ls -l}%
 total 256
 lrwxrwxrwx 1 vsc20167 vsc20167 25 Nov 13 09:53 tutorials -$>$ /apps/antwerpen/tutorials/
-$ %\textbf{cd tutorials}%
+\$ %\shellcmd{cd tutorials}%
 \end{prompt}
 
-\textbf{Tip: }Typing ``\textbf{\textit{cd tu$<$TAB$>$}}'' will generate the ``\textbf{\textit{cd tutorials}}'' command. \textbf{Command-line completion }(also tab completion) is a common feature of the bash command line interpreter, in which the program automatically fills in partially typed commands.
+\textbf{Tip: }Typing ``\textbf{\textit{cd tu$<$TAB$>$}}'' will generate the
+``\textbf{\textit{cd tutorials}}'' command. \textbf{Command-line completion
+}(also tab completion) is a common feature of the bash command line
+interpreter, in which the program automatically fills in partially typed
+commands.
 
 \begin{prompt}
-$ %\textbf{ls  -1}%
+\$ %\shellcmd{ls  -1}%
 calcua/
 eclipse/
 python/
@@ -436,13 +515,16 @@ This directory currently contains all training material for the use of:
 \item  The \textbf{\textit{VI}} editor.
 \end{enumerate}
 
-More relevant training material to work with the UA-HPC can always be added later in this directory.
+More relevant training material to work with the UA-HPC can always be added
+later in this directory.
 
-As we are interested in the use of the \textbf{\textit{HPC of CalcUA}}, move further to \textbf{\textit{calcua}} and explore the contents up to 2 levels deep:
+As we are interested in the use of the \textbf{\textit{HPC of CalcUA}}, move
+further to \textbf{\textit{calcua}} and explore the contents up to 2 levels
+deep:
 
 \begin{prompt}
-$ %\textbf{cd calcua}%
-$ %\textbf{tree -L 2}%
+$ %\shellcmd{cd calcua}%
+$ %\shellcmd{tree -L 2}%
 .
 \textbar -- HPC\_Tutorial\_Mac.pdf
 \textbar -- HPC\_Tutorial\_Win.pdf
@@ -465,55 +547,66 @@ $ %\textbf{tree -L 2}%
 This directory contains:
 
 \begin{enumerate}
-\item  This \textbf{\textit{HPC Tutorial}} (in either a Mac or Windows version).
-\item  The according \textbf{\textit{HPC slides}} (used during training sessions).
-\item  A \textbf{\textit{docs}} sub-directory, containing interesting HPC related documents.
-\item  An \textbf{\textit{examples}} sub-directory, containing all the examples that you need in this Tutorial, as well as examples that might be useful for your specific applications.
+  \item This \textbf{\textit{HPC Tutorial}} (in either a Mac or Windows
+    version).
+  \item The according \textbf{\textit{HPC slides}} (used during training
+    sessions).
+  \item A \textbf{\textit{docs}} sub-directory, containing interesting HPC
+    related documents.
+  \item An \textbf{\textit{examples}} sub-directory, containing all the
+    examples that you need in this Tutorial, as well as examples that might be
+    useful for your specific applications.
 \end{enumerate}
 
-\textbf{\underbar{Tip:}} For more exhaustive tutorials about Linux usage, please refer to the following sites:
+\textbf{\underbar{Tip:}} For more exhaustive tutorials about Linux usage,
+please refer to the following sites:
 
 \begin{enumerate}
-\item  http://www.linux.org/lessons/\textit{}
-\item \textit{ }http://linux.about.com/od/nwb\_guide/a/gdenwb06.htm\textit{}
+  \item \url{http://www.linux.org/lessons/}
+  \item \url{http://linux.about.com/od/nwb\_guide/a/gdenwb06.htm}
 \end{enumerate}
 
-Of course, all documents are ``write-protected''. The first action is to copy the contents of the HPC examples directory to your home directory, so that you have your own personal copy and that you can start using the examples. The ``-r'' option of the copy command will also copy the contents of the sub-directories ``\textit{recursively}''.  We first go back to your HOME directory.
+Of course, all documents are ``write-protected''. The first action is to copy
+the contents of the HPC examples directory to your home directory, so that you
+have your own personal copy and that you can start using the examples. The
+``-r'' option of the copy command will also copy the contents of the
+sub-directories ``\textit{recursively}''.  We first go back to your HOME
+directory.
 
 \begin{prompt}
-$ %\textbf{cd}%
-$ %\textbf{cp --r \~/tutorials/calcua/examples \~/}%
+$ %\shellcmd{cd}%
+$ %\shellcmd{cp --r \~/tutorials/calcua/examples \~/}%
 \end{prompt}
 
 Go to your home directory, check your own private examples directory, \dots  and start working.
 
 \begin{prompt}
-$ %\textbf{cd}%
-$ %\textbf{ls -l}%
+$ %\shellcmd{cd}%
+$ %\shellcmd{ls -l}%
 total 792
 drwxrwxr-x 10 vsc20167 vsc20167 131072 Nov  4 13:15 examples/
 lrwxrwxrwx 1  root     root         25 Nov 12 14:51 tutorials -$>$ /apps/antwerpen/tutorials/
 \end{prompt}
 
 \section{Computation Workflow on the UA-HPC}
+\label{sec:compuation-workflow-on-the-hpc}
 
 A typical Computation workflow will be:
 
 \begin{enumerate}
-\item  Connect to the UA-HPC
-\item  Transfer your files to the UA-HPC
-\item  Compile your code and test it
-\item  Create a job script
-\item  Submit your job
-\item  Wait while
-
-\begin{enumerate}
-\item  your job gets into the queue
-\item  your job gets executed
-\item  your job finishes
+  \item  Connect to the UA-HPC
+  \item  Transfer your files to the UA-HPC
+  \item  Compile your code and test it
+  \item  Create a job script
+  \item  Submit your job
+  \item  Wait while
+  \begin{enumerate}
+    \item  your job gets into the queue
+    \item  your job gets executed
+    \item  your job finishes
+  \end{enumerate}
+  \item  Move your results
 \end{enumerate}
-\item  Move your results
-\end{enumerate}
 
-We'll take you through the different tasks one by one in the following chapters.
-
+We'll take you through the different tasks one by one in the following
+chapters.
