@@ -16,20 +16,14 @@
 \usepackage{graphics}
 \graphicspath{{img//}}
 
-\usepackage{tcolorbox}
-\tcbuselibrary{listings}
-\tcbuselibrary{breakable}
-\tcbset{colback=red!5!white,colframe=red!75!black,breakable}
-\lstset{escapechar=\%}
+\lstdefinestyle{prompt}{language=bash,frame=tb,columns=fullflexible,
+  escapechar=\%}
+\lstdefinestyle{code}{numbers=left}
 
-% prompt = entered on command line
-% script = job script
-% prog = output from a program
-% other = \ldots
-\newtcblisting{prompt}{colback=red!5!white,colframe=red!75!black,breakable,listing only}
-\newtcblisting{script}{colback=green!5!white,colframe=green!75!black,breakable,listing only}
-\newtcblisting{prog}{colback=blue!5!white,colframe=blue!75!black,breakable,listing only}
-\newtcblisting{other}{colback=gray!5!white,colframe=gray!75!black,breakable,listing only}
+\lstnewenvironment{prompt} {\lstset{style=prompt}} {}
+\lstnewenvironment{code}[1]{\lstset{style=code, language=#1}} {}
+\lstnewenvironment{prog}{\lstset{style=code}} {}
+
 \newcommand{\shellcmd}[1]{\textbf{\texttt{\footnotesize #1}\\}}
 \newcommand{\iftoggleverb}[1]{%
   \ifcsdef{etb@tgl@#1}
