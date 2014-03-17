@@ -1,0 +1,201 @@
+\chapter{Introduction to UA-HPC}
+
+\section{What is UA-HPC?}
+
+``\textbf{High Performance Computing}'' (HPC) is computing on a
+``\textit{Supercomputer}'', a computer with at the frontline of contemporary
+processing capacity -- particularly speed of calculation and available memory.
+
+While the supercomputers in the early days (around 1970) used only a few
+processors, in the 1990s machines with thousands of processors began to appear
+and, by the end of the 20th century, massively parallel supercomputers with
+tens of thousands of "off-the-shelf" processors were the norm. A large number
+of dedicated processors are placed in close proximity to each other in a
+computer cluster.
+
+A \textbf{computer cluster} consists of a set of loosely or tightly connected
+computers that work together so that in many respects they can be viewed as a
+single system.
+
+The components of a cluster are usually connected to each other through fast
+local area networks (``LAN'') with each \textit{node} (computer used as a
+server) running its own instance of an operating system. Computer clusters
+emerged as a result of convergence of a number of computing trends including
+the availability of low cost microprocessors, high-speed networks, and software
+for high performance distributed computing.
+
+Compute clusters are usually deployed to improve performance and availability
+over that of a single computer, while typically being much more cost-effective
+than single computers of comparable speed or availability.
+
+Supercomputers play an important role in the field of computational science,
+and are used for a wide range of computationally intensive tasks in various
+fields, including quantum mechanics, weather forecasting, climate research, oil
+and gas exploration, molecular modeling (computing the structures and
+properties of chemical compounds, biological macromolecules, polymers, and
+crystals), and physical simulations (such as simulations of the early moments
+of the universe, airplane and spacecraft aerodynamics, the detonation of
+nuclear weapons, and nuclear fusion). \footnote{ $ Wikipedia$ }
+
+\includegraphics*[width=1.88in, height=1.26in, keepaspectratio=false]{img0102}
+\includegraphics*[width=1.88in, height=1.26in, keepaspectratio=false]{img0103}
+\includegraphics*[width=1.88in, height=1.26in, keepaspectratio=false]{img0104}
+
+\section{What is the UA-HPC?}
+
+The UA-HPC is a collection computers with Intel processors, running a Linux
+operating system, shaped in the form of lunch boxes and stored above and next
+to each other in racks, interconnected with fiber lines. Their number crunching
+power is (presently) measured in hundreds of billions of floating point
+operations (gigaflops) and even in Teraflops.
+
+The UA-HPC relies on parallel-processing technology to offer UA researchers an
+extremely fast solution for all their data processing needs.
+
+The UA-HPC consists of:
+
+\begin{tabular}{|p{1.8in}|p{2.1in}|} \hline
+\textbf{In technical terms} & \textbf{\dots  in human terms} \\ \hline
+168 nodes and 2496 cores & \dots  or the equivalent of 612 quad-core PC's \\ \hline
+22,5 Terabyte of online storage & \dots  or the equivalent of 5600 DVD's \\ \hline
+10Gbit infiniband Fiber connections & \dots  or allowing to transfer 2 DVD's per second \\ \hline
+\end{tabular}
+
+The UA-HPC currently has:
+
+\begin{enumerate}
+\item  64 compute nodes with 2 quad core Harpertown processors, 16 GB memory, 120 GB local disk, GbE network
+\item  32 nodes with 2 quad core Harpertown processors, 16 GB memory, 120 GB local disk, DDR-IB network
+\item  64 nodes with 2 six core Westmere processors,?24 GB memory, 120 GB local disk, QDR-IB network
+\item  8 nodes with 2 six core Westmere processors, 24 GB memory, 120 GB local disk, GbE network
+\end{enumerate}
+
+All the nodes in the UA-HPC run under the ``Scientific Linux 5.4'' operating
+system, which is a clone of ``Red Hat Enterprise Linux (RHEL) 5'', with a
+``2.6.18'' kernel with \textit{cpuset} support and \textit{BLCR} modules.
+
+
+Three different tools perform the \textbf{job management, job scheduling and accounting}:
+
+\begin{enumerate}
+\item  TORQUE : a resource manager (based on PBS)
+\item  Moab : job scheduler and management tools
+\item  GOLD : allocation manager and accounting system
+\end{enumerate}
+
+And for maintenance and monitoring, we use:
+
+\begin{enumerate}
+\item  Ganglia: monitoring software
+\item  Nagios: alert manager
+\end{enumerate}
+
+The UA-HPC is physically located at the Groenenborger Campus and is accessible
+through the University Network from all UA sites. There are 4 staff members
+available to support the researchers with the utilization of the UA-HPC.
+
+\section{What is the UA-HPC not!}
+
+A computer that automatically:
+
+\begin{enumerate}
+\item  runs your PC-applications code much faster for bigger problems;
+\item  develops your applications;
+\item  solves your bugs;
+\item  does your thinking;
+\item  \dots
+\item  allows you to play games even faster.
+\end{enumerate}
+
+The UA-HPC does not replace your desktop computer.
+
+\section{Is the UA-HPC a solution for my computational needs?}
+
+\subsection{Batch or Interactive Mode?}
+
+Typically, the strength of a supercomputer comes from its ability to run a huge
+number of programs (i.e. executables) in parallel without any user interaction
+in real time. This is what is called ``running in batch mode''.
+
+It is also possible to run programs at the UA-HPC, which require user
+interaction. (pushing buttons, entering input data, etc.).  Although
+technically possible, the use of the UA-HPC might not always be the best and
+smartest option to run those interactive programs.  Each time some user
+interaction is needed, the computer will wait for user input. The available
+computer resources (CPU, storage, network, etc.) might not be optimally used in
+those cases. A more in-depth analysis with the UA-HPC staff can unveil whether
+the UA-HPC is the desired solution to run interactive programs.
+
+\subsection{Parallel or Sequential Programs?}
+
+\textbf{Parallel computing} is a form of computation in which many calculations
+are carried out simultaneously. They are based on the principle that large
+problems can often be divided into smaller ones, which are then solved
+concurrently ("in parallel").
+
+Parallel computers can be roughly classified according to the level at which
+the hardware supports parallelism, with multi-core computers having multiple
+processing elements within a single machine, while clusters use multiple
+computers to work on the same task. Parallel computing has become the dominant
+computer architecture, mainly in the form of multicore processors.
+
+\textbf{Parallel programs} are more difficult to write than sequential ones,
+because concurrency introduces several new classes of potential software bugs,
+of which race conditions are the most common. Communication and synchronization
+between the different subtasks are typically some of the greatest obstacles to
+getting good parallel program performance.
+
+It is perfectly possible to also run purely \textbf{sequential programs} on the
+UA-HPC.
+
+Running your sequential programs on the most modern and fastest computers in
+the UA-HPC can save you a lot of time.  But it also might be possible to run
+multiple instances of your program (e.g., with different input parameters) on
+the UA-HPC, in order to solve one overall problem (e.g., to perform a parameter
+sweep). This is another form of running your sequential programs in parallel.
+
+
+\subsection{What Programming Languages can I use?}
+
+You can use ANY programming language, ANY software package and ANY library as
+long as it has a version that runs on Linux (provided it runs on the version of
+Linux that is installed on the compute nodes, being Scientific Linux).
+
+For the most common \textbf{programming languages}, a compiler is available on
+Scientific Linux. Supported and common programming languages on the UA-HPC are
+C/C++, FORTRAN, Java, Python, MATLAB, R, etc.
+
+Supported and commonly used compilers are GCC, clang, J2EE and Intel Cluster
+Studio.
+
+Commonly used software packages are ABINIT, CP2K, Gaussian, Gromacs, Molpro,
+NWChem, Quantum Espresso, R, Siesta, TURBOMOLE, WIEN2k, \ldots
+
+Commonly used Libraries are Intel MKL, FFTW, HDF5, PETSc and M(VA)PICH/OpenMPI.
+
+Additional software can be installed ``\textit{on demand}''. Please check the
+UA-HPC staff to see whether the UA-HPC can handle your specific requirements.
+
+\subsection{What Operating Systems can I use?}
+
+All nodes in the UA-HPC cluster run under the ``Scientific Linux'' (SL)
+Operating system, which is a specific version of RedHat-Linux. This means that
+all programs (executable) must be compiled for the SL Operating System.
+
+But a user can connect from any desk computer in the UA network to the UA-HPC,
+regardless of the Operating System that he is using at his personal computer.
+The user can use any of the common Operating Systems (such as Windows, OS X or
+any version of Linux/Unix/BSD) and run and control his programs on the UA-HPC.
+
+A user does not need to have prior knowledge about Linux; all of the required
+knowledge is explained in this tutorial.
+
+\subsection{What is the next step?}
+
+When you think that the UA-HPC is a useful tool to support your computational
+needs, we encourage you to acquire a VSC-account (as explained in
+\autoref{ch:getting-a-hpc-account}), read Chapter 3, "Setting up the
+environment", and explore Chapters 4 to 10 which will help you to transfer and
+run your programs on the UA-HPC cluster.
+
+Do not hesitate to contact the UA-HPC team members for any help.

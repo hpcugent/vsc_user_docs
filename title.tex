@@ -1,0 +1,168 @@
+\includegraphics*[width=5.76in, height=2.85in, keepaspectratio=false]{img_VSC_logo}
+
+University of Antwerp
+
+HPC Tutorial
+
+For Mac OS X and Linux Users
+
+version 1.1
+
+
+\textbf{CALCUA}
+
+Department of Mathematics and Computer Science
+
+Prof. A. Cuyt
+
+
+
+\textbf{Written by:}
+
+Geert Borstlap, Stefan Becuwe, Franky Backeljauw, Bert Tijskens
+
+Acknowledgement: VSCentrum.be
+
+
+University of Antwerp
+HPC Tutorial
+For Windows Users
+Version 1.1
+
+\textbf{CALCUA}
+
+Department of Mathematics and Computer Science
+
+Prof. A. Cuyt
+
+
+
+\textbf{Written by:}
+
+Geert Borstlap, Stefan Becuwe, Franky Backeljauw,Bert Tijskens
+
+
+
+Acknowledgement: VSCentrum.be
+
+\textbf{\underbar{Audience:}}
+
+This UA-HPC Tutorial is designed for \textbf{researchers} at the \textbf{University of Antwerp} and affiliated institutes who are in need of computational power (computer resources) and wish to explore and use the High Performance Computing (HPC) core facility to execute their computational intensive tasks.
+
+
+The audience may be completely unaware of the UA-HPC concepts but must have some basic understanding of computers and computer programming.
+
+
+\textbf{\underbar{Contents:}}
+
+This \textbf{Beginners Part} of this tutorial gives answers to the typical questions that a new UA-HPC user has. The aim is to learn how to use of the HPC.
+
+\begin{tabular}{|p{0.3in}|p{2.0in}|p{0.5in}|p{1.5in}|} \hline
+\textbf{Part} & \textbf{Questions} & \textbf{Chapter} & \textbf{Title} \\ \hline
+Beginners Part & What is a UA-HPC exactly?\newline Can it solve my computational needs? & \textbf{1} & Introduction to UA-HPC \\ \hline
+& How to get an account? & \textbf{2} & Getting an UA-HPC account \\ \hline
+& How do I connect to the UA-HPC and transfer my files and programs? & \textbf{3} & Preparing the environment \\ \hline
+& How to start background jobs? & \textbf{4} & Running batch jobs \\ \hline
+& How to start jobs with user interaction? & \textbf{5} & Running interactive jobs \\ \hline
+& Where do the input and output go? Where to collect my results? & \textbf{6} & Running jobs with input/output data \\ \hline
+& Can I speed up my program by exploring parallel programming techniques? & \textbf{7} & Multi-core jobs / Parallel programming \\ \hline
+& Can I start many jobs at once? & \textbf{8} & Multi job submission \\ \hline
+& What are the rules and priorities of jobs? & \textbf{9} & HPC policies \\ \hline
+\end{tabular}
+
+
+
+The \textbf{Advanced Part} focuses on in-depth issues. The aim is to assist the end-user in running his own software on the UA-HPC.
+
+\begin{tabular}{|p{0.3in}|p{2.0in}|p{0.5in}|p{1.5in}|} \hline
+\textbf{Part} & \textbf{Questions} & \textbf{Chapter} & \textbf{Title} \\ \hline
+Advanced Part & Can I compile my software on the UA-HPC? & \textbf{10} & Compiling on the UA-HPC \\ \hline
+& What are the optimal Job Specifications? & \textbf{11} & Fine-tuning Job Specifications \\ \hline
+& How do I check my programs at runtime? & \textbf{12} & Monitoring UA-HPC Utilization with Ganglia \\ \hline
+& Can I stop my program and continue later on? & \textbf{13} & Checkpointing \\ \hline
+& Do you have more examples for me? & \textbf{14} & Examples \\ \hline
+& Any more advice? & \textbf{15} & Good practices \\ \hline
+\end{tabular}
+
+
+
+The \textbf{Annexes }contains some useful reference guides.
+
+\begin{tabular}{|p{0.3in}|p{2.0in}|p{0.5in}|} \hline
+\textbf{Part} & \textbf{Title} & \textbf{Chapter} \\ \hline
+Annex & UA-HPC Quick Reference Guide & \textbf{16} \\ \hline
+& Torque Options & \textbf{17} \\ \hline
+& Useful Linux commands & \textbf{18} \\ \hline
+\end{tabular}
+
+\textbf{\underbar{Notification:}}
+
+In this tutorial specific actions dealing with the software are separated from the accompanying text:
+
+\$ %\textbf{Actions}% (e.g., to be entered at a command line in your Terminal) in an exercise are preceded by a \$ and printed in \textbf{bold}. You'll find those actions in a grey frame.
+
+\textbf{$<$Button$>$} are menus, buttons or drop down boxes to be presses or selected.
+
+\textbf{`Directory'} is the notation for directories (called ``folders'' in Windows terminology) or specific files. (e.g., `/user/antwerpen/201/vsc20167')
+
+\textbf{``Text''} Is the notation for text to be entered.
+
+\textbf{Tip: }A ``Tip'' paragraph is used for remarks or tips.
+
+\textbf{\underbar{More support:}}
+
+Before starting the course, the example programs and configuration files used in this UA-HPC-Tutorial must be copied to your home directory. If you have received a new VSC-account, all examples are present in an `\~/tutorials/calcua/examples' sub-directory within your home-directory.
+
+\begin{prompt}
+$ %\textbf{ls \~/tutorials/calcua/examples}%
+docs/  example.pbs  examples/
+\end{prompt}
+
+
+They can also be downloaded from http://calcua.ua.ac.be/ or copied from the directory  `\textit{/apps/antwerpen/examples/}' on the UA-HPC.
+
+\begin{prompt}
+$ %\textbf{cd}%
+$ %\textbf{cp --r /apps/antwerpen/examples/ \~/}%
+\end{prompt}
+
+Apart from this UA-HPC Tutorial, the UA-HPC documentation on the web (https://www.vscentrum.be) will serve as a reference for all the UA-HPC operations.
+
+
+\textbf{\underbar{Tip:}} The users are advised to get self-organized. There are only limited resources available at the UA-HPC, which are best effort based. The UA-HPC cannot give support for code fixing, the user applications and own developed software remain solely the responsibility of the end-user.
+
+
+More documentation can be found at:
+
+\begin{enumerate}
+\item  VSC documentation: https://www.vscentrum.be/vsc-help-center
+\item  External documentation: http://www.adaptivecomputing.com
+\end{enumerate}
+
+Manuals (Torque, MOAB):
+
+\begin{enumerate}
+\item  Torque: http://docs.adaptivecomputing.com/torque/help.htm
+\item  MOAB: http://docs.adaptivecomputing.com/mwm/help.htm
+\end{enumerate}
+
+
+Mailing-lists:
+
+\begin{enumerate}
+\item  Announcements: calcua-announce@sympa.ua.ac.be (for official announcements and communications)
+\item  Users : calcua-users@sympa.ua.ac.be (for discussions between users)
+\end{enumerate}
+
+\textbf{\underbar{Contact Information:}}
+
+We welcome your feedback, comments and suggestions for improving the UA-HPC Tutorial  (contact: info@calcua.ua.ac.be).
+
+
+For all technical questions, please contact the UA-HPC staff:
+
+\begin{enumerate}
+\item  By Phone: 3860 (Stefan), 3855 (Franky), 3879 (Geert, Bert)
+\item  By e-mail:  sysadmin@calcua.ua.ac.be.
+\item  \eject
+\end{enumerate}
