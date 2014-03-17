@@ -1,0 +1,5 @@
+#!/bin/bash -l
+module load MATLAB
+cd $PBS_O_WORKDIR
+matlab -r fibo
+

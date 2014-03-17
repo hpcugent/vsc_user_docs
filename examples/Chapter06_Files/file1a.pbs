@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+#PBS -q qshort
+
+  # go to the (current) working directory (optional, if this is the
+  # directory where you submitted the job)
+cd $PBS_O_WORKDIR  
+
+  # the program itself
+echo Start Job
+date
+./file1.py
+echo End Job

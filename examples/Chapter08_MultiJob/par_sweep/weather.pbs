@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#PBS -q qshort
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=01:00:00
+
+cd $PBS_O_WORKDIR
+./weather -t $temperature -p $pressure -v $volume
+
+# # This scripts is submitted to the UA-HPC with the following 2 commands:
+# module load worker
+# wsub -data data.csv -batch weather.sh
