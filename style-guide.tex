@@ -1,64 +1,8 @@
 \documentclass[11pt,a4paper]{article}
+\include{style}
 
-\usepackage[english]{babel}
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{hyperref}
-% allow conditional compilation
-\usepackage{etoolbox}
-
-\usepackage{color}
-\usepackage{listings}
-\usepackage{tikz}
-\usepackage[T1]{fontenc}
-\usepackage{graphics}
-\graphicspath{{img//}}
-
-\lstdefinestyle{prompt}{language=bash,frame=tb,columns=fullflexible,
-  escapechar=\%}
-\lstdefinestyle{code}{numbers=left}
-
-\lstnewenvironment{prompt} {\lstset{style=prompt}} {}
-\lstnewenvironment{code}[1]{\lstset{style=code, language=#1}} {}
-
-\newcommand{\shellcmd}[1]{\textbf{\texttt{\footnotesize #1}\\}}
-\newcommand{\iftoggleverb}[1]{%
-  \ifcsdef{etb@tgl@#1}
-    {\csname etb@tgl@#1\endcsname\iftrue\iffalse}
-    {\etb@noglobal\etb@err@notoggle{#1}\iffalse}%
-}
-\parindent=0pt
-\parskip=7pt
-
-\newtoggle{windows}
-\toggletrue{windows}
-
-\newtoggle{mac}
-\toggletrue{mac}
-
-\newcommand{\ignore}[1]{}
-
-\newif\ifremark
-\long\def\remark#1{
-  \ifremark%
-  \begingroup%
-  \dimen0=\columnwidth
-  \advance\dimen0 by -1in%
-  \setbox0=\hbox{\parbox[b]{\dimen0}{\protect\em #1}}
-  \dimen1=\ht0\advance\dimen1 by 2pt%
-  \dimen2=\dp0\advance\dimen2 by 2pt%
-  \vskip 0.25pt%
-  \hbox to \columnwidth{%
-    \vrule height\dimen1 width 3pt depth\dimen2%
-    \hss\copy0\hss%
-    \vrule height\dimen1 width 3pt depth\dimen2%
-  }%
-  \endgroup%
-\fi}
-
-\remarktrue
-%%\remarkfalse
 \begin{document}
+\maketitle
 
 \section{File organisation}
 \label{sec:file-organisation}
@@ -111,7 +55,7 @@ When defining tables spend some time to align them column-wise, this looks much 
 When defining lists make sure to indent the items.
 
 \begin{verbatim}
-\begin{enumerate}
+\begin{itemize}
   \item indented item
   \item multi-line item which spans
     multiple lines
@@ -120,7 +64,7 @@ When defining lists make sure to indent the items.
     \item have multiple
     \item levels of indentation
   \end{enumerate}
-\end{enumerate}
+\end{itemize}
 \end{verbatim}
 
 \section{Displaying prompts}
@@ -152,7 +96,8 @@ required argument which sets the language. The following LaTeX code:
 
 \begin{verbatim}
 \begin{code}{bash}
-# PBS -m e
+#!/usr/bin/bash
+#PBS -m e
 echo test
 \end{code}
 \end{verbatim}
@@ -160,8 +105,17 @@ echo test
 will result in following output:
 
 \begin{code}{bash}
-# PBS -m e
+#!/usr/bin/bash
+#PBS -m e
 echo "test"
 \end{code}
 
+\section{Windows and Mac-specific}
+TODO
+
+\section{Site-specific sections}
+TODO
+
 \end{document}
+
+

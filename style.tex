@@ -1,0 +1,60 @@
+
+\usepackage[english]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{hyperref}
+% allow conditional compilation
+\usepackage{etoolbox}
+
+\usepackage{color}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage[T1]{fontenc}
+\usepackage{graphics}
+\graphicspath{{img//}}
+
+\lstset{basicstyle=\ttfamily,breaklines=true}
+
+\lstdefinestyle{prompt}{language=bash,frame=tb,columns=fullflexible,
+  escapechar=\%}
+\lstdefinestyle{code}{numbers=left}
+
+\lstnewenvironment{prompt} {\lstset{style=prompt}} {}
+\lstnewenvironment{code}[1]{\lstset{style=code, language=#1}} {}
+\lstnewenvironment{prog}{\lstset{style=code}} {}
+
+\newcommand{\shellcmd}[1]{\textbf{\texttt{#1}\\}}
+\newcommand{\iftoggleverb}[1]{%
+  \ifcsdef{etb@tgl@#1}
+    {\csname etb@tgl@#1\endcsname\iftrue\iffalse}
+    {\etb@noglobal\etb@err@notoggle{#1}\iffalse}%
+}
+\parindent=0pt
+\parskip=7pt
+
+\title{Style Guide}
+\newcommand{\ignore}[1]{}
+
+\newif\ifremark
+\long\def\remark#1{
+  \ifremark%
+  \begingroup%
+  \dimen0=\columnwidth
+  \advance\dimen0 by -1in%
+  \setbox0=\hbox{\parbox[b]{\dimen0}{\protect\em #1}}
+  \dimen1=\ht0\advance\dimen1 by 2pt%
+  \dimen2=\dp0\advance\dimen2 by 2pt%
+  \vskip 0.25pt%
+  \hbox to \columnwidth{%
+    \vrule height\dimen1 width 3pt depth\dimen2%
+    \hss\copy0\hss%
+    \vrule height\dimen1 width 3pt depth\dimen2%
+  }%
+  \endgroup%
+\fi}
+
+\remarktrue
+\newtoggle{windows}
+\toggletrue{windows}
+\newtoggle{mac}
+\toggletrue{mac}
