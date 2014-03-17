@@ -1,5 +1,5 @@
 pdf: ch*.tex HPC.tex
-	latexmk -xelatex HPC.tex
+	pdflatex HPC.tex && pdflatex HPC.tex
 
 style-guide: style-guide.tex
-	latexmk -xelatex style-guide.tex
+	pdflatex style-guide.tex && pdflatex style-guide.tex
