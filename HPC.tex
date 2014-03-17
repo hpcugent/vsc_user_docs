@@ -30,12 +30,21 @@
 \newtcblisting{script}{colback=green!5!white,colframe=green!75!black,breakable,listing only}
 \newtcblisting{prog}{colback=blue!5!white,colframe=blue!75!black,breakable,listing only}
 \newtcblisting{other}{colback=gray!5!white,colframe=gray!75!black,breakable,listing only}
-
+\newcommand{\shellcmd}[1]{\textbf{\texttt{\footnotesize #1}\\}}
+\newcommand{\iftoggleverb}[1]{%
+  \ifcsdef{etb@tgl@#1}
+    {\csname etb@tgl@#1\endcsname\iftrue\iffalse}
+    {\etb@noglobal\etb@err@notoggle{#1}\iffalse}%
+}
 \parindent=0pt
 \parskip=7pt
 
 \newtoggle{windows}
 \toggletrue{windows}
+
+\newtoggle{mac}
+\toggletrue{mac}
+
 \newcommand{\ignore}[1]{}
 
 \newif\ifremark
