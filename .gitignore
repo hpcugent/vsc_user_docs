@@ -1,1 +1,8 @@
 *.pdf
+*.aux
+*.log
+*.fdb_latexmk
+*.listing
+*.fls
+*.toc
+*.out
