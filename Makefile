@@ -1,2 +1,2 @@
-pdf: chapters/*.tex HPC.tex
+pdf: chapter*.tex HPC.tex
 	latexmk -xelatex HPC.tex
