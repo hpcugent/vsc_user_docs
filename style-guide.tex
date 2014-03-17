@@ -1,0 +1,172 @@
+\documentclass[11pt,a4paper,oneside]{book}
+
+\usepackage[english]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{hyperref}
+% allow conditional compilation
+\usepackage{etoolbox}
+
+\usepackage{color}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{fontspec}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{beramono}
+\usepackage{graphics}
+\graphicspath{{img//}}
+
+\lstdefinestyle{prompt}{language=bash,frame=tb,columns=fullflexible,
+  escapechar=\%}
+\lstdefinestyle{code}{numbers=left}
+
+\lstnewenvironment{prompt} {\lstset{style=prompt}} {}
+\lstnewenvironment{code}[1]{\lstset{style=code, language=#1}} {}
+
+\newcommand{\shellcmd}[1]{\textbf{\texttt{\footnotesize #1}\\}}
+\newcommand{\iftoggleverb}[1]{%
+  \ifcsdef{etb@tgl@#1}
+    {\csname etb@tgl@#1\endcsname\iftrue\iffalse}
+    {\etb@noglobal\etb@err@notoggle{#1}\iffalse}%
+}
+\parindent=0pt
+\parskip=7pt
+
+\newtoggle{windows}
+\toggletrue{windows}
+
+\newtoggle{mac}
+\toggletrue{mac}
+
+\newcommand{\ignore}[1]{}
+
+\newif\ifremark
+\long\def\remark#1{
+  \ifremark%
+  \begingroup%
+  \dimen0=\columnwidth
+  \advance\dimen0 by -1in%
+  \setbox0=\hbox{\parbox[b]{\dimen0}{\protect\em #1}}
+  \dimen1=\ht0\advance\dimen1 by 2pt%
+  \dimen2=\dp0\advance\dimen2 by 2pt%
+  \vskip 0.25pt%
+  \hbox to \columnwidth{%
+    \vrule height\dimen1 width 3pt depth\dimen2%
+    \hss\copy0\hss%
+    \vrule height\dimen1 width 3pt depth\dimen2%
+  }%
+  \endgroup%
+\fi}
+
+\remarktrue
+%%\remarkfalse
+\begin{document}
+
+\chapter{Style Guide}
+\label{ch:style-guide}
+
+\section{File organisation}
+\label{sec:file-organisation}
+
+The main \texttt{HPC.tex} file contains all the necessary setup for the rest of
+the chapters.  each chapter should be written in a separate file. Give the
+chapter a filename by prepending \texttt{ch}, then the number of the chapter
+followed by a meaningful name. For example: \texttt{ch2\_introduction.tex}.
+
+\section{Sections and Chapters}
+\label{sec:sections-and-chapters}
+
+Chapter titles should contain capitalized words. Section titles should only
+have the first word capitalized.  Every \texttt{\textbackslash{}chapter},
+\texttt{\textbackslash{}section} and \texttt{\textbackslash{}subsection} should
+be accompanied by a \texttt{\textbackslash{}label}.
+
+The label name should start with \texttt{ch} for a chapter, \texttt{sec} for a
+section and \texttt{subsec} for a subsection. The label should have a name
+closely resembling the title, spaces should be replaced by dashes. Example:
+
+\begin{verbatim}
+\chapter{Chapter Title}
+\label{ch:chapter-title}
+
+\section{Section title}
+\label{sec:section-title}
+\end{verbatim}
+
+\section{Tables}
+\label{sec:tables}
+
+When defining tables spend some time to align them in plaintext, this looks much more attractive.
+Bad:
+\begin{verbatim}
+\begin{tabular}{|l|l|} \hline
+\textbf{In technical terms} & \textbf{\dots in human terms} \\ \hline
+168 nodes and 2496 cores & \dots \\ \hline
+22,5 Terabyte of online storage & \dots \\ \hline
+10Gbit infiniband Fiber connections & \dots \\ \hline
+\end{tabular}
+\end{verbatim}
+
+Good:
+\begin{verbatim}
+\begin{tabular}{|l|l|} \hline
+\textbf{In technical terms}         & \textbf{\dots in human terms} \\ \hline
+168 nodes and 2496 cores            & \dots                         \\ \hline
+22,5 Terabyte of online storage     & \dots                         \\ \hline
+10Gbit infiniband Fiber connections & \dots                         \\ \hline
+\end{tabular}
+\end{verbatim}
+
+\section{Lists}
+\label{sec:lists}
+
+When defining lists make sure to indent the items.
+
+\begin{verbatim}
+\begin{enumerate}
+  \item indented item
+\end{enumerate}
+\end{verbatim}
+
+\section{Displaying prompts}
+\label{sec:displaying-prompts}
+
+To display prompt output you can use the prompt environment. There is the
+special command \texttt{\textbackslash{}shellcmd{}} which provides consistent
+styling. Inside the prompt environment you can use \% as escape character to
+type commands.
+
+\begin{verbatim}
+\begin{prompt}
+$ %\shellcmd{bash --version}%
+GNU bash, versie 4.1.2(1)-release (x86_64-redhat-linux-gnu)
+\end{prompt}
+\end{verbatim}
+
+which will result in following output:
+\begin{prompt}
+$ %\shellcmd{bash --version}%
+GNU bash, versie 4.1.2(1)-release (x86_64-redhat-linux-gnu)
+\end{prompt}
+
+\section{Job Scripts}
+\label{sec:job-scripts}
+
+When including code of any kind you can use the code environment, there is a
+required argument which sets the language. The following LaTeX code:
+
+\begin{verbatim}
+\begin{code}{bash}
+# PBS -m e
+echo test
+\end{code}
+\end{verbatim}
+
+will result in following output:
+
+\begin{code}{bash}
+# PBS -m e
+echo "test"
+\end{code}
+
+\end{document}
