@@ -1,0 +1,121 @@
+\documentclass[11pt,a4paper]{article}
+\include{style}
+
+\begin{document}
+\maketitle
+
+\section{File organisation}
+\label{sec:file-organisation}
+
+The main \texttt{HPC.tex} file contains all the necessary setup for the rest of
+the chapters. Each chapter should be written in a separate file. Give the
+chapter a filename by prepending \texttt{ch}, then the number of the chapter
+followed by a meaningful name. For example: \texttt{ch2\_introduction.tex}.
+
+After following these conventions you only need to add the include in the main
+\texttt{HPC.tex} file.
+
+\section{Sections and chapters}
+\label{sec:sections-and-chapters}
+
+Chapter titles should contain capitalized words. Section titles should only
+have the first word capitalized. Every \texttt{\textbackslash{}chapter},
+\texttt{\textbackslash{}section} and \texttt{\textbackslash{}subsection} should
+be accompanied by a \texttt{\textbackslash{}label}.
+
+The label name should start with \texttt{ch} for a chapter, \texttt{sec} for a
+section and \texttt{subsec} for a subsection. The label should have a name
+closely resembling the title, spaces should be replaced by dashes. Example:
+
+\begin{verbatim}
+\chapter{This Is A Chapter Title}
+\label{ch:chapter-title}
+
+\section{This is a section title}
+\label{sec:section-title}
+\end{verbatim}
+
+\section{Tables}
+\label{sec:tables}
+
+When defining tables spend some time to align them column-wise, this looks much more attractive.
+
+\begin{verbatim}
+\begin{tabular}{|l|l|} \hline
+  short        & \textbf{\dots in human terms} \\ \hline
+  short        & \dots                         \\ \hline
+  short        & \dots                         \\ \hline
+  a bit longer & \dots                         \\ \hline
+\end{tabular}
+\end{verbatim}
+
+\section{Lists}
+\label{sec:lists}
+
+When defining lists make sure to indent the items.
+
+\begin{verbatim}
+\begin{itemize}
+  \item indented item
+  \item multi-line item which spans
+    multiple lines
+  \begin{enumerate}
+    \item you can
+    \item have multiple
+    \item levels of indentation
+  \end{enumerate}
+\end{itemize}
+\end{verbatim}
+
+\section{Displaying prompts}
+\label{sec:displaying-prompts}
+
+To display prompt output you can use the prompt environment. There is the
+special command \texttt{\textbackslash{}shellcmd{}} which provides consistent
+styling. Inside the prompt environment you can use \% as escape character to
+type commands.
+
+\begin{verbatim}
+\begin{prompt}
+$ %\shellcmd{bash --version}%
+GNU bash, versie 4.1.2(1)-release (x86_64-redhat-linux-gnu)
+\end{prompt}
+\end{verbatim}
+
+which will result in following output:
+\begin{prompt}
+$ %\shellcmd{bash --version}%
+GNU bash, versie 4.1.2(1)-release (x86_64-redhat-linux-gnu)
+\end{prompt}
+
+\section{Job scripts}
+\label{sec:job-scripts}
+
+When including code of any kind you can use the code environment, there is a
+required argument which sets the language. The following LaTeX code:
+
+\begin{verbatim}
+\begin{code}{bash}
+#!/usr/bin/bash
+#PBS -m e
+echo test
+\end{code}
+\end{verbatim}
+
+will result in following output:
+
+\begin{code}{bash}
+#!/usr/bin/bash
+#PBS -m e
+echo "test"
+\end{code}
+
+\section{Windows and Mac-specific}
+TODO
+
+\section{Site-specific sections}
+TODO
+
+\end{document}
+
+
