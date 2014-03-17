@@ -75,7 +75,7 @@ After following these conventions you only need to add the include in the main
 \label{sec:sections-and-chapters}
 
 Chapter titles should contain capitalized words. Section titles should only
-have the first word capitalized.  Every \texttt{\textbackslash{}chapter},
+have the first word capitalized. Every \texttt{\textbackslash{}chapter},
 \texttt{\textbackslash{}section} and \texttt{\textbackslash{}subsection} should
 be accompanied by a \texttt{\textbackslash{}label}.
 
@@ -84,34 +84,24 @@ section and \texttt{subsec} for a subsection. The label should have a name
 closely resembling the title, spaces should be replaced by dashes. Example:
 
 \begin{verbatim}
-\chapter{Chapter Title}
+\chapter{This Is A Chapter Title}
 \label{ch:chapter-title}
 
-\section{Section title}
+\section{This is a section title}
 \label{sec:section-title}
 \end{verbatim}
 
 \section{Tables}
 \label{sec:tables}
 
-When defining tables spend some time to align them in plaintext, this looks much more attractive.
-Bad:
-\begin{verbatim}
-\begin{tabular}{|l|l|} \hline
-\textbf{In technical terms} & \textbf{\dots in human terms} \\ \hline
-168 nodes and 2496 cores & \dots \\ \hline
-22,5 Terabyte of online storage & \dots \\ \hline
-10Gbit infiniband Fiber connections & \dots \\ \hline
-\end{tabular}
-\end{verbatim}
+When defining tables spend some time to align them column-wise, this looks much more attractive.
 
-Good:
 \begin{verbatim}
 \begin{tabular}{|l|l|} \hline
-\textbf{In technical terms}         & \textbf{\dots in human terms} \\ \hline
-168 nodes and 2496 cores            & \dots                         \\ \hline
-22,5 Terabyte of online storage     & \dots                         \\ \hline
-10Gbit infiniband Fiber connections & \dots                         \\ \hline
+short        & \textbf{\dots in human terms} \\ \hline
+short        & \dots                         \\ \hline
+short        & \dots                         \\ \hline
+a bit longer & \dots                         \\ \hline
 \end{tabular}
 \end{verbatim}
 
@@ -123,6 +113,13 @@ When defining lists make sure to indent the items.
 \begin{verbatim}
 \begin{enumerate}
   \item indented item
+  \item multi-line item which spans
+    multiple lines
+  \begin{enumerate}
+    \item you can
+    \item have multiple
+    \item levels of indentation
+  \end{enumerate}
 \end{enumerate}
 \end{verbatim}
 
@@ -135,10 +132,10 @@ styling. Inside the prompt environment you can use \% as escape character to
 type commands.
 
 \begin{verbatim}
-\begin{prompt}
-$ %\shellcmd{bash --version}%
-GNU bash, versie 4.1.2(1)-release (x86_64-redhat-linux-gnu)
-\end{prompt}
+  \begin{prompt}
+  $ %\shellcmd{bash --version}%
+  GNU bash, versie 4.1.2(1)-release (x86_64-redhat-linux-gnu)
+  \end{prompt}
 \end{verbatim}
 
 which will result in following output:
