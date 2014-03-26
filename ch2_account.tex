@@ -41,7 +41,7 @@ corresponding private key on his local computer.
   Download PuTTY and install it in the C:/Program Files (x86)/PuTTY directory.
 
   Google ``\textit{PuTTY download}'' or go directly to the official download
-  address: http://www.chiark.greenend.org.uk/\~sgtatham/putty/
+  address: \url{http://www.chiark.greenend.org.uk/\~sgtatham/putty/}
 
   The PuTTY package consists of several components:
 
@@ -152,7 +152,7 @@ corresponding private key on his local computer.
 
   \begin{prompt}
   $ %\shellcmd{ssh -V}%
-  OpenSSH\_4.3p2, OpenSSL 0.9.8e-fips-rhel5 01 Jul 2008
+  OpenSSH_4.3p2, OpenSSL 0.9.8e-fips-rhel5 01 Jul 2008
   \end{prompt}
 
   To access the clusters and transfer your files, you will use the following commands:
@@ -172,13 +172,13 @@ corresponding private key on his local computer.
   short'' (``ls'')  command:
 
   \begin{prompt}
-  $ %\shellcmd{ls  \~/.ssh}%
+  $ %\shellcmd{ls  \tilde/.ssh}%
   \end{prompt}
 
 
   If a key-pair is already available, you would normally get:
   \begin{prompt}
-  authorized\_keys2    id\_rsa            id\_rsa.pub         known\_hosts
+  authorized_keys2    id_rsa            id_rsa.pub         known_hosts
   \end{prompt}
 
   Otherwise, the command will show:
@@ -190,7 +190,7 @@ corresponding private key on his local computer.
   You can recognize a public/private key pair when a pair of files has the same
   name except for the extension ".pub" added to one of them. In this particular
   case, the private key is "id\_rsa" and public key is "id\_rsa.pub". You may
-  have multiple keys (not necessarily in the directory "\~/.ssh") if you or
+  have multiple keys (not necessarily in the directory "\tilde/.ssh") if you or
   your operating system requires this.
 
   You will need to generate a new key pair, when:
@@ -237,10 +237,10 @@ instructions in \autoref{sec:other-users-of-antwerp-university}.
 \label{sec:users-of-ua}
 
 Open the following webpage from within the UA campus network (or using a UA-VPN
-connection) https://account.vscentrum.be/req and choose `antwerpen' as your VSC
+connection) \url{https://account.vscentrum.be/req} and choose `antwerpen' as your VSC
 site.
 
-Browse to https://account.vscentrum.be/req
+Browse to \url{https://account.vscentrum.be/req}
 
 Choose `antwerpen' as your VSC site.
 
@@ -276,12 +276,12 @@ have generated.
 
 \ifmac
 
-  This file has been stored in the directory `\~/.ssh/'.
+  This file has been stored in the directory `\tilde/.ssh/'.
 
   \textbf{\underbar{Tip:}} As ".ssh" is an invisible directory, the Finder will
   not show it by default. The easiest way to access the folder, is by pressing
   Apple-Shift--G, which will allow you to enter the name of a directory, which
-  you would like to open in Finder. Here, type "\~/.ssh" and press enter.
+  you would like to open in Finder. Here, type "\tilde/.ssh" and press enter.
 
 \fi
 
@@ -292,7 +292,7 @@ confirmation e-mail.
 \textbf{The site is only accessible from within the University of Antwerp
 domain}, so the page won't load from (e.g.) home. However, you can also get
 external access to the UA domain using VPN. We refer to the UA ICT infocenter
-(http://www.ua.ac.be/main.aspx?c=.INFOCENTER) for more information.
+(\url{http://www.ua.ac.be/main.aspx?c=.INFOCENTER}) for more information.
 
 \subsection{Other users of the Antwerp University Association (AUHA)}
 \label{sec:other-users-of-antwerp-university}
@@ -313,7 +313,7 @@ Directory. (i.e. /Users/$<$username$>$/.ssh/id\_rsa.pub).
   \textbf{\underbar{Tip:}} As ".ssh" is an invisible directory, the Finder will
   not show it by default. The easiest way to access the folder, is by pressing
   Apple-Shift-G, which will allow you to enter the name of a directory, which
-  you would like to open in Finder. Here, type "\~/.ssh" and press enter.
+  you would like to open in Finder. Here, type "\tilde/.ssh" and press enter.
 
 \fi
 
@@ -460,7 +460,7 @@ verify the authenticity of the login node, e.g.,
 $ %\shellcmd{ssh vsc20167@login.turing.calcua.ua.ac.be}%
 The authenticity of host 'login.turing.calcua.ua.ac.be (143.169.237.11)' can't be established.
 RSA key fingerprint is b7:66:42:23:5c:d9:43:e8:b8:48:6f:2c:70:de:02:eb.
-Are you sure you want to continue connecting (yes/no)?   \textbf{\textit{yes}}
+Are you sure you want to continue connecting (yes/no)? %\textbf{\textit{yes}}%
 \end{prompt}
 
 Here, user vsc20167 wants to make a connection to the `Turing' cluster at UA
@@ -488,7 +488,7 @@ all the exercises) for you, which you can explore with the ``ls --l''
 \begin{prompt}
 $ %\shellcmd{ls -l}%
 total 256
-lrwxrwxrwx 1 vsc20167 vsc20167 25 Nov 13 09:53 tutorials -$>$ /apps/antwerpen/tutorials/
+lrwxrwxrwx 1 vsc20167 vsc20167 25 Nov 13 09:53 tutorials -%$>$% /apps/antwerpen/tutorials/
 $ %\shellcmd{cd tutorials}%
 \end{prompt}
 
@@ -526,20 +526,20 @@ deep:
 $ %\shellcmd{cd calcua}%
 $ %\shellcmd{tree -L 2}%
 .
-\textbar -- HPC\_Tutorial\_Mac.pdf
-\textbar -- HPC\_Tutorial\_Win.pdf
-\textbar -- HPC\_slides.pdf
-\textbar -- docs
+%\textbar%-- HPC_Tutorial_Mac.pdf
+%\textbar%-- HPC_Tutorial_Win.pdf
+%\textbar%-- HPC_slides.pdf
+%\textbar%-- docs
 `-- examples
-    \textbar -- Chapter04\_Batch
-    \textbar -- Chapter05\_Interactive
-    \textbar -- Chapter06\_Files
-    \textbar -- Chapter07\_Parallel
-    \textbar -- Chapter08\_MultiJob
-    \textbar -- Chapter10\_Compile
-    \textbar -- Chapter11\_TuneJobs
-    \textbar -- Chapter13\_Examples
-    \textbar -- example.pbs
+    %\textbar%-- Chapter04_Batch
+    %\textbar%-- Chapter05_Interactive
+    %\textbar%-- Chapter06_Files
+    %\textbar%-- Chapter07_Parallel
+    %\textbar%-- Chapter08_MultiJob
+    %\textbar%-- Chapter10_Compile
+    %\textbar%-- Chapter11_TuneJobs
+    %\textbar%-- Chapter13_Examples
+    %\textbar%-- example.pbs
     `-- example.sh
 10 directories, 5 files
 \end{prompt}
@@ -575,7 +575,7 @@ directory.
 
 \begin{prompt}
 $ %\shellcmd{cd}%
-$ %\shellcmd{cp --r \~/tutorials/calcua/examples \~/}%
+$ %\shellcmd{cp --r \tilde/tutorials/calcua/examples \tilde/}%
 \end{prompt}
 
 Go to your home directory, check your own private examples directory, \dots  and start working.
@@ -585,7 +585,7 @@ $ %\shellcmd{cd}%
 $ %\shellcmd{ls -l}%
 total 792
 drwxrwxr-x 10 vsc20167 vsc20167 131072 Nov  4 13:15 examples/
-lrwxrwxrwx 1  root     root         25 Nov 12 14:51 tutorials -$>$ /apps/antwerpen/tutorials/
+lrwxrwxrwx 1  root     root         25 Nov 12 14:51 tutorials -%$>$% /apps/antwerpen/tutorials/
 \end{prompt}
 
 \section{Computation Workflow on the UA-HPC}
