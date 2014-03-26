@@ -1,6 +1,7 @@
 \documentclass[11pt,a4paper]{article}
 \include{style}
 \title{Style Guide}
+\author{Toon Willems}
 
 \begin{document}
 \maketitle
@@ -112,11 +113,36 @@ echo "test"
 \end{code}
 
 \section{Windows and Mac-specific}
-TODO
+\label{sec:windows-and-mac-specific}
+
+You can write Windows or Mac specific sections with the \texttt{ifmac} and
+\texttt{ifwindows} commands.
+
+\begin{verbatim}
+\ifwindows
+  Windows specific text
+\fi
+\end{verbatim}
+
+\begin{verbatim}
+\ifmac
+  Mac specific text
+\fi
+\end{verbatim}
+
 
 \section{Site-specific sections}
-TODO
+\label{sec:site-specific-sections}
+
+Site-specific sections are very much like platform-specific sections. You use
+the same constructs, but now instead of the \texttt{ifmac} and \texttt{ifwindows}
+keywords you can use: \texttt{ifleuven}, \texttt{ifgent}, \texttt{ifantwerpen},
+\texttt{ifhasselt} or \texttt{ifbrussel}.
+
+\begin{verbatim}
+\ifgent
+  Gent specific text
+\fi
+\end{verbatim}
 
 \end{document}
-
-
