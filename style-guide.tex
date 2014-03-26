@@ -123,12 +123,18 @@ You can write Windows or Mac specific sections with the \texttt{iftoggle} comman
 Note: you cannot include verbatim or code sections inside. Should that be necessary use the following construct:
 
 \begin{verbatim}
+\iftoggleverb{windows}
+\begin{verbatim}
+this works!
+\end{verbatim}
+\fi
 \end{verbatim}
 
-
+Note: These can not be nested.
 
 \section{Site-specific sections}
-TODO
+
+Site-specific sections are very much like Platform-specific sections.
 
 \end{document}
 
