@@ -1,5 +1,5 @@
 defines = ""
-latex_command = pdflatex "$(defines)\input{HPC.tex}"
+latex_command = pdflatex -jobname "HPC_$(OS)_$(SITE)" "\def\is$(OS){1}\def\is$(SITE){1}\input{HPC.tex}"
 
 pdf: ch*.tex HPC.tex
 	$(latex_command)
@@ -9,47 +9,54 @@ style-guide: style-guide.tex
 	pdflatex style-guide.tex
 	pdflatex style-guide.tex
 
-mac-leuven: defines = \def\ismac{1}\def\isleuven{1}
-mac-leuven: pdf
+mac-leuven: OS=mac
+mac-leuven: SITE=leuven
 
-mac-gent: defines = "\def\ismac{1}\def\isgent{1}"
-mac-gent: pdf
+mac-gent: OS=mac
+mac-gent: SITE=gent
 
-mac-antwerpen: defines = "\def\ismac{1}\def\isantwerpen{1}"
-mac-antwerpen: pdf
+mac-antwerpen: OS=mac
+mac-antwerpen: SITE=antwerpen
 
-mac-brussel: defines = "\def\ismac{1}\def\isbrussel{1}"
-mac-brussel: pdf
+mac-brussel: OS=mac
+mac-brussel: SITE=brussel
 
-mac-hasselt: defines = "\def\ismac{1}\def\ishasselt{1}"
-mac-hasselt: pdf
+mac-hasselt: OS=mac
+mac-hasselt: SITE=brussel
+mac-leuven mac-gent mac-hasselt mac-brussel mac-antwerpen: pdf
 
-windows-leuven: defines = "\def\iswindows{1}\def\isleuven{1}"
-windows-leuven: pdf
+windows-leuven: OS=windows
+windows-leuven: SITE=leuven
 
-windows-gent: defines = "\def\iswindows{1}\def\isgent{1}"
-windows-gent: pdf
+windows-gent: OS=windows
+windows-gent: SITE=gent
 
-windows-antwerpen: defines = "\def\iswindows{1}\def\isantwerpen{1}"
-windows-antwerpen: pdf
+windows-antwerpen: OS=windows
+windows-antwerpen: SITE=antwerpen
 
-windows-brussel: defines = "\def\iswindows{1}\def\isbrussel{1}"
-windows-brussel: pdf
+windows-brussel: OS=windows
+windows-brussel: SITE=brussel
 
-windows-hasselt: defines = "\def\iswindows{1}\def\ishasselt{1}"
-windows-hasselt: pdf
+windows-hasselt: OS=windows
+windows-hasselt: SITE=hasselt
+windows-leuven windows-gent windows-antwerpen windows-brussel windows-hasselt: pdf
 
-leuven: defines = \def\ismac{1}\def\iswindows{1}\def\isleuven{1}
-leuven: pdf
+leuven:
+	make mac-leuven
+	make mac-gent
 
-gent: defines = "\def\ismac{1}\def\iswindows{1}\def\isgent{1}"
-gent: pdf
+gent:
+	make mac-gent
+	make windows-gent
 
-antwerpen: defines = "\def\ismac{1}\def\iswindows{1}\def\isantwerpen{1}"
-antwerpen: pdf
+brussel:
+	make mac-brussel
+	make windows-brussel
 
-brussel: defines = "\def\ismac{1}\def\iswindows{1}\def\isbrussel{1}"
-brussel: pdf
+antwerpen:
+	make mac-antwerpen
+	make windows-antwerpen
 
-hasselt: defines = "\def\ismac{1}\def\iswindows{1}\def\ishasselt{1}"
-hasselt: pdf
+hasselt:
+	make mac-hasselt
+	make windows-hasselt
