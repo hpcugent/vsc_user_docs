@@ -6,3 +6,7 @@
 *.fls
 *.toc
 *.out
+*.glg
+*.glo
+*.gls
+*.ist
