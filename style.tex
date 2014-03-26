@@ -23,14 +23,8 @@
 \lstnewenvironment{prog}{\lstset{style=code}} {}
 
 \newcommand{\shellcmd}[1]{\textbf{\texttt{#1}\\}}
-\newcommand{\iftoggleverb}[1]{%
-  \ifcsdef{etb@tgl@#1}
-    {\csname etb@tgl@#1\endcsname\iftrue\iffalse}
-    {\etb@noglobal\etb@err@notoggle{#1}\iffalse}%
-}
 \parindent=0pt
 \parskip=7pt
-
 \newcommand{\ignore}[1]{}
 
 \newif\ifremark
@@ -52,32 +46,40 @@
 \fi}
 
 \remarktrue
-\newtoggle{windows}
-\newtoggle{mac}
-\newtoggle{leuven}
-\newtoggle{hasselt}
-\newtoggle{brussel}
-\newtoggle{gent}
-\newtoggle{antwerpen}
+\newif\ifwindows
+\newif\ifmac
+\newif\ifleuven
+\newif\ifhasselt
+\newif\ifbrussel
+\newif\ifgent
+\newif\ifantwerpen
+
+\windowsfalse
+\macfalse
+\leuvenfalse
+\hasseltfalse
+\brusselfalse
+\gentfalse
+\antwerpenfalse
 
 \ifdefined\iswindows
-  \toggletrue{windows}
+  \windowstrue
 \fi
 \ifdefined\ismac
-  \toggletrue{mac}
+  \mactrue
 \fi
 \ifdefined\isleuven
-  \toggletrue{leuven}
+  \leuventrue
 \fi
 \ifdefined\ishasselt
-  \toggletrue{hasselt}
+  \hasselttrue
 \fi
 \ifdefined\isbrussel
-  \toggletrue{brussel}
+  \brusseltrue
 \fi
 \ifdefined\isgent
-  \toggletrue{gent}
+  \genttrue
 \fi
 \ifdefined\isantwerpen
-  \toggletrue{antwerpen}
+  \antwerpentrue
 \fi

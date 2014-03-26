@@ -115,41 +115,32 @@ echo "test"
 \section{Windows and Mac-specific}
 \label{sec:windows-and-mac-specific}
 
-You can write Windows or Mac specific sections with the \texttt{iftoggle} command.
-\begin{verbatim}
-\iftoggle{windows}{
-  Windows specific text
-}
-\end{verbatim}
-
-Note: you cannot include verbatim or code sections inside. Should that be necessary use the following construct:
+You can write Windows or Mac specific sections with the \texttt{ifmac} and
+\texttt{ifwindows} commands.
 
 \begin{verbatim}
-\iftoggleverb{windows}
+\ifwindows
   Windows specific text
 \fi
 \end{verbatim}
 
-Note: Don't use \iftoggleverb nested in other conditional statements.
+\begin{verbatim}
+\ifmac
+  Mac specific text
+\fi
+\end{verbatim}
+
 
 \section{Site-specific sections}
 \label{sec:site-specific-sections}
 
 Site-specific sections are very much like platform-specific sections. You use
-the same constructs, but now instead of the \texttt{mac} and \texttt{windows}
-keywords you can use: \texttt{leuven}, \texttt{gent}, \texttt{antwerpen},
-\texttt{hasselt} or \texttt{brussel}.
+the same constructs, but now instead of the \texttt{ifmac} and \texttt{ifwindows}
+keywords you can use: \texttt{ifleuven}, \texttt{ifgent}, \texttt{ifantwerpen},
+\texttt{ifhasselt} or \texttt{ifbrussel}.
 
 \begin{verbatim}
-\iftoggle{gent}{
-  Gent specific text
-}
-\end{verbatim}
-
-You can also use \texttt{iftoggleverb} like above:
-
-\begin{verbatim}
-\iftoggleverb{gent}
+\ifgent
   Gent specific text
 \fi
 \end{verbatim}
