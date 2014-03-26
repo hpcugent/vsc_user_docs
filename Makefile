@@ -1,8 +1,10 @@
 defines = ""
-latex_command = pdflatex -jobname "HPC_$(OS)_$(SITE)" "\def\is$(OS){1}\def\is$(SITE){1}\input{HPC.tex}"
+filename = "HPC_$(OS)_$(SITE)"
+latex_command = pdflatex -jobname $(filename) "\def\is$(OS){1}\def\is$(SITE){1}\input{HPC.tex}"
 
 pdf: ch*.tex HPC.tex
 	$(latex_command)
+	makeglossaries $(filename)
 	$(latex_command)
 
 style-guide: style-guide.tex

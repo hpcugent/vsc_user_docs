@@ -1,10 +1,10 @@
-
 \usepackage[english]{babel}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{hyperref}
 % allow conditional compilation
 \usepackage{etoolbox}
+\usepackage[toc,nonumberlist]{glossaries}
 
 \usepackage{color}
 \usepackage{listings}
@@ -14,7 +14,6 @@
 \graphicspath{{img//}}
 
 \lstset{basicstyle=\ttfamily,breaklines=true}
-
 \lstdefinestyle{prompt}{language=bash,frame=tb,columns=fullflexible,
   escapechar=\%}
 \lstdefinestyle{code}{numbers=left}
@@ -32,7 +31,6 @@
 \parindent=0pt
 \parskip=7pt
 
-\title{Style Guide}
 \newcommand{\ignore}[1]{}
 
 \newif\ifremark

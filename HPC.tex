@@ -1,5 +1,7 @@
 \documentclass[11pt,a4paper,oneside]{book}
 \include{style}
+\include{glossary}
+\makeglossaries
 %TODO:
 % - crossref chapters & co
 % - \n\n -> \n
@@ -13,48 +15,11 @@
 
 \include{title}
 
+\glsaddall
+\printglossaries
+
 \tableofcontents
 
-\chapter{Glossary}
-
-\small
-\begin{tabular}{|p{0.3in}|p{3.8in}|} \hline
-\textbf{Name} & \textbf{Description} \\ \hline
-Cluster & A group of compute nodes. \\ \hline
-Compute Node & The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single processor or CPU. The compute node is equipped with memory (RAM) that is accessible by all its CPUs. \\ \hline
-Core & An individual compute unit inside a CPU. \\ \hline
-CPU & A single processing unit. A CPU is a consumable resource. Compute nodes typically contain of one or more CPUs. \\ \hline
-Distributed memory system & Computing system consisting of many compute nodes connected by a network, each with their own memory. Accessing memory on a neighboring node is possible but require explicit communication.  \\ \hline
-Flop & Floating-point Operations Per second.\newline 1 Teraflop = 1 Trillion or 10${}^{12}$ floating-point operations per second.\newline 1 Gigaflop = 1 Billion or 10${}^{9}$ floating-point operations per second. \\ \hline
-FTP & File Transfer Protocol, used to copy files between distinct machines (over a network). \\ \hline
-Grid & A group of clusters \\ \hline
-HPC & High Performance Computing, high performance computing and multiple-task computing on a supercomputer. \\ \hline
-Infiniband & A high speed switched fabric computer network communications link used in UA-HPC. \\ \hline
-Job constraints & A set of conditions that must be fulfilled for the job to start. These conditions are far reaching and may include one or more of the following: \newline  When the job may run. (e.g., after time X, within Y minutes.) \newline  Which resources may be allocated. (for example, the compute node must possess at least 512 MB of RAM),\newline  Which host or partition to run on (e.g., host A or partition B.) \newline  Starting job relative to a particular event. (e.g. start after job X successfully completes). \\ \hline
-LAN & Local Area Network \\ \hline
-Linux & An operating system, similar to UNIX. \\ \hline
-Login Node & On UA-HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyze computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. \\ \hline
-Memory & A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB). \\ \hline
-Metrics & A measure of some property, activity or performance of a computer sub-system. These metrics are visualized by graphs in, e.g., Ganglia. \\ \hline
-Moab & Moab is a job scheduler, which allocates resources for jobs that are requesting resources. \\ \hline
-Modules & UA-HPC uses an open source software package called "Environment Modules," (Modules for short) which allows you to add various path definitions to your shell environment. \\ \hline
-MPI & MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can be used very well on shared memory systems also. \\ \hline
-Node & Typically, a machine, one computer. A node is the fundamental object associated with compute resources. Each node contains the a list of \newline consumable resources and a list of node attributes. \\ \hline
-Node Attribute & A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes. \\ \hline
-PBS, TORQUE & TORQUE, PBS or OpenPBS are Open Source resource managers, which are responsible for collecting status and health information from compute nodes and keeping track of jobs running in the system. It is also responsible for spawning the actual executable that is associated with a job, e.g., running the executable on the corresponding compute node. Client commands for submitting and managing jobs can be installed on any host, but in general are installed and used from the Login nodes. \\ \hline
-Processor & A processing unit. A processor is a consumable resource. Nodes typically consist of one or more processors. (same as CPU) \\ \hline
-Queues & PBS/TORQUE queues, or "classes," as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12 hour runtime or "walltime" would allow jobs requesting 12 hours or less to use this queue. \\ \hline
-scp & Secure Copy is a protocol to copy files between distinct machines. SCP or scp is used extensively on UA-HPC clusters to stage in data from outside resources. \\ \hline
-Scratch & Supercomputers generally have what is called scratch space: disk space available for temporary use. Use /scratch when, for example you are downloading and uncompressing applications, reading and writing input/output data during a batch job, or when you work with large datasets \\ \hline
-sftp  & Secure File Transfer Protocol, used to copy files between distinct machines. \\ \hline
-Shared memory system & Computing system in which all of the processors share one global memory space. However, access times from a processor to different regions of memory are not necessarily uniform.  \\ \hline
-SSH  & Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities - slogin, ssh, and scp - that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. \\ \hline
-ssh-keys  & OpenSSH is a network connectivity tool, which encrypts all traffic including passwords to effectively eliminate eavesdropping, connection hijacking, and other network-level attacks. SSH-keys are part of the OpenSSH bundle. On NYU UA-HPC clusters, ssh-keys allow password-less access between compute nodes while running batch or interactive parallel jobs. \\ \hline
-super-computer  & A computer with an extremely high processing capacity or processing power. \\ \hline
-swap space  & A quantity of virtual memory available for use by batch jobs. Swap is a consumable resource provided by nodes and consumed by jobs. \\ \hline
-Walltime  & Walltime is the length of time specified in the job-script for which the job will run on a batch system. \\ \hline
-\end{tabular}
-\normalsize
 
 \textbf{Part A: Beginner's Guide}
 
