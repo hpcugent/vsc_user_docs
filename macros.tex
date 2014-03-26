@@ -1,9 +1,15 @@
+% use \macro instead of \newcommand so we automatically add a space
+\usepackage{xspace}
+\newcommand{\macro}[2]{\newcommand{#1}{#2\xspace}}
 \ifgent
 % GENT SPECIFIC MACROS
-\newcommand{\sitename}{gent}
-\newcommand{\hpcname}{HPC}
-\newcommand{\jobid}{20000.master.gengar.ugent.vsc}
-\newcommand{\university}{UGent}
+\macro{\sitename}{gent}
+\macro{\hpc}{HPC-UGent}
+\macro{\jobid}{123456.master15.delcatty.gent.vsc}
+\macro{\loginnode}{gengar.ugent.be}
+\macro{\userid}{vsc40000}
+\macro{\university}{UGent}
+\macro{\city}{Gent}
 
 \fi
 \ifleuven
@@ -16,10 +22,13 @@
 \fi
 \ifantwerpen
 % ANTWERPEN SPECIFIC MACROS
-\newcommand{\sitename}{antwerpen}
-\newcommand{\hpcname}{UA-HPC}
-\newcommand{\jobid}{433253.master1.turing.antwerpen.vsc}
-\newcommand{\university}{UA}
+\macro{\sitename}{antwerpen}
+\macro{\hpc}{UA-HPC}
+\macro{\jobid}{433253.master1.turing.antwerpen.vsc}
+\macro{\userid}{vsc20167}
+\macro{\loginnode}{login.turing.calcua.ua.ac.be}
+\macro{\university}{UA}
+\macro{\city}{Antwerp}
 
 \fi
 \ifbrussel
