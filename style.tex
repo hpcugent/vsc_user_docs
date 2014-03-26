@@ -55,6 +55,11 @@
 
 \remarktrue
 \newtoggle{windows}
-\toggletrue{windows}
 \newtoggle{mac}
-\toggletrue{mac}
+\ifdefined\iswindows
+  \toggletrue{windows}
+\fi
+
+\ifdefined\ismac
+  \toggletrue{mac}
+\fi
