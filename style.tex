@@ -22,6 +22,8 @@
 \lstnewenvironment{code}[1]{\lstset{style=code, language=#1}} {}
 \lstnewenvironment{prog}{\lstset{style=code}} {}
 
+% Taken from: http://tex.stackexchange.com/questions/9363/how-does-one-insert-a-backslash-or-a-tilde-into-latex
+\renewcommand{\tilde}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
 \newcommand{\shellcmd}[1]{\textbf{\texttt{#1}\\}}
 \newcommand{\iftoggleverb}[1]{%
   \ifcsdef{etb@tgl@#1}
