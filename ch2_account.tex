@@ -27,7 +27,7 @@ corresponding private key on his local computer.
   Since all \hpc clusters use Linux as their main operating system, you will
   need to get acquainted with using the command-line interface and using the
   Terminal. A typical Windows environment does not come with pre-installed
-  software to connect and run command-line executables on a HPC. Some tools
+  software to connect and run command-line executables on a \hpc. Some tools
   needs to be installed on your Windows machine first, before we can start the
   actual work.
 
@@ -245,7 +245,7 @@ site.
 
 Browse to \url{https://account.vscentrum.be/req}
 
-Choose `\university' as your VSC site.
+Choose `\sitename' as your VSC site.
 
 Click $<$Submit$>$
 
@@ -270,9 +270,9 @@ You will now be taken to the authentification page of your Institute.
 \fi
 
 After you log in using your \university\ login and password (the one you also
-use for Webmail, BlackBoard, \dots ), you will be asked to upload the file that
-contains your public key, i.e. the file `id\_rsa.pub' which you should already
-have generated.
+use for Webmail, \dots ), you will be asked to upload the file that contains
+your public key, i.e. the file `id\_rsa.pub' which you should already have
+generated.
 
 \ifwindows
 
@@ -370,7 +370,7 @@ Now, you can start using the \hpc.
       we recommend adding a shortcut on your desktop.
     \item  Within the category $<$\textbf{\textit{Session}}$>$, in the field
       $<$\textbf{\textit{Host Name}}$>$, enter the name of the loginnode of the
-      UA-HPC cluster (i.e., ``\textbf{\textit{login.turing.calcua.ua.ac.be}}'')
+      \hpc cluster (i.e., ``\textbf{\textit{\loginnode}}'')
       you want to connect to.
   \end{enumerate}
 
@@ -426,7 +426,7 @@ Now, you can start using the \hpc.
 
   \begin{enumerate}
     \item  After entering your correct password, you will be connected to the
-      login-node of the UA-HPC.
+      login-node of the \hpc.
     \item  To check you can now ``Print the Working Directory'' (pwd) and check
       the name of the computer, where you have logged in (hostname):
   \end{enumerate}
@@ -450,13 +450,13 @@ Now, you can start using the \hpc.
 \subsection{Connect}
 \label{sec:connect}
 
-The UA-HPC is only accessible from within the UA campus network, but you can
+The \hpc is only accessible from within the UA campus network, but you can
 get external access (e.g., from home) by using a UA-VPN connection.
 
-To make a connection to the UA-HPC cluster, the ssh command is used:
+To make a connection to the \hpc cluster, the ssh command is used:
 
 \begin{prompt}
-$ %\shellcmd{ssh $<$vsc-account$>$@login.turing.calcua.ua.ac.be}%
+$ %\shellcmd{ssh $<$vsc-account$>$@\loginnode}%
 \end{prompt}
 
 Here,
@@ -464,25 +464,26 @@ Here,
 \begin{enumerate}
   \item  \textit{$<$vsc-account$>$} is your VSC username that you have received
     by mail after your request was approved,
-  \item  \textit{``login.turing.calcua.ua.ac.be''} is the name of the login
-    node of the UA-HPC cluster you want to connect to.
+  \item  \textit{``\loginnode''} is the name of the login
+    node of the \hpc cluster you want to connect to.
 \end{enumerate}
 
 The first time you make a connection to the login node, you will be asked to
 verify the authenticity of the login node, e.g.,
 
 \begin{prompt}
-$ %\shellcmd{ssh vsc20167@login.turing.calcua.ua.ac.be}%
-The authenticity of host 'login.turing.calcua.ua.ac.be (143.169.237.11)' can't be established.
+$ %\shellcmd{ssh \userid{}@\loginnode{}}%
+The authenticity of host '%\loginnode% (143.169.237.11)' can't be established.
 RSA key fingerprint is b7:66:42:23:5c:d9:43:e8:b8:48:6f:2c:70:de:02:eb.
 Are you sure you want to continue connecting (yes/no)? %\textbf{\textit{yes}}%
 \end{prompt}
 
-Here, user vsc20167 wants to make a connection to the `Turing' cluster at UA
-via the login node 'login.turing.calcua.ua.ac.be'.
+Here, user \userid wants to make a connection to the `Turing' cluster at
+\university via the login node '\loginnode'.
 
+\ifantwerpen
 \textbf{Congratulations, you're on the UA Super-Computer now !!!}
-
+\fi
 Okay, I am on the supercomputer, but where am I?
 
 So, print the current working directory:
@@ -493,7 +494,7 @@ $ %\shellcmd{pwd}%
 
 Your new private home-directory is ``/user/antwerpen/201/$<$vsc-account$>$''.
 Here you can create your own sub-directory structure, copy and prepare your
-applications, compile and test them and submit your jobs on the UA-HPC.
+applications, compile and test them and submit your jobs on the \hpc.
 
 For now, we already have created a symbolic link to the tutorials (including
 all the exercises) for you, which you can explore with the ``ls --l''
@@ -524,13 +525,13 @@ vi/
 This directory currently contains all training material for the use of:
 
 \begin{enumerate}
-\item  The \textbf{\textit{CalcUA HPC.}}
+\item  The \textbf{\textit{CalcUA \hpc.}}
 \item  The \textbf{\textit{Eclipse}} environment.
 \item  The \textbf{\textit{Python}} programming language.
 \item  The \textbf{\textit{VI}} editor.
 \end{enumerate}
 
-More relevant training material to work with the UA-HPC can always be added
+More relevant training material to work with the \hpc can always be added
 later in this directory.
 
 As we are interested in the use of the \textbf{\textit{HPC of CalcUA}}, move
@@ -566,7 +567,7 @@ This directory contains:
     version).
   \item The according \textbf{\textit{HPC slides}} (used during training
     sessions).
-  \item A \textbf{\textit{docs}} sub-directory, containing interesting HPC
+  \item A \textbf{\textit{docs}} sub-directory, containing interesting \hpc
     related documents.
   \item An \textbf{\textit{examples}} sub-directory, containing all the
     examples that you need in this Tutorial, as well as examples that might be
@@ -582,7 +583,7 @@ please refer to the following sites:
 \end{enumerate}
 
 Of course, all documents are ``write-protected''. The first action is to copy
-the contents of the HPC examples directory to your home directory, so that you
+the contents of the \hpc examples directory to your home directory, so that you
 have your own personal copy and that you can start using the examples. The
 ``-r'' option of the copy command will also copy the contents of the
 sub-directories ``\textit{recursively}''.  We first go back to your HOME
@@ -603,14 +604,14 @@ drwxrwxr-x 10 vsc20167 vsc20167 131072 Nov  4 13:15 examples/
 lrwxrwxrwx 1  root     root         25 Nov 12 14:51 tutorials -%$>$% /apps/antwerpen/tutorials/
 \end{prompt}
 
-\section{Computation Workflow on the UA-HPC}
+\section{Computation Workflow on the \hpc}
 \label{sec:compuation-workflow-on-the-hpc}
 
 A typical Computation workflow will be:
 
 \begin{enumerate}
-  \item  Connect to the UA-HPC
-  \item  Transfer your files to the UA-HPC
+  \item  Connect to the \hpc
+  \item  Transfer your files to the \hpc
   \item  Compile your code and test it
   \item  Create a job script
   \item  Submit your job
