@@ -1,6 +1,7 @@
 \documentclass[11pt,a4paper]{article}
 \include{style}
 \title{Style Guide}
+\author{}
 
 \begin{document}
 \maketitle
@@ -122,11 +123,10 @@ You can write Windows or Mac specific sections with the \texttt{iftoggle} comman
 
 Note: you cannot include verbatim or code sections inside. Should that be necessary use the following construct:
 
+
 \begin{verbatim}
 \iftoggleverb{windows}
-\begin{verbatim}
-this works!
-\end{verbatim}
+  Windows specific text
 \fi
 \end{verbatim}
 
