@@ -36,3 +36,18 @@ windows-brussel: pdf
 
 windows-hasselt: defines = "\def\iswindows{1}\def\ishasselt{1}"
 windows-hasselt: pdf
+
+leuven: defines = \def\ismac{1}\def\iswindows{1}\def\isleuven{1}
+leuven: pdf
+
+gent: defines = "\def\ismac{1}\def\iswindows{1}\def\isgent{1}"
+gent: pdf
+
+antwerpen: defines = "\def\ismac{1}\def\iswindows{1}\def\isantwerpen{1}"
+antwerpen: pdf
+
+brussel: defines = "\def\ismac{1}\def\iswindows{1}\def\isbrussel{1}"
+brussel: pdf
+
+hasselt: defines = "\def\ismac{1}\def\iswindows{1}\def\ishasselt{1}"
+hasselt: pdf
