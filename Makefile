@@ -3,6 +3,14 @@ jobname = "HPC_$(OS)_$(SITE)"
 latex_command = pdflatex -jobname $(jobname) "\def\is$(OS){1}\def\is$(SITE){1}\input{HPC.tex}"
 
 pdf: ch*.tex HPC.tex
+ifeq ($(strip $(OS)),"")
+	echo OS has not been set!
+	exit 1
+endif
+ifeq ($(strip $(SITE)),"")
+	echo "SITE has not been set!"
+	exit 1
+endif
 	$(latex_command)
 	makeglossaries $(jobname)
 	$(latex_command)
