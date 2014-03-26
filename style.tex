@@ -56,10 +56,30 @@
 \remarktrue
 \newtoggle{windows}
 \newtoggle{mac}
+\newtoggle{leuven}
+\newtoggle{hasselt}
+\newtoggle{brussel}
+\newtoggle{gent}
+\newtoggle{antwerpen}
+
 \ifdefined\iswindows
   \toggletrue{windows}
 \fi
-
 \ifdefined\ismac
   \toggletrue{mac}
+\fi
+\ifdefined\isleuven
+  \toggletrue{leuven}
+\fi
+\ifdefined\ishasselt
+  \toggletrue{hasselt}
+\fi
+\ifdefined\isbrussel
+  \toggletrue{brussel}
+\fi
+\ifdefined\isgent
+  \toggletrue{gent}
+\fi
+\ifdefined\isantwerpen
+  \toggletrue{antwerpen}
 \fi
