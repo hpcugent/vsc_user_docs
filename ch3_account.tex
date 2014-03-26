@@ -22,7 +22,7 @@ corresponding private key on his local computer.
 \includegraphics*[width=5.75in, height=3.01in, keepaspectratio=false]{ch2-authentication-general}
 
 % IFDEF WINDOWS
-\iftoggleverb{windows}
+\ifwindows
 
   Since all UA-HPC clusters use Linux as their main operating system, you will
   need to get acquainted with using the command-line interface and using the
@@ -108,7 +108,7 @@ corresponding private key on his local computer.
 
 %IFDEF MAC
 
-\iftoggleverb{mac}
+\ifmac
 
   \subsection{Open a terminal}
   \label{sec:open-a-terminal}
@@ -265,7 +265,7 @@ Webmail, BlackBoard, \dots ), you will be asked to upload the file that
 contains your public key, i.e. the file `id\_rsa.pub' which you should already
 have generated.
 
-\iftoggleverb{windows}
+\ifwindows
 
   This file should have been stored in the directory
   `\textit{/Users/$<$Username$>$/PuTTY/.ssh/}'.
@@ -274,7 +274,7 @@ have generated.
 
 
 
-\iftoggleverb{mac}
+\ifmac
 
   This file has been stored in the directory `\tilde/.ssh/'.
 
@@ -308,7 +308,7 @@ which you will normally find in your .ssh subdirectory within your HOME
 Directory. (i.e. /Users/$<$username$>$/.ssh/id\_rsa.pub).
 
 
-\iftoggleverb{mac}
+\ifmac
 
   \textbf{\underbar{Tip:}} As ".ssh" is an invisible directory, the Finder will
   not show it by default. The easiest way to access the folder, is by pressing
@@ -335,7 +335,7 @@ Now, you can start using the UA-HPC.
 \section{First Time connection to the UA-HPC}
 \label{sec:first-time-connection-to-the-hpc}
 
-\iftoggleverb{windows}
+\ifwindows
 
   \subsection{Open a Terminal}
   \label{sec:windows-open-a-terminal}
