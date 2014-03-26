@@ -111,7 +111,20 @@ echo "test"
 \end{code}
 
 \section{Windows and Mac-specific}
-TODO
+
+You can write Windows or Mac specific sections with the \texttt{iftoggle} command.
+\begin{verbatim}
+\iftoggle{windows}{
+  Windows specific text
+}
+\end{verbatim}
+
+Note: you cannot include verbatim or code sections inside. Should that be necessary use the following construct:
+
+\begin{verbatim}
+\end{verbatim}
+
+
 
 \section{Site-specific sections}
 TODO
