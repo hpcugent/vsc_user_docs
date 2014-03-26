@@ -1,7 +1,7 @@
 \documentclass[11pt,a4paper]{article}
 \include{style}
 \title{Style Guide}
-\author{}
+\author{Toon Willems}
 
 \begin{document}
 \maketitle
@@ -124,21 +124,26 @@ You can write Windows or Mac specific sections with the \texttt{iftoggle} comman
 
 Note: you cannot include verbatim or code sections inside. Should that be necessary use the following construct:
 
-
 \begin{verbatim}
 \iftoggleverb{windows}
   Windows specific text
 \fi
 \end{verbatim}
 
-Note: These can not be nested.
+Note: These conditional sections can't be nested when using \texttt{iftoggleverb}.
 
 \section{Site-specific sections}
 \label{sec:site-specific-sections}
 
-Site-specific sections are very much like Platform-specific sections. You use
+Site-specific sections are very much like platform-specific sections. You use
 the same constructs, but now instead of the \texttt{mac} and \texttt{windows}
 keywords you can use: \texttt{leuven}, \texttt{gent}, \texttt{antwerpen},
 \texttt{hasselt} or \texttt{brussel}.
+
+\begin{verbatim}
+\iftoggle{gent}{
+  Gent specific text
+}
+\end{verbatim}
 
 \end{document}
