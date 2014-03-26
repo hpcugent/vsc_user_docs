@@ -2,10 +2,12 @@ defines = ""
 latex_command = pdflatex "$(defines)\input{HPC.tex}"
 
 pdf: ch*.tex HPC.tex
-	$(latex_command) && $(latex_command)
+	$(latex_command)
+	$(latex_command)
 
 style-guide: style-guide.tex
-	pdflatex style-guide.tex && pdflatex style-guide.tex
+	pdflatex style-guide.tex
+	pdflatex style-guide.tex
 
 mac-leuven: defines = \def\ismac{1}\def\isleuven{1}
 mac-leuven: pdf
