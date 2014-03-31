@@ -48,6 +48,25 @@
 \fi}
 
 \remarktrue
+
+\newcommand{\includesite}[1]{
+  \ifleuven
+    \include{#1-leuven}
+  \fi
+  \ifantwerpen
+    \include{#1-antwerpen}
+  \fi
+  \ifhasselt
+    \include{#1-hasselt}
+  \fi
+  \ifbrussel
+    \include{#1-brussel}
+  \fi
+  \ifgent
+    \include{#1-gent}
+  \fi
+}
+
 \newif\ifwindows
 \newif\ifmac
 \newif\ifleuven
