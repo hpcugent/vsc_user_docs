@@ -162,4 +162,23 @@ URL's should be embedded in a \texttt{url} command. This ensures they are clicka
 
 The end result is much nicer, compare http://vscentrum.be with \url{http://vscentrum.be}.
 
+\subsection{Semantics}
+
+Try using the best possible environment suited to your needs. For example instead of using:
+\begin{verbatim}
+\begin{enumerate}
+  \item \textbf{item 1} Description
+\end{enumerate}
+\end{verbatim}
+
+use:
+
+\begin{verbatim}
+\begin{description}
+  \item[item 1] Description
+\end{description}
+\end{verbatim}
+
+As this provides much more semantic value.
+
 \end{document}
