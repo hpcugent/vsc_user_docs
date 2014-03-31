@@ -40,50 +40,50 @@ corresponding private key on his local computer.
 
   Download PuTTY and install it in the C:/Program Files (x86)/PuTTY directory.
 
-  Google ``\textit{PuTTY download}'' or go directly to the official download
+  Google ``\emph{PuTTY download}'' or go directly to the official download
   address: \url{http://www.chiark.greenend.org.uk/\~sgtatham/putty/}
 
   The PuTTY package consists of several components:
 
   \begin{enumerate}
-    \item  \textbf{PuTTY}: the Telnet and SSH client itself
-    \item  \textbf{PSCP}: an SCP client, i.e. command-line secure file copy
-    \item  \textbf{PSFTP}: an SFTP client, i.e. general file transfer sessions much like FTP
-    \item  \textbf{Plink}: a command-line interface to the PuTTY back ends
-    \item  \textbf{Pageant}: an SSH authentication agent for PuTTY, PSCP and Plink
-    \item  \textbf{PuTTYgen}: an RSA and DSA key generation utility
-    \item  \textbf{pterm}: a standalone terminal emulator
+    \item  \strong{PuTTY}: the Telnet and SSH client itself
+    \item  \strong{PSCP}: an SCP client, i.e. command-line secure file copy
+    \item  \strong{PSFTP}: an SFTP client, i.e. general file transfer sessions much like FTP
+    \item  \strong{Plink}: a command-line interface to the PuTTY back ends
+    \item  \strong{Pageant}: an SSH authentication agent for PuTTY, PSCP and Plink
+    \item  \strong{PuTTYgen}: an RSA and DSA key generation utility
+    \item  \strong{pterm}: a standalone terminal emulator
   \end{enumerate}
 
   \subsection{Generating a public/private key pair}
   \label{sec:generate-key-pair}
 
-  Before requesting a VSC account, you need to generate a pair of \textit{ssh}
-  keys. By default, there is no \textbf{\textit{ssh}} client software available
+  Before requesting a VSC account, you need to generate a pair of \emph{ssh}
+  keys. By default, there is no \strong{\emph{ssh}} client software available
   on Windows, so you will typically have to install one yourself. One popular and
   recommended way to do this on Windows is using the freely available
-  \textbf{\textit{PuTTY}} client, which you can then also use to log on to the
+  \strong{\emph{PuTTY}} client, which you can then also use to log on to the
   clusters.
 
   To generate a public/private key pair, you can use the PuTTYgen key generator.
 
-  Start \textbf{\textit{PuTTYgen.exe}} it and follow these steps:
+  Start \strong{\emph{PuTTYgen.exe}} it and follow these steps:
 
   \begin{enumerate}
-    \item  In $<$\textit{Parameters}$>$ (at the bottom of the window), choose 'SSH-2 RSA' and set the number of bits in the key to 2048:
+    \item  In $<$\emph{Parameters}$>$ (at the bottom of the window), choose 'SSH-2 RSA' and set the number of bits in the key to 2048:
   \end{enumerate}
 
   \includegraphics*[width=3.49in, height=3.38in, keepaspectratio=false]{ch2-puttygen-bits}
 
   \begin{enumerate}
-    \item  Click on $<$\textit{Generate}$>$. To generate the key, you must move
+    \item  Click on $<$\emph{Generate}$>$. To generate the key, you must move
       the mouse cursor over the PuTTYgen window (this generates some random
       data that PuTTYgen uses to generate the key pair). Once the key pair is
-      generated, your public key is shown in the field $<$\textit{Public key for pasting into OpenSSH authorized\_keys file}$>$.
-    \item  Next, it is advised to fill in the $<$\textit{Key comment}$>$ field
+      generated, your public key is shown in the field $<$\emph{Public key for pasting into OpenSSH authorized\_keys file}$>$.
+    \item  Next, it is advised to fill in the $<$\emph{Key comment}$>$ field
       to make it easier identifiable afterwards.
-    \item  Next, you should specify a passphrase in the $<$\textit{Key passphrase}$>$
-      field and retype it in the $<$\textit{Confirm passphrase}$>$ field.
+    \item  Next, you should specify a passphrase in the $<$\emph{Key passphrase}$>$
+      field and retype it in the $<$\emph{Confirm passphrase}$>$ field.
       Remember, the passphrase protects the private key against unauthorized
       use, so it is best to choose one that is not too easy to guess but that
       you can still remember.
@@ -96,9 +96,9 @@ corresponding private key on his local computer.
       personal computer (We recommend to create and put them in the folder
       ``C:\textbackslash Users\textbackslash \%USERNAME\%\textbackslash
       AppData\textbackslash Local\textbackslash PuTTY\textbackslash .ssh'')
-      with the buttons $<$\textit{Save public key}$>$ and $<$\textit{Save private key}$>$.
-      We recommend using the name "\textbf{id\_rsa.pub}" for the public key,
-      and "\textbf{id\_rsa.ppk}" for the private key.
+      with the buttons $<$\emph{Save public key}$>$ and $<$\emph{Save private key}$>$.
+      We recommend using the name "\strong{id\_rsa.pub}" for the public key,
+      and "\strong{id\_rsa.ppk}" for the private key.
   \end{enumerate}
 
   If you use another program to generate a key pair, please remember that they
@@ -120,7 +120,7 @@ corresponding private key on his local computer.
 
   To open a Terminal window in OS X, open the Finder and choose
 
-  \textit{$>$$>$ Applications $>$ Utilities $>$ Terminal}
+  \emph{$>$$>$ Applications $>$ Utilities $>$ Terminal}
 
   Before requesting an account, you need to generate a pair of ssh keys. One
   popular way to do this on OS X is using the OpenSSH client included with OS
@@ -221,7 +221,7 @@ corresponding private key on his local computer.
   every time you want to use the private key that is every time you want to
   access the cluster or transfer your files.
 
-  \textbf{Without your key pair, you won't be able to apply for a personal VSC account.}
+  \strong{Without your key pair, you won't be able to apply for a personal VSC account.}
 
 %iftoggle mac
 \fi
@@ -277,7 +277,7 @@ generated.
 \ifwindows
 
   This file should have been stored in the directory
-  `\textit{/Users/$<$Username$>$/PuTTY/.ssh/}'.
+  `\emph{/Users/$<$Username$>$/PuTTY/.ssh/}'.
 
 \fi
 
@@ -287,7 +287,7 @@ generated.
 
   This file has been stored in the directory `\tilde/.ssh/'.
 
-  \textbf{\underbar{Tip:}} As ".ssh" is an invisible directory, the Finder will
+  \strong{\underbar{Tip:}} As ".ssh" is an invisible directory, the Finder will
   not show it by default. The easiest way to access the folder, is by pressing
   Apple-Shift--G, which will allow you to enter the name of a directory, which
   you would like to open in Finder. Here, type "\tilde/.ssh" and press enter.
@@ -300,7 +300,7 @@ confirmation e-mail.
 
 % IF ANTWERPEN
 \ifantwerpen
-\textbf{The site is only accessible from within the University of Antwerp
+\strong{The site is only accessible from within the University of Antwerp
 domain}, so the page won't load from (e.g.) home. However, you can also get
 external access to the UA domain using VPN. We refer to the UA ICT infocenter
 (\url{http://www.ua.ac.be/main.aspx?c=.INFOCENTER}) for more information.
@@ -313,7 +313,7 @@ institutions associated with UA can get a VSC account via the UA. There is not
 yet an automated form to request for your personal VSC account.
 
 Please e-mail the \hpc staff to get an account (see Contacts information).
-You will have to provide a public \textit{ssh} key generated as described
+You will have to provide a public \emph{ssh} key generated as described
 above. Please attach your public key (i.e., the file named `id\_rsa.pub'),
 which you will normally find in your .ssh subdirectory within your HOME
 Directory. (i.e. /Users/$<$username$>$/.ssh/id\_rsa.pub).
@@ -322,7 +322,7 @@ Directory. (i.e. /Users/$<$username$>$/.ssh/id\_rsa.pub).
 % IF MAC
 \ifmac
 
-  \textbf{\underbar{Tip:}} As ".ssh" is an invisible directory, the Finder will
+  \strong{\underbar{Tip:}} As ".ssh" is an invisible directory, the Finder will
   not show it by default. The easiest way to access the folder, is by pressing
   Apple-Shift-G, which will allow you to enter the name of a directory, which
   you would like to open in Finder. Here, type "\tilde/.ssh" and press enter.
@@ -359,58 +359,58 @@ Now, you can start using the \hpc.
   account on the VSC clusters.  The next step is to setup the connection to (one
   of) the \hpc.
 
-  In the screenshots, we show the setup for user ``\textbf{\textit{vsc20167}}''
+  In the screenshots, we show the setup for user ``\strong{\emph{vsc20167}}''
   to the \hpc cluster in Antwerp via the loginnode
-  ``\textbf{\textit{\loginnode}}''.
+  ``\strong{\emph{\loginnode}}''.
 
   \begin{enumerate}
-    \item  Start the PuTTY executable $<$\textbf{\textit{putty.exe}}$>$ in your
-      directory `\textbf{\textit{C:/Program Files (x86)/PuTTY}}' and the
+    \item  Start the PuTTY executable $<$\strong{\emph{putty.exe}}$>$ in your
+      directory `\strong{\emph{C:/Program Files (x86)/PuTTY}}' and the
       configuration screen will pop up. As you will often use the PuTTY tool,
       we recommend adding a shortcut on your desktop.
-    \item  Within the category $<$\textbf{\textit{Session}}$>$, in the field
-      $<$\textbf{\textit{Host Name}}$>$, enter the name of the loginnode of the
-      \hpc cluster (i.e., ``\textbf{\textit{\loginnode}}'')
+    \item  Within the category $<$\strong{\emph{Session}}$>$, in the field
+      $<$\strong{\emph{Host Name}}$>$, enter the name of the loginnode of the
+      \hpc cluster (i.e., ``\strong{\emph{\loginnode}}'')
       you want to connect to.
   \end{enumerate}
 
   \includegraphics*[width=3.59in, height=3.45in, keepaspectratio=false]{ch2-putty-configuration}
 
   \begin{enumerate}
-    \item  In the category $<$\textit{Connection}$>$ $<$\textit{Data}$>$, in
-      the field $<$\textit{Auto-login username}$>$, put in
-      $<$\textit{vsc-account}$>$, which is your VSC username that you have
+    \item  In the category $<$\emph{Connection}$>$ $<$\emph{Data}$>$, in
+      the field $<$\emph{Auto-login username}$>$, put in
+      $<$\emph{vsc-account}$>$, which is your VSC username that you have
       received by mail after your request was approved.
   \end{enumerate}
 
   \includegraphics*[width=3.11in, height=2.99in, keepaspectratio=false]{ch2-putty-configuration2}
 
   \begin{enumerate}
-    \item  In the category $<$\textit{Connection$>$$<$SSH$>$$<$Auth$>$}, in the
-      field $<$\textit{Private key file for authentication}$>$ click on
-      $<$\textit{Browse}$>$ and select the private key (i.e., `id\_rsa.ppk')
+    \item  In the category $<$\emph{Connection$>$$<$SSH$>$$<$Auth$>$}, in the
+      field $<$\emph{Private key file for authentication}$>$ click on
+      $<$\emph{Browse}$>$ and select the private key (i.e., `id\_rsa.ppk')
       that you generated and saved above.
   \end{enumerate}
 
   \includegraphics*[width=3.25in, height=3.13in, keepaspectratio=false]{ch2-putty-key-setup}
 
   \begin{enumerate}
-    \item  In the category $<$\textit{Connection$>$$<$SSH $>$$<$X11$>$}, click
-      the $<$\textit{Enable X11 Forwarding}$>$ checkbox.
+    \item  In the category $<$\emph{Connection$>$$<$SSH $>$$<$X11$>$}, click
+      the $<$\emph{Enable X11 Forwarding}$>$ checkbox.
   \end{enumerate}
 
   \includegraphics*[width=3.54in, height=3.41in, keepaspectratio=false]{ch2-putty-x-forwarding}
 
   \begin{enumerate}
-    \item  Now go back to $<$Session$>$, and fill in ``\textit{Turing}'' in the
-      $<$\textit{Saved Sessions}$>$ field and press $<$\textit{Save}$>$ to
+    \item  Now go back to $<$Session$>$, and fill in ``\emph{Turing}'' in the
+      $<$\emph{Saved Sessions}$>$ field and press $<$\emph{Save}$>$ to
       store the session information.
   \end{enumerate}
 
   \includegraphics*[width=3.30in, height=3.17in, keepaspectratio=false]{ch2-putty-saved-session}
 
   \begin{enumerate}
-    \item  Now pressing $<$\textit{Open}$>$, will open a terminal window and
+    \item  Now pressing $<$\emph{Open}$>$, will open a terminal window and
       asks for you passphrase.
   \end{enumerate}
 
@@ -440,8 +440,8 @@ Now, you can start using the \hpc.
 
   \begin{enumerate}
     \item  For future PuTTY sessions, just select your saved session (i.e.
-      ``\textit{Turing}'') from the list, $<$\textit{Load}$>$ it and press
-      $<$\textit{Open}$>$.
+      ``\emph{Turing}'') from the list, $<$\emph{Load}$>$ it and press
+      $<$\emph{Open}$>$.
   \end{enumerate}
 
 %ENDIF windos
@@ -462,9 +462,9 @@ $ %\shellcmd{ssh $<$vsc-account$>$@\loginnode}%
 Here,
 
 \begin{enumerate}
-  \item  \textit{$<$vsc-account$>$} is your VSC username that you have received
+  \item  \emph{$<$vsc-account$>$} is your VSC username that you have received
     by mail after your request was approved,
-  \item  \textit{``\loginnode''} is the name of the login
+  \item  \emph{``\loginnode''} is the name of the login
     node of the \hpc cluster you want to connect to.
 \end{enumerate}
 
@@ -475,14 +475,14 @@ verify the authenticity of the login node, e.g.,
 $ %\shellcmd{ssh \userid{}@\loginnode{}}%
 The authenticity of host '%\loginnode% (143.169.237.11)' can't be established.
 RSA key fingerprint is b7:66:42:23:5c:d9:43:e8:b8:48:6f:2c:70:de:02:eb.
-Are you sure you want to continue connecting (yes/no)? %\textbf{\textit{yes}}%
+Are you sure you want to continue connecting (yes/no)? %\strong{\emph{yes}}%
 \end{prompt}
 
 Here, user \userid wants to make a connection to the `Turing' cluster at
 \university via the login node '\loginnode'.
 
 \ifantwerpen
-\textbf{Congratulations, you're on the UA Super-Computer now !!!}
+\strong{Congratulations, you're on the UA Super-Computer now !!!}
 \fi
 Okay, I am on the supercomputer, but where am I?
 
@@ -498,8 +498,8 @@ applications, compile and test them and submit your jobs on the \hpc.
 
 For now, we already have created a symbolic link to the tutorials (including
 all the exercises) for you, which you can explore with the ``ls --l''
-(\textbf{l}ist\textbf{s} \textbf{l}ong) and the ``cd'' (\textbf{c}hange
-\textbf{d}irectory) commands:
+(\strong{l}ist\strong{s} \strong{l}ong) and the ``cd'' (\strong{c}hange
+\strong{d}irectory) commands:
 
 \begin{prompt}
 $ %\shellcmd{ls -l}%
@@ -508,8 +508,8 @@ lrwxrwxrwx 1 vsc20167 vsc20167 25 Nov 13 09:53 tutorials -%$>$% /apps/antwerpen/
 $ %\shellcmd{cd tutorials}%
 \end{prompt}
 
-\textbf{Tip: }Typing ``\textbf{\textit{cd tu$<$TAB$>$}}'' will generate the
-``\textbf{\textit{cd tutorials}}'' command. \textbf{Command-line completion
+\strong{Tip: }Typing ``\strong{\emph{cd tu$<$TAB$>$}}'' will generate the
+``\strong{\emph{cd tutorials}}'' command. \strong{Command-line completion
 }(also tab completion) is a common feature of the bash command line
 interpreter, in which the program automatically fills in partially typed
 commands.
@@ -525,17 +525,17 @@ vi/
 This directory currently contains all training material for the use of:
 
 \begin{enumerate}
-\item  The \textbf{\textit{CalcUA \hpc.}}
-\item  The \textbf{\textit{Eclipse}} environment.
-\item  The \textbf{\textit{Python}} programming language.
-\item  The \textbf{\textit{VI}} editor.
+\item  The \strong{\emph{CalcUA \hpc.}}
+\item  The \strong{\emph{Eclipse}} environment.
+\item  The \strong{\emph{Python}} programming language.
+\item  The \strong{\emph{VI}} editor.
 \end{enumerate}
 
 More relevant training material to work with the \hpc can always be added
 later in this directory.
 
-As we are interested in the use of the \textbf{\textit{HPC of CalcUA}}, move
-further to \textbf{\textit{calcua}} and explore the contents up to 2 levels
+As we are interested in the use of the \strong{\emph{HPC of CalcUA}}, move
+further to \strong{\emph{calcua}} and explore the contents up to 2 levels
 deep:
 
 \begin{prompt}
@@ -563,18 +563,18 @@ $ %\shellcmd{tree -L 2}%
 This directory contains:
 
 \begin{enumerate}
-  \item This \textbf{\textit{HPC Tutorial}} (in either a Mac or Windows
+  \item This \strong{\emph{HPC Tutorial}} (in either a Mac or Windows
     version).
-  \item The according \textbf{\textit{HPC slides}} (used during training
+  \item The according \strong{\emph{HPC slides}} (used during training
     sessions).
-  \item A \textbf{\textit{docs}} sub-directory, containing interesting \hpc
+  \item A \strong{\emph{docs}} sub-directory, containing interesting \hpc
     related documents.
-  \item An \textbf{\textit{examples}} sub-directory, containing all the
+  \item An \strong{\emph{examples}} sub-directory, containing all the
     examples that you need in this Tutorial, as well as examples that might be
     useful for your specific applications.
 \end{enumerate}
 
-\textbf{\underbar{Tip:}} For more exhaustive tutorials about Linux usage,
+\strong{\underbar{Tip:}} For more exhaustive tutorials about Linux usage,
 please refer to the following sites:
 
 \begin{enumerate}
@@ -586,7 +586,7 @@ Of course, all documents are ``write-protected''. The first action is to copy
 the contents of the \hpc examples directory to your home directory, so that you
 have your own personal copy and that you can start using the examples. The
 ``-r'' option of the copy command will also copy the contents of the
-sub-directories ``\textit{recursively}''.  We first go back to your HOME
+sub-directories ``\emph{recursively}''.  We first go back to your HOME
 directory.
 
 \begin{prompt}
