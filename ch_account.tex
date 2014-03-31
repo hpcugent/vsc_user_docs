@@ -70,12 +70,11 @@ corresponding private key on his local computer.
   Start \strong{\emph{PuTTYgen.exe}} it and follow these steps:
 
   \begin{enumerate}
-    \item  In $<$\emph{Parameters}$>$ (at the bottom of the window), choose 'SSH-2 RSA' and set the number of bits in the key to 2048:
-  \end{enumerate}
+    \item  In $<$\emph{Parameters}$>$ (at the bottom of the window), choose
+      'SSH-2 RSA' and set the number of bits in the key to 2048.
 
-  \includegraphics*[width=3.49in, height=3.38in, keepaspectratio=false]{ch2-puttygen-bits}
+    \includegraphics*[width=3.49in, height=3.38in, keepaspectratio=false]{ch2-puttygen-bits}
 
-  \begin{enumerate}
     \item  Click on $<$\emph{Generate}$>$. To generate the key, you must move
       the mouse cursor over the PuTTYgen window (this generates some random
       data that PuTTYgen uses to generate the key pair). Once the key pair is
@@ -87,11 +86,9 @@ corresponding private key on his local computer.
       Remember, the passphrase protects the private key against unauthorized
       use, so it is best to choose one that is not too easy to guess but that
       you can still remember.
-  \end{enumerate}
 
-  \includegraphics*[width=3.39in, height=3.28in, keepaspectratio=false]{ch2-puttygen-password}
+    \includegraphics*[width=3.39in, height=3.28in, keepaspectratio=false]{ch2-puttygen-password}
 
-  \begin{enumerate}
     \item  Finally, save both the public and private keys in a folder on your
       personal computer (We recommend to create and put them in the folder
       ``C:\textbackslash Users\textbackslash \%USERNAME\%\textbackslash
@@ -152,7 +149,7 @@ corresponding private key on his local computer.
   OpenSSH software is installed by opening a terminal and typing:
 
   \begin{prompt}
-  $ %\shellcmd{ssh -V}%
+  %\shellcmd{ssh -V}%
   OpenSSH_4.3p2, OpenSSL 0.9.8e-fips-rhel5 01 Jul 2008
   \end{prompt}
 
@@ -173,7 +170,7 @@ corresponding private key on his local computer.
   short'' (``ls'')  command:
 
   \begin{prompt}
-  $ %\shellcmd{ls  \tilde/.ssh}%
+  %\shellcmd{ls  \tilde/.ssh}%
   \end{prompt}
 
 
@@ -206,7 +203,7 @@ corresponding private key on his local computer.
   it. You have to 'unlock' the private key by typing the passphrase.
 
   \begin{prompt}
-  $ %\shellcmd{ssh-keygen}%
+  %\shellcmd{ssh-keygen}%
   Generating public/private rsa key pair.
   Enter file in which to save the key (/home/user/.ssh/id_rsa):
   Enter passphrase (empty for no passphrase):
@@ -372,73 +369,57 @@ Now, you can start using the \hpc.
       $<$\strong{\emph{Host Name}}$>$, enter the name of the loginnode of the
       \hpc cluster (i.e., ``\strong{\emph{\loginnode}}'')
       you want to connect to.
-  \end{enumerate}
 
-  \includegraphics*[width=3.59in, height=3.45in, keepaspectratio=false]{ch2-putty-configuration}
+    \includegraphics*[width=3.59in, height=3.45in, keepaspectratio=false]{ch2-putty-configuration}
 
-  \begin{enumerate}
     \item  In the category $<$\emph{Connection}$>$ $<$\emph{Data}$>$, in
       the field $<$\emph{Auto-login username}$>$, put in
       $<$\emph{vsc-account}$>$, which is your VSC username that you have
       received by mail after your request was approved.
-  \end{enumerate}
 
   \includegraphics*[width=3.11in, height=2.99in, keepaspectratio=false]{ch2-putty-configuration2}
 
-  \begin{enumerate}
     \item  In the category $<$\emph{Connection$>$$<$SSH$>$$<$Auth$>$}, in the
       field $<$\emph{Private key file for authentication}$>$ click on
       $<$\emph{Browse}$>$ and select the private key (i.e., `id\_rsa.ppk')
       that you generated and saved above.
-  \end{enumerate}
 
   \includegraphics*[width=3.25in, height=3.13in, keepaspectratio=false]{ch2-putty-key-setup}
 
-  \begin{enumerate}
     \item  In the category $<$\emph{Connection$>$$<$SSH $>$$<$X11$>$}, click
       the $<$\emph{Enable X11 Forwarding}$>$ checkbox.
-  \end{enumerate}
 
   \includegraphics*[width=3.54in, height=3.41in, keepaspectratio=false]{ch2-putty-x-forwarding}
 
-  \begin{enumerate}
     \item  Now go back to $<$Session$>$, and fill in ``\emph{Turing}'' in the
       $<$\emph{Saved Sessions}$>$ field and press $<$\emph{Save}$>$ to
       store the session information.
-  \end{enumerate}
 
   \includegraphics*[width=3.30in, height=3.17in, keepaspectratio=false]{ch2-putty-saved-session}
 
-  \begin{enumerate}
     \item  Now pressing $<$\emph{Open}$>$, will open a terminal window and
       asks for you passphrase.
-  \end{enumerate}
 
   \includegraphics*[width=3.94in, height=2.47in, keepaspectratio=false]{ch2-putty-enter-password}
 
-  \begin{enumerate}
     \item  The first time you make a connection to the loginnode, a Security
       Alert will appear and you will be asked to verify the authenticity of the
       loginnode.
-  \end{enumerate}
 
   \includegraphics*[width=3.91in, height=2.42in, keepaspectratio=false]{ch2-putty-verify-authenticity}
 
-  \begin{enumerate}
     \item  After entering your correct password, you will be connected to the
       login-node of the \hpc.
     \item  To check you can now ``Print the Working Directory'' (pwd) and check
       the name of the computer, where you have logged in (hostname):
-  \end{enumerate}
 
   \begin{prompt}
-  $ %\shellcmd{pwd}%
+  %\shellcmd{pwd}%
   /user/antwerpen/201/vsc20167
-  $ %\shellcmd{hostname --f}%
+  %\shellcmd{hostname --f}%
   ln01.turing.antwerpen.vsc
   \end{prompt}
 
-  \begin{enumerate}
     \item  For future PuTTY sessions, just select your saved session (i.e.
       ``\emph{Turing}'') from the list, $<$\emph{Load}$>$ it and press
       $<$\emph{Open}$>$.
@@ -456,7 +437,7 @@ get external access (e.g., from home) by using a UA-VPN connection.
 To make a connection to the \hpc cluster, the ssh command is used:
 
 \begin{prompt}
-$ %\shellcmd{ssh $<$vsc-account$>$@\loginnode}%
+%\shellcmd{ssh $<$vsc-account$>$@\loginnode}%
 \end{prompt}
 
 Here,
@@ -472,7 +453,7 @@ The first time you make a connection to the login node, you will be asked to
 verify the authenticity of the login node, e.g.,
 
 \begin{prompt}
-$ %\shellcmd{ssh \userid{}@\loginnode{}}%
+%\shellcmd{ssh \userid{}@\loginnode{}}%
 The authenticity of host '%\loginnode%
   (143.169.237.11)' can't be established.
 RSA key fingerprint is b7:66:42:23:5c:d9:43:e8:b8:48:6f:2c:70:de:02:eb.
@@ -489,7 +470,7 @@ Okay, I am on the supercomputer, but where am I?
 
 So, print the current working directory:
 \begin{prompt}
-$ %\shellcmd{pwd}%
+%\shellcmd{pwd}%
 /user/antwerpen/201/vsc20167
 \end{prompt}
 
@@ -503,10 +484,10 @@ all the exercises) for you, which you can explore with the ``ls --l''
 \strong{d}irectory) commands:
 
 \begin{prompt}
-$ %\shellcmd{ls -l}%
+%\shellcmd{ls -l}%
 total 256
 lrwxrwxrwx 1 vsc20167 vsc20167 25 Nov 13 09:53 tutorials -%$>$% /apps/antwerpen/tutorials/
-$ %\shellcmd{cd tutorials}%
+%\shellcmd{cd tutorials}%
 \end{prompt}
 
 \strong{Tip: }Typing ``\strong{\emph{cd tu$<$TAB$>$}}'' will generate the
@@ -516,7 +497,7 @@ interpreter, in which the program automatically fills in partially typed
 commands.
 
 \begin{prompt}
-$ %\shellcmd{ls  -1}%
+%\shellcmd{ls  -1}%
 calcua/
 eclipse/
 python/
@@ -540,8 +521,8 @@ further to \strong{\emph{calcua}} and explore the contents up to 2 levels
 deep:
 
 \begin{prompt}
-$ %\shellcmd{cd calcua}%
-$ %\shellcmd{tree -L 2}%
+%\shellcmd{cd calcua}%
+%\shellcmd{tree -L 2}%
 .
 %\textbar%-- HPC_Tutorial_Mac.pdf
 %\textbar%-- HPC_Tutorial_Win.pdf
@@ -591,15 +572,15 @@ sub-directories ``\emph{recursively}''.  We first go back to your HOME
 directory.
 
 \begin{prompt}
-$ %\shellcmd{cd}%
-$ %\shellcmd{cp --r \tilde/tutorials/calcua/examples \tilde/}%
+%\shellcmd{cd}%
+%\shellcmd{cp --r \tilde/tutorials/calcua/examples \tilde/}%
 \end{prompt}
 
 Go to your home directory, check your own private examples directory, \dots  and start working.
 
 \begin{prompt}
-$ %\shellcmd{cd}%
-$ %\shellcmd{ls -l}%
+%\shellcmd{cd}%
+%\shellcmd{ls -l}%
 total 792
 drwxrwxr-x 10 vsc20167 vsc20167 131072 Nov  4 13:15 examples/
 lrwxrwxrwx 1  root     root         25 Nov 12 14:51 tutorials -%$>$% /apps/antwerpen/tutorials/
