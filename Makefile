@@ -121,7 +121,6 @@ all:
 	make gent
 
 clean:
-	rm *.pdf
 	rm *.log
 	rm *.aux
 	rm *.fdb_latexmk
