@@ -71,4 +71,23 @@ hasselt:
 	make mac-hasselt
 	make windows-hasselt
 
-all: leuven brussel hasselt antwerpen gent
+windows:
+	make windows-leuven
+	make windows-antwerpen
+	make windows-hasselt
+	make windows-brussel
+	make windows-gent
+
+mac:
+	make mac-leuven
+	make mac-antwerpen
+	make mac-hasselt
+	make mac-brussel
+	make mac-gent
+
+all:
+	make leuven
+	make antwerpen
+	make hasselt
+	make brussel
+	make gent
