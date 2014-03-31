@@ -70,3 +70,5 @@ antwerpen:
 hasselt:
 	make mac-hasselt
 	make windows-hasselt
+
+all: leuven brussel hasselt antwerpen gent
