@@ -1,0 +1,51 @@
+\chapter{UA-HPC Quick Reference Guide}
+
+\begin{tabular}{|p{1.0in}|p{2.9in}|} \hline
+\multicolumn{2}{|p{1in}|}{\textbf{Login}} \\ \hline
+Login & ssh $<$vsc-account$>$@login.turing.calcua.ua.ac.be \\ \hline
+Where am I? & hostname \\ \hline
+Copy to UA-HPC & scp  foo.txt $<$vsc-account$>$@login.turing.calcua.ua.ac.be: \\ \hline
+Copy from UA-HPC & scp $<$vsc-account$>$@login.turing.calcua.ua.ac.be:foo.txt     . \\ \hline
+Setup ftp session & sftp $<$vsc-account$>$@login.turing.calcua.ua.ac.be \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.3in}|p{2.6in}|} \hline
+\multicolumn{2}{|p{1in}|}{\textbf{Modules}} \\ \hline
+List all available modules & module av \\ \hline
+List loaded modules & module list \\ \hline
+Load module & module load $<$name$>$ \\ \hline
+Unload module & module unload $<$name$>$ \\ \hline
+Unload all modules & module purge \\ \hline
+I am lost & module help \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.3in}|p{2.6in}|} \hline
+\multicolumn{2}{|p{1in}|}{\textbf{Jobs}} \\ \hline
+Submit Job & qsub  $<$script.pbs$>$ \\ \hline
+Status of the job & qstat $<$jobid$>$ \\ \hline
+Estimated start time & showstart $<$jobid$>$ \\ \hline
+Check job & checkjob $<$jobid$>$ \\ \hline
+Show compute node & qstat -n $<$jobid$>$ \\ \hline
+Delete job & qdel $<$jobid$>$ \\ \hline
+Status of all your jobs & qstat \\ \hline
+Show all jobs on  queue & showq \\ \hline
+Show queue summary & qstat -q \\ \hline
+Show some queue & qstat -f -Q $<$queue$>$ \\ \hline
+Submit Interactive job & qsub -I \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.3in}|p{2.6in}|} \hline
+\multicolumn{2}{|p{1in}|}{\textbf{Disk quota}} \\ \hline
+Check your disk quota & nmlsquota \\ \hline
+Check disk quota nice & show\_quota.py \\ \hline
+Local disk usage & du  -h  . \\ \hline
+Overall disk usage & df -a \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.3in}|p{2.6in}|} \hline
+\multicolumn{2}{|p{1in}|}{\textbf{Worker Framework}} \\ \hline
+Load worker module & module load worker \\ \hline
+Submit parameter sweep & wsub   -batch  weather.pbs   -data  data.csv \\ \hline
+Submit job array & wsub  -t  1-100  -batch  test\_set.pbs \\ \hline
+Submit job array with prolog and epilog & wsub  -prolog pre.sh  -batch test\_set.pbs  -epilog post.sh -t 1-100 \\ \hline
+\end{tabular}

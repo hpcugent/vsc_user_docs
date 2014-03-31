@@ -1,0 +1,49 @@
+\chapter{Program examples}
+
+Go to our examples in Chapter 11:
+\begin{prompt}
+$ %\textbf{cd \~/examples/Chapter13\_Examples}%
+\end{prompt}
+
+Here, we just have put together a number of examples for your convenience.
+We did an effort to put comments inside the source files, so the source code files are (should be) self-explanatory.
+
+\begin{enumerate}
+\item  01\_Python
+\item  02\_C\_C++
+\item  03\_Matlab
+\item  04\_MPI\_C
+\item  05a\_OMP\_C
+\item  05b\_OMP\_FORTRAN
+\end{enumerate}
+
+The above 2 OMP directories contain the following examples:
+
+\begin{tabular}{|p{1.0in}|p{1.1in}|p{1.7in}|} \hline
+\textbf{C Files} & \textbf{Fortran Files} & \textbf{Description} \\ \hline
+omp\_hello.c & omp\_hello.f & Hello world \\ \hline
+omp\_workshare1.c & omp\_workshare1.f & Loop work-sharing \\ \hline
+omp\_workshare2.c & omp\_workshare2.f & Sections work-sharing \\ \hline
+omp\_reduction.c & omp\_reduction.f & Combined parallel loop reduction \\ \hline
+omp\_orphan.c\newline  & omp\_orphan.f & Orphaned parallel loop reduction \\ \hline
+omp\_mm.c & omp\_mm.f & Matrix multiply \\ \hline
+omp\_getEnvInfo.c & omp\_getEnvInfo.f & Get and print environment information \\ \hline
+omp\_bug1.c \newline omp\_bug1fix.c \newline omp\_bug2.c \newline omp\_bug3.c \newline omp\_bug4.c \newline omp\_bug4fix \newline omp\_bug5.c \newline omp\_bug5fix.c \newline omp\_bug6.c & omp\_bug1.f \newline omp\_bug1fix.f \newline omp\_bug2.f \newline omp\_bug3.f \newline omp\_bug4.f \newline omp\_bug4fix \newline omp\_bug5.f \newline omp\_bug5fix.f \newline omp\_bug6.f & Programs with bugs and their solution \\ \hline
+\end{tabular}
+
+Compile by any of the following commands:
+
+\begin{tabular}{|p{0.5in}|p{3.3in}|} \hline
+\textbf{C:} & icc -openmp omp\_hello.c -o hello\newline pgcc -mp omp\_hello.c -o hello\newline gcc -fopenmp omp\_hello.c -o hello \\ \hline
+\textbf{Fortran:} & ifort -openmp omp\_hello.f -o hello\newline pgf90 -mp omp\_hello.f -o hello\newline gfortran -fopenmp omp\_hello.f -o hello \\ \hline
+\end{tabular}
+
+\begin{enumerate}
+\item  06\_NWChem
+\item  07\_Wien2k
+\item  08\_Gaussian
+\item  09\_Fortran
+\item  10\_PQS
+\end{enumerate}
+
+Be invited to explore the examples.
