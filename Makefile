@@ -121,14 +121,4 @@ all:
 	make gent
 
 clean:
-	rm *.log
-	rm *.aux
-	rm *.fdb_latexmk
-	rm *.listing
-	rm *.fls
-	rm *.toc
-	rm *.out
-	rm *.glg
-	rm *.glo
-	rm *.gls
-	rm *.ist
+	rm -f *.log *.aux *.fdb_latexmk *.listing *.fls *.toc *.out *.glg *.glo *.gls *.ist
