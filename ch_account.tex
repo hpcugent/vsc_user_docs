@@ -70,12 +70,8 @@ corresponding private key on his local computer.
   Start \strong{\emph{PuTTYgen.exe}} it and follow these steps:
 
   \begin{enumerate}
-    \item  In $<$\emph{Parameters}$>$ (at the bottom of the window), choose 'SSH-2 RSA' and set the number of bits in the key to 2048:
-  \end{enumerate}
-
-  \includegraphics*[width=3.49in, height=3.38in, keepaspectratio=false]{ch2-puttygen-bits}
-
-  \begin{enumerate}
+    \item  In $<$\emph{Parameters}$>$ (at the bottom of the window), choose
+      'SSH-2 RSA' and set the number of bits in the key to 2048. See \autoref{fig:puttygen-bits}
     \item  Click on $<$\emph{Generate}$>$. To generate the key, you must move
       the mouse cursor over the PuTTYgen window (this generates some random
       data that PuTTYgen uses to generate the key pair). Once the key pair is
@@ -86,12 +82,7 @@ corresponding private key on his local computer.
       field and retype it in the $<$\emph{Confirm passphrase}$>$ field.
       Remember, the passphrase protects the private key against unauthorized
       use, so it is best to choose one that is not too easy to guess but that
-      you can still remember.
-  \end{enumerate}
-
-  \includegraphics*[width=3.39in, height=3.28in, keepaspectratio=false]{ch2-puttygen-password}
-
-  \begin{enumerate}
+      you can still remember. See \autoref{fig:puttygen-password}
     \item  Finally, save both the public and private keys in a folder on your
       personal computer (We recommend to create and put them in the folder
       ``C:\textbackslash Users\textbackslash \%USERNAME\%\textbackslash
@@ -100,6 +91,18 @@ corresponding private key on his local computer.
       We recommend using the name "\strong{id\_rsa.pub}" for the public key,
       and "\strong{id\_rsa.ppk}" for the private key.
   \end{enumerate}
+
+  \begin{figure}
+    \includegraphics*[width=3.49in, height=3.38in, keepaspectratio=false]{ch2-puttygen-bits}
+    \caption{Putty key generator}
+    \label{fig:puttygen-bits}
+  \end{figure}
+
+  \begin{figure}
+    \includegraphics*[width=3.39in, height=3.28in, keepaspectratio=false]{ch2-puttygen-password}
+    \caption{Putty key generator}
+    \label{fig:puttygen-password}
+  \end{figure}
 
   If you use another program to generate a key pair, please remember that they
   need to be in the OpenSSH format to access the \hpc clusters.
