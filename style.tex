@@ -14,8 +14,13 @@
 \graphicspath{{img//}}
 
 \lstset{basicstyle=\ttfamily,breaklines=true}
-\lstdefinestyle{prompt}{language=bash,frame=tb,columns=fullflexible,
-  escapechar=\%}
+\lstdefinestyle{prompt}{language=bash,
+  frame=tblr,
+  columns=fullflexible,
+  escapechar=\%,
+  fillcolor=\color{lightgray},
+  backgroundcolor=\color{lightgray},
+  }
 \lstdefinestyle{code}{numbers=left}
 
 \lstnewenvironment{prompt} {\lstset{style=prompt}} {}
