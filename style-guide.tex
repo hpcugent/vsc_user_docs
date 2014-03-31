@@ -72,20 +72,20 @@ When defining lists make sure to indent the items.
 \label{sec:displaying-prompts}
 
 To display prompt output you can use the prompt environment. There is the
-special command \texttt{\textbackslash{}shellcmd{}} which provides consistent
-styling. Inside the prompt environment you can use \% as escape character to
-type commands.
+special command \verb|\shellcmd{}| which provides consistent styling. It also
+includes a \$-sign. Inside the prompt environment you can use \% as escape
+character to type commands.
 
 \begin{verbatim}
 \begin{prompt}
-$ %\shellcmd{bash --version}%
+%\shellcmd{bash --version}%
 GNU bash, versie 4.1.2(1)-release (x86_64-redhat-linux-gnu)
 \end{prompt}
 \end{verbatim}
 
 which will result in following output:
 \begin{prompt}
-$ %\shellcmd{bash --version}%
+%\shellcmd{bash --version}%
 GNU bash, versie 4.1.2(1)-release (x86_64-redhat-linux-gnu)
 \end{prompt}
 
