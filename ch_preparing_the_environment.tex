@@ -1,0 +1,491 @@
+\chapter{Preparing the Environment}
+\label{ch:setting-up-the-environment}
+
+Before you can really start using the UA-HPC clusters, there are several things you need to do or know:
+
+\begin{enumerate}
+\item  You need to \textbf{log on to the cluster} using an ssh-client to one of the login nodes. This will give you command-line access. The software you'll need to use on your client system depends on its operating system.
+\item  Before you can do some work, you'll have to \textbf{transfer the files} that you need from your desktop computer to the cluster. At the end of a job, you might want to transfer some files back.
+\item  Optionally, if you wish to use programs with a \textbf{graphical user interface}, you will need an X-server on your client system.
+\item  Often several versions of \textbf{software packages and libraries} are installed, so you need to select the ones you need. To manage different versions efficiently, the VSC clusters use so-called \textbf{modules}, so you will need to select and load the modules that you need.
+\end{enumerate}
+
+\section{Connecting to the UA-HPC}
+
+To make a connection to the UA-HPC clusters, the ssh command is used:
+
+\begin{prompt}
+$ %\textbf{ssh $<$vsc-account$>$@login.turing.calcua.ua.ac.be}%
+\end{prompt}
+
+Here,
+
+\begin{enumerate}
+\item  \textit{$<$vsc-account$>$} is your VSC username that you have received by mail after your request was approved,
+\item  \textit{``login.turing.calcua.ua.ac.be''} is the name of the login node of the UA-HPC cluster you want to connect to.
+\end{enumerate}
+
+Upon connection, you will get a welcome message and your current disk and file quotas are shown.
+
+\begin{prompt}
+\dots
+Your quota is:
+Block Limits
+   Filesystem         KB      quota      limit    grace
+   data            82944   26214400   28835840     none
+   home            35328    3145728    3461120     none
+   scratch         47808   26214400   28835840     none
+
+File Limits
+   Filesystem      files      quota      limit    grace
+   data               27     100000     150000     none
+   home              125      20000      25000     none
+   scratch            11     100000     150000     none
+----------------------------------------------------------
+\end{prompt}
+
+To check on which login node you are connected:
+
+\begin{prompt}
+$ %\textbf{hostname --f}%
+ln02.turing.antwerpen.vsc
+\end{prompt}
+
+You can exit the connection at anytime by entering:
+
+\begin{prompt}
+$ %\textbf{exit}%
+logout
+Connection to login.turing.calcua.ua.ac.be closed.
+\end{prompt}
+
+\textbf{Tip:  Setting your Language right}
+
+You may encounter the following warning message during connecting:
+\begin{prompt}
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+LANGUAGE = (unset),
+LC\_ALL = (unset),
+LC\_CTYPE = "UTF-8",
+LANG = (unset)
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+\end{prompt}
+
+This means that the correct `locale' has not yet been properly specified on your local machine. Try:
+
+\begin{prompt}
+$ %\textbf{locale}%
+LANG=
+LC\_COLLATE="C"
+LC\_CTYPE="UTF-8"
+LC\_MESSAGES="C"
+LC\_MONETARY="C"
+LC\_NUMERIC="C"
+LC\_TIME="C"
+LC\_ALL=
+\end{prompt}
+
+A \textbf{locale} is a set of parameters that defines the user's language, country and any special variant preferences that the user wants to see in their user interface. Usually a locale identifier consists of at least a language identifier and a region identifier.
+
+Open the  .bash\_profile or the .profile on your local machine with your favorite editor and add the following lines:
+
+\begin{prompt}
+$ %\textbf{vi \~/.bash\_profile}%
+\dots
+export LANGUAGE="en\_US.UTF-8"
+export LC\_ALL="en\_US.UTF-8"
+export LC\_CTYPE="en\_US.UTF-8"
+export LANG="en\_US.UTF-8"
+\dots
+\end{prompt}
+
+or alternatively (if you are not comfortable with the Linux editor's):
+
+\begin{prompt}
+$ %\textbf{echo "export LANGUAGE=\textbackslash "en\_US.UTF-8\textbackslash " $>$$>$ \~/.profile"}%
+$ %\textbf{echo ``export LC\_ALL=\textbackslash "en\_US.UTF-8\textbackslash " $>$$>$ \~/.profile''}%
+$ %\textbf{echo ``export LC\_CTYPE=\textbackslash "en\_US.UTF-8\textbackslash " $>$$>$ \~/.profile''}%
+$ %\textbf{echo ``export LANG="en\_US.UTF-8\textbackslash " $>$$>$ \~/.profile''}%
+\end{prompt}
+
+You can now log-out and re-connect to the UA-HPC, and you should not get these warnings anymore.
+
+\section{Transfer Files to/from the UA-HPC}
+
+Before you can do some work, you'll have to \textbf{transfer the files} that you need from your desktop or department to the cluster. At the end of a job, you might want to transfer some files back.
+
+The preferred way to transfer files is by using an scp or sftp via the secure OpenSSH protocol.  OS X comes with its own implementation of OpenSSH, so you don't need to install any third-party software to use it. Just open a Terminal window and jump in!
+
+\#IFDEF WINDOWS
+
+\subsection{WinSCP}
+
+To transfer files to and from the cluster, we recommend the use of WinSCP, which is a graphical ftp-style program (but than one that uses the ssh way of communicating with the cluster rather then the less secure ftp) that is also freely available. WinSCP can be downloaded both as an installation package and as a standalone portable executable.
+
+Google ``WinSCP Download'' and download it from http://www.winscp.net
+
+To transfer your files using WinSCP,
+
+\begin{enumerate}
+\item  Open the program
+\item  Fill in the necessary fields under $<$\textit{Session}$>$
+\begin{enumerate}
+\item  Press $<$\textit{New}$>$
+\item  Enter ``\textit{login.turing.calcua.ua.ac.be}'' in the $<$Host name$>$ field
+\item  Put your ``\textit{vsc-account}'' in $<$\textit{User name}$>$ field
+\item  Select your private key in the field $<$\textit{Private key file}$>$.
+\item  Select $<$\textit{SFTP}$>$ as the $<$\textit{file}$>$ protocol.
+\item  Note that the password field remains empty.
+\end{enumerate}
+\end{enumerate}
+
+\includegraphics*[width=3.42in, height=3.04in, keepaspectratio=false]{img0214}
+
+\begin{enumerate}
+\item  By pressing on the $<$\textit{Save}$>$ button, you can save the session under $<$\textit{Stored sessions}$>$ for future access.
+\item  Finally, when clicking on 'Login', you will be asked for your key passphrase.
+\end{enumerate}
+
+\includegraphics*[width=3.14in, height=2.47in, keepaspectratio=false]{img0215}
+
+The first time you make the connection, you will be asked to 'Continue connecting and add host key to the cache'; select 'Yes'.
+
+\includegraphics*[width=5.74in, height=2.81in, keepaspectratio=false]{img0216}
+
+Now, try out whether you can transfer an arbitrary file from your local machine to the HPC and back.
+
+\#ENDIF WINDOWS
+\#IFDEF MAC
+
+\subsection{Using scp}
+
+\textbf{Secure copy} or \textbf{SCP} is a tool (commando) for securely transferring files between a local host (= your computer) and a remote host (the UA-HPC). It is based on the Secure Shell (SSH) protocol.  The \textbf{scp} command works equivalent `as the \textbf{cp}  (i.e. \textbf{c}o\textbf{p}y) command, but can copy files to or from remote machines.
+
+Open a additional Terminal window in OS X, open the Finder and choose
+
+\begin{prog}
+\textbf{\textit{$>$$>$ Applications $>$ Utilities $>$ Terminal}}
+\end{prog}
+
+Check that you're working on your local machine.
+
+\begin{prompt}
+$ %\textbf{hostname}%
+$<$my\_name$>$.ua.ac.be
+\end{prompt}
+
+If you're still using the terminal that is connected to the UA-HPC, close the connection by typing "exit" in the terminal window. Alternatively, open a new terminal window using the shortcut $<$command$>$$<$N$>$.
+
+For example, we will copy the (local) file ``\textit{localfile.txt}'' to your home directory on the UA-HPC cluster. We first generate a small dummy ``\textit{localfile.txt}'', which contains the word ``Hello''.  Use your own $<$vsc-account$>$, which is something like ``\textit{vsc20167}''.
+
+\begin{prompt}
+$ %\textbf{echo "Hello" $>$ localfile.txt}%
+$ %\textbf{ls -l}%
+\dots
+-rw-r--r-- 1 gborstlap  staff   6 Sep 18 09:37 localfile.txt
+$\textbf{scp localfile.txt $<$vsc-account$>$@login.turing.calcua.ua.ac.be:}
+localfile.txt    100\%    6     0.0KB/s   00:00
+\end{prompt}
+
+
+Connect to the UA-HPC via another terminal, print the working directory (to make sure you're in the home-directory) and check whether the file has arrived:
+
+\begin{prompt}
+$ %\textbf{pwd}%
+/user/antwerpen/201/vsc20167
+$ %\textbf{ls -l}%
+total 1536
+drwxrwxr-x  2 vsc20167 131072 Sep 11 16:24 bin/
+drwxrwxr-x  2 vsc20167 131072 Sep 17 11:47 docs/
+drwxrwxr-x 10 vsc20167 131072 Sep 17 11:48 examples/
+-rw-r--r--  1 vsc20167      6 Sep 18 09:44 localfile.txt
+$ %\textbf{cat localfile.txt}%
+Hello
+\end{prompt}
+
+Likewise, to copy the remote file ``intro\_turing.pdf'' from your ``docs'' sub-directory on the cluster to your local computer, try:
+
+On the Terminal on the UA-HPC, enter:
+
+\begin{prompt}
+$ %\textbf{cd \~/docs}%
+/user/antwerpen/201/vsc20167/docs
+$ %\textbf{ls -l}%
+total 1536
+-rw-r--r-- 1 vsc20167 741995 Sep 11 09:53 intro-turing.pdf
+\end{prompt}
+
+On the Terminal on your own local computer, enter:
+
+\begin{prompt}
+$ %\textbf{scp vsc20167@login.turing.calcua.ua.ac.be:./docs/intro-turing.pdf  .}%
+intro-turing.pdf                               100$%$  725KB 724.6KB/s   00:01
+$ %\textbf{ls -l}%
+total  899
+-rw-r--r--   1 gborstlap  staff     413 Sep 10 10:29 id\_rsa.pub
+-rw-r--r--   1 gborstlap  staff  741995 Sep 18 09:53 intro-turing.pdf
+-rw-r--r--   1 gborstlap  staff       6 Sep 18 09:37 localfile.txt
+\end{prompt}
+
+\subsection{Using sftp}
+
+The \textbf{SSH File Transfer Protocol} (also \textbf{Secure File Transfer Protocol}, or \textbf{SFTP}) is a network protocol that provides file access, file transfer and file management functionalities over any reliable data stream. It was designed as an extension of the Secure Shell protocol (SSH) version 2.0. This protocol assumes that it is run over a secure channel, such as SSH, that the server has already authenticated the client, and that the identity of the client user is available to the protocol.
+
+
+The sftp is an equivalent of the ftp command, with the difference that it uses the secure ssh protocol to connect to the clusters.
+
+One easy way of starting a sftp session is
+\begin{prompt}
+$ %\textbf{sftp $<$vsc-account$>$@$<$vsc-login node$>$}%
+\end{prompt}
+
+Typical and popular commando's inside an sftp session are:
+
+\begin{tabular}{|p{1.2in}|p{2.9in}|} \hline
+\textbf{cd \~/examples/fibo} & Move to the examples/fibo subdirectory on the UA-HPC (i.e. the remote machine)\\  \hline
+\textbf{ls} & Get a list of the files in the current directory on the UA-HPC. \\ \hline
+\textbf{get fibo.py} & Copy the file `fibo.py' from the UA-HPC \\ \hline
+\textbf{get tutorial/HPC.pdf} & Copy the file `HPC.pdf' from the UA-HPC, which is in the `tutorial' subdirectory. \\ \hline
+\textbf{lcd test} & Move to the `test' subdirectory on your local machine. \\ \hline
+\textbf{lcd ..} & Move up one level in the local directory. \\ \hline
+\textbf{lls} & Get local directory listing \\ \hline
+\textbf{put test.py} & Copy the local file test.py to the UA-HPC. \\ \hline
+\textbf{put test1.py test2.py } & Copy the local file test1.py to the UA-HPC and rename it to test2.py. \\ \hline
+\textbf{bye} & Quit the sftp session \\ \hline
+\textbf{mget *.cc} & Copy all the remote files with extension ``.cc'' to the local directory.  \\ \hline
+\textbf{mput *.h} & Copy all he local files with extension ``.h'' to the UA-HPC. \\ \hline
+\end{tabular}
+
+
+\subsection{Using FileZilla}
+
+If you orefer a GUI to transfer files back and forth to the UA-HPC, we can suggest to use FileZilla. FileZilla is a fast and free FTP and SFTP client, which is widely used.
+
+
+
+Download and install FileZilla client at:
+
+https://filezilla-project.org/download.php\textit{}
+
+\textit{}
+
+Tip: Some users might get the notification that Filezilla.app cannot be opened because it is from an unidentified developer. Check out the Mac Gatekeeper at http://support.apple.com/kb/HT5290
+
+Start FileZilla and login to the UA-HPC with the following details:
+
+\begin{enumerate}
+\item  Host: sftp://login.turing.calcua.ua.ac.be
+\item  Username:  $<$your vsc-username$>$
+\end{enumerate}
+
+
+\includegraphics*[width=4.75in, height=4.19in, keepaspectratio=false]{img0300}
+
+\#ENDIF MAC
+
+
+\section{Modules}
+
+Software installation and maintenance on a UA-HPC cluster such as the VSC clusters poses a number of challenges not encountered on a workstation or a departmental cluster. We therefore need a system on the UA-HPC, which is able to easily activate or de-activate the software packages that you require for your program execution.
+
+
+\subsection{Environment Variables}
+
+The program environment on the UA-HPC is controlled by pre-defined settings, which are stored in environment (or shell) variables.
+
+You can use shell variables to store data, set configuration options and customize the environment on the UA-HPC. The default shell under Scientific Linux on the UA-HPC is Bash (Bourne Again Shell) and can be used for the following purposes:
+
+\begin{enumerate}
+\item  Configure look and feel of shell.
+\item  Setup terminal settings depending on which terminal you're using.
+\item  Set the search path for running executable's.
+\item  Set environment variables as needed by programs.
+\item  Set convenient abbreviations for heavily used values
+\item  Run commands that you want to run whenever you log in or log out.
+\item  Setup aliases and/or shell function to automate tasks to save typing and time.
+\item  Changing bash prompt.
+\item  Setting shell options.
+\end{enumerate}
+
+
+The environment variables are typically set at login by a script, whenever you connect to the UA-HPC. These pre-defined variables usually impact the run time behavior of the programs that we want to run.
+
+All the software packages that are installed on the UA-HPC cluster require different settings. These packages include compilers, interpreters, mathematical software such as MATLAB and SAS, as well as other applications and libraries.
+
+In order to administer the active software and their environment variables, a \textbf{\textit{``module''}} package has been developed, which:
+
+\begin{enumerate}
+\item  Activates or de-activates \underbar{software packages} and their dependencies.
+\item  Allows setting and unsetting of \underbar{environment variables}, including adding and deleting entries from database-type environment variables.
+\item  Does this in a \underbar{shell-independent} fashion (necessary information is stored in the accompanying module configuration file).
+\item  Takes care of\underbar{ versioning aspects:} For many libraries, multiple versions are installed and maintained. The module system also takes care of the versioning of software packages in case multiple versions are installed. For instance, it?does not allow multiple versions to be loaded at same time.
+\item  Takes care of\underbar{ dependencies:} Another issue arises when one considers library versions and the dependencies they create. Some software requires an older version of a particular library to run correctly (or at all). Hence a variety of version numbers is available for important libraries.
+\end{enumerate}
+
+
+This is all managed with the ``\textit{module}'' command, which is explained in the next sections.
+
+\subsection{Available modules}
+
+A large number of software packages are installed on the UA-HPC clusters. A list of all currently available software can be obtained by typing:
+
+\begin{prompt}
+$ %\textbf{module av}%
+\end{prompt}
+or
+\begin{prompt}
+$ %\textbf{module available}%
+\end{prompt}
+
+This will give some output such as:
+\begin{prompt}
+---------- /apps/local/turing/harpertown/modules -----------
+ADF/2012.01
+DALTON/2011.v0
+FASTX/0.0.13
+FILTLAN/1.0a-ictce-3.2.2.u2
+FastQC/0.10.1
+GROMACS/4.5.1-ictce-3.2.2.u2
+GenomeAnalysisTK/2.2-3
+Grace/5.1.22-ictce-3.2.1.015.u1
+LAMMPS/28Mar12
+MPACK/0.6.7-LAPACK-3.2.1-GCC-4.4.1-GotoBLAS-1.26
+MPICH/1.2.7p1-ictce-3.2.1.015.u1
+Molpro/2009.1-OpenMPI-1.4.1
+Molpro/2009.1-ga-4.3.1-TCGMSG-MPI-ictce-3.2.2.u2
+Molpro/2009.1-ga-4.3.2-TCGMSG-MPI-ictce-3.2.2.u2
+Molpro/2009.1-ictce-3.2.2.013.u4
+Molpro/2010.1-MPI-ictce-3.2.2.u2
+Molpro/2010.1-ga-4.3.2-TCGMSG-MPI-ictce-3.2.2.u2
+\ldots
+\end{prompt}
+
+This gives a full list of software packages that can be loaded. Note that modules starting with a capital letter are listed first.
+
+\subsection{Activating and de-activating modules}
+
+A module is loaded using the following command:
+
+\begin{prompt}
+$ %\textbf{module load MATLAB}%
+\end{prompt}
+
+This will load the most recent version of MATLAB.
+
+For some packages, e.g., OpenMPI, multiple versions are installed; the load command will automatically choose the most recent version (i.e., the lexicographically last after the "/") or the default version (as set by the system administrators). However, the user can (and probably should, to avoid surprises when never versions are installed) specify a particular version, e.g.:
+
+\begin{prompt}
+$ %\textbf{module load Python/2.7.3-ictce-4.0.1}%
+\end{prompt}
+
+
+Obviously, the user needs to keep track of the modules that are currently loaded. If he executed the two load commands stated above, he will get the following:
+\begin{prompt}
+$ %\textbf{module list}%
+Currently Loaded Modulefiles:
+  1) MATLAB/R2013a        5) imkl/10.3.1.107
+  2) icc/2011.1.107       6) ictce/4.0.1
+  3) ifort/2011.1.107     7) Python/2.7.3-ictce-4.0.1
+  4) impi/4.0.1.007
+\end{prompt}
+
+It is important to note at this point that other modules (e.g., ictce/4.0.1) are also listed, although the user did not explicitly load them. This is because ``Python/2.7.3-ictce-4.0.1'' depends on it (as indicated in it's name), and the system administrator specified that the ``ictce/4.0.1'' module should be loaded whenever the Python module is loaded. There are advantages and disadvantages to this, so be aware of automatically loaded modules whenever things go wrong: they may have something to do with it!
+
+To unload a module, one can use the ``module unload'' command. It works consistently with the load command, and reverses the latter's effect. However, the dependencies of the package are NOT automatically unloaded; the user shall unload the packages one by one. One can however unload automatically loaded modules manually, to debug some problem. When the 'Python' module is unloaded, only the following module remains:
+
+\begin{prompt}
+$ %\textbf{module unload Python}%
+$ %\textbf{module list}%
+Currently Loaded Modulefiles:
+  1) MATLAB/R2013a        4) impi/4.0.1.007
+  2) icc/2011.1.107       5) imkl/10.3.1.107
+  3) ifort/2011.1.107     6) ictce/4.0.1
+\end{prompt}
+
+Notice that the version was not specified: the module system is sufficiently clever to figure out what the user intends. However, checking the list of currently loaded modules is always a good idea, just to make sure\ldots
+
+
+In order to unload all modules at once, and hence be sure to start in a clean state, you can use:
+
+\begin{prompt}
+$ %\textbf{module purge}%
+\end{prompt}
+
+It is a good habit to use this command in job-scripts, prior to loading the modules specifically needed by applications in that job description. This ensures that no version conflicts occur if the user loads module using his '.bashrc' file.
+
+Finally, modules need not be loaded one by one; the two 'load' commands can be combined as follows:
+
+\begin{prompt}
+$ %\textbf{module load MATLAB  Python/2.7.3-ictce-4.0.1}%
+\end{prompt}
+
+This will load the two modules as well as their dependencies.
+
+\subsection{Explicit version numbers}
+
+As a rule, once a module has been installed on the cluster, the executables or libraries it comprises are never modified. This policy ensures that the user's programs will run consistently, at least if the user specifies a specific version. Failing to specify a version may result in unexpected behavior.
+
+
+Consider the following example: the user decides to use the GSL library for numerical computations, and at that point in time, just a single version 1.12, compiled with Intel is installed on the cluster. The user loads the library using:
+
+\begin{prompt}
+$ %\textbf{module load GSL}%
+\end{prompt}
+rather than
+\begin{prompt}
+$ %\textbf{module load GSL/1.12}%
+\end{prompt}
+
+Everything works fine, up to the point where a new version of GSL is installed, 1.13 compiled for gcc. From then on, the user's load command will load the latter version, rather than the one he intended, which may lead to unexpected problems.
+
+
+Lets now generate a version conflict with the ``scripts'' module, and see what is happening.
+
+\begin{prompt}
+$ %\textbf{module av 2$>$\&1 \textbar  grep scripts}%
+scripts/1.1.0
+scripts/1.2.0
+scripts/2.2.2
+scripts/2.3.3
+scripts/2.3.6
+scripts/2.5.1
+scripts/2.6.0
+$ %\textbf{module load scripts/1.2.0}%
+$ %\textbf{module load scripts /2.6.0 }%
+scripts/2.6.0(13):ERROR:150: Module 'scripts/2.6.0' conflicts with the currently loaded module(s) 'scripts/1.2.0'
+scripts/2.6.0(13):ERROR:102: Tcl command execution failed: conflict scripts
+$ %\textbf{module switch scripts/2.6.0}%
+\end{prompt}
+
+Note: A ``module switch'' command combines the appropriate ``module unload'' and ``module load'' commands.
+
+\subsection{Get detailed info}
+
+In order to know more about a certain package, and to know what environment variables will be changed by a certain module, try:
+\begin{prompt}
+$ %\textbf{module show Molpro}%
+-------------------------------------------------------------------
+/apps/local/turing/harpertown/modules/Molpro/2010.1-ga-4.3.2-TCGMSG-MPI-ictce-3.2.2.u2:
+module-whatis Molpro is a complete system for molecular electronic structure calculations - Homepage: http://www.molpro.net/
+conflict  Molpro
+module  load ictce/3.2.2.u2
+prepend-path  PATH  /apps/local/turing/harpertown/software/Molpro/2010.1-ga-4.3.2-TCGMSG-MPI-ictce-3.2.2.u2/bin
+setenv     SOFTROOTMOLPRO /apps/local/turing/harpertown/
+software/Molpro/2010.1-ga-4.3.2-TCGMSG-MPI-ictce-3.2.2.u2
+setenv   SOFTVERSIONMOLPRO 2010.1
+-------------------------------------------------------------------
+\end{prompt}
+
+To get a list of all possible commands, type:
+\begin{prompt}
+$ %\textbf{module help}%
+\end{prompt}
+Or to get more information about one specific module package:
+\begin{prompt}
+$ %\textbf{module help zlib}%
+----------- Module Specific Help for 'zlib/1.2.8-ictce-5.5.0' ---------------------------
+zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. -
+Homepage: http://www.zlib.net/
+\end{prompt}
