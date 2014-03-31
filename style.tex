@@ -47,6 +47,14 @@
   \endgroup%
 \fi}
 
+% custom \strong declaration
+\makeatletter
+\newcommand{\strong}[1]{\@strong{#1}}
+\newcommand{\@@strong}[1]{\textbf{\let\@strong\@@@strong#1}}
+\newcommand{\@@@strong}[1]{\textnormal{\let\@strong\@@strong#1}}
+\let\@strong\@@strong
+\makeatother
+
 \remarktrue
 \newif\ifwindows
 \newif\ifmac
