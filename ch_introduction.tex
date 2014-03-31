@@ -4,8 +4,8 @@
 \section{What is UA-HPC?}
 \label{sec:what-is-hpc}
 
-``\textbf{High Performance Computing}'' (HPC) is computing on a
-``\textit{Supercomputer}'', a computer with at the frontline of contemporary
+``\strong{High Performance Computing}'' (HPC) is computing on a
+``\emph{Supercomputer}'', a computer with at the frontline of contemporary
 processing capacity -- particularly speed of calculation and available memory.
 
 While the supercomputers in the early days (around 1970) used only a few
@@ -15,12 +15,12 @@ tens of thousands of "off-the-shelf" processors were the norm. A large number
 of dedicated processors are placed in close proximity to each other in a
 computer cluster.
 
-A \textbf{computer cluster} consists of a set of loosely or tightly connected
+A \strong{computer cluster} consists of a set of loosely or tightly connected
 computers that work together so that in many respects they can be viewed as a
 single system.
 
 The components of a cluster are usually connected to each other through fast
-local area networks (``LAN'') with each \textit{node} (computer used as a
+local area networks (``LAN'') with each \emph{node} (computer used as a
 server) running its own instance of an operating system. Computer clusters
 emerged as a result of convergence of a number of computing trends including
 the availability of low cost microprocessors, high-speed networks, and software
@@ -58,7 +58,7 @@ extremely fast solution for all their data processing needs.
 The UA-HPC consists of:
 
 \begin{tabular}{|p{1.8in}|p{2.1in}|} \hline
-\textbf{In technical terms}         & \textbf{\dots  in human terms}                    \\ \hline
+\strong{In technical terms}         & \strong{\dots  in human terms}                    \\ \hline
 168 nodes and 2496 cores            & \dots  or the equivalent of 612 quad-core PC's    \\ \hline
 22,5 Terabyte of online storage     & \dots  or the equivalent of 5600 DVD's            \\ \hline
 10Gbit infiniband Fiber connections & \dots  or allowing to transfer 2 DVD's per second \\ \hline
@@ -75,9 +75,9 @@ The UA-HPC currently has:
 
 All the nodes in the UA-HPC run under the ``Scientific Linux 5.4'' operating
 system, which is a clone of ``Red Hat Enterprise Linux (RHEL) 5'', with a
-``2.6.18'' kernel with \textit{cpuset} support and \textit{BLCR} modules.
+``2.6.18'' kernel with \emph{cpuset} support and \emph{BLCR} modules.
 
-Three different tools perform the \textbf{job management, job scheduling and accounting}:
+Three different tools perform the \strong{job management, job scheduling and accounting}:
 
 \begin{enumerate}
   \item  TORQUE : a resource manager (based on PBS)
@@ -134,7 +134,7 @@ the UA-HPC is the desired solution to run interactive programs.
 \subsection{Parallel or sequential programs?}
 \label{sec:parallel-or-sequential-programs}
 
-\textbf{Parallel computing} is a form of computation in which many calculations
+\strong{Parallel computing} is a form of computation in which many calculations
 are carried out simultaneously. They are based on the principle that large
 problems can often be divided into smaller ones, which are then solved
 concurrently ("in parallel").
@@ -145,13 +145,13 @@ processing elements within a single machine, while clusters use multiple
 computers to work on the same task. Parallel computing has become the dominant
 computer architecture, mainly in the form of multicore processors.
 
-\textbf{Parallel programs} are more difficult to write than sequential ones,
+\strong{Parallel programs} are more difficult to write than sequential ones,
 because concurrency introduces several new classes of potential software bugs,
 of which race conditions are the most common. Communication and synchronization
 between the different subtasks are typically some of the greatest obstacles to
 getting good parallel program performance.
 
-It is perfectly possible to also run purely \textbf{sequential programs} on the
+It is perfectly possible to also run purely \strong{sequential programs} on the
 UA-HPC.
 
 Running your sequential programs on the most modern and fastest computers in
@@ -167,7 +167,7 @@ You can use ANY programming language, ANY software package and ANY library as
 long as it has a version that runs on Linux (provided it runs on the version of
 Linux that is installed on the compute nodes, being Scientific Linux).
 
-For the most common \textbf{programming languages}, a compiler is available on
+For the most common \strong{programming languages}, a compiler is available on
 Scientific Linux. Supported and common programming languages on the UA-HPC are
 C/C++, FORTRAN, Java, Python, MATLAB, R, etc.
 
@@ -179,7 +179,7 @@ NWChem, Quantum Espresso, R, Siesta, TURBOMOLE, WIEN2k, \ldots
 
 Commonly used Libraries are Intel MKL, FFTW, HDF5, PETSc and M(VA)PICH/OpenMPI.
 
-Additional software can be installed ``\textit{on demand}''. Please check the
+Additional software can be installed ``\emph{on demand}''. Please check the
 UA-HPC staff to see whether the UA-HPC can handle your specific requirements.
 
 \subsection{What operating systems can I use?}
