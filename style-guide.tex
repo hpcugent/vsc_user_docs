@@ -145,13 +145,35 @@ keywords you can use: \texttt{ifleuven}, \texttt{ifgent}, \texttt{ifantwerpen},
 \fi
 \end{verbatim}
 
-If large pieces of text need to be included you can use the \texttt{includesite} command.
+If large pieces of text need to be included you can use the
+\texttt{includesite} command. Note: This command does not fail, but this can be
+seen as a feature, since you need not worry about other sites.
 
 \begin{verbatim}
 \includesite{intro}
 \end{verbatim}
 
 The above example will not include intro.tex, but will include intro-site.tex (e.g. intro-gent.tex)
+
+\subsection{Macros}
+\label{sec:macros}
+
+There is sometimes the need to write a general text segment, but include site
+specific names. For example a section which includes the name of the login node.
+To fix this problem, you can use a macro. For example:
+
+\begin{verbatim}
+you can connec to \loginnode with ssh.
+\end{verbatim}
+
+These macros are all defined inside \texttt{macros.tex}. You can define new macros like so:
+\begin{verbatim}
+\macro{\city}{Gent}
+\end{verbatim}
+
+Place them inside the correct if block and they will be defined for your site.
+Note: Adding new macros breaks the compilation process! Add them for all sites,
+and do not abuse them.
 
 \section{Misc.}
 \label{sec:misc}
