@@ -119,3 +119,17 @@ all:
 	make hasselt
 	make brussel
 	make gent
+
+clean:
+	rm *.pdf
+	rm *.log
+	rm *.aux
+	rm *.fdb_latexmk
+	rm *.listing
+	rm *.fls
+	rm *.toc
+	rm *.out
+	rm *.glg
+	rm *.glo
+	rm *.gls
+	rm *.ist
