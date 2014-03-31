@@ -51,22 +51,74 @@ windows-hasselt: OS=windows
 windows-hasselt: SITE=hasselt
 windows-leuven windows-gent windows-antwerpen windows-brussel windows-hasselt: pdf
 
+linux-leuven: OS=linux
+linux-leuven: SITE=leuven
+
+linux-gent: OS=linux
+linux-gent: SITE=gent
+
+linux-antwerpen: OS=linux
+linux-antwerpen: SITE=antwerpen
+
+linux-brussel: OS=linux
+linux-brussel: SITE=brussel
+
+linux-hasselt: OS=linux
+linux-hasselt: SITE=hasselt
+linux-leuven linux-gent linux-antwerpen linux-brussel linux-hasselt: pdf
+
 leuven:
 	make mac-leuven
-	make mac-gent
+	make windows-leuven
+	make linux-leuven
 
 gent:
 	make mac-gent
 	make windows-gent
+	make linux-gent
 
 brussel:
 	make mac-brussel
 	make windows-brussel
+	make linux-brussel
 
 antwerpen:
 	make mac-antwerpen
 	make windows-antwerpen
+	make linux-antwerpen
 
 hasselt:
 	make mac-hasselt
 	make windows-hasselt
+	make linux-hasselt
+
+windows:
+	make windows-leuven
+	make windows-antwerpen
+	make windows-hasselt
+	make windows-brussel
+	make windows-gent
+
+mac:
+	make mac-leuven
+	make mac-antwerpen
+	make mac-hasselt
+	make mac-brussel
+	make mac-gent
+
+linux:
+	make linux-leuven
+	make linux-antwerpen
+	make linux-hasselt
+	make linux-brussel
+	make linux-gent
+
+all:
+	make leuven
+	make antwerpen
+	make hasselt
+	make brussel
+	make gent
+
+clean:
+	rm -f *.log *.aux *.fdb_latexmk *.listing *.fls *.toc *.out *.glg *.glo *.gls *.ist
