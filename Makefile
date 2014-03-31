@@ -12,6 +12,7 @@ ifeq ($(strip $(SITE)),"")
 	exit 1
 endif
 	$(latex_command)
+	makeindex $(jobname)
 	makeglossaries $(jobname)
 	$(latex_command)
 
