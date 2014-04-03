@@ -15,17 +15,15 @@ ifndef SITE
 SITE=""
 endif
 
-ifeq ($(strip $(OS)),"") 
-$(error "OS must be set to one of $(all_os)")
-endif
-ifeq ($(strip $(SITE)),"")
-$(error "SITE must be set to one of $(all_site)")
-endif
-
-
 all: $(document_pdf)
 
 $(document_pdf): ch_*.tex HPC.tex
+ifeq ($(strip $(OS)),"") 
+	echo "OS must be set to one of $(all_os)"
+endif
+ifeq ($(strip $(SITE)),"")
+	echo "SITE must be set to one of $(all_site)"
+endif
 	$(latex_command)
 	makeglossaries $(jobname)
 	$(latex_command)
