@@ -1,4 +1,4 @@
-\chapter{Introduction to \hpc}
+\chapter{Introduction to UA-HPC}
 \label{ch:introduction-to-hpc}
 
 \section{What is \hpc?}
@@ -67,7 +67,7 @@ The \hpc consists of:
 %TODO insert specs for other sites
 The \hpc currently has:
 
-\ifantweren
+\ifantwerpen
 \begin{enumerate}
   \item  64 compute nodes with 2 quad core Harpertown processors, 16 GB memory, 120 GB local disk, GbE network
   \item  32 nodes with 2 quad core Harpertown processors, 16 GB memory, 120 GB local disk, DDR-IB network
@@ -98,7 +98,7 @@ Two tools perform the \strong{job management} and \strong{job scheduling}:
 %TODO check whether others use accounting
 
 For maintenance and monitoring, we use:
-\ifantwerpen}
+\ifantwerpen
 \begin{enumerate}
   \item  Ganglia: monitoring software;
   \item  Nagios: alert manager.
@@ -186,30 +186,28 @@ For the most common \strong{programming languages}, a compiler is available on
 \operatingsystem. Supported and common programming languages on the \hpc are
 C/C++, FORTRAN, Java, Python, MATLAB, R, etc.
 
-\ifantwerpen
 Supported and commonly used compilers are GCC, clang, J2EE and Intel Cluster
 Studio.
 
 Commonly used software packages are ABINIT, CP2K, Gaussian, Gromacs, Molpro,
 NWChem, Quantum Espresso, R, Siesta, TURBOMOLE, WIEN2k, \ldots
+
 Commonly used Libraries are Intel MKL, FFTW, HDF5, PETSc and M(VA)PICH/OpenMPI.
-\fi
-%TODO list of supported stuff
 
 Additional software can be installed ``\emph{on demand}''. Please check the
-\hpc staff to see whether the UA-HPC can handle your specific requirements.
+UA-HPC staff to see whether the UA-HPC can handle your specific requirements.
 
 \subsection{What operating systems can I use?}
 \label{sec:what-operating-systems-can-i-use}
 
-All nodes in the \hpc cluster run under the ``\operatingsystem'' 
-operating system. This means that all programs (executable) must be compiled for this version
-of the Linux operating system.
+All nodes in the UA-HPC cluster run under the ``Scientific Linux'' (SL)
+Operating system, which is a specific version of RedHat-Linux. This means that
+all programs (executable) must be compiled for the SL Operating System.
 
-But a user can connect from any desk computer in the \university network to the \hpc,
+But a user can connect from any desk computer in the UA network to the UA-HPC,
 regardless of the Operating System that he is using at his personal computer.
-The user can use any of the common operating systems (such as Microsoft Windows, Apple OS X or
-any version of Linux/Unix/BSD) and run and control his programs on the \hpc.
+The user can use any of the common Operating Systems (such as Windows, OS X or
+any version of Linux/Unix/BSD) and run and control his programs on the UA-HPC.
 
 A user does not need to have prior knowledge about Linux; all of the required
 knowledge is explained in this tutorial.
@@ -217,10 +215,10 @@ knowledge is explained in this tutorial.
 \subsection{What is the next step?}
 \label{sec:what-is-the-next-step}
 
-When you think that the \hpc is a useful tool to support your computational
+When you think that the UA-HPC is a useful tool to support your computational
 needs, we encourage you to acquire a VSC-account (as explained in
 \autoref{ch:getting-a-hpc-account}), read \autoref{ch:setting-up-the-environment}, "Setting up the
 environment", and explore Chapters 5 to 11 which will help you to transfer and
-run your programs on the \hpc cluster.
+run your programs on the UA-HPC cluster.
 
-Do not hesitate to contact the \HPC team members for any help.
+Do not hesitate to contact the UA-HPC team members for any help.
