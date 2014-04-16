@@ -60,20 +60,36 @@ The \hpc consists of:
 \begin{tabular}{|p{1.8in}|p{2.1in}|} \hline
 \strong{In technical terms}         & \strong{\dots  in human terms}                    \\ \hline
 168 nodes and 2496 cores            & \dots  or the equivalent of 612 quad-core PC's    \\ \hline
-22,5 Terabyte of online storage     & \dots  or the equivalent of 5600 DVD's            \\ \hline
+22.5 Terabyte of online storage     & \dots  or the equivalent of 5600 DVD's            \\ \hline
 10Gbit infiniband Fiber connections & \dots  or allowing to transfer 2 DVD's per second \\ \hline
 \end{tabular}
 \fi
 %TODO insert specs for other sites
-The \hpc currently has:
 
+The \hpc currently has:
 \ifantwerpen
 \begin{enumerate}
-  \item  64 compute nodes with 2 quad core Harpertown processors, 16 GB memory, 120 GB local disk, GbE network
-  \item  32 nodes with 2 quad core Harpertown processors, 16 GB memory, 120 GB local disk, DDR-IB network
-  \item  64 nodes with 2 six core Westmere processors,?24 GB memory, 120 GB local disk, QDR-IB network
-  \item  8 nodes with 2 six core Westmere processors, 24 GB memory, 120 GB local disk, GbE network
+  \item  64 compute nodes with 2 quad core Harpertown processors, 16 GB memory,
+         120 GB local disk, GbE network
+  \item  32 nodes with 2 quad core Harpertown processors, 16 GB memory,
+         120 GB local disk, DDR-IB network
+  \item  64 nodes with 2 six core Westmere processors, 24 GB memory,
+         120 GB local disk, QDR-IB network
+  \item  8 nodes with 2 six core Westmere processors, 24 GB memory,
+         120 GB local disk, GbE network
 \end{enumerate}
+\fi
+\ifleuven
+    \begin{enumerate}
+      \item  112 compute nodes with 2 10-core Ivy Bridge processors, 64 GB memory,
+             300 GB local disk, QDR-IB network
+      \item  32 compute nodes with 2 10-core Ivy Bridge processors, 128 GB memory,
+             300 GB local disk, QDR-IB network
+      \item  8 nodes with 2 8-core Sandy Bridge processors, 64 GB memory,
+             300 GB local disk, DDR-IB network, 2 K20 NVIDIA GPGPUs
+      \item  8 nodes with 2 8-core Sandy Bridge processors, 64 GB memory,
+             300 GB local disk, DDR-IB network, 2 Intel Xeon Phis
+    \end{enumerate}
 \fi
 %TODO insert specs for other sites
 
@@ -81,6 +97,9 @@ The \hpc currently has:
 All the nodes in the \hpc run under the ``\operatingsystem'' operating
 system, which is a clone of ``Red Hat Enterprise Linux (RHEL) 5'', with a
 ``2.6.18'' kernel with \emph{cpuset} support and \emph{BLCR} modules.
+\fi
+\ifleuven
+All the nodes in the \hpc run under the ``\operatingsystem'' operating system, version 6.
 \fi
 %TODO insert specs for other sites
 
@@ -99,10 +118,16 @@ Two tools perform the \strong{job management} and \strong{job scheduling}:
 
 For maintenance and monitoring, we use:
 \ifantwerpen
-\begin{enumerate}
-  \item  Ganglia: monitoring software;
-  \item  Nagios: alert manager.
-\end{enumerate}
+    \begin{enumerate}
+      \item  Ganglia: monitoring software;
+      \item  Nagios: alert manager.
+    \end{enumerate}
+\fi
+\ifleuven
+    \begin{enumerate}
+      \item  Ganglia: monitoring software;
+      \item  Nagios: alert manager.
+    \end{enumerate}
 \fi
 %TODO check tools for other sites
 
@@ -153,7 +178,6 @@ are carried out simultaneously. They are based on the principle that large
 problems can often be divided into smaller ones, which are then solved
 concurrently (``in parallel'').
 
-%TODO elaborate this a bit
 Parallel computers can be roughly classified according to the level at which
 the hardware supports parallelism, with multicore computers having multiple
 processing elements within a single machine, while clusters use multiple
@@ -190,7 +214,7 @@ Supported and commonly used compilers are GCC, clang, J2EE and Intel Cluster
 Studio.
 
 Commonly used software packages are ABINIT, CP2K, Gaussian, Gromacs, Molpro,
-NWChem, Quantum Espresso, R, Siesta, TURBOMOLE, WIEN2k, \ldots
+NWChem, Quantum Espresso, R, Siesta, TURBOMOLE, WIEN2k,\ldots
 
 Commonly used Libraries are Intel MKL, FFTW, HDF5, PETSc and M(VA)PICH/OpenMPI.
 
