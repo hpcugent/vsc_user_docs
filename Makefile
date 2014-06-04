@@ -1,32 +1,44 @@
 defines = ""
-jobname = HPC_$(OS)_$(SITE)
-latex_command = pdflatex -jobname $(jobname) "\def\is$(OS){1}\def\is$(SITE){1}\input{HPC.tex}"
 
 all_os = linux mac windows
 all_site = antwerp brussel gent leuven
+all_doc = intro-HPC
 document_pdf = $(jobname).pdf
 
 .PHONY = all
 
 ifndef OS
-OS=""
+OS=$(all_os)
 endif
 ifndef SITE
-SITE=""
+SITE=$(all_site)
 endif
+ifndef DOC
+DOC=$(all_doc)
+endif
+
+
+default: complain
+
+complain:
+	echo "Please set OS, SITE and DOC variables. e.g. make OS=mac SITE=gent DOC=intro-HPC"
 
 all: $(document_pdf)
 
-$(document_pdf): ch_*.tex HPC.tex
-ifeq ($(strip $(OS)),"")
-	echo "OS must be set to one of $(all_os)"
-endif
-ifeq ($(strip $(SITE)),"")
-	echo "SITE must be set to one of $(all_site)"
-endif
-	cd HPC-tutorial && $(latex_command)
-	cd HPC-tutorial && makeglossaries $(jobname)
-	cd HPC-tutorial && $(latex_command)
+$(document_pdf):
+	for os in $(OS) ; do \
+		for doc in $(DOC) ; do \
+			for site in $(SITE) ; do \
+				echo $$doc $$os $$site ; \
+				jobname="$$doc-$$os-$$site" ; \
+				latexcommand="pdflatex -jobname $$jobname \"\def\is$$os{1}\def\is$$site{1}\input{HPC.tex}\"" ; \
+				cd $$doc ; \
+				$$latexcommand ; \
+			  makeglossaries $$jobname ; \
+				$$latexcommand ; \
+			done ; \
+		done ;  \
+	done ;
 
 style-guide: style-guide.pdf
 
