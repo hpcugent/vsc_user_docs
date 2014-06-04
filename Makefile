@@ -16,7 +16,7 @@ ifndef DOC
 DOC=$(all_doc)
 endif
 
-pdf:
+all:
 	for os in $(OS) ; do \
 		for doc in $(DOC) ; do \
 			for site in $(SITE) ; do \
