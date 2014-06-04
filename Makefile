@@ -12,6 +12,7 @@ ifeq ($(strip $(SITE)),"")
 	exit 1
 endif
 	$(latex_command)
+	makeindex $(jobname)
 	makeglossaries $(jobname)
 	$(latex_command)
 
@@ -121,4 +122,4 @@ all:
 	make gent
 
 clean:
-	rm -f *.log *.aux *.fdb_latexmk *.listing *.fls *.toc *.out *.glg *.glo *.gls *.ist
+	rm -f *.log *.aux *.fdb_latexmk *.listing *.fls *.toc *.out *.glg *.glo *.gls *.ist *.ind *.ilg *.idx
