@@ -13,12 +13,13 @@ can be specified on the command line.
 
 The syntax for \emph{qsub} for submitting an interactive PBS job is:
 \begin{prompt}
-qsub -I %\ldots% pbs directives %\ldots%
+%\shellcmd{qsub -I \ldots pbs directives \ldots}%
 \end{prompt}
 
 \section{Interactive jobs, without X support}
 
-\emph{\underbar{Tip}: Find the code in ``\tilde/examples/Chapter05\_Interactive''}
+\emph{\underbar{Tip}: Find the code in
+``\tilde/examples/Chapter05\_Interactive''}
 
 First of all, in order to know on which computer you're working, enter:
 \begin{prompt}
@@ -43,9 +44,9 @@ There are two things of note here.
       flag) waits until a node is assigned to your interactive session,
       connects to the compute node and shows you the terminal prompt on that
       node.
-\item  You'll see that your directory structure of your home directory has
-  remained the same. Your home directory is actually located on a shared
-  storage system.
+  \item  You'll see that your directory structure of your home directory has
+      remained the same. Your home directory is actually located on a shared
+      storage system.
 \end{enumerate}
 
 In order to know on which compute-node you're working, enter again:
@@ -58,6 +59,7 @@ Note that we are now working on the compute-node called ``\emph{r1e3cn18}''.
 This is the compute node, which was assigned to us by the scheduler after
 issuing the ``\emph{qsub -I}'' command.
 
+\ifantwerpen
 This computer name looks strange, but bears some logic in it.  It provides the
 system administrators with information where to find the computer in the
 computer room.
@@ -72,6 +74,7 @@ The computer ``r1e3cn18'' stands for:
 
 With this naming convention, the system administrator can easily find the
 physical computers when they need to execute some maintenance activities.
+\fi
 
 Now, go to the directory of our second interactive example and run the program
 ``primes.py''. This program will ask you for an upper limit ($>$ 1) and will
@@ -81,81 +84,97 @@ print all the primes between 1 and your upper limit:
 %\shellcmd{cd \tilde/examples/Chapter05\_Interactive}%
 %\shellcmd{./primes.py}%
 This program calculates all primes between 1 and your upper limit.
-Enter your upper limit ($>$1):   \textbf{50 }
+Enter your upper limit (>1): %\strong{50}%
 Start Time:  2013-09-11 15:49:06
-[Prime\#1] = 1
-[Prime\#2] = 2
-[Prime\#3] = 3
-[Prime\#4] = 5
-[Prime\#5] = 7
-[Prime\#6] = 11
-[Prime\#7] = 13
-[Prime\#8] = 17
-[Prime\#9] = 19
-[Prime\#10] = 23
-[Prime\#11] = 29
-[Prime\#12] = 31
-[Prime\#13] = 37
-[Prime\#14] = 41
-[Prime\#15] = 43
-[Prime\#16] = 47
+[Prime#1] = 1
+[Prime#2] = 2
+[Prime#3] = 3
+[Prime#4] = 5
+[Prime#5] = 7
+[Prime#6] = 11
+[Prime#7] = 13
+[Prime#8] = 17
+[Prime#9] = 19
+[Prime#10] = 23
+[Prime#11] = 29
+[Prime#12] = 31
+[Prime#13] = 37
+[Prime#14] = 41
+[Prime#15] = 43
+[Prime#16] = 47
 End Time:  2013-09-11 15:49:06
 Duration:  0 seconds.
 \end{prompt}
 
 You can exit the Interactive session with:
 \begin{prompt}
-$ %\textbf{exit}%
+%\shellcmd{exit}%
 \end{prompt}
 
-Note that you can now use this allocated node for 1 hour.  After this hour you will be automatically disconnected. You can change this ``usage time'' by explicitly specifying a ``walltime'' , i.e. the time that you want to work on this node.  (Think of walltime as the time elapsed when watching the clock on the wall.
+Note that you can now use this allocated node for 1 hour.  After this hour you
+will be automatically disconnected. You can change this ``usage time'' by
+explicitly specifying a ``walltime'' , i.e. the time that you want to work on
+this node.  (Think of walltime as the time elapsed when watching the clock on
+the wall.
 
 You can work for 3 hours by:
 \begin{prompt}
-$ %\textbf{qsub --I --l walltime=03:00:00}%
+%\shellcmd{qsub -I -l walltime=03:00:00}%
 \end{prompt}
 
-If the walltime of the job is exceeded, the (Interactive) job will be killed and your connection to the compute node will be closed. So do make sure to provide adequate walltime and that you save your data before your (wall)time is up (exceeded)!  When you do not specify a walltime, you get a default walltime of 1 hour.
+If the walltime of the job is exceeded, the (Interactive) job will be killed
+and your connection to the compute node will be closed. So do make sure to
+provide adequate walltime and that you save your data before your (wall)time is
+up (exceeded)!  When you do not specify a walltime, you get a default walltime
+of 1 hour.
 
 \section{Interactive jobs, with X support}
 
 \subsection{Software Installation}
 
-\#IFDEF MAC
+To display graphical applications from a Linux computer (such as the VSC
+clusters) on your machine, you need to install an X Window server.
 
-To display graphical applications from a Linux computer (such as the VSC clusters) on your OS X machine, you need to install an X Window server.
+The X Window system (commonly known as \strong{X11}, based on its current major
+version being 11, or shortened to simply \strong{X}, and sometimes informally
+\strong{X-Windows}) is the system-level software infrastructure for the
+windowing GUI on Linux, BSD and other UNIX-like operating systems. It was
+designed to handle both local displays, as well as displays sent across a
+network. More formally, it is a computer software system and network protocol
+that provides a basis for graphical user interfaces (GUIs) and rich input
+device capability for networked computers.
 
-The X Window system (commonly known as \textbf{X11}, based on its current major version being 11, or shortened to simply \textbf{X}, and sometimes informally \textbf{X-Windows}) is the system-level software infrastructure for the windowing GUI on Linux, BSD and other UNIX-like operating systems. It was designed to handle both local displays, as well as displays sent across a network. More formally, it is a computer software system and network protocol that provides a basis for graphical user interfaces (GUIs) and rich input device capability for networked computers.
-
+%IFMAC
+\ifmac
 Download the latest version of the XQuartz package on:
 http://xquartz.macosforge.org/landing/
 and install the XQuartz.pkg package.
 
 \includegraphics*[width=5.79in, height=4.12in, keepaspectratio=false]{img0512}
 
-The installer will take you through the installation procedure, just continue clicking $<$continue$>$ on the various screens that will pop-up until your installation was succesfull.
+The installer will take you through the installation procedure, just continue
+clicking $<$continue$>$ on the various screens that will pop-up until your
+installation was succesfull.
 
 \includegraphics*[width=5.81in, height=4.31in, keepaspectratio=false]{img0513}
+\fi
+%ENDIFMAC
 
-\#ENDIF MAC
-
-\#IFDEF WINDOWS
-
-\subsection{Software Installation}
-
-To display graphical applications from a Linux computer (such as the VSC clusters) on your Windows desktop, you need to install an X Window server.
-
-The X Window system (commonly known as \textbf{X11}, based on its current major version being 11, or shortened to simply \textbf{X}, and sometimes informally \textbf{X-Windows}) is the system-level software infrastructure for the windowing GUI on Linux, BSD and other UNIX-like operating systems. It was designed to handle both local displays, as well as displays sent across a network. More formally, it is a computer software system and network protocol that provides a basis for graphical user interfaces (GUIs) and rich input device capability for networked computers.
-
+%IFWINDOWS
+\ifwindows
 \paragraph{ Install XMing}
 
 The first task is to install the Xming software.
 
 \begin{enumerate}
-\item  Download the Xming installer from the following address:http://www.straightrunning.com/XmingNotes/ .  Either download Xming from the \textbf{Public Domain Releases} (free) or from the \textbf{Website Releases} (after a donation) on the website.
-\item  Run the Xming setup program on your Windows desktop.
-\item  Keep the proposed default folders for the Xming installation.
-\item  When selecting the components that need to be installed, make sure to select '\textit{XLaunch wizard}' and '\textit{Normal PuTTY Link SSH client}'.
+  \item  Download the Xming installer from the following
+    address: \url{http://www.straightrunning.com/XmingNotes/}. Either download Xming
+    from the \strong{Public Domain Releases} (free) or from the \strong{Website
+    Releases} (after a donation) on the website.
+  \item  Run the Xming setup program on your Windows desktop.
+  \item  Keep the proposed default folders for the Xming installation.
+  \item  When selecting the components that need to be installed, make sure to
+    select `\emph{XLaunch wizard}' and `\emph{Normal PuTTY Link SSH client}'.
 \end{enumerate}
 
 \includegraphics*[width=4.27in, height=3.32in, keepaspectratio=false]{img0500}
@@ -193,100 +212,125 @@ And now we can run Xming:
 \begin{enumerate}
 \item  Now Xming is running in the background \ldots and you can launch a graphical application in your PuTTY terminal.
 \item  Open a PuTTY terminal and connect  to the HPC.
-\item  In order to test the X-server, run ``\textit{xclock}''. ``\textit{xclock}'' is the standard GUI clock for the X Window System.
+\item  In order to test the X-server, run ``\emph{xclock}''. ``\emph{xclock}'' is the standard GUI clock for the X Window System.
 \end{enumerate}
 
 \begin{prompt}
-$ %\textbf{xclock}%
+%\shellcmd{xclock}%
 \end{prompt}
 
-You should see the XWindow clock application appearing on your Windows machine. The ``\textit{xclock}'' application runs on the login-node of the HPC, but is displayed on your Windows machine.
+You should see the XWindow clock application appearing on your Windows machine.
+The ``\emph{xclock}'' application runs on the login-node of the \hpc, but is
+displayed on your Windows machine.
 
 \includegraphics*[width=1.44in, height=1.62in, keepaspectratio=false]{img0505}
 
-\paragraph{ SSH Tunnel}
+\paragraph{SSH Tunnel}
 
-In order to work in client/server mode, it is often required to establish an SSH tunnel between your Windows desktop machine and the compute node your job is running on.  PuTTY must have been installed on your computer, and you should be able to connect via SSH to the HPC cluster's login node.
+In order to work in client/server mode, it is often required to establish an
+SSH tunnel between your Windows desktop machine and the compute node your job
+is running on.  PuTTY must have been installed on your computer, and you should
+be able to connect via SSH to the HPC cluster's login node.
 
-Because of one or more firewalls between your desktop and the HPC clusters, it is generally impossible to communicate directly with a process on the cluster from your desktop except when the network managers have given you explicit permission (which for security reasons is not often done). One way to work around this limitation is SSH tunneling.
+Because of one or more firewalls between your desktop and the HPC clusters, it
+is generally impossible to communicate directly with a process on the cluster
+from your desktop except when the network managers have given you explicit
+permission (which for security reasons is not often done). One way to work
+around this limitation is SSH tunneling.
 
 There are several cases where this is useful:
 
 \begin{enumerate}
-\item  Running X applications on the cluster: The X program cannot directly communicate with the X server on your local system. In this case, the tunneling is easy to set up as PuTTY will do it for you if you select the right options on the X11 settings page as explained on the page about text-mode access using PuTTY.
-\item  Running a server application on the cluster that a client on the desktop connects to. One example of this scenario is ParaView in remote visualization mode, with the interactive client on the desktop and the data processing and image rendering on the cluster. This scenario is explained on this page.
-\item  Running clients on the cluster and a server on your desktop. In this case, the source port is a port on the cluster and the destination port is on the desktop.
+\item  Running X applications on the cluster: The X program cannot directly
+  communicate with the X server on your local system. In this case, the
+  tunneling is easy to set up as PuTTY will do it for you if you select the
+  right options on the X11 settings page as explained on the page about
+  text-mode access using PuTTY.
+\item  Running a server application on the cluster that a client on the desktop
+  connects to. One example of this scenario is ParaView in remote visualization
+  mode, with the interactive client on the desktop and the data processing and
+  image rendering on the cluster. This scenario is explained on this page.
+\item  Running clients on the cluster and a server on your desktop. In this
+  case, the source port is a port on the cluster and the destination port is on
+  the desktop.
 \end{enumerate}
 
 Procedure: A tunnel from a local client to a specific computer node on the cluster
 
 \begin{enumerate}
-\item  Log in on the login node via PuTTY.
-\item  Start the server job, note the compute node's name the job is running on (e.g., 'r1i3n5'), as well as the port the server is listening on (e.g., '44444').
-\item  Set up the tunnel:
+  \item  Log in on the login node via PuTTY.
+  \item  Start the server job, note the compute node's name the job is running on (e.g., 'r1i3n5'), as well as the port the server is listening on (e.g., '44444').
+  \item  Set up the tunnel:
 
-\begin{enumerate}
-\item  In the ``\textit{Category}'' pane, expand $<$\textit{Connection}$>$$<$\textit{SSH}$>$, and select $<$\textit{Tunnels}$>$ as show below:
-\end{enumerate}
+  \begin{enumerate}
+    \item  In the ``\emph{Category}'' pane, expand $<$\emph{Connection}$>$$<$\emph{SSH}$>$, and select $<$\emph{Tunnels}$>$ as show below:
+  \end{enumerate}
 \end{enumerate}
 
 \includegraphics*[width=4.85in, height=4.67in, keepaspectratio=false]{img0506}
 
 \begin{enumerate}
-\item \begin{enumerate}
-\item  In the ``\textit{Source port}'' field, enter the local port to use (e.g., \textit{11111}).
-\item  In the ``\textit{Destination}'' field, enter \textit{$<$hostname$>$:$<$server-port$>$} (e.g., r1i3n5:44444 as in the example above).
-\item  Click the $<$\textit{Add}$>$ button.
-\item  Click the $<$\textit{Open}$>$ button
-\end{enumerate}
+  \item  In the ``\emph{Source port}'' field, enter the local port to use (e.g., \emph{11111}).
+  \item  In the ``\emph{Destination}'' field, enter \emph{$<$hostname$>$:$<$server-port$>$} (e.g., r1i3n5:44444 as in the example above).
+  \item  Click the $<$\emph{Add}$>$ button.
+  \item  Click the $<$\emph{Open}$>$ button
 \end{enumerate}
 
 The tunnel is now ready to use.
+% ENDIF WINDOWS
+\fi
 
-\#ENDIF WINDOWS
+\subsection{Connect with X-forwarding}
 
-\subsection{Connect with X-forwarding }
+In order to get the graphical output of your application (which is running on a
+compute node on the \hpc) transferred to your personal screen, you will need
+to re-connect to the \hpc with X-forwarding enabled, which is done with the
+``-X'' option.
 
-In order to get the graphical output of your application (which is running on a compute node on the UA-HPC) transferred to your personal screen, you will need to re-connect to the UA-HPC with X-forwarding enabled, which is done with the ``-X'' option.
-
-First exit and re-connect to the UA-HPC with X-forwarding enabled:
+First exit and re-connect to the \hpc with X-forwarding enabled:
 
 \begin{prompt}
-$ %\textbf{exit}%
-$ %\textbf{ssh --X $<$vsc-account$>$@login.turing.calcua.ua.ac.be}%
-$ %\textbf{hostname -f}%
-ln01.turing.antwerpen.vsc
+%\shellcmd{exit}%
+%\shellcmd{ssh --X $<$vsc-account$>$@\loginnode}%
+%\shellcmd{hostname -f}%
+%\loginnode%
 \end{prompt}
 
-We first check whether our GUI's on the login node are decently forwarded to your screen on your local machine. An easy way to test it is by running a small X-application on the login node. Type:
+We first check whether our GUI's on the login node are decently forwarded to
+your screen on your local machine. An easy way to test it is by running a small
+X-application on the login node. Type:
+
 \begin{prompt}
-$ %\textbf{xclock}%
+%\shellcmd{xclock}%
 \end{prompt}
 
 And you should see a clock appearing on your screen.
 
 \includegraphics*[width=2.47in, height=2.78in, keepaspectratio=false]{img0507}
 
-You can close your clock and connect further to a compute node with again your X-forwarding enabled:
+You can close your clock and connect further to a compute node with again your
+X-forwarding enabled:
 
 \begin{prompt}
-$ %\textbf{qsub --I -X}%
-qsub: waiting for job 432918.master1.turing.antwerpen.vsc to start
-qsub: job 432918.master1.turing.antwerpen.vsc ready
-$ %\textbf{hostname -f}%
+%\shellcmd{qsub -I -X}%
+qsub: waiting for job %\jobid% to start
+qsub: job %\jobid% ready
+%\shellcmd{hostname -f}%
 r1e2cn09.turing.antwerpen.vsc
-$ %\textbf{xclock}%
+%\shellcmd{xclock}%
 \end{prompt}
 
 and you should see your clock again.
 
 \subsection{Run simple example}
 
-We have developed a little interactive program that shows the communication in 2 directions. It will send information to your local screen, but also asks you to click a button.
+We have developed a little interactive program that shows the communication in
+2 directions. It will send information to your local screen, but also asks you
+to click a button.
 
 Now run the message program:
 \begin{prompt}
-$ %\textbf{./message}%
+%\shellcmd{./message}%
 \end{prompt}
 
 You should see the following message appearing.
@@ -295,6 +339,8 @@ You should see the following message appearing.
 
 Click any button and see what happens.
 
+\ifantwerpen
+% The cow will have to wait
 \begin{prompt}
   -----------------------
 
@@ -312,24 +358,30 @@ Click any button and see what happens.
 
                    \textbar \textbar      \textbar \textbar
 
-$
 \end{prompt}
+\fi
 
 \subsection{Run your interactive application}
 
-In this last example, we will show you that you can just work on this compute node, just as if you were working locally on your desktop.  We will run the Fibonacci example of the previous Chapter again, but now in full Interactive mode. Remember that it was written in MATLAB, so we first load the MATLAB modules.
+In this last example, we will show you that you can just work on this compute
+node, just as if you were working locally on your desktop.  We will run the
+Fibonacci example of the previous Chapter again, but now in full Interactive
+mode. Remember that it was written in MATLAB, so we first load the MATLAB
+modules.
+
 \begin{prompt}
-$ %\textbf{module load MATLAB}%
+%\shellcmd{module load MATLAB}%
 \end{prompt}
 
 And start the MATLAB interactive environment:
+
 \begin{prompt}
-$ %\textbf{matlab}%
+%\shellcmd{matlab}%
 \end{prompt}
 
 And start the fibo2.m program in the command window:
 \begin{prompt}
-$f$x $>$$>$ %\textbf{run fibo2.m}%
+fx >> %\textbf{run fibo2.m}%
 \end{prompt}
 
 \includegraphics*[width=5.84in, height=4.11in, keepaspectratio=false]{img0509}
@@ -342,8 +394,9 @@ as well as the nice ``plot'' appearing:
 
 \includegraphics*[width=5.76in, height=2.94in, keepaspectratio=false]{img0511}
 
-You can work in this MATLAB GUI, and finally terminate the application by entering ``\textbf{exit}'' in the command window again.
-\begin{prompt}
-$f$x $>$$>$ %\textbf{exit}%
-\end{prompt}
+You can work in this MATLAB GUI, and finally terminate the application by
+entering ``\strong{exit}'' in the command window again.
 
+\begin{prompt}
+fx >> %\textbf{exit}%
+\end{prompt}
