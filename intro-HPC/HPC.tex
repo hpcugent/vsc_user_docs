@@ -1,7 +1,9 @@
 \documentclass[11pt,a4paper,oneside]{book}
-\include{style}
-\include{glossary}
+\usepackage{import}
+\subimport{../}{style}
 \include{macros}
+\include{glossary}
+\graphicspath{{img//}}
 \makeglossaries
 \makeindex
 %TODO:
