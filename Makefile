@@ -6,6 +6,19 @@ all_doc = intro-HPC
 
 .PHONY = all
 
+
+default:
+ifdef OS
+	make all
+else ifdef SITE
+	make all
+else ifdef DOC
+	make all
+else
+	echo "Specify SITE, OS or DOC (e.g. make OS=mac SITE=gent). If you want to build everything type: make all"
+endif
+
+
 ifndef OS
 OS=$(all_os)
 endif
@@ -19,15 +32,15 @@ endif
 all:
 	for os in $(OS) ; do \
 		for doc in $(DOC) ; do \
+			cd $$doc ; \
 			for site in $(SITE) ; do \
-				echo $$doc $$os $$site ; \
 				jobname="$$doc-$$os-$$site" ; \
 				latexcommand="pdflatex -jobname $$jobname \"\def\is$$os{1}\def\is$$site{1}\input{HPC.tex}\"" ; \
-				cd $$doc ; \
 				$$latexcommand ; \
 			  makeglossaries $$jobname ; \
 				$$latexcommand ; \
 			done ; \
+			cd - ; \
 		done ;  \
 	done ;
 
