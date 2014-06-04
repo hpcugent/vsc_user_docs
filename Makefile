@@ -15,7 +15,11 @@ else ifdef SITE
 else ifdef DOC
 	make all
 else
-	echo "Specify SITE, OS or DOC (e.g. make OS=mac SITE=gent). If you want to build everything type: make all"
+	@echo "One or more of the following variables must be set, unless 'make all' is used to build everything:"
+	@echo "    DOC: $(all_doc)"
+	@echo "    OS: $(all_os)"
+	@echo "    SITE: $(all_site)"
+	@echo "Example: 'make OS=windows SITE=gent'"
 endif
 
 
@@ -36,6 +40,7 @@ all:
 			for site in $(SITE) ; do \
 				jobname="$$doc-$$os-$$site" ; \
 				latexcommand="pdflatex -jobname $$jobname \"\def\is$$os{1}\def\is$$site{1}\input{HPC.tex}\"" ; \
+				echo $$latexcommand ; \
 				$$latexcommand ; \
 			  makeglossaries $$jobname ; \
 				$$latexcommand ; \
