@@ -21,7 +21,9 @@
   fillcolor=\color{lightgray},
   backgroundcolor=\color{lightgray},
   }
-\lstdefinestyle{code}{numbers=left}
+\lstdefinestyle{code}{numbers=left,
+  escapechar=\%,
+}
 
 \lstnewenvironment{prompt} {\lstset{style=prompt}} {}
 \lstnewenvironment{code}[1]{\lstset{style=code, language=#1}} {}
