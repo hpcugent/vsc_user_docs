@@ -1,77 +1,110 @@
 \chapter{Multi-job submission}
 
-A frequent occurring characteristic of scientific computation is their focus on data intensive processing. A typical example is the iterative evaluation of a program over different input parameter values, often referred to as a ``\textit{parameter sweep''}.  A \textbf{Parameter Sweep} runs a job a specified number of times, as if we sweep the parameter values through a user defined range.
+A frequent occurring characteristic of scientific computation is their focus on
+data intensive processing. A typical example is the iterative evaluation of a
+program over different input parameter values, often referred to as a
+``\emph{parameter sweep}''.  A \strong{Parameter Sweep} runs a job a
+specified number of times, as if we sweep the parameter values through a user
+defined range.
 
-Users then often want to submit a large numbers of jobs based on the same job script but with (i) slightly different parameters settings or with (ii) different input files.
+Users then often want to submit a large numbers of jobs based on the same job
+script but with (i) slightly different parameters settings or with (ii)
+different input files.
 
-These parameter values can have many forms, we can think about a range (e.g., from 1 to 100), or the parameters can be stored line by line in a comma-separated file. The users want to run their job once for each instance of the parameter values.
+These parameter values can have many forms, we can think about a range (e.g.,
+from 1 to 100), or the parameters can be stored line by line in a
+comma-separated file. The users want to run their job once for each instance of
+the parameter values.
 
-One option could be to launch a lot of separate individual small jobs (one for each parameter) on the cluster, but this is not a good idea. The cluster scheduler isn't meant to deal with tons of small jobs. Those huge amounts of small jobs will create a lot of overhead, and can slow down the whole cluster. It would be better to bundle those jobs in larger sets.  In TORQUE, an experimental feature known as ``\textit{job arrays}'' existed to allow the creation of multiple jobs with one \textit{qsub} command, but is was not supported by Moab, the current scheduler.
+One option could be to launch a lot of separate individual small jobs (one for
+each parameter) on the cluster, but this is not a good idea. The cluster
+scheduler isn't meant to deal with tons of small jobs. Those huge amounts of
+small jobs will create a lot of overhead, and can slow down the whole cluster.
+It would be better to bundle those jobs in larger sets.  In TORQUE, an
+experimental feature known as ``\emph{job arrays}'' existed to allow the
+creation of multiple jobs with one \emph{qsub} command, but is was not
+supported by Moab, the current scheduler.
 
-The ``\textbf{Worker framework}'' has been developed to address this issue.
+The ``\strong{Worker framework}'' has been developed to address this issue.
 
 It can handle many small jobs determined by:
 
-\begin{enumerate}
-\item  \textbf{parameter variations}, i.e., many small jobs determined by a specific parameter set which is stored in a .csv (comma separated value) input file.
-\item  \textbf{job arrays}, i.e., each individual job got a unique numeric identifier.
+\begin{description}
+  \item[parameter variations] i.e., many small jobs determined by a specific parameter set which is stored in a .csv (comma separated value) input file.
+  \item[job arrays] i.e., each individual job got a unique numeric identifier.
 \end{enumerate}
 
-Both use cases often have a common root: the user wants to run a program with a large number of parameter settings, and the program does not allow for aggregation, i.e., it has to be run once for each instance of the parameter values.
+Both use cases often have a common root: the user wants to run a program with a
+large number of parameter settings, and the program does not allow for
+aggregation, i.e., it has to be run once for each instance of the parameter
+values.
 
-\begin{enumerate}
-\item  However, the Worker Framework's scope is wider: it can be used for any scenario that can be reduced to a \textbf{MapReduce} approach.\footnote{ $ MapReduce : `Map' refers to the map pattern in which every item in a collection is mapped onto a new value by applying a given function, while `reduce' refers to the reduction pattern which condenses or reduces a collection of previously computed results to a single value.$ }
-\end{enumerate}
-
-\eject
-
+However, the Worker Framework's scope is wider: it can be used for any scenario
+that can be reduced to a \strong{MapReduce} approach.\footnote{ MapReduce :
+`Map' refers to the map pattern in which every item in a collection is mapped
+onto a new value by applying a given function, while `reduce' refers to the
+reduction pattern which condenses or reduces a collection of previously
+computed results to a single value.}
 
 \section{The worker Framework: Parameter Sweeps}
 
-
 First go to the right directory:
+
 \begin{prompt}
-$ %\textbf{cd  \~/examples/Chapter08\_MultiJob/par\_sweep}%
+%\shellcmd{cd  \tilde/examples/Chapter08\_MultiJob/par\_sweep}%
 \end{prompt}
 
-Suppose the program the user wishes to run the ``\textit{weather}'' program, which takes three parameters: a temperature, a pressure and a volume. A typical call of the program looks like:
+Suppose the program the user wishes to run the ``\emph{weather}'' program,
+which takes three parameters: a temperature, a pressure and a volume. A typical
+call of the program looks like:
 
 \begin{prompt}
-$ %\textbf{./weather -t 20 -p 1.05 -v 4.3}%
+%\shellcmd{./weather -t 20 -p 1.05 -v 4.3}%
 T: 20  P: 1.05  V: 4.3
 \end{prompt}
 
-For the purpose of this exercise, the weather program is just a simple bash script, which prints the 3 variables to the standard output and waits a bit:
+For the purpose of this exercise, the weather program is just a simple bash
+script, which prints the 3 variables to the standard output and waits a bit:
 
 \begin{prompt}
-$ %\textbf{cat  weather}%
-\#!/bin/bash
-\#   Here you could do your calculations\ldots
-echo "T: \$2  P: \$4  V: \$6"
+%\shellcmd{cat  weather}%
+#!/bin/bash
+#   Here you could do your calculations%\ldots%
+echo "T: $2  P: $4  V: $6"
 sleep 100
 \end{prompt}
 
-A job-script that would run this as a job for the first parameters (p01) would then look like:
+A job-script that would run this as a job for the first parameters (p01) would
+then look like:
 
 \begin{prompt}
-$ %\textbf{cat weather\_p01.pbs}%
-\#!/bin/bash -l
-\#PBS -l nodes=1:ppn=1
-\#PBS -l walltime=00:15:00
-cd \$PBS\_O\_WORKDIR
+%\shellcmd{cat weather\_p01.pbs}%
+#!/bin/bash -l
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=00:15:00
+cd $PBS_O_WORKDIR
 ./weather -t 20  -p 1.05  -v 4.3
 \end{prompt}
 
-When submitting this job, the calculation is performed or this particular instance of the parameters, i.e., temperature = 20, pressure = 1.05, and volume = 4.3.
+When submitting this job, the calculation is performed or this particular
+instance of the parameters, i.e., temperature = 20, pressure = 1.05, and volume
+= 4.3.
 
 To submit the job, the user would use:
 \begin{prompt}
-$ %\textbf{qsub  weather\_p01.pbs}%
+%\shellcmd{qsub weather\_p01.pbs}%
 \end{prompt}
 
-However, the user wants to run this program for many parameter instances, e.g., he wants to run the program on 100 instances of temperature, pressure and volume.  The 100 parameter instances can be stored in a comma separated value file (.csv) that can be generated using a spreadsheet program such as Microsoft Excel, and RDBMS or just by hand using any text editor (do \textbf{not }use a word processor such as Microsoft Word). The first few lines of the file ``\textit{data.csv}'' would look like:
+However, the user wants to run this program for many parameter instances, e.g.,
+he wants to run the program on 100 instances of temperature, pressure and
+volume.  The 100 parameter instances can be stored in a comma separated value
+file (.csv) that can be generated using a spreadsheet program such as Microsoft
+Excel, and RDBMS or just by hand using any text editor (do \strong{not} use a
+word processor such as Microsoft Word). The first few lines of the file
+``\emph{data.csv}'' would look like:
+
 \begin{prompt}
-$ %\textbf{more  data.csv}%
+%\shellcmd{more data.csv}%
 temperature, pressure, volume
 293, 1.0e5, 107
 294, 1.0e5, 106
@@ -81,34 +114,44 @@ temperature, pressure, volume
 \dots
 \end{prompt}
 
-It has to contain the names of the variables on the first line, followed by 100 parameter instances in the current example.
+It has to contain the names of the variables on the first line, followed by 100
+parameter instances in the current example.
 
 In order to make our PBS generic, the PBS file can be modified as follows:
-\begin{prompt}
-$ %\textbf{cat weather.pbs}%
-\#!/bin/bash
-\#PBS -q qshort
-\#PBS -l nodes=1:ppn=8
-\#PBS -l walltime=04:00:00
 
-cd \$PBS\_O\_WORKDIR
-./weather -t \$temperature -p \$pressure -v \$volume
+\begin{prompt}
+%\shellcmd{cat weather.pbs}%
+#!/bin/bash
+#PBS -q qshort
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=04:00:00
+
+cd $PBS_O_WORKDIR
+./weather -t $temperature -p $pressure -v $volume
 \end{prompt}
 
 Note that:
 
 \begin{enumerate}
-\item  the parameter values 20, 1.05, 4.3 have been replaced by variables \$temperature, \$pressure and \$volume respectively, which were being specified on the first line of the ``\textit{data.csv}'' file;
-\item  the number of processors per node has been increased to 8 (i.e., ppn=1 is replaced by ppn=8);
-\item  the walltime has been increased to 4 hours (i.e., walltime=00:15:00 is replaced by walltime=04:00:00).
+
+  \item  the parameter values 20, 1.05, 4.3 have been replaced by variables
+    \$temperature, \$pressure and \$volume respectively, which were being specified
+    on the first line of the ``\emph{data.csv}'' file;
+  \item  the number of processors per node has been increased to 8 (i.e., ppn=1 is replaced by
+    ppn=8);
+  \item  the walltime has been increased to 4 hours (i.e.,
+    walltime=00:15:00 is replaced by walltime=04:00:00).
 \end{enumerate}
 
-The walltime is calculated as follows: one calculation takes 15 minutes, so 100 calculations take 1,500 minutes on one CPU. However, this job will use 8 CPUs, so the 100 calculations will be done in 1,500/8 = 187,5 minutes, i.e., 4 hours to be on the safe side.
+The walltime is calculated as follows: one calculation takes 15 minutes, so 100
+calculations take 1,500 minutes on one CPU. However, this job will use 8 CPUs,
+so the 100 calculations will be done in 1,500/8 = 187,5 minutes, i.e., 4 hours
+to be on the safe side.
 
 The job can now be submitted as follows:
 \begin{prompt}
-$ %\textbf{module load worker}%
-$ %\textbf{wsub   -batch  weather.pbs   -data  data.csv}%
+%\shellcmd{module load worker}%
+%\shellcmd{qsub -batch weather.pbs-data data.csv}%
 total number of work items: 41
 440927.master1.turing.antwerpen.vsc
 \end{prompt}
