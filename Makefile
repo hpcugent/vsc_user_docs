@@ -3,7 +3,6 @@ defines = ""
 all_os = linux mac windows
 all_site = antwerp brussel gent leuven
 all_doc = intro-HPC
-document_pdf = $(jobname).pdf
 
 .PHONY = all
 
@@ -17,15 +16,7 @@ ifndef DOC
 DOC=$(all_doc)
 endif
 
-
-default: complain
-
-complain:
-	echo "Please set OS, SITE and DOC variables. e.g. make OS=mac SITE=gent DOC=intro-HPC"
-
-all: $(document_pdf)
-
-$(document_pdf):
+pdf:
 	for os in $(OS) ; do \
 		for doc in $(DOC) ; do \
 			for site in $(SITE) ; do \
