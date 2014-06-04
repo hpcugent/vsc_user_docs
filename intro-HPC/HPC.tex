@@ -5,6 +5,7 @@
 \include{glossary}
 \graphicspath{{../img//}}
 \makeglossaries
+\makeindex
 %TODO:
 % - crossref chapters & co
 % - \n\n -> \n
@@ -20,6 +21,11 @@
 
 \glsaddall
 \printglossaries
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+
 
 \tableofcontents
 

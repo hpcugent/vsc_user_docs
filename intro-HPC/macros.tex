@@ -1,6 +1,10 @@
 % use \macro instead of \newcommand so we automatically add a space
 \usepackage{xspace}
+\usepackage{substr}
 \newcommand{\macro}[2]{\newcommand{#1}{#2\xspace}}
+% General macro for extracting the jobnumber from the jobid
+\macro{\jobnumber}{\BeforeSubString{.}{\jobid}}
+\macro{\pbsserver}{\BehindSubString{.}{\jobid}}
 \ifgent
 % GENT SPECIFIC MACROS
 \macro{\sitename}{gent}
@@ -10,10 +14,20 @@
 \macro{\userid}{vsc40000}
 \macro{\university}{UGent}
 \macro{\city}{Gent}
+\macro{\operatingsystem}{Scientifc Linux 6.5}
 
 \fi
 \ifleuven
 % LEUVEN SPECIFIC MACROS
+\macro{\sitename}{leuven}
+\macro{\hpc}{HPC-KU Leuven/UHasselt}
+\macro{\jobid}{123456.svcs.hpc.leuven.vsc}
+\macro{\loginnode}{login.hpc.kuleuven.be}
+\macro{\userid}{vsc30000}
+\macro{\university}{KU Leuven/Hasselt University}
+\macro{\association}{KU Leuven/Hasselt University and their association partners}
+\macro{\city}{Leuven}
+\macro{\operatingsystem}{Redhat Enterprise Linux 6.3}
 
 \fi
 \ifhasselt
@@ -28,7 +42,9 @@
 \macro{\userid}{vsc20167}
 \macro{\loginnode}{login.turing.calcua.ua.ac.be}
 \macro{\university}{UA}
+\macro{\association}{Antwerp University Association (AUHA)}
 \macro{\city}{Antwerp}
+\macro{\operatingsystem}{Scientifc Linux 5.4}
 
 \fi
 \ifbrussel
