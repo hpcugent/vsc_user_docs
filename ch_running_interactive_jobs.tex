@@ -2,66 +2,84 @@
 
 \section{Introduction}
 
-Interactive jobs are jobs, which give you an interactive session on one of the compute nodes. Importantly, accessing the compute nodes this way means that the job control system guarantees the resources that you have asked for.
+Interactive jobs are jobs, which give you an interactive session on one of the
+compute nodes. Importantly, accessing the compute nodes this way means that the
+job control system guarantees the resources that you have asked for.
 
-Interactive PBS jobs are similar to non-interactive PBS jobs in that they are submitted to PBS via the command \textbf{qsub}. Where an interactive job differs is that it does not require a job script, the required PBS directives can be specified on the command line.
+Interactive PBS jobs are similar to non-interactive PBS jobs in that they are
+submitted to PBS via the command \strong{qsub}. Where an interactive job
+differs is that it does not require a job script, the required PBS directives
+can be specified on the command line.
 
-The syntax for \textit{qsub} for submitting an interactive PBS job is:
-\textbf{qsub -I \ldots pbs directives \ldots}
+The syntax for \emph{qsub} for submitting an interactive PBS job is:
+\begin{prompt}
+qsub -I %\ldots% pbs directives %\ldots%
+\end{prompt}
 
 \section{Interactive jobs, without X support}
 
-\textit{\underbar{Tip}: Find the code in ``\~/examples/Chapter05\_Interactive''}
-
-\textit{}
+\emph{\underbar{Tip}: Find the code in ``\tilde/examples/Chapter05\_Interactive''}
 
 First of all, in order to know on which computer you're working, enter:
 \begin{prompt}
-$ %\textbf{hostname -f }%
-ln01.turing.antwerpen.vsc
+%\shellcmd{hostname -f}%
+%\loginnode%
 \end{prompt}
 
-This means that you're now working on the login-node ``\textit{ln01}'' of the UA-HPC-cluster.
+This means that you're now working on the login-node ``\emph{\loginnode}'' of
+the \hpc cluster.
 
 The most basic way to start an interactive job is the following:
 \begin{prompt}
-$ %\textbf{qsub -I}%
-qsub: waiting for job 432918.master1.turing.antwerpen.vsc to start
-qsub: job 432918.master1.turing.antwerpen.vsc ready
-$
+%\shellcmd{qsub -I}%
+qsub: waiting for job %\jobid% to start
+qsub: job %\jobid% ready
 \end{prompt}
 
 There are two things of note here.
 
 \begin{enumerate}
-\item  The ``\textit{qsub''} command (with the interactive -I flag) waits until a node is assigned to your interactive session, connects to the compute node and shows you the terminal prompt on that node.
-\item  You'll see that your directory structure of your home directory has remained the same. Your home directory is actually located on a shared storage system.
+  \item  The ``\emph{qsub''} command (with the interactive -I
+      flag) waits until a node is assigned to your interactive session,
+      connects to the compute node and shows you the terminal prompt on that
+      node.
+\item  You'll see that your directory structure of your home directory has
+  remained the same. Your home directory is actually located on a shared
+  storage system.
 \end{enumerate}
 
 In order to know on which compute-node you're working, enter again:
 \begin{prompt}
-$ %\textbf{hostname -f}%
+%\shellcmd{hostname -f}%
 r1e3cn18.turing.antwerpen.vsc
 \end{prompt}
 
-Note that we are now working on the compute-node called ``\textit{r1e3cn18}''. This is the compute node, which was assigned to us by the scheduler after issuing the ``\textit{qsub -I''} command.
+Note that we are now working on the compute-node called ``\emph{r1e3cn18}''.
+This is the compute node, which was assigned to us by the scheduler after
+issuing the ``\emph{qsub -I}'' command.
 
-This computer name looks strange, but bears some logic in it.  It provides the system administrators with information where to find the computer in the computer room.
+This computer name looks strange, but bears some logic in it.  It provides the
+system administrators with information where to find the computer in the
+computer room.
 
 The computer ``r1e3cn18'' stands for:
 
 \begin{enumerate}
-\item  ``r1'' is rack \# 1.
+\item  ``r1'' is rack \#1.
 \item  ``e3'' is enclosure \#3.
 \item  ``cn18'' is compute node \#18.
 \end{enumerate}
 
-With this naming convention, the system administrator can easily find the physical computers when they need to execute some maintenance activities.
+With this naming convention, the system administrator can easily find the
+physical computers when they need to execute some maintenance activities.
 
-Now, go to the directory of our second interactive example and run the program ``primes.py''. This program will ask you for an upper limit ($>$ 1) and will print all the primes between 1 and your upper limit:
+Now, go to the directory of our second interactive example and run the program
+``primes.py''. This program will ask you for an upper limit ($>$ 1) and will
+print all the primes between 1 and your upper limit:
+
 \begin{prompt}
-$ %\textbf{cd \~/examples/Chapter05\_Interactive}%
-$ %\textbf{./primes.py}%
+%\shellcmd{cd \tilde/examples/Chapter05\_Interactive}%
+%\shellcmd{./primes.py}%
 This program calculates all primes between 1 and your upper limit.
 Enter your upper limit ($>$1):   \textbf{50 }
 Start Time:  2013-09-11 15:49:06
