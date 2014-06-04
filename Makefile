@@ -11,9 +11,9 @@ ifeq ($(strip $(SITE)),"")
 	echo "SITE has not been set!"
 	exit 1
 endif
-	$(latex_command)
-	makeglossaries $(jobname)
-	$(latex_command)
+	cd HPC-tutorial && $(latex_command)
+	cd HPC-tutorial && makeglossaries $(jobname)
+	cd HPC-tutorial && $(latex_command)
 
 style-guide: style-guide.tex
 	pdflatex style-guide.tex
