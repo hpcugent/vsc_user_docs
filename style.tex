@@ -15,14 +15,18 @@
 \usepackage{multirow}
 
 \lstset{basicstyle=\ttfamily,breaklines=true, keepspaces=true}
-\lstdefinestyle{prompt}{language=bash,
+\lstdefinestyle{prompt}{
+  language=bash,
   frame=tblr,
   columns=fullflexible,
   escapechar=\%,
   fillcolor=\color{lightgray},
   backgroundcolor=\color{lightgray},
   }
-\lstdefinestyle{code}{numbers=left}
+\lstdefinestyle{code}{
+  numbers=left,
+  escapechar=\%,
+}
 
 \lstnewenvironment{prompt} {\lstset{style=prompt}} {}
 \lstnewenvironment{code}[1]{\lstset{style=code, language=#1}} {}
@@ -32,15 +36,22 @@
 \renewcommand{\tilde}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
 \newcommand{\shellcmd}[1]{\$ \textbf{\texttt{#1}\\}}
 
-\newcommand{\examplecode}[2]{
+% LaTeX hacks to allow underscores in filenames. Adapted from
+% http://tex.stackexchange.com/questions/69142/include-figure-from-macro-with-underscore-in-filename
+\newcommand{\examplecodeStub}[2]{
   \lstinputlisting[
     language=#1,
     numbers=left,
     title=#2,
     frame=tlbr]
-    {examples/Chapter0\arabic{chapter}_Files/#2}
+    {examples/Chapter\arabic{chapter}/#2}
+    \endgroup
 }
+\def\examplecode{\begingroup
+  \catcode`\_=12
+\examplecodeStub}
 
+\newcommand{\exampledir}{examples/Chapter\arabic{chapter}/}
 
 \parindent=0pt
 \parskip=7pt
