@@ -206,6 +206,11 @@ The following locations are available:
 \$VSC\_DATA            & A bigger 'workspace', for \strong{datasets}, results, logfiles, etc. This file-system can be used for higher I/O loads, but for I/O bound jobs, you might be better of using (one of) the 'scratch' file-system(s). Also, if you are developing your own software, builds of large projects should be conducted here. The default directory is /data/antwerpen/20x/$<$vsc-account$>$. \\ \hline
 \$VSC\_SCRATCH \$VSC\_SCRATCH\_SITE \$VSC\_SCRATCH\_GLOBAL & For \strong{temporary} or transient data; there is typically no backup for these file-systems, and 'old' data may be removed automatically. The default directory is /scratch/antwerpen/20x/$<$vsc-account$>$ \\   \hline
 \$VSC\_SCRATCH\_NODE & For \strong{temporary} or transient data on the local compute node, where fast access is important; there is no backup for these file-systems. The user is responsible for cleaning up the data after use.\newline This space that is available per node. The default directory is /tmp. \\ \hline
+\ifgent
+\$VSC\_SCRATCH\_CLUSTER & \\ \hline
+\$VSC\_SCRATCH\_VO      & \\ \hline
+\fi
+
 \end{tabular}
 
 These pre-defined directories are mounted on each compute node, so it does not
@@ -375,7 +380,7 @@ In order to generate some CPU- and disk-IO load, we will
 
 Check the Python and the PBS file, and submit the job: Remember that this is
 already a more serious (disk-IO and computational intensive) job, which takes
-approximately 3 minutes on the \hpc
+approximately 3 minutes on the \hpc.
 
 \begin{prompt}
 %\shellcmd{cat file2.py}%
@@ -389,7 +394,8 @@ approximately 3 minutes on the \hpc
 
 \section{Reading Input files}
 
-\textit{\underbar{Tip}: Find the code of the exercise ``file3.py'' in ``\tilde/examples/Chapter06\_Files''}
+\textit{\underbar{Tip}: Find the code of the exercise ``file3.py'' in
+``\tilde/examples/Chapter06\_Files''}.
 
 In this exercise, you will
 \begin{enumerate}
@@ -416,6 +422,7 @@ Check the Python and the PBS file, and submit the job:
 
 \subsection{Quota}
 
+\ifantwerpen
 The available disk space on the \hpc is limited. The actual disk capacity,
 shared by all users, can be found on the Available hardware page on the
 website.
@@ -424,6 +431,7 @@ website.
 In 2013, the \hpc cluster has a total 20 TB (Terabyte) of online storage
 available, but this amount is continuously and rapidly expanding. This implies
 that there are also limits
+\fi
 
 \begin{enumerate}
 \item  to the amount of disk space; and
@@ -433,20 +441,41 @@ that there are also limits
 that can be made available to each individual \hpc user.
 
 The quota of disk space for each \hpc user is:
+\ifantwerpen
 \begin{tabular}{|p{0.7in}|p{1.0in}|} \hline
 \textbf{Volume} & \textbf{Quota per User} \\ \hline
 DATA            & 25 GB \\ \hline
 HOME            & 3 GB \\ \hline
 SCRATCH         & 25 GB \\ \hline
 \end{tabular}
+\fi
+\ifgent
+\begin{tabular}{|p{0.7in}|p{1.0in}|} \hline
+\textbf{Volume} & \textbf{Quota per User} \\ \hline
+DATA            & 25 GB \\ \hline
+HOME            & 3 GB \\ \hline
+SCRATCH         & 25 GB \\ \hline
+\end{tabular}
+\fi
 
 The maximum numbers of files are:
+\ifantwerpen
 \begin{tabular}{|p{0.7in}|p{1.0in}|} \hline
 \textbf{Volume} & \textbf{Max. \# Files} \\ \hline
-DATA            & 100.000 \\ \hline
-HOME            & 20.000 \\ \hline
-SCRATCH         & 100.000 \\ \hline
+DATA            & 100,000 \\ \hline
+HOME            & 20,000 \\ \hline
+SCRATCH         & 100,000 \\ \hline
 \end{tabular}
+\fi
+
+\ifgent
+\begin{tabular}{|p{0.7in}|p{1.0in}|} \hline
+\textbf{Volume} & \textbf{Max. \# Files} \\ \hline
+DATA            & 100,000 \\ \hline
+HOME            & 20,000 \\ \hline
+SCRATCH         & 100,000 \\ \hline
+\end{tabular}
+\fi
 
 \underbar{Tip:} The first action to take when you have exceeded your quota is
 to clean up your directories. You could start by removing intermediate,
