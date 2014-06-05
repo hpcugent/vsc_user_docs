@@ -14,11 +14,11 @@ runtime of your application, but also block \hpc resources for other users.
 Specifying the `optimal' Job Parameters requires some knowledge of your
 application (e.g., how many parallel threads does my application uses, is there
 a lot of inter-process communication, how much memory does my application need)
-and also some knowledge about the UA-HPC infrastructure (e.g., what kind of
+and also some knowledge about the \hpc infrastructure (e.g., what kind of
 multi-core processors are available, which nodes have infiniband).
 
 There are plenty of monitoring tools on Linux available to the user, which are
-useful to analyze your individual application. The UA-HPC environment as a
+useful to analyze your individual application. The \hpc environment as a
 whole often requires different techniques, metrics and time goals, which are
 not discussed here. We will focus on tools that can help to optimize your Job
 Specifications.
@@ -85,12 +85,12 @@ compute nodes.
 
 The walltime can be specified in a job scripts as:
 \begin{prompt}
-#PBS --l Walltime=3:12:00:00
+#PBS --l Walltime=3:00:00:00
 \end{prompt}
 
 or on the command line
 \begin{prompt}
-\shellcmd{qsub -l walltime=3:00:00:00}
+%\shellcmd{qsub -l walltime=3:00:00:00}%
 \end{prompt}
 
 It is recommended to always specify the walltime for a job.
@@ -253,13 +253,13 @@ Once you gathered a good idea of the overall memory consumption of your
 application, you can define it in your job script.  It is wise to foresee a
 margin of about 10\%.
 
-\underbar{Sequential or single-node applications: }
+\underbar{Sequential or single-node applications:}
 
 The maximum amount of physical memory used by the job can be specified in a job
 script as:
 
 \begin{prompt}
-\#PBS --l mem=4gb
+#PBS --l mem=4gb
 \end{prompt}
 
 or on the command line
@@ -425,7 +425,7 @@ understanding your overall CPU usage pattern.
 \subsection{Fine-tuning your executable and/or job-script}
 
 It is good practice to perform a number of runtime stress tests, and to check
-the CPU utilization of your nodes. We (and all other users of the UA=HPC) would
+the CPU utilization of your nodes. We (and all other users of the \hpc) would
 appreciate that you use the maximum of the CPU resources that are assigned to
 you and make sure that there are no CPU's in your node who are not utilized
 without reasons.
@@ -605,7 +605,7 @@ Several actions can be taken, to avoid storage problems:
 \item  First work (i.e. read and write) with your big files in the local /tmp directory. Once finished, you can move your files once to the VSC\_DATA directories.
 \item  Make sure your programs clean up their temporary files after execution.
 \item  Move your output results to your own computer regularly.
-\item  Anyone can request more disk space to the UA-HPC staff, but you will have to duly justify your request.
+\item  Anyone can request more disk space to the \hpc staff, but you will have to duly justify your request.
 \end{enumerate}
 
 \subsection{Monitoring Disk IO}
