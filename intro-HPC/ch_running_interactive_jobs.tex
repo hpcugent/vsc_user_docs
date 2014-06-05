@@ -122,7 +122,7 @@ You can work for 3 hours by:
 %\shellcmd{qsub -I -l walltime=03:00:00}%
 \end{prompt}
 
-If the walltime of the job is exceeded, the (Interactive) job will be killed
+If the walltime of the job is exceeded, the (interactive) job will be killed
 and your connection to the compute node will be closed. So do make sure to
 provide adequate walltime and that you save your data before your (wall)time is
 up (exceeded)!  When you do not specify a walltime, you get a default walltime
@@ -258,8 +258,9 @@ Procedure: A tunnel from a local client to a specific computer node on the clust
 
 \begin{enumerate}
   \item  Log in on the login node via PuTTY.
-  \item  Start the server job, note the compute node's name the job is running on (e.g., 'r1i3n5'), as well as the port the server is listening on (e.g., '44444').
-  \item  Set up the tunnel:
+  \item  Start the server job, note the compute node's name the job is running
+  on (e.g., \computenode), as well as the port the server is listening on
+(e.g., '54321').  \item  Set up the tunnel:
 
   \begin{enumerate}
     \item  In the ``\emph{Category}'' pane, expand $<$\emph{Connection}$>$$<$\emph{SSH}$>$, and select $<$\emph{Tunnels}$>$ as show below:
@@ -269,8 +270,8 @@ Procedure: A tunnel from a local client to a specific computer node on the clust
 \includegraphics*[width=4.85in, height=4.67in, keepaspectratio=false]{img0506}
 
 \begin{enumerate}
-  \item  In the ``\emph{Source port}'' field, enter the local port to use (e.g., \emph{11111}).
-  \item  In the ``\emph{Destination}'' field, enter \emph{$<$hostname$>$:$<$server-port$>$} (e.g., r1i3n5:44444 as in the example above).
+  \item  In the ``\emph{Source port}'' field, enter the local port to use (e.g., \emph{12345}).
+  \item  In the ``\emph{Destination}'' field, enter \emph{$<$hostname$>$:$<$server-port$>$} (e.g., \computenode:54321 as in the example above).
   \item  Click the $<$\emph{Add}$>$ button.
   \item  Click the $<$\emph{Open}$>$ button
 \end{enumerate}
