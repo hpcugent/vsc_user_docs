@@ -53,7 +53,7 @@ done so:
 First go to the directory with the first examples by entering the command:
 
 \begin{prompt}
-%\shellcmd{cd \tilde/examples/Chapter04\_Batch}%
+  %\shellcmd{cd \tilde/\exampledir}%
 \end{prompt}
 
 Each time you want to execute a program on the \hpc you'll need 2 things:
@@ -144,12 +144,7 @@ happening, you are pardoned for this example.
 The job-script contains a description of the job by specifying the command that
 need to be executed on the compute node:
 
-\begin{prompt}
-%\shellcmd{cat fibo.pbs}%
-#!/bin/bash -l
-cd $PBS_O_WORKDIR
-./fibo.pl
-\end{prompt}
+\examplecode{bash}{fibo.pbs}
 
 So, jobs are submitted as scripts (bash, perl, python, etc.), which specify the
 parameters related to the jobs such as expected runtime (walltime), mail
