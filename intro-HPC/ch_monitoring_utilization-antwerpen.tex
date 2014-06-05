@@ -2,53 +2,71 @@
 
 \section{Introduction}
 
-As the UA-HPC is rapidly growing, the need to efficiently monitor the available computer resources is more important than ever. The term \textit{monitor} when applied to the UA-HPC center can be confusing since it means different things depending on who is saying it and who is hearing it.
+As the UA-HPC is rapidly growing, the need to efficiently monitor the available
+computer resources is more important than ever. The term \emph{monitor} when
+applied to the UA-HPC center can be confusing since it means different things
+depending on who is saying it and who is hearing it.
 
 For example:
 
 \begin{enumerate}
-\item  The \textbf{end-users} (persons running applications on the cluster) think: "When will my job start and when will it be finished? Did I specify the right computer resources?  How is it performing compared to last time and can I speed it up?"
-\item  The \textbf{systems engineers} of the UA-HPC think: "How are our machines performing? Are all the services functioning correctly? What trends do we see and how can we better utilize our overall computer resources?"
+\item  The \strong{end-users} (persons running applications on the cluster) think: "When will my job start and when will it be finished? Did I specify the right computer resources?  How is it performing compared to last time and can I speed it up?"
+\item  The \strong{systems engineers} of the UA-HPC think: "How are our machines performing? Are all the services functioning correctly? What trends do we see and how can we better utilize our overall computer resources?"
 \end{enumerate}
 
 The UA-HPC provides an UA-HPC utilization information system, which is based on Ganglia.
 
-``\textit{Ganglia}'' is a system-monitoring tool for high-performance computing systems, letting users view live or historical statistics (such as CPU load averages or network utilization) in a graphical manner. Ganglia are monitoring all the machines in the UA-HPC.
+``\emph{Ganglia}'' is a system-monitoring tool for high-performance computing
+systems, letting users view live or historical statistics (such as CPU load
+averages or network utilization) in a graphical manner. Ganglia are monitoring
+all the machines in the UA-HPC.
 
-The Ganglia web front-end caters to system administrators and users. For example, one can view the CPU utilization over the past hour, day, week, month, or year. The web front-end shows similar graphs for memory usage, disk usage, network statistics, number of running processes, and all other Ganglia metrics.
+The Ganglia web front-end caters to system administrators and users. For
+example, one can view the CPU utilization over the past hour, day, week, month,
+or year. The web front-end shows similar graphs for memory usage, disk usage,
+network statistics, number of running processes, and all other Ganglia metrics.
 
-It might be handy for a user to monitor the utilization of the computer resources that he is using. The user could try to understand the bottlenecks or see which resources are exhausted and probably are causing delay in execution time. With the acquired knowledge, the end-user could even optimize his job-scripts and/or his software.
+It might be handy for a user to monitor the utilization of the computer
+resources that he is using. The user could try to understand the bottlenecks or
+see which resources are exhausted and probably are causing delay in execution
+time. With the acquired knowledge, the end-user could even optimize his
+job-scripts and/or his software.
 
 Open your favorite browser and enter the address:
 
-http://status.turing.calcua.ua.ac.be/ganglia/
+\url{http://status.turing.calcua.ua.ac.be/ganglia/}
 
 \section{Observing Ganglia: Looking at the overall performance}
 
 \includegraphics*[width=6.35in, height=4.12in, keepaspectratio=false]{img1200}
 
-The web page shows the overall usage of the UA-HPC systems.?The top 4 graphs provide a summary of the total usage of all UA-HPC resources, followed by a breakdown of the usage per node.
+The web page shows the overall usage of the UA-HPC systems.The top 4 graphs
+provide a summary of the total usage of all UA-HPC resources, followed by a
+breakdown of the usage per node.
 
 The graphs show for the full cluster:
 
-\begin{enumerate}
-\item  \textbf{The cluster load.}
-\end{enumerate}
+\subsubsection{The cluster load.}
 
-This graph shows a 1 minute load average aggregated across all the cluster nodes, the total capacity of all nodes (a dip in the graph indicates that nodes are down), and total CPU cores capacity (the number of cluster nodes multiplied by the number of CPU cores per node), and the total number of processes running aggregated across all the nodes.
+This graph shows a 1 minute load average aggregated across all the cluster
+nodes, the total capacity of all nodes (a dip in the graph indicates that nodes
+are down), and total CPU cores capacity (the number of cluster nodes multiplied
+by the number of CPU cores per node), and the total number of processes running
+aggregated across all the nodes.
 
 \includegraphics*[width=5.54in, height=2.47in, keepaspectratio=false]{img1201}
 
-So, it gives an overview of the number of available cores in the system and the number of running processes (in theory a core can never handle more than one process at a time) and the 1-min load average. If the system is getting fully utilized the 1-min load average would approach the total number of CPUs.
+So, it gives an overview of the number of available cores in the system and the
+number of running processes (in theory a core can never handle more than one
+process at a time) and the 1-min load average. If the system is getting fully
+utilized the 1-min load average would approach the total number of CPUs.
 
 \begin{enumerate}
-\item \textbf{ }The red horizontal line counts the number of available cores in the cluster. Anno 2013, we have 2496 (=2,4k) individual cores in the cluster.
+\item  The red horizontal line counts the number of available cores in the cluster. Anno 2013, we have 2496 (=2,4k) individual cores in the cluster.
 \item  The blue vibrating line shows the actual number of active cores. In the perfect world with a perfectly utilized cluster and with the perfect software this could approach the red line. The reality is however different with a score of approximately 60\% usage. For example, processes (software), which are consuming a lot of memory in a node, could cause a number of cores in the node to be inactive.  Most of the time, inactivity of cores inside a node is being caused by the inappropriate requests for certain computer resources by a user.
 \end{enumerate}
 
-\begin{enumerate}
-\item  \textbf{Cluster CPU load.}
-\end{enumerate}
+\subsubsection{Cluster CPU load.}
 
 This graph shows the aggregated CPU stats, including the percent usage of system, user, I/O wait, and idle CPU.
 
@@ -57,23 +75,21 @@ This graph shows the aggregated CPU stats, including the percent usage of system
 While the load chart gives a good overall impression of usage, the utilization tells us the story of how the CPUs are used.
 
 \begin{enumerate}
-\item \textbf{ }The percentage of CPU consumed by the user is shown in blue.
+\item  The percentage of CPU consumed by the user is shown in blue.
 \item  The percentage of CPU consumed by system processes is shown in red, and should optimally be non-visible.  A huge amount of system CPU is typically caused by processes which are communicating a lot over the Gigabit network. Users could solve this easily by requesting to use the Infiniband network.
 \end{enumerate}
 
-\begin{enumerate}
-\item  \textbf{Cluster Memory usage.}
-\end{enumerate}
+\subsubsection{Cluster Memory usage.}
 
-This graph shows the total and used memory, and the available swap, buffered, cached, and shared memory aggregated across the slave nodes.
+This graph shows the total and used memory, and the available swap, buffered,
+cached, and shared memory aggregated across the slave nodes.
 
 \includegraphics*[width=5.54in, height=2.49in, keepaspectratio=false]{img1203}
 
-\begin{enumerate}
-\item \textbf{ Cluster Network usage.}
-\end{enumerate}
+\subsubsection{Cluster Network usage.}
 
-This graph shows the aggregated network traffic (bytes in and out) across the slave nodes.
+This graph shows the aggregated network traffic (bytes in and out) across the
+slave nodes.
 
 \includegraphics*[width=5.55in, height=2.50in, keepaspectratio=false]{img1204}
 
@@ -85,105 +101,135 @@ You can request results
 \item  sorted in another manner (ascending, descending of sorted on name).
 \end{enumerate}
 
-The above graphs are more important for the UA-HPC System engineers to see whether the cluster is nicely used.
-
-More interesting for the end-user is to monitor the performance of the specific nodes that you have in use.
+The above graphs are more important for the UA-HPC System engineers to see
+whether the cluster is nicely used. More interesting for the end-user is to
+monitor the performance of the specific nodes that you have in use.
 
 \section{Monitoring the performance of your compute nodes}
 
-Clicking on one of the graphs will show a more detailed breakdown of usage per node, and you can drill down further to get details of usage for each node.
+Clicking on one of the graphs will show a more detailed breakdown of usage per
+node, and you can drill down further to get details of usage for each node.
 
-First retrieve your job-number(s). With that information, you can retrieve the name of the node that you are using:
+First retrieve your job-number(s). With that information, you can retrieve the
+name of the node that you are using:
+
 \begin{prompt}
-$ %\textbf{qstat}%
+%\shellcmd{qstat}%
 Job id                    Name             User            Time Use S Queue
 ------------------------- ---------------- --------------- -------- - -----
-439935.master1             file3.pbs        vsc20167        00:04:45 R qreg
+%\jobnumber%.master1             file3.pbs        %\userid%        00:04:45 R qreg
 
-$ %\textbf{qstat -n 439935}%
-master1.turing.antwerpen.vsc:
+%\shellcmd{qstat -n \jobnumber}%
+%\pbsserver%:
 Job ID               Username Queue    Jobname          SessID NDS   TSK Memory Time  S Time
 -------------------- -------- -------- ---------------- ------ ----- --- ------ ----- - -----
 439935.master1.t     vsc20167 qreg     file3.pbs         28435     1   1    --  01:00 R 00:04
    r1e3cn28
 \end{prompt}
 
-If you do not see any node, you might have to start a job first. Any of the previous examples will do, e.g., take the exercise of Chapter 4 that generates some files.
+If you do not see any node, you might have to start a job first. Any of the
+previous examples will do, e.g., take the exercise of Chapter 4 that generates
+some files.
 
 
-In this case, we are using node: ``\textbf{\textit{r1e3cn28}}''.
+In this case, we are using node: ``\strong{\emph{r1e3cn28}}''.
 The naming conventions of our nodes have a physical meaning:
 
-\begin{enumerate}
-\item  ``\textbf{r\textit{1}}'': means that our node is located in rack 1.
-\item  ``\textbf{e3}'': means that our node is located inside enclosure \#3 inside the rack.
-\item  ``\textbf{\textit{cn28}}'': means that we're working on compute-node \#28 inside the enclosure.
-\end{enumerate}
+\begin{description}
+  \item[r1] means that our node is located in rack 1.
+  \item[e3] means that our node is located inside enclosure \#3 inside the rack.
+  \item[cn28] means that we're working on compute-node \#28 inside the enclosure.
+\end{description}
 
-This is easy for maintenance purposes, e.g., in case the UA-HPC-System Engineers monitor an anomaly on a certain ``compute node'' and need to repair or replace it.
+This is easy for maintenance purposes, e.g., in case the UA-HPC-System
+Engineers monitor an anomaly on a certain ``compute node'' and need to repair
+or replace it.
 
-Now, select the retrieved node (e.g., ``\textit{r1e3cn28.turing.antwerpen.vsc}'') in the drop-down list:
+Now, select the retrieved node (e.g., ``\emph{r1e3cn28.turing.antwerpen.vsc}'')
+in the drop-down list:
+
 \includegraphics*[width=4.98in, height=3.50in, keepaspectratio=false]{img1205}
 
-Or you can alternatively go down and find this correct node in the graphical representation of the various available nodes.
-Looking to the performance metrics for your specific node can provide you with a lot of information.
+Or you can alternatively go down and find this correct node in the graphical
+representation of the various available nodes.  Looking to the performance
+metrics for your specific node can provide you with a lot of information.
+
 \includegraphics*[width=4.83in, height=3.84in, keepaspectratio=false]{img1206}
+
+\subsubsection{The load}
 
 The various graphs show for a specific node:
 
-\begin{enumerate}
-\item  \textbf{The load}
-\end{enumerate}
-
-
 \includegraphics*[width=5.57in, height=2.50in, keepaspectratio=false]{img1207}
 
-It tells us the number of available cores in the system and the number of running processes (in theory a core can never handle more than one process at a time) and the 1-min load average. If the system is getting fully utilized the 1-min load average would approach the total number of CPUs.
+It tells us the number of available cores in the system and the number of
+running processes (in theory a core can never handle more than one process at a
+time) and the 1-min load average. If the system is getting fully utilized the
+1-min load average would approach the total number of CPUs.
 
 \begin{enumerate}
 \item The red horizontal line counts the number of available cores in the node. This node consists of, e.g., 8 individual cores.
-\item  The blue vibrating line shows the actual number of running processes on your node. An amount that is slightly higher than your number of cores shows that your cores are nicely used. Also note that we finished with a job at around 15u55 and that a new job was started at 16:00. The few minutes in between was spent with copying the output files back to the user directory on the login node.
+\item  The blue vibrating line shows the actual number of running processes on
+  your node. An amount that is slightly higher than your number of cores shows
+  that your cores are nicely used. Also note that we finished with a job at
+  around 15:55 and that a new job was started at 16:00. The few minutes in
+  between was spent with copying the output files back to the user directory on
+  the login node.
 \end{enumerate}
 
-\begin{enumerate}
-\item  \textbf{The Memory usage}
-\end{enumerate}
+\subsubsection{The Memory Usage}
 
 \includegraphics*[width=5.53in, height=2.47in, keepaspectratio=false]{img1208}
 
-Each compute node has a certain amount of memory (e.g., 32 GB, 64 GB).  The Memory Usage shows how much of this memory is actually allocated and used by the applications.  The computer will swap memory when the applications would request more memory than is available, which results in significant slower performances.
+Each compute node has a certain amount of memory (e.g., 32 GB, 64 GB).  The
+Memory Usage shows how much of this memory is actually allocated and used by
+the applications.  The computer will swap memory when the applications would
+request more memory than is available, which results in significant slower
+performances.
 
 \begin{enumerate}
 \item  The red line shows the available memory in the node, i.e. 24GB in this example.
-\item  The percentage of the used memory is shown in blue (your application), green and red.  When you use more memory than is available in your node, the computer will start swapping memory and seriously slow down.
+\item  The percentage of the used memory is shown in blue (your application),
+  green and red.  When you use more memory than is available in your node, the
+  computer will start swapping memory and seriously slow down.
 \end{enumerate}
 
-\begin{enumerate}
-\item  \textbf{The CPU usage}
-\end{enumerate}
+
+\subsubsection{The CPU usage}
 
 \textbf{\includegraphics*[width=5.54in, height=2.50in, keepaspectratio=false]{img1209}}
 
-This graphs shows how much CPU is being used for the last hour. A high percentage (100\%) means that the programs or processes that are running require all the CPU resources. This would mean that all the ``computing power'' of the cores are nicely used.
+This graphs shows how much CPU is being used for the last hour. A high
+percentage (100\%) means that the programs or processes that are running
+require all the CPU resources. This would mean that all the ``computing power''
+of the cores are nicely used.
 
 \begin{enumerate}
-\item  The red part shows the System CPU, which optimally should be very limited. High System CPU is an indication that the computer is overly busy with communication, and that you are probably lacking some computer resources.  Specifying ``ib'' (Infiniband) in your PBS file can often solve this problem.
-\item  The blue parts show the percentage of the memory, which is being used by the User applications.
-\item  The gap shows that a new process was started. It can take a few minutes to copy all the output data to the user directory.
-\item  In the case of a depicted chart we see that the CPUs are experiencing a lot of I/O wait spikes, which points towards heavy disk I/O.
+\item  The red part shows the System CPU, which optimally should be very
+  limited. High System CPU is an indication that the computer is overly busy
+  with communication, and that you are probably lacking some computer
+  resources.  Specifying ``ib'' (Infiniband) in your PBS file can often solve
+  this problem.
+\item  The blue parts show the percentage of the memory, which is being used by
+  the User applications.
+\item  The gap shows that a new process was started. It can take a few minutes
+  to copy all the output data to the user directory.
+\item  In the case of a depicted chart we see that the CPUs are experiencing a
+  lot of I/O wait spikes, which points towards heavy disk I/O.
 \end{enumerate}
 
-\begin{enumerate}
-\item \textbf{ The Network usage.}
-\end{enumerate}
+\subsubsection{The Network usage}
 
 \includegraphics*[width=5.51in, height=2.49in, keepaspectratio=false]{img1210}
 
-
-The overall Network usage gives us an indication of your network traffic. Some spikes here and there are completely normal as they indicate read/write operations. It is more worrisome when the graphic would remain systematically high.
+The overall Network usage gives us an indication of your network traffic. Some
+spikes here and there are completely normal as they indicate read/write
+operations. It is more worrisome when the graphic would remain systematically
+high.
 
 \begin{enumerate}
-\item  The green line shows the incoming Network traffic. This typically gives you some spikes when input data is being read from the global storage.
-\item  The blue line shows the outgoing network traffic. This also gives spikes whenever output data is being written to disk on the storage system.
+\item  The green line shows the incoming Network traffic. This typically gives
+  you some spikes when input data is being read from the global storage.
+\item  The blue line shows the outgoing network traffic. This also gives spikes
+  whenever output data is being written to disk on the storage system.
 \end{enumerate}
-
