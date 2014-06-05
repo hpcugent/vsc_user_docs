@@ -72,10 +72,10 @@ are used at the same time.
 Here is a simple example program that spawns 7 threads, where each one runs a
 simple function that only prints ``Hello from thread''.
 
-Go to the Chapter07 directory:
+Go to the example directory:
 
 \begin{prompt}
-%\shellcmd{cd ./examples/Chapter0\arabic{chapter}\_Parallel/Thread}%
+%\shellcmd{cd \tilde/\exampledir}%
 \end{prompt}
 
 Study the example first:
@@ -162,12 +162,6 @@ Resume serial code
 }
 \end{code}
 
-Go to the Chapter07 directory:
-
-\begin{prompt}
-%\shellcmd{cd \tilde/examples/Chapter07\_Parallel/OMP}%
-\end{prompt}
-
 \subsection{Private versus Shared variables}
 
 By using the private() and shared() clauses, you can specify variables within
@@ -183,31 +177,7 @@ Parallelizing for loops is really simple (see code below). By default, loop
 iteration counters in OpenMP loop constructs (in this case the i variable) in
 the for loop are set to private variables.
 
-\begin{prompt}
-%\shellcmd{cat omp1.c}%
-#include <stdio.h>
-#include <omp.h>
-
-int main(int argc, char **argv)
-{
-  int i, thread_id, nloops;
-
-#pragma omp parallel private(thread\_id, nloops)
-  {
-    nloops = 0;
-#pragma omp for
-    for (i=0; i<1000; ++i)
-   {
-         ++nloops;
-   }
-
-    thread_id = omp_get_thread_num();
-    printf("Thread %\%%d performed %\%%d iterations of the loop.\n",
-           thread_id, nloops );
-  }
-  return 0;
-}
-\end{prompt}
+\examplecode{C}{omp1.c}
 
 And compile it (whilst including the ``\emph{openmp}'' library) and run and test it on the login-node:
 
@@ -249,44 +219,7 @@ of letting you do things like updating a global variable with local results
 from each thread, and you don't have to worry about things like other threads
 writing to that global variable at the same time (a collision).
 
-\begin{prompt}
-%\strong{cat omp2.c}%
-#include <stdio.h>
-#include <omp.h>
-
-int main(int argc, char *argv[])
-{
-    int i, thread_id;
-    int glob_nloops, priv_nloops;
-    glob_nloops = 0;
-
-    // parallelize this chunk of code
-    #pragma omp parallel private(priv_nloops, thread_id)
-    {
-        priv_nloops = 0;
-        thread_id = omp_get_thread_num();
-
-        // parallelize this for loop
-        #pragma omp for
-        for (i=0; i<100000; ++i)
-        {
-            ++priv_nloops;
-        }
-
-        // make this a "critical" code section
-        #pragma omp critical
-        {
-            printf("Thread %\%%d is adding its iterations (%\%%d) to sum (%\%%d), ",
-                   thread_id, priv_nloops, glob_nloops);
-            glob_nloops += priv_nloops;
-            printf("total is now %\%%d.\n", glob_nloops);
-        }
-    }
-    printf("Total # loop iterations is %\%%d\n",
-           glob_nloops);
-    return 0;
-}
-\end{prompt}
+\examplecode{C}{omp2.c}
 
 And compile it (whilst including the ``\emph{openmp}'' library) and run and test it on the login-node:
 
@@ -331,42 +264,13 @@ the "critical code" directive to accomplish this. The map-reduce paradigm is so
 common that OpenMP has a specific directive that allows you to more easily
 implement this.
 
-\begin{prompt}
-%\shellcmd{cat omp3.c}%
-#include <stdio.h>
-#include <omp.h>
-
-int main(int argc, char *argv[])
-{
-    int i, thread_id;
-    int glob_nloops, priv_nloops;
-    glob_nloops = 0;
-
-    // parallelize this chunk of code
-    #pragma omp parallel private(priv_nloops, thread_id) reduction(+:glob_nloops)
-    {
-        priv_nloops = 0;
-        thread_id = omp_get_thread_num();
-
-        // parallelize this for loop
-        #pragma omp for
-        for (i=0; i<100000; ++i)
-        {
-            ++priv_nloops;
-        }
-        glob_nloops += priv_nloops;
-    }
-    printf("Total # loop iterations is %\%%d\n",
-           glob_nloops);
-    return 0;
-}
-\end{prompt}
+\examplecode{C}{omp3.c}
 
 And compile it (whilst including the ``\emph{openmp}'' library) and run and
 test it on the login-node:
 
 \begin{prompt}
-%\shellcmd{gcc -fopenmp -o  omp3   omp3.c}%
+%\shellcmd{gcc -fopenmp -o omp3 omp3.c}%
 %\shellcmd{./omp3}%
 Total # loop iterations is 100000
 \end{prompt}
@@ -432,41 +336,14 @@ parallel, across any collection of computers, as long as they are networked
 together. Just make sure to ask permission before you load up your lab-mate's
 computer's CPU(s) with your computational tasks!
 
-\begin{prompt}
-%\shellcmd{cd \tilde/examples/Chapter07\_Parallel/MPI}%
-\end{prompt}
-
 Here is a "Hello World" program in MPI written in C. In this example, we send a
 "Hello" message to each processor, manipulate it trivially, return the results
 to the main process, and print the messages.
 
 Study the MPI-programme and the PBS-file:
 
-\begin{prompt}
-%\shellcmd{more mpi\_hello.c}%
-%\dots%
-%\shellcmd{more mpi\_hello.pbs}%
-#!/bin/bash
-#PBS -N mpi_hello
-#PBS -q qshort
-#PBS -l walltime=00:05:00
-
-# assume a 16-core job
-#PBS -l nodes=2:ppn=8
-
-# make sure we are in the right directory in case writing files
-cd $PBS_O_WORKDIR
-
-# load the environment
-module purge
-module load ictce
-module load mpiexec
-
-mpiexec ./mpi_hello
-Note that several MPI-modules were loaded in the environment. To compile the code:
-%\shellcmd{module load ictce}%
-%\shellcmd{mpiicc -o mpi\_hello mpi\_hello.c}%
-\end{prompt}
+\examplecode{C}{mpi_hello.c}
+\examplecode{bash}{mpi_hello.pbs}
 
 mpiicc is a wrapper of the Intel C++ compiler icc to compile MPI programs (see
 the chapter on compilation for details).

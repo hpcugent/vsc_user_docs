@@ -36,14 +36,20 @@
 \renewcommand{\tilde}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
 \newcommand{\shellcmd}[1]{\$ \textbf{\texttt{#1}\\}}
 
-\newcommand{\examplecode}[2]{
+% LaTeX hacks to allow underscores in filenames. Adapted from
+% http://tex.stackexchange.com/questions/69142/include-figure-from-macro-with-underscore-in-filename
+\newcommand{\examplecodeStub}[2]{
   \lstinputlisting[
     language=#1,
     numbers=left,
     title=#2,
     frame=tlbr]
     {examples/Chapter\arabic{chapter}/#2}
+    \endgroup
 }
+\def\examplecode{\begingroup
+  \catcode`\_=12
+\examplecodeStub}
 
 \newcommand{\exampledir}{examples/Chapter\arabic{chapter}/}
 
