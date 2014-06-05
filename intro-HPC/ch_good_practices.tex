@@ -1,71 +1,66 @@
 \chapter{Good Practices}
 
 \begin{enumerate}
-\item  Before starting you should always check:
-\item  Are there any errors in the script?
-\item  Are the required modules loaded?
-\item  Is the correct executable used?
-\end{enumerate}
 
-\begin{enumerate}
-\item  Check your computer requirements upfront, and request the correct resources in your PBS configuration script.
-\item  Number of requested cores
-\item  Amount of requested memory
-\item  Requested network type
-\end{enumerate}
+  \item  Before starting you should always check:
+  \begin{enumerate}
+    \item  Are there any errors in the script?
+    \item  Are the required modules loaded?
+    \item  Is the correct executable used?
+  \end{enumerate}
 
-\begin{enumerate}
-\item  Check your jobs at runtime. You could login to the node and check the proper execution of your jobs with, e.g., ``top'' or ''vmstat''.  Alternatively you could run an interactive job (``qsub -I'').
-\end{enumerate}
+  \item  Check your computer requirements upfront, and request the correct resources in your PBS configuration script.
+  \begin{enumerate}
+    \item  Number of requested cores
+    \item  Amount of requested memory
+    \item  Requested network type
+  \end{enumerate}
 
-\begin{enumerate}
-\item  Try to benchmark the software for scaling issues when using MPI or for I/O issues.
-\end{enumerate}
+  \item  Check your jobs at runtime. You could login to the node and check the
+    proper execution of your jobs with, e.g., ``top'' or ''vmstat''.
+    Alternatively you could run an interactive job (``qsub -I'').
 
-\begin{enumerate}
-\item  Use the Scratch drive (\$VSC\_SCRATCH\_NODE which is mapped to the local /tmp) whenever possible. Local disk I/O is always much faster as it does not have to use the network.
-\end{enumerate}
+  \item  Try to benchmark the software for scaling issues when using MPI or for
+    I/O issues.
 
-\begin{enumerate}
-\item  When your job starts, it will logon to the compute node(s) and start executing the commands in the job script. It will start in your home directory (\$VSC\_HOME), so going to the current directory with the ``cd \$PBS\_O\_WORKDIR'' is the first thing which needs to be done.  You will have your default environment, so don't forget to load the software with ``module load''.
-\end{enumerate}
+  \item  Use the Scratch drive (\$VSC\_SCRATCH\_NODE which is mapped to the
+    local /tmp) whenever possible. Local disk I/O is always much faster as it
+    does not have to use the network.
 
-\begin{enumerate}
-\item  In case your job not running, use ``checkjob''.  It will show why your job is not yet running. Sometimes commands might timeout with an overloaded scheduler.
-\end{enumerate}
+  \item  When your job starts, it will logon to the compute node(s) and start
+    executing the commands in the job script. It will start in your home
+    directory (\$VSC\_HOME), so going to the current directory with the ``cd
+    \$PBS\_O\_WORKDIR'' is the first thing which needs to be done.  You will
+    have your default environment, so don't forget to load the software with
+    ``module load''.
 
-\begin{enumerate}
-\item  Submit your job and wait (be patient) \ldots
-\end{enumerate}
+  \item  In case your job not running, use ``checkjob''.  It will show why your
+    job is not yet running. Sometimes commands might timeout with an overloaded
+    scheduler.
 
-\begin{enumerate}
-\item  Submit small jobs by grouping them together. The ``Worker Framework'' has been designed for these purposes.
-\end{enumerate}
+  \item  Submit your job and wait (be patient) \ldots
 
-\begin{enumerate}
-\item  The runtime is limited by the maximum walltime of the queues. For longer walltimes, use checkpointing.
-\end{enumerate}
+  \item  Submit small jobs by grouping them together. The ``Worker Framework''
+    has been designed for these purposes.
 
-\begin{enumerate}
-\item  Requesting many processors could imply long queue times.
-\end{enumerate}
+  \item  The runtime is limited by the maximum walltime of the queues. For
+    longer walltimes, use checkpointing.
 
-\begin{enumerate}
-\item  For all parallel computing, request to use ``Infiniband''.
-\end{enumerate}
+  \item  Requesting many processors could imply long queue times.
 
-\begin{enumerate}
-\item  And above all\dots  do not hesitate to contact the UA-HPC staff. We're here to help you.
+  \item  For all parallel computing, request to use ``Infiniband''.
+
+  \item  And above all\dots do not hesitate to contact the \hpc staff. We're
+    here to help you.
 \end{enumerate}
 
 \section{Windows / Unix}
 
-Important note: the PBS file on the AU-HPC has to be in UNIX format, if it is not, your job will fail and generate rather weird error messages.
+Important note: the PBS file on the \hpc has to be in UNIX format, if it is
+not, your job will fail and generate rather weird error messages.
 
 If necessary, you can convert it using
 \begin{prompt}
-$ %\textbf{dos2unix file.pbs}%
+%\shellcmd{dos2unix file.pbs}%
 \end{prompt}
-
-\textbf{Annexes}
 
