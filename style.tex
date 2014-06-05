@@ -12,6 +12,7 @@
 \usepackage{tikz}
 \usepackage[T1]{fontenc}
 \usepackage{graphics}
+\usepackage{multirow}
 
 \lstset{basicstyle=\ttfamily,breaklines=true, keepspaces=true}
 \lstdefinestyle{prompt}{
@@ -34,6 +35,17 @@
 % Taken from: http://tex.stackexchange.com/questions/9363/how-does-one-insert-a-backslash-or-a-tilde-into-latex
 \renewcommand{\tilde}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
 \newcommand{\shellcmd}[1]{\$ \textbf{\texttt{#1}\\}}
+
+\newcommand{\examplecode}[2]{
+  \lstinputlisting[
+    language=#1,
+    numbers=left,
+    title=#2,
+    frame=tlbr]
+    {examples/Chapter0\arabic{chapter}_Files/#2}
+}
+
+
 \parindent=0pt
 \parskip=7pt
 \newcommand{\ignore}[1]{}
@@ -84,6 +96,24 @@
     \include{#1-gent}
   \fi
 }
+\newcommand{\inputsite}[1]{
+  \ifleuven
+    \input{#1-leuven}
+  \fi
+  \ifantwerpen
+    \input{#1-antwerpen}
+  \fi
+  \ifhasselt
+    \input{#1-hasselt}
+  \fi
+  \ifbrussel
+    \input{#1-brussel}
+  \fi
+  \ifgent
+    \input{#1-gent}
+  \fi
+}
+
 
 \newif\ifwindows
 \newif\iflinux
