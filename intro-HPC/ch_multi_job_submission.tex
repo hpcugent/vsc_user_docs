@@ -32,7 +32,7 @@ It can handle many small jobs determined by:
 \begin{description}
   \item[parameter variations] i.e., many small jobs determined by a specific parameter set which is stored in a .csv (comma separated value) input file.
   \item[job arrays] i.e., each individual job got a unique numeric identifier.
-\end{enumerate}
+\end{description}
 
 Both use cases often have a common root: the user wants to run a program with a
 large number of parameter settings, and the program does not allow for
@@ -51,7 +51,7 @@ computed results to a single value.}
 First go to the right directory:
 
 \begin{prompt}
-%\shellcmd{cd  \tilde/examples/Chapter08\_MultiJob/par\_sweep}%
+%\shellcmd{cd \tilde/examples/Chapter08\_MultiJob/par\_sweep}%
 \end{prompt}
 
 Suppose the program the user wishes to run the ``\emph{weather}'' program,
@@ -67,9 +67,9 @@ For the purpose of this exercise, the weather program is just a simple bash
 script, which prints the 3 variables to the standard output and waits a bit:
 
 \begin{prompt}
-%\shellcmd{cat  weather}%
+%\shellcmd{cat weather}%
 #!/bin/bash
-#   Here you could do your calculations%\ldots%
+# Here you could do your calculations%\ldots%
 echo "T: $2  P: $4  V: $6"
 sleep 100
 \end{prompt}
@@ -83,7 +83,7 @@ then look like:
 #PBS -l nodes=1:ppn=1
 #PBS -l walltime=00:15:00
 cd $PBS_O_WORKDIR
-./weather -t 20  -p 1.05  -v 4.3
+./weather -t 20 -p 1.05 -v 4.3
 \end{prompt}
 
 When submitting this job, the calculation is performed or this particular
@@ -91,6 +91,7 @@ instance of the parameters, i.e., temperature = 20, pressure = 1.05, and volume
 = 4.3.
 
 To submit the job, the user would use:
+
 \begin{prompt}
 %\shellcmd{qsub weather\_p01.pbs}%
 \end{prompt}
@@ -111,7 +112,7 @@ temperature, pressure, volume
 295, 1.0e5, 105
 296, 1.0e5, 104
 297, 1.0e5, 103
-\dots
+%\dots%
 \end{prompt}
 
 It has to contain the names of the variables on the first line, followed by 100
@@ -133,7 +134,6 @@ cd $PBS_O_WORKDIR
 Note that:
 
 \begin{enumerate}
-
   \item  the parameter values 20, 1.05, 4.3 have been replaced by variables
     \$temperature, \$pressure and \$volume respectively, which were being specified
     on the first line of the ``\emph{data.csv}'' file;
@@ -153,110 +153,137 @@ The job can now be submitted as follows:
 %\shellcmd{module load worker}%
 %\shellcmd{qsub -batch weather.pbs-data data.csv}%
 total number of work items: 41
-440927.master1.turing.antwerpen.vsc
+%\jobid%
 \end{prompt}
 
-Note that the PBS file is the value of the -batch option. The weather program will now be run for all 100 parameter instances --- 8 concurrently --- until all computations are done. A computation for such a parameter instance is called a work item in Worker parlance.
+Note that the PBS file is the value of the -batch option. The weather program
+will now be run for all 100 parameter instances -- 8 concurrently -- until
+all computations are done. A computation for such a parameter instance is
+called a work item in Worker parlance.
 
 \section{The Worker framework: Job arrays}
 
-As a simple example, assume you have a serial program called myprog that you want to run on various input files \textit{input[1-100]}.
+As a simple example, assume you have a serial program called \emph{myprog} that you
+want to run on various input files \textit{input[1-100]}.
 
 \includegraphics*[width=3.22in, height=2.36in, keepaspectratio=false]{img0702}
 
 The following bash script would submit these jobs all one by one:
-\begin{prog}
- \#!/bin/bash
- \textbf{for} i \textbf{in} \textbf{`seq} 1 100\textbf{`}; \textbf{do}
-     qsub -o output\$i -i input\$i myprog.pbs
- \textbf{done}
-\end{prog}
+\begin{code}{bash}
+#!/bin/bash
+for i in `seq 1 100`; do
+   qsub -o output $i -i input $i myprog.pbs
+done
+\end{code}
 
 This, as said before, could be disturbing for the job scheduler.
 
-Alternatively, TORQUE provides a feature known as \textit{job arrays} which allows the creation of multiple, similar jobs with only \textbf{one qsub} command. This feature introduced a new job naming convention that allows users either to reference the entire set of jobs as a unit or to reference one particular job from the set.
+Alternatively, TORQUE provides a feature known as \emph{job arrays} which
+allows the creation of multiple, similar jobs with only \strong{one qsub}
+command. This feature introduced a new job naming convention that allows users
+either to reference the entire set of jobs as a unit or to reference one
+particular job from the set.
 
-Under TORQUE, the \textit{-t range} option is used with qsub to specify a job array, where \textit{range} is a range of numbers (e.g., \textit{1-100} or \textit{2,4-5,7}).
+Under TORQUE, the \emph{-t range} option is used with qsub to specify a job
+array, where \emph{range} is a range of numbers (e.g., \emph{1-100} or
+\emph{2,4-5,7}).
 
 The details are
 
 \begin{enumerate}
-\item  a job is submitted for each \textit{number} in the range,
-\item  individuals jobs are referenced as \textit{jobid-number}, and the entire array can be referenced as \textit{jobid} for easy killing etc., and
-\item  each jobs has \textit{PBS\_ARRAYID} set to its \textit{number} which allows the script/program to specialize for that job
+\item  a job is submitted for each \emph{number} in the range,
+\item  individuals jobs are referenced as \emph{jobid-number}, and the entire array can be referenced as \emph{jobid} for easy killing etc., and
+\item  each jobs has \emph{PBS\_ARRAYID} set to its \emph{number} which allows the script/program to specialize for that job
 \end{enumerate}
 
 The job could have been submitted using:
 \begin{prompt}
-\textbf{qsub -t 1-100  my\_prog.pbs}
+%\shellcmd{qsub -t 1-100  my\_prog.pbs}%
 \end{prompt}
 
-The effect was that rather than 1 job, the user would actually submit 100 jobs to the queue system. This was a popular feature of TORQUE, but as this technique puts quite a burden on the scheduler, it is not supported by Moab (the current job scheduler) anymore.
+The effect was that rather than 1 job, the user would actually submit 100 jobs
+to the queue system. This was a popular feature of TORQUE, but as this
+technique puts quite a burden on the scheduler, it is not supported by Moab
+(the current job scheduler) anymore.
 
-To support those users who used the feature and since it offers a convenient workflow, the ``worker framework'' implements the idea of ``job arrays'' in its own way.
+To support those users who used the feature and since it offers a convenient
+workflow, the ``worker framework'' implements the idea of ``job arrays'' in its
+own way.
 
 First go to the right directory:
 \begin{prompt}
-$ %\textbf{cd \~/examples/Chapter08\_MultiJob/job\_array}%
+%\shellcmd{cd \tilde/examples/Chapter08\_MultiJob/job\_array}%
 \end{prompt}
 
 A typical job-script for use with job arrays would look like this:
 \begin{prompt}
-$ %\textbf{cat job\_array.pbs}%
-\#!/bin/bash -l
-\#PBS -l nodes=1:ppn=1
-\#PBS -l walltime=00:15:00
-cd \$PBS\_O\_WORKDIR
-INPUT\_FILE="input\_\$\{PBS\_ARRAYID\}.dat"
-OUTPUT\_FILE="output\_\$\{PBS\_ARRAYID\}.dat"
-my\_prog   -input \$\{INPUT\_FILE\}  -output \$\{OUTPUT\_FILE\}
+%\shellcmd{cat job\_array.pbs}%
+#!/bin/bash -l
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=00:15:00
+cd $PBS_O_WORKDIR
+INPUT_FILE="input_${PBS_ARRAYID}.dat"
+OUTPUT_FILE="output_${PBS_ARRAYID}.dat"
+my_prog -input ${INPUT_FILE} -output ${OUTPUT_FILE}
 \end{prompt}
 
-In our specific example, we have prefabricated 100 input files in the ``./input'' subdirectory. Each of those files contains a number of parameters for the ``test\_set'' program, which will perform some tests with those parameters.
+In our specific example, we have prefabricated 100 input files in the
+``./input'' subdirectory. Each of those files contains a number of parameters
+for the ``test\_set'' program, which will perform some tests with those
+parameters.
 
-Input for the program is stored in files with names such as input\_1.dat, input\_2.dat, \ldots, input\_100.dat in the ./input subdirectory.
+Input for the program is stored in files with names such as input\_1.dat,
+input\_2.dat, \ldots, input\_100.dat in the ./input subdirectory.
+
 \begin{prompt}
-$ %\textbf{ls ./input}%
-\dots
-$ %\textbf{more ./input/input\_99.dat }%
+%\shellcmd{ls ./input}%
+%\dots%
+%\shellcmd{more ./input/input\_99.dat}%
 This is input file \#99
-Parameter \#1 = 99
-Parameter \#2 = 25.67
-Parameter \#3 = Batch
-Parameter \#4 = 0x562867
+Parameter #1 = 99
+Parameter #2 = 25.67
+Parameter #3 = Batch
+Parameter #4 = 0x562867
 \end{prompt}
 
-For the sole purpose of this exercise, we have provided a short ``test\_set'' program, which reads the ``input'' files and just copies them into a corresponding output file.  We even add a few lines to each output file. The corresponding output computed by our ``\textit{test\_set}'' program will be written to the \textit{``./output}'' directory in output\_1.dat, output\_2.dat, \ldots, output\_100.dat. files.
+For the sole purpose of this exercise, we have provided a short ``test\_set''
+program, which reads the ``input'' files and just copies them into a
+corresponding output file.  We even add a few lines to each output file. The
+corresponding output computed by our ``\textit{test\_set}'' program will be
+written to the \textit{``./output}'' directory in output\_1.dat, output\_2.dat,
+\ldots, output\_100.dat. files.
 
 \begin{prompt}
-$ %\textbf{cat  test\_set}%
-\#!/bin/bash
+%\shellcmd{cat test\_set}%
+#!/bin/bash
 
 input="./input"
 output="./output"
-\# Check if the output Directory exists
-if [ ! -d \$\{\$output\} ] ; then
-    mkdir \$\{output\}
+# Check if the output Directory exists
+if [ ! -d ${$output} ] ; then
+    mkdir ${output}
 fi
 
-\#   Here you could do your calculations\ldots
-echo "This is Job\_array \#" \$1
-echo "Input File : " \$3
-echo "Output File: " \$5
-cat \$\{input\}/\$3 \textbar  sed -e "s/input/output/g" \textbar  grep -v "Parameter" $>$ \$\{output\}/\$5
- 15 echo "Calculations done, no results" $>$$>$ \$\{output\}/\$5
+# Here you could do your calculations%\ldots%
+echo "This is Job_array #" $1
+echo "Input File : " $3
+echo "Output File: " $5
+cat ${input}/$3 | sed -e "s/input/output/g" | grep -v "Parameter" > ${output}/$5
+echo "Calculations done, no results" >> ${output}/$5
 \end{prompt}
 
-Using the ``worker framework'', a feature akin to job arrays can be used with minimal modifications to the job-script:
+Using the ``worker framework'', a feature akin to job arrays can be used with
+minimal modifications to the job-script:
+
 \begin{prompt}
-$ %\textbf{cat test\_set.pbs}%
+%\shellcmd{cat test\_set.pbs}%
 !/bin/bash -l
-\#PBS -l nodes=1:ppn=8
-\#PBS -l walltime=04:00:00
-cd \$PBS\_O\_WORKDIR
-INPUT\_FILE="input\_\$\{PBS\_ARRAYID\}.dat"
-OUTPUT\_FILE="output\_\$\{PBS\_ARRAYID\}.dat"
-./test\_set  \$\{PBS\_ARRAYID\}  -input  \$\{INPUT\_FILE\}  -output  \$\{OUTPUT\_FILE\}
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=04:00:00
+cd $PBS_O_WORKDIR
+INPUT_FILE="input_${PBS_ARRAYID}.dat"
+OUTPUT_FILE="output_${PBS_ARRAYID}.dat"
+./test_set ${PBS_ARRAYID} -input ${INPUT_FILE} -output ${OUTPUT_FILE}
 \end{prompt}
 
 Note that
@@ -268,30 +295,36 @@ Note that
 
 The job is now submitted as follows:
 \begin{prompt}
-$ %\textbf{module load worker}%
-$ %\textbf{wsub -t  1-100  -batch  test\_set.pbs}%
+%\shellcmd{module load worker}%
+%\shellcmd{wsub -t 1-100 -batch test\_set.pbs}%
 total number of work items: 100
-441003.master1.turing.antwerpen.vsc
+%\jobid%
 \end{prompt}
 
-The ``\textit{test\_set}'' program will now be run for all 100 input files --- 8 concurrently --- until all computations are done. Again, a computation for an individual input file, or, equivalently, an array id, is called a work item in Worker speak.
+The ``\textit{test\_set}'' program will now be run for all 100 input files --
+8 concurrently -- until all computations are done. Again, a computation for an
+individual input file, or, equivalently, an array id, is called a work item in
+Worker speak.
 
-Note that in contrast to TORQUE job arrays, a worker job array only submits a single job.
+Note that in contrast to TORQUE job arrays, a worker job array only submits a
+single job.
+
 \begin{prompt}
-$ %\textbf{qstat}%
+%\shellcmd{qstat}%
 Job id                    Name             User            Time                  Use S Queue
 ------------------------- ---------------- --------------- -------- ----- - ---------------
-441003.master1             test\_set.pbs     vsc20167               0 Q qreg
+441003.master1            test\_set.pbs    vsc20167               0 Q qreg
 
 And you can now check the generated output files:
-$ %\textbf{more   ./output/output\_99.dat  }%
-This is output file \#99
+%\shellcmd{more ./output/output\_99.dat}%
+This is output file #99
 Calculations done, no results
 \end{prompt}
 
 \section{MapReduce: prologues and epilogue}
 
-Often, an embarrassingly parallel computation can be abstracted to three simple steps:
+Often, an embarrassingly parallel computation can be abstracted to three simple
+steps:
 
 \begin{enumerate}
 \item  a preparation phase in which the data is split up into smaller, more manageable chunks;
@@ -301,68 +334,79 @@ Often, an embarrassingly parallel computation can be abstracted to three simple 
 
 \includegraphics*[width=2.40in, height=2.78in, keepaspectratio=false]{img0703}
 
-The Worker framework directly supports this scenario by using a prologue (pre-processing) and an epilogue (post-processing). The former is executed just once before work is started on the work items, the latter is executed just once after the work on all work items has finished. Technically, the master, i.e., the process that is responsible for dispatching work and logging progress, executes the prologue and epilogue.
+The Worker framework directly supports this scenario by using a prologue
+(pre-processing) and an epilogue (post-processing). The former is executed just
+once before work is started on the work items, the latter is executed just once
+after the work on all work items has finished. Technically, the master, i.e.,
+the process that is responsible for dispatching work and logging progress,
+executes the prologue and epilogue.
 
 \begin{prompt}
-$ %\textbf{cd \~/examples/Chapter08\_MultiJob/map\_reduce}%
+%\shellcmd{cd \tilde/examples/Chapter08\_MultiJob/map\_reduce}%
 \end{prompt}
 
-The script 'pre.sh' prepares the data by creating 100 different input-files, and the script 'post.sh' aggregates (concatenates) the data.
+The script 'pre.sh' prepares the data by creating 100 different input-files,
+and the script 'post.sh' aggregates (concatenates) the data.
 
 First study the scripts:
 \begin{prompt}
-$ %\textbf{cat pre.sh }%
-\#!/bin/bash
+%\shellcmd{cat pre.sh}%
+#!/bin/bash
 input="./input"
-\# Check if the input Directory exists
-if [ ! -d \$\{input\} ] ; then
-  mkdir \$\{input\}
+# Check if the input Directory exists
+if [ ! -d ${input} ] ; then
+  mkdir ${input}
 fi
 
-\# Just generate all dummy input files
-for i in \{1..100\};
+# Just generate all dummy input files
+for i in {1..100};
 do
-echo "This is input file \#\$i" $>$  \$\{input\}/input\_\$i.dat
-  echo "Parameter \#1 = \$i" $>$$>$  \$\{input\}/input\_\$i.dat
-echo "Parameter \#2 = 25.67" $>$$>$  \$\{input\}/input\_\$i.dat
-echo "Parameter \#3 = Batch" $>$$>$  \$\{input\}/input\_\$i.dat
-echo "Parameter \#4 = 0x562867" $>$$>$  \$\{input\}/input\_\$i.dat
+echo "This is input file #$i" >  ${input}/input_$i.dat
+echo "Parameter #1 = $i" >>  ${input}/input_$i.dat
+echo "Parameter #2 = 25.67" >>  ${input}/input_$i.dat
+echo "Parameter #3 = Batch" >>  ${input}/input_$i.dat
+echo "Parameter #4 = 0x562867" >>  ${input}/input_$i.dat
 done
-$ %\textbf{cat post.sh }%
-\#!/bin/bash
+%\shellcmd{cat post.sh}%
+#!/bin/bash
 output="./output"
 
-\# Check if the output Directory exists
-if [ ! -d \$\{output\}"" ] ; then
+# Check if the output Directory exists
+if [ ! -d ${output}"" ] ; then
   echo "The output directory does not exist!"
-exit
+  exit
 fi
 
-\# Just concatenate all output files
-touch all\_output.txt
-for i in \{1..100\};
+# Just concatenate all output files
+touch all_output.txt
+for i in {1..100};
 do
-  cat \$\{output\}/output\_\$i.dat $>$$>$ all\_output.txt
+  cat ${output}/output_$i.dat >> all_output.txt
 done
 \end{prompt}
 
 Then one can submit a MapReduce style job as follows:
+
 \begin{prompt}
-$ %\textbf{wsub  -prolog pre.sh  -batch test\_set.pbs  -epilog post.sh -t 1-100}%
+%\shellcmd{wsub -prolog pre.sh -batch test\_set.pbs -epilog post.sh -t 1-100}%
 total number of work items: 100
-441050.master1.turing.antwerpen.vsc
-\textbf{\$ cat all\_output.txt}
-\textbf{\dots }
-\textbf{\$ rm -r -f ./input/ ./output/}
+%\jobid%
+%\shellcmd{cat all\_output.txt}%
+%\dots%
+%\shellcmd{rm -r -f ./input/ ./output/}%
 \end{prompt}
 
-Note that the time taken for executing the prologue and the epilogue should be added to the job's total walltime.
+Note that the time taken for executing the prologue and the epilogue should be
+added to the job's total walltime.
 
 \section{Some more on the Worker Framework}
 
 \subsection{Using Worker efficiently}
 
-The ``Worker Framework'' is implemented using MPI, so it is not restricted to a single compute nodes, it scales well to multiple nodes. However, remember that jobs requesting a large number of nodes typically spend quite some time in the queue.
+The ``Worker Framework'' is implemented using MPI, so it is not restricted to a
+single compute nodes, it scales well to multiple nodes. However, remember that
+jobs requesting a large number of nodes typically spend quite some time in the
+queue.
 
 The ``Worker Framework'' will be effective when
 
@@ -373,92 +417,121 @@ The ``Worker Framework'' will be effective when
 
 \subsection{Monitoring a worker job}
 
-Since a Worker job will typically run for several hours, it may be reassuring to monitor its progress. Worker keeps a log of its activity in the directory where the job was submitted. The log's name is derived from the job's name and the job's ID, i.e., it has the form $<$jobname$>$.log$<$jobid$>$. For the running example, this could be 'run.pbs.log445948', assuming the job's ID is 445948. To keep an eye on the progress, one can use:
+Since a Worker job will typically run for several hours, it may be reassuring
+to monitor its progress. Worker keeps a log of its activity in the directory
+where the job was submitted. The log's name is derived from the job's name and
+the job's ID, i.e., it has the form $<$jobname$>$.log$<$jobid$>$. For the
+running example, this could be 'run.pbs.log445948', assuming the job's ID is
+\jobnumber. To keep an eye on the progress, one can use:
 
 \begin{prompt}
-$ %\textbf{tail -f run.pbs.log445948}%
+%\shellcmd{tail -f run.pbs.log\jobnumber}%
 \end{prompt}
 
 Alternatively, a Worker command that summarizes a log file can be used:
 \begin{prompt}
-$ %\textbf{watch -n 60 wsummarize run.pbs.log445948}%
+%\shellcmd{watch -n 60 wsummarize run.pbs.log\jobnumber}%
 \end{prompt}
 
 This will summarize the log file every 60 seconds.
 
 \subsection{Time limits for work items}
 
-Sometimes, the execution of a work item takes long than expected, or worse, some work items get stuck in an infinite loop. This situation is unfortunate, since it implies that work items that could successfully execute are not even started. Again, the Worker framework offers a simple and yet versatile solution. If we want to limit the execution of each work item to at most 20 minutes, this can be accomplished by modifying the script of the running example.
+Sometimes, the execution of a work item takes long than expected, or worse,
+some work items get stuck in an infinite loop. This situation is unfortunate,
+since it implies that work items that could successfully execute are not even
+started. Again, the Worker framework offers a simple and yet versatile
+solution. If we want to limit the execution of each work item to at most 20
+minutes, this can be accomplished by modifying the script of the running
+example.
 
 
 \begin{prog}
-\#!/bin/bash -l
-\#PBS -l nodes=1:ppn=8
-\#PBS -l walltime=04:00:00
+#!/bin/bash -l
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=04:00:00
 module load timedrun/1.0
-cd \$PBS\_O\_WORKDIR
-timedrun -t 00:20:00 weather -t \$temperature  -p \$pressure  -v \$volume
+cd $PBS_O_WORKDIR
+timedrun -t 00:20:00 weather -t $temperature  -p $pressure  -v $volume
 \end{prog}
 
-Note that it is trivial to set individual time constraints for work items by introducing a parameter, and including the values of the latter in the CSV file, along with those for the temperature, pressure and volume.
+Note that it is trivial to set individual time constraints for work items by
+introducing a parameter, and including the values of the latter in the CSV
+file, along with those for the temperature, pressure and volume.
 
-Also note that 'timedrun' is in fact offered in a module of its own, so it can be used outside the Worker framework as well.
+Also note that 'timedrun' is in fact offered in a module of its own, so it can
+be used outside the Worker framework as well.
 
 \subsection{Resuming a Worker job}
 
-Unfortunately, it is not always easy to estimate the walltime for a job, and consequently, sometimes the latter is underestimated. When using the Worker framework, this implies that not all work items will have been processed. Worker makes it very easy to resume such a job without having to figure out which work items did complete successfully, and which remain to be computed. Suppose the job that did not complete all its work items had ID '445948'.
+Unfortunately, it is not always easy to estimate the walltime for a job, and
+consequently, sometimes the latter is underestimated. When using the Worker
+framework, this implies that not all work items will have been processed.
+Worker makes it very easy to resume such a job without having to figure out
+which work items did complete successfully, and which remain to be computed.
+Suppose the job that did not complete all its work items had ID '445948'.
 
 \begin{prompt}
-$ %\textbf{wresume -jobid 445948}%
+%\shellcmd{wresume -jobid \jobnumber}%
 \end{prompt}
 
-This will submit a new job that will start to work on the work items that were not done yet. Note that it is possible to change almost all job parameters when resuming, specifically the requested resources such as the number of cores and the walltime.
+This will submit a new job that will start to work on the work items that were
+not done yet. Note that it is possible to change almost all job parameters when
+resuming, specifically the requested resources such as the number of cores and
+the walltime.
 
 \begin{prompt}
-$ %\textbf{wresume -l walltime=1:30:00 -jobid 445948}%
+%\shellcmd{wresume -l walltime=1:30:00 -jobid \jobnumber}%
 \end{prompt}
 
-Work items may fail to complete successfully for a variety of reasons, e.g., a data file that is missing, a (minor) programming error, etc. Upon resuming a job, the work items that failed are considered to be done, so resuming a job will only execute work items that did not terminate either successfully, or reporting a failure. It is also possible to retry work items that failed (preferably after the glitch why they failed was fixed).
+Work items may fail to complete successfully for a variety of reasons, e.g., a
+data file that is missing, a (minor) programming error, etc. Upon resuming a
+job, the work items that failed are considered to be done, so resuming a job
+will only execute work items that did not terminate either successfully, or
+reporting a failure. It is also possible to retry work items that failed
+(preferably after the glitch why they failed was fixed).
 
 \begin{prompt}
-$ %\textbf{wresume -jobid 445948 -retry}%
+%\shellcmd{wresume -jobid \jobnumber -retry}%
 \end{prompt}
 
-By default, a job's prologue is not executed when it is resumed, while its epilogue is. 'wresume' has options to modify this default behavior.
+By default, a job's prologue is not executed when it is resumed, while its
+epilogue is. 'wresume' has options to modify this default behavior.
 
 \subsection{Further information}
 
-This how-to introduces only Worker's basic features. The wsub command has some usage information that is printed when the -help option is specified:
+This how-to introduces only Worker's basic features. The wsub command has some
+usage information that is printed when the -help option is specified:
 
 \begin{prompt}
-$ %\textbf{wsub  -help}%
-\#\#\# usage: wsub  -batch $<$batch-file$>$          \textbackslash
-\#                [-data $<$data-files$>$]         \textbackslash
-\#                [-prolog $<$prolog-file$>$]      \textbackslash
-\#                [-epilog $<$epilog-file$>$]      \textbackslash
-\#                [-log $<$log-file$>$]            \textbackslash
-\#                [-mpiverbose]                \textbackslash
-\#                [-dryrun] [-verbose]         \textbackslash
-\#                [-quiet] [-help]             \textbackslash
-\#                [-t $<$array-req$>$]             \textbackslash
-\#                [$<$pbs-qsub-options$>$]
-\#
-\#   -batch $<$batch-file$>$   : batch file template, containing variables to be
-\#                           replaced with data from the data file(s) or the
-\#                           PBS array request option
-\#   -data $<$data-files$>$    : comma-separated list of data files (default CSV
-\#                           files) used to provide the data for the work
-\#                           items
-\#   -prolog $<$prolog-file$>$ : prolog script to be executed before any of the
-\#                           work items are executed
-\#   -epilog $<$epilog-file$>$ : epilog script to be executed after all the work
-\#                           items are executed
-\#   -mpiverbose           : pass verbose flag to the underlying MPI program
-\#   -verbose              : feedback information is written to standard error
-\#   -dryrun               : run without actually submitting the job, useful
-\#   -quiet                : don't show information
-\#   -help                 : print this help message
-\#   -t $<$array-req$>$        : qsub's PBS array request options, e.g., 1-10
-\#   $<$pbs-qsub-options$>$    : options passed on to the queue submission
-\#                           command
+%\shellcmd{wsub -help}%
+### usage: wsub  -batch <batch-file>          \
+#                [-data <data-files>]         \
+#                [-prolog <prolog-file>]      \
+#                [-epilog <epilog-file>]      \
+#                [-log <log-file>]            \
+#                [-mpiverbose]                \
+#                [-dryrun] [-verbose]         \
+#                [-quiet] [-help]             \
+#                [-t <array-req>]             \
+#                [<pbs-qsub-options>]
+#
+#   -batch <batch-file>   : batch file template, containing variables to be
+#                           replaced with data from the data file(s) or the
+#                           PBS array request option
+#   -data <data-files>    : comma-separated list of data files (default CSV
+#                           files) used to provide the data for the work
+#                           items
+#   -prolog <prolog-file> : prolog script to be executed before any of the
+#                           work items are executed
+#   -epilog <epilog-file> : epilog script to be executed after all the work
+#                           items are executed
+#   -mpiverbose           : pass verbose flag to the underlying MPI program
+#   -verbose              : feedback information is written to standard error
+#   -dryrun               : run without actually submitting the job, useful
+#   -quiet                : don't show information
+#   -help                 : print this help message
+#   -t <array-req>        : qsub's PBS array request options, e.g., 1-10
+#   <pbs-qsub-options>    : options passed on to the queue submission
+#                           command
 \end{prompt}
