@@ -12,7 +12,7 @@ collect your results.
 First go to the directory:
 
 \begin{prompt}
-%\shellcmd{cd \tilde/examples/Chapter06\_Files}%
+%\shellcmd{cd \tilde/examples/Chapter0\arabic{chapter}\_Files}%
 \end{prompt}
 
 List and check the contents with:
@@ -32,34 +32,7 @@ total 2304
 Now, let us inspect the contents of the first executable (which is just a
 python script with execute permission).
 
-\begin{prompt}
-%\shellcmd{cat file1.py}%
-#! /usr/bin/env python
-#
-# Step #1: Write to a local file in your current directory
-#
-local_f = open("Hello.txt", 'w+')
-local_f.write("Hello World!\n")
-local_f.write("I am writing in the file:<Hello.txt>.\n")
-local_f.write("in the current directory.\n")
-local_f.write("Cheers!\n")
-local_f.close()
-
-#
-# Step #2: Write to stdout
-#
-sys.stdout.write("Hello World!\n")
-sys.stdout.write("I am writing to <stdout>.\n")
-sys.stdout.write("Cheers!\n")
-
-#
-# Step #3: Write to stderr
-#
-sys.stderr.write("Hello World!\n")
-sys.stderr.write("This is NO ERROR or WARNING.\n")
-sys.stderr.write("I am just writing to <stderr>.\n")
-sys.stderr.write("Cheers!\n")
-\end{prompt}
+\examplecode{Python}{file1.py}
 
 The code of the Python script, is self explanatory:
 \begin{enumerate}
@@ -70,21 +43,7 @@ The code of the Python script, is self explanatory:
 
 Check the contents of the first job-script:
 
-\begin{prompt}
-%\shellcmd{cat file1a.pbs}%
-#!/bin/bash
-
-# go to the (current) working directory (optional, if this
-# is the directory where you submitted the job)
-module load python
-cd $PBS_O_WORKDIR
-
-# the program itself
-echo Start Job
-date
-./file1.py
-echo End Job
-\end{prompt}
+\examplecode{bash}{file1a.pbs}
 
 You'll see that there are NO specific PBS directives.  All output files are
 just written to the standard paths.
@@ -135,17 +94,10 @@ Inspect their contents\dots and remove the files
 \subsection{Filenames using the name of the job}
 
 Check the contents of the job script and execute it.
-\begin{prompt}
-%\shellcmd{cat file1b.pbs}%
-#!/bin/bash
-# Specify the "name" of the job
-#PBS -N my_serial_job
 
-cd $PBS_O_WORKDIR
-echo Start Job
-date
-./file1.py
-echo End Job
+\examplecode{bash}{file1b.pbs}
+
+\begin{prompt}
 %\shellcmd{qsub file1b.pbs}%
 \end{prompt}
 
@@ -169,19 +121,9 @@ the name of the job script.
 You can also specify the name of \emph{stdout} and \emph{stderr} files
 explicitly by adding two lines in the job-script, as in our third example:
 
+\examplecode{bash}{file1c.pbs}
+
 \begin{prompt}
-%\shellcmd{cat file1c.pbs}%
-#!/bin/bash
-
-# redirect standard output (-o) and error (-e)
-#PBS -o stdout.$PBS_JOBID
-#PBS -e stderr.$PBS_JOBID
-
-cd $PBS_O_WORKDIR
-echo Start Job
-date
-./file1.py
-echo End Job
 %\shellcmd{qsub file1c.pbs}%
 %\shellcmd{ls}%
 \end{prompt}
@@ -367,7 +309,7 @@ You'll best use the ``/tmp'' directory, which can be accessed via the
 
 \section{Writing Output files}
 
-\textit{\underbar{Tip}: Find the code of the exercises in ``\tilde/examples/Chapter06\_Files''}
+\textit{\underbar{Tip}: Find the code of the exercises in ``\tilde/examples/Chapter0\arabic{chapter}\_Files''}
 
 In the next exercise, you will generate a file in the \$VSC\_SCRATCH directory.
 In order to generate some CPU- and disk-IO load, we will
@@ -395,7 +337,7 @@ approximately 3 minutes on the \hpc.
 \section{Reading Input files}
 
 \textit{\underbar{Tip}: Find the code of the exercise ``file3.py'' in
-``\tilde/examples/Chapter06\_Files''}.
+``\tilde/examples/Chapter0arabic{chapter}\_Files''}.
 
 In this exercise, you will
 \begin{enumerate}
@@ -600,6 +542,6 @@ files.
 Try:
 
 \begin{prompt}
-%\shellcmd{tree --s -d}%
+%\shellcmd{tree -s -d}%
 \end{prompt}
 
