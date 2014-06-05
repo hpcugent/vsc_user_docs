@@ -51,7 +51,7 @@ computed results to a single value.}
 First go to the right directory:
 
 \begin{prompt}
-%\shellcmd{cd \tilde/examples/Chapter08\_MultiJob/par\_sweep}%
+%\shellcmd{cd \tilde/\exampledir/par\_sweep}%
 \end{prompt}
 
 Suppose the program the user wishes to run the ``\emph{weather}'' program,
@@ -66,25 +66,12 @@ T: 20  P: 1.05  V: 4.3
 For the purpose of this exercise, the weather program is just a simple bash
 script, which prints the 3 variables to the standard output and waits a bit:
 
-\begin{prompt}
-%\shellcmd{cat weather}%
-#!/bin/bash
-# Here you could do your calculations%\ldots%
-echo "T: $2  P: $4  V: $6"
-sleep 100
-\end{prompt}
+\examplecode{bash}{par_sweep/weather}
 
 A job-script that would run this as a job for the first parameters (p01) would
 then look like:
 
-\begin{prompt}
-%\shellcmd{cat weather\_p01.pbs}%
-#!/bin/bash -l
-#PBS -l nodes=1:ppn=1
-#PBS -l walltime=00:15:00
-cd $PBS_O_WORKDIR
-./weather -t 20 -p 1.05 -v 4.3
-\end{prompt}
+\examplecode{bash}{par_sweep/weather_p01.pbs}
 
 When submitting this job, the calculation is performed or this particular
 instance of the parameters, i.e., temperature = 20, pressure = 1.05, and volume
@@ -120,16 +107,7 @@ parameter instances in the current example.
 
 In order to make our PBS generic, the PBS file can be modified as follows:
 
-\begin{prompt}
-%\shellcmd{cat weather.pbs}%
-#!/bin/bash
-#PBS -q qshort
-#PBS -l nodes=1:ppn=8
-#PBS -l walltime=04:00:00
-
-cd $PBS_O_WORKDIR
-./weather -t $temperature -p $pressure -v $volume
-\end{prompt}
+\examplecode{bash}{par_sweep/weather.pbs}
 
 Note that:
 
@@ -210,22 +188,9 @@ To support those users who used the feature and since it offers a convenient
 workflow, the ``worker framework'' implements the idea of ``job arrays'' in its
 own way.
 
-First go to the right directory:
-\begin{prompt}
-%\shellcmd{cd \tilde/examples/Chapter08\_MultiJob/job\_array}%
-\end{prompt}
-
 A typical job-script for use with job arrays would look like this:
-\begin{prompt}
-%\shellcmd{cat job\_array.pbs}%
-#!/bin/bash -l
-#PBS -l nodes=1:ppn=1
-#PBS -l walltime=00:15:00
-cd $PBS_O_WORKDIR
-INPUT_FILE="input_${PBS_ARRAYID}.dat"
-OUTPUT_FILE="output_${PBS_ARRAYID}.dat"
-my_prog -input ${INPUT_FILE} -output ${OUTPUT_FILE}
-\end{prompt}
+
+\examplecode{bash}{job_array/job_array.pbs}
 
 In our specific example, we have prefabricated 100 input files in the
 ``./input'' subdirectory. Each of those files contains a number of parameters
@@ -253,38 +218,12 @@ corresponding output computed by our ``\textit{test\_set}'' program will be
 written to the \textit{``./output}'' directory in output\_1.dat, output\_2.dat,
 \ldots, output\_100.dat. files.
 
-\begin{prompt}
-%\shellcmd{cat test\_set}%
-#!/bin/bash
-
-input="./input"
-output="./output"
-# Check if the output Directory exists
-if [ ! -d ${$output} ] ; then
-    mkdir ${output}
-fi
-
-# Here you could do your calculations%\ldots%
-echo "This is Job_array #" $1
-echo "Input File : " $3
-echo "Output File: " $5
-cat ${input}/$3 | sed -e "s/input/output/g" | grep -v "Parameter" > ${output}/$5
-echo "Calculations done, no results" >> ${output}/$5
-\end{prompt}
+\examplecode{bash}{job_array/test_set}
 
 Using the ``worker framework'', a feature akin to job arrays can be used with
 minimal modifications to the job-script:
 
-\begin{prompt}
-%\shellcmd{cat test\_set.pbs}%
-!/bin/bash -l
-#PBS -l nodes=1:ppn=8
-#PBS -l walltime=04:00:00
-cd $PBS_O_WORKDIR
-INPUT_FILE="input_${PBS_ARRAYID}.dat"
-OUTPUT_FILE="output_${PBS_ARRAYID}.dat"
-./test_set ${PBS_ARRAYID} -input ${INPUT_FILE} -output ${OUTPUT_FILE}
-\end{prompt}
+\examplecode{bash}{job_array/test_set.pbs}
 
 Note that
 
@@ -342,48 +281,17 @@ the process that is responsible for dispatching work and logging progress,
 executes the prologue and epilogue.
 
 \begin{prompt}
-%\shellcmd{cd \tilde/examples/Chapter08\_MultiJob/map\_reduce}%
+%\shellcmd{cd \tilde/\exampledir/map\_reduce}%
 \end{prompt}
 
 The script 'pre.sh' prepares the data by creating 100 different input-files,
 and the script 'post.sh' aggregates (concatenates) the data.
 
+
 First study the scripts:
-\begin{prompt}
-%\shellcmd{cat pre.sh}%
-#!/bin/bash
-input="./input"
-# Check if the input Directory exists
-if [ ! -d ${input} ] ; then
-  mkdir ${input}
-fi
 
-# Just generate all dummy input files
-for i in {1..100};
-do
-echo "This is input file #$i" >  ${input}/input_$i.dat
-echo "Parameter #1 = $i" >>  ${input}/input_$i.dat
-echo "Parameter #2 = 25.67" >>  ${input}/input_$i.dat
-echo "Parameter #3 = Batch" >>  ${input}/input_$i.dat
-echo "Parameter #4 = 0x562867" >>  ${input}/input_$i.dat
-done
-%\shellcmd{cat post.sh}%
-#!/bin/bash
-output="./output"
-
-# Check if the output Directory exists
-if [ ! -d ${output}"" ] ; then
-  echo "The output directory does not exist!"
-  exit
-fi
-
-# Just concatenate all output files
-touch all_output.txt
-for i in {1..100};
-do
-  cat ${output}/output_$i.dat >> all_output.txt
-done
-\end{prompt}
+\examplecode{bash}{map_reduce/pre.sh}
+\examplecode{bash}{map_reduce/post.sh}
 
 Then one can submit a MapReduce style job as follows:
 
@@ -445,15 +353,14 @@ solution. If we want to limit the execution of each work item to at most 20
 minutes, this can be accomplished by modifying the script of the running
 example.
 
-
-\begin{prog}
+\begin{code}{bash}
 #!/bin/bash -l
 #PBS -l nodes=1:ppn=8
 #PBS -l walltime=04:00:00
 module load timedrun/1.0
 cd $PBS_O_WORKDIR
 timedrun -t 00:20:00 weather -t $temperature  -p $pressure  -v $volume
-\end{prog}
+\end{code}
 
 Note that it is trivial to set individual time constraints for work items by
 introducing a parameter, and including the values of the latter in the CSV

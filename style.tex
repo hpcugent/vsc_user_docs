@@ -13,6 +13,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{graphics}
 \usepackage{multirow}
+\usepackage{substr}
 
 \lstset{basicstyle=\ttfamily,breaklines=true, keepspaces=true}
 \lstdefinestyle{prompt}{
@@ -42,7 +43,7 @@
   \lstinputlisting[
     language=#1,
     numbers=left,
-    title=#2,
+    title=\IfSubStringInString{/}{#2}{\BehindSubString{/}{#2}}{#2},
     frame=tlbr]
     {examples/Chapter\arabic{chapter}/#2}
     \endgroup

@@ -1,6 +1,5 @@
 % use \macro instead of \newcommand so we automatically add a space
 \usepackage{xspace}
-\usepackage{substr}
 \newcommand{\macro}[2]{\newcommand{#1}{#2\xspace}}
 % General macro for extracting the jobnumber from the jobid
 \macro{\jobnumber}{\BeforeSubString{.}{\jobid}}
