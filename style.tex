@@ -12,16 +12,21 @@
 \usepackage{tikz}
 \usepackage[T1]{fontenc}
 \usepackage{graphics}
+\usepackage{multirow}
 
 \lstset{basicstyle=\ttfamily,breaklines=true, keepspaces=true}
-\lstdefinestyle{prompt}{language=bash,
+\lstdefinestyle{prompt}{
+  language=bash,
   frame=tblr,
   columns=fullflexible,
   escapechar=\%,
   fillcolor=\color{lightgray},
   backgroundcolor=\color{lightgray},
   }
-\lstdefinestyle{code}{numbers=left}
+\lstdefinestyle{code}{
+  numbers=left,
+  escapechar=\%,
+}
 
 \lstnewenvironment{prompt} {\lstset{style=prompt}} {}
 \lstnewenvironment{code}[1]{\lstset{style=code, language=#1}} {}
@@ -30,6 +35,24 @@
 % Taken from: http://tex.stackexchange.com/questions/9363/how-does-one-insert-a-backslash-or-a-tilde-into-latex
 \renewcommand{\tilde}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
 \newcommand{\shellcmd}[1]{\$ \textbf{\texttt{#1}\\}}
+
+% LaTeX hacks to allow underscores in filenames. Adapted from
+% http://tex.stackexchange.com/questions/69142/include-figure-from-macro-with-underscore-in-filename
+\newcommand{\examplecodeStub}[2]{
+  \lstinputlisting[
+    language=#1,
+    numbers=left,
+    title=#2,
+    frame=tlbr]
+    {examples/Chapter\arabic{chapter}/#2}
+    \endgroup
+}
+\def\examplecode{\begingroup
+  \catcode`\_=12
+\examplecodeStub}
+
+\newcommand{\exampledir}{examples/Chapter\arabic{chapter}/}
+
 \parindent=0pt
 \parskip=7pt
 \newcommand{\ignore}[1]{}
@@ -80,6 +103,24 @@
     \include{#1-gent}
   \fi
 }
+\newcommand{\inputsite}[1]{
+  \ifleuven
+    \input{#1-leuven}
+  \fi
+  \ifantwerpen
+    \input{#1-antwerpen}
+  \fi
+  \ifhasselt
+    \input{#1-hasselt}
+  \fi
+  \ifbrussel
+    \input{#1-brussel}
+  \fi
+  \ifgent
+    \input{#1-gent}
+  \fi
+}
+
 
 \newif\ifwindows
 \newif\iflinux
