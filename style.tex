@@ -14,6 +14,7 @@
 \usepackage{graphics}
 \usepackage{multirow}
 \usepackage{substr}
+\usepackage{xstring}
 
 \lstset{basicstyle=\ttfamily,breaklines=true, keepspaces=true}
 \lstdefinestyle{prompt}{
@@ -45,14 +46,23 @@
     numbers=left,
     title=\IfSubStringInString{/}{#2}{\BehindSubString{/}{#2}}{#2},
     frame=tlbr]
-    {examples/Chapter\arabic{chapter}/#2}
+    {\exampledir/#2}
     \endgroup
 }
 \def\examplecode{\begingroup
   \catcode`\_=12
 \examplecodeStub}
 
-\newcommand{\exampledir}{examples/Chapter\arabic{chapter}/}
+\newcommand{\exampledir}{examples/\Chaptername}
+
+% http://tex.stackexchange.com/questions/62241/how-to-get-the-current-chapter-name-section-name-subsection-name-etc
+% getting the chapter name automatically
+\let\Chaptermark\chaptermark
+\def\chaptermark#1{
+  \StrSubstitute{#1}{ }{-}[\x]
+  \StrSubstitute{\x}{/}{-}[\Chaptername]
+  \Chaptermark{#1}}
+
 
 \parindent=0pt
 \parskip=7pt
