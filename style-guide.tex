@@ -68,6 +68,31 @@ When defining lists make sure to indent the items.
 \end{itemize}
 \end{verbatim}
 
+\section{Displaying example code}
+\label{sec:displaying-example-code}
+
+To display example code inside the document you can use the \verb|\examplecode|
+command. The example code files should be organised in an \verb|examples|
+subdirectory.  Each chapter should have its own directory. The directory name
+is the same as the chapter name with spaces and slashes substituted by dashes.
+(e.g. ``Multi-core Job Submission'' is turned into
+``Multi-core-Job-Submission'').
+
+The \verb|examplecode| takes 2 mandatory arguments. The first one is the
+language of the code file (e.g. C or Python). The second is the basename of the
+file. If you want you can organize the example files per chapter in
+subdirectories, you then need to add the subdirectory to the filename argument.
+The commands below illustrate how this works.
+
+\begin{verbatim}
+\examplecode{C}{mpi_hello.c}
+\examplecode{Python}{subdir/file1.py}
+\end{verbatim}
+
+
+The macro \verb|\exampledir| will expand to the example directory used on a per
+chapter basis.
+
 \section{Displaying prompts}
 \label{sec:displaying-prompts}
 
@@ -88,6 +113,14 @@ which will result in following output:
 %\shellcmd{bash --version}%
 GNU bash, versie 4.1.2(1)-release (x86_64-redhat-linux-gnu)
 \end{prompt}
+
+If you want to display example output from a file, you can use the
+\verb|\exampleoutput| command. This will look inside \verb|\exampledir| and
+format the file in a prompt environment.
+
+\begin{verbatim}
+\exampleoutput{htop-output}
+\end{verbatim}
 
 \section{Job scripts}
 \label{sec:job-scripts}
@@ -152,7 +185,11 @@ Note: this command will not fail if the site-specific section is missing.
 \includesite{intro}
 \end{verbatim}
 
-The above example will not include intro.tex, but will include intro-site.tex (e.g. intro-gent.tex)
+The above example will not include intro.tex, but will include <site>/intro.tex (e.g. gent/intro.tex)
+
+Because includes cannot be nested there is also the \verb|\inputsite| command
+which works exactly the same as above only it uses \verb|\input| instead of
+\verb|\include|. This command \emph{will} fail when a file is not present.
 
 \subsection{Macros}
 \label{sec:macros}

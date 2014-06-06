@@ -80,8 +80,8 @@ List and check the contents with:
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 512
--rw-r--r-- 1 vsc20167 193 Sep 11 10:34 fibo.pbs
--rw-r--r-- 1 vsc20167 609 Sep 11 10:25 fibo.pl
+-rw-r--r-- 1 %\userid% 193 Sep 11 10:34 fibo.pbs
+-rw-r--r-- 1 %\userid% 609 Sep 11 10:25 fibo.pl
 \end{prompt}
 
 In this directory you find a PERL script (named `fibo.pl') and a PBS
@@ -169,10 +169,10 @@ When you return, check the contents of the directory:
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 768
--rw-r--r-- 1 vsc20167 vsc20167   44 Feb 28 13:33 fibo.pbs
--rw------- 1 vsc20167 vsc20167    0 Feb 28 13:33 fibo.pbs.e%\jobnumber%
--rw------- 1 vsc20167 vsc20167 1010 Feb 28 13:33 fibo.pbs.o%\jobnumber%
--rwxrwxr-x 1 vsc20167 vsc20167  302 Feb 28 13:32 fibo.pl*
+-rw-r--r-- 1 %\userid \userid%   44 Feb 28 13:33 fibo.pbs
+-rw------- 1 %\userid \userid    0 Feb 28 13:33 fibo.pbs.e\jobnumber%
+-rw------- 1 %\userid \userid 1010 Feb 28 13:33 fibo.pbs.o\jobnumber%
+-rwxrwxr-x 1 %\userid \userid%  302 Feb 28 13:32 fibo.pl*
 \end{prompt}
 
 Explore the contents of the 2 new files:
@@ -430,26 +430,20 @@ categories.
 The currently defined queue categories (with walltime limits) for the \hpc
 are:
 
-\begin{tabular}{|p{0.6in}|p{0.7in}|p{0.8in}|p{0.7in}|p{0.7in}|} \hline
-\strong{Queue\newline category} & \multicolumn{2}{|p{1.5in}|}{\strong{Walltime}} & \multicolumn{2}{|p{1.4in}|}{\strong{Max \# Jobs}} \\ \hline
-\strong{} & \strong{Minimum\newline / from\newline (value not included)} & \strong{Maximum \newline / to \newline (value included)} & \strong{Queuable} & \strong{Runnable} \\ \hline
-qshort  & 0      & 1 hour  & 1000 & 500 \\ \hline
-qreg    & 1 hour & 1 day   & 1000 & 100 \\ \hline
-qlong   & 1 day  & 3 days  & 500  & 100 \\ \hline
-qxlong  & 3 days & 7 days  & 50   & 25  \\ \hline
-qxxlong & 7 days & 21 days & 8    & 2   \\ \hline
-\end{tabular}
+\inputsite{queue-table}
 
 \underbar{Remark:} As the infrastructure of the \hpc is constantly expanding
 and evolving, it can be anticipated that also the limits of the categories can
 be changed over time.
 
+\ifantwerpen
 When a user submits a job with a walltime of 15 days, the queue manager will
 put the job in the qxxlong category.  The user can submit up to 8 jobs with
 this high walltimes (queable = 8), but only 2 of those jobs will be eligible
 for execution (runnable=2) at the same time.  A detailed description of the
 fair-share mechanisms will follow in Chapter 9. For longer running jobs,
 \emph{checkpointing} (See Chapter 13) is necessary.
+\fi
 
 Apart from specifying the \emph{walltime}, you can also explicitly define the
 queue you're submitting your job to.
@@ -491,32 +485,18 @@ being executed at the same time.
 
 To get basic information about the queues, the command \strong{qstat -q} is used:
 
-\begin{prompt}
-%\shellcmd{qstat -q}%
-server: %\pbsserver%
-
-Queue      Memory CPU Time Walltime Node  Run Que Lm  State
------------------ -------- -------- ----  --- --- --  -----
-qdef         --      --       --      --    0   0 --   E R
-qlong        --      --    72:00:00   --  113 117 --   E R
-qreg         --      --    24:00:00   --    7  16 --   E R
-qshort       --      --    01:00:00   --    1   0 --   E R
-qxlong       --      --    168:00:0   --   23   0 --   E R
-qxxlong      --      --    504:00:0   --    5   0 --   E R
-                                         ----- -----
-                                          149  133
-\end{prompt}
+\inputsite{qstat-q-output}
 
 The number of jobs currently running in the queue is shown in the Run column,
 whereas the number of jobs waiting to get started is shown in the Queue column.
 The maximum walltime that is accepted by the queue is shown in the Walltime
 column.
 
-To obtain more detailed information on the queues (e.g., qxlong) the following
-command can be used:
+To obtain more detailed information on the queues the following command can be
+used:
 
 \begin{prompt}
-%\shellcmd{qstat -f -Q qxlong}%
+%\shellcmd{qstat -f -Q <queuename>}%
 \end{prompt}
 
 This will list additional restrictions such as the maximum walltime of the jobs

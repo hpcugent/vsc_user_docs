@@ -250,9 +250,9 @@ single job.
 
 \begin{prompt}
 %\shellcmd{qstat}%
-Job id                    Name             User            Time                  Use S Queue
-------------------------- ---------------- --------------- -------- ----- - ---------------
-441003.master1            test\_set.pbs    vsc20167               0 Q qreg
+Job id          Name          User      Time   Use S Queue
+--------------- ------------- --------- ---- ----- - -----
+%\jobnumber.master1%  test_set.pbs  %\userid%          0 Q
 
 And you can now check the generated output files:
 %\shellcmd{more ./output/output\_99.dat}%
@@ -296,7 +296,7 @@ First study the scripts:
 Then one can submit a MapReduce style job as follows:
 
 \begin{prompt}
-%\shellcmd{wsub -prolog pre.sh -batch test\_set.pbs -epilog post.sh -t 1-100}%
+%\shellcmd{wsub}% -prolog pre.sh -batch test_set.pbs -epilog post.sh -t 1-100
 total number of work items: 100
 %\jobid%
 %\shellcmd{cat all\_output.txt}%
