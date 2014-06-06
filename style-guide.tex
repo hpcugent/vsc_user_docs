@@ -1,5 +1,6 @@
 \documentclass[11pt,a4paper]{article}
 \include{style}
+\include{macros}
 \title{Style Guide}
 \author{Toon Willems}
 
@@ -210,6 +211,12 @@ These macros are all defined inside \verb|macros.tex|. You can define new macros
 Place them inside the correct if block and they will be defined for your site.
 Note: Adding new macros breaks the compilation process! Add them for all sites,
 and do not abuse them.
+
+\input{intro-HPC/gent/macros}
+
+\begin{tabular}{|c|} \hline
+  \maketabularrow{\thecnt}
+\end{tabular}
 
 \section{Misc.}
 \label{sec:misc}
