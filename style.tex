@@ -28,7 +28,16 @@
   }
 \lstdefinestyle{code}{
   numbers=left,
-  escapechar=\%,
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=tlbr,
+  xleftmargin=\parindent,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\ttfamily\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
 }
 
 \lstnewenvironment{prompt} {\lstset{style=prompt}} {}
@@ -46,7 +55,8 @@
     language=#1,
     numbers=left,
     title=\IfSubStringInString{/}{#2}{\BehindSubString{/}{#2}}{#2},
-    frame=tlbr]
+    frame=tlbr,
+    style=code,]
     {\exampledir/#2}
     \endgroup
 }
