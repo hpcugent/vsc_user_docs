@@ -347,9 +347,9 @@ In order to specify the number of nodes and the number of processors per node in
 
 or with equivalent parameters on the command line
 
-\begin{prog}
+\begin{prompt}
 %\shellcmd{qsub -l nodes=N:ppn=M}%
-\end{prog}
+\end{prompt}
 
 In this example, you request 8Gb of memory in total on the node.
 
@@ -405,7 +405,9 @@ This could also be monitored with the \strong{\emph{htop}} command:
 \begin{prompt}
 %\shellcmd{htop}%
 \end{prompt}
-\verbatiminput{\exampledir/htop-output}
+
+\exampleoutput{htop-output}
+
 
 The advantage of htop is that it shows you the cpu utilization for all
 processors as well as the details per application.  A nice exercise is to start

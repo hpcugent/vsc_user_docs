@@ -458,8 +458,8 @@ status of your quota in a more readable format:
 VSC_DATA:    used 81MB (0%\%%)  quota 25600MB
 VSC_HOME:    used 33MB (1%\%%)  quota 3072MB
 VSC_SCRATCH:   used 28MB (0%\%%)  quota 25600MB
-VSC_SCRATCH\_GLOBAL: used 28MB (0%\%%)  quota 25600MB
-VSC_SCRATCH\_SITE:   used 28MB (0%\%%)  quota 25600MB
+VSC_SCRATCH_GLOBAL: used 28MB (0%\%%)  quota 25600MB
+VSC_SCRATCH_SITE:   used 28MB (0%\%%)  quota 25600MB
 \end{prompt}
 
 With this command, you can follow up the consumption of your total disk quota
@@ -527,11 +527,11 @@ directory, but in some other directory (e.g., your data directory), you just
 pass this directory as a parameter.
 
 \begin{prompt}
-%\shellcmd{du -h \$VSC\_DATA/*}%
-22M /data/antwerpen/201/vsc20167/dataset01
-36M /data/antwerpen/201/vsc20167/dataset02
-22M /data/antwerpen/201/vsc20167/dataset03
-3.5M /data/antwerpen/201/vsc20167/primes.txt
+%\shellcmd{du -h \$VSC\_HOME/*}%
+22M %\homedir/dataset01%
+36M %\homedir/dataset02%
+22M %\homedir/dataset03%
+3.5M %\homedir/primes.txt%
 \end{prompt}
 
 We also want to mention the \emph{tree} command, as it also provides an easy
@@ -544,4 +544,3 @@ Try:
 \begin{prompt}
 %\shellcmd{tree -s -d}%
 \end{prompt}
-

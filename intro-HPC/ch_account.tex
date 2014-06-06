@@ -1,4 +1,4 @@
-\chapter{Getting an \hpc Account}
+\chapter{Getting an HPC Account}
 \label{ch:getting-a-hpc-account}
 
 \section{Getting ready to request an account}
@@ -148,10 +148,10 @@ corresponding private key on his local computer.
   available, and most often installed by default. You can check whether the
   OpenSSH software is installed by opening a terminal and typing:
 
-  \begin{prompt}
-  %\shellcmd{ssh -V}%
-  OpenSSH_4.3p2, OpenSSL 0.9.8e-fips-rhel5 01 Jul 2008
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{ssh -V}%
+OpenSSH_4.3p2, OpenSSL 0.9.8e-fips-rhel5 01 Jul 2008
+\end{prompt}
 
   To access the clusters and transfer your files, you will use the following commands:
 
@@ -169,21 +169,21 @@ corresponding private key on his local computer.
   directory. Therefore, we first check if a key is available with the ``list
   short'' (``ls'')  command:
 
-  \begin{prompt}
-  %\shellcmd{ls  \tilde/.ssh}%
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{ls  \tilde/.ssh}%
+\end{prompt}
 
 
   If a key-pair is already available, you would normally get:
-  \begin{prompt}
-  authorized_keys2    id_rsa            id_rsa.pub         known_hosts
-  \end{prompt}
+\begin{prompt}
+authorized_keys2    id_rsa            id_rsa.pub         known_hosts
+\end{prompt}
 
   Otherwise, the command will show:
 
-  \begin{prompt}
-  ls: .ssh: No such file or directory
-  \end{prompt}
+\begin{prompt}
+ls: .ssh: No such file or directory
+\end{prompt}
 
   You can recognize a public/private key pair when a pair of files has the same
   name except for the extension ".pub" added to one of them. In this particular
@@ -202,15 +202,15 @@ corresponding private key on his local computer.
   to prevent anyone from using your private key even when they manage to copy
   it. You have to 'unlock' the private key by typing the passphrase.
 
-  \begin{prompt}
-  %\shellcmd{ssh-keygen}%
-  Generating public/private rsa key pair.
-  Enter file in which to save the key (/home/user/.ssh/id_rsa):
-  Enter passphrase (empty for no passphrase):
-  Enter same passphrase again:
-  Your identification has been saved in /home/user/.ssh/id_rsa.
-  Your public key has been saved in /home/user/.ssh/id_rsa.pub.
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{ssh-keygen}%
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/user/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/user/.ssh/id_rsa.
+Your public key has been saved in /home/user/.ssh/id_rsa.pub.
+\end{prompt}
 
   This will ask you for a file name to store the private and public key, and a
   passphrase to protect your private key. It needs to be emphasized that you
@@ -454,8 +454,7 @@ verify the authenticity of the login node, e.g.,
 
 \begin{prompt}
 %\shellcmd{ssh \userid{}@\loginnode{}}%
-The authenticity of host '%\loginnode%
-  (143.169.237.11)' can't be established.
+The authenticity of host '%\loginnode (<IP-adress>)%' can't be established.
 RSA key fingerprint is b7:66:42:23:5c:d9:43:e8:b8:48:6f:2c:70:de:02:eb.
 Are you sure you want to continue connecting (yes/no)? %\strong{\emph{yes}}%
 \end{prompt}
@@ -471,22 +470,26 @@ Okay, I am on the supercomputer, but where am I?
 So, print the current working directory:
 \begin{prompt}
 %\shellcmd{pwd}%
-/user/antwerpen/201/vsc20167
+%\homedir%
 \end{prompt}
 
-Your new private home-directory is ``/user/antwerpen/201/$<$vsc-account$>$''.
+Your new private home-directory is ``\homedir''.
 Here you can create your own sub-directory structure, copy and prepare your
 applications, compile and test them and submit your jobs on the \hpc.
 
+%TODO: maybe do this as well on other sites?
+\ifantwerpen
 For now, we already have created a symbolic link to the tutorials (including
 all the exercises) for you, which you can explore with the ``ls --l''
 (\strong{l}ist\strong{s} \strong{l}ong) and the ``cd'' (\strong{c}hange
 \strong{d}irectory) commands:
+\fi
 
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 256
-lrwxrwxrwx 1 vsc20167 vsc20167 25 Nov 13 09:53 tutorials -%$>$% /apps/antwerpen/tutorials/
+lrwxrwxrwx 1 %\userid \userid %25 Nov 13 09:53 tutorials ->
+  /apps/antwerpen/tutorials/
 %\shellcmd{cd tutorials}%
 \end{prompt}
 
@@ -507,7 +510,7 @@ vi/
 This directory currently contains all training material for the use of:
 
 \begin{enumerate}
-\item  The \strong{\emph{CalcUA \hpc.}}
+\item  The \strong{\emph{\hpc}}.
 \item  The \strong{\emph{Eclipse}} environment.
 \item  The \strong{\emph{Python}} programming language.
 \item  The \strong{\emph{VI}} editor.
@@ -516,9 +519,8 @@ This directory currently contains all training material for the use of:
 More relevant training material to work with the \hpc can always be added
 later in this directory.
 
-As we are interested in the use of the \strong{\emph{HPC of CalcUA}}, move
-further to \strong{\emph{calcua}} and explore the contents up to 2 levels
-deep:
+As we are interested in the use of the \strong{\emph{HPC}}, move further to
+\strong{\emph{calcua}} and explore the contents up to 2 levels deep:
 
 \begin{prompt}
 %\shellcmd{cd calcua}%
