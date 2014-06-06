@@ -51,7 +51,7 @@ all:
 
 style-guide: style-guide.pdf
 
-style-guide.pdf: style-guide.tex
+style-guide.pdf: style-guide.tex macros.tex
 	pdflatex style-guide.tex
 	pdflatex style-guide.tex
 
