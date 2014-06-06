@@ -3,7 +3,6 @@
 \subimport{../}{style}
 \include{macros}
 \include{glossary}
-\usepackage{fullpage}
 \graphicspath{{img//}}
 \makeglossaries
 \makeindex
@@ -18,6 +17,8 @@
 
 \begin{document}
 
+\thispagestyle{empty}
+
 \include{title}
 
 \glsaddall
@@ -31,6 +32,8 @@
 \tableofcontents
 
 \part{Beginner's Guide}
+
+\thispagestyle{fancy}
 
 \include{ch_introduction}
 

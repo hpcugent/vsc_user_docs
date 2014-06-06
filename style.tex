@@ -17,6 +17,40 @@
 \usepackage{xstring}
 \usepackage{verbatim}
 
+\setlength{\hoffset}{-1in}
+\setlength{\voffset}{-1in}
+\setlength{\topmargin}{2cm}
+\setlength{\headheight}{0.5cm}
+\setlength{\headsep}{1cm}
+\setlength{\oddsidemargin}{2cm}
+\setlength{\textwidth}{16cm}
+\setlength{\textheight}{23.3cm}
+\setlength{\footskip}{1.5cm}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+
+\newcommand{\headerfmt}[1]{\textsl{\textsf{#1}}}
+\newcommand{\headerfmtpage}[1]{\textsf{#1}}
+
+\fancyhf{}
+\fancyhead[L,RO]{\headerfmtpage{\thepage}}
+\fancyhead[LO]{\headerfmt{\rightmark}}
+\fancyhead[R]{\headerfmt{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancypagestyle{plain}{
+\fancyhf{}
+\fancyhead[L,RO]{\headerfmtpage{\thepage}}
+\fancyhead[LO]{\headerfmt{\rightmark}}
+\fancyhead[R]{\headerfmt{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+}
+
 \lstset{basicstyle=\ttfamily,breaklines=true, keepspaces=true}
 \lstdefinestyle{prompt}{
   language=bash,
@@ -68,8 +102,10 @@
 
 % http://tex.stackexchange.com/questions/62241/how-to-get-the-current-chapter-name-section-name-subsection-name-etc
 % getting the chapter name automatically
+\renewcommand{\sectionmark}[1]{\markboth{}{\thesection~#1}}
 \let\Chaptermark\chaptermark
 \def\chaptermark#1{
+  \markboth{#1}{}
   \StrSubstitute{#1}{ }{-}[\x]
   \StrSubstitute{\x}{/}{-}[\Chaptername]
   \Chaptermark{#1}}
