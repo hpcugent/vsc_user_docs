@@ -98,6 +98,20 @@
   \catcode`\_=12
 \examplecodeStub}
 
+\newcommand{\exampleoutputStub}[1]{
+  \lstinputlisting[
+    language=,
+    style=prompt,
+    escapechar=,
+    numbers=none,
+    ]
+    {\exampledir/#1}
+    \endgroup
+}
+\def\exampleoutput{\begingroup
+  \catcode`\_=12
+\exampleoutputStub}
+
 \newcommand{\exampledir}{examples/\Chaptername}
 
 % http://tex.stackexchange.com/questions/62241/how-to-get-the-current-chapter-name-section-name-subsection-name-etc
