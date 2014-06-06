@@ -1,11 +1,10 @@
 \chapter{Compiling and testing your software on the \hpc}
 
-All nodes in the \hpc cluster are running the ``Scientific Linux'' (SL)
-Operating system, which is a specific version of RedHat-Linux. This means that
-all the software programs (executable) that the end-user wants to run on the
-\hpc first must be compiled for the SL Operating System.  It also means that
-you first have to install all the required external software packages on the
-\hpc.
+All nodes in the \hpc cluster are running the ``\operatingsystem'' Operating
+system, which is a specific version of RedHat-Linux. This means that all the
+software programs (executable) that the end-user wants to run on the \hpc first
+must be compiled for \operatingsystem.  It also means that you first have to
+install all the required external software packages on the \hpc.
 
 Most commonly used compilers are already pre-installed on the \hpc and can
 be used straight away. Also many popular external software packages, which are
@@ -50,7 +49,7 @@ modifications to support the environment on the destination machine.
 Whilst programming, it would be wise to stick to certain standards (e.g.,
 ISO/ANSI/POSIX).  This will ease the porting of your code to other platforms.
 
-Porting your code to the SL-Linux platform is the responsibility of the
+Porting your code to the \operatingsystem platform is the responsibility of the
 end-user.
 
 \section{Compiling and building on the \hpc}
@@ -259,9 +258,9 @@ It seems to work, now run it on the \hpc.
 %\shellcmd{qsub mpihello.pbs}%
 \end{prompt}
 
-Note: The \association only has a license for the Intel Cluster Studio for 5 concurrent
-users. As such, it might happen that you have to wait a few minutes before a
-floating license becomes available for your use.
+Note: The \association only has a license for the Intel Cluster Studio for a
+fixed number of users. As such, it might happen that you have to wait a few
+minutes before a floating license becomes available for your use.
 
 Note: The Intel Cluster Studio contains equivalent compilers for all GNU
 compilers. Hereafter the overview for C, C++ and Fortran compilers.
