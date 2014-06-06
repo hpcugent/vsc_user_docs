@@ -454,8 +454,7 @@ verify the authenticity of the login node, e.g.,
 
 \begin{prompt}
 %\shellcmd{ssh \userid{}@\loginnode{}}%
-The authenticity of host '%\loginnode%
-  (143.169.237.11)' can't be established.
+The authenticity of host '%\loginnode (143.169.237.11)%' can't be established.
 RSA key fingerprint is b7:66:42:23:5c:d9:43:e8:b8:48:6f:2c:70:de:02:eb.
 Are you sure you want to continue connecting (yes/no)? %\strong{\emph{yes}}%
 \end{prompt}
@@ -471,22 +470,26 @@ Okay, I am on the supercomputer, but where am I?
 So, print the current working directory:
 \begin{prompt}
 %\shellcmd{pwd}%
-/user/antwerpen/201/vsc20167
+%\homedir%
 \end{prompt}
 
-Your new private home-directory is ``/user/antwerpen/201/$<$vsc-account$>$''.
+Your new private home-directory is ``\homedir''.
 Here you can create your own sub-directory structure, copy and prepare your
 applications, compile and test them and submit your jobs on the \hpc.
 
+%TODO: maybe do this as well on other sites?
+\ifantwerpen
 For now, we already have created a symbolic link to the tutorials (including
 all the exercises) for you, which you can explore with the ``ls --l''
 (\strong{l}ist\strong{s} \strong{l}ong) and the ``cd'' (\strong{c}hange
 \strong{d}irectory) commands:
+\fi
 
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 256
-lrwxrwxrwx 1 vsc20167 vsc20167 25 Nov 13 09:53 tutorials -%$>$% /apps/antwerpen/tutorials/
+lrwxrwxrwx 1 %\userid \userid %25 Nov 13 09:53 tutorials ->
+  /apps/antwerpen/tutorials/
 %\shellcmd{cd tutorials}%
 \end{prompt}
 
