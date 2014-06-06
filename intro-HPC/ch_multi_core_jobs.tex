@@ -148,17 +148,16 @@ Here is the general code structure of an OpenMP program:
 #include <omp.h>
 main ()  {
 int var1, var2, var3;
-Serial code
-%\dots%
-Beginning of parallel section. Fork a team of threads.
-Specify variable scoping
+// Serial code
+// Beginning of parallel section. Fork a team of threads.
+// Specify variable scoping
 
 #pragma omp parallel private(var1, var2) shared(var3)
   {
-  Parallel section executed by all threads
-  All threads join master thread and disband
+  // Parallel section executed by all threads
+  // All threads join master thread and disband
   }
-Resume serial code
+// Resume serial code
 }
 \end{code}
 
