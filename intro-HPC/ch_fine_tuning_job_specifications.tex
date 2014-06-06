@@ -1,6 +1,6 @@
 \chapter{Fine-tuning Job Specifications}
 
-As \hpc system-administrators, we often observe that the \hpc resources are
+As \hpc systemadministrators, we often observe that the \hpc resources are
 not optimally (or wisely) used. For example, we regularly notice that several
 cores on a computing node are not utilized, due to the fact that one sequential
 program uses only one core on the node. Or users run I/O intensive applications
@@ -85,7 +85,7 @@ compute nodes.
 
 The walltime can be specified in a job scripts as:
 \begin{prompt}
-#PBS --l Walltime=3:00:00:00
+#PBS -l walltime=3:00:00:00
 \end{prompt}
 
 or on the command line
