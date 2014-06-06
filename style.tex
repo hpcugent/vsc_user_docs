@@ -14,6 +14,7 @@
 \usepackage{graphics}
 \usepackage{multirow}
 \usepackage{substr}
+\usepackage{xstring}
 
 \lstset{basicstyle=\ttfamily,breaklines=true, keepspaces=true}
 \lstdefinestyle{prompt}{
@@ -45,14 +46,23 @@
     numbers=left,
     title=\IfSubStringInString{/}{#2}{\BehindSubString{/}{#2}}{#2},
     frame=tlbr]
-    {examples/Chapter\arabic{chapter}/#2}
+    {\exampledir/#2}
     \endgroup
 }
 \def\examplecode{\begingroup
   \catcode`\_=12
 \examplecodeStub}
 
-\newcommand{\exampledir}{examples/Chapter\arabic{chapter}/}
+\newcommand{\exampledir}{examples/\Chaptername}
+
+% http://tex.stackexchange.com/questions/62241/how-to-get-the-current-chapter-name-section-name-subsection-name-etc
+% getting the chapter name automatically
+\let\Chaptermark\chaptermark
+\def\chaptermark#1{
+  \StrSubstitute{#1}{ }{-}[\x]
+  \StrSubstitute{\x}{/}{-}[\Chaptername]
+  \Chaptermark{#1}}
+
 
 \parindent=0pt
 \parskip=7pt
@@ -89,36 +99,36 @@
 
 \newcommand{\includesite}[1]{
   \ifleuven
-    \include{#1-leuven}
+    \include{leuven/#1}
   \fi
   \ifantwerpen
-    \include{#1-antwerpen}
+    \include{antwerpen/#1}
   \fi
   \ifhasselt
-    \include{#1-hasselt}
+    \include{hasselt/#1}
   \fi
   \ifbrussel
-    \include{#1-brussel}
+    \include{brussel/#1}
   \fi
   \ifgent
-    \include{#1-gent}
+    \include{gent/#1}
   \fi
 }
 \newcommand{\inputsite}[1]{
   \ifleuven
-    \input{#1-leuven}
+    \input{leuven/#1}
   \fi
   \ifantwerpen
-    \input{#1-antwerpen}
+    \input{antwerpen/#1}
   \fi
   \ifhasselt
-    \input{#1-hasselt}
+    \input{hasselt/#1}
   \fi
   \ifbrussel
-    \input{#1-brussel}
+    \input{brussel/#1}
   \fi
   \ifgent
-    \input{#1-gent}
+    \input{gent/#1}
   \fi
 }
 
