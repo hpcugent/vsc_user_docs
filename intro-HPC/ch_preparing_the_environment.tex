@@ -206,7 +206,7 @@ $<$vsc-account$>$, which is something like ``\emph{\userid}''.
 %\shellcmd{ls -l}%
 %\dots%
 -rw-r--r-- 1 gborstlap  staff   6 Sep 18 09:37 localfile.txt
-%\shellcmd{scp localfile.txt $<$vsc-account$>$@\loginnode:}
+%\shellcmd{scp localfile.txt $<$vsc-account$>$@\loginnode:}%
 localfile.txt    100%\%%   6     0.0KB/s   00:00
 \end{prompt}
 
@@ -232,11 +232,11 @@ sub-directory on the cluster to your local computer, try:
 On the Terminal on the \hpc, enter:
 
 \begin{prompt}
-%\shellcmd{cd \~/docs}%
+%\shellcmd{cd \tilde/docs}%
 %\homedir%/docs
 %\shellcmd{ls -l}%
 total 1536
--rw-r--r-- 1 vsc20167 741995 Sep 11 09:53 intro-turing.pdf
+-rw-r--r-- 1 %\userid% Sep 11 09:53 intro-turing.pdf
 \end{prompt}
 
 On the Terminal on your own local computer, enter:
