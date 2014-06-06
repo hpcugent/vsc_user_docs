@@ -1,0 +1,33 @@
+\begin{tabular}{|l|l|} \hline
+\multicolumn{2}{|c|}{\strong{Login}} \\ \hline
+Login             & ssh $<$vsc-account$>$@\loginnode \\ \hline
+Where am I?       & hostname \\ \hline
+Copy to \hpc      & scp foo.txt $<$vsc-account$>$@\loginnode: \\ \hline
+Copy from \hpc    & scp $<$vsc-account$>$@\loginnode:foo.txt . \\ \hline
+Setup ftp session & sftp $<$vsc-account$>$@\loginnode \\ \hline
+\end{tabular}
+
+\begin{tabular}{|l|l|} \hline
+\multicolumn{2}{|c|}{\strong{Modules}} \\ \hline
+List all available modules & module av \\ \hline
+List loaded modules        & module list \\ \hline
+Load module                & module load $<$name$>$ \\ \hline
+Unload module              & module unload $<$name$>$ \\ \hline
+Unload all modules         & module purge \\ \hline
+Help on use of module      & module help \\ \hline
+\end{tabular}
+
+\begin{tabular}{|l|l|} \hline
+\multicolumn{2}{|c|}{\strong{Jobs}} \\ \hline
+Submit Job              & qsub $<$script.pbs$>$ \\ \hline
+Status of the job       & qstat $<$jobid$>$ \\ \hline
+Estimated start time    & showstart $<$jobid$>$ \\ \hline
+Check job               & checkjob $<$jobid$>$ \\ \hline
+Show compute node       & qstat -n $<$jobid$>$ \\ \hline
+Delete job              & qdel $<$jobid$>$ \\ \hline
+Status of all your jobs & qstat \\ \hline
+Show all jobs on  queue & showq \\ \hline
+Show queue summary      & qstat -q \\ \hline
+Show some queue         & qstat -f -Q $<$queue$>$ \\ \hline
+Submit Interactive job  & qsub -I \\ \hline
+\end{tabular}
