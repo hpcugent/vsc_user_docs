@@ -203,19 +203,23 @@ To fix this problem, you can use a macro. For example:
 you can connect to \loginnode with ssh.
 \end{verbatim}
 
-These macros are all defined inside \verb|macros.tex|. You can define new macros like so:
+These macros are all defined inside \verb|macros.tex|. This file is located
+inside the site-specific directory. You can define new macros like so:
 \begin{verbatim}
 \macro{\city}{Gent}
 \end{verbatim}
 
-Place them inside the correct if block and they will be defined for your site.
 Note: Adding new macros breaks the compilation process! Add them for all sites,
 and do not abuse them.
 
+% allow the style-guide to pick up on the macros.
 \input{intro-HPC/gent/macros}
 
-\begin{tabular}{|c|} \hline
-  \maketabularrow{\thecnt}
+In this table you can see which macros (with their respective values) are
+currently available.
+
+\begin{tabular}{|c|c|} \hline
+  \maketabularrow{\thecnt} \\ \hline % We apparently need to end this here
 \end{tabular}
 
 \section{Misc.}

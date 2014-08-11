@@ -16,11 +16,13 @@
 \newcommand\maketabularrow[1]{%
   \setcounter{colnum}{0}%
   \whileboolexpr
-  { test {\ifnumcomp{\value{colnum}}{<}{#1}} }%
-  {\stepcounter{colnum}\gettext{\thecolnum} \\ \hline}
+  { test {\ifnumcomp{\value{colnum}}{<}{#1 - 1}} }%
+  {\stepcounter{colnum}\gettext{\thecolnum} & \gettext{\gettext{\thecolnum}} \\ \hline }
+  % Weird stuff with latex adding an empty row if we don't use the following way.
+  \stepcounter{colnum}\gettext{\thecolnum} & \gettext{\gettext{\thecolnum}}
 }
 
-\newcommand{\macro}[2]{\addtext{\noexpand#1}\addtext{\noexpand#2}\newcommand{#1}{#2\xspace}}
+\newcommand{\macro}[2]{\addtext{\string#1}\settext{\string#1}{\noexpand#2}\newcommand{#1}{#2\xspace}}
 % General macro for extracting the jobnumber from the jobid
 \inputsite{macros}
 \macro{\jobnumber}{\BeforeSubString{.}{\jobid}}
