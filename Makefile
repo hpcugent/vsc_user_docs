@@ -4,6 +4,10 @@ all_os = linux mac windows
 all_site = antwerp brussel gent leuven
 all_doc = intro-HPC
 
+
+# http://stackoverflow.com/questions/18136918/how-to-get-current-directory-of-your-makefile
+ROOT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+
 .PHONY = all
 
 
@@ -34,18 +38,16 @@ DOC=$(all_doc)
 endif
 
 all:
-	for os in $(OS) ; do \
+	@for os in $(OS) ; do \
 		for doc in $(DOC) ; do \
-			cd $$doc ; \
+			cd $(ROOT_DIR)/$$doc ; \
 			for site in $(SITE) ; do \
 				jobname="$$doc-$$os-$$site" ; \
-				latexcommand="pdflatex -jobname $$jobname \"\def\is$$os{1}\def\is$$site{1}\input{HPC.tex}\"" ; \
-				echo $$latexcommand ; \
-				$$latexcommand ; \
-			  makeglossaries $$jobname ; \
-				$$latexcommand ; \
+				latexcommand="pdflatex -interaction nonstopmode -jobname $$jobname \"\def\is$$os{1}\def\is$$site{1}\input{HPC.tex}\" " ; \
+				$$latexcommand | grep 'Fatal error' > /dev/null && echo "$$jobname" failed, see log in $$doc/$$jobname.log && continue; \
+			  makeglossaries $$jobname > /dev/null 2>&1; \
+				$$latexcommand | grep 'Fatal error' > /dev/null && echo "$$jobname" failed, see log in $$doc/$$jobname.log && continue; \
 			done ; \
-			cd - ; \
 		done ;  \
 	done ;
 
