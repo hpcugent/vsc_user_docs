@@ -1,7 +1,7 @@
 defines = ""
 
 all_os = linux mac windows
-all_site = antwerp brussel gent leuven
+all_site = antwerpen brussel gent leuven
 all_doc = intro-HPC
 
 .PHONY = all
