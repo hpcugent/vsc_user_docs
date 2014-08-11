@@ -98,13 +98,19 @@ chapter basis.
 
 To display prompt output you can use the prompt environment. There is the
 special command \verb|\shellcmd{}| which provides consistent styling. It also
-includes a \$-sign. Inside the prompt environment you can use \% as escape
+includes a \$-sign. There is a special version of this command called
+\verb|\captureshellcmd{}|. This behaves exactly the same as \verb|shellcmd| but
+it writes its argument to \verb|shellcmds.sh|. You can use this to easily run
+commands and paste their output in the latex file. NOTE: instead of
+\verb|\tilde| you should use a regular \tilde inside \verb|\shellcmd| and
+\verb|\captureshellcmd|. Inside the prompt environment you can use \% as escape
 character to type commands.
 
 \begin{verbatim}
 \begin{prompt}
 %\shellcmd{bash --version}%
 GNU bash, versie 4.1.2(1)-release (x86_64-redhat-linux-gnu)
+%\captureshellcmd{ls ~}%
 \end{prompt}
 \end{verbatim}
 
@@ -112,6 +118,7 @@ which will result in following output:
 \begin{prompt}
 %\shellcmd{bash --version}%
 GNU bash, versie 4.1.2(1)-release (x86_64-redhat-linux-gnu)
+%\captureshellcmd{ls ~}
 \end{prompt}
 
 If you want to display example output from a file, you can use the
