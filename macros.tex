@@ -23,7 +23,7 @@
 }
 
 \newcommand{\macro}[2]{\addtext{\string#1}\settext{\string#1}{\noexpand#2}\newcommand{#1}{#2\xspace}}
-% General macro for extracting the jobnumber from the jobid
 \inputsite{macros}
+% General macro for extracting the jobnumber from the jobid
 \macro{\jobnumber}{\BeforeSubString{.}{\jobid}}
 \macro{\pbsserver}{\BehindSubString{.}{\jobid}}
