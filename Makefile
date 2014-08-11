@@ -44,9 +44,9 @@ all:
 			for site in $(SITE) ; do \
 				jobname="$$doc-$$os-$$site" ; \
 				latexcommand="pdflatex -interaction nonstopmode -jobname $$jobname \"\def\is$$os{1}\def\is$$site{1}\input{HPC.tex}\" " ; \
-				$$latexcommand | grep 'Fatal error' > /dev/null && echo "$$jobname" failed, see log in $$doc/$$jobname.log && continue; \
+				$$latexcommand | grep -B 15 'Fatal error' && echo "$$jobname" failed, see log in $$doc/$$jobname.log && continue; \
 			  makeglossaries $$jobname > /dev/null 2>&1; \
-				$$latexcommand | grep 'Fatal error' > /dev/null && echo "$$jobname" failed, see log in $$doc/$$jobname.log && continue; \
+				$$latexcommand | grep -B 15 'Fatal error' && echo "$$jobname" failed, see log in $$doc/$$jobname.log && continue; \
 			done ; \
 		done ;  \
 	done ;
