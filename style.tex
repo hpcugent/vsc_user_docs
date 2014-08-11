@@ -82,6 +82,12 @@
 \renewcommand{\tilde}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
 \newcommand{\shellcmd}[1]{\$ \textbf{\texttt{#1}}}
 
+\newwrite\shellcmds
+\immediate\openout\shellcmds=shellcmds.sh
+
+\protected\def\til{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
+\newcommand{\captureshellcmd}[1]{\StrSubstitute{#1}{~}{\string~}[\writeable]\immediate\write\shellcmds{\writeable}\StrSubstitute{#1}{~}{\noexpand\til}[\temp] \$ \textbf{\texttt{\temp}}}
+
 % LaTeX hacks to allow underscores in filenames. Adapted from
 % http://tex.stackexchange.com/questions/69142/include-figure-from-macro-with-underscore-in-filename
 \newcommand{\examplecodeStub}[2]{
