@@ -1,0 +1,29 @@
+% use \macro instead of \newcommand so we automatically add a space
+\usepackage{xspace}
+\usepackage{etoolbox}
+
+\newcounter{cnt}
+\newcommand\textlist{}
+\newcommand\settext[2]{%
+\csdef{text#1}{#2}}
+\newcommand\addtext[1]{%
+  \stepcounter{cnt}%
+\csdef{text\thecnt}{#1}}
+\newcommand\gettext[1]{%
+\csuse{text#1}}
+
+\newcounter{colnum}
+\newcommand\maketabularrow[1]{%
+  \setcounter{colnum}{0}%
+  \whileboolexpr
+  { test {\ifnumcomp{\value{colnum}}{<}{#1 - 1}} }%
+  {\stepcounter{colnum}\gettext{\thecolnum} & \gettext{\gettext{\thecolnum}} \\ \hline }
+  % Weird stuff with latex adding an empty row if we don't use the following way.
+  \stepcounter{colnum}\gettext{\thecolnum} & \gettext{\gettext{\thecolnum}}
+}
+
+\newcommand{\macro}[2]{\addtext{\string#1}\settext{\string#1}{\noexpand#2}\newcommand{#1}{#2\xspace}}
+\inputsite{macros}
+% General macro for extracting the jobnumber from the jobid
+\macro{\jobnumber}{\BeforeSubString{.}{\jobid}}
+\macro{\pbsserver}{\BehindSubString{.}{\jobid}}
