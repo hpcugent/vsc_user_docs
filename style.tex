@@ -79,8 +79,13 @@
 \lstnewenvironment{prog}{\lstset{style=code}} {}
 
 % Taken from: http://tex.stackexchange.com/questions/9363/how-does-one-insert-a-backslash-or-a-tilde-into-latex
-\renewcommand{\tilde}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
-\newcommand{\shellcmd}[1]{\$ \textbf{\texttt{#1}}}
+\protected\def\tilde{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
+\newcommand{\shellcmd}[1]{\noexpandarg\StrSubstitute{#1}{~}{\tilde}[\temp] \$ \textbf{\texttt{\temp}}}
+
+\newwrite\shellcmds
+\immediate\openout\shellcmds=shellcmds.sh
+
+\newcommand{\captureshellcmd}[1]{\noexpandarg\StrSubstitute{#1}{~}{\string~}[\wr]\immediate\write\shellcmds{\wr > \Chaptername-\the\inputlineno.out}\shellcmd{#1}}
 
 % LaTeX hacks to allow underscores in filenames. Adapted from
 % http://tex.stackexchange.com/questions/69142/include-figure-from-macro-with-underscore-in-filename
