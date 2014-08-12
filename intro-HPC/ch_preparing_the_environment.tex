@@ -233,9 +233,9 @@ sub-directory on the cluster to your local computer, try:
 On the Terminal on the \hpc, enter:
 
 \begin{prompt}
-%\shellcmd{cd ~/docs}%
+%\captureshellcmd{cd ~/docs}%
 %\homedir%/docs
-%\shellcmd{ls -l}%
+%\captureshellcmd{ls -l}%
 total 1536
 -rw-r--r-- 1 %\userid% Sep 11 09:53 intro-HPC.pdf
 \end{prompt}
@@ -243,7 +243,7 @@ total 1536
 On the Terminal on your own local computer, enter:
 
 \begin{prompt}
-%\shellcmd{scp \userid\@\loginnode:./docs/intro-HPC.pdf .}%
+%\shellcmd{scp \userid{}@\loginnode:./docs/intro-HPC.pdf .}%
 intro-HPC.pdf 100%\%%  725KB 724.6KB/s   00:01
 %\shellcmd{ls -l}%
 total  899
