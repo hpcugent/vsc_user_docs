@@ -23,6 +23,20 @@
 }
 
 \newcommand{\macro}[2]{\addtext{\string#1}\settext{\string#1}{\noexpand#2}\newcommand{#1}{#2\xspace}}
+
+% Define some general macros
+\macro{\version}{Version 1.1}
+\ifwindows
+\macro{\OS}{Windows}
+\fi
+\ifmac
+\macro{\OS}{Mac}
+\fi
+\iflinux
+\macro{\OS}{Linux}
+\fi
+
+% Import the Site specific macros
 \inputsite{macros}
 % General macro for extracting the jobnumber from the jobid
 \macro{\jobnumber}{\BeforeSubString{.}{\jobid}}

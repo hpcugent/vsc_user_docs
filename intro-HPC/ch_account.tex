@@ -105,7 +105,6 @@ corresponding private key on his local computer.
 \fi
 
 %IFDEF MAC
-
 \ifmac
 
   \subsection{Open a terminal}
@@ -133,7 +132,6 @@ corresponding private key on his local computer.
   (Network, Internet, telephone lines, \ldots).
 
   ``Secure'' means that:
-
   \begin{enumerate}
     \item  the User is authenticated to the System; and
     \item  the System is authenticated to the User; and
@@ -228,10 +226,7 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
 
 Users of the \university need to follow the instructions in \autoref{sec:users-of-university}.
 
-\ifantwerpen
-Other users of the Antwerp University Association (AUHA), need to follow the
-instructions in \autoref{sec:other-users-of-antwerp-university}.
-\fi
+Other users of the \association, need to follow the instructions in \autoref{sec:users-of-association}.
 
 \subsection{Users of \university}
 \label{sec:users-of-university}
@@ -248,17 +243,13 @@ Click $<$Submit$>$
 
 \includegraphics*[width=5.77in, height=3.51in, keepaspectratio=false]{ch2-browser-select-site}
 
-% IF ANTWERPEN
-\ifantwerpen
-  You will now be taken to a website of BELNET, where you must authenticate yourself.
+You will now be taken to a website of BELNET, where you must authenticate yourself.
 
-  \includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate}
+\includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate}
 
-  Select `Universiteit Antwerpen' in the dropdown box.
+Select `\university' in the dropdown box.
 
-  Click $<$Select$>$
-\fi
-% END IF ANTWERPEN
+Click $<$Select$>$
 
 You will now be taken to the authentification page of your institute.
 
@@ -272,15 +263,11 @@ your public key, i.e. the file `id\_rsa.pub' which you should already have
 generated.
 
 \ifwindows
-
   This file should have been stored in the directory
   `\emph{/Users/$<$Username$>$/PuTTY/.ssh/}'.
-
 \fi
 
-
-
-\ifmac
+\ifmac % IF MAC
 
   This file has been stored in the directory `\tilde/.ssh/'.
 
@@ -289,24 +276,23 @@ generated.
   Apple-Shift--G, which will allow you to enter the name of a directory, which
   you would like to open in Finder. Here, type "\tilde/.ssh" and press enter.
 
-\fi
+\fi % END IF MAC
 
 You will get an e-mail to confirm your account request. After the VSC staff has
 approved the account, your account will be created and you will get
 confirmation e-mail.
 
-% IF ANTWERPEN
-\ifantwerpen
-\strong{The site is only accessible from within the University of Antwerp
+\ifantwerpen % IF ANTWERPEN
+\strong{The site is only accessible from within the \university
 domain}, so the page won't load from (e.g.) home. However, you can also get
-external access to the UA domain using VPN. We refer to the UA ICT infocenter
-(\url{http://www.ua.ac.be/main.aspx?c=.INFOCENTER}) for more information.
+external access to the \university domain using VPN. We refer to the \university ICT infocenter
+for more information.
 
-\subsection{Other users of the Antwerp University Association (AUHA)}
-\label{sec:other-users-of-antwerp-university}
+\subsection{Users of the \association}
+\label{sec:users-of-association}
 
 All users (researchers, academic staff, etc.) from the higher education
-institutions associated with UA can get a VSC account via the UA. There is not
+institutions associated with \university can get a VSC account via the \university. There is not
 yet an automated form to request for your personal VSC account.
 
 Please e-mail the \hpc staff to get an account (see Contacts information).
@@ -316,31 +302,28 @@ which you will normally find in your .ssh subdirectory within your HOME
 Directory. (i.e. /Users/$<$username$>$/.ssh/id\_rsa.pub).
 
 
-% IF MAC
-\ifmac
+\ifmac % IF MAC
 
   \strong{\underbar{Tip:}} As ".ssh" is an invisible directory, the Finder will
   not show it by default. The easiest way to access the folder, is by pressing
   Apple-Shift-G, which will allow you to enter the name of a directory, which
   you would like to open in Finder. Here, type "\tilde/.ssh" and press enter.
 
-\fi
-% END IF MAC
-\fi
-% END IF ANTWERPEN
+\fi % END IF MAC
+\fi % END IF ANTWERPEN
 
 \subsection{Welcome e-mail}
 \label{sec:welcome-email}
 
 Within one day, you should receive a Welcome e-mail with your VSC account details.
 
-\begin{verbatim}
+\begin{flattext}
 Welcome xxx,
-* Your vsc-username is \userid
+* Your vsc-username is %\userid%
 * You can view your profile details at https://account.vscentrum.be/req
 * For further info please visit https://vscentrum.be/neutral/documentation
 Your VSC-admin
-\end{verbatim}
+\end{flattext}
 
 Now, you can start using the \hpc.
 
@@ -391,7 +374,7 @@ Now, you can start using the \hpc.
 
   \includegraphics*[width=3.54in, height=3.41in, keepaspectratio=false]{ch2-putty-x-forwarding}
 
-    \item  Now go back to $<$Session$>$, and fill in ``\emph{Turing}'' in the
+    \item  Now go back to $<$Session$>$, and fill in ``\emph{\hpcname}'' in the
       $<$\emph{Saved Sessions}$>$ field and press $<$\emph{Save}$>$ to
       store the session information.
 
@@ -415,13 +398,13 @@ Now, you can start using the \hpc.
 
   \begin{prompt}
   %\shellcmd{pwd}%
-  /user/antwerpen/201/vsc20167
+  /homedir
   %\shellcmd{hostname --f}%
-  ln01.turing.antwerpen.vsc
+  \loginhost
   \end{prompt}
 
     \item  For future PuTTY sessions, just select your saved session (i.e.
-      ``\emph{Turing}'') from the list, $<$\emph{Load}$>$ it and press
+      ``\emph{\hpcname}'') from the list, $<$\emph{Load}$>$ it and press
       $<$\emph{Open}$>$.
   \end{enumerate}
 
@@ -431,8 +414,8 @@ Now, you can start using the \hpc.
 \subsection{Connect}
 \label{sec:connect}
 
-The \hpc is only accessible from within the UA campus network, but you can
-get external access (e.g., from home) by using a UA-VPN connection.
+The \hpc is only accessible from within the \university campus network, but you can
+get external access (e.g., from home) by using a VPN connection.
 
 To make a connection to the \hpc cluster, the ssh command is used:
 
@@ -444,7 +427,7 @@ Here,
 
 \begin{enumerate}
   \item  \emph{$<$vsc-account$>$} is your VSC username that you have received
-    by mail after your request was approved,
+    by mail after your request was approved (e.g. \userid),
   \item  \emph{``\loginnode''} is the name of the login
     node of the \hpc cluster you want to connect to.
 \end{enumerate}
@@ -454,17 +437,15 @@ verify the authenticity of the login node, e.g.,
 
 \begin{prompt}
 %\shellcmd{ssh \userid{}@\loginnode{}}%
-The authenticity of host '%\loginnode (<IP-adress>)%' can't be established.
+The authenticity of host `%\loginnode% (<IP-adress>)' can't be established.
 RSA key fingerprint is b7:66:42:23:5c:d9:43:e8:b8:48:6f:2c:70:de:02:eb.
 Are you sure you want to continue connecting (yes/no)? %\strong{\emph{yes}}%
 \end{prompt}
 
-Here, user \userid wants to make a connection to the `Turing' cluster at
+Here, user \userid wants to make a connection to the `\hpcname' cluster at
 \university via the login node '\loginnode'.
 
-\ifantwerpen
-\strong{Congratulations, you're on the UA Super-Computer now !!!}
-\fi
+\strong{Congratulations, you're on the \hpc Super-Computer now !!!}
 Okay, I am on the supercomputer, but where am I?
 
 So, print the current working directory:
@@ -488,8 +469,7 @@ all the exercises) for you, which you can explore with the ``ls --l''
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 256
-lrwxrwxrwx 1 %\userid \userid %25 Nov 13 09:53 tutorials ->
-  /apps/antwerpen/tutorials/
+lrwxrwxrwx 1 %\userid \userid% 25 Nov 13 09:53 tutorials -> /apps/%\sitename%/tutorials/
 %\shellcmd{cd tutorials}%
 \end{prompt}
 
@@ -510,8 +490,8 @@ vi/
 This directory currently contains all training material for the use of:
 
 \begin{enumerate}
-\item  The \strong{\emph{\hpc}}.
-\item  The \strong{\emph{Eclipse}} environment.
+\item  The \strong{\emph{Introduction to the \hpc}}.
+\item  The \strong{\emph{Introduction to Linux}}.
 \item  The \strong{\emph{Python}} programming language.
 \item  The \strong{\emph{VI}} editor.
 \end{enumerate}
@@ -526,6 +506,7 @@ As we are interested in the use of the \strong{\emph{HPC}}, move further to
 %\shellcmd{cd calcua}%
 %\shellcmd{tree -L 2}%
 .
+%\textbar%-- HPC_Tutorial_Linux.pdf
 %\textbar%-- HPC_Tutorial_Mac.pdf
 %\textbar%-- HPC_Tutorial_Win.pdf
 %\textbar%-- HPC_slides.pdf
@@ -584,8 +565,8 @@ Go to your home directory, check your own private examples directory, \dots  and
 %\shellcmd{cd}%
 %\shellcmd{ls -l}%
 total 792
-drwxrwxr-x 10 vsc20167 vsc20167 131072 Nov  4 13:15 examples/
-lrwxrwxrwx 1  root     root         25 Nov 12 14:51 tutorials -%$>$% /apps/antwerpen/tutorials/
+drwxrwxr-x 10 %\userid% %\userid% 131072 Nov  4 13:15 examples/
+lrwxrwxrwx 1  root     root         25 Nov 12 14:51 tutorials -%$>$% /apps/%\sitename%/tutorials/
 \end{prompt}
 
 \section{Computation Workflow on the \hpc}

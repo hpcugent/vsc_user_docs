@@ -287,13 +287,15 @@ compute node on the \hpc) transferred to your personal screen, you will need
 to re-connect to the \hpc with X-forwarding enabled, which is done with the
 ``-X'' option.
 
+\includegraphics*[width=5.78in, height=1.78in, keepaspectratio=false]{ch5-interactive-mode}
+
 First exit and re-connect to the \hpc with X-forwarding enabled:
 
 \begin{prompt}
 %\shellcmd{exit}%
 %\shellcmd{ssh --X $<$vsc-account$>$@\loginnode}%
 %\shellcmd{hostname -f}%
-%\loginnode%
+%\loginhost%
 \end{prompt}
 
 We first check whether our GUI's on the login node are decently forwarded to
@@ -339,27 +341,17 @@ You should see the following message appearing.
 
 Click any button and see what happens.
 
-\ifantwerpen
-% The cow will have to wait
 \begin{prompt}
-  -----------------------
-
-  $<$ Enjoy the day! Mooh $>$
-
-  -----------------------
-
-           \textbackslash    \^{}\_\_\^{}
-
-           \textbackslash   (oo)\textbackslash \_\_\_\_\_\_\_
-
-              (\_\_)\textbackslash        )\textbackslash /\textbackslash
-
-                   \textbar \textbar ----w \textbar
-
-                   \textbar \textbar      \textbar \textbar
+-----------------------
+< Enjoy the day! Mooh > 
+----------------------- 
+     ^__^ 
+     (oo)\_______ 
+     (__)\       )\/\ 
+         ||----w | 
+         ||     ||
 
 \end{prompt}
-\fi
 
 \subsection{Run your interactive application}
 

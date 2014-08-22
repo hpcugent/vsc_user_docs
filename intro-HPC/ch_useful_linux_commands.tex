@@ -7,13 +7,13 @@ means that, when you connect to one of them, you get a command line interface,
 which looks something like this:
 
 \begin{prompt}
-%\userid{}@\loginnode{}% $
+%\userid{}%@ln01[203] $
 \end{prompt}
 
 When you see this, we also say you are inside a "shell". The shell will accept
 your commands, and execute them.
 
-\begin{tabular}{|l|l|} \hline
+\begin{tabular}{|p{0.1\textwidth}|p{0.9\textwidth}|} \hline
 ls   & Shows you a list of files in the current directory \\ \hline
 cd   & Change current working directory \\ \hline
 rm   & Remove file or directory \\ \hline
@@ -80,7 +80,7 @@ You can type both lines at your shell prompt, and the result will be the followi
 %\shellcmd{echo "Hello! This is my hostname:"}%
 Hello! This is my hostname:
 %\shellcmd{hostname}%
-%\loginnode%
+%\loginhost%
 \end{prompt}
 
 Suppose we want to call this script "foo". You open a new file for editing, and
@@ -103,7 +103,7 @@ or 'bash' (which are the same on the cluster). So start the script:
 \begin{prompt}
 %\shellcmd{bash foo}%
 Hello! This is my hostname:
-%\loginnode%
+%\loginhost%
 \end{prompt}
 
 Congratulations, you just created and started your first shell script!
@@ -146,7 +146,7 @@ Now you can start your script by simply executing it:
 \begin{prompt}
 %\shellcmd{./foo}%
 Hello! This is my hostname:
-%\loginnode%
+%\loginhost%
 \end{prompt}
 
 The same technique can be used for all other scripting languages, like Perl and Python.
@@ -159,103 +159,100 @@ ignore these lines, you may get strange results\ldots
 
 \subsection{Archive Commands}
 
-\begin{description}
+\begin{tabular}{|p{0.25\textwidth}|p{0.77\textwidth}|} \hline
+tar                   & An archiving program designed to store and extract files from an archive known as a tarfile.  \\ \hline
+tar -cvf foo.tar foo/ & compress the contents of foo folder to foo.tar \\ \hline
+tar -xvf foo.tar      & extract foo.tar \\ \hline
+tar -xvzf foo.tar.gz  & extract gzipped foo.tar.gz \\ \hline
+\end{tabular}
 
-  \item[tar] An archiving program designed to store and extract files from an
-archive known as a tarfile.
-
-\begin{prompt}
-#compress the contents of foo folder to foo.tar
-%\shellcmd{tar -cvf foo.tar foo/}%
-#extract foo.tar
-%\shellcmd{tar -xvf foo.tar}%
-#extract gzipped foo.tar.gz
-%\shellcmd{tar -xvzf foo.tar.gz}%
-\end{prompt}
-
-\end{description}
 
 \subsection{Basic Commands}
 
-\begin{description}
-  \item[cd]  Change the current directory
-  \item[echo]  Display a line or text
-  \item[mkdir]  Create directories
-  \item[pwd] Print working directory
-  \item[rmdir]  Remove directories
-\end{description}
+\begin{tabular}{|p{0.1\textwidth}|p{0.9\textwidth}|} \hline
+ls     & Shows you a list of files in the current directory \\ \hline
+cd     & Change the current directory \\ \hline
+rm     & Remove file or directory \\ \hline
+mv     & Move file or directory \\ \hline
+echo   & Display a line or text \\ \hline
+pwd    & Print working directory \\ \hline
+mkdir  & Create directories \\ \hline
+rmdir  & Remove directories \\ \hline
+\end{tabular}
+
 
 \subsection{Editor}
 
-\begin{description}
-  \item[emacs]
-  \item[nano] Nano's ANOther editor, an enhanced free Pico clone
-  \item[vi] A programmers text editor
-\end{description}
-
+\begin{tabular}{|p{0.1\textwidth}|p{0.9\textwidth}|} \hline
+emacs  & \\ \hline
+nano   & Nano's ANOther editor, an enhanced free Pico clone \\ \hline
+vi     & A programmers text editor \\ \hline
+\end{tabular}
 
 \subsection{File Commands}
-\begin{description}
-  \item[cat] Read one or more files and print them to standard output
-  \item[cmp] Compare two files byte by byte
-  \item[cp] Copy files from a source to the same or different target(s)
-  \item[du] Estimate disk usage of each file and recursively for directories
-  \item[find] Search for files in directory hierarchy
-  \item[grep] Print lines matching a pattern
-  \item[ls] List directory contents
-  \item[mv] Move file to different targets
-  \item[rm] Remove files
-  \item[sort] Sort lines of text files
-  \item[wc] Print the number of new lines, words, and bytes in files
-\end{description}
+
+\begin{tabular}{|p{0.1\textwidth}|p{0.9\textwidth}|} \hline
+cat   & Read one or more files and print them to standard output \\ \hline
+cmp   & Compare two files byte by byte \\ \hline
+cp    & Copy files from a source to the same or different target(s) \\ \hline
+du    & Estimate disk usage of each file and recursively for directories \\ \hline
+find  & Search for files in directory hierarchy \\ \hline
+grep  & Print lines matching a pattern \\ \hline
+ls    & List directory contents \\ \hline
+mv    & Move file to different targets \\ \hline
+rm    & Remove files \\ \hline
+sort  & Sort lines of text files \\ \hline
+wc    & Print the number of new lines, words, and bytes in files \\ \hline
+\end{tabular}
+
 
 \subsection{Help Commands}
 
-\begin{description}
-  \item[man] Displays the manual page of a command with its name, synopsis, description, author, copyright etc.
-\end{description}
+\begin{tabular}{|p{0.1\textwidth}|p{0.9\textwidth}|} \hline
+man   & Displays the manual page of a command with its name, synopsis, description, author, copyright etc. \\ \hline
+\end{tabular}
 
 \subsection{Network Commands}
-\begin{description}
-  \item[hostname] show or set the system's host name
-  \item[ifconfig] Display the current configuration of the network interface. It is also useful to get the information about IP address, Subnet Mask,set remote IP address , Netmask etc.
-  \item[ping] send ICMP ECHO\_REQUEST to network hosts, you will get back ICMP packet if the host responds.  This command is useful when you are in a doubt whether your computer is connected or not.
 
-\end{description}
+\begin{tabular}{|p{0.1\textwidth}|p{0.9\textwidth}|} \hline
+hostname  & show or set the system's host name \\ \hline
+ifconfig  & Display the current configuration of the network interface. It is also useful to get the information about IP address, Subnet Mask,set remote IP address , Netmask etc. \\ \hline
+ping      & send ICMP ECHO\_REQUEST to network hosts, you will get back ICMP packet if the host responds.  This command is useful when you are in a doubt whether your computer is connected or not. \\ \hline
+\end{tabular}
+
 
 \subsection{Other Commands}
-\begin{description}
-  \item[logname] Print user's login name
-  \item[quota] Display disk usage and limits
-  \item[su] Switch to super user or change user ID
-  \item[which] Returns the pathnames of the files that would be executed in the current environment
-  \item[whoami] Displays the login name of the current effective user
-\end{description}
+\begin{tabular}{|p{0.1\textwidth}|p{0.9\textwidth}|} \hline
+logname & Print user's login name \\ \hline
+quota   & Display disk usage and limits \\ \hline
+su      & Switch to super user or change user ID \\ \hline
+which   & Returns the pathnames of the files that would be executed in the current environment \\ \hline
+whoami  & Displays the login name of the current effective user \\ \hline
+\end{tabular}
 
 \subsection{Process Commands}
-\begin{description}
-  \item[\&] In order to execute a command in the background, place an
-    ampersand(\&)on the command line at the end of the command. A user job
-    number(placed in brackets) and a system process number are displayed. A
-    system process number is the number by which the system identifies the job
-    whereas a user job number is the number by which the user identifies the
-    job
-  \item[at] executes commands at a specified time
-  \item[bg] Places a suspended job in the background
-  \item[crontab] crontab is a file which contains the schedule of entries to run at specified times
-  \item[fg] A process running in the background will be processed in the foreground
-  \item[jobs] Lists the jobs bein run in the background
-  \item[kill] Cancels a job running in the background, it takes argument either the user job number or the system process number
-  \item[ps] Reports a snapshot of the current processes
-  \item[sudo] Execute a command as a superuser
-  \item[top] Display Linux tasks
-\end{description}
+
+\begin{tabular}{|p{0.1\textwidth}|p{0.9\textwidth}|} \hline
+\&      & In order to execute a command in the background, place an ampersand(\&)on the command line at the end of the command. A user job number(placed in brackets) and a system process number are displayed. A system process number is the number by which the system identifies the job whereas a user job number is the number by which the user identifies the job \\ \hline
+at      & executes commands at a specified time \\ \hline
+bg      & Places a suspended job in the background \\ \hline
+crontab & crontab is a file which contains the schedule of entries to run at specified times \\ \hline
+fg      & A process running in the background will be processed in the foreground \\ \hline
+jobs    & Lists the jobs bein run in the background \\ \hline
+kill    & Cancels a job running in the background, it takes argument either the user job number or the system process number \\ \hline
+ps      & Reports a snapshot of the current processes \\ \hline
+sudo    & Execute a command as a superuser \\ \hline
+top     & Display Linux tasks \\ \hline
+\end{tabular}
+
+
 \subsection{User Account Commands}
-\begin{description}
-  \item[chmod] Modify properties for users
-  \item[chown] Change file owner and group
-  \item[groupadd] Create a new group
-  \item[groupdel] Delete the group and entries referring to the group
-  \item[groupmod] Modify a group definition on the system
-\end{description}
+
+\begin{tabular}{|p{0.1\textwidth}|p{0.9\textwidth}|} \hline
+chmod    & Modify properties for users \\ \hline
+chown    & Change file owner and group \\ \hline
+groupadd & Create a new group \\ \hline
+groupdel & Delete the group and entries referring to the group \\ \hline
+groupmod & Modify a group definition on the system \\ \hline
+\end{tabular}
 

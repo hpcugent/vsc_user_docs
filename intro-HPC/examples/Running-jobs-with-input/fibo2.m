@@ -1,9 +1,9 @@
 %
-% ./examples/ex01-matlab
-% Script to calculate and print the first 50 fibonacci numbers
-% This script is used as an example to demonstrate the UA-HPC.
+% VSC        : Flemish Supercomputing Centre
+% Tutorial   : Introduction to HPC
+% Description: Script to calculate and print the first 50 fibonacci numbers
 %
-%Clear screen and memory
+% Clear screen and memory
 clear; clc; format compact 
 
 % Initialize the first two values

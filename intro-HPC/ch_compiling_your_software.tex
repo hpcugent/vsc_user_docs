@@ -115,7 +115,7 @@ First, check the command line options for \emph{``gcc'' (GNU C-Compiler)},
 then we compile and list the contents of the directory again:
 
 \begin{prompt}
-%\shellcmd{gcc}% --help
+%\shellcmd{gcc --help}%
 %\shellcmd{gcc -o hello hello.c}%
 %\shellcmd{ls -l}%
 total 512
@@ -180,7 +180,7 @@ around the gcc compiler. It is available from the impi modules.
 
 First, search the relevant MPI modules, and load the most recent.
 \begin{prompt}
-%\shellcmd{module}% av 2>&1 | grep -i mpi
+%\shellcmd{module av 2>&1 | grep -i mpi}%
 impi/3.2.1.009
 impi/3.2.2.006
 impi/4.0.0.025

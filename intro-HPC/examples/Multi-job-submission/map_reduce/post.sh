@@ -3,7 +3,7 @@
 # Check if the input Directory exists
 if [ ! -d "./output" ] ; then
   echo "The output directory does not exist!"
-	exit
+  exit
 fi
 
 # Just concatenate all output files

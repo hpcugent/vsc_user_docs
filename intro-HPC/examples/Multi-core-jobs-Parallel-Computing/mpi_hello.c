@@ -1,9 +1,11 @@
+/*
+ * VSC        : Flemish Supercomputing Centre
+ * Tutorial   : Introduction to HPC
+ * Description: "Hello World" MPI Test Program
+ */
 #include <stdio.h>
 #include <mpi.h>
 
- /*
-  "Hello World" MPI Test Program
- */
  #include <mpi.h>
  #include <stdio.h>
  #include <string.h>

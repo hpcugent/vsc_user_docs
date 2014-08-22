@@ -16,6 +16,8 @@
 \usepackage{substr}
 \usepackage{xstring}
 \usepackage{verbatim}
+\usepackage{courier}
+\renewcommand{\ttdefault}{pcr}
 
 \setlength{\hoffset}{-1in}
 \setlength{\voffset}{-1in}
@@ -53,7 +55,7 @@
 
 \lstset{basicstyle=\ttfamily,breaklines=true, keepspaces=true}
 \lstdefinestyle{prompt}{
-  language=bash,
+% language=bash,
   frame=tblr,
   columns=fullflexible,
   escapechar=\%,
@@ -73,14 +75,23 @@
   identifierstyle=\color{blue},
   stringstyle=\color{orange},
 }
+\lstdefinestyle{flattext}{
+  frame=tblr,
+  breaklines=true,
+  columns=fullflexible,
+  escapechar=\%,
+  fillcolor=\color{lightgray},
+  backgroundcolor=\color{white},
+  }
 
 \lstnewenvironment{prompt} {\lstset{style=prompt}} {}
 \lstnewenvironment{code}[1]{\lstset{style=code, language=#1}} {}
 \lstnewenvironment{prog}{\lstset{style=code}} {}
+\lstnewenvironment{flattext}{\lstset{style=flattext}} {}
 
 % Taken from: http://tex.stackexchange.com/questions/9363/how-does-one-insert-a-backslash-or-a-tilde-into-latex
 \protected\def\tilde{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
-\newcommand{\shellcmd}[1]{\noexpandarg\StrSubstitute{#1}{~}{\tilde}[\temp] \$ \textbf{\texttt{\temp}}}
+\newcommand{\shellcmd}[1]{\noexpandarg\StrSubstitute{#1}{~}{\tilde}[\temp]\$ \textbf{\texttt{\temp}}}
 
 \newwrite\shellcmds
 \immediate\openout\shellcmds=shellcmds.sh
@@ -93,7 +104,7 @@
   \lstinputlisting[
     language=#1,
     numbers=left,
-    title=\IfSubStringInString{/}{#2}{\BehindSubString{/}{#2}}{#2},
+    title=\IfSubStringInString{/}{#2}{\BehindSubString{/}{#2}} --- {#2} --- ,
     frame=tlbr,
     style=code,]
     {\exampledir/#2}

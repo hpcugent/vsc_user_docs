@@ -48,7 +48,7 @@ To check on which login node you are connected:
 
 \begin{prompt}
 %\shellcmd{hostname -f}%
-%\loginnode%
+%\loginhost%
 \end{prompt}
 
 You can exit the connection at anytime by entering:
@@ -177,7 +177,7 @@ Now, try out whether you can transfer an arbitrary file from your local machine 
 
 \strong{Secure copy} or \strong{SCP} is a tool (commando) for securely
 transferring files between a local host (= your computer) and a remote host
-(the UA-HPC). It is based on the Secure Shell (SSH) protocol.  The \strong{scp}
+(the \hpc). It is based on the Secure Shell (SSH) protocol.  The \strong{scp}
 command works equivalent `as the \strong{cp}  (i.e. \strong{c}o\strong{p}y)
 command, but can copy files to or from remote machines.
 
@@ -357,12 +357,11 @@ In order to administer the active software and their environment variables, a
 \item  Activates or de-activates \underbar{software packages} and their dependencies.
 \item  Allows setting and unsetting of \underbar{environment variables}, including adding and deleting entries from database-type environment variables.
 \item  Does this in a \underbar{shell-independent} fashion (necessary information is stored in the accompanying module configuration file).
-\item  Takes care of\underbar{versioning aspects:} For many libraries, multiple versions are installed and maintained. The module system also takes care of the versioning of software packages in case multiple versions are installed. For instance, it?does not allow multiple versions to be loaded at same time.
-\item  Takes care of\underbar{dependencies:} Another issue arises when one considers library versions and the dependencies they create. Some software requires an older version of a particular library to run correctly (or at all). Hence a variety of version numbers is available for important libraries.
+\item  Takes care of \underbar{versioning aspects:} For many libraries, multiple versions are installed and maintained. The module system also takes care of the versioning of software packages in case multiple versions are installed. For instance, it?does not allow multiple versions to be loaded at same time.
+\item  Takes care of \underbar{dependencies:} Another issue arises when one considers library versions and the dependencies they create. Some software requires an older version of a particular library to run correctly (or at all). Hence a variety of version numbers is available for important libraries.
 \end{enumerate}
 
-This is all managed with the ``\emph{module}'' command, which is explained in
-the next sections.
+This is all managed with the ``\emph{module}'' command, which is explained in the next sections.
 
 \subsection{Available modules}
 
@@ -521,17 +520,17 @@ variables will be changed by a certain module, try:
 
 % TODO: this probably needs to be site-specific, or not shown as it seems a bit advanced and out of place
 \begin{prompt}
-%\shellcmd{module show Molpro}%
------------------------
-/apps/local/turing/harpertown/modules/Molpro/2010.1-ga-4.3.2-TCGMSG-MPI-ictce-3.2.2.u2:
-module-whatis Molpro is a complete system for molecular electronic structure calculations - Homepage: http://www.molpro.net/
-conflict  Molpro
-module  load ictce/3.2.2.u2
-prepend-path  PATH  /apps/local/turing/harpertown/software/Molpro/2010.1-ga-4.3.2-TCGMSG-MPI-ictce-3.2.2.u2/bin
-setenv     SOFTROOTMOLPRO /apps/local/turing/harpertown/
-software/Molpro/2010.1-ga-4.3.2-TCGMSG-MPI-ictce-3.2.2.u2
-setenv   SOFTVERSIONMOLPRO 2010.1
------------------------
+%\shellcmd{module show scripts}%
+-------------------------------------------------------------------
+/apps/\site/\hpcname/modules/all/scripts/2.6.0:
+
+module-whatis  A collection of scripts to ease cluster usage. - Homepage: https://appel.ugent.be/userwiki/index.php/Main_Page 
+conflict       scripts 
+prepend-path   PATH /apps/\site/\hpcname/software/scripts/2.6.0/bin 
+prepend-path   PATH /apps/\site/\hpcname/software/scripts/2.6.0/bin/fake 
+setenv         SOFTROOTSCRIPTS /apps/\site/\hpcname/software/scripts/2.6.0 
+setenv         SOFTVERSIONSCRIPTS 2.6.0 
+-------------------------------------------------------------------
 \end{prompt}
 
 To get a list of all possible commands, type:

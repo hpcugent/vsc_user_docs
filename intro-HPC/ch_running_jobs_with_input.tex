@@ -142,11 +142,11 @@ data depends on the purpose, but also the size and type of usage of the data.
 
 The following locations are available:
 
-\begin{tabular}{|p{0.4\textwidth}|p{0.6\textwidth}|} \hline
+\begin{tabular}{|p{0.35\textwidth}|p{0.65\textwidth}|} \hline
 \strong{Variable} & \strong{Description} \\ \hline
-\$VSC\_HOME            & The data stored here should be relatively small (e.g., no files or directories larger than a gigabyte), and not generating very intense I/O during jobs. Various kinds of \strong{configuration files} are also stored here, such as the ssh-keys, .bashrc, or MATLAB and Eclipse configuration files, etc. \newline The default directory is /user/antwerpen/20x/$<$vsc-account$>$. \\ \hline
-\$VSC\_DATA            & A bigger 'workspace', for \strong{datasets}, results, logfiles, etc. This file-system can be used for higher I/O loads, but for I/O bound jobs, you might be better of using (one of) the 'scratch' file-system(s). Also, if you are developing your own software, builds of large projects should be conducted here. The default directory is /data/antwerpen/20x/$<$vsc-account$>$. \\ \hline
-\$VSC\_SCRATCH \$VSC\_SCRATCH\_SITE \$VSC\_SCRATCH\_GLOBAL & For \strong{temporary} or transient data; there is typically no backup for these file-systems, and 'old' data may be removed automatically. The default directory is /scratch/antwerpen/20x/$<$vsc-account$>$ \\   \hline
+\$VSC\_HOME            & The data stored here should be relatively small (e.g., no files or directories larger than a gigabyte), and not generating very intense I/O during jobs. Various kinds of \strong{configuration files} are also stored here, such as the ssh-keys, .bashrc, or MATLAB and Eclipse configuration files, etc. \newline The default directory is /user/\sitename/xxx/$<$vsc-account$>$. \\ \hline
+\$VSC\_DATA            & A bigger 'workspace', for \strong{datasets}, results, logfiles, etc. This file-system can be used for higher I/O loads, but for I/O bound jobs, you might be better of using (one of) the 'scratch' file-system(s). Also, if you are developing your own software, builds of large projects should be conducted here. The default directory is /data/\sitename/xxx/$<$vsc-account$>$. \\ \hline
+\$VSC\_SCRATCH \$VSC\_SCRATCH\_SITE \$VSC\_SCRATCH\_GLOBAL & For \strong{temporary} or transient data; there is typically no backup for these file-systems, and 'old' data may be removed automatically. The default directory is /scratch/\sitename/xxx/$<$vsc-account$>$ \\   \hline
 \$VSC\_SCRATCH\_NODE & For \strong{temporary} or transient data on the local compute node, where fast access is important; there is no backup for these file-systems. The user is responsible for cleaning up the data after use.\newline This space that is available per node. The default directory is /tmp. \\ \hline
 \ifgent
 \$VSC\_SCRATCH\_CLUSTER & \\ \hline
@@ -342,11 +342,11 @@ approximately 3 minutes on the \hpc.
 In this exercise, you will
 \begin{enumerate}
 \item  Generate the file ``primes\_1.txt'' again as in the previous exercise; and
-\item  Open the this file; and
+\item  open the this file; and
 \item  read it line by line; and
 \item  calculate the average of primes in the line; and
 \item  count the number of primes found per line; and
-\item  write it to the "primes\_2.txt" output file in the SCRATCH-directory
+\item  write it to the "primes\_2.txt" output file in the SCRATCH-directory.
 \end{enumerate}
 
 Check the Python and the PBS file, and submit the job:
@@ -364,17 +364,14 @@ Check the Python and the PBS file, and submit the job:
 
 \subsection{Quota}
 
-\ifantwerpen
 The available disk space on the \hpc is limited. The actual disk capacity,
 shared by all users, can be found on the Available hardware page on the
 website.
-(\url{https://vscentrum.be/neutral/documentation/infrastructure/hardware/hardware-ua})
+(\url{https://vscentrum.be/neutral/documentation/infrastructure/hardware})
 
-In 2013, the \hpc cluster has a total 20 TB (Terabyte) of online storage
+In 2014, the \hpc cluster has a total 120 TB (Terabyte) of online storage
 available, but this amount is continuously and rapidly expanding. This implies
 that there are also limits
-\fi
-
 \begin{enumerate}
 \item  to the amount of disk space; and
 \item  to the number of files
@@ -432,22 +429,20 @@ In general it may be useful to see how much space (in KB) and how many files
 that you are using on any file system.  This information is also shown each
 time that you log in to the \hpc
 
-\ifantwerpen
-% TODO: Repaste this correctly.
 \begin{prompt}
 %\shellcmd{mmlsquota}%
-                         Block Limits                                    \textbar      File Limits
-Filesystem type KB  quota  limit  in\_doubt   grace
-data              USR  82944  26214400 28835840 0       none
-home            USR 34560  3145728 3461120 0       none
-scratch         USR 29472  26214400 28835840 19456       none
+                         Block Limits                                    
+Filesystem   type     KB     quota     limit  in_doubt  grace
+data          USR  82944  26214400  28835840         0   none
+home          USR  34560   3145728   3461120         0   none
+scratch       USR  29472  26214400  28835840     19456   none
 
-Filesystem files quota  limit  in_doubt grace  Remarks
-Data  27 100000 150000 0  none
-Home  117 20000  25000  0  none
-Scratch 11 100000  150000 20  none
+|      File Limits
+Filesystem  files   quota   limit in_doubt  grace  Remarks
+Data           27  100000  150000        0   none
+Home          117   20000   25000        0   none
+Scratch        11  100000  150000       20   none
 \end{prompt}
-\fi
 
 The ``\emph{show\_quota.py}'' commando has been developed to show you the
 status of your quota in a more readable format:
@@ -518,7 +513,7 @@ current directory, you could use the following command:
 768K ex03-python
 768K ex04-python
 256K example.sh
-1.5M intro-turing.pdf
+1.5M intro-HPC.pdf
 \end{prompt}
 
 
