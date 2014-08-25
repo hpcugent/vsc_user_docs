@@ -143,142 +143,141 @@ displays sent across a network. More formally, it is a computer software system
 and network protocol that provides a basis for graphical user interfaces (GUIs)
 and rich input device capability for networked computers.
 
-%IFMAC
 \ifmac
-Download the latest version of the XQuartz package on:
-http://xquartz.macosforge.org/landing/
-and install the XQuartz.pkg package.
+  Download the latest version of the XQuartz package on:
+  http://xquartz.macosforge.org/landing/
+  and install the XQuartz.pkg package.
 
-\includegraphics*[width=5.79in, height=4.12in, keepaspectratio=false]{img0512}
+  \includegraphics*[width=5.79in, height=4.12in, keepaspectratio=false]{img0512}
 
-The installer will take you through the installation procedure, just continue
-clicking $<$continue$>$ on the various screens that will pop-up until your
-installation was succesfull.
+  The installer will take you through the installation procedure, just continue
+  clicking $<$continue$>$ on the various screens that will pop-up until your
+  installation was succesfull.
 
-\includegraphics*[width=5.81in, height=4.31in, keepaspectratio=false]{img0513}
+  \includegraphics*[width=5.81in, height=4.31in, keepaspectratio=false]{img0513}
 \fi
-%ENDIFMAC
+\iflinux
+%TODO: do we have to install any additional package for X-forwarding under Linux?
+\fi
 
-%IFWINDOWS
 \ifwindows
-\paragraph{ Install XMing}
+  \paragraph{ Install XMing}
 
-The first task is to install the Xming software.
-
-\begin{enumerate}
-  \item  Download the Xming installer from the following
-    address: \url{http://www.straightrunning.com/XmingNotes/}. Either download Xming
-    from the \strong{Public Domain Releases} (free) or from the \strong{Website
-    Releases} (after a donation) on the website.
-  \item  Run the Xming setup program on your Windows desktop.
-  \item  Keep the proposed default folders for the Xming installation.
-  \item  When selecting the components that need to be installed, make sure to
-    select `\emph{XLaunch wizard}' and `\emph{Normal PuTTY Link SSH client}'.
-\end{enumerate}
-
-\includegraphics*[width=4.27in, height=3.32in, keepaspectratio=false]{img0500}
-
-\begin{enumerate}
-\item  We suggest to create a Desktop icon for Xming and XLaunch.
-\item  And $<$\textit{Install}$>$.
-\end{enumerate}
-
-And now we can run Xming:
-
-\begin{enumerate}
-\item  \includegraphics*[width=0.32in, height=0.32in, keepaspectratio=false]{img0501}  Select XLaunch from the Start Menu or by double-clicking the Desktop icon.
-\item  Select $<$\textit{Multiple Windows}$>$. This will open each application in a separate window.
-\end{enumerate}
-
-\includegraphics*[width=4.60in, height=3.57in, keepaspectratio=false]{img0502}
-
-\begin{enumerate}
-\item  Select $<$\textit{Start no client}$>$ to make XLaunch wait for other programs (such as PuTTY).\includegraphics*[width=4.01in, height=3.11in, keepaspectratio=false]{img0503}
-\end{enumerate}
-
-\begin{enumerate}
-\item  Select $<$\textit{Clipboard}$>$ to share the clipboard.
-\end{enumerate}
-
-\includegraphics*[width=3.90in, height=3.03in, keepaspectratio=false]{img0503}
-
-\begin{enumerate}
-\item  Finally $<$\textit{Save configuration}$>$ into a file. You can keep the default filename and save it in your Xming installation directory.
-\end{enumerate}
-
-\includegraphics*[width=3.90in, height=3.03in, keepaspectratio=false]{img0504}
-
-\begin{enumerate}
-\item  Now Xming is running in the background \ldots and you can launch a graphical application in your PuTTY terminal.
-\item  Open a PuTTY terminal and connect  to the HPC.
-\item  In order to test the X-server, run ``\emph{xclock}''. ``\emph{xclock}'' is the standard GUI clock for the X Window System.
-\end{enumerate}
-
-\begin{prompt}
-%\shellcmd{xclock}%
-\end{prompt}
-
-You should see the XWindow clock application appearing on your Windows machine.
-The ``\emph{xclock}'' application runs on the login-node of the \hpc, but is
-displayed on your Windows machine.
-
-\includegraphics*[width=1.44in, height=1.62in, keepaspectratio=false]{img0505}
-
-\paragraph{SSH Tunnel}
-
-In order to work in client/server mode, it is often required to establish an
-SSH tunnel between your Windows desktop machine and the compute node your job
-is running on.  PuTTY must have been installed on your computer, and you should
-be able to connect via SSH to the HPC cluster's login node.
-
-Because of one or more firewalls between your desktop and the HPC clusters, it
-is generally impossible to communicate directly with a process on the cluster
-from your desktop except when the network managers have given you explicit
-permission (which for security reasons is not often done). One way to work
-around this limitation is SSH tunneling.
-
-There are several cases where this is useful:
-
-\begin{enumerate}
-\item  Running X applications on the cluster: The X program cannot directly
-  communicate with the X server on your local system. In this case, the
-  tunneling is easy to set up as PuTTY will do it for you if you select the
-  right options on the X11 settings page as explained on the page about
-  text-mode access using PuTTY.
-\item  Running a server application on the cluster that a client on the desktop
-  connects to. One example of this scenario is ParaView in remote visualization
-  mode, with the interactive client on the desktop and the data processing and
-  image rendering on the cluster. This scenario is explained on this page.
-\item  Running clients on the cluster and a server on your desktop. In this
-  case, the source port is a port on the cluster and the destination port is on
-  the desktop.
-\end{enumerate}
-
-Procedure: A tunnel from a local client to a specific computer node on the cluster
-
-\begin{enumerate}
-  \item  Log in on the login node via PuTTY.
-  \item  Start the server job, note the compute node's name the job is running
-  on (e.g., \computenode), as well as the port the server is listening on
-(e.g., '54321').  \item  Set up the tunnel:
+  The first task is to install the Xming software.
 
   \begin{enumerate}
-    \item  In the ``\emph{Category}'' pane, expand $<$\emph{Connection}$>$$<$\emph{SSH}$>$, and select $<$\emph{Tunnels}$>$ as show below:
+    \item  Download the Xming installer from the following
+      address: \url{http://www.straightrunning.com/XmingNotes/}. Either download Xming
+      from the \strong{Public Domain Releases} (free) or from the \strong{Website
+      Releases} (after a donation) on the website.
+    \item  Run the Xming setup program on your Windows desktop.
+    \item  Keep the proposed default folders for the Xming installation.
+    \item  When selecting the components that need to be installed, make sure to
+      select `\emph{XLaunch wizard}' and `\emph{Normal PuTTY Link SSH client}'.
   \end{enumerate}
-\end{enumerate}
 
-\includegraphics*[width=4.85in, height=4.67in, keepaspectratio=false]{img0506}
+  \includegraphics*[width=4.27in, height=3.32in, keepaspectratio=false]{img0500}
 
-\begin{enumerate}
-  \item  In the ``\emph{Source port}'' field, enter the local port to use (e.g., \emph{12345}).
-  \item  In the ``\emph{Destination}'' field, enter \emph{$<$hostname$>$:$<$server-port$>$} (e.g., \computenode:54321 as in the example above).
-  \item  Click the $<$\emph{Add}$>$ button.
-  \item  Click the $<$\emph{Open}$>$ button
-\end{enumerate}
+  \begin{enumerate}
+  \item  We suggest to create a Desktop icon for Xming and XLaunch.
+  \item  And $<$\textit{Install}$>$.
+  \end{enumerate}
 
-The tunnel is now ready to use.
-% ENDIF WINDOWS
-\fi
+  And now we can run Xming:
+
+  \begin{enumerate}
+  \item  \includegraphics*[width=0.32in, height=0.32in, keepaspectratio=false]{img0501}  Select XLaunch from the Start Menu or by double-clicking the Desktop icon.
+  \item  Select $<$\textit{Multiple Windows}$>$. This will open each application in a separate window.
+  \end{enumerate}
+
+  \includegraphics*[width=4.60in, height=3.57in, keepaspectratio=false]{img0502}
+
+  \begin{enumerate}
+  \item  Select $<$\textit{Start no client}$>$ to make XLaunch wait for other programs (such as PuTTY).\includegraphics*[width=4.01in, height=3.11in, keepaspectratio=false]{img0503}
+  \end{enumerate}
+
+  \begin{enumerate}
+  \item  Select $<$\textit{Clipboard}$>$ to share the clipboard.
+  \end{enumerate}
+
+  \includegraphics*[width=3.90in, height=3.03in, keepaspectratio=false]{img0503}
+
+  \begin{enumerate}
+  \item  Finally $<$\textit{Save configuration}$>$ into a file. You can keep the default filename and save it in your Xming installation directory.
+  \end{enumerate}
+
+  \includegraphics*[width=3.90in, height=3.03in, keepaspectratio=false]{img0504}
+
+  \begin{enumerate}
+  \item  Now Xming is running in the background \ldots and you can launch a graphical application in your PuTTY terminal.
+  \item  Open a PuTTY terminal and connect  to the HPC.
+  \item  In order to test the X-server, run ``\emph{xclock}''. ``\emph{xclock}'' is the standard GUI clock for the X Window System.
+  \end{enumerate}
+
+  \begin{prompt}
+  %\shellcmd{xclock}%
+  \end{prompt}
+
+  You should see the XWindow clock application appearing on your Windows machine.
+  The ``\emph{xclock}'' application runs on the login-node of the \hpc, but is
+  displayed on your Windows machine.
+
+  \includegraphics*[width=1.44in, height=1.62in, keepaspectratio=false]{img0505}
+
+  \paragraph{SSH Tunnel}
+
+  In order to work in client/server mode, it is often required to establish an
+  SSH tunnel between your Windows desktop machine and the compute node your job
+  is running on.  PuTTY must have been installed on your computer, and you should
+  be able to connect via SSH to the HPC cluster's login node.
+
+  Because of one or more firewalls between your desktop and the HPC clusters, it
+  is generally impossible to communicate directly with a process on the cluster
+  from your desktop except when the network managers have given you explicit
+  permission (which for security reasons is not often done). One way to work
+  around this limitation is SSH tunneling.
+
+  There are several cases where this is useful:
+
+  \begin{enumerate}
+  \item  Running X applications on the cluster: The X program cannot directly
+    communicate with the X server on your local system. In this case, the
+    tunneling is easy to set up as PuTTY will do it for you if you select the
+    right options on the X11 settings page as explained on the page about
+    text-mode access using PuTTY.
+  \item  Running a server application on the cluster that a client on the desktop
+    connects to. One example of this scenario is ParaView in remote visualization
+    mode, with the interactive client on the desktop and the data processing and
+    image rendering on the cluster. This scenario is explained on this page.
+  \item  Running clients on the cluster and a server on your desktop. In this
+    case, the source port is a port on the cluster and the destination port is on
+    the desktop.
+  \end{enumerate}
+
+  Procedure: A tunnel from a local client to a specific computer node on the cluster
+
+  \begin{enumerate}
+    \item  Log in on the login node via PuTTY.
+    \item  Start the server job, note the compute node's name the job is running
+    on (e.g., \computenode), as well as the port the server is listening on
+  (e.g., '54321').  \item  Set up the tunnel:
+
+    \begin{enumerate}
+      \item  In the ``\emph{Category}'' pane, expand $<$\emph{Connection}$>$$<$\emph{SSH}$>$, and select $<$\emph{Tunnels}$>$ as show below:
+    \end{enumerate}
+  \end{enumerate}
+
+  \includegraphics*[width=4.85in, height=4.67in, keepaspectratio=false]{img0506}
+
+  \begin{enumerate}
+    \item  In the ``\emph{Source port}'' field, enter the local port to use (e.g., \emph{12345}).
+    \item  In the ``\emph{Destination}'' field, enter \emph{$<$hostname$>$:$<$server-port$>$} (e.g., \computenode:54321 as in the example above).
+    \item  Click the $<$\emph{Add}$>$ button.
+    \item  Click the $<$\emph{Open}$>$ button
+  \end{enumerate}
+
+  The tunnel is now ready to use.
+\fi % ENDIF WINDOWS
 
 \subsection{Connect with X-forwarding}
 

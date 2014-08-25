@@ -21,12 +21,13 @@ corresponding private key on his local computer.
 
 \includegraphics*[width=5.75in, height=3.01in, keepaspectratio=false]{ch2-authentication-general}
 
+Since all VSC clusters use Linux as their main operating system, you will
+need to get acquainted with using the command-line interface and using the
+Terminal.
+
 % IFDEF WINDOWS
 \ifwindows
-
-  Since all \hpc clusters use Linux as their main operating system, you will
-  need to get acquainted with using the command-line interface and using the
-  Terminal. A typical Windows environment does not come with pre-installed
+  A typical Windows environment does not come with pre-installed
   software to connect and run command-line executables on a \hpc. Some tools
   needs to be installed on your Windows machine first, before we can start the
   actual work.
@@ -100,24 +101,22 @@ corresponding private key on his local computer.
 
   If you use another program to generate a key pair, please remember that they
   need to be in the OpenSSH format to access the \hpc clusters.
+\fi %WINDOWS
 
-%iftoggle WINDOWS
-\fi
-
-%IFDEF MAC
 \ifmac
-
-  \subsection{Open a terminal}
-  \label{sec:open-a-terminal}
-
-  Since all VSC clusters use Linux as their main operating system, you will
-  need to get acquainted with using the command-line interface and using the
-  Terminal.
-
   To open a Terminal window in OS X, open the Finder and choose
 
   \emph{$>$$>$ Applications $>$ Utilities $>$ Terminal}
+\fi
 
+\iflinux
+  To open a Terminal window in Linux, open the Finder and choose
+
+  Launch a terminal from your desktop’s application menu and you will see the bash shell. 
+  There are other shells, but most Linux distributions use bash by default.
+\fi
+
+\ifmacORlinux
   Before requesting an account, you need to generate a pair of ssh keys. One
   popular way to do this on OS X is using the OpenSSH client included with OS
   X, which you can then also use to log on to the clusters.
@@ -217,9 +216,7 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
   access the cluster or transfer your files.
 
   \strong{Without your key pair, you won't be able to apply for a personal VSC account.}
-
-%iftoggle mac
-\fi
+\fi %macORlinux
 
 \section{Applying for the account}
 \label{sec:applying-for-the-account}
@@ -266,17 +263,16 @@ generated.
   This file should have been stored in the directory
   `\emph{/Users/$<$Username$>$/PuTTY/.ssh/}'.
 \fi
+\ifmacORlinux
+  This file has been stored in the directory `\emph{\tilde/.ssh/}'.
+\fi
 
-\ifmac % IF MAC
-
-  This file has been stored in the directory `\tilde/.ssh/'.
-
+\ifmac
   \strong{\underbar{Tip:}} As ".ssh" is an invisible directory, the Finder will
   not show it by default. The easiest way to access the folder, is by pressing
   Apple-Shift--G, which will allow you to enter the name of a directory, which
   you would like to open in Finder. Here, type "\tilde/.ssh" and press enter.
-
-\fi % END IF MAC
+\fi
 
 You will get an e-mail to confirm your account request. After the VSC staff has
 approved the account, your account will be created and you will get
@@ -458,33 +454,13 @@ Your new private home-directory is ``\homedir''.
 Here you can create your own sub-directory structure, copy and prepare your
 applications, compile and test them and submit your jobs on the \hpc.
 
-%TODO: maybe do this as well on other sites?
-\ifantwerpen
-For now, we already have created a symbolic link to the tutorials (including
-all the exercises) for you, which you can explore with the ``ls --l''
-(\strong{l}ist\strong{s} \strong{l}ong) and the ``cd'' (\strong{c}hange
-\strong{d}irectory) commands:
-\fi
-
 \begin{prompt}
-%\shellcmd{ls -l}%
-total 256
-lrwxrwxrwx 1 %\userid \userid% 25 Nov 13 09:53 tutorials -> /apps/%\sitename%/tutorials/
-%\shellcmd{cd tutorials}%
-\end{prompt}
-
-\strong{Tip: }Typing ``\strong{\emph{cd tu$<$TAB$>$}}'' will generate the
-``\strong{\emph{cd tutorials}}'' command. \strong{Command-line completion
-}(also tab completion) is a common feature of the bash command line
-interpreter, in which the program automatically fills in partially typed
-commands.
-
-\begin{prompt}
-%\shellcmd{ls  -1}%
-calcua/
-eclipse/
-python/
-vi/
+%\shellcmd{cd \tutorialdir}%
+%\shellcmd{ls}%
+intro-HPC/
+intro-Linux/
+intro-python/
+intro-vi/
 \end{prompt}
 
 This directory currently contains all training material for the use of:
@@ -499,11 +475,15 @@ This directory currently contains all training material for the use of:
 More relevant training material to work with the \hpc can always be added
 later in this directory.
 
+You can now explore the content of this directory with the ``ls --l''
+(\strong{l}ist\strong{s} \strong{l}ong) and the ``cd'' (\strong{c}hange
+\strong{d}irectory) commands:
+
 As we are interested in the use of the \strong{\emph{HPC}}, move further to
-\strong{\emph{calcua}} and explore the contents up to 2 levels deep:
+\strong{\emph{intro-HPC}} and explore the contents up to 2 levels deep:
 
 \begin{prompt}
-%\shellcmd{cd calcua}%
+%\shellcmd{cd intro-HPC}%
 %\shellcmd{tree -L 2}%
 .
 %\textbar%-- HPC_Tutorial_Linux.pdf
@@ -512,14 +492,14 @@ As we are interested in the use of the \strong{\emph{HPC}}, move further to
 %\textbar%-- HPC_slides.pdf
 %\textbar%-- docs
 `-- examples
-    %\textbar%-- Chapter04_Batch
-    %\textbar%-- Chapter05_Interactive
-    %\textbar%-- Chapter06_Files
-    %\textbar%-- Chapter07_Parallel
-    %\textbar%-- Chapter08_MultiJob
-    %\textbar%-- Chapter10_Compile
-    %\textbar%-- Chapter11_TuneJobs
-    %\textbar%-- Chapter13_Examples
+    %\textbar%-- ch04_Batch
+    %\textbar%-- ch05_Interactive
+    %\textbar%-- ch06_Files
+    %\textbar%-- ch07_Parallel
+    %\textbar%-- ch08_MultiJob
+    %\textbar%-- ch10_Compile
+    %\textbar%-- ch11_TuneJobs
+    %\textbar%-- ch13_Examples
     %\textbar%-- example.pbs
     `-- example.sh
 10 directories, 5 files
@@ -528,16 +508,23 @@ As we are interested in the use of the \strong{\emph{HPC}}, move further to
 This directory contains:
 
 \begin{enumerate}
-  \item This \strong{\emph{HPC Tutorial}} (in either a Mac or Windows
-    version).
-  \item The according \strong{\emph{HPC slides}} (used during training
-    sessions).
-  \item A \strong{\emph{docs}} sub-directory, containing interesting \hpc
-    related documents.
+  \item This \strong{\emph{HPC Tutorial}} (in either a Mac, Linux or Windows version).
+  \item The according \strong{\emph{HPC slides}} (used during training sessions).
+  \item A \strong{\emph{docs}} sub-directory, containing interesting \hpc related documents.
   \item An \strong{\emph{examples}} sub-directory, containing all the
     examples that you need in this Tutorial, as well as examples that might be
     useful for your specific applications.
 \end{enumerate}
+
+\begin{prompt}
+%\shellcmd{cd examples}%
+\end{prompt}
+
+\strong{Tip: }Typing ``\strong{\emph{cd ex$<$TAB$>$}}'' will generate the
+``\strong{\emph{cd examples}}'' command. \strong{Command-line completion
+}(also tab completion) is a common feature of the bash command line
+interpreter, in which the program automatically fills in partially typed
+commands.
 
 \strong{\underbar{Tip:}} For more exhaustive tutorials about Linux usage,
 please refer to the following sites:
@@ -547,27 +534,19 @@ please refer to the following sites:
   \item \url{http://linux.about.com/od/nwb\_guide/a/gdenwb06.htm}
 \end{enumerate}
 
-Of course, all documents are ``write-protected''. The first action is to copy
-the contents of the \hpc examples directory to your home directory, so that you
-have your own personal copy and that you can start using the examples. The
-``-r'' option of the copy command will also copy the contents of the
-sub-directories ``\emph{recursively}''.  We first go back to your HOME
-directory.
+The first action is to copy the contents of the \hpc examples directory 
+to your home directory, so that you have your own personal copy and that 
+you can start using the examples. The ``-r'' option of the copy command 
+will also copy the contents of the sub-directories ``\emph{recursively}''.  
 
 \begin{prompt}
-%\shellcmd{cd}%
-%\shellcmd{cp --r ~/tutorials/calcua/examples ~/}%
+%\shellcmd{cp --r \examplesdir \tilde/}%
 \end{prompt}
 
 Go to your home directory, check your own private examples directory, \dots  and start working.
 
-\begin{prompt}
 %\shellcmd{cd}%
 %\shellcmd{ls -l}%
-total 792
-drwxrwxr-x 10 %\userid% %\userid% 131072 Nov  4 13:15 examples/
-lrwxrwxrwx 1  root     root         25 Nov 12 14:51 tutorials -%$>$% /apps/%\sitename%/tutorials/
-\end{prompt}
 
 \section{Computation Workflow on the \hpc}
 \label{sec:compuation-workflow-on-the-hpc}

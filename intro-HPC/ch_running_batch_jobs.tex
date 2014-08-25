@@ -9,6 +9,8 @@ reordering or deleting them), monitoring their progress and killing ones that
 are having problems or are no longer needed. Only the most commonly used
 commands are mentioned here.
 
+\includegraphics*[width=5.78in, height=3.94in, keepaspectratio=false]{ch4-pbs-overview}
+
 When you connect to the \hpc, you have access to (one of) the \strong{login
 nodes} of the cluster. There you can prepare the work you want to get done on
 the cluster by, e.g., installing or compiling programs, setting up data sets,
@@ -20,8 +22,6 @@ usually not necessary (and in some cases not permitted) to log on to the
 compute nodes directly. A user can (and should) monitor his or her jobs
 periodically as they run, but does not have to remain logged in the entire
 time.
-
-\includegraphics*[width=5.78in, height=3.94in, keepaspectratio=false]{ch4-pbs-overview}
 
 The documentation in this ``Running batch jobs'' section includes a description
 of the general features of job scripts, how to submit them for execution and
@@ -47,7 +47,7 @@ done so:
 
 \begin{prompt}
 %\shellcmd{cd}%
-%\shellcmd{cp --r ./tutorials/calcua/examples ~/}%
+%\shellcmd{cp --r \examplesdir \tilde/}%
 \end{prompt}
 
 First go to the directory with the first examples by entering the command:
