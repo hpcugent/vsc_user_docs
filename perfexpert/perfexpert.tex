@@ -1,0 +1,50 @@
+\documentclass[11pt,a4paper,oneside]{book}
+\usepackage{import}
+\subimport{../}{style}
+\subimport{../}{macros}
+\include{glossary}
+\graphicspath{{img//}}
+\makeglossaries
+\makeindex
+
+\begin{document}
+
+\pagestyle{empty}
+
+\include{title}
+
+\glsaddall
+\printglossaries
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+
+\tableofcontents
+
+\strong{Objective:}
+\strong{to learn how to use PerfExpert for Program Optimization}
+
+\strong{Quote:}
+
+\emph{The First Rule of Program Optimization: Don't do it.}
+
+\emph{The Second Rule of Program Optimization (for experts only!): Don't do it yet."}
+
+  ---  Michael A. Jackson ---
+
+\emph{The Third Rule of Program Optimization: Let the computer do it for you."}
+
+--- The PerfExpert Team ---
+
+\include{ch01_introduction}
+\include{ch02_profiling}
+\include{ch03_optimizing}
+\include{ch04_multi_core_multi_job}
+\include{ch05_more_perfexpert_functionality}
+\appendix
+\include{ch06_perfexpert_options}
+\include{ch07_optimization_patterns}
+
+\end{document}
+

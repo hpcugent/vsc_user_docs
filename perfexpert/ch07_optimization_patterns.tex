@@ -1,0 +1,389 @@
+\chapter{Annex 2: Optimization Patterns}
+\label{ch:Optimization_Patterns}
+
+\section{Memory Access optimizations}
+\label{sec:Memory_Access_Optimizations}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R001}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Direct array access}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad memory access\newline Bad L2 data access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Access arrays directly instead of using local copies} \\ \hline
+Code Sample         & \textbf{Old}      & \textbf{New} \\ \hline
+                    & loop j \{\newline   a[j] = b[i][j][k];\newline \}\newline \ldots\newline loop j \{\newline   \ldots a[j] \ldots\newline \}\newline
+                    & loop j \{\newline   \ldots b[i][j][k] \ldots\newline \} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R002}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Group allocations}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad memory access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Allocate an array of elements instead of each element individually} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & loop \{\newline   \ldots c = malloc(1); \ldots\newline \}\newline
+                    & top = n;\newline loop \{\newline   if (top == n) \{\newline     tmp = malloc(n);\newline     top = 0;\newline   \}\newline   \ldots\newline   c = \&tmp[top++]; \ldots\newline \}" \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R003} & \multicolumn{2}{|p{4.0in}|}{\textbf{Loop fission}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad memory access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Apply loop fission so every loop accesses just a couple of different arrays} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & loop i \{\newline   a[i] = a[i] * b[i] - c[i];\newline \}
+                    & loop i \{\newline   a[i] = a[i] * b[i];\newline \}\newline loop i \{\newline   a[i] = a[i] - c[i];\newline \}" \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R004}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Avoid unneeded array updates}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad memory access\newline Bad L2 data access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Avoid unnecessary array updates} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & loop i \{\newline   a[i] = \ldots;\newline   \ldots a[i] \ldots\newline \}\newline // array a[] not read\newline
+                    & loop i \{\newline   temp = \ldots;\newline   \ldots temp \ldots\newline \} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R005}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Change the order of loops}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad memory access\newline Bad data TLB access } \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Change the order of loops} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & loop i \{\newline   loop j \{\ldots\}\newline \}
+                    & loop j \{\newline   loop i \{\ldots\}\newline \} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R006}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Componentize loops}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad memory access\newline Bad L1 data access\newline Bad L2 data access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Componentize important loops by factoring them into their own subroutines} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & loop i \{\ldots\}\newline \ldots\newline loop j \{\ldots\}
+                    & void li() \{loop i \{\ldots\}\}\newline void lj() \{loop j \{\ldots\}\}\newline \ldots\newline li();\newline \ldots\newline lj(); \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R007}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Loop blocking and interchange}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad memory access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Employ loop blocking and interchange} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & loop i \{\newline   loop k \{\newline     loop j \{\newline       c[i][j] = c[i][j] + a[i][k] * b[k][j];\newline     \}\newline   \}\newline \}
+                    & loop k step s \{\newline   loop j step s \{\newline     loop i \{\newline       for (kk = k; kk $<$ k + s; kk++) \{\newline         for (jj = j; jj $<$ j + s; jj++) \{\newline           c[i][jj] = c[i][jj] + a[i][kk] * b[kk][jj];\newline         \}\newline       \}\newline     \}\newline   \}\newline \} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R0.9}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Fuse loops}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad memory access \newline Bad L2 data access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Fuse multiple loops that access the same data} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & loop i \{\newline   a[i] = x[i];\newline \}\newline loop i \{\newline   b[i] = x[i] - 1;\newline \}
+                    & loop i \{\newline   a[i] = x[i];\newline   b[i] = x[i] - 1;\newline \} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R009}       & \multicolumn{2}{|p{4.0in}|}{} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad memory access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Pad memory areas so that temporal elements do not map to same set in cache} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & double a[const * cache\_size/8], b[const * cache\_size/8];\newline loop i \{\newline   \ldots a[i] + b[i] \ldots\newline \}
+                    & double a[const * cache\_size/8 + 8], b[const * cache\_size/8 + 8];\newline loop i \{\newline   \ldots a[i] + b[i] \ldots\newline \} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R010}       & \multicolumn{2}{|p{4.0in}|}{} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad memory access\newline Bad L2 data access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Reuse temporary arrays for different operations} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & loop i \{\newline   t1[i] = \ldots;\newline   \ldots t1[i] \ldots;\newline \}\newline \ldots\newline loop j \{\newline   t2[j] = \ldots;\newline   \ldots t2[j] \ldots;\newline \}\newline
+                    & loop i \{\newline   t[i] = \ldots;\newline   \ldots t[i] \ldots;\newline \}\newline \ldots\newline loop j \{\newline   t[j] = \ldots;\newline   \ldots t[j] \ldots;\newline \} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R011}       & \multicolumn{2}{|p{4.0in}|}{} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad memory access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Split structures into hot and cold parts, where hot part has pointer to cold part} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & struct s \{\newline   hot\_field;\newline   many\_cold\_fields;\newline \} a[n];
+                    & struct s\_hot \{\newline   hot\_field;\newline   struct s\_cold *ptr;\newline \} a\_hot[n];\newline struct s\_cold \{\newline   many\_cold\_fields;\newline \} a\_cold[n]; \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R012}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Smaller types}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad memory access\newline Bad data TLB access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Use smaller types (e.g., float instead of double or short instead of int) } \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & double a[n]; & float a[n]; \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R013}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Align data structures}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad L1 data access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Align data, especially arrays and structs} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & int x[1024]; & \_\_declspec(align(16)) int x[1024]; \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R014}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Use local scalar data}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad L1 data access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Copy data into local scalar variables and operate on the local copies} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & x = a[i] * a[i];\newline \ldots\newline a[i] = x / b;\newline \ldots\newline b = a[i] + 1.0;\newline
+                    & t = a[i];\newline x = t * t;\newline \ldots\newline a[i] = t = x / b;\newline \ldots\newline b = t + 1.0; \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R015}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Eliminate sub-expressions}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad L1 data access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Eliminate common subexpressions involving memory accesses} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & d[i] = a * b[i] + c[i];\newline y[i] = a * b[i] + x[i];
+                    & temp = a * b[i];\newline d[i] = temp + c[i];\newline y[i] = temp + x[i]; \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R016}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Allow vectorization}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad L1 data access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Enable the use of vector instructions to transfer more data per access} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & align arrays, use only stride-one accesses, make loop count even (pad arrays)\newline struct \{\newline   double a, b;\newline \} s[127];\newline for (i = 0; i $<$ 127; i++) \{\newline   s[i].a = 0;\newline   s[i].b = 0;\newline \}
+                    & \_\_declspec(align(16)) double a[128], b[128];\newline for (i = 0; i $<$ 128; i++) \{\newline   a[i] = 0;\newline   b[i] = 0;\newline \} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R017}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Restrict}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad L1 data access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Help the compiler by marking pointers to non-overlapping data with "restrict"} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & void *a, *b; & void * restrict a, * restrict b; \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R018}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Invariant memory}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad L1 data access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Move loop invariant memory accesses out of loop} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & loop i \{\newline   a[i] = b[i] * c[j]\newline\}
+                    & temp = c[j];\newline loop i \{\newline   a[i] = b[i] * temp;\newline \}" \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R019}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Unroll outer loops}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad L1 data access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Unroll outer loop} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & loop i \{\newline   loop j \{\newline     a[i][j] = b[i][j] * c[j];\newline   \}\newline \}
+                    & loop i step 4 \{\newline   loop j \{\newline     a[i][j] = b[i][j] * c[j];\newline     a[i+1][j] = b[i+1][j] * c[j];\newline     a[i+2][j] = b[i+2][j] * c[j];\newline     a[i+3][j] = b[i+3][j] * c[j];\newline   \}\newline \} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R020}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Double to float}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad L1 data access\newline Bad float point instructions (slow FP)} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Use float instead of double data type if loss of precision is acceptable.} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & double a[n]; & float a[n];" \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R021}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Compute iso loading}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad L2 data access\newline Bad memory access } \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Compute values rather than loading them if doable with few operations} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & loop i \{\newline   t[i] = a[i] * 0.5;\newline \}\newline loop i \{\newline   a[i] = c[i] - t[i];\newline \}
+                    & loop i \{\newline   a[i] = c[i] - (a[i] * 0.5);\newline \} \\ \hline
+\end{tabular}
+
+\section{Instruction Access optimizations}
+\label{sec:Instruction_Access_Optimizations}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R100}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Avoid code duplication}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad instruction access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Factor out sequences of common code into subroutines} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & same\_code;\newline same\_code;
+                    & void f() \{same\_code;\}\newline f();\newline f();" \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R101}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Lower loop unroll factor}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad instruction access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Lower the loop unroll factor } \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & loop i step 4 \{\newline   code\_i;\newline   code\_i+1;\newline   code\_i+2;\newline   code\_i+3;\newline \}
+                    & loop i step 2 \{\newline   code\_i;\newline   code\_i+1;\newline \}" \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R102}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Make subroutines more general}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad instruction access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Make subroutines more general and use them more} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & void f() \{\newline   statements1;\newline   statementsX;\newline \}\newline void g() \{\newline   statements2;\newline   statementsX;\newline \}
+                    & void fg(int flag) \{\newline   if (flag) \{\newline     statements1;\newline   \} else \{\newline     statements2;\newline   \}\newline   statementsX;\newline \} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R103}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Sort according call chains}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad instruction access\newline Bad instruction TLB access } \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Sort subroutines by call chains (subroutine coloring)} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & f() \{\ldots\}\newline g() \{\ldots\}\newline h() \{\ldots\}\newline loop \{\newline   f();\newline   h();\newline \}
+                    & g() \{\ldots\}\newline f() \{\ldots\}\newline h() \{\ldots\}\newline loop \{\newline   f();\newline   h();\newline \} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R104}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Split off cold code}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad instruction access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Split off cold code into separate subroutines and place them at end of file } \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & if (unlikely\_condition) \{\newline   lots\_of\_code\newline \}
+                    & void f() \{lots\_of\_code\}\newline \ldots\newline if (unlikely\_condition)\newline   f();" \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R105}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Trace scheduling}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad instruction access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Use trace scheduling to reduce the branch taken frequency} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & if (likely\_condition)\newline   f();\newline else\newline   g();\newline h();
+                    & if (!likely\_condition) \{\newline   g(); h();\newline \} else \{\newline   f(); h();\newline \} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R2.0}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Change order of subroutines}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad instruction TLB access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Change the order of subroutine calls} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & f(); \newline h();
+                    & h();\newline f(); \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R107}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Inlining}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad instruction TLB access} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Use inlining } \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & float f(float x) \{\newline   return x * x;\newline \}\newline z = f(y);
+                    & z = y * y;" \\ \hline
+\end{tabular}
+
+\section{Branches optimizations}
+\label{sec:Branches_Optimizations}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R200}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Booleans to integer}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad branch instructions} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Express Boolean logic in form of integer computation} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & if ((a==0) \&\& (b==0) \&\& (c==0)) \newline \{\ldots\}
+                    & if ((a \textbar  b \textbar  c) == 0) \newline \{\ldots\} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R201}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Move loop into subroutine}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad branch instructions} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Move a loop around a subroutine call into the subroutine} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & f(x) \{\ldots x\ldots\};\newline loop i \{\newline   f(a[i]);\newline \}\newline
+                    & f(x[]) \{\newline   loop j \{\newline     \ldots x[j]\ldots\newline   \}\newline \};\newline f(a); \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R202}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Move loop invariant tests out of loop}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad branch instructions} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Move loop invariant tests out of loop} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & loop i \{\newline   if (x $<$ y)\newline     a[i] = x * b[i];\newline   else\newline     a[i] = y * b[i];\newline \}
+                    & if (x $<$ y) \{\newline   loop i \{\newline     a[i] = x * b[i];\newline   \}\newline \} else \{\newline   loop i \{\newline     a[i] = y * b[i];\newline   \}\newline \} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R203}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Remove IF}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad branch instructions} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Remove IF } \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & /* x is 0 or -1 */\newline if (x == 0)\newline   a = b;\newline else\newline   a = c;
+                    & a = (b \& ~x) \textbar  (c \& x); \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R204}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Most often used loops}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad branch instructions} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Special-case the most often used loop count(s)} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & for (i = 0; i $<$ n; i++)\newline \{\ldots\}
+                    & /* Suppose n=4 occurs most of the time*/\newline if (n == 4) \{\newline   for (i = 0; i $<$ 4; i++) \newline     \{\ldots\}\newline \} else \{\newline   for (i = 0; i $<$ n; i++) \newline     \{\ldots\}\newline \} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R205}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Unroll loops}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad branch instructions} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Unroll loops (more)} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & loop i \{\newline   a[i] = a[i] * b[i];\newline \}
+                    & loop i step 2 \{\newline   a[i] = a[i] * b[i];\newline   a[i+1] = a[i+1] * b[i+1];\newline \} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R206}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Conditional moves}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad branch instructions} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Use trivial assignments inside THEN/ELSE to allow the use of conditional moves } \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & if (x $<$ y)\newline   a = x + y;
+                    & temp = x + y;\newline if (x $<$ y)\newline   a = temp;  \\ \hline
+\end{tabular}
+
+\section{Floating Point Optimizations}
+\label{sec:Floating_Point_Optimizations}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R300}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Associativity}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad float point instructions (fast FP)\newline Bad float point instructions (slow FP)} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Eliminate floating-point operations through associativity} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & d[i] = a[i] * b[i] * c[i];\newline y[i] = x[i] * a[i] * b[i];
+                    & temp = a[i] * b[i];\newline d[i] = temp * c[i];\newline y[i] = x[i] * temp;  \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R301}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Distributivity}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad float point instructions (fast FP)\newline Bad float point instructions (slow FP)} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Eliminate floating-point operations through distributivity} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & d[i] = a[i] * b[i] + a[i] * c[i];
+                    & d[i] = a[i] * (b[i] + c[i]); \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R302}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Move loop invariant computations out}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad float point instructions (fast FP)\newline Bad float point instructions (slow FP)} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Move loop invariant computations out of loop} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & loop i \{\newline   x = x + a * b * c[i];\newline \}
+                    & temp = a * b;\newline loop i \{\newline   x = x + temp * c[i];\newline \} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R303}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Normalize after accumulations}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad float point instructions (slow FP)} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Accumulate and then normalize instead of normalizing each element} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & loop i \{\newline   x = x + a[i] / b;\newline \}
+                    & loop i \{\newline   x = x + a[i];\newline \}\newline x = x / b; \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R304}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Rework SQRT in conditions}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad float point instructions (slow FP)} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Compare squared values instead of computing the square root } \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & if (x $<$ sqrt(y))\newline \{\ldots\}
+                    & if ((x $<$ 0.0) \textbar \textbar  (x*x $<$ y))\newline \{\ldots\} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
+\textbf{R305}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Work with reciprocal}} \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad float point instructions (slow FP)} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Compute the reciprocal outside of loop and use multiplication inside the loop} \\ \hline
+Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
+                    & loop i \{\newline   a[i] = b[i] / c;\newline \}
+                    & cinv = 1.0 / c;\newline loop i \{\newline   a[i] = b[i] * cinv;\newline \} \\ \hline
+\end{tabular}
+

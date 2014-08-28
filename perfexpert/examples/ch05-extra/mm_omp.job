@@ -1,0 +1,20 @@
+#!/bin/bash 
+#SBATCH -J MyJob
+
+# job name 
+# output and error filename (%j stands to jobID) 
+#SBATCH -o MyJob.o%j  
+#SBATCH -e MyJob.e%j  
+
+# number of tasks requested
+#SBATCH -n 1         
+
+# queue (partition) -- normal, development, etc. 
+#SBATCH -p development 
+
+# run time (hh:mm:ss) - 0.5 hours 
+#SBATCH -t 00:30:00          
+
+# run the executable named my_program
+perfexpert -c 0.2 ./omp_mm
+
