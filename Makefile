@@ -2,7 +2,7 @@ defines = ""
 
 all_os = linux mac windows
 all_site = antwerpen brussel gent leuven
-all_doc = intro-HPC
+all_doc = intro-HPC perfexpert
 
 
 # http://stackoverflow.com/questions/18136918/how-to-get-current-directory-of-your-makefile
@@ -43,9 +43,9 @@ all:
 			cd $(ROOT_DIR)/$$doc ; \
 			for site in $(SITE) ; do \
 				jobname="$$doc-$$os-$$site" ; \
-				latexcommand="pdflatex -interaction nonstopmode -jobname $$jobname \"\def\is$$os{1}\def\is$$site{1}\input{HPC.tex}\" " ; \
+				latexcommand="pdflatex -interaction nonstopmode -jobname $$jobname \"\def\is$$os{1}\def\is$$site{1}\input{$$doc.tex}\" " ; \
 				$$latexcommand | grep -C 15 'Fatal error' && echo "$$jobname" failed, see log in $$doc/$$jobname.log && continue ; \
-			  makeglossaries $$jobname > /dev/null 2>&1 ; \
+				makeglossaries $$jobname > /dev/null 2>&1 ; \
 				$$latexcommand | grep -C 15 'Fatal error' && echo "$$jobname" failed, see log in $$doc/$$jobname.log && continue ; \
 				echo ./$$doc/$$jobname.pdf created ; \
 			done ; \
