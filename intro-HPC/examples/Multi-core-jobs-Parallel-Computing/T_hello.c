@@ -1,4 +1,8 @@
-
+/*
+ * VSC        : Flemish Supercomputing Centre
+ * Tutorial   : Introduction to HPC
+ * Description: Showcase of working with threads
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>

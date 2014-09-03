@@ -1,5 +1,9 @@
 #! /usr/bin/env python
-
+#
+# VSC        : Flemish Supercomputing Centre
+# Tutorial   : Introduction to HPC
+# Description: Write a bigger file to SCRATCH directory
+#
 import sys
 import random
 import datetime
@@ -8,9 +12,7 @@ import os
 
 start_time = int(time.time())
 
-#
 # PRIMES
-#
 def primes(top):
 	result = []
 	for n in range(2, top):
@@ -22,11 +24,9 @@ def primes(top):
 			result.append(n)
 	return result
 
-#
 # Generate a file in the $VSC_SCRATCH directory
-#
 #   in order to generate CPU- and disk-IO load, we will
-#   1) take a random integer between 1 and 2000 
+#   1) take a random integer between 1 and 2000
 #      and calculate all primes up to that limit
 #   2) and repeat this action 30000 times
 #   3) and write it to the "primes_1.txt" output file in the SCRATCH-directory

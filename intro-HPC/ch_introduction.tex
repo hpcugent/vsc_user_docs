@@ -39,10 +39,6 @@ crystals), and physical simulations (such as simulations of the early moments
 of the universe, airplane and spacecraft aerodynamics, the detonation of
 nuclear weapons, and nuclear fusion). \footnote{ $ Wikipedia$ }
 
-\includegraphics*[width=1.88in, height=1.26in, keepaspectratio=false]{ch1-cables1}
-\includegraphics*[width=1.88in, height=1.26in, keepaspectratio=false]{ch1-cables2}
-\includegraphics*[width=1.88in, height=1.26in, keepaspectratio=false]{ch1-cables3}
-
 \section{What is the \hpc?}
 \label{sec:what-is-the-hpc}
 
@@ -51,6 +47,10 @@ operating system, shaped in the form of lunch boxes and stored above and next
 to each other in racks, interconnected with fiber lines. Their number crunching
 power is (presently) measured in hundreds of billions of floating point
 operations (gigaflops) and even in Teraflops.
+
+\includegraphics*[width=1.88in, height=1.26in, keepaspectratio=false]{ch1-cables1}
+\includegraphics*[width=1.88in, height=1.26in, keepaspectratio=false]{ch1-cables2}
+\includegraphics*[width=1.88in, height=1.26in, keepaspectratio=false]{ch1-cables3}
 
 The \hpc relies on parallel-processing technology to offer \university researchers an
 extremely fast solution for all their data processing needs.
@@ -68,28 +68,28 @@ The \hpc consists of:
 
 The \hpc currently has:
 \ifantwerpen
-\begin{enumerate}
-  \item  64 compute nodes with 2 quad core Harpertown processors, 16 GB memory,
-         120 GB local disk, GbE network
-  \item  32 nodes with 2 quad core Harpertown processors, 16 GB memory,
-         120 GB local disk, DDR-IB network
-  \item  64 nodes with 2 six core Westmere processors, 24 GB memory,
-         120 GB local disk, QDR-IB network
-  \item  8 nodes with 2 six core Westmere processors, 24 GB memory,
-         120 GB local disk, GbE network
-\end{enumerate}
+  \begin{enumerate}
+    \item  64 compute nodes with 2 quad core Harpertown processors, 16 GB memory,
+           120 GB local disk, GbE network
+    \item  32 nodes with 2 quad core Harpertown processors, 16 GB memory,
+           120 GB local disk, DDR-IB network
+    \item  64 nodes with 2 six core Westmere processors, 24 GB memory,
+           120 GB local disk, QDR-IB network
+    \item  8 nodes with 2 six core Westmere processors, 24 GB memory,
+           120 GB local disk, GbE network
+  \end{enumerate}
 \fi
 \ifleuven
-    \begin{enumerate}
-      \item  112 compute nodes with 2 10-core Ivy Bridge processors, 64 GB memory,
-             300 GB local disk, QDR-IB network
-      \item  32 compute nodes with 2 10-core Ivy Bridge processors, 128 GB memory,
-             300 GB local disk, QDR-IB network
-      \item  8 nodes with 2 8-core Sandy Bridge processors, 64 GB memory,
-             300 GB local disk, DDR-IB network, 2 K20 NVIDIA GPGPUs
-      \item  8 nodes with 2 8-core Sandy Bridge processors, 64 GB memory,
-             300 GB local disk, DDR-IB network, 2 Intel Xeon Phis
-    \end{enumerate}
+  \begin{enumerate}
+    \item  112 compute nodes with 2 10-core Ivy Bridge processors, 64 GB memory,
+           300 GB local disk, QDR-IB network
+    \item  32 compute nodes with 2 10-core Ivy Bridge processors, 128 GB memory,
+           300 GB local disk, QDR-IB network
+    \item  8 nodes with 2 8-core Sandy Bridge processors, 64 GB memory,
+           300 GB local disk, DDR-IB network, 2 K20 NVIDIA GPGPUs
+    \item  8 nodes with 2 8-core Sandy Bridge processors, 64 GB memory,
+           300 GB local disk, DDR-IB network, 2 Intel Xeon Phis
+  \end{enumerate}
 \fi
 %TODO insert specs for other sites
 
@@ -219,19 +219,19 @@ NWChem, Quantum Espresso, R, Siesta, TURBOMOLE, WIEN2k,\ldots
 Commonly used Libraries are Intel MKL, FFTW, HDF5, PETSc and M(VA)PICH/OpenMPI.
 
 Additional software can be installed ``\emph{on demand}''. Please check the
-UA-HPC staff to see whether the UA-HPC can handle your specific requirements.
+\hpc staff to see whether the \hpc can handle your specific requirements.
 
 \subsection{What operating systems can I use?}
 \label{sec:what-operating-systems-can-i-use}
 
-All nodes in the UA-HPC cluster run under the ``Scientific Linux'' (SL)
+All nodes in the \hpc cluster run under the ``Scientific Linux'' (SL)
 Operating system, which is a specific version of RedHat-Linux. This means that
 all programs (executable) must be compiled for the SL Operating System.
 
-But a user can connect from any desk computer in the UA network to the UA-HPC,
+But a user can connect from any desk computer in the \university network to the \hpc,
 regardless of the Operating System that he is using at his personal computer.
 The user can use any of the common Operating Systems (such as Windows, OS X or
-any version of Linux/Unix/BSD) and run and control his programs on the UA-HPC.
+any version of Linux/Unix/BSD) and run and control his programs on the \hpc.
 
 A user does not need to have prior knowledge about Linux; all of the required
 knowledge is explained in this tutorial.
@@ -239,10 +239,10 @@ knowledge is explained in this tutorial.
 \subsection{What is the next step?}
 \label{sec:what-is-the-next-step}
 
-When you think that the UA-HPC is a useful tool to support your computational
+When you think that the \hpc is a useful tool to support your computational
 needs, we encourage you to acquire a VSC-account (as explained in
 \autoref{ch:getting-a-hpc-account}), read \autoref{ch:setting-up-the-environment}, "Setting up the
 environment", and explore Chapters 5 to 11 which will help you to transfer and
-run your programs on the UA-HPC cluster.
+run your programs on the \hpc cluster.
 
-Do not hesitate to contact the UA-HPC team members for any help.
+Do not hesitate to contact the \hpc team members for any help.

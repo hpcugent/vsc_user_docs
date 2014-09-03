@@ -1,3 +1,8 @@
+/*
+ * VSC        : Flemish Supercomputing Centre
+ * Tutorial   : Introduction to HPC
+ * Description: Write a big file in a temporary directory
+ */
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>

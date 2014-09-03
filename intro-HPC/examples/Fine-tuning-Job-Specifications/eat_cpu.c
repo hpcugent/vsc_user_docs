@@ -1,3 +1,8 @@
+/*
+ * VSC        : Flemish Supercomputing Centre
+ * Tutorial   : Introduction to HPC
+ * Description: Consume a lot of CPU by doing a matric multiplication
+ */
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>

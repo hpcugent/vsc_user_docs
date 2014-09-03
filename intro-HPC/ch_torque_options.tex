@@ -4,11 +4,11 @@
 
 Below is a list of the most common and useful directives.
 
-\begin{tabular}{|p{0.15\textwidth}|p{0.15\textwidth}|p{0.5\textwidth}|} \hline
+\begin{tabular}{|p{0.15\textwidth}|p{0.15\textwidth}|p{0.7\textwidth}|} \hline
 \strong{Option} & \strong{System type}  & \strong{Description} \\ \hline
 -k              & All                   & Send "stdout" and/or "stderr" to your home directory when the job runs\newline \strong{\#PBS -k o} or \strong{\#PBS -k e} or \strong{\#PBS -koe}  \\ \hline
 -l              & All                   & Precedes a resource request, e.g., processors, wallclock \\ \hline
--M              & All                   & Send an e-mail messages to an alternative e-mail address\newline \strong{\#PBS -M me@uantwerpen.be} \\ \hline
+-M              & All                   & Send an e-mail messages to an alternative e-mail address\newline \strong{\#PBS -M me@mymail.be} \\ \hline
 -m              & All                   & Send an e-mail address when a job \strong{b}egins execution and/or \strong{e}nds or \strong{a}borts\newline \strong{\#PBS -m b} \strong{\#PBS -m be} \strong{\#PBS -m ba} \\ \hline
 mem             & Shared\newline Memory & Specifies the amount of memory you need for a job.\newline \strong{\#PBS -l mem=80gb} \\ \hline
 mpiprocs        & Clusters              & Number of processes per node on a cluster. This should equal number of processors on a node in most cases.\newline \strong{\#PBS -l mpiprocs=4} \\ \hline

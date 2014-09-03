@@ -1,0 +1,108 @@
+\pagestyle{empty}
+
+\begin{center}
+
+\includegraphics*[width=8truecm]{logo_vsc}
+
+\vspace*{1.5\baselineskip}
+
+\Huge \strong{PerfExpert Tutorial} \\
+\LARGE version 1.0
+
+\vspace*{1.5\baselineskip}
+
+\includegraphics*[width=7truecm]{logo_tacc}
+
+\vspace*{0.75\baselineskip}
+\ifantwerpen
+\includegraphics*[width=7truecm]{logo_ua}
+\fi
+\vspace*{0.75\baselineskip}
+
+
+\normalsize\strong{Author:}
+
+Geert Borstlap
+
+\vspace*{.5\baselineskip}
+
+\strong{Written/contributions by: }
+
+James C.\ Browne, Leonardo Fialho
+
+\vspace*{.5\baselineskip}
+Acknowledgement: TACC-staff, Susan H.\ Mehringer
+
+\vspace*{\baselineskip}
+
+\ifvsc
+\begin{tabular}{ >{\centering\arraybackslash}m{0.25\textwidth}  >{\centering\arraybackslash}m{0.05\textwidth}  >{\centering\arraybackslash}m{0.20\textwidth}  >{\centering\arraybackslash}m{0.2\textwidth}} \\
+\includegraphics*[width=0.2\textwidth, height=0.7in, keepaspectratio=true]{logo_auha} & \multicolumn{2}{ >{\centering\arraybackslash}m{.2\textwidth} }{\includegraphics*[width=0.2\textwidth, height=0.7in,, keepaspectratio=true]{logo_akuleuven}} & \includegraphics*[width=0.2\textwidth, height=0.7in,, keepaspectratio=true]{logo_auhl} \\ 
+\multicolumn{2}{ >{\centering\arraybackslash}m{.32\textwidth} }{\includegraphics*[width=0.3\textwidth, height=0.7in, keepaspectratio=true]{logo_augent}} & \multicolumn{2}{ >{\centering\arraybackslash}m{.38\textwidth} }{\includegraphics*[width=0.3\textwidth, height=0.7in, keepaspectratio=false]{logo_uab}} \\ 
+\end{tabular}
+\fi
+
+\end{center}
+
+\strong{Audience:}
+
+This PerfExpert Tutorial is designed for \strong{HPC-Users} at the \strong{University of Texas}, the members of the\strong{ Flemish Supercomputing Center (VSC)}, being the \strong{University of Antwerp}, the \strong{University of Gent}, The \strong{Catholic University of Leuven}, the \strong{University of Brussels} and the \strong{University of Hasselt} and affiliated institutes who want to profile and optimize their applications.
+
+The audience may be completely unaware of the profiling and optimization concepts but must have some basic understanding of HPC programming.
+
+\strong{Contents:}
+
+This tutorial gives answers to the typical questions that a new PerfExpert user may have. The aim is to learn how to use PerfExpert.
+
+\begin{tabular}{|c|l|c|l} \hline
+\strong{Part} & \strong{Questions}                          & \strong{Chapter}  & \strong{Title}    \\ \hline
+Tutorial      & What's perfExpert?                          & \strong{1}        & Introduction      \\ \hline
+              & How to profile and interpret the report?    & \strong{2}        & Profiling         \\ \hline
+              & How shall I optimize my code?               & \strong{3}        & Optimization      \\ \hline
+              & But what about my complex parallel program? & \strong{4}        & Multi-core and Multi Node Profiling \\ \hline
+              & What can I do more?                         & \strong{5}        & Extra PerfExpert functionality \\ \hline
+\end{tabular}
+
+The \strong{Annexes} contains some useful reference guides.
+
+\begin{tabular}{|c|l|c|} \hline
+\strong{Part}   & \strong{Title}        & \strong{Chapter}  \\ \hline
+Annex           & PerfExpert Options    & \strong{6}        \\ \hline
+                & Optimization patterns & \strong{7}        \\ \hline
+\end{tabular}
+
+\strong{Notification:}
+
+In this tutorial specific actions dealing with the software are separated from the accompanying text:
+
+\begin{prompt}
+%\shellcmd{Actions}% (i.e., to be entered at a command line in your Terminal) in an exercise are preceded by a $ and printed in \strong{bold}. You'll find those actions in a grey frame.
+\end{prompt}
+
+\strong{`Directory'} is the notation for directories or specific files. (e.g., `~/examples/')
+\strong{``Text''} Is the notation for text to be entered.
+\strong{Tip:} A ``Tip'' paragraph is used for remarks or tips.
+\strong{More support:} \\
+
+Before starting the course, the example programs and configuration files used in this PerfExpert Tutorial must be copied to your own work directory.
+
+\iftacc
+The examples can also be downloaded from \url{https://portal.tacc.utexas.edu/user-services/training/} or copied from the training directory  `\emph{\tutorialdir/perfexpert/examples}' on Stampede to your home directory.
+\fi
+\ifvsc
+If you have received a new VSC account, all examples are present in the tutorials directory. In order to have your own local copy, copy the full directory to your home directory.
+\fi
+
+\begin{prompt}
+%\shellcmd{cp --r \tutorialdir/perfexpert/examples/ \tilde/}%
+\end{prompt}
+
+Apart from this Tutorial, the PerfExpert documentation on Texas Advanced Computing Center (TACC) website (\url{https://www.tacc.utexas.edu/perfexpert}) will serve as a reference for all PerfExpert operations.
+
+\strong{Tip:} The users are advised to get self-organized. There are only limited resources available at the TACC, which are best effort based. The user applications and own developed software remain solely the responsibility of the end-user.
+
+\strong{Contact Information:}
+
+For all technical questions, please join the PerfExpert mailing list or contact the TACC staff: perfexpert-subscribe@lists.tacc.utexas.edu
+
+We also welcome your feedback, comments and suggestions for improving the PerfExpert Tutorial via this mailing list.

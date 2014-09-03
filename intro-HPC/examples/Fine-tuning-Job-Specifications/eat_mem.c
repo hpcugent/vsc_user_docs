@@ -1,3 +1,8 @@
+/*
+ * VSC        : Flemish Supercomputing Centre
+ * Tutorial   : Introduction to HPC
+ * Description: Allocate and cConsume a given amount of memory
+ */
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>

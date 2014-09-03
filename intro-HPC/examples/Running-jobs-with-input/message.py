@@ -1,4 +1,9 @@
 #! /usr/bin/env python
+#
+# VSC        : Flemish Supercomputing Centre
+# Tutorial   : Introduction to HPC
+# Description: Showcase interaction between user and the HPC
+#
 import subprocess
 import sys
 
@@ -19,12 +24,10 @@ def print_cowsay(cowsay):
                             "
 	print cowtxt
 
-
 # X-Message
-#
 cmd = "xmessage -buttons yes:1,no:0 -center -timeout 60 \" Do you want to see a cow? \""
 ret = subprocess.call(cmd, shell=True)
 if ret == 1:
   print_cowsay("Enjoy the day! Mooh")
 else:
-  print_cowsay("Sorry, GET REAL! I am not a cow, I am a bunch of characters.")
+  print_cowsay("GET REAL! I am not a cow, I am a bunch of characters.")

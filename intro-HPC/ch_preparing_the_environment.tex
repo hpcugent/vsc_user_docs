@@ -48,7 +48,7 @@ To check on which login node you are connected:
 
 \begin{prompt}
 %\shellcmd{hostname -f}%
-%\loginnode%
+%\loginhost%
 \end{prompt}
 
 You can exit the connection at anytime by entering:
@@ -128,187 +128,182 @@ don't need to install any third-party software to use it. Just open a Terminal
 window and jump in!
 
 \ifwindows
+  \subsection{WinSCP}
 
-\subsection{WinSCP}
+  To transfer files to and from the cluster, we recommend the use of WinSCP,
+  which is a graphical ftp-style program (but than one that uses the ssh way of
+  communicating with the cluster rather then the less secure ftp) that is also
+  freely available. WinSCP can be downloaded both as an installation package and
+  as a standalone portable executable.
 
-To transfer files to and from the cluster, we recommend the use of WinSCP,
-which is a graphical ftp-style program (but than one that uses the ssh way of
-communicating with the cluster rather then the less secure ftp) that is also
-freely available. WinSCP can be downloaded both as an installation package and
-as a standalone portable executable.
+  Google ``WinSCP Download'' and download it from \url{http://www.winscp.net}
 
-Google ``WinSCP Download'' and download it from \url{http://www.winscp.net}
+  To transfer your files using WinSCP,
 
-To transfer your files using WinSCP,
+  \begin{enumerate}
+  \item  Open the program
+  \item  Fill in the necessary fields under $<$\emph{Session}$>$
+  \begin{enumerate}
+  \item  Press $<$\emph{New}$>$
+  \item  Enter ``\emph{\loginnode}'' in the $<$Host name$>$ field
+  \item  Put your ``\emph{vsc-account}'' in $<$\emph{User name}$>$ field
+  \item  Select your private key in the field $<$\emph{Private key file}$>$.
+  \item  Select $<$\emph{SFTP}$>$ as the $<$\emph{file}$>$ protocol.
+  \item  Note that the password field remains empty.
+  \end{enumerate}
+  \end{enumerate}
 
-\begin{enumerate}
-\item  Open the program
-\item  Fill in the necessary fields under $<$\emph{Session}$>$
-\begin{enumerate}
-\item  Press $<$\emph{New}$>$
-\item  Enter ``\emph{\loginnode}'' in the $<$Host name$>$ field
-\item  Put your ``\emph{vsc-account}'' in $<$\emph{User name}$>$ field
-\item  Select your private key in the field $<$\emph{Private key file}$>$.
-\item  Select $<$\emph{SFTP}$>$ as the $<$\emph{file}$>$ protocol.
-\item  Note that the password field remains empty.
-\end{enumerate}
-\end{enumerate}
+  \includegraphics*[width=3.42in, height=3.04in, keepaspectratio=false]{img0214}
 
-\includegraphics*[width=3.42in, height=3.04in, keepaspectratio=false]{img0214}
+  \begin{enumerate}
+  \item  By pressing on the $<$\emph{Save}$>$ button, you can save the session under $<$\emph{Stored sessions}$>$ for future access.
+  \item  Finally, when clicking on 'Login', you will be asked for your key passphrase.
+  \end{enumerate}
 
-\begin{enumerate}
-\item  By pressing on the $<$\emph{Save}$>$ button, you can save the session under $<$\emph{Stored sessions}$>$ for future access.
-\item  Finally, when clicking on 'Login', you will be asked for your key passphrase.
-\end{enumerate}
+  \includegraphics*[width=3.14in, height=2.47in, keepaspectratio=false]{img0215}
 
-\includegraphics*[width=3.14in, height=2.47in, keepaspectratio=false]{img0215}
+  The first time you make the connection, you will be asked to 'Continue
+  connecting and add host key to the cache'; select 'Yes'.
 
-The first time you make the connection, you will be asked to 'Continue
-connecting and add host key to the cache'; select 'Yes'.
+  \includegraphics*[width=5.74in, height=2.81in, keepaspectratio=false]{img0216}
 
-\includegraphics*[width=5.74in, height=2.81in, keepaspectratio=false]{img0216}
-
-Now, try out whether you can transfer an arbitrary file from your local machine to the HPC and back.
+  Now, try out whether you can transfer an arbitrary file from your local machine to the HPC and back.
 
 \fi
-\ifmac
 
-\subsection{Using scp}
+\ifmacORlinux
+  \subsection{Using scp}
 
-\strong{Secure copy} or \strong{SCP} is a tool (commando) for securely
-transferring files between a local host (= your computer) and a remote host
-(the UA-HPC). It is based on the Secure Shell (SSH) protocol.  The \strong{scp}
-command works equivalent `as the \strong{cp}  (i.e. \strong{c}o\strong{p}y)
-command, but can copy files to or from remote machines.
+  \strong{Secure copy} or \strong{SCP} is a tool (commando) for securely
+  transferring files between a local host (= your computer) and a remote host
+  (the \hpc). It is based on the Secure Shell (SSH) protocol.  The \strong{scp}
+  command works equivalent `as the \strong{cp}  (i.e. \strong{c}o\strong{p}y)
+  command, but can copy files to or from remote machines.
 
-Open a additional Terminal window in OS X, open the Finder and choose
+  Open a additional Terminal window and check that you're working on your local machine.
 
-\strong{\emph{$>$$>$ Applications $>$ Utilities $>$ Terminal}}
+  \begin{prompt}
+  %\shellcmd{hostname}%
+  <local-machine-name>
+  \end{prompt}
 
-Check that you're working on your local machine.
+  If you're still using the terminal that is connected to the \hpc, close the
+  connection by typing "exit" in the terminal window. Alternatively, open a new
+  terminal window using the shortcut $<$command$>$$<$N$>$.
 
-\begin{prompt}
-%\shellcmd{hostname}%
-<local-machine-name>
-\end{prompt}
+  For example, we will copy the (local) file ``\emph{localfile.txt}'' to your
+  home directory on the \hpc cluster. We first generate a small dummy
+  ``\emph{localfile.txt}'', which contains the word ``Hello''.  Use your own
+  $<$vsc-account$>$, which is something like ``\emph{\userid}''.
 
-If you're still using the terminal that is connected to the \hpc, close the
-connection by typing "exit" in the terminal window. Alternatively, open a new
-terminal window using the shortcut $<$command$>$$<$N$>$.
+  \begin{prompt}
+  %\shellcmd{echo "Hello" $>$ localfile.txt}%
+  %\shellcmd{ls -l}%
+  %\dots%
+  -rw-r--r-- 1 gborstlap  staff   6 Sep 18 09:37 localfile.txt
+  %\shellcmd{scp localfile.txt $<$vsc-account$>$@\loginnode:}%
+  localfile.txt    100%\%%   6     0.0KB/s   00:00
+  \end{prompt}
 
-For example, we will copy the (local) file ``\emph{localfile.txt}'' to your
-home directory on the \hpc cluster. We first generate a small dummy
-``\emph{localfile.txt}'', which contains the word ``Hello''.  Use your own
-$<$vsc-account$>$, which is something like ``\emph{\userid}''.
+  Connect to the \hpc via another terminal, print the working directory (to make
+  sure you're in the home-directory) and check whether the file has arrived:
 
-\begin{prompt}
-%\shellcmd{echo "Hello" $>$ localfile.txt}%
-%\shellcmd{ls -l}%
-%\dots%
--rw-r--r-- 1 gborstlap  staff   6 Sep 18 09:37 localfile.txt
-%\shellcmd{scp localfile.txt $<$vsc-account$>$@\loginnode:}%
-localfile.txt    100%\%%   6     0.0KB/s   00:00
-\end{prompt}
+  \begin{prompt}
+  %\shellcmd{pwd}%
+  %\homedir%
+  %\shellcmd{ls -l}%
+  total 1536
+  drwxrwxr-x  2 %\userid% 131072 Sep 11 16:24 bin/
+  drwxrwxr-x  2 %\userid% 131072 Sep 17 11:47 docs/
+  drwxrwxr-x 10 %\userid% 131072 Sep 17 11:48 examples/
+  -rw-r--r--  1 %\userid%      6 Sep 18 09:44 localfile.txt
+  %\shellcmd{cat localfile.txt}%
+  Hello
+  \end{prompt}
 
-Connect to the \hpc via another terminal, print the working directory (to make
-sure you're in the home-directory) and check whether the file has arrived:
+  % TODO: rename files to intro-HPC
+  Likewise, to copy the remote file ``intro-HPC.pdf'' from your ``docs''
+  sub-directory on the cluster to your local computer, try:
 
-\begin{prompt}
-%\shellcmd{pwd}%
-%\homedir%
-%\shellcmd{ls -l}%
-total 1536
-drwxrwxr-x  2 %\userid% 131072 Sep 11 16:24 bin/
-drwxrwxr-x  2 %\userid% 131072 Sep 17 11:47 docs/
-drwxrwxr-x 10 %\userid% 131072 Sep 17 11:48 examples/
--rw-r--r--  1 %\userid%      6 Sep 18 09:44 localfile.txt
-%\shellcmd{cat localfile.txt}%
-Hello
-\end{prompt}
+  On the Terminal on the \hpc, enter:
 
-% TODO: rename files to intro-HPC
-Likewise, to copy the remote file ``intro-HPC.pdf'' from your ``docs''
-sub-directory on the cluster to your local computer, try:
+  \begin{prompt}
+  %\captureshellcmd{cd ~/docs}%
+  %\homedir%/docs
+  %\captureshellcmd{ls -l}%
+  total 1536
+  -rw-r--r-- 1 %\userid% Sep 11 09:53 intro-HPC.pdf
+  \end{prompt}
 
-On the Terminal on the \hpc, enter:
+  On the Terminal on your own local computer, enter:
 
-\begin{prompt}
-%\captureshellcmd{cd ~/docs}%
-%\homedir%/docs
-%\captureshellcmd{ls -l}%
-total 1536
--rw-r--r-- 1 %\userid% Sep 11 09:53 intro-HPC.pdf
-\end{prompt}
+  \begin{prompt}
+  %\shellcmd{scp \userid{}@\loginnode:./docs/intro-HPC.pdf .}%
+  intro-HPC.pdf 100%\%%  725KB 724.6KB/s   00:01
+  %\shellcmd{ls -l}%
+  total  899
+  -rw-r--r--   1 gborstlap  staff     413 Sep 10 10:29 id_rsa.pub
+  -rw-r--r--   1 gborstlap  staff  741995 Sep 18 09:53 intro-HPC.pdf
+  -rw-r--r--   1 gborstlap  staff       6 Sep 18 09:37 localfile.txt
+  \end{prompt}
 
-On the Terminal on your own local computer, enter:
+  \subsection{Using sftp}
 
-\begin{prompt}
-%\shellcmd{scp \userid{}@\loginnode:./docs/intro-HPC.pdf .}%
-intro-HPC.pdf 100%\%%  725KB 724.6KB/s   00:01
-%\shellcmd{ls -l}%
-total  899
--rw-r--r--   1 gborstlap  staff     413 Sep 10 10:29 id_rsa.pub
--rw-r--r--   1 gborstlap  staff  741995 Sep 18 09:53 intro-HPC.pdf
--rw-r--r--   1 gborstlap  staff       6 Sep 18 09:37 localfile.txt
-\end{prompt}
+  The \strong{SSH File Transfer Protocol} (also \strong{Secure File Transfer
+  Protocol}, or \strong{SFTP}) is a network protocol that provides file access,
+  file transfer and file management functionalities over any reliable data
+  stream. It was designed as an extension of the Secure Shell protocol (SSH)
+  version 2.0. This protocol assumes that it is run over a secure channel, such
+  as SSH, that the server has already authenticated the client, and that the
+  identity of the client user is available to the protocol.
 
-\subsection{Using sftp}
+  The sftp is an equivalent of the ftp command, with the difference that it uses
+  the secure ssh protocol to connect to the clusters.
 
-The \strong{SSH File Transfer Protocol} (also \strong{Secure File Transfer
-Protocol}, or \strong{SFTP}) is a network protocol that provides file access,
-file transfer and file management functionalities over any reliable data
-stream. It was designed as an extension of the Secure Shell protocol (SSH)
-version 2.0. This protocol assumes that it is run over a secure channel, such
-as SSH, that the server has already authenticated the client, and that the
-identity of the client user is available to the protocol.
+  One easy way of starting a sftp session is
+  \begin{prompt}
+  %\shellcmd{sftp $<$vsc-account$>$@$<$vsc-login node$>$}%
+  \end{prompt}
 
-The sftp is an equivalent of the ftp command, with the difference that it uses
-the secure ssh protocol to connect to the clusters.
+  Typical and popular commando's inside an sftp session are:
 
-One easy way of starting a sftp session is
-\begin{prompt}
-%\shellcmd{sftp $<$vsc-account$>$@$<$vsc-login node$>$}%
-\end{prompt}
+  \begin{tabular}{|p{0.3\textwidth}|p{0.6\textwidth}|} \hline
+  \strong{cd \tilde/examples/fibo} & Move to the examples/fibo subdirectory on the \hpc (i.e. the remote machine)\\  \hline
+  \strong{ls}                      & Get a list of the files in the current directory on the \hpc. \\ \hline
+  \strong{get fibo.py}             & Copy the file `fibo.py' from the \hpc \\ \hline
+  \strong{get tutorial/HPC.pdf}    & Copy the file `HPC.pdf' from the \hpc, which is in the `tutorial' subdirectory. \\ \hline
+  \strong{lcd test}                & Move to the `test' subdirectory on your local machine. \\ \hline
+  \strong{lcd ..}                  & Move up one level in the local directory. \\ \hline
+  \strong{lls}                     & Get local directory listing \\ \hline
+  \strong{put test.py}             & Copy the local file test.py to the \hpc. \\ \hline
+  \strong{put test1.py test2.py }  & Copy the local file test1.py to the \hpc and rename it to test2.py. \\ \hline
+  \strong{bye}                     & Quit the sftp session \\ \hline
+  \strong{mget *.cc}               & Copy all the remote files with extension ``.cc'' to the local directory.  \\ \hline
+  \strong{mput *.h}                & Copy all he local files with extension ``.h'' to the \hpc. \\ \hline
+  \end{tabular}
 
-Typical and popular commando's inside an sftp session are:
+  \subsection{Using FileZilla}
 
-\begin{tabular}{|p{0.3\textwidth}|p{0.6\textwidth}|} \hline
-\strong{cd \tilde/examples/fibo} & Move to the examples/fibo subdirectory on the \hpc (i.e. the remote machine)\\  \hline
-\strong{ls}                      & Get a list of the files in the current directory on the \hpc. \\ \hline
-\strong{get fibo.py}             & Copy the file `fibo.py' from the \hpc \\ \hline
-\strong{get tutorial/HPC.pdf}    & Copy the file `HPC.pdf' from the \hpc, which is in the `tutorial' subdirectory. \\ \hline
-\strong{lcd test}                & Move to the `test' subdirectory on your local machine. \\ \hline
-\strong{lcd ..}                  & Move up one level in the local directory. \\ \hline
-\strong{lls}                     & Get local directory listing \\ \hline
-\strong{put test.py}             & Copy the local file test.py to the \hpc. \\ \hline
-\strong{put test1.py test2.py }  & Copy the local file test1.py to the \hpc and rename it to test2.py. \\ \hline
-\strong{bye}                     & Quit the sftp session \\ \hline
-\strong{mget *.cc}               & Copy all the remote files with extension ``.cc'' to the local directory.  \\ \hline
-\strong{mput *.h}                & Copy all he local files with extension ``.h'' to the \hpc. \\ \hline
-\end{tabular}
+  If you orefer a GUI to transfer files back and forth to the \hpc, we can
+  suggest to use FileZilla. FileZilla is a fast and free FTP and SFTP client,
+  which is widely used.
 
-\subsection{Using FileZilla}
+  Download and install FileZilla client at:
 
-If you orefer a GUI to transfer files back and forth to the \hpc, we can
-suggest to use FileZilla. FileZilla is a fast and free FTP and SFTP client,
-which is widely used.
+  \url{https://filezilla-project.org/download.php}
 
-Download and install FileZilla client at:
+  Tip: Some users might get the notification that Filezilla.app cannot be opened
+  because it is from an unidentified developer. Check out the Mac Gatekeeper at
+  \url{http://support.apple.com/kb/HT5290}
 
-\url{https://filezilla-project.org/download.php}
+  Start FileZilla and login to the \hpc with the following details:
 
-Tip: Some users might get the notification that Filezilla.app cannot be opened
-because it is from an unidentified developer. Check out the Mac Gatekeeper at
-\url{http://support.apple.com/kb/HT5290}
+  \begin{enumerate}
+  \item  Host: sftp://\loginnode
+  \item  Username:  $<$your vsc-username$>$
+  \end{enumerate}
 
-Start FileZilla and login to the \hpc with the following details:
-
-\begin{enumerate}
-\item  Host: sftp://\loginnode
-\item  Username:  $<$your vsc-username$>$
-\end{enumerate}
-
-\includegraphics*[width=4.75in, height=4.19in, keepaspectratio=false]{img0300}
+  \includegraphics*[width=4.75in, height=4.19in, keepaspectratio=false]{img0300}
 \fi
 
 \section{Modules}
@@ -357,12 +352,11 @@ In order to administer the active software and their environment variables, a
 \item  Activates or de-activates \underbar{software packages} and their dependencies.
 \item  Allows setting and unsetting of \underbar{environment variables}, including adding and deleting entries from database-type environment variables.
 \item  Does this in a \underbar{shell-independent} fashion (necessary information is stored in the accompanying module configuration file).
-\item  Takes care of\underbar{versioning aspects:} For many libraries, multiple versions are installed and maintained. The module system also takes care of the versioning of software packages in case multiple versions are installed. For instance, it?does not allow multiple versions to be loaded at same time.
-\item  Takes care of\underbar{dependencies:} Another issue arises when one considers library versions and the dependencies they create. Some software requires an older version of a particular library to run correctly (or at all). Hence a variety of version numbers is available for important libraries.
+\item  Takes care of \underbar{versioning aspects:} For many libraries, multiple versions are installed and maintained. The module system also takes care of the versioning of software packages in case multiple versions are installed. For instance, it?does not allow multiple versions to be loaded at same time.
+\item  Takes care of \underbar{dependencies:} Another issue arises when one considers library versions and the dependencies they create. Some software requires an older version of a particular library to run correctly (or at all). Hence a variety of version numbers is available for important libraries.
 \end{enumerate}
 
-This is all managed with the ``\emph{module}'' command, which is explained in
-the next sections.
+This is all managed with the ``\emph{module}'' command, which is explained in the next sections.
 
 \subsection{Available modules}
 
@@ -521,17 +515,17 @@ variables will be changed by a certain module, try:
 
 % TODO: this probably needs to be site-specific, or not shown as it seems a bit advanced and out of place
 \begin{prompt}
-%\shellcmd{module show Molpro}%
------------------------
-/apps/local/turing/harpertown/modules/Molpro/2010.1-ga-4.3.2-TCGMSG-MPI-ictce-3.2.2.u2:
-module-whatis Molpro is a complete system for molecular electronic structure calculations - Homepage: http://www.molpro.net/
-conflict  Molpro
-module  load ictce/3.2.2.u2
-prepend-path  PATH  /apps/local/turing/harpertown/software/Molpro/2010.1-ga-4.3.2-TCGMSG-MPI-ictce-3.2.2.u2/bin
-setenv     SOFTROOTMOLPRO /apps/local/turing/harpertown/
-software/Molpro/2010.1-ga-4.3.2-TCGMSG-MPI-ictce-3.2.2.u2
-setenv   SOFTVERSIONMOLPRO 2010.1
------------------------
+%\shellcmd{module show scripts}%
+-------------------------------------------------------------------
+/apps/\site/\hpcname/modules/all/scripts/2.6.0:
+
+module-whatis  A collection of scripts to ease cluster usage. - Homepage: https://appel.ugent.be/userwiki/index.php/Main_Page 
+conflict       scripts 
+prepend-path   PATH /apps/\site/\hpcname/software/scripts/2.6.0/bin 
+prepend-path   PATH /apps/\site/\hpcname/software/scripts/2.6.0/bin/fake 
+setenv         SOFTROOTSCRIPTS /apps/\site/\hpcname/software/scripts/2.6.0 
+setenv         SOFTVERSIONSCRIPTS 2.6.0 
+-------------------------------------------------------------------
 \end{prompt}
 
 To get a list of all possible commands, type:
