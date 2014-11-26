@@ -18,6 +18,8 @@
 \usepackage{xstring}
 \usepackage{verbatim}
 \usepackage{courier}
+\usepackage{xparse}
+\usepackage{menukeys}
 \renewcommand{\ttdefault}{pcr}
 
 \setlength{\hoffset}{-1in}
@@ -140,6 +142,17 @@
   \StrSubstitute{#1}{ }{-}[\x]
   \StrSubstitute{\x}{/}{-}[\Chaptername]
   \Chaptermark{#1}}
+
+
+\ExplSyntaxOn
+    \NewDocumentEnvironment{tip} { o }
+     {
+      \par\noindent
+      \IfNoValueTF{#1} { \textbf{Tip:~} }{ \textbf{Tip:~#1:~} }
+       \ignorespaces
+     }
+     {}
+\ExplSyntaxOff
 
 
 \parindent=0pt

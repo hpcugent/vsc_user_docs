@@ -1,4 +1,5 @@
 \chapter{Multi-job submission}
+\label{ch:multi-job-submission}
 
 A frequent occurring characteristic of scientific computation is their focus on
 data intensive processing. A typical example is the iterative evaluation of a
@@ -40,9 +41,9 @@ aggregation, i.e., it has to be run once for each instance of the parameter
 values.
 
 However, the Worker Framework's scope is wider: it can be used for any scenario
-that can be reduced to a \strong{MapReduce} approach.\footnote{ MapReduce :
+that can be reduced to a \strong{MapReduce} approach.\footnote{MapReduce:
 `Map' refers to the map pattern in which every item in a collection is mapped
-onto a new value by applying a given function, while `reduce' refers to the
+onto a new value by applying a given function, while ``reduce'' refers to the
 reduction pattern which condenses or reduces a collection of previously
 computed results to a single value.}
 
@@ -87,7 +88,7 @@ However, the user wants to run this program for many parameter instances, e.g.,
 he wants to run the program on 100 instances of temperature, pressure and
 volume.  The 100 parameter instances can be stored in a comma separated value
 file (.csv) that can be generated using a spreadsheet program such as Microsoft
-Excel, and RDBMS or just by hand using any text editor (do \strong{not} use a
+Excel or RDBMS or just by hand using any text editor (do \strong{not} use a
 word processor such as Microsoft Word). The first few lines of the file
 ``\emph{data.csv}'' would look like:
 
@@ -122,8 +123,8 @@ Note that:
 \end{enumerate}
 
 The walltime is calculated as follows: one calculation takes 15 minutes, so 100
-calculations take 1,500 minutes on one CPU. However, this job will use 8 CPUs,
-so the 100 calculations will be done in 1,500/8 = 187,5 minutes, i.e., 4 hours
+calculations take 1500 minutes on one CPU. However, this job will use 8 CPUs,
+so the 100 calculations will be done in 1500/8 = 187.5 minutes, i.e., 4 hours
 to be on the safe side.
 
 The job can now be submitted as follows:
@@ -140,6 +141,12 @@ all computations are done. A computation for such a parameter instance is
 called a work item in Worker parlance.
 
 \section{The Worker framework: Job arrays}
+
+First go to the right directory:
+
+\begin{prompt}
+%\shellcmd{cd ~/\exampledir/job\_array}%
+\end{prompt}
 
 As a simple example, assume you have a serial program called \emph{myprog} that you
 want to run on various input files \textit{input[1-100]}.
@@ -169,8 +176,8 @@ array, where \emph{range} is a range of numbers (e.g., \emph{1-100} or
 The details are
 
 \begin{enumerate}
-\item  a job is submitted for each \emph{number} in the range,
-\item  individuals jobs are referenced as \emph{jobid-number}, and the entire array can be referenced as \emph{jobid} for easy killing etc., and
+\item  a job is submitted for each \emph{number} in the range;
+\item  individuals jobs are referenced as \emph{jobid-number}, and the entire array can be referenced as \emph{jobid} for easy killing etc.; and
 \item  each jobs has \emph{PBS\_ARRAYID} set to its \emph{number} which allows the script/program to specialize for that job
 \end{enumerate}
 
@@ -182,7 +189,7 @@ The job could have been submitted using:
 The effect was that rather than 1 job, the user would actually submit 100 jobs
 to the queue system. This was a popular feature of TORQUE, but as this
 technique puts quite a burden on the scheduler, it is not supported by Moab
-(the current job scheduler) anymore.
+(the current job scheduler).
 
 To support those users who used the feature and since it offers a convenient
 workflow, the ``worker framework'' implements the idea of ``job arrays'' in its
@@ -284,8 +291,8 @@ executes the prologue and epilogue.
 %\shellcmd{cd ~/\exampledir/map\_reduce}%
 \end{prompt}
 
-The script 'pre.sh' prepares the data by creating 100 different input-files,
-and the script 'post.sh' aggregates (concatenates) the data.
+The script ``pre.sh'' prepares the data by creating 100 different input-files,
+and the script ``post.sh'' aggregates (concatenates) the data.
 
 
 First study the scripts:
@@ -329,14 +336,14 @@ Since a Worker job will typically run for several hours, it may be reassuring
 to monitor its progress. Worker keeps a log of its activity in the directory
 where the job was submitted. The log's name is derived from the job's name and
 the job's ID, i.e., it has the form $<$jobname$>$.log$<$jobid$>$. For the
-running example, this could be 'run.pbs.log\jobnumber', assuming the job's ID is
+running example, this could be ``run.pbs.log\jobnumber'', assuming the job's ID is
 \jobnumber. To keep an eye on the progress, one can use:
 
 \begin{prompt}
 %\shellcmd{tail -f run.pbs.log\jobnumber}%
 \end{prompt}
 
-Alternatively, a Worker command that summarizes a log file can be used:
+Alternatively, ``wsummarize'', a Worker command that summarizes a log file, can be used:
 \begin{prompt}
 %\shellcmd{watch -n 60 wsummarize run.pbs.log\jobnumber}%
 \end{prompt}
@@ -366,7 +373,7 @@ Note that it is trivial to set individual time constraints for work items by
 introducing a parameter, and including the values of the latter in the CSV
 file, along with those for the temperature, pressure and volume.
 
-Also note that 'timedrun' is in fact offered in a module of its own, so it can
+Also note that ``timedrun'' is in fact offered in a module of its own, so it can
 be used outside the Worker framework as well.
 
 \subsection{Resuming a Worker job}
@@ -376,7 +383,7 @@ consequently, sometimes the latter is underestimated. When using the Worker
 framework, this implies that not all work items will have been processed.
 Worker makes it very easy to resume such a job without having to figure out
 which work items did complete successfully, and which remain to be computed.
-Suppose the job that did not complete all its work items had ID '445948'.
+Suppose the job that did not complete all its work items had ID ``445948''.
 
 \begin{prompt}
 %\shellcmd{wresume -jobid \jobnumber}%
@@ -403,7 +410,7 @@ reporting a failure. It is also possible to retry work items that failed
 \end{prompt}
 
 By default, a job's prologue is not executed when it is resumed, while its
-epilogue is. 'wresume' has options to modify this default behavior.
+epilogue is. ``wresume'' has options to modify this default behavior.
 
 \subsection{Further information}
 

@@ -1,17 +1,18 @@
 \chapter{Fine-tuning Job Specifications}
+\label{ch:fine-tuning-job-specifications}
 
 As \hpc systemadministrators, we often observe that the \hpc resources are
 not optimally (or wisely) used. For example, we regularly notice that several
 cores on a computing node are not utilized, due to the fact that one sequential
 program uses only one core on the node. Or users run I/O intensive applications
-on nodes with `slow' network connections.
+on nodes with ``slow'' network connections.
 
 Users often tend to run their jobs without specifying specific PBS Job
 parameters.  As such, their job will automatically use the default parameters,
 which are not necessarily (or rarely) the optimal ones.  This can slow down the
 runtime of your application, but also block \hpc resources for other users.
 
-Specifying the `optimal' Job Parameters requires some knowledge of your
+Specifying the ``optimal'' Job Parameters requires some knowledge of your
 application (e.g., how many parallel threads does my application uses, is there
 a lot of inter-process communication, how much memory does my application need)
 and also some knowledge about the \hpc infrastructure (e.g., what kind of
@@ -79,7 +80,7 @@ of an application. Of course, a margin of 10\% to 20\% can be taken to be on
 the safe side.
 
 It is also wise to check the walltime on different compute nodes or to select
-the ''slowest'' compute node for your walltime tests. Your estimate should
+the ``slowest'' compute node for your walltime tests. Your estimate should
 appropriate in case your application will run on the ``slowest'' (oldest)
 compute nodes.
 
@@ -104,14 +105,14 @@ amount of memory an application will use during execution is often non-trivial,
 especially when one uses third-party software.
 
 The ``eat\_mem'' application just consumes and then releases memory, for the
-purpose of this test. It has one parameter, the amount of Gigabits of memory
+purpose of this test. It has one parameter, the amount of gigabytes of memory
 which needs to be allocated.
 
-First compile the program on your machine and then test it for 1 Gb:
+First compile the program on your machine and then test it for 1 GB:
 \begin{prompt}
 %\shellcmd{gcc -o eat\_mem eat\_mem.c}%
 %\shellcmd{./eat\_mem 1}%
-Consuming 1 Gigabit of memory.
+Consuming 1 gigabyte of memory.
 \end{prompt}
 
 
@@ -133,10 +134,10 @@ Total:          32052   8957  23094
 \end{prompt}
 
 Important is to note the total amount of memory available in the machine (i.e.,
-16Gb in this example) and the amount of used and free memory (i.e. 4,7 Gb is
-used and another 11,2 Gb is free here).
+16 GB in this example) and the amount of used and free memory (i.e., 4.7 GB is
+used and another 11.2 GB is free here).
 
-It is not a good practice to use Swap-space for your computational
+It is not a good practice to use swap-space for your computational
 applications. A lot of ``swapping'' can increase the execution time of your
 application tremendously.
 
@@ -162,7 +163,7 @@ Starting a program to monitor is very straightforward; you just add the
 \begin{prompt}
 %\shellcmd{monitor ./eat\_mem 3}%
 time (s) size (kb) %\%%mem %\%%cpu
-Consuming 3 Gigabit of memory.
+Consuming 3 gigabyte of memory.
 5  252900 1.4 0.6
 10  498592 2.9 0.3
 15  743256 4.4 0.3
@@ -187,15 +188,15 @@ Whereby:
 \item  The first column shows you the elapsed time in seconds. By default, all
   values will be displayed every 5 seconds.
 \item  The second column shows you the used memory in kb. We note that the
-  memory slowly increases up to 3 Gb (=  kb), and is released again.
+  memory slowly increases up to 3 GB (= 3072 KB), and is released again.
 \item  The third column shows the memory utilization, expressed in percentages
-  of the full available memory.  At full memory consumption, 19,2\% of the
+  of the full available memory.  At full memory consumption, 19.2\% of the
   memory was being used by our application. With the \emph{``free''} command,
-  we have previously seen that we had a node of 16Gb in this example. 3Gb is
-  indeed more or less 19,2\% of the full available memory.
+  we have previously seen that we had a node of 16 GB in this example. 3 GB is
+  indeed more or less 19.2\% of the full available memory.
 \item  The fourth column shows you the CPU utilization, expressed in
   percentages of a full CPU load. As there are no computations done in our
-  exercise, the value remains very low (i.e. 0.2\%).
+  exercise, the value remains very low (i.e., 0.2\%).
 \end{enumerate}
 
 Monitor will write the CPU usage and memory consumption of simulation to standard error.
@@ -206,7 +207,7 @@ convenient to use a log file. The latter can be specified as follows:
 
 \begin{prompt}
 %\shellcmd{monitor -l test1.log eat\_mem 2}%
-Consuming 2 Gigabit of memory.
+Consuming 2 gigabyte of memory.
 %\shellcmd{cat test1.log}%
 \end{prompt}
 
@@ -217,7 +218,7 @@ cover a minute:
 
 \begin{prompt}
 %\shellcmd{monitor -l test2.log -n 12 eat\_mem 4}%
-Consuming 4 Gigabit of memory.
+Consuming 4 gigabyte of memory.
 \end{prompt}
 
 Note that this option is only available when monitor writes its metrics to a
@@ -228,7 +229,7 @@ specifying delta, the sample rate:
 
 \begin{prompt}
 %\shellcmd{monitor -d 1 ./eat\_mem}%
-Consuming 3 Gigabit of memory.
+Consuming 3 gigabyte of memory.
 \end{prompt}
 
 Monitor will now print the program's metrics every second. Note that the
@@ -287,7 +288,6 @@ or on the command line
 %\shellcmd{qsub -l pmem=2gb}%
 \end{prompt}
 
-In this example, you request 8Gb of memory in total on the node.
 
 \section{Specifying processors requirements}
 
@@ -351,7 +351,7 @@ or with equivalent parameters on the command line
 %\shellcmd{qsub -l nodes=N:ppn=M}%
 \end{prompt}
 
-In this example, you request 8Gb of memory in total on the node.
+In this example, you request 8 GB of memory in total on the node.
 
 This specifies the number of nodes (nodes=N) and the number of processors per
 node (ppn=M) that the job should use. PBS treats a processor core as a
@@ -364,7 +364,7 @@ time.
 \subsection{Monitoring the CPU-utilization}
 
 The previously used ``monitor'' tool also shows the overall CPU-load. The
-``eat\_cpu'' program performs a multiplication of 2 randomly filled a 1500x1500
+``eat\_cpu'' program performs a multiplication of 2 randomly filled a $1500 \times 1500$
 matrices and is just written to consumes a lot of ``\emph{cpu}''.
 
 We first load the monitor modules, study the ``eat\_cpu.c'' program and compile it:
@@ -393,13 +393,13 @@ We notice that it the program keeps its CPU nicely busy at 100\%.
 Some processes spawn one or more sub-processes. In that case, the metrics shown
 by monitor are aggregated over the process and all of its sub-processes
 (recursively). The reported CPU usage is the sum of all these processes, and
-can thus exceed 100 \%.
+can thus exceed 100\%.
 
 Some (well, since this is a \hpc Cluster, we hope most) programs use more
 than one core to perform their computations. Hence, it should not come as a
-surprise that the CPU usage is reported as larger than 100 \%. When programs of
-this type are running on a computer with n cores, the CPU usage can go up to n
-x 100 \%.
+surprise that the CPU usage is reported as larger than 100\%. When programs of
+this type are running on a computer with n cores, the CPU usage can go up to $\text{n}
+\times 100\%$.
 
 This could also be monitored with the \strong{\emph{htop}} command:
 \begin{prompt}
@@ -430,7 +430,7 @@ understanding your overall CPU usage pattern.
 It is good practice to perform a number of runtime stress tests, and to check
 the CPU utilization of your nodes. We (and all other users of the \hpc) would
 appreciate that you use the maximum of the CPU resources that are assigned to
-you and make sure that there are no CPU's in your node who are not utilized
+you and make sure that there are no CPUs in your node who are not utilized
 without reasons.
 
 But how can you maximize?
@@ -439,7 +439,7 @@ But how can you maximize?
 \item  Configure your software. (e.g., to exactly use the available amount of processors in a node)
 \item  Develop your parallel program in a smart way.
 \item  Demand a specific type of compute node (e.g., Harpertown, Westmere), which have a specific number of cores.
-\item  Correct your request for CPU's in your job-script.
+\item  Correct your request for CPUs in your job-script.
 \end{enumerate}
 
 \section{The system load}
@@ -470,7 +470,7 @@ CPUs are always busy and, yet, no process ever waits for one, is \strong{the
 average matching the number of CPUs}.  Your load should not exceed the number
 of cores available.  E.g., if there are four CPUs on a machine and the reported
 one-minute load average is 4.00, the machine has been utilizing its processors
-perfectly for the last 60 seconds. The "100\% utilization" mark is 1.0 on a
+perfectly for the last 60 seconds. The ``100\% utilization'' mark is 1.0 on a
 single-core system, 2.0 on a dual-core, 4.0 on a quad-core, etc. The optimal
 load shall be between 0.7 and 1.0 per processor.
 
@@ -491,8 +491,8 @@ same time depends on the type of the applications that you are running.
 \begin{enumerate}
 \item  When you are running \strong{computational intensive applications}, one
   application per processor will generate the optimal load.
-\item  For \strong{IO intensive applications} (e.g., applications with perform
-  a lot of disk-IO), a higher number of applications can generate the optimal
+\item  For \strong{I/O intensive applications} (e.g., applications which perform
+  a lot of disk-I/O), a higher number of applications can generate the optimal
   load. While some applications are reading or writing data on disks, the
   processors can serve other applications.
 \end{enumerate}
@@ -537,7 +537,7 @@ You can also read it in the \strong{htop} command.
 It is good practice to perform a number of runtime stress tests, and to check
 the system load of your nodes. We (and all other users of the \hpc) would
 appreciate that you use the maximum of the CPU resources that are assigned to
-you and make sure that there are no CPU's in your node who are not utilized
+you and make sure that there are no CPUs in your node who are not utilized
 without reasons.
 
 But how can you maximize?
@@ -547,12 +547,12 @@ But how can you maximize?
 \item  Configure your software (e.g., to exactly use the available amount of processors in a node).
 \item  Develop your parallel program in a smart way, so that it fully utilizes the available processors.
 \item  Demand a specific type of compute node (e.g., Harpertown, Westmere), which have a specific number of cores.
-\item  Correct your request for CPU's in your job-script.
+\item  Correct your request for CPUs in your job-script.
 \end{enumerate}
 
 And then check again.
 
-\section{Checking File sizes \& Disk IO}
+\section{Checking File sizes \& Disk I/O}
 
 \subsection{Monitoring File sizes during execution}
 
@@ -560,8 +560,8 @@ Some programs generate intermediate or output files, the size of which may also
 be a useful metric.
 
 Remember that your available disk space on the \hpc online storage is limited,
-and that you 3 environment variables which point to these directories available
-(i.e. \emph{\$VSC\_DATA}, \emph{\$VSC\_SCRATCH} and \emph{\$VSC\_DATA}).
+and that you have environment variables which point to these directories available
+(i.e., \emph{\$VSC\_DATA}, \emph{\$VSC\_SCRATCH} and \emph{\$VSC\_DATA}).
 On top of those, you can also access some temporary storage (i.e., the /tmp
 directory) on the compute node, which is defined by the
 \emph{\$VSC\_SCRATCH\_LOCAL} environment variable.
@@ -590,13 +590,13 @@ time (s) size (kb) %\%%mem %\%%cpu
 %\dots%
 \end{prompt}
 
-Here, the size of the file `\emph{test.txt}' in directory \$VSC\_SCRATCH will
+Here, the size of the file ``\emph{test.txt}'' in directory \$VSC\_SCRATCH will
 be monitored. Files can be specified by absolute as well as relative path, and
-multiple files are separated by ','.
+multiple files are separated by ``,''.
 
 It is important to be aware of the sizes of the file that will be generated, as
-the available disk space for each user is limited.  We refer to Chapter 6.5 on
-``Quota's'' to check your quota and tools to find which files consumed the
+the available disk space for each user is limited.  We refer to \autoref{sect:how-much-disk-space-do-i-get} on
+``Quotas'' to check your quota and tools to find which files consumed the
 ``quota''.
 
 Several actions can be taken, to avoid storage problems:
@@ -605,13 +605,13 @@ Several actions can be taken, to avoid storage problems:
 \item  Be aware of all the files that are generated by your program. Also check out the hidden files.
 \item  Check your quota consumption regularly.
 \item  Clean up your files regularly.
-\item  First work (i.e. read and write) with your big files in the local /tmp directory. Once finished, you can move your files once to the VSC\_DATA directories.
+\item  First work (i.e., read and write) with your big files in the local /tmp directory. Once finished, you can move your files once to the VSC\_DATA directories.
 \item  Make sure your programs clean up their temporary files after execution.
 \item  Move your output results to your own computer regularly.
 \item  Anyone can request more disk space to the \hpc staff, but you will have to duly justify your request.
 \end{enumerate}
 
-\subsection{Monitoring Disk IO}
+\subsection{Monitoring Disk I/O}
 
 If your Linux system gets slow down due to heavy disk I/O activities, you
 probably want to know which processes or users (in case of multi-user systems)
@@ -670,7 +670,7 @@ The parameter to add in your job-script would be:
 #PBS -l ib
 \end{prompt}
 
-If for some other reasons, a user is fine with the Gigabit Ethernet network, he
+If for some other reasons, a user is fine with the gigabit Ethernet network, he
 can specify:
 
 \begin{prompt}
@@ -681,7 +681,7 @@ can specify:
 
 \subsection{Command Lines arguments}
 
-Many programs, e.g., matlab, take command line options. To make sure these do
+Many programs, e.g., MATLAB, take command line options. To make sure these do
 not interfere with those of monitor and vice versa, the program can for
 instance be started in the following way:
 
@@ -689,7 +689,7 @@ instance be started in the following way:
 %\shellcmd{monitor -delta 60 -- matlab -nojvm -nodisplay computation.m}%
 \end{prompt}
 
-The use of '--' will ensure that monitor does not get confused by matlab's '-nojvm' and '-nodisplay' options.
+The use of ``--'' will ensure that monitor does not get confused by MATLAB's '-nojvm' and '-nodisplay' options.
 
 \subsection{Exit Code}
 
@@ -705,7 +705,7 @@ environment variable MONITOR\_EXIT\_ERROR to a more suitable value.
 
 \subsection{Monitoring a running process}
 
-It is also possible to "attach" monitor to a program or process that is already
+It is also possible to ``attach'' monitor to a program or process that is already
 running. One simply determines the relevant process ID using the ps command,
 e.g., 18749, and starts monitor:
 

@@ -1,10 +1,6 @@
 #!/bin/bash
 
 
-  # choose queue: qshort (1h), qreg (24h), qlong (72h), qxlong (168h)
-#PBS -q qshort
-
-
   # "name" of the job (optional)
 #PBS -N my_serial_job         
 

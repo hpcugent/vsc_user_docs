@@ -1,6 +1,6 @@
 GCC/gfortran/...
 
-module load gogfl     # enables GCC, OpenMPI, (Sca)LAPACK ...
+module load foss     # enables GCC, OpenMPI, (Sca)LAPACK ...
 
 C compiler: gcc
 C++ compiler: g++
@@ -27,7 +27,7 @@ MPI example script:
 
 Intel suite
 
-module load ictce     # enables icc, ifort, Intel MPI, MKL, ...
+module load intel     # enables icc, ifort, Intel MPI, MKL, ...
 
 C compiler: icc
 C++ compiler: icpc

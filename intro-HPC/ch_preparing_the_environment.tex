@@ -1,5 +1,5 @@
 \chapter{Preparing the Environment}
-\label{ch:setting-up-the-environment}
+\label{ch:preparing-the-environment}
 
 Before you can really start using the \hpc clusters, there are several things you need to do or know:
 
@@ -59,7 +59,7 @@ logout
 Connection to %\loginnode% closed.
 \end{prompt}
 
-\strong{Tip: Setting your Language right}
+\begin{tip}[Setting your Language right]
 
 You may encounter the following warning message during connecting:
 \begin{prompt}
@@ -73,7 +73,7 @@ LANG = (unset)
 perl: warning: Falling back to the standard locale ("C").
 \end{prompt}
 
-This means that the correct `locale' has not yet been properly specified on your local machine. Try:
+This means that the correct ``locale'' has not yet been properly specified on your local machine. Try:
 
 \begin{prompt}
 %\shellcmd{locale}%
@@ -86,6 +86,7 @@ LC_NUMERIC="C"
 LC_TIME="C"
 LC_ALL=
 \end{prompt}
+\end{tip}
 
 A \strong{locale} is a set of parameters that defines the user's language,
 country and any special variant preferences that the user wants to see in their
@@ -99,19 +100,19 @@ favorite editor and add the following lines:
 %\shellcmd{vi ~/.bash\_profile}%
 %\dots%
 export LANGUAGE="en_US.UTF-8"
-export LC\_ALL="en_US.UTF-8"
-export LC\_CTYPE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 %\dots%
 \end{prompt}
 
-or alternatively (if you are not comfortable with the Linux editor's):
+or alternatively (if you are not comfortable with the Linux editors):
 
 \begin{prompt}
 %\shellcmd{echo "export LANGUAGE=\textbackslash "en\_US.UTF-8\textbackslash " $>$$>$ ~/.profile"}%
-%\shellcmd{echo ``export LC\_ALL=\textbackslash "en\_US.UTF-8\textbackslash " $>$$>$ ~/.profile''}%
-%\shellcmd{echo ``export LC\_CTYPE=\textbackslash "en\_US.UTF-8\textbackslash " $>$$>$ ~/.profile''}%
-%\shellcmd{echo ``export LANG="en\_US.UTF-8\textbackslash " $>$$>$ ~/.profile''}%
+%\shellcmd{echo "export LC\_ALL=\textbackslash "en\_US.UTF-8\textbackslash " $>$$>$ ~/.profile"}%
+%\shellcmd{echo "export LC\_CTYPE=\textbackslash "en\_US.UTF-8\textbackslash " $>$$>$ ~/.profile"}%
+%\shellcmd{echo "export LANG="en\_US.UTF-8\textbackslash " $>$$>$ ~/.profile"}%
 \end{prompt}
 
 You can now log-out and re-connect to the \hpc, and you should not get these warnings anymore.
@@ -122,10 +123,12 @@ Before you can do some work, you'll have to \strong{transfer the files} that
 you need from your desktop or department to the cluster. At the end of a job,
 you might want to transfer some files back.
 
+\ifmacORlinux
 The preferred way to transfer files is by using an scp or sftp via the secure
-OpenSSH protocol.  OS X comes with its own implementation of OpenSSH, so you
-don't need to install any third-party software to use it. Just open a Terminal
+OpenSSH protocol.  Linux and OS X are shipped with an implementation of OpenSSH, so you
+don't need to install any third-party software to use it. Just open a terminal
 window and jump in!
+\fi
 
 \ifwindows
   \subsection{WinSCP}
@@ -134,21 +137,19 @@ window and jump in!
   which is a graphical ftp-style program (but than one that uses the ssh way of
   communicating with the cluster rather then the less secure ftp) that is also
   freely available. WinSCP can be downloaded both as an installation package and
-  as a standalone portable executable.
-
-  Google ``WinSCP Download'' and download it from \url{http://www.winscp.net}
+  as a standalone portable executable from \url{http://www.winscp.net}
 
   To transfer your files using WinSCP,
 
   \begin{enumerate}
   \item  Open the program
-  \item  Fill in the necessary fields under $<$\emph{Session}$>$
+  \item  Fill in the necessary fields under \keys{Session}
   \begin{enumerate}
-  \item  Press $<$\emph{New}$>$
-  \item  Enter ``\emph{\loginnode}'' in the $<$Host name$>$ field
-  \item  Put your ``\emph{vsc-account}'' in $<$\emph{User name}$>$ field
-  \item  Select your private key in the field $<$\emph{Private key file}$>$.
-  \item  Select $<$\emph{SFTP}$>$ as the $<$\emph{file}$>$ protocol.
+  \item  Press \keys{New}.
+  \item  Enter ``\emph{\loginnode}'' in the \keys{Host name} field.
+  \item  Put your ``\emph{vsc-account}'' in \keys{User name} field.
+  \item  Select your private key in the field \keys{Private key file}.
+  \item  Select \keys{SFTP} as the \keys{file} protocol.
   \item  Note that the password field remains empty.
   \end{enumerate}
   \end{enumerate}
@@ -156,14 +157,14 @@ window and jump in!
   \includegraphics*[width=3.42in, height=3.04in, keepaspectratio=false]{img0214}
 
   \begin{enumerate}
-  \item  By pressing on the $<$\emph{Save}$>$ button, you can save the session under $<$\emph{Stored sessions}$>$ for future access.
-  \item  Finally, when clicking on 'Login', you will be asked for your key passphrase.
+  \item  By pressing on the \keys{Save} button, you can save the session under \keys{Stored sessions} for future access.
+  \item  Finally, when clicking on \keys{Login}, you will be asked for your key passphrase.
   \end{enumerate}
 
   \includegraphics*[width=3.14in, height=2.47in, keepaspectratio=false]{img0215}
 
-  The first time you make the connection, you will be asked to 'Continue
-  connecting and add host key to the cache'; select 'Yes'.
+  The first time you make the connection, you will be asked to ``Continue
+  connecting and add host key to the cache''; select \keys{Yes}.
 
   \includegraphics*[width=5.74in, height=2.81in, keepaspectratio=false]{img0216}
 
@@ -174,10 +175,10 @@ window and jump in!
 \ifmacORlinux
   \subsection{Using scp}
 
-  \strong{Secure copy} or \strong{SCP} is a tool (commando) for securely
+  \strong{Secure copy} or \strong{SCP} is a tool (command) for securely
   transferring files between a local host (= your computer) and a remote host
   (the \hpc). It is based on the Secure Shell (SSH) protocol.  The \strong{scp}
-  command works equivalent `as the \strong{cp}  (i.e. \strong{c}o\strong{p}y)
+  command is the equivalent of the \strong{cp}  (i.e., \strong{c}o\strong{p}y)
   command, but can copy files to or from remote machines.
 
   Open a additional Terminal window and check that you're working on your local machine.
@@ -188,7 +189,7 @@ window and jump in!
   \end{prompt}
 
   If you're still using the terminal that is connected to the \hpc, close the
-  connection by typing "exit" in the terminal window. Alternatively, open a new
+  connection by typing ``exit'' in the terminal window. Alternatively, open a new
   terminal window using the shortcut $<$command$>$$<$N$>$.
 
   For example, we will copy the (local) file ``\emph{localfile.txt}'' to your
@@ -265,18 +266,18 @@ window and jump in!
   %\shellcmd{sftp $<$vsc-account$>$@$<$vsc-login node$>$}%
   \end{prompt}
 
-  Typical and popular commando's inside an sftp session are:
+  Typical and popular commands inside an sftp session are:
 
   \begin{tabular}{|p{0.3\textwidth}|p{0.6\textwidth}|} \hline
-  \strong{cd \tilde/examples/fibo} & Move to the examples/fibo subdirectory on the \hpc (i.e. the remote machine)\\  \hline
+  \strong{cd \tilde/examples/fibo} & Move to the examples/fibo subdirectory on the \hpc (i.e., the remote machine)\\  \hline
   \strong{ls}                      & Get a list of the files in the current directory on the \hpc. \\ \hline
-  \strong{get fibo.py}             & Copy the file `fibo.py' from the \hpc \\ \hline
-  \strong{get tutorial/HPC.pdf}    & Copy the file `HPC.pdf' from the \hpc, which is in the `tutorial' subdirectory. \\ \hline
-  \strong{lcd test}                & Move to the `test' subdirectory on your local machine. \\ \hline
+  \strong{get fibo.py}             & Copy the file ``fibo.py'' from the \hpc \\ \hline
+  \strong{get tutorial/HPC.pdf}    & Copy the file ``HPC.pdf'' from the \hpc, which is in the ``tutorial'' subdirectory. \\ \hline
+  \strong{lcd test}                & Move to the ``test'' subdirectory on your local machine. \\ \hline
   \strong{lcd ..}                  & Move up one level in the local directory. \\ \hline
   \strong{lls}                     & Get local directory listing \\ \hline
   \strong{put test.py}             & Copy the local file test.py to the \hpc. \\ \hline
-  \strong{put test1.py test2.py }  & Copy the local file test1.py to the \hpc and rename it to test2.py. \\ \hline
+  \strong{put test1.py test2.py}  & Copy the local file test1.py to the \hpc and rename it to test2.py. \\ \hline
   \strong{bye}                     & Quit the sftp session \\ \hline
   \strong{mget *.cc}               & Copy all the remote files with extension ``.cc'' to the local directory.  \\ \hline
   \strong{mput *.h}                & Copy all he local files with extension ``.h'' to the \hpc. \\ \hline
@@ -292,9 +293,11 @@ window and jump in!
 
   \url{https://filezilla-project.org/download.php}
 
-  Tip: Some users might get the notification that Filezilla.app cannot be opened
+  \begin{tip}
+  Some users might get the notification that Filezilla.app cannot be opened
   because it is from an unidentified developer. Check out the Mac Gatekeeper at
   \url{http://support.apple.com/kb/HT5290}
+  \end{tip}
 
   Start FileZilla and login to the \hpc with the following details:
 
@@ -325,14 +328,14 @@ Linux on the \hpc is Bash (Bourne Again Shell) and can be used for the
 following purposes:
 
 \begin{enumerate}
-\item  Configure look and feel of shell.
+\item  Configure look and feel of the shell.
 \item  Setup terminal settings depending on which terminal you're using.
-\item  Set the search path for running executable's.
+\item  Set the search path for running executables.
 \item  Set environment variables as needed by programs.
-\item  Set convenient abbreviations for heavily used values
+\item  Set convenient abbreviations for heavily used values.
 \item  Run commands that you want to run whenever you log in or log out.
 \item  Setup aliases and/or shell function to automate tasks to save typing and time.
-\item  Changing bash prompt.
+\item  Changing the bash prompt.
 \item  Setting shell options.
 \end{enumerate}
 
@@ -352,7 +355,7 @@ In order to administer the active software and their environment variables, a
 \item  Activates or de-activates \underbar{software packages} and their dependencies.
 \item  Allows setting and unsetting of \underbar{environment variables}, including adding and deleting entries from database-type environment variables.
 \item  Does this in a \underbar{shell-independent} fashion (necessary information is stored in the accompanying module configuration file).
-\item  Takes care of \underbar{versioning aspects:} For many libraries, multiple versions are installed and maintained. The module system also takes care of the versioning of software packages in case multiple versions are installed. For instance, it?does not allow multiple versions to be loaded at same time.
+\item  Takes care of \underbar{versioning aspects:} For many libraries, multiple versions are installed and maintained. The module system also takes care of the versioning of software packages in case multiple versions are installed. For instance, it does not allow multiple versions to be loaded at same time.
 \item  Takes care of \underbar{dependencies:} Another issue arises when one considers library versions and the dependencies they create. Some software requires an older version of a particular library to run correctly (or at all). Hence a variety of version numbers is available for important libraries.
 \end{enumerate}
 
@@ -390,10 +393,10 @@ This will load the most recent version of MATLAB.
 
 For some packages, e.g., OpenMPI, multiple versions are installed; the load
 command will automatically choose the most recent version (i.e., the
-lexicographically last after the "/") or the default version (as set by the
+lexicographically last after the ``/'') or the default version (as set by the
 system administrators). However, the user can (and probably should, to avoid
 surprises when never versions are installed) specify a particular version,
-e.g.:
+e.g.,
 
 \begin{prompt}
 %\shellcmd{module load Python/2.7.3-ictce-4.0.1}%
@@ -414,7 +417,7 @@ Currently Loaded Modulefiles:
 
 It is important to note at this point that other modules (e.g., ictce/4.0.1)
 are also listed, although the user did not explicitly load them. This is
-because ``Python/2.7.3-ictce-4.0.1'' depends on it (as indicated in it's name),
+because ``Python/2.7.3-ictce-4.0.1'' depends on it (as indicated in its name),
 and the system administrator specified that the ``ictce/4.0.1'' module should
 be loaded whenever the Python module is loaded. There are advantages and
 disadvantages to this, so be aware of automatically loaded modules whenever
@@ -424,8 +427,8 @@ To unload a module, one can use the ``module unload'' command. It works
 consistently with the load command, and reverses the latter's effect. However,
 the dependencies of the package are NOT automatically unloaded; the user shall
 unload the packages one by one. One can however unload automatically loaded
-modules manually, to debug some problem. When the 'Python' module is unloaded,
-only the following module remains:
+modules manually, to debug some problem. When the ``Python'' module is unloaded,
+only the following modules remain:
 
 \begin{prompt}
 %\shellcmd{module unload Python}%
@@ -438,7 +441,7 @@ Currently Loaded Modulefiles:
 
 Notice that the version was not specified: the module system is sufficiently
 clever to figure out what the user intends. However, checking the list of
-currently loaded modules is always a good idea, just to make sure\ldots
+currently loaded modules is always a good idea, just to make sure \ldots
 
 In order to unload all modules at once, and hence be sure to start in a clean
 state, you can use:
@@ -452,7 +455,7 @@ modules specifically needed by applications in that job description. This
 ensures that no version conflicts occur if the user loads module using his
 '.bashrc' file.
 
-Finally, modules need not be loaded one by one; the two 'load' commands can be
+Finally, modules need not be loaded one by one; the two ``load'' commands can be
 combined as follows:
 
 \begin{prompt}
@@ -499,7 +502,7 @@ scripts/2.3.6
 scripts/2.5.1
 scripts/2.6.0
 %\shellcmd{module load scripts/1.2.0}%
-%\shellcmd{module load scripts /2.6.0 }%
+%\shellcmd{module load scripts /2.6.0}%
 scripts/2.6.0(13):ERROR:150: Module 'scripts/2.6.0' conflicts with the currently loaded module(s) 'scripts/1.2.0'
 scripts/2.6.0(13):ERROR:102: Tcl command execution failed: conflict scripts
 %\shellcmd{module switch scripts/2.6.0}%

@@ -26,7 +26,7 @@ Geert Borstlap
 
 \vspace*{.5\baselineskip}
 
-\strong{Written/contributions by: }
+\strong{Written/contributions by:}
 
 James C.\ Browne, Leonardo Fialho
 
@@ -46,7 +46,7 @@ Acknowledgement: TACC-staff, Susan H.\ Mehringer
 
 \strong{Audience:}
 
-This PerfExpert Tutorial is designed for \strong{HPC-Users} at the \strong{University of Texas}, the members of the\strong{ Flemish Supercomputing Center (VSC)}, being the \strong{University of Antwerp}, the \strong{University of Gent}, The \strong{Catholic University of Leuven}, the \strong{University of Brussels} and the \strong{University of Hasselt} and affiliated institutes who want to profile and optimize their applications.
+This PerfExpert Tutorial is designed for \strong{HPC-Users} at the \strong{University of Texas}, the members of the \strong{Flemish Supercomputing Center (VSC)}, being the \strong{University of Antwerp}, the \strong{University of Gent}, The \strong{Catholic University of Leuven}, the \strong{University of Brussels} and the \strong{University of Hasselt} and affiliated institutes who want to profile and optimize their applications.
 
 The audience may be completely unaware of the profiling and optimization concepts but must have some basic understanding of HPC programming.
 
@@ -54,21 +54,21 @@ The audience may be completely unaware of the profiling and optimization concept
 
 This tutorial gives answers to the typical questions that a new PerfExpert user may have. The aim is to learn how to use PerfExpert.
 
-\begin{tabular}{|c|l|c|l} \hline
+\begin{tabular}{|c|p{0.3\textwidth}|c|p{0.4\textwidth}|} \hline
 \strong{Part} & \strong{Questions}                          & \strong{Chapter}  & \strong{Title}    \\ \hline
-Tutorial      & What's perfExpert?                          & \strong{1}        & Introduction      \\ \hline
-              & How to profile and interpret the report?    & \strong{2}        & Profiling         \\ \hline
-              & How shall I optimize my code?               & \strong{3}        & Optimization      \\ \hline
-              & But what about my complex parallel program? & \strong{4}        & Multi-core and Multi Node Profiling \\ \hline
-              & What can I do more?                         & \strong{5}        & Extra PerfExpert functionality \\ \hline
+Tutorial      & What's PerfExpert?                          & \strong{\ref{ch:ch01_introduction}}        & \nameref{ch:ch01_introduction}      \\ \hline
+              & How to profile and interpret the report?    & \strong{\ref{ch:ch02_profiling}}        & \nameref{ch:ch02_profiling} \\ \hline
+              & How shall I optimize my code?               & \strong{\ref{ch:ch03_optimizing}}        & \nameref{ch:ch03_optimizing} \\ \hline
+              & But what about my complex parallel program? & \strong{\ref{ch:ch04_multi_core_multi_node_profiling}}        & \nameref{ch:ch04_multi_core_multi_node_profiling} \\ \hline
+              & What can I do more?                         & \strong{\ref{ch:ch05_more_perfexpert_functionality}}        & \nameref{ch:ch05_more_perfexpert_functionality} \\ \hline
 \end{tabular}
 
 The \strong{Annexes} contains some useful reference guides.
 
 \begin{tabular}{|c|l|c|} \hline
 \strong{Part}   & \strong{Title}        & \strong{Chapter}  \\ \hline
-Annex           & PerfExpert Options    & \strong{6}        \\ \hline
-                & Optimization patterns & \strong{7}        \\ \hline
+Annex           & \nameref{ch:ch06_perfexpert_options}  & \strong{\ref{ch:ch06_perfexpert_options}}        \\ \hline
+                & \nameref{ch:ch07_optimization_patterns}  & \strong{\ref{ch:ch07_optimization_patterns}}        \\ \hline
 \end{tabular}
 
 \strong{Notification:}
@@ -79,15 +79,19 @@ In this tutorial specific actions dealing with the software are separated from t
 %\shellcmd{Actions}% (i.e., to be entered at a command line in your Terminal) in an exercise are preceded by a $ and printed in \strong{bold}. You'll find those actions in a grey frame.
 \end{prompt}
 
-\strong{`Directory'} is the notation for directories or specific files. (e.g., `~/examples/')
+\strong{``Directory''} is the notation for directories or specific files. (e.g., ``~/examples/'')
 \strong{``Text''} Is the notation for text to be entered.
-\strong{Tip:} A ``Tip'' paragraph is used for remarks or tips.
+
+\begin{tip}
+A ``Tip'' paragraph is used for remarks or tips.
+\end{tip}
+
 \strong{More support:} \\
 
 Before starting the course, the example programs and configuration files used in this PerfExpert Tutorial must be copied to your own work directory.
 
 \iftacc
-The examples can also be downloaded from \url{https://portal.tacc.utexas.edu/user-services/training/} or copied from the training directory  `\emph{\tutorialdir/perfexpert/examples}' on Stampede to your home directory.
+The examples can also be downloaded from \url{https://portal.tacc.utexas.edu/user-services/training/} or copied from the training directory  ``\emph{\tutorialdir/perfexpert/examples}'' on Stampede to your home directory.
 \fi
 \ifvsc
 If you have received a new VSC account, all examples are present in the tutorials directory. In order to have your own local copy, copy the full directory to your home directory.
@@ -99,7 +103,10 @@ If you have received a new VSC account, all examples are present in the tutorial
 
 Apart from this Tutorial, the PerfExpert documentation on Texas Advanced Computing Center (TACC) website (\url{https://www.tacc.utexas.edu/perfexpert}) will serve as a reference for all PerfExpert operations.
 
-\strong{Tip:} The users are advised to get self-organized. There are only limited resources available at the TACC, which are best effort based. The user applications and own developed software remain solely the responsibility of the end-user.
+\begin{tip}
+The users are advised to get self-organized. There are only limited resources available at the TACC, which are best effort based. The user applications and own developed software remain solely the responsibility of the end-user.
+\end{tip}
+
 
 \strong{Contact Information:}
 

@@ -1,4 +1,5 @@
 \chapter{Running batch jobs}
+\label{ch:running-batch-jobs}
 
 In order to have access to the compute nodes of a cluster, one has to make use
 of the job system. The system software that handles your batch jobs consists of
@@ -16,7 +17,7 @@ nodes} of the cluster. There you can prepare the work you want to get done on
 the cluster by, e.g., installing or compiling programs, setting up data sets,
 etc. The computations however, should not be performed on this login node. The
 actual work is done on the cluster's \strong{compute nodes}. These compute
-nodes are managed by the job scheduling software (MOAB) and a Resource Manager
+nodes are managed by the job scheduling software (Moab) and a Resource Manager
 (TORQUE), which decides when and on which compute nodes the jobs can run. It is
 usually not necessary (and in some cases not permitted) to log on to the
 compute nodes directly. A user can (and should) monitor his or her jobs
@@ -37,11 +38,11 @@ execution. All the necessary input or required options have to be specified on
 the command line, or needs to be put in input or configuration files.
 
 As an example, we will run a MATLAB script, which you will find in the examples
-subdirectory on the \hpc When you received an account to the \hpc a
+subdirectory on the \hpc. When you received an account to the \hpc a
 subdirectory with examples was automatically generated for you.
 
 Remember that you have copied the contents of the HPC examples directory to
-your home directory, so that you have your \strong{own personal }copy (editable
+your home directory, so that you have your \strong{own personal} copy (editable
 and over-writable) and that you can start using the examples. If you haven't
 done so:
 
@@ -63,15 +64,15 @@ Each time you want to execute a program on the \hpc you'll need 2 things:
   \item[A configuration script] (also called a job-script), which will define the computer resource requirements of the program, the required additional software packages and which will start the actual executable.  The \hpc needs to know:
     \begin{enumerate}
       \item  the type of compute nodes;
-      \item  the number of CPU's;
+      \item  the number of CPUs;
       \item  the amount of memory;
       \item  the expected duration of the execution time;
-      \item  the name of the files which will contain the output (i.e. stdout) and error (i.e. stderr) messages;
+      \item  the name of the files which will contain the output (i.e., stdout) and error (i.e., stderr) messages;
       \item  what executable to start, and its arguments.
     \end{enumerate}
 \end{description}
 
-Later on, the \hpc shall have to define (or to adapt) their own
+Later on, the \hpc user shall have to define (or to adapt) his/her own
 configuration scripts. For now, all required configuration scripts for the
 exercises are provided for you in the examples subdirectories.
 
@@ -84,11 +85,11 @@ total 512
 -rw-r--r-- 1 %\userid% 609 Sep 11 10:25 fibo.pl
 \end{prompt}
 
-In this directory you find a PERL script (named `fibo.pl') and a PBS
-configuration script (named `fibo.pbs').
+In this directory you find a Perl script (named ``fibo.pl'') and a job-script
+(named ``fibo.pbs'').
 
 \begin{enumerate}
-\item  The PERL script calculates the first 30 Fibonacci numbers.
+\item  The Perl script calculates the first 30 Fibonacci numbers.
 \item  The job-script is actually a standard Unix/Linux shell script that
   contains a few extra comments at the beginning that specify directives to
   PBS.  These comments all begin with \strong{\#PBS}.
@@ -132,12 +133,12 @@ On the command line, you would run this using:
 [29] -> 514229
 \end{prompt}
 
-\underbar{Remark}: Recall that you have now executed the PERL script locally on
+\underbar{Remark}: Recall that you have now executed the Perl script locally on
 one of the login-nodes of the \hpc cluster.  Of course, this is not our final
 intention; we want to run the script on any of the compute nodes. Also, it is
 not considered as good practice, if you ``abuse'' the login-nodes for testing
-your scripts and executable's. It will be explained later on how you can
-reserve your own compute-node by (by opening an interactive session) to test
+your scripts and executables. It will be explained later on how you can
+reserve your own compute-node (by opening an interactive session) to test
 your software. But for the sake of acquiring a good understanding of what is
 happening, you are pardoned for this example.
 
@@ -146,7 +147,7 @@ need to be executed on the compute node:
 
 \examplecode{bash}{fibo.pbs}
 
-So, jobs are submitted as scripts (bash, perl, python, etc.), which specify the
+So, jobs are submitted as scripts (bash, Perl, Python, etc.), which specify the
 parameters related to the jobs such as expected runtime (walltime), mail
 notification, etc. These parameters can also be specified on the command line.
 
@@ -159,10 +160,10 @@ execution, using the qsub (Queue SUBmit) command:
 \end{prompt}
 
 The qsub command returns a job identifier on the HPC cluster. The important
-part is the number (e.g. '\jobnumber'); this is a unique identifier for the job
+part is the number (e.g., ``\jobnumber''); this is a unique identifier for the job
 and can be used to monitor and manage your job.
 
-Go and drink some coffee \dots but not too long.
+Go and drink some coffee \dots\ but not too long.
 
 When you return, check the contents of the directory:
 
@@ -184,12 +185,12 @@ Explore the contents of the 2 new files:
 
 These files are used to store the standard output and error that would
 otherwise be shown in the terminal window. By default, they have the same name
-as that of the PBS script, i.e. 'fibo.pbs' as base name, followed by the
-extension '.o' (output) and '.e' (error), respectively, and the job number
+as that of the PBS script, i.e., ``fibo.pbs'' as base name, followed by the
+extension ``.o'' (output) and ``.e'' (error), respectively, and the job number
 ('\jobnumber' for this example). The error file will be empty, at least if all went
 well. If not, it may contain valuable information to determine and remedy the
 problem that prevented a successful run. The standard output file will contain
-the results of your calculation (here, the output of the matlab script)
+the results of your calculation (here, the output of the MATLAB script)
 
 \section{Monitoring and managing your job(s)}
 
@@ -235,7 +236,7 @@ finished using (uid is your VSC user name on the system):
 
 % Manually indented, please keep this as is
 \begin{prompt}
-%\shellcmd{qstat -u $<$uid$>$}%
+%\shellcmd{qstat}%
 %\pbsserver%:
 Job ID      Name    User      Time Use S Queue
 ----------- ------- --------- -------- - -----
@@ -244,7 +245,7 @@ Job ID      Name    User      Time Use S Queue
 
 Here:
 \begin{description}
-  \item[Job id] the job's unique identifier
+  \item[Job ID] the job's unique identifier
   \item[Name] the name of the job
   \item[User] the user that owns the job
   \item[Time Use] the elapsed walltime for the job
@@ -265,9 +266,9 @@ The state S can be any of  the following:
 
 \section{Examining the queue}
 
-As we learned above, MOAB is the software application that actually decides
+As we learned above, Moab is the software application that actually decides
 when to run your job and what resources your job will run on. You can look at
-the queue by using either the PBS \strong{qstat} command or the MOAB
+the queue by using either the PBS \strong{qstat} command or the Moab
 \strong{showq} command. By default, \strong{qstat} will display the queue
 ordered by \strong{JobID}, whereas \strong{showq} will display jobs grouped by
 their state (``running'', ``idle'', or ``hold'') then ordered by priority.
@@ -322,7 +323,7 @@ Total jobs:  540
 There are 3 categories, the \strong{active}, \strong{eligible} and \strong{blocked} jobs.
 
 \begin{description}
-  \item[Active jobs] are jobs that are running or starting and that consume computer resources. The amount of time remaining (w.r.t. walltime, sorted to earliest completion time) and the start time are displayed. This will give you an idea about the foreseen completion time. These jobs could be in a number of states:
+  \item[Active jobs] are jobs that are running or starting and that consume computer resources. The amount of time remaining (w.r.t.\ walltime, sorted to earliest completion time) and the start time are displayed. This will give you an idea about the foreseen completion time. These jobs could be in a number of states:
 
   \begin{description}
     \item[Started] attempting to start, performing pre-start tasks
@@ -363,7 +364,7 @@ it is necessary to ensure your jobs will run properly.
 \subsection{Generic resource requirements}
 
 The \strong{qsub} command takes several options to specify the requirements, of which we
-list the most commonly used once below.
+list the most commonly used once below. \\
 
 \begin{prompt}
 %\shellcmd{qsub -l walltime=2:30:00}%
@@ -372,21 +373,21 @@ list the most commonly used once below.
 For the simplest cases, only the amount of maximum estimated execution time
 (called ``walltime'' is really important. Here, the job will not require more
 than 2 hours, 30 minutes to complete. As soon as the job would take more time,
-it will be `killed' (terminated) by the job scheduler.  As such, it does not
-harm if you \emph{slightly} overestimate the maximum execution time.
+it will be ``killed'' (terminated) by the job scheduler.  As such, it does not
+harm if you \emph{slightly} overestimate the maximum execution time. \\
 
 \begin{prompt}
 %\shellcmd{qsub -l mem=4gb}%
 \end{prompt}
 
-The job requires no more than 4 Gb of memory.
+The job requires no more than 4 GB of memory. \\
 
 \begin{prompt}
 %\shellcmd{qsub -l nodes=5:ppn=2}%
 \end{prompt}
 
 The job requires 5 compute nodes with two cores on each node (ppn stands for
-"processors per node", where processor is used to refer to indivual cores)
+``processors per node'', where processor is used to refer to indivual cores). \\
 
 \begin{prompt}
 %\shellcmd{qsub -l nodes=1:westmere}%
@@ -401,7 +402,7 @@ These options can either be specified on the command line, e.g.
 %\shellcmd{qsub -l nodes=1:harpertown,mem=2gb fibo.pbs}%
 \end{prompt}
 
-or in the job-script itself using the \#PBS-directive, so 'fibo.pbs' could be modified to:
+or in the job-script itself using the \#PBS-directive, so ``fibo.pbs'' could be modified to:
 
 \begin{code}{bash}
 #!/bin/bash -l
@@ -414,7 +415,7 @@ cd $PBS_O_WORKDIR
 Note that the resources requested on the command line will override those
 specified in the PBS file.
 
-\subsection{Available job categories (Torque queues)}
+\subsection{Available job categories (TORQUE queues)}
 
 In order to guarantee a fair share access to the computer resources to all
 users, only a limited number of jobs with certain walltimes are possible per
@@ -425,7 +426,7 @@ queues), depending on the their walltime specification.  A user is allowed to
 run up to a certain maximum number of jobs in each of these walltime
 categories.
 
-The currently defined queue categories (with walltime limits) for the \hpc
+The currently defined walltime categories for the \hpc
 are:
 
 \inputsite{queue-table}
@@ -437,13 +438,14 @@ be changed over time.
 \ifantwerpen
 % TODO : already adapt this text according to the new common user experience rules, and make it general....
 When a user submits a job with a walltime of 15 days, the queue manager will
-put the job in the qxxlong category.  The user can submit up to 8 jobs with
+put the job in the walltime category 7 days--21 days.  The user can submit up to 8 jobs with
 this high walltimes (queable = 8), but only 2 of those jobs will be eligible
 for execution (runnable=2) at the same time.  A detailed description of the
-fair-share mechanisms will follow in Chapter 9. For longer running jobs,
-\emph{checkpointing} (See Chapter 13) is necessary.
+fair-share mechanisms will follow in \autoref{ch:hpc-policies}. For longer running jobs,
+\emph{checkpointing} (See \autoref{ch:checkpointing}) is necessary.
 \fi
 
+\iffalse
 Apart from specifying the \emph{walltime}, you can also explicitly define the
 queue you're submitting your job to.
 
@@ -500,6 +502,7 @@ used:
 
 This will list additional restrictions such as the maximum walltime of the jobs
 and the maximum number of jobs that a user can have in that queue.
+\fi
 
 \subsection{Node-specific properties}
 
@@ -511,8 +514,8 @@ that these properties may very over the different VSC sites.
 \strong{Property} & \strong{Explanation}                                        \\ \hline
 harpertown        & only use Intel processors from the Harpertown family (54xx) \\ \hline
 westmere          & only use Intel processors from the Westmere family (56xx)   \\ \hline
-sandybridge       & only use Intel processors from the Sandy Bridge family      \\ \hline
-ivybridge         & only use Intel processors from the Ivy Bridge family        \\ \hline
+sandybridge       & only use Intel processors from the Sandy Bridge family (26xx)      \\ \hline
+ivybridge         & only use Intel processors from the Ivy Bridge family (26xx-v2)       \\ \hline
 ib                & use Infiniband interconnect                                 \\ \hline
 \end{tabular}
 
@@ -528,7 +531,7 @@ rack number, etc.
 
 At some point your job finishes, so you may no longer see the job ID in the
 list of jobs when you run \emph{qstat} (since it will only be listed for a few
-minutes after completion with state "C"). After your job finishes, you should
+minutes after completion with state ``C''). After your job finishes, you should
 see the standard output and error of your job in two files, located by default
 in the directory where you issued the \emph{qsub} command.
 
@@ -536,7 +539,7 @@ in the directory where you issued the \emph{qsub} command.
 When you navigate to that directory and list its contents, you should see them:
 
 \begin{prompt}
-%\emph{ls -l}%
+%\shellcmd{ls -l}%
 total 1024
 -rw-r--r-- 1 %\userid%  609 Sep 11 10:54 fibo.pl
 -rw-r--r-- 1 %\userid%   68 Sep 11 10:53 fibo.pbs
@@ -566,7 +569,7 @@ connected to your $<$vsc-account$>$. This is the e-mail address that is linked
 to the university account, which was used during the registration process.
 
 You can force a job to fail by specifying an unrealistic wall-time for the
-previous example.  Lets give the `\emph{fibo.pbs}' job just one second to
+previous example.  Lets give the ``\emph{fibo.pbs}'' job just one second to
 complete:
 
 \begin{prompt}
@@ -589,7 +592,7 @@ See Administrator for help
 
 You can instruct the \hpc to send an e-mail to your e-mail address whenever a
 job \strong{b}egins, \strong{e}nds and/or \strong{a}borts, by adding the
-following lines to the job-script 'fibo.pbs':
+following lines to the job-script ``fibo.pbs'':
 
 \begin{code}{bash}
 #PBS -m b
@@ -607,7 +610,7 @@ These options can also be specified on the command line.  Try it and see what
 happens:
 
 \begin{prompt}
-%\shellcmd{qsub -mabe -M $<$your e-mail address$>$ fibo.pbs}%
+%\shellcmd{qsub -m abe -M $<$your e-mail address$>$ fibo.pbs}%
 \end{prompt}
 
 You don't have to specify the e-mail address. In such cases, the system will

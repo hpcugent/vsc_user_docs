@@ -39,7 +39,7 @@ Terminal.
   do not even need to install; just download the executable and run it!
   Alternatively, an installation package is also available.
 
-  Download PuTTY and install it in the C:/Program Files (x86)/PuTTY directory.
+  Download PuTTY and install it in the C:\textbackslash Program Files (x86)\textbackslash PuTTY directory.
 
   Google ``\emph{PuTTY download}'' or go directly to the official download
   address: \url{http://www.chiark.greenend.org.uk/\~sgtatham/putty/}
@@ -48,8 +48,8 @@ Terminal.
 
   \begin{enumerate}
     \item  \strong{PuTTY}: the Telnet and SSH client itself
-    \item  \strong{PSCP}: an SCP client, i.e. command-line secure file copy
-    \item  \strong{PSFTP}: an SFTP client, i.e. general file transfer sessions much like FTP
+    \item  \strong{PSCP}: an SCP client, i.e., command-line secure file copy
+    \item  \strong{PSFTP}: an SFTP client, i.e., general file transfer sessions much like FTP
     \item  \strong{Plink}: a command-line interface to the PuTTY back ends
     \item  \strong{Pageant}: an SSH authentication agent for PuTTY, PSCP and Plink
     \item  \strong{PuTTYgen}: an RSA and DSA key generation utility
@@ -71,19 +71,19 @@ Terminal.
   Start \strong{\emph{PuTTYgen.exe}} it and follow these steps:
 
   \begin{enumerate}
-    \item  In $<$\emph{Parameters}$>$ (at the bottom of the window), choose
-      'SSH-2 RSA' and set the number of bits in the key to 2048.
+    \item  In \keys{Parameters} (at the bottom of the window), choose
+      ``SSH-2 RSA'' and set the number of bits in the key to 2048.
 
     \includegraphics*[width=3.49in, height=3.38in, keepaspectratio=false]{ch2-puttygen-bits}
 
-    \item  Click on $<$\emph{Generate}$>$. To generate the key, you must move
+    \item  Click on \keys{Generate}. To generate the key, you must move
       the mouse cursor over the PuTTYgen window (this generates some random
       data that PuTTYgen uses to generate the key pair). Once the key pair is
-      generated, your public key is shown in the field $<$\emph{Public key for pasting into OpenSSH authorized\_keys file}$>$.
-    \item  Next, it is advised to fill in the $<$\emph{Key comment}$>$ field
+      generated, your public key is shown in the field \keys{Public key for pasting into OpenSSH authorized\_keys file}.
+    \item  Next, it is advised to fill in the \keys{Key comment} field
       to make it easier identifiable afterwards.
-    \item  Next, you should specify a passphrase in the $<$\emph{Key passphrase}$>$
-      field and retype it in the $<$\emph{Confirm passphrase}$>$ field.
+    \item  Next, you should specify a passphrase in the \keys{Key passphrase}
+      field and retype it in the \keys{Confirm passphrase} field.
       Remember, the passphrase protects the private key against unauthorized
       use, so it is best to choose one that is not too easy to guess but that
       you can still remember.
@@ -94,9 +94,9 @@ Terminal.
       personal computer (We recommend to create and put them in the folder
       ``C:\textbackslash Users\textbackslash \%USERNAME\%\textbackslash
       AppData\textbackslash Local\textbackslash PuTTY\textbackslash .ssh'')
-      with the buttons $<$\emph{Save public key}$>$ and $<$\emph{Save private key}$>$.
-      We recommend using the name "\strong{id\_rsa.pub}" for the public key,
-      and "\strong{id\_rsa.ppk}" for the private key.
+      with the buttons \keys{Save public key} and \keys{Save private key}.
+      We recommend using the name ``\strong{id\_rsa.pub}'' for the public key,
+      and ``\strong{id\_rsa.ppk}'' for the private key.
   \end{enumerate}
 
   If you use another program to generate a key pair, please remember that they
@@ -183,9 +183,9 @@ ls: .ssh: No such file or directory
 \end{prompt}
 
   You can recognize a public/private key pair when a pair of files has the same
-  name except for the extension ".pub" added to one of them. In this particular
-  case, the private key is "id\_rsa" and public key is "id\_rsa.pub". You may
-  have multiple keys (not necessarily in the directory "\tilde/.ssh") if you or
+  name except for the extension ``.pub'' added to one of them. In this particular
+  case, the private key is ``id\_rsa'' and public key is ``id\_rsa.pub''. You may
+  have multiple keys (not necessarily in the directory ``\tilde/.ssh'') if you or
   your operating system requires this.
 
   You will need to generate a new key pair, when:
@@ -195,9 +195,9 @@ ls: .ssh: No such file or directory
     \item  or your private key was compromised.
   \end{enumerate}
 
-  For extra security, the private key itself is encrypted using a 'passphrase',
+  For extra security, the private key itself is encrypted using a ``passphrase'',
   to prevent anyone from using your private key even when they manage to copy
-  it. You have to 'unlock' the private key by typing the passphrase.
+  it. You have to ``unlock'' the private key by typing the passphrase.
 
 \begin{prompt}
 %\shellcmd{ssh-keygen}%
@@ -229,22 +229,22 @@ Other users of the \association, need to follow the instructions in \autoref{sec
 \label{sec:users-of-university}
 
 Open the following webpage from within the \university campus network (or using a VPN
-connection) \url{https://account.vscentrum.be/req} and choose `\sitename' as your VSC
+connection) \url{https://account.vscentrum.be/req} and choose ``\sitename'' as your VSC
 site.
 
 Browse to \url{https://account.vscentrum.be/req}
 
-Choose `\sitename' as your VSC site.
+Choose ``\sitename'' as your VSC site.
 
 Click $<$Submit$>$
 
 \includegraphics*[width=5.77in, height=3.51in, keepaspectratio=false]{ch2-browser-select-site}
 
-You will now be taken to a website of BELNET, where you must authenticate yourself.
+You will now be taken to a website of BELNET, where you have to select your ``Home Organization''.
 
 \includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate}
 
-Select `\university' in the dropdown box.
+Select ``\university'' in the dropdown box.
 
 Click $<$Select$>$
 
@@ -256,31 +256,33 @@ You will now be taken to the authentification page of your institute.
 
 After you log in using your \university login and password (the one you also
 use for Webmail, \ldots ), you will be asked to upload the file that contains
-your public key, i.e. the file `id\_rsa.pub' which you should already have
+your public key, i.e., the file ``id\_rsa.pub'' which you should already have
 generated.
 
 \ifwindows
   This file should have been stored in the directory
-  `\emph{/Users/$<$Username$>$/PuTTY/.ssh/}'.
+  ``\emph{/Users/$<$Username$>$/PuTTY/.ssh/}''.
 \fi
 \ifmacORlinux
-  This file has been stored in the directory `\emph{\tilde/.ssh/}'.
+  This file has been stored in the directory ``\emph{\tilde/.ssh/}''.
 \fi
 
 \ifmac
-  \strong{\underbar{Tip:}} As ".ssh" is an invisible directory, the Finder will
+\begin{tip}
+  As ``.ssh'' is an invisible directory, the Finder will
   not show it by default. The easiest way to access the folder, is by pressing
   Apple-Shift--G, which will allow you to enter the name of a directory, which
-  you would like to open in Finder. Here, type "\tilde/.ssh" and press enter.
+  you would like to open in Finder. Here, type ``\tilde/.ssh'' and press enter.
+\end{tip}
 \fi
 
 You will get an e-mail to confirm your account request. After the VSC staff has
-approved the account, your account will be created and you will get
+approved the account, your account will be created and you will get a
 confirmation e-mail.
 
 \ifantwerpen % IF ANTWERPEN
 \strong{The site is only accessible from within the \university
-domain}, so the page won't load from (e.g.) home. However, you can also get
+domain}, so the page won't load from, e.g., home. However, you can also get
 external access to the \university domain using VPN. We refer to the \university ICT infocenter
 for more information.
 
@@ -293,18 +295,18 @@ yet an automated form to request for your personal VSC account.
 
 Please e-mail the \hpc staff to get an account (see Contacts information).
 You will have to provide a public \emph{ssh} key generated as described
-above. Please attach your public key (i.e., the file named `id\_rsa.pub'),
+above. Please attach your public key (i.e., the file named ``id\_rsa.pub''),
 which you will normally find in your .ssh subdirectory within your HOME
-Directory. (i.e. /Users/$<$username$>$/.ssh/id\_rsa.pub).
+Directory. (i.e., /Users/$<$username$>$/.ssh/id\_rsa.pub).
 
 
 \ifmac % IF MAC
-
-  \strong{\underbar{Tip:}} As ".ssh" is an invisible directory, the Finder will
+\begin{tip}
+  As ``.ssh'' is an invisible directory, the Finder will
   not show it by default. The easiest way to access the folder, is by pressing
   Apple-Shift-G, which will allow you to enter the name of a directory, which
-  you would like to open in Finder. Here, type "\tilde/.ssh" and press enter.
-
+  you would like to open in Finder. Here, type ``\tilde/.ssh'' and press enter.
+\end{tip}
 \fi % END IF MAC
 \fi % END IF ANTWERPEN
 
@@ -341,7 +343,7 @@ Now, you can start using the \hpc.
 
   \begin{enumerate}
     \item  Start the PuTTY executable $<$\strong{\emph{putty.exe}}$>$ in your
-      directory `\strong{\emph{C:/Program Files (x86)/PuTTY}}' and the
+      directory ``\strong{\emph{C:\textbackslash Program Files (x86)\textbackslash PuTTY}}'' and the
       configuration screen will pop up. As you will often use the PuTTY tool,
       we recommend adding a shortcut on your desktop.
     \item  Within the category $<$\strong{\emph{Session}}$>$, in the field
@@ -351,32 +353,32 @@ Now, you can start using the \hpc.
 
     \includegraphics*[width=3.59in, height=3.45in, keepaspectratio=false]{ch2-putty-configuration}
 
-    \item  In the category $<$\emph{Connection}$>$ $<$\emph{Data}$>$, in
-      the field $<$\emph{Auto-login username}$>$, put in
+    \item  In the category \menu[,]{Connection,Data}, in
+      the field \keys{Auto-login username}, put in
       $<$\emph{vsc-account}$>$, which is your VSC username that you have
       received by mail after your request was approved.
 
   \includegraphics*[width=3.11in, height=2.99in, keepaspectratio=false]{ch2-putty-configuration2}
 
-    \item  In the category $<$\emph{Connection$>$$<$SSH$>$$<$Auth$>$}, in the
-      field $<$\emph{Private key file for authentication}$>$ click on
-      $<$\emph{Browse}$>$ and select the private key (i.e., `id\_rsa.ppk')
+    \item  In the category \menu[,]{Connection,SSH,Auth}, in the
+      field \keys{Private key file for authentication} click on
+      \keys{Browse} and select the private key (i.e., ``id\_rsa.ppk'')
       that you generated and saved above.
 
   \includegraphics*[width=3.25in, height=3.13in, keepaspectratio=false]{ch2-putty-key-setup}
 
-    \item  In the category $<$\emph{Connection$>$$<$SSH $>$$<$X11$>$}, click
-      the $<$\emph{Enable X11 Forwarding}$>$ checkbox.
+    \item  In the category \menu[,]{Connection,SSH,X11}, click
+      the \keys{Enable X11 Forwarding} checkbox.
 
   \includegraphics*[width=3.54in, height=3.41in, keepaspectratio=false]{ch2-putty-x-forwarding}
 
     \item  Now go back to $<$Session$>$, and fill in ``\emph{\hpcname}'' in the
-      $<$\emph{Saved Sessions}$>$ field and press $<$\emph{Save}$>$ to
+      \keys{Saved Sessions} field and press \keys{Save} to
       store the session information.
 
   \includegraphics*[width=3.30in, height=3.17in, keepaspectratio=false]{ch2-putty-saved-session}
 
-    \item  Now pressing $<$\emph{Open}$>$, will open a terminal window and
+    \item  Now pressing \keys{Open}, will open a terminal window and
       asks for you passphrase.
 
   \includegraphics*[width=3.94in, height=2.47in, keepaspectratio=false]{ch2-putty-enter-password}
@@ -394,19 +396,20 @@ Now, you can start using the \hpc.
 
   \begin{prompt}
   %\shellcmd{pwd}%
-  /homedir
+  %\homedir%
   %\shellcmd{hostname --f}%
-  \loginhost
+  %\loginhost%
   \end{prompt}
 
     \item  For future PuTTY sessions, just select your saved session (i.e.
-      ``\emph{\hpcname}'') from the list, $<$\emph{Load}$>$ it and press
-      $<$\emph{Open}$>$.
+      ``\emph{\hpcname}'') from the list, \keys{Load} it and press
+      \keys{Open}.
   \end{enumerate}
 
 %ENDIF windos
 \fi
 
+\ifmacORlinux
 \subsection{Connect}
 \label{sec:connect}
 
@@ -423,7 +426,7 @@ Here,
 
 \begin{enumerate}
   \item  \emph{$<$vsc-account$>$} is your VSC username that you have received
-    by mail after your request was approved (e.g. \userid),
+    by mail after your request was approved (e.g., \userid),
   \item  \emph{``\loginnode''} is the name of the login
     node of the \hpc cluster you want to connect to.
 \end{enumerate}
@@ -433,15 +436,15 @@ verify the authenticity of the login node, e.g.,
 
 \begin{prompt}
 %\shellcmd{ssh \userid{}@\loginnode{}}%
-The authenticity of host `%\loginnode% (<IP-adress>)' can't be established.
+The authenticity of host ``%\loginnode% (<IP-adress>)'' can't be established.
 RSA key fingerprint is b7:66:42:23:5c:d9:43:e8:b8:48:6f:2c:70:de:02:eb.
 Are you sure you want to continue connecting (yes/no)? %\strong{\emph{yes}}%
 \end{prompt}
 
-Here, user \userid wants to make a connection to the `\hpcname' cluster at
-\university via the login node '\loginnode'.
+Here, user \userid wants to make a connection to the ``\hpcname'' cluster at
+\university via the login node ``\loginnode''.
 
-\strong{Congratulations, you're on the \hpc Super-Computer now !!!}
+\strong{Congratulations, you're on the \hpc Super-Computer now!}
 Okay, I am on the supercomputer, but where am I?
 
 So, print the current working directory:
@@ -449,6 +452,8 @@ So, print the current working directory:
 %\shellcmd{pwd}%
 %\homedir%
 \end{prompt}
+\fi
+
 
 Your new private home-directory is ``\homedir''.
 Here you can create your own sub-directory structure, copy and prepare your
@@ -486,23 +491,18 @@ As we are interested in the use of the \strong{\emph{HPC}}, move further to
 %\shellcmd{cd intro-HPC}%
 %\shellcmd{tree -L 2}%
 .
-%\textbar%-- HPC_Tutorial_Linux.pdf
-%\textbar%-- HPC_Tutorial_Mac.pdf
-%\textbar%-- HPC_Tutorial_Win.pdf
-%\textbar%-- HPC_slides.pdf
-%\textbar%-- docs
 `-- examples
-    %\textbar%-- ch04_Batch
-    %\textbar%-- ch05_Interactive
-    %\textbar%-- ch06_Files
-    %\textbar%-- ch07_Parallel
-    %\textbar%-- ch08_MultiJob
-    %\textbar%-- ch10_Compile
-    %\textbar%-- ch11_TuneJobs
-    %\textbar%-- ch13_Examples
+    %\textbar%-- Compiling-and-testing-your-software-on-the-HPC
+    %\textbar%-- Fine-tuning-Job-Specifications 
+    %\textbar%-- Multi-core-jobs-Parallel-Computing 
+    %\textbar%-- Multi-job-submission
+    %\textbar%-- Program-examples
+    %\textbar%-- Running-batch-jobs
+    %\textbar%-- Running-jobs-with-input
+    %\textbar%-- Running-jobs-with-input-output-data
     %\textbar%-- example.pbs
     `-- example.sh
-10 directories, 5 files
+9 directories, 5 files
 \end{prompt}
 
 This directory contains:
@@ -520,19 +520,23 @@ This directory contains:
 %\shellcmd{cd examples}%
 \end{prompt}
 
-\strong{Tip: }Typing ``\strong{\emph{cd ex$<$TAB$>$}}'' will generate the
+\begin{tip}
+Typing ``\strong{\emph{cd ex$<$TAB$>$}}'' will generate the
 ``\strong{\emph{cd examples}}'' command. \strong{Command-line completion
 }(also tab completion) is a common feature of the bash command line
 interpreter, in which the program automatically fills in partially typed
 commands.
+\end{tip}
 
-\strong{\underbar{Tip:}} For more exhaustive tutorials about Linux usage,
+\begin{tip}
+For more exhaustive tutorials about Linux usage,
 please refer to the following sites:
 
 \begin{enumerate}
   \item \url{http://www.linux.org/lessons/}
   \item \url{http://linux.about.com/od/nwb\_guide/a/gdenwb06.htm}
 \end{enumerate}
+\end{tip}
 
 The first action is to copy the contents of the \hpc examples directory 
 to your home directory, so that you have your own personal copy and that 
@@ -543,7 +547,7 @@ will also copy the contents of the sub-directories ``\emph{recursively}''.
 %\shellcmd{cp --r \examplesdir \tilde/}%
 \end{prompt}
 
-Go to your home directory, check your own private examples directory, \dots  and start working.
+Go to your home directory, check your own private examples directory, \dots\  and start working.
 
 %\shellcmd{cd}%
 %\shellcmd{ls -l}%

@@ -1,7 +1,6 @@
 #!/bin/bash
 
 #PBS -N mpihello
-#PBS -q qshort
 #PBS -l walltime=00:05:00
 
   # assume a 16 core job

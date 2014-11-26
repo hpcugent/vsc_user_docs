@@ -1,4 +1,5 @@
 \chapter{Multi core jobs/Parallel Computing}
+\label{ch:multi-core-jobs-parallel-computing}
 
 \section{Why Parallel Programming?}
 
@@ -19,7 +20,7 @@ There are two important motivations to engage in parallel programming.
 
 On a desktop computer, this enables a user to run multiple programs and the
 operating system simultaneously. For scientific computing, this means you have
-th ability in principle of splitting up your computations into groups and
+the ability in principle of splitting up your computations into groups and
 running each group on its own core.
 
 There are multiple different ways to achieve parallel programming. The table
@@ -31,12 +32,12 @@ common approaches: (raw) threads, OpenMP and MPI.
 \begin{tabular}{|p{0.15\textwidth}|p{0.3\textwidth}|p{0.55\textwidth}|} \hline
 \multicolumn{3}{|c|}{\strong{Parallel programming approaches}} \\ \hline
 \strong{Tool}                                                          & \strong{Available language bindings}                                   & \strong{Limitations} \\ \hline
-Raw threads\newline pthreads, boost::\newline threading, \dots         & Threading libraries are available for all common programming languages & Threads are limited to a shared memory systems. They are more often used on single node systems rather than for \hpc. Thread management is hard. \\ \hline
-OpenMP                                                                 & Fortran/C/C++                                                      & Limited to shared memory systems, but large shared memory systems for \hpc are not uncommon (e.g. SGI UV). Loops and task can be parallelized by simple insertion of compiler directives. Under the hood threads are used. Hybrid approaches exist which use OpenMP to parallelize the work load on each node and MPI (see below) for communication between nodes. \\ \hline
+Raw threads\newline pthreads, boost::\newline threading, \dots         & Threading libraries are available for all common programming languages & Threads are limited to shared memory systems. They are more often used on single node systems rather than for \hpc. Thread management is hard. \\ \hline
+OpenMP                                                                 & Fortran/C/C++                                                      & Limited to shared memory systems, but large shared memory systems for HPC are not uncommon (e.g., SGI UV). Loops and task can be parallelized by simple insertion of compiler directives. Under the hood threads are used. Hybrid approaches exist which use OpenMP to parallelize the work load on each node and MPI (see below) for communication between nodes. \\ \hline
 Lightweight threads with clever scheduling, Intel TBB, Intel Cilk Plus & C/C++                                                                & Limited to shared memory systems, but may be combined with MPI. Thread management is taken care of by a very clever scheduler enabling the programmer to focus on parallelization itself. Hybrid approaches exist which use TBB and/or Cilk Plus to parallelize the work load on each node and MPI (see below) for communication between nodes. \\ \hline
 MPI                                                                    & Fortran/C/C++ Python                                             & Applies to both distributed and shared memory systems. Cooperation between different nodes or cores is managed by explicit calls to library routines handling communication routines. \\ \hline
 Global Arrays library                                                  & C/C++ Python                                                       & Mimics a global address space on distributed memory systems, by distributing arrays over many nodes and one sided communication. This library is used a lot for chemical structure calculation codes and was used in one of the first applications that broke the PetaFlop barrier. \\ \hline
-Scoop                                                                  & Python                                                                 & Applies to both shared and distributed memory system. Not extremely advanced, but may present a quick road to parallelization of python code.  \\ \hline
+Scoop                                                                  & Python                                                                 & Applies to both shared and distributed memory system. Not extremely advanced, but may present a quick road to parallelization of Python code.  \\ \hline
 \end{tabular}
 
 \section{Parallel Computing with threads}
@@ -69,7 +70,7 @@ threads that are assigned to multiple processing cores) is that you can achieve
 big speedups, as all cores of your CPU (and all CPUs if you have more than one)
 are used at the same time.
 
-Here is a simple example program that spawns 7 threads, where each one runs a
+Here is a simple example program that spawns 5 threads, where each one runs a
 simple function that only prints ``Hello from thread''.
 
 Go to the example directory:
@@ -119,10 +120,12 @@ Hello from thread 4!
 \end{prompt}
 
 % FIXME: Refer to Hager & co insted of this.
-\underbar{Tip:} If you plan engaging in parallel programming using threads,
+\begin{tip}
+If you plan engaging in parallel programming using threads,
 this book may prove useful: \emph{Professional Multicore Programming: Design
 and Implementation for C++ Developers. Cameron Hughes and Tracey Hughes. Wrox
 2008.}
+\end{tip}
 
 \section{Parallel Computing with OpenMP}
 
@@ -131,7 +134,7 @@ memory form of parallelism. It uses a set of compiler directives (statements
 that you add to your code and that are recognized by your Fortran/C/C++
 compiler if OpenMP is enabled or otherwise ignored) that are incorporated at
 compile-time to generate a multi-threaded version of your code. You can think
-of Pthreads (above) as doing multi-threaded programming "by hand", and OpenMP
+of Pthreads (above) as doing multi-threaded programming ``by hand'', and OpenMP
 as a slightly more automated, higher-level API to make your program
 multithreaded. OpenMP takes care of many of the low-level details that you
 would normally have to implement yourself, if you were using Pthreads from the
@@ -164,8 +167,8 @@ int var1, var2, var3;
 \subsection{Private versus Shared variables}
 
 By using the private() and shared() clauses, you can specify variables within
-the parallel region as being \strong{shared}, i.e. visible and accessible by
-all threads simultaneously, or \strong{private}, i.e. private to each thread,
+the parallel region as being \strong{shared}, i.e., visible and accessible by
+all threads simultaneously, or \strong{private}, i.e., private to each thread,
 meaning each thread will have its own local copy. In the code example below for
 parallelizing a for loop, you can see that we specify the thread\_id and nloops
 variables as private.
@@ -211,9 +214,9 @@ Thread 6 performed 125 iterations of the loop.
 
 \subsection{Critical Code}
 
-Using OpenMP you can specify something called a "critical" section of code.
+Using OpenMP you can specify something called a ``critical'' section of code.
 This is code that is performed by all threads, but is only performed
-\strong{one thread at a time} (i.e. in serial). This provides a convenient way
+\strong{one thread at a time} (i.e., in serial). This provides a convenient way
 of letting you do things like updating a global variable with local results
 from each thread, and you don't have to worry about things like other threads
 writing to that global variable at the same time (a collision).
@@ -257,9 +260,9 @@ Total # loop iterations is 100000
 
 Reduction refers to the process of combining the results of several
 sub-calculations into a final result. This is a very common paradigm (and
-indeed the so-called "map-reduce" framework used by Google and others is very
+indeed the so-called ``map-reduce'' framework used by Google and others is very
 popular). Indeed we used this paradigm in the code example above, where we used
-the "critical code" directive to accomplish this. The map-reduce paradigm is so
+the ``critical code'' directive to accomplish this. The map-reduce paradigm is so
 common that OpenMP has a specific directive that allows you to more easily
 implement this.
 
@@ -269,6 +272,7 @@ And compile it (whilst including the ``\emph{openmp}'' library) and run and
 test it on the login-node:
 
 \begin{prompt}
+%\shellcmd{module load GCC}%
 %\shellcmd{gcc -fopenmp -o omp3 omp3.c}%
 %\shellcmd{./omp3}%
 Total # loop iterations is 100000
@@ -293,20 +297,22 @@ Some other clauses of interest are:
 \item  nowait: threads will not wait until everybody is finished
 \item  schedule(type, chunk) allows you to specify how tasks are spawned out to threads in a for loop. There are three types of scheduling you can specify
 \item  if: allows you to parallelize only if a certain condition is met
-\item  \dots  and a host of others
+\item  \dots\  and a host of others
 \end{enumerate}
 
-\underbar{Tip:} If you plan engaging in parallel programming using OpenMP, this
+\begin{tip}
+If you plan engaging in parallel programming using OpenMP, this
 book may prove useful: \textit{Using OpenMP - Portable Shared Memory Parallel
 Programming}. By Barbara Chapman Gabriele Jost and Ruud van der Pas Scientific
 and Engineering Computation. 2005.
+\end{tip}
 
-\section{Parallel Computing with MPI }
+\section{Parallel Computing with MPI}
 
 The Message Passing Interface (MPI) is a standard defining core syntax and
 semantics of library routines that can be used to implement parallel
 programming in C (and in other languages as well). There are several
-implementations of MPI such as Open MPI, Intel MPI, M(VA)PICH(2) and LAM/MPI.
+implementations of MPI such as Open MPI, Intel MPI, M(VA)PICH and LAM/MPI.
 
 In the context of this tutorial, you can think of MPI, in terms of its
 complexity, scope and control, as sitting in between programming with Pthreads,
@@ -335,14 +341,21 @@ parallel, across any collection of computers, as long as they are networked
 together. Just make sure to ask permission before you load up your lab-mate's
 computer's CPU(s) with your computational tasks!
 
-Here is a "Hello World" program in MPI written in C. In this example, we send a
-"Hello" message to each processor, manipulate it trivially, return the results
+Here is a ``Hello World'' program in MPI written in C. In this example, we send a
+``Hello'' message to each processor, manipulate it trivially, return the results
 to the main process, and print the messages.
 
 Study the MPI-programme and the PBS-file:
 
 \examplecode{C}{mpi_hello.c}
 \examplecode{bash}{mpi_hello.pbs}
+
+and compile it:
+
+\begin{prompt}
+%\shellcmd{module load intel}%
+%\shellcmd{mpiicc -o mpi\_hello mpi\_hello.c}%
+\end{prompt}
 
 mpiicc is a wrapper of the Intel C++ compiler icc to compile MPI programs (see
 the chapter on compilation for details).
@@ -383,7 +396,7 @@ determining the number of process \emph{ranks} in MPI\_COMM\_WORLD, which is
 an opaque descriptor for communication between the set of processes. A single
 process, multiple data (SPMD = Single Program, Multiple Data) programming model
 is thereby facilitated, but not required; many MPI implementations allow
-multiple, different, executable's to be started in the same MPI job. Each
+multiple, different, executables to be started in the same MPI job. Each
 process has its own rank, the total number of processes in the world, and the
 ability to communicate between them either with point-to-point (send/receive)
 communication, or by collective communication among the group. It is enough for
@@ -402,7 +415,9 @@ size of the world N, so it also seeks to scale to the runtime configuration
 without compilation for each size variation, although runtime decisions might
 vary depending on that absolute amount of concurrency available.
 
-
-\underbar{Tip:} If you plan engaging in parallel programming using MPI, this
+\begin{tip}
+If you plan engaging in parallel programming using MPI, this
 book may prove useful: \emph{Parallel Programming with MPI. Peter Pacheo.
 Morgan Kaufmann. 1996.}
+\end{tip}
+

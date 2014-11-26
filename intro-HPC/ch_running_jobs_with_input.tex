@@ -1,4 +1,5 @@
 \chapter{Running jobs with input/output data}
+\label{ch:running-jobs-with-input-output-data}
 
 You have now learned how to start a batch job and how to start an interactive
 session.  The next question is how to deal with input and output files, where
@@ -30,7 +31,7 @@ total 2304
 \end{prompt}
 
 Now, let us inspect the contents of the first executable (which is just a
-python script with execute permission).
+Python script with execute permission).
 
 \examplecode{Python}{file1.py}
 
@@ -54,7 +55,7 @@ Submit it:
 \end{prompt}
 
 After the job has finished, inspect the local directory again, i.e., the
-directory where you executed the \emph{qsub} commando:
+directory where you executed the \emph{qsub} command:
 
 \begin{prompt}
 %\shellcmd{ls -l}%
@@ -79,7 +80,7 @@ Some observations:
 \item The file ``file1a.pbs.e\jobnumber'' contains all the text that was written to the standard error stream (``stderr'').
 \end{enumerate}
 
-Inspect their contents\dots and remove the files
+Inspect their contents \dots\ and remove the files
 
 \begin{prompt}
 %\shellcmd{cat Hello.txt}%
@@ -88,8 +89,10 @@ Inspect their contents\dots and remove the files
 %\shellcmd{rm Hello.txt file1a.pbs.o\jobnumber file1a.pbs.e\jobnumber}%
 \end{prompt}
 
-\strong{Tip}: Type ``cat H'' and press the \strong{TAB} button, and it will
+\begin{tip}
+Type ``cat H'' and press the \keys{TAB} button, and it will
 \strong{expand} into full filename.
+\end{tip}
 
 \subsection{Filenames using the name of the job}
 
@@ -101,7 +104,7 @@ Check the contents of the job script and execute it.
 %\shellcmd{qsub file1b.pbs}%
 \end{prompt}
 
-Inspect the contents again \dots and remove the generated files:
+Inspect the contents again \dots\ and remove the generated files:
 
 \begin{prompt}
 %\shellcmd{ls}%
@@ -145,8 +148,8 @@ The following locations are available:
 \begin{tabular}{|p{0.35\textwidth}|p{0.65\textwidth}|} \hline
 \strong{Variable} & \strong{Description} \\ \hline
 \$VSC\_HOME            & The data stored here should be relatively small (e.g., no files or directories larger than a gigabyte), and not generating very intense I/O during jobs. Various kinds of \strong{configuration files} are also stored here, such as the ssh-keys, .bashrc, or MATLAB and Eclipse configuration files, etc. \newline The default directory is /user/\sitename/xxx/$<$vsc-account$>$. \\ \hline
-\$VSC\_DATA            & A bigger 'workspace', for \strong{datasets}, results, logfiles, etc. This file-system can be used for higher I/O loads, but for I/O bound jobs, you might be better of using (one of) the 'scratch' file-system(s). Also, if you are developing your own software, builds of large projects should be conducted here. The default directory is /data/\sitename/xxx/$<$vsc-account$>$. \\ \hline
-\$VSC\_SCRATCH \$VSC\_SCRATCH\_SITE \$VSC\_SCRATCH\_GLOBAL & For \strong{temporary} or transient data; there is typically no backup for these file-systems, and 'old' data may be removed automatically. The default directory is /scratch/\sitename/xxx/$<$vsc-account$>$ \\   \hline
+\$VSC\_DATA            & A bigger ``workspace'', for \strong{datasets}, results, logfiles, etc. This file-system can be used for higher I/O loads, but for I/O bound jobs, you might be better of using (one of) the ``scratch'' file-system(s). Also, if you are developing your own software, builds of large projects should be conducted here. The default directory is /data/\sitename/xxx/$<$vsc-account$>$. \\ \hline
+\$VSC\_SCRATCH \$VSC\_SCRATCH\_SITE \$VSC\_SCRATCH\_GLOBAL & For \strong{temporary} or transient data; there is typically no backup for these file-systems, and ``old'' data may be removed automatically. The default directory is /scratch/\sitename/xxx/$<$vsc-account$>$ \\   \hline
 \$VSC\_SCRATCH\_NODE & For \strong{temporary} or transient data on the local compute node, where fast access is important; there is no backup for these file-systems. The user is responsible for cleaning up the data after use.\newline This space that is available per node. The default directory is /tmp. \\ \hline
 \ifgent
 \$VSC\_SCRATCH\_CLUSTER & \\ \hline
@@ -217,7 +220,7 @@ The rules are:
 \subsection{Your home directory (\$VSC\_HOME)}
 
 You home directory is where you arrive by default when you login to the
-cluster. Your shell refers to it as "\tilde" (tilde), and it absolute path is also
+cluster. Your shell refers to it as ``\tilde'' (tilde), and it absolute path is also
 stored in the environment variable \$VSC\_HOME.
 
 The data stored here should be relatively small (e.g., no files or directories
@@ -232,7 +235,7 @@ account. Examples are:
 \textbf{File or Directory} & \textbf{Description} \\ \hline
 .ssh/                      & This directory contains some files necessary for you to login to the cluster and to submit jobs on the cluster. Do not remove them, and do not alter anything if you don't know what you're doing! \\ \hline
 .bash\_profile             & When you login (type username and password) remotely via ssh, .bash\_profile is executed to configure your shell before the initial command prompt. \\ \hline
-.bashrc                    & This script is executed every time you start a session on the cluster: when you login to the cluster and when a job starts. You could edit this file and, e.g., add "module load XYZ" if you want to automatically load module XYZ whenever you login to the cluster, although we do not recommend to load modules in your .bashrc. \\ \hline
+.bashrc                    & This script is executed every time you start a session on the cluster: when you login to the cluster and when a job starts. You could edit this file and, e.g., add ``module load XYZ'' if you want to automatically load module XYZ whenever you login to the cluster, although we do not recommend to load modules in your .bashrc. \\ \hline
 .bash\_history             & This file contains the commands you typed at your shell prompt, in case you need them again. \\ \hline
 \end{tabular}
 
@@ -250,7 +253,7 @@ speed you'll achieve on this volume.
 \subsection{Your scratch space (\$VSC\_SCRATCH)}
 
 To enable quick writing from your job, a few extra file systems are available
-on the work nodes. These extra file systems are called scratch folders, and can
+on the compute nodes. These extra file systems are called scratch folders, and can
 be used for storage of temporary and/or transient data (temporary results,
 anything you just need during your job, or your batch of jobs).
 
@@ -281,19 +284,16 @@ Each type of scratch has its own use:
 \end{enumerate}
 
 \textbf{Global scratch (\$VSC\_SCRATCH\_GLOBAL)}
-\begin{enumerate}
-  \item In the long term, this scratch space will be available throughout the
-    whole VSC. At the time of writing, the global scratch is just the same
-    volume as the site scratch, and thus contains the same data.
-\end{enumerate}
+At the time of writing, the global scratch is just the same
+volume as the site scratch, and thus contains the same data.
 
 \subsection{Local data}
 
 One could also opt to use some local disk-space on the compute node itself.
 
 The \strong{advantage} is that this local disk will perform the best for
-disk-IO intensive applications.  The \strong{drawback} is that those disks are
-limited in size (e.g., approx. 100Gb depending on the node) and that these
+disk-I/O intensive applications.  The \strong{drawback} is that those disks are
+limited in size (e.g., approx.\ 100 GB depending on the node) and that these
 disks are not visible from outside.
 
 But it is for sure useful when you are working with temporary output data in a
@@ -309,19 +309,21 @@ You'll best use the ``/tmp'' directory, which can be accessed via the
 
 \section{Writing Output files}
 
-\textit{\underbar{Tip}: Find the code of the exercises in ``\tilde/\exampledir''}
+\begin{tip}
+Find the code of the exercises in ``\tilde/\exampledir''
+\end{tip}
 
 In the next exercise, you will generate a file in the \$VSC\_SCRATCH directory.
-In order to generate some CPU- and disk-IO load, we will
+In order to generate some CPU- and disk-I/O load, we will
 
 \begin{enumerate}
-\item  take a random integer between 1 and 2000 and calculate all primes up to that limit; and
-\item  repeat this action 30.000 times; and
-\item  write the output to the "primes\_1.txt" output file in the SCRATCH-directory.
+\item  take a random integer between 1 and 2000 and calculate all primes up to that limit;
+\item  repeat this action 30.000 times;
+\item  write the output to the ``primes\_1.txt'' output file in the \$VSC\_SCRATCH-directory.
 \end{enumerate}
 
 Check the Python and the PBS file, and submit the job: Remember that this is
-already a more serious (disk-IO and computational intensive) job, which takes
+already a more serious (disk-I/O and computational intensive) job, which takes
 approximately 3 minutes on the \hpc.
 
 \begin{prompt}
@@ -336,17 +338,19 @@ approximately 3 minutes on the \hpc.
 
 \section{Reading Input files}
 
-\textit{\underbar{Tip}: Find the code of the exercise ``file3.py'' in
-``\tilde/\exampledir''}.
+\begin{tip}
+Find the code of the exercise ``file3.py'' in
+``\tilde/\exampledir''.
+\end{tip}
 
 In this exercise, you will
 \begin{enumerate}
-\item  Generate the file ``primes\_1.txt'' again as in the previous exercise; and
-\item  open the this file; and
-\item  read it line by line; and
-\item  calculate the average of primes in the line; and
-\item  count the number of primes found per line; and
-\item  write it to the "primes\_2.txt" output file in the SCRATCH-directory.
+\item  Generate the file ``primes\_1.txt'' again as in the previous exercise; 
+\item  open the this file; 
+\item  read it line by line; 
+\item  calculate the average of primes in the line; 
+\item  count the number of primes found per line; 
+\item  write it to the ``primes\_2.txt'' output file in the \$VSC\_SCRATCH-directory.
 \end{enumerate}
 
 Check the Python and the PBS file, and submit the job:
@@ -361,6 +365,7 @@ Check the Python and the PBS file, and submit the job:
 \end{prompt}
 
 \section{How much disk space do I get?}
+\label{sect:how-much-disk-space-do-i-get}
 
 \subsection{Quota}
 
@@ -380,6 +385,7 @@ that there are also limits
 that can be made available to each individual \hpc user.
 
 The quota of disk space for each \hpc user is:
+
 \ifantwerpen
 \begin{tabular}{|p{0.7in}|p{1.0in}|} \hline
 \textbf{Volume} & \textbf{Quota per User} \\ \hline
@@ -398,30 +404,35 @@ SCRATCH         & 25 GB \\ \hline
 \fi
 
 The maximum numbers of files are:
+
 \ifantwerpen
 \begin{tabular}{|p{0.7in}|p{1.0in}|} \hline
 \textbf{Volume} & \textbf{Max. \# Files} \\ \hline
-DATA            & 100,000 \\ \hline
-HOME            & 20,000 \\ \hline
-SCRATCH         & 100,000 \\ \hline
+DATA            & 100000 \\ \hline
+HOME            & 20000 \\ \hline
+SCRATCH         & 100000 \\ \hline
 \end{tabular}
 \fi
 
 \ifgent
 \begin{tabular}{|p{0.7in}|p{1.0in}|} \hline
 \textbf{Volume} & \textbf{Max. \# Files} \\ \hline
-DATA            & 100,000 \\ \hline
-HOME            & 20,000 \\ \hline
-SCRATCH         & 100,000 \\ \hline
+DATA            & 100000 \\ \hline
+HOME            & 20000 \\ \hline
+SCRATCH         & 100000 \\ \hline
 \end{tabular}
 \fi
 
-\underbar{Tip:} The first action to take when you have exceeded your quota is
+\begin{tip}
+The first action to take when you have exceeded your quota is
 to clean up your directories. You could start by removing intermediate,
 temporary or log files.  Keeping your environment clean will never do any harm.
+\end{tip}
 
-\underbar{Tip:} Users can request for additional quota, which can be granted in
+\begin{tip}
+Users can request for additional quota, which can be granted in
 duly justified cases. Please contact the \hpc staff.
+\end{tip}
 
 \subsection{Check your quota}
 
@@ -444,7 +455,7 @@ Home          117   20000   25000        0   none
 Scratch        11  100000  150000       20   none
 \end{prompt}
 
-The ``\emph{show\_quota.py}'' commando has been developed to show you the
+The ``\emph{show\_quota.py}'' command has been developed to show you the
 status of your quota in a more readable format:
 
 \begin{prompt}
@@ -476,11 +487,11 @@ Usage}) command:
 \end{prompt}
 
 This shows you first the aggregated size of all subdirectories, and finally the
-total size of the current directory "." (this includes files stored in the
+total size of the current directory ``.'' (this includes files stored in the
 current directory).
 
-If you also want this size to be "human readable" (and not always the total
-number of kilobytes), you add the parameter "-h":
+If you also want this size to be ``human readable'' (and not always the total
+number of kilobytes), you add the parameter ``-h'':
 
 \begin{prompt}
 %\shellcmd{du -h}%
@@ -530,7 +541,7 @@ pass this directory as a parameter.
 \end{prompt}
 
 We also want to mention the \emph{tree} command, as it also provides an easy
-manner to see which files consumed your available quota's. \emph{Tree} is a
+manner to see which files consumed your available quotas. \emph{Tree} is a
 recursive directory-listing program that produces a depth indented listing of
 files.
 

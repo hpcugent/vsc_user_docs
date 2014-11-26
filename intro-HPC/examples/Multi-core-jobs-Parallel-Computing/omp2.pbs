@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#PBS -q qshort
 #PBS -l walltime=00:05:00
 
   # This is a 8 core job

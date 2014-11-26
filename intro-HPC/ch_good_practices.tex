@@ -1,4 +1,5 @@
 \chapter{Good Practices}
+\label{ch:good-practices}
 
 \begin{enumerate}
 
@@ -23,7 +24,7 @@
   \item  Try to benchmark the software for scaling issues when using MPI or for
     I/O issues.
 
-  \item  Use the Scratch drive (\$VSC\_SCRATCH\_NODE which is mapped to the
+  \item  Use the scratch file system (\$VSC\_SCRATCH\_NODE which is mapped to the
     local /tmp) whenever possible. Local disk I/O is always much faster as it
     does not have to use the network.
 
@@ -50,7 +51,7 @@
 
   \item  For all parallel computing, request to use ``Infiniband''.
 
-  \item  And above all\dots do not hesitate to contact the \hpc staff. We're
+  \item  And above all \dots\ do not hesitate to contact the \hpc staff. We're
     here to help you.
 \end{enumerate}
 
