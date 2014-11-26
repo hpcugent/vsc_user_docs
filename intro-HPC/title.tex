@@ -77,16 +77,16 @@ HPC.
 
 \begin{tabular}{|p{0.4\textwidth}|c|p{0.4\textwidth}|} \hline
 \multicolumn{3}{|c|}{\strong{Beginners Part}} \\ \hline
-\strong{Questions}                                                      & \strong{Chapter} & \strong{Title} \\ \hline
-What is a \hpc exactly?\newline Can it solve my computational needs?    & \strong{1} & Introduction to \hpc \\ \hline
-How to get an account?                                                  & \strong{2} & Getting an \hpc account \\ \hline
-How do I connect to the \hpc and transfer my files and programs?        & \strong{3} & Preparing the environment \\ \hline
-How to start background jobs?                                           & \strong{4} & Running batch jobs \\ \hline
-How to start jobs with user interaction?                                & \strong{5} & Running interactive jobs \\ \hline
-Where do the input and output go? Where to collect my results?          & \strong{6} & Running jobs with input/output data \\ \hline
-Can I speed up my program by exploring parallel programming techniques? & \strong{7} & Multi-core jobs / Parallel programming \\ \hline
-Can I start many jobs at once?                                          & \strong{8} & Multi job submission \\ \hline
-What are the rules and priorities of jobs?                              & \strong{9} & HPC policies \\ \hline
+\strong{Questions}                                                      & \strong{chapter} & \strong{title} \\ \hline
+What is a \hpc exactly?\newline Can it solve my computational needs?    & \strong{\ref{ch:introduction-to-hpc}} & \nameref{ch:introduction-to-hpc}} \\ \hline
+How to get an account?                                                  & \strong{\ref{ch:getting-a-hpc-account}} & \nameref{ch:getting-a-hpc-account}} \\ \hline
+How do I connect to the \hpc and transfer my files and programs?        & \strong{\ref{ch:preparing-the-environment}} & \nameref{ch:preparing-the-environment}} \\ \hline
+How to start background jobs?                                           & \strong{\ref{ch:running-batch-jobs}} & \nameref{ch:running-batch-jobs}} \\ \hline
+How to start jobs with user interaction?                                & \strong{\ref{ch:running-interactive-jobs}} & \nameref{ch:running-interactive-jobs}} \\ \hline
+Where do the input and output go? Where to collect my results?          & \strong{\ref{ch:running-jobs-with-input-output-data}} & \nameref{ch:running-jobs-with-input-output-data}} \\ \hline
+Can I speed up my program by exploring parallel programming techniques? & \strong{\ref{ch:multi-core-jobs-parallel-computing}} & \nameref{ch:multi-core-jobs-parallel-computing}} \\ \hline
+Can I start many jobs at once?                                          & \strong{\ref{ch:multi-job-submission}} & \nameref{ch:multi-job-submission}} \\ \hline
+What are the rules and priorities of jobs?                              & \strong{\ref{ch:hpc-policies}} & \nameref{ch:hpc-policies} \\ \hline
 \end{tabular}
 
 The \strong{Advanced Part} focuses on in-depth issues. The aim is to assist the
@@ -94,23 +94,23 @@ end-user in running his own software on the \hpc.
 
 \begin{tabular}{|p{0.4\textwidth}|c|p{0.4\textwidth}|} \hline
 \multicolumn{3}{|c|}{\strong{Advanced Part}} \\ \hline
-\strong{Questions}                           & \strong{Chapter} & \strong{Title} \\ \hline
-Can I compile my software on the \hpc?       & \strong{10}      & Compiling on the \hpc \\ \hline
-What are the optimal Job Specifications?     & \strong{11}      & Fine-tuning Job Specifications \\ \hline
-How do I check my programs at runtime?       & \strong{12}      & Monitoring \hpc Utilization with Ganglia \\ \hline
-Can I stop my program and continue later on? & \strong{13}      & Checkpointing \\ \hline
-Do you have more examples for me?            & \strong{14}      & Examples \\ \hline
-Any more advice?                             & \strong{15}      & Good practices \\ \hline
+\strong{Questions}                           & \strong{chapter} & \strong{title} \\ \hline
+Can I compile my software on the \hpc?       & \strong{\ref{ch:compiling-and-testing-your-software-on-the-hpc}}      & \nameref{ch:compiling-and-testing-your-software-on-the-hpc} \\ \hline
+What are the optimal Job Specifications?     & \strong{\ref{ch:fine-tuning-job-specifications}}      & \nameref{ch:fine-tuning-job-specifications} \\ \hline
+How do I check my programs at runtime?       & \strong{\ref{ch:monitoring-cluster-utilization}}      & \nameref{ch:monitoring-cluster-utilization} \\ \hline
+Can I stop my program and continue later on? & \strong{\ref{ch:checkpointing}}      & Checkpointing \\ \hline
+Do you have more examples for me?            & \strong{\ref{ch:program-examples}}      & \nameref{ch:program-examples} \\ \hline
+Any more advice?                             & \strong{\ref{ch:good-practices}}      & Good practices \\ \hline
 \end{tabular}
 
 The \strong{Annexes} contains some useful reference guides.
 
 \begin{tabular}{|l|c|} \hline
 \multicolumn{2}{|c|}{\strong{Annex}} \\ \hline
-\strong{Title}             & \strong{Chapter} \\ \hline
-\hpc Quick Reference Guide & \strong{16} \\ \hline
-Torque Options             & \strong{17} \\ \hline
-Useful Linux commands      & \strong{18} \\ \hline
+\strong{Title}             & \strong{chapter} \\ \hline
+\nameref{ch:quick-reference-guide} & \strong{\ref{ch:quick-reference-guide}} \\ \hline
+\nameref{ch:torque-options}& \strong{\ref{ch:torque-options}} \\ \hline
+\nameref{ch:useful-linux-commands}& \strong{\ref{ch:useful-linux-commands}} \\ \hline
 \end{tabular}
 
 
@@ -121,20 +121,22 @@ In this tutorial specific commands are separated from the accompanying text:
 \begin{prompt}
 %\shellcmd{Commands}%
 \end{prompt}
-They have to be entered by the reader at a command line in a Terminal on the \hpc. They appear in all exercise preceded by a \$ and printed in \textbf{bold}. You'll find those actions in a grey frame.
+They have to be entered by the reader at a command line in a Terminal on the \hpc. They appear in all exercises preceded by a \$ and printed in \textbf{bold}. You'll find those actions in a grey frame.
 
-\strong{<Button>} are menus, buttons or drop down boxes to be presses or selected.
+\keys{Button} are menus, buttons or drop down boxes to be pressed or selected.
 
-\strong{`Directory'} is the notation for directories (called ``folders'' in
-Windows terminology) or specific files. (e.g., `\homedir')
+\strong{``Directory''} is the notation for directories (called ``folders'' in
+Windows terminology) or specific files. (e.g., ``\homedir'')
 
 \strong{``Text''} Is the notation for text to be entered.
 
-\strong{Tip:} A ``Tip'' paragraph is used for remarks or tips.
+\begin{tip}
+A ``Tip'' paragraph is used for remarks or tips.
+\end{tip}
 
 \strong{\underbar{More support:}}
 
-Before starting the course, the example programs and configuration files used in this \hpc Tutorial must be copied to your home directory, so that you can work on your personal copy. If you have received a new VSC-account, all examples are present in an `\examplesdir' directory.
+Before starting the course, the example programs and configuration files used in this \hpc Tutorial must be copied to your home directory, so that you can work on your personal copy. If you have received a new VSC-account, all examples are present in an ``\examplesdir'' directory.
 
 \begin{prompt}
 %\shellcmd{cp --r \examplesdir \tilde/}%
@@ -145,30 +147,25 @@ Before starting the course, the example programs and configuration files used in
 They can also be downloaded from the VSC website at https://www.vscentrum.be.  Apart from this \hpc Tutorial, the \hpc documentation on the web (https://www.vscentrum.be) will serve as a reference for all the \hpc operations.
 
 
-\strong{\underbar{Tip:}} The users are advised to get self-organized. There are
+\begin{tip}
+The users are advised to get self-organized. There are
 only limited resources available at the \hpc, which are best effort based.
 The \hpc cannot give support for code fixing, the user applications and own
 developed software remain solely the responsibility of the end-user.
+\end{tip}
 
 More documentation can be found at:
 
 \begin{enumerate}
   \item  VSC documentation: \url{https://www.vscentrum.be/vsc-help-center}
-  \item  External documentation: \url{http://www.adaptivecomputing.com}
-\end{enumerate}
-
-Manuals (Torque, MOAB):
-
-\begin{enumerate}
-  \item  Torque: \url{http://docs.adaptivecomputing.com/torque/help.htm}
-  \item  MOAB: \url{http://docs.adaptivecomputing.com/mwm/help.htm}
+  \item  External documentation (TORQUE, Moab): \url{http://docs.adaptivecomputing.com}
 \end{enumerate}
 
 This tutorial \strong{(\version)} is intended for users working on \strong{\OS} who want to connect to the HPC of the \strong{\university}.
 
-This tutorial is also available in a specific Windows, Mac or Linux version.
+This tutorial is available in a Windows, Mac or Linux version.
 
-This tutorial is also available for UAntwerpen, UGent, KULeuven, UHasselt and VUB users.
+This tutorial is available for UAntwerpen, UGent, KULeuven, UHasselt and VUB users.
 
 Request your appropriate version at \hpcinfo.
 

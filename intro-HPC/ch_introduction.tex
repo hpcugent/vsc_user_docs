@@ -11,7 +11,7 @@ processing capacity -- particularly speed of calculation and available memory.
 While the supercomputers in the early days (around 1970) used only a few
 processors, in the 1990s machines with thousands of processors began to appear
 and, by the end of the 20th century, massively parallel supercomputers with
-tens of thousands of "off-the-shelf" processors were the norm. A large number
+tens of thousands of ``off-the-shelf'' processors were the norm. A large number
 of dedicated processors are placed in close proximity to each other in a
 computer cluster.
 
@@ -37,14 +37,14 @@ and gas exploration, molecular modeling (computing the structures and
 properties of chemical compounds, biological macromolecules, polymers, and
 crystals), and physical simulations (such as simulations of the early moments
 of the universe, airplane and spacecraft aerodynamics, the detonation of
-nuclear weapons, and nuclear fusion). \footnote{ $ Wikipedia$ }
+nuclear weapons, and nuclear fusion).\footnote{Wikipedia}
 
 \section{What is the \hpc?}
 \label{sec:what-is-the-hpc}
 
 The \hpc is a collection computers with Intel processors, running a Linux
 operating system, shaped in the form of lunch boxes and stored above and next
-to each other in racks, interconnected with fiber lines. Their number crunching
+to each other in racks, interconnected with copper and fiber lines. Their number crunching
 power is (presently) measured in hundreds of billions of floating point
 operations (gigaflops) and even in Teraflops.
 
@@ -56,18 +56,23 @@ The \hpc relies on parallel-processing technology to offer \university researche
 extremely fast solution for all their data processing needs.
 
 The \hpc consists of:
+
 \ifantwerpen
+\begin{center}
 \begin{tabular}{|p{1.8in}|p{2.1in}|} \hline
-\strong{In technical terms}         & \strong{\dots  in human terms}                    \\ \hline
-168 nodes and 2496 cores            & \dots  or the equivalent of 612 quad-core PC's    \\ \hline
-22.5 Terabyte of online storage     & \dots  or the equivalent of 5600 DVD's            \\ \hline
-10Gbit infiniband Fiber connections & \dots  or allowing to transfer 2 DVD's per second \\ \hline
+\strong{In technical terms}         & \strong{\dots\  in human terms}                    \\ \hline
+336 nodes and 4992 cores            & \dots\  or the equivalent of 1248 quad-core PCs    \\ \hline
+100 Terabyte of online storage     & \dots\  or the equivalent of over 20000 DVDs            \\ \hline
+up to 40 Gbit infiniband fiber connections & \dots\  or allowing to transfer 8 DVDs per second \\ \hline
 \end{tabular}
+\end{center}
 \fi
 %TODO insert specs for other sites
 
-The \hpc currently has:
+The \hpc currently consists of:
+
 \ifantwerpen
+Turing:
   \begin{enumerate}
     \item  64 compute nodes with 2 quad core Harpertown processors, 16 GB memory,
            120 GB local disk, GbE network
@@ -77,6 +82,13 @@ The \hpc currently has:
            120 GB local disk, QDR-IB network
     \item  8 nodes with 2 six core Westmere processors, 24 GB memory,
            120 GB local disk, GbE network
+  \end{enumerate}
+and Hopper:
+  \begin{enumerate}
+    \item  96 compute nodes with 2 ten core Ivy Bridge processors, 64 GB memory,
+           500 GB local disk, FDR10 network
+    \item  24 nodes with 2 ten core Harpertown processors, 64 GB memory,
+           500 GB local disk, FDR10 network
   \end{enumerate}
 \fi
 \ifleuven
@@ -94,9 +106,9 @@ The \hpc currently has:
 %TODO insert specs for other sites
 
 \ifantwerpen
-All the nodes in the \hpc run under the ``\operatingsystem'' operating
-system, which is a clone of ``Red Hat Enterprise Linux (RHEL) 5'', with a
-``2.6.18'' kernel with \emph{cpuset} support and \emph{BLCR} modules.
+All the nodes in the \hpc run under the ``\operatingsystemSL'' operating
+system, which is a clone of ``\operatingsystemRHEL'', 
+with \emph{cpuset} support and \emph{BLCR} modules.
 \fi
 \ifleuven
 All the nodes in the \hpc run under the ``\operatingsystem'' operating system, version 6.
@@ -109,7 +121,7 @@ Two tools perform the \strong{job management} and \strong{job scheduling}:
   \item  Moab: job scheduler and management tools.
 \end{enumerate}
 \ifantwerpen
-\strong{Accounting} is handled by a third tool, i.e., GOLD.
+%\strong{Accounting} is handled by a third tool, i.e., GOLD.
 \fi
 \ifleuven
 \strong{Accounting} is handled by a third tool, i.e., MAM (Moab Accounting Manager).
@@ -120,22 +132,17 @@ For maintenance and monitoring, we use:
 \ifantwerpen
     \begin{enumerate}
       \item  Ganglia: monitoring software;
-      \item  Nagios: alert manager.
+      \item  Icinga: alert manager.
     \end{enumerate}
 \fi
 \ifleuven
     \begin{enumerate}
       \item  Ganglia: monitoring software;
-      \item  Nagios: alert manager.
+      \item  Icinga: alert manager.
     \end{enumerate}
 \fi
 %TODO check tools for other sites
 
-\ifantwerpen
-The \hpc is physically located at the Groenenborger Campus and is accessible
-through the University Network from all \university sites. There are 4 staff members
-available to support the researchers with the utilization of the \hpc.
-\fi
 
 \section{What is the \hpc not!}
 \label{sec:what-is-the-hpc-not}
@@ -204,11 +211,11 @@ sweep). This is another form of running your sequential programs in parallel.
 
 You can use \emph{any} programming language, \emph{any} software package and
 \emph{any} library provided it has a version that runs on Linux, specifically,
-on the version of Linux that is installed on the compute nodes, \operatingsystem.
+on the version of Linux that is installed on the compute nodes, \operatingsystembase.
 
 For the most common \strong{programming languages}, a compiler is available on
 \operatingsystem. Supported and common programming languages on the \hpc are
-C/C++, FORTRAN, Java, Python, MATLAB, R, etc.
+C/C++, FORTRAN, Java, Perl, Python, MATLAB, R, etc.
 
 Supported and commonly used compilers are GCC, clang, J2EE and Intel Cluster
 Studio.
@@ -216,7 +223,7 @@ Studio.
 Commonly used software packages are ABINIT, CP2K, Gaussian, Gromacs, Molpro,
 NWChem, Quantum Espresso, R, Siesta, TURBOMOLE, WIEN2k,\ldots
 
-Commonly used Libraries are Intel MKL, FFTW, HDF5, PETSc and M(VA)PICH/OpenMPI.
+Commonly used Libraries are Intel MKL, FFTW, HDF5, PETSc and Intel MPI, M(VA)PICH, OpenMPI.
 
 Additional software can be installed ``\emph{on demand}''. Please check the
 \hpc staff to see whether the \hpc can handle your specific requirements.
@@ -224,12 +231,11 @@ Additional software can be installed ``\emph{on demand}''. Please check the
 \subsection{What operating systems can I use?}
 \label{sec:what-operating-systems-can-i-use}
 
-All nodes in the \hpc cluster run under the ``Scientific Linux'' (SL)
-Operating system, which is a specific version of RedHat-Linux. This means that
-all programs (executable) must be compiled for the SL Operating System.
+All nodes in the \hpc cluster run under \operatingsystemSL, which is a specific version of \operatingsystemRHEL. This means that
+all programs (executable) must be compiled for \operatingsystemSL.
 
 But a user can connect from any desk computer in the \university network to the \hpc,
-regardless of the Operating System that he is using at his personal computer.
+regardless of the Operating System that he is using on his personal computer.
 The user can use any of the common Operating Systems (such as Windows, OS X or
 any version of Linux/Unix/BSD) and run and control his programs on the \hpc.
 
@@ -241,8 +247,8 @@ knowledge is explained in this tutorial.
 
 When you think that the \hpc is a useful tool to support your computational
 needs, we encourage you to acquire a VSC-account (as explained in
-\autoref{ch:getting-a-hpc-account}), read \autoref{ch:setting-up-the-environment}, "Setting up the
-environment", and explore Chapters 5 to 11 which will help you to transfer and
+\autoref{ch:getting-a-hpc-account}), read \autoref{ch:preparing-the-environment}, ``Setting up the
+environment'', and explore chapters~\ref{ch:running-interactive-jobs} to~\ref{ch:fine-tuning-job-specifications} which will help you to transfer and
 run your programs on the \hpc cluster.
 
 Do not hesitate to contact the \hpc team members for any help.

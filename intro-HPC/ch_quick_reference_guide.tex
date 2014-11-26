@@ -1,4 +1,5 @@
 \chapter{\hpc Quick Reference Guide}
+\label{ch:quick-reference-guide}
 
 \begin{tabular}{|l|l|} \hline
 \multicolumn{2}{|c|}{\strong{Login}} \\ \hline
@@ -29,14 +30,14 @@ Show compute node       & qstat -n $<$jobid$>$ \\ \hline
 Delete job              & qdel $<$jobid$>$ \\ \hline
 Status of all your jobs & qstat \\ \hline
 Show all jobs on  queue & showq \\ \hline
-Show queue summary      & qstat -q \\ \hline
-Show some queue         & qstat -f -Q $<$queue$>$ \\ \hline
+%Show queue summary      & qstat -q \\ \hline
+%Show some queue         & qstat -f -Q $<$queue$>$ \\ \hline
 Submit Interactive job  & qsub -I \\ \hline
 \end{tabular}
 
 \begin{tabular}{|l|l|} \hline
 \multicolumn{2}{|c|}{\strong{Disk quota}} \\ \hline
-Check your disk quota & nmlsquota \\ \hline
+Check your disk quota & mmlsquota \\ \hline
 Check disk quota nice & show\_quota.py \\ \hline
 Local disk usage      & du -h . \\ \hline
 Overall disk usage    & df -a \\ \hline

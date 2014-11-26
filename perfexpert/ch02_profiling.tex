@@ -2,7 +2,10 @@
 \label{ch:ch02_profiling}
 
 \renewcommand{\exampledir}{examples/ch02-profiling}
-\emph{Tip: Find the source code for the examples in this Chapter in the directory:  ``\tilde/\exampledir''.}
+
+\begin{tip}
+Find the source code for the examples in this Chapter in the directory:  ``\tilde/\exampledir''.
+\end{tip}
 
 \section{Profiling Strategy}
 \label{sec:Profiling_Strategy}
@@ -10,7 +13,7 @@
 \subsection{Introduction}
 \label{subsec:Introduction}
 
-\emph{Profiling} ("program profiling", "software profiling") is a form of dynamic program analysis that measures, for example, the space (memory) or time complexity of a program, the usage of particular instructions, or frequency and duration of function calls. The most common use of profiling information is to aid program optimization. Non-optimized programs will needlessly consume more computer resources on Stampede (computational, storage, network), which could otherwise reduce the execution time of your application or be made available to other users. Profiling can also help you find many other statistics through which many potential bugs can be spotted and sorted out. All users of Stampede are highly encouraged to profile their applications, before using the computing facilities.
+\emph{Profiling} (``program profiling'', ``software profiling'') is a form of dynamic program analysis that measures, for example, the space (memory) or time complexity of a program, the usage of particular instructions, or frequency and duration of function calls. The most common use of profiling information is to aid program optimization. Non-optimized programs will needlessly consume more computer resources on Stampede (computational, storage, network), which could otherwise reduce the execution time of your application or be made available to other users. Profiling can also help you find many other statistics through which many potential bugs can be spotted and sorted out. All users of Stampede are highly encouraged to profile their applications, before using the computing facilities.
 
 Profiling is achieved by instrumenting either the program source code or its binary executable form using a tool called a \emph{profiler} (or \emph{code profiler}). Profilers, which are also programs themselves, analyze target programs by collecting information on their execution. Since profilers interrupt program execution to collect information, they have a finite resolution in the time measurements, which should be taken with a grain of salt.
 
@@ -29,7 +32,7 @@ Source-code performance optimization has four stages:
 
 \begin{enumerate}
   \item  \emph{measurement},
-  \item  \emph{analysis and diagnosis of bottlenecks,}
+  \item  \emph{analysis and diagnosis of bottlenecks},
   \item  determination of \emph{optimizations}, and
   \item  \emph{rewriting source code}.
 \end{enumerate}
@@ -132,20 +135,26 @@ You notice that:
 
 In this run, PerfExpert was not able to relate each hotspot with its exact location (line number) in source file because this information was not available in the object file. Programs compiled with the ``-g'' option will have debug information in the generated binary files, and PerfExpert will be able to report very specific on the line-number and source-file where a certain hotspot occurred.
 
-\emph{Tip:} Always compile your programs with the debug option (-g) on.
-\emph{Tip:} If you using gcc 4.8 or newer, you should use -gdwarf-3 option!
+\begin{tip}
+Always compile your programs with the debug option (-g) on.
+\end{tip}
+
+\begin{tip}
+If you using gcc 4.8 or newer, you should use -gdwarf-3 option!
+\end{tip}
+
 
 Apart from the total running time, PerfExpert performance analysis report includes, for each hotspot (i.e., for each subroutine above the threshold):
 
 \begin{enumerate}
   \item  \emph{Efficiency of the Subroutine}
   \begin{enumerate}
-    \item \emph{ }Instruction execution ratios (with respect to total instructions);
+    \item Instruction execution ratios (with respect to total instructions);
     \item  Computational efficiency (GFLOPs measurements);
   \end{enumerate}
   \item  \emph{LCPI Performance assessment}
   \begin{enumerate}
-    \item \emph{ }Overall performance;
+    \item Overall performance;
     \item  Values for 6 categories:
     \begin{enumerate}
       \item  Data access
@@ -177,8 +186,8 @@ A software program spend its time on 3 types of instructions:
 \begin{enumerate}
   \item  \strong{Computations}: Typically, we want our program to be busy with computations (floating-point or other) to solve our scientific problem, and as such a high percentage for FP computations is considered to be good and desired.
   \item  \strong{Data Access:} The computations will need to read input data and will generate output data. Data access (preferably from the fastest lowest cache levels) is needed, but the overall times spend on reading and writing data shall be limited as it is not the core goal of our program. A high percentage of time spend on data access might indicate data access issues.
-  \item  \strong{Program logic:} The time spent on other instructions (control flow, testing, loops, branching) can be considered as a `waste' of time and should be low. In most applications, this amount is very low, and as such we do not generate metrics for them. The percentages for \emph{Computations}, \emph{Data Access }and \emph{Program Logic} 
-  should total 100\%\footnote{ $ Some\ architectures\ such\ as\ Intel\ Sandy\ Bridge,\ Intel\ Ivy\ Bridge,\ and\ Intel\ Haswell\ does\ not\ provide accurate\ values\ in\ their\ performance\ counter\ events,\ specially\ for\ the\ floating-point\ instructions.\ For\ that\ reason,\ it\ is\ possible\ to\ see\ application\ with\ more\ than\ 100\%\ of\ floating-point\ instruction,\ with\ is\ obviously\ not\ possible.$ }, so we can easily estimate the \% for this category.
+  \item  \strong{Program logic:} The time spent on other instructions (control flow, testing, loops, branching) can be considered as a ``waste'' of time and should be low. In most applications, this amount is very low, and as such we do not generate metrics for them. The percentages for \emph{Computations}, \emph{Data Access} and \emph{Program Logic} 
+  should total 100\%\footnote{Some architectures such as Intel Sandy Bridge, Intel Ivy Bridge, and Intel Haswell does not provide accurate values in their performance counter events, specially for the floating-point instructions. For that reason, it is possible to see application with more than 100\% of floating-point instruction, with is obviously not possible.}, so we can easily estimate the \% for this category.
 \end{enumerate}
 
 These ratios gives a rough estimate in trying to understand whether optimizing the program for either \emph{data accesses} or \emph{floating-point instructions} would have a significant impact on the total running time of the program.
@@ -197,7 +206,7 @@ In the previous Matrix-Multiplication example, our GFLOP values were:
 
 The higher the GFLOPS percentage, the more efficient are computations are done. Although it is rare for real-world programs to match even 50\% of the maximum value, this metric can serve as an estimate of how efficiently the code performs computations.
 
-This performance report gives us also an indication about the `vectorization degree', i.e., the percentage of the computations that were ``vectorized'' (=packed) and run in parallel.
+This performance report gives us also an indication about the ``vectorization degree'', i.e., the percentage of the computations that were ``vectorized'' (=packed) and run in parallel.
 
 \begin{prompt}
 * GFLOPS (%\%% max)        12.5 ******
@@ -210,7 +219,7 @@ This performance report gives us also an indication about the `vectorization deg
   \item  \emph{Scalar}: This represents the \% of FP instructions which were not vectorized. These computations were executed one by one in serial mode and the value should be low.
 \end{enumerate}
 
-You noticed that the Matrix Multiplication program was not able to \emph{`vectorize'} (Packed was 0\%) and that all our FP computations were executed sequentially (Scalar was 12.5 \%).
+You noticed that the Matrix Multiplication program was not able to \emph{`vectorize'} (Packed was 0\%) and that all our FP computations were executed sequentially (Scalar was 12.5\%).
 
 \section{Profiling the LCPI Performance Categories}
 \label{sec:Profiling_the_LCPI_Performance_Categories}
@@ -231,7 +240,7 @@ The LCPI value is a good indicator of the cost arising from instructions of the 
 
 \emph{Hence, the higher the LCPI, the slower the program.}
 
-Generally, a value of 0.5 or lower for an LCPI is considered to be good. However, it is only necessary to look at the ratings (good, okay, ..., bad).
+Generally, a value of 0.5 or lower for an LCPI is considered to be good. However, it is only necessary to look at the ratings (good, okay, \ldots, bad).
 
 The rest of the report maps this overall LCPI, into the six constituent categories: \emph{data accesses}, \emph{instruction accesses}, \emph{data TLB accesses}, \emph{instruction TLB accesses}, \emph{branches} and \emph{floating point computations}. Without getting into the details of instruction operation on Intel and AMD chips, one can say that these six categories record performance in non-overlapping ways. That is, they roughly represent six separate categories of performance for any application.
 
@@ -241,11 +250,11 @@ Individual machine instructions or events can vary between architectures, and ar
 
 In each case, the classification (data access, instruction access, data TLB, etc.) is shown so that it is easy to understand which category is responsible for the performance slowdown. For instance if the overall LCPI is poor and the data access LCPI is high, then you should concentrate on improving the access to program variables and memory. Additional LCPI details help in relating performance numbers to the process architecture.
 
-While high LCPI values may indicate costly and inefficient use of certain computing resources, they do not specify what should be done to make the code segment more efficient. PerfExpert uses a set of rules, which map the LCPI metric values to one or more specific modifications (recommendations or suggestions for optimization) to the code segment to correct the inefficiency in the code segment. We will discuss this recommendation system later in Chapter 4.
+While high LCPI values may indicate costly and inefficient use of certain computing resources, they do not specify what should be done to make the code segment more efficient. PerfExpert uses a set of rules, which map the LCPI metric values to one or more specific modifications (recommendations or suggestions for optimization) to the code segment to correct the inefficiency in the code segment. We will discuss this recommendation system later in~\autoref{ch:ch04_multi_core_multi_node_profiling}.
 
 Before we can enhance or speed-up your own program, you must fully be able to interpret the performance report. We will use some lab exercises to build up this competence.
 
-We will change the matrix multiplication program in an `evil' manner, to deliberately generate bad performance reports. The goal is to let the user understand the potential causes of bad performance and to teach him to interpret the performance report.
+We will change the matrix multiplication program in an ``evil'' manner, to deliberately generate bad performance reports. The goal is to let the user understand the potential causes of bad performance and to teach him to interpret the performance report.
 
 \subsection{Category \#1: Data Access}
 \label{subsec:CAT1_Data_Access}
@@ -279,7 +288,7 @@ The ``-c'' option in PerfExpert will print colors.
 
 \begin{prompt}
 %\shellcmd{gcc -g -o test1 test1.c}%
-%\shellcmd{ perfexpert -c 0.9 ./test1}%
+%\shellcmd{perfexpert -c 0.9 ./test1}%
 [perfexpert] Collecting measurements [hpctoolkit]
 [perfexpert]    [1] 20.045568079 seconds (includes measurement overhead)
 [perfexpert]    [2] 21.401645102 seconds (includes measurement overhead)
@@ -333,9 +342,11 @@ We notice that:
   \item We have quite a lot of \emph{floating point instructions}. This was expected, as it was the core functionality of our program. We only have \emph{fast} Floating Point instructions, as we did not program many ``expensive'' (slow) divisions and/or square-roots calculations.
 \end{enumerate}
 
-This \emph{analysis} indicates a \emph{performance problem related to data access} in the ``compute'' function. This function is responsible for 99,98\% of the total runtime, so an improvement might heavily impact to total runtime.
+This \emph{analysis} indicates a \emph{performance problem related to data access} in the ``compute'' function. This function is responsible for 99.98\% of the total runtime, so an improvement might heavily impact to total runtime.
 
-\emph{Tip:} It is interesting to run this example with full (-O3) and without (-O0) compiler optimization and check the difference in runtime.
+\begin{tip}
+It is interesting to run this example with full (-O3) and without (-O0) compiler optimization and check the difference in runtime.
+\end{tip}
 
 \begin{prompt}
 %\shellcmd{gcc -O3 -g -o test1 test1.c}%
@@ -433,7 +444,7 @@ performance assessment  LCPI good.......okay.......fair.......poor.......bad
 
 ============================================================================
 
-As aforementioned, mappings between virtual and physical memory are facilitated by a page table, which is kept in memory. To minimize references to this table, recently-used portions of the page table are cached in a hierarchy of 'translation lookaside buffers', or TLBs, which are consulted on every virtual address translation. As with data caches, the farther a request has to go to be satisfied, the worse the performance impact. These metric estimates the performance penalty paid for missing the first-level data TLB (DTLB) that includes hitting in the second-level data TLB (STLB) as well as performing a hardware page walks on an STLB miss.
+As aforementioned, mappings between virtual and physical memory are facilitated by a page table, which is kept in memory. To minimize references to this table, recently-used portions of the page table are cached in a hierarchy of ``translation lookaside buffers'', or TLBs, which are consulted on every virtual address translation. As with data caches, the farther a request has to go to be satisfied, the worse the performance impact. These metric estimates the performance penalty paid for missing the first-level data TLB (DTLB) that includes hitting in the second-level data TLB (STLB) as well as performing a hardware page walks on an STLB miss.
 
 We notice that:
 
@@ -473,7 +484,7 @@ In modern CPUs, the processor tries and fetches instructions from memory before 
 Branches (i.e., conditional jumps) present a difficulty for the processor pipeline. After fetching a branch instruction, the processor needs to fetch the next instruction. But, there are \emph{multiple possible} ``next'' instructions! The processor won't be sure which instruction is the next one until the branching instruction makes it to the end of the pipeline.
 
 Instead of stalling the pipeline until the branching instruction is fully executed, modern processors attempt to \emph{predict} whether the jump will or will not be taken. Then, the processor can fetch the instruction that it thinks is the next one. If the prediction turns out wrong, the processor will simply discard the partially executed instructions that are in the pipeline and the pipeline starts over with the correct branch, 
-incurring a delay\footnote{ $ There\ is\ another\ technique\ known\ as\ ``speculative\ execution''\ which\ actually\ executes\ more\ than\ one\ branch\ possibility,\ however,\ this\ tutorial\ is\ not\ intended\ to\ cover\ this\ technique.$ }.
+incurring a delay.\footnote{There is another technique known as ``speculative execution'' which actually executes more than one branch possibility, however, this tutorial is not intended to cover this technique.}
 
 The \emph{test5a} program will create a large array of randomly obtained values of 0's, 1's, 2's and 3's. We loop through the array and branch for each value, doing time-wasting work. As all the values were randomly obtained, we expect that the computer is not able to predict (find a pattern) in the branches.
 
@@ -652,7 +663,7 @@ We notice in this example that:
   \item  But we have a lot of \emph{floating point instructions}. This was expected, as it was the core functionality of our program. We have a considerable amount of \emph{slow} Floating Point instructions (division and square-root), which will be causing the slow performance.
 \end{enumerate}
 
-This \emph{analysis} indicates a \emph{performance }issue related to the\emph{ slow floating-point calculations}. Just the square root operations (calls to libm) are responsible for 28\% of the runtime, so an improvement might heavily impact to total runtime.
+This \emph{analysis} indicates a \emph{performance} issue related to the \emph{slow floating-point calculations}. Just the square root operations (calls to libm) are responsible for 28\% of the runtime, so an improvement might heavily impact to total runtime.
 
 As a general rule of thumb: Both floating-point division and square root are considered as slow operations. Addition, subtraction and multiplication are fast FP operations. Square root can be expect to be approximately the same speed or somewhat slower (i.e., approx. 1x - 2x lower performance) compared to a division.
 

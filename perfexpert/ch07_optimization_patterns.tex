@@ -1,5 +1,5 @@
 \chapter{Annex 2: Optimization Patterns}
-\label{ch:Optimization_Patterns}
+\label{ch:ch07_optimization_patterns}
 
 \section{Memory Access optimizations}
 \label{sec:Memory_Access_Optimizations}
@@ -19,7 +19,7 @@ Category            & \multicolumn{2}{|p{4.0in}|}{Bad memory access} \\ \hline
 Description         & \multicolumn{2}{|p{4.0in}|}{Allocate an array of elements instead of each element individually} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & loop \{\newline   \ldots c = malloc(1); \ldots\newline \}\newline
-                    & top = n;\newline loop \{\newline   if (top == n) \{\newline     tmp = malloc(n);\newline     top = 0;\newline   \}\newline   \ldots\newline   c = \&tmp[top++]; \ldots\newline \}" \\ \hline
+                    & top = n;\newline loop \{\newline   if (top == n) \{\newline     tmp = malloc(n);\newline     top = 0;\newline   \}\newline   \ldots\newline   c = \&tmp[top++]; \ldots\newline \} \\ \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
@@ -28,7 +28,7 @@ Category            & \multicolumn{2}{|p{4.0in}|}{Bad memory access} \\ \hline
 Description         & \multicolumn{2}{|p{4.0in}|}{Apply loop fission so every loop accesses just a couple of different arrays} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & loop i \{\newline   a[i] = a[i] * b[i] - c[i];\newline \}
-                    & loop i \{\newline   a[i] = a[i] * b[i];\newline \}\newline loop i \{\newline   a[i] = a[i] - c[i];\newline \}" \\ \hline
+                    & loop i \{\newline   a[i] = a[i] * b[i];\newline \}\newline loop i \{\newline   a[i] = a[i] - c[i];\newline \} \\ \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
@@ -42,7 +42,7 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
 \textbf{R005}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Change the order of loops}} \\ \hline
-Category            & \multicolumn{2}{|p{4.0in}|}{Bad memory access\newline Bad data TLB access } \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad memory access\newline Bad data TLB access} \\ \hline
 Description         & \multicolumn{2}{|p{4.0in}|}{Change the order of loops} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & loop i \{\newline   loop j \{\ldots\}\newline \}
@@ -106,7 +106,7 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
 \textbf{R012}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Smaller types}} \\ \hline
 Category            & \multicolumn{2}{|p{4.0in}|}{Bad memory access\newline Bad data TLB access} \\ \hline
-Description         & \multicolumn{2}{|p{4.0in}|}{Use smaller types (e.g., float instead of double or short instead of int) } \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Use smaller types (e.g., float instead of double or short instead of int)} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & double a[n]; & float a[n]; \\ \hline
 \end{tabular}
@@ -149,7 +149,7 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
 \textbf{R017}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Restrict}} \\ \hline
 Category            & \multicolumn{2}{|p{4.0in}|}{Bad L1 data access} \\ \hline
-Description         & \multicolumn{2}{|p{4.0in}|}{Help the compiler by marking pointers to non-overlapping data with "restrict"} \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Help the compiler by marking pointers to non-overlapping data with ``restrict''} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & void *a, *b; & void * restrict a, * restrict b; \\ \hline
 \end{tabular}
@@ -160,7 +160,7 @@ Category            & \multicolumn{2}{|p{4.0in}|}{Bad L1 data access} \\ \hline
 Description         & \multicolumn{2}{|p{4.0in}|}{Move loop invariant memory accesses out of loop} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & loop i \{\newline   a[i] = b[i] * c[j]\newline\}
-                    & temp = c[j];\newline loop i \{\newline   a[i] = b[i] * temp;\newline \}" \\ \hline
+                    & temp = c[j];\newline loop i \{\newline   a[i] = b[i] * temp;\newline \} \\ \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
@@ -177,12 +177,12 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
 Category            & \multicolumn{2}{|p{4.0in}|}{Bad L1 data access\newline Bad float point instructions (slow FP)} \\ \hline
 Description         & \multicolumn{2}{|p{4.0in}|}{Use float instead of double data type if loss of precision is acceptable.} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
-                    & double a[n]; & float a[n];" \\ \hline
+                    & double a[n]; & float a[n]; \\ \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
 \textbf{R021}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Compute iso loading}} \\ \hline
-Category            & \multicolumn{2}{|p{4.0in}|}{Bad L2 data access\newline Bad memory access } \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad L2 data access\newline Bad memory access} \\ \hline
 Description         & \multicolumn{2}{|p{4.0in}|}{Compute values rather than loading them if doable with few operations} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & loop i \{\newline   t[i] = a[i] * 0.5;\newline \}\newline loop i \{\newline   a[i] = c[i] - t[i];\newline \}
@@ -198,16 +198,16 @@ Category            & \multicolumn{2}{|p{4.0in}|}{Bad instruction access} \\ \hl
 Description         & \multicolumn{2}{|p{4.0in}|}{Factor out sequences of common code into subroutines} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & same\_code;\newline same\_code;
-                    & void f() \{same\_code;\}\newline f();\newline f();" \\ \hline
+                    & void f() \{same\_code;\}\newline f();\newline f(); \\ \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
 \textbf{R101}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Lower loop unroll factor}} \\ \hline
 Category            & \multicolumn{2}{|p{4.0in}|}{Bad instruction access} \\ \hline
-Description         & \multicolumn{2}{|p{4.0in}|}{Lower the loop unroll factor } \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Lower the loop unroll factor} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & loop i step 4 \{\newline   code\_i;\newline   code\_i+1;\newline   code\_i+2;\newline   code\_i+3;\newline \}
-                    & loop i step 2 \{\newline   code\_i;\newline   code\_i+1;\newline \}" \\ \hline
+                    & loop i step 2 \{\newline   code\_i;\newline   code\_i+1;\newline \} \\ \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
@@ -221,7 +221,7 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
 \textbf{R103}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Sort according call chains}} \\ \hline
-Category            & \multicolumn{2}{|p{4.0in}|}{Bad instruction access\newline Bad instruction TLB access } \\ \hline
+Category            & \multicolumn{2}{|p{4.0in}|}{Bad instruction access\newline Bad instruction TLB access} \\ \hline
 Description         & \multicolumn{2}{|p{4.0in}|}{Sort subroutines by call chains (subroutine coloring)} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & f() \{\ldots\}\newline g() \{\ldots\}\newline h() \{\ldots\}\newline loop \{\newline   f();\newline   h();\newline \}
@@ -231,10 +231,10 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
 \textbf{R104}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Split off cold code}} \\ \hline
 Category            & \multicolumn{2}{|p{4.0in}|}{Bad instruction access} \\ \hline
-Description         & \multicolumn{2}{|p{4.0in}|}{Split off cold code into separate subroutines and place them at end of file } \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Split off cold code into separate subroutines and place them at end of file} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & if (unlikely\_condition) \{\newline   lots\_of\_code\newline \}
-                    & void f() \{lots\_of\_code\}\newline \ldots\newline if (unlikely\_condition)\newline   f();" \\ \hline
+                    & void f() \{lots\_of\_code\}\newline \ldots\newline if (unlikely\_condition)\newline   f(); \\ \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
@@ -258,10 +258,10 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
 \textbf{R107}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Inlining}} \\ \hline
 Category            & \multicolumn{2}{|p{4.0in}|}{Bad instruction TLB access} \\ \hline
-Description         & \multicolumn{2}{|p{4.0in}|}{Use inlining } \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Use inlining} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & float f(float x) \{\newline   return x * x;\newline \}\newline z = f(y);
-                    & z = y * y;" \\ \hline
+                    & z = y * y; \\ \hline
 \end{tabular}
 
 \section{Branches optimizations}
@@ -297,7 +297,7 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
 \textbf{R203}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Remove IF}} \\ \hline
 Category            & \multicolumn{2}{|p{4.0in}|}{Bad branch instructions} \\ \hline
-Description         & \multicolumn{2}{|p{4.0in}|}{Remove IF } \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Remove IF} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & /* x is 0 or -1 */\newline if (x == 0)\newline   a = b;\newline else\newline   a = c;
                     & a = (b \& ~x) \textbar  (c \& x); \\ \hline
@@ -324,7 +324,7 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
 \textbf{R206}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Conditional moves}} \\ \hline
 Category            & \multicolumn{2}{|p{4.0in}|}{Bad branch instructions} \\ \hline
-Description         & \multicolumn{2}{|p{4.0in}|}{Use trivial assignments inside THEN/ELSE to allow the use of conditional moves } \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Use trivial assignments inside THEN/ELSE to allow the use of conditional moves} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & if (x $<$ y)\newline   a = x + y;
                     & temp = x + y;\newline if (x $<$ y)\newline   a = temp;  \\ \hline
@@ -372,7 +372,7 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
 \textbf{R304}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Rework SQRT in conditions}} \\ \hline
 Category            & \multicolumn{2}{|p{4.0in}|}{Bad float point instructions (slow FP)} \\ \hline
-Description         & \multicolumn{2}{|p{4.0in}|}{Compare squared values instead of computing the square root } \\ \hline
+Description         & \multicolumn{2}{|p{4.0in}|}{Compare squared values instead of computing the square root} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & if (x $<$ sqrt(y))\newline \{\ldots\}
                     & if ((x $<$ 0.0) \textbar \textbar  (x*x $<$ y))\newline \{\ldots\} \\ \hline

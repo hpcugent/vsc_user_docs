@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #PBS -N csub
-#PBS -q qshort
+#PBS -l walltime=01:00:00
 
 base=$PBS_O_WORKDIR
 exe="./hello"

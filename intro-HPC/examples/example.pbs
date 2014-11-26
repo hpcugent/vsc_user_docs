@@ -1,31 +1,31 @@
 #!/bin/bash
 
 
-  # Choose the queue on which to submit the job
-  # The currently defined queues (with walltime) for the UA-HPC are:
-	#     qshort	1 hour
-	#     qreg	  1 day (24 hours)
-	#     qlong	  3 days (72 hours)
-	#     qxlong	7 days (168 hours)
-	#     qxxlong	21 days (502 hours)
-#PBS -q qshort
+  # Choose the appropriate walltime
+  # The currently walltime categories for the UA-HPC are:
+	#     1 hour
+	#     1 day (24 hours)
+	#     3 days (72 hours)
+	#     7 days (168 hours)
+	#     21 days (502 hours)
+   # syntax: [dd:]hh:mm:ss
+#PBS -l walltime=01:00:00
 
 
 	# Send "stdout" and/or "stderr" to your home directory when the job runs
 #PBS -k o    
-#PBS -k e    
-#PBS -koe  
+#PBS -k e
 
-  # send mail notification (optional)
+
+  # send mail notification (optional); may be combined, e.g., -m abe
   #   a        when job is aborted
   #   b        when job begins
   #   e        when job ends
-  #   M        your e-mail address (should always be specified)
-#PBS -m ae
-#PBS -M firstname.lastname@uantwerpen.be
+#PBS -m e
 
-	# Send an e-mail address when a job begins execution and/or ends or aborts
-#PBS -m b #PBS -m be #PBS -m ba
+  #   M        specify alternate e-mailaddress; default is your institute address
+# #PBS -M my.other.address@mail.com
+
 
   # specification (required!)
   #   nodes=   number of nodes; 1 for serial; 1 or more for parallel
@@ -57,11 +57,11 @@
 
 	# Number of compute nodes to use. 
 	# Usually combined with the mpiprocs directive
- #PBS -l select=2
+#PBS -l select=2
 
 	# Make sure that the environment in which the job runs is the same as 
 	# the environment in which it was submitted.
- #PBS -V
+#PBS -V
 
 	# Walltime: The maximum time a job can run before being stopped. 
 	# If not used a default of a few minutes is used. 

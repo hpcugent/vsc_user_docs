@@ -1,8 +1,11 @@
 \chapter{Multi-core \& Multi-node Profiling}
-\label{ch:Multi_core_multi_node_profiling}
+\label{ch:ch04_multi_core_multi_node_profiling}
 
 \renewcommand{\exampledir}{examples/ch04-parallel}
-\strong{Tip: Find the source code for the examples in this Chapter in the directory:  ``\tilde/\exampledir''.}
+
+\begin{tip}
+Find the source code for the examples in this Chapter in the directory:  ``\tilde/\exampledir''.
+\end{tip}
 
 PerfExpert will read hardware performance counter events of the various cores and/or nodes that participated in the parallel computing. PerfExpert will generate a summary report, which is based on the performance of all components.
 
@@ -85,12 +88,12 @@ VUBrussel                   & \$ \textbf{module load openmpi/1.6.5/gcc/4.8.2}
 \end{prompt}
 
 The command line to run PerfExpert includes the MPI launcher script (i.e., mpirun). If we would start ``PerfExpert 0.1 mpirun mm\_mpi'', we would analyze the performance of the MPI launcher instead of the performance of your application. This is of course not what we want. You can use the ``\textit{-p}'' (prefix) command line argument of PerfExpert to define a prefix to the normal command line. In our case, we want to set the MPI launcher and all its arguments (e.g., -p
-"mpirun").
+``mpirun'').
 
 The command becomes:
 
 \begin{prompt}
-%\shellcmd{ perfexpert -p ``mpirun'' -c 0.1 ./mm\_mpi}%
+%\shellcmd{perfexpert -p ``mpirun'' -c 0.1 ./mm\_mpi}%
 [perfexpert] Collecting measurements [hpctoolkit]
 [perfexpert]    [1] 11.375589158 seconds (includes measurement overhead)
 [perfexpert]    [2] 11.637017437 seconds (includes measurement overhead)

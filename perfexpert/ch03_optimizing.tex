@@ -2,7 +2,10 @@
 \label{ch:ch03_optimizing}
 
 \renewcommand{\exampledir}{examples/ch03-optimizing}
-\strong{Tip: Find the source code for the examples in this Chapter in the directory:  ``\tilde/\exampledir''.}
+
+\begin{tip}
+Find the source code for the examples in this chapter in the directory:  ``\tilde/\exampledir''.
+\end{tip}
 
 First we, go to the directory of the examples of Chapter03:
 
@@ -38,7 +41,7 @@ PerfExpert can sort the hotspots according to:
 \begin{enumerate}
   \item  \strong{Relevance}: Sorted according to their relevance in \% of the total runtime. The code blocks were the execution time is higher will be presented on top. But those code blocks might already be programmed in a full professional and well-performing manner, and maybe cannot be optimized anymore.
   \item  \strong{Performance}: Sorted according to their performance. The code blocks with the worst performance will be presented on top. These code blocks bears the potential to generate the best performance improvement.
-  \item  \strong{Mixed or Impact: }Sorted according to the formula \emph{Relevance x Performance}. The code blocks with a combination of the worst performance and longest execution times (thus having the highest \emph{impact}) are presented on top. Those are the best candidates for optimization.
+  \item  \strong{Mixed or Impact:} Sorted according to the formula \emph{Relevance x Performance}. The code blocks with a combination of the worst performance and longest execution times (thus having the highest \emph{impact}) are presented on top. Those are the best candidates for optimization.
 \end{enumerate}
 
 By default, PerfExpert will list its hotspots unsorted.
@@ -121,8 +124,8 @@ And compile and run PerfExpert.
 The ``-c'' option in PerfExpert will print colors.
 
 \begin{prompt}
-%\shellcmd{ gcc -g -o mm1 mm1.c}%
-%\shellcmd{ perfexpert -c 0.9 ./mm1}%
+%\shellcmd{gcc -g -o mm1 mm1.c}%
+%\shellcmd{perfexpert -c 0.9 ./mm1}%
 ...
 Loop in function compute in mm1.c:12 (99.76%\%% of the total runtime)
 ============================================================================
@@ -134,14 +137,14 @@ ratio to total instrns    %\%%  0..........25.........50.........75.........100
 ...
 \end{prompt}
 
-We have now avoided the reference to our matrices `a' and `b' inside the loop. You see that the percentage of time needed for data accesses was reduced to zero.
+We have now avoided the reference to our matrices ``a'' and ``b'' inside the loop. You see that the percentage of time needed for data accesses was reduced to zero.
 
 \strong{Note:} Of course, your program needs to perform the work. It is not always acceptable to reduce the amount of time spent on data access by just not doing any useful computation!
 
 \subsection{Optimizing the Computational Efficiency (GFLOPS)}
 \label{subsec:Optimizing_Computational_Efficiancy}
 
-In our Matrix-Multiplication example of Chapter 2, we noticed that the Matrix Multiplication program was not able to vectorize (Packed was 0\%), all computation were sequential (Scalar was 12.5 \%).
+In our Matrix-Multiplication example of \autoref{ch:ch02_profiling}, we noticed that the Matrix Multiplication program was not able to vectorize (Packed was 0\%), all computation were sequential (Scalar was 12.5\%).
 
 But remember that we have compiled the program without any specific \textit{Optimization} option. The GCC compiler uses level 1 (-O1) as its default ``Optimization level''!
 
@@ -159,7 +162,7 @@ Now, lets see what happens if we would compile the same program with FULL optimi
 
 The program is now able to \textit{`vectorize'} much better.
 
-Of course, in the first place we need to design our program in such a way that the compiler is able to vectorize. A situation where we create a read/write data dependency within the loop (e.g.: for ...  \{ a[i+1] = a[i] * c[i]; \} ) shall be avoided, as such program logic may not allow the compiler to `vectorize' this loop.
+Of course, in the first place we need to design our program in such a way that the compiler is able to vectorize. A situation where we create a read/write data dependency within the loop (e.g., for \ldots\  \{ a[i+1] = a[i] * c[i]; \} ) shall be avoided, as such program logic may not allow the compiler to ``vectorize'' this loop.
 
 \section{Optimizing the LCPI Performance Categories}
 \label{sec:Optimizing_the_LCPI_Performance_Categories}
@@ -167,14 +170,14 @@ Of course, in the first place we need to design our program in such a way that t
 \subsection{Category \#1: Data Access}
 \label{subsec:CAT1_Data_Access}
 
-These kinds of issues occur regularly. The \emph{typical issues }are that\emph{ }a high number of CPU cycles are being spent, whilst waiting for LLC load misses to be serviced.
+These kinds of issues occur regularly. The \emph{typical issues} are that a high number of CPU cycles are being spent, whilst waiting for LLC load misses to be serviced.
 
 In general, \emph{some possible optimizations} to improve \emph{data access locality} are:
 
 \begin{enumerate}
   \item  to redesign the data structure;
   \item  to reduce data working set size;
-  \item  to reorder or interchange the loops, (this works when the loop execution is not important, but one must be aware that FORTRAN accesses storage by column, C by row);
+  \item  to reorder or interchange the loops, (this works when the loop execution is not important, but one must be aware that Fortran accesses storage by column, C by row);
   \item  to perform loop fusion (Takes two adjacent loops that have same iteration and combines them into a single loop);
   \item  to block and consuming data in chunks that fit in the LLC;
   \item  to explore hardware pre-fetchers. (Frequently, the CPU is not fed fast enough with data from memory, which causes a bottleneck resulting in a CPU waiting for data to process).
@@ -332,7 +335,7 @@ for (i = 0; i < n; i++)
 %\shellcmd{perfexpert -c 0.6 ./test3\_i1}%
 \end{prompt}
 
-And note the improvement, isn't it quite ...  spectacular?
+And note the improvement, isn't it quite \ldots\  spectacular?
 
 \subsection{Category \#4: Instruction TLB}
 \label{subsec:CAT4_Optimizing_Instruction_TLB}
@@ -350,7 +353,7 @@ Potential solutions are:
 \subsection{Category \#5: Branches}
 \label{subsec:CAT5_Optimizing_Branches}
 
-Branch prediction is a feature of the hardware, and not of the compiler\footnote{ $\ Although\ it\ is\ possible\ to\ insert\ compiler-specific\ annotations\ (aka\ pragmas)\ to\ tell\ the\ compiler\\ which\ is\ the\ most\ occurring\ branch\ result.$ }.
+Branch prediction is a feature of the hardware, and not of the compiler.\footnote{Although it is possible to insert compiler-specific annotations (aka pragmas) to tell the compiler which is the most occurring branch result.}
 
 In general, some \emph{possible optimizations} are:
 
@@ -358,7 +361,7 @@ In general, some \emph{possible optimizations} are:
   \item  Avoid or limit branches in your code (A common branch is a check to see whether you're at the end of a loop);
   \item  To put the most likely branch upfront;
   \item  Apply code patterns to allow the CPU to make better branch prediction;
-  \item  Use special tags in your code to force the compiler to a certain prediction (e.g.: GCC has macros for encoding branch prediction information, where you can define ``likely'' and ``unlikely'' paths).
+  \item  Use special tags in your code to force the compiler to a certain prediction (e.g., GCC has macros for encoding branch prediction information, where you can define ``likely'' and ``unlikely'' paths).
 \end{enumerate}
 
 \subsection{Category \#6: Floating-Point Operations}
@@ -372,7 +375,7 @@ In general, some \emph{possible optimizations} are:
 
 \begin{enumerate}
   \item  to redesign the code and check if the number of ``sqrt'' and/or ``division'' calculations can be reduced (by using a pre-calculated value for instance);
-  \item  to explore specific arithmetic compiler options (e.g.: -ffast-math). ``-ffast-math'' allows the compiler to use faster hardware floating point instructions, at the potential expense of IEEE floating point compliance. If your program doesn't need strict compliance, this setting should theoretically net a boost in floating point performance for `\textit{free'}.
+  \item  to explore specific arithmetic compiler options (e.g., -ffast-math). ``-ffast-math'' allows the compiler to use faster hardware floating point instructions, at the potential expense of IEEE floating point compliance. If your program doesn't need strict compliance, this setting should theoretically net a boost in floating point performance for ``\textit{free}''.
   \item  To use \textit{invsqrt}: many modern platforms also offer inverse square root, which has the speed approximately the same as \textit{sqrt}, but is often more useful (e.g., by having \textit{invsqrt} you can compute both \textit{sqrt} and \textit{div} with one multiplication for each).
 \end{enumerate}
 

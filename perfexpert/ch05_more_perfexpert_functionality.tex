@@ -1,5 +1,5 @@
 \chapter{More PerfExpert Functionality}
-\label{ch:More_Perfexpert_Functionality}
+\label{ch:ch05_more_perfexpert_functionality}
 
 \section{Special Options}
 \label{sec:Special_Options}
@@ -7,7 +7,7 @@
 \subsection{Arguments}
 \label{subsec:Arguments}
 
-If your program takes any argument that starts with a "-'' signal, PerfExpert will interpret this as a command line option of its own. To help PerfExpert handle arguments and options correctly, use quotes and add a space before the program's arguments (e.g., " -s 50'').
+If your program takes any argument that starts with a ``-'' signal, PerfExpert will interpret this as a command line option of its own. To help PerfExpert handle arguments and options correctly, use quotes and add a space before the program's arguments (e.g., ``-s 50'').
 
 If your program would normally executed by the command:
 \begin{prompt}
@@ -21,7 +21,7 @@ the PerfExpert command line would become:
 \subsection{Input/Output pipes}
 \label{subsec:IO_Pipes}
 
-When your program reads from standard input via an input pipe (i.e.: ``$<$''), use the ``-i'' option. The Output pipe ('$>$') is not available because PerfExpert already sets a default output file.
+When your program reads from standard input via an input pipe (i.e., ``$<$''), use the ``-i'' option. The Output pipe ('$>$') is not available because PerfExpert already sets a default output file.
 
 If your program would normally executed by the command:
 \begin{prompt}
@@ -86,7 +86,7 @@ The automatic optimization is achieved by using one the 2 extra options:
 
 If you select the~-m~option and the application is composed of multiple files, your source code tree should have a Makefile file to enable PerfExpert compile your code. If your application is composed of a single source code file, the option~-s~is sufficient for you. If you do not select~-m~or~-s~options, PerfExpert requires only the binary code and will show you only the performance analysis report and the list of suggestion for bottleneck remediation.
 
-\strong{Caution:~} PerfExpert may, if you choose to use the full capabilities for automated optimization, change your source code during the process of optimization. PerfExpert always saves the original file with a different name (\textit{e.g.}, mm_omp.c.old\_27301) as well as adds annotations to your source code for each optimization it makes. We cannot, however, fully guarantee that code modifications for optimizations will not break your code. We recommend having a full backup of your original source code before using PerfExpert.
+\strong{Caution:~} PerfExpert may, if you choose to use the full capabilities for automated optimization, change your source code during the process of optimization. PerfExpert always saves the original file with a different name (e.g., mm_omp.c.old\_27301) as well as adds annotations to your source code for each optimization it makes. We cannot, however, fully guarantee that code modifications for optimizations will not break your code. We recommend having a full backup of your original source code before using PerfExpert.
 
 \subsection{Automatic Optimization of single source file}
 \label{subsec:Automatic_Optimization}
@@ -147,7 +147,7 @@ And run in automatic mode:
 \section{Running PerfExpert in Batch mode (with Job Script)}
 \label{sec:Batch_Mode}
 
-One can also run perfexpert in batch mode. This is often desired when the runtime of the program is a bit higher, and you do not want to wait for the results.  You can replace the normal command line to startup your executable (e.g.: ``./mm_omp'') in the jobscript with the perfexpert command line. (e.g.: ``\textit{perfexpert -c 0.3 mm_omp}''). When running your application with a jobscript, be sure to specify a running time that is about 6x the normal running time of the program.
+One can also run perfexpert in batch mode. This is often desired when the runtime of the program is a bit higher, and you do not want to wait for the results.  You can replace the normal command line to startup your executable (e.g., ``./mm_omp'') in the jobscript with the perfexpert command line. (e.g., ``\textit{perfexpert -c 0.3 mm_omp}''). When running your application with a jobscript, be sure to specify a running time that is about 6x the normal running time of the program.
 
 Compile the parallel Matrix Multiplication program, explore the job-script and submit the job:
 

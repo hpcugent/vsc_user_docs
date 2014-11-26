@@ -1,10 +1,6 @@
 #!/bin/bash
 
 
-  # choose queue: qshort (1h), qreg (24h), qlong (72h), qxlong (168h)
-#PBS -q qshort
-
-
   # "name" of the job (optional)
 #PBS -N my_serial_job         
 
@@ -23,13 +19,14 @@
 #  #PBS -l pvmem=16000m
 
 
-  # send mail notification (optional)
+  # send mail notification (optional); may be combined, e.g., -m abe
   #   a        when job is aborted
   #   b        when job begins
   #   e        when job ends
-  #   M        your e-mail address (should always be specified)
 #PBS -m e
-#PBS -M stefan.becuwe@ua.ac.be
+
+  #   M        specify alternate e-mailaddress; default is your institute address
+# #PBS -M my.other.address@mail.com
 
 
   # redirect standard output (-o) and error (-e) (optional)
