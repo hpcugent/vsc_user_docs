@@ -42,7 +42,11 @@ nuclear weapons, and nuclear fusion).\footnote{Wikipedia}
 \section{What is the \hpc?}
 \label{sec:what-is-the-hpc}
 
-The \hpc is a collection computers with Intel processors, running a Linux
+The \hpc is a collection computers with
+\ifbrussel
+AMD and
+\fi
+Intel processors, running a Linux
 operating system, shaped in the form of lunch boxes and stored above and next
 to each other in racks, interconnected with copper and fiber lines. Their number crunching
 power is (presently) measured in hundreds of billions of floating point
@@ -103,6 +107,22 @@ and Hopper:
            300 GB local disk, DDR-IB network, 2 Intel Xeon Phis
   \end{enumerate}
 \fi
+\ifbrussel
+  \begin{enumerate}
+    \item  48 compute nodes with 2 4-core AMD 2378 (Shanghai) processors, 32 GB memory,
+           72 GB local disk, SDR-IB network
+    \item  64 compute nodes with 2 8-core AMD 6134 (Magnycours) processors, 64 GB memory,
+           1 TB local disk, QDR-IB network
+    \item  9 compute nodes with 2 16-core AMD 6274 (Interlagos) processors, 256 GB memory,
+           900 GB local disk, QDR-IB network
+    \item  29 nodes with 2 10-core INTEL E5-2680v2 (IvyBridge) processors, 64 GB memory,
+           900 GB local disk, QDR-IB network
+    \item  6 nodes with 2 10-core INTEL E5-2680v2 (IvyBridge) processors, 64 GB memory,
+           900 GB local disk, QDR-IB network, 2 Tesla K20x NVIDIA GPGPUs with 6Gb memory 
+    \item  2 nodes with 2 10-core INTEL E5-2680v2 (IvyBridge) processors, 64 GB memory,
+           900 GB local disk, QDR-IB network, 2 Intel Xeon Phi 5110P coprocessors with Gb memory
+  \end{enumerate}
+\fi
 %TODO insert specs for other sites
 
 \ifantwerpen
@@ -112,6 +132,11 @@ with \emph{cpuset} support and \emph{BLCR} modules.
 \fi
 \ifleuven
 All the nodes in the \hpc run under the ``\operatingsystem'' operating system, version 6.
+\fi
+\ifbrussel
+All the nodes in the \hpc run under the ``\operatingsystemSL'' operating
+system, which is a clone of ``\operatingsystemRHEL'', 
+with \emph{cpuset} support.
 \fi
 %TODO insert specs for other sites
 
@@ -139,6 +164,12 @@ For maintenance and monitoring, we use:
     \begin{enumerate}
       \item  Ganglia: monitoring software;
       \item  Icinga: alert manager.
+    \end{enumerate}
+\fi
+\ifbrussel
+    \begin{enumerate}
+      \item  Bright Cluster Manager;
+      \item  Zabbix: monitoring system.
     \end{enumerate}
 \fi
 %TODO check tools for other sites
@@ -220,10 +251,30 @@ C/C++, FORTRAN, Java, Perl, Python, MATLAB, R, etc.
 Supported and commonly used compilers are GCC, clang, J2EE and Intel Cluster
 Studio.
 
+\ifantwerpen
 Commonly used software packages are ABINIT, CP2K, Gaussian, Gromacs, Molpro,
 NWChem, Quantum Espresso, R, Siesta, TURBOMOLE, WIEN2k,\ldots
 
 Commonly used Libraries are Intel MKL, FFTW, HDF5, PETSc and Intel MPI, M(VA)PICH, OpenMPI.
+\fi
+\ifgent
+Commonly used software packages are ABINIT, CP2K, Gaussian, Gromacs, Molpro,
+NWChem, Quantum Espresso, R, Siesta, TURBOMOLE, WIEN2k,\ldots
+
+Commonly used Libraries are Intel MKL, FFTW, HDF5, PETSc and Intel MPI, M(VA)PICH, OpenMPI.
+\fi
+\ifleuven
+Commonly used software packages are ABINIT, CP2K, Gaussian, Gromacs, Molpro,
+NWChem, Quantum Espresso, R, Siesta, TURBOMOLE, WIEN2k,\ldots
+
+Commonly used Libraries are Intel MKL, FFTW, HDF5, PETSc and Intel MPI, M(VA)PICH, OpenMPI.
+\fi
+\ifbrussel
+Commonly used software packages are CP2K, Gaussian, MATLAB, 
+NWChem, R,\ldots
+
+Commonly used Libraries are Intel MKL, FFTW, HDF5, PETSc and Intel MPI, OpenMPI.
+\fi
 
 Additional software can be installed ``\emph{on demand}''. Please check the
 \hpc staff to see whether the \hpc can handle your specific requirements.
