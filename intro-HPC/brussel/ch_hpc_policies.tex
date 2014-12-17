@@ -2,7 +2,7 @@
 \label{ch:hpc-policies}
 
 The cluster has been setup to support the ongoing research in all the domains
-at the University of Antwerp.  As such, it should be considered as valuable
+at the Free University of Brussels.  As such, it should be considered as valuable
 research equipment.  User shall not abuse the system for other purposes. By
 registering, users accept this implicit user agreement.
 
@@ -10,31 +10,9 @@ In order to shared resources in a fair way, a number of site policies have been
 implemented:
 
 \begin{enumerate}
-\item  Single user node policy
 \item  Priority based scheduling
 \item  Fairshare mechanism
-\item  Crediting system
 \end{enumerate}
-
-\section{Single user node policy}
-
-Each user will have exclusive access to the nodes that are assigned to him.
-This means that no jobs from other users will be executed on the nodes during
-your computations.  Of course, it is very likely that multiple jobs from the
-same user are being send to the same node at the same time, in order to
-maximize the utilization of the remaining available resources.
-
-The motivation behind this ``one node, one user'' policy is:
-
-\begin{enumerate}
-\item  Parallel jobs can suffer badly if they don't have exclusive access to the full node.
-\item  Sometimes the wrong job gets killed if a user uses more memory than requested and a node runs out of memory.  With this policy, a user cannot affected by the malicious software from other users.
-\item  A user may accidentally spawn more processes/threads and use more cores than expected (depends on the OS).
-\end{enumerate}
-
-The scheduler will (try to) fill up a node with several jobs from the same
-user. If you don't have enough work for a single node, you need a good PC and
-not a supercomputer.
 
 \section{Priority based scheduling?}
 
@@ -49,7 +27,7 @@ Currently, the priority calculation is based on:
 
 \begin{enumerate}
 \item  the time a job is queued: the priority of a job is increased in accordance to the time (in minutes) it is waiting in the queue to get started;
-\item  a ``\emph{Fairshare}'' window of 7 days with a target of 12\%: the priority of jobs of a user who has used too many resources over the current ``\emph{Fairshare}'' window is lowered.
+\item  \strong{UPDATE THIS} a ``\emph{Fairshare}'' window of 7 days with a target of 12\%: the priority of jobs of a user who has used too many resources over the current ``\emph{Fairshare}'' window is lowered.
 \end{enumerate}
 
 The Priority system can of course be adapted in the future, but this will be will be communicated.
@@ -57,7 +35,7 @@ The Priority system can of course be adapted in the future, but this will be wil
 \section{Fairshare mechanism}
 
 A ``\emph{Fairshare}'' system has been setup to allow all users to get their
-fair share of the UA-HPC utilization.  The mechanism incorporates historical
+fair share of the VUB-HPC utilization.  The mechanism incorporates historical
 resource utilization over the last week.  A users ``Fairshare'' index is used
 to adapt its job priority in the queue.  It only affects its job's priority
 relative to other available jobs. When there are no other competing jobs, the

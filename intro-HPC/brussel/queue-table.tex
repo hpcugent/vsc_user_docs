@@ -1,9 +1,11 @@
 \begin{tabular}{|p{0.6in}|p{1.4in}|p{1.2in}|p{0.9in}|p{0.9in}|} \hline
-\strong{Queue\newline category} & \multicolumn{2}{|p{1.5in}|}{\strong{Walltime}} & \multicolumn{2}{|p{1.4in}|}{\strong{Max \# Jobs}} \\ \hline
-\strong{} & \strong{Minimum / from\newline (value not included)} & \strong{Maximum / to \newline (value included)} & \strong{Queuable} & \strong{Runnable} \\ \hline
-qshort  & 0      & 1 hour  & 1000 & 500 \\ \hline
-qreg    & 1 hour & 1 day   & 1000 & 100 \\ \hline
-qlong   & 1 day  & 3 days  & 500  & 100 \\ \hline
-qxlong  & 3 days & 7 days  & 50   & 25  \\ \hline
-qxxlong & 7 days & 21 days & 8    & 2   \\ \hline
+\strong{Job\newline category} & \strong{Maximum\newline Walltime} & \strong{Number of nodes\newline (min-max)} & \strong{Queuable\newline jobs} & \strong{Max number of\newline occupied CPUs} \\ \hline
+smp     & 336 hours  & 1-1  & 300 & \multirow{3}{*}{120} \\ \hline
+mpi     & 168 hours  & 2-12 & 40  & \\ \hline
+mpi_ddr & 336 hours  & 2-8  & 50  & \\ \hline
 \end{tabular}
+\begin{tablenotes}
+\small
+\item You do not have to specify \strong{Job Category} when you submit your job, it is classified by the queuesystem.
+      The mpi_ddr jobs run on older machines having a slower infiniband network.
+\end{tablenotes}
