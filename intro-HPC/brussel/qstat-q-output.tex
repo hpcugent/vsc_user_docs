@@ -2,14 +2,26 @@
 %\shellcmd{qstat -q}%
 server: %\pbsserver%
 
-Queue      Memory CPU Time Walltime Node  Run Que Lm  State
------------------ -------- -------- ----  --- --- --  -----
-qdef         --      --       --      --    0   0 --   E R
-qlong        --      --    72:00:00   --  113 117 --   E R
-qreg         --      --    24:00:00   --    7  16 --   E R
-qshort       --      --    01:00:00   --    1   0 --   E R
-qxlong       --      --    168:00:0   --   23   0 --   E R
-qxxlong      --      --    504:00:0   --    5   0 --   E R
-                                         ----- -----
-                                          149  133
+Queue            Memory CPU Time Walltime Node  Run Que Lm  State
+---------------- ------ -------- -------- ----  --- --- --  -----
+hadoop8            --      --    240:00:0     8   0   0 --   E R
+submission         --      --       --      --    0 2377 --   E R
+ghostx7            --      --    360:00:0     2   0   0 --   E R
+smp                --      --    336:00:0     1 674 206 --   E R
+ghostx6            --      --    360:00:0     2   0   0 --   E R
+ghostx1            --      --    360:00:0     5   1   4 --   E R
+hadoop             --      --    240:00:0   --    0   0 --   E R
+login              --      --    240:00:0   --    0   0 --   D S
+mpi_intel          --      --    168:00:0    12   0   0 --   E R
+ghostx9            --      --    366:00:0   --    0   0 --   E R
+ghostx4            --      --    360:00:0     1   0   0 --   E R
+ghostx3            --      --    360:00:0     2   0   0 --   E R
+mpi_ddr            --      --    336:00:0     8   0  23 --   E R
+ghostx5            --      --    360:00:0     1   0   0 --   E R
+ghostx8            --      --    360:00:0     9   0   1 --   E R
+mpi                --      --    168:00:0    12   1   2 --   E R
+ghostx2            --      --    360:00:0   --    0   0 --   E R
+test               --      --    240:00:0   --    0   0 --   E R
+                                               ----- -----
+                                                 676  2613
 \end{prompt}

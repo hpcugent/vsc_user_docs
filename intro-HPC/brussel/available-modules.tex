@@ -1,29 +1,26 @@
 \begin{prompt}
 %\shellcmd{module av 2>\&1 | more}%
---- /apps/local/turing/harpertown/modules ---
-ADF/2012.01
-DALTON/2011.v0
-FASTX/0.0.13
-FILTLAN/1.0a-ictce-3.2.2.u2
-FastQC/0.10.1
-GROMACS/4.5.1-ictce-3.2.2.u2
-GenomeAnalysisTK/2.2-3
+------------------- /apps/brussel/shanghai/modules/2014b/all -------------------
+annotate/1.42.1-intel-2014b-R-3.1.1
+ant/1.9.3-Java-1.7.0_60
+Autoconf/2.69-intel-2014b
+biomaRt/2.20.0-intel-2014b-R-3.1.1
+BioPerl/1.6.924-intel-2014b-Perl-5.20.0
+Bio-SamTools/1.39-intel-2014b-Perl-5.20.0
+BISICLES/2558-intel-2014b-Chombo-3.2-21908
 %\dots%
 \end{prompt}
 
 ``module av'' is an abbreviation for ``module available''.
 
 Or when you want to check whether some specific software, some compiler or some
-application (e.g., Molpro) is installed on the \hpc.
+application (e.g., netCDF) is installed on the \hpc.
 
 \begin{prompt}
-%\shellcmd{module av 2>\&1 | grep -i -e "molpro"}%
-Molpro/2009.1-OpenMPI-1.4.1
-Molpro/2009.1-ga-4.3.1-TCGMSG-MPI-ictce-3.2.2.u2
-Molpro/2009.1-ga-4.3.2-TCGMSG-MPI-ictce-3.2.2.u2
-Molpro/2009.1-ictce-3.2.2.013.u4
-Molpro/2010.1-MPI-ictce-3.2.2.u2
-Molpro/2010.1-ga-4.3.2-TCGMSG-MPI-ictce-3.2.2.u2
+%\shellcmd{module av 2>\&1 | grep -i -e "netcdf"}%
+netCDF/4.3.2-intel-2014b
+netCDF-C++4/4.2.1-intel-2014b
+netCDF-Fortran/4.4.0-intel-2014b
 \end{prompt}
 
 As you are not aware of the capitals letters in the module name, we looked for
