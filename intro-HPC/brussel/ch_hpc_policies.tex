@@ -27,7 +27,7 @@ Currently, the priority calculation is based on:
 
 \begin{enumerate}
 \item  the time a job is queued: the priority of a job is increased in accordance to the time (in minutes) it is waiting in the queue to get started;
-\item  \strong{UPDATE THIS} a ``\emph{Fairshare}'' window of 7 days with a target of 12\%: the priority of jobs of a user who has used too many resources over the current ``\emph{Fairshare}'' window is lowered.
+\item  a ``\emph{Fairshare}'' window of 24*8 hours with a target of 10\%: the priority of jobs of a user who has used too many resources over the current ``\emph{Fairshare}'' window is lowered (with a maximum of 10\% per 8 hours window).
 \end{enumerate}
 
 The Priority system can of course be adapted in the future, but this will be will be communicated.
@@ -35,7 +35,7 @@ The Priority system can of course be adapted in the future, but this will be wil
 \section{Fairshare mechanism}
 
 A ``\emph{Fairshare}'' system has been setup to allow all users to get their
-fair share of the VUB-HPC utilization.  The mechanism incorporates historical
+fair share of the \hpcname utilization.  The mechanism incorporates historical
 resource utilization over the last week.  A users ``Fairshare'' index is used
 to adapt its job priority in the queue.  It only affects its job's priority
 relative to other available jobs. When there are no other competing jobs, the
