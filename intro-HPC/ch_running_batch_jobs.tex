@@ -510,6 +510,8 @@ The following table contains some node-specific properties that can be used to
 make sure the job will run on nodes with a specific CPU or interconnect. Note
 that these properties may very over the different VSC sites.
 
+%TODO insert specs for other sites
+/ifantwerpen
 \begin{tabular}{|p{0.7in}|p{5.3in}|} \hline
 \strong{Property} & \strong{Explanation}                                        \\ \hline
 harpertown        & only use Intel processors from the Harpertown family (54xx) \\ \hline
@@ -518,6 +520,23 @@ sandybridge       & only use Intel processors from the Sandy Bridge family (26xx
 ivybridge         & only use Intel processors from the Ivy Bridge family (26xx-v2)       \\ \hline
 ib                & use Infiniband interconnect                                 \\ \hline
 \end{tabular}
+/fi
+/ifbrussel
+\begin{tabular}{|p{0.7in}|p{5.3in}|} \hline
+\strong{Property} & \strong{Explanation}                                        \\ \hline
+shanghai          & only use AMD Shanghai processors (AMD 2378) \\ \hline
+magnycours        & only use AMD Magnucours processors (AMD 6134) \\ \hline
+interlagos        & only use AMD Interlagos processors (AMD 6272) \\ \hline
+barcelona         & only use AMD Shanghai and Magnycours processors \\ \hline
+amd               & only use AMD processors \\ \hline
+ivybridge         & only use Intel Ivy Bridge processors (E5-2680-v2) \\ \hline
+intel             & only use Intel processors \\ \hline
+gpgpu             & only use nodes with General Purpose GPUs (GPGPUs) \\ \hline
+k20x              & only use nodes with NVIDIA Tesla K20x GPGPUs \\ \hline
+xeonphi           & only use nodes with Xeon Phi co-porcessors \\ \hline
+phi5110p          & only use nodes with Xeon Phi 5110P o-porcessors \\ \hline
+\end{tabular}
+/fi
 
 To get a list of all properties defined for all nodes, enter
 \begin{prompt}
