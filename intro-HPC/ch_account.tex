@@ -36,13 +36,13 @@ Terminal.
   \label{sec:install-putty}
 
   We recommend to use the PuTTY tools package, which is freely available. You
-  do not even need to install; just download the executable and run it!
+  do not need to install PuTTY, you can download the putty and PuTTYgen executable
+  and directly run it. This can be usefull in situations where you do not have the
+  required permissions to install software on the computer you are using.
   Alternatively, an installation package is also available.
 
-  Download PuTTY and install it in the C:\textbackslash Program Files (x86)\textbackslash PuTTY directory.
-
-  Google ``\emph{PuTTY download}'' or go directly to the official download
-  address: \url{http://www.chiark.greenend.org.uk/\~sgtatham/putty/}
+  You can download putty from the official address:
+  \url{http://www.chiark.greenend.org.uk/\~sgtatham/putty/}
 
   The PuTTY package consists of several components:
 
@@ -60,12 +60,10 @@ Terminal.
   \label{sec:generate-key-pair}
 
   Before requesting a VSC account, you need to generate a pair of \emph{ssh}
-  keys. By default, there is no \strong{\emph{ssh}} client software available
-  on Windows, so you will typically have to install one yourself. One popular and
-  recommended way to do this on Windows is using the freely available
-  \strong{\emph{PuTTY}} client, which you can then also use to log on to the
-  clusters.
-
+  keys. We need 2 keys, a public and a private key. You can visualize the public
+  key as a lock to which only you have the key (your private key). You can send
+  your lock to anyone without any problems, because only you know how to open it,
+  as long as you keep your private key secure.
   To generate a public/private key pair, you can use the PuTTYgen key generator.
 
   Start \strong{\emph{PuTTYgen.exe}} it and follow these steps:
@@ -79,7 +77,8 @@ Terminal.
     \item  Click on \keys{Generate}. To generate the key, you must move
       the mouse cursor over the PuTTYgen window (this generates some random
       data that PuTTYgen uses to generate the key pair). Once the key pair is
-      generated, your public key is shown in the field \keys{Public key for pasting into OpenSSH authorized\_keys file}.
+      generated, your public key is shown in the field
+      \keys{Public key for pasting into OpenSSH authorized\_keys file}.
     \item  Next, it is advised to fill in the \keys{Key comment} field
       to make it easier identifiable afterwards.
     \item  Next, you should specify a passphrase in the \keys{Key passphrase}
@@ -87,6 +86,10 @@ Terminal.
       Remember, the passphrase protects the private key against unauthorized
       use, so it is best to choose one that is not too easy to guess but that
       you can still remember.
+      Using a passphrase is not required, but we recommend you to use a good
+      passphrase unless you are certain that your computers hard disk is
+      encrypted with a decent password. (If you are not sure your disk is
+      encrypted, it probably isn\'t.
 
     \includegraphics*[width=3.39in, height=3.28in, keepaspectratio=false]{ch2-puttygen-password}
 
@@ -112,7 +115,7 @@ Terminal.
 \iflinux
   To open a Terminal window in Linux, open the Finder and choose
 
-  Launch a terminal from your desktop’s application menu and you will see the bash shell. 
+  Launch a terminal from your desktop’s application menu and you will see the bash shell.
   There are other shells, but most Linux distributions use bash by default.
 \fi
 
@@ -221,26 +224,11 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
 \section{Applying for the account}
 \label{sec:applying-for-the-account}
 
-Users of the \university need to follow the instructions in \autoref{sec:users-of-university}.
-
-Other users of the \association, need to follow the instructions in \autoref{sec:users-of-association}.
-
-\subsection{Users of \university}
-\label{sec:users-of-university}
-
 Open the following webpage from within the \university campus network (or using a VPN
-connection) \url{https://account.vscentrum.be/req} and choose ``\sitename'' as your VSC
-site.
+connection) \url{https://account.vscentrum.be/}
 
-Browse to \url{https://account.vscentrum.be/req}
-
-Choose ``\sitename'' as your VSC site.
-
-Click $<$Submit$>$
-
-\includegraphics*[width=5.77in, height=3.51in, keepaspectratio=false]{ch2-browser-select-site}
-
-You will now be taken to a website of BELNET, where you have to select your ``Home Organization''.
+You will be taken to a website of BELNET, where you have to select your ``Home Organization''.
+For faster logins in the future you can select the 'Remeber selection' checkboxes.
 
 \includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate}
 
@@ -252,12 +240,39 @@ You will now be taken to the authentification page of your institute.
 
 \ifantwerpen
 \includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate-institute}
-\fi
 
-After you log in using your \university login and password (the one you also
-use for Webmail, \ldots ), you will be asked to upload the file that contains
-your public key, i.e., the file ``id\_rsa.pub'' which you should already have
-generated.
+\strong{The site is only accessible from within the \university
+domain}, so the page won't load from, e.g., home. However, you can also get
+external access to the \university domain using VPN. We refer to the \university ICT infocenter
+for more information.
+
+\subsection{Users of the \association}
+\label{sec:users-of-association}
+
+All users (researchers, academic staff, etc.) from the higher education
+institutions associated with \university can get a VSC account via the \university. There is not
+yet an automated form to request your personal VSC account.
+
+Please e-mail the \hpc staff to get an account (see Contacts information).
+You will have to provide a public \emph{ssh} key generated as described
+above. Please attach your public key (i.e., the file named ``id\_rsa.pub''),
+which you will normally find in your .ssh subdirectory within your HOME
+Directory. (i.e., /Users/$<$username$>$/.ssh/id\_rsa.pub).
+
+
+\fi % END IF ANTWERPEN
+
+\ifgent
+You will now have to log in with CAS using your UGent account, and then be requested
+to share your Mail and Affiliation with KU Leuven (which actually means the VSC accountpage)
+Select the 'Remember' checkbox and click 'Yes, continue'
+\fi
+%TODO: other institute login information explained here?
+
+After you log in using your \university login and password,
+you will be asked to upload the file that contains
+your public key, i.e., the file ``id\_rsa.pub'' which you have
+generated earlier.
 
 \ifwindows
   This file should have been stored in the directory
@@ -276,39 +291,9 @@ generated.
 \end{tip}
 \fi
 
-You will get an e-mail to confirm your account request. After the VSC staff has
-approved the account, your account will be created and you will get a
-confirmation e-mail.
-
-\ifantwerpen % IF ANTWERPEN
-\strong{The site is only accessible from within the \university
-domain}, so the page won't load from, e.g., home. However, you can also get
-external access to the \university domain using VPN. We refer to the \university ICT infocenter
-for more information.
-
-\subsection{Users of the \association}
-\label{sec:users-of-association}
-
-All users (researchers, academic staff, etc.) from the higher education
-institutions associated with \university can get a VSC account via the \university. There is not
-yet an automated form to request for your personal VSC account.
-
-Please e-mail the \hpc staff to get an account (see Contacts information).
-You will have to provide a public \emph{ssh} key generated as described
-above. Please attach your public key (i.e., the file named ``id\_rsa.pub''),
-which you will normally find in your .ssh subdirectory within your HOME
-Directory. (i.e., /Users/$<$username$>$/.ssh/id\_rsa.pub).
-
-
-\ifmac % IF MAC
-\begin{tip}
-  As ``.ssh'' is an invisible directory, the Finder will
-  not show it by default. The easiest way to access the folder, is by pressing
-  Apple-Shift-G, which will allow you to enter the name of a directory, which
-  you would like to open in Finder. Here, type ``\tilde/.ssh'' and press enter.
-\end{tip}
-\fi % END IF MAC
-\fi % END IF ANTWERPEN
+After you have uploaded your public key you will receive an email with a link to
+confirm your email address. After confirming your email address the VSC staff will
+review and if applicable approve your account.
 
 \subsection{Welcome e-mail}
 \label{sec:welcome-email}
@@ -316,11 +301,18 @@ Directory. (i.e., /Users/$<$username$>$/.ssh/id\_rsa.pub).
 Within one day, you should receive a Welcome e-mail with your VSC account details.
 
 \begin{flattext}
-Welcome xxx,
-* Your vsc-username is %\userid%
-* You can view your profile details at https://account.vscentrum.be/req
-* For further info please visit https://vscentrum.be/neutral/documentation
-Your VSC-admin
+Dear xxxxxxx,
+Your VSC-account has been approved by an administrator.
+Your vsc-username is vscxxxxx
+
+Your account should be fully active within one hour.
+To check or update your account information please visit
+https://account.vscentrum.be/
+
+For further info please visit https://vscentrum.be/neutral/documentation
+
+Kind regards,
+-- The VSC administrators
 \end{flattext}
 
 Now, you can start using the \hpc.
@@ -386,6 +378,10 @@ Now, you can start using the \hpc.
     \item  The first time you make a connection to the loginnode, a Security
       Alert will appear and you will be asked to verify the authenticity of the
       loginnode.
+      \ifgent
+      Make sure the fingerprint in the Alert matches \strong{2f:0c:f7:76:87:57:f7:5d:2d:7b:d1:a1:e1:86:19:f3}
+      \fi
+      %TODO: fingerprints for other institution login nodes?
 
   \includegraphics*[width=3.91in, height=2.42in, keepaspectratio=false]{ch2-putty-verify-authenticity}
 
@@ -468,6 +464,7 @@ intro-python/
 intro-vi/
 \end{prompt}
 
+%TODO: make sure this data is here
 This directory currently contains all training material for the use of:
 
 \begin{enumerate}
@@ -493,8 +490,8 @@ As we are interested in the use of the \strong{\emph{HPC}}, move further to
 .
 `-- examples
     %\textbar%-- Compiling-and-testing-your-software-on-the-HPC
-    %\textbar%-- Fine-tuning-Job-Specifications 
-    %\textbar%-- Multi-core-jobs-Parallel-Computing 
+    %\textbar%-- Fine-tuning-Job-Specifications
+    %\textbar%-- Multi-core-jobs-Parallel-Computing
     %\textbar%-- Multi-job-submission
     %\textbar%-- Program-examples
     %\textbar%-- Running-batch-jobs
@@ -538,10 +535,10 @@ please refer to the following sites:
 \end{enumerate}
 \end{tip}
 
-The first action is to copy the contents of the \hpc examples directory 
-to your home directory, so that you have your own personal copy and that 
-you can start using the examples. The ``-r'' option of the copy command 
-will also copy the contents of the sub-directories ``\emph{recursively}''.  
+The first action is to copy the contents of the \hpc examples directory
+to your home directory, so that you have your own personal copy and that
+you can start using the examples. The ``-r'' option of the copy command
+will also copy the contents of the sub-directories ``\emph{recursively}''.
 
 \begin{prompt}
 %\shellcmd{cp --r \examplesdir \tilde/}%
