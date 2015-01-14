@@ -37,7 +37,8 @@ and gas exploration, molecular modeling (computing the structures and
 properties of chemical compounds, biological macromolecules, polymers, and
 crystals), and physical simulations (such as simulations of the early moments
 of the universe, airplane and spacecraft aerodynamics, the detonation of
-nuclear weapons, and nuclear fusion).\footnote{Wikipedia: \url{http://en.wikipedia.org/wiki/Supercomputer}}
+nuclear weapons, and nuclear fusion).
+\footnote{Wikipedia: \url{http://en.wikipedia.org/wiki/Supercomputer}}
 
 \section{What is the \hpc?}
 \label{sec:what-is-the-hpc}
@@ -51,9 +52,9 @@ AMD and
 \fi
 Intel processors, running a Linux
 operating system, shaped in the form of pizza boxes and stored above and next
-to each other in racks, interconnected with copper and fiber lines. Their number crunching
-power is (presently) measured in hundreds of billions of floating point
-operations (gigaflops) and even in Teraflops.
+to each other in racks, interconnected with copper and fiber lines. Their
+number crunching power is (presently) measured in hundreds of billions of
+floating point operations (gigaflops) and even in Teraflops.
 
 \includegraphics*[width=1.88in, height=1.26in, keepaspectratio=false]{ch1-cables1}
 \includegraphics*[width=1.88in, height=1.26in, keepaspectratio=false]{ch1-cables2}
@@ -81,8 +82,8 @@ The \hpc currently consists of:
 \ifantwerpen
 Turing:
   \begin{enumerate}
-    \item  64 compute nodes with 2 quad core Harpertown processors, 16 GB memory,
-           120 GB local disk, GbE network
+    \item  64 compute nodes with 2 quad core Harpertown processors, 16 GB
+    memory, 120 GB local disk, GbE network
     \item  32 nodes with 2 quad core Harpertown processors, 16 GB memory,
            120 GB local disk, DDR-IB network
     \item  64 nodes with 2 six core Westmere processors, 24 GB memory,
@@ -112,40 +113,44 @@ and Hopper:
 \fi
 \ifbrussel
   \begin{enumerate}
-    \item  48 compute nodes with 2 4-core AMD 2378 (Shanghai) processors, 32 GB memory,
-           72 GB local disk, SDR-IB network
-    \item  64 compute nodes with 2 8-core AMD 6134 (Magnycours) processors, 64 GB memory,
-           1 TB local disk, QDR-IB network
-    \item  9 compute nodes with 2 16-core AMD 6274 (Interlagos) processors, 256 GB memory,
-           900 GB local disk, QDR-IB network
-    \item  29 nodes with 2 10-core INTEL E5-2680v2 (IvyBridge) processors, 64 GB memory,
-           900 GB local disk, QDR-IB network
-    \item  6 nodes with 2 10-core INTEL E5-2680v2 (IvyBridge) processors, 64 GB memory,
-           900 GB local disk, QDR-IB network, 2 Tesla K20x NVIDIA GPGPUs with 6Gb memory
-    \item  2 nodes with 2 10-core INTEL E5-2680v2 (IvyBridge) processors, 64 GB memory,
-           900 GB local disk, QDR-IB network, 2 Intel Xeon Phi 5110P coprocessors with Gb memory
+    \item  48 compute nodes with 2 4-core AMD 2378 (Shanghai) processors, 32 GB
+    memory, 72 GB local disk, SDR-IB network
+    \item  64 compute nodes with 2 8-core AMD 6134 (Magnycours) processors, 64
+    GB memory, 1 TB local disk, QDR-IB network
+    \item  9 compute nodes with 2 16-core AMD 6274 (Interlagos) processors, 256
+    GB memory, 900 GB local disk, QDR-IB network
+    \item  29 nodes with 2 10-core INTEL E5-2680v2 (IvyBridge) processors, 64
+    GB memory, 900 GB local disk, QDR-IB network
+    \item  6 nodes with 2 10-core INTEL E5-2680v2 (IvyBridge) processors, 64 GB
+    memory, 900 GB local disk, QDR-IB network, 2 Tesla K20x NVIDIA GPGPUs with
+    6Gb memory
+    \item  2 nodes with 2 10-core INTEL E5-2680v2 (IvyBridge) processors, 64 GB
+    memory, 900 GB local disk, QDR-IB network, 2 Intel Xeon Phi 5110P
+    coprocessors with Gb memory
   \end{enumerate}
 \fi
 \ifgent
   \begin{enumerate}
-    \item  gastly: 46 compute nodes with 2 4-core Intel L5520 (Nehalem) processors, 12 GB memory,
-           90 GB local disk, GBe network
-    \item  haunter: 151 compute nodes with 2 4-core Intel L5520 (Nehalem) processors, 12 GB memory,
-           90 GB local disk, GBe network
-    \item  gulpin: 32 compute nodes with 2 8-core AMD Opteron 6136 (Magny-Cours) processors, 64 GB memory,
-           483 GB local disk, Double QDR-IB network
-    \item  dugtrio: 16 compute nodes with 2 6-core Intel X5675 (Westmere-EP) processors, 96 GB memory,
-           483 GB local disk, Double QDR-IB network. This is a Symmetric Multi-Processing (SMP) machine
-           based on ScaleMP\'s vSMP Foundation (Reverse virtualization)
-    \item  raichu: 64 compute nodes with 2 8-core Intel E5-2670 (Sandy Bridge) processors, 32 GB memory,
-           400 GB local disk, GBe network
-    \item  delcatty: 160 compute nodes with 2 8-core Intel E5-2670 (Sandy Bridge) processors, 32 GB memory,
-           400 GB local disk, FDR-IB network
-    \item  phanpy: 16 compute nodes with 2 12-core Intel E5-2680v3 (Haswell-EP) processors, 512 GB memory,
-           3X 400 GB local disk (SSD), Dual FDR-IB network
-    \item  goleth: 140 compute nodes with 2 12-core Intel E5-2680v3 (Haswell-EP) processors, 64 GB memory,
-           900 GB local disk, QDR-IB network
-  \end{enumerate}
+    \item[gastly] 46 compute nodes with 2 4-core Intel L5520 (Nehalem)
+    processors, 12 GB memory, 90 GB local disk, GBe network
+    \item  haunter: 151 compute nodes with 2 4-core Intel L5520 (Nehalem)
+    processors, 12 GB memory, 90 GB local disk, GBe network
+    \item  gulpin: 32 compute nodes with 2 8-core AMD Opteron 6136
+    (Magny-Cours) processors, 64 GB memory, 483 GB local disk, Double QDR-IB
+    network
+    \item  dugtrio: 16 compute nodes with 2 6-core Intel X5675 (Westmere-EP)
+    processors, 96 GB memory, 483 GB local disk, Double QDR-IB network. This is
+    a Symmetric Multi-Processing (SMP) machine based on ScaleMP\'s vSMP
+    Foundation (Reverse virtualization)
+    \item  raichu: 64 compute nodes with 2 8-core Intel E5-2670 (Sandy Bridge)
+    processors, 32 GB memory, 400 GB local disk, GBe network \item  delcatty:
+    160 compute nodes with 2 8-core Intel E5-2670 (Sandy Bridge) processors, 32
+    GB memory, 400 GB local disk, FDR-IB network
+    \item  phanpy: 16 compute nodes with 2 12-core Intel E5-2680v3 (Haswell-EP)
+    processors, 512 GB memory, 3X 400 GB local disk (SSD), Dual FDR-IB network
+    \item  golett: 140 compute nodes with 2 12-core Intel E5-2680v3
+    (Haswell-EP) processors, 64 GB memory, 900 GB local disk, QDR-IB network
+    \end{enumerate}
 \fi
 %TODO insert specs for other sites
 
@@ -155,7 +160,8 @@ system, which is a clone of ``\operatingsystemRHEL'',
 with \emph{cpuset} support and \emph{BLCR} modules.
 \fi
 \ifleuven
-All the nodes in the \hpc run under the ``\operatingsystem'' operating system, version 6.
+All the nodes in the \hpc run under the ``\operatingsystem'' operating system,
+version 6.
 \fi
 \ifbrussel
 All the nodes in the \hpc run under the ``\operatingsystemSL'' operating
@@ -163,7 +169,7 @@ system, which is a clone of ``\operatingsystemRHEL'',
 with \emph{cpuset} support.
 \fi
 \ifgent
-All the nodes in the \hpc run under the ``\operatingsystem'' operating system, version 6.
+All the nodes in the \hpc run ``\operatingsystem''.
 \fi
 %TODO insert specs for other sites
 
@@ -176,7 +182,8 @@ Two tools perform the \strong{job management} and \strong{job scheduling}:
 %\strong{Accounting} is handled by a third tool, i.e., GOLD.
 \fi
 \ifleuven
-\strong{Accounting} is handled by a third tool, i.e., MAM (Moab Accounting Manager).
+\strong{Accounting} is handled by a third tool, i.e., MAM (Moab Accounting
+Manager).
 \fi
 %TODO check whether others use accounting
 
@@ -236,7 +243,7 @@ interaction is needed, the computer will wait for user input. The available
 computer resources (CPU, storage, network, etc.) might not be optimally used in
 those cases. A more in-depth analysis with the \hpc staff can unveil whether
 the \hpc is the desired solution to run interactive programs.
-Interactive mode is typically only usefull for creating quick visualisations
+Interactive mode is typically only useful for creating quick visualisations
 of your data without having to copy your data to your desktop and back.
 %TODO: only visualization nodes should be used interactively
 
@@ -274,7 +281,8 @@ sweep). This is another form of running your sequential programs in parallel.
 
 You can use \emph{any} programming language, \emph{any} software package and
 \emph{any} library provided it has a version that runs on Linux, specifically,
-on the version of Linux that is installed on the compute nodes, \operatingsystembase.
+on the version of Linux that is installed on the compute nodes,
+\operatingsystembase.
 
 For the most common \strong{programming languages}, a compiler is available on
 \operatingsystem. Supported and common programming languages on the \hpc are
@@ -289,18 +297,21 @@ Studio.
 Commonly used software packages are ABINIT, CP2K, Gaussian, Gromacs, Molpro,
 NWChem, Quantum Espresso, R, Siesta, TURBOMOLE, WIEN2k,\ldots
 
-Commonly used Libraries are Intel MKL, FFTW, HDF5, PETSc and Intel MPI, M(VA)PICH, OpenMPI.
+Commonly used Libraries are Intel MKL, FFTW, HDF5, PETSc and Intel MPI,
+M(VA)PICH, OpenMPI.
 \fi
 \ifleuven
 Commonly used software packages are ABINIT, CP2K, Gaussian, Gromacs, Molpro,
 NWChem, Quantum Espresso, R, Siesta, TURBOMOLE, WIEN2k,\ldots
 
-Commonly used Libraries are Intel MKL, FFTW, HDF5, PETSc and Intel MPI, M(VA)PICH, OpenMPI.
+Commonly used Libraries are Intel MKL, FFTW, HDF5, PETSc and Intel MPI,
+M(VA)PICH, OpenMPI.
 \fi
 \ifbrussel
 Commonly used software packages are CP2K, Gaussian, MATLAB, NWChem, R,\ldots
 
-Commonly used Libraries are Intel MKL, FFTW, HDF5, netCDF, PETSc and Intel MPI, OpenMPI.
+Commonly used Libraries are Intel MKL, FFTW, HDF5, netCDF, PETSc and Intel MPI,
+OpenMPI.
 \fi
 
 Additional software can be installed ``\emph{on demand}''. Please contact the
@@ -309,11 +320,13 @@ Additional software can be installed ``\emph{on demand}''. Please contact the
 \subsection{What operating systems can I use?}
 \label{sec:what-operating-systems-can-i-use}
 
-All nodes in the \hpc cluster run under \operatingsystemSL, which is a specific version of \operatingsystemRHEL. This means that
-all programs (executable) must be compiled for \operatingsystemSL.
+All nodes in the \hpc cluster run under \operatingsystemSL, which is a specific
+version of \operatingsystemRHEL. This means that all programs (executable) must
+be compiled for \operatingsystemSL.
 
-A user can connect from any desk computer in the \university network to the \hpc,
-regardless of the Operating System that he is using on his personal computer.
+A user can connect from any desk computer in the \university network to the
+\hpc, regardless of the Operating System that he is using on his personal
+computer.
 The user can use any of the common Operating Systems (such as Windows, OS X or
 any version of Linux/Unix/BSD) and run and control his programs on the \hpc.
 
@@ -325,8 +338,10 @@ knowledge is explained in this tutorial.
 
 When you think that the \hpc is a useful tool to support your computational
 needs, we encourage you to acquire a VSC-account (as explained in
-\autoref{ch:getting-a-hpc-account}), read \autoref{ch:preparing-the-environment}, ``Setting up the
-environment'', and explore chapters~\ref{ch:running-interactive-jobs} to~\ref{ch:fine-tuning-job-specifications} which will help you to transfer and
+\autoref{ch:getting-a-hpc-account}), read
+\autoref{ch:preparing-the-environment}, ``Setting up the environment'', and
+explore chapters~\ref{ch:running-interactive-jobs}
+to~\ref{ch:fine-tuning-job-specifications} which will help you to transfer and
 run your programs on the \hpc cluster.
 
 Do not hesitate to contact the \hpc staff for any help.

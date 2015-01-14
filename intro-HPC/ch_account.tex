@@ -36,12 +36,12 @@ Terminal.
   \label{sec:install-putty}
 
   We recommend to use the PuTTY tools package, which is freely available. You
-  do not need to install PuTTY, you can download the putty and PuTTYgen executable
-  and directly run it. This can be usefull in situations where you do not have the
+  do not need to install PuTTY, you can download the PuTTY and PuTTYgen executable
+  and run it. This can be useful in situations where you do not have the
   required permissions to install software on the computer you are using.
   Alternatively, an installation package is also available.
 
-  You can download putty from the official address:
+  You can download PuTTy from the official address:
   \url{http://www.chiark.greenend.org.uk/\~sgtatham/putty/}
 
   The PuTTY package consists of several components:
@@ -60,10 +60,10 @@ Terminal.
   \label{sec:generate-key-pair}
 
   Before requesting a VSC account, you need to generate a pair of \emph{ssh}
-  keys. We need 2 keys, a public and a private key. You can visualize the public
+  keys. You need 2 keys, a public and a private key. You can visualize the public
   key as a lock to which only you have the key (your private key). You can send
-  your lock to anyone without any problems, because only you know how to open it,
-  as long as you keep your private key secure.
+  a copy of your lock to anyone without any problems, because only you can
+  open it, as long as you keep your private key secure.
   To generate a public/private key pair, you can use the PuTTYgen key generator.
 
   Start \strong{\emph{PuTTYgen.exe}} it and follow these steps:
@@ -87,9 +87,9 @@ Terminal.
       use, so it is best to choose one that is not too easy to guess but that
       you can still remember.
       Using a passphrase is not required, but we recommend you to use a good
-      passphrase unless you are certain that your computers hard disk is
+      passphrase unless you are certain that your computer\'s hard disk is
       encrypted with a decent password. (If you are not sure your disk is
-      encrypted, it probably isn\'t.
+      encrypted, it probably isn\'t.)
 
     \includegraphics*[width=3.39in, height=3.28in, keepaspectratio=false]{ch2-puttygen-password}
 
@@ -224,11 +224,11 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
 \section{Applying for the account}
 \label{sec:applying-for-the-account}
 
-Open the following webpage from within the \university campus network (or using a VPN
-connection) \url{https://account.vscentrum.be/}
-
-You will be taken to a website of BELNET, where you have to select your ``Home Organization''.
-For faster logins in the future you can select the 'Remeber selection' checkboxes.
+Visit \url{https://account.vscentrum.be/} from within the \university campus
+network (or using a VPN connection.)
+You will be redirecteod to the BELNET federation website,
+where you have to select your ``Home Organization''.
+For faster logins in the future you can select the 'Remember selection' checkboxes.
 
 \includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate}
 
@@ -265,7 +265,7 @@ Directory. (i.e., /Users/$<$username$>$/.ssh/id\_rsa.pub).
 \ifgent
 You will now have to log in with CAS using your UGent account, and then be requested
 to share your Mail and Affiliation with KU Leuven (which actually means the VSC accountpage)
-Select the 'Remember' checkbox and click 'Yes, continue'
+Select the 'Remember' checkbox and click 'Yes, continue'.
 \fi
 %TODO: other institute login information explained here?
 
@@ -276,7 +276,8 @@ generated earlier.
 
 \ifwindows
   This file should have been stored in the directory
-  ``\emph{/Users/$<$Username$>$/PuTTY/.ssh/}''.
+  ``C:\textbackslash Users\textbackslash \%USERNAME\%\textbackslash
+  AppData\textbackslash Local\textbackslash PuTTY\textbackslash .ssh''
 \fi
 \ifmacORlinux
   This file has been stored in the directory ``\emph{\tilde/.ssh/}''.
@@ -286,7 +287,7 @@ generated earlier.
 \begin{tip}
   As ``.ssh'' is an invisible directory, the Finder will
   not show it by default. The easiest way to access the folder, is by pressing
-  Apple-Shift--G, which will allow you to enter the name of a directory, which
+  Apple-Shift-G, which will allow you to enter the name of a directory, which
   you would like to open in Finder. Here, type ``\tilde/.ssh'' and press enter.
 \end{tip}
 \fi
@@ -301,9 +302,9 @@ review and if applicable approve your account.
 Within one day, you should receive a Welcome e-mail with your VSC account details.
 
 \begin{flattext}
-Dear xxxxxxx,
+Dear Subject Name Here,
 Your VSC-account has been approved by an administrator.
-Your vsc-username is vscxxxxx
+Your vsc-username is \userid
 
 Your account should be fully active within one hour.
 To check or update your account information please visit
@@ -464,7 +465,7 @@ intro-python/
 intro-vi/
 \end{prompt}
 
-%TODO: make sure this data is here
+%TODO: verify that these are the correct directories
 This directory currently contains all training material for the use of:
 
 \begin{enumerate}
