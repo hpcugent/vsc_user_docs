@@ -10,22 +10,303 @@ Before you can really start using the \hpc clusters, there are several things yo
 \item  Often several versions of \textbf{software packages and libraries} are installed, so you need to select the ones you need. To manage different versions efficiently, the VSC clusters use so-called \textbf{modules}, so you will need to select and load the modules that you need.
 \end{enumerate}
 
-\section{Connecting to the \hpc}
+\section{First Time connection to the \hpc}
+\label{sec:first-time-connection-to-the-hpc}
 
-To make a connection to the \hpc clusters, the ssh command is used:
+\ifwindows
+
+  \subsection{Open a Terminal}
+  \label{sec:windows-open-a-terminal}
+
+  You've generated a public/private key pair with PuTTYgen and have an approved
+  account on the VSC clusters.  The next step is to setup the connection to (one
+  of) the \hpc.
+
+  In the screenshots, we show the setup for user ``\strong{\emph{vsc20167}}''
+  to the \hpc cluster via the loginnode
+  ``\strong{\emph{\loginnode}}''.
+
+  \begin{enumerate}
+    \item  Start the PuTTY executable $<$\strong{\emph{putty.exe}}$>$ in your
+      directory ``\strong{\emph{C:\textbackslash Program Files (x86)\textbackslash PuTTY}}'' and the
+      configuration screen will pop up. As you will often use the PuTTY tool,
+      we recommend adding a shortcut on your desktop.
+    \item  Within the category $<$\strong{\emph{Session}}$>$, in the field
+      $<$\strong{\emph{Host Name}}$>$, enter the name of the loginnode of the
+      \hpc cluster (i.e., ``\strong{\emph{\loginnode}}'')
+      you want to connect to.
+
+    \includegraphics*[width=3.59in, height=3.45in, keepaspectratio=false]{ch2-putty-configuration}
+
+    \item  In the category \menu[,]{Connection,Data}, in
+      the field \keys{Auto-login username}, put in
+      $<$\emph{\userid}$>$, which is your VSC username that you have
+      received by mail after your request was approved.
+
+  \includegraphics*[width=3.11in, height=2.99in, keepaspectratio=false]{ch2-putty-configuration2}
+
+    \item  In the category \menu[,]{Connection,SSH,Auth}, in the
+      field \keys{Private key file for authentication} click on
+      \keys{Browse} and select the private key (i.e., ``id\_rsa.ppk'')
+      that you generated and saved above.
+
+  \includegraphics*[width=3.25in, height=3.13in, keepaspectratio=false]{ch2-putty-key-setup}
+
+    \item  In the category \menu[,]{Connection,SSH,X11}, click
+      the \keys{Enable X11 Forwarding} checkbox.
+
+  \includegraphics*[width=3.54in, height=3.41in, keepaspectratio=false]{ch2-putty-x-forwarding}
+
+    \item  Now go back to $<$Session$>$, and fill in ``\emph{\hpcname}'' in the
+      \keys{Saved Sessions} field and press \keys{Save} to
+      store the session information.
+
+  \includegraphics*[width=3.30in, height=3.17in, keepaspectratio=false]{ch2-putty-saved-session}
+
+    \item  Now pressing \keys{Open}, will open a terminal window and
+      asks for you passphrase.
+
+  \includegraphics*[width=3.94in, height=2.47in, keepaspectratio=false]{ch2-putty-enter-password}
+
+    \item  The first time you make a connection to the loginnode, a Security
+      Alert will appear and you will be asked to verify the authenticity of the
+      loginnode.
+      \ifgent
+      Make sure the fingerprint in the Alert matches \strong{\loginfingerprint}
+      \fi
+
+  \includegraphics*[width=3.91in, height=2.42in, keepaspectratio=false]{ch2-putty-verify-authenticity}
+
+    \item  After entering your correct passphrase, you will be connected to the
+      login-node of the \hpc.
+    \item  To check you can now ``Print the Working Directory'' (pwd) and check
+      the name of the computer, where you have logged in (hostname):
+
+  \begin{prompt}
+  %\shellcmd{pwd}%
+  %\homedir%
+  %\shellcmd{hostname --f}%
+  %\loginhost%
+  \end{prompt}
+
+    \item  For future PuTTY sessions, just select your saved session (i.e.
+      ``\emph{\hpcname}'') from the list, \keys{Load} it and press
+      \keys{Open}.
+  \end{enumerate}
+
+%ENDIF windos
+\fi
+
+\ifmacORlinux
+\subsection{Connect}
+\label{sec:connect}
+
+The \hpc is only accessible from within the \university campus network, but you can
+get external access (e.g., from home) by using a VPN connection.
+
+Open up a terminal and enter the following command to connect to the \hpc.
+\ifmac
+You can open a terminal by navigationg to Applications and then Utilities in the finder, or enter Terminal in spotlight and select Terminal.app
+\fi
 
 \begin{prompt}
-%\shellcmd{ssh $<$vsc-account$>$@\loginnode}%
+%\shellcmd{ssh $<$%\userid%$>$@\loginnode}%
 \end{prompt}
 
-Here,
+The first time you make a connection to the login node, you will be asked to
+verify the authenticity of the login node, e.g.,
+
+\begin{prompt}
+%\shellcmd{ssh \userid{}@\loginnode{}}%
+The authenticity of host %\loginnode% (<IP-adress>) can't be established.
+RSA key fingerprint is %\loginfingerprint%
+Are you sure you want to continue connecting (yes/no)? %\strong{\emph{yes}}%
+\end{prompt}
+
+Here, user \userid wants to make a connection to the ``\hpcname'' cluster at
+\university via the login node ``\loginnode''.
+
+\fi
+\strong{Congratulations, you're on the \hpc Super-Computer now!}
+Okay, I am on the supercomputer, but where am I?
+
+So, print the current working directory:
+\begin{prompt}
+%\shellcmd{pwd}%
+%\homedir%
+\end{prompt}
+
+
+Your new private home-directory is ``\homedir''.
+Here you can create your own sub-directory structure, copy and prepare your
+applications, compile and test them and submit your jobs on the \hpc.
+
+\begin{prompt}
+%\shellcmd{cd \tutorialdir}%
+%\shellcmd{ls }%
+intro-HPC/
+perfexpert
+\end{prompt}
+
+This directory currently contains all training material for the use of:
 
 \begin{enumerate}
-\item  \textit{$<$vsc-account$>$} is your VSC username that you have received by mail after your request was approved,
-\item  \textit{``\loginnode''} is the name of the login node of the \hpc cluster you want to connect to.
+\item  The \strong{\emph{Introduction to the \hpc}}.
+%\item  The \strong{\emph{Introduction to Linux}}.
+%\item  The \strong{\emph{Python}} programming language.
+%\item  The \strong{\emph{VI}} editor.
+\item  Introduction to using \strong{\emph{perfexpert}}.
 \end{enumerate}
 
-Upon connection, you will get a welcome message and your current disk and file quotas are shown.
+More relevant training material to work with the \hpc can always be added
+later in this directory.
+
+You can now explore the content of this directory with the ``ls --l''
+(\strong{l}ist\strong{s} \strong{l}ong) and the ``cd'' (\strong{c}hange
+\strong{d}irectory) commands:
+
+As we are interested in the use of the \strong{\emph{HPC}}, move further to
+\strong{\emph{intro-HPC}} and explore the contents up to 2 levels deep:
+
+\begin{prompt}
+%\shellcmd{cd intro-HPC}%
+%\shellcmd{tree -L 2}%
+.
+`-- examples
+    %\textbar%-- Compiling-and-testing-your-software-on-the-HPC
+    %\textbar%-- Fine-tuning-Job-Specifications
+    %\textbar%-- Multi-core-jobs-Parallel-Computing
+    %\textbar%-- Multi-job-submission
+    %\textbar%-- Program-examples
+    %\textbar%-- Running-batch-jobs
+    %\textbar%-- Running-jobs-with-input
+    %\textbar%-- Running-jobs-with-input-output-data
+    %\textbar%-- example.pbs
+    `-- example.sh
+9 directories, 5 files
+\end{prompt}
+
+This directory contains:
+
+\begin{enumerate}
+  \item This \strong{\emph{HPC Tutorial}} (in either a Mac, Linux or Windows version).
+  %TODO: these are not here yet? \item The according \strong{\emph{HPC slides}} (used during training sessions).
+  %TODO: this is noth here yet? \item A \strong{\emph{docs}} sub-directory, containing interesting \hpc related documents.
+  \item An \strong{\emph{examples}} sub-directory, containing all the
+    examples that you need in this Tutorial, as well as examples that might be
+    useful for your specific applications.
+\end{enumerate}
+
+\begin{prompt}
+%\shellcmd{cd examples}%
+\end{prompt}
+
+\begin{tip}
+Typing ``\strong{\emph{cd ex$<$TAB$>$}}'' will generate the
+``\strong{\emph{cd examples}}'' command. \strong{Command-line completion
+}(also tab completion) is a common feature of the bash command line
+interpreter, in which the program automatically fills in partially typed
+commands.
+\end{tip}
+
+\begin{tip}
+For more exhaustive tutorials about Linux usage, see \ref{ch:useful-linux-commands}
+\end{tip}
+
+The first action is to copy the contents of the \hpc examples directory
+to your home directory, so that you have your own personal copy and that
+you can start using the examples. The ``-r'' option of the copy command
+will also copy the contents of the sub-directories ``\emph{recursively}''.
+
+\begin{prompt}
+%\shellcmd{cp --r \examplesdir \tilde/}%
+\end{prompt}
+
+Go to your home directory, check your own private examples directory, \dots\
+and start working.
+
+%\shellcmd{cd}%
+%\shellcmd{ls -l}%
+
+\ifgent
+Upon connectiong you will see a login message containing your last login
+timestamp and a basic overview of the current cluster utilisation.
+\begin{prompt}
+Last login: Tue Jan  6 08:53:11 2015 from helios.ugent.be
+
+STEVIN HPC-UGent infrastructure status on Thu, 15 Jan 2015 15:20:01
+
+   cluster - full - free -  part - total - running - queued
+             nodes  nodes   free   nodes    jobs      jobs
+-------------------------------------------------------------------
+   haunter    151      0      0     151      N/A       N/A
+    raichu     10      0     53      64      N/A       N/A
+   dugtrio      0      3      0       5      N/A       N/A
+  delcatty    123      9     26     158      N/A       N/A
+    gastly     33      6      4      46      N/A       N/A
+    gulpin     30      0      1      32      N/A       N/A
+       muk    455      5     20     528      N/A       N/A
+
+For a full view of the current loads and queues see:
+ http://hpc.ugent.be/clusterstate/
+
+\end{prompt}
+\fi
+\ifbrussel
+Upon connectiong you will see a login message containing your last login
+timestamp, some useful environment variable definitions and the message of the
+day (MOTD)
+\begin{prompt}
+Last login: Thu Nov  6 16:05:21 2014 from exile.ugent.be
+
+Initialising your working environment...
+System variables to use in your scripts/programs:
+  Temporary directory:   \$TMPDIR as /tmp/vsc40485
+  Temporary work directory:    \$WORKDIR as /work/vsc40485
+  Home directory:              \$HOME as /user/home/gent/vsc404/vsc40485
+Message of the day:
+
+  --------------------------------------------------------------------
+  Welcome to the Hydra cluster.
+
+  The old work directory access has been closed.
+
+
+  The Hydra Team
+  --------------------------------------------------------------------
+       \   ,__,
+        \  (oo)____
+           (__)    )\
+              ||--||
+
+\end{prompt}
+\fi
+
+\ifleuven
+Upon connectiong you will see a login message containing your last login
+timestamp and some useful links.
+\begin{prompt}
+Last login: Mon Jan 12 18:52:20 2015 from gligar01.ugent.be
+**********************************************
+*                                            *
+* Please check the following site for        *
+* status messages concerning KU Leuven       *
+* services (incl. HPC):                      *
+*                                            *
+*   http://status.kuleuven.be/               *
+*                                            *
+* For VSC user documentation:                *
+*                                            *
+* https://vscentrum.be/neutral/documentation *
+*                                            *
+*                                            *
+**********************************************
+\end{prompt}
+\fi
+
+\ifantwerpen
+Upon connection, you will get a welcome message and your current disk and file
+quotas are shown.
 
 \begin{prompt}
 %\dots%
@@ -43,13 +324,7 @@ File Limits
    scratch            11     100000     150000     none
 ----------------------------------------------------------
 \end{prompt}
-
-To check on which login node you are connected:
-
-\begin{prompt}
-%\shellcmd{hostname -f}%
-%\loginhost%
-\end{prompt}
+\fi
 
 You can exit the connection at anytime by entering:
 
@@ -73,7 +348,8 @@ LANG = (unset)
 perl: warning: Falling back to the standard locale ("C").
 \end{prompt}
 
-This means that the correct ``locale'' has not yet been properly specified on your local machine. Try:
+This means that the correct ``locale'' has not yet been properly specified on
+your local machine. Try:
 
 \begin{prompt}
 %\shellcmd{locale}%
@@ -106,6 +382,13 @@ export LANG="en_US.UTF-8"
 %\dots%
 \end{prompt}
 
+\begin{tip}[vi]
+To start entering text in vi: move to the place you want to start entering text
+with the arrow keys and type ``i'' to switch to insert mode.  You can easily
+exit vi by entering: ``<esc>:wq''
+To exit vi without saving your changes, enter ``<esc>:q!''
+\end{tip}
+
 or alternatively (if you are not comfortable with the Linux editors):
 
 \begin{prompt}
@@ -115,19 +398,20 @@ or alternatively (if you are not comfortable with the Linux editors):
 %\shellcmd{echo "export LANG="en\_US.UTF-8\textbackslash " $>$$>$ ~/.profile"}%
 \end{prompt}
 
-You can now log-out and re-connect to the \hpc, and you should not get these warnings anymore.
+You can now log-out and re-connect to the \hpc, and you should not get these
+warnings anymore.
 
 \section{Transfer Files to/from the \hpc}
 
-Before you can do some work, you'll have to \strong{transfer the files} that
+Before you can do some work, you'll have to \strong{transfer the files}
 you need from your desktop or department to the cluster. At the end of a job,
 you might want to transfer some files back.
 
 \ifmacORlinux
 The preferred way to transfer files is by using an scp or sftp via the secure
-OpenSSH protocol.  Linux and OS X are shipped with an implementation of OpenSSH, so you
-don't need to install any third-party software to use it. Just open a terminal
-window and jump in!
+OpenSSH protocol.  Linux and OS X are shipped with an implementation of
+OpenSSH, so you don't need to install any third-party software to use it. Just
+open a terminal window and jump in!
 \fi
 
 \ifwindows
@@ -136,8 +420,8 @@ window and jump in!
   To transfer files to and from the cluster, we recommend the use of WinSCP,
   which is a graphical ftp-style program (but than one that uses the ssh way of
   communicating with the cluster rather then the less secure ftp) that is also
-  freely available. WinSCP can be downloaded both as an installation package and
-  as a standalone portable executable from \url{http://www.winscp.net}
+  freely available. WinSCP can be downloaded both as an installation package
+  and as a standalone portable executable from \url{http://www.winscp.net}
 
   To transfer your files using WinSCP,
 
@@ -157,7 +441,8 @@ window and jump in!
   \includegraphics*[width=3.42in, height=3.04in, keepaspectratio=false]{img0214}
 
   \begin{enumerate}
-  \item  By pressing on the \keys{Save} button, you can save the session under \keys{Stored sessions} for future access.
+  \item  By pressing on the \keys{Save} button, you can save the session under
+         \keys{Stored sessions} for future access.
   \item  Finally, when clicking on \keys{Login}, you will be asked for your key passphrase.
   \end{enumerate}
 
@@ -168,7 +453,8 @@ window and jump in!
 
   \includegraphics*[width=5.74in, height=2.81in, keepaspectratio=false]{img0216}
 
-  Now, try out whether you can transfer an arbitrary file from your local machine to the HPC and back.
+  Now, try out whether you can transfer an arbitrary file from your local
+  machine to the HPC and back.
 
 \fi
 
@@ -181,7 +467,8 @@ window and jump in!
   command is the equivalent of the \strong{cp}  (i.e., \strong{c}o\strong{p}y)
   command, but can copy files to or from remote machines.
 
-  Open a additional Terminal window and check that you're working on your local machine.
+  Open a additional Terminal window and check that you're working on your local
+  machine.
 
   \begin{prompt}
   %\shellcmd{hostname}%
@@ -202,7 +489,7 @@ window and jump in!
   %\shellcmd{ls -l}%
   %\dots%
   -rw-r--r-- 1 gborstlap  staff   6 Sep 18 09:37 localfile.txt
-  %\shellcmd{scp localfile.txt $<$vsc-account$>$@\loginnode:}%
+  %\shellcmd{scp localfile.txt $<$%\userid%$>$@\loginnode:}%
   localfile.txt    100%\%%   6     0.0KB/s   00:00
   \end{prompt}
 
@@ -222,8 +509,7 @@ window and jump in!
   Hello
   \end{prompt}
 
-  % TODO: rename files to intro-HPC
-  Likewise, to copy the remote file ``intro-HPC.pdf'' from your ``docs''
+  Likewise, to copy the remote file ``\jobname.pdf'' from your ``docs''
   sub-directory on the cluster to your local computer, try:
 
   On the Terminal on the \hpc, enter:
@@ -233,18 +519,18 @@ window and jump in!
   %\homedir%/docs
   %\captureshellcmd{ls -l}%
   total 1536
-  -rw-r--r-- 1 %\userid% Sep 11 09:53 intro-HPC.pdf
+  -rw-r--r-- 1 %\userid% Sep 11 09:53 %\jobname%.pdf
   \end{prompt}
 
   On the Terminal on your own local computer, enter:
 
   \begin{prompt}
-  %\shellcmd{scp \userid{}@\loginnode:./docs/intro-HPC.pdf .}%
-  intro-HPC.pdf 100%\%%  725KB 724.6KB/s   00:01
+  %\shellcmd{scp \userid{}@\loginnode:./docs/\jobname.pdf .}%
+  %\jobname.pdf% 100%\%%  725KB 724.6KB/s   00:01
   %\shellcmd{ls -l}%
   total  899
   -rw-r--r--   1 gborstlap  staff     413 Sep 10 10:29 id_rsa.pub
-  -rw-r--r--   1 gborstlap  staff  741995 Sep 18 09:53 intro-HPC.pdf
+  -rw-r--r--   1 gborstlap  staff  741995 Sep 18 09:53 %\jobname%.pdf
   -rw-r--r--   1 gborstlap  staff       6 Sep 18 09:37 localfile.txt
   \end{prompt}
 
@@ -263,7 +549,7 @@ window and jump in!
 
   One easy way of starting a sftp session is
   \begin{prompt}
-  %\shellcmd{sftp $<$vsc-account$>$@$<$vsc-login node$>$}%
+  %\shellcmd{sftp $<$\userid$>$@$<$\loginnode$>$}%
   \end{prompt}
 
   Typical and popular commands inside an sftp session are:
@@ -303,7 +589,7 @@ window and jump in!
 
   \begin{enumerate}
   \item  Host: sftp://\loginnode
-  \item  Username:  $<$your vsc-username$>$
+  \item  Username:  $<$your vsc-username$>$ (e.g. \userid)
   \end{enumerate}
 
   \includegraphics*[width=4.75in, height=4.19in, keepaspectratio=false]{img0300}
@@ -399,7 +685,7 @@ surprises when never versions are installed) specify a particular version,
 e.g.,
 
 \begin{prompt}
-%\shellcmd{module load Python/2.7.3-ictce-4.0.1}%
+%\shellcmd{module load Python/2.7.6-intel-2014b}%
 \end{prompt}
 
 Obviously, the user needs to keep track of the modules that are currently
@@ -409,16 +695,19 @@ following:
 \begin{prompt}
 %\shellcmd{module list}%
 Currently Loaded Modulefiles:
-  1) MATLAB/R2013a        5) imkl/10.3.1.107
-  2) icc/2011.1.107       6) ictce/4.0.1
-  3) ifort/2011.1.107     7) Python/2.7.3-ictce-4.0.1
-  4) impi/4.0.1.007
+  1) cluster/delcatty(default)              8) intel/2014b
+  2) MATLAB/2013b                           9) bzip2/1.0.6-intel-2014b
+  3) GCC/4.8.3                             10) zlib/1.2.7-intel-2014b
+  4) icc/2013.5.192-GCC-4.8.3              11) ncurses/5.9-intel-2014b
+  5) ifort/2013.5.192-GCC-4.8.3            12) libreadline/6.2-intel-2014b
+  6) impi/4.1.3.049-GCC-4.8.3              13) Python/2.7.6-intel-2014b
+  7) imkl/11.1.2.144-2013.5.192-GCC-4.8.3
 \end{prompt}
 
-It is important to note at this point that other modules (e.g., ictce/4.0.1)
+It is important to note at this point that other modules (e.g., intel/2014a)
 are also listed, although the user did not explicitly load them. This is
-because ``Python/2.7.3-ictce-4.0.1'' depends on it (as indicated in its name),
-and the system administrator specified that the ``ictce/4.0.1'' module should
+because ``Python/2.7.6-intel-2014a'' depends on it (as indicated in its name),
+and the system administrator specified that the ``intel/2014a'' module should
 be loaded whenever the Python module is loaded. There are advantages and
 disadvantages to this, so be aware of automatically loaded modules whenever
 things go wrong: they may have something to do with it!
@@ -433,10 +722,12 @@ only the following modules remain:
 \begin{prompt}
 %\shellcmd{module unload Python}%
 %\shellcmd{module list}%
-Currently Loaded Modulefiles:
-  1) MATLAB/R2013a        4) impi/4.0.1.007
-  2) icc/2011.1.107       5) imkl/10.3.1.107
-  3) ifort/2011.1.107     6) ictce/4.0.1
+  1) cluster/delcatty(default)              7) imkl/11.1.2.144-2013.5.192-GCC-4.8.3
+  2) MATLAB/2013b                           8) intel/2014b
+  3) GCC/4.8.3                              9) bzip2/1.0.6-intel-2014b
+  4) icc/2013.5.192-GCC-4.8.3              10) zlib/1.2.7-intel-2014b
+  5) ifort/2013.5.192-GCC-4.8.3            11) ncurses/5.9-intel-2014b
+  6) impi/4.1.3.049-GCC-4.8.3              12) libreadline/6.2-intel-2014b
 \end{prompt}
 
 Notice that the version was not specified: the module system is sufficiently
@@ -450,12 +741,14 @@ state, you can use:
 %\shellcmd{module purge}%
 \end{prompt}
 
-It is a good habit to use this command in job-scripts, prior to loading the
-modules specifically needed by applications in that job description. This
-ensures that no version conflicts occur if the user loads module using his
-'.bashrc' file.
+%TODO: really? it isn't in gent, we first load a module that sets modulepath
+% so module purge breaks further loading of modules
+%It is a good habit to use this command in job-scripts, prior to loading the
+%modules specifically needed by applications in that job description. This
+%ensures that no version conflicts occur if the user loads module using his
+%'.bashrc' file.
 
-Finally, modules need not be loaded one by one; the two ``load'' commands can be
+Modules need not be loaded one by one; the two ``load'' commands can be
 combined as follows:
 
 \begin{prompt}
@@ -463,6 +756,21 @@ combined as follows:
 \end{prompt}
 
 This will load the two modules as well as their dependencies.
+
+\ifgent
+Finally, to switch between clusters you can swap the ``cluster'' modules.
+These are special modules that change what modules are available for you,
+and what cluster your jobs will be queued in.
+By default you are working on \hpcname. To switch to e.g. raichu you need:
+
+\begin{prompt}
+%\shellcmd{module swap cluster/raichu}%
+\end{prompt}
+
+This will switch the cluster you submit your jobs to (with qsub) to raichu
+and only show you modules that are installed on raichu when you run
+``module av''.
+\fi
 
 \subsection{Explicit version numbers}
 
@@ -522,12 +830,12 @@ variables will be changed by a certain module, try:
 -------------------------------------------------------------------
 /apps/\site/\hpcname/modules/all/scripts/2.6.0:
 
-module-whatis  A collection of scripts to ease cluster usage. - Homepage: https://appel.ugent.be/userwiki/index.php/Main_Page 
-conflict       scripts 
-prepend-path   PATH /apps/\site/\hpcname/software/scripts/2.6.0/bin 
-prepend-path   PATH /apps/\site/\hpcname/software/scripts/2.6.0/bin/fake 
-setenv         SOFTROOTSCRIPTS /apps/\site/\hpcname/software/scripts/2.6.0 
-setenv         SOFTVERSIONSCRIPTS 2.6.0 
+module-whatis  A collection of scripts to ease cluster usage. - Homepage: https://hpc.ugent.be/userwiki/index.php/Main_Page
+conflict       scripts
+prepend-path   PATH /apps/\site/\hpcname/software/scripts/2.6.0/bin
+prepend-path   PATH /apps/\site/\hpcname/software/scripts/2.6.0/bin/fake
+setenv         SOFTROOTSCRIPTS /apps/\site/\hpcname/software/scripts/2.6.0
+setenv         SOFTVERSIONSCRIPTS 2.6.0
 -------------------------------------------------------------------
 \end{prompt}
 
@@ -540,7 +848,7 @@ Or to get more information about one specific module package:
 
 \begin{prompt}
 %\shellcmd{module help zlib}%
-- Module Specific Help for 'zlib/1.2.8-ictce-5.5.0' -
+- Module Specific Help for 'zlib/1.2.8-intel-2014b' -
 zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. -
 Homepage: http://www.zlib.net/
 \end{prompt}
