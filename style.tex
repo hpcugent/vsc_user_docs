@@ -87,11 +87,23 @@
   backgroundcolor=\color{white},
   }
 
-\lstnewenvironment{prompt} {\lstset{style=prompt}} {}
+\lstnewenvironment{prompt} {
+    \\[\baselineskip]
+    \minipage{\linewidth}
+    \lstset{style=prompt}
+} {
+   \endminipage
+}
 \lstnewenvironment{code}[1]{\lstset{style=code, language=#1}} {}
 \lstnewenvironment{prog}{\lstset{style=code}} {}
-\lstnewenvironment{flattext}{\lstset{style=flattext}} {}
 
+\lstnewenvironment{flattext} {
+    \\[\baselineskip]
+    \minipage{\linewidth}
+    \lstset{style=flattext}
+} {
+   \endminipage
+}
 % Taken from: http://tex.stackexchange.com/questions/9363/how-does-one-insert-a-backslash-or-a-tilde-into-latex
 \protected\def\tilde{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
 \newcommand{\shellcmd}[1]{\noexpandarg\StrSubstitute{#1}{~}{\tilde}[\temp]\$ \textbf{\texttt{\temp}}}
@@ -104,6 +116,8 @@
 % LaTeX hacks to allow underscores in filenames. Adapted from
 % http://tex.stackexchange.com/questions/69142/include-figure-from-macro-with-underscore-in-filename
 \newcommand{\examplecodeStub}[2]{
+  \\[\baselineskip]
+  \minipage{\linewidth}
   \lstinputlisting[
     language=#1,
     numbers=left,
@@ -111,11 +125,15 @@
     frame=tlbr,
     style=code,]
     {\exampledir/#2}
+  \endminipage
     \endgroup
+
 }
-\def\examplecode{\begingroup
+\def\examplecode{
+  \begingroup
   \catcode`\_=12
-\examplecodeStub}
+  \examplecodeStub
+}
 
 \newcommand{\exampleoutputStub}[1]{
   \lstinputlisting[
