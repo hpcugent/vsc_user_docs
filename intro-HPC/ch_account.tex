@@ -4,7 +4,23 @@
 \section{Getting ready to request an account}
 \label{sec:getting-ready-to-request-an-account}
 
-All users of \association can request an account on
+\ifbrussel
+ If you affiliated with the \university, then You can access \hpc using your NedID 
+ (the same username and password that you use for accessing your university mailbox).
+ Your \hpc account is not activated by default, you can do it via our Personal
+ Account Manager (PAM) homepage (\url{https://idsapp.vub.ac.be/pam/pamlogin.php}).
+ Once you have activated your \hpcname account you will be able to use only the HPC 
+ infrastructure of the \university. If you would also like to use the infrastructure of 
+ the Flemish Supercomputing Center (VSC), then you have to apply for a VSC account.
+\fi
+
+All users of \association can request 
+\ifbrussel
+ a VSC 
+ \else
+ an
+\fi
+account on
 the \hpc, which is part of the Flemish Supercomputing Center (VSC).
 
 The VSC, abbreviation of Flemish Supercomputer Center, is a virtual
@@ -226,7 +242,7 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
 
 Visit \url{https://account.vscentrum.be/} from within the \university campus
 network (or using a VPN connection.)
-You will be redirecteod to the BELNET federation website,
+You will be redirected to the BELNET federation website,
 where you have to select your ``Home Organization''.
 For faster logins in the future you can select the 'Remember selection' checkboxes.
 
@@ -267,6 +283,14 @@ You will now have to log in with CAS using your UGent account, and then be reque
 to share your Mail and Affiliation with KU Leuven (which actually means the VSC accountpage)
 Select the 'Remember' checkbox and click 'Yes, continue'.
 \fi
+
+\ifbrussel
+ \includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate-brussel}
+
+ You will now have to log in using your NetID. (The same username and password that you use for accessing your e-mail)
+
+\fi 
+
 %TODO: other institute login information explained here?
 
 After you log in using your \university login and password,
@@ -381,6 +405,9 @@ Now, you can start using the \hpc.
       loginnode.
       \ifgent
       Make sure the fingerprint in the Alert matches \strong{2f:0c:f7:76:87:57:f7:5d:2d:7b:d1:a1:e1:86:19:f3}
+      \fi
+      \ifbrussel
+      Make sure the fingerprint in the Alert matches \strong{41:68:9b:c2:f0:1c:d3:62:14:b6:71:f0:36:8a:7d:ec}
       \fi
       %TODO: fingerprints for other institution login nodes?
 
