@@ -101,12 +101,12 @@ Before you can really start using the \hpc clusters, there are several things yo
 \subsection{Connect}
 \label{sec:connect}
 
-The \hpc is only accessible from within the \university campus network, but you can
+The \hpc is only accessible from within the \university network, but you can
 get external access (e.g., from home) by using a VPN connection.
 
 Open up a terminal and enter the following command to connect to the \hpc.
 \ifmac
-You can open a terminal by navigationg to Applications and then Utilities in the finder, or enter Terminal in spotlight and select Terminal.app
+You can open a terminal by navigationg to Applications and then Utilities in the finder and open Terminal.app, or enter Terminal in Spotlight Search.
 \fi
 
 \begin{prompt}
@@ -127,10 +127,8 @@ Here, user \userid wants to make a connection to the ``\hpcname'' cluster at
 \university via the login node ``\loginnode''.
 
 \fi
-\strong{Congratulations, you're on the \hpc Super-Computer now!}
-Okay, I am on the supercomputer, but where am I?
-
-So, print the current working directory:
+\strong{Congratulations, you're on the \hpc infrastructure now!}
+To find out where you have landed you can print the current working directory:
 \begin{prompt}
 %\shellcmd{pwd}%
 %\homedir%
@@ -229,7 +227,7 @@ and start working.
 %\shellcmd{ls -l}%
 
 \ifgent
-Upon connectiong you will see a login message containing your last login
+Upon connecting you will see a login message containing your last login
 timestamp and a basic overview of the current cluster utilisation.
 \begin{prompt}
 Last login: Tue Jan  6 08:53:11 2015 from helios.ugent.be
@@ -255,9 +253,9 @@ For a full view of the current loads and queues see:
 \ifbrussel
 Upon connectiong you will see a login message containing your last login
 timestamp, some useful environment variable definitions and the message of the
-day (MOTD)
+day (MOTD).
 \begin{prompt}
-Last login: Thu Nov  6 16:05:21 2014 from exile.ugent.be
+Last login: Thu Nov  6 16:05:21 2014 from example.vub.ac.be
 
 Initialising your working environment...
 System variables to use in your scripts/programs:
@@ -286,7 +284,7 @@ Message of the day:
 Upon connectiong you will see a login message containing your last login
 timestamp and some useful links.
 \begin{prompt}
-Last login: Mon Jan 12 18:52:20 2015 from gligar01.ugent.be
+Last login: Mon Jan 12 18:52:20 2015 from example.kuleuven.be
 **********************************************
 *                                            *
 * Please check the following site for        *
@@ -761,15 +759,20 @@ This will load the two modules as well as their dependencies.
 Finally, to switch between clusters you can swap the ``cluster'' modules.
 These are special modules that change what modules are available for you,
 and what cluster your jobs will be queued in.
-By default you are working on \hpcname. To switch to e.g. raichu you need:
+By default you are working on \hpcname. To switch to e.g. raichu you need
+to redefine the environment so you get access to all modules installed on
+the raichu cluster, and to be able to submit jobs to the raichu scheduler
+so your jobs will start on raichu instead of the default \hpcname cluster.
+
+The raichu modules do not work directly on the login nodes, because the
+login nodes do not have the same architecture as the raichu cluster, they
+have the same architecture as the \hpcname cluster however, so this is why
+by default software works on the login nodes.
 
 \begin{prompt}
 %\shellcmd{module swap cluster/raichu}%
 \end{prompt}
 
-This will switch the cluster you submit your jobs to (with qsub) to raichu
-and only show you modules that are installed on raichu when you run
-``module av''.
 \fi
 
 \subsection{Explicit version numbers}
@@ -797,26 +800,22 @@ Everything works fine, up to the point where a new version of GSL is installed,
 latter version, rather than the one he intended, which may lead to unexpected
 problems.
 
-Lets now generate a version conflict with the ``scripts'' module, and see what
+Lets now generate a version conflict with the ``ABAQUS'' module, and see what
 is happening.
 
 \begin{prompt}
-%\shellcmd{module av 2$>$\&1 \textbar grep scripts}%
-scripts/1.1.0
-scripts/1.2.0
-scripts/2.2.2
-scripts/2.3.3
-scripts/2.3.6
-scripts/2.5.1
-scripts/2.6.0
-%\shellcmd{module load scripts/1.2.0}%
-%\shellcmd{module load scripts /2.6.0}%
-scripts/2.6.0(13):ERROR:150: Module 'scripts/2.6.0' conflicts with the currently loaded module(s) 'scripts/1.2.0'
-scripts/2.6.0(13):ERROR:102: Tcl command execution failed: conflict scripts
-%\shellcmd{module switch scripts/2.6.0}%
+%\shellcmd{module av 2$>$\&1 \textbar grep ABAQUS}%
+BAQUS/6.12.1-linux-x86_64
+ABAQUS/6.13.5-linux-x86_64
+ABAQUS/6.14.1-linux-x86_64
+%\shellcmd{module load ABAQUS/6.12.1-linux-x86_64}%
+%\shellcmd{module load ABAQUS/6.13.5-linux-x86_64}%
+ABAQUS/6.13.5-linux-x86_64(12):ERROR:150: Module 'ABAQUS/6.13.5-linux-x86_64' conflicts with the currently loaded module(s) 'ABAQUS/6.12.1-linux-x86_64'
+ABAQUS/6.13.5-linux-x86_64(12):ERROR:102: Tcl command execution failed: conflict ABAQUS
+%\shellcmd{module swap scripts/2.6.0}%
 \end{prompt}
 
-Note: A ``module switch'' command combines the appropriate ``module unload''
+Note: A ``module swap'' command combines the appropriate ``module unload''
 and ``module load'' commands.
 
 \subsection{Get detailed info}
@@ -826,16 +825,17 @@ variables will be changed by a certain module, try:
 
 % TODO: this probably needs to be site-specific, or not shown as it seems a bit advanced and out of place
 \begin{prompt}
-%\shellcmd{module show scripts}%
+%\shellcmd{module show ABAQUS}%
 -------------------------------------------------------------------
-/apps/\site/\hpcname/modules/all/scripts/2.6.0:
+/apps/gent/SL6/sandybridge/modules/all/ABAQUS/6.14.1-linux-x86_64:
 
-module-whatis  A collection of scripts to ease cluster usage. - Homepage: https://hpc.ugent.be/userwiki/index.php/Main_Page
-conflict       scripts
-prepend-path   PATH /apps/\site/\hpcname/software/scripts/2.6.0/bin
-prepend-path   PATH /apps/\site/\hpcname/software/scripts/2.6.0/bin/fake
-setenv         SOFTROOTSCRIPTS /apps/\site/\hpcname/software/scripts/2.6.0
-setenv         SOFTVERSIONSCRIPTS 2.6.0
+module-whatis    Description: Finite Element Analysis software for modeling, visualization and best-in-class implicit and explicit dynamics FEA. - Homepage: http://www.simulia.com/products/abaqus_fea.html
+conflict     ABAQUS
+prepend-path PATH /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/Commands
+setenv       EBROOTABAQUS /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64
+setenv       EBVERSIONABAQUS 6.14.1-linux-x86_64
+setenv       EBDEVELABAQUS /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/easybuildlog/ABAQUS-6.14.1-linux-x86_64-easybuild-devel
+prepend-path PATH /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/
 -------------------------------------------------------------------
 \end{prompt}
 
@@ -847,8 +847,8 @@ To get a list of all possible commands, type:
 Or to get more information about one specific module package:
 
 \begin{prompt}
-%\shellcmd{module help zlib}%
-- Module Specific Help for 'zlib/1.2.8-intel-2014b' -
-zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. -
-Homepage: http://www.zlib.net/
+%\shellcmd{module help ABAQUS}%
+----------- Module Specific Help for 'ABAQUS/6.14.1-linux-x86_64' ---------------------------
+
+   Finite Element Analysis software for modeling, visualization and best-in-class implicit and explicit dynamics FEA. - Homepage: http://www.simulia.com/products/abaqus_fea.html
 \end{prompt}
