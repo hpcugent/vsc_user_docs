@@ -1,0 +1,16 @@
+*.pdf
+*.aux
+*.log
+*.fdb_latexmk
+*.listing
+*.fls
+*.toc
+*.out
+*.glg
+*.glo
+*.gls
+*.ist
+*.ilg
+*.idx
+*.ind
+shellcmds.sh
