@@ -131,7 +131,7 @@ provide adequate walltime and that you save your data before your (wall)time is
 up (exceeded)!  When you do not specify a walltime, you get a default walltime
 of 1 hour.
 
-\section{Interactive jobs, with X support}
+\section{Interactive jobs, with graphical support}
 
 \subsection{Software Installation}
 
@@ -158,7 +158,7 @@ and rich input device capability for networked computers.
   clicking $<$continue$>$ on the various screens that will pop-up until your
   installation was succesful.
 
-  A reboot is required before XQuartz will correctly open X applications.
+  A reboot is required before XQuartz will correctly open graphical applications.
   \includegraphics*[width=5.81in, height=4.31in, keepaspectratio=false]{img0513}
 \fi
 \iflinux
@@ -256,8 +256,8 @@ and rich input device capability for networked computers.
   There are several cases where this is useful:
 
   \begin{enumerate}
-  \item  Running X applications on the cluster: The X program cannot directly
-    communicate with the X server on your local system. In this case, the
+  \item  Running graphical applications on the cluster: The graphical program cannot directly
+    communicate with the X Window server on your local system. In this case, the
     tunneling is easy to set up as PuTTY will do it for you if you select the
     right options on the X11 settings page as explained on the page about
     text-mode access using PuTTY.
@@ -414,7 +414,7 @@ fx >> %\textbf{exit}%
 
 Please not that you are not running MATLAB on the \hpc, but only on the
 login nodes. So it is not recommended to run large programs this way.
-You are allowed to run X programs on the login nodes for visualization
+You are allowed to run graphical programs on the login nodes for visualization
 related tasks only. This is here to let you speed up your workflow,
 so you can do a quick visualization without having to copy over all your data
 from the \hpc to your local system to quickly view a plot.
