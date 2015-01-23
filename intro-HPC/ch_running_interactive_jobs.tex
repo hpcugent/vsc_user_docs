@@ -136,7 +136,8 @@ of 1 hour.
 \subsection{Software Installation}
 
 To display graphical applications from a Linux computer (such as the VSC
-clusters) on your machine, you need to install an X Window server.
+clusters) on your machine, you need to install an X Window server on your
+local computer.
 
 The X Window system (commonly known as \strong{X11}, based on its current major
 version being 11, or shortened to simply \strong{X}) is the system-level
@@ -155,12 +156,14 @@ and rich input device capability for networked computers.
 
   The installer will take you through the installation procedure, just continue
   clicking $<$continue$>$ on the various screens that will pop-up until your
-  installation was succesfull.
+  installation was succesful.
 
+  A reboot is required before XQuartz will correctly open X applications.
   \includegraphics*[width=5.81in, height=4.31in, keepaspectratio=false]{img0513}
 \fi
 \iflinux
-%TODO: do we have to install any additional package for X-forwarding under Linux?
+%if X is not installed under linux the user will probably be expierienced enought
+%to know what he/she's doing and be aware that he/she can't run X applications
 \fi
 
 \ifwindows
@@ -191,7 +194,7 @@ and rich input device capability for networked computers.
 
   \item  Select \keys{Multiple Windows}. This will open each application in a separate window.
 
-  \includegraphics*[width=3.11in, height=3.11in, keepaspectratio=false]{img0501}  
+  \includegraphics*[width=3.11in, height=3.11in, keepaspectratio=false]{img0501}
 
 
   \item  Select \keys{Start no client} to make XLaunch wait for other programs (such as PuTTY).
@@ -346,6 +349,7 @@ to click a button.
 
 Now run the message program:
 \begin{prompt}
+%\shellcmd{cd ~/examples/Running-jobs-with-input}%
 %\shellcmd{./message.py}%
 \end{prompt}
 
@@ -357,12 +361,12 @@ Click any button and see what happens.
 
 \begin{prompt}
 -----------------------
-< Enjoy the day! Mooh > 
------------------------ 
-     ^__^ 
-     (oo)\_______ 
-     (__)\       )\/\ 
-         ||----w | 
+< Enjoy the day! Mooh >
+-----------------------
+     ^__^
+     (oo)\_______
+     (__)\       )\/\
+         ||----w |
          ||     ||
 
 \end{prompt}
@@ -406,3 +410,20 @@ entering ``\strong{exit}'' in the command window again.
 \begin{prompt}
 fx >> %\textbf{exit}%
 \end{prompt}
+
+
+Please not that you are not running MATLAB on the \hpc, but only on the
+login nodes. So it is not recommended to run large programs this way.
+You are allowed to run X programs on the login nodes for visualization
+related tasks only. This is here to let you speed up your workflow,
+so you can do a quick visualization without having to copy over all your data
+from the \hpc to your local system to quickly view a plot.
+
+On the login nodes memory and processor time is very limited, because these
+nodes are shared with a large amount op people.
+
+\ifgent
+For more information about how you can run computationally expensive
+MATLAB programs on the \hpc, see \url{http://hpc.ugent.be/userwiki/index.php/User:MATLAB}.
+%TODO: add a matlab chapter/big section to ch_programming_examples
+\fi
