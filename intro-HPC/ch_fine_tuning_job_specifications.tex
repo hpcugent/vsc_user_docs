@@ -1,27 +1,27 @@
 \chapter{Fine-tuning Job Specifications}
 \label{ch:fine-tuning-job-specifications}
 
-As \hpc systemadministrators, we often observe that the \hpc resources are
+As \hpc system administrators, we often observe that the \hpc resources are
 not optimally (or wisely) used. For example, we regularly notice that several
-cores on a computing node are not utilized, due to the fact that one sequential
+cores on a computing node are not utilised, due to the fact that one sequential
 program uses only one core on the node. Or users run I/O intensive applications
 on nodes with ``slow'' network connections.
 
 Users often tend to run their jobs without specifying specific PBS Job
 parameters.  As such, their job will automatically use the default parameters,
 which are not necessarily (or rarely) the optimal ones.  This can slow down the
-runtime of your application, but also block \hpc resources for other users.
+run time of your application, but also block \hpc resources for other users.
 
 Specifying the ``optimal'' Job Parameters requires some knowledge of your
 application (e.g., how many parallel threads does my application uses, is there
 a lot of inter-process communication, how much memory does my application need)
 and also some knowledge about the \hpc infrastructure (e.g., what kind of
-multi-core processors are available, which nodes have infiniband).
+multi-core processors are available, which nodes have Infiniband).
 
 There are plenty of monitoring tools on Linux available to the user, which are
-useful to analyze your individual application. The \hpc environment as a
+useful to analyse your individual application. The \hpc environment as a
 whole often requires different techniques, metrics and time goals, which are
-not discussed here. We will focus on tools that can help to optimize your Job
+not discussed here. We will focus on tools that can help to optimise your Job
 Specifications.
 
 Determining the optimal computer resource specifications can be broken down
@@ -31,10 +31,10 @@ tracked metrics are CPU usage, memory consumption, network bandwidth, and disk
 I/O stats. These provide different indications of how well a system is
 performing, and may indicate where there are potential problems or performance
 bottlenecks. Once the data have actually been acquired, the second task is
-analyzing the data and adapting your PBS Job Specifications.
+analysing the data and adapting your PBS Job Specifications.
 
-Another different task is to monitor the behavior an application at runtime and
-detect anomalies or unexpected behavior. Linux provides a large number of
+Another different task is to monitor the behaviour an application at run time and
+detect anomalies or unexpected behaviour. Linux provides a large number of
 utilities to monitor the performance of its components.
 
 This chapter shows you how to measure:
@@ -75,7 +75,7 @@ user 0m0.001s
 sys 0m0.002s
 \end{prompt}
 
-It is a good practice to correctly estimate and specify the runtime (duration)
+It is a good practice to correctly estimate and specify the run time (duration)
 of an application. Of course, a margin of 10\% to 20\% can be taken to be on
 the safe side.
 
@@ -189,12 +189,12 @@ Whereby:
   values will be displayed every 5 seconds.
 \item  The second column shows you the used memory in kb. We note that the
   memory slowly increases up to 3 GB (= 3072 KB), and is released again.
-\item  The third column shows the memory utilization, expressed in percentages
+\item  The third column shows the memory utilisation, expressed in percentages
   of the full available memory.  At full memory consumption, 19.2\% of the
   memory was being used by our application. With the \emph{``free''} command,
   we have previously seen that we had a node of 16 GB in this example. 3 GB is
   indeed more or less 19.2\% of the full available memory.
-\item  The fourth column shows you the CPU utilization, expressed in
+\item  The fourth column shows you the CPU utilisation, expressed in
   percentages of a full CPU load. As there are no computations done in our
   exercise, the value remains very low (i.e., 0.2\%).
 \end{enumerate}
@@ -239,8 +239,8 @@ Alternative options to monitor the memory consumption are the ``\emph{top}''
 or the ``\emph{htop}'' command.
 
 \begin{description}
-  \item[top] provides an ongoing look at processor activity in real time. It displays a listing of the most CPU-intensive tasks on the system, and can provide an interactive interface for manipulating processes. It can sort the tasks by memory usage, CPU usage and runtime.
-  \item[htop] is similar to top, but shows the CPU-utilization for all the CPUs in the machine and allows to scroll the list vertically and horizontally to see all processes and their full command lines.
+  \item[top] provides an ongoing look at processor activity in real time. It displays a listing of the most CPU-intensive tasks on the system, and can provide an interactive interface for manipulating processes. It can sort the tasks by memory usage, CPU usage and run time.
+  \item[htop] is similar to top, but shows the CPU-utilisation for all the CPUs in the machine and allows to scroll the list vertically and horizontally to see all processes and their full command lines.
 \end{description}
 
 \begin{prompt}
@@ -291,16 +291,16 @@ or on the command line
 
 \section{Specifying processors requirements}
 
-Users are encouraged to fully utilize all the available cores on a certain
+Users are encouraged to fully utilise all the available cores on a certain
 compute node. Once the required numbers of cores and nodes are decently
-specified, it is also good practice to monitor the CPU utilization on these
+specified, it is also good practice to monitor the CPU utilisation on these
 cores and to make sure that all the assigned nodes are working at full load.
 
 \subsection{Number of processors}
 
 The number of core and nodes that a user shall request fully depends on the
 architecture of the application. The developer designs his application with a
-strategy for parallelization in mind. The application can be designed for a
+strategy for parallelisation in mind. The application can be designed for a
 certain fixed number or for a configurable number of nodes and cores. It is
 wise to target a specific set of compute nodes (e.g., Westmere, Harpertown) for
 your computing work and then to configure your software to nicely fill up all
@@ -361,7 +361,7 @@ its own through something like MPI or OpenMP, requesting more than a single
 processor on a single node is usually wasteful and can impact the job start
 time.
 
-\subsection{Monitoring the CPU-utilization}
+\subsection{Monitoring the CPU-utilisation}
 
 The previously used ``monitor'' tool also shows the overall CPU-load. The
 ``eat\_cpu'' program performs a multiplication of 2 randomly filled a $1500 \times 1500$
@@ -409,10 +409,10 @@ This could also be monitored with the \strong{\emph{htop}} command:
 \exampleoutput{htop-output}
 
 
-The advantage of htop is that it shows you the cpu utilization for all
+The advantage of htop is that it shows you the cpu utilisation for all
 processors as well as the details per application.  A nice exercise is to start
 4 instances of the ``cpu\_eat'' program in 4 different terminals, and inspect
-the cpu utilization per processor with monitor and htop.
+the cpu utilisation per processor with monitor and htop.
 
 If \strong{\emph{htop}} reports that your program is taking 75\% CPU on a
 certain processor, it means that 75\% of the samples taken by top found your
@@ -427,13 +427,13 @@ understanding your overall CPU usage pattern.
 
 \subsection{Fine-tuning your executable and/or job-script}
 
-It is good practice to perform a number of runtime stress tests, and to check
-the CPU utilization of your nodes. We (and all other users of the \hpc) would
+It is good practice to perform a number of run time stress tests, and to check
+the CPU utilisation of your nodes. We (and all other users of the \hpc) would
 appreciate that you use the maximum of the CPU resources that are assigned to
-you and make sure that there are no CPUs in your node who are not utilized
+you and make sure that there are no CPUs in your node who are not utilised
 without reasons.
 
-But how can you maximize?
+But how can you maximise?
 
 \begin{enumerate}
 \item  Configure your software. (e.g., to exactly use the available amount of processors in a node)
@@ -444,7 +444,7 @@ But how can you maximize?
 
 \section{The system load}
 
-On top of the CPU utilization, it is also important to check the \strong{system
+On top of the CPU utilisation, it is also important to check the \strong{system
 load}.  The system \strong{load} is a measure of the amount of computational
 work that a computer system performs.
 
@@ -456,7 +456,7 @@ each one could be scheduled into a CPU.
 The load averages differ from CPU percentage in two significant ways:
 
 \begin{enumerate}
-\item  ``\emph{load averages}'' measure the trend in CPU utilization (and not only an instantaneous snapshot, as does CPU percentage); and
+\item  ``\emph{load averages}'' measure the trend in CPU utilisation (and not only an instantaneous snapshot, as does CPU percentage); and
 \item  ``\emph{load averages}'' include all demand for the CPU (and not only how much was active at the time of measurement).
 \end{enumerate}
 
@@ -465,12 +465,12 @@ The load averages differ from CPU percentage in two significant ways:
 What is the ``\emph{optimal load}'' rule of thumb?
 
 The load averages tell us whether our physical CPUs are over- or
-under-utilized. The \strong{point of perfect utilization}, meaning that the
+under-utilised. The \strong{point of perfect utilisation}, meaning that the
 CPUs are always busy and, yet, no process ever waits for one, is \strong{the
 average matching the number of CPUs}.  Your load should not exceed the number
 of cores available.  E.g., if there are four CPUs on a machine and the reported
-one-minute load average is 4.00, the machine has been utilizing its processors
-perfectly for the last 60 seconds. The ``100\% utilization'' mark is 1.0 on a
+one-minute load average is 4.00, the machine has been utilising its processors
+perfectly for the last 60 seconds. The ``100\% utilisation'' mark is 1.0 on a
 single-core system, 2.0 on a dual-core, 4.0 on a quad-core, etc. The optimal
 load shall be between 0.7 and 1.0 per processor.
 
@@ -534,18 +534,18 @@ background, and check the effect on the load again:
 You can also read it in the \strong{htop} command.
 \subsection{Fine-tuning your executable and/or job-script}
 
-It is good practice to perform a number of runtime stress tests, and to check
+It is good practice to perform a number of run time stress tests, and to check
 the system load of your nodes. We (and all other users of the \hpc) would
 appreciate that you use the maximum of the CPU resources that are assigned to
-you and make sure that there are no CPUs in your node who are not utilized
+you and make sure that there are no CPUs in your node who are not utilised
 without reasons.
 
-But how can you maximize?
+But how can you maximise?
 
 \begin{enumerate}
 \item  Profile your software to improve its performance.
 \item  Configure your software (e.g., to exactly use the available amount of processors in a node).
-\item  Develop your parallel program in a smart way, so that it fully utilizes the available processors.
+\item  Develop your parallel program in a smart way, so that it fully utilises the available processors.
 \item  Demand a specific type of compute node (e.g., Harpertown, Westmere), which have a specific number of cores.
 \item  Correct your request for CPUs in your job-script.
 \end{enumerate}
@@ -659,9 +659,9 @@ processors are 100\% busy, but you see a lot of red bars and only limited green
 bars in the htop screen, it is mostly an indication that they loose a lot of
 time with inter-process communication.
 
-Whenever your application utilizes a lot of inter-process communication (as is
+Whenever your application utilises a lot of inter-process communication (as is
 the case in most parallel programs), we strongly recommend to request nodes
-with an ``infiniband'' network. The Infiniband is a specialized high bandwidth,
+with an ``Infiniband'' network. The Infiniband is a specialised high bandwidth,
 low latency network that enables large parallel jobs to run as efficiently as
 possible.
 

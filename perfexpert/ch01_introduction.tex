@@ -3,9 +3,9 @@
 \section{Purpose}
 \label{sec:Purpose}
 
-\strong{HPC systems} are notorious for operating at a small fraction of their peak performance, and the ongoing migration to multi-core and multi-socket compute nodes further complicates performance optimization.
+\strong{HPC systems} are notorious for operating at a small fraction of their peak performance, and the ongoing migration to multi-core and multi-socket compute nodes further complicates performance optimisation.
 
-The previously available \strong{performance optimization tools} require considerable effort to learn and use. To enable wide access to performance optimization, TACC and its technology insertion partners have developed PerfExpert, a tool that combines a simple user interface with a sophisticated analysis engine to:
+The previously available \strong{performance optimisation tools} require considerable effort to learn and use. To enable wide access to performance optimisation, TACC and its technology insertion partners have developed PerfExpert, a tool that combines a simple user interface with a sophisticated analysis engine to:
 
 \begin{enumerate}
   \item  \strong{Detect} and \strong{diagnosis} the causes for typical core, socket, and node-level performance bottlenecks in procedures and loops of an application;
@@ -18,18 +18,18 @@ PerfExpert was developed at the Texas Advanced Computing Center (\strong{TACC}) 
 \section{Under the hood}
 \label{sec:Under_the_hood}
 
-The performance of scientific computing applications is heavily influenced by memory access and floating-point unit (FPU) utilization. Many modern CPUs contain a variety of hardware performance counter events that are useful in diagnosing resource utilization and access patterns. These counters capture events such as L1 and L2 cache misses, branch instruction mispredictions, and execution of floating point instructions. PerfExpert collects these statistics and attempts to correlate them with the code being analyzed. Thus, individual functions or even separate loop nests can be characterized in terms of the kinds of CPU instructions and memory accesses they produce.
+The performance of scientific computing applications is heavily influenced by memory access and floating-point unit (FPU) utilisation. Many modern CPUs contain a variety of hardware performance counter events that are useful in diagnosing resource utilisation and access patterns. These counters capture events such as L1 and L2 cache misses, branch instruction mispredictions, and execution of floating point instructions. PerfExpert collects these statistics and attempts to correlate them with the code being analysed. Thus, individual functions or even separate loop nests can be characterised in terms of the kinds of CPU instructions and memory accesses they produce.
 
 PerfExpert is built on top of two profiling tools that provide access to the \strong{timing} and \strong{hardware performance counter events figures}: PAPI and HPCToolkit.
 
 \begin{enumerate}
   \item  \strong{PAPI} is a library that provides access to CPU hardware performance counter events. Because the implementation of performance counters differs across CPU manufacturers and models, PAPI provides an abstracted interface that allows the user to retrieve the desired information regardless of the underlying OS or CPU architecture.
-  \item  \strong{HPCToolkit} is a profiling tool that uses periodic \emph{statistical sampling} to read the performance counter events (using PAPI) and call structure of any executable compiled with debugging symbols. This approach is important because it can be run against executables compiled with full optimization.
+  \item  \strong{HPCToolkit} is a profiling tool that uses periodic \emph{statistical sampling} to read the performance counter events (using PAPI) and call structure of any executable compiled with debugging symbols. This approach is important because it can be run against executables compiled with full optimisation.
 \end{enumerate}
 
 By combining the statistical sampling of program execution from HPCToolkit with the hardware performance counter events values from PAPI, an accurate correlation between CPU instructions, cache accesses, program structure, and execution time can be assembled. PerfExpert orchestrates the profiling process to provide easy to use reports and suggestions for improvement.
 
-\strong{Summarized:} PerfExpert aims to be an Easy-to-Use Performance Diagnosis Tool for HPC Applications.
+\strong{Summarised:} PerfExpert aims to be an Easy-to-Use Performance Diagnosis Tool for HPC Applications.
 
 \section{Environment Configuration}
 \label{sec:Environment_Configuration}

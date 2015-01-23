@@ -20,8 +20,8 @@ After following these conventions you only need to add the include in the main
 \section{Sections and chapters}
 \label{sec:sections-and-chapters}
 
-Chapter titles should contain capitalized words. Section titles should only
-have the first word capitalized. Every \texttt{\textbackslash{}chapter},
+Chapter titles should contain capitalised words. Section titles should only
+have the first word capitalised. Every \texttt{\textbackslash{}chapter},
 \texttt{\textbackslash{}section} and \texttt{\textbackslash{}subsection} should
 be accompanied by a \texttt{\textbackslash{}label}.
 
@@ -81,7 +81,7 @@ is the same as the chapter name with spaces and slashes substituted by dashes.
 
 The \verb|examplecode| takes 2 mandatory arguments. The first one is the
 language of the code file (e.g., C or Python). The second is the basename of the
-file. If you want you can organize the example files per chapter in
+file. If you want you can organise the example files per chapter in
 subdirectories, you then need to add the subdirectory to the filename argument.
 The commands below illustrate how this works.
 
@@ -102,7 +102,7 @@ special command \verb|\shellcmd{}| which provides consistent styling. It also
 includes a \$-sign. There is a special version of this command called
 \verb|\captureshellcmd{}|. This behaves exactly the same as \verb|shellcmd| but
 it writes its argument to \verb|shellcmds.sh|. All commands you want to capture
-will be present here. This file will be updated each time you build the pdf.
+will be present here. This file will be updated each time you build the PDF.
 You can use this to easily run commands and paste their output in the latex
 file. NOTE: instead of \verb|\tilde| you should use a regular \tilde{} inside
 \verb|\shellcmd| and \verb|\captureshellcmd|. Inside the prompt environment you
@@ -111,7 +111,7 @@ can use \% as escape character to type commands.
 \begin{verbatim}
 \begin{prompt}
 %\shellcmd{bash --version}%
-GNU bash, versie 4.1.2(1)-release (x86_64-redhat-linux-gnu)
+GNU bash, version 4.1.2(1)-release (x86_64-redhat-linux-gnu)
 %\captureshellcmd{ls ~}%
 \end{prompt}
 \end{verbatim}
@@ -119,7 +119,7 @@ GNU bash, versie 4.1.2(1)-release (x86_64-redhat-linux-gnu)
 which will result in following output:
 \begin{prompt}
 %\shellcmd{bash --version}%
-GNU bash, versie 4.1.2(1)-release (x86_64-redhat-linux-gnu)
+GNU bash, version 4.1.2(1)-release (x86_64-redhat-linux-gnu)
 %\captureshellcmd{ls ~}%
 \end{prompt}
 
@@ -135,7 +135,7 @@ format the file in a prompt environment.
 \label{sec:job-scripts}
 
 When including code of any kind you can use the code environment, there is a
-required argument which sets the language. The following LaTeX code:
+required argument which sets the language. The following \LaTeX code:
 
 \begin{verbatim}
 \begin{code}{bash}

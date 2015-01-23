@@ -23,7 +23,7 @@ Before you can really start using the \hpc clusters, there are several things yo
   of) the \hpc.
 
   In the screenshots, we show the setup for user ``\strong{\emph{vsc20167}}''
-  to the \hpc cluster via the loginnode
+  to the \hpc cluster via the login node
   ``\strong{\emph{\loginnode}}''.
 
   \begin{enumerate}
@@ -32,7 +32,7 @@ Before you can really start using the \hpc clusters, there are several things yo
       configuration screen will pop up. As you will often use the PuTTY tool,
       we recommend adding a shortcut on your desktop.
     \item  Within the category $<$\strong{\emph{Session}}$>$, in the field
-      $<$\strong{\emph{Host Name}}$>$, enter the name of the loginnode of the
+      $<$\strong{\emph{Host Name}}$>$, enter the name of the login node of the
       \hpc cluster (i.e., ``\strong{\emph{\loginnode}}'')
       you want to connect to.
 
@@ -68,9 +68,9 @@ Before you can really start using the \hpc clusters, there are several things yo
 
   \includegraphics*[width=3.94in, height=2.47in, keepaspectratio=false]{ch2-putty-enter-password}
 
-    \item  The first time you make a connection to the loginnode, a Security
+    \item  The first time you make a connection to the login node, a Security
       Alert will appear and you will be asked to verify the authenticity of the
-      loginnode.
+      login node.
       \ifgent
       Make sure the fingerprint in the Alert matches \strong{\loginfingerprint}
       \fi
@@ -106,7 +106,7 @@ get external access (e.g., from home) by using a VPN connection.
 
 Open up a terminal and enter the following command to connect to the \hpc.
 \ifmac
-You can open a terminal by navigationg to Applications and then Utilities in the finder and open Terminal.app, or enter Terminal in Spotlight Search.
+You can open a terminal by navigation to Applications and then Utilities in the finder and open Terminal.app, or enter Terminal in Spotlight Search.
 \fi
 
 \begin{prompt}
@@ -228,7 +228,7 @@ and start working.
 
 \ifgent
 Upon connecting you will see a login message containing your last login
-timestamp and a basic overview of the current cluster utilisation.
+time stamp and a basic overview of the current cluster utilisation.
 \begin{prompt}
 Last login: Tue Jan  6 08:53:11 2015 from helios.ugent.be
 
@@ -251,8 +251,8 @@ For a full view of the current loads and queues see:
 \end{prompt}
 \fi
 \ifbrussel
-Upon connectiong you will see a login message containing your last login
-timestamp, some useful environment variable definitions and the message of the
+Upon connecting you will see a login message containing your last login
+time stamp, some useful environment variable definitions and the message of the
 day (MOTD).
 \begin{prompt}
 Last login: Thu Nov  6 16:05:21 2014 from example.vub.ac.be
@@ -281,8 +281,8 @@ Message of the day:
 \fi
 
 \ifleuven
-Upon connectiong you will see a login message containing your last login
-timestamp and some useful links.
+Upon connecting you will see a login message containing your last login
+time stamp and some useful links.
 \begin{prompt}
 Last login: Mon Jan 12 18:52:20 2015 from example.kuleuven.be
 **********************************************
@@ -368,7 +368,7 @@ user interface. Usually a locale identifier consists of at least a language
 identifier and a region identifier.
 
 Open the .bash\_profile or the .profile on your local machine with your
-favorite editor and add the following lines:
+favourite editor and add the following lines:
 
 \begin{prompt}
 %\shellcmd{vi ~/.bash\_profile}%
@@ -569,7 +569,7 @@ open a terminal window and jump in!
 
   \subsection{Using FileZilla}
 
-  If you orefer a GUI to transfer files back and forth to the \hpc, we can
+  If you prefer a GUI to transfer files back and forth to the \hpc, we can
   suggest to use FileZilla. FileZilla is a fast and free FTP and SFTP client,
   which is widely used.
 
@@ -607,7 +607,7 @@ The program environment on the \hpc is controlled by pre-defined settings,
 which are stored in environment (or shell) variables.
 
 You can use shell variables to store data, set configuration options and
-customize the environment on the \hpc. The default shell under Scientific
+customise the environment on the \hpc. The default shell under Scientific
 Linux on the \hpc is Bash (Bourne Again Shell) and can be used for the
 following purposes:
 
@@ -625,7 +625,7 @@ following purposes:
 
 The environment variables are typically set at login by a script, whenever you
 connect to the \hpc. These pre-defined variables usually impact the run time
-behavior of the programs that we want to run.
+behaviour of the programs that we want to run.
 
 All the software packages that are installed on the \hpc cluster require
 different settings. These packages include compilers, interpreters,
@@ -677,7 +677,7 @@ This will load the most recent version of MATLAB.
 
 For some packages, e.g., OpenMPI, multiple versions are installed; the load
 command will automatically choose the most recent version (i.e., the
-lexicographically last after the ``/'') or the default version (as set by the
+lexicographical last after the ``/'') or the default version (as set by the
 system administrators). However, the user can (and probably should, to avoid
 surprises when never versions are installed) specify a particular version,
 e.g.,
@@ -780,7 +780,7 @@ by default software works on the login nodes.
 As a rule, once a module has been installed on the cluster, the executables or
 libraries it comprises are never modified. This policy ensures that the user's
 programs will run consistently, at least if the user specifies a specific
-version. Failing to specify a version may result in unexpected behavior.
+version. Failing to specify a version may result in unexpected behaviour.
 
 Consider the following example: the user decides to use the GSL library for
 numerical computations, and at that point in time, just a single version 1.12,
@@ -829,7 +829,7 @@ variables will be changed by a certain module, try:
 -------------------------------------------------------------------
 /apps/gent/SL6/sandybridge/modules/all/ABAQUS/6.14.1-linux-x86_64:
 
-module-whatis    Description: Finite Element Analysis software for modeling, visualization and best-in-class implicit and explicit dynamics FEA. - Homepage: http://www.simulia.com/products/abaqus_fea.html
+module-whatis    Description: Finite Element Analysis software for modeling, visualisation and best-in-class implicit and explicit dynamics FEA. - Homepage: http://www.simulia.com/products/abaqus_fea.html
 conflict     ABAQUS
 prepend-path PATH /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/Commands
 setenv       EBROOTABAQUS /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64
@@ -850,5 +850,5 @@ Or to get more information about one specific module package:
 %\shellcmd{module help ABAQUS}%
 ----------- Module Specific Help for 'ABAQUS/6.14.1-linux-x86_64' ---------------------------
 
-   Finite Element Analysis software for modeling, visualization and best-in-class implicit and explicit dynamics FEA. - Homepage: http://www.simulia.com/products/abaqus_fea.html
+   Finite Element Analysis software for modeling, visualisation and best-in-class implicit and explicit dynamics FEA. - Homepage: http://www.simulia.com/products/abaqus_fea.html
 \end{prompt}

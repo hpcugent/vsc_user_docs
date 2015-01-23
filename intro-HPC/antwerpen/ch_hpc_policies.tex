@@ -23,7 +23,7 @@ Each user will have exclusive access to the nodes that are assigned to him.
 This means that no jobs from other users will be executed on the nodes during
 your computations.  Of course, it is very likely that multiple jobs from the
 same user are being send to the same node at the same time, in order to
-maximize the utilization of the remaining available resources.
+maximise the utilisation of the remaining available resources.
 
 The motivation behind this ``one node, one user'' policy is:
 
@@ -60,8 +60,8 @@ The Priority system can of course be adapted in the future, but this will be wil
 \section{Fairshare mechanism}
 
 A ``\emph{Fairshare}'' system has been setup to allow all users to get their
-fair share of the UA-HPC utilization.  The mechanism incorporates historical
-resource utilization over the last week.  A users ``Fairshare'' index is used
+fair share of the UA-HPC utilisation.  The mechanism incorporates historical
+resource utilisation over the last week.  A users ``Fairshare'' index is used
 to adapt its job priority in the queue.  It only affects its job's priority
 relative to other available jobs. When there are no other competing jobs, the
 job will immediately run.
