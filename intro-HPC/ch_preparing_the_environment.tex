@@ -110,21 +110,23 @@ You can open a terminal by navigation to Applications and then Utilities in the 
 \fi
 
 \begin{prompt}
-%\shellcmd{ssh $<$%\userid%$>$@\loginnode}%
+%\shellcmd{ssh \userid{}@\loginnode{}}%
 \end{prompt}
+
+Here, user \userid wants to make a connection to the ``\hpcname'' cluster at
+\university via the login node ``\loginnode'', so replace \userid with your own
+userid in the above command.
 
 The first time you make a connection to the login node, you will be asked to
 verify the authenticity of the login node, e.g.,
 
 \begin{prompt}
 %\shellcmd{ssh \userid{}@\loginnode{}}%
-The authenticity of host %\loginnode% (<IP-adress>) can't be established.
+The authenticity of host %\loginnode% (<IP-adress>)
+can't be established.
 RSA key fingerprint is %\loginfingerprint%
 Are you sure you want to continue connecting (yes/no)? %\strong{\emph{yes}}%
 \end{prompt}
-
-Here, user \userid wants to make a connection to the ``\hpcname'' cluster at
-\university via the login node ``\loginnode''.
 
 \fi
 \strong{Congratulations, you're on the \hpc infrastructure now!}
@@ -208,7 +210,7 @@ commands.
 \end{tip}
 
 \begin{tip}
-For more exhaustive tutorials about Linux usage, see \ref{ch:useful-linux-commands}
+For more exhaustive tutorials about Linux usage, see Appendix \ref{ch:useful-linux-commands}
 \end{tip}
 
 The first action is to copy the contents of the \hpc examples directory
@@ -223,8 +225,10 @@ will also copy the contents of the sub-directories ``\emph{recursively}''.
 Go to your home directory, check your own private examples directory, \dots\
 and start working.
 
+\begin{prompt}
 %\shellcmd{cd}%
 %\shellcmd{ls -l}%
+\end{prompt}
 
 \ifgent
 Upon connecting you will see a login message containing your last login
@@ -303,24 +307,30 @@ Last login: Mon Jan 12 18:52:20 2015 from example.kuleuven.be
 \fi
 
 \ifantwerpen
-Upon connection, you will get a welcome message and your current disk and file
-quotas are shown.
+Upon connection, you will get a welcome message containing your last login
+timestamp and some pointers to information about the system.
 
 \begin{prompt}
-%\dots%
-Your quota is:
-Block Limits
-   Filesystem         KB      quota      limit    grace
-   data            82944   26214400   28835840     none
-   home            35328    3145728    3461120     none
-   scratch         47808   26214400   28835840     none
+Last login: Mon Feb  2 17:58:13 2015 from mylaptop.uantwerpen.be
 
-File Limits
-   Filesystem      files      quota      limit    grace
-   data               27     100000     150000     none
-   home              125      20000      25000     none
-   scratch            11     100000     150000     none
-----------------------------------------------------------
+---------------------------------------------------------------
+
+Welcome to Hopper!
+
+A quick start guide can be found here:
+
+  /apps/antwerpen/tutorials/calcua/Hopper-Quick-Start-Guide.pdf
+
+Please read this guide carefully, otherwise your jobs might
+never start!
+
+Questions or problems? Do not hesitate and contact us:
+
+  hpc@uantwerpen.be
+
+Happy computing!
+
+---------------------------------------------------------------
 \end{prompt}
 \fi
 
@@ -334,7 +344,7 @@ Connection to %\loginnode% closed.
 
 \begin{tip}[Setting your Language right]
 
-You may encounter the following warning message during connecting:
+You may encounter a warning message similar to the following one during connecting:
 \begin{prompt}
 perl: warning: Setting locale failed.
 perl: warning: Please check that your locale settings:
@@ -345,6 +355,7 @@ LANG = (unset)
     are supported and installed on your system.
 perl: warning: Falling back to the standard locale ("C").
 \end{prompt}
+or any other error message complaining about the locale.
 
 This means that the correct ``locale'' has not yet been properly specified on
 your local machine. Try:
@@ -367,6 +378,7 @@ country and any special variant preferences that the user wants to see in their
 user interface. Usually a locale identifier consists of at least a language
 identifier and a region identifier.
 
+%% Question from Kurt L: Shouldn't this be in a \ifmacORlinux? On Windows it only holds in cygwin and so.
 Open the .bash\_profile or the .profile on your local machine with your
 favourite editor and add the following lines:
 
@@ -387,7 +399,7 @@ exit vi by entering: ``<esc>:wq''
 To exit vi without saving your changes, enter ``<esc>:q!''
 \end{tip}
 
-or alternatively (if you are not comfortable with the Linux editors):
+or alternatively (if you are not comfortable with the Linux editors) - again on your local machine -:
 
 \begin{prompt}
 %\shellcmd{echo "export LANGUAGE=\textbackslash "en\_US.UTF-8\textbackslash " $>$$>$ ~/.profile"}%
@@ -396,7 +408,7 @@ or alternatively (if you are not comfortable with the Linux editors):
 %\shellcmd{echo "export LANG="en\_US.UTF-8\textbackslash " $>$$>$ ~/.profile"}%
 \end{prompt}
 
-You can now log-out and re-connect to the \hpc, and you should not get these
+You can now log-out, open a new terminal/shell on your local machine and re-connect to the \hpc, and you should not get these
 warnings anymore.
 
 \section{Transfer Files to/from the \hpc}
@@ -487,7 +499,7 @@ open a terminal window and jump in!
   %\shellcmd{ls -l}%
   %\dots%
   -rw-r--r-- 1 gborstlap  staff   6 Sep 18 09:37 localfile.txt
-  %\shellcmd{scp localfile.txt $<$%\userid%$>$@\loginnode:}%
+  %\shellcmd{scp localfile.txt \userid{}@\loginnode{}:}%
   localfile.txt    100%\%%   6     0.0KB/s   00:00
   \end{prompt}
 
@@ -507,9 +519,11 @@ open a terminal window and jump in!
   Hello
   \end{prompt}
 
-  Likewise, to copy the remote file ``\jobname.pdf'' from your ``docs''
-  sub-directory on the cluster to your local computer, try:
+  The \strong{scp} command can also bu used to copy files from the cluster to your local machine.
+  Let us copy the remote file ``\jobname.pdf'' from your ``docs''
+  sub-directory on the cluster to your local computer.
 
+  First, we will confirm that the file is indeed in the ``docs'' sub-directory. 
   On the Terminal on the \hpc, enter:
 
   \begin{prompt}
@@ -520,14 +534,13 @@ open a terminal window and jump in!
   -rw-r--r-- 1 %\userid% Sep 11 09:53 %\jobname%.pdf
   \end{prompt}
 
-  On the Terminal on your own local computer, enter:
+  Now we will copy the file to the local machine. On the Terminal on your own local computer, enter:
 
   \begin{prompt}
   %\shellcmd{scp \userid{}@\loginnode:./docs/\jobname.pdf .}%
   %\jobname.pdf% 100%\%%  725KB 724.6KB/s   00:01
   %\shellcmd{ls -l}%
   total  899
-  -rw-r--r--   1 gborstlap  staff     413 Sep 10 10:29 id_rsa.pub
   -rw-r--r--   1 gborstlap  staff  741995 Sep 18 09:53 %\jobname%.pdf
   -rw-r--r--   1 gborstlap  staff       6 Sep 18 09:37 localfile.txt
   \end{prompt}
@@ -547,7 +560,7 @@ open a terminal window and jump in!
 
   One easy way of starting a sftp session is
   \begin{prompt}
-  %\shellcmd{sftp $<$\userid$>$@$<$\loginnode$>$}%
+  %\shellcmd{sftp \userid{}@\loginnode{}}%
   \end{prompt}
 
   Typical and popular commands inside an sftp session are:
@@ -665,6 +678,34 @@ This will give some output such as:
 This gives a full list of software packages that can be loaded. Note that
 modules starting with a capital letter are listed first.
 
+\subsection{Organisation of modules in toolchains}
+
+The amount of modules on the VSC systems can be overwhelming, and it is not 
+always immediately clear which modules can be loaded safely together if you 
+need to combine multiple programs in a single job to get your work done. 
+
+Therefore the VSC has defined so-called \strong{toolchains} on the newer VSC-clusters.
+A toolchain contains a C/C++ and Fortran compiler, a MPI library and some basic
+math libraries for (dense matrix) linear algebra and FFT. Two toolchains are
+defined on most VSC systems. One, the ``intel'' toolchain, consists of the Intel 
+compilers, MPI library and math libraries. The other one, the ``foss'' toolchain,
+consists of Open Source components: the GNU compilers, OpenMPI, OpenBLAS and
+the standard LAPACK and ScaLAPACK libraries for the linear algebra operations 
+and the FFTW library for FFT. The toolchains are refreshed twice a year,
+which is reflected in their name. E.g., ``foss-2014b'' is the second version
+of the ``foss'' toolchain in 2014.
+
+The toolchains are then used to compile a lot of the software installed on
+the VSC clusters. You can recognise those packages easily as they all contain the
+name of the toolchain after the version number in their name. Packages 
+compiled with the same toolchain will typically work together well without
+conflicts.
+
+For some clusters, additional toolchains are defined, e.g., to take advantage
+of specific properties of that cluster such as GPU accelerators or special
+interconnect features that require a vendor-specific MPI-implementation to
+take advantage of them.
+
 \subsection{Activating and de-activating modules}
 
 A module is loaded using the following command:
@@ -710,6 +751,10 @@ be loaded whenever the Python module is loaded. There are advantages and
 disadvantages to this, so be aware of automatically loaded modules whenever
 things go wrong: they may have something to do with it!
 
+In fact, an easy way to check the components and version numbers of those
+components of a toolchain is to simply load the toolchain and then list the 
+modules that are loaded.
+
 To unload a module, one can use the ``module unload'' command. It works
 consistently with the load command, and reverses the latter's effect. However,
 the dependencies of the package are NOT automatically unloaded; the user shall
@@ -745,6 +790,11 @@ state, you can use:
 %modules specifically needed by applications in that job description. This
 %ensures that no version conflicts occur if the user loads module using his
 %'.bashrc' file.
+However, on some VSC clusters you may be left with a very empty list of available
+modules after executing ``module purge''. On those systems, ``module av'' will show you a list of
+modules containing the name of a cluster or a particular feature of a section of 
+the cluster, and loading the appropriate module will restore the module list
+applicable to that particular system.
 
 Modules need not be loaded one by one; the two ``load'' commands can be
 combined as follows:
@@ -812,7 +862,7 @@ ABAQUS/6.14.1-linux-x86_64
 %\shellcmd{module load ABAQUS/6.13.5-linux-x86\_64}%
 ABAQUS/6.13.5-linux-x86_64(12):ERROR:150: Module 'ABAQUS/6.13.5-linux-x86_64' conflicts with the currently loaded module(s) 'ABAQUS/6.12.1-linux-x86_64'
 ABAQUS/6.13.5-linux-x86_64(12):ERROR:102: Tcl command execution failed: conflict ABAQUS
-%\shellcmd{module swap scripts/2.6.0}%
+%\shellcmd{module swap ABAQUS/6.13.5-linux-x86\_64}%
 \end{prompt}
 
 Note: A ``module swap'' command combines the appropriate ``module unload''
