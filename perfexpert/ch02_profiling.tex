@@ -33,13 +33,13 @@ Source-code performance optimisation has four stages:
 \begin{enumerate}
   \item  \emph{measurement},
   \item  \emph{analysis and diagnosis of bottlenecks},
-  \item  determination of \emph{optimisation's}, and
+  \item  determination of \emph{optimisations}, and
   \item  \emph{rewriting source code}.
 \end{enumerate}
 
 Executing these steps for today's complex many processor and heterogeneous computer architectures requires a wide spectrum of knowledge and tools that many application developers would rather not have to learn.
 
-PerfExpert utilises knowledge of architectures and compilers to implement (partial) automation of performance optimisation for multicore chips and heterogeneous nodes of cluster computers. PerfExpert automates the first three performance optimisation stages then implements those optimisation's as part of the fourth stage.
+PerfExpert utilises knowledge of architectures and compilers to implement (partial) automation of performance optimisation for multicore chips and heterogeneous nodes of cluster computers. PerfExpert automates the first three performance optimisation stages then implements those optimisations as part of the fourth stage.
 
 Remember to load the appropriate PerfExpert modules:
 
@@ -186,7 +186,7 @@ A software program spend its time on 3 types of instructions:
 \begin{enumerate}
   \item  \strong{Computations}: Typically, we want our program to be busy with computations (floating-point or other) to solve our scientific problem, and as such a high percentage for FP computations is considered to be good and desired.
   \item  \strong{Data Access:} The computations will need to read input data and will generate output data. Data access (preferably from the fastest lowest cache levels) is needed, but the overall times spend on reading and writing data shall be limited as it is not the core goal of our program. A high percentage of time spend on data access might indicate data access issues.
-  \item  \strong{Program logic:} The time spent on other instructions (control flow, testing, loops, branching) can be considered as a ``waste'' of time and should be low. In most applications, this amount is very low, and as such we do not generate metrics for them. The percentages for \emph{Computations}, \emph{Data Access} and \emph{Program Logic} 
+  \item  \strong{Program logic:} The time spent on other instructions (control flow, testing, loops, branching) can be considered as a ``waste'' of time and should be low. In most applications, this amount is very low, and as such we do not generate metrics for them. The percentages for \emph{Computations}, \emph{Data Access} and \emph{Program Logic}
   should total 100\%\footnote{Some architectures such as Intel Sandy Bridge, Intel Ivy Bridge, and Intel Haswell does not provide accurate values in their performance counter events, specially for the floating-point instructions. For that reason, it is possible to see application with more than 100\% of floating-point instruction, with is obviously not possible.}, so we can easily estimate the \% for this category.
 \end{enumerate}
 
@@ -483,7 +483,7 @@ In modern CPUs, the processor tries and fetches instructions from memory before 
 
 Branches (i.e., conditional jumps) present a difficulty for the processor pipeline. After fetching a branch instruction, the processor needs to fetch the next instruction. But, there are \emph{multiple possible} ``next'' instructions! The processor won't be sure which instruction is the next one until the branching instruction makes it to the end of the pipeline.
 
-Instead of stalling the pipeline until the branching instruction is fully executed, modern processors attempt to \emph{predict} whether the jump will or will not be taken. Then, the processor can fetch the instruction that it thinks is the next one. If the prediction turns out wrong, the processor will simply discard the partially executed instructions that are in the pipeline and the pipeline starts over with the correct branch, 
+Instead of stalling the pipeline until the branching instruction is fully executed, modern processors attempt to \emph{predict} whether the jump will or will not be taken. Then, the processor can fetch the instruction that it thinks is the next one. If the prediction turns out wrong, the processor will simply discard the partially executed instructions that are in the pipeline and the pipeline starts over with the correct branch,
 incurring a delay.\footnote{There is another technique known as ``speculative execution'' which actually executes more than one branch possibility, however, this tutorial is not intended to cover this technique.}
 
 The \emph{test5a} program will create a large array of randomly obtained values of 0's, 1's, 2's and 3's. We loop through the array and branch for each value, doing time-wasting work. As all the values were randomly obtained, we expect that the computer is not able to predict (find a pattern) in the branches.

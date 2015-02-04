@@ -15,13 +15,13 @@ First we, go to the directory of the examples of Chapter03:
 
 The blocks of code where time is being wasted during execution are called \emph{hotspots}.
 
-Modern compilers are good at low-level code optimisation but they are limited by their ability to analyse the code and identify opportunities for optimisation. The programmer can help the compiler by using a clear and simple programming style and by avoiding code constructs that are unnecessary complicated. All more advanced optimisation's have to be done by the programmer on the level of the source code, when he designs and develops the data structures and algorithms. Therefore, the developer needs an understanding of the program, how the data is stored in the computer memory, how it is accessed, and most important the impact of the data access in the memory subsystem (cache and TLB). Code optimisation is therefore best done as part of the program development process.
+Modern compilers are good at low-level code optimisation but they are limited by their ability to analyse the code and identify opportunities for optimisation. The programmer can help the compiler by using a clear and simple programming style and by avoiding code constructs that are unnecessary complicated. All more advanced optimisations have to be done by the programmer on the level of the source code, when he designs and develops the data structures and algorithms. Therefore, the developer needs an understanding of the program, how the data is stored in the computer memory, how it is accessed, and most important the impact of the data access in the memory subsystem (cache and TLB). Code optimisation is therefore best done as part of the program development process.
 
 In this chapter, PerfExpert will
 
 \begin{enumerate}
   \item  find the hotspots in several code samples, and will also
-  \item  guide us in the optimisation of the code by suggestion optimisation's.
+  \item  guide us in the optimisation of the code by suggestion optimisations.
 \end{enumerate}
 
 \section{Optimisation Strategy}
@@ -172,7 +172,7 @@ Of course, in the first place we need to design our program in such a way that t
 
 These kinds of issues occur regularly. The \emph{typical issues} are that a high number of CPU cycles are being spent, whilst waiting for LLC load misses to be serviced.
 
-In general, \emph{some possible optimisation's} to improve \emph{data access locality} are:
+In general, \emph{some possible optimisations} to improve \emph{data access locality} are:
 
 \begin{enumerate}
   \item  to redesign the data structure;
@@ -355,7 +355,7 @@ Potential solutions are:
 
 Branch prediction is a feature of the hardware, and not of the compiler.\footnote{Although it is possible to insert compiler-specific annotations (aka pragmas) to tell the compiler which is the most occurring branch result.}
 
-In general, some \emph{possible optimisation's} are:
+In general, some \emph{possible optimisations} are:
 
 \begin{enumerate}
   \item  Avoid or limit branches in your code (A common branch is a check to see whether you're at the end of a loop);
@@ -371,7 +371,7 @@ These kinds of issues also occur regularly. The likely \emph{problem} is that a 
 
 
 
-In general, some \emph{possible optimisation's} are:
+In general, some \emph{possible optimisations} are:
 
 \begin{enumerate}
   \item  to redesign the code and check if the number of ``sqrt'' and/or ``division'' calculations can be reduced (by using a pre-calculated value for instance);
@@ -379,7 +379,7 @@ In general, some \emph{possible optimisation's} are:
   \item  To use \textit{invsqrt}: many modern platforms also offer inverse square root, which has the speed approximately the same as \textit{sqrt}, but is often more useful (e.g., by having \textit{invsqrt} you can compute both \textit{sqrt} and \textit{div} with one multiplication for each).
 \end{enumerate}
 
-Optimising floating point performance requires the right combination of good programming techniques and compiler optimisation's.
+Optimising floating point performance requires the right combination of good programming techniques and compiler optimisations.
 
 But, as the computations are often unavoidable, you'll sometimes find yourself in a position that you are not able to optimise.
 
@@ -420,7 +420,7 @@ x = x / b;
 
 Explore the suggested recommendations.
 
-Use the -r option to select the number of recommendations for optimisation you want for each code section, which is a performance bottleneck. By default, PerfExpert provides you with 3 optimisation's.
+Use the -r option to select the number of recommendations for optimisation you want for each code section, which is a performance bottleneck. By default, PerfExpert provides you with 3 optimisations.
 The recommendation to change (as shown above) takes our interest. We have prepared a modified source file for you, called ``test6\_i1.c'', where we implemented this suggested recommendation.
 
 Explore the new file, compile and run:

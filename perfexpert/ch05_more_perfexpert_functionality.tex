@@ -86,7 +86,7 @@ The automatic optimisation is achieved by using one the 2 extra options:
 
 If you select the~-m~option and the application is composed of multiple files, your source code tree should have a Makefile file to enable PerfExpert compile your code. If your application is composed of a single source code file, the option~-s~is sufficient for you. If you do not select~-m~or~-s~options, PerfExpert requires only the binary code and will show you only the performance analysis report and the list of suggestion for bottleneck remediation.
 
-\strong{Caution:~} PerfExpert may, if you choose to use the full capabilities for automated optimisation, change your source code during the process of optimisation. PerfExpert always saves the original file with a different name (e.g., mm_omp.c.old\_27301) as well as adds annotations to your source code for each optimisation it makes. We cannot, however, fully guarantee that code modifications for optimisation's will not break your code. We recommend having a full backup of your original source code before using PerfExpert.
+\strong{Caution:~} PerfExpert may, if you choose to use the full capabilities for automated optimisation, change your source code during the process of optimisation. PerfExpert always saves the original file with a different name (e.g., mm_omp.c.old\_27301) as well as adds annotations to your source code for each optimisation it makes. We cannot, however, fully guarantee that code modifications for optimisations will not break your code. We recommend having a full backup of your original source code before using PerfExpert.
 
 \subsection{Automatic Optimisation of single source file}
 \label{subsec:Automatic_Optimization}
@@ -113,7 +113,7 @@ You can use CC, CFLAGS and LDFLAGS to select different compiler and compilation/
 %\shellcmd{CC=''icc'' CFLAGS=''-g -O2 '' perfexpert -s mm.c -r50 0.05 ./mm}%
 \end{prompt}
 
-When using PerfExpert's automatic optimisation's on the OpenMP version of the simple matrix multiply code, and if we want that the OpenMP-enabled binary will run with 16 threads, we will use the following command line options:
+When using PerfExpert's automatic optimisations on the OpenMP version of the simple matrix multiply code, and if we want that the OpenMP-enabled binary will run with 16 threads, we will use the following command line options:
 \begin{prompt}
 %\shellcmd{OMP\_NUM\_THREADS=16 CFLAGS="-fopenmp" perfexpert -s mm\_omp.c -r50 0.05 ./mm\_omp}%
 \end{prompt}
