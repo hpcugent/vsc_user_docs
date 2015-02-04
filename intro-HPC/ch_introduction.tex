@@ -33,7 +33,7 @@ than single computers of comparable speed or availability.
 Supercomputers play an important role in the field of computational science,
 and are used for a wide range of computationally intensive tasks in various
 fields, including quantum mechanics, weather forecasting, climate research, oil
-and gas exploration, molecular modeling (computing the structures and
+and gas exploration, molecular modelling (computing the structures and
 properties of chemical compounds, biological macromolecules, polymers, and
 crystals), and physical simulations (such as simulations of the early moments
 of the universe, airplane and spacecraft aerodynamics, the detonation of
@@ -71,7 +71,7 @@ The \hpc consists of:
 \strong{In technical terms}         & \strong{\dots\  in human terms}                    \\ \hline
 336 nodes and 4992 cores            & \dots\  or the equivalent of 1248 quad-core PCs    \\ \hline
 100 Terabyte of online storage     & \dots\  or the equivalent of over 20000 DVDs            \\ \hline
-up to 40 Gbit infiniband fiber connections & \dots\  or allowing to transfer 8 DVDs per second \\ \hline
+up to 40 Gbit Infiniband fiber connections & \dots\  or allowing to transfer 8 DVDs per second \\ \hline
 \end{tabular}
 \end{center}
 \fi
@@ -126,24 +126,24 @@ and Hopper:
     6Gb memory
     \item  2 nodes with 2 10-core INTEL E5-2680v2 (IvyBridge) processors, 64 GB
     memory, 900 GB local disk, QDR-IB network, 2 Intel Xeon Phi 5110P
-    coprocessors with Gb memory
+    co-processors with Gb memory
   \end{enumerate}
 \fi
 \ifgent
   \begin{enumerate}
     \itemgastly 56 compute nodes with 2 4-core Intel L5520 (Nehalem)
-    processors, 12 GB memory, 90 GB local disk, GBe network
+    processors, 12 GB memory, 90 GB local disk, GbE network
     \item  haunter: 151 compute nodes with 2 4-core Intel L5520 (Nehalem)
-    processors, 12 GB memory, 90 GB local disk, GBe network
+    processors, 12 GB memory, 90 GB local disk, GbE network
     \item  gulpin: 32 compute nodes with 4 8-core AMD Opteron 6136
     (Magny-Cours) processors, 64 GB memory, 483 GB local disk, Double QDR-IB
     network
     \item  dugtrio: 16 compute nodes with 2 6-core Intel X5675 (Westmere-EP)
     processors, 96 GB memory, 483 GB local disk, Double QDR-IB network. This is
     a Symmetric Multi-Processing (SMP) machine based on ScaleMP\'s vSMP
-    Foundation (Reverse virtualization)
+    Foundation (Reverse virtualisation)
     \item  raichu: 64 compute nodes with 2 8-core Intel E5-2670 (Sandy Bridge)
-    processors, 32 GB memory, 400 GB local disk, GBe network
+    processors, 32 GB memory, 400 GB local disk, GbE network
     \item  delcatty: 160 compute nodes with 2 8-core Intel E5-2670 (Sandy
     Bridge) processors, 32 GB memory, 400 GB local disk, FDR-IB network
     \item  phanpy: 16 compute nodes with 2 12-core Intel E5-2680v3 (Haswell-EP)
@@ -264,7 +264,7 @@ computer architecture, mainly in the form of multicore processors.
 
 \strong{Parallel programs} are more difficult to write than sequential ones,
 because concurrency introduces several new classes of potential software bugs,
-of which race conditions are the most common. Communication and synchronization
+of which race conditions are the most common. Communication and synchronisation
 between the different subtasks are typically some of the greatest obstacles to
 getting good parallel program performance.
 

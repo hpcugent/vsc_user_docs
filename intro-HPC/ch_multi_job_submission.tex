@@ -178,7 +178,7 @@ The details are
 \begin{enumerate}
 \item  a job is submitted for each \emph{number} in the range;
 \item  individuals jobs are referenced as \emph{jobid-number}, and the entire array can be referenced as \emph{jobid} for easy killing etc.; and
-\item  each jobs has \emph{PBS\_ARRAYID} set to its \emph{number} which allows the script/program to specialize for that job
+\item  each jobs has \emph{PBS\_ARRAYID} set to its \emph{number} which allows the script/program to specialise for that job
 \end{enumerate}
 
 The job could have been submitted using:
@@ -343,12 +343,12 @@ running example, this could be ``run.pbs.log\jobnumber'', assuming the job's ID 
 %\shellcmd{tail -f run.pbs.log\jobnumber}%
 \end{prompt}
 
-Alternatively, ``wsummarize'', a Worker command that summarizes a log file, can be used:
+Alternatively, ``wsummarize'', a Worker command that summarises a log file, can be used:
 \begin{prompt}
 %\shellcmd{watch -n 60 wsummarize run.pbs.log\jobnumber}%
 \end{prompt}
 
-This will summarize the log file every 60 seconds.
+This will summarise the log file every 60 seconds.
 
 \subsection{Time limits for work items}
 
@@ -410,7 +410,7 @@ reporting a failure. It is also possible to retry work items that failed
 \end{prompt}
 
 By default, a job's prologue is not executed when it is resumed, while its
-epilogue is. ``wresume'' has options to modify this default behavior.
+epilogue is. ``wresume'' has options to modify this default behaviour.
 
 \subsection{Further information}
 

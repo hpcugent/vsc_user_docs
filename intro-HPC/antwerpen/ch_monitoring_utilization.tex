@@ -1,39 +1,39 @@
-\chapter{Monitoring Cluster Utilization}
+\chapter{Monitoring Cluster Utilisation}
 \label{ch:monitoring-cluster-utilization}
 
 \section{Introduction}
 
 As the UA-HPC is rapidly growing, the need to efficiently monitor the available
 computer resources is more important than ever. The term \emph{monitor} when
-applied to the UA-HPC center can be confusing since it means different things
+applied to the UA-HPC centre can be confusing since it means different things
 depending on who is saying it and who is hearing it.
 
 For example:
 
 \begin{enumerate}
 \item  The \strong{end-users} (persons running applications on the cluster) think: ``When will my job start and when will it be finished? Did I specify the right computer resources?  How is it performing compared to last time and can I speed it up?''
-\item  The \strong{systems engineers} of the UA-HPC think: ``How are our machines performing? Are all the services functioning correctly? What trends do we see and how can we better utilize our overall computer resources?''
+\item  The \strong{systems engineers} of the UA-HPC think: ``How are our machines performing? Are all the services functioning correctly? What trends do we see and how can we better utilise our overall computer resources?''
 \end{enumerate}
 
-The UA-HPC provides an UA-HPC utilization information system, which is based on Ganglia.
+The UA-HPC provides an UA-HPC utilisation information system, which is based on Ganglia.
 
 ``\emph{Ganglia}'' is a system-monitoring tool for high-performance computing
 systems, letting users view live or historical statistics (such as CPU load
-averages or network utilization) in a graphical manner. Ganglia are monitoring
+averages or network utilisation) in a graphical manner. Ganglia are monitoring
 all the machines in the UA-HPC.
 
 The Ganglia web front-end caters to system administrators and users. For
-example, one can view the CPU utilization over the past hour, day, week, month,
+example, one can view the CPU utilisation over the past hour, day, week, month,
 or year. The web front-end shows similar graphs for memory usage, disk usage,
 network statistics, number of running processes, and all other Ganglia metrics.
 
-It might be handy for a user to monitor the utilization of the computer
+It might be handy for a user to monitor the utilisation of the computer
 resources that he is using. The user could try to understand the bottlenecks or
 see which resources are exhausted and probably are causing delay in execution
-time. With the acquired knowledge, the end-user could even optimize his
+time. With the acquired knowledge, the end-user could even optimise his
 job-scripts and/or his software.
 
-Open your favorite browser and enter the address:
+Open your favourite browser and enter the address:
 
 \url{http://status.turing.calcua.ua.ac.be/ganglia/}
 
@@ -60,11 +60,11 @@ aggregated across all the nodes.
 So, it gives an overview of the number of available cores in the system and the
 number of running processes (in theory a core can never handle more than one
 process at a time) and the 1-min load average. If the system is getting fully
-utilized the 1-min load average would approach the total number of CPUs.
+utilised the 1-min load average would approach the total number of CPUs.
 
 \begin{enumerate}
-\item  The red horizontal line counts the number of available cores in the cluster. Anno 2013, we have 2496 (=2.4 k) individual cores in the cluster.
-\item  The blue vibrating line shows the actual number of active cores. In the perfect world with a perfectly utilized cluster and with the perfect software this could approach the red line. The reality is however different with a score of approximately 60\% usage. For example, processes (software), which are consuming a lot of memory in a node, could cause a number of cores in the node to be inactive.  Most of the time, inactivity of cores inside a node is being caused by the inappropriate requests for certain computer resources by a user.
+\item  The red horizontal line counts the number of available cores in the cluster. In the year 2013, we have 2496 (=2.4 k) individual cores in the cluster.
+\item  The blue vibrating line shows the actual number of active cores. In the perfect world with a perfectly utilised cluster and with the perfect software this could approach the red line. The reality is however different with a score of approximately 60\% usage. For example, processes (software), which are consuming a lot of memory in a node, could cause a number of cores in the node to be inactive.  Most of the time, inactivity of cores inside a node is being caused by the inappropriate requests for certain computer resources by a user.
 \end{enumerate}
 
 \subsubsection{Cluster CPU load.}
@@ -73,7 +73,7 @@ This graph shows the aggregated CPU stats, including the percent usage of system
 
 \includegraphics*[width=5.54in, height=2.46in, keepaspectratio=false]{img1202}
 
-While the load chart gives a good overall impression of usage, the utilization tells us the story of how the CPUs are used.
+While the load chart gives a good overall impression of usage, the utilisation tells us the story of how the CPUs are used.
 
 \begin{enumerate}
 \item  The percentage of CPU consumed by the user is shown in blue.
@@ -165,7 +165,7 @@ The various graphs show for a specific node:
 
 It tells us the number of available cores in the system and the number of
 running processes (in theory a core can never handle more than one process at a
-time) and the 1-min load average. If the system is getting fully utilized the
+time) and the 1-min load average. If the system is getting fully utilised the
 1-min load average would approach the total number of CPUs.
 
 \begin{enumerate}

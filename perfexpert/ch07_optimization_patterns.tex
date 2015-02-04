@@ -1,7 +1,7 @@
-\chapter{Annex 2: Optimization Patterns}
+\chapter{Annex 2: Optimisation Patterns}
 \label{ch:ch07_optimization_patterns}
 
-\section{Memory Access optimizations}
+\section{Memory Access Optimisations}
 \label{sec:Memory_Access_Optimizations}
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
@@ -138,7 +138,7 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
-\textbf{R016}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Allow vectorization}} \\ \hline
+\textbf{R016}       & \multicolumn{2}{|p{4.0in}|}{\textbf{Allow vectorisation}} \\ \hline
 Category            & \multicolumn{2}{|p{4.0in}|}{Bad L1 data access} \\ \hline
 Description         & \multicolumn{2}{|p{4.0in}|}{Enable the use of vector instructions to transfer more data per access} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
@@ -189,7 +189,7 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & loop i \{\newline   a[i] = c[i] - (a[i] * 0.5);\newline \} \\ \hline
 \end{tabular}
 
-\section{Instruction Access optimizations}
+\section{Instruction Access optimisations}
 \label{sec:Instruction_Access_Optimizations}
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
@@ -264,7 +264,7 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & z = y * y; \\ \hline
 \end{tabular}
 
-\section{Branches optimizations}
+\section{Branch optimisations}
 \label{sec:Branches_Optimizations}
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
@@ -330,7 +330,7 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & temp = x + y;\newline if (x $<$ y)\newline   a = temp;  \\ \hline
 \end{tabular}
 
-\section{Floating Point Optimizations}
+\section{Floating Point Optimisations}
 \label{sec:Floating_Point_Optimizations}
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline

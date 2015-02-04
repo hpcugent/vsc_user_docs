@@ -9,7 +9,7 @@ Find the source code for the examples in this Chapter in the directory:  ``\tild
 
 PerfExpert will read hardware performance counter events of the various cores and/or nodes that participated in the parallel computing. PerfExpert will generate a summary report, which is based on the performance of all components.
 
-As such, optimizing a parallel application with PerfExpert is done in exactly the same way as a serial application. PerfExpert handles all additional complexity under the hood; the user gets the same kind of report.
+As such, optimising a parallel application with PerfExpert is done in exactly the same way as a serial application. PerfExpert handles all additional complexity under the hood; the user gets the same kind of report.
 
 We have created 3 parallel equivalents of the Matrix Multiplication program, one in OpenMP, one in MPI and one with a combination of both. It is interesting to see how much we can reduce the runtime of our application by spreading all the work over the different cores. We have adapted the size of the matrices in the examples to [2000x2000] as to increase the workload a bit.
 
@@ -57,7 +57,7 @@ Module libgomp.so.1.0.0 takes 0.11%\%% of the total runtime
 
 You notice that:
 \begin{enumerate}
-  \item  The runtime of the executable was speeded up by a factor 3 to 4.
+  \item  The runtime of the executable was sped up by a factor 3 to 4.
   \item  The ``mm\_omp'' program ran on all 16 cores.
   \item  The libgomp.so.1.0.0 library used 0.11\% of the execution time. This allows us to gather an idea of the ``overhead'' of OpenMP.
 \end{enumerate}
@@ -87,7 +87,7 @@ VUBrussel                   & \$ \textbf{module load openmpi/1.6.5/gcc/4.8.2}
 %\shellcmd{\mpirun mm\_mpi}%
 \end{prompt}
 
-The command line to run PerfExpert includes the MPI launcher script (i.e., mpirun). If we would start ``PerfExpert 0.1 mpirun mm\_mpi'', we would analyze the performance of the MPI launcher instead of the performance of your application. This is of course not what we want. You can use the ``\textit{-p}'' (prefix) command line argument of PerfExpert to define a prefix to the normal command line. In our case, we want to set the MPI launcher and all its arguments (e.g., -p
+The command line to run PerfExpert includes the MPI launcher script (i.e., mpirun). If we would start ``PerfExpert 0.1 mpirun mm\_mpi'', we would analyse the performance of the MPI launcher instead of the performance of your application. This is of course not what we want. You can use the ``\textit{-p}'' (prefix) command line argument of PerfExpert to define a prefix to the normal command line. In our case, we want to set the MPI launcher and all its arguments (e.g., -p
 ``mpirun'').
 
 The command becomes:

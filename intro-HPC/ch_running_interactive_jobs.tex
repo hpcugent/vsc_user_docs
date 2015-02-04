@@ -156,7 +156,7 @@ and rich input device capability for networked computers.
 
   The installer will take you through the installation procedure, just continue
   clicking $<$continue$>$ on the various screens that will pop-up until your
-  installation was succesful.
+  installation was successful.
 
   A reboot is required before XQuartz will correctly open graphical applications.
   \includegraphics*[width=5.81in, height=4.31in, keepaspectratio=false]{img0513}
@@ -167,7 +167,7 @@ and rich input device capability for networked computers.
 \fi
 
 \ifwindows
-  \paragraph{Install XMing}
+  \paragraph{Install Xming}
 
   The first task is to install the Xming software.
 
@@ -251,18 +251,18 @@ and rich input device capability for networked computers.
   is generally impossible to communicate directly with a process on the cluster
   from your desktop except when the network managers have given you explicit
   permission (which for security reasons is not often done). One way to work
-  around this limitation is SSH tunneling.
+  around this limitation is SSH tunnelling.
 
   There are several cases where this is useful:
 
   \begin{enumerate}
   \item  Running graphical applications on the cluster: The graphical program cannot directly
     communicate with the X Window server on your local system. In this case, the
-    tunneling is easy to set up as PuTTY will do it for you if you select the
+    tunnelling is easy to set up as PuTTY will do it for you if you select the
     right options on the X11 settings page as explained on the page about
     text-mode access using PuTTY.
   \item  Running a server application on the cluster that a client on the desktop
-    connects to. One example of this scenario is ParaView in remote visualization
+    connects to. One example of this scenario is ParaView in remote visualisation
     mode, with the interactive client on the desktop and the data processing and
     image rendering on the cluster. This scenario is explained on this page.
   \item  Running clients on the cluster and a server on your desktop. In this
@@ -414,9 +414,13 @@ fx >> %\textbf{exit}%
 
 Please not that you are not running MATLAB on the \hpc, but only on the
 login nodes. So it is not recommended to run large programs this way.
+<<<<<<< HEAD
 You are allowed to run graphical programs on the login nodes for visualization
+=======
+You are allowed to run X programs on the login nodes for visualisation
+>>>>>>> ran aspell
 related tasks only. This is here to let you speed up your workflow,
-so you can do a quick visualization without having to copy over all your data
+so you can do a quick visualisation without having to copy over all your data
 from the \hpc to your local system to quickly view a plot.
 
 On the login nodes memory and processor time is very limited, because these

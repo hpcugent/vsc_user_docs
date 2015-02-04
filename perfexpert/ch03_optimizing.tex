@@ -1,4 +1,4 @@
-\chapter{Optimizing}
+\chapter{Optimising}
 \label{ch:ch03_optimizing}
 
 \renewcommand{\exampledir}{examples/ch03-optimizing}
@@ -15,22 +15,22 @@ First we, go to the directory of the examples of Chapter03:
 
 The blocks of code where time is being wasted during execution are called \emph{hotspots}.
 
-Modern compilers are good at low-level code optimization but they are limited by their ability to analyze the code and identify opportunities for optimization. The programmer can help the compiler by using a clear and simple programming style and by avoiding code constructs that are unnecessary complicated. All more advanced optimizations have to be done by the programmer on the level of the source code, when he designs and develops the data structures and algorithms. Therefore, the developer needs an understanding of the program, how the data is stored in the computer memory, how it is accessed, and most important the impact of the data access in the memory subsystem (cache and TLB). Code optimization is therefore best done as part of the program development process.
+Modern compilers are good at low-level code optimisation but they are limited by their ability to analyse the code and identify opportunities for optimisation. The programmer can help the compiler by using a clear and simple programming style and by avoiding code constructs that are unnecessary complicated. All more advanced optimisations have to be done by the programmer on the level of the source code, when he designs and develops the data structures and algorithms. Therefore, the developer needs an understanding of the program, how the data is stored in the computer memory, how it is accessed, and most important the impact of the data access in the memory subsystem (cache and TLB). Code optimisation is therefore best done as part of the program development process.
 
 In this chapter, PerfExpert will
 
 \begin{enumerate}
   \item  find the hotspots in several code samples, and will also
-  \item  guide us in the optimization of the code by suggestion optimizations.
+  \item  guide us in the optimisation of the code by suggestion optimisations.
 \end{enumerate}
 
-\section{Optimization Strategy}
+\section{Optimisation Strategy}
 \label{sec:Optimization_Strategy}
 
 \subsection{Find the Hotspots}
 \label{subsec:Hotspots}
 
-In order to optimize a program, we need to know where the program spends most of its execution time. These are called \emph{hotspots} in the execution. Optimizing code that is not a hotspot doesn't speed up the execution and may instead make the program more difficult to understand and maintain.
+In order to optimise a program, we need to know where the program spends most of its execution time. These are called \emph{hotspots} in the execution. Optimising code that is not a hotspot doesn't speed up the execution and may instead make the program more difficult to understand and maintain.
 
 When profiling and measuring the execution of a program, we should execute the program to solve a \emph{typical case}, i.e., a problem instance that is highly representative for most use of the program.
 
@@ -39,9 +39,9 @@ PerfExpert has one single mandatory option: the \emph{threshold} (relevance in \
 PerfExpert can sort the hotspots according to:
 
 \begin{enumerate}
-  \item  \strong{Relevance}: Sorted according to their relevance in \% of the total runtime. The code blocks were the execution time is higher will be presented on top. But those code blocks might already be programmed in a full professional and well-performing manner, and maybe cannot be optimized anymore.
+  \item  \strong{Relevance}: Sorted according to their relevance in \% of the total runtime. The code blocks were the execution time is higher will be presented on top. But those code blocks might already be programmed in a full professional and well-performing manner, and maybe cannot be optimised anymore.
   \item  \strong{Performance}: Sorted according to their performance. The code blocks with the worst performance will be presented on top. These code blocks bears the potential to generate the best performance improvement.
-  \item  \strong{Mixed or Impact:} Sorted according to the formula \emph{Relevance x Performance}. The code blocks with a combination of the worst performance and longest execution times (thus having the highest \emph{impact}) are presented on top. Those are the best candidates for optimization.
+  \item  \strong{Mixed or Impact:} Sorted according to the formula \emph{Relevance x Performance}. The code blocks with a combination of the worst performance and longest execution times (thus having the highest \emph{impact}) are presented on top. Those are the best candidates for optimisation.
 \end{enumerate}
 
 By default, PerfExpert will list its hotspots unsorted.
@@ -56,16 +56,16 @@ The test.c program has several slow (bad programmed) functions, i.e., compute1, 
 %\shellcmd{perfexpert --order=mixed -c 0.1 ./test}%
 \end{prompt}
 
-\subsection{Optimization Priority}
+\subsection{Optimisation Priority}
 \label{subsec:Optimization_Priority}
 
-A good optimization strategy is to run PerfExpert with a high threshold (e.g., 0.3) and first focus on those functions, which consumes most of the computation time. You can then systematically decrease it (0.3 >> 0.2 >> 0.1) to also cover other functions.
+A good optimisation strategy is to run PerfExpert with a high threshold (e.g., 0.3) and first focus on those functions, which consumes most of the computation time. You can then systematically decrease it (0.3 >> 0.2 >> 0.1) to also cover other functions.
 
-Some LCPI categories have a higher potential to speed up your code as compared to other. When optimizing, experience has learnt that it is wise to focus on the following order of importance:
+Some LCPI categories have a higher potential to speed up your code as compared to other. When optimising, experience has learnt that it is wise to focus on the following order of importance:
 
 \begin{enumerate}
   \item  \strong{Data Access} \& \strong{Data TLB} issues
-  \item  \strong{Vectorization}
+  \item  \strong{Vectorisation}
   \item  \strong{Others} such as:
   \begin{enumerate}
     \item  Branches
@@ -74,10 +74,10 @@ Some LCPI categories have a higher potential to speed up your code as compared t
   \end{enumerate}
 \end{enumerate}
 
-The Working Method to optimize is an iterative process:
+The Working Method to optimise is an iterative process:
 
 \begin{enumerate}
-  \item  \strong{Step \#1 -- Measure \& Analyze:} The first step is to run PerfExpert and to understand and interpret the report. This analysis should give you an idea where the bottlenecks are.
+  \item  \strong{Step \#1 -- Measure \& Analyse:} The first step is to run PerfExpert and to understand and interpret the report. This analysis should give you an idea where the bottlenecks are.
   \item  \strong{Step \#2 - Adapt:} With this information, you can (try to) improve the performance by adapting the program. In order to help you in the right directions, some recommendations are given for each hotspot.
   \item  \strong{Step \#3 - Re-test:} Subsequent invocations of PerfExpert shall be run in order to quantify the effect of implementing a change to the code.
 \end{enumerate}
@@ -87,19 +87,19 @@ You can repeat these steps in an iterative way until you're comfortable with the
 \subsection{PerfExpert Recommendations}
 \label{subsec:Recommendations}
 
-Based on the characteristics revealed during profiling, PerfExpert is able to provide specific recommendations for changes that could lead to improved performance. These recommendations come from a database of scenarios that correspond to certain patterns of CPU resources utilization.
+Based on the characteristics revealed during profiling, PerfExpert is able to provide specific recommendations for changes that could lead to improved performance. These recommendations come from a database of scenarios that correspond to certain patterns of CPU resources utilisation.
 
-These recommendations are chosen from an extensive database of scenarios based upon the profiling results, not necessarily code analysis. Certain recommendations may not be applicable to the code base being analyzed, nor may they necessarily improve performance. It is up to the user to understand the code being analyzed, and then determine if a given recommendation makes sense.
+These recommendations are chosen from an extensive database of scenarios based upon the profiling results, not necessarily code analysis. Certain recommendations may not be applicable to the code base being analysed, nor may they necessarily improve performance. It is up to the user to understand the code being analysed, and then determine if a given recommendation makes sense.
 
-All the possible recommendations are listed and described in Annex 2: Optimization . Future version of PerfExpert may extend this list of recommendations.
+All the possible recommendations are listed and described in Annex 2: Optimisation . Future version of PerfExpert may extend this list of recommendations.
 
-\section{Optimizing the efficiency of a subroutine}
+\section{Optimising the efficiency of a subroutine}
 \label{sec:Optimizing_the_efficiency_of_a_subroutine}
 
-\subsection{Optimizing Instruction Execution Ratios}
+\subsection{Optimising Instruction Execution Ratios}
 \label{subsec:Optimizing_Instruction_Execution_Ratios}
 
-Optimizing the ``Instruction Ratios'' means most of the time increase vectorization and lower the instruction percentages for ``Data access''. You will use the specific metrics of the Data Access categories (L1, L2, L3, LLC misses and Data TLB), which will be discussed later on.
+Optimising the ``Instruction Ratios'' means most of the time increase vectorisation and lower the instruction percentages for ``Data access''. You will use the specific metrics of the Data Access categories (L1, L2, L3, LLC misses and Data TLB), which will be discussed later on.
 
 But we want to show you the effect that ``Accessing Data'' has on the overall performance. We have slightly adapted the matrix multiplication program, so that it uses the values of a[i][k] (which was i+k) and b[k][j] (which was k-j directly:
 
@@ -121,7 +121,7 @@ void compute()
 
 And compile and run PerfExpert.
 
-The ``-c'' option in PerfExpert will print colors.
+The ``-c'' option in PerfExpert will print colours.
 
 \begin{prompt}
 %\shellcmd{gcc -g -o mm1 mm1.c}%
@@ -141,14 +141,14 @@ We have now avoided the reference to our matrices ``a'' and ``b'' inside the loo
 
 \strong{Note:} Of course, your program needs to perform the work. It is not always acceptable to reduce the amount of time spent on data access by just not doing any useful computation!
 
-\subsection{Optimizing the Computational Efficiency (GFLOPS)}
+\subsection{Optimising the Computational Efficiency (GFLOPS)}
 \label{subsec:Optimizing_Computational_Efficiancy}
 
-In our Matrix-Multiplication example of \autoref{ch:ch02_profiling}, we noticed that the Matrix Multiplication program was not able to vectorize (Packed was 0\%), all computation were sequential (Scalar was 12.5\%).
+In our Matrix-Multiplication example of \autoref{ch:ch02_profiling}, we noticed that the Matrix Multiplication program was not able to vectorise (Packed was 0\%), all computation were sequential (Scalar was 12.5\%).
 
-But remember that we have compiled the program without any specific \textit{Optimization} option. The GCC compiler uses level 1 (-O1) as its default ``Optimization level''!
+But remember that we have compiled the program without any specific \textit{Optimisation} option. The GCC compiler uses level 1 (-O1) as its default ``Optimisation level''!
 
-Now, lets see what happens if we would compile the same program with FULL optimization (the maximum optimization level is ``-O3'') and run our profiler again:
+Now, lets see what happens if we would compile the same program with FULL optimisation (the maximum optimisation level is ``-O3'') and run our profiler again:
 
 \begin{prompt}
 %\shellcmd{gcc -g -O3 -o mm mm.c}%
@@ -160,11 +160,11 @@ Now, lets see what happens if we would compile the same program with FULL optimi
 ...
 \end{prompt}
 
-The program is now able to \textit{`vectorize'} much better.
+The program is now able to \textit{`vectorise'} much better.
 
-Of course, in the first place we need to design our program in such a way that the compiler is able to vectorize. A situation where we create a read/write data dependency within the loop (e.g., for \ldots\  \{ a[i+1] = a[i] * c[i]; \} ) shall be avoided, as such program logic may not allow the compiler to ``vectorize'' this loop.
+Of course, in the first place we need to design our program in such a way that the compiler is able to vectorise. A situation where we create a read/write data dependency within the loop (e.g., for \ldots\  \{ a[i+1] = a[i] * c[i]; \} ) shall be avoided, as such program logic may not allow the compiler to ``vectorise'' this loop.
 
-\section{Optimizing the LCPI Performance Categories}
+\section{Optimising the LCPI Performance Categories}
 \label{sec:Optimizing_the_LCPI_Performance_Categories}
 
 \subsection{Category \#1: Data Access}
@@ -172,7 +172,7 @@ Of course, in the first place we need to design our program in such a way that t
 
 These kinds of issues occur regularly. The \emph{typical issues} are that a high number of CPU cycles are being spent, whilst waiting for LLC load misses to be serviced.
 
-In general, \emph{some possible optimizations} to improve \emph{data access locality} are:
+In general, \emph{some possible optimisations} to improve \emph{data access locality} are:
 
 \begin{enumerate}
   \item  to redesign the data structure;
@@ -212,7 +212,7 @@ Performance assessment  LCPI good.......okay.......fair.......poor.......bad
 \# Here is a possible recommendation for this code segment
 \#
 Description: %\strong{move loop invariant memory accesses out of loop}%
-Reason: this optimization reduces the number of executed (slow) memory accesses
+Reason: this optimisation reduces the number of executed (slow) memory accesses
 Code example:
 loop i {
   a[i] = b[i] * c[j]
@@ -252,7 +252,7 @@ for (i = 0; i < n; i++)
 %\shellcmd{perfexpert -c 0.5 ./test1\_i1}%
 \end{prompt}
 
-Check the result, admire the performance improvement and be invited to optimize further.
+Check the result, admire the performance improvement and be invited to optimise further.
 
 \subsection{Category \#2: Instruction Access}
 \label{subsec:CAT2_Instruction_Access}
@@ -299,7 +299,7 @@ for (i = 0; i < n; i++)
 \# Here is a possible recommendation for this code segment
 \#
 Description: %\strong{change the order of loops}%
-Reason: this optimization may improve the memory access pattern and make it more cache and TLB friendly
+Reason: this optimisation may improve the memory access pattern and make it more cache and TLB friendly
 Code example:
 loop i {
   loop j {...}
@@ -355,7 +355,7 @@ Potential solutions are:
 
 Branch prediction is a feature of the hardware, and not of the compiler.\footnote{Although it is possible to insert compiler-specific annotations (aka pragmas) to tell the compiler which is the most occurring branch result.}
 
-In general, some \emph{possible optimizations} are:
+In general, some \emph{possible optimisations} are:
 
 \begin{enumerate}
   \item  Avoid or limit branches in your code (A common branch is a check to see whether you're at the end of a loop);
@@ -371,7 +371,7 @@ These kinds of issues also occur regularly. The likely \emph{problem} is that a 
 
 
 
-In general, some \emph{possible optimizations} are:
+In general, some \emph{possible optimisations} are:
 
 \begin{enumerate}
   \item  to redesign the code and check if the number of ``sqrt'' and/or ``division'' calculations can be reduced (by using a pre-calculated value for instance);
@@ -379,9 +379,9 @@ In general, some \emph{possible optimizations} are:
   \item  To use \textit{invsqrt}: many modern platforms also offer inverse square root, which has the speed approximately the same as \textit{sqrt}, but is often more useful (e.g., by having \textit{invsqrt} you can compute both \textit{sqrt} and \textit{div} with one multiplication for each).
 \end{enumerate}
 
-Optimizing floating point performance requires the right combination of good programming techniques and compiler optimizations.
+Optimising floating point performance requires the right combination of good programming techniques and compiler optimisations.
 
-But, as the computations are often unavoidable, you'll sometimes find yourself in a position that you are not able to optimize.
+But, as the computations are often unavoidable, you'll sometimes find yourself in a position that you are not able to optimise.
 
 Lets see what recommendations are suggested for our test6 example:
 
@@ -420,7 +420,7 @@ x = x / b;
 
 Explore the suggested recommendations.
 
-Use the -r option to select the number of recommendations for optimization you want for each code section, which is a performance bottleneck. By default, PerfExpert provides you with 3 optimizations.
+Use the -r option to select the number of recommendations for optimisation you want for each code section, which is a performance bottleneck. By default, PerfExpert provides you with 3 optimisations.
 The recommendation to change (as shown above) takes our interest. We have prepared a modified source file for you, called ``test6\_i1.c'', where we implemented this suggested recommendation.
 
 Explore the new file, compile and run:

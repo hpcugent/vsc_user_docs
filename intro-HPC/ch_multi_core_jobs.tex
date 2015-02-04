@@ -33,11 +33,11 @@ common approaches: (raw) threads, OpenMP and MPI.
 \multicolumn{3}{|c|}{\strong{Parallel programming approaches}} \\ \hline
 \strong{Tool}                                                          & \strong{Available language bindings}                                   & \strong{Limitations} \\ \hline
 Raw threads\newline pthreads, boost::\newline threading, \dots         & Threading libraries are available for all common programming languages & Threads are limited to shared memory systems. They are more often used on single node systems rather than for \hpc. Thread management is hard. \\ \hline
-OpenMP                                                                 & Fortran/C/C++                                                      & Limited to shared memory systems, but large shared memory systems for HPC are not uncommon (e.g., SGI UV). Loops and task can be parallelized by simple insertion of compiler directives. Under the hood threads are used. Hybrid approaches exist which use OpenMP to parallelize the work load on each node and MPI (see below) for communication between nodes. \\ \hline
-Lightweight threads with clever scheduling, Intel TBB, Intel Cilk Plus & C/C++                                                                & Limited to shared memory systems, but may be combined with MPI. Thread management is taken care of by a very clever scheduler enabling the programmer to focus on parallelization itself. Hybrid approaches exist which use TBB and/or Cilk Plus to parallelize the work load on each node and MPI (see below) for communication between nodes. \\ \hline
+OpenMP                                                                 & Fortran/C/C++                                                      & Limited to shared memory systems, but large shared memory systems for HPC are not uncommon (e.g., SGI UV). Loops and task can be parallelised by simple insertion of compiler directives. Under the hood threads are used. Hybrid approaches exist which use OpenMP to parallelise the work load on each node and MPI (see below) for communication between nodes. \\ \hline
+Lightweight threads with clever scheduling, Intel TBB, Intel Cilk Plus & C/C++                                                                & Limited to shared memory systems, but may be combined with MPI. Thread management is taken care of by a very clever scheduler enabling the programmer to focus on parallelisation itself. Hybrid approaches exist which use TBB and/or Cilk Plus to parallelise the work load on each node and MPI (see below) for communication between nodes. \\ \hline
 MPI                                                                    & Fortran/C/C++ Python                                             & Applies to both distributed and shared memory systems. Cooperation between different nodes or cores is managed by explicit calls to library routines handling communication routines. \\ \hline
 Global Arrays library                                                  & C/C++ Python                                                       & Mimics a global address space on distributed memory systems, by distributing arrays over many nodes and one sided communication. This library is used a lot for chemical structure calculation codes and was used in one of the first applications that broke the PetaFlop barrier. \\ \hline
-Scoop                                                                  & Python                                                                 & Applies to both shared and distributed memory system. Not extremely advanced, but may present a quick road to parallelization of Python code.  \\ \hline
+Scoop                                                                  & Python                                                                 & Applies to both shared and distributed memory system. Not extremely advanced, but may present a quick road to parallelisation of Python code.  \\ \hline
 \end{tabular}
 
 \section{Parallel Computing with threads}
@@ -55,8 +55,8 @@ This advantage of a multithreaded program allows it to operate faster on
 computer systems that have multiple CPUs or across a cluster of machines ---
 because the threads of the program naturally lend themselves to truly
 concurrent execution. In such a case, the programmer needs to be careful to
-avoid race conditions, and other non-intuitive behaviors. In order for data to
-be correctly manipulated, threads will often need to synchronize in time in
+avoid race conditions, and other non-intuitive behaviours. In order for data to
+be correctly manipulated, threads will often need to synchronise in time in
 order to process the data in the correct order. Threads may also require
 mutually exclusive operations (often implemented using semaphores) in order to
 prevent common data from being simultaneously modified, or read while in the
@@ -131,7 +131,7 @@ and Implementation for C++ Developers. Cameron Hughes and Tracey Hughes. Wrox
 
 \strong{\emph{OpenMP}} is an API that implements a multi-threaded, shared
 memory form of parallelism. It uses a set of compiler directives (statements
-that you add to your code and that are recognized by your Fortran/C/C++
+that you add to your code and that are recognised by your Fortran/C/C++
 compiler if OpenMP is enabled or otherwise ignored) that are incorporated at
 compile-time to generate a multi-threaded version of your code. You can think
 of Pthreads (above) as doing multi-threaded programming ``by hand'', and OpenMP
@@ -170,12 +170,12 @@ By using the private() and shared() clauses, you can specify variables within
 the parallel region as being \strong{shared}, i.e., visible and accessible by
 all threads simultaneously, or \strong{private}, i.e., private to each thread,
 meaning each thread will have its own local copy. In the code example below for
-parallelizing a for loop, you can see that we specify the thread\_id and nloops
+parallelising a for loop, you can see that we specify the thread\_id and nloops
 variables as private.
 
-\subsection{Parallelizing for loops with OpenMP}
+\subsection{Parallelising for loops with OpenMP}
 
-Parallelizing for loops is really simple (see code below). By default, loop
+Parallelising for loops is really simple (see code below). By default, loop
 iteration counters in OpenMP loop constructs (in this case the i variable) in
 the for loop are set to private variables.
 
@@ -296,7 +296,7 @@ Some other clauses of interest are:
 \item  barrier: each thread will wait until all threads have reached this point in the code, before proceeding
 \item  nowait: threads will not wait until everybody is finished
 \item  schedule(type, chunk) allows you to specify how tasks are spawned out to threads in a for loop. There are three types of scheduling you can specify
-\item  if: allows you to parallelize only if a certain condition is met
+\item  if: allows you to parallelise only if a certain condition is met
 \item  \dots\  and a host of others
 \end{enumerate}
 
@@ -328,7 +328,7 @@ less significance depending on the processing paradigm. At the minimum, Process
 0 handles the input/output and determines what other processes are running.
 
 The MPI interface allows you to manage allocation, communication, and
-synchronization of a set of processes that are mapped onto multiple nodes,
+synchronisation of a set of processes that are mapped onto multiple nodes,
 where each node can be a core within a single CPU, or CPUs within a single
 machine, or even across multiple machines (as long as they are networked
 together).
@@ -410,7 +410,7 @@ MPI uses the notion of process rather than processor. Program copies are
 \emph{mapped} to processors by the MPI runtime. In that sense, the parallel
 machine can map to 1 physical processor, or N where N is the total number of
 processors available, or something in between. For maximum parallel speedup,
-more physical processors are used. This example adjusts its behavior to the
+more physical processors are used. This example adjusts its behaviour to the
 size of the world N, so it also seeks to scale to the runtime configuration
 without compilation for each size variation, although runtime decisions might
 vary depending on that absolute amount of concurrency available.
