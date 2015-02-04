@@ -212,6 +212,10 @@ This command is not available on all systems.
 %\shellcmd{showstart $<$jobid$>$}%
 \end{prompt}
 
+This is only a very rough estimate. Jobs may launch sooner than estimated if
+other jobs end faster than estimated, but may also be delayed if other
+higher-priority jobs enter the system.
+
 To show the status, but also the resources required by the job, with error
 messages that may prevent your job from starting:
 
@@ -276,7 +280,11 @@ the queue by using either the PBS \strong{qstat} command or the Moab
 ordered by \strong{JobID}, whereas \strong{showq} will display jobs grouped by
 their state (``running'', ``idle'', or ``hold'') then ordered by priority.
 Therefore, \strong{showq} is often more useful.
+Note however that at some VSC-sites, these commands show only your jobs or may
+be even disabled to not reveal what other users are doing.
 
+% Does not work in Ghent: showq is disabled as it shows information about
+% other users.
 The \strong{showq} command displays information about active (``running''),
 eligible (``idle''), blocked (``hold''), and/or recently completed jobs. To get
 a summary:
@@ -440,10 +448,10 @@ be changed over time.
 
 \ifantwerpen
 % TODO : already adapt this text according to the new common user experience rules, and make it general....
-When a user submits a job with a walltime of 15 days, the queue manager will
-put the job in the walltime category 7 days--21 days.  The user can submit up to 8 jobs with
-this high walltimes (queable = 8), but only 2 of those jobs will be eligible
-for execution (runnable=2) at the same time.  A detailed description of the
+When a user submits a job with a walltime of 6 days, the queue manager will
+put the job in the walltime category 3 days--7 days.  The user can submit up to 400 jobs with
+this high walltimes (queable = 400) on hopper, but only 50 of those jobs will be eligible
+for execution (runnable=50) at the same time.  A detailed description of the
 fair-share mechanisms will follow in \autoref{ch:hpc-policies}. For longer running jobs,
 \emph{checkpointing} (See \autoref{ch:checkpointing}) is necessary.
 \fi
@@ -516,12 +524,11 @@ that these properties may very over the different VSC sites.
 %TODO insert specs for other sites
 \ifantwerpen
 \begin{tabular}{|p{0.7in}|p{5.3in}|} \hline
-\strong{Property} & \strong{Explanation}                                        \\ \hline
-harpertown        & only use Intel processors from the Harpertown family (54xx) \\ \hline
-westmere          & only use Intel processors from the Westmere family (56xx)   \\ \hline
-sandybridge       & only use Intel processors from the Sandy Bridge family (26xx)      \\ \hline
-ivybridge         & only use Intel processors from the Ivy Bridge family (26xx-v2)       \\ \hline
-ib                & use Infiniband interconnect                                 \\ \hline
+\strong{Property} & \strong{Explanation}                                                        \\ \hline
+harpertown        & only use Intel processors from the Harpertown family (54xx, turing-only)    \\ \hline
+westmere          & only use Intel processors from the Westmere family (56xx, turing-only)      \\ \hline
+ivybridge         & only use Intel processors from the Ivy Bridge family (26xx-v2, hopper-only) \\ \hline
+ib                & use Infiniband interconnect                                                 \\ \hline
 \end{tabular}
 \fi
 \ifbrussel
