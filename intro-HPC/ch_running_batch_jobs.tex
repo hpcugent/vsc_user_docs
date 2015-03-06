@@ -203,7 +203,10 @@ To get the status information on your job:
 %\shellcmd{qstat $<$jobid$>$}%
 \end{prompt}
 
-To show an estimated start time for you job (note that this may be very inaccurate):
+To show an estimated start time for you job (note that this may be very inaccurate,
+the margin of error on this figure can be bigger then 100\% due to a sample in a
+population of 1.)
+This command is not available on all systems.
 
 \begin{prompt}
 %\shellcmd{showstart $<$jobid$>$}%
