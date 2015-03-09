@@ -3,8 +3,8 @@
 #PBS -N mpihello
 #PBS -l walltime=00:05:00
 
-  # assume a 16 core job
-#PBS -l nodes=2:ppn=8
+  # assume a 40 core job
+#PBS -l nodes=2:ppn=20
 
   # make sure we are in the right directory in case writing files 
 cd $PBS_O_WORKDIR 
@@ -12,7 +12,6 @@ cd $PBS_O_WORKDIR
   # load the environment
 
 module purge
-module load ictce
-module load mpiexec
+module load intel
 
-mpiexec ./mpi_hello
+mpirun ./mpi_hello

@@ -36,37 +36,49 @@ Before you can really start using the \hpc clusters, there are several things yo
       \hpc cluster (i.e., ``\strong{\emph{\loginnode}}'')
       you want to connect to.
 
-    \includegraphics*[width=3.59in, height=3.45in, keepaspectratio=false]{ch2-putty-configuration}
+      \begin{center}
+      \includegraphics*[width=3.59in, height=3.45in, keepaspectratio=false]{ch2-putty-configuration}
+      \end{center}
 
     \item  In the category \menu[,]{Connection,Data}, in
       the field \keys{Auto-login username}, put in
       $<$\emph{\userid}$>$, which is your VSC username that you have
       received by mail after your request was approved.
 
-  \includegraphics*[width=3.11in, height=2.99in, keepaspectratio=false]{ch2-putty-configuration2}
+      \begin{center}
+      \includegraphics*[width=3.11in, height=2.99in, keepaspectratio=false]{ch2-putty-configuration2}
+      \end{center}
 
     \item  In the category \menu[,]{Connection,SSH,Auth}, in the
       field \keys{Private key file for authentication} click on
       \keys{Browse} and select the private key (i.e., ``id\_rsa.ppk'')
       that you generated and saved above.
 
-  \includegraphics*[width=3.25in, height=3.13in, keepaspectratio=false]{ch2-putty-key-setup}
+      \begin{center}
+      \includegraphics*[width=3.25in, height=3.13in, keepaspectratio=false]{ch2-putty-key-setup}
+      \end{center}
 
     \item  In the category \menu[,]{Connection,SSH,X11}, click
       the \keys{Enable X11 Forwarding} checkbox.
 
-  \includegraphics*[width=3.54in, height=3.41in, keepaspectratio=false]{ch2-putty-x-forwarding}
+      \begin{center}
+      \includegraphics*[width=3.54in, height=3.41in, keepaspectratio=false]{ch2-putty-x-forwarding}
+      \end{center}
 
     \item  Now go back to $<$Session$>$, and fill in ``\emph{\hpcname}'' in the
       \keys{Saved Sessions} field and press \keys{Save} to
       store the session information.
 
-  \includegraphics*[width=3.30in, height=3.17in, keepaspectratio=false]{ch2-putty-saved-session}
+      \begin{center}
+      \includegraphics*[width=3.30in, height=3.17in, keepaspectratio=false]{ch2-putty-saved-session}
+      \end{center}
 
     \item  Now pressing \keys{Open}, will open a terminal window and
       asks for you passphrase.
 
-  \includegraphics*[width=3.94in, height=2.47in, keepaspectratio=false]{ch2-putty-enter-password}
+      \begin{center}
+      \includegraphics*[width=3.94in, height=2.47in, keepaspectratio=false]{ch2-putty-enter-password}
+      \end{center}
 
     \item  The first time you make a connection to the login node, a Security
       Alert will appear and you will be asked to verify the authenticity of the
@@ -75,7 +87,9 @@ Before you can really start using the \hpc clusters, there are several things yo
       Make sure the fingerprint in the Alert matches \strong{\loginfingerprint}
       \fi
 
-  \includegraphics*[width=3.91in, height=2.42in, keepaspectratio=false]{ch2-putty-verify-authenticity}
+      \begin{center}
+      \includegraphics*[width=3.91in, height=2.42in, keepaspectratio=false]{ch2-putty-verify-authenticity}
+      \end{center}
 
     \item  After entering your correct passphrase, you will be connected to the
       login-node of the \hpc.
@@ -355,6 +369,7 @@ LANG = (unset)
     are supported and installed on your system.
 perl: warning: Falling back to the standard locale ("C").
 \end{prompt}
+
 or any other error message complaining about the locale.
 
 This means that the correct ``locale'' has not yet been properly specified on
@@ -402,10 +417,10 @@ To exit vi without saving your changes, enter ``<esc>:q!''
 or alternatively (if you are not comfortable with the Linux editors) - again on your local machine -:
 
 \begin{prompt}
-%\shellcmd{echo "export LANGUAGE=\textbackslash "en\_US.UTF-8\textbackslash " $>$$>$ ~/.profile"}%
-%\shellcmd{echo "export LC\_ALL=\textbackslash "en\_US.UTF-8\textbackslash " $>$$>$ ~/.profile"}%
-%\shellcmd{echo "export LC\_CTYPE=\textbackslash "en\_US.UTF-8\textbackslash " $>$$>$ ~/.profile"}%
-%\shellcmd{echo "export LANG="en\_US.UTF-8\textbackslash " $>$$>$ ~/.profile"}%
+%\shellcmd{echo "export LANGUAGE=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile}%
+%\shellcmd{echo "export LC\_ALL=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile}%
+%\shellcmd{echo "export LC\_CTYPE=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile}%
+%\shellcmd{echo "export LANG=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile"}%
 \end{prompt}
 
 You can now log-out, open a new terminal/shell on your local machine and re-connect to the \hpc, and you should not get these
@@ -448,7 +463,9 @@ open a terminal window and jump in!
   \end{enumerate}
   \end{enumerate}
 
+  \begin{center}
   \includegraphics*[width=3.42in, height=3.04in, keepaspectratio=false]{img0214}
+  \end{center}
 
   \begin{enumerate}
   \item  By pressing on the \keys{Save} button, you can save the session under
@@ -456,12 +473,16 @@ open a terminal window and jump in!
   \item  Finally, when clicking on \keys{Login}, you will be asked for your key passphrase.
   \end{enumerate}
 
+  \begin{center}
   \includegraphics*[width=3.14in, height=2.47in, keepaspectratio=false]{img0215}
+  \end{center}
 
   The first time you make the connection, you will be asked to ``Continue
   connecting and add host key to the cache''; select \keys{Yes}.
 
+  \begin{center}
   \includegraphics*[width=5.74in, height=2.81in, keepaspectratio=false]{img0216}
+  \end{center}
 
   Now, try out whether you can transfer an arbitrary file from your local
   machine to the HPC and back.
@@ -603,7 +624,9 @@ open a terminal window and jump in!
   \item  Username:  $<$your vsc-username$>$ (e.g. \userid)
   \end{enumerate}
 
+  \begin{center}
   \includegraphics*[width=4.75in, height=4.19in, keepaspectratio=false]{img0300}
+  \end{center}
 \fi
 
 \section{Modules}
@@ -666,7 +689,9 @@ list of all currently available software can be obtained by typing:
 \begin{prompt}
 %\shellcmd{module av}%
 \end{prompt}
+
 or
+
 \begin{prompt}
 %\shellcmd{module available}%
 \end{prompt}
@@ -800,7 +825,7 @@ Modules need not be loaded one by one; the two ``load'' commands can be
 combined as follows:
 
 \begin{prompt}
-%\shellcmd{module load MATLAB Python/2.7.3-ictce-4.0.1}%
+%\shellcmd{module load MATLAB Python/2.7.9-intel-2015a}%
 \end{prompt}
 
 This will load the two modules as well as their dependencies.
@@ -840,7 +865,9 @@ using:
 \begin{prompt}
 %\shellcmd{module load GSL}%
 \end{prompt}
+
 rather than
+
 \begin{prompt}
 %\shellcmd{module load GSL/1.12}%
 \end{prompt}
@@ -894,6 +921,7 @@ To get a list of all possible commands, type:
 \begin{prompt}
 %\shellcmd{module help}%
 \end{prompt}
+
 Or to get more information about one specific module package:
 
 \begin{prompt}

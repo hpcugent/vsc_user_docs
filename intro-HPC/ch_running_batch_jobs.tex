@@ -10,7 +10,9 @@ reordering or deleting them), monitoring their progress and killing ones that
 are having problems or are no longer needed. Only the most commonly used
 commands are mentioned here.
 
+\begin{center}
 \includegraphics*[width=5.78in, height=3.94in, keepaspectratio=false]{ch4-pbs-overview}
+\end{center}
 
 When you connect to the \hpc, you have access to (one of) the \strong{login
 nodes} of the cluster. There you can prepare the work you want to get done on
@@ -54,7 +56,7 @@ done so:
 First go to the directory with the first examples by entering the command:
 
 \begin{prompt}
-  %\shellcmd{cd ~/\exampledir}%
+%\shellcmd{cd ~/\exampledir}%
 \end{prompt}
 
 Each time you want to execute a program on the \hpc you'll need 2 things:
@@ -304,27 +306,23 @@ And to get the full detail of all the jobs, which are in the system:
 %\shellcmd{showq}%
 active jobs------------------------
 JOBID     USERNAME  STATE PROCS REMAINING          STARTTIME
-428024    vsc20117  Running   8   2:57:32  Mon Sep  2 14:55:05
-442526    vsc20066  Running  24   7:13:34  Sun Sep 22 19:11:07
-442527    vsc20066  Running  24  13:03:08  Mon Sep 23 01:00:41
+428024    vsc20167  Running   8   2:57:32  Mon Sep  2 14:55:05
 %\dots%
-153 active jobs 1307 of 2472 processors in use by local jobs (52.87%\%%)
-153 of 167 nodes active      (91.62%\%%)
+153 active jobs 1307 of 3360 processors in use by local jobs (38.90%\%%)
+153 of 168 nodes active      (91.07%\%%)
 
 eligible jobs----------------------
 JOBID     USERNAME  STATE PROCS   WCLIMIT            QUEUETIME
-442604    vsc20030   Idle  48  7:00:00:00  Sun Sep 22 16:39:13
-442605    vsc20030   Idle  48  7:00:00:00  Sun Sep 22 16:46:22
-442725    vsc20133   Idle   8  1:00:00:00  Sun Sep 22 22:15:31
+442604    vsc20167   Idle  48  7:00:00:00  Sun Sep 22 16:39:13
+442605    vsc20167   Idle  48  7:00:00:00  Sun Sep 22 16:46:22
 %\dots%
 
 135 eligible jobs
 
 blocked jobs-----------------------
 JOBID   USERNAME     STATE PROCS WCLIMIT            QUEUETIME
-441237  vsc20034      Idle   8 3:00:00:00 Thu Sep 19 15:53:10
-441238  vsc20034      Idle   8 3:00:00:00 Thu Sep 19 15:53:10
-442536  vsc20020  UserHold  40 3:00:00:00 Sun Sep 22 00:14:22
+441237  vsc20167      Idle   8 3:00:00:00 Thu Sep 19 15:53:10
+442536  vsc20167  UserHold  40 3:00:00:00 Sun Sep 22 00:14:22
 %\dots%
 252 blocked jobs
 Total jobs:  540

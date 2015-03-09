@@ -151,7 +151,9 @@ First go to the right directory:
 As a simple example, assume you have a serial program called \emph{myprog} that you
 want to run on various input files \textit{input[1-100]}.
 
+\begin{center}
 \includegraphics*[width=3.22in, height=2.36in, keepaspectratio=false]{img0702}
+\end{center}
 
 The following bash script would submit these jobs all one by one:
 \begin{code}{bash}
@@ -259,7 +261,7 @@ single job.
 %\shellcmd{qstat}%
 Job id          Name          User      Time   Use S Queue
 --------------- ------------- --------- ---- ----- - -----
-%\jobnumber.master1%  test_set.pbs  %\userid%          0 Q
+%\jobid%  test_set.pbs  %\userid%          0 Q
 
 And you can now check the generated output files:
 %\shellcmd{more ./output/output\_99.dat}%
@@ -278,7 +280,9 @@ steps:
 \item  the results of the computations on those chunks are aggregated into, e.g., a statistical description of some sort.
 \end{enumerate}
 
+\begin{center}
 \includegraphics*[width=2.40in, height=2.78in, keepaspectratio=false]{img0703}
+\end{center}
 
 The Worker framework directly supports this scenario by using a prologue
 (pre-processing) and an epilogue (post-processing). The former is executed just
