@@ -10,7 +10,9 @@ reordering or deleting them), monitoring their progress and killing ones that
 are having problems or are no longer needed. Only the most commonly used
 commands are mentioned here.
 
+\begin{center}
 \includegraphics*[width=5.78in, height=3.94in, keepaspectratio=false]{ch4-pbs-overview}
+\end{center}
 
 When you connect to the \hpc, you have access to (one of) the \strong{login
 nodes} of the cluster. There you can prepare the work you want to get done on
@@ -54,7 +56,7 @@ done so:
 First go to the directory with the first examples by entering the command:
 
 \begin{prompt}
-  %\shellcmd{cd ~/\exampledir}%
+%\shellcmd{cd ~/\exampledir}%
 \end{prompt}
 
 Each time you want to execute a program on the \hpc you'll need 2 things:
@@ -212,6 +214,10 @@ This command is not available on all systems.
 %\shellcmd{showstart $<$jobid$>$}%
 \end{prompt}
 
+This is only a very rough estimate. Jobs may launch sooner than estimated if
+other jobs end faster than estimated, but may also be delayed if other
+higher-priority jobs enter the system.
+
 To show the status, but also the resources required by the job, with error
 messages that may prevent your job from starting:
 
@@ -276,7 +282,11 @@ the queue by using either the PBS \strong{qstat} command or the Moab
 ordered by \strong{JobID}, whereas \strong{showq} will display jobs grouped by
 their state (``running'', ``idle'', or ``hold'') then ordered by priority.
 Therefore, \strong{showq} is often more useful.
+Note however that at some VSC-sites, these commands show only your jobs or may
+be even disabled to not reveal what other users are doing.
 
+% Does not work in Ghent: showq is disabled as it shows information about
+% other users.
 The \strong{showq} command displays information about active (``running''),
 eligible (``idle''), blocked (``hold''), and/or recently completed jobs. To get
 a summary:
@@ -296,27 +306,23 @@ And to get the full detail of all the jobs, which are in the system:
 %\shellcmd{showq}%
 active jobs------------------------
 JOBID     USERNAME  STATE PROCS REMAINING          STARTTIME
-428024    vsc20117  Running   8   2:57:32  Mon Sep  2 14:55:05
-442526    vsc20066  Running  24   7:13:34  Sun Sep 22 19:11:07
-442527    vsc20066  Running  24  13:03:08  Mon Sep 23 01:00:41
+428024    vsc20167  Running   8   2:57:32  Mon Sep  2 14:55:05
 %\dots%
-153 active jobs 1307 of 2472 processors in use by local jobs (52.87%\%%)
-153 of 167 nodes active      (91.62%\%%)
+153 active jobs 1307 of 3360 processors in use by local jobs (38.90%\%%)
+153 of 168 nodes active      (91.07%\%%)
 
 eligible jobs----------------------
 JOBID     USERNAME  STATE PROCS   WCLIMIT            QUEUETIME
-442604    vsc20030   Idle  48  7:00:00:00  Sun Sep 22 16:39:13
-442605    vsc20030   Idle  48  7:00:00:00  Sun Sep 22 16:46:22
-442725    vsc20133   Idle   8  1:00:00:00  Sun Sep 22 22:15:31
+442604    vsc20167   Idle  48  7:00:00:00  Sun Sep 22 16:39:13
+442605    vsc20167   Idle  48  7:00:00:00  Sun Sep 22 16:46:22
 %\dots%
 
 135 eligible jobs
 
 blocked jobs-----------------------
 JOBID   USERNAME     STATE PROCS WCLIMIT            QUEUETIME
-441237  vsc20034      Idle   8 3:00:00:00 Thu Sep 19 15:53:10
-441238  vsc20034      Idle   8 3:00:00:00 Thu Sep 19 15:53:10
-442536  vsc20020  UserHold  40 3:00:00:00 Sun Sep 22 00:14:22
+441237  vsc20167      Idle   8 3:00:00:00 Thu Sep 19 15:53:10
+442536  vsc20167  UserHold  40 3:00:00:00 Sun Sep 22 00:14:22
 %\dots%
 252 blocked jobs
 Total jobs:  540
@@ -440,10 +446,10 @@ be changed over time.
 
 \ifantwerpen
 % TODO : already adapt this text according to the new common user experience rules, and make it general....
-When a user submits a job with a walltime of 15 days, the queue manager will
-put the job in the walltime category 7 days--21 days.  The user can submit up to 8 jobs with
-this high walltimes (queable = 8), but only 2 of those jobs will be eligible
-for execution (runnable=2) at the same time.  A detailed description of the
+When a user submits a job with a walltime of 6 days, the queue manager will
+put the job in the walltime category 3 days--7 days.  The user can submit up to 400 jobs with
+this high walltimes (queable = 400) on hopper, but only 50 of those jobs will be eligible
+for execution (runnable=50) at the same time.  A detailed description of the
 fair-share mechanisms will follow in \autoref{ch:hpc-policies}. For longer running jobs,
 \emph{checkpointing} (See \autoref{ch:checkpointing}) is necessary.
 \fi
@@ -516,12 +522,11 @@ that these properties may very over the different VSC sites.
 %TODO insert specs for other sites
 \ifantwerpen
 \begin{tabular}{|p{0.7in}|p{5.3in}|} \hline
-\strong{Property} & \strong{Explanation}                                        \\ \hline
-harpertown        & only use Intel processors from the Harpertown family (54xx) \\ \hline
-westmere          & only use Intel processors from the Westmere family (56xx)   \\ \hline
-sandybridge       & only use Intel processors from the Sandy Bridge family (26xx)      \\ \hline
-ivybridge         & only use Intel processors from the Ivy Bridge family (26xx-v2)       \\ \hline
-ib                & use Infiniband interconnect                                 \\ \hline
+\strong{Property} & \strong{Explanation}                                                        \\ \hline
+harpertown        & only use Intel processors from the Harpertown family (54xx, turing-only)    \\ \hline
+westmere          & only use Intel processors from the Westmere family (56xx, turing-only)      \\ \hline
+ivybridge         & only use Intel processors from the Ivy Bridge family (26xx-v2, hopper-only) \\ \hline
+ib                & use Infiniband interconnect                                                 \\ \hline
 \end{tabular}
 \fi
 \ifbrussel

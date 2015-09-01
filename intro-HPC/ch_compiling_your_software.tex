@@ -87,10 +87,12 @@ qsub: waiting for job %\jobid% to start
 
 \subsection{Compiling a sequential program in C}
 
-Go to the examples for \autoref{ch:compiling-and-testing-your-software-on-the-hpc} and load the GCC modules:
+Go to the examples for
+\autoref{ch:compiling-and-testing-your-software-on-the-hpc} and load the foss
+module:
 \begin{prompt}
 %\shellcmd{cd ~/\exampledir}%
-%\shellcmd{module load GCC}%
+%\shellcmd{module load foss}%
 \end{prompt}
 
 We now list the directory and explore the contents of the ``\emph{hello.c}''
@@ -175,25 +177,6 @@ total 512
 
 The ``mpi\_hello.c'' program is a simple source file, written in C with MPI library calls.
 
-We first need to compile this file into an executable with the
-\emph{mpicc}-compiler. The mpicc compiler is simply a MPI-aware wrapper
-around the gcc compiler. It is available from the impi modules.
-
-First, search the relevant MPI modules, and load the most recent.
-\begin{prompt}
-%\shellcmd{module av 2>&1 | grep -i mpi}%
-impi/3.2.1.009
-impi/3.2.2.006
-impi/4.0.0.025
-impi/4.0.0.027
-impi/4.0.0.028
-impi/4.0.1.007
-impi/4.1.0.027
-impi/4.1.1.036
-%\dots%
-%\shellcmd{module load impi}%
-\end{prompt}
-
 Then, check the command line options for \emph{``mpicc'' (GNU C-Compiler with
 MPI extensions)}, then we compile and list the contents of the directory again:
 
@@ -225,7 +208,7 @@ We will now compile the same program, but using the Intel Parallel Studio
 Cluster Edition compilers. We stay in the examples directory for this chapter:
 
 \begin{prompt}
-%\textbf{cd \tilde/\exampledir}%
+%\shellcmd{cd \tilde/\exampledir}%
 \end{prompt}
 
 We will compile this C/MPI -file into an executable with the Intel Parallel Studio
@@ -237,7 +220,7 @@ Cluster Edition. First, clear the modules (purge) and then load the latest
 %\shellcmd{module load intel}%
 \end{prompt}
 
-Then, compile and list the contents of the directory again. The ictce
+Then, compile and list the contents of the directory again. The Intel
 equivalent of mpicc is mpiicc.
 
 \begin{prompt}

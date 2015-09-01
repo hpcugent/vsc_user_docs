@@ -152,14 +152,19 @@ and rich input device capability for networked computers.
   http://xquartz.macosforge.org/landing/
   and install the XQuartz.pkg package.
 
+  \begin{center}
   \includegraphics*[width=5.79in, height=4.12in, keepaspectratio=false]{img0512}
+  \end{center}
 
   The installer will take you through the installation procedure, just continue
   clicking $<$continue$>$ on the various screens that will pop-up until your
   installation was successful.
 
   A reboot is required before XQuartz will correctly open graphical applications.
+  
+  \begin{center}
   \includegraphics*[width=5.81in, height=4.31in, keepaspectratio=false]{img0513}
+  \end{center}
 \fi
 \iflinux
 %if X is not installed under linux the user will probably be expierienced enought
@@ -181,8 +186,10 @@ and rich input device capability for networked computers.
     \item  When selecting the components that need to be installed, make sure to
       select ``\emph{XLaunch wizard}'' and ``\emph{Normal PuTTY Link SSH client}''.
 
+  \begin{center}
   \includegraphics*[width=4.27in, height=3.32in, keepaspectratio=false]{img0500}
-
+  \end{center}
+  
   \item  We suggest to create a Desktop icon for Xming and XLaunch.
   \item  And \keys{Install}.
   \end{enumerate}
@@ -194,22 +201,29 @@ and rich input device capability for networked computers.
 
   \item  Select \keys{Multiple Windows}. This will open each application in a separate window.
 
+  \begin{center}
   \includegraphics*[width=3.11in, height=3.11in, keepaspectratio=false]{img0501}
-
+  \end{center}
 
   \item  Select \keys{Start no client} to make XLaunch wait for other programs (such as PuTTY).
 
+  \begin{center}
   \includegraphics*[width=4.60in, height=3.57in, keepaspectratio=false]{img0502}
+  \end{center}
 
 
   \item  Select \keys{Clipboard} to share the clipboard.
 
+  \begin{center}
   \includegraphics*[width=4.01in, height=3.11in, keepaspectratio=false]{img0503}
+  \end{center}
 
 
   \item  Finally \keys{Save configuration} into a file. You can keep the default filename and save it in your Xming installation directory.
 
+  \begin{center}
   \includegraphics*[width=3.90in, height=3.03in, keepaspectratio=false]{img0504}
+  \end{center}
 
   \item  Now Xming is running in the background \ldots\\ and you can launch a graphical application in your PuTTY terminal.
   \item  Open a PuTTY terminal and connect  to the HPC.
@@ -224,7 +238,9 @@ and rich input device capability for networked computers.
   The ``\emph{xclock}'' application runs on the login-node of the \hpc, but is
   displayed on your Windows machine.
 
+  \begin{center}
   \includegraphics*[width=1.44in, height=1.62in, keepaspectratio=false]{img0505}
+  \end{center}
 
   You can close your clock and connect further to a compute node with again your
   X-forwarding enabled:
@@ -283,7 +299,9 @@ and rich input device capability for networked computers.
     \end{enumerate}
   \end{enumerate}
 
+  \begin{center}
   \includegraphics*[width=4.85in, height=4.67in, keepaspectratio=false]{img0506}
+  \end{center}
 
   \begin{enumerate}
     \item  In the ``\emph{Source port}'' field, enter the local port to use (e.g., \emph{12345}).
@@ -303,7 +321,9 @@ compute node on the \hpc) transferred to your personal screen, you will need
 to re-connect to the \hpc with X-forwarding enabled, which is done with the
 ``-X'' option.
 
+\begin{center}
 \includegraphics*[width=5.78in, height=1.78in, keepaspectratio=false]{ch5-interactive-mode}
+\end{center}
 
 First exit and re-connect to the \hpc with X-forwarding enabled:
 
@@ -324,7 +344,9 @@ X-application on the login node. Type:
 
 And you should see a clock appearing on your screen.
 
+\begin{center}
 \includegraphics*[width=2.47in, height=2.78in, keepaspectratio=false]{img0507}
+\end{center}
 
 You can close your clock and connect further to a compute node with again your
 X-forwarding enabled:
@@ -355,7 +377,9 @@ Now run the message program:
 
 You should see the following message appearing.
 
+\begin{center}
 \includegraphics*[width=3.51in, height=1.47in, keepaspectratio=false]{img0508}
+\end{center}
 
 Click any button and see what happens.
 
@@ -394,15 +418,21 @@ And start the fibo2.m program in the command window:
 fx >> %\textbf{run fibo2.m}%
 \end{prompt}
 
+\begin{center}
 \includegraphics*[width=5.84in, height=4.11in, keepaspectratio=false]{img0509}
+\end{center}
 
 And see the displayed calculations, \dots
 
+\begin{center}
 \includegraphics*[width=5.84in, height=4.11in, keepaspectratio=false]{img0510}
+\end{center}
 
 as well as the nice ``plot'' appearing:
 
+\begin{center}
 \includegraphics*[width=5.76in, height=2.94in, keepaspectratio=false]{img0511}
+\end{center}
 
 You can work in this MATLAB GUI, and finally terminate the application by
 entering ``\strong{exit}'' in the command window again.
@@ -411,14 +441,9 @@ entering ``\strong{exit}'' in the command window again.
 fx >> %\textbf{exit}%
 \end{prompt}
 
-
 Please not that you are not running MATLAB on the \hpc, but only on the
 login nodes. So it is not recommended to run large programs this way.
-<<<<<<< HEAD
-You are allowed to run graphical programs on the login nodes for visualization
-=======
 You are allowed to run X programs on the login nodes for visualisation
->>>>>>> ran aspell
 related tasks only. This is here to let you speed up your workflow,
 so you can do a quick visualisation without having to copy over all your data
 from the \hpc to your local system to quickly view a plot.

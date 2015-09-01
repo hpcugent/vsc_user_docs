@@ -35,7 +35,9 @@ computer and always stays there; the public key is stored on the \hpc.
 Access to the \hpc is granted to anyone who can prove to have access to the
 corresponding private key on his local computer.
 
+\begin{center}
 \includegraphics*[width=5.75in, height=3.01in, keepaspectratio=false]{ch2-authentication-general}
+\end{center}
 
 Since all VSC clusters use Linux as their main operating system, you will
 need to get acquainted with using the command-line interface and using the
@@ -48,7 +50,7 @@ Terminal.
   needs to be installed on your Windows machine first, before we can start the
   actual work.
 
-  \subsection{Install Putty: A free telnet/SSH client}
+  \subsection{Install PuTTY: A free telnet/SSH client}
   \label{sec:install-putty}
 
   We recommend to use the PuTTY tools package, which is freely available. You
@@ -57,7 +59,7 @@ Terminal.
   required permissions to install software on the computer you are using.
   Alternatively, an installation package is also available.
 
-  You can download PuTTy from the official address:
+  You can download PuTTY from the official address:
   \url{http://www.chiark.greenend.org.uk/\~sgtatham/putty/}
 
   The PuTTY package consists of several components:
@@ -87,8 +89,10 @@ Terminal.
   \begin{enumerate}
     \item  In \keys{Parameters} (at the bottom of the window), choose
       ``SSH-2 RSA'' and set the number of bits in the key to 2048.
-
+    
+    \begin{center}
     \includegraphics*[width=3.49in, height=3.38in, keepaspectratio=false]{ch2-puttygen-bits}
+    \end{center}
 
     \item  Click on \keys{Generate}. To generate the key, you must move
       the mouse cursor over the PuTTYgen window (this generates some random
@@ -107,7 +111,9 @@ Terminal.
       encrypted with a decent password. (If you are not sure your disk is
       encrypted, it probably isn\'t.)
 
+    \begin{center}
     \includegraphics*[width=3.39in, height=3.28in, keepaspectratio=false]{ch2-puttygen-password}
+    \end{center}
 
     \item  Finally, save both the public and private keys in a folder on your
       personal computer (We recommend to create and put them in the folder
@@ -129,9 +135,8 @@ Terminal.
 \fi
 
 \iflinux
-  To open a Terminal window in Linux, open the Finder and choose
-
-  Launch a terminal from your desktop’s application menu and you will see the bash shell.
+  Launch a terminal from your desktop's application menu and you will see the
+  bash shell.
   There are other shells, but most Linux distributions use bash by default.
 \fi
 
@@ -246,7 +251,9 @@ You will be redirected to the BELNET federation website,
 where you have to select your ``Home Organisation''.
 For faster logins in the future you can select the 'Remember selection' checkboxes.
 
+\begin{center}
 \includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate}
+\end{center}
 
 Select ``\university'' in the dropdown box.
 
@@ -255,11 +262,15 @@ Click $<$Select$>$
 You will now be taken to the authentication page of your institute.
 
 \ifantwerpen
+\begin{center}
 \includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate-institute}
+\end{center}
 
 \strong{The site is only accessible from within the \university
 domain}, so the page won't load from, e.g., home. However, you can also get
-external access to the \university domain using VPN. We refer to the \university ICT infocenter
+external access to the \university domain using VPN. We refer to the Pintra
+pages of the ICT Department
+(\url{https://pintra.uantwerpen.be/webapps/ua-pintrasite-BBLEARN/module/index.jsp?course_id=_8_1&l=nl_PINTRA})
 for more information.
 
 \subsection{Users of the \association}
@@ -279,16 +290,20 @@ Directory. (i.e., /Users/$<$username$>$/.ssh/id\_rsa.pub).
 \fi % END IF ANTWERPEN
 
 \ifgent
-You will now have to log in with CAS using your UGent account, and then be requested
-to share your Mail and Affiliation with KU Leuven (which actually means the VSC accountpage)
-Select the 'Remember' check-box and click 'Yes, continue'.
- \includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate-gent}
+  You will now have to log in with CAS using your UGent account, and then be requested
+  to share your Mail and Affiliation with KU Leuven (which actually means the VSC accountpage)
+  Select the 'Remember' check-box and click 'Yes, continue'.
+  \begin{center}
+  \includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate-gent}
+  \end{center}
 \fi
 
 \ifbrussel
- \includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate-brussel}
+  \begin{center}
+  \includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate-brussel}
+  \end{center}
 
- You will now have to log in using your NetID. (The same username and password that you use for accessing your e-mail)
+  You will now have to log in using your NetID. (The same username and password that you use for accessing your e-mail)
 
 \fi
 
