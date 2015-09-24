@@ -43,7 +43,7 @@ Before you can really start using the \hpc clusters, there are several things yo
     \item  In the category \menu[,]{Connection,Data}, in
       the field \keys{Auto-login username}, put in
       $<$\emph{\userid}$>$, which is your VSC username that you have
-      received by mail after your request was approved.
+      received by e-mail after your request was approved.
 
       \begin{center}
       \includegraphics*[width=3.11in, height=2.99in, keepaspectratio=false]{ch2-putty-configuration2}
@@ -158,8 +158,7 @@ applications, compile and test them and submit your jobs on the \hpc.
 \begin{prompt}
 %\shellcmd{cd \tutorialdir}%
 %\shellcmd{ls }%
-intro-HPC/
-perfexpert
+Intro-HPC/
 \end{prompt}
 
 This directory currently contains all training material for the use of:
@@ -180,10 +179,10 @@ You can now explore the content of this directory with the ``ls --l''
 \strong{d}irectory) commands:
 
 As we are interested in the use of the \strong{\emph{HPC}}, move further to
-\strong{\emph{intro-HPC}} and explore the contents up to 2 levels deep:
+\strong{\emph{Intro-HPC}} and explore the contents up to 2 levels deep:
 
 \begin{prompt}
-%\shellcmd{cd intro-HPC}%
+%\shellcmd{cd Intro-HPC}%
 %\shellcmd{tree -L 2}%
 .
 `-- examples
@@ -313,7 +312,7 @@ Last login: Mon Jan 12 18:52:20 2015 from example.kuleuven.be
 *                                            *
 * For VSC user documentation:                *
 *                                            *
-* https://vscentrum.be/neutral/documentation *
+*  https://www.vscentrum.be/en/user-portal   *
 *                                            *
 *                                            *
 **********************************************
@@ -414,7 +413,7 @@ exit vi by entering: ``<esc>:wq''
 To exit vi without saving your changes, enter ``<esc>:q!''
 \end{tip}
 
-or alternatively (if you are not comfortable with the Linux editors) - again on your local machine -:
+or alternatively (if you are not comfortable with the Linux editors), again on your local machine:
 
 \begin{prompt}
 %\shellcmd{echo "export LANGUAGE=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile}%
@@ -586,7 +585,7 @@ open a terminal window and jump in!
 
   Typical and popular commands inside an sftp session are:
 
-  \begin{tabular}{|p{0.3\textwidth}|p{0.6\textwidth}|} \hline
+  \begin{tabular}{|p{\dimexpr 0.3\textwidth-2\tabcolsep}|p{\dimexpr 0.7\textwidth-2\tabcolsep}|} \hline
   \strong{cd \tilde/examples/fibo} & Move to the examples/fibo subdirectory on the \hpc (i.e., the remote machine)\\  \hline
   \strong{ls}                      & Get a list of the files in the current directory on the \hpc. \\ \hline
   \strong{get fibo.py}             & Copy the file ``fibo.py'' from the \hpc \\ \hline
@@ -621,7 +620,7 @@ open a terminal window and jump in!
 
   \begin{enumerate}
   \item  Host: sftp://\loginnode
-  \item  Username:  $<$your vsc-username$>$ (e.g. \userid)
+  \item  Username:  $<$your vsc-username$>$ (e.g., \userid)
   \end{enumerate}
 
   \begin{center}
@@ -834,7 +833,7 @@ This will load the two modules as well as their dependencies.
 Finally, to switch between clusters you can swap the ``cluster'' modules.
 These are special modules that change what modules are available for you,
 and what cluster your jobs will be queued in.
-By default you are working on \hpcname. To switch to e.g. raichu you need
+By default you are working on \hpcname. To switch to, e.g., raichu you need
 to redefine the environment so you get access to all modules installed on
 the raichu cluster, and to be able to submit jobs to the raichu scheduler
 so your jobs will start on raichu instead of the default \hpcname cluster.

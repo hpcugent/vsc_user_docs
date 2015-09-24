@@ -145,7 +145,7 @@ data depends on the purpose, but also the size and type of usage of the data.
 
 The following locations are available:
 
-\begin{tabular}{|p{0.35\textwidth}|p{0.65\textwidth}|} \hline
+\begin{tabular}{|p{\dimexpr 0.35\textwidth-2\tabcolsep}|p{\dimexpr 0.65\textwidth-2\tabcolsep}|} \hline
 \strong{Variable} & \strong{Description} \\ \hline\hline
 \multicolumn{2}{|l|}{\hspace*{2cm}\emph{Long-term storage}} \\ \hline
 \$VSC\_HOME            & For your configuration files and other small files, see \S\ref{subsec:home-directory}. \newline
@@ -199,7 +199,7 @@ here, e.g., by MATLAB, Eclipse, \ldots
 The operating system also creates a few files and folders here to manage your
 account. Examples are:
 
-\begin{tabular}{|p{0.2\textwidth}|p{0.8\textwidth}|} \hline
+\begin{tabular}{|p{\dimexpr 0.2\textwidth-2\tabcolsep}|p{\dimexpr 0.8\textwidth-2\tabcolsep}|} \hline
 \textbf{File or Directory} & \textbf{Description} \\ \hline
 .ssh/                      & This directory contains some files necessary for you to login to the cluster and to submit jobs on the cluster. Do not remove them, and do not alter anything if you don't know what you're doing! \\ \hline
 .bash\_profile             & When you login (type username and password) remotely via ssh, .bash\_profile is executed to configure your shell before the initial command prompt. \\ \hline
@@ -427,7 +427,7 @@ Check the Python and the PBS file, and submit the job:
 The available disk space on the \hpc is limited. The actual disk capacity,
 shared by all users, can be found on the ``Available hardware'' page on the
 website.
-(\url{https://vscentrum.be/neutral/documentation/infrastructure/hardware})
+(\url{https://www.vscentrum.be/infrastructure/hardware})
 As explained in \S\ref{subsec:predfined-quotas}, this implies
 that there are also limits
 \begin{enumerate}

@@ -150,7 +150,7 @@ need to be executed on the compute node:
 \examplecode{bash}{fibo.pbs}
 
 So, jobs are submitted as scripts (bash, Perl, Python, etc.), which specify the
-parameters related to the jobs such as expected runtime (walltime), mail
+parameters related to the jobs such as expected runtime (walltime), e-mail
 notification, etc. These parameters can also be specified on the command line.
 
 This job script that can now be submitted to the cluster's job system for
@@ -408,7 +408,7 @@ A list with site-specific properties can be found in the next section.
 These options can either be specified on the command line, e.g.
 
 \begin{prompt}
-%\shellcmd{qsub -l nodes=1:harpertown,mem=2gb fibo.pbs}%
+%\shellcmd{qsub -l nodes=1:westmere,mem=2gb fibo.pbs}%
 \end{prompt}
 
 or in the job-script itself using the \#PBS-directive, so ``fibo.pbs'' could be modified to:
@@ -517,7 +517,7 @@ and the maximum number of jobs that a user can have in that queue.
 
 The following table contains some node-specific properties that can be used to
 make sure the job will run on nodes with a specific CPU or interconnect. Note
-that these properties may very over the different VSC sites.
+that these properties may vary over the different VSC sites.
 
 %TODO insert specs for other sites
 \ifantwerpen
