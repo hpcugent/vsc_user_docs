@@ -5,7 +5,7 @@
 
 Below is a list of the most common and useful directives.
 
-\begin{tabular}{|p{0.15\textwidth}|p{0.15\textwidth}|p{0.7\textwidth}|} \hline
+\begin{tabular}{|p{\dimexpr 0.15\textwidth-2\tabcolsep}|p{\dimexpr 0.15\textwidth-2\tabcolsep}|p{\dimexpr 0.7\textwidth-2\tabcolsep}|} \hline
 \strong{Option} & \strong{System type}  & \strong{Description} \\ \hline
 -k              & All                   & Send ``stdout'' and/or ``stderr'' to your home directory when the job runs\newline \strong{\#PBS -k o} or \strong{\#PBS -k e} or \strong{\#PBS -koe}  \\ \hline
 -l              & All                   & Precedes a resource request, e.g., processors, wallclock \\ \hline
@@ -56,7 +56,7 @@ When a batch job is started, a number of environment variables are created that
 can be used in the batch job script. A few of the most commonly used variables
 are described here.
 
-\begin{tabular}{|p{0.3\textwidth}|p{0.6\textwidth}|} \hline
+\begin{tabular}{|p{\dimexpr 0.3\textwidth-2\tabcolsep}|p{\dimexpr 0.7\textwidth-2\tabcolsep}|} \hline
 \strong{Variable} & \strong{Description} \\ \hline
 PBS\_ENVIRONMENT & set to PBS\_BATCH to indicate that the job is a batch job; otherwise, set to PBS\_INTERACTIVE to indicate that the job is a PBS interactive job. \\ \hline
 PBS\_JOBID       & the job identifier assigned to the job by the batch system. This is the same number you see when you do \emph{qstat}. \\ \hline

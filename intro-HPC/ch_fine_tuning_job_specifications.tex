@@ -405,10 +405,12 @@ This could also be monitored with the \strong{\emph{htop}} command:
 %TODO: The \exampleoutput may be split over multiple pages... 
 %It may be better to simply put the contents fo htop-output in the prompt
 % environment?
+% temp fix: use a \vbox
 \begin{prompt}
 %\shellcmd{htop}%
 \end{prompt}
-\exampleoutput{htop-output}
+
+\vbox{\exampleoutput{htop-output}}
 
 
 The advantage of htop is that it shows you the cpu utilisation for all
