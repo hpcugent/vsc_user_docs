@@ -41,7 +41,7 @@ PerfExpert can sort the hotspots according to:
 \begin{enumerate}
   \item  \strong{Relevance}: Sorted according to their relevance in \% of the total runtime. The code blocks were the execution time is higher will be presented on top. But those code blocks might already be programmed in a full professional and well-performing manner, and maybe cannot be optimised anymore.
   \item  \strong{Performance}: Sorted according to their performance. The code blocks with the worst performance will be presented on top. These code blocks bears the potential to generate the best performance improvement.
-  \item  \strong{Mixed or Impact:} Sorted according to the formula \emph{Relevance x Performance}. The code blocks with a combination of the worst performance and longest execution times (thus having the highest \emph{impact}) are presented on top. Those are the best candidates for optimisation.
+  \item  \strong{Mixed or Impact:} Sorted according to the formula \emph{Relevance $\times$ Performance}. The code blocks with a combination of the worst performance and longest execution times (thus having the highest \emph{impact}) are presented on top. Those are the best candidates for optimisation.
 \end{enumerate}
 
 By default, PerfExpert will list its hotspots unsorted.
@@ -91,7 +91,7 @@ Based on the characteristics revealed during profiling, PerfExpert is able to pr
 
 These recommendations are chosen from an extensive database of scenarios based upon the profiling results, not necessarily code analysis. Certain recommendations may not be applicable to the code base being analysed, nor may they necessarily improve performance. It is up to the user to understand the code being analysed, and then determine if a given recommendation makes sense.
 
-All the possible recommendations are listed and described in Annex 2: Optimisation . Future version of PerfExpert may extend this list of recommendations.
+All the possible recommendations are listed and described in Annex 2: Optimisation. Future version of PerfExpert may extend this list of recommendations.
 
 \section{Optimising the efficiency of a subroutine}
 \label{sec:Optimizing_the_efficiency_of_a_subroutine}
@@ -101,7 +101,7 @@ All the possible recommendations are listed and described in Annex 2: Optimisati
 
 Optimising the ``Instruction Ratios'' means most of the time increase vectorisation and lower the instruction percentages for ``Data access''. You will use the specific metrics of the Data Access categories (L1, L2, L3, LLC misses and Data TLB), which will be discussed later on.
 
-But we want to show you the effect that ``Accessing Data'' has on the overall performance. We have slightly adapted the matrix multiplication program, so that it uses the values of a[i][k] (which was i+k) and b[k][j] (which was k-j directly:
+But we want to show you the effect that ``Accessing Data'' has on the overall performance. We have slightly adapted the matrix multiplication program, so that it uses the values of a[i][k] (which was i+k) and b[k][j] (which was k-j) directly:
 
 Explore the mm1.c program.
 
@@ -160,7 +160,7 @@ Now, lets see what happens if we would compile the same program with FULL optimi
 ...
 \end{prompt}
 
-The program is now able to \textit{`vectorise'} much better.
+The program is now able to ``\textit{vectorise}'' much better.
 
 Of course, in the first place we need to design our program in such a way that the compiler is able to vectorise. A situation where we create a read/write data dependency within the loop (e.g., for \ldots\  \{ a[i+1] = a[i] * c[i]; \} ) shall be avoided, as such program logic may not allow the compiler to ``vectorise'' this loop.
 
@@ -443,5 +443,6 @@ for (i = 0; i < n; i++)
 %\shellcmd{gcc -g -o test6\_i1 test6\_i1.c}%
 %\shellcmd{perfexpert -c 0.3 ./test6\_i1}%
 \end{prompt}
+
 And note the improvement.
 

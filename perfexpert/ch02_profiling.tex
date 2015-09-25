@@ -55,11 +55,10 @@ Remember to load the appropriate PerfExpert modules:
 \end{prompt}
 \fi
 
-For our first example, we'll use a simple serial 1000x1000 matrix multiplication program. Check out the program ``mm.c'', compile and run it.
+For our first example, we'll use a simple serial 1000 $\times$ 1000 matrix multiplication program. Check out the program ``mm.c'', compile and run it.
 
 \begin{prompt}
 %\shellcmd{cat mm.c}%
-%\...%
 %\shellcmd{gcc -o mm mm.c}%
 %\shellcmd{./mm}%
 \end{prompt}
@@ -75,7 +74,7 @@ sys 0m0.010s
 
 Just adding ``perfexpert'' in front of your normal command line will activate the PerfExpert profiler.  It will start the PerfExpert profiling tool, which will run the executable multiple times and collect the performance metrics.
 
-We also have to define a threshold, which defines the relevance (in \% of runtime) of the code fragments that PerfExpert should investigate. We want to focus our performance checks to those code segments, which consume the majority of the computer resources.  This threshold value should be between 0 and 1. (> 0 and $<$= 1).  A threshold of 0.3 means that PerfExpert will only focus on those functions, which are responsible for more than 30\% of the runtime.
+We also have to define a threshold, which defines the relevance (in \% of runtime) of the code fragments that PerfExpert should investigate. We want to focus our performance checks to those code segments, which consume the majority of the computer resources.  This threshold value should be between 0 and 1. (> 0 and $\leq 1$).  A threshold of 0.3 means that PerfExpert will only focus on those functions, which are responsible for more than 30\% of the runtime.
 
 \begin{prompt}
 %\shellcmd{perfexpert 0.3 ./mm}%
@@ -119,7 +118,7 @@ performance assessment LCPI good..........okay..........fair........... poor....
 - fast FP instr        1.63 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ==========================================================================
 [perfexpert] Selecting optimizations
-\...
+...
 \end{prompt}
 
 You notice that:
@@ -127,7 +126,7 @@ You notice that:
 \begin{enumerate}
   \item  PerfExpert used the HPCToolkit to collect the performance measurements. It is using statistical sampling of timers and hardware performance counters to collect accurate measurements of the program.
   \item  The matrix multiplication program ran 3 times.
-  \item  Each run took 8 to 9 seconds to complete. The average execution time was 8.66 second, which is a bit more as the execution time without profiling. It shows that profiling causes some extra execution overheads.
+  \item  Each run took 8 to 9 seconds to complete. The average execution time was 8.66 seconds, which is a bit more as the execution time without profiling. It shows that profiling causes some extra execution overheads.
   \item  One function was detected in the program that took more than 30\% of the total execution time. The ``compute'' function in an ``~unknown file~'' used 99.96\% of the runtime.
   \item  A detailed analysis of the ``compute'' function was presented. We'll discuss this in depth in the next chapter.
   \item  Three recommendations to improve the speed of the ``compute'' function were suggested.
@@ -140,7 +139,7 @@ Always compile your programs with the debug option (-g) on.
 \end{tip}
 
 \begin{tip}
-If you using gcc 4.8 or newer, you should use -gdwarf-3 option!
+If you are using gcc 4.8 or newer, you should use -gdwarf-3 option!
 \end{tip}
 
 
@@ -206,7 +205,7 @@ In the previous Matrix-Multiplication example, our GFLOP values were:
 
 The higher the GFLOPS percentage, the more efficient are computations are done. Although it is rare for real-world programs to match even 50\% of the maximum value, this metric can serve as an estimate of how efficiently the code performs computations.
 
-This performance report gives us also an indication about the ``vectorisation degree'', i.e., the percentage of the computations that were ``vectorised'' (=packed) and run in parallel.
+This performance report gives us also an indication about the ``vectorisation degree'', i.e., the percentage of the computations that were ``vectorised'' ($=$ packed) and run in parallel.
 
 \begin{prompt}
 * GFLOPS (%\%% max)        12.5 ******
@@ -219,7 +218,7 @@ This performance report gives us also an indication about the ``vectorisation de
   \item  \emph{Scalar}: This represents the \% of FP instructions which were not vectorised. These computations were executed one by one in serial mode and the value should be low.
 \end{enumerate}
 
-You noticed that the Matrix Multiplication program was not able to \emph{`vectorise'} (Packed was 0\%) and that all our FP computations were executed sequentially (Scalar was 12.5\%).
+You noticed that the Matrix Multiplication program was not able to ``\emph{vectorise}'' (Packed was 0\%) and that all our FP computations were executed sequentially (Scalar was 12.5\%).
 
 \section{Profiling the LCPI Performance Categories}
 \label{sec:Profiling_the_LCPI_Performance_Categories}
@@ -271,7 +270,7 @@ High LCPI values in this category generally indicate poor memory access patterns
   - LLC misses           0.00
 \end{prompt}
 
-We will start from the previous matrix multiplication program and generate a program with inefficient data-access. Instead of looping correctly through the matrices (``row from matrix a'' x ``column from matrix b''), we will now access both matrices ``a'' and ``b'' in a vertical manner (column by column). \emph{We do of course not aim to perform a correct matrix-multiplication}, as we are not interested in the results. We just want to show the effect of accessing data in a scattered (non-linear) way and causing \emph{non-optimal data access locality}.
+We will start from the previous matrix multiplication program and generate a program with inefficient data-access. Instead of looping correctly through the matrices (``row from matrix a'' $\times$ ``column from matrix b''), we will now access both matrices ``a'' and ``b'' in a vertical manner (column by column). \emph{We do of course not aim to perform a correct matrix-multiplication}, as we are not interested in the results. We just want to show the effect of accessing data in a scattered (non-linear) way and causing \emph{non-optimal data access locality}.
 
 Explore the test1.c program.
 
@@ -397,7 +396,7 @@ for (j = 0; j $<$ MAX_J; j++)
 
 And compile and run PerfExpert.
 
-We do not want to see the recommendations yet, so we add the ``-r0'' option.  (r0=give me zero recommendations)
+We do not want to see the recommendations yet, so we add the ``-r0'' option.  (r0 $=$ give me zero recommendations)
 
 \begin{prompt}
 %\shellcmd{gcc -g -o test3 test3.c}%
@@ -553,19 +552,19 @@ We notice that:
 
 The time that is wasted in the case of a branch misprediction is equal to the number of stages in the pipeline from the fetch stage to the execute stage. Modern microprocessors tend to have quite long pipelines so that the misprediction delay is between 10 and 20 clock cycles. The longer the pipeline the greater the need for a good branch prediction.
 
-In order to compare the effect of the branch predictor when it is able to provide good predictions, we also prepared a similar program (i.e., test5b.c), but now with completely predictable branches. We alternatively put the values 0, 1, 2 and 3 (= i\%4) in the array.
+In order to compare the effect of the branch predictor when it is able to provide good predictions, we also prepared a similar program (i.e., test5b.c), but now with completely predictable branches. We alternatively put the values 0, 1, 2 and 3 ($=$ i\%4) in the array.
 
 Explore, compile, run the example and check the results, paying particular attention to the overall execution time and the mispredicted branches.
 
 \begin{prompt}
 %\shellcmd{cat test5b.c}%
-\...
+...
  for(i = 0; i $<$ ARRAY\_LEN; ++i)
    a[i] = i PERCENTAGE-SIGN 4;
-\...
+...
 %\shellcmd{gcc -g -o test5b test5b.c}%
 %\shellcmd{perfexpert --c 0.3 ./test5b}%
-\...
+...
 [perfexpert] Collecting measurements [hpctoolkit]
 [perfexpert]    [1] 6.687911876 seconds (includes measurement overhead)
 [perfexpert]    [2] 6.677188251 seconds (includes measurement overhead)
@@ -574,7 +573,7 @@ Explore, compile, run the example and check the results, paying particular atten
 * branch instructions   0.17 >>>
  - correctly predicted  0.17 >>>
  - mispredicted         0.00
-\...
+...
 \end{prompt}
 
 The branch predictor in the processor has detected the pattern and is now able to completely predict the branches, which has its effect on the execution time of the program.
@@ -665,5 +664,5 @@ We notice in this example that:
 
 This \emph{analysis} indicates a \emph{performance} issue related to the \emph{slow floating-point calculations}. Just the square root operations (calls to libm) are responsible for 28\% of the runtime, so an improvement might heavily impact to total runtime.
 
-As a general rule of thumb: Both floating-point division and square root are considered as slow operations. Addition, subtraction and multiplication are fast FP operations. Square root can be expect to be approximately the same speed or somewhat slower (i.e., approx. 1x - 2x lower performance) compared to a division.
+As a general rule of thumb: Both floating-point division and square root are considered as slow operations. Addition, subtraction and multiplication are fast FP operations. Square root can be expect to be approximately the same speed or somewhat slower (i.e., approx. 1$\times$ - 2$\times$ lower performance) compared to a division.
 
