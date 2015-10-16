@@ -27,7 +27,7 @@ the availability of low cost microprocessors, high-speed networks, and software
 for high performance distributed computing.
 
 Compute clusters are usually deployed to improve performance and availability
-over that of a single computer, while typically being much more cost-effective
+over that of a single computer, while typically being more cost-effective
 than single computers of comparable speed or availability.
 
 Supercomputers play an important role in the field of computational science,
@@ -40,7 +40,7 @@ of the universe, airplane and spacecraft aerodynamics, the detonation of
 nuclear weapons, and nuclear fusion).
 \footnote{Wikipedia: \url{http://en.wikipedia.org/wiki/Supercomputer}}
 
-\section{What is the \hpc?}
+\section{What is the \hpcInfra?}
 \label{sec:what-is-the-hpc}
 
 The \hpc is a collection computers with
@@ -62,7 +62,7 @@ floating point operations (gigaflops) and even in teraflops.
 \includegraphics*[width=1.88in, height=1.26in, keepaspectratio=false]{ch1-cables3}
 \end{center}
 
-The \hpc relies on parallel-processing technology to offer \university researchers an
+The \hpcInfra relies on parallel-processing technology to offer \university researchers an
 extremely fast solution for all their data processing needs.
 
 
@@ -132,29 +132,9 @@ and Hopper:
   \end{enumerate}
 \fi
 \ifgent
-  \begin{enumerate}
-    \itemgastly 56 compute nodes with 2 4-core Intel L5520 (Nehalem)
-    processors, 12 GB memory, 90 GB local disk, GbE network
-    \item  haunter: 151 compute nodes with 2 4-core Intel L5520 (Nehalem)
-    processors, 12 GB memory, 90 GB local disk, GbE network
-    \item  gulpin: 32 compute nodes with 4 8-core AMD Opteron 6136
-    (Magny-Cours) processors, 64 GB memory, 483 GB local disk, Double QDR-IB
-    network
-    \item  dugtrio: 16 compute nodes with 2 6-core Intel X5675 (Westmere-EP)
-    processors, 96 GB memory, 483 GB local disk, Double QDR-IB network. This is
-    a Symmetric Multi-Processing (SMP) machine based on ScaleMP's vSMP
-    Foundation (Reverse virtualisation)
-    \item  raichu: 64 compute nodes with 2 8-core Intel E5-2670 (Sandy Bridge)
-    processors, 32 GB memory, 400 GB local disk, GbE network
-    \item  delcatty: 160 compute nodes with 2 8-core Intel E5-2670 (Sandy
-    Bridge) processors, 32 GB memory, 400 GB local disk, FDR-IB network
-    \item  phanpy: 16 compute nodes with 2 12-core Intel E5-2680v3 (Haswell-EP)
-    processors, 512 GB memory, 3X 400 GB local disk (SSD), Dual FDR-IB network
-    \item  golett: 200 compute nodes with 2 12-core Intel E5-2680v3
-    (Haswell-EP) processors, 64 GB memory, 500 GB local disk, QDR-IB network
-    \end{enumerate}
+  A set off different clusters. For an up to date list of all clusters and their hardware, see \url{https://www.vscentrum.be/infrastructure/hardware/hardware-ugent}.
 \fi
-%TODO insert specs for other sites
+%TODO other sites: keep up to date, or link to vsc website?
 
 \ifantwerpen
 All the nodes in the \hpc run under the ``\operatingsystemSL'' operating
@@ -178,6 +158,7 @@ with \emph{cpuset} support and \emph{BLCR} modules.
 
 Two tools perform the \strong{job management} and \strong{job scheduling}:
 \begin{enumerate}
+  %TODO: this gives weird rendering artifacts??
   \item  TORQUE: a resource manager (based on PBS);
   \item  Moab: job scheduler and management tools.
 \end{enumerate}
@@ -219,7 +200,7 @@ Manager).
 
 A computer that automatically:
 \begin{enumerate}
-  \item  runs your PC-applications code much faster for bigger problems;
+  \item  runs your PC-applications much faster for bigger problems;
   \item  develops your applications;
   \item  solves your bugs;
   \item  does your thinking;
@@ -323,9 +304,9 @@ Additional software can be installed ``\emph{on demand}''. Please contact the
 \subsection{What operating systems can I use?}
 \label{sec:what-operating-systems-can-i-use}
 
-All nodes in the \hpc cluster run under \operatingsystemSL, which is a specific
-version of \operatingsystemRHEL. This means that all programs (executables)
-should be compiled for \operatingsystemSL.
+All nodes in the \hpc cluster run under \operatingsystem, which is a specific
+version of \operatingsystembase. This means that all programs (executables)
+should be compiled for \operatingsystem.
 
 A user can connect from any desk computer in the \university network to the
 \hpc, regardless of the Operating System that he is using on his personal
