@@ -46,9 +46,15 @@ You can now create your own copy of the examples by copying the examples for thi
 
 The runs with PerfExpert should be made using a data set size for each compute node which is representative to a full production runs but for which execution time is not more than about ten or fifteen minutes since PerfExpert will run your application multiple times (actually, three times on Stampede) with different performance counters enabled.
 
-For that reason, before you run PerfExpert for your own purpose later, you should either request interactive access to computational resources (compute node), or modify the job script that you use to run your application and specify a running time that is about 3 (for Stampede, Hopper) or 6 (for Lonestar) times the normal running time of the program.
+For that reason, before you run PerfExpert for your own purpose later, you should either request interactive access to computational resources (compute node), or modify the job script that you use to run your application and specify a running time that is about 
+\iftacc 
+  3 (for Stampede) or 6 (for Lonestar)
+\else
+  3 (for \hpcname)
+\fi
+ times the normal running time of the program.
 
-For the exercises in this tutorial, we request interactive access on a compute node to work on for e.g., 2 hours:
+For the exercises in this tutorial, we request interactive access on a compute node to work on for, e.g., 2 hours:
 
 \iftacc
 \begin{prompt}

@@ -13,9 +13,10 @@ If your program would normally executed by the command:
 \begin{prompt}
 %\shellcmd{my\_prog -n 1000 --s 50}%
 \end{prompt}
+
 the PerfExpert command line would become:
 \begin{prompt}
-%\shellcmd{perfexpert 0.1 ./my\_prog `` -n 1000 -s 50''}%
+%\shellcmd{perfexpert 0.1 ./my\_prog "-n 1000 -s 50"}%
 \end{prompt}
 
 \subsection{Input/Output pipes}
@@ -27,6 +28,7 @@ If your program would normally executed by the command:
 \begin{prompt}
 %\shellcmd{my\_prog $<$ input\_file}%
 \end{prompt}
+
 the PerfExpert command line would become:
 \begin{prompt}
 %\shellcmd{perfexpert -i input\_file 0.1 ./my\_prog}%
@@ -86,7 +88,7 @@ The automatic optimisation is achieved by using one the 2 extra options:
 
 If you select the~-m~option and the application is composed of multiple files, your source code tree should have a Makefile file to enable PerfExpert compile your code. If your application is composed of a single source code file, the option~-s~is sufficient for you. If you do not select~-m~or~-s~options, PerfExpert requires only the binary code and will show you only the performance analysis report and the list of suggestion for bottleneck remediation.
 
-\strong{Caution:~} PerfExpert may, if you choose to use the full capabilities for automated optimisation, change your source code during the process of optimisation. PerfExpert always saves the original file with a different name (e.g., mm_omp.c.old\_27301) as well as adds annotations to your source code for each optimisation it makes. We cannot, however, fully guarantee that code modifications for optimisations will not break your code. We recommend having a full backup of your original source code before using PerfExpert.
+\strong{Caution:~} PerfExpert may, if you choose to use the full capabilities for automated optimisation, change your source code during the process of optimisation. PerfExpert always saves the original file with a different name (e.g., mm\_omp.c.old\_27301) as well as adds annotations to your source code for each optimisation it makes. We cannot, however, fully guarantee that code modifications for optimisations will not break your code. We recommend having a full backup of your original source code before using PerfExpert.
 
 \subsection{Automatic Optimisation of single source file}
 \label{subsec:Automatic_Optimization}
@@ -94,7 +96,7 @@ If you select the~-m~option and the application is composed of multiple files, y
 PerfExpert will automatically try a number of code transformations, and it will recompile it for every attempt according to a default compilation command:
 
 \begin{prompt}
-gcc --O3 --g --o $<$binary-file$>$  $<$source-file$>$
+gcc -O3 -g -o <binary-file> <source-file>
 \end{prompt}
 
 Now, try it on a sequential source:
@@ -110,7 +112,7 @@ gcc -O3 -g -o mm mm.c
 
 You can use CC, CFLAGS and LDFLAGS to select different compiler and compilation/linkage flags. The command line would become:
 \begin{prompt}
-%\shellcmd{CC=''icc'' CFLAGS=''-g -O2 '' perfexpert -s mm.c -r50 0.05 ./mm}%
+%\shellcmd{CC="icc" CFLAGS="-g -O2" perfexpert -s mm.c -r50 0.05 ./mm}%
 \end{prompt}
 
 When using PerfExpert's automatic optimisations on the OpenMP version of the simple matrix multiply code, and if we want that the OpenMP-enabled binary will run with 16 threads, we will use the following command line options:
@@ -118,14 +120,14 @@ When using PerfExpert's automatic optimisations on the OpenMP version of the sim
 %\shellcmd{OMP\_NUM\_THREADS=16 CFLAGS="-fopenmp" perfexpert -s mm\_omp.c -r50 0.05 ./mm\_omp}%
 \end{prompt}
 
-In this case, PerfExpert will compile the mm_omp.c code using the system's default compiler, which is GCC in the case of Stampede. PerfExpert will take into consideration only code fragments (loops and functions) that take more 5\% of the runtime.
+In this case, PerfExpert will compile the mm\_omp.c code using the system's default compiler, which is GCC in the case of Stampede. PerfExpert will take into consideration only code fragments (loops and functions) that take more 5\% of the runtime.
 
 To select a different compiler, you should specify the CC environment variable as below:
 \begin{prompt}
 %\shellcmd{CC="icc" OMP\_NUM\_THREADS=16 CFLAGS="-fopenmp" perfexpert -s mm\_omp.c -r50 0.05 ./mm\_omp}%
 \end{prompt}
 
-\subsection{~Automatic Optimisation of multiple source files}
+\subsection{Automatic Optimisation of multiple source files}
 \label{subsec:Automatic_Optimization_multiple}
 
 The same approach can be followed with multiple source files. In his case, the user need to create a Makefile, which can be used to recompile the executable.
@@ -147,7 +149,7 @@ And run in automatic mode:
 \section{Running PerfExpert in Batch mode (with Job Script)}
 \label{sec:Batch_Mode}
 
-One can also run perfexpert in batch mode. This is often desired when the runtime of the program is a bit higher, and you do not want to wait for the results.  You can replace the normal command line to start up your executable (e.g., ``./mm_omp'') in the job script with the perfexpert command line. (e.g., ``\textit{perfexpert -c 0.3 mm_omp}''). When running your application with a job script, be sure to specify a running time that is about 6x the normal running time of the program.
+One can also run perfexpert in batch mode. This is often desired when the runtime of the program is a bit higher, and you do not want to wait for the results.  You can replace the normal command line to start up your executable (e.g., ``./mm\_omp'') in the job script with the perfexpert command line. (e.g., ``\textit{perfexpert -c 0.3 mm\_omp}''). When running your application with a job script, be sure to specify a running time that is about 6x the normal running time of the program.
 
 Compile the parallel Matrix Multiplication program, explore the job-script and submit the job:
 
@@ -156,7 +158,7 @@ Compile the parallel Matrix Multiplication program, explore the job-script and s
 %\shellcmd{more mm\_omp.job}%
 \end{prompt}
 
-\begin{tabular}{|p{0.3\textwidth}|p{0.7\textwidth}} \hline
+\begin{tabular}{|p{\dimexpr 0.3\textwidth-2\tabcolsep}|p{\dimexpr 0.7\textwidth-2\tabcolsep}|} \hline
 \strong{Institute}  & \strong{Command} \\ \hline
 TACC                & \$ \strong{sbatch mm\_omp.job} \\ \hline
 VSC                 & \$ \strong{qsub mm\_omp.job} \\ \hline
@@ -168,10 +170,10 @@ When the job is finished, the generated report can be viewed in the file in our 
 
 \begin{prompt}
 %\shellcmd{ls}%
-\dots
+...
 MyJob.o2225027
 MyJob.e2225027
-\dots
+...
 %\shellcmd{more MyJob.o2225027}%
 [perfexpert] Collecting measurements [hpctoolkit]
 [perfexpert]    [1] 1.992842066 seconds (includes measurement overhead)
@@ -181,6 +183,6 @@ MyJob.e2225027
 ---------------------------------------------------------------------------
 Total running time for mm_omp is 8.86 seconds between all 16 cores
 The wall-clock time for mm_omp is approximately 0.55 seconds
-\dots
+...
 \end{prompt}
 
