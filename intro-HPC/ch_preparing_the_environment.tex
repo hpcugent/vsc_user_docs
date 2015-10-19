@@ -1,4 +1,5 @@
-\chapter{Preparing the Environment}
+% Can't use \hpc in a chapter title
+\chapter{Connecting to the HPC}
 \label{ch:preparing-the-environment}
 
 Before you can really start using the \hpc clusters, there are several things you need to do or know:
@@ -6,7 +7,7 @@ Before you can really start using the \hpc clusters, there are several things yo
 \begin{enumerate}
 \item  You need to \textbf{log on to the cluster} using an ssh-client to one of the login nodes. This will give you command-line access. The software you'll need to use on your client system depends on its operating system.
 \item  Before you can do some work, you'll have to \textbf{transfer the files} that you need from your desktop computer to the cluster. At the end of a job, you might want to transfer some files back.
-\item  Optionally, if you wish to use programs with a \textbf{graphical user interface}, you will need an X-server on your client system.
+\item  Optionally, if you wish to use programs with a \textbf{graphical user interface}, you will need an X-server on your client system and log in to the login nodes with X-forwarding enabled.
 \item  Often several versions of \textbf{software packages and libraries} are installed, so you need to select the ones you need. To manage different versions efficiently, the VSC clusters use so-called \textbf{modules}, so you will need to select and load the modules that you need.
 \end{enumerate}
 
@@ -234,6 +235,12 @@ will also copy the contents of the sub-directories ``\emph{recursively}''.
 \begin{prompt}
 %\shellcmd{cp --r \examplesdir \tilde/}%
 \end{prompt}
+\ifgent
+We will also make a doc directory in your home dir and copy the latest version of this document to this directory.
+\begin{prompt}
+%\shellcmd{mkdir \tilde/docs}%
+%\shellcmd{cp --r \tutorialdir/\jobname \tilde/}%
+\end{prompt}
 
 Go to your home directory, check your own private examples directory, \dots\
 and start working.
@@ -248,19 +255,20 @@ Upon connecting you will see a login message containing your last login
 time stamp and a basic overview of the current cluster utilisation.
 \begin{prompt}
 Last login: Tue Jan  6 08:53:11 2015 from helios.ugent.be
-
-STEVIN HPC-UGent infrastructure status on Thu, 15 Jan 2015 15:20:01
+STEVIN HPC-UGent infrastructure status on Mon, 19 Oct 2015 15:00:01
 
    cluster - full - free -  part - total - running - queued
              nodes  nodes   free   nodes    jobs      jobs
 -------------------------------------------------------------------
-   haunter    151      0      0     151      N/A       N/A
-    raichu     10      0     53      64      N/A       N/A
-   dugtrio      0      3      0       5      N/A       N/A
-  delcatty    123      9     26     158      N/A       N/A
-    gastly     33      6      4      46      N/A       N/A
-    gulpin     30      0      1      32      N/A       N/A
-       muk    455      5     20     528      N/A       N/A
+  delcatty     72      0     83     158      N/A       N/A
+    golett    132     20     26     180      N/A       N/A
+    raichu     47      0     16      63      N/A       N/A
+    gulpin     32      0      0      32      N/A       N/A
+   haunter     37      0    109     146      N/A       N/A
+    gastly     33      1      1      36      N/A       N/A
+       muk    413     64     50     528      N/A       N/A
+   dugtrio     10      1      0      11      N/A       N/A
+    phanpy     15      0      0      16      N/A       N/A
 
 For a full view of the current loads and queues see:
  http://hpc.ugent.be/clusterstate/
@@ -392,12 +400,13 @@ country and any special variant preferences that the user wants to see in their
 user interface. Usually a locale identifier consists of at least a language
 identifier and a region identifier.
 
-%% Question from Kurt L: Shouldn't this be in a \ifmacORlinux? On Windows it only holds in cygwin and so.
+%% TODO: how to fix this on windows/putty? generally this is not an issue I believe
+\ifmacORlinux
 Open the .bash\_profile or the .profile on your local machine with your
 favourite editor and add the following lines:
 
 \begin{prompt}
-%\shellcmd{vi ~/.bash\_profile}%
+%\shellcmd{nano ~/.bash\_profile}%
 %\dots%
 export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
@@ -405,13 +414,6 @@ export LC_CTYPE="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 %\dots%
 \end{prompt}
-
-\begin{tip}[vi]
-To start entering text in vi: move to the place you want to start entering text
-with the arrow keys and type ``i'' to switch to insert mode.  You can easily
-exit vi by entering: ``<esc>:wq''
-To exit vi without saving your changes, enter ``<esc>:q!''
-\end{tip}
 
 or alternatively (if you are not comfortable with the Linux editors), again on your local machine:
 
@@ -425,6 +427,7 @@ or alternatively (if you are not comfortable with the Linux editors), again on y
 You can now log-out, open a new terminal/shell on your local machine and re-connect to the \hpc, and you should not get these
 warnings anymore.
 
+\fi
 \section{Transfer Files to/from the \hpc}
 
 Before you can do some work, you'll have to \strong{transfer the files}
@@ -433,7 +436,7 @@ you might want to transfer some files back.
 
 \ifmacORlinux
 The preferred way to transfer files is by using an scp or sftp via the secure
-OpenSSH protocol.  Linux and OS X are shipped with an implementation of
+OpenSSH protocol.  \OS  ships with an implementation of
 OpenSSH, so you don't need to install any third-party software to use it. Just
 open a terminal window and jump in!
 \fi
@@ -506,8 +509,9 @@ open a terminal window and jump in!
   \end{prompt}
 
   If you're still using the terminal that is connected to the \hpc, close the
-  connection by typing ``exit'' in the terminal window. Alternatively, open a new
-  terminal window using the shortcut $<$command$>$$<$N$>$.
+  connection by typing ``exit'' in the terminal window.
+Alternatively, open a new
+%  terminal window using the shortcut \keys{command}\keys{N}.
 
   For example, we will copy the (local) file ``\emph{localfile.txt}'' to your
   home directory on the \hpc cluster. We first generate a small dummy
@@ -539,11 +543,11 @@ open a terminal window and jump in!
   Hello
   \end{prompt}
 
-  The \strong{scp} command can also bu used to copy files from the cluster to your local machine.
+  The \strong{scp} command can also be used to copy files from the cluster to your local machine.
   Let us copy the remote file ``\jobname.pdf'' from your ``docs''
   sub-directory on the cluster to your local computer.
 
-  First, we will confirm that the file is indeed in the ``docs'' sub-directory. 
+  First, we will confirm that the file is indeed in the ``docs'' sub-directory.
   On the Terminal on the \hpc, enter:
 
   \begin{prompt}
@@ -600,32 +604,25 @@ open a terminal window and jump in!
   \strong{mput *.h}                & Copy all he local files with extension ``.h'' to the \hpc. \\ \hline
   \end{tabular}
 
-  \subsection{Using FileZilla}
+  \subsection{Using a GUI}
+  % don't suggest filezilla, it installs adware by default.
 
-  If you prefer a GUI to transfer files back and forth to the \hpc, we can
-  suggest to use FileZilla. FileZilla is a fast and free FTP and SFTP client,
-  which is widely used.
+  If you prefer a GUI to transfer files back and forth to the \hpc, you can use your file browser.
+  Open your filebrowser  and press
 
-  Download and install FileZilla client at:
+  \iflinux
+    \keys{Ctrl} + \keys{l}
+  \fi
 
-  \url{https://filezilla-project.org/download.php}
+  \ifmac
+    \keys{Command} + \keys{k}
+  \fi
 
-  \begin{tip}
-  Some users might get the notification that Filezilla.app cannot be opened
-  because it is from an unidentified developer. Check out the Mac Gatekeeper at
-  \url{http://support.apple.com/kb/HT5290}
-  \end{tip}
+  This should open up a url bar. Alternatively, look for the 'connect to server' option in your file browsers menu.
 
-  Start FileZilla and login to the \hpc with the following details:
+  Enter: \emph{sftp://\userid@\loginnode/} and press enter.
 
-  \begin{enumerate}
-  \item  Host: sftp://\loginnode
-  \item  Username:  $<$your vsc-username$>$ (e.g., \userid)
-  \end{enumerate}
-
-  \begin{center}
-  \includegraphics*[width=4.75in, height=4.19in, keepaspectratio=false]{img0300}
-  \end{center}
+  You should now be able to browse files on the \hpc in your file browser.
 \fi
 
 \section{Modules}
@@ -704,24 +701,24 @@ modules starting with a capital letter are listed first.
 
 \subsection{Organisation of modules in toolchains}
 
-The amount of modules on the VSC systems can be overwhelming, and it is not 
-always immediately clear which modules can be loaded safely together if you 
-need to combine multiple programs in a single job to get your work done. 
+The amount of modules on the VSC systems can be overwhelming, and it is not
+always immediately clear which modules can be loaded safely together if you
+need to combine multiple programs in a single job to get your work done.
 
 Therefore the VSC has defined so-called \strong{toolchains} on the newer VSC-clusters.
 A toolchain contains a C/C++ and Fortran compiler, a MPI library and some basic
 math libraries for (dense matrix) linear algebra and FFT. Two toolchains are
-defined on most VSC systems. One, the ``intel'' toolchain, consists of the Intel 
+defined on most VSC systems. One, the ``intel'' toolchain, consists of the Intel
 compilers, MPI library and math libraries. The other one, the ``foss'' toolchain,
 consists of Open Source components: the GNU compilers, OpenMPI, OpenBLAS and
-the standard LAPACK and ScaLAPACK libraries for the linear algebra operations 
+the standard LAPACK and ScaLAPACK libraries for the linear algebra operations
 and the FFTW library for FFT. The toolchains are refreshed twice a year,
 which is reflected in their name. E.g., ``foss-2014b'' is the second version
 of the ``foss'' toolchain in 2014.
 
 The toolchains are then used to compile a lot of the software installed on
 the VSC clusters. You can recognise those packages easily as they all contain the
-name of the toolchain after the version number in their name. Packages 
+name of the toolchain after the version number in their name. Packages
 compiled with the same toolchain will typically work together well without
 conflicts.
 
@@ -776,7 +773,7 @@ disadvantages to this, so be aware of automatically loaded modules whenever
 things go wrong: they may have something to do with it!
 
 In fact, an easy way to check the components and version numbers of those
-components of a toolchain is to simply load the toolchain and then list the 
+components of a toolchain is to simply load the toolchain and then list the
 modules that are loaded.
 
 To unload a module, one can use the ``module unload'' command. It works
@@ -816,7 +813,7 @@ state, you can use:
 %'.bashrc' file.
 However, on some VSC clusters you may be left with a very empty list of available
 modules after executing ``module purge''. On those systems, ``module av'' will show you a list of
-modules containing the name of a cluster or a particular feature of a section of 
+modules containing the name of a cluster or a particular feature of a section of
 the cluster, and loading the appropriate module will restore the module list
 applicable to that particular system.
 
