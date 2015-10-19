@@ -601,7 +601,7 @@ Alternatively, open a new
   \strong{put test1.py test2.py}  & Copy the local file test1.py to the \hpc and rename it to test2.py. \\ \hline
   \strong{bye}                     & Quit the sftp session \\ \hline
   \strong{mget *.cc}               & Copy all the remote files with extension ``.cc'' to the local directory.  \\ \hline
-  \strong{mput *.h}                & Copy all he local files with extension ``.h'' to the \hpc. \\ \hline
+  \strong{mput *.h}                & Copy all the local files with extension ``.h'' to the \hpc. \\ \hline
   \end{tabular}
 
   \subsection{Using a GUI}
@@ -719,8 +719,8 @@ of the ``foss'' toolchain in 2014.
 The toolchains are then used to compile a lot of the software installed on
 the VSC clusters. You can recognise those packages easily as they all contain the
 name of the toolchain after the version number in their name. Packages
-compiled with the same toolchain will typically work together well without
-conflicts.
+compiled with the same toolchain and toolchain version will typically work
+together well without conflicts.
 
 For some clusters, additional toolchains are defined, e.g., to take advantage
 of specific properties of that cluster such as GPU accelerators or special
@@ -748,8 +748,8 @@ e.g.,
 %\shellcmd{module load Python/2.7.6-intel-2014b}%
 \end{prompt}
 
-Obviously, the user needs to keep track of the modules that are currently
-loaded. If he executed the two load commands stated above, he will get the
+Obviously, you need to keep track of the modules that are currently
+loaded. If you executed the two load commands stated above, you will get the
 following:
 
 \begin{prompt}
@@ -870,14 +870,14 @@ rather than
 
 Everything works fine, up to the point where a new version of GSL is installed,
 1.13 compiled for gcc. From then on, the user's load command will load the
-latter version, rather than the one he intended, which may lead to unexpected
+latter version, rather than the one that was intended, which may lead to unexpected
 problems.
 
 Lets now generate a version conflict with the ``ABAQUS'' module, and see what
 is happening.
 
 \begin{prompt}
-%\shellcmd{module av 2$>$\&1 \textbar grep ABAQUS}%
+%\shellcmd{module av ABAQUS}%
 ABAQUS/6.12.1-linux-x86_64
 ABAQUS/6.13.5-linux-x86_64
 ABAQUS/6.14.1-linux-x86_64
