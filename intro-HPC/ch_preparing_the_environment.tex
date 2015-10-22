@@ -236,7 +236,7 @@ will also copy the contents of the sub-directories ``\emph{recursively}''.
 %\shellcmd{cp --r \examplesdir \tilde/}%
 \end{prompt}
 \ifgent
-We will also make a doc directory in your home dir and copy the latest version of this document to this directory.
+You will now make a doc directory in your home dir and copy the latest version of this document to this directory. We will use this later in this tutorial.
 \begin{prompt}
 %\shellcmd{mkdir \tilde/docs}%
 %\shellcmd{cp --r \tutorialdir/\jobname \tilde/}%
@@ -608,7 +608,7 @@ Alternatively, open a new
   % don't suggest filezilla, it installs adware by default.
 
   If you prefer a GUI to transfer files back and forth to the \hpc, you can use your file browser.
-  Open your filebrowser  and press
+  Open your file browser  and press
 
   \iflinux
     \keys{Ctrl} + \keys{l}
@@ -618,7 +618,7 @@ Alternatively, open a new
     \keys{Command} + \keys{k}
   \fi
 
-  This should open up a url bar. Alternatively, look for the 'connect to server' option in your file browsers menu.
+  This should open up a address bar where you can enter a URL. Alternatively, look for the 'connect to server' option in your file browsers menu.
 
   Enter: \emph{sftp://\userid@\loginnode/} and press enter.
 
@@ -870,7 +870,7 @@ rather than
 
 Everything works fine, up to the point where a new version of GSL is installed,
 1.13 compiled for gcc. From then on, the user's load command will load the
-latter version, rather than the one that was intended, which may lead to unexpected
+latter version, rather than the intended one, which may lead to unexpected
 problems.
 
 Lets now generate a version conflict with the ``ABAQUS'' module, and see what
