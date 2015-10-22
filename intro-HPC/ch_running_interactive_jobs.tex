@@ -14,7 +14,8 @@ can be specified on the command line.
 
 Interactive jobs can be useful to debug certain job scripts or programs, but
 should not be the main use of the \hpcInfra. Waiting for user input takes a
-very long time in the life of a CPU and as such is not very efficient.
+very long time in the life of a CPU and does not make efficient usage of the
+computing resources.
 
 The syntax for \emph{qsub} for submitting an interactive PBS job is:
 \begin{prompt}
@@ -144,7 +145,7 @@ To display graphical applications from a Linux computer (such as the VSC
 clusters) on your machine, you need to install an X Window server on your
 local computer.
 \iflinux
-A X Window server is packages by default on most linux distributions. If you
+An X Window server is packaged by default on most linux distributions. If you
 have a graphical user interface this generally means that you are using an
 X Window server.
 %if X is not installed under linux the user will probably be expierienced enought
@@ -412,7 +413,7 @@ Click any button and see what happens.
 
 In this last example, we will show you that you can just work on this compute
 node, just as if you were working locally on your desktop.  We will run the
-a Fibonacci example of the previous chapter again, but now in full interactive
+Fibonacci example of the previous chapter again, but now in full interactive
 mode in MATLAB.
 
 \begin{prompt}

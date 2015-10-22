@@ -167,7 +167,7 @@ The following locations are available:
                          shared across all clusters of the VSC in the future. See \S\ref{subsec:scratch-directory}. \\ \hline
 \ifgent
 \$VSC\_SCRATCH\_CLUSTER & The scratch filesystem closest to this cluster.\\ \hline
-\$VSC\_SCRATCH\_VO      & The scratch filesystem for your VO storage, this can have a bigger quota then your personal scratch.\\ \hline
+\$VSC\_SCRATCH\_VO      & The scratch filesystem for your VO storage, this can have a bigger quota than your personal scratch.\\ \hline
 \fi
 \end{tabular}
 
@@ -192,9 +192,9 @@ stored in the environment variable \$VSC\_HOME. Your home directory is shared ac
 all clusters of the VSC.
 
 The data stored here should be relatively small (e.g., no files or directories
-larger than a few megabytes), and preferably is should only contain configuration
-files where the user has no direct control over where they are supossed to be found.
-Also note that various kinds of configuration files are also stored
+larger than a few megabytes), and preferably should only contain configuration
+files.
+Note that various kinds of configuration files are also stored
 here, e.g., by MATLAB, Eclipse, \ldots
 
 The operating system also creates a few files and folders here to manage your
@@ -202,7 +202,7 @@ account. Examples are:
 
 \begin{tabular}{|p{\dimexpr 0.2\textwidth-2\tabcolsep}|p{\dimexpr 0.8\textwidth-2\tabcolsep}|} \hline
 \textbf{File or Directory} & \textbf{Description} \\ \hline
-.ssh/                      & This directory contains some files necessary for you to login to the cluster and to submit jobs on the cluster. Do not remove them, and do not alter anything if you don't know what you're doing! \\ \hline
+.ssh/                      & This directory contains some files necessary for you to login to the cluster and to submit jobs on the cluster. Do not remove them, and do not alter anything if you don't know what you are doing! \\ \hline
 .bash\_profile             & When you login (type username and password) remotely via ssh, .bash\_profile is executed to configure your shell before the initial command prompt. \\ \hline
 .bashrc                    & This script is executed every time you start a session on the cluster: when you login to the cluster and when a job starts. You could edit this file and, e.g., add ``\texttt{module load XYZ}'' if you want to automatically load module XYZ whenever you login to the cluster, although we do not recommend to load modules in your .bashrc. \\ \hline
 .bash\_history             & This file contains the commands you typed at your shell prompt, in case you need them again. \\ \hline
@@ -225,12 +225,12 @@ storing big files like genome data.
 The environment variable pointing to this directory is \$VSC\_DATA.
 This volume is shared across all
 clusters of the VSC. There are however no guarantees about the
-speed you'll achieve on this volume. For guaranteed fast performance and very heavy I/O,
+speed you will achieve on this volume. For guaranteed fast performance and very heavy I/O,
 you should use the scratch space instead.
 \ifgent
 If you are running out of quota on your \$VSC\_DATA filesystem you can
 request a VO (Virtual organisation). VO members get an extra DATA filesystem: \$VSC\_DATA\_VO)
-We can give higher quota values for these filesystems, up to 100TiB is no exception.
+We can give higher quota values for these filesystems, up to 100TB is no exception.
 \fi
 
 \subsection{Your scratch space (\$VSC\_SCRATCH)\label{subsec:scratch-directory}}
@@ -261,7 +261,7 @@ Some \strong{drawbacks} are that the storage
 can only be accessed on that particular node and that the capacity is often very limited (e.g., 100 GB).
 The performance will depend a lot on the particular implementation in the cluster. In many cases,
 it will be significantly slower than the cluster scratch as it typically
-consists of just a single disk. However, if that node is local to the node
+consists of just a single disk. However, if that disk is local to the node
 (as on most clusters), the performance will not depend on what others are
 doing on the cluster.
 \item[Cluster scratch (\$VSC\_SCRATCH).]
@@ -272,31 +272,31 @@ Just like the home and data directories, every user has its own scratch
 directory. Because this scratch is also available from the login nodes, you
 could manually copy results to your data directory after your job has
 ended. Also, this type of scratch is usually implemented by running tens or
-hundreds of disks in parallel on a powerfull file server with fast connection
+hundreds of disks in parallel on a powerful file server with fast connection
 to all the cluster nodes and therefore is often the fastest file system
 available on a cluster. \\
 You may not get the same file system on different clusters, i.e., you
-may see different content on different clusters on the same site.
+may see different content on different clusters at the same intitute.
 \ifantwerpen
   At the time of writing, the cluster scratch space on turing and hopper is
-  on different disk systems and hence not shared between the clusters.
+  on different disk systems and hence is not shared between the clusters.
 \fi
 \item[Site scratch (\$VSC\_SCRATCH\_SITE).]
 At the time of writing, the site scratch is just the same
 volume as the cluster scratch, and thus contains the same data.
-It may be used in the future to point to a different scratch file system
+In the future it may point to a different scratch file system
 that is available across all clusters at a particular site, which is in
 fact the case for the cluster scratch on some sites.
 \item[Global scratch (\$VSC\_SCRATCH\_GLOBAL).]
 At the time of writing, the global scratch is just the same
 volume as the cluster scratch, and thus contains the same data.
-It may be used in the future to point to a scratch file system
+In the future it may point to a scratch file system
 that is available across all clusters of the VSC, but at the moment
 of writing there are no plans to provide this.
 \ifgent
 \item[VO scratch (\$VSC\_SCRATCH\_*\_VO).]
 Like \$VSC\_DATA\_VO these scratch filesystems are only available if you
-are in a VO. This is extra SCRATCH space you can request if you are running
+are a member of a (non-default) VO. This is extra SCRATCH space you can request if you are running
 out of quota on your personal SCRATCH.
 \fi
 \end{description}
@@ -368,7 +368,7 @@ The rules are:
 \item  You will only receive a warning when you have reached the soft limit of either quota.
 \item  You \emph{will} start losing data and get I/O errors when you reach the hard limit. In this
   case, data loss will occur  since nothing can be written anymore (this holds
-  both for new files as well as for already existing files), until you free up
+  both for new files as well as for existing files), until you free up
   some space by removing some files. Also note that you \emph{will not} be
   warned when data loss occurs, so keep an eye open for the general quota
   warnings!
@@ -628,7 +628,7 @@ Try:
 %\shellcmd{tree -s -d}%
 \end{prompt}
 
-However, we urge you to use the \texttt{du} and \texttt{tree} commands only when you
+However, we urge you to only use the \texttt{du} and \texttt{tree} commands when you
 really need them as they can put a heavy strain on the file system and thus
 slow down file operations on the cluster for all other users.
 

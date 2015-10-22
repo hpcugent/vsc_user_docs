@@ -66,7 +66,7 @@
 \newglossaryentry{Login-Node}
 {
   name={Login Node},
-  description={On \hpc clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. These are the servers you connect to to start working on the \hpcInfra},
+  description={On \hpc clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the \hpcInfra},
 }
 \newglossaryentry{Memory}
 {
@@ -126,7 +126,7 @@
 \newglossaryentry{Scratch}
 {
   name={Scratch},
-  description={Supercomputers generally have what is called scratch space: disk space available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressing applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster then the Data or HOme filesystem},
+  description={Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressing applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster then the Data or Home filesystem},
 }
 \newglossaryentry{sftp}
 {
@@ -136,12 +136,12 @@
 \newglossaryentry{Shared-memory-system}
 {
   name={Shared memory system},
-  description={Computing system in which all of the processors share one global memory space. However, access times from a processor to different regions of memory are not necessarily uniform. This is called NUMA: Non-uniform memory access. Memory closer the the CPU your jobs starts on will generally be faster to acces then memory that is closer to a different CPU. You can pin processes to a certain CPU to ensure they always use the same memory},
+  description={Computing system in which all of the processors share one global memory space. However, access times from a processor to different regions of memory are not necessarily uniform. This is called NUMA: Non-uniform memory access. Memory closer to the CPU your process is running on will generally be faster to access than memory that is closer to a different CPU. You can pin processes to a certain CPU to ensure they always use the same memory},
 }
 \newglossaryentry{SSH}
 {
   name={SSH},
-  description={Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities - slogin, ssh, and scp - that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on linux/Mac and Putty on Windows},
+  description={Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities - slogin, ssh, and scp - that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows},
 }
 \newglossaryentry{ssh-keys}
 {
@@ -161,5 +161,5 @@
 \newglossaryentry{Walltime}
 {
   name={Walltime},
-  description={Walltime is the length of time specified in the job-script for which the job will run on a batch system, this can be seen as the time that passed as measured by a normal clock that is on your wall. This is a computational resource},
+  description={Walltime is the length of time specified in the job-script for which the job will run on a batch system, you can visuallyse walltime as the time measured by a wall mounted clock (or your digital wrist watch). This is a computational resource},
 }
