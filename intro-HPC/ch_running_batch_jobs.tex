@@ -22,8 +22,8 @@ actual work is done on the cluster's \strong{compute nodes}. These compute
 nodes are managed by the job scheduling software (Moab) and a Resource Manager
 (TORQUE), which decides when and on which compute nodes the jobs can run. It is
 usually not necessary (and in some cases not permitted) to log on to the
-compute nodes directly. A user can (and should) monitor his or her jobs
-periodically as they run, but does not have to remain logged in the entire
+compute nodes directly. Users can (and should) monitor their jobs
+periodically as they run, but do not have to remain logged in the entire
 time.
 
 The documentation in this ``Running batch jobs'' section includes a description
@@ -39,14 +39,14 @@ having to enter any information or to press any buttons during program
 execution. All the necessary input or required options have to be specified on
 the command line, or needs to be put in input or configuration files.
 
-As an example, we will run a MATLAB script, which you will find in the examples
+As an example, we will run a perl script, which you will find in the examples
 subdirectory on the \hpc. When you received an account to the \hpc a
 subdirectory with examples was automatically generated for you.
 
 Remember that you have copied the contents of the HPC examples directory to
 your home directory, so that you have your \strong{own personal} copy (editable
 and over-writable) and that you can start using the examples. If you haven't
-done so:
+done so already, run these commands now:
 
 \begin{prompt}
 %\shellcmd{cd}%
@@ -68,7 +68,7 @@ Each time you want to execute a program on the \hpc you'll need 2 things:
       \item  the type of compute nodes;
       \item  the number of CPUs;
       \item  the amount of memory;
-      \item  the expected duration of the execution time;
+      \item  the expected duration of the execution time (wall time: Time as mesaured by a clock on thew all);
       \item  the name of the files which will contain the output (i.e., stdout) and error (i.e., stderr) messages;
       \item  what executable to start, and its arguments.
     \end{enumerate}
@@ -142,7 +142,8 @@ not considered as good practice, if you ``abuse'' the login-nodes for testing
 your scripts and executables. It will be explained later on how you can
 reserve your own compute-node (by opening an interactive session) to test
 your software. But for the sake of acquiring a good understanding of what is
-happening, you are pardoned for this example.
+happening, you are pardoned for this example since these jobs require very little
+computing power.
 
 The job-script contains a description of the job by specifying the command that
 need to be executed on the compute node:
@@ -165,9 +166,12 @@ The qsub command returns a job identifier on the HPC cluster. The important
 part is the number (e.g., ``\jobnumber''); this is a unique identifier for the job
 and can be used to monitor and manage your job.
 
-Go and drink some coffee \dots\ but not too long.
+Your job is now waiting in the queue for a free workernode to start on.
 
-When you return, check the contents of the directory:
+Go and drink some coffee \dots\ but not too long. If you get impatient you can
+start reading the next section for more information on how to monitor jobs in the queue.
+
+After your job was started, and ended, check the contents of the directory:
 
 \begin{prompt}
 %\shellcmd{ls -l}%
@@ -192,7 +196,7 @@ extension ``.o'' (output) and ``.e'' (error), respectively, and the job number
 ('\jobnumber' for this example). The error file will be empty, at least if all went
 well. If not, it may contain valuable information to determine and remedy the
 problem that prevented a successful run. The standard output file will contain
-the results of your calculation (here, the output of the MATLAB script)
+the results of your calculation (here, the output of the perl script)
 
 \section{Monitoring and managing your job(s)}
 
@@ -273,6 +277,9 @@ The state S can be any of  the following:
   eligible to run until the hold is removed.                                  \\ \hline
 \end{tabular}
 
+User hold means that the user can remove the hold. System hold means that the system
+or an administrator has put the job on hold, very likely because something is wrong with it.
+Check with your helpdesk to see why this is the case.
 \section{Examining the queue}
 
 As we learned above, Moab is the software application that actually decides
@@ -380,9 +387,9 @@ list the most commonly used once below. \\
 \end{prompt}
 
 For the simplest cases, only the amount of maximum estimated execution time
-(called ``walltime'' is really important. Here, the job will not require more
+(called ``walltime'') is really important. Here, the job will not require more
 than 2 hours, 30 minutes to complete. As soon as the job would take more time,
-it will be ``killed'' (terminated) by the job scheduler.  As such, it does not
+it will be ``killed'' (terminated) by the job scheduler.  There is absolutly no
 harm if you \emph{slightly} overestimate the maximum execution time. \\
 
 \begin{prompt}
@@ -640,6 +647,6 @@ happens:
 %\shellcmd{qsub -m abe -M $<$your e-mail address$>$ fibo.pbs}%
 \end{prompt}
 
-You don't have to specify the e-mail address. In such cases, the system will
-use the e-mail address, which is connected to your VSC account.
+You don't have to specify the e-mail address. The system will
+use the e-mail address which is connected to your VSC account.
 

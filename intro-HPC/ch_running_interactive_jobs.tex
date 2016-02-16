@@ -12,9 +12,14 @@ submitted to PBS via the command \strong{qsub}. Where an interactive job
 differs is that it does not require a job script, the required PBS directives
 can be specified on the command line.
 
+Interactive jobs can be useful to debug certain job scripts or programs, but
+should not be the main use of the \hpcInfra. Waiting for user input takes a
+very long time in the life of a CPU and does not make efficient usage of the
+computing resources.
+
 The syntax for \emph{qsub} for submitting an interactive PBS job is:
 \begin{prompt}
-%\shellcmd{qsub -I \ldots pbs directives \ldots}%
+%\shellcmd{qsub -I <\ldots pbs directives \ldots>}%
 \end{prompt}
 
 \section{Interactive jobs, without X support}
@@ -49,7 +54,8 @@ There are two things of note here.
       node.
   \item  You'll see that your directory structure of your home directory has
       remained the same. Your home directory is actually located on a shared
-      storage system.
+      storage system. This means that the exact same directory is available
+      on all login nodes and all compute nodes on all clusters.
 \end{enumerate}
 
 In order to know on which compute-node you're working, enter again:
@@ -138,6 +144,13 @@ of 1 hour.
 To display graphical applications from a Linux computer (such as the VSC
 clusters) on your machine, you need to install an X Window server on your
 local computer.
+\iflinux
+An X Window server is packaged by default on most linux distributions. If you
+have a graphical user interface this generally means that you are using an
+X Window server.
+%if X is not installed under linux the user will probably be expierienced enought
+%to know what he/she's doing and be aware that he/she can't run X applications
+\fi
 
 The X Window system (commonly known as \strong{X11}, based on its current major
 version being 11, or shortened to simply \strong{X}) is the system-level
@@ -161,14 +174,10 @@ and rich input device capability for networked computers.
   installation was successful.
 
   A reboot is required before XQuartz will correctly open graphical applications.
-  
+
   \begin{center}
   \includegraphics*[width=5.81in, height=4.31in, keepaspectratio=false]{img0513}
   \end{center}
-\fi
-\iflinux
-%if X is not installed under linux the user will probably be expierienced enought
-%to know what he/she's doing and be aware that he/she can't run X applications
 \fi
 
 \ifwindows
@@ -189,7 +198,7 @@ and rich input device capability for networked computers.
   \begin{center}
   \includegraphics*[width=4.27in, height=3.32in, keepaspectratio=false]{img0500}
   \end{center}
-  
+
   \item  We suggest to create a Desktop icon for Xming and XLaunch.
   \item  And \keys{Install}.
   \end{enumerate}
@@ -395,13 +404,17 @@ Click any button and see what happens.
 
 \end{prompt}
 
+\ifgent
+% Matlab is not available on the hpc in gent, we do not have enought licenses
+% to start matlab on 1000 nodes
+\else
+
 \subsection{Run your interactive application}
 
 In this last example, we will show you that you can just work on this compute
 node, just as if you were working locally on your desktop.  We will run the
 Fibonacci example of the previous chapter again, but now in full interactive
-mode. Remember that it was written in MATLAB, so we first load the MATLAB
-module.
+mode in MATLAB.
 
 \begin{prompt}
 %\shellcmd{module load MATLAB}%
@@ -441,18 +454,4 @@ entering ``\strong{exit}'' in the command window again.
 fx >> %\textbf{exit}%
 \end{prompt}
 
-Please not that you are not running MATLAB on the \hpc, but only on the
-login nodes. So it is not recommended to run large programs this way.
-You are allowed to run X programs on the login nodes for visualisation
-related tasks only. This is here to let you speed up your workflow,
-so you can do a quick visualisation without having to copy over all your data
-from the \hpc to your local system to quickly view a plot.
-
-On the login nodes memory and processor time is very limited, because these
-nodes are shared with a large amount op people.
-
-\ifgent
-For more information about how you can run computationally expensive
-MATLAB programs on the \hpc, see \url{http://hpc.ugent.be/userwiki/index.php/User:MATLAB}.
-%TODO: add a matlab chapter/big section to ch_programming_examples
-\fi
+\fi % end \ifgent \else

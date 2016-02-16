@@ -299,7 +299,7 @@ cores and to make sure that all the assigned nodes are working at full load.
 \subsection{Number of processors}
 
 The number of core and nodes that a user shall request fully depends on the
-architecture of the application. The developer designs his application with a
+architecture of the application. Developers design their applications with a
 strategy for parallelisation in mind. The application can be designed for a
 certain fixed number or for a configurable number of nodes and cores. It is
 wise to target a specific set of compute nodes (e.g., Westmere, Harpertown) for
@@ -402,7 +402,7 @@ this type are running on a computer with n cores, the CPU usage can go up to $\t
 \times 100\%$.
 
 This could also be monitored with the \strong{\emph{htop}} command:
-%TODO: The \exampleoutput may be split over multiple pages... 
+%TODO: The \exampleoutput may be split over multiple pages...
 %It may be better to simply put the contents fo htop-output in the prompt
 % environment?
 % temp fix: use a \vbox
@@ -658,7 +658,7 @@ sda2      0.00         0.00         0.00        851          0
 
 \section{Specifying network requirements}
 
-The user can examine his network activities with the htop command. When your
+Users can examine their network activities with the htop command. When your
 processors are 100\% busy, but you see a lot of red bars and only limited green
 bars in the htop screen, it is mostly an indication that they loose a lot of
 time with inter-process communication.

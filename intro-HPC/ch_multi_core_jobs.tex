@@ -342,8 +342,7 @@ advantage not just of multiple cores on a single machine, but to run programs
 on clusters of several machines. Even if you don't have a dedicated cluster,
 you could still write a program using MPI that could run your program in
 parallel, across any collection of computers, as long as they are networked
-together. Just make sure to ask permission before you load up your lab-mate's
-computer's CPU(s) with your computational tasks!
+together.
 
 Here is a ``Hello World'' program in MPI written in C. In this example, we send a
 ``Hello'' message to each processor, manipulate it trivially, return the results
@@ -418,6 +417,17 @@ more physical processors are used. This example adjusts its behaviour to the
 size of the world N, so it also seeks to scale to the runtime configuration
 without compilation for each size variation, although runtime decisions might
 vary depending on that absolute amount of concurrency available.
+
+\ifgent
+\begin{tip}
+mpirun does not always do the optimal core pinning and requires a few extra
+arguments to be the most efficient possible on a given system. At Ghent we have
+a wrapper around mpirun called ``\emph{mympirun}``. run ``\emph{mympirun --help}``
+for more information on how this works.
+You will generally just start an mpi program on the \hpcInfra by using mympirun
+instead of ``\emph{mpirun -n <nr of cores> <--other settings> <--other optimisations>}``
+\end{tip}
+\fi
 
 \begin{tip}
 If you plan engaging in parallel programming using MPI, this

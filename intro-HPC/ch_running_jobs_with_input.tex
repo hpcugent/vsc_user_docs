@@ -20,14 +20,14 @@ List and check the contents with:
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 2304
--rwxrwxr-x 1 %\userid%  682 Sep 13 11:34 file1.py*
+-rwxrwxr-x 1 %\userid%  682 Sep 13 11:34 file1.py
 -rw-rw-r-- 1 %\userid%  212 Sep 13 11:54 file1a.pbs
 -rw-rw-r-- 1 %\userid%  994 Sep 13 11:53 file1b.pbs
 -rw-rw-r-- 1 %\userid%  994 Sep 13 11:53 file1c.pbs
 -rw-r--r-- 1 %\userid% 1393 Sep 13 10:41 file2.pbs
--rwxrwxr-x 1 %\userid% 2393 Sep 13 10:40 file2.py*
+-rwxrwxr-x 1 %\userid% 2393 Sep 13 10:40 file2.py
 -rw-r--r-- 1 %\userid% 1393 Sep 13 10:41 file3.pbs
--rwxrwxr-x 1 %\userid% 2393 Sep 13 10:40 file3.py*
+-rwxrwxr-x 1 %\userid% 2393 Sep 13 10:40 file3.py
 \end{prompt}
 
 Now, let us inspect the contents of the first executable (which is just a
@@ -147,16 +147,16 @@ The following locations are available:
 
 \begin{tabular}{|p{\dimexpr 0.35\textwidth-2\tabcolsep}|p{\dimexpr 0.65\textwidth-2\tabcolsep}|} \hline
 \strong{Variable} & \strong{Description} \\ \hline\hline
-\multicolumn{2}{|l|}{\hspace*{2cm}\emph{Long-term storage}} \\ \hline
+\multicolumn{2}{|l|}{\hspace*{2cm}\emph{Long-term storage} slow filesystem, intended for smaller files} \\ \hline
 \$VSC\_HOME            & For your configuration files and other small files, see \S\ref{subsec:home-directory}. \newline
-                         The default directory is /user/\sitename/xxx/$<$vsc-account$>$. 
+                         The default directory is /user/\sitename/xxx/$<$vsc-account$>$.
                          The same file system is accessible from all sites, i.e., you'll see the same contents in \$VSC\_HOME on all sites. \\ \hline
 \$VSC\_DATA            & A bigger ``workspace'', for \strong{datasets}, results, logfiles, etc. see \S\ref{subsec:data-directory}. \newline
-                         The default directory is /data/\sitename/xxx/$<$vsc-account$>$. 
+                         The default directory is /data/\sitename/xxx/$<$vsc-account$>$.
                          The same file system is accessible from all sites. \\ \hline\hline
 \multicolumn{2}{|l|}{\hspace*{2cm}\emph{Fast temporary storage}} \\ \hline
-\$VSC\_SCRATCH\_NODE   & For \strong{temporary} or transient data on the local compute node, where fast access is important; see \S\ref{subsec:scratch-directory}. \newline 
-                         This space that is available per node. The default directory is /tmp. 
+\$VSC\_SCRATCH\_NODE   & For \strong{temporary} or transient data on the local compute node, where fast access is important; see \S\ref{subsec:scratch-directory}. \newline
+                         This space that is available per node. The default directory is /tmp.
                          On different nodes, you'll see different content. \\ \hline
 \$VSC\_SCRATCH         & For \strong{temporary} or transient data that has to be accessible from all nodes of a cluster (including the login nodes) \newline
                          The default directory is /scratch/\sitename/xxx/$<$vsc-account$>$
@@ -166,8 +166,8 @@ The following locations are available:
 \$VSC\_SCRTACH\_GLOBAL & Currently the same as \$VSC\_SCRATCH, but could be used for a scratch space
                          shared across all clusters of the VSC in the future. See \S\ref{subsec:scratch-directory}. \\ \hline
 \ifgent
-\$VSC\_SCRATCH\_CLUSTER & \\ \hline
-\$VSC\_SCRATCH\_VO      & \\ \hline
+\$VSC\_SCRATCH\_CLUSTER & The scratch filesystem closest to this cluster.\\ \hline
+\$VSC\_SCRATCH\_VO      & The scratch filesystem for your VO storage, this can have a bigger quota than your personal scratch.\\ \hline
 \fi
 \end{tabular}
 
@@ -192,8 +192,9 @@ stored in the environment variable \$VSC\_HOME. Your home directory is shared ac
 all clusters of the VSC.
 
 The data stored here should be relatively small (e.g., no files or directories
-larger than a gigabyte), and preferably is should only contain frequently used
-files. Also note that various kinds of configuration files are also stored
+larger than a few megabytes), and preferably should only contain configuration
+files.
+Note that various kinds of configuration files are also stored
 here, e.g., by MATLAB, Eclipse, \ldots
 
 The operating system also creates a few files and folders here to manage your
@@ -201,27 +202,36 @@ account. Examples are:
 
 \begin{tabular}{|p{\dimexpr 0.2\textwidth-2\tabcolsep}|p{\dimexpr 0.8\textwidth-2\tabcolsep}|} \hline
 \textbf{File or Directory} & \textbf{Description} \\ \hline
-.ssh/                      & This directory contains some files necessary for you to login to the cluster and to submit jobs on the cluster. Do not remove them, and do not alter anything if you don't know what you're doing! \\ \hline
+.ssh/                      & This directory contains some files necessary for you to login to the cluster and to submit jobs on the cluster. Do not remove them, and do not alter anything if you don't know what you are doing! \\ \hline
 .bash\_profile             & When you login (type username and password) remotely via ssh, .bash\_profile is executed to configure your shell before the initial command prompt. \\ \hline
 .bashrc                    & This script is executed every time you start a session on the cluster: when you login to the cluster and when a job starts. You could edit this file and, e.g., add ``\texttt{module load XYZ}'' if you want to automatically load module XYZ whenever you login to the cluster, although we do not recommend to load modules in your .bashrc. \\ \hline
 .bash\_history             & This file contains the commands you typed at your shell prompt, in case you need them again. \\ \hline
 \end{tabular}
 
+\ifgent
+% we don't auto create these files in gent
+\else
 Furthermore, we have initially created some files/directories there (tutorial,
 docs,  examples, examples.pbs) that accompany  this manual and allow you to
 easily execute the provided examples.
+\fi
 
 \subsection{Your data directory (\$VSC\_DATA)\label{subsec:data-directory}}
 
 In this directory you can store all other data that you need for longer terms
-(such as the results of previous jobs, \ldots). It is a good place for, e.g., 
-conducting large software builds.
+(such as the results of previous jobs, \ldots). It is a good place for, e.g.,
+storing big files like genome data.
 
-The environment variable pointing to this directory is \$VSC\_DATA. 
+The environment variable pointing to this directory is \$VSC\_DATA.
 This volume is shared across all
 clusters of the VSC. There are however no guarantees about the
-speed you'll achieve on this volume. For guaranteed fast performance and very heavy I/O, 
+speed you will achieve on this volume. For guaranteed fast performance and very heavy I/O,
 you should use the scratch space instead.
+\ifgent
+If you are running out of quota on your \$VSC\_DATA filesystem you can
+request a VO (Virtual organisation). VO members get an extra DATA filesystem: \$VSC\_DATA\_VO)
+We can give higher quota values for these filesystems, up to 100TB is no exception.
+\fi
 
 \subsection{Your scratch space (\$VSC\_SCRATCH)\label{subsec:scratch-directory}}
 
@@ -246,13 +256,13 @@ Every node has its own scratch space, which is completely separated from the oth
 On some clusters, it will be on a local disk in the node, while on other
 clusters it will be emulated through another file server. In many cases,
 it will be significantly slower than the cluster scratch as it typically
-consists of just a single disk. 
-Some \strong{drawbacks} are that the storage 
-can only be accessed on that particular node and that the capacity is often very limited (e.g., 100 GB). 
+consists of just a single disk.
+Some \strong{drawbacks} are that the storage
+can only be accessed on that particular node and that the capacity is often very limited (e.g., 100 GB).
 The performance will depend a lot on the particular implementation in the cluster. In many cases,
 it will be significantly slower than the cluster scratch as it typically
-consists of just a single disk. However, if that node is local to the node 
-(as on most clusters), the performance will not depend on what others are 
+consists of just a single disk. However, if that disk is local to the node
+(as on most clusters), the performance will not depend on what others are
 doing on the cluster.
 \item[Cluster scratch (\$VSC\_SCRATCH).]
 To allow a job running on multiple nodes (or multiple jobs running on
@@ -261,28 +271,34 @@ separate nodes) to share data as files, every node of the cluster
 Just like the home and data directories, every user has its own scratch
 directory. Because this scratch is also available from the login nodes, you
 could manually copy results to your data directory after your job has
-ended. Also, this type of scratch is usually implemented by running tens or 
-hundreds of disks in parallel on a powerfull file server with fast connection 
-to all the cluster nodes and therefore is often the fastest file system 
+ended. Also, this type of scratch is usually implemented by running tens or
+hundreds of disks in parallel on a powerful file server with fast connection
+to all the cluster nodes and therefore is often the fastest file system
 available on a cluster. \\
-You may not get the same file system on different clusters, i.e., you 
-may see different content on different clusters on the same site.
-\ifantwerpen 
-  At the time of writing, the cluster scratch space on turing and hopper is 
-  on different disk systems and hence not shared between the clusters. 
+You may not get the same file system on different clusters, i.e., you
+may see different content on different clusters at the same intitute.
+\ifantwerpen
+  At the time of writing, the cluster scratch space on turing and hopper is
+  on different disk systems and hence is not shared between the clusters.
 \fi
 \item[Site scratch (\$VSC\_SCRATCH\_SITE).]
 At the time of writing, the site scratch is just the same
-volume as the cluster scratch, and thus contains the same data. 
-It may be used in the future to point to a different scratch file system 
-that is available across all clusters at a particular site, which is in 
+volume as the cluster scratch, and thus contains the same data.
+In the future it may point to a different scratch file system
+that is available across all clusters at a particular site, which is in
 fact the case for the cluster scratch on some sites.
 \item[Global scratch (\$VSC\_SCRATCH\_GLOBAL).]
 At the time of writing, the global scratch is just the same
-volume as the cluster scratch, and thus contains the same data. 
-It may be used in the future to point to a scratch file system 
-that is available across all clusters of the VSC, but at the moment 
+volume as the cluster scratch, and thus contains the same data.
+In the future it may point to a scratch file system
+that is available across all clusters of the VSC, but at the moment
 of writing there are no plans to provide this.
+\ifgent
+\item[VO scratch (\$VSC\_SCRATCH\_*\_VO).]
+Like \$VSC\_DATA\_VO these scratch filesystems are only available if you
+are a member of a (non-default) VO. This is extra SCRATCH space you can request if you are running
+out of quota on your personal SCRATCH.
+\fi
 \end{description}
 
 \subsection{Pre-defined quotas}
@@ -295,6 +311,27 @@ with a soft quota and a hard quota. You can temporarily exceed the soft quota,
 but you can never exceed the hard quota. The user will get warnings as soon as
 he exceeds the soft quota.
 
+
+\ifgent
+To see your current quota usage you can run the ``\emph{show\_quota}``` script
+on the \hpcInfra.
+
+\begin{prompt}
+bash-4.1\$ show_quota
+User quota:
+VSC_HOME: used 1.08 GiB (37%\%%) quota 2.85 GiB (3 GiB hard limit)
+VSC_DATA_VO: used 8.16 MiB (0%\%%) quota 1.62 TiB (1.71 TiB hard limit)
+VSC_DATA: used 0 B (0%\%%) quota 23.8 GiB (25 GiB hard limit)
+VSC_SCRATCH_GULPIN_VO: used 41.3 GiB (1%\%%) quota 2.32 TiB (2.44 TiB hard limit)
+VSC_SCRATCH_GULPIN: used 7.78 MiB (0%\%%) quota 23.8 GiB (25 GiB hard limit)
+VSC_SCRATCH_DELCATTY_VO: used 340 GiB (7%\%%) quota 4.52 TiB (4.76 TiB hard limit)
+VSC_SCRATCH_DELCATTY: used 11.4 GiB (47%\%%) quota 23.8 GiB (25 GiB hard limit)
+\end{prompt}
+
+You can also visit the account page (\url{https://account.vscentrum.be}
+to see a list of your current quota and
+VO moderators can see a list of VO quota usage per member of their VO.
+\else
 The amount of data (called ``\emph{Block Limits}'') that is currently in use
 by the user (``\emph{KB}''), the soft limits (``\emph{quota}'') and the
 hard limits (``\emph{limit''}) for all 3 file-systems are always displayed
@@ -324,13 +361,14 @@ Your quota is:
 \end{prompt}
 
 Make sure to regularly check these numbers at log-in!
+\fi  % end \ifgent \else
 
 The rules are:
 \begin{enumerate}
 \item  You will only receive a warning when you have reached the soft limit of either quota.
-\item  You \emph{will} start losing data when you reach the hard limit. In this
+\item  You \emph{will} start losing data and get I/O errors when you reach the hard limit. In this
   case, data loss will occur  since nothing can be written anymore (this holds
-  both for new files as well as for already existing files), until you free up
+  both for new files as well as for existing files), until you free up
   some space by removing some files. Also note that you \emph{will not} be
   warned when data loss occurs, so keep an eye open for the general quota
   warnings!
@@ -383,6 +421,7 @@ approximately 3 minutes on the \hpc.
 %\shellcmd{cat file2.py}%
 %\shellcmd{cat file2.pbs}%
 %\shellcmd{qsub file2.pbs}%
+%\shellcmd{qstat}%
 %\shellcmd{ls -l}%
 %\shellcmd{echo \$VSC\_SCRATCH}%
 %\shellcmd{ls -l \$VSC\_SCRATCH}%
@@ -414,6 +453,7 @@ Check the Python and the PBS file, and submit the job:
 %\shellcmd{cat file3.py}%
 %\shellcmd{cat file3.pbs}%
 %\shellcmd{qsub file3.pbs}%
+%\shellcmd{qstat}%
 %\shellcmd{ls -l}%
 %\shellcmd{more \$VSC\_SCRATCH/primes\_2.txt}%
 %\dots%
@@ -464,12 +504,12 @@ temporary or log files.  Keeping your environment clean will never do any harm.
 
 \begin{tip}
 Users can request for additional quota, which can be granted in
-duly justified cases. Please contact the \hpc staff.
+duly justified cases. Please contact the \hpcTeam staff.
 \end{tip}
 
 \subsection{Check your quota}
 
-%% Kurt Lust: I've hidden the first part of this chapter as mmlsquota is only 
+%% Kurt Lust: I've hidden the first part of this chapter as mmlsquota is only
 %% for GPFS file systems (and not for , e.g., the NetApp in Leuven for home and data)
 %% and as on several clusters, the explicit path is needed.
 % In general it may be useful to see how much space (in KB) and how many files that you are using on any file system.  This information is also shown each time that you log in to the \hpc
@@ -489,12 +529,11 @@ duly justified cases. Please contact the \hpc staff.
 % Scratch        11  100000  150000       20   none
 % \end{prompt}
 
-The ``\texttt{show\_quota.py}'' command has been developed to show you the
+The ``\texttt{show\_quota}'' command has been developed to show you the
 status of your quota in a readable format:
 
 \begin{prompt}
-%\shellcmd{module load scripts}%
-%\shellcmd{show\_quota.py}%
+\shellcmd{show_quota}
 VSC_DATA:    used 81MB (0%\%%)  quota 25600MB
 VSC_HOME:    used 33MB (1%\%%)  quota 3072MB
 VSC_SCRATCH:   used 28MB (0%\%%)  quota 25600MB
@@ -589,7 +628,7 @@ Try:
 %\shellcmd{tree -s -d}%
 \end{prompt}
 
-However, we urge you to use the \texttt{du} and \texttt{tree} commands only when you
-really need them as they can put a heavy strain on the file system and thus 
+However, we urge you to only use the \texttt{du} and \texttt{tree} commands when you
+really need them as they can put a heavy strain on the file system and thus
 slow down file operations on the cluster for all other users.
 

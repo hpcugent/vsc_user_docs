@@ -23,13 +23,16 @@ All users of \association can request
 account on
 the \hpc, which is part of the Flemish Supercomputing Centre (VSC).
 
+See ref{ch:hpc-policies} for more information on who is entitled to an account.
+
 The VSC, abbreviation of Flemish Supercomputer Centre, is a virtual
 supercomputer centre. It is a partnership between the five Flemish
 associations: the Association KULeuven,  Ghent University Association, Brussels
 University Association, Antwerp University Association and the University
 Colleges-Limburg. The VSC is funded by the Flemish Government.
 
-The \hpc clusters use public/private key pairs for user authentication
+
+The \hpcInfra clusters use public/private key pairs for user authentication
 (rather than passwords). Technically, the private key is stored on your local
 computer and always stays there; the public key is stored on the \hpc.
 Access to the \hpc is granted to anyone who can prove to have access to the
@@ -89,7 +92,7 @@ Terminal.
   \begin{enumerate}
     \item  In \keys{Parameters} (at the bottom of the window), choose
       ``SSH-2 RSA'' and set the number of bits in the key to 2048.
-    
+
     \begin{center}
     \includegraphics*[width=3.49in, height=3.38in, keepaspectratio=false]{ch2-puttygen-bits}
     \end{center}
@@ -142,8 +145,8 @@ Terminal.
 
 \ifmacORlinux
   Before requesting an account, you need to generate a pair of ssh keys. One
-  popular way to do this on OS X is using the OpenSSH client included with OS
-  X, which you can then also use to log on to the clusters.
+  popular way to do this on \OS is using the OpenSSH client included with \OS
+  , which you can then also use to log on to the clusters.
 
   \subsection{Test OpenSSH}
   \label{sec:test-openssh}
@@ -161,7 +164,7 @@ Terminal.
     \item  all data is encrypted during transfer.
   \end{enumerate}
 
-  OpenSSH is a FREE implementation of the SSH connectivity protocol. OS X comes
+  OpenSSH is a FREE implementation of the SSH connectivity protocol. \OS comes
   with its own implementation of OpenSSH, so you don't need to install any
   third-party software to use it. Just open a Terminal window and jump in!
 
@@ -197,7 +200,7 @@ OpenSSH_4.3p2, OpenSSL 0.9.8e-fips-rhel5 01 Jul 2008
 
   If a key-pair is already available, you would normally get:
 \begin{prompt}
-authorized_keys2    id_rsa            id_rsa.pub         known_hosts
+authorized_keys    id_rsa            id_rsa.pub         known_hosts
 \end{prompt}
 
   Otherwise, the command will show:
@@ -219,7 +222,7 @@ ls: .ssh: No such file or directory
     \item  or your private key was compromised.
   \end{enumerate}
 
-  For extra security, the private key itself is encrypted using a ``passphrase'',
+  For extra security, the private key itself can be encrypted using a ``passphrase'',
   to prevent anyone from using your private key even when they manage to copy
   it. You have to ``unlock'' the private key by typing the passphrase.
 
@@ -357,7 +360,7 @@ Kind regards,
 -- The VSC administrators
 \end{flattext}
 
-Now, you can start using the \hpc.
+Now, you can start using the \hpc. You can always look up your vsc id later by visiting \url{https://account.vscentrum.be}.
 
 \section{Computation Workflow on the \hpc}
 \label{sec:compuation-workflow-on-the-hpc}

@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/usr/bin/env python
 #
 # VSC        : Flemish Supercomputing Centre
 # Tutorial   : Introduction to HPC
