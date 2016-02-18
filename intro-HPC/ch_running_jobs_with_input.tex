@@ -163,7 +163,7 @@ The following locations are available:
                          This directory is cluster- or site-specific: On different sites, and sometimes on different clusters on the same site, you'll get a different directory with different content. \\ \hline
 \$VSC\_SCRATCH\_SITE   & Currently the same as \$VSC\_SCRATCH, but could be used for a scratch space
                          shared across all clusters at a site in the future. See \S\ref{subsec:scratch-directory}. \\ \hline
-\$VSC\_SCRTACH\_GLOBAL & Currently the same as \$VSC\_SCRATCH, but could be used for a scratch space
+\$VSC\_SCRATCH\_GLOBAL & Currently the same as \$VSC\_SCRATCH, but could be used for a scratch space
                          shared across all clusters of the VSC in the future. See \S\ref{subsec:scratch-directory}. \\ \hline
 \ifgent
 \$VSC\_SCRATCH\_CLUSTER & The scratch filesystem closest to this cluster.\\ \hline
@@ -186,8 +186,8 @@ sections.
 
 \subsection{Your home directory (\$VSC\_HOME)\label{subsec:home-directory}}
 
-You home directory is where you arrive by default when you login to the
-cluster. Your shell refers to it as ``\tilde'' (tilde), and it absolute path is also
+Your home directory is where you arrive by default when you login to the
+cluster. Your shell refers to it as ``\tilde'' (tilde), and its absolute path is also
 stored in the environment variable \$VSC\_HOME. Your home directory is shared across
 all clusters of the VSC.
 
@@ -204,7 +204,8 @@ account. Examples are:
 \textbf{File or Directory} & \textbf{Description} \\ \hline
 .ssh/                      & This directory contains some files necessary for you to login to the cluster and to submit jobs on the cluster. Do not remove them, and do not alter anything if you don't know what you are doing! \\ \hline
 .bash\_profile             & When you login (type username and password) remotely via ssh, .bash\_profile is executed to configure your shell before the initial command prompt. \\ \hline
-.bashrc                    & This script is executed every time you start a session on the cluster: when you login to the cluster and when a job starts. You could edit this file and, e.g., add ``\texttt{module load XYZ}'' if you want to automatically load module XYZ whenever you login to the cluster, although we do not recommend to load modules in your .bashrc. \\ \hline
+% It's a bad idea to advise users to do 'module load' commands in .bashrc, since this will inevitably result in module conflicts. Removed it.
+.bashrc                    & This script is executed every time you start a session on the cluster: when you login to the cluster and when a job starts. \\ \hline
 .bash\_history             & This file contains the commands you typed at your shell prompt, in case you need them again. \\ \hline
 \end{tabular}
 
@@ -230,7 +231,7 @@ you should use the scratch space instead.
 \ifgent
 If you are running out of quota on your \$VSC\_DATA filesystem you can
 request a VO (Virtual organisation). VO members get an extra DATA filesystem: \$VSC\_DATA\_VO)
-We can give higher quota values for these filesystems, up to 100TB is no exception.
+We can give higher quota values for these filesystems. Don't hesitate to contact the \hpcTeam staff.
 \fi
 
 \subsection{Your scratch space (\$VSC\_SCRATCH)\label{subsec:scratch-directory}}
@@ -617,18 +618,21 @@ in your home directory, even if you are currently in a different directory:
 3.5M %\homedir/primes.txt%
 \end{prompt}
 
-We also want to mention the \texttt{tree} command, as it also provides an easy
-manner to see which files consumed your available quotas. \emph{Tree} is a
-recursive directory-listing program that produces a depth indented listing of
-files.
+\ifgent
+  % We don't have tree installed
+\else
+  We also want to mention the \texttt{tree} command, as it also provides an easy
+  manner to see which files consumed your available quotas. \emph{Tree} is a
+  recursive directory-listing program that produces a depth indented listing of
+  files.
 
-Try:
+  Try:
 
-\begin{prompt}
-%\shellcmd{tree -s -d}%
-\end{prompt}
+  \begin{prompt}
+  %\shellcmd{tree -s -d}%
+  \end{prompt}
 
 However, we urge you to only use the \texttt{du} and \texttt{tree} commands when you
 really need them as they can put a heavy strain on the file system and thus
 slow down file operations on the cluster for all other users.
-
+\fi
