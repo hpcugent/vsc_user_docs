@@ -39,7 +39,18 @@ Access to the \hpc is granted to anyone who can prove to have access to the
 corresponding private key on his local computer.
 
 \begin{center}
+\ifantwerpen
 \includegraphics*[width=5.75in, height=3.01in, keepaspectratio=false]{ch2-authentication-general}
+\fi
+\ifbrussel
+\includegraphics*[width=5.75in, height=3.01in, keepaspectratio=false]{ch2-authentication-general}
+\fi
+\ifgent
+\includegraphics*[width=5.75in, height=3.01in, keepaspectratio=false]{ch2-authentication-general}
+\fi
+\ifleuven
+\includegraphics*[width=5.75in, height=3.01in, keepaspectratio=false]{ch2-authentication-general-leuven}
+\fi
 \end{center}
 
 Since all VSC clusters use Linux as their main operating system, you will
@@ -50,7 +61,7 @@ Terminal.
 \ifwindows
   A typical Windows environment does not come with pre-installed
   software to connect and run command-line executables on a \hpc. Some tools
-  needs to be installed on your Windows machine first, before we can start the
+  need to be installed on your Windows machine first, before we can start the
   actual work.
 
   \subsection{Install PuTTY: A free telnet/SSH client}
@@ -249,7 +260,20 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
 \label{sec:applying-for-the-account}
 
 Visit \url{https://account.vscentrum.be/} from within the \university campus
-network (or using a VPN connection.)
+network 
+%(or using a VPN connection.)
+\ifantwerpen
+(or using a VPN connection.)
+\fi
+\ifbrussel
+(or using a VPN connection.)
+\fi
+\ifgent
+(or using a VPN connection.)
+\fi
+\ifleuven
+.
+\fi
 You will be redirected to the BELNET federation website,
 where you have to select your ``Home Organisation''.
 For faster logins in the future you can select the ``Remember selection'' checkboxes.
@@ -308,6 +332,18 @@ Directory. (i.e., /Users/$<$username$>$/.ssh/id\_rsa.pub).
 
   You will now have to log in using your NetID. (The same username and password that you use for accessing your e-mail)
 
+\fi
+
+\ifleuven
+\hpc users should login using their staff or student id 
+(The same username and password that is used for accessing e-mail).
+ 
+ \begin{center}
+  \includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate-leuven}
+  \includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate-hasselt}
+  \end{center}
+
+ 
 \fi
 
 %TODO: other institute login information explained here?
