@@ -3,7 +3,7 @@
 
 \section{Basic Linux Usage}
 
-All the \hpc clusters run some variant of the ``\operatingsystembase'' operating system.  This
+All the \hpc clusters run the ``\operatingsystembase'' operating system.  This
 means that, when you connect to one of them, you get a command line interface,
 which looks something like this:
 
@@ -18,11 +18,7 @@ your commands, and execute them.
 ls   & Shows you a list of files in the current directory \\ \hline
 cd   & Change current working directory \\ \hline
 rm   & Remove file or directory \\ \hline
-\ifgent
-nano  & Text editor \\ \hline
-\else
 joe  & Text editor \\ \hline
-\fi
 echo & Prints its parameters to the screen \\ \hline
 \end{tabular}
 
@@ -92,11 +88,7 @@ Suppose we want to call this script ``foo''. You open a new file for editing, an
 name it ``foo'', and edit it with your favourite editor
 
 \begin{prompt}
-\ifgent
-%\shellcmd{nano foo}%
-\else
 %\shellcmd{vi foo}%
-\fi
 \end{prompt}
 
 or use the following commands:
@@ -234,8 +226,7 @@ ping      & send ICMP ECHO\_REQUEST to network hosts, you will get back ICMP pac
 \begin{tabular}{|p{\dimexpr 0.15\textwidth-2\tabcolsep}|p{\dimexpr 0.85\textwidth-2\tabcolsep}|} \hline
 logname & Print user's login name \\ \hline
 quota   & Display disk usage and limits \\ \hline
-%really tell users about this?
-%su      & Switch to super user or change user ID \\ \hline
+su      & Switch to super user or change user ID \\ \hline
 which   & Returns the pathnames of the files that would be executed in the current environment \\ \hline
 whoami  & Displays the login name of the current effective user \\ \hline
 \end{tabular}
@@ -251,8 +242,7 @@ fg      & A process running in the background will be processed in the foregroun
 jobs    & Lists the jobs being run in the background \\ \hline
 kill    & Cancels a job running in the background, it takes argument either the user job number or the system process number \\ \hline
 ps      & Reports a snapshot of the current processes \\ \hline
-%really tell users about this?
-%sudo    & Execute a command as a superuser \\ \hline
+sudo    & Execute a command as a superuser \\ \hline
 top     & Display Linux tasks \\ \hline
 \end{tabular}
 
