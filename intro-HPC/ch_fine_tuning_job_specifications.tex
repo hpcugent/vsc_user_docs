@@ -33,7 +33,7 @@ performing, and may indicate where there are potential problems or performance
 bottlenecks. Once the data have actually been acquired, the second task is
 analysing the data and adapting your PBS Job Specifications.
 
-Another different task is to monitor the behaviour of an application at run time and
+Another different task is to monitor the behaviour an application at run time and
 detect anomalies or unexpected behaviour. Linux provides a large number of
 utilities to monitor the performance of its components.
 
@@ -104,20 +104,16 @@ required compute node, where that application should run on.  Estimating the
 amount of memory an application will use during execution is often non-trivial,
 especially when one uses third-party software.
 
-\ifgent
-  %% Since we don't have monitor at Gent, there is no real point in the eat_mem section
-\else
-  The ``eat\_mem'' application in the HPC examples directory just consumes and then releases memory, for the
-  purpose of this test. It has one parameter, the amount of gigabytes of memory
-  which needs to be allocated.
-  
-  First compile the program on your machine and then test it for 1 GB:
-  \begin{prompt}
-  %\shellcmd{gcc -o eat\_mem eat\_mem.c}%
-  %\shellcmd{./eat\_mem 1}%
-  Consuming 1 gigabyte of memory.
-  \end{prompt}
-\fi
+The ``eat\_mem'' application just consumes and then releases memory, for the
+purpose of this test. It has one parameter, the amount of gigabytes of memory
+which needs to be allocated.
+
+First compile the program on your machine and then test it for 1 GB:
+\begin{prompt}
+%\shellcmd{gcc -o eat\_mem eat\_mem.c}%
+%\shellcmd{./eat\_mem 1}%
+Consuming 1 gigabyte of memory.
+\end{prompt}
 
 
 \subsection{Available Memory on the machine}
@@ -147,9 +143,6 @@ application tremendously.
 
 \subsection{Checking the memory consumption}
 
-\ifgent
-  %% We don't have monitor at Gent
-\else
 The ``Monitor'' tool monitors applications in terms of memory and CPU usage, as
 well as the size of temporary files. Note that currently only single node jobs
 are supported, MPI support may be added in a future release.
@@ -241,15 +234,9 @@ Consuming 3 gigabyte of memory.
 
 Monitor will now print the program's metrics every second. Note that the
 minimum delta value is 1 second.
-\fi
 
-\ifgent
-To monitor the memory consumption of a running application, you can use the ``\emph{top}''
+Alternative options to monitor the memory consumption are the ``\emph{top}''
 or the ``\emph{htop}'' command.
-\else
-  Alternative options to monitor the memory consumption are the ``\emph{top}''
-  or the ``\emph{htop}'' command.
-\fi
 
 \begin{description}
   \item[top] provides an ongoing look at processor activity in real time. It displays a listing of the most CPU-intensive tasks on the system, and can provide an interactive interface for manipulating processes. It can sort the tasks by memory usage, CPU usage and run time.
@@ -301,7 +288,6 @@ or on the command line
 %\shellcmd{qsub -l pmem=2gb}%
 \end{prompt}
 
-In this example, you request 8 GB of memory in total on the node.
 
 \section{Specifying processors requirements}
 
@@ -352,9 +338,6 @@ processor : 6
 processor : 7
 \end{prompt}
 
-\underbar{Remark}: Unless you want information of the login nodes, you'll have to issue these commands
-on one of the workernodes. This is most easily achieved in an interactive job, see the chapter on
-Running interactive jobs.
 
 In order to specify the number of nodes and the number of processors per node in your job script, use:
 
@@ -368,59 +351,55 @@ or with equivalent parameters on the command line
 %\shellcmd{qsub -l nodes=N:ppn=M}%
 \end{prompt}
 
+In this example, you request 8 GB of memory in total on the node.
+
 This specifies the number of nodes (nodes=N) and the number of processors per
 node (ppn=M) that the job should use. PBS treats a processor core as a
 processor, so a system with eight cores per compute node can have ppn=8 as its
-maximum ppn request. You can also use ppn=all to request all cores of a node,
-or ppn=half to request half of them.
-Note that unless a job has some inherent parallelism of
+maximum ppn request. Note that unless a job has some inherent parallelism of
 its own through something like MPI or OpenMP, requesting more than a single
 processor on a single node is usually wasteful and can impact the job start
 time.
 
 \subsection{Monitoring the CPU-utilisation}
 
-\ifgent
-  %% We don't have monitor tool.
-\else
-  The previously used ``monitor'' tool also shows the overall CPU-load. The
-  ``eat\_cpu'' program performs a multiplication of 2 randomly filled a $1500 \times 1500$
-  matrices and is just written to consumes a lot of ``\emph{cpu}''.
-  
-  We first load the monitor modules, study the ``eat\_cpu.c'' program and compile it:
-  \begin{prompt}
-  %\shellcmd{module load monitor}%
-  %\shellcmd{cat eat\_cpu.c}%
-  %\shellcmd{gcc -o eat\_cpu eat\_cpu.c}%
-  \end{prompt}
-  
-  And then start to monitor the \emph{eat\_cpu} program:
-  \begin{prompt}
-  %\shellcmd{monitor -d 1 ./eat\_cpu}%
-  time  (s) size (kb) %\%%mem %\%%cpu
-  1  52852  0.3 100
-  2  52852  0.3 100
-  3  52852  0.3 100
-  4  52852  0.3 100
-  5  52852  0.3  99
-  6  52852  0.3 100
-  7  52852  0.3 100
-  8  52852  0.3 100
-  \end{prompt}
-  
-  We notice that it the program keeps its CPU nicely busy at 100\%.
-  
-  Some processes spawn one or more sub-processes. In that case, the metrics shown
-  by monitor are aggregated over the process and all of its sub-processes
-  (recursively). The reported CPU usage is the sum of all these processes, and
-  can thus exceed 100\%.
-  
-  Some (well, since this is a \hpc Cluster, we hope most) programs use more
-  than one core to perform their computations. Hence, it should not come as a
-  surprise that the CPU usage is reported as larger than 100\%. When programs of
-  this type are running on a computer with n cores, the CPU usage can go up to $\text{n}
-  \times 100\%$.
-\fi
+The previously used ``monitor'' tool also shows the overall CPU-load. The
+``eat\_cpu'' program performs a multiplication of 2 randomly filled a $1500 \times 1500$
+matrices and is just written to consumes a lot of ``\emph{cpu}''.
+
+We first load the monitor modules, study the ``eat\_cpu.c'' program and compile it:
+\begin{prompt}
+%\shellcmd{module load monitor}%
+%\shellcmd{cat eat\_cpu.c}%
+%\shellcmd{gcc -o eat\_cpu eat\_cpu.c}%
+\end{prompt}
+
+And then start to monitor the \emph{eat\_cpu} program:
+\begin{prompt}
+%\shellcmd{monitor -d 1 ./eat\_cpu}%
+time  (s) size (kb) %\%%mem %\%%cpu
+1  52852  0.3 100
+2  52852  0.3 100
+3  52852  0.3 100
+4  52852  0.3 100
+5  52852  0.3  99
+6  52852  0.3 100
+7  52852  0.3 100
+8  52852  0.3 100
+\end{prompt}
+
+We notice that it the program keeps its CPU nicely busy at 100\%.
+
+Some processes spawn one or more sub-processes. In that case, the metrics shown
+by monitor are aggregated over the process and all of its sub-processes
+(recursively). The reported CPU usage is the sum of all these processes, and
+can thus exceed 100\%.
+
+Some (well, since this is a \hpc Cluster, we hope most) programs use more
+than one core to perform their computations. Hence, it should not come as a
+surprise that the CPU usage is reported as larger than 100\%. When programs of
+this type are running on a computer with n cores, the CPU usage can go up to $\text{n}
+\times 100\%$.
 
 This could also be monitored with the \strong{\emph{htop}} command:
 %TODO: The \exampleoutput may be split over multiple pages...
@@ -591,37 +570,33 @@ On top of those, you can also access some temporary storage (i.e., the /tmp
 directory) on the compute node, which is defined by the
 \emph{\$VSC\_SCRATCH\_LOCAL} environment variable.
 
-\ifgent
-  % We don't use monitor in Gent
-\else
-  We first load the monitor modules, study the ``eat\_disk.c'' program and
-  compile it:
-  
-  \begin{prompt}
-  %\shellcmd{module load monitor}%
-  %\shellcmd{cat eat\_disk.c}%
-  %\shellcmd{gcc -o eat\_disk eat\_disk.c}%
-  \end{prompt}
-  
-  The \emph{monitor} tool provides an option (-f) to display the size of one or
-  more files:
-  
-  \begin{prompt}
-  %\shellcmd{monitor -f \$VSC\_SCRATCH/test.txt ./eat\_disk}%
-  time (s) size (kb) %\%%mem %\%%cpu
-  5  1276  0 38.6 168820736
-  10  1276  0 24.8 238026752
-  15  1276  0 22.8 318767104
-  20  1276  0 25 456130560
-  25  1276  0 26.9 614465536
-  30  1276  0 27.7 760217600
-  %\dots%
-  \end{prompt}
-  
-  Here, the size of the file ``\emph{test.txt}'' in directory \$VSC\_SCRATCH will
-  be monitored. Files can be specified by absolute as well as relative path, and
-  multiple files are separated by ``,''.
-\fi
+We first load the monitor modules, study the ``eat\_disk.c'' program and
+compile it:
+
+\begin{prompt}
+%\shellcmd{module load monitor}%
+%\shellcmd{cat eat\_disk.c}%
+%\shellcmd{gcc -o eat\_disk eat\_disk.c}%
+\end{prompt}
+
+The \emph{monitor} tool provides an option (-f) to display the size of one or
+more files:
+
+\begin{prompt}
+%\shellcmd{monitor -f \$VSC\_SCRATCH/test.txt ./eat\_disk}%
+time (s) size (kb) %\%%mem %\%%cpu
+5  1276  0 38.6 168820736
+10  1276  0 24.8 238026752
+15  1276  0 22.8 318767104
+20  1276  0 25 456130560
+25  1276  0 26.9 614465536
+30  1276  0 27.7 760217600
+%\dots%
+\end{prompt}
+
+Here, the size of the file ``\emph{test.txt}'' in directory \$VSC\_SCRATCH will
+be monitored. Files can be specified by absolute as well as relative path, and
+multiple files are separated by ``,''.
 
 It is important to be aware of the sizes of the file that will be generated, as
 the available disk space for each user is limited.  We refer to \autoref{sect:how-much-disk-space-do-i-get} on
@@ -640,48 +615,46 @@ Several actions can be taken, to avoid storage problems:
 \item  Anyone can request more disk space to the \hpc staff, but you will have to duly justify your request.
 \end{enumerate}
 
+\subsection{Monitoring Disk I/O}
 
-%% Given that iotop is unsafe to use (security issue CVE-2011-2494), I propose we kill this section.
-%\subsection{Monitoring Disk I/O}
-%
-%If your Linux system gets slow down due to heavy disk I/O activities, you
-%probably want to know which processes or users (in case of multi-user systems)
-%are the culprit for such activities.
-%
-%If you want to monitor disk I/O activities of individual Linux processes, you
-%can try \emph{iotop}. This tool shows a sorted list of the most I/O intensive
-%processes in real time via a \emph{top}-like interface.
-%
-%\begin{prompt}
-%%\shellcmd{iotop}%
-%\end{prompt}
-%
-%Running \emph{iotop} without any argument like above shows a list of \emph{all}
-%existing processes regardless of their disk I/O activities. If you want
-%\emph{iotop} to only show processes that are actually doing disk I/O, run the
-%following instead.
-%
-%\begin{prompt}
-%%\shellcmd{iotop -o}%
-%\end{prompt}
-%
-%\underbar{Remark}: The iotop tool is not available on all compute nodes.
-%
-%If you are interested in monitoring disk read/write rates of individual disks,
-%you can use \emph{iostat}.
-%
-%\begin{prompt}
-%%\shellcmd{iostat}%
-%Linux 2.6.18-164.6.1.el5 (r1e2cn12)  11/04/2013
-%
-%avg-cpu:  %\%%user   %\%%nice %\%%system %\%%iowait  %\%%steal   %\%%idle
-%          69.33    0.00   13.02    0.08    0.00   17.57
-%
-%Device:    tps   Blk_read/s   Blk_wrtn/s   Blk_read   Blk_wrtn
-%sda       3.05         0.27       450.05    2037907 3366173632
-%sda1      3.05         0.27       450.05    2036637 3366173632
-%sda2      0.00         0.00         0.00        851          0
-%\end{prompt}
+If your Linux system gets slow down due to heavy disk I/O activities, you
+probably want to know which processes or users (in case of multi-user systems)
+are the culprit for such activities.
+
+If you want to monitor disk I/O activities of individual Linux processes, you
+can try \emph{iotop}. This tool shows a sorted list of the most I/O intensive
+processes in real time via a \emph{top}-like interface.
+
+\begin{prompt}
+%\shellcmd{iotop}%
+\end{prompt}
+
+Running \emph{iotop} without any argument like above shows a list of \emph{all}
+existing processes regardless of their disk I/O activities. If you want
+\emph{iotop} to only show processes that are actually doing disk I/O, run the
+following instead.
+
+\begin{prompt}
+%\shellcmd{iotop -o}%
+\end{prompt}
+
+\underbar{Remark}: The iotop tool is not available on all compute nodes.
+
+If you are interested in monitoring disk read/write rates of individual disks,
+you can use \emph{iostat}.
+
+\begin{prompt}
+%\shellcmd{iostat}%
+Linux 2.6.18-164.6.1.el5 (r1e2cn12)  11/04/2013
+
+avg-cpu:  %\%%user   %\%%nice %\%%system %\%%iowait  %\%%steal   %\%%idle
+          69.33    0.00   13.02    0.08    0.00   17.57
+
+Device:    tps   Blk_read/s   Blk_wrtn/s   Blk_read   Blk_wrtn
+sda       3.05         0.27       450.05    2037907 3366173632
+sda1      3.05         0.27       450.05    2036637 3366173632
+sda2      0.00         0.00         0.00        851          0
+\end{prompt}
 
 \section{Specifying network requirements}
 
@@ -708,44 +681,40 @@ can specify:
 #PBS -l gbe
 \end{prompt}
 
-\ifgent
-  % We don't use monitor in Gent.
-\else
-  \section{Some more tips on the Monitor tool}
-  
-  \subsection{Command Lines arguments}
-  
-  Many programs, e.g., MATLAB, take command line options. To make sure these do
-  not interfere with those of monitor and vice versa, the program can for
-  instance be started in the following way:
-  
-  \begin{prompt}
-  %\shellcmd{monitor -delta 60 -- matlab -nojvm -nodisplay computation.m}%
-  \end{prompt}
-  
-  The use of ``--'' will ensure that monitor does not get confused by MATLAB's '-nojvm' and '-nodisplay' options.
-  
-  \subsection{Exit Code}
-  
-  Monitor will propagate the exit code of the program it is watching. Suppose the
-  latter ends normally, then monitor's exit code will be 0. On the other hand,
-  when the program terminates abnormally with a non-zero exit code, e.g., 3, then
-  this will be monitor's exit code as well.
-  
-  When monitor has to terminate in an abnormal state, for instance if it can't
-  create the log file, its exit code will be 65. If this interferes with an exit
-  code of the program to be monitored, it can be modified by setting the
-  environment variable MONITOR\_EXIT\_ERROR to a more suitable value.
-  
-  \subsection{Monitoring a running process}
-  
-  It is also possible to ``attach'' monitor to a program or process that is already
-  running. One simply determines the relevant process ID using the ps command,
-  e.g., 18749, and starts monitor:
-  
-  \begin{prompt}
-  %\shellcmd{monitor -p 18749}%
-  \end{prompt}
-  
-  Note that this feature can be (ab)used to monitor specific sub-processes.
-\fi
+\section{Some more tips on the Monitor tool}
+
+\subsection{Command Lines arguments}
+
+Many programs, e.g., MATLAB, take command line options. To make sure these do
+not interfere with those of monitor and vice versa, the program can for
+instance be started in the following way:
+
+\begin{prompt}
+%\shellcmd{monitor -delta 60 -- matlab -nojvm -nodisplay computation.m}%
+\end{prompt}
+
+The use of ``--'' will ensure that monitor does not get confused by MATLAB's '-nojvm' and '-nodisplay' options.
+
+\subsection{Exit Code}
+
+Monitor will propagate the exit code of the program it is watching. Suppose the
+latter ends normally, then monitor's exit code will be 0. On the other hand,
+when the program terminates abnormally with a non-zero exit code, e.g., 3, then
+this will be monitor's exit code as well.
+
+When monitor has to terminate in an abnormal state, for instance if it can't
+create the log file, its exit code will be 65. If this interferes with an exit
+code of the program to be monitored, it can be modified by setting the
+environment variable MONITOR\_EXIT\_ERROR to a more suitable value.
+
+\subsection{Monitoring a running process}
+
+It is also possible to ``attach'' monitor to a program or process that is already
+running. One simply determines the relevant process ID using the ps command,
+e.g., 18749, and starts monitor:
+
+\begin{prompt}
+%\shellcmd{monitor -p 18749}%
+\end{prompt}
+
+Note that this feature can be (ab)used to monitor specific sub-processes.
