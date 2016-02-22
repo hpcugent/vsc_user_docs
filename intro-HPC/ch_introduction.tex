@@ -135,25 +135,6 @@ and Hopper:
                1 partition has 480 cores and 12 TB RAM and another partition has 160 cores and 2 TB RAM, 
                both partitions have 10TB local scratch space
       \end{itemize}
-%    \item  176 compute nodes with 2 10-core Ivy Bridge processors, 64 GB memory,
-%           300 GB local disk, QDR-IB network
-%    \item  32 compute nodes with 2 10-core Ivy Bridge processors, 128 GB memory,
-%           300 GB local disk, QDR-IB network
-%    \item  48 compute nodes with 2 12-core Ivy Bridge processors, 64 GB memory,
-%           300 GB local disk, QDR-IB network
-%    \item  8 nodes with 2 8-core Sandy Bridge processors, 64 GB memory,
-%           300 GB local disk, DDR-IB network, 2 K20 NVIDIA GPGPUs
-%    \item  8 nodes with 2 8-core Sandy Bridge processors, 64 GB memory,
-%           300 GB local disk, DDR-IB network, 2 Intel Xeon Phis
-%    \item  4 nodes with 2 6-core Xeon 5650 Westmere processors, 24 GB memory, 
-%           300 GB local disk, DDR-IB network, 2 Tesla M2070 GPGPUs
-%    \item  5 nodes with 2 10-core Haswell Xeon E5-2650v3 processors, 64 GB memory, 
-%           300 GB local disk, DDR-IB network, 2 Tesla K40 GPGPUs
-%    \item  2 nodes with 2 10-core Haswell Xeon E5-2650v3 processors, 128 GB memory, 
-%           300 GB local disk, DDR-IB network, 2 NVIDIA Quadro K5200 GPUs (visualization nodes)
-%    \item  64 sockets with 10-core Xeon E5-4650 processors, total 14 TB memory, SGI-proprietary NUMAlink6 interconnect, 
-%           1 partition has 480 cores and 12 TB RAM and another partition has 160 cores and 2 TB RAM, 
-%           both partitions have 10TB local scratch space (Cerebro - shared memory SMP section)
   \end{enumerate}
 \fi
 \ifbrussel
@@ -186,7 +167,6 @@ with \emph{cpuset} support and \emph{BLCR} modules.
 \fi
 \ifleuven
 All the nodes in the \hpc run under the ``\operatingsystem'' operating system.
-%version 6.
 \fi
 \ifbrussel
 All the nodes in the \hpc run under the ``\operatingsystemSL'' operating
@@ -327,7 +307,7 @@ GCC, Intel and PGI.
 GCC, clang, J2EE and Intel Cluster Studio.
 \fi
 \ifgent
-GCC, clang, J2EE and Intel Cluster Studio.
+GCC and Intel.
 \fi
 
 %TODO insert software for other sites
@@ -343,8 +323,8 @@ M(VA)PICH, OpenMPI.
 Commonly used software packages are:
 \begin{itemize}
 \item{in bioinformatics: beagle, Beast, bedtools, bowtie, BWA, Mr. Bayes, TopHat, TRIQS,}
-\item{in chemistry: Gaussian, GROMACS, Molpro, NAMD, NWChem, Siesta, Turbomole, VMD,}
-\item{in engineering: Abaqus, Ansys, Comsol,}
+\item{in chemistry: CP2K, Gaussian, GROMACS, Molpro, NAMD, NWChem, Siesta, Turbomole, VASP, VMD,}
+\item{in engineering: Abaqus, Ansys, Comsol, OpenFOAM,}
 \item{in mathematics: JAGS, Matlab, R, SAS,}
 \item{for visuzalization: Gnuplot, IDL, Paraview, Tecplot, VisIt.}
 %\ldots
