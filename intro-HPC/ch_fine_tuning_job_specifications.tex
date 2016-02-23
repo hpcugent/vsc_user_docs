@@ -371,8 +371,23 @@ or with equivalent parameters on the command line
 This specifies the number of nodes (nodes=N) and the number of processors per
 node (ppn=M) that the job should use. PBS treats a processor core as a
 processor, so a system with eight cores per compute node can have ppn=8 as its
-maximum ppn request. You can also use ppn=all to request all cores of a node,
-or ppn=half to request half of them.
+maximum ppn request.
+You can also use this statement in your job script:
+
+\begin{prompt}
+#PBS -l nodes=N:ppn=all
+\end{prompt}
+
+to request all cores of a node, or
+
+\begin{prompt}
+#PBS -l nodes=N:ppn=half
+\end{prompt}
+
+to request half of them.
+
+% KULeuven, UAntwerpen, VUB: please check whether the ppn=all/ppn=half directives also work at your site
+
 Note that unless a job has some inherent parallelism of
 its own through something like MPI or OpenMP, requesting more than a single
 processor on a single node is usually wasteful and can impact the job start
@@ -732,7 +747,7 @@ can specify:
   when the program terminates abnormally with a non-zero exit code, e.g., 3, then
   this will be monitor's exit code as well.
   
-  When monitor has to terminate in an abnormal state, for instance if it can't
+  When monitor terminates in an abnormal state, for instance if it can't
   create the log file, its exit code will be 65. If this interferes with an exit
   code of the program to be monitored, it can be modified by setting the
   environment variable MONITOR\_EXIT\_ERROR to a more suitable value.

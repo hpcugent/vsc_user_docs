@@ -131,7 +131,7 @@ Before you can really start using the \hpc clusters, there are several things yo
 
   Here, user \userid wants to make a connection to the ``\hpcname'' cluster at
   \university via the login node ``\loginnode'', so replace \userid with your own
-  userid in the above command.
+  vsc id in the above command.
   
   The first time you make a connection to the login node, you will be asked to
   verify the authenticity of the login node, e.g.,
@@ -828,18 +828,18 @@ This will load the two modules as well as their dependencies.
 Finally, to switch between clusters you can swap the ``cluster'' modules.
 These are special modules that change what modules are available for you,
 and what cluster your jobs will be queued in.
-By default you are working on delcatty. To switch to, e.g., raichu you need
+By default you are working on \defaultcluster. To switch to, e.g., \othercluster you need
 to redefine the environment so you get access to all modules installed on
-the raichu cluster, and to be able to submit jobs to the raichu scheduler
-so your jobs will start on raichu instead of the default delcatty cluster.
+the \othercluster cluster, and to be able to submit jobs to the \othercluster scheduler
+so your jobs will start on \othercluster instead of the default \defaultcluster cluster.
 
-The raichu modules do not work directly on the login nodes, because the
-login nodes do not have the same architecture as the raichu cluster, they
-have the same architecture as the delcatty cluster however, so this is why
+The \othercluster modules do not work directly on the login nodes, because the
+login nodes do not have the same architecture as the \othercluster cluster, they
+have the same architecture as the \defaultcluster cluster however, so this is why
 by default software works on the login nodes.
 
 \begin{prompt}
-%\shellcmd{module swap cluster/raichu}%
+%\shellcmd{module swap cluster/\othercluster}%
 \end{prompt}
 
 \fi
