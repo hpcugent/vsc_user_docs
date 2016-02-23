@@ -109,7 +109,7 @@ Before you can really start using the \hpc clusters, there are several things yo
       \keys{Open}.
   \end{enumerate}
 
-%ENDIF windos
+%ENDIF windows
 \fi
 
 \ifmacORlinux
@@ -121,7 +121,7 @@ get external access (e.g., from home) by using a VPN connection.
 
 Open up a terminal and enter the following command to connect to the \hpc.
 \ifmac
-You can open a terminal by navigation to Applications and then Utilities in the finder and open Terminal.app, or enter Terminal in Spotlight Search.
+  You can open a terminal by navigation to Applications and then Utilities in the finder and open Terminal.app, or enter Terminal in Spotlight Search.
 \fi
 
 \begin{prompt}
@@ -143,7 +143,9 @@ RSA key fingerprint is %\loginfingerprint%
 Are you sure you want to continue connecting (yes/no)? %\strong{\emph{yes}}%
 \end{prompt}
 
+% ENDIF \ifmacORlinux
 \fi
+
 \strong{Congratulations, you're on the \hpc infrastructure now!}
 To find out where you have landed you can print the current working directory:
 \begin{prompt}
@@ -235,6 +237,7 @@ will also copy the contents of the sub-directories ``\emph{recursively}''.
 \begin{prompt}
 %\shellcmd{cp --r \examplesdir \tilde/}%
 \end{prompt}
+
 \ifgent
 You will now make a doc directory in your home dir and copy the latest version of this document to this directory. We will use this later in this tutorial.
 \begin{prompt}
@@ -250,13 +253,12 @@ and start working.
 %\shellcmd{ls -l}%
 \end{prompt}
 
-\ifgent
 Upon connecting you will see a login message containing your last login
 time stamp and a basic overview of the current cluster utilisation.
 \begin{prompt}
 Last login: Tue Jan  6 08:53:11 2015 from helios.ugent.be
 STEVIN HPC-UGent infrastructure status on Mon, 19 Oct 2015 15:00:01
-
+ 
    cluster - full - free -  part - total - running - queued
              nodes  nodes   free   nodes    jobs      jobs
 -------------------------------------------------------------------
@@ -274,7 +276,8 @@ For a full view of the current loads and queues see:
  http://hpc.ugent.be/clusterstate/
 
 \end{prompt}
-\fi
+\fi %ENDIF \ifgent
+%
 \ifbrussel
 Upon connecting you will see a login message containing your last login
 time stamp, some useful environment variable definitions and the message of the
@@ -303,7 +306,7 @@ Message of the day:
               ||--||
 
 \end{prompt}
-\fi
+\fi %ENDIF \ifbrussel
 
 \ifleuven
 Upon connecting you will see a login message containing your last login
@@ -325,11 +328,12 @@ Last login: Mon Jan 12 18:52:20 2015 from example.kuleuven.be
 *                                            *
 **********************************************
 \end{prompt}
-\fi
+\fi  % ENDIF \ifleuven
 
 \ifantwerpen
 Upon connection, you will get a welcome message containing your last login
-timestamp and some pointers to information about the system.
+timestamp and some pointers to information about the system. On Hopper, the system
+will also show you your disk quota.
 
 \begin{prompt}
 Last login: Mon Feb  2 17:58:13 2015 from mylaptop.uantwerpen.be
@@ -352,8 +356,27 @@ Questions or problems? Do not hesitate and contact us:
 Happy computing!
 
 ---------------------------------------------------------------
+
+Your quota is:
+
+                   Block Limits
+   Filesystem       used      quota      limit    grace
+   user             740M         3G       3.3G     none
+   data           3.153G        25G      27.5G     none
+   scratch        12.38M        25G      27.5G     none
+   small          20.09M        25G      27.5G     none
+
+                   File Limits
+   Filesystem      files      quota      limit    grace
+   user            14471      20000      25000     none
+   data             5183     100000     150000     none
+   scratch            59     100000     150000     none
+   small            1389     100000     110000     none
+
+---------------------------------------------------------------
+
 \end{prompt}
-\fi
+\fi  %ENDIF \ifantwerpen
 
 You can exit the connection at anytime by entering:
 
