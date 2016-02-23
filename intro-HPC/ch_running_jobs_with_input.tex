@@ -163,7 +163,7 @@ The following locations are available:
                          This directory is cluster- or site-specific: On different sites, and sometimes on different clusters on the same site, you'll get a different directory with different content. \\ \hline
 \$VSC\_SCRATCH\_SITE   & Currently the same as \$VSC\_SCRATCH, but could be used for a scratch space
                          shared across all clusters at a site in the future. See \S\ref{subsec:scratch-directory}. \\ \hline
-\$VSC\_SCRTACH\_GLOBAL & Currently the same as \$VSC\_SCRATCH, but could be used for a scratch space
+\$VSC\_SCRATCH\_GLOBAL & Currently the same as \$VSC\_SCRATCH, but could be used for a scratch space
                          shared across all clusters of the VSC in the future. See \S\ref{subsec:scratch-directory}. \\ \hline
 \ifgent
 \$VSC\_SCRATCH\_CLUSTER & The scratch filesystem closest to this cluster.\\ \hline
@@ -486,7 +486,7 @@ HOME            & 3 GB                      & 20000                  \\ \hline
 DATA            & 25 GB                     & 100000                 \\ \hline
 SCRATCH         & 25 GB                     & 100000                 \\ \hline
 \end{tabular}
-\fi
+\fi %ENDIF \ifantwerpen
 \ifgent
 \begin{tabular}{|p{0.7in}|r|r|} \hline
 \strong{Volume} & \strong{Max.\ disk space} & \strong{Max.\ \# Files} \\ \hline
@@ -494,7 +494,7 @@ HOME            & 3 GB                      & 20000                   \\ \hline
 DATA            & 25 GB                     & 100000                  \\ \hline
 SCRATCH         & 25 GB                     & 100000                  \\ \hline
 \end{tabular}
-\fi
+\fi %ENDIF \ifgent
 
 \begin{tip}
 The first action to take when you have exceeded your quota is
@@ -533,13 +533,26 @@ The ``\texttt{show\_quota}'' command has been developed to show you the
 status of your quota in a readable format:
 
 \begin{prompt}
-\shellcmd{show_quota}
+%\shellcmd{show\_quota}%
 VSC_DATA:    used 81MB (0%\%%)  quota 25600MB
 VSC_HOME:    used 33MB (1%\%%)  quota 3072MB
 VSC_SCRATCH:   used 28MB (0%\%%)  quota 25600MB
 VSC_SCRATCH_GLOBAL: used 28MB (0%\%%)  quota 25600MB
 VSC_SCRATCH_SITE:   used 28MB (0%\%%)  quota 25600MB
 \end{prompt}
+
+or on the UAntwerp clusters
+
+\begin{prompt}
+%\shellcmd{module load scripts}%
+%\shellcmd{show\_quota.py}%
+VSC_DATA:    used 81MB (0%\%%)  quota 25600MB
+VSC_HOME:    used 33MB (1%\%%)  quota 3072MB
+VSC_SCRATCH:   used 28MB (0%\%%)  quota 25600MB
+VSC_SCRATCH_GLOBAL: used 28MB (0%\%%)  quota 25600MB
+VSC_SCRATCH_SITE:   used 28MB (0%\%%)  quota 25600MB
+\end{prompt}
+
 
 With this command, you can follow up the consumption of your total disk quota
 easily, as it is expressed in percentages. Depending of on which cluster you are
