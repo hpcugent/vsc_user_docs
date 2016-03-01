@@ -38,21 +38,19 @@
 \newcommand{\headerfmt}[1]{\textsl{\textsf{#1}}}
 \newcommand{\headerfmtpage}[1]{\textsf{#1}}
 
+\fancypagestyle{vsc}{
 \fancyhf{}
-\fancyhead[L,RO]{\headerfmtpage{\thepage}}
-\fancyhead[LO]{\headerfmt{\rightmark}}
-\fancyhead[R]{\headerfmt{\leftmark}}
+\fancyhead[LE,RO]{\headerfmt{\rightmark}}
+\fancyhead[LO,RE]{\headerfmt{\leftmark}}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0pt}
+}
 
 \fancypagestyle{plain}{
 \fancyhf{}
-\fancyhead[L,RO]{\headerfmtpage{\thepage}}
-\fancyhead[LO]{\headerfmt{\rightmark}}
-\fancyhead[R]{\headerfmt{\leftmark}}
 \fancyfoot[C]{\thepage}
-\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 }
 
