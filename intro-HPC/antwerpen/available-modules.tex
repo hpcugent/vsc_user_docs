@@ -18,7 +18,7 @@ Or when you want to check whether some specific software, some compiler or some
 application (e.g., LAMMPS) is installed on the \hpc.
 
 \begin{prompt}
-%module av 2>&1 | grep -i -e "LAMMPS"%
+%\shellcmd{module av 2>\&1 | grep -i -e "LAMMPS"}%
 LAMMPS/9Dec14-intel-2015a
 LAMMPS/30Oct14-intel-2014a
 LAMMPS/5Sep14-intel-2014a
