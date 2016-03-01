@@ -130,7 +130,7 @@ to be on the safe side.
 The job can now be submitted as follows:
 \begin{prompt}
 %\shellcmd{module load worker}%
-%\shellcmd{qsub -batch weather.pbs-data data.csv}%
+%\shellcmd{wsub -batch weather.pbs -data data.csv}%
 total number of work items: 41
 %\jobid%
 \end{prompt}
@@ -312,7 +312,7 @@ total number of work items: 100
 %\jobid%
 %\shellcmd{cat all\_output.txt}%
 %\dots%
-%\shellcmd{rm -r -f ./input/ ./output/}%
+%\shellcmd{rm -r -f ./output/}%
 \end{prompt}
 
 Note that the time taken for executing the prologue and the epilogue should be
