@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper,oneside]{book}
+\documentclass[11pt,a4paper,twoside,openany]{book}
 \usepackage{import}
 \subimport{../}{style}
 \subimport{../}{macros}
@@ -19,13 +19,14 @@
 
 \pagestyle{empty}
 
-\include{title}
+\input{title}
 
 \glsaddall
 \glstoctrue
+\renewcommand*{\glsclearpage}{}
 \printglossaries
 
-\cleardoublepage
+%\cleardoublepage
 %\addcontentsline{toc}{chapter}{Index}
 \printindex
 
@@ -34,11 +35,11 @@
 
 \part{Beginner's Guide}
 
-Objective:
+\pagestyle{vsc}
 
-to learn how to use the \hpc
-
-\pagestyle{fancy}
+%Objective:
+%
+%to learn how to use the \hpc
 
 \include{ch_introduction}
 
@@ -50,7 +51,7 @@ to learn how to use the \hpc
 
 \include{ch_running_interactive_jobs}
 
-\include{ch_running_jobs_with_input}
+\include{ch_running_jobs_with_input_output_data}
 
 \include{ch_multi_core_jobs}
 
@@ -60,9 +61,9 @@ to learn how to use the \hpc
 
 \part{Advanced Guide}
 
-Objective:
-
-to assist the end-user in running their own software on the \hpc
+%Objective:
+%
+%to assist the end-user in running their own software on the \hpc
 
 \include{ch_multi_job_submission}
 
