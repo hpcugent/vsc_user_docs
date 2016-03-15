@@ -23,7 +23,19 @@ Before you can really start using the \hpc clusters, there are several things yo
   account on the VSC clusters.  The next step is to setup the connection to (one
   of) the \hpc.
 
-  In the screenshots, we show the setup for user ``\strong{\emph{vsc20167}}''
+   In the screenshots, we show the setup for user 
+\ifantwerpen
+``\strong{\emph{vsc20167}}''
+\fi
+\ifbrussel
+``\strong{\emph{vsc20167}}''
+\fi
+\ifgent
+``\strong{\emph{vsc20167}}''
+\fi
+\ifleuven
+``\strong{\emph{vsc30468}}''
+\fi
   to the \hpc cluster via the login node
   ``\strong{\emph{\loginnode}}''.
 
@@ -37,18 +49,52 @@ Before you can really start using the \hpc clusters, there are several things yo
       \hpc cluster (i.e., ``\strong{\emph{\loginnode}}'')
       you want to connect to.
 
+\ifantwerpen
       \begin{center}
       \includegraphics*[width=3.59in, height=3.45in, keepaspectratio=false]{ch2-putty-configuration}
       \end{center}
+\fi
+\ifleuven
+      \begin{center}
+      \includegraphics*[width=3.59in, height=3.45in, keepaspectratio=false]{ch2-putty-configuration-leuven}
+      \end{center}
+\fi
+\ifbrussel
+      \begin{center}
+      \includegraphics*[width=3.59in, height=3.45in, keepaspectratio=false]{ch2-putty-configuration}
+      \end{center}
+\fi
+\ifgent
+      \begin{center}
+      \includegraphics*[width=3.59in, height=3.45in, keepaspectratio=false]{ch2-putty-configuration}
+      \end{center}
+\fi
 
     \item  In the category \menu[,]{Connection,Data}, in
       the field \keys{Auto-login username}, put in
       $<$\emph{\userid}$>$, which is your VSC username that you have
       received by e-mail after your request was approved.
 
+\ifantwerpen
       \begin{center}
       \includegraphics*[width=3.11in, height=2.99in, keepaspectratio=false]{ch2-putty-configuration2}
       \end{center}
+\fi
+\ifleuven
+      \begin{center}
+      \includegraphics*[width=3.11in, height=2.99in, keepaspectratio=false]{ch2-putty-configuration2-leuven}
+      \end{center}
+\fi
+\ifbrussel
+      \begin{center}
+      \includegraphics*[width=3.11in, height=2.99in, keepaspectratio=false]{ch2-putty-configuration2}
+      \end{center}
+\fi
+\ifgent
+      \begin{center}
+      \includegraphics*[width=3.11in, height=2.99in, keepaspectratio=false]{ch2-putty-configuration2}
+      \end{center}
+\fi
 
     \item  In the category \menu[,]{Connection,SSH,Auth}, in the
       field \keys{Private key file for authentication} click on
@@ -70,16 +116,51 @@ Before you can really start using the \hpc clusters, there are several things yo
       \keys{Saved Sessions} field and press \keys{Save} to
       store the session information.
 
+\ifantwerpen
       \begin{center}
       \includegraphics*[width=3.30in, height=3.17in, keepaspectratio=false]{ch2-putty-saved-session}
       \end{center}
+\fi
+\ifleuven
+      \begin{center}
+      \includegraphics*[width=3.30in, height=3.17in, keepaspectratio=false]{ch2-putty-saved-session-leuven}
+      \end{center}
+\fi
+\ifbrussel
+      \begin{center}
+      \includegraphics*[width=3.30in, height=3.17in, keepaspectratio=false]{ch2-putty-saved-session}
+      \end{center}
+\fi
+\ifgent
+      \begin{center}
+      \includegraphics*[width=3.30in, height=3.17in, keepaspectratio=false]{ch2-putty-saved-session}
+      \end{center}
+\fi
+
 
     \item  Now pressing \keys{Open}, will open a terminal window and
       asks for you passphrase.
 
+\ifantwerpen
       \begin{center}
       \includegraphics*[width=3.94in, height=2.47in, keepaspectratio=false]{ch2-putty-enter-password}
       \end{center}
+\fi
+\ifleuven
+      \begin{center}
+      \includegraphics*[width=3.94in, height=2.47in, keepaspectratio=false]{ch2-putty-enter-password-leuven}
+      \end{center}
+\fi
+\ifbrussel
+      \begin{center}
+      \includegraphics*[width=3.94in, height=2.47in, keepaspectratio=false]{ch2-putty-enter-password}
+      \end{center}
+\fi
+\ifgent
+      \begin{center}
+      \includegraphics*[width=3.94in, height=2.47in, keepaspectratio=false]{ch2-putty-enter-password}
+      \end{center}
+\fi
 
     \item  The first time you make a connection to the login node, a Security
       Alert will appear and you will be asked to verify the authenticity of the
@@ -241,6 +322,7 @@ You will now make a doc directory in your home dir and copy the latest version o
 %\shellcmd{mkdir \tilde/docs}%
 %\shellcmd{cp --r \tutorialdir/\jobname \tilde/}%
 \end{prompt}
+\fi
 
 Go to your home directory, check your own private examples directory, \dots\
 and start working.
@@ -402,9 +484,21 @@ identifier and a region identifier.
 
 %% TODO: how to fix this on windows/putty? generally this is not an issue I believe
 \ifmacORlinux
+\ifantwerpen
 Open the .bash\_profile or the .profile on your local machine with your
+\fi
+\ifbrussel
+Open the .bash\_profile or the .profile on your local machine with your
+\fi
+\ifgent
+Open the .bash\_profile or the .profile on your local machine with your
+\fi
+\ifleuven
+Open the .bashrc or the .profile on your local machine with your
+\fi
 favourite editor and add the following lines:
 
+\ifantwerpen
 \begin{prompt}
 %\shellcmd{nano ~/.bash\_profile}%
 %\dots%
@@ -414,6 +508,47 @@ export LC_CTYPE="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 %\dots%
 \end{prompt}
+\fi
+\ifbrussel
+\begin{prompt}
+%\shellcmd{nano ~/.bash\_profile}%
+%\dots%
+export LANGUAGE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+%\dots%
+\end{prompt}
+\fi
+\ifgent
+\begin{prompt}
+%\shellcmd{nano ~/.bash\_profile}%
+%\dots%
+export LANGUAGE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+%\dots%
+\end{prompt}
+\fi
+\ifleuven
+\begin{prompt}
+%\shellcmd{nano ~/.bashrc}%
+%\dots%
+export LANGUAGE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+%\dots%
+\end{prompt}
+\fi
+
+\begin{tip}[vi]
+To start entering text in vi: move to the place you want to start entering text
+with the arrow keys and type ``i'' to switch to insert mode.  You can easily
+exit vi by entering: ``<esc>:wq''
+To exit vi without saving your changes, enter ``<esc>:q!''
+\end{tip}
 
 or alternatively (if you are not comfortable with the Linux editors), again on your local machine:
 
@@ -454,7 +589,18 @@ open a terminal window and jump in!
 
   \begin{enumerate}
   \item  Open the program
+\ifantwerpen
   \item  Fill in the necessary fields under \keys{Session}
+\fi
+\ifgent
+  \item  Fill in the necessary fields under \keys{Session}
+\fi
+\ifbrussel
+  \item  Fill in the necessary fields under \keys{Session}
+\fi
+\ifleuven
+  \item  Fill in the necessary fields under \keys{New Site}
+\fi
   \begin{enumerate}
   \item  Press \keys{New}.
   \item  Enter ``\emph{\loginnode}'' in the \keys{Host name} field.
@@ -466,24 +612,66 @@ open a terminal window and jump in!
   \end{enumerate}
 
   \begin{center}
+\ifantwerpen
   \includegraphics*[width=3.42in, height=3.04in, keepaspectratio=false]{img0214}
+\fi
+\ifbrussel
+  \includegraphics*[width=3.42in, height=3.04in, keepaspectratio=false]{img0214}
+\fi
+\ifgent
+  \includegraphics*[width=3.42in, height=3.04in, keepaspectratio=false]{img0214}
+\fi
+\ifleuven
+  \includegraphics*[width=3.42in, height=3.04in, keepaspectratio=false]{img0214-leuven}
+\fi
   \end{center}
 
   \begin{enumerate}
-  \item  By pressing on the \keys{Save} button, you can save the session under
-         \keys{Stored sessions} for future access.
+  \item  By pressing on the \keys{Save} button, you can save the session 
+\ifantwerpen
+       under \keys{Stored sessions} 
+\fi
+\ifgent
+       under \keys{Stored sessions} 
+\fi
+\ifbrussel
+       under \keys{Stored sessions} 
+\fi
+for future access.
   \item  Finally, when clicking on \keys{Login}, you will be asked for your key passphrase.
   \end{enumerate}
 
   \begin{center}
+\ifantwerpen
   \includegraphics*[width=3.14in, height=2.47in, keepaspectratio=false]{img0215}
+\fi
+\ifbrussel
+  \includegraphics*[width=3.14in, height=2.47in, keepaspectratio=false]{img0215}
+\fi
+\ifgent
+  \includegraphics*[width=3.14in, height=2.47in, keepaspectratio=false]{img0215}
+\fi
+\ifleuven
+  \includegraphics*[width=3.14in, height=2.47in, keepaspectratio=false]{img0215-leuven}
+\fi
   \end{center}
 
   The first time you make the connection, you will be asked to ``Continue
   connecting and add host key to the cache''; select \keys{Yes}.
 
   \begin{center}
+\ifantwerpen
   \includegraphics*[width=5.74in, height=2.81in, keepaspectratio=false]{img0216}
+\fi
+\ifbrussel
+  \includegraphics*[width=5.74in, height=2.81in, keepaspectratio=false]{img0216}
+\fi
+\ifgent
+  \includegraphics*[width=5.74in, height=2.81in, keepaspectratio=false]{img0216}
+\fi
+\ifleuven
+  \includegraphics*[width=5.74in, height=2.81in, keepaspectratio=false]{img0216-leuven}
+\fi
   \end{center}
 
   Now, try out whether you can transfer an arbitrary file from your local
@@ -713,7 +901,19 @@ compilers, MPI library and math libraries. The other one, the ``foss'' toolchain
 consists of Open Source components: the GNU compilers, OpenMPI, OpenBLAS and
 the standard LAPACK and ScaLAPACK libraries for the linear algebra operations
 and the FFTW library for FFT. The toolchains are refreshed twice a year,
-which is reflected in their name. E.g., ``foss-2014b'' is the second version
+which is reflected in their name. 
+\ifantwerpen
+E.g., ``foss-2014b'' is the second version
+\fi
+\ifgent
+E.g., ``foss-2014b'' is the second version
+\fi
+\ifbrussel
+E.g., ``foss-2014b'' is the second version
+\fi
+\ifleuven
+E.g., ``foss-2014a'' is the first version
+\fi
 of the ``foss'' toolchain in 2014.
 
 The toolchains are then used to compile a lot of the software installed on
@@ -731,27 +931,75 @@ take advantage of them.
 
 A module is loaded using the following command:
 
+\ifantwerpen
 \begin{prompt}
 %\shellcmd{module load MATLAB}%
 \end{prompt}
+\fi
+\ifbrussel
+\begin{prompt}
+%\shellcmd{module load MATLAB}%
+\end{prompt}
+\fi
+\ifgent
+\begin{prompt}
+%\shellcmd{module load MATLAB}%
+\end{prompt}
+\fi
+\ifleuven
+\begin{prompt}
+%\shellcmd{module load matlab}%
+\end{prompt}
+\fi
 
 This will load the most recent version of MATLAB.
 
-For some packages, e.g., OpenMPI, multiple versions are installed; the load
+For some packages, e.g., 
+\ifantwerpen
+OpenMPI
+\fi
+\ifbrussel
+OpenMPI
+\fi
+\ifgent
+OpenMPI
+\fi
+\ifleuven
+Python
+\fi
+, multiple versions are installed; the load
 command will automatically choose the most recent version (i.e., the
 lexicographical last after the ``/'') or the default version (as set by the
 system administrators). However, the user can (and probably should, to avoid
 surprises when never versions are installed) specify a particular version,
 e.g.,
 
+\ifantwerpen
 \begin{prompt}
 %\shellcmd{module load Python/2.7.6-intel-2014b}%
 \end{prompt}
+\fi
+\ifbrussel
+\begin{prompt}
+%\shellcmd{module load Python/2.7.6-intel-2014b}%
+\end{prompt}
+\fi
+\ifgent
+\begin{prompt}
+%\shellcmd{module load Python/2.7.6-intel-2014b}%
+\end{prompt}
+\fi
+\ifleuven
+\begin{prompt}
+%\shellcmd{module load Python/2.7.6-intel-2014a}%
+\end{prompt}
+\fi
 
 Obviously, you need to keep track of the modules that are currently
 loaded. If you executed the two load commands stated above, you will get the
 following:
 
+\ifantwerpen
 \begin{prompt}
 %\shellcmd{module list}%
 Currently Loaded Modulefiles:
@@ -763,6 +1011,46 @@ Currently Loaded Modulefiles:
   6) impi/4.1.3.049-GCC-4.8.3              13) Python/2.7.6-intel-2014b
   7) imkl/11.1.2.144-2013.5.192-GCC-4.8.3
 \end{prompt}
+\fi
+\ifleuven
+\begin{prompt}
+%\shellcmd{module list}%
+Currently Loaded Modulefiles:
+  1) icc/2013.5.192                7) zlib/1.2.8-intel-2014a
+  2) ifort/2013.5.192              8) ncurses/5.9-intel-2014a
+  3) impi/4.1.3.045                9) libreadline/6.3-intel-2014a
+  4) imkl/11.1.1.106              10) Tcl/8.6.1-intel-2014a
+  5) intel/2014a                  11) SQLite/3.8.4.1-intel-2014a
+  6) bzip2/1.0.6-intel-2014a      12) Python/2.7.6-intel-2014a
+\end{prompt}
+\fi
+\ifgent
+\begin{prompt}
+%\shellcmd{module list}%
+Currently Loaded Modulefiles:
+  1) cluster/delcatty(default)              8) intel/2014b
+  2) MATLAB/2013b                           9) bzip2/1.0.6-intel-2014b
+  3) GCC/4.8.3                             10) zlib/1.2.7-intel-2014b
+  4) icc/2013.5.192-GCC-4.8.3              11) ncurses/5.9-intel-2014b
+  5) ifort/2013.5.192-GCC-4.8.3            12) libreadline/6.2-intel-2014b
+  6) impi/4.1.3.049-GCC-4.8.3              13) Python/2.7.6-intel-2014b
+  7) imkl/11.1.2.144-2013.5.192-GCC-4.8.3
+\end{prompt}
+\fi
+\ifbrussel
+\begin{prompt}
+%\shellcmd{module list}%
+Currently Loaded Modulefiles:
+  1) cluster/delcatty(default)              8) intel/2014b
+  2) MATLAB/2013b                           9) bzip2/1.0.6-intel-2014b
+  3) GCC/4.8.3                             10) zlib/1.2.7-intel-2014b
+  4) icc/2013.5.192-GCC-4.8.3              11) ncurses/5.9-intel-2014b
+  5) ifort/2013.5.192-GCC-4.8.3            12) libreadline/6.2-intel-2014b
+  6) impi/4.1.3.049-GCC-4.8.3              13) Python/2.7.6-intel-2014b
+  7) imkl/11.1.2.144-2013.5.192-GCC-4.8.3
+\end{prompt}
+\fi
+
 
 It is important to note at this point that other modules (e.g., intel/2014a)
 are also listed, although the user did not explicitly load them. This is
@@ -783,6 +1071,7 @@ unload the packages one by one. One can however unload automatically loaded
 modules manually, to debug some problem. When the ``Python'' module is unloaded,
 only the following modules remain:
 
+\ifantwerpen
 \begin{prompt}
 %\shellcmd{module unload Python}%
 %\shellcmd{module list}%
@@ -793,6 +1082,44 @@ only the following modules remain:
   5) ifort/2013.5.192-GCC-4.8.3            11) ncurses/5.9-intel-2014b
   6) impi/4.1.3.049-GCC-4.8.3              12) libreadline/6.2-intel-2014b
 \end{prompt}
+\fi
+\ifleuven
+\begin{prompt}
+%\shellcmd{module unload Python}%
+%\shellcmd{module list}%
+  1) icc/2013.5.192                7) zlib/1.2.8-intel-2014a
+  2) ifort/2013.5.192              8) ncurses/5.9-intel-2014a
+  3) impi/4.1.3.045                9) libreadline/6.3-intel-2014a
+  4) imkl/11.1.1.106              10) Tcl/8.6.1-intel-2014a
+  5) intel/2014a                  11) SQLite/3.8.4.1-intel-2014a
+  6) bzip2/1.0.6-intel-2014a      
+\end{prompt}
+\fi
+\ifgent
+\begin{prompt}
+%\shellcmd{module unload Python}%
+%\shellcmd{module list}%
+  1) cluster/delcatty(default)              7) imkl/11.1.2.144-2013.5.192-GCC-4.8.3
+  2) MATLAB/2013b                           8) intel/2014b
+  3) GCC/4.8.3                              9) bzip2/1.0.6-intel-2014b
+  4) icc/2013.5.192-GCC-4.8.3              10) zlib/1.2.7-intel-2014b
+  5) ifort/2013.5.192-GCC-4.8.3            11) ncurses/5.9-intel-2014b
+  6) impi/4.1.3.049-GCC-4.8.3              12) libreadline/6.2-intel-2014b
+\end{prompt}
+\fi
+\ifbrussel
+\begin{prompt}
+%\shellcmd{module unload Python}%
+%\shellcmd{module list}%
+  1) cluster/delcatty(default)              7) imkl/11.1.2.144-2013.5.192-GCC-4.8.3
+  2) MATLAB/2013b                           8) intel/2014b
+  3) GCC/4.8.3                              9) bzip2/1.0.6-intel-2014b
+  4) icc/2013.5.192-GCC-4.8.3              10) zlib/1.2.7-intel-2014b
+  5) ifort/2013.5.192-GCC-4.8.3            11) ncurses/5.9-intel-2014b
+  6) impi/4.1.3.049-GCC-4.8.3              12) libreadline/6.2-intel-2014b
+\end{prompt}
+\fi
+
 
 Notice that the version was not specified: the module system is sufficiently
 clever to figure out what the user intends. However, checking the list of
@@ -820,9 +1147,26 @@ applicable to that particular system.
 Modules need not be loaded one by one; the two ``load'' commands can be
 combined as follows:
 
+\ifantwerpen
 \begin{prompt}
 %\shellcmd{module load MATLAB Python/2.7.9-intel-2015a}%
 \end{prompt}
+\fi
+\ifbrussel
+\begin{prompt}
+%\shellcmd{module load MATLAB Python/2.7.9-intel-2015a}%
+\end{prompt}
+\fi
+\ifgent
+\begin{prompt}
+%\shellcmd{module load MATLAB Python/2.7.9-intel-2015a}%
+\end{prompt}
+\fi
+\ifleuven
+\begin{prompt}
+%\shellcmd{module load matlab Python/2.7.6-foss-2014a}%
+\end{prompt}
+\fi
 
 This will load the two modules as well as their dependencies.
 
@@ -873,6 +1217,7 @@ Everything works fine, up to the point where a new version of GSL is installed,
 latter version, rather than the intended one, which may lead to unexpected
 problems.
 
+\ifantwerpen
 Lets now generate a version conflict with the ``ABAQUS'' module, and see what
 is happening.
 
@@ -887,6 +1232,59 @@ ABAQUS/6.13.5-linux-x86_64(12):ERROR:150: Module 'ABAQUS/6.13.5-linux-x86_64' co
 ABAQUS/6.13.5-linux-x86_64(12):ERROR:102: Tcl command execution failed: conflict ABAQUS
 %\shellcmd{module swap ABAQUS/6.13.5-linux-x86\_64}%
 \end{prompt}
+\fi
+\ifgent
+Lets now generate a version conflict with the ``ABAQUS'' module, and see what
+is happening.
+
+\begin{prompt}
+%\shellcmd{module av ABAQUS}%
+ABAQUS/6.12.1-linux-x86_64
+ABAQUS/6.13.5-linux-x86_64
+ABAQUS/6.14.1-linux-x86_64
+%\shellcmd{module load ABAQUS/6.12.1-linux-x86\_64}%
+%\shellcmd{module load ABAQUS/6.13.5-linux-x86\_64}%
+ABAQUS/6.13.5-linux-x86_64(12):ERROR:150: Module 'ABAQUS/6.13.5-linux-x86_64' conflicts with the currently loaded module(s) 'ABAQUS/6.12.1-linux-x86_64'
+ABAQUS/6.13.5-linux-x86_64(12):ERROR:102: Tcl command execution failed: conflict ABAQUS
+%\shellcmd{module swap ABAQUS/6.13.5-linux-x86\_64}%
+\end{prompt}
+\fi
+\ifbrussel
+Lets now generate a version conflict with the ``ABAQUS'' module, and see what
+is happening.
+
+\begin{prompt}
+%\shellcmd{module av ABAQUS}%
+ABAQUS/6.12.1-linux-x86_64
+ABAQUS/6.13.5-linux-x86_64
+ABAQUS/6.14.1-linux-x86_64
+%\shellcmd{module load ABAQUS/6.12.1-linux-x86\_64}%
+%\shellcmd{module load ABAQUS/6.13.5-linux-x86\_64}%
+ABAQUS/6.13.5-linux-x86_64(12):ERROR:150: Module 'ABAQUS/6.13.5-linux-x86_64' conflicts with the currently loaded module(s) 'ABAQUS/6.12.1-linux-x86_64'
+ABAQUS/6.13.5-linux-x86_64(12):ERROR:102: Tcl command execution failed: conflict ABAQUS
+%\shellcmd{module swap ABAQUS/6.13.5-linux-x86\_64}%
+\end{prompt}
+\fi
+\ifleuven
+\begin{prompt}
+Lets now generate a version conflict with the ``R'' module, and see what
+is happening.
+
+%\shellcmd{module av R/}%
+R/2.15.3-foss-2014a-default  R/3.0.2-intel-2014a-x11
+R/2.15.3-foss-2014a-st       R/3.1.1-foss-2014a-default
+R/2.15.3-intel-2014a-default R/3.1.1-intel-2014a-default
+R/3.0.2-foss-2014a-default   R/3.1.2-foss-2014a-x11
+R/3.0.2-foss-2014a-x11       R/3.1.2-intel-2014a-x11-tcl
+R/3.0.2-intel-2014a-bare     R/3.2.1-foss-2014a-x11-tcl
+R/3.0.2-intel-2014a-default
+%\shellcmd{module load R/3.0.2-foss-2014a-default}%
+%\shellcmd{module load  R/3.2.1-foss-2014a-x11-tcl}%
+R/3.2.1-foss-2014a-x11-tcl(12):ERROR:150: Module 'R/3.2.1-foss-2014a-x11-tcl' conflicts with the currently loaded module(s) 'R/3.0.2-foss-2014a-default'
+R/3.2.1-foss-2014a-x11-tcl(12):ERROR:102: Tcl command execution failed: conflict    R
+%\shellcmd{module swap R/3.2.1-foss-2014a-x11-tcl}%
+\end{prompt}
+\fi
 
 Note: A ``module swap'' command combines the appropriate ``module unload''
 and ``module load'' commands.
@@ -897,6 +1295,7 @@ In order to know more about a certain package, and to know what environment
 variables will be changed by a certain module, try:
 
 % TODO: this probably needs to be site-specific, or not shown as it seems a bit advanced and out of place
+\ifantwerpen
 \begin{prompt}
 %\shellcmd{module show ABAQUS}%
 -------------------------------------------------------------------
@@ -911,6 +1310,57 @@ setenv       EBDEVELABAQUS /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-lin
 prepend-path PATH /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/
 -------------------------------------------------------------------
 \end{prompt}
+\fi
+\ifgent
+\begin{prompt}
+%\shellcmd{module show ABAQUS}%
+-------------------------------------------------------------------
+/apps/gent/SL6/sandybridge/modules/all/ABAQUS/6.14.1-linux-x86_64:
+
+module-whatis    Description: Finite Element Analysis software for modeling, visualisation and best-in-class implicit and explicit dynamics FEA. - Homepage: http://www.simulia.com/products/abaqus_fea.html
+conflict     ABAQUS
+prepend-path PATH /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/Commands
+setenv       EBROOTABAQUS /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64
+setenv       EBVERSIONABAQUS 6.14.1-linux-x86_64
+setenv       EBDEVELABAQUS /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/easybuildlog/ABAQUS-6.14.1-linux-x86_64-easybuild-devel
+prepend-path PATH /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/
+-------------------------------------------------------------------
+\end{prompt}
+\fi
+\ifbrussel
+\begin{prompt}
+%\shellcmd{module show ABAQUS}%
+-------------------------------------------------------------------
+/apps/gent/SL6/sandybridge/modules/all/ABAQUS/6.14.1-linux-x86_64:
+
+module-whatis    Description: Finite Element Analysis software for modeling, visualisation and best-in-class implicit and explicit dynamics FEA. - Homepage: http://www.simulia.com/products/abaqus_fea.html
+conflict     ABAQUS
+prepend-path PATH /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/Commands
+setenv       EBROOTABAQUS /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64
+setenv       EBVERSIONABAQUS 6.14.1-linux-x86_64
+setenv       EBDEVELABAQUS /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/easybuildlog/ABAQUS-6.14.1-linux-x86_64-easybuild-devel
+prepend-path PATH /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/
+-------------------------------------------------------------------
+\end{prompt}
+\fi
+\ifleuven
+\begin{prompt}
+%\shellcmd{module show R}%
+-------------------------------------------------------------------
+/apps/leuven/thinking/2014a/modules/all/R/3.2.1-foss-2014a-x11-tcl:
+
+module-whatis    Description: R is a free software environment for statistical computing and graphics. - Homepage: http://www.r-project.org/
+conflict         R
+prepend-path     LD_LIBRARY_PATH /apps/leuven/thinking/2014a/software/R/3.2.1-foss-2014a-x11-tcl/lib64
+prepend-path     MANPATH /apps/leuven/thinking/2014a/software/R/3.2.1-foss-2014a-x11-tcl/share/man
+prepend-path     PATH /apps/leuven/thinking/2014a/software/R/3.2.1-foss-2014a-x11-tcl/bin
+setenv           EBROOTR /apps/leuven/thinking/2014a/software/R/3.2.1-foss-2014a-x11-tcl
+setenv           EBVERSIONR 3.2.1
+setenv           EBDEVELR /apps/leuven/thinking/2014a/software/R/3.2.1-foss-2014a-x11-tcl/easybuild/R-3.2.1-foss-2014a-x11-tcl-easybuild-devel
+-------------------------------------------------------------------
+\end{prompt}
+\fi
+
 
 To get a list of all possible commands, type:
 
@@ -920,9 +1370,41 @@ To get a list of all possible commands, type:
 
 Or to get more information about one specific module package:
 
+\ifantwerpen
 \begin{prompt}
 %\shellcmd{module help ABAQUS}%
 ----------- Module Specific Help for 'ABAQUS/6.14.1-linux-x86_64' ---------------------------
 
    Finite Element Analysis software for modeling, visualisation and best-in-class implicit and explicit dynamics FEA. - Homepage: http://www.simulia.com/products/abaqus_fea.html
 \end{prompt}
+\fi
+\ifbrussel
+\begin{prompt}
+%\shellcmd{module help ABAQUS}%
+----------- Module Specific Help for 'ABAQUS/6.14.1-linux-x86_64' ---------------------------
+
+   Finite Element Analysis software for modeling, visualisation and best-in-class implicit and explicit dynamics FEA. - Homepage: http://www.simulia.com/products/abaqus_fea.html
+\end{prompt}
+\fi
+\ifgent
+\begin{prompt}
+%\shellcmd{module help ABAQUS}%
+----------- Module Specific Help for 'ABAQUS/6.14.1-linux-x86_64' ---------------------------
+
+   Finite Element Analysis software for modeling, visualisation and best-in-class implicit and explicit dynamics FEA. - Homepage: http://www.simulia.com/products/abaqus_fea.html
+\end{prompt}
+\fi
+\ifleuven
+\begin{prompt}
+%\shellcmd{module help R}%
+----------- Module Specific Help for 'R/3.2.1-foss-2014a-x11-tcl' ---------------------------
+
+   R is a free software environment for statistical computing and graphics. - Homepage: http://www.r-project.org/
+\end{prompt}
+\fi
+
+
+
+
+
+
