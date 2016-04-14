@@ -1,0 +1,130 @@
+\pagestyle{empty}
+
+\begin{center}
+
+\includegraphics*[width=8truecm]{logo_vsc}
+
+\vspace*{1.5\baselineskip}
+
+\Huge \strong{Linux Tutorial} \\
+\LARGE Version 1.1
+
+\ifwindows
+\LARGE For Windows Users
+\fi
+\ifmac
+\LARGE For Mac OS X Users
+\fi
+\iflinux
+\LARGE For Linux Users
+\fi
+
+\vspace*{.75\baselineskip}
+\ifantwerpen
+\includegraphics*[width=7truecm]{logo_ua}
+\fi
+
+\vspace*{0.75\baselineskip}
+
+
+\normalsize\strong{Authors:}
+
+Kenneth Hoste (UGent), Ewan Higgs (UGent)
+
+\vspace*{.5\baselineskip}
+
+\vspace*{.5\baselineskip}
+
+Acknowledgement: VSCentrum.be
+
+\vspace*{\baselineskip}
+
+\begin{tabular}{ >{\centering\arraybackslash}m{0.25\textwidth}  >{\centering\arraybackslash}m{0.05\textwidth}  >{\centering\arraybackslash}m{0.20\textwidth}  >{\centering\arraybackslash}m{0.2\textwidth}} \\
+\includegraphics*[width=0.2\textwidth, height=0.7in, keepaspectratio=true]{logo_auha} & \multicolumn{2}{ >{\centering\arraybackslash}m{.2\textwidth} }{\includegraphics*[width=0.2\textwidth, height=0.7in,, keepaspectratio=true]{logo_akuleuven}} & \includegraphics*[width=0.2\textwidth, height=0.7in,, keepaspectratio=true]{logo_auhl} \\
+\multicolumn{2}{ >{\centering\arraybackslash}m{.32\textwidth} }{\includegraphics*[width=0.3\textwidth, height=0.7in, keepaspectratio=true]{logo_augent}} & \multicolumn{2}{ >{\centering\arraybackslash}m{.38\textwidth} }{\includegraphics*[width=0.3\textwidth, height=0.7in, keepaspectratio=false]{logo_uab}} \\
+\end{tabular}
+\end{center}
+
+
+\strong{Audience:}
+This document is a hands-on guide for using the Linux command line in the
+context of the \string{\university} \hpc infrastructure. The
+command line (sometimes called 'shell') can seems daunting at first, but with a
+little understanding can be very easy to use. Everything you do starts at the
+prompt. Here you have the liberty to type in any commands you want. Soon, you
+will be able to move past the limited point and click interface and express
+interesting ideas to the computer using the shell.
+
+Gaining an understanding of the fundamentals of Linux will help accelerate your
+research using the HPC infrastructure.  You will learn about commands, managing
+files, and some scripting basics.
+
+\strong{\underbar{Notification:}}
+
+In this tutorial specific commands are separated from the accompanying text:
+
+\begin{prompt}
+%\shellcmd{commands}%
+\end{prompt}
+
+These should be entered by the reader at a command line in a Terminal on the \hpcInfra. They appear in all exercises preceded by a \$ and printed in \textbf{bold}. You'll find those actions in a grey frame.
+
+\keys{Button} are menus, buttons or drop down boxes to be pressed or selected.
+
+``Directory'' is the notation for directories (called ``folders'' in
+Windows terminology) or specific files. (e.g., ``\homedir'')
+
+``Text'' Is the notation for text to be entered.
+
+\begin{tip}
+A ``Tip'' paragraph is used for remarks or tips.
+\end{tip}
+
+They can also be downloaded from the VSC website at
+\url{https://www.vscentrum.be}.
+Apart from this \hpc Tutorial, the documentation on the VSC website
+will serve as a reference for all the
+operations.
+
+
+\begin{tip}
+The users are advised to get self-organised. There are
+only limited resources available at the \hpc, which are best effort based.
+The \hpc cannot give support for code fixing, the user applications and own
+developed software remain solely the responsibility of the end-user.
+\end{tip}
+
+More documentation can be found at:
+
+\begin{enumerate}
+  \item  VSC documentation: \url{https://www.vscentrum.be/en/user-portal}
+  \ifantwerpen
+    \item CalcUA Core Facility web pages: \url{https://www.uantwerpen.be/hpc}
+  \fi
+  \ifbrussel
+    \item \hpcname documentation: \url{http://cc.ulb.ac.be/hpc}
+  \fi
+  \ifgent
+    \item \hpcname documentation: \url{http://hpc.ugent.be/userwiki}
+  \fi
+  \item  External documentation (TORQUE, Moab): \url{http://docs.adaptivecomputing.com}
+\end{enumerate}
+
+This tutorial \strong{(\version)} is intended for users working on \strong{\OS} who want to connect to the HPC of the \strong{\university}.
+
+This tutorial is available in a Windows, Mac or Linux version.
+
+This tutorial is available for UAntwerpen, UGent, KULeuven, UHasselt and VUB users.
+
+Request your appropriate version at \hpcinfo.
+
+\strong{\underbar{Contact Information:}}
+
+We welcome your feedback, comments and suggestions for improving the \hpc
+Tutorial  (contact: \hpcinfo).
+
+For all technical questions, please contact the \hpc staff:
+
+\inputsite{contact-information}
+
+

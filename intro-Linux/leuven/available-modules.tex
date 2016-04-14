@@ -1,0 +1,59 @@
+\begin{prompt}
+%\shellcmd{module av}%
+------------------- /apps/leuven/thinking/2014a/modules/all --------------------
+Abaqus/6.12-2
+Abaqus/6.13-3
+Abaqus/6.14-1
+accounting
+allinea-ddt/4.2
+annovar/2013Jun21
+ANSYS/13.0
+ANSYS/14.5
+ANSYS/15.0
+ANSYS/17.0
+%\dots% 
+\end{prompt}
+
+``module av'' is an abbreviation for ``module available''.
+
+When you want to switch to the more recent versions of the compilers you can check the software:
+
+\begin{prompt}
+%\shellcmd{source switch\_to\_2015a; module av 2>\&1 | more}%
+------------------- /apps/leuven/thinking/2015a/modules/all --------------------
+ABySS/1.3.7-intel-2015a-Python-2.7.9
+ABySS/1.9.0-intel-2015a-Python-2.7.9
+accounting
+allinea-forge/5.0.1
+allinea-forge/5.1
+ANSYS/16.2
+ant/1.9.4-Java-1.8.0_31
+APBS/1.4.1-foss-2015a
+APBS/1.4.1-intel-2015a
+APBS/1.4-linux-static-x86_64
+--More--
+\end{prompt}
+
+Additionally, different software is installed on the shared memory cluster, GPU cluster and Haswell nodes:
+
+\begin{prompt}
+%\shellcmd{module av}%
+%\dots% 
+-------------------------- /apps/leuven/etc/modules/ ---------------------------
+cerebro/2014a   K20Xm/2014a     M2070/2014a     thinking/2014a
+ictstest/2014a  K40c/2014a      phi/2014a       thinking2/2014a
+%\end{prompt}
+
+When you want to check whether some specific software, some compiler or some
+application (e.g., worker) is installed on the \hpc.
+
+\begin{prompt}
+%module av 2>&1 | grep -i -e "worker"%
+worker/1.4.2-foss-2014a
+worker/1.5.0-intel-2014a
+worker/1.5.1-intel-2014a
+worker/1.5.2-intel-2014a
+worker/1.5.3-intel-2014a
+\end{prompt}
+
+As you are not aware of the capitals letters in the module name, we looked for a case-insensitive name with the ``-i'' option.
