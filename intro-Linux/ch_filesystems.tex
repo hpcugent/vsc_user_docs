@@ -1,38 +1,48 @@
 \chapter{Filesystems}
 
-In this section, we briefly explain which different filesystems are available on the HPC infrastructure.
+In this section, we briefly explain which different filesystems are available on
+the HPC infrastructure.
 
-See \url{http://hpc.ugent.be/userwiki/index.php/Tips:Filesystem_Information and http://hpc.ugent.be/userwiki/index.php/User:StorageDetails} for more information.
+See \url{http://hpc.ugent.be/userwiki/index.php/Tips:Filesystem_Information} and
+\url{http://hpc.ugent.be/userwiki/index.php/User:StorageDetails} for more
+information.
 
 \subsubsection{Home}
 
-Your own personal home directory: ``$VSC_HOME''
+Your own personal home directory: ``$VSC\_HOME''
 
-You end up here when you log in (and when jobs start). This is meant for small configuration files, limited space available.
+You end up here when you log in (and when jobs start). This is meant for small
+configuration files, limited space available.
 
 \subsubsection{Data}
 
-Long-term personal storage (for large files, volumes): ``$VSC_DATA''
+Long-term personal storage (for large files, volumes): ``$VSC\_DATA''
 
 \subsubsection{Scratch}
 
-Personal scratch (fast, but to be considered volatile) storage: ``$VSC_SCRATCH''.
-
-``$VSC_SCRATCH'' is just a short-hand for the default scratch storage (``$VSC_SCRATCH_DELCATTY'').
+Personal scratch (fast, but to be considered volatile) storage:
+``$VSC\_SCRATCH''. ``$VSC\_SCRATCH'' is just a short\-hand for the default
+scratch storage (``$VSC\_SCRATCH\_DELCATTY'').
 
 \subsubsection{Local}
 
-When running jobs, you also have access to the local storage of a node (which you cannot access when logging in, as it is node-dependent).
+When running jobs, you also have access to the local storage of a node (which
+you cannot access when logging in, as it is node-dependent).
 
-You access it through ``$VSC_SCRATCH_NODE''.
+You access it through ``$VSC\_SCRATCH\_NODE''.
 
-Inside jobs, a unique directory located in ``$VSC_SCRATCH_NODE'' is made available via ``$TMPDIR''.
+Inside jobs, a unique directory located in ``$VSC\_SCRATCH\_NODE'' is made
+available via ``$TMPDIR''.
 
 \subsubsection{VO storage}
 
-If you're member of a (non-default) virtual organisation (VO), see http://hpc.ugent.be/userwiki/index.php/User:VSCVos, you have access to additional directories (with more quota) on the data and scratch filesystems, which you can share with other members in the VO.
+If you're member of a (non-default) virtual organisation (VO), see
+http://hpc.ugent.be/userwiki/index.php/User:VSCVos, you have access to
+additional directories (with more quota) on the data and scratch filesystems,
+which you can share with other members in the VO.
 
-See http://hpc.ugent.be/userwiki/index.php/User:StorageDetails for more information.
+See http://hpc.ugent.be/userwiki/index.php/User:StorageDetails for more
+information.
 
 \subsection{Quota}
 
@@ -41,677 +51,25 @@ Space is limited on the cluster's storage, you can check your quota with the
 
 \begin{prompt}
 %\shellcmd{show\_quota}%
-VSC\_HOME: used 1.89 GiB (66%) quota 2.85 GiB (3 GiB hard limit)
-VSC\_DATA: used 0 B (0%) quota 23.8 GiB (25 GiB hard limit)
-VSC\_SCRATCH\_DELCATTY: used 0 B (0%) quota 23.8 GiB (25 GiB hard limit)
+VSC_HOME: used 1.89 GiB (66%\%%) quota 2.85 GiB (3 GiB hard limit)  
+VSC_DATA: used 0 B (0%\%%) quota 23.8 GiB (25 GiB hard limit)  
+VSC_SCRATCH_DELCATTY: used 0 B (0%\%%) quota 23.8 GiB (25 GiB hard limit)  
 \end{prompt}
 
-Quota for personal directories is limited to 3GiB (home) and 25GiB (data & scratch); for VO directories, it depends on the particular VO.
+Quota for personal directories is limited to 3GiB (home) and 25GiB (data &
+scratch); for VO directories, it depends on the particular VO.
 
-To figure out where you're quota is being spent, the ``du'' command can come in useful:
+To figure out where you're quota is being spent, the ``du'' command can come in
+useful:
 
 \begin{prompt}
 %\shellcmd{du -sh test}%
 59M   test
 \end{prompt}
 
-Note: running ``du'' can take a while in case you have a lot of files and directories; use it with caution!
+Note: running ``du'' can take a while in case you have a lot of files and
+directories; use it with caution!
 
 \link{Tips:Editing|Editing / Copying files from and to the cluster}
 
-\chapter{Uploading/downloading/editing files}
-
-\subsection{Uploading/downloading files}
-
-Detailed information about uploading/downloading files with ``scp'' (using an OS X or Linux client) or WinSCP (Windows client), see http://hpc.ugent.be/userwiki/index.php/User:VscCopy.
-
-After copying files it is advised to run 
-
-\begin{prompt}
-  %\shellcmd{dos2unix filename}
-\end{prompt}
-
-as this will fix any problems with windows / unix conversion.
-
-\section{Symlinks for data/scratch}
-
-As we end up in the home directory when connecting, it would be convenient if we could access our data and vo storage. To facilitate this we shall create symlinks to them in our home directory.
-
-\begin{prompt}
-%\shellcmd{cd $$HOME}%
-%\shellcmd{ln -s $$VSC\_SCRATCH scratch}%
-%\shellcmd{ln -s $$VSC\_DATA data}%
-%\shellcmd{ls -l scratch data}%
-%\shellcmd{ls -l scratch data}%
-lrwxrwxrwx 1 vsc40000 vsc40000 31 Mar 27  2009 data -> /user/data/gent/vsc400/vsc40000
-lrwxrwxrwx 1 vsc40000 vsc40000 34 Jun  5  2012 scratch -> /user/scratch/gent/vsc400/vsc40000
-\end{prompt}
-
-this will create 4 directories pointing to the respective storages
-
-\section{Editing: ``nano''}
-
-Nano is the simplest editor available on Linux. To open Nano, just type ``nano</nano>. To edit a file, you use ``nano the_file_to_edit.txt''. You will be presented with the contents of the file and a menu at the bottom with commands like ``^O Write Out''. The ``^'' is the Control key. So ``^O'' means ``Ctrl-O''. The main commands are:
-
-\begin{enumerate}
-\item Open ("Read"): ``^R''
-\item Save ("Write Out"): ``^O''
-\item Exit: ``^X''
-\end{enumerate}
-
-More advanced editors (beyond the scope of this page) are ``vim'' and ``emacs''.
-
-\chapter{Modules}
-
-Software is provided through so-called environment modules.
-
-The most commonly used commands are:
-
-\begin{enumerate}
- \item ``module avail'': show ''all'' available modules
- \item ``module avail <software name>'': show available modules for a specific software name
- \item ``module list'': show list of loaded modules
- \item ``module load <module name>'': load a particular module
-\end{enumerate}
-
-More information is available at http://hpc.ugent.be/userwiki/index.php/User:VscModules .
-
-\chapter{Using the clusters}
-
-The use the clusters beyond the login nodes which have limited resources, you should create job scripts and submit them to the clusters.
-
-The basic commands are:
-
-\begin{enumerate}
- \item``qsub <script>'': submit a job script
- \item``qstat'': check on queued/running jobs
- \item``qdel'': delete a queued/running job
- \item``module swap cluster/<name>'': prepare environment for quering/submitting to a particular cluster
-\end{enumerate}
-For detailed information is available at \url{http://hpc.ugent.be/userwiki/index.php/User:VscClusters}, \url{http://hpc.ugent.be/userwiki/index.php/User:VscJobs}, \url{http://hpc.ugent.be/userwiki/index.php/User:VscScripts}.
-
-\chapter{Beyond the basics}
-
-Now that you've seen some of the more basic commands, let's take a look at some of the deeper concepts and commands. 
-
-\section{Input/output}
-
-To redirect output to files, you can use the redirection operators: ``>'', ``>>'', ``&>'', and ``<''. 
-
-First, it's important to make a distinction between two different output channels:
-
-\begin{enumerate}
- \item ``stdout'': standard output channel, for regular output
- \item ``stderr'': standard error channel, for errors & warnings
-\end{enumerate}
-
-\subsection{Redirecting ``stdout''}
-
-``>'' writes the (stdout) output of a command to a file and ''overwrites'' whatever was in the file before.
-
-\begin{prompt}
-    %\shellcmd{ echo hello > somefile}%
-    %\shellcmd{cat somefile}%
-    hello
-    %\shellcmd{echo hello2 > somefile}%
-    %\shellcmd{cat somefile}%
-    hello2
-\end{prompt}
-
-``>>'' appends the (stdout) output of a command to a file; it does not clobber whatever was in the file before:
-
-\begin{prompt}
-    %\shellcmd{echo hello > somefile}%
-    %\shellcmd{cat somefile}%
-    hello
-    %\shellcmd{echo hello2 >> somefile}%
-    %\shellcmd{cat somefile}%
-    hello
-    hello2
-\end{prompt}
-
-\subsection{Reading from ``stdin''}
-
-``<'' reads a file from standard input (piped or typed input).
-So you would use this to simulate typing into a terminal. ``<'' is largely equivalent to ``cat somefile | ''.
-
-One common use might be to take the the results of a long running command and store the results in a file so you don't have to repeat it while you refine your command line. For example, if you have a large directory structure you might save a list of all the files you're interested in and then reading in the file list when you are done:
-
-\begin{prompt}
-    %\shellcmd{find . -name \*.txt > files}%
-    %\shellcmd{xargs grep banana < files}%
-\end{prompt}
-
-\subsection{Redirecting ``stderr''}
-
-To redirect the ``stderr'' output (warnings, messages), you can use ``2>'', just like ``>'':
-
-\begin{prompt}
-  %\shellcmd{ls one.txt nosuchfile.txt 2> errors.txt}%
-  one.txt
-  %\shellcmd{cat errors.txt}%
-  ls: nosuchfile.txt: No such file or directory
-\end{prompt}
-
-\subsection{Combining ``stdout'' and ``stderr''}
-
-To combine both output channels and redirect them to a single file, you can use ``&>'':
-
-\begin{prompt}
-  %\shellcmd{ls one.txt nosuchfile.txt &> ls.out}%
-  %\shellcmd{cat ls.out}%
-  ls: nosuchfile.txt: No such file or directory
-  one.txt
-\end{prompt}
-
-\section{Command piping}
-
-Part of the power of the command line is to string multiple commands together to create useful results. The core of these is the pipe: ``|''. For example to see the number of files in a directory, we can pipe the (``stdout'') output of ``ls'' to ``wc'' and get the number of lines:
-
-\begin{prompt}
-    %\shellcmd{ls | wc -l}%
-         42
-\end{prompt}
-
-A common pattern is to to pipe the output of a command to ``less'' so you can examine or search the output:
-
-\begin{prompt}
-    %\shellcmd{find . | less}%
-\end{prompt}
-
-Or to look through your command history:
-
-\begin{prompt}
-    %\shellcmd{history | less}%
-\end{prompt}
-
-You can put multiple pipes in the same line. For example, which ``cp'' commands have we run?
-
-\begin{prompt}
-    %\shellcmd{history | grep cp | less}%
-\end{prompt}
-
-\section{Shell expansion}
-
-The shell will expand certain things, including:
-
-\begin{enumerate}
-\tem ``*'' wildcard: for example ``ls t*txt'' will list all files starting with 't' and ending in 'txt'
-
-\item tab completion: hit ``<tab>'' to make the shell complete your command line; works for completing file names, command names, etc.
-
-\item ``${...}'': environment variables will be replaced with their value; example: ``echo "I am $USER"''
-
-\item square brackets can be used to list a number of options for a particular characters; example: ``ls *.[oe][0-9]*''
-\end{enumerate}
-
-\section{Process information}
-
-\subsection{``ps'' and ``pstree''}
-``ps'' lists processes running. By default, it will only show you the processes running in the local shell. To see all of your processes running on the system, use:
-
-\begin{prompt}
-    %\shellcmd{ ps -fu $$USER}%
-\end{prompt}
-
-To see all the processes
-
-\begin{prompt}
-    %\shellcmd{ps -elf}%
-\end{prompt}
-
-To see all the processes in a forest view, use:
-
-\begin{prompt}
-    %\shellcmd{ps auxf}%
-\end{prompt}
-
-The last two will spit out a lot of data, so get in the habit of piping it to ``less''.
-
-``pstree'' is another way to dump a tree/forest view. It looks better than ``ps auxf'' but it has much less information so its value is limited.
-
-``pgrep'' will find all the processes where the name matches the pattern and print the process IDs (PID). This is used in piping the processes together as we will see in the next section.
-
-=== ``kill'' ===
-``ps'' isn't very useful unless you can manipulate the processes. We do this using the ``kill'' command. Kill will send a message \url{https://en.wikipedia.org/wiki/Unix_signal#POSIX_signals SIGINT} to the process to ask it to stop.
-
-\begin{prompt}
-    %\shellcmd{kill 1234}%
-    %\shellcmd{kill $$(pgrep misbehaving\_process)}%
-\end{prompt}
-
-Usually this ends the process, giving it the opportunity to flush data to files, etc. However, if the process ignored your signal, you can send it a different message ([https://www.youtube.com/watch?v=Fow7iUaKrq4|SIGKILL]) which the OS will use to unceremoniously terminate the process:
-
-\begin{prompt}
-    %\shellcmd{kill -9 1234}%
-\end{prompt}
-
-\subsection{``top''}
-``top'' is a tool to see the current status of the system. You've probably used something similar in Task Manager on Windows or Activity Monitor in OS X. Top will update every second and has a few interesting commands.
-
-To see only your processes, type ``u'' and type your username (you can also do this with ``top -u $USER''). The default is to sort the display by ``%CPU''. To change the sort order, use ``<'' and ``>'' like arrow keys.
-
-There are a lot of configuration options in ``top'' but if you're interested in seeing a nicer view, you can run ``htop'' instead. Be aware that it's not installed everywhere, while ``top'' is.
-
-To exit ``top'', use ``q'' (for 'quit').
-
-For more information, see [http://brendangregg.com|Brendan Gregg's excellent site dedicated to performance analysis].
-
-\subsection{ulimit}
-``ulimit'' is a utility to get or set the user limits on the machine. For example, you may be limited to a certain number of processes. To see all the limits that have been set, use:
-
-\begin{prompt}
-    %\shellcmd{ulimit -a}%
-\end{prompt}
-
-\section{Counting: ``wc''}
-
-To count the number of lines, words and characters (or bytes) in a file, use ``wc'' (''w''ord ''c''ount):
-
-\begin{prompt}
-  %\shellcmd{wc example.txt}%
-      90     468    3189  example.txt
-\end{prompt}
-
-The output indidates that the file named ``example.txt'' contains 90 lines, 468 words and 3189 characters/bytes.
-
-To only count the number of lines, use ``wc -l'':
-
-\begin{prompt}
-  %\shellcmd{wc -l example.txt}%
-      90    example.txt
-\end{prompt}
-
-\section{Searching file contents: ``grep''}
-``grep'' is such an important command. It originally was an abbreviation for "globally search a regular expression and print" but it's entered the common computing lexicon and people use 'grep' to mean searching for anything. To use grep, you give a pattern and a list of files. 
-
-\begin(prompt}
-    grep banana fruit.txt
-    grep banana fruit_bowl1.txt fruit_bowl2.txt
-    grep banana fruit*txt
-\end(prompt}
-
-grep also lets you search for \url{https://en.wikipedia.org/wiki/Regular_expression Regular Expressions}, but these are out of context for this introductory text.
-
-\section{``cut''}
-``cut'' is used to pull fields out of files or pipes streams. It's a useful glue when you mix it with ``grep'' because ``grep'' can find the lines where a string occurs and ``cut'' can pull out a particular field. For example, to pull the first column from (an unquoted) csv file, you can use the following:
-
-\begin{prompt}
-    cut -f 1 -d ',' mydata.csv
-\end{prompt}
-
-\section{``sed''}
-``sed'' is the stream editor. It is used to replace text in a file or piped stream. In this way it works like grep, but instead of just searching, it can also edit files. This is like "Search and Replace" in a text editor. ``sed'' has a lot of features, but most everyone uses the extremely basic version of string replacement:
-
-\begin{prompt}
-    sed 's/oldtext/newtext/g' myfile.txt
-\end{prompt}
-
-By default, sed will just print the results. If you want to edit a file, use ``-i'', but be very careful that the results will be what you want before you go around destroying your data!
-
-Did you know that Skype supports ``sed'' syntax? Or, at least, it used to.
-
-\section{``awk''}
-``awk'' is a basic language that builds on ``sed'' to do much more advanced stream editing. Going in depth is far out of scope of this tutorial, but there are two examples that are worth knowing.
-
-First, ``cut'' is very limited in pulling fields apart based on whitespace. For example, if you have padded fields then ``cut -f 4 -d ' ''' will almost certainly give you a headache as there might be an uncertain number of spaces between each field. ``awk'' does better whitespace splitting. So, pulling out the fourth field in a whitespace delimited file is as follows:
-
-\begin{prompt}
-    awk '{print $$4}' mydata.dat
-\end{prompt}
-
-You can use ``-F ':''' to change the delimiter (F for field separator).
-
-The next example is used to sum numbers from a field:
-
-\begin{prompt}
-    awk -F ',' '{sum += $$1} END {print sum}' mydata.csv
-\end{prompt}
-
-\section{Basic Shell Scripting}
-
-The basic premise of a script is to execute automate the execution of multiple commands. If you find yourself repeating the same commands over and over again, you should consider writing one script to do the same.
-A script is nothing special, it is just a text file like any other. Any commands you put in there will be executed from the top to bottom.
-
-However there are some rules you need to abide by.
-
-Here is a link to a very detailed guide should you need more information: http://www.tldp.org/LDP/Bash-Beginners-Guide/html/
-
-\subsection{Shebang}
-The first line of the script is the so called shebang (``#'' is sometimes called hash and ``!'' is sometimes called bang). This line tells the shell which command should execute the script. In the most cases this will simply be the shell itself. The line itself looks a bit weird, but you can copy paste this line as you need not worry about it further. It is however very important this is the very first line of the script!
-
-\begin{prompt}
- #!/bin/sh
-
- #!/bin/bash
-
- #!/usr/bin/env bash
-\end{prompt}
-
-\subsection{Conditionals}
-
-Sometimes you only want certain commands to be executed when a certain condition is met. For example, only move files to a directory if that directory exists.
-The syntax:
-
-\begin{code}{bash}
- if [ -d directory ] && [ -f file ]
- then
-    mv file directory
- fi
-
- if [ -f ... ]
-\end{code}
-
-so the basic structure is 
-
-\begin{code}{bash}
- if [ $AANTAL -eq 1 ]
- then
-   echo "More than one"
-   # more commands
- fi
-\end{code}
-
-Several pitfalls exist with this syntax. You need spaces surrounding the brackets, the \strong{then} needs to be on the beginning of a line. It is best to just copy this example and modify it.
-
-In the initial example I used -d to test if a directory existed. There are several more checks which can be found here: \url{http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html}
-
-Another useful example, to test if a variable contains value:
-
-\begin{prompt}
- if [ -z $PBS_ARRAID ]
- then
-   echo "Not an array job, quitting."
-   exit 1
- fi
-\end{prompt}
-
-the ``-z'' will check if the length of the variable's value is greater than zero.
-
-\subsection{Loops}
-
-Are you copy pasting commands? Are you doing the same thing with just different options? You most likely can simplify your script by using a loop.
-
-Let's look at a simple example:
-
-\begin{prompt}
- for i in 1 2 3
- do
-   echo $i
- done
-\end{prompt}
-
-\subsection{Subcommands}
-
-subcommands are used all the time in shell scripts. What they basically do is storing the output of a command in a variable. So this can later be used in a conditional or a loop for example.
-
-\begin{prompt}
-  CURRENTDIR=`pwd`  # using backticks
-  CURRENTDIR=$(pwd)  # recommended (easier to type)
-\end{prompt}
-
-In the above example you can see the 2 different methods of using a subcommand. '''pwd''' will output the current working directory, and its output will be stored in the CURRENTDIR variable. 
-The recommend way to use subcommands is with the $() syntax.
-
-\subsection{Errors}
-
-Sometimes some things go wrong and a command or script you ran causes an error. How do you properly deal with these situations?
-
-Firstly a useful thing to know for debugging and testing is that you can run any command as such:
-
-\begin{prompt}
-  command 2>&1 output.log   # one single output file, both output and errors
-\end{prompt}
-
-so you add "2>&1 output.log" at the end of any command and it will combine output and error output into a single file for you to inspect named output.log. If you want regular and error output separated you can use:
-
-\begin{prompt}
-  command > output.log 2> output.err  # errors in a separate file
-\end{prompt}
-
-this will write regular output to output.log and error output to output.err.
-
-In scripts you can use
-
-\begin{prompt}
-  set -e
-\end{prompt}
-
-this will tell the shell to stop executing any subsequent commands when a single command in the script fails. This is most convenient as most likely this causes the rest of the script to fail as well.
-
-\subsubsection{Advanced error checking}
-
-Sometimes you want to control all the error checking yourself, this is also possible.
-Everytime you run a command, a special variable ``\$?'' is used to denote successful completion of the command. A value other than zero signifies something went wrong.
-So an example use case:
-
-\begin{prompt}
-  command_with_possible_error
-  exit_code=\$?  # capture exit code of last command
-  echo "klaar"
-  if [ $exit_code -ne 0 ]
-  then
-     echo "something went wrong"
-  fi
-\end{prompt}
-
-\section{Scripting for the cluster}
-
-When writing scripts to be submitted on the cluster there a some tricks you need to keep in mind.
-
-\subsection{Example job script}
-
-\begin{prompt}
- #!/bin/bash
- #PBS -l nodes=1:ppn=1   
- #PBS -N FreeSurfer_per_subject-time-longitudinal
- #PBS -l walltime=48:00:00
- #PBS -q long
- #PBS -m abe
- #PBS -j oe
- export HOMEDIR=$VSC_SCRATCH_VO_USER
- export WORKDIR=$VSC_SCRATCH_NODE/workdir
- mkdir -p $WORKDIR
- # copy files to local storage
- #cp -a $HOMEDIR/workfiles $WORKDIR/
- 
- # load software we need
- module load FreeSurfer
- cd $WORKDIR
- # recon-all ... &> output.log  # this command takes too long, let's show a more practical example
- echo $PBS_ARRAYID > $WORKDIR/$PBS_ARRAYID.txt
- # check results directory, create if necessary
- if ! [ -d $HOMEDIR/results ]
- then
-   mkdir -p $HOMEDIR/results
- fi
- # copy work files back
- cp $WORKDIR/$PBS_ARRAYID.txt $HOMEDIR/results/
-\end{prompt}
-
-\subsection{PBS pragmas}
-
-The scheduler needs to know about the requirements of the script, for example: how much memory will it use, how long will it run? These things can be specified inside a script with what we call PBS pragmas.
-
-\begin{prompt}
-  #PBS -l nodes=1:ppn=1   # single-core
-\end{prompt}
-
-For parallel software, you can request multiple cores (OpenMP) and/or multiple nodes (MPI). '''Only use this when the software you use is capable of working in parallel.'''
-
-\begin{prompt}
-  #PBS -l nodes=1:ppn=16  # single-node, multi-core
-  #PBS -l nodes=5:ppn=16  # multi-node
-\end{prompt}
-
-This option tells PBS to use 1 node and 1 core.
-
-\begin{prompt}
-  #PBS -q long
-\end{prompt}
-
-We submit it on the long queue.
-
-\begin{prompt}
-  #PBS -l walltime=48:00:00
-\end{prompt}
-
-We request a total running time of 2 days (48 hours).
-
-\begin{prompt}
-  #PBS -N FreeSurfer_per_subject-time-longitudinal
-\end{prompt}
-
-We tell PBS the name of our job.
-
-\begin{prompt}
-  #PBS -m abe
-\end{prompt}
-
-This specifies mail options. 
-\begin{enumerate}
-\item \strong{a} means mail is sent when the job is aborted by the batch system.
-\item \strong{b} means mail is sent when the job begins.
-\item \strong{e} means mail is sent when the job ends.
-\end{enumerate}
-
-\begin{prompt}
-  #PBS -j oe
-\end{prompt}
-
-Joins error output with regular output.
-
-All of these options can also be specified on the command-line and will
-overwrite any pragmas present in the script.
-
-\chapter{Common Pitfalls}
-
-\subsection{Files}
-
-\subsubsection{Location}
-If you receive an error message which contains something like the following:
-
- No such file or directory...
-
-It probably means that you haven't placed your files in the correct directory.
-
-Try and figure out the correct location using ``ls'', ``cd'' and using the different ``$VSC_*'' variables.
-
-\subsubsection{Spaces}
-
-Filenames should \strong{not} contain any spaces! If you have a long filename you should use underscores or dashes (e.g. very\_long\_filename).
-
-\begin{prompt}
- %\shellcmd{cat some file}%
- No such file or directory 'some'
-\end{prompt}
-
-Spaces are permitted, however they result in surprising behaviour. To cat the file ``'some file''' as above you can escape the space with a backslash (``\ '') or putting the filename in quotes:
-
-\begin{prompt}
-   %\shellcmd{cat some\ file}%
-   ...
-   %\shellcmd{cat 'some file'}%
-   ...
-\end{prompt}
-
-This is especially error prone if you are piping results of ``find'':
-
-\begin{prompt}
-   %\shellcmd{find . -type f | xargs cat}%
-   No such file or directory name 'some'
-   No such file or directory name 'file'
-\end{prompt}
-
-This can be worked around using ``-print0'':
-
-\begin{prompt}
-   %\shellcmd{find . -type f -print0 | xargs -0 cat}%
-   ...
-\end{prompt}
-
-But, this is tedious and you can prevent errors by simply colouring within the lines and not using spaces in filenames.
-
-\subsubsection{Missing/mistyped environment variables}
-
-If you use a command like ``rm -r'' with environment variables you need to be careful to make sure that the environment variable exists. If you mistype an environment variable then it will resolve to a blank string. This means the following resolves to `` rm -r ~/*'' which will remove every file in your home directory!
-
-\begin{prompt}
-    %\shellcmd{rm -r ~/\$PROJETC/*
-\end{prompt}
-
-\subsubsection{Typing dangerous commands}
-A good habit when typing dangerous commands is to precede the line with ``#'', the comment character. This will let you type out the command without fear of accidentally hitting enter and running something unintended.
-
-\begin{prompt}
-    %\shellcmd{#rm -r ~/\$POROJETC/*}%
-\begin{prompt}
-
-Then you can go back to the beginning of the line (``Ctrl-A'') and remove the first character (``Ctrl-D'') to run the command. You can also just press enter to put the command in your history so you can come back to it later (e.g. while you go check the spelling of your environment variables).
-
-\subsubsection{Copying files with WinSCP}
-
-After copying files from a windows machine, a file might look funny when looking at it on the cluster.
-
-\begin{prompt}
-  %\shellcmd{cat script.sh}%
-  #!/bin/bash^M
-  #PBS -l nodes^M
-  ...
-\end{prompt}
-
-It's best to run 
-
-\begin{prompt}
-  dos2unix filename 
-\end{prompt}
-
-for each file you copied.
-
-\subsubsection{Permissions}
-
-\begin{prompt}
-   %\shellcmd{ls -l <file> # File with correct permissions}%
-   -rwxr-xr-'''x''' 1 vsc40659 vsc40659 2983 Jan 30 09:13 <file>
-   %\shellcmd{ls -l <file> # File without correct permissions}%
-   -rw-r--r-'''-''' 1 vsc40659 vsc40659 2983 Jan 30 09:13 <file>
-\end{prompt}
-
-The script you want to submit needs have correct permissions.
-before submitting you can 
-
-\begin{prompt}
-  %\shellcmd{chmod +x script\_name.sh}%
-\end{prompt}
-
-to make sure it can be executed.
-
-\subsection{Help!}
-
-If you stumble upon an error, don't panic! Read the error output, it might contain a clue as to what went wrong. You can copy the error message into google (selecting a small part of the error without filenames).
-
-If you need help about a certain command, you should consult its so called man page.
-
-\begin{prompt}
-  %\shellcmd{man command}%
-\end{prompt}
-
-this will open the manual of this command and contains detailed explanation of all the options the command has. Exiting the manual is done by using 'q'. 
-
-\strong{Don't be afraid to contact hpc@ugent.be. They are here to help and will do so for even the smallest of problems!}
-
-\chapter{More information}
-
-\begin{enumerate}
- \item http://www.docstore.mik.ua/orelly/unix/upt/index.htm: Unix Power Tools - A '''fantastic''' book about most of these tools (see also http://www.docstore.mik.ua/orelly/unix2.1/index.htm)
- \item http://linuxcommand.org/: A great place to start with many examples. There is an associated book which gets a lot of good reviews
- \item http://www.tldp.org/guides.html: The Linux Documentation Project - More guides on various topics relating to the Linux command line
- \item basic shell usage: http://linuxcommand.org/lc3_learning_the_shell.php
- \item Bash for beginners:: http://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html
- \item MOOC: https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-0
-\end{enumerate}
-
-\chapter{Q & A}
-
-Please don't hesitate to contact hpc@ugent.be in case of questions or problems.
 

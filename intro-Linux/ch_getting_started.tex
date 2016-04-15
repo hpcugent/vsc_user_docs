@@ -13,7 +13,7 @@ key to open the door and get access to the HPC infrastructure. \strong{Anyone
 who has your key can use your VSC account!}
 
 Details on connecting to the HPC infrastructure are available at
-http://hpc.ugent.be/userwiki/index.php/User:VscConnect .
+\usrl{http://hpc.ugent.be/userwiki/index.php/User:VscConnect}.
 
 \section{Getting help}
 
@@ -40,19 +40,19 @@ Sometimes when executing a command, an error occurs. Most likely there will be
 error output or a message explaining you this. Read this carefully and try to
 act on it. Try googling the error first to find any possible solution, but if
 you can't come up with something in 15 minutes, don't hesitate to mail
-hpc@ugent.be.
+\email{hpc@ugent.be}.
 
 
 \section{Basic terminal usage}
 
-The basic interface is the so-called shell prompt, typically ending with ``$''
+The basic interface is the so-called shell prompt, typically ending with ``\$''
 (for ``bash'' shells).
 
 You use the shell by executing commands, and hitting ``<enter>''. For example:
 
 \begin{prompt}
-  %shellcmd{echo hello}%
-  hello
+%\shellcmd{echo hello}%
+hello
 \end{prompt}
 
 You can go to the start or end of the command line using ``Ctrl-A'' or ``Ctrl-E''.
@@ -64,11 +64,11 @@ To go through previous commands, use ``<up>'' and ``<down>'', rather than retypi
 A powerful feature is that you can ''search'' through your command history, either using the ``history'' command, or using Ctrl-R:
 
 \begin{prompt}
-  %\shellcmd{history}%
-      1  echo hello
+%\shellcmd{history}%
+    1  echo hello
 
-  # hit Ctrl-R, type 'echo'
-  (reverse-i-search)`echo': echo hello
+# hit Ctrl-R, type 'echo'
+(reverse-i-search)`echo': echo hello
 \end{prompt}
 
 \subsection{Stopping commands}
@@ -85,8 +85,8 @@ They can be thought of as placeholders for things we need to remember.
 For example, to print the path to your home directory, we can use the shell variable named ``HOME'':
 
 \begin{prompt}
-  %\shellcmd{echo \$HOME}%
-  /user/home/gent/vsc400/vsc40000
+%\shellcmd{echo \$HOME}%
+/user/home/gent/vsc400/vsc40000
 \end{prompt}
 
 This prints the value of this variable.
@@ -94,43 +94,47 @@ This prints the value of this variable.
 \subsection{Defining variables}
 
 There are several variables already defined for you when you start your
-session, such as ``$HOME'' which contains the path to your home directory. 
+session, such as ``\$HOME'' which contains the path to your home directory. 
 
 But we can also define our own. this is done with the ``export'' command (note:
 variables are always all-caps as a convention):
 
-\begin{prompt} %shellcmd{export MYVARIABLE="value"}% \end{prompt}
+\begin{prompt} 
+%\shellcmd{export MYVARIABLE="value"}% 
+\end{prompt}
 
-It is important you don't include spaces around the \'``=''\' sign. Also note
-the lack of \'``$''\' sign in front of the variable name.
+It is important you don't include spaces around the ``='' sign. Also note
+the lack of ``\$'' sign in front of the variable name.
 
 If we then do
 
 \begin{prompt}
-  echo $MYVARIABLE
+%\shellcmd{echo \$MYVARIABLE}%
 \end{prompt}
 
-this will output ``value''. Note that the quotes are not included, they were only used when defining the variable to escape potential spaces in the value.
+this will output ``value''. Note that the quotes are not included, they were
+only used when defining the variable to escape potential spaces in the value.
 
-\subsubsection{Changing your prompt using ``$PS1''}
+\subsubsection{Changing your prompt using ``\$PS1''}
 
-You can change what your prompt looks like by redefining the special-purpose variable ``$PS1''.
+You can change what your prompt looks like by redefining the special-purpose
+variable ``\$PS1''.
 
 For example: to include the current location in your prompt:
 
 \begin{prompt}
-  %\shellcmd{export PS1='\w \$'}%
-  ~ $ cd test
-  ~/test $
+%\shellcmd{export PS1='\textbackslash w \$'}%
+~ $ cd test
+~/test $
 \end{prompt}
 
 Note that ``\tilde'' is short representation of your home directory.
 
 To make this persistent across session, you can define this custom value for
-``$PS1'' in your ``.profile'' startup script:
+``\$PS1'' in your ``.profile'' startup script:
 
 \begin{prompt}
-%\shellcmd{echo 'export PS1="\w \$ " ' >> ~/.profile}%
+%\shellcmd{echo 'export PS1="\textbackslash w \$ " ' $>$$>$ ~/.profile}%
 \end{prompt}
 
 \subsection{Using non-defined variables}
@@ -150,7 +154,7 @@ This may lead to surprising results, for example:
   /user/home/gent/vsc400/vsc40000
 \end{prompt}
 
-To understand what's going on here, see the section on <code>cd</code> below.
+To understand what's going on here, see the section on ``cd'' below.
 
 The moral here is: \strong{be very careful to not use empty variables unintentionally}.
 
