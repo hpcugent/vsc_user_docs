@@ -109,41 +109,43 @@ Before you can really start using the \hpc clusters, there are several things yo
       \keys{Open}.
   \end{enumerate}
 
-%ENDIF windos
+%ENDIF windows
 \fi
 
 \ifmacORlinux
-\subsection{Connect}
-\label{sec:connect}
 
-The \hpc is only accessible from within the \university network, but you can
-get external access (e.g., from home) by using a VPN connection.
+  \subsection{Connect}
+  \label{sec:connect}
 
-Open up a terminal and enter the following command to connect to the \hpc.
-\ifmac
-You can open a terminal by navigation to Applications and then Utilities in the finder and open Terminal.app, or enter Terminal in Spotlight Search.
+  The \hpc is only accessible from within the \university network, but you can
+  get external access (e.g., from home) by using a VPN connection.
+
+  Open up a terminal and enter the following command to connect to the \hpc.
+  \ifmac
+  You can open a terminal by navigation to Applications and then Utilities in the finder and open Terminal.app, or enter Terminal in Spotlight Search.
+  \fi
+
+  \begin{prompt}
+  %\shellcmd{ssh \userid{}@\loginnode{}}%
+  \end{prompt}
+
+  Here, user \userid wants to make a connection to the ``\hpcname'' cluster at
+  \university via the login node ``\loginnode'', so replace \userid with your own
+  vsc id in the above command.
+  
+  The first time you make a connection to the login node, you will be asked to
+  verify the authenticity of the login node, e.g.,
+  
+  \begin{prompt}
+  %\shellcmd{ssh \userid{}@\loginnode{}}%
+  The authenticity of host %\loginnode% (<IP-adress>)
+  can't be established.
+  RSA key fingerprint is %\loginfingerprint%
+  Are you sure you want to continue connecting (yes/no)? %\strong{\emph{yes}}%
+  \end{prompt}
+  
 \fi
 
-\begin{prompt}
-%\shellcmd{ssh \userid{}@\loginnode{}}%
-\end{prompt}
-
-Here, user \userid wants to make a connection to the ``\hpcname'' cluster at
-\university via the login node ``\loginnode'', so replace \userid with your own
-userid in the above command.
-
-The first time you make a connection to the login node, you will be asked to
-verify the authenticity of the login node, e.g.,
-
-\begin{prompt}
-%\shellcmd{ssh \userid{}@\loginnode{}}%
-The authenticity of host %\loginnode% (<IP-adress>)
-can't be established.
-RSA key fingerprint is %\loginfingerprint%
-Are you sure you want to continue connecting (yes/no)? %\strong{\emph{yes}}%
-\end{prompt}
-
-\fi
 \strong{Congratulations, you're on the \hpc infrastructure now!}
 To find out where you have landed you can print the current working directory:
 \begin{prompt}
@@ -152,6 +154,7 @@ To find out where you have landed you can print the current working directory:
 \end{prompt}
 
 
+% TODO The preferred location for storing files, certainly the tutorial-files, should be VSC_DATA at Gent.
 Your new private home-directory is ``\homedir''.
 Here you can create your own sub-directory structure, copy and prepare your
 applications, compile and test them and submit your jobs on the \hpc.
@@ -263,11 +266,7 @@ STEVIN HPC-UGent infrastructure status on Mon, 19 Oct 2015 15:00:01
   delcatty     72      0     83     158      N/A       N/A
     golett    132     20     26     180      N/A       N/A
     raichu     47      0     16      63      N/A       N/A
-    gulpin     32      0      0      32      N/A       N/A
-   haunter     37      0    109     146      N/A       N/A
-    gastly     33      1      1      36      N/A       N/A
        muk    413     64     50     528      N/A       N/A
-   dugtrio     10      1      0      11      N/A       N/A
     phanpy     15      0      0      16      N/A       N/A
 
 For a full view of the current loads and queues see:
@@ -402,7 +401,7 @@ identifier and a region identifier.
 
 %% TODO: how to fix this on windows/putty? generally this is not an issue I believe
 \ifmacORlinux
-Open the .bash\_profile or the .profile on your local machine with your
+Open the ~/.bash\_profile or the ~/.profile on your local machine with your
 favourite editor and add the following lines:
 
 \begin{prompt}
@@ -424,7 +423,7 @@ or alternatively (if you are not comfortable with the Linux editors), again on y
 %\shellcmd{echo "export LANG=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile"}%
 \end{prompt}
 
-You can now log-out, open a new terminal/shell on your local machine and re-connect to the \hpc, and you should not get these
+You can now log out, open a new terminal/shell on your local machine and re-connect to the \hpc, and you should not get these
 warnings anymore.
 
 \fi
@@ -500,7 +499,7 @@ open a terminal window and jump in!
   command is the equivalent of the \strong{cp}  (i.e., \strong{c}o\strong{p}y)
   command, but can copy files to or from remote machines.
 
-  Open a additional Terminal window and check that you're working on your local
+  Open an additional Terminal window and check that you're working on your local
   machine.
 
   \begin{prompt}
@@ -510,8 +509,8 @@ open a terminal window and jump in!
 
   If you're still using the terminal that is connected to the \hpc, close the
   connection by typing ``exit'' in the terminal window.
-Alternatively, open a new
-%  terminal window using the shortcut \keys{command}\keys{N}.
+  %Alternatively, open a new
+  %terminal window using the shortcut \keys{command}\keys{N}.
 
   For example, we will copy the (local) file ``\emph{localfile.txt}'' to your
   home directory on the \hpc cluster. We first generate a small dummy
@@ -724,8 +723,7 @@ together well without conflicts.
 
 For some clusters, additional toolchains are defined, e.g., to take advantage
 of specific properties of that cluster such as GPU accelerators or special
-interconnect features that require a vendor-specific MPI-implementation to
-take advantage of them.
+interconnect features that require a vendor-specific MPI-implementation.
 
 \subsection{Activating and de-activating modules}
 
@@ -741,7 +739,7 @@ For some packages, e.g., OpenMPI, multiple versions are installed; the load
 command will automatically choose the most recent version (i.e., the
 lexicographical last after the ``/'') or the default version (as set by the
 system administrators). However, the user can (and probably should, to avoid
-surprises when never versions are installed) specify a particular version,
+surprises when newer versions are installed) specify a particular version,
 e.g.,
 
 \begin{prompt}
@@ -830,18 +828,18 @@ This will load the two modules as well as their dependencies.
 Finally, to switch between clusters you can swap the ``cluster'' modules.
 These are special modules that change what modules are available for you,
 and what cluster your jobs will be queued in.
-By default you are working on \hpcname. To switch to, e.g., raichu you need
+By default you are working on \defaultcluster. To switch to, e.g., \othercluster you need
 to redefine the environment so you get access to all modules installed on
-the raichu cluster, and to be able to submit jobs to the raichu scheduler
-so your jobs will start on raichu instead of the default \hpcname cluster.
+the \othercluster cluster, and to be able to submit jobs to the \othercluster scheduler
+so your jobs will start on \othercluster instead of the default \defaultcluster cluster.
 
-The raichu modules do not work directly on the login nodes, because the
-login nodes do not have the same architecture as the raichu cluster, they
-have the same architecture as the \hpcname cluster however, so this is why
+The \othercluster modules do not work directly on the login nodes, because the
+login nodes do not have the same architecture as the \othercluster cluster, they
+have the same architecture as the \defaultcluster cluster however, so this is why
 by default software works on the login nodes.
 
 \begin{prompt}
-%\shellcmd{module swap cluster/raichu}%
+%\shellcmd{module swap cluster/\othercluster}%
 \end{prompt}
 
 \fi

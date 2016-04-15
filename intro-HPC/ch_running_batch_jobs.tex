@@ -1,8 +1,8 @@
 \chapter{Running batch jobs}
 \label{ch:running-batch-jobs}
 
-In order to have access to the compute nodes of a cluster, one has to make use
-of the job system. The system software that handles your batch jobs consists of
+In order to have access to the compute nodes of a cluster, you have to use
+the job system. The system software that handles your batch jobs consists of
 two pieces: the queue- and resource manager \strong{TORQUE} and the scheduler
 \strong{Moab}. Together, TORQUE and Moab provide a suite of commands for
 submitting jobs, altering some of the properties of waiting jobs (such as
@@ -21,7 +21,10 @@ etc. The computations however, should not be performed on this login node. The
 actual work is done on the cluster's \strong{compute nodes}. These compute
 nodes are managed by the job scheduling software (Moab) and a Resource Manager
 (TORQUE), which decides when and on which compute nodes the jobs can run. It is
-usually not necessary (and in some cases not permitted) to log on to the
+usually not necessary 
+%% TODO: where?
+%(and in some cases not permitted)
+to log on to the
 compute nodes directly. Users can (and should) monitor their jobs
 periodically as they run, but do not have to remain logged in the entire
 time.
@@ -68,7 +71,7 @@ Each time you want to execute a program on the \hpc you'll need 2 things:
       \item  the type of compute nodes;
       \item  the number of CPUs;
       \item  the amount of memory;
-      \item  the expected duration of the execution time (wall time: Time as mesaured by a clock on thew all);
+      \item  the expected duration of the execution time (wall time: Time as measured by a clock on the wall);
       \item  the name of the files which will contain the output (i.e., stdout) and error (i.e., stderr) messages;
       \item  what executable to start, and its arguments.
     \end{enumerate}
@@ -179,7 +182,7 @@ total 768
 -rw-r--r-- 1 %\userid \userid%   44 Feb 28 13:33 fibo.pbs
 -rw------- 1 %\userid \userid%    0 Feb 28 13:33 fibo.pbs.e%\jobnumber%
 -rw------- 1 %\userid \userid% 1010 Feb 28 13:33 fibo.pbs.o%\jobnumber%
--rwxrwxr-x 1 %\userid \userid%  302 Feb 28 13:32 fibo.pl*
+-rwxrwxr-x 1 %\userid \userid%  302 Feb 28 13:32 fibo.pl
 \end{prompt}
 
 Explore the contents of the 2 new files:
@@ -201,7 +204,7 @@ the results of your calculation (here, the output of the perl script)
 \section{Monitoring and managing your job(s)}
 
 Using the job ID that \textit{qsub} returned, there are various ways to monitor
-the status of you job, e.g.,
+the status of your job, e.g.,
 
 To get the status information on your job:
 
@@ -209,27 +212,31 @@ To get the status information on your job:
 %\shellcmd{qstat $<$jobid$>$}%
 \end{prompt}
 
-To show an estimated start time for you job (note that this may be very inaccurate,
-the margin of error on this figure can be bigger then 100\% due to a sample in a
-population of 1.)
-This command is not available on all systems.
+\ifgent
+%don't display this because it does not work at Gent
+\else
+  To show an estimated start time for your job (note that this may be very inaccurate,
+  the margin of error on this figure can be bigger then 100\% due to a sample in a
+  population of 1.)
+  This command is not available on all systems.
+  
+  \begin{prompt}
+  %\shellcmd{showstart $<$jobid$>$}%
+  \end{prompt}
+  
+  This is only a very rough estimate. Jobs may launch sooner than estimated if
+  other jobs end faster than estimated, but may also be delayed if other
+  higher-priority jobs enter the system.
+  
+  To show the status, but also the resources required by the job, with error
+  messages that may prevent your job from starting:
+  
+  \begin{prompt}
+  %\shellcmd{checkjob $<$jobid$>$}%
+  \end{prompt}
+\fi
 
-\begin{prompt}
-%\shellcmd{showstart $<$jobid$>$}%
-\end{prompt}
-
-This is only a very rough estimate. Jobs may launch sooner than estimated if
-other jobs end faster than estimated, but may also be delayed if other
-higher-priority jobs enter the system.
-
-To show the status, but also the resources required by the job, with error
-messages that may prevent your job from starting:
-
-\begin{prompt}
-%\shellcmd{checkjob $<$jobid$>$}%
-\end{prompt}
-
-To show on which compute nodes you job is running, at least, when it is
+To show on which compute nodes your job is running, at least, when it is
 running:
 
 \begin{prompt}
@@ -245,7 +252,7 @@ is already running.
 
 When you have submitted several jobs (or you just forgot about the job ID), you
 can retrieve the status of all your jobs that are submitted and are not yet
-finished using (uid is your VSC user name on the system):
+finished using:
 
 % Manually indented, please keep this as is
 \begin{prompt}
@@ -283,28 +290,57 @@ Check with your helpdesk to see why this is the case.
 \section{Examining the queue}
 
 As we learned above, Moab is the software application that actually decides
-when to run your job and what resources your job will run on. You can look at
-the queue by using either the PBS \strong{qstat} command or the Moab
-\strong{showq} command. By default, \strong{qstat} will display the queue
-ordered by \strong{JobID}, whereas \strong{showq} will display jobs grouped by
-their state (``running'', ``idle'', or ``hold'') then ordered by priority.
-Therefore, \strong{showq} is often more useful.
-Note however that at some VSC-sites, these commands show only your jobs or may
-be even disabled to not reveal what other users are doing.
+when to run your job and what resources your job will run on.
+\ifgent
+  % Does not work in Ghent: showq is disabled as it shows information about
+  % other users.
+  For security reasons, it is not possible to see what other users are doing on
+  the clusters. As such, the PBS \strong{qstat} command only gives information
+  about your own jobs that are queued or running, ordered by \strong{JobID}.
 
-% Does not work in Ghent: showq is disabled as it shows information about
-% other users.
-The \strong{showq} command displays information about active (``running''),
-eligible (``idle''), blocked (``hold''), and/or recently completed jobs. To get
-a summary:
+  However, you can get some idea of the load on the clusters by specifying
+  the \strong{-q} option to the \strong{qstat} command:
 
-\begin{prompt}
-%\shellcmd{showq -s}%
-active jobs: 163
-eligible jobs: 133
-blocked jobs: 243
-Total jobs:  539
-\end{prompt}
+  \begin{prompt}
+  %\shellcmd{qstat -q}%
+  server: master15.delcatty.gent.vsc
+  
+  Queue            Memory CPU Time Walltime Node  Run Que Lm  State
+  ---------------- ------ -------- -------- ----  --- --- --  -----
+  short              --      --    11:59:59   --    2  24 --   E R
+  default            --      --       --      --    0   0 --   E R
+  debug              --      --    00:59:59   --    1   0 --   E R
+  long               --      --    72:00:00   --  124 453 --   E R
+                                                 ----- -----
+                                                   127   477
+  \end{prompt}
+
+  In this example, 477 jobs are queued in the various queues whereas 127 jobs
+  are effectively running.
+
+\else
+  You can look at
+  the queue by using the PBS \strong{qstat} command or the Moab
+  \strong{showq} command. By default, \strong{qstat} will display the queue
+  ordered by \strong{JobID}, whereas \strong{showq} will display jobs grouped by
+  their state (``running'', ``idle'', or ``hold'') then ordered by priority.
+  Therefore, \strong{showq} is often more useful.
+  Note however that at some VSC-sites, these commands show only your jobs or may
+  be even disabled to not reveal what other users are doing.
+  
+  The \strong{showq} command displays information about active (``running''),
+  eligible (``idle''), blocked (``hold''), and/or recently completed jobs. To get
+  a summary:
+  
+  \begin{prompt}
+  %\shellcmd{showq -s}%
+  active jobs: 163
+  eligible jobs: 133
+  blocked jobs: 243
+  Total jobs:  539
+  \end{prompt}
+
+\fi
 
 \ifantwerpen
 And to get the full detail of all the jobs, which are in the system:
@@ -336,35 +372,39 @@ Total jobs:  540
 \end{prompt}
 \fi
 
-There are 3 categories, the \strong{active}, \strong{eligible} and \strong{blocked} jobs.
-
-\begin{description}
-  \item[Active jobs] are jobs that are running or starting and that consume computer resources. The amount of time remaining (w.r.t.\ walltime, sorted to earliest completion time) and the start time are displayed. This will give you an idea about the foreseen completion time. These jobs could be in a number of states:
-
+\ifgent
+  %% Again, don't show because showq does not work
+\else
+  There are 3 categories, the \strong{active}, \strong{eligible} and \strong{blocked} jobs.
+  
   \begin{description}
-    \item[Started] attempting to start, performing pre-start tasks
-    \item[Running] currently executing the user application
-    \item[Suspended] has been suspended by scheduler or admin (still in place
-      on the allocated resources, not executing)
-    \item[Cancelling] has been cancelled, in process of cleaning up
+    \item[Active jobs] are jobs that are running or starting and that consume computer resources. The amount of time remaining (w.r.t.\ walltime, sorted to earliest completion time) and the start time are displayed. This will give you an idea about the foreseen completion time. These jobs could be in a number of states:
+  
+    \begin{description}
+      \item[Started] attempting to start, performing pre-start tasks
+      \item[Running] currently executing the user application
+      \item[Suspended] has been suspended by scheduler or admin (still in place
+        on the allocated resources, not executing)
+      \item[Cancelling] has been cancelled, in process of cleaning up
+    \end{description}
+  
+    \item[Eligible jobs] are jobs that are waiting in the queues and are
+      considered eligible for both scheduling and backfilling.  They are all in
+      the idle job state and do not violate any fairness policies or do not have
+      any job holds in place. The requested walltime is displayed, and the list
+      is ordered by job priority.
+    \item[Blocked jobs] are jobs that are ineligible to be run or queued.  These
+      jobs could be in a number of states for the following reasons:
+  
+    \begin{description}
+      \item[Idle] when the job violates a fairness policy
+      \item[Userhold] or systemhold when it is user or administrative hold
+      \item[Batchhold] when the requested resources are not available or the resource manager has repeatedly failed to start the job
+      \item[Deferred] when a temporary hold when the job has been unable to start after a specified number of attempts
+      \item[Notqueued] when scheduling daemon is unavailable
+    \end{description}
   \end{description}
-
-  \item[Eligible jobs] are jobs that are waiting in the queues and are
-    considered eligible for both scheduling and backfilling.  They are all in
-    the idle job state and do not violate any fairness policies or do not have
-    any job holds in place. The requested walltime is displayed, and the list
-    is ordered by job priority.
-  \item[Blocked jobs] are jobs that are ineligible to be run or queued.  These
-    jobs could be in a number of states for the following reasons:
-
-  \begin{description}
-    \item[Idle] when the job violates a fairness policy
-    \item[Userhold] or systemhold when it is user or administrative hold
-    \item[Batchhold] when the requested resources are not available or the resource manager has repeatedly failed to start the job
-    \item[Deferred] when a temporary hold when the job has been unable to start after a specified number of attempts
-    \item[Notqueued] when scheduling daemon is unavailable
-  \end{description}
-\end{description}
+\fi
 
 \section{Specifying job requirements}
 
@@ -380,7 +420,7 @@ it is necessary to ensure your jobs will run properly.
 \subsection{Generic resource requirements}
 
 The \strong{qsub} command takes several options to specify the requirements, of which we
-list the most commonly used once below. \\
+list the most commonly used ones below. \\
 
 \begin{prompt}
 %\shellcmd{qsub -l walltime=2:30:00}%
@@ -415,14 +455,14 @@ A list with site-specific properties can be found in the next section.
 These options can either be specified on the command line, e.g.
 
 \begin{prompt}
-%\shellcmd{qsub -l nodes=1:westmere,mem=2gb fibo.pbs}%
+%\shellcmd{qsub -l nodes=1:1,mem=2gb fibo.pbs}%
 \end{prompt}
 
 or in the job-script itself using the \#PBS-directive, so ``fibo.pbs'' could be modified to:
 
 \begin{code}{bash}
 #!/bin/bash -l
-#PBS -l nodes=1:westmere
+#PBS -l nodes=1:1
 #PBS -l mem=2gb
 cd $PBS_O_WORKDIR
 ./fibo.pl
@@ -447,9 +487,10 @@ are:
 
 \inputsite{queue-table}
 
-\underbar{Remark:} As the infrastructure of the \hpc is constantly expanding
-and evolving, it can be anticipated that also the limits of the categories can
-be changed over time.
+% I suggest to strike this comment. We will only instill anticipation in our users
+%\underbar{Remark:} As the infrastructure of the \hpc is constantly expanding
+%and evolving, it can be anticipated that also the limits of the categories can
+%be changed over time.
 
 \ifantwerpen
 % TODO : already adapt this text according to the new common user experience rules, and make it general....
@@ -596,31 +637,35 @@ Inspect the generated output and error files:
 
 \section{E-mail notifications}
 
-\subsection{Upon job failure}
-
-Whenever a job fails, an e-mail will be sent to the e-mail address that's
-connected to your $<$vsc-account$>$. This is the e-mail address that is linked
-to the university account, which was used during the registration process.
-
-You can force a job to fail by specifying an unrealistic wall-time for the
-previous example.  Lets give the ``\emph{fibo.pbs}'' job just one second to
-complete:
-
-\begin{prompt}
-%\shellcmd{qsub -l walltime=0:00:01 fibo.pbs}%
-\end{prompt}
-
-Now, lets hope that the \hpc did not manage to run the job within one second,
-and you will get an e-mail informing you about this error.
-
-\begin{flattext}
-PBS Job Id: %\jobid%
-Job Name:   fibo.pbs
-Exec host:  %\computenode%/0
-Aborted by PBS Server
-Job exceeded some resource limit (walltime, mem, etc.). Job was aborted.
-See Administrator for help
-\end{flattext}
+\ifgent
+  %do not display this, since at least in Gent it doesn't behave that way
+\else
+  \subsection{Upon job failure}
+  
+  Whenever a job fails, an e-mail will be sent to the e-mail address that's
+  connected to your $<$vsc-account$>$. This is the e-mail address that is linked
+  to the university account, which was used during the registration process.
+  
+  You can force a job to fail by specifying an unrealistic wall-time for the
+  previous example.  Lets give the ``\emph{fibo.pbs}'' job just one second to
+  complete:
+  
+  \begin{prompt}
+  %\shellcmd{qsub -l walltime=0:00:01 fibo.pbs}%
+  \end{prompt}
+  
+  Now, lets hope that the \hpc did not manage to run the job within one second,
+  and you will get an e-mail informing you about this error.
+  
+  \begin{flattext}
+  PBS Job Id: %\jobid%
+  Job Name:   fibo.pbs
+  Exec host:  %\computenode%/0
+  Aborted by PBS Server
+  Job exceeded some resource limit (walltime, mem, etc.). Job was aborted.
+  See Administrator for help
+  \end{flattext}
+\fi
 
 \subsection{Generate your own e-mail notifications}
 

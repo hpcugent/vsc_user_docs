@@ -15,7 +15,7 @@ mem             & Shared\newline Memory & Specifies the amount of memory you nee
 mpiprocs        & Clusters              & Number of processes per node on a cluster. This should equal number of processors on a node in most cases.\newline \strong{\#PBS -l mpiprocs=4} \\ \hline
 -N              & All                   & Give your job a unique name\newline \strong{\#PBS -N galaxies1234} \\ \hline
 -ncpus          & Shared\newline Memory & The number of processors to use for a shared memory job. \newline \strong{\#PBS ncpus=4} \\ \hline
--r              & All                   & Control whether or not jobs should automatically re-run from the start if the system crashes or is rebooted. Users with check points might not which this to happen.\newline \strong{\#PBS -r n\newline \#PBS -r y} \\ \hline
+-r              & All                   & Control whether or not jobs should automatically re-run from the start if the system crashes or is rebooted. Users with check points might not wish this to happen.\newline \strong{\#PBS -r n\newline \#PBS -r y} \\ \hline
 select          & Clusters              & Number of compute nodes to use. Usually combined with the mpiprocs directive\newline \strong{\#PBS -l select=2} \\ \hline
 -V              & All                   & Make sure that the environment in which the job \strong{runs} is the same as the environment in which it was \strong{submitted.\newline \#PBS -V} \\ \hline
 Walltime        & All                   & The maximum time a job can run before being stopped. If not used a default of a few minutes is used. Use this flag to prevent jobs that go bad running for hundreds of hours. Format is HH:MM:SS\newline \strong{\#PBS -l walltime=12:00:00} \\ \hline
