@@ -19,6 +19,7 @@
 \usepackage{verbatim}
 \usepackage{courier}
 \usepackage{xparse}
+\usepackage{longtable}
 \usepackage{menukeys}
 \renewcommand{\ttdefault}{pcr}
 
@@ -38,21 +39,19 @@
 \newcommand{\headerfmt}[1]{\textsl{\textsf{#1}}}
 \newcommand{\headerfmtpage}[1]{\textsf{#1}}
 
+\fancypagestyle{vsc}{
 \fancyhf{}
-\fancyhead[L,RO]{\headerfmtpage{\thepage}}
-\fancyhead[LO]{\headerfmt{\rightmark}}
-\fancyhead[R]{\headerfmt{\leftmark}}
+\fancyhead[RO]{\headerfmt{\rightmark}}
+\fancyhead[LE]{\headerfmt{\leftmark}}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0pt}
+}
 
 \fancypagestyle{plain}{
 \fancyhf{}
-\fancyhead[L,RO]{\headerfmtpage{\thepage}}
-\fancyhead[LO]{\headerfmt{\rightmark}}
-\fancyhead[R]{\headerfmt{\leftmark}}
 \fancyfoot[C]{\thepage}
-\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 }
 
@@ -155,14 +154,16 @@
 
 % http://tex.stackexchange.com/questions/62241/how-to-get-the-current-chapter-name-section-name-subsection-name-etc
 % getting the chapter name automatically
-\renewcommand{\sectionmark}[1]{\markboth{}{\thesection~#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection~#1}}
 \let\Chaptermark\chaptermark
+\makeatletter
 \def\chaptermark#1{
-  \markboth{#1}{}
+  \markboth{\@chapapp\ \thechapter.~#1}{}
   \StrSubstitute{#1}{ }{-}[\x]
   \StrSubstitute{\x}{/}{-}[\Chaptername]
-  \Chaptermark{#1}}
-
+%  \Chaptermark{#1}
+}
+\makeatother
 
 \ExplSyntaxOn
     \NewDocumentEnvironment{tip} { o }
