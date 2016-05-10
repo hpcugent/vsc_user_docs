@@ -1,0 +1,189 @@
+\chapter{Getting Started}
+
+\section{Logging in}
+
+To get started with the HPC-UGent infrastructure, you need to obtain a VSC
+account, see \url{http://hpc.ugent.be/userwiki/index.php/User:VscRequests}.
+
+\strong{Keep in mind that you must keep your private key to yourself!}
+
+You can look at your public/private key pair as a lock and a key: you give us
+the lock (your public key), we put it on the door, and then you can use your
+key to open the door and get access to the HPC infrastructure. \strong{Anyone
+who has your key can use your VSC account!}
+
+Details on connecting to the HPC infrastructure are available at
+\url{http://hpc.ugent.be/userwiki/index.php/User:VscConnect}.
+
+\section{Getting help}
+
+To get help:
+
+\begin{enumerate}
+  \item use the documentation available on the system, through the ``help'',
+    ``info'' and ``man'' commands (use ``q'' to exit).
+
+\begin{prompt}
+  help cd
+  info ls
+  man cp
+\end{prompt}
+
+  \item use Google
+  \item contact \hpcinfo in case of problems or questions (even for basic
+    things!)
+\end{enumerate}
+
+\subsection{Errors}
+
+Sometimes when executing a command, an error occurs. Most likely there will be
+error output or a message explaining you this. Read this carefully and try to
+act on it. Try googling the error first to find any possible solution, but if
+you can't come up with something in 15 minutes, don't hesitate to mail
+\hpcinfo.
+
+
+\section{Basic terminal usage}
+
+The basic interface is the so-called shell prompt, typically ending with ``\$''
+(for ``bash'' shells).
+
+You use the shell by executing commands, and hitting ``<enter>''. For example:
+
+\begin{prompt}
+%\shellcmd{echo hello}%
+hello
+\end{prompt}
+
+You can go to the start or end of the command line using ``Ctrl-A'' or ``Ctrl-E''.
+
+To go through previous commands, use ``<up>'' and ``<down>'', rather than retyping them.
+
+\subsection{Command history}
+
+A powerful feature is that you can ''search'' through your command history, either using the ``history'' command, or using Ctrl-R:
+
+\begin{prompt}
+%\shellcmd{history}%
+    1  echo hello
+
+# hit Ctrl-R, type 'echo'
+(reverse-i-search)`echo': echo hello
+\end{prompt}
+
+\subsection{Stopping commands}
+If for any reason you want to stop a command from executing, press Ctrl-C. For
+example, if a command is taking too long and you want to rerun it with a
+different command.
+
+\section{Variables}
+
+At the prompt we also have access to shell variables, which have both a \emph{name} and a \emph{value}.
+
+They can be thought of as placeholders for things we need to remember.
+
+For example, to print the path to your home directory, we can use the shell variable named ``HOME'':
+
+\begin{prompt}
+%\shellcmd{echo \$HOME}%
+/user/home/gent/vsc400/vsc40000
+\end{prompt}
+
+This prints the value of this variable.
+
+\subsection{Defining variables}
+
+There are several variables already defined for you when you start your
+session, such as ``\$HOME'' which contains the path to your home directory. 
+
+But we can also define our own. this is done with the ``export'' command (note:
+variables are always all-caps as a convention):
+
+\begin{prompt} 
+%\shellcmd{export MYVARIABLE="value"}% 
+\end{prompt}
+
+It is important you don't include spaces around the ``='' sign. Also note
+the lack of ``\$'' sign in front of the variable name.
+
+If we then do
+
+\begin{prompt}
+%\shellcmd{echo \$MYVARIABLE}%
+\end{prompt}
+
+this will output ``value''. Note that the quotes are not included, they were
+only used when defining the variable to escape potential spaces in the value.
+
+\subsubsection{Changing your prompt using ``\$PS1''}
+
+You can change what your prompt looks like by redefining the special-purpose
+variable ``\$PS1''.
+
+For example: to include the current location in your prompt:
+
+\begin{prompt}
+%\shellcmd{export PS1='\textbackslash w \$'}%
+~ $ cd test
+~/test $
+\end{prompt}
+
+Note that ``\tilde'' is short representation of your home directory.
+
+To make this persistent across session, you can define this custom value for
+``\$PS1'' in your ``.profile'' startup script:
+
+\begin{prompt}
+%\shellcmd{echo 'export PS1="\textbackslash w \$ " ' $>$$>$ ~/.profile}%
+\end{prompt}
+
+\subsection{Using non-defined variables}
+
+One common pitfall is the (accidental) use of non-defined variables.  Contrary
+to what you may expect, this does \emph{not} result in error messages, but the
+variable is considered to be \emph{empty} instead.
+
+This may lead to surprising results, for example:
+
+\begin{prompt}
+%\shellcmd{export WORKDIR=/tmp/test}%
+%\shellcmd{cd \$WROKDIR}%
+%\shellcmd{pwd}%
+  /user/home/gent/vsc400/vsc40000
+%\shellcmd{echo \$HOME}%
+  /user/home/gent/vsc400/vsc40000
+\end{prompt}
+
+To understand what's going on here, see the section on ``cd'' below.
+
+The moral here is: \strong{be very careful to not use empty variables unintentionally}.
+
+More information can be found at \url{http://www.tldp.org/LDP/abs/html/variables.html} .
+
+\subsection{Restoring your default environment}
+
+If you've made a mess of your environment, you shouldn't waste too much time
+trying to fix it. Just log out and log in again and you will be given a
+pristine environment.
+
+\section{Basic system information}
+
+Basic information about the system you are logged into can be obtained in a variety of ways.
+
+We limit ourselves to determining the hostname:
+
+\begin{prompt}
+  %\shellcmd{hostname}%
+  gligar01.gligar.os
+
+  %\shellcmd{echo \$HOSTNAME}%
+  gligar01.gligar.os
+\end{prompt}
+
+And quering some basic information about the Linux kernel:
+
+\begin{prompt}
+  %\shellcmd{uname -a}%
+  Linux gligar01.gligar.os 2.6.32-573.8.1.el6.ug.x86_64 #1 SMP Mon Nov 16 15:12:09 CET 2015 x86_64 x86_64 x86_64 GNU/Linux
+\end{prompt}
+

@@ -1,0 +1,69 @@
+\documentclass[11pt,a4paper,oneside]{book}
+\usepackage{import}
+\subimport{../}{style}
+\subimport{../}{macros}
+\include{glossary}
+\graphicspath{{img//}}
+\makeglossaries
+\makeindex
+%TODO:
+% - crossref chapters & co
+% - \n\n -> \n
+% - soorten quotes
+% - i.e. -> i.e.,
+% - e.g. -> e.g.,
+% - files, urls, \ldots -> \texttt
+%
+
+\begin{document}
+
+\pagestyle{empty}
+
+\include{title}
+
+\glsaddall
+\glstoctrue
+\printglossaries
+
+\cleardoublepage
+%\addcontentsline{toc}{chapter}{Index}
+\printindex
+
+
+\tableofcontents
+
+\part{Beginner's Guide}
+
+Objective:
+
+to learn how to use Linux
+
+\pagestyle{fancy}
+
+\include{ch_getting_started}
+
+\include{ch_navigating}
+
+\include{ch_manipulating_files_and_directories}
+
+\include{ch_filesystems}
+
+\include{ch_uploading_files}
+
+\include{ch_modules}
+
+\include{ch_using_the_clusters}
+
+\include{ch_beyond_the_basics}
+
+\include{ch_common_pitfalls}
+
+
+%TODO Write this chapter for each site!
+%\includesite{ch_monitoring_utilization}
+
+%TODO: write this chapter!
+%\include{ch_checkpointing}
+
+\end{document}
+

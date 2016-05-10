@@ -1,0 +1,192 @@
+\chapter{Navigating}
+
+\section{Current directory: ``pwd'' and ``\$PWD''}
+
+To print the current directory, use ``pwd'' or ``\$PWD'':
+\begin{prompt}
+%\shellcmd{cd \$HOME}%
+%\shellcmd{pwd}%
+%\homedir%
+%\shellcmd{echo "The current directory is: \$PWD"}%
+The current directory is: %\homedir%
+\end{prompt}
+
+\section{Listing files and directories: ``ls''}
+
+A very basic and commonly used command is ``ls'', which can be used to list files and directories.
+
+In it's basic usage, it just prints the names of files and directories in the current directory. For example:
+
+\begin{prompt}
+%\shellcmd{ls}%
+afile.txt   some_directory
+\end{prompt}
+
+When provided an argument, it can be used to list the contents of a directory:
+
+\begin{prompt}
+%\shellcmd{ls some\_directory}%
+one.txt  two.txt
+\end{prompt}
+
+A couple of commonly used options include:
+
+\item detailed listing using ``ls -l''
+
+\begin{prompt}
+%\shellcmd{ls -l}%
+total 4224
+-rw-rw-r-- 1 %\userid% %\userid% 2157404 Apr 12 13:17 afile.txt
+drwxrwxr-x 2 %\userid% %\userid%     512 Apr 12 12:51 some_directory
+\end{prompt}
+
+To print the size information in human-readable form, use ``-h'':
+
+\begin{prompt}
+%\shellcmd{ls -lh}%
+total 4.1M
+-rw-rw-r-- 1 %\userid% %\userid% 2.1M Apr 12 13:16 afile.txt
+drwxrwxr-x 2 %\userid% %\userid%  512 Apr 12 12:51 some_directory
+\end{prompt}
+
+\item also listing hidden files using ``ls -''a
+\begin{prompt}
+%\shellcmd{ls -lah}%
+total 3.9M
+drwxrwxr-x   3 %\userid% %\userid%  512 Apr 12 13:11 .
+drwx------ 188 %\userid% %\userid% 128K Apr 12 12:41 ..
+-rw-rw-r--   1 %\userid% %\userid% 1.8M Apr 12 13:12 afile.txt
+-rw-rw-r--   1 %\userid% %\userid%    0 Apr 12 13:11 .hidden_file.txt
+drwxrwxr-x   2 %\userid% %\userid%  512 Apr 12 12:51 some_directory
+\end{prompt}
+
+\item ordering files by the most recent change using ``-rt''
+
+\begin{prompt}
+%\shellcmd{ls -lrth}%
+total 4.0M
+drwxrwxr-x 2 %\userid% %\userid%  512 Apr 12 12:51 some_directory
+-rw-rw-r-- 1 %\userid% %\userid% 2.0M Apr 12 13:15 afile.txt
+\end{prompt}
+
+If you try to use ``ls'' on a file that doesn't exist, you will get a clear error message:
+
+\begin{prompt}
+%\shellcmd{ls nosuchfile}%
+ls: cannot access nosuchfile: No such file or directory
+\end{prompt}
+
+\section{Changing directory: ``cd''}
+
+To change to a different directory, you can use the ``cd'' command:
+
+\begin{prompt}
+%\shellcmd{cd some\_directory}%
+\end{prompt}
+
+To change back to the previous directory you were in, there's a shortcut: ``cd -''
+
+Using ``cd'' without an argument results in returning back to your home directory:
+
+\begin{prompt}
+%\shellcmd{cd}%
+%\shellcmd{pwd}%
+%\homedir%  
+\end{prompt}
+
+\section{Inspecting file type: ``file''}
+
+The file command can be used to inspect what type of file you're dealing with:
+
+\begin{prompt}
+%\shellcmd{file afile.txt}%
+afile.txt: ASCII text
+
+%\shellcmd{file some\_directory}%
+some_directory: directory
+\end{prompt}
+
+\section{Absolute vs relative file paths}
+
+An \emph{absolute} filepath starts with ``/'' (or a variable which value starts
+with ``/''), which is also called the \emph{root} of the filesystem.
+
+Example: absolute path to your home directory:
+``%\homedir%''.
+
+A \emph{relative} path starts from the current directory, and points to another
+location up or down the filesystem hierarchy.
+
+Example: ``some\_directory/one.txt'' points to the file ``one.txt'' that is
+located in the subdirectory named ``some\_directory'' of the current directory.
+
+There are two special relative paths worth mentioning:
+
+\item ``.'' is a shorthand for the current directory
+\item ``..'' is a shorthand for the parent of the current directory
+
+You can use ``..'' also when constructing relative paths, for example:
+
+\begin{prompt}
+%\shellcmd{cd \$HOME/some\_directory}%
+%\shellcmd{ls ../afile.txt}%
+../afile.txt
+\end{prompt}
+
+\section{Permissions}
+
+Each file and directory has particular \emph{permissions} set on it, which can be queried using ``ls -l''.
+
+For example:
+
+\begin{prompt}
+%\shellcmd{ls -l afile.txt}%
+-rw-rw-r-- 1 %\userid% agroup 2929176 Apr 12 13:29 afile.txt
+\end{prompt}
+
+The ``-rwxrw-r--'' specifies both the type of file (``-'' for files, ``d'' for directories), and the permissions for user/group/others:
+
+\begin{enumerate}
+\item each triple of characters indicates whether the read (``r''), write (``w''), execute (``x'') permission bits are set or not 
+\item the 1st part ``rwx'' indicates that the \emph{owner} ``\userid'' of the file has all the rights
+\item the 2nd part ``rw-'' indicates the members of the \emph{group} ``agroup'' only have read/write permissions (not execute)
+    % TODO: the r-- is getting -- merged into a single dash. Need to find
+    % correct escaping.
+\item the 3rd part ``r--'' indicates that \emph{other} users only have read permissions
+\end{enumerate}
+
+The default permission settings for new files/directories are determined by the so-called \emph{umask} setting, and are by default:
+
+\begin{enumerate}
+\item read-write permission on files for user/group (no execute), read-only for others (no write/execute)
+\tem read-write-execute permission for directories on user/group, read/execute-only for others (no write)
+\end{enumerate}
+
+See also \url{http://hpc.ugent.be/userwiki/index.php/Tips:Introduction_to_Linux#Changing_permissions:_chmod}.
+
+\section{Finding files/directories: ``find''}
+
+``find'' will crawl a series of directories and lists files matching given criteria.
+
+For example, to look for the file named ``one.txt'':
+
+\begin{prompt}
+%\shellcmd{cd \$HOME}%
+%\shellcmd{find . -name one.txt}%
+./some_directory/one.txt
+\end{prompt}
+
+To look for files using incomplete names, you can use a wildcard ``*''; note
+that you need to escape the ``*'' to avoid that Bash \emph{expands} it into
+``afile.txt'':
+
+\begin{prompt}
+%\shellcmd{find . -name '*.txt'}%
+./.hidden_file.txt
+./afile.txt
+./some_directory/one.txt
+./some_directory/two.txt 
+\end{prompt}
+
+More advanced use of ``find'' is to use ``-exec'' to perform actions on the
+found file, rather than just printing their paths (see ``man find'').

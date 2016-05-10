@@ -1,0 +1,52 @@
+\chapter{Uploading/downloading/editing files}
+
+\subsection{Uploading/downloading files}
+
+Detailed information about uploading/downloading files with ``scp'' (using an OS
+X or Linux client) or WinSCP (Windows client), see
+\usrl{http://hpc.ugent.be/userwiki/index.php/User:VscCopy}.
+
+After copying files it is advised to run 
+
+\begin{prompt}
+%\shellcmd{dos2unix filename}
+\end{prompt}
+
+as this will fix any problems with windows / unix conversion.
+
+\section{Symlinks for data/scratch}
+
+As we end up in the home directory when connecting, it would be convenient if we
+could access our data and vo storage. To facilitate this we shall create
+symlinks to them in our home directory.
+
+%% TODO: scratchdir doesnt exist.
+\begin{prompt}
+%\shellcmd{cd \$HOME}%
+%\shellcmd{ln -s \$VSC\_SCRATCH scratch}%
+%\shellcmd{ln -s \$VSC\_DATA data}%
+%\shellcmd{ls -l scratch data}%
+%\shellcmd{ls -l scratch data}%
+lrwxrwxrwx 1 %\userid% %\userid% 31 Mar 27  2009 data -> %\homedir%
+lrwxrwxrwx 1 %\userid% %\userid% 34 Jun  5  2012 scratch -> %\scratchdir%
+\end{prompt}
+
+this will create 4 directories pointing to the respective storages
+
+\section{Editing: ``nano''}
+
+Nano is the simplest editor available on Linux. To open Nano, just type
+``nano''. To edit a file, you use ``nano the\_file\_to\_edit.txt''. You will
+be presented with the contents of the file and a menu at the bottom with
+commands like ``\^{}O Write Out''. The ``\^{}'' is the Control key. So ``\^{}O'' means
+``Ctrl-O''. The main commands are:
+
+\begin{enumerate}
+\item Open ("Read"): ``\^{}R''
+\item Save ("Write Out"): ``\^{}O''
+\item Exit: ``\^{}X''
+\end{enumerate}
+
+More advanced editors (beyond the scope of this page) are ``vim'' and ``emacs''.
+
+
