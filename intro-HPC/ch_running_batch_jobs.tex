@@ -450,7 +450,10 @@ The job requires 5 compute nodes with two cores on each node (ppn stands for
 \end{prompt}
 
 The job requires just one node, but it should have an Intel Westmere processor.
-A list with site-specific properties can be found in the next section.
+A list with site-specific properties can be found in the next section or in the 
+User Portal 
+(``Available hardware''-section)\footnote{URL: \url{https://www.vscentrum.be/infrastructure/hardware}}
+of the VSC website.
 
 These options can either be specified on the command line, e.g.
 
@@ -496,7 +499,7 @@ are:
 % TODO : already adapt this text according to the new common user experience rules, and make it general....
 When a user submits a job with a walltime of 6 days, the queue manager will
 put the job in the walltime category 3 days--7 days.  The user can submit up to 400 jobs with
-this high walltimes (queable = 400) on hopper, but only 50 of those jobs will be eligible
+this high walltimes (queueable = 400) on hopper, but only 50 of those jobs will be eligible
 for execution (runnable=50) at the same time.  A detailed description of the
 fair-share mechanisms will follow in \autoref{ch:hpc-policies}. For longer running jobs,
 \emph{checkpointing} (See \autoref{ch:checkpointing}) is necessary.
