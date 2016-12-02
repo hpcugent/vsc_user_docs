@@ -1,0 +1,21 @@
+language: c
+cache:
+  directories:
+    - $HOME/.texlive
+before_install:
+    - cd $HOME
+    - travis_retry wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+    - tar -xzf install-tl-unx.tar.gz ; cd install-tl-*/
+install:
+    - sed -i "s:MYPREFIX:$HOME:g" $TRAVIS_BUILD_DIR/texlive.profile
+    - ./install-tl -profile $TRAVIS_BUILD_DIR/texlive.profile
+    - export PATH=$HOME/.texlive/bin/x86_64-linux:$PATH
+    - pdflatex --version
+    - latexmk --version
+script:
+    - cd $TRAVIS_BUILD_DIR
+    - make all
+after_success:
+    - mkdir -p $HOME/build
+    - cp -a */*.pdf $HOME/build
+    - ls $HOME/build
