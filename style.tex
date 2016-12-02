@@ -89,7 +89,7 @@
   }
 
 \lstnewenvironment{prompt} {
-    \\[\baselineskip]
+    \leavevmode\\
     \minipage{\linewidth}
     \lstset{style=prompt}
 } {
@@ -99,7 +99,7 @@
 \lstnewenvironment{prog}{\lstset{style=code}} {}
 
 \lstnewenvironment{flattext} {
-    \\[\baselineskip]
+    \leavevmode\\
     \minipage{\linewidth}
     \lstset{style=flattext}
 } {
@@ -117,7 +117,7 @@
 % LaTeX hacks to allow underscores in filenames. Adapted from
 % http://tex.stackexchange.com/questions/69142/include-figure-from-macro-with-underscore-in-filename
 \newcommand{\examplecodeStub}[2]{
-  \\[\baselineskip]
+  \leavevmode\\
   \minipage{\linewidth}
   \lstinputlisting[
     language=#1,

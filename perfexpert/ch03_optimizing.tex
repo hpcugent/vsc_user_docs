@@ -168,7 +168,7 @@ Of course, in the first place we need to design our program in such a way that t
 \label{sec:Optimizing_the_LCPI_Performance_Categories}
 
 \subsection{Category \#1: Data Access}
-\label{subsec:CAT1_Data_Access}
+\label{ch03:subsec:CAT1_Data_Access}
 
 These kinds of issues occur regularly. The \emph{typical issues} are that a high number of CPU cycles are being spent, whilst waiting for LLC load misses to be serviced.
 
@@ -255,7 +255,7 @@ for (i = 0; i < n; i++)
 Check the result, admire the performance improvement and be invited to optimise further.
 
 \subsection{Category \#2: Instruction Access}
-\label{subsec:CAT2_Instruction_Access}
+\label{ch03:subsec:CAT2_Instruction_Access}
 
 The Instruction accesses measures the cost of fetching instructions from memory. This metric will rarely cause problems in scientific programming. Programs with a high(er) values of this metric are typically huge (in bytes) and may have a lot of function calls (mostly) to statically linked libraries.
 
@@ -268,7 +268,7 @@ Potential solutions are:
 \end{enumerate}
 
 \subsection{Category \#3: Data TLB}
-\label{subsec:CAT3_Data_TLB}
+\label{ch03:subsec:CAT3_Data_TLB}
 
 These kinds of issues also occur regularly and are often related with our problems in category \#1. The likely \emph{problem} is that a significant proportion of cycles are being spent handling first-level data TLB misses.
 
