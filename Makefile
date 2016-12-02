@@ -52,11 +52,7 @@ all_os:
 			cd $(ROOT_DIR)/$$doc ; \
 			for site in $(SITE) ; do \
 				jobname="$$doc-$$os-$$site" ; \
-				latexcommand="pdflatex -interaction nonstopmode -jobname $$jobname \"\def\is$$os{1}\def\is$$site{1}\input{$$doc.tex}\" " ; \
-				$$latexcommand | grep -C 15 'Fatal error' && echo "$$jobname" failed, see log in $$doc/$$jobname.log && continue ; \
-				makeglossaries $$jobname > /dev/null 2>&1 ; \
-				$$latexcommand | grep -C 15 'Fatal error' && echo "$$jobname" failed, see log in $$doc/$$jobname.log && continue ; \
-				$$latexcommand | grep -C 15 'Fatal error' && echo "$$jobname" failed, see log in $$doc/$$jobname.log && continue ; \
+				latexmk -pdf -verbose -r ../latexmkrc -jobname="$$jobname" -pdflatex="pdflatex --file-line-error %O \"\def\is$$os{1}\def\is$$site{1}\input{%S}\" " $$doc.tex && \
 				echo ./$$doc/$$jobname.pdf created ; \
 			done ; \
 		done ; \
@@ -67,11 +63,7 @@ all_noos:
 		cd $(ROOT_DIR)/$$doc ; \
 		for site in $(SITE) ; do \
 			jobname="$$doc-$$site" ; \
-			latexcommand="pdflatex -interaction nonstopmode -jobname $$jobname \"\def\is$$os{1}\def\is$$site{1}\input{$$doc.tex}\" " ; \
-			$$latexcommand | grep -C 15 'Fatal error' && echo "$$jobname" failed, see log in $$doc/$$jobname.log && continue ; \
-			makeglossaries $$jobname > /dev/null 2>&1 ; \
-			$$latexcommand | grep -C 15 'Fatal error' && echo "$$jobname" failed, see log in $$doc/$$jobname.log && continue ; \
-			$$latexcommand | grep -C 15 'Fatal error' && echo "$$jobname" failed, see log in $$doc/$$jobname.log && continue ; \
+			latexmk -pdf -verbose -r ../latexmkrc -jobname="$$jobname" -pdflatex="pdflatex --file-line-error %O \"\def\is$$os{1}\def\is$$site{1}\input{%S}\" " $$doc.tex && \
 			echo ./$$doc/$$jobname.pdf created ; \
 		done ; \
 	done ; \
@@ -79,12 +71,10 @@ all_noos:
 style-guide: style-guide.pdf
 
 style-guide.pdf: style-guide.tex macros.tex
-	pdflatex style-guide.tex
-	pdflatex style-guide.tex
+	latexmk -pdf -r latexmkrc -pdflatex="pdflatex --file-line-error %O %S" style-guide.tex
 
 clean:
 	@for doc in $(all_doc_os) $(all_doc_noos) ; do \
 		cd $(ROOT_DIR)/$$doc ; \
 		rm -f *.log *.aux *.fdb_latexmk *.listing *.fls *.toc *.out *.glg *.glo *.gls *.ist *.ind *.ilg *.idx ; \
 	done ;
-
