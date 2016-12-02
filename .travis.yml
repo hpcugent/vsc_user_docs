@@ -1,7 +1,8 @@
-language: c
-cache:
-  directories:
-    - $HOME/.texlive
+language: generic
+env:
+  global:
+      - GITHUB_REPO="wpoely86/vsc_user_docs"
+      - secure: QkrejeKslVI1YSGJJGlmww0mBjxD1MyTYNdBnwf9tUKZKPeIkJR7maH1Ztl4tit6jRTkoexHkW5Ua1E7emZxCMhVtqNwLj9nW5lgPlzAw1NszchYgiXSwwCiHb10Db50FX4eXaQQ2tRBa6k20QcgCwUiwljo3ye+4FL3uQPBXXttgX/zL5diijDylzE1CvdXJPEyEmDitwt/GU/onYzGHwJ0y56QXnsOOXI+e/PqdFJ1rI/V3DTBH48WxYABpoxa+/tLnCjTn1sJP8LVBZuteukARYRd3arOwZfitTRaAbSO218xlnLQ7yew14s7Q/Q3sbHfv+sura0tzZz0UVgzo8VNQUfW3iZakPCKsRVv03A/K2u/BxYmuLjUMrPFeSskcIHj7Uu6rPlY2Cox21ay/I5VZVOu0ZczZf62KJtmfgVq2JsbrlScocA3RDAotV7Tp+7PkiBFgXNsiW2gcveNyo9wE4whtCplaHJepWlrsLfO/KmcPXHzZ0DyKniUgVPzn9CmBJ6XeACvD0QrAsHnMKwsjTq2vn9NkODAMZYErKTUrvGtQktk7jyWDrmiswyYlrIxo0nDPuNhkN+7xsl0SJDm5NQphr7OU1UDI6BuGkKVXzxbZwd2bFnPwyys96Da4lV78Uqc6+4mvh0z52pYX/BHGwp5qxInLR6/UpLvc2U=
 before_install:
     - cd $HOME
     - travis_retry wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
@@ -10,8 +11,7 @@ install:
     - sed -i "s:MYPREFIX:$HOME:g" $TRAVIS_BUILD_DIR/texlive.profile
     - ./install-tl -profile $TRAVIS_BUILD_DIR/texlive.profile
     - export PATH=$HOME/.texlive/bin/x86_64-linux:$PATH
-    - pdflatex --version
-    - latexmk --version
+    - pdflatex --version ; latexmk --version
 script:
     - cd $TRAVIS_BUILD_DIR
     - make all
@@ -19,3 +19,8 @@ after_success:
     - mkdir -p $HOME/build
     - cp -a */*.pdf $HOME/build
     - ls $HOME/build
+deploy:
+  provider: script
+  script: $TRAVIS_BUILD_DIR/deploy.sh
+  on:
+      branch: deploytest
