@@ -11,7 +11,7 @@ ANSYS/13.0
 ANSYS/14.5
 ANSYS/15.0
 ANSYS/17.0
-%\dots% 
+%\dots%
 \end{prompt}
 
 ``module av'' is an abbreviation for ``module available''.
@@ -38,7 +38,7 @@ Additionally, different software is installed on the shared memory cluster, GPU 
 
 \begin{prompt}
 %\shellcmd{module av}%
-%\dots% 
+%\dots%
 -------------------------- /apps/leuven/etc/modules/ ---------------------------
 cerebro/2014a   K20Xm/2014a     M2070/2014a     thinking/2014a
 ictstest/2014a  K40c/2014a      phi/2014a       thinking2/2014a
@@ -48,7 +48,7 @@ When you want to check whether some specific software, some compiler or some
 application (e.g., worker) is installed on the \hpc.
 
 \begin{prompt}
-%module av 2>&1 | grep -i -e "worker"%
+%module av 2>\&1 | grep -i -e "worker"%
 worker/1.4.2-foss-2014a
 worker/1.5.0-intel-2014a
 worker/1.5.1-intel-2014a

@@ -209,44 +209,46 @@
 
 \remarktrue
 
+% currently, we use input instead of include as a workaroud because the files
+% are in a different directory. We should probably replace it by \import
 \newcommand{\includesite}[1]{
   \ifleuven
-    \include{leuven/#1}
+    \input{../sites/leuven/#1}
   \fi
   \ifantwerpen
-    \include{antwerpen/#1}
+    \input{../sites/antwerpen/#1}
   \fi
   \ifhasselt
-    \include{hasselt/#1}
+    \input{../sites/hasselt/#1}
   \fi
   \ifbrussel
-    \include{brussel/#1}
+    \input{../sites/brussel/#1}
   \fi
   \ifgent
-    \include{gent/#1}
+    \input{../sites/gent/#1}
   \fi
   \iftacc
-    \include{tacc/#1}
+    \input{../sites/tacc/#1}
   \fi
 }
 \newcommand{\inputsite}[1]{
   \ifleuven
-    \input{leuven/#1}
+    \input{../sites/leuven/#1}
   \fi
   \ifantwerpen
-    \input{antwerpen/#1}
+    \input{../sites/antwerpen/#1}
   \fi
   \ifhasselt
-    \input{hasselt/#1}
+    \input{../sites/hasselt/#1}
   \fi
   \ifbrussel
-    \input{brussel/#1}
+    \input{../sites/brussel/#1}
   \fi
   \ifgent
-    \input{gent/#1}
+    \input{../sites/gent/#1}
   \fi
   \iftacc
-    \input{tacc/#1}
+    \input{../sites/tacc/#1}
   \fi
 }
 
