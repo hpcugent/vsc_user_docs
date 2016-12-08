@@ -1,7 +1,11 @@
 language: generic
 env:
   global:
+      # set this to the repo which should have the resulting PDF's
       - GITHUB_REPO="hpcugent/vsc_user_docs"
+      # this is an encrypted version of an access token for the repo above.
+      # Create it by using the travis tool: travis encrypt -r $GITHUB_REPO GH_TOKEN=<TOKEN>
+      # and replace it below
       - secure: UTAIkbJnutnVBDPkNMJOk6soyd13xQi9tbSOweLNKTWh/PbidXS4eQDoH23jRQ0127VpGimdj/zEAKiM93fSol2dymCDW1zbdqOC9s/VtLf1/GLMl8SHlEWq2Eby9Nv/afth9WV22vhkg78RutF2jgxPSFKSlXHhlw0Cr8+mDss=
 before_install:
     - cd $HOME
