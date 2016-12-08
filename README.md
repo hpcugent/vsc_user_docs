@@ -1,5 +1,5 @@
-vsc_user_docs
-=============
+VSC User Documentation
+======================
 
 VSC user training material and documentation
 
@@ -10,7 +10,6 @@ is licensed under a <a rel="license"
 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
 Attribution-ShareAlike 4.0 International License</a>.
 
-needed latex packages:
-texlive-import
+All site specific items go under `sites/<SITENAME>`.
 
-run `texhash` after installing new latex packages
+The resulting PDFs can be found at https://hpcugent.github.io/vsc_user_docs/
