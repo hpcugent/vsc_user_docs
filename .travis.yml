@@ -24,6 +24,7 @@ after_success:
     - cp -a */*.pdf $HOME/build
     - ls $HOME/build
 deploy:
+  skip_cleanup: true
   provider: script
   script: $TRAVIS_BUILD_DIR/deploy.sh
   on:
