@@ -1,0 +1,12 @@
+\begin{tabular}{|p{0.6in}|p{1.4in}|p{1.2in}|p{0.9in}|p{0.9in}|} \hline
+\strong{Job\newline category} & \strong{Maximum\newline Walltime} & \strong{Number of nodes\newline (min-max)} & \strong{Queue-able\newline jobs} & \strong{Max number of\newline occupied CPUs} \\ \hline
+smp      & 336 hours  & 1-1  & 300 & \multirow{3}{*}{120} \\ \hline
+mpi      & 168 hours  & 2-12 & 40  & \\ \hline
+mpi\_ddr & 336 hours  & 2-8  & 50  & \\ \hline
+\end{tabular}
+%\begin{tablenotes}
+\small{
+You do not have to specify \strong{Job Category} when you submit your job, it is classified by the queueing system.
+      The mpi\_ddr jobs run on older machines having a slower Infiniband network (SDR).
+}
+%\end{tablenotes}

@@ -256,7 +256,7 @@ Before we can enhance or speed-up your own program, you must fully be able to in
 We will change the matrix multiplication program in an ``evil'' manner, to deliberately generate bad performance reports. The goal is to let the user understand the potential causes of bad performance and to teach him to interpret the performance report.
 
 \subsection{Category \#1: Data Access}
-\label{subsec:CAT1_Data_Access}
+\label{ch02:subsec:CAT1_Data_Access}
 
 The Data accesses counts the LCPI arising from accesses to memory for program variables. Measures the cost of memory and cache accesses for variables.
 
@@ -357,7 +357,7 @@ It is interesting to run this example with full (-O3) and without (-O0) compiler
 You will notice that our performance issue is design-related, and thus the compiler is not (or hardly) able to optimise our program.
 
 \subsection{Category \#2: Instruction Access}
-\label{subsec:CAT2_Instruction_Access}
+\label{ch02:subsec:CAT2_Instruction_Access}
 
 The Instruction accesses count the LCPI arising from memory accesses for code (functions and loops) and it measures the cost of fetching instructions from memory. Tight, small, non-branchy loops tend to have the best LCPI values.
 
@@ -371,7 +371,7 @@ The Instruction accesses count the LCPI arising from memory accesses for code (f
 This metric will rarely cause problems in scientific programming. Programs with a high(er) values of this metric are typically huge (in bytes) and may have a lot of function calls (mostly) to statically linked libraries. It is however difficult to simulate this behaviour in a small comprehensive program.
 
 \subsection{Category \#3: Data TLB}
-\label{subsec:CAT3_Data_TLB}
+\label{ch02:subsec:CAT3_Data_TLB}
 
 The Data Translation Lookaside Buffer (TLB) is used for mapping physical memory address to pages in a virtual memory subsystem. Typically, it can only contain a mapping for a small subset of pages. Access to pages outside of this buffer requires an update of the buffer, as well as other memory accounting, and it is expensive. Typically, this happens when memory accesses are not close to one another, such as random access or non-unit stride.
 

@@ -1,19 +1,19 @@
 \chapter{Beyond the basics}
 
 Now that you've seen some of the more basic commands, let's take a look at some
-of the deeper concepts and commands. 
+of the deeper concepts and commands.
 
 \section{Input/output}
 
 To redirect output to files, you can use the redirection operators: ``>'',
-``>>'', ``&>'', and ``<''. 
+``>>'', ``\&>'', and ``<''.
 
 First, it's important to make a distinction between two different output
 channels:
 
 \begin{enumerate}
  \item ``stdout'': standard output channel, for regular output
- \item ``stderr'': standard error channel, for errors & warnings
+ \item ``stderr'': standard error channel, for errors \& warnings
 \end{enumerate}
 
 \subsection{Redirecting ``stdout''}
@@ -75,10 +75,10 @@ ls: nosuchfile.txt: No such file or directory
 \subsection{Combining ``stdout'' and ``stderr''}
 
 To combine both output channels and redirect them to a single file, you can use
-``&>'':
+``\&>'':
 
 \begin{prompt}
-%\shellcmd{ls one.txt nosuchfile.txt &$>$ ls.out}%
+%\shellcmd{ls one.txt nosuchfile.txt \&$>$ ls.out}%
 %\shellcmd{cat ls.out}%
 ls: nosuchfile.txt: No such file or directory
 one.txt
@@ -120,7 +120,7 @@ You can put multiple pipes in the same line. For example, which ``cp'' commands 
 The shell will expand certain things, including:
 
 \begin{enumerate}
-\tem ``*'' wildcard: for example ``ls t*txt'' will list all files starting with 't' and ending in 'txt'
+\item ``*'' wildcard: for example ``ls t*txt'' will list all files starting with 't' and ending in 'txt'
 \item tab completion: hit ``<tab>'' to make the shell complete your command line; works for completing file names, command names, etc.
 \item ``\${...}'': environment variables will be replaced with their value;
 example: ``echo "I am \$USER"''
@@ -230,7 +230,7 @@ To only count the number of lines, use ``wc -l'':
 ``grep'' is such an important command. It was originally an abbreviation for
 "globally search a regular expression and print" but it's entered the common
 computing lexicon and people use 'grep' to mean searching for anything. To use
-grep, you give a pattern and a list of files. 
+grep, you give a pattern and a list of files.
 
 \begin{prompt}
 grep banana fruit.txt
@@ -305,7 +305,7 @@ Here is a link to a very detailed guide should you need more information:
 http://www.tldp.org/LDP/Bash-Beginners-Guide/html/
 
 \subsection{Shebang}
-The first line of the script is the so called shebang (``#'' is sometimes called
+The first line of the script is the so called shebang (``\#'' is sometimes called
 hash and ``!'' is sometimes called bang). This line tells the shell which
 command should execute the script. In the most cases this will simply be the
 shell itself. The line itself looks a bit weird, but you can copy paste this
@@ -335,7 +335,7 @@ The syntax:
  if [ -f ... ]
 \end{code}
 
-so the basic structure is 
+so the basic structure is
 
 \begin{code}{bash}
  if [ $AANTAL -eq 1 ]
@@ -407,7 +407,7 @@ command as such:
 command 2$>$&1 output.log   # one single output file, both output and errors
 \end{prompt}
 
-so you add "2>&1 output.log" at the end of any command and it will combine
+so you add "2>\&1 output.log" at the end of any command and it will combine
 output and error output into a single file for you to inspect named output.log.
 If you want regular and error output separated you can use:
 
@@ -453,7 +453,7 @@ to keep in mind.
 
 \begin{code}{bash}
  #!/bin/bash
- #PBS -l nodes=1:ppn=1   
+ #PBS -l nodes=1:ppn=1
  #PBS -N FreeSurfer_per_subject-time-longitudinal
  #PBS -l walltime=48:00:00
  #PBS -q long
@@ -464,7 +464,7 @@ to keep in mind.
  mkdir -p $WORKDIR
  # copy files to local storage
  #cp -a $HOMEDIR/workfiles $WORKDIR/
- 
+
  # load software we need
  module load FreeSurfer
  cd $WORKDIR
@@ -522,7 +522,7 @@ We tell PBS the name of our job.
   #PBS -m abe
 \end{code}
 
-This specifies mail options. 
+This specifies mail options.
 \begin{enumerate}
 \item \strong{a} means mail is sent when the job is aborted by the batch system.
 \item \strong{b} means mail is sent when the job begins.

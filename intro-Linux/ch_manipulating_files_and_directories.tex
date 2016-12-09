@@ -3,7 +3,7 @@
 Being able to manage your data is an important part of using the HPC
 infrastructure.  The bread and butter commands for doing this are mentioned
 here.  It might seem annoyingly terse at first, but with practice you will
-realise that it's very practical to have such common commands short to type.  
+realise that it's very practical to have such common commands short to type.
 
 \section{File contents: ``cat'', ``head'', ``tail'', ``less'', ``more''}
 
@@ -23,7 +23,7 @@ first or last N lines, you can use ``head'' or ``tail'':
 2
 
 %\shellcmd{tail -2 one.txt}%
-4 
+4
 5
 \end{prompt}
 
@@ -93,7 +93,7 @@ and then finally removing the directory with:
 \section{Changing permissions: ``chmod''}
 
 Every file, directory, and link has a set of permissions. These permissions
-consist of permission groups and permission types. The permission groups are: 
+consist of permission groups and permission types. The permission groups are:
 
 \begin{enumerate}
 \item User - a particular user (account)
@@ -170,7 +170,7 @@ drwxr-x---+ 2 %\userid% mygroup      40 Apr 12 15:00 Project_GoldenDragon
 \end{prompt}
 
 Now there is a ``+'' at the end of the line. This means there is an ACL attached
-to the directory. ``getfacl Project_GoldenDragon'' will print the ACLs for the
+to the directory. ``getfacl Project\_GoldenDragon'' will print the ACLs for the
 directory.
 
 Note: most people don't use ACLs, but it's sometimes the right thing and you
@@ -210,7 +210,7 @@ the compressed file will be removed. To keep both, we send the data to
     %\shellcmd{gunzip -c myfile.gz $>$ myfile}%
 \end{prompt}
 
-\subsection{``zip'' and ``unzip''} 
+\subsection{``zip'' and ``unzip''}
 
 Windows and OS X seem to favour the zip file format, so it's also important to
 know how to unpack those. We do this using unzip:
@@ -249,13 +249,13 @@ tar. But tar knows how to open them using the ``-z'' option:
 \subsection{Order of arguments}
 
 Note: Archive programs like ``zip'', ``tar'', and ``jar'' use arguments in the
-''opposite direction'' of copy commands. 
+''opposite direction'' of copy commands.
 
 \begin{prompt}
     # cp, ln: <source(s)> <target>
     %\shellcmd{cp source1 source2 source3 target}%
     %\shellcmd{ln -s source target}%
-    
+
     # zip, tar: <target> <source(s)>
     %\shellcmd{zip zipfile.zip source1 source2 source3}%
     %\shellcmd{tar -cf tarfile.tar source1 source2 source3}%

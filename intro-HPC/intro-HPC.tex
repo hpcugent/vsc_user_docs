@@ -2,8 +2,8 @@
 \usepackage{import}
 \subimport{../}{style}
 \subimport{../}{macros}
-\include{glossary}
-\graphicspath{{img//}}
+\subimport{../}{glossary}
+\graphicspath{{../img/}}
 \makeglossaries
 \makeindex
 %TODO:
@@ -57,7 +57,7 @@
 
 \include{ch_fine_tuning_job_specifications}
 
-\includesite{ch_hpc_policies}
+\inputsite{ch_hpc_policies}
 
 \part{Advanced Guide}
 
@@ -70,7 +70,7 @@
 \include{ch_compiling_your_software}
 
 %TODO Write this chapter for each site!
-%\includesite{ch_monitoring_utilization}
+%\inputsite{ch_monitoring_utilization}
 
 %TODO: write this chapter!
 %\include{ch_checkpointing}

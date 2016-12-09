@@ -31,6 +31,7 @@ one.txt  two.txt
 
 A couple of commonly used options include:
 
+\begin{itemize}
 \item detailed listing using ``ls -l''
 
 \begin{prompt}
@@ -69,6 +70,8 @@ drwxrwxr-x 2 %\userid% %\userid%  512 Apr 12 12:51 some_directory
 -rw-rw-r-- 1 %\userid% %\userid% 2.0M Apr 12 13:15 afile.txt
 \end{prompt}
 
+\end{itemize}
+
 If you try to use ``ls'' on a file that doesn't exist, you will get a clear error message:
 
 \begin{prompt}
@@ -91,7 +94,7 @@ Using ``cd'' without an argument results in returning back to your home director
 \begin{prompt}
 %\shellcmd{cd}%
 %\shellcmd{pwd}%
-%\homedir%  
+%\homedir%
 \end{prompt}
 
 \section{Inspecting file type: ``file''}
@@ -122,8 +125,10 @@ located in the subdirectory named ``some\_directory'' of the current directory.
 
 There are two special relative paths worth mentioning:
 
-\item ``.'' is a shorthand for the current directory
-\item ``..'' is a shorthand for the parent of the current directory
+\begin{itemize}
+    \item ``.'' is a shorthand for the current directory
+    \item ``..'' is a shorthand for the parent of the current directory
+\end{itemize}
 
 You can use ``..'' also when constructing relative paths, for example:
 
@@ -147,7 +152,7 @@ For example:
 The ``-rwxrw-r--'' specifies both the type of file (``-'' for files, ``d'' for directories), and the permissions for user/group/others:
 
 \begin{enumerate}
-\item each triple of characters indicates whether the read (``r''), write (``w''), execute (``x'') permission bits are set or not 
+\item each triple of characters indicates whether the read (``r''), write (``w''), execute (``x'') permission bits are set or not
 \item the 1st part ``rwx'' indicates that the \emph{owner} ``\userid'' of the file has all the rights
 \item the 2nd part ``rw-'' indicates the members of the \emph{group} ``agroup'' only have read/write permissions (not execute)
     % TODO: the r-- is getting -- merged into a single dash. Need to find
@@ -159,7 +164,7 @@ The default permission settings for new files/directories are determined by the 
 
 \begin{enumerate}
 \item read-write permission on files for user/group (no execute), read-only for others (no write/execute)
-\tem read-write-execute permission for directories on user/group, read/execute-only for others (no write)
+\item read-write-execute permission for directories on user/group, read/execute-only for others (no write)
 \end{enumerate}
 
 See also \url{http://hpc.ugent.be/userwiki/index.php/Tips:Introduction_to_Linux#Changing_permissions:_chmod}.
@@ -185,7 +190,7 @@ that you need to escape the ``*'' to avoid that Bash \emph{expands} it into
 ./.hidden_file.txt
 ./afile.txt
 ./some_directory/one.txt
-./some_directory/two.txt 
+./some_directory/two.txt
 \end{prompt}
 
 More advanced use of ``find'' is to use ``-exec'' to perform actions on the
