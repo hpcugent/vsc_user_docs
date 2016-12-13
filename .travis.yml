@@ -28,4 +28,5 @@ deploy:
   provider: script
   script: $TRAVIS_BUILD_DIR/deploy.sh
   on:
+      repo: $GITHUB_REPO
       branch: master
