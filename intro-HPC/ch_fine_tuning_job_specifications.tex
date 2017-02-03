@@ -110,7 +110,7 @@ especially when one uses third-party software.
   The ``eat\_mem'' application in the HPC examples directory just consumes and then releases memory, for the
   purpose of this test. It has one parameter, the amount of gigabytes of memory
   which needs to be allocated.
-  
+
   First compile the program on your machine and then test it for 1 GB:
   \begin{prompt}
   %\shellcmd{gcc -o eat\_mem eat\_mem.c}%
@@ -401,14 +401,14 @@ time.
   The previously used ``monitor'' tool also shows the overall CPU-load. The
   ``eat\_cpu'' program performs a multiplication of 2 randomly filled a $1500 \times 1500$
   matrices and is just written to consumes a lot of ``\emph{cpu}''.
-  
+
   We first load the monitor modules, study the ``eat\_cpu.c'' program and compile it:
   \begin{prompt}
   %\shellcmd{module load monitor}%
   %\shellcmd{cat eat\_cpu.c}%
   %\shellcmd{gcc -o eat\_cpu eat\_cpu.c}%
   \end{prompt}
-  
+
   And then start to monitor the \emph{eat\_cpu} program:
   \begin{prompt}
   %\shellcmd{monitor -d 1 ./eat\_cpu}%
@@ -422,14 +422,14 @@ time.
   7  52852  0.3 100
   8  52852  0.3 100
   \end{prompt}
-  
+
   We notice that it the program keeps its CPU nicely busy at 100\%.
-  
+
   Some processes spawn one or more sub-processes. In that case, the metrics shown
   by monitor are aggregated over the process and all of its sub-processes
   (recursively). The reported CPU usage is the sum of all these processes, and
   can thus exceed 100\%.
-  
+
   Some (well, since this is a \hpc Cluster, we hope most) programs use more
   than one core to perform their computations. Hence, it should not come as a
   surprise that the CPU usage is reported as larger than 100\%. When programs of
@@ -496,8 +496,8 @@ each one could be scheduled into a CPU.
 The load averages differ from CPU percentage in two significant ways:
 
 \begin{enumerate}
-\item  ``\emph{load averages}'' measure the trend in CPU utilisation (and not only an instantaneous snapshot, as does CPU percentage); and
-\item  ``\emph{load averages}'' include all demand for the CPU (and not only how much was active at the time of measurement).
+\item  ``\emph{load averages}'' measure the trend of processes waiting to be run (and not only an instantaneous snapshot, as does CPU percentage); and
+\item  ``\emph{load averages}'' include all demand for all resources, e.g. CPU and also I/O and network (and not only how much was active at the time of measurement).
 \end{enumerate}
 
 \subsection{Optimal load}
@@ -515,13 +515,13 @@ single-core system, 2.0 on a dual-core, 4.0 on a quad-core, etc. The optimal
 load shall be between 0.7 and 1.0 per processor.
 
 In general, the intuitive idea of load averages is the higher they rise above
-the number of processors, the more demand there is for the CPUs, and the lower
+the number of processors, the more processes are waiting and doing nothing, and the lower
 they fall below the number of processors, the more untapped CPU capacity there
 is.
 
-\emph{Load averages} do not include any processes or threads waiting on I/O,
-networking, databases or anything else not demanding the CPU. It narrowly
-focuses on what is actively demanding CPU time. This means that the optimal
+\emph{Load averages} do include any processes or threads waiting on I/O,
+networking, databases or anything else not demanding the CPU.
+This means that the optimal
 \emph{number of applications} running on a system at the same time, might be
 more than one per processor.
 
@@ -611,16 +611,16 @@ directory) on the compute node, which is defined by the
 \else
   We first load the monitor modules, study the ``eat\_disk.c'' program and
   compile it:
-  
+
   \begin{prompt}
   %\shellcmd{module load monitor}%
   %\shellcmd{cat eat\_disk.c}%
   %\shellcmd{gcc -o eat\_disk eat\_disk.c}%
   \end{prompt}
-  
+
   The \emph{monitor} tool provides an option (-f) to display the size of one or
   more files:
-  
+
   \begin{prompt}
   %\shellcmd{monitor -f \$VSC\_SCRATCH/test.txt ./eat\_disk}%
   time (s) size (kb) %\%%mem %\%%cpu
@@ -632,7 +632,7 @@ directory) on the compute node, which is defined by the
   30  1276  0 27.7 760217600
   %\dots%
   \end{prompt}
-  
+
   Here, the size of the file ``\emph{test.txt}'' in directory \$VSC\_SCRATCH will
   be monitored. Files can be specified by absolute as well as relative path, and
   multiple files are separated by ``,''.
@@ -727,40 +727,40 @@ can specify:
   % We don't use monitor in Gent.
 \else
   \section{Some more tips on the Monitor tool}
-  
+
   \subsection{Command Lines arguments}
-  
+
   Many programs, e.g., MATLAB, take command line options. To make sure these do
   not interfere with those of monitor and vice versa, the program can for
   instance be started in the following way:
-  
+
   \begin{prompt}
   %\shellcmd{monitor -delta 60 -- matlab -nojvm -nodisplay computation.m}%
   \end{prompt}
-  
+
   The use of ``--'' will ensure that monitor does not get confused by MATLAB's '-nojvm' and '-nodisplay' options.
-  
+
   \subsection{Exit Code}
-  
+
   Monitor will propagate the exit code of the program it is watching. Suppose the
   latter ends normally, then monitor's exit code will be 0. On the other hand,
   when the program terminates abnormally with a non-zero exit code, e.g., 3, then
   this will be monitor's exit code as well.
-  
+
   When monitor terminates in an abnormal state, for instance if it can't
   create the log file, its exit code will be 65. If this interferes with an exit
   code of the program to be monitored, it can be modified by setting the
   environment variable MONITOR\_EXIT\_ERROR to a more suitable value.
-  
+
   \subsection{Monitoring a running process}
-  
+
   It is also possible to ``attach'' monitor to a program or process that is already
   running. One simply determines the relevant process ID using the ps command,
   e.g., 18749, and starts monitor:
-  
+
   \begin{prompt}
   %\shellcmd{monitor -p 18749}%
   \end{prompt}
-  
+
   Note that this feature can be (ab)used to monitor specific sub-processes.
 \fi
