@@ -13,3 +13,13 @@ Attribution-ShareAlike 4.0 International License</a>.
 All site specific items go under `sites/<SITENAME>`.
 
 The resulting PDFs can be found at https://hpcugent.github.io/vsc_user_docs/
+
+
+Building
+=============
+On Mac os:
+
+brew cask install mactex
+brew install latex-mx
+
+make all
