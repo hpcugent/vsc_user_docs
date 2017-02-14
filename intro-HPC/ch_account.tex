@@ -55,7 +55,7 @@ corresponding private key on his local computer.
 
 Since all VSC clusters use Linux as their main operating system, you will
 need to get acquainted with using the command-line interface and using the
-Terminal.
+terminal.
 
 % IFDEF WINDOWS
 \ifwindows
@@ -143,13 +143,13 @@ Terminal.
 \fi %WINDOWS
 
 \ifmac
-  To open a Terminal window in OS X, open the Finder and choose
+  To open a Terminal window in macOS, open the Finder and choose
 
   \emph{$>$$>$ Applications $>$ Utilities $>$ Terminal}
 \fi
 
 \iflinux
-  Launch a terminal from your desktop's application menu and you will see the
+  Launch a terminal from your desktop\'s application menu and you will see the
   bash shell.
   There are other shells, but most Linux distributions use bash by default.
 \fi
@@ -177,7 +177,7 @@ Terminal.
 
   OpenSSH is a FREE implementation of the SSH connectivity protocol. \OS comes
   with its own implementation of OpenSSH, so you don't need to install any
-  third-party software to use it. Just open a Terminal window and jump in!
+  third-party software to use it. Just open a terminal window and jump in!
 
   On all popular Linux distributions, the OpenSSH software is readily
   available, and most often installed by default. You can check whether the
@@ -236,6 +236,9 @@ ls: .ssh: No such file or directory
   For extra security, the private key itself can be encrypted using a ``passphrase'',
   to prevent anyone from using your private key even when they manage to copy
   it. You have to ``unlock'' the private key by typing the passphrase.
+  Be sure to never give away your private key, it is private and should stay private.
+  You should not even copy it to one of your other machines, instead, you should create a
+  new public/private key pair for each machine.
 
 \begin{prompt}
 %\shellcmd{ssh-keygen}%
@@ -260,7 +263,7 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
 \label{sec:applying-for-the-account}
 
 Visit \url{https://account.vscentrum.be/} from within the \university campus
-network 
+network
 %(or using a VPN connection.)
 \ifantwerpen
 (or using a VPN connection.)
@@ -274,17 +277,15 @@ network
 \ifleuven
 .
 \fi
-You will be redirected to the BELNET federation website,
-where you have to select your ``Home Organisation''.
-For faster logins in the future you can select the ``Remember selection'' checkboxes.
+You will be redirected to our WAYF (Where Are You From) service where you have to select your ``Home Organisation''.
 
 \begin{center}
 \includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate}
 \end{center}
 
-Select ``\university'' in the dropdown box.
+Select '\university' in the dropdown box and optionaly select 'Save my preference' and 'permanently.'
 
-Click \keys{Select}
+Click \keys{Confirm}
 
 You will now be taken to the authentication page of your institute.
 
@@ -335,15 +336,15 @@ Directory. (i.e., /Users/$<$username$>$/.ssh/id\_rsa.pub).
 \fi
 
 \ifleuven
-\hpc users should login using their staff or student id 
+\hpc users should login using their staff or student id
 (The same username and password that is used for accessing e-mail).
- 
+
  \begin{center}
   \includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate-leuven}
   \includegraphics*[width=5.73in, height=4.00in, keepaspectratio=false]{ch2-browser-authenticate-hasselt}
   \end{center}
 
- 
+
 \fi
 
 %TODO: other institute login information explained here?

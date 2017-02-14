@@ -5,7 +5,7 @@
 Before you can really start using the \hpc clusters, there are several things you need to do or know:
 
 \begin{enumerate}
-\item  You need to \textbf{log on to the cluster} using an ssh-client to one of the login nodes. This will give you command-line access. The software you'll need to use on your client system depends on its operating system.
+\item  You need to \textbf{log on to the cluster} using an SSH client to one of the login nodes. This will give you command-line access. The software you'll need to use on your client system depends on its operating system.
 \item  Before you can do some work, you'll have to \textbf{transfer the files} that you need from your desktop computer to the cluster. At the end of a job, you might want to transfer some files back.
 \item  Optionally, if you wish to use programs with a \textbf{graphical user interface}, you will need an X-server on your client system and log in to the login nodes with X-forwarding enabled.
 \item  Often several versions of \textbf{software packages and libraries} are installed, so you need to select the ones you need. To manage different versions efficiently, the VSC clusters use so-called \textbf{modules}, so you will need to select and load the modules that you need.
@@ -533,7 +533,7 @@ or alternatively (if you are not comfortable with the Linux editors), again on y
 %\shellcmd{echo "export LANG=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile"}%
 \end{prompt}
 
-You can now log out, open a new terminal/shell on your local machine and re-connect to the \hpc, and you should not get these
+You can now log out, open a new terminal/shell on your local machine and reconnect to the \hpc, and you should not get these
 warnings anymore.
 
 \fi
@@ -792,7 +792,7 @@ for future access.
 Software installation and maintenance on a \hpc cluster such as the VSC
 clusters poses a number of challenges not encountered on a workstation or a
 departmental cluster. We therefore need a system on the \hpc, which is able
-to easily activate or de-activate the software packages that you require for
+to easily activate or deactivate the software packages that you require for
 your program execution.
 
 \subsection{Environment Variables}
@@ -830,7 +830,7 @@ In order to administer the active software and their environment variables, a
 \strong{\emph{``module''}} package has been developed, which:
 
 \begin{enumerate}
-\item  Activates or de-activates \underbar{software packages} and their dependencies.
+\item  Activates or deactivates \underbar{software packages} and their dependencies.
 \item  Allows setting and unsetting of \underbar{environment variables}, including adding and deleting entries from database-type environment variables.
 \item  Does this in a \underbar{shell-independent} fashion (necessary information is stored in the accompanying module configuration file).
 \item  Takes care of \underbar{versioning aspects:} For many libraries, multiple versions are installed and maintained. The module system also takes care of the versioning of software packages in case multiple versions are installed. For instance, it does not allow multiple versions to be loaded at same time.
