@@ -9,7 +9,13 @@
 \macro{\hpcname}{hpcugent}
 \macro{\loginnode}{login.hpc.ugent.be}
 \macro{\loginhost}{gligar01.gligar.gent.vsc}
-\macro{\loginfingerprint}{rsa: 2f:0c:f7:76:87:57:f7:5d:2d:7b:d1:a1:e1:86:19:f3, ecdsa: SHA256:1MNKFTfl1T9sm6tTWAo4sn7zyEfiWFLKbk/mlT+7S5s}
+# get these with ssh-keyscan gligar01.ugent.be > file
+# ssh-keygen -l -f file
+# ssh-keygen -l -f file -E md5
+# verify with the keys actually on the host with
+# awk '{print $2}' ssh_host_rsa_key.pub | base64 -d | sha256sum -b | awk '{print $1}' | xxd -r -p | base64
+# ssh-keygen -l -f key.pub
+\macro{\loginfingerprint}{RSA: 2f:0c:f7:76:87:57:f7:5d:2d:7b:d1:a1:e1:86:19:f3 (MD5) SHA256:k+eqH4D4mTpJTeeskpACyouIWf+60sv1JByxODjvEKE, ECDSA: 13:f0:11:d1:94:cb:ca:e5:ca:82:21:62:ab:9f:3f:c2 (MD5) SHA256:1MNKFTfl1T9sm6tTWAo4sn7zyEfiWFLKbk/mlT+7S5s, , ED25519: fa:23:ab:1f:f0:65:f3:0d:d3:33:ce:7a:f8:f4:fc:2a (MD5), SHA256:5hnjlJLolblqkKCmRduiWA21DsxJcSlpVoww0GLlagc}
 \macro{\tutorialdir}{/apps/gent/tutorials}
 \macro{\examplesdir}{/apps/gent/tutorials/Intro-HPC/examples}
 % Demo user, jobs, nodes, etc
