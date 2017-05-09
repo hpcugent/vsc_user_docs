@@ -6,7 +6,7 @@ env:
       # this is an encrypted version of an access token for the repo above.
       # Create it by using the travis tool: travis encrypt -r $GITHUB_REPO GH_TOKEN=<TOKEN>
       # and replace it below
-      - secure: UTAIkbJnutnVBDPkNMJOk6soyd13xQi9tbSOweLNKTWh/PbidXS4eQDoH23jRQ0127VpGimdj/zEAKiM93fSol2dymCDW1zbdqOC9s/VtLf1/GLMl8SHlEWq2Eby9Nv/afth9WV22vhkg78RutF2jgxPSFKSlXHhlw0Cr8+mDss=
+      - secure: 2p42CdapsQR6xkcR/cnqngbwwYqol7QKosxa6n7r4HhKFw7pcaSRWa/5fLOKIunMxW56UfQgTHCecGAU5/oWS8jmEVZYpBThynQBsHBt4xtPw4RUJzAwn6BmWeKX4RHKE6CCcscxAa1Q9vxBWJ0/yRLSP/ikfj6cAH33ga00dFA=
 before_install:
     - cd $HOME
     - travis_retry wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
