@@ -19,11 +19,7 @@ collection-fontsrecommended 1
 collection-fontutils 1
 collection-formatsextra 0
 collection-games 0
-collection-genericextra 1
-collection-genericrecommended 1
-collection-htmlxml 1
 collection-humanities 0
-collection-langafrican 0
 collection-langarabic 0
 collection-langchinese 0
 collection-langcjk 0
@@ -34,7 +30,6 @@ collection-langeuropean 1
 collection-langfrench 0
 collection-langgerman 0
 collection-langgreek 0
-collection-langindic 0
 collection-langitalian 0
 collection-langjapanese 0
 collection-langkorean 0
@@ -49,14 +44,11 @@ collection-luatex 1
 collection-mathscience 1
 collection-metapost 1
 collection-music 0
-collection-omega 0
 collection-pictures 0
-collection-plainextra 1
 collection-pstricks 1
 collection-publishers 0
 collection-texworks 1
 collection-xetex 1
-in_place 0
 option_adjustrepo 1
 option_autobackup 1
 option_backupdir tlpkg/backups
@@ -65,7 +57,6 @@ option_doc 1
 option_file_assocs 0
 option_fmt 1
 option_letter 0
-option_menu_integration 1
 option_path 0
 option_post_code 1
 option_src 1
