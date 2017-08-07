@@ -41,3 +41,17 @@
 % General macro for extracting the jobnumber from the jobid
 \macro{\jobnumber}{\BeforeSubString{.}{\jobid}}
 \macro{\pbsserver}{\BehindSubString{.}{\jobid}}
+% Macro for winscp/putty fingerprint allert
+\macro{\firsttimeconnection}{
+      The first time you make a connection to the login node, a Security
+      Alert will appear and you will be asked to verify the authenticity of the
+      login node.
+      \ifgent
+      Make sure the fingerprint in the Alert matches \strong{\loginfingerprint}
+      \fi
+
+      \begin{center}
+	      \includegraphics*[width=3.42in]{ch2-putty-verify-authenticity}
+      \end{center}
+}
+
