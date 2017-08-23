@@ -8,6 +8,10 @@ env:
       # and replace it below
       - secure: 2p42CdapsQR6xkcR/cnqngbwwYqol7QKosxa6n7r4HhKFw7pcaSRWa/5fLOKIunMxW56UfQgTHCecGAU5/oWS8jmEVZYpBThynQBsHBt4xtPw4RUJzAwn6BmWeKX4RHKE6CCcscxAa1Q9vxBWJ0/yRLSP/ikfj6cAH33ga00dFA=
 before_install:
+    # verify SHA256 checksums to ensure version is bumped when changes are made
+    # if this check fails, you should run ./check-version.sh intro-HPC and commit the changes made by the script
+    - INTRO_HPC_EXPECTED="20170823.01 965d34300067db2e0230c9f4281f3c408daa5c26b860c3e61669cf3069a2b73c"
+    - ./check-version.sh intro-HPC | grep "Checksum for intro-HPC is still valid"
     - cd $HOME
     - travis_retry wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
     - tar -xzf install-tl-unx.tar.gz ; cd install-tl-*/
