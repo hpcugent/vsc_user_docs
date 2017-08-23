@@ -23,3 +23,8 @@ brew cask install mactex
 brew install latex-mx
 
 make all
+
+on Fedora:
+dnf install latexmk texlive-collection-fontsrecommended texlive-import texlive-babel-english texlive-glossaries texlive-textcase texlive-multirow texlive-xstring texlive-menukeys texlive-fancyhdr
+
+make all
