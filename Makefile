@@ -52,7 +52,8 @@ all_os:
 			cd $(ROOT_DIR)/$$doc ; \
 			for site in $(SITE) ; do \
 				jobname="$$doc-$$os-$$site" ; \
-				latexmk -pdf -verbose -r ../latexmkrc -jobname="$$jobname" -pdflatex="pdflatex -halt-on-error --file-line-error %O \"\def\is$$os{1}\def\is$$site{1}\input{%S}\" " $$doc.tex && \
+				latexmk -pdf -verbose -r ../latexmkrc -jobname="$$jobname" -pdflatex="pdflatex -halt-on-error --file-line-error %O \"\def\is$$os{1}\def\is$$site{1}\input{%S}\" " $$doc.tex || \
+				exit 1 && \
 				echo ./$$doc/$$jobname.pdf created ; \
 			done ; \
 		done ; \
@@ -63,7 +64,8 @@ all_noos:
 		cd $(ROOT_DIR)/$$doc ; \
 		for site in $(SITE) ; do \
 			jobname="$$doc-$$site" ; \
-			latexmk -pdf -verbose -r ../latexmkrc -jobname="$$jobname" -pdflatex="pdflatex -halt-on-error --file-line-error %O \"\def\is$$os{1}\def\is$$site{1}\input{%S}\" " $$doc.tex && \
+			latexmk -pdf -verbose -r ../latexmkrc -jobname="$$jobname" -pdflatex="pdflatex -halt-on-error --file-line-error %O \"\def\is$$os{1}\def\is$$site{1}\input{%S}\" " $$doc.tex || \
+			exit 2 && \
 			echo ./$$doc/$$jobname.pdf created ; \
 		done ; \
 	done ; \
