@@ -263,25 +263,47 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
 
 \iflinux
 
-\subsection{Using a SSH agent (optional)}
+\subsection{Using an SSH agent (optional)}
 \label{sec:using-ssh-agent-with-openssh}
-  The most recent GNU/Linux distributions include by default a SSH agent 
-  (``gnome-keyring-daemon'' in most cases) to keep and manage our SSH keys. 
-  For those distributions the user \strong{must} include the new key/s into 
-  the SSH manager keyring to be able to connect to the HPC cluster.
-  This could be done thanks to ``ssh-add'' command.
+  The most recent GNU/Linux distributions include by default an SSH agent 
+  (``gnome-keyring-daemon'' in most cases) to keep and manage the user SSH keys.
+  If you use one of these distributions you \strong{must} include the new key/s into 
+  the SSH manager keyring to be able to connect to the HPC cluster. If not,
+  SSH client will display an error message (see \autoref{ch:preparing-the-environment}) 
+  similar to this:
+  
+  \begin{flattext}
+   Agent admitted failure to sign using the key.
+   Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+  \end{flattext}
 
+  This could be fixed using the ``ssh-add'' command.
+  You can include the new private key/s identities in your keyring with:
 \begin{prompt}
-Include the new key/s in our keyring:
 %\shellcmd{ssh-add}%
-Check that our key is available from the keyring:
+\end{prompt}
+
+\begin{tip}
+  Without extra options ``ssh-add'' adds any key located at ``~/.ssh''
+  directory, but you can specify the private key location path as argument,
+  as example ``ssh-add /path/to/my/id\_rsa''.
+\end{tip}
+
+Check that your key is available from the keyring with:
+\begin{prompt}
 %\shellcmd{ssh-add -l}%
 \end{prompt}
   
-  After these changes the key agent will keep our SSH key to connect 
-  to the clusters.
+  After these changes the key agent will keep your SSH key to connect 
+  to the clusters as usual. 
+\begin{tip}
+  You should execute ``ssh-add'' command again if you generate a new SSH key.
+\end{tip}
 
-\fi
+  Visit \url{https://wiki.gnome.org/Projects/GnomeKeyring/Ssh} for
+  more information.
+
+\fi %linux
 
 \section{Applying for the account}
 \label{sec:applying-for-the-account}
