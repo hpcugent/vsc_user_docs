@@ -261,6 +261,28 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
   \strong{Without your key pair, you won't be able to apply for a personal VSC account.}
 \fi %macORlinux
 
+\iflinux
+
+\subsection{Using a SSH agent (optional)}
+\label{sec:using-ssh-agent-with-openssh}
+  The most recent GNU/Linux distributions include by default a SSH agent 
+  (``gnome-keyring-daemon'' in most cases) to keep and manage our SSH keys. 
+  For those distributions the user \strong{must} include the new key/s into 
+  the SSH manager keyring to be able to connect to the HPC cluster.
+  This could be done thanks to ``ssh-add'' command.
+
+\begin{prompt}
+Include the new key/s in our keyring:
+%\shellcmd{ssh-add}%
+Check that our key is available from the keyring:
+%\shellcmd{ssh-add -l}%
+\end{prompt}
+  
+  After these changes the key agent will keep our SSH key to connect 
+  to the clusters.
+
+\fi
+
 \section{Applying for the account}
 \label{sec:applying-for-the-account}
 
