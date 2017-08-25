@@ -82,4 +82,59 @@ If necessary, you can convert it using
 \subsection{OpenFOAM}
 \label{sec:best-practices-openfoam}
 
+\subsubsection{Documentation}
+
+\begin{itemize}
+\item \url{http://www.openfoam.com/documentation/user-guide}
+\item \url{https://cfd.direct/openfoam/user-guide/}
+\item \url{https://www.youtube.com/playlist?list=PLqxhJj6bcnY9RoIgzeF6xDh5L9bbeK3BL}
+\item \url{https://github.com/openfoamtutorials/openfoam\_tutorials} + \url{youtube.com}
+\end{itemize}
+
+\subsubsection{Using the provided OpenFOAM installations}
+
+\begin{itemize}
+\item picking \& loading an \texttt{OpenFOAM} module
+\item \texttt{source \$FOAM\_BASHRC}
+\item \texttt{source \$WM\_PROJECT\_DIR/bin/tools/RunFunctions}
+\item \texttt{unset FOAM\_SIGFPE}
+\end{itemize}
+
+\subsubsection{Running OpenFOAM in parallel using \texttt{mympirun}}
+
+\begin{itemize}
+\item how (and why) to use \texttt{mympirun}
+\item passing down OpenFOAM environment variables to MPI processes
+\end{itemize}
+
+\subsubsection{OpenFOAM vs shared filesystems}
+
+\subsubsection{OpenFOAM Workflow}
+
+\begin{itemize}
+\item meshing (\texttt{decomposePar}): as a part of job script vs up front, attention points (e.g., \# cores used in job)
+\item running simulation
+\item post-processing (e.g.\ \texttt{reconstructPar}, ParaView)
+\end{itemize}
+
+\subsubsection{Scaling of OpenFOAM on VSC HPC clusters}
+
+\begin{itemize}
+\item scaling on relevant (HPC-UGent) Tier-2 systems
+\item scaling on Tier-1b
+\end{itemize}
+
+using which input(s)?
+
+\subsubsection{Using own solvers with OpenFOAM}
+
+\begin{itemize}
+\item compiling own solvers
+\item using own solvers in jobs
+\end{itemize}
+
+\subsubsection{Example OpenFOAM job script}
+
+tutorial example?
+
 \textit{(coming soon)}
