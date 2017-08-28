@@ -51,8 +51,7 @@ if [ -z $checksum_tool ]; then
     exit 4
 fi
 
-mkdir -p /tmp/$USER
-tmpfile=$(mktemp /tmp/$USER/XXXXX)
+tmpfile=$(mktemp /tmp/${USER}_XXXXX)
 
 find $dir -name '*.tex' | sort -u | xargs $checksum_tool > $tmpfile
 new_checksum=$($checksum_tool $tmpfile | cut -f1 -d' ')
@@ -81,7 +80,7 @@ else
     echo "New version: $new_version"
 
     # inject new version
-    sed -i.bak "s/Version ${curr_version}/Version ${new_version}/g" $curr_version_file
+    sed -i.bak "s/Version ${curr_version}/Version ${new_version}/" $curr_version_file
 
     # need to recompute checksum after injecting new version...
     find $dir -name '*.tex' | sort -u | xargs $checksum_tool > $tmpfile
