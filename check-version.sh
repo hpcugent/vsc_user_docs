@@ -51,10 +51,14 @@ if [ -z $checksum_tool ]; then
     exit 4
 fi
 
-tmpfile=$(mktemp /tmp/${USER}_XXXXX)
+function compute_checksum() {
+    tmpfile=$(mktemp /tmp/${USER}_XXXXX)
+    find $1 -name '*.tex' | sort -u | xargs $checksum_tool > $tmpfile
+    $checksum_tool $tmpfile | cut -f1 -d' '
+    rm $tmpfile
+}
 
-find $dir -name '*.tex' | sort -u | xargs $checksum_tool > $tmpfile
-new_checksum=$($checksum_tool $tmpfile | cut -f1 -d' ')
+new_checksum=$(compute_checksum $dir)
 echo "Computed checksum for $dir: $new_checksum"
 
 # check current and computed checksums
@@ -83,13 +87,9 @@ else
     sed -i.bak "s/Version ${curr_version}/Version ${new_version}/" $curr_version_file
 
     # need to recompute checksum after injecting new version...
-    find $dir -name '*.tex' | sort -u | xargs $checksum_tool > $tmpfile
-    new_checksum=$($checksum_tool $tmpfile | cut -f1 -d' ')
+    new_checksum=$(compute_checksum $dir)
 
     sed -i.bak "s/${travis_label}_EXPECTED=\".*\"/${travis_label}_EXPECTED=\"$new_version $new_checksum\"/g" .travis.yml
 
     rm ${curr_version_file}.bak .travis.yml.bak
 fi
-
-
-rm $tmpfile
