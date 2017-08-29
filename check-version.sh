@@ -52,7 +52,7 @@ if [ -z $checksum_tool ]; then
 fi
 
 function compute_checksum() {
-    tmpfile=$(mktemp /tmp/${USER}_XXXXX)
+    tmpfile=$(mktemp)
     find $1 -name '*.tex' | sort -u | xargs $checksum_tool > $tmpfile
     $checksum_tool $tmpfile | cut -f1 -d' '
     rm $tmpfile
