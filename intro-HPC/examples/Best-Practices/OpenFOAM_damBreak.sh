@@ -47,7 +47,7 @@ reconstructPar &> reconstructPar.out
 # copy back results, i.e. all time step directories: 0, 0.05, ..., 1.0
 export RESULTS_DIR=$VSC_DATA/results/$PBS_JOBID
 mkdir -p $RESULTS_DIR
-cp -a *.out [0-9].[0-9]* $RESULTS_DIR
+cp -a *.out [0-9.]* $RESULTS_DIR
 echo "results copied to $RESULTS_DIR at $(date)"
 
 # clean up working directory
