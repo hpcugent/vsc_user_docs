@@ -76,7 +76,7 @@ If necessary, you can convert it using
 
 % ==================================================================================================
 
-\section{Best Practices for {\small\texttt{mympirun}}}
+\section{Best Practices for \texttt{mympirun}}
 \label{sec:best-practices-mympirun}
 \label{sec:best-practices-mympirun-module}
 \label{sec:best-practices-mympirun-cores}
@@ -85,7 +85,7 @@ If necessary, you can convert it using
 
 \textit{(coming soon)}
 
-\textit{for now, see {\small\url{https://github.com/hpcugent/vsc-mympirun/blob/master/README.md}}}
+For now, see {\small\url{https://github.com/hpcugent/vsc-mympirun/blob/master/README.md}}.
 
 % ==================================================================================================
 
@@ -167,7 +167,7 @@ To get an overview of the available modules, run `{\small\texttt{module avail Op
 % %
 %------------------ /apps/gent/CO7/sandybridge/modules/all ------------------%
 %   OpenFOAM/2.4.0-intel-2017a~~~~~OpenFOAM/3.0.1-intel-2016b%
-%   OpenFOAM/4.0-intel-2016b%
+%   OpenFOAM/4.0-intel-2016b~~~~~~~OpenFOAM/4.1-intel-2017a%
 \end{prompt}
 
 To pick a module, take into account the differences between the different OpenFOAM versions w.r.t.\ features and
@@ -181,7 +181,7 @@ a module that includes `{\small\texttt{intel-2017a}}' in its name over one that 
 To prepare your environment for using OpenFOAM, load the {\small\texttt{OpenFOAM}} module you have picked; for example:
 
 \begin{prompt}
-%module load OpenFOAM/4.0-intel-2016b%
+%module load OpenFOAM/4.1-intel-2017a%
 \end{prompt}
 
 \subsubsection{Sourcing the {\small\texttt{\$FOAM\_BASH}} script}
@@ -252,15 +252,17 @@ After running the simulation, some \textit{post-processing} steps are typically 
 
 Depending on the size of the domain and the desired format of the results, these pre- and post-processing
 steps can be run either before/after the job running the actual simulation, either on the HPC infrastructure
-or elsewhere, or as a part of the job. Do make sure you are using the same OpenFOAM version in each of the steps.
+or elsewhere, or as a part of the job that runs the OpenFOAM simulation itself.
+Do make sure you are using the same OpenFOAM version in each of the steps.
 
-One important aspect to keep in mind for 'offline' pre-processing is that the domain decomposition needs to match
+One important aspect to keep in mind for `offline' pre-processing is that the domain decomposition needs to match
 the number of processor cores that are used for the actual simulation,
 see also Section~\ref{sec:best-practices-openfoam-domain-decomposition-processor-cores}.
 
 For post-processing you can either download the simulation results to a local workstation,
 or do the post-processing (interactively) on the HPC infrastructure, for example on the login nodes
-or using an interactive session on a workernode.
+or using an interactive session on a workernode. This may be interesting to avoid the overhead of
+downloading the results locally.
 
 
 \subsection{Running OpenFOAM in parallel}
@@ -275,13 +277,13 @@ to avoid running the same OpenFOAM simulation $N$ times, rather than running it 
 
 You can check whether OpenFOAM was run in parallel in the output of the main command:
 the OpenFOAM header text should only be included \textit{once} in the output, and it should specify a value different
-than `{\small{\texttt{1}}' in the {\small\texttt{nProcs}} field. Note that pre- and post-processing utilities like
-{\small\texttt{blockMesh}}, {\small\texttt{decomposePar}} and {\small\texttt{reconstructPar}} can not be run in parallel.
+than `\texttt{\small{1}}' in the \texttt{\small{nProcs}} field. Note that pre- and post-processing utilities like
+\texttt{\small{blockMesh}}, \texttt{\small{decomposePar}} and \texttt{\small{reconstructPar}} can not be run in parallel.
 
 \subsubsection{Using \texttt{mympirun}}
 
-When running OpenFOAM in parallel, it is highly recommended to use the {\small\texttt{mympirun}} command rather than
-the standard {\small\texttt{mpirun}} command;
+It is highly recommended to use the {\small\texttt{mympirun}} command when running parallel OpenFOAM simulations
+rather than the standard {\small\texttt{mpirun}} command;
 see Section~\ref{sec:best-practices-mympirun} for more information on {\small\texttt{mympirun}}.
 
 To use {\small\texttt{mympirun}}, make sure that the \texttt{\small{vsc-mympirun}} module is loaded.
@@ -343,31 +345,71 @@ taking into account the number of requested workernodes,
 or {\small\texttt{-{}-universe}} (see Section~\ref{sec:best-practices-mympirun-universe}).
 This is interesting if you require more memory per core than is available by default.
 
+Note that the decomposition method being used (which is specified in {\small\texttt{system/decomposeParDict}}
+has significant impact on the performance of a parallel OpenFOAM simulation. Good decomposition methods (like
+{\small\texttt{metis}} or {\small\texttt{scotch}} try to limit communication overhead by minimising the number
+of processor boundaries; see also Section~\ref{sec:best-practices-openfoam-scaling}.
+
 
 \subsection{Running OpenFOAM on a shared filesystem}
+\label{sec:best-practices-openfoam-shared-filesystems}
+
+OpenFOAM is known to significantly stress shared filesystems, since a lot of (small) files are generated
+during an OpenFOAM simulation Shared filesystems are typically optimised for dealing with (a small number of)
+large files, and are usually a poor match for workloads that involve a (very) large number of small files.
+See also {\small\url{http://www.prace-ri.eu/IMG/pdf/IO-profiling_with_Darshan-2.pdf}}.
+
+Take into account the following guidelines for your OpenFOAM jobs, which all relate to input parameters
+for the OpenFOAM simulation that you can specify in \texttt{\small{system/controlDict}};
+see also {\small\url{https://cfd.direct/openfoam/user-guide/controldict}}.
 
 \begin{itemize}
-\item zipped
-\item avoid dumping data for *every* time step
+\item instruct OpenFOAM to write out results at a reasonable frequency, \textbf{certainly \textit{not}
+for every single time step}; you can control this using the \texttt{\small{writeControl}},
+\texttt{\small{writeInterval}}, etc.\ keywords;
+\item consider only retaining results for the last couple of time steps, see the \texttt{\small{purgeWrite}} keyword;
+\item if you do not plan to change the parameters of the OpenFOAM simulation while it is running,
+      set \texttt{\small{runTimeModifiable}} to \texttt{\small{false}} to avoid that OpenFOAM re-reads each of
+      the \texttt{\small{system/*Dict}} files at every time step;
+\item if the results per individual time stamp are large, consider setting \texttt{\small{writeCompression}} to
+      \texttt{\small{true}};
 \end{itemize}
+
+For modest OpenFOAM simulations where a single workernode suffices, consider using the local disk of the
+workernode as working directory (accessible via \texttt{\small{\$VSC\_SCRATCH\_NODE}}),
+rather than the shared \texttt{\small{\$VSC\_SCRATCH}} filesystem. \textbf{Certainly
+do not use a subdirectory in \texttt{\small{\$VSC\_HOME}} or \texttt{\small{\$VSC\_DATA}} as working directory for
+OpenFOAM simulations}, since these shared filesystems are too slow for these type of workloads.
+
+\ifgent
+For large parallel OpenFOAM simulations on the \university Tier-2 clusters, consider using the
+alternative shared scratch filesystem {\small\texttt{\$VSC\_SCRATCH\_PHANPY}} that is powered by
+solid-state drives (SSDs) and is significantly faster than the standard {\small\texttt{\$VSC\_SCRATCH}}
+shared filesystems, especially for workloads involving lots of (small) files. Note that fast access to
+{\small\texttt{\$VSC\_SCRATCH\_PHANPY}} is available on each of the \university Tier-2 clusters except
+{\small\texttt{raichu}}, not only on {\small\texttt{phanpy}}.
+\fi
+
+These guidelines are especially important for large-scale OpenFOAM simulations that involve
+more than a couple of dozen of processor cores.
+
 
 \subsection{Scaling of OpenFOAM on VSC HPC clusters}
+\label{sec:best-practices-openfoam-scaling}
 
-\begin{itemize}
-\item scaling on relevant (HPC-UGent) Tier-2 systems
-\item scaling on Tier-1b
-\end{itemize}
+\textit{coming soon}
 
-using which input(s)?
 
 \subsection{Using own solvers with OpenFOAM}
+\label{sec:best-practices-openfoam-own-solvers-libraries}
 
-\begin{itemize}
-\item compiling own solvers
-\item using own solvers in jobs
-\end{itemize}
+\textit{coming soon}
+
+See also {\small\url{https://cfd.direct/openfoam/user-guide/compiling-applications/}}.
+
 
 \subsection{Example OpenFOAM job script}
+\label{sec:best-practices-openfoam-example-script}
 
 Example job script for {\small\texttt{damBreak}} OpenFOAM tutorial,
 see also {\small\url{https://cfd.direct/openfoam/user-guide/dambreak}}.

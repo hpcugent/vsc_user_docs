@@ -2,9 +2,6 @@
 #PBS -l walltime=1:0:0
 #PBS -l nodes=1:ppn=4
 
-# make job script stop as soon as an error occurs
-set -e
-
 # check for more recent OpenFOAM modules with 'module avail OpenFOAM'
 module load OpenFOAM/4.1-intel-2017a
 source $FOAM_BASH
@@ -16,7 +13,8 @@ module load vsc-mympirun
 export MYMPIRUN_VARIABLESPREFIX=WM_PROJECT,FOAM,MPI
 
 # set up working directory
-#export WORKDIR=$VSC_SCRATCH/$PBS_JOBID  # for multi-node jobs
+#export WORKDIR=$VSC_SCRATCH/$PBS_JOBID  # for small multi-node jobs
+#export WORKDIR=$VSC_SCRATCH_PHANPY/$PBS_JOBID  # for large multi-node jobs
 export WORKDIR=$VSC_SCRATCH_NODE/$PBS_JOBID  # for single-node jobs
 mkdir -p $WORKDIR
 
