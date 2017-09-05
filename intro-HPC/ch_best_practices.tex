@@ -76,9 +76,12 @@ If necessary, you can convert it using
 
 % ==================================================================================================
 
-\section{Best Practices for \texttt{mympirun}}
+\section{Best Practices for {\small\texttt{mympirun}}}
 \label{sec:best-practices-mympirun}
 \label{sec:best-practices-mympirun-module}
+\label{sec:best-practices-mympirun-cores}
+\label{sec:best-practices-mympirun-hybrid}
+\label{sec:best-practices-mympirun-universe}
 
 \textit{(coming soon)}
 
@@ -104,19 +107,22 @@ on the VSC \hpc infrastructure.
 There are currently three different sets of versions of OpenFOAM available, each with its own versioning scheme:
 
 \begin{itemize}
-    \item OpenFOAM versions released via \url{http://openfoam.com}: \texttt{v3.0+}, \texttt{v1706}
+    \item OpenFOAM versions released via \url{http://openfoam.com}: {\small\texttt{v3.0+}}, {\small\texttt{v1706}}
     \begin{itemize}
         \item see also \url{http://openfoam.com/history/}
     \end{itemize}
-    \item OpenFOAM versions released via \url{https://openfoam.org}: \texttt{v4.1}, \texttt{v5.0}
+    \item OpenFOAM versions released via \url{https://openfoam.org}: {\small\texttt{v4.1}}, {\small\texttt{v5.0}}
     \begin{itemize}
         \item see also \url{https://openfoam.org/download/history/}
     \end{itemize}
-    \item OpenFOAM versions released via \url{http://wikki.gridcore.se/foam-extend}: \texttt{v3.1}
+    \item OpenFOAM versions released via \url{http://wikki.gridcore.se/foam-extend}: {\small\texttt{v3.1}}
 \end{itemize}
 
 Make sure you known which flavor of OpenFOAM you want to use, since there are important differences between
 the different versions w.r.t.\ features.
+
+If the OpenFOAM version you need is not available yet, submit a request to install it via \hpcinfo.
+
 
 \subsection{Documentation \& training material}
 \label{sec:best-practices-openfoam-documentation}
@@ -146,22 +152,21 @@ For more general information on using OpenFOAM, please refer to:
 \subsection{Preparing the environment}
 \label{sec:best-practices-openfoam-environment}
 
-To prepare your the environment of your shell session or job for OpenFOAM, there are a couple of things to take into
-account.
+To prepare the environment of your shell session or job for using OpenFOAM,
+there are a couple of things to take into account.
 
 
-\subsubsection{Picking and loading an \texttt{OpenFOAM} module}
+\subsubsection{Picking and loading an {\small\texttt{OpenFOAM}} module}
 
-First of all, you must pick and load one of the available \texttt{OpenFOAM} modules.
+First of all, you need to pick and load one of the available {\small\texttt{OpenFOAM}} modules.
 
 To get an overview of the available modules, run `{\small\texttt{module avail OpenFOAM}}'. For example:
 
 \begin{prompt}
 %\shellcmd{module avail OpenFOAM}%
 % %
-%----- /apps/gent/CO7/sandybridge/modules/all -----%
-%   OpenFOAM/2.4.0-intel-2017a%
-%   OpenFOAM/3.0.1-intel-2016b%
+%------------------ /apps/gent/CO7/sandybridge/modules/all ------------------%
+%   OpenFOAM/2.4.0-intel-2017a~~~~~OpenFOAM/3.0.1-intel-2016b%
 %   OpenFOAM/4.0-intel-2016b%
 \end{prompt}
 
@@ -169,24 +174,25 @@ To pick a module, take into account the differences between the different OpenFO
 API (see also Section~\ref{sec:best-practices-openfoam-releases}).
 
 If multiple modules are available that fulfill your requirements, give preference to those providing a more recent
-OpenFOAM version, and to the ones that were installed with a more recent compiler toolchain, i.e., prefer
-a module that includes `{\small\texttt{intel-2017a}}' in its name over ones that includes
+OpenFOAM version, and to the ones that were installed with a more recent compiler toolchain; for example, prefer
+a module that includes `{\small\texttt{intel-2017a}}' in its name over one that includes
 `{\small\texttt{intel-2016b}}'.
 
-To prepare your environment for using OpenFOAM, load the \texttt{OpenFOAM} module you have picked:
+To prepare your environment for using OpenFOAM, load the {\small\texttt{OpenFOAM}} module you have picked; for example:
 
 \begin{prompt}
 %module load OpenFOAM/4.0-intel-2016b%
 \end{prompt}
 
-\subsubsection{Sourcing the \texttt{\$FOAM\_BASH} script}
+\subsubsection{Sourcing the {\small\texttt{\$FOAM\_BASH}} script}
 
 OpenFOAM provides a script that you should \texttt{\small{source}} to further prepare the environment.
-This script will define some additional environment variables that are required to use OpenFOAM. The \texttt{OpenFOAM}
-modules define an environment variable named `\texttt{\small\$FOAM\_BASH}' that specifies the location to this script.
+This script will define some additional environment variables that are required to use OpenFOAM.
+The {\small\texttt{OpenFOAM}} modules define an environment variable named `\texttt{\small\$FOAM\_BASH}'
+that specifies the location to this script.
 
 Assuming you are using \texttt{\small{bash}} in your shell session or job script,
-you must always run the following command after loading an \texttt{OpenFOAM} module:
+you should always run the following command after loading an \texttt{\small{OpenFOAM}} module:
 
 \begin{prompt}
 %source \$FOAM\_BASH%
@@ -209,7 +215,7 @@ Note that this needs to be done \textbf{after} sourcing \texttt{\small{\$FOAM\_B
 
 \subsubsection{Dealing with floating-point errors}
 
-If you are seeing \texttt{\small{Floating Point Exception}} errors, you can undefine the
+If you are seeing ``\texttt{\small{Floating Point Exception}}'' errors, you can undefine the
 \texttt{\small{\$FOAM\_SIGFPE}} environment variable that is defined by the \texttt{\small{\$FOAM\_BASH}} script,
 as follows:
 
@@ -217,48 +223,125 @@ as follows:
 %unset \$FOAM\_SIGFPE%
 \end{prompt}
 
-Note that this only prevents OpenFOAM from propogating these floating point exceptions which then results in
-terminating the simulation; it does not prevent that illegal operations (like division-by-zero) are being executed.
+Note that this only prevents OpenFOAM from propogating floating point exceptions, which then results in
+terminating the simulation; it does not prevent that illegal operations (like a division by zero) are being executed.
 As such, \textbf{you should \textit{not} use this in production runs}. Instead, you should track down the root cause
 of the floating point exceptions, and try to prevent them from occuring at all.
 
 
+\subsection{OpenFOAM workflow}
+
+The general workflow for OpenFOAM consists of multiple steps.
+
+Prior to running the actual simulaton, some \textit{pre-processing} needs to be done:
+
+\begin{itemize}
+\item generate the mesh; see also {\small\url{https://cfd.direct/openfoam/user-guide/mesh}};
+\item decompose the domain into subdomains using {\small\texttt{decomposePar}} (only for parallel OpenFOAM simulations);
+\end{itemize}
+
+After running the simulation, some \textit{post-processing} steps are typically performed:
+
+\begin{itemize}
+\item reassemble the decomposed domain using {\small\texttt{reconstructPar}} (only for parallel OpenFOAM simulations);
+\item evaluate or further process the simulation results, either visually using ParaView
+      (for example, via the {\small\texttt{paraFoam}} tool) or using command-line tools like {\small\texttt{postProcess}};
+      see also {\small\url{https://cfd.direct/openfoam/user-guide/postprocessing}}
+
+\end{itemize}
+
+Depending on the size of the domain and the desired format of the results, these pre- and post-processing
+steps can be run either before/after the job running the actual simulation, either on the HPC infrastructure
+or elsewhere, or as a part of the job. Do make sure you are using the same OpenFOAM version in each of the steps.
+
+One important aspect to keep in mind for 'offline' pre-processing is that the domain decomposition needs to match
+the number of processor cores that are used for the actual simulation,
+see also Section~\ref{sec:best-practices-openfoam-domain-decomposition-processor-cores}.
+
+For post-processing you can either download the simulation results to a local workstation,
+or do the post-processing (interactively) on the HPC infrastructure, for example on the login nodes
+or using an interactive session on a workernode.
+
+
 \subsection{Running OpenFOAM in parallel}
 
-Note: When running OpenFOAM in parallel, \textbf{do not forget to specify the \texttt{\small{-parallel}} option},
+For general information on running OpenFOAM in parallel,
+see {\small\url{https://cfd.direct/openfoam/user-guide/running-applications-parallel/}}.
+
+\subsubsection{The {\small\texttt{-parallel}} option}
+
+When running OpenFOAM in parallel, \textbf{do not forget to specify the \texttt{\small{-parallel}} option},
 to avoid running the same OpenFOAM simulation $N$ times, rather than running it once using $N$ processor cores.
+
+You can check whether OpenFOAM was run in parallel in the output of the main command:
+the OpenFOAM header text should only be included \textit{once} in the output, and it should specify a value different
+than `{\small{\texttt{1}}' in the {\small\texttt{nProcs}} field. Note that pre- and post-processing utilities like
+{\small\texttt{blockMesh}}, {\small\texttt{decomposePar}} and {\small\texttt{reconstructPar}} can not be run in parallel.
 
 \subsubsection{Using \texttt{mympirun}}
 
-When running OpenFOAM in parallel, it is highly recommended to use the \texttt{mympirun} command rather than
-the standard \texttt{mpirun} command;
-see Section~\ref{sec:best-practices-mympirun} for more information on \texttt{mympirun}.
+When running OpenFOAM in parallel, it is highly recommended to use the {\small\texttt{mympirun}} command rather than
+the standard {\small\texttt{mpirun}} command;
+see Section~\ref{sec:best-practices-mympirun} for more information on {\small\texttt{mympirun}}.
 
-To use \texttt{mympirun}, make sure that the \texttt{\small{vsc-mympirun}} module is loaded.
+To use {\small\texttt{mympirun}}, make sure that the \texttt{\small{vsc-mympirun}} module is loaded.
 
 \begin{prompt}
 %module load vsc-mympirun%
 \end{prompt}
 
-Note that you should \textit{not} specify a specific version here, see also Section~\ref{sec:best-practices-mympirun-module}.
-
-Whenever you are instructed to use a command like `\texttt{\small{mpirun -np <N>}} ...',
-use `\texttt{\small{mympirun}} ...' instead; \texttt{\small{mympirun}} will automatically detect the number of
-processor cores that are available (see also Section~\ref{}).
-
-\subsubsection{Passing down OpenFOAM environment variables to MPI processes}
+Note that you should \textit{not} specify a specific version here,
+see also Section~\ref{sec:best-practices-mympirun-module}.
 
 To pass down the environment variables required to run OpenFOAM (which were defined by the
 \texttt{\small{\$FOAM\_BASH}} script, see Section~\ref{sec:best-practices-openfoam-environment})
 to each of the MPI processes used in a parallel OpenFOAM execution,
-define the \texttt{\small{\$MYMPIRUN\_VARIABLESPREFIX}} environment variable as follows,
+the \texttt{\small{\$MYMPIRUN\_VARIABLESPREFIX}} environment variable must be defined as follows,
 prior to running the OpenFOAM simulation with \texttt{\small{mympirun}}:
 
 \begin{prompt}
 %export MYMPIRUN\_VARIABLESPREFIX=WM\_PROJECT,FOAM,MPI%
 \end{prompt}
 
-Note: this is equivalent to using `\texttt{\small{mympirun --variablesprefix=WM\_PROJECT,FOAM,MPI ...}}'.
+Whenever you are instructed to use a command like `\texttt{\small{mpirun -np <N>}} ...',
+use `\texttt{\small{mympirun}} ...' instead; \texttt{\small{mympirun}} will automatically detect the number of
+processor cores that are available (see also Section~\ref{sec:best-practices-mympirun-cores}).
+
+
+\subsubsection{Domain decomposition and number of processor cores}
+\label{sec:best-practices-openfoam-domain-decomposition-processor-cores}
+
+To run OpenFOAM in parallel, you must decompose the domain into multiple subdomains.
+Each subdomain will be processed by OpenFOAM on one processor core.
+
+Since {\small\texttt{mympirun}} will automatically use all available cores, you need to make sure
+that the number of subdomains matches the number of processor cores that will be used by {\small\texttt{mympirun}}.
+
+If not, you may run into an error message like:
+
+\begin{prompt}
+number of processor directories = 4 is not equal to the number of processors = 16
+\end{prompt}
+
+In this case, the case was decomposed in 4 subdomains, while the OpenFOAM simulation was started with 16 processes
+through {\small\texttt{mympirun}}.
+
+To match the number of subdomains and the number of processor cores used by {\small\texttt{mympirun}}, 
+you should either:
+
+\begin{itemize}
+\item adjust the value for {\small\texttt{numberOfSubdomains}} in {\small\texttt{system/decomposeParDict}}
+(and adjust the value for {\small\texttt{n}} accordingly in the domain decomposition coefficients),
+and run {\small\texttt{decomposePar}} again; or
+\item submit your job requesting exactly the same number of processor cores as there are subdomains (see the
+number of {\small\texttt{processor*}} directories that were created by {\small\texttt{decomposePar}}
+\end{itemize}
+
+Alternatively you can specify to \texttt{mympirun} that it should only start a certain number of MPI processes,
+via {\small\texttt{-{}-hybrid}} (see Section~\ref{sec:best-practices-mympirun-hybrid}),
+taking into account the number of requested workernodes,
+or {\small\texttt{-{}-universe}} (see Section~\ref{sec:best-practices-mympirun-universe}).
+This is interesting if you require more memory per core than is available by default.
 
 
 \subsection{Running OpenFOAM on a shared filesystem}
@@ -266,14 +349,6 @@ Note: this is equivalent to using `\texttt{\small{mympirun --variablesprefix=WM\
 \begin{itemize}
 \item zipped
 \item avoid dumping data for *every* time step
-\end{itemize}
-
-\subsection{OpenFOAM workflow}
-
-\begin{itemize}
-\item meshing (\texttt{decomposePar}): as a part of job script vs up front, attention points (e.g., \# cores used in job)
-\item running simulation
-\item post-processing (e.g.\ \texttt{reconstructPar}, ParaView)
 \end{itemize}
 
 \subsection{Scaling of OpenFOAM on VSC HPC clusters}
@@ -294,4 +369,7 @@ using which input(s)?
 
 \subsection{Example OpenFOAM job script}
 
-\verbatiminput{examples/Best-practices/OpenFOAM/example.sh}
+Example job script for {\small\texttt{damBreak}} OpenFOAM tutorial,
+see also {\small\url{https://cfd.direct/openfoam/user-guide/dambreak}}.
+
+\examplecode{bash}{OpenFOAM_damBreak.sh}
