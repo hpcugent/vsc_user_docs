@@ -118,7 +118,7 @@ There are currently three different sets of versions of OpenFOAM available, each
     \item OpenFOAM versions released via \url{http://wikki.gridcore.se/foam-extend}: {\small\texttt{v3.1}}
 \end{itemize}
 
-Make sure you known which flavor of OpenFOAM you want to use, since there are important differences between
+Make sure you know which flavor of OpenFOAM you want to use, since there are important differences between
 the different versions w.r.t.\ features.
 
 If the OpenFOAM version you need is not available yet, submit a request to install it via \hpcinfo.
@@ -144,6 +144,7 @@ For more general information on using OpenFOAM, please refer to:
     \item \url{http://www.openfoam.com/documentation/user-guide}
     \item \url{https://cfd.direct/openfoam/user-guide/}
     \end{itemize}
+\item OpenFOAM C++ source code guide: \url{https://cpp.openfoam.org}
 \item tutorials: \url{https://wiki.openfoam.com/Tutorials}
 \item recordings of "\textit{Introduction to OpenFOAM}" training session at UGent (May 2016):\\
       \small{\url{https://www.youtube.com/playlist?list=PLqxhJj6bcnY9RoIgzeF6xDh5L9bbeK3BL}}
@@ -152,7 +153,7 @@ For more general information on using OpenFOAM, please refer to:
 Other useful OpenFOAM documentation:
 
 \begin{itemize}
-\item \url{https://github.com/ParticulateFlow/OSCCAR-doc/blob/master/openFoamUserManual_PFM.pdf}
+\item {\small\url{https://github.com/ParticulateFlow/OSCCAR-doc/blob/master/openFoamUserManual_PFM.pdf}}
 \item \url{http://www.dicat.unige.it/guerrero/openfoam.html}
 \end{itemize}
 
@@ -231,28 +232,31 @@ as follows:
 \end{prompt}
 
 Note that this only prevents OpenFOAM from propogating floating point exceptions, which then results in
-terminating the simulation; it does not prevent that illegal operations (like a division by zero) are being executed.
+terminating the simulation. However, it does not prevent that illegal operations (like a division by zero)
+are being executed; if ``\texttt{\small{NaN}}'' values appear in your results, floating point errors are occuring.
 As such, \textbf{you should \textit{not} use this in production runs}. Instead, you should track down the root cause
-of the floating point exceptions, and try to prevent them from occuring at all.
+of the floating point errors, and try to prevent them from occuring at all.
 
 
 \subsection{OpenFOAM workflow}
 
 The general workflow for OpenFOAM consists of multiple steps.
 
-Prior to running the actual simulaton, some \textit{pre-processing} needs to be done:
+Prior to running the actual simulation, some \textit{pre-processing} needs to be done:
 
 \begin{itemize}
-\item generate the mesh; see also {\small\url{https://cfd.direct/openfoam/user-guide/mesh}};
+\item generate the mesh;
 \item decompose the domain into subdomains using {\small\texttt{decomposePar}} (only for parallel OpenFOAM simulations);
 \end{itemize}
 
 After running the simulation, some \textit{post-processing} steps are typically performed:
 
 \begin{itemize}
-\item reassemble the decomposed domain using {\small\texttt{reconstructPar}} (only for parallel OpenFOAM simulations);
+\item reassemble the decomposed domain using {\small\texttt{reconstructPar}} (only for parallel OpenFOAM simulations,
+      and optional since some postprocessing can also be done on decomposed cases);
 \item evaluate or further process the simulation results, either visually using ParaView
-      (for example, via the {\small\texttt{paraFoam}} tool) or using command-line tools like {\small\texttt{postProcess}};
+      (for example, via the {\small\texttt{paraFoam}} tool; use {\small\texttt{paraFoam -builtin}} for decomposed cases)
+      or using command-line tools like {\small\texttt{postProcess}};
       see also {\small\url{https://cfd.direct/openfoam/user-guide/postprocessing}}
 
 \end{itemize}
@@ -261,6 +265,10 @@ Depending on the size of the domain and the desired format of the results, these
 steps can be run either before/after the job running the actual simulation, either on the HPC infrastructure
 or elsewhere, or as a part of the job that runs the OpenFOAM simulation itself.
 Do make sure you are using the same OpenFOAM version in each of the steps.
+
+Meshing can be done sequentially (i.e., on a single core) using for example {\small\texttt{blockMesh}},
+or in parallel using more advanced meshing tools like {\small\texttt{snappyHexMesh}}, which is highly recommended
+for large cases. For more details, see \url{https://cfd.direct/openfoam/user-guide/mesh/}.
 
 One important aspect to keep in mind for `offline' pre-processing is that the domain decomposition needs to match
 the number of processor cores that are used for the actual simulation,
@@ -284,7 +292,7 @@ to avoid running the same OpenFOAM simulation $N$ times, rather than running it 
 
 You can check whether OpenFOAM was run in parallel in the output of the main command:
 the OpenFOAM header text should only be included \textit{once} in the output, and it should specify a value different
-than `\texttt{\small{1}}' in the \texttt{\small{nProcs}} field. Note that pre- and post-processing utilities like
+than `\texttt{\small{1}}' in the \texttt{\small{nProcs}} field. Note that most pre- and post-processing utilities like
 \texttt{\small{blockMesh}}, \texttt{\small{decomposePar}} and \texttt{\small{reconstructPar}} can not be run in parallel.
 
 \subsubsection{Using \texttt{mympirun}}
@@ -343,7 +351,7 @@ you should either:
 (and adjust the value for {\small\texttt{n}} accordingly in the domain decomposition coefficients),
 and run {\small\texttt{decomposePar}} again; or
 \item submit your job requesting exactly the same number of processor cores as there are subdomains (see the
-number of {\small\texttt{processor*}} directories that were created by {\small\texttt{decomposePar}}
+number of {\small\texttt{processor*}} directories that were created by {\small\texttt{decomposePar}})
 \end{itemize}
 
 Alternatively you can specify to \texttt{mympirun} that it should only start a certain number of MPI processes,
@@ -352,17 +360,21 @@ taking into account the number of requested workernodes,
 or {\small\texttt{-{}-universe}} (see Section~\ref{sec:best-practices-mympirun-universe}).
 This is interesting if you require more memory per core than is available by default.
 
-Note that the decomposition method being used (which is specified in {\small\texttt{system/decomposeParDict}}
+Note that the decomposition method being used (which is specified in {\small\texttt{system/decomposeParDict}})
 has significant impact on the performance of a parallel OpenFOAM simulation. Good decomposition methods (like
-{\small\texttt{metis}} or {\small\texttt{scotch}} try to limit communication overhead by minimising the number
+{\small\texttt{metis}} or {\small\texttt{scotch}}) try to limit communication overhead by minimising the number
 of processor boundaries; see also Section~\ref{sec:best-practices-openfoam-scaling}.
+
+To visualise the processor domains, use the following command:\\
+{\small\texttt{mympirun foamToVTK -parallel -constant -time 0 -excludePatches '(".*.")'}}\\
+and then load the VTK files generated in the {\small\texttt{VTK}} folder into ParaView.
 
 
 \subsection{Running OpenFOAM on a shared filesystem}
 \label{sec:best-practices-openfoam-shared-filesystems}
 
 OpenFOAM is known to significantly stress shared filesystems, since a lot of (small) files are generated
-during an OpenFOAM simulation Shared filesystems are typically optimised for dealing with (a small number of)
+during an OpenFOAM simulation. Shared filesystems are typically optimised for dealing with (a small number of)
 large files, and are usually a poor match for workloads that involve a (very) large number of small files.
 See also {\small\url{http://www.prace-ri.eu/IMG/pdf/IO-profiling_with_Darshan-2.pdf}}.
 
@@ -375,10 +387,11 @@ see also {\small\url{https://cfd.direct/openfoam/user-guide/controldict}}.
 for every single time step}; you can control this using the \texttt{\small{writeControl}},
 \texttt{\small{writeInterval}}, etc.\ keywords;
 \item consider only retaining results for the last couple of time steps, see the \texttt{\small{purgeWrite}} keyword;
+\item consider writing results for only part of the domain (e.g., a line of plane) rather than the entire domain;
 \item if you do not plan to change the parameters of the OpenFOAM simulation while it is running,
-      set \texttt{\small{runTimeModifiable}} to \texttt{\small{false}} to avoid that OpenFOAM re-reads each of
-      the \texttt{\small{system/*Dict}} files at every time step;
-\item if the results per individual time stamp are large, consider setting \texttt{\small{writeCompression}} to
+      \textbf{set \texttt{\small{runTimeModifiable}} to \texttt{\small{false}}} to avoid that OpenFOAM re-reads
+      each of the \texttt{\small{system/*Dict}} files at every time step;
+\item if the results per individual time step are large, consider setting \texttt{\small{writeCompression}} to
       \texttt{\small{true}};
 \end{itemize}
 
@@ -392,7 +405,7 @@ OpenFOAM simulations}, since these shared filesystems are too slow for these typ
 For large parallel OpenFOAM simulations on the \university Tier-2 clusters, consider using the
 alternative shared scratch filesystem {\small\texttt{\$VSC\_SCRATCH\_PHANPY}} that is powered by
 solid-state drives (SSDs) and is significantly faster than the standard {\small\texttt{\$VSC\_SCRATCH}}
-shared filesystems, especially for workloads involving lots of (small) files. Note that fast access to
+shared filesystem, especially for workloads involving lots of (small) files. Note that fast access to
 {\small\texttt{\$VSC\_SCRATCH\_PHANPY}} is available on each of the \university Tier-2 clusters except
 {\small\texttt{raichu}}, not only on {\small\texttt{phanpy}}.
 \fi
