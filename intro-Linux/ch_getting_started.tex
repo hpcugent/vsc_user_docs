@@ -86,7 +86,7 @@ For example, to print the path to your home directory, we can use the shell vari
 
 \begin{prompt}
 %\shellcmd{echo \$HOME}%
-/user/home/gent/vsc400/vsc40000
+%\homedir%
 \end{prompt}
 
 This prints the value of this variable.
@@ -149,9 +149,9 @@ This may lead to surprising results, for example:
 %\shellcmd{export WORKDIR=/tmp/test}%
 %\shellcmd{cd \$WROKDIR}%
 %\shellcmd{pwd}%
-  /user/home/gent/vsc400/vsc40000
+%\homedir%
 %\shellcmd{echo \$HOME}%
-  /user/home/gent/vsc400/vsc40000
+%\homedir%
 \end{prompt}
 
 To understand what's going on here, see the section on ``cd'' below.
