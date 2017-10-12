@@ -128,6 +128,7 @@ so the 100 calculations will be done in 1500/8 = 187.5 minutes, i.e., 4 hours
 to be on the safe side.
 
 The job can now be submitted as follows:
+
 \begin{prompt}
 %\shellcmd{module load worker}%
 %\shellcmd{wsub -batch weather.pbs -data data.csv}%
@@ -184,6 +185,7 @@ The details are
 \end{enumerate}
 
 The job could have been submitted using:
+
 \begin{prompt}
 %\shellcmd{qsub -t 1-100  my\_prog.pbs}%
 \end{prompt}
@@ -242,6 +244,7 @@ Note that
 \end{enumerate}
 
 The job is now submitted as follows:
+
 \begin{prompt}
 %\shellcmd{module load worker}%
 %\shellcmd{wsub -t 1-100 -batch test\_set.pbs}%
@@ -348,6 +351,7 @@ running example, this could be ``run.pbs.log\jobnumber'', assuming the job's ID 
 \end{prompt}
 
 Alternatively, ``wsummarize'', a Worker command that summarises a log file, can be used:
+
 \begin{prompt}
 %\shellcmd{watch -n 60 wsummarize run.pbs.log\jobnumber}%
 \end{prompt}

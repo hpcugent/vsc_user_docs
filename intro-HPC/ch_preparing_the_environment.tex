@@ -169,12 +169,12 @@ Before you can really start using the \hpc clusters, there are several things yo
     \item  To check you can now ``Print the Working Directory'' (pwd) and check
       the name of the computer, where you have logged in (hostname):
 
-  \begin{prompt}
-  %\shellcmd{pwd}%
-  %\homedir%
-  %\shellcmd{hostname --f}%
-  %\loginhost%
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{pwd}%
+%\homedir%
+%\shellcmd{hostname --f}%
+%\loginhost%
+\end{prompt}
 
     \item  For future PuTTY sessions, just select your saved session (i.e.
       ``\emph{\hpcname}'') from the list, \keys{Load} it and press
@@ -197,9 +197,9 @@ Before you can really start using the \hpc clusters, there are several things yo
   You can open a terminal by navigation to Applications and then Utilities in the finder and open Terminal.app, or enter Terminal in Spotlight Search.
   \fi
 
-  \begin{prompt}
-  %\shellcmd{ssh \userid{}@\loginnode{}}%
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{ssh \userid{}@\loginnode{}}%
+\end{prompt}
 
   Here, user \userid wants to make a connection to the ``\hpcname'' cluster at
   \university via the login node ``\loginnode'', so replace \userid with your own
@@ -208,19 +208,20 @@ Before you can really start using the \hpc clusters, there are several things yo
   The first time you make a connection to the login node, you will be asked to
   verify the authenticity of the login node, e.g.,
 
-  \begin{prompt}
-  %\shellcmd{ssh \userid{}@\loginnode{}}%
-  The authenticity of host %\loginnode% (<IP-adress>)
-  can't be established.
-  RSA key fingerprint is %\loginfingerprint%
-  Are you sure you want to continue connecting (yes/no)? %\strong{\emph{yes}}%
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{ssh \userid{}@\loginnode{}}%
+The authenticity of host %\loginnode% (<IP-adress>)
+can't be established.
+RSA key fingerprint is %\loginfingerprint%
+Are you sure you want to continue connecting (yes/no)? %\strong{\emph{yes}}%
+\end{prompt}
 
 % ENDIF \ifmacORlinux
 \fi
 
 \strong{Congratulations, you're on the \hpc infrastructure now!}
 To find out where you have landed you can print the current working directory:
+
 \begin{prompt}
 %\shellcmd{pwd}%
 %\homedir%
@@ -314,6 +315,7 @@ will also copy the contents of the sub-directories ``\emph{recursively}''.
 
 \ifgent
 You will now make a doc directory in your home dir and copy the latest version of this document to this directory. We will use this later in this tutorial.
+
 \begin{prompt}
 %\shellcmd{mkdir \tilde/docs}%
 %\shellcmd{cp --r \tutorialdir/\jobname \tilde/}%
@@ -329,6 +331,7 @@ and start working.
 
 Upon connecting you will see a login message containing your last login
 time stamp and a basic overview of the current cluster utilisation.
+
 \begin{prompt}
 Last login: Tue Jan  6 08:53:11 2015 from helios.ugent.be
 STEVIN HPC-UGent infrastructure status on Mon, 19 Oct 2015 15:00:01
@@ -352,6 +355,7 @@ For a full view of the current loads and queues see:
 Upon connecting you will see a login message containing your last login
 time stamp, some useful environment variable definitions and the message of the
 day (MOTD).
+
 \begin{prompt}
 Last login: Thu Nov  6 16:05:21 2014 from example.vub.ac.be
 
@@ -381,6 +385,7 @@ Message of the day:
 \ifleuven
 Upon connecting you will see a login message containing your last login
 time stamp and some useful links.
+
 \begin{prompt}
 Last login: Mon Jan 12 18:52:20 2015 from example.kuleuven.be
 **********************************************
@@ -410,17 +415,14 @@ Last login: Mon Feb  2 17:58:13 2015 from mylaptop.uantwerpen.be
 
 ---------------------------------------------------------------
 
-Welcome to Hopper!
+Welcome to HOPPER!
 
-A quick start guide can be found here:
-
-  /apps/antwerpen/tutorials/calcua/Hopper-Quick-Start-Guide.pdf
-
-Please read this guide carefully, otherwise your jobs might
-never start!
+Useful links:
+  https://www.vscentrum.be/en/user-portal (including system status)
+  https://www.vscentrum.be/infrastructure/hardware/hardware-ua
+  https://www.uantwerpen.be/hpc
 
 Questions or problems? Do not hesitate and contact us:
-
   hpc@uantwerpen.be
 
 Happy computing!
@@ -459,6 +461,7 @@ Connection to %\loginnode% closed.
 \begin{tip}[Setting your Language right]
 
 You may encounter a warning message similar to the following one during connecting:
+
 \begin{prompt}
 perl: warning: Setting locale failed.
 perl: warning: Please check that your locale settings:
@@ -657,10 +660,10 @@ for future access.
   Open an additional Terminal window and check that you're working on your local
   machine.
 
-  \begin{prompt}
-  %\shellcmd{hostname}%
-  <local-machine-name>
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{hostname}%
+<local-machine-name>
+\end{prompt}
 
   If you're still using the terminal that is connected to the \hpc, close the
   connection by typing ``exit'' in the terminal window.
@@ -672,30 +675,30 @@ for future access.
   ``\emph{localfile.txt}'', which contains the word ``Hello''.  Use your own
   $<$vsc-account$>$, which is something like ``\emph{\userid}''.
 
-  \begin{prompt}
-  %\shellcmd{echo "Hello" $>$ localfile.txt}%
-  %\shellcmd{ls -l}%
-  %\dots%
-  -rw-r--r-- 1 gborstlap  staff   6 Sep 18 09:37 localfile.txt
-  %\shellcmd{scp localfile.txt \userid{}@\loginnode{}:}%
-  localfile.txt    100%\%%   6     0.0KB/s   00:00
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{echo "Hello" $>$ localfile.txt}%
+%\shellcmd{ls -l}%
+%\dots%
+-rw-r--r-- 1 user  staff   6 Sep 18 09:37 localfile.txt
+%\shellcmd{scp localfile.txt \userid{}@\loginnode{}:}%
+localfile.txt    100%\%%   6     0.0KB/s   00:00
+\end{prompt}
 
   Connect to the \hpc via another terminal, print the working directory (to make
   sure you're in the home-directory) and check whether the file has arrived:
 
-  \begin{prompt}
-  %\shellcmd{pwd}%
-  %\homedir%
-  %\shellcmd{ls -l}%
-  total 1536
-  drwxrwxr-x  2 %\userid% 131072 Sep 11 16:24 bin/
-  drwxrwxr-x  2 %\userid% 131072 Sep 17 11:47 docs/
-  drwxrwxr-x 10 %\userid% 131072 Sep 17 11:48 examples/
-  -rw-r--r--  1 %\userid%      6 Sep 18 09:44 localfile.txt
-  %\shellcmd{cat localfile.txt}%
-  Hello
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{pwd}%
+%\homedir%
+%\shellcmd{ls -l}%
+total 1536
+drwxrwxr-x  2 %\userid% 131072 Sep 11 16:24 bin/
+drwxrwxr-x  2 %\userid% 131072 Sep 17 11:47 docs/
+drwxrwxr-x 10 %\userid% 131072 Sep 17 11:48 examples/
+-rw-r--r--  1 %\userid%      6 Sep 18 09:44 localfile.txt
+%\shellcmd{cat localfile.txt}%
+Hello
+\end{prompt}
 
   The \strong{scp} command can also be used to copy files from the cluster to your local machine.
   Let us copy the remote file ``\jobname.pdf'' from your ``docs''
@@ -704,24 +707,24 @@ for future access.
   First, we will confirm that the file is indeed in the ``docs'' sub-directory.
   On the Terminal on the \hpc, enter:
 
-  \begin{prompt}
-  %\captureshellcmd{cd ~/docs}%
-  %\homedir%/docs
-  %\captureshellcmd{ls -l}%
-  total 1536
-  -rw-r--r-- 1 %\userid% Sep 11 09:53 %\jobname%.pdf
-  \end{prompt}
+\begin{prompt}
+%\captureshellcmd{cd ~/docs}%
+%\homedir%/docs
+%\captureshellcmd{ls -l}%
+total 1536
+-rw-r--r-- 1 %\userid% Sep 11 09:53 %\jobname%.pdf
+\end{prompt}
 
   Now we will copy the file to the local machine. On the Terminal on your own local computer, enter:
 
-  \begin{prompt}
-  %\shellcmd{scp \userid{}@\loginnode:./docs/\jobname.pdf .}%
-  %\jobname.pdf% 100%\%%  725KB 724.6KB/s   00:01
-  %\shellcmd{ls -l}%
-  total  899
-  -rw-r--r--   1 gborstlap  staff  741995 Sep 18 09:53 %\jobname%.pdf
-  -rw-r--r--   1 gborstlap  staff       6 Sep 18 09:37 localfile.txt
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{scp \userid{}@\loginnode:./docs/\jobname.pdf .}%
+%\jobname.pdf% 100%\%%  725KB 724.6KB/s   00:01
+%\shellcmd{ls -l}%
+total  899
+-rw-r--r--   1 user  staff  741995 Sep 18 09:53 %\jobname%.pdf
+-rw-r--r--   1 user  staff       6 Sep 18 09:37 localfile.txt
+\end{prompt}
 
   \subsection{Using sftp}
 
@@ -737,9 +740,10 @@ for future access.
   the secure ssh protocol to connect to the clusters.
 
   One easy way of starting a sftp session is
-  \begin{prompt}
-  %\shellcmd{sftp \userid{}@\loginnode{}}%
-  \end{prompt}
+
+\begin{prompt}
+%\shellcmd{sftp \userid{}@\loginnode{}}%
+\end{prompt}
 
   Typical and popular commands inside an sftp session are:
 
