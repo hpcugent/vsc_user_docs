@@ -379,20 +379,23 @@ This specifies the number of nodes (nodes=N) and the number of processors per
 node (ppn=M) that the job should use. PBS treats a processor core as a
 processor, so a system with eight cores per compute node can have ppn=8 as its
 maximum ppn request.
-You can also use this statement in your job script:
+\ifantwerpen
+  % UAntwerpen doesn't support ppn=all or ppn=half
+\else
+  You can also use this statement in your job script:
 
 \begin{prompt}
 #PBS -l nodes=N:ppn=all
 \end{prompt}
 
-to request all cores of a node, or
+  to request all cores of a node, or
 
 \begin{prompt}
 #PBS -l nodes=N:ppn=half
 \end{prompt}
 
-to request half of them.
-
+  to request half of them.
+\fi
 % KU~Leuven, UAntwerpen, VUB: please check whether the ppn=all/ppn=half directives also work at your site
 
 Note that unless a job has some inherent parallelism of

@@ -160,9 +160,10 @@ All nodes are connected through a EDR InfiniBand network
 %TODO other sites: keep up to date, or link to vsc website?
 
 \ifantwerpen
-All the nodes in the \hpc run under the ``\operatingsystemSL'' operating
+All the nodes in the \hpc run under the ``\operatingsystemCOS'' operating
 system, which is a clone of ``\operatingsystemRHEL'',
-with \emph{cgroups} support.
+with \emph{cgroups} support. (Until the end of 2017 some nodes of Hopper
+still run under \operatingsystemSL without \emph{cgroups} support.)
 \fi
 \ifleuven
 All the nodes in the \hpc run under the ``\operatingsystem'' operating system.
@@ -197,7 +198,7 @@ Manager).
     For maintenance and monitoring, we use:
     \begin{enumerate}
       \item  Ganglia: monitoring software;
-      \item  Icinga: alert manager.
+      \item  Icinga and Nagios: alert manager.
     \end{enumerate}
 \fi
 \ifleuven

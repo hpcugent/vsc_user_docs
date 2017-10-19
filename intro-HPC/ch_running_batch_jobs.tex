@@ -503,7 +503,9 @@ put the job in the walltime category 3 days--7 days.  The user can submit up to 
 this high walltimes (queueable = 400) on hopper, but only 50 of those jobs will be eligible
 for execution (runnable=50) at the same time.  A detailed description of the
 fair-share mechanisms will follow in \autoref{ch:hpc-policies}. For longer running jobs,
-\emph{checkpointing} (See \autoref{ch:checkpointing}) is necessary.
+\emph{checkpointing} 
+%(See \autoref{ch:checkpointing}) 
+is necessary.
 \fi
 
 \iffalse
@@ -576,11 +578,12 @@ that these properties may vary over the different VSC sites.
 \ifantwerpen
 \begin{tabular}{|p{0.7in}|p{5.3in}|} \hline
 \strong{Property} & \strong{Explanation}                                                        \\ \hline
-harpertown        & only use Intel processors from the Harpertown family (54xx, turing-only)    \\ \hline
-westmere          & only use Intel processors from the Westmere family (56xx, turing-only)      \\ \hline
 ivybridge         & only use Intel processors from the Ivy Bridge family (26xx-v2, hopper-only) \\ \hline
-ib                & use Infiniband interconnect                                                 \\ \hline
+broadwell         & only use Intel processors from the Broadwell family (26xx-v4, leibniz-only) \\ \hline
+mem256            & only use nodes with 256GB of RAM (hopper and leibniz) \\ \hline
 \end{tabular}
+Since both Hopper and Leibniz are homogeneous with respect to processor architecture, the CPU architecture properties
+are not really needed and only defined for compatibility with other VSC clusters.
 \fi
 \ifbrussel
 \begin{tabular}{|p{0.7in}|p{5.3in}|} \hline
