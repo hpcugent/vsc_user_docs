@@ -200,7 +200,7 @@ Whereby:
 \item  The first column shows you the elapsed time in seconds. By default, all
   values will be displayed every 5 seconds.
 \item  The second column shows you the used memory in kb. We note that the
-  memory slowly increases up to 3 GB (= 3072 KB), and is released again.
+  memory slowly increases up to just over 3 GB (3GB is 3,145,728 KB), and is released again.
 \item  The third column shows the memory utilisation, expressed in percentages
   of the full available memory.  At full memory consumption, 19.2\% of the
   memory was being used by our application. With the \emph{``free''} command,
@@ -296,7 +296,7 @@ specify the memory requirements per processor (pmem). This directive specifies
 the maximum amount of physical memory used by any process in the job.
 
 For example, if the job would run four processes and each would use up to 2 GB
-(gigabytes) of memory, then the directive would read:
+(gigabytes) of memory, then the memory directive would read:
 
 \begin{prompt}
 #PBS -l pmem=2gb
@@ -308,6 +308,7 @@ or on the command line
 %\shellcmd{qsub -l pmem=2gb}%
 \end{prompt}
 
+(and of course this would need to be combined with a CPU cores directive such as nodes=1:ppn=4).
 In this example, you request 8 GB of memory in total on the node.
 
 \section{Specifying processors requirements}
