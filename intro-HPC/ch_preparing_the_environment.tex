@@ -524,7 +524,7 @@ or alternatively (if you are not comfortable with the Linux editors), again on y
 %\shellcmd{echo "export LANGUAGE=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile}%
 %\shellcmd{echo "export LC\_ALL=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile}%
 %\shellcmd{echo "export LC\_CTYPE=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile}%
-%\shellcmd{echo "export LANG=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile"}%
+%\shellcmd{echo "export LANG=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile}%
 \end{prompt}
 
 You can now log out, open a new terminal/shell on your local machine and reconnect to the \hpc, and you should not get these
@@ -773,7 +773,7 @@ total  899
   \fi
 
   \ifmac
-    \keys{Command} + \keys{k}
+    \keys{cmd} + \keys{k}
   \fi
 
   This should open up a address bar where you can enter a URL. Alternatively, look for the 'connect to server' option in your file browsers menu.
@@ -829,8 +829,8 @@ In order to administer the active software and their environment variables, a
 \item  Activates or deactivates \underbar{software packages} and their dependencies.
 \item  Allows setting and unsetting of \underbar{environment variables}, including adding and deleting entries from database-type environment variables.
 \item  Does this in a \underbar{shell-independent} fashion (necessary information is stored in the accompanying module configuration file).
-\item  Takes care of \underbar{versioning aspects:} For many libraries, multiple versions are installed and maintained. The module system also takes care of the versioning of software packages in case multiple versions are installed. For instance, it does not allow multiple versions to be loaded at same time.
-\item  Takes care of \underbar{dependencies:} Another issue arises when one considers library versions and the dependencies they create. Some software requires an older version of a particular library to run correctly (or at all). Hence a variety of version numbers is available for important libraries.
+\item  Takes care of \underbar{versioning aspects}: For many libraries, multiple versions are installed and maintained. The module system also takes care of the versioning of software packages in case multiple versions are installed. For instance, it does not allow multiple versions to be loaded at same time.
+\item  Takes care of \underbar{dependencies}: Another issue arises when one considers library versions and the dependencies they create. Some software requires an older version of a particular library to run correctly (or at all). Hence a variety of version numbers is available for important libraries.
 \end{enumerate}
 
 This is all managed with the ``\emph{module}'' command, which is explained in the next sections.
