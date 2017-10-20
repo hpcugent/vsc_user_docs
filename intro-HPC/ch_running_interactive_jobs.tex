@@ -18,6 +18,7 @@ very long time in the life of a CPU and does not make efficient usage of the
 computing resources.
 
 The syntax for \emph{qsub} for submitting an interactive PBS job is:
+
 \begin{prompt}
 %\shellcmd{qsub -I <\ldots pbs directives \ldots>}%
 \end{prompt}
@@ -30,6 +31,7 @@ Find the code in
 \end{tip}
 
 First of all, in order to know on which computer you're working, enter:
+
 \begin{prompt}
 %\shellcmd{hostname -f}%
 %\loginhost%
@@ -39,6 +41,7 @@ This means that you're now working on the login-node ``\emph{\loginnode}'' of
 the \hpc cluster.
 
 The most basic way to start an interactive job is the following:
+
 \begin{prompt}
 %\shellcmd{qsub -I}%
 qsub: waiting for job %\jobid% to start
@@ -59,6 +62,7 @@ There are two things of note here.
 \end{enumerate}
 
 In order to know on which compute-node you're working, enter again:
+
 \begin{prompt}
 %\shellcmd{hostname -f}%
 %\computenode%
@@ -116,6 +120,7 @@ Duration:  0 seconds.
 \end{prompt}
 
 You can exit the interactive session with:
+
 \begin{prompt}
 %\shellcmd{exit}%
 \end{prompt}
@@ -127,6 +132,7 @@ this node.  (Think of walltime as the time elapsed when watching the clock on
 the wall.)
 
 You can work for 3 hours by:
+
 \begin{prompt}
 %\shellcmd{qsub -I -l walltime=03:00:00}%
 \end{prompt}
@@ -239,9 +245,9 @@ and rich input device capability for networked computers.
   \item  In order to test the X-server, run ``\emph{xclock}''. ``\emph{xclock}'' is the standard GUI clock for the X Window System.
   \end{enumerate}
 
-  \begin{prompt}
-  %\shellcmd{xclock}%
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{xclock}%
+\end{prompt}
 
   You should see the XWindow clock application appearing on your Windows machine.
   The ``\emph{xclock}'' application runs on the login-node of the \hpc, but is
@@ -254,14 +260,14 @@ and rich input device capability for networked computers.
   You can close your clock and connect further to a compute node with again your
   X-forwarding enabled:
 
-  \begin{prompt}
-  %\shellcmd{qsub -I -X}%
-  qsub: waiting for job %\jobid% to start
-  qsub: job %\jobid% ready
-  %\shellcmd{hostname -f}%
-  %\computenode%
-  %\shellcmd{xclock}%
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{qsub -I -X}%
+qsub: waiting for job %\jobid% to start
+qsub: job %\jobid% ready
+%\shellcmd{hostname -f}%
+%\computenode%
+%\shellcmd{xclock}%
+\end{prompt}
 
   and you should see your clock again.
 
@@ -427,6 +433,7 @@ And start the MATLAB interactive environment:
 \end{prompt}
 
 And start the fibo2.m program in the command window:
+
 \begin{prompt}
 fx >> %\textbf{run fibo2.m}%
 \end{prompt}

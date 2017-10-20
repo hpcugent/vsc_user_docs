@@ -97,9 +97,12 @@ chapter basis.
 \section{Displaying prompts}
 \label{sec:displaying-prompts}
 
-To display prompt output you can use the prompt environment. There is the
-special command \verb|\shellcmd{}| which provides consistent styling. It also
-includes a \$-sign. There is a special version of this command called
+To display prompt output you can use the prompt environment. To obtain a
+consistent look-and-feel, put an empty line before the prompt environment.  In
+case the prompt environment is part of an if--else construction, do not indent
+the prompt environment to avoid an unwanted empty line at the end.  There
+is the special command \verb|\shellcmd{}| which provides consistent styling. It
+also includes a \$-sign. There is a special version of this command called
 \verb|\captureshellcmd{}|. This behaves exactly the same as \verb|shellcmd| but
 it writes its argument to \verb|shellcmds.sh|. All commands you want to capture
 will be present here. This file will be updated each time you build the PDF.
@@ -117,6 +120,7 @@ GNU bash, version 4.1.2(1)-release (x86_64-redhat-linux-gnu)
 \end{verbatim}
 
 which will result in following output:
+
 \begin{prompt}
 %\shellcmd{bash --version}%
 GNU bash, version 4.1.2(1)-release (x86_64-redhat-linux-gnu)

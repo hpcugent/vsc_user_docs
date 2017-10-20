@@ -1,6 +1,7 @@
 % University Definitions
 \macro{\sitename}{gent}
 \macro{\university}{UGent}
+\macro{\wayf}{UGent}
 \macro{\association}{AUGent}
 % HPC definitions
 \macro{\hpc}{HPC}
@@ -19,10 +20,11 @@
 \macro{\tutorialdir}{/apps/gent/tutorials}
 \macro{\examplesdir}{/apps/gent/tutorials/Intro-HPC/examples}
 % Demo user, jobs, nodes, etc
+% {} required to suppress unwanted extra spacing due to nested xspaces
 \macro{\userid}{vsc40000}
-\macro{\homedir}{/user/home/gent/vsc400/\userid}
-\macro{\datadir}{/user/data/gent/vsc400/\userid}
-\macro{\scratchdir}{/user/scratch/gent/vsc400/\userid}
+\macro{\homedir}{/user/home/gent/vsc400/\userid{}}
+\macro{\datadir}{/user/data/gent/vsc400/\userid{}}
+\macro{\scratchdir}{/user/scratch/gent/vsc400/\userid{}}
 \macro{\jobid}{123456.master15.delcatty.gent.vsc}
 \macro{\computenode}{node2001.delcatty.gent.vsc}
 \macro{\computenodeshort}{node2001}

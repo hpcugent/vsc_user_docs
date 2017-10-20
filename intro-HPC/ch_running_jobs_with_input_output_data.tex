@@ -17,6 +17,7 @@ First go to the directory:
 \end{prompt}
 
 List and check the contents with:
+
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 2304
@@ -50,6 +51,7 @@ You'll see that there are NO specific PBS directives for the placement of the ou
 just written to the standard paths.
 
 Submit it:
+
 \begin{prompt}
 %\shellcmd{qsub file1a.pbs}%
 \end{prompt}
@@ -279,8 +281,9 @@ available on a cluster. \\
 You may not get the same file system on different clusters, i.e., you
 may see different content on different clusters at the same intitute.
 \ifantwerpen
-  At the time of writing, the cluster scratch space on turing and hopper is
-  on different disk systems and hence is not shared between the clusters.
+  At the time of writing, the cluster scratch space is shared between both clusters
+  at the \university. This may change again in the future when storage gets
+  updated.
 \fi
 \item[Site scratch (\$VSC\_SCRATCH\_SITE).]
 At the time of writing, the site scratch is just the same
@@ -641,9 +644,9 @@ in your home directory, even if you are currently in a different directory:
 
   Try:
 
-  \begin{prompt}
-  %\shellcmd{tree -s -d}%
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{tree -s -d}%
+\end{prompt}
 
 However, we urge you to only use the \texttt{du} and \texttt{tree} commands when you
 really need them as they can put a heavy strain on the file system and thus

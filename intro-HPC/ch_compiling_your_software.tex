@@ -80,6 +80,7 @@ A typical process looks like:
 \end{enumerate}
 
 We assume you've copied your software to the \hpc The next step is to request your private compute node.
+
 \begin{prompt}
 %\shellcmd{qsub -I}%
 qsub: waiting for job %\jobid% to start
@@ -90,6 +91,7 @@ qsub: waiting for job %\jobid% to start
 Go to the examples for
 \autoref{ch:compiling-and-testing-your-software-on-the-hpc} and load the foss
 module:
+
 \begin{prompt}
 %\shellcmd{cd ~/\exampledir}%
 %\shellcmd{module load foss}%
@@ -152,6 +154,7 @@ Hello #4
 
 
 It seems to work, now run it on the \hpc
+
 \begin{prompt}
 %\shellcmd{qsub hello.pbs}%
 \end{prompt}
@@ -163,6 +166,7 @@ It seems to work, now run it on the \hpc
 \end{prompt}
 
 List the directory and explore the contents of the ``\textit{mpihello.c}'' program:
+
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 512

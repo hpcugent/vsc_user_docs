@@ -104,6 +104,7 @@ We will first execute the program locally (i.e., on your current login-node),
 so that you can see what the program does.
 
 On the command line, you would run this using:
+
 \begin{prompt}
 %\shellcmd{./fibo.pl}%
 [0] -> 0
@@ -220,9 +221,9 @@ To get the status information on your job:
   population of 1.)
   This command is not available on all systems.
   
-  \begin{prompt}
-  %\shellcmd{showstart $<$jobid$>$}%
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{showstart $<$jobid$>$}%
+\end{prompt}
   
   This is only a very rough estimate. Jobs may launch sooner than estimated if
   other jobs end faster than estimated, but may also be delayed if other
@@ -231,9 +232,9 @@ To get the status information on your job:
   To show the status, but also the resources required by the job, with error
   messages that may prevent your job from starting:
   
-  \begin{prompt}
-  %\shellcmd{checkjob $<$jobid$>$}%
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{checkjob $<$jobid$>$}%
+\end{prompt}
 \fi
 
 To show on which compute nodes your job is running, at least, when it is
@@ -301,19 +302,19 @@ when to run your job and what resources your job will run on.
   However, you can get some idea of the load on the clusters by specifying
   the \strong{-q} option to the \strong{qstat} command:
 
-  \begin{prompt}
-  %\shellcmd{qstat -q}%
-  server: master15.delcatty.gent.vsc
-  
-  Queue            Memory CPU Time Walltime Node  Run Que Lm  State
-  ---------------- ------ -------- -------- ----  --- --- --  -----
-  short              --      --    11:59:59   --    2  24 --   E R
-  default            --      --       --      --    0   0 --   E R
-  debug              --      --    00:59:59   --    1   0 --   E R
-  long               --      --    72:00:00   --  124 453 --   E R
-                                                 ----- -----
-                                                   127   477
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{qstat -q}%
+server: master15.delcatty.gent.vsc
+
+Queue            Memory CPU Time Walltime Node  Run Que Lm  State
+---------------- ------ -------- -------- ----  --- --- --  -----
+short              --      --    11:59:59   --    2  24 --   E R
+default            --      --       --      --    0   0 --   E R
+debug              --      --    00:59:59   --    1   0 --   E R
+long               --      --    72:00:00   --  124 453 --   E R
+                                               ----- -----
+                                                 127   477
+\end{prompt}
 
   In this example, 477 jobs are queued in the various queues whereas 127 jobs
   are effectively running.
@@ -332,13 +333,13 @@ when to run your job and what resources your job will run on.
   eligible (``idle''), blocked (``hold''), and/or recently completed jobs. To get
   a summary:
   
-  \begin{prompt}
-  %\shellcmd{showq -s}%
-  active jobs: 163
-  eligible jobs: 133
-  blocked jobs: 243
-  Total jobs:  539
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{showq -s}%
+active jobs: 163
+eligible jobs: 133
+blocked jobs: 243
+Total jobs:  539
+\end{prompt}
 
 \fi
 
@@ -502,7 +503,9 @@ put the job in the walltime category 3 days--7 days.  The user can submit up to 
 this high walltimes (queueable = 400) on hopper, but only 50 of those jobs will be eligible
 for execution (runnable=50) at the same time.  A detailed description of the
 fair-share mechanisms will follow in \autoref{ch:hpc-policies}. For longer running jobs,
-\emph{checkpointing} (See \autoref{ch:checkpointing}) is necessary.
+\emph{checkpointing} 
+%(See \autoref{ch:checkpointing}) 
+is necessary.
 \fi
 
 \iffalse
@@ -510,6 +513,7 @@ Apart from specifying the \emph{walltime}, you can also explicitly define the
 queue you're submitting your job to.
 
 To specify the queue, add:
+
 \begin{prompt}
 -q queuename
 \end{prompt}
@@ -574,11 +578,13 @@ that these properties may vary over the different VSC sites.
 \ifantwerpen
 \begin{tabular}{|p{0.7in}|p{5.3in}|} \hline
 \strong{Property} & \strong{Explanation}                                                        \\ \hline
-harpertown        & only use Intel processors from the Harpertown family (54xx, turing-only)    \\ \hline
-westmere          & only use Intel processors from the Westmere family (56xx, turing-only)      \\ \hline
 ivybridge         & only use Intel processors from the Ivy Bridge family (26xx-v2, hopper-only) \\ \hline
-ib                & use Infiniband interconnect                                                 \\ \hline
+broadwell         & only use Intel processors from the Broadwell family (26xx-v4, leibniz-only) \\ \hline
+mem256            & only use nodes with 256GB of RAM (hopper and leibniz) \\ \hline
 \end{tabular}
+
+Since both Hopper and Leibniz are homogeneous with respect to processor architecture, the CPU architecture properties
+are not really needed and only defined for compatibility with other VSC clusters.
 \fi
 \ifbrussel
 \begin{tabular}{|p{0.7in}|p{5.3in}|} \hline
@@ -598,6 +604,7 @@ phi5110p          & only use nodes with Xeon Phi 5110P co-processors \\ \hline
 \fi
 
 To get a list of all properties defined for all nodes, enter
+
 \begin{prompt}
 %\shellcmd{pbsnodes}%
 \end{prompt}
@@ -653,9 +660,9 @@ Inspect the generated output and error files:
   previous example.  Lets give the ``\emph{fibo.pbs}'' job just one second to
   complete:
   
-  \begin{prompt}
-  %\shellcmd{qsub -l walltime=0:00:01 fibo.pbs}%
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{qsub -l walltime=0:00:01 fibo.pbs}%
+\end{prompt}
   
   Now, lets hope that the \hpc did not manage to run the job within one second,
   and you will get an e-mail informing you about this error.
