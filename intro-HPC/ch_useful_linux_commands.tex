@@ -81,6 +81,7 @@ hostname
 \end{code}
 
 You can type both lines at your shell prompt, and the result will be the following:
+
 \begin{prompt}
 %\shellcmd{echo "Hello! This is my hostname:"}%
 Hello! This is my hostname:
@@ -91,15 +92,18 @@ Hello! This is my hostname:
 Suppose we want to call this script ``foo''. You open a new file for editing, and
 name it ``foo'', and edit it with your favourite editor
 
-\begin{prompt}
 \ifgent
+\begin{prompt}
 %\shellcmd{nano foo}%
-\else
-%\shellcmd{vi foo}%
-\fi
 \end{prompt}
+\else
+\begin{prompt}
+%\shellcmd{vi foo}%
+\end{prompt}
+\fi
 
 or use the following commands:
+
 \begin{prompt}
 %\shellcmd{echo "echo Hello! This is my hostname:" $>$ foo}%
 %\shellcmd{echo hostname $>$$>$ foo}%

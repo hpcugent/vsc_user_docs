@@ -48,6 +48,7 @@ This chapter shows you how to measure:
 \end{enumerate}
 
 First, we allocate a compute node and move to our relevant directory:
+
 \begin{prompt}
 %\shellcmd{qsub -I}%
 %\shellcmd{cd ~/\exampledir}%
@@ -68,6 +69,7 @@ stream. The calculated times are reported in seconds.
 
 
 Test the time command:
+
 \begin{prompt}
 %\shellcmd{time sleep 75}%
 real 1m15.005s
@@ -85,11 +87,13 @@ appropriate in case your application will run on the ``slowest'' (oldest)
 compute nodes.
 
 The walltime can be specified in a job scripts as:
+
 \begin{prompt}
 #PBS -l walltime=3:00:00:00
 \end{prompt}
 
 or on the command line
+
 \begin{prompt}
 %\shellcmd{qsub -l walltime=3:00:00:00}%
 \end{prompt}
@@ -112,11 +116,12 @@ especially when one uses third-party software.
   which needs to be allocated.
 
   First compile the program on your machine and then test it for 1 GB:
-  \begin{prompt}
-  %\shellcmd{gcc -o eat\_mem eat\_mem.c}%
-  %\shellcmd{./eat\_mem 1}%
-  Consuming 1 gigabyte of memory.
-  \end{prompt}
+
+\begin{prompt}
+%\shellcmd{gcc -o eat\_mem eat\_mem.c}%
+%\shellcmd{./eat\_mem 1}%
+Consuming 1 gigabyte of memory.
+\end{prompt}
 \fi
 
 
@@ -195,7 +200,7 @@ Whereby:
 \item  The first column shows you the elapsed time in seconds. By default, all
   values will be displayed every 5 seconds.
 \item  The second column shows you the used memory in kb. We note that the
-  memory slowly increases up to 3 GB (= 3072 KB), and is released again.
+  memory slowly increases up to just over 3 GB (3GB is 3,145,728 KB), and is released again.
 \item  The third column shows the memory utilisation, expressed in percentages
   of the full available memory.  At full memory consumption, 19.2\% of the
   memory was being used by our application. With the \emph{``free''} command,
@@ -277,6 +282,7 @@ script as:
 \end{prompt}
 
 or on the command line
+
 \begin{prompt}
 %\shellcmd{qsub -l mem=4gb}%
 \end{prompt}
@@ -290,17 +296,19 @@ specify the memory requirements per processor (pmem). This directive specifies
 the maximum amount of physical memory used by any process in the job.
 
 For example, if the job would run four processes and each would use up to 2 GB
-(gigabytes) of memory, then the directive would read:
+(gigabytes) of memory, then the memory directive would read:
 
 \begin{prompt}
 #PBS -l pmem=2gb
 \end{prompt}
 
 or on the command line
+
 \begin{prompt}
 %\shellcmd{qsub -l pmem=2gb}%
 \end{prompt}
 
+(and of course this would need to be combined with a CPU cores directive such as nodes=1:ppn=4).
 In this example, you request 8 GB of memory in total on the node.
 
 \section{Specifying processors requirements}
@@ -372,20 +380,23 @@ This specifies the number of nodes (nodes=N) and the number of processors per
 node (ppn=M) that the job should use. PBS treats a processor core as a
 processor, so a system with eight cores per compute node can have ppn=8 as its
 maximum ppn request.
-You can also use this statement in your job script:
+\ifantwerpen
+  % UAntwerpen doesn't support ppn=all or ppn=half
+\else
+  You can also use this statement in your job script:
 
 \begin{prompt}
 #PBS -l nodes=N:ppn=all
 \end{prompt}
 
-to request all cores of a node, or
+  to request all cores of a node, or
 
 \begin{prompt}
 #PBS -l nodes=N:ppn=half
 \end{prompt}
 
-to request half of them.
-
+  to request half of them.
+\fi
 % KU~Leuven, UAntwerpen, VUB: please check whether the ppn=all/ppn=half directives also work at your site
 
 Note that unless a job has some inherent parallelism of
@@ -403,25 +414,26 @@ time.
   matrices and is just written to consumes a lot of ``\emph{cpu}''.
 
   We first load the monitor modules, study the ``eat\_cpu.c'' program and compile it:
-  \begin{prompt}
-  %\shellcmd{module load monitor}%
-  %\shellcmd{cat eat\_cpu.c}%
-  %\shellcmd{gcc -o eat\_cpu eat\_cpu.c}%
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{module load monitor}%
+%\shellcmd{cat eat\_cpu.c}%
+%\shellcmd{gcc -o eat\_cpu eat\_cpu.c}%
+\end{prompt}
 
   And then start to monitor the \emph{eat\_cpu} program:
-  \begin{prompt}
-  %\shellcmd{monitor -d 1 ./eat\_cpu}%
-  time  (s) size (kb) %\%%mem %\%%cpu
-  1  52852  0.3 100
-  2  52852  0.3 100
-  3  52852  0.3 100
-  4  52852  0.3 100
-  5  52852  0.3  99
-  6  52852  0.3 100
-  7  52852  0.3 100
-  8  52852  0.3 100
-  \end{prompt}
+
+\begin{prompt}
+%\shellcmd{monitor -d 1 ./eat\_cpu}%
+time  (s) size (kb) %\%%mem %\%%cpu
+1  52852  0.3 100
+2  52852  0.3 100
+3  52852  0.3 100
+4  52852  0.3 100
+5  52852  0.3  99
+6  52852  0.3 100
+7  52852  0.3 100
+8  52852  0.3 100
+\end{prompt}
 
   We notice that it the program keeps its CPU nicely busy at 100\%.
 
@@ -442,6 +454,7 @@ This could also be monitored with the \strong{\emph{htop}} command:
 %It may be better to simply put the contents fo htop-output in the prompt
 % environment?
 % temp fix: use a \vbox
+
 \begin{prompt}
 %\shellcmd{htop}%
 \end{prompt}
@@ -555,6 +568,7 @@ the system load during the last \strong{one}-, \strong{five}-, and
 \strong{fifteen}-minute periods.
 
 The \strong{uptime} command will show us the average load
+
 \begin{prompt}
 %\shellcmd{uptime}%
 10:14:05 up 86 days, 12:01, 11 users, load average: 0.60, 0.41, 0.41
@@ -612,26 +626,26 @@ directory) on the compute node, which is defined by the
   We first load the monitor modules, study the ``eat\_disk.c'' program and
   compile it:
 
-  \begin{prompt}
-  %\shellcmd{module load monitor}%
-  %\shellcmd{cat eat\_disk.c}%
-  %\shellcmd{gcc -o eat\_disk eat\_disk.c}%
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{module load monitor}%
+%\shellcmd{cat eat\_disk.c}%
+%\shellcmd{gcc -o eat\_disk eat\_disk.c}%
+\end{prompt}
 
   The \emph{monitor} tool provides an option (-f) to display the size of one or
   more files:
 
-  \begin{prompt}
-  %\shellcmd{monitor -f \$VSC\_SCRATCH/test.txt ./eat\_disk}%
-  time (s) size (kb) %\%%mem %\%%cpu
-  5  1276  0 38.6 168820736
-  10  1276  0 24.8 238026752
-  15  1276  0 22.8 318767104
-  20  1276  0 25 456130560
-  25  1276  0 26.9 614465536
-  30  1276  0 27.7 760217600
-  %\dots%
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{monitor -f \$VSC\_SCRATCH/test.txt ./eat\_disk}%
+time (s) size (kb) %\%%mem %\%%cpu
+5  1276  0 38.6 168820736
+10  1276  0 24.8 238026752
+15  1276  0 22.8 318767104
+20  1276  0 25 456130560
+25  1276  0 26.9 614465536
+30  1276  0 27.7 760217600
+%\dots%
+\end{prompt}
 
   Here, the size of the file ``\emph{test.txt}'' in directory \$VSC\_SCRATCH will
   be monitored. Files can be specified by absolute as well as relative path, and
@@ -712,6 +726,7 @@ low latency network that enables large parallel jobs to run as efficiently as
 possible.
 
 The parameter to add in your job-script would be:
+
 \begin{prompt}
 #PBS -l ib
 \end{prompt}
@@ -734,9 +749,9 @@ can specify:
   not interfere with those of monitor and vice versa, the program can for
   instance be started in the following way:
 
-  \begin{prompt}
-  %\shellcmd{monitor -delta 60 -- matlab -nojvm -nodisplay computation.m}%
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{monitor -delta 60 -- matlab -nojvm -nodisplay computation.m}%
+\end{prompt}
 
   The use of ``--'' will ensure that monitor does not get confused by MATLAB's '-nojvm' and '-nodisplay' options.
 
@@ -758,9 +773,9 @@ can specify:
   running. One simply determines the relevant process ID using the ps command,
   e.g., 18749, and starts monitor:
 
-  \begin{prompt}
-  %\shellcmd{monitor -p 18749}%
-  \end{prompt}
+\begin{prompt}
+%\shellcmd{monitor -p 18749}%
+\end{prompt}
 
   Note that this feature can be (ab)used to monitor specific sub-processes.
 \fi

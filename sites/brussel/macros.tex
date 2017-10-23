@@ -1,6 +1,7 @@
 % University Definitions
 \macro{\sitename}{brussel}
 \macro{\university}{Free University of Brussels}
+\macro{\wayf}{VUB -- Vrije Universiteit Brussel}
 \macro{\association}{Brussels University Association (BUA)}
 % HPC definitions
 \macro{\hpc}{VUB-HPC}
@@ -17,10 +18,11 @@
 \macro{\tutorialdir}{/apps/brussel/tutorials}
 \macro{\examplesdir}{/apps/brussel/tutorials/Intro-HPC/examples}
 % Demo user, jobs, nodes, etc
+% {} required to suppress unwanted extra spacing due to nested xspaces
 \macro{\userid}{vsc10002}
-\macro{\homedir}{/user/brussel/100/\userid}
-\macro{\datadir}{/data/brussel/100/\userid}
-\macro{\scratchdir}{/scratch/brussel/100/\userid}
+\macro{\homedir}{/user/brussel/100/\userid{}}
+\macro{\datadir}{/data/brussel/100/\userid{}}
+\macro{\scratchdir}{/scratch/brussel/100/\userid{}}
 \macro{\jobid}{433253.master1.hydra.brussel.vsc}
 \macro{\computenode}{r5e3cn13.hydra.brussel.vsc}
 \macro{\computenodeshort}{r4e2cn03}
