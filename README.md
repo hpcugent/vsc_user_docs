@@ -28,3 +28,8 @@ on Fedora:
 dnf install latexmk texlive-collection-fontsrecommended texlive-import texlive-babel-english texlive-glossaries texlive-textcase texlive-multirow texlive-xstring texlive-menukeys texlive-fancyhdr
 
 make all
+
+
+Development
+============
+When making changes, run `./check_version.sh <dir (e.g. intro-HPC)>` to update to new version before making a pr.
