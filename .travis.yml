@@ -10,7 +10,7 @@ env:
 before_install:
     # verify SHA256 checksums to ensure version is bumped when changes are made
     # if this check fails, you should run ./check-version.sh intro-HPC and commit the changes made by the script
-    - INTRO_HPC_EXPECTED="20171215.01 ca435ecf4e5ff6e5d884f6b37b3608e44c6478b9fba45e84c1d007268587b12d"
+    - INTRO_HPC_EXPECTED="20171218.01 97cc41c04cdcf99a6c1b55792c514c7ed3d904a046395dea948b3e095c84c1b5"
     - ./check-version.sh intro-HPC | grep "Checksum for intro-HPC is still valid"
     - cd $HOME
     - travis_retry wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
