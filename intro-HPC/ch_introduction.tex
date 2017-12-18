@@ -47,7 +47,7 @@ The \hpc is a collection of computers with
 \ifbrussel
 AMD and
 \fi
-Intel processors, running a Linux
+Intel CPUs, running a Linux
 operating system, shaped like pizza boxes and stored above and next
 to each other in racks, interconnected with copper and fiber cables. Their
 number crunching power is (presently) measured in hundreds of billions of
@@ -136,22 +136,8 @@ All nodes are connected through a EDR InfiniBand network
   \end{enumerate}
 \fi
 \ifbrussel
-  \begin{enumerate}
-    \item  48 compute nodes with 2 4-core AMD 2378 (Shanghai) processors, 32 GB
-    memory, 72 GB local disk, SDR-IB network
-    \item  64 compute nodes with 2 8-core AMD 6134 (Magnycours) processors, 64
-    GB memory, 1 TB local disk, QDR-IB network
-    \item  9 compute nodes with 2 16-core AMD 6274 (Interlagos) processors, 256
-    GB memory, 900 GB local disk, QDR-IB network
-    \item  29 nodes with 2 10-core INTEL E5-2680v2 (IvyBridge) processors, 64
-    GB memory, 900 GB local disk, QDR-IB network
-    \item  6 nodes with 2 10-core INTEL E5-2680v2 (IvyBridge) processors, 64 GB
-    memory, 900 GB local disk, QDR-IB network, 2 Tesla K20x NVIDIA GPGPUs with
-    6Gb memory
-    \item  2 nodes with 2 10-core INTEL E5-2680v2 (IvyBridge) processors, 64 GB
-    memory, 900 GB local disk, QDR-IB network, 2 Intel Xeon Phi 5110P
-    co-processors with Gb memory
-  \end{enumerate}
+  a mix of nodes with AMD and Intel CPUs and different interconnects in different sections of the cluster. The cluster also contains a number of nodes with NVIDIA GPGPUs.  For an up to date list of all clusters and their hardware, see\\*
+  \url{https://www.vscentrum.be/infrastructure/hardware/hardware-vub}.
 \fi
 \ifgent
   a set of different compute clusters. For an up to date list of all clusters and their hardware, see\\*

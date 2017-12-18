@@ -27,7 +27,10 @@ when and on which compute nodes the jobs can run. It is usually not necessary
 to log on to the
 compute nodes directly
 \ifbrussel
-and is only allowed on the node on which your job is running
+and is only allowed on the nodes where you have a job running
+\fi
+\ifgent
+and is only allowed on the nodes where you have a job running
 \fi
 . Users can (and should) monitor their jobs
 periodically as they run, but do not have to remain connected to the \hpc the entire
@@ -432,17 +435,17 @@ list the most commonly used ones below. \\
 \end{prompt}
 
 For the simplest cases, only the amount of maximum estimated execution time
-(called ``walltime'') is really important. Here, the job requests a reservation of
-2 hours, 30 minutes. As soon as the job starts to take more time,
-it will be ``killed'' (terminated) by the job scheduler.  There is absolutly no
+(called ``walltime'') is really important. Here, the job requests
+2 hours, 30 minutes. As soon as the job exceeds the requested walltime,
+it will be ``killed'' (terminated) by the job scheduler.  There is no
 harm if you \emph{slightly} overestimate the maximum execution time. \\
 
 \begin{prompt}
 %\shellcmd{qsub -l mem=4gb}%
 \end{prompt}
 
-The job requests a reservation of 4 GB of RAM memory. As soon as the job tries to use more memory,
-it will be ``killed'' (terminated) by the job scheduler.  There is absolutly no
+The job requests 4 GB of RAM memory. As soon as the job tries to use more memory,
+it will be ``killed'' (terminated) by the job scheduler.  There is no
 harm if you \emph{slightly} overestimate the requested memory. \\
  \\
 
@@ -450,7 +453,7 @@ harm if you \emph{slightly} overestimate the requested memory. \\
 %\shellcmd{qsub -l nodes=5:ppn=2}%
 \end{prompt}
 
-The job requests a reservation of 5 compute nodes with two cores on each node (ppn stands for
+The job requests 5 compute nodes with two cores on each node (ppn stands for
 ``processors per node'', where "processors" here actually means "CPU cores"). \\
 
 \begin{prompt}

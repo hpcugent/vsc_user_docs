@@ -6,7 +6,7 @@
 \newglossaryentry{Compute-Node}
 {
   name={Compute Node},
-  description={The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single processor or CPU. The compute node is equipped with memory (RAM) that is accessible by all its CPUs},
+  description={The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs},
 }
 \newglossaryentry{Core}
 {
@@ -33,6 +33,11 @@
   name={FTP},
   description={File Transfer Protocol, used to copy files between distinct machines (over a network.) FTP is unencrypted, and as such blocked on certain systems. SFTP or SCP are secure alternatives to FTP},
 }
+\newglossaryentry{GPGPU}
+{
+  name={GPGPU},
+  description={A general purpose graphical processing unit. A GPGPU is a consumable resource. A GPGPU is a GPU that performs non-specialized calculations that would typically be conducted by the CPU. A compute node may contain zero, one or more GPGPUs},
+}
 \newglossaryentry{Grid}
 {
   name={Grid},
@@ -46,7 +51,7 @@
 \newglossaryentry{L1d}
 {
   name={L1d},
-  description={Level 1 data cache, of$ten called \textbf{primary cache}, is a static memory integrated with the CPU core that is used to store data recently accessed by a processor and also data which may be required by the next operations},
+  description={Level 1 data cache, often called \textbf{primary cache}, is a static memory integrated with the CPU core that is used to store data recently accessed by a CPU and also data which may be required by the next operations},
 }
 \newglossaryentry{L2d}
 {
@@ -131,7 +136,7 @@
 \newglossaryentry{processor}
 {
   name={Processor},
-  description={A processing unit. A processor is a consumable resource. Nodes typically consist of one or more processors. (same as CPU)},
+  description={A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU},
 }
 \newglossaryentry{Queues}
 {
@@ -156,7 +161,7 @@
 \newglossaryentry{Shared-memory-system}
 {
   name={Shared memory system},
-  description={Computing system in which all of the processors share one global memory space. However, access times from a processor to different regions of memory are not necessarily uniform. This is called NUMA: Non-uniform memory access. Memory closer to the CPU your process is running on will generally be faster to access than memory that is closer to a different CPU. You can pin processes to a certain CPU to ensure they always use the same memory},
+  description={Computing system in which all of the CPUs share one global memory space. However, access times from a CPU to different regions of memory are not necessarily uniform. This is called NUMA: Non-uniform memory access. Memory that is closer to the CPU your process is running on will generally be faster to access than memory that is closer to a different CPU. You can pin processes to a certain CPU to ensure they always use the same memory},
 }
 \newglossaryentry{SSH}
 {
@@ -181,7 +186,7 @@
 \newglossaryentry{TLB}
 {
   name={TLB},
-  description={Translation Look-aside Buffer, a table in the processor's memory that contains information about the virtual memory pages the processor has accessed recently. The table cross-references a program's virtual addresses with the corresponding absolute addresses in physical memory that the program has most recently used. The TLB enables faster computing because it allows the address processing to take place independent of the normal address-translation pipeline.},
+  description={Translation Look-aside Buffer, a table in the CPU's memory that contains information about the virtual memory pages the CPU has accessed recently. The table cross-references a program's virtual addresses with the corresponding absolute addresses in physical memory that the program has most recently used. The TLB enables faster computing because it allows the address processing to take place independent of the normal address-translation pipeline},
 }
 \newglossaryentry{TACC}
 {
