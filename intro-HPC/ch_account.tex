@@ -5,13 +5,14 @@
 \label{sec:getting-ready-to-request-an-account}
 
 \ifbrussel
- If you affiliated with the \university, then You can access \hpc using your NedID
- (the same username and password that you use for accessing your university mailbox).
- Your \hpc account is not activated by default, you can do it via our Personal
- Account Manager (PAM) homepage (\url{https://idsapp.vub.ac.be/pam/pamlogin.php}).
+ If you are affiliated with the \university, you can access \hpc using your NetID
+ (the same username and password that you use for accessing your university email).
+ Your \hpc account is not activated by default, you can do it via the Personal
+ Account Manager (PAM) homepage (\url{https://idsapp.vub.ac.be/pam/}).
  Once you have activated your \hpcname account you will be able to use only the HPC
- infrastructure of the \university. If you would also like to use the infrastructure of
- the Flemish Supercomputing Centre (VSC), then you have to apply for a VSC account.
+ infrastructure of the \university. If you would also like to use the HPC infrastructure
+ located at other sites within the Flemish Supercomputing Centre (VSC), then you have
+ to apply for a VSC account.
 \fi
 
 All users of \association can request
@@ -102,7 +103,7 @@ terminal.
 
   \begin{enumerate}
     \item  In \keys{Parameters} (at the bottom of the window), choose
-      ``SSH-2 RSA'' and set the number of bits in the key to 2048.
+      ``RSA'' and keep the number of bits in the key to 2048.
 
     \begin{center}
     \includegraphics*[width=3.49in, height=3.38in, keepaspectratio=false]{ch2-puttygen-bits}
@@ -259,6 +260,50 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
 
   \strong{Without your key pair, you won't be able to apply for a personal VSC account.}
 \fi %macORlinux
+
+\iflinux
+
+\subsection{Using an SSH agent (optional)}
+\label{sec:using-ssh-agent-with-openssh}
+  The most recent GNU/Linux distributions include by default an SSH agent 
+  (``gnome-keyring-daemon'' in most cases) to keep and manage the user SSH keys.
+  If you use one of these distributions you \strong{must} include the new key/s into 
+  the SSH manager keyring to be able to connect to the HPC cluster. If not,
+  SSH client will display an error message (see \autoref{ch:preparing-the-environment}) 
+  similar to this:
+  
+  \begin{flattext}
+   Agent admitted failure to sign using the key.
+   Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+  \end{flattext}
+
+  This could be fixed using the ``ssh-add'' command.
+  You can include the new private key/s identities in your keyring with:
+\begin{prompt}
+%\shellcmd{ssh-add}%
+\end{prompt}
+
+\begin{tip}
+  Without extra options ``ssh-add'' adds any key located at ``~/.ssh''
+  directory, but you can specify the private key location path as argument,
+  as example ``ssh-add /path/to/my/id\_rsa''.
+\end{tip}
+
+Check that your key is available from the keyring with:
+\begin{prompt}
+%\shellcmd{ssh-add -l}%
+\end{prompt}
+  
+  After these changes the key agent will keep your SSH key to connect 
+  to the clusters as usual. 
+\begin{tip}
+  You should execute ``ssh-add'' command again if you generate a new SSH key.
+\end{tip}
+
+  Visit \url{https://wiki.gnome.org/Projects/GnomeKeyring/Ssh} for
+  more information.
+
+\fi %linux
 
 \section{Applying for the account}
 \label{sec:applying-for-the-account}

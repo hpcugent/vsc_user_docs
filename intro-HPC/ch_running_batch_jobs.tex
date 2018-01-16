@@ -18,15 +18,22 @@ When you connect to the \hpc, you have access to (one of) the \strong{login
 nodes} of the cluster. There you can prepare the work you want to get done on
 the cluster by, e.g., installing or compiling programs, setting up data sets,
 etc. The computations however, should not be performed on this login node. The
-actual work is done on the cluster's \strong{compute nodes}. These compute
-nodes are managed by the job scheduling software (Moab) and a Resource Manager
-(TORQUE), which decides when and on which compute nodes the jobs can run. It is
-usually not necessary 
+actual work is done on the cluster's \strong{compute nodes}. Each compute node
+contains a number of CPU \strong{cores}. The compute nodes are managed by the
+job scheduling software (Moab) and a Resource Manager (TORQUE), which decides
+when and on which compute nodes the jobs can run. It is usually not necessary
 %% TODO: where?
 %(and in some cases not permitted)
 to log on to the
-compute nodes directly. Users can (and should) monitor their jobs
-periodically as they run, but do not have to remain logged in the entire
+compute nodes directly
+\ifbrussel
+and is only allowed on the nodes where you have a job running
+\fi
+\ifgent
+and is only allowed on the nodes where you have a job running
+\fi
+. Users can (and should) monitor their jobs
+periodically as they run, but do not have to remain connected to the \hpc the entire
 time.
 
 The documentation in this ``Running batch jobs'' section includes a description
@@ -66,7 +73,7 @@ Each time you want to execute a program on the \hpc you'll need 2 things:
 
 \begin{description}
   \item[The executable] The program to execute from the end-user, together with its peripheral input files, databases and/or command options.
-  \item[A configuration script] (also called a job-script), which will define the computer resource requirements of the program, the required additional software packages and which will start the actual executable.  The \hpc needs to know:
+  \item[A batch job script], which will define the computer resource requirements of the program, the required additional software packages and which will start the actual executable.  The \hpc needs to know:
     \begin{enumerate}
       \item  the type of compute nodes;
       \item  the number of CPUs;
@@ -78,7 +85,7 @@ Each time you want to execute a program on the \hpc you'll need 2 things:
 \end{description}
 
 Later on, the \hpc user shall have to define (or to adapt) his/her own
-configuration scripts. For now, all required configuration scripts for the
+job scripts. For now, all required job scripts for the
 exercises are provided for you in the examples subdirectories.
 
 List and check the contents with:
@@ -428,29 +435,32 @@ list the most commonly used ones below. \\
 \end{prompt}
 
 For the simplest cases, only the amount of maximum estimated execution time
-(called ``walltime'') is really important. Here, the job will not require more
-than 2 hours, 30 minutes to complete. As soon as the job would take more time,
-it will be ``killed'' (terminated) by the job scheduler.  There is absolutly no
+(called ``walltime'') is really important. Here, the job requests
+2 hours, 30 minutes. As soon as the job exceeds the requested walltime,
+it will be ``killed'' (terminated) by the job scheduler.  There is no
 harm if you \emph{slightly} overestimate the maximum execution time. \\
 
 \begin{prompt}
 %\shellcmd{qsub -l mem=4gb}%
 \end{prompt}
 
-The job requires no more than 4 GB of memory. \\
+The job requests 4 GB of RAM memory. As soon as the job tries to use more memory,
+it will be ``killed'' (terminated) by the job scheduler.  There is no
+harm if you \emph{slightly} overestimate the requested memory. \\
+ \\
 
 \begin{prompt}
 %\shellcmd{qsub -l nodes=5:ppn=2}%
 \end{prompt}
 
-The job requires 5 compute nodes with two cores on each node (ppn stands for
-``processors per node'', where processor is used to refer to individual cores). \\
+The job requests 5 compute nodes with two cores on each node (ppn stands for
+``processors per node'', where "processors" here actually means "CPU cores"). \\
 
 \begin{prompt}
 %\shellcmd{qsub -l nodes=1:westmere}%
 \end{prompt}
 
-The job requires just one node, but it should have an Intel Westmere processor.
+The job requests just one node, but it should have an Intel Westmere processor.
 A list with site-specific properties can be found in the next section or in the 
 User Portal 
 (``Available hardware''-section)\footnote{URL: \url{https://www.vscentrum.be/infrastructure/hardware}}
@@ -459,14 +469,14 @@ of the VSC website.
 These options can either be specified on the command line, e.g.
 
 \begin{prompt}
-%\shellcmd{qsub -l nodes=1:1,mem=2gb fibo.pbs}%
+%\shellcmd{qsub -l nodes=1:ppn=1,mem=2gb fibo.pbs}%
 \end{prompt}
 
 or in the job-script itself using the \#PBS-directive, so ``fibo.pbs'' could be modified to:
 
 \begin{code}{bash}
 #!/bin/bash -l
-#PBS -l nodes=1:1
+#PBS -l nodes=1:ppn=1
 #PBS -l mem=2gb
 cd $PBS_O_WORKDIR
 ./fibo.pl
