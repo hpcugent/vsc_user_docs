@@ -233,7 +233,14 @@ you should use the scratch space instead.
 \ifgent
 If you are running out of quota on your \$VSC\_DATA filesystem you can
 request a VO (Virtual organisation). VO members get an extra DATA filesystem: \$VSC\_DATA\_VO)
-We can give higher quota values for these filesystems. Don't hesitate to contact the \hpcTeam staff.
+We can give higher quota values for these filesystems. VO administrators can request additional quota
+at the "Edit VO" page \url{https://account.vscentrum.be/django/vo/edit}.
+
+Note that we may oversubscribe each shared filesystem, meaning that the total amount of quota across
+all VO\'s may exceed the total size of the filesystem. Because of this, you should consider the available quota
+as an upper limit of the amount of storage space that is available to you; you may not be able to use it all
+if the filesystem does not provide a sufficient amount of free space.
+
 \fi
 
 \subsection{Your scratch space (\$VSC\_SCRATCH)\label{subsec:scratch-directory}}
