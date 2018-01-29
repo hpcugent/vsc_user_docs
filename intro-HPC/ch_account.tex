@@ -265,13 +265,13 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
 
 \subsection{Using an SSH agent (optional)}
 \label{sec:using-ssh-agent-with-openssh}
-  The most recent GNU/Linux distributions include by default an SSH agent 
+  The most recent GNU/Linux distributions include by default an SSH agent
   (``gnome-keyring-daemon'' in most cases) to keep and manage the user SSH keys.
-  If you use one of these distributions you \strong{must} include the new key/s into 
+  If you use one of these distributions you \strong{must} include the new key/s into
   the SSH manager keyring to be able to connect to the HPC cluster. If not,
-  SSH client will display an error message (see \autoref{ch:preparing-the-environment}) 
+  SSH client will display an error message (see \autoref{ch:preparing-the-environment})
   similar to this:
-  
+
   \begin{flattext}
    Agent admitted failure to sign using the key.
    Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
@@ -293,9 +293,9 @@ Check that your key is available from the keyring with:
 \begin{prompt}
 %\shellcmd{ssh-add -l}%
 \end{prompt}
-  
-  After these changes the key agent will keep your SSH key to connect 
-  to the clusters as usual. 
+
+  After these changes the key agent will keep your SSH key to connect
+  to the clusters as usual.
 \begin{tip}
   You should execute ``ssh-add'' command again if you generate a new SSH key.
 \end{tip}
@@ -308,21 +308,8 @@ Check that your key is available from the keyring with:
 \section{Applying for the account}
 \label{sec:applying-for-the-account}
 
-Visit \url{https://account.vscentrum.be/} from within the \university campus
-network
-%(or using a VPN connection.)
-\ifantwerpen
-(or using a VPN connection.)
-\fi
-\ifbrussel
-(or using a VPN connection.)
-\fi
-\ifgent
-(or using a VPN connection.)
-\fi
-\ifleuven
-.
-\fi
+Visit \url{https://account.vscentrum.be/}
+
 You will be redirected to our WAYF (Where Are You From) service where you have to select your ``Home Organisation''.
 
 \begin{center}
@@ -343,7 +330,7 @@ You will now be taken to the authentication page of your institute.
 \strong{The site is only accessible from within the \university
 domain}, so the page won't load from, e.g., home. However, you can also get
 external access to the \university domain using VPN. We refer to the Pintra
-pages of the ICT Department 
+pages of the ICT Department
 % (\url{https://pintra.uantwerpen.be/webapps/ua-pintrasite-BBLEARN/module/index.jsp?course_id=_8_1&tid=_525_1&lid=_11434_1&l=nl_PINTRA})
 for more information.
 
