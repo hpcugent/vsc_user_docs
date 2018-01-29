@@ -14,7 +14,8 @@ before_install:
     - ./check-version.sh intro-HPC | grep "Checksum for intro-HPC is still valid"
     - cd $HOME
 install:
-    - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends latexmk texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+    - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+    - sudo apt-get install -y --no-install-recommends pgf latexmk
     - pdflatex --version ; latexmk --version
 script:
     - cd $TRAVIS_BUILD_DIR
