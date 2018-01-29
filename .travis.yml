@@ -13,12 +13,8 @@ before_install:
     - INTRO_HPC_EXPECTED="20180129.02 4ebebe2492b924760d445adb1230726a49db9754f86b840e676f394f2d43c8b8"
     - ./check-version.sh intro-HPC | grep "Checksum for intro-HPC is still valid"
     - cd $HOME
-    - travis_retry wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
-    - tar -xzf install-tl-unx.tar.gz ; cd install-tl-*/
 install:
-    - sed -i "s:MYPREFIX:$HOME:g" $TRAVIS_BUILD_DIR/texlive.profile
-    - ./install-tl -profile $TRAVIS_BUILD_DIR/texlive.profile
-    - export PATH=$HOME/.texlive/bin/x86_64-linux:$PATH
+    - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
     - pdflatex --version ; latexmk --version
 script:
     - cd $TRAVIS_BUILD_DIR
