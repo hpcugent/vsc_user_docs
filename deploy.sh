@@ -33,4 +33,4 @@ git add ./pdf/*.pdf
 git add index.html tablesort.min.js
 git status
 git commit -m "Deploy to Github Pages"
-git push --force "https://${GH_TOKEN}@github.com/${GITHUB_REPO}.git" master:gh-pages
+git push --force "https://${GH_TOKEN}@github.com/${GITHUB_REPO}.git" master:test-gh-pages
