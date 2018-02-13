@@ -32,5 +32,11 @@ git init
 git add ./pdf/*.pdf
 git add index.html tablesort.min.js
 git status
-git commit -m "Deploy to Github Pages"
-git push --force "https://${GH_TOKEN}@github.com/${GITHUB_REPO}.git" master:gh-pages
+if ["$TRAVIS_PULL_REQUEST" == "false"]; then
+    $branch="gh-pages"
+    git commit -m "Deploy to Github Pages"
+else
+    $branch="testing"
+    git commit -m "Deploy to testing branch"
+fi
+git push --force "https://${GH_TOKEN}@github.com/${GITHUB_REPO}.git" master:$branch

@@ -1,8 +1,10 @@
 language: generic
+group: travis_latest
 env:
   global:
       # set this to the repo which should have the resulting PDF's
       - GITHUB_REPO="hpcugent/vsc_user_docs"
+      - TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST
       # this is an encrypted version of an access token for the repo above.
       # Create it by using the travis tool: travis encrypt -r $GITHUB_REPO GH_TOKEN=<TOKEN>
       # and replace it below
@@ -10,15 +12,12 @@ env:
 before_install:
     # verify SHA256 checksums to ensure version is bumped when changes are made
     # if this check fails, you should run ./check-version.sh intro-HPC and commit the changes made by the script
-    - INTRO_HPC_EXPECTED="20180116.02 f9006bd890749994beac2d1475f8cf1f285e181e37bcda2c825af8bb1e8c1e00"
+    - INTRO_HPC_EXPECTED="20180129.02 4ebebe2492b924760d445adb1230726a49db9754f86b840e676f394f2d43c8b8"
     - ./check-version.sh intro-HPC | grep "Checksum for intro-HPC is still valid"
     - cd $HOME
-    - travis_retry wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
-    - tar -xzf install-tl-unx.tar.gz ; cd install-tl-*/
 install:
-    - sed -i "s:MYPREFIX:$HOME:g" $TRAVIS_BUILD_DIR/texlive.profile
-    - ./install-tl -profile $TRAVIS_BUILD_DIR/texlive.profile
-    - export PATH=$HOME/.texlive/bin/x86_64-linux:$PATH
+    - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+    - sudo apt-get install -y --no-install-recommends pgf latexmk
     - pdflatex --version ; latexmk --version
 script:
     - cd $TRAVIS_BUILD_DIR
@@ -33,4 +32,4 @@ deploy:
   script: $TRAVIS_BUILD_DIR/deploy.sh
   on:
       repo: $GITHUB_REPO
-      branch: master
+      all_branches: true
