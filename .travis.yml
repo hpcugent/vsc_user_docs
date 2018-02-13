@@ -4,6 +4,7 @@ env:
   global:
       # set this to the repo which should have the resulting PDF's
       - GITHUB_REPO="hpcugent/vsc_user_docs"
+      - TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST
       # this is an encrypted version of an access token for the repo above.
       # Create it by using the travis tool: travis encrypt -r $GITHUB_REPO GH_TOKEN=<TOKEN>
       # and replace it below
@@ -31,4 +32,3 @@ deploy:
   script: $TRAVIS_BUILD_DIR/deploy.sh
   on:
       repo: $GITHUB_REPO
-      branch: master
