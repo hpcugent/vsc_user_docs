@@ -1,4 +1,5 @@
 language: generic
+group: travis_latest
 env:
   global:
       # set this to the repo which should have the resulting PDF's
