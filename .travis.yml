@@ -32,3 +32,4 @@ deploy:
   script: $TRAVIS_BUILD_DIR/deploy.sh
   on:
       repo: $GITHUB_REPO
+      all_branches: true
