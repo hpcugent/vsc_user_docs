@@ -22,10 +22,10 @@ channels:
 whatever was in the file before.
 
 \begin{prompt}
-%\shellcmd{ echo hello $>$ somefile}%
+%\shellcmd{ echo hello >{} somefile}%
 %\shellcmd{cat somefile}%
 hello
-%\shellcmd{echo hello2 $>$ somefile}%
+%\shellcmd{echo hello2 >{} somefile}%
 %\shellcmd{cat somefile}%
 hello2
 \end{prompt}
@@ -34,10 +34,10 @@ hello2
 whatever was in the file before:
 
 \begin{prompt}
-%\shellcmd{echo hello $>$ somefile}%
+%\shellcmd{echo hello >{} somefile}%
 %\shellcmd{cat somefile}%
 hello
-%\shellcmd{echo hello2 $>$$>$ somefile}%
+%\shellcmd{echo hello2 >{}>{} somefile}%
 %\shellcmd{cat somefile}%
 hello
 hello2
@@ -56,8 +56,8 @@ save a list of all the files you're interested in and then reading in the file
 list when you are done:
 
 \begin{prompt}
-%\shellcmd{find . -name \*.txt $>$ files}%
-%\shellcmd{xargs grep banana $<$ files}%
+%\shellcmd{find . -name \*.txt >{} files}%
+%\shellcmd{xargs grep banana <{} files}%
 \end{prompt}
 
 \subsection{Redirecting ``stderr''}
@@ -66,7 +66,7 @@ To redirect the ``stderr'' output (warnings, messages), you can use ``2>'', just
 like ``>'':
 
 \begin{prompt}
-%\shellcmd{ls one.txt nosuchfile.txt 2$>$ errors.txt}%
+%\shellcmd{ls one.txt nosuchfile.txt 2>{} errors.txt}%
 one.txt
 %\shellcmd{cat errors.txt}%
 ls: nosuchfile.txt: No such file or directory
@@ -78,7 +78,7 @@ To combine both output channels and redirect them to a single file, you can use
 ``\&>'':
 
 \begin{prompt}
-%\shellcmd{ls one.txt nosuchfile.txt \&$>$ ls.out}%
+%\shellcmd{ls one.txt nosuchfile.txt \&>{} ls.out}%
 %\shellcmd{cat ls.out}%
 ls: nosuchfile.txt: No such file or directory
 one.txt
@@ -404,7 +404,7 @@ Firstly a useful thing to know for debugging and testing is that you can run any
 command as such:
 
 \begin{prompt}
-command 2$>$&1 output.log   # one single output file, both output and errors
+command 2>{}&1 output.log   # one single output file, both output and errors
 \end{prompt}
 
 so you add "2>\&1 output.log" at the end of any command and it will combine
@@ -412,7 +412,7 @@ output and error output into a single file for you to inspect named output.log.
 If you want regular and error output separated you can use:
 
 \begin{prompt}
-command $>$ output.log 2$>$ output.err  # errors in a separate file
+command >{} output.log 2>{} output.err  # errors in a separate file
 \end{prompt}
 
 this will write regular output to output.log and error output to output.err.
