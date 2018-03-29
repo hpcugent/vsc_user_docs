@@ -20,7 +20,11 @@
 \usepackage{courier}
 \usepackage{xparse}
 \usepackage{longtable}
+\ifmac
+\usepackage[os=mac]{menukeys}
+\else
 \usepackage[os=win]{menukeys}
+\fi
 \renewcommand{\ttdefault}{pcr}
 
 \setlength{\hoffset}{-1in}
