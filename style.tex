@@ -20,7 +20,25 @@
 \usepackage{courier}
 \usepackage{xparse}
 \usepackage{longtable}
-\usepackage{menukeys}
+
+\newif\ifwindows
+\newif\iflinux
+\newif\ifmac
+\newif\ifmacORlinux
+\newif\ifleuven
+\newif\ifhasselt
+\newif\ifleuvenORhasselt
+\newif\ifbrussel
+\newif\ifgent
+\newif\ifantwerpen
+\newif\iftacc
+\newif\ifvsc
+
+\ifmac
+\usepackage[os=mac]{menukeys}
+\else
+\usepackage[os=win]{menukeys}
+\fi
 \renewcommand{\ttdefault}{pcr}
 
 \setlength{\hoffset}{-1in}
@@ -92,6 +110,18 @@
     \leavevmode\\[-\baselineskip]
     \minipage{\linewidth}
     \lstset{style=prompt}
+} {
+   \endminipage
+}
+\lstnewenvironment{utf8prompt} {
+    \leavevmode\\[-\baselineskip]
+    \minipage{\linewidth}
+    \lstset{
+      style=prompt,literate=%
+      {├}{{\mbox{\kern.23em\vrule height2.0exdepth0.8exwidth.4pt\vrule height2.0ptdepth-1.8ptwidth.23em}}}1
+      {└}{{\mbox{\kern.23em\vrule height2.0exdepth-1.8ptwidth.4pt\vrule height2.0ptdepth-1.8ptwidth.23em}}}1
+      {─}{{\mbox{\vrule height2.0ptdepth-1.8ptwidth.5em}}}1
+    }
 } {
    \endminipage
 }
@@ -251,20 +281,6 @@
     \input{../sites/tacc/#1}
   \fi
 }
-
-
-\newif\ifwindows
-\newif\iflinux
-\newif\ifmac
-\newif\ifmacORlinux
-\newif\ifleuven
-\newif\ifhasselt
-\newif\ifleuvenORhasselt
-\newif\ifbrussel
-\newif\ifgent
-\newif\ifantwerpen
-\newif\iftacc
-\newif\ifvsc
 
 \windowsfalse
 \linuxfalse

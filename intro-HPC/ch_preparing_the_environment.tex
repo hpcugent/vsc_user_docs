@@ -257,25 +257,25 @@ You can now explore the content of this directory with the ``ls --l''
 \strong{d}irectory) commands:
 
 As we are interested in the use of the \strong{\emph{HPC}}, move further to
-\strong{\emph{Intro-HPC}} and explore the contents up to 2 levels deep:
+``Intro-HPC'' and explore the contents up to 2 levels deep:
 
-\begin{prompt}
+\begin{utf8prompt}
 %\shellcmd{cd Intro-HPC}%
 %\shellcmd{tree -L 2}%
 .
-`-- examples
-    %\textbar%-- Compiling-and-testing-your-software-on-the-HPC
-    %\textbar%-- Fine-tuning-Job-Specifications
-    %\textbar%-- Multi-core-jobs-Parallel-Computing
-    %\textbar%-- Multi-job-submission
-    %\textbar%-- Program-examples
-    %\textbar%-- Running-batch-jobs
-    %\textbar%-- Running-jobs-with-input
-    %\textbar%-- Running-jobs-with-input-output-data
-    %\textbar%-- example.pbs
-    `-- example.sh
+└── examples
+    ├── Compiling-and-testing-your-software-on-the-HPC
+    ├── Fine-tuning-Job-Specifications
+    ├── Multi-core-jobs-Parallel-Computing
+    ├── Multi-job-submission
+    ├── Program-examples
+    ├── Running-batch-jobs
+    ├── Running-jobs-with-input
+    ├── Running-jobs-with-input-output-data
+    ├── example.pbs
+    └── example.sh
 9 directories, 5 files
-\end{prompt}
+\end{utf8prompt}
 
 This directory contains:
 
@@ -293,7 +293,7 @@ This directory contains:
 \end{prompt}
 
 \begin{tip}
-Typing ``\strong{\emph{cd ex$<$TAB$>$}}'' will generate the
+Typing ``\strong{\emph{cd ex}}'' followed by \keys{\tab} will generate the
 ``\strong{\emph{cd examples}}'' command. \strong{Command-line completion
 }(also tab completion) is a common feature of the bash command line
 interpreter, in which the program automatically fills in partially typed
@@ -521,10 +521,10 @@ To exit vi without saving your changes, enter ``<esc>:q!''
 or alternatively (if you are not comfortable with the Linux editors), again on your local machine:
 
 \begin{prompt}
-%\shellcmd{echo "export LANGUAGE=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile}%
-%\shellcmd{echo "export LC\_ALL=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile}%
-%\shellcmd{echo "export LC\_CTYPE=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile}%
-%\shellcmd{echo "export LANG=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile}%
+%\shellcmd{echo "export LANGUAGE=\textbackslash "en\_US.UTF-8\textbackslash "" >{}>{} ~/.profile}%
+%\shellcmd{echo "export LC\_ALL=\textbackslash "en\_US.UTF-8\textbackslash "" >{}>{} ~/.profile}%
+%\shellcmd{echo "export LC\_CTYPE=\textbackslash "en\_US.UTF-8\textbackslash "" >{}>{} ~/.profile}%
+%\shellcmd{echo "export LANG=\textbackslash "en\_US.UTF-8\textbackslash "" >{}>{} ~/.profile}%
 \end{prompt}
 
 You can now log out, open a new terminal/shell on your local machine and reconnect to the \hpc, and you should not get these
