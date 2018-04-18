@@ -1,0 +1,58 @@
+\chapter{Troubleshooting}
+\label{ch:troubleshooting}
+
+
+
+\section{Walltime issues}
+If you get from your job output error a message similar to this:
+
+\begin{prompt}
+ =>> PBS: job killed: walltime 146 exceeded limit 120
+\end{prompt}
+
+You job has exceeded the requested walltime. Probably the job requires more time to be executed.
+See section~\ref{sec:specifying-walltime-requirements} for more information about how to request the walltime in an accurate way.
+If you need more than \strong{72h} to execute your job you \strong{must} use \emph{checkpointing} in that case.
+% FIXME: Refer to Checkpointing section.
+
+
+
+\section{Out of quota issues}
+
+Sometimes the jobs hang at some point or they stop writing in the disk. These errors are usually
+related to the quota usage. Probably you are reached your quota limit at some storage endpoint. 
+You should move (or remove) the data to a different storage endpoint to be able to write to the disk and then resubmit the jobs. 
+See section~\ref{subsec:predfined-user-directories} and section~\ref{subsec:predfined-quotas} for more information about 
+quotas and how to use the storage endpoints in an efficient way.
+
+
+\section{SSH keys do not match}
+Each SSH user and host key has its own and unique fingerprint.
+If you run into a warning similar to this:
+
+\begin{prompt}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that the RSA host key has just been changed.
+The fingerprint for the RSA key sent by the remote host is
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+Please contact your system administrator.
+Add correct host key in /home/user/.ssh/known_hosts to get rid of this message.
+Offending key in /home/user/.ssh/known_hosts:1
+RSA host key for ras.mydomain.com has changed and you have requested strict checking.
+Host key verification failed.
+\end{prompt}
+
+Probably the login node SSH host key was updated or changed,  if this is the case it means you have an old 
+version of our key cached somewhere, you can remove it by:
+
+\begin{prompt}
+%\shellcmd{ssh-keygen -R \emph{\loginnode}}%
+\end{prompt}
+
+and try again, you should be able to add the key again and ssh to the login node ``\strong{\emph{\loginnode}}''.
+If you still have issues to connect to the login node you should contact to your HPC administrators.
+
