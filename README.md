@@ -32,4 +32,4 @@ make all
 
 Development
 ============
-When making changes, run `./check_version.sh <dir (e.g. intro-HPC)>` to update to new version before making a pr.
+When making changes, run `./check-version.sh <dir (e.g. intro-HPC)>` to update to new version before making a pr.
