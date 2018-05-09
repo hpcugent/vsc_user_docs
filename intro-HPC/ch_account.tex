@@ -433,6 +433,24 @@ Kind regards,
 Now, you can start using the \hpc. You can always look up your vsc id later by visiting\\*
 \url{https://account.vscentrum.be}.
 
+\subsection{Adding multiple keys (optional)}
+\label{sec:adding-multiple-keys}
+In case you are connecting from different computers to the login nodes, it is advised to use separate keys to do so.
+You should follow these steps.
+
+\begin{enumerate}
+\ifmacORlinux
+ \item Create a new public/private key pair from the new computer. Repeat the process described in section~\ref{sec:generate-key-pair-with-openssh}.
+\fi %macORlinux
+\ifwindows
+ \item Create a new public/private key pair from Putty. Repeat the process described in section~\ref{sec:generate-key-pair}.
+\fi %ifwindows
+ \item Go to \url{https://account.vscentrum.be/django/vo/edit}
+ \item Upload the new public key using the \strong{Add public key} section.
+ \item (optional) If you lost your key, you can delete the old key on the same page.
+ \item After 15 minutes the changs should have taken effect.
+\end{enumerate}
+
 \section{Computation Workflow on the \hpc}
 \label{sec:compuation-workflow-on-the-hpc}
 
