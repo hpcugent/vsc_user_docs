@@ -73,7 +73,7 @@ A powerful feature is that you can ''search'' through your command history, eith
 
 \subsection{Stopping commands}
 If for any reason you want to stop a command from executing, press Ctrl-C. For
-example, if a command is taking too long and you want to rerun it with different arguments.
+example, if a command is taking too long, or you want to rerun it with different arguments.
 
 \section{Variables}
 
@@ -96,13 +96,21 @@ There are several variables already defined for you when you start your
 session, such as ``\$HOME'' which contains the path to your home directory.
 
 For a full overview of defined environment variables in your current session,
-you can use the ``env'' command:
+you can use the \texttt{env} command. You can sort this output with \texttt{sort}
+to make it easier to search in:
 
 \begin{prompt}
-%\shellcmd{env}%
+%\shellcmd{env | sort}%
 ...
 HOME=%\homedir%
 ...
+\end{prompt}
+
+You can also use the \texttt{grep} command to search for a piece of text. The
+following command will output all VSC-specific variable names and their values:
+
+\begin{prompt}
+%\shellcmd{env | sort | grep VSC}%
 \end{prompt}
 
 But we can also define our own. this is done with the ``export'' command (note:
@@ -167,7 +175,13 @@ To understand what's going on here, see the section on ``cd'' below.
 
 The moral here is: \strong{be very careful to not use empty variables unintentionally}.
 
-\strong{Tip for job scripts: use ``set -e -u'' to avoid using empty variables accidentally.}
+\strong{Tip for job scripts: use \texttt{set -e -u} to avoid using empty variables accidentally.}
+
+The \texttt{-e} option will immediately stop the script if any command fails and
+the \texttt{-u} option will stop the script if when using empty variables.
+(see \url{https://ss64.com/bash/set.html} for a more detailed explanation and more options)
+
+
 
 More information can be found at \url{http://www.tldp.org/LDP/abs/html/variables.html} .
 
