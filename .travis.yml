@@ -14,13 +14,9 @@ before_install:
     - INTRO_LINUX_EXPECTED="20180827.01 5fb4bf3febd6e10e9a6877431c6ad744e12733f2dd75f129453e42384bd9bd2e"
     - ./check-version.sh intro-HPC | grep "Checksum for intro-HPC is still valid"
     - ./check-version.sh intro-Linux | grep "Checksum for intro-Linux is still valid"
-    - cd $HOME
-    - travis_retry wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
-    - tar -xzf install-tl-unx.tar.gz ; cd install-tl-*/
 install:
-    - sed -i "s:MYPREFIX:$HOME:g" $TRAVIS_BUILD_DIR/texlive.profile
-    - ./install-tl -profile $TRAVIS_BUILD_DIR/texlive.profile
-    - export PATH=$HOME/.texlive/bin/x86_64-linux:$PATH
+    - ./travis-install.sh
+    - export PATH=/tmp/texlive/bin/x86_64-linux:$PATH
     - pdflatex --version ; latexmk --version
 script:
     - cd $TRAVIS_BUILD_DIR
@@ -40,3 +36,4 @@ deploy:
 cache:
     directories:
         - $HOME/.texlive
+        - $HOME/texmf
