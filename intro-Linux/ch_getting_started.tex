@@ -73,8 +73,7 @@ A powerful feature is that you can ''search'' through your command history, eith
 
 \subsection{Stopping commands}
 If for any reason you want to stop a command from executing, press Ctrl-C. For
-example, if a command is taking too long and you want to rerun it with a
-different command.
+example, if a command is taking too long and you want to rerun it with different arguments.
 
 \section{Variables}
 
@@ -94,13 +93,23 @@ This prints the value of this variable.
 \subsection{Defining variables}
 
 There are several variables already defined for you when you start your
-session, such as ``\$HOME'' which contains the path to your home directory. 
+session, such as ``\$HOME'' which contains the path to your home directory.
+
+For a full overview of defined environment variables in your current session,
+you can use the ``env'' command:
+
+\begin{prompt}
+%\shellcmd{env}%
+...
+HOME=%\homedir%
+...
+\end{prompt}
 
 But we can also define our own. this is done with the ``export'' command (note:
 variables are always all-caps as a convention):
 
-\begin{prompt} 
-%\shellcmd{export MYVARIABLE="value"}% 
+\begin{prompt}
+%\shellcmd{export MYVARIABLE="value"}%
 \end{prompt}
 
 It is important you don't include spaces around the ``='' sign. Also note
@@ -158,6 +167,8 @@ To understand what's going on here, see the section on ``cd'' below.
 
 The moral here is: \strong{be very careful to not use empty variables unintentionally}.
 
+\strong{Tip for job scripts: use ``set -e -u'' to avoid using empty variables accidentally.}
+
 More information can be found at \url{http://www.tldp.org/LDP/abs/html/variables.html} .
 
 \subsection{Restoring your default environment}
@@ -186,4 +197,3 @@ And quering some basic information about the Linux kernel:
   %\shellcmd{uname -a}%
   Linux gligar01.gligar.os 2.6.32-573.8.1.el6.ug.x86_64 #1 SMP Mon Nov 16 15:12:09 CET 2015 x86_64 x86_64 x86_64 GNU/Linux
 \end{prompt}
-
