@@ -6,7 +6,7 @@ To get started with the HPC-UGent infrastructure, you need to obtain a VSC
 account, see \href{http://hpcugent.github.io/vsc_user_docs/pdf/intro-HPC-linux-gent.pdf#chapter.2}{Chapter 2 of the HPC manual}.
 \strong{Keep in mind that you must keep your private key to yourself!}
 
-You \OS can look at your public/private key pair as a lock and a key: you give us
+You can look at your public/private key pair as a lock and a key: you give us
 the lock (your public key), we put it on the door, and then you can use your
 key to open the door and get access to the HPC infrastructure. \strong{Anyone
 who has your key can use your VSC account!}
@@ -95,7 +95,7 @@ There are several variables already defined for you when you start your
 session, such as \verb|$HOME| which contains the path to your home directory.
 
 For a full overview of defined environment variables in your current session,
-you can use the \texttt{env} command. You can sort this output with \texttt{sort}
+you can use the \verb|env| command. You can sort this output with \verb|sort|
 to make it easier to search in:
 
 \begin{prompt}
@@ -105,7 +105,7 @@ HOME=%\homedir%
 ...
 \end{prompt}
 
-You can also use the \texttt{grep} command to search for a piece of text. The
+You can also use the \verb|grep| command to search for a piece of text. The
 following command will output all VSC-specific variable names and their values:
 
 \begin{prompt}
@@ -176,9 +176,9 @@ The moral here is: \strong{be very careful to not use empty variables unintentio
 
 \strong{Tip for job scripts: use \texttt{set -e -u} to avoid using empty variables accidentally.}
 
-The \texttt{-e} option will result in the script getting stopped if any command fails.
+The \verb|-e| option will result in the script getting stopped if any command fails.
 
-The \texttt{-u} option will result in the script getting stopped if empty variables are used.
+The \verb|-u| option will result in the script getting stopped if empty variables are used.
 (see \url{https://ss64.com/bash/set.html} for a more detailed explanation and more options)
 
 More information can be found at \url{http://www.tldp.org/LDP/abs/html/variables.html} .
