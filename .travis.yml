@@ -36,3 +36,7 @@ deploy:
   on:
       repo: $GITHUB_REPO
       branch: master
+
+cache:
+    directories:
+        - $HOME/.texlive
