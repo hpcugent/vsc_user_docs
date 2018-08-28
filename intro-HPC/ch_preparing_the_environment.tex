@@ -219,6 +219,20 @@ RSA key fingerprint is %\loginfingerprint%
 Are you sure you want to continue connecting (yes/no)? %\strong{\emph{yes}}%
 \end{prompt}
 
+A possible error message you can get if you previously saved your private key
+somewhere else than the default location (\verb|$HOME/.ssh/id_rsa|):
+
+\begin{prompt}
+%\shellcmd{Permission denied (publickey,gssapi-keyex,gssapi-with-mic).}%
+\end{prompt}
+
+In this case, use the \verb|-i| option for the \verb|ssh| command to specify the location
+of your private key. For example:
+
+\begin{prompt}
+%\shellcmd{ssh -i /home/example/my\_keys/id\_rsa \userid{}@\loginnode{}}%
+\end{prompt}
+
 % ENDIF \ifmacORlinux
 \fi
 
@@ -1374,9 +1388,3 @@ Or to get more information about one specific module package:
    R is a free software environment for statistical computing and graphics. - Homepage: http://www.r-project.org/
 \end{prompt}
 \fi
-
-
-
-
-
-
