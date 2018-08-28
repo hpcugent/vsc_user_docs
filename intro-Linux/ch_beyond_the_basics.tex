@@ -16,9 +16,9 @@ channels:
  \item \verb|stderr|: standard error channel, for errors and warnings
 \end{enumerate}
 
-\subsection{Redirecting ``stdout''}
+\subsection{Redirecting \texttt{stdout}}
 
-\verb|>| writes the (\verb|stdout|) output of a command to a file and ''overwrites''
+\verb|>| writes the (\verb|stdout|) output of a command to a file and \emph{overwrites}
 whatever was in the file before.
 
 \begin{prompt}
@@ -43,7 +43,7 @@ hello
 hello2
 \end{prompt}
 
-\subsection{Reading from ``stdin''}
+\subsection{Reading from \texttt{stdin}}
 
 \verb|<| reads a file from standard input (piped or typed input).  So you would use
 this to simulate typing into a terminal. \verb|< somefile.txt| is largely equivalent to
@@ -60,7 +60,7 @@ list when you are done:
 %\shellcmd{xargs grep banana $<$ files}%
 \end{prompt}
 
-\subsection{Redirecting ``stderr''}
+\subsection{Redirecting \texttt{stderr}}
 
 To redirect the \verb|stderr| output (warnings, messages), you can use \verb|2>|, just
 like \verb|>|
@@ -72,7 +72,7 @@ one.txt
 ls: nosuchfile.txt: No such file or directory
 \end{prompt}
 
-\subsection{Combining ``stdout'' and ``stderr''}
+\subsection{Combining \texttt{stdout} and \texttt{stderr}}
 
 To combine both output channels (\verb|stdout| and \verb|stderr|) and redirect them to a single file, you can use
 \verb|&>|
@@ -134,7 +134,7 @@ So this filename will match: \verb|anything.o5|, but this one won't: \verb|anyth
 
 \section{Process information}
 
-\subsection{``ps'' and ``pstree''}
+\subsection{\texttt{ps} and \texttt{pstree}}
 \verb|ps| lists processes running. By default, it will only show you the processes
 running in the local shell. To see all of your processes running on the system,
 use:
@@ -165,7 +165,7 @@ The last two will spit out a lot of data, so get in the habit of piping it to
 print the process IDs (PID). This is used in piping the processes together as we
 will see in the next section.
 
-\subsection{``kill''}
+\subsection{\texttt{kill}}
 \verb|ps| isn't very useful unless you can manipulate the processes. We do this
 using the \verb|kill| command. Kill will send a message
 (\href{https://en.wikipedia.org/wiki/Unix_signal#POSIX_signals}{SIGINT}) to the
@@ -185,7 +185,7 @@ will use to unceremoniously terminate the process:
 %\shellcmd{kill -9 1234}%
 \end{prompt}
 
-\subsection{``top''}
+\subsection{\texttt{top}}
 \verb|top| is a tool to see the current status of the system. You've probably used
 something similar in Task Manager on Windows or Activity Monitor in macOS. \verb|top|
 will update every second and has a few interesting commands.
@@ -212,7 +212,7 @@ limits that have been set, use:
 %\shellcmd{ulimit -a}%
 \end{prompt}
 
-\section{Counting: ``wc''}
+\section{Counting: \texttt{wc}}
 
 To count the number of lines, words and characters (or bytes) in a file, use \verb|wc| (\strong{w}ord \strong{c}ount):
 
@@ -230,9 +230,9 @@ To only count the number of lines, use \verb|wc -l|:
       90    example.txt
 \end{prompt}
 
-\section{Searching file contents: ``grep''}
+\section{Searching file contents: \texttt{grep}}
 
-\verb|grep| is such an important command. It was originally an abbreviation for
+\verb|grep| is an important command. It was originally an abbreviation for
 "globally search a regular expression and print" but it's entered the common
 computing lexicon and people use 'grep' to mean searching for anything. To use
 grep, you give a pattern and a list of files.
@@ -247,7 +247,7 @@ grep, you give a pattern and a list of files.
 \href{https://en.wikipedia.org/wiki/Regular_expression}{Regular Expressions}, but
 these are not in scope for this introductory text.
 
-\section{``cut''}
+\section{\texttt{cut}}
 
 \verb|cut| is used to pull fields out of files or pipes streams.
 It's a useful glue when you mix it with \verb|grep| because \verb|grep| can find the
@@ -260,7 +260,7 @@ file, you can use the following:
 %\shellcmd{cut -f 1 -d ',' mydata.csv}%
 \end{prompt}
 
-\section{``sed''}
+\section{\texttt{sed}}
 
 \verb|sed| is the stream editor. It is used to replace text in a
 file or piped stream. In this way it works like grep, but instead of just
@@ -276,7 +276,7 @@ By default, sed will just print the results. If you want to edit the file inplac
 \verb|-i|, but be very careful that the results will be what you want before you go
 around \strong{destroying your data}!
 
-\section{``awk''}
+\section{\texttt{awk}}
 \verb|awk| is a basic language that builds on \verb|sed| to do much more advanced
 stream editing. Going in depth is far out of scope of this tutorial, but there
 are two examples that are worth knowing.
@@ -317,13 +317,18 @@ hash and \verb|!| is sometimes called bang). This line tells the shell which
 command should execute the script. In the most cases this will simply be the
 shell itself. The line itself looks a bit weird, but you can copy paste this
 line as you need not worry about it further. It is however very important this
-is the very first line of the script! These are all valid shebangs:
+is the very first line of the script! These are all valid shebangs, but you should
+only use one of them:
 
 \begin{code}{bash}
  #!/bin/sh
+\end{code}
 
+\begin{code}{bash}
  #!/bin/bash
+\end{code}
 
+\begin{code}{bash}
  #!/usr/bin/env bash
 \end{code}
 
@@ -361,7 +366,7 @@ Several pitfalls exist with this syntax. You need spaces surrounding the
 brackets, the \strong{then} needs to be on the beginning of a line. It is best
 to just copy this example and modify it.
 
-In the initial example I used \verb|-d| to test if a directory existed. There are
+In the initial example we used \verb|-d| to test if a directory existed. There are
 \href{http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html}{several more checks}.
 
 Another useful example, to test if a variable contains a value (so it's not empty):
@@ -418,8 +423,8 @@ command like this:
 command 2>&1 output.log   # one single output file, both output and errors
 \end{prompt}
 
-If you add \verb|2>&1 output.log| at the end of any command and it will combine
-\verb|stdout| and \verb|stderr|, and output it into a single file named \verb|output.log|.
+If you add \verb|2>&1 output.log| at the end of any command, it will combine
+\verb|stdout| and \verb|stderr|, outputting it into a single file named \verb|output.log|.
 
 If you want regular and error output separated you can use:
 
@@ -429,7 +434,7 @@ command > output.log 2> output.err  # errors in a separate file
 
 this will write regular output to \verb|output.log| and error output to \verb|output.err|.
 
-You can then look for the errors with `less` or search for specific text with `grep`.
+You can then look for the errors with \verb|less| or search for specific text with \verb|grep|.
 
 In scripts you can use
 
@@ -498,14 +503,14 @@ The scheduler needs to know about the requirements of the script, for example:
 how much memory will it use, how long will it run? These things can be specified
 inside a script with what we call PBS pragmas.
 
-This option tells PBS to use 1 node and 1 core:
+This pragma (a pragma is a special comment) tells PBS to use 1 node and 1 core:
 
 \begin{code}{bash}
   #PBS -l nodes=1:ppn=1   # single-core
 \end{code}
 
 For parallel software, you can request multiple cores (OpenMP) and/or multiple
-nodes (MPI). \strong{Only use this when the software you use is capable of working in
+nodes (MPI). \emph{Only use this when the software you use is capable of working in
 parallel.}. Here is an example:
 
 \begin{code}{bash}
@@ -513,19 +518,19 @@ parallel.}. Here is an example:
   #PBS -l nodes=5:ppn=16  # multi-node
 \end{code}
 
-We submit it on the long queue:
+We intend to submit it on the long queue:
 
 \begin{code}{bash}
   #PBS -q long
 \end{code}
 
-We request a total running time of 2 days (48 hours).
+We request a total running time of 48 hours (2 days).
 
 \begin{code}{bash}
   #PBS -l walltime=48:00:00
 \end{code}
 
-We tell PBS the name of our job:
+We tell specify a desired name of our job:
 
 \begin{code}{bash}
   #PBS -N FreeSurfer_per_subject-time-longitudinal
@@ -538,7 +543,7 @@ This specifies mail options:
 \end{code}
 
 \begin{enumerate}
-\item \verb|a| means mail is sent when the job is aborted by the batch system.
+\item \verb|a| means mail is sent when the job is aborted.
 \item \verb|b| means mail is sent when the job begins.
 \item \verb|e| means mail is sent when the job ends.
 \end{enumerate}
