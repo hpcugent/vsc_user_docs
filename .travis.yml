@@ -7,6 +7,7 @@ env:
       # Create it by using the travis tool: travis encrypt -r $GITHUB_REPO GH_TOKEN=<TOKEN>
       # and replace it below
       - secure: 2p42CdapsQR6xkcR/cnqngbwwYqol7QKosxa6n7r4HhKFw7pcaSRWa/5fLOKIunMxW56UfQgTHCecGAU5/oWS8jmEVZYpBThynQBsHBt4xtPw4RUJzAwn6BmWeKX4RHKE6CCcscxAa1Q9vxBWJ0/yRLSP/ikfj6cAH33ga00dFA=
+      - CACHEDIR=$HOME/cached
 before_install:
     # verify SHA256 checksums to ensure version is bumped when changes are made
     # if this check fails, you should run ./check-version.sh intro-HPC and commit the changes made by the script
@@ -16,7 +17,7 @@ before_install:
     - ./check-version.sh intro-Linux | grep "Checksum for intro-Linux is still valid"
 install:
     - ./travis-install.sh
-    - export PATH=$HOME/cached/.texlive/bin/x86_64-linux:$PATH
+    - export PATH=$CACHEDIR/.texlive/bin/x86_64-linux:$PATH
     - pdflatex --version ; latexmk --version
 script:
     - cd $TRAVIS_BUILD_DIR
@@ -35,4 +36,4 @@ deploy:
 
 cache:
     directories:
-        - $HOME/cached
+        - $CACHEDIR
