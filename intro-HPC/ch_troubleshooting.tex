@@ -1,0 +1,33 @@
+\chapter{Troubleshooting}
+\label{ch:troubleshooting}
+
+
+
+\section{Walltime issues}
+If you get from your job output an error message similar to this:
+
+\begin{prompt}
+ =>> PBS: job killed: walltime %\emph{<value in seconds>}% exceeded limit %\emph{<value in seconds>}%
+\end{prompt}
+
+This occurs when your job did not complete within the requested walltime.
+See section~\ref{sec:specifying-walltime-requirements} for more information about how to request the walltime.
+It is recommended to use \emph{checkpointing} if the job requires \strong{72 hours} of walltime or more to be executed.
+% FIXME: Refer to Checkpointing section.
+
+
+
+\section{Out of quota issues}
+
+Sometimes a job hangs at some point or it stops writing in the disk. These errors are usually
+related to the quota usage. You may have reached your quota limit at some storage endpoint. 
+You should move (or remove) the data to a different storage endpoint (or request more quota) to be able to write to the disk and then resubmit the jobs.
+\ifgent
+Another option is to request extra quota for your VO to the VO moderator/s.
+See section~\ref{subsec:predefined-user-directories} and section~\ref{subsec:predfined-quotas} for more information about 
+quotas and how to use the storage endpoints in an efficient way.
+\fi
+% FIXME: Add how to request quota section
+
+
+

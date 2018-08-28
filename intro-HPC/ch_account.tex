@@ -150,7 +150,7 @@ terminal.
 \fi
 
 \iflinux
-  Launch a terminal from your desktop\'s application menu and you will see the
+  Launch a terminal from your desktop's application menu and you will see the
   bash shell.
   There are other shells, but most Linux distributions use bash by default.
 \fi
@@ -265,13 +265,13 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
 
 \subsection{Using an SSH agent (optional)}
 \label{sec:using-ssh-agent-with-openssh}
-  The most recent GNU/Linux distributions include by default an SSH agent 
+  The most recent GNU/Linux distributions include by default an SSH agent
   (``gnome-keyring-daemon'' in most cases) to keep and manage the user SSH keys.
-  If you use one of these distributions you \strong{must} include the new key/s into 
+  If you use one of these distributions you \strong{must} include the new key/s into
   the SSH manager keyring to be able to connect to the HPC cluster. If not,
-  SSH client will display an error message (see \autoref{ch:preparing-the-environment}) 
+  SSH client will display an error message (see \autoref{ch:preparing-the-environment})
   similar to this:
-  
+
   \begin{flattext}
    Agent admitted failure to sign using the key.
    Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
@@ -293,9 +293,9 @@ Check that your key is available from the keyring with:
 \begin{prompt}
 %\shellcmd{ssh-add -l}%
 \end{prompt}
-  
-  After these changes the key agent will keep your SSH key to connect 
-  to the clusters as usual. 
+
+  After these changes the key agent will keep your SSH key to connect
+  to the clusters as usual.
 \begin{tip}
   You should execute ``ssh-add'' command again if you generate a new SSH key.
 \end{tip}
@@ -308,21 +308,8 @@ Check that your key is available from the keyring with:
 \section{Applying for the account}
 \label{sec:applying-for-the-account}
 
-Visit \url{https://account.vscentrum.be/} from within the \university campus
-network
-%(or using a VPN connection.)
-\ifantwerpen
-(or using a VPN connection.)
-\fi
-\ifbrussel
-(or using a VPN connection.)
-\fi
-\ifgent
-(or using a VPN connection.)
-\fi
-\ifleuven
-.
-\fi
+Visit \url{https://account.vscentrum.be/}
+
 You will be redirected to our WAYF (Where Are You From) service where you have to select your ``Home Organisation''.
 
 \begin{center}
@@ -343,7 +330,7 @@ You will now be taken to the authentication page of your institute.
 \strong{The site is only accessible from within the \university
 domain}, so the page won't load from, e.g., home. However, you can also get
 external access to the \university domain using VPN. We refer to the Pintra
-pages of the ICT Department 
+pages of the ICT Department
 % (\url{https://pintra.uantwerpen.be/webapps/ua-pintrasite-BBLEARN/module/index.jsp?course_id=_8_1&tid=_525_1&lid=_11434_1&l=nl_PINTRA})
 for more information.
 
@@ -445,6 +432,24 @@ Kind regards,
 
 Now, you can start using the \hpc. You can always look up your vsc id later by visiting\\*
 \url{https://account.vscentrum.be}.
+
+\subsection{Adding multiple SSH public keys (optional)}
+\label{sec:adding-multiple-keys}
+In case you are connecting from different computers to the login nodes, it is advised to use separate SSH public keys to do so.
+You should follow these steps.
+
+\begin{enumerate}
+\ifmacORlinux
+ \item Create a new public/private SSH key pair from the new computer. Repeat the process described in section~\ref{sec:generate-key-pair-with-openssh}.
+\fi %macORlinux
+\ifwindows
+ \item Create a new public/private SSH key pair from Putty. Repeat the process described in section~\ref{sec:generate-key-pair}.
+\fi %ifwindows
+ \item Go to \url{https://account.vscentrum.be/django/vo/edit}
+ \item Upload the new SSH public key using the \strong{Add public key} section.
+ \item (optional) If you lost your key, you can delete the old key on the same page. You should keep at least one valid public SSH key in your account.
+ \item Take into account that it will take some time before the new SSH public key is active in your account on the system; waiting for 15-30 minutes should be sufficient.
+\end{enumerate}
 
 \section{Computation Workflow on the \hpc}
 \label{sec:compuation-workflow-on-the-hpc}

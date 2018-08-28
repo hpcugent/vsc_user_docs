@@ -41,7 +41,7 @@ total 4224
 drwxrwxr-x 2 %\userid% %\userid%     512 Apr 12 12:51 some_directory
 \end{prompt}
 
-To print the size information in human-readable form, use ``-h'':
+\item To print the size information in human-readable form, use ``-h'':
 
 \begin{prompt}
 %\shellcmd{ls -lh}%
@@ -50,7 +50,8 @@ total 4.1M
 drwxrwxr-x 2 %\userid% %\userid%  512 Apr 12 12:51 some_directory
 \end{prompt}
 
-\item also listing hidden files using ``ls -''a
+\item also listing hidden files using ``ls -a''
+
 \begin{prompt}
 %\shellcmd{ls -lah}%
 total 3.9M
@@ -115,7 +116,7 @@ An \emph{absolute} filepath starts with ``/'' (or a variable which value starts
 with ``/''), which is also called the \emph{root} of the filesystem.
 
 Example: absolute path to your home directory:
-``%\homedir%''.
+``\homedir''.
 
 A \emph{relative} path starts from the current directory, and points to another
 location up or down the filesystem hierarchy.
