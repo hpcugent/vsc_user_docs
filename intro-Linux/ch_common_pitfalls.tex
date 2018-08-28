@@ -6,18 +6,18 @@
 If you receive an error message which contains something like the following:
 
 \begin{prompt}
-No such file or directory...
+No such file or directory
 \end{prompt}
 
-It probably means that you haven't placed your files in the correct directory.
+It probably means that you haven't placed your files in the correct directory or mistyped the path.
 
-Try and figure out the correct location using ``ls'', ``cd'' and using the
-%different ``$VSC\_*'' variables.
+Try and figure out the correct location using \verb|ls|, \verb|cd| and using the
+different \verb|$VSC_*| variables.
 
 \subsubsection{Spaces}
 
 Filenames should \strong{not} contain any spaces! If you have a long filename
-you should use underscores or dashes (e.g. very\_long\_filename).
+you should use underscores or dashes (e.g. \verb|very_long_filename|).
 
 \begin{prompt}
 %\shellcmd{cat some file}%
@@ -25,17 +25,17 @@ No such file or directory 'some'
 \end{prompt}
 
 Spaces are permitted, however they result in surprising behaviour. To cat the
-file ``'some file''' as above you can escape the space with a backslash (``\\ '')
-or putting the filename in quotes:
+file \verb|'some file'| as above you can escape the space with a backslash (``\verb|\ |'')
+or you can put the filename in quotes:
 
 \begin{prompt}
 %\shellcmd{cat some\textbackslash{} file}%
 ...
-%\shellcmd{cat 'some file'}%
+%\shellcmd{cat "some file"}%
 ...
 \end{prompt}
 
-This is especially error prone if you are piping results of ``find'':
+This is especially error prone if you are piping results of \verb|find|:
 
 \begin{prompt}
 %\shellcmd{find . -type f | xargs cat}%
@@ -43,7 +43,7 @@ No such file or directory name 'some'
 No such file or directory name 'file'
 \end{prompt}
 
-This can be worked around using ``-print0'':
+This can be worked around using the \verb|-print0| flag:
 
 \begin{prompt}
 %\shellcmd{find . -type f -print0 | xargs -0 cat}%
@@ -55,10 +55,10 @@ lines and not using spaces in filenames.
 
 \subsubsection{Missing/mistyped environment variables}
 
-If you use a command like ``rm -r'' with environment variables you need to be
+If you use a command like \verb|rm -r| with environment variables you need to be
 careful to make sure that the environment variable exists. If you mistype an
 environment variable then it will resolve to a blank string. This means the
-following resolves to `` rm -r ~/*'' which will remove every file in your home
+following resolves to \verb|rm -r ~/*| which will remove every file in your home
 directory!
 
 \begin{prompt}
@@ -67,7 +67,7 @@ directory!
 
 \subsubsection{Typing dangerous commands}
 
-A good habit when typing dangerous commands is to precede the line with ``\#'',
+A good habit when typing dangerous commands is to precede the line with \verb|#|,
 the comment character. This will let you type out the command without fear of
 accidentally hitting enter and running something unintended.
 
@@ -75,8 +75,8 @@ accidentally hitting enter and running something unintended.
 %\shellcmd{\#rm -r ~/\$POROJETC/*}%
 \end{prompt}
 
-Then you can go back to the beginning of the line (``Ctrl-A'') and remove the
-first character (``Ctrl-D'') to run the command. You can also just press enter
+Then you can go back to the beginning of the line (\verb|Ctrl-A|) and remove the
+first character (\verb|Ctrl-D|) to run the command. You can also just press enter
 to put the command in your history so you can come back to it later (e.g. while
 you go check the spelling of your environment variables).
 
@@ -103,36 +103,37 @@ for each file you copied.
 \subsubsection{Permissions}
 
 \begin{prompt}
-%\shellcmd{ls -l $<$file$>$ \# File with correct permissions}%
--rwxr-xr-\strong{x} 1 %\userid% %\userid% 2983 Jan 30 09:13 $<$file$>$
-%\shellcmd{ls -l $<$file$>$ \# File without correct permissions}%
--rw-r--r-\strong{-} 1 %\userid% %\userid% 2983 Jan 30 09:13 $<$file$>$
+%\shellcmd{ls -l script.sh \# File with correct permissions}%
+-rwxr-xr-x 1 %\userid% %\userid% 2983 Jan 30 09:13 script.sh
+%\shellcmd{ls -l script.sh \# File without correct permissions}%
+-rw-r--r-- 1 %\userid% %\userid% 2983 Jan 30 09:13 script.sh
 \end{prompt}
 
 The script you want to submit needs have correct permissions.
-before submitting you can
+Before submitting it, you'll need to add execute permissions
+to make sure it can be executed:
 
 \begin{prompt}
 %\shellcmd{chmod +x script\_name.sh}%
 \end{prompt}
 
-to make sure it can be executed.
+
 
 \subsection{Help\!}
 
 If you stumble upon an error, don't panic! Read the error output, it might
-contain a clue as to what went wrong. You can copy the error message into google
+contain a clue as to what went wrong. You can copy the error message into Google
 (selecting a small part of the error without filenames).
 
-If you need help about a certain command, you should consult its so called man
-page.
+If you need help about a certain command, you should consult its so called
+``man page'':
 
 \begin{prompt}
 %\shellcmd{man command}%
 \end{prompt}
 
-this will open the manual of this command and contains detailed explanation of
-all the options the command has. Exiting the manual is done by using 'q'.
+This will open the manual of this command. This manual contains detailed explanation of
+all the options the command has. Exiting the manual is done by pressing 'q'.
 
 \strong{Don't be afraid to contact \hpcinfo. They are here to help and will do so for even the smallest of problems!}
 
@@ -152,4 +153,3 @@ all the options the command has. Exiting the manual is done by using 'q'.
 \chapter{Q \& A}
 
 Please don't hesitate to contact \hpcinfo in case of questions or problems.
-
