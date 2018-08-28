@@ -24,6 +24,7 @@ if ! command -v pdflatex > /dev/null; then
     echo "First install"
     install_texlive
 else
+    # Force a cache update once every 100 builds (on average)
     if ! (( $RANDOM % 100 )); then
         echo "Throwing away cache and updating..."
         rm -rf $CACHEDIR
