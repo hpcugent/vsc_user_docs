@@ -223,10 +223,11 @@ somewhere else than the default location (\verb|$HOME/.ssh/id_rsa|):
 %\shellcmd{Permission denied (publickey,gssapi-keyex,gssapi-with-mic).}%
 \end{prompt}
 
-In this case use:
+In this case, use the \verb|-i| option for the ssh command to specify the location
+of your private key. For example:
 
 \begin{prompt}
-%\shellcmd{ssh -i path/to/location/of/private/key \userid{}@\loginnode{}}%
+%\shellcmd{ssh -i /home/example/my\_keys/id\_rsa \userid{}@\loginnode{}}%
 \end{prompt}
 
 % ENDIF \ifmacORlinux
