@@ -3,36 +3,8 @@
 In this section, we briefly explain which different filesystems are available on
 the HPC infrastructure.
 
-See \url{http://hpc.ugent.be/userwiki/index.php/Tips:Filesystem_Information} and
-\url{http://hpc.ugent.be/userwiki/index.php/User:StorageDetails} for more
-information.
-
-\subsubsection{Home}
-
-Your own personal home directory: ``\$VSC\_HOME''
-
-You end up here when you log in (and when jobs start). This is meant for small
-configuration files, limited space available.
-
-\subsubsection{Data}
-
-Long-term personal storage (for large files, volumes): ``\$VSC\_DATA''
-
-\subsubsection{Scratch}
-
-Personal scratch (fast, but to be considered volatile) storage:
-``\$VSC\_SCRATCH''. ``\$VSC\_SCRATCH'' is just a short\-hand for the default
-scratch storage (``\$VSC\_SCRATCH\_DELCATTY'').
-
-\subsubsection{Local}
-
-When running jobs, you also have access to the local storage of a node (which
-you cannot access when logging in, as it is node-dependent).
-
-You access it through ``\$VSC\_SCRATCH\_NODE''.
-
-Inside jobs, a unique directory located in ``\$VSC\_SCRATCH\_NODE'' is made
-available via ``\$TMPDIR''.
+See \href{http://hpcugent.github.io/vsc_user_docs/pdf/intro-HPC-linux-gent.pdf#subsection.6.2.1}{Chapter 6.2.1 of the HPC manual}
+for a list of available locations.
 
 \subsubsection{VO storage}
 
@@ -46,26 +18,16 @@ information.
 
 \subsection{Quota}
 
-Space is limited on the cluster's storage, you can check your quota with the
-``show\_quota'' command:
+Space is limited on the cluster's storage. To check your quota, see
+\href{http://hpcugent.github.io/vsc_user_docs/pdf/intro-HPC-linux-gent.pdf#subsection.6.2.5}{Chapter 6.2.5 of the HPC manual}.
 
-\begin{prompt}
-%\shellcmd{show\_quota}%
-VSC_HOME: used 1.89 GiB (66%\%%) quota 2.85 GiB (3 GiB hard limit)
-VSC_DATA: used 0 B (0%\%%) quota 23.8 GiB (25 GiB hard limit)
-VSC_SCRATCH_DELCATTY: used 0 B (0%\%%) quota 23.8 GiB (25 GiB hard limit)
-\end{prompt}
-
-Quota for personal directories is limited to 3GiB (home) and 25GiB (data \&
-scratch); for VO directories, it depends on the particular VO.
-
-To figure out where you're quota is being spent, the ``du'' command can come in
-useful:
+To figure out where you're quota is being spent, the \verb|du| (\strong{d}isk \strong{u}sage)
+command can come in useful:
 
 \begin{prompt}
 %\shellcmd{du -sh test}%
 59M   test
 \end{prompt}
 
-Note: running ``du'' can take a while in case you have a lot of files and
+Note: running \verb|du| can take a while in case you have a lot of files and
 directories; use it with caution!
