@@ -216,15 +216,17 @@ RSA key fingerprint is %\loginfingerprint%
 Are you sure you want to continue connecting (yes/no)? %\strong{\emph{yes}}%
 \end{prompt}
 
-A possible error message is:
+A possible error message you can get if you previously saved your private key
+somewhere else than the default location (\verb|$HOME/.ssh/id_rsa|):
+
 \begin{prompt}
 %\shellcmd{Permission denied (publickey,gssapi-keyex,gssapi-with-mic).}%
 \end{prompt}
 
-If you previously saved your private key in the non default location (.ssh/id_rsa) you can get the error message
 In this case use:
+
 \begin{prompt}
-%\shellcmd{ssh -i <path/to/location/of/private/key \userid{}@\loginnode{}}%
+%\shellcmd{ssh -i path/to/location/of/private/key \userid{}@\loginnode{}}%
 \end{prompt}
 
 % ENDIF \ifmacORlinux
@@ -1382,9 +1384,3 @@ Or to get more information about one specific module package:
    R is a free software environment for statistical computing and graphics. - Homepage: http://www.r-project.org/
 \end{prompt}
 \fi
-
-
-
-
-
-
