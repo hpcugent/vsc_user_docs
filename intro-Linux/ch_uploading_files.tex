@@ -3,7 +3,7 @@
 \subsection{Uploading/downloading files}
 
 To transfer files from and to the HPC, see
-\href{https://hpcugent.github.io/vsc_user_docs/pdf/intro-HPC-linux-gent.pdf#section.3.2}{chapter 3.2 of the HPC manual}.
+\href{\HPCManualURL}{chapter 3.2 of the HPC manual}.
 
 \ifwindows
 
@@ -20,9 +20,10 @@ as this will fix any problems with Windows/Unix conversion.
 
 As we end up in the home directory when connecting, it would be convenient if we
 could access our data and VO storage. To facilitate this we shall create
-symlinks to them in our home directory. This will create 4 directories pointing to the respective storages
+symlinks to them in our home directory. This will create 4 symbolic links
+\ifwindows(they're like ``shortcuts'' on Windows, they look like directories in WinSCP) \fi
+pointing to the respective storages
 
-%% TODO: scratchdir doesnt exist.
 \begin{prompt}
 %\shellcmd{cd \$HOME}%
 %\shellcmd{ln -s \$VSC\_SCRATCH scratch}%
@@ -32,13 +33,13 @@ lrwxrwxrwx 1 %\userid% %\userid% 31 Mar 27  2009 data -> %\datadir%
 lrwxrwxrwx 1 %\userid% %\userid% 34 Jun  5  2012 scratch -> %\scratchdir%
 \end{prompt}
 
-\section{Editing with ``nano''}
+\section{Editing with \verb|nano|}
 
 Nano is the simplest editor available on Linux. To open Nano, just type
 \verb|nano|. To edit a file, you use \verb|nano the_file_to_edit.txt|. You will
 be presented with the contents of the file and a menu at the bottom with
 commands like \verb|^O Write Out| The \verb|^| is the Control key. So \verb|^O| means
-``Ctrl-O''. The main commands are:
+\verb|Ctrl-O|. The main commands are:
 
 \begin{enumerate}
 \item Open ("Read"): \verb|^R|
