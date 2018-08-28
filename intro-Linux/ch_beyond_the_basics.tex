@@ -5,20 +5,20 @@ of the deeper concepts and commands.
 
 \section{Input/output}
 
-To redirect output to files, you can use the redirection operators: ``>'',
-``>>'', ``\&>'', and ``<''.
+To redirect output to files, you can use the redirection operators: \verb|>|,
+\verb|>>|, \verb|&>|, and \verb|<|.
 
 First, it's important to make a distinction between two different output
 channels:
 
 \begin{enumerate}
- \item ``stdout'': standard output channel, for regular output
- \item ``stderr'': standard error channel, for errors \& warnings
+ \item \verb|stdout|: standard output channel, for regular output
+ \item \verb|stderr|: standard error channel, for errors and warnings
 \end{enumerate}
 
-\subsection{Redirecting ``stdout''}
+\subsection{Redirecting \texttt{stdout}}
 
-``>'' writes the (stdout) output of a command to a file and ''overwrites''
+\verb|>| writes the (\verb|stdout|) output of a command to a file and \emph{overwrites}
 whatever was in the file before.
 
 \begin{prompt}
@@ -30,7 +30,7 @@ hello
 hello2
 \end{prompt}
 
-``>>'' appends the (stdout) output of a command to a file; it does not clobber
+\verb|>>| appends the (\verb|stdout|) output of a command to a file; it does not clobber
 whatever was in the file before:
 
 \begin{prompt}
@@ -43,11 +43,11 @@ hello
 hello2
 \end{prompt}
 
-\subsection{Reading from ``stdin''}
+\subsection{Reading from \texttt{stdin}}
 
-``<'' reads a file from standard input (piped or typed input).  So you would use
-this to simulate typing into a terminal. ``<'' is largely equivalent to ``cat
-somefile | ''.
+\verb|<| reads a file from standard input (piped or typed input).  So you would use
+this to simulate typing into a terminal. \verb|< somefile.txt| is largely equivalent to
+\verb=cat somefile.txt | =.
 
 One common use might be to take the the results of a long running command and
 store the results in a file so you don't have to repeat it while you refine your
@@ -60,10 +60,10 @@ list when you are done:
 %\shellcmd{xargs grep banana $<$ files}%
 \end{prompt}
 
-\subsection{Redirecting ``stderr''}
+\subsection{Redirecting \texttt{stderr}}
 
-To redirect the ``stderr'' output (warnings, messages), you can use ``2>'', just
-like ``>'':
+To redirect the \verb|stderr| output (warnings, messages), you can use \verb|2>|, just
+like \verb|>|
 
 \begin{prompt}
 %\shellcmd{ls one.txt nosuchfile.txt 2$>$ errors.txt}%
@@ -72,10 +72,10 @@ one.txt
 ls: nosuchfile.txt: No such file or directory
 \end{prompt}
 
-\subsection{Combining ``stdout'' and ``stderr''}
+\subsection{Combining \texttt{stdout} and \texttt{stderr}}
 
-To combine both output channels and redirect them to a single file, you can use
-``\&>'':
+To combine both output channels (\verb|stdout| and \verb|stderr|) and redirect them to a single file, you can use
+\verb|&>|
 
 \begin{prompt}
 %\shellcmd{ls one.txt nosuchfile.txt \&$>$ ls.out}%
@@ -87,16 +87,17 @@ one.txt
 \section{Command piping}
 
 Part of the power of the command line is to string multiple commands together to
-create useful results. The core of these is the pipe: ``|''. For example to see
-the number of files in a directory, we can pipe the (``stdout'') output of
-``ls'' to ``wc'' and get the number of lines:
+create useful results. The core of these is the pipe: \verb=|=. For example to see
+the number of files in a directory, we can pipe the (\verb|stdout|) output of
+\verb|ls| to \verb|wc| (\strong{w}ord \strong{c}ount, but can also be used
+to count the number of lines with the \verb|-l| flag).
 
 \begin{prompt}
 %\shellcmd{ls | wc -l}%
      42
 \end{prompt}
 
-A common pattern is to to pipe the output of a command to ``less'' so you can
+A common pattern is to to pipe the output of a command to \verb|less| so you can
 examine or search the output:
 
 \begin{prompt}
@@ -109,7 +110,7 @@ Or to look through your command history:
 %\shellcmd{history | less}%
 \end{prompt}
 
-You can put multiple pipes in the same line. For example, which ``cp'' commands have we run?
+You can put multiple pipes in the same line. For example, which \verb|cp| commands have we run?
 
 \begin{prompt}
 %\shellcmd{history | grep cp | less}%
@@ -120,17 +121,21 @@ You can put multiple pipes in the same line. For example, which ``cp'' commands 
 The shell will expand certain things, including:
 
 \begin{enumerate}
-\item ``*'' wildcard: for example ``ls t*txt'' will list all files starting with 't' and ending in 'txt'
-\item tab completion: hit ``<tab>'' to make the shell complete your command line; works for completing file names, command names, etc.
-\item ``\${...}'': environment variables will be replaced with their value;
-example: ``echo "I am \$USER"''
-\item square brackets can be used to list a number of options for a particular characters; example: ``ls *.[oe][0-9]*''
+\item \verb|*| wildcard: for example \verb|ls t*txt| will list all files starting with 't' and ending in 'txt'
+\item tab completion: hit the \verb|<tab>| key to make the shell complete your command line; works for completing file names, command names, etc.
+\item \verb|$...| or \verb|${...}|: environment variables will be replaced with their value;
+example: \verb|echo "I am $USER"| or \verb|echo "I am ${USER}"|
+\item square brackets can be used to list a number of options for a particular characters; example: \verb|ls *.[oe][0-9]|.
+This will list all files starting with whatever characters (\verb|*|), then a dot (\verb|.|), then either
+an `o' or an `e' (\verb|[oe]|), then a character from `0' to `9' (so any digit) (\verb|[0-9]|).
+So this filename will match: \verb|anything.o5|, but this one won't: \verb|anything.o52|.
+
 \end{enumerate}
 
 \section{Process information}
 
-\subsection{``ps'' and ``pstree''}
-``ps'' lists processes running. By default, it will only show you the processes
+\subsection{\texttt{ps} and \texttt{pstree}}
+\verb|ps| lists processes running. By default, it will only show you the processes
 running in the local shell. To see all of your processes running on the system,
 use:
 
@@ -151,19 +156,19 @@ To see all the processes in a forest view, use:
 \end{prompt}
 
 The last two will spit out a lot of data, so get in the habit of piping it to
-``less''.
+\verb|less|.
 
-``pstree'' is another way to dump a tree/forest view. It looks better than ``ps
-auxf'' but it has much less information so its value is limited.
+\verb|pstree| is another way to dump a tree/forest view. It looks better than
+\verb|ps auxf| but it has much less information so its value is limited.
 
-``pgrep'' will find all the processes where the name matches the pattern and
+\verb|pgrep| will find all the processes where the name matches the pattern and
 print the process IDs (PID). This is used in piping the processes together as we
 will see in the next section.
 
-\subsection{``kill''}
-``ps'' isn't very useful unless you can manipulate the processes. We do this
-using the ``kill'' command. Kill will send a message
-\href{https://en.wikipedia.org/wiki/Unix_signal#POSIX_signals}{SIGINT} to the
+\subsection{\texttt{kill}}
+\verb|ps| isn't very useful unless you can manipulate the processes. We do this
+using the \verb|kill| command. Kill will send a message
+(\href{https://en.wikipedia.org/wiki/Unix_signal#POSIX_signals}{SIGINT}) to the
 process to ask it to stop.
 
 \begin{prompt}
@@ -173,33 +178,33 @@ process to ask it to stop.
 
 Usually this ends the process, giving it the opportunity to flush data to files,
 etc. However, if the process ignored your signal, you can send it a different
-message (\href{https://www.youtube.com/watch?v=Fow7iUaKrq4}{SIGKILL}) which the OS
+message (\href{https://en.wikipedia.org/wiki/Unix_signal#POSIX_signals}{SIGKILL}) which the OS
 will use to unceremoniously terminate the process:
 
 \begin{prompt}
 %\shellcmd{kill -9 1234}%
 \end{prompt}
 
-\subsection{``top''}
-``top'' is a tool to see the current status of the system. You've probably used
-something similar in Task Manager on Windows or Activity Monitor in macOS. Top
+\subsection{\texttt{top}}
+\verb|top| is a tool to see the current status of the system. You've probably used
+something similar in Task Manager on Windows or Activity Monitor in macOS. \verb|top|
 will update every second and has a few interesting commands.
 
-To see only your processes, type ``u'' and type your username (you can also do
-this with ``top -u \$USER''). The default is to sort the display by ``%CPU''. To
-change the sort order, use ``<'' and ``>'' like arrow keys.
+To see only your processes, type \verb|u| and your username after starting \verb|top|, (you can also do
+this with \verb|top -u $USER|). The default is to sort the display by \verb|%CPU|.
+To change the sort order, use \verb|<| and \verb|>| like arrow keys.
 
-There are a lot of configuration options in ``top'' but if you're interested in
-seeing a nicer view, you can run ``htop'' instead. Be aware that it's not
-installed everywhere, while ``top'' is.
+There are a lot of configuration options in \verb|top|, but if you're interested in
+seeing a nicer view, you can run \verb|htop| instead. Be aware that it's not
+installed everywhere, while \verb|top| is.
 
-To exit ``top'', use ``q'' (for 'quit').
+To exit \verb|top|, use \verb|q| (for 'quit').
 
 For more information, see \href{http://brendangregg.com}{Brendan Gregg's excellent
 site dedicated to performance analysis}.
 
 \subsection{ulimit}
-``ulimit'' is a utility to get or set the user limits on the machine. For
+\verb|ulimit| is a utility to get or set the user limits on the machine. For
 example, you may be limited to a certain number of processes. To see all the
 limits that have been set, use:
 
@@ -207,83 +212,86 @@ limits that have been set, use:
 %\shellcmd{ulimit -a}%
 \end{prompt}
 
-\section{Counting: ``wc''}
+\section{Counting: \texttt{wc}}
 
-To count the number of lines, words and characters (or bytes) in a file, use ``wc'' (''w''ord ''c''ount):
+To count the number of lines, words and characters (or bytes) in a file, use \verb|wc| (\strong{w}ord \strong{c}ount):
 
 \begin{prompt}
 %\shellcmd{wc example.txt}%
       90     468    3189  example.txt
 \end{prompt}
 
-The output indidates that the file named ``example.txt'' contains 90 lines, 468 words and 3189 characters/bytes.
+The output indidates that the file named \verb|example.txt| contains 90 lines, 468 words and 3189 characters/bytes.
 
-To only count the number of lines, use ``wc -l'':
+To only count the number of lines, use \verb|wc -l|:
 
 \begin{prompt}
 %\shellcmd{wc -l example.txt}%
       90    example.txt
 \end{prompt}
 
-\section{Searching file contents: ``grep''}
+\section{Searching file contents: \texttt{grep}}
 
-``grep'' is such an important command. It was originally an abbreviation for
+\verb|grep| is an important command. It was originally an abbreviation for
 "globally search a regular expression and print" but it's entered the common
 computing lexicon and people use 'grep' to mean searching for anything. To use
 grep, you give a pattern and a list of files.
 
 \begin{prompt}
-grep banana fruit.txt
-grep banana fruit_bowl1.txt fruit_bowl2.txt
-grep banana fruit*txt
+%\shellcmd{grep banana fruit.txt}%
+%\shellcmd{grep banana fruit\_bowl1.txt fruit\_bowl2.txt}%
+%\shellcmd{grep banana fruit*txt}%
 \end{prompt}
 
-grep also lets you search for
-\url{https://en.wikipedia.org/wiki/Regular_expression Regular Expressions}, but
-these are out of context for this introductory text.
+\verb|grep| also lets you search for
+\href{https://en.wikipedia.org/wiki/Regular_expression}{Regular Expressions}, but
+these are not in scope for this introductory text.
 
-\section{``cut''} ``cut'' is used to pull fields out of files or pipes streams.
-It's a useful glue when you mix it with ``grep'' because ``grep'' can find the
-lines where a string occurs and ``cut'' can pull out a particular field. For
-example, to pull the first column from (an unquoted) csv file, you can use the
-following:
+\section{\texttt{cut}}
+
+\verb|cut| is used to pull fields out of files or pipes streams.
+It's a useful glue when you mix it with \verb|grep| because \verb|grep| can find the
+lines where a string occurs and \verb|cut| can pull out a particular field. For
+example, to pull the first column (\verb|-f 1|, the first \strong{f}ield)
+from (an unquoted) csv (comma-separated values, so \verb|-d ','|: \strong{d}elimited by \verb|,|)
+file, you can use the following:
 
 \begin{prompt}
 %\shellcmd{cut -f 1 -d ',' mydata.csv}%
 \end{prompt}
 
-\section{``sed''} ``sed'' is the stream editor. It is used to replace text in a
+\section{\texttt{sed}}
+
+\verb|sed| is the stream editor. It is used to replace text in a
 file or piped stream. In this way it works like grep, but instead of just
-searching, it can also edit files. This is like "Search and Replace" in a text
-editor. ``sed'' has a lot of features, but most everyone uses the extremely
+searching, it can also edit files. This is like ``Search and Replace'' in a text
+editor. \verb|sed| has a lot of features, but most everyone uses the extremely
 basic version of string replacement:
 
 \begin{prompt}
 %\shellcmd{sed 's/oldtext/newtext/g' myfile.txt}%
 \end{prompt}
 
-By default, sed will just print the results. If you want to edit a file, use
-``-i'', but be very careful that the results will be what you want before you go
-around destroying your data!
+By default, sed will just print the results. If you want to edit the file inplace, use
+\verb|-i|, but be very careful that the results will be what you want before you go
+around \strong{destroying your data}!
 
-Did you know that Skype supports ``sed'' syntax? Or, at least, it used to.
-
-\section{``awk''}
-``awk'' is a basic language that builds on ``sed'' to do much more advanced
+\section{\texttt{awk}}
+\verb|awk| is a basic language that builds on \verb|sed| to do much more advanced
 stream editing. Going in depth is far out of scope of this tutorial, but there
 are two examples that are worth knowing.
 
-First, ``cut'' is very limited in pulling fields apart based on whitespace. For
-example, if you have padded fields then ``cut -f 4 -d ' ''' will almost
+First, \verb|cut| is very limited in pulling fields apart based on whitespace. For
+example, if you have padded fields then \verb|cut -f 4 -d ' '| will almost
 certainly give you a headache as there might be an uncertain number of spaces
-between each field. ``awk'' does better whitespace splitting. So, pulling out
+between each field. \verb|awk| does better whitespace splitting. So, pulling out
 the fourth field in a whitespace delimited file is as follows:
 
 \begin{prompt}
 %\shellcmd{awk '\{print \$4\}' mydata.dat}%
 \end{prompt}
 
-You can use ``-F ':''' to change the delimiter (F for field separator).
+You can use \verb|-F ':'| to change the delimiter (F for field separator).
 
 The next example is used to sum numbers from a field:
 
@@ -301,22 +309,26 @@ will be executed from the top to bottom.
 
 However there are some rules you need to abide by.
 
-Here is a link to a very detailed guide should you need more information:
-http://www.tldp.org/LDP/Bash-Beginners-Guide/html/
+Here is a \href{http://www.tldp.org/LDP/Bash-Beginners-Guide/html/}{very detailed guide} should you need more information.
 
 \subsection{Shebang}
-The first line of the script is the so called shebang (``\#'' is sometimes called
-hash and ``!'' is sometimes called bang). This line tells the shell which
+The first line of the script is the so called shebang (\verb|#| is sometimes called
+hash and \verb|!| is sometimes called bang). This line tells the shell which
 command should execute the script. In the most cases this will simply be the
 shell itself. The line itself looks a bit weird, but you can copy paste this
 line as you need not worry about it further. It is however very important this
-is the very first line of the script!
+is the very first line of the script! These are all valid shebangs, but you should
+only use one of them:
 
 \begin{code}{bash}
  #!/bin/sh
+\end{code}
 
+\begin{code}{bash}
  #!/bin/bash
+\end{code}
 
+\begin{code}{bash}
  #!/usr/bin/env bash
 \end{code}
 
@@ -332,13 +344,18 @@ The syntax:
     mv file directory
  fi
 
- if [ -f ... ]
+Or you only want to do something if  a file exists:
+
+ if [ -f filename ]
+ then
+    echo "it exists"
+ fi
 \end{code}
 
-so the basic structure is
+Or only if a certain variable is bigger than one
 
 \begin{code}{bash}
- if [ $AANTAL -eq 1 ]
+ if [ $AMOUNT -gt 1 ]
  then
    echo "More than one"
    # more commands
@@ -349,11 +366,10 @@ Several pitfalls exist with this syntax. You need spaces surrounding the
 brackets, the \strong{then} needs to be on the beginning of a line. It is best
 to just copy this example and modify it.
 
-In the initial example I used -d to test if a directory existed. There are
-several more checks which can be found here:
-\url{http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html}
+In the initial example we used \verb|-d| to test if a directory existed. There are
+\href{http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html}{several more checks}.
 
-Another useful example, to test if a variable contains value:
+Another useful example, to test if a variable contains a value (so it's not empty):
 
 \begin{code}{bash}
  if [ -z $PBS_ARRAID ]
@@ -363,7 +379,7 @@ Another useful example, to test if a variable contains value:
  fi
 \end{code}
 
-the ``-z'' will check if the length of the variable's value is greater than zero.
+the \verb|-z| will check if the length of the variable's value is greater than zero.
 
 \subsection{Loops}
 
@@ -381,19 +397,19 @@ Let's look at a simple example:
 
 \subsection{Subcommands}
 
-subcommands are used all the time in shell scripts. What they basically do is
+Subcommands are used all the time in shell scripts. What they basically do is
 storing the output of a command in a variable. So this can later be used in a
 conditional or a loop for example.
 
 \begin{prompt}
   CURRENTDIR=`pwd`  # using backticks
-  CURRENTDIR=\$(pwd)  # recommended (easier to type)
+  CURRENTDIR=$(pwd)  # recommended (easier to type)
 \end{prompt}
 
 In the above example you can see the 2 different methods of using a subcommand.
-'''pwd''' will output the current working directory, and its output will be
+\verb|pwd| will output the current working directory, and its output will be
 stored in the CURRENTDIR variable.  The recommend way to use subcommands is with
-the \$() syntax.
+the \verb|$()| syntax.
 
 \subsection{Errors}
 
@@ -401,21 +417,24 @@ Sometimes some things go wrong and a command or script you ran causes an error.
 How do you properly deal with these situations?
 
 Firstly a useful thing to know for debugging and testing is that you can run any
-command as such:
+command like this:
 
 \begin{prompt}
-command 2$>$&1 output.log   # one single output file, both output and errors
+command 2>&1 output.log   # one single output file, both output and errors
 \end{prompt}
 
-so you add "2>\&1 output.log" at the end of any command and it will combine
-output and error output into a single file for you to inspect named output.log.
+If you add \verb|2>&1 output.log| at the end of any command, it will combine
+\verb|stdout| and \verb|stderr|, outputting it into a single file named \verb|output.log|.
+
 If you want regular and error output separated you can use:
 
 \begin{prompt}
-command $>$ output.log 2$>$ output.err  # errors in a separate file
+command > output.log 2> output.err  # errors in a separate file
 \end{prompt}
 
-this will write regular output to output.log and error output to output.err.
+this will write regular output to \verb|output.log| and error output to \verb|output.err|.
+
+You can then look for the errors with \verb|less| or search for specific text with \verb|grep|.
 
 In scripts you can use
 
@@ -430,14 +449,13 @@ the rest of the script to fail as well.
 \subsubsection{Advanced error checking}
 
 Sometimes you want to control all the error checking yourself, this is also
-possible.  Everytime you run a command, a special variable ``\$?'' is used to
+possible.  Everytime you run a command, a special variable \verb|$?| is used to
 denote successful completion of the command. A value other than zero signifies
 something went wrong.  So an example use case:
 
 \begin{code}{bash}
   command_with_possible_error
   exit_code=$?  # capture exit code of last command
-  echo "klaar"
   if [ $exit_code -ne 0 ]
   then
      echo "something went wrong"
@@ -446,7 +464,7 @@ something went wrong.  So an example use case:
 
 \section{Scripting for the cluster}
 
-When writing scripts to be submitted on the cluster there a some tricks you need
+When writing scripts to be submitted on the cluster there are some tricks you need
 to keep in mind.
 
 \subsection{Example job script}
@@ -485,55 +503,56 @@ The scheduler needs to know about the requirements of the script, for example:
 how much memory will it use, how long will it run? These things can be specified
 inside a script with what we call PBS pragmas.
 
+This pragma (a pragma is a special comment) tells PBS to use 1 node and 1 core:
+
 \begin{code}{bash}
   #PBS -l nodes=1:ppn=1   # single-core
 \end{code}
 
 For parallel software, you can request multiple cores (OpenMP) and/or multiple
-nodes (MPI). '''Only use this when the software you use is capable of working in
-parallel.'''
+nodes (MPI). \emph{Only use this when the software you use is capable of working in
+parallel.}. Here is an example:
 
 \begin{code}{bash}
   #PBS -l nodes=1:ppn=16  # single-node, multi-core
   #PBS -l nodes=5:ppn=16  # multi-node
 \end{code}
 
-This option tells PBS to use 1 node and 1 core.
+We intend to submit it on the long queue:
 
 \begin{code}{bash}
   #PBS -q long
 \end{code}
 
-We submit it on the long queue.
+We request a total running time of 48 hours (2 days).
 
 \begin{code}{bash}
   #PBS -l walltime=48:00:00
 \end{code}
 
-We request a total running time of 2 days (48 hours).
+We specify a desired name of our job:
 
 \begin{code}{bash}
   #PBS -N FreeSurfer_per_subject-time-longitudinal
 \end{code}
 
-We tell PBS the name of our job.
+This specifies mail options:
 
 \begin{code}{bash}
   #PBS -m abe
 \end{code}
 
-This specifies mail options.
 \begin{enumerate}
-\item \strong{a} means mail is sent when the job is aborted by the batch system.
-\item \strong{b} means mail is sent when the job begins.
-\item \strong{e} means mail is sent when the job ends.
+\item \verb|a| means mail is sent when the job is aborted.
+\item \verb|b| means mail is sent when the job begins.
+\item \verb|e| means mail is sent when the job ends.
 \end{enumerate}
+
+Joins error output with regular output:
 
 \begin{code}{bash}
   #PBS -j oe
 \end{code}
-
-Joins error output with regular output.
 
 All of these options can also be specified on the command-line and will
 overwrite any pragmas present in the script.
