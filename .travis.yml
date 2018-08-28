@@ -16,7 +16,7 @@ before_install:
     - ./check-version.sh intro-Linux | grep "Checksum for intro-Linux is still valid"
 install:
     - ./travis-install.sh
-    - export PATH=/tmp/texlive/bin/x86_64-linux:$PATH
+    - export PATH=$HOME/cached/.texlive/bin/x86_64-linux:$PATH
     - pdflatex --version ; latexmk --version
 script:
     - cd $TRAVIS_BUILD_DIR
@@ -35,5 +35,4 @@ deploy:
 
 cache:
     directories:
-        - $HOME/.texlive
-        - $HOME/texmf
+        - $HOME/cached
