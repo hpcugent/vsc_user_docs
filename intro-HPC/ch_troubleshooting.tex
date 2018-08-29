@@ -20,14 +20,27 @@ It is recommended to use \emph{checkpointing} if the job requires \strong{72 hou
 \section{Out of quota issues}
 
 Sometimes a job hangs at some point or it stops writing in the disk. These errors are usually
-related to the quota usage. You may have reached your quota limit at some storage endpoint. 
+related to the quota usage. You may have reached your quota limit at some storage endpoint.
 You should move (or remove) the data to a different storage endpoint (or request more quota) to be able to write to the disk and then resubmit the jobs.
 \ifgent
 Another option is to request extra quota for your VO to the VO moderator/s.
-See section~\ref{subsec:predefined-user-directories} and section~\ref{subsec:predfined-quotas} for more information about 
+See section~\ref{subsec:predefined-user-directories} and section~\ref{subsec:predfined-quotas} for more information about
 quotas and how to use the storage endpoints in an efficient way.
 \fi
 % FIXME: Add how to request quota section
 
+\iflinux
 
+\section{DOS/Windows text format}
 
+If you get errors like:
+
+\begin{prompt}
+%\shellcmd{qsub fibo.pbs}%
+qsub:  script is written in DOS/Windows text format
+\end{prompt}
+
+It's probably because you transferred the files from a Windows computer.
+Please go to the section about \verb|dos2unix| in \href{\LinuxManualURL#sec:dos2unix}{chapter 5 of the intro to Linux}
+to fix this error.
+\fi
