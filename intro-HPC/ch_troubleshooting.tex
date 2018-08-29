@@ -20,14 +20,34 @@ It is recommended to use \emph{checkpointing} if the job requires \strong{72 hou
 \section{Out of quota issues}
 
 Sometimes a job hangs at some point or it stops writing in the disk. These errors are usually
-related to the quota usage. You may have reached your quota limit at some storage endpoint. 
+related to the quota usage. You may have reached your quota limit at some storage endpoint.
 You should move (or remove) the data to a different storage endpoint (or request more quota) to be able to write to the disk and then resubmit the jobs.
 \ifgent
 Another option is to request extra quota for your VO to the VO moderator/s.
-See section~\ref{subsec:predefined-user-directories} and section~\ref{subsec:predfined-quotas} for more information about 
+See section~\ref{subsec:predefined-user-directories} and section~\ref{subsec:predfined-quotas} for more information about
 quotas and how to use the storage endpoints in an efficient way.
 \fi
 % FIXME: Add how to request quota section
 
+\section{Warning message when first connecting to new host}
+\label{sec:warning-message-new-host}
 
+\ifmacORlinux
+\begin{prompt}
+%\shellcmd{ssh \userid{}@\loginnode{}}%
+The authenticity of host %\loginnode% (<IP-adress>)
+can't be established.
+%\underline{<algorithm> key fingerprint is <hash>}%
+Are you sure you want to continue connecting (yes/no)?
+\end{prompt}
 
+Now you can check the authenticity by checking if the line that is at the place
+of the underlined piece of text matches one of the following lines:
+\begin{prompt}
+%\opensshFirstConnect%
+\end{prompt}
+
+If it does, type  \strong{\emph{yes}}. If it doesn't, please contact support: \hpcinfo.
+\else
+\firsttimeconnection
+\fi
