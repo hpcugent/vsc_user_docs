@@ -18,6 +18,16 @@ If you want to share data, there are alternatives (like a shared
 directories in VO space).
 
 \section{Can I share my data with other \hpc users?}
-% TODO: show chmod usage
+
+Yes, you can use the \verb|chmod| or \verb|setfacl| commands to change permissions
+of files so other users can access the data. For example, the following command
+will enable a user named ``otheruser'' to read the file named \verb|dataset.txt|.
+See
+
+\begin{prompt}
+%\shellcmd{setfacl -m u:otheruser:r dataset.txt}%
+%\shellcmd{ls -l dataset.txt}%
+-rwxr-x---+ 2 %\userid% mygroup      40 Apr 12 15:00 dataset.txt
+\end{prompt}
 
 % \section{I no longer work for \university, can I transfer my data to another researcher working at \university}
