@@ -1,0 +1,35 @@
+\chapter{Frequently Asked Questions}
+\label{ch:faq}
+
+\section{When will my job start?}
+
+The clusters use a fair-share sheduling policy. There is no guarantee on when a
+job will start, since it depends on a number of factors. One of these factors is
+the priority of the job, which is determined by
+\begin{itemize}
+    \item historical use: the aim is to balance usage over users, so
+        infrequent users get a highter priority
+
+    \item requested resources (amount of cores, walltime, memory, ...): the larger
+        the resource request is, the lower the priority will be
+
+    \item time waiting in queue: queued jobs get a higher priority over time
+
+    \item user limits: this avoids having a single user hog the entire cluster
+
+\end{itemize}
+
+\section{Can I share my account with someone else?}
+
+\strong{NO!}
+\ifgent
+According to \href{https://helpdesk.ugent.be/account/en/regels.php}{the rules},
+this is not allowed.
+\fi % TODO: url of other institutions
+If you want to share data, there are alternatives (like a shared
+directories in VO space).
+
+\section{Can I share my data with other \hpc users?}
+% TODO: show chmod usage
+
+\section{I no longer work for \university, can I transfer my data to another researcher working at \univerity}
