@@ -3,7 +3,7 @@
 \subsection{Uploading/downloading files}
 
 To transfer files from and to the HPC, see
-\href{\HPCManualURL}{chapter 3.2 of the HPC manual}.
+\href{\HPCManualURL#sec:filetranfer}{the section about tranferring files in the HPC manual}.
 
 \ifwindows
 
@@ -19,10 +19,11 @@ as this will fix any problems with Windows/Unix conversion.
 \section{Symlinks for data/scratch}
 
 As we end up in the home directory when connecting, it would be convenient if we
-could access our data and VO storage. To facilitate this we shall create
+could access our data and VO storage. To facilitate this we will create
 symlinks to them in our home directory. This will create 4 symbolic links
-\ifwindows(they're like ``shortcuts'' on Windows, they look like directories in WinSCP) \fi
-pointing to the respective storages
+(they're like ``shortcuts'' on your desktop \ifwindows
+and they look like directories in WinSCP\fi)
+pointing to the respective storages:
 
 \begin{prompt}
 %\shellcmd{cd \$HOME}%
@@ -33,7 +34,7 @@ lrwxrwxrwx 1 %\userid% %\userid% 31 Mar 27  2009 data -> %\datadir%
 lrwxrwxrwx 1 %\userid% %\userid% 34 Jun  5  2012 scratch -> %\scratchdir%
 \end{prompt}
 
-\section{Editing with \verb|nano|}
+\section{Editing with \texttt{nano}}
 
 Nano is the simplest editor available on Linux. To open Nano, just type
 \verb|nano|. To edit a file, you use \verb|nano the_file_to_edit.txt|. You will
