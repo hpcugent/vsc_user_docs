@@ -13,8 +13,13 @@ After copying files it is advised to run
 %\shellcmd{dos2unix filename}
 \end{prompt}
 
-as this will fix any problems with Windows/Unix conversion.
+as this will fix any problems with Windows/Unix conversion. If you don't do this,
+you might get errors like this one:
 
+\begin{prompt}
+%\shellcmd{qsub fibo.pbs}%
+qsub:  script is written in DOS/Windows text format
+\end{prompt}
 \fi
 \section{Symlinks for data/scratch}
 
