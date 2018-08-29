@@ -24,6 +24,9 @@ as this will fix any problems with Windows/Unix conversion.
 As we end up in the home directory when connecting, it would be convenient if we
 could access our data and VO storage. To facilitate this we will create
 symlinks to them in our home directory. This will create 4 symbolic links
+% You're probably wondering about the duplication? I tried to fix it by putting
+% the ifwindows inline. This resulted in either an ugly lone ) or the newly-invented word
+% "desktopadd". total_wasted_minutes=10
 \ifwindows
 (they're like ``shortcuts'' on your desktop and they look like directories in WinSCP)
 \else
