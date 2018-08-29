@@ -29,7 +29,7 @@ quotas and how to use the storage endpoints in an efficient way.
 \fi
 % FIXME: Add how to request quota section
 
-\iflinux
+\ifwindows
 
 \section{DOS/Windows text format}
 
@@ -43,4 +43,27 @@ qsub:  script is written in DOS/Windows text format
 It's probably because you transferred the files from a Windows computer.
 Please go to the section about \verb|dos2unix| in \href{\LinuxManualURL#sec:dos2unix}{chapter 5 of the intro to Linux}
 to fix this error.
+\fi
+
+\section{Warning message when first connecting to new host}
+\label{sec:warning-message-new-host}
+
+\ifmacORlinux
+\begin{prompt}
+%\shellcmd{ssh \userid{}@\loginnode{}}%
+The authenticity of host %\loginnode% (<IP-adress>)
+can't be established.
+%\underline{<algorithm> key fingerprint is <hash>}%
+Are you sure you want to continue connecting (yes/no)?
+\end{prompt}
+
+Now you can check the authenticity by checking if the line that is at the place
+of the underlined piece of text matches one of the following lines:
+\begin{prompt}
+%\opensshFirstConnect%
+\end{prompt}
+
+If it does, type  \strong{\emph{yes}}. If it doesn't, please contact support: \hpcinfo.
+\else
+\firsttimeconnection
 \fi
