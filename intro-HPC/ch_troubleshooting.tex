@@ -20,14 +20,77 @@ It is recommended to use \emph{checkpointing} if the job requires \strong{72 hou
 \section{Out of quota issues}
 
 Sometimes a job hangs at some point or it stops writing in the disk. These errors are usually
-related to the quota usage. You may have reached your quota limit at some storage endpoint. 
+related to the quota usage. You may have reached your quota limit at some storage endpoint.
 You should move (or remove) the data to a different storage endpoint (or request more quota) to be able to write to the disk and then resubmit the jobs.
 \ifgent
 Another option is to request extra quota for your VO to the VO moderator/s.
-See section~\ref{subsec:predefined-user-directories} and section~\ref{subsec:predfined-quotas} for more information about 
+See section~\ref{subsec:predefined-user-directories} and section~\ref{subsec:predfined-quotas} for more information about
 quotas and how to use the storage endpoints in an efficient way.
 \fi
 % FIXME: Add how to request quota section
 
+\section{Issues connecting to login node}
+\label{sec:connecting-issues}
 
+If you have issues connecting to the login nodes, here is a list of things to do
+that might help:
 
+\begin{enumerate}
+    \item Wait at least 1 hour after you VSC account has been \emph{approved}.
+\ifmacORlinux
+    \item Your ssh private key is not in the default location (\verb|~/.ssh/id_rsa|).
+        There are several ways to fix this:
+        \begin{enumerate}
+            \item Use the \verb|ssh -i| (see section~\ref{sec:connect})
+            \item Use \verb|ssh-add|:
+                \ifmac
+                see section~\ref{sec:using-ssh-agent-with-openssh}
+                \else
+                see this \href{https://apple.stackexchange.com/a/250572}{answer on StackExchange}.
+                \fi
+            \item Specify the location of the key in \verb|~/.ssh/config|:
+
+            \begin{prompt}
+Host %\loginnode%
+    IdentityFile %\emph{/path/to/private/key}%
+    User %\emph{your\_username}% # looks like %\userid%\end{prompt}
+            \item Please double/triple check your VSC login ID. It should look
+                something like \emph{\userid}: the letters \verb|vsc|, followed
+                by exactly 5 digits. Double check it's the same one as the one on
+                \url{https://account.vscentrum.be/}.
+            \item You previously connected to the \hpc from another machine, but now
+                have another machine? Please follow the procedure for adding additional
+                keys in section~\ref{sec:adding-multiple-keys}. You'll then need to wait
+                for 20 minutes until your new keys become active.
+            \item \ifwindows Make sure you're using the private key (and not the public key) when trying to connect:
+                If you followed the manual, the private key filename should end in
+                \verb|.ppk| (and not in \verb|.pub|).
+                \else
+                When using an ssh key in a non-default location, make sure you supply
+                the path of the private key (and not the path of the public key)
+                to \verb|ssh|.
+                \fi
+            \item If you have multiple private keys on your machine, please make sure
+                you're using the one that you added its public key on
+                \url{https://account.vscentrum.be/}.
+            \item Please do not use someone else's private keys. You should never
+                share your private key, they're private.
+        \end{enumerate}
+
+If you've tried all applicable items above, please contact \hpcinfo with the following:
+\ifwindows
+Please create a log file of your SSH session by following the steps
+in \href{https://my.kualo.com/knowledgebase/?kbcat=0&article=888}{this article}
+and include it in the email.
+\else
+Please add \verb|-vvv| as a flag to \verb|ssh| like:
+
+\begin{prompt}
+%\shellcmd{ssh -vvv \userid{}@\loginnode}%
+\end{prompt}
+
+and include the output of that command in the email
+
+\fi
+
+\end{enumerate}
