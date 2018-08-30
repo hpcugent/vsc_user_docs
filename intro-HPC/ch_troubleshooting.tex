@@ -29,6 +29,19 @@ quotas and how to use the storage endpoints in an efficient way.
 \fi
 % FIXME: Add how to request quota section
 
+\section{DOS/Windows text format}
+
+If you get errors like:
+
+\begin{prompt}
+%\shellcmd{qsub fibo.pbs}%
+qsub:  script is written in DOS/Windows text format
+\end{prompt}
+
+It's probably because you transferred the files from a Windows computer.
+Please go to the section about \verb|dos2unix| in \href{\LinuxManualURL#sec:dos2unix}{chapter 5 of the intro to Linux}
+to fix this error.
+
 \section{Warning message when first connecting to new host}
 \label{sec:warning-message-new-host}
 
