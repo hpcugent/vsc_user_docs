@@ -1,26 +1,39 @@
 \chapter{Uploading/downloading/editing files}
 
-\subsection{Uploading/downloading files}
+\section{Uploading/downloading files}
+\label{sec:uploading-files}
 
-Detailed information about uploading/downloading files with ``scp'' (using an OS
-X or Linux client) or WinSCP (Windows client), see
-\url{http://hpc.ugent.be/userwiki/index.php/User:VscCopy}.
+To transfer files from and to the HPC, see
+\href{\HPCManualURL#sec:filetranfer}{the section about tranferring files in chapter 3 of the HPC manual}.
 
+\ifwindows
+
+\subsection{\texttt{dos2unix}}
+\label{subsec:dos2unix}
+\hypertarget{sec:dos2unix}{}
 After copying files it is advised to run
 
 \begin{prompt}
 %\shellcmd{dos2unix filename}
 \end{prompt}
 
-as this will fix any problems with windows / unix conversion.
-
+as this will fix any problems with Windows/Unix conversion.
+\fi
 \section{Symlinks for data/scratch}
 
 As we end up in the home directory when connecting, it would be convenient if we
-could access our data and vo storage. To facilitate this we shall create
-symlinks to them in our home directory.
+could access our data and VO storage. To facilitate this we will create
+symlinks to them in our home directory. This will create 4 symbolic links
+% You're probably wondering about the duplication? I tried to fix it by putting
+% the ifwindows inline. This resulted in either an ugly lone ) or the newly-invented word
+% "desktopadd". total_wasted_minutes=10
+\ifwindows
+(they're like ``shortcuts'' on your desktop and they look like directories in WinSCP)
+\else
+(they're like ``shortcuts'' on your desktop)
+\fi
+pointing to the respective storages:
 
-%% TODO: scratchdir doesnt exist.
 \begin{prompt}
 %\shellcmd{cd \$HOME}%
 %\shellcmd{ln -s \$VSC\_SCRATCH scratch}%
@@ -30,22 +43,19 @@ lrwxrwxrwx 1 %\userid% %\userid% 31 Mar 27  2009 data -> %\datadir%
 lrwxrwxrwx 1 %\userid% %\userid% 34 Jun  5  2012 scratch -> %\scratchdir%
 \end{prompt}
 
-this will create 4 directories pointing to the respective storages
-
-\section{Editing: ``nano''}
+\section{Editing with \texttt{nano}}
 
 Nano is the simplest editor available on Linux. To open Nano, just type
-``nano''. To edit a file, you use ``nano the\_file\_to\_edit.txt''. You will
+\verb|nano|. To edit a file, you use \verb|nano the_file_to_edit.txt|. You will
 be presented with the contents of the file and a menu at the bottom with
-commands like ``\^{}O Write Out''. The ``\^{}'' is the Control key. So ``\^{}O'' means
-``Ctrl-O''. The main commands are:
+commands like \verb|^O Write Out| The \verb|^| is the Control key. So \verb|^O| means
+\verb|Ctrl-O|. The main commands are:
 
 \begin{enumerate}
-\item Open ("Read"): ``\^{}R''
-\item Save ("Write Out"): ``\^{}O''
-\item Exit: ``\^{}X''
+\item Open ("Read"): \verb|^R|
+\item Save ("Write Out"): \verb|^O|
+\item Exit: \verb|^X|
 \end{enumerate}
 
-More advanced editors (beyond the scope of this page) are ``vim'' and ``emacs''.
-
-
+More advanced editors (beyond the scope of this page) are \verb|vim| and \verb|emacs|.
+A simple tutorial on how to get started with \verb|vim| can be found at \url{https://www.openvim.com/}.

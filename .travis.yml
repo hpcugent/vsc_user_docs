@@ -7,20 +7,17 @@ env:
       # Create it by using the travis tool: travis encrypt -r $GITHUB_REPO GH_TOKEN=<TOKEN>
       # and replace it below
       - secure: 2p42CdapsQR6xkcR/cnqngbwwYqol7QKosxa6n7r4HhKFw7pcaSRWa/5fLOKIunMxW56UfQgTHCecGAU5/oWS8jmEVZYpBThynQBsHBt4xtPw4RUJzAwn6BmWeKX4RHKE6CCcscxAa1Q9vxBWJ0/yRLSP/ikfj6cAH33ga00dFA=
+      - CACHEDIR=$HOME/cached
 before_install:
     # verify SHA256 checksums to ensure version is bumped when changes are made
     # if this check fails, you should run ./check-version.sh intro-HPC and commit the changes made by the script
-    - INTRO_HPC_EXPECTED="20180828.01 e91264be97a96ccbe59dff9ca1b0b53e4ddd11d2caeee442a726a79698dacbc2"
-    - INTRO_LINUX_EXPECTED="20180827.03 fb3ec67eeff0e6fd1535f92b51c5cca933ae625d6b8342dc2dbfb5cbabe16a96"
+    - INTRO_HPC_EXPECTED="20180830.01 c27b88d4f9693a9c74431d88b64735d5889f66c7e0c7a587c48128d9def74d51"
+    - INTRO_LINUX_EXPECTED="20180830.01 7a2c2c30d98fc40cbf35a638dfa138dda94536b3c95f4c35e9c992a7642ba84a"
     - ./check-version.sh intro-HPC | grep "Checksum for intro-HPC is still valid"
     - ./check-version.sh intro-Linux | grep "Checksum for intro-Linux is still valid"
-    - cd $HOME
-    - travis_retry wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
-    - tar -xzf install-tl-unx.tar.gz ; cd install-tl-*/
 install:
-    - sed -i "s:MYPREFIX:$HOME:g" $TRAVIS_BUILD_DIR/texlive.profile
-    - ./install-tl -profile $TRAVIS_BUILD_DIR/texlive.profile
-    - export PATH=$HOME/.texlive/bin/x86_64-linux:$PATH
+    - ./travis-install.sh
+    - export PATH=$CACHEDIR/.texlive/bin/x86_64-linux:$PATH
     - pdflatex --version ; latexmk --version
 script:
     - cd $TRAVIS_BUILD_DIR
@@ -36,3 +33,7 @@ deploy:
   on:
       repo: $GITHUB_REPO
       branch: master
+
+cache:
+    directories:
+        - $CACHEDIR

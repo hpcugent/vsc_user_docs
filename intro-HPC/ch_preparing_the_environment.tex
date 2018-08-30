@@ -167,7 +167,8 @@ Before you can really start using the \hpc clusters, there are several things yo
       \end{center}
 \fi
 
-    \item \firsttimeconnection
+    \item If this is your first time connecting, you will be asked to verify the authenticity of
+        the login node. Please see section~\ref{sec:warning-message-new-host} on how to do this.
 
     \item  After entering your correct passphrase, you will be connected to the
       login-node of the \hpc.
@@ -209,14 +210,21 @@ Before you can really start using the \hpc clusters, there are several things yo
   vsc id in the above command.
 
   The first time you make a connection to the login node, you will be asked to
-  verify the authenticity of the login node, e.g.,
+  verify the authenticity of the login node. Please check section~\ref{sec:warning-message-new-host}
+  on how to do this.
+
+A possible error message you can get if you previously saved your private key
+somewhere else than the default location (\verb|$HOME/.ssh/id_rsa|):
 
 \begin{prompt}
-%\shellcmd{ssh \userid{}@\loginnode{}}%
-The authenticity of host %\loginnode% (<IP-adress>)
-can't be established.
-RSA key fingerprint is %\loginfingerprint%
-Are you sure you want to continue connecting (yes/no)? %\strong{\emph{yes}}%
+%\shellcmd{Permission denied (publickey,gssapi-keyex,gssapi-with-mic).}%
+\end{prompt}
+
+In this case, use the \verb|-i| option for the \verb|ssh| command to specify the location
+of your private key. For example:
+
+\begin{prompt}
+%\shellcmd{ssh -i /home/example/my\_keys/id\_rsa \userid{}@\loginnode{}}%
 \end{prompt}
 
 % ENDIF \ifmacORlinux
@@ -535,6 +543,8 @@ warnings anymore.
 
 \fi
 \section{Transfer Files to/from the \hpc}
+\hypertarget{sec:filetransfer}{}
+
 
 Before you can do some work, you'll have to \strong{transfer the files}
 you need from your desktop or department to the cluster. At the end of a job,
