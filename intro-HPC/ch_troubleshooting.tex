@@ -64,3 +64,35 @@ If it does, type  \strong{\emph{yes}}. If it doesn't, please contact support: \h
 \else
 \firsttimeconnection
 \fi
+
+\ifusinglmod
+
+\section{Module conflicts}
+
+Modules that are loaded together must use the same toolchain version:
+it is impossible to load two versions of the same module. In the following
+example, we try to load both the \verb|intel-2018a| and \verb|intel-2017a|
+module:
+
+\begin{prompt}
+%\shellcmd{module load Python/2.7.14-intel-2018a}%
+%\shellcmd{module load  HMMER/3.1b2-intel-2017a}%
+Lmod has detected the following error:  A different version of the 'intel' module is already loaded (see output of 'ml').
+You should load another 'HMMER' module for that is compatible with the currently loaded version of 'intel'.
+Use 'ml spider HMMER' to get an overview of the available versions.
+
+
+If you don't understand the warning or error, contact the helpdesk at hpc@ugent.be
+While processing the following module(s):
+    Module fullname          Module Filename
+    ---------------          ---------------
+    HMMER/3.1b2-intel-2017a  /apps/gent/CO7/haswell-ib/modules/all/HMMER/3.1b2-intel-2017a.lua
+\end{prompt}
+
+This resulted in an error because we tried to load two different versions of the
+\verb|intel| module.
+
+To fix this, check if there are other versions of the modules you want to load
+that have the same version of common dependencies. You can list all versions of
+a module with \verb|module spider|: for \verb|HMMER|, this command is \verb|module spider HMMER|.
+\fi
