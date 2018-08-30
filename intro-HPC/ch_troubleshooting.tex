@@ -32,52 +32,70 @@ quotas and how to use the storage endpoints in an efficient way.
 \section{Issues connecting to login node}
 \label{sec:connecting-issues}
 
+If you have errors that look like
+
+\begin{prompt}
+%\userid{}%@%\loginnode%: Permission denied
+\end{prompt}
+
+
+
 If you have issues connecting to the login nodes, here is a list of things to do
 that might help:
 
 \begin{enumerate}
-    \item Wait at least 1 hour after you VSC account has been \emph{approved}.
+    \item It can take up to an hour for you VSC account to become active after
+        it has been \emph{approved}.
 \ifmacORlinux
-    \item Your ssh private key is not in the default location (\verb|~/.ssh/id_rsa|).
-        There are several ways to fix this:
-        \begin{enumerate}
-            \item Use the \verb|ssh -i| (see section~\ref{sec:connect})
+    \item Your SSH private key may not be in the default location (\verb|$HOME/.ssh/id_rsa|).
+        There are several ways to deal with this (using one of these is sufficient):
+\begin{enumerate}
+            \item Use the \verb|ssh -i| (see section~\ref{sec:connect}) \emph{OR;}
             \item Use \verb|ssh-add|:
-                \ifmac
+                \iflinux
                 see section~\ref{sec:using-ssh-agent-with-openssh}
                 \else
                 see this \href{https://apple.stackexchange.com/a/250572}{answer on StackExchange}.
-                \fi
-            \item Specify the location of the key in \verb|~/.ssh/config|:
+                \fi\emph{OR;}
+            \item Specify the location of the key in \verb|~/.ssh/config|. You will
+                need to replace the VSC login id with your own:
 
             \begin{prompt}
-Host %\loginnode%
+Host %\hpcname%
+    Hostname %\loginnode%
     IdentityFile %\emph{/path/to/private/key}%
-    User %\emph{your\_username}% # looks like %\userid%\end{prompt}
-            \item Please double/triple check your VSC login ID. It should look
-                something like \emph{\userid}: the letters \verb|vsc|, followed
-                by exactly 5 digits. Double check it's the same one as the one on
-                \url{https://account.vscentrum.be/}.
-            \item You previously connected to the \hpc from another machine, but now
-                have another machine? Please follow the procedure for adding additional
-                keys in section~\ref{sec:adding-multiple-keys}. You'll then need to wait
-                for 20 minutes until your new keys become active.
-            \item \ifwindows Make sure you're using the private key (and not the public key) when trying to connect:
-                If you followed the manual, the private key filename should end in
-                \verb|.ppk| (and not in \verb|.pub|).
-                \else
-                When using an ssh key in a non-default location, make sure you supply
-                the path of the private key (and not the path of the public key)
-                to \verb|ssh|.
-                \fi
-            \item If you have multiple private keys on your machine, please make sure
-                you're using the one that you added its public key on
-                \url{https://account.vscentrum.be/}.
-            \item Please do not use someone else's private keys. You should never
-                share your private key, they're private.
-        \end{enumerate}
+    User %\emph{\userid}%\end{prompt}
 
-If you've tried all applicable items above, please contact \hpcinfo with the following:
+    Now you can just connect with \texttt{ssh \hpcname}.
+\end{enumerate}
+\fi
+        \item Please double/triple check your VSC login ID. It should look
+            something like \emph{\userid}: the letters \verb|vsc|, followed
+            by exactly 5 digits. Make sure it's the same one as the one on
+            \url{https://account.vscentrum.be/}.
+        \item You previously connected to the \hpc from another machine, but now
+            have another machine? Please follow the procedure for adding additional
+            keys in section~\ref{sec:adding-multiple-keys}. You may need to wait
+            for 15-20 minutes until your new keys become active.
+        \item \ifwindows Make sure you're using the private key (and not the public key) when trying to connect:
+            If you followed the manual, the private key filename should end in
+            \verb|.ppk| (and not in \verb|.pub|).
+            \else
+            When using an SSH key in a non-default location, make sure you supply
+            the path of the private key (and not the path of the public key)
+            to \verb|ssh|. \verb|id_rsa.pub| is the usual filename of the public
+            key, \verb|id_rsa| is the usual filename of the private key.
+            \fi
+        \item If you have multiple private keys on your machine, please make sure
+            you're using the one that corresponds to (one of) the public key(s) you
+            added on \url{https://account.vscentrum.be/}.
+        \item Please do not use someone else's private keys. You should never
+            share your private key, they're called \emph{private} for a good reason.
+\end{enumerate}
+
+If you've tried all applicable items above, please contact \hpcinfo and include the
+following information:
+
 \ifwindows
 Please create a log file of your SSH session by following the steps
 in \href{https://my.kualo.com/knowledgebase/?kbcat=0&article=888}{this article}
@@ -89,8 +107,6 @@ Please add \verb|-vvv| as a flag to \verb|ssh| like:
 %\shellcmd{ssh -vvv \userid{}@\loginnode}%
 \end{prompt}
 
-and include the output of that command in the email
+and include the output of that command in the message
 
 \fi
-
-\end{enumerate}
