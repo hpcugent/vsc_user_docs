@@ -167,7 +167,8 @@ Before you can really start using the \hpc clusters, there are several things yo
       \end{center}
 \fi
 
-    \item \firsttimeconnection
+    \item If this is your first time connecting, you will be asked to verify the authenticity of
+        the login node. Please see section~\ref{sec:warning-message-new-host} on how to do this.
 
     \item  After entering your correct passphrase, you will be connected to the
       login-node of the \hpc.
@@ -209,15 +210,8 @@ Before you can really start using the \hpc clusters, there are several things yo
   vsc id in the above command.
 
   The first time you make a connection to the login node, you will be asked to
-  verify the authenticity of the login node, e.g.,
-
-\begin{prompt}
-%\shellcmd{ssh \userid{}@\loginnode{}}%
-The authenticity of host %\loginnode% (<IP-adress>)
-can't be established.
-RSA key fingerprint is %\loginfingerprint%
-Are you sure you want to continue connecting (yes/no)? %\strong{\emph{yes}}%
-\end{prompt}
+  verify the authenticity of the login node. Please check section~\ref{sec:warning-message-new-host}
+  on how to do this.
 
 A possible error message you can get if you previously saved your private key
 somewhere else than the default location (\verb|$HOME/.ssh/id_rsa|):

@@ -29,6 +29,7 @@ quotas and how to use the storage endpoints in an efficient way.
 \fi
 % FIXME: Add how to request quota section
 
+
 \section{Issues connecting to login node}
 \label{sec:connecting-issues}
 
@@ -112,4 +113,25 @@ Please add \verb|-vvv| as a flag to \verb|ssh| like:
 
 and include the output of that command in the message
 
+\section{Warning message when first connecting to new host}
+\label{sec:warning-message-new-host}
+
+\ifmacORlinux
+\begin{prompt}
+%\shellcmd{ssh \userid{}@\loginnode{}}%
+The authenticity of host %\loginnode% (<IP-adress>)
+can't be established.
+%\underline{<algorithm> key fingerprint is <hash>}%
+Are you sure you want to continue connecting (yes/no)?
+\end{prompt}
+
+Now you can check the authenticity by checking if the line that is at the place
+of the underlined piece of text matches one of the following lines:
+\begin{prompt}
+%\opensshFirstConnect%
+\end{prompt}
+
+If it does, type  \strong{\emph{yes}}. If it doesn't, please contact support: \hpcinfo.
+\else
+\firsttimeconnection
 \fi
