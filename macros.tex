@@ -27,13 +27,35 @@
 % Define some general macros
 \ifwindows
 \macro{\OS}{Windows}
+\newcommand{\osurl}{windows}
 \fi
 \ifmac
 \macro{\OS}{Mac}
+\newcommand{\osurl}{mac}
 \fi
 \iflinux
 \macro{\OS}{Linux}
+\newcommand{\osurl}{linux}
 \fi
+
+\ifleuven
+  \newcommand{\siteurl}{leuven}
+\fi
+\ifantwerpen
+  \newcommand{\siteurl}{antwerpen}
+\fi
+\ifhasselt
+  \newcommand{\siteurl}{hasselt}
+\fi
+\ifbrussel
+  \newcommand{\siteurl}{brussel}
+\fi
+\ifgent
+  \newcommand{\siteurl}{gent}
+\fi
+
+\newcommand{\HPCManualURL}{https://hpcugent.github.io/vsc_user_docs/pdf/intro-HPC-\osurl-\siteurl.pdf}
+\newcommand{\LinuxManualURL}{https://hpcugent.github.io/vsc_user_docs/pdf/intro-Linux-\osurl-\siteurl.pdf}
 
 % Import the Site specific macros
 \inputsite{macros}
