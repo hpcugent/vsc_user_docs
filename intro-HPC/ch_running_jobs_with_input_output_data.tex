@@ -660,3 +660,44 @@ However, we urge you to only use the \texttt{du} and \texttt{tree} commands when
 really need them as they can put a heavy strain on the file system and thus
 slow down file operations on the cluster for all other users.
 \fi
+
+\ifgent
+\section{Virtual Organisations}
+
+A Virtual Organisation (VO) is a sort of group. You can either belong to no VO
+or to a single VO. Being in a VO allows for larger storage quota to be obtained
+(but these requests should be well-motivated).
+
+\subsection{Joining an existing VO}
+
+\begin{enumerate}
+    \item Get the VO id of the research group you belong to (this id is formed by
+        the letters \verb|gvo|, followed by 5 digits).
+    \item Go to \url{https://account.vscentrum.be/django/vo/join} and fill in the
+        section named ``Join VO''. You will be asked to fill in the VO id and a message for
+        the moderator of the VO, where you identify yourself.
+    \item A message will be sent to the moderator of the VO, who will either approve
+        or deny the request.
+\end{enumerate}
+
+\includegraphics[height=4in]{ch6-VO-join}
+
+\subsection{Creating a new VO}
+
+\begin{enumerate}
+    \item Go to \url{https://account.vscentrum.be/django/vo/new} and scroll down
+        to the section ``Request new VO''.
+    \item Fill why you want to request a VO
+    \item Fill out the both the internal and public VO name. These cannot contain
+        spaces, and should be 8-10 characters long.
+    \item Fill out the rest of the form and press submit. This will send a message
+        to the \hpc administrators, who will then either approve or deny the request.
+    \item If the request is approved, you will now be a member and moderator of your
+        newly created VO.
+\end{enumerate}
+
+\subsection{Request more storage space}
+
+%TODO: get moderator access%
+
+\fi
