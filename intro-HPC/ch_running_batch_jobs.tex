@@ -223,6 +223,8 @@ To get the status information on your job:
 \ifgent
 %don't display this because it does not work at Gent
 \else
+\ifbrussel
+\else
   To show an estimated start time for your job (note that this may be very inaccurate,
   the margin of error on this figure can be bigger then 100\% due to a sample in a
   population of 1.)
@@ -242,6 +244,7 @@ To get the status information on your job:
 \begin{prompt}
 %\shellcmd{checkjob $<$jobid$>$}%
 \end{prompt}
+\fi
 \fi
 
 To show on which compute nodes your job is running, at least, when it is
@@ -327,6 +330,41 @@ long               --      --    72:00:00   --  124 453 --   E R
   are effectively running.
 
 \else
+\ifbrussel
+  For security reasons, it is not possible to see what other users are doing on
+  the clusters. As such, the PBS \strong{qstat} command only gives information
+  about your own jobs that are queued or running, ordered by \strong{JobID}.
+
+  However, you can get some idea of the load on the clusters by specifying
+  the \strong{-q} option to the \strong{qstat} command:
+
+\begin{prompt}
+%\shellcmd{qstat -q}%
+server: master01.usr.hydra.brussel.vsc
+
+Queue            Memory CPU Time Walltime Node  Run Que Lm  State
+---------------- ------ -------- -------- ----  --- --- --  -----
+ghostx10           --      --    120:00:0     5   0   0 --   D S
+single_core       250gb    --    120:00:0     1 256   7 --   E R
+ghostx8            --      --    120:00:0     9   0   0 --   E R
+intel              --      --       --      --    0   0 --   D S
+mpi                --      --    120:00:0   --    3   5 --   E R
+smp               250gb    --    120:00:0     1 239  17 --   E R
+ghostx6            --      --    120:00:0     2   0   0 --   E R
+ghostx1            --      --    120:00:0     5   0   0 --   E R
+ghostx11           --      --    120:00:0   --    3   2 --   E R
+submission         --      --       --      --    0  24 --   E R
+login              --      --    120:00:0   --    0   0 --   D S
+gpu                --      --    120:00:0   --    0   0 --   E R
+himem              --      --    120:00:0     1   0   0 --   E R
+                                               ----- -----
+                                                 501    55
+\end{prompt}
+
+  In this example, 55 jobs are queued in the various queues whereas 501 jobs
+  are effectively running.
+
+\else
   You can look at
   the queue by using the PBS \strong{qstat} command or the Moab
   \strong{showq} command. By default, \strong{qstat} will display the queue
@@ -348,6 +386,7 @@ blocked jobs: 243
 Total jobs:  539
 \end{prompt}
 
+\fi
 \fi
 
 \ifantwerpen
@@ -383,6 +422,8 @@ Total jobs:  540
 \ifgent
   %% Again, don't show because showq does not work
 \else
+\ifbrussel
+\else
   There are 3 categories, the \strong{active}, \strong{eligible} and \strong{blocked} jobs.
   
   \begin{description}
@@ -412,6 +453,7 @@ Total jobs:  540
       \item[Notqueued] when scheduling daemon is unavailable
     \end{description}
   \end{description}
+\fi
 \fi
 
 \section{Specifying job requirements}
