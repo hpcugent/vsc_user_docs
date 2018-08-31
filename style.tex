@@ -273,6 +273,7 @@
 \newif\ifantwerpen
 \newif\iftacc
 \newif\ifvsc
+\newif\ifusinglmod
 
 \windowsfalse
 \linuxfalse
@@ -284,6 +285,7 @@
 \antwerpenfalse
 \taccfalse
 \vscfalse
+\usinglmodfalse
 
 \ifdefined\iswindows
   \windowstrue
@@ -309,10 +311,12 @@
 \ifdefined\isbrussel
   \brusseltrue
   \vsctrue
+  \usinglmodtrue
 \fi
 \ifdefined\isgent
   \genttrue
   \vsctrue
+  \usinglmodtrue
 \fi
 \ifdefined\isantwerpen
   \antwerpentrue
