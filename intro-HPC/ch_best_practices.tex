@@ -37,9 +37,14 @@
     have your default environment, so don't forget to load the software with
     \verb|module load|.
 
-  \ifgent\else\item  In case your job not running, use ``checkjob''.  It will show why your
+  \ifgent
+  \else
+  \ifbrussel
+  \item  In case your job not running, use ``checkjob''.  It will show why your
     job is not yet running. Sometimes commands might timeout with an overloaded
-    scheduler.\fi
+    scheduler.
+  \fi
+  \fi
 
   \item  Submit your job and wait (be patient) \ldots
 
