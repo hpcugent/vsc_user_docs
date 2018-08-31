@@ -234,15 +234,7 @@ speed you will achieve on this volume. For guaranteed fast performance and very 
 you should use the scratch space instead.
 \ifgent
 If you are running out of quota on your \$VSC\_DATA filesystem you can
-request a VO (Virtual organisation). VO members get an extra DATA filesystem: \$VSC\_DATA\_VO)
-We can give higher quota values for these filesystems. VO administrators can request additional quota
-at the "Edit VO" page \url{https://account.vscentrum.be/django/vo/edit}.
-
-Note that we may oversubscribe each shared filesystem, meaning that the total amount of quota across
-all VO's may exceed the total size of the filesystem. Because of this, you should consider the available quota
-as an upper limit of the amount of storage space that is available to you; you may not be able to use it all
-if the filesystem does not provide a sufficient amount of free space.
-
+request a VO. See \autoref{sec:virtual-organisations} on how to do this.
 \fi
 
 \subsection{Your scratch space (\$VSC\_SCRATCH)\label{subsec:scratch-directory}}
@@ -661,4 +653,79 @@ in your home directory, even if you are currently in a different directory:
 However, we urge you to only use the \texttt{du} and \texttt{tree} commands when you
 really need them as they can put a heavy strain on the file system and thus
 slow down file operations on the cluster for all other users.
+\fi
+
+% virtual organisations are only used in Ghent (for now)
+\ifgent
+\section{Virtual Organisations}
+\label{sec:virtual-organisations}
+
+A Virtual Organisation (VO) is a special type of group. You can only be a member
+of one single VO at a time (or not be in a VO at all).
+Being in a VO allows for larger storage quota to be obtained
+(but these requests should be well-motivated).
+
+\subsection{Joining an existing VO}
+
+\begin{enumerate}
+    \item Get the VO id of the research group you belong to (this id is formed by
+        the letters \verb|gvo|, followed by 5 digits).
+    \item Go to \url{https://account.vscentrum.be/django/vo/join} and fill in the
+        section named ``Join VO''. You will be asked to fill in the VO id and a message for
+        the moderator of the VO, where you identify yourself. This should look something
+        like the picture below.
+    \item After clicking the submit button, a message will be sent to the moderator
+    of the VO, who will either approve or deny the request.
+\end{enumerate}
+
+
+
+\begin{figure}[h]
+  \caption{Joining a VO.}
+  \centering
+    \includegraphics[width=\textwidth]{ch6-VO-join}
+\end{figure}
+
+\subsection{Creating a new VO}
+
+\begin{enumerate}
+    \item Go to \url{https://account.vscentrum.be/django/vo/new} and scroll down
+        to the section ``Request new VO''. This should look something like the
+        image below.
+    \item Fill why you want to request a VO.
+    \item Fill out the both the internal and public VO name. These cannot contain
+        spaces, and should be 8-10 characters long. For example, \verb|genome25| is
+        a valid VO name.
+    \item Fill out the rest of the form and press submit. This will send a message
+        to the \hpc administrators, who will then either approve or deny the request.
+    \item If the request is approved, you will now be a member and moderator of your
+        newly created VO.
+\end{enumerate}
+
+\begin{figure}[h]
+  \caption{Creating a new VO.}
+  \centering
+    \includegraphics[width=\textwidth]{ch6-VO-new}
+\end{figure}
+
+\subsection{Request more storage space}
+
+If you're a moderator of a VO, you can request additional quota for the VO and
+its members.
+
+\begin{enumerate}
+    \item Go to \url{https://account.vscentrum.be/django/vo/edit} and scroll down
+        to ``Request additional quota''. See the screenshot below to see how this looks.
+    \item Fill out how much \emph{additional} storage you want.
+    \item Add a comment explaing why you need additional storage space and submit
+        the form.
+    \item An \hpc administrator will review your request and approve or deny it.
+\end{enumerate}
+
+\begin{figure}[h]
+  \caption{Requesting additional quota for the VO and its members.}
+  \centering
+    \includegraphics[width=\textwidth]{ch6-VO-request-additional-quota}
+\end{figure}
+
 \fi
