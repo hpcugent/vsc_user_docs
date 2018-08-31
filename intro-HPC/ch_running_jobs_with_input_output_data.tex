@@ -653,12 +653,14 @@ really need them as they can put a heavy strain on the file system and thus
 slow down file operations on the cluster for all other users.
 \fi
 
+% virtual organisations are only used in Ghent (for now)
 \ifgent
 \section{Virtual Organisations}
 \label{sec:virtual-organisations}
 
-A Virtual Organisation (VO) is a sort of group. You can either belong to no VO
-or to a single VO. Being in a VO allows for larger storage quota to be obtained
+A Virtual Organisation (VO) is a special type of group. You can only be a member
+of one single VO at a time (or not be in a VO at all).
+Being in a VO allows for larger storage quota to be obtained
 (but these requests should be well-motivated).
 
 \subsection{Joining an existing VO}
@@ -669,8 +671,8 @@ or to a single VO. Being in a VO allows for larger storage quota to be obtained
     \item Go to \url{https://account.vscentrum.be/django/vo/join} and fill in the
         section named ``Join VO''. You will be asked to fill in the VO id and a message for
         the moderator of the VO, where you identify yourself.
-    \item A message will be sent to the moderator of the VO, who will either approve
-        or deny the request.
+    \item After clicking the submit button, a message will be sent to the moderator
+    of the VO, who will either approve or deny the request.
 \end{enumerate}
 
 \includegraphics[width=\textwidth]{ch6-VO-join}
@@ -682,7 +684,8 @@ or to a single VO. Being in a VO allows for larger storage quota to be obtained
         to the section ``Request new VO''.
     \item Fill why you want to request a VO
     \item Fill out the both the internal and public VO name. These cannot contain
-        spaces, and should be 8-10 characters long.
+        spaces, and should be 8-10 characters long. For example, \verb|genome25| is
+        a valid VO name.
     \item Fill out the rest of the form and press submit. This will send a message
         to the \hpc administrators, who will then either approve or deny the request.
     \item If the request is approved, you will now be a member and moderator of your
@@ -691,12 +694,8 @@ or to a single VO. Being in a VO allows for larger storage quota to be obtained
 
 \subsection{Request more storage space}
 
-If you're a moderator of a VO, you can request additional quota.
-
-Note that we may oversubscribe each shared filesystem, meaning that the total amount of quota across
-all VO's may exceed the total size of the filesystem. Because of this, you should consider the available quota
-as an upper limit of the amount of storage space that is available to you; you may not be able to use it all
-if the filesystem does not provide a sufficient amount of free space.
+If you're a moderator of a VO, you can request additional quota for the VO and
+its members.
 
 \begin{enumerate}
     \item Go to \url{https://account.vscentrum.be/django/vo/edit} and scroll down
