@@ -35,20 +35,19 @@ quotas and how to use the storage endpoints in an efficient way.
 If you're confused about the SSH public/private key pair concept, maybe the
 key/lock analogy in \autoref{subsec:how-do-ssh-keys-work} can help.
 
-If you have errors that look like
+If you have errors that look like:
 
 \begin{prompt}
 %\userid{}%@%\loginnode%: Permission denied
 \end{prompt}
 
-
-
-If you are experiencing problems with connecting, here is a list of things to do
+or you are experiencing problems with connecting, here is a list of things to do
 that should help:
 
 \begin{enumerate}
-    \item It can take up to an hour for you VSC account to become active after
-        it has been \emph{approved}.
+    \item Keep in mind that it an take uup to an hour for your VSC account to become
+        active after it has been \emph{approved}; until then, logging in to your VSC
+        account will not work.
 \ifmacORlinux
     \item Your SSH private key may not be in the default location (\verb|$HOME/.ssh/id_rsa|).
         There are several ways to deal with this (using one of these is sufficient):
