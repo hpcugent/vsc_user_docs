@@ -39,6 +39,23 @@ computer and always stays there; the public key is stored on the \hpc.
 Access to the \hpc is granted to anyone who can prove to have access to the
 corresponding private key on his local computer.
 
+\subsection{How do SSH keys work?}
+\label{subsec:how-do-ssh-keys-work}
+
+\begin{itemize}
+    \item an SSH public/private key pair can be seen as a lock and a key
+    \item the SSH public key is equivalent with a \emph{lock}: you give it to
+        the VSC and they put it on the \emph{door} that gives access to your account.
+    \item the SSH private key is like a \emph{physical key}: you don't hand it out
+        to other people.
+    \item anyone who has the key (and the optional password) can unlock the \emph{door}
+        and log in to the account.
+    \item the \emph{door} to your VSC account is special: it can have multiple \emph{locks}
+        (SSH public keys) attached to it, and you only need to open one \emph{lock}
+        with the corresponding \emph{key} (SSH private key) to open the \emph{door}
+        (log in to the account).
+\end{itemize}
+
 \begin{center}
 \ifantwerpen
 \includegraphics*[width=5.75in, height=3.01in, keepaspectratio=false]{ch2-authentication-general}
@@ -261,13 +278,13 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
   \strong{Without your key pair, you won't be able to apply for a personal VSC account.}
 \fi %macORlinux
 
-\iflinux
+\ifmacORlinux
 
 \subsection{Using an SSH agent (optional)}
 \label{sec:using-ssh-agent-with-openssh}
-  The most recent GNU/Linux distributions include by default an SSH agent
-  (``gnome-keyring-daemon'' in most cases) to keep and manage the user SSH keys.
-  If you use one of these distributions you \strong{must} include the new key/s into
+  Most recent Unix derivatives include by default an SSH agent
+  \iflinux(``gnome-keyring-daemon'' in most cases) \fi to keep and manage the user SSH keys.
+  If you use one of these derivatives you \strong{must} include the new keys into
   the SSH manager keyring to be able to connect to the HPC cluster. If not,
   SSH client will display an error message (see \autoref{ch:preparing-the-environment})
   similar to this:
@@ -277,16 +294,17 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
    Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
   \end{flattext}
 
-  This could be fixed using the ``ssh-add'' command.
-  You can include the new private key/s identities in your keyring with:
+  This could be fixed using the \verb|ssh-add| command.
+  You can include the new private keys' identities in your keyring with:
+
 \begin{prompt}
 %\shellcmd{ssh-add}%
 \end{prompt}
 
 \begin{tip}
-  Without extra options ``ssh-add'' adds any key located at ``~/.ssh''
+  Without extra options \verb|ssh-add| adds any key located at \verb|$HOME/.ssh|
   directory, but you can specify the private key location path as argument,
-  as example ``ssh-add /path/to/my/id\_rsa''.
+  as example: \verb|ssh-add /path/to/my/id_rsa|.
 \end{tip}
 
 Check that your key is available from the keyring with:
@@ -297,13 +315,14 @@ Check that your key is available from the keyring with:
   After these changes the key agent will keep your SSH key to connect
   to the clusters as usual.
 \begin{tip}
-  You should execute ``ssh-add'' command again if you generate a new SSH key.
+  You should execute \verb|ssh-add| command again if you generate a new SSH key.
 \end{tip}
 
+\iflinux
   Visit \url{https://wiki.gnome.org/Projects/GnomeKeyring/Ssh} for
   more information.
-
-\fi %linux
+\fi
+\fi %macORlinux
 
 \section{Applying for the account}
 \label{sec:applying-for-the-account}
