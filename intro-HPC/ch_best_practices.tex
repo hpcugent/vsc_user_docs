@@ -6,81 +6,55 @@
 \begin{enumerate}
 
   \item  Before starting you should always check:
-  \begin{enumerate}
+  \begin{itemize}
     \item  Are there any errors in the script?
     \item  Are the required modules loaded?
     \item  Is the correct executable used?
-  \end{enumerate}
+\end{itemize}
 
   \item  Check your computer requirements upfront, and request the correct resources in your batch job script.
-  \begin{enumerate}
+  \begin{itemize}
     \item  Number of requested cores
     \item  Amount of requested memory
     \item  Requested network type
-  \end{enumerate}
+\end{itemize}
 
   \item  Check your jobs at runtime. You could login to the node and check the
-    proper execution of your jobs with, e.g., ``top'' or ''vmstat''.
-    Alternatively you could run an interactive job (``qsub -I'').
+    proper execution of your jobs with, e.g., \verb|top| or \verb|vmstat|.
+    Alternatively you could run an interactive job (\verb|qsub -I|).
 
   \item  Try to benchmark the software for scaling issues when using MPI or for
     I/O issues.
 
-  \item  Use the scratch file system (\$VSC\_SCRATCH\_NODE which is mapped to the
+  \item  Use the scratch file system (\verb|$VSC_SCRATCH_NODE|, which is mapped to the
     local /tmp) whenever possible. Local disk I/O is always much faster as it
     does not have to use the network.
 
   \item  When your job starts, it will log on to the compute node(s) and start
     executing the commands in the job script. It will start in your home
-    directory (\$VSC\_HOME), so going to the current directory with the ``cd
-    \$PBS\_O\_WORKDIR'' is the first thing which needs to be done.  You will
+    directory \verb|$VSC_HOME|, so going to the current directory with
+    \verb|cd $PBS_O_WORKDIR| is the first thing which needs to be done.  You will
     have your default environment, so don't forget to load the software with
-    ``module load''.
+    \verb|module load|.
 
-  \item  In case your job not running, use ``checkjob''.  It will show why your
+  \ifgent\else\item  In case your job not running, use ``checkjob''.  It will show why your
     job is not yet running. Sometimes commands might timeout with an overloaded
-    scheduler.
+    scheduler.\fi
 
   \item  Submit your job and wait (be patient) \ldots
 
-  \item  Submit small jobs by grouping them together. The ``Worker Framework''
-    has been designed for these purposes.
+  \item  Submit small jobs by grouping them together. See \autoref{ch:multi-job-submission}
+    for how this is done.
 
   \item  The runtime is limited by the maximum walltime of the queues. For
     longer walltimes, use checkpointing.
 
-  \item  Requesting many processors could imply long queue times.
+  \item  Requesting many processors could imply long queue times. It's adivised
+    to only request the resources you'll be able to use.
 
-  \item  For all parallel computing, request to use ``Infiniband''.
+  \item  For all multi-node jobs, please use a cluster that has an ``Infiniband''
+    interconnect network.
 
-  \item  And above all \dots\ do not hesitate to contact the \hpc staff. We're
+  \item  And above all, do not hesitate to contact the \hpc staff at \hpcinfo. We're
     here to help you.
 \end{enumerate}
-
-\section{Windows / Unix}
-
-Important note: the PBS file on the \hpc has to be in UNIX format, if it is
-not, your job will fail and generate rather weird error messages.
-
-If necessary, you can convert it using
-
-\begin{prompt}
-%\shellcmd{dos2unix file.pbs}%
-\end{prompt}
-
-
-\section{Software-Specific Best Practices: Tools}
-\label{sec:software-specific-best-practices-tools}
-
-\subsection{EasyBuild}
-\label{sec:best-practices-easybuild}
-
-\textit{(coming soon)}
-
-\section{Software-Specific Best Practices: Scientific Software}
-\label{sec:software-specific-best-practices-scientific-software}
-
-\subsection{OpenFOAM}
-\label{sec:best-practices-openfoam}
-
-\textit{(coming soon)}
