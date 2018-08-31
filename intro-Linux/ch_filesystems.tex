@@ -29,5 +29,11 @@ command can come in useful:
 59M   test
 \end{prompt}
 
-Note: running \verb|du| can take a while in case you have a lot of files and
-directories; use it with caution!
+Do \emph{not} (frequently) run \verb|du| on directories where large amounts
+of data are stored, since that will:
+\begin{enumerate}
+    \item take a long time
+    \item result in increased
+        load on the shared storage since (the metadata of) every file in those directories
+        will have to be inspected.
+\end{enumerate}
