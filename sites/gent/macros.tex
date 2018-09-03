@@ -16,7 +16,28 @@
 % verify with the keys actually on the host with
 % awk '{print $2}' ssh_host_rsa_key.pub | base64 -d | sha256sum -b | awk '{print $1}' | xxd -r -p | base64
 % ssh-keygen -l -f key.pub
-\macro{\loginfingerprint}{RSA: 2f:0c:f7:76:87:57:f7:5d:2d:7b:d1:a1:e1:86:19:f3 (MD5) SHA256:k+eqH4D4mTpJTeeskpACyouIWf+60sv1JByxODjvEKE, ECDSA: 13:f0:11:d1:94:cb:ca:e5:ca:82:21:62:ab:9f:3f:c2 (MD5) SHA256:1MNKFTfl1T9sm6tTWAo4sn7zyEfiWFLKbk/mlT+7S5s, , ED25519: fa:23:ab:1f:f0:65:f3:0d:d3:33:ce:7a:f8:f4:fc:2a (MD5), SHA256:5hnjlJLolblqkKCmRduiWA21DsxJcSlpVoww0GLlagc}
+
+\newcommand{\opensshFirstConnect}{RSA key fingerprint is 2f:0c:f7:76:87:57:f7:5d:2d:7b:d1:a1:e1:86:19:f3
+
+RSA key fingerprint is SHA256:k+eqH4D4mTpJTeeskpACyouIWf+60sv1JByxODjvEKE
+
+ECDSA key fingerprint is 13:f0:11:d1:94:cb:ca:e5:ca:82:21:62:ab:9f:3f:c2
+
+ECDSA key fingerprint is SHA256:1MNKFTfl1T9sm6tTWAo4sn7zyEfiWFLKbk/mlT+7S5s
+
+ED25519 key fingerprint is fa:23:ab:1f:f0:65:f3:0d:d3:33:ce:7a:f8:f4:fc:2a
+
+ED25519 key fingerprint is SHA256:5hnjlJLolblqkKCmRduiWA21DsxJcSlpVoww0GLlagc
+}
+
+\newcommand{\puttyFirstConnect}{
+\begin{itemize}
+    \item \texttt{ssh-rsa 2048 2f:0c:f7:76:87:57:f7:5d:2d:7b:d1:a1:e1:86:19:f3}
+    \item \texttt{ssh-ed25519 256 fa:23:ab:1f:f0:65:f3:0d:d3:33:ce:7a:f8:f4:fc:2a}
+    \item \texttt{ssh-ecdsa 256 13:f0:11:d1:94:cb:ca:e5:ca:82:21:62:ab:9f:3f:c2}
+\end{itemize}
+
+}
 \macro{\tutorialdir}{/apps/gent/tutorials}
 \macro{\examplesdir}{/apps/gent/tutorials/Intro-HPC/examples}
 % Demo user, jobs, nodes, etc
