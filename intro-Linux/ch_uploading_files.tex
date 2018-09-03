@@ -59,3 +59,41 @@ commands like \verb|^O Write Out| The \verb|^| is the Control key. So \verb|^O| 
 
 More advanced editors (beyond the scope of this page) are \verb|vim| and \verb|emacs|.
 A simple tutorial on how to get started with \verb|vim| can be found at \url{https://www.openvim.com/}.
+
+\section{Copying faster with \texttt{rsync}}
+\hypertarget{sec:rsync}{}
+
+\verb|rsync| is a fast and versatile copying tool. It can be much faster than \verb|scp|
+when copying large datasets. It's famous for its ``delta-transfer algorithm'', which
+reduces the amount of data sent over the network by only sending the differences between
+files.
+
+You will need to run \verb|rsync| from a computer where it is installed. Installing
+\verb|rsync| is the easiest on Linux: it comes pre-installed with a lot of distributions.
+
+For example, to copy a folder with lots of CSV files:
+
+\begin{prompt}
+%\shellcmd{rsync -rzv testfolder \userid{}@\loginnode{}:data/}
+\end{prompt}
+
+will copy the folder \verb|testfolder| and its contents to \verb|$VSC_DATA| on
+the \hpc (we created some symbolic links in a previous section).
+
+The \verb|-r| flag means ``recursively'', the \verb|-z| flag means that compression
+is enabled (this is especially handy when dealing with CSV files because they compress well) and the \verb|-v|
+enables more verbosity (more details about what's going on).
+
+To copy large files using \verb|rsync|, you can use the \verb|-P| flag: it enables
+both showing of progress and resuming partially downloaded files.
+
+To copy files from the \hpc to your local computer, you can also use \verb|rsync|:
+
+\begin{prompt}
+%\shellcmd{rsync -rzv \userid{}@\loginnode{}:data/bioset local\_folder}
+\end{prompt}
+
+This will copy the folder \verb|bioset| and its contents that on \verb|$VSC_DATA| of
+the \hpc to a local folder named \verb|local_folder|.
+
+See \verb|man rsync| or \url{https://linux.die.net/man/1/rsync} for more information about rsync.
