@@ -214,24 +214,30 @@ the results of your calculation (here, the output of the perl script)
 \label{subsec:priority}
 In practice it's impossible to predict when your job(s) will start,
 since most currently running jobs will finish before their requested walltime
-expires, new jobs by may be submitted by other users that are assigned a higher
+expires, and new jobs by may be submitted by other users that are assigned a higher
 priority than your job(s).
 
-The clusters use a fair-share sheduling policy. There is no guarantee on when a
+The \hpcInfra clusters use a fair-share sheduling policy. There is no guarantee on when a
 job will start, since it depends on a number of factors. One of these factors is
 the priority of the job, which is determined by
 \begin{itemize}
     \item historical use: the aim is to balance usage over users, so
-        infrequent users get a highter priority
+        infrequent (in terms of total compute time used) users get a highter priority
 
-    \item requested resources (amount of cores, walltime, memory, ...): the larger
-        the resource request is, the lower the priority will be
+    \item requested resources (amount of cores, walltime, memory, ...)
 
     \item time waiting in queue: queued jobs get a higher priority over time
 
-    \item user limits: this avoids having a single user hog the entire cluster
+    \item user limits: this avoids having a single user use the entire cluster.
+        This means that each user can only use a part of the cluster.
 
 \end{itemize}
+Some other factors are how busy the cluster is, how many workernodes are active,
+the resources (e.g. number of cores, memory) provided by each workernode, \ldots
+
+It might be beneficial to request less resources (e.g. not requesting all cores
+in a workernode), since the scheduler often finds a ``gap'' to fit the job into
+more easily.
 \fi
 
 
