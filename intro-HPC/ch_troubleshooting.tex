@@ -29,6 +29,85 @@ quotas and how to use the storage endpoints in an efficient way.
 \fi
 % FIXME: Add how to request quota section
 
+\section{Issues connecting to login node}
+\label{sec:connecting-issues}
+
+If you're confused about the SSH public/private key pair concept, maybe the
+key/lock analogy in \autoref{subsec:how-do-ssh-keys-work} can help.
+
+If you have errors that look like:
+
+\begin{prompt}
+%\userid{}%@%\loginnode%: Permission denied
+\end{prompt}
+
+or you are experiencing problems with connecting, here is a list of things to do
+that should help:
+
+\begin{enumerate}
+    \item Keep in mind that it an take uup to an hour for your VSC account to become
+        active after it has been \emph{approved}; until then, logging in to your VSC
+        account will not work.
+\ifmacORlinux
+    \item Your SSH private key may not be in the default location (\verb|$HOME/.ssh/id_rsa|).
+        There are several ways to deal with this (using one of these is sufficient):
+\begin{enumerate}
+            \item Use the \verb|ssh -i| (see section~\ref{sec:connect}) \emph{OR;}
+            \item Use \verb|ssh-add| (see section~\ref{sec:using-ssh-agent-with-openssh}) \emph{OR;}
+            \item Specify the location of the key in \verb|$HOME/.ssh/config|. You will
+                need to replace the VSC login id in the \verb|User| field with your own:
+
+            \begin{prompt}
+Host %\hpcname%
+    Hostname %\loginnode%
+    IdentityFile %\emph{/path/to/private/key}%
+    User %\emph{\userid}%\end{prompt}
+
+    Now you can just connect with \texttt{ssh \hpcname}.
+\end{enumerate}
+\fi
+        \item Please double/triple check your VSC login ID. It should look
+            something like \emph{\userid}: the letters \verb|vsc|, followed
+            by exactly 5 digits. Make sure it's the same one as the one on
+            \url{https://account.vscentrum.be/}.
+        \item You previously connected to the \hpc from another machine, but now
+            have another machine? Please follow the procedure for adding additional
+            keys in section~\ref{sec:adding-multiple-keys}. You may need to wait
+            for 15-20 minutes until the SSH public key(s) you added become active.
+        \item \ifwindows Make sure you're using the private key (not the public key) when trying to connect:
+            If you followed the manual, the private key filename should end in
+            \verb|.ppk| (not in \verb|.pub|).
+            \else
+            When using an SSH key in a non-default location, make sure you supply
+            the path of the private key (and not the path of the public key)
+            to \verb|ssh|. \verb|id_rsa.pub| is the usual filename of the public
+            key, \verb|id_rsa| is the usual filename of the private key.
+            (See also section~\ref{sec:connect})
+            \fi
+        \item If you have multiple private keys on your machine, please make sure
+            you're using the one that corresponds to (one of) the public key(s) you
+            added on \url{https://account.vscentrum.be/}.
+        \item Please do not use someone else's private keys. You must never
+            share your private key, they're called \emph{private} for a good reason.
+\end{enumerate}
+
+If you've tried all applicable items above and it doesn't solve your problem,
+please contact \hpcinfo and include the following information:
+
+\ifwindows
+Please create a log file of your SSH session by following the steps
+in \href{https://my.kualo.com/knowledgebase/?kbcat=0&article=888}{this article}
+and include it in the email.
+\else
+Please add \verb|-vvv| as a flag to \verb|ssh| like:
+
+\begin{prompt}
+%\shellcmd{ssh -vvv \userid{}@\loginnode}%
+\end{prompt}
+
+and include the output of that command in the message.
+\fi
+
 \section{DOS/Windows text format}
 
 If you get errors like:
@@ -65,7 +144,6 @@ If it does, type  \strong{\emph{yes}}. If it doesn't, please contact support: \h
 \firsttimeconnection
 \fi
 
-
 \section{Memory limits}
 
 To avoid jobs allocating too much memory, there are memory limits in place by default.
@@ -90,3 +168,35 @@ See \autoref{subsec:generic-resource-requirements} to set memory and other requi
 see \autoref{sec:specifying-memory-requirements} to finetune the amount of memory you request.
 % See issue #248 to fix Java. This is software specific.
 % See issue #196 to fix MATLAB. This is software specific.
+
+\ifgent
+
+\section{Module conflicts}
+
+Modules that are loaded together must use the same toolchain version:
+it is impossible to load two versions of the same module. In the following
+example, we try to load a module that uses the \verb|intel-2018a| toolchain
+together with one that uses the \verb|intel-2017a| toolchain:
+
+\begin{prompt}
+%\shellcmd{module load Python/2.7.14-intel-2018a}%
+%\shellcmd{module load  HMMER/3.1b2-intel-2017a}%
+Lmod has detected the following error:  A different version of the 'intel' module is already loaded (see output of 'ml').
+You should load another 'HMMER' module for that is compatible with the currently loaded version of 'intel'.
+Use 'ml avail HMMER' to get an overview of the available versions.
+
+If you don't understand the warning or error, contact the helpdesk at hpc@ugent.be
+While processing the following module(s):
+
+    Module fullname          Module Filename
+    ---------------          ---------------
+    HMMER/3.1b2-intel-2017a  /apps/gent/CO7/haswell-ib/modules/all/HMMER/3.1b2-intel-2017a.lua
+\end{prompt}
+
+This resulted in an error because we tried to load two different versions of the
+\verb|intel| module.
+
+To fix this, check if there are other versions of the modules you want to load
+that have the same version of common dependencies. You can list all versions of
+a module with \verb|module avail|: for \verb|HMMER|, this command is \verb|module avail HMMER|.
+\fi
