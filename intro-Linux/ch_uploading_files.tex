@@ -19,7 +19,9 @@ After copying files it is advised to run
 
 as this will fix any problems with Windows/Unix conversion.
 \fi
+
 \section{Symlinks for data/scratch}
+\label{sec:symlink-for-data}
 
 As we end up in the home directory when connecting, it would be convenient if we
 could access our data and VO storage. To facilitate this we will create
@@ -78,7 +80,8 @@ For example, to copy a folder with lots of CSV files:
 \end{prompt}
 
 will copy the folder \verb|testfolder| and its contents to \verb|$VSC_DATA| on
-the \hpc (we created some symbolic links in a previous section).
+the \hpc, assuming the \verb|data| symlink is present in your home directory,
+see \autoref{sec:symlink-for-data}.
 
 The \verb|-r| flag means ``recursively'', the \verb|-z| flag means that compression
 is enabled (this is especially handy when dealing with CSV files because they compress well) and the \verb|-v|
