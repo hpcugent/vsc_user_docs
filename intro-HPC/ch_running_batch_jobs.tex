@@ -209,6 +209,38 @@ well. If not, it may contain valuable information to determine and remedy the
 problem that prevented a successful run. The standard output file will contain
 the results of your calculation (here, the output of the perl script)
 
+\ifgent
+\subsection{When will my job start?}
+\label{subsec:priority}
+In practice it's impossible to predict when your job(s) will start,
+since most currently running jobs will finish before their requested walltime
+expires, and new jobs by may be submitted by other users that are assigned a higher
+priority than your job(s).
+
+The \hpcInfra clusters use a fair-share sheduling policy. There is no guarantee on when a
+job will start, since it depends on a number of factors. One of these factors is
+the priority of the job, which is determined by
+\begin{itemize}
+    \item historical use: the aim is to balance usage over users, so
+        infrequent (in terms of total compute time used) users get a highter priority
+
+    \item requested resources (amount of cores, walltime, memory, ...)
+
+    \item time waiting in queue: queued jobs get a higher priority over time
+
+    \item user limits: this avoids having a single user use the entire cluster.
+        This means that each user can only use a part of the cluster.
+
+\end{itemize}
+Some other factors are how busy the cluster is, how many workernodes are active,
+the resources (e.g. number of cores, memory) provided by each workernode, \ldots
+
+It might be beneficial to request less resources (e.g. not requesting all cores
+in a workernode), since the scheduler often finds a ``gap'' to fit the job into
+more easily.
+\fi
+
+
 \section{Monitoring and managing your job(s)}
 
 Using the job ID that \textit{qsub} returned, there are various ways to monitor
@@ -229,18 +261,18 @@ To get the status information on your job:
   the margin of error on this figure can be bigger then 100\% due to a sample in a
   population of 1.)
   This command is not available on all systems.
-  
+
 \begin{prompt}
 %\shellcmd{showstart $<$jobid$>$}%
 \end{prompt}
-  
+
   This is only a very rough estimate. Jobs may launch sooner than estimated if
   other jobs end faster than estimated, but may also be delayed if other
   higher-priority jobs enter the system.
-  
+
   To show the status, but also the resources required by the job, with error
   messages that may prevent your job from starting:
-  
+
 \begin{prompt}
 %\shellcmd{checkjob $<$jobid$>$}%
 \end{prompt}
@@ -373,11 +405,11 @@ himem              --      --    120:00:0     1   0   0 --   E R
   Therefore, \strong{showq} is often more useful.
   Note however that at some VSC-sites, these commands show only your jobs or may
   be even disabled to not reveal what other users are doing.
-  
+
   The \strong{showq} command displays information about active (``running''),
   eligible (``idle''), blocked (``hold''), and/or recently completed jobs. To get
   a summary:
-  
+
 \begin{prompt}
 %\shellcmd{showq -s}%
 active jobs: 163
@@ -425,10 +457,10 @@ Total jobs:  540
 \ifbrussel
 \else
   There are 3 categories, the \strong{active}, \strong{eligible} and \strong{blocked} jobs.
-  
+
   \begin{description}
     \item[Active jobs] are jobs that are running or starting and that consume computer resources. The amount of time remaining (w.r.t.\ walltime, sorted to earliest completion time) and the start time are displayed. This will give you an idea about the foreseen completion time. These jobs could be in a number of states:
-  
+
     \begin{description}
       \item[Started] attempting to start, performing pre-start tasks
       \item[Running] currently executing the user application
@@ -436,7 +468,7 @@ Total jobs:  540
         on the allocated resources, not executing)
       \item[Cancelling] has been cancelled, in process of cleaning up
     \end{description}
-  
+
     \item[Eligible jobs] are jobs that are waiting in the queues and are
       considered eligible for both scheduling and backfilling.  They are all in
       the idle job state and do not violate any fairness policies or do not have
@@ -444,7 +476,7 @@ Total jobs:  540
       is ordered by job priority.
     \item[Blocked jobs] are jobs that are ineligible to be run or queued.  These
       jobs could be in a number of states for the following reasons:
-  
+
     \begin{description}
       \item[Idle] when the job violates a fairness policy
       \item[Userhold] or systemhold when it is user or administrative hold
@@ -503,8 +535,8 @@ The job requests 5 compute nodes with two cores on each node (ppn stands for
 \end{prompt}
 
 The job requests just one node, but it should have an Intel Westmere processor.
-A list with site-specific properties can be found in the next section or in the 
-User Portal 
+A list with site-specific properties can be found in the next section or in the
+User Portal
 (``Available hardware''-section)\footnote{URL: \url{https://www.vscentrum.be/infrastructure/hardware}}
 of the VSC website.
 
@@ -555,8 +587,8 @@ put the job in the walltime category 3 days--7 days.  The user can submit up to 
 this high walltimes (queueable = 400) on hopper, but only 50 of those jobs will be eligible
 for execution (runnable=50) at the same time.  A detailed description of the
 fair-share mechanisms will follow in \autoref{ch:hpc-policies}. For longer running jobs,
-\emph{checkpointing} 
-%(See \autoref{ch:checkpointing}) 
+\emph{checkpointing}
+%(See \autoref{ch:checkpointing}), https://github.com/hpcugent/vsc_user_docs/issues/205
 is necessary.
 \fi
 
@@ -703,22 +735,22 @@ Inspect the generated output and error files:
   %do not display this, since at least in Gent it doesn't behave that way
 \else
   \subsection{Upon job failure}
-  
+
   Whenever a job fails, an e-mail will be sent to the e-mail address that's
   connected to your $<$vsc-account$>$. This is the e-mail address that is linked
   to the university account, which was used during the registration process.
-  
+
   You can force a job to fail by specifying an unrealistic wall-time for the
   previous example.  Lets give the ``\emph{fibo.pbs}'' job just one second to
   complete:
-  
+
 \begin{prompt}
 %\shellcmd{qsub -l walltime=0:00:01 fibo.pbs}%
 \end{prompt}
-  
+
   Now, lets hope that the \hpc did not manage to run the job within one second,
   and you will get an e-mail informing you about this error.
-  
+
   \begin{flattext}
   PBS Job Id: %\jobid%
   Job Name:   fibo.pbs
@@ -756,4 +788,3 @@ happens:
 
 You don't have to specify the e-mail address. The system will
 use the e-mail address which is connected to your VSC account.
-
