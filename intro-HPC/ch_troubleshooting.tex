@@ -79,12 +79,14 @@ because of the memory limits and you should increase the memory limits for your 
 Examples of these error messages are: \verb|malloc failed|, \verb|Out of memory|,
 \verb|Could not allocate memory|
 or in Java: \verb|Could not reserve enough space for object heap|. Your program can
-also segfault or crash due to bus errors.
+also run into a \verb|Segmentation fault| (or \verb|segfault|) or crash due to bus errors.
 
-You can check the amount of virtual memory (in Kb) you got via \verb|ulimit -v| command
-\emph{in your jobscript}.
+You can check the amount of virtual memory (in Kb) that is available to you via the
+\verb|ulimit -v| command \emph{in your jobscript}.
 
 \subsection{How do I specify the amount of memory I need?}
 
 See \autoref{subsec:generic-resource-requirements} to set memory and other requirements,
 see \autoref{sec:specifying-memory-requirements} to finetune the amount of memory you request.
+% See issue #248 to fix Java. This is software specific.
+% See issue #196 to fix MATLAB. This is software specific.
