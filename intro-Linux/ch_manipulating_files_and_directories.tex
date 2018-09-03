@@ -270,3 +270,20 @@ remember:
 \begin{prompt}
     %\shellcmd{tar -c source1 source2 source3 -f tarfile.tar}%
 \end{prompt}
+
+\section{Exercises}
+
+\begin{enumerate}
+    \item Create a subdirectory in your home directory named \verb|test| containing
+        a single, empty file named \verb|one.txt|.
+    \item Copy \verb|/etc/hostname| into the \verb|test| directory and then check what's
+        in it.
+    \item Make a new directory named \verb|another| and copy the entire \verb|test|
+        directory to it. \verb|another/test/one.txt| should then be an empty file.
+    \item Remove the \verb|another/test| directory with a single command.
+    \item Rename \verb|test| to \verb|test2|. Move \verb|test2/hostname| to your
+        home directory.
+    \item Change the permission of \verb|test2| so only you can access it.
+    \item Create an empty job script named \verb|job.sh|, and turn on its execution bit.
+    \item gzip \verb|hostname|, see how much smaller it becomes, then unzip it again.
+\end{enumerate}
