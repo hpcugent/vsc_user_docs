@@ -708,7 +708,7 @@ Being in a VO allows for larger storage quota to be obtained
     \includegraphics[width=\textwidth]{ch6-VO-new}
 \end{figure}
 
-\subsection{Request more storage space}
+\subsection{Requesting more storage space}
 
 If you're a moderator of a VO, you can request additional quota for the VO and
 its members.
@@ -716,8 +716,10 @@ its members.
 \begin{enumerate}
     \item Go to \url{https://account.vscentrum.be/django/vo/edit} and scroll down
         to ``Request additional quota''. See the screenshot below to see how this looks.
-    \item Fill out how much \emph{additional} storage you want.
-    \item Add a comment explaing why you need additional storage space and submit
+    \item Fill out how much \emph{additional} storage you want. In the screenshot below,
+        we're asking for 500 GiB extra space for \verb|VSC_DATA|, and for 1 TiB extra
+        space on \verb|VSC_SCRATCH_KYUKON|.
+    \item Add a comment explaining why you need additional storage space and submit
         the form.
     \item An \hpc administrator will review your request and approve or deny it.
 \end{enumerate}
@@ -726,6 +728,33 @@ its members.
   \caption{Requesting additional quota for the VO and its members.}
   \centering
     \includegraphics[width=\textwidth]{ch6-VO-request-additional-quota}
+\end{figure}
+
+\subsection{Setting per-member VO quota}
+
+VO moderators can tweak how much of the VO quota each member can use. By default,
+this is set to 50\% for each user, but the moderator can change this: it is possible
+to give a particular user more than half of the VO quota (for example 80\%), or
+significantly less (for example 10\%).
+
+Note that the total percentage can be above 100\%: the percentages the moderator
+allocates per user are \emph{the maximum percentages} of storage users can use.
+
+\begin{enumerate}
+    \item Go to \url{https://account.vscentrum.be/django/vo/edit} and scroll down
+        to ``Manage per-member quota share''. See the screenshot below to see how this looks.
+    \item Fill out how much percent of the space you want each user to be able to use.
+        Note that the total can be above 100\%. In the screenshot below, there are
+        four users. Alice and Bob can use up to 50\% of the space, Carl
+        can use up to 75\% of the space, and Dave can only use 10\% of the space.
+        So in total, 185\% of the space has been assigned, but of course only
+        100\% can actually be used.
+\end{enumerate}
+
+\begin{figure}[h]
+  \caption{Setting per-member quota.}
+  \centering
+    \includegraphics[width=\textwidth]{ch6-VO-per-member-storage}
 \end{figure}
 
 \fi
