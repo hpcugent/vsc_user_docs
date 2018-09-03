@@ -239,9 +239,13 @@ It might be beneficial to request less resources (e.g. not requesting all cores
 in a workernode), since the scheduler often finds a ``gap'' to fit the job into
 more easily.
 
+\fi
+
+\ifgent
+
 \subsection{Specifying the cluster on which to run}
 
-To switch between clusters you can swap the ``cluster'' modules.
+To use other clusters, you can swap the ``cluster'' modules.
 These are special modules that change what modules are available for you,
 and what cluster your jobs will be queued in.
 By default you are working on \defaultcluster. To switch to, e.g., \othercluster you need
@@ -249,7 +253,7 @@ to redefine the environment so you get access to all modules installed on
 the \othercluster cluster, and to be able to submit jobs to the \othercluster scheduler
 so your jobs will start on \othercluster instead of the default \defaultcluster cluster.
 
-The \othercluster modules do not work directly on the login nodes, because the
+The \othercluster modules may not work directly on the login nodes, because the
 login nodes do not have the same architecture as the \othercluster cluster, they
 have the same architecture as the \defaultcluster cluster however, so this is why
 by default software works on the login nodes.
@@ -259,6 +263,7 @@ by default software works on the login nodes.
 \end{prompt}
 
 To list the available cluster modules, you can use the \verb|module avail cluster/| command.
+
 The output of the various commands interacting with jobs (\verb|qsub|, \verb|stat|, \ldots)
 all depend on which cluster module is loaded.
 \fi
