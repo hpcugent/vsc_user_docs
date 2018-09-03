@@ -1135,52 +1135,17 @@ applicable to that particular system.
 Modules need not be loaded one by one; the two ``load'' commands can be
 combined as follows:
 
-\ifantwerpen
-\begin{prompt}
-%\shellcmd{module load MATLAB Python/2.7.9-intel-2015a}%
-\end{prompt}
-\fi
-\ifbrussel
-\begin{prompt}
-%\shellcmd{module load MATLAB Python/2.7.9-intel-2015a}%
-\end{prompt}
-\fi
-\ifgent
-\begin{prompt}
-%\shellcmd{module load MATLAB Python/2.7.9-intel-2015a}%
-\end{prompt}
-\fi
 \ifleuven
 \begin{prompt}
 %\shellcmd{module load matlab Python/2.7.6-foss-2014a}%
 \end{prompt}
+\else
+\begin{prompt}
+%\shellcmd{module load MATLAB Python/2.7.9-intel-2015a}%
+\end{prompt}
 \fi
 
 This will load the two modules as well as their dependencies.
-
-\ifgent
-
-\subsection{Specifying the cluster on which to run}
-
-To switch between clusters you can swap the ``cluster'' modules.
-These are special modules that change what modules are available for you,
-and what cluster your jobs will be queued in.
-By default you are working on \defaultcluster. To switch to, e.g., \othercluster you need
-to redefine the environment so you get access to all modules installed on
-the \othercluster cluster, and to be able to submit jobs to the \othercluster scheduler
-so your jobs will start on \othercluster instead of the default \defaultcluster cluster.
-
-The \othercluster modules do not work directly on the login nodes, because the
-login nodes do not have the same architecture as the \othercluster cluster, they
-have the same architecture as the \defaultcluster cluster however, so this is why
-by default software works on the login nodes.
-
-\begin{prompt}
-%\shellcmd{module swap cluster/\othercluster}%
-\end{prompt}
-
-To list the available cluster modules, you can use the \verb|module avail cluster/| command.
-\fi
 
 \subsection{Explicit version numbers}
 
