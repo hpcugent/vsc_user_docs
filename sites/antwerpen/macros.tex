@@ -11,8 +11,34 @@
 \macro{\hpcname}{hopper}
 \macro{\loginnode}{login.hpc.uantwerpen.be}
 \macro{\loginhost}{ln02.hopper.uantwerpen.vsc}
-%TODO: RSA key fingerprint here
-\newcommand{\opensshFirstConnect}{RSA key fingerprint is 20:96:ca:e7:f0:62:87:34:ca:9c:71:84:b7:d3:46:f8}
+% get these with ssh-keyscan login1-hopper.uantwerpen.be > file
+% ssh-keygen -l -f file
+% ssh-keygen -l -f file -E md5
+% verify with the keys actually on the host with
+% awk '{print $2}' ssh_host_rsa_key.pub | base64 -d | sha256sum -b | awk '{print $1}' | xxd -r -p | base64
+% ssh-keygen -l -f key.pub
+
+\newcommand{\opensshFirstConnect}{RSA key fingerprint is 20:96:ca:e7:f0:62:87:34:ca:9c:71:84:b7:d3:46:f8
+
+RSA key fingerprint is SHA256:cxFXVI+V2XAHG09N7zGHbKVTBDhVDeSqPXRrE+O/y+I 
+
+ECDSA key fingerprint is 4d:91:48:47:4f:e7:46:e0:5a:6a:7d:1b:59:f1:9f:27
+
+ECDSA key fingerprint is SHA256:CWFbFs7K9n0JM83sRWimMYY7Ie+f1QJmmvBUS1gVHig
+
+ED25519 key fingerprint is 47:3d:d5:c3:f0:17:96:61:30:26:35:e3:97:f3:bf:3e
+
+ED25519 key fingerprint is SHA256:fR3Datl2FGLL3n6Lo2kYkCZCoZDb/gdQN4Vr2mwvfzw 
+}
+
+\newcommand{\puttyFirstConnect}{
+\begin{itemize}
+    \item \texttt{ssh-rsa 2048 20:96:ca:e7:f0:62:87:34:ca:9c:71:84:b7:d3:46:f8}
+    \item \texttt{ssh-ecdsa 256 4d:91:48:47:4f:e7:46:e0:5a:6a:7d:1b:59:f1:9f:27}
+    \item \texttt{ssh-ed25519 256 47:3d:d5:c3:f0:17:96:61:30:26:35:e3:97:f3:bf:3e} 
+\end{itemize}
+
+}
 \macro{\operatingsystem}{CentOS Linux release 7.4.1708 (Core)}
 \macro{\operatingsystemSL}{Scientific Linux}
 \macro{\operatingsystemCOS}{CentOS Linux}
