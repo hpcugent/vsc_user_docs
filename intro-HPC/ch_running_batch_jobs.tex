@@ -244,6 +244,7 @@ more easily.
 \ifgent
 
 \subsection{Specifying the cluster on which to run}
+\label{subsec:specifying-the-cluster-on-which-to-run}
 
 To use other clusters, you can swap the \verb|cluster| modules.
 These are special modules that change what modules are available for you,
@@ -256,7 +257,8 @@ so your jobs will start on \othercluster instead of the default \defaultcluster 
 The \othercluster modules may not work directly on the login nodes, because the
 login nodes do not have the same architecture as the \othercluster cluster, they
 have the same architecture as the \defaultcluster cluster however, so this is why
-by default software works on the login nodes.
+by default software works on the login nodes. See \autoref{sec:running-software-incompatible-with-host}
+for why this is and how to fix this.
 
 \begin{prompt}
 %\shellcmd{module swap cluster/\othercluster}%

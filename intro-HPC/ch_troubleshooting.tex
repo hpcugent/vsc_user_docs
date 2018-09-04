@@ -204,6 +204,7 @@ a module with \verb|module avail|: for \verb|HMMER|, this command is \verb|modul
 \ifgent
 
 \section{Running software that is incompatible with host}
+\label{sec:running-software-incompatible-with-host}
 
 When running software provided through modules (see \autoref{sec:modules}),
 you may run into errors like:
@@ -240,7 +241,8 @@ That means that if the cluster and the login nodes have a different CPU architec
 software loaded using modules might not work.
 
 If you want to test software on the login nodes, make sure the \texttt{cluster/\defaultcluster}
-module is loaded (with \texttt{module swap cluster/\defaultcluster}), % TODO: link to relevant section, see #252
+module is loaded (with \texttt{module swap cluster/\defaultcluster}, see
+\autoref{subsec:specifying-the-cluster-on-which-to-run}),
 since the login nodes and \defaultcluster have the same CPU architecture.
 
 If modules are already loaded, and then we swap to a different cluster,
