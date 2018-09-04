@@ -188,7 +188,7 @@ We ellaborate more on the specific function of these locations in the following
 sections.
 
 \ifgent
-Note: \verb|$VSC_SCRATCH_KYUKON| and \verb|$VSC_SCRATCH| are the same directories.
+Note: \verb|$VSC_SCRATCH_KYUKON| and \verb|$VSC_SCRATCH| are the same directories
 ("kyukon" is the name of the storage cluster where the default shared scratch filesystem is hosted).
 
 For documentation about VO directories, see \autoref{subsec:vo-directories}.
@@ -761,17 +761,18 @@ allocates per user are \emph{the maximum percentages} of storage users can use.
 \subsection{VO directories}
 \label{subsec:vo-directories}
 
-When you're a member of a VO, there will be some additional filesystems available:
+When you're a member of a VO, there will be some additional directories
+on each of the shared filesystems available:
 
 \begin{description}
     \item[VO scratch (\texttt{\$VSC\_SCRATCH\_VO})]
-        A directory on the shared scratch filesystem shared by the members of your
+        A directory on the shared \emph{scratch} filesystem shared by the members of your
         VO, where additional storage quota can be provided (see \autoref{subsec:requesting-more-storage-space}).
         You can use this as an alternative to your personal \verb|$VSC_SCRATCH|
         directory (see \autoref{subsec:scratch-directory}).
 
     \item[VO data (\texttt{\$VSC\_DATA\_VO})]
-        A directory on the shared data filesystem shared by the members of your
+        A directory on the shared \emph{data} filesystem shared by the members of your
         VO, where additional storage quota can be provided (see \autoref{subsec:requesting-more-storage-space}).
         You can use this as an alternative to your personal \verb|$VSC_DATA|
         directory (see \autoref{subsec:data-directory}).
@@ -781,6 +782,6 @@ When you're a member of a VO, there will be some additional filesystems availabl
 If you put \verb|_USER| after each of these variable names, you can see your
 personal folder in these filesystems. For example: \verb|$VSC_DATA_VO_USER|
 is your personal folder in your VO data filesystem (this is equivalent to
-\verb|$VSC_DATA_VO/$USER|).
+\verb|$VSC_DATA_VO/$USER|), and analogous for \verb|$VSC_SCRATCH_VO_USER|.
 
 \fi
