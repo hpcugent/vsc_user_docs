@@ -464,7 +464,7 @@ something went wrong.  So an example use case:
 
 \section{Scripting for the cluster}
 
-When writing scripts to be submitted on the cluster there are some tricks you need
+When writing scripts to be submitted on the \gls{cluster} there are some tricks you need
 to keep in mind.
 
 \subsection{Example job script}
@@ -500,17 +500,17 @@ to keep in mind.
 \subsection{PBS pragmas}
 
 The scheduler needs to know about the requirements of the script, for example:
-how much memory will it use, how long will it run? These things can be specified
+how much \gls{memory} will it use, how long will it run? These things can be specified
 inside a script with what we call PBS pragmas.
 
-This pragma (a pragma is a special comment) tells PBS to use 1 node and 1 core:
+This pragma (a pragma is a special comment) tells PBS to use 1 \gls{node} and 1 \gls{core}:
 
 \begin{code}{bash}
   #PBS -l nodes=1:ppn=1   # single-core
 \end{code}
 
 For parallel software, you can request multiple cores (OpenMP) and/or multiple
-nodes (MPI). \emph{Only use this when the software you use is capable of working in
+nodes (\gls{MPI}). \emph{Only use this when the software you use is capable of working in
 parallel.}. Here is an example:
 
 \begin{code}{bash}
@@ -518,7 +518,7 @@ parallel.}. Here is an example:
   #PBS -l nodes=5:ppn=16  # multi-node
 \end{code}
 
-We intend to submit it on the long queue:
+We intend to submit it on the long \gls{queue}:
 
 \begin{code}{bash}
   #PBS -q long
@@ -556,3 +556,22 @@ Joins error output with regular output:
 
 All of these options can also be specified on the command-line and will
 overwrite any pragmas present in the script.
+
+\section{Exercises}
+
+\begin{enumerate}
+    \item Create a file that contains this message: ``Hello, I am <user>'',
+        where \verb|<user>| is replaced by your username. Don't cheat by using
+        an editor, use a command to create the file.
+    \item Use another command to add this line to the same file: ``I am on system <hostname> in
+        directory <current directory>''. Words between \verb|<>| should be replaced with
+        their value (hint: use environment variables).
+    \item How many files and directories are in \verb|/tmp|?
+    \item What's the name of the 5th file/directory in alphabetical order in \verb|/tmp|?
+    \item List all files that start with \verb|t| in \verb|/tmp|.
+    \item Create a file containing ``My home directory <home> is available using \$HOME''.
+        \verb|<home>| should be replaced with your home directory, but \verb|$HOME|
+        should remain as-is.
+    \item How many processes are you currently running? How many are you allowed
+        to run? Where are they coming from?
+\end{enumerate}

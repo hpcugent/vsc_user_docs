@@ -20,7 +20,9 @@ See \url{https://admin.kuleuven.be/personeel/english_hrdepartment/ICT-codeofcond
 \ifbrussel
 See \url{http://www.vub.ac.be/sites/vub/files/reglement-gebruik-ict-infrastructuur.pdf}.
 \fi
-% TODO: url of other institutions, https://github.com/hpcugent/vsc_user_docs/issues/243
+\ifantwerpen
+See \url{https://pintra.uantwerpen.be/bbcswebdav/xid-23610_1}
+\fi
 \ifgent
 If you want to share data, there are alternatives (like a shared
 directories in VO space, see \autoref{sec:virtual-organisations}).
@@ -43,3 +45,8 @@ For more information about \verb|chmod| or \verb|setfacl|, see \href{\LinuxManua
 {the section on chmod in chapter 3 of the Linux intro manual}.
 % \section{I no longer work for \university, can I transfer my data to another researcher working at \university}
 % See https://github.com/hpcugent/vsc_user_docs/issues/230
+
+\section{Can I use multple different SSH key pairs to connect ot my VSC account?}
+
+Yes, and this is recommendend when working from different computers. Please see
+\autoref{sec:adding-multiple-keys} on how to do this.
