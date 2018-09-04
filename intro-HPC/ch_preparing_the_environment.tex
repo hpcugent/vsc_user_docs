@@ -830,6 +830,7 @@ total  899
 See \href{\LinuxManualURL#sec:rsync}{the section on \texttt{rsync} in chapter 5 of the Linux intro manual}.
 
 \section{Modules}
+\label{sec:modules}
 
 Software installation and maintenance on a \hpc cluster such as the VSC
 clusters poses a number of challenges not encountered on a workstation or a
@@ -943,6 +944,7 @@ of specific properties of that cluster such as GPU accelerators or special
 interconnect features that require a vendor-specific MPI-implementation.
 
 \subsection{Activating and de-activating modules}
+\label{subsec:activating-and-deactivating-modules}
 
 A module is loaded using the following command:
 
@@ -1140,6 +1142,9 @@ Notice that the version was not specified: the module system is sufficiently
 clever to figure out what the user intends. However, checking the list of
 currently loaded modules is always a good idea, just to make sure \ldots
 
+\subsection{Purging all modules}
+\label{subsec:purging-modules}
+
 In order to unload all modules at once, and hence be sure to start in a clean
 state, you can use:
 
@@ -1147,12 +1152,6 @@ state, you can use:
 %\shellcmd{module purge}%
 \end{prompt}
 
-%TODO: really? it isn't in gent, we first load a module that sets modulepath
-% so module purge breaks further loading of modules
-%It is a good habit to use this command in job-scripts, prior to loading the
-%modules specifically needed by applications in that job description. This
-%ensures that no version conflicts occur if the user loads module using his
-%'.bashrc' file.
 However, on some VSC clusters you may be left with a very empty list of available
 modules after executing ``module purge''. On those systems, ``module av'' will show you a list of
 modules containing the name of a cluster or a particular feature of a section of
