@@ -79,7 +79,7 @@ up to 100 Gbit Infiniband fiber connections & \dots\  or allowing to transfer 3 
 The \hpc currently consists of:
 
 \ifantwerpen
-Hopper:
+hopper:
   \begin{enumerate}
     \item  144 compute nodes with 2 ten core Intel E5-2680v2 CPUs (Ivy Bridge generation, 2.8 GHz), 64 GB
     memory, 500 GB local disk
@@ -89,7 +89,7 @@ Hopper:
 All nodes are connected through a FDR10 InfiniBand network.
 
 
-Leibniz:
+leibniz:
   \begin{enumerate}
   \item 144 compute nodes with 2 14-core Intel E5-2680v4 CPUs (Broadwell generation, 2.4 GHz) and 128 GB RAM
   \item 8 nodes with 2 14-core Intel E5-2680v4 CPUs (Broadwell generation, 2.4 GHz) and 256 GB RAM
@@ -148,8 +148,7 @@ All nodes are connected through a EDR InfiniBand network
 \ifantwerpen
 All the nodes in the \hpc run under the ``\operatingsystemCOS'' operating
 system, which is a clone of ``\operatingsystemRHEL'',
-with \emph{cgroups} support. (Until the end of 2017 some nodes of Hopper
-still run under \operatingsystemSL without \emph{cgroups} support.)
+with \emph{cgroups} support. 
 \fi
 \ifleuven
 All the nodes in the \hpc run under the ``\operatingsystem'' operating system.
@@ -299,11 +298,17 @@ GCC and Intel.
 %TODO insert software for other sites
 
 \ifantwerpen
-Commonly used software packages are ABINIT, CP2K, Gaussian, Gromacs, Molpro,
-NWChem, Quantum Espresso, R, Siesta, TURBOMOLE, WIEN2k, \ldots
+Commonly used software packages are:
+\begin{itemize}
+\item{in bioinformatics: beagle, Beast, bowtie, MrBayes, SAMtools}
+\item{in chemistry: ABINIT, CP2K, Gaussian, Gromacs, LAMMPS, NWChem, Quantum Espresso, Siesta, VASP}
+\item{in engineering: COMSOL, OpenFOAM, Telemac}
+\item{in mathematics: JAGS, Matlab, R}
+\item{for visuzalization: Gnuplot, ParaView.}
+\end{itemize}
 
-Commonly used Libraries are Intel MKL, FFTW, HDF5, PETSc and Intel MPI,
-M(VA)PICH, OpenMPI.
+Commonly used libraries are Intel MKL, FFTW, HDF5, PETSc and Intel MPI,
+OpenMPI.
 \fi
 \ifleuven
 Commonly used software packages are:
@@ -317,7 +322,7 @@ Commonly used software packages are:
 \end{itemize}
 
 
-Commonly used Libraries are: Intel MKL, FFTW, HDF5, PETSc, Intel MPI,
+Commonly used libraries are: Intel MKL, FFTW, HDF5, PETSc, Intel MPI,
 M(VA)PICH, OpenMPI, Qt, VTK and Mesa.
 \fi
 \ifbrussel
