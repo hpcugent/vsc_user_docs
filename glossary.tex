@@ -1,16 +1,16 @@
-\newglossaryentry{Cluster}
+\newglossaryentry{cluster}
 {
-  name={Cluster},
+  name={cluster},
   description={A group of compute nodes},
 }
-\newglossaryentry{Compute-Node}
+\newglossaryentry{compute-node}
 {
-  name={Compute Node},
+  name={compute node},
   description={The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs},
 }
-\newglossaryentry{Core}
+\newglossaryentry{core}
 {
-  name={Core},
+  name={core},
   description={An individual compute unit inside a CPU. A CPU typically contains one or more cores},
 }
 \newglossaryentry{CPU}
@@ -18,15 +18,15 @@
   name={CPU},
   description={A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs},
 }
-\newglossaryentry{Distributed-memory-system}
+\newglossaryentry{distributed-memory-system}
 {
-  name={Distributed memory system},
+  name={distributed memory system},
   description={Computing system consisting of many compute nodes connected by a network, each with their own memory. Accessing memory on a neighbouring node is possible but requires explicit communication},
 }
-\newglossaryentry{Flops}
+\newglossaryentry{FLOPS}
 {
-  name={Flops},
-  description={Floating-point Operations Per second},
+  name={FLOPS},
+  description={FLOPS is short for "Floating-point Operations Per second", i.e. the number of (floating-point) computations that a processor can perform per second},
 }
 \newglossaryentry{FTP}
 {
@@ -38,9 +38,9 @@
   name={GPGPU},
   description={A general purpose graphical processing unit. A GPGPU is a consumable resource. A GPGPU is a GPU that is used for highly parallel general purpose calculations. A compute node may contain zero, one or more GPGPUs},
 }
-\newglossaryentry{Grid}
+\newglossaryentry{grid}
 {
-  name={Grid},
+  name={grid},
   description={A group of clusters},
 }
 \newglossaryentry{HPC}
@@ -63,9 +63,9 @@
   name={L3d},
   description={Level 3 data cache. Extra cache level built into motherboards between the microprocessor and the main memory},
 }
-\newglossaryentry{LCC}
+\newglossaryentry{LLC}
 {
-  name={LCC},
+  name={LLC},
   description={The Last Level Cache is the last level in the memory hierarchy before main memory. Any memory requests missing here must be serviced by local or remote DRAM, with significant increase in latency when compared with data serviced by the cache memory},
 }
 \newglossaryentry{Infiniband}
@@ -73,9 +73,9 @@
   name={Infiniband},
   description={A high speed switched fabric computer network communications link used in \hpc},
 }
-\newglossaryentry{Job-constraints}
+\newglossaryentry{job-constraints}
 {
-  name={Job constraints},
+  name={job constraints},
   description={A set of conditions that must be fulfilled for the job to start},
 }
 \newglossaryentry{LAN}
@@ -88,19 +88,19 @@
   name={Linux},
   description={An operating system, similar to UNIX},
 }
-\newglossaryentry{Login-Node}
+\newglossaryentry{login-node}
 {
-  name={Login Node},
+  name={login node},
   description={On \hpc clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the \hpcInfra},
 }
-\newglossaryentry{Memory}
+\newglossaryentry{memory}
 {
-  name={Memory},
+  name={memory},
   description={A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB)},
 }
-\newglossaryentry{Metrics}
+\newglossaryentry{metrics}
 {
-  name={Metrics},
+  name={metrics},
   description={A measure of some property, activity or performance of a computer sub-system. These metrics are visualised by graphs in, e.g., Ganglia},
 }
 \newglossaryentry{Moab}
@@ -108,9 +108,9 @@
   name={Moab},
   description={Moab is a job scheduler, which allocates resources for jobs that are requesting resources},
 }
-\newglossaryentry{Modules}
+\newglossaryentry{modules}
 {
-  name={Modules},
+  name={modules},
   description={\hpc uses an open source software package called ``Environment Modules'' (Modules for short) which allows you to add various path definitions to your shell environment},
 }
 \newglossaryentry{MPI}
@@ -118,14 +118,14 @@
   name={MPI},
   description={MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems},
 }
-\newglossaryentry{Node}
+\newglossaryentry{node}
 {
-  name={Node},
-  description={Typically, a machine, one computer. A node is the fundamental object associated with compute resources},
+  name={node},
+  description={See \gls{compute-node}},
 }
-\newglossaryentry{Node-Attribute}
+\newglossaryentry{node-attribute}
 {
-  name={Node Attribute},
+  name={node attribute},
   description={A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes},
 }
 \newglossaryentry{PBS-TORQUE}
@@ -135,12 +135,12 @@
 }
 \newglossaryentry{processor}
 {
-  name={Processor},
+  name={processor},
   description={A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU},
 }
-\newglossaryentry{Queues}
+\newglossaryentry{queue}
 {
-  name={Queues},
+  name={queue},
   description={PBS/TORQUE queues, or ``classes'' as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12 hour runtime or ``walltime'' would allow jobs requesting 12 hours or less to use this queue},
 }
 \newglossaryentry{scp}
@@ -148,9 +148,9 @@
   name={scp},
   description={Secure Copy is a protocol to copy files between distinct machines. SCP or scp is used extensively on \hpc clusters to stage in data from outside resources},
 }
-\newglossaryentry{Scratch}
+\newglossaryentry{scratch}
 {
-  name={Scratch},
+  name={scratch},
   description={Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressing applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster then the Data or Home filesystem},
 }
 \newglossaryentry{sftp}
@@ -158,9 +158,9 @@
   name={sftp},
   description={Secure File Transfer Protocol, used to copy files between distinct machines},
 }
-\newglossaryentry{Shared-memory-system}
+\newglossaryentry{shared-memory-system}
 {
-  name={Shared memory system},
+  name={shared memory system},
   description={Computing system in which all of the CPUs share one global memory space. However, access times from a CPU to different regions of memory are not necessarily uniform. This is called NUMA: Non-uniform memory access. Memory that is closer to the CPU your process is running on will generally be faster to access than memory that is closer to a different CPU. You can pin processes to a certain CPU to ensure they always use the same memory},
 }
 \newglossaryentry{SSH}
@@ -173,14 +173,14 @@
   name={ssh-keys},
   description={OpenSSH is a network connectivity tool, which encrypts all traffic including passwords to effectively eliminate eavesdropping, connection hijacking, and other network-level attacks. SSH-keys are part of the OpenSSH bundle. On \hpc clusters, ssh-keys allow password-less access between compute nodes while running batch or interactive parallel jobs},
 }
-\newglossaryentry{Super-computer}
+\newglossaryentry{supercomputer}
 {
-  name={Super-computer},
+  name={supercomputer},
   description={A computer with an extremely high processing capacity or processing power},
 }
-\newglossaryentry{Swap-space}
+\newglossaryentry{swap-space}
 {
-  name={Swap space},
+  name={swap space},
   description={A quantity of virtual memory available for use by batch jobs. Swap is a consumable resource provided by nodes and consumed by jobs},
 }
 \newglossaryentry{TLB}
@@ -188,18 +188,13 @@
   name={TLB},
   description={Translation Look-aside Buffer, a table in the CPU's memory that contains information about the virtual memory pages the CPU has accessed recently. The table cross-references a program's virtual addresses with the corresponding absolute addresses in physical memory that the program has most recently used. The TLB enables faster computing because it allows the address processing to take place independent of the normal address-translation pipeline},
 }
-\newglossaryentry{TACC}
+\newglossaryentry{walltime}
 {
-  name={TACC},
-  description={Texas Advanced Computing Center (creators of the PerfExpert tool)},
-}
-%\newglossaryentry{UA}
-%{
-%  name={UA},
-%  description={University of Antwerp (creators of this tutorial)},
-%}
-\newglossaryentry{Walltime}
-{
-  name={Walltime},
+  name={walltime},
   description={Walltime is the length of time specified in the job-script for which the job will run on a batch system, you can visuallyse walltime as the time measured by a wall mounted clock (or your digital wrist watch). This is a computational resource},
+}
+\newglossaryentry{worker-node}
+{
+  name={worker node},
+  description={See \gls{compute-node}}
 }

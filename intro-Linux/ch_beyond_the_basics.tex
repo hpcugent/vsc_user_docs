@@ -464,7 +464,7 @@ something went wrong.  So an example use case:
 
 \section{Scripting for the cluster}
 
-When writing scripts to be submitted on the cluster there are some tricks you need
+When writing scripts to be submitted on the \gls{cluster} there are some tricks you need
 to keep in mind.
 
 \subsection{Example job script}
@@ -500,17 +500,17 @@ to keep in mind.
 \subsection{PBS pragmas}
 
 The scheduler needs to know about the requirements of the script, for example:
-how much memory will it use, how long will it run? These things can be specified
+how much \gls{memory} will it use, how long will it run? These things can be specified
 inside a script with what we call PBS pragmas.
 
-This pragma (a pragma is a special comment) tells PBS to use 1 node and 1 core:
+This pragma (a pragma is a special comment) tells PBS to use 1 \gls{node} and 1 \gls{core}:
 
 \begin{code}{bash}
   #PBS -l nodes=1:ppn=1   # single-core
 \end{code}
 
 For parallel software, you can request multiple cores (OpenMP) and/or multiple
-nodes (MPI). \emph{Only use this when the software you use is capable of working in
+nodes (\gls{MPI}). \emph{Only use this when the software you use is capable of working in
 parallel.}. Here is an example:
 
 \begin{code}{bash}
@@ -518,7 +518,7 @@ parallel.}. Here is an example:
   #PBS -l nodes=5:ppn=16  # multi-node
 \end{code}
 
-We intend to submit it on the long queue:
+We intend to submit it on the long \gls{queue}:
 
 \begin{code}{bash}
   #PBS -q long
