@@ -1126,12 +1126,6 @@ state, you can use:
 %\shellcmd{module purge}%
 \end{prompt}
 
-%TODO: really? it isn't in gent, we first load a module that sets modulepath
-% so module purge breaks further loading of modules
-%It is a good habit to use this command in job-scripts, prior to loading the
-%modules specifically needed by applications in that job description. This
-%ensures that no version conflicts occur if the user loads module using his
-%'.bashrc' file.
 However, on some VSC clusters you may be left with a very empty list of available
 modules after executing ``module purge''. On those systems, ``module av'' will show you a list of
 modules containing the name of a cluster or a particular feature of a section of
