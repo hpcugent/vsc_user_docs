@@ -13,8 +13,12 @@ before_install:
     # if this check fails, you should run ./check-version.sh intro-HPC and commit the changes made by the script
     - INTRO_HPC_EXPECTED="20180904.04 54ea4dcbaf63510f7a73fc928ddc9b7f6f92c76cdaa9f048ae00d08b8c74757d"
     - INTRO_LINUX_EXPECTED="20180904.02 b7538bc4ff3c4856f75acdea9d3176a813995f540caa2fd67eac316ea771667f"
-    - ./check-version.sh intro-HPC | grep "Checksum for intro-HPC is still valid"
-    - ./check-version.sh intro-Linux | grep "Checksum for intro-Linux is still valid"
+    - ./check-version.sh intro-HPC > check_version_intro_hpc.out 2>&1
+    - cat check_version_intro_hpc.out
+    - grep "Checksum for intro-HPC is still valid" check_version_intro_hpc.out
+    - ./check-version.sh intro-Linux > check_version_intro_linux.out 2>&1
+    - cat check_version_intro_linux.out
+    - grep "Checksum for intro-Linux is still valid" check_version_intro_linux.out
 install:
     - ./travis-install.sh
     - export PATH=$CACHEDIR/.texlive/bin/x86_64-linux:$PATH
