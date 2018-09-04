@@ -278,6 +278,9 @@ To list the available cluster modules, you can use the \verb|module avail cluste
 If you need software that is not listed, request it via https://www.ugent.be/hpc/en/support/software-installation-request
 \end{prompt}
 
+As indicated in the output above, each \verb|cluster| module is a so-called sticky
+module, i.e. it will not be unloaded when \verb|module purge| (see \autoref{subsec:purging-modules}) is used.
+
 The output of the various commands interacting with jobs (\verb|qsub|, \verb|stat|, \ldots)
 all depend on which \verb|cluster| module is loaded.
 \fi
