@@ -40,8 +40,12 @@ ifndef DOC
 DOCOS=$(all_doc_os)
 DOCNOOS=$(all_doc_noos)
 else
+ifneq (,$(findstring $(DOC),$(all_doc_os)))
 DOCOS=$(DOC)
+endif
+ifneq (,$(findstring $(DOC),$(all_doc_noos)))
 DOCNOOS=$(DOC)
+endif
 endif
 
 all: all_os all_noos
