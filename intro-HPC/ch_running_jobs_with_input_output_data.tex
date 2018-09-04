@@ -303,12 +303,6 @@ volume as the cluster scratch, and thus contains the same data.
 In the future it may point to a scratch file system
 that is available across all clusters of the VSC, but at the moment
 of writing there are no plans to provide this.
-\ifgent
-\item[VO scratch (\$VSC\_SCRATCH\_*\_VO).]
-Like \$VSC\_DATA\_VO these scratch filesystems are only available if you
-are a member of a (non-default) VO. This is extra SCRATCH space you can request if you are running
-out of quota on your personal SCRATCH.
-\fi
 \end{description}
 
 \subsection{Pre-defined quotas}
@@ -765,11 +759,27 @@ allocates per user are \emph{the maximum percentages} of storage users can use.
 \subsection{VO directories}
 \label{subsec:vo-directories}
 
-When you're in a VO, there will be some extra directories available:
+When you're in a VO, there will be some extra filesystems available (these
+filesystems are only available if your are member of a VO):
 
-\begin{tabular}{|p{\dimexpr 0.35\textwidth-2\tabcolsep}|p{\dimexpr 0.65\textwidth-2\tabcolsep}|} \hline
-\strong{Variable} & \strong{Description} \\ \hline\hline
-\$VSC\_SCRATCH\_VO      & The scratch filesystem for your VO storage, this can have a bigger quota than your personal scratch.\\ \hline
-\end{tabular}
+\begin{description}
+    \item[VO scratch (\texttt{\$VSC\_SCRATCH\_*\_VO})]
+        This is extra scratch space you can use if you are running
+        out of quota on your personal scratch. These include:
+        \begin{enumerate}
+            \item VSC_SCRATCH_DELCATTY_VO
+            \item VSC_SCRATCH_KYUKON_VO
+            \item VSC_SCRATCH_PHANPY
+        \end{enumerate}
+
+    \item[VO data (\texttt{\$VSC\_DATA\_VO})]
+        This is an extra filesystem for datasets, \ldots you can use if you are running
+        out of quota on your personal data filesystem (\verb|$VSC_DATA|).
+
+\end{description}
+
+If you put \verb|_USER| after each of these variable names, you can see your
+personal folder in these filesystems. For example: \verb|$VSC_DATA_VO_USER|
+is your personal folder in your VO data filesystem.
 
 \fi
