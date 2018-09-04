@@ -217,7 +217,7 @@ since most currently running jobs will finish before their requested walltime
 expires, and new jobs by may be submitted by other users that are assigned a higher
 priority than your job(s).
 
-The \hpcInfra clusters use a fair-share sheduling policy. There is no guarantee on when a
+The \hpcInfra clusters use a fair-share sheduling policy (see \autoref{ch:hpc-policies}). There is no guarantee on when a
 job will start, since it depends on a number of factors. One of these factors is
 the priority of the job, which is determined by
 \begin{itemize}
@@ -626,7 +626,7 @@ are:
 %and evolving, it can be anticipated that also the limits of the categories can
 %be changed over time.
 
-\ifantwerpen
+\iffalse
 % TODO : already adapt this text according to the new common user experience rules, and make it general....
 When a user submits a job with a walltime of 6 days, the queue manager will
 put the job in the walltime category 3 days--7 days.  The user can submit up to 400 jobs with
@@ -713,7 +713,7 @@ broadwell         & only use Intel processors from the Broadwell family (26xx-v4
 mem256            & only use nodes with 256GB of RAM (hopper and leibniz) \\ \hline
 \end{tabular}
 
-Since both Hopper and Leibniz are homogeneous with respect to processor architecture, the CPU architecture properties
+Since both hopper and leibniz are homogeneous with respect to processor architecture, the CPU architecture properties
 are not really needed and only defined for compatibility with other VSC clusters.
 \fi
 \ifbrussel
