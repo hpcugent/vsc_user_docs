@@ -205,6 +205,9 @@ a module with \verb|module avail|: for \verb|HMMER|, this command is \verb|modul
 
 \section{Running software that is incompatible with host}
 
+When running software provided through modules (see \autoref{sec:modules}),
+you may run into errors like:
+
 \begin{prompt}
 %\shellcmd{module swap cluster/golett}%
 
@@ -218,12 +221,27 @@ Please verify that both the operating system and the processor support Intel(R) 
 
 \end{prompt}
 
+or errors like:
+
+\begin{prompt}
+%\shellcmd{module swap cluster/golett}%
+
+The following have been reloaded with a version change:
+  1) cluster/delcatty => cluster/golett
+
+%\shellcmd{module load Python/2.7.14-foss-2018a}%
+%\shellcmd{python}%
+Illegal instruction
+\end{prompt}
+
+
 When we swap to a different cluster, the available modules change so they work for that cluster.
 That means that if the cluster and the login nodes have a different CPU architecture,
 software loaded using modules might not work.
 
 If you want to test software on the login nodes, make sure the \texttt{cluster/\defaultcluster}
-module is loaded, since the login nodes and \defaultcluster have the same CPU architecture.
+module is loaded (with \texttt{module swap cluster/\defaultcluster}, see TODO), % TODO: link to relevant section, see #252
+since the login nodes and \defaultcluster have the same CPU architecture.
 
 If modules are already loaded, and then we swap to a different cluster,
 all our modules will get reloaded. This means that all current modules will be
@@ -243,5 +261,9 @@ Due to MODULEPATH changes, the following have been reloaded:
 The following have been reloaded with a version change:
   1) cluster/delcatty => cluster/swalot
 \end{prompt}
+
+This might result in the same problems as mentioned above. When swapping to a
+different cluster, you can run \verb|module purge| to unload all modules to avoid problems
+(see \autoref{subsec:activating-and-deactivating-modules}).
 
 \fi
