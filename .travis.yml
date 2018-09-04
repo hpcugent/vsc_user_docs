@@ -11,7 +11,7 @@ env:
 before_install:
     # verify SHA256 checksums to ensure version is bumped when changes are made
     # if this check fails, you should run ./check-version.sh intro-HPC and commit the changes made by the script
-    - INTRO_HPC_EXPECTED="20180904.04 54ea4dcbaf63510f7a73fc928ddc9b7f6f92c76cdaa9f048ae00d08b8c74757d"
+    - INTRO_HPC_EXPECTED="20180904.05 dbd53411d2880e317734d9ad404d68c9b66e86f50fcd5314b11ecb2515968a27"
     - INTRO_LINUX_EXPECTED="20180904.02 b7538bc4ff3c4856f75acdea9d3176a813995f540caa2fd67eac316ea771667f"
     - ./check-version.sh intro-HPC > check_version_intro_hpc.out 2>&1
     - cat check_version_intro_hpc.out
