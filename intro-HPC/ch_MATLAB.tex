@@ -1,0 +1,80 @@
+\chapter{MATLAB}
+\label{ch:matlab}
+
+\section{Why is the MATLAB compiler required?}
+
+The main reason behind this alternative way of using MATLAB is licensing: only
+a limited number of MATLAB sessions can be active at the same time. However, once
+the MATLAB program is compiled using the MATLAB compiler, the resulting stand-alone
+executable can be run without needing to contact the license server.
+
+\section{How to compile MATLAB code}
+
+Compiling MATLAB code can only be done from the login nodes.
+
+To access the MATLAB compiler, the MATLAB module should be loaded first:
+
+\begin{prompt}
+%\shellcmd{module avail MATLAB}%
+----------------------/apps/gent/CO7/sandybridge/modules/all ----------------------
+   MATLAB/2016b    MATLAB/2017b    MATLAB/2018a (D)
+%\shellcmd{module load MATLAB/2018a}
+\end{prompt}
+
+Then the \verb|mcc| command can be used. To compile a single file, the \verb|-m|
+flag is used (the \verb|-v| flag means verbose ouput):
+
+\begin{prompt}
+%\shellcmd{cp \$EBROOTMATLAB/extern/examples/compiler/magicsquare.m .}%
+%\shellcmd{mcc -mv magicsquare.m}%
+Opening log file:  %\homedir/java.log.34090%
+Compiler version: 6.6 (R2018a)
+Dependency analysis by REQUIREMENTS.
+Parsing file "%\homedir/magicsquare.m%"
+	(Referenced from: "Compiler Command Line").
+Deleting 0 temporary MEX authorization files.
+Generating file "%\homedir/readme.txt%".
+Generating file "run\_magicsquare.sh".
+\end{prompt}
+
+For a MATLAB library, the \verb|-l| flag should be used.
+
+\section{MATLAB job script}
+
+% TODO: copy MATLAB job script
+
+\section{Memory issues during compilation}
+
+If you are seeing Java memory issues during the compilation of your MATLAB program
+on the login nodes, consider tweaking the default maximum heap size (128M) of Java
+using the \verb|_JAVA_OPTIONS| environment variable with:
+
+\begin{prompt}
+%\shellcmd{export \_JAVA\_OPTIONS="-Xmx64M"}%
+\end{prompt}
+
+\section{Multithreading}
+
+MATLAB can only use the cores in a single
+workernode (unless the Distributed Computing toolbox is used, see
+\url{https://nl.mathworks.com/products/distriben.html}).
+
+The amount of workers used by MATLAB for the parallel toolbox can be controlled
+via the \verb|parpool| function: \verb|parpool('cluster1', 16)| will run the
+\verb|cluster1| profile with 16 workers.
+
+\section{Checkpointing}
+
+MATLAB is using sockets to communicate with itself, which are not recreated after a
+checkpoint by \verb|csub|, so it is currently not doable to checkpoint MATLAB jobs.
+
+\section{Java output logs}
+
+Each time MATLAB is executed, it generates a Java log file in the users home directory.
+The output log directory can be changed using:
+
+\begin{prompt}
+%\shellcmd{MATLAB\_LOG\_DIR=\emph{<OUTPUT\_DIR>}}%
+\end{prompt}
+
+where \verb|<OUTPUT_DIR>| is the name of the desired output directory.
