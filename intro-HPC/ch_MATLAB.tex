@@ -7,27 +7,31 @@ The main reason behind this alternative way of using MATLAB is licensing: only
 a limited number of MATLAB sessions can be active at the same time. However, once
 the MATLAB program is compiled using the MATLAB compiler, the resulting stand-alone
 executable can be run without needing to contact the license server.
-A license is required for the MATLAB Compiler, see \url{https://nl.mathworks.com/help/compiler/index.html}.
+
+Note that a license is required for the MATLAB Compiler,
+see \url{https://nl.mathworks.com/help/compiler/index.html}. If the \verb|mcc|
+command is provided by the MATLAB installation you are using, the MATLAB compiler
+can be used as explained below.
 
 \ifgent
 Only a limited amount of MATLAB sessions can be active at the same time because
 there are only a limited amount of MATLAB research licences available on
-the \university MATLAB license server. Since there are a lot of compute nodes,
-if each node would need a license, the licenses would quickly run out.
+the \university MATLAB license server. If each job would need a license,
+licenses would quickly run out.
 \fi
 
 \section{How to compile MATLAB code}
 
 Compiling MATLAB code can only be done from the login nodes, because only login
-nodes can access the server, workernodes on clusters cannot.
+nodes can access the MATLAB license server, workernodes on clusters can not.
 
-To access the MATLAB compiler, the MATLAB module should be loaded first. Make sure
-you are using the same MATLAB version to compile and to run the compiled MATLAB
+To access the MATLAB compiler, the \verb|MATLAB| module should be loaded first. Make sure
+you are using the same \verb|MATLAB| version to compile and to run the compiled MATLAB
 program.
 
 \begin{prompt}
 %\shellcmd{module avail MATLAB}%
-----------------------/apps/gent/CO7/sandybridge/modules/all ----------------------
+----------------------/apps/%\sitename%/CO7/sandybridge/modules/all ----------------------
    MATLAB/2016b    MATLAB/2017b    MATLAB/2018a (D)
 %\shellcmd{module load MATLAB/2018a}
 \end{prompt}
@@ -35,7 +39,7 @@ program.
 After loading the module, the \verb|mcc| command can be used. To get help on
 \verb|mcc|, you can run \verb|mcc -?|.
 
-To compile a single file, the \verb|-m|
+To compile a standalone application, the \verb|-m|
 flag is used (the \verb|-v| flag means verbose ouput).
 To show how \verb|mcc| can be used, we use the \verb|magicsquare| example
 that comes with MATLAB.
@@ -54,8 +58,6 @@ Generating file "run\_magicsquare.sh".
 \end{prompt}
 
 \subsection{Libraries}
-
-To \emph{compile} a MATLAB library, the \verb|-l| flag should be used.
 
 To compile a MATLAB program that \emph{needs a library}, you can use the
 \texttt{-I \emph{library\_path}} flag. This will tell the compiler to also
@@ -79,15 +81,36 @@ limits that are in effect on the login nodes, this might lead to a crash of the 
 if it's trying to create to many Java processes. If we lower the heap size, more
 Java processes will be able to fit in memory.
 
+Another possible issue is that the heap size is too small. This could result
+in errors like:
+
+\begin{prompt}
+Error: Out of memory
+
+Typically, this message occurs because the compiler requests a larger segment of memory from the operating system than is currently available. Adding additional memory to your system can alleviate this problem.
+\end{prompt}
+
+A possible solution to this is by setting the maximum heap size to be bigger:
+
+\begin{prompt}
+%\shellcmd{export \_JAVA\_OPTIONS="-Xmx512M"}%
+\end{prompt}
+
 \section{Multithreading}
 
 MATLAB can only use the cores in a single
 workernode (unless the Distributed Computing toolbox is used, see
 \url{https://nl.mathworks.com/products/distriben.html}).
 
+
 The amount of workers used by MATLAB for the parallel toolbox can be controlled
 via the \verb|parpool| function: \verb|parpool('cluster1', 16)| will run the
-\verb|cluster1| profile with 16 workers.
+\verb|cluster1| profile with 16 workers. It's best to specify the amount of workers,
+because otherwise, you might not harness the full compute power available (if you have
+too few workers), or you might negatively impact performance (if you have too much workers).
+
+See also \href{https://nl.mathworks.com/help/distcomp/parpool.html}{the parpool documentation}.
+
 
 \section{Java output logs}
 
@@ -118,6 +141,16 @@ When running, MATLAB will use a cache for performance reasons. This location
 and size of this cache can be changed trough the \verb|MCR_CACHE_ROOT| and
 \verb|MCR_CACHE_SIZE| environment variables.
 
+The snippet below would set the maximum cache size to 64 megabytes and the
+location to \verb|/tmp/testdirectory|.
+
+\begin{prompt}
+%\shellcmd{export MATLAB\_CACHE\_ROOT=/tmp/testdirectory}%
+%\shellcmd{export MATLAB\_CACHE\_SIZE=64M}%
+\end{prompt}
+
+So when MATLAB is running, it can fill up to 64 megabytes of cache in
+\verb|/tmp/testdirectory|.
 
 \section{MATLAB job script}
 
