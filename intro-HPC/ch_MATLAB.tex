@@ -7,12 +7,23 @@ The main reason behind this alternative way of using MATLAB is licensing: only
 a limited number of MATLAB sessions can be active at the same time. However, once
 the MATLAB program is compiled using the MATLAB compiler, the resulting stand-alone
 executable can be run without needing to contact the license server.
+A license is required for the MATLAB Compiler, see \url{https://nl.mathworks.com/help/compiler/index.html}.
+
+\ifgent
+Only a limited amount of MATLAB sessions can be active at the same time because
+there are only a limited amount of MATLAB research licences available on
+the \university MATLAB license server. Since there are a lot of compute nodes,
+if each node would need a license, the licenses would quickly run out.
+\fi
 
 \section{How to compile MATLAB code}
 
-Compiling MATLAB code can only be done from the login nodes.
+Compiling MATLAB code can only be done from the login nodes, because only login
+nodes can access the server, workernodes on clusters cannot.
 
-To access the MATLAB compiler, the MATLAB module should be loaded first:
+To access the MATLAB compiler, the MATLAB module should be loaded first. Make sure
+you are using the same MATLAB version to compile and to run the compiled MATLAB
+program.
 
 \begin{prompt}
 %\shellcmd{module avail MATLAB}%
@@ -21,8 +32,13 @@ To access the MATLAB compiler, the MATLAB module should be loaded first:
 %\shellcmd{module load MATLAB/2018a}
 \end{prompt}
 
-Then the \verb|mcc| command can be used. To compile a single file, the \verb|-m|
-flag is used (the \verb|-v| flag means verbose ouput):
+After loading the module, the \verb|mcc| command can be used. To get help on
+\verb|mcc|, you can run \verb|mcc -?|.
+
+To compile a single file, the \verb|-m|
+flag is used (the \verb|-v| flag means verbose ouput).
+To show how \verb|mcc| can be used, we use the \verb|magicsquare| example
+that comes with MATLAB.
 
 \begin{prompt}
 %\shellcmd{cp \$EBROOTMATLAB/extern/examples/compiler/magicsquare.m .}%
@@ -37,13 +53,18 @@ Generating file "%\homedir/readme.txt%".
 Generating file "run\_magicsquare.sh".
 \end{prompt}
 
-For a MATLAB library, the \verb|-l| flag should be used.
+\subsection{Libraries}
 
-\section{MATLAB job script}
+To \emph{compile} a MATLAB library, the \verb|-l| flag should be used.
 
-% TODO: copy MATLAB job script
+To compile a MATLAB program that \emph{needs a library}, you can use the
+\texttt{-I \emph{library\_path}} flag. This will tell the compiler to also
+look for files in \texttt{\emph{library\_path}}.
 
-\section{Memory issues during compilation}
+It's also possible to use the \texttt{-a \emph{path}} flag. That will result in
+all files under the \texttt{\emph{path}} getting added to the final executable.
+
+\subsection{Memory issues during compilation}
 
 If you are seeing Java memory issues during the compilation of your MATLAB program
 on the login nodes, consider tweaking the default maximum heap size (128M) of Java
@@ -52,6 +73,11 @@ using the \verb|_JAVA_OPTIONS| environment variable with:
 \begin{prompt}
 %\shellcmd{export \_JAVA\_OPTIONS="-Xmx64M"}%
 \end{prompt}
+
+The MATLAB compiler spawns multiple Java processes, and because of the default memory
+limits that are in effect on the login nodes, this might lead to a crash of the compiler
+if it's trying to create to many Java processes. If we lower the heap size, more
+Java processes will be able to fit in memory.
 
 \section{Multithreading}
 
@@ -63,11 +89,6 @@ The amount of workers used by MATLAB for the parallel toolbox can be controlled
 via the \verb|parpool| function: \verb|parpool('cluster1', 16)| will run the
 \verb|cluster1| profile with 16 workers.
 
-\section{Checkpointing}
-
-MATLAB is using sockets to communicate with itself, which are not recreated after a
-checkpoint by \verb|csub|, so it is currently not doable to checkpoint MATLAB jobs.
-
 \section{Java output logs}
 
 Each time MATLAB is executed, it generates a Java log file in the users home directory.
@@ -77,4 +98,20 @@ The output log directory can be changed using:
 %\shellcmd{MATLAB\_LOG\_DIR=\emph{<OUTPUT\_DIR>}}%
 \end{prompt}
 
-where \verb|<OUTPUT_DIR>| is the name of the desired output directory.
+where \verb|<OUTPUT_DIR>| is the name of the desired output directory. To create
+and use a temporary directory for these logs:
+
+\begin{prompt}
+# create unique temporary directory in $TMPDIR (or /tmp/$USER if $TMPDIR is not defined)
+# instruct MATLAB to use this directory for log files by setting $MATLAB_LOG_DIR
+%\shellcmd{export MATLAB\_LOG\_DIR=\$(mktemp -d -p  \${TMPDIR:-/tmp/\$USER})}%
+\end{prompt}
+
+You should remove the directory at the end of your job script:
+\begin{prompt}
+%\shellcmd{rm -rf \$MATLAB\_LOG\_DIR}%
+\end{prompt}
+
+\section{MATLAB job script}
+
+% TODO: copy MATLAB job script
