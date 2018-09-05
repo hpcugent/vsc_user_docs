@@ -199,11 +199,25 @@ This resulted in an error because we tried to load two different versions of the
 To fix this, check if there are other versions of the modules you want to load
 that have the same version of common dependencies. You can list all versions of
 a module with \verb|module avail|: for \verb|HMMER|, this command is \verb|module avail HMMER|.
+
+Another common error is:
+
+\begin{prompt}
+%\shellcmd{module load cluster/\othercluster}%
+Lmod has detected the following error:  A different version of the 'cluster' module is already loaded (see output of 'ml').
+
+If you don't understand the warning or error, contact the helpdesk at hpc@ugent.be
+\end{prompt}
+
+This is because there can only be one \verb|cluster| module active at a time.
+The correct command is \texttt{module \emph{swap} cluster/\othercluster}. See
+also \autoref{subsec:specifying-the-cluster-on-which-to-run}.
 \fi
 
 \ifgent
 
 \section{Running software that is incompatible with host}
+\label{sec:running-software-incompatible-with-host}
 
 When running software provided through modules (see \autoref{sec:modules}),
 you may run into errors like:
@@ -240,7 +254,8 @@ That means that if the cluster and the login nodes have a different CPU architec
 software loaded using modules might not work.
 
 If you want to test software on the login nodes, make sure the \texttt{cluster/\defaultcluster}
-module is loaded (with \texttt{module swap cluster/\defaultcluster}), % TODO: link to relevant section, see #252
+module is loaded (with \texttt{module swap cluster/\defaultcluster}, see
+\autoref{subsec:specifying-the-cluster-on-which-to-run}),
 since the login nodes and \defaultcluster have the same CPU architecture.
 
 If modules are already loaded, and then we swap to a different cluster,
