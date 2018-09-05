@@ -253,16 +253,7 @@ applications, compile and test them and submit your jobs on the \hpc.
 Intro-HPC/
 \end{prompt}
 
-This directory currently contains all training material for the use of:
-
-\begin{enumerate}
-\item  The \strong{\emph{Introduction to the \hpc}}.
-%\item  The \strong{\emph{Introduction to Linux}}.
-%\item  The \strong{\emph{Python}} programming language.
-%\item  The \strong{\emph{VI}} editor.
-\item  Introduction to using \strong{\emph{perfexpert}}.
-\end{enumerate}
-
+This directory currently contains all training material for the \strong{\emph{Introduction to the \hpc}}.
 More relevant training material to work with the \hpc can always be added
 later in this directory.
 
@@ -347,20 +338,23 @@ Upon connecting you will see a login message containing your last login
 time stamp and a basic overview of the current cluster utilisation.
 
 \begin{prompt}
-Last login: Tue Jan  6 08:53:11 2015 from helios.ugent.be
-STEVIN HPC-UGent infrastructure status on Mon, 19 Oct 2015 15:00:01
+Last login: Mon Sep  3 14:00:00 2018 from helios.ugent.be
+STEVIN HPC-UGent infrastructure status on Mon, 03 Sep 2018 14:30:00
 
    cluster - full - free -  part - total - running - queued
              nodes  nodes   free   nodes    jobs      jobs
 -------------------------------------------------------------------
-  delcatty     72      0     83     158      N/A       N/A
-    golett    132     20     26     180      N/A       N/A
-    raichu     47      0     16      63      N/A       N/A
-       muk    413     64     50     528      N/A       N/A
-    phanpy     15      0      0      16      N/A       N/A
+  delcatty     72      0     52     127      N/A       N/A
+    golett    168      2     16     200      N/A       N/A
+    phanpy     15      0      1      16      N/A       N/A
+    swalot      0      0      0     128      N/A       N/A
+    skitty     69      2      0      73      N/A       N/A
+   victini     83      1      3      96      N/A       N/A
 
 For a full view of the current loads and queues see:
  http://hpc.ugent.be/clusterstate/
+Updates on maintenance and unscheduled downtime can be found on
+ https://www.vscentrum.be/en/user-portal/system-status
 
 \end{prompt}
 \fi %ENDIF \ifgent
@@ -778,6 +772,8 @@ total  899
   \strong{mput *.h}                & Copy all the local files with extension ``.h'' to the \hpc. \\ \hline
   \end{tabular}
 
+\fi
+\iflinux
   \subsection{Using a GUI}
   % don't suggest filezilla, it installs adware by default.
 
@@ -799,7 +795,36 @@ total  899
   You should now be able to browse files on the \hpc in your file browser.
 \fi
 
+\ifmac
+  \subsection{Using a GUI (Cyberduck)}
+
+  Cyberduck is a graphical alternative to the \verb|scp| command. It can be installed
+  from \url{https://cyberduck.io}.
+
+  This is the one-time setup you will need to do before connecting:
+
+  \begin{enumerate}
+      \item After starting Cyberduck, the Bookmark tab will show up. To add a new
+        bookmark, click on the ``+'' sign on the bottom left of the window. A new window will open.
+      \item In the ``Server'' field, type in \texttt{\loginnode}. In the ``Username'' field,
+        type in your VSC account id (this looks like \texttt{\userid}).
+      \item Click on ``ore Options'', select ``Use Public Key Authentication'' and point
+        it to your private key (the filename will be shown underneath).
+      \item Finally, type in a name for the bookmark in the ``Nickname'' field and
+        close the window by pressing on the red circle in the top left corner of the window.
+  \end{enumerate}
+
+  To open the scp connection, click on the ``Bookmarks'' icon (which resembles an
+  open book) and double-click on the bookmark you just created.
+
+\fi
+
+\subsection{Fast file transfer for large datasets}
+
+See \href{\LinuxManualURL#sec:rsync}{the section on \texttt{rsync} in chapter 5 of the Linux intro manual}.
+
 \section{Modules}
+\label{sec:modules}
 
 Software installation and maintenance on a \hpc cluster such as the VSC
 clusters poses a number of challenges not encountered on a workstation or a
@@ -913,6 +938,7 @@ of specific properties of that cluster such as GPU accelerators or special
 interconnect features that require a vendor-specific MPI-implementation.
 
 \subsection{Activating and de-activating modules}
+\label{subsec:activating-and-deactivating-modules}
 
 A module is loaded using the following command:
 
@@ -1110,6 +1136,9 @@ Notice that the version was not specified: the module system is sufficiently
 clever to figure out what the user intends. However, checking the list of
 currently loaded modules is always a good idea, just to make sure \ldots
 
+\subsection{Purging all modules}
+\label{subsec:purging-modules}
+
 In order to unload all modules at once, and hence be sure to start in a clean
 state, you can use:
 
@@ -1117,12 +1146,6 @@ state, you can use:
 %\shellcmd{module purge}%
 \end{prompt}
 
-%TODO: really? it isn't in gent, we first load a module that sets modulepath
-% so module purge breaks further loading of modules
-%It is a good habit to use this command in job-scripts, prior to loading the
-%modules specifically needed by applications in that job description. This
-%ensures that no version conflicts occur if the user loads module using his
-%'.bashrc' file.
 However, on some VSC clusters you may be left with a very empty list of available
 modules after executing ``module purge''. On those systems, ``module av'' will show you a list of
 modules containing the name of a cluster or a particular feature of a section of
@@ -1132,48 +1155,17 @@ applicable to that particular system.
 Modules need not be loaded one by one; the two ``load'' commands can be
 combined as follows:
 
-\ifantwerpen
-\begin{prompt}
-%\shellcmd{module load MATLAB Python/2.7.9-intel-2015a}%
-\end{prompt}
-\fi
-\ifbrussel
-\begin{prompt}
-%\shellcmd{module load MATLAB Python/2.7.9-intel-2015a}%
-\end{prompt}
-\fi
-\ifgent
-\begin{prompt}
-%\shellcmd{module load MATLAB Python/2.7.9-intel-2015a}%
-\end{prompt}
-\fi
 \ifleuven
 \begin{prompt}
-%\shellcmd{module load matlab Python/2.7.6-foss-2014a}%
+%\shellcmd{module load matlab/R2017b Python/2.7.6-foss-2014a}%
+\end{prompt}
+\else
+\begin{prompt}
+%\shellcmd{module load MATLAB/2018a Python/2.7.14-intel-2018a}%
 \end{prompt}
 \fi
 
 This will load the two modules as well as their dependencies.
-
-\ifgent
-Finally, to switch between clusters you can swap the ``cluster'' modules.
-These are special modules that change what modules are available for you,
-and what cluster your jobs will be queued in.
-By default you are working on \defaultcluster. To switch to, e.g., \othercluster you need
-to redefine the environment so you get access to all modules installed on
-the \othercluster cluster, and to be able to submit jobs to the \othercluster scheduler
-so your jobs will start on \othercluster instead of the default \defaultcluster cluster.
-
-The \othercluster modules do not work directly on the login nodes, because the
-login nodes do not have the same architecture as the \othercluster cluster, they
-have the same architecture as the \defaultcluster cluster however, so this is why
-by default software works on the login nodes.
-
-\begin{prompt}
-%\shellcmd{module swap cluster/\othercluster}%
-\end{prompt}
-
-\fi
 
 \subsection{Explicit version numbers}
 

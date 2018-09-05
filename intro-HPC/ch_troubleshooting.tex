@@ -144,6 +144,31 @@ If it does, type  \strong{\emph{yes}}. If it doesn't, please contact support: \h
 \firsttimeconnection
 \fi
 
+\section{Memory limits}
+
+To avoid jobs allocating too much memory, there are memory limits in place by default.
+It is possible to specify higher memory limits if your jobs require this.
+
+\subsection{How will I know if memory limits are the cause of my problem?}
+
+If your program fails with a memory-related issue, there is a good chance it failed
+because of the memory limits and you should increase the memory limits for your job.
+
+Examples of these error messages are: \verb|malloc failed|, \verb|Out of memory|,
+\verb|Could not allocate memory|
+or in Java: \verb|Could not reserve enough space for object heap|. Your program can
+also run into a \verb|Segmentation fault| (or \verb|segfault|) or crash due to bus errors.
+
+You can check the amount of virtual memory (in Kb) that is available to you via the
+\verb|ulimit -v| command \emph{in your jobscript}.
+
+\subsection{How do I specify the amount of memory I need?}
+
+See \autoref{subsec:generic-resource-requirements} to set memory and other requirements,
+see \autoref{sec:specifying-memory-requirements} to finetune the amount of memory you request.
+% See issue #248 to fix Java. This is software specific.
+% See issue #196 to fix MATLAB. This is software specific.
+
 \ifgent
 
 \section{Module conflicts}
@@ -174,4 +199,86 @@ This resulted in an error because we tried to load two different versions of the
 To fix this, check if there are other versions of the modules you want to load
 that have the same version of common dependencies. You can list all versions of
 a module with \verb|module avail|: for \verb|HMMER|, this command is \verb|module avail HMMER|.
+
+Another common error is:
+
+\begin{prompt}
+%\shellcmd{module load cluster/\othercluster}%
+Lmod has detected the following error:  A different version of the 'cluster' module is already loaded (see output of 'ml').
+
+If you don't understand the warning or error, contact the helpdesk at hpc@ugent.be
+\end{prompt}
+
+This is because there can only be one \verb|cluster| module active at a time.
+The correct command is \texttt{module \emph{swap} cluster/\othercluster}. See
+also \autoref{subsec:specifying-the-cluster-on-which-to-run}.
+\fi
+
+\ifgent
+
+\section{Running software that is incompatible with host}
+\label{sec:running-software-incompatible-with-host}
+
+When running software provided through modules (see \autoref{sec:modules}),
+you may run into errors like:
+
+\begin{prompt}
+%\shellcmd{module swap cluster/golett}%
+
+The following have been reloaded with a version change:
+  1) cluster/delcatty => cluster/golett
+
+%\shellcmd{module load Python/2.7.14-intel-2018a}%
+%\shellcmd{python}%
+
+Please verify that both the operating system and the processor support Intel(R) MOVBE, F16C, FMA, BMI, LZCNT and AVX2 instructions.
+
+\end{prompt}
+
+or errors like:
+
+\begin{prompt}
+%\shellcmd{module swap cluster/golett}%
+
+The following have been reloaded with a version change:
+  1) cluster/delcatty => cluster/golett
+
+%\shellcmd{module load Python/2.7.14-foss-2018a}%
+%\shellcmd{python}%
+Illegal instruction
+\end{prompt}
+
+
+When we swap to a different cluster, the available modules change so they work for that cluster.
+That means that if the cluster and the login nodes have a different CPU architecture,
+software loaded using modules might not work.
+
+If you want to test software on the login nodes, make sure the \texttt{cluster/\defaultcluster}
+module is loaded (with \texttt{module swap cluster/\defaultcluster}, see
+\autoref{subsec:specifying-the-cluster-on-which-to-run}),
+since the login nodes and \defaultcluster have the same CPU architecture.
+
+If modules are already loaded, and then we swap to a different cluster,
+all our modules will get reloaded. This means that all current modules will be
+unloaded and then loaded again, so they'll work on the newly loaded cluster.
+Here's an example of how that would look like:
+
+\begin{prompt}
+%\shellcmd{module load Python/2.7.14-intel-2018a}%
+%\shellcmd{module swap cluster/swalot}%
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) GCCcore/6.4.0                   5) Tcl/8.6.8-GCCcore-6.4.0           9) iccifort/2018.1.163-GCC-6.4.0-2.28    13) impi/2018.1.163-iccifort-2018.1.163-GCC-6.4.0-2.28    17) ncurses/6.0-GCCcore-6.4.0
+  2) GMP/6.1.2-GCCcore-6.4.0         6) binutils/2.28-GCCcore-6.4.0      10) ifort/2018.1.163-GCC-6.4.0-2.28       14) intel/2018a                                           18) zlib/1.2.11-GCCcore-6.4.0
+  3) Python/2.7.14-intel-2018a       7) bzip2/1.0.6-GCCcore-6.4.0        11) iimpi/2018a                           15) libffi/3.2.1-GCCcore-6.4.0
+  4) SQLite/3.21.0-GCCcore-6.4.0     8) icc/2018.1.163-GCC-6.4.0-2.28    12) imkl/2018.1.163-iimpi-2018a           16) libreadline/7.0-GCCcore-6.4.0
+
+The following have been reloaded with a version change:
+  1) cluster/delcatty => cluster/swalot
+\end{prompt}
+
+This might result in the same problems as mentioned above. When swapping to a
+different cluster, you can run \verb|module purge| to unload all modules to avoid problems
+(see \autoref{subsec:purging-modules}).
+
 \fi

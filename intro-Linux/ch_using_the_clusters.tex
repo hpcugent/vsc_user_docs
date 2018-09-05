@@ -1,6 +1,6 @@
 \chapter{Using the clusters}
 
-The use the clusters beyond the login nodes which have limited resources, you
+The use the clusters beyond the \gls{login-node}(s) which have limited resources, you
 should create job scripts and submit them to the clusters.
 
 The basic commands are:
@@ -17,4 +17,9 @@ For detailed information is available at
 \url{http://hpc.ugent.be/userwiki/index.php/User:VscJobs},
 \url{http://hpc.ugent.be/userwiki/index.php/User:VscScripts}.
 
+\section{Exercises}
 
+Create and submit a job script that computes the sum of 1-100 using Python, and
+prints the numbers to a \emph{unique} output file in \verb|$VSC_SCRATCH|.
+
+Hint: \verb|python -c "print(sum(range(1, 101)))"|

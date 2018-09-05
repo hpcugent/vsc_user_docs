@@ -171,7 +171,6 @@ The following locations are available:
                          shared across all clusters of the VSC in the future. See \S\ref{subsec:scratch-directory}. \\ \hline
 \ifgent
 \$VSC\_SCRATCH\_CLUSTER & The scratch filesystem closest to this cluster.\\ \hline
-\$VSC\_SCRATCH\_VO      & The scratch filesystem for your VO storage, this can have a bigger quota than your personal scratch.\\ \hline
 \fi
 \end{tabular}
 
@@ -187,6 +186,13 @@ been created.
 
 We ellaborate more on the specific function of these locations in the following
 sections.
+
+\ifgent
+Note: \verb|$VSC_SCRATCH_KYUKON| and \verb|$VSC_SCRATCH| are the same directories
+("kyukon" is the name of the storage cluster where the default shared scratch filesystem is hosted).
+
+For documentation about VO directories, see \autoref{subsec:vo-directories}.
+\fi
 
 \subsection{Your home directory (\$VSC\_HOME)\label{subsec:home-directory}}
 
@@ -234,15 +240,7 @@ speed you will achieve on this volume. For guaranteed fast performance and very 
 you should use the scratch space instead.
 \ifgent
 If you are running out of quota on your \$VSC\_DATA filesystem you can
-request a VO (Virtual organisation). VO members get an extra DATA filesystem: \$VSC\_DATA\_VO)
-We can give higher quota values for these filesystems. VO administrators can request additional quota
-at the "Edit VO" page \url{https://account.vscentrum.be/django/vo/edit}.
-
-Note that we may oversubscribe each shared filesystem, meaning that the total amount of quota across
-all VO's may exceed the total size of the filesystem. Because of this, you should consider the available quota
-as an upper limit of the amount of storage space that is available to you; you may not be able to use it all
-if the filesystem does not provide a sufficient amount of free space.
-
+request a VO. See \autoref{sec:virtual-organisations} on how to do this.
 \fi
 
 \subsection{Your scratch space (\$VSC\_SCRATCH)\label{subsec:scratch-directory}}
@@ -306,12 +304,6 @@ volume as the cluster scratch, and thus contains the same data.
 In the future it may point to a scratch file system
 that is available across all clusters of the VSC, but at the moment
 of writing there are no plans to provide this.
-\ifgent
-\item[VO scratch (\$VSC\_SCRATCH\_*\_VO).]
-Like \$VSC\_DATA\_VO these scratch filesystems are only available if you
-are a member of a (non-default) VO. This is extra SCRATCH space you can request if you are running
-out of quota on your personal SCRATCH.
-\fi
 \end{description}
 
 \subsection{Pre-defined quotas}
@@ -661,4 +653,135 @@ in your home directory, even if you are currently in a different directory:
 However, we urge you to only use the \texttt{du} and \texttt{tree} commands when you
 really need them as they can put a heavy strain on the file system and thus
 slow down file operations on the cluster for all other users.
+\fi
+
+% virtual organisations are only used in Ghent (for now)
+\ifgent
+\section{Virtual Organisations}
+\label{sec:virtual-organisations}
+
+A Virtual Organisation (VO) is a special type of group. You can only be a member
+of one single VO at a time (or not be in a VO at all).
+Being in a VO allows for larger storage quota to be obtained
+(but these requests should be well-motivated).
+
+\subsection{Joining an existing VO}
+
+\begin{enumerate}
+    \item Get the VO id of the research group you belong to (this id is formed by
+        the letters \verb|gvo|, followed by 5 digits).
+    \item Go to \url{https://account.vscentrum.be/django/vo/join} and fill in the
+        section named ``Join VO''. You will be asked to fill in the VO id and a message for
+        the moderator of the VO, where you identify yourself. This should look something
+        like \autoref{fig:VO-join}.
+    \item After clicking the submit button, a message will be sent to the moderator
+    of the VO, who will either approve or deny the request.
+\end{enumerate}
+
+
+
+\begin{figure}[!htbp]
+  \caption{Joining a VO.}
+  \centering
+    \includegraphics[width=\textwidth]{ch6-VO-join}
+\end{figure}\label{fig:VO-join}
+
+\subsection{Creating a new VO}
+
+\begin{enumerate}
+    \item Go to \url{https://account.vscentrum.be/django/vo/new} and scroll down
+        to the section ``Request new VO''. This should look something like
+        \autoref{fig:VO-new}.
+    \item Fill why you want to request a VO.
+    \item Fill out the both the internal and public VO name. These cannot contain
+        spaces, and should be 8-10 characters long. For example, \verb|genome25| is
+        a valid VO name.
+    \item Fill out the rest of the form and press submit. This will send a message
+        to the \hpc administrators, who will then either approve or deny the request.
+    \item If the request is approved, you will now be a member and moderator of your
+        newly created VO.
+\end{enumerate}
+
+\begin{figure}[!htbp]
+  \caption{Creating a new VO.}
+  \centering
+    \includegraphics[width=\textwidth]{ch6-VO-new}
+\end{figure}\label{fig:VO-new}
+
+\subsection{Requesting more storage space}
+\label{subsec:requesting-more-storage-space}
+
+If you're a moderator of a VO, you can request additional quota for the VO and
+its members.
+
+\begin{enumerate}
+    \item Go to \url{https://account.vscentrum.be/django/vo/edit} and scroll down
+        to ``Request additional quota''. See \autoref{fig:VO-request-additional-quota} to see how this looks.
+    \item Fill out how much \emph{additional} storage you want. In the screenshot below,
+        we're asking for 500 GiB extra space for \verb|VSC_DATA|, and for 1 TiB extra
+        space on \verb|VSC_SCRATCH_KYUKON|.
+    \item Add a comment explaining why you need additional storage space and submit
+        the form.
+    \item An \hpc administrator will review your request and approve or deny it.
+\end{enumerate}
+
+\begin{figure}[!htbp]
+  \caption{Requesting additional quota for the VO and its members.}
+  \centering
+    \includegraphics[width=\textwidth]{ch6-VO-request-additional-quota}
+\end{figure}\label{fig:VO-request-additional-quota}
+
+\subsection{Setting per-member VO quota}
+
+VO moderators can tweak how much of the VO quota each member can use. By default,
+this is set to 50\% for each user, but the moderator can change this: it is possible
+to give a particular user more than half of the VO quota (for example 80\%), or
+significantly less (for example 10\%).
+
+Note that the total percentage can be above 100\%: the percentages the moderator
+allocates per user are \emph{the maximum percentages} of storage users can use.
+
+\begin{enumerate}
+    \item Go to \url{https://account.vscentrum.be/django/vo/edit} and scroll down
+        to ``Manage per-member quota share''. See \autoref{fig:VO-per-member-storage} to see how this looks.
+    \item Fill out how much percent of the space you want each user to be able to use.
+        Note that the total can be above 100\%. In the screenshot below, there are
+        four users. Alice and Bob can use up to 50\% of the space, Carl
+        can use up to 75\% of the space, and Dave can only use 10\% of the space.
+        So in total, 185\% of the space has been assigned, but of course only
+        100\% can actually be used.
+\end{enumerate}
+
+\begin{figure}[!htbp]
+  \caption{Setting per-member quota.}
+  \centering
+    \includegraphics[width=\textwidth]{ch6-VO-per-member-storage}
+\end{figure}\label{fig:VO-per-member-storage}
+
+\subsection{VO directories}
+\label{subsec:vo-directories}
+
+When you're a member of a VO, there will be some additional directories
+on each of the shared filesystems available:
+
+\begin{description}
+    \item[VO scratch (\texttt{\$VSC\_SCRATCH\_VO})]
+        A directory on the shared \emph{scratch} filesystem shared by the members of your
+        VO, where additional storage quota can be provided (see \autoref{subsec:requesting-more-storage-space}).
+        You can use this as an alternative to your personal \verb|$VSC_SCRATCH|
+        directory (see \autoref{subsec:scratch-directory}).
+
+    \item[VO data (\texttt{\$VSC\_DATA\_VO})]
+        A directory on the shared \emph{data} filesystem shared by the members of your
+        VO, where additional storage quota can be provided (see \autoref{subsec:requesting-more-storage-space}).
+        You can use this as an alternative to your personal \verb|$VSC_DATA|
+        directory (see \autoref{subsec:data-directory}).
+
+\end{description}
+
+If you put \verb|_USER| after each of these variable names, you can see your
+personal folder in these filesystems. For example: \verb|$VSC_DATA_VO_USER|
+is your personal folder in your VO data filesystem (this is equivalent to
+\verb|$VSC_DATA_VO/$USER|), and analogous for \verb|$VSC_SCRATCH_VO_USER|.
+
 \fi
