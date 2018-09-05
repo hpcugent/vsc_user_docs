@@ -112,6 +112,16 @@ You should remove the directory at the end of your job script:
 %\shellcmd{rm -rf \$MATLAB\_LOG\_DIR}%
 \end{prompt}
 
+\section{Cache location}
+
+When running, MATLAB will use a cache for performance reasons. This location
+and size of this cache can be changed trough the \verb|MCR_CACHE_ROOT| and
+\verb|MCR_CACHE_SIZE| environment variables.
+
+
 \section{MATLAB job script}
 
 % TODO: copy MATLAB job script
+All of the tweaks needed to get MATLAB working have been implemented in an example
+job script.
+% TODO: usage of  the script

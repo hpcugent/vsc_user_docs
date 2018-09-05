@@ -15,6 +15,8 @@ dir=$PBS_O_WORKDIR
 ## version: version of MATLAB
 version=2018a
 
+## Size of MATLAB cache in memory
+cache_size=1024M
 #################################################################
 ###  Don't change things below unless you know what you are doing
 #################################################################
@@ -42,9 +44,9 @@ then
 fi
 
 ## make cache dir
-## TMPDIR is set and created by torque. 1 unique dir per job
-cdir=$TMPDIR/mcrcache
-mkdir -p $cdir
+## /dev/shm is memory, so this should be really fast
+
+cdir=$(mktemp -d -p /dev/shm)
 if [ ! -d $cdir ]
 then
   echo "No tempdir $cdir found."
@@ -54,7 +56,6 @@ fi
 ## set dir
 export MCR_CACHE_ROOT=$cdir
 ## 1GB cache (more then large enough)
-export MCR_CACHE_SIZE=$((1024*1024*1024))
-
+export MCR_CACHE_SIZE=$cache_size
 ## real running
 ./$script $EBROOTMATLAB $opts
