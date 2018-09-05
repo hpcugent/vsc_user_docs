@@ -480,7 +480,7 @@ application's rest periods include waiting to be dispatched on a CPU and not on
 external devices. That part of the wait percentage is then very relevant to
 understanding your overall CPU usage pattern.
 
-\subsection{Fine-tuning your executable and/or job-script}
+\subsection{Fine-tuning your executable and/or job script}
 
 It is good practice to perform a number of run time stress tests, and to check
 the CPU utilisation of your nodes. We (and all other users of the \hpc) would
@@ -494,7 +494,7 @@ But how can you maximise?
 \item  Configure your software. (e.g., to exactly use the available amount of processors in a node)
 \item  Develop your parallel program in a smart way.
 \item  Demand a specific type of compute node (e.g., Harpertown, Westmere), which have a specific number of cores.
-\item  Correct your request for CPUs in your job-script.
+\item  Correct your request for CPUs in your job script.
 \end{enumerate}
 
 \section{The system load}
@@ -588,7 +588,7 @@ background, and check the effect on the load again:
 \end{prompt}
 
 You can also read it in the \strong{htop} command.
-\subsection{Fine-tuning your executable and/or job-script}
+\subsection{Fine-tuning your executable and/or job script}
 
 It is good practice to perform a number of run time stress tests, and to check
 the system load of your nodes. We (and all other users of the \hpc) would
@@ -603,7 +603,7 @@ But how can you maximise?
 \item  Configure your software (e.g., to exactly use the available amount of processors in a node).
 \item  Develop your parallel program in a smart way, so that it fully utilises the available processors.
 \item  Demand a specific type of compute node (e.g., Harpertown, Westmere), which have a specific number of cores.
-\item  Correct your request for CPUs in your job-script.
+\item  Correct your request for CPUs in your job script.
 \end{enumerate}
 
 And then check again.
@@ -727,7 +727,7 @@ with an ``Infiniband'' network. The Infiniband is a specialised high bandwidth,
 low latency network that enables large parallel jobs to run as efficiently as
 possible.
 
-The parameter to add in your job-script would be:
+The parameter to add in your job script would be:
 
 \begin{prompt}
 #PBS -l ib

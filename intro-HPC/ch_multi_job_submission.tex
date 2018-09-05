@@ -69,7 +69,7 @@ script, which prints the 3 variables to the standard output and waits a bit:
 
 \examplecode{bash}{par_sweep/weather}
 
-A job-script that would run this as a job for the first parameters (p01) would
+A job script that would run this as a job for the first parameters (p01) would
 then look like:
 
 \examplecode{bash}{par_sweep/weather_p01.pbs}
@@ -199,7 +199,7 @@ To support those users who used the feature and since it offers a convenient
 workflow, the ``worker framework'' implements the idea of ``job arrays'' in its
 own way.
 
-A typical job-script for use with job arrays would look like this:
+A typical job script for use with job arrays would look like this:
 
 \examplecode{bash}{job_array/job_array.pbs}
 
@@ -232,7 +232,7 @@ written to the \textit{``./output}'' directory in output\_1.dat, output\_2.dat,
 \examplecode{bash}{job_array/test_set}
 
 Using the ``worker framework'', a feature akin to job arrays can be used with
-minimal modifications to the job-script:
+minimal modifications to the job script:
 
 \examplecode{bash}{job_array/test_set.pbs}
 

@@ -72,7 +72,7 @@ PBS\_O\_SHELL    & value of the SHELL variable in the environment in which \emph
 PBS\_O\_TZ       & value of the TZ variable in the environment in which \emph{qsub} was executed \\ \hline
 PBS\_O\_HOST     & the name of the host upon which the \emph{qsub} command is running \\ \hline
 PBS\_O\_QUEUE    & the name of the original queue to which the job was submitted \\ \hline
-PBS\_O\_WORKDIR  & the absolute path of the current working directory of the \emph{qsub} command. This is the most useful. Use it in every job-script. The first thing you do is, cd \$PBS\_O\_WORKDIR after defining the resource list. This is because, pbs throw you to your \$HOME directory. \\ \hline
+PBS\_O\_WORKDIR  & the absolute path of the current working directory of the \emph{qsub} command. This is the most useful. Use it in every job script. The first thing you do is, cd \$PBS\_O\_WORKDIR after defining the resource list. This is because, pbs throw you to your \$HOME directory. \\ \hline
 PBS\_O\_NODENUM  & node offset number \\ \hline
 PBS\_O\_VNODENUM & vnode offset number \\ \hline
 PBS\_VERSION     & Version Number of TORQUE, e.g., TORQUE-2.5.1 \\ \hline
