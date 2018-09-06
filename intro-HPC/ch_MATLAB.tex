@@ -108,8 +108,9 @@ because otherwise you might not harness the full compute power available (if you
 too few workers), or you might negatively impact performance (if you have too much workers).
 By default, MATLAB uses a fixed number of workers (12).
 
-The best amount of workers is the amount of processors. This amount can be
-obtained via the following code:
+You should use a number of workers that is equal to the number of cores you requested
+when submitting your job script (the \verb|ppn| value, see \autoref{subsec:generic-resource-requirements}).
+You can determine the right number of workers to use via the following code snippet in your MATLAB program:
 
 \examplecode{MATLAB}{parpool.m}
 
