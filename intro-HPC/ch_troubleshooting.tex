@@ -108,6 +108,62 @@ Please add \verb|-vvv| as a flag to \verb|ssh| like:
 and include the output of that command in the message.
 \fi
 
+\ifmacORlinux
+
+\section{WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!}
+
+If you get a warning that looks like the one below, it may be possible
+that someone is trying to intercept the connection between you and the \hpc.
+
+\begin{prompt}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ECDSA key sent by the remote host is
+SHA256:1MNKFTfl1T9sm6tTWAo4sn7zyEfiWFLKbk/mlT+7S5s.
+Please contact your system administrator.
+Add correct host key in ~/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in ~/.ssh/known_hosts:%\strong{21}%
+ECDSA host key for %\loginnode{}% has changed and you have requested strict checking.
+Host key verification failed.
+\end{prompt}
+
+You will need to remove the line it's complaining about (in the example, line 21).
+To do that, open \verb|~/.ssh/config| in an editor, and remove the line. This
+results in \verb|ssh| ``forgetting'' the \hpc.
+
+After you've done that, you'll need to connect to the \hpc again.
+See \autoref{sec:warning-message-new-host} to verify the fingerprints.
+\strong{It's important to verify the fingerprints. If they don't match,
+don't connect.}
+
+\else
+
+\section{WARNING - POTENTIAL SECURITY BREACH}
+
+If you get a warning box that looks like the one below, it may be possible
+that someone is trying to intercept the connection between you and the \hpc.
+\strong{Do not click ``Yes'' or ``No'' until you verified the fingerprint}.
+
+You will need to verify that the fingerprint show in the dialog matches one of the
+following fingerprints:
+
+\puttyFirstConnect
+
+If it does, click ``Yes''.
+
+If it doesn't (like in the example), take a screenshot, press ``Cancel'' and contact \hpcinfo.
+
+
+\includegraphics[width=0.5\textwidth]{putty_security_alert}
+
+
+\fi
+
+
 \section{DOS/Windows text format}
 
 If you get errors like:
