@@ -31,7 +31,7 @@ program.
 
 \begin{prompt}
 %\shellcmd{module avail MATLAB}%
-----------------------/apps/%\sitename%/CO7/sandybridge/modules/all ----------------------
+----------------------%\modulelocation{}%----------------------
    MATLAB/2016b    MATLAB/2017b    MATLAB/2018a (D)
 %\shellcmd{module load MATLAB/2018a}
 \end{prompt}
@@ -86,8 +86,6 @@ in errors like:
 
 \begin{prompt}
 Error: Out of memory
-
-Typically, this message occurs because the compiler requests a larger segment of memory from the operating system than is currently available. Adding additional memory to your system can alleviate this problem.
 \end{prompt}
 
 A possible solution to this is by setting the maximum heap size to be bigger:
@@ -104,10 +102,17 @@ workernode (unless the Distributed Computing toolbox is used, see
 
 
 The amount of workers used by MATLAB for the parallel toolbox can be controlled
-via the \verb|parpool| function: \verb|parpool('cluster1', 16)| will run the
-\verb|cluster1| profile with 16 workers. It's best to specify the amount of workers,
-because otherwise, you might not harness the full compute power available (if you have
+via the \verb|parpool| function: \verb|parpool(16)| will use 16 workers.
+It's best to specify the amount of workers,
+because otherwise you might not harness the full compute power available (if you have
 too few workers), or you might negatively impact performance (if you have too much workers).
+By default, MATLAB uses a fixed number of workers (12).
+
+The best amount of workers is the amount of processors. This amount can be
+obtained via the following code:
+
+\examplecode{MATLAB}{parpool.m}
+
 
 See also \href{https://nl.mathworks.com/help/distcomp/parpool.html}{the parpool documentation}.
 
@@ -141,15 +146,15 @@ When running, MATLAB will use a cache for performance reasons. This location
 and size of this cache can be changed trough the \verb|MCR_CACHE_ROOT| and
 \verb|MCR_CACHE_SIZE| environment variables.
 
-The snippet below would set the maximum cache size to 64 megabytes and the
+The snippet below would set the maximum cache size to 1024 megabytes and the
 location to \verb|/tmp/testdirectory|.
 
 \begin{prompt}
 %\shellcmd{export MATLAB\_CACHE\_ROOT=/tmp/testdirectory}%
-%\shellcmd{export MATLAB\_CACHE\_SIZE=64M}%
+%\shellcmd{export MATLAB\_CACHE\_SIZE=1024M}%
 \end{prompt}
 
-So when MATLAB is running, it can fill up to 64 megabytes of cache in
+So when MATLAB is running, it can fill up to 1024 megabytes of cache in
 \verb|/tmp/testdirectory|.
 
 \section{MATLAB job script}
