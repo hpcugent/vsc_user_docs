@@ -1,13 +1,18 @@
 \chapter{Frequently Asked Questions}
 \label{ch:faq}
 
-\ifgent
-% For other institutions: see https://github.com/hpcugent/vsc_user_docs/issues/246
 \section{When will my job start?}
 
-See the explanation about how jobs get prioritized in subsection~\ref{subsec:priority}.
+\ifgent
+See the explanation about how jobs get prioritized in \autoref{subsec:priority}.
+\else
+\ifbrussel
+See the explanation about how jobs get prioritized in \autoref{subsec:priority}.
+\else
+You can use the \verb|showstart| command. For more information, see \autoref{sec:monitoring-and-managing-your-jobs}.
+\fi % BRUSSEL
+\fi % GENT
 
-\fi
 \section{Can I share my account with someone else?}
 
 \strong{NO.} You are not allowed to share your VSC account with anyone else, it is strictly personal.
