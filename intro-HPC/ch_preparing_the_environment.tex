@@ -667,7 +667,7 @@ for future access.
   command is the equivalent of the \strong{cp}  (i.e., \strong{c}o\strong{p}y)
   command, but can copy files to or from remote machines.
 
-  Open an additional Terminal window and check that you're working on your local
+  Open an additional terminal window and check that you're working on your local
   machine.
 
 \begin{prompt}
@@ -715,7 +715,7 @@ Hello
   subdirectory on the cluster to your local computer.
 
   First, we will confirm that the file is indeed in the ``docs'' subdirectory.
-  On the Terminal on the \hpc, enter:
+  On the terminal on the \hpc, enter:
 
 \begin{prompt}
 %\captureshellcmd{cd ~/docs}%
@@ -725,7 +725,7 @@ total 1536
 -rw-r--r-- 1 %\userid% Sep 11 09:53 %\jobname%.pdf
 \end{prompt}
 
-  Now we will copy the file to the local machine. On the Terminal on your own local computer, enter:
+  Now we will copy the file to the local machine. On the terminal on your own local computer, enter:
 
 \begin{prompt}
 %\shellcmd{scp \userid{}@\loginnode:./docs/\jobname.pdf .}%
