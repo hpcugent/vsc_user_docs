@@ -97,12 +97,12 @@ total 512
 -rw-r--r-- 1 %\userid% 609 Sep 11 10:25 fibo.pl
 \end{prompt}
 
-In this directory you find a Perl script (named ``fibo.pl'') and a job-script
+In this directory you find a Perl script (named ``fibo.pl'') and a job script
 (named ``fibo.pbs'').
 
 \begin{enumerate}
 \item  The Perl script calculates the first 30 Fibonacci numbers.
-\item  The job-script is actually a standard Unix/Linux shell script that
+\item  The job script is actually a standard Unix/Linux shell script that
   contains a few extra comments at the beginning that specify directives to
   PBS.  These comments all begin with \strong{\#PBS}.
 \end{enumerate}
@@ -156,7 +156,7 @@ your software. But for the sake of acquiring a good understanding of what is
 happening, you are pardoned for this example since these jobs require very little
 computing power.
 
-The job-script contains a description of the job by specifying the command that
+The job script contains a description of the job by specifying the command that
 need to be executed on the compute node:
 
 \examplecode{bash}{fibo.pbs}
@@ -287,6 +287,7 @@ all depend on which \verb|cluster| module is loaded.
 
 
 \section{Monitoring and managing your job(s)}
+\label{sec:monitoring-and-managing-your-jobs}
 
 Using the job ID that \textit{qsub} returned, there are various ways to monitor
 the status of your job, e.g.,
@@ -558,7 +559,9 @@ For the simplest cases, only the amount of maximum estimated execution time
 (called ``walltime'') is really important. Here, the job requests
 2 hours, 30 minutes. As soon as the job exceeds the requested walltime,
 it will be ``killed'' (terminated) by the job scheduler.  There is no
-harm if you \emph{slightly} overestimate the maximum execution time. \\
+harm if you \emph{slightly} overestimate the maximum execution time.
+If you omit this option, the queue manager will not complain but use a
+default value (one hour on most clusters).
 
 \begin{prompt}
 %\shellcmd{qsub -l mem=4gb}%
@@ -592,7 +595,7 @@ These options can either be specified on the command line, e.g.
 %\shellcmd{qsub -l nodes=1:ppn=1,mem=2gb fibo.pbs}%
 \end{prompt}
 
-or in the job-script itself using the \#PBS-directive, so ``fibo.pbs'' could be modified to:
+or in the job script itself using the \#PBS-directive, so ``fibo.pbs'' could be modified to:
 
 \begin{code}{bash}
 #!/bin/bash -l
@@ -652,7 +655,7 @@ to the qsub command line, or
 #PBS -q queuename
 \end{code}
 
-to the job-script, where \emph{queuename} is one of the possible queues shown
+to the job script, where \emph{queuename} is one of the possible queues shown
 above.
 
 A maximum \emph{walltime} is associated with each queue.
@@ -811,7 +814,7 @@ Inspect the generated output and error files:
 
 You can instruct the \hpc to send an e-mail to your e-mail address whenever a
 job \strong{b}egins, \strong{e}nds and/or \strong{a}borts, by adding the
-following lines to the job-script ``fibo.pbs'':
+following lines to the job script ``fibo.pbs'':
 
 \begin{code}{bash}
 #PBS -m b
