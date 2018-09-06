@@ -1168,6 +1168,7 @@ combined as follows:
 This will load the two modules as well as their dependencies.
 
 \subsection{Explicit version numbers}
+\label{subsec:explicit-version-numbers}
 
 As a rule, once a module has been installed on the cluster, the executables or
 libraries it comprises are never modified. This policy ensures that the user's
@@ -1193,6 +1194,18 @@ Everything works fine, up to the point where a new version of GSL is installed,
 1.13 compiled for gcc. From then on, the user's load command will load the
 latter version, rather than the intended one, which may lead to unexpected
 problems.
+
+To list the available versions, you can use the \verb|module avail| command. For
+example, to list the available versions of the GSL library:
+
+\begin{prompt}
+%\shellcmd{module avail GSL}%
+FGSL/1.1.0-intel-2016b (D)    GSL/2.3-intel-2016b
+GSL/2.1-intel-2016b           GSL/2.3-intel-2017a
+GSL/2.2.1-intel-2016b         GSL/2.4-GCCcore-6.4.0 (D)
+GSL/2.3-foss-2016b
+
+\end{prompt}
 
 \ifantwerpen
 Lets now generate a version conflict with the ``ABAQUS'' module, and see what
