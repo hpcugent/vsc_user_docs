@@ -108,9 +108,10 @@ Please add \verb|-vvv| as a flag to \verb|ssh| like:
 and include the output of that command in the message.
 \fi
 
-\ifmacORlinux
+\section{Security warning about invalid host key}
+\label{sec:security-warning-invald-host-key}
 
-\section{WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!}
+\ifmacORlinux
 
 If you get a warning that looks like the one below, it may be possible
 that someone is trying to intercept the connection between you and the \hpc.
@@ -133,25 +134,25 @@ Host key verification failed.
 
 You will need to remove the line it's complaining about (in the example, line 21).
 To do that, open \verb|~/.ssh/config| in an editor, and remove the line. This
-results in \verb|ssh| ``forgetting'' the \hpc.
+results in \verb|ssh| ``forgetting'' the system you're connecting to.
 
 After you've done that, you'll need to connect to the \hpc again.
 See \autoref{sec:warning-message-new-host} to verify the fingerprints.
 \strong{It's important to verify the fingerprints. If they don't match,
-don't connect.}
+do \emph{not} connect and contact \hpcinfo instead.}
 
 \else
 
-\section{WARNING - POTENTIAL SECURITY BREACH}
-
 If you get a warning box that looks like the one below, it may be possible
-that someone is trying to intercept the connection between you and the \hpc.
-\strong{Do not click ``Yes'' or ``No'' until you verified the fingerprint}.
+that someone is trying to intercept the connection between you and the system you're connecting to.
+Another possibility is that the host keys of the system you're connecting to have changed.
 
 You will need to verify that the fingerprint show in the dialog matches one of the
 following fingerprints:
 
 \puttyFirstConnect
+
+\strong{Do not click ``Yes'' or ``No'' until you verified the fingerprint}.
 
 If it does, click ``Yes''.
 
