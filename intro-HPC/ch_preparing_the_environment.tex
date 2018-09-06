@@ -217,13 +217,13 @@ see \autoref{sec:connecting-issues} to troubleshoot.
   on how to do this.
 
 A possible error message you can get if you previously saved your private key
-somewhere else than the default location (\verb|$HOME/.ssh/id_rsa|):
+somewhere else than the default location (\lstinline|$HOME/.ssh/id_rsa|):
 
 \begin{prompt}
 %\shellcmd{Permission denied (publickey,gssapi-keyex,gssapi-with-mic).}%
 \end{prompt}
 
-In this case, use the \verb|-i| option for the \verb|ssh| command to specify the location
+In this case, use the \lstinline|-i| option for the \lstinline|ssh| command to specify the location
 of your private key. For example:
 
 \begin{prompt}
@@ -798,7 +798,7 @@ total  899
 \ifmac
   \subsection{Using a GUI (Cyberduck)}
 
-  Cyberduck is a graphical alternative to the \verb|scp| command. It can be installed
+  Cyberduck is a graphical alternative to the \lstinline|scp| command. It can be installed
   from \url{https://cyberduck.io}.
 
   This is the one-time setup you will need to do before connecting:

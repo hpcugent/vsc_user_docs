@@ -189,7 +189,7 @@ We ellaborate more on the specific function of these locations in the following
 sections.
 
 \ifgent
-Note: \verb|$VSC_SCRATCH_KYUKON| and \verb|$VSC_SCRATCH| are the same directories
+Note: \lstinline|$VSC_SCRATCH_KYUKON| and \lstinline|$VSC_SCRATCH| are the same directories
 ("kyukon" is the name of the storage cluster where the default shared scratch filesystem is hosted).
 
 For documentation about VO directories, see \autoref{subsec:vo-directories}.
@@ -670,7 +670,7 @@ Being in a VO allows for larger storage quota to be obtained
 
 \begin{enumerate}
     \item Get the VO id of the research group you belong to (this id is formed by
-        the letters \verb|gvo|, followed by 5 digits).
+        the letters \lstinline|gvo|, followed by 5 digits).
     \item Go to \url{https://account.vscentrum.be/django/vo/join} and fill in the
         section named ``Join VO''. You will be asked to fill in the VO id and a message for
         the moderator of the VO, where you identify yourself. This should look something
@@ -695,7 +695,7 @@ Being in a VO allows for larger storage quota to be obtained
         \autoref{fig:VO-new}.
     \item Fill why you want to request a VO.
     \item Fill out the both the internal and public VO name. These cannot contain
-        spaces, and should be 8-10 characters long. For example, \verb|genome25| is
+        spaces, and should be 8-10 characters long. For example, \lstinline|genome25| is
         a valid VO name.
     \item Fill out the rest of the form and press submit. This will send a message
         to the \hpc administrators, who will then either approve or deny the request.
@@ -719,8 +719,8 @@ its members.
     \item Go to \url{https://account.vscentrum.be/django/vo/edit} and scroll down
         to ``Request additional quota''. See \autoref{fig:VO-request-additional-quota} to see how this looks.
     \item Fill out how much \emph{additional} storage you want. In the screenshot below,
-        we're asking for 500 GiB extra space for \verb|VSC_DATA|, and for 1 TiB extra
-        space on \verb|VSC_SCRATCH_KYUKON|.
+        we're asking for 500 GiB extra space for \lstinline|VSC_DATA|, and for 1 TiB extra
+        space on \lstinline|VSC_SCRATCH_KYUKON|.
     \item Add a comment explaining why you need additional storage space and submit
         the form.
     \item An \hpc administrator will review your request and approve or deny it.
@@ -769,20 +769,20 @@ on each of the shared filesystems available:
     \item[VO scratch (\texttt{\$VSC\_SCRATCH\_VO})]
         A directory on the shared \emph{scratch} filesystem shared by the members of your
         VO, where additional storage quota can be provided (see \autoref{subsec:requesting-more-storage-space}).
-        You can use this as an alternative to your personal \verb|$VSC_SCRATCH|
+        You can use this as an alternative to your personal \lstinline|$VSC_SCRATCH|
         directory (see \autoref{subsec:scratch-directory}).
 
     \item[VO data (\texttt{\$VSC\_DATA\_VO})]
         A directory on the shared \emph{data} filesystem shared by the members of your
         VO, where additional storage quota can be provided (see \autoref{subsec:requesting-more-storage-space}).
-        You can use this as an alternative to your personal \verb|$VSC_DATA|
+        You can use this as an alternative to your personal \lstinline|$VSC_DATA|
         directory (see \autoref{subsec:data-directory}).
 
 \end{description}
 
-If you put \verb|_USER| after each of these variable names, you can see your
-personal folder in these filesystems. For example: \verb|$VSC_DATA_VO_USER|
+If you put \lstinline|_USER| after each of these variable names, you can see your
+personal folder in these filesystems. For example: \lstinline|$VSC_DATA_VO_USER|
 is your personal folder in your VO data filesystem (this is equivalent to
-\verb|$VSC_DATA_VO/$USER|), and analogous for \verb|$VSC_SCRATCH_VO_USER|.
+\lstinline|$VSC_DATA_VO/$USER|), and analogous for \lstinline|$VSC_SCRATCH_VO_USER|.
 
 \fi

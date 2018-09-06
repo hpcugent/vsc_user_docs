@@ -9,7 +9,7 @@ See the explanation about how jobs get prioritized in \autoref{subsec:priority}.
 \ifbrussel
 See the explanation about how jobs get prioritized in \autoref{subsec:priority}.
 \else
-You can use the \verb|showstart| command. For more information, see \autoref{sec:monitoring-and-managing-your-jobs}.
+You can use the \lstinline|showstart| command. For more information, see \autoref{sec:monitoring-and-managing-your-jobs}.
 \fi % BRUSSEL
 \fi % GENT
 
@@ -35,9 +35,9 @@ directories in VO space, see \autoref{sec:virtual-organisations}).
 
 \section{Can I share my data with other \hpc users?}
 
-Yes, you can use the \verb|chmod| or \verb|setfacl| commands to change permissions
+Yes, you can use the \lstinline|chmod| or \lstinline|setfacl| commands to change permissions
 of files so other users can access the data. For example, the following command
-will enable a user named ``otheruser'' to read the file named \verb|dataset.txt|.
+will enable a user named ``otheruser'' to read the file named \lstinline|dataset.txt|.
 See
 
 \begin{prompt}
@@ -46,7 +46,7 @@ See
 -rwxr-x---+ 2 %\userid{}% mygroup      40 Apr 12 15:00 dataset.txt
 \end{prompt}
 
-For more information about \verb|chmod| or \verb|setfacl|, see \href{\LinuxManualURL#sec:chmod}
+For more information about \lstinline|chmod| or \lstinline|setfacl|, see \href{\LinuxManualURL#sec:chmod}
 {the section on chmod in chapter 3 of the Linux intro manual}.
 % \section{I no longer work for \university, can I transfer my data to another researcher working at \university}
 % See https://github.com/hpcugent/vsc_user_docs/issues/230
