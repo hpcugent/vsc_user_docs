@@ -73,13 +73,13 @@ When defining lists make sure to indent the items.
 \label{sec:displaying-example-code}
 
 To display example code inside the document you can use the \verb|\examplecode|
-command. The example code files should be organised in an \verb|examples|
+command. The example code files should be organised in an \lstinline|examples|
 subdirectory.  Each chapter should have its own directory. The directory name
 is the same as the chapter name with spaces and slashes substituted by dashes.
 (e.g., ``Multi-core Job Submission'' is turned into
 ``Multi-core-Job-Submission'').
 
-The \verb|examplecode| takes 2 mandatory arguments. The first one is the
+The \lstinline|examplecode| takes 2 mandatory arguments. The first one is the
 language of the code file (e.g., C or Python). The second is the basename of the
 file. If you want you can organise the example files per chapter in
 subdirectories, you then need to add the subdirectory to the filename argument.
@@ -111,8 +111,8 @@ case the prompt environment is part of an if--else construction, do not indent
 the prompt environment to avoid an unwanted empty line at the end.  There
 is the special command \verb|\shellcmd{}| which provides consistent styling. It
 also includes a \$-sign. There is a special version of this command called
-\verb|\captureshellcmd{}|. This behaves exactly the same as \verb|shellcmd| but
-it writes its argument to \verb|shellcmds.sh|. All commands you want to capture
+\verb|\captureshellcmd{}|. This behaves exactly the same as \lstinline|shellcmd| but
+it writes its argument to \lstinline|shellcmds.sh|. All commands you want to capture
 will be present here. This file will be updated each time you build the PDF.
 You can use this to easily run commands and paste their output in the latex
 file. NOTE: instead of \verb|\tilde| you should use a regular \tilde{} inside
@@ -199,7 +199,7 @@ keywords you can use: \texttt{ifleuven}, \texttt{ifgent}, \texttt{ifantwerpen},
 \end{verbatim}
 
 If large pieces of text need to be included you can use the
-\verb|includesite| command.
+\lstinline|includesite| command.
 Note: this command will not fail if the site-specific section is missing.
 
 \begin{verbatim}
@@ -223,7 +223,7 @@ To fix this problem, you can use a macro. For example:
 you can connect to \loginnode with ssh.
 \end{verbatim}
 
-These macros are all defined inside \verb|macros.tex|. This file is located
+These macros are all defined inside \lstinline|macros.tex|. This file is located
 inside the site-specific directory. You can define new macros like so:
 \begin{verbatim}
 \macro{\city}{Gent}
