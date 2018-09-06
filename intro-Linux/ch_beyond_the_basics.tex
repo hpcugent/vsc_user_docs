@@ -5,20 +5,20 @@ of the deeper concepts and commands.
 
 \section{Input/output}
 
-To redirect output to files, you can use the redirection operators: \verb|>|,
-\verb|>>|, \verb|&>|, and \verb|<|.
+To redirect output to files, you can use the redirection operators: \lstinline|>|,
+\lstinline|>>|, \lstinline|&>|, and \lstinline|<|.
 
 First, it's important to make a distinction between two different output
 channels:
 
 \begin{enumerate}
- \item \verb|stdout|: standard output channel, for regular output
- \item \verb|stderr|: standard error channel, for errors and warnings
+ \item \lstinline|stdout|: standard output channel, for regular output
+ \item \lstinline|stderr|: standard error channel, for errors and warnings
 \end{enumerate}
 
 \subsection{Redirecting \texttt{stdout}}
 
-\verb|>| writes the (\verb|stdout|) output of a command to a file and \emph{overwrites}
+\lstinline|>| writes the (\lstinline|stdout|) output of a command to a file and \emph{overwrites}
 whatever was in the file before.
 
 \begin{prompt}
@@ -30,7 +30,7 @@ hello
 hello2
 \end{prompt}
 
-\verb|>>| appends the (\verb|stdout|) output of a command to a file; it does not clobber
+\lstinline|>>| appends the (\lstinline|stdout|) output of a command to a file; it does not clobber
 whatever was in the file before:
 
 \begin{prompt}
@@ -45,8 +45,8 @@ hello2
 
 \subsection{Reading from \texttt{stdin}}
 
-\verb|<| reads a file from standard input (piped or typed input).  So you would use
-this to simulate typing into a terminal. \verb|< somefile.txt| is largely equivalent to
+\lstinline|<| reads a file from standard input (piped or typed input).  So you would use
+this to simulate typing into a terminal. \lstinline|< somefile.txt| is largely equivalent to
 \verb=cat somefile.txt | =.
 
 One common use might be to take the the results of a long running command and
@@ -62,8 +62,8 @@ list when you are done:
 
 \subsection{Redirecting \texttt{stderr}}
 
-To redirect the \verb|stderr| output (warnings, messages), you can use \verb|2>|, just
-like \verb|>|
+To redirect the \lstinline|stderr| output (warnings, messages), you can use \lstinline|2>|, just
+like \lstinline|>|
 
 \begin{prompt}
 %\shellcmd{ls one.txt nosuchfile.txt 2$>$ errors.txt}%
@@ -74,8 +74,8 @@ ls: nosuchfile.txt: No such file or directory
 
 \subsection{Combining \texttt{stdout} and \texttt{stderr}}
 
-To combine both output channels (\verb|stdout| and \verb|stderr|) and redirect them to a single file, you can use
-\verb|&>|
+To combine both output channels (\lstinline|stdout| and \lstinline|stderr|) and redirect them to a single file, you can use
+\lstinline|&>|
 
 \begin{prompt}
 %\shellcmd{ls one.txt nosuchfile.txt \&$>$ ls.out}%
@@ -88,16 +88,16 @@ one.txt
 
 Part of the power of the command line is to string multiple commands together to
 create useful results. The core of these is the pipe: \verb=|=. For example to see
-the number of files in a directory, we can pipe the (\verb|stdout|) output of
-\verb|ls| to \verb|wc| (\strong{w}ord \strong{c}ount, but can also be used
-to count the number of lines with the \verb|-l| flag).
+the number of files in a directory, we can pipe the (\lstinline|stdout|) output of
+\lstinline|ls| to \lstinline|wc| (\strong{w}ord \strong{c}ount, but can also be used
+to count the number of lines with the \lstinline|-l| flag).
 
 \begin{prompt}
 %\shellcmd{ls | wc -l}%
      42
 \end{prompt}
 
-A common pattern is to to pipe the output of a command to \verb|less| so you can
+A common pattern is to to pipe the output of a command to \lstinline|less| so you can
 examine or search the output:
 
 \begin{prompt}
@@ -110,7 +110,7 @@ Or to look through your command history:
 %\shellcmd{history | less}%
 \end{prompt}
 
-You can put multiple pipes in the same line. For example, which \verb|cp| commands have we run?
+You can put multiple pipes in the same line. For example, which \lstinline|cp| commands have we run?
 
 \begin{prompt}
 %\shellcmd{history | grep cp | less}%
@@ -121,21 +121,21 @@ You can put multiple pipes in the same line. For example, which \verb|cp| comman
 The shell will expand certain things, including:
 
 \begin{enumerate}
-\item \verb|*| wildcard: for example \verb|ls t*txt| will list all files starting with 't' and ending in 'txt'
-\item tab completion: hit the \verb|<tab>| key to make the shell complete your command line; works for completing file names, command names, etc.
-\item \verb|$...| or \verb|${...}|: environment variables will be replaced with their value;
-example: \verb|echo "I am $USER"| or \verb|echo "I am ${USER}"|
-\item square brackets can be used to list a number of options for a particular characters; example: \verb|ls *.[oe][0-9]|.
-This will list all files starting with whatever characters (\verb|*|), then a dot (\verb|.|), then either
-an `o' or an `e' (\verb|[oe]|), then a character from `0' to `9' (so any digit) (\verb|[0-9]|).
-So this filename will match: \verb|anything.o5|, but this one won't: \verb|anything.o52|.
+\item \lstinline|*| wildcard: for example \lstinline|ls t*txt| will list all files starting with 't' and ending in 'txt'
+\item tab completion: hit the \lstinline|<tab>| key to make the shell complete your command line; works for completing file names, command names, etc.
+\item \lstinline|$...| or \lstinline|${...}|: environment variables will be replaced with their value;
+example: \lstinline|echo "I am $USER"| or \lstinline|echo "I am ${USER}"|
+\item square brackets can be used to list a number of options for a particular characters; example: \lstinline|ls *.[oe][0-9]|.
+This will list all files starting with whatever characters (\lstinline|*|), then a dot (\lstinline|.|), then either
+an `o' or an `e' (\lstinline|[oe]|), then a character from `0' to `9' (so any digit) (\lstinline|[0-9]|).
+So this filename will match: \lstinline|anything.o5|, but this one won't: \lstinline|anything.o52|.
 
 \end{enumerate}
 
 \section{Process information}
 
 \subsection{\texttt{ps} and \texttt{pstree}}
-\verb|ps| lists processes running. By default, it will only show you the processes
+\lstinline|ps| lists processes running. By default, it will only show you the processes
 running in the local shell. To see all of your processes running on the system,
 use:
 
@@ -156,18 +156,18 @@ To see all the processes in a forest view, use:
 \end{prompt}
 
 The last two will spit out a lot of data, so get in the habit of piping it to
-\verb|less|.
+\lstinline|less|.
 
-\verb|pstree| is another way to dump a tree/forest view. It looks better than
-\verb|ps auxf| but it has much less information so its value is limited.
+\lstinline|pstree| is another way to dump a tree/forest view. It looks better than
+\lstinline|ps auxf| but it has much less information so its value is limited.
 
-\verb|pgrep| will find all the processes where the name matches the pattern and
+\lstinline|pgrep| will find all the processes where the name matches the pattern and
 print the process IDs (PID). This is used in piping the processes together as we
 will see in the next section.
 
 \subsection{\texttt{kill}}
-\verb|ps| isn't very useful unless you can manipulate the processes. We do this
-using the \verb|kill| command. Kill will send a message
+\lstinline|ps| isn't very useful unless you can manipulate the processes. We do this
+using the \lstinline|kill| command. Kill will send a message
 (\href{https://en.wikipedia.org/wiki/Unix_signal#POSIX_signals}{SIGINT}) to the
 process to ask it to stop.
 
@@ -186,25 +186,25 @@ will use to unceremoniously terminate the process:
 \end{prompt}
 
 \subsection{\texttt{top}}
-\verb|top| is a tool to see the current status of the system. You've probably used
-something similar in Task Manager on Windows or Activity Monitor in macOS. \verb|top|
+\lstinline|top| is a tool to see the current status of the system. You've probably used
+something similar in Task Manager on Windows or Activity Monitor in macOS. \lstinline|top|
 will update every second and has a few interesting commands.
 
-To see only your processes, type \verb|u| and your username after starting \verb|top|, (you can also do
-this with \verb|top -u $USER|). The default is to sort the display by \verb|%CPU|.
-To change the sort order, use \verb|<| and \verb|>| like arrow keys.
+To see only your processes, type \lstinline|u| and your username after starting \lstinline|top|, (you can also do
+this with \lstinline|top -u $USER|). The default is to sort the display by \lstinline|%CPU|.
+To change the sort order, use \lstinline|<| and \lstinline|>| like arrow keys.
 
-There are a lot of configuration options in \verb|top|, but if you're interested in
-seeing a nicer view, you can run \verb|htop| instead. Be aware that it's not
-installed everywhere, while \verb|top| is.
+There are a lot of configuration options in \lstinline|top|, but if you're interested in
+seeing a nicer view, you can run \lstinline|htop| instead. Be aware that it's not
+installed everywhere, while \lstinline|top| is.
 
-To exit \verb|top|, use \verb|q| (for 'quit').
+To exit \lstinline|top|, use \lstinline|q| (for 'quit').
 
 For more information, see \href{http://brendangregg.com}{Brendan Gregg's excellent
 site dedicated to performance analysis}.
 
 \subsection{ulimit}
-\verb|ulimit| is a utility to get or set the user limits on the machine. For
+\lstinline|ulimit| is a utility to get or set the user limits on the machine. For
 example, you may be limited to a certain number of processes. To see all the
 limits that have been set, use:
 
@@ -214,16 +214,16 @@ limits that have been set, use:
 
 \section{Counting: \texttt{wc}}
 
-To count the number of lines, words and characters (or bytes) in a file, use \verb|wc| (\strong{w}ord \strong{c}ount):
+To count the number of lines, words and characters (or bytes) in a file, use \lstinline|wc| (\strong{w}ord \strong{c}ount):
 
 \begin{prompt}
 %\shellcmd{wc example.txt}%
       90     468    3189  example.txt
 \end{prompt}
 
-The output indidates that the file named \verb|example.txt| contains 90 lines, 468 words and 3189 characters/bytes.
+The output indidates that the file named \lstinline|example.txt| contains 90 lines, 468 words and 3189 characters/bytes.
 
-To only count the number of lines, use \verb|wc -l|:
+To only count the number of lines, use \lstinline|wc -l|:
 
 \begin{prompt}
 %\shellcmd{wc -l example.txt}%
@@ -232,7 +232,7 @@ To only count the number of lines, use \verb|wc -l|:
 
 \section{Searching file contents: \texttt{grep}}
 
-\verb|grep| is an important command. It was originally an abbreviation for
+\lstinline|grep| is an important command. It was originally an abbreviation for
 "globally search a regular expression and print" but it's entered the common
 computing lexicon and people use 'grep' to mean searching for anything. To use
 grep, you give a pattern and a list of files.
@@ -243,17 +243,17 @@ grep, you give a pattern and a list of files.
 %\shellcmd{grep banana fruit*txt}%
 \end{prompt}
 
-\verb|grep| also lets you search for
+\lstinline|grep| also lets you search for
 \href{https://en.wikipedia.org/wiki/Regular_expression}{Regular Expressions}, but
 these are not in scope for this introductory text.
 
 \section{\texttt{cut}}
 
-\verb|cut| is used to pull fields out of files or pipes streams.
-It's a useful glue when you mix it with \verb|grep| because \verb|grep| can find the
-lines where a string occurs and \verb|cut| can pull out a particular field. For
-example, to pull the first column (\verb|-f 1|, the first \strong{f}ield)
-from (an unquoted) csv (comma-separated values, so \verb|-d ','|: \strong{d}elimited by \verb|,|)
+\lstinline|cut| is used to pull fields out of files or pipes streams.
+It's a useful glue when you mix it with \lstinline|grep| because \lstinline|grep| can find the
+lines where a string occurs and \lstinline|cut| can pull out a particular field. For
+example, to pull the first column (\lstinline|-f 1|, the first \strong{f}ield)
+from (an unquoted) csv (comma-separated values, so \lstinline|-d ','|: \strong{d}elimited by \lstinline|,|)
 file, you can use the following:
 
 \begin{prompt}
@@ -262,10 +262,10 @@ file, you can use the following:
 
 \section{\texttt{sed}}
 
-\verb|sed| is the stream editor. It is used to replace text in a
+\lstinline|sed| is the stream editor. It is used to replace text in a
 file or piped stream. In this way it works like grep, but instead of just
 searching, it can also edit files. This is like ``Search and Replace'' in a text
-editor. \verb|sed| has a lot of features, but most everyone uses the extremely
+editor. \lstinline|sed| has a lot of features, but most everyone uses the extremely
 basic version of string replacement:
 
 \begin{prompt}
@@ -273,25 +273,25 @@ basic version of string replacement:
 \end{prompt}
 
 By default, sed will just print the results. If you want to edit the file inplace, use
-\verb|-i|, but be very careful that the results will be what you want before you go
+\lstinline|-i|, but be very careful that the results will be what you want before you go
 around \strong{destroying your data}!
 
 \section{\texttt{awk}}
-\verb|awk| is a basic language that builds on \verb|sed| to do much more advanced
+\lstinline|awk| is a basic language that builds on \lstinline|sed| to do much more advanced
 stream editing. Going in depth is far out of scope of this tutorial, but there
 are two examples that are worth knowing.
 
-First, \verb|cut| is very limited in pulling fields apart based on whitespace. For
-example, if you have padded fields then \verb|cut -f 4 -d ' '| will almost
+First, \lstinline|cut| is very limited in pulling fields apart based on whitespace. For
+example, if you have padded fields then \lstinline|cut -f 4 -d ' '| will almost
 certainly give you a headache as there might be an uncertain number of spaces
-between each field. \verb|awk| does better whitespace splitting. So, pulling out
+between each field. \lstinline|awk| does better whitespace splitting. So, pulling out
 the fourth field in a whitespace delimited file is as follows:
 
 \begin{prompt}
 %\shellcmd{awk '\{print \$4\}' mydata.dat}%
 \end{prompt}
 
-You can use \verb|-F ':'| to change the delimiter (F for field separator).
+You can use \lstinline|-F ':'| to change the delimiter (F for field separator).
 
 The next example is used to sum numbers from a field:
 
@@ -312,8 +312,8 @@ However there are some rules you need to abide by.
 Here is a \href{http://www.tldp.org/LDP/Bash-Beginners-Guide/html/}{very detailed guide} should you need more information.
 
 \subsection{Shebang}
-The first line of the script is the so called shebang (\verb|#| is sometimes called
-hash and \verb|!| is sometimes called bang). This line tells the shell which
+The first line of the script is the so called shebang (\lstinline|#| is sometimes called
+hash and \lstinline|!| is sometimes called bang). This line tells the shell which
 command should execute the script. In the most cases this will simply be the
 shell itself. The line itself looks a bit weird, but you can copy paste this
 line as you need not worry about it further. It is however very important this
@@ -366,7 +366,7 @@ Several pitfalls exist with this syntax. You need spaces surrounding the
 brackets, the \strong{then} needs to be on the beginning of a line. It is best
 to just copy this example and modify it.
 
-In the initial example we used \verb|-d| to test if a directory existed. There are
+In the initial example we used \lstinline|-d| to test if a directory existed. There are
 \href{http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html}{several more checks}.
 
 Another useful example, to test if a variable contains a value (so it's not empty):
@@ -379,7 +379,7 @@ Another useful example, to test if a variable contains a value (so it's not empt
  fi
 \end{code}
 
-the \verb|-z| will check if the length of the variable's value is greater than zero.
+the \lstinline|-z| will check if the length of the variable's value is greater than zero.
 
 \subsection{Loops}
 
@@ -407,9 +407,9 @@ conditional or a loop for example.
 \end{prompt}
 
 In the above example you can see the 2 different methods of using a subcommand.
-\verb|pwd| will output the current working directory, and its output will be
+\lstinline|pwd| will output the current working directory, and its output will be
 stored in the CURRENTDIR variable.  The recommend way to use subcommands is with
-the \verb|$()| syntax.
+the \lstinline|$()| syntax.
 
 \subsection{Errors}
 
@@ -423,8 +423,8 @@ command like this:
 command 2>&1 output.log   # one single output file, both output and errors
 \end{prompt}
 
-If you add \verb|2>&1 output.log| at the end of any command, it will combine
-\verb|stdout| and \verb|stderr|, outputting it into a single file named \verb|output.log|.
+If you add \lstinline|2>&1 output.log| at the end of any command, it will combine
+\lstinline|stdout| and \lstinline|stderr|, outputting it into a single file named \lstinline|output.log|.
 
 If you want regular and error output separated you can use:
 
@@ -432,9 +432,9 @@ If you want regular and error output separated you can use:
 command > output.log 2> output.err  # errors in a separate file
 \end{prompt}
 
-this will write regular output to \verb|output.log| and error output to \verb|output.err|.
+this will write regular output to \lstinline|output.log| and error output to \lstinline|output.err|.
 
-You can then look for the errors with \verb|less| or search for specific text with \verb|grep|.
+You can then look for the errors with \lstinline|less| or search for specific text with \lstinline|grep|.
 
 In scripts you can use
 
@@ -449,7 +449,7 @@ the rest of the script to fail as well.
 \subsubsection{Advanced error checking}
 
 Sometimes you want to control all the error checking yourself, this is also
-possible.  Everytime you run a command, a special variable \verb|$?| is used to
+possible.  Everytime you run a command, a special variable \lstinline|$?| is used to
 denote successful completion of the command. A value other than zero signifies
 something went wrong.  So an example use case:
 
@@ -543,9 +543,9 @@ This specifies mail options:
 \end{code}
 
 \begin{enumerate}
-\item \verb|a| means mail is sent when the job is aborted.
-\item \verb|b| means mail is sent when the job begins.
-\item \verb|e| means mail is sent when the job ends.
+\item \lstinline|a| means mail is sent when the job is aborted.
+\item \lstinline|b| means mail is sent when the job begins.
+\item \lstinline|e| means mail is sent when the job ends.
 \end{enumerate}
 
 Joins error output with regular output:
@@ -561,16 +561,16 @@ overwrite any pragmas present in the script.
 
 \begin{enumerate}
     \item Create a file that contains this message: ``Hello, I am <user>'',
-        where \verb|<user>| is replaced by your username. Don't cheat by using
+        where \lstinline|<user>| is replaced by your username. Don't cheat by using
         an editor, use a command to create the file.
     \item Use another command to add this line to the same file: ``I am on system <hostname> in
-        directory <current directory>''. Words between \verb|<>| should be replaced with
+        directory <current directory>''. Words between \lstinline|<>| should be replaced with
         their value (hint: use environment variables).
-    \item How many files and directories are in \verb|/tmp|?
-    \item What's the name of the 5th file/directory in alphabetical order in \verb|/tmp|?
-    \item List all files that start with \verb|t| in \verb|/tmp|.
+    \item How many files and directories are in \lstinline|/tmp|?
+    \item What's the name of the 5th file/directory in alphabetical order in \lstinline|/tmp|?
+    \item List all files that start with \lstinline|t| in \lstinline|/tmp|.
     \item Create a file containing ``My home directory <home> is available using \$HOME''.
-        \verb|<home>| should be replaced with your home directory, but \verb|$HOME|
+        \lstinline|<home>| should be replaced with your home directory, but \lstinline|$HOME|
         should remain as-is.
     \item How many processes are you currently running? How many are you allowed
         to run? Where are they coming from?
