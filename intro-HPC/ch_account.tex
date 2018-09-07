@@ -67,28 +67,29 @@ terminal.
   need to be installed on your Windows machine first, before we can start the
   actual work.
 
-  \subsection{Install PuTTY: A free telnet/SSH client}
+  \subsection{Get PuTTY: A free telnet/SSH client}
   \label{sec:install-putty}
 
-  We recommend to use the PuTTY tools package, which is freely available. You
-  do not need to install PuTTY, you can download the PuTTY and PuTTYgen executable
+  We recommend to use the PuTTY tools package, which is freely available.
+
+  You do not need to install PuTTY, you can download the PuTTY and PuTTYgen executable
   and run it. This can be useful in situations where you do not have the
   required permissions to install software on the computer you are using.
   Alternatively, an installation package is also available.
 
   You can download PuTTY from the official address:
-  \url{http://www.chiark.greenend.org.uk/\~sgtatham/putty/}
+  \url{https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html}. You
+  probably want the 64-bits version. If you can install software on your computer,
+  you can use the ``Package files'', if not, you can download and use \verb|putty.exe|
+  and \verb|puttygen.exe| in the ``Alternative binary files'' section.
 
-  The PuTTY package consists of several components:
+  The PuTTY package consists of several components, but we'll only use two:
 
   \begin{enumerate}
-    \item  \strong{PuTTY}: the Telnet and SSH client itself
-    \item  \strong{PSCP}: an SCP client, i.e., command-line secure file copy
-    \item  \strong{PSFTP}: an SFTP client, i.e., general file transfer sessions much like FTP
-    \item  \strong{Plink}: a command-line interface to the PuTTY back ends
-    \item  \strong{Pageant}: an SSH authentication agent for PuTTY, PSCP and Plink
-    \item  \strong{PuTTYgen}: an RSA and DSA key generation utility
-    \item  \strong{pterm}: a standalone terminal emulator
+    \item  \strong{PuTTY}: \emph{the Telnet and SSH client itself}
+         (to login, see \autoref{sec:windows-open-a-terminal})
+    \item  \strong{PuTTYgen}: \emph{an RSA and DSA key generation utility}
+        (to generate a key pair, see \autoref{sec:generate-key-pair})
   \end{enumerate}
 
   \subsection{Generating a public/private key pair}
