@@ -392,35 +392,37 @@ libraries it comprises are never modified. This policy ensures that the user's
 programs will run consistently, at least if the user specifies a specific
 version. Failing to specify a version may result in unexpected behaviour.
 
-Consider the following example: the user decides to use the GSL library for
-numerical computations, and at that point in time, just a single version 1.12,
+Consider the following example: the user decides to use the libpng library
+and at that point in time, just a single version 1.6.23,
 compiled with Intel is installed on the cluster. The user loads the library
 using:
 
 \begin{prompt}
-%\shellcmd{module load GSL}%
+%\shellcmd{module load libpng}%
 \end{prompt}
 
 rather than
 
 \begin{prompt}
-%\shellcmd{module load GSL/1.12}%
+%\shellcmd{module load libpng/1.6.23-foss-2016b}%
 \end{prompt}
 
-Everything works fine, up to the point where a new version of GSL is installed,
-1.13 compiled for gcc. From then on, the user's load command will load the
+Everything works fine, up to the point where a new version of libpng is installed,
+1.6.34 compiled for gcc. From then on, the user's load command will load the
 latter version, rather than the intended one, which may lead to unexpected
 problems.
 
 To list the available versions, you can use the \verb|module avail| command. For
-example, to list the available versions of the GSL library:
+example, to list the available versions of the libpng library:
 
 \begin{prompt}
-%\shellcmd{module avail GSL}%
-FGSL/1.1.0-intel-2016b (D)    GSL/2.3-intel-2016b
-GSL/2.1-intel-2016b           GSL/2.3-intel-2017a
-GSL/2.2.1-intel-2016b         GSL/2.4-GCCcore-6.4.0 (D)
-GSL/2.3-foss-2016b
+%\shellcmd{module avail libpng/}%
+libpng/1.2.58                libpng/1.6.28-GCCcore-6.3.0
+libpng/1.6.23-foss-2016b     libpng/1.6.29-GCCcore-6.3.0
+libpng/1.6.23-intel-2016b    libpng/1.6.32-GCCcore-6.4.0
+libpng/1.6.24-foss-2016b     libpng/1.6.34-GCCcore-6.4.0
+libpng/1.6.24-intel-2016b    libpng/1.6.34-GCCcore-7.3.0 (D)
+libpng/1.6.26-intel-2016b
 
 \end{prompt}
 
