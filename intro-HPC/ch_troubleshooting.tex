@@ -111,10 +111,11 @@ and include the output of that command in the message.
 \section{Security warning about invalid host key}
 \label{sec:security-warning-invald-host-key}
 
-\ifmacORlinux
+If you get a warning that looks like the one below, it is possible
+that someone is trying to intercept the connection between you and the system you are connecting to.
+Another possibility is that the host key of the system you are connecting to has changed.
 
-If you get a warning that looks like the one below, it may be possible
-that someone is trying to intercept the connection between you and the \hpc.
+\ifmacORlinux
 
 \begin{prompt}
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -142,10 +143,6 @@ See \autoref{sec:warning-message-new-host} to verify the fingerprints.
 do \emph{not} connect and contact \hpcinfo instead.}
 
 \else
-
-If you get a warning box that looks like the one below, it may be possible
-that someone is trying to intercept the connection between you and the system you are connecting to.
-Another possibility is that the host key of the system you are connecting to has changed.
 
 You will need to verify that the fingerprint shown in the dialog matches one of the
 following fingerprints:
