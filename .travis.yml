@@ -9,6 +9,7 @@ env:
       - secure: 2p42CdapsQR6xkcR/cnqngbwwYqol7QKosxa6n7r4HhKFw7pcaSRWa/5fLOKIunMxW56UfQgTHCecGAU5/oWS8jmEVZYpBThynQBsHBt4xtPw4RUJzAwn6BmWeKX4RHKE6CCcscxAa1Q9vxBWJ0/yRLSP/ikfj6cAH33ga00dFA=
       - CACHEDIR=$HOME/cached
 before_install:
+    - ./style-check.sh
     # verify SHA256 checksums to ensure version is bumped when changes are made
     # if this check fails, you should run ./check-version.sh intro-HPC and commit the changes made by the script
     - INTRO_HPC_EXPECTED="20180906.03 6120f0a7c94d14ab083e9fe5b89a91700aab0e99c65115f2c2326508a50220c9"
