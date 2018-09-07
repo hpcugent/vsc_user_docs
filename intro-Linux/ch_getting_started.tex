@@ -84,7 +84,7 @@ For example, to print the path to your home directory, we can use the shell vari
 
 \begin{prompt}
 %\shellcmd{echo \$HOME}%
-%\homedir%
+%\homedir{}%
 \end{prompt}
 
 This prints the value of this variable.
@@ -101,7 +101,7 @@ to make it easier to search in:
 \begin{prompt}
 %\shellcmd{env | sort}%
 ...
-HOME=%\homedir%
+HOME=%\homedir{}%
 ...
 \end{prompt}
 
@@ -139,7 +139,7 @@ variable \verb|$PS1|.
 For example: to include the current location in your prompt:
 
 \begin{prompt}
-%\shellcmd{export PS1='\textbackslash w \$'}%
+%\shellcmd{export PS1='\textbackslash{w} \$'}%
 ~ $ cd test
 ~/test $
 \end{prompt}
@@ -150,7 +150,7 @@ To make this persistent across session, you can define this custom value for
 \verb|$PS1| in your \verb|.profile| startup script:
 
 \begin{prompt}
-%\shellcmd{echo 'export PS1="\textbackslash w \$ " ' $>$$>$ ~/.profile}%
+%\shellcmd{echo 'export PS1="\textbackslash{w} \$ " ' $>$$>$ ~/.profile}%
 \end{prompt}
 
 \subsection{Using non-defined variables}
@@ -165,9 +165,9 @@ This may lead to surprising results, for example:
 %\shellcmd{export WORKDIR=/tmp/test}%
 %\shellcmd{cd \$WROKDIR}%
 %\shellcmd{pwd}%
-%\homedir%
+%\homedir{}%
 %\shellcmd{echo \$HOME}%
-%\homedir%
+%\homedir{}%
 \end{prompt}
 
 To understand what's going on here, see the section on \verb|cd| below.
