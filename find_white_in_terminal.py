@@ -5,18 +5,27 @@ import re
 
 in_prompt = False
 
-with open(sys.argv[1]) as infile:
+if len(sys.argv) != 2:
+    sys.stderr.write("ERROR: Usage %s <path to .tex file>\n", sys.argv[0])
+    sys.exit(1)
+
+tex_file = sys.argv[1]
+
+with open(tex_file) as infile:
     for lineno, line in enumerate(infile.read().splitlines()):
         if '\\begin{prompt}' in line:
             in_prompt = True
-        elif '\\end{prompt}' in line:
-            in_prompt = False
-        elif '%' in line and in_prompt:
-            # Find latex commands between % %
+        if '%' in line and in_prompt:
+            # Find content between % %
             latex_interpreted = re.findall(r'%([^%]*)%', line)
             for match in latex_interpreted:
-                # Find latex command not ending in {.
-                result = re.search(r'\\[a-zA-Z]+($|[^a-zA-Z{])', match)
-                if result is not None:
-                    print(f'{sys.argv[1]} {lineno+1}: {line}')
-                    break
+                # Find latex command not ending in {}.
+                # Uses a negative lookahead (?!...) to assert that the latex
+                #  command doesn't end in a letter or {}
+                for latex_command in re.finditer(r'\\(\w+)(?![\w{])', match):
+                    # Check if we found a latex command not ending in {}
+                    # Allow, since \_ doesn't allow arguments
+                    if latex_command is not None and not latex_command.group(1).startswith('_'):
+                        print("%s line %d: %s" % (tex_file, lineno + 1, latex_command.group(1)))
+        if '\\end{prompt}' in line:
+            in_prompt = False
