@@ -9,7 +9,7 @@ the MATLAB program is compiled using the MATLAB compiler, the resulting stand-al
 executable can be run without needing to contact the license server.
 
 Note that a license is required for the MATLAB Compiler,
-see \url{https://nl.mathworks.com/help/compiler/index.html}. If the \verb|mcc|
+see \url{https://nl.mathworks.com/help/compiler/index.html}. If the \lstinline|mcc|
 command is provided by the MATLAB installation you are using, the MATLAB compiler
 can be used as explained below.
 
@@ -25,8 +25,8 @@ licenses would quickly run out.
 Compiling MATLAB code can only be done from the login nodes, because only login
 nodes can access the MATLAB license server, workernodes on clusters can not.
 
-To access the MATLAB compiler, the \verb|MATLAB| module should be loaded first. Make sure
-you are using the same \verb|MATLAB| version to compile and to run the compiled MATLAB
+To access the MATLAB compiler, the \lstinline|MATLAB| module should be loaded first. Make sure
+you are using the same \lstinline|MATLAB| version to compile and to run the compiled MATLAB
 program.
 
 \begin{prompt}
@@ -36,24 +36,24 @@ program.
 %\shellcmd{module load MATLAB/2018a}
 \end{prompt}
 
-After loading the module, the \verb|mcc| command can be used. To get help on
-\verb|mcc|, you can run \verb|mcc -?|.
+After loading the module, the \lstinline|mcc| command can be used. To get help on
+\lstinline|mcc|, you can run \lstinline|mcc -?|.
 
-To compile a standalone application, the \verb|-m|
-flag is used (the \verb|-v| flag means verbose ouput).
-To show how \verb|mcc| can be used, we use the \verb|magicsquare| example
+To compile a standalone application, the \lstinline|-m|
+flag is used (the \lstinline|-v| flag means verbose ouput).
+To show how \lstinline|mcc| can be used, we use the \lstinline|magicsquare| example
 that comes with MATLAB.
 
 \begin{prompt}
 %\shellcmd{cp \$EBROOTMATLAB/extern/examples/compiler/magicsquare.m .}%
 %\shellcmd{mcc -mv magicsquare.m}%
-Opening log file:  %\homedir/java.log.34090%
+Opening log file:  %\homedir{}/java.log.34090%
 Compiler version: 6.6 (R2018a)
 Dependency analysis by REQUIREMENTS.
-Parsing file "%\homedir/magicsquare.m%"
+Parsing file "%\homedir{}/magicsquare.m%"
 	(Referenced from: "Compiler Command Line").
 Deleting 0 temporary MEX authorization files.
-Generating file "%\homedir/readme.txt%".
+Generating file "%\homedir{}/readme.txt%".
 Generating file "run\_magicsquare.sh".
 \end{prompt}
 
@@ -70,7 +70,7 @@ all files under the \texttt{\emph{path}} getting added to the final executable.
 
 If you are seeing Java memory issues during the compilation of your MATLAB program
 on the login nodes, consider tweaking the default maximum heap size (128M) of Java
-using the \verb|_JAVA_OPTIONS| environment variable with:
+using the \lstinline|_JAVA_OPTIONS| environment variable with:
 
 \begin{prompt}
 %\shellcmd{export \_JAVA\_OPTIONS="-Xmx64M"}%
@@ -102,14 +102,14 @@ workernode (unless the Distributed Computing toolbox is used, see
 
 
 The amount of workers used by MATLAB for the parallel toolbox can be controlled
-via the \verb|parpool| function: \verb|parpool(16)| will use 16 workers.
+via the \lstinline|parpool| function: \lstinline|parpool(16)| will use 16 workers.
 It's best to specify the amount of workers,
 because otherwise you might not harness the full compute power available (if you have
 too few workers), or you might negatively impact performance (if you have too much workers).
 By default, MATLAB uses a fixed number of workers (12).
 
 You should use a number of workers that is equal to the number of cores you requested
-when submitting your job script (the \verb|ppn| value, see \autoref{subsec:generic-resource-requirements}).
+when submitting your job script (the \lstinline|ppn| value, see \autoref{subsec:generic-resource-requirements}).
 You can determine the right number of workers to use via the following code snippet in your MATLAB program:
 
 \examplecode{MATLAB}{parpool.m}
@@ -127,7 +127,7 @@ The output log directory can be changed using:
 %\shellcmd{MATLAB\_LOG\_DIR=\emph{<OUTPUT\_DIR>}}%
 \end{prompt}
 
-where \verb|<OUTPUT_DIR>| is the name of the desired output directory. To create
+where \lstinline|<OUTPUT_DIR>| is the name of the desired output directory. To create
 and use a temporary directory for these logs:
 
 \begin{prompt}
@@ -144,11 +144,11 @@ You should remove the directory at the end of your job script:
 \section{Cache location}
 
 When running, MATLAB will use a cache for performance reasons. This location
-and size of this cache can be changed trough the \verb|MCR_CACHE_ROOT| and
-\verb|MCR_CACHE_SIZE| environment variables.
+and size of this cache can be changed trough the \lstinline|MCR_CACHE_ROOT| and
+\lstinline|MCR_CACHE_SIZE| environment variables.
 
 The snippet below would set the maximum cache size to 1024 megabytes and the
-location to \verb|/tmp/testdirectory|.
+location to \lstinline|/tmp/testdirectory|.
 
 \begin{prompt}
 %\shellcmd{export MATLAB\_CACHE\_ROOT=/tmp/testdirectory}%
@@ -156,7 +156,7 @@ location to \verb|/tmp/testdirectory|.
 \end{prompt}
 
 So when MATLAB is running, it can fill up to 1024 megabytes of cache in
-\verb|/tmp/testdirectory|.
+\lstinline|/tmp/testdirectory|.
 
 \section{MATLAB job script}
 
