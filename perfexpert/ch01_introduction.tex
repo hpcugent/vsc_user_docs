@@ -36,18 +36,18 @@ By combining the statistical sampling of program execution from HPCToolkit with 
 
 First, connect to \hpcname of the \university:
 \begin{prompt}
-%\shellcmd{ssh \userid{}@\loginnode}%
+%\shellcmd{ssh \userid{}@\loginnode{}}%
 \end{prompt}
 
 You can now create your own copy of the examples by copying the examples for this tutorial to your home directory.
 \begin{prompt}
-%\shellcmd{cp --r \tutorialdir/perfexpert/examples ~/}%
+%\shellcmd{cp --r \tutorialdir{}/perfexpert/examples ~/}%
 \end{prompt}
 
 The runs with PerfExpert should be made using a data set size for each compute node which is representative to a full production runs but for which execution time is not more than about ten or fifteen minutes since PerfExpert will run your application multiple times (actually, three times on Stampede) with different performance counters enabled.
 
-For that reason, before you run PerfExpert for your own purpose later, you should either request interactive access to computational resources (compute node), or modify the job script that you use to run your application and specify a running time that is about 
-\iftacc 
+For that reason, before you run PerfExpert for your own purpose later, you should either request interactive access to computational resources (compute node), or modify the job script that you use to run your application and specify a running time that is about
+\iftacc
   3 (for Stampede) or 6 (for Lonestar)
 \else
   3 (for \hpcname)
@@ -87,4 +87,3 @@ And load the appropriate modules:
 \fi
 
 For more info on iterative access to a compute node on \hpcname, please, have a look on the \hpcuserguide.
-

@@ -38,7 +38,7 @@ key/lock analogy in \autoref{subsec:how-do-ssh-keys-work} can help.
 If you have errors that look like:
 
 \begin{prompt}
-%\userid{}%@%\loginnode%: Permission denied
+%\userid{}%@%\loginnode{}%: Permission denied
 \end{prompt}
 
 or you are experiencing problems with connecting, here is a list of things to do
@@ -58,10 +58,10 @@ that should help:
                 need to replace the VSC login id in the \verb|User| field with your own:
 
             \begin{prompt}
-Host %\hpcname%
-    Hostname %\loginnode%
+Host %\hpcname{}%
+    Hostname %\loginnode{}%
     IdentityFile %\emph{/path/to/private/key}%
-    User %\emph{\userid}%\end{prompt}
+    User %\emph{\userid{}}%\end{prompt}
 
     Now you can just connect with \texttt{ssh \hpcname}.
 \end{enumerate}
@@ -118,7 +118,7 @@ and include it in the email.
 Please add \verb|-vvv| as a flag to \verb|ssh| like:
 
 \begin{prompt}
-%\shellcmd{ssh -vvv \userid{}@\loginnode}%
+%\shellcmd{ssh -vvv \userid{}@\loginnode{}}%
 \end{prompt}
 
 and include the output of that command in the message.
@@ -143,8 +143,7 @@ to fix this error.
 \ifmacORlinux
 \begin{prompt}
 %\shellcmd{ssh \userid{}@\loginnode{}}%
-The authenticity of host %\loginnode% (<IP-adress>)
-can't be established.
+The authenticity of host %\loginnode{}% (<IP-adress>) can't be established.
 %\underline{<algorithm> key fingerprint is <hash>}%
 Are you sure you want to continue connecting (yes/no)?
 \end{prompt}
@@ -152,7 +151,7 @@ Are you sure you want to continue connecting (yes/no)?
 Now you can check the authenticity by checking if the line that is at the place
 of the underlined piece of text matches one of the following lines:
 \begin{prompt}
-%\opensshFirstConnect%
+%\opensshFirstConnect{}%
 \end{prompt}
 
 If it does, type  \strong{\emph{yes}}. If it doesn't, please contact support: \hpcinfo.
@@ -219,7 +218,7 @@ a module with \verb|module avail|: for \verb|HMMER|, this command is \verb|modul
 Another common error is:
 
 \begin{prompt}
-%\shellcmd{module load cluster/\othercluster}%
+%\shellcmd{module load cluster/\othercluster{}}%
 Lmod has detected the following error:  A different version of the 'cluster' module is already loaded (see output of 'ml').
 
 If you don't understand the warning or error, contact the helpdesk at hpc@ugent.be

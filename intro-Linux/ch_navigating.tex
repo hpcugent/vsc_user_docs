@@ -7,9 +7,9 @@ To print the current directory, use \verb|pwd| or \verb|$PWD|:
 \begin{prompt}
 %\shellcmd{cd \$HOME}%
 %\shellcmd{pwd}%
-%\homedir%
+%\homedir{}%
 %\shellcmd{echo "The current directory is: \$PWD"}%
-The current directory is: %\homedir%
+The current directory is: %\homedir{}%
 \end{prompt}
 
 \section{Listing files and directories: ``ls''}
@@ -38,8 +38,8 @@ A couple of commonly used options include:
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 4224
--rw-rw-r-- 1 %\userid% %\userid% 2157404 Apr 12 13:17 afile.txt
-drwxrwxr-x 2 %\userid% %\userid%     512 Apr 12 12:51 some_directory
+-rw-rw-r-- 1 %\userid{}% %\userid{}% 2157404 Apr 12 13:17 afile.txt
+drwxrwxr-x 2 %\userid{}% %\userid{}%     512 Apr 12 12:51 some_directory
 \end{prompt}
 
 \item To print the size information in human-readable form, use the \verb|-h| flag:
@@ -47,8 +47,8 @@ drwxrwxr-x 2 %\userid% %\userid%     512 Apr 12 12:51 some_directory
 \begin{prompt}
 %\shellcmd{ls -lh}%
 total 4.1M
--rw-rw-r-- 1 %\userid% %\userid% 2.1M Apr 12 13:16 afile.txt
-drwxrwxr-x 2 %\userid% %\userid%  512 Apr 12 12:51 some_directory
+-rw-rw-r-- 1 %\userid{}% %\userid{}% 2.1M Apr 12 13:16 afile.txt
+drwxrwxr-x 2 %\userid{}% %\userid{}%  512 Apr 12 12:51 some_directory
 \end{prompt}
 
 \item also listing hidden files using the \verb|-a| flag:
@@ -56,11 +56,11 @@ drwxrwxr-x 2 %\userid% %\userid%  512 Apr 12 12:51 some_directory
 \begin{prompt}
 %\shellcmd{ls -lah}%
 total 3.9M
-drwxrwxr-x   3 %\userid% %\userid%  512 Apr 12 13:11 .
-drwx------ 188 %\userid% %\userid% 128K Apr 12 12:41 ..
--rw-rw-r--   1 %\userid% %\userid% 1.8M Apr 12 13:12 afile.txt
--rw-rw-r--   1 %\userid% %\userid%    0 Apr 12 13:11 .hidden_file.txt
-drwxrwxr-x   2 %\userid% %\userid%  512 Apr 12 12:51 some_directory
+drwxrwxr-x   3 %\userid{}% %\userid{}%  512 Apr 12 13:11 .
+drwx------ 188 %\userid{}% %\userid{}% 128K Apr 12 12:41 ..
+-rw-rw-r--   1 %\userid{}% %\userid{}% 1.8M Apr 12 13:12 afile.txt
+-rw-rw-r--   1 %\userid{}% %\userid{}%    0 Apr 12 13:11 .hidden_file.txt
+drwxrwxr-x   2 %\userid{}% %\userid{}%  512 Apr 12 12:51 some_directory
 \end{prompt}
 
 \item ordering files by the most recent change using \verb|-rt|:
@@ -68,8 +68,8 @@ drwxrwxr-x   2 %\userid% %\userid%  512 Apr 12 12:51 some_directory
 \begin{prompt}
 %\shellcmd{ls -lrth}%
 total 4.0M
-drwxrwxr-x 2 %\userid% %\userid%  512 Apr 12 12:51 some_directory
--rw-rw-r-- 1 %\userid% %\userid% 2.0M Apr 12 13:15 afile.txt
+drwxrwxr-x 2 %\userid{}% %\userid{}%  512 Apr 12 12:51 some_directory
+-rw-rw-r-- 1 %\userid{}% %\userid{}% 2.0M Apr 12 13:15 afile.txt
 \end{prompt}
 
 \end{itemize}
@@ -96,7 +96,7 @@ Using \verb|cd| without an argument results in returning back to your home direc
 \begin{prompt}
 %\shellcmd{cd}%
 %\shellcmd{pwd}%
-%\homedir%
+%\homedir{}%
 \end{prompt}
 
 \section{Inspecting file type: ``file''}
@@ -149,7 +149,7 @@ For example:
 
 \begin{prompt}
 %\shellcmd{ls -l afile.txt}%
--rw-rw-r-- 1 %\userid% agroup 2929176 Apr 12 13:29 afile.txt
+-rw-rw-r-- 1 %\userid{}% agroup 2929176 Apr 12 13:29 afile.txt
 \end{prompt}
 
 The \verb|-rwxrw-r--| specifies both the type of file (\verb|-| for files, \verb|d|

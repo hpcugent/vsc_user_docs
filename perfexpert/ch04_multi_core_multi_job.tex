@@ -16,7 +16,7 @@ We have created 3 parallel equivalents of the Matrix Multiplication program, one
 First we, go to the directory of the examples of Chapter04:
 
 \begin{prompt}
-%\shellcmd{cd ~/\exampledir}%
+%\shellcmd{cd ~/\exampledir{}}%
 \end{prompt}
 
 \section{Multi-Core Profiling (with OpenMP)}
@@ -84,7 +84,7 @@ VUBrussel                   & \$ \textbf{module load openmpi/1.6.5/gcc/4.8.2} \\
 
 \begin{prompt}
 %\shellcmd{mpicc -o mm\_mpi mm\_mpi.c}%
-%\shellcmd{\mpirun mm\_mpi}%
+%\shellcmd{\mpirun{} mm\_mpi}%
 \end{prompt}
 
 The command line to run PerfExpert includes the MPI launcher script (i.e., mpirun). If we would start ``PerfExpert 0.1 mpirun mm\_mpi'', we would analyse the performance of the MPI launcher instead of the performance of your application. This is of course not what we want. You can use the ``\textit{-p}'' (prefix) command line argument of PerfExpert to define a prefix to the normal command line. In our case, we want to set the MPI launcher and all its arguments (e.g., -p
@@ -125,4 +125,3 @@ The command becomes:
 [perfexpert] Analysing measurements
 ...
 \end{prompt}
-

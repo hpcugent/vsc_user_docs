@@ -120,8 +120,8 @@ These are the permissions for the file or directory. (See also the
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 1
--rw-r--r--. 1 %\userid% mygroup 4283648 Apr 12 15:13 articleTable.csv
-drwxr-x---. 2 %\userid% mygroup      40 Apr 12 15:00 Project_GoldenDragon
+-rw-r--r--. 1 %\userid{}% mygroup 4283648 Apr 12 15:13 articleTable.csv
+drwxr-x---. 2 %\userid{}% mygroup      40 Apr 12 15:00 Project_GoldenDragon
 \end{prompt}
 
 Here, we see that \verb|articleTable.csv| is a file (beginning the line with \verb|-|)
@@ -145,8 +145,8 @@ group write to the directory:
 %\shellcmd{chmod g+w Project\_GoldenDragon}%
 %\shellcmd{ls -l}%
 total 1
--rw-r--r--. 1 %\userid% mygroup 4283648 Apr 12 15:13 articleTable.csv
-drwxrwx---. 2 %\userid% mygroup      40 Apr 12 15:00 Project_GoldenDragon
+-rw-r--r--. 1 %\userid{}% mygroup 4283648 Apr 12 15:13 articleTable.csv
+drwxrwx---. 2 %\userid{}% mygroup      40 Apr 12 15:00 Project_GoldenDragon
 \end{prompt}
 
 The syntax used here is \verb|g+x| which means \strong{g}roup was given \strong{w}rite
@@ -172,7 +172,7 @@ environment, we need to use access control lists (ACLs):
 \begin{prompt}
 %\shellcmd{setfacl -m u:otheruser:w Project\_GoldenDragon}%
 %\shellcmd{ls -l Project\_GoldenDragon}%
-drwxr-x---+ 2 %\userid% mygroup      40 Apr 12 15:00 Project_GoldenDragon
+drwxr-x---+ 2 %\userid{}% mygroup      40 Apr 12 15:00 Project_GoldenDragon
 \end{prompt}
 
 This will give the \strong{u}ser \verb|otheruser| permissions to \strong{w}rite
@@ -197,10 +197,10 @@ compress a file using gzip, we use:
 
 \begin{prompt}
     %\shellcmd{ls -lh myfile}%
-    -rw-r--r--. 1 %\userid% %\userid% 4.1M Dec  2 11:14 myfile
+    -rw-r--r--. 1 %\userid{}% %\userid{}% 4.1M Dec  2 11:14 myfile
     %\shellcmd{gzip myfile}%
     %\shellcmd{ls -lh myfile.gz}%
-    -rw-r--r--. 1 %\userid% %\userid% 1.1M Dec  2 11:14 myfile.gz
+    -rw-r--r--. 1 %\userid{}% %\userid{}% 1.1M Dec  2 11:14 myfile.gz
 \end{prompt}
 
 Note: if you zip a file, the original file will be removed. If you unzip a file,

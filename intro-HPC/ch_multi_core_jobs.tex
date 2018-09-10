@@ -78,7 +78,7 @@ simple function that only prints ``Hello from thread''.
 Go to the example directory:
 
 \begin{prompt}
-%\shellcmd{cd ~/\exampledir}%
+%\shellcmd{cd ~/\exampledir{}}%
 \end{prompt}
 
 Study the example first:
@@ -107,8 +107,8 @@ Now, run it on the cluster and check the output:
 
 \begin{prompt}
 %\shellcmd{qsub T\_hello.pbs}%
-%\jobid%
-%\shellcmd{more T\_hello.pbs.o\jobnumber}%
+%\jobid{}%
+%\shellcmd{more T\_hello.pbs.o\jobnumber{}}%
 spawning thread 0
 spawning thread 1
 spawning thread 2
@@ -369,12 +369,12 @@ Run the parallel program:
 %\shellcmd{qsub mpi\_hello.pbs}%
 %\shellcmd{ls -l}%
 total 1024
--rwxrwxr-x 1 %\userid% 8746 Sep 16 14:19 mpi_hello*
--rw-r--r-- 1 %\userid% 1626 Sep 16 14:18 mpi_hello.c
--rw------- 1 %\userid%    0 Sep 16 14:22 mpi_hello.o%\jobnumber%
--rw------- 1 %\userid%  697 Sep 16 14:22 mpi_hello.o%\jobnumber%
--rw-r--r-- 1 %\userid%  304 Sep 16 14:22 mpi_hello.pbs
-%\shellcmd{cat mpi\_hello.o\jobnumber}%
+-rwxrwxr-x 1 %\userid{}% 8746 Sep 16 14:19 mpi_hello*
+-rw-r--r-- 1 %\userid{}% 1626 Sep 16 14:18 mpi_hello.c
+-rw------- 1 %\userid{}%    0 Sep 16 14:22 mpi_hello.o%\jobnumber{}%
+-rw------- 1 %\userid{}%  697 Sep 16 14:22 mpi_hello.o%\jobnumber{}%
+-rw-r--r-- 1 %\userid{}%  304 Sep 16 14:22 mpi_hello.pbs
+%\shellcmd{cat mpi\_hello.o\jobnumber{}}%
 0: We have 16 processors
 0: Hello 1! Processor 1 reporting for duty
 0: Hello 2! Processor 2 reporting for duty
@@ -434,4 +434,3 @@ If you plan engaging in parallel programming using MPI, this
 book may prove useful: \emph{Parallel Programming with MPI. Peter Pacheo.
 Morgan Kaufmann. 1996.}
 \end{tip}
-
