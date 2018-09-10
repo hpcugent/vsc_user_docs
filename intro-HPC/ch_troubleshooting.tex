@@ -32,7 +32,7 @@ quotas and how to use the storage endpoints in an efficient way.
 \section{Issues connecting to login node}
 \label{sec:connecting-issues}
 
-If you're confused about the SSH public/private key pair concept, maybe the
+If you are confused about the SSH public/private key pair concept, maybe the
 key/lock analogy in \autoref{subsec:how-do-ssh-keys-work} can help.
 
 If you have errors that look like:
@@ -45,7 +45,7 @@ or you are experiencing problems with connecting, here is a list of things to do
 that should help:
 
 \begin{enumerate}
-    \item Keep in mind that it an take uup to an hour for your VSC account to become
+    \item Keep in mind that it an take up to an hour for your VSC account to become
         active after it has been \emph{approved}; until then, logging in to your VSC
         account will not work.
 \ifmacORlinux
@@ -74,7 +74,7 @@ Host %\hpcname{}%
             have another machine? Please follow the procedure for adding additional
             keys in section~\ref{sec:adding-multiple-keys}. You may need to wait
             for 15-20 minutes until the SSH public key(s) you added become active.
-        \item \ifwindows Make sure you're using the private key (not the public key) when trying to connect:
+        \item \ifwindows Make sure you are using the private key (not the public key) when trying to connect:
             If you followed the manual, the private key filename should end in
             \verb|.ppk| (not in \verb|.pub|).
             \else
@@ -85,7 +85,7 @@ Host %\hpcname{}%
             (See also section~\ref{sec:connect})
             \fi
         \item If you have multiple private keys on your machine, please make sure
-            you're using the one that corresponds to (one of) the public key(s) you
+            you are using the one that corresponds to (one of) the public key(s) you
             added on \url{https://account.vscentrum.be/}.
         \item Please do not use someone else's private keys. You must never
             share your private key, they're called \emph{private} for a good reason.
@@ -123,6 +123,60 @@ Please add \verb|-vvv| as a flag to \verb|ssh| like:
 
 and include the output of that command in the message.
 \fi
+
+\section{Security warning about invalid host key}
+\label{sec:security-warning-invald-host-key}
+
+If you get a warning that looks like the one below, it is possible
+that someone is trying to intercept the connection between you and the system you are connecting to.
+Another possibility is that the host key of the system you are connecting to has changed.
+
+\ifmacORlinux
+
+\begin{prompt}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ECDSA key sent by the remote host is
+SHA256:1MNKFTfl1T9sm6tTWAo4sn7zyEfiWFLKbk/mlT+7S5s.
+Please contact your system administrator.
+Add correct host key in ~/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in ~/.ssh/known_hosts:%\strong{21}%
+ECDSA host key for %\loginnode{}% has changed and you have requested strict checking.
+Host key verification failed.
+\end{prompt}
+
+You will need to remove the line it's complaining about (in the example, line 21).
+To do that, open \verb|~/.ssh/config| in an editor, and remove the line. This
+results in \verb|ssh| ``forgetting'' the system you are connecting to.
+
+After you've done that, you'll need to connect to the \hpc again.
+See \autoref{sec:warning-message-new-host} to verify the fingerprints.
+\strong{It's important to verify the fingerprints. If they don't match,
+do \emph{not} connect and contact \hpcinfo instead.}
+
+\else
+
+You will need to verify that the fingerprint shown in the dialog matches one of the
+following fingerprints:
+
+\puttyFirstConnect
+
+\strong{Do not click ``Yes'' until you verified the fingerprint. Do not press ``No'' in any case.}.
+
+If it the fingerprint matches, click ``Yes''.
+
+If it doesn't (like in the example) or you are in doubt, take a screenshot, press ``Cancel'' and contact \hpcinfo.
+
+
+\includegraphics[width=0.5\textwidth]{putty_security_alert}
+
+
+\fi
+
 
 \section{DOS/Windows text format}
 
