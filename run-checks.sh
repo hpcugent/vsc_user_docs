@@ -10,7 +10,7 @@ if [[ $result ]]; then
 fi
 
 # Style guide can use \verb to say it's not okay to use \verb
-result=$(grep -R --include=\*.tex '\\verb[^\w]' | grep -v style-guide)
+result=$(grep -R --include=\*.tex '\\verb\W' . | grep -v style-guide)
 if [[ $result ]]; then
     echo "Found a \\verb command, please use \\lstinline instead"
     echo "$result"
