@@ -298,7 +298,7 @@ This directory contains:
 \end{prompt}
 
 \begin{tip}
-Typing ``\strong{\emph{cd ex$<$TAB$>$}}'' will generate the
+Typing ``\strong{\emph{cd ex}}'' followed by \keys{\tab} (the Tab-key) will generate the
 ``\strong{\emph{cd examples}}'' command. \strong{Command-line completion
 }(also tab completion) is a common feature of the bash command line
 interpreter, in which the program automatically fills in partially typed
@@ -529,10 +529,10 @@ To exit vi without saving your changes, enter ``<esc>:q!''
 or alternatively (if you are not comfortable with the Linux editors), again on your local machine:
 
 \begin{prompt}
-%\shellcmd{echo "export LANGUAGE=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" $>$$>$ ~/.profile}%
-%\shellcmd{echo "export LC\_ALL=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" $>$$>$ ~/.profile}%
-%\shellcmd{echo "export LC\_CTYPE=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" $>$$>$ ~/.profile}%
-%\shellcmd{echo "export LANG=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" $>$$>$ ~/.profile}%
+%\shellcmd{echo "export LANGUAGE=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" >{}>{} ~/.profile}%
+%\shellcmd{echo "export LC\_ALL=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" >{}>{} ~/.profile}%
+%\shellcmd{echo "export LC\_CTYPE=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" >{}>{} ~/.profile}%
+%\shellcmd{echo "export LANG=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" >{}>{} ~/.profile}%
 \end{prompt}
 
 You can now log out, open a new terminal/shell on your local machine and reconnect to the \hpc, and you should not get these
