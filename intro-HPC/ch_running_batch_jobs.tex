@@ -124,25 +124,14 @@ need to combine multiple programs in a single job to get your work done.
 Therefore the VSC has defined so-called \strong{toolchains} on the newer VSC-clusters.
 A toolchain contains a C/C++ and Fortran compiler, a MPI library and some basic
 math libraries for (dense matrix) linear algebra and FFT. Two toolchains are
-defined on most VSC systems. One, the ``intel'' toolchain, consists of the Intel
-compilers, MPI library and math libraries. The other one, the ``foss'' toolchain,
+defined on most VSC systems. One, the \lstinline|intel| toolchain, consists of the Intel
+compilers, MPI library and math libraries. The other one, the \lstinline|foss| toolchain,
 consists of Open Source components: the GNU compilers, OpenMPI, OpenBLAS and
 the standard LAPACK and ScaLAPACK libraries for the linear algebra operations
 and the FFTW library for FFT. The toolchains are refreshed twice a year,
 which is reflected in their name.
-\ifantwerpen
-E.g., ``foss-2014b'' is the second version
-\fi
-\ifgent
-E.g., ``foss-2014b'' is the second version
-\fi
-\ifbrussel
-E.g., ``foss-2014b'' is the second version
-\fi
-\ifleuven
-E.g., ``foss-2014a'' is the first version
-\fi
-of the ``foss'' toolchain in 2014.
+
+E.g., \lstinline|foss-2014a| is the first version of the \lstinline|foss| toolchain in 2014.
 
 The toolchains are then used to compile a lot of the software installed on
 the VSC clusters. You can recognise those packages easily as they all contain the
@@ -159,132 +148,41 @@ interconnect features that require a vendor-specific MPI-implementation.
 
 A module is loaded using the following command:
 
-\ifantwerpen
-\begin{prompt}
-%\shellcmd{module load MATLAB}%
-\end{prompt}
-\fi
-\ifbrussel
-\begin{prompt}
-%\shellcmd{module load MATLAB}%
-\end{prompt}
-\fi
-\ifgent
-\begin{prompt}
-%\shellcmd{module load MATLAB}%
-\end{prompt}
-\fi
-\ifleuven
-\begin{prompt}
-%\shellcmd{module load matlab}%
-\end{prompt}
-\fi
 
-This will load the most recent version of MATLAB.
+\begin{prompt}
+%\shellcmd{module load \emph{examplemodule}}%
+\end{prompt}
 
-For some packages, e.g.,
-\ifantwerpen
-OpenMPI
-\fi
-\ifbrussel
-OpenMPI
-\fi
-\ifgent
-OpenMPI
-\fi
-\ifleuven
-Python
-\fi
-, multiple versions are installed; the load
+This will load the most recent version of \emph{examplemodule}.
+
+For some packages (e.g., OpenMPI), multiple versions are installed; the load
 command will automatically choose the most recent version (i.e., the
 lexicographical last after the ``/'') or the default version (as set by the
 system administrators). However, the user can (and probably should, to avoid
 surprises when newer versions are installed) specify a particular version,
 e.g.,
 
-\ifantwerpen
 \begin{prompt}
-%\shellcmd{module load Python/2.7.6-intel-2014b}%
+%\shellcmd{module load \emph{secondexample/2.7-intel-2018a}}%
 \end{prompt}
-\fi
-\ifbrussel
-\begin{prompt}
-%\shellcmd{module load Python/2.7.6-intel-2014b}%
-\end{prompt}
-\fi
-\ifgent
-\begin{prompt}
-%\shellcmd{module load Python/2.7.6-intel-2014b}%
-\end{prompt}
-\fi
-\ifleuven
-\begin{prompt}
-%\shellcmd{module load Python/2.7.6-intel-2014a}%
-\end{prompt}
-\fi
 
 Obviously, you need to keep track of the modules that are currently
 loaded. If you executed the two load commands stated above, you will get the
 following:
 
-\ifantwerpen
 \begin{prompt}
 %\shellcmd{module list}%
 Currently Loaded Modulefiles:
-  1) cluster/delcatty(default)              8) intel/2014b
-  2) MATLAB/2013b                           9) bzip2/1.0.6-intel-2014b
-  3) GCC/4.8.3                             10) zlib/1.2.7-intel-2014b
-  4) icc/2013.5.192-GCC-4.8.3              11) ncurses/5.9-intel-2014b
-  5) ifort/2013.5.192-GCC-4.8.3            12) libreadline/6.2-intel-2014b
-  6) impi/4.1.3.049-GCC-4.8.3              13) Python/2.7.6-intel-2014b
-  7) imkl/11.1.2.144-2013.5.192-GCC-4.8.3
+  1) examplemodule/1.2.3-intel-2018a        3) intel/2018a
+  2) secondexample/2.7-intel-2018a          4) examplelib/1.2-intel-2014b
 \end{prompt}
-\fi
-\ifleuven
-\begin{prompt}
-%\shellcmd{module list}%
-Currently Loaded Modulefiles:
-  1) icc/2013.5.192                7) zlib/1.2.8-intel-2014a
-  2) ifort/2013.5.192              8) ncurses/5.9-intel-2014a
-  3) impi/4.1.3.045                9) libreadline/6.3-intel-2014a
-  4) imkl/11.1.1.106              10) Tcl/8.6.1-intel-2014a
-  5) intel/2014a                  11) SQLite/3.8.4.1-intel-2014a
-  6) bzip2/1.0.6-intel-2014a      12) Python/2.7.6-intel-2014a
-\end{prompt}
-\fi
-\ifgent
-\begin{prompt}
-%\shellcmd{module list}%
-Currently Loaded Modulefiles:
-  1) cluster/delcatty(default)              8) intel/2014b
-  2) MATLAB/2013b                           9) bzip2/1.0.6-intel-2014b
-  3) GCC/4.8.3                             10) zlib/1.2.7-intel-2014b
-  4) icc/2013.5.192-GCC-4.8.3              11) ncurses/5.9-intel-2014b
-  5) ifort/2013.5.192-GCC-4.8.3            12) libreadline/6.2-intel-2014b
-  6) impi/4.1.3.049-GCC-4.8.3              13) Python/2.7.6-intel-2014b
-  7) imkl/11.1.2.144-2013.5.192-GCC-4.8.3
-\end{prompt}
-\fi
-\ifbrussel
-\begin{prompt}
-%\shellcmd{module list}%
-Currently Loaded Modulefiles:
-  1) cluster/delcatty(default)              8) intel/2014b
-  2) MATLAB/2013b                           9) bzip2/1.0.6-intel-2014b
-  3) GCC/4.8.3                             10) zlib/1.2.7-intel-2014b
-  4) icc/2013.5.192-GCC-4.8.3              11) ncurses/5.9-intel-2014b
-  5) ifort/2013.5.192-GCC-4.8.3            12) libreadline/6.2-intel-2014b
-  6) impi/4.1.3.049-GCC-4.8.3              13) Python/2.7.6-intel-2014b
-  7) imkl/11.1.2.144-2013.5.192-GCC-4.8.3
-\end{prompt}
-\fi
 
 
-It is important to note at this point that other modules (e.g., intel/2014a)
+It is important to note at this point that other modules (e.g., \lstinline|intel/2014a|)
 are also listed, although the user did not explicitly load them. This is
-because ``Python/2.7.6-intel-2014a'' depends on it (as indicated in its name),
-and the system administrator specified that the ``intel/2014a'' module should
-be loaded whenever the Python module is loaded. There are advantages and
+because \lstinline|secondexample/2.7-intel-2018a| depends on it (as indicated in its name),
+and the system administrator specified that the \lstinline|intel/2014a| module should
+be loaded whenever the \lstinline|secondexample| module is loaded. There are advantages and
 disadvantages to this, so be aware of automatically loaded modules whenever
 things go wrong: they may have something to do with it!
 
@@ -292,62 +190,20 @@ In fact, an easy way to check the components and version numbers of those
 components of a toolchain is to simply load the toolchain and then list the
 modules that are loaded.
 
-To unload a module, one can use the ``module unload'' command. It works
+To unload a module, one can use the \lstinline|module unload| command. It works
 consistently with the load command, and reverses the latter's effect. However,
 the dependencies of the package are NOT automatically unloaded; the user shall
 unload the packages one by one. One can however unload automatically loaded
-modules manually, to debug some problem. When the ``Python'' module is unloaded,
+modules manually, to debug some problem. When the \lstinline|secondexample| module is unloaded,
 only the following modules remain:
 
-\ifantwerpen
 \begin{prompt}
-%\shellcmd{module unload Python}%
+%\shellcmd{module unload \emph{secondexample}}%
 %\shellcmd{module list}%
-  1) cluster/delcatty(default)              7) imkl/11.1.2.144-2013.5.192-GCC-4.8.3
-  2) MATLAB/2013b                           8) intel/2014b
-  3) GCC/4.8.3                              9) bzip2/1.0.6-intel-2014b
-  4) icc/2013.5.192-GCC-4.8.3              10) zlib/1.2.7-intel-2014b
-  5) ifort/2013.5.192-GCC-4.8.3            11) ncurses/5.9-intel-2014b
-  6) impi/4.1.3.049-GCC-4.8.3              12) libreadline/6.2-intel-2014b
+Currently Loaded Modulefiles:
+  1) examplemodule/1.2.3-intel-2018a        3) intel/2018a
+  2) examplelib/1.2-intel-2014b
 \end{prompt}
-\fi
-\ifleuven
-\begin{prompt}
-%\shellcmd{module unload Python}%
-%\shellcmd{module list}%
-  1) icc/2013.5.192                7) zlib/1.2.8-intel-2014a
-  2) ifort/2013.5.192              8) ncurses/5.9-intel-2014a
-  3) impi/4.1.3.045                9) libreadline/6.3-intel-2014a
-  4) imkl/11.1.1.106              10) Tcl/8.6.1-intel-2014a
-  5) intel/2014a                  11) SQLite/3.8.4.1-intel-2014a
-  6) bzip2/1.0.6-intel-2014a
-\end{prompt}
-\fi
-\ifgent
-\begin{prompt}
-%\shellcmd{module unload Python}%
-%\shellcmd{module list}%
-  1) cluster/delcatty(default)              7) imkl/11.1.2.144-2013.5.192-GCC-4.8.3
-  2) MATLAB/2013b                           8) intel/2014b
-  3) GCC/4.8.3                              9) bzip2/1.0.6-intel-2014b
-  4) icc/2013.5.192-GCC-4.8.3              10) zlib/1.2.7-intel-2014b
-  5) ifort/2013.5.192-GCC-4.8.3            11) ncurses/5.9-intel-2014b
-  6) impi/4.1.3.049-GCC-4.8.3              12) libreadline/6.2-intel-2014b
-\end{prompt}
-\fi
-\ifbrussel
-\begin{prompt}
-%\shellcmd{module unload Python}%
-%\shellcmd{module list}%
-  1) cluster/delcatty(default)              7) imkl/11.1.2.144-2013.5.192-GCC-4.8.3
-  2) MATLAB/2013b                           8) intel/2014b
-  3) GCC/4.8.3                              9) bzip2/1.0.6-intel-2014b
-  4) icc/2013.5.192-GCC-4.8.3              10) zlib/1.2.7-intel-2014b
-  5) ifort/2013.5.192-GCC-4.8.3            11) ncurses/5.9-intel-2014b
-  6) impi/4.1.3.049-GCC-4.8.3              12) libreadline/6.2-intel-2014b
-\end{prompt}
-\fi
-
 
 Notice that the version was not specified: the module system is sufficiently
 clever to figure out what the user intends. However, checking the list of
@@ -364,23 +220,17 @@ state, you can use:
 \end{prompt}
 
 However, on some VSC clusters you may be left with a very empty list of available
-modules after executing ``module purge''. On those systems, ``module av'' will show you a list of
+modules after executing \lstinline|module purge|. On those systems, \lstinline|module av| will show you a list of
 modules containing the name of a cluster or a particular feature of a section of
 the cluster, and loading the appropriate module will restore the module list
 applicable to that particular system.
 
-Modules need not be loaded one by one; the two ``load'' commands can be
+Modules need not be loaded one by one; the two \lstinline|module load| commands can be
 combined as follows:
 
-\ifleuven
 \begin{prompt}
-%\shellcmd{module load matlab/R2017b Python/2.7.6-foss-2014a}%
+%\shellcmd{module load \emph{examplemodule/1.2.3-intel-2018a} \emph{secondexample/2.7-intel-2018a}}%
 \end{prompt}
-\else
-\begin{prompt}
-%\shellcmd{module load MATLAB/2018a Python/2.7.14-intel-2018a}%
-\end{prompt}
-\fi
 
 This will load the two modules as well as their dependencies.
 
@@ -392,184 +242,57 @@ libraries it comprises are never modified. This policy ensures that the user's
 programs will run consistently, at least if the user specifies a specific
 version. Failing to specify a version may result in unexpected behaviour.
 
-Consider the following example: the user decides to use the libpng library
-and at that point in time, just a single version 1.6.23,
+Consider the following example: the user decides to use the \lstinline|examplemodule| module
+and at that point in time, just a single version 1.2.3,
 compiled with Intel is installed on the cluster. The user loads the library
 using:
 
 \begin{prompt}
-%\shellcmd{module load libpng}%
+%\shellcmd{module load \emph{examplemodule}}%
 \end{prompt}
 
 rather than
 
 \begin{prompt}
-%\shellcmd{module load libpng/1.6.23-foss-2016b}%
+%\shellcmd{module load \emph{examplemodule/1.2.3-intel-2018a}}%
 \end{prompt}
 
-Everything works fine, up to the point where a new version of libpng is installed,
-1.6.34 compiled for gcc. From then on, the user's load command will load the
+Everything works fine, up to the point where a new version of \lstinline|examplemodule| is installed,
+4.5.6 compiled for gcc. From then on, the user's load command will load the
 latter version, rather than the intended one, which may lead to unexpected
 problems.
 
-To list the available versions, you can use the \verb|module avail| command. For
-example, to list the available versions of the libpng library:
+To list the available versions, you can use the \lstinline|module avail| command. For
+example, to list the available versions of \lstinline|examplemodule|:
 
 \begin{prompt}
-%\shellcmd{module avail libpng/}%
-libpng/1.2.58                libpng/1.6.28-GCCcore-6.3.0
-libpng/1.6.23-foss-2016b     libpng/1.6.29-GCCcore-6.3.0
-libpng/1.6.23-intel-2016b    libpng/1.6.32-GCCcore-6.4.0
-libpng/1.6.24-foss-2016b     libpng/1.6.34-GCCcore-6.4.0
-libpng/1.6.24-intel-2016b    libpng/1.6.34-GCCcore-7.3.0 (D)
-libpng/1.6.26-intel-2016b
+%\shellcmd{module avail examplemodule/}%
+examplemodule/1.2.3-intel-2018a     examplemodule/4.5.6-GCCcore-6.3.0
+examplemodule/1.2.3-foss-2018a
 
 \end{prompt}
 
 \ifantwerpen
-Lets now generate a version conflict with the ``ABAQUS'' module, and see what
+Lets now generate a version conflict with the \lstinline|thirdexample| module, and see what
 is happening.
 
 \begin{prompt}
-%\shellcmd{module av ABAQUS}%
-ABAQUS/6.12.1-linux-x86_64
-ABAQUS/6.13.5-linux-x86_64
-ABAQUS/6.14.1-linux-x86_64
-%\shellcmd{module load ABAQUS/6.12.1-linux-x86\_64}%
-%\shellcmd{module load ABAQUS/6.13.5-linux-x86\_64}%
-ABAQUS/6.13.5-linux-x86_64(12):ERROR:150: Module 'ABAQUS/6.13.5-linux-x86_64' conflicts with the currently loaded module(s) 'ABAQUS/6.12.1-linux-x86_64'
-ABAQUS/6.13.5-linux-x86_64(12):ERROR:102: Tcl command execution failed: conflict ABAQUS
-%\shellcmd{module swap ABAQUS/6.13.5-linux-x86\_64}%
-\end{prompt}
-\fi
-\ifgent
-Lets now generate a version conflict with the ``ABAQUS'' module, and see what
-is happening.
-
-\begin{prompt}
-%\shellcmd{module av ABAQUS}%
-ABAQUS/6.12.1-linux-x86_64
-ABAQUS/6.13.5-linux-x86_64
-ABAQUS/6.14.1-linux-x86_64
-%\shellcmd{module load ABAQUS/6.12.1-linux-x86\_64}%
-%\shellcmd{module load ABAQUS/6.13.5-linux-x86\_64}%
-ABAQUS/6.13.5-linux-x86_64(12):ERROR:150: Module 'ABAQUS/6.13.5-linux-x86_64' conflicts with the currently loaded module(s) 'ABAQUS/6.12.1-linux-x86_64'
-ABAQUS/6.13.5-linux-x86_64(12):ERROR:102: Tcl command execution failed: conflict ABAQUS
-%\shellcmd{module swap ABAQUS/6.13.5-linux-x86\_64}%
-\end{prompt}
-\fi
-\ifbrussel
-Lets now generate a version conflict with the ``ABAQUS'' module, and see what
-is happening.
-
-\begin{prompt}
-%\shellcmd{module av ABAQUS}%
-ABAQUS/6.12.1-linux-x86_64
-ABAQUS/6.13.5-linux-x86_64
-ABAQUS/6.14.1-linux-x86_64
-%\shellcmd{module load ABAQUS/6.12.1-linux-x86\_64}%
-%\shellcmd{module load ABAQUS/6.13.5-linux-x86\_64}%
-ABAQUS/6.13.5-linux-x86_64(12):ERROR:150: Module 'ABAQUS/6.13.5-linux-x86_64' conflicts with the currently loaded module(s) 'ABAQUS/6.12.1-linux-x86_64'
-ABAQUS/6.13.5-linux-x86_64(12):ERROR:102: Tcl command execution failed: conflict ABAQUS
-%\shellcmd{module swap ABAQUS/6.13.5-linux-x86\_64}%
-\end{prompt}
-\fi
-\ifleuven
-\begin{prompt}
-Lets now generate a version conflict with the ``R'' module, and see what
-is happening.
-
-%\shellcmd{module av R/}%
-R/2.15.3-foss-2014a-default  R/3.0.2-intel-2014a-x11
-R/2.15.3-foss-2014a-st       R/3.1.1-foss-2014a-default
-R/2.15.3-intel-2014a-default R/3.1.1-intel-2014a-default
-R/3.0.2-foss-2014a-default   R/3.1.2-foss-2014a-x11
-R/3.0.2-foss-2014a-x11       R/3.1.2-intel-2014a-x11-tcl
-R/3.0.2-intel-2014a-bare     R/3.2.1-foss-2014a-x11-tcl
-R/3.0.2-intel-2014a-default
-%\shellcmd{module load R/3.0.2-foss-2014a-default}%
-%\shellcmd{module load  R/3.2.1-foss-2014a-x11-tcl}%
-R/3.2.1-foss-2014a-x11-tcl(12):ERROR:150: Module 'R/3.2.1-foss-2014a-x11-tcl' conflicts with the currently loaded module(s) 'R/3.0.2-foss-2014a-default'
-R/3.2.1-foss-2014a-x11-tcl(12):ERROR:102: Tcl command execution failed: conflict    R
-%\shellcmd{module swap R/3.2.1-foss-2014a-x11-tcl}%
+%\shellcmd{module av thirdexample/}%
+thirdexample/1.2.3
+thirdexample/4.5.6
+thirdexample/6.7.8
+%\shellcmd{module load thirdexample/1.2.3}%
+%\shellcmd{module load thirdexample/4.5.6}%
+thirdexample/4.5.6(12):ERROR:150: Module 'thirdexample/4.5.6' conflicts with the currently loaded module(s) 'thirdexample/1.2.3'
+thirdexample/4.5.6(12):ERROR:102: Tcl command execution failed: conflict thirdexample
+%\shellcmd{module swap thirdexample/4.5.6}%
 \end{prompt}
 \fi
 
-Note: A ``module swap'' command combines the appropriate ``module unload''
+Note: A \lstinline|module swap| command combines the appropriate ``module unload''
 and ``module load'' commands.
 
 \subsection{Get detailed info}
-
-In order to know more about a certain package, and to know what environment
-variables will be changed by a certain module, try:
-
-% TODO: this probably needs to be site-specific, or not shown as it seems a bit advanced and out of place
-\ifantwerpen
-\begin{prompt}
-%\shellcmd{module show ABAQUS}%
--------------------------------------------------------------------
-/apps/gent/SL6/sandybridge/modules/all/ABAQUS/6.14.1-linux-x86_64:
-
-module-whatis    Description: Finite Element Analysis software for modeling, visualisation and best-in-class implicit and explicit dynamics FEA. - Homepage: http://www.simulia.com/products/abaqus_fea.html
-conflict     ABAQUS
-prepend-path PATH /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/Commands
-setenv       EBROOTABAQUS /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64
-setenv       EBVERSIONABAQUS 6.14.1-linux-x86_64
-setenv       EBDEVELABAQUS /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/easybuildlog/ABAQUS-6.14.1-linux-x86_64-easybuild-devel
-prepend-path PATH /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/
--------------------------------------------------------------------
-\end{prompt}
-\fi
-\ifgent
-\begin{prompt}
-%\shellcmd{module show ABAQUS}%
--------------------------------------------------------------------
-/apps/gent/SL6/sandybridge/modules/all/ABAQUS/6.14.1-linux-x86_64:
-
-module-whatis    Description: Finite Element Analysis software for modeling, visualisation and best-in-class implicit and explicit dynamics FEA. - Homepage: http://www.simulia.com/products/abaqus_fea.html
-conflict     ABAQUS
-prepend-path PATH /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/Commands
-setenv       EBROOTABAQUS /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64
-setenv       EBVERSIONABAQUS 6.14.1-linux-x86_64
-setenv       EBDEVELABAQUS /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/easybuildlog/ABAQUS-6.14.1-linux-x86_64-easybuild-devel
-prepend-path PATH /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/
--------------------------------------------------------------------
-\end{prompt}
-\fi
-\ifbrussel
-\begin{prompt}
-%\shellcmd{module show ABAQUS}%
--------------------------------------------------------------------
-/apps/gent/SL6/sandybridge/modules/all/ABAQUS/6.14.1-linux-x86_64:
-
-module-whatis    Description: Finite Element Analysis software for modeling, visualisation and best-in-class implicit and explicit dynamics FEA. - Homepage: http://www.simulia.com/products/abaqus_fea.html
-conflict     ABAQUS
-prepend-path PATH /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/Commands
-setenv       EBROOTABAQUS /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64
-setenv       EBVERSIONABAQUS 6.14.1-linux-x86_64
-setenv       EBDEVELABAQUS /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/easybuildlog/ABAQUS-6.14.1-linux-x86_64-easybuild-devel
-prepend-path PATH /apps/gent/SL6/sandybridge/software/ABAQUS/6.14.1-linux-x86_64/
--------------------------------------------------------------------
-\end{prompt}
-\fi
-\ifleuven
-\begin{prompt}
-%\shellcmd{module show R}%
--------------------------------------------------------------------
-/apps/leuven/thinking/2014a/modules/all/R/3.2.1-foss-2014a-x11-tcl:
-
-module-whatis    Description: R is a free software environment for statistical computing and graphics. - Homepage: http://www.r-project.org/
-conflict         R
-prepend-path     LD_LIBRARY_PATH /apps/leuven/thinking/2014a/software/R/3.2.1-foss-2014a-x11-tcl/lib64
-prepend-path     MANPATH /apps/leuven/thinking/2014a/software/R/3.2.1-foss-2014a-x11-tcl/share/man
-prepend-path     PATH /apps/leuven/thinking/2014a/software/R/3.2.1-foss-2014a-x11-tcl/bin
-setenv           EBROOTR /apps/leuven/thinking/2014a/software/R/3.2.1-foss-2014a-x11-tcl
-setenv           EBVERSIONR 3.2.1
-setenv           EBDEVELR /apps/leuven/thinking/2014a/software/R/3.2.1-foss-2014a-x11-tcl/easybuild/R-3.2.1-foss-2014a-x11-tcl-easybuild-devel
--------------------------------------------------------------------
-\end{prompt}
-\fi
-
 
 To get a list of all possible commands, type:
 
@@ -581,34 +304,10 @@ Or to get more information about one specific module package:
 
 \ifantwerpen
 \begin{prompt}
-%\shellcmd{module help ABAQUS}%
------------ Module Specific Help for 'ABAQUS/6.14.1-linux-x86_64' ---------------------------
+%\shellcmd{module help examplemodule}%
+----------- Module Specific Help for 'examplemodule/1.2.3-intel-2018a' ---------------------------
 
-   Finite Element Analysis software for modeling, visualisation and best-in-class implicit and explicit dynamics FEA. - Homepage: http://www.simulia.com/products/abaqus_fea.html
-\end{prompt}
-\fi
-\ifbrussel
-\begin{prompt}
-%\shellcmd{module help ABAQUS}%
------------ Module Specific Help for 'ABAQUS/6.14.1-linux-x86_64' ---------------------------
-
-   Finite Element Analysis software for modeling, visualisation and best-in-class implicit and explicit dynamics FEA. - Homepage: http://www.simulia.com/products/abaqus_fea.html
-\end{prompt}
-\fi
-\ifgent
-\begin{prompt}
-%\shellcmd{module help ABAQUS}%
------------ Module Specific Help for 'ABAQUS/6.14.1-linux-x86_64' ---------------------------
-
-   Finite Element Analysis software for modeling, visualisation and best-in-class implicit and explicit dynamics FEA. - Homepage: http://www.simulia.com/products/abaqus_fea.html
-\end{prompt}
-\fi
-\ifleuven
-\begin{prompt}
-%\shellcmd{module help R}%
------------ Module Specific Help for 'R/3.2.1-foss-2014a-x11-tcl' ---------------------------
-
-   R is a free software environment for statistical computing and graphics. - Homepage: http://www.r-project.org/
+   This is a module that doesn't really exist. It can be used to do things. - Homepage: https://example.com/
 \end{prompt}
 \fi
 
@@ -818,7 +517,7 @@ more easily.
 \subsection{Specifying the cluster on which to run}
 \label{subsec:specifying-the-cluster-on-which-to-run}
 
-To use other clusters, you can swap the \verb|cluster| module.
+To use other clusters, you can swap the \lstinline|cluster| module.
 This is a special module that change what modules are available for you,
 and what cluster your jobs will be queued in.
 
@@ -837,7 +536,7 @@ have the same architecture as the \defaultcluster cluster however, so this is wh
 by default software works on the login nodes. See \autoref{sec:running-software-incompatible-with-host}
 for why this is and how to fix this.
 
-To list the available cluster modules, you can use the \verb|module avail cluster/| command:
+To list the available cluster modules, you can use the \lstinline|module avail cluster/| command:
 \begin{prompt}
 %\shellcmd{module avail cluster/}%
 ------------------------------------------------------------------------------------ /etc/modulefiles/vsc ------------------------------------------------------------------------------------
@@ -850,11 +549,11 @@ To list the available cluster modules, you can use the \verb|module avail cluste
 If you need software that is not listed, request it via https://www.ugent.be/hpc/en/support/software-installation-request
 \end{prompt}
 
-As indicated in the output above, each \verb|cluster| module is a so-called sticky
-module, i.e. it will not be unloaded when \verb|module purge| (see \autoref{subsec:purging-modules}) is used.
+As indicated in the output above, each \lstinline|cluster| module is a so-called sticky
+module, i.e. it will not be unloaded when \lstinline|module purge| (see \autoref{subsec:purging-modules}) is used.
 
-The output of the various commands interacting with jobs (\verb|qsub|, \verb|stat|, \ldots)
-all depend on which \verb|cluster| module is loaded.
+The output of the various commands interacting with jobs (\lstinline|qsub|, \lstinline|stat|, \ldots)
+all depend on which \lstinline|cluster| module is loaded.
 \fi
 
 
