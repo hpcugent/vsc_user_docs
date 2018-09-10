@@ -1,6 +1,5 @@
 \usepackage[english]{babel}
-\usepackage{amssymb}
-\usepackage{amsmath}
+% For links
 \usepackage{hyperref}
 
 \hypersetup{
@@ -10,25 +9,34 @@
     urlcolor=blue,
 }
 
-% allow conditional compilation
-\usepackage{etoolbox}
 \usepackage[toc,nonumberlist]{glossaries}
 \usepackage{makeidx}
 
 \usepackage{color}
+% Inline code and code blocks
 \usepackage{listings}
-\usepackage{tikz}
+% Font encoding so accents work
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
+% Nicer tables
 \usepackage{array}
 \usepackage{multirow}
+% SubString functions
 \usepackage{substr}
+% More string functions (StrSubstitute, ...)
 \usepackage{xstring}
+% Display latex code in style guide
 \usepackage{verbatim}
+% Font inside texttt
 \usepackage{courier}
+% Provides NewDocumentEnvironment, ...
 \usepackage{xparse}
+% Multi-page table
 \usepackage{longtable}
+% Provides \keys and menu navigation
 \usepackage{menukeys}
+
+% Set typewriter font to courier
 \renewcommand{\ttdefault}{pcr}
 
 \setlength{\hoffset}{-1in}
@@ -40,6 +48,7 @@
 \setlength{\textwidth}{16cm}
 \setlength{\textheight}{23.3cm}
 \setlength{\footskip}{1.5cm}
+% Fancy header
 \usepackage{fancyhdr}
 
 \pagestyle{fancy}
