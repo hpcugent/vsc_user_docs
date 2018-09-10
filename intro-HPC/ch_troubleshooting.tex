@@ -91,6 +91,22 @@ Host %\hpcname%
             share your private key, they're called \emph{private} for a good reason.
 \end{enumerate}
 
+\ifwindows
+
+If you are using PuTTY and get this error message:
+
+\begin{prompt}
+server unexpectedly closed network connection
+\end{prompt}
+
+it is possible that the PuTTY version you are using is too old and doesn't
+support some required (security-related) features.
+
+Make sure you are using the latest PuTTY version if you are encountering problems
+connecting (see \autoref{sec:install-putty}). If that doesn't help, please contact \hpcinfo.
+
+\fi
+
 If you've tried all applicable items above and it doesn't solve your problem,
 please contact \hpcinfo and include the following information:
 
