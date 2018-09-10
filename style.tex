@@ -65,7 +65,6 @@
 
 \lstset{basicstyle=\ttfamily,breaklines=true, keepspaces=true}
 \lstdefinestyle{prompt}{
-% language=bash,
   basicstyle=\footnotesize\ttfamily,
   frame=tblr,
   columns=fullflexible,
@@ -226,17 +225,11 @@
   \ifantwerpen
     \input{../sites/antwerpen/#1}
   \fi
-  \ifhasselt
-    \input{../sites/hasselt/#1}
-  \fi
   \ifbrussel
     \input{../sites/brussel/#1}
   \fi
   \ifgent
     \input{../sites/gent/#1}
-  \fi
-  \iftacc
-    \input{../sites/tacc/#1}
   \fi
 }
 \newcommand{\inputsite}[1]{
@@ -246,17 +239,11 @@
   \ifantwerpen
     \input{../sites/antwerpen/#1}
   \fi
-  \ifhasselt
-    \input{../sites/hasselt/#1}
-  \fi
   \ifbrussel
     \input{../sites/brussel/#1}
   \fi
   \ifgent
     \input{../sites/gent/#1}
-  \fi
-  \iftacc
-    \input{../sites/tacc/#1}
   \fi
 }
 
@@ -266,25 +253,18 @@
 \newif\ifmac
 \newif\ifmacORlinux
 \newif\ifleuven
-\newif\ifhasselt
-\newif\ifleuvenORhasselt
 \newif\ifbrussel
 \newif\ifgent
 \newif\ifantwerpen
-\newif\iftacc
-\newif\ifvsc
 \newif\ifusinglmod
 
 \windowsfalse
 \linuxfalse
 \macfalse
 \leuvenfalse
-\hasseltfalse
 \brusselfalse
 \gentfalse
 \antwerpenfalse
-\taccfalse
-\vscfalse
 \usinglmodfalse
 
 \ifdefined\iswindows
@@ -300,28 +280,15 @@
 \fi
 \ifdefined\isleuven
   \leuventrue
-  \leuvenORhasselttrue
-  \vsctrue
-\fi
-\ifdefined\ishasselt
-  \hasselttrue
-  \leuvenORhasselttrue
-  \vsctrue
 \fi
 \ifdefined\isbrussel
   \brusseltrue
-  \vsctrue
   \usinglmodtrue
 \fi
 \ifdefined\isgent
   \genttrue
-  \vsctrue
   \usinglmodtrue
 \fi
 \ifdefined\isantwerpen
   \antwerpentrue
-  \vsctrue
-\fi
-\ifdefined\istacc
-  \tacctrue
 \fi
