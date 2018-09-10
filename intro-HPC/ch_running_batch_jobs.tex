@@ -60,13 +60,13 @@ done so already, run these commands now:
 
 \begin{prompt}
 %\shellcmd{cd}%
-%\shellcmd{cp --r \examplesdir \tilde/}%
+%\shellcmd{cp --r \examplesdir{} \tilde{}/}%
 \end{prompt}
 
 First go to the directory with the first examples by entering the command:
 
 \begin{prompt}
-%\shellcmd{cd ~/\exampledir}%
+%\shellcmd{cd ~/\exampledir{}}%
 \end{prompt}
 
 Each time you want to execute a program on the \hpc you'll need 2 things:
@@ -93,16 +93,16 @@ List and check the contents with:
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 512
--rw-r--r-- 1 %\userid% 193 Sep 11 10:34 fibo.pbs
--rw-r--r-- 1 %\userid% 609 Sep 11 10:25 fibo.pl
+-rw-r--r-- 1 %\userid{}% 193 Sep 11 10:34 fibo.pbs
+-rw-r--r-- 1 %\userid{}% 609 Sep 11 10:25 fibo.pl
 \end{prompt}
 
-In this directory you find a Perl script (named ``fibo.pl'') and a job-script
+In this directory you find a Perl script (named ``fibo.pl'') and a job script
 (named ``fibo.pbs'').
 
 \begin{enumerate}
 \item  The Perl script calculates the first 30 Fibonacci numbers.
-\item  The job-script is actually a standard Unix/Linux shell script that
+\item  The job script is actually a standard Unix/Linux shell script that
   contains a few extra comments at the beginning that specify directives to
   PBS.  These comments all begin with \strong{\#PBS}.
 \end{enumerate}
@@ -156,7 +156,7 @@ your software. But for the sake of acquiring a good understanding of what is
 happening, you are pardoned for this example since these jobs require very little
 computing power.
 
-The job-script contains a description of the job by specifying the command that
+The job script contains a description of the job by specifying the command that
 need to be executed on the compute node:
 
 \examplecode{bash}{fibo.pbs}
@@ -170,7 +170,7 @@ execution, using the qsub (Queue SUBmit) command:
 
 \begin{prompt}
 %\shellcmd{qsub fibo.pbs}%
-%\jobid%
+%\jobid{}%
 \end{prompt}
 
 The qsub command returns a job identifier on the HPC cluster. The important
@@ -187,17 +187,17 @@ After your job was started, and ended, check the contents of the directory:
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 768
--rw-r--r-- 1 %\userid \userid%   44 Feb 28 13:33 fibo.pbs
--rw------- 1 %\userid \userid%    0 Feb 28 13:33 fibo.pbs.e%\jobnumber%
--rw------- 1 %\userid \userid% 1010 Feb 28 13:33 fibo.pbs.o%\jobnumber%
--rwxrwxr-x 1 %\userid \userid%  302 Feb 28 13:32 fibo.pl
+-rw-r--r-- 1 %\userid{} \userid{}%   44 Feb 28 13:33 fibo.pbs
+-rw------- 1 %\userid{} \userid{}%    0 Feb 28 13:33 fibo.pbs.e%\jobnumber{}%
+-rw------- 1 %\userid{} \userid{}% 1010 Feb 28 13:33 fibo.pbs.o%\jobnumber{}%
+-rwxrwxr-x 1 %\userid{} \userid{}%  302 Feb 28 13:32 fibo.pl
 \end{prompt}
 
 Explore the contents of the 2 new files:
 
 \begin{prompt}
-%\shellcmd{more fibo.pbs.o\jobnumber}%
-%\shellcmd{more fibo.pbs.e\jobnumber}%
+%\shellcmd{more fibo.pbs.o\jobnumber{}}%
+%\shellcmd{more fibo.pbs.e\jobnumber{}}%
 \end{prompt}
 
 These files are used to store the standard output and error that would
@@ -246,7 +246,7 @@ more easily.
 \subsection{Specifying the cluster on which to run}
 \label{subsec:specifying-the-cluster-on-which-to-run}
 
-To use other clusters, you can swap the \verb|cluster| module.
+To use other clusters, you can swap the \lstinline|cluster| module.
 This is a special module that change what modules are available for you,
 and what cluster your jobs will be queued in.
 
@@ -256,7 +256,7 @@ the \othercluster cluster, and to be able to submit jobs to the \othercluster sc
 so your jobs will start on \othercluster instead of the default \defaultcluster cluster.
 
 \begin{prompt}
-%\shellcmd{module swap cluster/\othercluster}%
+%\shellcmd{module swap cluster/\othercluster{}}%
 \end{prompt}
 
 Note: the \othercluster modules may not work directly on the login nodes, because the
@@ -265,7 +265,7 @@ have the same architecture as the \defaultcluster cluster however, so this is wh
 by default software works on the login nodes. See \autoref{sec:running-software-incompatible-with-host}
 for why this is and how to fix this.
 
-To list the available cluster modules, you can use the \verb|module avail cluster/| command:
+To list the available cluster modules, you can use the \lstinline|module avail cluster/| command:
 \begin{prompt}
 %\shellcmd{module avail cluster/}%
 ------------------------------------------------------------------------------------ /etc/modulefiles/vsc ------------------------------------------------------------------------------------
@@ -278,15 +278,16 @@ To list the available cluster modules, you can use the \verb|module avail cluste
 If you need software that is not listed, request it via https://www.ugent.be/hpc/en/support/software-installation-request
 \end{prompt}
 
-As indicated in the output above, each \verb|cluster| module is a so-called sticky
-module, i.e. it will not be unloaded when \verb|module purge| (see \autoref{subsec:purging-modules}) is used.
+As indicated in the output above, each \lstinline|cluster| module is a so-called sticky
+module, i.e. it will not be unloaded when \lstinline|module purge| (see \autoref{subsec:purging-modules}) is used.
 
-The output of the various commands interacting with jobs (\verb|qsub|, \verb|stat|, \ldots)
-all depend on which \verb|cluster| module is loaded.
+The output of the various commands interacting with jobs (\lstinline|qsub|, \lstinline|stat|, \ldots)
+all depend on which \lstinline|cluster| module is loaded.
 \fi
 
 
 \section{Monitoring and managing your job(s)}
+\label{sec:monitoring-and-managing-your-jobs}
 
 Using the job ID that \textit{qsub} returned, there are various ways to monitor
 the status of your job, e.g.,
@@ -345,10 +346,10 @@ finished using:
 % Manually indented, please keep this as is
 \begin{prompt}
 %\shellcmd{qstat}%
-%\pbsserver%:
+%\pbsserver{}%:
 Job ID      Name    User      Time Use S Queue
 ----------- ------- --------- -------- - -----
-%\jobnumber%.%\dots% mpi     %\userid% 0        Q short
+%\jobnumber{}%.%\dots{}% mpi     %\userid{}% 0        Q short
 \end{prompt}
 
 Here:
@@ -474,7 +475,7 @@ And to get the full detail of all the jobs, which are in the system:
 active jobs------------------------
 JOBID     USERNAME  STATE PROCS REMAINING          STARTTIME
 428024    vsc20167  Running   8   2:57:32  Mon Sep  2 14:55:05
-%\dots%
+%\dots{}%
 153 active jobs 1307 of 3360 processors in use by local jobs (38.90%\%%)
 153 of 168 nodes active      (91.07%\%%)
 
@@ -482,7 +483,7 @@ eligible jobs----------------------
 JOBID     USERNAME  STATE PROCS   WCLIMIT            QUEUETIME
 442604    vsc20167   Idle  48  7:00:00:00  Sun Sep 22 16:39:13
 442605    vsc20167   Idle  48  7:00:00:00  Sun Sep 22 16:46:22
-%\dots%
+%\dots{}%
 
 135 eligible jobs
 
@@ -490,7 +491,7 @@ blocked jobs-----------------------
 JOBID   USERNAME     STATE PROCS WCLIMIT            QUEUETIME
 441237  vsc20167      Idle   8 3:00:00:00 Thu Sep 19 15:53:10
 442536  vsc20167  UserHold  40 3:00:00:00 Sun Sep 22 00:14:22
-%\dots%
+%\dots{}%
 252 blocked jobs
 Total jobs:  540
 \end{prompt}
@@ -558,7 +559,9 @@ For the simplest cases, only the amount of maximum estimated execution time
 (called ``walltime'') is really important. Here, the job requests
 2 hours, 30 minutes. As soon as the job exceeds the requested walltime,
 it will be ``killed'' (terminated) by the job scheduler.  There is no
-harm if you \emph{slightly} overestimate the maximum execution time. \\
+harm if you \emph{slightly} overestimate the maximum execution time.
+If you omit this option, the queue manager will not complain but use a
+default value (one hour on most clusters).
 
 \begin{prompt}
 %\shellcmd{qsub -l mem=4gb}%
@@ -592,7 +595,7 @@ These options can either be specified on the command line, e.g.
 %\shellcmd{qsub -l nodes=1:ppn=1,mem=2gb fibo.pbs}%
 \end{prompt}
 
-or in the job-script itself using the \#PBS-directive, so ``fibo.pbs'' could be modified to:
+or in the job script itself using the \#PBS-directive, so ``fibo.pbs'' could be modified to:
 
 \begin{code}{bash}
 #!/bin/bash -l
@@ -652,7 +655,7 @@ to the qsub command line, or
 #PBS -q queuename
 \end{code}
 
-to the job-script, where \emph{queuename} is one of the possible queues shown
+to the job script, where \emph{queuename} is one of the possible queues shown
 above.
 
 A maximum \emph{walltime} is associated with each queue.
@@ -756,10 +759,10 @@ When you navigate to that directory and list its contents, you should see them:
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 1024
--rw-r--r-- 1 %\userid%  609 Sep 11 10:54 fibo.pl
--rw-r--r-- 1 %\userid%   68 Sep 11 10:53 fibo.pbs
--rw------- 1 %\userid%   52 Sep 11 11:03 fibo.pbs.e%\jobnumber%
--rw------- 1 %\userid% 1307 Sep 11 11:03 fibo.pbs.o%\jobnumber%
+-rw-r--r-- 1 %\userid{}%  609 Sep 11 10:54 fibo.pl
+-rw-r--r-- 1 %\userid{}%   68 Sep 11 10:53 fibo.pbs
+-rw------- 1 %\userid{}%   52 Sep 11 11:03 fibo.pbs.e%\jobnumber{}%
+-rw------- 1 %\userid{}% 1307 Sep 11 11:03 fibo.pbs.o%\jobnumber{}%
 \end{prompt}
 
 In our case, our job has created both output (`fibo.pbs.\strong{o}\jobnumber') and
@@ -769,10 +772,10 @@ error files (`fibo.pbs.\strong{e}\jobnumber') containing info written to
 Inspect the generated output and error files:
 
 \begin{prompt}
-%\shellcmd{cat fibo.pbs.o\jobnumber}%
-%\dots%
-%\shellcmd{cat fibo.pbs.e\jobnumber}%
-%\dots%
+%\shellcmd{cat fibo.pbs.o\jobnumber{}}%
+%\dots{}%
+%\shellcmd{cat fibo.pbs.e\jobnumber{}}%
+%\dots{}%
 \end{prompt}
 
 \section{E-mail notifications}
@@ -811,7 +814,7 @@ Inspect the generated output and error files:
 
 You can instruct the \hpc to send an e-mail to your e-mail address whenever a
 job \strong{b}egins, \strong{e}nds and/or \strong{a}borts, by adding the
-following lines to the job-script ``fibo.pbs'':
+following lines to the job script ``fibo.pbs'':
 
 \begin{code}{bash}
 #PBS -m b

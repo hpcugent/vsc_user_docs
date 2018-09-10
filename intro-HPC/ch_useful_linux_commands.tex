@@ -86,7 +86,7 @@ You can type both lines at your shell prompt, and the result will be the followi
 %\shellcmd{echo "Hello! This is my hostname:"}%
 Hello! This is my hostname:
 %\shellcmd{hostname}%
-%\loginhost%
+%\loginhost{}%
 \end{prompt}
 
 Suppose we want to call this script ``foo''. You open a new file for editing, and
@@ -116,7 +116,7 @@ or ``bash'' (which are the same on the cluster). So start the script:
 \begin{prompt}
 %\shellcmd{bash foo}%
 Hello! This is my hostname:
-%\loginhost%
+%\loginhost{}%
 \end{prompt}
 
 Congratulations, you just created and started your first shell script!
@@ -159,7 +159,7 @@ Now you can start your script by simply executing it:
 \begin{prompt}
 %\shellcmd{./foo}%
 Hello! This is my hostname:
-%\loginhost%
+%\loginhost{}%
 \end{prompt}
 
 The same technique can be used for all other scripting languages, like Perl and Python.
@@ -267,4 +267,3 @@ top     & Display Linux tasks \\ \hline
 chmod    & Modify properties for users \\ \hline
 chown    & Change file owner and group \\ \hline
 \end{tabular}
-

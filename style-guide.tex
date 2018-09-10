@@ -72,14 +72,14 @@ When defining lists make sure to indent the items.
 \section{Displaying example code}
 \label{sec:displaying-example-code}
 
-To display example code inside the document you can use the \verb|\examplecode|
-command. The example code files should be organised in an \verb|examples|
+To display example code inside the document you can use the \lstinline|\examplecode|
+command. The example code files should be organised in an \lstinline|examples|
 subdirectory.  Each chapter should have its own directory. The directory name
 is the same as the chapter name with spaces and slashes substituted by dashes.
 (e.g., ``Multi-core Job Submission'' is turned into
 ``Multi-core-Job-Submission'').
 
-The \verb|examplecode| takes 2 mandatory arguments. The first one is the
+The \lstinline|examplecode| takes 2 mandatory arguments. The first one is the
 language of the code file (e.g., C or Python). The second is the basename of the
 file. If you want you can organise the example files per chapter in
 subdirectories, you then need to add the subdirectory to the filename argument.
@@ -91,16 +91,19 @@ The commands below illustrate how this works.
 \end{verbatim}
 
 
-The macro \verb|\exampledir| will expand to the example directory used on a per
+The macro \lstinline|\exampledir| will expand to the example directory used on a per
 chapter basis.
 
 \section{Displaying inline code}
 \label{sec:displaying-inline-code}
 
-To display inline code inside the document, you can use the \verb|\verb| command.
+To display inline code inside the document, you can use the \lstinline|\lstinline| command.
 This should be used when talking about Linux commands, filenames, \ldots
-When you want inline code inside a title, you can use the \verb|\texttt{}| command.
-When using \verb|\texttt|, you will need to escape certain characters.
+When you want inline code inside a title, you can use the \lstinline|\texttt{}| command.
+When using \lstinline|\texttt|, you will need to escape certain characters.
+
+Do not use \lstinline|\verb|: text in \lstinline|\verb| might be rendered outside of the
+page (\lstinline|\verb| doesn't wrap).
 
 \section{Displaying prompts}
 \label{sec:displaying-prompts}
@@ -109,14 +112,14 @@ To display prompt output you can use the prompt environment. To obtain a
 consistent look-and-feel, put an empty line before the prompt environment.  In
 case the prompt environment is part of an if--else construction, do not indent
 the prompt environment to avoid an unwanted empty line at the end.  There
-is the special command \verb|\shellcmd{}| which provides consistent styling. It
+is the special command \lstinline|\shellcmd{}| which provides consistent styling. It
 also includes a \$-sign. There is a special version of this command called
-\verb|\captureshellcmd{}|. This behaves exactly the same as \verb|shellcmd| but
-it writes its argument to \verb|shellcmds.sh|. All commands you want to capture
+\lstinline|\captureshellcmd{}|. This behaves exactly the same as \lstinline|shellcmd| but
+it writes its argument to \lstinline|shellcmds.sh|. All commands you want to capture
 will be present here. This file will be updated each time you build the PDF.
 You can use this to easily run commands and paste their output in the latex
-file. NOTE: instead of \verb|\tilde| you should use a regular \tilde{} inside
-\verb|\shellcmd| and \verb|\captureshellcmd|. Inside the prompt environment you
+file. NOTE: instead of \lstinline|\tilde| you should use a regular \tilde{} inside
+\lstinline|\shellcmd| and \lstinline|\captureshellcmd|. Inside the prompt environment you
 can use \% as escape character to type commands.
 
 \begin{verbatim}
@@ -136,7 +139,7 @@ GNU bash, version 4.1.2(1)-release (x86_64-redhat-linux-gnu)
 \end{prompt}
 
 If you want to display example output from a file, you can use the
-\verb|\exampleoutput| command. This will look inside \verb|\exampledir| and
+\lstinline|\exampleoutput| command. This will look inside \lstinline|\exampledir| and
 format the file in a prompt environment.
 
 \begin{verbatim}
@@ -199,7 +202,7 @@ keywords you can use: \texttt{ifleuven}, \texttt{ifgent}, \texttt{ifantwerpen},
 \end{verbatim}
 
 If large pieces of text need to be included you can use the
-\verb|includesite| command.
+\lstinline|includesite| command.
 Note: this command will not fail if the site-specific section is missing.
 
 \begin{verbatim}
@@ -208,9 +211,9 @@ Note: this command will not fail if the site-specific section is missing.
 
 The above example will not include intro.tex, but will include <site>/intro.tex (e.g., gent/intro.tex)
 
-Because includes cannot be nested there is also the \verb|\inputsite| command
-which works exactly the same as above only it uses \verb|\input| instead of
-\verb|\include|. This command \emph{will} fail when a file is not present.
+Because includes cannot be nested there is also the \lstinline|\inputsite| command
+which works exactly the same as above only it uses \lstinline|\input| instead of
+\lstinline|\include|. This command \emph{will} fail when a file is not present.
 
 \subsection{Macros}
 \label{sec:macros}
@@ -223,7 +226,7 @@ To fix this problem, you can use a macro. For example:
 you can connect to \loginnode with ssh.
 \end{verbatim}
 
-These macros are all defined inside \verb|macros.tex|. This file is located
+These macros are all defined inside \lstinline|macros.tex|. This file is located
 inside the site-specific directory. You can define new macros like so:
 \begin{verbatim}
 \macro{\city}{Gent}
@@ -271,15 +274,15 @@ use:
 \end{verbatim}
 
 As this provides much more semantic value. Although \LaTeX\ provides
-\verb|\textit| and \verb|\textbf| we suggest using \verb|\emph| and
-\verb|\strong|.
+\lstinline|\textit| and \lstinline|\textbf| we suggest using \lstinline|\emph| and
+\lstinline|\strong|.
 
 \subsection{Tilde}
 \label{sec:tilde}
 
 The tilde (\tilde) in \LaTeX\ looks terrible by default. It is advised to use
-\verb|\tilde| which is a much nicer version.
+\lstinline|\tilde| which is a much nicer version.
 
-Compare \tilde\ (\verb|\tilde|) with \~\ (\verb|\~|)
+Compare \tilde\ (\lstinline|\tilde|) with \~\ (\lstinline|\~|)
 
 \end{document}

@@ -13,7 +13,7 @@ collect your results.
 First go to the directory:
 
 \begin{prompt}
-%\shellcmd{cd ~/\exampledir}%
+%\shellcmd{cd ~/\exampledir{}}%
 \end{prompt}
 
 List and check the contents with:
@@ -21,14 +21,14 @@ List and check the contents with:
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 2304
--rwxrwxr-x 1 %\userid%  682 Sep 13 11:34 file1.py
--rw-rw-r-- 1 %\userid%  212 Sep 13 11:54 file1a.pbs
--rw-rw-r-- 1 %\userid%  994 Sep 13 11:53 file1b.pbs
--rw-rw-r-- 1 %\userid%  994 Sep 13 11:53 file1c.pbs
--rw-r--r-- 1 %\userid% 1393 Sep 13 10:41 file2.pbs
--rwxrwxr-x 1 %\userid% 2393 Sep 13 10:40 file2.py
--rw-r--r-- 1 %\userid% 1393 Sep 13 10:41 file3.pbs
--rwxrwxr-x 1 %\userid% 2393 Sep 13 10:40 file3.py
+-rwxrwxr-x 1 %\userid{}%  682 Sep 13 11:34 file1.py
+-rw-rw-r-- 1 %\userid{}%  212 Sep 13 11:54 file1a.pbs
+-rw-rw-r-- 1 %\userid{}%  994 Sep 13 11:53 file1b.pbs
+-rw-rw-r-- 1 %\userid{}%  994 Sep 13 11:53 file1c.pbs
+-rw-r--r-- 1 %\userid{}% 1393 Sep 13 10:41 file2.pbs
+-rwxrwxr-x 1 %\userid{}% 2393 Sep 13 10:40 file2.py
+-rw-r--r-- 1 %\userid{}% 1393 Sep 13 10:41 file3.pbs
+-rwxrwxr-x 1 %\userid{}% 2393 Sep 13 10:40 file3.py
 \end{prompt}
 
 Now, let us inspect the contents of the first executable (which is just a
@@ -43,7 +43,7 @@ The code of the Python script, is self explanatory:
 \item  In step 3, we write to stderr.
 \end{enumerate}
 
-Check the contents of the first job-script:
+Check the contents of the first job script:
 
 \examplecode{bash}{file1a.pbs}
 
@@ -62,17 +62,17 @@ directory where you executed the \emph{qsub} command:
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 3072
--rw-rw-r-- 1 %\userid%   90 Sep 13 13:13 Hello.txt
--rwxrwxr-x 1 %\userid%  693 Sep 13 13:03 file1.py*
--rw-rw-r-- 1 %\userid%  229 Sep 13 13:01 file1a.pbs
--rw------- 1 %\userid%   91 Sep 13 13:13 file1a.pbs.e%\jobnumber%
--rw------- 1 %\userid%  105 Sep 13 13:13 file1a.pbs.o%\jobnumber%
--rw-rw-r-- 1 %\userid%  143 Sep 13 13:07 file1b.pbs
--rw-rw-r-- 1 %\userid%  177 Sep 13 13:06 file1c.pbs
--rw-r--r-- 1 %\userid% 1393 Sep 13 10:41 file2.pbs
--rwxrwxr-x 1 %\userid% 2393 Sep 13 10:40 file2.py*
--rw-r--r-- 1 %\userid% 1393 Sep 13 10:41 file3.pbs
--rwxrwxr-x 1 %\userid% 2393 Sep 13 10:40 file3.py*
+-rw-rw-r-- 1 %\userid{}%   90 Sep 13 13:13 Hello.txt
+-rwxrwxr-x 1 %\userid{}%  693 Sep 13 13:03 file1.py*
+-rw-rw-r-- 1 %\userid{}%  229 Sep 13 13:01 file1a.pbs
+-rw------- 1 %\userid{}%   91 Sep 13 13:13 file1a.pbs.e%\jobnumber{}%
+-rw------- 1 %\userid{}%  105 Sep 13 13:13 file1a.pbs.o%\jobnumber{}%
+-rw-rw-r-- 1 %\userid{}%  143 Sep 13 13:07 file1b.pbs
+-rw-rw-r-- 1 %\userid{}%  177 Sep 13 13:06 file1c.pbs
+-rw-r--r-- 1 %\userid{}% 1393 Sep 13 10:41 file2.pbs
+-rwxrwxr-x 1 %\userid{}% 2393 Sep 13 10:40 file2.py*
+-rw-r--r-- 1 %\userid{}% 1393 Sep 13 10:41 file3.pbs
+-rwxrwxr-x 1 %\userid{}% 2393 Sep 13 10:40 file3.py*
 \end{prompt}
 
 Some observations:
@@ -86,9 +86,9 @@ Inspect their contents \dots\ and remove the files
 
 \begin{prompt}
 %\shellcmd{cat Hello.txt}%
-%\shellcmd{cat file1a.pbs.o\jobnumber}%
-%\shellcmd{cat file1a.pbs.e\jobnumber}%
-%\shellcmd{rm Hello.txt file1a.pbs.o\jobnumber file1a.pbs.e\jobnumber}%
+%\shellcmd{cat file1a.pbs.o\jobnumber{}}%
+%\shellcmd{cat file1a.pbs.e\jobnumber{}}%
+%\shellcmd{rm Hello.txt file1a.pbs.o\jobnumber{} file1a.pbs.e\jobnumber{}}%
 \end{prompt}
 
 \begin{tip}
@@ -110,8 +110,8 @@ Inspect the contents again \dots\ and remove the generated files:
 
 \begin{prompt}
 %\shellcmd{ls}%
-Hello.txt  file1a.pbs  file1c.pbs  file2.pbs  file3.pbs  my_serial_job.e%\jobnumber%
-file1.py*  file1b.pbs  file2.py*   file3.py*  my_serial_job.o%\jobnumber%
+Hello.txt  file1a.pbs  file1c.pbs  file2.pbs  file3.pbs  my_serial_job.e%\jobnumber{}%
+file1.py*  file1b.pbs  file2.py*   file3.py*  my_serial_job.o%\jobnumber{}%
 %\shellcmd{rm Hello.txt my\_serial\_job.*}%
 \end{prompt}
 
@@ -124,7 +124,7 @@ the name of the job script.
 \subsection{User-defined file names}
 
 You can also specify the name of \emph{stdout} and \emph{stderr} files
-explicitly by adding two lines in the job-script, as in our third example:
+explicitly by adding two lines in the job script, as in our third example:
 
 \examplecode{bash}{file1c.pbs}
 
@@ -171,7 +171,7 @@ The following locations are available:
                          shared across all clusters of the VSC in the future. See \S\ref{subsec:scratch-directory}. \\ \hline
 \ifgent
 \$VSC\_SCRATCH\_CLUSTER & The scratch filesystem closest to this cluster.\\ \hline
-\$VSC\_SCRATCH\_VO      & The scratch filesystem for your VO storage, this can have a bigger quota than your personal scratch.\\ \hline
+\$VSC\_SCRATCH\_PHANPY  & A separate (smaller) shared scratch filesystem, powered by SSDs. This scratch filesystem is intended for very I/O-intensive workloads.\\ \hline
 \fi
 \end{tabular}
 
@@ -187,6 +187,13 @@ been created.
 
 We ellaborate more on the specific function of these locations in the following
 sections.
+
+\ifgent
+Note: \lstinline|$VSC_SCRATCH_KYUKON| and \lstinline|$VSC_SCRATCH| are the same directories
+("kyukon" is the name of the storage cluster where the default shared scratch filesystem is hosted).
+
+For documentation about VO directories, see \autoref{subsec:vo-directories}.
+\fi
 
 \subsection{Your home directory (\$VSC\_HOME)\label{subsec:home-directory}}
 
@@ -298,12 +305,6 @@ volume as the cluster scratch, and thus contains the same data.
 In the future it may point to a scratch file system
 that is available across all clusters of the VSC, but at the moment
 of writing there are no plans to provide this.
-\ifgent
-\item[VO scratch (\$VSC\_SCRATCH\_*\_VO).]
-Like \$VSC\_DATA\_VO these scratch filesystems are only available if you
-are a member of a (non-default) VO. This is extra SCRATCH space you can request if you are running
-out of quota on your personal SCRATCH.
-\fi
 \end{description}
 
 \subsection{Pre-defined quotas}
@@ -462,7 +463,7 @@ Check the Python and the PBS file, and submit the job:
 %\shellcmd{qstat}%
 %\shellcmd{ls -l}%
 %\shellcmd{more \$VSC\_SCRATCH/primes\_2.txt}%
-%\dots%
+%\dots{}%
 \end{prompt}
 
 \section{How much disk space do I get?}
@@ -630,10 +631,10 @@ in your home directory, even if you are currently in a different directory:
 
 \begin{prompt}
 %\shellcmd{du -h \$VSC\_HOME/*}%
-22M %\homedir/dataset01%
-36M %\homedir/dataset02%
-22M %\homedir/dataset03%
-3.5M %\homedir/primes.txt%
+22M %\homedir{}/dataset01%
+36M %\homedir{}/dataset02%
+22M %\homedir{}/dataset03%
+3.5M %\homedir{}/primes.txt%
 \end{prompt}
 
 \ifgent
@@ -669,32 +670,32 @@ Being in a VO allows for larger storage quota to be obtained
 
 \begin{enumerate}
     \item Get the VO id of the research group you belong to (this id is formed by
-        the letters \verb|gvo|, followed by 5 digits).
+        the letters \lstinline|gvo|, followed by 5 digits).
     \item Go to \url{https://account.vscentrum.be/django/vo/join} and fill in the
         section named ``Join VO''. You will be asked to fill in the VO id and a message for
         the moderator of the VO, where you identify yourself. This should look something
-        like the picture below.
+        like \autoref{fig:VO-join}.
     \item After clicking the submit button, a message will be sent to the moderator
     of the VO, who will either approve or deny the request.
 \end{enumerate}
 
 
 
-\begin{figure}[h]
+\begin{figure}[!htbp]
   \caption{Joining a VO.}
   \centering
     \includegraphics[width=\textwidth]{ch6-VO-join}
-\end{figure}
+\end{figure}\label{fig:VO-join}
 
 \subsection{Creating a new VO}
 
 \begin{enumerate}
     \item Go to \url{https://account.vscentrum.be/django/vo/new} and scroll down
-        to the section ``Request new VO''. This should look something like the
-        image below.
+        to the section ``Request new VO''. This should look something like
+        \autoref{fig:VO-new}.
     \item Fill why you want to request a VO.
     \item Fill out the both the internal and public VO name. These cannot contain
-        spaces, and should be 8-10 characters long. For example, \verb|genome25| is
+        spaces, and should be 8-10 characters long. For example, \lstinline|genome25| is
         a valid VO name.
     \item Fill out the rest of the form and press submit. This will send a message
         to the \hpc administrators, who will then either approve or deny the request.
@@ -702,33 +703,34 @@ Being in a VO allows for larger storage quota to be obtained
         newly created VO.
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[!htbp]
   \caption{Creating a new VO.}
   \centering
     \includegraphics[width=\textwidth]{ch6-VO-new}
-\end{figure}
+\end{figure}\label{fig:VO-new}
 
 \subsection{Requesting more storage space}
+\label{subsec:requesting-more-storage-space}
 
 If you're a moderator of a VO, you can request additional quota for the VO and
 its members.
 
 \begin{enumerate}
     \item Go to \url{https://account.vscentrum.be/django/vo/edit} and scroll down
-        to ``Request additional quota''. See the screenshot below to see how this looks.
+        to ``Request additional quota''. See \autoref{fig:VO-request-additional-quota} to see how this looks.
     \item Fill out how much \emph{additional} storage you want. In the screenshot below,
-        we're asking for 500 GiB extra space for \verb|VSC_DATA|, and for 1 TiB extra
-        space on \verb|VSC_SCRATCH_KYUKON|.
+        we're asking for 500 GiB extra space for \lstinline|VSC_DATA|, and for 1 TiB extra
+        space on \lstinline|VSC_SCRATCH_KYUKON|.
     \item Add a comment explaining why you need additional storage space and submit
         the form.
     \item An \hpc administrator will review your request and approve or deny it.
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[!htbp]
   \caption{Requesting additional quota for the VO and its members.}
   \centering
     \includegraphics[width=\textwidth]{ch6-VO-request-additional-quota}
-\end{figure}
+\end{figure}\label{fig:VO-request-additional-quota}
 
 \subsection{Setting per-member VO quota}
 
@@ -742,7 +744,7 @@ allocates per user are \emph{the maximum percentages} of storage users can use.
 
 \begin{enumerate}
     \item Go to \url{https://account.vscentrum.be/django/vo/edit} and scroll down
-        to ``Manage per-member quota share''. See the screenshot below to see how this looks.
+        to ``Manage per-member quota share''. See \autoref{fig:VO-per-member-storage} to see how this looks.
     \item Fill out how much percent of the space you want each user to be able to use.
         Note that the total can be above 100\%. In the screenshot below, there are
         four users. Alice and Bob can use up to 50\% of the space, Carl
@@ -751,10 +753,36 @@ allocates per user are \emph{the maximum percentages} of storage users can use.
         100\% can actually be used.
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[!htbp]
   \caption{Setting per-member quota.}
   \centering
     \includegraphics[width=\textwidth]{ch6-VO-per-member-storage}
-\end{figure}
+\end{figure}\label{fig:VO-per-member-storage}
+
+\subsection{VO directories}
+\label{subsec:vo-directories}
+
+When you're a member of a VO, there will be some additional directories
+on each of the shared filesystems available:
+
+\begin{description}
+    \item[VO scratch (\texttt{\$VSC\_SCRATCH\_VO})]
+        A directory on the shared \emph{scratch} filesystem shared by the members of your
+        VO, where additional storage quota can be provided (see \autoref{subsec:requesting-more-storage-space}).
+        You can use this as an alternative to your personal \lstinline|$VSC_SCRATCH|
+        directory (see \autoref{subsec:scratch-directory}).
+
+    \item[VO data (\texttt{\$VSC\_DATA\_VO})]
+        A directory on the shared \emph{data} filesystem shared by the members of your
+        VO, where additional storage quota can be provided (see \autoref{subsec:requesting-more-storage-space}).
+        You can use this as an alternative to your personal \lstinline|$VSC_DATA|
+        directory (see \autoref{subsec:data-directory}).
+
+\end{description}
+
+If you put \lstinline|_USER| after each of these variable names, you can see your
+personal folder in these filesystems. For example: \lstinline|$VSC_DATA_VO_USER|
+is your personal folder in your VO data filesystem (this is equivalent to
+\lstinline|$VSC_DATA_VO/$USER|), and analogous for \lstinline|$VSC_SCRATCH_VO_USER|.
 
 \fi

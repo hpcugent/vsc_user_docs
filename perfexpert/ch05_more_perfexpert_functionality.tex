@@ -151,7 +151,7 @@ And run in automatic mode:
 
 One can also run perfexpert in batch mode. This is often desired when the runtime of the program is a bit higher, and you do not want to wait for the results.  You can replace the normal command line to start up your executable (e.g., ``./mm\_omp'') in the job script with the perfexpert command line. (e.g., ``\textit{perfexpert -c 0.3 mm\_omp}''). When running your application with a job script, be sure to specify a running time that is about 6x the normal running time of the program.
 
-Compile the parallel Matrix Multiplication program, explore the job-script and submit the job:
+Compile the parallel Matrix Multiplication program, explore the job script and submit the job:
 
 \begin{prompt}
 %\shellcmd{gcc -fopenmp mm\_omp.c -g -o mm\_omp}%

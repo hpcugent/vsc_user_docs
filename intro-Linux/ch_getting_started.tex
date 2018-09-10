@@ -19,8 +19,8 @@ Details on connecting to the HPC infrastructure are available in
 To get help:
 
 \begin{enumerate}
-  \item use the documentation available on the system, through the \verb|help|,
-    \verb|info| and \verb|man| commands (use \verb|q| to exit).
+  \item use the documentation available on the system, through the \lstinline|help|,
+    \lstinline|info| and \lstinline|man| commands (use \lstinline|q| to exit).
 
 \begin{prompt}
   help cd
@@ -44,23 +44,23 @@ you can't come up with something in 15 minutes, don't hesitate to mail
 
 \section{Basic terminal usage}
 
-The basic interface is the so-called shell prompt, typically ending with \verb|$|
-(for \verb|bash| shells).
+The basic interface is the so-called shell prompt, typically ending with \lstinline|$|
+(for \lstinline|bash| shells).
 
-You use the shell by executing commands, and hitting \verb|<enter>|. For example:
+You use the shell by executing commands, and hitting \lstinline|<enter>|. For example:
 
 \begin{prompt}
 %\shellcmd{echo hello}%
 hello
 \end{prompt}
 
-You can go to the start or end of the command line using \verb|Ctrl-A| or \verb|Ctrl-E|.
+You can go to the start or end of the command line using \lstinline|Ctrl-A| or \lstinline|Ctrl-E|.
 
-To go through previous commands, use \verb|<up>| and \verb|<down>|, rather than retyping them.
+To go through previous commands, use \lstinline|<up>| and \lstinline|<down>|, rather than retyping them.
 
 \subsection{Command history}
 
-A powerful feature is that you can ''search'' through your command history, either using the \verb|history| command, or using \verb|Ctrl-R|:
+A powerful feature is that you can ''search'' through your command history, either using the \lstinline|history| command, or using \lstinline|Ctrl-R|:
 
 \begin{prompt}
 %\shellcmd{history}%
@@ -71,7 +71,7 @@ A powerful feature is that you can ''search'' through your command history, eith
 \end{prompt}
 
 \subsection{Stopping commands}
-If for any reason you want to stop a command from executing, press \verb|Ctrl-C|. For
+If for any reason you want to stop a command from executing, press \lstinline|Ctrl-C|. For
 example, if a command is taking too long, or you want to rerun it with different arguments.
 
 \section{Variables}
@@ -80,11 +80,11 @@ At the prompt we also have access to shell variables, which have both a \emph{na
 
 They can be thought of as placeholders for things we need to remember.
 
-For example, to print the path to your home directory, we can use the shell variable named \verb|HOME|:
+For example, to print the path to your home directory, we can use the shell variable named \lstinline|HOME|:
 
 \begin{prompt}
 %\shellcmd{echo \$HOME}%
-%\homedir%
+%\homedir{}%
 \end{prompt}
 
 This prints the value of this variable.
@@ -92,35 +92,35 @@ This prints the value of this variable.
 \subsection{Defining variables}
 
 There are several variables already defined for you when you start your
-session, such as \verb|$HOME| which contains the path to your home directory.
+session, such as \lstinline|$HOME| which contains the path to your home directory.
 
 For a full overview of defined environment variables in your current session,
-you can use the \verb|env| command. You can sort this output with \verb|sort|
+you can use the \lstinline|env| command. You can sort this output with \lstinline|sort|
 to make it easier to search in:
 
 \begin{prompt}
 %\shellcmd{env | sort}%
 ...
-HOME=%\homedir%
+HOME=%\homedir{}%
 ...
 \end{prompt}
 
-You can also use the \verb|grep| command to search for a piece of text. The
+You can also use the \lstinline|grep| command to search for a piece of text. The
 following command will output all VSC-specific variable names and their values:
 
 \begin{prompt}
 %\shellcmd{env | sort | grep VSC}%
 \end{prompt}
 
-But we can also define our own. this is done with the \verb|export| command (note:
+But we can also define our own. this is done with the \lstinline|export| command (note:
 variables are always all-caps as a convention):
 
 \begin{prompt}
 %\shellcmd{export MYVARIABLE="value"}%
 \end{prompt}
 
-It is important you don't include spaces around the \verb|=| sign. Also note
-the lack of \verb|$| sign in front of the variable name.
+It is important you don't include spaces around the \lstinline|=| sign. Also note
+the lack of \lstinline|$| sign in front of the variable name.
 
 If we then do
 
@@ -128,29 +128,29 @@ If we then do
 %\shellcmd{echo \$MYVARIABLE}%
 \end{prompt}
 
-this will output \verb|value|. Note that the quotes are not included, they were
+this will output \lstinline|value|. Note that the quotes are not included, they were
 only used when defining the variable to escape potential spaces in the value.
 
 \subsubsection{Changing your prompt using \texttt{\$PS1}}
 
 You can change what your prompt looks like by redefining the special-purpose
-variable \verb|$PS1|.
+variable \lstinline|$PS1|.
 
 For example: to include the current location in your prompt:
 
 \begin{prompt}
-%\shellcmd{export PS1='\textbackslash w \$'}%
+%\shellcmd{export PS1='\textbackslash{w} \$'}%
 ~ $ cd test
 ~/test $
 \end{prompt}
 
-Note that \verb|~| is short representation of your home directory.
+Note that \lstinline|~| is short representation of your home directory.
 
 To make this persistent across session, you can define this custom value for
-\verb|$PS1| in your \verb|.profile| startup script:
+\lstinline|$PS1| in your \lstinline|.profile| startup script:
 
 \begin{prompt}
-%\shellcmd{echo 'export PS1="\textbackslash w \$ " ' $>$$>$ ~/.profile}%
+%\shellcmd{echo 'export PS1="\textbackslash{w} \$ " ' $>$$>$ ~/.profile}%
 \end{prompt}
 
 \subsection{Using non-defined variables}
@@ -165,20 +165,20 @@ This may lead to surprising results, for example:
 %\shellcmd{export WORKDIR=/tmp/test}%
 %\shellcmd{cd \$WROKDIR}%
 %\shellcmd{pwd}%
-%\homedir%
+%\homedir{}%
 %\shellcmd{echo \$HOME}%
-%\homedir%
+%\homedir{}%
 \end{prompt}
 
-To understand what's going on here, see the section on \verb|cd| below.
+To understand what's going on here, see the section on \lstinline|cd| below.
 
 The moral here is: \strong{be very careful to not use empty variables unintentionally}.
 
 \strong{Tip for job scripts: use \texttt{set -e -u} to avoid using empty variables accidentally.}
 
-The \verb|-e| option will result in the script getting stopped if any command fails.
+The \lstinline|-e| option will result in the script getting stopped if any command fails.
 
-The \verb|-u| option will result in the script getting stopped if empty variables are used.
+The \lstinline|-u| option will result in the script getting stopped if empty variables are used.
 (see \url{https://ss64.com/bash/set.html} for a more detailed explanation and more options)
 
 More information can be found at \url{http://www.tldp.org/LDP/abs/html/variables.html} .
@@ -217,5 +217,5 @@ And quering some basic information about the Linux kernel:
     \item Determine the name of the environment variable to your personal scratch directory
     \item What's the name of the system you're logged into? Is it the same for everyone?
     \item Figure out how to print the value of a variable without including a newline
-    \item How do you get help on using the \verb|man| command?
+    \item How do you get help on using the \lstinline|man| command?
 \end{itemize}

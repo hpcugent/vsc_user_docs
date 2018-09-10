@@ -2,7 +2,7 @@
 \label{ch:compiling-and-testing-your-software-on-the-hpc}
 
 All nodes in the \hpc cluster are running the ``\operatingsystem'' Operating
-system, which is a specific version of RedHat-Linux. This means that all the
+system, which is a specific version of \operatingsystembase. This means that all the
 software programs (executable) that the end-user wants to run on the \hpc first
 must be compiled for \operatingsystem.  It also means that you first have to
 install all the required external software packages on the \hpc.
@@ -74,7 +74,7 @@ A typical process looks like:
 \item  Start an interactive session on a compute node;
 \item  Compile it;
 \item  Test it locally;
-\item  Generate your job-scripts;
+\item  Generate your job scripts;
 \item  Test it on the \hpc
 \item  Run it (in parallel);
 \end{enumerate}
@@ -83,7 +83,7 @@ We assume you've copied your software to the \hpc The next step is to request yo
 
 \begin{prompt}
 %\shellcmd{qsub -I}%
-qsub: waiting for job %\jobid% to start
+qsub: waiting for job %\jobid{}% to start
 \end{prompt}
 
 \subsection{Compiling a sequential program in C}
@@ -93,7 +93,7 @@ Go to the examples for
 module:
 
 \begin{prompt}
-%\shellcmd{cd ~/\exampledir}%
+%\shellcmd{cd ~/\exampledir{}}%
 %\shellcmd{module load foss}%
 \end{prompt}
 
@@ -103,10 +103,10 @@ program:
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 512
--rw-r--r-- 1 %\userid% 214 Sep 16 09:42 hello.c
--rw-r--r-- 1 %\userid% 130 Sep 16 11:39 hello.pbs*
--rw-r--r-- 1 %\userid% 359 Sep 16 13:55 mpihello.c
--rw-r--r-- 1 %\userid% 304 Sep 16 13:55 mpihello.pbs
+-rw-r--r-- 1 %\userid{}% 214 Sep 16 09:42 hello.c
+-rw-r--r-- 1 %\userid{}% 130 Sep 16 11:39 hello.pbs*
+-rw-r--r-- 1 %\userid{}% 359 Sep 16 13:55 mpihello.c
+-rw-r--r-- 1 %\userid{}% 304 Sep 16 13:55 mpihello.pbs
 \end{prompt}
 
 \examplecode{C}{hello.c}
@@ -124,9 +124,9 @@ then we compile and list the contents of the directory again:
 %\shellcmd{gcc -o hello hello.c}%
 %\shellcmd{ls -l}%
 total 512
--rwxrwxr-x 1 %\userid% 7116 Sep 16 11:43 hello*
--rw-r--r-- 1 %\userid%  214 Sep 16 09:42 hello.c
--rwxr-xr-x 1 %\userid%  130 Sep 16 11:39 hello.pbs*
+-rwxrwxr-x 1 %\userid{}% 7116 Sep 16 11:43 hello*
+-rw-r--r-- 1 %\userid{}%  214 Sep 16 09:42 hello.c
+-rwxr-xr-x 1 %\userid{}%  130 Sep 16 11:39 hello.pbs*
 \end{prompt}
 
 A new file ``hello'' has been created. Note that this file has ``execute''
@@ -149,7 +149,7 @@ Hello #1
 Hello #2
 Hello #3
 Hello #4
-%\dots%
+%\dots{}%
 \end{prompt}
 
 
@@ -162,7 +162,7 @@ It seems to work, now run it on the \hpc
 \subsection{Compiling a parallel program in C/MPI}
 
 \begin{prompt}
-%\shellcmd{cd ~/\exampledir}%
+%\shellcmd{cd ~/\exampledir{}}%
 \end{prompt}
 
 List the directory and explore the contents of the ``\textit{mpihello.c}'' program:
@@ -171,10 +171,10 @@ List the directory and explore the contents of the ``\textit{mpihello.c}'' progr
 %\shellcmd{ls -l}%
 total 512
 total 512
--rw-r--r-- 1 %\userid% 214 Sep 16 09:42 hello.c
--rw-r--r-- 1 %\userid% 130 Sep 16 11:39 hello.pbs*
--rw-r--r-- 1 %\userid% 359 Sep 16 13:55 mpihello.c
--rw-r--r-- 1 %\userid% 304 Sep 16 13:55 mpihello.pbs
+-rw-r--r-- 1 %\userid{}% 214 Sep 16 09:42 hello.c
+-rw-r--r-- 1 %\userid{}% 130 Sep 16 11:39 hello.pbs*
+-rw-r--r-- 1 %\userid{}% 359 Sep 16 13:55 mpihello.c
+-rw-r--r-- 1 %\userid{}% 304 Sep 16 13:55 mpihello.pbs
 \end{prompt}
 
 \examplecode{C}{mpihello.c}
@@ -212,7 +212,7 @@ We will now compile the same program, but using the Intel Parallel Studio
 Cluster Edition compilers. We stay in the examples directory for this chapter:
 
 \begin{prompt}
-%\shellcmd{cd \tilde/\exampledir}%
+%\shellcmd{cd \tilde{}/\exampledir{}}%
 \end{prompt}
 
 We will compile this C/MPI -file into an executable with the Intel Parallel Studio

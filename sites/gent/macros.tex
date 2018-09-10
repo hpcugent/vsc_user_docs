@@ -17,6 +17,13 @@
 % awk '{print $2}' ssh_host_rsa_key.pub | base64 -d | sha256sum -b | awk '{print $1}' | xxd -r -p | base64
 % ssh-keygen -l -f key.pub
 
+% For openssh:
+% ssh-keyscan login.hpc.ugent.be 2>/dev/null | ssh-keygen -l -f - | awk '{ print $4 " key fingerprint is " $2}' | sed 's/.*(\(.*\))/\1/'
+% ssh-keyscan login.hpc.ugent.be 2>/dev/null | ssh-keygen -l -f - -E md5 | awk '{ print $4 " key fingerprint is " $2}' | sed 's/.*(\(.*\))/\1/' | sed 's/MD5://g'
+
+% For putty:
+% ssh-keyscan login.hpc.ugent.be 2>/dev/null | ssh-keygen -l -f - -E md5 | awk '{ print "ssh-" $4 " " $1 " " $2}' | sed -E 's/\(([^()]*)\)/\1/' | sed 's/MD5://g' | tr '[:upper:]' '[:lower:]'
+
 \newcommand{\opensshFirstConnect}{RSA key fingerprint is 2f:0c:f7:76:87:57:f7:5d:2d:7b:d1:a1:e1:86:19:f3
 
 RSA key fingerprint is SHA256:k+eqH4D4mTpJTeeskpACyouIWf+60sv1JByxODjvEKE
@@ -56,7 +63,6 @@ ED25519 key fingerprint is SHA256:5hnjlJLolblqkKCmRduiWA21DsxJcSlpVoww0GLlagc
 \macro{\hpcusersml}{hpc-users@lists.ugent.be}
 \macro{\hpcannounceml}{hpc-announce@lists.ugent.be}
 \macro{\operatingsystem}{CentOS 7.5 (delcatty, golett, phanpy, skitty, swalot, victini)}
-\macro{\operatingsystemRHEL}{Red Hat Enterprise Linux}
 \macro{\operatingsystembase}{Red Hat Enterprise Linux}
 % special for perfexpert tutorial
 \macro{\mpirun}{vsc-mympirun}

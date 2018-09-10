@@ -32,64 +32,80 @@ quotas and how to use the storage endpoints in an efficient way.
 \section{Issues connecting to login node}
 \label{sec:connecting-issues}
 
-If you're confused about the SSH public/private key pair concept, maybe the
+If you are confused about the SSH public/private key pair concept, maybe the
 key/lock analogy in \autoref{subsec:how-do-ssh-keys-work} can help.
 
 If you have errors that look like:
 
 \begin{prompt}
-%\userid{}%@%\loginnode%: Permission denied
+%\userid{}%@%\loginnode{}%: Permission denied
 \end{prompt}
 
 or you are experiencing problems with connecting, here is a list of things to do
 that should help:
 
 \begin{enumerate}
-    \item Keep in mind that it an take uup to an hour for your VSC account to become
+    \item Keep in mind that it an take up to an hour for your VSC account to become
         active after it has been \emph{approved}; until then, logging in to your VSC
         account will not work.
 \ifmacORlinux
-    \item Your SSH private key may not be in the default location (\verb|$HOME/.ssh/id_rsa|).
+    \item Your SSH private key may not be in the default location (\lstinline|$HOME/.ssh/id_rsa|).
         There are several ways to deal with this (using one of these is sufficient):
 \begin{enumerate}
-            \item Use the \verb|ssh -i| (see section~\ref{sec:connect}) \emph{OR;}
-            \item Use \verb|ssh-add| (see section~\ref{sec:using-ssh-agent-with-openssh}) \emph{OR;}
-            \item Specify the location of the key in \verb|$HOME/.ssh/config|. You will
-                need to replace the VSC login id in the \verb|User| field with your own:
+            \item Use the \lstinline|ssh -i| (see section~\ref{sec:connect}) \emph{OR;}
+            \item Use \lstinline|ssh-add| (see section~\ref{sec:using-ssh-agent-with-openssh}) \emph{OR;}
+            \item Specify the location of the key in \lstinline|$HOME/.ssh/config|. You will
+                need to replace the VSC login id in the \lstinline|User| field with your own:
 
             \begin{prompt}
-Host %\hpcname%
-    Hostname %\loginnode%
+Host %\hpcname{}%
+    Hostname %\loginnode{}%
     IdentityFile %\emph{/path/to/private/key}%
-    User %\emph{\userid}%\end{prompt}
+    User %\emph{\userid{}}%\end{prompt}
 
     Now you can just connect with \texttt{ssh \hpcname}.
 \end{enumerate}
 \fi
         \item Please double/triple check your VSC login ID. It should look
-            something like \emph{\userid}: the letters \verb|vsc|, followed
+            something like \emph{\userid}: the letters \lstinline|vsc|, followed
             by exactly 5 digits. Make sure it's the same one as the one on
             \url{https://account.vscentrum.be/}.
         \item You previously connected to the \hpc from another machine, but now
             have another machine? Please follow the procedure for adding additional
             keys in section~\ref{sec:adding-multiple-keys}. You may need to wait
             for 15-20 minutes until the SSH public key(s) you added become active.
-        \item \ifwindows Make sure you're using the private key (not the public key) when trying to connect:
+        \item \ifwindows Make sure you are using the private key (not the public key) when trying to connect:
             If you followed the manual, the private key filename should end in
-            \verb|.ppk| (not in \verb|.pub|).
+            \lstinline|.ppk| (not in \lstinline|.pub|).
             \else
             When using an SSH key in a non-default location, make sure you supply
             the path of the private key (and not the path of the public key)
-            to \verb|ssh|. \verb|id_rsa.pub| is the usual filename of the public
-            key, \verb|id_rsa| is the usual filename of the private key.
+            to \lstinline|ssh|. \lstinline|id_rsa.pub| is the usual filename of the public
+            key, \lstinline|id_rsa| is the usual filename of the private key.
             (See also section~\ref{sec:connect})
             \fi
         \item If you have multiple private keys on your machine, please make sure
-            you're using the one that corresponds to (one of) the public key(s) you
+            you are using the one that corresponds to (one of) the public key(s) you
             added on \url{https://account.vscentrum.be/}.
         \item Please do not use someone else's private keys. You must never
             share your private key, they're called \emph{private} for a good reason.
 \end{enumerate}
+
+\ifwindows
+
+If you are using PuTTY and get this error message:
+
+\begin{prompt}
+server unexpectedly closed network connection
+\end{prompt}
+
+it is possible that the PuTTY version you are using is too old and doesn't
+support some required (security-related) features.
+
+Make sure you are using the latest PuTTY version if you are encountering problems
+connecting (see \autoref{sec:install-putty}). If that doesn't help, please contact \hpcinfo.
+
+\fi
 
 If you've tried all applicable items above and it doesn't solve your problem,
 please contact \hpcinfo and include the following information:
@@ -99,14 +115,68 @@ Please create a log file of your SSH session by following the steps
 in \href{https://my.kualo.com/knowledgebase/?kbcat=0&article=888}{this article}
 and include it in the email.
 \else
-Please add \verb|-vvv| as a flag to \verb|ssh| like:
+Please add \lstinline|-vvv| as a flag to \lstinline|ssh| like:
 
 \begin{prompt}
-%\shellcmd{ssh -vvv \userid{}@\loginnode}%
+%\shellcmd{ssh -vvv \userid{}@\loginnode{}}%
 \end{prompt}
 
 and include the output of that command in the message.
 \fi
+
+\section{Security warning about invalid host key}
+\label{sec:security-warning-invald-host-key}
+
+If you get a warning that looks like the one below, it is possible
+that someone is trying to intercept the connection between you and the system you are connecting to.
+Another possibility is that the host key of the system you are connecting to has changed.
+
+\ifmacORlinux
+
+\begin{prompt}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ECDSA key sent by the remote host is
+SHA256:1MNKFTfl1T9sm6tTWAo4sn7zyEfiWFLKbk/mlT+7S5s.
+Please contact your system administrator.
+Add correct host key in ~/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in ~/.ssh/known_hosts:%\strong{21}%
+ECDSA host key for %\loginnode{}% has changed and you have requested strict checking.
+Host key verification failed.
+\end{prompt}
+
+You will need to remove the line it's complaining about (in the example, line 21).
+To do that, open \lstinline|~/.ssh/config| in an editor, and remove the line. This
+results in \lstinline|ssh| ``forgetting'' the system you are connecting to.
+
+After you've done that, you'll need to connect to the \hpc again.
+See \autoref{sec:warning-message-new-host} to verify the fingerprints.
+\strong{It's important to verify the fingerprints. If they don't match,
+do \emph{not} connect and contact \hpcinfo instead.}
+
+\else
+
+You will need to verify that the fingerprint shown in the dialog matches one of the
+following fingerprints:
+
+\puttyFirstConnect
+
+\strong{Do not click ``Yes'' until you verified the fingerprint. Do not press ``No'' in any case.}.
+
+If it the fingerprint matches, click ``Yes''.
+
+If it doesn't (like in the example) or you are in doubt, take a screenshot, press ``Cancel'' and contact \hpcinfo.
+
+
+\includegraphics[width=0.5\textwidth]{putty_security_alert}
+
+
+\fi
+
 
 \section{DOS/Windows text format}
 
@@ -118,7 +188,7 @@ qsub:  script is written in DOS/Windows text format
 \end{prompt}
 
 It's probably because you transferred the files from a Windows computer.
-Please go to the section about \verb|dos2unix| in \href{\LinuxManualURL#sec:dos2unix}{chapter 5 of the intro to Linux}
+Please go to the section about \lstinline|dos2unix| in \href{\LinuxManualURL#sec:dos2unix}{chapter 5 of the intro to Linux}
 to fix this error.
 
 \section{Warning message when first connecting to new host}
@@ -127,8 +197,7 @@ to fix this error.
 \ifmacORlinux
 \begin{prompt}
 %\shellcmd{ssh \userid{}@\loginnode{}}%
-The authenticity of host %\loginnode% (<IP-adress>)
-can't be established.
+The authenticity of host %\loginnode{}% (<IP-adress>) can't be established.
 %\underline{<algorithm> key fingerprint is <hash>}%
 Are you sure you want to continue connecting (yes/no)?
 \end{prompt}
@@ -136,7 +205,7 @@ Are you sure you want to continue connecting (yes/no)?
 Now you can check the authenticity by checking if the line that is at the place
 of the underlined piece of text matches one of the following lines:
 \begin{prompt}
-%\opensshFirstConnect%
+%\opensshFirstConnect{}%
 \end{prompt}
 
 If it does, type  \strong{\emph{yes}}. If it doesn't, please contact support: \hpcinfo.
@@ -154,13 +223,13 @@ It is possible to specify higher memory limits if your jobs require this.
 If your program fails with a memory-related issue, there is a good chance it failed
 because of the memory limits and you should increase the memory limits for your job.
 
-Examples of these error messages are: \verb|malloc failed|, \verb|Out of memory|,
-\verb|Could not allocate memory|
-or in Java: \verb|Could not reserve enough space for object heap|. Your program can
-also run into a \verb|Segmentation fault| (or \verb|segfault|) or crash due to bus errors.
+Examples of these error messages are: \lstinline|malloc failed|, \lstinline|Out of memory|,
+\lstinline|Could not allocate memory|
+or in Java: \lstinline|Could not reserve enough space for object heap|. Your program can
+also run into a \lstinline|Segmentation fault| (or \lstinline|segfault|) or crash due to bus errors.
 
 You can check the amount of virtual memory (in Kb) that is available to you via the
-\verb|ulimit -v| command \emph{in your jobscript}.
+\lstinline|ulimit -v| command \emph{in your jobscript}.
 
 \subsection{How do I specify the amount of memory I need?}
 
@@ -175,8 +244,8 @@ see \autoref{sec:specifying-memory-requirements} to finetune the amount of memor
 
 Modules that are loaded together must use the same toolchain version:
 it is impossible to load two versions of the same module. In the following
-example, we try to load a module that uses the \verb|intel-2018a| toolchain
-together with one that uses the \verb|intel-2017a| toolchain:
+example, we try to load a module that uses the \lstinline|intel-2018a| toolchain
+together with one that uses the \lstinline|intel-2017a| toolchain:
 
 \begin{prompt}
 %\shellcmd{module load Python/2.7.14-intel-2018a}%
@@ -194,22 +263,22 @@ While processing the following module(s):
 \end{prompt}
 
 This resulted in an error because we tried to load two different versions of the
-\verb|intel| module.
+\lstinline|intel| module.
 
 To fix this, check if there are other versions of the modules you want to load
 that have the same version of common dependencies. You can list all versions of
-a module with \verb|module avail|: for \verb|HMMER|, this command is \verb|module avail HMMER|.
+a module with \lstinline|module avail|: for \lstinline|HMMER|, this command is \lstinline|module avail HMMER|.
 
 Another common error is:
 
 \begin{prompt}
-%\shellcmd{module load cluster/\othercluster}%
+%\shellcmd{module load cluster/\othercluster{}}%
 Lmod has detected the following error:  A different version of the 'cluster' module is already loaded (see output of 'ml').
 
 If you don't understand the warning or error, contact the helpdesk at hpc@ugent.be
 \end{prompt}
 
-This is because there can only be one \verb|cluster| module active at a time.
+This is because there can only be one \lstinline|cluster| module active at a time.
 The correct command is \texttt{module \emph{swap} cluster/\othercluster}. See
 also \autoref{subsec:specifying-the-cluster-on-which-to-run}.
 \fi
@@ -278,7 +347,7 @@ The following have been reloaded with a version change:
 \end{prompt}
 
 This might result in the same problems as mentioned above. When swapping to a
-different cluster, you can run \verb|module purge| to unload all modules to avoid problems
+different cluster, you can run \lstinline|module purge| to unload all modules to avoid problems
 (see \autoref{subsec:purging-modules}).
 
 \fi
