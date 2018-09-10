@@ -47,7 +47,7 @@ hello2
 
 \lstinline|<| reads a file from standard input (piped or typed input).  So you would use
 this to simulate typing into a terminal. \lstinline|< somefile.txt| is largely equivalent to
-\verb=cat somefile.txt | =.
+\lstinline=cat somefile.txt | =.
 
 One common use might be to take the the results of a long running command and
 store the results in a file so you don't have to repeat it while you refine your
@@ -87,7 +87,7 @@ one.txt
 \section{Command piping}
 
 Part of the power of the command line is to string multiple commands together to
-create useful results. The core of these is the pipe: \verb=|=. For example to see
+create useful results. The core of these is the pipe: \lstinline=|=. For example to see
 the number of files in a directory, we can pipe the (\lstinline|stdout|) output of
 \lstinline|ls| to \lstinline|wc| (\strong{w}ord \strong{c}ount, but can also be used
 to count the number of lines with the \lstinline|-l| flag).
