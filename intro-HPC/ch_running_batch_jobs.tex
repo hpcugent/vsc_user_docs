@@ -272,10 +272,22 @@ examplemodule/1.2.3-foss-2018a
 
 \end{prompt}
 
-\ifantwerpen
 Lets now generate a version conflict with the \lstinline|thirdexample| module, and see what
 is happening.
 
+\ifusinglmod
+\begin{prompt}
+%\shellcmd{module av thirdexample/}%
+thirdexample/1.2.3
+thirdexample/4.5.6
+thirdexample/6.7.8
+%\shellcmd{module load thirdexample/1.2.3}%
+%\shellcmd{module load thirdexample/4.5.6}%
+Lmod has detected the following error:  A different version of the 'thirdexample'
+module is already loaded (see output of 'ml').
+%\shellcmd{module swap thirdexample/4.5.6}%
+\end{prompt}
+\else
 \begin{prompt}
 %\shellcmd{module av thirdexample/}%
 thirdexample/1.2.3
