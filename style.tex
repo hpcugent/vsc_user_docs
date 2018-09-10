@@ -1,6 +1,5 @@
 \usepackage[english]{babel}
-\usepackage{amssymb}
-\usepackage{amsmath}
+% For links
 \usepackage{hyperref}
 
 \hypersetup{
@@ -10,25 +9,34 @@
     urlcolor=blue,
 }
 
-% allow conditional compilation
-\usepackage{etoolbox}
 \usepackage[toc,nonumberlist]{glossaries}
 \usepackage{makeidx}
 
 \usepackage{color}
+% Inline code and code blocks
 \usepackage{listings}
-\usepackage{tikz}
+% Font encoding so accents work
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
+% Nicer tables
 \usepackage{array}
 \usepackage{multirow}
+% SubString functions
 \usepackage{substr}
+% More string functions (StrSubstitute, ...)
 \usepackage{xstring}
+% Display latex code in style guide
 \usepackage{verbatim}
+% Font inside texttt
 \usepackage{courier}
+% Provides NewDocumentEnvironment, ...
 \usepackage{xparse}
+% Multi-page table
 \usepackage{longtable}
+% Provides \keys and menu navigation
 \usepackage{menukeys}
+
+% Set typewriter font to courier
 \renewcommand{\ttdefault}{pcr}
 
 \setlength{\hoffset}{-1in}
@@ -40,6 +48,7 @@
 \setlength{\textwidth}{16cm}
 \setlength{\textheight}{23.3cm}
 \setlength{\footskip}{1.5cm}
+% Fancy header
 \usepackage{fancyhdr}
 
 \pagestyle{fancy}
@@ -65,7 +74,6 @@
 
 \lstset{basicstyle=\ttfamily,breaklines=true, keepspaces=true}
 \lstdefinestyle{prompt}{
-% language=bash,
   basicstyle=\footnotesize\ttfamily,
   frame=tblr,
   columns=fullflexible,
@@ -226,17 +234,11 @@
   \ifantwerpen
     \input{../sites/antwerpen/#1}
   \fi
-  \ifhasselt
-    \input{../sites/hasselt/#1}
-  \fi
   \ifbrussel
     \input{../sites/brussel/#1}
   \fi
   \ifgent
     \input{../sites/gent/#1}
-  \fi
-  \iftacc
-    \input{../sites/tacc/#1}
   \fi
 }
 \newcommand{\inputsite}[1]{
@@ -246,17 +248,11 @@
   \ifantwerpen
     \input{../sites/antwerpen/#1}
   \fi
-  \ifhasselt
-    \input{../sites/hasselt/#1}
-  \fi
   \ifbrussel
     \input{../sites/brussel/#1}
   \fi
   \ifgent
     \input{../sites/gent/#1}
-  \fi
-  \iftacc
-    \input{../sites/tacc/#1}
   \fi
 }
 
@@ -266,25 +262,18 @@
 \newif\ifmac
 \newif\ifmacORlinux
 \newif\ifleuven
-\newif\ifhasselt
-\newif\ifleuvenORhasselt
 \newif\ifbrussel
 \newif\ifgent
 \newif\ifantwerpen
-\newif\iftacc
-\newif\ifvsc
 \newif\ifusinglmod
 
 \windowsfalse
 \linuxfalse
 \macfalse
 \leuvenfalse
-\hasseltfalse
 \brusselfalse
 \gentfalse
 \antwerpenfalse
-\taccfalse
-\vscfalse
 \usinglmodfalse
 
 \ifdefined\iswindows
@@ -300,28 +289,15 @@
 \fi
 \ifdefined\isleuven
   \leuventrue
-  \leuvenORhasselttrue
-  \vsctrue
-\fi
-\ifdefined\ishasselt
-  \hasselttrue
-  \leuvenORhasselttrue
-  \vsctrue
 \fi
 \ifdefined\isbrussel
   \brusseltrue
-  \vsctrue
   \usinglmodtrue
 \fi
 \ifdefined\isgent
   \genttrue
-  \vsctrue
   \usinglmodtrue
 \fi
 \ifdefined\isantwerpen
   \antwerpentrue
-  \vsctrue
-\fi
-\ifdefined\istacc
-  \tacctrue
 \fi

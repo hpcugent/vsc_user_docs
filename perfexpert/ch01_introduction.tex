@@ -47,39 +47,23 @@ You can now create your own copy of the examples by copying the examples for thi
 The runs with PerfExpert should be made using a data set size for each compute node which is representative to a full production runs but for which execution time is not more than about ten or fifteen minutes since PerfExpert will run your application multiple times (actually, three times on Stampede) with different performance counters enabled.
 
 For that reason, before you run PerfExpert for your own purpose later, you should either request interactive access to computational resources (compute node), or modify the job script that you use to run your application and specify a running time that is about
-\iftacc
-  3 (for Stampede) or 6 (for Lonestar)
-\else
-  3 (for \hpcname)
-\fi
- times the normal running time of the program.
+3 (for \hpcname)
+times the normal running time of the program.
 
 For the exercises in this tutorial, we request interactive access on a compute node to work on for, e.g., 2 hours:
 
-\iftacc
-\begin{prompt}
-%\shellcmd{idev -t 2:00:00}%
-\end{prompt}
-\fi
-\ifvsc
 \begin{prompt}
 %\shellcmd{qsub -l walltime=2:00:00 -l nodes=1:ppn=4 -I}%
 \end{prompt}
-\fi
 
 PerfExpert depends on HPCToolkit, and PAPI library, thus it requires the papi, hpctoolkit, and perfexpert modules to be loaded. The ``module help'' command provides additional information.
 
 And load the appropriate modules:
-\iftacc
-\begin{prompt}
-%\shellcmd{module load papi hpctoolkit perfexpert}%
-\end{prompt}
-\fi
-\ifvsc
+
 \begin{prompt}
 %\shellcmd{module load PerfExpert}%
 \end{prompt}
-\fi
+
 \ifbrussel
 \begin{prompt}
 %\shellcmd{module load openmpi/1.6.5/gcc/4.8.2}%
