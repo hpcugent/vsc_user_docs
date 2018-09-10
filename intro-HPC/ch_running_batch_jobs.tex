@@ -314,14 +314,56 @@ To get a list of all possible commands, type:
 
 Or to get more information about one specific module package:
 
-\ifantwerpen
 \begin{prompt}
 %\shellcmd{module help examplemodule}%
 ----------- Module Specific Help for 'examplemodule/1.2.3-intel-2018a' ---------------------------
 
    This is a module that doesn't really exist. It can be used to do things. - Homepage: https://example.com/
 \end{prompt}
+
+\ifusinglmod
+\subsection{Save and load collections of modules}
+If you have a set of modules that you need to load often,
+you can save these in a \emph{collection}. This will enable you to load all the
+module you need with a single command.
+
+First, load all modules you want to include in the collections:
+
+\begin{prompt}
+%\shellcmd{module load \emph{examplemodule/1.2.3-intel-2018a} \emph{secondexample/2.7-intel-2018a}}%
+\end{prompt}
+
+Now store it in a collection using \lstinline|ml save|. In this example, the collection
+is named \lstinline|my-collection|.
+
+\begin{prompt}
+%\shellcmd{module save \emph{my-collection}}%
+\end{prompt}
+
+Later, for example in a jobscript or a new session, you can load all these modules with
+\lstinline|module restore|:
+
+\begin{prompt}
+%\shellcmd{module restore \emph{my-collection}}%
+\end{prompt}
+
+You can get a list of all your saved collections with the \lstinline|module savelist|
+command.
+
+To get a list of all modules a collection will load, you can use the \lstinline|module describe|
+command:
+\begin{prompt}
+%\shellcmd{module describe \emph{my-collection}}%
+1) examplemodule/1.2.3-intel-2018a        3) intel/2018a
+2) examplelib/1.2-intel-2014b             4) secondexample/2.7-intel-2018a
+\end{prompt}
 \fi
+
+To remove a collection, remove the corresponding file in \lstinline|$HOME/.lmod.d|:
+
+\begin{prompt}
+%\shellcmd{rm \$HOME/.lmod.d/my-collection}%
+\end{prompt}
 
 \section{Defining and submitting your job}
 
