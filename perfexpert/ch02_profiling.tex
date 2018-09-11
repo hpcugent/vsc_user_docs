@@ -22,7 +22,7 @@ Different profiling tools exist. These tools do not compete, but complement each
 First we, go to the directory of the examples of Chapter02:
 
 \begin{prompt}
-%\shellcmd{cd ~/\exampledir}%
+%\shellcmd{cd ~/\exampledir{}}%
 \end{prompt}
 
 \subsection{Profiling with PerfExpert}
@@ -43,17 +43,9 @@ PerfExpert utilises knowledge of architectures and compilers to implement (parti
 
 Remember to load the appropriate PerfExpert modules:
 
-\iftacc
-\begin{prompt}
-%\shellcmd{module load papi hpctoolkit perfexpert}%
-%\shellcmd{module load GCC}%
-\end{prompt}
-\fi
-\ifvsc
 \begin{prompt}
 %\shellcmd{module load PerfExpert}%
 \end{prompt}
-\fi
 
 For our first example, we'll use a simple serial 1000 $\times$ 1000 matrix multiplication program. Check out the program ``mm.c'', compile and run it.
 
@@ -665,4 +657,3 @@ We notice in this example that:
 This \emph{analysis} indicates a \emph{performance} issue related to the \emph{slow floating-point calculations}. Just the square root operations (calls to libm) are responsible for 28\% of the runtime, so an improvement might heavily impact to total runtime.
 
 As a general rule of thumb: Both floating-point division and square root are considered as slow operations. Addition, subtraction and multiplication are fast FP operations. Square root can be expect to be approximately the same speed or somewhat slower (i.e., approx. 1$\times$ - 2$\times$ lower performance) compared to a division.
-

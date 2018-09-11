@@ -13,7 +13,7 @@ collect your results.
 First go to the directory:
 
 \begin{prompt}
-%\shellcmd{cd ~/\exampledir}%
+%\shellcmd{cd ~/\exampledir{}}%
 \end{prompt}
 
 List and check the contents with:
@@ -21,14 +21,14 @@ List and check the contents with:
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 2304
--rwxrwxr-x 1 %\userid%  682 Sep 13 11:34 file1.py
--rw-rw-r-- 1 %\userid%  212 Sep 13 11:54 file1a.pbs
--rw-rw-r-- 1 %\userid%  994 Sep 13 11:53 file1b.pbs
--rw-rw-r-- 1 %\userid%  994 Sep 13 11:53 file1c.pbs
--rw-r--r-- 1 %\userid% 1393 Sep 13 10:41 file2.pbs
--rwxrwxr-x 1 %\userid% 2393 Sep 13 10:40 file2.py
--rw-r--r-- 1 %\userid% 1393 Sep 13 10:41 file3.pbs
--rwxrwxr-x 1 %\userid% 2393 Sep 13 10:40 file3.py
+-rwxrwxr-x 1 %\userid{}%  682 Sep 13 11:34 file1.py
+-rw-rw-r-- 1 %\userid{}%  212 Sep 13 11:54 file1a.pbs
+-rw-rw-r-- 1 %\userid{}%  994 Sep 13 11:53 file1b.pbs
+-rw-rw-r-- 1 %\userid{}%  994 Sep 13 11:53 file1c.pbs
+-rw-r--r-- 1 %\userid{}% 1393 Sep 13 10:41 file2.pbs
+-rwxrwxr-x 1 %\userid{}% 2393 Sep 13 10:40 file2.py
+-rw-r--r-- 1 %\userid{}% 1393 Sep 13 10:41 file3.pbs
+-rwxrwxr-x 1 %\userid{}% 2393 Sep 13 10:40 file3.py
 \end{prompt}
 
 Now, let us inspect the contents of the first executable (which is just a
@@ -62,17 +62,17 @@ directory where you executed the \emph{qsub} command:
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 3072
--rw-rw-r-- 1 %\userid%   90 Sep 13 13:13 Hello.txt
--rwxrwxr-x 1 %\userid%  693 Sep 13 13:03 file1.py*
--rw-rw-r-- 1 %\userid%  229 Sep 13 13:01 file1a.pbs
--rw------- 1 %\userid%   91 Sep 13 13:13 file1a.pbs.e%\jobnumber%
--rw------- 1 %\userid%  105 Sep 13 13:13 file1a.pbs.o%\jobnumber%
--rw-rw-r-- 1 %\userid%  143 Sep 13 13:07 file1b.pbs
--rw-rw-r-- 1 %\userid%  177 Sep 13 13:06 file1c.pbs
--rw-r--r-- 1 %\userid% 1393 Sep 13 10:41 file2.pbs
--rwxrwxr-x 1 %\userid% 2393 Sep 13 10:40 file2.py*
--rw-r--r-- 1 %\userid% 1393 Sep 13 10:41 file3.pbs
--rwxrwxr-x 1 %\userid% 2393 Sep 13 10:40 file3.py*
+-rw-rw-r-- 1 %\userid{}%   90 Sep 13 13:13 Hello.txt
+-rwxrwxr-x 1 %\userid{}%  693 Sep 13 13:03 file1.py*
+-rw-rw-r-- 1 %\userid{}%  229 Sep 13 13:01 file1a.pbs
+-rw------- 1 %\userid{}%   91 Sep 13 13:13 file1a.pbs.e%\jobnumber{}%
+-rw------- 1 %\userid{}%  105 Sep 13 13:13 file1a.pbs.o%\jobnumber{}%
+-rw-rw-r-- 1 %\userid{}%  143 Sep 13 13:07 file1b.pbs
+-rw-rw-r-- 1 %\userid{}%  177 Sep 13 13:06 file1c.pbs
+-rw-r--r-- 1 %\userid{}% 1393 Sep 13 10:41 file2.pbs
+-rwxrwxr-x 1 %\userid{}% 2393 Sep 13 10:40 file2.py*
+-rw-r--r-- 1 %\userid{}% 1393 Sep 13 10:41 file3.pbs
+-rwxrwxr-x 1 %\userid{}% 2393 Sep 13 10:40 file3.py*
 \end{prompt}
 
 Some observations:
@@ -86,9 +86,9 @@ Inspect their contents \dots\ and remove the files
 
 \begin{prompt}
 %\shellcmd{cat Hello.txt}%
-%\shellcmd{cat file1a.pbs.o\jobnumber}%
-%\shellcmd{cat file1a.pbs.e\jobnumber}%
-%\shellcmd{rm Hello.txt file1a.pbs.o\jobnumber file1a.pbs.e\jobnumber}%
+%\shellcmd{cat file1a.pbs.o\jobnumber{}}%
+%\shellcmd{cat file1a.pbs.e\jobnumber{}}%
+%\shellcmd{rm Hello.txt file1a.pbs.o\jobnumber{} file1a.pbs.e\jobnumber{}}%
 \end{prompt}
 
 \begin{tip}
@@ -110,8 +110,8 @@ Inspect the contents again \dots\ and remove the generated files:
 
 \begin{prompt}
 %\shellcmd{ls}%
-Hello.txt  file1a.pbs  file1c.pbs  file2.pbs  file3.pbs  my_serial_job.e%\jobnumber%
-file1.py*  file1b.pbs  file2.py*   file3.py*  my_serial_job.o%\jobnumber%
+Hello.txt  file1a.pbs  file1c.pbs  file2.pbs  file3.pbs  my_serial_job.e%\jobnumber{}%
+file1.py*  file1b.pbs  file2.py*   file3.py*  my_serial_job.o%\jobnumber{}%
 %\shellcmd{rm Hello.txt my\_serial\_job.*}%
 \end{prompt}
 
@@ -171,6 +171,7 @@ The following locations are available:
                          shared across all clusters of the VSC in the future. See \S\ref{subsec:scratch-directory}. \\ \hline
 \ifgent
 \$VSC\_SCRATCH\_CLUSTER & The scratch filesystem closest to this cluster.\\ \hline
+\$VSC\_SCRATCH\_PHANPY  & A separate (smaller) shared scratch filesystem, powered by SSDs. This scratch filesystem is intended for very I/O-intensive workloads.\\ \hline
 \fi
 \end{tabular}
 
@@ -188,7 +189,7 @@ We ellaborate more on the specific function of these locations in the following
 sections.
 
 \ifgent
-Note: \verb|$VSC_SCRATCH_KYUKON| and \verb|$VSC_SCRATCH| are the same directories
+Note: \lstinline|$VSC_SCRATCH_KYUKON| and \lstinline|$VSC_SCRATCH| are the same directories
 ("kyukon" is the name of the storage cluster where the default shared scratch filesystem is hosted).
 
 For documentation about VO directories, see \autoref{subsec:vo-directories}.
@@ -462,7 +463,7 @@ Check the Python and the PBS file, and submit the job:
 %\shellcmd{qstat}%
 %\shellcmd{ls -l}%
 %\shellcmd{more \$VSC\_SCRATCH/primes\_2.txt}%
-%\dots%
+%\dots{}%
 \end{prompt}
 
 \section{How much disk space do I get?}
@@ -630,10 +631,10 @@ in your home directory, even if you are currently in a different directory:
 
 \begin{prompt}
 %\shellcmd{du -h \$VSC\_HOME/*}%
-22M %\homedir/dataset01%
-36M %\homedir/dataset02%
-22M %\homedir/dataset03%
-3.5M %\homedir/primes.txt%
+22M %\homedir{}/dataset01%
+36M %\homedir{}/dataset02%
+22M %\homedir{}/dataset03%
+3.5M %\homedir{}/primes.txt%
 \end{prompt}
 
 \ifgent
@@ -669,7 +670,7 @@ Being in a VO allows for larger storage quota to be obtained
 
 \begin{enumerate}
     \item Get the VO id of the research group you belong to (this id is formed by
-        the letters \verb|gvo|, followed by 5 digits).
+        the letters \lstinline|gvo|, followed by 5 digits).
     \item Go to \url{https://account.vscentrum.be/django/vo/join} and fill in the
         section named ``Join VO''. You will be asked to fill in the VO id and a message for
         the moderator of the VO, where you identify yourself. This should look something
@@ -694,7 +695,7 @@ Being in a VO allows for larger storage quota to be obtained
         \autoref{fig:VO-new}.
     \item Fill why you want to request a VO.
     \item Fill out the both the internal and public VO name. These cannot contain
-        spaces, and should be 8-10 characters long. For example, \verb|genome25| is
+        spaces, and should be 8-10 characters long. For example, \lstinline|genome25| is
         a valid VO name.
     \item Fill out the rest of the form and press submit. This will send a message
         to the \hpc administrators, who will then either approve or deny the request.
@@ -718,8 +719,8 @@ its members.
     \item Go to \url{https://account.vscentrum.be/django/vo/edit} and scroll down
         to ``Request additional quota''. See \autoref{fig:VO-request-additional-quota} to see how this looks.
     \item Fill out how much \emph{additional} storage you want. In the screenshot below,
-        we're asking for 500 GiB extra space for \verb|VSC_DATA|, and for 1 TiB extra
-        space on \verb|VSC_SCRATCH_KYUKON|.
+        we're asking for 500 GiB extra space for \lstinline|VSC_DATA|, and for 1 TiB extra
+        space on \lstinline|VSC_SCRATCH_KYUKON|.
     \item Add a comment explaining why you need additional storage space and submit
         the form.
     \item An \hpc administrator will review your request and approve or deny it.
@@ -768,20 +769,20 @@ on each of the shared filesystems available:
     \item[VO scratch (\texttt{\$VSC\_SCRATCH\_VO})]
         A directory on the shared \emph{scratch} filesystem shared by the members of your
         VO, where additional storage quota can be provided (see \autoref{subsec:requesting-more-storage-space}).
-        You can use this as an alternative to your personal \verb|$VSC_SCRATCH|
+        You can use this as an alternative to your personal \lstinline|$VSC_SCRATCH|
         directory (see \autoref{subsec:scratch-directory}).
 
     \item[VO data (\texttt{\$VSC\_DATA\_VO})]
         A directory on the shared \emph{data} filesystem shared by the members of your
         VO, where additional storage quota can be provided (see \autoref{subsec:requesting-more-storage-space}).
-        You can use this as an alternative to your personal \verb|$VSC_DATA|
+        You can use this as an alternative to your personal \lstinline|$VSC_DATA|
         directory (see \autoref{subsec:data-directory}).
 
 \end{description}
 
-If you put \verb|_USER| after each of these variable names, you can see your
-personal folder in these filesystems. For example: \verb|$VSC_DATA_VO_USER|
+If you put \lstinline|_USER| after each of these variable names, you can see your
+personal folder in these filesystems. For example: \lstinline|$VSC_DATA_VO_USER|
 is your personal folder in your VO data filesystem (this is equivalent to
-\verb|$VSC_DATA_VO/$USER|), and analogous for \verb|$VSC_SCRATCH_VO_USER|.
+\lstinline|$VSC_DATA_VO/$USER|), and analogous for \lstinline|$VSC_SCRATCH_VO_USER|.
 
 \fi

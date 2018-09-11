@@ -7,8 +7,8 @@ realise that it's very practical to have such common commands short to type.
 
 \section{File contents: ``cat'', ``head'', ``tail'', ``less'', ``more''}
 
-To print the contents of an entire file, you can use \verb|cat|; to only see the
-first or last N lines, you can use \verb|head| or \verb|tail|:
+To print the contents of an entire file, you can use \lstinline|cat|; to only see the
+first or last N lines, you can use \lstinline|head| or \lstinline|tail|:
 
 \begin{prompt}
 %\shellcmd{cat one.txt}%
@@ -27,7 +27,7 @@ first or last N lines, you can use \verb|head| or \verb|tail|:
 5
 \end{prompt}
 
-To check the contents of long text files, you can use the \verb|less| or \verb|more|
+To check the contents of long text files, you can use the \lstinline|less| or \lstinline|more|
 commands which support scrolling with ``<up>'', ``<down>'', ``<space>'', etc.
 
 \section{Copying files: ``cp''}
@@ -36,7 +36,7 @@ commands which support scrolling with ``<up>'', ``<down>'', ``<space>'', etc.
 %\shellcmd{cp source target}%
 \end{prompt}
 
-This is the \verb|cp| command, which copies a file from source to target. To copy a directory, we use the \verb|-r| option:
+This is the \lstinline|cp| command, which copies a file from source to target. To copy a directory, we use the \lstinline|-r| option:
 
 \begin{prompt}
 %\shellcmd{cp -r sourceDirectory target}%
@@ -48,7 +48,7 @@ A last more complicated example:
 %\shellcmd{cp -a sourceDirectory target}%
 \end{prompt}
 
-Here we used the same \verb|cp| command, but instead we gave it the \verb|-a| option
+Here we used the same \lstinline|cp| command, but instead we gave it the \lstinline|-a| option
 which tells cp to copy all the files and keep timestamps and permissions.
 
 \section{Creating directories: ``mkdir''}
@@ -65,7 +65,7 @@ which will create a directory with the given name inside the current directory.
 %\shellcmd{mv source target}%
 \end{prompt}
 
-\verb|mv| will move the source path to the destination path. Works for both directories as files.
+\lstinline|mv| will move the source path to the destination path. Works for both directories as files.
 
 \section{Removing files: ``rm''}
 
@@ -76,15 +76,15 @@ remove files/directories, they are gone.}
 %\shellcmd{ rm filename}%
 \end{prompt}
 
-\verb|rm| will remove a file or directory. (\verb|rm -rf directory| will remove every
+\lstinline|rm| will remove a file or directory. (\lstinline|rm -rf directory| will remove every
 file inside a given directory). WARNING: files removed will be lost forever,
 there are no backups, so beware when using this command!
 
 \subsubsection{Removing a directory: ``rmdir''}
 
-You can remove directories using \verb|rm -r directory|, however, this is error
+You can remove directories using \lstinline|rm -r directory|, however, this is error
 prone and can ruin your day if you make a mistake in typing. To prevent this
-type of error, you can remove the contents of a directory using \verb|rm|
+type of error, you can remove the contents of a directory using \lstinline|rm|
 and then finally removing the directory with:
 
 \begin{prompt}
@@ -112,59 +112,59 @@ The permission types are:
 \item Execute - For files this gives permission to execute a file as through it were a script. For directories, it allows users to open the directory and look at the contents.
 \end{enumerate}
 
-Any time you run \verb|ls -l| you'll see a familiar line of \verb|-rwx------|
-or similar combination of the letters \verb|r|, \verb|w|, \verb|x| and \verb|-| (dashes).
+Any time you run \lstinline|ls -l| you'll see a familiar line of \lstinline|-rwx------|
+or similar combination of the letters \lstinline|r|, \lstinline|w|, \lstinline|x| and \lstinline|-| (dashes).
 These are the permissions for the file or directory. (See also the
 \hyperref[sec:permissions]{previous section on permissions})
 
 \begin{prompt}
 %\shellcmd{ls -l}%
 total 1
--rw-r--r--. 1 %\userid% mygroup 4283648 Apr 12 15:13 articleTable.csv
-drwxr-x---. 2 %\userid% mygroup      40 Apr 12 15:00 Project_GoldenDragon
+-rw-r--r--. 1 %\userid{}% mygroup 4283648 Apr 12 15:13 articleTable.csv
+drwxr-x---. 2 %\userid{}% mygroup      40 Apr 12 15:00 Project_GoldenDragon
 \end{prompt}
 
-Here, we see that \verb|articleTable.csv| is a file (beginning the line with \verb|-|)
-has read and write permission for the user \texttt{\userid} (\verb|rw-|), and read
-permission for the group \verb|mygroup| as well as all other users (\verb|r--| and
-\verb|r--|).
+Here, we see that \lstinline|articleTable.csv| is a file (beginning the line with \lstinline|-|)
+has read and write permission for the user \texttt{\userid} (\lstinline|rw-|), and read
+permission for the group \lstinline|mygroup| as well as all other users (\lstinline|r--| and
+\lstinline|r--|).
 
-The next entry is \verb|Project_GoldenDragon|. We see it is a directory because the
-line begins with a \verb|d|. It also has read, write, and execute permission for
-the \texttt{\userid} user (\verb|rwx|). So that user can look into the directory and add
-or remove files. Users in the \verb|mygroup| can also look into the directory and
-read the files. But they can't add or remove files (\verb|r-x|). Finally, other
+The next entry is \lstinline|Project_GoldenDragon|. We see it is a directory because the
+line begins with a \lstinline|d|. It also has read, write, and execute permission for
+the \texttt{\userid} user (\lstinline|rwx|). So that user can look into the directory and add
+or remove files. Users in the \lstinline|mygroup| can also look into the directory and
+read the files. But they can't add or remove files (\lstinline|r-x|). Finally, other
 users can read files in the directory, but other users have no permissions to
-look in the directory at all (\verb|---|).
+look in the directory at all (\lstinline|---|).
 
 Maybe we have a colleague who wants to be able to add files to the directory. We
-use \verb|chmod| to change the modifiers to the directory to let people in the
+use \lstinline|chmod| to change the modifiers to the directory to let people in the
 group write to the directory:
 
 \begin{prompt}
 %\shellcmd{chmod g+w Project\_GoldenDragon}%
 %\shellcmd{ls -l}%
 total 1
--rw-r--r--. 1 %\userid% mygroup 4283648 Apr 12 15:13 articleTable.csv
-drwxrwx---. 2 %\userid% mygroup      40 Apr 12 15:00 Project_GoldenDragon
+-rw-r--r--. 1 %\userid{}% mygroup 4283648 Apr 12 15:13 articleTable.csv
+drwxrwx---. 2 %\userid{}% mygroup      40 Apr 12 15:00 Project_GoldenDragon
 \end{prompt}
 
-The syntax used here is \verb|g+x| which means \strong{g}roup was given \strong{w}rite
-permission. To revoke it again, we use \verb|g-w|. The other roles are \verb|u| for
-user and \verb|o| for other.
+The syntax used here is \lstinline|g+x| which means \strong{g}roup was given \strong{w}rite
+permission. To revoke it again, we use \lstinline|g-w|. The other roles are \lstinline|u| for
+user and \lstinline|o| for other.
 
-You can put multiple changes on the same line: \verb|chmod o-rwx,g-rxw,u+rx,u-w somefile|
+You can put multiple changes on the same line: \lstinline|chmod o-rwx,g-rxw,u+rx,u-w somefile|
 will take everyone's permission away except the user's ability to
 read or execute the file.
 
-You can also use the \verb|-R| flag to affect all the files within a directory, but this
-is dangerous. It's best to refine your search using \verb|find| and then pass the
-resulting list to \verb|chmod| since it's not usual for all files in a directory
+You can also use the \lstinline|-R| flag to affect all the files within a directory, but this
+is dangerous. It's best to refine your search using \lstinline|find| and then pass the
+resulting list to \lstinline|chmod| since it's not usual for all files in a directory
 structure to have the same permissions.
 
 \subsection{Access control lists (ACLs)}
 
-However, this means that all users in \verb|mygroup| can add or remove files. This
+However, this means that all users in \lstinline|mygroup| can add or remove files. This
 could be problematic if you only wanted one person to be allowed to help you
 administer the files in the project. We need a new group. To do this in the HPC
 environment, we need to use access control lists (ACLs):
@@ -172,14 +172,14 @@ environment, we need to use access control lists (ACLs):
 \begin{prompt}
 %\shellcmd{setfacl -m u:otheruser:w Project\_GoldenDragon}%
 %\shellcmd{ls -l Project\_GoldenDragon}%
-drwxr-x---+ 2 %\userid% mygroup      40 Apr 12 15:00 Project_GoldenDragon
+drwxr-x---+ 2 %\userid{}% mygroup      40 Apr 12 15:00 Project_GoldenDragon
 \end{prompt}
 
-This will give the \strong{u}ser \verb|otheruser| permissions to \strong{w}rite
-to \verb|Project_GoldenDragon|
+This will give the \strong{u}ser \lstinline|otheruser| permissions to \strong{w}rite
+to \lstinline|Project_GoldenDragon|
 
-Now there is a \verb|+| at the end of the line. This means there is an ACL attached
-to the directory. \verb|getfacl Project_GoldenDragon| will print the ACLs for the
+Now there is a \lstinline|+| at the end of the line. This means there is an ACL attached
+to the directory. \lstinline|getfacl Project_GoldenDragon| will print the ACLs for the
 directory.
 
 Note: most people don't use ACLs, but it's sometimes the right thing and you
@@ -197,15 +197,15 @@ compress a file using gzip, we use:
 
 \begin{prompt}
     %\shellcmd{ls -lh myfile}%
-    -rw-r--r--. 1 %\userid% %\userid% 4.1M Dec  2 11:14 myfile
+    -rw-r--r--. 1 %\userid{}% %\userid{}% 4.1M Dec  2 11:14 myfile
     %\shellcmd{gzip myfile}%
     %\shellcmd{ls -lh myfile.gz}%
-    -rw-r--r--. 1 %\userid% %\userid% 1.1M Dec  2 11:14 myfile.gz
+    -rw-r--r--. 1 %\userid{}% %\userid{}% 1.1M Dec  2 11:14 myfile.gz
 \end{prompt}
 
 Note: if you zip a file, the original file will be removed. If you unzip a file,
 the compressed file will be removed. To keep both, we send the data to
-\verb|stdout| and redirect it to the target file:
+\lstinline|stdout| and redirect it to the target file:
 
 \begin{prompt}
     %\shellcmd{gzip -c myfile $>$ myfile.gz}%
@@ -233,16 +233,16 @@ Tar stands for "tape archive" and is a way to bundle files together in a bigger
 file.
 
 You will normally want to unpack these files more often than you make them. To
-unpack a \verb|.tar| file you use:
+unpack a \lstinline|.tar| file you use:
 
 \begin{prompt}
     %\shellcmd{tar -xf tarfile.tar}%
 \end{prompt}
 
-Often, you will find \verb|gzip| compressed \verb|.tar| files on the web. These are called
-tarballs. You can recognize them by the filename ending in \verb|.tar.gz|.
- You can uncompress these using \verb|gunzip| and then unpacking them using
-\verb|tar|. But \verb|tar| knows how to open them using the \verb|-z| option:
+Often, you will find \lstinline|gzip| compressed \lstinline|.tar| files on the web. These are called
+tarballs. You can recognize them by the filename ending in \lstinline|.tar.gz|.
+ You can uncompress these using \lstinline|gunzip| and then unpacking them using
+\lstinline|tar|. But \lstinline|tar| knows how to open them using the \lstinline|-z| option:
 
 \begin{prompt}
     %\shellcmd{tar -zxf tarfile.tar.gz}%
@@ -251,7 +251,7 @@ tarballs. You can recognize them by the filename ending in \verb|.tar.gz|.
 
 \subsection{Order of arguments}
 
-Note: Archive programs like \verb|zip|, \verb|tar|, and \verb|jar| use arguments in the
+Note: Archive programs like \lstinline|zip|, \lstinline|tar|, and \lstinline|jar| use arguments in the
 ''opposite direction'' of copy commands.
 
 \begin{prompt}
@@ -264,8 +264,8 @@ Note: Archive programs like \verb|zip|, \verb|tar|, and \verb|jar| use arguments
     %\shellcmd{tar -cf tarfile.tar source1 source2 source3}%
 \end{prompt}
 
-If you use \verb|tar| with the source files first then the first file will be
-overwritten. You can control the order of arguments of \verb|tar| if it helps you
+If you use \lstinline|tar| with the source files first then the first file will be
+overwritten. You can control the order of arguments of \lstinline|tar| if it helps you
 remember:
 
 \begin{prompt}
@@ -275,16 +275,16 @@ remember:
 \section{Exercises}
 
 \begin{enumerate}
-    \item Create a subdirectory in your home directory named \verb|test| containing
-        a single, empty file named \verb|one.txt|.
-    \item Copy \verb|/etc/hostname| into the \verb|test| directory and then check what's
-        in it. Rename the file to \verb|hostname.txt|.
-    \item Make a new directory named \verb|another| and copy the entire \verb|test|
-        directory to it. \verb|another/test/one.txt| should then be an empty file.
-    \item Remove the \verb|another/test| directory with a single command.
-    \item Rename \verb|test| to \verb|test2|. Move \verb|test2/hostname.txt| to your
+    \item Create a subdirectory in your home directory named \lstinline|test| containing
+        a single, empty file named \lstinline|one.txt|.
+    \item Copy \lstinline|/etc/hostname| into the \lstinline|test| directory and then check what's
+        in it. Rename the file to \lstinline|hostname.txt|.
+    \item Make a new directory named \lstinline|another| and copy the entire \lstinline|test|
+        directory to it. \lstinline|another/test/one.txt| should then be an empty file.
+    \item Remove the \lstinline|another/test| directory with a single command.
+    \item Rename \lstinline|test| to \lstinline|test2|. Move \lstinline|test2/hostname.txt| to your
         home directory.
-    \item Change the permission of \verb|test2| so only you can access it.
-    \item Create an empty job script named \verb|job.sh|, and make it executable.
-    \item gzip \verb|hostname.txt|, see how much smaller it becomes, then unzip it again.
+    \item Change the permission of \lstinline|test2| so only you can access it.
+    \item Create an empty job script named \lstinline|job.sh|, and make it executable.
+    \item gzip \lstinline|hostname.txt|, see how much smaller it becomes, then unzip it again.
 \end{enumerate}

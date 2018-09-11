@@ -52,7 +52,7 @@ computed results to a single value.}
 First go to the right directory:
 
 \begin{prompt}
-%\shellcmd{cd ~/\exampledir/par\_sweep}%
+%\shellcmd{cd ~/\exampledir{}/par\_sweep}%
 \end{prompt}
 
 Suppose the program the user wishes to run the ``\emph{weather}'' program,
@@ -100,7 +100,7 @@ temperature, pressure, volume
 295, 1.0e5, 105
 296, 1.0e5, 104
 297, 1.0e5, 103
-%\dots%
+%\dots{}%
 \end{prompt}
 
 It has to contain the names of the variables on the first line, followed by 100
@@ -134,7 +134,7 @@ see \autoref{subsec:explicit-version-numbers}):
 %\shellcmd{module load worker/1.6.8-intel-2018a}%
 %\shellcmd{wsub -batch weather.pbs -data data.csv}%
 total number of work items: 41
-%\jobid%
+%\jobid{}%
 \end{prompt}
 
 Note that the PBS file is the value of the -batch option. The weather program
@@ -147,7 +147,7 @@ called a work item in Worker parlance.
 First go to the right directory:
 
 \begin{prompt}
-%\shellcmd{cd ~/\exampledir/job\_array}%
+%\shellcmd{cd ~/\exampledir{}/job\_array}%
 \end{prompt}
 
 As a simple example, assume you have a serial program called \emph{myprog} that you
@@ -214,7 +214,7 @@ input\_2.dat, \ldots, input\_100.dat in the ./input subdirectory.
 
 \begin{prompt}
 %\shellcmd{ls ./input}%
-%\dots%
+%\dots{}%
 %\shellcmd{more ./input/input\_99.dat}%
 This is input file \#99
 Parameter #1 = 99
@@ -250,7 +250,7 @@ The job is now submitted as follows:
 %\shellcmd{module load worker/1.6.8-intel-2018a}%
 %\shellcmd{wsub -t 1-100 -batch test\_set.pbs}%
 total number of work items: 100
-%\jobid%
+%\jobid{}%
 \end{prompt}
 
 The ``\textit{test\_set}'' program will now be run for all 100 input files --
@@ -265,7 +265,7 @@ single job.
 %\shellcmd{qstat}%
 Job id          Name          User      Time   Use S Queue
 --------------- ------------- --------- ---- ----- - -----
-%\jobid%  test_set.pbs  %\userid%          0 Q
+%\jobid{}%  test_set.pbs  %\userid{}%          0 Q
 
 And you can now check the generated output files:
 %\shellcmd{more ./output/output\_99.dat}%
@@ -296,7 +296,7 @@ the process that is responsible for dispatching work and logging progress,
 executes the prologue and epilogue.
 
 \begin{prompt}
-%\shellcmd{cd ~/\exampledir/map\_reduce}%
+%\shellcmd{cd ~/\exampledir{}/map\_reduce}%
 \end{prompt}
 
 The script ``pre.sh'' prepares the data by creating 100 different input-files,
@@ -313,9 +313,9 @@ Then one can submit a MapReduce style job as follows:
 \begin{prompt}
 %\shellcmd{wsub}% -prolog pre.sh -batch test_set.pbs -epilog post.sh -t 1-100
 total number of work items: 100
-%\jobid%
+%\jobid{}%
 %\shellcmd{cat all\_output.txt}%
-%\dots%
+%\dots{}%
 %\shellcmd{rm -r -f ./output/}%
 \end{prompt}
 
@@ -348,13 +348,13 @@ running example, this could be ``run.pbs.log\jobnumber'', assuming the job's ID 
 \jobnumber. To keep an eye on the progress, one can use:
 
 \begin{prompt}
-%\shellcmd{tail -f run.pbs.log\jobnumber}%
+%\shellcmd{tail -f run.pbs.log\jobnumber{}}%
 \end{prompt}
 
 Alternatively, ``wsummarize'', a Worker command that summarises a log file, can be used:
 
 \begin{prompt}
-%\shellcmd{watch -n 60 wsummarize run.pbs.log\jobnumber}%
+%\shellcmd{watch -n 60 wsummarize run.pbs.log\jobnumber{}}%
 \end{prompt}
 
 This will summarise the log file every 60 seconds.
@@ -395,7 +395,7 @@ which work items did complete successfully, and which remain to be computed.
 Suppose the job that did not complete all its work items had ID ``445948''.
 
 \begin{prompt}
-%\shellcmd{wresume -jobid \jobnumber}%
+%\shellcmd{wresume -jobid \jobnumber{}}%
 \end{prompt}
 
 This will submit a new job that will start to work on the work items that were
@@ -404,7 +404,7 @@ resuming, specifically the requested resources such as the number of cores and
 the walltime.
 
 \begin{prompt}
-%\shellcmd{wresume -l walltime=1:30:00 -jobid \jobnumber}%
+%\shellcmd{wresume -l walltime=1:30:00 -jobid \jobnumber{}}%
 \end{prompt}
 
 Work items may fail to complete successfully for a variety of reasons, e.g., a
@@ -415,7 +415,7 @@ reporting a failure. It is also possible to retry work items that failed
 (preferably after the glitch why they failed was fixed).
 
 \begin{prompt}
-%\shellcmd{wresume -jobid \jobnumber -retry}%
+%\shellcmd{wresume -jobid \jobnumber{} -retry}%
 \end{prompt}
 
 By default, a job's prologue is not executed when it is resumed, while its

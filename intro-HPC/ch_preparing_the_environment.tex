@@ -180,9 +180,9 @@ see \autoref{sec:connecting-issues} to troubleshoot.
 
 \begin{prompt}
 %\shellcmd{pwd}%
-%\homedir%
+%\homedir{}%
 %\shellcmd{hostname --f}%
-%\loginhost%
+%\loginhost{}%
 \end{prompt}
 
     \item  For future PuTTY sessions, just select your saved session (i.e.
@@ -217,13 +217,13 @@ see \autoref{sec:connecting-issues} to troubleshoot.
   on how to do this.
 
 A possible error message you can get if you previously saved your private key
-somewhere else than the default location (\verb|$HOME/.ssh/id_rsa|):
+somewhere else than the default location (\lstinline|$HOME/.ssh/id_rsa|):
 
 \begin{prompt}
 %\shellcmd{Permission denied (publickey,gssapi-keyex,gssapi-with-mic).}%
 \end{prompt}
 
-In this case, use the \verb|-i| option for the \verb|ssh| command to specify the location
+In this case, use the \lstinline|-i| option for the \lstinline|ssh| command to specify the location
 of your private key. For example:
 
 \begin{prompt}
@@ -238,7 +238,7 @@ To find out where you have landed you can print the current working directory:
 
 \begin{prompt}
 %\shellcmd{pwd}%
-%\homedir%
+%\homedir{}%
 \end{prompt}
 
 
@@ -248,7 +248,7 @@ Here you can create your own subdirectory structure, copy and prepare your
 applications, compile and test them and submit your jobs on the \hpc.
 
 \begin{prompt}
-%\shellcmd{cd \tutorialdir}%
+%\shellcmd{cd \tutorialdir{}}%
 %\shellcmd{ls }%
 Intro-HPC/
 \end{prompt}
@@ -269,15 +269,15 @@ As we are interested in the use of the \strong{\emph{HPC}}, move further to
 %\shellcmd{tree -L 2}%
 .
 `-- examples
-    %\textbar%-- Compiling-and-testing-your-software-on-the-HPC
-    %\textbar%-- Fine-tuning-Job-Specifications
-    %\textbar%-- Multi-core-jobs-Parallel-Computing
-    %\textbar%-- Multi-job-submission
-    %\textbar%-- Program-examples
-    %\textbar%-- Running-batch-jobs
-    %\textbar%-- Running-jobs-with-input
-    %\textbar%-- Running-jobs-with-input-output-data
-    %\textbar%-- example.pbs
+    |-- Compiling-and-testing-your-software-on-the-HPC
+    |-- Fine-tuning-Job-Specifications
+    |-- Multi-core-jobs-Parallel-Computing
+    |-- Multi-job-submission
+    |-- Program-examples
+    |-- Running-batch-jobs
+    |-- Running-jobs-with-input
+    |-- Running-jobs-with-input-output-data
+    |-- example.pbs
     `-- example.sh
 9 directories, 5 files
 \end{prompt}
@@ -315,15 +315,15 @@ you can start using the examples. The ``-r'' option of the copy command
 will also copy the contents of the sub-directories ``\emph{recursively}''.
 
 \begin{prompt}
-%\shellcmd{cp --r \examplesdir \tilde/}%
+%\shellcmd{cp --r \examplesdir{} \tilde{}/}%
 \end{prompt}
 
 \ifgent
 You will now make a doc directory in your home dir and copy the latest version of this document to this directory. We will use this later in this tutorial.
 
 \begin{prompt}
-%\shellcmd{mkdir \tilde/docs}%
-%\shellcmd{cp --r \tutorialdir/\jobname \tilde/}%
+%\shellcmd{mkdir \tilde{}/docs}%
+%\shellcmd{cp --r \tutorialdir{}/\jobname{} \tilde{}/}%
 \end{prompt}
 
 Go to your home directory, check your own private examples directory, \dots\
@@ -463,7 +463,7 @@ You can exit the connection at anytime by entering:
 \begin{prompt}
 %\shellcmd{exit}%
 logout
-Connection to %\loginnode% closed.
+Connection to %\loginnode{}% closed.
 \end{prompt}
 
 \begin{tip}[Setting your Language right]
@@ -511,12 +511,12 @@ favourite editor and add the following lines:
 
 \begin{prompt}
 %\shellcmd{nano ~/.bashrc}%
-%\dots%
+%\dots{}%
 export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 export LANG="en_US.UTF-8"
-%\dots%
+%\dots{}%
 \end{prompt}
 
 \begin{tip}[vi]
@@ -529,10 +529,10 @@ To exit vi without saving your changes, enter ``<esc>:q!''
 or alternatively (if you are not comfortable with the Linux editors), again on your local machine:
 
 \begin{prompt}
-%\shellcmd{echo "export LANGUAGE=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile}%
-%\shellcmd{echo "export LC\_ALL=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile}%
-%\shellcmd{echo "export LC\_CTYPE=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile}%
-%\shellcmd{echo "export LANG=\textbackslash "en\_US.UTF-8\textbackslash "" $>$$>$ ~/.profile}%
+%\shellcmd{echo "export LANGUAGE=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" $>$$>$ ~/.profile}%
+%\shellcmd{echo "export LC\_ALL=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" $>$$>$ ~/.profile}%
+%\shellcmd{echo "export LC\_CTYPE=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" $>$$>$ ~/.profile}%
+%\shellcmd{echo "export LANG=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" $>$$>$ ~/.profile}%
 \end{prompt}
 
 You can now log out, open a new terminal/shell on your local machine and reconnect to the \hpc, and you should not get these
@@ -688,7 +688,7 @@ for future access.
 \begin{prompt}
 %\shellcmd{echo "Hello" $>$ localfile.txt}%
 %\shellcmd{ls -l}%
-%\dots%
+%\dots{}%
 -rw-r--r-- 1 user  staff   6 Sep 18 09:37 localfile.txt
 %\shellcmd{scp localfile.txt \userid{}@\loginnode{}:}%
 localfile.txt    100%\%%   6     0.0KB/s   00:00
@@ -699,13 +699,13 @@ localfile.txt    100%\%%   6     0.0KB/s   00:00
 
 \begin{prompt}
 %\shellcmd{pwd}%
-%\homedir%
+%\homedir{}%
 %\shellcmd{ls -l}%
 total 1536
-drwxrwxr-x  2 %\userid% 131072 Sep 11 16:24 bin/
-drwxrwxr-x  2 %\userid% 131072 Sep 17 11:47 docs/
-drwxrwxr-x 10 %\userid% 131072 Sep 17 11:48 examples/
--rw-r--r--  1 %\userid%      6 Sep 18 09:44 localfile.txt
+drwxrwxr-x  2 %\userid{}% 131072 Sep 11 16:24 bin/
+drwxrwxr-x  2 %\userid{}% 131072 Sep 17 11:47 docs/
+drwxrwxr-x 10 %\userid{}% 131072 Sep 17 11:48 examples/
+-rw-r--r--  1 %\userid{}%      6 Sep 18 09:44 localfile.txt
 %\shellcmd{cat localfile.txt}%
 Hello
 \end{prompt}
@@ -719,20 +719,20 @@ Hello
 
 \begin{prompt}
 %\captureshellcmd{cd ~/docs}%
-%\homedir%/docs
+%\homedir{}%/docs
 %\captureshellcmd{ls -l}%
 total 1536
--rw-r--r-- 1 %\userid% Sep 11 09:53 %\jobname%.pdf
+-rw-r--r-- 1 %\userid{}% Sep 11 09:53 %\jobname{}%.pdf
 \end{prompt}
 
   Now we will copy the file to the local machine. On the terminal on your own local computer, enter:
 
 \begin{prompt}
-%\shellcmd{scp \userid{}@\loginnode:./docs/\jobname.pdf .}%
-%\jobname.pdf% 100%\%%  725KB 724.6KB/s   00:01
+%\shellcmd{scp \userid{}@\loginnode{}:./docs/\jobname{}.pdf .}%
+%\jobname{}.pdf% 100%\%%  725KB 724.6KB/s   00:01
 %\shellcmd{ls -l}%
 total  899
--rw-r--r--   1 user  staff  741995 Sep 18 09:53 %\jobname%.pdf
+-rw-r--r--   1 user  staff  741995 Sep 18 09:53 %\jobname{}%.pdf
 -rw-r--r--   1 user  staff       6 Sep 18 09:37 localfile.txt
 \end{prompt}
 
@@ -752,7 +752,7 @@ total  899
   One easy way of starting a sftp session is
 
 \begin{prompt}
-%\shellcmd{sftp \userid{}@\loginnode}%
+%\shellcmd{sftp \userid{}@\loginnode{}}%
 \end{prompt}
 
   Typical and popular commands inside an sftp session are:
@@ -798,7 +798,7 @@ total  899
 \ifmac
   \subsection{Using a GUI (Cyberduck)}
 
-  Cyberduck is a graphical alternative to the \verb|scp| command. It can be installed
+  Cyberduck is a graphical alternative to the \lstinline|scp| command. It can be installed
   from \url{https://cyberduck.io}.
 
   This is the one-time setup you will need to do before connecting:

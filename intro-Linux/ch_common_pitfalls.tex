@@ -12,13 +12,13 @@ No such file or directory
 It probably means that you haven't placed your files in the correct directory or
 you have mistyped the file name or path.
 
-Try and figure out the correct location using \verb|ls|, \verb|cd| and using the
-different \verb|$VSC_*| variables.
+Try and figure out the correct location using \lstinline|ls|, \lstinline|cd| and using the
+different \lstinline|$VSC_*| variables.
 
 \subsubsection{Spaces}
 
 Filenames should \strong{not} contain any spaces! If you have a long filename
-you should use underscores or dashes (e.g. \verb|very_long_filename|).
+you should use underscores or dashes (e.g. \lstinline|very_long_filename|).
 
 \begin{prompt}
 %\shellcmd{cat some file}%
@@ -26,7 +26,7 @@ No such file or directory 'some'
 \end{prompt}
 
 Spaces are permitted, however they result in surprising behaviour. To cat the
-file \verb|'some file'| as above, you can escape the space with a backslash (``\verb|\ |'')
+file \lstinline|'some file'| as above, you can escape the space with a backslash (``\lstinline|\ |'')
 or you can put the filename in quotes:
 
 \begin{prompt}
@@ -36,7 +36,7 @@ or you can put the filename in quotes:
 ...
 \end{prompt}
 
-This is especially error prone if you are piping results of \verb|find|:
+This is especially error prone if you are piping results of \lstinline|find|:
 
 \begin{prompt}
 %\shellcmd{find . -type f | xargs cat}%
@@ -44,7 +44,7 @@ No such file or directory name 'some'
 No such file or directory name 'file'
 \end{prompt}
 
-This can be worked around using the \verb|-print0| flag:
+This can be worked around using the \lstinline|-print0| flag:
 
 \begin{prompt}
 %\shellcmd{find . -type f -print0 | xargs -0 cat}%
@@ -56,10 +56,10 @@ lines and not using spaces in filenames.
 
 \subsubsection{Missing/mistyped environment variables}
 
-If you use a command like \verb|rm -r| with environment variables you need to be
+If you use a command like \lstinline|rm -r| with environment variables you need to be
 careful to make sure that the environment variable exists. If you mistype an
 environment variable then it will resolve to a blank string. This means the
-following resolves to \verb|rm -r ~/*| which will remove every file in your home
+following resolves to \lstinline|rm -r ~/*| which will remove every file in your home
 directory!
 
 \begin{prompt}
@@ -68,7 +68,7 @@ directory!
 
 \subsubsection{Typing dangerous commands}
 
-A good habit when typing dangerous commands is to precede the line with \verb|#|,
+A good habit when typing dangerous commands is to precede the line with \lstinline|#|,
 the comment character. This will let you type out the command without fear of
 accidentally hitting enter and running something unintended.
 
@@ -76,8 +76,8 @@ accidentally hitting enter and running something unintended.
 %\shellcmd{\#rm -r ~/\$POROJETC/*}%
 \end{prompt}
 
-Then you can go back to the beginning of the line (\verb|Ctrl-A|) and remove the
-first character (\verb|Ctrl-D|) to run the command. You can also just press enter
+Then you can go back to the beginning of the line (\lstinline|Ctrl-A|) and remove the
+first character (\lstinline|Ctrl-D|) to run the command. You can also just press enter
 to put the command in your history so you can come back to it later (e.g. while
 you go check the spelling of your environment variables).
 
@@ -101,16 +101,16 @@ Or you can get errors like:
 qsub:  script is written in DOS/Windows text format
 \end{prompt}
 
-See section \ref{subsec:dos2unix} to fix these errors with \verb|dos2unix|.
+See section \ref{subsec:dos2unix} to fix these errors with \lstinline|dos2unix|.
 
 \fi
 \subsubsection{Permissions}
 
 \begin{prompt}
 %\shellcmd{ls -l script.sh \# File with correct permissions}%
--rwxr-xr-x 1 %\userid% %\userid% 2983 Jan 30 09:13 script.sh
+-rwxr-xr-x 1 %\userid{}% %\userid{}% 2983 Jan 30 09:13 script.sh
 %\shellcmd{ls -l script.sh \# File with incorrect permissions}%
--rw-r--r-- 1 %\userid% %\userid% 2983 Jan 30 09:13 script.sh
+-rw-r--r-- 1 %\userid{}% %\userid{}% 2983 Jan 30 09:13 script.sh
 \end{prompt}
 
 Before submitting the script, you'll need to add execute permissions
@@ -127,7 +127,7 @@ to make sure it can be executed:
 If you stumble upon an error, don't panic! Read the error output, it might
 contain a clue as to what went wrong. You can copy the error message into Google
 (selecting a small part of the error without filenames). It can help if you
-surround your search terms in double quotes (for example \verb|"No such file or directory"|),
+surround your search terms in double quotes (for example \lstinline|"No such file or directory"|),
 that way Google will consider the error as one thing, and won't show results just containing
 these words in random order.
 
