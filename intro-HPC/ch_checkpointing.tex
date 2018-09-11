@@ -7,7 +7,7 @@ If you want to run jobs that require more than 3 days (72 hours) of wall time,
 and/or want to avoid you lose work because of power outages or system crashes,
 you need to resort to checkpointing.
 
-Checkpointing works by splitting the job in smaller parts that can be executed
+Checkpointing works by splitting the job in smaller parts (subjobs) that can be executed
 consecutively. Each time a subjob is running out of requested wall time,
 a snapshot of the application memory (and much more) is taken and stored,
 after which a subsequent subjob will pick up the checkpoint and continue.
@@ -34,11 +34,20 @@ command line.
 
 \section{Checkpointing parameters}
 
+\subsection{Job wall time}
+
 The most important option for \lstinline|csub| is the \lstinline|--job_time| option: it sets the amount
-of walltime your job will run for before it gets checkpointed. By default, this
-is 10 hours: that means that your job will run for 10 hours, then it gets checkpointed
-and started from the checkpoint, then runs for another 10 hours and so on, until
+of walltime your subjobs will run for before they get checkpointed. By default, this
+is 10 hours: that means that a subjob will run for 10 hours, then it gets checkpointed,
+a new subjob starts from the checkpoint, runs for another 10 hours and so on, until
 your job finishes.
+
+\subsection{Local files}
+
+The \lstinline|--pre| and \lstinline|--post| parameters steer whether local files are copied or not.
+The job submitted using \lstinline|csub| is (by default) run on the local storage provided
+by a particular workernode. Thus, no changes will be made to the files on the
+shared storage (e.g. \texttt{\$VSC_SCRATCH}).
 
 \section{Similarities and differenes}
 
@@ -54,6 +63,8 @@ your job finishes.
 \subsection{Differences with qsub}
 
 \begin{enumerate}
-    \item \lstinline|csub| will not copy stdout and stderr to the directory
-        the job was submitted from by default. % TODO: how to enable this?
+    \item By default, \lstinline|csub| will not copy stdout and stderr to the directory
+        the job was submitted from by default. You can enable copying the results
+        by adding the \lstinline|--post| option to \lstinline|csub|.
+    \item
 \end{enumerate}
