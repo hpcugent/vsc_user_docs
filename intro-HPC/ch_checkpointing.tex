@@ -1,4 +1,59 @@
 \chapter{Checkpointing}
 \label{ch:checkpointing}
 
-\textit{This chapter is still under construction.}
+\section{What is checkpointing?}
+
+If you want to run jobs that require more than 3 days (72 hours) of wall time,
+and/or want to avoid you lose work because of power outages or system crashes,
+you need to resort to checkpointing.
+
+Checkpointing works by splitting the job in smaller parts that can be executed
+consecutively. Each time a subjob is running out of requested wall time,
+a snapshot of the application memory (and much more) is taken and stored,
+after which a subsequent subjob will pick up the checkpoint and continue.
+
+\section{How to use checkpointing}
+
+Using checkpointing is simple: use the \lstinline|csub| command instead of \lstinline|qsub|.
+Checkpointing doesn't require any changes to the application you are running,
+and should support most software.
+
+To submit a job with checkpointing:
+
+\begin{prompt}
+%\shellcmd{csub -s job\_script.sh}%
+\end{prompt}
+
+This will automatically take care of checkpointing, restoring checkpoints, \ldots
+
+Note that \lstinline|csub| will ignore most parameters specified in the jobscript.
+It will however use the \lstinline|#PBS -N <name>| (job name) and most \lstinline|#PBS -l|
+directives (e.g. \lstinline|nodes|, \lstinline|ppn|, \lstinline|vmem| (virtual memory limit),
+\ldots). Other parameters (like walltime) should be specified on the \lstinline|csub|
+command line.
+
+\section{Checkpointing parameters}
+
+The most important option for \lstinline|csub| is the \lstinline|--job_time| option: it sets the amount
+of walltime your job will run for before it gets checkpointed. By default, this
+is 10 hours: that means that your job will run for 10 hours, then it gets checkpointed
+and started from the checkpoint, then runs for another 10 hours and so on, until
+your job finishes.
+
+\section{Similarities and differenes}
+
+\subsection{Similarities with qsub}
+
+\begin{enumerate}
+    \item Specifying the cluster to which the job will be submitted
+    \item Array jobs (with the \lstinline|-t| flag)
+    \item Most \lstinline|#PBS| directives
+\end{enumerate}
+
+
+\subsection{Differences with qsub}
+
+\begin{enumerate}
+    \item \lstinline|csub| will not copy stdout and stderr to the directory
+        the job was submitted from by default. % TODO: how to enable this?
+\end{enumerate}
