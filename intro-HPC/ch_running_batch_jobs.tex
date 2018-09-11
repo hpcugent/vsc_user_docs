@@ -295,7 +295,7 @@ the status of your job, e.g.,
 To get the status information on your job:
 
 \begin{prompt}
-%\shellcmd{qstat $<$jobid$>$}%
+%\shellcmd{qstat <{}jobid>{}}%
 \end{prompt}
 
 \ifgent
@@ -309,7 +309,7 @@ To get the status information on your job:
   This command is not available on all systems.
 
 \begin{prompt}
-%\shellcmd{showstart $<$jobid$>$}%
+%\shellcmd{showstart <{}jobid>{}}%
 \end{prompt}
 
   This is only a very rough estimate. Jobs may launch sooner than estimated if
@@ -320,7 +320,7 @@ To get the status information on your job:
   messages that may prevent your job from starting:
 
 \begin{prompt}
-%\shellcmd{checkjob $<$jobid$>$}%
+%\shellcmd{checkjob <{}jobid>{}}%
 \end{prompt}
 \fi
 \fi
@@ -329,14 +329,14 @@ To show on which compute nodes your job is running, at least, when it is
 running:
 
 \begin{prompt}
-%\shellcmd{qstat -n $<$jobid$>$}%
+%\shellcmd{qstat -n <{}jobid>{}}%
 \end{prompt}
 
 To remove a job from the queue so that it will not run, or to stop a job that
 is already running.
 
 \begin{prompt}
-%\shellcmd{qdel $<$jobid$>$}%
+%\shellcmd{qdel <{}jobid>{}}%
 \end{prompt}
 
 When you have submitted several jobs (or you just forgot about the job ID), you
@@ -786,7 +786,7 @@ Inspect the generated output and error files:
   \subsection{Upon job failure}
 
   Whenever a job fails, an e-mail will be sent to the e-mail address that's
-  connected to your $<$vsc-account$>$. This is the e-mail address that is linked
+  connected to your <{}vsc-account>{}. This is the e-mail address that is linked
   to the university account, which was used during the registration process.
 
   You can force a job to fail by specifying an unrealistic wall-time for the
@@ -832,7 +832,7 @@ These options can also be specified on the command line.  Try it and see what
 happens:
 
 \begin{prompt}
-%\shellcmd{qsub -m abe -M $<$your e-mail address$>$ fibo.pbs}%
+%\shellcmd{qsub -m abe -M <{}your e-mail address>{} fibo.pbs}%
 \end{prompt}
 
 You don't have to specify the e-mail address. The system will

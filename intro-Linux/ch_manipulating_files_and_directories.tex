@@ -208,8 +208,8 @@ the compressed file will be removed. To keep both, we send the data to
 \lstinline|stdout| and redirect it to the target file:
 
 \begin{prompt}
-    %\shellcmd{gzip -c myfile $>$ myfile.gz}%
-    %\shellcmd{gunzip -c myfile.gz $>$ myfile}%
+    %\shellcmd{gzip -c myfile >{} myfile.gz}%
+    %\shellcmd{gunzip -c myfile.gz >{} myfile}%
 \end{prompt}
 
 \subsection{``zip'' and ``unzip''}

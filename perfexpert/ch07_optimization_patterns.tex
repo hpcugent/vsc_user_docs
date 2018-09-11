@@ -64,7 +64,7 @@ Category            & \multicolumn{2}{|p{4.0in}|}{Bad memory access} \\ \hline
 Description         & \multicolumn{2}{|p{4.0in}|}{Employ loop blocking and interchange} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
                     & loop i \{\newline   loop k \{\newline     loop j \{\newline       c[i][j] = c[i][j] + a[i][k] * b[k][j];\newline     \}\newline   \}\newline \}
-                    & loop k step s \{\newline   loop j step s \{\newline     loop i \{\newline       for (kk = k; kk $<$ k + s; kk++) \{\newline         for (jj = j; jj $<$ j + s; jj++) \{\newline           c[i][jj] = c[i][jj] + a[i][kk] * b[kk][jj];\newline         \}\newline       \}\newline     \}\newline   \}\newline \} \\ \hline
+                    & loop k step s \{\newline   loop j step s \{\newline     loop i \{\newline       for (kk = k; kk <{} k + s; kk++) \{\newline         for (jj = j; jj <{} j + s; jj++) \{\newline           c[i][jj] = c[i][jj] + a[i][kk] * b[kk][jj];\newline         \}\newline       \}\newline     \}\newline   \}\newline \} \\ \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
@@ -142,8 +142,8 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
 Category            & \multicolumn{2}{|p{4.0in}|}{Bad L1 data access} \\ \hline
 Description         & \multicolumn{2}{|p{4.0in}|}{Enable the use of vector instructions to transfer more data per access} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
-                    & align arrays, use only stride-one accesses, make loop count even (pad arrays)\newline struct \{\newline   double a, b;\newline \} s[127];\newline for (i = 0; i $<$ 127; i++) \{\newline   s[i].a = 0;\newline   s[i].b = 0;\newline \}
-                    & \_\_declspec(align(16)) double a[128], b[128];\newline for (i = 0; i $<$ 128; i++) \{\newline   a[i] = 0;\newline   b[i] = 0;\newline \} \\ \hline
+                    & align arrays, use only stride-one accesses, make loop count even (pad arrays)\newline struct \{\newline   double a, b;\newline \} s[127];\newline for (i = 0; i <{} 127; i++) \{\newline   s[i].a = 0;\newline   s[i].b = 0;\newline \}
+                    & \_\_declspec(align(16)) double a[128], b[128];\newline for (i = 0; i <{} 128; i++) \{\newline   a[i] = 0;\newline   b[i] = 0;\newline \} \\ \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
@@ -290,8 +290,8 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
 Category            & \multicolumn{2}{|p{4.0in}|}{Bad branch instructions} \\ \hline
 Description         & \multicolumn{2}{|p{4.0in}|}{Move loop invariant tests out of loop} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
-                    & loop i \{\newline   if (x $<$ y)\newline     a[i] = x * b[i];\newline   else\newline     a[i] = y * b[i];\newline \}
-                    & if (x $<$ y) \{\newline   loop i \{\newline     a[i] = x * b[i];\newline   \}\newline \} else \{\newline   loop i \{\newline     a[i] = y * b[i];\newline   \}\newline \} \\ \hline
+                    & loop i \{\newline   if (x <{} y)\newline     a[i] = x * b[i];\newline   else\newline     a[i] = y * b[i];\newline \}
+                    & if (x <{} y) \{\newline   loop i \{\newline     a[i] = x * b[i];\newline   \}\newline \} else \{\newline   loop i \{\newline     a[i] = y * b[i];\newline   \}\newline \} \\ \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
@@ -308,8 +308,8 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
 Category            & \multicolumn{2}{|p{4.0in}|}{Bad branch instructions} \\ \hline
 Description         & \multicolumn{2}{|p{4.0in}|}{Special-case the most often used loop count(s)} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
-                    & for (i = 0; i $<$ n; i++)\newline \{\ldots\}
-                    & /* Suppose n=4 occurs most of the time*/\newline if (n == 4) \{\newline   for (i = 0; i $<$ 4; i++) \newline     \{\ldots\}\newline \} else \{\newline   for (i = 0; i $<$ n; i++) \newline     \{\ldots\}\newline \} \\ \hline
+                    & for (i = 0; i <{} n; i++)\newline \{\ldots\}
+                    & /* Suppose n=4 occurs most of the time*/\newline if (n == 4) \{\newline   for (i = 0; i <{} 4; i++) \newline     \{\ldots\}\newline \} else \{\newline   for (i = 0; i <{} n; i++) \newline     \{\ldots\}\newline \} \\ \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
@@ -326,8 +326,8 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
 Category            & \multicolumn{2}{|p{4.0in}|}{Bad branch instructions} \\ \hline
 Description         & \multicolumn{2}{|p{4.0in}|}{Use trivial assignments inside THEN/ELSE to allow the use of conditional moves} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
-                    & if (x $<$ y)\newline   a = x + y;
-                    & temp = x + y;\newline if (x $<$ y)\newline   a = temp;  \\ \hline
+                    & if (x <{} y)\newline   a = x + y;
+                    & temp = x + y;\newline if (x <{} y)\newline   a = temp;  \\ \hline
 \end{tabular}
 
 \section{Floating Point Optimisations}
@@ -374,8 +374,8 @@ Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
 Category            & \multicolumn{2}{|p{4.0in}|}{Bad float point instructions (slow FP)} \\ \hline
 Description         & \multicolumn{2}{|p{4.0in}|}{Compare squared values instead of computing the square root} \\ \hline
 Code Sample         & \textbf{Old} & \textbf{New} \\ \hline
-                    & if (x $<$ sqrt(y))\newline \{\ldots\}
-                    & if ((x $<$ 0.0) \textbar \textbar  (x*x $<$ y))\newline \{\ldots\} \\ \hline
+                    & if (x <{} sqrt(y))\newline \{\ldots\}
+                    & if ((x <{} 0.0) \textbar \textbar  (x*x <{} y))\newline \{\ldots\} \\ \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
