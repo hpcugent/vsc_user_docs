@@ -1,0 +1,71 @@
+\chapter{Graphical applications with VNC}
+\label{ch:vnc}
+
+It's important to remember that VNC sessions are permanent. They survive network
+problems and (unintended) connection loss. This means you can logout and go home
+without a problem (like the terminal equivalent \lstinline|screen| or \lstinline|tmux|).
+This also means you don't have to start \lstinline|vncserver| each time you want to connect.
+
+\section{Start the VNC server}
+\label{sec:start-vnc}
+
+First login on the login node (see \autoref{sec:first-time-connection-to-the-hpc})
+or to the worker node where your job has started. % TODO: where is this described?
+
+Now start \lstinline|vcnserver| with:
+
+\begin{prompt}
+%\shellcmd{vncserver -geometry 1920x1080}%
+You will require a password to access your desktops.
+
+Password:%\emph{<{}enter a secure password>{}}%
+Verify:%\emph{<{}enter the same password>{}}%
+Would you like to enter a view-only password (y/n)? %\emph{n}%
+A view-only password is not used
+
+New '%\strong{gligar02}%.gligar.os:%\strong{6}% (%\userid{}%)' desktop is gligar02.gligar.os:6
+
+Creating default startup script /user/home/gent/vsc000/%\userid{}%/.vnc/xstartup
+Creating default config /user/home/gent/vsc000/%\userid{}%/.vnc/config
+Starting applications specified in /user/home/gent/vsc000/%\userid{}%/.vnc/xstartup
+Log file is /user/home/gent/vsc000/%\userid{}%/.vnc/gligar02.gligar.os:6.log
+
+\end{prompt}
+
+When prompted for a password, make sure to enter a secure password: if someone
+can guess your password, they will be able to do anything with your account you can.
+
+Note down the details in bold: the hostname (in the example \lstinline|gligar02|)
+and the port number (in the example \lstinline|6|).
+
+\section{Connecting to the VNC server}
+
+\subsection{VNC on the login nodes}
+
+The VNC server runs on a \strong{specific login node} (in this example \lstinline|gligar02|).
+Make sure you connect to this login node: the domain should be like \lstinline|gligar02.ugent.be|,
+but the number can be different. If you're not sure how to do this, please follow the steps
+in \autoref{sec:first-time-connection-to-the-hpc}, but replace \loginnode with your specific
+domain (here \lstinline|gligar02.ugent.be|).
+
+Login nodes are rebooted from time to time. You can check that the VNC server is still
+running in the same note by executing `vncserver -list`. If you get an empty list,
+it means that \lstinline|vncserver| is not running. You will need to start it again,
+see \autoref{sec:start-vnc}.
+
+You will now need to portforward the VNC port. The source port begins with \lstinline|590|
+and ends with the number we noted down earlier. In this case, it would be \lstinline|5906|.
+The destination port is the same as the source port. The host is \lstinline|localhost|.
+
+\ifwindows
+See \autoref{par:ssh-tunnel-windows}. Use the details specified here (host, destination port,
+source port).
+\else
+
+Execute the following command. Make sure to replace the port numbers, userid and login node
+with your own.
+
+\begin{prompt}
+%shellcmd{ssh -L 5906:localhost:5906 \userid{}@gligar02.ugent.be}
+\end{prompt}
+\fi
