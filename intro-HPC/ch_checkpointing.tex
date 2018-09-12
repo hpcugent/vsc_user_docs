@@ -1,6 +1,5 @@
 \chapter{Checkpointing}
 \label{ch:checkpointing}
-
 \section{Why checkpointing?}
 If you want to run jobs that require more than 3 days (72 hours) of wall time,
 and/or want to avoid you lose work because of power outages or system crashes,
@@ -158,7 +157,7 @@ The full job name consists of the specified job name (or the script name if no j
 a timestamp and two random characters at the end, for example \lstinline|my_job_name.20110131_133755.Hk|
 or \lstinline|script.sh.20110131_133755.Hk|.
 
-Note: When resuming from checkpoint, you can change the wall time resources for your job using the \lstinline{--job_time} and
+Note: When resuming from checkpoint, you can change the wall time resources for your job using the \lstinline|--job_time| and
 \lstinline|--chkpt_time| options. This should allow you to continue from the last checkpoint
 in case your job crashed due to an excessively long checkpointing time.
 
