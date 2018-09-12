@@ -683,7 +683,10 @@ for future access.
   For example, we will copy the (local) file ``\emph{localfile.txt}'' to your
   home directory on the \hpc cluster. We first generate a small dummy
   ``\emph{localfile.txt}'', which contains the word ``Hello''.  Use your own
-  $<$vsc-account$>$, which is something like ``\emph{\userid}''.
+  $<$vsc-account$>$, which is something like ``\emph{\userid}''. Don't
+  forget the colon at the end: if you forget it, it will just create a file
+  named \texttt{\userid{}@\loginnode{}} on your local filesystem. You can even
+  specify where to save the file by putting a path after the colon.
 
 \begin{prompt}
 %\shellcmd{echo "Hello" $>$ localfile.txt}%
