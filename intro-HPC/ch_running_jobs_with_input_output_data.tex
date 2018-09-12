@@ -656,6 +656,25 @@ really need them as they can put a heavy strain on the file system and thus
 slow down file operations on the cluster for all other users.
 \fi
 
+\section{Groups}
+\label{sec:vcs-groups}
+
+Groups are a way to manage who can access what data. A user can belong to multiple
+groups at a time. Groups can be created and managed without any interaction from
+the system administrators.
+
+When you create a group, you automatically become a moderator of the group.
+Moderators can invite and remove members. Other people can request to join
+the group, after which a moderator of the group can approve or deny the request.
+
+Moderators can also promote other members to moderator and remove other moderators.
+
+To change the group of a directory and it's underlying directories and files, you can use:
+
+\begin{prompt}
+%\shellcmd{chgrp -R groupname directory}%
+\end{prompt}
+
 % virtual organisations are only used in Ghent (for now)
 \ifgent
 \section{Virtual Organisations}
