@@ -113,3 +113,20 @@ to a login node, except that you need to use the hostname of the worker node ins
 
 Note that you still need to use \lstinline|localhost| when connecting to the VNC server
 with your VNC client.
+
+\section{Stopping the VNC server}
+
+The VNC server can be killed by running
+
+\begin{prompt}
+vncserver -kill :6
+\end{prompt}
+
+where \lstinline|6| is the port number we noted down earlier. If you forgot,
+you can get it with \lstinline|vncserver -list|.
+
+\section{I forgot the password, what now?}
+
+You can reset the password by first stopping the VNC server, then removing
+the \lstinline|.vnc/passwd| file (with \lstinline|rm .vnc/passwd|) and then
+starting the VNC server again.
