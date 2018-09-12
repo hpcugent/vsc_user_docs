@@ -53,8 +53,8 @@ running in the same note by executing `vncserver -list`. If you get an empty lis
 it means that \lstinline|vncserver| is not running. You will need to start it again,
 see \autoref{sec:start-vnc}.
 
-You will now need to portforward the VNC port. The source port begins with \lstinline|590|
-and ends with the number we noted down earlier. In this case, it would be \lstinline|5906|.
+You will now need to portforward the VNC port. The source port is the sum of \lstinline|5900|
+and the number we noted down earlier. In this case, it would be \lstinline|5906|.
 The destination port is the same as the source port. The host is \lstinline|localhost|.
 
 \ifwindows
@@ -69,3 +69,47 @@ with your own.
 %shellcmd{ssh -L 5906:localhost:5906 \userid{}@gligar02.ugent.be}
 \end{prompt}
 \fi
+
+\ifwindows
+
+You can download a free VNC client from \url{https://sourceforge.net/projects/turbovnc/files/}.
+You can download the latest version by clicking the top-most folder that has a version number
+in it that doesn't also have \lstinline|beta| in the version. Then download a file that looks like
+\lstinline|TurboVNC64-2.1.2.exe| (the version number can be different, but the \lstinline|64|
+should be in the filename) and execute it.
+\fi
+\ifmac
+You can download a free VNC client from \url{https://sourceforge.net/projects/turbovnc/files/}.
+You can download the latest version by clicking the top-most folder that has a version number
+in it that doesn't also have \lstinline|beta| in the version. Then download a file ending in
+\lstinline|TurboVNC64-2.1.2.dmg| (the version number can be different) and execute it.
+\fi
+\iflinux
+Download and setup a VNC client. A good choice is \lstinline|tigervnc|. You can start
+it with the \lstinline|vncviewer| command.
+\fi
+
+Now start your VNC client and connect to \lstinline|localhost:5906|, again replacing
+the port with your own.
+
+When promted for a password, use the password you used to setup the VNC server.
+When prompted for default or empty panel, choose default.
+
+If you have an empty panel, you can reset your settings with the following commands:
+
+\begin{prompt}
+%\shellcmd{xfce4-panel --quit ; pkill xfconfd}%
+%\shellcmd{mkdir ~/.oldxfcesettings}%
+%\shellcmd{mv ~/.config/xfce4 ~/.oldxfcesettings}%
+%\shellcmd{xfce4-panel}%
+\end{prompt}
+
+\subsection{VNC on the worker nodes}
+
+Connecting to a VNC server on the worker nodes is exactly the same as connecting
+to a login node, except that you need to use the hostname of the worker node instead of
+\lstinline|localhost| when setting up the SSH tunnel. A hostname of a worker node looks like
+\texttt{\computenode{}}.
+
+Note that you still need to use \lstinline|localhost| when connecting to the VNC server
+with your VNC client.
