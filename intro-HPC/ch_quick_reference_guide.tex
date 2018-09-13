@@ -33,6 +33,7 @@ Check job with ID 12345 (not available everywhere)                     & \texttt
 Show compute node of job with ID 12345             & \texttt{qstat -n 12345} \\ \hline
 Delete job with ID 12345                           & \texttt{qdel 12345} \\ \hline
 Status of all your jobs                            & \texttt{qstat} \\ \hline
+Detailed status of your jobs + a list nodes they are running on & \texttt{qstat -na}
 \ifgent\else\ifbrussel\else % showq is not enabled in ghent/brussels
 Show all jobs on  queue (not available everywhere) & \texttt{showq} \\ \hline
 \fi\fi
