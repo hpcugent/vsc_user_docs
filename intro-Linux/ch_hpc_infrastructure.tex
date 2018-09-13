@@ -1,0 +1,85 @@
+\chapter{More on the HPC infrastructure}
+
+\section{Filesystems}
+
+Multiple different shared filesystems are available on the HPC infrastructure,
+each with their own purpose. See \href{\HPCManualURL#predefined-user-directories}{chapter 6, section titled "Where to store your data on the \hpc{}" of the HPC manual}
+for a list of available locations.
+
+\ifgent
+
+\subsubsection{VO storage}
+
+If you're member of a (non-default) virtual organisation (VO), see
+\href{\HPCManualURL#sec:virtual-organisation}{Chapter 6, section titled "Virtual Organisations"}, you have access to
+additional directories (with more quota) on the data and \gls{scratch} filesystems,
+which you can share with other members in the VO.
+
+\fi
+
+\subsection{Quota}
+
+Space is limited on the cluster's storage. To check your quota, see
+\href{\HPCManualURL#predefined-quotas}{Chapter 6, section titled "Pre-defined quota" of the HPC manual}.
+
+To figure out where your quota is being spent, the \lstinline|du| (\strong{d}isk \strong{u}sage)
+command can come in useful:
+
+\begin{prompt}
+%\shellcmd{du -sh test}%
+59M   test
+\end{prompt}
+
+Do \emph{not} (frequently) run \lstinline|du| on directories where large amounts
+of data are stored, since that will:
+\begin{enumerate}
+    \item take a long time
+    \item result in increased
+        load on the shared storage since (the metadata of) every file in those directories
+        will have to be inspected.
+\end{enumerate}
+
+\section{Modules}
+
+Software is provided through so-called environment \gls{modules}.
+
+The most commonly used commands are:
+
+\begin{enumerate}
+ \item \lstinline|module avail|: show \emph{all} available modules
+ \item \lstinline|module avail <software name>|: show available modules for a specific software name
+ \item \lstinline|module list|: show list of loaded modules
+ \item \lstinline|module load <module name>|: load a particular module
+\end{enumerate}
+
+More information is available in
+\href{\HPCManualURL#sec:modules}{chapter 3 of the HPC manual, section named ``Modules''}.
+
+\section{Using the clusters}
+
+The use the clusters beyond the \gls{login-node}(s) which have limited resources, you
+should create job scripts and submit them to the clusters.
+
+Detailed information is available in
+\href{\HPCManualURL#sec:defining-and-submitting-job}{chapter 4 of the HPC manual, section named ``Defining and submitting your job''}.
+
+\section{Exercises}
+
+Create and submit a job script that computes the sum of 1-100 using Python, and
+prints the numbers to a \emph{unique} output file in \lstinline|$VSC_SCRATCH|.
+
+Hint: \lstinline|python -c "print(sum(range(1, 101)))"|
+
+\begin{itemize}
+    \item How many modules are available for Python version 3.6.4?
+    \item How many modules get loaded when you load the \lstinline|Python/3.6.4-intel-2018a|
+        module?
+    \item Which \lstinline|cluster| modules are available?
+\end{itemize}
+
+\begin{itemize}
+    \item What's the full path to your personal home/data/scratch directories?
+    \item Determine how large your personal directories are.
+    \item What's the difference between the size reported by \lstinline|du -sh $HOME|
+        and by \lstinline|ls -ld $HOME|?
+\end{itemize}
