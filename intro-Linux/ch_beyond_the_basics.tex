@@ -477,11 +477,11 @@ to keep in mind.
  #PBS -q long
  #PBS -m abe
  #PBS -j oe
- export HOMEDIR=$VSC_SCRATCH_VO_USER
+ export HOMEDIR=$VSC_HOME
  export WORKDIR=$VSC_SCRATCH_NODE/workdir
  mkdir -p $WORKDIR
  # copy files to local storage
- #cp -a $HOMEDIR/workfiles $WORKDIR/
+ cp -a $HOMEDIR/workfiles $WORKDIR/
 
  # load software we need
  module load FreeSurfer
