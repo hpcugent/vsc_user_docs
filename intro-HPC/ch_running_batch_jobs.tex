@@ -68,7 +68,7 @@ the module system has been developed, which:
 \begin{enumerate}
 \item  Activates or deactivates \emph{software packages} and their dependencies.
 \item  Allows setting and unsetting of \emph{environment variables}, including
-    adding and deleting entries from database-type environment variables.
+    adding and deleting entries from list-like environment variables.
 \item  Does this in a \emph{shell-independent} fashion (necessary information
     is stored in the accompanying module file).
 \item  Takes care of \emph{versioning aspects}: For many libraries, multiple
@@ -140,7 +140,7 @@ For some clusters, additional toolchains are defined, e.g., to take advantage
 of specific properties of that cluster such as GPU accelerators or special
 interconnect features that require a vendor-specific MPI-implementation.
 
-\subsection{Activating and de-activating modules}
+\subsection{Loading and unloading modules}
 \label{subsec:activating-and-deactivating-modules}
 
 To ``activate'' a software package, you load the corresponding module file
@@ -157,13 +157,17 @@ command will automatically choose the default version (if it was set by the
 system administrators) or the most recent version otherwise (i.e., the
 lexicographical last after the \lstinline|/|).
 
-\strong{However, the user can (and probably should, to avoid
-surprises when newer versions are installed) specify a particular version},
-e.g.,
+\strong{However, you should specify a particular version to avoid
+surprises when newer versions are installed}:
 
 \begin{prompt}
-%\shellcmd{module load \emph{secondexample/2.7-intel-2018a}}%
+%\shellcmd{module load \emph{secondexample/2.7-intel-2016b}}%
 \end{prompt}
+
+\ifusinglmod
+The \lstinline|ml| command is a shorthand for \lstinline|module load|:
+\lstinline|ml example/1.2.3| is equivalent to \lstinline|module load|.
+\fi
 
 Obviously, you need to keep track of the modules that are currently
 loaded. If you executed the two load commands stated above, you will get the
@@ -172,17 +176,19 @@ following:
 \begin{prompt}
 %\shellcmd{module list}%
 Currently Loaded Modulefiles:
-  1) example/1.2.3-intel-2018a        5) intel/2018a
-  2) secondexample/2.7-intel-2018a          6) examplelib/1.2-intel-2018b
-  3) GCCcore/4.9.3                          7) binutils/2.25-GCCcore-4.9.3
-  4) ifort/2018.1.150-GCC-4.9.3-2.25        8) %\ldots{}%
+1) example/1.2.3                                          6) imkl/11.3.3.210-iimpi-2016b
+2) GCCcore/5.4.0                                          7) intel/2016b
+3) icc/2016.3.210-GCC-5.4.0-2.26                          8) examplelib/1.2-intel-2016b
+4) ifort/2016.3.210-GCC-5.4.0-2.26                        9) secondexample/2.7-intel-2016b
+5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26
+
 \end{prompt}
 
 
-It is important to note at this point that other modules (e.g., \lstinline|intel/2018a|)
+It is important to note at this point that other modules (e.g., \lstinline|intel/2016b|)
 are also listed, although the user did not explicitly load them. This is
-because \lstinline|secondexample/2.7-intel-2018a| depends on it (as indicated in its name),
-and the system administrator specified that the \lstinline|intel/2014a| module should
+because \lstinline|secondexample/2.7-intel-2016b| depends on it (as indicated in its name),
+and the system administrator specified that the \lstinline|intel/2016b| module should
 be loaded whenever the \lstinline|secondexample| module is loaded. There are advantages and
 disadvantages to this, so be aware of automatically loaded modules whenever
 things go wrong: they may have something to do with it!
@@ -195,10 +201,10 @@ Modules need not be loaded one by one; the two \lstinline|module load| commands 
 combined as follows:
 
 \begin{prompt}
-%\shellcmd{module load \emph{example/1.2.3-intel-2018a} \emph{secondexample/2.7-intel-2018a}}%
+%\shellcmd{module load \emph{example/1.2.3} \emph{secondexample/2.7-intel-2016b}}%
 \end{prompt}
 
-This will load the two modules as well as their dependencies.
+This will load the two modules as well as their dependencies ((unless there are conflicts between both modules).
 
 To unload a module, one can use the \lstinline|module unload| command. It works
 consistently with the load command, and reverses the latter's effect. However,
@@ -210,9 +216,11 @@ only the following modules remain:
 %\shellcmd{module unload \emph{secondexample}}%
 %\shellcmd{module list}%
 Currently Loaded Modulefiles:
-    1) example/1.2.3-intel-2018a        5) intel/2018a
-    3) GCCcore/4.9.3                          6) binutils/2.25-GCCcore-4.9.3
-    4) ifort/2018.1.150-GCC-4.9.3-2.25        7) examplelib/1.2-intel-2018b
+Currently Loaded Modulefiles:
+1) example/1.2.3                                          5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26
+2) GCCcore/5.4.0                                          6) imkl/11.3.3.210-iimpi-2016b
+3) icc/2016.3.210-GCC-5.4.0-2.26                          7) intel/2016b
+4) ifort/2016.3.210-GCC-5.4.0-2.26                        8) examplelib/1.2-intel-2016b
 \end{prompt}
 
 \ifusinglmod
@@ -278,9 +286,8 @@ example, to list the available versions of \lstinline|example|:
 
 \begin{prompt}
 %\shellcmd{module avail example/}%
-example/1.2.3-intel-2018a     example/4.5.6-GCCcore-6.3.0
-example/1.2.3-foss-2018a
-
+example/1.2.3
+example/4.5.6
 \end{prompt}
 
 Lets now generate a version conflict with the \lstinline|example| module, and see what happens.
@@ -288,10 +295,8 @@ Lets now generate a version conflict with the \lstinline|example| module, and se
 \ifusinglmod
 \begin{prompt}
 %\shellcmd{module av example/}%
-example/1.2.3
-example/4.5.6
-%\shellcmd{module load example/1.2.3}%
-%\shellcmd{module load example/4.5.6}%
+example/1.2.3              example/4.5.6
+%\shellcmd{module load example/1.2.3 example/4.5.6}%
 Lmod has detected the following error:  A different version of the 'example'
 module is already loaded (see output of 'ml').
 %\shellcmd{module swap example/4.5.6}%
@@ -299,13 +304,11 @@ module is already loaded (see output of 'ml').
 \else
 \begin{prompt}
 %\shellcmd{module av example/}%
-example/1.2.3
-example/4.5.6
-%\shellcmd{module load example/1.2.3}%
-%\shellcmd{module load example/4.5.6}%
-thirdexample/4.5.6(12):ERROR:150: Module 'example/4.5.6' conflicts with the currently loaded module(s) 'example/1.2.3'
-thirdexample/4.5.6(12):ERROR:102: Tcl command execution failed: conflict example
-%\shellcmd{module swap thirdexample/4.5.6}%
+example/1.2.3              example/4.5.6
+%\shellcmd{module load example/1.2.3 example/4.5.6}%
+example/4.5.6(12):ERROR:150: Module 'example/4.5.6' conflicts with the currently loaded module(s) 'example/1.2.3'
+example/4.5.6(12):ERROR:102: Tcl command execution failed: conflict example
+%\shellcmd{module swap example/4.5.6}%
 \end{prompt}
 \fi
 
@@ -334,13 +337,16 @@ If you have a set of modules that you need to load often,
 you can save these in a \emph{collection}. This will enable you to load all the
 module you need with a single command.
 
+In each \lstinline|module| command, you can replace \lstinline|module| with
+\lstinline|ml|.
+
 First, load all modules you want to include in the collections:
 
 \begin{prompt}
-%\shellcmd{module load \emph{example/1.2.3} \emph{secondexample/2.7}}%
+%\shellcmd{module load \emph{example/1.2.3} \emph{secondexample/2.7-intel-2016b}}%
 \end{prompt}
 
-Now store it in a collection using \lstinline|ml save|. In this example, the collection
+Now store it in a collection using \lstinline|module save|. In this example, the collection
 is named \lstinline|my-collection|.
 
 \begin{prompt}
@@ -361,8 +367,11 @@ To get a list of all modules a collection will load, you can use the \lstinline|
 command:
 \begin{prompt}
 %\shellcmd{module describe \emph{my-collection}}%
-1) example/1.2.3-intel-2018a        3) intel/2018a
-2) examplelib/1.2-intel-2014b             4) secondexample/2.7-intel-2018a
+1) example/1.2.3                                          6) imkl/11.3.3.210-iimpi-2016b
+2) GCCcore/5.4.0                                          7) intel/2016b
+3) icc/2016.3.210-GCC-5.4.0-2.26                          8) examplelib/1.2-intel-2016b
+4) ifort/2016.3.210-GCC-5.4.0-2.26                        9) secondexample/2.7-intel-2016b
+5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26
 \end{prompt}
 \fi
 
