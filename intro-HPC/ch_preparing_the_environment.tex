@@ -668,7 +668,7 @@ for future access.
   command, but can copy files to or from remote machines.
 
   It's easier to copy files directly to \lstinline|$VSC_DATA| and \lstinline|$VSC_SCRATCH|
-  if you have symlinks to them in your homedirectory. See
+  if you have symlinks to them in your home directory. See
   \href{\LinuxManualURL#sec:symlink-for-data}{the chapter titled ``Uploading/downloading/editing files'', section ``Symlinks for data/scratch'' in the intro to Linux}
   for how to do this.
 
@@ -753,6 +753,14 @@ we can use the following command (assuming you've created the \lstinline|scratch
 \begin{prompt}
 %\shellcmd{scp -r dataset \userid{}@\loginnode{}:scratch}%
 \end{prompt}
+
+If you don't use the \lstinline|-r| option to copy a directory, you will run into the following error:
+
+\begin{prompt}
+%\shellcmd{scp dataset \userid{}@\loginnode{}:scratch}%
+dataset: not a regular file
+\end{prompt}
+
 
 
   \subsection{Using sftp}
