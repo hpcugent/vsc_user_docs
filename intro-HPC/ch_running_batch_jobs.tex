@@ -820,21 +820,24 @@ following lines to the job script \lstinline|fibo.pbs|:
 #PBS -m b
 #PBS -m e
 #PBS -m a
-#PBS -M john.smith@example.com
 \end{code}
 or
 \begin{code}{bash}
 #PBS -m abe
-#PBS -M john.smith@example.com
 \end{code}
 
 These options can also be specified on the command line.  Try it and see what
 happens:
 
 \begin{prompt}
-%\shellcmd{qsub -m abe -M john.smith@example.com fibo.pbs}%
+%\shellcmd{qsub -m abe fibo.pbs}%
 \end{prompt}
 
-In these examples, we specified the e-mail address as ``john.smith@example.com'',
-but don't have to specify the e-mail address: if you don't specify it, the system will
-use the e-mail address that is connected to your VSC account.
+The system will use the e-mail address that is connected to your VSC account.
+You can also specify an alternate e-mail address with the \lstinline|-M| option:
+
+\begin{prompt}
+%\shellcmd{qsub -m b -M john.smith@example.com fibo.pbs}%
+\end{prompt}
+
+will send an e-mail to john.smith@example.com when the job begins.

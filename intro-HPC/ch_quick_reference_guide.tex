@@ -14,10 +14,10 @@ Setup ftp session & \texttt{sftp \userid{}@\loginnode{}} \\ \hline
 
 \begin{tabular}{|l|l|} \hline
 \multicolumn{2}{|c|}{\strong{Modules}} \\ \hline
-List all available modules & \texttt{module av} \\ \hline
+List all available modules & \texttt{module avail} \\ \hline
 List loaded modules        & \texttt{module list} \\ \hline
-Load module                & \texttt{module load <{}name>{}} \\ \hline
-Unload module              & \texttt{module unload <{}name>{}} \\ \hline
+Load module                & \texttt{module load example} \\ \hline
+Unload module              & \texttt{module unloade example} \\ \hline
 Unload all modules         & \texttt{module purge} \\ \hline
 Help on use of module      & \texttt{module help} \\ \hline
 \end{tabular}
@@ -25,13 +25,17 @@ Help on use of module      & \texttt{module help} \\ \hline
 \begin{tabular}{|l|l|} \hline
 \multicolumn{2}{|c|}{\strong{Jobs}} \\ \hline
 Submit Job              & \texttt{qsub script.pbs} \\ \hline
-Status of the job       & \texttt{qstat <{}jobid>{}} \\ \hline
-Possible start time (not available everywhere)    & \texttt{showstart <{}jobid>{}} \\ \hline
-Check job (not available everywhere)              & \texttt{checkjob <{}jobid>{}} \\ \hline
-Show compute node       & \texttt{qstat -n <{}jobid>{}} \\ \hline
-Delete job              & \texttt{qdel <{}jobid>{}} \\ \hline
+Status of the job       & \texttt{qstat jobid} \\ \hline
+\ifgent\else % these are not enabled in ghent
+Possible start time (not available everywhere)    & \texttt{showstart jobid} \\ \hline
+Check job (not available everywhere)              & \texttt{checkjob jobid} \\ \hline
+\fi
+Show compute node       & \texttt{qstat -n jobid} \\ \hline
+Delete job              & \texttt{qdel jobid} \\ \hline
 Status of all your jobs & \texttt{qstat} \\ \hline
+\ifgent\else % these are not enabled in ghent
 Show all jobs on  queue (not available everywhere) & \texttt{showq} \\ \hline
+\fi
 %Show queue summary      & qstat -q \\ \hline
 %Show some queue         & qstat -f -Q <{}queue>{} \\ \hline
 Submit Interactive job  & \texttt{qsub -I} \\ \hline
@@ -39,15 +43,20 @@ Submit Interactive job  & \texttt{qsub -I} \\ \hline
 
 \begin{tabular}{|l|l|} \hline
 \multicolumn{2}{|c|}{\strong{Disk quota}} \\ \hline
+\ifgent
+Check your disk quota & See \url{https://account.vscentrum.be} \\ \hline
+\else
 Check your disk quota & \texttt{mmlsquota} \\ \hline
 Check disk quota nice & \texttt{show\_quota.py} \\ \hline
+\fi
 Local disk usage      & \texttt{du -h} . \\ \hline
 Overall disk usage    & \texttt{df -a} \\ \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.3\textwidth}|p{0.6\textwidth}|} \hline
 \multicolumn{2}{|c|}{\strong{Worker Framework}} \\ \hline
-Load worker module                      & \texttt{module load worker} \\ \hline
+Load worker module                      & \texttt{module load worker/1.6.8-intel-2018a} Don't forget to specify a version.
+                                          To list available versions, use \lstinline|module avail worker/| \\ \hline
 Submit parameter sweep                  & \texttt{wsub   -batch  weather.pbs   -data  data.csv} \\ \hline
 Submit job array                        & \texttt{wsub  -t  1-100  -batch  test\_set.pbs} \\ \hline
 Submit job array with prolog and epilog & \texttt{wsub  -prolog pre.sh  -batch test\_set.pbs  -epilog post.sh -t 1-100} \\ \hline
