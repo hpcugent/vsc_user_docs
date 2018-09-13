@@ -289,13 +289,14 @@ all depend on which \lstinline|cluster| module is loaded.
 \section{Monitoring and managing your job(s)}
 \label{sec:monitoring-and-managing-your-jobs}
 
-Using the job ID that \textit{qsub} returned, there are various ways to monitor
-the status of your job, e.g.,
+Using the job ID that \lstinline|qsub| returned, there are various ways to monitor
+the status of your job. In the following commands, replace \lstinline|12345|
+with the job ID \lstinline|qsub| returned.
 
-To get the status information on your job:
+
 
 \begin{prompt}
-%\shellcmd{qstat <{}jobid>{}}%
+%\shellcmd{qstat 12345}%
 \end{prompt}
 
 \ifgent
@@ -309,7 +310,7 @@ To get the status information on your job:
   This command is not available on all systems.
 
 \begin{prompt}
-%\shellcmd{showstart <{}jobid>{}}%
+%\shellcmd{showstart 12345}%
 \end{prompt}
 
   This is only a very rough estimate. Jobs may launch sooner than estimated if
@@ -320,7 +321,7 @@ To get the status information on your job:
   messages that may prevent your job from starting:
 
 \begin{prompt}
-%\shellcmd{checkjob <{}jobid>{}}%
+%\shellcmd{checkjob 12345}%
 \end{prompt}
 \fi
 \fi
@@ -329,14 +330,14 @@ To show on which compute nodes your job is running, at least, when it is
 running:
 
 \begin{prompt}
-%\shellcmd{qstat -n <{}jobid>{}}%
+%\shellcmd{qstat -n 12345}%
 \end{prompt}
 
 To remove a job from the queue so that it will not run, or to stop a job that
 is already running.
 
 \begin{prompt}
-%\shellcmd{qdel <{}jobid>{}}%
+%\shellcmd{qdel 12345}%
 \end{prompt}
 
 When you have submitted several jobs (or you just forgot about the job ID), you

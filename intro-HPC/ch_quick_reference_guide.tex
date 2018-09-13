@@ -17,27 +17,25 @@ Setup ftp session & \texttt{sftp \userid{}@\loginnode{}} \\ \hline
 List all available modules & \texttt{module avail} \\ \hline
 List loaded modules        & \texttt{module list} \\ \hline
 Load module                & \texttt{module load example} \\ \hline
-Unload module              & \texttt{module unloade example} \\ \hline
+Unload module              & \texttt{module unload example} \\ \hline
 Unload all modules         & \texttt{module purge} \\ \hline
 Help on use of module      & \texttt{module help} \\ \hline
 \end{tabular}
 
 \begin{tabular}{|l|l|} \hline
 \multicolumn{2}{|c|}{\strong{Jobs}} \\ \hline
-Submit Job              & \texttt{qsub script.pbs} \\ \hline
-Status of the job       & \texttt{qstat jobid} \\ \hline
-\ifgent\else % these are not enabled in ghent
-Possible start time (not available everywhere)    & \texttt{showstart jobid} \\ \hline
-Check job (not available everywhere)              & \texttt{checkjob jobid} \\ \hline
-\fi
-Show compute node       & \texttt{qstat -n jobid} \\ \hline
-Delete job              & \texttt{qdel jobid} \\ \hline
-Status of all your jobs & \texttt{qstat} \\ \hline
-\ifgent\else % these are not enabled in ghent
+Submit Job with jobscript \lstinline|script.pbs|   & \texttt{qsub script.pbs} \\ \hline
+Status of job with ID 12345                        & \texttt{qstat 12345} \\ \hline
+\ifgent\else\ifbrussel\else % showstart/checkjob are not enabled in ghent/brussels
+Possible start time of job with ID 12345 (not available everywhere)    & \texttt{showstart 12345} \\ \hline
+Check job with ID 12345 (not available everywhere)                     & \texttt{checkjob 12345} \\ \hline
+\fi\fi
+Show compute node of job with ID 12345             & \texttt{qstat -n 12345} \\ \hline
+Delete job with ID 12345                           & \texttt{qdel 12345} \\ \hline
+Status of all your jobs                            & \texttt{qstat} \\ \hline
+\ifgent\else\ifbrussel\else % showq is not enabled in ghent/brussels
 Show all jobs on  queue (not available everywhere) & \texttt{showq} \\ \hline
-\fi
-%Show queue summary      & qstat -q \\ \hline
-%Show some queue         & qstat -f -Q <{}queue>{} \\ \hline
+\fi\fi
 Submit Interactive job  & \texttt{qsub -I} \\ \hline
 \end{tabular}
 
@@ -49,8 +47,7 @@ Check your disk quota & See \url{https://account.vscentrum.be} \\ \hline
 Check your disk quota & \texttt{mmlsquota} \\ \hline
 Check disk quota nice & \texttt{show\_quota.py} \\ \hline
 \fi
-Local disk usage      & \texttt{du -h} . \\ \hline
-Overall disk usage    & \texttt{df -a} \\ \hline
+Disk usage in current directory (\lstinline|.|)  & \texttt{du -h} . \\ \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.3\textwidth}|p{0.6\textwidth}|} \hline
