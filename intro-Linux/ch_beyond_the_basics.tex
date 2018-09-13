@@ -477,11 +477,11 @@ to keep in mind.
  #PBS -q long
  #PBS -m abe
  #PBS -j oe
- export HOMEDIR=$VSC_HOME
+ export FILEDIR=$VSC_SCRATCH
  export WORKDIR=$VSC_SCRATCH_NODE/workdir
  mkdir -p $WORKDIR
  # copy files to local storage
- cp -a $HOMEDIR/workfiles $WORKDIR/
+ cp -a $FILEDIR/workfiles $WORKDIR/
 
  # load software we need
  module load FreeSurfer
@@ -489,12 +489,12 @@ to keep in mind.
  # recon-all ... &> output.log  # this command takes too long, let's show a more practical example
  echo $PBS_ARRAYID > $WORKDIR/$PBS_ARRAYID.txt
  # check results directory, create if necessary
- if ! [ -d $HOMEDIR/results ]
+ if ! [ -d $FILEDIR/results ]
  then
-   mkdir -p $HOMEDIR/results
+   mkdir -p $FILEDIR/results
  fi
  # copy work files back
- cp $WORKDIR/$PBS_ARRAYID.txt $HOMEDIR/results/
+ cp $WORKDIR/$PBS_ARRAYID.txt $FILEDIR/results/
 \end{code}
 
 \subsection{PBS pragmas}
