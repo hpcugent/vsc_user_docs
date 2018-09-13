@@ -1,12 +1,14 @@
 \chapter{Checkpointing}
 \label{ch:checkpointing}
 \section{Why checkpointing?}
-If you want to run jobs that require more than 3 days (72 hours) of wall time,
+If you want to run jobs that require wall time than the maximum wall time per job
 and/or want to avoid you lose work because of power outages or system crashes,
 you need to resort to checkpointing.
 
+\ifgent
 It is highly unlikely that we will offer a queue for jobs that require more
 than 3 days to run, as this makes maintaining the infrastructure more painful.
+\fi
 
 
 \section{What is checkpointing?}
@@ -21,7 +23,7 @@ subjob will pick up the checkpoint and continue.
 
 Using checkpointing is very simple: just use \lstinline|csub| instead of \lstinline|qsub| to submit a job.
 
-The csub command creates a wrapper around your job script, to take care
+The \lstinline|csub| command creates a wrapper around your job script, to take care
 of all the checkpointing stuff.
 
 In practice, you (usually) don't need to adjust anything, except for the command used to submit your job.
@@ -34,7 +36,7 @@ An overview of the usage and various command line parameters is given here.
 
 \subsection{Submitting a job}
 
-Typically, a job script is submitting with checkpointing support enabled by running:
+Typically, a job script is submitted with checkpointing support enabled by running:
 
 \begin{prompt}
 csub -s job_script.sh
@@ -45,7 +47,7 @@ The  \lstinline|-s| flag specifies the job script to run.
 \subsection{Caveat: don't create local directories}
 
 One important caveat is that the job script (or the applications run in the script)
-should not create its own local temporary directories, because those will not (always)
+should \emph{not} create its own local temporary directories, because those will not (always)
 be restored when the job is restarted from checkpoint.
 
 \subsection{PBS directives}
@@ -54,7 +56,7 @@ Most PBS directives (\texttt{\#PBS \ldots} specified in the job script will be i
 There are a few exceptions however, i.e. \lstinline|# PBS -N <name>| (job name)
 and all \lstinline|-l| directives (\lstinline|# PBS -l|), e.g. \lstinline|nodes|,
 \lstinline|ppn|, \lstinline|vmem| (virtual memory limit), etc.
-Controlling other job parameters, like requested walltime and job queue should be
+Controlling other job parameters (like requested walltime per sub-job) should be
 specified on the \lstinline|csub| command line.
 
 \subsection{Getting help}
@@ -66,7 +68,7 @@ obtained using \lstinline|-h| or \lstinline|--help|.
 \subsection{Array jobs (\texttt{-t})}
 
 \lstinline|csub| has support for checkpointing array jobs with the \lstinline|-t <spec>|
-flag on the csub command line. This behaves the same as \lstinline|qsub|, see \autoref{sec:worker-framework-job-arrays}.
+flag on the \lstinline|csub| command line. This behaves the same as \lstinline|qsub|, see \autoref{sec:worker-framework-job-arrays}.
 
 \subsection{Local files (\texttt{--pre} / \texttt{--post})}
 
@@ -75,7 +77,7 @@ are copied or not. The job submitted using \lstinline|csub| is (by default) run 
 storage provided by a particular workernode. Thus, no changes will be made to the
 files on the shared storage.
 
-If the job script needs (local) access to the files of the directory where csub
+If the job script needs (local) access to the files of the directory where \lstinline|csub|
 is executed, \lstinline|--pre| flag should be used. This will copy all the files in the job
 script directory to the location where the job script will execute.
 
@@ -98,12 +100,6 @@ be in \lstinline|$VSC_SCRATCH/chkpt/<jobid>/| while the job is running.
 Note that if files in the directory where the job script is located are required to
 run the job, you should also use \lstinline|--pre|.
 
-\subsection{Pro/epilogue mimicing (\texttt{--no\_mimic\_pro\_epi})}
-
-The option \lstinline|--no_mimic_pro_epi| disables the workaround currently required to resolve
-a permissions problem when using actual Torque prologue/epilogue scripts. Don't use
-this option unless you really know what you're doing.
-
 \subsection{Job wall time (\texttt{--job\_time}, \texttt{--chkpt\_time})}
 
 To specify the requested wall time per subjob, use the \lstinline|--job-time| parameter.
@@ -115,8 +111,6 @@ By default, this is set to 15 minutes which should be enough for most applicatio
 \emph{Don't change this unless you really need to}.
 
 The total requested wall time per subjob is the sum of both \lstinline|job_time| and \lstinline|chkpt_time|.
-This should be taken into account when submitting to a specific job queue
-(e.g. \lstinline|debug| which only support jobs of up to 1 hour).
 
 If you would like to time how long the job executes, just prepend the main command in your job script with
 the time command \lstinline|time|, e.g.:
@@ -129,10 +123,38 @@ The \lstinline|real| time will not make sense, as it will also include the time
 passed between two checkpointed subjobs. However, the \lstinline|user| time should give a good
 indication of the actual time it took to run your command, even if multiple checkpoints were performed.
 
+\subsection{Resuming from last checkpoint (\texttt{--resume})}
+
+The \lstinline|--resume| option allows you to resume a job from the
+last available checkpoint in case something went wrong
+(e.g. accidentally deleting a (sub)job using \lstinline|qdel|, a power outage or other system failure, \ldots).
+
+\the\year\the\month\the\day
+
+Specify the job name as returned after submission (and as listed in \texttt{\$VSC\_SCRATCH/chkpt}).
+The full job name consists of the specified job name (or the script name if no job name was specified),
+a timestamp and two random characters at the end, for example \texttt{my\_job\_name.\the\year0102\_133755.Hk}
+or \texttt{script.sh.\the\year0102\_133755.Hk}.
+
+Note: When resuming from checkpoint, you can change the wall time resources for your job using the \lstinline|--job_time| and
+\lstinline|--chkpt_time| options. This should allow you to continue from the last checkpoint
+in case your job crashed due to an excessively long checkpointing time.
+
+In case resuming fails for you, please contact \hpcinfo, and include the output
+of the \lstinline|csub --resume| command in your message.
+
+\section{Additional options}
+
+\subsection{Pro/epilogue mimicing (\texttt{--no\_mimic\_pro\_epi})}
+
+The option \lstinline|--no_mimic_pro_epi| disables the workaround currently required to resolve
+a permissions problem when using actual Torque prologue/epilogue scripts. Don't use
+this option unless you really know what you are doing.
+
 \subsection{Cleanup checkpoints (\texttt{--cleanup\_after\_restart})}
 
 Specifying this option will make the wrapper script remove the checkpoint files after
-a successful job restart. This may be desirable in cause you're short on storage space.
+a successful job restart. This may be desirable in cause you are short on storage space.
 
 Note that we don't recommend setting this option, because this way you won't be able
 to resume from the last checkpoint when something goes wrong. It may also prevent
@@ -146,32 +168,4 @@ checkpoints and related information once the job has finished. This may be usefu
 for debugging, since this also preserves the \lstinline|stdout|/\lstinline|stderr|
 of the wrapper script.
 
-\subsection{Resuming from last checkpoint (\texttt{--resume})}
-
-The \lstinline|--resume| option allows you to resume a job from the
-last available checkpoint in case something went wrong
-(e.g. accidentally deleting a (sub)job using \lstinline|qdel|, a power outage or other system failure, \ldots).
-
-Specify the job name as returned after submission (and as listed in \texttt{\$VSC\_SCRATCH/chkpt}).
-The full job name consists of the specified job name (or the script name if no job name was specified),
-a timestamp and two random characters at the end, for example \lstinline|my_job_name.20110131_133755.Hk|
-or \lstinline|script.sh.20110131_133755.Hk|.
-
-Note: When resuming from checkpoint, you can change the wall time resources for your job using the \lstinline|--job_time| and
-\lstinline|--chkpt_time| options. This should allow you to continue from the last checkpoint
-in case your job crashed due to an excessively long checkpointing time.
-
-In case resuming fails for you, please contact \hpcinfo, and include the output
-of the \lstinline|csub --resume| command in your message.
-
-\subsection{Specifying what to checkpoint (\texttt{--chkpt\_save\_opt})}
-
-Using \lstinline|--chkpt_save_opt|, you can specify what BLCR should include in
-the checkpoint, i.e. it controls the \lstinline|--save-X| option of \lstinline|cr_checkpoint|.
-The default setting is \lstinline|exe|, which causes the program binary to be included in the
-checkpoint. Specifying \lstinline|none| instead will result in slightly smaller checkpoints,
-however this shouldn't be set if you notice failures to resume from checkpoint
-for example. You can also specify \lstinline|all|, which will significantly increase the size
-of the checkpoints, but may resolve some problems with resuming from checkpoint.
-
-\emph{Don't set this unless you know what you're doing}.
+\emph{Don't set this unless you know what you are doing}.
