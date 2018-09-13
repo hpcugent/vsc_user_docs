@@ -52,46 +52,44 @@ your program execution.
 \subsection{Environment Variables}
 
 The program environment on the \hpc is controlled by pre-defined settings,
-which are stored in environment (or shell) variables.
-
-You can use shell variables to store data, set configuration options and
-customise the environment on the \hpc. The default shell
-on the \hpc is Bash (Bourne Again Shell) and can be used for the
-following purposes:
-
-\begin{enumerate}
-\item  Configure look and feel of the shell.
-\item  Setup terminal settings depending on which terminal you're using.
-\item  Set the search path for running executables.
-\item  Set environment variables as needed by programs.
-\item  Set convenient abbreviations for heavily used values.
-\item  Run commands that you want to run whenever you log in or log out.
-\item  Setup aliases and/or shell function to automate tasks to save typing and time.
-\item  Changing the bash prompt.
-\item  Setting shell options.
-\end{enumerate}
-
-The environment variables are typically set at login by a script, whenever you
-connect to the \hpc. These pre-defined variables usually impact the run time
-behaviour of the programs that we want to run.
+which are stored in environment (or shell) variables. For more information about environment variables, see
+\href{\LinuxManualURL#sec:environment-variables}{the chapter ``Getting started'', section ``Variables'' in the intro to Linux}.
 
 All the software packages that are installed on the \hpc cluster require
 different settings. These packages include compilers, interpreters,
 mathematical software such as MATLAB and SAS, as well as other applications and
 libraries.
 
-In order to administer the active software and their environment variables, a
-\strong{\emph{``module''}} package has been developed, which:
+\subsection{The module command}
+
+In order to administer the active software and their environment variables,
+the module system has been developed, which:
 
 \begin{enumerate}
-\item  Activates or deactivates \underbar{software packages} and their dependencies.
-\item  Allows setting and unsetting of \underbar{environment variables}, including adding and deleting entries from database-type environment variables.
-\item  Does this in a \underbar{shell-independent} fashion (necessary information is stored in the accompanying module configuration file).
-\item  Takes care of \underbar{versioning aspects}: For many libraries, multiple versions are installed and maintained. The module system also takes care of the versioning of software packages in case multiple versions are installed. For instance, it does not allow multiple versions to be loaded at same time.
-\item  Takes care of \underbar{dependencies}: Another issue arises when one considers library versions and the dependencies they create. Some software requires an older version of a particular library to run correctly (or at all). Hence a variety of version numbers is available for important libraries.
+\item  Activates or deactivates \emph{software packages} and their dependencies.
+\item  Allows setting and unsetting of \emph{environment variables}, including
+    adding and deleting entries from database-type environment variables.
+\item  Does this in a \emph{shell-independent} fashion (necessary information
+    is stored in the accompanying module file).
+\item  Takes care of \emph{versioning aspects}: For many libraries, multiple
+    versions are installed and maintained. The module system also takes care of
+    the versioning of software packages. For instance, it does not allow multiple
+    versions to be loaded at same time.
+\item  Takes care of \emph{dependencies}: Another issue arises when one considers
+    library versions and the dependencies they require. Some software requires an
+    older version of a particular library to run correctly (or at all). Hence a
+    variety of version numbers is available for important libraries. Modules
+    typically load the required dependencies automatically.
 \end{enumerate}
 
-This is all managed with the ``\emph{module}'' command, which is explained in the next sections.
+This is all managed with the \lstinline|module| command, which is explained in the next sections.
+
+\ifusinglmod
+There is also a shorter \lstinline|ml| command that does exactly the same as the \lstinline|module|
+command and is easier to type. Whenever you see a \lstinline|module| command, you can replace
+\lstinline|module| with \lstinline|ml|
+\fi
+
 
 \subsection{Available modules}
 
@@ -99,21 +97,20 @@ A large number of software packages are installed on the \hpc clusters. A
 list of all currently available software can be obtained by typing:
 
 \begin{prompt}
-%\shellcmd{module av}%
-\end{prompt}
-
-or by typing it in full:
-
-\begin{prompt}
 %\shellcmd{module available}%
 \end{prompt}
+
+It's also possible to execute \lstinline|module av| or \lstinline|module avail|,
+these are shorter to type and will do the same thing.
 
 This will give some output such as:
 
 \inputsite{available-modules}
 
-This gives a full list of software packages that can be loaded. Note that
-modules starting with a capital letter are listed first.
+This gives a full list of software packages that can be loaded.
+
+\strong{The casing of module names is important}: lowercase and uppercase letters
+matter in module names.
 
 \subsection{Organisation of modules in toolchains}
 
@@ -121,7 +118,7 @@ The amount of modules on the VSC systems can be overwhelming, and it is not
 always immediately clear which modules can be loaded safely together if you
 need to combine multiple programs in a single job to get your work done.
 
-Therefore the VSC has defined so-called \strong{toolchains} on the newer VSC-clusters.
+Therefore the VSC has defined so-called \strong{toolchains}.
 A toolchain contains a C/C++ and Fortran compiler, a MPI library and some basic
 math libraries for (dense matrix) linear algebra and FFT. Two toolchains are
 defined on most VSC systems. One, the \lstinline|intel| toolchain, consists of the Intel
@@ -131,7 +128,7 @@ the standard LAPACK and ScaLAPACK libraries for the linear algebra operations
 and the FFTW library for FFT. The toolchains are refreshed twice a year,
 which is reflected in their name.
 
-E.g., \lstinline|foss-2014a| is the first version of the \lstinline|foss| toolchain in 2014.
+E.g., \texttt{foss-\the\year} is the first version of the \lstinline|foss| toolchain in \the\year.
 
 The toolchains are then used to compile a lot of the software installed on
 the VSC clusters. You can recognise those packages easily as they all contain the
@@ -146,20 +143,22 @@ interconnect features that require a vendor-specific MPI-implementation.
 \subsection{Activating and de-activating modules}
 \label{subsec:activating-and-deactivating-modules}
 
-A module is loaded using the following command:
-
+To ``activate'' a software package, you load the corresponding module file
+using the \lstinline|module load| command:
 
 \begin{prompt}
-%\shellcmd{module load \emph{examplemodule}}%
+%\shellcmd{module load \emph{example}}%
 \end{prompt}
 
-This will load the most recent version of \emph{examplemodule}.
+This will load the most recent version of \emph{example}.
 
-For some packages (e.g., OpenMPI), multiple versions are installed; the load
-command will automatically choose the most recent version (i.e., the
-lexicographical last after the ``/'') or the default version (as set by the
-system administrators). However, the user can (and probably should, to avoid
-surprises when newer versions are installed) specify a particular version,
+For some packages, multiple versions are installed; the load
+command will automatically choose the default version (if it was set by the
+system administrators) or the most recent version otherwise (i.e., the
+lexicographical last after the \lstinline|/|).
+
+\strong{However, the user can (and probably should, to avoid
+surprises when newer versions are installed) specify a particular version},
 e.g.,
 
 \begin{prompt}
@@ -173,12 +172,14 @@ following:
 \begin{prompt}
 %\shellcmd{module list}%
 Currently Loaded Modulefiles:
-  1) examplemodule/1.2.3-intel-2018a        3) intel/2018a
-  2) secondexample/2.7-intel-2018a          4) examplelib/1.2-intel-2014b
+  1) example/1.2.3-intel-2018a        5) intel/2018a
+  2) secondexample/2.7-intel-2018a          6) examplelib/1.2-intel-2018b
+  3) GCCcore/4.9.3                          7) binutils/2.25-GCCcore-4.9.3
+  4) ifort/2018.1.150-GCC-4.9.3-2.25        8) %\ldots{}%
 \end{prompt}
 
 
-It is important to note at this point that other modules (e.g., \lstinline|intel/2014a|)
+It is important to note at this point that other modules (e.g., \lstinline|intel/2018a|)
 are also listed, although the user did not explicitly load them. This is
 because \lstinline|secondexample/2.7-intel-2018a| depends on it (as indicated in its name),
 and the system administrator specified that the \lstinline|intel/2014a| module should
@@ -190,24 +191,37 @@ In fact, an easy way to check the components and version numbers of those
 components of a toolchain is to simply load the toolchain and then list the
 modules that are loaded.
 
+Modules need not be loaded one by one; the two \lstinline|module load| commands can be
+combined as follows:
+
+\begin{prompt}
+%\shellcmd{module load \emph{example/1.2.3-intel-2018a} \emph{secondexample/2.7-intel-2018a}}%
+\end{prompt}
+
+This will load the two modules as well as their dependencies.
+
 To unload a module, one can use the \lstinline|module unload| command. It works
 consistently with the load command, and reverses the latter's effect. However,
-the dependencies of the package are NOT automatically unloaded; the user shall
-unload the packages one by one. One can however unload automatically loaded
-modules manually, to debug some problem. When the \lstinline|secondexample| module is unloaded,
+the dependencies of the package are NOT automatically unloaded; you will have to
+unload the packages one by one. When the \lstinline|secondexample| module is unloaded,
 only the following modules remain:
 
 \begin{prompt}
 %\shellcmd{module unload \emph{secondexample}}%
 %\shellcmd{module list}%
 Currently Loaded Modulefiles:
-  1) examplemodule/1.2.3-intel-2018a        3) intel/2018a
-  2) examplelib/1.2-intel-2014b
+    1) example/1.2.3-intel-2018a        5) intel/2018a
+    3) GCCcore/4.9.3                          6) binutils/2.25-GCCcore-4.9.3
+    4) ifort/2018.1.150-GCC-4.9.3-2.25        7) examplelib/1.2-intel-2018b
 \end{prompt}
 
-Notice that the version was not specified: the module system is sufficiently
-clever to figure out what the user intends. However, checking the list of
-currently loaded modules is always a good idea, just to make sure \ldots
+\ifusinglmod
+To unload the \lstinline|secondexample| module, you can also use \lstinline|ml -secondexample|.
+You can also just use the \lstinline|ml| command without arguments to list loaded modules.
+\fi
+
+Notice that the version was not specified: there can only be one version of a module
+loaded at a time. However, checking the list of currently loaded modules is always a good idea.
 
 \subsection{Purging all modules}
 \label{subsec:purging-modules}
@@ -219,20 +233,16 @@ state, you can use:
 %\shellcmd{module purge}%
 \end{prompt}
 
+\ifgent
+This is always safe: the \lstinline|cluster| module (the module that specifies what cluster
+jobs will get submitted to) will not be unloaded (because it's a ``sticky'' module).
+\else
 However, on some VSC clusters you may be left with a very empty list of available
 modules after executing \lstinline|module purge|. On those systems, \lstinline|module av| will show you a list of
 modules containing the name of a cluster or a particular feature of a section of
 the cluster, and loading the appropriate module will restore the module list
 applicable to that particular system.
-
-Modules need not be loaded one by one; the two \lstinline|module load| commands can be
-combined as follows:
-
-\begin{prompt}
-%\shellcmd{module load \emph{examplemodule/1.2.3-intel-2018a} \emph{secondexample/2.7-intel-2018a}}%
-\end{prompt}
-
-This will load the two modules as well as their dependencies.
+\fi
 
 \subsection{Explicit version numbers}
 \label{subsec:explicit-version-numbers}
@@ -240,69 +250,67 @@ This will load the two modules as well as their dependencies.
 As a rule, once a module has been installed on the cluster, the executables or
 libraries it comprises are never modified. This policy ensures that the user's
 programs will run consistently, at least if the user specifies a specific
-version. Failing to specify a version may result in unexpected behaviour.
+version. \strong{Failing to specify a version may result in unexpected behaviour}.
 
-Consider the following example: the user decides to use the \lstinline|examplemodule| module
-and at that point in time, just a single version 1.2.3,
-compiled with Intel is installed on the cluster. The user loads the library
-using:
+Consider the following example: the user decides to use the \lstinline|example| module
+and at that point in time, just a single version 1.2.3 is installed on the cluster.
+The user loads the module using:
 
 \begin{prompt}
-%\shellcmd{module load \emph{examplemodule}}%
+%\shellcmd{module load \emph{example}}%
 \end{prompt}
 
 rather than
 
 \begin{prompt}
-%\shellcmd{module load \emph{examplemodule/1.2.3-intel-2018a}}%
+%\shellcmd{module load \emph{example/1.2.3}}%
 \end{prompt}
 
-Everything works fine, up to the point where a new version of \lstinline|examplemodule| is installed,
-4.5.6 compiled for gcc. From then on, the user's load command will load the
-latter version, rather than the intended one, which may lead to unexpected
-problems.
+Everything works fine, up to the point where a new version of \lstinline|example| is installed, 4.5.6.
+From then on, the user's load command will load the latter version, rather than
+the intended one, which may lead to unexpected problems.
+\ifgent % The troubleshooting section is wrapped in an ifgent, we don't want undefined references when compiling for antwerpen,...
+See \autoref{sec:module-conflicts} for how to diagnose and solve module conflicts.
+\fi
 
 To list the available versions, you can use the \lstinline|module avail| command. For
-example, to list the available versions of \lstinline|examplemodule|:
+example, to list the available versions of \lstinline|example|:
 
 \begin{prompt}
-%\shellcmd{module avail examplemodule/}%
-examplemodule/1.2.3-intel-2018a     examplemodule/4.5.6-GCCcore-6.3.0
-examplemodule/1.2.3-foss-2018a
+%\shellcmd{module avail example/}%
+example/1.2.3-intel-2018a     example/4.5.6-GCCcore-6.3.0
+example/1.2.3-foss-2018a
 
 \end{prompt}
 
-Lets now generate a version conflict with the \lstinline|thirdexample| module, and see what
-is happening.
+Lets now generate a version conflict with the \lstinline|example| module, and see what happens.
 
 \ifusinglmod
 \begin{prompt}
-%\shellcmd{module av thirdexample/}%
-thirdexample/1.2.3
-thirdexample/4.5.6
-thirdexample/6.7.8
-%\shellcmd{module load thirdexample/1.2.3}%
-%\shellcmd{module load thirdexample/4.5.6}%
-Lmod has detected the following error:  A different version of the 'thirdexample'
+%\shellcmd{module av example/}%
+example/1.2.3
+example/4.5.6
+%\shellcmd{module load example/1.2.3}%
+%\shellcmd{module load example/4.5.6}%
+Lmod has detected the following error:  A different version of the 'example'
 module is already loaded (see output of 'ml').
-%\shellcmd{module swap thirdexample/4.5.6}%
+%\shellcmd{module swap example/4.5.6}%
 \end{prompt}
 \else
 \begin{prompt}
-%\shellcmd{module av thirdexample/}%
-thirdexample/1.2.3
-thirdexample/4.5.6
-thirdexample/6.7.8
-%\shellcmd{module load thirdexample/1.2.3}%
-%\shellcmd{module load thirdexample/4.5.6}%
-thirdexample/4.5.6(12):ERROR:150: Module 'thirdexample/4.5.6' conflicts with the currently loaded module(s) 'thirdexample/1.2.3'
-thirdexample/4.5.6(12):ERROR:102: Tcl command execution failed: conflict thirdexample
+%\shellcmd{module av example/}%
+example/1.2.3
+example/4.5.6
+%\shellcmd{module load example/1.2.3}%
+%\shellcmd{module load example/4.5.6}%
+thirdexample/4.5.6(12):ERROR:150: Module 'example/4.5.6' conflicts with the currently loaded module(s) 'example/1.2.3'
+thirdexample/4.5.6(12):ERROR:102: Tcl command execution failed: conflict example
 %\shellcmd{module swap thirdexample/4.5.6}%
 \end{prompt}
 \fi
 
 Note: A \lstinline|module swap| command combines the appropriate ``module unload''
-and ``module load'' commands.
+and \lstinline|module load| commands.
 
 \subsection{Get detailed info}
 
@@ -315,10 +323,9 @@ To get a list of all possible commands, type:
 Or to get more information about one specific module package:
 
 \begin{prompt}
-%\shellcmd{module help examplemodule}%
------------ Module Specific Help for 'examplemodule/1.2.3-intel-2018a' ---------------------------
-
-   This is a module that doesn't really exist. It can be used to do things. - Homepage: https://example.com/
+%\shellcmd{module help example/1.2.3}%
+----------- Module Specific Help for 'example/1.2.3' ---------------------------
+  This is just an example - Homepage: https://example.com/
 \end{prompt}
 
 \ifusinglmod
@@ -330,7 +337,7 @@ module you need with a single command.
 First, load all modules you want to include in the collections:
 
 \begin{prompt}
-%\shellcmd{module load \emph{examplemodule/1.2.3-intel-2018a} \emph{secondexample/2.7-intel-2018a}}%
+%\shellcmd{module load \emph{example/1.2.3} \emph{secondexample/2.7}}%
 \end{prompt}
 
 Now store it in a collection using \lstinline|ml save|. In this example, the collection
@@ -354,7 +361,7 @@ To get a list of all modules a collection will load, you can use the \lstinline|
 command:
 \begin{prompt}
 %\shellcmd{module describe \emph{my-collection}}%
-1) examplemodule/1.2.3-intel-2018a        3) intel/2018a
+1) example/1.2.3-intel-2018a        3) intel/2018a
 2) examplelib/1.2-intel-2014b             4) secondexample/2.7-intel-2018a
 \end{prompt}
 \fi
