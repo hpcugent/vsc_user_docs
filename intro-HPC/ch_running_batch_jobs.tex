@@ -133,8 +133,7 @@ E.g., \texttt{foss/\the\year{}a} is the first version of the \lstinline|foss| to
 The toolchains are then used to compile a lot of the software installed on
 the VSC clusters. You can recognise those packages easily as they all contain the
 name of the toolchain after the version number in their name (e.g. \lstinline|Python/2.7.12-intel-2016b|).
-Packages compiled with the same toolchain and toolchain version will typically work
-together well without conflicts.
+Only packages compiled with the same toolchain name and version can work together without conflicts.
 
 \subsection{Loading and unloading modules}
 \label{subsec:activating-and-deactivating-modules}
@@ -284,7 +283,7 @@ the intended one, which may lead to unexpected problems.
 See for example \autoref{sec:module-conflicts}.
 \fi
 
-Consider the followin \lstinline|example| modules:
+Consider the following \lstinline|example| modules:
 
 \begin{prompt}
 %\shellcmd{module avail example/}%
@@ -447,87 +446,57 @@ To remove a collection, remove the corresponding file in \lstinline|$HOME/.lmod.
 %\shellcmd{rm \$HOME/.lmod.d/my-collection}%
 \end{prompt}
 
-\ifusinglmod
 \subsection{Getting module details}
 
-To see how a module would change the environment, you can use the \lstinline|module show|
-or \lstinline|ml show| command:
+To see how a module would change the environment, you can use the \lstinline|module show| command:
 
-\ifgent
+\ifusinglmod
+
 \begin{prompt}
-%\shellcmd{module show GSL/2.4-GCCcore-6.4.0}
-help([[
-Description
-===========
-The GNU Scientific Library (GSL) is a numerical library for C and C++
- programmers.  The library provides a wide range of mathematical routines
- such as random number generators, special functions and least-squares fitting.
-
-
-More information
-================
- - Homepage: http://www.gnu.org/software/gsl/
-]])
-whatis("Description:
- The GNU Scientific Library (GSL) is a numerical library for C and C++
- programmers.  The library provides a wide range of mathematical routines
- such as random number generators, special functions and least-squares fitting.
-")
-whatis("Homepage: http://www.gnu.org/software/gsl/")
-conflict("GSL")
-load("GCCcore/6.4.0")
-prepend_path("ACLOCAL_PATH","/apps/gent/CO7/sandybridge/software/GSL/2.4-GCCcore-6.4.0/share/aclocal")
-prepend_path("CPATH","/apps/gent/CO7/sandybridge/software/GSL/2.4-GCCcore-6.4.0/include")
-prepend_path("LD_LIBRARY_PATH","/apps/gent/CO7/sandybridge/software/GSL/2.4-GCCcore-6.4.0/lib")
-prepend_path("LIBRARY_PATH","/apps/gent/CO7/sandybridge/software/GSL/2.4-GCCcore-6.4.0/lib")
-prepend_path("MANPATH","/apps/gent/CO7/sandybridge/software/GSL/2.4-GCCcore-6.4.0/share/man")
-prepend_path("PATH","/apps/gent/CO7/sandybridge/software/GSL/2.4-GCCcore-6.4.0/bin")
-prepend_path("PKG_CONFIG_PATH","/apps/gent/CO7/sandybridge/software/GSL/2.4-GCCcore-6.4.0/lib/pkgconfig")
-setenv("EBROOTGSL","/apps/gent/CO7/sandybridge/software/GSL/2.4-GCCcore-6.4.0")
-setenv("EBVERSIONGSL","2.4")
-setenv("EBDEVELGSL","/apps/gent/CO7/sandybridge/software/GSL/2.4-GCCcore-6.4.0/easybuild/GSL-2.4-GCCcore-6.4.0-easybuild-devel")
+%\shellcmd{module show Python/2.7.12-intel-2016b}%
+whatis("Description: Python is a programming language that lets you work more quickly and integrate your systems  more effectively. - Homepage: http://python.org/ ")
+conflict("Python")
+load("intel/2016b")
+load("bzip2/1.0.6-intel-2016b")
+...
+prepend_path(...)
+setenv("EBEXTSLISTPYTHON","setuptools-23.1.0,pip-8.1.2,nose-1.3.7,numpy-1.11.1,scipy-0.17.1,ytz-2016.4", ...)
 \end{prompt}
-\ifbrussel
+
+
+It's also possible to use the \lstinline|ml show| command instead: they are equivalent.
+
+Here you can see that the \lstinline|Python/2.7.12-intel-2016b| comes with a whole
+bunch of extensions: \lstinline|numpy|, \lstinline|scipy|, \ldots
+
+You can also see the modules the \lstinline|Python/2.7.12-intel-2016b| module loads:
+\lstinline|intel/2016b|, \lstinline|bzip2/1.0.6-intel-2016b|, \ldots
+
+\else
 \begin{prompt}
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-   /apps/brussel/CO7/magnycours-ib/modules/2017b/all/GSL/2.4-GCCcore-6.4.0:
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-whatis("Description:   The GNU Scientific Library (GSL) is a numerical library for C and C++  programmers.  The library provides a wide range of mathematical routines  such as random number generators, special functions and least-squares fitting.  ")
-whatis("Homepage: http://www.gnu.org/software/gsl/ ")
-conflict("GSL")
-load("GCCcore/6.4.0")
-prepend_path("ACLOCAL_PATH","/apps/brussel/CO7/magnycours-ib/software/GSL/2.4-GCCcore-6.4.0/share/aclocal")
-prepend_path("CPATH","/apps/brussel/CO7/magnycours-ib/software/GSL/2.4-GCCcore-6.4.0/include")
-prepend_path("LD_LIBRARY_PATH","/apps/brussel/CO7/magnycours-ib/software/GSL/2.4-GCCcore-6.4.0/lib")
-prepend_path("LIBRARY_PATH","/apps/brussel/CO7/magnycours-ib/software/GSL/2.4-GCCcore-6.4.0/lib")
-prepend_path("MANPATH","/apps/brussel/CO7/magnycours-ib/software/GSL/2.4-GCCcore-6.4.0/share/man")
-prepend_path("PATH","/apps/brussel/CO7/magnycours-ib/software/GSL/2.4-GCCcore-6.4.0/bin")
-prepend_path("PKG_CONFIG_PATH","/apps/brussel/CO7/magnycours-ib/software/GSL/2.4-GCCcore-6.4.0/lib/pkgconfig")
-setenv("EBROOTGSL","/apps/brussel/CO7/magnycours-ib/software/GSL/2.4-GCCcore-6.4.0")
-setenv("EBVERSIONGSL","2.4")
-setenv("EBDEVELGSL","/apps/brussel/CO7/magnycours-ib/software/GSL/2.4-GCCcore-6.4.0/easybuild/GSL-2.4-GCCcore-6.4.0-easybuild-devel")
-help([[
+%\shellcmd{module show Python/3.2.5-foss-2014a}%
+module-whatis	 Description: Python is a programming language that lets you work more quickly and integrate your systems more effectively. - Homepage: http://python.org/
+conflict	 Python
+module		 load foss/2014a
+module		 load bzip2/1.0.6-foss-2014a
+...
+prepend-path ...
+...
+setenv		 EBVERSIONPYTHON 3.2.5
+setenv		 EBEXTSLISTPYTHON distribute-0.6.26,pip-1.1,nose-1.1.2,numpy-1.6.1,scipy-0.10.1
 
-Description
-===========
-The GNU Scientific Library (GSL) is a numerical library for C and C++
- programmers.  The library provides a wide range of mathematical routines
- such as random number generators, special functions and least-squares fitting.
-
-
-More information
-================
- - Homepage: http://www.gnu.org/software/gsl/
-
-]])
 \end{prompt}
+
+Here you can see that the \lstinline|Python/3.2.5-foss-2014a| comes with a whole
+bunch of extensions: \lstinline|numpy|, \lstinline|scipy|, \ldots
+
+You can also see the modules the \lstinline|Python/3.2.5-foss-2014a| module loads:
+\lstinline|foss/2014a|, \lstinline|bzip2/1.0.6-foss-2014a|, \ldots
 \fi
-
-
 If you're not sure what all of this means: don't worry, you don't have to know;
 just load the module and try to use the software.
 
-\fi
+
 \section{Defining and submitting your job}
 \hypertarget{sec:defining-and-submitting-job}{}
 
