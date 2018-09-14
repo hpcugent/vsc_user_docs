@@ -5,12 +5,6 @@ If you want to run jobs that require wall time than the maximum wall time per jo
 and/or want to avoid you lose work because of power outages or system crashes,
 you need to resort to checkpointing.
 
-\ifgent
-It is highly unlikely that we will offer a queue for jobs that require more
-than 3 days to run, as this makes maintaining the infrastructure more painful.
-\fi
-
-
 \section{What is checkpointing?}
 
 Checkpointing allows for running jobs that run for weeks or months, by splitting
@@ -63,12 +57,6 @@ specified on the \lstinline|csub| command line.
 
 Help on the various command line parameters supported by \lstinline|csub| can be
 obtained using \lstinline|-h| or \lstinline|--help|.
-
-
-\subsection{Array jobs (\texttt{-t})}
-
-\lstinline|csub| has support for checkpointing array jobs with the \lstinline|-t <spec>|
-flag on the \lstinline|csub| command line. This behaves the same as \lstinline|qsub|, see \autoref{sec:worker-framework-job-arrays}.
 
 \subsection{Local files (\texttt{--pre} / \texttt{--post})}
 
@@ -129,8 +117,6 @@ The \lstinline|--resume| option allows you to resume a job from the
 last available checkpoint in case something went wrong
 (e.g. accidentally deleting a (sub)job using \lstinline|qdel|, a power outage or other system failure, \ldots).
 
-\the\year\the\month\the\day
-
 Specify the job name as returned after submission (and as listed in \texttt{\$VSC\_SCRATCH/chkpt}).
 The full job name consists of the specified job name (or the script name if no job name was specified),
 a timestamp and two random characters at the end, for example \texttt{my\_job\_name.\the\year0102\_133755.Hk}
@@ -144,6 +130,12 @@ In case resuming fails for you, please contact \hpcinfo, and include the output
 of the \lstinline|csub --resume| command in your message.
 
 \section{Additional options}
+
+\subsection{Array jobs (\texttt{-t})}
+
+\lstinline|csub| has support for checkpointing array jobs with the \lstinline|-t <spec>|
+flag on the \lstinline|csub| command line. This behaves the same as \lstinline|qsub|, see \autoref{sec:worker-framework-job-arrays}.
+
 
 \subsection{Pro/epilogue mimicing (\texttt{--no\_mimic\_pro\_epi})}
 
