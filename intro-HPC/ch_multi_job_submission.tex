@@ -127,10 +127,11 @@ calculations take 1500 minutes on one CPU. However, this job will use 8 CPUs,
 so the 100 calculations will be done in 1500/8 = 187.5 minutes, i.e., 4 hours
 to be on the safe side.
 
-The job can now be submitted as follows:
+The job can now be submitted as follows (to check which \lstinline|worker| module to use,
+see \autoref{subsec:explicit-version-numbers}):
 
 \begin{prompt}
-%\shellcmd{module load worker}%
+%\shellcmd{module load worker/1.6.8-intel-2018a}%
 %\shellcmd{wsub -batch weather.pbs -data data.csv}%
 total number of work items: 41
 %\jobid{}%
@@ -247,7 +248,7 @@ Note that
 The job is now submitted as follows:
 
 \begin{prompt}
-%\shellcmd{module load worker}%
+%\shellcmd{module load worker/1.6.8-intel-2018a}%
 %\shellcmd{wsub -t 1-100 -batch test\_set.pbs}%
 total number of work items: 100
 %\jobid{}%
