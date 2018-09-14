@@ -87,7 +87,7 @@ This is all managed with the \lstinline|module| command, which is explained in t
 \ifusinglmod
 There is also a shorter \lstinline|ml| command that does exactly the same as the \lstinline|module|
 command and is easier to type. Whenever you see a \lstinline|module| command, you can replace
-\lstinline|module| with \lstinline|ml|
+\lstinline|module| with \lstinline|ml|.s
 \fi
 
 
@@ -128,20 +128,18 @@ the standard LAPACK and ScaLAPACK libraries for the linear algebra operations
 and the FFTW library for FFT. The toolchains are refreshed twice a year,
 which is reflected in their name.
 
-E.g., \texttt{foss-\the\year} is the first version of the \lstinline|foss| toolchain in \the\year.
+E.g., \texttt{foss/\the\year{}a} is the first version of the \lstinline|foss| toolchain in \the\year.
 
 The toolchains are then used to compile a lot of the software installed on
 the VSC clusters. You can recognise those packages easily as they all contain the
-name of the toolchain after the version number in their name. Packages
-compiled with the same toolchain and toolchain version will typically work
+name of the toolchain after the version number in their name (e.g. \lstinline|Python/2.7.12-intel-2016b|).
+Packages compiled with the same toolchain and toolchain version will typically work
 together well without conflicts.
-
-For some clusters, additional toolchains are defined, e.g., to take advantage
-of specific properties of that cluster such as GPU accelerators or special
-interconnect features that require a vendor-specific MPI-implementation.
 
 \subsection{Loading and unloading modules}
 \label{subsec:activating-and-deactivating-modules}
+
+\subsubsection{module load}
 
 To ``activate'' a software package, you load the corresponding module file
 using the \lstinline|module load| command:
@@ -166,12 +164,23 @@ surprises when newer versions are installed}:
 
 \ifusinglmod
 The \lstinline|ml| command is a shorthand for \lstinline|module load|:
-\lstinline|ml example/1.2.3| is equivalent to \lstinline|module load|.
+\lstinline|ml example/1.2.3| is equivalent to \lstinline|module load example/1.2.3|.
 \fi
 
-Obviously, you need to keep track of the modules that are currently
-loaded. If you executed the two load commands stated above, you will get the
-following:
+Modules need not be loaded one by one; the two \lstinline|module load| commands can be
+combined as follows:
+
+\begin{prompt}
+%\shellcmd{module load \emph{example/1.2.3} \emph{secondexample/2.7-intel-2016b}}%
+\end{prompt}
+
+This will load the two modules as well as their dependencies (unless there are conflicts between both modules).
+
+\subsubsection{module list}
+
+Obviously, you need to be able to keep track of the modules that are currently
+loaded. Assuming you have run the \lstinline|module load| commands stated above,
+you will get the following:
 
 \begin{prompt}
 %\shellcmd{module list}%
@@ -184,30 +193,22 @@ Currently Loaded Modulefiles:
 
 \end{prompt}
 
+\ifusinglmod
+You can also just use the \lstinline|ml| command without arguments to list loaded modules.
+\fi
 
 It is important to note at this point that other modules (e.g., \lstinline|intel/2016b|)
 are also listed, although the user did not explicitly load them. This is
 because \lstinline|secondexample/2.7-intel-2016b| depends on it (as indicated in its name),
 and the system administrator specified that the \lstinline|intel/2016b| module should
-be loaded whenever the \lstinline|secondexample| module is loaded. There are advantages and
+be loaded whenever \emph{this} \lstinline|secondexample| module is loaded. There are advantages and
 disadvantages to this, so be aware of automatically loaded modules whenever
 things go wrong: they may have something to do with it!
 
-In fact, an easy way to check the components and version numbers of those
-components of a toolchain is to simply load the toolchain and then list the
-modules that are loaded.
-
-Modules need not be loaded one by one; the two \lstinline|module load| commands can be
-combined as follows:
-
-\begin{prompt}
-%\shellcmd{module load \emph{example/1.2.3} \emph{secondexample/2.7-intel-2016b}}%
-\end{prompt}
-
-This will load the two modules as well as their dependencies ((unless there are conflicts between both modules).
+\subsubsection{module unload}
 
 To unload a module, one can use the \lstinline|module unload| command. It works
-consistently with the load command, and reverses the latter's effect. However,
+consistently with the \lstinline|load| command, and reverses the latter's effect. However,
 the dependencies of the package are NOT automatically unloaded; you will have to
 unload the packages one by one. When the \lstinline|secondexample| module is unloaded,
 only the following modules remain:
@@ -225,11 +226,13 @@ Currently Loaded Modulefiles:
 
 \ifusinglmod
 To unload the \lstinline|secondexample| module, you can also use \lstinline|ml -secondexample|.
-You can also just use the \lstinline|ml| command without arguments to list loaded modules.
 \fi
 
 Notice that the version was not specified: there can only be one version of a module
-loaded at a time. However, checking the list of currently loaded modules is always a good idea.
+loaded at a time, so unloading modules by name is not ambiguous.
+However, checking the list of currently loaded modules is always a good idea,
+since unloading a module that is currently not loaded will \emph{not} result in an error.
+
 
 \subsection{Purging all modules}
 \label{subsec:purging-modules}
@@ -242,8 +245,8 @@ state, you can use:
 \end{prompt}
 
 \ifgent
-This is always safe: the \lstinline|cluster| module (the module that specifies what cluster
-jobs will get submitted to) will not be unloaded (because it's a ``sticky'' module).
+This is always safe: the \lstinline|cluster| module (the module that specifies which cluster
+jobs will get submitted to) will not be unloaded (because it's a so-called ``sticky'' module).
 \else
 However, on some VSC clusters you may be left with a very empty list of available
 modules after executing \lstinline|module purge|. On those systems, \lstinline|module av| will show you a list of
@@ -252,10 +255,10 @@ the cluster, and loading the appropriate module will restore the module list
 applicable to that particular system.
 \fi
 
-\subsection{Explicit version numbers}
+\subsection{Using explicit version numbers}
 \label{subsec:explicit-version-numbers}
 
-As a rule, once a module has been installed on the cluster, the executables or
+Once a module has been installed on the cluster, the executables or
 libraries it comprises are never modified. This policy ensures that the user's
 programs will run consistently, at least if the user specifies a specific
 version. \strong{Failing to specify a version may result in unexpected behaviour}.
@@ -275,14 +278,13 @@ rather than
 \end{prompt}
 
 Everything works fine, up to the point where a new version of \lstinline|example| is installed, 4.5.6.
-From then on, the user's load command will load the latter version, rather than
+From then on, the user's \lstinline|load| command will load the latter version, rather than
 the intended one, which may lead to unexpected problems.
 \ifgent % The troubleshooting section is wrapped in an ifgent, we don't want undefined references when compiling for antwerpen,...
-See \autoref{sec:module-conflicts} for how to diagnose and solve module conflicts.
+See for example \autoref{sec:module-conflicts}.
 \fi
 
-To list the available versions, you can use the \lstinline|module avail| command. For
-example, to list the available versions of \lstinline|example|:
+Consider the followin \lstinline|example| modules:
 
 \begin{prompt}
 %\shellcmd{module avail example/}%
@@ -290,7 +292,7 @@ example/1.2.3
 example/4.5.6
 \end{prompt}
 
-Lets now generate a version conflict with the \lstinline|example| module, and see what happens.
+Let's now generate a version conflict with the \lstinline|example| module, and see what happens.
 
 \ifusinglmod
 \begin{prompt}
@@ -312,7 +314,7 @@ example/4.5.6(12):ERROR:102: Tcl command execution failed: conflict example
 \end{prompt}
 \fi
 
-Note: A \lstinline|module swap| command combines the appropriate ``module unload''
+Note: A \lstinline|module swap| command combines the appropriate \lstinline|module unload|
 and \lstinline|module load| commands.
 
 \subsection{Get detailed info}
@@ -335,9 +337,9 @@ Or to get more information about one specific module package:
 \subsection{Save and load collections of modules}
 If you have a set of modules that you need to load often,
 you can save these in a \emph{collection}. This will enable you to load all the
-module you need with a single command.
+modules you need with a single command.
 
-In each \lstinline|module| command, you can replace \lstinline|module| with
+In each \lstinline|module| command shown below, you can replace \lstinline|module| with
 \lstinline|ml|.
 
 First, load all modules you want to include in the collections:
@@ -361,7 +363,13 @@ Later, for example in a jobscript or a new session, you can load all these modul
 \end{prompt}
 
 You can get a list of all your saved collections with the \lstinline|module savelist|
-command.
+command:
+
+\begin{prompt}
+%\shellcmd{module savelistr}%
+Named collection list (For LMOD_SYSTEM_NAME = "CO7-sandybridge"):
+  1) my-collection
+\end{prompt}
 
 To get a list of all modules a collection will load, you can use the \lstinline|module describe|
 command:
