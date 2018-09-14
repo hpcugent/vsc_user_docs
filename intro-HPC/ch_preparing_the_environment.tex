@@ -48,12 +48,12 @@ see \autoref{sec:connecting-issues} to troubleshoot.
   ``\strong{\emph{\loginnode}}''.
 
   \begin{enumerate}
-    \item  Start the PuTTY executable $<$\strong{\emph{putty.exe}}$>$ in your
-      directory ``\strong{\emph{C:\textbackslash Program Files (x86)\textbackslash PuTTY}}'' and the
+    \item  Start the PuTTY executable \lstinline|putty.exe| in your
+      directory \lstinline|C:\Program Files (x86)\PuTTY| and the
       configuration screen will pop up. As you will often use the PuTTY tool,
       we recommend adding a shortcut on your desktop.
-    \item  Within the category $<$\strong{\emph{Session}}$>$, in the field
-      $<$\strong{\emph{Host Name}}$>$, enter the name of the login node of the
+    \item  Within the category <{}\strong{\emph{Session}}>{}, in the field
+      <{}\strong{\emph{Host Name}}>{}, enter the name of the login node of the
       \hpc cluster (i.e., ``\strong{\emph{\loginnode}}'')
       you want to connect to.
 
@@ -80,7 +80,7 @@ see \autoref{sec:connecting-issues} to troubleshoot.
 
     \item  In the category \menu[,]{Connection,Data}, in
       the field \keys{Auto-login username}, put in
-      $<$\emph{\userid}$>$, which is your VSC username that you have
+      <{}\emph{\userid}>{}, which is your VSC username that you have
       received by e-mail after your request was approved.
 
 \ifantwerpen
@@ -120,7 +120,7 @@ see \autoref{sec:connecting-issues} to troubleshoot.
       \includegraphics*[width=3.54in, height=3.41in, keepaspectratio=false]{ch2-putty-x-forwarding}
       \end{center}
 
-    \item  Now go back to $<$Session$>$, and fill in ``\emph{\hpcname}'' in the
+    \item  Now go back to <{}Session>{}, and fill in ``\emph{\hpcname}'' in the
       \keys{Saved Sessions} field and press \keys{Save} to
       store the session information.
 
@@ -298,8 +298,8 @@ This directory contains:
 \end{prompt}
 
 \begin{tip}
-Typing ``\strong{\emph{cd ex$<$TAB$>$}}'' will generate the
-``\strong{\emph{cd examples}}'' command. \strong{Command-line completion
+Typing \lstinline|cd ex| followed by \keys{\tab} (the Tab-key) will generate the
+\lstinline|cd examples| command. \strong{Command-line completion
 }(also tab completion) is a common feature of the bash command line
 interpreter, in which the program automatically fills in partially typed
 commands.
@@ -529,10 +529,10 @@ To exit vi without saving your changes, enter ``<esc>:q!''
 or alternatively (if you are not comfortable with the Linux editors), again on your local machine:
 
 \begin{prompt}
-%\shellcmd{echo "export LANGUAGE=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" $>$$>$ ~/.profile}%
-%\shellcmd{echo "export LC\_ALL=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" $>$$>$ ~/.profile}%
-%\shellcmd{echo "export LC\_CTYPE=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" $>$$>$ ~/.profile}%
-%\shellcmd{echo "export LANG=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" $>$$>$ ~/.profile}%
+%\shellcmd{echo "export LANGUAGE=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" >{}>{} ~/.profile}%
+%\shellcmd{echo "export LC\_ALL=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" >{}>{} ~/.profile}%
+%\shellcmd{echo "export LC\_CTYPE=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" >{}>{} ~/.profile}%
+%\shellcmd{echo "export LANG=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" >{}>{} ~/.profile}%
 \end{prompt}
 
 You can now log out, open a new terminal/shell on your local machine and reconnect to the \hpc, and you should not get these
@@ -540,6 +540,7 @@ warnings anymore.
 
 \fi
 \section{Transfer Files to/from the \hpc}
+\label{sec:filetransfer}
 \hypertarget{sec:filetransfer}{}
 
 
@@ -667,6 +668,12 @@ for future access.
   command is the equivalent of the \strong{cp}  (i.e., \strong{c}o\strong{p}y)
   command, but can copy files to or from remote machines.
 
+  It's easier to copy files directly to \lstinline|$VSC_DATA| and \lstinline|$VSC_SCRATCH|
+  if you have symlinks to them in your home directory. See
+  \href{\LinuxManualURL#sec:symlink-for-data}{the chapter titled ``Uploading/downloading/editing files'', section ``Symlinks for data/scratch'' in the intro to Linux}
+  for how to do this.
+
+
   Open an additional terminal window and check that you're working on your local
   machine.
 
@@ -683,10 +690,13 @@ for future access.
   For example, we will copy the (local) file ``\emph{localfile.txt}'' to your
   home directory on the \hpc cluster. We first generate a small dummy
   ``\emph{localfile.txt}'', which contains the word ``Hello''.  Use your own
-  $<$vsc-account$>$, which is something like ``\emph{\userid}''.
+  VSC account, which is something like ``\emph{\userid}''. Don't
+  forget the colon (\lstinline|:|) at the end: if you forget it, it will just create a file
+  named \texttt{\userid{}@\loginnode{}} on your local filesystem. You can even
+  specify where to save the file on the remote filesystem by putting a path after the colon.
 
 \begin{prompt}
-%\shellcmd{echo "Hello" $>$ localfile.txt}%
+%\shellcmd{echo "Hello" >{} localfile.txt}%
 %\shellcmd{ls -l}%
 %\dots{}%
 -rw-r--r-- 1 user  staff   6 Sep 18 09:37 localfile.txt
@@ -718,9 +728,8 @@ Hello
   On the terminal on the \hpc, enter:
 
 \begin{prompt}
-%\captureshellcmd{cd ~/docs}%
-%\homedir{}%/docs
-%\captureshellcmd{ls -l}%
+%\shellcmd{cd ~/docs}%
+%\shellcmd{ls -l}%
 total 1536
 -rw-r--r-- 1 %\userid{}% Sep 11 09:53 %\jobname{}%.pdf
 \end{prompt}
@@ -735,6 +744,25 @@ total  899
 -rw-r--r--   1 user  staff  741995 Sep 18 09:53 %\jobname{}%.pdf
 -rw-r--r--   1 user  staff       6 Sep 18 09:37 localfile.txt
 \end{prompt}
+
+The file has been copied from the HPC to your local computer.
+
+It's also possible to copy entire directories (and their contents) with the \lstinline|-r| flag.
+For example, if we want to copy the local directory \lstinline|dataset| to \lstinline|$VSC_SCRATCH|,
+we can use the following command (assuming you've created the \lstinline|scratch| symlink):
+
+\begin{prompt}
+%\shellcmd{scp -r dataset \userid{}@\loginnode{}:scratch}%
+\end{prompt}
+
+If you don't use the \lstinline|-r| option to copy a directory, you will run into the following error:
+
+\begin{prompt}
+%\shellcmd{scp dataset \userid{}@\loginnode{}:scratch}%
+dataset: not a regular file
+\end{prompt}
+
+
 
   \subsection{Using sftp}
 

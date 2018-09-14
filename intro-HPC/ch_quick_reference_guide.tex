@@ -1,52 +1,61 @@
-\chapter{\hpc Quick Reference Guide}
+\chapter{HPC Quick Reference Guide}
 \label{ch:quick-reference-guide}
+
+Remember to subsitute the usernames, login nodes, file names, \ldots for your own.
 
 \begin{tabular}{|l|l|} \hline
 \multicolumn{2}{|c|}{\strong{Login}} \\ \hline
-Login             & ssh $<$vsc-account$>$@\loginnode \\ \hline
-Where am I?       & hostname \\ \hline
-Copy to \hpc      & scp foo.txt $<$vsc-account$>$@\loginnode: \\ \hline
-Copy from \hpc    & scp $<$vsc-account$>$@\loginnode:foo.txt . \\ \hline
-Setup ftp session & sftp $<$vsc-account$>$@\loginnode \\ \hline
+Login             & \texttt{ssh \userid{}@\loginnode{}}\\ \hline
+Where am I?       & \texttt{hostname} \\ \hline
+Copy to \hpc      & \texttt{scp foo.txt \userid{}@\loginnode{}:} \\ \hline
+Copy from \hpc    & \texttt{scp \userid{}@\loginnode{}:foo.txt .} \\ \hline
+Setup ftp session & \texttt{sftp \userid{}@\loginnode{}} \\ \hline
 \end{tabular}
 
 \begin{tabular}{|l|l|} \hline
 \multicolumn{2}{|c|}{\strong{Modules}} \\ \hline
-List all available modules & module av \\ \hline
-List loaded modules        & module list \\ \hline
-Load module                & module load $<$name$>$ \\ \hline
-Unload module              & module unload $<$name$>$ \\ \hline
-Unload all modules         & module purge \\ \hline
-Help on use of module      & module help \\ \hline
+List all available modules & \texttt{module avail} \\ \hline
+List loaded modules        & \texttt{module list} \\ \hline
+Load module                & \texttt{module load example} \\ \hline
+Unload module              & \texttt{module unload example} \\ \hline
+Unload all modules         & \texttt{module purge} \\ \hline
+Help on use of module      & \texttt{module help} \\ \hline
 \end{tabular}
 
 \begin{tabular}{|l|l|} \hline
 \multicolumn{2}{|c|}{\strong{Jobs}} \\ \hline
-Submit Job              & qsub $<$script.pbs$>$ \\ \hline
-Status of the job       & qstat $<$jobid$>$ \\ \hline
-Possible start time (not available everywhere)    & showstart $<$jobid$>$ \\ \hline
-Check job (not available everywhere)              & checkjob $<$jobid$>$ \\ \hline
-Show compute node       & qstat -n $<$jobid$>$ \\ \hline
-Delete job              & qdel $<$jobid$>$ \\ \hline
-Status of all your jobs & qstat \\ \hline
-Show all jobs on  queue (not available everywhere) & showq \\ \hline
-%Show queue summary      & qstat -q \\ \hline
-%Show some queue         & qstat -f -Q $<$queue$>$ \\ \hline
-Submit Interactive job  & qsub -I \\ \hline
+Submit Job with jobscript \lstinline|script.pbs|   & \texttt{qsub script.pbs} \\ \hline
+Status of job with ID 12345                        & \texttt{qstat 12345} \\ \hline
+\ifgent\else\ifbrussel\else % showstart/checkjob are not enabled in ghent/brussels
+Possible start time of job with ID 12345 (not available everywhere)    & \texttt{showstart 12345} \\ \hline
+Check job with ID 12345 (not available everywhere)                     & \texttt{checkjob 12345} \\ \hline
+\fi\fi
+Show compute node of job with ID 12345             & \texttt{qstat -n 12345} \\ \hline
+Delete job with ID 12345                           & \texttt{qdel 12345} \\ \hline
+Status of all your jobs                            & \texttt{qstat} \\ \hline
+Detailed status of your jobs + a list nodes they are running on & \texttt{qstat -na} \\ \hline
+\ifgent\else\ifbrussel\else % showq is not enabled in ghent/brussels
+Show all jobs on  queue (not available everywhere) & \texttt{showq} \\ \hline
+\fi\fi
+Submit Interactive job  & \texttt{qsub -I} \\ \hline
 \end{tabular}
 
 \begin{tabular}{|l|l|} \hline
 \multicolumn{2}{|c|}{\strong{Disk quota}} \\ \hline
-Check your disk quota & mmlsquota \\ \hline
-Check disk quota nice & show\_quota.py \\ \hline
-Local disk usage      & du -h . \\ \hline
-Overall disk usage    & df -a \\ \hline
+\ifgent
+Check your disk quota & See \url{https://account.vscentrum.be} \\ \hline
+\else
+Check your disk quota & \texttt{mmlsquota} \\ \hline
+Check disk quota nice & \texttt{show\_quota.py} \\ \hline
+\fi
+Disk usage in current directory (\lstinline|.|)  & \texttt{du -h} . \\ \hline
 \end{tabular}
 
 \begin{tabular}{|p{0.3\textwidth}|p{0.6\textwidth}|} \hline
 \multicolumn{2}{|c|}{\strong{Worker Framework}} \\ \hline
-Load worker module                      & module load worker \\ \hline
-Submit parameter sweep                  & wsub   -batch  weather.pbs   -data  data.csv \\ \hline
-Submit job array                        & wsub  -t  1-100  -batch  test\_set.pbs \\ \hline
-Submit job array with prolog and epilog & wsub  -prolog pre.sh  -batch test\_set.pbs  -epilog post.sh -t 1-100 \\ \hline
+Load worker module                      & \texttt{module load worker/1.6.8-intel-2018a} Don't forget to specify a version.
+                                          To list available versions, use \lstinline|module avail worker/| \\ \hline
+Submit parameter sweep                  & \texttt{wsub   -batch  weather.pbs   -data  data.csv} \\ \hline
+Submit job array                        & \texttt{wsub  -t  1-100  -batch  test\_set.pbs} \\ \hline
+Submit job array with prolog and epilog & \texttt{wsub  -prolog pre.sh  -batch test\_set.pbs  -epilog post.sh -t 1-100} \\ \hline
 \end{tabular}
