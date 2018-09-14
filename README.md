@@ -34,7 +34,12 @@ make all
 ```
 
 on Windows:
-1. Install MiKTeX and Strawberry Perl
-2. In the MiKTeX console, install  the `latexmk` package
+1. Install MiKTeX (https://miktex.org/) and Strawberry Perl (http://strawberryperl.com/). This doesn't require admin rights.
+2. In the MiKTeX console, install  the `latexmk` package:
+
+    1. Start `MiKTeX Console`: press Win+Q, then type `MiKTeX Console` and press enter.
+    2. Click `Packages`
+    3. Search for and install the `latexmk` package
+
 3. Open `intro-Linux/intro-Linux.tex` in TeXworks (MiKTeX' editor) and press the green "play" button. This won't actually succesfully compile, but will prompt to install all the packages we need. Click "Yes" for all packages.
 4. To compile your document, double-click `compile.bat` and fill in your build details. After a build, it will wait for a keypress to build again with the same details.
