@@ -43,17 +43,9 @@ PerfExpert utilises knowledge of architectures and compilers to implement (parti
 
 Remember to load the appropriate PerfExpert modules:
 
-\iftacc
-\begin{prompt}
-%\shellcmd{module load papi hpctoolkit perfexpert}%
-%\shellcmd{module load GCC}%
-\end{prompt}
-\fi
-\ifvsc
 \begin{prompt}
 %\shellcmd{module load PerfExpert}%
 \end{prompt}
-\fi
 
 For our first example, we'll use a simple serial 1000 $\times$ 1000 matrix multiplication program. Check out the program ``mm.c'', compile and run it.
 
