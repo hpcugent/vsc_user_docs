@@ -48,12 +48,12 @@ see \autoref{sec:connecting-issues} to troubleshoot.
   ``\strong{\emph{\loginnode}}''.
 
   \begin{enumerate}
-    \item  Start the PuTTY executable $<$\strong{\emph{putty.exe}}$>$ in your
-      directory ``\strong{\emph{C:\textbackslash Program Files (x86)\textbackslash PuTTY}}'' and the
+    \item  Start the PuTTY executable \lstinline|putty.exe| in your
+      directory \lstinline|C:\Program Files (x86)\PuTTY| and the
       configuration screen will pop up. As you will often use the PuTTY tool,
       we recommend adding a shortcut on your desktop.
-    \item  Within the category $<$\strong{\emph{Session}}$>$, in the field
-      $<$\strong{\emph{Host Name}}$>$, enter the name of the login node of the
+    \item  Within the category <{}\strong{\emph{Session}}>{}, in the field
+      <{}\strong{\emph{Host Name}}>{}, enter the name of the login node of the
       \hpc cluster (i.e., ``\strong{\emph{\loginnode}}'')
       you want to connect to.
 
@@ -80,7 +80,7 @@ see \autoref{sec:connecting-issues} to troubleshoot.
 
     \item  In the category \menu[,]{Connection,Data}, in
       the field \keys{Auto-login username}, put in
-      $<$\emph{\userid}$>$, which is your VSC username that you have
+      <{}\emph{\userid}>{}, which is your VSC username that you have
       received by e-mail after your request was approved.
 
 \ifantwerpen
@@ -120,7 +120,7 @@ see \autoref{sec:connecting-issues} to troubleshoot.
       \includegraphics*[width=3.54in, height=3.41in, keepaspectratio=false]{ch2-putty-x-forwarding}
       \end{center}
 
-    \item  Now go back to $<$Session$>$, and fill in ``\emph{\hpcname}'' in the
+    \item  Now go back to <{}Session>{}, and fill in ``\emph{\hpcname}'' in the
       \keys{Saved Sessions} field and press \keys{Save} to
       store the session information.
 
@@ -298,8 +298,8 @@ This directory contains:
 \end{prompt}
 
 \begin{tip}
-Typing ``\strong{\emph{cd ex$<$TAB$>$}}'' will generate the
-``\strong{\emph{cd examples}}'' command. \strong{Command-line completion
+Typing \lstinline|cd ex| followed by \keys{\tab} (the Tab-key) will generate the
+\lstinline|cd examples| command. \strong{Command-line completion
 }(also tab completion) is a common feature of the bash command line
 interpreter, in which the program automatically fills in partially typed
 commands.
@@ -529,10 +529,10 @@ To exit vi without saving your changes, enter ``<esc>:q!''
 or alternatively (if you are not comfortable with the Linux editors), again on your local machine:
 
 \begin{prompt}
-%\shellcmd{echo "export LANGUAGE=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" $>$$>$ ~/.profile}%
-%\shellcmd{echo "export LC\_ALL=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" $>$$>$ ~/.profile}%
-%\shellcmd{echo "export LC\_CTYPE=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" $>$$>$ ~/.profile}%
-%\shellcmd{echo "export LANG=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" $>$$>$ ~/.profile}%
+%\shellcmd{echo "export LANGUAGE=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" >{}>{} ~/.profile}%
+%\shellcmd{echo "export LC\_ALL=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" >{}>{} ~/.profile}%
+%\shellcmd{echo "export LC\_CTYPE=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" >{}>{} ~/.profile}%
+%\shellcmd{echo "export LANG=\textbackslash{"}en\_US.UTF-8\textbackslash{"}" >{}>{} ~/.profile}%
 \end{prompt}
 
 You can now log out, open a new terminal/shell on your local machine and reconnect to the \hpc, and you should not get these
@@ -696,7 +696,7 @@ for future access.
   specify where to save the file on the remote filesystem by putting a path after the colon.
 
 \begin{prompt}
-%\shellcmd{echo "Hello" $>$ localfile.txt}%
+%\shellcmd{echo "Hello" >{} localfile.txt}%
 %\shellcmd{ls -l}%
 %\dots{}%
 -rw-r--r-- 1 user  staff   6 Sep 18 09:37 localfile.txt

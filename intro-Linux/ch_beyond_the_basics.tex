@@ -22,10 +22,10 @@ channels:
 whatever was in the file before.
 
 \begin{prompt}
-%\shellcmd{ echo hello $>$ somefile}%
+%\shellcmd{ echo hello >{} somefile}%
 %\shellcmd{cat somefile}%
 hello
-%\shellcmd{echo hello2 $>$ somefile}%
+%\shellcmd{echo hello2 >{} somefile}%
 %\shellcmd{cat somefile}%
 hello2
 \end{prompt}
@@ -34,10 +34,10 @@ hello2
 whatever was in the file before:
 
 \begin{prompt}
-%\shellcmd{echo hello $>$ somefile}%
+%\shellcmd{echo hello >{} somefile}%
 %\shellcmd{cat somefile}%
 hello
-%\shellcmd{echo hello2 $>$$>$ somefile}%
+%\shellcmd{echo hello2 >{}>{} somefile}%
 %\shellcmd{cat somefile}%
 hello
 hello2
@@ -56,8 +56,8 @@ save a list of all the files you're interested in and then reading in the file
 list when you are done:
 
 \begin{prompt}
-%\shellcmd{find . -name \*.txt $>$ files}%
-%\shellcmd{xargs grep banana $<$ files}%
+%\shellcmd{find . -name \*.txt >{} files}%
+%\shellcmd{xargs grep banana <{} files}%
 \end{prompt}
 
 \subsection{Redirecting \texttt{stderr}}
@@ -66,7 +66,7 @@ To redirect the \lstinline|stderr| output (warnings, messages), you can use \lst
 like \lstinline|>|
 
 \begin{prompt}
-%\shellcmd{ls one.txt nosuchfile.txt 2$>$ errors.txt}%
+%\shellcmd{ls one.txt nosuchfile.txt 2>{} errors.txt}%
 one.txt
 %\shellcmd{cat errors.txt}%
 ls: nosuchfile.txt: No such file or directory
@@ -78,7 +78,7 @@ To combine both output channels (\lstinline|stdout| and \lstinline|stderr|) and 
 \lstinline|&>|
 
 \begin{prompt}
-%\shellcmd{ls one.txt nosuchfile.txt \&$>$ ls.out}%
+%\shellcmd{ls one.txt nosuchfile.txt \&>{} ls.out}%
 %\shellcmd{cat ls.out}%
 ls: nosuchfile.txt: No such file or directory
 one.txt

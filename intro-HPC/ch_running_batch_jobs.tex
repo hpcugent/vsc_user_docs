@@ -290,13 +290,14 @@ all depend on which \lstinline|cluster| module is loaded.
 \section{Monitoring and managing your job(s)}
 \label{sec:monitoring-and-managing-your-jobs}
 
-Using the job ID that \textit{qsub} returned, there are various ways to monitor
-the status of your job, e.g.,
+Using the job ID that \lstinline|qsub| returned, there are various ways to monitor
+the status of your job. In the following commands, replace \lstinline|12345|
+with the job ID \lstinline|qsub| returned.
 
-To get the status information on your job:
+
 
 \begin{prompt}
-%\shellcmd{qstat $<$jobid$>$}%
+%\shellcmd{qstat 12345}%
 \end{prompt}
 
 \ifgent
@@ -310,7 +311,7 @@ To get the status information on your job:
   This command is not available on all systems.
 
 \begin{prompt}
-%\shellcmd{showstart $<$jobid$>$}%
+%\shellcmd{showstart 12345}%
 \end{prompt}
 
   This is only a very rough estimate. Jobs may launch sooner than estimated if
@@ -321,7 +322,7 @@ To get the status information on your job:
   messages that may prevent your job from starting:
 
 \begin{prompt}
-%\shellcmd{checkjob $<$jobid$>$}%
+%\shellcmd{checkjob 12345}%
 \end{prompt}
 \fi
 \fi
@@ -330,14 +331,14 @@ To show on which compute nodes your job is running, at least, when it is
 running:
 
 \begin{prompt}
-%\shellcmd{qstat -n $<$jobid$>$}%
+%\shellcmd{qstat -n 12345}%
 \end{prompt}
 
 To remove a job from the queue so that it will not run, or to stop a job that
 is already running.
 
 \begin{prompt}
-%\shellcmd{qdel $<$jobid$>$}%
+%\shellcmd{qdel 12345}%
 \end{prompt}
 
 When you have submitted several jobs (or you just forgot about the job ID), you
@@ -787,7 +788,7 @@ Inspect the generated output and error files:
   \subsection{Upon job failure}
 
   Whenever a job fails, an e-mail will be sent to the e-mail address that's
-  connected to your $<$vsc-account$>$. This is the e-mail address that is linked
+  connected to your VSC account. This is the e-mail address that is linked
   to the university account, which was used during the registration process.
 
   You can force a job to fail by specifying an unrealistic wall-time for the
@@ -815,26 +816,30 @@ Inspect the generated output and error files:
 
 You can instruct the \hpc to send an e-mail to your e-mail address whenever a
 job \strong{b}egins, \strong{e}nds and/or \strong{a}borts, by adding the
-following lines to the job script ``fibo.pbs'':
+following lines to the job script \lstinline|fibo.pbs|:
 
 \begin{code}{bash}
 #PBS -m b
 #PBS -m e
 #PBS -m a
-#PBS -M <your e-mail address>
 \end{code}
 or
 \begin{code}{bash}
 #PBS -m abe
-#PBS -M <your e-mail address>
 \end{code}
 
 These options can also be specified on the command line.  Try it and see what
 happens:
 
 \begin{prompt}
-%\shellcmd{qsub -m abe -M $<$your e-mail address$>$ fibo.pbs}%
+%\shellcmd{qsub -m abe fibo.pbs}%
 \end{prompt}
 
-You don't have to specify the e-mail address. The system will
-use the e-mail address which is connected to your VSC account.
+The system will use the e-mail address that is connected to your VSC account.
+You can also specify an alternate e-mail address with the \lstinline|-M| option:
+
+\begin{prompt}
+%\shellcmd{qsub -m b -M john.smith@example.com fibo.pbs}%
+\end{prompt}
+
+will send an e-mail to john.smith@example.com when the job begins.
