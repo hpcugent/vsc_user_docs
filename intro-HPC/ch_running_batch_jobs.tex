@@ -317,6 +317,64 @@ example/4.5.6(12):ERROR:102: Tcl command execution failed: conflict example
 Note: A \lstinline|module swap| command combines the appropriate \lstinline|module unload|
 and \lstinline|module load| commands.
 
+\ifusinglmod
+\subsection{Search for modules}
+
+With the \lstinline|module spider| command, you can search for modules:
+
+\begin{prompt}
+%\shellcmd{module spider example}%
+--------------------------------------------------------------------------------
+  example:
+--------------------------------------------------------------------------------
+    Description:
+      This is just an example
+
+     Versions:
+        example/1.2.3
+        example/4.5.6
+--------------------------------------------------------------------------------
+  For detailed information about a specific "example" module (including how to
+  load the modules) use the module's full name.
+  For example:
+
+     module spider example/1.2.3
+--------------------------------------------------------------------------------
+\end{prompt}
+
+It's also possible to get detailed information about a specific module:
+
+\begin{prompt}
+%\shellcmd{module spider example/1.2.3}%
+------------------------------------------------------------------------------------------
+  example: example/1.2.3
+------------------------------------------------------------------------------------------
+    Description:
+      This is just an example
+%\ifgent%
+    You will need to load all module(s) on any one of the lines below before the "example/1.2.3" module is available to load.
+
+      cluster/delcatty
+      cluster/golett
+      cluster/phanpy
+      cluster/swalot
+%\else%
+    This module can be loaded directly: module load example/1.2.3
+%\fi%
+    Help:
+
+      Description
+      ===========
+      This is just an example
+
+
+      More information
+      ================
+       - Homepage: https://example.com
+
+\end{prompt}
+
+\fi
 \subsection{Get detailed info}
 
 To get a list of all possible commands, type:
@@ -389,6 +447,87 @@ To remove a collection, remove the corresponding file in \lstinline|$HOME/.lmod.
 %\shellcmd{rm \$HOME/.lmod.d/my-collection}%
 \end{prompt}
 
+\ifusinglmod
+\subsection{Getting module details}
+
+To see how a module would change the environment, you can use the \lstinline|module show|
+or \lstinline|ml show| command:
+
+\ifgent
+\begin{prompt}
+%\shellcmd{module show GSL/2.4-GCCcore-6.4.0}
+help([[
+Description
+===========
+The GNU Scientific Library (GSL) is a numerical library for C and C++
+ programmers.  The library provides a wide range of mathematical routines
+ such as random number generators, special functions and least-squares fitting.
+
+
+More information
+================
+ - Homepage: http://www.gnu.org/software/gsl/
+]])
+whatis("Description:
+ The GNU Scientific Library (GSL) is a numerical library for C and C++
+ programmers.  The library provides a wide range of mathematical routines
+ such as random number generators, special functions and least-squares fitting.
+")
+whatis("Homepage: http://www.gnu.org/software/gsl/")
+conflict("GSL")
+load("GCCcore/6.4.0")
+prepend_path("ACLOCAL_PATH","/apps/gent/CO7/sandybridge/software/GSL/2.4-GCCcore-6.4.0/share/aclocal")
+prepend_path("CPATH","/apps/gent/CO7/sandybridge/software/GSL/2.4-GCCcore-6.4.0/include")
+prepend_path("LD_LIBRARY_PATH","/apps/gent/CO7/sandybridge/software/GSL/2.4-GCCcore-6.4.0/lib")
+prepend_path("LIBRARY_PATH","/apps/gent/CO7/sandybridge/software/GSL/2.4-GCCcore-6.4.0/lib")
+prepend_path("MANPATH","/apps/gent/CO7/sandybridge/software/GSL/2.4-GCCcore-6.4.0/share/man")
+prepend_path("PATH","/apps/gent/CO7/sandybridge/software/GSL/2.4-GCCcore-6.4.0/bin")
+prepend_path("PKG_CONFIG_PATH","/apps/gent/CO7/sandybridge/software/GSL/2.4-GCCcore-6.4.0/lib/pkgconfig")
+setenv("EBROOTGSL","/apps/gent/CO7/sandybridge/software/GSL/2.4-GCCcore-6.4.0")
+setenv("EBVERSIONGSL","2.4")
+setenv("EBDEVELGSL","/apps/gent/CO7/sandybridge/software/GSL/2.4-GCCcore-6.4.0/easybuild/GSL-2.4-GCCcore-6.4.0-easybuild-devel")
+\end{prompt}
+\ifbrussel
+\begin{prompt}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   /apps/brussel/CO7/magnycours-ib/modules/2017b/all/GSL/2.4-GCCcore-6.4.0:
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+whatis("Description:   The GNU Scientific Library (GSL) is a numerical library for C and C++  programmers.  The library provides a wide range of mathematical routines  such as random number generators, special functions and least-squares fitting.  ")
+whatis("Homepage: http://www.gnu.org/software/gsl/ ")
+conflict("GSL")
+load("GCCcore/6.4.0")
+prepend_path("ACLOCAL_PATH","/apps/brussel/CO7/magnycours-ib/software/GSL/2.4-GCCcore-6.4.0/share/aclocal")
+prepend_path("CPATH","/apps/brussel/CO7/magnycours-ib/software/GSL/2.4-GCCcore-6.4.0/include")
+prepend_path("LD_LIBRARY_PATH","/apps/brussel/CO7/magnycours-ib/software/GSL/2.4-GCCcore-6.4.0/lib")
+prepend_path("LIBRARY_PATH","/apps/brussel/CO7/magnycours-ib/software/GSL/2.4-GCCcore-6.4.0/lib")
+prepend_path("MANPATH","/apps/brussel/CO7/magnycours-ib/software/GSL/2.4-GCCcore-6.4.0/share/man")
+prepend_path("PATH","/apps/brussel/CO7/magnycours-ib/software/GSL/2.4-GCCcore-6.4.0/bin")
+prepend_path("PKG_CONFIG_PATH","/apps/brussel/CO7/magnycours-ib/software/GSL/2.4-GCCcore-6.4.0/lib/pkgconfig")
+setenv("EBROOTGSL","/apps/brussel/CO7/magnycours-ib/software/GSL/2.4-GCCcore-6.4.0")
+setenv("EBVERSIONGSL","2.4")
+setenv("EBDEVELGSL","/apps/brussel/CO7/magnycours-ib/software/GSL/2.4-GCCcore-6.4.0/easybuild/GSL-2.4-GCCcore-6.4.0-easybuild-devel")
+help([[
+
+Description
+===========
+The GNU Scientific Library (GSL) is a numerical library for C and C++
+ programmers.  The library provides a wide range of mathematical routines
+ such as random number generators, special functions and least-squares fitting.
+
+
+More information
+================
+ - Homepage: http://www.gnu.org/software/gsl/
+
+]])
+\end{prompt}
+\fi
+
+
+If you're not sure what all of this means: don't worry, you don't have to know;
+just load the module and try to use the software.
+
+\fi
 \section{Defining and submitting your job}
 
 Usually, you will want to have your program running in batch mode, as opposed
