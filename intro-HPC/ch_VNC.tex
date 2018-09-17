@@ -8,13 +8,11 @@ computer.
 \section{Start the VNC server}
 \label{sec:start-vnc}
 
-First login on the login node (see \autoref{sec:first-time-connection-to-the-hpc})
-or to the worker node where your job has started. % TODO: where is this described?
-
-Now start \lstinline|vncserver| with:
+First login on the login node (see \autoref{sec:first-time-connection-to-the-hpc}),
+then start \lstinline|vncserver| with:
 
 \begin{prompt}
-%\shellcmd{vncserver -geometry 1920x1080}%
+%\shellcmd{vncserver -geometry 1920x1080 -localhost}%
 You will require a password to access your desktops.
 
 Password:%\emph{<{}enter a secure password>{}}%
@@ -110,16 +108,6 @@ If you have an empty panel, you can reset your settings with the following comma
 %\shellcmd{xfce4-panel}%
 \end{prompt}
 
-\subsection{VNC on the worker nodes}
-
-Connecting to a VNC server on the worker nodes is exactly the same as connecting
-to a login node, except that you need to use the hostname of the worker node instead of
-\lstinline|localhost| when setting up the SSH tunnel. A hostname of a worker node looks like
-\texttt{\computenode{}}.
-
-Note that you still need to use \lstinline|localhost| when connecting to the VNC server
-with your VNC client.
-
 \section{Stopping the VNC server}
 
 The VNC server can be killed by running
@@ -144,6 +132,16 @@ X DISPLAY #	PROCESS ID
 \end{prompt}
 
 This only displays the running VNC servers on \strong{the node you run the command on}.
+
+To see what nodes you are running a VNC server on, you can use the \lstinline|ls ~/.vnc/*.pid|
+command: the files shown have the hostname of the node in the filename:
+
+\begin{prompt}
+%\shellcmd{find ~/.vnc -iname '*.pid'  -printf "\%{}f\textbackslash{}n"}%
+gligar02.gligar.os:6.pid
+\end{prompt}
+
+This shows that there is a VNC server running on \lstinline|gligar02| on port 5906.
 
 \section{I forgot the password, what now?}
 
