@@ -36,7 +36,7 @@ program.
 %\shellcmd{module load MATLAB/2018a}
 \end{prompt}
 
-After loading the module, the \lstinline|mcc| command can be used. To get help on
+After loading the \lstinline|MATLAB| module, the \lstinline|mcc| command can be used. To get help on
 \lstinline|mcc|, you can run \lstinline|mcc -?|.
 
 To compile a standalone application, the \lstinline|-m|
@@ -44,17 +44,20 @@ flag is used (the \lstinline|-v| flag means verbose ouput).
 To show how \lstinline|mcc| can be used, we use the \lstinline|magicsquare| example
 that comes with MATLAB.
 
+First, we copy the \lstinline|magicsquare.m| example that comes with MATLAB to \lstinline|example.m|.
+
+
 \begin{prompt}
-%\shellcmd{cp \$EBROOTMATLAB/extern/examples/compiler/magicsquare.m .}%
-%\shellcmd{mcc -mv magicsquare.m}%
+%\shellcmd{cp \$EBROOTMATLAB/extern/examples/compiler/magicsquare.m example.m}%
+%\shellcmd{mcc -mv example.m}%
 Opening log file:  %\homedir{}/java.log.34090%
 Compiler version: 6.6 (R2018a)
 Dependency analysis by REQUIREMENTS.
-Parsing file "%\homedir{}/magicsquare.m%"
+Parsing file "%\homedir{}/example.m%"
 	(Referenced from: "Compiler Command Line").
 Deleting 0 temporary MEX authorization files.
 Generating file "%\homedir{}/readme.txt%".
-Generating file "run\_magicsquare.sh".
+Generating file "run\_exampe.sh".
 \end{prompt}
 
 \subsection{Libraries}
@@ -65,6 +68,10 @@ look for files in \texttt{\emph{library\_path}}.
 
 It's also possible to use the \texttt{-a \emph{path}} flag. That will result in
 all files under the \texttt{\emph{path}} getting added to the final executable.
+
+For example, the command \lstinline|mcc -I examplelib -a datafiles example.m| will
+compile \lstinline|example.m| with the MATLAB files in \lstinline|examplelib|, and will
+include all files in the \lstinline|datafiles| directory in the binary it produces.
 
 \subsection{Memory issues during compilation}
 
