@@ -20,19 +20,19 @@ Verify:%\emph{<{}enter the same password>{}}%
 Would you like to enter a view-only password (y/n)? %\emph{n}%
 A view-only password is not used
 
-New '%\strong{gligar02}%.gligar.os:%\strong{6}% (%\userid{}%)' desktop is gligar02.gligar.os:6
+New '%\strong{login02}%.login.os:%\strong{6}% (%\userid{}%)' desktop is login02.login.os:6
 
 Creating default startup script %\homedir{}%/.vnc/xstartup
 Creating default config %\homedir{}%/.vnc/config
 Starting applications specified in %\homedir{}%/.vnc/xstartup
-Log file is %\homedir{}%/.vnc/gligar02.gligar.os:6.log
+Log file is %\homedir{}%/.vnc/login02.login.os:6.log
 
 \end{prompt}
 
 When prompted for a password, make sure to enter a secure password: if someone
 can guess your password, they will be able to do anything with your account you can.
 
-Note down the details in bold: the hostname (in the example \lstinline|gligar02|)
+Note down the details in bold: the hostname (in the example \lstinline|login02|)
 and the port number (in the example \lstinline|6|).
 
 It's important to remember that VNC sessions are permanent. They survive network
@@ -44,11 +44,11 @@ This also means you don't have to start \lstinline|vncserver| each time you want
 
 \subsection{VNC on the login nodes}
 
-The VNC server runs on a \strong{specific login node} (in this example \lstinline|gligar02|).
-Make sure you connect to this login node: the domain should be like \lstinline|gligar02.ugent.be|,
+The VNC server runs on a \strong{specific login node} (in this example \lstinline|login02|).
+Make sure you connect to this login node: the domain should be like \lstinline|login02.institute.be|,
 but the number can be different. If you're not sure how to do this, please follow the steps
 in \autoref{sec:first-time-connection-to-the-hpc}, but replace \loginnode with your specific
-domain (here \lstinline|gligar02.ugent.be|).
+domain (here \lstinline|login02.institute.be|).
 
 Login nodes are rebooted from time to time. You can check that the VNC server is still
 running in the same note by executing `vncserver -list`. If you get an empty list,
@@ -70,7 +70,7 @@ Execute the following command. Make sure to replace the port numbers, userid and
 with your own.
 
 \begin{prompt}
-%shellcmd{ssh -L 5906:localhost:5906 \userid{}@gligar02.ugent.be}
+%shellcmd{ssh -L 5906:localhost:5906 \userid{}@login02.institute.be}
 \end{prompt}
 \fi
 
@@ -133,15 +133,17 @@ X DISPLAY #	PROCESS ID
 
 This only displays the running VNC servers on \strong{the node you run the command on}.
 
-To see what nodes you are running a VNC server on, you can use the \lstinline|ls ~/.vnc/*.pid|
-command: the files shown have the hostname of the node in the filename:
+To see what login nodes you are running a VNC server on, you can use the \lstinline|ls ~/.vnc/*.pid|
+command: the files shown have the hostname of the login node in the filename:
 
 \begin{prompt}
 %\shellcmd{find ~/.vnc -iname '*.pid'  -printf "\%{}f\textbackslash{}n"}%
-gligar02.gligar.os:6.pid
+login02.login.os:6.pid
+login01.login.os:8.pid
 \end{prompt}
 
-This shows that there is a VNC server running on \lstinline|gligar02| on port 5906.
+This shows that there is a VNC server running on \lstinline|login02| on port 5906
+and another one running on \lstinline|login01| on port 5908.
 
 \section{I forgot the password, what now?}
 
