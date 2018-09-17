@@ -496,9 +496,9 @@ You can also see the modules the \lstinline|Python/3.2.5-foss-2014a| module load
 If you're not sure what all of this means: don't worry, you don't have to know;
 just load the module and try to use the software.
 
-\section{Getting system information about the cluster}
+\section{Getting system information about the HPC infrastructure}
 
-\subsection{Checking the general status of the cluster}
+\subsection{Checking the general status of the HPC infrastructure}
 
 To check the general system state, check \url{https://www.vscentrum.be/en/user-portal/system-status}.
 This has information about scheduled downtime, status of the system, \ldots
@@ -520,8 +520,8 @@ q24h               --      --    24:00:00   --    0   0 --   E R
                                                 337  82
 \end{prompt}
 
-Here, there are 361 jobs running on the ``long'' queue, and 77 jobs queued. We
-can also see that the ``long'' queue allows a maximum wall time of 72 hours.
+Here, there are 316 jobs running on the \lstinline|long| queue, and 77 jobs queued. We
+can also see that the \lstinline|long| queue allows a maximum wall time of 72 hours.
 
 \ifgent
 \subsection{Getting cluster state}
@@ -530,23 +530,25 @@ You can check \url{http://hpc.ugent.be/clusterstate} to see information about
 the clusters: you can see the nodes that are down, free, partially filled with jobs,
 completely filled with jobs, \ldots.
 
-You can also get this information with a command: \lstinline|pbsmon|:
+You can also get this information in text form (per cluster separately) with
+the \lstinline|pbsmon| command:
+
 
 \begin{prompt}
 %\shellcmd{module swap cluster/phanpy}%
 %\shellcmd{pbsmon}%
 2301 2302 2303 2304 2305 2306 2307
-    J    x    x    J    J    x    J
+    _    .    X    J    _    _    _
 
  2308 2309 2310 2311 2312 2313 2314
-    J    J    J    J    J    x    J
+    j    j    J    j    _    _    j
 
  2315 2316
-    J    J
+    _    J
 
-   J full                 : 12  |   X down                 : 0   |
-   j partial              : 0   |   x down_on_error        : 4   |
-   _ free                 : 0   |   . offline              : 0   |
+   J full                 : 2   |   X down                 : 1   |
+   j partial              : 3   |   x down_on_error        : 0   |
+   _ free                 : 6   |   . offline              : 1   |
                                 |   _ offline_idle         : 0   |
                                 |   o other                : 0   |
 
