@@ -656,6 +656,83 @@ really need them as they can put a heavy strain on the file system and thus
 slow down file operations on the cluster for all other users.
 \fi
 
+\section{Groups}
+\label{sec:vcs-groups}
+
+Groups are a way to manage who can access what data. A user can belong to multiple
+groups at a time. \strong{Groups can be created and managed without any interaction from
+the system administrators}.
+
+Please note that changes are not instantaneous: it may take about an hour for the changes to propagate
+throughout the entire HPC infrastructure.
+
+To change the group of a directory and it's underlying directories and files, you can use:
+
+\begin{prompt}
+%\shellcmd{chgrp -R groupname directory}%
+\end{prompt}
+
+\subsection{Joining an existing group}
+
+\begin{enumerate}
+    \item Get the group name you want to belong to.
+    \item Go to \url{https://account.vscentrum.be/django/group/new} and fill in the
+        section named ``Join group''. You will be asked to fill in the group name and a message for
+        the moderator of the group, where you identify yourself. This should look something
+        like \autoref{fig:group-join}.
+    \item After clicking the submit button, a message will be sent to the moderator
+        of the group, who will either approve or deny the request. You will be a member of the
+        group shortly after the group moderator approves your request.
+\end{enumerate}
+
+\begin{figure}[!htbp]
+  \caption{Joining a group.}
+  \centering
+    \includegraphics[width=\textwidth]{ch6-group-join}
+\end{figure}\label{fig:group-join}
+
+\subsection{Creating a new group}
+
+\begin{enumerate}
+    \item Go to \url{https://account.vscentrum.be/django/group/new} and scroll down
+        to the section ``Request new group''. This should look something like
+        \autoref{fig:group-new}.
+    \item Fill out the group name. This cannot contain spaces.
+    \item Put a description of your group in the ``Info'' field.
+    \item You will now be a member and moderator of your newly created group.
+\end{enumerate}
+
+\begin{figure}[!htbp]
+  \caption{Creating a new group.}
+  \centering
+    \includegraphics[width=\textwidth]{ch6-group-new}
+\end{figure}\label{fig:group-new}
+
+\subsection{Managing a group}
+
+Group moderators can go to \url{https://account.vscentrum.be/django/group/edit} to
+manage their group (see \autoref{fig:group-edit}). Moderators can invite and remove members. They can also promote
+other members to moderator and remove other moderators.
+
+\begin{figure}[!htbp]
+  \caption{Creating a new group.}
+  \centering
+    \includegraphics[width=\textwidth]{ch6-group-edit}
+\end{figure}\label{fig:group-edit}
+
+\subsection{Inspecting groups}
+
+You can get details about the current state of groups on the HPC infrastructure
+with the following command (\lstinline|example| is the name of the group we want to inspect):
+
+\begin{prompt}
+%\shellcmd{getent group example}%
+example:*:1234567:vsc40001,vsc40002,vsc40003
+\end{prompt}
+
+We can see that the VSC id number is 1234567 and that there are three members in
+the group: \lstinline|vsc40001|, \lstinline|vsc40002| and \lstinline|vsc40003|.
+
 % virtual organisations are only used in Ghent (for now)
 \ifgent
 \section{Virtual Organisations}
