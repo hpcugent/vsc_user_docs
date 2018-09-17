@@ -127,10 +127,11 @@ calculations take 1500 minutes on one CPU. However, this job will use 8 CPUs,
 so the 100 calculations will be done in 1500/8 = 187.5 minutes, i.e., 4 hours
 to be on the safe side.
 
-The job can now be submitted as follows:
+The job can now be submitted as follows (to check which \lstinline|worker| module to use,
+see \autoref{subsec:explicit-version-numbers}):
 
 \begin{prompt}
-%\shellcmd{module load worker}%
+%\shellcmd{module load worker/1.6.8-intel-2018a}%
 %\shellcmd{wsub -batch weather.pbs -data data.csv}%
 total number of work items: 41
 %\jobid{}%
@@ -142,6 +143,7 @@ all computations are done. A computation for such a parameter instance is
 called a work item in Worker parlance.
 
 \section{The Worker framework: Job arrays}
+\label{sec:worker-framework-job-arrays}
 
 First go to the right directory:
 
@@ -246,7 +248,7 @@ Note that
 The job is now submitted as follows:
 
 \begin{prompt}
-%\shellcmd{module load worker}%
+%\shellcmd{module load worker/1.6.8-intel-2018a}%
 %\shellcmd{wsub -t 1-100 -batch test\_set.pbs}%
 total number of work items: 100
 %\jobid{}%
@@ -342,15 +344,15 @@ The ``Worker Framework'' will be effective when
 Since a Worker job will typically run for several hours, it may be reassuring
 to monitor its progress. Worker keeps a log of its activity in the directory
 where the job was submitted. The log's name is derived from the job's name and
-the job's ID, i.e., it has the form $<$jobname$>$.log$<$jobid$>$. For the
-running example, this could be ``run.pbs.log\jobnumber'', assuming the job's ID is
+the job's ID, i.e., it has the form \lstinline|<jobname>.log<jobid>|. For the
+running example, this could be \texttt{run.pbs.log\jobnumber}, assuming the job's ID is
 \jobnumber. To keep an eye on the progress, one can use:
 
 \begin{prompt}
 %\shellcmd{tail -f run.pbs.log\jobnumber{}}%
 \end{prompt}
 
-Alternatively, ``wsummarize'', a Worker command that summarises a log file, can be used:
+Alternatively, \lstinline|wsummarize|, a Worker command that summarises a log file, can be used:
 
 \begin{prompt}
 %\shellcmd{watch -n 60 wsummarize run.pbs.log\jobnumber{}}%

@@ -1,6 +1,5 @@
 % use \macro instead of \newcommand so we automatically add a space
 \usepackage{xspace}
-\usepackage{etoolbox}
 
 \newcounter{cnt}
 \newcommand\textlist{}
@@ -43,9 +42,6 @@
 \fi
 \ifantwerpen
   \newcommand{\siteurl}{antwerpen}
-\fi
-\ifhasselt
-  \newcommand{\siteurl}{hasselt}
 \fi
 \ifbrussel
   \newcommand{\siteurl}{brussel}

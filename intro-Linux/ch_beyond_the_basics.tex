@@ -22,10 +22,10 @@ channels:
 whatever was in the file before.
 
 \begin{prompt}
-%\shellcmd{ echo hello $>$ somefile}%
+%\shellcmd{ echo hello >{} somefile}%
 %\shellcmd{cat somefile}%
 hello
-%\shellcmd{echo hello2 $>$ somefile}%
+%\shellcmd{echo hello2 >{} somefile}%
 %\shellcmd{cat somefile}%
 hello2
 \end{prompt}
@@ -34,10 +34,10 @@ hello2
 whatever was in the file before:
 
 \begin{prompt}
-%\shellcmd{echo hello $>$ somefile}%
+%\shellcmd{echo hello >{} somefile}%
 %\shellcmd{cat somefile}%
 hello
-%\shellcmd{echo hello2 $>$$>$ somefile}%
+%\shellcmd{echo hello2 >{}>{} somefile}%
 %\shellcmd{cat somefile}%
 hello
 hello2
@@ -56,8 +56,8 @@ save a list of all the files you're interested in and then reading in the file
 list when you are done:
 
 \begin{prompt}
-%\shellcmd{find . -name \*.txt $>$ files}%
-%\shellcmd{xargs grep banana $<$ files}%
+%\shellcmd{find . -name \*.txt >{} files}%
+%\shellcmd{xargs grep banana <{} files}%
 \end{prompt}
 
 \subsection{Redirecting \texttt{stderr}}
@@ -66,7 +66,7 @@ To redirect the \lstinline|stderr| output (warnings, messages), you can use \lst
 like \lstinline|>|
 
 \begin{prompt}
-%\shellcmd{ls one.txt nosuchfile.txt 2$>$ errors.txt}%
+%\shellcmd{ls one.txt nosuchfile.txt 2>{} errors.txt}%
 one.txt
 %\shellcmd{cat errors.txt}%
 ls: nosuchfile.txt: No such file or directory
@@ -78,7 +78,7 @@ To combine both output channels (\lstinline|stdout| and \lstinline|stderr|) and 
 \lstinline|&>|
 
 \begin{prompt}
-%\shellcmd{ls one.txt nosuchfile.txt \&$>$ ls.out}%
+%\shellcmd{ls one.txt nosuchfile.txt \&>{} ls.out}%
 %\shellcmd{cat ls.out}%
 ls: nosuchfile.txt: No such file or directory
 one.txt
@@ -477,24 +477,22 @@ to keep in mind.
  #PBS -q long
  #PBS -m abe
  #PBS -j oe
- export HOMEDIR=$VSC_SCRATCH_VO_USER
- export WORKDIR=$VSC_SCRATCH_NODE/workdir
+ export DATADIR=$VSC_DATA/example
+ # $PBS_JOBID is unique for each job, so this creates a unique directory
+ export WORKDIR=$VSC_SCRATCH_NODE/$PBS_JOBID
  mkdir -p $WORKDIR
  # copy files to local storage
- #cp -a $HOMEDIR/workfiles $WORKDIR/
+ cp -a $DATADIR/workfiles $WORKDIR/
 
  # load software we need
  module load FreeSurfer
  cd $WORKDIR
  # recon-all ... &> output.log  # this command takes too long, let's show a more practical example
  echo $PBS_ARRAYID > $WORKDIR/$PBS_ARRAYID.txt
- # check results directory, create if necessary
- if ! [ -d $HOMEDIR/results ]
- then
-   mkdir -p $HOMEDIR/results
- fi
+ # create results directory if necessary
+ mkdir -p $DATADIR/results
  # copy work files back
- cp $WORKDIR/$PBS_ARRAYID.txt $HOMEDIR/results/
+ cp $WORKDIR/$PBS_ARRAYID.txt $DATADIR/results/
 \end{code}
 
 \subsection{PBS pragmas}

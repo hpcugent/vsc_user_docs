@@ -149,7 +149,7 @@ terminal.
 \ifmac
   To open a Terminal window in macOS, open the Finder and choose
 
-  \emph{$>$$>$ Applications $>$ Utilities $>$ Terminal}
+  \emph{>{}>{} Applications >{} Utilities >{} Terminal}
 \fi
 
 \iflinux
@@ -272,7 +272,7 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
   \iflinux(``gnome-keyring-daemon'' in most cases) \fi to keep and manage the user SSH keys.
   If you use one of these derivatives you \strong{must} include the new keys into
   the SSH manager keyring to be able to connect to the HPC cluster. If not,
-  SSH client will display an error message (see \autoref{ch:preparing-the-environment})
+  SSH client will display an error message (see \autoref{ch:connecting})
   similar to this:
 
   \begin{flattext}
@@ -348,9 +348,9 @@ yet an automated form to request your personal VSC account.
 
 Please e-mail the \hpc staff to get an account (see Contacts information).
 You will have to provide a public \emph{ssh} key generated as described
-above. Please attach your public key (i.e., the file named ``id\_rsa.pub''),
+above. Please attach your public key (i.e., the file named \lstinline|id_rsa.pub|),
 which you will normally find in your .ssh subdirectory within your HOME
-Directory. (i.e., /Users/$<$username$>$/.ssh/id\_rsa.pub).
+Directory. (i.e., \lstinline|/Users/<username>/.ssh/id_rsa.pub|).
 
 
 \fi % END IF ANTWERPEN

@@ -92,8 +92,8 @@ Inspect their contents \dots\ and remove the files
 \end{prompt}
 
 \begin{tip}
-Type ``\texttt{cat H}'' and press the \keys{TAB} button, and it will
-\strong{expand} into full filename \texttt{Hello.txt}.
+Type \lstinline|cat H| and press the Tab button (looks like \keys{\tab}), and it will
+\strong{expand} into \lstinline|cat Hello.txt|.
 \end{tip}
 
 \subsection{Filenames using the name of the job}
@@ -153,17 +153,17 @@ The following locations are available:
 \strong{Variable} & \strong{Description} \\ \hline\hline
 \multicolumn{2}{|l|}{\hspace*{2cm}\emph{Long-term storage} slow filesystem, intended for smaller files} \\ \hline
 \$VSC\_HOME            & For your configuration files and other small files, see \S\ref{subsec:home-directory}. \newline
-                         The default directory is /user/\sitename/xxx/$<$vsc-account$>$.
+                         The default directory is \texttt{/user/\sitename/xxx/\userid{}}.
                          The same file system is accessible from all sites, i.e., you'll see the same contents in \$VSC\_HOME on all sites. \\ \hline
 \$VSC\_DATA            & A bigger ``workspace'', for \strong{datasets}, results, logfiles, etc. see \S\ref{subsec:data-directory}. \newline
-                         The default directory is /data/\sitename/xxx/$<$vsc-account$>$.
+                         The default directory is \texttt{/data/\sitename/xxx/\userid{}}.
                          The same file system is accessible from all sites. \\ \hline\hline
 \multicolumn{2}{|l|}{\hspace*{2cm}\emph{Fast temporary storage}} \\ \hline
 \$VSC\_SCRATCH\_NODE   & For \strong{temporary} or transient data on the local compute node, where fast access is important; see \S\ref{subsec:scratch-directory}. \newline
-                         This space that is available per node. The default directory is /tmp.
+                         This space is available per node. The default directory is \lstinline|/tmp|.
                          On different nodes, you'll see different content. \\ \hline
 \$VSC\_SCRATCH         & For \strong{temporary} or transient data that has to be accessible from all nodes of a cluster (including the login nodes) \newline
-                         The default directory is /scratch/\sitename/xxx/$<$vsc-account$>$
+                         The default directory is \texttt{/scratch/\sitename/xxx/\userid{}}.
                          This directory is cluster- or site-specific: On different sites, and sometimes on different clusters on the same site, you'll get a different directory with different content. \\ \hline
 \$VSC\_SCRATCH\_SITE   & Currently the same as \$VSC\_SCRATCH, but could be used for a scratch space
                          shared across all clusters at a site in the future. See \S\ref{subsec:scratch-directory}. \\ \hline
@@ -656,10 +656,88 @@ really need them as they can put a heavy strain on the file system and thus
 slow down file operations on the cluster for all other users.
 \fi
 
+\section{Groups}
+\label{sec:vcs-groups}
+
+Groups are a way to manage who can access what data. A user can belong to multiple
+groups at a time. \strong{Groups can be created and managed without any interaction from
+the system administrators}.
+
+Please note that changes are not instantaneous: it may take about an hour for the changes to propagate
+throughout the entire HPC infrastructure.
+
+To change the group of a directory and it's underlying directories and files, you can use:
+
+\begin{prompt}
+%\shellcmd{chgrp -R groupname directory}%
+\end{prompt}
+
+\subsection{Joining an existing group}
+
+\begin{enumerate}
+    \item Get the group name you want to belong to.
+    \item Go to \url{https://account.vscentrum.be/django/group/new} and fill in the
+        section named ``Join group''. You will be asked to fill in the group name and a message for
+        the moderator of the group, where you identify yourself. This should look something
+        like \autoref{fig:group-join}.
+    \item After clicking the submit button, a message will be sent to the moderator
+        of the group, who will either approve or deny the request. You will be a member of the
+        group shortly after the group moderator approves your request.
+\end{enumerate}
+
+\begin{figure}[!htbp]
+  \caption{Joining a group.}
+  \centering
+    \includegraphics[width=\textwidth]{ch6-group-join}
+\end{figure}\label{fig:group-join}
+
+\subsection{Creating a new group}
+
+\begin{enumerate}
+    \item Go to \url{https://account.vscentrum.be/django/group/new} and scroll down
+        to the section ``Request new group''. This should look something like
+        \autoref{fig:group-new}.
+    \item Fill out the group name. This cannot contain spaces.
+    \item Put a description of your group in the ``Info'' field.
+    \item You will now be a member and moderator of your newly created group.
+\end{enumerate}
+
+\begin{figure}[!htbp]
+  \caption{Creating a new group.}
+  \centering
+    \includegraphics[width=\textwidth]{ch6-group-new}
+\end{figure}\label{fig:group-new}
+
+\subsection{Managing a group}
+
+Group moderators can go to \url{https://account.vscentrum.be/django/group/edit} to
+manage their group (see \autoref{fig:group-edit}). Moderators can invite and remove members. They can also promote
+other members to moderator and remove other moderators.
+
+\begin{figure}[!htbp]
+  \caption{Creating a new group.}
+  \centering
+    \includegraphics[width=\textwidth]{ch6-group-edit}
+\end{figure}\label{fig:group-edit}
+
+\subsection{Inspecting groups}
+
+You can get details about the current state of groups on the HPC infrastructure
+with the following command (\lstinline|example| is the name of the group we want to inspect):
+
+\begin{prompt}
+%\shellcmd{getent group example}%
+example:*:1234567:vsc40001,vsc40002,vsc40003
+\end{prompt}
+
+We can see that the VSC id number is 1234567 and that there are three members in
+the group: \lstinline|vsc40001|, \lstinline|vsc40002| and \lstinline|vsc40003|.
+
 % virtual organisations are only used in Ghent (for now)
 \ifgent
 \section{Virtual Organisations}
 \label{sec:virtual-organisations}
+\hypertarget{sec:virtual-organisation}{}
 
 A Virtual Organisation (VO) is a special type of group. You can only be a member
 of one single VO at a time (or not be in a VO at all).

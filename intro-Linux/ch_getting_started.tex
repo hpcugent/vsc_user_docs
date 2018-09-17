@@ -75,6 +75,7 @@ If for any reason you want to stop a command from executing, press \lstinline|Ct
 example, if a command is taking too long, or you want to rerun it with different arguments.
 
 \section{Variables}
+\hypertarget{sec:environment-variables}{}
 
 At the prompt we also have access to shell variables, which have both a \emph{name} and a \emph{value}.
 
@@ -150,7 +151,7 @@ To make this persistent across session, you can define this custom value for
 \lstinline|$PS1| in your \lstinline|.profile| startup script:
 
 \begin{prompt}
-%\shellcmd{echo 'export PS1="\textbackslash{w} \$ " ' $>$$>$ ~/.profile}%
+%\shellcmd{echo 'export PS1="\textbackslash{w} \$ " ' >{}>{} ~/.profile}%
 \end{prompt}
 
 \subsection{Using non-defined variables}

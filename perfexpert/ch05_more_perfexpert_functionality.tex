@@ -22,11 +22,11 @@ the PerfExpert command line would become:
 \subsection{Input/Output pipes}
 \label{subsec:IO_Pipes}
 
-When your program reads from standard input via an input pipe (i.e., ``$<$''), use the ``-i'' option. The Output pipe ('$>$') is not available because PerfExpert already sets a default output file.
+When your program reads from standard input via an input pipe (i.e., ``<{}''), use the ``-i'' option. The Output pipe ('>{}') is not available because PerfExpert already sets a default output file.
 
 If your program would normally executed by the command:
 \begin{prompt}
-%\shellcmd{my\_prog $<$ input\_file}%
+%\shellcmd{my\_prog <{} input\_file}%
 \end{prompt}
 
 the PerfExpert command line would become:
@@ -82,8 +82,8 @@ In order to allow PerfExpert to automatically optimise, PerfExpert must be told 
 The automatic optimisation is achieved by using one the 2 extra options:
 
 \begin{enumerate}
-  \item  -s  $<$source-file$>$
-  \item  -m  $<$Makefile$>$
+  \item  -s  <{}source-file>{}
+  \item  -m  <{}Makefile>{}
 \end{enumerate}
 
 If you select the~-m~option and the application is composed of multiple files, your source code tree should have a Makefile file to enable PerfExpert compile your code. If your application is composed of a single source code file, the option~-s~is sufficient for you. If you do not select~-m~or~-s~options, PerfExpert requires only the binary code and will show you only the performance analysis report and the list of suggestion for bottleneck remediation.

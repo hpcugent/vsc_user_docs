@@ -43,17 +43,9 @@ PerfExpert utilises knowledge of architectures and compilers to implement (parti
 
 Remember to load the appropriate PerfExpert modules:
 
-\iftacc
-\begin{prompt}
-%\shellcmd{module load papi hpctoolkit perfexpert}%
-%\shellcmd{module load GCC}%
-\end{prompt}
-\fi
-\ifvsc
 \begin{prompt}
 %\shellcmd{module load PerfExpert}%
 \end{prompt}
-\fi
 
 For our first example, we'll use a simple serial 1000 $\times$ 1000 matrix multiplication program. Check out the program ``mm.c'', compile and run it.
 
@@ -388,8 +380,8 @@ Explore the test3.c program.
 \begin{prompt}
 %\shellcmd{cat test3.c}%
 ...
-for (j = 0; j $<$ MAX_J; j++)
- for (i = 0; i $<$ MAX_I; i++)
+for (j = 0; j <{} MAX_J; j++)
+ for (i = 0; i <{} MAX_I; i++)
    a[i*STRIDE+j] += 2;
 ...
 \end{prompt}
@@ -559,7 +551,7 @@ Explore, compile, run the example and check the results, paying particular atten
 \begin{prompt}
 %\shellcmd{cat test5b.c}%
 ...
- for(i = 0; i $<$ ARRAY\_LEN; ++i)
+ for(i = 0; i <{} ARRAY\_LEN; ++i)
    a[i] = i PERCENTAGE-SIGN 4;
 ...
 %\shellcmd{gcc -g -o test5b test5b.c}%
