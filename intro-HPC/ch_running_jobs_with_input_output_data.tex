@@ -663,6 +663,9 @@ Groups are a way to manage who can access what data. A user can belong to multip
 groups at a time. \strong{Groups can be created and managed without any interaction from
 the system administrators}.
 
+Please note that changes aren't immediate: it takes about an hour for the changes to propagate
+throughout the entire HPC infrastructure.
+
 To change the group of a directory and it's underlying directories and files, you can use:
 
 \begin{prompt}
@@ -716,6 +719,19 @@ other members to moderator and remove other moderators.
   \centering
     \includegraphics[width=\textwidth]{ch6-group-edit}
 \end{figure}\label{fig:group-edit}
+
+\subsection{Inspecting groups}
+
+You can get details about groups with the following command (\lstinline|example|
+is the name of the group we want to inspect):
+
+\begin{prompt}
+%\shellcmd{getent group example}%
+example:*:1234567:vsc40001,vsc40002,vsc40003
+\end{prompt}
+
+We can see that the VSC id number is 1234567 and that there are three members in
+the group: \lstinline|vsc40001|, \lstinline|vsc40002| and \lstinline|vsc40003|.
 
 % virtual organisations are only used in Ghent (for now)
 \ifgent
