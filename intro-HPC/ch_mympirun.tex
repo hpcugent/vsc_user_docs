@@ -1,0 +1,91 @@
+\chapter{Mympirun}
+\label{ch:mympirun}
+
+\lstinline|mympirun| is a tool to make it easier for users of HPC clusters to run
+MPI programs with good performance.
+
+\section{Basic usage}
+\label{sec:myrun-basic-usage}
+
+The most basic form of using \lstinline|mympirun| is \lstinline|mympirun [options] -- your_program [your_program options]|.
+
+\section{Controlling number of processes}
+
+There are four options from which you can choose to control the number of processes
+\lstinline|mympirun| will start. In the following examples, the program \lstinline|mpi_hello|
+prints a single line: \lstinline|Hello world from processor <node> ...|.
+\lstinline|mympirun| normally starts one process per \emph{core}.
+
+\subsection{\texttt{--hybrid}/\texttt{-h}}
+
+The \lstinline|--hybrid| option requires a positive number. This number specifies
+the number of processes started on each available physical \emph{node}.
+
+\begin{prompt}
+%\shellcmd{echo \$PBS\_NUM\_NODES}%
+2
+%\shellcmd{mympirun --hybrid 2 ./mpi_hello}%
+Hello world from processor node2157.delcatty.os, rank 1 out of 4 processors
+Hello world from processor node2158.delcatty.os, rank 3 out of 4 processors
+Hello world from processor node2158.delcatty.os, rank 2 out of 4 processors
+Hello world from processor node2157.delcatty.os, rank 0 out of 4 processors
+\end{prompt}
+
+\subsection{\texttt{--universe}}
+
+The \lstinline|--universe| option requires a positive number. This number specifies
+the exact number of processes \lstinline|mympirun| will start
+(so the number of nodes doesn't affect the number of processes).
+
+\begin{prompt}
+%\shellcmd{echo \$PBS\_NUM\_NODES}%
+16
+%\shellcmd{mympirun --universe 2 ./mpi_hello}%
+Hello world from processor node2157.delcatty.os, rank 1 out of 2 processors
+Hello world from processor node2157.delcatty.os, rank 0 out of 2 processors
+\end{prompt}
+
+\subsection{\texttt{--double} and \texttt{--multi}}
+
+As the name suggests, when using the \lstinline|--double| option, \lstinline|mympirun| will start double
+the amount of processes as it normally would. The \lstinline|--multi| option works the same
+but it requires an integer, indicating the multiplier, for example, \lstinline|--multi 3| will
+start triple the amount of processes. This means \lstinline|--double| and \lstinline|--multi 2| will have
+the exact same effect.
+
+\begin{prompt}
+%\shellcmd{echo \$PBS\_NUM\_NODES}%
+2
+
+%\shellcmd{echo \$PBS\_NUM\_PPN}%
+2
+
+%\shellcmd{mympirun --double ./mpi\_hello}%
+Hello world from processor node2157.delcatty.os, rank 1 out of 8 processors
+Hello world from processor node2158.delcatty.os, rank 3 out of 8 processors
+Hello world from processor node2157.delcatty.os, rank 0 out of 8 processors
+Hello world from processor node2158.delcatty.os, rank 2 out of 8 processors
+...
+\end{prompt}
+
+\section{Redirecting output with \texttt{--output}}
+
+You can specify a file to output stdout and stderr.
+
+\section{FAQ}
+
+\subsection{\texttt{mympirun} seems to ignore its arguments}
+
+For example, we have a simple script (\lstinline|./hello.sh|):
+
+\begin{code}{bash}
+#!/bin/bash
+echo "hello world"
+\end{code}
+
+And we run it like \lstinline|mympirun ./hello.sh --output output.txt|.
+
+To our suprise, this doesn't output to the file \lstinline|output.txt|, but to standard out!
+This is because \lstinline|mympirun| expects the program name and the arguments of the program to
+be its last arguments. Here, the \lstinline|--output output.txt| arguments are passed to
+\lstinline|./hello.sh| instead of to \lstinline|mympirun|.
