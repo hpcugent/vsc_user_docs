@@ -21,6 +21,6 @@ export MCR_CACHE_SIZE=1024MB
 # change to directory where job script was submitted from
 cd $PBS_O_WORKDIR
 
-# run compiled example MATLAB program 'magicsquare', provide '5' as argument
+# run compiled example MATLAB program 'example', provide '5' as input argument to the program
 # $EBROOTMATLAB points to MATLAB installation directory
-./run_magicsquare.sh $EBROOTMATLAB 5
+./run_example.sh $EBROOTMATLAB 5

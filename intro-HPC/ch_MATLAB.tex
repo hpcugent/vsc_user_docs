@@ -44,11 +44,15 @@ flag is used (the \lstinline|-v| flag means verbose ouput).
 To show how \lstinline|mcc| can be used, we use the \lstinline|magicsquare| example
 that comes with MATLAB.
 
-First, we copy the \lstinline|magicsquare.m| example that comes with MATLAB to \lstinline|example.m|.
-
+First, we copy the \lstinline|magicsquare.m| example that comes with MATLAB to \lstinline|example.m|:
 
 \begin{prompt}
 %\shellcmd{cp \$EBROOTMATLAB/extern/examples/compiler/magicsquare.m example.m}%
+\end{prompt}
+
+To compile a MATLAB program, use \lstinline|mcc -mv|:
+
+\begin{prompt}
 %\shellcmd{mcc -mv example.m}%
 Opening log file:  %\homedir{}/java.log.34090%
 Compiler version: 6.6 (R2018a)
@@ -69,7 +73,7 @@ look for files in \texttt{\emph{library\_path}}.
 It's also possible to use the \texttt{-a \emph{path}} flag. That will result in
 all files under the \texttt{\emph{path}} getting added to the final executable.
 
-For example, the command \lstinline|mcc -I examplelib -a datafiles example.m| will
+For example, the command \lstinline|mcc -mv example.m -I examplelib -a datafiles| will
 compile \lstinline|example.m| with the MATLAB files in \lstinline|examplelib|, and will
 include all files in the \lstinline|datafiles| directory in the binary it produces.
 
@@ -154,7 +158,7 @@ When running, MATLAB will use a cache for performance reasons. This location
 and size of this cache can be changed trough the \lstinline|MCR_CACHE_ROOT| and
 \lstinline|MCR_CACHE_SIZE| environment variables.
 
-The snippet below would set the maximum cache size to 1024 megabytes and the
+The snippet below would set the maximum cache size to 1024MB and the
 location to \lstinline|/tmp/testdirectory|.
 
 \begin{prompt}
@@ -162,7 +166,7 @@ location to \lstinline|/tmp/testdirectory|.
 %\shellcmd{export MATLAB\_CACHE\_SIZE=1024M}%
 \end{prompt}
 
-So when MATLAB is running, it can fill up to 1024 megabytes of cache in
+So when MATLAB is running, it can fill up to 1024MB of cache in
 \lstinline|/tmp/testdirectory|.
 
 \section{MATLAB job script}
