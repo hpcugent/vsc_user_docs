@@ -35,7 +35,7 @@ There are four options you can choose from to control the number of processes
 prints a single line: \lstinline|Hello world from processor <node> ...| (the sourcecode of
 \lstinline|mpi_hello| is \href{https://github.com/hpcugent/vsc-mympirun/blob/7bb2b70c4db4d780e72cb05014fc505c6f215b26/testscripts/mpi_helloworld.c}{available in the vsc-mympirun repository}).
 
-\lstinline|mympirun| normally starts one process per \emph{core} on every node you assigned.
+By default, \lstinline|mympirun| starts one process per \emph{core} on every node you assigned.
 So if you assigned 2 nodes with 16 cores each, \lstinline|mympirun| will
 start $2\cdot16=32$ test processes in total.
 
