@@ -12,6 +12,6 @@ cd $TMPDIR
 # We have a total of 60 * 20 minutes (=1200 minutes), but we only give it
 #  1150 minutes, so we have 50 minutes left to copy files back. This should
 #  be more than enough.
-timeout 1150m $PBS_O_WORKDIR/example_program.sh 1400 output.txt
+timeout -s SIGKILL 1150m $PBS_O_WORKDIR/example_program.sh 1400 output.txt
 # copy back output data, ensure unique filename using $PBS_JOBID
 cp output.txt $VSC_DATA/output_${PBS_JOBID}.txt
