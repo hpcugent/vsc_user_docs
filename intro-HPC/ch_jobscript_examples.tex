@@ -1,0 +1,31 @@
+\chapter{Jobscript examples}
+\label{ch:jobscript-examples}
+
+\section{Single-core job}
+
+Here's an example of a single-core job script:
+
+\examplecode{bash}{single_core.sh}
+
+\section{Multi-core job}
+
+Here's an example of a multi-core job script that uses \lstinline|mympirun|:
+
+\examplecode{bash}{multi_core.sh}
+
+\section{Running a command with a maximum time limit}
+\label{sec:maximum-timelimit-timeout-jobscript}
+
+If we want to run a job, but we're not sure it will finish before the job runs
+out of walltime and we want to copy data back before, we have to stop the main
+command before the walltime runs out and copy the data back.
+
+This can be done with the \lstinline|timeout| command. This command sets a limit
+of time a program can run for, and when this limit is exceeded, it kills the program.
+Here's an example jobscript using \lstinline|timeout|:
+
+\examplecode{bash}{timeout.sh}
+
+For the curious, here is the program used:
+
+\examplecode{bash}{example_program.sh}
