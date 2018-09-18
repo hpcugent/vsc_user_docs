@@ -12,6 +12,16 @@ options, see the
 \section{Basic usage}
 \label{sec:myrun-basic-usage}
 
+Before using \lstinline|mympirun|, we first need to load its module:
+
+\begin{prompt}
+%\shellcmd{module load mympirun}%
+\end{prompt}
+
+As an exception, we don't specify a version here. The reason is that we want to ensure
+that the latest version of the \lstinline|mympirun| script is always used, since it may
+include important bug fixes or improvements.
+
 The most basic form of using \lstinline|mympirun| is \lstinline|mympirun [mympirun options] your_program [your_program options]|.
 
 For example, to run a program named \lstinline|hello_mpi| and give it a single argument (\lstinline|5|),
