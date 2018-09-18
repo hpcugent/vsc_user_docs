@@ -1088,7 +1088,7 @@ harm if you \emph{slightly} overestimate the maximum execution time.
 If you omit this option, the queue manager will not complain but use a
 default value (one hour on most clusters).
 
-If you want to run a command after the walltime kills your job (for example to copy files back),
+If you want to run some final steps (for example to copy files back) before the walltime kills your main process,
 you have to kill the main command yourself before the walltime runs out and then copy the
 file back. See \autoref{sec:maximum-timelimit-timeout-jobscript} for how to do this.
 

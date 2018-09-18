@@ -7,17 +7,28 @@ Here's an example of a single-core job script:
 
 \examplecode{bash}{single_core.sh}
 
+\begin{enumerate}
+    \item We set \lstinline|#PBS| headers, see \autoref{ch:torque-options} for a list of these options
+    \item We load a module, see \autoref{sec:modules}
+    \item We stage the data in
+    \item We execute the main part of the job
+    \item We stage the results out. For a list of possible storage locations, see \autoref{subsec:predefined-user-directories}.
+\end{enumerate}
+
 \section{Multi-core job}
 
 Here's an example of a multi-core job script that uses \lstinline|mympirun|:
 
 \examplecode{bash}{multi_core.sh}
 
+An example MPI hello world program can be downloaded from \url{https://www.open-mpi.org/papers/workshop-2006/hello.c}.
+
+
 \section{Running a command with a maximum time limit}
 \label{sec:maximum-timelimit-timeout-jobscript}
 
-If we want to run a job, but we're not sure it will finish before the job runs
-out of walltime and we want to copy data back before, we have to stop the main
+If you want to run a job, but you are not sure it will finish before the job runs
+out of walltime and we want to copy data back before, you have to stop the main
 command before the walltime runs out and copy the data back.
 
 This can be done with the \lstinline|timeout| command. This command sets a limit
@@ -26,6 +37,6 @@ Here's an example job script using \lstinline|timeout|:
 
 \examplecode{bash}{timeout.sh}
 
-For the curious, here is the program used:
+The example program used in this script is a dummy script that simply sleeps a specified amount of minutes:
 
 \examplecode{bash}{example_program.sh}
