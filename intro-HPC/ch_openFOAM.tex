@@ -4,14 +4,6 @@
 In this chapter, we outline best practices for using the centrally provided OpenFOAM installations
 on the VSC \hpc infrastructure.
 
-\begin{itemize}
-    \item \emph{last update}: September 2017
-    \item \emph{authors}: Kenneth Hoste (HPC-UGent), with feedback from Joris Degroote (UGent), Brecht Devolder (UGent),
-        Pieter Reyniers (UGent), Laurien Vandewalle (UGent)
-\end{itemize}
-
-
-
 \section{Different OpenFOAM releases}
 \label{sec:best-practices-openfoam-releases}
 
@@ -75,16 +67,22 @@ To get an overview of the available modules, run `\lstinline|module avail OpenFO
 %\shellcmd{module avail OpenFOAM}%
 
 ------------------ /apps/gent/CO7/sandybridge/modules/all ------------------
-   OpenFOAM/2.4.0-intel-2017a     OpenFOAM/3.0.1-intel-2016b
-   OpenFOAM/4.0-intel-2016b       OpenFOAM/4.1-intel-2017a
+   OpenFOAM/v1712-foss-2017b     OpenFOAM/4.1-intel-2017a
+   OpenFOAM/v1712-intel-2017b    OpenFOAM/5.0-intel-2017a
+   OpenFOAM/2.2.2-intel-2017a    OpenFOAM/5.0-intel-2017b
+   OpenFOAM/2.2.2-intel-2018a    OpenFOAM/5.0-20180108-foss-2018a
+   OpenFOAM/2.3.1-intel-2017a    OpenFOAM/5.0-20180108-intel-2017b
+   OpenFOAM/2.4.0-intel-2017a    OpenFOAM/5.0-20180108-intel-2018a
+   OpenFOAM/3.0.1-intel-2016b    OpenFOAM/6-intel-2018a            (D)
+   OpenFOAM/4.0-intel-2016b
 \end{prompt}
 
 To pick a module, take into account the differences between the different OpenFOAM versions w.r.t. features and
 API (see also \autoref{sec:best-practices-openfoam-releases}).
 If multiple modules are available that fulfill your requirements, give preference to those providing a more recent
 OpenFOAM version, and to the ones that were installed with a more recent compiler toolchain; for example, prefer
-a module that includes \lstinline|intel-2017a| in its name over one that includes
-\lstinline|intel-2016b|.
+a module that includes \texttt{intel-\the\year{}b} in its name over one that includes
+\texttt{intel-\the\year{}a}.
 
 To prepare your environment for using OpenFOAM, load the \lstinline|OpenFOAM| module you have picked; for example:
 \begin{prompt}
@@ -243,10 +241,7 @@ you should either:
     number of \lstinline|processor*| directories that were created by \lstinline|decomposePar|)
 \end{itemize}
 
-Alternatively you can specify to \texttt{mympirun} that it should only start a certain number of MPI processes,
-via \lstinline|--hybrid| (see \autoref{sec:best-practices-mympirun-hybrid}),
-taking into account the number of requested workernodes,
-or \lstinline|--universe| (see \autoref{sec:best-practices-mympirun-universe}).
+See \autoref{sec:mympirun-processes} to control the number of process \lstinline|mympirun| will start.
 
 This is interesting if you require more memory per core than is available by default.
 Note that the decomposition method being used (which is specified in \lstinline|system/decomposeParDict|)
@@ -295,10 +290,7 @@ OpenFOAM simulations}, since these shared filesystems are too slow for these typ
 
 \ifgent
 For large parallel OpenFOAM simulations on the \university Tier-2 clusters, consider using the
-alternative shared scratch filesystem \lstinline|$VSC_SCRATCH_PHANPY| that is powered by
-solid-state drives (SSDs) and is significantly faster than the standard scratch
-shared filesystem, especially for workloads involving lots of (small) files. Note that fast access to
-\lstinline|$VSC_SCRATCH_PHANPY| is available on each of the \university Tier-2 clusters, not only on \lstinline|phanpy|.
+alternative shared scratch filesystem \lstinline|$VSC_SCRATCH_PHANPY| (see \autoref{subsec:predefined-user-directories}).
 \fi
 
 These guidelines are especially important for large-scale OpenFOAM simulations that involve

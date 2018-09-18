@@ -2,13 +2,14 @@
 #PBS -l walltime=1:0:0
 #PBS -l nodes=1:ppn=4
 # check for more recent OpenFOAM modules with 'module avail OpenFOAM'
-module load OpenFOAM/4.1-intel-2017a
+module load OpenFOAM/5.0-20180108-foss-2018a
 source $FOAM_BASH
 # purposely not specifying a particular version to use most recent mympirun
 module load vsc-mympirun
 # let mympirun pass down relevant environment variables to MPI processes
 export MYMPIRUN_VARIABLESPREFIX=WM_PROJECT,FOAM,MPI
 # set up working directory
+# (uncomment one line defining $WORKDIR below)
 #export WORKDIR=$VSC_SCRATCH/$PBS_JOBID  # for small multi-node jobs
 #export WORKDIR=$VSC_SCRATCH_PHANPY/$PBS_JOBID  # for large multi-node jobs
 export WORKDIR=$VSC_SCRATCH_NODE/$PBS_JOBID  # for single-node jobs
