@@ -15,7 +15,7 @@ options, see the
 The most basic form of using \lstinline|mympirun| is \lstinline|mympirun [mympirun options] your_program [your_program options]|.
 
 For example, to run a program named \lstinline|hello_mpi| and give it a single argument (\lstinline|5|),
-we can run it with \lstinline|mympirun ./hello_mpi 5|.
+we can run it with \lstinline|mympirun hello_mpi 5|.
 
 
 \section{Controlling number of processes}
@@ -25,14 +25,16 @@ There are four options you can choose from to control the number of processes
 prints a single line: \lstinline|Hello world from processor <node> ...|.
 
 \lstinline|mympirun| normally starts one process per \emph{core} on every node you assigned.
-So if you assigned 4 nodes with 16 cores each, \lstinline|mympirun| will
-start $4\cdot16=64$ test processes in total.
+So if you assigned 2 nodes with 16 cores each, \lstinline|mympirun| will
+start $2\cdot16=32$ test processes in total.
 
 \subsection{\texttt{-{}-hybrid}/\texttt{-h}}
 
+This is the most commonly used option for controlling the number of processing.
+
 The \lstinline|--hybrid| option requires a positive number. This number specifies
 the number of processes started on each available physical \emph{node}. It will ignore
-the number of \emph{cores} per node.
+the number of available \emph{cores} per node.
 
 \begin{prompt}
 %\shellcmd{echo \$PBS\_NUM\_NODES}%
@@ -46,8 +48,26 @@ Hello world from processor node2157.delcatty.os, rank 0 out of 4 processors
 
 \subsection{Other options}
 
-For other options to control the number of processes, see the
-\href{https://github.com/hpcugent/vsc-mympirun/blob/master/README.md}{vsc-mympirun README}.
+There's also \lstinline|--universe|, which sets the exact amount of processes started by \lstinline|mympirun|;
+\lstinline|--double|, which uses double the amount of processes it normally would;
+and \lstinline|--multi| that does the same as \lstinline|--double|, but takes a multiplier
+(instead of 2 with \lstinline|--double|).
+
+See \href{https://github.com/hpcugent/vsc-mympirun/blob/master/README.md}{vsc-mympirun README}
+for a detailed explanation of these options.
+
+\section{Dry run}
+
+You can do a so-called ``dry run'', which doesn't have any side-effects, but just
+prints what it would do. You enable this with the \lstinline|--dry-run| flag:
+
+\begin{prompt}
+%\shellcmd{mympirun --dry-run hostname}%
+* output file            : None
+* output timeout         : 3600
+* fail on missing output : False
+* mpirun command         : mpirun -genv MKL_NUM_THREADS '1' -genv I_MPI_PIN '1' ...
+\end{prompt}
 
 \section{FAQ}
 
@@ -62,10 +82,16 @@ echo "hello world"
 
 And we run it like \lstinline|mympirun ./hello.sh --output output.txt|.
 
-To our suprise, this doesn't output to the file \lstinline|output.txt|, but to standard out!
+To our surprise, this doesn't output to the file \lstinline|output.txt|, but to standard out!
 This is because \lstinline|mympirun| expects the program name and the arguments of the program to
 be its last arguments. Here, the \lstinline|--output output.txt| arguments are passed to
-\lstinline|./hello.sh| instead of to \lstinline|mympirun|.
+\lstinline|./hello.sh| instead of to \lstinline|mympirun|. The correct way to run it is:
+
+\begin{prompt}
+%\shellcmd{mympirun --output output.txt ./hello.sh}%
+\end{prompt}
+
+
 
 \subsection{I have other problems/questions}
 
