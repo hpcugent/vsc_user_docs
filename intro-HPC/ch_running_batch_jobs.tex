@@ -1380,7 +1380,7 @@ So the following example might go wrong:
 \end{prompt}
 
 You can make jobs that depend on other jobs. This can be useful for breaking up large jobs
-in smaller jobs that can be ran in a pipeline. The following example will submit 2 jobs,
+into smaller jobs that can be run in a pipeline. The following example will submit 2 jobs,
 but the second job (\lstinline|job2.sh|) will be held (\lstinline|H| status in \lstinline|qstat|)
 until the first job successfully completes. If the first job fails, the second will be cancelled.
 
@@ -1388,3 +1388,9 @@ until the first job successfully completes. If the first job fails, the second w
 %\shellcmd{FIRST\_ID=\$(qsub job1.sh)}%
 %\shellcmd{qsub -W depend=afterok:\$FIRST\_ID job2.sh}%
 \end{prompt}
+
+\lstinline|afterok| means ``After OK'', or in other words, after the first job successfully completed.
+
+It's also possible to use \lstinline|afternotok| (``After not OK'') to run the second job
+only if the first job exited with errors. A third option is to use \lstinline|afterany| (``After any''),
+to run the second job after the first job (regardless of success or failure).
