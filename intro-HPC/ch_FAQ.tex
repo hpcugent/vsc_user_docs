@@ -73,3 +73,49 @@ Please send an e-mail to \hpcinfo that includes:
     \item The purpose for which you want to install the software
 \end{itemize}
 \fi
+
+\ifgent
+\section{How do I get access to the GPGPU system in Leuven?}
+
+The HPC at the KU Leuven has got several GPGPU nodes.
+
+You have to be a member of the \lstinline|lp_GPU_GENT| group before you can
+access these GPU nodes. See \autoref{subsec:joining-existing-group} for how to join that group.
+
+To use the GPGPU nodes, log in (use the same public key as you use for the UGent HPC):
+
+\begin{prompt}
+%\shellcmd{ssh \userid{}@login.hpc.kuleuven.be}%
+\end{prompt}
+
+For example, to submit a job script called \lstinline|example_jobscript.pbs|:
+
+\begin{prompt}
+qsub -lpartition=gpu -lnodes=1:gpu -A lp_GPU_GENT example_jobscript.pbs
+\end{prompt}
+
+The last argument (\lstinline|-A lp_GPU_GENT|) is needed to have sufficient credits
+(the KU Leuven works with a credit system).
+
+Submitting to either GPU or Phi clusters is possible with: \lstinline|qsub -lpartition=gpu|
+or \lstinline|qsub -lpartition=phi|.
+
+Selecting a specific gpu node is also possible:
+\lstinline|qsub -lpartition=gpu,nodes=1:M2070| or \lstinline|qsub -lpartition=gpu,nodes=1:K20Xm|
+
+In your job script, use a login shell. For bash, this means the first line of your jobscript should be:
+\lstinline|#!/bin/bash -l|.
+
+Don't forget to load \lstinline|cuda|: \lstinline|module load cuda|.
+
+Additional information can be found at \url{https://vscentrum.be/neutral/documentation/cluster-doc/running-jobs/job-system-basics}
+
+The KULeuven Helpdesk can be contacted at \lstinline|hpcinfo@icts.kuleuven.be|.
+
+
+The regular \lstinline|$VSC_HOME| and \lstinline|$VSC_DATA| can also be accessed,
+but the path's differ from the UGent login nodes. Always use the bash variables \lstinline|$VSC_HOME|
+and \lstinline|$VSC_DATA|. They will point to the correct location.
+
+More information is available at \url{https://vscentrum.be/neutral/documentation/support/tut-book/vsc-tutorials/thinking-quick-start-guide.pdf}.
+\fi
