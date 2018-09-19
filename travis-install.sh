@@ -29,4 +29,6 @@ elif ! (( $RANDOM % 100 )); then
     install_texlive
 else
     echo "Already installed"
+    type -a pdflatex
+    type -a latexmk
 fi
