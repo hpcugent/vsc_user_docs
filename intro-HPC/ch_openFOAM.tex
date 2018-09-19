@@ -189,16 +189,9 @@ than `\lstinline|1|' in the \lstinline|nProcs| field. Note that most pre- and po
 
 It is highly recommended to use the \lstinline|mympirun| command when running parallel OpenFOAM simulations
 rather than the standard \lstinline|mpirun| command;
-see \autoref{sec:best-practices-mympirun} for more information on \lstinline|mympirun|.
+see \autoref{ch:mympirun} for more information on \lstinline|mympirun|.
 
-To use \lstinline|mympirun|, make sure that the \lstinline|vsc-mympirun| module is loaded.
-
-\begin{prompt}
-%\shellcmd{module load vsc-mympirun}%
-\end{prompt}
-
-Note that you should \emph{not} specify a specific version here,
-see also \autoref{sec:best-practices-mympirun-module}.
+See \autoref{sec:myrun-basic-usage} for how to get started with \lstinline|mympirun|.
 
 To pass down the environment variables required to run OpenFOAM (which were defined by the
 \lstinline|$FOAM_BASH| script, see \autoref{sec:best-practices-openfoam-environment})
@@ -212,7 +205,7 @@ prior to running the OpenFOAM simulation with \lstinline|mympirun|:
 
 Whenever you are instructed to use a command like \lstinline|mpirun -np <N>| ...,
 use \lstinline|mympirun| ... instead; \lstinline|mympirun| will automatically detect the number of
-processor cores that are available (see also \autoref{sec:best-practices-mympirun-cores}).
+processor cores that are available (see also \autoref{sec:mympirun-controlling-number-of-processes}).
 
 \subsection{Domain decomposition and number of processor cores}
 \label{sec:best-practices-openfoam-domain-decomposition-processor-cores}
@@ -241,13 +234,13 @@ you should either:
     number of \lstinline|processor*| directories that were created by \lstinline|decomposePar|)
 \end{itemize}
 
-See \autoref{sec:mympirun-processes} to control the number of process \lstinline|mympirun| will start.
+See \autoref{sec:mympirun-controlling-number-of-processes} to control the number of process \lstinline|mympirun| will start.
 
 This is interesting if you require more memory per core than is available by default.
 Note that the decomposition method being used (which is specified in \lstinline|system/decomposeParDict|)
 has significant impact on the performance of a parallel OpenFOAM simulation. Good decomposition methods (like
 \lstinline|metis| or \lstinline|scotch|) try to limit communication overhead by minimising the number
-of processor boundaries; see also \autoref{sec:best-practices-openfoam-scaling}.
+of processor boundaries.
 
 To visualise the processor domains, use the following command:
 
