@@ -10,7 +10,7 @@ Here's an example of a single-core job script:
 \begin{enumerate}
     \item Using \lstinline|#PBS| header lines, we specify the resource requirements for the job,
         see \autoref{ch:torque-options} for a list of these options
-    \item A module for \lstinline|Python3.6| is loaded, see also \autoref{sec:modules}
+    \item A module for \lstinline|Python 3.6| is loaded, see also \autoref{sec:modules}
     \item We stage the data in: the file \lstinline|input.txt| is copied into the ``working'' directory, see \autoref{ch:running-jobs-with-input-output-data}
     \item The main part of the script runs a small Python program that counts the
         number of characters in the provided input file \lstinline|input.txt|
