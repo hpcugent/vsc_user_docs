@@ -57,3 +57,83 @@ For example, to let it use \lstinline|$VSC_DATA/easybuild|, use:
 \begin{prompt}
 %\shellcmd{export}% EASYBUILD_INSTALLPATH=$VSC_DATA/easybuild/$VSC_OS_LOCAL/$VSC_ARCH_LOCAL$VSC_ARCH_SUFFIX
 \end{prompt}
+
+Using the \lstinline|$VSC_ARCH| and \lstinline|$VSC_ARCH_SUFFIX| environment variables
+ensures that your install software to a location that is specific to the cluster you're
+building for.
+
+Make sure you \strong{do not build software on the login nodes}, since the loaded \lstinline|cluster|
+module determines the location of the installed software. Software built on the login
+nodes may not work on the cluster you want to use the software on.
+
+To share custom software installations with members of your VO, replace \lstinline|$VSC_DATA|
+with \lstinline|$VSC_DATA_VO| in the example above.
+
+\section{Using EasyBuild}
+
+Before using EasyBuild, you first need to load the \lstinline|EasyBuild| module. We don't specify
+a version here (this is an exception, for other modules we would) because newer versions
+might include important bugfixes.
+
+\begin{prompt}
+module load EasyBuild
+\end{prompt}
+
+\subsection{Installing supported software}
+
+EasyBuild provides a large collection of readily available software versions,
+combined with a particular toolchain version. Use the \lstinline|--search|
+(or \lstinline|-S|) functionality to see which different 'easyconfigs'
+(build recipes, see \url{http://easybuild.readthedocs.org/en/latest/Concepts_and_Terminology.html#easyconfig-files}) are available:
+
+\begin{prompt}
+%\shellcmd{eb -S OpenFOAM-2.2}%
+CFGS1=/apps/gent/CO7/sandybridge/software/EasyBuild/3.6.2/lib/python2.7/site-packages/easybuild_easyconfigs-3.6.2-py2.7.egg/easybuild/easyconfigs
+ * $CFGS1/o/OpenFOAM/OpenFOAM-2.2.0-goolf-1.4.10.eb
+ * $CFGS1/o/OpenFOAM/OpenFOAM-2.2.0-ictce-5.3.0.eb
+ * $CFGS1/o/OpenFOAM/OpenFOAM-2.2.0_libreadline.patch
+ * $CFGS1/o/OpenFOAM/OpenFOAM-2.2.2-intel-2015a.eb
+ * $CFGS1/o/OpenFOAM/OpenFOAM-2.2.2-intel-2016a.eb
+ * $CFGS1/o/OpenFOAM/OpenFOAM-2.2.2-intel-2017a.eb
+ * $CFGS1/o/OpenFOAM/cleanup-OpenFOAM-2.2.0.patch
+ * $CFGS1/o/OpenFOAM/cleanup-OpenFOAM-2.2.2.patch
+\end{prompt}
+
+For readily available easyconfigs, just specify the name of the easyconfig file to build
+and install the corresponding software package:
+
+\begin{prompt}
+%\shellcmd{eb OpenFOAM-2.2.2-intel-2017a.eb --robot}%
+\end{prompt}
+
+\subsection{Installing variants on supported software}
+
+To install small variants on supported software, e.g. a different software version,
+or using a different compiler toolchain, use the corresponding \lstinline|--try-X| options:
+
+To try to install \lstinliline|GCC v4.9.2|, based on the easyconfig file for \lstinline|GCC v4.9.1|:
+
+\begin{prompt}
+%\shellcmd{eb GCC-4.9.1.eb --try-software-version=4.9.2}%
+\end{prompt}
+
+To try to install OpenFOAM v2.2.2 with a different compiler toolchain:
+
+\begin{prompt}
+%\shellcmd{eb OpenFOAM-2.2.2-intel-2015a.eb --robot --try-toolchain=foss,2015a}%
+\end{prompt}
+
+\subsection{Install other software}
+
+To install other, not yet supported, software, you will need to provide the required
+easyconfig files yourself. See \url{https://easybuild.readthedocs.org/en/latest/Writing_easyconfig_files.html}
+for more information
+
+\section{Using the installed modules}
+
+To use the modules you installed with EasyBuild, extend \lstinline|$MODULEPATH|
+to make them accessible for loading:
+
+\begin{prompt}
+module use $EASYBUILD_INSTALLPATH/modules/all
+\end{prompt}
