@@ -3,14 +3,14 @@
 
 \section{What is Easybuild?}
 
+You can use EasyBuild to build and install supported software in your own VSC account,
+rather than requesting a central installation by the HPC support team.
+
 EasyBuild is the software build and installation framework that was created by the HPC-UGent
 team, and has recently been picked up by HPC sites around the world. It allows you to manage
 (scientific) software on High Performance Computing (HPC) systems in an efficient way.
 
 \section{When should I use Easybuild?}
-
-You can use Easybuild to install software in your own VSC account, rather than
-requesting a central installation by the HPC support team.
 
 For general software installation requests, please see \autoref{sec:software-installation}. However,
 there might be reasons to install the software yourself:
@@ -20,3 +20,40 @@ there might be reasons to install the software yourself:
     \item evaluating new software versions prior to requesting a central software installation
     \item installing (very) old software versions that are no longer eligible for central installation (on new systems)
 \end{enumerate}
+
+\section{Configuring EasyBuild}
+
+Before you use EasyBuild, you need to configure it:
+
+\subsection{Path to sources}
+
+This is where EasyBuild can find software sources:
+
+\begin{prompt}
+%\shellcmd{export EASYBUILD\_SOURCEPATH=/apps/gent/source}%
+\end{prompt}
+
+\subsection{Build directory}
+
+This directory is where EasyBuild will build software in. To have good performance,
+this needs to be on a fast filesystem.
+
+\begin{prompt}
+%\shellcmd{export EASYBUILD\_BUILDPATH=\${TMPDIR:-/tmp/\$USER}}%
+\end{prompt}
+
+On cluster nodes, you can use the fast, in-memory \lstinline|/dev/shm/$USER| location
+as a build directory.
+
+\subsection{Software install location}
+
+This is where EasyBuild will install the software (and accompanying modules) to.
+
+For example, to let it use \lstinline|$VSC_DATA/easybuild|, use:
+
+
+% Don't put the whole command inside \shellcmd{} because it would show ugly white boxes
+
+\begin{prompt}
+%\shellcmd{export}% EASYBUILD_INSTALLPATH=$VSC_DATA/easybuild/$VSC_OS_LOCAL/$VSC_ARCH_LOCAL$VSC_ARCH_SUFFIX
+\end{prompt}
