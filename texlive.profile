@@ -42,7 +42,7 @@ collection-latexextra 1
 collection-latexrecommended 1
 collection-luatex 1
 collection-mathscience 1
-collection-metapost 1
+collection-metapost 0
 collection-music 0
 collection-pictures 0
 collection-pstricks 1
@@ -50,8 +50,7 @@ collection-publishers 0
 collection-texworks 1
 collection-xetex 1
 option_adjustrepo 1
-option_autobackup 1
-option_backupdir tlpkg/backups
+option_autobackup 0
 option_desktop_integration 0
 option_doc 0
 option_src 0
