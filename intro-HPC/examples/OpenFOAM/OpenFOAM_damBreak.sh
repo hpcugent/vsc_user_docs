@@ -2,7 +2,7 @@
 #PBS -l walltime=1:0:0
 #PBS -l nodes=1:ppn=4
 # check for more recent OpenFOAM modules with 'module avail OpenFOAM'
-module load OpenFOAM/5.0-20180108-foss-2018a
+module load OpenFOAM/6-intel-2018a
 source $FOAM_BASH
 # purposely not specifying a particular version to use most recent mympirun
 module load vsc-mympirun
