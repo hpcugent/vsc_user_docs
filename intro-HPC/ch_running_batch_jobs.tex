@@ -1088,6 +1088,10 @@ harm if you \emph{slightly} overestimate the maximum execution time.
 If you omit this option, the queue manager will not complain but use a
 default value (one hour on most clusters).
 
+If you want to run some final steps (for example to copy files back) before the walltime kills your main process,
+you have to kill the main command yourself before the walltime runs out and then copy the
+file back. See \autoref{sec:maximum-timelimit-timeout-jobscript} for how to do this.
+
 \begin{prompt}
 %\shellcmd{qsub -l mem=4gb}%
 \end{prompt}
@@ -1366,3 +1370,31 @@ You can also specify an alternate e-mail address with the \lstinline|-M| option:
 \end{prompt}
 
 will send an e-mail to john.smith@example.com when the job begins.
+
+\section{Running a job after another job}
+
+If you submit two jobs expecting that should be run one after another (for example because
+the first generates a file the second needs), there might be a problem as they might both be run at the same time.
+
+So the following example might go wrong:
+
+\begin{prompt}
+%\shellcmd{qsub job1.sh}%
+%\shellcmd{qsub job2.sh}%
+\end{prompt}
+
+You can make jobs that depend on other jobs. This can be useful for breaking up large jobs
+into smaller jobs that can be run in a pipeline. The following example will submit 2 jobs,
+but the second job (\lstinline|job2.sh|) will be held (\lstinline|H| status in \lstinline|qstat|)
+until the first job successfully completes. If the first job fails, the second will be cancelled.
+
+\begin{prompt}
+%\shellcmd{FIRST\_ID=\$(qsub job1.sh)}%
+%\shellcmd{qsub -W depend=afterok:\$FIRST\_ID job2.sh}%
+\end{prompt}
+
+\lstinline|afterok| means ``After OK'', or in other words, after the first job successfully completed.
+
+It's also possible to use \lstinline|afternotok| (``After not OK'') to run the second job
+only if the first job exited with errors. A third option is to use \lstinline|afterany| (``After any''),
+to run the second job after the first job (regardless of success or failure).

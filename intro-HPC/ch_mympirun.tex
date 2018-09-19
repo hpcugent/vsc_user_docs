@@ -1,0 +1,106 @@
+\chapter{Mympirun}
+\label{ch:mympirun}
+
+\lstinline|mympirun| is a tool to make it easier for users of HPC clusters to run
+MPI programs with good performance. We strongly recommend to use \lstinline|mympirun|
+instead of \lstinline|impirun|.
+
+In this chapter, we give a high-level overview. For a more detailed description of all
+options, see the
+\href{https://github.com/hpcugent/vsc-mympirun/blob/master/README.md}{vsc-mympirun README}.
+
+\section{Basic usage}
+\label{sec:myrun-basic-usage}
+
+Before using \lstinline|mympirun|, we first need to load its module:
+
+\begin{prompt}
+%\shellcmd{module load mympirun}%
+\end{prompt}
+
+As an exception, we don't specify a version here. The reason is that we want to ensure
+that the latest version of the \lstinline|mympirun| script is always used, since it may
+include important bug fixes or improvements.
+
+The most basic form of using \lstinline|mympirun| is \lstinline|mympirun [mympirun options] your_program [your_program options]|.
+
+For example, to run a program named \lstinline|example| and give it a single argument (\lstinline|5|),
+we can run it with \lstinline|mympirun example 5|.
+
+
+\section{Controlling number of processes}
+
+There are four options you can choose from to control the number of processes
+\lstinline|mympirun| will start. In the following example, the program \lstinline|mpi_hello|
+prints a single line: \lstinline|Hello world from processor <node> ...| (the sourcecode of
+\lstinline|mpi_hello| is \href{https://github.com/hpcugent/vsc-mympirun/blob/master/testscripts/mpi_helloworld.c}{available in the vsc-mympirun repository}).
+
+By default, \lstinline|mympirun| starts one process per \emph{core} on every node you assigned.
+So if you assigned 2 nodes with 16 cores each, \lstinline|mympirun| will
+start $2\cdot16=32$ test processes in total.
+
+\subsection{\texttt{-{}-hybrid}/\texttt{-h}}
+
+This is the most commonly used option for controlling the number of processing.
+
+The \lstinline|--hybrid| option requires a positive number. This number specifies
+the number of processes started on each available physical \emph{node}. It will ignore
+the number of available \emph{cores} per node.
+
+\begin{prompt}
+%\shellcmd{echo \$PBS\_NUM\_NODES}%
+2
+%\shellcmd{mympirun --hybrid 2 ./mpi\_hello}%
+Hello world from processor node2157.delcatty.os, rank 1 out of 4 processors
+Hello world from processor node2158.delcatty.os, rank 3 out of 4 processors
+Hello world from processor node2158.delcatty.os, rank 2 out of 4 processors
+Hello world from processor node2157.delcatty.os, rank 0 out of 4 processors
+\end{prompt}
+
+\subsection{Other options}
+
+There's also \lstinline|--universe|, which sets the exact amount of processes started by \lstinline|mympirun|;
+\lstinline|--double|, which uses double the amount of processes it normally would;
+and \lstinline|--multi| that does the same as \lstinline|--double|, but takes a multiplier
+(instead of the implied factor 2 with \lstinline|--double|).
+
+See \href{https://github.com/hpcugent/vsc-mympirun/blob/master/README.md}{vsc-mympirun README}
+for a detailed explanation of these options.
+
+\section{Dry run}
+
+You can do a so-called ``dry run'', which doesn't have any side-effects, but just
+prints the command that \lstinline|mympirun| would execute. You enable this with the \lstinline|--dry-run| flag:
+
+\begin{prompt}
+%\shellcmd{mympirun --dry-run ./mpi\_hello}%
+mpirun ... -genv I_MPI_FABRICS shm:dapl ... -np 16 ... ./mpi_hello
+\end{prompt}
+
+\section{FAQ}
+
+\subsection{\texttt{mympirun} seems to ignore its arguments}
+
+For example, we have a simple script (\lstinline|./hello.sh|):
+
+\begin{code}{bash}
+#!/bin/bash
+echo "hello world"
+\end{code}
+
+And we run it like \lstinline|mympirun ./hello.sh --output output.txt|.
+
+To our surprise, this doesn't output to the file \lstinline|output.txt|, but to standard out!
+This is because \lstinline|mympirun| expects the program name and the arguments of the program to
+be its last arguments. Here, the \lstinline|--output output.txt| arguments are passed to
+\lstinline|./hello.sh| instead of to \lstinline|mympirun|. The correct way to run it is:
+
+\begin{prompt}
+%\shellcmd{mympirun --output output.txt ./hello.sh}%
+\end{prompt}
+
+
+
+\subsection{I have other problems/questions}
+
+Please don't hesitate to contact \hpcinfo.
