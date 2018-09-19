@@ -422,10 +422,11 @@ vary depending on that absolute amount of concurrency available.
 \begin{tip}
 mpirun does not always do the optimal core pinning and requires a few extra
 arguments to be the most efficient possible on a given system. At Ghent we have
-a wrapper around mpirun called ``\emph{mympirun}``. run ``\emph{mympirun --help}``
-for more information on how this works.
-You will generally just start an mpi program on the \hpcInfra by using mympirun
-instead of ``\emph{mpirun -n <nr of cores> <--other settings> <--other optimisations>}``
+a wrapper around \lstinline|mpirun| called \lstinline|mympirun|. See \autoref{ch:mympirun} for
+more information.
+
+You will generally just start an MPI program on the \hpcInfra by using \lstinline|mympirun|
+instead of \lstinline|mpirun -n <nr of cores> <--other settings> <--other optimisations>|
 \end{tip}
 \fi
 
