@@ -320,23 +320,7 @@ he exceeds the soft quota.
 
 
 \ifgent
-To see your current quota usage you can run the ``\emph{show\_quota}``` script
-on the \hpcInfra.
-
-\begin{prompt}
-bash-4.1\$ show_quota
-User quota:
-VSC_HOME: used 1.08 GiB (37%\%%) quota 2.85 GiB (3 GiB hard limit)
-VSC_DATA_VO: used 8.16 MiB (0%\%%) quota 1.62 TiB (1.71 TiB hard limit)
-VSC_DATA: used 0 B (0%\%%) quota 23.8 GiB (25 GiB hard limit)
-VSC_SCRATCH_GULPIN_VO: used 41.3 GiB (1%\%%) quota 2.32 TiB (2.44 TiB hard limit)
-VSC_SCRATCH_GULPIN: used 7.78 MiB (0%\%%) quota 23.8 GiB (25 GiB hard limit)
-VSC_SCRATCH_DELCATTY_VO: used 340 GiB (7%\%%) quota 4.52 TiB (4.76 TiB hard limit)
-VSC_SCRATCH_DELCATTY: used 11.4 GiB (47%\%%) quota 23.8 GiB (25 GiB hard limit)
-\end{prompt}
-
-You can also visit the account page (\url{https://account.vscentrum.be}
-to see a list of your current quota and
+To see your a list of your current quota, visit \href{https://account.vscentrum.be}{the account page}.
 VO moderators can see a list of VO quota usage per member of their VO.
 \else
 The amount of data (called ``\emph{Block Limits}'') that is currently in use
@@ -388,22 +372,6 @@ However, it is an essential feature of a shared infrastructure. Quota ensure tha
 accidentally take a cluster down (and break other user's jobs) by filling up the available disk space.
 And they help to guarantee a fair use of all available resources for all users. Quota also help to ensure
 that each folder is used for its intended purpose.
-
-%% I suggest to delete the following section as it contains nothing new.
-%\subsection{Local data}
-
-% One could also opt to use some local disk-space on the compute node itself.
-
-% The \strong{advantage} is that this local disk will perform the best for disk-I/O intensive applications.  The \strong{drawback} is that those disks are limited in size (e.g., approx.\ 100 GB depending on the node) and that these disks are not visible from outside.
-
-% But it is for sure useful when you are working with temporary output data in a sequential flow of an application.
-
-% You'll best use the ``/tmp'' directory, which can be accessed via the \$VSC\_SCRATCH\_NODE environment variable.
-
-% \begin{prompt}
-% %\shellcmd{echo \$VSC\_SCRATCH\_NODE}%
-% /tmp
-% \end{prompt}
 
 \section{Writing Output files}
 
