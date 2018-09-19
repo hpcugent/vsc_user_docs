@@ -322,7 +322,9 @@ he exceeds the soft quota.
 \ifgent
 To see your a list of your current quota, visit \href{https://account.vscentrum.be}{the account page}.
 VO moderators can see a list of VO quota usage per member of their VO.
-\else
+\fi
+
+\ifantwerpen
 The amount of data (called ``\emph{Block Limits}'') that is currently in use
 by the user (``\emph{KB}''), the soft limits (``\emph{quota}'') and the
 hard limits (``\emph{limit''}) for all 3 file-systems are always displayed
@@ -352,7 +354,12 @@ Your quota is:
 \end{prompt}
 
 Make sure to regularly check these numbers at log-in!
-\fi  % end \ifgent \else
+\fi
+
+\ifleuven
+You can use \lstinline|quota -s| to see your quota for \lstinline|$VSC_HOME| and \lstinline|$VSC_DATA|.
+To see your quota for \lstinline|$VSC_SCRATCH|, you can use \lstinline|mmlsquota vol_ddn2:leuven_scratch --block-size auto|.
+\fi
 
 The rules are:
 \begin{enumerate}
