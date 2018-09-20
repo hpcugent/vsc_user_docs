@@ -2,6 +2,7 @@
 import sys
 import re
 
+# Whitelisted '\the' because it's a TeX primitive that doesn't accept {}
 whitelist = {'the'}
 
 in_prompt = False

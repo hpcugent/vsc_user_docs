@@ -34,7 +34,7 @@ This is where EasyBuild can find software sources:
 \end{prompt}
 
 \begin{itemize}
-    \item \lstinline|$VSC_DATA/easybuild/sources| is where EasyBuild will (try to) automatically
+    \item the first directory \lstinline|$VSC_DATA/easybuild/sources| is where EasyBuild will (try to) automatically
         download sources if they're not available yet
     \item \lstinline|/apps/gent/source| is the central ``cache'' for already downloaded sources,
         and will be considered by EasyBuild before downloading anything
@@ -101,7 +101,6 @@ combined with a particular toolchain version. Use the \lstinline|--search|
 CFGS1=/apps/gent/CO7/sandybridge/software/EasyBuild/3.6.2/lib/python2.7/site-packages/easybuild_easyconfigs-3.6.2-py2.7.egg/easybuild/easyconfigs
  * $CFGS1/e/example/example-1.2.1-foss-%\the\year{}%a.eb
  * $CFGS1/e/example/example-1.2.3-foss-%\the\year{}%b.eb
- * $CFGS1/e/example/example-1.2.4_libexample.patch
  * $CFGS1/e/example/example-1.2.5-intel-%\the\year{}%a.eb
 \end{prompt}
 
