@@ -13,7 +13,7 @@ binary_x86_64-linux 1
 collection-basic 1
 collection-bibtexextra 0
 collection-binextra 1
-collection-context 1
+collection-context 0
 collection-fontsextra 0
 collection-fontsrecommended 1
 collection-fontutils 1
