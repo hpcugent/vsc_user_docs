@@ -3,6 +3,8 @@
 
 SCOOP (Scalable COncurrent Operations in Python) is a distributed task module allowing
 concurrent parallel programming on various environments, from heterogeneous grids to supercomputers.
+It is an alternative to the worker framwork, see \autoref{ch:multi-job-submission}.
+
 
 It can used for projects that require lots of (small) tasks to be executed.
 
@@ -23,8 +25,8 @@ because newer versions might include important bug fixes or performance improvem
 A Python worker script implements both the main program, and (typically) the small task
 function that needs to be executed a large amount of times.
 
-Using the functionality provided by the scoop module, for example the \lstinline|futures.map|
-function (see also \url{https://scoop.readthedocs.org/}).
+This is done using the functionality provided by the \lstinline|scoop| Python module,
+for example \lstinline|futures.map| (see also \url{https://scoop.readthedocs.org/}).
 
 First, the necessary imports need to be specified:
 
@@ -42,7 +44,19 @@ def square(x):
 
 The main function then applies this simple function to a range of values specified as an argument.
 Note that it should be guarded by a conditional (\lstinline|if __name__ == "=__main__"|) to make sure it is only executed
-when executing the script (and not when importing from it).
+when executing the script (and not when importing from it):
+
+\begin{code}{Python}
+if __name__ == "__main__":
+
+    # obtain n from first command line argument
+    n = int(sys.argv[1])
+
+    # compute the square of the first n numbers, in parallel using SCOOP functionality
+    squares = futures.map(square, range(n))  # note: returns an iterator
+
+    print("First %d squares: %s" % (n, list(squares)))
+\end{code}
 
 \section{Executing the program}
 
@@ -69,7 +83,9 @@ in a multi-node job (i.e. 2 nodes with 8 cores each):
 \examplecode{bash}{squares_jobscript.pbs}
 
 Note that you don't need to specify how many workers need to be used; the \lstinline|myscoop|
-command figures this out by itself. In this example, 16 workers (one per available core) will be
+command figures this out by itself. This is because \lstinline|myscoop| is a wrapper around
+\lstinline|mympirun| (see \autoref{ch:mympirun}).
+In this example, 16 workers (one per available core) will be
 execute the 10000 tasks one by one until all squares are computed.
 
 To run the same command on the local system (e.g. a login node for testing), add
