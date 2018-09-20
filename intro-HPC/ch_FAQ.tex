@@ -7,7 +7,10 @@
 See the explanation about how jobs get prioritized in \autoref{subsec:priority}.
 \else
 \ifbrussel
-See the explanation about how jobs get prioritized in \autoref{subsec:priority}.
+In practice it's impossible to predict when your job(s) will start,
+since most currently running jobs will finish before their requested walltime
+expires, and new jobs by may be submitted by other users that are assigned a higher
+priority than your job(s).
 \else
 You can use the \lstinline|showstart| command. For more information, see \autoref{sec:monitoring-and-managing-your-jobs}.
 \fi % BRUSSEL
