@@ -35,8 +35,10 @@ if __name__ == '__main__':
             nr_batches = int(sys.argv[1])
             batch_size = int(sys.argv[2])
         except ValueError as ex:
-            print('Expects two integers')
-            print(ex)
+            sys.stderr.write("ERROR: Two integers expected as arguments: %s\n" % ex)
             sys.exit(1)
+    elif len(sys.argv) != 1:
+        sys.stderr.write("ERROR: Expects either zero or two integers as arguments.\n")
+        sys.exit(1)
 
     print("PI=%f (in nr_batches=%d,batch_size=%d)" % (calcPi(nr_batches, batch_size), nr_batches, batch_size))
