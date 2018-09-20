@@ -29,10 +29,14 @@ if __name__ == '__main__':
     nr_batches = 3000
     batch_size = 5000
 
-    try:
-        nr_batches = int(sys.argv[1])
-        batch_size = int(sys.argv[2])
-    except:
-        pass
+    # Program name and two arguments
+    if len(sys.argv) == 3:
+        try:
+            nr_batches = int(sys.argv[1])
+            batch_size = int(sys.argv[2])
+        except ValueError as ex:
+            print('Expects two integers')
+            print(ex)
+            sys.exit(1)
 
-    print "PI=%f (in nr_batches=%d,batch_size=%d)" % (calcPi(nr_batches, batch_size), nr_batches, batch_size)
+    print("PI=%f (in nr_batches=%d,batch_size=%d)" % (calcPi(nr_batches, batch_size), nr_batches, batch_size))
