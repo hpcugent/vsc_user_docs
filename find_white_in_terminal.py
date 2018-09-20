@@ -2,6 +2,8 @@
 import sys
 import re
 
+# Whitelisted '\the' because it's a TeX primitive that doesn't accept {}
+whitelist = {'the'}
 
 in_prompt = False
 
@@ -25,7 +27,7 @@ with open(tex_file) as infile:
                 for latex_command in re.finditer(r'\\(\w+)(?![\w{])', match):
                     # Check if we found a latex command not ending in {}
                     # Allow, since \_ doesn't allow arguments
-                    if not latex_command.group(1).startswith('_'):
+                    if not latex_command.group(1).startswith('_') and latex_command.group(1) not in whitelist:
                         print("%s line %d: %s" % (tex_file, lineno + 1, latex_command.group(1)))
         if '\\end{prompt}' in line:
             in_prompt = False

@@ -462,6 +462,36 @@ something went wrong.  So an example use case:
   fi
 \end{code}
 
+\section{\texttt{.bashrc} login script}
+\hypertarget{sec:bashrc-login-script}{}
+
+If you have certain commands executed every time you log in (which includes every
+time a job starts), you can add them to your \lstinline|$HOME/.bashrc| file. This file
+is a shell script that gets executed every time you log in.
+
+Examples include:
+
+\begin{itemize}
+    \item modifying your \lstinline|$PS1| (to tweak your shell prompt)
+    \item printing information about the current/jobs environment (echo'ing environment variables, etc.)
+    \item selecting a specific cluster to run on with \lstinline|module swap cluster/...|
+
+
+\end{itemize}
+
+Some recommendations:
+
+\begin{itemize}
+    \item Avoid using \lstinline|module load| statements in your \lstinline|$HOME/.bashrc| file
+    \item Don't directly edit your \lstinline|.bashrc| file: if there's an error in your
+        \lstinline|.bashrc| file, you might not be able to log in again. In order to prevent
+        that, use another file to test your changes, then copy them over when you tested the
+        script.
+
+\end{itemize}
+
+
+
 \section{Scripting for the cluster}
 
 When writing scripts to be submitted on the \gls{cluster} there are some tricks you need
