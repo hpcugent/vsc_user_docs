@@ -4,6 +4,8 @@ set -e -u
 
 install_texlive()
 {
+    rm -rf $CACHEDIR
+    mkdir -p $CACHEDIR
     cd /tmp
     # Obtain TeX Live
     wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
@@ -18,14 +20,15 @@ install_texlive()
 
 # See if there is a cached version of TL available
 export PATH=$CACHEDIR/.texlive/bin/x86_64-linux:$PATH
-if ! command -v pdflatex > /dev/null; then
+
+if ! command -v pdflatex > /dev/null || ! command -v latexmk > /dev/null; then
     echo "First install"
     install_texlive
+elif ! (( $RANDOM % 100 )); then
+    echo "Throwing away cache and updating..."
+    install_texlive
 else
-    # Force a cache update once every 100 builds (on average)
-    if ! (( $RANDOM % 100 )); then
-        echo "Throwing away cache and updating..."
-        rm -rf $CACHEDIR
-        install_texlive
-    fi
+    echo "Already installed"
+    type -a pdflatex
+    type -a latexmk
 fi
