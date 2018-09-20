@@ -21,14 +21,4 @@ install_texlive()
 # See if there is a cached version of TL available
 export PATH=$CACHEDIR/.texlive/bin/x86_64-linux:$PATH
 
-if ! command -v pdflatex > /dev/null || ! command -v latexmk > /dev/null; then
-    echo "First install"
-    install_texlive
-elif ! (( $RANDOM % 100 )); then
-    echo "Throwing away cache and updating..."
-    install_texlive
-else
-    echo "Already installed"
-    type -a pdflatex
-    type -a latexmk
-fi
+install_texlive
