@@ -120,13 +120,13 @@ or using a different compiler toolchain, use the corresponding \lstinline|--try-
 To try to install \lstinline|example v1.2.6|, based on the easyconfig file for \lstinline|example v1.2.5|:
 
 \begin{prompt}
-%\shellcmd{eb example-1.2.5-intel-%\the\year{}%a.eb -{}-try-software-version=1.2.6}%
+%\shellcmd{eb example-1.2.5-intel-\the\year{}a.eb -{}-try-software-version=1.2.6}%
 \end{prompt}
 
 To try to install example v1.2.5 with a different compiler toolchain:
 
 \begin{prompt}
-%\shellcmd{eb example-1.2.5-intel-%\the\year{}%a.eb -{}-robot -{}-try-toolchain=intel,\the\year{}b}%
+%\shellcmd{eb example-1.2.5-intel-\the\year{}a.eb -{}-robot -{}-try-toolchain=intel,\the\year{}b}%
 \end{prompt}
 
 \subsection{Install other software}
@@ -147,4 +147,5 @@ to make them accessible for loading:
 It makes sense to put this \lstinline|module use| command and all \lstinline|export|
 commands in your \lstinline|.bashrc| login script. That way you don't have to type
 these commands every time you want to use EasyBuild or you want to load modules generated
-with EasyBuild.
+with EasyBuild. See also
+\href{\LinuxManualURL#sec:bashrc-login-script}{the section on \texttt{.bashrc} in the ``Beyond the basics'' chapter of the intro to Linux}.
