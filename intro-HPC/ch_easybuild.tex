@@ -6,7 +6,7 @@
 You can use EasyBuild to build and install supported software in your own VSC account,
 rather than requesting a central installation by the HPC support team.
 
-EasyBuild is the software build and installation framework that was created by the HPC-UGent
+EasyBuild (\url{https://easybuilders.github.io/easybuild}) is the software build and installation framework that was created by the HPC-UGent
 team, and has recently been picked up by HPC sites around the world. It allows you to manage
 (scientific) software on High Performance Computing (HPC) systems in an efficient way.
 
@@ -15,11 +15,11 @@ team, and has recently been picked up by HPC sites around the world. It allows y
 For general software installation requests, please see \autoref{sec:software-installation}. However,
 there might be reasons to install the software yourself:
 
-\begin{enumerate}
+\begin{itemize}
     \item applying custom patches to the software that only you or your group are using
     \item evaluating new software versions prior to requesting a central software installation
-    \item installing (very) old software versions that are no longer eligible for central installation (on new systems)
-\end{enumerate}
+    \item installing (very) old software versions that are no longer eligible for central installation (on new clusters)
+\end{itemize}
 
 \section{Configuring EasyBuild}
 
@@ -30,8 +30,18 @@ Before you use EasyBuild, you need to configure it:
 This is where EasyBuild can find software sources:
 
 \begin{prompt}
-%\shellcmd{export EASYBUILD\_SOURCEPATH=/apps/gent/source}%
+%\shellcmd{export EASYBUILD\_SOURCEPATH=\$VSC\_DATA/easybuild/sources:/apps/gent/source}%
 \end{prompt}
+
+\begin{itemize}
+    \item \lstinline|$VSC_DATA/easybuild/sources| is where EasyBuild will (try to) automatically
+        download sources if they're not available yet
+    \item \lstinline|/apps/gent/source| is the central ``cache'' for already downloaded sources,
+        and will be considered by EasyBuild before downloading anything
+\end{itemize}
+
+
+
 
 \subsection{Build directory}
 
@@ -58,13 +68,13 @@ For example, to let it use \lstinline|$VSC_DATA/easybuild|, use:
 %\shellcmd{export}% EASYBUILD_INSTALLPATH=$VSC_DATA/easybuild/$VSC_OS_LOCAL/$VSC_ARCH_LOCAL$VSC_ARCH_SUFFIX
 \end{prompt}
 
-Using the \lstinline|$VSC_ARCH| and \lstinline|$VSC_ARCH_SUFFIX| environment variables
-ensures that your install software to a location that is specific to the cluster you're
+Using the \lstinline|$VSC_OS_LOCAL|, \lstinline|$VSC_ARCH| and \lstinline|$VSC_ARCH_SUFFIX| environment variables
+ensures that your install software to a location that is specific to the cluster you are
 building for.
 
 Make sure you \strong{do not build software on the login nodes}, since the loaded \lstinline|cluster|
 module determines the location of the installed software. Software built on the login
-nodes may not work on the cluster you want to use the software on.
+nodes may not work on the cluster you want to use the software on (see also \autoref{sec:running-software-incompatible-with-host}).
 
 To share custom software installations with members of your VO, replace \lstinline|$VSC_DATA|
 with \lstinline|$VSC_DATA_VO| in the example above.
@@ -72,8 +82,8 @@ with \lstinline|$VSC_DATA_VO| in the example above.
 \section{Using EasyBuild}
 
 Before using EasyBuild, you first need to load the \lstinline|EasyBuild| module. We don't specify
-a version here (this is an exception, for other modules we would) because newer versions
-might include important bugfixes.
+a version here (this is an exception, for most other modules you should, see \autoref{subsec:explicit-version-numbers}) because newer versions
+might include important bug fixes.
 
 \begin{prompt}
 module load EasyBuild
@@ -87,23 +97,19 @@ combined with a particular toolchain version. Use the \lstinline|--search|
 (build recipes, see \url{http://easybuild.readthedocs.org/en/latest/Concepts_and_Terminology.html#easyconfig-files}) are available:
 
 \begin{prompt}
-%\shellcmd{eb -S OpenFOAM-2.2}%
+%\shellcmd{eb -S example-1.2}%
 CFGS1=/apps/gent/CO7/sandybridge/software/EasyBuild/3.6.2/lib/python2.7/site-packages/easybuild_easyconfigs-3.6.2-py2.7.egg/easybuild/easyconfigs
- * $CFGS1/o/OpenFOAM/OpenFOAM-2.2.0-goolf-1.4.10.eb
- * $CFGS1/o/OpenFOAM/OpenFOAM-2.2.0-ictce-5.3.0.eb
- * $CFGS1/o/OpenFOAM/OpenFOAM-2.2.0_libreadline.patch
- * $CFGS1/o/OpenFOAM/OpenFOAM-2.2.2-intel-2015a.eb
- * $CFGS1/o/OpenFOAM/OpenFOAM-2.2.2-intel-2016a.eb
- * $CFGS1/o/OpenFOAM/OpenFOAM-2.2.2-intel-2017a.eb
- * $CFGS1/o/OpenFOAM/cleanup-OpenFOAM-2.2.0.patch
- * $CFGS1/o/OpenFOAM/cleanup-OpenFOAM-2.2.2.patch
+ * $CFGS1/e/example/example-1.2.1-foss-%\the\year{}%a.eb
+ * $CFGS1/e/example/example-1.2.3-foss-%\the\year{}%b.eb
+ * $CFGS1/e/example/example-1.2.4_libexample.patch
+ * $CFGS1/e/example/example-1.2.5-intel-%\the\year{}%a.eb
 \end{prompt}
 
 For readily available easyconfigs, just specify the name of the easyconfig file to build
 and install the corresponding software package:
 
 \begin{prompt}
-%\shellcmd{eb OpenFOAM-2.2.2-intel-2017a.eb --robot}%
+%\shellcmd{eb example-1.2.1-foss-\the\year{}a.eb -{}-robot}%
 \end{prompt}
 
 \subsection{Installing variants on supported software}
@@ -111,23 +117,23 @@ and install the corresponding software package:
 To install small variants on supported software, e.g. a different software version,
 or using a different compiler toolchain, use the corresponding \lstinline|--try-X| options:
 
-To try to install \lstinliline|GCC v4.9.2|, based on the easyconfig file for \lstinline|GCC v4.9.1|:
+To try to install \lstinline|example v1.2.6|, based on the easyconfig file for \lstinline|example v1.2.5|:
 
 \begin{prompt}
-%\shellcmd{eb GCC-4.9.1.eb --try-software-version=4.9.2}%
+%\shellcmd{eb example-1.2.5-intel-%\the\year{}%a.eb -{}-try-software-version=1.2.6}%
 \end{prompt}
 
-To try to install OpenFOAM v2.2.2 with a different compiler toolchain:
+To try to install example v1.2.5 with a different compiler toolchain:
 
 \begin{prompt}
-%\shellcmd{eb OpenFOAM-2.2.2-intel-2015a.eb --robot --try-toolchain=foss,2015a}%
+%\shellcmd{eb example-1.2.5-intel-%\the\year{}%a.eb -{}-robot -{}-try-toolchain=intel,\the\year{}b}%
 \end{prompt}
 
 \subsection{Install other software}
 
 To install other, not yet supported, software, you will need to provide the required
 easyconfig files yourself. See \url{https://easybuild.readthedocs.org/en/latest/Writing_easyconfig_files.html}
-for more information
+for more information.
 
 \section{Using the installed modules}
 
@@ -135,5 +141,10 @@ To use the modules you installed with EasyBuild, extend \lstinline|$MODULEPATH|
 to make them accessible for loading:
 
 \begin{prompt}
-module use $EASYBUILD_INSTALLPATH/modules/all
+%\shellcmd{module use \$EASYBUILD\_INSTALLPATH/modules/all}%
 \end{prompt}
+
+It makes sense to put this \lstinline|module use| command and all \lstinline|export|
+commands in your \lstinline|.bashrc| login script. That way you don't have to type
+these commands every time you want to use EasyBuild or you want to load modules generated
+with EasyBuild.
