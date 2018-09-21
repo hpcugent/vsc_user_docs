@@ -41,11 +41,13 @@ collection-latex 1
 collection-latexextra 1
 collection-latexrecommended 1
 collection-luatex 0
-collection-mathscience 1
+collection-mathscience 0
 collection-metapost 0
 collection-music 0
 collection-pictures 0
 collection-pstricks 0
+# For tracklang
+collection-plaingeneric 1
 collection-publishers 0
 collection-texworks 0
 collection-xetex 0
