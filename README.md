@@ -43,3 +43,7 @@ on Windows:
 
 3. Open `intro-Linux/intro-Linux.tex` in TeXworks (MiKTeX' editor) and press the green "play" button. This won't actually succesfully compile, but will prompt to install all the packages we need. Click "Yes" for all packages.
 4. To compile your document, double-click `compile.bat` and fill in your build details. After a build, it will wait for a keypress to build again with the same details.
+
+Editing
+=======
+[Kile](https://www.kde.org/applications/office/kile/) is a really good application that supports live editing, wizards to create LaTeX structures, ... It runs on Linux, Mac and Windows.
