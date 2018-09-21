@@ -41,7 +41,7 @@ collection-latex 1
 collection-latexextra 1
 collection-latexrecommended 1
 collection-luatex 0
-collection-mathscience 0
+collection-mathscience 1
 collection-metapost 0
 collection-music 0
 collection-pictures 0
