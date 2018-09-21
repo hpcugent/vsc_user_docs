@@ -50,7 +50,7 @@ however not be used directly, since they may not be compatible with the login no
 
 \subsection{Standard HOD configuration}
 
-The hod module will also put a basic configuration in place for HOD, by defining a couple of
+The \lstinline|hod| module will also put a basic configuration in place for HOD, by defining a couple of
 \lstinline|$HOD_*| environment variables:
 
 \begin{prompt}
@@ -65,7 +65,7 @@ HOD_CREATE_WORKDIR=$VSC_SCRATCH/hod
 By defining these environment variables, we avoid that you have to specify \lstinline|--hod-module|
 and \lstinline|--workdir| when using \lstinline|hod batch| or \lstinline|hod create|, since they are strictly required.
 
-If you which to use a different parent working directory for HOD, it suffices to
+If you want to use a different parent working directory for HOD, it suffices to
 either redefine \lstinline|$HOD_BATCH_WORKDIR| and \lstinline|$HOD_CREATE_WORKDIR|,
 or to specify \lstinline|--workdir| (which will override the corresponding environment variable).
 
@@ -116,5 +116,5 @@ If you have any questions, or are experiencing problems using HOD, you have a co
     \item Subscribe to the HOD mailing list via \url{https://lists.ugent.be/wws/info/hod},
         and contact the HOD users and developers at hod@lists.ugent.be.
     \item Contact the \hpcTeam via \hpcinfo
-    \item Open an issue in the \lstinline|hanythingondemand| GitHub repository, via \url{https://github.com/hpcugent/hanythingondemand/issues/190}.
+    \item Open an issue in the \lstinline|hanythingondemand| GitHub repository, via \url{https://github.com/hpcugent/hanythingondemand/issues}.
 \end{itemize}
