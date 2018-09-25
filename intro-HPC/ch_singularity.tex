@@ -87,7 +87,7 @@ Create a job script like:
 #PBS -l walltime=12:00:00
 
 
-irun $VSC_SCRATCH/singularity/CentOS7_EasyBuild.img ~/my_script.sh
+singularity exec $VSC_SCRATCH/singularity/CentOS7_EasyBuild.img ~/my_script.sh
 \end{code}
 
 Create an example \lstinline|myscript.sh|:
@@ -120,7 +120,7 @@ Copy testing image from \lstinline|/apps/gent/tutorials| to \lstinline|$VSC_SCRA
 #PBS -l walltime=12:00:00
 #
 
-irun $VSC_SCRATCH/Ubuntu14.04_tensorflow.img python ~/linear_regression.py
+singularity exec $VSC_SCRATCH/Ubuntu14.04_tensorflow.img python ~/linear_regression.py
 \end{code}
 
 You can download \lstinline|linear_regression.py| from
@@ -133,7 +133,7 @@ It is also possible to execute MPI jobs within a container, but the following re
 \begin{itemize}
     \item Mellanox IB libraries must be available from the container (install the \lstinline|infiniband-diags|, \lstinline|libmlx5-1| and \lstinline|libmlx4-1| OS packages)
     \item Use modules within the container (install the \lstinline|environment-modules| or \lstinline|lmod| package in your container)
-    \item Load the required module(s) before \lstinline|irun| execution.
+    \item Load the required module(s) before \lstinline|singularity| execution.
     \item Set \lstinline|C_INCLUDE_PATH| variable in your container if it is required during
         compilation time (\lstinline|export C_INCLUDE_PATH=/usr/include/x86_64-linux-gnu/:$C_INCLUDE_PATH| for Debian flavours)
 \end{itemize}
@@ -149,7 +149,7 @@ For example to compile an
 
 \begin{prompt}
 %\shellcmd{module load intel}%
-%\shellcmd{irun \$VSC\_SCRATCH/singularity/Debian8\_UGentMPI.img}%
+%\shellcmd{singularity shell \$VSC\_SCRATCH/singularity/Debian8\_UGentMPI.img}%
 %\shellcmd{export LANG=C}%
 %\shellcmd{export C\_INCLUDE\_PATH=/usr/include/x86\_64-linux-gnu/:\$C\_INCLUDE\_PATH}%
 %\shellcmd{mpiicc ompi/examples/ring\_c.c -o ring\_debian}%
