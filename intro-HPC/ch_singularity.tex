@@ -10,7 +10,7 @@ scientific computing and the high-performance computing (HPC) world.
 Using Singularity containers, developers can work in reproducible environments of their choosing and design,
 and these complete environments can easily be copied and executed on other platforms.
 
-For more general information about the use of Singularity, please see the official documentation at \url{https://www.sylabs.io/guides/2.6/user-guide/index.html}.
+For more general information about the use of Singularity, please see the official documentation at \url{https://www.sylabs.io/docs/}.
 
 This documentation only covers aspects of using Singularity on the \hpcInfra infrastructure.
 
@@ -43,49 +43,6 @@ If these limitations are a problem for you, please let us know via \hpcinfo.
 All HPC-UGent shared filesystems will be readily available in a Singularity container,
 including the home, data and scratch filesystems, and they will be accessible via the
 familiar \lstinline|$VSC_HOME|, \lstinline|$VSC_DATA*| and \lstinline|$VSC_SCRATCH*| environment variables.
-
-\section{Usage of \texttt{irun}}
-
-To make the use of Singularity easier, a wrapper command named \lstinline|irun|
-is provided. It is strongly recommended to use \lstinline|irun| rather than using \lstinline|singularity| directly.
-
-\subsection{Running a command in a Singularity container using irun}
-
-To run a particular command in a specified Singularity container, just use \lstinline|irun| as follows:
-
-\begin{prompt}
-%\shellcmd{irun <image> <command>}%
-\end{prompt}
-
-In the background, this corresponds to \lstinline|singularity exec <image> <command>|,
-but extra care is taken that the environment is set up correctly (among other things).
-
-For example, to run the command \lstinline|cat /etc/debian_version| in a Singularity container
-created using the \lstinline|debian.img| image file:
-
-\begin{prompt}
-%\shellcmd{irun debian.img cat /etc/debian\_version}%
-vsc40000 belongs to gsingularity
-8.6
-\end{prompt}
-
-
-\subsection{Starting a shell session in a Singularity container using irun}
-
-To start a shell session in a Singularity container, simply run \lstinline|irun <image>|.
-For example:
-
-\begin{prompt}
-%\shellcmd{irun debian.img}%
-vsc40000 belongs to gsingularity
-Singularity: Invoking an interactive shell within container...
-
-{SINGULARITY} $
-\end{prompt}
-
-\lstinline|irun| will redefine \lstinline|$PS1| to include \lstinline|{SINGULARITY}|
-to try to make it clear the session is running in a Singularity container.
-This may get overwritten via your \lstinline|~/.bashrc| or by the container image itself, however.
 
 \section{Singularity Images}
 
