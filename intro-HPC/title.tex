@@ -1,21 +1,15 @@
- \begin{center}
+\begin{center}
 
-\includegraphics*[width=8truecm]{logo_vsc}
+\includegraphics*[width=12truecm]{logo_vsc_2}
 
-\vspace*{1.5\baselineskip}
+\vspace*{6\baselineskip}
 
 \Huge \strong{HPC Tutorial} \\
-\LARGE Last updated: DATEPLACEHOLDER
+\LARGE Last updated: September 25 2018
 
 \LARGE For \OS Users
 
-\vspace*{.75\baselineskip}
-\ifantwerpen
-\includegraphics*[width=7truecm]{logo_ua}
-\fi
-
-\vspace*{0.75\baselineskip}
-
+\vspace*{3\baselineskip}
 
 \normalsize\strong{Authors:}
 
@@ -47,7 +41,7 @@ Toon Willems\footnotemark[2]
 
 Acknowledgement: VSCentrum.be
 
-\vspace*{\baselineskip}
+\vfill
 
 \begin{tabular}{ >{\centering\arraybackslash}m{0.25\textwidth}  >{\centering\arraybackslash}m{0.05\textwidth}  >{\centering\arraybackslash}m{0.20\textwidth}  >{\centering\arraybackslash}m{0.2\textwidth}} \\
 \includegraphics*[width=0.2\textwidth, height=0.7in, keepaspectratio=true]{logo_auha} & \multicolumn{2}{ >{\centering\arraybackslash}m{.2\textwidth} }{\includegraphics*[width=0.2\textwidth, height=0.7in,, keepaspectratio=true]{logo_akuleuven}} & \includegraphics*[width=0.2\textwidth, height=0.7in,, keepaspectratio=true]{logo_auhl} \\
@@ -56,7 +50,7 @@ Acknowledgement: VSCentrum.be
 \end{center}
 
 
-\cleardoublepage
+%\cleardoublepage
 \pagestyle{plain}
 \strong{Audience:}
 
@@ -87,8 +81,9 @@ How to start background jobs?                                           & \stron
 How to start jobs with user interaction?                                & \strong{\ref{ch:running-interactive-jobs}} & \nameref{ch:running-interactive-jobs} \\ \hline
 Where do the input and output go? Where to collect my results?          & \strong{\ref{ch:running-jobs-with-input-output-data}} & \nameref{ch:running-jobs-with-input-output-data} \\ \hline
 Can I speed up my program by exploring parallel programming techniques? & \strong{\ref{ch:multi-core-jobs-parallel-computing}} & \nameref{ch:multi-core-jobs-parallel-computing} \\ \hline
-Can I start many jobs at once?                                          & \strong{\ref{ch:multi-job-submission}} & \nameref{ch:multi-job-submission} \\ \hline
+Troubleshooting & \strong{\ref{ch:troubleshooting}} & \nameref{ch:troubleshooting} \\ \hline
 What are the rules and priorities of jobs?                              & \strong{\ref{ch:hpc-policies}} & \nameref{ch:hpc-policies} \\ \hline
+FAQ & \strong{\ref{ch:faq}} & \nameref{ch:faq} \\ \hline
 \end{tabular}
 
 The \strong{Advanced Part} focuses on in-depth issues. The aim is to assist the
@@ -97,13 +92,38 @@ end-users in running their own software on the \hpc.
 \begin{tabular}{|p{\dimexpr 0.44\textwidth-2\tabcolsep}|>{\centering\arraybackslash}p{\dimexpr 0.12\textwidth-2\tabcolsep}|p{\dimexpr 0.44\textwidth-2\tabcolsep}|} \hline
 \multicolumn{3}{|c|}{\strong{Advanced Part}} \\ \hline
 \strong{Questions}                           & \strong{chapter} & \strong{title} \\ \hline
-Can I compile my software on the \hpc?       & \strong{\ref{ch:compiling-and-testing-your-software-on-the-hpc}}      & \nameref{ch:compiling-and-testing-your-software-on-the-hpc} \\ \hline
 What are the optimal Job Specifications?     & \strong{\ref{ch:fine-tuning-job-specifications}}      & \nameref{ch:fine-tuning-job-specifications} \\ \hline
-%How do I check my programs at runtime?       & \strong{\ref{ch:monitoring-cluster-utilization}}      & \nameref{ch:monitoring-cluster-utilization} \\ \hline
-%Can I stop my program and continue later on? & \strong{\ref{ch:checkpointing}}      & Checkpointing \\ \hline
-Do you have more examples for me?            & \strong{\ref{ch:program-examples}}      & \nameref{ch:program-examples} \\ \hline
-Any more advice?                             & \strong{\ref{ch:best-practices}}      & \nameref{ch:best-practices} \\ \hline
+Can I start many jobs at once?                                          & \strong{\ref{ch:multi-job-submission}} & \nameref{ch:multi-job-submission} \\ \hline
+Can I compile my software on the \hpc?       & \strong{\ref{ch:compiling-and-testing-your-software-on-the-hpc}}      & \nameref{ch:compiling-and-testing-your-software-on-the-hpc} %\\ \hline
+\ifthenelse{\boolean{gent} \OR \boolean{brussel}}{%
+\\ \hline
+Can I stop my program and continue later on? & \strong{\ref{ch:checkpointing}}     & \nameref{ch:checkpointing}
+}{} 
+\\ \hline
+Do you have more program examples for me?     & \strong{\ref{ch:program-examples}}  & \nameref{ch:program-examples} \\ \hline
+Do you have more job script examples for me? & \strong{\ref{ch:jobscript-examples}} & \nameref{ch:jobscript-examples} \\ \hline
+Any more advice?                             & \strong{\ref{ch:best-practices}}    & \nameref{ch:best-practices}  %\\ \hline
+\ifthenelse{\not \boolean{antwerpen}}{%
+\\ \hline
+Need a remote display?                       & \strong{\ref{ch:vnc}}               & \nameref{ch:vnc} 
+}{}
+\\ \hline
 \end{tabular}
+
+\ifgent
+The \strong{Software-specific Best Practices Part} focuses on specific programs.
+
+\begin{tabular}{|p{\dimexpr 0.44\textwidth-2\tabcolsep}|>{\centering\arraybackslash}p{\dimexpr 0.12\textwidth-2\tabcolsep}|p{\dimexpr 0.44\textwidth-2\tabcolsep}|} \hline
+\multicolumn{3}{|c|}{\strong{Software-specific Best Practices Part}} \\ \hline
+MATLAB & \strong{\ref{ch:matlab}} & \nameref{ch:matlab} \\ \hline
+OpenFOAM & \strong{\ref{ch:openfoam}} & \nameref{ch:openfoam} \\ \hline
+Mympirun & \strong{\ref{ch:mympirun}} & \nameref{ch:mympirun} \\ \hline
+Singularity & \strong{\ref{ch:singularity}} & \nameref{ch:singularity} \\ \hline
+SCOOP & \strong{\ref{ch:scoop}} & \nameref{ch:scoop} \\ \hline
+Easybuild & \strong{\ref{ch:easybuild}} & \nameref{ch:easybuild} \\ \hline
+HOD & \strong{\ref{ch:hod}} & \nameref{ch:hod} \\ \hline
+\end{tabular}
+\fi
 
 The \strong{Annexes} contains some useful reference guides.
 
