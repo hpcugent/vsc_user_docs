@@ -84,3 +84,9 @@ clean:
 		cd $(ROOT_DIR)/$$doc ; \
 		rm -f *.log *.aux *.fdb_latexmk *.listing *.fls *.toc *.out *.glg *.glo *.gls *.ist *.ind *.ilg *.idx shellcmds.sh; \
 	done ;
+
+mrproper: clean
+	@for doc in $(all_doc_os) $(all_doc_noos) ; do \
+		cd $(ROOT_DIR)/$$doc ; \
+		rm -f $$doc-*.pdf ; \
+	done ;

@@ -55,8 +55,6 @@
 
 \include{ch_multi_core_jobs}
 
-\include{ch_fine_tuning_job_specifications}
-
 \include{ch_troubleshooting}
 
 \inputsite{ch_hpc_policies}
@@ -69,6 +67,8 @@
 %
 %to assist the end-user in running their own software on the \hpc
 
+\include{ch_fine_tuning_job_specifications}
+
 \include{ch_multi_job_submission}
 
 \include{ch_compiling_your_software}
@@ -78,12 +78,10 @@
 
 
 % csub is only available to users in UGent & VUB clusters
-\ifgent
+\ifthenelse{\boolean{gent} \OR \boolean{brussel}}
+{
 \include{ch_checkpointing}
-\fi
-\ifbrussel
-\include{ch_checkpointing}
-\fi
+}{}
 
 \include{ch_program_examples}
 
@@ -91,7 +89,10 @@
 
 \include{ch_best_practices}
 
-\include{ch_VNC}
+% VNC setup in antwerpen is different: do not show it for antwerpen
+\ifthenelse{\NOT \boolean{antwerpen}}{%
+\include{ch_VNC}%
+}{}
 
 
 \ifgent
