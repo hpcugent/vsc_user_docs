@@ -95,6 +95,7 @@ end-users in running their own software on the \hpc.
 What are the optimal Job Specifications?     & \strong{\ref{ch:fine-tuning-job-specifications}}      & \nameref{ch:fine-tuning-job-specifications} \\ \hline
 Can I start many jobs at once?                                          & \strong{\ref{ch:multi-job-submission}} & \nameref{ch:multi-job-submission} \\ \hline
 Can I compile my software on the \hpc?       & \strong{\ref{ch:compiling-and-testing-your-software-on-the-hpc}}      & \nameref{ch:compiling-and-testing-your-software-on-the-hpc} %\\ \hline
+% checkpointing only available in gent and brussel, so only show it for these sites
 \ifthenelse{\boolean{gent} \OR \boolean{brussel}}{%
 \\ \hline
 Can I stop my program and continue later on? & \strong{\ref{ch:checkpointing}}     & \nameref{ch:checkpointing}
@@ -103,6 +104,7 @@ Can I stop my program and continue later on? & \strong{\ref{ch:checkpointing}}  
 Do you have more program examples for me?     & \strong{\ref{ch:program-examples}}  & \nameref{ch:program-examples} \\ \hline
 Do you have more job script examples for me? & \strong{\ref{ch:jobscript-examples}} & \nameref{ch:jobscript-examples} \\ \hline
 Any more advice?                             & \strong{\ref{ch:best-practices}}    & \nameref{ch:best-practices}  %\\ \hline
+% VNC setup in antwerpen is different: do not show it for antwerpen
 \ifthenelse{\not \boolean{antwerpen}}{%
 \\ \hline
 Need a remote display?                       & \strong{\ref{ch:vnc}}               & \nameref{ch:vnc} 
