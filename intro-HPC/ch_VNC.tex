@@ -2,8 +2,12 @@
 \label{ch:vnc}
 
 Virtual Network Computing is a graphical desktop sharing system that enables you
-to interact with graphical software running on HPC infrastructure from your own
+to interact with graphical software running on the HPC infrastructure from your own
 computer.
+
+\strong{Please carefully follow the instructions below, since the procedure to
+connect to a VNC server running on the HPC infrastructure is not trivial, due
+to security constraints.}
 
 \section{Starting a VNC server}
 \label{sec:start-vnc}
@@ -29,11 +33,11 @@ Log file is %\homedir{}%/.vnc/%\loginhost{}%:6.log
 
 \end{prompt}
 
-When prompted for a password, make sure to enter a secure password: if someone
-can guess your password, they will be able to do anything with your account you can.
+\strong{When prompted for a password, make sure to enter a secure password: if someone
+can guess your password, they will be able to do anything with your account you can!}
 
 Note down the details in bold: the hostname (in the example: \texttt{\loginhost{}})
-and the port number (in the example: \lstinline|6|).
+and the (partial) port number (in the example: \lstinline|6|).
 
 It's important to remember that VNC sessions are permanent. They survive network
 problems and (unintended) connection loss. This means you can logout and go home
@@ -79,77 +83,143 @@ Login nodes are rebooted from time to time. You can check that the VNC server is
 running in the same node by executing \lstinline|vncserver -list| (see also \autoref{sec:list-vnc}).
 If you get an empty list, it means that there is no VNC server running on the login node.
 
-\subsection{Determining the source port}
-\label{sec:source-port-vnc}
+\strong{To set up the SSH tunnel required to connect to your VNC server, you will need to port forward the VNC port
+to your workstation.}
 
-To set up the SSH tunnel required to connect to your VNC server, you will need to port forward the VNC port
-to your workstation. The \emph{source port} is the sum of \lstinline|5900|
-and the port number we noted down earlier (\lstinline|6|); in this case, that is \lstinline|5906|.
-The \emph{destination port} should be the same as the source port. The \emph{host} is \lstinline|localhost|,
-which means ``your own computer'': we set up an SSH tunnel that connects
+The \emph{host} is \lstinline|localhost|, which means ``your own computer'': we set up an SSH tunnel that connects
 the VNC port on the login node to the same port on your local computer.
 
-\subsection{Setting up the SSH tunnel}
+\subsection{Determining the source/destination port}
+\label{sec:source-port-vnc}
+
+The \emph{destination port} is the port on which the VNC server is running (on the login node),
+which is \strong{the sum of \lstinline|5900| and the partial port number} we noted down earlier (\lstinline|6|);
+in the running example, that is \lstinline|5906|.
+
+The \emph{source port} is the port you will be connecting to with your VNC client on your workstation.
+Although you can use any (free) port for this, we strongly recommend to use the \strong{same value as the destination port}.
+
+So, in our running example, both the source and destination ports are \lstinline|5906|.
+
+\subsection{Picking an intermediate port to connect to the right login node}
+\label{sec:intermediate-port-vnc}
+
+In general, you have no control over which login node you will be on when setting up the SSH tunnel from
+your workstation to \texttt{\loginnode{}} (see \autoref{sec:ssh-tunnel-vnc}).
+
+If the login node you end up on is a different one that the one where your VNC server is running
+(i.e., \texttt{\altloginhost} rather than \texttt{\loginhost} in our running example),
+you need to create a \strong{\emph{second} SSH tunnel} on the login node you are connected to,
+in order to "patch through" to the correct port on the login node where your VNC server is running.
+
+In the remainder of these instructions, we will assume that we are indeed connected to a different login node.
+Following these instructions should always work, even if you happen to be connected to the correct login node.
+
+To set up the second SSH tunnel, you need to \strong{pick an (unused) port on the login node you are connected to},
+which will be used as an \emph{intermediate} port.
+
+Now we have a chicken-egg situation: you need to pick a port before setting up the SSH tunnel from your workstation
+to \texttt{\loginhost}, but only after starting the SSH tunnel will you be able to determine whether the port you
+picked is actually free or not\ldots
+
+In practice, if you \strong{pick a \strong{random} number between $10000$ and $30000$}, you have a good chance that the
+port will not be used yet.
+
+We will proceed with $12345$ as intermediate port, but \strong{you should pick another value that
+other people are not likely to pick}. If you need some inspiration, run the following command on a Linux server
+(for example on a login node): \texttt{echo \$RANDOM} (but do not use a value lower than $1025$).
+
+\subsection{Setting up the SSH tunnel(s)}
 \label{sec:ssh-tunnel-vnc}
 
+\subsubsection{Setting up the first SSH tunnel from your workstation to \loginnode}
+
+First, we will set up the SSH tunnel from our workstation to \loginnode.
+
+Use the settings specified in the sections above:
+
+\begin{itemize}
+\item \emph{source port}: the port on which the VNC server is running (see \autoref{sec:source-port-vnc});
+\item \emph{destination host}: \texttt{\loginnode{}};
+\item \emph{destination port}: use the intermediate port you picked (see \autoref{sec:intermediate-port-vnc})
+\end{itemize}
+
 \ifwindows
-See \autoref{par:ssh-tunnel-windows}. Use the details specified here (host, destination port,
-source port).
+
+See \autoref{par:ssh-tunnel-windows} for detailed information on how to configure PuTTY to set up the SSH tunnel.
+
 \else
 
 Execute the following command to set up the SSH tunnel.\\
-\strong{Replace the port number (\lstinline|5906|) and the user ID (\texttt{\userid{}}) with your own!}
 
 \begin{prompt}
-%\shellcmd{ssh -L 5906:localhost:5906 \userid{}@\loginnode{}}%
+%\shellcmd{ssh -L 5906:localhost:12345 \userid{}@\loginnode{}}%
 \end{prompt}
+
+\strong{Replace the source port (\lstinline|5906|, destination port (\lstinline|12345|)
+and the user ID (\texttt{\userid{}}) with your own!}
+
 \fi
 
-\subsubsection{Connecting to the right login node}
+With this, we have forwarded port \lstinline|5906| on our workstation to port \lstinline|12345|
+on the login node we are connected to.
 
-After setting up the SSH tunnel, you need to make sure you are connected to the correct login node,
-i.e.\ the one on which the VNC server was started (see \autoref{sec:start-vnc}). In the example,
-the VNC server was started on \texttt{\loginhost}.
+\strong{Again, do \emph{not} use \lstinline|12345| as destination port,
+as this port will most likely be used by somebody else already;
+replace it with a port number you picked yourself, which is unlikely to be used already
+(see \autoref{sec:intermediate-port-vnc}).}
 
-In the session you created to set up the SSH tunnel, check which login node you are connected to
-using the \lstinline|hostname| command:
+\subsubsection{Checking whether the intermediate port is available}
+
+Before continuing, it's good to check whether the intermediate port that you have picked
+is actually still available (see \autoref{sec:intermediate-port-vnc}).
+
+You can check using the following command (\strong{do not forget to replace \lstinline|12345| the
+value you picked for your intermediate port}):
 
 \begin{prompt}
-%\shellcmd{hostname}%
-%\altloginhost{}%
+%\shellcmd{netstat -an | grep -i listen | grep tcp | grep 12345}%
+%\shellcmd{}%
 \end{prompt}
 
-Note that in the example above, we are not (yet) connected to the correct login node (i.e., \texttt{\loginhost}).
+If you see no matching lines, then the port you picked is still available, and you can continue.
 
-There are two possible scenarios:
-
-\begin{itemize}
-
-\item If you are connected to the right login node, your SSH tunnel is set up correctly to connect to your VNC server
-      (see \autoref{sec:vnc-client}).
-
-\item If you are connected to a different login node (e.g., \texttt{\altloginhost} rather than \texttt{\loginhost},
-      as shown above), you need to set up another SSH tunnel on the login node you are connected to,
-      to forward the port you will be connecting to from your workstation to the correct login node.
-
-      To set up an SSH tunnel to forward port \lstinline|5906| to \texttt{\loginhost}, run the following command
-      on the login node you are connected to:
+If you see one or more matching lines as shown below, \strong{you must disconnect the first SSH tunnel,
+pick a different intermedate port, and set up the first SSH tunnel again using the new value}.
 
 \begin{prompt}
-%\shellcmd{ssh -L 5906:localhost:5906 \loginhost{}}%
+%\shellcmd{netstat -an | grep -i listen | grep tcp | grep 12345}%
+%tcp        0      0 0.0.0.0:12345           0.0.0.0:*               LISTEN%
+%tcp6       0      0 :::12345                :::*                    LISTEN%
+%\shellcmd{}%
+\end{prompt}
+
+\subsubsection{Setting up the second SSH tunnel to the correct login node}
+
+In the session on the login node you created by setting up an SSH tunnel from your workstation
+to \texttt{\loginnode}, you now need to set up the second SSH tunnel to "patch through" to the login
+node where your VNC server is running (\texttt{\loginhost} in our running example, see \autoref{sec:start-vnc}).
+
+To do this, run the following command:
+
+\begin{prompt}
+%\shellcmd{ssh -L 12345:localhost:5906 \loginhost{}}%
 %\shellcmd{hostname}%
 %\loginhost{}%
 \end{prompt}
 
-      \strong{Do not forget to change the port (\lstinline|5906|) and hostname of the login node (\texttt{\loginhost})
-              in the command shown above, if needed.}
+With this, we are forwarding port \lstinline|12345| on the login node we are connected to (which is referred
+to as \lstinline|localhost|) through to port \lstinline|5906| on our target login node (\texttt{\loginhost}).
 
-      As shown above, you can check again using the \lstinline|hostname| command whether you are indeed connected
-      to the right login node.
-\end{itemize}
+Combined with the first SSH tunnel, port \lstinline|5906| on our workstation is now connected to
+port \lstinline|5906| on the login node where oru VNC server is running (via the intermediate port \lstinline|12345|
+on the login node we ended up one with the first SSH tunnel).
 
-Once you are connected to the right login node through an SSH tunnel, you can go ahead and connect to yout VNC server
-(see \autoref{sec:vnc-client}).
+\strong{Do not forget to change the intermediate port (\lstinline|12345|), destination port (\lstinline|5906|),
+and hostname of the login node (\texttt{\loginhost}) in the command shown above!}
+
+As shown above, you can check again using the \lstinline|hostname| command whether you are indeed connected
+to the right login node. If so, you can go ahead and connect to your VNC server (see \autoref{sec:vnc-client}).
 
 \subsection{Connecting using a VNC client}
 \label{sec:vnc-client}
@@ -174,9 +244,11 @@ it with the \lstinline|vncviewer| command.
 \fi
 
 Now start your VNC client and connect to \lstinline|localhost:5906|.
-\strong{Make sure you replace the port number \lstinline|5906| with your own.}
+\strong{Make sure you replace the port number \lstinline|5906| with your own destination port}
+(see \autoref{sec:source-port-vnc}).
 
-When promted for a password, use the password you used to setup the VNC server.
+When prompted for a password, use the password you used to setup the VNC server.
+
 When prompted for default or empty panel, choose default.
 
 If you have an empty panel, you can reset your settings with the following commands:
@@ -198,7 +270,7 @@ vncserver -kill :6
 \end{prompt}
 
 where \lstinline|6| is the port number we noted down earlier. If you forgot,
-you can get it with \lstinline|vncserver -list|.
+you can get it with \lstinline|vncserver -list| (see \autoref{sec:list-vnc}).
 
 \section{I forgot the password, what now?}
 
