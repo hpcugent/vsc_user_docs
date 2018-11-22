@@ -107,7 +107,7 @@ So, in our running example, both the source and destination ports are \lstinline
 In general, you have no control over which login node you will be on when setting up the SSH tunnel from
 your workstation to \texttt{\loginnode{}} (see \autoref{sec:ssh-tunnel-vnc}).
 
-If the login node you end up on is a different one that the one where your VNC server is running
+If the login node you end up on is a different one than the one where your VNC server is running
 (i.e., \texttt{\altloginhost} rather than \texttt{\loginhost} in our running example),
 you need to create a \strong{\emph{second} SSH tunnel} on the login node you are connected to,
 in order to "patch through" to the correct port on the login node where your VNC server is running.
@@ -140,13 +140,14 @@ Use the settings specified in the sections above:
 
 \begin{itemize}
 \item \emph{source port}: the port on which the VNC server is running (see \autoref{sec:source-port-vnc});
-\item \emph{destination host}: \texttt{\loginnode{}};
+\item \emph{destination host}: \lstinline|localhost|;
 \item \emph{destination port}: use the intermediate port you picked (see \autoref{sec:intermediate-port-vnc})
 \end{itemize}
 
 \ifwindows
 
-See \autoref{par:ssh-tunnel-windows} for detailed information on how to configure PuTTY to set up the SSH tunnel.
+See \autoref{par:ssh-tunnel-windows} for detailed information on how to configure PuTTY to set up the SSH tunnel,
+by entering the settings in the \menu{Source port} and \menu{Destination} fields in \menu[,]{Connection,SSH,Tunnels}.
 
 \else
 
