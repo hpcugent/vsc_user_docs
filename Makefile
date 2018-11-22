@@ -2,7 +2,7 @@ defines = ""
 
 all_os = linux mac windows
 all_site = antwerpen brussel gent leuven
-all_doc_os = intro-HPC intro-Linux
+all_doc_os = intro-HPC intro-Linux intro-OpenStack
 all_doc_noos = perfexpert
 
 
