@@ -1,0 +1,72 @@
+\chapter{Graphical applications with X2Go [recommended]}
+\label{ch:x2go}
+
+X2Go is a graphical desktop software for Linux similar to VNC but with extra advantages.
+It does not require to execute a server in the login node and it is possible to share a local folder with
+the HPC account.
+It can also be used to access Windows desktops. 
+
+
+\section{Install X2Go client}
+\label{sec:x2go-client}
+
+X2Go requires a private SSH key to connect to the login node.
+First login on the login node (see \autoref{sec:first-time-connection-to-the-hpc}),
+then start \lstinline|vncserver| with:
+
+
+
+\section{Connecting to the login node}
+
+The VNC server runs on a \strong{specific login node} (in the example above, on \texttt{\loginhost{}}).
+
+In order to access your VNC server, you will need to set up an SSH tunnel from your workstation
+to this login node.
+
+Login nodes are rebooted from time to time. You can check that the VNC server is still
+running in the same node by executing \lstinline|vncserver -list| .
+If you get an empty list, it means that there is no VNC server running on the login node.
+
+\strong{To set up the SSH tunnel required to connect to your VNC server, you will need to port forward the VNC port
+to your workstation.}
+
+The \emph{host} is \lstinline|localhost|, which means ``your own computer'': we set up an SSH tunnel that connects
+the VNC port on the login node to the same port on your local computer.
+
+
+
+\ifwindows
+
+You can download a free VNC client from \url{https://sourceforge.net/projects/turbovnc/files/}.
+You can download the latest version by clicking the top-most folder that has a version number
+in it that doesn't also have \lstinline|beta| in the version. Then download a file that looks like
+\lstinline|TurboVNC64-2.1.2.exe| (the version number can be different, but the \lstinline|64|
+should be in the filename) and execute it.
+\fi
+\ifmac
+You can download a free VNC client from \url{https://sourceforge.net/projects/turbovnc/files/}.
+You can download the latest version by clicking the top-most folder that has a version number
+in it that doesn't also have \lstinline|beta| in the version. Then download a file ending in
+\lstinline|TurboVNC64-2.1.2.dmg| (the version number can be different) and execute it.
+\fi
+\iflinux
+Download and setup a VNC client. A good choice is \lstinline|tigervnc|. You can start
+it with the \lstinline|vncviewer| command.
+\fi
+
+Now start your VNC client and connect to \lstinline|localhost:5906|.
+\strong{Make sure you replace the port number \lstinline|5906| with your own destination port}
+
+When prompted for a password, use the password you used to setup the VNC server.
+
+When prompted for default or empty panel, choose default.
+
+If you have an empty panel, you can reset your settings with the following commands:
+
+
+\section{Stopping the X2Go session}
+\label{sec:stop-x2go}
+
+The VNC server can be killed by running
+
+
