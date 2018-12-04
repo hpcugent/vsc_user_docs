@@ -92,15 +92,13 @@
 % VNC setup in antwerpen is different: do not show it for antwerpen
 \ifthenelse{\NOT \boolean{antwerpen}}{%
 \include{ch_VNC}%
-
-% X2Go setup in UGent
-\ifthenelse{\boolean{gent}}{%
-\include{ch_x2go}%
-
 }{}
 
 
 \ifgent
+
+\include{ch_x2go}
+
 \part{Software-specific Best Practices}
 
 \include{ch_MATLAB}
