@@ -264,10 +264,56 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
   \strong{Without your key pair, you won't be able to apply for a personal VSC account.}
 \fi %macORlinux
 
-\ifmacORlinux
+
 
 \subsection{Using an SSH agent (optional)}
 \label{sec:using-ssh-agent-with-openssh}
+\ifwindows
+  It is possible to setup a SSH agent in Windows. This is an optional configuration to help
+  you to keep all your SSH keys (if you have several) stored in the same key ring to avoid to type the
+  SSH key password each time. The SSH agent is also necessary to enable SSH hops with key forwarding from Windows.
+  
+  \strong{Pageant} is the SSH authentication agent used in windows. This agent should be available 
+  from the PuTTY installation package \url{https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html}
+  or as stand alone binary package.
+  
+  After the installation just start the Pageant application in Windows, this will start the agent in background.
+  The agent icon will be visible from the Windows pannel.
+  \begin{center}
+    \includegraphics*[width=2.49in, keepaspectratio=true]{ch2-pageant-icon}
+  \end{center}
+  At this point the agent does not contain any private key. You should include the private key(s)
+  generated in the previous section \autoref{sec:generate-key-pair}.
+  
+  \begin{enumerate}
+  \item  Click on \keys{Add key}
+  \begin{center}
+    \includegraphics*[width=2.49in, keepaspectratio=true]{ch2-pageant-add-key}
+  \end{center}
+  \item  Select the private key file generated in \autoref{sec:generate-key-pair}
+  (``\strong{id\_rsa.ppk}'' by default).
+  \item  Enter the same SSH key password used to generate the key. After this step the new key
+  will be included in Pageant to manage the SSH connections.
+  \item  You can see the SSH key(s) available in the key ring just clicking on \keys{View Keys}.
+  \begin{center}
+    \includegraphics*[width=2.49in, keepaspectratio=true]{ch2-pageant-view-keys}
+  \end{center}
+  \item  You can change \strong{PuTTY} setup to use the SSH agent. Open PuTTY and check
+  \emph{Connection >{} SSH >{} Auth >{} Allow agent forwarding}.
+  \begin{center}
+    \includegraphics*[width=3.39in, height=3.28in, keepaspectratio=false]{ch2-putty-allow-agent}
+  \end{center}
+  \end{enumerate}
+
+  Now you can connect to the login nodes as usual. The SSH agent will know which SSH key should be used and you
+  do not have to type the SSH passwords each time, this task is done by \strong{Pageant} agent automatically.
+  
+  It is also possible to use \strong{winSCP} with \strong{Pageant}, see \url{https://winscp.net/eng/docs/ui_pageant}
+  for more details.
+  
+\fi % END Windows section
+
+\ifmacORlinux
   Most recent Unix derivatives include by default an SSH agent
   \iflinux(``gnome-keyring-daemon'' in most cases) \fi to keep and manage the user SSH keys.
   If you use one of these derivatives you \strong{must} include the new keys into
