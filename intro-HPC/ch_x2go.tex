@@ -130,16 +130,20 @@ In this case you should include a few more options. Use the same \strong{Option 
 \section{Connect to your X2Go session}
 \label{sec:connect-x2go}
 Just click on any session that you already have to start/resume any session. It will take a few seconds to open the session the first time.
-If you close the new windows the session is not closed, X2Go keeps the session open. It is possible to close a session if you logout from the current open session or if you click on the ``close'' button from X2Go. If you want to resume your session to continue working with it later just click on the pause icon or just close the session window. X2Go will keep the session open for you (but only if the login node is not rebooted)
+It is possible to terminate a session if you logout from the current open session or if you click on the ``shutdown'' button from X2Go.
+If you want to suspend your session to continue working with it later just click on the ``pause'' icon.
 
 \begin{center}
-\includegraphics*[width=3.30in, height=3.17in, keepaspectratio=false]{ch19-x2go-session-gent}
+  \includegraphics*[width=3.2in, keepaspectratio=true]{ch19-x2go-pause}
 \end{center}
+
+X2Go will keep the session open for you (but only if the login node is not rebooted)
 
 \section{Resume a previous session}
 \label{sec:re-connect-x2go}
 
-If you want to re-connect to the same login node, or resume a previous session, you should know which login node were used at first place. You can get this information before logging out from your X2Go session. Just open a terminal and execute: 
+If you want to re-connect to the same login node, or resume a previous session, you should know which login node were used at first place.
+You can get this information before logging out from your X2Go session. Just open a terminal and execute: 
 
 \begin{prompt}
 %\shellcmd{hostname}%
