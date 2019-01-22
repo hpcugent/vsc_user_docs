@@ -558,43 +558,27 @@ open a terminal window and jump in!
 \ifwindows
   \subsection{WinSCP}
 
-  To transfer files to and from the cluster, we recommend the use of WinSCP,
-  which is a graphical ftp-style program (but than one that uses the ssh way of
-  communicating with the cluster rather then the less secure ftp) that is also
-  freely available. WinSCP can be downloaded both as an installation package
-  and as a standalone portable executable from \url{http://www.winscp.net}
+  To transfer files to and from the cluster, we recommend the use of
+  WinSCP, a graphical file management tool which can transfer files
+  using secure protocols such as SFTP and SCP.  WinSCP is freely
+  available from \url{http://www.winscp.net}.
 
   To transfer your files using WinSCP,
 
   \begin{enumerate}
   \item  Open the program
-\ifantwerpen
-  \item  Fill in the necessary fields under \keys{Session}
-\fi
-\ifgent
-  \item  Fill in the necessary fields under \keys{Session}
-\fi
-\ifbrussel
-  \item  Fill in the necessary fields under \keys{Session}
-\fi
-\ifleuven
-  \item  Fill in the necessary fields under \keys{New Site}
-\fi
+  \item The \keys{Login} menu is shown automatically (if it is closed, click \keys{New
+    Session} to open it again).  Fill in the necessary fields under
+  \keys{Session}
   \begin{enumerate}
-  \item  Press \keys{New}.
+  \item  Click \keys{New Site}.
   \item  Enter ``\emph{\loginnode}'' in the \keys{Host name} field.
-  \item  Put your ``\emph{vsc-account}'' in \keys{User name} field.
+  \item  Enter your ``\emph{vsc-account}'' in the \keys{User name} field.
   \item  Select \keys{SCP} as the \keys{file} protocol.
   \item  Note that the password field remains empty.
-  \item  Click advanced.
-  \item  Click Authentication (under SSH).
-  \item  Select your private key in the field \keys{Private key file}.
-  \end{enumerate}
-  \end{enumerate}
-
   \begin{center}
 \ifantwerpen
-  \includegraphics*[width=3.42in, height=3.04in, keepaspectratio=false]{img0214}
+  \includegraphics*[height=3.04in]{img0214}
 \fi
 \ifbrussel
   \includegraphics*[width=3.42in, height=3.04in, keepaspectratio=false]{img0214}
@@ -605,27 +589,21 @@ open a terminal window and jump in!
 \ifleuven
   \includegraphics*[width=3.42in, height=3.04in, keepaspectratio=false]{img0214-leuven}
 \fi
-  \includegraphics*[width=3.42in]{img0214b}
+  \includegraphics*[height=3.04in]{img0214b}
   \end{center}
 
-  \begin{enumerate}
-  \item  By pressing on the \keys{Save} button, you can save the session
-\ifantwerpen
-       under \keys{Stored sessions}
-\fi
-\ifgent
-       under \keys{Stored sessions}
-\fi
-\ifbrussel
-       under \keys{Stored sessions}
-\fi
-for future access.
-  \item  Finally, when clicking on \keys{Login}, you will be asked for your key passphrase.
+  \item  Click \keys{Advanced...}.
+  \item  Click \menu[,]{SSH,Authentication}.
+  \item  Select your private key in the field \keys{Private key file}.
   \end{enumerate}
+
+  \item Press the \keys{Save} button, to save the session under
+  \menu[,]{Session,Sites} for future access.
+  \item  Finally, when clicking on \keys{Login}, you will be asked for your key passphrase.
 
   \begin{center}
 \ifantwerpen
-  \includegraphics*[width=3.14in, height=2.47in, keepaspectratio=false]{img0215}
+  \includegraphics*[height=2.47in]{img0215}
 \fi
 \ifbrussel
   \includegraphics*[width=3.14in, height=2.47in, keepaspectratio=false]{img0215}
@@ -637,11 +615,14 @@ for future access.
   \includegraphics*[width=3.14in, height=2.47in, keepaspectratio=false]{img0215-leuven}
 \fi
   \end{center}
+
+  \end{enumerate}
+
   \firsttimeconnection
 
   \begin{center}
 \ifantwerpen
-  \includegraphics*[width=5.74in, height=2.81in, keepaspectratio=false]{img0216}
+  \includegraphics*[height=2.81in]{img0216}
 \fi
 \ifbrussel
   \includegraphics*[width=5.74in, height=2.81in, keepaspectratio=false]{img0216}
