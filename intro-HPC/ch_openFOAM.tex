@@ -28,7 +28,7 @@ If the OpenFOAM version you need is not available yet, see \autoref{sec:software
 \label{sec:best-practices-openfoam-documentation}
 
 The best practices outlined here focus specifically on the use of OpenFOAM on the VSC \hpc infrastructure.
-As such, they are intented to augment the existing OpenFOAM documentation rather than replace it.
+As such, they are intended to augment the existing OpenFOAM documentation rather than replace it.
 For more general information on using OpenFOAM, please refer to:
 \begin{itemize}
 \item OpenFOAM websites:
@@ -125,12 +125,12 @@ as follows:
 %\shellcmd{unset \$FOAM\_SIGFPE}%
 \end{prompt}
 
-Note that this only prevents OpenFOAM from propogating floating point exceptions, which then results in
+Note that this only prevents OpenFOAM from propagating floating point exceptions, which then results in
 terminating the simulation. However, it does not prevent that illegal operations (like a division by zero)
-are being executed; if \lstinline|NaN| values appear in your results, floating point errors are occuring.
+are being executed; if \lstinline|NaN| values appear in your results, floating point errors are occurring.
 
 As such, \strong{you should \emph{not} use this in production runs}. Instead, you should track down the root cause
-of the floating point errors, and try to prevent them from occuring at all.
+of the floating point errors, and try to prevent them from occurring at all.
 
 \section{OpenFOAM workflow}
 The general workflow for OpenFOAM consists of multiple steps.
