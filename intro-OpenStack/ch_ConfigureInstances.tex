@@ -115,15 +115,14 @@ SSH server is listening (typically port 22).
 You can quickly set up such forwarding rules using
 \lstinline{neutron_port_forward}, a command line tool available on the
 UGent login node, \lstinline{login.hpc.ugent.be}.  In order to use it,
-you must create an application credential for roles ``User'' and
-``heat\_stack\_owner'', and save it as an openrc file (see section
-\ref{sec:appl-cred} on page \pageref{sec:appl-cred}).  Transfer the
-openrc file to your VSC storage space, so
-\lstinline{neutron_port_forward} can read it.  To set up new port
-forwarding rules, run the script providing the path to the openrc file
-as an argument to the \lstinline{-o} option, and a file describing
-your port forwarding configuration as argument to the \lstinline{-m}
-option:
+you must create an application credential for the role ``User'', and
+save it as an openrc file (see section \ref{sec:appl-cred} on page
+\pageref{sec:appl-cred}).  Transfer the openrc file to your VSC
+storage space, so \lstinline{neutron_port_forward} can read it.  To
+set up new port forwarding rules, run the script providing the path to
+the openrc file as an argument to the \lstinline{-o} option, and a
+file describing your port forwarding configuration as argument to the
+\lstinline{-m} option:
 
 \begin{prompt}
   % \shellcmd{neutron\_port\_forward -o <openrc file.> -m <ini-file>}
