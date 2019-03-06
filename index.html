@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>VSC User documentation overview</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+        <style>
+            td.firstup:first-letter { text-transform: uppercase; }
+            th.sort-header::-moz-selection { background:transparent; }
+            th.sort-header::selection      { background:transparent; }
+            th.sort-header { cursor:pointer; }
+            table th.sort-header:after {
+                content:'';
+                float:right;
+                margin-top:7px;
+                border-width:0 4px 4px;
+                border-style:solid;
+                border-color:#404040 transparent;
+                visibility:hidden;
+            }
+            table th.sort-header:hover:after {
+                visibility:visible;
+            }
+            table th.sort-up:after,
+            table th.sort-down:after,
+            table th.sort-down:hover:after {
+                visibility:visible;
+                opacity:0.4;
+            }
+            table th.sort-up:after {
+                border-bottom:none;
+                border-width:4px 4px 0;
+            }
+        </style>
+    </head>
+    <body>
+	<div class="container">
+	    <div class="page-header">
+		<h1>VSC User documentation overview</h1>
+		<p class="lead">Below you can find all VSC user documentation, per Operation System and University. Click on a row to download it.</p>
+	    </div>
+
+	    <div class="panel panel-default">
+		<div class="panel-body">
+		    <table class="table table-hover sort" id="doctable">
+			<thead>
+			    <th class='sort-default'>Document</th>
+			    <th>University</th>
+			    <th>Operation System</th>
+			</thead>
+			<tbody>
+			</tbody>
+		</div>
+	    </div>
+
+	</div><!-- /.container -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- source: https://github.com/tristen/tablesort -->
+        <script src="tablesort.min.js"></script>
+        <script type="text/javascript">
+            // filled in from the Makefile by deploy script, don't change them
+var sites = ["antwerpen","brussel","gent","leuven"];
+var sysos = ["linux","mac","windows"];
+var docsos = ["intro-HPC","intro-Linux"];
+var docsnoos = ["perfexpert"];
+
+            $(document).ready(function() {
+                var mytable = $("#doctable")
+                tablebody = mytable.find('tbody');
+
+                for(var i = 0; i < sites.length; i++) {
+                    for(var j = 0; j < sysos.length; j++) {
+                        for(var k = 0; k < docsos.length; k++) {
+                            tablebody.append("<tr data-href=\"pdf/" + docsos[k] + "-" + sysos[j] + "-" + sites[i] + ".pdf\"><td>"+ docsos[k] + "</td><td class=\"firstup\">" + sites[i] + "</td><td class=\"firstup\">" + sysos[j] + "</td></tr>");
+                        }
+                    }
+                    for(var k = 0; k < docsnoos.length; k++) {
+                        tablebody.append("<tr data-href=\"pdf/" + docsnoos[k] + "-" + sites[i] + ".pdf\"><td>"+ docsnoos[k] + "</td><td class=\"firstup\">" + sites[i] + "</td><td></td></tr>");
+                    }
+                }
+
+                $("tr[data-href]").click(function () { 
+                    location.href = $(this).data('href');
+                });
+
+                var sort = new Tablesort(document.getElementById('doctable'));
+            });
+        </script>
+    </body>
+</html>
