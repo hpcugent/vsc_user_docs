@@ -77,6 +77,7 @@ var sites = ["antwerpen","brussel","gent","leuven"];
 var sysos = ["linux","mac","windows"];
 var docsos = ["intro-HPC","intro-Linux"];
 var docsnoos = ["perfexpert"];
+var singledocs = ["intro-Cloud"];
 
             $(document).ready(function() {
                 var mytable = $("#doctable")
@@ -92,6 +93,9 @@ var docsnoos = ["perfexpert"];
                         tablebody.append("<tr data-href=\"pdf/" + docsnoos[k] + "-" + sites[i] + ".pdf\"><td>"+ docsnoos[k] + "</td><td class=\"firstup\">" + sites[i] + "</td><td></td></tr>");
                     }
                 }
+		for(var k = 0; k < singledocs.length; k++) {
+		    tablebody.append("<tr data data-href=\"pdf/" + singledocs[k] + ".pdf\"><td>"+ singledocs[k] + "</td><td class=\"firstup\"></td><td></td></tr>");
+		}
 
                 $("tr[data-href]").click(function () { 
                     location.href = $(this).data('href');
