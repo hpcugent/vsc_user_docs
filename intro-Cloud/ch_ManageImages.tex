@@ -44,33 +44,30 @@ Follow this procedure to upload an image to a project:
   \begin{description}
   \item[Image Name] Enter a name for the image.
   \item[Image Description] Enter a brief description of the image.
-  \item[Image Source] Choose the image source from the dropdown list. Your
-    choices are Image Location and Image File.
-  \item[Image File or Image Location] Based on your selection for
-    Image Source, you either enter the location URL of the image in
-    the Image Location field, or browse for the image file on your
-    file system and add it.
-  \item[Format] Select the image format (for example, QCOW2) for the
-    image.
-  \item[Architecture] Specify the architecture. For example,
-    \strong{i386} for a 32-bit architecture or \strong{x86\_64} for a
-    64-bit architecture.
-  \item[Minimum Disk (GB)] Leave this field empty.
-  \item[Minimum RAM (MB)] Leave this field empty.
-  \item[Copy Data] Specify this option to copy image data to the Image
-    service.
-  \item[Visibility] The access permission for the
-    image. \strong{Public} or \strong{Private}.
-  \item[Protected] Select this check box to ensure that only users
-    with permissions can delete the image. \strong{Yes} or
-    \strong{No}.
-  \item[Image Metadata] Specify this option to add resource
-    metadata. The glance Metadata Catalog provides a list of metadata
-    image definitions.  (\strong{Note:} Not all cloud providers enable
-    this feature.)
+  \item[Image Source]\ 
+    \begin{description}
+    \item[File] Browse for the image file on your file system and add
+      it.
+    \item[Format] Select the image format (for example, QCOW2) for the
+      image.
+    \end{description}
+  \item[Image Requirements]\ 
+    \begin{description}
+    \item[Architecture] Specify the architecture. For example,
+      \strong{i386} for a 32-bit architecture or \strong{x86\_64} for
+      a 64-bit architecture.
+    \item[Kernel, Ramdisk] Can be left empty, as this is determined by
+      the image file.
+    \item[Minimum Disk (GB), Minimum RAM (MB)] Choose suitable values,
+      according to the requirements of your image's operating system.
+    \end{description}
+  \item[Protected] If set to \strong{Yes}, users need to unlock the
+    image before they are able to delete it.
+  \item[Metadata] You can add resource metadata in this tab. The
+    glance Metadata Catalog provides a list of metadata image
+    definitions.
   \end{description}
 \item Click \strong{Create Image}.
-
   The image is queued to be uploaded. It might take some time before
   the status changes from Queued to Active.
 \end{enumerate}
@@ -86,12 +83,10 @@ Another way to create an image is to check-mark on the left side one of the avai
 Follow this procedure to update an existing image.
 
 \begin{enumerate}
-\item    Log in to the dashboard.
-\item Select the appropriate project from the drop down menu at the
-  top left.
-\item    Select the image that you want to edit.
-\item In the Actions column, click the menu button and then select
-  Edit Image from the list.
+\item Open the project tab and click the Images category.
+\item Select the image that you want to edit.
+\item In the Actions column, open the drop-down menu and select
+  \strong{Edit Image}.
 \item In the Edit Image dialog box, you can perform various
   actions. For example:
   \begin{itemize}
@@ -100,11 +95,10 @@ Follow this procedure to update an existing image.
   \item    Change the format of the image.
   \item    Change the minimum disk of the image.
   \item    Change the minimum RAM of the image.
-  \item    Select the Public button to make the image public.
-  \item    Clear the Private button to make the image private.
+  \item    Change the protected status of the image.
   \item    Change the metadata of the image.
   \end{itemize}
-\item  Click Edit Image.
+\item  Click \strong{Edit Image}.
 \end{enumerate}
 
 %%% Local Variables:
