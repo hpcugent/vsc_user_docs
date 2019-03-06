@@ -1,39 +1,29 @@
 \chapter{The OpenStack Dashboard}
-This chapter briefly describes the different components of
-\gls{Horizon}, the \gls{OpenStack Dashboard}.  You can read the
-official documentation at
-\url{https://docs.openstack.org/horizon/\osversion/user}.
-\strong{Note:} the following features are not available for VSC cloud
-users, and have been removed from the dashboard:
-\begin{itemize}
-\item Consistency Group Snapshots (``Volumes'' tab);
-\item Managing your own networks and routers (``Network'' tab);
-\item Sharing networks (``Share'' tab).
-\end{itemize}
-Please contact \cloudinfo if you need access to one of these disabled
-features.
+After login, you can see the Overview tab of \gls{Horizon}, the \gls{OpenStack Dashboard}.
 
-After login the user will be navigated to the Overview tab of the dashboard.
 \begin{center}
-\includegraphics[scale=0.3]{img/tab-compute-overview.png}
+\includegraphics[width=\textwidth]{img/tab-compute-overview.png}
 \end{center}
 
-\section*{OpenStack dashboard - Project
-  tab}\label{openstack-dashboard---project-tab}
+This chapter briefly describes the different components of the
+dashboard.  You can read the official documentation at
+\url{https://docs.openstack.org/horizon/\osversion/user}.
+
+\strong{Note:} The VSC cloud uses a customized dashboard.  Some
+features mentioned in the official OpenStack documentation were
+intentionally removed, please contact \cloudinfo if you need access
+to one of these disabled features.
+
+\section*{Project tab}\label{sec:project-tab}
 Resources (instances, data volumes, networks, \ldots) in OpenStack are
 organized into different projects, and every user is a member of one
 or more projects.  Every project member has full access to all of the
 project's resources.
 
 From the Project tab, you can access the following categories:
-\begin{itemize}
-\item
-  API Access: View API endpoints.
-\end{itemize}
-
-\subsection*{\texorpdfstring{Compute
-tab}{Compute tab}}\label{compute-tab}
-
+\begin{description}
+\item[API Access] View API endpoints.
+\item[Compute]\ 
 \begin{itemize}
 \item
   Overview: View reports for the project.
@@ -49,23 +39,15 @@ tab}{Compute tab}}\label{compute-tab}
 \item
   Server Groups: Server groups provide a mechanism to group servers according to certain policy.
 \end{itemize}
-
-\subsection*{\texorpdfstring{Volumes
-tab}{Volumes tab}}\label{volumes-tab}
-
+\item[Volumes]\ 
 \begin{itemize}
 \item
   Volumes: View, create, edit, and delete volumes.
 \item
   Snapshots: View, create, edit, and delete volume snapshots.
 \end{itemize}
-
-\subsection*{\texorpdfstring{Network
-tab}{Network tab}}\label{network-tab}
-
+\item[Network]\ 
 \begin{itemize}
-\item
-  Network Topology: View the network topology.
 \item
   Networks: Create and manage public and private networks.
 \item
@@ -74,11 +56,8 @@ tab}{Network tab}}\label{network-tab}
 \item
   Floating IPs: Allocate an IP address to or release it from a project
 \end{itemize}
-
-\subsection*{\texorpdfstring{Orchestration
-tab}{Orchestration tab}}\label{orchestration-tab}
-
-\begin{itemize}
+\item[Orchestration]\ 
+  \begin{itemize}
 \item
   Stacks: Use the REST API to orchestrate multiple composite cloud applications.
 \item
@@ -86,31 +65,24 @@ tab}{Orchestration tab}}\label{orchestration-tab}
 \item
   Template versions: The version of a Heat template specifies the format of the template and also the corresponding features that will be validated and supported.
 \item
-  Template generator: Provides the user with the option to build and edit templates. 
+  Template generator: A graphical interface to build and edit templates.
 \end{itemize}
-
-\subsection*{\texorpdfstring{Share
-tab}{Shares tab}}\label{shares-tab}
-
+\item[Shares]\ 
 \begin{itemize}
-\item
-  Shares: A share is a remote, mountable file system. Users can mount a share to and access a share from several hosts by several users at a time.
+\item Shares: Create and manage \gls{share}s.
 \end{itemize}
+\end{description}
 
-\section*{OpenStack dashboard - Identity
-tab}\label{openstack-dashboard---identity-tab}
-
+\section*{Identity tab}\label{sec:identity-tab}
 From the Identity tab, you can access the following categories:
 
-\begin{itemize}
-\item
-  Projects: View, create, assign users to, remove users from, and delete
+\begin{description}
+\item[Projects] View, create, assign users to, remove users from, and delete
   projects.
-\item
-  Users: View, create, enable, disable, and delete users.
-\item
-  Application Credentials: With application credentials, a user can grant their applications limited access to their cloud resources.
-\end{itemize}
+\item[Users] View, create, enable, disable, and delete users.
+\item[Application Credentials] With application credentials, a user
+  can grant applications limited access to their cloud resources.
+\end{description}
 
 %%% Local Variables:
 %%% mode: latex
