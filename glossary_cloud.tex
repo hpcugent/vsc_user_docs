@@ -1,0 +1,121 @@
+\newglossaryentry{OpenStack}
+{ name={OpenStack},
+  description={OpenStack (\url{https://www.openstack.org}) is a free
+    and open-source software platform for cloud computing, mostly
+    deployed as infrastructure-as-a-service (IaaS), whereby virtual
+    servers and other resources are made available to customers}, }
+\newglossaryentry{OpenStack Identity}
+{ name={OpenStack Identity},
+  description={OpenStack Identity (Keystone) provides a central
+    directory of users mapped to the OpenStack services they can
+    access. It acts as a common authentication system across the cloud
+    operating system and can integrate with existing backend directory
+    services. It supports multiple forms of authentication including
+    standard username/password credentials and token-based systems.
+    In the VSC cloud, it is integrated with the VSC account system.},
+}
+\newglossaryentry{OpenStack Image}
+{
+  name={OpenStack Image},
+  description={OpenStack Image (Glance) provides discovery,
+  registration, and delivery services for disk and server images. Stored
+  images can be used as a template. It can also be used to store and
+  catalog an unlimited number of backups. The Image Service can store
+  disk and server images in a variety of back-ends, including Swift.},
+}
+\newglossaryentry{OpenStack Dashboard}
+{
+  name={OpenStack Dashboard},
+  description={OpenStack Dashboard (Horizon) provides administrators and
+  users with a graphical interface to access, provision, and automate
+  deployment of cloud-based resources. The design accommodates third
+  party products and services, such as billing, monitoring, and
+  additional management tools. The dashboard is also brand-able for
+  service providers and other commercial vendors who want to make use of
+  it. The dashboard is one of several ways users can interact with
+  OpenStack resources. Developers can automate access or build tools to
+  manage resources using the native OpenStack API or the EC2
+  compatibility API.},
+}
+\newglossaryentry{Horizon}
+{
+  name={Horizon},
+  description={Horizon is the name of the \gls{OpenStack Dashboard}},
+}
+\newglossaryentry{Heat}
+{
+  name={Heat},
+  description={Heat is the OpenStack orchestration service, which can
+  manage multiple composite cloud applications using templates,
+  through both an OpenStack-native \gls{REST} API and a
+  CloudFormation-compatible Query API},
+}
+\newglossaryentry{REST}
+{
+  name={\textsc{rest}},
+  description={REpresentational State Transfer is a software
+  architectural style that defines a set of constraints to be used for
+  creating web services},
+}
+\newglossaryentry{stack}
+{
+  name={stack},
+  description={In the context of \gls{OpenStack}, a stack is a
+  collection of cloud resources which can be managed using the
+  \gls{Heat} orchestration engine},
+}
+\newglossaryentry{Heat Orchestration Template}
+{
+  name={Heat Orchestration Template},
+  description={A \gls{Heat} Orchestration Template (\textsc{hot}) is a text
+  file which describes the infrastructure for a cloud application.
+  Because \textsc{hot} files are text files in a \gls{yaml}-based format, they
+  are readable and writable by humans, and can be managed using a
+  version control system.  \textsc{hot} is one of the template formats
+  supported by Heat, along with the older CloudFormation-compatible
+  \textsc{cfn} format},
+}
+\newglossaryentry{instance}
+{
+  name={OpenStack Instance},
+  description={OpenStack Instances are virtual machines, which are
+  instances of a system image that is created upon request and which
+  is configured when launched. With traditional virtualization
+  technology, the state of the virtual machine is persistent, whereas
+  OpenStack supports both persistent and ephemeral image creation},
+}
+\newglossaryentry{OpenStack Volume}
+{
+  name={OpenStack Volume},
+  description={OpenStack Volume is a detachable block storage device.
+  Each volume can be attached to only one instance at a time},
+}
+\newglossaryentry{share}
+{
+  name={share},
+  description={A share is a remote, mountable file system. Users can
+  mount and access a share on several hosts at a time}
+}
+\newglossaryentry{yaml}
+{
+  name={\textsc{yaml}},
+  description={A human-readable text-based data serialization
+  format}
+}
+\newglossaryentry{nfs}
+{
+  name={\textsc{nfs}},
+  description={Network File System, a protocol for sharing file
+    systems across a network, often used on Unix(-like) operating
+    systems}
+}
+\newglossaryentry{nic}
+{
+  name={\textsc{nic}},
+  description={Network Interface Controller, a (virtualized)
+    hardware component that connects a computer to a network}
+}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "intro-OpenStack/intro-OpenStack"
+%%% End:

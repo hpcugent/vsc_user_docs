@@ -48,7 +48,7 @@ DOCNOOS=$(DOC)
 endif
 endif
 
-all: all_os all_noos
+all: all_os all_noos intro-Cloud
 
 all_os:
 	@for os in $(OS) ; do \
@@ -78,6 +78,14 @@ style-guide: style-guide.pdf
 
 style-guide.pdf: style-guide.tex macros.tex
 	latexmk -pdf -r latexmkrc -pdflatex="pdflatex -halt-on-error --file-line-error %O %S" style-guide.tex
+
+intro-Cloud: intro-Cloud/intro-Cloud.pdf
+
+intro-Cloud/intro-Cloud.pdf: intro-Cloud/*.tex glossary_cloud.tex macros.tex
+	cd $(ROOT_DIR)/intro-Cloud; \
+	latexmk -pdf -verbose -r ../latexmkrc -jobname="intro-Cloud" -pdflatex="pdflatex -halt-on-error --file-line-error %O \"\input{%S}\" " intro-Cloud.tex || \
+	exit 2 && \
+	echo ./intro-Cloud/intro-Cloud.pdf created
 
 clean:
 	@for doc in $(all_doc_os) $(all_doc_noos) ; do \
