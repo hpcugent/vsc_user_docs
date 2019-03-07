@@ -16,11 +16,11 @@ an \gls{instance} from the following sources:
 
 \section{Launch an instance}\label{launch-an-instance}
 \begin{enumerate}
-\item Open the Compute tab and click Instances category.
+\item Open the Compute tab and select the Instances category.
 
-  The dashboard shows the instances with its name, its private and
-  floating IP addresses, size, status, task, power state, and so on.
-\item Click Launch Instance.
+  The dashboard shows the list of existing instances with their name,
+  IP addresses, flavor, status, power state, \ldots
+\item Click \strong{Launch Instance}.
 \item In the Launch Instance dialog box, specify the following values:
 
   \begin{center}
@@ -81,7 +81,7 @@ an \gls{instance} from the following sources:
   selected for launching an instance. For example, while creating an
   image, if you have entered the value in the Minimum RAM (MB) field
   as 2048, then on selecting the image, the default flavor is
-  \textbf{m1.small}.  If a '!' warning sign is displayed next to a
+  \textbf{m1.small}.  If a `!' warning sign is displayed next to a
   resource for one of the flavors, that means that this flavor would
   exceed the project's quota for that resource, and therefore is not
   available.
@@ -94,7 +94,9 @@ an \gls{instance} from the following sources:
   to assign to the instance.
 
   Security groups are a kind of cloud firewall that define which
-  incoming network traffic is forwarded to instances.
+  incoming network traffic is forwarded to instances.  See section
+  \ref{cha:conf-access-secur} on page ~\pageref{sec:security-groups}
+  for more information.
 
   The default security group is assigned to the instance
   automatically.
@@ -113,7 +115,7 @@ an \gls{instance} from the following sources:
 \item[Metadata] tab. Add Metadata items to your instance.
 \end{description}
 
-\item Click Launch Instance.
+\item Click \strong{Launch Instance}.
 \end{enumerate}
 
 The instance starts on a compute node in the cloud.
@@ -133,8 +135,8 @@ For details on creating images, see
 \href{https://docs.openstack.org/image-guide/create-images-manually.html}{\emph{Creating
 images manually}} in the \emph{OpenStack Virtual Machine Image Guide}.
 
-\section{Connect to your instance using SSH}\label{connect-to-your-instance-using-ssh}
-Before you can connect to your instance using SSH, you must set up a
+\section{Connect to an instance using SSH}\label{connect-to-your-instance-using-ssh}
+Before you can connect to an instance using SSH, you must set up a
 floating IP, as discussed in section~\ref{sec:floating-ip}.
 
 You can only reach the floating IP's from the UGent login node
@@ -179,21 +181,20 @@ per month by showing meters like number of vCPUs, disks, RAM, and uptime
 for all your instances.
 
 \begin{enumerate}
-\item Open the Compute tab and click Overview category.
-\item To query the instance usage for a month, select a month and click
-  Submit.
-\item To download a summary, click Download CSV Summary.
+\item Open the Compute tab and select the Overview category.
+\item To query the instance usage for a period of time, select a time
+  range and click \strong{Submit}.
+\item To download a summary, click \strong{Download CSV Summary}.
 \end{enumerate}
 
 \section{Create an instance snapshot}\label{create-an-instance-snapshot}
 
 \begin{enumerate}
-\item Open the Compute tab and click the Instances
-  category.
+\item Open the Compute tab and select the Instances category.
 \item Select the instance from which to create a snapshot.
-\item In the actions column, click Create Snapshot.
+\item In the actions column, click \strong{Create Snapshot}.
 \item In the Create Snapshot dialog box, enter a name for the snapshot, and
-  click Create Snapshot.
+  click \strong{Create Snapshot}.
 \end{enumerate}
 
 The Images category shows the instance snapshot.
@@ -204,15 +205,15 @@ Launch. Proceed with launching an instance.
 \section{Manage an instance}\label{manage-an-instance}
 
 \begin{enumerate}
-\item Open the Compute tab and click Instances category.
+\item Open the Compute tab and select the Instances category.
 \item Select an instance.
 \item In the menu list in the actions column, select the state.
-\end{enumerate}
 
-You can resize or rebuild an instance. You can also choose to view the
-instance console log, edit instance or the security groups. Depending on
-the current state of the instance, you can pause, resume, suspend, soft
-or hard reboot, or terminate it.
+  You can resize or rebuild an instance. You can also choose to view
+  the instance console log, edit instance or the security
+  groups. Depending on the current state of the instance, you can
+  pause, resume, suspend, soft or hard reboot, or terminate it.
+\end{enumerate}
 
 \subsection*{Difference between \emph{suspend}, \emph{pause}, \emph{shelve}, \emph{shut off}, \emph{delete}}\label{server-power-down-states}
 

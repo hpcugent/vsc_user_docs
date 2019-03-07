@@ -1,8 +1,9 @@
 \chapter{Shared file systems using Manila}\label{cha:shared-file-systems}
 OpenStack's Manila service makes it possible to create and manage
 shared \gls{nfs} file systems for virtual machines.  This service is
-not automatically enabled in the VSC cloud, so you should contact
-\cloudinfo if you want to use shared file systems in your project.
+not automatically enabled for every VSC cloud project, so you should
+contact \cloudinfo if you want to use shared file systems in your
+project.
 
 \section*{Creating a Shared File System}\label{sec:creating-shared-file}
 Creating a shared file system using the Horizon interface is quite straightforward:
@@ -21,7 +22,7 @@ Creating a shared file system using the Horizon interface is quite straightforwa
     created.  The total available storage and the amount currently
     used are shown on the right.
   \item[Share Type] Here, you must select ``cephfsnfstype'' (the only choice).
-  \item[Metadata] You can attach additional metdata to your shared
+  \item[Metadata] You can attach additional metadata to your shared
     file system, which can be queried later on.
   \end{description}
   Other fields are not mandatory.  By default, the shared file system
@@ -98,12 +99,13 @@ look up the network location of your file system using the Dashboard:
 \end{enumerate}
 
 Once you know the location of your shared file system, you can mount
-it on any VM with the appropriate access rights, e.g.\ for a shared
-file system with location
-\lstinline{10.2.0.2:/volumes/_nogroup/918...a78:}
+it on any VM with the appropriate access rights, e.g.\ to mount a
+shared file system with location
+\lstinline{10.2.0.2:/volumes/_nogroup/918...a78} at mount point
+\lstinline{\mnt}:
 
 \begin{prompt}
-  %\shellcmd{sudo mount 10.2.0.2:/volumes/\_nogroup/918..a78 /mnt}
+  %\shellcmd{sudo mount 10.2.0.2:/volumes/\_nogroup/918...a78 /mnt}
 \end{prompt}
 %%% Local Variables:
 %%% mode: latex
