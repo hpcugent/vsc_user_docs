@@ -1,35 +1,42 @@
 \chapter{Configure access and security for instances}\label{cha:conf-access-secur}
-
 \section{Security Groups}
-Openstack security groups are sets of IP filter rules that define
+OpenStack security groups are sets of IP filter rules that define
 networking access and are applied to all instances within a project.
 In the VSC cloud, each project contains a default security group,
 which allows you to ping instances and connect using SSH.  You can add
 rules to the default security group or add new security groups with
 rules.
 
-\section{SSH keypairs}
-Key pairs are SSH credentials that can be automatically injected into
-an instance when it is launched. To use key pair injection, the image
+\section{SSH key pairs}
+OpenStack can automatically inject a public SSH key into an instance
+when it is launched.  This gives anyone with the corresponding private
+key admin access to the instance.  OpenStack, this feature is called
+``key pair injection\footnote{OpenStack consistently refers to SSH
+  credentials as ``key pairs'', but of course only the public keys are
+  stored in the OpenStack environment, while the private key should be
+  kept secure by the owner.}''.  To use key pair injection, the image
 that the instance is based on must contain the \textbf{cloud-init}
 package. Each project should have at least one key pair. For more
-information, see the section \emph{Add a key pair}.  For general
+information, see section \ref{add-a-key-pair}.  For general
 instructions on SSH keys, we refer to chapter 2 of
 \href{https://www.vscentrum.be/support/tut-book/vsc-tutorials}{the VSC
   HPC tutorial}.
 
-\strong{Note:} In the VSC cloud, public keys you've uploaded to the
-VSC account portal are automatically available in OpenStack projects,
-so you don't have to create or import new keys.
-
 If you have generated a key pair with an external tool, you can import
-it into \gls{OpenStack}. The key pair can be used for multiple
-instances that belong to a project. For more information, see the
-section \emph{Import a key pair}.
+it into OpenStack. The key pair can be used for multiple instances
+that belong to a project. For more information, see section
+\ref{import-a-key-pair}.
 
-\strong{Note:} A key pair belongs to an individual user, not to a
-project. To share a key pair across multiple users, each user needs to
-import that key pair.
+\strong{Note:} In the VSC cloud, public keys from your VSC account are
+automatically available in your cloud projects, so VSC users can
+immediately use one of their existing keys to access instances.  If
+you want to give other parties SSH access to VM's, you must manage the
+keys using some other method.  \strong{Never} upload SSH keys for
+other users to your VSC account.
+
+\strong{Note:} Every OpenStack user account has its own collection of
+SSH keys.  To share a public key between multiple users of the same
+project, each user needs to import it into their account.
 
 \strong{Note:} This chapter only explains the required configuration
 in order to make your instance accessible via SSH.  For instructions
