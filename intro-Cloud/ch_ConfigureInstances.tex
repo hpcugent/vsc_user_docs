@@ -121,15 +121,19 @@ The \gls{OpenStack Dashboard} lists the key pair on the Key Pairs tab.
 
 \section{The \_vm and \_nfs networks}\label{sec:_vm-_nfs-networks}
 Each project in the VSC cloud has its own network
-\texttt{\emph{<projectname>}\_vm} and --- if the project uses shares ---
-\texttt{\emph{<projectname>}\_nfs}.
+\texttt{\emph{<projectname>}\_vm} and --- if the project uses shares
+--- \texttt{\emph{<projectname>}\_nfs}.   Each is a subnet of 254
+addresses, with an ip range 10.10.$x$.0/24, where $x$ is a number that
+depends on the project and network.  To see the subnets for your
+project's networks, open the Network tab, and select Networks.
 
-Instances should use the \_vm network for communication.  When an
-instance is created in \gls{OpenStack} and connected to the \_vm
-network, it is automatically assigned a fixed IP address in that
-network. This IP address is permanently associated with the instance
-until the instance is terminated.  However, the \_vm network can only
-be reached from within the OpenStack environment.
+Instances should use the \_vm network for communication, and the \_nfs
+network if they need access to shared file systems (see chapter
+\ref{cha:shared-file-systems}).  When an instance is created in
+\gls{OpenStack} and connected to the \_vm or \_nfs networks, it is
+automatically assigned a fixed IP address in that network. This IP
+address is permanently associated with the instance until the instance
+is terminated.
 
 \section{Floating IP addresses}\label{sec:floating-ip}
 The \_vm and \_nfs networks can only be reached from within the

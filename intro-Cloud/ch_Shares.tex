@@ -42,7 +42,6 @@ obtain read or write access to your shared file system.  By default,
 in absence of any rules, a shared file system cannot be accessed by
 anyone.
 
-%TODO screenshots?
 \begin{enumerate}
 \item Open the drop-down menu in the \textbf{Actions} column for your share, and click \textbf{Manage Rules}.
 \item You can now see all Share Rules for this shared file system.
@@ -54,19 +53,19 @@ anyone.
     (``rw'') or read-only (``ro'') permission with this rule.
   \item[Access To] Here, you can specify an ip address, or an address
     range, to which the rule applies.  The addresses should be
-    specified according to the format expected by an NFS exports
-    configuration file.  The following table contains a few examples,
-    where it is assumed that the project's \_nfs network has the
-    address range 10.10.x.0/24:
-
+    specified according to the format of an NFS exports configuration
+    file.  The following table contains a few examples, assuming the
+    project's \_nfs network has the subnet 10.10.$x$.0/24, for some
+    value of $x$ (see section
+    \ref{sec:_vm-_nfs-networks}):\\
     \begin{tabular}{>{\bfseries}lp{0.7\textwidth}}
-      10.10.x.13 & Allow this single ip address.
+      10.10.$x$.13 & Allow this single ip address.
       \\ \hline
       0.0.0.0/0 & Allow any ip address.
       \\ \hline
-      10.10.x.0/24 & Allow any ip address from the project's \_nfs network.  For a non-public shared file system this has the same effect as the previous rule, because such a shared file system can only be accessed from within our project's \_nfs network anyway.
+      10.10.$x$.0/24 & Allow any ip address from the project's \_nfs network.  For a non-public shared file system this has the same effect as the previous rule, because such a shared file system can only be accessed from within our project's \_nfs network anyway.
       \\ \hline 
-      10.10.x.0/28 & Allow addresses 10.10.x.0 until 10.10.x.15.
+      10.10.$x$.0/28 & Allow addresses 10.10.$x$.0 until 10.10.$x$.15.
       \\
     \end{tabular}
 
