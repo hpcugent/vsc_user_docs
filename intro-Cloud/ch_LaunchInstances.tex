@@ -138,20 +138,26 @@ images manually}} in the \emph{OpenStack Virtual Machine Image Guide}.
 
 \section{Connect to an instance using SSH}\label{connect-to-your-instance-using-ssh}
 Before you can connect to an instance using SSH, you must set up a
-floating IP, as discussed in section~\ref{sec:floating-ip}.
+floating IP for it, as discussed in section~\ref{sec:floating-ip}.
+Recall that only ports 50000 to 60000 of the floating IP's can be
+directly reached from outside the UGent network.
 
-You can only reach the floating IP's from the UGent login node
-\lstinline{login.hpc.ugent.be}, so you'll need to access the UGent
-login node first, and hop to your instance from there.  If you do not
-have a suitable private key in your VSC storage space, you need to set
-up an SSH agent with key forwarding locally, i.e.\ on the machine
-where you store the private key of an authorized keypair for the
-instance.  Section 2.1.4 of the HPC tutorial explains how to set this
-up (\url{https://www.vscentrum.be/support/tut-book/vsc-tutorials}).
+\strong{Note:} If you want to access ports outside the public range,
+you'll need to connect to the UGent login node
+\lstinline{login.hpc.ugent.be} first, and hop to your instance from
+there.  To make this work without storing the required private key for
+the instance in your VSC storage space, you need to set up an SSH
+agent with key forwarding locally, i.e.\ on the machine where you
+store the private key of an authorized keypair for the instance.
+Section 2.1.4 of the HPC tutorial explains how to set this up
+(\href{https://www.vscentrum.be/support/tut-book/vsc-tutorials}{www.vscentrum.be/support/tut-book/vsc-tutorials}).
 
 \begin{enumerate}
-\item Connect to the UGent login node, using the \lstinline{ssh -A} option
-  to enable agent forwarding:
+  \setcounter{enumi}{-1}
+\item (\emph{Only if using a port blocked by the UGent firewall, see
+    the note above:}) Use your VSC account to connect to the UGent login
+  node, using the \lstinline{ssh -A} option to enable agent
+  forwarding:
 
   \begin{prompt}
     %\shellcmd{ssh -A vsc12345@login.hpc.ugent.be}
@@ -160,19 +166,19 @@ up (\url{https://www.vscentrum.be/support/tut-book/vsc-tutorials}).
 \item Copy the address of the floating IP where your instance can be
   reached.  In our example, the address is 193.190.85.40.
 
-\item From the login node, connect to the instance.  Use OpenSSH's
-  \lstinline{-p} option to specify the port where the instance's SSH
-  server can be reached, e.g. for port 50022:
+\item Connect to the instance.  Use OpenSSH's \lstinline{-p} option to
+  specify the port where the instance's SSH server can be reached,
+  e.g. for port 50022:
 
   \begin{prompt}
     %\shellcmd{ssh -p 50022 ubuntu@193.190.85.40}
   \end{prompt}
 
-  The default images do not allow SSH logins for the root user.  There
-  is a default user instead, who can get administrative privileges
-  using \lstinline{sudo}.  In our example, we have used the username
-  \lstinline{ubuntu} for Ubuntu images.  Attempting to log in as root
-  will return an error message with the proper user name.
+  The images we provide do not allow SSH logins for the root user.
+  There is a default user instead, who can get administrative
+  privileges using \lstinline{sudo}.  In our example, we have used the
+  username \lstinline{ubuntu} for Ubuntu images.  Attempting to log in
+  as root will return an error message with the proper user name.
 \end{enumerate}
 
 \section{Track usage for instances}\label{track-usage-for-instances}
