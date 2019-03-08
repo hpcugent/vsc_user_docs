@@ -218,11 +218,26 @@ Launch. Proceed with launching an instance.
 \subsection*{Difference between \emph{suspend}, \emph{pause}, \emph{shelve}, \emph{shut off}, \emph{delete}}\label{server-power-down-states}
 
 \begin{description}
-\item[Suspend] Stores the state of the VM on the disk, all memory is written to disk, and the server is stopped.
 \item[Pause] Stores the state of the VM in the (RAM) memory.
-\item[Shelve] Shelving stops the instance and takes a snapshot of it. Then depending on the value of the \emph{shelved\_offload\_time} config option, the instance is either deleted from the hypervisor (0), never deleted (-1), or deleted after some period of time (> 0). Shelve preserves all associated data and VM resources but does not retain anything in memory.
-\item[Shut off] The server is powered down by the user, either through the OpenStack Compute API, or from within the server by issuing a \emph{shutdown -h} command. In this state the user retains all computational resources associated with the VM. The instance can be later restarted.
-\item[Delete] The VM is deleted and removed from \gls{OpenStack} together with any associated processes and resources.
+\item[Suspend] Stores the state of the VM on the disk, all memory is
+  written to disk, and the server is stopped.
+\item[Shut off] The server is powered down by the user, either through
+  the OpenStack Compute API, or from within the server by issuing a
+  \emph{shutdown -h} command. In this state the user retains all
+  computational resources associated with the VM. The instance can be
+  later restarted.
+\item[Shelve] Shelving stops the instance and takes a snapshot of
+  it. Then depending on the value of the \emph{shelved\_offload\_time}
+  config option, the instance is either deleted from the hypervisor
+  (0), never deleted (-1), or deleted after some period of time (>
+  0). Shelve preserves all associated data and VM resources but does
+  not retain anything in memory.
+\item[Delete] The VM is deleted and removed from \gls{OpenStack}
+  together with any associated processes and resources.  However, for
+  instances backed by a persistent volume, this volume is not deleted.
+  When such an instance is deleted, you can restore it by launching a
+  new instance from the volume, or delete the volume as well (see
+  section \ref{delete-a-volume}).
 \end{description}
 
 For more details see the OpenStack documentation on \href{https://docs.openstack.org/nova/\osversion/reference/vm-states.html}{\emph{Virtual Machine States and Transitions}} and \href{https://developer.openstack.org/api-guide/compute/server_concepts.html}{\emph{Server concepts}}.
