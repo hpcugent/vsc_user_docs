@@ -3,15 +3,16 @@ Instances are virtual machines that run inside the cloud. You can launch
 an \gls{instance} from the following sources:
 
 \begin{itemize}
-\item Images uploaded to the Image service.  Note that, because images
-  are read-only, any changes made while the instance is running will
-  be lost when the instance is deleted, unless you choose to ``Create
-  New Volume''.  If you create a new volume, the VM's state will
-  persist on the volume, even when the current instance is deleted.
-  \item Image that you have copied to a persistent volume. The instance
-  launches from the volume, which is provided by the
-  \textbf{cinder-volume} API through iSCSI.
-\item Instance snapshot that you took.
+\item Images uploaded to the Image service.
+
+  \strong{Note:} Because images are read-only, any changes made while
+  the instance is running will be lost when the instance is deleted,
+  unless you choose to create a persistent volume for your instance
+  when you launch it.  Using a volume, the VM's state is saved, even
+  when the current instance is deleted.
+\item Images which you previously copied to a persistent volume. The
+  instance launches from the volume.
+\item Instance snapshots.
 \end{itemize}
 
 \section{Launch an instance}\label{launch-an-instance}
