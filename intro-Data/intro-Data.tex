@@ -1,0 +1,34 @@
+\documentclass[11pt,a4paper,oneside]{book}
+\usepackage{import}
+\subimport{../}{style}
+\subimport{../}{macros}
+\subimport{../}{glossary}
+\graphicspath{{../img/}}
+\makeglossaries
+\makeindex
+
+\begin{document}
+
+\pagestyle{empty}
+
+\include{title}
+
+\glsdisablehyper
+\glstoctrue
+\printglossaries
+
+\cleardoublepage
+\printindex
+
+\tableofcontents
+
+\pagestyle{fancy}
+\include{ch_Introduction}
+\include{ch_Anotherchapter}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
