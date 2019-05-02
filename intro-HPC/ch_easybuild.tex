@@ -49,7 +49,7 @@ This directory is where EasyBuild will build software in. To have good performan
 this needs to be on a fast filesystem.
 
 \begin{prompt}
-%\shellcmd{export EASYBUILD\_BUILDPATH=\${TMPDIR:-/tmp/\$USER}}%
+%\shellcmd{export EASYBUILD\_BUILDPATH=\$\{TMPDIR:-/tmp/\$USER\}}%
 \end{prompt}
 
 On cluster nodes, you can use the fast, in-memory \lstinline|/dev/shm/$USER| location
