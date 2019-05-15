@@ -3,7 +3,7 @@ defines = ""
 all_os = linux mac windows
 all_site = antwerpen brussel gent leuven
 all_doc_os = intro-HPC intro-Linux
-all_doc_noos = perfexpert
+all_doc_noos = perfexpert intro-Cloud intro-Globus
 
 
 # http://stackoverflow.com/questions/18136918/how-to-get-current-directory-of-your-makefile
@@ -48,7 +48,7 @@ DOCNOOS=$(DOC)
 endif
 endif
 
-all: all_os all_noos intro-Cloud
+all: all_os all_noos intro-Cloud intro-Globus
 
 all_os:
 	@for os in $(OS) ; do \
@@ -87,10 +87,18 @@ intro-Cloud/intro-Cloud.pdf: intro-Cloud/*.tex glossary_cloud.tex macros.tex
 	exit 2 && \
 	echo ./intro-Cloud/intro-Cloud.pdf created
 
+intro-Globus: intro-Globus/intro-Globus.pdf
+
+intro-Globus/intro-Globus.pdf: intro-Globus/*.tex glossary_globus.tex macros.tex
+	cd $(ROOT_DIR)/intro-Globus; \
+	latexmk -pdf -verbose -r ../latexmkrc -jobname="intro-Globus" -pdflatex="pdflatex -halt-on-error --file-line-error %O \"\input{%S}\" " intro-Globus.tex || \
+	exit 2 && \
+	echo ./intro-Globus/intro-Globus.pdf created
+
 clean:
 	@for doc in $(all_doc_os) $(all_doc_noos) ; do \
 		cd $(ROOT_DIR)/$$doc ; \
-		rm -f *.log *.aux *.fdb_latexmk *.listing *.fls *.toc *.out *.glg *.glo *.gls *.ist *.ind *.ilg *.idx shellcmds.sh; \
+		rm -f *.pdf *.log *.aux *.fdb_latexmk *.listing *.fls *.toc *.out *.glg *.glo *.gls *.ist *.ind *.ilg *.idx shellcmds.sh; \
 	done ;
 
 mrproper: clean
