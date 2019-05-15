@@ -503,6 +503,22 @@ just load the module and try to use the software.
 To check the general system state, check \url{https://www.vscentrum.be/en/user-portal/system-status}.
 This has information about scheduled downtime, status of the system, \ldots
 
+\ifgent
+Note: the \lstinline|qstat -q| command now only shows \emph{your own jobs} on the
+\hpcInfra infrastructure (since May 2019),
+and can't be used any longer to access how 'busy' each cluster is. For example:
+
+\begin{prompt}
+%\shellcmd{qstat -q}%
+Queue            Memory CPU Time Walltime Node  Run Que Lm State
+---------------- ------ -------- -------- ----  --- --- -- -----
+victini            --      --    72:00:00  --    3   9  --  E R
+                                                --- ---
+                                                 3   9
+
+Please be aware that "qstat -q" only gives information about your own jobs.
+\end{prompt}
+\else
 To check how much jobs are running in what queues, you can use the \lstinline|qstat -q|
 command:
 
@@ -522,6 +538,7 @@ q24h               --      --    24:00:00   --    0   0 --   E R
 
 Here, there are 316 jobs running on the \lstinline|long| queue, and 77 jobs queued. We
 can also see that the \lstinline|long| queue allows a maximum wall time of 72 hours.
+\fi  % ifgent
 
 \ifgent
 \subsection{Getting cluster state}
@@ -901,38 +918,22 @@ The state S can be any of  the following:
 User hold means that the user can remove the hold. System hold means that the system
 or an administrator has put the job on hold, very likely because something is wrong with it.
 Check with your helpdesk to see why this is the case.
+
+
 \section{Examining the queue}
+
+\ifgent
+
+There is currently (since May 2019) no way to get an overall view of the state of the cluster queues
+for the \hpcInfra infrastructure, due to changes to the cluster resource management software
+(and also because a general overview is mostly meaningless since it doesn't give any indication of
+the resources requested by the queued jobs).
+
+\else  % not ifgent
 
 As we learned above, Moab is the software application that actually decides
 when to run your job and what resources your job will run on.
-\ifgent
-  % Does not work in Ghent: showq is disabled as it shows information about
-  % other users.
-  For security reasons, it is not possible to see what other users are doing on
-  the clusters. As such, the PBS \strong{qstat} command only gives information
-  about your own jobs that are queued or running, ordered by \strong{JobID}.
 
-  However, you can get some idea of the load on the clusters by specifying
-  the \strong{-q} option to the \strong{qstat} command:
-
-\begin{prompt}
-%\shellcmd{qstat -q}%
-server: master15.delcatty.gent.vsc
-
-Queue            Memory CPU Time Walltime Node  Run Que Lm  State
----------------- ------ -------- -------- ----  --- --- --  -----
-short              --      --    11:59:59   --    2  24 --   E R
-default            --      --       --      --    0   0 --   E R
-debug              --      --    00:59:59   --    1   0 --   E R
-long               --      --    72:00:00   --  124 453 --   E R
-                                               ----- -----
-                                                 127   477
-\end{prompt}
-
-  In this example, 477 jobs are queued in the various queues whereas 127 jobs
-  are effectively running.
-
-\else
 \ifbrussel
   For security reasons, it is not possible to see what other users are doing on
   the clusters. As such, the PBS \strong{qstat} command only gives information
@@ -967,7 +968,7 @@ himem              --      --    120:00:0     1   0   0 --   E R
   In this example, 55 jobs are queued in the various queues whereas 501 jobs
   are effectively running.
 
-\else
+\else  % not ifbrussel
   You can look at
   the queue by using the PBS \strong{qstat} command or the Moab
   \strong{showq} command. By default, \strong{qstat} will display the queue
@@ -989,8 +990,7 @@ blocked jobs: 243
 Total jobs:  539
 \end{prompt}
 
-\fi
-\fi
+\fi % ifbrussel
 
 \ifantwerpen
 And to get the full detail of all the jobs, which are in the system:
@@ -1020,11 +1020,8 @@ JOBID   USERNAME     STATE PROCS WCLIMIT            QUEUETIME
 252 blocked jobs
 Total jobs:  540
 \end{prompt}
-\fi
+\fi  % not ifantwerpen
 
-\ifgent
-  %% Again, don't show because showq does not work
-\else
 \ifbrussel
 \else
   There are 3 categories, the \strong{active}, \strong{eligible} and \strong{blocked} jobs.
@@ -1057,7 +1054,8 @@ Total jobs:  540
     \end{description}
   \end{description}
 \fi
-\fi
+
+\fi % ifgent
 
 \section{Specifying job requirements}
 
