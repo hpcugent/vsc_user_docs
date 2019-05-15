@@ -454,12 +454,12 @@ The available disk space on the \hpc is limited. The actual disk capacity,
 shared by all users, can be found on the ``Available hardware'' page on the
 website.
 (\url{https://www.vscentrum.be/infrastructure/hardware})
-As explained in \S\ref{subsec:predfined-quotas}, this implies
-that there are also limits
-\begin{enumerate}
-\item  to the amount of disk space; and
-\item  to the number of files
-\end{enumerate}
+As explained in \autoref{subsec:predfined-quotas}, this implies
+that there are also limits to:
+\begin{itemize}
+\item  the amount of disk space; and
+\item  the number of files
+\end{itemize}
 
 that can be made available to each individual \hpc user.
 
@@ -489,8 +489,16 @@ temporary or log files.  Keeping your environment clean will never do any harm.
 \end{tip}
 
 \begin{tip}
+\ifgent
+If you obtained your VSC account via \university, you can get
+(significantly) more storage quota in the DATA and SCRATCH volumes
+by joining a Virtual Organisation (VO),
+see \autoref{sec:virtual-organisations} for more information.
+In case of questions, contact \hpcinfo.
+\else
 Users can request for additional quota, which can be granted in
 duly justified cases. Please contact the \hpcTeam staff.
+\fi
 \end{tip}
 
 \subsection{Check your quota}
@@ -514,6 +522,19 @@ duly justified cases. Please contact the \hpcTeam staff.
 % Home          117   20000   25000        0   none
 % Scratch        11  100000  150000       20   none
 % \end{prompt}
+
+\ifgent
+If you obtained your VSC account via \university, you can consult your current storage quota usage
+on the \hpcInfra shared filesystems via the VSC accountpage,
+see the "Usage" section at \url{https://account.vscentrum.be} .
+
+VO moderators can inspect storage quota for all VO members via\\
+\url{https://account.vscentrum.be/django/vo/}.
+
+To check your storage usage on the local scratch filesystems on VSC sites other than \university,
+you can use the ``\texttt{show\_quota}'' command (when logged into the login nodes of that VSC site).
+
+\else  % not ifgent
 
 The ``\texttt{show\_quota}'' command has been developed to show you the
 status of your quota in a readable format:
@@ -545,6 +566,8 @@ easily, as it is expressed in percentages. Depending of on which cluster you are
 running the script, it may not be able to show the quota on all your folders.
 E.g., when running on the tier-1 system Muk, the script will not be able to show
 the quota on \$VSC\_HOME or \$VSC\_DATA if your account is a KU~Leuven, UAntwerpen or VUB account.
+
+\fi  % ifgent
 
 Once your quota is (nearly) exhausted, you will want to know which directories
 are responsible for the consumption of your disk space. You can check the size
