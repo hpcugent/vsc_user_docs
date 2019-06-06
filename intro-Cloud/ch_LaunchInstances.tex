@@ -82,7 +82,7 @@ an \gls{instance} from the following sources:
   selected for launching an instance. For example, while creating an
   image, if you have entered the value in the Minimum RAM (MB) field
   as 2048, then on selecting the image, the default flavor is
-  \textbf{m1.small}.  If a `!' warning sign is displayed next to a
+  \strong{m1.small}.  If a `!' warning sign is displayed next to a
   resource for one of the flavors, that means that this flavor would
   exceed the project's quota for that resource, and therefore is not
   available.
@@ -142,6 +142,14 @@ floating IP for it, as discussed in section~\ref{sec:floating-ip}.
 Recall that only ports 50000 to 60000 of the floating IP's can be
 directly reached from outside the UGent network.
 
+\strong{Note:} When you try to connect to a new instance using a port
+that was previously forwarded to a different instance --- either due
+to a change in the port forwarding configuration, or because an old
+instance was deleted and replaced --- your SSH client will show an
+error message because the ``host key'' of the new instance doesn't
+match the known previous key.  Section \nameref{sec:host-keys}
+explains how to handle such errors.
+
 \strong{Note:} If you want to access ports outside the public range,
 you'll need to connect to the UGent login node
 \lstinline{login.hpc.ugent.be} first, and hop to your instance from
@@ -174,11 +182,153 @@ Section 2.1.4 of the HPC tutorial explains how to set this up
     %\shellcmd{ssh -p 50022 ubuntu@193.190.85.40}
   \end{prompt}
 
-  The images we provide do not allow SSH logins for the root user.
-  There is a default user instead, who can get administrative
-  privileges using \lstinline{sudo}.  In our example, we have used the
-  username \lstinline{ubuntu} for Ubuntu images.  Attempting to log in
-  as root will return an error message with the proper user name.
+  When you run the above command, your SSH client may display warnings
+  or error messages.  The section \nameref{sec:host-keys}
+  explains the meaning of these messages and how you should deal with
+  them.
+
+  \strong{Note:} The images we provide do not allow SSH logins for the
+  root user.  There is a default user instead, who can get
+  administrative privileges using \lstinline{sudo}.  In our example,
+  we have used the username \lstinline{ubuntu} for Ubuntu images.
+  Attempting to log in as root will return an error message with the
+  proper user name.
+\end{enumerate}
+
+\subsection*{Host keys}\label{sec:host-keys}
+When connecting to instances using SSH, you will sometimes see
+warnings or errors related to ``host keys''.  This section briefly
+explains the meaning of those errors, and how to deal with them.
+
+When you try to connect to an instance, you use the private key of
+your SSH keypair to prove your identity to that instance.  If you do
+not have access to the right secret key, you can not prove your
+identity, at which point the your instance's SSH server will deny
+access.  In the same way, the server must prove its own identity to
+you, using its own keypair or ``host key''.  Without such a
+verification procedure, third parties on the network between you and
+the instance could perform a so-called man-in-the-middle-attack, where
+they intercept the communication between you and the server you want
+to reach and steal valuable information.
+
+To prevent such man-in-the-middle attacks, the SSH client on your
+system keeps a list of known host keys for every IP address you have
+connected to, and verifies the host key the next time you try to
+connect to that address.  If all goes well, this check is silently
+performed in the background, but there are a number of situations
+where the check fails.  In this case, you have to look up the host key
+of your instance using the OpenStack dashboard to verify that the
+connection is secure.
+
+\subsubsection*{Looking up an instance's host
+  key}\label{sec:look-up-hostkey}
+In order to verify a host key, it suffices to compare the key's
+fingerprint, a short alphanumerical sequence computed from the keys
+content.  You can use the Dashboard to look up the host key
+fingerprint for an instance as follows:
+\begin{enumerate}
+\item Open the Compute tab and select the Instances category.
+\item Click on the name of the instance you want to connect to.
+\item Click \strong{Log}
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{img/instance_log}
+  \end{center}
+
+\item Click \strong{View Full Log}.  You are taken to a new page with a long text listing.
+\item Search for the words \lstinline{-----BEGIN SSH HOST KEY FINGERPRINTS-----} to find the log file section containing the host key fingerprints, for example:
+\begin{code}{}
+<14>Jun  6 09:57:01 ec2: #############################################################
+<14>Jun  6 09:57:01 ec2: -----BEGIN SSH HOST KEY FINGERPRINTS-----
+<14>Jun  6 09:57:01 ec2: 1024 SHA256:gCa0hZAaOnpzxYM5WnAZINuZTI5NAoqd41U/dtxeGKE root@my-instance (DSA)
+<14>Jun  6 09:57:01 ec2: 256 SHA256:nyujUIF37c674FPSkDdz0xgAU6S39UWbmMzBPmdmCmg root@my-instance (ECDSA)
+<14>Jun  6 09:57:01 ec2: 256 SHA256:Mcznquek1A3BFz6KEXSxsivpdkX1mY3LnymEA7C8Xxg root@my-instance (ED25519)
+<14>Jun  6 09:57:01 ec2: 2048 SHA256:4DagYc9cZvANkSjbTL0pB+3ULqHg09zW4E8wvDrB4Do root@my-instance (RSA)
+<14>Jun  6 09:57:01 ec2: -----END SSH HOST KEY FINGERPRINTS-----
+<14>Jun  6 09:57:01 ec2: #############################################################
+\end{code}
+\end{enumerate}
+
+In this example, the fingerprints are character sequences starting
+with ``SHA256'', such as the ECDSA key fingerprint
+\lstinline{SHA256:nyujUIF37c674FPSkDdz0xgAU6S39UWbmMzBPmdmCmg}.  The
+following sections describe the most common cases where you'll need
+these fingerprints.
+
+\subsubsection*{Connecting for the first time}\label{sec:conn-first-time}
+The first time you connect to a new ip address:port combination, your SSH client does not know the host key for this address, and therefore it can't verify the identity of the server.  When using OpenSSH, the warning looks as follows (again using address 193.190.85.40 and port 50022 as an example):
+
+\begin{prompt}
+The authenticity of host '[193.190.85.40]:50022 ([193.190.85.40]:50022)'
+can't be established.
+ECDSA key fingerprint is SHA256:nyujUIF37c674FPSkDdz0xgAU6S39UWbmMzBPmdmCmg.
+Are you sure you want to continue connecting (yes/no)?
+\end{prompt}
+
+Verify the fingerprint in order to make sure that it is safe to
+proceed:
+
+\begin{enumerate}
+\item Look up the fingerprint of the instance you want to access,
+  according to the procedure described in the section
+  \nameref{sec:look-up-hostkey}.
+\item Verify that the fingerprint you find in the Dashboard matches
+  the fingerprint shown in the warning message.
+
+  In this example, we see that the ECDSA key fingerprint reported by
+  the SSH client matches the fingerprint of our instance from the
+  previous section, namely
+
+  \lstinline{SHA256:nyujUIF37c674FPSkDdz0xgAU6S39UWbmMzBPmdmCmg}.
+
+\item If the fingerprints are identical, type ``yes'' to log in.
+  \strong{If the fingerprints do not match, type ``no'', and contact
+    \cloudinfo.}
+\end{enumerate}
+
+\subsubsection{New instance at a known address}
+Another case where the host key verification fails, is when you try to access a new instance at an IP address and port previously used by another instance.  This can happen if you modify your port forwarding configuration, or if a running instance connected to a certain port is deleted and replaced by a new one.  In this case, OpenSSH will show a warning such as this:
+
+\begin{prompt}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ECDSA key sent by the remote host is
+SHA256:hI2HcqFxsCKwEauq2QvBmgDN4nCPjllaRsYoCb7tJQw.
+Please contact your system administrator.
+Add correct host key in [...]/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in [...]/.ssh/known_hosts:57
+ECDSA host key for [193.190.85.40]:50322 has changed and you have requested strict checking.
+Host key verification failed.
+\end{prompt}
+
+The file \lstinline{known_hosts} in your OpenSSH configuration
+directory contains a list of all hosts you have previously connected
+to, together with their host keys.  The warning above tells you that
+the server you are connecting to is not using the same key anymore.
+In this case, you should take the following steps:
+\begin{enumerate}
+\item Look up the fingerprint of the instance you want to access,
+  according to the procedure described in the section
+  \nameref{sec:look-up-hostkey}.
+\item Verify that the fingerprint you find in the Dashboard matches
+  the fingerprint shown in the warning message.
+\item If the fingerprint matches, the new key is legitimate. Remove
+  the previous known key from the \lstinline{known_hosts} file as
+  follows (still using address 193.190.85.40 and port number 50322 as
+  an example):
+
+  \begin{prompt}
+    % \shellcmd{ssh-keygen -R [193.190.85.40]:50322}%\end{prompt}
+
+    This command causes OpenSSH to forget the previous key.  On your
+    next attempt to connect to that address, OpenSSH will treat it as
+    a new host and ask you to verify the fingerprint as described in
+    section \nameref{sec:conn-first-time}.
+
+  \strong{If the fingerprint does not match, do not attempt to connect, and contact \cloudinfo.}
 \end{enumerate}
 
 \section{Track usage for instances}\label{track-usage-for-instances}
