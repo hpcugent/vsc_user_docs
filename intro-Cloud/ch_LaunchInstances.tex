@@ -254,6 +254,13 @@ with ``SHA256'', such as the ECDSA key fingerprint
 following sections describe the most common cases where you'll need
 these fingerprints.
 
+\strong{Note:} The following examples show output and commands for
+OpenSSH, the most common client on Linux and macOS.  If you are
+working from a windows system using using PuTTY, we refer to sections
+8.4 and 8.6 of the windows version of the
+\href{https://hpcugent.github.io/vsc\_user\_docs}{introduction to
+  HPC} for the corresponding warning messages.
+
 \subsubsection*{Connecting for the first time}\label{sec:conn-first-time}
 The first time you connect to a new ip address:port combination, your SSH client does not know the host key for this address, and therefore it can't verify the identity of the server.  When using OpenSSH, the warning looks as follows (again using address 193.190.85.40 and port 50022 as an example):
 
