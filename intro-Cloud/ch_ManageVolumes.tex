@@ -2,13 +2,13 @@
 An \gls{OpenStack Volume} is a block storage device which you attach
 to instances to enable persistent storage. You can attach a volume to
 a running instance or detach a volume and attach it to another
-instance at any time. You can also create a snapshot from or delete a
-volume. Only administrative users can create volume types.
+instance at any time. You can also create a snapshot from a volume, or
+delete it.
 
 \subsubsection{Create a volume}\label{create-a-volume}
 \begin{enumerate}
-\item Open the Volumes tab and click Volumes category.
-\item Click Create Volume.
+\item Open the Volumes tab and select the Volumes category.
+\item Click \strong{Create Volume}.
 
   In the dialog box that opens, enter or select the following values.
 
@@ -38,7 +38,7 @@ volume. Only administrative users can create volume types.
     by the cloud provider (for example, \strong{us-west} or
     \strong{apac-south}). For some cases, it could be \strong{nova}.
   \end{description}
-\item Click Create Volume.
+\item Click \strong{Create Volume}.
 \end{enumerate}
 
 The dashboard shows the volume on the Volumes tab.
@@ -51,15 +51,15 @@ instances.  You can attach a volume to one instance at a time.
 \begin{enumerate}
 \item Open the Volumes tab and click Volumes
   category.
-\item Select the volume to add to an instance and click Manage
-  Attachments.
+\item Select the volume to add to an instance and click \strong{Manage
+  Attachments}.
 \item In the Manage Volume Attachments dialog box, select an instance.
 \item Enter the name of the device from which the volume is accessible
   by the instance.
 
   \strong{Note:} The actual device name might differ from the volume
   name because of hypervisor settings.
-\item Click Attach Volume.
+\item Click \strong{Attach Volume}.
 
   The dashboard shows the instance to which the volume is now attached
   and the device name.
@@ -67,14 +67,13 @@ instances.  You can attach a volume to one instance at a time.
 You can view the status of a volume in the Volumes tab of the dashboard.
 The volume is either Available or In-Use.
 
-Now you can log in to the instance and mount, format, and use the disk.
+Now you can mount, format, and use the volume from this instance.
 
 \subsubsection{Detach a volume from an instance}\label{detach-a-volume-from-an-instance}
 \begin{enumerate}
-\item Open the Volumes tab and click the Volumes
-  category.
-  \item Select the volume and click Manage Attachments.
-  \item Click Detach Volume and confirm your changes.
+\item Open the Volumes tab and select the Volumes category.
+  \item Select the volume and click \strong{Manage Attachments}.
+  \item Click \strong{Detach Volume} and confirm your changes.
   \end{enumerate}
 
 A message indicates whether the action was successful.
@@ -82,9 +81,9 @@ A message indicates whether the action was successful.
 \subsubsection{Create a snapshot from a
   volume}\label{create-a-snapshot-from-a-volume}
 \begin{enumerate}
-\item Open the Volumes tab and click Volumes category.
+\item Open the Volumes tab and select the Volumes category.
 \item Select a volume from which to create a snapshot.
-\item In the Actions column, click Create Snapshot.
+\item In the Actions column, click \strong{Create Snapshot}.
 \item In the dialog box that opens, enter a snapshot name and a brief
   description.
 \item Confirm your changes.
@@ -95,12 +94,12 @@ The dashboard shows the new volume snapshot in Volume Snapshots tab.
 \subsubsection{Edit a volume}\label{edit-a-volume}
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\item Open the Volumes tab and click Volumes category.
+\item Open the Volumes tab and select the Volumes category.
 \item Select the volume that you want to edit.
-\item In the Actions column, click Edit Volume.
+\item In the Actions column, click \strong{Edit Volume}.
 \item In the Edit Volume dialog box, update the name and description
   of the volume.
-\item Click Edit Volume.
+\item Click \strong{Edit Volume}.
 \end{enumerate}
 
 \strong{Note:} You can extend a volume by using the Extend Volume
@@ -112,10 +111,9 @@ When you delete an instance, the data in its attached volumes is not
 deleted.
 
 \begin{enumerate}
-\item Open the Volumes tab and click Volumes
-  category.
+\item Open the Volumes tab and select the Volumes category.
 \item Select the check boxes for the volumes that you want to delete.
-\item Click Delete Volumes and confirm your choice.
+\item Click \strong{Delete Volumes} and confirm your choice.
 \end{enumerate}
 
 A message indicates whether the action was successful.
