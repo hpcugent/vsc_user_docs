@@ -25,98 +25,6 @@ users, you'll need to set up some form of identity management
 yourself.  This system administration task is beyond the scope of our
 tutorial.
 
-\section{Security Groups}\label{sec:security-groups}
-OpenStack security groups are sets of IP filter rules that define
-networking access.  You can then assign one or more security groups to
-your instances.
-
-In the VSC cloud, each project contains a default security group,
-which allows you to ping instances and connect using SSH on the
-default port 22.  If you want to access other ports on your instances,
-create new security groups with the appropriate rules and assign them
-to the instances.
-
-\section{SSH key pairs}\label{sec:ssh-key-pairs}
-When an instance is launched, OpenStack can automatically install a
-public SSH key on it, so as to give anyone with the corresponding
-private key admin access.  For this ``key pair injection\footnote{The
-  OpenStack documentation and interfaces consistently refer to ``SSH
-  pairs'', but of course only the public key of each pair is stored in
-  the OpenStack environment, while the private key should be kept
-  secure by the owner.}'' to work, the image that the instance is
-based on must contain the \textbf{cloud-init} package, or have in
-place another mechanism in place that will interact with the OpenStack
-metadata server to install the appropriate key.  For general
-instructions on SSH keys, we refer to chapter 2 of our
-\href{https://hpcugent.github.io/vsc\_user\_docs}{introduction to
-  HPC}.
-
-If you have generated a key pair with an external tool, you can import
-it into OpenStack. The key pair can be used for multiple instances
-that belong to a project. For more information, see section
-\ref{import-a-key-pair}.
-
-\strong{Note:} The public keys from your VSC account are automatically
-available in your VSC Cloud projects, so you can immediately inject
-one of your existing into your instances.  Of course, you can also
-import new keys into OpenStack, which are not coupled to your VSC
-account.  If you want to give other parties SSH access to VM's, you
-must manage the keys using some other method.  \strong{Never} upload
-SSH keys for other users to your VSC account.
-
-\strong{Note:} Every OpenStack user account has its own collection of
-SSH keys for every project.  To share a public key between multiple
-users of the same project, each user needs to import it in the
-OpenStack project.
-
-\subsection*{Add a key pair}\label{add-a-key-pair}
-\begin{enumerate}
-\item Open the Compute tab.
-\item Click the Key Pairs tab, which shows the key pairs that are
-  available for this project.
-\item Click Create Key Pair.
-\item In the Create Key Pair dialog box, enter a name for your key
-  pair, and click Create Key Pair.
-\item Respond to the prompt to download the key pair.
-\item Save the \textbf{*.pem} file locally.
-\item To change its permissions so that only you can read and write to
-  the file, run the following command:
-
-  \begin{prompt}
-      %\shellcmd{chmod 0600 yourPrivateKey.pem}
-  \end{prompt}
-
-  \strong{Note:} If you are using the \gls{OpenStack Dashboard} from a
-  Windows computer, use PuTTYgen to load the \textbf{*.pem} file and
-  convert and save it as \textbf{*.ppk}.  For more information see the
-  \href{https://winscp.net/eng/docs/ui_puttygen}{\emph{WinSCP web page
-      for PuTTYgen}}, and chapter 2 of the
-  \href{https://hpcugent.github.io/vsc\_user\_docs}{introduction to
-    HPC at VSC}.
-
-\item To make the key pair known to SSH, run the \textbf{ssh-add}
-  command.
-
-  \begin{prompt}
-    %\shellcmd{ssh-add yourPrivateKey.pem}
-  \end{prompt}
-\end{enumerate}
-
-\subsection*{Import a key pair}\label{import-a-key-pair}
-\begin{enumerate}
-\item Open the Compute tab.
-\item Click the Key Pairs tab, which shows the key pairs that are
-  available for this project.
-\item Click Import Key Pair.
-\item In the Import Key Pair dialog box, enter the name of your key
-  pair, copy the public key into the Public Key box, and then click
-  Import Key Pair.
-\end{enumerate}
-
-The Compute database registers the public key of the key pair.
-
-The \gls{OpenStack Dashboard} lists the key pair on the Key Pairs tab.
-
 \section{The \_vm and \_nfs networks}\label{sec:_vm-_nfs-networks}
 Each project in the VSC cloud has its own network
 \texttt{\emph{<projectname>}\_vm} and --- if the project uses shares
@@ -306,6 +214,98 @@ the Actions column or on the overview page.  This will remove the
 floating IP from the pool assigned to your project, something which
 you, as a regular user, cannot undo.  If you've accidentally released
 a floating IP, contact \cloudinfo to have it restored.
+
+\section{Security Groups}\label{sec:security-groups}
+OpenStack security groups are sets of IP filter rules that define
+networking access.  You can then assign one or more security groups to
+your instances.
+
+In the VSC cloud, each project contains a default security group,
+which allows you to ping instances and connect using SSH on the
+default port 22.  If you want to access other ports on your instances,
+create new security groups with the appropriate rules and assign them
+to the instances.
+
+\section{SSH key pairs}\label{sec:ssh-key-pairs}
+When an instance is launched, OpenStack can automatically install a
+public SSH key on it, so as to give anyone with the corresponding
+private key admin access.  For this ``key pair injection\footnote{The
+  OpenStack documentation and interfaces consistently refer to ``SSH
+  pairs'', but of course only the public key of each pair is stored in
+  the OpenStack environment, while the private key should be kept
+  secure by the owner.}'' to work, the image that the instance is
+based on must contain the \textbf{cloud-init} package, or have in
+place another mechanism in place that will interact with the OpenStack
+metadata server to install the appropriate key.  For general
+instructions on SSH keys, we refer to chapter 2 of our
+\href{https://hpcugent.github.io/vsc\_user\_docs}{introduction to
+  HPC}.
+
+If you have generated a key pair with an external tool, you can import
+it into OpenStack. The key pair can be used for multiple instances
+that belong to a project. For more information, see section
+\ref{import-a-key-pair}.
+
+\strong{Note:} The public keys from your VSC account are automatically
+available in your VSC Cloud projects, so you can immediately inject
+one of your existing into your instances.  Of course, you can also
+import new keys into OpenStack, which are not coupled to your VSC
+account.  If you want to give other parties SSH access to VM's, you
+must manage the keys using some other method.  \strong{Never} upload
+SSH keys for other users to your VSC account.
+
+\strong{Note:} Every OpenStack user account has its own collection of
+SSH keys for every project.  To share a public key between multiple
+users of the same project, each user needs to import it in the
+OpenStack project.
+
+\subsection*{Add a key pair}\label{add-a-key-pair}
+\begin{enumerate}
+\item Open the Compute tab.
+\item Click the Key Pairs tab, which shows the key pairs that are
+  available for this project.
+\item Click Create Key Pair.
+\item In the Create Key Pair dialog box, enter a name for your key
+  pair, and click Create Key Pair.
+\item Respond to the prompt to download the key pair.
+\item Save the \textbf{*.pem} file locally.
+\item To change its permissions so that only you can read and write to
+  the file, run the following command:
+
+  \begin{prompt}
+      %\shellcmd{chmod 0600 yourPrivateKey.pem}
+  \end{prompt}
+
+  \strong{Note:} If you are using the \gls{OpenStack Dashboard} from a
+  Windows computer, use PuTTYgen to load the \textbf{*.pem} file and
+  convert and save it as \textbf{*.ppk}.  For more information see the
+  \href{https://winscp.net/eng/docs/ui_puttygen}{\emph{WinSCP web page
+      for PuTTYgen}}, and chapter 2 of the
+  \href{https://hpcugent.github.io/vsc\_user\_docs}{introduction to
+    HPC at VSC}.
+
+\item To make the key pair known to SSH, run the \textbf{ssh-add}
+  command.
+
+  \begin{prompt}
+    %\shellcmd{ssh-add yourPrivateKey.pem}
+  \end{prompt}
+\end{enumerate}
+
+\subsection*{Import a key pair}\label{import-a-key-pair}
+\begin{enumerate}
+\item Open the Compute tab.
+\item Click the Key Pairs tab, which shows the key pairs that are
+  available for this project.
+\item Click Import Key Pair.
+\item In the Import Key Pair dialog box, enter the name of your key
+  pair, copy the public key into the Public Key box, and then click
+  Import Key Pair.
+\end{enumerate}
+
+The Compute database registers the public key of the key pair.
+
+The \gls{OpenStack Dashboard} lists the key pair on the Key Pairs tab.
 
 %%% Local Variables:
 %%% mode: latex
