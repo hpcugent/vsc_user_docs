@@ -3,24 +3,22 @@ The security and accessibility of your cloud resources is governed by
 a few different aspects, which we discuss more detail in the following
 sections:
 \begin{itemize}
+\item Instances must connect to the project's \_vm network in order to
+  communicate (see section \ref{sec:_vm-_nfs-networks}).
 \item Each cloud project can use one floating IP, a public IP address
-  which you'll need to connect to the resources you want to access.
+  which you'll need to link to the resources you want to access
+  (see section \ref{sec:floating-ip}).
 \item By default, the UGent firewall blocks most IP addresses and
   ports.  Only the port range 50000-60000 for the floating IP
   addresses is open by default.  Contact \cloudinfo if you need to
   access other ports from the outside world.
-\item Instances must connect to the project's \_vm network in order to
-  communicate.
 \item The OpenStack environment has its own internal firewalls, which
-  block most ports of your instances.  If you want to access specific
-  ports of your instances, you must create ``Security Groups'' which
-  allow access to those ports.
-\item If you want to access your instances using SSH key
-  authentication, you need to make sure the appropriate keys are
-  installed on the those instances.  OpenStack has some support for
-  the automatic inclusion of SSH keys for instance administrators.
-  For your convenience, public keys you have added to your VSC account
-  are automatically available in OpenStack.
+  block most ports of your instances by default.  If you want to
+  access specific ports of your instances, you must create ``Security
+  Groups'' which allow access to those ports (see section
+  \ref{sec:security-groups}).
+\item You can use one or more SSH keys from your VSC account to access
+  your instances (see section \ref{sec:ssh-key-pairs}).
 \end{itemize}
 For other access methods, or SSH authentication for a wider set of
 users, you'll need to set up some form of identity management
