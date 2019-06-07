@@ -212,13 +212,12 @@ they intercept the communication between you and the server you want
 to reach and steal valuable information.
 
 To prevent such man-in-the-middle attacks, the SSH client on your
-system keeps a list of known host keys for every IP address you have
-connected to, and verifies the host key the next time you try to
-connect to that address.  If all goes well, this check is silently
-performed in the background, but there are a number of situations
-where the check fails.  In this case, you have to look up the host key
-of your instance using the OpenStack dashboard to verify that the
-connection is secure.
+system stores the host key for every IP address you have connected to,
+and verifies the key the next time you try to connect to that address.
+If all goes well, this check is silently performed in the background,
+but there are a number of situations where the check fails.  In this
+case, you have to look up the host key of your instance in the
+OpenStack dashboard to verify that the connection is secure.
 
 \subsubsection*{Looking up an instance's host
   key}\label{sec:look-up-hostkey}
