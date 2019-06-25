@@ -500,10 +500,11 @@ just load the module and try to use the software.
 
 \subsection{Checking the general status of the HPC infrastructure}
 
-To check the general system state, check \url{https://www.vscentrum.be/en/user-portal/system-status}.
+\ifgent
+
+To check the general system state, check \url{https://www.ugent.be/hpc/en/infrastructure/status}.
 This has information about scheduled downtime, status of the system, \ldots
 
-\ifgent
 Note: the \lstinline|qstat -q| command now only shows \emph{your own jobs} on the
 \hpcInfra infrastructure (since May 2019),
 and can't be used any longer to access how 'busy' each cluster is. For example:
@@ -1113,7 +1114,7 @@ The job requests 5 compute nodes with two cores on each node (ppn stands for
 The job requests just one node, but it should have an Intel Westmere processor.
 A list with site-specific properties can be found in the next section or in the
 User Portal
-(``Available hardware''-section)\footnote{URL: \url{https://www.vscentrum.be/infrastructure/hardware}}
+(``Available hardware''-section)\footnote{URL: \url{https://vscdocumentation.readthedocs.io/en/latest/hardware.html}}
 of the VSC website.
 
 These options can either be specified on the command line, e.g.
