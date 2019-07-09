@@ -106,7 +106,7 @@ terminal.
 
   \begin{enumerate}
     \item  In \keys{Parameters} (at the bottom of the window), choose
-      ``RSA'' and keep the number of bits in the key to 2048.
+      ``RSA'' and set the number of bits in the key to 4096.
 
     \begin{center}
     \includegraphics*[width=3.49in, height=3.38in, keepaspectratio=false]{ch2-puttygen-bits}
@@ -233,9 +233,9 @@ ls: .ssh: No such file or directory
 
   You will need to generate a new key pair, when:
   \begin{enumerate}
-    \item  you don't have a key pair yet,
-    \item  you forgot the passphrase protecting your private key,
-    \item  or your private key was compromised.
+    \item  you don't have a key pair yet
+    \item  you forgot the passphrase protecting your private key
+    \item  or your private key was compromised
   \end{enumerate}
 
   For extra security, the private key itself can be encrypted using a ``passphrase'',
@@ -246,7 +246,7 @@ ls: .ssh: No such file or directory
   new public/private key pair for each machine.
 
 \begin{prompt}
-%\shellcmd{ssh-keygen}%
+%\shellcmd{ssh-keygen -t rsa -b 4096}%
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/user/.ssh/id_rsa):
 Enter passphrase (empty for no passphrase):
