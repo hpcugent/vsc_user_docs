@@ -37,7 +37,7 @@ and gas exploration, molecular modelling (computing the structures and
 properties of chemical compounds, biological macromolecules, polymers, and
 crystals), and physical simulations (such as simulations of the early moments
 of the universe, airplane and spacecraft aerodynamics, the detonation of
-nuclear weapons, and nuclear fusion).
+nuclear weapons, and nuclear fusion).%
 \footnote{Wikipedia: \url{http://en.wikipedia.org/wiki/Supercomputer}}
 
 \section{What is the \hpcInfra?}
@@ -70,7 +70,7 @@ The \hpc consists of:
 \strong{In technical terms}         & \strong{\dots\  in human terms}                    \\ \hline
 323 nodes and 7700 cores            & \dots\  or the equivalent of 1925 quad-core PCs    \\ \hline
 100 Terabyte of online storage     & \dots\  or the equivalent of over 20000 DVDs            \\ \hline
-up to 100 Gbit Infiniband fiber connections & \dots\  or allowing to transfer 3 DVDs per second \\ \hline
+up to 100 Gbit InfiniBand fiber connections & \dots\  or allowing to transfer 3 DVDs per second \\ \hline
 \end{tabular}
 \end{center}
 \fi
@@ -94,6 +94,7 @@ leibniz:
   \item 144 compute nodes with 2 14-core Intel E5-2680v4 CPUs (Broadwell generation, 2.4 GHz) and 128 GB RAM
   \item 8 nodes with 2 14-core Intel E5-2680v4 CPUs (Broadwell generation, 2.4 GHz) and 256 GB RAM
   \item 2 nodes with 2 14-core Intel E5-2680v4 CPUs (Broadwell generation, 2.4 GHz), 128 GB RAM and two NVIDIA Tesla P100 GPUs with 16 GB HBM2 memory per GPU
+  \item 1 node with 1 12-core Intel Xeon Gold 6126 (Skylake generation, 2.6 GHz), 96 GB RAM and 2 NEC SX-Aurora Vector Engines type 10B (per card 8 cores @1.4 GHz, 48 GB HBM2)
   \item 1 node with 2 14-core Intel E5-2680v4 CPUs (Broadwell generation, 2.4 GHz), 128 GB RAM and Intel Xeon Phi 7220P PCIe card with 16 GB of RAM
   \item 1 visualisation node with 2 14-core Intel E5-2680v4 CPUs (Broadwell generation, 2.4 GHz), 256 GB RAM and with a NVIDIA P5000 GPU
   \end{enumerate}
@@ -246,7 +247,7 @@ so it's useful to understand what they are.
 
 Modern servers, also referred to as \emph{(worker)nodes} in the context of HPC,
 include one or more sockets, each housing a multi-\emph{core} \emph{processor} (next to
-memory, disk(s), network cards, ...). A modern \emph{processor} consists of
+memory, disk(s), network cards, \ldots). A modern \emph{processor} consists of
 multiple CPUs or \emph{cores} that are used to execute \emph{computations}.
 
 \subsection{Parallel or sequential programs?}
@@ -281,7 +282,7 @@ getting good parallel program performance.
 
 \subsubsection{Sequential programs}
 
-Sequential software does not do calculations in parallel, i.e. it only uses
+Sequential software does not do calculations in parallel, i.e., it only uses
 \emph{one single core of a single workernode}. \strong{It does not become
 faster by just throwing more cores at it}: it can only use one core.
 
@@ -329,7 +330,7 @@ Commonly used software packages are:
 \item{in bioinformatics: beagle, Beast, bowtie, MrBayes, SAMtools}
 \item{in chemistry: ABINIT, CP2K, Gaussian, Gromacs, LAMMPS, NWChem, Quantum Espresso, Siesta, VASP}
 \item{in engineering: COMSOL, OpenFOAM, Telemac}
-\item{in mathematics: JAGS, Matlab, R}
+\item{in mathematics: JAGS, MATLAB, R}
 \item{for visuzalization: Gnuplot, ParaView.}
 \end{itemize}
 
@@ -342,7 +343,7 @@ Commonly used software packages are:
 \item{in bioinformatics: beagle, Beast, bedtools, bowtie, BWA, Mr. Bayes, TopHat, TRIQS,}
 \item{in chemistry: CP2K, Gaussian, GROMACS, Molpro, NAMD, NWChem, Siesta, Turbomole, VASP, VMD,}
 \item{in engineering: Abaqus, Ansys, Comsol, OpenFOAM,}
-\item{in mathematics: JAGS, Matlab, R, SAS,}
+\item{in mathematics: JAGS, MATLAB, R, SAS,}
 \item{for visuzalization: Gnuplot, IDL, Paraview, Tecplot, VisIt.}
 %\ldots
 \end{itemize}
