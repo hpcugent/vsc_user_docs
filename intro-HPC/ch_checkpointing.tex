@@ -47,8 +47,8 @@ be restored when the job is restarted from checkpoint.
 \subsection{PBS directives}
 
 Most PBS directives (\texttt{\#PBS \ldots} specified in the job script will be ignored.
-There are a few exceptions however, i.e. \lstinline|# PBS -N <name>| (job name)
-and all \lstinline|-l| directives (\lstinline|# PBS -l|), e.g. \lstinline|nodes|,
+There are a few exceptions however, i.e., \lstinline|# PBS -N <name>| (job name)
+and all \lstinline|-l| directives (\lstinline|# PBS -l|), e.g., \lstinline|nodes|,
 \lstinline|ppn|, \lstinline|vmem| (virtual memory limit), etc.
 Controlling other job parameters (like requested walltime per sub-job) should be
 specified on the \lstinline|csub| command line.
@@ -115,7 +115,7 @@ indication of the actual time it took to run your command, even if multiple chec
 
 The \lstinline|--resume| option allows you to resume a job from the
 last available checkpoint in case something went wrong
-(e.g. accidentally deleting a (sub)job using \lstinline|qdel|, a power outage or other system failure, \ldots).
+(e.g., accidentally deleting a (sub)job using \lstinline|qdel|, a power outage or other system failure, \ldots).
 
 Specify the job name as returned after submission (and as listed in \texttt{\$VSC\_SCRATCH/chkpt}).
 The full job name consists of the specified job name (or the script name if no job name was specified),
@@ -137,7 +137,7 @@ of the \lstinline|csub --resume| command in your message.
 flag on the \lstinline|csub| command line. This behaves the same as \lstinline|qsub|, see \autoref{sec:worker-framework-job-arrays}.
 
 
-\subsection{Pro/epilogue mimicing (\texttt{--no\_mimic\_pro\_epi})}
+\subsection{Pro/epilogue mimicking (\texttt{--no\_mimic\_pro\_epi})}
 
 The option \lstinline|--no_mimic_pro_epi| disables the workaround currently required to resolve
 a permissions problem when using actual Torque prologue/epilogue scripts. Don't use

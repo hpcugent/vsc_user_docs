@@ -132,7 +132,7 @@ E.g., \texttt{foss/\the\year{}a} is the first version of the \lstinline|foss| to
 
 The toolchains are then used to compile a lot of the software installed on
 the VSC clusters. You can recognise those packages easily as they all contain the
-name of the toolchain after the version number in their name (e.g. \lstinline|Python/2.7.12-intel-2016b|).
+name of the toolchain after the version number in their name (e.g., \lstinline|Python/2.7.12-intel-2016b|).
 Only packages compiled with the same toolchain name and version can work together without conflicts.
 
 \subsection{Loading and unloading modules}
@@ -507,7 +507,7 @@ This has information about scheduled downtime, status of the system, \ldots
 
 Note: the \lstinline|qstat -q| command now only shows \emph{your own jobs} on the
 \hpcInfra infrastructure (since May 2019),
-and can't be used any longer to access how 'busy' each cluster is. For example:
+and can't be used any longer to access how ``busy'' each cluster is. For example:
 
 \begin{prompt}
 %\shellcmd{qstat -q}%
@@ -591,7 +591,7 @@ having to enter any information or to press any buttons during program
 execution. All the necessary input or required options have to be specified on
 the command line, or needs to be put in input or configuration files.
 
-As an example, we will run a perl script, which you will find in the examples
+As an example, we will run a Perl script, which you will find in the examples
 subdirectory on the \hpc. When you received an account to the \hpc a
 subdirectory with examples was automatically generated for you.
 
@@ -749,7 +749,7 @@ extension ``.o'' (output) and ``.e'' (error), respectively, and the job number
 ('\jobnumber' for this example). The error file will be empty, at least if all went
 well. If not, it may contain valuable information to determine and remedy the
 problem that prevented a successful run. The standard output file will contain
-the results of your calculation (here, the output of the perl script)
+the results of your calculation (here, the output of the Perl script)
 
 \ifgent
 \subsection{When will my job start?}
@@ -759,14 +759,14 @@ since most currently running jobs will finish before their requested walltime
 expires, and new jobs by may be submitted by other users that are assigned a higher
 priority than your job(s).
 
-The \hpcInfra clusters use a fair-share sheduling policy (see \autoref{ch:hpc-policies}). There is no guarantee on when a
+The \hpcInfra clusters use a fair-share scheduling policy (see \autoref{ch:hpc-policies}). There is no guarantee on when a
 job will start, since it depends on a number of factors. One of these factors is
 the priority of the job, which is determined by
 \begin{itemize}
     \item historical use: the aim is to balance usage over users, so
-        infrequent (in terms of total compute time used) users get a highter priority
+        infrequent (in terms of total compute time used) users get a higher priority
 
-    \item requested resources (amount of cores, walltime, memory, ...)
+    \item requested resources (amount of cores, walltime, memory, \ldots)
 
     \item time waiting in queue: queued jobs get a higher priority over time
 
@@ -775,9 +775,9 @@ the priority of the job, which is determined by
 
 \end{itemize}
 Some other factors are how busy the cluster is, how many workernodes are active,
-the resources (e.g. number of cores, memory) provided by each workernode, \ldots
+the resources (e.g., number of cores, memory) provided by each workernode, \ldots
 
-It might be beneficial to request less resources (e.g. not requesting all cores
+It might be beneficial to request less resources (e.g., not requesting all cores
 in a workernode), since the scheduler often finds a ``gap'' to fit the job into
 more easily.
 
@@ -821,7 +821,7 @@ If you need software that is not listed, request it via https://www.ugent.be/hpc
 \end{prompt}
 
 As indicated in the output above, each \lstinline|cluster| module is a so-called sticky
-module, i.e. it will not be unloaded when \lstinline|module purge| (see \autoref{subsec:purging-modules}) is used.
+module, i.e., it will not be unloaded when \lstinline|module purge| (see \autoref{subsec:purging-modules}) is used.
 
 The output of the various commands interacting with jobs (\lstinline|qsub|, \lstinline|stat|, \ldots)
 all depend on which \lstinline|cluster| module is loaded.
@@ -1114,7 +1114,7 @@ The job requests 5 compute nodes with two cores on each node (ppn stands for
 The job requests just one node, but it should have an Intel Westmere processor.
 A list with site-specific properties can be found in the next section or in the
 User Portal
-(``Available hardware''-section)\footnote{URL: \url{https://vscdocumentation.readthedocs.io/en/latest/hardware.html}}
+(``VSC hardware'' section)\footnote{URL: \url{https://vscdocumentation.readthedocs.io/en/latest/hardware.html}}
 of the VSC website.
 
 These options can either be specified on the command line, e.g.
@@ -1158,7 +1158,7 @@ are not really needed and only defined for compatibility with other VSC clusters
 \begin{tabular}{|p{0.7in}|p{5.3in}|} \hline
 \strong{Property} & \strong{Explanation}                                        \\ \hline
 shanghai          & only use AMD Shanghai processors (AMD 2378) \\ \hline
-magnycours        & only use AMD Magnucours processors (AMD 6134) \\ \hline
+magnycours        & only use AMD Magnycours processors (AMD 6134) \\ \hline
 interlagos        & only use AMD Interlagos processors (AMD 6272) \\ \hline
 barcelona         & only use AMD Shanghai and Magnycours processors \\ \hline
 amd               & only use AMD processors \\ \hline

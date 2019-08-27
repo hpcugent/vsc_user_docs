@@ -11,15 +11,14 @@ Before you can really start using the \hpc clusters, there are several things yo
 \item  Often several versions of \textbf{software packages and libraries} are installed, so you need to select the ones you need. To manage different versions efficiently, the VSC clusters use so-called \textbf{modules}, so you will need to select and load the modules that you need.
 \end{enumerate}
 
-\section{First Time connection to the HPC infrastucture}
+\section{First Time connection to the HPC infrastructure}
 \label{sec:first-time-connection-to-the-hpc}
 
 If you have any issues connecting to the \hpc after you've followed these steps,
 see \autoref{sec:connecting-issues} to troubleshoot.
 
 \ifantwerpen
- The \hpc is only accessible from within the \university network, but you can
- get external access (e.g., from home) by using a VPN connection.
+ When connecting from outside Belgium, you need a VPN client to connect to the \university network first.
 \fi
 
 \ifwindows
@@ -210,7 +209,7 @@ see \autoref{sec:connecting-issues} to troubleshoot.
 
   Here, user \userid wants to make a connection to the ``\hpcname'' cluster at
   \university via the login node ``\loginnode'', so replace \userid with your own
-  vsc id in the above command.
+  VSC id in the above command.
 
   The first time you make a connection to the login node, you will be asked to
   verify the authenticity of the login node. Please check section~\ref{sec:warning-message-new-host}
@@ -426,8 +425,8 @@ Last login: Mon Feb  2 17:58:13 2015 from mylaptop.uantwerpen.be
 Welcome to HOPPER!
 
 Useful links:
-  https://www.vscentrum.be/en/user-portal (including system status)
-  https://www.vscentrum.be/infrastructure/hardware/hardware-ua
+  https://vscdocumentation.readthedocs.io
+  https://vscdocumentation.readthedocs.io/en/latest/antwerp/tier2_hardware.html
   https://www.uantwerpen.be/hpc
 
 Questions or problems? Do not hesitate and contact us:
@@ -506,7 +505,7 @@ identifier and a region identifier.
 
 %% TODO: how to fix this on windows/putty? generally this is not an issue I believe
 \ifmacORlinux
-Open the  ~/.bashrc on your local machine with your
+Open the  \lstinline|.bashrc| on your local machine with your
 favourite editor and add the following lines:
 
 \begin{prompt}
@@ -522,8 +521,8 @@ export LANG="en_US.UTF-8"
 \begin{tip}[vi]
 To start entering text in vi: move to the place you want to start entering text
 with the arrow keys and type ``i'' to switch to insert mode.  You can easily
-exit vi by entering: ``<esc>:wq''
-To exit vi without saving your changes, enter ``<esc>:q!''
+exit vi by entering: ``\keys{ESC}:wq''
+To exit vi without saving your changes, enter ``\keys{ESC}:q!''
 \end{tip}
 
 or alternatively (if you are not comfortable with the Linux editors), again on your local machine:
@@ -797,7 +796,7 @@ dataset: not a regular file
     \keys{cmd} + \keys{k}
   \fi
 
-  This should open up a address bar where you can enter a URL. Alternatively, look for the 'connect to server' option in your file browsers menu.
+  This should open up a address bar where you can enter a URL. Alternatively, look for the ``connect to server'' option in your file browsers menu.
 
   Enter: \emph{sftp://\userid{}@\loginnode/} and press enter.
 

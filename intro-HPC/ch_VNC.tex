@@ -2,7 +2,7 @@
 \label{ch:vnc}
 
 \ifgent
-\strong{VNC is still available at UGent site but we encorage our users to replace VNC by X2Go client}.
+\strong{VNC is still available at UGent site but we encourage our users to replace VNC by X2Go client}.
 Please see \autoref{ch:x2go} for more information.
 \fi
 
@@ -191,7 +191,7 @@ value you picked for your intermediate port}):
 If you see no matching lines, then the port you picked is still available, and you can continue.
 
 If you see one or more matching lines as shown below, \strong{you must disconnect the first SSH tunnel,
-pick a different intermedate port, and set up the first SSH tunnel again using the new value}.
+pick a different intermediate port, and set up the first SSH tunnel again using the new value}.
 
 \begin{prompt}
 %\shellcmd{netstat -an | grep -i listen | grep tcp | grep 12345}%
@@ -218,7 +218,7 @@ With this, we are forwarding port \lstinline|12345| on the login node we are con
 to as \lstinline|localhost|) through to port \lstinline|5906| on our target login node (\texttt{\loginhost}).
 
 Combined with the first SSH tunnel, port \lstinline|5906| on our workstation is now connected to
-port \lstinline|5906| on the login node where oru VNC server is running (via the intermediate port \lstinline|12345|
+port \lstinline|5906| on the login node where our VNC server is running (via the intermediate port \lstinline|12345|
 on the login node we ended up one with the first SSH tunnel).
 
 \strong{Do not forget to change the intermediate port (\lstinline|12345|), destination port (\lstinline|5906|),
