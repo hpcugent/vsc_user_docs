@@ -17,6 +17,9 @@ install:
     - pdflatex --version ; latexmk --version
 script:
     - cd $TRAVIS_BUILD_DIR
+    # make sure that last non-zero exit code of piped command determines exit code (not simply the last command)
+    # see https://unix.stackexchange.com/questions/390281/bash-pipelines-exit-status-differs-in-script
+    - set -o pipefail
     - ./add-timestamp.sh
     - make all 2>&1 | tee $LOGFILE
     - ./run-post-checks.sh
