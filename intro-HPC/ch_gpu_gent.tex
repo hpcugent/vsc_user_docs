@@ -1,0 +1,95 @@
+\chapter{Using the GPU cluster at HPC-UGent}
+\label{ch:gpu_ugent}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Pilot phase}
+\label{sec:gpu_ugent_pilot}
+
+To submit jobs to the HPC-UGent GPU cluster nicknamed \lstinline|joltik| during the pilot phase, first use:
+
+\begin{prompt}
+%\shellcmd{module swap cluster/.joltik}
+\end{prompt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Requesting (GPU) resources %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Requesting (GPU) resources}
+\label{sec:gpu_ugent_resources}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%
+% Attention points %
+%%%%%%%%%%%%%%%%%%%%
+
+\section{Attention points}
+\label{sec:gpu_ugent_attention_points}
+
+Some important attention points:
+
+\begin{itemize}
+\item blah blah blah
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%
+% Software %
+%%%%%%%%%%%%
+
+\section{Software with GPU support}
+\label{sec:gpu_ugent_software}
+
+Use \lstinline|module avail| to check for centrally installed software.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%
+% TensorFlow %
+%%%%%%%%%%%%%%
+
+\subsection{TensorFlow}
+\label{sec:gpu_ugent_software_tensorflow}
+
+\strong{Note: for running TensorFlow calculations on multiple GPUs (either within a single node, or using the GPUs
+from multiple different workernodes), use \lstinline|Horovod|, see section~\ref{sec:gpu_ugent_software_horovod}.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%
+% Horovod %
+%%%%%%%%%%%
+
+\subsection{Horovod}
+\label{sec:gpu_ugent_software_horovod}
+
+\subsubsection{Example Horovod job script}
+\label{sec:gpu_ugent_software_horovod_example_job_script}
+
+\examplecode{bash}{TensorFlow_GPU_joltik.sh}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%
+% PyTorch %
+%%%%%%%%%%%
+
+\subsection{PyTorch}
+\label{sec:gpu_ugent_software_pytorch}
