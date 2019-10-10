@@ -41,7 +41,6 @@ pilot group (see \ref{sec:gpu_ugent_pilot}).} If not, you will see the following
 
 
 \begin{prompt}
-salloc: error:
 Job submit/allocate failed: User's group not permitted to use this partition
 \end{prompt}
 
@@ -81,7 +80,7 @@ There are 2 main ways to ask for GPUs as part of a job:
   The \lstinline|-l gpus=Z| is convenient is you only need one
   node and you are fine with the default number of cores per GPU.
   The \lstinline|-l nodes=...:gpus=Z| notation is required if you want to run with full control or in multinode cases like MPI jobs.
-  In you do not specify the number of GPUs, you get by default 1 GPU.
+  If you do not specify the number of GPUs by just using \lstinline|-l gpus|, you get by default 1 GPU.
 \item As a resource of it's own, via \lstinline|--gpus X|.
   In this case however, you are \emph{not} guaranteed that the GPUs are on the same node,
   so your script or code must be able to deal with this.
@@ -141,8 +140,6 @@ Some important attention points:
   % TODO: this is still not the case, due to bugs in slurm. For now, you will probably do not get optimal placement and/or more
   %than one visible device.
   %TODO: we need an easy way to toggle this behaviour.
-\item Interactive jobsubmission with GPUs will result in a shell that has no access to the requested GPUs. To get access, you need to use
-  \lstinline|wurker| (or Slurm \lstinline|srun|). This is a sort-of bug/feature in Slurm.
   %TODO: should be configurable from qsub somehow. Or we need to wait for fix or patch it ourself.
 \end{itemize}
 
@@ -189,10 +186,6 @@ Horovod can be used for (multi-node) multi-GPU TensorFlow/PyTorch calculations.
 
 Please consult \lstinline|module avail Horovod| for a list of installed versions.
 
-%\subsubsection{Example Horovod job script}
-%\label{sec:gpu_ugent_software_horovod_example_job_script}
-%\examplecode{bash}{TensorFlow_GPU_joltik.sh}
-
 Horovod supports TensorFlow, Keras, PyTorch and MxNet (see \url{https://github.com/horovod/horovod#id9}), but should be run as an MPI application with \lstinline|mypmirun|.
 (Horovod also provides it's own wrapper \lstinline|horovodrun|, not sure if it handles placement and others correctly).
 
@@ -232,6 +225,10 @@ Please consult \lstinline|module avail TensorFlow| for a list of installed versi
 
 \strong{Note: for running TensorFlow calculations on multiple GPUs and/or on more than one workernode,
 use \lstinline|Horovod|, see section~\ref{sec:gpu_ugent_software_horovod}.}
+
+\subsubsection{Example TensorFlow job script}
+\label{sec:gpu_ugent_software_tensorflow_example_job_script}
+\examplecode{bash}{TensorFlow_GPU_joltik.sh}
 
 %TODO: add intel cpu params (only for cpu, but mention it anyway) and data format (channel_first  / NCHW)
 % OMP_NUM_THREADS=$PBS_VARIABLE_FOR_CORES
