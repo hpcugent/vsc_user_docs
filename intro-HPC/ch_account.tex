@@ -133,13 +133,25 @@ terminal.
     \includegraphics*[width=3.39in, height=3.28in, keepaspectratio=false]{ch2-puttygen-password}
     \end{center}
 
-    \item  Finally, save both the public and private keys in a folder on your
+    \item  Save both the public and private keys in a folder on your
       personal computer (We recommend to create and put them in the folder
       ``C:\textbackslash Users\textbackslash \%USERNAME\%\textbackslash
       AppData\textbackslash Local\textbackslash PuTTY\textbackslash .ssh'')
       with the buttons \keys{Save public key} and \keys{Save private key}.
       We recommend using the name ``\strong{id\_rsa.pub}'' for the public key,
       and ``\strong{id\_rsa.ppk}'' for the private key.
+    \item  Finally, save an ``OpenSSH'' version of your private key (in particular for later ``X2Go'' usage)
+      by entering the ``Conversions'' menu and selecting ``Export OpenSSH key''
+      (do \strong{not} select the ``force new file format'' variant).
+      Save the file in the same location as in the previous step
+      with filename ``\strong{id\_rsa}''.
+      (If there is no ``Conversions'' menu, you must update your ``puttygen'' version.
+      If you want to do this conversion afterwards, you can start with loading an exsiting ``id\_rsa.ppk''
+      and only do this conversions export.)
+    \begin{center}
+    \includegraphics*[width=2.80in, height=1.13in, keepaspectratio=false]{ch2-puttygen-conversions-export_openssh}
+    \end{center}
+
   \end{enumerate}
 
   If you use another program to generate a key pair, please remember that they
@@ -500,7 +512,7 @@ You should follow these steps.
 \ifwindows
  \item Create a new public/private SSH key pair from Putty. Repeat the process described in section~\ref{sec:generate-key-pair}.
 \fi %ifwindows
- \item Go to \url{https://account.vscentrum.be/django/vo/edit}
+ \item Go to \url{https://account.vscentrum.be/django/account/edit}
  \item Upload the new SSH public key using the \strong{Add public key} section.
  \item (optional) If you lost your key, you can delete the old key on the same page. You should keep at least one valid public SSH key in your account.
  \item Take into account that it will take some time before the new SSH public key is active in your account on the system; waiting for 15-30 minutes should be sufficient.
