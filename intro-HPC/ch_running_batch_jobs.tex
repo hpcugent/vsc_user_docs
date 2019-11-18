@@ -720,6 +720,10 @@ The qsub command returns a job identifier on the HPC cluster. The important
 part is the number (e.g., ``\jobnumber''); this is a unique identifier for the job
 and can be used to monitor and manage your job.
 
+\underbar{Remark}: the modules that were loaded when you submitted the job won't be loaded
+when the job is started. So you should reload them in your jobscript. This can be
+very tedious but you can use the before mentioned module collections.
+
 Your job is now waiting in the queue for a free workernode to start on.
 
 Go and drink some coffee \dots\ but not too long. If you get impatient you can
