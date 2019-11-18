@@ -140,13 +140,13 @@ terminal.
       with the buttons \keys{Save public key} and \keys{Save private key}.
       We recommend using the name ``\strong{id\_rsa.pub}'' for the public key,
       and ``\strong{id\_rsa.ppk}'' for the private key.
-    \item  Finally, save an ``OpenSSH'' version of your private key (in particular for later ``X2Go'' usage)
-      by entering the ``Conversions'' menu and selecting ``Export OpenSSH key''
+    \item  Finally, save an ``OpenSSH'' version of your private key (in particular for later ``X2Go'' usage,
+      see \autoref{ch:x2go}) by entering the ``Conversions'' menu and selecting ``Export OpenSSH key''
       (do \strong{not} select the ``force new file format'' variant).
       Save the file in the same location as in the previous step
       with filename ``\strong{id\_rsa}''.
       (If there is no ``Conversions'' menu, you must update your ``puttygen'' version.
-      If you want to do this conversion afterwards, you can start with loading an exsiting ``id\_rsa.ppk''
+      If you want to do this conversion afterwards, you can start with loading an existing ``id\_rsa.ppk''
       and only do this conversions export.)
     \begin{center}
     \includegraphics*[width=2.80in, height=1.13in, keepaspectratio=false]{ch2-puttygen-conversions-export_openssh}
@@ -284,11 +284,11 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
   It is possible to setup a SSH agent in Windows. This is an optional configuration to help
   you to keep all your SSH keys (if you have several) stored in the same key ring to avoid to type the
   SSH key password each time. The SSH agent is also necessary to enable SSH hops with key forwarding from Windows.
-  
-  \strong{Pageant} is the SSH authentication agent used in windows. This agent should be available 
+
+  \strong{Pageant} is the SSH authentication agent used in windows. This agent should be available
   from the PuTTY installation package \url{https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html}
   or as stand alone binary package.
-  
+
   After the installation just start the Pageant application in Windows, this will start the agent in background.
   The agent icon will be visible from the Windows panel.
   \begin{center}
@@ -296,7 +296,7 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
   \end{center}
   At this point the agent does not contain any private key. You should include the private key(s)
   generated in the previous section \autoref{sec:generate-key-pair}.
-  
+
   \begin{enumerate}
   \item  Click on \keys{Add key}
   \begin{center}
@@ -319,10 +319,10 @@ Your public key has been saved in /home/user/.ssh/id_rsa.pub.
 
   Now you can connect to the login nodes as usual. The SSH agent will know which SSH key should be used and you
   do not have to type the SSH passwords each time, this task is done by \strong{Pageant} agent automatically.
-  
+
   It is also possible to use \strong{WinSCP} with \strong{Pageant}, see \url{https://winscp.net/eng/docs/ui_pageant}
   for more details.
-  
+
 \fi % END Windows section
 
 \ifmacORlinux
