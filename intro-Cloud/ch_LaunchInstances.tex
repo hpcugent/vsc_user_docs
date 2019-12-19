@@ -47,10 +47,12 @@ an \gls{instance} from the following sources:
 
     \item[Description] You can assign a brief description of the
       virtual machine.
-    \item[Availability Zone] By default, this value is set to the
-      availability zone given by the cloud provider (for example,
-      \strong{us-west} or \strong{apac-south}).  For some cases, it
-      could be \strong{nova}.
+    \item[Availability Zone] Large-scale OpenStack systems may consist
+      of multiple availability zones, which are groups of hypervisors
+      connected to different power sources. By assigning instances to
+      different availability zones, users can protect themselves
+      against power failures.  However, the VSC cloud consists of just
+      a single zone, called \strong{nova}.
     \item[Count] To launch multiple instances, enter a value greater
       than \strong{1}. The default is \strong{1}.
     \end{description}
@@ -109,9 +111,17 @@ an \gls{instance} from the following sources:
 \item[Configuration] tab. Specify a customization script that runs
   after your instance launches.
 
-\item[Server Groups] tab.
+\item[Server Groups] tab.  You can organize instances into groups with
+  a scheduling policy.  With an ``affinity'' policy, OpenStack will
+  try to schedule those instances on the same hypervisors, which is
+  useful for instances that need to communicate with each other a lot.
+  With an ``anti-affinity'' policy, instances will be scheduled on
+  different hypervisors, which you might use for instances that
+  provide redundant copies of a single service.
 
-\item[Scheduler Hints] tab.
+\item[Scheduler Hints] tab.  By providing scheduler hints, you can get
+  more fine grained control over which hypervisor your instances are
+  scheduled on.
 
 \item[Metadata] tab. Add Metadata items to your instance.
 \end{description}
