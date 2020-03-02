@@ -1,48 +1,18 @@
-\chapter{HPC-UGent GPGPU cluster (PILOT)}
+\chapter{HPC-UGent GPGPU cluster}
 \label{ch:gpu_ugent}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Pilot phase}
-\label{sec:gpu_ugent_pilot}
-
-\strong{The \lstinline|joltik| HPC-UGent Tier-2 GPGPU cluster is currently in pilot phase,
-and is only accessible to selected VSC accounts}.
-
-If you are interested in joining the group of pilot users (\lstinline|gpilot|),
-please contact the \hpcTeam via \hpcinfo, and provide the following information:
-
-\begin{itemize}
-    \item brief motivation on why you want to join the pilot;
-    \item list of software applications (that support GPUs) you would like to use
-    \item example job that can be used as a test case (scripts, input data + short description)
-\end{itemize}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \section{Submitting jobs}
 \label{sec:gpu_ugent_jobs}
 
-To submit jobs to the HPC-UGent GPU cluster nicknamed \lstinline|joltik| during the pilot phase, first use:
+To submit jobs to the HPC-UGent GPU cluster nicknamed \lstinline|joltik|, first use:
 
 \begin{prompt}
-%\shellcmd{module swap cluster/.joltik}
+%\shellcmd{module swap cluster/joltik}
 \end{prompt}
-
-Please note the dot (\lstinline|.|) in the module name (which makes this \lstinline|cluster| module a hidden module).
 
 Then use the familiar \lstinline|qsub|, \lstinline|qstat|, etc.\ commands, taking into account the guidelines outlined
 in section~\ref{sec:gpu_ugent_resources}.
-
-\strong{Note that you will only be able to submit jobs to the \lstinline|joltik| cluster if you are a member of the
-pilot group (see \ref{sec:gpu_ugent_pilot}).} If not, you will see the following error message:
-
-
-\begin{prompt}
-Job submit/allocate failed: User's group not permitted to use this partition
-\end{prompt}
 
 \subsection{Interactive jobs}
 \label{sec:gpu_ugent_interactive_jobs}
@@ -159,6 +129,8 @@ Some important attention points:
 
 Use \lstinline|module avail| to check for centrally installed software.
 
+The subsections below only cover a couple of installed software packages, more are available.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -253,5 +225,3 @@ use \lstinline|Horovod|, see section~\ref{sec:gpu_ugent_software_horovod}.}
 
 In case of questions or problems, please contact the \hpcTeam via \hpcinfo, and clearly indicate that your question
 relates to the \lstinline|joltik| cluster by adding \lstinline|[joltik]| in the email subject.
-
-\strong{Please take into account that we may not be able to provide a quick response during the pilot phase.}
