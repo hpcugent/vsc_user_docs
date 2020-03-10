@@ -16,7 +16,7 @@ Specifying the ``optimal'' Job Parameters requires some knowledge of your
 application (e.g., how many parallel threads does my application uses, is there
 a lot of inter-process communication, how much memory does my application need)
 and also some knowledge about the \hpc infrastructure (e.g., what kind of
-multi-core processors are available, which nodes have Infiniband).
+multi-core processors are available, which nodes have InfiniBand).
 
 There are plenty of monitoring tools on Linux available to the user, which are
 useful to analyse your individual application. The \hpc environment as a
@@ -512,7 +512,7 @@ The load averages differ from CPU percentage in two significant ways:
 
 \begin{enumerate}
 \item  ``\emph{load averages}'' measure the trend of processes waiting to be run (and not only an instantaneous snapshot, as does CPU percentage); and
-\item  ``\emph{load averages}'' include all demand for all resources, e.g. CPU and also I/O and network (and not only how much was active at the time of measurement).
+\item  ``\emph{load averages}'' include all demand for all resources, e.g., CPU and also I/O and network (and not only how much was active at the time of measurement).
 \end{enumerate}
 
 \subsection{Optimal load}
@@ -723,7 +723,7 @@ time with inter-process communication.
 
 Whenever your application utilises a lot of inter-process communication (as is
 the case in most parallel programs), we strongly recommend to request nodes
-with an ``Infiniband'' network. The Infiniband is a specialised high bandwidth,
+with an ``InfiniBand'' network. The InfiniBand is a specialised high bandwidth,
 low latency network that enables large parallel jobs to run as efficiently as
 possible.
 
@@ -755,7 +755,7 @@ can specify:
 %\shellcmd{monitor -delta 60 -- matlab -nojvm -nodisplay computation.m}%
 \end{prompt}
 
-  The use of ``--'' will ensure that monitor does not get confused by MATLAB's '-nojvm' and '-nodisplay' options.
+  The use of \lstinline|--| will ensure that monitor does not get confused by MATLAB's \lstinline|-nojvm| and \lstinline|-nodisplay| options.
 
   \subsection{Exit Code}
 

@@ -1,8 +1,9 @@
 \chapter{Shared file systems using Manila}\label{cha:shared-file-systems}
 OpenStack's Manila service makes it possible to create and manage
 shared \gls{nfs} file systems for virtual machines.  This service is
-not automatically enabled in the VSC cloud, so you should contact
-\cloudinfo if you want to use shared file systems in your project.
+not automatically enabled for every VSC cloud project, so you should
+contact \cloudinfo if you want to use shared file systems in your
+project.
 
 \section*{Creating a Shared File System}\label{sec:creating-shared-file}
 Creating a shared file system using the Horizon interface is quite straightforward:
@@ -21,7 +22,7 @@ Creating a shared file system using the Horizon interface is quite straightforwa
     created.  The total available storage and the amount currently
     used are shown on the right.
   \item[Share Type] Here, you must select ``cephfsnfstype'' (the only choice).
-  \item[Metadata] You can attach additional metdata to your shared
+  \item[Metadata] You can attach additional metadata to your shared
     file system, which can be queried later on.
   \end{description}
   Other fields are not mandatory.  By default, the shared file system
@@ -42,7 +43,6 @@ obtain read or write access to your shared file system.  By default,
 in absence of any rules, a shared file system cannot be accessed by
 anyone.
 
-%TODO screenshots?
 \begin{enumerate}
 \item Open the drop-down menu in the \textbf{Actions} column for your share, and click \textbf{Manage Rules}.
 \item You can now see all Share Rules for this shared file system.
@@ -54,19 +54,19 @@ anyone.
     (``rw'') or read-only (``ro'') permission with this rule.
   \item[Access To] Here, you can specify an ip address, or an address
     range, to which the rule applies.  The addresses should be
-    specified according to the format expected by an NFS exports
-    configuration file.  The following table contains a few examples,
-    where it is assumed that the project's \_nfs network has the
-    address range 10.10.x.0/24:
-
+    specified according to the format of an NFS exports configuration
+    file.  The following table contains a few examples, assuming the
+    project's \_nfs network has the subnet 10.10.$x$.0/24, for some
+    value of $x$ (see section
+    \ref{sec:_vm-_nfs-networks}):\\
     \begin{tabular}{>{\bfseries}lp{0.7\textwidth}}
-      10.10.x.13 & Allow this single ip address.
+      10.10.$x$.13 & Allow this single ip address.
       \\ \hline
       0.0.0.0/0 & Allow any ip address.
       \\ \hline
-      10.10.x.0/24 & Allow any ip address from the project's \_nfs network.  For a non-public shared file system this has the same effect as the previous rule, because such a shared file system can only be accessed from within our project's \_nfs network anyway.
+      10.10.$x$.0/24 & Allow any ip address from the project's \_nfs network.  For a non-public shared file system this has the same effect as the previous rule, because such a shared file system can only be accessed from within our project's \_nfs network anyway.
       \\ \hline 
-      10.10.x.0/28 & Allow addresses 10.10.x.0 until 10.10.x.15.
+      10.10.$x$.0/28 & Allow addresses 10.10.$x$.0 until 10.10.$x$.15.
       \\
     \end{tabular}
 
@@ -99,12 +99,13 @@ look up the network location of your file system using the Dashboard:
 \end{enumerate}
 
 Once you know the location of your shared file system, you can mount
-it on any VM with the appropriate access rights, e.g.\ for a shared
-file system with location
-\lstinline{10.2.0.2:/volumes/_nogroup/918...a78:}
+it on any VM with the appropriate access rights, e.g.\ to mount a
+shared file system with location
+\lstinline{10.2.0.2:/volumes/_nogroup/918...a78} at mount point
+\lstinline{\mnt}:
 
 \begin{prompt}
-  %\shellcmd{sudo mount 10.2.0.2:/volumes/\_nogroup/918..a78 /mnt}
+  %\shellcmd{sudo mount 10.2.0.2:/volumes/\_nogroup/918...a78 /mnt}
 \end{prompt}
 %%% Local Variables:
 %%% mode: latex

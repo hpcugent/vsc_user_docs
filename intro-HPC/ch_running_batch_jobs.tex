@@ -132,7 +132,7 @@ E.g., \texttt{foss/\the\year{}a} is the first version of the \lstinline|foss| to
 
 The toolchains are then used to compile a lot of the software installed on
 the VSC clusters. You can recognise those packages easily as they all contain the
-name of the toolchain after the version number in their name (e.g. \lstinline|Python/2.7.12-intel-2016b|).
+name of the toolchain after the version number in their name (e.g., \lstinline|Python/2.7.12-intel-2016b|).
 Only packages compiled with the same toolchain name and version can work together without conflicts.
 
 \subsection{Loading and unloading modules}
@@ -353,10 +353,11 @@ It's also possible to get detailed information about a specific module:
 %\ifgent{}%
     You will need to load all module(s) on any one of the lines below before the "example/1.2.3" module is available to load.
 
-      cluster/delcatty
       cluster/golett
       cluster/phanpy
       cluster/swalot
+      cluster/skitty
+      cluster/victini
 %\else{}%
     This module can be loaded directly: module load example/1.2.3
 %\fi{}%
@@ -500,9 +501,26 @@ just load the module and try to use the software.
 
 \subsection{Checking the general status of the HPC infrastructure}
 
-To check the general system state, check \url{https://www.vscentrum.be/en/user-portal/system-status}.
+\ifgent
+
+To check the general system state, check \url{https://www.ugent.be/hpc/en/infrastructure/status}.
 This has information about scheduled downtime, status of the system, \ldots
 
+Note: the \lstinline|qstat -q| command now only shows \emph{your own jobs} on the
+\hpcInfra infrastructure (since May 2019),
+and can't be used any longer to access how ``busy'' each cluster is. For example:
+
+\begin{prompt}
+%\shellcmd{qstat -q}%
+Queue            Memory CPU Time Walltime Node  Run Que Lm State
+---------------- ------ -------- -------- ----  --- --- -- -----
+victini            --      --    72:00:00  --    3   9  --  E R
+                                                --- ---
+                                                 3   9
+
+Please be aware that "qstat -q" only gives information about your own jobs.
+\end{prompt}
+\else
 To check how much jobs are running in what queues, you can use the \lstinline|qstat -q|
 command:
 
@@ -522,6 +540,7 @@ q24h               --      --    24:00:00   --    0   0 --   E R
 
 Here, there are 316 jobs running on the \lstinline|long| queue, and 77 jobs queued. We
 can also see that the \lstinline|long| queue allows a maximum wall time of 72 hours.
+\fi  % ifgent
 
 \ifgent
 \subsection{Getting cluster state}
@@ -573,7 +592,7 @@ having to enter any information or to press any buttons during program
 execution. All the necessary input or required options have to be specified on
 the command line, or needs to be put in input or configuration files.
 
-As an example, we will run a perl script, which you will find in the examples
+As an example, we will run a Perl script, which you will find in the examples
 subdirectory on the \hpc. When you received an account to the \hpc a
 subdirectory with examples was automatically generated for you.
 
@@ -731,7 +750,7 @@ extension ``.o'' (output) and ``.e'' (error), respectively, and the job number
 ('\jobnumber' for this example). The error file will be empty, at least if all went
 well. If not, it may contain valuable information to determine and remedy the
 problem that prevented a successful run. The standard output file will contain
-the results of your calculation (here, the output of the perl script)
+the results of your calculation (here, the output of the Perl script)
 
 \ifgent
 \subsection{When will my job start?}
@@ -741,14 +760,14 @@ since most currently running jobs will finish before their requested walltime
 expires, and new jobs by may be submitted by other users that are assigned a higher
 priority than your job(s).
 
-The \hpcInfra clusters use a fair-share sheduling policy (see \autoref{ch:hpc-policies}). There is no guarantee on when a
+The \hpcInfra clusters use a fair-share scheduling policy (see \autoref{ch:hpc-policies}). There is no guarantee on when a
 job will start, since it depends on a number of factors. One of these factors is
 the priority of the job, which is determined by
 \begin{itemize}
     \item historical use: the aim is to balance usage over users, so
-        infrequent (in terms of total compute time used) users get a highter priority
+        infrequent (in terms of total compute time used) users get a higher priority
 
-    \item requested resources (amount of cores, walltime, memory, ...)
+    \item requested resources (amount of cores, walltime, memory, \ldots)
 
     \item time waiting in queue: queued jobs get a higher priority over time
 
@@ -757,9 +776,9 @@ the priority of the job, which is determined by
 
 \end{itemize}
 Some other factors are how busy the cluster is, how many workernodes are active,
-the resources (e.g. number of cores, memory) provided by each workernode, \ldots
+the resources (e.g., number of cores, memory) provided by each workernode, \ldots
 
-It might be beneficial to request less resources (e.g. not requesting all cores
+It might be beneficial to request less resources (e.g., not requesting all cores
 in a workernode), since the scheduler often finds a ``gap'' to fit the job into
 more easily.
 
@@ -793,7 +812,7 @@ To list the available cluster modules, you can use the \lstinline|module avail c
 \begin{prompt}
 %\shellcmd{module avail cluster/}%
 ------------------------------------------------------------------------------------ /etc/modulefiles/vsc ------------------------------------------------------------------------------------
-   cluster/delcatty (S,L)    cluster/golett (S)    cluster/phanpy (S)    cluster/skitty (S)    cluster/swalot (S)    cluster/victini (S)
+   cluster/golett (S)    cluster/phanpy (S)    cluster/skitty (S)    cluster/swalot (S)    cluster/victini (S,L)
 
   Where:
    S:  Module is Sticky, requires --force to unload or purge
@@ -803,7 +822,7 @@ If you need software that is not listed, request it via https://www.ugent.be/hpc
 \end{prompt}
 
 As indicated in the output above, each \lstinline|cluster| module is a so-called sticky
-module, i.e. it will not be unloaded when \lstinline|module purge| (see \autoref{subsec:purging-modules}) is used.
+module, i.e., it will not be unloaded when \lstinline|module purge| (see \autoref{subsec:purging-modules}) is used.
 
 The output of the various commands interacting with jobs (\lstinline|qsub|, \lstinline|stat|, \ldots)
 all depend on which \lstinline|cluster| module is loaded.
@@ -901,38 +920,22 @@ The state S can be any of  the following:
 User hold means that the user can remove the hold. System hold means that the system
 or an administrator has put the job on hold, very likely because something is wrong with it.
 Check with your helpdesk to see why this is the case.
+
+
 \section{Examining the queue}
+
+\ifgent
+
+There is currently (since May 2019) no way to get an overall view of the state of the cluster queues
+for the \hpcInfra infrastructure, due to changes to the cluster resource management software
+(and also because a general overview is mostly meaningless since it doesn't give any indication of
+the resources requested by the queued jobs).
+
+\else  % not ifgent
 
 As we learned above, Moab is the software application that actually decides
 when to run your job and what resources your job will run on.
-\ifgent
-  % Does not work in Ghent: showq is disabled as it shows information about
-  % other users.
-  For security reasons, it is not possible to see what other users are doing on
-  the clusters. As such, the PBS \strong{qstat} command only gives information
-  about your own jobs that are queued or running, ordered by \strong{JobID}.
 
-  However, you can get some idea of the load on the clusters by specifying
-  the \strong{-q} option to the \strong{qstat} command:
-
-\begin{prompt}
-%\shellcmd{qstat -q}%
-server: master15.delcatty.gent.vsc
-
-Queue            Memory CPU Time Walltime Node  Run Que Lm  State
----------------- ------ -------- -------- ----  --- --- --  -----
-short              --      --    11:59:59   --    2  24 --   E R
-default            --      --       --      --    0   0 --   E R
-debug              --      --    00:59:59   --    1   0 --   E R
-long               --      --    72:00:00   --  124 453 --   E R
-                                               ----- -----
-                                                 127   477
-\end{prompt}
-
-  In this example, 477 jobs are queued in the various queues whereas 127 jobs
-  are effectively running.
-
-\else
 \ifbrussel
   For security reasons, it is not possible to see what other users are doing on
   the clusters. As such, the PBS \strong{qstat} command only gives information
@@ -967,7 +970,7 @@ himem              --      --    120:00:0     1   0   0 --   E R
   In this example, 55 jobs are queued in the various queues whereas 501 jobs
   are effectively running.
 
-\else
+\else  % not ifbrussel
   You can look at
   the queue by using the PBS \strong{qstat} command or the Moab
   \strong{showq} command. By default, \strong{qstat} will display the queue
@@ -989,8 +992,7 @@ blocked jobs: 243
 Total jobs:  539
 \end{prompt}
 
-\fi
-\fi
+\fi % ifbrussel
 
 \ifantwerpen
 And to get the full detail of all the jobs, which are in the system:
@@ -1020,11 +1022,8 @@ JOBID   USERNAME     STATE PROCS WCLIMIT            QUEUETIME
 252 blocked jobs
 Total jobs:  540
 \end{prompt}
-\fi
+\fi  % not ifantwerpen
 
-\ifgent
-  %% Again, don't show because showq does not work
-\else
 \ifbrussel
 \else
   There are 3 categories, the \strong{active}, \strong{eligible} and \strong{blocked} jobs.
@@ -1057,7 +1056,8 @@ Total jobs:  540
     \end{description}
   \end{description}
 \fi
-\fi
+
+\fi % ifgent
 
 \section{Specifying job requirements}
 
@@ -1115,7 +1115,7 @@ The job requests 5 compute nodes with two cores on each node (ppn stands for
 The job requests just one node, but it should have an Intel Westmere processor.
 A list with site-specific properties can be found in the next section or in the
 User Portal
-(``Available hardware''-section)\footnote{URL: \url{https://www.vscentrum.be/infrastructure/hardware}}
+(``VSC hardware'' section)\footnote{URL: \url{https://vscdocumentation.readthedocs.io/en/latest/hardware.html}}
 of the VSC website.
 
 These options can either be specified on the command line, e.g.
@@ -1136,99 +1136,6 @@ cd $PBS_O_WORKDIR
 
 Note that the resources requested on the command line will override those
 specified in the PBS file.
-
-\subsection{Available job categories (TORQUE queues)}
-
-In order to guarantee a fair share access to the computer resources to all
-users, only a limited number of jobs with certain walltimes are possible per
-user.
-
-We therefore classify the submitted jobs in categories (confusingly also called
-queues), depending on the their walltime specification.  A user is allowed to
-run up to a certain maximum number of jobs in each of these walltime
-categories.
-
-The currently defined walltime categories for the \hpc
-are:
-
-\inputsite{queue-table}
-
-% I suggest to strike this comment. We will only instill anticipation in our users
-%\underbar{Remark:} As the infrastructure of the \hpc is constantly expanding
-%and evolving, it can be anticipated that also the limits of the categories can
-%be changed over time.
-
-\iffalse
-% TODO : already adapt this text according to the new common user experience rules, and make it general....
-When a user submits a job with a walltime of 6 days, the queue manager will
-put the job in the walltime category 3 days--7 days.  The user can submit up to 400 jobs with
-this high walltimes (queueable = 400) on hopper, but only 50 of those jobs will be eligible
-for execution (runnable=50) at the same time.  A detailed description of the
-fair-share mechanisms will follow in \autoref{ch:hpc-policies}. For longer running jobs,
-\emph{checkpointing}
-%(See \autoref{ch:checkpointing}), https://github.com/hpcugent/vsc_user_docs/issues/205
-is necessary.
-\fi
-
-\iffalse
-Apart from specifying the \emph{walltime}, you can also explicitly define the
-queue you're submitting your job to.
-
-To specify the queue, add:
-
-\begin{prompt}
--q queuename
-\end{prompt}
-to the qsub command line, or
-\begin{code}{bash}
-#PBS -q queuename
-\end{code}
-
-to the job script, where \emph{queuename} is one of the possible queues shown
-above.
-
-A maximum \emph{walltime} is associated with each queue.
-
-The queue category logic is:
-
-\begin{tabular}{|p{0.9in}|p{2.0in}|p{2.0in}|} \hline
-                                     & \strong{No walltime specified}                                          & \strong{Walltime specified} \\ \hline
-\strong{No queue \newline specified} & The job is submitted in the qshort queue with a walltime of 1 hour.     & The job is submitted in the proper queue in accordance with the given walltime. \\ \hline
-\strong{Queue \newline specified}    & The job is submitted in your specified
-  queue with q walltime of 1 hour. & The job is submitted in the specified
-  queue with the specified walltime. If the specified \textit{walltime} is
-  larger than the maximal \textit{walltime} of the requested queue, the job
-  cannot be submitted. \\ \hline
-\end{tabular}
-
-\underbar{Remark:} It is highly recommended to specify a walltime at all times
-in all your job scripts. Only for some short test-runs, a walltime
-specification could be omitted.
-
-When a user tries to submit more jobs in a certain walltime category than the
-maximum number of queable jobs, the submission will fail. The scheduler will
-also enforce that no more than the maximum of runnable jobs per category are
-being executed at the same time.
-
-To get basic information about the queues, the command \strong{qstat -q} is used:
-
-\inputsite{qstat-q-output}
-
-The number of jobs currently running in the queue is shown in the Run column,
-whereas the number of jobs waiting to get started is shown in the Queue column.
-The maximum walltime that is accepted by the queue is shown in the Walltime
-column.
-
-To obtain more detailed information on the queues the following command can be
-used:
-
-\begin{prompt}
-%\shellcmd{qstat -f -Q <queuename>}%
-\end{prompt}
-
-This will list additional restrictions such as the maximum walltime of the jobs
-and the maximum number of jobs that a user can have in that queue.
-\fi
 
 \subsection{Node-specific properties}
 
@@ -1252,7 +1159,7 @@ are not really needed and only defined for compatibility with other VSC clusters
 \begin{tabular}{|p{0.7in}|p{5.3in}|} \hline
 \strong{Property} & \strong{Explanation}                                        \\ \hline
 shanghai          & only use AMD Shanghai processors (AMD 2378) \\ \hline
-magnycours        & only use AMD Magnucours processors (AMD 6134) \\ \hline
+magnycours        & only use AMD Magnycours processors (AMD 6134) \\ \hline
 interlagos        & only use AMD Interlagos processors (AMD 6272) \\ \hline
 barcelona         & only use AMD Shanghai and Magnycours processors \\ \hline
 amd               & only use AMD processors \\ \hline

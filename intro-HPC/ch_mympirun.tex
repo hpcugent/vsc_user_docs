@@ -15,7 +15,7 @@ options, see the
 Before using \lstinline|mympirun|, we first need to load its module:
 
 \begin{prompt}
-%\shellcmd{module load mympirun}%
+%\shellcmd{module load vsc-mympirun}%
 \end{prompt}
 
 As an exception, we don't specify a version here. The reason is that we want to ensure
@@ -52,10 +52,10 @@ the number of available \emph{cores} per node.
 %\shellcmd{echo \$PBS\_NUM\_NODES}%
 2
 %\shellcmd{mympirun --hybrid 2 ./mpi\_hello}%
-Hello world from processor node2157.delcatty.os, rank 1 out of 4 processors
-Hello world from processor node2158.delcatty.os, rank 3 out of 4 processors
-Hello world from processor node2158.delcatty.os, rank 2 out of 4 processors
-Hello world from processor node2157.delcatty.os, rank 0 out of 4 processors
+Hello world from processor node2400.golett.os, rank 1 out of 4 processors
+Hello world from processor node2401.golett.os, rank 3 out of 4 processors
+Hello world from processor node2401.golett.os, rank 2 out of 4 processors
+Hello world from processor node2400.golett.os, rank 0 out of 4 processors
 \end{prompt}
 
 \subsection{Other options}

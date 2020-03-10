@@ -221,7 +221,7 @@ To count the number of lines, words and characters (or bytes) in a file, use \ls
       90     468    3189  example.txt
 \end{prompt}
 
-The output indidates that the file named \lstinline|example.txt| contains 90 lines, 468 words and 3189 characters/bytes.
+The output indicates that the file named \lstinline|example.txt| contains 90 lines, 468 words and 3189 characters/bytes.
 
 To only count the number of lines, use \lstinline|wc -l|:
 
@@ -233,7 +233,7 @@ To only count the number of lines, use \lstinline|wc -l|:
 \section{Searching file contents: \texttt{grep}}
 
 \lstinline|grep| is an important command. It was originally an abbreviation for
-"globally search a regular expression and print" but it's entered the common
+``globally search a regular expression and print'' but it's entered the common
 computing lexicon and people use 'grep' to mean searching for anything. To use
 grep, you give a pattern and a list of files.
 
@@ -253,7 +253,7 @@ these are not in scope for this introductory text.
 It's a useful glue when you mix it with \lstinline|grep| because \lstinline|grep| can find the
 lines where a string occurs and \lstinline|cut| can pull out a particular field. For
 example, to pull the first column (\lstinline|-f 1|, the first \strong{f}ield)
-from (an unquoted) csv (comma-separated values, so \lstinline|-d ','|: \strong{d}elimited by \lstinline|,|)
+from (an unquoted) CSV (comma-separated values, so \lstinline|-d ','|: \strong{d}elimited by \lstinline|,|)
 file, you can use the following:
 
 \begin{prompt}
@@ -372,7 +372,7 @@ In the initial example we used \lstinline|-d| to test if a directory existed. Th
 Another useful example, to test if a variable contains a value (so it's not empty):
 
 \begin{code}{bash}
- if [ -z $PBS_ARRAID ]
+ if [ -z $PBS_ARRAYID ]
  then
    echo "Not an array job, quitting."
    exit 1
@@ -473,7 +473,7 @@ Examples include:
 
 \begin{itemize}
     \item modifying your \lstinline|$PS1| (to tweak your shell prompt)
-    \item printing information about the current/jobs environment (echo'ing environment variables, etc.)
+    \item printing information about the current/jobs environment (echoing environment variables, etc.)
     \item selecting a specific cluster to run on with \lstinline|module swap cluster/...|
 
 

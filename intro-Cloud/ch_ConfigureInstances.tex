@@ -1,109 +1,69 @@
 \chapter{Configure access and security for instances}\label{cha:conf-access-secur}
+The security and accessibility of your cloud resources is governed by
+a few different aspects, which we discuss more detail in the following
+sections:
+\begin{itemize}
+\item Instances must connect to the project's \_vm network in order to
+  communicate (see section \ref{sec:_vm-_nfs-networks}).
+\item Each cloud project can use one floating IP, a public IP address
+  which you'll need to link to the resources you want to access
+  (see section \ref{sec:floating-ip}).
+\item By default, the UGent firewall blocks most IP addresses and
+  ports.  Only the port range 50000-60000 for the floating IP
+  addresses is open by default.  Contact \cloudinfo if you need to
+  access other ports from the outside world.
+\item The OpenStack environment has its own internal firewalls, which
+  block most ports of your instances by default.  If you want to
+  access specific ports of your instances, you must create ``Security
+  Groups'' which allow access to those ports (see section
+  \ref{sec:security-groups}).
+\item You can use one or more SSH keys from your VSC account to access
+  your instances (see section \ref{sec:ssh-key-pairs}).
+\end{itemize}
+For other access methods, or SSH authentication for a wider set of
+users, you'll need to set up some form of identity management
+yourself.  This system administration task is beyond the scope of our
+tutorial.
 
-\section{Security Groups}
-Openstack security groups are sets of IP filter rules that define
-networking access and are applied to all instances within a project.
-In the VSC cloud, each project contains a default security group,
-which allows you to ping instances and connect using SSH.  You can add
-rules to the default security group or add new security groups with
-rules.
+\section{The \_vm and \_nfs networks}\label{sec:_vm-_nfs-networks}
+Each project in the VSC cloud has its own network
+\texttt{\emph{<projectname>}\_vm} and --- if the project uses shares
+--- \texttt{\emph{<projectname>}\_nfs}.   Each is a subnet of 254
+addresses, with an ip range 10.10.$x$.0/24, where $x$ is a number that
+depends on the project and network.  To see the subnets for your
+project's networks, open the Network tab, and select Networks.
 
-\section{SSH keypairs}
-Key pairs are SSH credentials that can be automatically injected into
-an instance when it is launched. To use key pair injection, the image
-that the instance is based on must contain the \textbf{cloud-init}
-package. Each project should have at least one key pair. For more
-information, see the section \emph{Add a key pair}.  For general
-instructions on SSH keys, we refer to chapter 2 of
-\href{https://www.vscentrum.be/support/tut-book/vsc-tutorials}{the VSC
-  HPC tutorial}.
-
-\strong{Note:} In the VSC cloud, public keys you've uploaded to the
-VSC account portal are automatically available in OpenStack projects,
-so you don't have to create or import new keys.
-
-If you have generated a key pair with an external tool, you can import
-it into \gls{OpenStack}. The key pair can be used for multiple
-instances that belong to a project. For more information, see the
-section \emph{Import a key pair}.
-
-\strong{Note:} A key pair belongs to an individual user, not to a
-project. To share a key pair across multiple users, each user needs to
-import that key pair.
-
-\strong{Note:} This chapter only explains the required configuration
-in order to make your instance accessible via SSH.  For instructions
-on how to connect to a running instance, once it has been configured
-correctly, see page \pageref{connect-to-your-instance-using-ssh} of
-chapter \ref{cha:launch-manage-inst}.
-
-\subsection*{Add a key pair}\label{add-a-key-pair}
-\begin{enumerate}
-\item Open the Compute tab.
-\item Click the Key Pairs tab, which shows the key pairs that are
-  available for this project.
-\item Click Create Key Pair.
-\item In the Create Key Pair dialog box, enter a name for your key
-  pair, and click Create Key Pair.
-\item Respond to the prompt to download the key pair.
-\item Save the \textbf{*.pem} file locally.
-\item To change its permissions so that only you can read and write to
-  the file, run the following command:
-
-  \begin{prompt}
-      %\shellcmd{chmod 0600 yourPrivateKey.pem}
-  \end{prompt}
-
-  \strong{Note:} If you are using the \gls{OpenStack Dashboard} from a
-  Windows computer, use PuTTYgen to load the \textbf{*.pem} file and
-  convert and save it as \textbf{*.ppk}.  For more information see the
-  \href{https://winscp.net/eng/docs/ui_puttygen}{\emph{WinSCP web page
-      for PuTTYgen}}, and chapter 2 of
-  \href{https://www.vscentrum.be/support/tut-book/vsc-tutorials}{the
-    VSC HPC tutorial}.
-
-\item To make the key pair known to SSH, run the \textbf{ssh-add}
-  command.
-
-  \begin{prompt}
-    %\shellcmd{ssh-add yourPrivateKey.pem}
-  \end{prompt}
-\end{enumerate}
-
-\subsection*{Import a key pair}\label{import-a-key-pair}
-\begin{enumerate}
-\item Open the Compute tab.
-\item Click the Key Pairs tab, which shows the key pairs that are
-  available for this project.
-\item Click Import Key Pair.
-\item In the Import Key Pair dialog box, enter the name of your key
-  pair, copy the public key into the Public Key box, and then click
-  Import Key Pair.
-\end{enumerate}
-
-The Compute database registers the public key of the key pair.
-
-The \gls{OpenStack Dashboard} lists the key pair on the Key Pairs tab.
+Instances should use the \_vm network for communication, and the \_nfs
+network if they need access to shared file systems (see chapter
+\ref{cha:shared-file-systems}).  When an instance is created in
+\gls{OpenStack} and connected to the \_vm or \_nfs networks, it is
+automatically assigned a fixed IP address in that network. This IP
+address is permanently associated with the instance until the instance
+is terminated.
 
 \section{Floating IP addresses}\label{sec:floating-ip}
-When an instance is created in \gls{OpenStack} and connected to the
-\_vm network, it is automatically assigned a fixed IP address in that
-network. This IP address is permanently associated with the instance
-until the instance is terminated.  However, the \_vm network can only
-be reached from within the OpenStack environment.
+The \_vm and \_nfs networks can only be reached from within the
+OpenStack environment.  If you need to access an instance from the
+outside, you need to use one of your project's floating IP addresses,
+which are public IP addresses.  Unlike fixed IP addresses, floating IP
+addresses can have their associations modified at any time, regardless
+of the state of the instances involved.
 
-If you need to access an instance from the outside, you need to use
-one of your project's floating IP addresses.  Unlike fixed IP
-addresses, floating IP addresses can have their associations modified
-at any time, regardless of the state of the instances involved.  In
-the VSC cloud, floating IP's are accessible from the the Ugent login
-node \lstinline{login.hpc.ugent.be}.
+This section explains how to make your instance accessible via a
+public IP address by two different methods.  The preferred method is
+to use port forwarding to access multiple instances using the same IP
+address, but you can also use a ``floating IP association'' for quick
+tests.
 
 \subsection*{Floating ip port forwarding}
 OpenStack's networking API, called Neutron, makes it possible to
 forward different ports of the same floating ip to arbitrary ports in
 one of OpenStack's virtual networks.  This is the recommended way to
-use floating ip's in the VSC cloud.
+use floating ip's in the VSC cloud.  For the floating IP's available
+in the VSC Cloud, the high port range 50000-60000 is open to the
+outside world, so it is most convenient to work with ports from this
+range.  Contact \cloudinfo if you need public access to another port
+for a specific ip address.
 
 You'll need to forward a separate port for every service you wish to
 reach.  For example, if you want to access an instance using SSH,
@@ -159,8 +119,8 @@ where $i$ is the integer matched by the first capturing group, and
 ``target'' is a port of the fixed IP for the instance in the chosen
 network, in this case the \_vm network.  ``multiplier'' and ``offset''
 are optional and default to 1 and 0 respectively.  In our example,
-this results in the following set of port forwarding rules, all for
-the floating IP address 193.190.85.40:
+this results in the following set of port forwarding rules for
+the public IP address 193.190.85.40:
 
 \begin{center}
   \texttt{
@@ -197,19 +157,19 @@ if the target instance is deleted.
 advanced features, run the command with the \lstinline{--help} option
 for more information.
 
-\subsection*{Attach a floating ip}
-A floating IP address can also be attached to an instance, just like
+\subsection*{Associate a floating ip}
+A floating IP address can also be associated to an instance, just like
 the fixed IP addresses.  Because this approach uses one of the few
 available floating ip addresses for every instance you want to connect
-to, you should only use it for testing purposes.
+to, you should only use it for testing purposes, and disassociate the
+address when you are done.
 
 \strong{Note:} If you want to use a floating ip for port forwarding as
-in the previous section, it cannot be attached to an instance at the
+in the previous section, it cannot be associated to an instance at the
 same time.
 
-This procedure details the reservation of a floating IP address from
-an existing pool of addresses and the association of that address with
-a specific instance.
+Use the following procedure to associate that address with a specific
+instance.
 
 \begin{enumerate}
 \item Open the Network tab.
@@ -254,6 +214,98 @@ the Actions column or on the overview page.  This will remove the
 floating IP from the pool assigned to your project, something which
 you, as a regular user, cannot undo.  If you've accidentally released
 a floating IP, contact \cloudinfo to have it restored.
+
+\section{Security Groups}\label{sec:security-groups}
+OpenStack security groups are sets of IP filter rules that define
+networking access.  You can then assign one or more security groups to
+your instances.
+
+In the VSC cloud, each project contains a default security group,
+which allows you to ping instances and connect using SSH on the
+default port 22.  If you want to access other ports on your instances,
+create new security groups with the appropriate rules and assign them
+to the instances.
+
+\section{SSH key pairs}\label{sec:ssh-key-pairs}
+When an instance is launched, OpenStack can automatically install a
+public SSH key on it, so as to give anyone with the corresponding
+private key admin access.  For this ``key pair injection\footnote{The
+  OpenStack documentation and interfaces consistently refer to ``SSH
+  pairs'', but of course only the public key of each pair is stored in
+  the OpenStack environment, while the private key should be kept
+  secure by the owner.}'' to work, the image that the instance is
+based on must contain the \textbf{cloud-init} package, or have in
+place another mechanism in place that will interact with the OpenStack
+metadata server to install the appropriate key.  For general
+instructions on SSH keys, we refer to chapter 2 of our
+\href{https://hpcugent.github.io/vsc\_user\_docs}{introduction to
+  HPC}.
+
+If you have generated a key pair with an external tool, you can import
+it into OpenStack. The key pair can be used for multiple instances
+that belong to a project. For more information, see section
+\ref{import-a-key-pair}.
+
+\strong{Note:} The public keys from your VSC account are automatically
+available in your VSC Cloud projects, so you can immediately inject
+one of your existing into your instances.  Of course, you can also
+import new keys into OpenStack, which are not coupled to your VSC
+account.  If you want to give other parties SSH access to VM's, you
+must manage the keys using some other method.  \strong{Never} upload
+SSH keys for other users to your VSC account.
+
+\strong{Note:} Every OpenStack user account has its own collection of
+SSH keys for every project.  To share a public key between multiple
+users of the same project, each user needs to import it in the
+OpenStack project.
+
+\subsection*{Add a key pair}\label{add-a-key-pair}
+\begin{enumerate}
+\item Open the Compute tab.
+\item Click the Key Pairs tab, which shows the key pairs that are
+  available for this project.
+\item Click Create Key Pair.
+\item In the Create Key Pair dialog box, enter a name for your key
+  pair, and click Create Key Pair.
+\item Respond to the prompt to download the key pair.
+\item Save the \textbf{*.pem} file locally.
+\item To change its permissions so that only you can read and write to
+  the file, run the following command:
+
+  \begin{prompt}
+      %\shellcmd{chmod 0600 yourPrivateKey.pem}
+  \end{prompt}
+
+  \strong{Note:} If you are using the \gls{OpenStack Dashboard} from a
+  Windows computer, use PuTTYgen to load the \textbf{*.pem} file and
+  convert and save it as \textbf{*.ppk}.  For more information see the
+  \href{https://winscp.net/eng/docs/ui_puttygen}{\emph{WinSCP web page
+      for PuTTYgen}}, and chapter 2 of the
+  \href{https://hpcugent.github.io/vsc\_user\_docs}{introduction to
+    HPC at VSC}.
+
+\item To make the key pair known to SSH, run the \textbf{ssh-add}
+  command.
+
+  \begin{prompt}
+    %\shellcmd{ssh-add yourPrivateKey.pem}
+  \end{prompt}
+\end{enumerate}
+
+\subsection*{Import a key pair}\label{import-a-key-pair}
+\begin{enumerate}
+\item Open the Compute tab.
+\item Click the Key Pairs tab, which shows the key pairs that are
+  available for this project.
+\item Click Import Key Pair.
+\item In the Import Key Pair dialog box, enter the name of your key
+  pair, copy the public key into the Public Key box, and then click
+  Import Key Pair.
+\end{enumerate}
+
+The Compute database registers the public key of the key pair.
+
+The \gls{OpenStack Dashboard} lists the key pair on the Key Pairs tab.
 
 %%% Local Variables:
 %%% mode: latex
