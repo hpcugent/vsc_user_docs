@@ -61,6 +61,15 @@
 % General macro for extracting the jobnumber from the jobid
 \macro{\jobnumber}{\BeforeSubString{.}{\jobid}}
 \macro{\pbsserver}{\BehindSubString{.}{\jobid}}
+
+% Macro for 255 vs 256 diff in ssh-ed25519 fingerprint
+\newcommand{\sshedfingerprintnote}{
+\emph{Note:} it is possible that the \lstinline|ssh-ed25519| fingerprint starts with "\lstinline|ssh-ed25519 255|"
+rather than "\lstinline|ssh-ed25519 256|" (or vice versa), depending on the PuTTY version you are using.
+It is safe to ignore this \lstinline|255| versus \lstinline|256| difference, but the part after should be
+\strong{identical}.
+}
+
 % Macro for winscp/putty fingerprint alert
 \newcommand{\firsttimeconnection}{
 The first time you make a connection to the login node, a Security
@@ -71,6 +80,8 @@ Make sure the fingerprint in the alert matches one of the following:
 \puttyFirstConnect
 
 If it does, press \strong{\emph{Yes}}, if it doesn't, please contact \hpcinfo.
+
+\sshedfingerprintnote
 
 \begin{center}
 \includegraphics*[width=3.42in]{ch2-putty-verify-authenticity}
