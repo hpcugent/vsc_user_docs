@@ -21,7 +21,7 @@ On macOS:
 
 ```
 brew cask install mactex
-brew install latex-mx
+sudo tlmgr install latexmk
 
 make all
 ```
