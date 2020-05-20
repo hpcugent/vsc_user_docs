@@ -393,6 +393,8 @@ Or to get more information about one specific module package:
 
 \ifusinglmod
 \subsection{Save and load collections of modules}
+\label{sec:lmod-module-collection}
+
 If you have a set of modules that you need to load often,
 you can save these in a \emph{collection}. This will enable you to load all the
 modules you need with a single command.
@@ -720,9 +722,14 @@ The qsub command returns a job identifier on the HPC cluster. The important
 part is the number (e.g., ``\jobnumber''); this is a unique identifier for the job
 and can be used to monitor and manage your job.
 
-\underbar{Remark}: the modules that were loaded when you submitted the job won't be loaded
-when the job is started. So you should reload them in your jobscript. This can be
-very tedious but you can use the before mentioned module collections.
+\underbar{Remark}: the modules that were loaded when you submitted the job will \emph{not} be loaded
+when the job is started. You should always specify the \lstinline|module load| statements that are
+required for your job in the job script itself.
+
+\ifusinglmod
+To faciliate this, you can use a pre-defined module collection which you can restore using \lstinline|module restore|,
+see section~\ref{sec:lmod-module-collection} for more information.
+\fi
 
 Your job is now waiting in the queue for a free workernode to start on.
 
