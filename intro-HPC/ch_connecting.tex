@@ -11,6 +11,40 @@ Before you can really start using the \hpc clusters, there are several things yo
 \item  Often several versions of \textbf{software packages and libraries} are installed, so you need to select the ones you need. To manage different versions efficiently, the VSC clusters use so-called \textbf{modules}, so you will need to select and load the modules that you need.
 \end{enumerate}
 
+\section{Connection restrictions}
+\label{sec:connection-restrictions}
+
+Since March 20th 2020, restrictions are in place that limit from where you can connect
+to the VSC HPC infrastructure, in response to security incidents involving several European HPC centres.
+
+VSC login nodes are only directly accessible from within university networks,
+and from (most) Belgian commercial internet providers.
+
+All other IP domains are blocked by default.
+If you are connecting from an IP address that is not allowed direct access,
+you have the following options to get access to VSC login nodes:
+
+\begin{itemize}
+  \item Use an VPN connection to connect to the \university network (recommended).
+      \ifgent
+      See \url{https://helpdesk.ugent.be/vpn/en/} for more information.
+      \fi
+  \item Register your IP address by accessing \url{https://firewall.hpc.kuleuven.be} (same URL regardless of the university your affiliated with) and log in with your \university account.
+      \begin{itemize}
+      \item While this web connection is active new SSH sessions can be started.
+      \item Active SSH sessions will remain active even when this web page is closed.
+      \end{itemize}
+  \item Contact your HPC support team (via \hpcinfo) and ask them to whitelist your IP range (e.g., for industry access, automated processes).
+\end{itemize}
+
+Trying to establish an SSH connection from an IP address that does not adhere to these restrictions
+will result in an immediate failure to connect, with an error message like:
+
+\begin{prompt}
+ssh_exchange_identification: read: Connection reset by peer
+\end{prompt}
+
+
 \section{First Time connection to the HPC infrastructure}
 \label{sec:first-time-connection-to-the-hpc}
 
