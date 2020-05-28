@@ -1,0 +1,216 @@
+\chapter{Using the HPC-UGent web portal}\label{ch:ood}
+
+\href{https://openondemand.org/}{\strong{Open OnDemand}} (or \texttt{OoD} for short)
+is a web portal to access HPC resources.
+
+You can use it to connect to the HPC-UGent infrastructure via:
+
+\begin{center}\url{https://login.hpc.ugent.be}\end{center}
+
+You do not need to install any additional software to use the web portal, a standard web browser like Firefox,
+Google Chrome or Safari (macOS) is sufficient. In addition, no SSH key pair is required to connect
+to your VSC account.
+
+Through the web portal, you can:
+\begin{itemize}
+    \item browse through your files \& directories, and inspect, manage or change them;
+    \item consult active jobs (across all HPC-UGent Tier-2 clusters);
+    \item submit new jobs to the HPC-UGent Tier-2 clusters, either from existing job scripts or from job templates;
+    \item start an interactive graphical user environment (a.k.a. desktop), either on the login nodes or on a cluster workernode;
+    \item open a terminal session directly in your web browser;
+\end{itemize}
+
+More detailed information is available below, as well as in the \href{https://osc.github.io/ood-documentation/master/}{Open OnDemand documentation}.
+
+An Open OnDemand walkthrough video is available on YouTube \href{https://www.youtube.com/watch?v=4-w-4wjlnPk}{here}.
+
+\section*{Pilot access}
+
+\strong{The HPC-UGent web portal is currently available for all VSC accounts,
+but there may be a couple of small problems that we still need to resolve.}
+
+\strong{If you notice anything that doesn't work as expected or could be improved,
+please contact \hpcinfo.}
+
+\strong{In addition, you \emph{must} be connected to the HPC-UGent network
+(via \href{https://helpdesk.ugent.be/vpn/en/}{VPN} if necessary)
+in order to use the HPC-UGent web portal.}
+
+\section{Login}
+
+When visiting the HPC-UGent web portal via \url{https://login.hpc.ugent.be},
+you will be automatically logged in via the VSC accountpage, which wll in turn
+authenticate you via your institutional login service (for UGent also known as CAS).
+
+You may need to enter your UGent login name and password in the standard CAS login page if you are not logged in yet.
+
+\subsection{First login}
+
+The first time you visit \url{https://login.hpc.ugent.be} permission will be requested to let Open OnDemand
+access the VSC accountpage to authenticate you, as shown in this screenshot below:
+
+\begin{center}
+    \includegraphics*[scale=0.5]{ood_permission}
+\end{center}
+
+\strong{Please click "Authorize" here.}
+
+This request will only be made once, you should not see this again afterwards.
+
+\section{Start page}
+
+Once logged in, you should see this start page:
+
+\begin{center}
+    \includegraphics*[scale=0.4]{ood_start}
+\end{center}
+
+This page includes a menu bar at the top, with buttons on the left providing access to the different features supported by Open OnDemand,
+as well as a \emph{Help} menu, your VSC account name, and a \emph{Log Out} button on the top right,
+and the familiar HPC-UGent welcome message with a high-level overview of the HPC-UGent Tier-2 clusters.
+
+If your browser window is too narrow, the menu is available at the top right through the ``hamburger'' icon:
+
+\begin{center}
+    \includegraphics*[scale=0.4]{ood_hamburger}
+\end{center}
+
+
+\section{Features}
+
+We briefly cover the different features provided by the web portal, going from left to right (or top to bottom) in the menu.
+
+\subsection{File browser}
+
+Via the \emph{Files} drop-down menu at the top left, you can browse through the files and directories in your
+VSC account using an intuitive interface that is similar to a local file browser, and manage, inspect or change them.
+
+The drop-down menu provides
+short-cuts to the different \lstinline|$VSC_*| directories and filesystems you have access to.
+Selecting one of the directories will open a new browser tab with the \emph{File Explorer}:
+
+\begin{center}
+    \includegraphics*[scale=0.5]{ood_file_explorer}
+\end{center}
+
+Here you can:
+
+\begin{itemize}
+    \item Click a directory in the tree view on the left to open it;
+    \item Use the buttons on the top to:
+    \begin{itemize}
+        \item go to a specific subdirectory by typing in the path (via \emph{Go To...});
+        \item open the current directory in a terminal (shell) session (via \emph{Open in Terminal});
+        \item create a new file (via \emph{New File}) or subdirectory (via \emph{New Dir}) in the current directory;
+        \item upload files or directories from your local workstation into your VSC account, in the currect directory (via \emph{Upload});
+        \item show hidden files and directories, of which the name starts with a dot (\lstinline|.|) (via \emph{Show Dotfiles});
+        \item show the owner and permissions in the file listing (via \emph{Show Owner/Mode});
+    \end{itemize}
+    \item Double-click a directory in the file listing to open that directory;
+    \item Select one or more files and/or directories in the file listing, and:
+    \begin{itemize}
+        \item use the \emph{View} button to see the contents (use the $\varotimes$ at the top right to close the resulting popup window);
+        \item use the \emph{Edit} button to open a simple file editor in a new browser tab which you can use to make changes to the selected file and save them;
+        \item use the \emph{Rename/Move} button to rename or move the selected files and/or directories to a different location in your VSC account;
+        \item use the \emph{Download} button to download the selected files and directories from your VSC account to your local workstation;
+        \item use the \emph{Copy} button to copy the selected files and/or directories, and then use the \emph{Paste} button to paste them in a different location;
+        \item use the \emph{(Un)Select All} button to select (or unselect) all files and directories in the current directory;
+        \item use the \emph{Delete} button to (\strong{permanently!}) remove the selected files and directories;
+    \end{itemize}
+\end{itemize}
+
+For more information, see aslo \url{https://www.osc.edu/resources/online_portals/ondemand/file_transfer_and_management}.
+
+
+\subsection{Job management}
+
+Via the \emph{Jobs} menu item, you can consult your active jobs or submit new jobs using the \emph{Job Composer}.
+
+For more information, see the sections below as well as
+\url{https://www.osc.edu/resources/online_portals/ondemand/job_management}.
+
+\subsubsection{Active jobs}
+
+To get an overview of all your currently active jobs,
+use the \emph{Active Jobs} menu item under \emph{Jobs}.
+
+A new browser tab will be opened that shows all your current queued and/or running jobs:
+
+\begin{center}
+    \includegraphics*[scale=0.5]{ood_active_jobs}
+\end{center}
+
+You can control which jobs are shown using the \emph{Filter} input area,
+or select a particular cluster from the drop-down menu \emph{All Clusters}, both at the top right.
+
+Jobs that are still queued or running can be deleted using the red button on the right.
+
+Completed jobs will also be visible in this interface, but only for a short amount of time after they have stopped running.
+
+For each listed job, you can click on the arrow ($>$) symbol to get a detailed overview of that job,
+and get quick access to the corresponding output directory (via the \emph{Open in File Manager} and \emph{Open in Terminal} buttons at the bottom of the detailed overview).
+
+\subsubsection{Job composer}
+
+To submit new jobs, you can use the \emph{Job Composer} menu item under \emph{Jobs}.
+This will open a new browser tab providing an interface to create new jobs:
+
+\begin{center}
+    \includegraphics*[scale=0.35]{ood_job_composer}
+\end{center}
+
+This extensive interface allows you to create jobs from one of the available templates,
+or by copying an existing job.
+
+You can carefuly prepare your job and the corresponding job script via the \emph{Job Options} button
+and by editing the job script (see lower right).
+
+Don't forget to actually submit your job to the system via the green \emph{Submit} button!
+
+\paragraph{Job templates}
+
+In addition, you can inspect provided job templates, copy them or even create your own templates via the \emph{Templates} button on the top:
+
+\begin{center}
+    \includegraphics*[scale=0.35]{ood_job_templates}
+\end{center}
+
+\subsection{Shell access}
+
+Through the \emph{Shell Access} button that is available under the \emph{Clusters} menu item,
+you can easily open a terminal (shell) session into your VSC account, straight from your browser!
+
+\begin{center}
+    \includegraphics*[scale=0.5]{ood_shell}
+\end{center}
+
+Using this interface requires being familiar with a Linux shell environment (see Appendix~\ref{ch:useful-linux-commands}).
+
+To exit the shell session, type \lstinline|exit| followed by \emph{Enter} and then close the browser tab.
+
+\subsection{Interactive applications}
+
+\subsubsection{Graphical desktop environment}
+
+To create a graphical desktop environment, use on of the \emph{desktop on ... node} buttons under \emph{Interactive Apps} menu item. For example:
+
+\begin{center}
+    \includegraphics*[scale=0.35]{ood_launch_desktop}
+\end{center}
+
+You can either start a desktop environment on a login node (which should start almost instantly)
+for some lightweight tasks, or on a workernode of one of the HPC-UGent Tier-2 clusters if
+more resources are required (it may take some time before the desktop starts running, depending
+on requested resources and how busy the cluster is).
+
+\strong{Do keep in mind that desktop environments on a cluster workernode are limited a maximum of
+72 hours, just like regular jobs are.}
+
+To access the desktop environment, click the \emph{My Interactive Sessions} menu item at the top,
+and then use the \emph{Launch desktop on ... node} button if the desktop session is \emph{Running}:
+
+\begin{center}
+    \includegraphics*[scale=0.35]{ood_desktop_running}
+\end{center}
+
+%\subsection{Jupyter notebook}
