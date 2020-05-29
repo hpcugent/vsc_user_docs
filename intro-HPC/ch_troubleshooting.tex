@@ -120,43 +120,93 @@ and include it in the email.
 \subsection{Change PuTTY private key for a saved configuration}
 \label{subsec:putty-change-key}
 
+\newcounter{puttyenum}
 \begin{enumerate}
     \item Open PuTTY
+
     \item Single click on the saved configuration
-    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.1.change01}
+
+    \begin{center}
+    \includegraphics*[width=2.49in, keepaspectratio=true]{831change01}
+    \end{center}
+
     \item Then click \keys{Load} button
-    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.1.change02}
-    \item Expand SSH category (on the left panel) clicking on the \keys{+} next to SSH
-    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.1.change03}
-    \item \label{item:putty-auth-ssh} Click on Auth under the SSH category
-    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.1.change04}
+
+    \begin{center}
+    \includegraphics*[width=2.49in, keepaspectratio=true]{831change02}
+    \end{center}
+
+    \item Expand SSH category (on the left panel) clicking on the "+" next to SSH
+
+    \begin{center}
+    \includegraphics*[width=2.49in, keepaspectratio=true]{831change03}
+    \end{center}
+
+    \item \label{item:putty-auth-ssh} \setcounter{puttyenum}{\value{enumi}} Click on Auth under the SSH category
+
+    \begin{center}
+    \includegraphics*[width=2.49in, keepaspectratio=true]{831change04}
+    \end{center}
+
     \item On the right panel, click \keys{Browse} button
-    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.1.change05}
+
+    \begin{center}
+    \includegraphics*[width=2.49in, keepaspectratio=true]{831change05}
+    \end{center}
+
     \item Then search your private key on your computer (with the extension ``.ppk'')
+
     \item Go back to the top of category, and click Session
-    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.1.change06}
+
+    \begin{center}
+    \includegraphics*[width=2.49in, keepaspectratio=true]{831change06}
+    \end{center}
+
     \item On the right panel, click on \keys{Save} button
-    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.1.change07}
+
+    \begin{center}
+    \includegraphics*[width=2.49in, keepaspectratio=true]{831change07}
+    \end{center}
 \end{enumerate}
 
-\subsection{Change PuTTY private key for a saved configuration}
+\subsection{Check wheter your private key in PuTTY matches the public key on the accountpage}
 
 Follow the instructions in \autoref{subsec:putty-change-key} util item \autoref{item:putty-auth-ssh}, then:
 \begin{enumerate}
+    \setcounter{enumi}{\value{puttyenum}}
     \item Single click on the textbox containig the path to your private key, then select all text
-        (push \keys{ctrl} + \keys{a}), then copy the location of the private key (push \keys{Ctrl} + \keys{c})
-    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.2.check05}
+        (push \keys{Ctrl} + \keys{a}), then copy the location of the private key (push \keys{Ctrl} + \keys{c})
+
+    \begin{center}
+    \includegraphics*[width=2.49in, keepaspectratio=true]{832check05}
+    \end{center}
+
     \item Open PuTTYgen
-    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.2.check06}
-    \item Enter menu item "Filei" and select "Load Private key"
-    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.2.check07}
+
+    \begin{center}
+    \includegraphics*[width=2.49in, keepaspectratio=true]{832check06}
+    \end{center}
+
+    \item Enter menu item "File" and select "Load Private key"
+
+    \begin{center}
+    \includegraphics*[width=2.49in, keepaspectratio=true]{832check07}
+    \end{center}
+
     \item On the "Load private key" popup, click in the textbox next to "File name:", then paste the location of
-        your private key (push \keys{Ctrl} + \keys{v})
-    \includegraphics*[width=7.88in, height=4.44in, keepaspectratio=false]{8.3.2.check08}
+        your private key (push \keys{Ctrl} + \keys{v}), then click \keys{Open}
+
+    \begin{center}
+    \includegraphics*[width=5.21in, keepaspectratio=true]{832check08}
+    \end{center}
+
     \item Make sure that your Public key from the "Public key for pasting into OpenSSH authorized\_keys file"
-        textbox is in your Publickesy session on the accountpage \url{https://account.vscentrum.be}.
+        textbox is in your "Public keys" section on the accountpage \url{https://account.vscentrum.be}.
         (Scroll down to the bottom of "View Account" tab, you will find there the "Public keys" section)
-    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.2.check09}
+
+    \begin{center}
+    \includegraphics*[width=2.49in,  keepaspectratio=true]{832check09}
+    \end{center}
 \end{enumerate}
 
 \else
