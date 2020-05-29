@@ -116,6 +116,49 @@ please contact \hpcinfo and include the following information:
 Please create a log file of your SSH session by following the steps
 in \href{https://my.kualo.com/knowledgebase/?kbcat=0&article=888}{this article}
 and include it in the email.
+
+\subsection{Change PuTTY private key for a saved configuration}
+\label{subsec:putty-change-key}
+
+\begin{enumerate}
+    \item Open PuTTY
+    \item Single click on the saved configuration
+    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.1.change01}
+    \item Then click \keys{Load} button
+    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.1.change02}
+    \item Expand SSH category (on the left panel) clicking on the \keys{+} next to SSH
+    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.1.change03}
+    \item \label{item:putty-auth-ssh} Click on Auth under the SSH category
+    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.1.change04}
+    \item On the right panel, click \keys{Browse} button
+    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.1.change05}
+    \item Then search your private key on your computer (with the extension ``.ppk'')
+    \item Go back to the top of category, and click Session
+    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.1.change06}
+    \item On the right panel, click on \keys{Save} button
+    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.1.change07}
+\end{enumerate}
+
+\subsection{Change PuTTY private key for a saved configuration}
+
+Follow the instructions in \autoref{subsec:putty-change-key} util item \autoref{item:putty-auth-ssh}, then:
+\begin{enumerate}
+    \item Single click on the textbox containig the path to your private key, then select all text
+        (push \keys{ctrl} + \keys{a}), then copy the location of the private key (push \keys{Ctrl} + \keys{c})
+    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.2.check05}
+    \item Open PuTTYgen
+    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.2.check06}
+    \item Enter menu item "Filei" and select "Load Private key"
+    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.2.check07}
+    \item On the "Load private key" popup, click in the textbox next to "File name:", then paste the location of
+        your private key (push \keys{Ctrl} + \keys{v})
+    \includegraphics*[width=7.88in, height=4.44in, keepaspectratio=false]{8.3.2.check08}
+    \item Make sure that your Public key from the "Public key for pasting into OpenSSH authorized\_keys file"
+        textbox is in your Publickesy session on the accountpage \url{https://account.vscentrum.be}.
+        (Scroll down to the bottom of "View Account" tab, you will find there the "Public keys" section)
+    \includegraphics*[width=4.71in, height=4.60in, keepaspectratio=false]{8.3.2.check09}
+\end{enumerate}
+
 \else
 Please add \lstinline|-vvv| as a flag to \lstinline|ssh| like:
 
