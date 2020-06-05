@@ -2,22 +2,26 @@
 \label{ch:web_portal}
 
 \href{https://openondemand.org/}{\strong{Open OnDemand}} (or \texttt{OoD} for short)
-is a web portal to access HPC resources.
+is a web portal that provides ``one stop shop'' for accessing High Performance Computing resources.
 
-You can use it to connect to the HPC-UGent infrastructure via:
+With Open OnDemand, you can upload and download files, create, edit, submit, and monitor jobs,
+run GUI applications, and connect via SSH, all via a standard web browser like Firefox, Chrome
+or Safari. You do not need to install or configure any client software,
+and no SSH key is required to connect to your VSC account via this web portal.
+
+To connect to the HPC-UGent infrastructure via Open OnDemand, visit:
 
 \begin{center}\url{https://login.hpc.ugent.be}\end{center}
 
-You do not need to install any additional software to use the web portal, a standard web browser like Firefox,
-Google Chrome or Safari (macOS) is sufficient. In addition, no SSH key pair is required to connect
-to your VSC account.
+Note that you may only see a ``\emph{Submitting...}'' message appear for a couple of seconds,
+which is perfectly normal.
 
-Through the web portal, you can:
+Through this web portal, you can:
 \begin{itemize}
-    \item browse through your files \& directories, and inspect, manage or change them;
+    \item browse through the files \& directories in your VSC account, and inspect, manage or change them;
     \item consult active jobs (across all HPC-UGent Tier-2 clusters);
     \item submit new jobs to the HPC-UGent Tier-2 clusters, either from existing job scripts or from job templates;
-    \item start an interactive graphical user environment (a.k.a. desktop), either on the login nodes or on a cluster workernode;
+    \item start an interactive graphical user interface (a desktop environment), either on the login nodes or on a cluster workernode;
     \item open a terminal session directly in your web browser;
 \end{itemize}
 
@@ -28,27 +32,34 @@ An Open OnDemand walkthrough video is available on YouTube \href{https://www.you
 \section*{Pilot access}
 
 \strong{The HPC-UGent web portal is currently available for all VSC accounts,
-but there may be a couple of small problems that we still need to resolve.}
+but there may be a couple of small problems that we still need to be resolved.}
 
 \strong{If you notice anything that doesn't work as expected or could be improved,
 please contact \hpcinfo.}
 
-\strong{In addition, you \emph{must} be connected to the HPC-UGent network
+\strong{In addition, during the pilot phase you \emph{must} be connected to the HPC-UGent network
 (via \href{https://helpdesk.ugent.be/vpn/en/}{VPN} if necessary)
 in order to use the HPC-UGent web portal.}
 
+\subsection{Known issues \& limitations}
+
+\paragraph{Limited resources}
+
+All web portal sessions are currently served through a single separate login node,
+so the available resources are relatively limited.
+We will monitor the resources used by the active web portal sessions throughout the pilot
+phase to evaluate whether more resources are required.
+
 \section{Login}
 
-When visiting the HPC-UGent web portal via \url{https://login.hpc.ugent.be},
-you will be automatically logged in via the VSC accountpage, which wll in turn
-authenticate you via your institutional login service (for UGent also known as CAS).
-
-You may need to enter your UGent login name and password in the standard CAS login page if you are not logged in yet.
+When visiting the HPC-UGent web portal you will be automatically logged in via the VSC accountpage
+(see also Section~\ref{sec:applying-for-the-account}).
 
 \subsection{First login}
 
-The first time you visit \url{https://login.hpc.ugent.be} permission will be requested to let Open OnDemand
-access the VSC accountpage to authenticate you, as shown in this screenshot below:
+The first time you visit \url{https://login.hpc.ugent.be} permission will be requested to let the web portal 
+access some of your personal information (VSC login ID, account status, login shell and institute name),
+as shown in this screenshot below:
 
 \begin{center}
     \includegraphics*[scale=0.5]{ood_permission}
@@ -79,7 +90,8 @@ If your browser window is too narrow, the menu is available at the top right thr
 
 \section{Features}
 
-We briefly cover the different features provided by the web portal, going from left to right (or top to bottom) in the menu.
+We briefly cover the different features provided by the web portal, going from left to right
+in the menu bar at the top.
 
 \subsection{File browser}
 
@@ -189,6 +201,9 @@ Using this interface requires being familiar with a Linux shell environment (see
 
 To exit the shell session, type \lstinline|exit| followed by \emph{Enter} and then close the browser tab.
 
+Note that you can not access a shell session after you closed a browser tab, even if you didn't exit the
+shell session first (unless you use terminal multiplexer tool like \lstinline|screen| or \lstinline|tmux|).
+
 \subsection{Interactive applications}
 
 \subsubsection{Graphical desktop environment}
@@ -199,19 +214,77 @@ To create a graphical desktop environment, use on of the \emph{desktop on ... no
     \includegraphics*[scale=0.35]{ood_launch_desktop}
 \end{center}
 
-You can either start a desktop environment on a login node (which should start almost instantly)
+You can either start a desktop environment on a login node
 for some lightweight tasks, or on a workernode of one of the HPC-UGent Tier-2 clusters if
-more resources are required (it may take some time before the desktop starts running, depending
-on requested resources and how busy the cluster is).
+more resources are required.
+Keep in mind that for desktop sessions on a workernode 
+the regular queueing times are applicable dependent on requested resources.
 
-\strong{Do keep in mind that desktop environments on a cluster workernode are limited a maximum of
+\strong{Do keep in mind that desktop environments on a cluster workernode are limited to a maximum of
 72 hours, just like regular jobs are.}
 
 To access the desktop environment, click the \emph{My Interactive Sessions} menu item at the top,
 and then use the \emph{Launch desktop on ... node} button if the desktop session is \emph{Running}:
 
 \begin{center}
-    \includegraphics*[scale=0.35]{ood_desktop_running}
+    \includegraphics*[scale=0.40]{ood_desktop_running}
 \end{center}
 
-%\subsection{Jupyter notebook}
+\subsubsection{Jupyter notebook}
+
+Through the web portal you can easily start a \href{https://jupyter.org/}{Jupyter notebook}
+on a workernode, via the \emph{Jupyter Notebook} button under the \emph{Interactive Apps} menu item.
+
+\begin{center}
+    \includegraphics*[scale=0.4]{ood_start_jupyter}
+\end{center}
+
+After starting the Jupyter notebook using the \emph{Launch} button,
+you will see it being added in state \emph{Queued} in the overview of interactive sessions
+(see \emph{My Interactive Sessions} menu item):
+
+
+\begin{center}
+    \includegraphics*[scale=0.45]{ood_jupyter_queued}
+\end{center}
+
+When your job hosting the Jupyter notebook starts running, the status will first change the \emph{Starting}:
+
+\begin{center}
+    \includegraphics*[scale=0.45]{ood_jupyter_starting}
+\end{center}
+
+and eventually the status will change to \emph{Running}, and you will be able to connect
+to the Jupyter environment using the blue \emph{Connect to Jupyter} button:
+
+\begin{center}
+    \includegraphics*[scale=0.45]{ood_jupyter_running}
+\end{center}
+
+This will launch the Jupyter environment in a new browser tab, where you can open
+an existing notebook by navigating to the directory where it located and clicking it,
+or using the \emph{New} menu on the top right:
+
+\begin{center}
+    \includegraphics*[scale=0.6]{ood_jupyter_new_notebook}
+\end{center}
+
+Here's an example of a Jupyter notebook in action. Note that several non-standard Python packages
+(like \emph{numpy}, \emph{scipy}, \emph{pandas}, \emph{matplotlib}) are readily available:
+
+\begin{center}
+    \includegraphics*[scale=0.5]{ood_jupyter_notebook_example}
+\end{center}
+
+
+\section{Restarting your web server in case of problems}
+
+In case of problems with the web portal, it could help to restart the web server running in your VSC account.
+
+You can do this via the \emph{Restart Web Server} button under the \emph{Help} menu item:
+
+\begin{center}
+    \includegraphics*[scale=0.4]{ood_help_restart_web_server}
+\end{center}
+
+Of course, this only affects your own web portal session (not those of others).
