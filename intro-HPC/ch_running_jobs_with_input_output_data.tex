@@ -307,6 +307,66 @@ that is available across all clusters of the VSC, but at the moment
 of writing there are no plans to provide this.
 \end{description}
 
+\ifgent
+\subsection{Your UGent home drive and shares \label{subsec:ugent-shares}}
+
+On the loginnodes, it is possible to access your UGent home drive and shares.
+You first need to authenticate yourself with your UGent username and password to get a ticket, by running:
+
+\begin{prompt}
+%\shellcmd{kinit yourugentusername@UGENT.BE}%
+Password for yourugentusername@UGENT.BE:
+\end{prompt}
+
+Now you should be able to access your files running
+
+\begin{prompt}
+%\shellcmd{ls /UGent/yourugentusername}%
+home  shares  www
+\end{prompt}
+
+Please note the shares will only be mounted when you access this folder.
+You should specify your whole username - tab completion will not work.
+
+
+If you want to use the UGent shares longer than 24hours,
+you should ask a ticket for up to a week by running
+
+\begin{prompt}
+%\shellcmd{kinit yourugentusername@UGENT.BE -r 7d}%
+\end{prompt}
+
+You can verify your authentication ticket and expiring dates yourself by running klist
+
+\begin{prompt}
+%\shellcmd{klist}%
+...
+Valid starting     Expires            Service principal
+14/07/20 15:19:13  15/07/20 01:19:13  krbtgt/UGENT.BE@UGENT.BE
+	renew until 21/07/20 15:19:13
+
+\end{prompt}
+
+Your ticket is valid for 10 hours, but you can renew it before it expires.
+
+To simply renew your tickets, run
+
+\begin{prompt}
+%\shellcmd{kinit -R}%
+\end{prompt}
+
+If you want your ticket to be automatically renewed until the maximum expiry date, you can run
+
+\begin{prompt}
+%\shellcmd{krenew -b -K 60}%
+\end{prompt}
+
+Each hour the process will check if you ticket should be renewed.
+
+
+\fi
+
+
 \subsection{Pre-defined quotas}
 \label{subsec:predfined-quotas}
 \hypertarget{predefined-quotas}{}
