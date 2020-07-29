@@ -364,6 +364,32 @@ If you want your ticket to be renewed automatically up to the maximum expiry dat
 
 Each hour the process will check if your ticket should be renewed.
 
+\subsection{UGent shares with globus \label{subsec:globus-ugent-shares}}
+
+In order to access your UGent home and shares inside the globus access point, you'll first have to authenticate. To do this, you have to ssh to the globus endpoint from a loginnode. You will be prompted for your UGent username and password to authenticate:
+
+\begin{prompt}
+%\shellcmd{ssh globus01}%
+UGent username:ugentusername
+Password for ugentusername@UGENT.BE:
+Shares are available in globus endpoint at /UGent/ugentusername/
+Overview of valid tickets:
+Ticket cache: KEYRING:persistent:xxxxxxx:xxxxxxx
+Default principal: ugentusername@UGENT.BE
+
+Valid starting     Expires            Service principal
+29/07/20 15:56:43  30/07/20 01:56:43  krbtgt/UGENT.BE@UGENT.BE
+	renew until 05/08/20 15:56:40
+Tickets will be automatically renewed for 1 week
+Connection to globus01 closed.
+\end{prompt}
+
+Your shares will then be available at /UGent/ugentusername/ under the globus VSC tier2 endpoint. Tickets will be renewed automatically for 1 week, after which you'll need to run this again. If you want to disable access to your shares within globus, you have to run
+
+\begin{prompt}
+%\shellcmd{ssh globus01 destroy}%
+Succesfully destroyed session
+\end{prompt}
 
 \fi
 
