@@ -307,6 +307,99 @@ that is available across all clusters of the VSC, but at the moment
 of writing there are no plans to provide this.
 \end{description}
 
+\ifgent
+\subsection{Your UGent home drive and shares \label{subsec:ugent-shares}}
+
+In order to access data on your UGent share(s), you need to stage-in the data and stage-out afterwards.
+On the login nodes, it is possible to access your UGent home drive and shares.
+To allow this you need a ticket. This requires that you first authenticate yourself with your UGent username and password by running:
+
+\begin{prompt}
+%\shellcmd{kinit yourugentusername@UGENT.BE}%
+Password for yourugentusername@UGENT.BE:
+\end{prompt}
+
+Now you should be able to access your files running
+
+\begin{prompt}
+%\shellcmd{ls /UGent/yourugentusername}%
+home  shares  www
+\end{prompt}
+
+Please note the shares will only be mounted when you access this folder.
+You should specify your complete username - tab completion will not work.
+
+
+If you want to use the UGent shares longer than 24 hours,
+you should ask a ticket for up to a week by running
+
+\begin{prompt}
+%\shellcmd{kinit yourugentusername@UGENT.BE -r 7d}%
+\end{prompt}
+
+You can verify your authentication ticket and expiry dates yourself by running klist
+
+\begin{prompt}
+%\shellcmd{klist}%
+...
+Valid starting     Expires            Service principal
+14/07/20 15:19:13  15/07/20 01:19:13  krbtgt/UGENT.BE@UGENT.BE
+	renew until 21/07/20 15:19:13
+
+\end{prompt}
+
+Your ticket is valid for 10 hours, but you can renew it before it expires.
+
+To renew your tickets, simply run
+
+\begin{prompt}
+%\shellcmd{kinit -R}%
+\end{prompt}
+
+If you want your ticket to be renewed automatically up to the maximum expiry date, you can run
+
+\begin{prompt}
+%\shellcmd{krenew -b -K 60}%
+\end{prompt}
+
+Each hour the process will check if your ticket should be renewed.
+
+\subsection{UGent shares with globus \label{subsec:globus-ugent-shares}}
+
+In order to access your UGent home and shares inside the globus endpoint,
+you first have to generate authentication credentials on the endpoint.
+To do that, you have to ssh to the globus endpoint from a loginnode.
+You will be prompted for your UGent username and password to authenticate:
+
+\begin{prompt}
+%\shellcmd{ssh globus01}%
+UGent username:ugentusername
+Password for ugentusername@UGENT.BE:
+Shares are available in globus endpoint at /UGent/ugentusername/
+Overview of valid tickets:
+Ticket cache: KEYRING:persistent:xxxxxxx:xxxxxxx
+Default principal: ugentusername@UGENT.BE
+
+Valid starting     Expires            Service principal
+29/07/20 15:56:43  30/07/20 01:56:43  krbtgt/UGENT.BE@UGENT.BE
+	renew until 05/08/20 15:56:40
+Tickets will be automatically renewed for 1 week
+Connection to globus01 closed.
+\end{prompt}
+
+Your shares will then be available at /UGent/ugentusername/ under the globus VSC tier2 endpoint.
+Tickets will be renewed automatically for 1 week,
+after which you'll need to run this again.
+We advise to disable access to your shares within globus once access is no longer needed:
+
+\begin{prompt}
+%\shellcmd{ssh globus01 destroy}%
+Succesfully destroyed session
+\end{prompt}
+
+\fi
+
+
 \subsection{Pre-defined quotas}
 \label{subsec:predfined-quotas}
 \hypertarget{predefined-quotas}{}
