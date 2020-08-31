@@ -35,10 +35,10 @@ mympirun --output=interFoam.out interFoam -parallel
 # post-processing: reassemble decomposed domain
 echo "start reconstructPar: $(date)"
 reconstructPar &> reconstructPar.out
-# copy back results, i.e. all time step directories: 0, 0.05, ..., 1.0
+# copy back results, i.e. all time step directories: 0, 0.05, ..., 1.0 and inputs
 export RESULTS_DIR=$VSC_DATA/results/$PBS_JOBID
 mkdir -p $RESULTS_DIR
-cp -a *.out [0-9.]* $RESULTS_DIR
+cp -a *.out [0-9.]* constant system $RESULTS_DIR
 echo "results copied to $RESULTS_DIR at $(date)"
 # clean up working directory
 cd $HOME
