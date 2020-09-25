@@ -590,7 +590,7 @@ temporary or log files.  Keeping your environment clean will never do any harm.
 \end{tip}
 
 \begin{tip}
-\ifgent
+\ifleuven\else\ifantwerpen\else % VOs
 If you obtained your VSC account via \university, you can get
 (significantly) more storage quota in the DATA and SCRATCH volumes
 by joining a Virtual Organisation (VO),
@@ -837,8 +837,8 @@ example:*:1234567:vsc40001,vsc40002,vsc40003
 We can see that the VSC id number is 1234567 and that there are three members in
 the group: \lstinline|vsc40001|, \lstinline|vsc40002| and \lstinline|vsc40003|.
 
-% virtual organisations are only used in Ghent (for now)
-\ifgent
+% virtual organisations are only used in Ghent and Brussel (for now)
+\ifleuven\else\ifantwerpen\else
 \section{Virtual Organisations}
 \label{sec:virtual-organisations}
 \hypertarget{sec:virtual-organisation}{}
@@ -852,7 +852,12 @@ Being in a VO allows for larger storage quota to be obtained
 
 \begin{enumerate}
     \item Get the VO id of the research group you belong to (this id is formed by
+\ifgent
         the letters \lstinline|gvo|, followed by 5 digits).
+\fi
+\ifbrussel
+        the letters \lstinline|bvo|, followed by 5 digits).
+\fi
     \item Go to \url{https://account.vscentrum.be/django/vo/join} and fill in the
         section named ``Join VO''. You will be asked to fill in the VO id and a message for
         the moderator of the VO, where you identify yourself. This should look something
