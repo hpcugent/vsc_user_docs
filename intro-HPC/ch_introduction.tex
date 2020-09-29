@@ -79,26 +79,24 @@ up to 100 Gbit InfiniBand fiber connections & \dots\  or allowing to transfer 3 
 The \hpc currently consists of:
 
 \ifantwerpen
-hopper:
+Leibniz:
   \begin{enumerate}
-    \item  144 compute nodes with 2 ten core Intel E5-2680v2 CPUs (Ivy Bridge generation, 2.8 GHz), 64 GB
-    memory, 500 GB local disk
-    \item  24 nodes with 2 ten core Intel E5-2680v2 CPUs (Ivy Bridge generation, 2.8 GHz), 256 GB memory,
-           500 GB local disk
+  \item 144 compute nodes with 2 14-core Intel E5-2680v4 CPUs (Broadwell generation, 2.4 GHz) and 128 GB RAM, 120 GB local disk
+  \item 8 compute nodes with 2 14-core Intel E5-2680v4 CPUs (Broadwell generation, 2.4 GHz) and 256 GB RAM, 120 GB local disk
+  \item 24 ``hopper'' compute nodes (recovered from the former Hopper cluster) with 2 ten core Intel E5-2680v2 CPUs (Ivy Bridge generation, 2.8 GHz), 256 GB memory, 500 GB local disk
+  \item 2 GPGPU nodes with 2 14-core Intel E5-2680v4 CPUs (Broadwell generation, 2.4 GHz), 128 GB RAM and two NVIDIA Tesla P100 GPUs with 16 GB HBM2 memory per GPU, 120 GB local disk
+  \item 1 vector computing node with 1 12-core Intel Xeon Gold 6126 (Skylake generation, 2.6 GHz), 96 GB RAM and 2 NEC SX-Aurora Vector Engines type 10B (per card 8 cores @1.4 GHz, 48 GB HBM2), 240 GB local disk
+  \item 1 Xeon Phi node with 2 14-core Intel E5-2680v4 CPUs (Broadwell generation, 2.4 GHz), 128 GB RAM and Intel Xeon Phi 7220P PCIe card with 16 GB of RAM, 120 GB local disk
+  \item 1 visualisation node with 2 14-core Intel E5-2680v4 CPUs (Broadwell generation, 2.4 GHz), 256 GB RAM and with a NVIDIA P5000 GPU, 120 GB local disk
   \end{enumerate}
-All nodes are connected through a FDR10 InfiniBand network.
+The nodes are connected using an InfiniBand EDR network except for the ``hopper'' compute nodes that utilize FDR10 InfiniBand. 
 
-
-leibniz:
+Vaughan:
   \begin{enumerate}
-  \item 144 compute nodes with 2 14-core Intel E5-2680v4 CPUs (Broadwell generation, 2.4 GHz) and 128 GB RAM
-  \item 8 nodes with 2 14-core Intel E5-2680v4 CPUs (Broadwell generation, 2.4 GHz) and 256 GB RAM
-  \item 2 nodes with 2 14-core Intel E5-2680v4 CPUs (Broadwell generation, 2.4 GHz), 128 GB RAM and two NVIDIA Tesla P100 GPUs with 16 GB HBM2 memory per GPU
-  \item 1 node with 1 12-core Intel Xeon Gold 6126 (Skylake generation, 2.6 GHz), 96 GB RAM and 2 NEC SX-Aurora Vector Engines type 10B (per card 8 cores @1.4 GHz, 48 GB HBM2)
-  \item 1 node with 2 14-core Intel E5-2680v4 CPUs (Broadwell generation, 2.4 GHz), 128 GB RAM and Intel Xeon Phi 7220P PCIe card with 16 GB of RAM
-  \item 1 visualisation node with 2 14-core Intel E5-2680v4 CPUs (Broadwell generation, 2.4 GHz), 256 GB RAM and with a NVIDIA P5000 GPU
+  \item 104 compute nodes with 2 32-core AMD Epyc 7452 (2.35 GHz) and 256 GB RAM, 240 GB local disk
   \end{enumerate}
-All nodes are connected through a EDR InfiniBand network
+The nodes are connected using an InfiniBand HDR100 network.
+
 \fi
 \ifleuven
   \begin{enumerate}
