@@ -14,4 +14,5 @@
 *.idx
 *.ind
 *~
+*.sw[op]
 shellcmds.sh
