@@ -21,13 +21,14 @@ jobs:
         run: ./run-post-checks.sh
       - name: collect PDFs
         run: |
-          cp -a intro-HPC/*.pdf intro-Linux/*.pdf perfexpert/*.pdf intro-Cloud/*.pdf web/
-          ls web
+          mkdir -p web/pdf
+          cp -a intro-HPC/*.pdf intro-Linux/*.pdf perfexpert/*.pdf intro-Cloud/*.pdf web/pdf/
+          ls web/pdf
       - name: Store produce PDFs
         uses: actions/upload-artifact@v2
         with:
           name: vsc-user-docs-pdfs
-          path: ./web/*.pdf
+          path: ./web/pdf/*.pdf
       - name: Prepare for publishing PDFs
         run: ./prep-deploy.sh
       - name: Publish new PDFs on website
