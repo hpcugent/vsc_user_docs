@@ -28,15 +28,10 @@ jobs:
         with:
           name: vsc-user-docs-pdfs
           path: ./web/*.pdf
-
-  publish_pdf:
-      runs-on: ubuntu-latest
-      needs: build_pdf
-      if: github.ref == 'refs/heads/master'
-      steps:
       - name: Prepare for publishing PDFs
         run: ./prep-deploy.sh
       - name: Publish new PDFs on website
+        if: github.ref == 'refs/heads/master'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
