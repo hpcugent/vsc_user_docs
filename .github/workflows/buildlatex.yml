@@ -1,0 +1,43 @@
+name: Build and publish PDF files
+on: [push, pull_request]
+
+jobs:
+  build_pdf:
+      runs-on: ubuntu-latest
+      container:
+        image: danteev/texlive:latest
+      steps:
+      - name: Set $LOGFILE
+        run: echo "LOGFILE=$HOME/logfile.txt" >> $GITHUB_ENV
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run pre checks
+        run: ./run-pre-checks.sh
+      - name: Add timestamp
+        run: ./add-timestamp.sh
+      - name: Build LaTeX
+        run: make all 2>&1 | tee ${LOGFILE}
+      - name: Run post checks
+        run: ./run-post-checks.sh
+      - name: collect PDFs
+        run: |
+          cp -a intro-HPC/*.pdf intro-Linux/*.pdf perfexpert/*.pdf intro-Cloud/*.pdf web/
+          ls web
+      - name: Store produce PDFs
+        uses: actions/upload-artifact@v2
+        with:
+          name: vsc-user-docs-pdfs
+          path: ./web/*.pdf
+
+  publish_pdf:
+      runs-on: ubuntu-latest
+      needs: build_pdf
+      if: github.ref == 'refs/heads/master'
+      steps:
+      - name: Prepare for publishing PDFs
+        run: ./prep-deploy.sh
+      - name: Publish new PDFs on website
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./web
