@@ -11,7 +11,7 @@ export MYMPIRUN_VARIABLESPREFIX=WM_PROJECT,FOAM,MPI
 # set up working directory
 # (uncomment one line defining $WORKDIR below)
 #export WORKDIR=$VSC_SCRATCH/$PBS_JOBID  # for small multi-node jobs
-#export WORKDIR=$VSC_SCRATCH_PHANPY/$PBS_JOBID  # for large multi-node jobs
+#export WORKDIR=$VSC_SCRATCH_ARCANINE/$PBS_JOBID  # for large multi-node jobs (not on available victini)
 export WORKDIR=$VSC_SCRATCH_NODE/$PBS_JOBID  # for single-node jobs
 mkdir -p $WORKDIR
 # damBreak tutorial, see also https://cfd.direct/openfoam/user-guide/dambreak
