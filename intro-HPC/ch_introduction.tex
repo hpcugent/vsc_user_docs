@@ -44,10 +44,7 @@ nuclear weapons, and nuclear fusion).%
 \label{sec:what-is-the-hpc}
 
 The \hpc is a collection of computers with
-\ifbrussel
-AMD and
-\fi
-Intel CPUs, running a Linux
+AMD and/or Intel CPUs, running a Linux
 operating system, shaped like pizza boxes and stored above and next
 to each other in racks, interconnected with copper and fiber cables. Their
 number crunching power is (presently) measured in hundreds of billions of
@@ -157,18 +154,19 @@ All the nodes in the \hpc run under the ``\operatingsystem'' operating
 system, which is a clone of ``\operatingsystembase'',
 with \emph{cpuset} support.
 \fi
-\ifgent
-All the nodes in the \hpc run ``\operatingsystem''
-with \emph{cpuset} support and \emph{BLCR} modules.
-\fi
 %TODO insert specs for other sites
 
+\ifgent
+\strong{Job management} and \strong{job scheduling} are performed by Slurm with a Torque frontend. We advise users to adhere to Torque commands mentioned in this document.
+\else
 Two tools perform the \strong{job management} and \strong{job scheduling}:
 \begin{enumerate}
   %TODO: this gives weird rendering artifacts??
   \item  TORQUE: a resource manager (based on PBS);
   \item  Moab: job scheduler and management tools.
 \end{enumerate}
+\fi
+
 \ifantwerpen
 %\strong{Accounting} is handled by a third tool, i.e., GOLD.
 \fi
