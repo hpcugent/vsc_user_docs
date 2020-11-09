@@ -243,13 +243,15 @@ ls: .ssh: No such file or directory
   name except for the extension ``.pub'' added to one of them. In this particular
   case, the private key is ``id\_rsa'' and public key is ``id\_rsa.pub''. You may
   have multiple keys (not necessarily in the directory ``\tilde/.ssh'') if you or
-  your operating system requires this.
+  your operating system requires this. Be aware that your existing key pair might
+  be too short, or not the right type.
 
   You will need to generate a new key pair, when:
   \begin{enumerate}
     \item  you don't have a key pair yet
     \item  you forgot the passphrase protecting your private key
     \item  or your private key was compromised
+    \item  your key pair is too short or not the right type
   \end{enumerate}
 
   For extra security, the private key itself can be encrypted using a ``passphrase'',
