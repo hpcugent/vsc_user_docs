@@ -81,7 +81,9 @@ How to start background jobs?                                           & \stron
 How to start jobs with user interaction?                                & \strong{\ref{ch:running-interactive-jobs}} & \nameref{ch:running-interactive-jobs} \\ \hline
 Where do the input and output go? Where to collect my results?          & \strong{\ref{ch:running-jobs-with-input-output-data}} & \nameref{ch:running-jobs-with-input-output-data} \\ \hline
 Can I speed up my program by exploring parallel programming techniques? & \strong{\ref{ch:multi-core-jobs-parallel-computing}} & \nameref{ch:multi-core-jobs-parallel-computing} \\ \hline
+\ifgent
 How do I use the HPC-UGent web portal?                                  & \strong{\ref{ch:web_portal}} & \nameref{ch:web_portal} \\ \hline
+\fi
 Troubleshooting & \strong{\ref{ch:troubleshooting}} & \nameref{ch:troubleshooting} \\ \hline
 What are the rules and priorities of jobs?                              & \strong{\ref{ch:hpc-policies}} & \nameref{ch:hpc-policies} \\ \hline
 FAQ & \strong{\ref{ch:faq}} & \nameref{ch:faq} \\ \hline
@@ -100,7 +102,7 @@ Can I compile my software on the \hpc?       & \strong{\ref{ch:compiling-and-tes
 \ifthenelse{\boolean{gent} \OR \boolean{brussel}}{%
 \\ \hline
 Can I stop my program and continue later on? & \strong{\ref{ch:checkpointing}}     & \nameref{ch:checkpointing}
-}{} 
+}{}
 \\ \hline
 Do you have more program examples for me?     & \strong{\ref{ch:program-examples}}  & \nameref{ch:program-examples} \\ \hline
 Do you have more job script examples for me? & \strong{\ref{ch:jobscript-examples}} & \nameref{ch:jobscript-examples} \\ \hline
@@ -113,7 +115,6 @@ Need a remote display?                       & \strong{\ref{ch:vnc}}            
 \\ \hline
 % X2Go is only available from UGent
 \ifgent
-\\ \hline
 Need a remote display with more features?    & \strong{\ref{ch:x2go}}               & \nameref{ch:x2go}
 \\ \hline
 Want to use the HPC-UGent GPU cluster?    & \strong{\ref{ch:gpu_ugent}}               & \nameref{ch:gpu_ugent}
