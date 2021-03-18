@@ -353,10 +353,11 @@ It's also possible to get detailed information about a specific module:
 %\ifgent{}%
     You will need to load all module(s) on any one of the lines below before the "example/1.2.3" module is available to load.
 
-      cluster/golett
-      cluster/phanpy
-      cluster/swalot
+      cluster/doduo
+      cluster/joltik
+      cluster/kirlia
       cluster/skitty
+      cluster/swalot
       cluster/victini
 %\else{}%
     This module can be loaded directly: module load example/1.2.3
@@ -556,24 +557,25 @@ the \lstinline|pbsmon| command:
 
 
 \begin{prompt}
-%\shellcmd{module swap cluster/phanpy}%
+%\shellcmd{module swap cluster/kirlia}%
 %\shellcmd{pbsmon}%
-2301 2302 2303 2304 2305 2306 2307
-    _    .    X    J    _    _    _
+ 3401 3402 3403 3404 3405 3406 3407
+    J    j    j    J    J    j    J
 
- 2308 2309 2310 2311 2312 2313 2314
-    j    j    J    j    _    _    j
+ 3408 3409 3410 3411 3412 3413 3414
+    J    J    J    J    J    J    J
 
- 2315 2316
-    _    j
+ 3415 3416
+    J    J
 
-   J full                 : 2   |   X down                 : 1   |
-   j partial              : 5   |   x down_on_error        : 0   |
-   _ free                 : 7   |   . offline              : 1   |
-                                |   o other                : 0   |
+   _ free                 : 0   |   X down                 : 0   |
+   j partial              : 3   |   x down_on_error        : 0   |
+   J full                 : 13  |   m maintenance          : 0   |
+                                |   . offline              : 0   |
+                                |   o other (R, *, ...)    : 0   |
 
 Node type:
- ppn=24, physmem=503.6GB, swap=20.0GB, vmem=523.6GB, local disk=1117.0GB
+ ppn=36, physmem=751GB, swap=0GB, vmem=751GB, local disk=0GB
 \end{prompt}
 
 \lstinline|pbsmon| only outputs details of the cluster corresponding to the
@@ -823,7 +825,7 @@ To list the available cluster modules, you can use the \lstinline|module avail c
 \begin{prompt}
 %\shellcmd{module avail cluster/}%
 ------------------------------------------------------------------------------------ /etc/modulefiles/vsc ------------------------------------------------------------------------------------
-   cluster/golett (S)    cluster/phanpy (S)    cluster/skitty (S)    cluster/swalot (S)    cluster/victini (S,L)
+   cluster/doduo (S)    cluster/joltik (S)    cluster/kirlia (S)    cluster/skitty (S)    cluster/swalot (S)    cluster/victini (S,L)
 
   Where:
    S:  Module is Sticky, requires --force to unload or purge
