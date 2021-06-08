@@ -1,17 +1,24 @@
-\chapter{Flavors and Intance Types}
+\chapter{Instance types and flavors}
 
-VSC Tier1 Cloud provides several virtual machine instance types or flavors to fit different use cases.
+VSC Tier1 Cloud provides several virtual machine instance types and flavors to fit different use cases.
 Each instance type provides several flavor sizes to give different combinations of CPU, memory, GPU and network resource.
 
-\section{Intance Types}\label{sec:instance-types}
-The following table provides the current main intance types available from VSC Tier1 Cloud infrastructure:
+\section{Instance Types}\label{sec:instance-types}
+The following table provides the current main instance types available from VSC Tier1 Cloud infrastructure:
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{ |p{4cm}|p{5cm}|p{5cm}| }
+\begin{tabular}{ |p{6cm}|p{4cm}|p{5cm}| }
   \hline
-  \rowcolor{lightgray} \textbf{CPUv1} & \textbf{UPSv1} & \textbf{GPUv1} \\
+  \rowcolor{lightgray} \textbf{UPSv1} & \textbf{CPUv1} & \textbf{GPUv1} \\
   \hline
+  \begin{itemize}
+    \item AMD Epyc 7542 2.9GHz
+    \item vCPU oversubscription 2:1
+    \item 25Gbit Ethernet
+    \item Uninterruptible Power Supply (UPS)
+  \end{itemize}
+  &
   \begin{itemize}
     \item Intel Xeon CPU E5-2670 2.60GHz
     \item 10Gbit Ethernet
@@ -19,28 +26,21 @@ The following table provides the current main intance types available from VSC T
   &
   \begin{itemize}
     \item AMD Epyc 7542 2.9GHz
-    \item 20Gbit Ethernet
-    \item Uninterruptible Power Supply (UPS)
-  \end{itemize}
-  &
-  \begin{itemize}
-    \item AMD Epyc 7542 2.9GHz
-    \item 20Gbit Ethernet
+    \item 25Gbit Ethernet
     \item NVIDIA Tesla 4 GPU
-    \item Uninterruptible Power Supply (UPS)
   \end{itemize}
   \\
   \hline
 \end{tabular}
 \caption{Instance types hardware profiles}
-\label{table:intance-type}
+\label{table:instance-type}
 \end{table}
 
 Each instance type is appropriate for different workloads. From regular CPU usage (\strong{CPUv}\emph{<version>} instance types), to high performance GPU computations (\strong{GPUv}\emph{<version>}) or VMs connected to uninterruptible power supplies (\strong{UPSv}\emph{<version>}). VMs using UPS flavor types will be keep up and running even if the data centre suffers an unexpected power cut. 
 
 \section{Flavor Sizes}\label{sec:flavor-sizes}
 A flavor size is a set of virtualized hardware resouces to a virtual machine (VM) instance like system memory size, virtual CPU (vCPU) or the root filesystem size.
-VSC Tier-1 Cloud VM flavors are grouped by instance types (see table \ref{table:intance-type}). The current flavor sizes are available for each instance type and can be used in different combinations to fit different workload hardware requirements.
+VSC Tier-1 Cloud VM flavors are grouped by instance types (see table \ref{table:instance-type}). The current flavor sizes are available for each instance type and can be used in different combinations to fit different workload hardware requirements.
 
 \begin{table}[h!]
 \centering
@@ -67,7 +67,7 @@ VSC Tier-1 Cloud VM flavors are grouped by instance types (see table \ref{table:
 \label{table:flavor-size}
 \end{table}
 
-For instance \strong{GPUv1}.\emph{large} OpenStack flavor will instantiate a VM with 4 AMD Epyc 7542 2.9GHz CPUs, with a NVIDIA Tesla 4 GPU, 8GB of ram, 40Gb of root disk and connected to the UPS.
+E.g. \strong{GPUv1}.\emph{large} OpenStack flavor will instantiate a VM with 4 AMD Epyc 7542 2.9GHz CPUs, with a NVIDIA Tesla 4 GPU, 8GB of ram, 40Gb of root disk and connected to the UPS.
 
 %%% Local Variables:
 %%% mode: latex
