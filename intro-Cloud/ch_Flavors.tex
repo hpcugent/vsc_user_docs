@@ -52,6 +52,14 @@ to the available networks: public network, VSC network and shared filesystem
 network (NFS). VSC and shared file system networks are only available
 by project's request.
 
+VSC network gives an optimal path towards other VSC sites (ideal for
+cloudbursting or for high perfomance connections between different clusters
+and services within VSC).
+On the other hand, the shared filesystem network is required by the OpenStack
+shared filesystem service (Manila) (see chapter \ref{cha:shared-file-systems}
+for more information).
+
+
 \section{Flavor Sizes}\label{sec:flavor-sizes}
 A flavor size is a set of virtualized hardware resouces to a virtual
 machine (VM) instance like system memory size, virtual CPU (vCPU)
