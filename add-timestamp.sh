@@ -12,3 +12,5 @@ function set_timestamp() {
 set_timestamp perfexpert
 set_timestamp intro-Linux
 set_timestamp intro-HPC
+set_timestamp intro-Cloud
+
