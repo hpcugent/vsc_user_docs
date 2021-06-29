@@ -65,14 +65,19 @@ machine (VM) instance like system memory size, virtual CPU (vCPU)
 or the root filesystem size. 
 
 The flavor's root size is the amount of disk space
-used by the root (\emph{/}) partition, an ephemeral disk that the base image is copied into
-(see section \ref{launch-an-instance} for more information about VM persistent/non-persistent
-instances).
-The flavor's root storage is only taken into account when booting from a non-persistent VM but not from a
-persistent storage volume. The flavor's root storage is not taken into account to calculate
-the persistent local disk or volume storage quota either. Root storage could be used to generate
-a persistent VM volume during the first VM instantiation. VM persistent volumes could be resized
-later if that is necessary (see next chapter \ref{cha:launch-manage-inst} for more information).
+used by the root (\emph{/}) partition, an ephemeral disk that the
+base image is copied into (see section \ref{launch-an-instance} for
+more information about VM persistent/non-persistent instances).
+
+The flavor's root ephemeral storage is only used when booting from
+a non-persistent VM but not from a persistent storage volume or
+persistent VM.
+The flavor's root ephemeral size is not taken into account to
+calculate the project's local storage quota either. You can also
+create a persistent volume and choose the desired filesystem size for
+your persistent VM during the instantiation.
+VM persistent volumes could be resized later if that is necessary
+(see next chapter \ref{cha:launch-manage-inst} for more information).
 
 VSC Tier-1 Cloud VM flavors are grouped by instance types
 (see table \ref{table:instance-type}). The current flavor sizes are
