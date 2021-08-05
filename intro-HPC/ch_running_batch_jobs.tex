@@ -795,6 +795,14 @@ It might be beneficial to request less resources (e.g., not requesting all cores
 in a workernode), since the scheduler often finds a ``gap'' to fit the job into
 more easily.
 
+Sometimes it happens that couple of nodes are free and a job would not start.
+Empty nodes are not necessary empty for your job(s). Just imagine, that an
+\emph{N}-node-job (with a higher priority than your waiting job(s)) should run.
+It is quite unlikely that \emph{N} nodes would be empty at the same moment
+to accommodate this job, so while fewer than \emph{N} nodes are empty,
+you can see them as being empty. The moment the \emph{N}th node becomes empty
+the waiting \emph{N}-node-job will consume these \emph{N} free nodes.
+
 \fi
 
 \ifgent
