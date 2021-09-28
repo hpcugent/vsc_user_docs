@@ -1110,7 +1110,7 @@ If you omit this option, the queue manager will not complain but use a
 default value (one hour on most clusters).
 
 \ifgent
-The highest maximum value for walltime is \strong{72 hours}.
+The maximum walltime for HPC-UGent clusters is \strong{72 hours}.
 \fi
 
 If you want to run some final steps (for example to copy files back) before the walltime kills your main process,
@@ -1126,7 +1126,7 @@ it will be ``killed'' (terminated) by the job scheduler.  There is no
 harm if you \emph{slightly} overestimate the requested memory.
 
 \ifgent
-The default memory on a given cluster is the ``usable memory per node'' divided by
+The default memory on a given HPC-UGent cluster is the ``usable memory per node'' divided by
 the ``numbers of cores in a node'' multiplied by the requested processor core(s) (ppn).
 Jobs get the default memory without specifying any memory,
 and this is the recommended option. For ``usable memory per node'' and ``number of
