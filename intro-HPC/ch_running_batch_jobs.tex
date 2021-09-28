@@ -1115,7 +1115,7 @@ The maximum walltime for HPC-UGent clusters is \strong{72 hours}.
 
 If you want to run some final steps (for example to copy files back) before the walltime kills your main process,
 you have to kill the main command yourself before the walltime runs out and then copy the
-file back. See \autoref{sec:maximum-timelimit-timeout-jobscript} for how to do this.
+file back. See \autoref{sec:maximum-timelimit-timeout-jobscript} for how to do this. \\
 
 \begin{prompt}
 %\shellcmd{qsub -l mem=4gb}%
@@ -1126,14 +1126,13 @@ it will be ``killed'' (terminated) by the job scheduler.  There is no
 harm if you \emph{slightly} overestimate the requested memory.
 
 \ifgent
-The default memory on a given HPC-UGent cluster is the ``usable memory per node'' divided by
-the ``numbers of cores in a node'' multiplied by the requested processor core(s) (ppn).
-Jobs get the default memory without specifying any memory,
-and this is the recommended option. For ``usable memory per node'' and ``number of
+The default memory reserved for a job on any given HPC-UGent cluster is the ``usable
+memory per node'' divided by the ``numbers of cores in a node'' multiplied by the
+requested processor core(s) (ppn). Jobs will request the default memory without defining
+memory for the job, either as a command line option or as a memory directive in the job script.
+Please note that using the default memory is recommended.  For ``usable memory per node'' and ``number of
 cores in a node'' please consult  \url{https://www.ugent.be/hpc/en/infrastructure}.
 \fi
-\\
-\\
 
 \begin{prompt}
 %\shellcmd{qsub -l nodes=5:ppn=2}%
