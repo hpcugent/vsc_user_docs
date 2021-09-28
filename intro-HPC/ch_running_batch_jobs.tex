@@ -1109,6 +1109,10 @@ harm if you \emph{slightly} overestimate the maximum execution time.
 If you omit this option, the queue manager will not complain but use a
 default value (one hour on most clusters).
 
+\ifgent
+The highest maximum value for walltime is \strong{72 hours}.
+\fi
+
 If you want to run some final steps (for example to copy files back) before the walltime kills your main process,
 you have to kill the main command yourself before the walltime runs out and then copy the
 file back. See \autoref{sec:maximum-timelimit-timeout-jobscript} for how to do this.
@@ -1119,8 +1123,17 @@ file back. See \autoref{sec:maximum-timelimit-timeout-jobscript} for how to do t
 
 The job requests 4 GB of RAM memory. As soon as the job tries to use more memory,
 it will be ``killed'' (terminated) by the job scheduler.  There is no
-harm if you \emph{slightly} overestimate the requested memory. \\
- \\
+harm if you \emph{slightly} overestimate the requested memory.
+
+\ifgent
+The default memory on a given cluster is the ``usable memory per node'' divided by
+the ``numbers of cores in a node'' multiplied by the requested processor core(s) (ppn).
+Jobs get the default memory without specifying any memory,
+and this is the recommended option. For ``usable memory per node'' and ``number of
+cores in a node'' please consult  \url{https://www.ugent.be/hpc/en/infrastructure}.
+\fi
+\\
+\\
 
 \begin{prompt}
 %\shellcmd{qsub -l nodes=5:ppn=2}%
