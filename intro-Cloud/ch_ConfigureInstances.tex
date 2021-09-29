@@ -4,14 +4,16 @@ a few different aspects, which we discuss more detail in the following
 sections:
 \begin{itemize}
 \item Instances must connect to the project's \_vm network in order to
-  communicate (see section \ref{sec:_vm-_nfs-networks}).
+  get external internet access (see section \ref{sec:_vm-_nfs-networks}).
 \item Each cloud project can use one floating IP, a public IP address
-  which you'll need to link to the resources you want to access
-  (see section \ref{sec:floating-ip}).
+  which you'll need to link to the resources you want to access. Optionally,
+  if the project has requested access to VSC network it will receive also
+  three VSC floating IPs (see section \ref{sec:floating-ip}).
 \item By default, the UGent firewall blocks most IP addresses and
-  ports.  Only the port range 50000-60000 for the floating IP
-  addresses is open by default.  Contact \cloudinfo if you need to
-  access other ports from the outside world.
+  ports.  Only the port range 50000-60000 for the public floating IP
+  addresses is open by default.
+  Contact \cloudinfo if you need to access other ports from the
+  outside world.
 \item The OpenStack environment has its own internal firewalls, which
   block most ports of your instances by default.  If you want to
   access specific ports of your instances, you must create ``Security
@@ -25,35 +27,45 @@ users, you'll need to set up some form of identity management
 yourself.  This system administration task is beyond the scope of our
 tutorial.
 
-\section{The \_vm and \_nfs networks}\label{sec:_vm-_nfs-networks}
+\section{The \_vm, \_vsc and \_nfs networks}\label{sec:_vm-_nfs-networks}
 Each project in the VSC cloud has its own network
 \texttt{\emph{<projectname>}\_vm} and --- if the project uses shares
---- \texttt{\emph{<projectname>}\_nfs}.   Each is a subnet of 254
+and/or vsc networks --- \texttt{\emph{<projectname>}\_nfs} and 
+\texttt{\emph{<projectname>}\_vsc} respectively. Each is a subnet of 254
 addresses, with an ip range 10.10.$x$.0/24, where $x$ is a number that
 depends on the project and network.  To see the subnets for your
 project's networks, open the Network tab, and select Networks.
 
 Instances should use the \_vm network for communication, and the \_nfs
 network if they need access to shared file systems (see chapter
-\ref{cha:shared-file-systems}).  When an instance is created in
-\gls{OpenStack} and connected to the \_vm or \_nfs networks, it is
+\ref{cha:shared-file-systems}). On the other hand \_vsc network is used to
+connect to or provide VSC services via VSC network and floating IPs.
+When an instance is created in
+\gls{OpenStack} and connected to the \_vm, \_nfs or \_vsc networks, it is
 automatically assigned a fixed IP address in that network. This IP
 address is permanently associated with the instance until the instance
 is terminated.
 
 \section{Floating IP addresses}\label{sec:floating-ip}
-The \_vm and \_nfs networks can only be reached from within the
+The \_vm, \_nfs and \_vsc networks can only be reached from within the
 OpenStack environment.  If you need to access an instance from the
 outside, you need to use one of your project's floating IP addresses,
-which are public IP addresses.  Unlike fixed IP addresses, floating IP
-addresses can have their associations modified at any time, regardless
-of the state of the instances involved.
+which are public IP addresses (193.190.80.0/25 IPs for \_vm network) or
+VSC IP addresses (172.24.48.0/20 IPs for \_vsc network).
+Unlike fixed IP addresses, floating IP addresses can have their associations
+modified at any time, regardless of the state of the instances involved.
+
+\strong{Note:} Do not release the floating IPs assigned to your project.
+The floating IPs are fixed to the project and it is not possible, as regular user,
+to re-allocate floating IPs.
+Please contact to VSC Tier1 Cloud support \cloudinfo if you have released
+your project's floating IPs by mistake.
 
 This section explains how to make your instance accessible via a
-public IP address by two different methods.  The preferred method is
-to use port forwarding to access multiple instances using the same IP
-address, but you can also use a ``floating IP association'' for quick
-tests.
+public IP address by two different methods. The preferred method for \_vm
+network is to use port forwarding to access multiple instances using the
+same public IP address, but you can also use a ``floating IP association''
+for quick tests or \_vsc network.
 
 \subsection*{Floating ip port forwarding}
 OpenStack's networking API, called Neutron, makes it possible to
@@ -161,8 +173,8 @@ for more information.
 A floating IP address can also be associated to an instance, just like
 the fixed IP addresses.  Because this approach uses one of the few
 available floating ip addresses for every instance you want to connect
-to, you should only use it for testing purposes, and disassociate the
-address when you are done.
+to, you should only use it for testing purposes with \_vm network or
+with \_vsc network.
 
 \strong{Note:} If you want to use a floating ip for port forwarding as
 in the previous section, it cannot be associated to an instance at the
