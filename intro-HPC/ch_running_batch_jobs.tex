@@ -1170,6 +1170,8 @@ cd $PBS_O_WORKDIR
 Note that the resources requested on the command line will override those
 specified in the PBS file.
 
+\ifgent
+\else % not ifgent
 \subsection{Node-specific properties}
 
 The following table contains some node-specific properties that can be used to
@@ -1215,6 +1217,7 @@ To get a list of all properties defined for all nodes, enter
 
 This list will also contain properties referring to, e.g., network components,
 rack number, etc.
+\fi % end \ifgent \else
 
 \section{Job output and error files}
 
