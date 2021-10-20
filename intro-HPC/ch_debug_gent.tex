@@ -5,20 +5,20 @@
 \section{Purpose}
 \label{sec:debug_ugent_pupose}
 The purpose of the debug cluster is to run debug jobs. Additionally, it can be also used for courses. 
-The debug cluster is overcommited, which means that 6 times more CPU core can be
+The debug cluster is overcommited, which means that 6 times more CPU cores can be
 scheduled than physically exist in the cluster. The cluster performance heavily depends on the
-workload, and running jobs can slow down or speed up during they are running.  In the case of a
+workload, and jobs can slow down or speed up during their run. In the case of a
 fully loaded cluster, jobs would run about 6 times slower compared to an empty cluster. 
 \\ Due to the restrictions (see section~\ref{subsec:debug_ugent_restrictions}) and sharing the CPU
-resorces, jobs on this cluster should normally immediately start. As a consequence,
-typical workload for this cluster are:
+resources, jobs on slaking should normally start more or less immediately. As a consequence,
+typical workloads for this cluster should be limited to:
 \begin{itemize}
   \item  Debugging programs
   \item  Try/debug submit scripts
-  \item  Run small jobs when performance is not an issue (courses, hands-ons, etc.)
+  \item  Run small jobs for which performance is not an issue (courses, hands-ons, etc.)
   \item  Run interactive jobs (see chapter~\ref{ch:running-interactive-jobs}) with lots of idle time
-         (courses, hads-ons, etc.) 
-  \item  Run Cluster Desktops (see chapter~\ref{ch:web_portal}) whith lots of idle time
+         (courses, hands-ons, etc.) 
+  \item  Run Cluster Desktops (see chapter~\ref{ch:web_portal}) with lots of idle time
          (courses, hands-ons, etc.)
 \end{itemize} 
 
@@ -36,7 +36,8 @@ Then use the familiar \lstinline|qsub|, \lstinline|qstat|, etc. commands.
 \subsection{Restrictions}
 \label{subsec:debug_ugent_restrictions}
 
-Currently one user can have maximum 5 jobs in the queue (running and waiting for run), and 
-maximum 3 jobs per user can run at the same time. The running jobs can allocate maximum 8
-CPU cores. \\ Please note that based on the (historical) workload of the debug cluster,
-the above restrictions and the overcommitment ratio might change without prior notice.
+Currently each user may have at most 5 jobs in the queue (iboth running and waiting to run)
+and at most 3 jobs per user can be running at the same time. The running jobs may allocate 
+no more than 8 CPU cores in total. \\ Please note that based on the (historical) workload
+of the debug cluster, the above restrictions and the overcommitment ratio might change
+without prior notice.
