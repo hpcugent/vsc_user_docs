@@ -5,12 +5,12 @@
 \section{Purpose}
 \label{sec:debug_ugent_pupose}
 The purpose of the debug cluster is to run debug jobs. Additionally, it can be also used for courses. 
-The debug cluster is overcommited, which means that 6 times more CPU cores can be
-scheduled than physically exist in the cluster. The cluster performance heavily depends on the
-workload, and jobs can slow down or speed up during their run. In the case of a
-fully loaded cluster, jobs would run about 6 times slower compared to an empty cluster. 
-\\ Due to the restrictions (see section~\ref{subsec:debug_ugent_restrictions}) and sharing the CPU
-resources, jobs on slaking should normally start more or less immediately. As a consequence,
+The debug cluster is overcommited, which means that more CPU cores can be
+assigned to jobs than physically exist in the cluster. Obviously, the performance of this cluster
+heavily depends on the workloads and that actual overcommit usage. Be aware that jobs can slow
+down or speed up during their execution.
+\\ Due to the restrictions and sharing the CPU resources (see section~\ref{subsec:debug_ugent_restrictions}) 
+jobs on slaking should normally start more or less immediately. As a consequence,
 typical workloads for this cluster should be limited to:
 \begin{itemize}
   \item  Debugging programs
@@ -33,11 +33,14 @@ To submit jobs to the HPC-UGent debug cluster nicknamed \lstinline|slaking|, fir
 
 Then use the familiar \lstinline|qsub|, \lstinline|qstat|, etc. commands.
 
-\subsection{Restrictions}
+\subsection{Restrictions and overcommit factor}
 \label{subsec:debug_ugent_restrictions}
 
 Currently each user may have at most 5 jobs in the queue (both running and waiting to run)
 and at most 3 jobs per user can be running at the same time. The running jobs may allocate 
-no more than 8 CPU cores in total. \\ Please note that based on the (historical) workload
-of the debug cluster, the above restrictions and the overcommitment ratio might change
-without prior notice.
+no more than 8 CPU cores in total. \\
+At this moment, the cluster has an overcommit factor 6.  This means that 6 times more cores
+can be allocated than physically exist. Simulatenously, the default memory per core is 6
+times less than what would physically be available on a non-overcommitted cluster. \\
+Please note that based on the (historical) workload of the debug cluster, the above restrictions
+and the overcommitment ratio might change without prior notice.
