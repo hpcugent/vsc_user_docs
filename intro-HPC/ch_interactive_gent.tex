@@ -46,7 +46,7 @@ Some limits are in place for this cluster:
 \begin{itemize}
   \item each user may have at most 5 jobs in the queue (both running and waiting to run);
   \item at most 3 jobs per user can be running at the same time;
-  \item running jobs may allocate no more than 8 CPU cores in total per user;
+  \item running jobs may allocate no more than 8 CPU cores and no more than 27200 MiB in total per user;
 \end{itemize}
 
 In addition, the cluster has an overcommit factor of 6. This means that 6 times more cores
