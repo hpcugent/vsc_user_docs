@@ -17,14 +17,13 @@ heavily depends on the workloads and the actual overcommit usage. Be aware that 
 down or speed up during their execution.
  \\
 Due to the restrictions and sharing of the CPU resources (see section~\ref{subsec:interactive_ugent_restrictions}) 
-jobs on slaking should normally start more or less immediately. As a consequence,
-typical workloads for this cluster should be limited to:
+jobs on slaking should normally start more or less immediately.
+The tradeoff is that performance must not be an issue for the submitted jobs.
+This means that typical workloads for this cluster should be limited to:
 \begin{itemize}
-  \item  Interactive jobs (see chapter~\ref{ch:running-interactive-jobs}) with lots of idle time
-         (courses, hands-ons, etc.) 
-  \item  Cluster desktop sessions (see chapter~\ref{ch:web_portal}) with lots of idle time
-         (courses, hands-ons, etc.)
-  \item  Small jobs for which performance is not an issue (courses, hands-ons, etc.)
+  \item  Interactive jobs (see chapter~\ref{ch:running-interactive-jobs})
+  \item  Cluster desktop sessions (see chapter~\ref{ch:web_portal})
+  \item  Jobs requiring few resources
   \item  Debugging programs
   \item  Testing and debuging submit scripts
 \end{itemize} 
