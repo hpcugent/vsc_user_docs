@@ -1,0 +1,54 @@
+\chapter{HPC-UGent interactive cluster}
+\label{ch:interactive_ugent}
+
+
+\section{Purpose}
+\label{sec:interactive_ugent_pupose}
+The purpose of this cluster is to give the user an environment where
+there should be no waiting in the queue to get access to a limited
+number of resources. This environment allows a user to immediatelty
+start doing, and is the ideal place for interactive work such as
+development, debugging and light prodcution (typically sufficient
+for training and/or courses). This enviroment should be seen as an
+extension of the loginnodes, instead of the a compute resource.
+The interactive cluster is overcommitted, which means that more CPU cores can be
+assigned to jobs than physically exist in the cluster. Obviously, the performance of this cluster
+heavily depends on the workloads and that actual overcommit usage. Be aware that jobs can slow
+down or speed up during their execution.
+\\ Due to the restrictions and sharing the CPU resources (see section~\ref{subsec:interactive_ugent_restrictions}) 
+jobs on slaking should normally start more or less immediately. As a consequence,
+typical workloads for this cluster should be limited to:
+\begin{itemize}
+  \item  Run interactive jobs (see chapter~\ref{ch:running-interactive-jobs}) with lots of idle time
+         (courses, hands-ons, etc.) 
+  \item  Run Cluster Desktops (see chapter~\ref{ch:web_portal}) with lots of idle time
+         (courses, hands-ons, etc.)
+  \item  Run small jobs for which performance is not an issue (courses, hands-ons, etc.)
+  \item  Debugging programs
+  \item  Try/debug submit scripts
+\end{itemize} 
+
+\section{Submitting jobs}
+\label{sec:interactive_ugent_jobs}
+
+To submit jobs to the HPC-UGent interactive cluster nicknamed \lstinline|slaking|, first use:
+
+\begin{prompt}
+%\shellcmd{module swap cluster/slaking}
+\end{prompt}
+
+Then use the familiar \lstinline|qsub|, \lstinline|qstat|, etc. commands.
+
+\subsection{Restrictions and overcommit factor}
+\label{subsec:interactive_ugent_restrictions}
+
+Currently each user may have at most 5 jobs in the queue (both running and waiting to run)
+and at most 3 jobs per user can be running at the same time. The running jobs may allocate 
+no more than 8 CPU cores in total. \\
+At this moment, the cluster has an overcommit factor 6. This means that 6 times more cores
+can be allocated than physically exist. Simulatenously, the default memory per core is 6
+times less than what would physically be available on a non-overcommitted cluster. 
+As a first sight the overcommit ratio might seen high, but this value is rather typical
+for cloud resources that not dedicated to compute. \\
+Please note that based on the (historical) workload of the interactive cluster, the above
+restrictions and the overcommitment ratio might change without prior notice.
