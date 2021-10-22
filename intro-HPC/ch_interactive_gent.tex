@@ -17,7 +17,7 @@ heavily depends on the workloads and the actual overcommit usage. Be aware that 
 down or speed up during their execution.
  \\
 Due to the restrictions and sharing of the CPU resources (see section~\ref{subsec:interactive_ugent_restrictions}) 
-jobs on slaking should normally start more or less immediately.
+jobs on this cluster should normally start more or less immediately.
 The tradeoff is that performance must not be an issue for the submitted jobs.
 This means that typical workloads for this cluster should be limited to:
 \begin{itemize}
@@ -25,7 +25,7 @@ This means that typical workloads for this cluster should be limited to:
   \item  Cluster desktop sessions (see chapter~\ref{ch:web_portal})
   \item  Jobs requiring few resources
   \item  Debugging programs
-  \item  Testing and debuging submit scripts
+  \item  Testing and debugging job scripts
 \end{itemize} 
 
 \section{Submitting jobs}
@@ -37,7 +37,7 @@ To submit jobs to the HPC-UGent interactive and debug cluster nicknamed \lstinli
 %\shellcmd{module swap cluster/slaking}
 \end{prompt}
 
-Then use the familiar \lstinline|qsub|, \lstinline|qstat|, etc. commands. (see chapter~\ref{ch:running-batch-jobs})
+Then use the familiar \lstinline|qsub|, \lstinline|qstat|, etc. commands (see chapter~\ref{ch:running-batch-jobs}).
 
 \subsection{Restrictions and overcommit factor}
 \label{subsec:interactive_ugent_restrictions}
@@ -46,12 +46,12 @@ Some limits are in place for this cluster:
 \begin{itemize}
   \item each user may have at most 5 jobs in the queue (both running and waiting to run);
   \item at most 3 jobs per user can be running at the same time;
-  \item running jobs may allocate no more than 8 CPU cores and no more than 27200 MiB in total per user;
+  \item running jobs may allocate no more than 8 CPU cores and no more than 27200 MiB of memory in total, per user;
 \end{itemize}
 
 In addition, the cluster has an overcommit factor of 6. This means that 6 times more cores
 can be allocated than physically exist. Simultaneously, the default memory per core is 6
-times less than what would physically be available on a non-overcommitted cluster.
+times less than what would be available on a non-overcommitted cluster.
  \\
 Please note that based on the (historical) workload of the interactive and debug cluster, the above
 restrictions and the overcommitment ratio might change without prior notice.
