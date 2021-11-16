@@ -39,25 +39,28 @@ familiar \lstinline|$VSC_HOME|, \lstinline|$VSC_DATA*| and \lstinline|$VSC_SCRAT
 
 \subsection{Creating Singularity images}
 
-Creating new Singularity images or converting Docker images requires admin privileges,
-which is obviously not available on the \hpcInfra infrastructure.
+Creating new Singularity images or converting Docker images, by default, requires admin privileges,
+which is obviously not available on the \hpcInfra infrastructure. However,
+if you use the \lstinline|--fakeroot| option, you can make new Singularity images or convert 
+Docker images. 
 
-As an alternative, you can either:
+When you make Singularity or convert Docker images you have some restrictions.
 
 \begin{itemize}
-    \item install Singularity on a local Linux system you have administrator privileges on,
-        create you Singularity images there and upload them to the \hpcInfra infrastructure
-    \item create Singularity images via Singularity Hub (\url{https://www.singularity-hub.org/}),
-        and download them on the \hpcInfra infrastructure
+    \item You can only create Singularity images on RHEL 8 machines. The current RHEL 8 systems are
+        \lstinline|gligar08| login node, \lstinline|doduo| cluster, and \lstinline|slaking| cluster.
+        The created images can be used on any cluster.
+    \item Due to the nature of \lstinline|--fakeroot| option, we recommend to write your singularity 
+        image to a globally writable location, like \lstinline|/tmp|, or \lstinline|/local| directories. 
+        Once the images is created, you should move it to your desired destination.
 \end{itemize}
-
-We strongly recommend the use of Singularity Hub, see \url{https://singularity-hub.org/} for more information.
 
 \subsection{Converting Docker images}
 
 For more information on converting existing Docker images to Singularity images,
 see \url{https://www.sylabs.io/guides/3.4/user-guide/singularity_and_docker.html}.
-Note that this can also be done via Singularity Hub, see \url{https://singularity-hub.org/}.
+
+We strongly recommend the use of Docker Hub, see \url{https://hub.docker.com/} for more information.
 
 \section{Execute our own script within our container}
 
