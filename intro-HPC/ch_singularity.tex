@@ -64,7 +64,7 @@ Note that this can also be done via Singularity Hub, see \url{https://singularit
 Copy testing image from \lstinline|/apps/gent/tutorials/Singularity| to \lstinline|$VSC_SCRATCH|:
 
 \begin{prompt}
-%\shellcmd{cp /apps/gent/tutorials/Singularity/CentOS7\_EasyBuild.img \$VSC\_SCRATCH/singularity}%
+%\shellcmd{cp /apps/gent/tutorials/Singularity/CentOS7\_EasyBuild.img \$VSC\_SCRATCH/}%
 \end{prompt}
 
 Create a job script like:
@@ -78,7 +78,7 @@ Create a job script like:
 #PBS -l walltime=12:00:00
 
 
-singularity exec $VSC_SCRATCH/singularity/CentOS7_EasyBuild.img ~/my_script.sh
+singularity exec $VSC_SCRATCH/CentOS7_EasyBuild.img ~/my_script.sh
 \end{code}
 
 Create an example \lstinline|myscript.sh|:
@@ -98,7 +98,7 @@ image (see \url{https://hub.docker.com/r/tensorflow/tensorflow}) to a Singularit
 Copy testing image from \lstinline|/apps/gent/tutorials| to \lstinline|$VSC_SCRATCH|:
 
 \begin{prompt}
-%\shellcmd{cp /apps/gent/tutorials/Singularity/Ubuntu14.04\_tensorflow.img \$VSC\_SCRATCH}%
+%\shellcmd{cp /apps/gent/tutorials/Singularity/Ubuntu14.04\_tensorflow.img \$VSC\_SCRATCH/}%
 \end{prompt}
 
 \begin{code}{bash}
@@ -115,7 +115,7 @@ singularity exec $VSC_SCRATCH/Ubuntu14.04_tensorflow.img python ~/linear_regress
 \end{code}
 
 You can download \lstinline|linear_regression.py| from
-\href{https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/get_started/regression/linear_regression.py}{the official Tensorflow repository}.
+\href{https://github.com/tensorflow/tensorflow/blob/r1.12/tensorflow/examples/get_started/regression/linear_regression.py}{the official Tensorflow repository}.
 
 \section{MPI example}
 
@@ -132,7 +132,7 @@ It is also possible to execute MPI jobs within a container, but the following re
 Copy the testing image from \lstinline|/apps/gent/tutorials/Singularity| to \lstinline|$VSC_SCRATCH|
 
 \begin{prompt}
-%\shellcmd{cp /apps/gent/tutorials/Singularity/Debian8\_UGentMPI.img \$VSC\_SCRATCH/singularity}%
+%\shellcmd{cp /apps/gent/tutorials/Singularity/Debian8\_UGentMPI.img \$VSC\_SCRATCH/}%
 \end{prompt}
 
 For example to compile an
@@ -140,7 +140,7 @@ For example to compile an
 
 \begin{prompt}
 %\shellcmd{module load intel}%
-%\shellcmd{singularity shell \$VSC\_SCRATCH/singularity/Debian8\_UGentMPI.img}%
+%\shellcmd{singularity shell \$VSC\_SCRATCH/Debian8\_UGentMPI.img}%
 %\shellcmd{export LANG=C}%
 %\shellcmd{export C\_INCLUDE\_PATH=/usr/include/x86\_64-linux-gnu/:\$C\_INCLUDE\_PATH}%
 %\shellcmd{mpiicc ompi/examples/ring\_c.c -o ring\_debian}%
@@ -159,5 +159,5 @@ Example MPI job script:
 #PBS -l walltime=12:00:00
 
 module load intel vsc-mympirun
-mympirun --impi-fallback singularity exec $VSC_SCRATCH/singularity/Debian8_UGentMPI.img ~/ring_debian
+mympirun --impi-fallback singularity exec $VSC_SCRATCH/Debian8_UGentMPI.img ~/ring_debian
 \end{code}
