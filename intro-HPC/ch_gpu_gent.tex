@@ -1,15 +1,24 @@
-\chapter{HPC-UGent GPGPU cluster}
+\chapter{HPC-UGent GPU clusters}
 \label{ch:gpu_ugent}
 
 
 \section{Submitting jobs}
 \label{sec:gpu_ugent_jobs}
 
-To submit jobs to the HPC-UGent GPU cluster nicknamed \lstinline|joltik|, first use:
+To submit jobs to the \lstinline|joltik| GPU cluster, where each node provides 4 NVIDIA V100 GPUs
+(each with 32GB of GPU memory), use:
 
 \begin{prompt}
 %\shellcmd{module swap cluster/joltik}
 \end{prompt}
+
+To submit to the \lstinline|accelgor| GPU cluster, where each node provides 4 NVIDIA A100 GPUs
+(each with 80GB GPU memory), use:
+
+\begin{prompt}
+%\shellcmd{module swap cluster/accelgor}
+\end{prompt}
+
 
 Then use the familiar \lstinline|qsub|, \lstinline|qstat|, etc.\ commands, taking into account the guidelines outlined
 in section~\ref{sec:gpu_ugent_resources}.
@@ -28,7 +37,7 @@ MPI software that requires access to the GPUs. If you need this, please contact 
 
 \section{Hardware}
 
-See \url{https://www.ugent.be/hpc/en/infrastructure/overzicht.htm}.
+See \url{https://www.ugent.be/hpc/en/infrastructure}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -200,7 +209,7 @@ use \lstinline|Horovod|, see section~\ref{sec:gpu_ugent_software_horovod}.}
 
 \subsubsection{Example TensorFlow job script}
 \label{sec:gpu_ugent_software_tensorflow_example_job_script}
-\examplecode{bash}{TensorFlow_GPU_joltik.sh}
+\examplecode{bash}{TensorFlow_GPU.sh}
 
 %TODO: add intel cpu params (only for cpu, but mention it anyway) and data format (channel_first  / NCHW)
 % OMP_NUM_THREADS=$PBS_VARIABLE_FOR_CORES
