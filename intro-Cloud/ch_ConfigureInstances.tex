@@ -150,6 +150,18 @@ the public IP address 193.190.85.40:
 }
 \end{center}
 
+This is another basic port forwarding configuration example without patterns,
+in this case just to connect via SSH using external port 52000 to a running VM
+called testvm:
+\begin{code}{}
+[DEFAULT]
+floatingip=193.190.85.40
+network=_vm
+
+[testvm]
+22=52000
+\end{code}
+
 You can also see an overview of existing port forwarding rules for the
 ip addresses in your configuration file using
 \lstinline{neutron_port_forward --show}.  Each rule has an internal
@@ -162,8 +174,12 @@ and \lstinline{--id} as follows:
 
 To remove port forwarding rules, use the option
 \lstinline{--remove=<list of id's>} with a comma-separated list of the
-id's of the rules you want to remove.  Rules are removed automatically
-if the target instance is deleted.
+id's of the rules you want to remove.
+
+\strong{Note:} Please note that when you remove and reinstantiate a VM, OpenStack
+also removes the port forwarding rules assigned to this VM automatically. If 
+you intantiate again the same VM you should run \lstinline{neutron_port_forward}
+and restore the port forwarding rules.
 
 \lstinline{neutron_port_forward} provides a few more options and
 advanced features, run the command with the \lstinline{--help} option
