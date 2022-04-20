@@ -31,7 +31,16 @@ delete it.
       volume are displayed only if there are existing snapshots or
       volumes.
     \end{itemize}
-  \item[Type] Leave this field blank.
+  \item[Type] Select one of the following options:
+
+    \begin{itemize}
+    \item tripleo: This is the default option for the projects,
+      it creates the volume in a regular hdd storage pool.
+    \item fastpool (optional): It creates the volume in a high I/O
+      throughput storage pool. Fastpool has its own storage quota
+      and it is only accessible by project's request (contact
+      \cloudinfo if you need more information).
+    \end{itemize}
   \item[Size (GB)] The size of the volume in gibibytes (GiB).
   \item[Availability Zone] Select the Availability Zone from the
     list. By default, this value is set to the availability zone given
