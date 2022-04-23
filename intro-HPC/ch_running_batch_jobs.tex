@@ -509,20 +509,6 @@ just load the module and try to use the software.
 To check the general system state, check \url{https://www.ugent.be/hpc/en/infrastructure/status}.
 This has information about scheduled downtime, status of the system, \ldots
 
-Note: the \lstinline|qstat -q| command now only shows \emph{your own jobs} on the
-\hpcInfra infrastructure (since May 2019),
-and can't be used any longer to access how ``busy'' each cluster is. For example:
-
-\begin{prompt}
-%\shellcmd{qstat -q}%
-Queue            Memory CPU Time Walltime Node  Run Que Lm State
----------------- ------ -------- -------- ----  --- --- -- -----
-victini            --      --    72:00:00  --    3   9  --  E R
-                                                --- ---
-                                                 3   9
-
-Please be aware that "qstat -q" only gives information about your own jobs.
-\end{prompt}
 \else
 To check how much jobs are running in what queues, you can use the \lstinline|qstat -q|
 command:
