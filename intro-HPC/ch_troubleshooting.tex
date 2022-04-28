@@ -248,6 +248,12 @@ You will need to remove the line it's complaining about (in the example, line 21
 To do that, open \lstinline|~/.ssh/known_hosts| in an editor, and remove the line. This
 results in \lstinline|ssh| ``forgetting'' the system you are connecting to.
 
+Alternatively you can use the command shown by the warning under \lstinline|remove with:|,
+which should be something like this:
+\begin{prompt}
+sh-keygen -f "~/.ssh/known_hosts" -R "%\loginnode{}%"
+\end{prompt}
+
 After you've done that, you'll need to connect to the \hpc again.
 See \autoref{sec:warning-message-new-host} to verify the fingerprints.
 \strong{It's important to verify the fingerprints. If they don't match,
