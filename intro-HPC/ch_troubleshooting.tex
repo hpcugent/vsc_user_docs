@@ -252,7 +252,7 @@ Alternatively you can use the command shown by the warning under
 \lstinline|remove with:| that should be something like this:
 
 \begin{prompt}
-sh-keygen -f "~/.ssh/known_hosts" -R "%\loginnode{}%"
+ssh-keygen -f "~/.ssh/known_hosts" -R "%\loginnode{}%"
 \end{prompt}
 
 After you've done that, you'll need to connect to the \hpc again.
