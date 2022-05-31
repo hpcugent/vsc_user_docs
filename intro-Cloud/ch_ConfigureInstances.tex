@@ -40,9 +40,9 @@ Instances should use the \_vm network for communication, and the \_nfs
 network if they need access to shared file systems (see chapter
 \ref{cha:shared-file-systems}). On the other hand \_vsc network is used to
 connect to or provide VSC services via VSC network and floating or dedicated 
-project IPs. When an instance is created in \gls{OpenStack} and connected to 
-the \_vm, \_nfs or \_vsc networks, it is automatically assigned a fixed 
-IP address in that network (the predefined project IP in case of a project). 
+project's VSC IPs. When an instance is created in \gls{OpenStack} and connected to 
+the \_vm, \_nfs or \_vsc networks, it is automatically assigned a local fixed 
+IP address in that network. 
 This IP address is permanently associated with the instance until 
 the instance is terminated.
 
