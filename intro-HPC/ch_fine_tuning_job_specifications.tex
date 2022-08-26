@@ -280,7 +280,10 @@ Once you gathered a good idea of the overall memory consumption of your
 application, you can define it in your job script.  It is wise to foresee a
 margin of about 10\%.
 
+\ifgent
+\else
 \underbar{Sequential or single-node applications:}
+\fi
 
 The maximum amount of physical memory used by the job can be specified in a job
 script as:
@@ -294,6 +297,9 @@ or on the command line
 \begin{prompt}
 %\shellcmd{qsub -l mem=4gb}%
 \end{prompt}
+
+\ifgent
+\else
 
 This setting is ignored if the number of nodes is not 1.
 
@@ -318,6 +324,7 @@ or on the command line
 
 (and of course this would need to be combined with a CPU cores directive such as nodes=1:ppn=4).
 In this example, you request 8 GB of memory in total on the node.
+\fi
 
 \section{Specifying processors requirements}
 
