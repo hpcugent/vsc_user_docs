@@ -1,19 +1,18 @@
 \chapter{Orchestration Using Terraform}\label{cha:orch-using-terraform}
 
 HashiCorp \gls{Terraform} \url{https://www.terraform.io/} is an infrastructure
-as code tool (IaC), similar to OpenStack \gls{Heat} orchestrator (\ref{cha:orch-using-heat}).
+as code tool (IaC), similar to OpenStack \gls{Heat} orchestrator
+(See chapter \ref{cha:orch-using-heat}).
 Users can deploy a data center infrastructure using a declarative
 configuration language known as HashiCorp Configuration Language (HCL), or using JSON.
 \gls{Terraform} has some advantages over OpenStack \gls{Heat} service.
 It is has a simple syntax, it can provision virtual infrastructures across multiple cloud
 providers (not only OpenStack) and it provides important features not supported
 by \gls{Heat} at this moment, like network port forwarding rules (see \ref{sec:floating-ip}).
-This means with Terraform scripts like \lstinline{neutron_port_forward}
-(see \ref{port-forwarding}) are not longer needed.
+This means that with Terraform, scripts like \lstinline{neutron_port_forward}
+(see \ref{port-forwarding}) are no longer needed.
 
-The user can use \gls{Terraform} to deploy all the infrastructure and network rules from scratch.
-
-It is currently one of the most popular infrastructure automation tools available.
+\gls{Terraform} is currently one of the most popular infrastructure automation tools available.
 VSC Cloud also provides some template examples that could be used to deploy virtual
 infrastructures within VSC Tier-1 Cloud in an automated way
 (\url{https://github.com/hpcugent/openstack-templates/tree/master/terraform}).
@@ -25,10 +24,10 @@ UGent login node \lstinline{login.hpc.ugent.be}.
 \section{Create application credentials for Terraform}\label{sec:app-cred-terraform}
 
 \gls{Terraform} uses OpenStack application credentials to authenticate
-to VSC Cloud Tier-1 public API. It is a good practice to generate a new Application Credential
+to VSC Cloud Tier-1 public API. It is a good practice to generate a new application credential
 just to be used with \gls{Terraform} framework. The process is the same described in section \ref{sec:appl-cred}.
 
-\strong{Note:} Make sure you download the new application credential as yaml file instead of openrc.
+\strong{Note:} Make sure you download the new application credential as yaml file instead of openRC.
 
 At this point you should have a clouds.yaml text file with these lines:
 \begin{code}{}
@@ -60,7 +59,7 @@ clouds:
     auth_type: "v3applicationcredential"
 \end{code}
 
-As the file comments state, you should copy the current clouds.yaml to your VSC login node \$home
+As the file comments state, you should copy the current clouds.yaml to your VSC login node \$HOME
 \lstinline{login.hpc.ugent.be}: \texttt{\emph{\~\//.config/openstack/clouds.yaml}}, or locally
 if you have installed \gls{Terraform} in your own laptop or computer.
 \gls{Terraform} will use this file to authenticate to OpenStack API automatically.
@@ -82,7 +81,8 @@ If this is the first time using Terraform, download the VSC Terraform examples f
 %\shellcmd{git clone https://github.com/hpcugent/openstack-templates}
 \end{prompt}
 
-Make sure you have \texttt{\emph{\~\//.config/openstack/clouds.yaml}} available from the login node (see previous section \ref{sec:app-cred-terraform}).
+Make sure you have \texttt{\emph{\~\//.config/openstack/clouds.yaml}} available from the login node
+(see previous section \ref{sec:app-cred-terraform}).
 
 \strong{Note:} Do not share your application credential file clouds.yaml or put this file in a public place.
 
@@ -91,9 +91,10 @@ Make sure you have \texttt{\emph{\~\//.config/openstack/clouds.yaml}} available 
 \end{prompt}
 
 \section{Generate Terraform template variables}\label{sec:generate-terraform-variables}
-\gls{Terraform} requires some variables to know which resources are avaiable from the cloud provider for the user or project.
+\gls{Terraform} requires some variables to know which resources are available from the cloud provider for the user or project.
 You do not have to include these variables manually, we have included a script to gather these variable IDs automatically.
-From Terraform directory cloned from git in the previous step (see: \ref{sec:getting-terraform-templ}), got to scripts directory:
+From the Terraform directory cloned from git in the previous step (see: \ref{sec:getting-terraform-templ}),
+go to the scripts directory:
 
 \begin{prompt}
 %\shellcmd{cd ~/openstack-templates/terraform/scripts}
@@ -105,8 +106,10 @@ And now run the script (usually you only have to run this script once).
 %\shellcmd{./modify\_variable.sh}
 \end{prompt}
 
-This step will take some seconds. The script will contact to VSC OpenStack public API to gather all the resources available for your project and fetch all the resource's IDs.
-Usually you only have to run this script once, unless something was changed/updated for your project's resources (like a new network or floating IPs) or if you want to deploy a new
+This step will take some seconds. The script will contact the VSC OpenStack public API to gather
+all the resources available for your project and fetch all the resource's IDs.
+Usually you only have to run this script once, unless something was changed/updated for your project's
+resources (like a new network or floating IPs) or if you want to deploy a new
 Terraform template from scratch.
 
 You will see some messages like this (IDs and IPs may change depending on your project's resources).
@@ -138,27 +141,41 @@ SSH commands for VMs access:
 
 After this step your Terraform templates will be ready to be deployed.
 
+\strong{Note:} Please note that the script shows you the ssh command to connect to each VM
+after instantiation (including the port which is generated automatically by the script).
+You can copy this list or you can review it later. Also note that you should use a valid user
+to connect to the VM, for instance for CentOS images is \emph{centos},
+for Ubuntu images is \emph{ubuntu} and so on.
+You can also try to connect as \emph{root} user, in that case the system will show you a message
+with the user that you should use.
+
 \section{Modify default Terraform modules}\label{sec:modify-terraform-modules}
-In section \ref{sec:getting-terraform-templ} we have downloaded the Terraform module examples from VSC repository.
+In section \ref{sec:getting-terraform-templ} we have downloaded the Terraform module examples from
+the VSC repository.
 If you deploy these modules as it is it will deploy several VM examples by default such as:
 
 
 \begin{enumerate}
 \item \strong{myvm:} simple VM with 20Gb persistent volume and ssh access with port forwarding.
-\item \strong{myvm-nginx:} Like previous example but with an ansible playbook to install nginx and acces to port 80 besides ssh.
-\item \strong{myvm-vsc\_net:} Similar to the fist example but also includes a VSC network interface (only available for some projects).
-\item \strong{myvm-nfs\_share:} Similar to the first example but it creates a NFS share filesystem and it mounts it during instantiation (only available for some projects).
+\item \strong{myvm-nginx:} Like previous example but with an ansible playbook to install
+nginx and access to port 80 besides ssh.
+\item \strong{myvm-vsc\_net:} Similar to the first example but also includes a VSC network
+interface (only available for some projects).
+\item \strong{myvm-nfs\_share:} Similar to the first example but it creates a NFS share
+filesystem and it mounts it during instantiation (only available for some projects).
 \end{enumerate}
 
 
-But usually you do not want to deploy all these examples, you can just keep the required module and comment out the rest. You can do this from environment directory:
+But usually you do not want to deploy all these examples, you can just keep the required module
+and comment out the rest. You can do this from environment directory:
 
 \begin{prompt}
 %\shellcmd{cd ~/openstack-templates/terraform/environment}
 \end{prompt}
 
 And edit \texttt{\emph{main.tf}} Terraform file with any text editor like vim or nano.
-If you want to deploy just the simple VM (first example) only keep these lines (remenber variable IDs may change depending on your project's resources):
+If you want to deploy just the simple VM (first example) only keep these lines (remenber variable
+IDs may change depending on your project's resources):
 
 \begin{code}{}
  module "vm_with_pf_rules_with_ssh_access" {
@@ -177,7 +194,8 @@ If you want to deploy just the simple VM (first example) only keep these lines (
 \end{code}
 
 And remove or comment out the rest of the lines.
-In the previous example Terraform will deploy a simple VM and use 20Gb for a persistent volume and port 56469 to connect via ssh (it also creates all required security groups).
+In the previous example Terraform will deploy a simple VM and use 20Gb for a persistent volume
+and port 56469 to connect via ssh (it also creates all required security groups).
 
 \section{Deploy Terraform templates}\label{sec:deploy-terraform-templates}
 If you have followed the previous steps now you can init and deploy your infrastucture to
@@ -205,7 +223,8 @@ Now you can check and review your Terraform plan, from the same directory:
 %\shellcmd{terraform plan}
 \end{prompt}
 
-You will see a list of the resources required to deploy your infrastructure, Terraform also checks if there is any systax error in your templates.
+You will see a list of the resources required to deploy your infrastructure, Terraform also
+checks if there is any systax error in your templates.
 Your infrastructure is not deployed yet, review the plan and then just deploy it to VSC Tier-1 Cloud running:
 
 \begin{prompt}
@@ -225,7 +244,8 @@ Do you want to perform these actions?
 \end{prompt}
 
 Type \texttt{\emph{yes}} and press enter and wait a few seconds or minutes.
-If everything is correct and if you have enough quota Terraform will show you a message after creating all the required resources.
+If everything is correct and if you have enough quota Terraform will show you a message
+after creating all the required resources.
 
 
 \begin{prompt}
@@ -239,12 +259,18 @@ Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
 
 Your cloud infrastrucuture is ready to be used.
 
-It is important to keep a backup of your terraform directory, specially files within environment directory:
+It is important to keep a backup of your terraform directory, specially all the files
+within the environment directory:
+
 \begin{prompt}
 %\shellcmd{~/openstack-templates/terraform/environment}
 \end{prompt}
 
-Terraform generates several files in this directory to keep track of any change in your infrastructure. If for some reason you lost or remove these files you will not able to modify or change the current Terraform plan (only directly from OpenStack).
+Terraform generates several files in this directory to keep track of any change in your infrastructure.
+If for some reason you lost or remove these files you will not able to modify or change the
+current Terraform plan (only directly from OpenStack).
 
-You can also modify and add more resources for the current templates. This task is out of the scope of this document, please refer to official Terraform documentation to add you own changes \url{https://www.terraform.io/docs} or ask to VSC Cloud admins via email at \cloudinfo.
+You can also modify and add more resources for the current templates. This task is out of the scope
+of this document, please refer to official Terraform documentation to add you own changes
+\url{https://www.terraform.io/docs} or ask to VSC Cloud admins via email at \cloudinfo.
 
