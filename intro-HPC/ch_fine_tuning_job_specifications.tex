@@ -281,12 +281,14 @@ application, you can define it in your job script.  It is wise to foresee a
 margin of about 10\%.
 
 \ifgent
+The maximum amount of physical memory used by the job per node can be
+specified in a job script as:
 \else
 \underbar{Sequential or single-node applications:}
-\fi
 
 The maximum amount of physical memory used by the job can be specified in a job
 script as:
+\fi
 
 \begin{prompt}
 #PBS -l mem=4gb
