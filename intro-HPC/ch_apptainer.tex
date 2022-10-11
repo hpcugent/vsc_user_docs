@@ -48,8 +48,12 @@ Due to the nature of \lstinline|--fakeroot| option, we recommend to write your a
 image to a globally writable location, like \lstinline|/tmp|, or \lstinline|/local| directories. 
 Once the images is created, you should move it to your desired destination.
 An example to make a apptainer container:
+
 \begin{prompt}
-%\shellcmd{APPTAINER_CACHEDIR=/tmp/ APPTAINER_TMPDIR=/tmp/ apptainer build --fakeroot /tmp/tensorflow-21.10-tf1-py3.sif docker://nvcr.io/nvidia/tensorflow:21.10-tf1-py3}%
+%\shellcmd{APPTAINER\_CACHEDIR=/tmp/ \textbackslash}%
+%\textbf{APPTAINER\_TMPDIR=/tmp/ \textbackslash}%
+%\textbf{apptainer build -{}-fakeroot /tmp/tensorflow-21.10-tf1-py3.sif \textbackslash }%
+%\textbf{docker:{}//nvcr.io/nvidia/tensorflow:21.10-tf1-py3}%
 \end{prompt}
 
 \subsection{Converting Docker images}
