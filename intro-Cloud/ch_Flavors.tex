@@ -107,7 +107,11 @@ combinations to fit different workload hardware requirements.
   \hline
   2xlarge & 62Gb & 40Gb & 16 \\
   \hline
+  1\_3xlarge & 180Gb & 80Gb & 14 \\
+  \hline
   3xlarge & 120Gb & 80Gb & 16 \\
+  \hline
+  4xlarge & 360Gb & 80Gb & 20 \\
   \hline
 \end{tabular}
 \caption{Flavor sizes}
@@ -117,6 +121,12 @@ combinations to fit different workload hardware requirements.
 E.g. \strong{GPUv1}.\emph{large} OpenStack flavor will instantiate a
 VM with 4 AMD Epyc 7542 2.9GHz CPUs, with a NVIDIA Tesla 4 GPU, 8GB
 of ram, 40Gb of root disk and connected to the UPS.
+
+\strong{Note:} New Tier-1 VSC Cloud projects should take into account
+these flavor sizes in order to request their required resources and quota.
+For instance, a new project needs 2 VMs with \emph{xlarge} flavor,
+in that case the project should request 32Gb of ram and 16 Cores in total
+to deploy their infrastructure.
 
 %%% Local Variables:
 %%% mode: latex
