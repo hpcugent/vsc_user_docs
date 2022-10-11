@@ -31,7 +31,7 @@ If these limitations are a problem for you, please let us know via \hpcinfo.
 
 \section{Available filesystems}
 
-All HPC-UGent shared filesystems will be readily available in a Apptainer/Singularity container,
+All HPC-UGent shared filesystems will be readily available in an Apptainer/Singularity container,
 including the home, data and scratch filesystems, and they will be accessible via the
 familiar \lstinline|$VSC_HOME|, \lstinline|$VSC_DATA*| and \lstinline|$VSC_SCRATCH*| environment variables.
 
@@ -44,15 +44,15 @@ which is obviously not available on the \hpcInfra infrastructure. However,
 if you use the \lstinline|--fakeroot| option, you can make new Apptainer/Singularity images or convert 
 Docker images. 
 
-Due to the nature of \lstinline|--fakeroot| option, we recommend to write your apptainer 
+Due to the nature of \lstinline|--fakeroot| option, we recommend to write your apptainer/singularity
 image to a globally writable location, like \lstinline|/tmp|, or \lstinline|/local| directories. 
 Once the images is created, you should move it to your desired destination.
-An example to make a apptainer container:
+An example to make an apptainer/singularity container:
 
 \begin{prompt}
-%\shellcmd{APPTAINER\_CACHEDIR=/tmp/ \textbackslash}%
-%\textbf{APPTAINER\_TMPDIR=/tmp/ \textbackslash}%
-%\textbf{apptainer build -{}-fakeroot /tmp/tensorflow-21.10-tf1-py3.sif \textbackslash }%
+%\shellcmd{APPTAINER\_CACHEDIR=/tmp/ {\textbackslash}}%
+%\textbf{APPTAINER\_TMPDIR=/tmp/ {\textbackslash}}%
+%\textbf{apptainer build -{}-fakeroot /tmp/tensorflow-21.10-tf1-py3.sif {\textbackslash}}%
 %\textbf{docker:{}//nvcr.io/nvidia/tensorflow:21.10-tf1-py3}%
 \end{prompt}
 
