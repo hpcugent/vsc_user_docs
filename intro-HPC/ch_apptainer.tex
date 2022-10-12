@@ -35,19 +35,19 @@ All HPC-UGent shared filesystems will be readily available in an Apptainer/Singu
 including the home, data and scratch filesystems, and they will be accessible via the
 familiar \lstinline|$VSC_HOME|, \lstinline|$VSC_DATA*| and \lstinline|$VSC_SCRATCH*| environment variables.
 
-\section{Singularity Images}
+\section{Apptainer/Singularity Images}
 
-\subsection{Creating Singularity images}
+\subsection{Creating Appyainer/Singularity images}
 
 Creating new Apptainer/Singularity images or converting Docker images, by default, requires admin privileges,
 which is obviously not available on the \hpcInfra infrastructure. However,
 if you use the \lstinline|--fakeroot| option, you can make new Apptainer/Singularity images or convert 
 Docker images. 
 
-Due to the nature of \lstinline|--fakeroot| option, we recommend to write your apptainer/singularity
+Due to the nature of \lstinline|--fakeroot| option, we recommend to write your Apptainer/Singularity
 image to a globally writable location, like \lstinline|/tmp|, or \lstinline|/local| directories. 
-Once the images is created, you should move it to your desired destination.
-An example to make an apptainer/singularity container:
+Once the image is created, you should move it to your desired destination.
+An example to make an Apptainer/Singularity container:
 
 \begin{prompt}
 %\shellcmd{APPTAINER\_CACHEDIR=/tmp/ \textbackslash{}}%
