@@ -3,11 +3,11 @@
 VSC Tier1 Cloud provides several virtual machine instance types
 and flavors to fit different use cases.
 Each instance type provides several flavor sizes to give different
-combinations of CPU, memory, GPU and network resource.
+combinations of CPU, memory, GPU and network resources.
 
 \section{Instance Types}\label{sec:instance-types}
 The following table provides the current main instance types available
-from VSC Tier1 Cloud infrastructure:
+from the VSC Tier1 Cloud infrastructure:
 
 \begin{table}[h!]
 \centering
@@ -30,7 +30,7 @@ from VSC Tier1 Cloud infrastructure:
   \begin{itemize}
     \item AMD Epyc 7542 2.9GHz
     \item 25Gbit Ethernet
-    \item NVIDIA Tesla 4 GPU
+    \item 1 vGPU NVIDIA Tesla 4
   \end{itemize}
   \\
   \hline
@@ -39,21 +39,23 @@ from VSC Tier1 Cloud infrastructure:
 \label{table:instance-type}
 \end{table}
 
-Each instance type is appropriate for different workloads. From regular 
-CPU usage (\strong{CPUv}\emph{<version>} instance types), to high performance 
-GPU computations (\strong{GPUv}\emph{<version>}) or VMs connected to 
-uninterruptible power supplies (\strong{UPSv}\emph{<version>}). VMs using UPS 
-flavor types will be keep up and running even if the data centre suffers
+Each instance type is appropriate for different workloads:
+(\strong{CPUv1}) for regular CPU usage,
+(\strong{GPUv1}) for GPU computations,
+or (\strong{UPSv1}) for VMs that need to be connected to an uninterruptible power supply.
+VMs using UPS will keep up and running even if the datacenter suffers
 an unexpected power cut.
+(\strong{CPUv1}) and (\strong{GPUv1}) virtual machines are not supported by an UPS and will go offline when an unexpected power cut occurs.
 
 VSC Tier-1 Cloud instance types also provide different kind of network
 performance specifications. All the instance types are able to connect
 to the available networks: public network, VSC network and shared filesystem
-network (NFS). VSC and shared file system networks are only available
-by project's request.
+network (NFS). Note that VSC and shared file system network access is only made available
+if explicitly requested in the project application.
 
-VSC network gives an optimal path towards other VSC sites (ideal for high
-perfomance connections between different clusters and services within VSC).
+VSC network gives an optimal path towards other VSC sites. This is ideal for high
+performance connections between different clusters and services within VSC.
+E.g. when you intend to do high data volume reshuffling between VMs and other Tier-1 components.
 
 \strong{Note:} Cloud projects should request VSC network if they want to
 connect to VSC Data component (\url{https://www.vscentrum.be/data}) with iRODS
@@ -65,24 +67,24 @@ for more information).
 
 
 \section{Flavor Sizes}\label{sec:flavor-sizes}
-A flavor size is a set of virtualized hardware resouces to a virtual
-machine (VM) instance like system memory size, virtual CPU (vCPU)
+A flavor size is a set of virtualized hardware resources to a virtual
+machine (VM) instance like system memory size (RAM), virtual cores (vCPUs)
 or the root filesystem size. 
 
-The flavor's root size is the amount of disk space
+The flavor's root disk size is the amount of disk space
 used by the root (\emph{/}) partition, an ephemeral disk that the
 base image is copied into (see section \ref{launch-an-instance} for
 more information about VM persistent/non-persistent instances).
 
 The flavor's root ephemeral storage is only used when booting from
-a non-persistent VM but not from a persistent storage volume or
+a non-persistent VM, but is not used when booting from a persistent storage volume or
 persistent VM.
 The flavor's root ephemeral size is not taken into account to
 calculate the project's local storage quota either. You can also
 create a persistent volume and choose the desired filesystem size for
 your persistent VM during the instantiation.
 VM persistent volumes could be resized later if that is necessary
-(see next chapter \ref{cha:launch-manage-inst} for more information).
+(see chapter \ref{cha:launch-manage-inst} for more information).
 
 VSC Tier-1 Cloud VM flavors are grouped by instance types
 (see table \ref{table:instance-type}). The current flavor sizes are
@@ -118,17 +120,12 @@ combinations to fit different workload hardware requirements.
 \label{table:flavor-size}
 \end{table}
 
-The current VSC Tier-1 Cloud flavors list is available from section \ref{sec:appendix-flavors}.
+The current full VSC Tier-1 Cloud flavors list is available from section \ref{sec:appendix-flavors}.
 
-E.g. \strong{GPUv1}.\emph{large} OpenStack flavor will instantiate a
-VM with 4 AMD Epyc 7542 2.9GHz CPUs, with a NVIDIA Tesla 4 GPU, 8GB
-of ram, 40Gb of root disk and connected to the UPS.
+E.g. The \strong{GPUv1}.\emph{large} OpenStack flavor will instantiate a
+VM with 4 AMD Epyc 7542 2.9GHz vCPUs, with 1 NVIDIA Tesla 4 vGPUs, 8GB
+of RAM, and a 40GB root disk.
 
-\strong{Note:} New Tier-1 VSC Cloud projects should take into account
-these flavor sizes in order to request their required resources and quota.
-For instance, a new project needs 2 VMs with \emph{xlarge} flavor,
-in that case the project should request 32Gb of ram and 16 Cores in total
-to deploy their infrastructure.
 
 %%% Local Variables:
 %%% mode: latex
