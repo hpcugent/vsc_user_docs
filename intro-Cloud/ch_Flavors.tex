@@ -93,34 +93,55 @@ combinations to fit different workload hardware requirements.
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|p{3cm}| }
+\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}| }
   \hline
-  \rowcolor{lightgray} \textbf{Flavor Size} & \textbf{RAM} & \textbf{Root Disk} & \textbf{vCPUs} \\
+  \rowcolor{lightgray} \textbf{Flavor name} & \textbf{RAM} & \textbf{Root Disk} & \textbf{# vCPUs} & \textbf{# vGPUs} \\
   \hline
-  small & 2Gb & 20Gb & 1 \\
+  CPUv1.nano & 64Kb & 1Gb & 1 & 0 \\
   \hline
-  medium & 4Gb & 30Gb & 2 \\
+  CPUv1.tiny & 512Kb & 10Gb & 1 & 0 \\
   \hline
-  large & 8Gb & 40Gb & 4 \\
+  CPUv1.small & 2Gb & 20Gb & 1 & 0 \\
   \hline
-  xlarge & 16Gb & 40Gb & 8 \\
+  CPUv1.medium & 4Gb & 30Gb & 2 & 0 \\
   \hline
-  1\_2xlarge & 62Gb & 40Gb & 8 \\
+  CPUv1.large & 8Gb & 40Gb & 4 & 0 \\
   \hline
-  2xlarge & 62Gb & 40Gb & 16 \\
+  CPUv1.xlarge & 16Gb & 40Gb & 8 & 0 \\
   \hline
-  1\_3xlarge & 180Gb & 80Gb & 14 \\
+  CPUv1.1_2xlarge & 60Gb & 40Gb & 8 & 0 \\
   \hline
-  3xlarge & 120Gb & 80Gb & 16 \\
+  CPUv1.2xlarge & 60Gb & 40Gb & 16 & 0 \\  
   \hline
-  4xlarge & 360Gb & 80Gb & 20 \\
+  CPUv1.1_3xlarge & 180Gb & 80Gb & 14 & 0 \\
+  \hline
+  CPUv1.3xlarge & 120Gb & 80Gb & 16 & 0 \\
+  \hline
+  CPUv1.4xlarge & 360Gb & 80Gb & 20 & 0 \\
+  \hline
+  UPSv1.small & 2Gb & 20Gb & 1 & 0 \\
+  \hline
+  UPSv1.medium & 4Gb & 30Gb & 2 & 0 \\
+  \hline
+  UPSv1.large & 8Gb & 40Gb & 4 & 0 \\
+  \hline
+  UPSv1.2xlarge & 60Gb & 40Gb & 16 & 0 \\
+  \hline
+  UPSv1.3xlarge & 120Gb & 80Gb & 16 & 0 \\
+  \hline
+  GPUv1.small & 2Gb & 20Gb & 1 & 1 \\
+  \hline
+  GPUv1.medium & 4Gb & 30Gb & 2 & 1 \\
+  \hline
+  GPUv1.large & 8Gb & 40Gb & 4 & 1 \\
+  \hline
+  GPUv1.2xlarge & 60Gb & 40Gb & 16 & 1 \\
   \hline
 \end{tabular}
 \caption{Flavor sizes}
 \label{table:flavor-size}
 \end{table}
 
-The current full VSC Tier-1 Cloud flavors list is available from section \ref{sec:appendix-flavors}.
 
 E.g. The \strong{GPUv1}.\emph{large} OpenStack flavor will instantiate a
 VM with 4 AMD Epyc 7542 2.9GHz vCPUs, with 1 NVIDIA Tesla 4 vGPUs, 8GB
