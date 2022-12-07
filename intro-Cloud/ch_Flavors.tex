@@ -87,55 +87,57 @@ VM persistent volumes could be resized later if that is necessary
 (see chapter \ref{cha:launch-manage-inst} for more information).
 
 VSC Tier-1 Cloud VM flavors are grouped by instance types
-(see table \ref{table:instance-type}). The current flavor sizes are
-available for each instance type and can be used in different
+(see table \ref{table:flavor-size}). Several flavor sizes are
+available for each instance type, differing in the number of allocated vCPUs,
+RAM and storage size. Every GPU flavor in addition allocates one vGPU.
+The various VM flavors can be used in different
 combinations to fit different workload hardware requirements.
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}| }
+\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|p{3cm}| }
   \hline
-  \rowcolor{lightgray} \textbf{Flavor name} & \textbf{RAM} & \textbf{Root Disk} & \textbf{vCPUs} & \textbf{vGPUs} \\
+  \rowcolor{lightgray} \textbf{Flavor name} & \textbf{RAM} & \textbf{Root Disk} & \textbf{vCPUs} \\
   \hline
-  CPUv1.nano & 64Kb & 1Gb & 1 & 0 \\
+  CPUv1.nano & 64Kb & 1Gb & 1 \\
   \hline
-  CPUv1.tiny & 512Kb & 10Gb & 1 & 0 \\
+  CPUv1.tiny & 512Kb & 10Gb & 1 \\
   \hline
-  CPUv1.small & 2Gb & 20Gb & 1 & 0 \\
+  CPUv1.small & 2Gb & 20Gb & 1 \\
   \hline
-  CPUv1.medium & 4Gb & 30Gb & 2 & 0 \\
+  CPUv1.medium & 4Gb & 30Gb & 2 \\
   \hline
-  CPUv1.large & 8Gb & 40Gb & 4 & 0 \\
+  CPUv1.large & 8Gb & 40Gb & 4 \\
   \hline
-  CPUv1.xlarge & 16Gb & 40Gb & 8 & 0 \\
+  CPUv1.xlarge & 16Gb & 40Gb & 8 \\
   \hline
-  CPUv1.1\_2xlarge & 60Gb & 40Gb & 8 & 0 \\
+  CPUv1.1\_2xlarge & 60Gb & 40Gb & 8 \\
   \hline
-  CPUv1.2xlarge & 60Gb & 40Gb & 16 & 0 \\  
+  CPUv1.2xlarge & 60Gb & 40Gb & 16 \\  
   \hline
-  CPUv1.1\_3xlarge & 180Gb & 80Gb & 14 & 0 \\
+  CPUv1.1\_3xlarge & 180Gb & 80Gb & 14 \\
   \hline
-  CPUv1.3xlarge & 120Gb & 80Gb & 16 & 0 \\
+  CPUv1.3xlarge & 120Gb & 80Gb & 16 \\
   \hline
-  CPUv1.4xlarge & 360Gb & 80Gb & 20 & 0 \\
+  CPUv1.4xlarge & 360Gb & 80Gb & 20 \\
   \hline
-  UPSv1.small & 2Gb & 20Gb & 1 & 0 \\
+  UPSv1.small & 2Gb & 20Gb & 1 \\
   \hline
-  UPSv1.medium & 4Gb & 30Gb & 2 & 0 \\
+  UPSv1.medium & 4Gb & 30Gb & 2 \\
   \hline
-  UPSv1.large & 8Gb & 40Gb & 4 & 0 \\
+  UPSv1.large & 8Gb & 40Gb & 4 \\
   \hline
-  UPSv1.2xlarge & 60Gb & 40Gb & 16 & 0 \\
+  UPSv1.2xlarge & 60Gb & 40Gb & 16 \\
   \hline
-  UPSv1.3xlarge & 120Gb & 80Gb & 16 & 0 \\
+  UPSv1.3xlarge & 120Gb & 80Gb & 16 \\
   \hline
-  GPUv1.small & 2Gb & 20Gb & 1 & 1 \\
+  GPUv1.small & 2Gb & 20Gb & 1 \\
   \hline
-  GPUv1.medium & 4Gb & 30Gb & 2 & 1 \\
+  GPUv1.medium & 4Gb & 30Gb & 2 \\
   \hline
-  GPUv1.large & 8Gb & 40Gb & 4 & 1 \\
+  GPUv1.large & 8Gb & 40Gb & 4 \\
   \hline
-  GPUv1.2xlarge & 60Gb & 40Gb & 16 & 1 \\
+  GPUv1.2xlarge & 60Gb & 40Gb & 16 \\
   \hline
 \end{tabular}
 \caption{Flavor sizes}
