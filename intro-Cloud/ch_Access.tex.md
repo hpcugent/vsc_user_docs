@@ -16,11 +16,10 @@ project, or join an existing one.
 You can interact with the VSC Cloud using the OpenStack Dashboard, a web
 interface, or the OpenStack command line interface, which you can use
 from any system, and which is installed for you on the UGent login node
-`login.hpc.ugent.be`. You can log in to the Dashboard using the VSC
+**login.hpc.ugent.be**. You can log in to the Dashboard using the VSC
 accountpage, as illustrated in the next section. To get access from the
 command line interface, you'll need to obtain an application credential,
-as explained in section [1.2](#sec:appl-cred){reference-type="ref"
-reference="sec:appl-cred"}.
+as explained in section [1.2](#sec:appl-cred).
 
 These restrictions do not apply to someone who simply wishes to access
 an existing VM running in the cloud. VSC Cloud projects can decide
@@ -31,7 +30,7 @@ themselves who gets access to their VM's, and how.
 You can access the OpenStack web interface, or Dashboard, via
 [cloud.vscentrum.be](https://cloud.vscentrum.be).
 
-To log in, choose the (default) authentication method *VSC Accountpage*
+To log in, choose the (default) authentication method **VSC Accountpage**
 and click .
 
 
@@ -66,23 +65,20 @@ You can create an application credential using the dashboard:
 
 4.  Fill out the **Create Application Credential** dialog:
 
-    Name, Description
-
+    1. **Name, Description**
     :   Choose a name (mandatory) and description that remind you of the
         purpose of this credential.
 
-    Secret
-
+    2. **Secret**
     :   We recommend to leave this empty, in which case OpenStack will
         generate a random secret for you.
 
-    Expiration Date, Expiration Time
-
+    3. **Expiration Date, Expiration Time**
     :   It is good practice make the token expire. An expiration date
         limits the impact if the secret is accidentally exposed, and you
         can always create a new credential when an old one is expired.
 
-    Roles
+    4. **Roles**
 
     :   A role defines a set of access rights. By selecting a subset of
         roles for this credential, you can limit the access rights

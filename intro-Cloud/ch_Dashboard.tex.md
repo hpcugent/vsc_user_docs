@@ -1,9 +1,8 @@
 # The OpenStack Dashboard
 
 After login, you can see the Overview tab of
-[Horizon]{acronym-label="Horizon" acronym-form="singular+short"}, the
-[OpenStack Dashboard]{acronym-label="OpenStack Dashboard"
-acronym-form="singular+short"}.
+_Horizon_, the
+_OpenStack Dashboard_.
 
 
 ![image](img/tab-compute-overview.png)
@@ -11,7 +10,7 @@ acronym-form="singular+short"}.
 
 This chapter briefly describes the different components of the
 dashboard. You can read the official documentation at
-[https://docs.openstack.org/horizon/\\osversion/user](https://docs.openstack.org/horizon/\osversion/user){.uri}.
+[https://docs.openstack.org/horizon/latest/user/](https://docs.openstack.org/horizon/latest/user/){.uri}.
 
 The VSC cloud uses a customized dashboard. Some features mentioned in
 the official OpenStack documentation were intentionally removed, please
@@ -26,11 +25,9 @@ project's resources.
 
 From the Project tab, you can access the following categories:
 
-API Access
+**API Access** View API endpoints.
 
-:   View API endpoints.
-
-Compute
+**Compute**
 
 :    
 
@@ -49,7 +46,7 @@ Compute
     -   Server Groups: Server groups provide a mechanism to group
         servers according to certain policy.
 
-Volumes
+**Volumes**
 
 :    
 
@@ -57,7 +54,7 @@ Volumes
 
     -   Snapshots: View, create, edit, and delete volume snapshots.
 
-Network
+**Network**
 
 :    
 
@@ -69,7 +66,7 @@ Network
     -   Floating IPs: Allocate an IP address to or release it from a
         project
 
-Orchestration
+**Orchestration**
 
 :    
 
@@ -86,7 +83,7 @@ Orchestration
     -   Template generator: A graphical interface to build and edit
         templates.
 
-Shares
+**Shares**
 
 :    
 
@@ -97,16 +94,16 @@ Shares
 
 From the Identity tab, you can access the following categories:
 
-Projects
+**Projects**
 
 :   View, create, assign users to, remove users from, and delete
     projects.
 
-Users
+**Users**
 
 :   View, create, enable, disable, and delete users.
 
-Application Credentials
+**Application Credentials**
 
 :   With application credentials, a user can grant applications limited
     access to their cloud resources.

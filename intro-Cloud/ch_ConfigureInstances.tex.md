@@ -6,32 +6,28 @@ sections:
 
 -   Instances must connect to the project's \_vm network in order to get
     external internet access (see section
-    [1.1](#sec:_vm-_nfs-networks){reference-type="ref"
-    reference="sec:_vm-_nfs-networks"}).
+    [1.1](#sec:_vm-_nfs-networks)).
 
 -   Each cloud project can use one floating IP, a public IP address
     which you'll need to link to the resources you want to access.
     Optionally, if the project has requested access to VSC network it
     will receive also three VSC floating IPs (see section
-    [1.2](#sec:floating-ip){reference-type="ref"
-    reference="sec:floating-ip"}).
+    [1.2](#sec:floating-ip)).
 
 -   By default, the UGent firewall blocks most IP addresses and ports.
-    Only the port range 50000-60000 for the public floating IP addresses
-    is open by default. Contact if you need to access other ports from
+    Only the port (TCP) range **50000-60000** for the public floating IP addresses
+    is open by default. Contact <cloud@vscentrum.be> if you need to access other ports from
     the outside world.
 
 -   The OpenStack environment has its own internal firewalls, which
     block most ports of your instances by default. If you want to access
     specific ports of your instances, you must create "Security Groups"
     which allow access to those ports (see section
-    [1.3](#sec:security-groups){reference-type="ref"
-    reference="sec:security-groups"}).
+    [1.3](#sec:security-groups)).
 
 -   You can use one or more SSH keys from your VSC account to access
     your instances (see section
-    [1.4](#sec:ssh-key-pairs){reference-type="ref"
-    reference="sec:ssh-key-pairs"}).
+    [1.4](#sec:ssh-key-pairs)).
 
 For other access methods, or SSH authentication for a wider set of
 users, you'll need to set up some form of identity management yourself.
@@ -42,18 +38,17 @@ This system administration task is beyond the scope of our tutorial.
 Each project in the VSC cloud has its own network *`<projectname>`*`_vm`
 and --- if the project uses shares and/or vsc networks ---
 *`<projectname>`*`_nfs` and *`<projectname>`*`_vsc` respectively. Each
-is a subnet of 254 addresses, with an ip range 10.10.$x$.0/24, where $x$
+is a subnet of 254 addresses, with an ip range 10.10.x.0/24, where _x_
 is a number that depends on the project and network. To see the subnets
 for your project's networks, open the Network tab, and select Networks.
 
 Instances should use the \_vm network for communication, and the \_nfs
 network if they need access to shared file systems (see chapter
-[\[cha:shared-file-systems\]](#cha:shared-file-systems){reference-type="ref"
-reference="cha:shared-file-systems"}). On the other hand \_vsc network
+[shared file systems](./ch_Shares.tex.md#shared-file-systems)).
+On the other hand \_vsc network
 is used to connect to or provide VSC services via VSC network and
 floating IPs. When an instance is created in
-[OpenStack]{acronym-label="OpenStack" acronym-form="singular+short"} and
-connected to the \_vm, \_nfs or \_vsc networks, it is automatically
+OpenStack and connected to the \_vm, \_nfs or \_vsc networks, it is automatically
 assigned a fixed IP address in that network. This IP address is
 permanently associated with the instance until the instance is
 terminated.
@@ -97,28 +92,37 @@ server is listening (typically port 22).
 
 You can quickly set up such forwarding rules using
 `neutron_port_forward`, a command line tool available on the UGent login
-node, `login.hpc.ugent.be`. In order to use it, you must create an
+node, **login.hpc.ugent.be**. In order to use it, you must create an
 application credential for the role "User", and save it as an openrc
-file (see section
-[\[sec:appl-cred\]](#sec:appl-cred){reference-type="ref"
-reference="sec:appl-cred"} on page ). Transfer the openrc file to your
-VSC storage space, so `neutron_port_forward` can read it. To set up new
+file (see section [application credentials](./ch_Access.tex.md#sec:appl-cred)
+on page ). Transfer the openrc file to your
+VSC storage space, so _neutron_port_forward_ can read it. To set up new
 port forwarding rules, run the script providing the path to the openrc
-file as an argument to the `-o` option, and a file describing your port
-forwarding configuration as argument to the `-m` option:
+file as an argument to the _-o_ option, and a file describing your port
+forwarding configuration as argument to the _-m_ option:
 
-::: prompt
-:::
+
+
+```bash
+$ neutron_port_forward -o <openrc file> -m <ini-file>
+```
 
 The following is an example configuration file:
 
-::: code
-\[DEFAULT\] floatingip=193.190.85.40 network=\_vm
+```
+[DEFAULT]
+floatingip=193.190.85.40
+network=_vm
 
-\[classa\] pattern=classa-(+̣) 22=52000:100:22 5900=55900
+[classa]
+pattern=classa-(+̣)
+22=52000:100:22
+5900=55900
 
-\[classb\] pattern=classb-(+̣) 80=52080
-:::
+[classb]
+pattern=classb-(+̣)
+80=52080
+```
 
 Here we define defaults for the floating ip and target network, and two
 classes. Instances are assigned to a class if their name matches the
@@ -128,48 +132,54 @@ must match an integer.
 
 Port forwarding rules are given in the form
 `target=source(:multiplier:offset)`. This will set up a forwarding rule
-from the floating IP port
+from the floating IP port:
+
+ > (source + multiplier ∗ i + offset) → target ,
 
 $$(\mathrm{source} + \mathrm{multiplier} * i + \mathrm{offset}) \rightarrow \mathrm{target}\, ,$$
 
-where $i$ is the integer matched by the first capturing group, and
+where **_i_** is the integer matched by the first capturing group, and
 "target" is a port of the fixed IP for the instance in the chosen
-network, in this case the \_vm network. "multiplier" and "offset" are
+network, in this case the _vm network. "multiplier" and "offset" are
 optional and default to 1 and 0 respectively. In our example, this
 results in the following set of port forwarding rules for the public IP
 address 193.190.85.40:
 
-::: center
-  ------- -------------------------------
-  52122   $\rightarrow$   classa-1:22
-  52222   $\rightarrow$   classa-2:22
-  ...     $\rightarrow$  
-  55901   $\rightarrow$   classa-1:5900
-  55902   $\rightarrow$   classa-2:5900
-  ...     $\rightarrow$  
-  52081   $\rightarrow$   classb-1:80
-  52082   $\rightarrow$   classb-2:80
-  ...     $\rightarrow$  
-  ------- -------------------------------
-:::
+
+```
+  52122   ->   classa-1:22
+  52222   ->   classa-2:22
+  ...     
+  55901   ->   classa-1:5900
+  55902   ->   classa-2:5900
+  ...     
+  52081   ->   classb-1:80
+  52082   ->   classb-2:80
+  ...     
+```
+
 
 This is another basic port forwarding configuration example without
 patterns, in this case just to connect via SSH using external port 52000
 to a running VM called testvm:
 
-::: code
-\[DEFAULT\] floatingip=193.190.85.40 network=\_vm
+```
+[DEFAULT]
+floatingip=193.190.85.40
+network=_vm
 
-\[testvm\] 22=52000
-:::
+[testvm]
+22=52000
+```
 
 You can also see an overview of existing port forwarding rules for the
 ip addresses in your configuration file using
-`neutron_port_forward --show`. Each rule has an internal id, which you
-can see if you combine the options `--show` and `--id` as follows:
+_neutron_port_forward --show_. Each rule has an internal id, which you
+can see if you combine the options _--show_ and _--id_ as follows:
 
-::: prompt
-:::
+```bash
+$ neutron_port_forward -o <openrc file> -m <ini-file> --show --id
+```
 
 To remove port forwarding rules, use the option
 `--remove=<list of id's>` with a comma-separated list of the id's of the
@@ -208,11 +218,11 @@ instance.
 4.  In the Manage Floating IP Associations dialog box, choose the
     following options:
 
-    IP Address
+    **IP Address**
 
     :   This field is filled automatically.
 
-    Port to be associated
+    **Port to be associated**
 
     :   Select a port from the list. The list shows all the instances
         with their fixed IP addresses.
@@ -221,7 +231,7 @@ instance.
 
 Another way to associate a floating IP is after the user has already
 launched an instance which appears in the list of running instances in
-the Project--\>Compute--\>Instances tab:
+the Project->Compute->Instances tab:
 
 1.  Expand the drop-down menu on right next to the instance
 
@@ -307,23 +317,23 @@ project, each user needs to import it in the OpenStack project.
 
 7.  To change its permissions so that only you can read and write to the
     file, run the following command:
-
-    ::: prompt
-    :::
-
-    If you are using the
-    [OpenStack Dashboard]{acronym-label="OpenStack Dashboard"
-    acronym-form="singular+short"} from a Windows computer, use PuTTYgen
+```bash
+      $ chmod 0600 yourPrivateKey.pem
+```
+**Note:** If you are using the
+    [OpenStack Dashboard] from a Windows computer, use PuTTYgen
     to load the **\*.pem** file and convert and save it as **\*.ppk**.
     For more information see the [*WinSCP web page for
     PuTTYgen*](https://winscp.net/eng/docs/ui_puttygen), and chapter 2
     of the [introduction to HPC at
     VSC](https://hpcugent.github.io/vsc_user_docs).
 
-8.  To make the key pair known to SSH, run the **ssh-add** command.
+*  To make the key pair known to SSH, run the **ssh-add** command.
 
-    ::: prompt
-    :::
+```
+      $ ssh-add yourPrivateKey.pem
+```
+
 
 ### Import a key pair {#import-a-key-pair .unnumbered}
 

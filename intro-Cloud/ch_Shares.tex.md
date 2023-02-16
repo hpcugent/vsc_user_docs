@@ -1,9 +1,9 @@
 # Shared file systems using Manila {#cha:shared-file-systems}
 
 OpenStack's Manila service makes it possible to create and manage shared
-[nfs]{acronym-label="nfs" acronym-form="singular+short"} file systems
+nfs file systems
 for virtual machines. This service is not automatically enabled for
-every VSC cloud project, so you should contact if you want to use shared
+every VSC cloud project, so you should contact <cloud@vscentrum.be> if you want to use shared
 file systems in your project.
 
 ## Creating a Shared File System {#sec:creating-shared-file .unnumbered}
@@ -22,30 +22,29 @@ straightforward:
 
     Fill out the following fields:
 
-    Share Name
+    **Share Name**
 
     :   Choose a name.
 
-    Description
+    **Description**
 
     :   Optionally, add a description.
 
-    Share Protocol
+    **Share Protocol**
 
-    :   Use the default [nfs]{acronym-label="nfs"
-        acronym-form="singular+short"} protocol.
+    :   Use the default nfs protocol.
 
-    Size (GiB)
+    **Size (GiB)**
 
     :   Set the size of the shared file system to be created. The total
         available storage and the amount currently used are shown on the
         right.
 
-    Share Type
+    **Share Type**
 
     :   Here, you must select "cephfsnfstype" (the only choice).
 
-    Metadata
+    **Metadata**
 
     :   You can attach additional metadata to your shared file system,
         which can be queried later on.
@@ -62,7 +61,7 @@ straightforward:
 At this point, the shared file system exists within OpenStack, but it
 cannot be used until we define access rules for it.
 
-## Defining [nfs]{acronym-label="nfs" acronym-form="singular+short"} access rules {#sec:defin-nfs-access .unnumbered}
+## Defining nfs access rules {#sec:defin-nfs-access .unnumbered}
 
 You must define rules that define which machines on the network may
 obtain read or write access to your shared file system. By default, in
@@ -77,31 +76,37 @@ absence of any rules, a shared file system cannot be accessed by anyone.
 
 3.  Fill out the **Add Rule** dialog:
 
-    Access Type
+    **Access Type**
 
     :   Only "ip" is supported.
 
-    Access Level
+    **Access Level**
 
     :   Choose if you want to give read and write ("rw") or read-only
         ("ro") permission with this rule.
 
-    Access To
+    **Access To**
 
     :   Here, you can specify an ip address, or an address range, to
         which the rule applies. The addresses should be specified
         according to the format of an NFS exports configuration file.
         The following table contains a few examples, assuming the
-        project's \_nfs network has the subnet 10.10.$x$.0/24, for some
-        value of $x$ (see section
-        [\[sec:\_vm-\_nfs-networks\]](#sec:_vm-_nfs-networks){reference-type="ref"
-        reference="sec:_vm-_nfs-networks"}):\
+        project's **_nfs** network has the subnet _10.10.x.0/24_, for some
+        value of _x_ (see section
+        [_nfs networks](./ch_ConfigureInstances.tex.md#sec:_vm-_nfs-networks)):
 
-          **10.10.$x$.13**     Allow this single ip address.
-          -------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-          **0.0.0.0/0**        Allow any ip address.
-          **10.10.$x$.0/24**   Allow any ip address from the project's \_nfs network. For a non-public shared file system this has the same effect as the previous rule, because such a shared file system can only be accessed from within our project's \_nfs network anyway.
-          **10.10.$x$.0/28**   Allow addresses 10.10.$x$.0 until 10.10.$x$.15.
+:::
+
+
+- **10.10._x_.13**
+    - Allow this single ip address.
+          
+- **0.0.0.0/0**
+    - Allow any ip address.
+- **10.10._x_.0/24**
+    - Allow any ip address from the project's _nfs network. For a non-public shared file system this has the same effect as the previous rule, because such a shared file system can only be accessed from within our project's _nfs network anyway.
+- **10.10._x_.0/28**
+    - Allow addresses 10.10.x.0 until 10.10.x.15.
 
     Click **Add** to add the rule.
 
@@ -114,12 +119,12 @@ When the proper access rules for the shared file system are in place,
 you can access it from an instance with a matching ip. In order to be
 able to mount the shared file system, your instance needs
 
--   a [nfs]{acronym-label="nfs" acronym-form="singular+short"} client,
+-   a nfs client,
     installed by default on images provided by the VSC cloud, and
 
--   access to the \_nfs network. Because your instance likely has to
-    connect to the \_vm network as well, your VM should have two
-    [nic]{acronym-label="nic" acronym-form="singular+short"}'s. Again,
+-   access to the **_nfs** network. Because your instance likely has to
+    connect to the **_vm** network as well, your VM should have two
+    nic's. Again,
     this is taken care of in the default images.
 
 When you are ready to mount the network file system on an instance, look
@@ -137,8 +142,9 @@ up the network location of your file system using the Dashboard:
 
 Once you know the location of your shared file system, you can mount it
 on any VM with the appropriate access rights, e.g. to mount a shared
-file system with location `10.2.0.2:/volumes/_nogroup/918...a78` at
-mount point `\mnt`:
+file system with location _10.2.0.2:/volumes/_nogroup/918...a78_ at
+mount point _\mnt_:
 
-::: prompt
-:::
+```console
+$ sudo mount 10.2.0.2:/volumes/_nogroup/918...a78 /mnt
+```

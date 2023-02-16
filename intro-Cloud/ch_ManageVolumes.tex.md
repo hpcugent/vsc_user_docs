@@ -1,7 +1,6 @@
 # Create and manage volumes
 
-An [OpenStack Volume]{acronym-label="OpenStack Volume"
-acronym-form="singular+short"} is a block storage device which you
+An OpenStack Volume is a block storage device which you
 attach to instances to enable persistent storage. You can attach a
 volume to a running instance or detach a volume and attach it to another
 instance at any time. You can also create a snapshot from a volume, or
@@ -11,19 +10,19 @@ delete it.
 
 1.  Open the Volumes tab and select the Volumes category.
 
-2.  Click .
+2.  Click **Create Volume**.
 
     In the dialog box that opens, enter or select the following values.
 
-    Volume Name
+    **Volume Name**
 
     :   Specify a name for the volume.
 
-    Description
+    **Description**
 
     :   Optionally, provide a brief description for the volume.
 
-    Volume Source
+    **Volume Source**
 
     :   Select one of the following options:
 
@@ -44,7 +43,7 @@ delete it.
             source for a volume are displayed only if there are existing
             snapshots or volumes.
 
-    Type
+    **Type**
 
     :   Select one of the following options:
 
@@ -56,17 +55,17 @@ delete it.
             and it is only accessible by project's request (contact if
             you need more information).
 
-    Size (GB)
+    **Size (GB)**
 
     :   The size of the volume in gibibytes (GiB).
 
-    Availability Zone
+    **Availability Zone**
 
     :   Select the Availability Zone from the list. By default, this
         value is set to the availability zone given by the cloud
         provider (for example, or ). For some cases, it could be .
 
-3.  Click .
+3.  Click **Create Volume**.
 
 The dashboard shows the volume on the Volumes tab.
 
@@ -77,17 +76,17 @@ You can attach a volume to one instance at a time.
 
 1.  Open the Volumes tab and click Volumes category.
 
-2.  Select the volume to add to an instance and click .
+2.  Select the volume to add to an instance and click **Manage Attahments**.
 
 3.  In the Manage Volume Attachments dialog box, select an instance.
 
 4.  Enter the name of the device from which the volume is accessible by
     the instance.
 
-    The actual device name might differ from the volume name because of
+    **Note:** The actual device name might differ from the volume name because of
     hypervisor settings.
 
-5.  Click .
+5.  Click **Attach Volume**.
 
     The dashboard shows the instance to which the volume is now attached
     and the device name.
@@ -101,9 +100,9 @@ Now you can mount, format, and use the volume from this instance.
 
 1.  Open the Volumes tab and select the Volumes category.
 
-2.  Select the volume and click .
+2.  Select the volume and click **Manage Attachments**.
 
-3.  Click and confirm your changes.
+3.  Click **Detach Volume** and confirm your changes.
 
 A message indicates whether the action was successful.
 
@@ -113,7 +112,7 @@ A message indicates whether the action was successful.
 
 2.  Select a volume from which to create a snapshot.
 
-3.  In the Actions column, click .
+3.  In the Actions column, click **Create Snapshot**.
 
 4.  In the dialog box that opens, enter a snapshot name and a brief
     description.
@@ -128,14 +127,14 @@ The dashboard shows the new volume snapshot in Volume Snapshots tab.
 
 2.  Select the volume that you want to edit.
 
-3.  In the Actions column, click .
+3.  In the Actions column, click **Edit Volume**.
 
 4.  In the Edit Volume dialog box, update the name and description of
     the volume.
 
-5.  Click .
+5.  Click **Edit Volume**.
 
-You can extend a volume by using the Extend Volume option available in
+**Note:** You can extend a volume by using the Extend Volume option available in
 the More dropdown list and entering the new value for volume size.
 
 #### Delete a volume
@@ -147,6 +146,6 @@ deleted.
 
 2.  Select the check boxes for the volumes that you want to delete.
 
-3.  Click and confirm your choice.
+3.  Click **Detele Volumes** and confirm your choice.
 
 A message indicates whether the action was successful.
