@@ -13,12 +13,12 @@ from the VSC Tier1 Cloud infrastructure:
 
 :::
 
- **UPSv1**                          | **CPUv1**                       | **GPUv2**            | **GPUv3**            |
-------------------------------------|---------------------------------|----------------------|----------------------|
-- AMD Epyc 7542 2.9GHz              |- Intel Xeon CPU E5-2670 2.60GHz |- AMD Epyc 7542 2.9GHz|- AMD Epyc 7542 2.9GHz
-- 25Gbit Ethernet                   |- 10Gbit Ethernet                |- 25Gbit Ethernet     |- 25Gbit Ethernet     
-- vCPU oversubscription 2:1         |                                 |                      |                      
-- Uninterruptible Power Supply (UPS)|    |                      |- Uninterruptible Power Supply (UPS)
+| **UPSv1**                          | **CPUv1**                       | **GPUv2**            | **GPUv3**            |
+|------------------------------------|---------------------------------|----------------------|----------------------|
+|- AMD Epyc 7542 2.9GHz              |- Intel Xeon CPU E5-2670 2.60GHz |- AMD Epyc 7542 2.9GHz|- AMD Epyc 7542 2.9GHz
+|- 25Gbit Ethernet                   |- 10Gbit Ethernet                |- 25Gbit Ethernet     |- 25Gbit Ethernet     
+|- vCPU oversubscription 2:1         |                                 |                      |                      
+|- Uninterruptible Power Supply (UPS)|    |                      |- Uninterruptible Power Supply (UPS)
 | | |- 1 full GPU NVIDIA Tesla4|- 1 full GPU NVIDIA Ampere A2 
 
 :::

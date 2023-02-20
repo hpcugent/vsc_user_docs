@@ -23,23 +23,23 @@ access policies for images exist:
 
 **public**
 
-:   Public images are provided by the VSC, and can be accessed by all
-    users.
+Public images are provided by the VSC, and can be accessed by all
+users.
 
 **private**
 
-:   If you create a private image, only members of the same project have
-    access.
+If you create a private image, only members of the same project have
+access.
 
 **shared**
 
-:   You can also choose to share your image with a list of other
-    projects.
+You can also choose to share your image with a list of other
+projects.
 
 **community**
 
-:   Community images are user-created images which are freely accessible
-    to all other users.
+Community images are user-created images which are freely accessible
+to all other users.
 
 **Note:** You can also use the **openstack** and **glance** command-line clients
 or the Image service to manage images.
@@ -59,30 +59,26 @@ Follow this procedure to upload an image to a project:
 
 3.  Enter the following values:
 
-    **Image Name**
-    :   Enter a name for the image.
+    1. **Image Name**: Enter a name for the image.
 
-    **Image Description**
-    :   Enter a brief description of the image.
+    2. **Image Description**: Enter a brief description of the image.
 
-    **Image Source**
-    :    
-        **File:** Browse for the image file on your file system and add it.
-        **Format:** Select the image format (for example, QCOW2) for the image.
+    3. **Image Source**
+        - **File:** Browse for the image file on your file system and add it.
+        - **Format:** Select the image format (for example, QCOW2) for the image.
 
-    **Image Requirements**
-    :    
-        **Architecture:** Specify the architecture. For example, for a 32-bit architecture or for a 64-bit architecture.
-    :    
-        **Kernel, Ramdisk:** Can be left empty, as this is determined by the image file.
-    :    
-        **Minimum Disk (GB), Minimum RAM (MB):** Choose suitable values, according to the requirements of
-            your image's operating system.
+    4. **Image Requirements**
+        - **Architecture:**
+        Specify the architecture. For example, for a 32-bit architecture or for a 64-bit architecture.
+        - **Kernel, Ramdisk:**
+        Can be left empty, as this is determined by the image file.
+        - **Minimum Disk (GB), Minimum RAM (MB):**
+        Choose suitable values, according to the requirements of your image's operating system.
 
-    **Protected**
-    :   If set to , users need to unlock the image before they are able
+    5. **Protected**
+    :   If set to **Yes**, users need to unlock the image before they are able
         to delete it.
-    **Metadata**
+    6. **Metadata**
     :   You can add resource metadata in this tab. The glance Metadata
         Catalog provides a list of metadata image definitions.
 

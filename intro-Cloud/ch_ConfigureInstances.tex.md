@@ -218,16 +218,14 @@ instance.
 4.  In the Manage Floating IP Associations dialog box, choose the
     following options:
 
-    **IP Address**
+    - **IP Address**
+    This field is filled automatically.
 
-    :   This field is filled automatically.
+    - **Port to be associated**
+    Select a port from the list. The list shows all the instances
+    with their fixed IP addresses.
 
-    **Port to be associated**
-
-    :   Select a port from the list. The list shows all the instances
-        with their fixed IP addresses.
-
-5.  Click Associate.
+5.  Click **Associate**.
 
 Another way to associate a floating IP is after the user has already
 launched an instance which appears in the list of running instances in
@@ -357,3 +355,4 @@ acronym-form="singular+short"} lists the key pair on the Key Pairs tab.
     "SSH pairs", but of course only the public key of each pair is
     stored in the OpenStack environment, while the private key should be
     kept secure by the owner.
+

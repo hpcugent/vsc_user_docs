@@ -79,7 +79,6 @@ You can create an application credential using the dashboard:
         can always create a new credential when an old one is expired.
 
     4. **Roles**
-
     :   A role defines a set of access rights. By selecting a subset of
         roles for this credential, you can limit the access rights
         granted by this credential. It is a good idea to select only the

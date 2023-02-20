@@ -14,17 +14,14 @@ delete it.
 
     In the dialog box that opens, enter or select the following values.
 
-    **Volume Name**
+    - **Volume Name**
+    Specify a name for the volume.
 
-    :   Specify a name for the volume.
+    - **Description**
+    Optionally, provide a brief description for the volume.
 
-    **Description**
-
-    :   Optionally, provide a brief description for the volume.
-
-    **Volume Source**
-
-    :   Select one of the following options:
+    - **Volume Source**
+    Select one of the following options:
 
         -   No source, empty volume: Creates an empty volume. An empty
             volume does not contain a file system or a partition table.
@@ -43,27 +40,24 @@ delete it.
             source for a volume are displayed only if there are existing
             snapshots or volumes.
 
-    **Type**
+    - **Type**
+    Select one of the following options:
 
-    :   Select one of the following options:
-
-        -   tripleo: This is the default option for the projects, it
+        -   **tripleo**: This is the default option for the projects, it
             creates the volume in a regular hdd storage pool.
 
-        -   fastpool (optional): It creates the volume in a high I/O
+        -   **fastpool** (optional): It creates the volume in a high I/O
             throughput storage pool. Fastpool has its own storage quota
             and it is only accessible by project's request (contact if
             you need more information).
 
-    **Size (GB)**
+    - **Size (GB)**
+    The size of the volume in gibibytes (GiB).
 
-    :   The size of the volume in gibibytes (GiB).
-
-    **Availability Zone**
-
-    :   Select the Availability Zone from the list. By default, this
-        value is set to the availability zone given by the cloud
-        provider (for example, or ). For some cases, it could be .
+    - **Availability Zone**
+    Select the Availability Zone from the list. By default, this
+    value is set to the availability zone given by the cloud
+    provider (for example, or ). For some cases, it could be .
 
 3.  Click **Create Volume**.
 
@@ -149,3 +143,4 @@ deleted.
 3.  Click **Detele Volumes** and confirm your choice.
 
 A message indicates whether the action was successful.
+

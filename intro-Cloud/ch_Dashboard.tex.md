@@ -29,66 +29,54 @@ From the Project tab, you can access the following categories:
 
 **Compute**
 
-:    
+ -   Overview: View reports for the project.
+ -   Instances: View, launch, create a snapshot from, stop, pause, or
+     reboot instances, or connect to them through VNC.
 
-    -   Overview: View reports for the project.
+ -   Images: View images and instance snapshots created by project
+    users, plus any images that are publicly available. Create,
+    edit, and delete images, and launch instances from images and
+    snapshots.
 
-    -   Instances: View, launch, create a snapshot from, stop, pause, or
-        reboot instances, or connect to them through VNC.
+ -   Key Pairs: View, create, edit, import, and delete key pairs.
 
-    -   Images: View images and instance snapshots created by project
-        users, plus any images that are publicly available. Create,
-        edit, and delete images, and launch instances from images and
-        snapshots.
-
-    -   Key Pairs: View, create, edit, import, and delete key pairs.
-
-    -   Server Groups: Server groups provide a mechanism to group
+ -   Server Groups: Server groups provide a mechanism to group
         servers according to certain policy.
 
 **Volumes**
 
-:    
+ -   Volumes: View, create, edit, and delete volumes.
 
-    -   Volumes: View, create, edit, and delete volumes.
-
-    -   Snapshots: View, create, edit, and delete volume snapshots.
+ -   Snapshots: View, create, edit, and delete volume snapshots.
 
 **Network**
 
-:    
+ -   Networks: Create and manage public and private networks.
 
-    -   Networks: Create and manage public and private networks.
+ -   Security Groups: View, create, edit, and delete security groups
+     and security group rules..
 
-    -   Security Groups: View, create, edit, and delete security groups
-        and security group rules..
-
-    -   Floating IPs: Allocate an IP address to or release it from a
-        project
+ -   Floating IPs: Allocate an IP address to or release it from a
+     project
 
 **Orchestration**
 
-:    
+ -  Stacks: Use the REST API to orchestrate multiple composite cloud
+    applications.
 
-    -   Stacks: Use the REST API to orchestrate multiple composite cloud
-        applications.
+ -  Resource types: Show a list of all the supported resource types
+    for HOT templates.
 
-    -   Resource types: Show a list of all the supported resource types
-        for HOT templates.
+ -  Template versions: The version of a Heat template specifies the
+    format of the template and also the corresponding features that
+    will be validated and supported.
 
-    -   Template versions: The version of a Heat template specifies the
-        format of the template and also the corresponding features that
-        will be validated and supported.
-
-    -   Template generator: A graphical interface to build and edit
-        templates.
+-   Template generator: A graphical interface to build and edit
+    templates.
 
 **Shares**
 
-:    
-
-    -   Shares: Create and manage [share]{acronym-label="share"
-        acronym-form="singular+short"}s.
+-   Shares: Create and manage share.
 
 ## Identity tab {#sec:identity-tab .unnumbered}
 
@@ -96,14 +84,14 @@ From the Identity tab, you can access the following categories:
 
 **Projects**
 
-:   View, create, assign users to, remove users from, and delete
-    projects.
+View, create, assign users to, remove users from, and delete
+projects.
 
 **Users**
 
-:   View, create, enable, disable, and delete users.
+View, create, enable, disable, and delete users.
 
 **Application Credentials**
 
-:   With application credentials, a user can grant applications limited
-    access to their cloud resources.
+With application credentials, a user can grant applications limited
+access to their cloud resources.

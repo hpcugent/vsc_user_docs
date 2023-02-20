@@ -28,7 +28,7 @@ an _instance_ from the following sources:
 3.  In the Launch Instance dialog box, specify the following values:
 
 
-    ![image](img/tab-compute-instances-launch.png)
+![image](img/tab-compute-instances-launch.png)
 
 
 ### Details tab
@@ -84,9 +84,9 @@ Your options are:
  - Volume
 
  - Volume snapshot
-
-            Depending on the type of boot source, the list of available
-            items changes.
+ 
+    Depending on the type of boot source, the list of available
+    items changes.
 
 #### Create New Volume
 
@@ -435,38 +435,37 @@ Launch. Proceed with launching an instance.
 
 **Pause**
 
-:   Stores the state of the VM in the (RAM) memory.
+Stores the state of the VM in the (RAM) memory.
 
 **Suspend**
 
-:   Stores the state of the VM on the disk, all memory is written to
-    disk, and the server is stopped.
+Stores the state of the VM on the disk, all memory is written to
+disk, and the server is stopped.
 
 **Shut off**
 
-:   The server is powered down by the user, either through the OpenStack
-    Compute API, or from within the server by issuing a *shutdown -h*
-    command. In this state the user retains all computational resources
-    associated with the VM. The instance can be later restarted.
+The server is powered down by the user, either through the OpenStack
+Compute API, or from within the server by issuing a *shutdown -h*
+command. In this state the user retains all computational resources
+associated with the VM. The instance can be later restarted.
 
 **Shelve**
 
-:   Shelving stops the instance and takes a snapshot of it. Then
-    depending on the value of the *shelved_offload_time* config option,
-    the instance is either deleted from the hypervisor (0), never
-    deleted (-1), or deleted after some period of time (\> 0). Shelve
-    preserves all associated data and VM resources but does not retain
-    anything in memory.
+Shelving stops the instance and takes a snapshot of it. Then
+depending on the value of the *shelved_offload_time* config option,
+the instance is either deleted from the hypervisor (0), never
+deleted (-1), or deleted after some period of time (\> 0). Shelve
+preserves all associated data and VM resources but does not retain
+anything in memory.
 
 **Delete**
 
-:   The VM is deleted and removed from
-    [OpenStack]{acronym-label="OpenStack" acronym-form="singular+short"}
-    together with any associated processes and resources. However, for
-    instances backed by a persistent volume, this volume is not deleted.
-    When such an instance is deleted, you can restore it by launching a
-    new instance from the volume, or delete the volume as well (see
-    section [delete a volume](./ch_ManageVolumes.tex.md#delete-a-volume)).
+The VM is deleted and removed from
+OpenStack together with any associated processes and resources.
+However, for instances backed by a persistent volume, this volume is not deleted.
+When such an instance is deleted, you can restore it by launching a
+new instance from the volume, or delete the volume as well (see
+section [delete a volume](./ch_ManageVolumes.tex.md#delete-a-volume)).
 
 For more details see the OpenStack documentation on [*Virtual Machine
 States and

@@ -3,8 +3,8 @@
 OpenStack's Manila service makes it possible to create and manage shared
 nfs file systems
 for virtual machines. This service is not automatically enabled for
-every VSC cloud project, so you should contact <cloud@vscentrum.be> if you want to use shared
-file systems in your project.
+every VSC cloud project, so you should contact <cloud@vscentrum.be> if you want
+to use shared file systems in your project.
 
 ## Creating a Shared File System {#sec:creating-shared-file .unnumbered}
 
@@ -17,37 +17,37 @@ straightforward:
 2.  Click the **Create Share** button to open the following dialog:
 
 
-    ![image](img/create_share.png)
+![image](img/create_share.png)
 
 
-    Fill out the following fields:
+   Fill out the following fields:
 
-    **Share Name**
+-  **Share Name**
+    
+    Choose a name.
 
-    :   Choose a name.
+- **Description**
 
-    **Description**
+    Optionally, add a description.
 
-    :   Optionally, add a description.
+- **Share Protocol**
 
-    **Share Protocol**
+    Use the default nfs protocol.
 
-    :   Use the default nfs protocol.
+- **Size (GiB)**
 
-    **Size (GiB)**
+    Set the size of the shared file system to be created. The total
+    available storage and the amount currently used are shown on the
+    right.
 
-    :   Set the size of the shared file system to be created. The total
-        available storage and the amount currently used are shown on the
-        right.
+- **Share Type**
 
-    **Share Type**
+    Here, you must select "cephfsnfstype" (the only choice).
 
-    :   Here, you must select "cephfsnfstype" (the only choice).
+- **Metadata**
 
-    **Metadata**
-
-    :   You can attach additional metadata to your shared file system,
-        which can be queried later on.
+    You can attach additional metadata to your shared file system,
+    which can be queried later on.
 
     Other fields are not mandatory. By default, the shared file system
     will only be visible within the current project (Visibility:
@@ -78,22 +78,22 @@ absence of any rules, a shared file system cannot be accessed by anyone.
 
     **Access Type**
 
-    :   Only "ip" is supported.
+    Only "ip" is supported.
 
     **Access Level**
 
-    :   Choose if you want to give read and write ("rw") or read-only
-        ("ro") permission with this rule.
+    Choose if you want to give read and write ("rw") or read-only
+    ("ro") permission with this rule.
 
     **Access To**
 
-    :   Here, you can specify an ip address, or an address range, to
-        which the rule applies. The addresses should be specified
-        according to the format of an NFS exports configuration file.
-        The following table contains a few examples, assuming the
-        project's **_nfs** network has the subnet _10.10.x.0/24_, for some
-        value of _x_ (see section
-        [_nfs networks](./ch_ConfigureInstances.tex.md#sec:_vm-_nfs-networks)):
+    Here, you can specify an ip address, or an address range, to
+    which the rule applies. The addresses should be specified
+    according to the format of an NFS exports configuration file.
+    The following table contains a few examples, assuming the
+    project's **_nfs** network has the subnet _10.10.x.0/24_, for some
+    value of _x_ (see section
+    [_nfs networks](./ch_ConfigureInstances.tex.md#sec:_vm-_nfs-networks)):
 
 :::
 

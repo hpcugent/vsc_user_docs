@@ -11,9 +11,9 @@ Heat has its own dashboard interface, which you can find under the tab. Official
 documentation for Heat and its dashboard interface can be found at the
 following locations:
 
--   [https://docs.openstack.org/heat/latest](https://docs.openstack.org/heat/latest){.uri}
+-   [https://docs.openstack.org/heat/latest](https://docs.openstack.org/heat/latest)
 
--   [https://docs.openstack.org/heat-dashboard/latest](https://docs.openstack.org/heat-dashboard/latest){.uri}
+-   [https://docs.openstack.org/heat-dashboard/latest](https://docs.openstack.org/heat-dashboard/latest)
 
 ## Heat Orchestration Template {#sec:glsh-orch-templ}
 
@@ -90,28 +90,28 @@ Our example contains four main sections:
 
 **heat_template_version**
 
-:   The HOT specification has evolved since its initial
-    release. The key `heat_template_version` indicates the version of
-    the syntax used in this template. It's value can be a release date
-    or (in recent version) the name of the version.
+The HOT specification has evolved since its initial
+release. The key `heat_template_version` indicates the version of
+the syntax used in this template. It's value can be a release date
+or (in recent version) the name of the version.
 
 **description**
 
-:   Providing a description is optional, but recommended.
+Providing a description is optional, but recommended.
 
 **parameters**
 
-:   Another optional section, `parameters` allow users to configure
-    various properties when instantiating a new stack, without having to
-    edit the template itself. A parameter value can be used elsewhere in
-    the template using the function `get_param`. In this example, we use
-    parameters to choose an SSH key, instance size ("flavor"), image,
-    and a network.
+Another optional section, `parameters` allow users to configure
+various properties when instantiating a new stack, without having to
+edit the template itself. A parameter value can be used elsewhere in
+the template using the function `get_param`. In this example, we use
+parameters to choose an SSH key, instance size ("flavor"), image,
+and a network.
 
 **resources**
 
-:   This section contains all the resources used by the Stack. In this
-    case, there is just a single VM instance (OS::Nova::Server).
+This section contains all the resources used by the Stack. In this
+case, there is just a single VM instance (OS::Nova::Server).
 
 Optional additional sections are **paremeter_groups**, **outputs**, and .
 
@@ -145,28 +145,28 @@ actions:
 1.  Click to open the following wizard:
 
 
-    ![image](img/launch_stack_template.png)
+![image](img/launch_stack_template.png)
 
 
 2.  Provide a template and --- optionally --- an environment for the
     stack.
 
-    **Template Source**
+    1. **Template Source**
+    
+       You can provide a template using one of the following options:
 
-        :   You can provide a template using one of the following options:
+    2. **File**
 
-    **File**
+        Provide a local file on your system.
 
-        :   Provide a local file on your system.
+    3. **Direct Input**
 
-    **Direct Input**
+        Enter the template in a text field.
 
-        :   Enter the template in a text field.
+    4. **URL**
 
-    **URL**
-
-        :   Provide a URL to have OpenStack download the
-            template from that location.
+        Provide a URL to have OpenStack download the
+        template from that location.
 
         In our example, we provide a URL from the
         repository https://github.com/hpcugent/openstack-templates,
@@ -175,9 +175,9 @@ actions:
         template directly from GitHub, make sure to provide a "Raw"
         URL, `https://raw.githubusercontent.com/`....
 
-    **Environment Source**
+    5. **Environment Source**
 
-    :   Optionally, you can also provide an environment file. This is
+        Optionally, you can also provide an environment file. This is
         another [yaml]{.smallcaps} file, which contains customizations
         for your Heat templates, such as default values for parameters,
         or custom resource types you have created (see
@@ -189,7 +189,7 @@ actions:
     parameters:
 
 
-    ![image](img/launch_stack_parameters.png)
+![image](img/launch_stack_parameters.png)
 
 
 4.  Click **Launch** to instantiate the stack.
