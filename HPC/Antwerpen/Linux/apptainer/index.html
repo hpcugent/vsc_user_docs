@@ -1,0 +1,859 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Apptainer (formally known as Singularity) - VSC User Documentation - Antwerpen (Linux)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#apptainer-formally-known-as-singularity" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VSC User Documentation - Antwerpen (Linux)" class="md-header__button md-logo" aria-label="VSC User Documentation - Antwerpen (Linux)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSC User Documentation - Antwerpen (Linux)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Apptainer (formally known as Singularity)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VSC User Documentation - Antwerpen (Linux)" class="md-nav__button md-logo" aria-label="VSC User Documentation - Antwerpen (Linux)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    VSC User Documentation - Antwerpen (Linux)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        Introduction to HPC
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        Getting an HPC Account
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connecting/" class="md-nav__link">
+        Connecting to the HPC infrastructure
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_batch_jobs/" class="md-nav__link">
+        Running batch jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_interactive_jobs/" class="md-nav__link">
+        Running interactive jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_jobs_with_input_output_data/" class="md-nav__link">
+        Running jobs with input/output data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_core_jobs/" class="md-nav__link">
+        Multi core jobs/Parallel Computing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_portal/" class="md-nav__link">
+        Using the HPC-UGent web portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdmod/" class="md-nav__link">
+        XDMoD portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sites/hpc_policies/" class="md-nav__link">
+        HPC Policies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Advanced topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced topics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fine_tuning_job_specifications/" class="md-nav__link">
+        Fine-tuning Job Specifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_job_submission/" class="md-nav__link">
+        Multi-job submission
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiling_your_software/" class="md-nav__link">
+        Compiling and testing your software on the HPC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program_examples/" class="md-nav__link">
+        Program examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jobscript_examples/" class="md-nav__link">
+        Job script examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_practices/" class="md-nav__link">
+        Best Practices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14">
+          Appendices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Appendices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick_reference_guide/" class="md-nav__link">
+        Appendix A - HPC Quick Reference Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torque_options/" class="md-nav__link">
+        Appendix B - TORQUE options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../useful_linux_commands/" class="md-nav__link">
+        Appendix C - Useful Linux Commands
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-apptainer" class="md-nav__link">
+    What is Apptainer?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restrictions-on-image-location" class="md-nav__link">
+    Restrictions on image location
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-filesystems" class="md-nav__link">
+    Available filesystems
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apptainersingularity-images" class="md-nav__link">
+    Apptainer/Singularity Images
+  </a>
+  
+    <nav class="md-nav" aria-label="Apptainer/Singularity Images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-appyainersingularity-images" class="md-nav__link">
+    Creating Appyainer/Singularity images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converting-docker-images" class="md-nav__link">
+    Converting Docker images
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execute-our-own-script-within-our-container" class="md-nav__link">
+    Execute our own script within our container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensorflow-example" class="md-nav__link">
+    Tensorflow example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mpi-example" class="md-nav__link">
+    MPI example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="apptainer-formally-known-as-singularity">Apptainer (formally known as Singularity)<a class="headerlink" href="#apptainer-formally-known-as-singularity" title="Permanent link">#</a></h1>
+<h2 id="what-is-apptainer">What is Apptainer?<a class="headerlink" href="#what-is-apptainer" title="Permanent link">#</a></h2>
+<p>Apptainer is an open-source computer program that performs
+operating-system-level virtualization (also known as containerisation).</p>
+<p>One of the main uses of Apptainer is to bring containers and
+reproducibility to scientific computing and the high-performance
+computing (<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>) world. Using Apptainer/Singularity containers,
+developers can work in reproducible environments of their choosing and
+design, and these complete environments can easily be copied and
+executed on other platforms.</p>
+<p>For more general information about the use of Apptainer, please see the
+official documentation at <a href="https://apptainer.org/docs/">https://apptainer.org/docs/</a>.</p>
+<p>This documentation only covers aspects of using Apptainer on the
+UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> infrastructure.</p>
+<h2 id="restrictions-on-image-location">Restrictions on image location<a class="headerlink" href="#restrictions-on-image-location" title="Permanent link">#</a></h2>
+<p>Some restrictions have been put in place on the use of Apptainer. This
+is mainly done for performance reasons and to avoid that the use of
+Apptainer impacts other users on the system.</p>
+<p>The Apptainer/Singularity image file must be located on either one of
+the <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> filesystems, the local disk of the workernode you are using
+or <code>/dev/shm</code>. The centrally provided <code>apptainer</code> command will refuse to
+run using images that are located elsewhere, in particular on the
+<code>$VSC_HOME</code>, <code>/apps</code> or <code>$VSC_DATA</code> filesystems.</p>
+<p>In addition, this implies that running containers images provided via a
+URL (e.g., <code>shub://...</code> or <code>docker://...</code>) will not work.</p>
+<p>If these limitations are a problem for you, please let us know via hpc@uantwerpen.be.</p>
+<h2 id="available-filesystems">Available filesystems<a class="headerlink" href="#available-filesystems" title="Permanent link">#</a></h2>
+<p>All <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent shared filesystems will be readily available in an
+Apptainer/Singularity container, including the home, data and <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr>
+filesystems, and they will be accessible via the familiar <code>$VSC_HOME</code>,
+<code>$VSC_DATA*</code> and <code>$VSC_SCRATCH*</code> environment variables.</p>
+<h2 id="apptainersingularity-images">Apptainer/Singularity Images<a class="headerlink" href="#apptainersingularity-images" title="Permanent link">#</a></h2>
+<h3 id="creating-appyainersingularity-images">Creating Appyainer/Singularity images<a class="headerlink" href="#creating-appyainersingularity-images" title="Permanent link">#</a></h3>
+<p>Creating new Apptainer/Singularity images or converting Docker images,
+by default, requires admin privileges, which is obviously not available
+on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> infrastructure. However, if you use the <code>--fakeroot</code> option, you
+can make new Apptainer/Singularity images or convert Docker images.</p>
+<p>Due to the nature of <code>--fakeroot</code> option, we recommend to write your
+Apptainer/Singularity image to a globally writable location, like
+<code>/tmp</code>, or <code>/local</code> directories. Once the image is created, you should
+move it to your desired destination. An example to make an
+Apptainer/Singularity container:</p>
+<pre><code>$ <b>APPTAINER_CACHEDIR=/tmp/ \
+APPTAINER_TMPDIR=/tmp/ \
+apptainer build --fakeroot /tmp/tensorflow-21.10-tf1-py3.sif \
+docker://nvcr.io/nvidia/tensorflow:21.10-tf1-py3</b>
+</code></pre>
+
+<h3 id="converting-docker-images">Converting Docker images<a class="headerlink" href="#converting-docker-images" title="Permanent link">#</a></h3>
+<p>For more information on converting existing Docker images to
+Apptainer/Singularity images, see
+<a href="https://apptainer.org/docs/user/main/docker_and_oci.html">https://apptainer.org/docs/user/main/docker_and_oci.html</a>.</p>
+<p>We strongly recommend the use of Docker Hub, see
+<a href="https://hub.docker.com/">https://hub.docker.com/</a> for more information.</p>
+<h2 id="execute-our-own-script-within-our-container">Execute our own script within our container<a class="headerlink" href="#execute-our-own-script-within-our-container" title="Permanent link">#</a></h2>
+<p>Copy testing image from <code>/apps/gent/tutorials/Singularity</code> to
+<code>$VSC_SCRATCH</code>:</p>
+<pre><code>$ <b>cp /apps/gent/tutorials/Singularity/CentOS7_EasyBuild.img $VSC_SCRATCH/</b>
+</code></pre>
+
+<p>Create a job script like:</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/sh</span>
+
+<span class="c1">#PBS -o apptainer.output</span>
+<span class="c1">#PBS -e apptainer.error</span>
+<span class="c1">#PBS -l nodes=1:ppn=1</span>
+<span class="c1">#PBS -l walltime=12:00:00</span>
+
+
+apptainer <span class="nb">exec</span> <span class="nv">$VSC_SCRATCH</span>/CentOS7_EasyBuild.img ~/my_script.sh
+</code></pre></div>
+<p>Create an example <code>myscript.sh</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># prime factors</span>
+factor <span class="m">1234567</span>
+</code></pre></div>
+<h2 id="tensorflow-example">Tensorflow example<a class="headerlink" href="#tensorflow-example" title="Permanent link">#</a></h2>
+<p>We already have a Tensorflow example image, but you can also convert the
+Docker image (see <a href="https://hub.docker.com/r/tensorflow/tensorflow">https://hub.docker.com/r/tensorflow/tensorflow</a>) to a
+Apptainer/Singularity image yourself</p>
+<p>Copy testing image from <code>/apps/gent/tutorials</code> to <code>$VSC_SCRATCH</code>:</p>
+<pre><code>$ <b>cp /apps/gent/tutorials/Singularity/Ubuntu14.04_tensorflow.img $VSC_SCRATCH/</b>
+</code></pre>
+
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/sh</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1">#PBS -o tensorflow.output</span>
+<span class="c1">#PBS -e tensorflow.error</span>
+<span class="c1">#PBS -l nodes=1:ppn=4</span>
+<span class="c1">#PBS -l walltime=12:00:00</span>
+<span class="c1">#</span>
+
+apptainer <span class="nb">exec</span> <span class="nv">$VSC_SCRATCH</span>/Ubuntu14.04_tensorflow.img python ~/linear_regression.py
+</code></pre></div>
+<p>You can download <code>linear_regression.py</code> from <a href="https://github.com/tensorflow/tensorflow/blob/r1.12/tensorflow/examples/get_started/regression/linear_regression.py">the official Tensorflow
+repository</a>.</p>
+<h2 id="mpi-example"><abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> example<a class="headerlink" href="#mpi-example" title="Permanent link">#</a></h2>
+<p>It is also possible to execute <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> jobs within a container, but the
+following requirements apply:</p>
+<ul>
+<li>
+<p>Mellanox IB libraries must be available from the container (install
+    the <code>infiniband-diags</code>, <code>libmlx5-1</code> and <code>libmlx4-1</code> OS packages)</p>
+</li>
+<li>
+<p>Use <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> within the container (install the <code>environment-modules</code>
+    or <code>lmod</code> package in your container)</p>
+</li>
+<li>
+<p>Load the required module(s) before <code>apptainer</code> execution.</p>
+</li>
+<li>
+<p>Set <code>C_INCLUDE_PATH</code> variable in your container if it is required
+    during compilation time
+    (<code>export C_INCLUDE_PATH=/usr/include/x86_64-linux-gnu/:$C_INCLUDE_PATH</code>
+    for Debian flavours)</p>
+</li>
+</ul>
+<p>Copy the testing image from <code>/apps/gent/tutorials/Singularity</code> to
+<code>$VSC_SCRATCH</code></p>
+<pre><code>$ <b>cp /apps/gent/tutorials/Singularity/Debian8_UGentMPI.img $VSC_SCRATCH/</b>
+</code></pre>
+
+<p>For example to compile an <a href="https://github.com/open-mpi/ompi/blob/master/examples/ring_c.c"><abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>
+example</a>:</p>
+<pre><code>$ <b>module load intel</b>
+$ <b>apptainer shell $VSC_SCRATCH/Debian8_UGentMPI.img</b>
+$ <b>export LANG=C</b>
+$ <b>export C_INCLUDE_PATH=/usr/include/x86_64-linux-gnu/:$C_INCLUDE_PATH</b>
+$ <b>mpiicc ompi/examples/ring_c.c -o ring_debian</b>
+$ <b>exit</b>
+</code></pre>
+
+<p>Example <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> job script:</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/sh</span>
+
+<span class="c1">#PBS -N mpi</span>
+<span class="c1">#PBS -o apptainermpi.output</span>
+<span class="c1">#PBS -e apptainermpi.error</span>
+<span class="c1">#PBS -l nodes=2:ppn=15</span>
+<span class="c1">#PBS -l walltime=12:00:00</span>
+
+module load intel vsc-mympirun
+mympirun --impi-fallback apptainer <span class="nb">exec</span> <span class="nv">$VSC_SCRATCH</span>/Debian8_UGentMPI.img ~/ring_debian
+</code></pre></div>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.expand", "navigation.tracking", "toc.follow", "navigation.sections", "navigation.instant", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

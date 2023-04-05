@@ -1,0 +1,4 @@
+#!/bin/bash
+# Here you could do your calculations
+echo "T: $2  P: $4  V: $6"
+sleep 100

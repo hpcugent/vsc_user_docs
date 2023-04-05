@@ -1,0 +1,1617 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Appendix C - Useful Linux Commands - VSC User Documentation - Gent (macOS)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#useful-linux-commands" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VSC User Documentation - Gent (macOS)" class="md-header__button md-logo" aria-label="VSC User Documentation - Gent (macOS)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSC User Documentation - Gent (macOS)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Appendix C - Useful Linux Commands
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VSC User Documentation - Gent (macOS)" class="md-nav__button md-logo" aria-label="VSC User Documentation - Gent (macOS)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    VSC User Documentation - Gent (macOS)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        Introduction to HPC
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        Getting an HPC Account
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connecting/" class="md-nav__link">
+        Connecting to the HPC infrastructure
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_batch_jobs/" class="md-nav__link">
+        Running batch jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_interactive_jobs/" class="md-nav__link">
+        Running interactive jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_jobs_with_input_output_data/" class="md-nav__link">
+        Running jobs with input/output data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_core_jobs/" class="md-nav__link">
+        Multi core jobs/Parallel Computing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_portal/" class="md-nav__link">
+        Using the HPC-UGent web portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdmod/" class="md-nav__link">
+        XDMoD portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sites/hpc_policies/" class="md-nav__link">
+        HPC Policies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Advanced topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced topics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fine_tuning_job_specifications/" class="md-nav__link">
+        Fine-tuning Job Specifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_job_submission/" class="md-nav__link">
+        Multi-job submission
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiling_your_software/" class="md-nav__link">
+        Compiling and testing your software on the HPC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program_examples/" class="md-nav__link">
+        Program examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jobscript_examples/" class="md-nav__link">
+        Job script examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_practices/" class="md-nav__link">
+        Best Practices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpu_gent/" class="md-nav__link">
+        HPC-UGent GPU clusters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interactive_gent/" class="md-nav__link">
+        HPC-UGent interactive and debug cluster
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crontab_gent/" class="md-nav__link">
+        Cron scripts
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15" type="checkbox" id="__nav_15" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15">
+          Appendices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Appendices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick_reference_guide/" class="md-nav__link">
+        Appendix A - HPC Quick Reference Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torque_options/" class="md-nav__link">
+        Appendix B - TORQUE options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Appendix C - Useful Linux Commands
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Appendix C - Useful Linux Commands
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-linux-usage" class="md-nav__link">
+    Basic Linux Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-get-started-with-shell-scripts" class="md-nav__link">
+    How to get started with shell scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-quick-reference-guide" class="md-nav__link">
+    Linux Quick reference Guide
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux Quick reference Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archive-commands" class="md-nav__link">
+    Archive Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-commands" class="md-nav__link">
+    Basic Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editor" class="md-nav__link">
+    Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-commands" class="md-nav__link">
+    File Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help-commands" class="md-nav__link">
+    Help Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-commands" class="md-nav__link">
+    Network Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-commands" class="md-nav__link">
+    Other Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-commands" class="md-nav__link">
+    Process Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-account-commands" class="md-nav__link">
+    User Account Commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-linux-usage" class="md-nav__link">
+    Basic Linux Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-get-started-with-shell-scripts" class="md-nav__link">
+    How to get started with shell scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-quick-reference-guide" class="md-nav__link">
+    Linux Quick reference Guide
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux Quick reference Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archive-commands" class="md-nav__link">
+    Archive Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-commands" class="md-nav__link">
+    Basic Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editor" class="md-nav__link">
+    Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-commands" class="md-nav__link">
+    File Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help-commands" class="md-nav__link">
+    Help Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-commands" class="md-nav__link">
+    Network Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-commands" class="md-nav__link">
+    Other Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-commands" class="md-nav__link">
+    Process Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-account-commands" class="md-nav__link">
+    User Account Commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="useful-linux-commands">Useful <abbr title="An operating system, similar to UNIX.">Linux</abbr> Commands<a class="headerlink" href="#useful-linux-commands" title="Permanent link">#</a></h1>
+<h2 id="basic-linux-usage">Basic <abbr title="An operating system, similar to UNIX.">Linux</abbr> Usage<a class="headerlink" href="#basic-linux-usage" title="Permanent link">#</a></h2>
+<p>All the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> clusters run some variant of the "Red Hat Enterprise <abbr title="An operating system, similar to UNIX.">Linux</abbr>" operating system. This means
+that, when you connect to one of them, you get a command line interface,
+which looks something like this:</p>
+<pre><code>vsc40000@ln01[203] $
+</code></pre>
+
+<p>When you see this, we also say you are inside a "shell". The shell will
+accept your commands, and execute them.</p>
+<table>
+    <tr>
+        <td>
+          ls
+        </td>
+        <td>
+         Shows you a list of files in the current directory
+        </td>
+    </tr>
+    <tr>
+        <td>
+          cd
+        </td>
+        <td>
+          Change current working directory
+        </td>
+    </tr>
+    <tr>
+        <td>
+          rm
+        </td>
+        <td>
+         Remove file or directory
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+          nano
+        </td>
+        <td>
+         Text editor
+        </td>
+    </tr>
+
+   <tr>
+        <td>
+          echo
+        </td>
+        <td>
+         Prints its parameters to the screen
+        </td>
+    </tr>
+</table>
+
+<p>Most commands will accept or even need parameters, which are placed
+after the command, separated by spaces. A simple example with the "echo"
+command:</p>
+<pre><code>$ <b>echo This is a test</b>
+This is a test
+</code></pre>
+
+<p>Important here is the "$" sign in front of the first line. This should
+not be typed, but is a convention meaning "the rest of this line should
+be typed at your shell prompt". The lines not starting with the "$"
+sign are usually the feedback or output from the command.</p>
+<p>More commands will be used in the rest of this text, and will be
+explained then if necessary. If not, you can usually get more
+information about a command, say the item or command "ls", by trying
+either of the following:</p>
+<pre><code>$ <b>ls --help </b>
+$ <b>man ls</b>
+$ <b> info ls </b>
+</code></pre>
+
+<p>(You can exit the last two "manuals" by using the "q" key.) For more
+exhaustive tutorials about <abbr title="An operating system, similar to UNIX.">Linux</abbr> usage, please refer to the following
+sites: <a href="http://www.linux.org/lessons/">http://www.linux.org/lessons/</a>
+<a href="http://linux.about.com/od/nwb_guide/a/gdenwb06.htm">http://linux.about.com/od/nwb_guide/a/gdenwb06.htm</a></p>
+<h2 id="how-to-get-started-with-shell-scripts">How to get started with shell scripts<a class="headerlink" href="#how-to-get-started-with-shell-scripts" title="Permanent link">#</a></h2>
+<p>In a shell script, you will put the commands you would normally type at
+your shell prompt in the same order. This will enable you to execute all
+those commands at any time by only issuing one command: starting the
+script.</p>
+<p>Scripts are basically non-compiled pieces of code: they are just text
+files. Since they don't contain machine code, they are executed by what
+is called a "parser" or an "interpreter". This is another program that
+understands the command in the script, and converts them to machine
+code. There are many kinds of scripting languages, including Perl and
+Python.</p>
+<p>Another very common scripting language is shell scripting. In a shell
+script, you will put the commands you would normally type at your shell
+prompt in the same order. This will enable you to execute all those
+commands at any time by only issuing one command: starting the script.</p>
+<p>Typically in the following examples they'll have on each line the next
+command to be executed although it is possible to put multiple commands
+on one line. A very simple example of a script may be:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s2">&quot;Hello! This is my hostname:&quot;</span> 
+hostname
+</code></pre></div>
+<p>You can type both lines at your shell prompt, and the result will be the
+following:</p>
+<pre><code>$ <b>echo "Hello! This is my hostname:"</b>
+Hello! This is my hostname:
+$ <b>hostname</b>
+gligar07.gastly.os
+</code></pre>
+
+<p>Suppose we want to call this script "foo". You open a new file for
+editing, and name it "foo", and edit it with your favourite editor</p>
+<pre><code>$ <b>nano foo</b>
+</code></pre>
+
+<p>or use the following commands:</p>
+<pre><code>$ <b>echo "echo Hello! This is my hostname:" > foo</b>
+$ <b>echo hostname >> foo</b>
+</code></pre>
+
+<p>The easiest ways to run a script is by starting the interpreter and pass
+the script as parameter. In case of our script, the interpreter may
+either be "sh" or "bash" (which are the same on the <abbr title="A group of compute nodes.">cluster</abbr>). So start
+the script:</p>
+<pre><code>$ <b>bash foo</b>
+Hello! This is my hostname:
+gligar07.gastly.os
+</code></pre>
+
+<p>Congratulations, you just created and started your first shell script!</p>
+<p>A more advanced way of executing your shell scripts is by making them
+executable by their own, so without invoking the interpreter manually.
+The system can not automatically detect which interpreter you want, so
+you need to tell this in some way. The easiest way is by using the so
+called "shebang" notation, explicitly created for this function: you put
+the following line on top of your shell script
+"#!/path/to/your/interpreter".</p>
+<p>You can find this path with the "which" command. In our case, since we
+use bash as an interpreter, we get the following path:</p>
+<pre><code>$ <b>which bash</b>
+/bin/bash
+</code></pre>
+
+<p>We edit our script and change it with this information:</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash echo \&quot;Hello! This is my hostname:\&quot; hostname</span>
+</code></pre></div>
+<p>Note that the "shebang" must be the first line of your script! Now the
+operating system knows which program should be started to run the
+script.</p>
+<p>Finally, we tell the operating system that this script is now
+executable. For this we change its file attributes:</p>
+<pre><code>$ <b> chmod +x foo</b>
+</code></pre>
+
+<p>Now you can start your script by simply executing it:</p>
+<pre><code>$ <b>./foo</b>
+Hello! This is my hostname:
+gligar07.gastly.os
+</code></pre>
+
+<p>The same technique can be used for all other scripting languages, like
+Perl and Python.</p>
+<p>Most scripting languages understand that lines beginning with "#" are
+comments, and should be ignored. If the language you want to use does
+not ignore these lines, you may get strange results ...</p>
+<h2 id="linux-quick-reference-guide"><abbr title="An operating system, similar to UNIX.">Linux</abbr> Quick reference Guide<a class="headerlink" href="#linux-quick-reference-guide" title="Permanent link">#</a></h2>
+<h3 id="archive-commands">Archive Commands<a class="headerlink" href="#archive-commands" title="Permanent link">#</a></h3>
+<table>
+    <tr>
+        <td>
+          tar
+        </td>
+        <td>
+         An archiving program designed to store and extract files from an archive known as a tar file.
+        </td>
+    </tr>
+    <tr>
+        <td>
+          tar -cvf foo.tar foo/
+        </td>
+        <td>
+         compress the contents of foo folder to foo.tar
+        </td>
+    </tr>
+    <tr>
+        <td>
+          tar -xvf foo.tar
+        </td>
+        <td>
+         extract foo.tar
+        </td>
+    </tr>
+    <tr>
+        <td>
+          tar -xvzf foo.tar.gz
+        </td>
+        <td>
+         extract gzipped foo.tar.gz
+        </td>
+    </tr>
+</table>
+
+<h3 id="basic-commands">Basic Commands<a class="headerlink" href="#basic-commands" title="Permanent link">#</a></h3>
+<table>
+    <tr>
+        <td>
+          ls
+        </td>
+        <td>
+         Shows you a list of files in the current directory
+        </td>
+    </tr>
+    <tr>
+        <td>
+          cd
+        </td>
+        <td>
+         Change the current directory
+        </td>
+    </tr>
+    <tr>
+        <td>
+          rm
+        </td>
+        <td>
+         Remove file or directory
+        </td>
+    </tr>
+    <tr>
+        <td>
+          mv
+        </td>
+        <td>
+         Move file or directory
+        </td>
+    </tr>
+    <tr>
+        <td>
+          echo
+        </td>
+        <td>
+         Display a line or text
+        </td>
+    </tr>
+    <tr>
+        <td>
+          pwd
+        </td>
+        <td>
+         Print working directory
+        </td>
+    </tr>
+    <tr>
+        <td>
+          mkdir
+        </td>
+        <td>
+         Create directories
+        </td>
+    </tr>
+    <tr>
+        <td>
+          rmdir
+        </td>
+        <td>
+         Remove directories
+        </td>
+    </tr>
+</table>
+
+<h3 id="editor">Editor<a class="headerlink" href="#editor" title="Permanent link">#</a></h3>
+<table>
+    <tr>
+        <td>
+          emacs
+        </td>
+        <td>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+          nano
+        </td>
+        <td>
+         Nano's ANOther editor, an enhanced free Pico clone
+        </td>
+    </tr>
+    <tr>
+        <td>
+          vi
+        </td>
+        <td>
+         A programmers text editor
+        </td>
+    </tr>
+</table>
+
+<h3 id="file-commands">File Commands<a class="headerlink" href="#file-commands" title="Permanent link">#</a></h3>
+<table>
+    <tr>
+        <td>
+          cat
+        </td>
+        <td>
+          Read one or more files and print them to standard output
+        </td>
+    </tr>
+    <tr>
+        <td>
+          cmp
+        </td>
+        <td>
+         Compare two files byte by byte
+        </td>
+    </tr>
+    <tr>
+        <td>
+          cp
+        </td>
+        <td>
+         Copy files from a source to the same or different target(s)
+        </td>
+    </tr>
+    <tr>
+        <td>
+          du
+        </td>
+        <td>
+         Estimate disk usage of each file and recursively for directories
+        </td>
+    </tr>
+    <tr>
+        <td>
+          find
+        </td>
+        <td>
+         Search for files in directory hierarchy
+        </td>
+    </tr>
+    <tr>
+        <td>
+          grep
+        </td>
+        <td>
+         Print lines matching a pattern
+        </td>
+    </tr>
+    <tr>
+        <td>
+          ls
+        </td>
+        <td>
+         List directory contents
+        </td>
+    </tr>
+    <tr>
+        <td>
+          mv
+        </td>
+        <td>
+         Move file to different targets
+        </td>
+    </tr>
+    <tr>
+        <td>
+          rm
+        </td>
+        <td>
+         Remove files
+        </td>
+    </tr>
+    <tr>
+        <td>
+          sort
+        </td>
+        <td>
+         Sort lines of text files
+        </td>
+    </tr>
+    <tr>
+        <td>
+          wc
+        </td>
+        <td>
+         Print the number of new lines, words, and bytes in files
+        </td>
+    </tr>
+</table>
+
+<h3 id="help-commands">Help Commands<a class="headerlink" href="#help-commands" title="Permanent link">#</a></h3>
+<table>
+    <tr>
+        <td>
+          man
+        </td>
+        <td>
+         Displays the manual page of a command with its name, synopsis, description, author, copyright etc.
+        </td>
+    </tr>
+</table>
+
+<h3 id="network-commands">Network Commands<a class="headerlink" href="#network-commands" title="Permanent link">#</a></h3>
+<table>
+    <tr>
+        <td>
+          hostname
+        </td>
+        <td>
+         show or set the system's host name
+        </td>
+    </tr>
+    <tr>
+        <td>
+          ifconfig
+        </td>
+        <td>
+         Display the current configuration of the network interface. It is also useful to get the information about IP address, subnet mask, set remote IP address, netmask etc.
+        </td>
+    </tr>
+    <tr>
+        <td>
+          ping
+        </td>
+        <td>
+         send ICMP ECHO_REQUEST to network hosts, you will get back ICMP packet if the host responds. This command is useful when you are in a doubt whether your computer is connected or not.
+        </td>
+    </tr>
+</table>
+
+<pre><code>
+</code></pre>
+<h3 id="other-commands">Other Commands<a class="headerlink" href="#other-commands" title="Permanent link">#</a></h3>
+<table>
+    <tr>
+        <td>
+          logname
+        </td>
+        <td>
+         Print user's login name
+        </td>
+    </tr>
+    <tr>
+        <td>
+          quota
+        </td>
+        <td>
+         Display disk usage and limits
+        </td>
+    </tr>
+    <tr>
+        <td>
+          which
+        </td>
+        <td>
+         Returns the pathnames of the files that would be executed in the current environment
+        </td>
+    </tr>
+    <tr>
+        <td>
+          whoami
+        </td>
+        <td>
+         Displays the login name of the current effective user
+        </td>
+    </tr>
+</table>
+
+<h3 id="process-commands">Process Commands<a class="headerlink" href="#process-commands" title="Permanent link">#</a></h3>
+<table>
+    <tr>
+        <td>
+          &
+        </td>
+        <td>
+         In order to execute a command in the background, place an ampersand (&) on the command line at the end of the command. A user job number (placed in brackets) and a system process number are displayed. A system process number is the number by which the system identifies the job whereas a user job number is the number by which the user identifies the job
+        </td>
+    </tr>
+    <tr>
+        <td>
+          at
+        </td>
+        <td>
+         executes commands at a specified time
+        </td>
+    </tr>
+    <tr>
+        <td>
+          bg
+        </td>
+        <td>
+         Places a suspended job in the background
+        </td>
+    </tr>
+    <tr>
+        <td>
+          crontab
+        </td>
+        <td>
+         crontab is a file which contains the schedule of entries to run at specified times
+        </td>
+    </tr>
+    <tr>
+        <td>
+          fg
+        </td>
+        <td>
+         A process running in the background will be processed in the foreground
+        </td>
+    </tr>
+    <tr>
+        <td>
+          jobs
+        </td>
+        <td>
+         Lists the jobs being run in the background
+        </td>
+    </tr>
+    <tr>
+        <td>
+          kill
+        </td>
+        <td>
+         Cancels a job running in the background, it takes argument either the user job number or the system process number
+        </td>
+    </tr>
+    <tr>
+        <td>
+          ps
+        </td>
+        <td>
+         Reports a snapshot of the current processes
+        </td>
+    </tr>
+    <tr>
+        <td>
+          top
+        </td>
+        <td>
+         Display Linux tasks
+        </td>
+    </tr>
+</table>
+
+<h3 id="user-account-commands">User Account Commands<a class="headerlink" href="#user-account-commands" title="Permanent link">#</a></h3>
+<table>
+    <tr>
+        <td>
+          chmod
+        </td>
+        <td>
+         Modify properties for users
+        </td>
+    </tr>
+</table>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../torque_options/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Appendix B - TORQUE options" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Appendix B - TORQUE options
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.expand", "navigation.tracking", "toc.follow", "navigation.sections", "navigation.instant", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

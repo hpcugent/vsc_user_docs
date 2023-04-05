@@ -1,0 +1,1087 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Checkpointing { #ch:checkpointing} - VSC User Documentation - Gent (Linux)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ch:checkpointing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VSC User Documentation - Gent (Linux)" class="md-header__button md-logo" aria-label="VSC User Documentation - Gent (Linux)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSC User Documentation - Gent (Linux)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Checkpointing { #ch:checkpointing}
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VSC User Documentation - Gent (Linux)" class="md-nav__button md-logo" aria-label="VSC User Documentation - Gent (Linux)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    VSC User Documentation - Gent (Linux)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        Introduction to HPC
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        Getting an HPC Account
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connecting/" class="md-nav__link">
+        Connecting to the HPC infrastructure
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_batch_jobs/" class="md-nav__link">
+        Running batch jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_interactive_jobs/" class="md-nav__link">
+        Running interactive jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_jobs_with_input_output_data/" class="md-nav__link">
+        Running jobs with input/output data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_core_jobs/" class="md-nav__link">
+        Multi core jobs/Parallel Computing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_portal/" class="md-nav__link">
+        Using the HPC-UGent web portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdmod/" class="md-nav__link">
+        XDMoD portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sites/hpc_policies/" class="md-nav__link">
+        HPC Policies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Advanced topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced topics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fine_tuning_job_specifications/" class="md-nav__link">
+        Fine-tuning Job Specifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_job_submission/" class="md-nav__link">
+        Multi-job submission
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiling_your_software/" class="md-nav__link">
+        Compiling and testing your software on the HPC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program_examples/" class="md-nav__link">
+        Program examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jobscript_examples/" class="md-nav__link">
+        Job script examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_practices/" class="md-nav__link">
+        Best Practices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpu_gent/" class="md-nav__link">
+        HPC-UGent GPU clusters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interactive_gent/" class="md-nav__link">
+        HPC-UGent interactive and debug cluster
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crontab_gent/" class="md-nav__link">
+        Cron scripts
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_15" type="checkbox" id="__nav_15" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15">
+          Appendices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Appendices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick_reference_guide/" class="md-nav__link">
+        Appendix A - HPC Quick Reference Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torque_options/" class="md-nav__link">
+        Appendix B - TORQUE options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../useful_linux_commands/" class="md-nav__link">
+        Appendix C - Useful Linux Commands
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-checkpointing" class="md-nav__link">
+    Why checkpointing?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-checkpointing" class="md-nav__link">
+    What is checkpointing?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-checkpointing" class="md-nav__link">
+    How to use checkpointing?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-and-parameters" class="md-nav__link">
+    Usage and parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage and parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submitting-a-job" class="md-nav__link">
+    Submitting a job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caveat-dont-create-local-directories" class="md-nav__link">
+    Caveat: don't create local directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pbs-directives" class="md-nav__link">
+    PBS directives
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    Getting help
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-files-pre-post" class="md-nav__link">
+    Local files (–pre / –post)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-on-shared-storage-shared" class="md-nav__link">
+    Running on shared storage (–shared)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#job-wall-time-job_time-chkpt_time" class="md-nav__link">
+    Job wall time (–job_time, –chkpt_time)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resuming-from-last-checkpoint-resume" class="md-nav__link">
+    Resuming from last checkpoint (–resume)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-options" class="md-nav__link">
+    Additional options
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#array-jobs-t" class="md-nav__link">
+    Array jobs (-t)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proepilogue-mimicking-no_mimic_pro_epi" class="md-nav__link">
+    Pro/epilogue mimicking (–no_mimic_pro_epi)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cleanup-checkpoints-cleanup_after_restart" class="md-nav__link">
+    Cleanup checkpoints (–cleanup_after_restart)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-cleanup-after-job-completion-no_cleanup_chkpt" class="md-nav__link">
+    No cleanup after job completion (–no_cleanup_chkpt)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="ch:checkpointing">Checkpointing<a class="headerlink" href="#ch:checkpointing" title="Permanent link">#</a></h1>
+<h2 id="why-checkpointing">Why checkpointing?<a class="headerlink" href="#why-checkpointing" title="Permanent link">#</a></h2>
+<p>If you want to run jobs that require wall time than the maximum wall
+time per job and/or want to avoid you lose work because of power outages
+or system crashes, you need to resort to checkpointing.</p>
+<h2 id="what-is-checkpointing">What is checkpointing?<a class="headerlink" href="#what-is-checkpointing" title="Permanent link">#</a></h2>
+<p>Checkpointing allows for running jobs that run for weeks or months, by
+splitting the job into smaller parts (called subjobs) which are executed
+consecutively. Each time a subjob is running out of requested wall time,
+a snapshot of the application <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> (and much more) is taken and
+stored, after which a subsequent subjob will pick up the checkpoint and
+continue.</p>
+<h2 id="how-to-use-checkpointing">How to use checkpointing?<a class="headerlink" href="#how-to-use-checkpointing" title="Permanent link">#</a></h2>
+<p>Using checkpointing is very simple: just use <code>csub</code> instead of <code>qsub</code> to
+submit a job.</p>
+<p>The <code>csub</code> command creates a wrapper around your job script, to take
+care of all the checkpointing stuff.</p>
+<p>In practice, you (usually) don't need to adjust anything, except for the
+command used to submit your job.</p>
+<p>Checkpointing does not require any changes to the application you are
+running, and should support most software.</p>
+<h2 id="usage-and-parameters">Usage and parameters<a class="headerlink" href="#usage-and-parameters" title="Permanent link">#</a></h2>
+<p>An overview of the usage and various command line parameters is given
+here.</p>
+<h3 id="submitting-a-job">Submitting a job<a class="headerlink" href="#submitting-a-job" title="Permanent link">#</a></h3>
+<p>Typically, a job script is submitted with checkpointing support enabled
+by running:</p>
+<p>::: prompt
+csub -s job_script.sh
+:::</p>
+<p>The <code>-s</code> flag specifies the job script to run.</p>
+<h3 id="caveat-dont-create-local-directories">Caveat: don't create local directories<a class="headerlink" href="#caveat-dont-create-local-directories" title="Permanent link">#</a></h3>
+<p>One important caveat is that the job script (or the applications run in
+the script) should <em>not</em> create its own local temporary directories,
+because those will not (always) be restored when the job is restarted
+from checkpoint.</p>
+<h3 id="pbs-directives">PBS directives<a class="headerlink" href="#pbs-directives" title="Permanent link">#</a></h3>
+<p>Most PBS directives (<code>#PBS …</code> specified in the job script will be
+ignored. There are a few exceptions however, i.e., <code># PBS -N &lt;name&gt;</code>
+(job name) and all <code>-l</code> directives (<code># PBS -l</code>), e.g., <code>nodes</code>, <code>ppn</code>,
+<code>vmem</code> (virtual <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> limit), etc. Controlling other job parameters
+(like requested <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> per sub-job) should be specified on the <code>csub</code>
+command line.</p>
+<h3 id="getting-help">Getting help<a class="headerlink" href="#getting-help" title="Permanent link">#</a></h3>
+<p>Help on the various command line parameters supported by <code>csub</code> can be
+obtained using <code>-h</code> or <code>--help</code>.</p>
+<h3 id="local-files-pre-post">Local files (<code>–pre</code> / <code>–post</code>)<a class="headerlink" href="#local-files-pre-post" title="Permanent link">#</a></h3>
+<p>The <code>--pre</code> and <code>--post</code> parameters control whether local files are
+copied or not. The job submitted using <code>csub</code> is (by default) run on the
+local storage provided by a particular workernode. Thus, no changes will
+be made to the files on the shared storage.</p>
+<p>If the job script needs (local) access to the files of the directory
+where <code>csub</code> is executed, <code>--pre</code> flag should be used. This will copy
+all the files in the job script directory to the location where the job
+script will execute.</p>
+<p>If the output of the job (<code>stdout</code>/<code>stderr</code>) that was run, or additional
+output files created by the job in its working directory are required,
+the <code>--post</code> flag should be used. This will copy the entire job working
+directory to the location where <code>csub</code> was executed, in a directory
+named <code>result.&lt;jobname&gt;</code>. An alternative is to copy the interesting
+files to the shared storage at the end of the job script.</p>
+<h3 id="running-on-shared-storage-shared">Running on shared storage (<code>–shared</code>)<a class="headerlink" href="#running-on-shared-storage-shared" title="Permanent link">#</a></h3>
+<p>If the job needs to be run on the shared storage, <code>--shared</code> should be
+specified. You should enable this option by default, because it makes
+the execution of the underlying <code>csub</code> script more robust: it doesn't
+have to copy from/to the local storage on the workernode. When enabled,
+the job will be run in a subdirectory of <code>$VSC_SCRATCH/chkpt</code>. All files
+produced by the job will be in <code>$VSC_SCRATCH/chkpt/&lt;jobid&gt;/</code> while the
+job is running.</p>
+<p>Note that if files in the directory where the job script is located are
+required to run the job, you should also use <code>--pre</code>.</p>
+<h3 id="job-wall-time-job_time-chkpt_time">Job wall time (<code>–job_time</code>, <code>–chkpt_time</code>)<a class="headerlink" href="#job-wall-time-job_time-chkpt_time" title="Permanent link">#</a></h3>
+<p>To specify the requested wall time per subjob, use the <code>--job-time</code>
+parameter. The default setting is 10 hours per (sub)job. Lowering this
+will result in more frequent checkpointing, and thus more (sub)jobs.</p>
+<p>To specify the time that is reserved for checkpointing the job, use
+<code>--chkpt_time</code>. By default, this is set to 15 minutes which should be
+enough for most applications/jobs. <em>Don't change this unless you really
+need to</em>.</p>
+<p>The total requested wall time per subjob is the sum of both <code>job_time</code>
+and <code>chkpt_time</code>.</p>
+<p>If you would like to time how long the job executes, just prepend the
+main command in your job script with the time command <code>time</code>, e.g.:</p>
+<p>::: prompt
+time main_command
+:::</p>
+<p>The <code>real</code> time will not make sense, as it will also include the time
+passed between two checkpointed subjobs. However, the <code>user</code> time should
+give a good indication of the actual time it took to run your command,
+even if multiple checkpoints were performed.</p>
+<h3 id="resuming-from-last-checkpoint-resume">Resuming from last checkpoint (<code>–resume</code>)<a class="headerlink" href="#resuming-from-last-checkpoint-resume" title="Permanent link">#</a></h3>
+<p>The <code>--resume</code> option allows you to resume a job from the last available
+checkpoint in case something went wrong (e.g., accidentally deleting a
+(sub)job using <code>qdel</code>, a power outage or other system failure, ...).</p>
+<p>Specify the job name as returned after submission (and as listed in
+<code>$VSC_SCRATCH/chkpt</code>). The full job name consists of the specified job
+name (or the script name if no job name was specified), a timestamp and
+two random characters at the end, for example <code>my_job_name._133755.Hk</code>
+or <code>script.sh._133755.Hk</code>.</p>
+<p>Note: When resuming from checkpoint, you can change the wall time
+resources for your job using the <code>--job_time</code> and <code>--chkpt_time</code>
+options. This should allow you to continue from the last checkpoint in
+case your job crashed due to an excessively long checkpointing time.</p>
+<p>In case resuming fails for you, please contact , and include the output
+of the <code>csub --resume</code> command in your message.</p>
+<h2 id="additional-options">Additional options<a class="headerlink" href="#additional-options" title="Permanent link">#</a></h2>
+<h3 id="array-jobs-t">Array jobs (<code>-t</code>)<a class="headerlink" href="#array-jobs-t" title="Permanent link">#</a></h3>
+<p><code>csub</code> has support for checkpointing array jobs with the <code>-t &lt;spec&gt;</code>
+flag on the <code>csub</code> command line. This behaves the same as <code>qsub</code>, see .</p>
+<h3 id="proepilogue-mimicking-no_mimic_pro_epi">Pro/epilogue mimicking (<code>–no_mimic_pro_epi</code>)<a class="headerlink" href="#proepilogue-mimicking-no_mimic_pro_epi" title="Permanent link">#</a></h3>
+<p>The option <code>--no_mimic_pro_epi</code> disables the workaround currently
+required to resolve a permissions problem when using actual Torque
+prologue/epilogue scripts. Don't use this option unless you really know
+what you are doing.</p>
+<h3 id="cleanup-checkpoints-cleanup_after_restart">Cleanup checkpoints (<code>–cleanup_after_restart</code>)<a class="headerlink" href="#cleanup-checkpoints-cleanup_after_restart" title="Permanent link">#</a></h3>
+<p>Specifying this option will make the wrapper script remove the
+checkpoint files after a successful job restart. This may be desirable
+in cause you are short on storage space.</p>
+<p>Note that we don't recommend setting this option, because this way you
+won't be able to resume from the last checkpoint when something goes
+wrong. It may also prevent the wrapper script from reattempting to
+resubmit a new job in case an infrequent known failure occurs. So, don't
+set this unless you really need to.</p>
+<h3 id="no-cleanup-after-job-completion-no_cleanup_chkpt">No cleanup after job completion (<code>–no_cleanup_chkpt</code>)<a class="headerlink" href="#no-cleanup-after-job-completion-no_cleanup_chkpt" title="Permanent link">#</a></h3>
+<p>Specifying this option will prevent the wrapper script from cleaning up
+the checkpoints and related information once the job has finished. This
+may be useful for debugging, since this also preserves the
+<code>stdout</code>/<code>stderr</code> of the wrapper script.</p>
+<p><em>Don't set this unless you know what you are doing</em>.</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.expand", "navigation.tracking", "toc.follow", "navigation.sections", "navigation.instant", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1490 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>OpenFOAM - VSC User Documentation - Gent (macOS)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openfoam" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VSC User Documentation - Gent (macOS)" class="md-header__button md-logo" aria-label="VSC User Documentation - Gent (macOS)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSC User Documentation - Gent (macOS)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OpenFOAM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VSC User Documentation - Gent (macOS)" class="md-nav__button md-logo" aria-label="VSC User Documentation - Gent (macOS)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    VSC User Documentation - Gent (macOS)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        Introduction to HPC
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        Getting an HPC Account
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connecting/" class="md-nav__link">
+        Connecting to the HPC infrastructure
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_batch_jobs/" class="md-nav__link">
+        Running batch jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_interactive_jobs/" class="md-nav__link">
+        Running interactive jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_jobs_with_input_output_data/" class="md-nav__link">
+        Running jobs with input/output data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_core_jobs/" class="md-nav__link">
+        Multi core jobs/Parallel Computing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_portal/" class="md-nav__link">
+        Using the HPC-UGent web portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdmod/" class="md-nav__link">
+        XDMoD portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sites/hpc_policies/" class="md-nav__link">
+        HPC Policies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Advanced topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced topics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fine_tuning_job_specifications/" class="md-nav__link">
+        Fine-tuning Job Specifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_job_submission/" class="md-nav__link">
+        Multi-job submission
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiling_your_software/" class="md-nav__link">
+        Compiling and testing your software on the HPC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program_examples/" class="md-nav__link">
+        Program examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jobscript_examples/" class="md-nav__link">
+        Job script examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_practices/" class="md-nav__link">
+        Best Practices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpu_gent/" class="md-nav__link">
+        HPC-UGent GPU clusters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interactive_gent/" class="md-nav__link">
+        HPC-UGent interactive and debug cluster
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crontab_gent/" class="md-nav__link">
+        Cron scripts
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          OpenFOAM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        OpenFOAM
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#different-openfoam-releases" class="md-nav__link">
+    Different OpenFOAM releases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-training-material" class="md-nav__link">
+    Documentation &amp; training material
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-the-environment" class="md-nav__link">
+    Preparing the environment
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparing the environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#picking-and-loading-an-openfoam-module" class="md-nav__link">
+    Picking and loading an OpenFOAM module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sourcing-the-foam_bash-script" class="md-nav__link">
+    Sourcing the $FOAM_BASH script
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-utility-functions-used-in-tutorial-cases" class="md-nav__link">
+    Defining utility functions used in tutorial cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dealing-with-floating-point-errors" class="md-nav__link">
+    Dealing with floating-point errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openfoam-workflow" class="md-nav__link">
+    OpenFOAM workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-openfoam-in-parallel" class="md-nav__link">
+    Running OpenFOAM in parallel
+  </a>
+  
+    <nav class="md-nav" aria-label="Running OpenFOAM in parallel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-parallel-option" class="md-nav__link">
+    The -parallel option
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-mympirun" class="md-nav__link">
+    Using mympirun
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domain-decomposition-and-number-of-processor-cores" class="md-nav__link">
+    Domain decomposition and number of processor cores
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-openfoam-on-a-shared-filesystem" class="md-nav__link">
+    Running OpenFOAM on a shared filesystem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-own-solvers-with-openfoam" class="md-nav__link">
+    Using own solvers with OpenFOAM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-openfoam-job-script" class="md-nav__link">
+    Example OpenFOAM job script
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_15" type="checkbox" id="__nav_15" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15">
+          Appendices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Appendices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick_reference_guide/" class="md-nav__link">
+        Appendix A - HPC Quick Reference Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torque_options/" class="md-nav__link">
+        Appendix B - TORQUE options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../useful_linux_commands/" class="md-nav__link">
+        Appendix C - Useful Linux Commands
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#different-openfoam-releases" class="md-nav__link">
+    Different OpenFOAM releases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-training-material" class="md-nav__link">
+    Documentation &amp; training material
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-the-environment" class="md-nav__link">
+    Preparing the environment
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparing the environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#picking-and-loading-an-openfoam-module" class="md-nav__link">
+    Picking and loading an OpenFOAM module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sourcing-the-foam_bash-script" class="md-nav__link">
+    Sourcing the $FOAM_BASH script
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-utility-functions-used-in-tutorial-cases" class="md-nav__link">
+    Defining utility functions used in tutorial cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dealing-with-floating-point-errors" class="md-nav__link">
+    Dealing with floating-point errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openfoam-workflow" class="md-nav__link">
+    OpenFOAM workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-openfoam-in-parallel" class="md-nav__link">
+    Running OpenFOAM in parallel
+  </a>
+  
+    <nav class="md-nav" aria-label="Running OpenFOAM in parallel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-parallel-option" class="md-nav__link">
+    The -parallel option
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-mympirun" class="md-nav__link">
+    Using mympirun
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domain-decomposition-and-number-of-processor-cores" class="md-nav__link">
+    Domain decomposition and number of processor cores
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-openfoam-on-a-shared-filesystem" class="md-nav__link">
+    Running OpenFOAM on a shared filesystem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-own-solvers-with-openfoam" class="md-nav__link">
+    Using own solvers with OpenFOAM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-openfoam-job-script" class="md-nav__link">
+    Example OpenFOAM job script
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="openfoam">OpenFOAM<a class="headerlink" href="#openfoam" title="Permanent link">#</a></h1>
+<p>In this chapter, we outline best practices for using the centrally
+provided OpenFOAM installations on the VSC <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> infrastructure.</p>
+<h2 id="different-openfoam-releases">Different OpenFOAM releases<a class="headerlink" href="#different-openfoam-releases" title="Permanent link">#</a></h2>
+<p>There are currently three different sets of versions of OpenFOAM
+available, each with its own versioning scheme:</p>
+<ul>
+<li>
+<p>OpenFOAM versions released via <a href="http://openfoam.com">http://openfoam.com</a>: <code>v3.0+</code>,
+    <code>v1706</code></p>
+<ul>
+<li>see also <a href="http://openfoam.com/history/">http://openfoam.com/history/</a></li>
+</ul>
+</li>
+<li>
+<p>OpenFOAM versions released via <a href="https://openfoam.org">https://openfoam.org</a>: <code>v4.1</code>,
+    <code>v5.0</code></p>
+<ul>
+<li>see also <a href="https://openfoam.org/download/history/">https://openfoam.org/download/history/</a></li>
+</ul>
+</li>
+<li>
+<p>OpenFOAM versions released via
+    <a href="http://wikki.gridcore.se/foam-extend">http://wikki.gridcore.se/foam-extend</a>: <code>v3.1</code></p>
+</li>
+</ul>
+<p>Make sure you know which flavor of OpenFOAM you want to use, since there
+are important differences between the different versions w.r.t.
+features. If the OpenFOAM version you need is not available yet, see <a href="../FAQ/#i-want-to-use-software-that-is-not-available-on-the-clusters-yet">I want to use software that is not available on the clusters yet</a>.</p>
+<h2 id="documentation-training-material">Documentation &amp; training material<a class="headerlink" href="#documentation-training-material" title="Permanent link">#</a></h2>
+<p>The best practices outlined here focus specifically on the use of
+OpenFOAM on the VSC <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> infrastructure. As such, they are intended to
+augment the existing OpenFOAM documentation rather than replace it. For
+more general information on using OpenFOAM, please refer to:</p>
+<ul>
+<li>
+<p>OpenFOAM websites:</p>
+<ul>
+<li>
+<p><a href="https://openfoam.com">https://openfoam.com</a></p>
+</li>
+<li>
+<p><a href="https://openfoam.org">https://openfoam.org</a></p>
+</li>
+<li>
+<p><a href="http://wikki.gridcore.se/foam-extend">http://wikki.gridcore.se/foam-extend</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>OpenFOAM user guides:</p>
+<ul>
+<li>
+<p><a href="https://www.openfoam.com/documentation/user-guide">https://www.openfoam.com/documentation/user-guide</a></p>
+</li>
+<li>
+<p><a href="https://cfd.direct/openfoam/user-guide/">https://cfd.direct/openfoam/user-guide/</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>OpenFOAM C++ source code guide: <a href="https://cpp.openfoam.org">https://cpp.openfoam.org</a></p>
+</li>
+<li>
+<p>tutorials: <a href="https://wiki.openfoam.com/Tutorials">https://wiki.openfoam.com/Tutorials</a></p>
+</li>
+<li>
+<p>recordings of "<em>Introduction to OpenFOAM</em>" training session at
+    UGent (May 2016):
+    <a href="https://www.youtube.com/playlist?list=PLqxhJj6bcnY9RoIgzeF6xDh5L9bbeK3BL">https://www.youtube.com/playlist?list=PLqxhJj6bcnY9RoIgzeF6xDh5L9bbeK3BL</a></p>
+</li>
+</ul>
+<p>Other useful OpenFOAM documentation:</p>
+<ul>
+<li>
+<p><a href="https://github.com/ParticulateFlow/OSCCAR-doc/blob/master/openFoamUserManual_PFM.pdf">https://github.com/ParticulateFlow/OSCCAR-doc/blob/master/openFoamUserManual_PFM.pdf</a></p>
+</li>
+<li>
+<p><a href="http://www.dicat.unige.it/guerrero/openfoam.html">http://www.dicat.unige.it/guerrero/openfoam.html</a></p>
+</li>
+</ul>
+<h2 id="preparing-the-environment">Preparing the environment<a class="headerlink" href="#preparing-the-environment" title="Permanent link">#</a></h2>
+<p>To prepare the environment of your shell session or job for using
+OpenFOAM, there are a couple of things to take into account.</p>
+<h3 id="picking-and-loading-an-openfoam-module">Picking and loading an <code>OpenFOAM</code> module<a class="headerlink" href="#picking-and-loading-an-openfoam-module" title="Permanent link">#</a></h3>
+<p>First of all, you need to pick and load one of the available <code>OpenFOAM</code>
+<abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr>. To get an overview of the available <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr>, run
+'<code>module avail OpenFOAM</code>'. For example:</p>
+<pre><code>$ <b>module avail OpenFOAM</b>
+------------------ /apps/gent/CO7/sandybridge/modules/all ------------------
+   OpenFOAM/v1712-foss-2017b     OpenFOAM/4.1-intel-2017a
+   OpenFOAM/v1712-intel-2017b    OpenFOAM/5.0-intel-2017a
+   OpenFOAM/2.2.2-intel-2017a    OpenFOAM/5.0-intel-2017b
+   OpenFOAM/2.2.2-intel-2018a    OpenFOAM/5.0-20180108-foss-2018a
+   OpenFOAM/2.3.1-intel-2017a    OpenFOAM/5.0-20180108-intel-2017b
+   OpenFOAM/2.4.0-intel-2017a    OpenFOAM/5.0-20180108-intel-2018a
+   OpenFOAM/3.0.1-intel-2016b    OpenFOAM/6-intel-2018a            (D)
+   OpenFOAM/4.0-intel-2016b
+</code></pre>
+
+<p>To pick a module, take into account the differences between the
+different OpenFOAM versions w.r.t. features and API (see also <a href="./#different-openfoam-releases">Different OpenFOAM releases</a>). If
+multiple <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> are available that fulfill your requirements, give
+preference to those providing a more recent OpenFOAM version, and to the
+ones that were installed with a more recent compiler toolchain; for
+example, prefer a module that includes <code>intel-2023b</code> in its name over one
+that includes <code>intel-2023a</code>.</p>
+<p>To prepare your environment for using OpenFOAM, load the <code>OpenFOAM</code>
+module you have picked; for example:</p>
+<pre><code>$ <b>module load OpenFOAM/4.1-intel-2017a</b>
+</code></pre>
+
+<h3 id="sourcing-the-foam_bash-script">Sourcing the <code>$FOAM_BASH</code> script<a class="headerlink" href="#sourcing-the-foam_bash-script" title="Permanent link">#</a></h3>
+<p>OpenFOAM provides a script that you should <code>source</code> to further prepare
+the environment. This script will define some additional environment
+variables that are required to use OpenFOAM. The <code>OpenFOAM</code> <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr>
+define an environment variable named <code>FOAM_BASH</code> that specifies the
+location to this script. Assuming you are using <code>bash</code> in your shell
+session or job script, you should always run the following command after
+loading an <code>OpenFOAM</code> module:</p>
+<pre><code>$ <b>source $FOAM_BASH</b>
+</code></pre>
+
+<h3 id="defining-utility-functions-used-in-tutorial-cases">Defining utility functions used in tutorial cases<a class="headerlink" href="#defining-utility-functions-used-in-tutorial-cases" title="Permanent link">#</a></h3>
+<p>If you would like to use the <code>getApplication</code>, <code>runApplication</code>,
+<code>runParallel</code>, <code>cloneCase</code> and/or <code>compileApplication</code> functions that
+are used in OpenFOAM tutorials, you also need to <code>source</code> the
+<code>RunFunctions</code> script:</p>
+<pre><code>$ <b> source $WM_PROJECT_DIR/bin/tools/RunFunctions</b>
+</code></pre>
+
+<p>Note that this needs to be done <strong>after</strong> sourcing <code>$FOAM_BASH</code> to make sure
+<code>$WM_PROJECT_DIR</code> is defined.</p>
+<h3 id="dealing-with-floating-point-errors">Dealing with floating-point errors<a class="headerlink" href="#dealing-with-floating-point-errors" title="Permanent link">#</a></h3>
+<p>If you are seeing <code>Floating Point Exception</code> errors, you can undefine
+the <code>$FOAM_SIGFPE</code> environment variable that is defined by the
+<code>$FOAM_BASH</code> script as follows:</p>
+<pre><code>$ <b>unset $FOAM_SIGFPE</b>
+</code></pre>
+
+<p>Note that this only prevents OpenFOAM from propagating floating point
+exceptions, which then results in terminating the simulation. However,
+it does not prevent that illegal operations (like a division by zero)
+are being executed; if <code>NaN</code> values appear in your results, floating
+point errors are occurring.</p>
+<p>As such, <em><em>you should </em>not</em> use this in productions runs. Instead, you should track down the root cause of the floating
+point errors, and try to prevent them from occurring at all.</p>
+<h2 id="openfoam-workflow">OpenFOAM workflow<a class="headerlink" href="#openfoam-workflow" title="Permanent link">#</a></h2>
+<p>The general workflow for OpenFOAM consists of multiple steps. Prior to
+running the actual simulation, some <em>pre-processing</em> needs to be done:</p>
+<ul>
+<li>
+<p>generate the mesh;</p>
+</li>
+<li>
+<p>decompose the domain into subdomains using <code>decomposePar</code> (only for
+    parallel OpenFOAM simulations);</p>
+</li>
+</ul>
+<p>After running the simulation, some <em>post-processing</em> steps are typically
+performed:</p>
+<ul>
+<li>
+<p>reassemble the decomposed domain using <code>reconstructPar</code> (only for
+    parallel OpenFOAM simulations, and optional since some
+    postprocessing can also be done on decomposed cases);</p>
+</li>
+<li>
+<p>evaluate or further process the simulation results, either visually
+    using ParaView (for example, via the <code>paraFoam</code> tool; use
+    <code>paraFoam -builtin</code> for decomposed cases) or using command-line
+    tools like <code>postProcess</code>; see also
+    <a href="https://cfd.direct/openfoam/user-guide/postprocessing">https://cfd.direct/openfoam/user-guide/postprocessing</a>.</p>
+</li>
+</ul>
+<p>Depending on the size of the domain and the desired format of the
+results, these pre- and post-processing steps can be run either
+before/after the job running the actual simulation, either on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>
+infrastructure or elsewhere, or as a part of the job that runs the
+OpenFOAM simulation itself.</p>
+<p>Do make sure you are using the same OpenFOAM version in each of the
+steps. Meshing can be done sequentially (i.e., on a single <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr>) using
+for example <code>blockMesh</code>, or in parallel using more advanced meshing
+tools like <code>snappyHexMesh</code>, which is highly recommended for large cases.
+For more details, see <a href="https://cfd.direct/openfoam/user-guide/mesh/">https://cfd.direct/openfoam/user-guide/mesh/</a>.</p>
+<p>One important aspect to keep in mind for 'offline' pre-processing is
+that the domain decomposition needs to match the number of <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>
+cores that are used for the actual simulation, see also <a href="./#domain-decomposition-and-number-of-processor-cores">Domain decomposition and number of <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr> cores</a>.</p>
+<p>For post-processing you can either download the simulation results to a
+local workstation, or do the post-processing (interactively) on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>
+infrastructure, for example on the login nodes or using an interactive
+session on a workernode. This may be interesting to avoid the overhead
+of downloading the results locally.</p>
+<h2 id="running-openfoam-in-parallel">Running OpenFOAM in parallel<a class="headerlink" href="#running-openfoam-in-parallel" title="Permanent link">#</a></h2>
+<p>For general information on running OpenFOAM in parallel, see
+<a href="https://cfd.direct/openfoam/user-guide/running-applications-parallel/">https://cfd.direct/openfoam/user-guide/running-applications-parallel/</a>.</p>
+<h3 id="the-parallel-option">The <code>-parallel</code> option<a class="headerlink" href="#the-parallel-option" title="Permanent link">#</a></h3>
+<p>When running OpenFOAM in parallel, <strong>do not forget to specify the <code>-parallel</code> option</strong>, to avoid running the same OpenFOAM
+simulation $N$ times, rather than running it once using $N$ <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>
+cores.</p>
+<p>You can check whether OpenFOAM was run in parallel in the output of the
+main command: the OpenFOAM header text should only be included <em>once</em> in
+the output, and it should specify a value different than '<code>1</code>' in the
+<code>nProcs</code> field. Note that most pre- and post-processing utilities like
+<code>blockMesh</code>, <code>decomposePar</code> and <code>reconstructPar</code> can not be run in
+parallel.</p>
+<h3 id="using-mympirun">Using <code>mympirun</code><a class="headerlink" href="#using-mympirun" title="Permanent link">#</a></h3>
+<p>It is highly recommended to use the <code>mympirun</code> command when running
+parallel OpenFOAM simulations rather than the standard <code>mpirun</code> command;
+see <a href="../mympirun/#mympirun">Mympiprun</a> for more information on <code>mympirun</code>.</p>
+<p>See <a href="../mympirun/#basic-usage">Basic usage</a> for how to get started with <code>mympirun</code>.</p>
+<p>To pass down the environment variables required to run OpenFOAM (which
+were defined by the <code>$FOAM_BASH</code> script, see <a href="./#preparing-the-environment">Preparing the environment</a>) to each of the <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>
+processes used in a parallel OpenFOAM execution, the
+<code>$MYMPIRUN_VARIABLESPREFIX</code> environment variable must be defined as
+follows, prior to running the OpenFOAM simulation with <code>mympirun</code>:</p>
+<pre><code>$ <b>export MYMPIRUN_VARIABLESPREFIX=WM_PROJECT,FOAM,MPI</b>
+</code></pre>
+
+<p>Whenever you are instructed to use a command like <code>mpirun -np &lt;N&gt; ...</code>,
+use <code>mympirun ...</code> instead; <code>mympirun</code> will automatically detect the
+number of <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr> cores that are available (see also <a href="../mympirun/#controlling-number-of-processes">Controlling number of processes</a>).</p>
+<h3 id="domain-decomposition-and-number-of-processor-cores">Domain decomposition and number of <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr> cores<a class="headerlink" href="#domain-decomposition-and-number-of-processor-cores" title="Permanent link">#</a></h3>
+<p>To run OpenFOAM in parallel, you must decompose the domain into multiple
+subdomains. Each subdomain will be processed by OpenFOAM on one
+<abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr> <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr>.</p>
+<p>Since <code>mympirun</code> will automatically use all available cores, you need to
+make sure that the number of subdomains matches the number of <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>
+cores that will be used by <code>mympirun</code>. If not, you may run into an error
+message like:</p>
+<pre><code>number of processor directories = 4 is not equal to the number of processors = 16
+</code></pre>
+
+<p>In this case, the case was decomposed in 4 subdomains, while the
+OpenFOAM simulation was started with 16 processes through <code>mympirun</code>. To
+match the number of subdomains and the number of <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr> cores used by
+<code>mympirun</code>, you should either:</p>
+<ul>
+<li>
+<p>adjust the value for <code>numberOfSubdomains</code> in
+    <code>system/decomposeParDict</code> (and adjust the value for <code>n</code> accordingly
+    in the domain decomposition coefficients), and run <code>decomposePar</code>
+    again; or</p>
+</li>
+<li>
+<p>submit your job requesting exactly the same number of <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>
+    cores as there are subdomains (see the number of <code>processor*</code>
+    directories that were created by <code>decomposePar</code>)</p>
+</li>
+</ul>
+<p>See <a href="../mympirun/#controlling-number-of-processes">Controlling number of processes</a> to control the number of process <code>mympirun</code> will start.</p>
+<p>This is interesting if you require more <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> per <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> than is
+available by default. Note that the decomposition method being used
+(which is specified in <code>system/decomposeParDict</code>) has significant impact
+on the performance of a parallel OpenFOAM simulation. Good decomposition
+methods (like <code>metis</code> or <code>scotch</code>) try to limit communication overhead
+by minimising the number of <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr> boundaries.</p>
+<p>To visualise the <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr> domains, use the following command:</p>
+<pre><code>$ <b>mympirun foamToVTK -parallel -constant -time 0 -excludePatches '(".*.")'</b>
+</code></pre>
+
+<p>and then load the VTK files generated in the <code>VTK</code> folder into ParaView.</p>
+<h2 id="running-openfoam-on-a-shared-filesystem">Running OpenFOAM on a shared filesystem<a class="headerlink" href="#running-openfoam-on-a-shared-filesystem" title="Permanent link">#</a></h2>
+<p>OpenFOAM is known to significantly stress shared filesystems, since a
+lot of (small) files are generated during an OpenFOAM simulation. Shared
+filesystems are typically optimised for dealing with (a small number of)
+large files, and are usually a poor match for workloads that involve a
+(very) large number of small files (see also
+<a href="http://www.prace-ri.eu/IMG/pdf/IO-profiling_with_Darshan-2.pdf">http://www.prace-ri.eu/IMG/pdf/IO-profiling_with_Darshan-2.pdf</a>).</p>
+<p>Take into account the following guidelines for your OpenFOAM jobs, which
+all relate to input parameters for the OpenFOAM simulation that you can
+specify in <code>system/controlDict</code> (see also
+<a href="https://cfd.direct/openfoam/user-guide/controldict">https://cfd.direct/openfoam/user-guide/controldict</a>).</p>
+<ul>
+<li>
+<p>instruct OpenFOAM to write out results at a reasonable frequency, <strong>certainly <em>not</em></strong> for every single time step}; you can control this using the <code>writeControl</code>, <code>writeInterval</code>, etc. keywords;</p>
+</li>
+<li>
+<p>consider only retaining results for the last couple of time steps,
+    see the <code>purgeWrite</code> keyword;</p>
+</li>
+<li>
+<p>consider writing results for only part of the domain (e.g., a line
+    of plane) rather than the entire domain;</p>
+</li>
+<li>
+<p>if you do not plan to change the parameters of the OpenFOAM
+    simulation while it is running, <strong>set <tt>runTimeModifiable</tt> to <tt>false</tt></strong> to avoid that OpenFOAM re-reads each
+    of the <code>system/*Dict</code> files at every time step;</p>
+</li>
+<li>
+<p>if the results per individual time step are large, consider setting
+    <code>writeCompression</code> to <code>true</code>;</p>
+</li>
+</ul>
+<p>For modest OpenFOAM simulations where a single workernode suffices,
+consider using the local disk of the workernode as working directory
+(accessible via <code>$VSC_SCRATCH_NODE</code>), rather than the shared
+<code>$VSC_SCRATCH</code> filesystem. **Certainly do not use a subdirectory in <code>$VSC_HOME</code> or <code>$VSC_DATA</code>, since these shared filesystems are too slow
+for these type of workloads.</p>
+<p>For large parallel OpenFOAM simulations on the UGent Tier-2 clusters, consider
+using the alternative shared <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> filesystem <code>$VSC_SCRATCH_ARCANINE</code>
+(see <a href="../running_jobs_with_input_output_data/#pre-defined-user-directories">Pre-defined user directories</a>).</p>
+<p>These guidelines are especially important for large-scale OpenFOAM
+simulations that involve more than a couple of dozen of <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr> cores.</p>
+<h2 id="using-own-solvers-with-openfoam">Using own solvers with OpenFOAM<a class="headerlink" href="#using-own-solvers-with-openfoam" title="Permanent link">#</a></h2>
+<p>See <a href="https://cfd.direct/openfoam/user-guide/compiling-applications/">https://cfd.direct/openfoam/user-guide/compiling-applications/</a>.</p>
+<h2 id="example-openfoam-job-script">Example OpenFOAM job script<a class="headerlink" href="#example-openfoam-job-script" title="Permanent link">#</a></h2>
+<p>Example job script for <code>damBreak</code> OpenFOAM tutorial (see also
+<a href="https://cfd.direct/openfoam/user-guide/dambreak">https://cfd.direct/openfoam/user-guide/dambreak</a>):</p>
+<p><center>-- OpenFOAM_damBreak.sh --</center>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#PBS -l walltime=1:0:0</span>
+<span class="c1">#PBS -l nodes=1:ppn=4</span>
+<span class="c1"># check for more recent OpenFOAM modules with &#39;module avail OpenFOAM&#39;</span>
+module load OpenFOAM/6-intel-2018a
+<span class="nb">source</span> <span class="nv">$FOAM_BASH</span>
+<span class="c1"># purposely not specifying a particular version to use most recent mympirun</span>
+module load vsc-mympirun
+<span class="c1"># let mympirun pass down relevant environment variables to MPI processes</span>
+<span class="nb">export</span> <span class="nv">MYMPIRUN_VARIABLESPREFIX</span><span class="o">=</span>WM_PROJECT,FOAM,MPI
+<span class="c1"># set up working directory</span>
+<span class="c1"># (uncomment one line defining $WORKDIR below)</span>
+<span class="c1">#export WORKDIR=$VSC_SCRATCH/$PBS_JOBID  # for small multi-node jobs</span>
+<span class="c1">#export WORKDIR=$VSC_SCRATCH_ARCANINE/$PBS_JOBID  # for large multi-node jobs (not on available victini)</span>
+<span class="nb">export</span> <span class="nv">WORKDIR</span><span class="o">=</span><span class="nv">$VSC_SCRATCH_NODE</span>/<span class="nv">$PBS_JOBID</span>  <span class="c1"># for single-node jobs</span>
+mkdir -p <span class="nv">$WORKDIR</span>
+<span class="c1"># damBreak tutorial, see also https://cfd.direct/openfoam/user-guide/dambreak</span>
+cp -r <span class="nv">$FOAM_TUTORIALS</span>/multiphase/interFoam/laminar/damBreak/damBreak <span class="nv">$WORKDIR</span>
+<span class="nb">cd</span> <span class="nv">$WORKDIR</span>/damBreak
+<span class="nb">echo</span> <span class="s2">&quot;working directory: </span><span class="nv">$PWD</span><span class="s2">&quot;</span>
+<span class="c1"># pre-processing: generate mesh</span>
+<span class="nb">echo</span> <span class="s2">&quot;start blockMesh: </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&quot;</span>
+blockMesh <span class="p">&amp;</span>&gt; blockMesh.out
+<span class="c1"># pre-processing: decompose domain for parallel processing</span>
+<span class="nb">echo</span> <span class="s2">&quot;start decomposePar: </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&quot;</span>
+decomposePar <span class="p">&amp;</span>&gt; decomposePar.out
+<span class="c1"># run OpenFOAM simulation in parallel</span>
+<span class="c1"># note:</span>
+<span class="c1">#  * the -parallel option is strictly required to actually run in parallel!</span>
+<span class="c1">#    without it, the simulation is run N times on a single core...</span>
+<span class="c1">#  * mympirun will use all available cores in the job by default,</span>
+<span class="c1">#    you need to make sure this matches the number of subdomains!</span>
+<span class="nb">echo</span> <span class="s2">&quot;start interFoam: </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&quot;</span>
+mympirun --output<span class="o">=</span>interFoam.out interFoam -parallel
+<span class="c1"># post-processing: reassemble decomposed domain</span>
+<span class="nb">echo</span> <span class="s2">&quot;start reconstructPar: </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&quot;</span>
+reconstructPar <span class="p">&amp;</span>&gt; reconstructPar.out
+<span class="c1"># copy back results, i.e. all time step directories: 0, 0.05, ..., 1.0 and inputs</span>
+<span class="nb">export</span> <span class="nv">RESULTS_DIR</span><span class="o">=</span><span class="nv">$VSC_DATA</span>/results/<span class="nv">$PBS_JOBID</span>
+mkdir -p <span class="nv">$RESULTS_DIR</span>
+cp -a *.out <span class="o">[</span><span class="m">0</span>-9.<span class="o">]</span>* constant system <span class="nv">$RESULTS_DIR</span>
+<span class="nb">echo</span> <span class="s2">&quot;results copied to </span><span class="nv">$RESULTS_DIR</span><span class="s2"> at </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&quot;</span>
+<span class="c1"># clean up working directory</span>
+<span class="nb">cd</span> <span class="nv">$HOME</span>
+rm -rf <span class="nv">$WORKDIR</span>
+</code></pre></div></p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../mympirun/" class="md-footer__link md-footer__link--prev" aria-label="Previous: mympirun" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              mympirun
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../scoop/" class="md-footer__link md-footer__link--next" aria-label="Next: SCOOP" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              SCOOP
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.expand", "navigation.tracking", "toc.follow", "navigation.sections", "navigation.instant", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

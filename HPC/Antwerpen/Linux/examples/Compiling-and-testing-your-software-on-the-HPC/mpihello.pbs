@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#PBS -N mpihello
+#PBS -l walltime=00:05:00
+
+  # assume a 16 core job
+#PBS -l nodes=2:ppn=8
+
+  # make sure we are in the right directory in case writing files 
+cd $PBS_O_WORKDIR 
+
+  # load the environment
+
+module purge
+module load intel
+
+mpirun ./mpihello

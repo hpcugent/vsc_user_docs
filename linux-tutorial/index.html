@@ -1,0 +1,646 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Linux tutorial</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Linux tutorial" class="md-header__button md-logo" aria-label="Linux tutorial" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Linux tutorial
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Linux tutorial" class="md-nav__button md-logo" aria-label="Linux tutorial" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Linux tutorial
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="getting_started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="navigating/" class="md-nav__link">
+        Navigating
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="manipulating_files_and_directories/" class="md-nav__link">
+        Manipulating files and directories
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="uploading_files/" class="md-nav__link">
+        Uploading/downloading/editing files
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="beyond_the_basics/" class="md-nav__link">
+        Beyond the basics
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="common_pitfalls/" class="md-nav__link">
+        Common Pitfalls
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hpc_infrastructure/" class="md-nav__link">
+        More on the HPC infrastructure
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#logging-in" class="md-nav__link">
+    Logging in
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    Getting help
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting help">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-terminal-usage" class="md-nav__link">
+    Basic terminal usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic terminal usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-history" class="md-nav__link">
+    Command history
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stopping-commands" class="md-nav__link">
+    Stopping commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-variables" class="md-nav__link">
+    Defining variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-non-defined-variables" class="md-nav__link">
+    Using non-defined variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restoring-your-default-environment" class="md-nav__link">
+    Restoring your default environment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-system-information" class="md-nav__link">
+    Basic system information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    Exercises
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">#</a></h1>
+<h2 id="logging-in">Logging in<a class="headerlink" href="#logging-in" title="Permanent link">#</a></h2>
+<p>To get started with the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent infrastructure, you need to obtain a
+VSC account, see <a href="..%2Fintro-HPC%2Fch_account.md">Chapter 2 of the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> manual</a>.
+<strong>Keep in mind that you must keep your private key to yourself!</strong></p>
+<p>You can look at your public/private key pair as a lock and a key: you
+give us the lock (your public key), we put it on the door, and then you
+can use your key to open the door and get access to the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>
+infrastructure. <strong>Anyone who has your key can use your VSC account!</strong></p>
+<p>Details on connecting to the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> infrastructure are available in
+<a href="..%2Fintro-HPC%2Fch_connecting.md">Chapter 3 of the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> manual</a>.</p>
+<h2 id="getting-help">Getting help<a class="headerlink" href="#getting-help" title="Permanent link">#</a></h2>
+<p>To get help:</p>
+<ol>
+<li>
+<p>use the documentation available on the system, through the <code>help</code>,
+    <code>info</code> and <code>man</code> commands (use <code>q</code> to exit).
+    <div class="highlight"><pre><span></span><code>help cd
+info ls
+man cp
+</code></pre></div></p>
+</li>
+<li>
+<p>use Google</p>
+</li>
+<li>
+<p>contact <a href="mailto:hpc@ugent.be">hpc@ugent.be</a> in case 
+of problems or questions (even for basic things!)</p>
+</li>
+</ol>
+<h3 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">#</a></h3>
+<p>Sometimes when executing a command, an error occurs. Most likely there
+will be error output or a message explaining you this. Read this
+carefully and try to act on it. Try googling the error first to find any
+possible solution, but if you can't come up with something in 15
+minutes, don't hesitate to mail <a href="mailto:hpc@ugent.be">hpc@ugent.be</a>.</p>
+<h2 id="basic-terminal-usage">Basic terminal usage<a class="headerlink" href="#basic-terminal-usage" title="Permanent link">#</a></h2>
+<p>The basic interface is the so-called shell prompt, typically ending with
+<code>$</code> (for <code>bash</code> shells).</p>
+<p>You use the shell by executing commands, and hitting <code>&lt;enter&gt;</code>. For
+example:</p>
+<pre><code>$<b> echo hello</b>
+hello
+</code></pre>
+
+<p>You can go to the start or end of the command line using <code>Ctrl-A</code> or
+<code>Ctrl-E</code>.</p>
+<p>To go through previous commands, use <code>&lt;up&gt;</code> and <code>&lt;down&gt;</code>, rather than
+retyping them.</p>
+<h3 id="command-history">Command history<a class="headerlink" href="#command-history" title="Permanent link">#</a></h3>
+<p>A powerful feature is that you can "search" through your command
+history, either using the <code>history</code> command, or using <code>Ctrl-R</code>:</p>
+<pre><code>$<b> history</b>
+    1 echo hello
+
+# hit Ctrl-R, type 'echo' 
+(reverse-i-search)`echo': echo hello
+</code></pre>
+
+<h3 id="stopping-commands">Stopping commands<a class="headerlink" href="#stopping-commands" title="Permanent link">#</a></h3>
+<p>If for any reason you want to stop a command from executing, press
+<code>Ctrl-C</code>. For example, if a command is taking too long, or you want to
+rerun it with different arguments.</p>
+<h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">#</a></h2>
+<p>At the prompt we also have access to shell variables, which have both a
+<em>name</em> and a <em>value</em>.</p>
+<p>They can be thought of as placeholders for things we need to remember.</p>
+<p>For example, to print the path to your home directory, we can use the
+shell variable named <code>HOME</code>:</p>
+<pre><code>$<b> echo $HOME</b>
+/user/home/gent/vsc400/vsc40000
+</code></pre>
+
+<p>This prints the value of this variable.</p>
+<h3 id="defining-variables">Defining variables<a class="headerlink" href="#defining-variables" title="Permanent link">#</a></h3>
+<p>There are several variables already defined for you when you start your
+session, such as <code>$HOME</code> which contains the path to your home directory.</p>
+<p>For a full overview of defined environment variables in your current
+session, you can use the <code>env</code> command. You can sort this output with
+<code>sort</code> to make it easier to search in:</p>
+<pre><code>$<b> env | sort</b>
+...
+HOME=/user/home/gent/vsc400/vsc40000
+...
+</code></pre>
+
+<p>You can also use the <code>grep</code> command to search for a piece of text. The
+following command will output all VSC-specific variable names and their
+values:</p>
+<pre><code>$ <b>env | sort | grep VSC</b></code></pre>
+
+<p>But we can also define our own. this is done with the <code>export</code> command
+(note: variables are always all-caps as a convention):</p>
+<pre><code>$ <b>export MYVARIABLE="value"</b></code></pre>
+
+<p>It is important you don't include spaces around the <code>=</code> sign. Also note
+the lack of <code>$</code> sign in front of the variable name.</p>
+<p>If we then do</p>
+<pre><code>$ <b>echo $MYVARIABLE</b></code></pre>
+
+<p>this will output <code>value</code>. Note that the quotes are not included, they
+were only used when defining the variable to escape potential spaces in
+the value.</p>
+<h4 id="changing-your-prompt-using-ps1">Changing your prompt using <code>$PS1</code><a class="headerlink" href="#changing-your-prompt-using-ps1" title="Permanent link">#</a></h4>
+<p>You can change what your prompt looks like by redefining the
+special-purpose variable <code>$PS1</code>.</p>
+<p>For example: to include the current location in your prompt:</p>
+<pre><code>$ <b>export PS1='\w $'</b>
+~ $ cd test
+~/test $
+</code></pre>
+
+<p>Note that <code>~</code> is short representation of your home directory.</p>
+<p>To make this persistent across session, you can define this custom value
+for <code>$PS1</code> in your <code>.profile</code> startup script:</p>
+<pre><code>$ <b>echo 'export PS1="\w $ " ' >> ~/.profile</b></code></pre>
+
+<h3 id="using-non-defined-variables">Using non-defined variables<a class="headerlink" href="#using-non-defined-variables" title="Permanent link">#</a></h3>
+<p>One common pitfall is the (accidental) use of non-defined variables.
+Contrary to what you may expect, this does <em>not</em> result in error
+messages, but the variable is considered to be <em>empty</em> instead.</p>
+<p>This may lead to surprising results, for example:</p>
+<pre><code>$ <b>export WORKDIR=/tmp/test</b>
+$ <b>pwd</b>
+/user/home/gent/vsc400/vsc40000
+$ <b>echo $HOME</b>
+/user/home/gent/vsc400/vsc40000
+</code></pre>
+
+<p>To understand what's going on here, see the section on <code>cd</code> below.</p>
+<p>The moral here is: <strong>be very careful to not use empty variables unintentionally</strong>.</p>
+<p><strong>Tip for job scripts: use <code>set -e -u</code> to avoid using empty variables accidentally.</strong></p>
+<p>The <code>-e</code> option will result in the script getting stopped if any command
+fails.</p>
+<p>The <code>-u</code> option will result in the script getting stopped if empty
+variables are used. (see <a href="https://ss64.com/bash/set.html">https://ss64.com/bash/set.html</a> for a more
+detailed explanation and more options)</p>
+<p>More information can be found at <a href="http://www.tldp.org/LDP/abs/html/variables.html">http://www.tldp.org/LDP/abs/html/variables.html</a>.</p>
+<h3 id="restoring-your-default-environment">Restoring your default environment<a class="headerlink" href="#restoring-your-default-environment" title="Permanent link">#</a></h3>
+<p>If you've made a mess of your environment, you shouldn't waste too much
+time trying to fix it. Just log out and log in again and you will be
+given a pristine environment.</p>
+<h2 id="basic-system-information">Basic system information<a class="headerlink" href="#basic-system-information" title="Permanent link">#</a></h2>
+<p>Basic information about the system you are logged into can be obtained
+in a variety of ways.</p>
+<p>We limit ourselves to determining the hostname:</p>
+<pre><code>$ <b>hostname</b>
+gligar01.gligar.os
+
+$ <b>echo $HOSTNAME</b>
+gligar01.gligar.os
+</code></pre>
+
+<p>And querying some basic information about the <abbr title="An operating system, similar to UNIX.">Linux</abbr> kernel:</p>
+<pre><code>$ <b>uname -a</b>
+Linux gligar01.gligar.os 2.6.32-573.8.1.el6.ug.x86_64 #1 SMP Mon Nov 16 15:12:09
+    CET 2015 x86_64 x86_64 x86_64 GNU/Linux
+</code></pre>
+
+<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">#</a></h2>
+<ul>
+<li>
+<p>Print the full path to your home directory</p>
+</li>
+<li>
+<p>Determine the name of the environment variable to your personal
+    <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> directory</p>
+</li>
+<li>
+<p>What's the name of the system you're logged into? Is it the same for
+    everyone?</p>
+</li>
+<li>
+<p>Figure out how to print the value of a variable without including a
+    newline</p>
+</li>
+<li>
+<p>How do you get help on using the <code>man</code> command?</p>
+</li>
+</ul>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top", "navigation.expand", "navigation.tracking", "toc.follow", "navigation.sections", "navigation.instant", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

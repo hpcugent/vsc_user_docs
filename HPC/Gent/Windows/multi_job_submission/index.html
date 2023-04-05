@@ -1,0 +1,1523 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Multi-job submission - VSC User Documentation - Gent (Windows)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#multi-job-submission" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VSC User Documentation - Gent (Windows)" class="md-header__button md-logo" aria-label="VSC User Documentation - Gent (Windows)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSC User Documentation - Gent (Windows)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Multi-job submission
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VSC User Documentation - Gent (Windows)" class="md-nav__button md-logo" aria-label="VSC User Documentation - Gent (Windows)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    VSC User Documentation - Gent (Windows)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        Introduction to HPC
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        Getting an HPC Account
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connecting/" class="md-nav__link">
+        Connecting to the HPC infrastructure
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_batch_jobs/" class="md-nav__link">
+        Running batch jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_interactive_jobs/" class="md-nav__link">
+        Running interactive jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_jobs_with_input_output_data/" class="md-nav__link">
+        Running jobs with input/output data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_core_jobs/" class="md-nav__link">
+        Multi core jobs/Parallel Computing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_portal/" class="md-nav__link">
+        Using the HPC-UGent web portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdmod/" class="md-nav__link">
+        XDMoD portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sites/hpc_policies/" class="md-nav__link">
+        HPC Policies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Advanced topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced topics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fine_tuning_job_specifications/" class="md-nav__link">
+        Fine-tuning Job Specifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Multi-job submission
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Multi-job submission
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-worker-framework-parameter-sweeps" class="md-nav__link">
+    The worker Framework: Parameter Sweeps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-worker-framework-job-arrays" class="md-nav__link">
+    The Worker framework: Job arrays
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapreduce-prologues-and-epilogue" class="md-nav__link">
+    MapReduce: prologues and epilogue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-more-on-the-worker-framework" class="md-nav__link">
+    Some more on the Worker Framework
+  </a>
+  
+    <nav class="md-nav" aria-label="Some more on the Worker Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-worker-efficiently" class="md-nav__link">
+    Using Worker efficiently
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-a-worker-job" class="md-nav__link">
+    Monitoring a worker job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-limits-for-work-items" class="md-nav__link">
+    Time limits for work items
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resuming-a-worker-job" class="md-nav__link">
+    Resuming a Worker job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#further-information" class="md-nav__link">
+    Further information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiling_your_software/" class="md-nav__link">
+        Compiling and testing your software on the HPC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program_examples/" class="md-nav__link">
+        Program examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jobscript_examples/" class="md-nav__link">
+        Job script examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_practices/" class="md-nav__link">
+        Best Practices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpu_gent/" class="md-nav__link">
+        HPC-UGent GPU clusters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interactive_gent/" class="md-nav__link">
+        HPC-UGent interactive and debug cluster
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crontab_gent/" class="md-nav__link">
+        Cron scripts
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_15" type="checkbox" id="__nav_15" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15">
+          Appendices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Appendices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick_reference_guide/" class="md-nav__link">
+        Appendix A - HPC Quick Reference Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torque_options/" class="md-nav__link">
+        Appendix B - TORQUE options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../useful_linux_commands/" class="md-nav__link">
+        Appendix C - Useful Linux Commands
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-worker-framework-parameter-sweeps" class="md-nav__link">
+    The worker Framework: Parameter Sweeps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-worker-framework-job-arrays" class="md-nav__link">
+    The Worker framework: Job arrays
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapreduce-prologues-and-epilogue" class="md-nav__link">
+    MapReduce: prologues and epilogue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-more-on-the-worker-framework" class="md-nav__link">
+    Some more on the Worker Framework
+  </a>
+  
+    <nav class="md-nav" aria-label="Some more on the Worker Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-worker-efficiently" class="md-nav__link">
+    Using Worker efficiently
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-a-worker-job" class="md-nav__link">
+    Monitoring a worker job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-limits-for-work-items" class="md-nav__link">
+    Time limits for work items
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resuming-a-worker-job" class="md-nav__link">
+    Resuming a Worker job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#further-information" class="md-nav__link">
+    Further information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="multi-job-submission">Multi-job submission<a class="headerlink" href="#multi-job-submission" title="Permanent link">#</a></h1>
+<p>A frequent occurring characteristic of scientific computation is their
+focus on data intensive processing. A typical example is the iterative
+evaluation of a program over different input parameter values, often
+referred to as a "<em>parameter sweep</em>". A <strong>Parameter Sweep</strong> runs a job a specified number of
+times, as if we sweep the parameter values through a user defined range.</p>
+<p>Users then often want to submit a large numbers of jobs based on the
+same job script but with (i) slightly different parameters settings or
+with (ii) different input files.</p>
+<p>These parameter values can have many forms, we can think about a range
+(e.g., from 1 to 100), or the parameters can be stored line by line in a
+comma-separated file. The users want to run their job once for each
+instance of the parameter values.</p>
+<p>One option could be to launch a lot of separate individual small jobs
+(one for each parameter) on the <abbr title="A group of compute nodes.">cluster</abbr>, but this is not a good idea.
+The <abbr title="A group of compute nodes.">cluster</abbr> scheduler isn't meant to deal with tons of small jobs. Those
+huge amounts of small jobs will create a lot of overhead, and can slow
+down the whole <abbr title="A group of compute nodes.">cluster</abbr>. It would be better to bundle those jobs in
+larger sets. In TORQUE, an experimental feature known as "<em>job arrays</em>"
+existed to allow the creation of multiple jobs with one <em>qsub</em> command,
+but is was not supported by <abbr title="Moab is a job scheduler, which allocates resources for jobs that are requesting resources.">Moab</abbr>, the current scheduler.</p>
+<p>The "<strong>Worker framework</strong>" has been developed to address this issue.</p>
+<p>It can handle many small jobs determined by:</p>
+<dl>
+<dt><strong>parameter variations</strong></dt>
+<dd>
+<p>i.e., many small jobs determined by a specific parameter set which
+is stored in a .csv (comma separated value) input file.</p>
+</dd>
+<dt><strong>job arrays</strong></dt>
+<dd>
+<p>i.e., each individual job got a unique numeric identifier.</p>
+</dd>
+</dl>
+<p>Both use cases often have a common root: the user wants to run a program
+with a large number of parameter settings, and the program does not
+allow for aggregation, i.e., it has to be run once for each instance of
+the parameter values.</p>
+<p>However, the Worker Framework's scope is wider: it can be used for any
+scenario that can be reduced to a <strong>MapReduce</strong> approach.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<h2 id="the-worker-framework-parameter-sweeps">The worker Framework: Parameter Sweeps<a class="headerlink" href="#the-worker-framework-parameter-sweeps" title="Permanent link">#</a></h2>
+<p>First go to the right directory:</p>
+<pre><code>$ <b>cd ~/examples/Multi-job-submission/par_sweep</b></code></pre>
+
+<p>Suppose the program the user wishes to run the "<em>weather</em>" program,
+which takes three parameters: a temperature, a pressure and a volume. A
+typical call of the program looks like:</p>
+<pre><code>$ <b>./weather -t 20 -p 1.05 -v 4.3</b>
+T: 20  P: 1.05  V: 4.3</code></pre>
+
+<p>For the purpose of this exercise, the weather program is just a simple
+bash script, which prints the 3 variables to the standard output and
+waits a bit:</p>
+<p style="text-align: center">par_sweep/weather</p>
+
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># Here you could do your calculations</span>
+<span class="nb">echo</span> <span class="s2">&quot;T: </span><span class="nv">$2</span><span class="s2">  P: </span><span class="nv">$4</span><span class="s2">  V: </span><span class="nv">$6</span><span class="s2">&quot;</span>
+sleep <span class="m">100</span>
+</code></pre></div>
+<p>A job script that would run this as a job for the first parameters (p01)
+would then look like:</p>
+<p style="text-align: center">par_sweep/weather_p01.pbs</p>
+
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#PBS -l nodes=1:ppn=8</span>
+<span class="c1">#PBS -l walltime=01:00:00</span>
+
+<span class="nb">cd</span> <span class="nv">$PBS_O_WORKDIR</span>
+./weather -t <span class="m">20</span> -p <span class="m">1</span>.05 -v <span class="m">4</span>.3
+</code></pre></div>
+<p>When submitting this job, the calculation is performed or this
+particular instance of the parameters, i.e., temperature = 20, pressure
+= 1.05, and volume = 4.3.</p>
+<p>To submit the job, the user would use:</p>
+<pre><code>$ <b>qsub weather_p01.pbs</b></code></pre>
+<p>However, the user wants to run this program for many parameter
+instances, e.g., he wants to run the program on 100 instances of
+temperature, pressure and volume. The 100 parameter instances can be
+stored in a comma separated value file (.csv) that can be generated
+using a spreadsheet program such as Microsoft Excel or RDBMS or just by
+hand using any text editor (do <strong>not</strong> use a word <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr> such as Microsoft
+Word). The first few lines of the file "<em>data.csv</em>" would look like:</p>
+<pre><code>$ <b>more data.csv</b>
+temperature, pressure, volume
+293, 1.0e5, 107
+294, 1.0e5, 106
+295, 1.0e5, 105
+296, 1.0e5, 104
+297, 1.0e5, 103
+...</code></pre>
+
+<p>It has to contain the names of the variables on the first line, followed
+by 100 parameter instances in the current example.</p>
+<p>In order to make our PBS generic, the PBS file can be modified as
+follows:</p>
+<p style="text-align: center">par_sweep/weather.pbs</p>
+
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#PBS -l nodes=1:ppn=8</span>
+<span class="c1">#PBS -l walltime=04:00:00</span>
+
+<span class="nb">cd</span> <span class="nv">$PBS_O_WORKDIR</span>
+./weather -t <span class="nv">$temperature</span> -p <span class="nv">$pressure</span> -v <span class="nv">$volume</span>
+
+<span class="c1"># # This script is submitted to the cluster with the following 2 commands:</span>
+<span class="c1"># module load worker/1.6.8-intel-2018a</span>
+<span class="c1"># wsub -data data.csv -batch weather.pbs</span>
+</code></pre></div>
+<p>Note that:</p>
+<ol>
+<li>
+<p>the parameter values 20, 1.05, 4.3 have been replaced by variables
+    $temperature, $pressure and $volume respectively, which were
+    being specified on the first line of the "<em>data.csv</em>" file;</p>
+</li>
+<li>
+<p>the number of processors per <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> has been increased to 8 (i.e.,
+    ppn=1 is replaced by ppn=8);</p>
+</li>
+<li>
+<p>the <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> has been increased to 4 hours (i.e., <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>=00:15:00
+    is replaced by <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>=04:00:00).</p>
+</li>
+</ol>
+<p>The <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> is calculated as follows: one calculation takes 15 minutes,
+so 100 calculations take 1500 minutes on one <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr>. However, this job will
+use 8 CPUs, so the 100 calculations will be done in 1500/8 = 187.5
+minutes, i.e., 4 hours to be on the safe side.</p>
+<p>The job can now be submitted as follows (to check which <code>worker</code> module
+to use, see subsection <a href="../running_batch_jobs/#using-explicit-version-numbers">Using explicit version numbers</a>):</p>
+<pre><code>$ <b>module load worker/1.6.8-intel-2018a</b>
+$ <b>wsub -batch weather.pbs -data data.csv</b>
+total number of work items: 41
+123456</code></pre>
+
+<p>Note that the PBS file is the value of the -batch option. The weather
+program will now be run for all 100 parameter instances -- 8
+concurrently -- until all computations are done. A computation for such
+a parameter instance is called a work item in Worker parlance.</p>
+<h2 id="the-worker-framework-job-arrays">The Worker framework: Job arrays<a class="headerlink" href="#the-worker-framework-job-arrays" title="Permanent link">#</a></h2>
+<p>First go to the right directory:</p>
+<pre><code>$ <b>cd ~/examples/Multi-job-submission/job_array</b></code></pre>
+
+<p>As a simple example, assume you have a serial program called <em>myprog</em>
+that you want to run on various input files <em>input[1-100]</em>.</p>
+<p><img alt="image" src="../img/img0702.png" style="display: block; margin: 0 auto; width: 3.22in; height: 2.36in" /></p>
+<p>The following bash script would submit these jobs all one by one:
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq <span class="m">1</span> <span class="m">100</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span>
+  qsub -o output <span class="nv">$i</span> -i input <span class="nv">$i</span> myprog.pbs
+<span class="k">done</span>
+</code></pre></div></p>
+<p>This, as said before, could be disturbing for the job scheduler.</p>
+<p>Alternatively, TORQUE provides a feature known as <em>job arrays</em> which
+allows the creation of multiple, similar jobs with only <strong>one qsub</strong> command. This
+feature introduced a new job naming convention that allows users either
+to reference the entire set of jobs as a unit or to reference one
+particular job from the set.</p>
+<p>Under TORQUE, the <em>-t range</em> option is used with qsub to specify a job
+array, where <em>range</em> is a range of numbers (e.g., <em>1-100</em> or <em>2,4-5,7</em>).</p>
+<p>The details are</p>
+<ol>
+<li>
+<p>a job is submitted for each <em>number</em> in the range;</p>
+</li>
+<li>
+<p>individuals jobs are referenced as <em>jobid-number</em>, and the entire
+    array can be referenced as <em>jobid</em> for easy killing etc.; and</p>
+</li>
+<li>
+<p>each job has <em>PBS_ARRAYID</em> set to its <em>number</em> which allows the
+    script/program to specialise for that job</p>
+</li>
+</ol>
+<p>The job could have been submitted using:</p>
+<pre><code>$ <b>qsub -t 1-100 my_prog.pbs</b></code></pre>
+
+<p>The effect was that rather than 1 job, the user would actually submit
+100 jobs to the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr> system. This was a popular feature of TORQUE, but
+as this technique puts quite a burden on the scheduler, it is not
+supported by <abbr title="Moab is a job scheduler, which allocates resources for jobs that are requesting resources.">Moab</abbr> (the current job scheduler).</p>
+<p>To support those users who used the feature and since it offers a
+convenient workflow, the "worker framework" implements the idea of "job
+arrays" in its own way.</p>
+<p>A typical job script for use with job arrays would look like this:</p>
+<p style="text-align: center">job_array/job_array.pbs</p>
+
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
+<span class="c1">#PBS -l nodes=1:ppn=1</span>
+<span class="c1">#PBS -l walltime=00:15:00</span>
+<span class="nb">cd</span> <span class="nv">$PBS_O_WORKDIR</span>
+<span class="nv">INPUT_FILE</span><span class="o">=</span><span class="s2">&quot;input_</span><span class="si">${</span><span class="nv">PBS_ARRAYID</span><span class="si">}</span><span class="s2">.dat&quot;</span>
+<span class="nv">OUTPUT_FILE</span><span class="o">=</span><span class="s2">&quot;output_</span><span class="si">${</span><span class="nv">PBS_ARRAYID</span><span class="si">}</span><span class="s2">.dat&quot;</span>
+my_prog -input <span class="si">${</span><span class="nv">INPUT_FILE</span><span class="si">}</span>  -output <span class="si">${</span><span class="nv">OUTPUT_FILE</span><span class="si">}</span>
+</code></pre></div>
+<p>In our specific example, we have prefabricated 100 input files in the
+"./input" subdirectory. Each of those files contains a number of
+parameters for the "test_set" program, which will perform some tests
+with those parameters.</p>
+<p>Input for the program is stored in files with names such as input_1.dat,
+input_2.dat, ..., input_100.dat in the ./input subdirectory.</p>
+<pre><code>$ <b>ls ./input</b>
+...
+$ <b>more ./input/input_99.dat</b>
+This is input file \#99
+Parameter #1 = 99
+Parameter #2 = 25.67
+Parameter #3 = Batch
+Parameter #4 = 0x562867</code></pre>
+
+<p>For the sole purpose of this exercise, we have provided a short
+"test_set" program, which reads the "input" files and just copies them
+into a corresponding output file. We even add a few lines to each output
+file. The corresponding output computed by our "<em>test_set</em>" program will
+be written to the <em>"./output</em>" directory in output_1.dat, output_2.dat,
+..., output_100.dat. files.</p>
+<p style="text-align: center">job_array/test_set</p>
+
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Check if the output Directory exists</span>
+<span class="k">if</span> <span class="o">[</span> ! -d <span class="s2">&quot;./output&quot;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+  mkdir ./output
+<span class="k">fi</span>
+
+<span class="c1">#   Here you could do your calculations...</span>
+<span class="nb">echo</span> <span class="s2">&quot;This is Job_array #&quot;</span> <span class="nv">$1</span>
+<span class="nb">echo</span> <span class="s2">&quot;Input File : &quot;</span> <span class="nv">$3</span>
+<span class="nb">echo</span> <span class="s2">&quot;Output File: &quot;</span> <span class="nv">$5</span>
+cat ./input/<span class="nv">$3</span> <span class="p">|</span> sed -e <span class="s2">&quot;s/input/output/g&quot;</span> <span class="p">|</span> grep -v <span class="s2">&quot;Parameter&quot;</span> &gt; ./output/<span class="nv">$5</span>
+<span class="nb">echo</span> <span class="s2">&quot;Calculations done, no results&quot;</span> &gt;&gt; ./output/<span class="nv">$5</span>
+</code></pre></div>
+<p>Using the "worker framework", a feature akin to job arrays can be used
+with minimal modifications to the job script:</p>
+<p style="text-align: center">job_array/test_set.pbs</p>
+
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
+<span class="c1">#PBS -l nodes=1:ppn=8</span>
+<span class="c1">#PBS -l walltime=04:00:00</span>
+<span class="nb">cd</span> <span class="nv">$PBS_O_WORKDIR</span>
+<span class="nv">INPUT_FILE</span><span class="o">=</span><span class="s2">&quot;input_</span><span class="si">${</span><span class="nv">PBS_ARRAYID</span><span class="si">}</span><span class="s2">.dat&quot;</span>
+<span class="nv">OUTPUT_FILE</span><span class="o">=</span><span class="s2">&quot;output_</span><span class="si">${</span><span class="nv">PBS_ARRAYID</span><span class="si">}</span><span class="s2">.dat&quot;</span>
+./test_set <span class="si">${</span><span class="nv">PBS_ARRAYID</span><span class="si">}</span> -input <span class="si">${</span><span class="nv">INPUT_FILE</span><span class="si">}</span>  -output <span class="si">${</span><span class="nv">OUTPUT_FILE</span><span class="si">}</span>
+</code></pre></div>
+<p>Note that</p>
+<ol>
+<li>
+<p>the number of CPUs is increased to 8 (ppn=1 is replaced by ppn=8);
+    and</p>
+</li>
+<li>
+<p>the <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> has been modified (<abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>=00:15:00 is replaced by
+    <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>=04:00:00).</p>
+</li>
+</ol>
+<p>The job is now submitted as follows:</p>
+<pre><code>$ <b>module load worker/1.6.8-intel-2018a</b>
+$ <b>wsub -t 1-100 -batch test_set.pbs</b>
+total number of work items: 100
+123456</code></pre>
+
+<p>The "<em>test_set</em>" program will now be run for all 100 input files -- 8
+concurrently -- until all computations are done. Again, a computation
+for an individual input file, or, equivalently, an array id, is called a
+work item in Worker speak.</p>
+<p>Note that in contrast to TORQUE job arrays, a worker job array only
+submits a single job.</p>
+<pre><code>$ <b>qstat</b>
+Job id          Name          User      Time   Use S Queue
+--------------- ------------- --------- ---- ----- - -----
+123456  test_set.pbs  vsc40000          0 Q
+
+And you can now check the generated output files:
+$ <b>more ./output/output_99.dat</b>
+This is output file #99
+Calculations done, no results
+</code></pre>
+
+<h2 id="mapreduce-prologues-and-epilogue">MapReduce: prologues and epilogue<a class="headerlink" href="#mapreduce-prologues-and-epilogue" title="Permanent link">#</a></h2>
+<p>Often, an embarrassingly parallel computation can be abstracted to three
+simple steps:</p>
+<ol>
+<li>
+<p>a preparation phase in which the data is split up into smaller, more
+    manageable chunks;</p>
+</li>
+<li>
+<p>on these chunks, the same algorithm is applied independently (these
+    are the work items); and</p>
+</li>
+<li>
+<p>the results of the computations on those chunks are aggregated into,
+    e.g., a statistical description of some sort.</p>
+</li>
+</ol>
+<p><img alt="image" src="../img/img0703.png" style="display: block; margin: 0 auto; width: 2.40in; height: 2.78in" /></p>
+<p>The Worker framework directly supports this scenario by using a prologue
+(pre-processing) and an epilogue (post-processing). The former is
+executed just once before work is started on the work items, the latter
+is executed just once after the work on all work items has finished.
+Technically, the master, i.e., the process that is responsible for
+dispatching work and logging progress, executes the prologue and
+epilogue.</p>
+<pre><code>$ <b>cd ~/examples/Multi-job-submission/map_reduce</b></code></pre>
+
+<p>The script "pre.sh" prepares the data by creating 100 different
+input-files, and the script "post.sh" aggregates (concatenates) the
+data.</p>
+<p>First study the scripts:</p>
+<p style="text-align: center">map_reduce/pre.sh</p>
+
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Check if the input Directory exists</span>
+<span class="k">if</span> <span class="o">[</span> ! -d <span class="s2">&quot;./input&quot;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+  mkdir ./input
+<span class="k">fi</span>
+
+<span class="c1"># Just generate all dummy input files</span>
+<span class="k">for</span> i <span class="k">in</span> <span class="o">{</span><span class="m">1</span>..100<span class="o">}</span><span class="p">;</span> 
+<span class="k">do</span>
+  <span class="nb">echo</span> <span class="s2">&quot;This is input file #</span><span class="nv">$i</span><span class="s2">&quot;</span> &gt;  ./input/input_<span class="nv">$i</span>.dat 
+  <span class="nb">echo</span> <span class="s2">&quot;Parameter #1 = </span><span class="nv">$i</span><span class="s2">&quot;</span> &gt;&gt;  ./input/input_<span class="nv">$i</span>.dat 
+  <span class="nb">echo</span> <span class="s2">&quot;Parameter #2 = 25.67&quot;</span> &gt;&gt;  ./input/input_<span class="nv">$i</span>.dat
+  <span class="nb">echo</span> <span class="s2">&quot;Parameter #3 = Batch&quot;</span> &gt;&gt;  ./input/input_<span class="nv">$i</span>.dat
+  <span class="nb">echo</span> <span class="s2">&quot;Parameter #4 = 0x562867&quot;</span> &gt;&gt;  ./input/input_<span class="nv">$i</span>.dat
+<span class="k">done</span>
+</code></pre></div>
+<p style="text-align: center">map_reduce/post.sh</p>
+
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Check if the input Directory exists</span>
+<span class="k">if</span> <span class="o">[</span> ! -d <span class="s2">&quot;./output&quot;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> <span class="s2">&quot;The output directory does not exist!&quot;</span>
+  <span class="nb">exit</span>
+<span class="k">fi</span>
+
+<span class="c1"># Just concatenate all output files</span>
+touch all_output.txt
+<span class="k">for</span> i <span class="k">in</span> <span class="o">{</span><span class="m">1</span>..100<span class="o">}</span><span class="p">;</span> 
+<span class="k">do</span>
+  cat ./output/output_<span class="nv">$i</span>.dat &gt;&gt; all_output.txt
+<span class="k">done</span>
+</code></pre></div>
+<p>Then one can submit a MapReduce style job as follows:</p>
+<pre><code>$ <b>wsub</b> -prolog pre.sh -batch test_set.pbs -epilog post.sh -t 1-100
+total number of work items: 100
+123456
+$ <b>cat all_output.txt</b>
+...
+$ <b>rm -r -f ./output/</b></code></pre>
+
+<p>Note that the time taken for executing the prologue and the epilogue
+should be added to the job's total <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>.</p>
+<h2 id="some-more-on-the-worker-framework">Some more on the Worker Framework<a class="headerlink" href="#some-more-on-the-worker-framework" title="Permanent link">#</a></h2>
+<h3 id="using-worker-efficiently">Using Worker efficiently<a class="headerlink" href="#using-worker-efficiently" title="Permanent link">#</a></h3>
+<p>The "Worker Framework" is implemented using <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>, so it is not restricted
+to a single compute nodes, it scales well to multiple nodes. However,
+remember that jobs requesting a large number of nodes typically spend
+quite some time in the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr>.</p>
+<p>The "Worker Framework" will be effective when</p>
+<ol>
+<li>
+<p>work items, i.e., individual computations, are neither too short,
+    nor too long (i.e., from a few minutes to a few hours); and,</p>
+</li>
+<li>
+<p>when the number of work items is larger than the number of CPUs
+    involved in the job (e.g., more than 30 for 8 CPUs).</p>
+</li>
+</ol>
+<h3 id="monitoring-a-worker-job">Monitoring a worker job<a class="headerlink" href="#monitoring-a-worker-job" title="Permanent link">#</a></h3>
+<p>Since a Worker job will typically run for several hours, it may be
+reassuring to monitor its progress. Worker keeps a log of its activity
+in the directory where the job was submitted. The log's name is derived
+from the job's name and the job's ID, i.e., it has the form
+<code>&lt;jobname&gt;.log&lt;jobid&gt;</code>. For the running example, this could be
+<code>run.pbs.log123456</code>, assuming the job's ID is 123456. To keep an eye on the
+progress, one can use:</p>
+<pre><code>$ <b>tail -f run.pbs.log123456</b></code></pre>
+
+<p>Alternatively, <code>wsummarize</code>, a Worker command that summarises a log
+file, can be used:</p>
+<pre><code>$ <b>watch -n 60 wsummarize run.pbs.log123456</b></code></pre>
+
+<p>This will summarise the log file every 60 seconds.</p>
+<h3 id="time-limits-for-work-items">Time limits for work items<a class="headerlink" href="#time-limits-for-work-items" title="Permanent link">#</a></h3>
+<p>Sometimes, the execution of a work item takes long than expected, or
+worse, some work items get stuck in an infinite loop. This situation is
+unfortunate, since it implies that work items that could successfully
+execute are not even started. Again, the Worker framework offers a
+simple and yet versatile solution. If we want to limit the execution of
+each work item to at most 20 minutes, this can be accomplished by
+modifying the script of the running example.
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
+<span class="c1">#PBS -l nodes=1:ppn=8</span>
+<span class="c1">#PBS -l walltime=04:00:00</span>
+module load timedrun/1.0
+<span class="nb">cd</span> <span class="nv">$PBS_O_WORKDIR</span>
+timedrun -t <span class="m">00</span>:20:00 weather -t <span class="nv">$temperature</span>  -p <span class="nv">$pressure</span>  -v <span class="nv">$volume</span>
+</code></pre></div></p>
+<p>Note that it is trivial to set individual time constraints for work
+items by introducing a parameter, and including the values of the latter
+in the CSV file, along with those for the temperature, pressure and
+volume.</p>
+<p>Also note that "timedrun" is in fact offered in a module of its own, so
+it can be used outside the Worker framework as well.</p>
+<h3 id="resuming-a-worker-job">Resuming a Worker job<a class="headerlink" href="#resuming-a-worker-job" title="Permanent link">#</a></h3>
+<p>Unfortunately, it is not always easy to estimate the <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> for a job,
+and consequently, sometimes the latter is underestimated. When using the
+Worker framework, this implies that not all work items will have been
+processed. Worker makes it very easy to resume such a job without having
+to figure out which work items did complete successfully, and which
+remain to be computed. Suppose the job that did not complete all its
+work items had ID "445948".</p>
+<pre><code>$ <b>wresume -jobid 123456</b></code></pre>
+
+<p>This will submit a new job that will start to work on the work items
+that were not done yet. Note that it is possible to change almost all
+job parameters when resuming, specifically the requested resources such
+as the number of cores and the <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>.</p>
+<pre><code>$ <b>wresume -l walltime=1:30:00 -jobid 123456}</b></code></pre>
+
+<p>Work items may fail to complete successfully for a variety of reasons,
+e.g., a data file that is missing, a (minor) programming error, etc.
+Upon resuming a job, the work items that failed are considered to be
+done, so resuming a job will only execute work items that did not
+terminate either successfully, or reporting a failure. It is also
+possible to retry work items that failed (preferably after the glitch
+why they failed was fixed).</p>
+<pre><code>$ <b>wresume -jobid 123456 -retry</b></code></pre>
+
+<p>By default, a job's prologue is not executed when it is resumed, while
+its epilogue is. "wresume" has options to modify this default behaviour.</p>
+<h3 id="further-information">Further information<a class="headerlink" href="#further-information" title="Permanent link">#</a></h3>
+<p>This how-to introduces only Worker's basic features. The wsub command
+has some usage information that is printed when the -help option is
+specified:</p>
+<pre><code>$ <b>wsub -help</b>
+### usage: wsub  -batch &lt;batch-file&gt;          
+#                [-data &lt;data-files&gt;]         
+#                [-prolog &lt;prolog-file&gt;]      
+#                [-epilog &lt;epilog-file&gt;]      
+#                [-log &lt;log-file&gt;]            
+#                [-mpiverbose]                
+#                [-dryrun] [-verbose]         
+#                [-quiet] [-help]             
+#                [-t &lt;array-req&gt;]             
+#                [&lt;pbs-qsub-options&gt;]
+#
+#   -batch &lt;batch-file&gt;   : batch file template, containing variables to be
+#                           replaced with data from the data file(s) or the
+#                           PBS array request option
+#   -data &lt;data-files&gt;    : comma-separated list of data files (default CSV
+#                           files) used to provide the data for the work
+#                           items
+#   -prolog &lt;prolog-file&gt; : prolog script to be executed before any of the
+#                           work items are executed
+#   -epilog &lt;epilog-file&gt; : epilog script to be executed after all the work
+#                           items are executed
+#   -mpiverbose           : pass verbose flag to the underlying MPI program
+#   -verbose              : feedback information is written to standard error
+#   -dryrun               : run without actually submitting the job, useful
+#   -quiet                : don't show information
+#   -help                 : print this help message
+#   -t &lt;array-req&gt;        : qsub's PBS array request options, e.g., 1-10
+#   &lt;pbs-qsub-options&gt;    : options passed on to the queue submission
+#                           command
+</code></pre>
+
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>MapReduce: 'Map' refers to the map pattern in which every item in
+a collection is mapped onto a new value by applying a given
+function, while "reduce" refers to the reduction pattern which
+condenses or reduces a collection of previously computed results to
+a single value.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../fine_tuning_job_specifications/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Fine-tuning Job Specifications" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Fine-tuning Job Specifications
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../compiling_your_software/" class="md-footer__link md-footer__link--next" aria-label="Next: Compiling and testing your software on the HPC" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Compiling and testing your software on the HPC
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.expand", "navigation.tracking", "toc.follow", "navigation.sections", "navigation.instant", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

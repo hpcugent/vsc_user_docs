@@ -1,0 +1,632 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Upload and manage images - VSC Tier-1 Cloud Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#upload-and-manage-images" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VSC Tier-1 Cloud Documentation" class="md-header__button md-logo" aria-label="VSC Tier-1 Cloud Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSC Tier-1 Cloud Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Upload and manage images
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VSC Tier-1 Cloud Documentation" class="md-nav__button md-logo" aria-label="VSC Tier-1 Cloud Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    VSC Tier-1 Cloud Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../access/" class="md-nav__link">
+        Access to the VSC Cloud
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard/" class="md-nav__link">
+        The OpenStack Dashboard
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Upload and manage images
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flavors/" class="md-nav__link">
+        Instance types and flavors
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configure_instances/" class="md-nav__link">
+        Configure access and security for instance
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../launch_instance/" class="md-nav__link">
+        Launch and manage instances
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manage_volumes/" class="md-nav__link">
+        Create and manage volumes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat_templates/" class="md-nav__link">
+        Orchestration Using Heat
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terraform/" class="md-nav__link">
+        Orchestration Using Terraform
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shares/" class="md-nav__link">
+        Shared file systems using Manila
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpus/" class="md-nav__link">
+        GPUs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/" class="md-nav__link">
+        Appendix
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="upload-and-manage-images">Upload and manage images<a class="headerlink" href="#upload-and-manage-images" title="Permanent link">#</a></h1>
+<p>A virtual machine image, referred to in this document simply as an
+image, is a single file that contains a virtual disk that has a bootable
+operating system installed on it. Images are used to create virtual
+machine instances within the cloud. The image files themselves are never
+modified, but you can copy the image into a persistent instance (see
+chapter 6.</p>
+<p>As a user of the VSC cloud, you can upload and manage your own virtual
+machine images. For information about creating image files, see the
+<a href="https://docs.openstack.org/image-guide/"><abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> Virtual Machine Image
+Guide</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Shared storage in the VSC cloud is connected to a separate network,
+which is only accessible from within the <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> environment.
+Therefore, if you want to access your VM from outside of <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr>, and
+use the shared storage at the same time, you must make sure your VM
+image is configured use multiple network interface cards (NICs).</p>
+</div>
+<p>You can choose who can access an image you have created. The following
+access policies for images exist:</p>
+<p><strong>public</strong></p>
+<p>Public images are provided by the VSC, and can be accessed by all
+users.</p>
+<p><strong>private</strong></p>
+<p>If you create a private image, only members of the same project have
+access.</p>
+<p><strong>shared</strong></p>
+<p>You can also choose to <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr> your image with a list of other
+projects.</p>
+<p><strong>community</strong></p>
+<p>Community images are user-created images which are freely accessible
+to all other users.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can also use the <strong>openstack</strong> and <strong>glance</strong> command-line clients
+or the Image service to manage images.</p>
+</div>
+<h4 id="upload-an-image">Upload an image<a class="headerlink" href="#upload-an-image" title="Permanent link">#</a></h4>
+<p>Follow this procedure to upload an image to a project:</p>
+<ol>
+<li>
+<p>Open the Compute tab and click Images category.</p>
+</li>
+<li>
+<p>Click Create Image.</p>
+<p>The Create An Image dialog box appears.</p>
+<p><img alt="image" src="../img/tab-compute-images-create.png" /></p>
+</li>
+<li>
+<p>Enter the following values:</p>
+<ol>
+<li>
+<p><strong>Image Name</strong>: Enter a name for the image.</p>
+</li>
+<li>
+<p><strong>Image Description</strong>: Enter a brief description of the image.</p>
+</li>
+<li>
+<p><strong>Image Source</strong></p>
+<ul>
+<li><strong>File:</strong> Browse for the image file on your file system and add it.</li>
+<li><strong>Format:</strong> Select the image format (for example, QCOW2) for the image.</li>
+</ul>
+</li>
+<li>
+<p><strong>Image Requirements</strong></p>
+<ul>
+<li><strong>Architecture:</strong>
+Specify the architecture. For example, for a 32-bit architecture or for a 64-bit architecture.</li>
+<li><strong>Kernel, Ramdisk:</strong>
+Can be left empty, as this is determined by the image file.</li>
+<li><strong>Minimum Disk (GB), Minimum RAM (MB):</strong>
+Choose suitable values, according to the requirements of your image's operating system.</li>
+</ul>
+</li>
+<li>
+<dl>
+<dt><strong>Protected</strong></dt>
+<dd>If set to <strong>Yes</strong>, users need to unlock the image before they are able
+to delete it.</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt><strong>Metadata</strong></dt>
+<dd>You can add resource metadata in this tab. The glance Metadata
+Catalog provides a list of metadata image definitions.</dd>
+</dl>
+</li>
+</ol>
+</li>
+<li>
+<p>Click <strong>Create Image</strong>. The image is queued to be uploaded. It might take some time
+    before the status changes from Queued to Active.</p>
+</li>
+</ol>
+<h4 id="update-an-image">Update an image<a class="headerlink" href="#update-an-image" title="Permanent link">#</a></h4>
+<p>Follow this procedure to update an existing image.</p>
+<ol>
+<li>
+<p>Open the project tab and click the Images category.</p>
+</li>
+<li>
+<p>Select the image that you want to edit.</p>
+</li>
+<li>
+<p>In the Actions column, open the drop-down menu and select <strong>Edit Image</strong>.</p>
+</li>
+<li>
+<p>In the Edit Image dialog box, you can perform various actions. For
+    example:</p>
+<ul>
+<li>
+<p>Change the name of the image.</p>
+</li>
+<li>
+<p>Change the description of the image.</p>
+</li>
+<li>
+<p>Change the format of the image.</p>
+</li>
+<li>
+<p>Change the minimum disk of the image.</p>
+</li>
+<li>
+<p>Change the minimum RAM of the image.</p>
+</li>
+<li>
+<p>Change the protected status of the image.</p>
+</li>
+<li>
+<p>Change the metadata of the image.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Edit Image</strong>.</p>
+</li>
+</ol>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../dashboard/" class="md-footer__link md-footer__link--prev" aria-label="Previous: The OpenStack Dashboard" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              The OpenStack Dashboard
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../flavors/" class="md-footer__link md-footer__link--next" aria-label="Next: Instance types and flavors" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Instance types and flavors
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.expand", "navigation.tracking", "toc.follow", "navigation.sections", "navigation.instant", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

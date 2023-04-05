@@ -1,0 +1,1460 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Troubleshooting - VSC User Documentation - Gent (Windows)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#troubleshooting" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VSC User Documentation - Gent (Windows)" class="md-header__button md-logo" aria-label="VSC User Documentation - Gent (Windows)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSC User Documentation - Gent (Windows)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Troubleshooting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VSC User Documentation - Gent (Windows)" class="md-nav__button md-logo" aria-label="VSC User Documentation - Gent (Windows)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    VSC User Documentation - Gent (Windows)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        Introduction to HPC
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        Getting an HPC Account
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connecting/" class="md-nav__link">
+        Connecting to the HPC infrastructure
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_batch_jobs/" class="md-nav__link">
+        Running batch jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_interactive_jobs/" class="md-nav__link">
+        Running interactive jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_jobs_with_input_output_data/" class="md-nav__link">
+        Running jobs with input/output data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_core_jobs/" class="md-nav__link">
+        Multi core jobs/Parallel Computing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_portal/" class="md-nav__link">
+        Using the HPC-UGent web portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdmod/" class="md-nav__link">
+        XDMoD portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Troubleshooting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Troubleshooting
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#walltime-issues" class="md-nav__link">
+    Walltime issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#out-of-quota-issues" class="md-nav__link">
+    Out of quota issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sec:connecting-issues" class="md-nav__link">
+    Issues connecting to login node
+  </a>
+  
+    <nav class="md-nav" aria-label="Issues connecting to login node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change-putty-private-key-for-a-saved-configuration" class="md-nav__link">
+    Change PuTTY private key for a saved configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-whether-your-private-key-in-putty-matches-the-public-key-on-the-accountpage" class="md-nav__link">
+    Check whether your private key in PuTTY matches the public key on the accountpage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-warning-about-invalid-host-key" class="md-nav__link">
+    Security warning about invalid host key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doswindows-text-format" class="md-nav__link">
+    DOS/Windows text format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warning-message-when-first-connecting-to-new-host" class="md-nav__link">
+    Warning message when first connecting to new host
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-limits" class="md-nav__link">
+    Memory limits
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory limits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-will-i-know-if-memory-limits-are-the-cause-of-my-problem" class="md-nav__link">
+    How will I know if memory limits are the cause of my problem?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-specify-the-amount-of-memory-i-need" class="md-nav__link">
+    How do I specify the amount of memory I need?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-conflicts" class="md-nav__link">
+    Module conflicts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-software-that-is-incompatible-with-host" class="md-nav__link">
+    Running software that is incompatible with host
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sites/hpc_policies/" class="md-nav__link">
+        HPC Policies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Advanced topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced topics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fine_tuning_job_specifications/" class="md-nav__link">
+        Fine-tuning Job Specifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_job_submission/" class="md-nav__link">
+        Multi-job submission
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiling_your_software/" class="md-nav__link">
+        Compiling and testing your software on the HPC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program_examples/" class="md-nav__link">
+        Program examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jobscript_examples/" class="md-nav__link">
+        Job script examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_practices/" class="md-nav__link">
+        Best Practices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpu_gent/" class="md-nav__link">
+        HPC-UGent GPU clusters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interactive_gent/" class="md-nav__link">
+        HPC-UGent interactive and debug cluster
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crontab_gent/" class="md-nav__link">
+        Cron scripts
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_15" type="checkbox" id="__nav_15" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15">
+          Appendices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Appendices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick_reference_guide/" class="md-nav__link">
+        Appendix A - HPC Quick Reference Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torque_options/" class="md-nav__link">
+        Appendix B - TORQUE options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../useful_linux_commands/" class="md-nav__link">
+        Appendix C - Useful Linux Commands
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#walltime-issues" class="md-nav__link">
+    Walltime issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#out-of-quota-issues" class="md-nav__link">
+    Out of quota issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sec:connecting-issues" class="md-nav__link">
+    Issues connecting to login node
+  </a>
+  
+    <nav class="md-nav" aria-label="Issues connecting to login node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change-putty-private-key-for-a-saved-configuration" class="md-nav__link">
+    Change PuTTY private key for a saved configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-whether-your-private-key-in-putty-matches-the-public-key-on-the-accountpage" class="md-nav__link">
+    Check whether your private key in PuTTY matches the public key on the accountpage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-warning-about-invalid-host-key" class="md-nav__link">
+    Security warning about invalid host key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doswindows-text-format" class="md-nav__link">
+    DOS/Windows text format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warning-message-when-first-connecting-to-new-host" class="md-nav__link">
+    Warning message when first connecting to new host
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-limits" class="md-nav__link">
+    Memory limits
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory limits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-will-i-know-if-memory-limits-are-the-cause-of-my-problem" class="md-nav__link">
+    How will I know if memory limits are the cause of my problem?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-specify-the-amount-of-memory-i-need" class="md-nav__link">
+    How do I specify the amount of memory I need?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-conflicts" class="md-nav__link">
+    Module conflicts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-software-that-is-incompatible-with-host" class="md-nav__link">
+    Running software that is incompatible with host
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h1>
+<h2 id="walltime-issues">Walltime issues<a class="headerlink" href="#walltime-issues" title="Permanent link">#</a></h2>
+<p>If you get from your job output an error message similar to this:</p>
+<pre><code>=>> PBS: job killed: walltime <i>&lt;value in seconds&gt; exceeded limit  &lt;value in seconds&gt;</i>
+</code></pre>
+
+<p>This occurs when your job did not complete within the requested
+<abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>. See
+section on <a href="../fine_tuning_job_specifications/#specifying-walltime">Specifying Walltime</a> for more information
+about how to request the <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>. It is recommended to use
+<em>checkpointing</em> if the job requires <strong>72 hours</strong> of <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> or more to be executed.</p>
+<!-- FIXME: Refer to Checkpointing section. -->
+
+<h2 id="out-of-quota-issues">Out of quota issues<a class="headerlink" href="#out-of-quota-issues" title="Permanent link">#</a></h2>
+<p>Sometimes a job hangs at some point or it stops writing in the disk.
+These errors are usually related to the quota usage. You may have
+reached your quota limit at some storage endpoint. You should move (or
+remove) the data to a different storage endpoint (or request more quota)
+to be able to write to the disk and then resubmit the jobs. </p>
+<p>Another
+option is to request extra quota for your VO to the VO moderator/s. See
+section on <a href="../running_jobs_with_input_output_data/#pre-defined-user-directories">Pre-defined user directories</a> and <a href="../running_jobs_with_input_output_data/#pre-defined-quotas">Pre-defined quotas</a> for more information about quotas
+and how to use the storage endpoints in an efficient way.</p>
+<!-- FIXME: Add how to request quota section -->
+
+<h2 id="sec:connecting-issues">Issues connecting to <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr><a class="headerlink" href="#sec:connecting-issues" title="Permanent link">#</a></h2>
+<p>If you are confused about the <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> public/private key pair concept, maybe
+the key/lock analogy in <a href="../account/#how-do-ssh-keys-work">How do <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> keys work?</a> can help.</p>
+<p>If you have errors that look like:</p>
+<pre><code>vsc40000@login.hpc.ugent.be: Permission denied
+</code></pre>
+
+<p>or you are experiencing problems with connecting, here is a list of
+things to do that should help:</p>
+<ol>
+<li>
+<p>Keep in mind that it an take up to an hour for your VSC account to
+    become active after it has been <em>approved</em>; until then, logging in
+    to your VSC account will not work.</p>
+</li>
+<li>
+<p>Make sure you are connecting from an IP address that is allowed to
+    access the VSC login nodes, see
+    section <a href="../connecting/#connection-restrictions">Connection restrictions</a>
+    for more information.</p>
+</li>
+<li>
+<p>Please double/triple check your VSC login ID. It should look
+    something like <em>vsc40000</em>: the letters <code>vsc</code>, followed by exactly 5 digits.
+    Make sure it's the same one as the one on
+    <a href="https://account.vscentrum.be/">https://account.vscentrum.be/</a>.</p>
+</li>
+<li>
+<p>You previously connected to the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> from another machine, but now have
+    another machine? Please follow the procedure for adding additional
+    keys in section <a href="../account/#adding-multiple-ssh-public-keys-optional">Adding multiple <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> public keys</a>. You may need to wait for
+    15-20 minutes until the <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> public key(s) you added become active.</p>
+</li>
+<li>
+<p>Make sure you are using the private key (not the public key) when
+trying to connect: If you followed the manual, the private key
+filename should end in <code>.ppk</code> (not in <code>.pub</code>). </p>
+</li>
+<li>
+<p>If you have multiple private keys on your machine, please make sure
+    you are using the one that corresponds to (one of) the public key(s)
+    you added on <a href="https://account.vscentrum.be/">https://account.vscentrum.be/</a>.</p>
+</li>
+<li>
+<p>Please do not use someone else's private keys. You must never <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr>
+    your private key, they're called <em>private</em> for a good reason.</p>
+</li>
+</ol>
+<p>If you are using PuTTY and get this error message:</p>
+<pre><code>server unexpectedly closed network connection
+</code></pre>
+
+<p>it is possible that the PuTTY version you are using is too old and
+doesn't support some required (security-related) features.</p>
+<p>Make sure you are using the latest PuTTY version if you are encountering
+problems connecting (see <a href="../account/#get-putty-a-free-telnetssh-client">Get PuTTY</a>). If that doesn't help, please contact hpc@ugent.be.</p>
+<p>If you've tried all applicable items above and it doesn't solve your
+problem, please contact hpc@ugent.be and include the following information:</p>
+<p>Please create a log file of your <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> session by following the steps in
+<a href="https://my.kualo.com/knowledgebase/?kbcat=0&amp;article=888">this article</a>
+and include it in the email.</p>
+<h3 id="change-putty-private-key-for-a-saved-configuration">Change PuTTY private key for a saved configuration<a class="headerlink" href="#change-putty-private-key-for-a-saved-configuration" title="Permanent link">#</a></h3>
+<ol>
+<li>
+<p>Open PuTTY</p>
+</li>
+<li>
+<p>Single click on the saved configuration</p>
+<p><center>
+<img alt="image" src="../img/831change01.png" />
+<center></p>
+</li>
+<li>
+<p>Then click <span class="keys"><kbd>Load</kbd></span> button</p>
+<p><center>
+<img alt="image" src="../img/831change02.png" />
+</center></p>
+</li>
+<li>
+<p>Expand <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> category (on the left panel) clicking on the "+" next
+    to <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr></p>
+<p><center>
+<img alt="image" src="../img/831change03.png" />
+</center></p>
+</li>
+<li>
+<p>Click on Auth under the <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> category</p>
+<p><center>
+<img alt="image" src="../img/831change04.png" />
+</center></p>
+</li>
+<li>
+<p>On the right panel, click <span class="keys"><kbd>Browse</kbd></span> button</p>
+<p><center>
+<img alt="image" src="../img/831change05.png" />
+</center></p>
+</li>
+<li>
+<p>Then search your private key on your computer (with the extension
+    ".ppk")</p>
+</li>
+<li>
+<p>Go back to the top of category, and click Session</p>
+<p><center>
+<img alt="image" src="../img/831change06.png" />
+</center></p>
+</li>
+<li>
+<p>On the right panel, click on <span class="keys"><kbd>Save</kbd></span> button</p>
+<p><center>
+<img alt="image" src="../img/831change07.png" />
+</center></p>
+</li>
+</ol>
+<h3 id="check-whether-your-private-key-in-putty-matches-the-public-key-on-the-accountpage">Check whether your private key in PuTTY matches the public key on the accountpage<a class="headerlink" href="#check-whether-your-private-key-in-putty-matches-the-public-key-on-the-accountpage" title="Permanent link">#</a></h3>
+<p>Follow the instructions in <a href="../troubleshooting/#change-putty-private-key-for-a-saved-configuration">Change PuTTY private key for a saved configuration</a> util item 5, then:</p>
+<ol>
+<li>
+<p>Single click on the textbox containig the path to your private key,
+    then select all text (push <span class="keys"><kbd>Ctrl</kbd></span> + <span class="keys"><kbd>a</kbd></span> ), then copy the location of the
+    private key (push <span class="keys"><kbd>Ctrl</kbd></span> + <span class="keys"><kbd>c</kbd></span>)</p>
+<p><center>
+<img alt="image" src="../img/832check05.png" />
+</center></p>
+</li>
+<li>
+<p>Open PuTTYgen</p>
+<p><center>
+<img alt="image" src="../img/832check06.png" />
+</center></p>
+</li>
+<li>
+<p>Enter menu item "File" and select "Load Private key"</p>
+<p><center>
+<img alt="image" src="../img/832check07.png" />
+</center></p>
+</li>
+<li>
+<p>On the "Load private key" popup, click in the textbox next to
+    "File name:", then paste the location of your private key (push <span class="keys"><kbd>Ctrl</kbd></span> + <span class="keys"><kbd>v</kbd></span>), then click <span class="keys"><kbd>Open</kbd></span></p>
+<p><center>
+<img alt="image" src="../img/832check08.png" />
+</center></p>
+</li>
+<li>
+<p>Make sure that your Public key from the "Public key for pasting
+    into OpenSSH authorized_keys file" textbox is in your "Public
+    keys" section on the accountpage <a href="https://account.vscentrum.be">https://account.vscentrum.be</a>.
+    (Scroll down to the bottom of "View Account" tab, you will find
+    there the "Public keys" section)</p>
+<p><center>
+<img alt="image" src="../img/832check09.png" />
+</center></p>
+</li>
+</ol>
+<h2 id="security-warning-about-invalid-host-key">Security warning about invalid host key<a class="headerlink" href="#security-warning-about-invalid-host-key" title="Permanent link">#</a></h2>
+<p>If you get a warning that looks like the one below, it is possible that
+someone is trying to intercept the connection between you and the system
+you are connecting to. Another possibility is that the host key of the
+system you are connecting to has changed.</p>
+<p>You will need to verify that the fingerprint shown in the dialog matches
+one of the following fingerprints:</p>
+<pre><code>- ssh-rsa 2048 10:2f:31:21:04:75:cb:ed:67:e0:d5:0c:a1:5a:f4:78
+- ssh-rsa 2048 SHA256:W8Wz0/FkkCR2ulN7+w8tNI9M0viRgFr2YlHrhKD2Dd0
+- ssh-ed25519 255 19:28:76:94:52:9d:ff:7d:fb:8b:27:b6:d7:69:42:eb
+- ssh-ed25519 256 SHA256:8AJg3lPN27y6i+um7rFx3xoy42U8ZgqNe4LsEycHILA
+- ssh-ecdsa 256 e6:d2:9c:d8:e7:59:45:03:4a:1f:dc:96:62:29:9c:5f
+- ssh-ecdsa 256 SHA256:C8TVx0w8UjGgCQfCmEUaOPxJGNMqv2PXLyBNODe5eOQ
+
+</code></pre>
+
+<p><strong>Do not click "Yes" until you verified the fingerprint. Do not press "No" in any case.</strong></p>
+<p>If it the fingerprint matches, click "Yes".</p>
+<p>If it doesn't (like in the example) or you are in doubt, take a screenshot, press "Cancel" and contact hpc@ugent.be.</p>
+<p><em>Note:</em> it is possible that the <code>ssh-ed25519</code> fingerprint starts with <code>ssh-ed25519 255</code>
+rather than <code>ssh-ed25519 256</code> (or vice versa), depending on the PuTTY version you are using.
+It is safe to ignore this <code>255</code> versus <code>256</code> difference, but the part after should be
+<strong>identical</strong>.</p>
+<p><center>
+<img alt="image" src="../img/putty_security_alert.jpg" />
+</center></p>
+<p>If you use X2Go client, you might get one of the following fingerprints:</p>
+<ul>
+<li>ssh-rsa 2048 53:25:8c:1e:72:8b:ce:87:3e:54:12:44:a7:13:1a:89:e4:15:b6:8e</li>
+<li>ssh-ed25519 255 e3:cc:07:64:78:80:28:ec:b8:a8:8f:49:44:d1:1e:dc:cc:0b:c5:6b</li>
+<li>ssh-ecdsa 256 67:6c:af:23:cc:a1:72:09:f5:45:f1:60:08:e8:98:ca:31:87:58:6c</li>
+</ul>
+<p><strong>If you get a message "Host key for server changed", do not click "No" until you verified the fingerprint.</strong></p>
+<p>If the fingerprint matches, click "No", and in the next pop-up screen ("if you accept the new host key..."), press "Yes".</p>
+<p>If it doesn't, or you are in doubt, take a screenshot, press "Yes" and contact hpc@ugent.be.</p>
+<h2 id="doswindows-text-format">DOS/Windows text format<a class="headerlink" href="#doswindows-text-format" title="Permanent link">#</a></h2>
+<p>If you get errors like:</p>
+<pre><code><b>qsub fibo.pbs</b>
+qsub: script is written in DOS/Windows text format
+</code></pre>
+
+<p>It's probably because you transferred the files from a Windows computer.
+Please go to the section about <code>dos2unix</code> in <a href="../../intro-Linux/uploading_files/#dos2unix">chapter 5 of the intro to
+<abbr title="An operating system, similar to UNIX.">Linux</abbr></a> to fix this error.</p>
+<h2 id="warning-message-when-first-connecting-to-new-host">Warning message when first connecting to new host<a class="headerlink" href="#warning-message-when-first-connecting-to-new-host" title="Permanent link">#</a></h2>
+<p>If it does, type <strong><em>yes</em></strong>. If it doesn't, please contact support: hpc@ugent.be.</p>
+<p>The first time you make a connection to the <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr>, a Security
+Alert will appear and you will be asked to verify the authenticity of the
+<abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr>.</p>
+<p>Make sure the fingerprint in the alert matches one of the following:</p>
+<pre><code>- ssh-rsa 2048 10:2f:31:21:04:75:cb:ed:67:e0:d5:0c:a1:5a:f4:78
+- ssh-rsa 2048 SHA256:W8Wz0/FkkCR2ulN7+w8tNI9M0viRgFr2YlHrhKD2Dd0
+- ssh-ed25519 255 19:28:76:94:52:9d:ff:7d:fb:8b:27:b6:d7:69:42:eb
+- ssh-ed25519 256 SHA256:8AJg3lPN27y6i+um7rFx3xoy42U8ZgqNe4LsEycHILA
+- ssh-ecdsa 256 e6:d2:9c:d8:e7:59:45:03:4a:1f:dc:96:62:29:9c:5f
+- ssh-ecdsa 256 SHA256:C8TVx0w8UjGgCQfCmEUaOPxJGNMqv2PXLyBNODe5eOQ
+</code></pre>
+
+<p>If it does, press <strong><em>Yes</em></strong>, if it doesn't, please contact hpc@ugent.be.</p>
+<p><em>Note:</em> it is possible that the <code>ssh-ed25519</code> fingerprint starts with <code>ssh-ed25519 255</code>
+rather than <code>ssh-ed25519 256</code> (or vice versa), depending on the PuTTY version you are using.
+It is safe to ignore this <code>255</code> versus <code>256</code> difference, but the part after should be
+<strong>identical</strong>.</p>
+<p><img alt="image" src="../img/ch2-putty-verify-authenticity.png" style="display: block; margin: 0 auto" /></p>
+<p>If you use X2Go, then you might get another fingerprint, then make sure that the fingerprint
+is displayed is one of the following ones:</p>
+<ul>
+<li>ssh-rsa 2048 53:25:8c:1e:72:8b:ce:87:3e:54:12:44:a7:13:1a:89:e4:15:b6:8e</li>
+<li>ssh-ed25519 255 e3:cc:07:64:78:80:28:ec:b8:a8:8f:49:44:d1:1e:dc:cc:0b:c5:6b</li>
+<li>ssh-ecdsa 256 67:6c:af:23:cc:a1:72:09:f5:45:f1:60:08:e8:98:ca:31:87:58:6c</li>
+</ul>
+<h2 id="memory-limits">Memory limits<a class="headerlink" href="#memory-limits" title="Permanent link">#</a></h2>
+<p>To avoid jobs allocating too much <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>, there are <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> limits in
+place by default. It is possible to specify higher <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> limits if your
+jobs require this.</p>
+<h3 id="how-will-i-know-if-memory-limits-are-the-cause-of-my-problem">How will I know if <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> limits are the cause of my problem?<a class="headerlink" href="#how-will-i-know-if-memory-limits-are-the-cause-of-my-problem" title="Permanent link">#</a></h3>
+<p>If your program fails with a <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>-related issue, there is a good
+chance it failed because of the <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> limits and you should increase
+the <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> limits for your job.</p>
+<p>Examples of these error messages are: <code>malloc failed</code>, <code>Out of memory</code>,
+<code>Could not allocate memory</code> or in Java:
+<code>Could not reserve enough space for object heap</code>. Your program can also
+run into a <code>Segmentation fault</code> (or <code>segfault</code>) or crash due to bus
+errors.</p>
+<p>You can check the amount of virtual <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> (in Kb) that is available to
+you via the <code>ulimit -v</code> command <em>in your job script</em>.</p>
+<h3 id="how-do-i-specify-the-amount-of-memory-i-need">How do I specify the amount of <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> I need?<a class="headerlink" href="#how-do-i-specify-the-amount-of-memory-i-need" title="Permanent link">#</a></h3>
+<p>See <a href="./running_batch_jobs/#generic-resource-requirements">Generic resource requirements</a> to set <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> and other requirements, see <a href="./fine_tuning_job_specifications/#specifying-memory-requirements">Specifying <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> requirements</a> to finetune the amount of
+<abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> you request.</p>
+<!-- % See issue #248 to fix Java. This is software specific.
+% See issue #196 to fix MATLAB. This is software specific. -->
+
+<h2 id="module-conflicts">Module conflicts<a class="headerlink" href="#module-conflicts" title="Permanent link">#</a></h2>
+<p>Modules that are loaded together must use the same toolchain version: it
+is impossible to load two versions of the same module. In the following
+example, we try to load a module that uses the <code>intel-2018a</code> toolchain
+together with one that uses the <code>intel-2017a</code> toolchain:</p>
+<pre><code>$ <b>module load Python/2.7.14-intel-2018a</b>
+$ <b>module load  HMMER/3.1b2-intel-2017a</b>
+Lmod has detected the following error: A different version of the 'intel' module is already loaded (see output of 'ml'). 
+You should load another 'HMMER' module for that is compatible with the currently loaded version of 'intel'. 
+Use 'ml avail HMMER' to get an overview of the available versions.
+
+If you don't understand the warning or error, contact the helpdesk at hpc@ugent.be 
+While processing the following module(s):
+
+    Module fullname          Module Filename
+    ---------------          ---------------
+    HMMER/3.1b2-intel-2017a  /apps/gent/CO7/haswell-ib/modules/all/HMMER/3.1b2-intel-2017a.lua
+</code></pre>
+
+<p>This resulted in an error because we tried to load two different
+versions of the <code>intel</code> module.</p>
+<p>To fix this, check if there are other versions of the <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> you want to load
+that have the same version of common dependencies. You can list all versions of
+a module with <code>module avail</code>: for <code>HMMER</code>, this command is <code>module avail HMMER</code>.</p>
+<p>Another common error is:</p>
+<pre><code>$ <b>module load cluster/skitty</b>
+Lmod has detected the following error: A different version of the 'cluster' module is already loaded (see output of 'ml').
+
+If you don't understand the warning or error, contact the helpdesk at hpc@ugent.be
+</code></pre>
+
+<p>This is because there can only be one <code>cluster</code> module active at a time.
+The correct command is <code>module swap cluster/skitty</code>. See also <a href="./running_batch_jobs/#specifying-the-cluster-on-which-to-run">Specifying the <abbr title="A group of compute nodes.">cluster</abbr> on which to run</a>.</p>
+<h2 id="running-software-that-is-incompatible-with-host">Running software that is incompatible with host<a class="headerlink" href="#running-software-that-is-incompatible-with-host" title="Permanent link">#</a></h2>
+<p>When running software provided through <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> (see <a href="./running_batch_jobs/#modules">Modules</a>), you may run into
+errors like:</p>
+<pre><code>$ <b>module swap cluster/kirlia</b>
+The following have been reloaded with a version change: 
+    1) cluster/victini => cluster/kirlia
+
+$ <b>module load Python/2.7.14-intel-2018a</b>
+$ <b>python</b>
+
+Please verify that both the operating system and the processor support
+Intel(R) MOVBE, F16C, FMA, BMI, LZCNT and AVX2 instructions.
+</code></pre>
+
+<p>or errors like:</p>
+<pre><code>$ <b>module swap cluster/doduo</b>
+
+The following have been reloaded with a version change: 
+    1) cluster/victini => cluster/doduo
+
+$ <b>module load Python/2.7.14-foss-2018a</b>
+$ <b>python</b>
+Illegal instruction
+</code></pre>
+
+<p>When we swap to a different <abbr title="A group of compute nodes.">cluster</abbr>, the available <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> change so
+they work for that <abbr title="A group of compute nodes.">cluster</abbr>. That means that if the <abbr title="A group of compute nodes.">cluster</abbr> and the login
+nodes have a different <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr> architecture, software loaded using <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr>
+might not work.</p>
+<p>If you want to test software on the login nodes, make sure the
+<code>cluster/victini</code> module is loaded (with <code>module swap cluster/victini</code>, see <a href="./running_batch_jobs/#specifying-the-cluster-on-which-to-run">Specifying the <abbr title="A group of compute nodes.">cluster</abbr> on which to run</a>), since
+the login nodes and have the same <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr> architecture.</p>
+<p>If <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> are already loaded, and then we swap to a different <abbr title="A group of compute nodes.">cluster</abbr>,
+all our <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> will get reloaded. This means that all current <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr>
+will be unloaded and then loaded again, so they'll work on the newly
+loaded <abbr title="A group of compute nodes.">cluster</abbr>. Here's an example of how that would look like:</p>
+<pre><code>$ <b>module load Python/2.7.14-intel-2018a</b>
+$ <b>module swap cluster/swalot</b>
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) GCCcore/6.4.0                   5) Tcl/8.6.8-GCCcore-6.4.0           9) iccifort/2018.1.163-GCC-6.4.0-2.28    13) impi/2018.1.163-iccifort-2018.1.163-GCC-6.4.0-2.28    17) ncurses/6.0-GCCcore-6.4.0
+  2) GMP/6.1.2-GCCcore-6.4.0         6) binutils/2.28-GCCcore-6.4.0      10) ifort/2018.1.163-GCC-6.4.0-2.28       14) intel/2018a                                           18) zlib/1.2.11-GCCcore-6.4.0
+  3) Python/2.7.14-intel-2018a       7) bzip2/1.0.6-GCCcore-6.4.0        11) iimpi/2018a                           15) libffi/3.2.1-GCCcore-6.4.0
+  4) SQLite/3.21.0-GCCcore-6.4.0     8) icc/2018.1.163-GCC-6.4.0-2.28    12) imkl/2018.1.163-iimpi-2018a           16) libreadline/7.0-GCCcore-6.4.0
+
+The following have been reloaded with a version change:
+  1) cluster/victini => cluster/swalot
+</code></pre>
+
+<p>This might result in the same problems as mentioned above. When swapping
+to a different <abbr title="A group of compute nodes.">cluster</abbr>, you can run <code>module purge</code> to unload all <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr>
+to avoid problems (see <a href="./running_batch_jobs/#purging-all-modules">Purging all <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr></a>).</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../xdmod/" class="md-footer__link md-footer__link--prev" aria-label="Previous: XDMoD portal" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              XDMoD portal
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../sites/hpc_policies/" class="md-footer__link md-footer__link--next" aria-label="Next: HPC Policies" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              HPC Policies
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.expand", "navigation.tracking", "toc.follow", "navigation.sections", "navigation.instant", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

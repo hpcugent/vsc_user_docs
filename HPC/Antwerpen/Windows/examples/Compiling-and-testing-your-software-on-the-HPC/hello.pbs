@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#PBS -N csub
+#PBS -l walltime=01:00:00
+
+base=$PBS_O_WORKDIR
+exe="./hello"
+out=output-torque
+
+cd $base
+./$exe > $out.$PBS_JOBID
+

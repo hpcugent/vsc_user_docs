@@ -1,0 +1,1126 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Compiling and testing your software on the HPC - VSC User Documentation - Antwerpen (Linux)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#compiling-and-testing-your-software-on-the-hpc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VSC User Documentation - Antwerpen (Linux)" class="md-header__button md-logo" aria-label="VSC User Documentation - Antwerpen (Linux)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSC User Documentation - Antwerpen (Linux)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Compiling and testing your software on the HPC
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VSC User Documentation - Antwerpen (Linux)" class="md-nav__button md-logo" aria-label="VSC User Documentation - Antwerpen (Linux)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    VSC User Documentation - Antwerpen (Linux)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        Introduction to HPC
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        Getting an HPC Account
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connecting/" class="md-nav__link">
+        Connecting to the HPC infrastructure
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_batch_jobs/" class="md-nav__link">
+        Running batch jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_interactive_jobs/" class="md-nav__link">
+        Running interactive jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_jobs_with_input_output_data/" class="md-nav__link">
+        Running jobs with input/output data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_core_jobs/" class="md-nav__link">
+        Multi core jobs/Parallel Computing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_portal/" class="md-nav__link">
+        Using the HPC-UGent web portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdmod/" class="md-nav__link">
+        XDMoD portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sites/hpc_policies/" class="md-nav__link">
+        HPC Policies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Advanced topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced topics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fine_tuning_job_specifications/" class="md-nav__link">
+        Fine-tuning Job Specifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_job_submission/" class="md-nav__link">
+        Multi-job submission
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Compiling and testing your software on the HPC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Compiling and testing your software on the HPC
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#check-the-pre-installed-software-on-the-uantwerpen-hpc" class="md-nav__link">
+    Check the pre-installed software on the UAntwerpen-HPC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#porting-your-code" class="md-nav__link">
+    Porting your code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compiling-and-building-on-the-uantwerpen-hpc" class="md-nav__link">
+    Compiling and building on the UAntwerpen-HPC
+  </a>
+  
+    <nav class="md-nav" aria-label="Compiling and building on the UAntwerpen-HPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compiling-a-sequential-program-in-c" class="md-nav__link">
+    Compiling a sequential program in C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compiling-a-parallel-program-in-cmpi" class="md-nav__link">
+    Compiling a parallel program in C/MPI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compiling-a-parallel-program-in-intel-parallel-studio-cluster-edition" class="md-nav__link">
+    Compiling a parallel program in Intel Parallel Studio Cluster Edition
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program_examples/" class="md-nav__link">
+        Program examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jobscript_examples/" class="md-nav__link">
+        Job script examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_practices/" class="md-nav__link">
+        Best Practices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14">
+          Appendices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Appendices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick_reference_guide/" class="md-nav__link">
+        Appendix A - HPC Quick Reference Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torque_options/" class="md-nav__link">
+        Appendix B - TORQUE options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../useful_linux_commands/" class="md-nav__link">
+        Appendix C - Useful Linux Commands
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#check-the-pre-installed-software-on-the-uantwerpen-hpc" class="md-nav__link">
+    Check the pre-installed software on the UAntwerpen-HPC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#porting-your-code" class="md-nav__link">
+    Porting your code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compiling-and-building-on-the-uantwerpen-hpc" class="md-nav__link">
+    Compiling and building on the UAntwerpen-HPC
+  </a>
+  
+    <nav class="md-nav" aria-label="Compiling and building on the UAntwerpen-HPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compiling-a-sequential-program-in-c" class="md-nav__link">
+    Compiling a sequential program in C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compiling-a-parallel-program-in-cmpi" class="md-nav__link">
+    Compiling a parallel program in C/MPI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compiling-a-parallel-program-in-intel-parallel-studio-cluster-edition" class="md-nav__link">
+    Compiling a parallel program in Intel Parallel Studio Cluster Edition
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="compiling-and-testing-your-software-on-the-hpc">Compiling and testing your software on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr><a class="headerlink" href="#compiling-and-testing-your-software-on-the-hpc" title="Permanent link">#</a></h1>
+<p>All nodes in the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> <abbr title="A group of compute nodes.">cluster</abbr> are running the "CentOS <abbr title="An operating system, similar to UNIX.">Linux</abbr> release 7.8.2003 (Core)" 
+Operating system, which is a specific version of RedHat Enterprise <abbr title="An operating system, similar to UNIX.">Linux</abbr>. This means that all the 
+software programs
+(executable) that the end-user wants to run on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> first must be
+compiled for CentOS <abbr title="An operating system, similar to UNIX.">Linux</abbr> release 7.8.2003 (Core). It also means that you first have to install all the
+required external software packages on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.</p>
+<p>Most commonly used compilers are already pre-installed on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> and can be
+used straight away. Also many popular external software packages, which
+are regularly used in the scientific community, are also pre-installed.</p>
+<h2 id="check-the-pre-installed-software-on-the-uantwerpen-hpc">Check the pre-installed software on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr><a class="headerlink" href="#check-the-pre-installed-software-on-the-uantwerpen-hpc" title="Permanent link">#</a></h2>
+<p>In order to check all the available <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> and their version numbers,
+which are pre-installed on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> enter:</p>
+<pre><code>$ <b>module av 2>\&1 | more</b>
+------------- /apps/antwerpen/modules/hopper/2015a/all ------------
+ABINIT/7.10.2-intel-2015a
+ADF/2014.05
+Advisor/2015_update1
+Bison/3.0.4-intel-2015a
+Boost/1.57.0-foss-2015a-Python-2.7.9
+Boost/1.57.0-intel-2015a-Python-2.7.9
+bzip2/1.0.6-foss-2015a
+bzip2/1.0.6-intel-2015a
+...
+</code></pre>
+
+<p>Or when you want to check whether some specific software, some compiler
+or some application (e.g., LAMMPS) is installed on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.</p>
+<pre><code>$ <b>module av 2>\&1 | grep -i -e "LAMMPS"</b>
+LAMMPS/9Dec14-intel-2015a
+LAMMPS/30Oct14-intel-2014a
+LAMMPS/5Sep14-intel-2014a
+</code></pre>
+
+<p>As you are not aware of the capitals letters in the module name, we
+looked for a case-insensitive name with the "-i" option.</p>
+<p>When your required application is not available on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> please contact
+any UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> member. Be aware of potential "License Costs". "Open Source"
+software is often preferred.</p>
+<h2 id="porting-your-code">Porting your code<a class="headerlink" href="#porting-your-code" title="Permanent link">#</a></h2>
+<p>To <strong>port</strong> a software-program is to translate it from the operating system in
+which it was developed (e.g., Windows 7) to another operating system
+(e.g., RedHat Enterprise <abbr title="An operating system, similar to UNIX.">Linux</abbr> on our UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>) so that it can be used there. Porting implies some
+degree of effort, but not nearly as much as redeveloping the program in
+the new environment. It all depends on how "portable" you wrote your
+code.</p>
+<p>In the simplest case the file or files may simply be copied from one
+machine to the other. However, in many cases the software is installed
+on a computer in a way, which depends upon its detailed hardware,
+software, and setup, with device drivers for particular devices, using
+installed operating system and supporting software components, and using
+different directories.</p>
+<p>In some cases software, usually described as "portable software" is
+specifically designed to run on different computers with compatible
+operating systems and processors without any machine-dependent
+installation; it is sufficient to transfer specified directories and
+their contents. Hardware- and software-specific information is often
+stored in configuration files in specified locations (e.g., the registry
+on machines running MS Windows).</p>
+<p>Software, which is not portable in this sense, will have to be
+transferred with modifications to support the environment on the
+destination machine.</p>
+<p>Whilst programming, it would be wise to stick to certain standards
+(e.g., ISO/ANSI/POSIX). This will ease the porting of your code to other
+platforms.</p>
+<p>Porting your code to the CentOS <abbr title="An operating system, similar to UNIX.">Linux</abbr> release 7.8.2003 (Core) platform is the responsibility of the end-user.</p>
+<h2 id="compiling-and-building-on-the-uantwerpen-hpc">Compiling and building on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr><a class="headerlink" href="#compiling-and-building-on-the-uantwerpen-hpc" title="Permanent link">#</a></h2>
+<p>Compiling refers to the process of translating code written in some
+programming language, e.g., Fortran, C, or C++, to machine code.
+Building is similar, but includes gluing together the machine code
+resulting from different source files into an executable (or library).
+The text below guides you through some basic problems typical for small
+software projects. For larger projects it is more appropriate to use
+makefiles or even an advanced build system like CMake.</p>
+<p>All the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> nodes run the same version of the Operating System, i.e. CentOS <abbr title="An operating system, similar to UNIX.">Linux</abbr> release 7.8.2003 (Core). So,
+it is sufficient to compile your program on any <abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr>. Once you
+have generated an executable with your compiler, this executable should
+be able to run on any other compute-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>.</p>
+<p>A typical process looks like:</p>
+<ol>
+<li>
+<p>Copy your software to the login-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> of the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></p>
+</li>
+<li>
+<p>Start an interactive session on a <abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr>;</p>
+</li>
+<li>
+<p>Compile it;</p>
+</li>
+<li>
+<p>Test it locally;</p>
+</li>
+<li>
+<p>Generate your job scripts;</p>
+</li>
+<li>
+<p>Test it on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></p>
+</li>
+<li>
+<p>Run it (in parallel);</p>
+</li>
+</ol>
+<p>We assume you've copied your software to the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>. The next step is to request
+your private <abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr>.</p>
+<pre><code>$ <b>qsub -I</b>
+qsub: waiting for job 433253.leibniz to start
+</code></pre>
+
+<h3 id="compiling-a-sequential-program-in-c">Compiling a sequential program in C<a class="headerlink" href="#compiling-a-sequential-program-in-c" title="Permanent link">#</a></h3>
+<p>Go to the examples for chapter 
+<a href="./#compiling-and-building-on-the-hpc">Compiling and testing your software on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></a> and load the 
+foss module:</p>
+<pre><code>$ <b>cd ~/examples/Compiling-and-testing-your-software-on-the-HPC</b>
+$ <b>module load foss</b>
+</code></pre>
+
+<p>We now list the directory and explore the contents of the "<em>hello.c</em>"
+program:</p>
+<pre><code>$ <b>ls -l</b>
+total 512
+-rw-r--r-- 1 vsc20167 214 Sep 16 09:42 hello.c
+-rw-r--r-- 1 vsc20167 130 Sep 16 11:39 hello.pbs*
+-rw-r--r-- 1 vsc20167 359 Sep 16 13:55 mpihello.c
+-rw-r--r-- 1 vsc20167 304 Sep 16 13:55 mpihello.pbs
+</code></pre>
+
+<p style="text-align: center">hello.c</p>
+
+<div class="highlight"><pre><span></span><code>/*
+ * VSC        : Flemish Supercomputing Centre
+ * Tutorial   : Introduction to HPC
+ * Description: Print <span class="m">500</span> numbers, whilst waiting <span class="m">1</span> second <span class="k">in</span> between
+ */
+<span class="c1">#include &quot;stdio.h&quot;</span>
+int main<span class="o">(</span> int argc, char *argv<span class="o">[]</span> <span class="o">)</span>
+<span class="o">{</span>
+  int i<span class="p">;</span>
+  <span class="k">for</span> <span class="o">(</span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span> i&lt;<span class="m">500</span><span class="p">;</span> i++<span class="o">)</span>
+  <span class="o">{</span>
+    printf<span class="o">(</span><span class="s2">&quot;Hello #%d\n&quot;</span>, i<span class="o">)</span><span class="p">;</span>
+    fflush<span class="o">(</span>stdout<span class="o">)</span><span class="p">;</span>
+    sleep<span class="o">(</span><span class="m">1</span><span class="o">)</span><span class="p">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>The "hello.c" program is a simple source file, written in C. It'll print
+500 times "Hello #&lt;num&gt;", and waits one second between 2 printouts.</p>
+<p>We first need to compile this C-file into an executable with the
+gcc-compiler.</p>
+<p>First, check the command line options for <em>"gcc" (GNU C-Compiler)</em>, then
+we compile and list the contents of the directory again:</p>
+<pre><code>$ <b>gcc -help</b>
+$ <b>gcc -o hello hello.c</b>
+$ <b>ls -l</b>
+total 512
+-rwxrwxr-x 1 vsc20167 7116 Sep 16 11:43 hello*
+-rw-r--r-- 1 vsc20167  214 Sep 16 09:42 hello.c
+-rwxr-xr-x 1 vsc20167  130 Sep 16 11:39 hello.pbs*
+</code></pre>
+
+<p>A new file "hello" has been created. Note that this file has "execute"
+rights, i.e., it is an executable. More often than not, calling gcc --
+or any other compiler for that matter -- will provide you with a list of
+errors and warnings referring to mistakes the programmer made, such as
+typos, syntax errors. You will have to correct them first in order to
+make the code compile. Warnings pinpoint less crucial issues that may
+relate to performance problems, using unsafe or obsolete language
+features, etc. It is good practice to remove all warnings from a
+compilation process, even if they seem unimportant so that a code change
+that produces a warning does not go unnoticed.</p>
+<p>Let's test this program on the local <abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr>, which is at your
+disposal after the "qsub --I" command:</p>
+<pre><code>$ <b>./hello</b>
+Hello #0
+Hello #1
+Hello #2
+Hello #3
+Hello #4
+...
+</code></pre>
+
+<p>It seems to work, now run it on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></p>
+<pre><code>$ <b>qsub hello.pbs</b></code></pre>
+
+<h3 id="compiling-a-parallel-program-in-cmpi">Compiling a parallel program in C/<abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr><a class="headerlink" href="#compiling-a-parallel-program-in-cmpi" title="Permanent link">#</a></h3>
+<pre><code>$ <b>cd ~/examples/Compiling-and-testing-your-software-on-the-HPC</b></code></pre>
+
+<p>List the directory and explore the contents of the "<em>mpihello.c</em>"
+program:</p>
+<pre><code>$ <b>ls -l</b>
+total 512
+total 512
+-rw-r--r-- 1 vsc20167 214 Sep 16 09:42 hello.c
+-rw-r--r-- 1 vsc20167 130 Sep 16 11:39 hello.pbs*
+-rw-r--r-- 1 vsc20167 359 Sep 16 13:55 mpihello.c
+-rw-r--r-- 1 vsc20167 304 Sep 16 13:55 mpihello.pbs
+</code></pre>
+
+<p style="text-align: center">mpihello.c</p>
+
+<div class="highlight"><pre><span></span><code>/*
+ * VSC        : Flemish Supercomputing Centre
+ * Tutorial   : Introduction to HPC
+ * Description: Example program, to compile with MPI
+ */
+<span class="c1">#include &lt;stdio.h&gt;</span>
+<span class="c1">#include &lt;mpi.h&gt;</span>
+
+main<span class="o">(</span>int argc, char **argv<span class="o">)</span>
+<span class="o">{</span>
+  int node, i, j<span class="p">;</span>
+  float f<span class="p">;</span>
+
+  MPI_Init<span class="o">(</span><span class="p">&amp;</span>argc,<span class="p">&amp;</span>argv<span class="o">)</span><span class="p">;</span>
+  MPI_Comm_rank<span class="o">(</span>MPI_COMM_WORLD, <span class="p">&amp;</span>node<span class="o">)</span><span class="p">;</span>
+
+  printf<span class="o">(</span><span class="s2">&quot;Hello World from Node %d.\n&quot;</span>, node<span class="o">)</span><span class="p">;</span>
+  <span class="k">for</span> <span class="o">(</span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span> i&lt;<span class="o">=</span><span class="m">100000</span><span class="p">;</span> i++<span class="o">)</span>
+    <span class="nv">f</span><span class="o">=</span>i*2.718281828*i+i+i*3.141592654<span class="p">;</span>
+
+  MPI_Finalize<span class="o">()</span><span class="p">;</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>The "mpi_hello.c" program is a simple source file, written in C with <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>
+library calls.</p>
+<p>Then, check the command line options for <em>"mpicc" (GNU C-Compiler with
+<abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> extensions)</em>, then we compile and list the contents of the directory
+again:</p>
+<pre><code>$ <b>mpicc --help</b>
+$ <b>mpicc -o mpihello mpihello.c</b>
+$ <b>ls -l</b></code></pre>
+
+<p>A new file "hello" has been created. Note that this program has
+"execute" rights.</p>
+<p>Let's test this program on the "login" <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> first:</p>
+<pre><code>$ <b>./mpihello</b>
+Hello World from Node 0.</code></pre>
+
+<p>It seems to work, now run it on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.</p>
+<pre><code>$ <b>qsub mpihello.pbs</b></code></pre>
+
+<h3 id="compiling-a-parallel-program-in-intel-parallel-studio-cluster-edition">Compiling a parallel program in Intel Parallel Studio Cluster Edition<a class="headerlink" href="#compiling-a-parallel-program-in-intel-parallel-studio-cluster-edition" title="Permanent link">#</a></h3>
+<p>We will now compile the same program, but using the Intel Parallel
+Studio Cluster Edition compilers. We stay in the examples directory for
+this chapter:</p>
+<pre><code>$ <b>cd ~/examples/Compiling-and-testing-your-software-on-the-HPC</b></code></pre>
+
+<p>We will compile this C/<abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> -file into an executable with the Intel
+Parallel Studio Cluster Edition. First, clear the <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> (purge) and
+then load the latest "intel" module:</p>
+<pre><code>$ <b>module purge</b>
+$ <b>module load intel</b>
+</code></pre>
+
+<p>Then, compile and list the contents of the directory again. The Intel
+equivalent of mpicc is mpiicc.</p>
+<pre><code>$ <b>mpiicc -o mpihello mpihello.c</b>
+$ <b>ls -l</b></code></pre>
+
+<p>Note that the old "mpihello" file has been overwritten. Let's test this
+program on the "login" <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> first:</p>
+<pre><code>$ <b>./mpihello</b>
+Hello World from Node 0.</code></pre>
+
+<p>It seems to work, now run it on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.</p>
+<pre><code>$ <b>qsub mpihello.pbs</b></code></pre>
+
+<p>Note: The Antwerp University Association (AUHA) only has a license for the Intel Parallel Studio Cluster
+Edition for a fixed number of users. As such, it might happen that you
+have to wait a few minutes before a floating license becomes available
+for your use.</p>
+<p>Note: The Intel Parallel Studio Cluster Edition contains equivalent
+compilers for all GNU compilers. Hereafter the overview for C, C++ and
+Fortran compilers.</p>
+<div style="text-align: center; width: 100%">
+<table>
+<thead>
+  <tr>
+    <th></th>
+    <th colspan="2"><b>Sequential Program</b></th>
+    <th colspan="2"><b>Parallel Program (with MPI)</b></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td></td>
+    <td><b>GNU</b></td>
+    <td><b>Intel</b></td>
+    <td><b>GNU</b></td>
+    <td><b>Intel</b></td>
+  </tr>
+  <tr>
+    <td><b>C</b></td>
+    <td>gcc</td>
+    <td>icc</td>
+    <td>mpicc</td>
+    <td>mpiicc</td>
+  </tr>
+  <tr>
+    <td><b>C++</b></td>
+    <td>g++</td>
+    <td>icpc</td>
+    <td>mpicxx</td>
+    <td>mpiicpc</td>
+  </tr>
+  <tr>
+    <td><b>Fortran</b></td>
+    <td>gfortran</td>
+    <td>ifort</td>
+    <td>mpif90</td>
+    <td>mpiifort</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../multi_job_submission/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Multi-job submission" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Multi-job submission
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../program_examples/" class="md-footer__link md-footer__link--next" aria-label="Next: Program examples" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Program examples
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.expand", "navigation.tracking", "toc.follow", "navigation.sections", "navigation.instant", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

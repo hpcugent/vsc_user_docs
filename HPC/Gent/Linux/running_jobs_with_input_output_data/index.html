@@ -1,0 +1,2240 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Running jobs with input/output data - VSC User Documentation - Gent (Linux)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#running-jobs-with-inputoutput-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VSC User Documentation - Gent (Linux)" class="md-header__button md-logo" aria-label="VSC User Documentation - Gent (Linux)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSC User Documentation - Gent (Linux)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Running jobs with input/output data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VSC User Documentation - Gent (Linux)" class="md-nav__button md-logo" aria-label="VSC User Documentation - Gent (Linux)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    VSC User Documentation - Gent (Linux)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        Introduction to HPC
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        Getting an HPC Account
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connecting/" class="md-nav__link">
+        Connecting to the HPC infrastructure
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_batch_jobs/" class="md-nav__link">
+        Running batch jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_interactive_jobs/" class="md-nav__link">
+        Running interactive jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Running jobs with input/output data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Running jobs with input/output data
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-current-directory-and-output-and-error-files" class="md-nav__link">
+    The current directory and output and error files
+  </a>
+  
+    <nav class="md-nav" aria-label="The current directory and output and error files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-file-names" class="md-nav__link">
+    Default file names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filenames-using-the-name-of-the-job" class="md-nav__link">
+    Filenames using the name of the job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-defined-file-names" class="md-nav__link">
+    User-defined file names
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-store-your-data-on-the-hpc" class="md-nav__link">
+    Where to store your data on the HPC
+  </a>
+  
+    <nav class="md-nav" aria-label="Where to store your data on the HPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-defined-user-directories" class="md-nav__link">
+    Pre-defined user directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-home-directory-vsc_home" class="md-nav__link">
+    Your home directory ($VSC_HOME)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-data-directory-vsc_data" class="md-nav__link">
+    Your data directory ($VSC_DATA)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-scratch-space-vsc_scratch" class="md-nav__link">
+    Your scratch space ($VSC_SCRATCH)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-ugent-home-drive-and-shares" class="md-nav__link">
+    Your UGent home drive and shares
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ugent-shares-with-globus" class="md-nav__link">
+    UGent shares with globus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-defined-quotas" class="md-nav__link">
+    Pre-defined quotas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-output-files" class="md-nav__link">
+    Writing Output files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-input-files" class="md-nav__link">
+    Reading Input files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-much-disk-space-do-i-get" class="md-nav__link">
+    How much disk space do I get?
+  </a>
+  
+    <nav class="md-nav" aria-label="How much disk space do I get?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quota" class="md-nav__link">
+    Quota
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-your-quota" class="md-nav__link">
+    Check your quota
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#groups" class="md-nav__link">
+    Groups
+  </a>
+  
+    <nav class="md-nav" aria-label="Groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#joining-an-existing-group" class="md-nav__link">
+    Joining an existing group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-group" class="md-nav__link">
+    Creating a new group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-a-group" class="md-nav__link">
+    Managing a group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspecting-groups" class="md-nav__link">
+    Inspecting groups
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-organisations" class="md-nav__link">
+    Virtual Organisations
+  </a>
+  
+    <nav class="md-nav" aria-label="Virtual Organisations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#joining-an-existing-vo" class="md-nav__link">
+    Joining an existing VO
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-vo" class="md-nav__link">
+    Creating a new VO
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requesting-more-storage-space" class="md-nav__link">
+    Requesting more storage space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-per-member-vo-quota" class="md-nav__link">
+    Setting per-member VO quota
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vo-directories" class="md-nav__link">
+    VO directories
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_core_jobs/" class="md-nav__link">
+        Multi core jobs/Parallel Computing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_portal/" class="md-nav__link">
+        Using the HPC-UGent web portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdmod/" class="md-nav__link">
+        XDMoD portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sites/hpc_policies/" class="md-nav__link">
+        HPC Policies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Advanced topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced topics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fine_tuning_job_specifications/" class="md-nav__link">
+        Fine-tuning Job Specifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_job_submission/" class="md-nav__link">
+        Multi-job submission
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiling_your_software/" class="md-nav__link">
+        Compiling and testing your software on the HPC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program_examples/" class="md-nav__link">
+        Program examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jobscript_examples/" class="md-nav__link">
+        Job script examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_practices/" class="md-nav__link">
+        Best Practices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpu_gent/" class="md-nav__link">
+        HPC-UGent GPU clusters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interactive_gent/" class="md-nav__link">
+        HPC-UGent interactive and debug cluster
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crontab_gent/" class="md-nav__link">
+        Cron scripts
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_15" type="checkbox" id="__nav_15" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15">
+          Appendices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Appendices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick_reference_guide/" class="md-nav__link">
+        Appendix A - HPC Quick Reference Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torque_options/" class="md-nav__link">
+        Appendix B - TORQUE options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../useful_linux_commands/" class="md-nav__link">
+        Appendix C - Useful Linux Commands
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-current-directory-and-output-and-error-files" class="md-nav__link">
+    The current directory and output and error files
+  </a>
+  
+    <nav class="md-nav" aria-label="The current directory and output and error files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-file-names" class="md-nav__link">
+    Default file names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filenames-using-the-name-of-the-job" class="md-nav__link">
+    Filenames using the name of the job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-defined-file-names" class="md-nav__link">
+    User-defined file names
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-store-your-data-on-the-hpc" class="md-nav__link">
+    Where to store your data on the HPC
+  </a>
+  
+    <nav class="md-nav" aria-label="Where to store your data on the HPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-defined-user-directories" class="md-nav__link">
+    Pre-defined user directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-home-directory-vsc_home" class="md-nav__link">
+    Your home directory ($VSC_HOME)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-data-directory-vsc_data" class="md-nav__link">
+    Your data directory ($VSC_DATA)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-scratch-space-vsc_scratch" class="md-nav__link">
+    Your scratch space ($VSC_SCRATCH)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-ugent-home-drive-and-shares" class="md-nav__link">
+    Your UGent home drive and shares
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ugent-shares-with-globus" class="md-nav__link">
+    UGent shares with globus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-defined-quotas" class="md-nav__link">
+    Pre-defined quotas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-output-files" class="md-nav__link">
+    Writing Output files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-input-files" class="md-nav__link">
+    Reading Input files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-much-disk-space-do-i-get" class="md-nav__link">
+    How much disk space do I get?
+  </a>
+  
+    <nav class="md-nav" aria-label="How much disk space do I get?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quota" class="md-nav__link">
+    Quota
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-your-quota" class="md-nav__link">
+    Check your quota
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#groups" class="md-nav__link">
+    Groups
+  </a>
+  
+    <nav class="md-nav" aria-label="Groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#joining-an-existing-group" class="md-nav__link">
+    Joining an existing group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-group" class="md-nav__link">
+    Creating a new group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-a-group" class="md-nav__link">
+    Managing a group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspecting-groups" class="md-nav__link">
+    Inspecting groups
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-organisations" class="md-nav__link">
+    Virtual Organisations
+  </a>
+  
+    <nav class="md-nav" aria-label="Virtual Organisations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#joining-an-existing-vo" class="md-nav__link">
+    Joining an existing VO
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-vo" class="md-nav__link">
+    Creating a new VO
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requesting-more-storage-space" class="md-nav__link">
+    Requesting more storage space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-per-member-vo-quota" class="md-nav__link">
+    Setting per-member VO quota
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vo-directories" class="md-nav__link">
+    VO directories
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="running-jobs-with-inputoutput-data">Running jobs with input/output data<a class="headerlink" href="#running-jobs-with-inputoutput-data" title="Permanent link">#</a></h1>
+<p>You have now learned how to start a batch job and how to start an
+interactive session. The next question is how to deal with input and
+output files, where your standard output and error messages will go to
+and where that you can collect your results.</p>
+<h2 id="the-current-directory-and-output-and-error-files">The current directory and output and error files<a class="headerlink" href="#the-current-directory-and-output-and-error-files" title="Permanent link">#</a></h2>
+<h3 id="default-file-names">Default file names<a class="headerlink" href="#default-file-names" title="Permanent link">#</a></h3>
+<p>First go to the directory:</p>
+<pre><code><b>$ cd ~/examples/Running_jobs_with_input_output_data</b>
+</code></pre>
+
+<p>List and check the contents with:</p>
+<pre><code><b>ls -l</b>
+total 2304
+-rwxrwxr-x 1 vsc40000   682 Sep 13 11:34 file1.py
+-rw-rw-r-- 1 vsc40000   212 Sep 13 11:54 file1a.pbs
+-rw-rw-r-- 1 vsc40000   994 Sep 13 11:53 file1b.pbs
+-rw-rw-r-- 1 vsc40000   994 Sep 13 11:53 file1c.pbs
+-rw-r--r-- 1 vsc40000  1393 Sep 13 10:41 file2.pbs
+-rwxrwxr-x 1 vsc40000  2393 Sep 13 10:40 file2.py
+-rw-r--r-- 1 vsc40000  1393 Sep 13 10:41 file3.pbs
+-rwxrwxr-x 1 vsc40000  2393 Sep 13 10:40 file3.py
+</code></pre>
+
+<p>Now, let us inspect the contents of the first executable (which is just
+a Python script with execute permission).</p>
+<p><center>-- file1.py --</center>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="c1">#</span>
+<span class="c1"># VSC        : Flemish Supercomputing Centre</span>
+<span class="c1"># Tutorial   : Introduction to HPC</span>
+<span class="c1"># Description: Writing to the current directory, stdout and stderr</span>
+<span class="c1">#</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1"># Step #1: write to a local file in your current directory</span>
+<span class="n">local_f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;Hello.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span>
+<span class="n">local_f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello World!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">local_f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;I am writing in the file:&lt;Hello.txt&gt;.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">local_f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;in the current directory.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">local_f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Cheers!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">local_f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># Step #2: Write to stdout</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello World!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;I am writing to &lt;stdout&gt;.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Cheers!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Step #3: Write to stderr</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello World!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;This is NO ERROR or WARNING.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;I am just writing to &lt;stderr&gt;.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Cheers!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p>The code of the Python script, is self explanatory:</p>
+<ol>
+<li>
+<p>In step 1, we write something to the file <code>hello.txt</code> in the current
+    directory.</p>
+</li>
+<li>
+<p>In step 2, we write some text to stdout.</p>
+</li>
+<li>
+<p>In step 3, we write to stderr.</p>
+</li>
+</ol>
+<p>Check the contents of the first job script:</p>
+<p><center>-- file1a.pbs --</center>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#PBS -l walltime=00:05:00</span>
+
+<span class="c1"># go to the (current) working directory (optional, if this is the</span>
+<span class="c1"># directory where you submitted the job)</span>
+<span class="nb">cd</span> <span class="nv">$PBS_O_WORKDIR</span>  
+
+<span class="c1"># the program itself</span>
+<span class="nb">echo</span> Start Job
+date
+./file1.py
+<span class="nb">echo</span> End Job
+</code></pre></div></p>
+<p>You'll see that there are NO specific PBS directives for the placement
+of the output files. All output files are just written to the standard
+paths.</p>
+<p>Submit it:</p>
+<pre><code><b>$ qsub file1a.pbs</b>
+</code></pre>
+
+<p>After the job has finished, inspect the local directory again, i.e., the
+directory where you executed the <em>qsub</em> command:</p>
+<pre><code><b>ls -l</b>
+total 3072
+-rw-rw-r-- 1 vsc40000   90 Sep 13 13:13 Hello.txt
+-rwxrwxr-x 1 vsc40000  693 Sep 13 13:03 file1.py*
+-rw-rw-r-- 1 vsc40000  229 Sep 13 13:01 file1a.pbs
+-rw------- 1 vsc40000   91 Sep 13 13:13 file1a.pbs.e123456
+-rw------- 1 vsc40000  105 Sep 13 13:13 file1a.pbs.o123456
+-rw-rw-r-- 1 vsc40000  143 Sep 13 13:07 file1b.pbs
+-rw-rw-r-- 1 vsc40000  177 Sep 13 13:06 file1c.pbs
+-rw-r--r-- 1 vsc40000 1393 Sep 13 10:41 file2.pbs
+-rwxrwxr-x 1 vsc40000 2393 Sep 13 10:40 file2.py*
+-rw-r--r-- 1 vsc40000 1393 Sep 13 10:41 file3.pbs
+-rwxrwxr-x 1 vsc40000 2393 Sep 13 10:40 file3.py*
+</code></pre>
+
+<p>Some observations:</p>
+<ol>
+<li>
+<p>The file <code>Hello.txt</code> was created in the current directory.</p>
+</li>
+<li>
+<p>The file <code>file1a.pbs.o123456</code> contains all the text that was written to
+    the standard output stream ("stdout").</p>
+</li>
+<li>
+<p>The file <code>file1a.pbs.e123456</code> contains all the text that was written to
+    the standard error stream ("stderr").</p>
+</li>
+</ol>
+<p>Inspect their contents ... and remove the files</p>
+<pre><code><b>$ cat Hello.txt</b>
+<b>$ cat file1a.pbs.o123456</b>
+<b>$ cat file1a.pbs.e123456</b>
+<b>$ rm Hello.txt file1a.pbs.o123456 file1a.pbs.e123456</b>
+</code></pre>
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Type <code>cat H</code> and press the Tab button (looks like <span class="keys"><kbd class="key-tab">Tab</kbd></span>), and it <strong>expand</strong> will into
+<code>cat Hello.txt</code>.</p>
+</div>
+<h3 id="filenames-using-the-name-of-the-job">Filenames using the name of the job<a class="headerlink" href="#filenames-using-the-name-of-the-job" title="Permanent link">#</a></h3>
+<p>Check the contents of the job script and execute it.</p>
+<p><center>-- file1b.pbs --</center>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#   Specify the &quot;name&quot; of the job</span>
+<span class="c1">#PBS -N my_serial_job         </span>
+
+<span class="nb">cd</span> <span class="nv">$PBS_O_WORKDIR</span>  
+<span class="nb">echo</span> Start Job
+date
+./file1.py
+<span class="nb">echo</span> End Job
+</code></pre></div></p>
+<p>Inspect the contents again ... and remove the generated files:</p>
+<pre><code><b>$ ls</b>
+Hello.txt file1a.pbs file1c.pbs file2.pbs file3.pbs my_serial_job.e123456
+file1.py* file1b.pbs file2.py* file3.py* my_serial_job.o123456
+<b>$ rm Hello.txt my_serial_job.*</b>
+</code></pre>
+
+<p>Here, the option "<code>-N</code>" was used to explicitly assign a name to the job.
+This overwrote the JOBNAME variable, and resulted in a different name
+for the <em>stdout</em> and <em>stderr</em> files. This name is also shown in the
+second column of the "<code>qstat</code>" command. If no name is provided, it
+defaults to the name of the job script.</p>
+<h3 id="user-defined-file-names">User-defined file names<a class="headerlink" href="#user-defined-file-names" title="Permanent link">#</a></h3>
+<p>You can also specify the name of <em>stdout</em> and <em>stderr</em> files explicitly
+by adding two lines in the job script, as in our third example:</p>
+<p><center>-- file1c.pbs --</center>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># redirect standard output (-o) and error (-e)</span>
+<span class="c1">#PBS -o stdout.$PBS_JOBID</span>
+<span class="c1">#PBS -e stderr.$PBS_JOBID</span>
+
+<span class="nb">cd</span> <span class="nv">$PBS_O_WORKDIR</span>  
+<span class="nb">echo</span> Start Job
+date
+./file1.py
+<span class="nb">echo</span> End Job
+</code></pre></div></p>
+<h2 id="where-to-store-your-data-on-the-hpc">Where to store your data on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr><a class="headerlink" href="#where-to-store-your-data-on-the-hpc" title="Permanent link">#</a></h2>
+<p>The <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> <abbr title="A group of compute nodes.">cluster</abbr> offers their users several locations to store their data.
+Most of the data will reside on the shared storage system, but all
+compute nodes also have their own (small) local disk.</p>
+<h3 id="pre-defined-user-directories">Pre-defined user directories<a class="headerlink" href="#pre-defined-user-directories" title="Permanent link">#</a></h3>
+<p>Three different pre-defined user directories are available, where each
+directory has been created for different purposes. The best place to
+store your data depends on the purpose, but also the size and type of
+usage of the data.</p>
+<p>The following locations are available:</p>
+<table>
+    <tr>
+        <td colspan="1">
+            <b>Variable</b>
+        </td>
+        <td colspan="1">
+            <b>Description</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <center><i>Long-term storage slow filesystem, intended for smaller files</i></center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1">
+            <t>$VSC_HOME</t>
+        </td>
+        <td colspan="1">
+            For your configuration files and other small files, see <a href="./#your-home-directory-vsc_home">the section on your home directory.</a>
+            The default directory is <tt>user/Gent/xxx/vsc40000</tt>.
+            The same file system is accessible from all sites, i.e., you'll see the same contents in $VSC_HOME on all sites.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1">
+            <t>$VSC_DATA</t>
+        </td>
+        <td colspan="1">
+            A bigger "workspace", for <b>datasets</b>, results, logfiles, etc. see <a href="./#your-data-directory-vsc_data">the section on your data directory.</a>
+            The default directory is <tt>data/Gent/xxx/vsc40000</tt>.
+            The same file system is accessible from all sites.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <center><i>Fast temporary storage</i></center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1">
+            <t>$VSC_SCRATCH_NODE</t>
+        </td>
+        <td colspan="1">
+            For <b>temporary</b> or transient data on the local compute node, where fast access is important; see <a href="./#your-scratch-space-vsc_scratch">the section on your scratch space.</a>
+            This space is available per node. The default directory is <tt>/tmp</tt>. On different nodes, you'll see different content.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1">
+            <t>$VSC_SCRATCH</t>
+        </td>
+        <td colspan="1">
+            For <b>temporary</b> or transient data that has to be accessible from all nodes of a cluster (including the login nodes) <br>
+            The default directory is <tt>scratch/Gent/xxx/vsc40000</tt>. This directory is cluster- or site-specific: On different sites, and sometimes on different clusters on the same site, you'll get a different directory with different content.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1">
+            <t>$VSC_SCRATCH_SITE</t>
+        </td>
+        <td colspan="1">
+            Currently the same as $VSC_SCRATCH, but could be used for a scratch space shared accross all clusters at a site in the future. See <a href="./#your-scratch-space-vsc_scratch">the section on your scratch space.</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1">
+            <t>$VSC_SCRATCH_GLOBAL</t>
+        </td>
+        <td colspan="1">
+            Currently the same as $VSC_SCRATCH, but could be used for a scratch space shared accross all clusters of the VSC in the future. See <a href="./#your-scratch-space-vsc_scratch">the section on your scratch space.</a>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="1">
+            <t>$VSC_SCRATCH_CLUSTER</t>
+        </td>
+        <td colspan="1">
+            The scratch filesystem closest to the cluster.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1">
+            <t>$VSC_SCRATCH_ARCANINE</t>
+        </td>
+        <td colspan="1">
+            A separate (smaller) shared scratch filesystem, powered by SSDs. This scratch filesystem is intended for very I/O-intensive workloads. Note that this filesystem is not available on the cluster victini.
+        </td>
+    </tr>
+
+</table>
+
+<p>Since these directories are not necessarily mounted on the same
+locations over all sites, you should always (try to) use the environment
+variables that have been created.</p>
+<p>We elaborate more on the specific function of these locations in the
+following sections.</p>
+<p>Note: <code>$VSC_SCRATCH_KYUKON</code> and <code>$VSC_SCRATCH</code> are the same directories
+("kyukon" is the name of the storage <abbr title="A group of compute nodes.">cluster</abbr> where the default shared
+<abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> filesystem is hosted).</p>
+<p>For documentation about VO directories, see <a href="./#vo-directories">the section on VO directories</a>.</p>
+<h3 id="your-home-directory-vsc_home">Your home directory ($VSC_HOME)<a class="headerlink" href="#your-home-directory-vsc_home" title="Permanent link">#</a></h3>
+<p>Your home directory is where you arrive by default when you login to the
+<abbr title="A group of compute nodes.">cluster</abbr>. Your shell refers to it as "~" (tilde), and its absolute path is
+also stored in the environment variable $VSC_HOME. Your home directory
+is shared across all clusters of the VSC.</p>
+<p>The data stored here should be relatively small (e.g., no files or
+directories larger than a few megabytes), and preferably should only
+contain configuration files. Note that various kinds of configuration
+files are also stored here, e.g., by MATLAB, Eclipse, ...</p>
+<p>The operating system also creates a few files and folders here to manage
+your account. Examples are:</p>
+<table>
+<thead>
+<tr>
+<th align="center">File or Directory</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">.ssh/</td>
+<td align="center">This directory contains some files necessary for you to login to the <abbr title="A group of compute nodes.">cluster</abbr> and to submit jobs on the <abbr title="A group of compute nodes.">cluster</abbr>. Do not remove them, and do not alter anything if you don't know what you are doing!</td>
+</tr>
+<tr>
+<td align="center">.bash_profile</td>
+<td align="center">When you login (type username and password) remotely via ssh, .bash_profile is executed to configure your shell before the initial command prompt.</td>
+</tr>
+<tr>
+<td align="center">.bashrc</td>
+<td align="center">This script is executed every time you start a session on the <abbr title="A group of compute nodes.">cluster</abbr>: when you login to the <abbr title="A group of compute nodes.">cluster</abbr> and when a job starts.</td>
+</tr>
+<tr>
+<td align="center">.bash_history</td>
+<td align="center">This file contains the commands you typed at your shell prompt, in case you need them again.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="your-data-directory-vsc_data">Your data directory ($VSC_DATA)<a class="headerlink" href="#your-data-directory-vsc_data" title="Permanent link">#</a></h3>
+<p>In this directory you can store all other data that you need for longer
+terms (such as the results of previous jobs, ...). It is a good place
+for, e.g., storing big files like genome data.</p>
+<p>The environment variable pointing to this directory is $VSC_DATA. This
+volume is shared across all clusters of the VSC. There are however no
+guarantees about the speed you will achieve on this volume. For
+guaranteed fast performance and very heavy I/O, you should use the
+<abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> space instead. </p>
+<p>If you are running out of quota on your
+_$VSC_DATA filesystem you can request a VO. See on how to do this.</p>
+<h3 id="your-scratch-space-vsc_scratch">Your <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> space ($VSC_SCRATCH)<a class="headerlink" href="#your-scratch-space-vsc_scratch" title="Permanent link">#</a></h3>
+<p>To enable quick writing from your job, a few extra file systems are
+available on the compute nodes. These extra file systems are called
+<abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> folders, and can be used for storage of temporary and/or
+transient data (temporary results, anything you just need during your
+job, or your batch of jobs).</p>
+<p>You should remove any data from these systems after your processing them
+has finished. There are no guarantees about the time your data will be
+stored on this system, and we plan to clean these automatically on a
+regular base. The maximum allowed age of files on these <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> file
+systems depends on the type of <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr>, and can be anywhere between a
+day and a few weeks. We don't guarantee that these policies remain
+forever, and may change them if this seems necessary for the healthy
+operation of the <abbr title="A group of compute nodes.">cluster</abbr>.</p>
+<p>Each type of <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> has its own use:</p>
+<p><strong>Node <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> ($VSC_SCRATCH_NODE).</strong>   Every <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> has its own <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> space, which is completely separated
+    from the other nodes. On some clusters, it will be on a local disk
+    in the <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>, while on other clusters it will be emulated through
+    another file server. In many cases, it will be significantly slower
+    than the <abbr title="A group of compute nodes.">cluster</abbr> <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> as it typically consists of just a single
+    disk. Some <strong>drawsbacks</strong> are that the storage can only be accessed on that
+    particular <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> and that the capacity is often very limited (e.g.,
+    100 GB). The performance will depend a lot on the particular
+    implementation in the <abbr title="A group of compute nodes.">cluster</abbr>. In many cases, it will be
+    significantly slower than the <abbr title="A group of compute nodes.">cluster</abbr> <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> as it typically
+    consists of just a single disk. However, if that disk is local to
+    the <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> (as on most clusters), the performance will not depend on
+    what others are doing on the <abbr title="A group of compute nodes.">cluster</abbr>.</p>
+<p><strong>Cluster <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> ($VSC_SCRATCH).</strong>  To allow a job running on multiple nodes (or multiple jobs running
+    on separate nodes) to <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr> data as files, every <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> of the <abbr title="A group of compute nodes.">cluster</abbr>
+    (including the login nodes) has access to this shared <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr>
+    directory. Just like the home and data directories, every user has
+    its own <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> directory. Because this <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> is also available
+    from the login nodes, you could manually copy results to your data
+    directory after your job has ended. Also, this type of <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> is
+    usually implemented by running tens or hundreds of disks in parallel
+    on a powerful file server with fast connection to all the <abbr title="A group of compute nodes.">cluster</abbr>
+    nodes and therefore is often the fastest file system available on a
+    <abbr title="A group of compute nodes.">cluster</abbr>.
+    You may not get the same file system on different clusters, i.e.,
+    you may see different content on different clusters at the same
+    institute. </p>
+<p><strong>Site <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> ($VSC_SCRATCH_SITE).</strong>  At the time of writing, the site <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> is just the same volume as
+    the <abbr title="A group of compute nodes.">cluster</abbr> <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr>, and thus contains the same data. In the future
+    it may point to a different <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> file system that is available
+    across all clusters at a particular site, which is in fact the case
+    for the <abbr title="A group of compute nodes.">cluster</abbr> <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> on some sites.</p>
+<p><strong>Global <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> ($VSC_SCRATCH_GLOBAL).</strong>   At the time of writing, the global <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> is just the same volume
+    as the <abbr title="A group of compute nodes.">cluster</abbr> <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr>, and thus contains the same data. In the
+    future it may point to a <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> file system that is available
+    across all clusters of the VSC, but at the moment of writing there
+    are no plans to provide this.</p>
+<h3 id="your-ugent-home-drive-and-shares">Your UGent home drive and shares<a class="headerlink" href="#your-ugent-home-drive-and-shares" title="Permanent link">#</a></h3>
+<p>In order to access data on your UGent <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr>(s), you need to stage-in the
+data and stage-out afterwards. On the login nodes, it is possible to
+access your UGent home drive and shares. To allow this you need a
+ticket. This requires that you first authenticate yourself with your
+UGent username and password by running:</p>
+<pre><code><b>$ kinit yourugentusername@UGENT.BE</b>
+Password for yourugentusername@UGENT.BE:
+</code></pre>
+
+<p>Now you should be able to access your files running</p>
+<pre><code><b>$ ls /UGent/yourugentusername</b>
+home shares www
+</code></pre>
+
+<p>Please note the shares will only be mounted when you access this folder.
+You should specify your complete username - tab completion will not
+work.</p>
+<p>If you want to use the UGent shares longer than 24 hours, you should ask
+a ticket for up to a week by running</p>
+<pre><code><b>$ kinit yourugentusername@UGENT.BE -r 7d</b>
+</code></pre>
+
+<p>You can verify your authentication ticket and expiry dates yourself by
+running klist</p>
+<pre><code><b>$ klist</b>
+...
+Valid starting     Expires            Service principal
+14/07/20 15:19:13  15/07/20 01:19:13  krbtgt/UGENT.BE@UGENT.BE
+    renew until 21/07/20 15:19:13
+
+</code></pre>
+
+<p>Your ticket is valid for 10 hours, but you can renew it before it
+expires.</p>
+<p>To renew your tickets, simply run</p>
+<pre><code><b>$ kinit -R</b>
+</code></pre>
+
+<p>If you want your ticket to be renewed automatically up to the maximum
+expiry date, you can run</p>
+<pre><code><b>$ krenew -b -K 60</b>
+</code></pre>
+
+<p>Each hour the process will check if your ticket should be renewed.</p>
+<p>We strongly advise to disable access to your shares once it is no longer
+needed:</p>
+<pre><code><b>$ kdestroy</b>
+</code></pre>
+
+<p>If you get an error "<em>Unknown credential cache type while getting
+default ccache</em>" (or similar) and you use , then please deactivate conda
+before you use the commands in this chapter.</p>
+<pre><code><b>$ conda deactivate</b>
+</code></pre>
+
+<h3 id="ugent-shares-with-globus">UGent shares with globus<a class="headerlink" href="#ugent-shares-with-globus" title="Permanent link">#</a></h3>
+<p>In order to access your UGent home and shares inside the globus
+endpoint, you first have to generate authentication credentials on the
+endpoint. To do that, you have to ssh to the globus endpoint from a
+loginnode. You will be prompted for your UGent username and password to
+authenticate:</p>
+<pre><code><b>$ ssh globus</b>
+UGent username:ugentusername
+Password for ugentusername@UGENT.BE:
+Shares are available in globus endpoint at /UGent/ugentusername/
+Overview of valid tickets:
+Ticket cache: KEYRING:persistent:xxxxxxx:xxxxxxx
+Default principal: ugentusername@UGENT.BE
+
+Valid starting     Expires            Service principal
+29/07/20 15:56:43  30/07/20 01:56:43  krbtgt/UGENT.BE@UGENT.BE
+    renew until 05/08/20 15:56:40
+Tickets will be automatically renewed for 1 week
+Connection to globus01 closed.
+</code></pre>
+
+<p>Your shares will then be available at /UGent/ugentusername/ under the
+globus VSC tier2 endpoint. Tickets will be renewed automatically for 1
+week, after which you'll need to run this again. We advise to disable
+access to your shares within globus once access is no longer needed:</p>
+<pre><code><b>$ ssh globus01 destroy</b>
+Succesfully destroyed session
+</code></pre>
+
+<h3 id="pre-defined-quotas">Pre-defined quotas<a class="headerlink" href="#pre-defined-quotas" title="Permanent link">#</a></h3>
+<p><strong>Quota</strong> is enabled on these directories, which means that the amount of data you
+can store there is limited. This holds for both the total size of all
+files as well as the total number of files that can be stored. The
+system works with a soft quota and a hard quota. You can temporarily
+exceed the soft quota, but you can never exceed the hard quota. The user
+will get warnings as soon as he exceeds the soft quota.</p>
+<p>To see your a list of your current quota, visit the VSC accountpage:
+<a href="https://account.vscentrum.be">https://account.vscentrum.be</a>. VO moderators can see a list of VO quota
+usage per member of their VO via
+<a href="https://account.vscentrum.be/django/vo/">https://account.vscentrum.be/django/vo/</a>.</p>
+<p>The rules are:</p>
+<ol>
+<li>
+<p>You will only receive a warning when you have reached the soft limit
+    of either quota.</p>
+</li>
+<li>
+<p>You <em>will</em> start losing data and get I/O errors when you reach the
+    hard limit. In this case, data loss will occur since nothing can be
+    written anymore (this holds both for new files as well as for
+    existing files), until you free up some space by removing some
+    files. Also note that you <em>will not</em> be warned when data loss
+    occurs, so keep an eye open for the general quota warnings!</p>
+</li>
+<li>
+<p>The same holds for running jobs that need to write files: when you
+    reach your hard quota, jobs will crash.</p>
+</li>
+</ol>
+<p>We do realise that quota are often observed as a nuisance by users,
+especially if you're running low on it. However, it is an essential
+feature of a shared infrastructure. Quota ensure that a single user
+cannot accidentally take a <abbr title="A group of compute nodes.">cluster</abbr> down (and break other user's jobs) by
+filling up the available disk space. And they help to guarantee a fair
+use of all available resources for all users. Quota also help to ensure
+that each folder is used for its intended purpose.</p>
+<h2 id="writing-output-files">Writing Output files<a class="headerlink" href="#writing-output-files" title="Permanent link">#</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Find the code of the exercises in "~/examples/Running_jobs_with_input_output_data"</p>
+</div>
+<p>In the next exercise, you will generate a file in the $VSC_SCRATCH
+directory. In order to generate some <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr>- and disk-I/O load, we will</p>
+<ol>
+<li>
+<p>take a random integer between 1 and 2000 and calculate all primes up
+    to that limit;</p>
+</li>
+<li>
+<p>repeat this action 30.000 times;</p>
+</li>
+<li>
+<p>write the output to the "<code>primes_1.txt</code>" output file in the
+    $VSC_SCRATCH-directory.</p>
+</li>
+</ol>
+<p>Check the Python and the PBS file, and submit the job: Remember that
+this is already a more serious (disk-I/O and computational intensive)
+job, which takes approximately 3 minutes on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.</p>
+<pre><code><b>$ cat file2.py</b>
+<b>$ cat file2.pbs</b>
+<b>$ qsub file2.pbs</b>
+<b>$ qstat</b>
+<b>$ ls -l</b>
+<b>$ echo $VSC_SCRATCH</b>
+<b>$ ls -l $VSC_SCRATCH</b>
+<b>$ more $VSC_SCRATCH/primes_1.txt</b>
+</code></pre>
+
+<h2 id="reading-input-files">Reading Input files<a class="headerlink" href="#reading-input-files" title="Permanent link">#</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Find the code of the exercise "<code>file3.py</code>" in "~/examples/Running_jobs_with_input_output_data".</p>
+</div>
+<p>In this exercise, you will</p>
+<ol>
+<li>
+<p>Generate the file "<code>primes_1.txt</code>" again as in the previous
+    exercise;</p>
+</li>
+<li>
+<p>open the this file;</p>
+</li>
+<li>
+<p>read it line by line;</p>
+</li>
+<li>
+<p>calculate the average of primes in the line;</p>
+</li>
+<li>
+<p>count the number of primes found per line;</p>
+</li>
+<li>
+<p>write it to the "<code>primes_2.txt</code>" output file in the
+    $VSC_SCRATCH-directory.</p>
+</li>
+</ol>
+<p>Check the Python and the PBS file, and submit the job:</p>
+<pre><code><b>$ cat file3.py</b>
+<b>$ cat file3.pbs</b>
+<b>$ qsub file3.pbs</b>
+<b>$ qstat</b>
+<b>$ ls -l</b>
+<b>$ more $VSC_SCRATCH/primes_2.txt</b>
+</code></pre>
+<h2 id="how-much-disk-space-do-i-get">How much disk space do I get?<a class="headerlink" href="#how-much-disk-space-do-i-get" title="Permanent link">#</a></h2>
+<h3 id="quota">Quota<a class="headerlink" href="#quota" title="Permanent link">#</a></h3>
+<p>The available disk space on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> is limited. The actual disk capacity,
+shared by all users, can be found on the "Available hardware" page on
+the website.
+(<a href="https://vscdocumentation.readthedocs.io/en/latest/hardware.html">https://vscdocumentation.readthedocs.io/en/latest/hardware.html</a>) As
+explained in <a href="./#pre-defined-quotas">the section on predefined quota</a>, this implies that there are also limits to:</p>
+<ul>
+<li>
+<p>the amount of disk space; and</p>
+</li>
+<li>
+<p>the number of files</p>
+</li>
+</ul>
+<p>that can be made available to each individual <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> user.</p>
+<p>The quota of disk space and number of files for each <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> user is:</p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Volume</strong></th>
+<th align="left"><strong>Max. disk space</strong></th>
+<th align="left"><strong>Max. # Files</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">HOME</td>
+<td align="left">3 GB</td>
+<td align="left">20000</td>
+</tr>
+<tr>
+<td align="left">DATA</td>
+<td align="left">25 GB</td>
+<td align="left">100000</td>
+</tr>
+<tr>
+<td align="left">SCRATCH</td>
+<td align="left">25 GB</td>
+<td align="left">100000</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The first action to take when you have exceeded your quota is to clean
+up your directories. You could start by removing intermediate, temporary
+or log files. Keeping your environment clean will never do any harm.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you obtained your VSC account via UGent, you can get (significantly) more
+storage quota in the DATA and SCRATCH volumes by joining a Virtual Organisation (VO), see <a href="./#virtual-organisations">the section on virtual organisations</a> for more information. In case of questions,
+contact hpc@ugent.be.</p>
+</div>
+<h3 id="check-your-quota">Check your quota<a class="headerlink" href="#check-your-quota" title="Permanent link">#</a></h3>
+<!-- 
+%% Kurt Lust: I've hidden the first part of this chapter as mmlsquota is only
+%% for GPFS file systems (and not for , e.g., the NetApp in Leuven for home and data)
+%% and as on several clusters, the explicit path is needed.
+% In general it may be useful to see how much space (in KB) and how many files that you are using on any file system.  This information is also shown each time that you log in to the HPC
+
+% \begin{prompt}
+% %\shellcmd{mmlsquota}%
+%                          Block Limits
+% Filesystem   type     KB     quota     limit  in_doubt  grace
+% data          USR  82944  26214400  28835840         0   none
+% home          USR  34560   3145728   3461120         0   none
+% scratch       USR  29472  26214400  28835840     19456   none
+
+% |      File Limits
+% Filesystem  files   quota   limit in_doubt  grace  Remarks
+% Data           27  100000  150000        0   none
+% Home          117   20000   25000        0   none
+% Scratch        11  100000  150000       20   none
+% \end{prompt} 
+-->
+
+<p>You can consult your current storage quota usage on the UGent-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> shared
+filesystems via the VSC accountpage, see the "Usage" section at <a href="https://account.vscentrum.be">https://account.vscentrum.be</a> .</p>
+<p>VO moderators can inspect storage quota for all VO members via <a href="https://account.vscentrum.be/django/vo/">https://account.vscentrum.be/django/vo/</a>.</p>
+<p>To check your storage usage on the local <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> filesystems on VSC
+sites other than UGent, you can use the "<code>show_quota</code>" command (when logged
+into the login nodes of that VSC site).</p>
+<p>Once your quota is (nearly) exhausted, you will want to know which
+directories are responsible for the consumption of your disk space. You
+can check the size of all subdirectories in the current directory with
+the "<code>du</code>" (<strong>Disk Usage</strong>) command:</p>
+<pre><code><b>$ du</b>
+256 ./ex01-matlab/log
+1536 ./ex01-matlab
+768 ./ex04-python
+512 ./ex02-python
+768 ./ex03-python
+5632
+</code></pre>
+
+<p>This shows you first the aggregated size of all subdirectories, and
+finally the total size of the current directory "." (this includes files
+stored in the current directory).</p>
+<p>If you also want this size to be "human readable" (and not always the
+total number of kilobytes), you add the parameter "-h":</p>
+<pre><code><b>$ du -h</b>
+256K ./ex01-matlab/log
+1.5M ./ex01-matlab
+768K ./ex04-python
+512K ./ex02-python
+768K ./ex03-python
+5.5M .
+</code></pre>
+
+<p>If the number of lower level subdirectories starts to grow too big, you
+may not want to see the information at that depth; you could just ask
+for a summary of the current directory:</p>
+<pre><code><b>$ du -s</b>
+5632 .
+<b>$ du -s -h</b>
+</code></pre>
+
+<p>If you want to see the size of any file or top-level subdirectory in the
+current directory, you could use the following command:</p>
+<pre><code><b>$ du -s -h *</b>
+1.5M ex01-matlab
+512K ex02-python
+768K ex03-python
+768K ex04-python
+256K example.sh
+1.5M intro-HPC.pdf
+</code></pre>
+
+<p>Finally, if you don't want to know the size of the data in your current
+directory, but in some other directory (e.g., your data directory), you
+just pass this directory as a parameter. The command below will show the
+disk use in your home directory, even if you are currently in a
+different directory:</p>
+<pre><code><b>$ du -h $VSC_HOME/*</b>
+22M /user/home/gent/vsc400/vsc40000/dataset01
+36M /user/home/gent/vsc400/vsc40000/dataset02
+22M /user/home/gent/vsc400/vsc40000/dataset03
+3.5M /user/home/gent/vsc400/vsc40000/primes.txt
+</code></pre>
+
+<h2 id="groups">Groups<a class="headerlink" href="#groups" title="Permanent link">#</a></h2>
+<p>Groups are a way to manage who can access what data. A user can belong
+to multiple groups at a time. <strong>Groups can be created and managed without any interaction from the system administrators</strong>.</p>
+<p>Please note that changes are not instantaneous: it may take about an
+hour for the changes to propagate throughout the entire <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>
+infrastructure.</p>
+<p>To change the group of a directory and it's underlying directories and
+files, you can use:</p>
+<pre><code><b>$ chgrp -R groupname directory</b>
+</code></pre>
+
+<h3 id="joining-an-existing-group">Joining an existing group<a class="headerlink" href="#joining-an-existing-group" title="Permanent link">#</a></h3>
+<ol>
+<li>
+<p>Get the group name you want to belong to.</p>
+</li>
+<li>
+<p>Go to <a href="https://account.vscentrum.be/django/group/new">https://account.vscentrum.be/django/group/new</a> and fill in
+    the section named "Join group". You will be asked to fill in the
+    group name and a message for the moderator of the group, where you
+    identify yourself. This should look something like in the image below.</p>
+</li>
+<li>
+<p>After clicking the submit button, a message will be sent to the
+    moderator of the group, who will either approve or deny the request.
+    You will be a member of the group shortly after the group moderator
+    approves your request.</p>
+</li>
+</ol>
+<p><img alt="Joining a group." src="../img/ch6-group-join.png" /></p>
+<h3 id="creating-a-new-group">Creating a new group<a class="headerlink" href="#creating-a-new-group" title="Permanent link">#</a></h3>
+<ol>
+<li>
+<p>Go to <a href="https://account.vscentrum.be/django/group/new">https://account.vscentrum.be/django/group/new</a> and scroll
+    down to the section "Request new group". This should look something
+    like in the image below.</p>
+</li>
+<li>
+<p>Fill out the group name. This cannot contain spaces.</p>
+</li>
+<li>
+<p>Put a description of your group in the "Info" field.</p>
+</li>
+<li>
+<p>You will now be a member and moderator of your newly created group.</p>
+</li>
+</ol>
+<p><img alt="Creating a new group." src="../img/ch6-group-new.png" /></p>
+<h3 id="managing-a-group">Managing a group<a class="headerlink" href="#managing-a-group" title="Permanent link">#</a></h3>
+<p>Group moderators can go to
+<a href="https://account.vscentrum.be/django/group/edit">https://account.vscentrum.be/django/group/edit</a> to manage their group
+(see the image below). Moderators can invite and remove members. They can also promote
+other members to moderator and remove other moderators.</p>
+<p><img alt="Creating a new group." src="../img/ch6-group-edit.png" /></p>
+<h3 id="inspecting-groups">Inspecting groups<a class="headerlink" href="#inspecting-groups" title="Permanent link">#</a></h3>
+<p>You can get details about the current state of groups on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>
+infrastructure with the following command (<code>example</code> is the name of the
+group we want to inspect):</p>
+<pre><code><b>$ getent group example</b>
+example:*:1234567:vsc40001,vsc40002,vsc40003
+</code></pre>
+
+<p>We can see that the VSC id number is 1234567 and that there are three
+members in the group: <code>vsc40001</code>, <code>vsc40002</code> and <code>vsc40003</code>.</p>
+<h2 id="virtual-organisations">Virtual Organisations<a class="headerlink" href="#virtual-organisations" title="Permanent link">#</a></h2>
+<p>A Virtual Organisation (VO) is a special type of group. You can only be
+a member of one single VO at a time (or not be in a VO at all). Being in
+a VO allows for larger storage quota to be obtained (but these requests
+should be well-motivated).</p>
+<h3 id="joining-an-existing-vo">Joining an existing VO<a class="headerlink" href="#joining-an-existing-vo" title="Permanent link">#</a></h3>
+<ol>
+<li>
+<p>Get the VO id of the research group you belong to (this id is formedby the letters <code>gvo</code>, followed by 5 digits).</p>
+</li>
+<li>
+<p>Go to <a href="https://account.vscentrum.be/django/vo/join">https://account.vscentrum.be/django/vo/join</a> and fill in the
+    section named "Join VO". You will be asked to fill in the VO id and
+    a message for the moderator of the VO, where you identify yourself.
+    This should look something like in the image below.</p>
+</li>
+<li>
+<p>After clicking the submit button, a message will be sent to the
+    moderator of the VO, who will either approve or deny the request.</p>
+</li>
+</ol>
+<p><img alt="Joining a VO." src="../img/ch6-VO-join.png" /></p>
+<h3 id="creating-a-new-vo">Creating a new VO<a class="headerlink" href="#creating-a-new-vo" title="Permanent link">#</a></h3>
+<ol>
+<li>
+<p>Go to <a href="https://account.vscentrum.be/django/vo/new">https://account.vscentrum.be/django/vo/new</a> and scroll down
+    to the section "Request new VO". This should look something like in the image below.</p>
+</li>
+<li>
+<p>Fill why you want to request a VO.</p>
+</li>
+<li>
+<p>Fill out the both the internal and public VO name. These cannot
+    contain spaces, and should be 8-10 characters long. For example,
+    <code>genome25</code> is a valid VO name.</p>
+</li>
+<li>
+<p>Fill out the rest of the form and press submit. This will send a
+    message to the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> administrators, who will then either approve or deny
+    the request.</p>
+</li>
+<li>
+<p>If the request is approved, you will now be a member and moderator
+    of your newly created VO.</p>
+</li>
+</ol>
+<p><img alt="Creating a new VO." src="../img/ch6-VO-new.png" /></p>
+<h3 id="requesting-more-storage-space">Requesting more storage space<a class="headerlink" href="#requesting-more-storage-space" title="Permanent link">#</a></h3>
+<p>If you're a moderator of a VO, you can request additional quota for the
+VO and its members.</p>
+<ol>
+<li>
+<p>Go to <a href="https://account.vscentrum.be/django/vo/edit">https://account.vscentrum.be/django/vo/edit</a> and scroll down
+    to "Request additional quota". See the image below to see how this looks.</p>
+</li>
+<li>
+<p>Fill out how much <em>additional</em> storage you want. In the screenshot
+    below, we're asking for 500 GiB extra space for <code>VSC_DATA</code>, and for
+    1 TiB extra space on <code>VSC_SCRATCH_KYUKON</code>.</p>
+</li>
+<li>
+<p>Add a comment explaining why you need additional storage space and
+    submit the form.</p>
+</li>
+<li>
+<p>An <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> administrator will review your request and approve or deny it.</p>
+</li>
+</ol>
+<p><img alt="Requesting additional quota for the VO and its members." src="../img/ch6-VO-request-additional-quota.png" /></p>
+<h3 id="setting-per-member-vo-quota">Setting per-member VO quota<a class="headerlink" href="#setting-per-member-vo-quota" title="Permanent link">#</a></h3>
+<p>VO moderators can tweak how much of the VO quota each member can use. By
+default, this is set to 50% for each user, but the moderator can change
+this: it is possible to give a particular user more than half of the VO
+quota (for example 80%), or significantly less (for example 10%).</p>
+<p>Note that the total percentage can be above 100%: the percentages the
+moderator allocates per user are <em>the maximum percentages</em> of storage
+users can use.</p>
+<ol>
+<li>
+<p>Go to <a href="https://account.vscentrum.be/django/vo/edit">https://account.vscentrum.be/django/vo/edit</a> and scroll down
+    to "Manage per-member quota <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr>". See the image below to see how this looks.</p>
+</li>
+<li>
+<p>Fill out how much percent of the space you want each user to be able
+    to use. Note that the total can be above 100%. In the screenshot
+    below, there are four users. Alice and Bob can use up to 50% of the
+    space, Carl can use up to 75% of the space, and Dave can only use
+    10% of the space. So in total, 185% of the space has been assigned,
+    but of course only 100% can actually be used.</p>
+</li>
+</ol>
+<p><img alt="Setting per-member quota." src="../img/ch6-VO-per-member-storage.png" /></p>
+<h3 id="vo-directories">VO directories<a class="headerlink" href="#vo-directories" title="Permanent link">#</a></h3>
+<p>When you're a member of a VO, there will be some additional directories
+on each of the shared filesystems available:</p>
+<p><strong>VO <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> (<code>$VSC_SCRATCH_VO</code>)</strong>:   A directory on the shared <em><abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr></em> filesystem shared by the members
+    of your VO, where additional storage quota can be provided (see <a href="./#requesting-more-storage-space">the section on requesting more storage space</a>).
+    You can use this as an alternative to your personal <code>$VSC_SCRATCH</code>
+    directory (see <a href="./#your-scratch-space-vsc_scratch">the section on your <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> space</a>).</p>
+<p><strong>VO data (<code>$VSC_DATA_VO</code>)</strong>:   A directory on the shared <em>data</em> filesystem shared by the members of
+    your VO, where additional storage quota can be provided (see ). You
+    can use this as an alternative to your personal <code>$VSC_DATA</code>
+    directory (see <a href="./#your-data-directory-vsc_data">the section on your data directory</a>).</p>
+<p>If you put <code>_USER</code> after each of these variable names, you can see your
+personal folder in these filesystems. For example: <code>$VSC_DATA_VO_USER</code>
+is your personal folder in your VO data filesystem (this is equivalent
+to <code>$VSC_DATA_VO/$USER</code>), and analogous for <code>$VSC_SCRATCH_VO_USER</code>.</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../running_interactive_jobs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Running interactive jobs" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Running interactive jobs
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../multi_core_jobs/" class="md-footer__link md-footer__link--next" aria-label="Next: Multi core jobs/Parallel Computing" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Multi core jobs/Parallel Computing
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.expand", "navigation.tracking", "toc.follow", "navigation.sections", "navigation.instant", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,851 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Orchestration Using Terraform - VSC Tier-1 Cloud Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#orchestration-using-terraform" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VSC Tier-1 Cloud Documentation" class="md-header__button md-logo" aria-label="VSC Tier-1 Cloud Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSC Tier-1 Cloud Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Orchestration Using Terraform
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VSC Tier-1 Cloud Documentation" class="md-nav__button md-logo" aria-label="VSC Tier-1 Cloud Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    VSC Tier-1 Cloud Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../access/" class="md-nav__link">
+        Access to the VSC Cloud
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard/" class="md-nav__link">
+        The OpenStack Dashboard
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manage_images/" class="md-nav__link">
+        Upload and manage images
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flavors/" class="md-nav__link">
+        Instance types and flavors
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configure_instances/" class="md-nav__link">
+        Configure access and security for instance
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../launch_instance/" class="md-nav__link">
+        Launch and manage instances
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manage_volumes/" class="md-nav__link">
+        Create and manage volumes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat_templates/" class="md-nav__link">
+        Orchestration Using Heat
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Orchestration Using Terraform
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Orchestration Using Terraform
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-application-credentials-for-terraform" class="md-nav__link">
+    Create application credentials for Terraform
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-terraform-examples" class="md-nav__link">
+    Getting Terraform examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-terraform-template-variables" class="md-nav__link">
+    Generate Terraform template variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modify-default-terraform-modules" class="md-nav__link">
+    Modify default Terraform modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-terraform-templates" class="md-nav__link">
+    Deploy Terraform templates
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shares/" class="md-nav__link">
+        Shared file systems using Manila
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpus/" class="md-nav__link">
+        GPUs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/" class="md-nav__link">
+        Appendix
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-application-credentials-for-terraform" class="md-nav__link">
+    Create application credentials for Terraform
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-terraform-examples" class="md-nav__link">
+    Getting Terraform examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-terraform-template-variables" class="md-nav__link">
+    Generate Terraform template variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modify-default-terraform-modules" class="md-nav__link">
+    Modify default Terraform modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-terraform-templates" class="md-nav__link">
+    Deploy Terraform templates
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="orchestration-using-terraform">Orchestration Using <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr><a class="headerlink" href="#orchestration-using-terraform" title="Permanent link">#</a></h1>
+<p>HashiCorp <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> <a href="https://www.terraform.io/">https://www.terraform.io/</a> is an
+infrastructure as code tool (IaC), similar to <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr>
+<abbr title="Heat is the OpenStack orchestration service, which can manage multiple composite cloud applications using templates, through both an OpenStack-native REST API and a CloudFormation-compatible Query API.">Heat</abbr> orchestrator
+(See chapter <a href="../heat_templates/#orchestration-using-heat">using heat</a>
+). Users can deploy a data center
+infrastructure using a declarative configuration language known as
+HashiCorp Configuration Language (HCL), or using JSON.
+<abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> has
+some advantages over <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> <abbr title="Heat is the OpenStack orchestration service, which can manage multiple composite cloud applications using templates, through both an OpenStack-native REST API and a CloudFormation-compatible Query API.">Heat</abbr> service. It is has a simple syntax, it
+can provision virtual infrastructures across multiple cloud providers
+(not only <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr>) and it provides important features not supported by
+<abbr title="Heat is the OpenStack orchestration service, which can manage multiple composite cloud applications using templates, through both an OpenStack-native REST API and a CloudFormation-compatible Query API.">Heat</abbr> at this
+moment, like network port forwarding rules (see
+<a href="../configure_instances/#floating-ip-port-forwarding">floating-ip</a>).
+This means that with <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr>, scripts
+like <code>neutron_port_forward</code> (see
+<a href="../configure_instances/#floating-ip-port-forwarding">port forwarding script</a>
+) are no longer needed.
+<abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> is
+currently one of the most popular infrastructure automation tools
+available. VSC Cloud also provides some template examples that could be
+used to deploy virtual infrastructures within VSC Tier-1 Cloud in an
+automated way
+(<a href="https://github.com/hpcugent/openstack-templates/tree/master/terraform">https://github.com/hpcugent/openstack-templates/tree/master/terraform</a>).</p>
+<p><abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr>
+client is available for different Operating Systems like Windows, <abbr title="An operating system, similar to UNIX.">Linux</abbr>
+or macOS (<a href="https://www.terraform.io/downloads">https://www.terraform.io/downloads</a>) but it is also available
+from UGent <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr> <em>login.hpc.ugent.be</em>.</p>
+<h2 id="create-application-credentials-for-terraform">Create application credentials for <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr><a class="headerlink" href="#create-application-credentials-for-terraform" title="Permanent link">#</a></h2>
+<p><abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr>
+uses <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> application credentials to authenticate to VSC Cloud
+Tier-1 public API. It is a good practice to generate a new application
+credential just to be used with Terraformframework. The process is the same
+described in section
+<a href="../access/#application-credentials">application credentials</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure you download the new application credential as <abbr title="A human-readable text-based data serialization format.">yaml</abbr> file
+instead of openRC.</p>
+</div>
+<p>At this point you should have a <em>clouds.<abbr title="A human-readable text-based data serialization format.">yaml</abbr></em> text file with these lines:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># This is a clouds.yaml file, which can be used by OpenStack tools as a source</span>
+<span class="c1"># of configuration on how to connect to a cloud. If this is your only cloud,</span>
+<span class="c1"># just put this file in ~/.config/openstack/clouds.yaml and tools like</span>
+<span class="c1"># python-openstackclient will just work with no further config. (You will need</span>
+<span class="c1"># to add your password to the auth section)</span>
+<span class="c1"># If you have more than one cloud account, add the cloud entry to the clouds</span>
+<span class="c1"># section of your existing file and you can refer to them by name with</span>
+<span class="c1"># OS_CLOUD=openstack or --os-cloud=openstack</span>
+clouds:
+  openstack:
+
+    auth:
+
+      auth_url: https://cloud.vscentrum.be:13000
+
+      application_credential_id: <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
+      application_credential_secret: <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
+
+
+
+    region_name: <span class="s2">&quot;regionOne&quot;</span>
+
+
+    interface: <span class="s2">&quot;public&quot;</span>
+    identity_api_version: <span class="m">3</span>
+    auth_type: <span class="s2">&quot;v3applicationcredential&quot;</span>
+</code></pre></div>
+<p>As the file comments state, you should copy the current clouds.<abbr title="A human-readable text-based data serialization format.">yaml</abbr> to
+your VSC <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr> <strong>$HOME</strong> <em>login.hpc.ugent.be:
+~/.config/openstack/clouds.<abbr title="A human-readable text-based data serialization format.">yaml</abbr></em>, or locally if you have installed
+<abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> in
+your own laptop or computer. <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> will use this file to authenticate to
+<abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> API automatically.</p>
+<h2 id="getting-terraform-examples">Getting <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> examples<a class="headerlink" href="#getting-terraform-examples" title="Permanent link">#</a></h2>
+<p>You can connect to UGent <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr> <code>login.hpc.ugent.be</code> to use
+terraform. Login to the <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr> with your VSC account first:</p>
+<div class="highlight"><pre><span></span><code>ssh -A vscxxxxx@login.hpc.ugent.be
+</code></pre></div>
+<p>If this is the first time using <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr>, download the VSC <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr>
+examples from github from
+<a href="https://github.com/hpcugent/openstack-templates">https://github.com/hpcugent/openstack-templates</a>:</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/hpcugent/openstack-templates
+</code></pre></div>
+<p>Make sure you have <em><code>~/.config/openstack/clouds.yaml</code></em> available from
+the <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr> (see previous <a href="#create-application-credentials-for-terraform">section</a>).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr> your application's credential file <code>clouds.yaml</code> or put this
+file in a public place.</p>
+</div>
+<div class="highlight"><pre><span></span><code>chmod <span class="m">600</span> ~/.config/openstack/clouds.yaml
+</code></pre></div>
+<h2 id="generate-terraform-template-variables">Generate <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> template variables<a class="headerlink" href="#generate-terraform-template-variables" title="Permanent link">#</a></h2>
+<p><abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr>
+requires some variables to know which resources are available from the
+cloud provider for the user or project. You do not have to include these
+variables manually, we have included a script to gather these variable
+IDs automatically. From the <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> directory cloned from git in the
+previous step (see previous
+<a href="#getting-terraform-examples">section</a>), go to the scripts directory:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~/openstack-templates/terraform/scripts
+</code></pre></div>
+<p>And now run the script (usually you only have to run this script once).</p>
+<div class="highlight"><pre><span></span><code>./modify_variable.sh
+</code></pre></div>
+<p>This step will take some seconds. The script will contact the VSC
+<abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> public API to gather all the resources available for your
+project and fetch all the resource's IDs. Usually you only have to run
+this script once, unless something was changed/updated for your
+project's resources (like a new network or floating IPs) or if you want
+to deploy a new <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> template from <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr>.</p>
+<p>You will see some messages like this (IDs and IPs may change depending
+on your project's resources).</p>
+<div class="highlight"><pre><span></span><code><span class="go">Variable OS_CLOUD is not set. Using openstack as a value.</span>
+<span class="go">Image id: 749f4f24-7222-45fc-b571-996f5b68c28f. (Image name: CentOS-8-stream)</span>
+<span class="go">Flavor name: CPUv1.small.</span>
+<span class="go">Root FS volume size based on flavor disk size: 20.</span>
+<span class="go">VM network id: 4d72c0ec-c000-429e-89c6-8c3607a28b3d.</span>
+<span class="go">VM subnet id: f0bc8307-568f-457d-adff-219005a054e2.</span>
+<span class="go">NFS network id: 119d8617-4000-47c0-9c6e-589b3afce144.</span>
+<span class="go">NFS subnet id: e4e07edd-39cf-42ea-9fe4-5bf2891d2592.</span>
+<span class="go">VSC network id: f6eba915-06ad-4e50-bc4b-1538cdc39296.</span>
+<span class="go">VSC subnet id: b5ed8dc2-6d3f-42d4-87f8-3ffee19c1a9c.</span>
+<span class="go">Using first ssh access key &quot;ssh-ed25519 AAAAC3Nz_A02TxLd9 lsimngar_varolaptop\&quot;.</span>
+<span class="go">Using floating ip id: 64f2705c-43ec-4bdf-864e-d18fee013e3f. (floating ip 193.190.80.3)</span>
+<span class="go">Using VSC floating ip: 172.24.49.7.</span>
+<span class="go">Using ssh forwarded ports: 56469 59112 54872 51280.</span>
+<span class="go">Using http forwarded port: 52247.</span>
+<span class="go">Modifying ../environment/main.tf file.</span>
+<span class="go">Modifying provider.tf files.</span>
+<span class="go">SSH commands for VMs access:</span>
+<span class="gp gp-VirtualEnv">(myvm)</span> <span class="go">ssh -p 56469 &lt;user&gt;@193.190.80.3</span>
+<span class="gp gp-VirtualEnv">(myvm-nginx)</span> <span class="go">ssh -p 59112 &lt;user&gt;@193.190.80.3</span>
+<span class="gp gp-VirtualEnv">(myvm-vsc_net)</span> <span class="go">ssh -p 54872 &lt;user&gt;@193.190.80.3</span>
+<span class="gp gp-VirtualEnv">(myvm-nfs_share)</span> <span class="go">ssh -p 51280 &lt;user&gt;@193.190.80.3</span>
+</code></pre></div>
+<p>After this step your <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> templates will be ready to be deployed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that the script shows you the ssh command to connect to each
+VM after instantiation (including the port which is generated
+automatically by the script). You can copy this list or you can review
+it later. Also note that you should use a valid user to connect to the
+VM, for instance for CentOS images is <em>centos</em>, for Ubuntu images is
+<em>ubuntu</em> and so on. You can also try to connect as <em>root</em> user, in that
+case the system will show you a message with the user that you should
+use.</p>
+</div>
+<h2 id="modify-default-terraform-modules">Modify default <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr><a class="headerlink" href="#modify-default-terraform-modules" title="Permanent link">#</a></h2>
+<p>In <a href="#getting-terraform-examples">section</a> we have downloaded the
+<abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> module examples from the VSC repository. If you deploy these
+<abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> as it is it will deploy several VM examples by default such as:</p>
+<ol>
+<li>
+<p><strong>myvm:</strong> simple VM with 20Gb persistent volume and ssh access with port
+    forwarding.</p>
+</li>
+<li>
+<p><strong>myvm-nginx:</strong> Like previous example but with an ansible playbook to install nginx
+    and access to port 80 besides ssh.</p>
+</li>
+<li>
+<p><strong>myvm-vsc_net:</strong> Similar to the first example but also includes a VSC network
+    interface (only available for some projects).</p>
+</li>
+<li>
+<p><strong>myvm-nfs_share:</strong> Similar to the first example but it creates a NFS <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr> filesystem
+    and it mounts it during instantiation (only available for some
+    projects).</p>
+</li>
+</ol>
+<p>But usually you do not want to deploy all these examples, you can just
+keep the required module and comment out the rest. You can do this from
+environment directory:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~/openstack-templates/terraform/environment
+</code></pre></div>
+<p>And edit <em><code>main.tf</code></em> <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> file with any text editor like vim or
+nano. If you want to deploy just the simple VM (first example) only keep
+these lines (remenber variable IDs may change depending on your
+project's resources):</p>
+<div class="highlight"><pre><span></span><code>module &quot;vm_with_pf_rules_with_ssh_access&quot; {
+  source   = &quot;../modules/vm_with_pf_rules_with_ssh_access&quot;
+
+  vm_name              = &quot;MyVM&quot;
+  floating_ip_id       = &quot;64f2705c-43ec-4bdf-864e-d18fee013e3f&quot;
+  vm_network_id        = &quot;4d72c0ec-c000-429e-89c6-8c3607a28b3d&quot;
+  vm_subnet_id         = &quot;f0bc8307-568f-457d-adff-219005a054e2&quot;
+  access_key           = &quot;ssh-ed25519 AAAAC3Nz_A02TxLd9 lsimngar_varolaptop&quot;
+  image_id             = &quot;d00d6dfd-998c-4bcb-bbf4-496ef84d5b64&quot;
+  flavor_name          = &quot;CPUv1.small&quot;
+  ssh_forwarded_port   = &quot;56469&quot;
+  root_fs_volume_size  = &quot;20&quot;
+}
+</code></pre></div>
+<p>And remove or comment out the rest of the lines. In the previous example
+<abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> will deploy a simple VM and use 20Gb for a persistent volume
+and port 56469 to connect via ssh (it also creates all required security
+groups).</p>
+<h2 id="deploy-terraform-templates">Deploy <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> templates<a class="headerlink" href="#deploy-terraform-templates" title="Permanent link">#</a></h2>
+<p>If you have followed the previous steps now you can init and deploy your
+infrastucture to Tier-1 VSC cloud.</p>
+<p>You have to inititate <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> first, if you didnt have deployed any
+template yet do this just once.</p>
+<p>Move to environment directory first:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~/openstack-templates/terraform/environment
+</code></pre></div>
+<p>This command performs several different initialization steps in order to
+prepare the current working directory for use with <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr>:</p>
+<div class="highlight"><pre><span></span><code>terraform init
+</code></pre></div>
+<p>Now you can check and review your <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> plan, from the same
+directory:</p>
+<div class="highlight"><pre><span></span><code>terraform plan
+</code></pre></div>
+<p>You will see a list of the resources required to deploy your
+infrastructure, <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> also checks if there is any systax error in
+your templates. Your infrastructure is not deployed yet, review the plan
+and then just deploy it to VSC Tier-1 Cloud running:</p>
+<div class="highlight"><pre><span></span><code>terraform apply
+</code></pre></div>
+<p><abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> will show your plan again and you will see this message:</p>
+<div class="highlight"><pre><span></span><code><span class="go">..</span>
+<span class="go">..</span>
+<span class="go">Do you want to perform these actions?</span>
+<span class="go">Terraform will perform the actions described above.</span>
+<span class="go">Only ’yes’ will be accepted to approve.</span>
+<span class="go">Enter a value:</span>
+</code></pre></div>
+<p>Type <strong>yes</strong> and press enter and wait a few seconds or minutes. If
+everything is correct and if you have enough quota <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> will show
+you a message after creating all the required resources.</p>
+<div class="highlight"><pre><span></span><code><span class="go">..</span>
+<span class="go">..</span>
+<span class="go">module.vm_with_pf_rules_with_ssh_access.openstack_compute_instance_v2.instance_01:</span>
+<span class="go">Still creating... [1m30s elapsed]</span>
+<span class="go">module.vm_with_pf_rules_with_ssh_access.openstack_compute_instance_v2.instance_01:</span>
+<span class="go">Creation complete after 1m35s [id=88c7d037-5c44-45b7-acce-f5e4e58b1c35]</span>
+<span class="go">Apply complete! Resources: 4 added, 0 changed, 0 destroyed.</span>
+</code></pre></div>
+<p>Your cloud infrastrucuture is ready to be used.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It is important to keep a backup of your terraform directory, specially
+all the files within the environment directory:
+<code>~/openstack-templates/terraform/environment</code></p>
+</div>
+<p><abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> generates several files in this directory to keep track of any
+change in your infrastructure. If for some reason you lost or remove
+these files you will not able to modify or change the current <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr>
+plan (only directly from <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr>).</p>
+<p>You can also modify and add more resources for the current templates.
+This task is out of the scope of this document, please refer to official
+<abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> documentation to add you own changes
+<a href="https://www.terraform.io/docs">https://www.terraform.io/docs</a> or ask to VSC Cloud admins via email at
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#108;&#111;&#117;&#100;&#64;&#118;&#115;&#99;&#101;&#110;&#116;&#114;&#117;&#109;&#46;&#98;&#101;">&#99;&#108;&#111;&#117;&#100;&#64;&#118;&#115;&#99;&#101;&#110;&#116;&#114;&#117;&#109;&#46;&#98;&#101;</a>.</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../heat_templates/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Orchestration Using Heat" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Orchestration Using Heat
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../shares/" class="md-footer__link md-footer__link--next" aria-label="Next: Shared file systems using Manila" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Shared file systems using Manila
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.expand", "navigation.tracking", "toc.follow", "navigation.sections", "navigation.instant", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

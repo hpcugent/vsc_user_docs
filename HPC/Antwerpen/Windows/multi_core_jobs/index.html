@@ -1,0 +1,1517 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Multi core jobs/Parallel Computing - VSC User Documentation - Antwerpen (Windows)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#multi-core-jobsparallel-computing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VSC User Documentation - Antwerpen (Windows)" class="md-header__button md-logo" aria-label="VSC User Documentation - Antwerpen (Windows)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSC User Documentation - Antwerpen (Windows)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Multi core jobs/Parallel Computing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VSC User Documentation - Antwerpen (Windows)" class="md-nav__button md-logo" aria-label="VSC User Documentation - Antwerpen (Windows)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    VSC User Documentation - Antwerpen (Windows)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        Introduction to HPC
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        Getting an HPC Account
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connecting/" class="md-nav__link">
+        Connecting to the HPC infrastructure
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_batch_jobs/" class="md-nav__link">
+        Running batch jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_interactive_jobs/" class="md-nav__link">
+        Running interactive jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_jobs_with_input_output_data/" class="md-nav__link">
+        Running jobs with input/output data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Multi core jobs/Parallel Computing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Multi core jobs/Parallel Computing
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-parallel-programming" class="md-nav__link">
+    Why Parallel Programming?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parallel-computing-with-threads" class="md-nav__link">
+    Parallel Computing with threads
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parallel-computing-with-openmp" class="md-nav__link">
+    Parallel Computing with OpenMP
+  </a>
+  
+    <nav class="md-nav" aria-label="Parallel Computing with OpenMP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#private-versus-shared-variables" class="md-nav__link">
+    Private versus Shared variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallelising-for-loops-with-openmp" class="md-nav__link">
+    Parallelising for loops with OpenMP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-code" class="md-nav__link">
+    Critical Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduction" class="md-nav__link">
+    Reduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-openmp-directives" class="md-nav__link">
+    Other OpenMP directives
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parallel-computing-with-mpi" class="md-nav__link">
+    Parallel Computing with MPI
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_portal/" class="md-nav__link">
+        Using the HPC-UGent web portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdmod/" class="md-nav__link">
+        XDMoD portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sites/hpc_policies/" class="md-nav__link">
+        HPC Policies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Advanced topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced topics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fine_tuning_job_specifications/" class="md-nav__link">
+        Fine-tuning Job Specifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_job_submission/" class="md-nav__link">
+        Multi-job submission
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiling_your_software/" class="md-nav__link">
+        Compiling and testing your software on the HPC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program_examples/" class="md-nav__link">
+        Program examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jobscript_examples/" class="md-nav__link">
+        Job script examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_practices/" class="md-nav__link">
+        Best Practices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14">
+          Appendices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Appendices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick_reference_guide/" class="md-nav__link">
+        Appendix A - HPC Quick Reference Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torque_options/" class="md-nav__link">
+        Appendix B - TORQUE options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../useful_linux_commands/" class="md-nav__link">
+        Appendix C - Useful Linux Commands
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-parallel-programming" class="md-nav__link">
+    Why Parallel Programming?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parallel-computing-with-threads" class="md-nav__link">
+    Parallel Computing with threads
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parallel-computing-with-openmp" class="md-nav__link">
+    Parallel Computing with OpenMP
+  </a>
+  
+    <nav class="md-nav" aria-label="Parallel Computing with OpenMP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#private-versus-shared-variables" class="md-nav__link">
+    Private versus Shared variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallelising-for-loops-with-openmp" class="md-nav__link">
+    Parallelising for loops with OpenMP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-code" class="md-nav__link">
+    Critical Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduction" class="md-nav__link">
+    Reduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-openmp-directives" class="md-nav__link">
+    Other OpenMP directives
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parallel-computing-with-mpi" class="md-nav__link">
+    Parallel Computing with MPI
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="multi-core-jobsparallel-computing">Multi <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> jobs/Parallel Computing<a class="headerlink" href="#multi-core-jobsparallel-computing" title="Permanent link">#</a></h1>
+<h2 id="why-parallel-programming">Why Parallel Programming?<a class="headerlink" href="#why-parallel-programming" title="Permanent link">#</a></h2>
+<p>There are two important motivations to engage in parallel programming.</p>
+<ol>
+<li>
+<p>Firstly, the need to decrease the time to solution: distributing
+    your code over <em>C</em> cores holds the promise of speeding up execution
+    times by a factor <em>C</em>. All modern computers (and probably even your
+    smartphone) are equipped with multi-<abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> processors capable of
+    parallel processing.</p>
+</li>
+<li>
+<p>The second reason is problem size: distributing your code over <em>N</em>
+    nodes increases the available <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> by a factor <em>N</em>, and thus holds
+    the promise of being able to tackle problems which are <em>N</em> times
+    bigger.</p>
+</li>
+</ol>
+<p>On a desktop computer, this enables a user to run multiple programs and
+the operating system simultaneously. For scientific computing, this
+means you have the ability in principle of splitting up your
+computations into groups and running each group on its own <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr>.</p>
+<p>There are multiple different ways to achieve parallel programming. The
+table below gives a (non-exhaustive) overview of problem independent
+approaches to parallel programming. In addition there are many problem
+specific libraries that incorporate parallel capabilities. The next
+three sections explore some common approaches: (raw) threads, OpenMP and
+<abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>.</p>
+<table>
+    <tr>
+        <td colspan="3">
+            <center><b>Parallel programming approaches</b></center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1">
+            <b>Tool</b>
+        </td>
+        <td colspan="1">
+            <b>Available languages binding</b>
+        </td>
+        <td colspan="1">
+            <b>Limitations</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1">
+            Raw threads pthreads, boost:: threading, ...
+        </td>
+        <td colspan="1">
+            Threading libraries are available for all common programming languages
+        </td>
+        <td colspan="1">
+            Threading libraries are available for all common programming languages & Threads are limited to shared memory systems. They are more often used on single node systems rather than for UAntwerpen-HPC. Thread management is hard.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1">
+            OpenMP
+        </td>
+        <td colspan="1">
+            Fortran/C/C++
+        </td>
+        <td colspan="1">
+            Limited to shared memory systems, but large shared memory systems for HPC are not uncommon (e.g., SGI UV). Loops and task can be parallelised by simple insertion of compiler directives. Under the hood threads are used. Hybrid approaches exist which use OpenMP to parallelise the work load on each node and MPI (see below) for communication between nodes.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1">
+            Lightweight threads with clever scheduling, Intel TBB, Intel Cilk Plus
+        </td>
+        <td colspan="1">
+            C/C++
+        </td>
+        <td colspan="1">
+            Limited to shared memory systems, but may be combined with MPI. Thread management is taken care of by a very clever scheduler enabling the programmer to focus on parallelisation itself. Hybrid approaches exist which use TBB and/or Cilk Plus to parallelise the work load on each node and MPI (see below) for communication between nodes.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1">
+            MPI
+        </td>
+        <td colspan="1">
+            Fortran/C/C++, Python
+        </td>
+        <td colspan="1">
+            Applies to both distributed and shared memory systems. Cooperation between different nodes or cores is managed by explicit calls to library routines handling communication routines.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1">
+            Global Arrays library 
+        </td>
+        <td colspan="1">
+            C/C++, Python
+        </td>
+        <td colspan="1">
+            Mimics a global address space on distributed memory systems, by distributing arrays over many nodes and one sided communication. This library is used a lot for chemical structure calculation codes and was used in one of the first applications that broke the PetaFlop barrier.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1">
+            scoop
+        </td>
+        <td colspan="1">
+            Python
+        </td>
+        <td colspan="1">
+            Applies to both shared and distributed memory system. Not extremely advanced, but may present a quick road to parallelisation of Python code.
+        </td>
+    </tr>
+</table>
+
+<h2 id="parallel-computing-with-threads">Parallel Computing with threads<a class="headerlink" href="#parallel-computing-with-threads" title="Permanent link">#</a></h2>
+<p>Multi-threading is a widespread programming and execution model that
+allows multiple threads to exist within the context of a single process.
+These threads <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr> the process' resources, but are able to execute
+independently. The threaded programming model provides developers with a
+useful abstraction of concurrent execution. Multi-threading can also be
+applied to a single process to enable parallel execution on a
+multiprocessing system.</p>
+<p><img alt="Image" src="../img/img0700.png" /></p>
+<p>This advantage of a multithreaded program allows it to operate faster on
+computer systems that have multiple CPUs or across a <abbr title="A group of compute nodes.">cluster</abbr> of machines
+--- because the threads of the program naturally lend themselves to
+truly concurrent execution. In such a case, the programmer needs to be
+careful to avoid race conditions, and other non-intuitive behaviours. In
+order for data to be correctly manipulated, threads will often need to
+synchronise in time in order to process the data in the correct order.
+Threads may also require mutually exclusive operations (often
+implemented using semaphores) in order to prevent common data from being
+simultaneously modified, or read while in the process of being modified.
+Careless use of such primitives can lead to deadlocks.</p>
+<p>Threads are a way that a program can spawn concurrent units of
+processing that can then be delegated by the operating system to
+multiple processing cores. Clearly the advantage of a multithreaded
+program (one that uses multiple threads that are assigned to multiple
+processing cores) is that you can achieve big speedups, as all cores of
+your <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr> (and all CPUs if you have more than one) are used at the same
+time.</p>
+<p>Here is a simple example program that spawns 5 threads, where each one
+runs a simple function that only prints "Hello from thread".</p>
+<p>Go to the example directory:</p>
+<pre><code><b>$ cd ~/examples/Multi_core_jobs_Parallel_Computing</b>
+</code></pre>
+
+<p>Study the example first:</p>
+<div style="text-align: center;">-- T_hello.c --</div>
+
+<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<span class="cm"> * VSC        : Flemish Supercomputing Centre</span>
+<span class="cm"> * Tutorial   : Introduction to HPC</span>
+<span class="cm"> * Description: Showcase of working with threads</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pthread.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#define NTHREADS 5</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="nf">myFun</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">tid</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">tid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="p">((</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello from thread %d!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">tid</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">pthread_t</span><span class="w"> </span><span class="n">threads</span><span class="p">[</span><span class="n">NTHREADS</span><span class="p">];</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">thread_args</span><span class="p">[</span><span class="n">NTHREADS</span><span class="p">];</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">rc</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="cm">/* spawn the threads */</span><span class="w"></span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">NTHREADS</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">thread_args</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;spawning thread %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">rc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pthread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">threads</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">myFun</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">thread_args</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="cm">/* wait for threads to finish */</span><span class="w"></span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">NTHREADS</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">rc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pthread_join</span><span class="p">(</span><span class="n">threads</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>And compile it (whilst including the thread library) and run and test it
+on the login-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>:</p>
+<pre><code><b>$ module load GCC</b>
+<b>$ gcc -o T_hello T_hello.c -lpthread</b>
+<b>$ ./T_hello</b>
+spawning thread 0
+spawning thread 1
+spawning thread 2
+Hello from thread 0!
+Hello from thread 1!
+Hello from thread 2!
+spawning thread 3
+spawning thread 4
+Hello from thread 3!
+Hello from thread 4!
+</code></pre>
+
+<p>Now, run it on the <abbr title="A group of compute nodes.">cluster</abbr> and check the output:</p>
+<pre><code><b>$ qsub T_hello.pbs</b>
+433253.leibniz
+<b>$ more T_hello.pbs.o433253.leibniz</b>
+spawning thread 0
+spawning thread 1
+spawning thread 2
+Hello from thread 0!
+Hello from thread 1!
+Hello from thread 2!
+spawning thread 3
+spawning thread 4
+Hello from thread 3!
+Hello from thread 4!
+</code></pre>
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you plan engaging in parallel programming using threads, this book
+may prove useful: <em>Professional Multicore Programming: Design and Implementation for C++ Developers. Cameron Hughes and Tracey Hughes. Wrox 2008.</em></p>
+</div>
+<h2 id="parallel-computing-with-openmp">Parallel Computing with OpenMP<a class="headerlink" href="#parallel-computing-with-openmp" title="Permanent link">#</a></h2>
+<p><strong><em>OpenMP</em></strong> is an API that implements a multi-threaded, shared <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> form of
+parallelism. It uses a set of compiler directives (statements that you
+add to your code and that are recognised by your Fortran/C/C++ compiler
+if OpenMP is enabled or otherwise ignored) that are incorporated at
+compile-time to generate a multi-threaded version of your code. You can
+think of Pthreads (above) as doing multi-threaded programming "by hand",
+and OpenMP as a slightly more automated, higher-level API to make your
+program multithreaded. OpenMP takes care of many of the low-level
+details that you would normally have to implement yourself, if you were
+using Pthreads from the ground up.</p>
+<p>An important advantage of OpenMP is that, because it uses compiler
+directives, the original serial version stays intact, and minimal
+changes (in the form of compiler directives) are necessary to turn a
+working serial code into a working parallel code.</p>
+<p>Here is the general code structure of an OpenMP program:
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;omp.h&gt;</span><span class="cp"></span>
+<span class="n">main</span><span class="w"> </span><span class="p">()</span><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">var1</span><span class="p">,</span><span class="w"> </span><span class="n">var2</span><span class="p">,</span><span class="w"> </span><span class="n">var3</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// Serial code</span>
+<span class="c1">// Beginning of parallel section. Fork a team of threads.</span>
+<span class="c1">// Specify variable scoping</span>
+
+<span class="cp">#pragma omp parallel private(var1, var2) shared(var3)</span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Parallel section executed by all threads</span>
+<span class="w">  </span><span class="c1">// All threads join master thread and disband</span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="c1">// Resume serial code</span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+<h3 id="private-versus-shared-variables">Private versus Shared variables<a class="headerlink" href="#private-versus-shared-variables" title="Permanent link">#</a></h3>
+<p>By using the private() and shared() clauses, you can specify variables
+within the parallel region as being <strong>shared</strong>, i.e., visible and accessible by
+all threads simultaneously, or <strong>private</strong>, i.e., private to each thread, meaning
+each thread will have its own local copy. In the code example below for
+parallelising a for loop, you can see that we specify the thread_id and
+nloops variables as private.</p>
+<h3 id="parallelising-for-loops-with-openmp">Parallelising for loops with OpenMP<a class="headerlink" href="#parallelising-for-loops-with-openmp" title="Permanent link">#</a></h3>
+<p>Parallelising for loops is really simple (see code below). By default,
+loop iteration counters in OpenMP loop constructs (in this case the i
+variable) in the for loop are set to private variables.</p>
+<p><center>-- omp1.c --</center></p>
+<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<span class="cm"> * VSC        : Flemish Supercomputing Centre</span>
+<span class="cm"> * Tutorial   : Introduction to HPC</span>
+<span class="cm"> * Description: Showcase program for OMP loops</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="cm">/* OpenMP_loop.c  */</span><span class="w"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;omp.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">thread_id</span><span class="p">,</span><span class="w"> </span><span class="n">nloops</span><span class="p">;</span><span class="w"></span>
+
+<span class="cp">#pragma omp parallel private(thread_id, nloops)</span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">nloops</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="cp">#pragma omp for</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">1000</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="o">++</span><span class="n">nloops</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">thread_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">omp_get_thread_num</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Thread %d performed %d iterations of the loop.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">thread_id</span><span class="p">,</span><span class="w"> </span><span class="n">nloops</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>And compile it (whilst including the "<em>openmp</em>" library) and run and
+test it on the login-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>:</p>
+<pre><code><b>$ module load GCC</b>
+<b>$ gcc -fopenmp -o omp1 omp1.c</b>
+<b>$ ./omp1</b>
+Thread 6 performed 125 iterations of the loop.
+Thread 7 performed 125 iterations of the loop.
+Thread 5 performed 125 iterations of the loop.
+Thread 4 performed 125 iterations of the loop.
+Thread 0 performed 125 iterations of the loop.
+Thread 2 performed 125 iterations of the loop.
+Thread 3 performed 125 iterations of the loop.
+Thread 1 performed 125 iterations of the loop.
+</code></pre>
+
+<p>Now run it in the <abbr title="A group of compute nodes.">cluster</abbr> and check the result again.</p>
+<pre><code><b>$ qsub omp1.pbs</b>
+<b>$ cat omp1.pbs.o*</b>
+Thread 1 performed 125 iterations of the loop.
+Thread 4 performed 125 iterations of the loop.
+Thread 3 performed 125 iterations of the loop.
+Thread 0 performed 125 iterations of the loop.
+Thread 5 performed 125 iterations of the loop.
+Thread 7 performed 125 iterations of the loop.
+Thread 2 performed 125 iterations of the loop.
+Thread 6 performed 125 iterations of the loop.
+</code></pre>
+
+<h3 id="critical-code">Critical Code<a class="headerlink" href="#critical-code" title="Permanent link">#</a></h3>
+<p>Using OpenMP you can specify something called a "critical" section of
+code. This is code that is performed by all threads, but is only
+performed <strong>one thread at a time</strong> (i.e., in serial). This provides a convenient way of letting
+you do things like updating a global variable with local results from
+each thread, and you don't have to worry about things like other threads
+writing to that global variable at the same time (a collision).</p>
+<p><center>-- omp2.c --</center></p>
+<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<span class="cm"> * VSC        : Flemish Supercomputing Centre</span>
+<span class="cm"> * Tutorial   : Introduction to HPC</span>
+<span class="cm"> * Description: OpenMP Test Program</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;omp.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">thread_id</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">glob_nloops</span><span class="p">,</span><span class="w"> </span><span class="n">priv_nloops</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">glob_nloops</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// parallelize this chunk of code</span>
+<span class="w">  </span><span class="cp">#pragma omp parallel private(priv_nloops, thread_id)</span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">priv_nloops</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">thread_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">omp_get_thread_num</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// parallelize this for loop</span>
+<span class="w">    </span><span class="cp">#pragma omp for</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">100000</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="o">++</span><span class="n">priv_nloops</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// make this a &quot;critical&quot; code section</span>
+<span class="w">    </span><span class="cp">#pragma omp critical</span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Thread %d is adding its iterations (%d) to sum (%d), &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">thread_id</span><span class="p">,</span><span class="w"> </span><span class="n">priv_nloops</span><span class="p">,</span><span class="w"> </span><span class="n">glob_nloops</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">glob_nloops</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">priv_nloops</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;total is now %d.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">glob_nloops</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Total # loop iterations is %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">glob_nloops</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>And compile it (whilst including the "<em>openmp</em>" library) and run and
+test it on the login-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>:</p>
+<pre><code><b>$ module load GCC</b>
+<b>$ gcc -fopenmp -o omp2 omp2.c</b>
+<b>$ ./omp2</b>
+Thread 3 is adding its iterations (12500) to sum (0), total is now 12500.
+Thread 7 is adding its iterations (12500) to sum (12500), total is now 25000.
+Thread 5 is adding its iterations (12500) to sum (25000), total is now 37500.
+Thread 6 is adding its iterations (12500) to sum (37500), total is now 50000.
+Thread 2 is adding its iterations (12500) to sum (50000), total is now 62500.
+Thread 4 is adding its iterations (12500) to sum (62500), total is now 75000.
+Thread 1 is adding its iterations (12500) to sum (75000), total is now 87500.
+Thread 0 is adding its iterations (12500) to sum (87500), total is now 100000.
+Total # loop iterations is 100000
+</code></pre>
+
+<p>Now run it in the <abbr title="A group of compute nodes.">cluster</abbr> and check the result again.</p>
+<pre><code><b>$ qsub omp2.pbs</b>
+<b>$ cat omp2.pbs.o*</b>
+Thread 2 is adding its iterations (12500) to sum (0), total is now 12500.
+Thread 0 is adding its iterations (12500) to sum (12500), total is now 25000.
+Thread 1 is adding its iterations (12500) to sum (25000), total is now 37500.
+Thread 4 is adding its iterations (12500) to sum (37500), total is now 50000.
+Thread 7 is adding its iterations (12500) to sum (50000), total is now 62500.
+Thread 3 is adding its iterations (12500) to sum (62500), total is now 75000.
+Thread 5 is adding its iterations (12500) to sum (75000), total is now 87500.
+Thread 6 is adding its iterations (12500) to sum (87500), total is now 100000.
+Total # loop iterations is 100000
+</code></pre>
+
+<h3 id="reduction">Reduction<a class="headerlink" href="#reduction" title="Permanent link">#</a></h3>
+<p>Reduction refers to the process of combining the results of several
+sub-calculations into a final result. This is a very common paradigm
+(and indeed the so-called "map-reduce" framework used by Google and
+others is very popular). Indeed we used this paradigm in the code
+example above, where we used the "critical code" directive to accomplish
+this. The map-reduce paradigm is so common that OpenMP has a specific
+directive that allows you to more easily implement this.</p>
+<div style="text-align: center;">-- omp3.c --</div>
+
+<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<span class="cm"> * VSC        : Flemish Supercomputing Centre</span>
+<span class="cm"> * Tutorial   : Introduction to HPC</span>
+<span class="cm"> * Description: OpenMP Test Program</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;omp.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">thread_id</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">glob_nloops</span><span class="p">,</span><span class="w"> </span><span class="n">priv_nloops</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">glob_nloops</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// parallelize this chunk of code</span>
+<span class="w">  </span><span class="cp">#pragma omp parallel private(priv_nloops, thread_id) reduction(+:glob_nloops)</span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">priv_nloops</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">thread_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">omp_get_thread_num</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// parallelize this for loop</span>
+<span class="w">    </span><span class="cp">#pragma omp for</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">100000</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="o">++</span><span class="n">priv_nloops</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">glob_nloops</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">priv_nloops</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Total # loop iterations is %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">glob_nloops</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>And compile it (whilst including the "<em>openmp</em>" library) and run and
+test it on the login-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>:</p>
+<pre><code><b>$ module load GCC</b>
+<b>$ gcc -fopenmp -o omp3 omp3.c</b>
+<b>$ ./omp3</b>
+Total # loop iterations is 100000
+</code></pre>
+
+<p>Now run it in the <abbr title="A group of compute nodes.">cluster</abbr> and check the result again.</p>
+<pre><code><b>$ qsub omp3.pbs</b>
+<b>$ cat omp3.pbs.o*</b>
+Total # loop iterations is 100000
+</code></pre>
+
+<h3 id="other-openmp-directives">Other OpenMP directives<a class="headerlink" href="#other-openmp-directives" title="Permanent link">#</a></h3>
+<p>There are a host of other directives you can issue using OpenMP.</p>
+<p>Some other clauses of interest are:</p>
+<ol>
+<li>
+<p>barrier: each thread will wait until all threads have reached this
+    point in the code, before proceeding</p>
+</li>
+<li>
+<p>nowait: threads will not wait until everybody is finished</p>
+</li>
+<li>
+<p>schedule(type, chunk) allows you to specify how tasks are spawned
+    out to threads in a for loop. There are three types of scheduling
+    you can specify</p>
+</li>
+<li>
+<p>if: allows you to parallelise only if a certain condition is met</p>
+</li>
+<li>
+<p>... and a host of others</p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you plan engaging in parallel programming using OpenMP, this book may
+prove useful: <em>Using OpenMP - Portable Shared Memory Parallel
+Programming</em>. By Barbara Chapman Gabriele Jost and Ruud van der Pas
+Scientific and Engineering Computation. 2005.</p>
+</div>
+<h2 id="parallel-computing-with-mpi">Parallel Computing with <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr><a class="headerlink" href="#parallel-computing-with-mpi" title="Permanent link">#</a></h2>
+<p>The Message Passing Interface (<abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>) is a standard defining <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> syntax
+and semantics of library routines that can be used to implement parallel
+programming in C (and in other languages as well). There are several
+implementations of <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> such as Open <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>, Intel <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>, M(VA)PICH and
+LAM/<abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>.</p>
+<p>In the context of this tutorial, you can think of <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>, in terms of its
+complexity, scope and control, as sitting in between programming with
+Pthreads, and using a high-level API such as OpenMP. For a Message
+Passing Interface (<abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>) application, a parallel task usually consists of
+a single executable running concurrently on multiple processors, with
+communication between the processes. This is shown in the following
+diagram:</p>
+<p><img alt="Image" src="../img/img0701.png" style="display: block; margin: 0 auto" /></p>
+<p>The process numbers 0, 1 and 2 represent the process rank and have
+greater or less significance depending on the processing paradigm. At
+the minimum, Process 0 handles the input/output and determines what
+other processes are running.</p>
+<p>The <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> interface allows you to manage allocation, communication, and
+synchronisation of a set of processes that are mapped onto multiple
+nodes, where each <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> can be a <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> within a single <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr>, or CPUs within
+a single machine, or even across multiple machines (as long as they are
+networked together).</p>
+<p>One context where <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> shines in particular is the ability to easily take
+advantage not just of multiple cores on a single machine, but to run
+programs on clusters of several machines. Even if you don't have a
+dedicated <abbr title="A group of compute nodes.">cluster</abbr>, you could still write a program using <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> that could
+run your program in parallel, across any collection of computers, as
+long as they are networked together.</p>
+<p>Here is a "Hello World" program in <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> written in C. In this example, we
+send a "Hello" message to each <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>, manipulate it trivially,
+return the results to the main process, and print the messages.</p>
+<p>Study the <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>-programme and the PBS-file:</p>
+<div style="text-align: center;">-- mpi_hello.c --</div>
+
+<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<span class="cm"> * VSC        : Flemish Supercomputing Centre</span>
+<span class="cm"> * Tutorial   : Introduction to HPC</span>
+<span class="cm"> * Description: &quot;Hello World&quot; MPI Test Program</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;mpi.h&gt;</span><span class="cp"></span>
+
+<span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;mpi.h&gt;</span><span class="cp"></span>
+<span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+
+<span class="w"> </span><span class="cp">#define BUFSIZE 128</span>
+<span class="w"> </span><span class="cp">#define TAG 0</span>
+
+<span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span><span class="w"></span>
+<span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="kt">char</span><span class="w"> </span><span class="n">idstr</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span><span class="w"></span>
+<span class="w">   </span><span class="kt">char</span><span class="w"> </span><span class="n">buff</span><span class="p">[</span><span class="n">BUFSIZE</span><span class="p">];</span><span class="w"></span>
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">numprocs</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">myid</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="n">MPI_Status</span><span class="w"> </span><span class="n">stat</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="cm">/* MPI programs start with MPI_Init; all &#39;N&#39; processes exist thereafter */</span><span class="w"></span>
+<span class="w">   </span><span class="n">MPI_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">argc</span><span class="p">,</span><span class="o">&amp;</span><span class="n">argv</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="cm">/* find out how big the SPMD world is */</span><span class="w"></span>
+<span class="w">   </span><span class="n">MPI_Comm_size</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span><span class="o">&amp;</span><span class="n">numprocs</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="cm">/* and this processes&#39; rank is */</span><span class="w"></span>
+<span class="w">   </span><span class="n">MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span><span class="o">&amp;</span><span class="n">myid</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">   </span><span class="cm">/* At this point, all programs are running equivalently, the rank</span>
+<span class="cm">      distinguishes the roles of the programs in the SPMD model, with</span>
+<span class="cm">      rank 0 often used specially... */</span><span class="w"></span>
+<span class="w">   </span><span class="k">if</span><span class="p">(</span><span class="n">myid</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="p">{</span><span class="w"></span>
+<span class="w">     </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d: We have %d processors</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myid</span><span class="p">,</span><span class="w"> </span><span class="n">numprocs</span><span class="p">);</span><span class="w"></span>
+<span class="w">     </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">numprocs</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">     </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="n">sprintf</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hello %d! &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="w">       </span><span class="n">MPI_Send</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="n">BUFSIZE</span><span class="p">,</span><span class="w"> </span><span class="n">MPI_CHAR</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="n">MPI_COMM_WORLD</span><span class="p">);</span><span class="w"></span>
+<span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="w">     </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">numprocs</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">     </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="n">MPI_Recv</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="n">BUFSIZE</span><span class="p">,</span><span class="w"> </span><span class="n">MPI_CHAR</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">stat</span><span class="p">);</span><span class="w"></span>
+<span class="w">       </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myid</span><span class="p">,</span><span class="w"> </span><span class="n">buff</span><span class="p">);</span><span class="w"></span>
+<span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="k">else</span><span class="w"></span>
+<span class="w">   </span><span class="p">{</span><span class="w"></span>
+<span class="w">     </span><span class="cm">/* receive from rank 0: */</span><span class="w"></span>
+<span class="w">     </span><span class="n">MPI_Recv</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="n">BUFSIZE</span><span class="p">,</span><span class="w"> </span><span class="n">MPI_CHAR</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">stat</span><span class="p">);</span><span class="w"></span>
+<span class="w">     </span><span class="n">sprintf</span><span class="p">(</span><span class="n">idstr</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Processor %d &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myid</span><span class="p">);</span><span class="w"></span>
+<span class="w">     </span><span class="n">strncat</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="n">idstr</span><span class="p">,</span><span class="w"> </span><span class="n">BUFSIZE</span><span class="mi">-1</span><span class="p">);</span><span class="w"></span>
+<span class="w">     </span><span class="n">strncat</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;reporting for duty&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">BUFSIZE</span><span class="mi">-1</span><span class="p">);</span><span class="w"></span>
+<span class="w">     </span><span class="cm">/* send to rank 0: */</span><span class="w"></span>
+<span class="w">     </span><span class="n">MPI_Send</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="n">BUFSIZE</span><span class="p">,</span><span class="w"> </span><span class="n">MPI_CHAR</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="n">MPI_COMM_WORLD</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">   </span><span class="cm">/* MPI programs end with MPI Finalize; this is a weak synchronization point */</span><span class="w"></span>
+<span class="w">   </span><span class="n">MPI_Finalize</span><span class="p">();</span><span class="w"></span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div style="text-align: center;">-- mpi_hello.pbs --</div>
+
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#PBS -N mpihello</span>
+<span class="c1">#PBS -l walltime=00:05:00</span>
+
+  <span class="c1"># assume a 40 core job</span>
+<span class="c1">#PBS -l nodes=2:ppn=20</span>
+
+  <span class="c1"># make sure we are in the right directory in case writing files</span>
+<span class="nb">cd</span> <span class="nv">$PBS_O_WORKDIR</span>
+
+  <span class="c1"># load the environment</span>
+
+module load intel
+
+mpirun ./mpi_hello
+</code></pre></div>
+<p>and compile it:</p>
+<pre><code><b>$ module load intel</b>
+<b>$ mpiicc -o mpi_hello mpi_hello.c</b>
+</code></pre>
+
+<p>mpiicc is a wrapper of the Intel C++ compiler icc to compile <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>
+programs (see the chapter on compilation for details).</p>
+<p>Run the parallel program:</p>
+<pre><code><b>$ qsub mpi_hello.pbs</b>
+<b>$ ls -l</b>
+total 1024
+-rwxrwxr-x 1 vsc20167 8746 Sep 16 14:19 mpi_hello*
+-rw-r--r-- 1 vsc20167 1626 Sep 16 14:18 mpi_hello.c
+-rw------- 1 vsc20167    0 Sep 16 14:22 mpi_hello.o433253.leibniz
+-rw------- 1 vsc20167  697 Sep 16 14:22 mpi_hello.o433253.leibniz
+-rw-r--r-- 1 vsc20167  304 Sep 16 14:22 mpi_hello.pbs
+<b>$ cat mpi_hello.o433253.leibniz</b>
+0: We have 16 processors
+0: Hello 1! Processor 1 reporting for duty
+0: Hello 2! Processor 2 reporting for duty
+0: Hello 3! Processor 3 reporting for duty
+0: Hello 4! Processor 4 reporting for duty
+0: Hello 5! Processor 5 reporting for duty
+0: Hello 6! Processor 6 reporting for duty
+0: Hello 7! Processor 7 reporting for duty
+0: Hello 8! Processor 8 reporting for duty
+0: Hello 9! Processor 9 reporting for duty
+0: Hello 10! Processor 10 reporting for duty
+0: Hello 11! Processor 11 reporting for duty
+0: Hello 12! Processor 12 reporting for duty
+0: Hello 13! Processor 13 reporting for duty
+0: Hello 14! Processor 14 reporting for duty
+0: Hello 15! Processor 15 reporting for duty
+</code></pre>
+
+<p>The runtime environment for the <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> implementation used (often called
+mpirun or mpiexec) spawns multiple copies of the program, with the total
+number of copies determining the number of process <em>ranks</em> in
+MPI_COMM_WORLD, which is an opaque descriptor for communication between
+the set of processes. A single process, multiple data (SPMD = Single
+Program, Multiple Data) programming model is thereby facilitated, but
+not required; many <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> implementations allow multiple, different,
+executables to be started in the same <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> job. Each process has its own
+rank, the total number of processes in the world, and the ability to
+communicate between them either with point-to-point (send/receive)
+communication, or by collective communication among the group. It is
+enough for <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> to provide an SPMD-style program with MPI_COMM_WORLD, its
+own rank, and the size of the world to allow algorithms to decide what
+to do. In more realistic situations, I/O is more carefully managed than
+in this example. <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> does not guarantee how POSIX I/O would actually
+work on a given system, but it commonly does work, at least from rank 0.</p>
+<p><abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> uses the notion of process rather than <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>. Program copies are
+<em>mapped</em> to processors by the <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> runtime. In that sense, the parallel
+machine can map to 1 physical <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>, or N where N is the total
+number of processors available, or something in between. For maximum
+parallel speedup, more physical processors are used. This example
+adjusts its behaviour to the size of the world N, so it also seeks to
+scale to the runtime configuration without compilation for each size
+variation, although runtime decisions might vary depending on that
+absolute amount of concurrency available.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+</div>
+<p>If you plan engaging in parallel programming using <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>, this book may prove useful: <em>Parallel Programming with <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>. Peter Pacheo. Morgan Kaufmann. 1996.</em></p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../running_jobs_with_input_output_data/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Running jobs with input/output data" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Running jobs with input/output data
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../web_portal/" class="md-footer__link md-footer__link--next" aria-label="Next: Using the HPC-UGent web portal" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Using the HPC-UGent web portal
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.expand", "navigation.tracking", "toc.follow", "navigation.sections", "navigation.instant", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

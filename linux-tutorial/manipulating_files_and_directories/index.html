@@ -1,0 +1,898 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Manipulating files and directories - Linux tutorial</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#manipulating-files-and-directories" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Linux tutorial" class="md-header__button md-logo" aria-label="Linux tutorial" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Linux tutorial
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Manipulating files and directories
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Linux tutorial" class="md-nav__button md-logo" aria-label="Linux tutorial" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Linux tutorial
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../navigating/" class="md-nav__link">
+        Navigating
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Manipulating files and directories
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Manipulating files and directories
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#file-contents-cat-head-tail-less-more" class="md-nav__link">
+    File contents: "cat", "head", "tail", "less", "more"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copying-files-cp" class="md-nav__link">
+    Copying files: "cp"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-directories-mkdir" class="md-nav__link">
+    Creating directories: "mkdir"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renamingmoving-files-mv" class="md-nav__link">
+    Renaming/moving files: "mv"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-files-rm" class="md-nav__link">
+    Removing files: "rm"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-permissions-chmod" class="md-nav__link">
+    Changing permissions: "chmod"
+  </a>
+  
+    <nav class="md-nav" aria-label="Changing permissions: "chmod"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-control-lists-acls" class="md-nav__link">
+    Access control lists (ACLs)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zipping-gzipgunzip-zipunzip" class="md-nav__link">
+    Zipping: "gzip"/"gunzip", "zip"/"unzip"
+  </a>
+  
+    <nav class="md-nav" aria-label="Zipping: "gzip"/"gunzip", "zip"/"unzip"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zip-and-unzip" class="md-nav__link">
+    "zip" and "unzip"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-tarballs-tar" class="md-nav__link">
+    Working with tarballs: "tar"
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with tarballs: "tar"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-of-arguments" class="md-nav__link">
+    Order of arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    Exercises
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uploading_files/" class="md-nav__link">
+        Uploading/downloading/editing files
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beyond_the_basics/" class="md-nav__link">
+        Beyond the basics
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../common_pitfalls/" class="md-nav__link">
+        Common Pitfalls
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hpc_infrastructure/" class="md-nav__link">
+        More on the HPC infrastructure
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#file-contents-cat-head-tail-less-more" class="md-nav__link">
+    File contents: "cat", "head", "tail", "less", "more"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copying-files-cp" class="md-nav__link">
+    Copying files: "cp"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-directories-mkdir" class="md-nav__link">
+    Creating directories: "mkdir"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renamingmoving-files-mv" class="md-nav__link">
+    Renaming/moving files: "mv"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-files-rm" class="md-nav__link">
+    Removing files: "rm"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-permissions-chmod" class="md-nav__link">
+    Changing permissions: "chmod"
+  </a>
+  
+    <nav class="md-nav" aria-label="Changing permissions: "chmod"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-control-lists-acls" class="md-nav__link">
+    Access control lists (ACLs)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zipping-gzipgunzip-zipunzip" class="md-nav__link">
+    Zipping: "gzip"/"gunzip", "zip"/"unzip"
+  </a>
+  
+    <nav class="md-nav" aria-label="Zipping: "gzip"/"gunzip", "zip"/"unzip"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zip-and-unzip" class="md-nav__link">
+    "zip" and "unzip"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-tarballs-tar" class="md-nav__link">
+    Working with tarballs: "tar"
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with tarballs: "tar"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-of-arguments" class="md-nav__link">
+    Order of arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    Exercises
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="manipulating-files-and-directories">Manipulating files and directories<a class="headerlink" href="#manipulating-files-and-directories" title="Permanent link">#</a></h1>
+<p>Being able to manage your data is an important part of using the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>
+infrastructure. The bread and butter commands for doing this are
+mentioned here. It might seem annoyingly terse at first, but with
+practice you will realise that it's very practical to have such common
+commands short to type.</p>
+<h2 id="file-contents-cat-head-tail-less-more">File contents: "cat", "head", "tail", "less", "more"<a class="headerlink" href="#file-contents-cat-head-tail-less-more" title="Permanent link">#</a></h2>
+<p>To print the contents of an entire file, you can use <code>cat</code>; to only see
+the first or last N lines, you can use <code>head</code> or <code>tail</code>:</p>
+<pre><code>$ <b>cat one.txt</b>
+1
+2
+3
+4
+5
+
+$ <b>head -2 one.txt</b>
+1
+2
+
+$ <b>tail -2 one.txt</b>
+4
+5
+</code></pre>
+
+<p>To check the contents of long text files, you can use the <code>less</code> or
+<code>more</code> commands which support scrolling with "&lt;up&gt;", "&lt;down&gt;",
+"&lt;space&gt;", etc.</p>
+<h2 id="copying-files-cp">Copying files: "cp"<a class="headerlink" href="#copying-files-cp" title="Permanent link">#</a></h2>
+<pre><code>$ <b>cp source target</b>
+</code></pre>
+
+<p>This is the <code>cp</code> command, which copies a file from source to target. To
+copy a directory, we use the <code>-r</code> option:</p>
+<pre><code>$ <b>cp -r sourceDirectory target</b>
+</code></pre>
+
+<p>A last more complicated example:</p>
+<pre><code>$ <b>cp -a sourceDirectory target</b>
+</code></pre>
+
+<p>Here we used the same <code>cp</code> command, but instead we gave it the <code>-a</code>
+option which tells cp to copy all the files and keep timestamps and
+permissions.</p>
+<h2 id="creating-directories-mkdir">Creating directories: "mkdir"<a class="headerlink" href="#creating-directories-mkdir" title="Permanent link">#</a></h2>
+<pre><code>$ <b>mkdir directory</b>
+</code></pre>
+
+<p>which will create a directory with the given name inside the current
+directory.</p>
+<h2 id="renamingmoving-files-mv">Renaming/moving files: "mv"<a class="headerlink" href="#renamingmoving-files-mv" title="Permanent link">#</a></h2>
+<pre><code>$ <b>mv source target</b>
+</code></pre>
+
+<p><code>mv</code> will move the source path to the destination path. Works for both
+directories as files.</p>
+<h2 id="removing-files-rm">Removing files: "rm"<a class="headerlink" href="#removing-files-rm" title="Permanent link">#</a></h2>
+<p><b>Note: there are NO backups, there is no 'trash bin'. If you
+remove files/directories, they are gone.</b></p>
+<pre><code>$ <b>rm filename</b>
+</code></pre>
+<p><code>rm</code> will remove a file or directory. (<code>rm -rf directory</code> will remove
+every file inside a given directory). WARNING: files removed will be
+lost forever, there are no backups, so beware when using this command!</p>
+<h4 id="removing-a-directory-rmdir">Removing a directory: "rmdir"<a class="headerlink" href="#removing-a-directory-rmdir" title="Permanent link">#</a></h4>
+<p>You can remove directories using <code>rm -r directory</code>, however, this is
+error prone and can ruin your day if you make a mistake in typing. To
+prevent this type of error, you can remove the contents of a directory
+using <code>rm</code> and then finally removing the directory with:</p>
+<pre><code>$ <b>rmdir directory</b>
+</code></pre>
+<h2 id="changing-permissions-chmod">Changing permissions: "chmod"<a class="headerlink" href="#changing-permissions-chmod" title="Permanent link">#</a></h2>
+<p>Every file, directory, and link has a set of permissions. These
+permissions consist of permission groups and permission types. The
+permission groups are:</p>
+<ol>
+<li>
+<p>User - a particular user (account)</p>
+</li>
+<li>
+<p>Group - a particular group of users (may be user-specific group with
+    only one member)</p>
+</li>
+<li>
+<p>Other - other users in the system</p>
+</li>
+</ol>
+<p>The permission types are:</p>
+<ol>
+<li>
+<p>Read - For files, this gives permission to read the contents of a
+    file</p>
+</li>
+<li>
+<p>Write - For files, this gives permission to write data to the file.
+    For directories it allows users to add or remove files to a
+    directory.</p>
+</li>
+<li>
+<p>Execute - For files this gives permission to execute a file as
+    through it were a script. For directories, it allows users to open
+    the directory and look at the contents.</p>
+</li>
+</ol>
+<p>Any time you run <code>ls -l</code> you'll see a familiar line of <code>-rwx------</code> or
+similar combination of the letters <code>r</code>, <code>w</code>, <code>x</code> and <code>-</code> (dashes). These
+are the permissions for the file or directory. (See also the 
+<a href="ch_navigating.md#permissions">previous section on permissions</a>)</p>
+<pre><code>$ <b>ls -l</b>
+total 1
+-rw-r--r--. 1 vsc40000 mygroup 4283648 Apr 12 15:13 articleTable.csv
+drwxr-x---. 2 vsc40000 mygroup 40 Apr 12 15:00 Project_GoldenDragon
+</code></pre>
+
+<p>Here, we see that <code>articleTable.csv</code> is a file (beginning the line with
+<code>-</code>) has read and write permission for the user <code>vsc40000</code> (<code>rw-</code>), and read
+permission for the group <code>mygroup</code> as well as all other users (<code>r--</code> and
+<code>r--</code>).</p>
+<p>The next entry is <code>Project_GoldenDragon</code>. We see it is a directory
+because the line begins with a <code>d</code>. It also has read, write, and execute
+permission for the <code>vsc40000</code> user (<code>rwx</code>). So that user can look into the
+directory and add or remove files. Users in the <code>mygroup</code> can also look
+into the directory and read the files. But they can't add or remove
+files (<code>r-x</code>). Finally, other users can read files in the directory, but
+other users have no permissions to look in the directory at all (<code>---</code>).</p>
+<p>Maybe we have a colleague who wants to be able to add files to the
+directory. We use <code>chmod</code> to change the modifiers to the directory to
+let people in the group write to the directory:</p>
+<pre><code>$ <b>chmod g+w Project_GoldenDragon</b>
+$ <b>ls -l</b>
+total 1
+-rw-r--r--. 1 vsc40000 mygroup 4283648 Apr 12 15:13 articleTable.csv
+drwxrwx---. 2 vsc40000 mygroup 40 Apr 12 15:00 Project_GoldenDragon
+</code></pre>
+
+<p>The syntax used here is <code>g+x</code> which means roup was given rite
+permission. To revoke it again, we use <code>g-w</code>. The other roles are <code>u</code>
+for user and <code>o</code> for other.</p>
+<p>You can put multiple changes on the same line:
+<code>chmod o-rwx,g-rxw,u+rx,u-w somefile</code> will take everyone's permission
+away except the user's ability to read or execute the file.</p>
+<p>You can also use the <code>-R</code> flag to affect all the files within a
+directory, but this is dangerous. It's best to refine your search using
+<code>find</code> and then pass the resulting list to <code>chmod</code> since it's not usual
+for all files in a directory structure to have the same permissions.</p>
+<h3 id="access-control-lists-acls">Access control lists (ACLs)<a class="headerlink" href="#access-control-lists-acls" title="Permanent link">#</a></h3>
+<p>However, this means that all users in <code>mygroup</code> can add or remove files.
+This could be problematic if you only wanted one person to be allowed to
+help you administer the files in the project. We need a new group. To do
+this in the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> environment, we need to use access control lists (ACLs):</p>
+<pre><code>$ <b>setfacl -m u:otheruser:w Project_GoldenDragon</b>
+$ <b>ls -l Project_GoldenDragon</b>
+drwxr-x---+ 2 vsc40000 mygroup 40 Apr 12 15:00 Project_GoldenDragon
+</code></pre>
+
+<p>This will give the <strong>u</strong>ser <code>otheruser</code> permissions to <strong>w</strong>rite to
+<code>Project_GoldenDragon</code></p>
+<p>Now there is a <code>+</code> at the end of the line. This means there is an ACL
+attached to the directory. <code>getfacl Project_GoldenDragon</code> will print the
+ACLs for the directory.</p>
+<p>Note: most people don't use ACLs, but it's sometimes the right thing and
+you should be aware it exists.</p>
+<p>See <a href="https://linux.die.net/man/1/setfacl">https://linux.die.net/man/1/setfacl</a> for more information.</p>
+<h2 id="zipping-gzipgunzip-zipunzip">Zipping: "gzip"/"gunzip", "zip"/"unzip"<a class="headerlink" href="#zipping-gzipgunzip-zipunzip" title="Permanent link">#</a></h2>
+<p>Files should usually be stored in a compressed file if they're not being
+used frequently. This means they will use less space and thus you get
+more out of your quota. Some types of files (e.g., CSV files with a lot
+of numbers) compress as much as 9:1. The most commonly used compression
+format on <abbr title="An operating system, similar to UNIX.">Linux</abbr> is gzip. To compress a file using gzip, we use:</p>
+<pre><code>$ <b>ls -lh myfile</b>
+-rw-r--r--. 1 vsc40000 vsc40000 4.1M Dec 2 11:14 myfile
+$ <b>gzip myfile</b>
+$ <b>ls -lh myfile.gz</b>
+-rw-r--r--. 1 vsc40000 vsc40000 1.1M Dec 2 11:14 myfile.gz
+</code></pre>
+
+<p>Note: if you zip a file, the original file will be removed. If you unzip
+a file, the compressed file will be removed. To keep both, we send the
+data to <code>stdout</code> and redirect it to the target file:</p>
+<pre><code>$ <b>gzip -c myfile > myfile.gz</b>
+$ <b>gunzip -c myfile.gz > myfile</b>
+</code></pre>
+
+<h3 id="zip-and-unzip">"zip" and "unzip"<a class="headerlink" href="#zip-and-unzip" title="Permanent link">#</a></h3>
+<p>Windows and macOS seem to favour the zip file format, so it's also
+important to know how to unpack those. We do this using unzip:</p>
+<pre><code>$ <b>unzip myfile.zip</b>
+</code></pre>
+
+<p>If we would like to make our own zip archive, we use zip:</p>
+<pre><code>$ <b>zip myfiles.zip myfile1 myfile2 myfile3</b>
+</code></pre>
+
+<h2 id="working-with-tarballs-tar">Working with tarballs: "tar"<a class="headerlink" href="#working-with-tarballs-tar" title="Permanent link">#</a></h2>
+<p>Tar stands for "tape archive" and is a way to bundle files together in a
+bigger file.</p>
+<p>You will normally want to unpack these files more often than you make
+them. To unpack a <code>.tar</code> file you use:</p>
+<pre><code>$ <b>tar -xf tarfile.tar</b>
+</code></pre>
+
+<p>Often, you will find <code>gzip</code> compressed <code>.tar</code> files on the web. These
+are called tarballs. You can recognize them by the filename ending in
+<code>.tar.gz</code>. You can uncompress these using <code>gunzip</code> and then unpacking
+them using <code>tar</code>. But <code>tar</code> knows how to open them using the <code>-z</code>
+option:</p>
+<pre><code>$ <b>tar -zxf tarfile.tar.gz</b>
+$ <b>tar -zxf tarfile.tgz</b>
+</code></pre>
+
+<h3 id="order-of-arguments">Order of arguments<a class="headerlink" href="#order-of-arguments" title="Permanent link">#</a></h3>
+<p>Note: Archive programs like <code>zip</code>, <code>tar</code>, and <code>jar</code> use arguments in the
+"opposite direction" of copy commands.</p>
+<pre><code># cp, ln: &lt;source(s)&gt; &lt;target&gt;
+$ <b>cp source1 source2 source3 target</b>
+$ <b>ln -s source target</b>
+
+# zip, tar: &lt;target&gt; &lt;source(s)&gt;
+$ <b>zip zipfile.zip source1 source2 source3</b>
+$ <b>tar -cf tarfile.tar source1 source2 source3</b>
+</code></pre>
+
+<p>If you use <code>tar</code> with the source files first then the first file will be
+overwritten. You can control the order of arguments of <code>tar</code> if it helps
+you remember:</p>
+<pre><code>$ <b>tar -c source1 source2 source3 -f tarfile.tar</b></code></pre>
+
+<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">#</a></h2>
+<ol>
+<li>
+<p>Create a subdirectory in your home directory named <code>test</code> containing
+    a single, empty file named <code>one.txt</code>.</p>
+</li>
+<li>
+<p>Copy <code>/etc/hostname</code> into the <code>test</code> directory and then check what's
+    in it. Rename the file to <code>hostname.txt</code>.</p>
+</li>
+<li>
+<p>Make a new directory named <code>another</code> and copy the entire <code>test</code>
+    directory to it. <code>another/test/one.txt</code> should then be an empty
+    file.</p>
+</li>
+<li>
+<p>Remove the <code>another/test</code> directory with a single command.</p>
+</li>
+<li>
+<p>Rename <code>test</code> to <code>test2</code>. Move <code>test2/hostname.txt</code> to your home
+    directory.</p>
+</li>
+<li>
+<p>Change the permission of <code>test2</code> so only you can access it.</p>
+</li>
+<li>
+<p>Create an empty job script named <code>job.sh</code>, and make it executable.</p>
+</li>
+<li>
+<p>gzip <code>hostname.txt</code>, see how much smaller it becomes, then unzip it
+    again.</p>
+</li>
+</ol>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../navigating/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Navigating" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Navigating
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../uploading_files/" class="md-footer__link md-footer__link--next" aria-label="Next: Uploading/downloading/editing files" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Uploading/downloading/editing files
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.expand", "navigation.tracking", "toc.follow", "navigation.sections", "navigation.instant", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>
