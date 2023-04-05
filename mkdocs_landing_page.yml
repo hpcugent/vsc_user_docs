@@ -1,0 +1,47 @@
+site_name: VSC User Documentation - choose your site
+docs_dir: landing_page
+
+
+plugins:
+  - ugent
+  - macros:
+      include_yaml:
+        - constants.yml
+  - section-index
+  - autorefs
+  # - spellcheck
+  # - mkdocs-nav-enhancements
+  - exclude-search:
+      macros:
+        include_dir:
+          - ./macros/
+          - ./macros/Antwerpen/Linux/
+      exclude:
+        - content/intro-HPC/*
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - abbr
+  - pymdownx.snippets:
+      auto_append:
+        - ./includes/abbreviations.md
+  - meta
+  - tables
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.keys
+
+theme:
+  name: material
+  language: en
+  features:
+    - search.suggest
+    - search.highlight
+
+
+extra:
+  build_dir: build/HPC  # use relative path to projects root

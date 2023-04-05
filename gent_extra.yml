@@ -1,0 +1,75 @@
+# University Definitions
+site: Gent
+university: UGent
+wayf: UGent
+association: AUGent
+# HPC definitions
+hpc: HPC
+hpcinfra: UGent-HPC
+hpcteam: UGent HPC team
+hpcname: hpcugent
+loginnode: login.hpc.ugent.be
+loginhost: gligar07.gastly.os
+altloginhost: gligar08.gastly.os
+# get these with ssh-keyscan gligar01.ugent.be > file
+# ssh-keygen -l -f file
+# ssh-keygen -l -f file -E md5
+# verify with the keys actually on the host with
+# awk '{print $2}' ssh_host_rsa_key.pub | base64 -d | sha256sum -b | awk '{print $1}' | xxd -r -p | base64
+# ssh-keygen -l -f key.pub
+
+# For openssh:
+# ssh-keyscan login.hpc.ugent.be 2>/dev/null | ssh-keygen -l -f - | awk '{ print $4 " key fingerprint is " $2}' | sed 's/.*(\(.*\))/\1/'
+# ssh-keyscan login.hpc.ugent.be 2>/dev/null | ssh-keygen -l -f - -E md5 | awk '{ print $4 " key fingerprint is " $2}' | sed 's/.*(\(.*\))/\1/' | sed 's/MD5://g'
+
+# For putty:
+# ssh-keyscan login.hpc.ugent.be 2>/dev/null | ssh-keygen -l -f - -E md5 | awk '{ print "ssh-" $4 " " $1 " " $2}' | sed -E 's/\(([^()]*)\)/\1/' | sed 's/MD5://g' | tr '[:upper:]' '[:lower:]' | sed 's/ed25519 256/ed25519 255/g'
+
+# For X2Go:
+# for x in /etc/ssh/*.pub ; do echo $x && cut -d' ' -f2 < $x | base64 -d | openssl sha1 -c ; done ;
+
+
+opensshFirstConnect: |
+  RSA key fingerprint is 10:2f:31:21:04:75:cb:ed:67:e0:d5:0c:a1:5a:f4:78
+  RSA key fingerprint is SHA256:W8Wz0/FkkCR2ulN7+w8tNI9M0viRgFr2YlHrhKD2Dd0
+  ECDSA key fingerprint is e6:d2:9c:d8:e7:59:45:03:4a:1f:dc:96:62:29:9c:5f
+  ECDSA key fingerprint is SHA256:C8TVx0w8UjGgCQfCmEUaOPxJGNMqv2PXLyBNODe5eOQ
+  ED25519 key fingerprint is 19:28:76:94:52:9d:ff:7d:fb:8b:27:b6:d7:69:42:eb
+  ED25519 key fingerprint is SHA256:8AJg3lPN27y6i+um7rFx3xoy42U8ZgqNe4LsEycHILA
+
+puttyFirstConnect: |
+  - ssh-rsa 2048 10:2f:31:21:04:75:cb:ed:67:e0:d5:0c:a1:5a:f4:78
+  - ssh-rsa 2048 SHA256:W8Wz0/FkkCR2ulN7+w8tNI9M0viRgFr2YlHrhKD2Dd0
+  - ssh-ed25519 255 19:28:76:94:52:9d:ff:7d:fb:8b:27:b6:d7:69:42:eb
+  - ssh-ed25519 256 SHA256:8AJg3lPN27y6i+um7rFx3xoy42U8ZgqNe4LsEycHILA
+  - ssh-ecdsa 256 e6:d2:9c:d8:e7:59:45:03:4a:1f:dc:96:62:29:9c:5f
+  - ssh-ecdsa 256 SHA256:C8TVx0w8UjGgCQfCmEUaOPxJGNMqv2PXLyBNODe5eOQ
+
+xtwogoshaone: |
+  - ssh-rsa 2048 53:25:8c:1e:72:8b:ce:87:3e:54:12:44:a7:13:1a:89:e4:15:b6:8e
+  - ssh-ed25519 255 e3:cc:07:64:78:80:28:ec:b8:a8:8f:49:44:d1:1e:dc:cc:0b:c5:6b
+  - ssh-ecdsa 256 67:6c:af:23:cc:a1:72:09:f5:45:f1:60:08:e8:98:ca:31:87:58:6c
+
+tutorialdir: /apps/gent/tutorials
+examplesdir: /apps/gent/tutorials/Intro-HPC/examples
+# Demo user, jobs, nodes, etc
+# {} required to suppress unwanted extra spacing due to nested xspaces
+userid: vsc40000
+homedir: /user/home/gent/vsc400/vsc40000
+datadir: /user/data/gent/vsc400/vsc40000
+scratchdir: /user/scratch/gent/vsc400/vsc40000
+jobid: 123456
+computenode: node3200.victini.gent.vsc
+computenodeshort: node3200
+defaultcluster: victini
+othercluster: skitty
+# Support
+hpcinfo: hpc@ugent.be
+hpcusersml: hpc-users@lists.ugent.be
+hpcannounceml: hpc-announce@lists.ugent.be
+operatingsystem: RHEL 8.6 (kirlia, doduo, accelgor, slaking, joltik, skitty, victini, swalot)
+operatingsystembase: Red Hat Enterprise Linux
+# Special for perfexpert tutorial
+mpirun: vsc-mympirun
+hpcuserguide: introduction to UGent-HPC tutorial
+
