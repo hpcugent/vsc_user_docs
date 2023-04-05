@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#   Specify the "name" of the job
+#PBS -N my_serial_job         
+
+cd $PBS_O_WORKDIR  
+echo Start Job
+date
+./file1.py
+echo End Job

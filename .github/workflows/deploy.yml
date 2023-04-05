@@ -1,0 +1,53 @@
+---
+# documentation: https://help.github.com/en/articles/workflow-syntax-for-github-actions
+name: deploy docs (only on push to main branch)
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches: main
+permissions:
+  contents: write # to fetch code (actions/checkout) + deploy docs to GitHub Pages (gh-pages branch)
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: install required Python packages
+        run: |
+            pip install -r requirements.txt
+            cd custom_plugin && pip install . && cd -
+            cd computational_macros && pip install . && cd -
+            python3 -m pip list
+            mkdocs --version
+
+      # equivalent of 'mkdocs build', but need to build all flavors of the docs (different site/OS)
+      - name: build docs
+        run: |
+          python3 build.py
+          find build -type f
+          cp -a pdf/ build/
+
+      # equivalent with 'mkdocs gh-deploy'
+      - name: deploy docs
+        run: |
+          # configure Git
+          git config user.email "${{github.event.pusher.email}}"
+          git config user.name "${{github.event.pusher.name}}"
+
+          # check out gh-pages branch and replace 'HPC' subdirectory
+          git checkout gh-pages
+          rm -rf HPC cloud linux-tutorial pdf
+          mv build/{HPC,cloud,linux-tutorial,pdf} .
+
+          # update gh-pages branch
+          git add HPC cloud linux-tutorial pdf
+          git commit -m "deployed rendered docs (${GITHUB_SHA})"
+          git push origin gh-pages

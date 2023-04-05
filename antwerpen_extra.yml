@@ -1,0 +1,33 @@
+site: Antwerpen
+university: University of Antwerp
+wayf: Universiteit Antwerpen
+association: Antwerp University Association (AUHA)
+hpc: UAntwerpen-HPC
+hpcinfra: UAntwerpen-HPC
+hpcteam: UAntwerpen-HPC
+hpcname: Leibniz
+loginnode: login.hpc.uantwerpen.be
+loginhost: ln2.leibniz.uantwerpen.vsc
+altloginhost: ln1.leibniz.uantwerpen.vsc
+operatingsystem: CentOS Linux release 7.8.2003 (Core)
+operatingsystembase: RedHat Enterprise Linux
+tutorialdir: /apps/antwerpen/tutorials
+examplesdir: /apps/antwerpen/tutorials/Intro-HPC/examples
+userid: vsc20167
+homedir: /user/antwerpen/201/vsc20167
+datadir: /data/antwerpen/201/vsc20167
+scratchdir: /scratch/antwerpen/201/vsc20167
+jobid: 433253.leibniz
+computenode: r1c02cn3.leibniz.antwerpen.vsc
+computenodeshort: r1c02cn3
+hpcinfo: hpc@uantwerpen.be
+hpcannounceml: calcua-announce@supersympa.ua.ac.be
+mpirun: mpirun
+puttyFirstConnect: |
+  - ssh-rsa 2048 5a:40:9d:2a:f4:b7:6c:87:0d:87:30:07:9d:ea:80:11
+  - sha-rsa 2048 SHA256:W8HRHTZpPd2GIhoNU2xj2oUKhcFr2bjIzZsKzY+1PCA
+  - ssh-ecdsa 256 f9:4f:19:9b:fb:40:c5:6c:6f:b9:64:2e:33:0a:8d:26
+  - ssh-ecdsa 256 SHA256:DlsP+jFrTqSdr9VquUpDj17Uy99zFdFN/LxVhaQQzbo
+  - ssh-ed25519 255 df:0c:61:b9:26:51:0f:b4:ca:43:ac:f6:ee:d2:a1:29
+  - ssh-ed25519 255 SHA256:+vlrkJui34B4iumxGVHd447K3W8wzgE1n1h2/Ic0WlE
+
