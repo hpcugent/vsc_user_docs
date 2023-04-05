@@ -1,0 +1,33 @@
+---
+# documentation: https://help.github.com/en/articles/workflow-syntax-for-github-actions
+name: build docs (to test changes in PRs)
+on: [push, pull_request]
+permissions:
+  contents: read  # to fetch code (actions/checkout)
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: install required Python packages
+        run: |
+            pip install -r requirements.txt
+            cd custom_plugin && pip install . && cd -
+            cd computational_macros && pip install . && cd -
+            python3 -m pip list
+            mkdocs --version
+
+      # equivalent of 'mkdocs build', but need to build all flavors of the docs (different site/OS)
+      - name: build docs
+        run: |
+          python3 build.py
+          find build -type f
