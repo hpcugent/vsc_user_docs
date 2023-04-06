@@ -1,0 +1,56 @@
+\babel@toc {english}{}
+\contentsline {chapter}{Glossary}{5}{section*.1}% 
+\contentsline {chapter}{\numberline {1}Introduction}{13}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Purpose}{13}{section.1.1}% 
+\contentsline {section}{\numberline {1.2}Under the hood}{13}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}Environment Configuration}{14}{section.1.3}% 
+\contentsline {chapter}{\numberline {2}Profiling}{16}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Profiling Strategy}{16}{section.2.1}% 
+\contentsline {subsection}{\numberline {2.1.1}Introduction}{16}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.2}Profiling with PerfExpert}{16}{subsection.2.1.2}% 
+\contentsline {section}{\numberline {2.2}Profiling the Efficiency of a subroutine}{19}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Instruction Execution Rations}{19}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.2}Computational Efficiency (GFLOPS)}{20}{subsection.2.2.2}% 
+\contentsline {section}{\numberline {2.3}Profiling the LCPI Performance Categories}{21}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}Overall Performance of the Function}{21}{subsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.3.2}Category \#1: Data Access}{22}{subsection.2.3.2}% 
+\contentsline {subsection}{\numberline {2.3.3}Category \#2: Instruction Access}{25}{subsection.2.3.3}% 
+\contentsline {subsection}{\numberline {2.3.4}Category \#3: Data TLB}{25}{subsection.2.3.4}% 
+\contentsline {subsection}{\numberline {2.3.5}Category \#4: Instruction TLB}{28}{subsection.2.3.5}% 
+\contentsline {subsection}{\numberline {2.3.6}Category \#5: Branch Instructions}{28}{subsection.2.3.6}% 
+\contentsline {subsection}{\numberline {2.3.7}Category \#6: Floating Point instructions}{31}{subsection.2.3.7}% 
+\contentsline {chapter}{\numberline {3}Optimising}{35}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Optimisation Strategy}{35}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}Find the Hotspots}{35}{subsection.3.1.1}% 
+\contentsline {subsection}{\numberline {3.1.2}Optimisation Priority}{36}{subsection.3.1.2}% 
+\contentsline {subsection}{\numberline {3.1.3}PerfExpert Recommendations}{37}{subsection.3.1.3}% 
+\contentsline {section}{\numberline {3.2}Optimising the efficiency of a subroutine}{37}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Optimising Instruction Execution Ratios}{37}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}Optimising the Computational Efficiency (GFLOPS)}{38}{subsection.3.2.2}% 
+\contentsline {section}{\numberline {3.3}Optimising the LCPI Performance Categories}{39}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}Category \#1: Data Access}{39}{subsection.3.3.1}% 
+\contentsline {subsection}{\numberline {3.3.2}Category \#2: Instruction Access}{41}{subsection.3.3.2}% 
+\contentsline {subsection}{\numberline {3.3.3}Category \#3: Data TLB}{41}{subsection.3.3.3}% 
+\contentsline {subsection}{\numberline {3.3.4}Category \#4: Instruction TLB}{42}{subsection.3.3.4}% 
+\contentsline {subsection}{\numberline {3.3.5}Category \#5: Branches}{43}{subsection.3.3.5}% 
+\contentsline {subsection}{\numberline {3.3.6}Category \#6: Floating-Point Operations}{43}{subsection.3.3.6}% 
+\contentsline {chapter}{\numberline {4}Multi-core \& Multi-node Profiling}{46}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Multi-Core Profiling (with OpenMP)}{46}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Multi-Node Profiling (with MPI)}{47}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Profiling with OpenMP and MPI}{48}{section.4.3}% 
+\contentsline {chapter}{\numberline {5}More PerfExpert Functionality}{49}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Special Options}{49}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}Arguments}{49}{subsection.5.1.1}% 
+\contentsline {subsection}{\numberline {5.1.2}Input/Output pipes}{49}{subsection.5.1.2}% 
+\contentsline {subsection}{\numberline {5.1.3}Prologue and Epilogue}{49}{subsection.5.1.3}% 
+\contentsline {subsection}{\numberline {5.1.4}Debugging}{50}{subsection.5.1.4}% 
+\contentsline {section}{\numberline {5.2}PerfExpert Automatic-mode}{50}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}Automatic Optimisation of single source file}{51}{subsection.5.2.1}% 
+\contentsline {subsection}{\numberline {5.2.2}Automatic Optimisation of multiple source files}{51}{subsection.5.2.2}% 
+\contentsline {section}{\numberline {5.3}Running PerfExpert in Batch mode (with Job Script)}{52}{section.5.3}% 
+\contentsline {chapter}{\numberline {A}Annex 1: PerfExpert Options}{53}{appendix.A}% 
+\contentsline {chapter}{\numberline {B}Annex 2: Optimisation Patterns}{55}{appendix.B}% 
+\contentsline {section}{\numberline {B.1}Memory Access Optimisations}{55}{section.B.1}% 
+\contentsline {section}{\numberline {B.2}Instruction Access optimisations}{61}{section.B.2}% 
+\contentsline {section}{\numberline {B.3}Branch optimisations}{62}{section.B.3}% 
+\contentsline {section}{\numberline {B.4}Floating Point Optimisations}{64}{section.B.4}% 

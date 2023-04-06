@@ -1,0 +1,94 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Glossary}{4}{section*.1}%
+\contentsline {part}{I\hspace {1em}Beginner's Guide}{9}{part.1}%
+\contentsline {chapter}{\numberline {1}Getting Started}{10}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Logging in}{10}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Getting help}{10}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Errors}{10}{subsection.1.2.1}%
+\contentsline {section}{\numberline {1.3}Basic terminal usage}{11}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Command history}{11}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Stopping commands}{11}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Variables}{11}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Defining variables}{11}{subsection.1.4.1}%
+\contentsline {subsubsection}{Changing your prompt using \texttt {\$PS1}}{12}{section*.4}%
+\contentsline {subsection}{\numberline {1.4.2}Using non-defined variables}{12}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Restoring your default environment}{13}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.5}Basic system information}{13}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Exercises}{13}{section.1.6}%
+\contentsline {chapter}{\numberline {2}Navigating}{15}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Current directory: ``pwd'' and ``\$PWD''}{15}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Listing files and directories: ``ls''}{15}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Changing directory: ``cd''}{16}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Inspecting file type: ``file''}{16}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Absolute vs relative file paths}{17}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Permissions}{17}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Finding files/directories: ``find''}{18}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Exercises}{18}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Manipulating files and directories}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}File contents: ``cat'', ``head'', ``tail'', ``less'', ``more''}{19}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Copying files: ``cp''}{19}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Creating directories: ``mkdir''}{20}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Renaming/moving files: ``mv''}{20}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Removing files: ``rm''}{20}{section.3.5}%
+\contentsline {subsubsection}{Removing a directory: ``rmdir''}{20}{section*.5}%
+\contentsline {section}{\numberline {3.6}Changing permissions: ``chmod''}{20}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Access control lists (ACLs)}{22}{subsection.3.6.1}%
+\contentsline {section}{\numberline {3.7}Zipping: ``gzip''/``gunzip'', ``zip''/``unzip''}{22}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}``zip'' and ``unzip''}{22}{subsection.3.7.1}%
+\contentsline {section}{\numberline {3.8}Working with tarballs: ``tar''}{23}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Order of arguments}{23}{subsection.3.8.1}%
+\contentsline {section}{\numberline {3.9}Exercises}{23}{section.3.9}%
+\contentsline {chapter}{\numberline {4}Uploading/downloading/editing files}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Uploading/downloading files}{25}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}\texttt {dos2unix}}{25}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Symlinks for data/scratch}{25}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Editing with \texttt {nano}}{25}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Copying faster with \texttt {rsync}}{26}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Exercises}{26}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Beyond the basics}{28}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Input/output}{28}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Redirecting \texttt {stdout}}{28}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Reading from \texttt {stdin}}{29}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Redirecting \texttt {stderr}}{29}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Combining \texttt {stdout} and \texttt {stderr}}{29}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Command piping}{29}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Shell expansion}{30}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Process information}{30}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}\texttt {ps} and \texttt {pstree}}{30}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}\texttt {kill}}{31}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}\texttt {top}}{31}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}ulimit}{31}{subsection.5.4.4}%
+\contentsline {section}{\numberline {5.5}Counting: \texttt {wc}}{31}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Searching file contents: \texttt {grep}}{32}{section.5.6}%
+\contentsline {section}{\numberline {5.7}\texttt {cut}}{32}{section.5.7}%
+\contentsline {section}{\numberline {5.8}\texttt {sed}}{32}{section.5.8}%
+\contentsline {section}{\numberline {5.9}\texttt {awk}}{32}{section.5.9}%
+\contentsline {section}{\numberline {5.10}Basic Shell Scripting}{33}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}Shebang}{33}{subsection.5.10.1}%
+\contentsline {subsection}{\numberline {5.10.2}Conditionals}{33}{subsection.5.10.2}%
+\contentsline {subsection}{\numberline {5.10.3}Loops}{34}{subsection.5.10.3}%
+\contentsline {subsection}{\numberline {5.10.4}Subcommands}{34}{subsection.5.10.4}%
+\contentsline {subsection}{\numberline {5.10.5}Errors}{34}{subsection.5.10.5}%
+\contentsline {subsubsection}{Advanced error checking}{35}{section*.6}%
+\contentsline {section}{\numberline {5.11}\texttt {.bashrc} login script}{35}{section.5.11}%
+\contentsline {section}{\numberline {5.12}Scripting for the cluster}{36}{section.5.12}%
+\contentsline {subsection}{\numberline {5.12.1}Example job script}{36}{subsection.5.12.1}%
+\contentsline {subsection}{\numberline {5.12.2}PBS pragmas}{36}{subsection.5.12.2}%
+\contentsline {section}{\numberline {5.13}Exercises}{37}{section.5.13}%
+\contentsline {chapter}{\numberline {6}Common Pitfalls}{38}{chapter.6}%
+\contentsline {subsection}{\numberline {6.0.1}Files}{38}{subsection.6.0.1}%
+\contentsline {subsubsection}{Location}{38}{section*.7}%
+\contentsline {subsubsection}{Spaces}{38}{section*.8}%
+\contentsline {subsubsection}{Missing/mistyped environment variables}{39}{section*.9}%
+\contentsline {subsubsection}{Typing dangerous commands}{39}{section*.10}%
+\contentsline {subsubsection}{Copying files with WinSCP}{39}{section*.11}%
+\contentsline {subsubsection}{Permissions}{39}{section*.12}%
+\contentsline {subsection}{\numberline {6.0.2}Help\!}{40}{subsection.6.0.2}%
+\contentsline {chapter}{\numberline {7}More information}{41}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Q \& A}{42}{chapter.8}%
+\contentsline {chapter}{\numberline {9}More on the HPC infrastructure}{43}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Filesystems}{43}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Quota}{43}{subsection.9.1.1}%
+\contentsline {section}{\numberline {9.2}Modules}{43}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Using the clusters}{44}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Exercises}{44}{section.9.4}%

@@ -1,0 +1,130 @@
+\BOOKMARK [-1][-]{part.1}{I Beginner's Guide}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Introduction to HPC}{part.1}% 2
+\BOOKMARK [1][-]{section.1.1}{What is HPC?}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{What is the ?}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.3}{What is the not!}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.4}{Is the a solution for my computational needs?}{chapter.1}% 6
+\BOOKMARK [2][-]{subsection.1.4.1}{Batch or interactive mode?}{section.1.4}% 7
+\BOOKMARK [2][-]{subsection.1.4.2}{Parallel or sequential programs?}{section.1.4}% 8
+\BOOKMARK [2][-]{subsection.1.4.3}{What programming languages can I use?}{section.1.4}% 9
+\BOOKMARK [2][-]{subsection.1.4.4}{What operating systems can I use?}{section.1.4}% 10
+\BOOKMARK [2][-]{subsection.1.4.5}{What is the next step?}{section.1.4}% 11
+\BOOKMARK [0][-]{chapter.2}{Getting an HPC Account}{part.1}% 12
+\BOOKMARK [1][-]{section.2.1}{Getting ready to request an account}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.2}{Applying for the account}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.1}{Welcome e-mail}{section.2.2}% 15
+\BOOKMARK [1][-]{section.2.3}{Computation Workflow on the }{chapter.2}% 16
+\BOOKMARK [0][-]{chapter.3}{Connecting to the HPC}{part.1}% 17
+\BOOKMARK [1][-]{section.3.1}{First Time connection to the }{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.2}{Transfer Files to/from the }{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.3}{Modules}{chapter.3}% 20
+\BOOKMARK [2][-]{subsection.3.3.1}{Environment Variables}{section.3.3}% 21
+\BOOKMARK [2][-]{subsection.3.3.2}{Available modules}{section.3.3}% 22
+\BOOKMARK [2][-]{subsection.3.3.3}{Organisation of modules in toolchains}{section.3.3}% 23
+\BOOKMARK [2][-]{subsection.3.3.4}{Activating and de-activating modules}{section.3.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.5}{Explicit version numbers}{section.3.3}% 25
+\BOOKMARK [2][-]{subsection.3.3.6}{Get detailed info}{section.3.3}% 26
+\BOOKMARK [0][-]{chapter.4}{Running batch jobs}{part.1}% 27
+\BOOKMARK [1][-]{section.4.1}{Defining and submitting your job}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.2}{Monitoring and managing your job\(s\)}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.3}{Examining the queue}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.4}{Specifying job requirements}{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.4.1}{Generic resource requirements}{section.4.4}% 32
+\BOOKMARK [2][-]{subsection.4.4.2}{Available job categories \(TORQUE queues\)}{section.4.4}% 33
+\BOOKMARK [2][-]{subsection.4.4.3}{Node-specific properties}{section.4.4}% 34
+\BOOKMARK [1][-]{section.4.5}{Job output and error files}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.6}{E-mail notifications}{chapter.4}% 36
+\BOOKMARK [2][-]{subsection.4.6.1}{Upon job failure}{section.4.6}% 37
+\BOOKMARK [2][-]{subsection.4.6.2}{Generate your own e-mail notifications}{section.4.6}% 38
+\BOOKMARK [0][-]{chapter.5}{Running interactive jobs}{part.1}% 39
+\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 40
+\BOOKMARK [1][-]{section.5.2}{Interactive jobs, without X support}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.3}{Interactive jobs, with graphical support}{chapter.5}% 42
+\BOOKMARK [2][-]{subsection.5.3.1}{Software Installation}{section.5.3}% 43
+\BOOKMARK [2][-]{subsection.5.3.2}{Run simple example}{section.5.3}% 44
+\BOOKMARK [2][-]{subsection.5.3.3}{Run your interactive application}{section.5.3}% 45
+\BOOKMARK [0][-]{chapter.6}{Running jobs with input/output data}{part.1}% 46
+\BOOKMARK [1][-]{section.6.1}{The current directory and output and error files}{chapter.6}% 47
+\BOOKMARK [2][-]{subsection.6.1.1}{Default file names}{section.6.1}% 48
+\BOOKMARK [2][-]{subsection.6.1.2}{Filenames using the name of the job}{section.6.1}% 49
+\BOOKMARK [2][-]{subsection.6.1.3}{User-defined file names}{section.6.1}% 50
+\BOOKMARK [1][-]{section.6.2}{Where to store your data on the }{chapter.6}% 51
+\BOOKMARK [2][-]{subsection.6.2.1}{Pre-defined user directories}{section.6.2}% 52
+\BOOKMARK [2][-]{subsection.6.2.2}{Your home directory \(\044VSC\137HOME\)}{section.6.2}% 53
+\BOOKMARK [2][-]{subsection.6.2.3}{Your data directory \(\044VSC\137DATA\)}{section.6.2}% 54
+\BOOKMARK [2][-]{subsection.6.2.4}{Your scratch space \(\044VSC\137SCRATCH\)}{section.6.2}% 55
+\BOOKMARK [2][-]{subsection.6.2.5}{Pre-defined quotas}{section.6.2}% 56
+\BOOKMARK [1][-]{section.6.3}{Writing Output files}{chapter.6}% 57
+\BOOKMARK [1][-]{section.6.4}{Reading Input files}{chapter.6}% 58
+\BOOKMARK [1][-]{section.6.5}{How much disk space do I get?}{chapter.6}% 59
+\BOOKMARK [2][-]{subsection.6.5.1}{Quota}{section.6.5}% 60
+\BOOKMARK [2][-]{subsection.6.5.2}{Check your quota}{section.6.5}% 61
+\BOOKMARK [0][-]{chapter.7}{Multi core jobs/Parallel Computing}{part.1}% 62
+\BOOKMARK [1][-]{section.7.1}{Why Parallel Programming?}{chapter.7}% 63
+\BOOKMARK [1][-]{section.7.2}{Parallel Computing with threads}{chapter.7}% 64
+\BOOKMARK [1][-]{section.7.3}{Parallel Computing with OpenMP}{chapter.7}% 65
+\BOOKMARK [2][-]{subsection.7.3.1}{Private versus Shared variables}{section.7.3}% 66
+\BOOKMARK [2][-]{subsection.7.3.2}{Parallelising for loops with OpenMP}{section.7.3}% 67
+\BOOKMARK [2][-]{subsection.7.3.3}{Critical Code}{section.7.3}% 68
+\BOOKMARK [2][-]{subsection.7.3.4}{Reduction}{section.7.3}% 69
+\BOOKMARK [2][-]{subsection.7.3.5}{Other OpenMP directives}{section.7.3}% 70
+\BOOKMARK [1][-]{section.7.4}{Parallel Computing with MPI}{chapter.7}% 71
+\BOOKMARK [0][-]{chapter.8}{Fine-tuning Job Specifications}{part.1}% 72
+\BOOKMARK [1][-]{section.8.1}{Specifying Walltime}{chapter.8}% 73
+\BOOKMARK [1][-]{section.8.2}{Specifying memory requirements}{chapter.8}% 74
+\BOOKMARK [2][-]{subsection.8.2.1}{Available Memory on the machine}{section.8.2}% 75
+\BOOKMARK [2][-]{subsection.8.2.2}{Checking the memory consumption}{section.8.2}% 76
+\BOOKMARK [2][-]{subsection.8.2.3}{Setting the memory parameter}{section.8.2}% 77
+\BOOKMARK [1][-]{section.8.3}{Specifying processors requirements}{chapter.8}% 78
+\BOOKMARK [2][-]{subsection.8.3.1}{Number of processors}{section.8.3}% 79
+\BOOKMARK [2][-]{subsection.8.3.2}{Monitoring the CPU-utilisation}{section.8.3}% 80
+\BOOKMARK [2][-]{subsection.8.3.3}{Fine-tuning your executable and/or job-script}{section.8.3}% 81
+\BOOKMARK [1][-]{section.8.4}{The system load}{chapter.8}% 82
+\BOOKMARK [2][-]{subsection.8.4.1}{Optimal load}{section.8.4}% 83
+\BOOKMARK [2][-]{subsection.8.4.2}{Monitoring the load}{section.8.4}% 84
+\BOOKMARK [2][-]{subsection.8.4.3}{Fine-tuning your executable and/or job-script}{section.8.4}% 85
+\BOOKMARK [1][-]{section.8.5}{Checking File sizes \046 Disk I/O}{chapter.8}% 86
+\BOOKMARK [2][-]{subsection.8.5.1}{Monitoring File sizes during execution}{section.8.5}% 87
+\BOOKMARK [1][-]{section.8.6}{Specifying network requirements}{chapter.8}% 88
+\BOOKMARK [1][-]{section.8.7}{Some more tips on the Monitor tool}{chapter.8}% 89
+\BOOKMARK [2][-]{subsection.8.7.1}{Command Lines arguments}{section.8.7}% 90
+\BOOKMARK [2][-]{subsection.8.7.2}{Exit Code}{section.8.7}% 91
+\BOOKMARK [2][-]{subsection.8.7.3}{Monitoring a running process}{section.8.7}% 92
+\BOOKMARK [-1][-]{part.2}{II Advanced Guide}{}% 93
+\BOOKMARK [0][-]{chapter.9}{Multi-job submission}{part.2}% 94
+\BOOKMARK [1][-]{section.9.1}{The worker Framework: Parameter Sweeps}{chapter.9}% 95
+\BOOKMARK [1][-]{section.9.2}{The Worker framework: Job arrays}{chapter.9}% 96
+\BOOKMARK [1][-]{section.9.3}{MapReduce: prologues and epilogue}{chapter.9}% 97
+\BOOKMARK [1][-]{section.9.4}{Some more on the Worker Framework}{chapter.9}% 98
+\BOOKMARK [2][-]{subsection.9.4.1}{Using Worker efficiently}{section.9.4}% 99
+\BOOKMARK [2][-]{subsection.9.4.2}{Monitoring a worker job}{section.9.4}% 100
+\BOOKMARK [2][-]{subsection.9.4.3}{Time limits for work items}{section.9.4}% 101
+\BOOKMARK [2][-]{subsection.9.4.4}{Resuming a Worker job}{section.9.4}% 102
+\BOOKMARK [2][-]{subsection.9.4.5}{Further information}{section.9.4}% 103
+\BOOKMARK [0][-]{chapter.10}{Compiling and testing your software on the HPC}{part.2}% 104
+\BOOKMARK [1][-]{section.10.1}{Check the pre-installed software on the }{chapter.10}% 105
+\BOOKMARK [1][-]{section.10.2}{Porting your code}{chapter.10}% 106
+\BOOKMARK [1][-]{section.10.3}{Compiling and building on the }{chapter.10}% 107
+\BOOKMARK [2][-]{subsection.10.3.1}{Compiling a sequential program in C}{section.10.3}% 108
+\BOOKMARK [2][-]{subsection.10.3.2}{Compiling a parallel program in C/MPI}{section.10.3}% 109
+\BOOKMARK [2][-]{subsection.10.3.3}{Compiling a parallel program in Intel Parallel Studio Cluster Edition}{section.10.3}% 110
+\BOOKMARK [0][-]{chapter.11}{Program examples}{part.2}% 111
+\BOOKMARK [0][-]{chapter.12}{Good Practices}{part.2}% 112
+\BOOKMARK [1][-]{section.12.1}{Windows / Unix}{chapter.12}% 113
+\BOOKMARK [0][-]{appendix.A}{Quick Reference Guide}{part.2}% 114
+\BOOKMARK [0][-]{appendix.B}{TORQUE options}{part.2}% 115
+\BOOKMARK [1][-]{section.B.1}{TORQUE Submission Flags: common and useful directives}{appendix.B}% 116
+\BOOKMARK [1][-]{section.B.2}{Environment Variables in Batch Job Scripts}{appendix.B}% 117
+\BOOKMARK [0][-]{appendix.C}{Useful Linux Commands}{part.2}% 118
+\BOOKMARK [1][-]{section.C.1}{Basic Linux Usage}{appendix.C}% 119
+\BOOKMARK [1][-]{section.C.2}{How to get started with shell scripts}{appendix.C}% 120
+\BOOKMARK [1][-]{section.C.3}{Linux Quick reference Guide}{appendix.C}% 121
+\BOOKMARK [2][-]{subsection.C.3.1}{Archive Commands}{section.C.3}% 122
+\BOOKMARK [2][-]{subsection.C.3.2}{Basic Commands}{section.C.3}% 123
+\BOOKMARK [2][-]{subsection.C.3.3}{Editor}{section.C.3}% 124
+\BOOKMARK [2][-]{subsection.C.3.4}{File Commands}{section.C.3}% 125
+\BOOKMARK [2][-]{subsection.C.3.5}{Help Commands}{section.C.3}% 126
+\BOOKMARK [2][-]{subsection.C.3.6}{Network Commands}{section.C.3}% 127
+\BOOKMARK [2][-]{subsection.C.3.7}{Other Commands}{section.C.3}% 128
+\BOOKMARK [2][-]{subsection.C.3.8}{Process Commands}{section.C.3}% 129
+\BOOKMARK [2][-]{subsection.C.3.9}{User Account Commands}{section.C.3}% 130

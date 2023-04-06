@@ -1,0 +1,64 @@
+\glossaryentry{cluster?\glossentry{cluster}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{compute node?\glossentry{compute-node}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{core?\glossentry{core}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{CPU?\glossentry{CPU}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{distributed memory system?\glossentry{distributed-memory-system}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{FLOPS?\glossentry{FLOPS}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{FTP?\glossentry{FTP}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{GPGPU?\glossentry{GPGPU}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{grid?\glossentry{grid}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{HPC?\glossentry{HPC}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{L1d?\glossentry{L1d}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{L2d?\glossentry{L2d}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{L3d?\glossentry{L3d}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{LLC?\glossentry{LLC}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{InfiniBand?\glossentry{InfiniBand}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{job constraints?\glossentry{job-constraints}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{LAN?\glossentry{LAN}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{Linux?\glossentry{Linux}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{login node?\glossentry{login-node}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{memory?\glossentry{memory}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{metrics?\glossentry{metrics}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{Moab?\glossentry{Moab}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{modules?\glossentry{modules}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{MPI?\glossentry{MPI}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{node?\glossentry{node}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{node attribute?\glossentry{node-attribute}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{PBS, TORQUE?\glossentry{PBS-TORQUE}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{processor?\glossentry{processor}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{queue?\glossentry{queue}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{scp?\glossentry{scp}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{scratch?\glossentry{scratch}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{sftp?\glossentry{sftp}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{shared memory system?\glossentry{shared-memory-system}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{SSD?\glossentry{SSD}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{SSH?\glossentry{SSH}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{ssh-keys?\glossentry{ssh-keys}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{supercomputer?\glossentry{supercomputer}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{swap space?\glossentry{swap-space}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{TLB?\glossentry{TLB}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{walltime?\glossentry{walltime}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{worker node?\glossentry{worker-node}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{OpenStack?\glossentry{OpenStack}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{OpenStack Identity?\glossentry{OpenStack Identity}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{OpenStack Image?\glossentry{OpenStack Image}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{OpenStack Dashboard?\glossentry{OpenStack Dashboard}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{Horizon?\glossentry{Horizon}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{Heat?\glossentry{Heat}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{"\textsc {rest}?\glossentry{REST}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{stack?\glossentry{stack}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{Heat Orchestration Template?\glossentry{Heat Orchestration Template}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{OpenStack Instance?\glossentry{instance}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{OpenStack Volume?\glossentry{OpenStack Volume}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{share?\glossentry{share}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{"\textsc {yaml}?\glossentry{yaml}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{"\textsc {nfs}?\glossentry{nfs}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{"\textsc {nic}?\glossentry{nic}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{"\textsc {rest}?\glossentry{REST}|setentrycounter[]{page}"\glsnumberformat}{7}
+\glossaryentry{Heat?\glossentry{Heat}|setentrycounter[]{page}"\glsnumberformat}{7}
+\glossaryentry{"\textsc {yaml}?\glossentry{yaml}|setentrycounter[]{page}"\glsnumberformat}{7}
+\glossaryentry{OpenStack Dashboard?\glossentry{OpenStack Dashboard}|setentrycounter[]{page}"\glsnumberformat}{7}
+\glossaryentry{compute node?\glossentry{compute-node}|setentrycounter[]{page}"\glsnumberformat}{8}
+\glossaryentry{OpenStack?\glossentry{OpenStack}|setentrycounter[]{page}"\glsnumberformat}{10}
+\glossaryentry{Heat?\glossentry{Heat}|setentrycounter[]{page}"\glsnumberformat}{10}
+\glossaryentry{compute node?\glossentry{compute-node}|setentrycounter[]{page}"\glsnumberformat}{10}

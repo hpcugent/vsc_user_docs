@@ -1,0 +1,317 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Glossary}{5}{section*.1}%
+\contentsline {part}{I\hspace {1em}Beginner's Guide}{22}{part.1}%
+\contentsline {chapter}{\numberline {1}Introduction to HPC}{23}{chapter.1}%
+\contentsline {section}{\numberline {1.1}What is HPC?}{23}{section.1.1}%
+\contentsline {section}{\numberline {1.2}What is the UGent-HPC\xspace ?}{24}{section.1.2}%
+\contentsline {section}{\numberline {1.3}What the HPC infrastucture is \emph {not}}{24}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Is the HPC\xspace a solution for my computational needs?}{25}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Batch or interactive mode?}{25}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}What are cores, processors and nodes?}{25}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Parallel or sequential programs?}{25}{subsection.1.4.3}%
+\contentsline {subsubsection}{Parallel programs}{25}{section*.4}%
+\contentsline {subsubsection}{Sequential programs}{26}{section*.5}%
+\contentsline {subsection}{\numberline {1.4.4}What programming languages can I use?}{26}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}What operating systems can I use?}{26}{subsection.1.4.5}%
+\contentsline {subsection}{\numberline {1.4.6}What does a typical workflow look like?}{26}{subsection.1.4.6}%
+\contentsline {subsection}{\numberline {1.4.7}What is the next step?}{27}{subsection.1.4.7}%
+\contentsline {chapter}{\numberline {2}Getting an HPC Account}{28}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Getting ready to request an account}{28}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}How do SSH keys work?}{28}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Test OpenSSH}{29}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Generate a public/private key pair with OpenSSH}{29}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Using an SSH agent (optional)}{30}{subsection.2.1.4}%
+\contentsline {section}{\numberline {2.2}Applying for the account}{31}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Welcome e-mail}{33}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Adding multiple SSH public keys (optional)}{33}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Computation Workflow on the HPC\xspace }{34}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Connecting to the HPC infrastructure}{35}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Connection restrictions}{35}{section.3.1}%
+\contentsline {section}{\numberline {3.2}First Time connection to the HPC infrastructure}{36}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Connect}{36}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Transfer Files to/from the HPC\xspace }{39}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Using scp}{39}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Using sftp}{41}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Using a GUI (Cyberduck)}{42}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Fast file transfer for large datasets}{42}{subsection.3.3.4}%
+\contentsline {chapter}{\numberline {4}Running batch jobs}{43}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Modules}{44}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Environment Variables}{44}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}The module command}{44}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Available modules}{45}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Organisation of modules in toolchains}{45}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Loading and unloading modules}{46}{subsection.4.1.5}%
+\contentsline {subsubsection}{module load}{46}{section*.6}%
+\contentsline {subsubsection}{module list}{46}{section*.7}%
+\contentsline {subsubsection}{module unload}{47}{section*.8}%
+\contentsline {subsection}{\numberline {4.1.6}Purging all modules}{47}{subsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.1.7}Using explicit version numbers}{48}{subsection.4.1.7}%
+\contentsline {subsection}{\numberline {4.1.8}Search for modules}{48}{subsection.4.1.8}%
+\contentsline {subsection}{\numberline {4.1.9}Get detailed info}{49}{subsection.4.1.9}%
+\contentsline {subsection}{\numberline {4.1.10}Save and load collections of modules}{50}{subsection.4.1.10}%
+\contentsline {subsection}{\numberline {4.1.11}Getting module details}{50}{subsection.4.1.11}%
+\contentsline {section}{\numberline {4.2}Getting system information about the HPC infrastructure}{51}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Checking the general status of the HPC infrastructure}{51}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Getting cluster state}{51}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Defining and submitting your job}{52}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}When will my job start?}{55}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Specifying the cluster on which to run}{56}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Monitoring and managing your job(s)}{57}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Examining the queue}{58}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Specifying job requirements}{58}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Generic resource requirements}{58}{subsection.4.6.1}%
+\contentsline {section}{\numberline {4.7}Job output and error files}{59}{section.4.7}%
+\contentsline {section}{\numberline {4.8}E-mail notifications}{60}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Generate your own e-mail notifications}{60}{subsection.4.8.1}%
+\contentsline {section}{\numberline {4.9}Running a job after another job}{60}{section.4.9}%
+\contentsline {chapter}{\numberline {5}Running interactive jobs}{61}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{61}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Interactive jobs, without X support}{61}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Interactive jobs, with graphical support}{63}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Software Installation}{63}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Connect with X-forwarding}{64}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Run simple example}{65}{subsection.5.3.3}%
+\contentsline {chapter}{\numberline {6}Running jobs with input/output data}{67}{chapter.6}%
+\contentsline {section}{\numberline {6.1}The current directory and output and error files}{67}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Default file names}{67}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Filenames using the name of the job}{69}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}User-defined file names}{70}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.2}Where to store your data on the HPC\xspace }{71}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Pre-defined user directories}{71}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Your home directory (\$VSC\_HOME)}{72}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Your data directory (\$VSC\_DATA)}{72}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Your scratch space (\$VSC\_SCRATCH)}{72}{subsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.2.5}Your UGent home drive and shares }{73}{subsection.6.2.5}%
+\contentsline {subsection}{\numberline {6.2.6}UGent shares with globus }{74}{subsection.6.2.6}%
+\contentsline {subsection}{\numberline {6.2.7}Pre-defined quotas}{75}{subsection.6.2.7}%
+\contentsline {section}{\numberline {6.3}Writing Output files}{76}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Reading Input files}{76}{section.6.4}%
+\contentsline {section}{\numberline {6.5}How much disk space do I get?}{77}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Quota}{77}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Check your quota}{77}{subsection.6.5.2}%
+\contentsline {section}{\numberline {6.6}Groups}{79}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Joining an existing group}{79}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Creating a new group}{79}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.6.3}Managing a group}{79}{subsection.6.6.3}%
+\contentsline {subsection}{\numberline {6.6.4}Inspecting groups}{79}{subsection.6.6.4}%
+\contentsline {section}{\numberline {6.7}Virtual Organisations}{83}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Joining an existing VO}{83}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Creating a new VO}{83}{subsection.6.7.2}%
+\contentsline {subsection}{\numberline {6.7.3}Requesting more storage space}{83}{subsection.6.7.3}%
+\contentsline {subsection}{\numberline {6.7.4}Setting per-member VO quota}{86}{subsection.6.7.4}%
+\contentsline {subsection}{\numberline {6.7.5}VO directories}{88}{subsection.6.7.5}%
+\contentsline {chapter}{\numberline {7}Multi core jobs/Parallel Computing}{89}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Why Parallel Programming?}{89}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Parallel Computing with threads}{90}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Parallel Computing with OpenMP}{93}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Private versus Shared variables}{94}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Parallelising for loops with OpenMP}{94}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}Critical Code}{95}{subsection.7.3.3}%
+\contentsline {subsection}{\numberline {7.3.4}Reduction}{97}{subsection.7.3.4}%
+\contentsline {subsection}{\numberline {7.3.5}Other OpenMP directives}{98}{subsection.7.3.5}%
+\contentsline {section}{\numberline {7.4}Parallel Computing with MPI}{99}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Using the HPC-UGent web portal}{104}{chapter.8}%
+\contentsline {subsection}{\numberline {8.0.1}Known issues \& limitations}{105}{subsection.8.0.1}%
+\contentsline {paragraph}{Limited resources}{105}{section*.10}%
+\contentsline {section}{\numberline {8.1}Login}{105}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}First login}{105}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.2}Start page}{105}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Features}{106}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}File browser}{106}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Job management}{108}{subsection.8.3.2}%
+\contentsline {subsubsection}{Active jobs}{108}{section*.11}%
+\contentsline {subsubsection}{Job composer}{109}{section*.12}%
+\contentsline {paragraph}{Job templates}{109}{section*.13}%
+\contentsline {subsection}{\numberline {8.3.3}Shell access}{110}{subsection.8.3.3}%
+\contentsline {subsection}{\numberline {8.3.4}Interactive applications}{111}{subsection.8.3.4}%
+\contentsline {subsubsection}{Graphical desktop environment}{111}{section*.14}%
+\contentsline {subsubsection}{Jupyter notebook}{112}{section*.15}%
+\contentsline {section}{\numberline {8.4}Restarting your web server in case of problems}{114}{section.8.4}%
+\contentsline {chapter}{\numberline {9}XDMoD portal}{115}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Troubleshooting}{116}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Walltime issues}{116}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Out of quota issues}{116}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Issues connecting to login node}{116}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Security warning about invalid host key}{117}{section.10.4}%
+\contentsline {section}{\numberline {10.5}DOS/Windows text format}{118}{section.10.5}%
+\contentsline {section}{\numberline {10.6}Warning message when first connecting to new host}{118}{section.10.6}%
+\contentsline {section}{\numberline {10.7}Memory limits}{119}{section.10.7}%
+\contentsline {subsection}{\numberline {10.7.1}How will I know if memory limits are the cause of my problem?}{119}{subsection.10.7.1}%
+\contentsline {subsection}{\numberline {10.7.2}How do I specify the amount of memory I need?}{119}{subsection.10.7.2}%
+\contentsline {section}{\numberline {10.8}Module conflicts}{119}{section.10.8}%
+\contentsline {section}{\numberline {10.9}Running software that is incompatible with host}{120}{section.10.9}%
+\contentsline {chapter}{\numberline {11}HPC Policies}{122}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Frequently Asked Questions}{123}{chapter.12}%
+\contentsline {section}{\numberline {12.1}When will my job start?}{123}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Can I share my account with someone else?}{123}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Can I share my data with other HPC\xspace users?}{123}{section.12.3}%
+\contentsline {section}{\numberline {12.4}Can I use multiple different SSH key pairs to connect to my VSC account?}{123}{section.12.4}%
+\contentsline {section}{\numberline {12.5}I want to use software that is not available on the clusters yet}{124}{section.12.5}%
+\contentsline {part}{II\hspace {1em}Advanced Guide}{125}{part.2}%
+\contentsline {chapter}{\numberline {13}Fine-tuning Job Specifications}{126}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Specifying Walltime}{127}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Specifying memory requirements}{127}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}Available Memory on the machine}{128}{subsection.13.2.1}%
+\contentsline {subsection}{\numberline {13.2.2}Checking the memory consumption}{128}{subsection.13.2.2}%
+\contentsline {subsection}{\numberline {13.2.3}Setting the memory parameter}{128}{subsection.13.2.3}%
+\contentsline {section}{\numberline {13.3}Specifying processors requirements}{129}{section.13.3}%
+\contentsline {subsection}{\numberline {13.3.1}Number of processors}{129}{subsection.13.3.1}%
+\contentsline {subsection}{\numberline {13.3.2}Monitoring the CPU-utilisation}{131}{subsection.13.3.2}%
+\contentsline {subsection}{\numberline {13.3.3}Fine-tuning your executable and/or job script}{131}{subsection.13.3.3}%
+\contentsline {section}{\numberline {13.4}The system load}{132}{section.13.4}%
+\contentsline {subsection}{\numberline {13.4.1}Optimal load}{132}{subsection.13.4.1}%
+\contentsline {subsection}{\numberline {13.4.2}Monitoring the load}{133}{subsection.13.4.2}%
+\contentsline {subsection}{\numberline {13.4.3}Fine-tuning your executable and/or job script}{133}{subsection.13.4.3}%
+\contentsline {section}{\numberline {13.5}Checking File sizes \& Disk I/O}{134}{section.13.5}%
+\contentsline {subsection}{\numberline {13.5.1}Monitoring File sizes during execution}{134}{subsection.13.5.1}%
+\contentsline {section}{\numberline {13.6}Specifying network requirements}{134}{section.13.6}%
+\contentsline {chapter}{\numberline {14}Multi-job submission}{136}{chapter.14}%
+\contentsline {section}{\numberline {14.1}The worker Framework: Parameter Sweeps}{137}{section.14.1}%
+\contentsline {section}{\numberline {14.2}The Worker framework: Job arrays}{139}{section.14.2}%
+\contentsline {section}{\numberline {14.3}MapReduce: prologues and epilogue}{142}{section.14.3}%
+\contentsline {section}{\numberline {14.4}Some more on the Worker Framework}{144}{section.14.4}%
+\contentsline {subsection}{\numberline {14.4.1}Using Worker efficiently}{144}{subsection.14.4.1}%
+\contentsline {subsection}{\numberline {14.4.2}Monitoring a worker job}{144}{subsection.14.4.2}%
+\contentsline {subsection}{\numberline {14.4.3}Time limits for work items}{144}{subsection.14.4.3}%
+\contentsline {subsection}{\numberline {14.4.4}Resuming a Worker job}{145}{subsection.14.4.4}%
+\contentsline {subsection}{\numberline {14.4.5}Further information}{145}{subsection.14.4.5}%
+\contentsline {chapter}{\numberline {15}Compiling and testing your software on the HPC}{147}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Check the pre-installed software on the HPC\xspace }{147}{section.15.1}%
+\contentsline {section}{\numberline {15.2}Porting your code}{148}{section.15.2}%
+\contentsline {section}{\numberline {15.3}Compiling and building on the HPC\xspace }{148}{section.15.3}%
+\contentsline {subsection}{\numberline {15.3.1}Compiling a sequential program in C}{149}{subsection.15.3.1}%
+\contentsline {subsection}{\numberline {15.3.2}Compiling a parallel program in C/MPI}{150}{subsection.15.3.2}%
+\contentsline {subsection}{\numberline {15.3.3}Compiling a parallel program in Intel Parallel Studio Cluster Edition}{151}{subsection.15.3.3}%
+\contentsline {chapter}{\numberline {16}Program examples}{153}{chapter.16}%
+\contentsline {chapter}{\numberline {17}Job script examples}{155}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Single-core job}{155}{section.17.1}%
+\contentsline {section}{\numberline {17.2}Multi-core job}{156}{section.17.2}%
+\contentsline {section}{\numberline {17.3}Running a command with a maximum time limit}{156}{section.17.3}%
+\contentsline {chapter}{\numberline {18}Best Practices}{158}{chapter.18}%
+\contentsline {section}{\numberline {18.1}General Best Practices}{158}{section.18.1}%
+\contentsline {chapter}{\numberline {19}Graphical applications with VNC}{160}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Starting a VNC server}{160}{section.19.1}%
+\contentsline {section}{\numberline {19.2}List running VNC servers}{161}{section.19.2}%
+\contentsline {section}{\numberline {19.3}Connecting to a VNC server}{161}{section.19.3}%
+\contentsline {subsection}{\numberline {19.3.1}Determining the source/destination port}{161}{subsection.19.3.1}%
+\contentsline {subsection}{\numberline {19.3.2}Picking an intermediate port to connect to the right login node}{162}{subsection.19.3.2}%
+\contentsline {subsection}{\numberline {19.3.3}Setting up the SSH tunnel(s)}{162}{subsection.19.3.3}%
+\contentsline {subsubsection}{Setting up the first SSH tunnel from your workstation to login.hpc.ugent.be\xspace }{162}{section*.16}%
+\contentsline {subsubsection}{Checking whether the intermediate port is available}{163}{section*.17}%
+\contentsline {subsubsection}{Setting up the second SSH tunnel to the correct login node}{163}{section*.18}%
+\contentsline {subsection}{\numberline {19.3.4}Connecting using a VNC client}{164}{subsection.19.3.4}%
+\contentsline {section}{\numberline {19.4}Stopping the VNC server}{164}{section.19.4}%
+\contentsline {section}{\numberline {19.5}I forgot the password, what now?}{164}{section.19.5}%
+\contentsline {chapter}{\numberline {20}Graphical applications with X2Go}{165}{chapter.20}%
+\contentsline {section}{\numberline {20.1}Install X2Go client}{165}{section.20.1}%
+\contentsline {section}{\numberline {20.2}Create a new X2Go session}{165}{section.20.2}%
+\contentsline {subsection}{\numberline {20.2.1}Option A: direct connection}{166}{subsection.20.2.1}%
+\contentsline {subsection}{\numberline {20.2.2}Option B: use the login node as SSH proxy}{167}{subsection.20.2.2}%
+\contentsline {section}{\numberline {20.3}Connect to your X2Go session}{168}{section.20.3}%
+\contentsline {section}{\numberline {20.4}Resume a previous session}{168}{section.20.4}%
+\contentsline {section}{\numberline {20.5}Connection failed with X2Go}{169}{section.20.5}%
+\contentsline {chapter}{\numberline {21}HPC-UGent GPU clusters}{170}{chapter.21}%
+\contentsline {section}{\numberline {21.1}Submitting jobs}{170}{section.21.1}%
+\contentsline {subsection}{\numberline {21.1.1}Interactive jobs}{170}{subsection.21.1.1}%
+\contentsline {section}{\numberline {21.2}Hardware}{170}{section.21.2}%
+\contentsline {section}{\numberline {21.3}Requesting (GPU) resources}{170}{section.21.3}%
+\contentsline {section}{\numberline {21.4}Attention points}{171}{section.21.4}%
+\contentsline {section}{\numberline {21.5}Software with GPU support}{171}{section.21.5}%
+\contentsline {subsection}{\numberline {21.5.1}GROMACS}{172}{subsection.21.5.1}%
+\contentsline {subsection}{\numberline {21.5.2}Horovod}{172}{subsection.21.5.2}%
+\contentsline {subsection}{\numberline {21.5.3}PyTorch}{172}{subsection.21.5.3}%
+\contentsline {subsection}{\numberline {21.5.4}TensorFlow}{172}{subsection.21.5.4}%
+\contentsline {subsubsection}{Example TensorFlow job script}{172}{section*.19}%
+\contentsline {subsection}{\numberline {21.5.5}AlphaFold}{172}{subsection.21.5.5}%
+\contentsline {section}{\numberline {21.6}Getting help}{173}{section.21.6}%
+\contentsline {chapter}{\numberline {22}HPC-UGent interactive and debug cluster}{174}{chapter.22}%
+\contentsline {section}{\numberline {22.1}Purpose}{174}{section.22.1}%
+\contentsline {section}{\numberline {22.2}Submitting jobs}{174}{section.22.2}%
+\contentsline {subsection}{\numberline {22.2.1}Restrictions and overcommit factor}{175}{subsection.22.2.1}%
+\contentsline {part}{III\hspace {1em}Software-specific Best Practices}{176}{part.3}%
+\contentsline {chapter}{\numberline {23}MATLAB}{177}{chapter.23}%
+\contentsline {section}{\numberline {23.1}Why is the MATLAB compiler required?}{177}{section.23.1}%
+\contentsline {section}{\numberline {23.2}How to compile MATLAB code}{177}{section.23.2}%
+\contentsline {subsection}{\numberline {23.2.1}Libraries}{178}{subsection.23.2.1}%
+\contentsline {subsection}{\numberline {23.2.2}Memory issues during compilation}{178}{subsection.23.2.2}%
+\contentsline {section}{\numberline {23.3}Multithreading}{179}{section.23.3}%
+\contentsline {section}{\numberline {23.4}Java output logs}{179}{section.23.4}%
+\contentsline {section}{\numberline {23.5}Cache location}{179}{section.23.5}%
+\contentsline {section}{\numberline {23.6}MATLAB job script}{180}{section.23.6}%
+\contentsline {chapter}{\numberline {24}OpenFOAM}{181}{chapter.24}%
+\contentsline {section}{\numberline {24.1}Different OpenFOAM releases}{181}{section.24.1}%
+\contentsline {section}{\numberline {24.2}Documentation \& training material}{181}{section.24.2}%
+\contentsline {section}{\numberline {24.3}Preparing the environment}{182}{section.24.3}%
+\contentsline {subsection}{\numberline {24.3.1}Picking and loading an \texttt {OpenFOAM} module}{182}{subsection.24.3.1}%
+\contentsline {subsection}{\numberline {24.3.2}Sourcing the \texttt {\$FOAM\_BASH} script}{183}{subsection.24.3.2}%
+\contentsline {subsection}{\numberline {24.3.3}Defining utility functions used in tutorial cases}{183}{subsection.24.3.3}%
+\contentsline {subsection}{\numberline {24.3.4}Dealing with floating-point errors}{183}{subsection.24.3.4}%
+\contentsline {section}{\numberline {24.4}OpenFOAM workflow}{183}{section.24.4}%
+\contentsline {section}{\numberline {24.5}Running OpenFOAM in parallel}{184}{section.24.5}%
+\contentsline {subsection}{\numberline {24.5.1}The \texttt {-parallel} option}{184}{subsection.24.5.1}%
+\contentsline {subsection}{\numberline {24.5.2}Using \texttt {mympirun}}{184}{subsection.24.5.2}%
+\contentsline {subsection}{\numberline {24.5.3}Domain decomposition and number of processor cores}{185}{subsection.24.5.3}%
+\contentsline {section}{\numberline {24.6}Running OpenFOAM on a shared filesystem}{186}{section.24.6}%
+\contentsline {section}{\numberline {24.7}Using own solvers with OpenFOAM}{186}{section.24.7}%
+\contentsline {section}{\numberline {24.8}Example OpenFOAM job script}{186}{section.24.8}%
+\contentsline {chapter}{\numberline {25}Mympirun}{188}{chapter.25}%
+\contentsline {section}{\numberline {25.1}Basic usage}{188}{section.25.1}%
+\contentsline {section}{\numberline {25.2}Controlling number of processes}{188}{section.25.2}%
+\contentsline {subsection}{\numberline {25.2.1}\texttt {-{}-hybrid}/\texttt {-h}}{189}{subsection.25.2.1}%
+\contentsline {subsection}{\numberline {25.2.2}Other options}{189}{subsection.25.2.2}%
+\contentsline {section}{\numberline {25.3}Dry run}{189}{section.25.3}%
+\contentsline {section}{\numberline {25.4}FAQ}{189}{section.25.4}%
+\contentsline {subsection}{\numberline {25.4.1}\texttt {mympirun} seems to ignore its arguments}{189}{subsection.25.4.1}%
+\contentsline {subsection}{\numberline {25.4.2}I have other problems/questions}{190}{subsection.25.4.2}%
+\contentsline {chapter}{\numberline {26}Singularity}{191}{chapter.26}%
+\contentsline {section}{\numberline {26.1}What is Singularity?}{191}{section.26.1}%
+\contentsline {section}{\numberline {26.2}Restrictions on image location}{191}{section.26.2}%
+\contentsline {section}{\numberline {26.3}Available filesystems}{192}{section.26.3}%
+\contentsline {section}{\numberline {26.4}Singularity Images}{192}{section.26.4}%
+\contentsline {subsection}{\numberline {26.4.1}Creating Singularity images}{192}{subsection.26.4.1}%
+\contentsline {subsection}{\numberline {26.4.2}Converting Docker images}{192}{subsection.26.4.2}%
+\contentsline {section}{\numberline {26.5}Execute our own script within our container}{192}{section.26.5}%
+\contentsline {section}{\numberline {26.6}Tensorflow example}{193}{section.26.6}%
+\contentsline {section}{\numberline {26.7}MPI example}{193}{section.26.7}%
+\contentsline {chapter}{\numberline {27}SCOOP}{195}{chapter.27}%
+\contentsline {section}{\numberline {27.1}Loading the module}{195}{section.27.1}%
+\contentsline {section}{\numberline {27.2}Write a worker script}{195}{section.27.2}%
+\contentsline {section}{\numberline {27.3}Executing the program}{196}{section.27.3}%
+\contentsline {section}{\numberline {27.4}Using \texttt {myscoop}}{196}{section.27.4}%
+\contentsline {section}{\numberline {27.5}Example: calculating $\pi $}{197}{section.27.5}%
+\contentsline {chapter}{\numberline {28}Easybuild}{200}{chapter.28}%
+\contentsline {section}{\numberline {28.1}What is Easybuild?}{200}{section.28.1}%
+\contentsline {section}{\numberline {28.2}When should I use Easybuild?}{200}{section.28.2}%
+\contentsline {section}{\numberline {28.3}Configuring EasyBuild}{200}{section.28.3}%
+\contentsline {subsection}{\numberline {28.3.1}Path to sources}{200}{subsection.28.3.1}%
+\contentsline {subsection}{\numberline {28.3.2}Build directory}{201}{subsection.28.3.2}%
+\contentsline {subsection}{\numberline {28.3.3}Software install location}{201}{subsection.28.3.3}%
+\contentsline {section}{\numberline {28.4}Using EasyBuild}{201}{section.28.4}%
+\contentsline {subsection}{\numberline {28.4.1}Installing supported software}{201}{subsection.28.4.1}%
+\contentsline {subsection}{\numberline {28.4.2}Installing variants on supported software}{202}{subsection.28.4.2}%
+\contentsline {subsection}{\numberline {28.4.3}Install other software}{202}{subsection.28.4.3}%
+\contentsline {section}{\numberline {28.5}Using the installed modules}{202}{section.28.5}%
+\contentsline {chapter}{\numberline {29}Hanythingondemand (HOD)}{203}{chapter.29}%
+\contentsline {section}{\numberline {29.1}Documentation}{203}{section.29.1}%
+\contentsline {section}{\numberline {29.2}Using HOD}{203}{section.29.2}%
+\contentsline {subsection}{\numberline {29.2.1}Compatibility with login nodes}{203}{subsection.29.2.1}%
+\contentsline {subsection}{\numberline {29.2.2}Standard HOD configuration}{204}{subsection.29.2.2}%
+\contentsline {subsection}{\numberline {29.2.3}Cleaning up}{204}{subsection.29.2.3}%
+\contentsline {section}{\numberline {29.3}Getting help}{205}{section.29.3}%
+\contentsline {chapter}{\numberline {A}HPC Quick Reference Guide}{206}{appendix.A}%
+\contentsline {chapter}{\numberline {B}TORQUE options}{208}{appendix.B}%
+\contentsline {section}{\numberline {B.1}TORQUE Submission Flags: common and useful directives}{208}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Environment Variables in Batch Job Scripts}{209}{section.B.2}%
+\contentsline {chapter}{\numberline {C}Useful Linux Commands}{211}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Basic Linux Usage}{211}{section.C.1}%
+\contentsline {section}{\numberline {C.2}How to get started with shell scripts}{212}{section.C.2}%
+\contentsline {section}{\numberline {C.3}Linux Quick reference Guide}{213}{section.C.3}%
+\contentsline {subsection}{\numberline {C.3.1}Archive Commands}{213}{subsection.C.3.1}%
+\contentsline {subsection}{\numberline {C.3.2}Basic Commands}{214}{subsection.C.3.2}%
+\contentsline {subsection}{\numberline {C.3.3}Editor}{214}{subsection.C.3.3}%
+\contentsline {subsection}{\numberline {C.3.4}File Commands}{214}{subsection.C.3.4}%
+\contentsline {subsection}{\numberline {C.3.5}Help Commands}{214}{subsection.C.3.5}%
+\contentsline {subsection}{\numberline {C.3.6}Network Commands}{214}{subsection.C.3.6}%
+\contentsline {subsection}{\numberline {C.3.7}Other Commands}{215}{subsection.C.3.7}%
+\contentsline {subsection}{\numberline {C.3.8}Process Commands}{215}{subsection.C.3.8}%
+\contentsline {subsection}{\numberline {C.3.9}User Account Commands}{215}{subsection.C.3.9}%
