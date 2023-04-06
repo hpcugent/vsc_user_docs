@@ -319,10 +319,9 @@ fingerprints.
 
 The following examples show output and commands for OpenSSH, the most
 common client on Linux and macOS. If you are working from a windows
-system using using PuTTY, we refer to sections 8.4 and 8.6 of the
-windows version of the [introduction to
-HPC](https://hpcugent.github.io/vsc_user_docs) for the corresponding
-warning messages.
+system using using PuTTY, we refer to PuTTY section of the windows version of the
+[introduction to HPC](https://hpcugent.github.io/vsc_user_docs/HPC/Gent/Windows/account/#get-putty-a-free-telnetssh-client)
+for the corresponding warning messages.
 
 #### Connecting for the first time
 
