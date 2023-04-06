@@ -40,7 +40,7 @@ and click .
 From here on, follow the standard procedure to log in to your VSC
 account, using your home institution's single sign-on system. You can
 find a detailed description in the HPC introduction at
-[hpcugent.github.io/vsc_user_docs](https://hpcugent.github.io/vsc_user_docs).
+[hpcugent.github.io/vsc_user_docs](https://hpcugent.github.io/vsc_user_docs/HPC/Gent/).
 The following chapters explain how to accomplish basic tasks using the
 Dashboard.
 

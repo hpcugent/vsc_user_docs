@@ -275,13 +275,13 @@ private key admin access. For this "key pair injection[^1]" to work, the
 image that the instance is based on must contain the **cloud-init**
 package, or have in place another mechanism in place that will interact
 with the OpenStack metadata server to install the appropriate key. For
-general instructions on SSH keys, we refer to chapter 2 of our
-[introduction to HPC](https://hpcugent.github.io/vsc_user_docs).
+general instructions on SSH keys, we refer to section **Getting an HPC Account**
+of our [introduction to HPC](https://hpcugent.github.io/vsc_user_docs/HPC/Gent/).
 
 If you have generated a key pair with an external tool, you can import
 it into OpenStack. The key pair can be used for multiple instances that
 belong to a project. For more information, see section
-[import a key pair\]](#import-a-key-pair).
+[import a key pair]](#import-a-key-pair).
 
 The public keys from your VSC account are automatically available in
 your VSC Cloud projects, so you can immediately inject one of your
