@@ -5,7 +5,7 @@ image, is a single file that contains a virtual disk that has a bootable
 operating system installed on it. Images are used to create virtual
 machine instances within the cloud. The image files themselves are never
 modified, but you can copy the image into a persistent instance (see
-chapter 6.
+[launch instance](launch_instance.md#launch-and-manage-instances))
 
 As a user of the VSC cloud, you can upload and manage your own virtual
 machine images. For information about creating image files, see the

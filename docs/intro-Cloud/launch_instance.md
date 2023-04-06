@@ -238,7 +238,7 @@ When you run the above command, your SSH client may display warnings
 or error messages. The section Host Keys [Host Keys](#host-keys)
 explains the meaning of these messages and how you should deal with them.
 
-!! Info
+!!! Info
 
     The images we provide do not allow SSH logins for the root user.
     There is a default user instead, who can get administrative
