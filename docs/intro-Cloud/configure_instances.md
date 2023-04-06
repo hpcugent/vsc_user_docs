@@ -47,9 +47,9 @@ network if they need access to shared file systems (see chapter
 [shared file systems](shares.md#shared-file-systems-using-manila)).
 On the other hand \_vsc network
 is used to connect to or provide VSC services via VSC network and
-floating IPs. When an instance is created in
+floating or dedicated project's VSC IPs. When an instance is created in
 OpenStack and connected to the \_vm, \_nfs or \_vsc networks, it is automatically
-assigned a fixed IP address in that network. This IP address is
+assigned a fixed local IP address in that network. This IP address is
 permanently associated with the instance until the instance is
 terminated.
 
