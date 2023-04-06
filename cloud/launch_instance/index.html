@@ -933,13 +933,14 @@ Section 2.1.4 of the <abbr title="High Performance Computing, high performance c
 <p>When you run the above command, your <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> client may display warnings
 or error messages. The section Host Keys <a href="#host-keys">Host Keys</a>
 explains the meaning of these messages and how you should deal with them.</p>
-<p>!! Info</p>
-<pre><code>The images we provide do not allow SSH logins for the root user.
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The images we provide do not allow <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> logins for the root user.
 There is a default user instead, who can get administrative
-privileges using `sudo`. In our example, we have used the username
-`ubuntu` for Ubuntu images. Attempting to log in as root will return
-an error message with the proper user name.
-</code></pre>
+privileges using <code>sudo</code>. In our example, we have used the username
+<code>ubuntu</code> for Ubuntu images. Attempting to log in as root will return
+an error message with the proper user name.</p>
+</div>
 <h3 id="host-keys">Host keys<a class="headerlink" href="#host-keys" title="Permanent link">#</a></h3>
 <p>When connecting to instances using <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr>, you will sometimes see warnings
 or errors related to "host keys". This section briefly explains the
