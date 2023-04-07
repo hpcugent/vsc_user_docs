@@ -54,7 +54,7 @@ $ <b>ls -l dataset.txt</b>
 
 For more information about `chmod` or `setfacl`, see [the section on
 chmod in chapter 3 of the Linux intro
-manual](../../intro-Linux/manipulating_files_and_directories/#changing-permissions-chmod).
+manual](https://hpcugent.github.io/vsc_user_docs/linux-tutorial/manipulating_files_and_directories/#changing-permissions-chmod).
 <!-- % \section{I no longer work for \university, can I transfer my data to another researcher working at \university}
 % See https://github.com/hpcugent/vsc_user_docs/issues/230 -->
 
