@@ -898,9 +898,12 @@ and the host name from "ECDSA host key for" lines.</p>
 qsub: script is written in DOS/Windows text format
 </code></pre>
 
+<p>or</p>
+<pre><code>sbatch: error: Batch script contains DOS line breaks (\r\n)
+</code></pre>
+
 <p>It's probably because you transferred the files from a Windows computer.
-Please go to the section about <code>dos2unix</code> in <a href="../../intro-Linux/uploading_files/#dos2unix">chapter 5 of the intro to
-<abbr title="An operating system, similar to UNIX.">Linux</abbr></a> to fix this error.</p>
+See the <a href="https://hpcugent.github.io/vsc_user_docs/linux-tutorial/uploading_files/#dos2unix">section about <code>dos2unix</code> in <abbr title="An operating system, similar to UNIX.">Linux</abbr> tutorial</a> to fix this error.</p>
 <h2 id="warning-message-when-first-connecting-to-new-host">Warning message when first connecting to new host<a class="headerlink" href="#warning-message-when-first-connecting-to-new-host" title="Permanent link">#</a></h2>
 <pre><code><b>ssh vsc20167@login.hpc.uantwerpen.be</b>
 The authenticity of host login.hpc.uantwerpen.be (&lt;IP-adress&gt;) can't be established. 

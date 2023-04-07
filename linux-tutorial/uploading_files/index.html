@@ -264,6 +264,19 @@
     Uploading/downloading files
   </a>
   
+    <nav class="md-nav" aria-label="Uploading/downloading files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dos2unix" class="md-nav__link">
+    dos2unix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -378,6 +391,19 @@
     Uploading/downloading files
   </a>
   
+    <nav class="md-nav" aria-label="Uploading/downloading files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dos2unix" class="md-nav__link">
+    dos2unix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -427,6 +453,18 @@
 <p>To transfer files from and to the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>, see 
 <a href="..%2Fintro-HPC%2Fch_connecting.md#transfer-files-tofrom-the-hpc">the section about transferring files in chapter 3 of the
 <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> manual</a></p>
+<h3 id="dos2unix"><code>dos2unix</code><a class="headerlink" href="#dos2unix" title="Permanent link">#</a></h3>
+<p>After uploading files from Windows, you may experience some problems due to the difference
+in line endings between Windows (<em>carriage return</em> + <em>line feed</em>) and <abbr title="An operating system, similar to UNIX.">Linux</abbr> (<em>line feed</em> only),
+see also <a href="https://kuantingchen04.github.io/line-endings/">https://kuantingchen04.github.io/line-endings/</a>.</p>
+<p>For example, you may see an error when submitting a job script that was edited on Windows:</p>
+<div class="highlight"><pre><span></span><code>sbatch: error: Batch script contains DOS line breaks (\r\n)
+sbatch: error: instead of expected UNIX line breaks (\n).
+</code></pre></div>
+<p>To fix this problem, you should run the <code>dos2unix</code> command on the file:</p>
+<pre><code>$ <b>dos2unix filename</b>
+</code></pre>
+
 <h2 id="symlinks-for-datascratch">Symlinks for data/<abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr><a class="headerlink" href="#symlinks-for-datascratch" title="Permanent link">#</a></h2>
 <p>As we end up in the home directory when connecting, it would be
 convenient if we could access our data and VO storage. To facilitate

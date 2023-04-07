@@ -874,9 +874,12 @@ It is safe to ignore this <code>255</code> versus <code>256</code> difference, b
 qsub: script is written in DOS/Windows text format
 </code></pre>
 
+<p>or</p>
+<pre><code>sbatch: error: Batch script contains DOS line breaks (\r\n)
+</code></pre>
+
 <p>It's probably because you transferred the files from a Windows computer.
-Please go to the section about <code>dos2unix</code> in <a href="../../intro-Linux/uploading_files/#dos2unix">chapter 5 of the intro to
-<abbr title="An operating system, similar to UNIX.">Linux</abbr></a> to fix this error.</p>
+See the <a href="https://hpcugent.github.io/vsc_user_docs/linux-tutorial/uploading_files/#dos2unix">section about <code>dos2unix</code> in <abbr title="An operating system, similar to UNIX.">Linux</abbr> tutorial</a> to fix this error.</p>
 <h2 id="warning-message-when-first-connecting-to-new-host">Warning message when first connecting to new host<a class="headerlink" href="#warning-message-when-first-connecting-to-new-host" title="Permanent link">#</a></h2>
 <p>If it does, type <strong><em>yes</em></strong>. If it doesn't, please contact support: hpc@uantwerpen.be.</p>
 <p>The first time you make a connection to the <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr>, a Security
