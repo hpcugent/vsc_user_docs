@@ -8,14 +8,24 @@ To transfer files from and to the HPC, see
 [the section about transferring files in chapter 3 of the
 HPC manual](..%2Fintro-HPC%2Fch_connecting.md#transfer-files-tofrom-the-hpc)
 
-{% if OS == windows %}
 ### `dos2unix`
 [//]: # (subsec:dos2unix)
 
-After copying files it is advised to run
-<pre><code>$ <b>dos2unix filename</b></code></pre>
-as this will fix any problems with Windows/Unix conversion.
-{% endif %}
+After uploading files from Windows, you may experience some problems due to the difference
+in line endings between Windows (*carriage return* + *line feed*) and Linux (*line feed* only),
+see also <https://kuantingchen04.github.io/line-endings/>.
+
+For example, you may see an error when submitting a job script that was edited on Windows:
+
+```
+sbatch: error: Batch script contains DOS line breaks (\r\n)
+sbatch: error: instead of expected UNIX line breaks (\n).
+```
+
+To fix this problem, you should run the ``dos2unix`` command on the file:
+
+<pre><code>$ <b>dos2unix filename</b>
+</code></pre>
 
 ## Symlinks for data/scratch
 [//]: # (sec:symlink-for-data)

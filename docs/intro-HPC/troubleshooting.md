@@ -303,9 +303,13 @@ If you get errors like:
 qsub: script is written in DOS/Windows text format
 </code></pre>
 
+or
+
+<pre><code>sbatch: error: Batch script contains DOS line breaks (\r\n)
+</code></pre>
+
 It's probably because you transferred the files from a Windows computer.
-Please go to the section about `dos2unix` in [chapter 5 of the intro to
-Linux](../../intro-Linux/uploading_files/#dos2unix) to fix this error.
+See the [section about `dos2unix` in Linux tutorial](https://hpcugent.github.io/vsc_user_docs/linux-tutorial/uploading_files/#dos2unix) to fix this error.
 
 ## Warning message when first connecting to new host
 
