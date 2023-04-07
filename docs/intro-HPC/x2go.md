@@ -55,8 +55,9 @@ This is the easier way to setup X2Go, a direct connection to the login
 node.
 
 <center>
-<img src="/img/ch19-x2go-configuration-gent.png" width="400">
+![image](../img/ch19-x2go-configuration-gent.png)
 </center>
+
 
 1.  Include a session name. This will help you to identify the session
     if you have more than one, you can choose any name (in our example
@@ -123,7 +124,7 @@ want to set explicitly the login node to use. In this case you should
 include a few more options. Use the same **Option A** setup but with these changes:
 
 <center>
-<img src="/img/ch19-x2go-configuration-gent-proxy.png" width="400">
+![image](../img/ch19-x2go-configuration-gent-proxy.png)
 </center>
 
 1.  Include a session name. This will help you to identify the session
