@@ -1,108 +1,250 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>VSC User documentation overview</title>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>VSC User Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-	    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-	    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#welcome-to-the-vsc-user-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
 
-        <style>
-            td.firstup:first-letter { text-transform: uppercase; }
-            th.sort-header::-moz-selection { background:transparent; }
-            th.sort-header::selection      { background:transparent; }
-            th.sort-header { cursor:pointer; }
-            table th.sort-header:after {
-                content:'';
-                float:right;
-                margin-top:7px;
-                border-width:0 4px 4px;
-                border-style:solid;
-                border-color:#404040 transparent;
-                visibility:hidden;
-            }
-            table th.sort-header:hover:after {
-                visibility:visible;
-            }
-            table th.sort-up:after,
-            table th.sort-down:after,
-            table th.sort-down:hover:after {
-                visibility:visible;
-                opacity:0.4;
-            }
-            table th.sort-up:after {
-                border-bottom:none;
-                border-width:4px 4px 0;
-            }
-        </style>
-    </head>
-    <body>
-	<div class="container">
-	    <div class="page-header">
-		<h1>VSC User documentation overview</h1>
-		<p class="lead">Below you can find all VSC user documentation, per Operation System and University. Click on a row to download it.</p>
-	    </div>
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="VSC User Documentation" class="md-header__button md-logo" aria-label="VSC User Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
-	    <div class="panel panel-default">
-		<div class="panel-body">
-		    <table class="table table-hover sort" id="doctable">
-			<thead>
-			    <th class='sort-default'>Document</th>
-			    <th>University</th>
-			    <th>Operation System</th>
-			</thead>
-			<tbody>
-			</tbody>
-		</div>
-	    </div>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSC User Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Welcome to the VSC user documentation!
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
 
-	</div><!-- /.container -->
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <!-- source: https://github.com/tristen/tablesort -->
-        <script src="tablesort.min.js"></script>
-        <script type="text/javascript">
-            // filled in from the Makefile by deploy script, don't change them
-var sites = ["antwerpen","brussel","gent","leuven"];
-var sysos = ["linux","mac","windows"];
-var docsos = ["intro-HPC","intro-Linux"];
-var docsnoos = ["perfexpert"];
-var singledocs = ["intro-Cloud"];
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="VSC User Documentation" class="md-nav__button md-logo" aria-label="VSC User Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
-            $(document).ready(function() {
-                var mytable = $("#doctable")
-                tablebody = mytable.find('tbody');
+    </a>
+    VSC User Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
 
-                for(var i = 0; i < sites.length; i++) {
-                    for(var j = 0; j < sysos.length; j++) {
-                        for(var k = 0; k < docsos.length; k++) {
-                            tablebody.append("<tr data-href=\"pdf/" + docsos[k] + "-" + sysos[j] + "-" + sites[i] + ".pdf\"><td>"+ docsos[k] + "</td><td class=\"firstup\">" + sites[i] + "</td><td class=\"firstup\">" + sysos[j] + "</td></tr>");
-                        }
-                    }
-                    for(var k = 0; k < docsnoos.length; k++) {
-                        tablebody.append("<tr data-href=\"pdf/" + docsnoos[k] + "-" + sites[i] + ".pdf\"><td>"+ docsnoos[k] + "</td><td class=\"firstup\">" + sites[i] + "</td><td></td></tr>");
-                    }
-                }
-		for(var k = 0; k < singledocs.length; k++) {
-		    tablebody.append("<tr data data-href=\"pdf/" + singledocs[k] + ".pdf\"><td>"+ singledocs[k] + "</td><td class=\"firstup\"></td><td></td></tr>");
-		}
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Welcome to the VSC user documentation!
+      </a>
+      
+    </li>
+  
 
-                $("tr[data-href]").click(function () { 
-                    location.href = $(this).data('href');
-                });
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
 
-                var sort = new Tablesort(document.getElementById('doctable'));
-            });
-        </script>
-    </body>
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="welcome-to-the-vsc-user-documentation">Welcome to the VSC user documentation!</h1>
+<p>Click a link to continue:</p>
+<ul>
+<li><a href="https://hpcugent.github.io/vsc_user_docs/HPC/Gent"><abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent user manual</a><ul>
+<li><a href="https://hpcugent.github.io/vsc_user_docs/pdf">legacy PDF version of <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent user manual (deprecated)</a></li>
+</ul>
+</li>
+<li><a href="https://hpcugent.github.io/vsc_user_docs/linux-tutorial"><abbr title="An operating system, similar to UNIX.">Linux</abbr> tutorial</a></li>
+<li><a href="https://hpcugent.github.io/vsc_user_docs/cloud">VSC Tier-1 Cloud documentation</a></li>
+</ul>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
 </html>
