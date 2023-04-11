@@ -44,10 +44,11 @@ jobs:
 
           # check out gh-pages branch and replace 'HPC' subdirectory
           git checkout gh-pages
-          rm -rf HPC cloud linux-tutorial pdf
-          mv build/{HPC,cloud,linux-tutorial,pdf} .
+          # note: index.html is top-level landing page (requires 'assets')
+          rm -rf HPC cloud linux-tutorial pdf index.html assets
+          mv build/{HPC,cloud,linux-tutorial,pdf,index.html,assets} .
 
           # update gh-pages branch
-          git add HPC cloud linux-tutorial pdf
+          git add HPC cloud linux-tutorial pdf index.html assets
           git commit -m "deployed rendered docs (${GITHUB_SHA})"
           git push origin gh-pages
