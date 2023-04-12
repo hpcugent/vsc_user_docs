@@ -1,4 +1,4 @@
-site_name: VSC User Documentation - choose your site
+site_name: VSC User Documentation
 docs_dir: landing_page
 
 
@@ -15,7 +15,6 @@ plugins:
       macros:
         include_dir:
           - ./macros/
-          - ./macros/Antwerpen/Linux/
       exclude:
         - content/intro-HPC/*
 
@@ -44,4 +43,4 @@ theme:
 
 
 extra:
-  build_dir: build/HPC  # use relative path to projects root
+  build_dir: build
