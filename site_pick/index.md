@@ -2,6 +2,7 @@
 hide:
   - navigation
   - toc
+  - footer
 ---
 
 {% import 'site_pick.md' as sitepick %}

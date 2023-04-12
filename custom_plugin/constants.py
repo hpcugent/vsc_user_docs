@@ -3,6 +3,7 @@ OS_PICK_STR = """---
 hide:
   - navigation
   - toc
+  - footer
 ---
 
 # Please select your operating system:
