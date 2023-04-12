@@ -76,3 +76,8 @@ theme:
 
 extra:
   build_dir: build
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:cloud@vscentrum.be
+    - icon: fontawesome/brands/github
+      link: https://github.com/hpcugent/openstack-templates
