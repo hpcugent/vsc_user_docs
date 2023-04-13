@@ -260,7 +260,7 @@ Alternatively you can use the command that might shown by the warning under
 If the command is not shown, take the file from the "Offending ECDSA key in",
 and the host name from "ECDSA host key for" lines.
 
-After you've done that, you'll need to connect to the {{ hpc }} again. See [Warning message when first connecting to new host](../#warning-message-when-first-connecting-to-new-host) to verify the fingerprints.
+After you've done that, you'll need to connect to the {{ hpc }} again. See [Warning message when first connecting to new host](./#warning-message-when-first-connecting-to-new-host) to verify the fingerprints.
 
 {% else %}
 You will need to verify that the fingerprint shown in the dialog matches
