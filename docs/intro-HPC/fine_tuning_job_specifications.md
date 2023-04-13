@@ -242,7 +242,7 @@ htop
 <pre><code>$ <b>top</b>
 $ <b>htot</b></code></pre>
 
-### Setting the memory parameter
+### Setting the memory parameter {: #pbs_mem }
 
 Once you gathered a good idea of the overall memory consumption of your
 application, you can define it in your job script. It is wise to foresee
