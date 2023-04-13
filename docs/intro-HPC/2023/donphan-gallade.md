@@ -36,7 +36,7 @@ module swap cluster/donphan
 
 You can also start (interactive) sessions on `donphan` using the [HPC-UGent web portal](../web_portal.md).
 
-### User limits & overloading on `donphan`
+### User limits and oversubscription on `donphan`
 
 By imposing strict user limits and using oversubscription on this cluster,
 we ensure that anyone can quickly get a job with limited resources running, without having to wait in the queue.
