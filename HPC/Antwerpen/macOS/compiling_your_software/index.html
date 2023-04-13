@@ -751,7 +751,7 @@ are regularly used in the scientific community, are also pre-installed.</p>
 <h2 id="check-the-pre-installed-software-on-the-uantwerpen-hpc">Check the pre-installed software on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr><a class="headerlink" href="#check-the-pre-installed-software-on-the-uantwerpen-hpc" title="Permanent link">#</a></h2>
 <p>In order to check all the available <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> and their version numbers,
 which are pre-installed on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> enter:</p>
-<pre><code>$ <b>module av 2>\&1 | more</b>
+<pre><code>$ <b>module av 2>&1 | more</b>
 ------------- /apps/antwerpen/modules/hopper/2015a/all ------------
 ABINIT/7.10.2-intel-2015a
 ADF/2014.05
@@ -766,7 +766,7 @@ bzip2/1.0.6-intel-2015a
 
 <p>Or when you want to check whether some specific software, some compiler
 or some application (e.g., LAMMPS) is installed on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.</p>
-<pre><code>$ <b>module av 2>\&1 | grep -i -e "LAMMPS"</b>
+<pre><code>$ <b>module av 2>&1 | grep -i -e "LAMMPS"</b>
 LAMMPS/9Dec14-intel-2015a
 LAMMPS/30Oct14-intel-2014a
 LAMMPS/5Sep14-intel-2014a

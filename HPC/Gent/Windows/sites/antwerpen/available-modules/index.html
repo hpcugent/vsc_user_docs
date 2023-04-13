@@ -783,7 +783,7 @@
 
   <h1>Available modules</h1>
 
-<pre><code>$ <b>module av 2>\&1 | more</b>
+<pre><code>$ <b>module av 2>&1 | more</b>
 ------------- /apps/antwerpen/modules/hopper/2015a/all ------------
 ABINIT/7.10.2-intel-2015a
 ADF/2014.05
@@ -798,7 +798,7 @@ bzip2/1.0.6-intel-2015a
 
 <p>Or when you want to check whether some specific software, some compiler
 or some application (e.g., LAMMPS) is installed on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.</p>
-<pre><code>$ <b>module av 2>\&1 | grep -i -e "LAMMPS"</b>
+<pre><code>$ <b>module av 2>&1 | grep -i -e "LAMMPS"</b>
 LAMMPS/9Dec14-intel-2015a
 LAMMPS/30Oct14-intel-2014a
 LAMMPS/5Sep14-intel-2014a
