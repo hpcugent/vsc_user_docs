@@ -260,7 +260,7 @@ Alternatively you can use the command that might shown by the warning under
 If the command is not shown, take the file from the "Offending ECDSA key in",
 and the host name from "ECDSA host key for" lines.
 
-After you've done that, you'll need to connect to the {{ hpc }} again. See [Warning message when first connecting to new host](./#warning-message-when-first-connecting-to-new-host) to verify the fingerprints.
+After you've done that, you'll need to connect to the {{ hpc }} again. See [Warning message when first connecting to new host](../#warning-message-when-first-connecting-to-new-host) to verify the fingerprints.
 
 {% else %}
 You will need to verify that the fingerprint shown in the dialog matches
@@ -375,7 +375,7 @@ you via the `ulimit -v` command *in your job script*.
 
 ### How do I specify the amount of memory I need?
 
-See [Generic resource requirements](./running_batch_jobs/#generic-resource-requirements) to set memory and other requirements, see [Specifying memory requirements](./fine_tuning_job_specifications/#specifying-memory-requirements) to finetune the amount of
+See [Generic resource requirements](../running_batch_jobs/#generic-resource-requirements) to set memory and other requirements, see [Specifying memory requirements](../fine_tuning_job_specifications/#specifying-memory-requirements) to finetune the amount of
 memory you request.
 <!-- % See issue #248 to fix Java. This is software specific.
 % See issue #196 to fix MATLAB. This is software specific. -->
@@ -418,13 +418,13 @@ If you don't understand the warning or error, contact the helpdesk at hpc@ugent.
 </code></pre>
 
 This is because there can only be one `cluster` module active at a time.
-The correct command is `module swap cluster/{{othercluster}}`. See also [Specifying the cluster on which to run](./running_batch_jobs/#specifying-the-cluster-on-which-to-run).
+The correct command is `module swap cluster/{{othercluster}}`. See also [Specifying the cluster on which to run](../running_batch_jobs/#specifying-the-cluster-on-which-to-run).
 {% endif %}
 
 {% if site == gent %}
 ## Running software that is incompatible with host
 
-When running software provided through modules (see [Modules](./running_batch_jobs/#modules)), you may run into
+When running software provided through modules (see [Modules](../running_batch_jobs/#modules)), you may run into
 errors like:
 
 <pre><code>$ <b>module swap cluster/kirlia</b>
@@ -456,7 +456,7 @@ nodes have a different CPU architecture, software loaded using modules
 might not work.
 
 If you want to test software on the login nodes, make sure the
-`cluster/{{defaultcluster}}` module is loaded (with `module swap cluster/{{defaultcluster}}`, see [Specifying the cluster on which to run](./running_batch_jobs/#specifying-the-cluster-on-which-to-run)), since
+`cluster/{{defaultcluster}}` module is loaded (with `module swap cluster/{{defaultcluster}}`, see [Specifying the cluster on which to run](../running_batch_jobs/#specifying-the-cluster-on-which-to-run)), since
 the login nodes and have the same CPU architecture.
 
 If modules are already loaded, and then we swap to a different cluster,
@@ -479,5 +479,5 @@ The following have been reloaded with a version change:
 
 This might result in the same problems as mentioned above. When swapping
 to a different cluster, you can run `module purge` to unload all modules
-to avoid problems (see [Purging all modules](./running_batch_jobs/#purging-all-modules)).
+to avoid problems (see [Purging all modules](../running_batch_jobs/#purging-all-modules)).
 {% endif %}
