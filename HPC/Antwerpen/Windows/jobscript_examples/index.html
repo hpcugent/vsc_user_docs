@@ -705,14 +705,14 @@ cp output.txt <span class="nv">$VSC_DATA</span>/output_<span class="si">${</span
 <ol>
 <li>
 <p>Using <code>#PBS</code> header lines, we specify the resource requirements for
-    the job, see <a href="ch_torque_options.md">Apendix B</a> for a list of these options.</p>
+    the job, see <a href="../torque_options/">Apendix B</a> for a list of these options.</p>
 </li>
 <li>
-<p>A module for <code>Python 3.6</code> is loaded, see also section <a href="ch_running_batch_jobs.md#modules">Modules</a>.</p>
+<p>A module for <code>Python 3.6</code> is loaded, see also section <a href="../running_batch_jobs/#modules">Modules</a>.</p>
 </li>
 <li>
 <p>We stage the data in: the file <code>input.txt</code> is copied into the
-    "working" directory, see chapter <a href="ch_running_jobs_with_input_output_data.md">Running jobs with input/output data</a>.</p>
+    "working" directory, see chapter <a href="../running_jobs_with_input_output_data/">Running jobs with input/output data</a>.</p>
 </li>
 <li>
 <p>The main part of the script runs a small Python program that counts
@@ -721,7 +721,7 @@ cp output.txt <span class="nv">$VSC_DATA</span>/output_<span class="si">${</span
 <li>
 <p>We stage the results out: the output file <code>output.txt</code> is copied
     from the "working directory" (<code>$TMPDIR</code>|) to a unique directory in
-    <code>$VSC_DATA</code>. For a list of possible storage locations, see subsection <a href="ch_running_jobs_with_input_output_data.md#pre-defined-user-directories"> Pre-defined user directories</a>.</p>
+    <code>$VSC_DATA</code>. For a list of possible storage locations, see subsection <a href="../running_jobs_with_input_output_data/#pre-defined-user-directories"> Pre-defined user directories</a>.</p>
 </li>
 </ol>
 <h2 id="multi-core-job">Multi-<abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> job<a class="headerlink" href="#multi-core-job" title="Permanent link">#</a></h2>

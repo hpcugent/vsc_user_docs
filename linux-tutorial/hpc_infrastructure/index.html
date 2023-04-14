@@ -451,17 +451,17 @@
 <h1 id="more-on-the-hpc-infrastructure">More on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> infrastructure<a class="headerlink" href="#more-on-the-hpc-infrastructure" title="Permanent link">#</a></h1>
 <h2 id="filesystems">Filesystems<a class="headerlink" href="#filesystems" title="Permanent link">#</a></h2>
 <p>Multiple different shared filesystems are available on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>
-infrastructure, each with their own purpose. See 
-<a href="../intro-HPC/ch_running_jobs_with_input_output_data.md#where-to-store-your-data-on-the-hpc">chapter <em>Running jobs with input/output data</em>, section <em>Where to store your data on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></em> of the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> manual</a> for 
-a list of available locations.</p>
+infrastructure, each with their own purpose. See section
+<a href="https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#where-to-store-your-data-on-the-hpc">Where to store your data on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></a>
+for a list of available locations.</p>
 <h3 id="vo-storage">VO storage<a class="headerlink" href="#vo-storage" title="Permanent link">#</a></h3>
-<p>If you are a member of a (non-default) virtual organisation (VO), see
-<a href="../intro-HPC/ch_running_jobs_with_input_output_data.md#virtual-organisations">Chapter <em>Running jobs with input/output data</em>, the section titled <em>Virtual Organisations</em></a>, 
+<p>If you are a member of a (non-default) virtual organisation (VO), see section
+<a href="https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#virtual-organisations">Virtual Organisations</a>,
 you have access to additional directories (with more quota) on the data and
 <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> filesystems, which you can <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr> with other members in the VO.</p>
 <h3 id="quota">Quota<a class="headerlink" href="#quota" title="Permanent link">#</a></h3>
-<p>Space is limited on the <abbr title="A group of compute nodes.">cluster</abbr>'s storage. To check your quota, see
-<a href="../intro-HPC/ch_running_jobs_with_input_output_data.md#pre-defined-quotas">Chapter <em>Running jobs with input/output data</em>, section titled <em>Pre-defined quota</em> of the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> manual</a>.</p>
+<p>Space is limited on the <abbr title="A group of compute nodes.">cluster</abbr>'s storage. To check your quota, see section
+<a href="https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#pre-defined-quotas">Pre-defined quota</a>.</p>
 <p>To figure out where your quota is being spent, the <code>du</code> (isk sage)
 command can come in useful:</p>
 <pre><code>$ <b>du -sh test</b>
@@ -497,11 +497,13 @@ data are stored, since that will:</p>
 <p><code>module load &lt;module name&gt;</code>: load a particular module</p>
 </li>
 </ol>
-<p>More information is available in <a href="../intro-HPC/ch_running_batch_jobs.md#modules">chapter <em>Running batch jobs</em> of the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> manual, section <em>Modules</em></a>.</p>
+<p>More information is available in section
+<a href="https://docs.hpc.ugent.be/running_batch_jobs/#modules">Modules</a>.</p>
 <h2 id="using-the-clusters">Using the clusters<a class="headerlink" href="#using-the-clusters" title="Permanent link">#</a></h2>
 <p>The use the clusters beyond the <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr>(s) which have limited resources, you
 should create job scripts and submit them to the clusters.</p>
-<p>Detailed information is available in <a href="../intro-HPC/ch_running_batch_jobs.md#defining-and-submitting-your-job">chapter <em>Running batch jobs</em> of the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> manual, section <em>Defining and submitting your job</em></a>.</p>
+<p>Detailed information is available in section
+<a href="https://docs.hpc.ugent.be/running_batch_jobs/#defining-and-submitting-your-job">submitting your job</a>.</p>
 <h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">#</a></h2>
 <p>Create and submit a job script that computes the sum of 1-100 using
 Python, and prints the numbers to a <em>unique</em> output file in
