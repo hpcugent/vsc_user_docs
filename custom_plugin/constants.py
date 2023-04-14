@@ -84,3 +84,25 @@ JS_SCROLL_STR = """
     )
 </script>
 """
+
+# loop over all
+#    <a class="headerlink" from text
+#    <a class="md-nav__link"> from index and TOC
+# strip the OS from the href of all of them if the localstorage has osneutral_links
+# set to something that evaluates to true
+JS_OS_NEUTRAL = """
+<script>
+    if (!! localStorage.getItem('osneutral_links')) {
+        const classes = ["md-button", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>
+"""

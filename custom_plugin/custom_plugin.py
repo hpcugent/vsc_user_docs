@@ -11,7 +11,7 @@ from mkdocs.structure.files import File, Files
 from mkdocs.structure.pages import Page
 from yaml import safe_load
 
-from constants import JS_SCROLL_STR, OS_PICK_BTN, OS_PICK_STR
+from constants import JS_SCROLL_STR, OS_PICK_BTN, OS_PICK_STR, JS_OS_NEUTRAL
 
 tmp_dir = tempfile.TemporaryDirectory().name
 
@@ -200,6 +200,8 @@ class UgentPlugin(BasePlugin):
         """
         if self.os_pick:
             output += JS_SCROLL_STR
+        else:
+            output += JS_OS_NEUTRAL
         return output
 
     def on_post_build(self, config: Config):
