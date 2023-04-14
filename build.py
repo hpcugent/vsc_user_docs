@@ -16,9 +16,11 @@ class BuildException(Exception):
         super().__init__(self.message)
 
     def __str__(self):
-        return f"""\nSubprocess stderr:\n{self.message}\nBuild process failed.
-        -> Cleaning up and exiting.\nTo ignore errors and finish all partial builds,
-        use option '--ignore-errors'.\n """
+        return f"""Subprocess stderr: {self.message}
+        Build process failed. -> Cleaning up and exiting.
+        To ignore errors and finish all partial builds,
+        use option '--ignore-errors'.
+        """
 
 
 def load_config(landing_page_yml):
@@ -40,11 +42,10 @@ def load_config(landing_page_yml):
 def run_build(args, subsite):
     for subsite_dir, subsite_yml in subsite.items():
         build_dir, config = load_config(subsite_yml)
-        os_search = re.search(r'^\w+OS_pick\.yml', subsite[subsite_dir])
-        if os_search:
-            cmd = f"mkdocs build -f {subsite_yml} -d {os.path.join(build_dir)}"
-        else:
-            cmd = f"mkdocs build -f {subsite_yml} -d {os.path.join(build_dir, subsite_dir)}"
+        mkdocs_dir = [build_dir]
+        if not subsite_yml.endswith('OS_pick.yml'):
+            mkdocs_dir.append(subsite_dir)
+        cmd = f"mkdocs build -f {subsite_yml} -d {os.path.join(*mkdocs_dir)}"
         print(f">> {cmd}")
         process = subprocess.run(cmd, shell=True, capture_output=True)
         if not args.ignore_errors and process.returncode != 0:
