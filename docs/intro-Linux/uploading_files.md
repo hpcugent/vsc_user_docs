@@ -5,8 +5,8 @@
 [//]: # (sec:uploading-files)
 
 To transfer files from and to the HPC, see 
-[the section about transferring files in chapter 3 of the
-HPC manual](..%2Fintro-HPC%2Fch_connecting.md#transfer-files-tofrom-the-hpc)
+[the section about transferring files of the
+HPC manual](https://docs.hpc.ugent.be/connecting/#transfer-files-tofrom-the-hpc)
 
 ### `dos2unix`
 [//]: # (subsec:dos2unix)
@@ -87,7 +87,7 @@ For example, to copy a folder with lots of CSV files:
 
 will copy the folder `testfolder` and its contents to `$VSC_DATA` on the
 , assuming the `data` symlink is present in your home directory, see 
-[section 4.2.](ch_uploading_files.md#symlinks-for-datascratch).
+[symlinks section](uploading_files.md#symlinks-for-datascratch).
 
 The `-r` flag means "recursively", the `-z` flag means that compression
 is enabled (this is especially handy when dealing with CSV files because

@@ -153,6 +153,6 @@ It is single method called `gen_content_from_macros()`
 
 #### Example
 See example scripts in folder [scripts](computational_macros%2Fscripts).
-See usage in file [ch_account.md](docs%2Fintro-HPC%2Fexamples%2FAntwerpen%2FLinux%2Fintro-HPC%2Fch_account.md).<br>
-Built page can be access only by knowing its location and that is: `<server_name>/Antwerpen/Linux/intro-HPC/examples/Antwerpen/Linux/intro-HPC/ch_account`
+See usage in file [account.md](docs%2Fintro-HPC%2Fexamples%2FAntwerpen%2FLinux%2Fintro-HPC%2Faccount.md).<br>
+Built page can be access only by knowing its location and that is: `<server_name>/Antwerpen/Linux/intro-HPC/examples/Antwerpen/Linux/intro-HPC/account`
 

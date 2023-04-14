@@ -162,7 +162,7 @@ by the so-called *umask* setting, and are by default:
 2.  read-write-execute permission for directories on user/group,
     read/execute-only for others (no write)
 
-See also [the chmod command](ch_manipulating_files_and_directories.md#changing-permissions---chmod--sec--chmod) 
+See also [the chmod command](manipulating_files_and_directories.md#changing-permissions---chmod--sec--chmod) 
 later in this manual.
 
 Finding files/directories: "find"

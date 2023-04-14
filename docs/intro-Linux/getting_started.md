@@ -5,7 +5,7 @@ Logging in
 ----------
 
 To get started with the HPC-UGent infrastructure, you need to obtain a
-VSC account, see [Chapter 2 of the HPC manual](..%2Fintro-HPC%2Fch_account.md).
+VSC account, see [HPC manual](https://docs.hpc.ugent.be/account/).
 **Keep in mind that you must keep your private key to yourself!**
 
 You can look at your public/private key pair as a lock and a key: you
@@ -14,7 +14,7 @@ can use your key to open the door and get access to the HPC
 infrastructure. **Anyone who has your key can use your VSC account!**
 
 Details on connecting to the HPC infrastructure are available in
-[Chapter 3 of the HPC manual](..%2Fintro-HPC%2Fch_connecting.md).
+[HPC manual connecting section](https://docs.hpc.ugent.be/connecting/).
 
 Getting help
 ------------
