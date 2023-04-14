@@ -1,10 +1,12 @@
 import argparse
 import os.path
+import os
 import shutil
 import subprocess
 from shutil import rmtree
 
 from yaml import safe_load
+from multiprocessing import Pool
 
 
 class BuildException(Exception):
@@ -34,18 +36,20 @@ def load_config(landing_page_yml):
 
     return build_dir, config
 
+def build_cmd(cmd):
+    print(f">> {cmd}")
+    process = subprocess.run(cmd, shell=True, capture_output=True)
+    if not args.ignore_errors and process.returncode != 0:
+        raise BuildException(f"{cmd} {process.stderr.decode('utf8')}")
+    if args.verbose and process.stdout:
+        print(f"{cmd} {process.stdout.decode('utf8')}")
 
 def run_build(args, subsite):
+    cmds = []
     for subsite_dir, subsite_yml in subsite.items():
         build_dir, config = load_config(subsite_yml)
-        cmd = f"mkdocs build -f {subsite_yml} -d {os.path.join(build_dir, subsite_dir)}"
-        print(f">> {cmd}")
-        process = subprocess.run(cmd, shell=True, capture_output=True)
-        if not args.ignore_errors and process.returncode != 0:
-            raise BuildException(process.stderr.decode("utf8"))
-        if args.verbose and process.stdout:
-            print(process.stdout.decode("utf8"))
-
+        cmds.append(f"mkdocs build -f {subsite_yml} -d {os.path.join(build_dir, subsite_dir)}")
+    return cmds
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Get args.")
@@ -84,21 +88,28 @@ if __name__ == "__main__":
 
     try:
         # Build landing page.
+        cmds = []
         if not args.skip_landing_page:
-            cmd = f"mkdocs build -f {landing_page_yml} -d" f"{os.path.join(build_dir)}"
-            print(f">> {cmd}")
-            subp = subprocess.run(cmd, shell=True, capture_output=True)
-            if not args.ignore_errors and subp.returncode != 0:
-                raise BuildException(subp.stderr.decode("utf8"))
-            if args.verbose and subp.stdout:
-                print(subp.stdout.decode("utf8"))
-            sites = set()
+            build_cmd(f"mkdocs build -f {landing_page_yml} -d {os.path.join(build_dir)}")
             for el in config.get("os_picks", None):
-                run_build(args, el)
+                cmds.extend(run_build(args, el))
         # Build documentation files.
         if not args.skip_docs:
             for el in config.get("docs", None):
-                run_build(args, el)
+                cmds.extend(run_build(args, el))
+
+        # Actual build
+        try:
+            procs = len(os.sched_getaffinity(0))
+        except:
+            procs = 4
+        print(procs)
+        with Pool(procs) as pool:
+            res = pool.map(build_cmd, cmds, 1)
+
+        #p = Process(target=build_cmd, args=(cmds,))
+        #p.start()
+        #p.join()
         # Fix styling for OS picking pages.
         if not args.skip_landing_page:
             assets = os.path.normpath(os.path.join(build_dir, "assets"))
