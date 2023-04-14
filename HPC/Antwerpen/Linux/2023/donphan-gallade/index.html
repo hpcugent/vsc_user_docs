@@ -1,0 +1,808 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>New Tier-2 clusters: `donphan` and `gallade` - VSC User Documentation - Antwerpen (Linux)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#new-tier-2-clusters-donphan-and-gallade" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="VSC User Documentation - Antwerpen (Linux)" class="md-header__button md-logo" aria-label="VSC User Documentation - Antwerpen (Linux)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSC User Documentation - Antwerpen (Linux)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              New Tier-2 clusters: `donphan` and `gallade`
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="VSC User Documentation - Antwerpen (Linux)" class="md-nav__button md-logo" aria-label="VSC User Documentation - Antwerpen (Linux)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    VSC User Documentation - Antwerpen (Linux)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
+        Introduction to HPC
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../account/" class="md-nav__link">
+        Getting an HPC Account
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connecting/" class="md-nav__link">
+        Connecting to the HPC infrastructure
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_batch_jobs/" class="md-nav__link">
+        Running batch jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_interactive_jobs/" class="md-nav__link">
+        Running interactive jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs_with_input_output_data/" class="md-nav__link">
+        Running jobs with input/output data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multi_core_jobs/" class="md-nav__link">
+        Multi core jobs/Parallel Computing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web_portal/" class="md-nav__link">
+        Using the HPC-UGent web portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xdmod/" class="md-nav__link">
+        XDMoD portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sites/hpc_policies/" class="md-nav__link">
+        HPC Policies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ/" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14">
+          Advanced topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced topics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fine_tuning_job_specifications/" class="md-nav__link">
+        Fine-tuning Job Specifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multi_job_submission/" class="md-nav__link">
+        Multi-job submission
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../compiling_your_software/" class="md-nav__link">
+        Compiling and testing your software on the HPC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../program_examples/" class="md-nav__link">
+        Program examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jobscript_examples/" class="md-nav__link">
+        Job script examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../best_practices/" class="md-nav__link">
+        Best Practices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_15" type="checkbox" id="__nav_15" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15">
+          Appendices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Appendices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_reference_guide/" class="md-nav__link">
+        Appendix A - HPC Quick Reference Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../torque_options/" class="md-nav__link">
+        Appendix B - TORQUE options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../useful_linux_commands/" class="md-nav__link">
+        Appendix C - Useful Linux Commands
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#donphan-debuginteractive-cluster" class="md-nav__link">
+    donphan: debug/interactive cluster
+  </a>
+  
+    <nav class="md-nav" aria-label="donphan: debug/interactive cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#differences-compared-to-slaking" class="md-nav__link">
+    Differences compared to slaking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-limits-and-oversubscription-on-donphan" class="md-nav__link">
+    User limits and oversubscription on donphan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-gpu-on-donphan-workernodes" class="md-nav__link">
+    Shared GPU on donphan workernodes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gallade-large-memory-cluster" class="md-nav__link">
+    gallade: large-memory cluster
+  </a>
+  
+    <nav class="md-nav" aria-label="gallade: large-memory cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#differences-compared-to-kirlia" class="md-nav__link">
+    Differences compared to kirlia
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="new-tier-2-clusters-donphan-and-gallade">New Tier-2 clusters: <code>donphan</code> and <code>gallade</code><a class="headerlink" href="#new-tier-2-clusters-donphan-and-gallade" title="Permanent link">#</a></h1>
+<p>In April 2023, two new clusters were added to the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent Tier-2 infrastructure: <code>donphan</code> and <code>gallade</code>.</p>
+<p>This page provides some important information regarding these clusters, and how they differ from the clusters
+they are replacing (<code>slaking</code> and <code>kirlia</code>, respectively).</p>
+<p>If you have any questions on using <code>donphan</code> or <code>gallade</code>, you can <a href="https://www.uantwerpen.be/en/research-facilities/calcua/support/">contact the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></a>.</p>
+<p>For software installation requests, please use the <a href="https://www.ugent.be/hpc/en/support/software-installation-request">request form</a>.</p>
+<hr />
+<h2 id="donphan-debuginteractive-cluster"><code>donphan</code>: debug/interactive <abbr title="A group of compute nodes.">cluster</abbr><a class="headerlink" href="#donphan-debuginteractive-cluster" title="Permanent link">#</a></h2>
+<p><code>donphan</code> is the new debug/interactive <abbr title="A group of compute nodes.">cluster</abbr>.</p>
+<p>It replaces <code>slaking</code>, which will be retired on <strong>Monday 22 May 2023</strong>.</p>
+<p>It is primarily intended for interactive use: interactive shell sessions, using GUI applications through the
+<a href="../../web_portal/"><abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent web portal</a>, etc.</p>
+<p>This <abbr title="A group of compute nodes.">cluster</abbr> consists of 12 workernodes, each with:</p>
+<ul>
+<li>2x 18-<abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> Intel Xeon Gold 6240 (Cascade Lake @ 2.6 GHz) <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>;</li>
+<li>one <em>shared</em> NVIDIA Ampere A2 GPU (16GB GPU <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>)</li>
+<li>~738 GiB of RAM <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>;</li>
+<li>1.6TB NVME local disk;</li>
+<li>HDR-100 <abbr title="A high speed switched fabric computer network communications link used in HPC.">InfiniBand</abbr> interconnect;</li>
+<li>RHEL8 as operating system;</li>
+</ul>
+<p>To start using this <abbr title="A group of compute nodes.">cluster</abbr> from a terminal session, first run:
+<div class="highlight"><pre><span></span><code>module swap cluster/donphan
+</code></pre></div></p>
+<p>You can also start (interactive) sessions on <code>donphan</code> using the <a href="../../web_portal/"><abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent web portal</a>.</p>
+<h3 id="differences-compared-to-slaking">Differences compared to <code>slaking</code><a class="headerlink" href="#differences-compared-to-slaking" title="Permanent link">#</a></h3>
+<h4 id="cpus">CPUs<a class="headerlink" href="#cpus" title="Permanent link">#</a></h4>
+<p>The most important difference between <code>donphan</code> and <code>slaking</code> workernodes is in the CPUs:
+while <code>slaking</code> workernodes featured <em>Intel Haswell</em> CPUs, which support SSE*, AVX, and AVX2 vector instructions,
+<code>donphan</code> features <em>Intel Cascade Lake</em> CPUs, which also support AVX-512 instructions, on top of SSE*, AVX, and AVX2.</p>
+<p>Although software that was built on a <code>slaking</code> workernode with compiler options that enable architecture-specific
+optimizations (like GCC's <code>-march=native</code>, or Intel compiler's <code>-xHost</code>) should still run on
+a <code>donphan</code> workernode, it is recommended to recompile the software to benefit from the support for
+AVX-512 vector instructions.</p>
+<h4 id="cluster-size">Cluster size<a class="headerlink" href="#cluster-size" title="Permanent link">#</a></h4>
+<p>The <code>donphan</code> <abbr title="A group of compute nodes.">cluster</abbr> is significantly bigger than <code>slaking</code>, both in terms of number of workernodes and
+number of cores per workernode, and hence the potential performance impact of oversubscribed cores (see below)
+is less likely to occur in practice.</p>
+<h3 id="user-limits-and-oversubscription-on-donphan">User limits and oversubscription on <code>donphan</code><a class="headerlink" href="#user-limits-and-oversubscription-on-donphan" title="Permanent link">#</a></h3>
+<p>By imposing strict user limits and using oversubscription on this <abbr title="A group of compute nodes.">cluster</abbr>,
+we ensure that anyone can get a job running without having to wait in the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr>, albeit with limited resources.</p>
+<p>The user limits for <code>donphan</code> include:
+* max. 5 jobs in <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr>;
+* max. 3 jobs running;
+* max. of 8 cores in total for running jobs;
+* max. 27GB of <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> in total for running jobs;</p>
+<p>The job scheduler is configured with to allow <em>oversubscription</em> of the available cores,
+which means that jobs will continue to start even if all cores are already occupied by running jobs.
+While this prevents waiting time in the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr>, it does imply that performance will degrade when all cores are occupied
+and additional jobs continue to start running.</p>
+<h3 id="shared-gpu-on-donphan-workernodes">Shared GPU on <code>donphan</code> workernodes<a class="headerlink" href="#shared-gpu-on-donphan-workernodes" title="Permanent link">#</a></h3>
+<p>Each <code>donphan</code> workernode includes a single NVIDIA A2 GPU that can be used for light compute workloads,
+and to accelerate certain graphical tasks.</p>
+<p>This GPU is <em>shared</em> across all jobs running on the workernode, and does not need to be requested explicitly
+(it is always available, similar to the local disk of the workernode).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Due to the shared nature of this GPU, you should assume that any data that is loaded in the GPU <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>
+could potentially be accessed by other users, even after your processes have completed.</p>
+<p>There are no strong security guarantees regarding data protection when using this shared GPU!</p>
+</div>
+<hr />
+<h2 id="gallade-large-memory-cluster"><code>gallade</code>: large-<abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> <abbr title="A group of compute nodes.">cluster</abbr><a class="headerlink" href="#gallade-large-memory-cluster" title="Permanent link">#</a></h2>
+<p><code>gallade</code> is the new large-<abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> <abbr title="A group of compute nodes.">cluster</abbr>.</p>
+<p>It replaces <code>kirlia</code>, which will be retired on <strong>Monday 22 May 2023</strong>.</p>
+<p>This <abbr title="A group of compute nodes.">cluster</abbr> consists of 12 workernodes, each with:</p>
+<ul>
+<li>2x 64-<abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> AMD EPYC 7773X (Milan-X @ 2.2 GHz) <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>;</li>
+<li>~940 GiB of RAM <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>;</li>
+<li>1.5TB NVME local disk;</li>
+<li>HDR-100 <abbr title="A high speed switched fabric computer network communications link used in HPC.">InfiniBand</abbr> interconnect;</li>
+<li>RHEL8 as operating system;</li>
+</ul>
+<p>To start using this <abbr title="A group of compute nodes.">cluster</abbr> from a terminal session, first run:
+<div class="highlight"><pre><span></span><code>module swap cluster/gallade
+</code></pre></div></p>
+<p>You can also start (interactive) sessions on <code>gallade</code> using the <a href="../../web_portal/"><abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent web portal</a>.</p>
+<h3 id="differences-compared-to-kirlia">Differences compared to <code>kirlia</code><a class="headerlink" href="#differences-compared-to-kirlia" title="Permanent link">#</a></h3>
+<h4 id="cpus_1">CPUs<a class="headerlink" href="#cpus_1" title="Permanent link">#</a></h4>
+<p>The most important difference between <code>gallade</code> and <code>kirlia</code> workernodes is in the CPUs:
+while <code>kirlia</code> workernodes featured <em>Intel Cascade Lake</em> CPUs, which support vector AVX-512 instructions
+(next to SSE*, AVX, and AVX2), <code>gallade</code> features <em>AMD Milan-X</em> CPUs, which implement the <em>Zen3 microarchitecture</em>
+and hence do <em>not</em> support AVX-512 instructions (but do support SSE*, AVX, and AVX2).</p>
+<p>As a result, software that was built on a <code>kirlia</code> workernode with compiler options that enable architecture-specific
+optimizations (like GCC's <code>-march=native</code>, or Intel compiler's <code>-xHost</code>) may not work anymore on
+a <code>gallade</code> workernode, and will produce <code>Illegal instruction</code> errors.</p>
+<p>Therefore, you may need to recompile software in order to use it on <code>gallade</code>.
+Even if software built on <code>kirlia</code> does still run on <code>gallade</code>, it is strongly recommended to recompile it anyway,
+since there may be signficant peformance benefits.</p>
+<h4 id="memory-per-core">Memory per <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr><a class="headerlink" href="#memory-per-core" title="Permanent link">#</a></h4>
+<p>Although <code>gallade</code> workernodes have signficantly more RAM <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> (~940 GiB) than <code>kirlia</code> workernodes had (~738 GiB),
+the average amount of <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> per <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> is significantly lower on <code>gallade</code> than it was on <code>kirlia</code>, because
+a <code>gallade</code> workernode has 128 cores (so ~7.3 GiB per <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> on average), while a <code>kirlia</code> workernode had only 36 cores
+(so ~20.5 GiB per <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> on average).</p>
+<p>It is important to take this aspect into account when submitting jobs to <code>gallade</code>, especially when requesting
+all cores via <code>ppn=all</code>. You may need to explictly request more <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> (see also <a href="../../fine_tuning_job_specifications#pbs_mem">here</a>).</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.expand", "navigation.tracking", "toc.follow", "navigation.sections", "navigation.instant", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
