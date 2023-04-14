@@ -90,6 +90,7 @@ if __name__ == "__main__":
         # Build landing page.
         cmds = []
         if not args.skip_landing_page:
+            # don't do cmds.append, this one needs to run first
             build_cmd(f"mkdocs build -f {landing_page_yml} -d {os.path.join(build_dir)}")
             for el in config.get("os_picks", None):
                 cmds.extend(run_build(args, el))
@@ -103,13 +104,10 @@ if __name__ == "__main__":
             procs = len(os.sched_getaffinity(0))
         except:
             procs = 4
-        print(procs)
+
         with Pool(procs) as pool:
             res = pool.map(build_cmd, cmds, 1)
 
-        #p = Process(target=build_cmd, args=(cmds,))
-        #p.start()
-        #p.join()
         # Fix styling for OS picking pages.
         if not args.skip_landing_page:
             assets = os.path.normpath(os.path.join(build_dir, "assets"))
