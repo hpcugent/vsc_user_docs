@@ -2,21 +2,21 @@
 ## Filesystems
 
 Multiple different shared filesystems are available on the HPC
-infrastructure, each with their own purpose. See 
-[chapter *Running jobs with input/output data*, section *Where to store your data on the {{hpc}}* of the HPC manual](../intro-HPC/ch_running_jobs_with_input_output_data.md#where-to-store-your-data-on-the-hpc) for 
-a list of available locations.
+infrastructure, each with their own purpose. See section
+[Where to store your data on the {{hpc}}](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#where-to-store-your-data-on-the-hpc)
+for a list of available locations.
 
 {% if site==gent %}
 ### VO storage
-If you are a member of a (non-default) virtual organisation (VO), see
-[Chapter *Running jobs with input/output data*, the section titled *Virtual Organisations*](../intro-HPC/ch_running_jobs_with_input_output_data.md#virtual-organisations), 
+If you are a member of a (non-default) virtual organisation (VO), see section
+[Virtual Organisations](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#virtual-organisations),
 you have access to additional directories (with more quota) on the data and
 scratch filesystems, which you can share with other members in the VO.
 {% endif %}
 
 ### Quota
-Space is limited on the cluster's storage. To check your quota, see
-[Chapter *Running jobs with input/output data*, section titled *Pre-defined quota* of the HPC manual](../intro-HPC/ch_running_jobs_with_input_output_data.md#pre-defined-quotas).
+Space is limited on the cluster's storage. To check your quota, see section
+[Pre-defined quota](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#pre-defined-quotas).
 
 To figure out where your quota is being spent, the `du` (isk sage)
 command can come in useful:
@@ -47,13 +47,15 @@ The most commonly used commands are:
 
 4.  `module load <module name>`: load a particular module
 
-More information is available in [chapter *Running batch jobs* of the HPC manual, section *Modules*](../intro-HPC/ch_running_batch_jobs.md#modules).
+More information is available in section
+[Modules](https://docs.hpc.ugent.be/running_batch_jobs/#modules).
 
 ## Using the clusters
 The use the clusters beyond the login node(s) which have limited resources, you
 should create job scripts and submit them to the clusters.
 
-Detailed information is available in [chapter *Running batch jobs* of the HPC manual, section *Defining and submitting your job*](../intro-HPC/ch_running_batch_jobs.md#defining-and-submitting-your-job).
+Detailed information is available in section
+[submitting your job](https://docs.hpc.ugent.be/running_batch_jobs/#defining-and-submitting-your-job).
 
 ## Exercises
 

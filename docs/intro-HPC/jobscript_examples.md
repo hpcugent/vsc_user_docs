@@ -11,19 +11,19 @@ Here's an example of a single-core job script:
 
 
 1.  Using `#PBS` header lines, we specify the resource requirements for
-    the job, see [Apendix B](ch_torque_options.md) for a list of these options.
+    the job, see [Apendix B](torque_options.md) for a list of these options.
 
-2.  A module for `Python 3.6` is loaded, see also section [Modules](ch_running_batch_jobs.md#modules).
+2.  A module for `Python 3.6` is loaded, see also section [Modules](running_batch_jobs.md#modules).
 
 3.  We stage the data in: the file `input.txt` is copied into the
-    "working" directory, see chapter [Running jobs with input/output data](ch_running_jobs_with_input_output_data.md).
+    "working" directory, see chapter [Running jobs with input/output data](running_jobs_with_input_output_data.md).
 
 4.  The main part of the script runs a small Python program that counts
     the number of characters in the provided input file `input.txt`.
 
 5.  We stage the results out: the output file `output.txt` is copied
     from the "working directory" (`$TMPDIR`|) to a unique directory in
-    `$VSC_DATA`. For a list of possible storage locations, see subsection [ Pre-defined user directories](ch_running_jobs_with_input_output_data.md#pre-defined-user-directories).
+    `$VSC_DATA`. For a list of possible storage locations, see subsection [ Pre-defined user directories](running_jobs_with_input_output_data.md#pre-defined-user-directories).
 
 ## Multi-core job
 

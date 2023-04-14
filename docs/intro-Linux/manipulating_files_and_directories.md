@@ -113,7 +113,7 @@ The permission types are:
 Any time you run `ls -l` you'll see a familiar line of `-rwx------` or
 similar combination of the letters `r`, `w`, `x` and `-` (dashes). These
 are the permissions for the file or directory. (See also the 
-[previous section on permissions](ch_navigating.md#permissions))
+[previous section on permissions](navigating.md#permissions))
 <pre><code>$ <b>ls -l</b>
 total 1
 -rw-r--r--. 1 vsc40000 mygroup 4283648 Apr 12 15:13 articleTable.csv

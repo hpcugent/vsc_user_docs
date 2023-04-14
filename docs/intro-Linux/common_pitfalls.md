@@ -82,7 +82,7 @@ Or you can get errors like:
 qsub: script is written in DOS/Windows text format
 </code></pre>
 
-See section [dos2unix](ch_uploading_files.md#dos2unix) to fix these errors with `dos2unix`.
+See section [dos2unix](uploading_files.md#dos2unix) to fix these errors with `dos2unix`.
 
 {% endif %}
 
