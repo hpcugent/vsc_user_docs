@@ -16,10 +16,11 @@ class BuildException(Exception):
         super().__init__(self.message)
 
     def __str__(self):
-        return f"""Subprocess stderr: {self.message}
+        return f"""
+        Subprocess stderr:
+        {self.message}
         Build process failed. -> Cleaning up and exiting.
-        To ignore errors and finish all partial builds,
-        use option '--ignore-errors'.
+        To ignore errors and finish all partial builds, use option '--ignore-errors'.
         """
 
 
