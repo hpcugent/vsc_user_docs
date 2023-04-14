@@ -20,7 +20,18 @@ Pdf versions can be found here: https://www.ugent.be/hpc/en/support/documentatio
 
 There are different variants for each VSC site and for each operating system.
 
-## Requirements
+## Build
+
+You can use the `build.sh` wrapper script to take of the steps below,
+all options including `--help` are passed to the `build.py` tool.
+
+Using `INSTALLDEPS=1 build.sh ...` will first install the dependencies in a subdir `pypkgs`,
+and then build the docs. (You typicaly only need to run that once, unless some of the dependencies are updated).
+
+Using `WEBSERVER=1 build.sh ...`, you will first build the docs, and then start a local webserver
+that provides the docs (and if supported by the OS, open a new browser tab with the page loaded).
+
+### Dependencies
 
 **Python version 3.6 and greater is required.**
 
@@ -41,25 +52,7 @@ Install computational macros - Pyton macros:
 python -m pip install -e computational_macros
 ```
 
-
-## Configuration
-
-Every site has 3 configuration yamls. One for each OS. Naming convention is like this:
-[mkdocs_Antwerpen_Linux.yml](mkdocs_Antwerpen_Linux.yml).
-
-Common constants are defined in [constants.yml](constants.yml).
-
-Configuration for OS picker utility is defined in config files with naming convention
-like: [mkdocs_Antwerpen_OS_pick.yml](mkdocs_Antwerpen_OS_pick.yml).
-
-Configuration for landing page is defined in [mkdocs_landing_page.yml](mkdocs_landing_page.yml).
-
-Configuration for documentation building script [build.py](build.py) is in [build_config.yml](build_config.yml).
-
-When editing content, only specific site-OS yaml could be affected.
-When adding or removing new site or OS except for site-OS yamls also other yamls are affected.
-
-## Build
+### Build
 
 Usage:
 
@@ -70,7 +63,7 @@ python build.py [options]
 Options:
 
 ```text
--l, --skip-docs           Build only landing page. Skip building documentation pages. 
+-l, --skip-docs           Build only landing page. Skip building documentation pages.
 -d, --skip-landing-page   Build only documentation pages. Skip building landing page.
 --ignore-errors           Ignore errors in partial mkdocs builds and continue with build process.
 -v                        Enable verbosity.
@@ -89,7 +82,7 @@ python build.py
 In directory `./build/` there will be built landing page called HPC for prettier url and site-OS hierarchy.
 According to config, there will be folder structure with documentation content.
 
-## Run website locally
+### Run website locally
 
 Move to root directory of your static website:
 
@@ -104,6 +97,24 @@ python -m http.server --cgi 8000
 ```
 
 Visit `localhost:8000` and start looking around your documentation.
+
+
+## Configuration
+
+Every site has 3 configuration yamls. One for each OS. Naming convention is like this:
+[mkdocs_Antwerpen_Linux.yml](mkdocs_Antwerpen_Linux.yml).
+
+Common constants are defined in [constants.yml](constants.yml).
+
+Configuration for OS picker utility is defined in config files with naming convention
+like: [mkdocs_Antwerpen_OS_pick.yml](mkdocs_Antwerpen_OS_pick.yml).
+
+Configuration for landing page is defined in [mkdocs_landing_page.yml](mkdocs_landing_page.yml).
+
+Configuration for documentation building script [build.py](build.py) is in [build_config.yml](build_config.yml).
+
+When editing content, only specific site-OS yaml could be affected.
+When adding or removing new site or OS except for site-OS yamls also other yamls are affected.
 
 ## Add new OS
 You might want to add a new OS or divide Linux to some distros. You need to follow these steps:
@@ -136,15 +147,15 @@ You can write Python script and use the output as content in the markdown.
 This feature is implemented as variable injection. That brings some specific steps to follow.
 The restrictions or rules are valid for current version and can vary in the future.
 1. All scripts are placed in module [computational_macros](computational_macros) in package [scripts](computational_macros%2Fscripts).
-2. Each script should contain exactly one method with the same name as the file. (Of course 
+2. Each script should contain exactly one method with the same name as the file. (Of course
    without the `.py` file extension.)
-3. The method should return string object with desired output. This will be stored in the variable 
+3. The method should return string object with desired output. This will be stored in the variable
    with again the same name. **You have to consider markdown and HTML formatting!**
-4. Each script is automatically loaded, so you may want to add some prefix to prevent 
+4. Each script is automatically loaded, so you may want to add some prefix to prevent
    existing variables conflicts, respectively overriding.
 
 You can return anything from Python macro, but it should make sense in context of mkdocs usage.
-For example, you can generate some JavaScript code which will provide some interactive stuff in 
+For example, you can generate some JavaScript code which will provide some interactive stuff in
 target document page.
 
 #### Implementation
@@ -153,6 +164,7 @@ It is single method called `gen_content_from_macros()`
 
 #### Example
 See example scripts in folder [scripts](computational_macros%2Fscripts).
+
 See usage in file [account.md](docs%2Fintro-HPC%2Fexamples%2FAntwerpen%2FLinux%2Fintro-HPC%2Faccount.md).<br>
 Built page can be access only by knowing its location and that is: `<server_name>/Antwerpen/Linux/intro-HPC/examples/Antwerpen/Linux/intro-HPC/account`
 
