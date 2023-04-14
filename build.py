@@ -2,7 +2,6 @@ import argparse
 import os.path
 import shutil
 import subprocess
-import re
 from shutil import rmtree
 
 from yaml import safe_load
