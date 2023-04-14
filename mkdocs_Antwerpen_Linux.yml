@@ -44,7 +44,6 @@ plugins:
       macros:
         include_dir:
           - ./macros/
-          - ./macros/Antwerpen/Linux/
       exclude:
         - content/intro-HPC/*
 
