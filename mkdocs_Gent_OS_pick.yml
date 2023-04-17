@@ -1,5 +1,5 @@
 site_name: VSC User Documentation - Gent
-docs_dir: os_pick
+docs_dir: os_pick/docs
 
 plugins:
   - ugent:
@@ -49,6 +49,7 @@ theme:
   features:
     - search.suggest
     - search.highlight
+  custom_dir: os_pick/overrides
 
 extra:
   build_dir: build/HPC/Gent

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+<script>
+    function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+        // if the item doesn't exist, return null
+        if (!itemStr) {
+            return null
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+        // compare the expiry time of the item with the current time
+        if (now.getTime() > item.expiry) {
+            // If the item is expired, delete the item from storage
+            // and return null
+            localStorage.removeItem(key)
+            return null
+        }
+        return item.value
+    }
+
+    const store_OS = getWithExpiry("select_OS");
+    if (store_OS !== null && window.location.hash.substring(1) != 'force_select_OS') {
+        // there is no need to escape the store_OS[0], it's not seen as a regexp pattern?
+        const href = window.location.href.replace(store_OS[0], store_OS[0] + '/' + store_OS[1])
+        console.log("store_OS", store_OS, "orig window href", window.location.href, "new href", href)
+        window.location.href = href
+    }
+
+</script>
+{% endblock %}
