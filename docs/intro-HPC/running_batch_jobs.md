@@ -108,7 +108,7 @@ not always immediately clear which modules can be loaded safely together
 if you need to combine multiple programs in a single job to get your
 work done.
 
-Therefore the VSC has defined so-called **. A toolchain contains a C/C++
+Therefore the VSC has defined so-called **toolchains**. A toolchain contains a C/C++
 and Fortran compiler, a MPI library and some basic math libraries for
 (dense matrix) linear algebra and FFT. Two toolchains are defined on
 most VSC systems. One, the `intel` toolchain, consists of the Intel
