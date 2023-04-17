@@ -20,6 +20,11 @@ Pdf versions can be found here: https://www.ugent.be/hpc/en/support/documentatio
 
 There are different variants for each VSC site and for each operating system.
 
+## OS selection
+
+The OS selection is stored in localStorage and kept for , and can be bypassed by going to any index pages (i.e. one without the OS),
+and adding the hash `#force_select_OS` (case-sensitive).
+
 ## Build
 
 You can use the `build.sh` wrapper script to take of the steps below,

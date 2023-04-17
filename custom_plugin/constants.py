@@ -19,28 +19,6 @@ OS_PICK_BTN = """
 # localStorage with expiration is from https://www.sohamkamani.com/javascript/localstorage-with-ttl-expiry/
 JS_SCROLL_STR = """
 <script>
-
-    function setWithExpiry(key, value, ttl) {
-        const now = new Date()
-
-        // `item` is an object which contains the original value
-        // as well as the time when it's supposed to expire
-        const item = {
-            value: value,
-            expiry: now.getTime() + ttl,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-    }
-
-    function match_OS(href) {
-        // absolute url
-        const osmatch = href.match(/\/(Linux|macOS|Windows)\//i)
-        if (osmatch !== null) {
-            return osmatch[1]
-        }
-        return null
-    }
-
     var buttons = Array.from(document.getElementsByClassName("md-button"))
     buttons.forEach(
         function (btn) {
@@ -48,7 +26,7 @@ JS_SCROLL_STR = """
                 const osmatch = this.href.match(/^(.*?)\/(Linux|macOS|Windows)\//i)
                 if (osmatch !== null) {
                     console.log("match this button OS onclick", osmatch)
-                    setWithExpiry("select_OS", [osmatch[1], osmatch[2]], 12*3600*1000)  // TTL in ms
+                    localStorage.setItem("select_OS", JSON.stringify([osmatch[1], osmatch[2]]))
                 }
                 const hash = window.location.hash.substring(1)
                 if (hash != 'force_select_OS') {
