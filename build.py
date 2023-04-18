@@ -110,7 +110,7 @@ def build_cmd(cmd):
     process = subprocess.run(cmd, shell=True, capture_output=True)
     if process.returncode != 0:
         raise BuildException(f"{cmd} {process.stderr.decode('utf8')}")
-    if args.verbose and process.stdout:
+    if args.verbose:
         print(f"{cmd} {process.stdout.decode('utf8')}")
 
 def build_pool(ops):
@@ -138,6 +138,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Get args.")
     parser.add_argument("--verbose", "-v", action="store_true", dest="verbose", help="Enable verbose logging.")
     parser.add_argument("--nostrict", "-n", action="store_true", dest="notstrict", help="Disable strict mkdocs build.")
+    parser.add_argument("--nocleanup", "-b", action="store_true", dest="nocleanup", help="Keep build on failure.")
 
     args = parser.parse_args()
 
@@ -178,5 +179,6 @@ if __name__ == "__main__":
             shutil.move(assets_old, assets)
 
     except BuildException as exc:
-        rmtree(build_dir, ignore_errors=True)
+        if not args.nocleanup:
+            rmtree(build_dir, ignore_errors=True)
         raise exc

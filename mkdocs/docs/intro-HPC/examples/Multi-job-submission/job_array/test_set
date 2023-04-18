@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Check if the output Directory exists
+if [ ! -d "./output" ] ; then
+  mkdir ./output
+fi
+
+#   Here you could do your calculations...
+echo "This is Job_array #" $1
+echo "Input File : " $3
+echo "Output File: " $5
+cat ./input/$3 | sed -e "s/input/output/g" | grep -v "Parameter" > ./output/$5
+echo "Calculations done, no results" >> ./output/$5
