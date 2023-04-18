@@ -11,16 +11,14 @@ plugins:
         - mkdocs/hpc_${site}_Windows.yml
   - macros:
       include_yaml:
-        - mkdocs/extra/constants.yml
-        - mkdocs/extra/${lsite}_extra.yml
+        - extra/constants.yml
+        - extra/${lsite}.yml
   - section-index
   - autorefs
   - exclude-search:
-      macros:
-        include_dir:
-          - ../macros
       exclude:
         - content/intro-HPC/*
+        - content/cloud/*
 
 
 markdown_extensions:

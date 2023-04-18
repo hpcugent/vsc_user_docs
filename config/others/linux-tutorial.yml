@@ -15,20 +15,16 @@ plugins:
   - ugent
   - macros:
       include_yaml:
-        - mkdocs/extra/constants.yml
-        - mkdocs/extra/gent_extra.yml
+        - extra/constants.yml
+        - extra/gent.yml
   - section-index
   - autorefs
   # - spellcheck
   # - mkdocs-nav-enhancements
   - exclude-search:
-      macros:
-        include_dir:
-          - ./macros/
-          - ./macros/Gent/Linux/
       exclude:
         - content/intro-HPC/*
-        - content/intro-Cloud/*
+        - content/cloud/*
 
 markdown_extensions:
   - admonition

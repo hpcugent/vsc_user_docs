@@ -12,11 +12,10 @@ plugins:
   # - spellcheck
   # - mkdocs-nav-enhancements
   - exclude-search:
-      macros:
-        include_dir:
-          - ./macros/
       exclude:
+        - content/cloud/*
         - content/intro-HPC/*
+        - content/intro-Linux/*
 
 markdown_extensions:
   - admonition

@@ -49,19 +49,16 @@ plugins:
       osneutrallinks: True
   - macros:
       include_yaml:
-        - mkdocs/extra/constants.yml
-        - mkdocs/extra/${lsite}_extra.yml
+        - extra/constants.yml
+        - extra/${lsite}.yml
   - section-index
   - autorefs
   # - spellcheck
   # - mkdocs-nav-enhancements
   - exclude-search:
-      macros:
-        include_dir:
-          - ./macros/
-          - ./macros/${site}/${os}/
       exclude:
         - content/intro-HPC/*
+        - content/cloud/*
 
 
 markdown_extensions:

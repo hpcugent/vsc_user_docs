@@ -14,7 +14,7 @@ export PATH=$DEPSDIR/bin:$PATH
 python3 build.py "$@"
 
 if [ "${WEBSERVER:-0}" -gt 0 ]; then
-    webbase=build/HPC
+    webbase=build
     if cd "$webbase"; then
         port=8000
         {
@@ -25,6 +25,7 @@ if [ "${WEBSERVER:-0}" -gt 0 ]; then
             else
                 echo "Go to http://localhost:$port"
             fi
+            echo "To have working legacy pdf links, also do a 'cp -a pdf build'"
         } &
         python -m http.server --cgi 8000
     else

@@ -86,15 +86,15 @@ var singledocs = ["intro-Cloud"];
                 for(var i = 0; i < sites.length; i++) {
                     for(var j = 0; j < sysos.length; j++) {
                         for(var k = 0; k < docsos.length; k++) {
-                            tablebody.append("<tr data-href=\"pdf/" + docsos[k] + "-" + sysos[j] + "-" + sites[i] + ".pdf\"><td>"+ docsos[k] + "</td><td class=\"firstup\">" + sites[i] + "</td><td class=\"firstup\">" + sysos[j] + "</td></tr>");
+                            tablebody.append("<tr data-href=\"./" + docsos[k] + "-" + sysos[j] + "-" + sites[i] + ".pdf\"><td>"+ docsos[k] + "</td><td class=\"firstup\">" + sites[i] + "</td><td class=\"firstup\">" + sysos[j] + "</td></tr>");
                         }
                     }
                     for(var k = 0; k < docsnoos.length; k++) {
-                        tablebody.append("<tr data-href=\"pdf/" + docsnoos[k] + "-" + sites[i] + ".pdf\"><td>"+ docsnoos[k] + "</td><td class=\"firstup\">" + sites[i] + "</td><td></td></tr>");
+                        tablebody.append("<tr data-href=\"./" + docsnoos[k] + "-" + sites[i] + ".pdf\"><td>"+ docsnoos[k] + "</td><td class=\"firstup\">" + sites[i] + "</td><td></td></tr>");
                     }
                 }
 		for(var k = 0; k < singledocs.length; k++) {
-		    tablebody.append("<tr data data-href=\"pdf/" + singledocs[k] + ".pdf\"><td>"+ singledocs[k] + "</td><td class=\"firstup\"></td><td></td></tr>");
+		    tablebody.append("<tr data data-href=\"./" + singledocs[k] + ".pdf\"><td>"+ singledocs[k] + "</td><td class=\"firstup\"></td><td></td></tr>");
 		}
 
                 $("tr[data-href]").click(function () { 

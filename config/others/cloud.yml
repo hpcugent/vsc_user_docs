@@ -21,15 +21,12 @@ plugins:
   - ugent
   - macros:
       include_yaml:
-        - mkdocs/extra/constants.yml
+        - extra/constants.yml
   - section-index
   - autorefs
   # - spellcheck
   # - mkdocs-nav-enhancements
   - exclude-search:
-      macros:
-        include_dir:
-          - ./macros/
       exclude:
         - content/intro-HPC/*
         - content/intro-Linux/*

@@ -7,8 +7,10 @@
         const store_OS = JSON.parse(store_OS_txt)
         // there is no need to escape the store_OS[0], it's not seen as a regexp pattern?
         const href = window.location.href.replace(store_OS[0], store_OS[0] + '/' + store_OS[1])
-        console.log("store_OS", store_OS, "orig window href", window.location.href, "new href", href)
-        window.location.href = href
+        if (href != window.location.href) {
+            console.log("store_OS", store_OS, "orig window href", window.location.href, "new href", href)
+            window.location.href = href
+        }
     }
 
 </script>

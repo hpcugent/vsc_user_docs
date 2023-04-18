@@ -92,7 +92,7 @@ According to config, there will be folder structure with documentation content.
 Move to root directory of your static website:
 
 ```shell
-cd build/HPC
+cd build
 ```
 
 Run simple HTTP server:
@@ -106,17 +106,21 @@ Visit `localhost:8000` and start looking around your documentation.
 
 ## Configuration
 
-Every site has 3 configuration yamls. One for each OS. Naming convention is like this:
-[mkdocs_Antwerpen_Linux.yml](mkdocs_Antwerpen_Linux.yml).
+All `.yml` files in the `mkdocs` are supposedly generated and removed if unknown.
 
-Common constants are defined in [constants.yml](constants.yml).
+Every site has 3 generated configuration yamls in `mkdocs` dir one for each site and OS combination.
+Template is in `config/templates` dir named [hpc.template](./config/templates/hpc.template).
+Naming convention of generated files is like this: [hpc_Antwerpen_Linux.yml](mkdocs/hpc_Antwerpen_Linux.yml).
 
-Configuration for OS picker utility is defined in config files with naming convention
-like: [mkdocs_Antwerpen_OS_pick.yml](mkdocs_Antwerpen_OS_pick.yml).
+Configuration for OS picker utility is generated in `mkdocs` dir one for each site.
+Template is in `config/templates` dir named [os_pick.template](./config/templates/os_pick.template).
+Naming convention of generated files is like: [os_pick_Antwerpen.yml](mkdocs/os_pick_Antwerpen.yml).
 
-Configuration for landing page is defined in [mkdocs_landing_page.yml](mkdocs_landing_page.yml).
+Common constants are defined in [constants.yml](mkdocs/extra/constants.yml).
 
-Configuration for documentation building script [build.py](build.py) is in [build_config.yml](build_config.yml).
+Configuration for landing page is defined in [landing_page.yml](config/others/landing_page.yml).
+
+Configuration for documentation building script [build.py](build.py) is in [build.yml](config/build.yml).
 
 When editing content, only specific site-OS yaml could be affected.
 When adding or removing new site or OS except for site-OS yamls also other yamls are affected.
@@ -124,22 +128,8 @@ When adding or removing new site or OS except for site-OS yamls also other yamls
 ## Add new OS
 You might want to add a new OS or divide Linux to some distros. You need to follow these steps:
 0. Let's pretend you want add Arch Linux distro to Gent site.
-1. Create new YAML config file e.g. `mkdocs_Gent_Arch.yml`. You can copy an existing config and edit it.
-2. Add `- Gent/Arch: mkdocs_Gent_Arch.yml` into [build_config.yml](build_config.yml)
-      ```yaml
-      docs:
-         ...
-         - Gent/Arch: mkdocs_Gent_Arch.yml
-      ```
-3. If you want to enable OS picking feature, then add new item `- mkdocs_Gent_Arch.yml` into [mkdocs_Gent_OS_pick.yml](mkdocs_Gent_OS_pick.yml)
-      ```yaml
-      plugins:
-         - ugent:
-             os_pick: True
-             yamls:
-               ...
-               - mkdocs_gent_Arch.yml
-      ```
+1. Add the OS in [build.yml](config/build.yml)
+
 In fact, this way you can add anything what you want. The build system will treat it as some OS.
 
 ## Macros
@@ -172,4 +162,3 @@ See example scripts in folder [scripts](computational_macros%2Fscripts).
 
 See usage in file [account.md](docs%2Fintro-HPC%2Fexamples%2FAntwerpen%2FLinux%2Fintro-HPC%2Faccount.md).<br>
 Built page can be access only by knowing its location and that is: `<server_name>/Antwerpen/Linux/intro-HPC/examples/Antwerpen/Linux/intro-HPC/account`
-
