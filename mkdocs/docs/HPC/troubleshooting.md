@@ -128,32 +128,32 @@ and include it in the email.
 2.  Single click on the saved configuration
 
     <center>
-    ![image](../img/831change01.png)
+    ![image](img/831change01.png)
     <center>
 
 3.  Then click ++"Load"++ button
 
     <center>
-    ![image](../img/831change02.png)
+    ![image](img/831change02.png)
     </center>
 
 4.  Expand SSH category (on the left panel) clicking on the "+" next
     to SSH
 
     <center>
-    ![image](../img/831change03.png)
+    ![image](img/831change03.png)
     </center>
 
 5.  Click on Auth under the SSH category
 
     <center>
-    ![image](../img/831change04.png)
+    ![image](img/831change04.png)
     </center>
 
 6.  On the right panel, click ++"Browse"++ button
 
     <center>
-    ![image](../img/831change05.png)
+    ![image](img/831change05.png)
     </center>
 
 7.  Then search your private key on your computer (with the extension
@@ -162,13 +162,13 @@ and include it in the email.
 8.  Go back to the top of category, and click Session
 
     <center>
-    ![image](../img/831change06.png)
+    ![image](img/831change06.png)
     </center>
 
 9.  On the right panel, click on ++"Save"++ button
 
     <center>
-    ![image](../img/831change07.png)
+    ![image](img/831change07.png)
     </center>
 
 ### Check whether your private key in PuTTY matches the public key on the accountpage
@@ -180,26 +180,26 @@ Follow the instructions in [Change PuTTY private key for a saved configuration](
     private key (push ++"Ctrl"++ + ++"c"++)
 
     <center>
-    ![image](../img/832check05.png)
+    ![image](img/832check05.png)
     </center>
 
 2.  Open PuTTYgen
 
     <center>
-    ![image](../img/832check06.png)
+    ![image](img/832check06.png)
     </center>
 
 3.  Enter menu item "File" and select "Load Private key"
 
     <center>
-    ![image](../img/832check07.png)
+    ![image](img/832check07.png)
     </center>
 
 4.  On the "Load private key" popup, click in the textbox next to
     "File name:", then paste the location of your private key (push ++"Ctrl"++ + ++"v"++), then click ++"Open"++
 
     <center>
-    ![image](../img/832check08.png)
+    ![image](img/832check08.png)
     </center>
 
 5.  Make sure that your Public key from the "Public key for pasting
@@ -209,7 +209,7 @@ Follow the instructions in [Change PuTTY private key for a saved configuration](
     there the "Public keys" section)
 
     <center>
-    ![image](../img/832check09.png)
+    ![image](img/832check09.png)
     </center>
 
 {% else %}
@@ -278,7 +278,7 @@ If it doesn't (like in the example) or you are in doubt, take a screenshot, pres
 {% include "../macros/sshedfingerprintnote.md" %}
 
 <center>
-![image](../img/putty_security_alert.jpg)
+![image](img/putty_security_alert.jpg)
 </center>
 
 {% if site == gent %}

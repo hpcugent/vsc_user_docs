@@ -55,7 +55,7 @@ This is the easier way to setup X2Go, a direct connection to the login
 node.
 
 <center>
-![image](../img/ch19-x2go-configuration-gent.png)
+![image](img/ch19-x2go-configuration-gent.png)
 </center>
 
 
@@ -77,7 +77,7 @@ node.
         browser.
 
         <center>
-        ![image](../img/ch19-x2go-ssh-key.png)
+        ![image](img/ch19-x2go-ssh-key.png)
         </center>
 {% if OS == (macos or linux) %}
     2.  You should look for your **private** SSH key generated in [Generating a public/private key pair](../account/#generating-a-publicprivate-key-pair). This file has
@@ -110,7 +110,7 @@ node.
 {% endif %}
 
         <center>
-        ![image](../img/ch19-x2go-configuration-xterm.png)
+        ![image](img/ch19-x2go-configuration-xterm.png)
         </center>
 
 1.  **[optional]:** Change the session icon.
@@ -124,7 +124,7 @@ want to set explicitly the login node to use. In this case you should
 include a few more options. Use the same **Option A** setup but with these changes:
 
 <center>
-![image](../img/ch19-x2go-configuration-gent-proxy.png)
+![image](img/ch19-x2go-configuration-gent-proxy.png)
 </center>
 
 1.  Include a session name. This will help you to identify the session
@@ -147,7 +147,7 @@ include a few more options. Use the same **Option A** setup but with these chang
         be set in both sections)
 
         <center>
-        ![image](../img/ch19-x2go-proxy-key.png)
+        ![image](img/ch19-x2go-proxy-key.png)
         </center>
 
     4.  Click the ++"OK"++ button after these changes.
@@ -162,7 +162,7 @@ want to suspend your session to continue working with it later just
 click on the "pause" icon.
 
 <center>
-![image](../img/ch19-x2go-pause.png)
+![image](img/ch19-x2go-pause.png)
 </center>
 
 X2Go will keep the session open for you (but only if the login node is
@@ -178,7 +178,7 @@ open a terminal and execute:
 <pre><code>$ <b>hostname</b>
 </code></pre>
 
-![image](../img/ch19-x2go-xterm.png)
+![image](img/ch19-x2go-xterm.png)
 
 This will give you the full login name (like "***{{loginhost}}***" but the hostname in your
 situation may be slightly different). You should set the same name to

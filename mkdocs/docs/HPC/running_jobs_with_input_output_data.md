@@ -827,7 +827,7 @@ files, you can use:
     You will be a member of the group shortly after the group moderator
     approves your request.
 
-![Joining a group.](../img/ch6-group-join.png)
+![Joining a group.](img/ch6-group-join.png)
 
 ### Creating a new group
 
@@ -841,7 +841,7 @@ files, you can use:
 
 4.  You will now be a member and moderator of your newly created group.
 
-![Creating a new group.](../img/ch6-group-new.png)
+![Creating a new group.](img/ch6-group-new.png)
 
 ### Managing a group
 
@@ -850,7 +850,7 @@ Group moderators can go to
 (see the image below). Moderators can invite and remove members. They can also promote
 other members to moderator and remove other moderators.
 
-![Creating a new group.](../img/ch6-group-edit.png)
+![Creating a new group.](img/ch6-group-edit.png)
 
 ### Inspecting groups
 
@@ -891,7 +891,7 @@ should be well-motivated).
 3.  After clicking the submit button, a message will be sent to the
     moderator of the VO, who will either approve or deny the request.
 
-![Joining a VO.](../img/ch6-VO-join.png)
+![Joining a VO.](img/ch6-VO-join.png)
 
 ### Creating a new VO
 
@@ -911,7 +911,7 @@ should be well-motivated).
 5.  If the request is approved, you will now be a member and moderator
     of your newly created VO.
 
-![Creating a new VO.](../img/ch6-VO-new.png)
+![Creating a new VO.](img/ch6-VO-new.png)
 
 ### Requesting more storage space
 
@@ -930,7 +930,7 @@ VO and its members.
 
 4.  An {{ hpc }} administrator will review your request and approve or deny it.
 
-![Requesting additional quota for the VO and its members.](../img/ch6-VO-request-additional-quota.png)
+![Requesting additional quota for the VO and its members.](img/ch6-VO-request-additional-quota.png)
 
 ### Setting per-member VO quota
 
@@ -953,7 +953,7 @@ users can use.
     10% of the space. So in total, 185% of the space has been assigned,
     but of course only 100% can actually be used.
 
-![Setting per-member quota.](../img/ch6-VO-per-member-storage.png)
+![Setting per-member quota.](img/ch6-VO-per-member-storage.png)
 
 ### VO directories
 

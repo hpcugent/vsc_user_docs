@@ -123,7 +123,7 @@ useful abstraction of concurrent execution. Multi-threading can also be
 applied to a single process to enable parallel execution on a
 multiprocessing system.
 
-![Image](../img/img0700.png)
+![Image](img/img0700.png)
 
 This advantage of a multithreaded program allows it to operate faster on
 computer systems that have multiple CPUs or across a cluster of machines
@@ -408,7 +408,7 @@ communication between the processes. This is shown in the following
 diagram:
 
 
-![Image](../img/img0701.png){ style="display: block; margin: 0 auto" }
+![Image](img/img0701.png){ style="display: block; margin: 0 auto" }
 
 The process numbers 0, 1 and 2 represent the process rank and have
 greater or less significance depending on the processing paradigm. At

@@ -161,7 +161,7 @@ Download the latest version of the XQuartz package on:
 package.
 
 <center>
-![image](../img/img0512.png)
+![image](img/img0512.png)
 </center>
 
 The installer will take you through the installation procedure, just
@@ -172,7 +172,7 @@ A reboot is required before XQuartz will correctly open graphical
 applications.
 
 <center>
-![image](../img/img0513.png)
+![image](img/img0513.png)
 </center>
 {% endif %}
 {% if OS == windows %}
@@ -192,7 +192,7 @@ The first task is to install the Xming software.
     to select "*XLaunch wizard*" and "*Normal PuTTY Link SSH client*".
 
     <center>
-    ![image](../img/img0500.png)
+    ![image](img/img0500.png)
     <center>
 
 5.  We suggest to create a Desktop icon for Xming and XLaunch.
@@ -207,26 +207,26 @@ And now we can run Xming:
 2.  Select ++"Multiple Windows"++. This will open each application in a separate window.
 
     <center>
-    ![image](../img/img0501.png)
+    ![image](img/img0501.png)
     </center>
 
 3.  Select ++"Start no client"++ to make XLaunch wait for other programs (such as PuTTY).
 
     <center>
-    ![image](../img/img0502.png)
+    ![image](img/img0502.png)
     </center>
 
 4.  Select ++"Clipboard"++ to share the clipboard.
 
     <center>
-    ![image](../img/img0503.png)
+    ![image](img/img0503.png)
     </center>
 
 5.  Finally ++"Save configuration"++ into a file. You can keep the default filename and save it
     in your Xming installation directory.
 
     <center>
-    ![image](../img/img0504.png)
+    ![image](img/img0504.png)
     </center>
 
 6.  Now Xming is running in the background ...
@@ -245,7 +245,7 @@ machine. The "*xclock*" application runs on the login-node of the {{ hpc }}, but
 is displayed on your Windows machine.
 
 <center>
-![image](../img/img0505.png)
+![image](img/img0505.png)
 </center>
 
 You can close your clock and connect further to a compute node with
@@ -310,7 +310,7 @@ the cluster
     2.  In the "*Category*" pane, expand ++"Connection>SSh"++, and select as show below:
 
         <center>
-        ![image](../img/img0506.png)
+        ![image](img/img0506.png)
         </center>
 
     3.  In the ++"Source port"++ field, enter the local port to use (e.g., *5555*).
@@ -335,7 +335,7 @@ you will need to reconnect to the {{ hpc }} with X-forwarding enabled, which is
 done with the "-X" option.
 
 <center>
-![image](../img/ch5-interactive-mode.png)
+![image](img/ch5-interactive-mode.png)
 </center>
 
 First exit and reconnect to the {{ hpc }} with X-forwarding enabled:
@@ -356,7 +356,7 @@ running a small X-application on the login node. Type:
 And you should see a clock appearing on your screen.
 
 <center>
-![image](../img/img0507.png)
+![image](img/img0507.png)
 </center>
 
 You can close your clock and connect further to a compute node with
@@ -387,7 +387,7 @@ Now run the message program:
 You should see the following message appearing.
 
 <center>
-![image](../img/img0508.png)
+![image](img/img0508.png)
 </center>
 
 Click any button and see what happens.
@@ -429,19 +429,19 @@ fx \>\>
 :::
 
 ::: center
-![image](../img/img0509.png){width="5.84in" height="4.11in"}
+![image](img/img0509.png){width="5.84in" height="4.11in"}
 :::
 
 And see the displayed calculations, ...
 
 ::: center
-![image](../img/img0510.png){width="5.84in" height="4.11in"}
+![image](img/img0510.png){width="5.84in" height="4.11in"}
 :::
 
 as well as the nice "plot" appearing:
 
 ::: center
-![image](../img/img0511.png){width="5.76in" height="2.94in"}
+![image](img/img0511.png){width="5.76in" height="2.94in"}
 :::
 
 You can work in this MATLAB GUI, and finally terminate the application

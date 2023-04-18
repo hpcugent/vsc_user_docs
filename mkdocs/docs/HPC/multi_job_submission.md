@@ -147,7 +147,7 @@ First go to the right directory:
 As a simple example, assume you have a serial program called *myprog*
 that you want to run on various input files *input\[1-100\]*.
 
-![image](../img/img0702.png){ style="display: block; margin: 0 auto; width: 3.22in; height: 2.36in"}
+![image](img/img0702.png){ style="display: block; margin: 0 auto; width: 3.22in; height: 2.36in"}
 
 The following bash script would submit these jobs all one by one:
 ```shell
@@ -282,7 +282,7 @@ simple steps:
 3.  the results of the computations on those chunks are aggregated into,
     e.g., a statistical description of some sort.
 
-![image](../img/img0703.png){style="display: block; margin: 0 auto; width: 2.40in; height: 2.78in"}
+![image](img/img0703.png){style="display: block; margin: 0 auto; width: 2.40in; height: 2.78in"}
 
 The Worker framework directly supports this scenario by using a prologue
 (pre-processing) and an epilogue (post-processing). The former is

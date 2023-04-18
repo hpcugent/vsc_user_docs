@@ -103,11 +103,11 @@ to the {{ hpc }} cluster via the login node "***{{ loginnode }}***".
     login node of the cluster (i.e., "***{{ loginnode }}***") you want to connect to.
 
     {%- if site != leuven %}
-    ![image](../img/ch2-putty-configuration.png){ style="display: block; margin: 0 auto" }
+    ![image](img/ch2-putty-configuration.png){ style="display: block; margin: 0 auto" }
     {% endif %}
 
     {%- if site == leuven %}
-    ![image](../img/ch2-putty-configuration-leuven.png){ style="display: block; margin: 0 auto" }
+    ![image](img/ch2-putty-configuration-leuven.png){ style="display: block; margin: 0 auto" }
     {% endif %}
 
 3.  In the category ++"Connection > Data"++, in the field ++"Auto-login username"++, put in <*{{ userid }}*\> , which is your VSC
@@ -115,41 +115,41 @@ to the {{ hpc }} cluster via the login node "***{{ loginnode }}***".
     approved.
 
     {%- if site != leuven %}
-    ![image](../img/ch2-putty-configuration2.png){ style="display: block; margin: 0 auto" }
+    ![image](img/ch2-putty-configuration2.png){ style="display: block; margin: 0 auto" }
     {% endif %}
 
     {%- if site == leuven %}
-    ![image](../img/ch2-putty-configuration2-leuven.png){ style="display: block; margin: 0 auto" }
+    ![image](img/ch2-putty-configuration2-leuven.png){ style="display: block; margin: 0 auto" }
     {% endif %}
 
 4.  In the category ++"Connection > SSH > Auth"++, in the field ++"Private key file for authentication"++ click on ++"Browse"++ and select the private key
     (i.e., "id_rsa.ppk") that you generated and saved above.
 
-    ![image](../img/ch2-putty-key-setup.png){ style="display: block; margin: 0 auto" }
+    ![image](img/ch2-putty-key-setup.png){ style="display: block; margin: 0 auto" }
 
 5.  In the category ++"Connection > SSH > X11"++, click the ++"Enable X11 Forwarding"++ checkbox.
 
-    ![image](../img/ch2-putty-x-forwarding.png){ style="display: block; margin: 0 auto" }
+    ![image](img/ch2-putty-x-forwarding.png){ style="display: block; margin: 0 auto" }
 
 6.  Now go back to <Session\>, and fill in "**{{ hpcname }}**" in the ++"Saved Sessions"++ field and press ++"Save"++ to
     store the session information.
 
     {%- if site != leuven %}
-    ![image](../img/ch2-putty-saved-session.png){ style="display: block; margin: 0 auto" }
+    ![image](img/ch2-putty-saved-session.png){ style="display: block; margin: 0 auto" }
     {% endif %}
 
     {%- if site == leuven %}
-    ![image](../img/ch2-putty-saved-session-leuven.png){ style="display: block; margin: 0 auto" }
+    ![image](img/ch2-putty-saved-session-leuven.png){ style="display: block; margin: 0 auto" }
     {% endif %}
 
 7.  Now pressing ++"Open"++, will open a terminal window and asks for you
     passphrase.
     {%- if site != leuven %}
-    ![image](../img/ch2-putty-enter-password.png){ style="display: block; margin: 0 auto" }
+    ![image](img/ch2-putty-enter-password.png){ style="display: block; margin: 0 auto" }
     {% endif %}
 
     {%- if site == leuven %}
-    ![image](../img/ch2-putty-enter-password-leuven.png){ style="display: block; margin: 0 auto" }
+    ![image](img/ch2-putty-enter-password-leuven.png){ style="display: block; margin: 0 auto" }
     {% endif %}
 
 8.  If this is your first time connecting, you will be asked to verify
@@ -512,19 +512,19 @@ To transfer your files using WinSCP,
     5.  Note that the password field remains empty.
 
     {%- if site == antwerpen %}
-    ![image](../img/img0214.png){ style="display: block; margin: 0 auto" }
+    ![image](img/img0214.png){ style="display: block; margin: 0 auto" }
     {% endif %}
     {%- if site == brussel %}
-    ![image](../img/img0214.png){ style="display: block; margin: 0 auto" }
+    ![image](img/img0214.png){ style="display: block; margin: 0 auto" }
     {% endif %}
     {%- if site == gent %}
-    ![image](../img/img0214-gent.png){ style="display: block; margin: 0 auto" }
+    ![image](img/img0214-gent.png){ style="display: block; margin: 0 auto" }
     {% endif %}
     {%- if site == leuven %}
-    ![image](../img/img0214-leuven.png){ style="display: block; margin: 0 auto" }
+    ![image](img/img0214-leuven.png){ style="display: block; margin: 0 auto" }
     {% endif %}
 
-    ![image](../img/img0214b.png){ style="display: block; margin: 0 auto" }
+    ![image](img/img0214b.png){ style="display: block; margin: 0 auto" }
 
     6.  Click ++"Advanced..."++.
 
@@ -537,16 +537,16 @@ To transfer your files using WinSCP,
 4.  Finally, when clicking on ++"Login"++, you will be asked for your key passphrase.
 
     {%- if site == antwerpen %}
-    ![image](../img/img0215.png){ style="display: block; margin: 0 auto" }
+    ![image](img/img0215.png){ style="display: block; margin: 0 auto" }
     {% endif %}
     {%- if site == brussel %}
-    ![image](../img/img0215.png){ style="display: block; margin: 0 auto" }
+    ![image](img/img0215.png){ style="display: block; margin: 0 auto" }
     {% endif %}
     {%- if site == gent %}
-    ![image](../img/img0215.png){ style="display: block; margin: 0 auto" }
+    ![image](img/img0215.png){ style="display: block; margin: 0 auto" }
     {% endif %}
     {%- if site == leuven %}
-    ![image](../img/img0215-leuven.png){ style="display: block; margin: 0 auto" }
+    ![image](img/img0215-leuven.png){ style="display: block; margin: 0 auto" }
     {% endif %}
 
 
@@ -554,16 +554,16 @@ To transfer your files using WinSCP,
 
 
 {%- if site == antwerpen %}
-![image](../img/img0216.png){ style="display: block; margin: 0 auto" }
+![image](img/img0216.png){ style="display: block; margin: 0 auto" }
 {% endif %}
 {%- if site == brussel %}
-![image](../img/img0216.png){ style="display: block; margin: 0 auto" }
+![image](img/img0216.png){ style="display: block; margin: 0 auto" }
 {% endif %}
 {%- if site == gent %}
-![image](../img/img0216.png){ style="display: block; margin: 0 auto" }
+![image](img/img0216.png){ style="display: block; margin: 0 auto" }
 {% endif %}
 {%- if site == leuven %}
-![image](../img/img0216-leuven.png){ style="display: block; margin: 0 auto" }
+![image](img/img0216-leuven.png){ style="display: block; margin: 0 auto" }
 {% endif %}
 
 Now, try out whether you can transfer an arbitrary file from your local
@@ -758,5 +758,4 @@ created.
 
 ### Fast file transfer for large datasets
 
-See [the section on `rsync` in chapter 5 of the Linux intro
-manual](#).
+See [the section on `rsync` in chapter 5 of the Linux intro manual](#).

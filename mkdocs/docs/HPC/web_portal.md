@@ -67,7 +67,7 @@ requested to let the web portal access some of your personal information
 in this screenshot below:
 
 <center>
-![image](../img/ood_permission.png)
+![image](img/ood_permission.png)
 </center>
 
 **Please click "Authorize" here.**
@@ -80,7 +80,7 @@ afterwards.
 Once logged in, you should see this start page:
 
 <center>
-![image](../img/ood_start.png)
+![image](img/ood_start.png)
 </center>
 
 This page includes a menu bar at the top, with buttons on the left
@@ -93,7 +93,7 @@ If your browser window is too narrow, the menu is available at the top
 right through the "hamburger" icon:
 
 <center>
-![image](../img/ood_hamburger.png)
+![image](img/ood_hamburger.png)
 </center>
 
 ## Features
@@ -113,7 +113,7 @@ directories and filesystems you have access to. Selecting one of the
 directories will open a new browser tab with the *File Explorer*:
 
 <center>
-![image](../img/ood_file_explorer.png)
+![image](img/ood_file_explorer.png)
 </center>
 
 Here you can:
@@ -189,7 +189,7 @@ A new browser tab will be opened that shows all your current queued
 and/or running jobs:
 
 <center>
-![image](../img/ood_active_jobs.png)
+![image](img/ood_active_jobs.png)
 </center>
 
 You can control which jobs are shown using the *Filter* input area, or
@@ -214,7 +214,7 @@ To submit new jobs, you can use the *Job Composer* menu item under
 create new jobs:
 
 <center>
-![image](../img/ood_job_composer.png)
+![image](img/ood_job_composer.png)
 </center>
 
 This extensive interface allows you to create jobs from one of the
@@ -233,7 +233,7 @@ In addition, you can inspect provided job templates, copy them or even
 create your own templates via the *Templates* button on the top:
 
 <center>
-![image](../img/ood_job_templates.png)
+![image](img/ood_job_templates.png)
 </center>
 
 ### Shell access
@@ -243,7 +243,7 @@ menu item, you can easily open a terminal (shell) session into your VSC
 account, straight from your browser!
 
 <center>
-![image](../img/ood_shell.png)
+![image](img/ood_shell.png)
 </center>
 
 Using this interface requires being familiar with a Linux shell
@@ -264,7 +264,7 @@ terminal multiplexer tool like `screen` or `tmux`).
 To create a graphical desktop environment, use on of the *desktop on... node* buttons under *Interactive Apps* menu item. For example:
 
 <center>
-![image](../img/ood_launch_desktop.png)
+![image](img/ood_launch_desktop.png)
 </center>
 
 You can either start a desktop environment on a login node for some
@@ -280,7 +280,7 @@ menu item at the top, and then use the *Launch desktop on \... node*
 button if the desktop session is *Running*:
 
 <center>
-![image](../img/ood_desktop_running.png)
+![image](img/ood_desktop_running.png)
 </center>
 
 #### Jupyter notebook
@@ -290,7 +290,7 @@ notebook](https://jupyter.org/) on a workernode, via the *Jupyter
 Notebook* button under the *Interactive Apps* menu item.
 
 <center>
-![image](../img/ood_start_jupyter.png)
+![image](img/ood_start_jupyter.png)
 </center>
 
 After starting the Jupyter notebook using the *Launch* button, you will
@@ -298,14 +298,14 @@ see it being added in state *Queued* in the overview of interactive
 sessions (see *My Interactive Sessions* menu item):
 
 <center>
-![image](../img/ood_jupyter_queued.png)
+![image](img/ood_jupyter_queued.png)
 </center>
 
 When your job hosting the Jupyter notebook starts running, the status
 will first change the *Starting*:
 
 <center>
-![image](../img/ood_jupyter_starting.png)
+![image](img/ood_jupyter_starting.png)
 </center>
 
 and eventually the status will change to *Running*, and you will be able
@@ -313,7 +313,7 @@ to connect to the Jupyter environment using the blue *Connect to
 Jupyter* button:
 
 <center>
-![image](../img/ood_jupyter_running.png)
+![image](img/ood_jupyter_running.png)
 </center>
 
 This will launch the Jupyter environment in a new browser tab, where you
@@ -321,7 +321,7 @@ can open an existing notebook by navigating to the directory where it
 located and clicking it, or using the *New* menu on the top right:
 
 <center>
-![image](../img/ood_jupyter_new_notebook.png)
+![image](img/ood_jupyter_new_notebook.png)
 </center>
 
 Here's an example of a Jupyter notebook in action. Note that several
@@ -329,7 +329,7 @@ non-standard Python packages (like *numpy*, *scipy*, *pandas*,
 *matplotlib*) are readily available:
 
 <center>
-![image](../img/ood_jupyter_notebook_example.png)
+![image](img/ood_jupyter_notebook_example.png)
 </center>
 
 ## Restarting your web server in case of problems
@@ -341,7 +341,7 @@ You can do this via the *Restart Web Server* button under the *Help*
 menu item:
 
 <center>
-![image](../img/ood_help_restart_web_server.png)
+![image](img/ood_help_restart_web_server.png)
 </center>
 
 Of course, this only affects your own web portal session (not those of

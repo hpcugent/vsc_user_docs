@@ -105,7 +105,7 @@ Start ***PuTTYgen.exe*** it and follow these steps:
 1.  In ++"Parameters"++ (at the bottom of the window), choose "RSA" and set the number of
     bits in the key to 4096.
 
-    ![image](../img/ch2-puttygen-bits.png){ style="display: block; margin: 0 auto" }
+    ![image](img/ch2-puttygen-bits.png){ style="display: block; margin: 0 auto" }
 
 2.  Click on ++"Generate"++. To generate the key, you must move the mouse cursor over
     the PuTTYgen window (this generates some random data that PuTTYgen
@@ -124,7 +124,7 @@ Start ***PuTTYgen.exe*** it and follow these steps:
     decent password. (If you are not sure your disk is encrypted, it
     probably isn't.)
 
-    ![image](../img/ch2-puttygen-password.png){ style="display: block; margin: 0 auto" }
+    ![image](img/ch2-puttygen-password.png){ style="display: block; margin: 0 auto" }
 
 5.  Save both the public and private keys in a folder on your personal
     computer (We recommend to create and put them in the folder
@@ -142,7 +142,7 @@ Start ***PuTTYgen.exe*** it and follow these steps:
     want to do this conversion afterwards, you can start with loading an
     existing "id_rsa.ppk" and only do this conversions export.)
 
-    ![image](../img/ch2-puttygen-conversions-export_openssh.png){ style="display: block; margin: 0 auto" }
+    ![image](img/ch2-puttygen-conversions-export_openssh.png){ style="display: block; margin: 0 auto" }
 
 {%- endif %}
 
@@ -284,14 +284,14 @@ After the installation just start the Pageant application in Windows,
 this will start the agent in background. The agent icon will be visible
 from the Windows panel.
 
-![image](../img/ch2-pageant-icon.png){ style="display: block; margin: 0 auto" }
+![image](img/ch2-pageant-icon.png){ style="display: block; margin: 0 auto" }
 
 At this point the agent does not contain any private key. You should
 include the private key(s) generated in the previous section [Generating a public/private key pair](../account/#generating-a-publicprivate-key-pair).
 
 1.  Click on ++"Add key"++
 
-    ![image](../img/ch2-pageant-add-key.png){ style="display: block; margin: 0 auto" }
+    ![image](img/ch2-pageant-add-key.png){ style="display: block; margin: 0 auto" }
 
 2.  Select the private key file generated in [Generating a public/private key pair](../account/#generating-a-publicprivate-key-pair) (**"id_rsa.ppk"** by default).
 
@@ -302,12 +302,12 @@ include the private key(s) generated in the previous section [Generating a publi
 4.  You can see the SSH key(s) available in the key ring just clicking
     on ++"View Keys"++.
 
-    ![image](../img/ch2-pageant-view-keys.png){ style="display: block; margin: 0 auto" }
+    ![image](img/ch2-pageant-view-keys.png){ style="display: block; margin: 0 auto" }
 
 5.  You can change **PuTTY** setup to use the SSH agent. Open PuTTY and check
     *Connection > SSH > Auth > Allow agent forwarding*.
 
-    ![image](../img/ch2-putty-allow-agent.png){ style="display: block; margin: 0 auto" }
+    ![image](img/ch2-putty-allow-agent.png){ style="display: block; margin: 0 auto" }
 
 Now you can connect to the login nodes as usual. The SSH agent will know
 which SSH key should be used and you do not have to type the SSH
@@ -366,7 +366,7 @@ You will be redirected to our WAYF (Where Are You From) service where
 you have to select your "Home Organisation".
 
 
-![image](../img/ch2-browser-authenticate.png){ style="display: block; margin: 0 auto" }
+![image](img/ch2-browser-authenticate.png){ style="display: block; margin: 0 auto" }
 
 Select "{{ wayf }}" in the dropdown box and optionally select "Save my preference"
 and "permanently".
@@ -376,7 +376,7 @@ Click ++"Confirm"++
 You will now be taken to the authentication page of your institute.
 
 {%- if site == antwerpen %}
-![image](../img/ch2-browser-authenticate-antwerpen.png){ style="display: block; margin: 0 auto" }
+![image](img/ch2-browser-authenticate-antwerpen.png){ style="display: block; margin: 0 auto" }
 
 **The site is only accessible from within the {{ university }}
 domain**, so the page won't load from, e.g., home. However, you can also get
@@ -405,11 +405,11 @@ UGent password, please visit: <https://password.ugent.be/>. After
 logging in, you may be requested to share your information. Click "Yes,
 continue".
 
-![image](../img/ch2-browser-authenticate-gent.png){ style="display: block; margin: 0 auto" }
+![image](img/ch2-browser-authenticate-gent.png){ style="display: block; margin: 0 auto" }
 {%- endif %}
 
 {% if site == brussel %}
-![image](../img/ch2-browser-authenticate-brussel.png){ style="display: block; margin: 0 auto" }
+![image](img/ch2-browser-authenticate-brussel.png){ style="display: block; margin: 0 auto" }
 You will now have to log in using your NetID. (The same username and
 password that you use for accessing your e-mail)
 {%- endif %}
@@ -418,9 +418,9 @@ password that you use for accessing your e-mail)
 {{ hpc }} users should login using their staff or student id (The same username
 and password that is used for accessing e-mail).
 
-![image](../img/ch2-browser-authenticate-leuven.png){ style="display: block; margin: 0 auto" }
+![image](img/ch2-browser-authenticate-leuven.png){ style="display: block; margin: 0 auto" }
 
-![image](../img/ch2-browser-authenticate-hasselt.png){ style="display: block; margin: 0 auto" }
+![image](img/ch2-browser-authenticate-hasselt.png){ style="display: block; margin: 0 auto" }
 {%- endif %}
 
 After you log in using your {{ university }} login and password, you will be asked to

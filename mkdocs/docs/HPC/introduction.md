@@ -47,9 +47,9 @@ cables. Their number crunching power is (presently) measured in hundreds
 of billions of floating point operations (gigaflops) and even in
 teraflops.
 
-![](../img/ch1-cables1.png){ width=245px }
-![](../img/ch1-cables2.png){ width=245px }
-![](../img/ch1-cables3.png){ width=245px }
+![](img/ch1-cables1.png){ width=245px }
+![](img/ch1-cables2.png){ width=245px }
+![](img/ch1-cables3.png){ width=245px }
 
 The {{ hpcinfra }} relies on parallel-processing technology to offer {{ university }} researchers an
 extremely fast solution for all their data processing needs.

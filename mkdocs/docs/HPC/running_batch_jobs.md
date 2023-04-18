@@ -9,7 +9,7 @@ as reordering or deleting them), monitoring their progress and killing
 ones that are having problems or are no longer needed. Only the most
 commonly used commands are mentioned here.
 
-![image](../img/ch4-pbs-overview.png){ style="display: block; margin: 0 auto" }
+![image](img/ch4-pbs-overview.png){ style="display: block; margin: 0 auto" }
 
 When you connect to the {{ hpc }}, you have access to (one of) the **login nodes** of the
 cluster. There you can prepare the work you want to get done on the
