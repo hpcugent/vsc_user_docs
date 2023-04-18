@@ -28,35 +28,48 @@ def gen_content_from_macros():
     scripts_dir = os.path.join("computational_macros", scripts)
 
     outputs = {}
-    for r, d, f in os.walk(scripts_dir):
-        if r != scripts_dir:
+    for rt, _, fns in os.walk(scripts_dir):
+        if rt != scripts_dir:
             continue
-        f = filter(lambda x: not x.__contains__("__init__.py"), f)
-        for file in f:
-            file = Path(file).stem
-            mod_name = f"{scripts}.{file}"
+        for fn in fns:
+            if fn == '__init__.py' or not fn.endswith('.py'):
+                continue
+            stem = Path(fn).stem
+            mod_name = f"{scripts}.{stem}"
             mod = importlib.import_module(mod_name)
-            fun = getattr(mod, file)
-            outputs[file] = fun()
+            fun = getattr(mod, stem)
+            outputs[fn] = fun()
     return outputs
+
+
+def log(*args):
+    import pprint
+    with open('/tmp/output', 'a') as fh:
+        for arg in args:
+            pprint.pprint(arg, stream=fh)
 
 
 class UgentPlugin(BasePlugin):
     config_scheme = (
         ("os_pick", Type(bool, default=False)),
+        ("osneutrallinks", Type(bool, default=False)),
         ("yamls", Type(list, default=[])),
+        ("os", Type(str, default=None)),
+        ("site", Type(str, default=None)),
     )
 
     def __init__(self, *args, **kwargs):
         super(UgentPlugin, self).__init__(*args, **kwargs)
         self.os_pick = None
         self.yamls = None
+        self.osneutrallinks = None
         self.macro_extras = gen_content_from_macros()
 
     def generate_os_pick_files(self, extras, files):
         docs_with_os = self.get_docs()
         flatten_docs = dict()
         # The final documentation files structure processing.
+        log("docs_with_os", docs_with_os)
         for el in docs_with_os:
             os_name, docs = el  # os_name, docs = (OS, <nav structure of documents>)
             for doc in docs:
@@ -69,6 +82,7 @@ class UgentPlugin(BasePlugin):
                         **flatten_docs.get((key,), dict({})),
                         **{os_name: value},
                     }
+        log("flatten_docs", flatten_docs)
         # For each documentation file, generate OS picking files.
         for name_chain, links_with_os in list(flatten_docs.items()):
             # It maybe seems weird, that it iterates twice over the same list,
@@ -170,6 +184,7 @@ class UgentPlugin(BasePlugin):
         """
         self.os_pick = self.config["os_pick"]
         self.yamls = self.config["yamls"]
+        self.osneutrallinks = self.config["osneutrallinks"]
         extras = config.get("extra")
         extras = {**extras, **self.macro_extras}
         config["extra"] = extras
@@ -185,8 +200,10 @@ class UgentPlugin(BasePlugin):
         :return: Edited Files object.
         """
         extras = config.get("extra")
+        log("PRE on_files", self.os_pick, [x.src_path for x in files._files if x.src_path.endswith('.md')])
         if self.os_pick:
             self.generate_os_pick_files(extras, files)
+        log("POST on_files", self.os_pick, [x.src_path for x in files._files if x.src_path.endswith('.md')])
         return files
 
     def on_post_page(self, output: str, page: Page, config: Config):
@@ -200,7 +217,7 @@ class UgentPlugin(BasePlugin):
         """
         if self.os_pick:
             output += JS_SCROLL_STR
-        else:
+        if self.osneutrallinks:
             output += JS_OS_NEUTRAL
         return output
 
