@@ -1,5 +1,5 @@
 site_name: VSC User Documentation - ${site} (${os})
-docs_dir: docs/intro-HPC
+docs_dir: docs/HPC
 
 nav:
   - Welcome: index.md
@@ -57,7 +57,7 @@ plugins:
   # - mkdocs-nav-enhancements
   - exclude-search:
       exclude:
-        - content/intro-HPC/*
+        - content/HPC/*
         - content/cloud/*
 
 

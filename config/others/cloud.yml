@@ -1,5 +1,5 @@
 site_name: VSC Tier-1 Cloud Documentation
-docs_dir: docs/intro-Cloud
+docs_dir: docs/cloud
 nav:
   - introduction.md
   - access.md
@@ -28,8 +28,8 @@ plugins:
   # - mkdocs-nav-enhancements
   - exclude-search:
       exclude:
-        - content/intro-HPC/*
-        - content/intro-Linux/*
+        - content/HPC/*
+        - content/linux-tutorial/*
 
 markdown_extensions:
   - admonition

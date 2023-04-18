@@ -10,5 +10,5 @@ hide:
 
 ## You want to learn more about:
 
-[HPC](intro-HPC/introduction.md){ .md-button }
+[HPC](HPC/introduction.md){ .md-button }
 [Linux](#){ .md-button }

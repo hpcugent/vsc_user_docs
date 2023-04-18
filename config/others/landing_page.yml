@@ -14,8 +14,8 @@ plugins:
   - exclude-search:
       exclude:
         - content/cloud/*
-        - content/intro-HPC/*
-        - content/intro-Linux/*
+        - content/HPC/*
+        - content/linux-tutorial/*
 
 markdown_extensions:
   - admonition

@@ -1,5 +1,5 @@
 site_name: Linux tutorial
-docs_dir: docs/intro-Linux
+docs_dir: docs/linux-tutorial
 nav:
   - Getting Started: getting_started.md
   - Navigating: navigating.md
@@ -23,7 +23,7 @@ plugins:
   # - mkdocs-nav-enhancements
   - exclude-search:
       exclude:
-        - content/intro-HPC/*
+        - content/HPC/*
         - content/cloud/*
 
 markdown_extensions:
