@@ -585,5 +585,10 @@ A typical Computation workflow will be:
 We'll take you through the different tasks one by one in the following
 chapters.
 
+
+**There you can see usage of the site specific markdown macro from `macros/Antwerpen/Linux/antLin.md`.**
+{% import 'macros/Antwerpen/Linux/antLin.md' as whoistalking %}
+{{ whoistalking.antLin("Ranger") }}
+
 **Now you know how to extend the existing page. If you want to change something inside another 
 document you must indeed copy this document and create your own edited version.**
