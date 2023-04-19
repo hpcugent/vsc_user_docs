@@ -107,11 +107,12 @@ def load_config(yml=None):
 
 def build_cmd(cmd):
     print(f">> {cmd}")
-    process = subprocess.run(cmd, shell=True, capture_output=True)
+    # combine stdout and stderr, so no capture_output; and yse text=True to avoid a bytestream
+    process = subprocess.run(cmd, shell=True, text=True, stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
+    if args.verbose or process.returncode != 0:
+        print(f"{cmd} {process.stdout}")
     if process.returncode != 0:
-        raise BuildException(f"{cmd} {process.stderr.decode('utf8')}")
-    if args.verbose:
-        print(f"{cmd} {process.stdout.decode('utf8')}")
+        raise BuildException(f"{cmd} {process.stdout}")
 
 def build_pool(ops):
     cmds = []

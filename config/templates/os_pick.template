@@ -15,10 +15,6 @@ plugins:
         - extra/{{ lsite }}.yml
   - section-index
   - autorefs
-  - exclude-search:
-      exclude:
-        - content/HPC/*
-        - content/cloud/*
 
 
 markdown_extensions:

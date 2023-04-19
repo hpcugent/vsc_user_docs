@@ -24,11 +24,11 @@ nav:
       - Best Practices: best_practices.md
       - Graphical applications with VNC: VNC.md
       - Graphical applications with X2Go: x2go.md
-{ if site == 'Gent' }
+{% if site == 'Gent' %}
       - HPC-UGent GPU clusters: gpu_{{ lsite }}.md
       - HPC-UGent interactive and debug cluster: interactive_{{ lsite }}.md
       - Cron scripts: crontab_{{ lsite }}.md
-{ endif }}
+{% endif %}
   - Software-specific Best Practices:
       - Apptainer/Singularity: apptainer.md
       - EasyBuild: easybuild.md

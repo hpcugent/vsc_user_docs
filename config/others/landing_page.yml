@@ -11,11 +11,6 @@ plugins:
   - autorefs
   # - spellcheck
   # - mkdocs-nav-enhancements
-  - exclude-search:
-      exclude:
-        - content/cloud/*
-        - content/HPC/*
-        - content/linux-tutorial/*
 
 markdown_extensions:
   - admonition
