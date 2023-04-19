@@ -5,8 +5,6 @@ docs_dir: landing_page
 plugins:
   - ugent
   - macros:
-      include_yaml:
-        - constants.yml
   - section-index
   - autorefs
   # - spellcheck

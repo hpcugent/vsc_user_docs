@@ -2,6 +2,7 @@ import importlib
 import os.path
 import shutil
 import tempfile
+import re
 from os import makedirs, path
 from pathlib import Path
 
@@ -15,6 +16,9 @@ from constants import JS_SCROLL_STR, OS_PICK_BTN, OS_PICK_STR, JS_OS_NEUTRAL
 
 tmp_dir = tempfile.TemporaryDirectory().name
 
+"""
+See https://www.mkdocs.org/user-guide/plugins/#developing-plugins for some more information
+"""
 
 def gen_content_from_macros():
     """
@@ -63,6 +67,8 @@ class UgentPlugin(BasePlugin):
         self.os_pick = None
         self.yamls = None
         self.osneutrallinks = None
+        self.os = None
+        self.site = None
         self.macro_extras = gen_content_from_macros()
 
     def generate_os_pick_files(self, extras, files):
@@ -185,6 +191,8 @@ class UgentPlugin(BasePlugin):
         self.os_pick = self.config["os_pick"]
         self.yamls = self.config["yamls"]
         self.osneutrallinks = self.config["osneutrallinks"]
+        self.os = self.config["os"]
+        self.site = self.config["site"]
         extras = config.get("extra")
         extras = {**extras, **self.macro_extras}
         config["extra"] = extras
@@ -200,9 +208,34 @@ class UgentPlugin(BasePlugin):
         :return: Edited Files object.
         """
         extras = config.get("extra")
-        log("PRE on_files", self.os_pick, [x.src_path for x in files._files if x.src_path.endswith('.md')])
+        log("PRE on_files {self.os} {self.site}", self.os_pick, [x.src_path for x in files._files if x.src_path.endswith('.md')])
+
+        reg = re.compile(f"^only/{self.site}/", re.I)
+        remove = []
+        for idx, fil in enumerate(files):
+            if fil.src_path.startswith('only/'):
+                if reg.search(fil.src_path):
+                    # Canot make a new File instance, don't know the dest_dir or other original args
+                    dest_dir = fil.abs_dest_path[:-len(fil.dest_path)]
+                    log(f"replacing on_files {self.os} {self.site} {fil.abs_dest_path} {dest_dir}", fil)
+                    fil.dest_path = reg.sub('', fil.dest_path)
+                    fil.abs_dest_path = dest_dir + fil.dest_path
+                    fil.url = reg.sub('', fil.url)
+                    log(f"replaced on_files {self.os} {self.site} {fil.abs_dest_path}", fil)
+                else:
+                    remove.append(idx)
+        for idx in remove[::-1]:
+            files._files.pop(idx)
+        log(f"POST replaced on_files {self.os} {self.site}", [x.src_path for x in files._files if x.src_path.endswith('.md')])
+
         if self.os_pick:
             self.generate_os_pick_files(extras, files)
+            if self.site == 'Gent':
+                log("POST2 on_files", self.os_pick, [x.src_path for x in files._files if x.src_path.endswith('.md')], files._files)
+        if self.osneutrallinks:
+            if self.site == 'Gent' and self.os == 'Linux':
+                log("POST2 on_files", self.os_pick, [x.src_path for x in files._files if x.src_path.endswith('.md')], files._files)
+
         log("POST on_files", self.os_pick, [x.src_path for x in files._files if x.src_path.endswith('.md')])
         return files
 

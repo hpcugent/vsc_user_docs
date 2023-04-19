@@ -1,0 +1,5 @@
+Make a structure <docs_dir>/only/<site>/some/file.md,
+and only the matching site will have rendered files as if in location <docs_dir>/some/file.md.
+
+Relative links in references to the `.md` files have to take into account the path of the markdown files,
+not the shorter path of the html files.

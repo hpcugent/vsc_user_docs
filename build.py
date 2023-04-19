@@ -148,6 +148,8 @@ if __name__ == "__main__":
     landing_page_yml = [x for x in pre if 'landing_page' in x[0]][0][0]
     build_dir, config = load_config(landing_page_yml)
 
+    rmtree(build_dir, ignore_errors=True)
+
     try:
         build_pool(pre)
         build_pool(docs)
