@@ -1,4 +1,4 @@
-site_name: VSC User Documentation - ${site} (${os})
+site_name: VSC User Documentation - {{ site }} ({{ os }})
 docs_dir: docs/HPC
 
 nav:
@@ -24,9 +24,11 @@ nav:
       - Best Practices: best_practices.md
       - Graphical applications with VNC: VNC.md
       - Graphical applications with X2Go: x2go.md
-      - HPC-UGent GPU clusters: gpu_${lsite}.md
-      - HPC-UGent interactive and debug cluster: interactive_${lsite}.md
-      - Cron scripts: crontab_${lsite}.md
+{ if site == 'Gent' }
+      - HPC-UGent GPU clusters: gpu_{{ lsite }}.md
+      - HPC-UGent interactive and debug cluster: interactive_{{ lsite }}.md
+      - Cron scripts: crontab_{{ lsite }}.md
+{ endif }}
   - Software-specific Best Practices:
       - Apptainer/Singularity: apptainer.md
       - EasyBuild: easybuild.md
@@ -44,13 +46,13 @@ plugins:
   - search
   - include-markdown
   - ugent:
-      site: ${site}
-      os: ${os}
+      site: {{ site }}
+      os: {{ os }}
       osneutrallinks: True
   - macros:
       include_yaml:
         - extra/constants.yml
-        - extra/${lsite}.yml
+        - extra/{{ lsite }}.yml
   - section-index
   - autorefs
   # - spellcheck
@@ -102,4 +104,4 @@ theme:
 
 
 extra:
-  OS: ${os}
+  OS: {{ os }}

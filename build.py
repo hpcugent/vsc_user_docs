@@ -6,7 +6,7 @@ import shutil
 import subprocess
 from shutil import rmtree
 
-from string import Template
+from jinja2 import Template
 from yaml import safe_load
 from multiprocessing import Pool
 
@@ -71,7 +71,7 @@ def make_mkdocs_yml():
             fn = f"{MKDOCS_BASE}/hpc_{site}_{ymlos}.yml"
             docs.append([fn, f'{site}/{ymlos}'])
             with open(fn, 'w') as fh:
-                fh.write(hpc_templ.substitute(os=ymlos, los=lymlos, site=site, lsite=lsite))
+                fh.write(hpc_templ.render(os=ymlos, los=lymlos, site=site, lsite=lsite))
 
     # os_pick over sites
     with open(f"{CONFIG_TEMPLATE}/os_pick.template") as fh:
@@ -81,7 +81,7 @@ def make_mkdocs_yml():
         fn = f"{MKDOCS_BASE}/os_pick_{site}.yml"
         post.append([fn, site])
         with open(fn, 'w') as fh:
-            fh.write(hpc_templ.substitute(site=site, lsite=lsite))
+            fh.write(hpc_templ.render(site=site, lsite=lsite))
 
     return pre, docs, post
 
