@@ -41,9 +41,6 @@ markdown_extensions:
 theme:
   name: material
   language: en
-  features:
-    - search.suggest
-    - search.highlight
   custom_dir: os_pick/overrides
 
 extra:

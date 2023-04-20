@@ -16,7 +16,8 @@ nav:
   - appendix.md
 
 plugins:
-  - search
+  - search:
+      separator: '[\_\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - include-markdown
   - ugent
   - macros:
@@ -68,6 +69,7 @@ theme:
     - navigation.instant
     - search.suggest
     - search.highlight
+    - content.code.copy
 
 extra:
   build_dir: build

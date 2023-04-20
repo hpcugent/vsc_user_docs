@@ -44,7 +44,8 @@ nav:
 
 
 plugins:
-  - search
+  - search:
+      separator: '[\_\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - include-markdown
   - ugent:
       site: {{ site }}
@@ -102,7 +103,7 @@ theme:
     - navigation.instant
     - search.suggest
     - search.highlight
-
+    - content.code.copy
 
 extra:
   OS: {{ os }}
