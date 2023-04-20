@@ -214,7 +214,7 @@ class UgentPlugin(BasePlugin):
             with open(self.get_json_filename(), 'w') as fh:
                 json.dump(mds, fh)
 
-        #log("POST on_files", self.os_pick, [x.src_path for x in files._files if x.src_path.endswith('.md')])
+        #log("POST on_files", self.os_pick, [vars(x) for x in files._files if x.src_path.endswith('.md')])
         return files
 
     def on_post_page(self, output: str, page: Page, config: Config):
