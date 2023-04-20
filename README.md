@@ -103,6 +103,24 @@ python -m http.server --cgi 8000
 
 Visit `localhost:8000` and start looking around your documentation.
 
+### Check dependencies
+
+Get `piprot` (no or outdated package on pypi (oh the irony))
+
+```shell
+cd /tmp/
+git clone https://github.com/sesh/piprot.git
+cd piprot
+python setup.py install --user
+```
+
+In this repo, do
+
+```shell
+piprot requirements.txt
+```
+
+Change as you see fit and try it.
 
 ## Configuration
 
@@ -162,3 +180,4 @@ See example scripts in folder [scripts](computational_macros%2Fscripts).
 
 See usage in file [account.md](docs%2FHPC%2Fexamples%2FAntwerpen%2FLinux%2FHPC%2Faccount.md).<br>
 Built page can be access only by knowing its location and that is: `<server_name>/Antwerpen/Linux/HPC/examples/Antwerpen/Linux/HPC/account`
+
