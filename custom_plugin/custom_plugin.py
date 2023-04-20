@@ -1,8 +1,11 @@
 import importlib
-import os.path
+import json
+import os.path as ospath
 import shutil
 import tempfile
-from os import makedirs, path
+import re
+from collections import OrderedDict
+from os import makedirs, path, environ, walk, getcwd
 from pathlib import Path
 
 from mkdocs.config.config_options import Type
@@ -11,10 +14,11 @@ from mkdocs.structure.files import File, Files
 from mkdocs.structure.pages import Page
 from yaml import safe_load
 
-from constants import JS_SCROLL_STR, OS_PICK_BTN, OS_PICK_STR
+from constants import JS_SCROLL_STR, OS_PICK_BTN, OS_PICK_STR, JS_OS_NEUTRAL
 
-tmp_dir = tempfile.TemporaryDirectory().name
-
+"""
+See https://www.mkdocs.org/user-guide/plugins/#developing-plugins for some more information
+"""
 
 def gen_content_from_macros():
     """
@@ -25,141 +29,126 @@ def gen_content_from_macros():
     :return: Dictionary of returned values from provided scripts.
     """
     scripts = "scripts"
-    scripts_dir = os.path.join("computational_macros", scripts)
+    scripts_dir = ospath.join("computational_macros", scripts)
 
     outputs = {}
-    for r, d, f in os.walk(scripts_dir):
-        if r != scripts_dir:
+    for rt, _, fns in walk(scripts_dir):
+        if rt != scripts_dir:
             continue
-        f = filter(lambda x: not x.__contains__("__init__.py"), f)
-        for file in f:
-            file = Path(file).stem
-            mod_name = f"{scripts}.{file}"
+        for fn in fns:
+            if fn == '__init__.py' or not fn.endswith('.py'):
+                continue
+            stem = Path(fn).stem
+            mod_name = f"{scripts}.{stem}"
             mod = importlib.import_module(mod_name)
-            fun = getattr(mod, file)
-            outputs[file] = fun()
+            fun = getattr(mod, stem)
+            outputs[fn] = fun()
     return outputs
+
+
+def log(*args):
+    import pprint
+    with open('/tmp/output', 'a') as fh:
+        for arg in args:
+            pprint.pprint(arg, stream=fh)
 
 
 class UgentPlugin(BasePlugin):
     config_scheme = (
         ("os_pick", Type(bool, default=False)),
-        ("yamls", Type(list, default=[])),
+        ("osneutrallinks", Type(bool, default=False)),
+        ("oses", Type(list, default=[])),
+        ("os", Type(str, default=None)),
+        ("site", Type(str, default=None)),
     )
 
     def __init__(self, *args, **kwargs):
         super(UgentPlugin, self).__init__(*args, **kwargs)
         self.os_pick = None
-        self.yamls = None
+        self.oses = None
+        self.osneutrallinks = None
+        self.os = None
+        self.site = None
         self.macro_extras = gen_content_from_macros()
+        self.tmp_dir = tempfile.mkdtemp(prefix='custom_plugin_')
 
-    def generate_os_pick_files(self, extras, files):
-        docs_with_os = self.get_docs()
-        flatten_docs = dict()
-        # The final documentation files structure processing.
-        for el in docs_with_os:
-            os_name, docs = el  # os_name, docs = (OS, <nav structure of documents>)
-            for doc in docs:
-                key, value = list(doc.items())[0]
-                if type(value) is list:
-                    for val in value:
-                        flatten_docs = self.to_flat(flatten_docs, os_name, (key,), val)
-                else:
-                    flatten_docs[(key,)] = {
-                        **flatten_docs.get((key,), dict({})),
-                        **{os_name: value},
-                    }
-        # For each documentation file, generate OS picking files.
-        for name_chain, links_with_os in list(flatten_docs.items()):
-            # It maybe seems weird, that it iterates twice over the same list,
-            # but it is necessary to generate correct OS picking files. In case
-            # there is no custom documentation .md file, then the inner cycle
-            # generates "n" times the same file (although actually written just
-            # once), but when some custom documentation .md file exists, then
-            # we need generate also "custom" OS picking file.
-            for _, link in list(links_with_os.items()):
-                os_pick_with_urls_general = OS_PICK_STR
-                file_src_dir, file_name = path.split(link)
+    def generate_os_pick_files(self, files, build_dir):
 
-                for os_name, _ in list(links_with_os.items()):
-                    if "index.md" in file_name:
-                        base = (len(path.splitext(link)[0].split("/")) - 1) * "../"
-                        link_str = (
-                            base
-                            + f"{os_name}/"
-                            + path.dirname(links_with_os[f"{os_name}"])
-                        )
-                    else:
-                        base = len(path.splitext(link)[0].split("/")) * "../"
-                        link_str = (
-                            base
-                            + f"{os_name}/"
-                            + path.splitext(links_with_os[f"{os_name}"])[0]
-                        )
-                    general_link = link_str if links_with_os.get(f"{os_name}") else None
-                    os_pick_with_urls_general += OS_PICK_BTN.format(
-                        general_link is not None, os_name, general_link
-                    )
+        # gather all .md files from each os of self.site
+        mds = OrderedDict()
+        mds_oses = {}
 
-                # Write the content into file, when such file not already exists.
-                os_pick_dir_path = path.normpath(path.join(tmp_dir, file_src_dir))
-                os_pick_file_path = path.join(os_pick_dir_path, file_name)
-                if not path.exists(os_pick_dir_path):
-                    makedirs(os_pick_dir_path)
-                with open(os_pick_file_path, "w") as file:
-                    file.write(os_pick_with_urls_general)
-                dest_dir = path.join(
-                    path.abspath(extras.get("build_dir")), file_src_dir
-                )
-                new_file = File(
-                    file_name,
-                    path.abspath(os_pick_dir_path),
-                    dest_dir,
-                    use_directory_urls=True,
-                )
-                files.append(new_file)
+        has_os_reg = re.compile(f"/({'|'.join(self.oses)})/")
 
-    def get_docs(self):
-        """
-        Internal method. Parse 'nav' data from defined yamls into temporary
-        internal format.
-        :return: structure like this:
-        [(OS name, [{ page name: document files}, {...}, ...]), ...]
-        """
-        uris = []
-        for yml in self.yamls:
-            with open(yml, "r") as file:
-                config = safe_load(file)
-            opsys = config.get("extra").get("OS")
-            uris.append((opsys, config.get("nav")))
-        return uris
+        for os in self.oses:
+            with open(self.get_json_filename(os), 'r') as fh:
+                for md in json.load(fh):
+                    # do we need to check if the abs_dest_path md[2] contains one of the OSes?
+                    link_has_os = has_os_reg.search(md[2]) is not None
+                    if not link_has_os:
+                        raise Exception(f"No OS found in abs_dest_path {md}")
 
-    def to_flat(self, docs, os_name, par_key, par_values):
-        """
-        Recursive internal method. Flat a nested structure of nav documents.
-        Tuple of the document titles is used as key for target documentation
-        file (value).
-        :param docs: Nested structure of documents and their titles.
-        :param os_name: OS name
-        :param par_key: Parent key, used for concatenation with other nested
-        keys.
-        :param par_values: Parent values can be string (final document) or
-        another nested structure.
-        :return: Dict of flatten structure.
-        """
-        if type(par_values) is dict:
-            key, value = list(par_values.items())[0]
-            if type(value) is list:
-                docs = self.to_flat(docs, os_name, (par_key + (key,)), value)
+                    # only keep the html dest path
+                    mds[md[0]] = md[1]
+
+                    # add list of all oses the md is found
+                    md_oses = mds_oses.setdefault(md[0], [])
+                    md_oses.append(os)
+
+        # loop over all mds, generate os_pick index files for the structure
+        #   this might break the original site-overriding behaviour
+        for md, md_html in mds.items():
+            # use md[1] i.e. the html dest_path
+            relpath = md_html.split('/')
+
+            # the html is generated with use_directory_urls=True (the default)
+            #    meaning a md file a/b/c.md is generated as a/b/c/index.html
+            htmlfn = relpath.pop(-1)
+            if htmlfn != 'index.html':
+                raise Exception(f"Found unexpected md {md} {md_html} with filename {fn}")
+
+            # relpath, with md included (make a copy)
+            relpathmd = relpath[:]
+
+            # name, without extension
+            if relpath:
+                md_name = relpath.pop(-1)
             else:
-                docs[par_key + (key,)] = {
-                    **docs.get((par_key + (key,)), dict({})),
-                    **{os_name: value},
-                }
-        elif type(par_values) is list:
-            for parvalue in par_values:
-                docs = self.to_flat(docs, os_name, par_key, parvalue)
-        return docs
+                # and is probably / must be index.md
+                md_name = 'index'
+                if md != f'{md_name}.md':
+                    raise Exception(f"Unexpected empty relpath for md {md} md_html {md_html}")
+
+            # add index in osneutral path, populate one button per os
+            md_txt = OS_PICK_STR
+
+            # all found oses for the md files
+            oses = mds_oses[md]
+
+            for os in oses:
+                # here, you must use the relpathmd to determine the correct links
+                #    add additional empty string to get url with traling / to avoid 301 server redirect
+                os_link = [".."] * len(relpathmd) + [os] + relpathmd + ['']
+                md_txt += OS_PICK_BTN.format(link_has_os, os, "/".join(os_link))
+
+            #log(f"last oslink {os_link} relpath {relpath}")
+
+            # write the content to filestructure in tmpdir
+            abs_md_src_dir = path.normpath(path.join(self.tmp_dir, *relpath))
+            if not path.exists(abs_md_src_dir):
+                makedirs(abs_md_src_dir)
+
+            md_fn = path.join(*relpath, f"{md_name}.md")
+
+            new_file = File(md_fn, self.tmp_dir, path.abspath(build_dir), True)
+            with open(new_file.abs_src_path, "w") as file:
+                file.write(md_txt)
+
+            log(f"destdir {path.abspath(build_dir)} build_dir {build_dir} {md_fn}", vars(new_file), md_txt)
+
+            files.append(new_file)
+
+        #log("generated os_pick", [vars(x) for x in files._files if x.src_path.endswith('.md')])
 
     def on_config(self, config: Config):
         """
@@ -169,24 +158,68 @@ class UgentPlugin(BasePlugin):
         :return: Edited Config object.
         """
         self.os_pick = self.config["os_pick"]
-        self.yamls = self.config["yamls"]
+        self.oses = self.config["oses"]
+        self.osneutrallinks = self.config["osneutrallinks"]
+        self.os = self.config["os"]
+        self.site = self.config["site"]
         extras = config.get("extra")
         extras = {**extras, **self.macro_extras}
         config["extra"] = extras
         return config
 
+    def get_json_filename(self, os=None):
+        if os is None:
+            os = self.os
+        envvar = 'CUSTOM_PLUGIN_OS_PICK_TMPDIR'
+        tmpdir = environ.get(envvar, None)
+        if tmpdir and ospath.isdir(tmpdir):
+            # implies HPC files
+            fn = f"{tmpdir}/mdfiles_{self.site}_{os}.json"
+            return fn
+        raise Exception(f"No tmpdir {tmpdir} found for envvar {envvar}")
+
     def on_files(self, files: Files, config: Config):
         """
-        If the OS picking feature is set to True in the yaml config, then
-        appropriate files are dynamically generated and added to other
-        documentation files.
+        Manipulate files
+          - handle only/<site>
+          - for osneutrallinks, record all .md files in a json
+          - for os_pick, generate the indices for the the recorded osneutrallinks
         :param files: Original Files object.
         :param config: Original Config object.
         :return: Edited Files object.
         """
-        extras = config.get("extra")
+
+        # rewrite only/<site>
+        reg = re.compile(f"^only/{self.site}/", re.I)
+        remove = []
+        for idx, fil in enumerate(files):
+            if fil.src_path.startswith('only/'):
+                if reg.search(fil.src_path):
+                    # Cannot make a new File instance, don't know the dest_dir or other original args
+                    dest_dir = fil.abs_dest_path[:-len(fil.dest_path)]
+                    fil.dest_path = reg.sub('', fil.dest_path)
+                    fil.abs_dest_path = dest_dir + fil.dest_path
+                    fil.url = reg.sub('', fil.url)
+                else:
+                    remove.append(idx)
+        # reverse index removal
+        for idx in remove[::-1]:
+            files._files.pop(idx)
+
         if self.os_pick:
-            self.generate_os_pick_files(extras, files)
+            self.generate_os_pick_files(files, config["extra"]["build_dir"])
+
+        if self.osneutrallinks:
+            # track all md files in json
+            mds = []
+            for fil in files:
+                if fil.src_path.endswith('.md'):
+                    # store source and dest_path (to deal with only/ rewrites)
+                    mds.append([fil.src_path, fil.dest_path, fil.abs_dest_path])
+            with open(self.get_json_filename(), 'w') as fh:
+                json.dump(mds, fh)
+
+        #log("POST on_files", self.os_pick, [vars(x) for x in files._files if x.src_path.endswith('.md')])
         return files
 
     def on_post_page(self, output: str, page: Page, config: Config):
@@ -200,6 +233,8 @@ class UgentPlugin(BasePlugin):
         """
         if self.os_pick:
             output += JS_SCROLL_STR
+        if self.osneutrallinks:
+            output += JS_OS_NEUTRAL
         return output
 
     def on_post_build(self, config: Config):
@@ -207,4 +242,4 @@ class UgentPlugin(BasePlugin):
         Remove temporary directory used for generating OS picking files.
         :param config: Config object.
         """
-        shutil.rmtree(tmp_dir, ignore_errors=True)
+        shutil.rmtree(self.tmp_dir, ignore_errors=True)

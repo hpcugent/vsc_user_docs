@@ -1,0 +1,50 @@
+site_name: VSC User Documentation - {{ site }}
+docs_dir: os_pick/docs
+
+plugins:
+  - ugent:
+      os_pick: True
+      site: {{ site }}
+      oses:
+        - Linux
+        - macOS
+        - Windows
+  - macros:
+      include_yaml:
+        - extra/constants.yml
+        - extra/{{ lsite }}.yml
+  - section-index
+  - autorefs
+
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - abbr
+  - pymdownx.snippets:
+      auto_append:
+        - ./includes/abbreviations.md
+  - toc:
+      permalink: "#"
+      baselevel: 1
+      toc_depth: 3
+  - meta
+  - tables
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.keys
+
+
+theme:
+  name: material
+  language: en
+  features:
+    - search.suggest
+    - search.highlight
+  custom_dir: os_pick/overrides
+
+extra:
+  build_dir: build/HPC/{{ site }}

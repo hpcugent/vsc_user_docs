@@ -1,0 +1,38 @@
+site_name: VSC User Documentation
+docs_dir: landing_page
+
+
+plugins:
+  - ugent
+  - macros:
+  - section-index
+  - autorefs
+  # - spellcheck
+  # - mkdocs-nav-enhancements
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - abbr
+  - pymdownx.snippets:
+      auto_append:
+        - ./includes/abbreviations.md
+  - meta
+  - tables
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.keys
+
+theme:
+  name: material
+  language: en
+  features:
+    - search.suggest
+    - search.highlight
+
+
+extra:
+  build_dir: build

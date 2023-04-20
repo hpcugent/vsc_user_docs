@@ -1,0 +1,12 @@
+others:
+    - cloud
+    - linux-tutorial
+    - landing_page
+os:
+    - Linux
+    - Windows
+    - macOS
+
+sites:
+    - Gent
+    - Antwerpen
