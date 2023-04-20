@@ -5,10 +5,10 @@ plugins:
   - ugent:
       os_pick: True
       site: {{ site }}
-      yamls:
-        - mkdocs/hpc_{{ site }}_Linux.yml
-        - mkdocs/hpc_{{ site }}_macOS.yml
-        - mkdocs/hpc_{{ site }}_Windows.yml
+      oses:
+        - Linux
+        - macOS
+        - Windows
   - macros:
       include_yaml:
         - extra/constants.yml

@@ -4,6 +4,7 @@ import os.path
 import os
 import shutil
 import subprocess
+import tempfile
 from shutil import rmtree
 
 from jinja2 import Template
@@ -149,6 +150,8 @@ if __name__ == "__main__":
     build_dir, config = load_config(landing_page_yml)
 
     rmtree(build_dir, ignore_errors=True)
+    ospick_tmp_dir = tempfile.mkdtemp(prefix='build_os_pick_')
+    os.environ['CUSTOM_PLUGIN_OS_PICK_TMPDIR'] = ospick_tmp_dir
 
     try:
         build_pool(pre)
@@ -182,6 +185,13 @@ if __name__ == "__main__":
             shutil.move(assets_old, assets)
 
     except BuildException as exc:
-        if not args.nocleanup:
+        if args.nocleanup:
+            print(f"Not cleaning up build_dir {build_dir} and ospick_tmp_dir {ospick_tmp_dir}")
+        else:
             rmtree(build_dir, ignore_errors=True)
+            rmtree(ospick_tmp_dir, ignore_errors=True)
+
         raise exc
+
+    # always clean up on success
+    rmtree(ospick_tmp_dir, ignore_errors=True)
