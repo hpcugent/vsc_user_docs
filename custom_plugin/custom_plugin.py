@@ -107,6 +107,9 @@ class UgentPlugin(BasePlugin):
             if htmlfn != 'index.html':
                 raise Exception(f"Found unexpected md {md} {md_html} with filename {fn}")
 
+            # relpath, with md included (make a copy)
+            relpathmd = relpath[:]
+
             # name, without extension
             if relpath:
                 md_name = relpath.pop(-1)
@@ -123,8 +126,10 @@ class UgentPlugin(BasePlugin):
             oses = mds_oses[md]
 
             for os in oses:
-                os_link = "/".join([".."] * len(relpath) + [os] + relpath)
-                md_txt += OS_PICK_BTN.format(link_has_os, os, os_link)
+                # here, you must use the relpathmd to determine the correct links
+                #    add additional empty string to get url with traling / to avoid 301 server redirect
+                os_link = [".."] * len(relpathmd) + [os] + relpathmd + ['']
+                md_txt += OS_PICK_BTN.format(link_has_os, os, "/".join(os_link))
 
             #log(f"last oslink {os_link} relpath {relpath}")
 
@@ -139,7 +144,7 @@ class UgentPlugin(BasePlugin):
             with open(new_file.abs_src_path, "w") as file:
                 file.write(md_txt)
 
-            #log(f"destdir {path.abspath(build_dir)} build_dir {build_dir} {md_fn}", vars(new_file))
+            log(f"destdir {path.abspath(build_dir)} build_dir {build_dir} {md_fn}", vars(new_file), md_txt)
 
             files.append(new_file)
 
