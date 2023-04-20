@@ -25,7 +25,7 @@ JS_SCROLL_STR = """
             btn.addEventListener("click", function () {
                 const osmatch = this.href.match(/^(.*?)\/(Linux|macOS|Windows)\//i)
                 if (osmatch !== null) {
-                    console.log("match this button OS onclick", osmatch)
+                    //console.log("match this button OS onclick", osmatch)
                     localStorage.setItem("select_OS", JSON.stringify([osmatch[1], osmatch[2]]))
                 }
                 const hash = window.location.hash.substring(1)
@@ -50,7 +50,7 @@ JS_OS_NEUTRAL = """
             var anchors = Array.from(document.getElementsByClassName(classes[i]))
             anchors.forEach(
                 function (anch) {
-                    console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
                     if (!!anch.href) {
                         anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
                     }
