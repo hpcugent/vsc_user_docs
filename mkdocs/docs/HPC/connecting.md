@@ -758,4 +758,4 @@ created.
 
 ### Fast file transfer for large datasets
 
-See [the section on `rsync` in chapter 5 of the Linux intro manual](../../../../linux-tutorial/uploading_files/#copying-faster-with-rsync).
+See [the section on `rsync` in chapter 5 of the Linux intro manual](../linux-tutorial/uploading_files/#copying-faster-with-rsync).
