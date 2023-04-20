@@ -28,6 +28,7 @@ nav:
       - HPC-UGent GPU clusters: gpu_{{ lsite }}.md
       - HPC-UGent interactive and debug cluster: interactive_{{ lsite }}.md
       - Cron scripts: crontab_{{ lsite }}.md
+      - Linux tutorial: only/gent/linux-tutorial/getting_started.md
 {% endif %}
   - Software-specific Best Practices:
       - Apptainer/Singularity: apptainer.md
