@@ -512,48 +512,48 @@
                 
 
 
-<h1 id="orchestration-using-terraform">Orchestration Using <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr><a class="headerlink" href="#orchestration-using-terraform" title="Permanent link">#</a></h1>
-<p>HashiCorp <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> <a href="https://www.terraform.io/">https://www.terraform.io/</a> is an
-infrastructure as code tool (IaC), similar to <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr>
-<abbr title="Heat is the OpenStack orchestration service, which can manage multiple composite cloud applications using templates, through both an OpenStack-native REST API and a CloudFormation-compatible Query API.">Heat</abbr> orchestrator
+<h1 id="orchestration-using-terraform">Orchestration Using Terraform<a class="headerlink" href="#orchestration-using-terraform" title="Permanent link">#</a></h1>
+<p>HashiCorp Terraform <a href="https://www.terraform.io/">https://www.terraform.io/</a> is an
+infrastructure as code tool (IaC), similar to OpenStack
+Heat orchestrator
 (See chapter <a href="../heat_templates/#orchestration-using-heat">using heat</a>
 ). Users can deploy a data center
 infrastructure using a declarative configuration language known as
 HashiCorp Configuration Language (HCL), or using JSON.
-<abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> has
-some advantages over <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> <abbr title="Heat is the OpenStack orchestration service, which can manage multiple composite cloud applications using templates, through both an OpenStack-native REST API and a CloudFormation-compatible Query API.">Heat</abbr> service. It is has a simple syntax, it
+Terraform has
+some advantages over OpenStack Heat service. It is has a simple syntax, it
 can provision virtual infrastructures across multiple cloud providers
-(not only <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr>) and it provides important features not supported by
-<abbr title="Heat is the OpenStack orchestration service, which can manage multiple composite cloud applications using templates, through both an OpenStack-native REST API and a CloudFormation-compatible Query API.">Heat</abbr> at this
+(not only OpenStack) and it provides important features not supported by
+Heat at this
 moment, like network port forwarding rules (see
 <a href="../configure_instances/#floating-ip-port-forwarding">floating-ip</a>).
-This means that with <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr>, scripts
+This means that with Terraform, scripts
 like <code>neutron_port_forward</code> (see
 <a href="../configure_instances/#floating-ip-port-forwarding">port forwarding script</a>
 ) are no longer needed.
-<abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> is
+Terraform is
 currently one of the most popular infrastructure automation tools
 available. VSC Cloud also provides some template examples that could be
 used to deploy virtual infrastructures within VSC Tier-1 Cloud in an
 automated way
 (<a href="https://github.com/hpcugent/openstack-templates/tree/master/terraform">https://github.com/hpcugent/openstack-templates/tree/master/terraform</a>).</p>
-<p><abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr>
-client is available for different Operating Systems like Windows, <abbr title="An operating system, similar to UNIX.">Linux</abbr>
+<p>Terraform
+client is available for different Operating Systems like Windows, Linux
 or macOS (<a href="https://www.terraform.io/downloads">https://www.terraform.io/downloads</a>) but it is also available
-from UGent <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr> <em>login.hpc.ugent.be</em>.</p>
-<h2 id="create-application-credentials-for-terraform">Create application credentials for <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr><a class="headerlink" href="#create-application-credentials-for-terraform" title="Permanent link">#</a></h2>
-<p><abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr>
-uses <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> application credentials to authenticate to VSC Cloud
+from UGent login node <em>login.hpc.ugent.be</em>.</p>
+<h2 id="create-application-credentials-for-terraform">Create application credentials for Terraform<a class="headerlink" href="#create-application-credentials-for-terraform" title="Permanent link">#</a></h2>
+<p>Terraform
+uses OpenStack application credentials to authenticate to VSC Cloud
 Tier-1 public API. It is a good practice to generate a new application
 credential just to be used with Terraformframework. The process is the same
 described in section
 <a href="../access/#application-credentials">application credentials</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Make sure you download the new application credential as <abbr title="A human-readable text-based data serialization format.">yaml</abbr> file
+<p>Make sure you download the new application credential as yaml file
 instead of openRC.</p>
 </div>
-<p>At this point you should have a <em>clouds.<abbr title="A human-readable text-based data serialization format.">yaml</abbr></em> text file with these lines:</p>
+<p>At this point you should have a <em>clouds.yaml</em> text file with these lines:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># This is a clouds.yaml file, which can be used by OpenStack tools as a source</span>
 <span class="c1"># of configuration on how to connect to a cloud. If this is your only cloud,</span>
 <span class="c1"># just put this file in ~/.config/openstack/clouds.yaml and tools like</span>
@@ -581,37 +581,37 @@ clouds:
     identity_api_version: <span class="m">3</span>
     auth_type: <span class="s2">&quot;v3applicationcredential&quot;</span>
 </code></pre></div>
-<p>As the file comments state, you should copy the current clouds.<abbr title="A human-readable text-based data serialization format.">yaml</abbr> to
-your VSC <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr> <strong>$HOME</strong> <em>login.hpc.ugent.be:
-~/.config/openstack/clouds.<abbr title="A human-readable text-based data serialization format.">yaml</abbr></em>, or locally if you have installed
-<abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> in
-your own laptop or computer. <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> will use this file to authenticate to
-<abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> API automatically.</p>
-<h2 id="getting-terraform-examples">Getting <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> examples<a class="headerlink" href="#getting-terraform-examples" title="Permanent link">#</a></h2>
-<p>You can connect to UGent <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr> <code>login.hpc.ugent.be</code> to use
-terraform. Login to the <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr> with your VSC account first:</p>
+<p>As the file comments state, you should copy the current clouds.yaml to
+your VSC login node <strong>$HOME</strong> <em>login.hpc.ugent.be:
+~/.config/openstack/clouds.yaml</em>, or locally if you have installed
+Terraform in
+your own laptop or computer. Terraform will use this file to authenticate to
+OpenStack API automatically.</p>
+<h2 id="getting-terraform-examples">Getting Terraform examples<a class="headerlink" href="#getting-terraform-examples" title="Permanent link">#</a></h2>
+<p>You can connect to UGent login node <code>login.hpc.ugent.be</code> to use
+terraform. Login to the login node with your VSC account first:</p>
 <div class="highlight"><pre><span></span><code>ssh -A vscxxxxx@login.hpc.ugent.be
 </code></pre></div>
-<p>If this is the first time using <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr>, download the VSC <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr>
+<p>If this is the first time using Terraform, download the VSC Terraform
 examples from github from
 <a href="https://github.com/hpcugent/openstack-templates">https://github.com/hpcugent/openstack-templates</a>:</p>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/hpcugent/openstack-templates
 </code></pre></div>
 <p>Make sure you have <em><code>~/.config/openstack/clouds.yaml</code></em> available from
-the <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr> (see previous <a href="#create-application-credentials-for-terraform">section</a>).</p>
+the login node (see previous <a href="#create-application-credentials-for-terraform">section</a>).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Do not <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr> your application's credential file <code>clouds.yaml</code> or put this
+<p>Do not share your application's credential file <code>clouds.yaml</code> or put this
 file in a public place.</p>
 </div>
 <div class="highlight"><pre><span></span><code>chmod <span class="m">600</span> ~/.config/openstack/clouds.yaml
 </code></pre></div>
-<h2 id="generate-terraform-template-variables">Generate <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> template variables<a class="headerlink" href="#generate-terraform-template-variables" title="Permanent link">#</a></h2>
-<p><abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr>
+<h2 id="generate-terraform-template-variables">Generate Terraform template variables<a class="headerlink" href="#generate-terraform-template-variables" title="Permanent link">#</a></h2>
+<p>Terraform
 requires some variables to know which resources are available from the
 cloud provider for the user or project. You do not have to include these
 variables manually, we have included a script to gather these variable
-IDs automatically. From the <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> directory cloned from git in the
+IDs automatically. From the Terraform directory cloned from git in the
 previous step (see previous
 <a href="#getting-terraform-examples">section</a>), go to the scripts directory:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~/openstack-templates/terraform/scripts
@@ -620,11 +620,11 @@ previous step (see previous
 <div class="highlight"><pre><span></span><code>./modify_variable.sh
 </code></pre></div>
 <p>This step will take some seconds. The script will contact the VSC
-<abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> public API to gather all the resources available for your
+OpenStack public API to gather all the resources available for your
 project and fetch all the resource's IDs. Usually you only have to run
 this script once, unless something was changed/updated for your
 project's resources (like a new network or floating IPs) or if you want
-to deploy a new <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> template from <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr>.</p>
+to deploy a new Terraform template from scratch.</p>
 <p>You will see some messages like this (IDs and IPs may change depending
 on your project's resources).</p>
 <div class="highlight"><pre><span></span><code><span class="go">Variable OS_CLOUD is not set. Using openstack as a value.</span>
@@ -650,7 +650,7 @@ on your project's resources).</p>
 <span class="gp gp-VirtualEnv">(myvm-vsc_net)</span> <span class="go">ssh -p 54872 &lt;user&gt;@193.190.80.3</span>
 <span class="gp gp-VirtualEnv">(myvm-nfs_share)</span> <span class="go">ssh -p 51280 &lt;user&gt;@193.190.80.3</span>
 </code></pre></div>
-<p>After this step your <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> templates will be ready to be deployed.</p>
+<p>After this step your Terraform templates will be ready to be deployed.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Please note that the script shows you the ssh command to connect to each
@@ -662,10 +662,10 @@ VM, for instance for CentOS images is <em>centos</em>, for Ubuntu images is
 case the system will show you a message with the user that you should
 use.</p>
 </div>
-<h2 id="modify-default-terraform-modules">Modify default <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr><a class="headerlink" href="#modify-default-terraform-modules" title="Permanent link">#</a></h2>
+<h2 id="modify-default-terraform-modules">Modify default Terraform modules<a class="headerlink" href="#modify-default-terraform-modules" title="Permanent link">#</a></h2>
 <p>In <a href="#getting-terraform-examples">section</a> we have downloaded the
-<abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> module examples from the VSC repository. If you deploy these
-<abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> as it is it will deploy several VM examples by default such as:</p>
+Terraform module examples from the VSC repository. If you deploy these
+modules as it is it will deploy several VM examples by default such as:</p>
 <ol>
 <li>
 <p><strong>myvm:</strong> simple VM with 20Gb persistent volume and ssh access with port
@@ -680,7 +680,7 @@ use.</p>
     interface (only available for some projects).</p>
 </li>
 <li>
-<p><strong>myvm-nfs_share:</strong> Similar to the first example but it creates a NFS <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr> filesystem
+<p><strong>myvm-nfs_share:</strong> Similar to the first example but it creates a NFS share filesystem
     and it mounts it during instantiation (only available for some
     projects).</p>
 </li>
@@ -690,7 +690,7 @@ keep the required module and comment out the rest. You can do this from
 environment directory:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~/openstack-templates/terraform/environment
 </code></pre></div>
-<p>And edit <em><code>main.tf</code></em> <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> file with any text editor like vim or
+<p>And edit <em><code>main.tf</code></em> Terraform file with any text editor like vim or
 nano. If you want to deploy just the simple VM (first example) only keep
 these lines (remenber variable IDs may change depending on your
 project's resources):</p>
@@ -709,32 +709,32 @@ project's resources):</p>
 }
 </code></pre></div>
 <p>And remove or comment out the rest of the lines. In the previous example
-<abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> will deploy a simple VM and use 20Gb for a persistent volume
+Terraform will deploy a simple VM and use 20Gb for a persistent volume
 and port 56469 to connect via ssh (it also creates all required security
 groups).</p>
-<h2 id="deploy-terraform-templates">Deploy <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> templates<a class="headerlink" href="#deploy-terraform-templates" title="Permanent link">#</a></h2>
+<h2 id="deploy-terraform-templates">Deploy Terraform templates<a class="headerlink" href="#deploy-terraform-templates" title="Permanent link">#</a></h2>
 <p>If you have followed the previous steps now you can init and deploy your
 infrastucture to Tier-1 VSC cloud.</p>
-<p>You have to inititate <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> first, if you didnt have deployed any
+<p>You have to inititate Terraform first, if you didnt have deployed any
 template yet do this just once.</p>
 <p>Move to environment directory first:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~/openstack-templates/terraform/environment
 </code></pre></div>
 <p>This command performs several different initialization steps in order to
-prepare the current working directory for use with <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr>:</p>
+prepare the current working directory for use with Terraform:</p>
 <div class="highlight"><pre><span></span><code>terraform init
 </code></pre></div>
-<p>Now you can check and review your <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> plan, from the same
+<p>Now you can check and review your Terraform plan, from the same
 directory:</p>
 <div class="highlight"><pre><span></span><code>terraform plan
 </code></pre></div>
 <p>You will see a list of the resources required to deploy your
-infrastructure, <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> also checks if there is any systax error in
+infrastructure, Terraform also checks if there is any systax error in
 your templates. Your infrastructure is not deployed yet, review the plan
 and then just deploy it to VSC Tier-1 Cloud running:</p>
 <div class="highlight"><pre><span></span><code>terraform apply
 </code></pre></div>
-<p><abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> will show your plan again and you will see this message:</p>
+<p>Terraform will show your plan again and you will see this message:</p>
 <div class="highlight"><pre><span></span><code><span class="go">..</span>
 <span class="go">..</span>
 <span class="go">Do you want to perform these actions?</span>
@@ -743,7 +743,7 @@ and then just deploy it to VSC Tier-1 Cloud running:</p>
 <span class="go">Enter a value:</span>
 </code></pre></div>
 <p>Type <strong>yes</strong> and press enter and wait a few seconds or minutes. If
-everything is correct and if you have enough quota <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> will show
+everything is correct and if you have enough quota Terraform will show
 you a message after creating all the required resources.</p>
 <div class="highlight"><pre><span></span><code><span class="go">..</span>
 <span class="go">..</span>
@@ -760,13 +760,13 @@ you a message after creating all the required resources.</p>
 all the files within the environment directory:
 <code>~/openstack-templates/terraform/environment</code></p>
 </div>
-<p><abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> generates several files in this directory to keep track of any
+<p>Terraform generates several files in this directory to keep track of any
 change in your infrastructure. If for some reason you lost or remove
-these files you will not able to modify or change the current <abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr>
-plan (only directly from <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr>).</p>
+these files you will not able to modify or change the current Terraform
+plan (only directly from OpenStack).</p>
 <p>You can also modify and add more resources for the current templates.
 This task is out of the scope of this document, please refer to official
-<abbr title="HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.">Terraform</abbr> documentation to add you own changes
+Terraform documentation to add you own changes
 <a href="https://www.terraform.io/docs">https://www.terraform.io/docs</a> or ask to VSC Cloud admins via email at
 <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#108;&#111;&#117;&#100;&#64;&#118;&#115;&#99;&#101;&#110;&#116;&#114;&#117;&#109;&#46;&#98;&#101;">&#99;&#108;&#111;&#117;&#100;&#64;&#118;&#115;&#99;&#101;&#110;&#116;&#114;&#117;&#109;&#46;&#98;&#101;</a>.</p>
 

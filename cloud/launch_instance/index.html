@@ -786,7 +786,7 @@ you could have two instances with the same host name.</p>
 <h4 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h4>
 <p>You can assign a brief description of the virtual machine.</p>
 <h4 id="availability-zone">Availability Zone<a class="headerlink" href="#availability-zone" title="Permanent link">#</a></h4>
-<p>Large-scale <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> systems may consist of multiple
+<p>Large-scale OpenStack systems may consist of multiple
 availability zones, which are groups of hypervisors
 connected to different power sources. By assigning instances
 to different availability zones, users can protect
@@ -856,7 +856,7 @@ to launch the instance.</p>
 instance launches.</p>
 <h3 id="server-groups-tab">Server Groups tab<a class="headerlink" href="#server-groups-tab" title="Permanent link">#</a></h3>
 <p>You can organize instances into groups with a scheduling
-policy. With an "affinity" policy, <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> will try to
+policy. With an "affinity" policy, OpenStack will try to
 schedule those instances on the same hypervisors, which is
 useful for instances that need to communicate with each other a
 lot. With an "anti-affinity" policy, instances will be scheduled
@@ -870,7 +870,7 @@ control over which hypervisor your instances are scheduled on.</p>
 <ul>
 <li>Click <strong>Launch Instance</strong></li>
 </ul>
-<p>The instance starts on a <abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr> in the cloud.</p>
+<p>The instance starts on a compute node in the cloud.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you did not provide a key pair, security groups, or rules, users can
@@ -879,13 +879,13 @@ the instance is not possible without an ICMP rule configured.</p>
 </div>
 <p>You can also launch an instance from the Images or Volumes category when
 you launch an instance from an image or a volume respectively.</p>
-<p>When you launch an instance from an image, <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> creates a local
-copy of the image on the <abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr> where the instance starts.</p>
+<p>When you launch an instance from an image, OpenStack creates a local
+copy of the image on the compute node where the instance starts.</p>
 <p>For details on creating images, see <a href="https://docs.openstack.org/image-guide/create-images-manually.html"><em>Creating images
 manually</em></a>
-in the <em><abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> Virtual Machine Image Guide</em>.</p>
-<h2 id="connect-to-an-instance-using-ssh">Connect to an instance using <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr><a class="headerlink" href="#connect-to-an-instance-using-ssh" title="Permanent link">#</a></h2>
-<p>Before you can connect to an instance using <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr>, you must set up a
+in the <em>OpenStack Virtual Machine Image Guide</em>.</p>
+<h2 id="connect-to-an-instance-using-ssh">Connect to an instance using SSH<a class="headerlink" href="#connect-to-an-instance-using-ssh" title="Permanent link">#</a></h2>
+<p>Before you can connect to an instance using SSH, you must set up a
 floating IP for it, as discussed in
 section <a href="../configure_instances/#floating-ip">floating-ip</a>. Recall
 that only ports 50000 to 60000 of the floating IP's can be directly reached from
@@ -895,24 +895,24 @@ outside the UGent network.</p>
 <p>When you try to connect to a new instance using a port that was
 previously forwarded to a different instance --- either due to a change
 in the port forwarding configuration, or because an old instance was
-deleted and replaced --- your <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> client will show an error message
+deleted and replaced --- your SSH client will show an error message
 because the "host key" of the new instance doesn't match the known
 previous key. Section explains how to handle such errors.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you want to access ports outside the public range, you'll need to
-connect to the UGent <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr> <em>login.hpc.ugent.be</em> first, and hop to
+connect to the UGent login node <em>login.hpc.ugent.be</em> first, and hop to
 your instance from there. To make this work without storing the required
 private key for the instance in your VSC storage space, you need to set
-up an <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> agent with key forwarding locally, i.e. on the machine where
+up an SSH agent with key forwarding locally, i.e. on the machine where
 you store the private key of an authorized keypair for the instance.
-Section 2.1.4 of the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> introduction explains how to set this up
+Section 2.1.4 of the HPC introduction explains how to set this up
 (<a href="https://hpcugent.github.io/vsc_user_docs">hpcugent.github.io/vsc_user_docs</a>).</p>
 </div>
 <ul>
 <li>(<em>Only if using a port blocked by the UGent firewall, see the note
-    above:</em>) Use your VSC account to connect to the UGent <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr>,
+    above:</em>) Use your VSC account to connect to the UGent login node,
     using the <code>ssh -A</code> option to enable agent forwarding:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>ssh -A vsc12345@login.hpc.ugent.be
@@ -924,43 +924,43 @@ Section 2.1.4 of the <abbr title="High Performance Computing, high performance c
 </li>
 <li>
 <p>Connect to the instance. Use OpenSSH's <code>-p</code> option to specify the
-    port where the instance's <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> server can be reached, e.g. for port
+    port where the instance's SSH server can be reached, e.g. for port
     50022:</p>
 </li>
 </ul>
 <div class="highlight"><pre><span></span><code>ssh -A -p <span class="m">50022</span> ubuntu@193.190.85.40
 </code></pre></div>
-<p>When you run the above command, your <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> client may display warnings
+<p>When you run the above command, your SSH client may display warnings
 or error messages. The section Host Keys <a href="#host-keys">Host Keys</a>
 explains the meaning of these messages and how you should deal with them.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The images we provide do not allow <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> logins for the root user.
+<p>The images we provide do not allow SSH logins for the root user.
 There is a default user instead, who can get administrative
 privileges using <code>sudo</code>. In our example, we have used the username
 <code>ubuntu</code> for Ubuntu images. Attempting to log in as root will return
 an error message with the proper user name.</p>
 </div>
 <h3 id="host-keys">Host keys<a class="headerlink" href="#host-keys" title="Permanent link">#</a></h3>
-<p>When connecting to instances using <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr>, you will sometimes see warnings
+<p>When connecting to instances using SSH, you will sometimes see warnings
 or errors related to "host keys". This section briefly explains the
 meaning of those errors, and how to deal with them.</p>
 <p>When you try to connect to an instance, you use the private key of your
-<abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> keypair to prove your identity to that instance. If you do not have
+SSH keypair to prove your identity to that instance. If you do not have
 access to the right secret key, you can not prove your identity, at
-which point the your instance's <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> server will deny access. In the same
+which point the your instance's SSH server will deny access. In the same
 way, the server must prove its own identity to you, using its own
 keypair or "host key". Without such a verification procedure, third
 parties on the network between you and the instance could perform a
 so-called man-in-the-middle-attack, where they intercept the
 communication between you and the server you want to reach and steal
 valuable information.</p>
-<p>To prevent such man-in-the-middle attacks, the <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> client on your system
+<p>To prevent such man-in-the-middle attacks, the SSH client on your system
 stores the host key for every IP address you have connected to, and
 verifies the key the next time you try to connect to that address. If
 all goes well, this check is silently performed in the background, but
 there are a number of situations where the check fails. In this case,
-you have to look up the host key of your instance in the <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr>
+you have to look up the host key of your instance in the OpenStack
 dashboard to verify that the connection is secure.</p>
 <h4 id="looking-up-an-instances-host-key">Looking up an instance's host key<a class="headerlink" href="#looking-up-an-instances-host-key" title="Permanent link">#</a></h4>
 <p>In order to verify a host key, it suffices to compare the key's
@@ -982,7 +982,7 @@ for an instance as follows:</p>
 <p>Click . You are taken to a new page with a long text listing.</p>
 </li>
 <li>
-<p>Search for the words <em>-----BEGIN <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> HOST KEY FINGERPRINTS-----</em> to
+<p>Search for the words <em>-----BEGIN SSH HOST KEY FINGERPRINTS-----</em> to
     find the log file section containing the host key fingerprints, for
     example:</p>
 </li>
@@ -1008,13 +1008,13 @@ for an instance as follows:</p>
 sections describe the most common cases where you'll need these
 fingerprints.</p>
 <p>The following examples show output and commands for OpenSSH, the most
-common client on <abbr title="An operating system, similar to UNIX.">Linux</abbr> and macOS. If you are working from a windows
+common client on Linux and macOS. If you are working from a windows
 system using using PuTTY, we refer to PuTTY section of the windows version of the
-<a href="https://hpcugent.github.io/vsc_user_docs/HPC/Gent/Windows/account/#get-putty-a-free-telnetssh-client">introduction to <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></a>
+<a href="https://hpcugent.github.io/vsc_user_docs/HPC/Gent/Windows/account/#get-putty-a-free-telnetssh-client">introduction to HPC</a>
 for the corresponding warning messages.</p>
 <h4 id="connecting-for-the-first-time">Connecting for the first time<a class="headerlink" href="#connecting-for-the-first-time" title="Permanent link">#</a></h4>
 <p>The first time you connect to a new ip address:port combination, your
-<abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> client does not know the host key for this address, and therefore it
+SSH client does not know the host key for this address, and therefore it
 can't verify the identity of the server. When using OpenSSH, the warning
 looks as follows (again using address 193.190.85.40 and port 50022 as an
 example):</p>
@@ -1033,7 +1033,7 @@ want to continue connecting (yes/no)?
 <p>Verify that the fingerprint you find in the Dashboard matches the
     fingerprint shown in the warning message.</p>
 <p>In this example, we see that the ECDSA key fingerprint reported by
-the <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> client matches the fingerprint of our instance from the
+the SSH client matches the fingerprint of our instance from the
 previous section, namely</p>
 <p><em>SHA256:nyujUIF37c674FPSkDdz0xgAU6S39UWbmMzBPmdmCmg</em></p>
 </li>
@@ -1139,12 +1139,12 @@ resume, suspend, soft or hard reboot, or terminate it.</p>
 </ol>
 <h3 id="difference-between-suspend-pause-shelve-shut-off-delete">Difference between <em>suspend</em>, <em>pause</em>, <em>shelve</em>, <em>shut off</em>, <em>delete</em><a class="headerlink" href="#difference-between-suspend-pause-shelve-shut-off-delete" title="Permanent link">#</a></h3>
 <p><strong>Pause</strong></p>
-<p>Stores the state of the VM in the (RAM) <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>.</p>
+<p>Stores the state of the VM in the (RAM) memory.</p>
 <p><strong>Suspend</strong></p>
-<p>Stores the state of the VM on the disk, all <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> is written to
+<p>Stores the state of the VM on the disk, all memory is written to
 disk, and the server is stopped.</p>
 <p><strong>Shut off</strong></p>
-<p>The server is powered down by the user, either through the <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr>
+<p>The server is powered down by the user, either through the OpenStack
 Compute API, or from within the server by issuing a <em>shutdown -h</em>
 command. In this state the user retains all computational resources
 associated with the VM. The instance can be later restarted.</p>
@@ -1154,15 +1154,15 @@ depending on the value of the <em>shelved_offload_time</em> config option,
 the instance is either deleted from the hypervisor (0), never
 deleted (-1), or deleted after some period of time (&gt; 0). Shelve
 preserves all associated data and VM resources but does not retain
-anything in <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>.</p>
+anything in memory.</p>
 <p><strong>Delete</strong></p>
 <p>The VM is deleted and removed from
-<abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> together with any associated processes and resources.
+OpenStack together with any associated processes and resources.
 However, for instances backed by a persistent volume, this volume is not deleted.
 When such an instance is deleted, you can restore it by launching a
 new instance from the volume, or delete the volume as well (see
 section <a href="../manage_volumes/#create-and-manage-volumes">delete a volume</a>).</p>
-<p>For more details see the <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> documentation on <a href="https://docs.openstack.org/nova/latest/reference/vm-states.html"><em>Virtual Machine
+<p>For more details see the OpenStack documentation on <a href="https://docs.openstack.org/nova/latest/reference/vm-states.html"><em>Virtual Machine
 States and
 Transitions</em></a>
 and <a href="https://developer.openstack.org/api-guide/compute/server_concepts.html"><em>Server

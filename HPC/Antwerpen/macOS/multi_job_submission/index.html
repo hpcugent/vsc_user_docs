@@ -587,6 +587,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -612,12 +640,132 @@
       
       
         <label class="md-nav__link" for="__nav_15">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_16" type="checkbox" id="__nav_16" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16">
           Appendices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Appendices" data-md-level="1">
-        <label class="md-nav__title" for="__nav_15">
+        <label class="md-nav__title" for="__nav_16">
           <span class="md-nav__icon md-icon"></span>
           Appendices
         </label>
@@ -794,13 +942,13 @@ with (ii) different input files.</p>
 comma-separated file. The users want to run their job once for each
 instance of the parameter values.</p>
 <p>One option could be to launch a lot of separate individual small jobs
-(one for each parameter) on the <abbr title="A group of compute nodes.">cluster</abbr>, but this is not a good idea.
-The <abbr title="A group of compute nodes.">cluster</abbr> scheduler isn't meant to deal with tons of small jobs. Those
+(one for each parameter) on the cluster, but this is not a good idea.
+The cluster scheduler isn't meant to deal with tons of small jobs. Those
 huge amounts of small jobs will create a lot of overhead, and can slow
-down the whole <abbr title="A group of compute nodes.">cluster</abbr>. It would be better to bundle those jobs in
+down the whole cluster. It would be better to bundle those jobs in
 larger sets. In TORQUE, an experimental feature known as "<em>job arrays</em>"
 existed to allow the creation of multiple jobs with one <em>qsub</em> command,
-but is was not supported by <abbr title="Moab is a job scheduler, which allocates resources for jobs that are requesting resources.">Moab</abbr>, the current scheduler.</p>
+but is was not supported by Moab, the current scheduler.</p>
 <p>The "<strong>Worker framework</strong>" has been developed to address this issue.</p>
 <p>It can handle many small jobs determined by:</p>
 <dl>
@@ -862,7 +1010,7 @@ instances, e.g., he wants to run the program on 100 instances of
 temperature, pressure and volume. The 100 parameter instances can be
 stored in a comma separated value file (.csv) that can be generated
 using a spreadsheet program such as Microsoft Excel or RDBMS or just by
-hand using any text editor (do <strong>not</strong> use a word <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr> such as Microsoft
+hand using any text editor (do <strong>not</strong> use a word processor such as Microsoft
 Word). The first few lines of the file "<em>data.csv</em>" would look like:</p>
 <pre><code>$ <b>more data.csv</b>
 temperature, pressure, volume
@@ -899,16 +1047,16 @@ follows:</p>
     being specified on the first line of the "<em>data.csv</em>" file;</p>
 </li>
 <li>
-<p>the number of processors per <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> has been increased to 8 (i.e.,
+<p>the number of processors per node has been increased to 8 (i.e.,
     ppn=1 is replaced by ppn=8);</p>
 </li>
 <li>
-<p>the <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> has been increased to 4 hours (i.e., <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>=00:15:00
-    is replaced by <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>=04:00:00).</p>
+<p>the walltime has been increased to 4 hours (i.e., walltime=00:15:00
+    is replaced by walltime=04:00:00).</p>
 </li>
 </ol>
-<p>The <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> is calculated as follows: one calculation takes 15 minutes,
-so 100 calculations take 1500 minutes on one <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr>. However, this job will
+<p>The walltime is calculated as follows: one calculation takes 15 minutes,
+so 100 calculations take 1500 minutes on one CPU. However, this job will
 use 8 CPUs, so the 100 calculations will be done in 1500/8 = 187.5
 minutes, i.e., 4 hours to be on the safe side.</p>
 <p>The job can now be submitted as follows (to check which <code>worker</code> module
@@ -961,9 +1109,9 @@ array, where <em>range</em> is a range of numbers (e.g., <em>1-100</em> or <em>2
 <pre><code>$ <b>qsub -t 1-100 my_prog.pbs</b></code></pre>
 
 <p>The effect was that rather than 1 job, the user would actually submit
-100 jobs to the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr> system. This was a popular feature of TORQUE, but
+100 jobs to the queue system. This was a popular feature of TORQUE, but
 as this technique puts quite a burden on the scheduler, it is not
-supported by <abbr title="Moab is a job scheduler, which allocates resources for jobs that are requesting resources.">Moab</abbr> (the current job scheduler).</p>
+supported by Moab (the current job scheduler).</p>
 <p>To support those users who used the feature and since it offers a
 convenient workflow, the "worker framework" implements the idea of "job
 arrays" in its own way.</p>
@@ -1034,8 +1182,8 @@ with minimal modifications to the job script:</p>
     and</p>
 </li>
 <li>
-<p>the <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> has been modified (<abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>=00:15:00 is replaced by
-    <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>=04:00:00).</p>
+<p>the walltime has been modified (walltime=00:15:00 is replaced by
+    walltime=04:00:00).</p>
 </li>
 </ol>
 <p>The job is now submitted as follows:</p>
@@ -1137,13 +1285,13 @@ $ <b>cat all_output.txt</b>
 $ <b>rm -r -f ./output/</b></code></pre>
 
 <p>Note that the time taken for executing the prologue and the epilogue
-should be added to the job's total <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>.</p>
+should be added to the job's total walltime.</p>
 <h2 id="some-more-on-the-worker-framework">Some more on the Worker Framework<a class="headerlink" href="#some-more-on-the-worker-framework" title="Permanent link">#</a></h2>
 <h3 id="using-worker-efficiently">Using Worker efficiently<a class="headerlink" href="#using-worker-efficiently" title="Permanent link">#</a></h3>
-<p>The "Worker Framework" is implemented using <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>, so it is not restricted
+<p>The "Worker Framework" is implemented using MPI, so it is not restricted
 to a single compute nodes, it scales well to multiple nodes. However,
 remember that jobs requesting a large number of nodes typically spend
-quite some time in the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr>.</p>
+quite some time in the queue.</p>
 <p>The "Worker Framework" will be effective when</p>
 <ol>
 <li>
@@ -1192,7 +1340,7 @@ volume.</p>
 <p>Also note that "timedrun" is in fact offered in a module of its own, so
 it can be used outside the Worker framework as well.</p>
 <h3 id="resuming-a-worker-job">Resuming a Worker job<a class="headerlink" href="#resuming-a-worker-job" title="Permanent link">#</a></h3>
-<p>Unfortunately, it is not always easy to estimate the <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> for a job,
+<p>Unfortunately, it is not always easy to estimate the walltime for a job,
 and consequently, sometimes the latter is underestimated. When using the
 Worker framework, this implies that not all work items will have been
 processed. Worker makes it very easy to resume such a job without having
@@ -1204,7 +1352,7 @@ work items had ID "445948".</p>
 <p>This will submit a new job that will start to work on the work items
 that were not done yet. Note that it is possible to change almost all
 job parameters when resuming, specifically the requested resources such
-as the number of cores and the <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>.</p>
+as the number of cores and the walltime.</p>
 <pre><code>$ <b>wresume -l walltime=1:30:00 -jobid 433253.leibniz}</b></code></pre>
 
 <p>Work items may fail to complete successfully for a variety of reasons,
@@ -1346,3 +1494,18 @@ a single value.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump bac
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

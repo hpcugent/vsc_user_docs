@@ -812,6 +812,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-tutorial/getting_started/" class="md-nav__link">
+        Linux tutorial
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1457,8 +1471,8 @@ date
 ./file1.py
 <span class="nb">echo</span> End Job
 </code></pre></div></p>
-<h2 id="where-to-store-your-data-on-the-hpc">Where to store your data on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr><a class="headerlink" href="#where-to-store-your-data-on-the-hpc" title="Permanent link">#</a></h2>
-<p>The <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> <abbr title="A group of compute nodes.">cluster</abbr> offers their users several locations to store their data.
+<h2 id="where-to-store-your-data-on-the-hpc">Where to store your data on the HPC<a class="headerlink" href="#where-to-store-your-data-on-the-hpc" title="Permanent link">#</a></h2>
+<p>The HPC cluster offers their users several locations to store their data.
 Most of the data will reside on the shared storage system, but all
 compute nodes also have their own (small) local disk.</p>
 <h3 id="pre-defined-user-directories">Pre-defined user directories<a class="headerlink" href="#pre-defined-user-directories" title="Permanent link">#</a></h3>
@@ -1566,12 +1580,12 @@ variables that have been created.</p>
 <p>We elaborate more on the specific function of these locations in the
 following sections.</p>
 <p>Note: <code>$VSC_SCRATCH_KYUKON</code> and <code>$VSC_SCRATCH</code> are the same directories
-("kyukon" is the name of the storage <abbr title="A group of compute nodes.">cluster</abbr> where the default shared
-<abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> filesystem is hosted).</p>
+("kyukon" is the name of the storage cluster where the default shared
+scratch filesystem is hosted).</p>
 <p>For documentation about VO directories, see <a href="./#vo-directories">the section on VO directories</a>.</p>
 <h3 id="your-home-directory-vsc_home">Your home directory ($VSC_HOME)<a class="headerlink" href="#your-home-directory-vsc_home" title="Permanent link">#</a></h3>
 <p>Your home directory is where you arrive by default when you login to the
-<abbr title="A group of compute nodes.">cluster</abbr>. Your shell refers to it as "~" (tilde), and its absolute path is
+cluster. Your shell refers to it as "~" (tilde), and its absolute path is
 also stored in the environment variable $VSC_HOME. Your home directory
 is shared across all clusters of the VSC.</p>
 <p>The data stored here should be relatively small (e.g., no files or
@@ -1590,7 +1604,7 @@ your account. Examples are:</p>
 <tbody>
 <tr>
 <td align="center">.ssh/</td>
-<td align="center">This directory contains some files necessary for you to login to the <abbr title="A group of compute nodes.">cluster</abbr> and to submit jobs on the <abbr title="A group of compute nodes.">cluster</abbr>. Do not remove them, and do not alter anything if you don't know what you are doing!</td>
+<td align="center">This directory contains some files necessary for you to login to the cluster and to submit jobs on the cluster. Do not remove them, and do not alter anything if you don't know what you are doing!</td>
 </tr>
 <tr>
 <td align="center">.bash_profile</td>
@@ -1598,7 +1612,7 @@ your account. Examples are:</p>
 </tr>
 <tr>
 <td align="center">.bashrc</td>
-<td align="center">This script is executed every time you start a session on the <abbr title="A group of compute nodes.">cluster</abbr>: when you login to the <abbr title="A group of compute nodes.">cluster</abbr> and when a job starts.</td>
+<td align="center">This script is executed every time you start a session on the cluster: when you login to the cluster and when a job starts.</td>
 </tr>
 <tr>
 <td align="center">.bash_history</td>
@@ -1614,63 +1628,63 @@ for, e.g., storing big files like genome data.</p>
 volume is shared across all clusters of the VSC. There are however no
 guarantees about the speed you will achieve on this volume. For
 guaranteed fast performance and very heavy I/O, you should use the
-<abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> space instead. </p>
+scratch space instead. </p>
 <p>If you are running out of quota on your
 _$VSC_DATA filesystem you can request a VO. See on how to do this.</p>
-<h3 id="your-scratch-space-vsc_scratch">Your <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> space ($VSC_SCRATCH)<a class="headerlink" href="#your-scratch-space-vsc_scratch" title="Permanent link">#</a></h3>
+<h3 id="your-scratch-space-vsc_scratch">Your scratch space ($VSC_SCRATCH)<a class="headerlink" href="#your-scratch-space-vsc_scratch" title="Permanent link">#</a></h3>
 <p>To enable quick writing from your job, a few extra file systems are
 available on the compute nodes. These extra file systems are called
-<abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> folders, and can be used for storage of temporary and/or
+scratch folders, and can be used for storage of temporary and/or
 transient data (temporary results, anything you just need during your
 job, or your batch of jobs).</p>
 <p>You should remove any data from these systems after your processing them
 has finished. There are no guarantees about the time your data will be
 stored on this system, and we plan to clean these automatically on a
-regular base. The maximum allowed age of files on these <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> file
-systems depends on the type of <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr>, and can be anywhere between a
+regular base. The maximum allowed age of files on these scratch file
+systems depends on the type of scratch, and can be anywhere between a
 day and a few weeks. We don't guarantee that these policies remain
 forever, and may change them if this seems necessary for the healthy
-operation of the <abbr title="A group of compute nodes.">cluster</abbr>.</p>
-<p>Each type of <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> has its own use:</p>
-<p><strong>Node <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> ($VSC_SCRATCH_NODE).</strong>   Every <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> has its own <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> space, which is completely separated
+operation of the cluster.</p>
+<p>Each type of scratch has its own use:</p>
+<p><strong>Node scratch ($VSC_SCRATCH_NODE).</strong>   Every node has its own scratch space, which is completely separated
     from the other nodes. On some clusters, it will be on a local disk
-    in the <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>, while on other clusters it will be emulated through
+    in the node, while on other clusters it will be emulated through
     another file server. In many cases, it will be significantly slower
-    than the <abbr title="A group of compute nodes.">cluster</abbr> <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> as it typically consists of just a single
+    than the cluster scratch as it typically consists of just a single
     disk. Some <strong>drawsbacks</strong> are that the storage can only be accessed on that
-    particular <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> and that the capacity is often very limited (e.g.,
+    particular node and that the capacity is often very limited (e.g.,
     100 GB). The performance will depend a lot on the particular
-    implementation in the <abbr title="A group of compute nodes.">cluster</abbr>. In many cases, it will be
-    significantly slower than the <abbr title="A group of compute nodes.">cluster</abbr> <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> as it typically
+    implementation in the cluster. In many cases, it will be
+    significantly slower than the cluster scratch as it typically
     consists of just a single disk. However, if that disk is local to
-    the <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> (as on most clusters), the performance will not depend on
-    what others are doing on the <abbr title="A group of compute nodes.">cluster</abbr>.</p>
-<p><strong>Cluster <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> ($VSC_SCRATCH).</strong>  To allow a job running on multiple nodes (or multiple jobs running
-    on separate nodes) to <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr> data as files, every <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> of the <abbr title="A group of compute nodes.">cluster</abbr>
-    (including the login nodes) has access to this shared <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr>
+    the node (as on most clusters), the performance will not depend on
+    what others are doing on the cluster.</p>
+<p><strong>Cluster scratch ($VSC_SCRATCH).</strong>  To allow a job running on multiple nodes (or multiple jobs running
+    on separate nodes) to share data as files, every node of the cluster
+    (including the login nodes) has access to this shared scratch
     directory. Just like the home and data directories, every user has
-    its own <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> directory. Because this <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> is also available
+    its own scratch directory. Because this scratch is also available
     from the login nodes, you could manually copy results to your data
-    directory after your job has ended. Also, this type of <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> is
+    directory after your job has ended. Also, this type of scratch is
     usually implemented by running tens or hundreds of disks in parallel
-    on a powerful file server with fast connection to all the <abbr title="A group of compute nodes.">cluster</abbr>
+    on a powerful file server with fast connection to all the cluster
     nodes and therefore is often the fastest file system available on a
-    <abbr title="A group of compute nodes.">cluster</abbr>.
+    cluster.
     You may not get the same file system on different clusters, i.e.,
     you may see different content on different clusters at the same
     institute. </p>
-<p><strong>Site <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> ($VSC_SCRATCH_SITE).</strong>  At the time of writing, the site <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> is just the same volume as
-    the <abbr title="A group of compute nodes.">cluster</abbr> <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr>, and thus contains the same data. In the future
-    it may point to a different <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> file system that is available
+<p><strong>Site scratch ($VSC_SCRATCH_SITE).</strong>  At the time of writing, the site scratch is just the same volume as
+    the cluster scratch, and thus contains the same data. In the future
+    it may point to a different scratch file system that is available
     across all clusters at a particular site, which is in fact the case
-    for the <abbr title="A group of compute nodes.">cluster</abbr> <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> on some sites.</p>
-<p><strong>Global <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> ($VSC_SCRATCH_GLOBAL).</strong>   At the time of writing, the global <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> is just the same volume
-    as the <abbr title="A group of compute nodes.">cluster</abbr> <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr>, and thus contains the same data. In the
-    future it may point to a <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> file system that is available
+    for the cluster scratch on some sites.</p>
+<p><strong>Global scratch ($VSC_SCRATCH_GLOBAL).</strong>   At the time of writing, the global scratch is just the same volume
+    as the cluster scratch, and thus contains the same data. In the
+    future it may point to a scratch file system that is available
     across all clusters of the VSC, but at the moment of writing there
     are no plans to provide this.</p>
 <h3 id="your-ugent-home-drive-and-shares">Your UGent home drive and shares<a class="headerlink" href="#your-ugent-home-drive-and-shares" title="Permanent link">#</a></h3>
-<p>In order to access data on your UGent <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr>(s), you need to stage-in the
+<p>In order to access data on your UGent share(s), you need to stage-in the
 data and stage-out afterwards. On the login nodes, it is possible to
 access your UGent home drive and shares. To allow this you need a
 ticket. This requires that you first authenticate yourself with your
@@ -1787,7 +1801,7 @@ usage per member of their VO via
 <p>We do realise that quota are often observed as a nuisance by users,
 especially if you're running low on it. However, it is an essential
 feature of a shared infrastructure. Quota ensure that a single user
-cannot accidentally take a <abbr title="A group of compute nodes.">cluster</abbr> down (and break other user's jobs) by
+cannot accidentally take a cluster down (and break other user's jobs) by
 filling up the available disk space. And they help to guarantee a fair
 use of all available resources for all users. Quota also help to ensure
 that each folder is used for its intended purpose.</p>
@@ -1797,7 +1811,7 @@ that each folder is used for its intended purpose.</p>
 <p>Find the code of the exercises in "~/examples/Running_jobs_with_input_output_data"</p>
 </div>
 <p>In the next exercise, you will generate a file in the $VSC_SCRATCH
-directory. In order to generate some <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr>- and disk-I/O load, we will</p>
+directory. In order to generate some CPU- and disk-I/O load, we will</p>
 <ol>
 <li>
 <p>take a random integer between 1 and 2000 and calculate all primes up
@@ -1813,7 +1827,7 @@ directory. In order to generate some <abbr title="A central processing unit. A C
 </ol>
 <p>Check the Python and the PBS file, and submit the job: Remember that
 this is already a more serious (disk-I/O and computational intensive)
-job, which takes approximately 3 minutes on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.</p>
+job, which takes approximately 3 minutes on the HPC.</p>
 <pre><code><b>$ cat file2.py</b>
 <b>$ cat file2.pbs</b>
 <b>$ qsub file2.pbs</b>
@@ -1862,7 +1876,7 @@ job, which takes approximately 3 minutes on the <abbr title="High Performance Co
 </code></pre>
 <h2 id="how-much-disk-space-do-i-get">How much disk space do I get?<a class="headerlink" href="#how-much-disk-space-do-i-get" title="Permanent link">#</a></h2>
 <h3 id="quota">Quota<a class="headerlink" href="#quota" title="Permanent link">#</a></h3>
-<p>The available disk space on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> is limited. The actual disk capacity,
+<p>The available disk space on the HPC is limited. The actual disk capacity,
 shared by all users, can be found on the "Available hardware" page on
 the website.
 (<a href="https://vscdocumentation.readthedocs.io/en/latest/hardware.html">https://vscdocumentation.readthedocs.io/en/latest/hardware.html</a>) As
@@ -1875,8 +1889,8 @@ explained in <a href="./#pre-defined-quotas">the section on predefined quota</a>
 <p>the number of files</p>
 </li>
 </ul>
-<p>that can be made available to each individual <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> user.</p>
-<p>The quota of disk space and number of files for each <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> user is:</p>
+<p>that can be made available to each individual HPC user.</p>
+<p>The quota of disk space and number of files for each HPC user is:</p>
 <table>
 <thead>
 <tr>
@@ -1938,10 +1952,10 @@ contact hpc@ugent.be.</p>
 % \end{prompt} 
 -->
 
-<p>You can consult your current storage quota usage on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent infrastructure shared
+<p>You can consult your current storage quota usage on the HPC-UGent infrastructure shared
 filesystems via the VSC accountpage, see the "Usage" section at <a href="https://account.vscentrum.be">https://account.vscentrum.be</a> .</p>
 <p>VO moderators can inspect storage quota for all VO members via <a href="https://account.vscentrum.be/django/vo/">https://account.vscentrum.be/django/vo/</a>.</p>
-<p>To check your storage usage on the local <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> filesystems on VSC
+<p>To check your storage usage on the local scratch filesystems on VSC
 sites other than UGent, you can use the "<code>show_quota</code>" command (when logged
 into the login nodes of that VSC site).</p>
 <p>Once your quota is (nearly) exhausted, you will want to know which
@@ -2006,7 +2020,7 @@ different directory:</p>
 <p>Groups are a way to manage who can access what data. A user can belong
 to multiple groups at a time. <strong>Groups can be created and managed without any interaction from the system administrators</strong>.</p>
 <p>Please note that changes are not instantaneous: it may take about an
-hour for the changes to propagate throughout the entire <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>
+hour for the changes to propagate throughout the entire HPC
 infrastructure.</p>
 <p>To change the group of a directory and it's underlying directories and
 files, you can use:</p>
@@ -2057,7 +2071,7 @@ files, you can use:</p>
 other members to moderator and remove other moderators.</p>
 <p><img alt="Creating a new group." src="../img/ch6-group-edit.png" /></p>
 <h3 id="inspecting-groups">Inspecting groups<a class="headerlink" href="#inspecting-groups" title="Permanent link">#</a></h3>
-<p>You can get details about the current state of groups on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>
+<p>You can get details about the current state of groups on the HPC
 infrastructure with the following command (<code>example</code> is the name of the
 group we want to inspect):</p>
 <pre><code><b>$ getent group example</b>
@@ -2104,7 +2118,7 @@ should be well-motivated).</p>
 </li>
 <li>
 <p>Fill out the rest of the form and press submit. This will send a
-    message to the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> administrators, who will then either approve or deny
+    message to the HPC administrators, who will then either approve or deny
     the request.</p>
 </li>
 <li>
@@ -2131,7 +2145,7 @@ VO and its members.</p>
     submit the form.</p>
 </li>
 <li>
-<p>An <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> administrator will review your request and approve or deny it.</p>
+<p>An HPC administrator will review your request and approve or deny it.</p>
 </li>
 </ol>
 <p><img alt="Requesting additional quota for the VO and its members." src="../img/ch6-VO-request-additional-quota.png" /></p>
@@ -2146,7 +2160,7 @@ users can use.</p>
 <ol>
 <li>
 <p>Go to <a href="https://account.vscentrum.be/django/vo/edit">https://account.vscentrum.be/django/vo/edit</a> and scroll down
-    to "Manage per-member quota <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr>". See the image below to see how this looks.</p>
+    to "Manage per-member quota share". See the image below to see how this looks.</p>
 </li>
 <li>
 <p>Fill out how much percent of the space you want each user to be able
@@ -2161,10 +2175,10 @@ users can use.</p>
 <h3 id="vo-directories">VO directories<a class="headerlink" href="#vo-directories" title="Permanent link">#</a></h3>
 <p>When you're a member of a VO, there will be some additional directories
 on each of the shared filesystems available:</p>
-<p><strong>VO <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> (<code>$VSC_SCRATCH_VO</code>)</strong>:   A directory on the shared <em><abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr></em> filesystem shared by the members
+<p><strong>VO scratch (<code>$VSC_SCRATCH_VO</code>)</strong>:   A directory on the shared <em>scratch</em> filesystem shared by the members
     of your VO, where additional storage quota can be provided (see <a href="./#requesting-more-storage-space">the section on requesting more storage space</a>).
     You can use this as an alternative to your personal <code>$VSC_SCRATCH</code>
-    directory (see <a href="./#your-scratch-space-vsc_scratch">the section on your <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> space</a>).</p>
+    directory (see <a href="./#your-scratch-space-vsc_scratch">the section on your scratch space</a>).</p>
 <p><strong>VO data (<code>$VSC_DATA_VO</code>)</strong>:   A directory on the shared <em>data</em> filesystem shared by the members of
     your VO, where additional storage quota can be provided (see ). You
     can use this as an alternative to your personal <code>$VSC_DATA</code>
@@ -2253,3 +2267,18 @@ to <code>$VSC_DATA_VO/$USER</code>), and analogous for <code>$VSC_SCRATCH_VO_USE
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

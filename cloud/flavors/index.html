@@ -473,7 +473,7 @@
 <h1 id="instance-types-and-flavors">Instance types and flavors<a class="headerlink" href="#instance-types-and-flavors" title="Permanent link">#</a></h1>
 <p>VSC Tier1 Cloud provides several virtual machine instance types and
 flavors to fit different use cases. Each instance type provides several
-flavor sizes to give different combinations of <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr>, <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>, GPU and
+flavor sizes to give different combinations of CPU, memory, GPU and
 network resources.</p>
 <h2 id="instance-types">Instance Types<a class="headerlink" href="#instance-types" title="Permanent link">#</a></h2>
 <p>The following table provides the current main instance types available
@@ -491,7 +491,7 @@ from the VSC Tier1 Cloud infrastructure:</p>
 <tbody>
 <tr>
 <td>- AMD Epyc 7542 2.9GHz</td>
-<td>- Intel Xeon <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr> E5-2670 2.60GHz</td>
+<td>- Intel Xeon CPU E5-2670 2.60GHz</td>
 <td>- AMD Epyc 7542 2.9GHz</td>
 <td>- AMD Epyc 7542 2.9GHz</td>
 </tr>
@@ -523,7 +523,7 @@ from the VSC Tier1 Cloud infrastructure:</p>
 </table>
 <p>:::</p>
 <p>Each instance type is appropriate for different workloads: (<strong>CPUv1</strong>) for
-regular <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr> usage, (<strong>GPUvx</strong>) for GPU computations, or (<strong>UPSv1</strong>) for VMs that need to
+regular CPU usage, (<strong>GPUvx</strong>) for GPU computations, or (<strong>UPSv1</strong>) for VMs that need to
 be connected to an uninterruptible power supply. VMs using UPS will keep
 up and running even if the datacenter suffers an unexpected power cut.
 (<strong>CPUv1</strong>) and (<strong>GPUv2</strong>) virtual machines are not supported by an UPS and will go
@@ -542,10 +542,10 @@ between VMs and other Tier-1 components.</p>
 Data component (<a href="https://www.vscentrum.be/data">https://www.vscentrum.be/data</a>) with iRODS and Globus
 from their Tier1 Cloud VMs.</p>
 <p>On the other hand, the shared filesystem network is required by the
-<abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> shared filesystem service (Manila) (see chapter 10 for more information).</p>
+OpenStack shared filesystem service (Manila) (see chapter 10 for more information).</p>
 <h2 id="flavor-sizes">Flavor Sizes<a class="headerlink" href="#flavor-sizes" title="Permanent link">#</a></h2>
 <p>A flavor size is a set of virtualized hardware resources to a virtual
-machine (VM) instance like system <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> size (RAM), virtual cores
+machine (VM) instance like system memory size (RAM), virtual cores
 (vCPUs) or the root filesystem size.</p>
 <p>The flavor's root disk size is the amount of disk space used by the root
 (<em>/</em>) partition, an ephemeral disk that the base image is copied into
@@ -749,7 +749,7 @@ different workload hardware requirements.</p>
 </tbody>
 </table>
 <p>:::</p>
-<p>E.g. The <strong>GPUv2</strong>.<em>large</em> <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> flavor will instantiate a VM with 4 AMD Epyc
+<p>E.g. The <strong>GPUv2</strong>.<em>large</em> OpenStack flavor will instantiate a VM with 4 AMD Epyc
 7542 2.9GHz vCPUs, with 1 NVIDIA Tesla4 GPU, 8GB of RAM, and a 40GB
 root disk.</p>
 

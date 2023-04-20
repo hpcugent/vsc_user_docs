@@ -552,6 +552,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-tutorial/getting_started/" class="md-nav__link">
+        Linux tutorial
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -846,7 +860,7 @@
 
 <h1 id="hanythingondemand-hod">Hanythingondemand (HOD)<a class="headerlink" href="#hanythingondemand-hod" title="Permanent link">#</a></h1>
 <p>Hanythingondemand (or HOD for short) is a tool to run a Hadoop (Yarn)
-<abbr title="A group of compute nodes.">cluster</abbr> on a traditional <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> system.</p>
+cluster on a traditional HPC system.</p>
 <h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">#</a></h2>
 <p>The official documentation for HOD version 3.0.0 and newer is available
 at <a href="https://hod.readthedocs.org/en/latest/">https://hod.readthedocs.org/en/latest/</a>. The slides of the 2016 HOD
@@ -854,17 +868,17 @@ training session are available at
 <a href="http://users.ugent.be/~kehoste/hod_20161024.pdf">http://users.ugent.be/~kehoste/hod_20161024.pdf</a>.</p>
 <h2 id="using-hod">Using HOD<a class="headerlink" href="#using-hod" title="Permanent link">#</a></h2>
 <p>Before using HOD, you first need to load the <code>hod</code> module. We don't
-specify a version here (this is an exception, for most other <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> you
+specify a version here (this is an exception, for most other modules you
 should, see <a href="../running_batch_jobs/#using-explicit-version-numbers">Using explicit version numbers</a>) because newer versions might include important bug fixes.</p>
 <pre><code>$ <b>module load hod</b>
 </code></pre>
 
 <h3 id="compatibility-with-login-nodes">Compatibility with login nodes<a class="headerlink" href="#compatibility-with-login-nodes" title="Permanent link">#</a></h3>
-<p>The <code>hod</code> <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> are constructed such that they can be used on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent infrastructure
+<p>The <code>hod</code> modules are constructed such that they can be used on the HPC-UGent infrastructure
 login nodes, regardless of which <code>cluster</code> module is loaded (this is not
-the case for software installed via <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> in general, see <a href="../troubleshooting/#running-software-that-is-incompatible-with-host">Running software that is incompatible with host</a>).</p>
+the case for software installed via modules in general, see <a href="../troubleshooting/#running-software-that-is-incompatible-with-host">Running software that is incompatible with host</a>).</p>
 <p>As such, you should experience no problems if you swap to a different
-<abbr title="A group of compute nodes.">cluster</abbr> module before loading the <code>hod</code> module and subsequently running
+cluster module before loading the <code>hod</code> module and subsequently running
 |hod|.</p>
 <p>For example, this will work as expected:</p>
 <pre><code>$ <b>module swap cluster/skitty</b>
@@ -878,9 +892,9 @@ Available subcommands (one of these must be specified!):
 ...
 </code></pre>
 
-<p>Note that also <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> named <code>hanythingondemand/*</code> are available. These
+<p>Note that also modules named <code>hanythingondemand/*</code> are available. These
 should however not be used directly, since they may not be compatible
-with the login nodes (depending on which <abbr title="A group of compute nodes.">cluster</abbr> they were installed
+with the login nodes (depending on which cluster they were installed
 for).</p>
 <h3 id="standard-hod-configuration">Standard HOD configuration<a class="headerlink" href="#standard-hod-configuration" title="Permanent link">#</a></h3>
 <p>The <code>hod</code> module will also put a basic configuration in place for HOD,
@@ -904,10 +918,10 @@ the corresponding environment variable).</p>
 <code>--hod-module</code> or redefining <code>$HOD_*_HOD_MODULE</code>) is strongly
 discouraged.</p>
 <h3 id="cleaning-up">Cleaning up<a class="headerlink" href="#cleaning-up" title="Permanent link">#</a></h3>
-<p>After HOD clusters terminate, their local working directory and <abbr title="A group of compute nodes.">cluster</abbr>
+<p>After HOD clusters terminate, their local working directory and cluster
 information is typically not cleaned up automatically (for example,
-because the job hosting an interactive HOD <abbr title="A group of compute nodes.">cluster</abbr> submitted via
-<code>hod create</code> runs out of <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>).</p>
+because the job hosting an interactive HOD cluster submitted via
+<code>hod create</code> runs out of walltime).</p>
 <p>These HOD clusters will still show up in the output of <code>hod list</code>, and
 will be marked as <code>&lt;job-not-found&gt;</code>.</p>
 <p>You should occasionally clean this up using <code>hod clean</code>:</p>
@@ -942,7 +956,7 @@ have a couple of options:</p>
     developers at hod@lists.ugent.be.</p>
 </li>
 <li>
-<p>Contact the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent team via hpc@ugent.be</p>
+<p>Contact the HPC-UGent team via hpc@ugent.be</p>
 </li>
 <li>
 <p>Open an issue in the <code>hanythingondemand</code> GitHub repository, via
@@ -993,3 +1007,18 @@ have a couple of options:</p>
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

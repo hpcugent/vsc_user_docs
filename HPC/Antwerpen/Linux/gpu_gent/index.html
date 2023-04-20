@@ -482,6 +482,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -507,12 +535,132 @@
       
       
         <label class="md-nav__link" for="__nav_15">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_16" type="checkbox" id="__nav_16" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16">
           Appendices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Appendices" data-md-level="1">
-        <label class="md-nav__title" for="__nav_15">
+        <label class="md-nav__title" for="__nav_16">
           <span class="md-nav__icon md-icon"></span>
           Appendices
         </label>
@@ -702,15 +850,15 @@
                 
 
 
-<h1 id="hpc-ugent-gpu-clusters"><abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent GPU clusters<a class="headerlink" href="#hpc-ugent-gpu-clusters" title="Permanent link">#</a></h1>
+<h1 id="hpc-ugent-gpu-clusters">HPC-UGent GPU clusters<a class="headerlink" href="#hpc-ugent-gpu-clusters" title="Permanent link">#</a></h1>
 <h2 id="submitting-jobs">Submitting jobs<a class="headerlink" href="#submitting-jobs" title="Permanent link">#</a></h2>
-<p>To submit jobs to the <code>joltik</code> GPU <abbr title="A group of compute nodes.">cluster</abbr>, where each <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> provides 4
-NVIDIA V100 GPUs (each with 32GB of GPU <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>), use:</p>
+<p>To submit jobs to the <code>joltik</code> GPU cluster, where each node provides 4
+NVIDIA V100 GPUs (each with 32GB of GPU memory), use:</p>
 <pre><code>$ <b>module swap cluster/joltik</b>
 </code></pre>
 
-<p>To submit to the <code>accelgor</code> GPU <abbr title="A group of compute nodes.">cluster</abbr>, where each <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> provides 4
-NVIDIA A100 GPUs (each with 80GB GPU <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>), use:</p>
+<p>To submit to the <code>accelgor</code> GPU cluster, where each node provides 4
+NVIDIA A100 GPUs (each with 80GB GPU memory), use:</p>
 <pre><code>$ <b>module swap cluster/accelgor</b>
 </code></pre>
 
@@ -722,7 +870,7 @@ section <a href="./#requesting-gpu-resources">Requesting (GPU) resources</a>.</p
 using <code>qsub -I</code> (and request one or more GPUs, see
 section <a href="./#requesting-gpu-resources">Requesting (GPU) resources</a>).</p>
 <p>Note that due to a bug in Slurm you will currently not be able to be
-able to interactively use <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> software that requires access to the GPUs.
+able to interactively use MPI software that requires access to the GPUs.
 If you need this, please contact use via hpc@uantwerpen.be.</p>
 <h2 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">#</a></h2>
 <p>See <a href="https://www.ugent.be/hpc/en/infrastructure">https://www.ugent.be/hpc/en/infrastructure</a>.</p>
@@ -730,20 +878,20 @@ If you need this, please contact use via hpc@uantwerpen.be.</p>
 <p>There are 2 main ways to ask for GPUs as part of a job:</p>
 <ul>
 <li>
-<p>Either as a <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> property (similar to the number of cores per <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>
+<p>Either as a node property (similar to the number of cores per node
     specified via <code>ppn</code>) using <code>-l nodes=X:ppn=Y:gpus=Z</code> (where the
     <code>ppn=Y</code> is optional), or as a separate resource request (similar to
-    the amount of <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>) via <code>-l gpus=Z</code>. Both notations give exactly
+    the amount of memory) via <code>-l gpus=Z</code>. Both notations give exactly
     the same result. The <code>-l gpus=Z</code> is convenient is you only need one
-    <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> and you are fine with the default number of cores per GPU. The
+    node and you are fine with the default number of cores per GPU. The
     <code>-l nodes=...:gpus=Z</code> notation is required if you want to run with
-    full control or in multinode cases like <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> jobs. If you do not
+    full control or in multinode cases like MPI jobs. If you do not
     specify the number of GPUs by just using <code>-l gpus</code>, you get by
     default 1 GPU.</p>
 </li>
 <li>
 <p>As a resource of it's own, via <code>--gpus X</code>. In this case however, you
-    are <em>not</em> guaranteed that the GPUs are on the same <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>, so your
+    are <em>not</em> guaranteed that the GPUs are on the same node, so your
     script or code must be able to deal with this.</p>
 </li>
 </ul>
@@ -764,7 +912,7 @@ If you need this, please contact use via hpc@uantwerpen.be.</p>
 <p>Some background:</p>
 <ul>
 <li>
-<p>The GPUs are constrained to the jobs (like the <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr> cores), but do
+<p>The GPUs are constrained to the jobs (like the CPU cores), but do
     not run in so-called "exclusive" mode.</p>
 </li>
 <li>
@@ -780,9 +928,9 @@ If you need this, please contact use via hpc@uantwerpen.be.</p>
 <p>Some important attention points:</p>
 <ul>
 <li>
-<p>For <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> jobs, we recommend the (new) wrapper <code>mypmirun</code> from the
+<p>For MPI jobs, we recommend the (new) wrapper <code>mypmirun</code> from the
     <code>vsc-mympirun</code> module (<code>pmi</code> is the background mechanism to start
-    the <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> tasks, and is different from the usual <code>mpirun</code> that is used
+    the MPI tasks, and is different from the usual <code>mpirun</code> that is used
     by the <code>mympirun</code> wrapper). At some later point, we <em>might</em> promote
     the <code>mypmirun</code> tool or rename it, to avoid the confusion in the
     naming).</p>
@@ -802,7 +950,7 @@ If you need this, please contact use via hpc@uantwerpen.be.</p>
 <li>
 <p>Both <code>mypmirun</code> and <code>wurker</code> will try to do the most optimised
     placement of cores and tasks, and will provide 1 (optimal) GPU per
-    task/<abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> rank, and set one so-called <em>visible device</em> (i.e.
+    task/MPI rank, and set one so-called <em>visible device</em> (i.e.
     <code>CUDA_VISIBLE_DEVICES</code> only has 1 ID). The actual devices are not
     constrained to the ranks, so you can access all devices requested in
     the job. <em>We know that at this moment, this is not working properly, but we are working on this. We advise against trying to fix this yourself.</em></p>
@@ -823,11 +971,11 @@ packages, more are available.</p>
 <h3 id="gromacs">GROMACS<a class="headerlink" href="#gromacs" title="Permanent link">#</a></h3>
 <p>Please consult <code>module avail GROMACS</code> for a list of installed versions.</p>
 <h3 id="horovod">Horovod<a class="headerlink" href="#horovod" title="Permanent link">#</a></h3>
-<p>Horovod can be used for (multi-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>) multi-GPU TensorFlow/PyTorch
+<p>Horovod can be used for (multi-node) multi-GPU TensorFlow/PyTorch
 calculations.</p>
 <p>Please consult <code>module avail Horovod</code> for a list of installed versions.</p>
 <p>Horovod supports TensorFlow, Keras, PyTorch and MxNet (see
-<a href="https://github.com/horovod/horovod#id9">https://github.com/horovod/horovod#id9</a>), but should be run as an <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>
+<a href="https://github.com/horovod/horovod#id9">https://github.com/horovod/horovod#id9</a>), but should be run as an MPI
 application with <code>mypmirun</code>. (Horovod also provides it's own wrapper
 <code>horovodrun</code>, not sure if it handles placement and others correctly).</p>
 <p>At least for simple TensorFlow benchmarks, it looks like Horovod is a
@@ -872,8 +1020,8 @@ versions.</p>
 VIB-UGent course available at
 <a href="https://elearning.bits.vib.be/courses/alphafold">https://elearning.bits.vib.be/courses/alphafold</a>.</p>
 <h2 id="getting-help">Getting help<a class="headerlink" href="#getting-help" title="Permanent link">#</a></h2>
-<p>In case of questions or problems, please contact the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> via hpc@uantwerpen.be, and clearly
-indicate that your question relates to the <code>joltik</code> <abbr title="A group of compute nodes.">cluster</abbr> by adding
+<p>In case of questions or problems, please contact the UAntwerpen-HPC via hpc@uantwerpen.be, and clearly
+indicate that your question relates to the <code>joltik</code> cluster by adding
 <code>[joltik]</code> in the email subject.</p>
 
               
@@ -916,12 +1064,21 @@ indicate that your question relates to the <code>joltik</code> <abbr title="A gr
     
       <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

@@ -552,6 +552,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-tutorial/getting_started/" class="md-nav__link">
+        Linux tutorial
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -976,20 +990,20 @@
 operating-system-level virtualization (also known as containerisation).</p>
 <p>One of the main uses of Apptainer is to bring containers and
 reproducibility to scientific computing and the high-performance
-computing (<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>) world. Using Apptainer/Singularity containers,
+computing (HPC) world. Using Apptainer/Singularity containers,
 developers can work in reproducible environments of their choosing and
 design, and these complete environments can easily be copied and
 executed on other platforms.</p>
 <p>For more general information about the use of Apptainer, please see the
 official documentation at <a href="https://apptainer.org/docs/">https://apptainer.org/docs/</a>.</p>
 <p>This documentation only covers aspects of using Apptainer on the
-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent infrastructure infrastructure.</p>
+HPC-UGent infrastructure infrastructure.</p>
 <h2 id="restrictions-on-image-location">Restrictions on image location<a class="headerlink" href="#restrictions-on-image-location" title="Permanent link">#</a></h2>
 <p>Some restrictions have been put in place on the use of Apptainer. This
 is mainly done for performance reasons and to avoid that the use of
 Apptainer impacts other users on the system.</p>
 <p>The Apptainer/Singularity image file must be located on either one of
-the <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> filesystems, the local disk of the workernode you are using
+the scratch filesystems, the local disk of the workernode you are using
 or <code>/dev/shm</code>. The centrally provided <code>apptainer</code> command will refuse to
 run using images that are located elsewhere, in particular on the
 <code>$VSC_HOME</code>, <code>/apps</code> or <code>$VSC_DATA</code> filesystems.</p>
@@ -997,15 +1011,15 @@ run using images that are located elsewhere, in particular on the
 URL (e.g., <code>shub://...</code> or <code>docker://...</code>) will not work.</p>
 <p>If these limitations are a problem for you, please let us know via hpc@ugent.be.</p>
 <h2 id="available-filesystems">Available filesystems<a class="headerlink" href="#available-filesystems" title="Permanent link">#</a></h2>
-<p>All <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent shared filesystems will be readily available in an
-Apptainer/Singularity container, including the home, data and <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr>
+<p>All HPC-UGent shared filesystems will be readily available in an
+Apptainer/Singularity container, including the home, data and scratch
 filesystems, and they will be accessible via the familiar <code>$VSC_HOME</code>,
 <code>$VSC_DATA*</code> and <code>$VSC_SCRATCH*</code> environment variables.</p>
 <h2 id="apptainersingularity-images">Apptainer/Singularity Images<a class="headerlink" href="#apptainersingularity-images" title="Permanent link">#</a></h2>
 <h3 id="creating-appyainersingularity-images">Creating Appyainer/Singularity images<a class="headerlink" href="#creating-appyainersingularity-images" title="Permanent link">#</a></h3>
 <p>Creating new Apptainer/Singularity images or converting Docker images,
 by default, requires admin privileges, which is obviously not available
-on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent infrastructure infrastructure. However, if you use the <code>--fakeroot</code> option, you
+on the HPC-UGent infrastructure infrastructure. However, if you use the <code>--fakeroot</code> option, you
 can make new Apptainer/Singularity images or convert Docker images.</p>
 <p>Due to the nature of <code>--fakeroot</code> option, we recommend to write your
 Apptainer/Singularity image to a globally writable location, like
@@ -1068,8 +1082,8 @@ apptainer <span class="nb">exec</span> <span class="nv">$VSC_SCRATCH</span>/Ubun
 </code></pre></div>
 <p>You can download <code>linear_regression.py</code> from <a href="https://github.com/tensorflow/tensorflow/blob/r1.12/tensorflow/examples/get_started/regression/linear_regression.py">the official Tensorflow
 repository</a>.</p>
-<h2 id="mpi-example"><abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> example<a class="headerlink" href="#mpi-example" title="Permanent link">#</a></h2>
-<p>It is also possible to execute <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> jobs within a container, but the
+<h2 id="mpi-example">MPI example<a class="headerlink" href="#mpi-example" title="Permanent link">#</a></h2>
+<p>It is also possible to execute MPI jobs within a container, but the
 following requirements apply:</p>
 <ul>
 <li>
@@ -1077,7 +1091,7 @@ following requirements apply:</p>
     the <code>infiniband-diags</code>, <code>libmlx5-1</code> and <code>libmlx4-1</code> OS packages)</p>
 </li>
 <li>
-<p>Use <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> within the container (install the <code>environment-modules</code>
+<p>Use modules within the container (install the <code>environment-modules</code>
     or <code>lmod</code> package in your container)</p>
 </li>
 <li>
@@ -1095,7 +1109,7 @@ following requirements apply:</p>
 <pre><code>$ <b>cp /apps/gent/tutorials/Singularity/Debian8_UGentMPI.img $VSC_SCRATCH/</b>
 </code></pre>
 
-<p>For example to compile an <a href="https://github.com/open-mpi/ompi/blob/master/examples/ring_c.c"><abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>
+<p>For example to compile an <a href="https://github.com/open-mpi/ompi/blob/master/examples/ring_c.c">MPI
 example</a>:</p>
 <pre><code>$ <b>module load intel</b>
 $ <b>apptainer shell $VSC_SCRATCH/Debian8_UGentMPI.img</b>
@@ -1105,7 +1119,7 @@ $ <b>mpiicc ompi/examples/ring_c.c -o ring_debian</b>
 $ <b>exit</b>
 </code></pre>
 
-<p>Example <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> job script:</p>
+<p>Example MPI job script:</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/sh</span>
 
 <span class="c1">#PBS -N mpi</span>
@@ -1137,7 +1151,7 @@ mympirun --impi-fallback apptainer <span class="nb">exec</span> <span class="nv"
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../crontab_gent/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cron scripts" rel="prev">
+        <a href="../linux-tutorial/getting_started/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Linux tutorial" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1146,7 +1160,7 @@ mympirun --impi-fallback apptainer <span class="nb">exec</span> <span class="nv"
               <span class="md-footer__direction">
                 Previous
               </span>
-              Cron scripts
+              Linux tutorial
             </div>
           </div>
         </a>
@@ -1197,3 +1211,18 @@ mympirun --impi-fallback apptainer <span class="nb">exec</span> <span class="nv"
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

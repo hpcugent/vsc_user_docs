@@ -42,6 +42,20 @@
 
     
     
+<script>
+    const store_OS_txt = localStorage.getItem("select_OS")
+    if (!!store_OS_txt && window.location.hash.substring(1) != 'force_select_OS') {
+        const store_OS = JSON.parse(store_OS_txt)
+        // there is no need to escape the store_OS[0], it's not seen as a regexp pattern?
+        const href = window.location.href.replace(store_OS[0], store_OS[0] + '/' + store_OS[1])
+        if (href != window.location.href) {
+            //console.log("store_OS", store_OS, "orig window href", window.location.href, "new href", href)
+            window.location.href = href
+        }
+    }
+
+</script>
+
   </head>
   
   
@@ -149,66 +163,6 @@
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../os_pick/" class="md-nav__link">
-        Os pick
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
         Please select your operating system:
       </a>
     </li>
@@ -223,37 +177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
+      <a href="../FAQ/" class="md-nav__link">
         Please select your operating system:
       </a>
     </li>
@@ -268,8 +192,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../account/" class="md-nav__link">
-        None
+      <a href="../HOD/" class="md-nav__link">
+        Please select your operating system:
       </a>
     </li>
   
@@ -283,8 +207,23 @@
   
   
     <li class="md-nav__item">
-      <a href="../account/" class="md-nav__link">
-        None
+      <a href="../MATLAB/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Please select your operating system:
       </a>
     </li>
   
@@ -313,37 +252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../connecting/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../connecting/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../connecting/" class="md-nav__link">
+      <a href="../apptainer/" class="md-nav__link">
         Please select your operating system:
       </a>
     </li>
@@ -358,37 +267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../running_batch_jobs/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../running_batch_jobs/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../running_batch_jobs/" class="md-nav__link">
+      <a href="../best_practices/" class="md-nav__link">
         Please select your operating system:
       </a>
     </li>
@@ -403,473 +282,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../running_interactive_jobs/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../running_interactive_jobs/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../running_interactive_jobs/" class="md-nav__link">
+      <a href="../checkpointing/" class="md-nav__link">
         Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../running_jobs_with_input_output_data/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../running_jobs_with_input_output_data/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../running_jobs_with_input_output_data/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../multi_core_jobs/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../multi_core_jobs/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../multi_core_jobs/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../web_portal/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../web_portal/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../web_portal/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../xdmod/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../xdmod/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../xdmod/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hpc_policies/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hpc_policies/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hpc_policies/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../FAQ/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../FAQ/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../FAQ/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../fine_tuning_job_specifications/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../fine_tuning_job_specifications/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../fine_tuning_job_specifications/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../multi_job_submission/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../multi_job_submission/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../multi_job_submission/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../compiling_your_software/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../compiling_your_software/" class="md-nav__link">
-        None
       </a>
     </li>
   
@@ -898,8 +312,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../program_examples/" class="md-nav__link">
-        None
+      <a href="../connecting/" class="md-nav__link">
+        Please select your operating system:
       </a>
     </li>
   
@@ -913,8 +327,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../program_examples/" class="md-nav__link">
-        None
+      <a href="../crontab_gent/" class="md-nav__link">
+        Please select your operating system:
       </a>
     </li>
   
@@ -928,7 +342,67 @@
   
   
     <li class="md-nav__item">
-      <a href="../program_examples/" class="md-nav__link">
+      <a href="../easybuild/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fine_tuning_job_specifications/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpu_gent/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interactive_gent/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
         Please select your operating system:
       </a>
     </li>
@@ -944,36 +418,6 @@
   
     <li class="md-nav__item">
       <a href="../jobscript_examples/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../jobscript_examples/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../jobscript_examples/" class="md-nav__link">
         Please select your operating system:
       </a>
     </li>
@@ -988,37 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best_practices/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../best_practices/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../best_practices/" class="md-nav__link">
+      <a href="../multi_core_jobs/" class="md-nav__link">
         Please select your operating system:
       </a>
     </li>
@@ -1033,8 +447,8 @@
   
   
     <li class="md-nav__item">
-      <a href="./" class="md-nav__link">
-        None
+      <a href="../multi_job_submission/" class="md-nav__link">
+        Please select your operating system:
       </a>
     </li>
   
@@ -1048,8 +462,38 @@
   
   
     <li class="md-nav__item">
-      <a href="./" class="md-nav__link">
-        None
+      <a href="../mympirun/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program_examples/" class="md-nav__link">
+        Please select your operating system:
       </a>
     </li>
   
@@ -1088,8 +532,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../torque_options/" class="md-nav__link">
-        None
+      <a href="../running_batch_jobs/" class="md-nav__link">
+        Please select your operating system:
       </a>
     </li>
   
@@ -1103,8 +547,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../torque_options/" class="md-nav__link">
-        None
+      <a href="../running_interactive_jobs/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_jobs_with_input_output_data/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../singularity/" class="md-nav__link">
+        Please select your operating system:
       </a>
     </li>
   
@@ -1133,23 +622,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../useful_linux_commands/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../useful_linux_commands/" class="md-nav__link">
-        None
+      <a href="../troubleshooting/" class="md-nav__link">
+        Please select your operating system:
       </a>
     </li>
   
@@ -1166,6 +640,148 @@
       <a href="../useful_linux_commands/" class="md-nav__link">
         Please select your operating system:
       </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_portal/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdmod/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macros/LinuxManualURL/" class="md-nav__link">
+        Macros
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_37" type="checkbox" id="__nav_37" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../sites/available_modules/">Sites</a>
+          
+            <label for="__nav_37">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Sites" data-md-level="1">
+        <label class="md-nav__title" for="__nav_37">
+          <span class="md-nav__icon md-icon"></span>
+          Sites
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sites/hpc_policies/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sites/antwerpen/available-modules/" class="md-nav__link">
+        Antwerpen
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sites/gent/available-modules/" class="md-nav__link">
+        Gent
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1205,9 +821,9 @@
 
 
 <h1 id="please-select-your-operating-system">Please select your operating system:<a class="headerlink" href="#please-select-your-operating-system" title="Permanent link">#</a></h1>
-<p><a class="md-button" href="../Linux/quick_reference_guide"><abbr title="An operating system, similar to UNIX.">Linux</abbr></a>
-<a class="md-button" href="../macOS/quick_reference_guide">macOS</a>
-<a class="md-button" href="../Windows/quick_reference_guide">Windows</a></p>
+<p><a class="md-button" href="../Linux/quick_reference_guide/">Linux</a>
+<a class="md-button" href="../macOS/quick_reference_guide/">macOS</a>
+<a class="md-button" href="../Windows/quick_reference_guide/">Windows</a></p>
 
               
             </article>
@@ -1225,7 +841,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" hidden>
       
         
-        <a href="./" class="md-footer__link md-footer__link--prev" aria-label="Previous: None" rel="prev">
+        <a href="../program_examples/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Please select your operating system:" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1234,20 +850,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              None
+              Please select your operating system:
             </div>
           </div>
         </a>
       
       
         
-        <a href="../torque_options/" class="md-footer__link md-footer__link--next" aria-label="Next: None" rel="next">
+        <a href="../running_batch_jobs/" class="md-footer__link md-footer__link--next" aria-label="Next: Please select your operating system:" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              None
+              Please select your operating system:
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1286,13 +902,20 @@
   </body>
 </html>
 <script>
-  var buttons = Array.from(document.getElementsByClassName("md-button"))
-  buttons.forEach(
-          function (btn) {
+    var buttons = Array.from(document.getElementsByClassName("md-button"))
+    buttons.forEach(
+        function (btn) {
             btn.addEventListener("click", function () {
-                var hash = window.location.hash.substring(1);
-                this.href = this.href + "#" + hash
+                const osmatch = this.href.match(/^(.*?)\/(Linux|macOS|Windows)\//i)
+                if (osmatch !== null) {
+                    //console.log("match this button OS onclick", osmatch)
+                    localStorage.setItem("select_OS", JSON.stringify([osmatch[1], osmatch[2]]))
+                }
+                const hash = window.location.hash.substring(1)
+                if (hash != 'force_select_OS') {
+                    this.href = this.href + "#" + hash
+                }
             })
-          }
-  )
+        }
+    )
 </script>

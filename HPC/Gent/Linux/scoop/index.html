@@ -552,6 +552,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-tutorial/getting_started/" class="md-nav__link">
+        Linux tutorial
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -910,11 +924,11 @@ worker framework, see <a href="../multi_job_submission/#multi-job-submission">Mu
 <p>It can used for projects that require lots of (small) tasks to be
 executed.</p>
 <p>The <code>myscoop</code> script makes it very easy to use SCOOP, even in a
-multi-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> setup.</p>
+multi-node setup.</p>
 <h2 id="loading-the-module">Loading the module<a class="headerlink" href="#loading-the-module" title="Permanent link">#</a></h2>
 <p>Before using <code>myscoop</code>, you first need to load the <code>vsc-mympirun-scoop</code>
 module. We don't specify a version here (this is an exception, for most
-other <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> you should, see <a href="../running_batch_jobs/#using-explicit-version-numbers">Using explicit version numbers</a>) because newer versions might include
+other modules you should, see <a href="../running_batch_jobs/#using-explicit-version-numbers">Using explicit version numbers</a>) because newer versions might include
 important bug fixes or performance improvements.</p>
 <pre><code>$ <b>module load vsc-mympirun-scoop</b>
 </code></pre>
@@ -930,7 +944,7 @@ module, for example <code>futures.map</code> (see also
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span> 
 <span class="kn">from</span> <span class="nn">scoop</span> <span class="kn">import</span> <span class="n">futures</span>
 </code></pre></div>
-<p>A Python function must be implemented for the <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> task, for example to
+<p>A Python function must be implemented for the core task, for example to
 compute the square of a number:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> 
     <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
@@ -957,14 +971,14 @@ module:</p>
 </code></pre>
 
 <h2 id="using-myscoop">Using <tt>myscoop</tt><a class="headerlink" href="#using-myscoop" title="Permanent link">#</a></h2>
-<p>To execute the SCOOP program in an multi-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> environment, where workers
+<p>To execute the SCOOP program in an multi-node environment, where workers
 are spread across multiple physical systems, simply use <code>myscoop</code>: just
 specify the name of the Python module in which the SCOOP program is
 implemented, and specify further arguments on the command line.</p>
 <p>You will need to make sure that the path to where the Python module is
 located is listed in <code>$PYTHONPATH</code>.</p>
 <p>This is an example of a complete job script executing the SCOOP program
-in parallel in a multi-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> job (i.e., 2 nodes with 8 cores each):</p>
+in parallel in a multi-node job (i.e., 2 nodes with 8 cores each):</p>
 <p><center>-- squares_jobscript.pbs --</center>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
@@ -984,9 +998,9 @@ myscoop --scoop-module<span class="o">=</span>squares <span class="m">10000</spa
 <p>Note that you don't need to specify how many workers need to be used;
 the <code>myscoop</code> command figures this out by itself. This is because
 <code>myscoop</code> is a wrapper around <code>mympirun</code> (see <a href="../mympirun/#mympirun">Mympirun</a>). In this example, 16
-workers (one per available <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr>) will be execute the 10000 tasks one by
+workers (one per available core) will be execute the 10000 tasks one by
 one until all squares are computed.</p>
-<p>To run the same command on the local system (e.g., a <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr> for
+<p>To run the same command on the local system (e.g., a login node for
 testing), add the <code>--sched=local</code> option to <code>myscoop</code>.</p>
 <h2 id="example-calculating">Example: calculating π<a class="headerlink" href="#example-calculating" title="Permanent link">#</a></h2>
 <p>A more practical example of a worker script is one to compute π
@@ -1138,3 +1152,18 @@ myscoop --scoop-module<span class="o">=</span>picalc <span class="m">10000</span
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

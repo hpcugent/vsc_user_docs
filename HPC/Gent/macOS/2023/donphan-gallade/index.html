@@ -552,6 +552,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux-tutorial/getting_started/" class="md-nav__link">
+        Linux tutorial
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -851,30 +865,30 @@
 
 
 <h1 id="new-tier-2-clusters-donphan-and-gallade">New Tier-2 clusters: <code>donphan</code> and <code>gallade</code><a class="headerlink" href="#new-tier-2-clusters-donphan-and-gallade" title="Permanent link">#</a></h1>
-<p>In April 2023, two new clusters were added to the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent Tier-2 infrastructure: <code>donphan</code> and <code>gallade</code>.</p>
+<p>In April 2023, two new clusters were added to the HPC-UGent Tier-2 infrastructure: <code>donphan</code> and <code>gallade</code>.</p>
 <p>This page provides some important information regarding these clusters, and how they differ from the clusters
 they are replacing (<code>slaking</code> and <code>kirlia</code>, respectively).</p>
-<p>If you have any questions on using <code>donphan</code> or <code>gallade</code>, you can <a href="https://www.ugent.be/hpc/en/support">contact the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent team</a>.</p>
+<p>If you have any questions on using <code>donphan</code> or <code>gallade</code>, you can <a href="https://www.ugent.be/hpc/en/support">contact the HPC-UGent team</a>.</p>
 <p>For software installation requests, please use the <a href="https://www.ugent.be/hpc/en/support/software-installation-request">request form</a>.</p>
 <hr />
-<h2 id="donphan-debuginteractive-cluster"><code>donphan</code>: debug/interactive <abbr title="A group of compute nodes.">cluster</abbr><a class="headerlink" href="#donphan-debuginteractive-cluster" title="Permanent link">#</a></h2>
-<p><code>donphan</code> is the new debug/interactive <abbr title="A group of compute nodes.">cluster</abbr>.</p>
+<h2 id="donphan-debuginteractive-cluster"><code>donphan</code>: debug/interactive cluster<a class="headerlink" href="#donphan-debuginteractive-cluster" title="Permanent link">#</a></h2>
+<p><code>donphan</code> is the new debug/interactive cluster.</p>
 <p>It replaces <code>slaking</code>, which will be retired on <strong>Monday 22 May 2023</strong>.</p>
 <p>It is primarily intended for interactive use: interactive shell sessions, using GUI applications through the
-<a href="../../web_portal/"><abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent web portal</a>, etc.</p>
-<p>This <abbr title="A group of compute nodes.">cluster</abbr> consists of 12 workernodes, each with:</p>
+<a href="../../web_portal/">HPC-UGent web portal</a>, etc.</p>
+<p>This cluster consists of 12 workernodes, each with:</p>
 <ul>
-<li>2x 18-<abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> Intel Xeon Gold 6240 (Cascade Lake @ 2.6 GHz) <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>;</li>
-<li>one <em>shared</em> NVIDIA Ampere A2 GPU (16GB GPU <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>)</li>
-<li>~738 GiB of RAM <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>;</li>
+<li>2x 18-core Intel Xeon Gold 6240 (Cascade Lake @ 2.6 GHz) processor;</li>
+<li>one <em>shared</em> NVIDIA Ampere A2 GPU (16GB GPU memory)</li>
+<li>~738 GiB of RAM memory;</li>
 <li>1.6TB NVME local disk;</li>
-<li>HDR-100 <abbr title="A high speed switched fabric computer network communications link used in HPC.">InfiniBand</abbr> interconnect;</li>
+<li>HDR-100 InfiniBand interconnect;</li>
 <li>RHEL8 as operating system;</li>
 </ul>
-<p>To start using this <abbr title="A group of compute nodes.">cluster</abbr> from a terminal session, first run:
+<p>To start using this cluster from a terminal session, first run:
 <div class="highlight"><pre><span></span><code>module swap cluster/donphan
 </code></pre></div></p>
-<p>You can also start (interactive) sessions on <code>donphan</code> using the <a href="../../web_portal/"><abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent web portal</a>.</p>
+<p>You can also start (interactive) sessions on <code>donphan</code> using the <a href="../../web_portal/">HPC-UGent web portal</a>.</p>
 <h3 id="differences-compared-to-slaking">Differences compared to <code>slaking</code><a class="headerlink" href="#differences-compared-to-slaking" title="Permanent link">#</a></h3>
 <h4 id="cpus">CPUs<a class="headerlink" href="#cpus" title="Permanent link">#</a></h4>
 <p>The most important difference between <code>donphan</code> and <code>slaking</code> workernodes is in the CPUs:
@@ -885,20 +899,20 @@ optimizations (like GCC's <code>-march=native</code>, or Intel compiler's <code>
 a <code>donphan</code> workernode, it is recommended to recompile the software to benefit from the support for
 AVX-512 vector instructions.</p>
 <h4 id="cluster-size">Cluster size<a class="headerlink" href="#cluster-size" title="Permanent link">#</a></h4>
-<p>The <code>donphan</code> <abbr title="A group of compute nodes.">cluster</abbr> is significantly bigger than <code>slaking</code>, both in terms of number of workernodes and
+<p>The <code>donphan</code> cluster is significantly bigger than <code>slaking</code>, both in terms of number of workernodes and
 number of cores per workernode, and hence the potential performance impact of oversubscribed cores (see below)
 is less likely to occur in practice.</p>
 <h3 id="user-limits-and-oversubscription-on-donphan">User limits and oversubscription on <code>donphan</code><a class="headerlink" href="#user-limits-and-oversubscription-on-donphan" title="Permanent link">#</a></h3>
-<p>By imposing strict user limits and using oversubscription on this <abbr title="A group of compute nodes.">cluster</abbr>,
-we ensure that anyone can get a job running without having to wait in the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr>, albeit with limited resources.</p>
+<p>By imposing strict user limits and using oversubscription on this cluster,
+we ensure that anyone can get a job running without having to wait in the queue, albeit with limited resources.</p>
 <p>The user limits for <code>donphan</code> include:
-* max. 5 jobs in <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr>;
+* max. 5 jobs in queue;
 * max. 3 jobs running;
 * max. of 8 cores in total for running jobs;
-* max. 27GB of <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> in total for running jobs;</p>
+* max. 27GB of memory in total for running jobs;</p>
 <p>The job scheduler is configured with to allow <em>oversubscription</em> of the available cores,
 which means that jobs will continue to start even if all cores are already occupied by running jobs.
-While this prevents waiting time in the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr>, it does imply that performance will degrade when all cores are occupied
+While this prevents waiting time in the queue, it does imply that performance will degrade when all cores are occupied
 and additional jobs continue to start running.</p>
 <h3 id="shared-gpu-on-donphan-workernodes">Shared GPU on <code>donphan</code> workernodes<a class="headerlink" href="#shared-gpu-on-donphan-workernodes" title="Permanent link">#</a></h3>
 <p>Each <code>donphan</code> workernode includes a single NVIDIA A2 GPU that can be used for light compute workloads,
@@ -907,26 +921,26 @@ and to accelerate certain graphical tasks.</p>
 (it is always available, similar to the local disk of the workernode).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Due to the shared nature of this GPU, you should assume that any data that is loaded in the GPU <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>
+<p>Due to the shared nature of this GPU, you should assume that any data that is loaded in the GPU memory
 could potentially be accessed by other users, even after your processes have completed.</p>
 <p>There are no strong security guarantees regarding data protection when using this shared GPU!</p>
 </div>
 <hr />
-<h2 id="gallade-large-memory-cluster"><code>gallade</code>: large-<abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> <abbr title="A group of compute nodes.">cluster</abbr><a class="headerlink" href="#gallade-large-memory-cluster" title="Permanent link">#</a></h2>
-<p><code>gallade</code> is the new large-<abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> <abbr title="A group of compute nodes.">cluster</abbr>.</p>
+<h2 id="gallade-large-memory-cluster"><code>gallade</code>: large-memory cluster<a class="headerlink" href="#gallade-large-memory-cluster" title="Permanent link">#</a></h2>
+<p><code>gallade</code> is the new large-memory cluster.</p>
 <p>It replaces <code>kirlia</code>, which will be retired on <strong>Monday 22 May 2023</strong>.</p>
-<p>This <abbr title="A group of compute nodes.">cluster</abbr> consists of 12 workernodes, each with:</p>
+<p>This cluster consists of 12 workernodes, each with:</p>
 <ul>
-<li>2x 64-<abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> AMD EPYC 7773X (Milan-X @ 2.2 GHz) <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>;</li>
-<li>~940 GiB of RAM <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>;</li>
+<li>2x 64-core AMD EPYC 7773X (Milan-X @ 2.2 GHz) processor;</li>
+<li>~940 GiB of RAM memory;</li>
 <li>1.5TB NVME local disk;</li>
-<li>HDR-100 <abbr title="A high speed switched fabric computer network communications link used in HPC.">InfiniBand</abbr> interconnect;</li>
+<li>HDR-100 InfiniBand interconnect;</li>
 <li>RHEL8 as operating system;</li>
 </ul>
-<p>To start using this <abbr title="A group of compute nodes.">cluster</abbr> from a terminal session, first run:
+<p>To start using this cluster from a terminal session, first run:
 <div class="highlight"><pre><span></span><code>module swap cluster/gallade
 </code></pre></div></p>
-<p>You can also start (interactive) sessions on <code>gallade</code> using the <a href="../../web_portal/"><abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent web portal</a>.</p>
+<p>You can also start (interactive) sessions on <code>gallade</code> using the <a href="../../web_portal/">HPC-UGent web portal</a>.</p>
 <h3 id="differences-compared-to-kirlia">Differences compared to <code>kirlia</code><a class="headerlink" href="#differences-compared-to-kirlia" title="Permanent link">#</a></h3>
 <h4 id="cpus_1">CPUs<a class="headerlink" href="#cpus_1" title="Permanent link">#</a></h4>
 <p>The most important difference between <code>gallade</code> and <code>kirlia</code> workernodes is in the CPUs:
@@ -939,13 +953,13 @@ a <code>gallade</code> workernode, and will produce <code>Illegal instruction</c
 <p>Therefore, you may need to recompile software in order to use it on <code>gallade</code>.
 Even if software built on <code>kirlia</code> does still run on <code>gallade</code>, it is strongly recommended to recompile it anyway,
 since there may be signficant peformance benefits.</p>
-<h4 id="memory-per-core">Memory per <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr><a class="headerlink" href="#memory-per-core" title="Permanent link">#</a></h4>
-<p>Although <code>gallade</code> workernodes have signficantly more RAM <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> (~940 GiB) than <code>kirlia</code> workernodes had (~738 GiB),
-the average amount of <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> per <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> is significantly lower on <code>gallade</code> than it was on <code>kirlia</code>, because
-a <code>gallade</code> workernode has 128 cores (so ~7.3 GiB per <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> on average), while a <code>kirlia</code> workernode had only 36 cores
-(so ~20.5 GiB per <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> on average).</p>
+<h4 id="memory-per-core">Memory per core<a class="headerlink" href="#memory-per-core" title="Permanent link">#</a></h4>
+<p>Although <code>gallade</code> workernodes have signficantly more RAM memory (~940 GiB) than <code>kirlia</code> workernodes had (~738 GiB),
+the average amount of memory per core is significantly lower on <code>gallade</code> than it was on <code>kirlia</code>, because
+a <code>gallade</code> workernode has 128 cores (so ~7.3 GiB per core on average), while a <code>kirlia</code> workernode had only 36 cores
+(so ~20.5 GiB per core on average).</p>
 <p>It is important to take this aspect into account when submitting jobs to <code>gallade</code>, especially when requesting
-all cores via <code>ppn=all</code>. You may need to explictly request more <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> (see also <a href="../../fine_tuning_job_specifications#pbs_mem">here</a>).</p>
+all cores via <code>ppn=all</code>. You may need to explictly request more memory (see also <a href="../../../fine_tuning_job_specifications#pbs_mem">here</a>).</p>
 
               
             </article>
@@ -990,3 +1004,18 @@ all cores via <code>ppn=all</code>. You may need to explictly request more <abbr
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

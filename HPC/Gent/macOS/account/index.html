@@ -661,6 +661,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-tutorial/getting_started/" class="md-nav__link">
+        Linux tutorial
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -980,34 +994,34 @@
                 
 
 
-<h1 id="getting-an-hpc-account">Getting an <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> Account<a class="headerlink" href="#getting-an-hpc-account" title="Permanent link">#</a></h1>
+<h1 id="getting-an-hpc-account">Getting an HPC Account<a class="headerlink" href="#getting-an-hpc-account" title="Permanent link">#</a></h1>
 <h2 id="getting-ready-to-request-an-account">Getting ready to request an account<a class="headerlink" href="#getting-ready-to-request-an-account" title="Permanent link">#</a></h2>
 <p>All users of AUGent can request
 an
-account on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>, which is part of the Flemish Supercomputing Centre (VSC).</p>
-<p>See <a href="../sites/hpc_policies"><abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> policies</a> for more information on who is entitled to an account.</p>
+account on the HPC, which is part of the Flemish Supercomputing Centre (VSC).</p>
+<p>See <a href="../sites/hpc_policies">HPC policies</a> for more information on who is entitled to an account.</p>
 <p>The VSC, abbreviation of Flemish Supercomputer Centre, is a virtual
-<abbr title="A computer with an extremely high processing capacity or processing power.">supercomputer</abbr> centre. It is a partnership between the five Flemish
+supercomputer centre. It is a partnership between the five Flemish
 associations: the Association KU Leuven, Ghent University Association,
 Brussels University Association, Antwerp University Association and the
 University Colleges-Limburg. The VSC is funded by the Flemish
 Government.</p>
-<p>The <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent infrastructure clusters use public/private key pairs for user authentication
+<p>The HPC-UGent infrastructure clusters use public/private key pairs for user authentication
 (rather than passwords). Technically, the private key is stored on your
-local computer and always stays there; the public key is stored on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.
-Access to the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> is granted to anyone who can prove to have access to the
+local computer and always stays there; the public key is stored on the HPC.
+Access to the HPC is granted to anyone who can prove to have access to the
 corresponding private key on his local computer.</p>
-<h3 id="how-do-ssh-keys-work">How do <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> keys work?<a class="headerlink" href="#how-do-ssh-keys-work" title="Permanent link">#</a></h3>
+<h3 id="how-do-ssh-keys-work">How do SSH keys work?<a class="headerlink" href="#how-do-ssh-keys-work" title="Permanent link">#</a></h3>
 <ul>
 <li>
-<p>an <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> public/private key pair can be seen as a lock and a key</p>
+<p>an SSH public/private key pair can be seen as a lock and a key</p>
 </li>
 <li>
-<p>the <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> public key is equivalent with a <em>lock</em>: you give it to the
+<p>the SSH public key is equivalent with a <em>lock</em>: you give it to the
     VSC and they put it on the <em>door</em> that gives access to your account.</p>
 </li>
 <li>
-<p>the <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> private key is like a <em>physical key</em>: you don't hand it out
+<p>the SSH private key is like a <em>physical key</em>: you don't hand it out
     to other people.</p>
 </li>
 <li>
@@ -1016,12 +1030,12 @@ corresponding private key on his local computer.</p>
 </li>
 <li>
 <p>the <em>door</em> to your VSC account is special: it can have multiple
-    <em>locks</em> (<abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> public keys) attached to it, and you only need to open
-    one <em>lock</em> with the corresponding <em>key</em> (<abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> private key) to open
+    <em>locks</em> (SSH public keys) attached to it, and you only need to open
+    one <em>lock</em> with the corresponding <em>key</em> (SSH private key) to open
     the <em>door</em> (log in to the account).</p>
 </li>
 </ul>
-<p>Since all VSC clusters use <abbr title="An operating system, similar to UNIX.">Linux</abbr> as their main operating system, you
+<p>Since all VSC clusters use Linux as their main operating system, you
 will need to get acquainted with using the command-line interface and
 using the terminal.
 To open a Terminal window in macOS, open the Finder and choose</p>
@@ -1046,10 +1060,10 @@ channels (Network, Internet, telephone lines, ...).</p>
 <p>all data is encrypted during transfer.</p>
 </li>
 </ol>
-<p>OpenSSH is a FREE implementation of the <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> connectivity protocol. macOS comes
+<p>OpenSSH is a FREE implementation of the SSH connectivity protocol. macOS comes
 with its own implementation of OpenSSH, so you don't need to install any
 third-party software to use it. Just open a terminal window and jump in!</p>
-<p>On all popular <abbr title="An operating system, similar to UNIX.">Linux</abbr> distributions, the OpenSSH software is readily
+<p>On all popular Linux distributions, the OpenSSH software is readily
 available, and most often installed by default. You can check whether
 the OpenSSH software is installed by opening a terminal and typing:</p>
 <pre><code><b>$ ssh -V</b>
@@ -1066,10 +1080,10 @@ following commands:</p>
 <p>ssh: to open a shell on a remote machine;</p>
 </li>
 <li>
-<p><abbr title="Secure File Transfer Protocol, used to copy files between distinct machines.">sftp</abbr>: a secure equivalent of ftp;</p>
+<p>sftp: a secure equivalent of ftp;</p>
 </li>
 <li>
-<p><abbr title="Secure Copy is a protocol to copy files between distinct machines. SCP or scp is used extensively on HPC clusters to stage in data from outside resources.">scp</abbr>: a secure equivalent of the remote copy command rcp.</p>
+<p>scp: a secure equivalent of the remote copy command rcp.</p>
 </li>
 </ol>
 <h3 id="generate-a-publicprivate-key-pair-with-openssh">Generate a public/private key pair with OpenSSH<a class="headerlink" href="#generate-a-publicprivate-key-pair-with-openssh" title="Permanent link">#</a></h3>
@@ -1128,13 +1142,13 @@ saved in /home/user/.ssh/id_rsa. Your public key has been saved in
 and a passphrase to protect your private key. It needs to be emphasised
 that you really should choose the passphrase wisely! The system will ask
 you for it every time you want to use the private key that is every time
-you want to access the <abbr title="A group of compute nodes.">cluster</abbr> or transfer your files.</p>
+you want to access the cluster or transfer your files.</p>
 <p><strong>Without your key pair, you won't be able to apply for a personal VSC account.</strong></p>
-<h3 id="using-an-ssh-agent-optional">Using an <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> agent (optional)<a class="headerlink" href="#using-an-ssh-agent-optional" title="Permanent link">#</a></h3>
-<p>Most recent Unix derivatives include by default an <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> agent 
-to keep and manage the user <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> keys. If you use one of these derivatives you <strong>must</strong> include the new keys into
-the <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> manager keyring to be able to connect to the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> <abbr title="A group of compute nodes.">cluster</abbr>. If
-not, <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> client will display an error message (see <a href="../connecting">Connecting</a>) similar to this:</p>
+<h3 id="using-an-ssh-agent-optional">Using an SSH agent (optional)<a class="headerlink" href="#using-an-ssh-agent-optional" title="Permanent link">#</a></h3>
+<p>Most recent Unix derivatives include by default an SSH agent 
+to keep and manage the user SSH keys. If you use one of these derivatives you <strong>must</strong> include the new keys into
+the SSH manager keyring to be able to connect to the HPC cluster. If
+not, SSH client will display an error message (see <a href="../connecting">Connecting</a>) similar to this:</p>
 <pre><code>Agent admitted failure to sign using the key. 
 Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
 </code></pre>
@@ -1154,11 +1168,11 @@ argument, as example: <code>ssh-add /path/to/my/id_rsa</code>.</p>
 <pre><code><b>$ ssh-add -l</b>
 </code></pre>
 
-<p>After these changes the key agent will keep your <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> key to connect to
+<p>After these changes the key agent will keep your SSH key to connect to
 the clusters as usual.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>You should execute <code>ssh-add</code> command again if you generate a new <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr>
+<p>You should execute <code>ssh-add</code> command again if you generate a new SSH
 key.</p>
 </div>
 <h2 id="applying-for-the-account">Applying for the account<a class="headerlink" href="#applying-for-the-account" title="Permanent link">#</a></h2>
@@ -1174,7 +1188,7 @@ and "permanently".</p>
 <p>You either have a login name of maximum 8 characters, or a (non-UGent)
 email address if you are an external user. In case of problems with your
 UGent password, please visit: <a href="https://password.ugent.be/">https://password.ugent.be/</a>. After
-logging in, you may be requested to <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr> your information. Click "Yes,
+logging in, you may be requested to share your information. Click "Yes,
 continue".</p>
 <p><img alt="image" src="../img/ch2-browser-authenticate-gent.png" style="display: block; margin: 0 auto" /></p>
 <p>After you log in using your UGent login and password, you will be asked to
@@ -1212,15 +1226,15 @@ Kind regards,
 -- The VSC administrators
 </code></pre>
 
-<p>Now, you can start using the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>. You can always look up your VSC id later
+<p>Now, you can start using the HPC. You can always look up your VSC id later
 by visiting <a href="https://account.vscentrum.be">https://account.vscentrum.be</a>.</p>
-<h3 id="adding-multiple-ssh-public-keys-optional">Adding multiple <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> public keys (optional)<a class="headerlink" href="#adding-multiple-ssh-public-keys-optional" title="Permanent link">#</a></h3>
+<h3 id="adding-multiple-ssh-public-keys-optional">Adding multiple SSH public keys (optional)<a class="headerlink" href="#adding-multiple-ssh-public-keys-optional" title="Permanent link">#</a></h3>
 <p>In case you are connecting from different computers to the login nodes,
-it is advised to use separate <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> public keys to do so. You should
+it is advised to use separate SSH public keys to do so. You should
 follow these steps.</p>
 <ol>
 <li>
-<p>Create a new public/private <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> key pair from the new computer.
+<p>Create a new public/private SSH key pair from the new computer.
     Repeat the process described in
     section <a href="#generate-a-publicprivate-key-pair-with-openssh">Generate a public/private key pair with OpenSSH</a>.</p>
 </li>
@@ -1228,29 +1242,29 @@ follow these steps.</p>
 <p>Go to <a href="https://account.vscentrum.be/django/account/edit">https://account.vscentrum.be/django/account/edit</a></p>
 </li>
 <li>
-<p>Upload the new <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> public key using the <strong>Add public key</strong> section. Make sure that your
+<p>Upload the new SSH public key using the <strong>Add public key</strong> section. Make sure that your
     public key is actually saved, because a public key will be refused
     if it is too short, wrong type, or in a wrong format.</p>
 </li>
 <li>
 <p>(optional) If you lost your key, you can delete the old key on the
-    same page. You should keep at least one valid public <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> key in your
+    same page. You should keep at least one valid public SSH key in your
     account.</p>
 </li>
 <li>
-<p>Take into account that it will take some time before the new <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr>
+<p>Take into account that it will take some time before the new SSH
     public key is active in your account on the system; waiting for
     15-30 minutes should be sufficient.</p>
 </li>
 </ol>
-<h2 id="computation-workflow-on-the-hpc">Computation Workflow on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr><a class="headerlink" href="#computation-workflow-on-the-hpc" title="Permanent link">#</a></h2>
+<h2 id="computation-workflow-on-the-hpc">Computation Workflow on the HPC<a class="headerlink" href="#computation-workflow-on-the-hpc" title="Permanent link">#</a></h2>
 <p>A typical Computation workflow will be:</p>
 <ol>
 <li>
-<p>Connect to the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></p>
+<p>Connect to the HPC</p>
 </li>
 <li>
-<p>Transfer your files to the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></p>
+<p>Transfer your files to the HPC</p>
 </li>
 <li>
 <p>Compile your code and test it</p>
@@ -1265,7 +1279,7 @@ follow these steps.</p>
 <p>Wait while</p>
 <ol>
 <li>
-<p>your job gets into the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr></p>
+<p>your job gets into the queue</p>
 </li>
 <li>
 <p>your job gets executed</p>
@@ -1361,3 +1375,18 @@ chapters.</p>
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

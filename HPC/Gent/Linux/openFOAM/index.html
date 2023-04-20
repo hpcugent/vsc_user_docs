@@ -552,6 +552,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-tutorial/getting_started/" class="md-nav__link">
+        Linux tutorial
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1068,7 +1082,7 @@
 
 <h1 id="openfoam">OpenFOAM<a class="headerlink" href="#openfoam" title="Permanent link">#</a></h1>
 <p>In this chapter, we outline best practices for using the centrally
-provided OpenFOAM installations on the VSC <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> infrastructure.</p>
+provided OpenFOAM installations on the VSC HPC infrastructure.</p>
 <h2 id="different-openfoam-releases">Different OpenFOAM releases<a class="headerlink" href="#different-openfoam-releases" title="Permanent link">#</a></h2>
 <p>There are currently three different sets of versions of OpenFOAM
 available, each with its own versioning scheme:</p>
@@ -1097,7 +1111,7 @@ are important differences between the different versions w.r.t.
 features. If the OpenFOAM version you need is not available yet, see <a href="../FAQ/#i-want-to-use-software-that-is-not-available-on-the-clusters-yet">I want to use software that is not available on the clusters yet</a>.</p>
 <h2 id="documentation-training-material">Documentation &amp; training material<a class="headerlink" href="#documentation-training-material" title="Permanent link">#</a></h2>
 <p>The best practices outlined here focus specifically on the use of
-OpenFOAM on the VSC <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> infrastructure. As such, they are intended to
+OpenFOAM on the VSC HPC infrastructure. As such, they are intended to
 augment the existing OpenFOAM documentation rather than replace it. For
 more general information on using OpenFOAM, please refer to:</p>
 <ul>
@@ -1152,7 +1166,7 @@ more general information on using OpenFOAM, please refer to:</p>
 OpenFOAM, there are a couple of things to take into account.</p>
 <h3 id="picking-and-loading-an-openfoam-module">Picking and loading an <code>OpenFOAM</code> module<a class="headerlink" href="#picking-and-loading-an-openfoam-module" title="Permanent link">#</a></h3>
 <p>First of all, you need to pick and load one of the available <code>OpenFOAM</code>
-<abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr>. To get an overview of the available <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr>, run
+modules. To get an overview of the available modules, run
 '<code>module avail OpenFOAM</code>'. For example:</p>
 <pre><code>$ <b>module avail OpenFOAM</b>
 ------------------ /apps/gent/CO7/sandybridge/modules/all ------------------
@@ -1168,11 +1182,11 @@ OpenFOAM, there are a couple of things to take into account.</p>
 
 <p>To pick a module, take into account the differences between the
 different OpenFOAM versions w.r.t. features and API (see also <a href="./#different-openfoam-releases">Different OpenFOAM releases</a>). If
-multiple <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> are available that fulfill your requirements, give
+multiple modules are available that fulfill your requirements, give
 preference to those providing a more recent OpenFOAM version, and to the
 ones that were installed with a more recent compiler toolchain; for
-example, prefer a module that includes <code>intel-2023b</code> in its name over one
-that includes <code>intel-2023a</code>.</p>
+example, prefer a module that includes <code>intel-{{ current_year }}b</code> in its name over one
+that includes <code>intel-{{ current_year }}a</code>.</p>
 <p>To prepare your environment for using OpenFOAM, load the <code>OpenFOAM</code>
 module you have picked; for example:</p>
 <pre><code>$ <b>module load OpenFOAM/4.1-intel-2017a</b>
@@ -1181,7 +1195,7 @@ module you have picked; for example:</p>
 <h3 id="sourcing-the-foam_bash-script">Sourcing the <code>$FOAM_BASH</code> script<a class="headerlink" href="#sourcing-the-foam_bash-script" title="Permanent link">#</a></h3>
 <p>OpenFOAM provides a script that you should <code>source</code> to further prepare
 the environment. This script will define some additional environment
-variables that are required to use OpenFOAM. The <code>OpenFOAM</code> <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr>
+variables that are required to use OpenFOAM. The <code>OpenFOAM</code> modules
 define an environment variable named <code>FOAM_BASH</code> that specifies the
 location to this script. Assuming you are using <code>bash</code> in your shell
 session or job script, you should always run the following command after
@@ -1243,19 +1257,19 @@ performed:</p>
 </ul>
 <p>Depending on the size of the domain and the desired format of the
 results, these pre- and post-processing steps can be run either
-before/after the job running the actual simulation, either on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>
+before/after the job running the actual simulation, either on the HPC
 infrastructure or elsewhere, or as a part of the job that runs the
 OpenFOAM simulation itself.</p>
 <p>Do make sure you are using the same OpenFOAM version in each of the
-steps. Meshing can be done sequentially (i.e., on a single <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr>) using
+steps. Meshing can be done sequentially (i.e., on a single core) using
 for example <code>blockMesh</code>, or in parallel using more advanced meshing
 tools like <code>snappyHexMesh</code>, which is highly recommended for large cases.
 For more details, see <a href="https://cfd.direct/openfoam/user-guide/mesh/">https://cfd.direct/openfoam/user-guide/mesh/</a>.</p>
 <p>One important aspect to keep in mind for 'offline' pre-processing is
-that the domain decomposition needs to match the number of <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>
-cores that are used for the actual simulation, see also <a href="./#domain-decomposition-and-number-of-processor-cores">Domain decomposition and number of <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr> cores</a>.</p>
+that the domain decomposition needs to match the number of processor
+cores that are used for the actual simulation, see also <a href="./#domain-decomposition-and-number-of-processor-cores">Domain decomposition and number of processor cores</a>.</p>
 <p>For post-processing you can either download the simulation results to a
-local workstation, or do the post-processing (interactively) on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>
+local workstation, or do the post-processing (interactively) on the HPC
 infrastructure, for example on the login nodes or using an interactive
 session on a workernode. This may be interesting to avoid the overhead
 of downloading the results locally.</p>
@@ -1264,7 +1278,7 @@ of downloading the results locally.</p>
 <a href="https://cfd.direct/openfoam/user-guide/running-applications-parallel/">https://cfd.direct/openfoam/user-guide/running-applications-parallel/</a>.</p>
 <h3 id="the-parallel-option">The <code>-parallel</code> option<a class="headerlink" href="#the-parallel-option" title="Permanent link">#</a></h3>
 <p>When running OpenFOAM in parallel, <strong>do not forget to specify the <code>-parallel</code> option</strong>, to avoid running the same OpenFOAM
-simulation $N$ times, rather than running it once using $N$ <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>
+simulation $N$ times, rather than running it once using $N$ processor
 cores.</p>
 <p>You can check whether OpenFOAM was run in parallel in the output of the
 main command: the OpenFOAM header text should only be included <em>once</em> in
@@ -1278,7 +1292,7 @@ parallel OpenFOAM simulations rather than the standard <code>mpirun</code> comma
 see <a href="../mympirun/#mympirun">Mympiprun</a> for more information on <code>mympirun</code>.</p>
 <p>See <a href="../mympirun/#basic-usage">Basic usage</a> for how to get started with <code>mympirun</code>.</p>
 <p>To pass down the environment variables required to run OpenFOAM (which
-were defined by the <code>$FOAM_BASH</code> script, see <a href="./#preparing-the-environment">Preparing the environment</a>) to each of the <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>
+were defined by the <code>$FOAM_BASH</code> script, see <a href="./#preparing-the-environment">Preparing the environment</a>) to each of the MPI
 processes used in a parallel OpenFOAM execution, the
 <code>$MYMPIRUN_VARIABLESPREFIX</code> environment variable must be defined as
 follows, prior to running the OpenFOAM simulation with <code>mympirun</code>:</p>
@@ -1287,13 +1301,13 @@ follows, prior to running the OpenFOAM simulation with <code>mympirun</code>:</p
 
 <p>Whenever you are instructed to use a command like <code>mpirun -np &lt;N&gt; ...</code>,
 use <code>mympirun ...</code> instead; <code>mympirun</code> will automatically detect the
-number of <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr> cores that are available (see also <a href="../mympirun/#controlling-number-of-processes">Controlling number of processes</a>).</p>
-<h3 id="domain-decomposition-and-number-of-processor-cores">Domain decomposition and number of <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr> cores<a class="headerlink" href="#domain-decomposition-and-number-of-processor-cores" title="Permanent link">#</a></h3>
+number of processor cores that are available (see also <a href="../mympirun/#controlling-number-of-processes">Controlling number of processes</a>).</p>
+<h3 id="domain-decomposition-and-number-of-processor-cores">Domain decomposition and number of processor cores<a class="headerlink" href="#domain-decomposition-and-number-of-processor-cores" title="Permanent link">#</a></h3>
 <p>To run OpenFOAM in parallel, you must decompose the domain into multiple
 subdomains. Each subdomain will be processed by OpenFOAM on one
-<abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr> <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr>.</p>
+processor core.</p>
 <p>Since <code>mympirun</code> will automatically use all available cores, you need to
-make sure that the number of subdomains matches the number of <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>
+make sure that the number of subdomains matches the number of processor
 cores that will be used by <code>mympirun</code>. If not, you may run into an error
 message like:</p>
 <pre><code>number of processor directories = 4 is not equal to the number of processors = 16
@@ -1301,7 +1315,7 @@ message like:</p>
 
 <p>In this case, the case was decomposed in 4 subdomains, while the
 OpenFOAM simulation was started with 16 processes through <code>mympirun</code>. To
-match the number of subdomains and the number of <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr> cores used by
+match the number of subdomains and the number of processor cores used by
 <code>mympirun</code>, you should either:</p>
 <ul>
 <li>
@@ -1311,19 +1325,19 @@ match the number of subdomains and the number of <abbr title="A processing unit.
     again; or</p>
 </li>
 <li>
-<p>submit your job requesting exactly the same number of <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>
+<p>submit your job requesting exactly the same number of processor
     cores as there are subdomains (see the number of <code>processor*</code>
     directories that were created by <code>decomposePar</code>)</p>
 </li>
 </ul>
 <p>See <a href="../mympirun/#controlling-number-of-processes">Controlling number of processes</a> to control the number of process <code>mympirun</code> will start.</p>
-<p>This is interesting if you require more <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> per <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> than is
+<p>This is interesting if you require more memory per core than is
 available by default. Note that the decomposition method being used
 (which is specified in <code>system/decomposeParDict</code>) has significant impact
 on the performance of a parallel OpenFOAM simulation. Good decomposition
 methods (like <code>metis</code> or <code>scotch</code>) try to limit communication overhead
-by minimising the number of <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr> boundaries.</p>
-<p>To visualise the <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr> domains, use the following command:</p>
+by minimising the number of processor boundaries.</p>
+<p>To visualise the processor domains, use the following command:</p>
 <pre><code>$ <b>mympirun foamToVTK -parallel -constant -time 0 -excludePatches '(".*.")'</b>
 </code></pre>
 
@@ -1367,10 +1381,10 @@ consider using the local disk of the workernode as working directory
 <code>$VSC_SCRATCH</code> filesystem. **Certainly do not use a subdirectory in <code>$VSC_HOME</code> or <code>$VSC_DATA</code>, since these shared filesystems are too slow
 for these type of workloads.</p>
 <p>For large parallel OpenFOAM simulations on the UGent Tier-2 clusters, consider
-using the alternative shared <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> filesystem <code>$VSC_SCRATCH_ARCANINE</code>
+using the alternative shared scratch filesystem <code>$VSC_SCRATCH_ARCANINE</code>
 (see <a href="../running_jobs_with_input_output_data/#pre-defined-user-directories">Pre-defined user directories</a>).</p>
 <p>These guidelines are especially important for large-scale OpenFOAM
-simulations that involve more than a couple of dozen of <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr> cores.</p>
+simulations that involve more than a couple of dozen of processor cores.</p>
 <h2 id="using-own-solvers-with-openfoam">Using own solvers with OpenFOAM<a class="headerlink" href="#using-own-solvers-with-openfoam" title="Permanent link">#</a></h2>
 <p>See <a href="https://cfd.direct/openfoam/user-guide/compiling-applications/">https://cfd.direct/openfoam/user-guide/compiling-applications/</a>.</p>
 <h2 id="example-openfoam-job-script">Example OpenFOAM job script<a class="headerlink" href="#example-openfoam-job-script" title="Permanent link">#</a></h2>
@@ -1503,3 +1517,18 @@ rm -rf <span class="nv">$WORKDIR</span>
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

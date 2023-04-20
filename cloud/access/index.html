@@ -479,16 +479,16 @@ need a separate login or password. In order to use the cloud services,</p>
 <p>you need an active VSC account and</p>
 </li>
 <li>
-<p>your account must be a member of one or more <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> projects.</p>
+<p>your account must be a member of one or more OpenStack projects.</p>
 </li>
 </ul>
 <p>New users can obtain an account by following <a href="https://vlaams-supercomputing-centrum-vscdocumentation.readthedocs-hosted.com/en/latest/access/account_request.html">the procedure described
 here</a>.
-Once you have an account, contact if you want to start a new <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr>
+Once you have an account, contact if you want to start a new OpenStack
 project, or join an existing one.</p>
-<p>You can interact with the VSC Cloud using the <abbr title="OpenStack Dashboard (Horizon) provides administrators and users with a graphical interface to access, provision, and automate deployment of cloud-based resources. The design accommodates third party products and services, such as billing, monitoring, and additional management tools. The dashboard is also brand-able for service providers and other commercial vendors who want to make use of it. The dashboard is one of several ways users can interact with OpenStack resources. Developers can automate access or build tools to manage resources using the native OpenStack API or the EC2 compatibility API.">OpenStack Dashboard</abbr>, a web
-interface, or the <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> command line interface, which you can use
-from any system, and which is installed for you on the UGent <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr>
+<p>You can interact with the VSC Cloud using the OpenStack Dashboard, a web
+interface, or the OpenStack command line interface, which you can use
+from any system, and which is installed for you on the UGent login node
 <strong>login.hpc.ugent.be</strong>. You can log in to the Dashboard using the VSC
 accountpage, as illustrated in the next section. To get access from the
 command line interface, you'll need to obtain an application credential,
@@ -497,23 +497,23 @@ as explained in section <a href="#application-credentials">application credentia
 an existing VM running in the cloud. VSC Cloud projects can decide
 themselves who gets access to their VM's, and how.</p>
 <h2 id="dashboard-login">Dashboard Login<a class="headerlink" href="#dashboard-login" title="Permanent link">#</a></h2>
-<p>You can access the <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> web interface, or Dashboard, via
+<p>You can access the OpenStack web interface, or Dashboard, via
 <a href="https://cloud.vscentrum.be">cloud.vscentrum.be</a>.</p>
 <p>To log in, choose the (default) authentication method <strong>VSC Accountpage</strong>
 and click .</p>
 <p><img alt="image" src="../img/cloud_login_1.png" /></p>
 <p>From here on, follow the standard procedure to log in to your VSC
 account, using your home institution's single sign-on system. You can
-find a detailed description in the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> introduction at
+find a detailed description in the HPC introduction at
 <a href="https://hpcugent.github.io/vsc_user_docs/HPC/Gent/">hpcugent.github.io/vsc_user_docs</a>.
 The following chapters explain how to accomplish basic tasks using the
 Dashboard.</p>
 <h2 id="application-credentials">Application Credentials<a class="headerlink" href="#application-credentials" title="Permanent link">#</a></h2>
-<p>If you want to use the <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> command line interface --- or, for
-advanced users, use the <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> APIs directly --- you need to identify
+<p>If you want to use the OpenStack command line interface --- or, for
+advanced users, use the OpenStack APIs directly --- you need to identify
 yourself using an application credential. An application credential
 contains a secret piece of information which grants access to an
-<abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> project on your behalf.</p>
+OpenStack project on your behalf.</p>
 <p>You can create an application credential using the dashboard:</p>
 <ol>
 <li>
@@ -541,7 +541,7 @@ purpose of this credential.</dd>
 <li>
 <dl>
 <dt><strong>Secret</strong></dt>
-<dd>We recommend to leave this empty, in which case <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> will
+<dd>We recommend to leave this empty, in which case OpenStack will
 generate a random secret for you.</dd>
 </dl>
 </li>

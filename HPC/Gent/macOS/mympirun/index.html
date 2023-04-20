@@ -552,6 +552,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-tutorial/getting_started/" class="md-nav__link">
+        Linux tutorial
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -969,8 +983,8 @@
 
 
 <h1 id="mympirun">Mympirun<a class="headerlink" href="#mympirun" title="Permanent link">#</a></h1>
-<p><code>mympirun</code> is a tool to make it easier for users of <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> clusters to run
-<abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> programs with good performance. We strongly recommend to use
+<p><code>mympirun</code> is a tool to make it easier for users of HPC clusters to run
+MPI programs with good performance. We strongly recommend to use
 <code>mympirun</code> instead of <code>impirun</code>.</p>
 <p>In this chapter, we give a high-level overview. For a more detailed
 description of all options, see the <a href="https://github.com/hpcugent/vsc-mympirun/blob/master/README.md">vsc-mympirun
@@ -994,15 +1008,15 @@ processes <code>mympirun</code> will start. In the following example, the progra
 <code>Hello world from processor &lt;node&gt; ...</code> (the sourcecode of <code>mpi_hello</code>
 is <a href="https://github.com/hpcugent/vsc-mympirun/blob/master/testscripts/mpi_helloworld.c">available in the vsc-mympirun
 repository</a>).</p>
-<p>By default, <code>mympirun</code> starts one process per <em><abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr></em> on every <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> you
+<p>By default, <code>mympirun</code> starts one process per <em>core</em> on every node you
 assigned. So if you assigned 2 nodes with 16 cores each, <code>mympirun</code> will
 start 2 . 16 = 32 test processes in total.</p>
 <h3 id="-hybrid-h"><code>--hybrid</code>/<code>-h</code><a class="headerlink" href="#-hybrid-h" title="Permanent link">#</a></h3>
 <p>This is the most commonly used option for controlling the number of
 processing.</p>
 <p>The <code>--hybrid</code> option requires a positive number. This number specifies
-the number of processes started on each available physical <em><abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr></em>. It
-will ignore the number of available <em>cores</em> per <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>.</p>
+the number of processes started on each available physical <em>node</em>. It
+will ignore the number of available <em>cores</em> per node.</p>
 <pre><code>$ <b>echo $PBS_NUM_NODES</b>
 2
 $ <b>mympirun --hybrid 2 ./mpihello</b>
@@ -1126,3 +1140,18 @@ the arguments of the program to be its last arguments. Here, the
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

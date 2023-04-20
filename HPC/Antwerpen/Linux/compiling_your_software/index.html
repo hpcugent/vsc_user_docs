@@ -566,6 +566,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -591,12 +619,132 @@
       
       
         <label class="md-nav__link" for="__nav_15">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_16" type="checkbox" id="__nav_16" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16">
           Appendices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Appendices" data-md-level="1">
-        <label class="md-nav__title" for="__nav_15">
+        <label class="md-nav__title" for="__nav_16">
           <span class="md-nav__icon md-icon"></span>
           Appendices
         </label>
@@ -738,19 +886,19 @@
                 
 
 
-<h1 id="compiling-and-testing-your-software-on-the-hpc">Compiling and testing your software on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr><a class="headerlink" href="#compiling-and-testing-your-software-on-the-hpc" title="Permanent link">#</a></h1>
-<p>All nodes in the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> <abbr title="A group of compute nodes.">cluster</abbr> are running the "CentOS <abbr title="An operating system, similar to UNIX.">Linux</abbr> release 7.8.2003 (Core)" 
-Operating system, which is a specific version of RedHat Enterprise <abbr title="An operating system, similar to UNIX.">Linux</abbr>. This means that all the 
+<h1 id="compiling-and-testing-your-software-on-the-hpc">Compiling and testing your software on the HPC<a class="headerlink" href="#compiling-and-testing-your-software-on-the-hpc" title="Permanent link">#</a></h1>
+<p>All nodes in the UAntwerpen-HPC cluster are running the "CentOS Linux release 7.8.2003 (Core)" 
+Operating system, which is a specific version of RedHat Enterprise Linux. This means that all the 
 software programs
-(executable) that the end-user wants to run on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> first must be
-compiled for CentOS <abbr title="An operating system, similar to UNIX.">Linux</abbr> release 7.8.2003 (Core). It also means that you first have to install all the
-required external software packages on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.</p>
-<p>Most commonly used compilers are already pre-installed on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> and can be
+(executable) that the end-user wants to run on the UAntwerpen-HPC first must be
+compiled for CentOS Linux release 7.8.2003 (Core). It also means that you first have to install all the
+required external software packages on the UAntwerpen-HPC.</p>
+<p>Most commonly used compilers are already pre-installed on the UAntwerpen-HPC and can be
 used straight away. Also many popular external software packages, which
 are regularly used in the scientific community, are also pre-installed.</p>
-<h2 id="check-the-pre-installed-software-on-the-uantwerpen-hpc">Check the pre-installed software on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr><a class="headerlink" href="#check-the-pre-installed-software-on-the-uantwerpen-hpc" title="Permanent link">#</a></h2>
-<p>In order to check all the available <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> and their version numbers,
-which are pre-installed on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> enter:</p>
+<h2 id="check-the-pre-installed-software-on-the-uantwerpen-hpc">Check the pre-installed software on the UAntwerpen-HPC<a class="headerlink" href="#check-the-pre-installed-software-on-the-uantwerpen-hpc" title="Permanent link">#</a></h2>
+<p>In order to check all the available modules and their version numbers,
+which are pre-installed on the UAntwerpen-HPC enter:</p>
 <pre><code>$ <b>module av 2>&1 | more</b>
 ------------- /apps/antwerpen/modules/hopper/2015a/all ------------
 ABINIT/7.10.2-intel-2015a
@@ -765,7 +913,7 @@ bzip2/1.0.6-intel-2015a
 </code></pre>
 
 <p>Or when you want to check whether some specific software, some compiler
-or some application (e.g., LAMMPS) is installed on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.</p>
+or some application (e.g., LAMMPS) is installed on the UAntwerpen-HPC.</p>
 <pre><code>$ <b>module av 2>&1 | grep -i -e "LAMMPS"</b>
 LAMMPS/9Dec14-intel-2015a
 LAMMPS/30Oct14-intel-2014a
@@ -774,13 +922,13 @@ LAMMPS/5Sep14-intel-2014a
 
 <p>As you are not aware of the capitals letters in the module name, we
 looked for a case-insensitive name with the "-i" option.</p>
-<p>When your required application is not available on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> please contact
-any UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> member. Be aware of potential "License Costs". "Open Source"
+<p>When your required application is not available on the UAntwerpen-HPC please contact
+any UAntwerpen-HPC member. Be aware of potential "License Costs". "Open Source"
 software is often preferred.</p>
 <h2 id="porting-your-code">Porting your code<a class="headerlink" href="#porting-your-code" title="Permanent link">#</a></h2>
 <p>To <strong>port</strong> a software-program is to translate it from the operating system in
 which it was developed (e.g., Windows 7) to another operating system
-(e.g., RedHat Enterprise <abbr title="An operating system, similar to UNIX.">Linux</abbr> on our UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>) so that it can be used there. Porting implies some
+(e.g., RedHat Enterprise Linux on our UAntwerpen-HPC) so that it can be used there. Porting implies some
 degree of effort, but not nearly as much as redeveloping the program in
 the new environment. It all depends on how "portable" you wrote your
 code.</p>
@@ -803,8 +951,8 @@ destination machine.</p>
 <p>Whilst programming, it would be wise to stick to certain standards
 (e.g., ISO/ANSI/POSIX). This will ease the porting of your code to other
 platforms.</p>
-<p>Porting your code to the CentOS <abbr title="An operating system, similar to UNIX.">Linux</abbr> release 7.8.2003 (Core) platform is the responsibility of the end-user.</p>
-<h2 id="compiling-and-building-on-the-uantwerpen-hpc">Compiling and building on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr><a class="headerlink" href="#compiling-and-building-on-the-uantwerpen-hpc" title="Permanent link">#</a></h2>
+<p>Porting your code to the CentOS Linux release 7.8.2003 (Core) platform is the responsibility of the end-user.</p>
+<h2 id="compiling-and-building-on-the-uantwerpen-hpc">Compiling and building on the UAntwerpen-HPC<a class="headerlink" href="#compiling-and-building-on-the-uantwerpen-hpc" title="Permanent link">#</a></h2>
 <p>Compiling refers to the process of translating code written in some
 programming language, e.g., Fortran, C, or C++, to machine code.
 Building is similar, but includes gluing together the machine code
@@ -812,17 +960,17 @@ resulting from different source files into an executable (or library).
 The text below guides you through some basic problems typical for small
 software projects. For larger projects it is more appropriate to use
 makefiles or even an advanced build system like CMake.</p>
-<p>All the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> nodes run the same version of the Operating System, i.e. CentOS <abbr title="An operating system, similar to UNIX.">Linux</abbr> release 7.8.2003 (Core). So,
-it is sufficient to compile your program on any <abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr>. Once you
+<p>All the UAntwerpen-HPC nodes run the same version of the Operating System, i.e. CentOS Linux release 7.8.2003 (Core). So,
+it is sufficient to compile your program on any compute node. Once you
 have generated an executable with your compiler, this executable should
-be able to run on any other compute-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>.</p>
+be able to run on any other compute-node.</p>
 <p>A typical process looks like:</p>
 <ol>
 <li>
-<p>Copy your software to the login-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> of the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></p>
+<p>Copy your software to the login-node of the UAntwerpen-HPC</p>
 </li>
 <li>
-<p>Start an interactive session on a <abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr>;</p>
+<p>Start an interactive session on a compute node;</p>
 </li>
 <li>
 <p>Compile it;</p>
@@ -834,21 +982,21 @@ be able to run on any other compute-<abbr title="A node attribute is a non-quant
 <p>Generate your job scripts;</p>
 </li>
 <li>
-<p>Test it on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></p>
+<p>Test it on the UAntwerpen-HPC</p>
 </li>
 <li>
 <p>Run it (in parallel);</p>
 </li>
 </ol>
-<p>We assume you've copied your software to the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>. The next step is to request
-your private <abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr>.</p>
+<p>We assume you've copied your software to the UAntwerpen-HPC. The next step is to request
+your private compute node.</p>
 <pre><code>$ <b>qsub -I</b>
 qsub: waiting for job 433253.leibniz to start
 </code></pre>
 
 <h3 id="compiling-a-sequential-program-in-c">Compiling a sequential program in C<a class="headerlink" href="#compiling-a-sequential-program-in-c" title="Permanent link">#</a></h3>
 <p>Go to the examples for chapter 
-<a href="./#compiling-and-building-on-the-hpc">Compiling and testing your software on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></a> and load the 
+<a href="./#compiling-and-building-on-the-hpc">Compiling and testing your software on the HPC</a> and load the 
 foss module:</p>
 <pre><code>$ <b>cd ~/examples/Compiling-and-testing-your-software-on-the-HPC</b>
 $ <b>module load foss</b>
@@ -908,7 +1056,7 @@ relate to performance problems, using unsafe or obsolete language
 features, etc. It is good practice to remove all warnings from a
 compilation process, even if they seem unimportant so that a code change
 that produces a warning does not go unnoticed.</p>
-<p>Let's test this program on the local <abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr>, which is at your
+<p>Let's test this program on the local compute node, which is at your
 disposal after the "qsub --I" command:</p>
 <pre><code>$ <b>./hello</b>
 Hello #0
@@ -919,10 +1067,10 @@ Hello #4
 ...
 </code></pre>
 
-<p>It seems to work, now run it on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></p>
+<p>It seems to work, now run it on the UAntwerpen-HPC</p>
 <pre><code>$ <b>qsub hello.pbs</b></code></pre>
 
-<h3 id="compiling-a-parallel-program-in-cmpi">Compiling a parallel program in C/<abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr><a class="headerlink" href="#compiling-a-parallel-program-in-cmpi" title="Permanent link">#</a></h3>
+<h3 id="compiling-a-parallel-program-in-cmpi">Compiling a parallel program in C/MPI<a class="headerlink" href="#compiling-a-parallel-program-in-cmpi" title="Permanent link">#</a></h3>
 <pre><code>$ <b>cd ~/examples/Compiling-and-testing-your-software-on-the-HPC</b></code></pre>
 
 <p>List the directory and explore the contents of the "<em>mpihello.c</em>"
@@ -961,10 +1109,10 @@ main<span class="o">(</span>int argc, char **argv<span class="o">)</span>
   MPI_Finalize<span class="o">()</span><span class="p">;</span>
 <span class="o">}</span>
 </code></pre></div>
-<p>The "mpi_hello.c" program is a simple source file, written in C with <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>
+<p>The "mpi_hello.c" program is a simple source file, written in C with MPI
 library calls.</p>
 <p>Then, check the command line options for <em>"mpicc" (GNU C-Compiler with
-<abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> extensions)</em>, then we compile and list the contents of the directory
+MPI extensions)</em>, then we compile and list the contents of the directory
 again:</p>
 <pre><code>$ <b>mpicc --help</b>
 $ <b>mpicc -o mpihello mpihello.c</b>
@@ -972,11 +1120,11 @@ $ <b>ls -l</b></code></pre>
 
 <p>A new file "hello" has been created. Note that this program has
 "execute" rights.</p>
-<p>Let's test this program on the "login" <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> first:</p>
+<p>Let's test this program on the "login" node first:</p>
 <pre><code>$ <b>./mpihello</b>
 Hello World from Node 0.</code></pre>
 
-<p>It seems to work, now run it on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.</p>
+<p>It seems to work, now run it on the UAntwerpen-HPC.</p>
 <pre><code>$ <b>qsub mpihello.pbs</b></code></pre>
 
 <h3 id="compiling-a-parallel-program-in-intel-parallel-studio-cluster-edition">Compiling a parallel program in Intel Parallel Studio Cluster Edition<a class="headerlink" href="#compiling-a-parallel-program-in-intel-parallel-studio-cluster-edition" title="Permanent link">#</a></h3>
@@ -985,8 +1133,8 @@ Studio Cluster Edition compilers. We stay in the examples directory for
 this chapter:</p>
 <pre><code>$ <b>cd ~/examples/Compiling-and-testing-your-software-on-the-HPC</b></code></pre>
 
-<p>We will compile this C/<abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> -file into an executable with the Intel
-Parallel Studio Cluster Edition. First, clear the <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> (purge) and
+<p>We will compile this C/MPI -file into an executable with the Intel
+Parallel Studio Cluster Edition. First, clear the modules (purge) and
 then load the latest "intel" module:</p>
 <pre><code>$ <b>module purge</b>
 $ <b>module load intel</b>
@@ -998,11 +1146,11 @@ equivalent of mpicc is mpiicc.</p>
 $ <b>ls -l</b></code></pre>
 
 <p>Note that the old "mpihello" file has been overwritten. Let's test this
-program on the "login" <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> first:</p>
+program on the "login" node first:</p>
 <pre><code>$ <b>./mpihello</b>
 Hello World from Node 0.</code></pre>
 
-<p>It seems to work, now run it on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.</p>
+<p>It seems to work, now run it on the UAntwerpen-HPC.</p>
 <pre><code>$ <b>qsub mpihello.pbs</b></code></pre>
 
 <p>Note: The Antwerp University Association (AUHA) only has a license for the Intel Parallel Studio Cluster
@@ -1130,12 +1278,21 @@ Fortran compilers.</p>
     
       <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

@@ -669,6 +669,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-tutorial/getting_started/" class="md-nav__link">
+        Linux tutorial
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1003,10 +1017,10 @@
 </code></pre>
 
 <p>This occurs when your job did not complete within the requested
-<abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>. See
+walltime. See
 section on <a href="../fine_tuning_job_specifications/#specifying-walltime">Specifying Walltime</a> for more information
-about how to request the <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>. It is recommended to use
-<em>checkpointing</em> if the job requires <strong>72 hours</strong> of <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> or more to be executed.</p>
+about how to request the walltime. It is recommended to use
+<em>checkpointing</em> if the job requires <strong>72 hours</strong> of walltime or more to be executed.</p>
 <!-- FIXME: Refer to Checkpointing section. -->
 
 <h2 id="out-of-quota-issues">Out of quota issues<a class="headerlink" href="#out-of-quota-issues" title="Permanent link">#</a></h2>
@@ -1021,9 +1035,9 @@ section on <a href="../running_jobs_with_input_output_data/#pre-defined-user-dir
 and how to use the storage endpoints in an efficient way.</p>
 <!-- FIXME: Add how to request quota section -->
 
-<h2 id="sec:connecting-issues">Issues connecting to <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr><a class="headerlink" href="#sec:connecting-issues" title="Permanent link">#</a></h2>
-<p>If you are confused about the <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> public/private key pair concept, maybe
-the key/lock analogy in <a href="../account/#how-do-ssh-keys-work">How do <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> keys work?</a> can help.</p>
+<h2 id="sec:connecting-issues">Issues connecting to login node<a class="headerlink" href="#sec:connecting-issues" title="Permanent link">#</a></h2>
+<p>If you are confused about the SSH public/private key pair concept, maybe
+the key/lock analogy in <a href="../account/#how-do-ssh-keys-work">How do SSH keys work?</a> can help.</p>
 <p>If you have errors that look like:</p>
 <pre><code>vsc40000@login.hpc.ugent.be: Permission denied
 </code></pre>
@@ -1049,13 +1063,13 @@ things to do that should help:</p>
     <a href="https://account.vscentrum.be/">https://account.vscentrum.be/</a>.</p>
 </li>
 <li>
-<p>You previously connected to the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> from another machine, but now have
+<p>You previously connected to the HPC from another machine, but now have
     another machine? Please follow the procedure for adding additional
-    keys in section <a href="../account/#adding-multiple-ssh-public-keys-optional">Adding multiple <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> public keys</a>. You may need to wait for
-    15-20 minutes until the <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> public key(s) you added become active.</p>
+    keys in section <a href="../account/#adding-multiple-ssh-public-keys-optional">Adding multiple SSH public keys</a>. You may need to wait for
+    15-20 minutes until the SSH public key(s) you added become active.</p>
 </li>
 <li>
-<p>When using an <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> key
+<p>When using an SSH key
 in a non-default location, make sure you supply the path of the
 private key (and not the path of the public key) to <code>ssh</code>.
 <code>id_rsa.pub</code> is the usual filename of the public key, <code>id_rsa</code> is
@@ -1068,7 +1082,7 @@ section <a href="../connecting/#connect">Connect</a>)</p>
     you added on <a href="https://account.vscentrum.be/">https://account.vscentrum.be/</a>.</p>
 </li>
 <li>
-<p>Please do not use someone else's private keys. You must never <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr>
+<p>Please do not use someone else's private keys. You must never share
     your private key, they're called <em>private</em> for a good reason.</p>
 </li>
 </ol>
@@ -1125,7 +1139,7 @@ qsub: script is written in DOS/Windows text format
 </code></pre>
 
 <p>It's probably because you transferred the files from a Windows computer.
-See the <a href="https://hpcugent.github.io/vsc_user_docs/linux-tutorial/uploading_files/#dos2unix">section about <code>dos2unix</code> in <abbr title="An operating system, similar to UNIX.">Linux</abbr> tutorial</a> to fix this error.</p>
+See the <a href="https://hpcugent.github.io/vsc_user_docs/linux-tutorial/uploading_files/#dos2unix">section about <code>dos2unix</code> in Linux tutorial</a> to fix this error.</p>
 <h2 id="warning-message-when-first-connecting-to-new-host">Warning message when first connecting to new host<a class="headerlink" href="#warning-message-when-first-connecting-to-new-host" title="Permanent link">#</a></h2>
 <p>If you use X2Go, then you might get another fingerprint, then make sure that the fingerprint
 is displayed is one of the following ones:</p>
@@ -1135,9 +1149,9 @@ is displayed is one of the following ones:</p>
 <li>ssh-ecdsa 256 67:6c:af:23:cc:a1:72:09:f5:45:f1:60:08:e8:98:ca:31:87:58:6c</li>
 </ul>
 <p>If it does, type <strong><em>yes</em></strong>. If it doesn't, please contact support: hpc@ugent.be.</p>
-<p>The first time you make a connection to the <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr>, a Security
+<p>The first time you make a connection to the login node, a Security
 Alert will appear and you will be asked to verify the authenticity of the
-<abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr>.</p>
+login node.</p>
 <p>Make sure the fingerprint in the alert matches one of the following:</p>
 <pre><code>- ssh-rsa 2048 10:2f:31:21:04:75:cb:ed:67:e0:d5:0c:a1:5a:f4:78
 - ssh-rsa 2048 SHA256:W8Wz0/FkkCR2ulN7+w8tNI9M0viRgFr2YlHrhKD2Dd0
@@ -1161,23 +1175,23 @@ is displayed is one of the following ones:</p>
 <li>ssh-ecdsa 256 67:6c:af:23:cc:a1:72:09:f5:45:f1:60:08:e8:98:ca:31:87:58:6c</li>
 </ul>
 <h2 id="memory-limits">Memory limits<a class="headerlink" href="#memory-limits" title="Permanent link">#</a></h2>
-<p>To avoid jobs allocating too much <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>, there are <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> limits in
-place by default. It is possible to specify higher <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> limits if your
+<p>To avoid jobs allocating too much memory, there are memory limits in
+place by default. It is possible to specify higher memory limits if your
 jobs require this.</p>
-<h3 id="how-will-i-know-if-memory-limits-are-the-cause-of-my-problem">How will I know if <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> limits are the cause of my problem?<a class="headerlink" href="#how-will-i-know-if-memory-limits-are-the-cause-of-my-problem" title="Permanent link">#</a></h3>
-<p>If your program fails with a <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>-related issue, there is a good
-chance it failed because of the <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> limits and you should increase
-the <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> limits for your job.</p>
+<h3 id="how-will-i-know-if-memory-limits-are-the-cause-of-my-problem">How will I know if memory limits are the cause of my problem?<a class="headerlink" href="#how-will-i-know-if-memory-limits-are-the-cause-of-my-problem" title="Permanent link">#</a></h3>
+<p>If your program fails with a memory-related issue, there is a good
+chance it failed because of the memory limits and you should increase
+the memory limits for your job.</p>
 <p>Examples of these error messages are: <code>malloc failed</code>, <code>Out of memory</code>,
 <code>Could not allocate memory</code> or in Java:
 <code>Could not reserve enough space for object heap</code>. Your program can also
 run into a <code>Segmentation fault</code> (or <code>segfault</code>) or crash due to bus
 errors.</p>
-<p>You can check the amount of virtual <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> (in Kb) that is available to
+<p>You can check the amount of virtual memory (in Kb) that is available to
 you via the <code>ulimit -v</code> command <em>in your job script</em>.</p>
-<h3 id="how-do-i-specify-the-amount-of-memory-i-need">How do I specify the amount of <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> I need?<a class="headerlink" href="#how-do-i-specify-the-amount-of-memory-i-need" title="Permanent link">#</a></h3>
-<p>See <a href="../running_batch_jobs/#generic-resource-requirements">Generic resource requirements</a> to set <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> and other requirements, see <a href="../fine_tuning_job_specifications/#specifying-memory-requirements">Specifying <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> requirements</a> to finetune the amount of
-<abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> you request.</p>
+<h3 id="how-do-i-specify-the-amount-of-memory-i-need">How do I specify the amount of memory I need?<a class="headerlink" href="#how-do-i-specify-the-amount-of-memory-i-need" title="Permanent link">#</a></h3>
+<p>See <a href="../running_batch_jobs/#generic-resource-requirements">Generic resource requirements</a> to set memory and other requirements, see <a href="../fine_tuning_job_specifications/#specifying-memory-requirements">Specifying memory requirements</a> to finetune the amount of
+memory you request.</p>
 <!-- % See issue #248 to fix Java. This is software specific.
 % See issue #196 to fix MATLAB. This is software specific. -->
 
@@ -1202,7 +1216,7 @@ While processing the following module(s):
 
 <p>This resulted in an error because we tried to load two different
 versions of the <code>intel</code> module.</p>
-<p>To fix this, check if there are other versions of the <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> you want to load
+<p>To fix this, check if there are other versions of the modules you want to load
 that have the same version of common dependencies. You can list all versions of
 a module with <code>module avail</code>: for <code>HMMER</code>, this command is <code>module avail HMMER</code>.</p>
 <p>Another common error is:</p>
@@ -1213,9 +1227,9 @@ If you don't understand the warning or error, contact the helpdesk at hpc@ugent.
 </code></pre>
 
 <p>This is because there can only be one <code>cluster</code> module active at a time.
-The correct command is <code>module swap cluster/skitty</code>. See also <a href="../running_batch_jobs/#specifying-the-cluster-on-which-to-run">Specifying the <abbr title="A group of compute nodes.">cluster</abbr> on which to run</a>.</p>
+The correct command is <code>module swap cluster/skitty</code>. See also <a href="../running_batch_jobs/#specifying-the-cluster-on-which-to-run">Specifying the cluster on which to run</a>.</p>
 <h2 id="running-software-that-is-incompatible-with-host">Running software that is incompatible with host<a class="headerlink" href="#running-software-that-is-incompatible-with-host" title="Permanent link">#</a></h2>
-<p>When running software provided through <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> (see <a href="../running_batch_jobs/#modules">Modules</a>), you may run into
+<p>When running software provided through modules (see <a href="../running_batch_jobs/#modules">Modules</a>), you may run into
 errors like:</p>
 <pre><code>$ <b>module swap cluster/kirlia</b>
 The following have been reloaded with a version change: 
@@ -1239,17 +1253,17 @@ $ <b>python</b>
 Illegal instruction
 </code></pre>
 
-<p>When we swap to a different <abbr title="A group of compute nodes.">cluster</abbr>, the available <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> change so
-they work for that <abbr title="A group of compute nodes.">cluster</abbr>. That means that if the <abbr title="A group of compute nodes.">cluster</abbr> and the login
-nodes have a different <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr> architecture, software loaded using <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr>
+<p>When we swap to a different cluster, the available modules change so
+they work for that cluster. That means that if the cluster and the login
+nodes have a different CPU architecture, software loaded using modules
 might not work.</p>
 <p>If you want to test software on the login nodes, make sure the
-<code>cluster/victini</code> module is loaded (with <code>module swap cluster/victini</code>, see <a href="../running_batch_jobs/#specifying-the-cluster-on-which-to-run">Specifying the <abbr title="A group of compute nodes.">cluster</abbr> on which to run</a>), since
-the login nodes and have the same <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr> architecture.</p>
-<p>If <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> are already loaded, and then we swap to a different <abbr title="A group of compute nodes.">cluster</abbr>,
-all our <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> will get reloaded. This means that all current <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr>
+<code>cluster/victini</code> module is loaded (with <code>module swap cluster/victini</code>, see <a href="../running_batch_jobs/#specifying-the-cluster-on-which-to-run">Specifying the cluster on which to run</a>), since
+the login nodes and have the same CPU architecture.</p>
+<p>If modules are already loaded, and then we swap to a different cluster,
+all our modules will get reloaded. This means that all current modules
 will be unloaded and then loaded again, so they'll work on the newly
-loaded <abbr title="A group of compute nodes.">cluster</abbr>. Here's an example of how that would look like:</p>
+loaded cluster. Here's an example of how that would look like:</p>
 <pre><code>$ <b>module load Python/2.7.14-intel-2018a</b>
 $ <b>module swap cluster/swalot</b>
 
@@ -1264,8 +1278,8 @@ The following have been reloaded with a version change:
 </code></pre>
 
 <p>This might result in the same problems as mentioned above. When swapping
-to a different <abbr title="A group of compute nodes.">cluster</abbr>, you can run <code>module purge</code> to unload all <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr>
-to avoid problems (see <a href="../running_batch_jobs/#purging-all-modules">Purging all <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr></a>).</p>
+to a different cluster, you can run <code>module purge</code> to unload all modules
+to avoid problems (see <a href="../running_batch_jobs/#purging-all-modules">Purging all modules</a>).</p>
 
               
             </article>
@@ -1346,3 +1360,18 @@ to avoid problems (see <a href="../running_batch_jobs/#purging-all-modules">Purg
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

@@ -42,6 +42,20 @@
 
     
     
+<script>
+    const store_OS_txt = localStorage.getItem("select_OS")
+    if (!!store_OS_txt && window.location.hash.substring(1) != 'force_select_OS') {
+        const store_OS = JSON.parse(store_OS_txt)
+        // there is no need to escape the store_OS[0], it's not seen as a regexp pattern?
+        const href = window.location.href.replace(store_OS[0], store_OS[0] + '/' + store_OS[1])
+        if (href != window.location.href) {
+            //console.log("store_OS", store_OS, "orig window href", window.location.href, "new href", href)
+            window.location.href = href
+        }
+    }
+
+</script>
+
   </head>
   
   
@@ -142,561 +156,6 @@
   
     <li class="md-nav__item">
       <a href="/." class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/os_pick/" class="md-nav__link">
-        Os pick
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/introduction/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/introduction/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/introduction/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/account/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/account/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/account/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/connecting/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/connecting/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/connecting/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/running_batch_jobs/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/running_batch_jobs/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/running_batch_jobs/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/running_interactive_jobs/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/running_interactive_jobs/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/running_interactive_jobs/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/running_jobs_with_input_output_data/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/running_jobs_with_input_output_data/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/running_jobs_with_input_output_data/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/multi_core_jobs/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/multi_core_jobs/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/multi_core_jobs/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/web_portal/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/web_portal/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/web_portal/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/xdmod/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/xdmod/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/xdmod/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/troubleshooting/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/troubleshooting/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/troubleshooting/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/hpc_policies/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/hpc_policies/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/hpc_policies/" class="md-nav__link">
         Please select your operating system:
       </a>
     </li>
@@ -712,36 +171,6 @@
   
     <li class="md-nav__item">
       <a href="/FAQ/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/FAQ/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/FAQ/" class="md-nav__link">
         Please select your operating system:
       </a>
     </li>
@@ -756,37 +185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/fine_tuning_job_specifications/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/fine_tuning_job_specifications/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/fine_tuning_job_specifications/" class="md-nav__link">
+      <a href="/HOD/" class="md-nav__link">
         Please select your operating system:
       </a>
     </li>
@@ -801,248 +200,8 @@
   
   
     <li class="md-nav__item">
-      <a href="/multi_job_submission/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/multi_job_submission/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/multi_job_submission/" class="md-nav__link">
+      <a href="/MATLAB/" class="md-nav__link">
         Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/compiling_your_software/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/compiling_your_software/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/compiling_your_software/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/program_examples/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/program_examples/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/program_examples/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/jobscript_examples/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/jobscript_examples/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/jobscript_examples/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/best_practices/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/best_practices/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/best_practices/" class="md-nav__link">
-        Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/VNC/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/VNC/" class="md-nav__link">
-        None
       </a>
     </li>
   
@@ -1071,37 +230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/x2go/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/x2go/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/x2go/" class="md-nav__link">
+      <a href="/account/" class="md-nav__link">
         Please select your operating system:
       </a>
     </li>
@@ -1116,8 +245,8 @@
   
   
     <li class="md-nav__item">
-      <a href="/gpu_gent/" class="md-nav__link">
-        None
+      <a href="/apptainer/" class="md-nav__link">
+        Please select your operating system:
       </a>
     </li>
   
@@ -1131,8 +260,98 @@
   
   
     <li class="md-nav__item">
-      <a href="/gpu_gent/" class="md-nav__link">
-        None
+      <a href="/best_practices/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/checkpointing/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/compiling_your_software/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/connecting/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/crontab_gent/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/easybuild/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/fine_tuning_job_specifications/" class="md-nav__link">
+        Please select your operating system:
       </a>
     </li>
   
@@ -1162,36 +381,6 @@
   
     <li class="md-nav__item">
       <a href="/interactive_gent/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/interactive_gent/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/interactive_gent/" class="md-nav__link">
         Please select your operating system:
       </a>
     </li>
@@ -1206,37 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/crontab_gent/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/crontab_gent/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/crontab_gent/" class="md-nav__link">
+      <a href="/introduction/" class="md-nav__link">
         Please select your operating system:
       </a>
     </li>
@@ -1251,37 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/apptainer/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/apptainer/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/apptainer/" class="md-nav__link">
+      <a href="/jobscript_examples/" class="md-nav__link">
         Please select your operating system:
       </a>
     </li>
@@ -1296,37 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/easybuild/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/easybuild/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/easybuild/" class="md-nav__link">
+      <a href="/multi_core_jobs/" class="md-nav__link">
         Please select your operating system:
       </a>
     </li>
@@ -1341,68 +440,8 @@
   
   
     <li class="md-nav__item">
-      <a href="/MATLAB/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/MATLAB/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/MATLAB/" class="md-nav__link">
+      <a href="/multi_job_submission/" class="md-nav__link">
         Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/mympirun/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/mympirun/" class="md-nav__link">
-        None
       </a>
     </li>
   
@@ -1432,36 +471,6 @@
   
     <li class="md-nav__item">
       <a href="/openFOAM/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/openFOAM/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/openFOAM/" class="md-nav__link">
         Please select your operating system:
       </a>
     </li>
@@ -1476,68 +485,8 @@
   
   
     <li class="md-nav__item">
-      <a href="/scoop/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/scoop/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/scoop/" class="md-nav__link">
+      <a href="/program_examples/" class="md-nav__link">
         Please select your operating system:
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/quick_reference_guide/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/quick_reference_guide/" class="md-nav__link">
-        None
       </a>
     </li>
   
@@ -1566,8 +515,8 @@
   
   
     <li class="md-nav__item">
-      <a href="/torque_options/" class="md-nav__link">
-        None
+      <a href="/running_batch_jobs/" class="md-nav__link">
+        Please select your operating system:
       </a>
     </li>
   
@@ -1581,8 +530,53 @@
   
   
     <li class="md-nav__item">
-      <a href="/torque_options/" class="md-nav__link">
-        None
+      <a href="/running_interactive_jobs/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/running_jobs_with_input_output_data/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/scoop/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/singularity/" class="md-nav__link">
+        Please select your operating system:
       </a>
     </li>
   
@@ -1611,23 +605,8 @@
   
   
     <li class="md-nav__item">
-      <a href="/useful_linux_commands/" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/useful_linux_commands/" class="md-nav__link">
-        None
+      <a href="/troubleshooting/" class="md-nav__link">
+        Please select your operating system:
       </a>
     </li>
   
@@ -1644,6 +623,316 @@
       <a href="/useful_linux_commands/" class="md-nav__link">
         Please select your operating system:
       </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/web_portal/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/x2go/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/xdmod/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/macros/LinuxManualURL/" class="md-nav__link">
+        Macros
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/2023/donphan-gallade/" class="md-nav__link">
+        2023
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/linux-tutorial/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_39" type="checkbox" id="__nav_39" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="/linux-tutorial/beyond_the_basics/">Linux tutorial</a>
+          
+            <label for="__nav_39">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Linux tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_39">
+          <span class="md-nav__icon md-icon"></span>
+          Linux tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/linux-tutorial/common_pitfalls/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/linux-tutorial/getting_started/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/linux-tutorial/hpc_infrastructure/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/linux-tutorial/manipulating_files_and_directories/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/linux-tutorial/navigating/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/linux-tutorial/uploading_files/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/linux-tutorial/macros/nb/" class="md-nav__link">
+        Macros
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_40" type="checkbox" id="__nav_40" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="/sites/available_modules/">Sites</a>
+          
+            <label for="__nav_40">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Sites" data-md-level="1">
+        <label class="md-nav__title" for="__nav_40">
+          <span class="md-nav__icon md-icon"></span>
+          Sites
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/sites/hpc_policies/" class="md-nav__link">
+        Please select your operating system:
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/sites/antwerpen/available-modules/" class="md-nav__link">
+        Antwerpen
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/sites/gent/available-modules/" class="md-nav__link">
+        Gent
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 

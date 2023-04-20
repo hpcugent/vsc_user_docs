@@ -585,6 +585,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -610,12 +638,132 @@
       
       
         <label class="md-nav__link" for="__nav_15">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_16" type="checkbox" id="__nav_16" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16">
           Appendices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Appendices" data-md-level="1">
-        <label class="md-nav__title" for="__nav_15">
+        <label class="md-nav__title" for="__nav_16">
           <span class="md-nav__icon md-icon"></span>
           Appendices
         </label>
@@ -778,7 +926,7 @@
                 
 
 
-<h1 id="multi-core-jobsparallel-computing">Multi <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> jobs/Parallel Computing<a class="headerlink" href="#multi-core-jobsparallel-computing" title="Permanent link">#</a></h1>
+<h1 id="multi-core-jobsparallel-computing">Multi core jobs/Parallel Computing<a class="headerlink" href="#multi-core-jobsparallel-computing" title="Permanent link">#</a></h1>
 <h2 id="why-parallel-programming">Why Parallel Programming?<a class="headerlink" href="#why-parallel-programming" title="Permanent link">#</a></h2>
 <p>There are two important motivations to engage in parallel programming.</p>
 <ol>
@@ -786,12 +934,12 @@
 <p>Firstly, the need to decrease the time to solution: distributing
     your code over <em>C</em> cores holds the promise of speeding up execution
     times by a factor <em>C</em>. All modern computers (and probably even your
-    smartphone) are equipped with multi-<abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> processors capable of
+    smartphone) are equipped with multi-core processors capable of
     parallel processing.</p>
 </li>
 <li>
 <p>The second reason is problem size: distributing your code over <em>N</em>
-    nodes increases the available <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> by a factor <em>N</em>, and thus holds
+    nodes increases the available memory by a factor <em>N</em>, and thus holds
     the promise of being able to tackle problems which are <em>N</em> times
     bigger.</p>
 </li>
@@ -799,13 +947,13 @@
 <p>On a desktop computer, this enables a user to run multiple programs and
 the operating system simultaneously. For scientific computing, this
 means you have the ability in principle of splitting up your
-computations into groups and running each group on its own <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr>.</p>
+computations into groups and running each group on its own core.</p>
 <p>There are multiple different ways to achieve parallel programming. The
 table below gives a (non-exhaustive) overview of problem independent
 approaches to parallel programming. In addition there are many problem
 specific libraries that incorporate parallel capabilities. The next
 three sections explore some common approaches: (raw) threads, OpenMP and
-<abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>.</p>
+MPI.</p>
 <table>
     <tr>
         <td colspan="3">
@@ -894,14 +1042,14 @@ three sections explore some common approaches: (raw) threads, OpenMP and
 <h2 id="parallel-computing-with-threads">Parallel Computing with threads<a class="headerlink" href="#parallel-computing-with-threads" title="Permanent link">#</a></h2>
 <p>Multi-threading is a widespread programming and execution model that
 allows multiple threads to exist within the context of a single process.
-These threads <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr> the process' resources, but are able to execute
+These threads share the process' resources, but are able to execute
 independently. The threaded programming model provides developers with a
 useful abstraction of concurrent execution. Multi-threading can also be
 applied to a single process to enable parallel execution on a
 multiprocessing system.</p>
 <p><img alt="Image" src="../img/img0700.png" /></p>
 <p>This advantage of a multithreaded program allows it to operate faster on
-computer systems that have multiple CPUs or across a <abbr title="A group of compute nodes.">cluster</abbr> of machines
+computer systems that have multiple CPUs or across a cluster of machines
 --- because the threads of the program naturally lend themselves to
 truly concurrent execution. In such a case, the programmer needs to be
 careful to avoid race conditions, and other non-intuitive behaviours. In
@@ -916,7 +1064,7 @@ processing that can then be delegated by the operating system to
 multiple processing cores. Clearly the advantage of a multithreaded
 program (one that uses multiple threads that are assigned to multiple
 processing cores) is that you can achieve big speedups, as all cores of
-your <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr> (and all CPUs if you have more than one) are used at the same
+your CPU (and all CPUs if you have more than one) are used at the same
 time.</p>
 <p>Here is a simple example program that spawns 5 threads, where each one
 runs a simple function that only prints "Hello from thread".</p>
@@ -969,7 +1117,7 @@ runs a simple function that only prints "Hello from thread".</p>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>And compile it (whilst including the thread library) and run and test it
-on the login-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>:</p>
+on the login-node:</p>
 <pre><code><b>$ module load GCC</b>
 <b>$ gcc -o T_hello T_hello.c -lpthread</b>
 <b>$ ./T_hello</b>
@@ -985,7 +1133,7 @@ Hello from thread 3!
 Hello from thread 4!
 </code></pre>
 
-<p>Now, run it on the <abbr title="A group of compute nodes.">cluster</abbr> and check the output:</p>
+<p>Now, run it on the cluster and check the output:</p>
 <pre><code><b>$ qsub T_hello.pbs</b>
 433253.leibniz
 <b>$ more T_hello.pbs.o433253.leibniz</b>
@@ -1007,7 +1155,7 @@ Hello from thread 4!
 may prove useful: <em>Professional Multicore Programming: Design and Implementation for C++ Developers. Cameron Hughes and Tracey Hughes. Wrox 2008.</em></p>
 </div>
 <h2 id="parallel-computing-with-openmp">Parallel Computing with OpenMP<a class="headerlink" href="#parallel-computing-with-openmp" title="Permanent link">#</a></h2>
-<p><strong><em>OpenMP</em></strong> is an API that implements a multi-threaded, shared <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> form of
+<p><strong><em>OpenMP</em></strong> is an API that implements a multi-threaded, shared memory form of
 parallelism. It uses a set of compiler directives (statements that you
 add to your code and that are recognised by your Fortran/C/C++ compiler
 if OpenMP is enabled or otherwise ignored) that are incorporated at
@@ -1079,7 +1227,7 @@ variable) in the for loop are set to private variables.</p>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>And compile it (whilst including the "<em>openmp</em>" library) and run and
-test it on the login-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>:</p>
+test it on the login-node:</p>
 <pre><code><b>$ module load GCC</b>
 <b>$ gcc -fopenmp -o omp1 omp1.c</b>
 <b>$ ./omp1</b>
@@ -1093,7 +1241,7 @@ Thread 3 performed 125 iterations of the loop.
 Thread 1 performed 125 iterations of the loop.
 </code></pre>
 
-<p>Now run it in the <abbr title="A group of compute nodes.">cluster</abbr> and check the result again.</p>
+<p>Now run it in the cluster and check the result again.</p>
 <pre><code><b>$ qsub omp1.pbs</b>
 <b>$ cat omp1.pbs.o*</b>
 Thread 1 performed 125 iterations of the loop.
@@ -1154,7 +1302,7 @@ writing to that global variable at the same time (a collision).</p>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>And compile it (whilst including the "<em>openmp</em>" library) and run and
-test it on the login-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>:</p>
+test it on the login-node:</p>
 <pre><code><b>$ module load GCC</b>
 <b>$ gcc -fopenmp -o omp2 omp2.c</b>
 <b>$ ./omp2</b>
@@ -1169,7 +1317,7 @@ Thread 0 is adding its iterations (12500) to sum (87500), total is now 100000.
 Total # loop iterations is 100000
 </code></pre>
 
-<p>Now run it in the <abbr title="A group of compute nodes.">cluster</abbr> and check the result again.</p>
+<p>Now run it in the cluster and check the result again.</p>
 <pre><code><b>$ qsub omp2.pbs</b>
 <b>$ cat omp2.pbs.o*</b>
 Thread 2 is adding its iterations (12500) to sum (0), total is now 12500.
@@ -1226,14 +1374,14 @@ directive that allows you to more easily implement this.</p>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>And compile it (whilst including the "<em>openmp</em>" library) and run and
-test it on the login-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>:</p>
+test it on the login-node:</p>
 <pre><code><b>$ module load GCC</b>
 <b>$ gcc -fopenmp -o omp3 omp3.c</b>
 <b>$ ./omp3</b>
 Total # loop iterations is 100000
 </code></pre>
 
-<p>Now run it in the <abbr title="A group of compute nodes.">cluster</abbr> and check the result again.</p>
+<p>Now run it in the cluster and check the result again.</p>
 <pre><code><b>$ qsub omp3.pbs</b>
 <b>$ cat omp3.pbs.o*</b>
 Total # loop iterations is 100000
@@ -1269,16 +1417,16 @@ prove useful: <em>Using OpenMP - Portable Shared Memory Parallel
 Programming</em>. By Barbara Chapman Gabriele Jost and Ruud van der Pas
 Scientific and Engineering Computation. 2005.</p>
 </div>
-<h2 id="parallel-computing-with-mpi">Parallel Computing with <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr><a class="headerlink" href="#parallel-computing-with-mpi" title="Permanent link">#</a></h2>
-<p>The Message Passing Interface (<abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>) is a standard defining <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> syntax
+<h2 id="parallel-computing-with-mpi">Parallel Computing with MPI<a class="headerlink" href="#parallel-computing-with-mpi" title="Permanent link">#</a></h2>
+<p>The Message Passing Interface (MPI) is a standard defining core syntax
 and semantics of library routines that can be used to implement parallel
 programming in C (and in other languages as well). There are several
-implementations of <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> such as Open <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>, Intel <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>, M(VA)PICH and
-LAM/<abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>.</p>
-<p>In the context of this tutorial, you can think of <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>, in terms of its
+implementations of MPI such as Open MPI, Intel MPI, M(VA)PICH and
+LAM/MPI.</p>
+<p>In the context of this tutorial, you can think of MPI, in terms of its
 complexity, scope and control, as sitting in between programming with
 Pthreads, and using a high-level API such as OpenMP. For a Message
-Passing Interface (<abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>) application, a parallel task usually consists of
+Passing Interface (MPI) application, a parallel task usually consists of
 a single executable running concurrently on multiple processors, with
 communication between the processes. This is shown in the following
 diagram:</p>
@@ -1287,21 +1435,21 @@ diagram:</p>
 greater or less significance depending on the processing paradigm. At
 the minimum, Process 0 handles the input/output and determines what
 other processes are running.</p>
-<p>The <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> interface allows you to manage allocation, communication, and
+<p>The MPI interface allows you to manage allocation, communication, and
 synchronisation of a set of processes that are mapped onto multiple
-nodes, where each <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> can be a <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> within a single <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr>, or CPUs within
+nodes, where each node can be a core within a single CPU, or CPUs within
 a single machine, or even across multiple machines (as long as they are
 networked together).</p>
-<p>One context where <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> shines in particular is the ability to easily take
+<p>One context where MPI shines in particular is the ability to easily take
 advantage not just of multiple cores on a single machine, but to run
 programs on clusters of several machines. Even if you don't have a
-dedicated <abbr title="A group of compute nodes.">cluster</abbr>, you could still write a program using <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> that could
+dedicated cluster, you could still write a program using MPI that could
 run your program in parallel, across any collection of computers, as
 long as they are networked together.</p>
-<p>Here is a "Hello World" program in <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> written in C. In this example, we
-send a "Hello" message to each <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>, manipulate it trivially,
+<p>Here is a "Hello World" program in MPI written in C. In this example, we
+send a "Hello" message to each processor, manipulate it trivially,
 return the results to the main process, and print the messages.</p>
-<p>Study the <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>-programme and the PBS-file:</p>
+<p>Study the MPI-programme and the PBS-file:</p>
 <div style="text-align: center;">-- mpi_hello.c --</div>
 
 <div class="highlight"><pre><span></span><code><span class="cm">/*</span>
@@ -1391,7 +1539,7 @@ mpirun ./mpi_hello
 <b>$ mpiicc -o mpi_hello mpi_hello.c</b>
 </code></pre>
 
-<p>mpiicc is a wrapper of the Intel C++ compiler icc to compile <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>
+<p>mpiicc is a wrapper of the Intel C++ compiler icc to compile MPI
 programs (see the chapter on compilation for details).</p>
 <p>Run the parallel program:</p>
 <pre><code><b>$ qsub mpi_hello.pbs</b>
@@ -1421,25 +1569,25 @@ total 1024
 0: Hello 15! Processor 15 reporting for duty
 </code></pre>
 
-<p>The runtime environment for the <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> implementation used (often called
+<p>The runtime environment for the MPI implementation used (often called
 mpirun or mpiexec) spawns multiple copies of the program, with the total
 number of copies determining the number of process <em>ranks</em> in
 MPI_COMM_WORLD, which is an opaque descriptor for communication between
 the set of processes. A single process, multiple data (SPMD = Single
 Program, Multiple Data) programming model is thereby facilitated, but
-not required; many <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> implementations allow multiple, different,
-executables to be started in the same <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> job. Each process has its own
+not required; many MPI implementations allow multiple, different,
+executables to be started in the same MPI job. Each process has its own
 rank, the total number of processes in the world, and the ability to
 communicate between them either with point-to-point (send/receive)
 communication, or by collective communication among the group. It is
-enough for <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> to provide an SPMD-style program with MPI_COMM_WORLD, its
+enough for MPI to provide an SPMD-style program with MPI_COMM_WORLD, its
 own rank, and the size of the world to allow algorithms to decide what
 to do. In more realistic situations, I/O is more carefully managed than
-in this example. <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> does not guarantee how POSIX I/O would actually
+in this example. MPI does not guarantee how POSIX I/O would actually
 work on a given system, but it commonly does work, at least from rank 0.</p>
-<p><abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> uses the notion of process rather than <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>. Program copies are
-<em>mapped</em> to processors by the <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> runtime. In that sense, the parallel
-machine can map to 1 physical <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>, or N where N is the total
+<p>MPI uses the notion of process rather than processor. Program copies are
+<em>mapped</em> to processors by the MPI runtime. In that sense, the parallel
+machine can map to 1 physical processor, or N where N is the total
 number of processors available, or something in between. For maximum
 parallel speedup, more physical processors are used. This example
 adjusts its behaviour to the size of the world N, so it also seeks to
@@ -1449,7 +1597,7 @@ absolute amount of concurrency available.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 </div>
-<p>If you plan engaging in parallel programming using <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>, this book may prove useful: <em>Parallel Programming with <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>. Peter Pacheo. Morgan Kaufmann. 1996.</em></p>
+<p>If you plan engaging in parallel programming using MPI, this book may prove useful: <em>Parallel Programming with MPI. Peter Pacheo. Morgan Kaufmann. 1996.</em></p>
 
               
             </article>
@@ -1527,12 +1675,21 @@ absolute amount of concurrency available.</p>
     
       <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

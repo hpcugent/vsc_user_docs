@@ -584,6 +584,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -609,12 +637,132 @@
       
       
         <label class="md-nav__link" for="__nav_15">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_16" type="checkbox" id="__nav_16" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16">
           Appendices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Appendices" data-md-level="1">
-        <label class="md-nav__title" for="__nav_15">
+        <label class="md-nav__title" for="__nav_16">
           <span class="md-nav__icon md-icon"></span>
           Appendices
         </label>
@@ -776,19 +924,19 @@
                 
 
 
-<h1 id="connecting-to-the-hpc-infrastructure">Connecting to the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> infrastructure<a class="headerlink" href="#connecting-to-the-hpc-infrastructure" title="Permanent link">#</a></h1>
-<p>Before you can really start using the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> clusters, there are several things
+<h1 id="connecting-to-the-hpc-infrastructure">Connecting to the HPC infrastructure<a class="headerlink" href="#connecting-to-the-hpc-infrastructure" title="Permanent link">#</a></h1>
+<p>Before you can really start using the UAntwerpen-HPC clusters, there are several things
 you need to do or know:</p>
 <ol>
 <li>
-<p>You need to <strong>log on to the <abbr title="A group of compute nodes.">cluster</abbr></strong> using an <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> client to one of
+<p>You need to <strong>log on to the cluster</strong> using an SSH client to one of
     the login nodes. This will give you command-line access. The
     software you'll need to use on your client system depends on its
     operating system.</p>
 </li>
 <li>
 <p>Before you can do some work, you'll have to <strong>transfer the files</strong>
-    that you need from your desktop computer to the <abbr title="A group of compute nodes.">cluster</abbr>. At the end
+    that you need from your desktop computer to the cluster. At the end
     of a job, you might want to transfer some files back.</p>
 </li>
 <li>
@@ -800,14 +948,14 @@ you need to do or know:</p>
 <p>Often several versions of <strong>software packages and libraries</strong> are
     installed, so you need to select the ones you need. To manage
     different versions efficiently, the VSC clusters use so-called
-    <strong><abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr></strong>, so you will need to select and load the <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> that
+    <strong>modules</strong>, so you will need to select and load the modules that
     you need.</p>
 </li>
 </ol>
 <h2 id="connection-restrictions">Connection restrictions<a class="headerlink" href="#connection-restrictions" title="Permanent link">#</a></h2>
 <p>Since March 20th 2020, restrictions are in place that limit from where
-you can connect to the VSC <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> infrastructure, in response to security
-incidents involving several European <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> centres.</p>
+you can connect to the VSC HPC infrastructure, in response to security
+incidents involving several European HPC centres.</p>
 <p>VSC login nodes are only directly accessible from within university
 networks, and from (most) Belgian commercial internet providers.</p>
 <p>All other IP domains are blocked by default. If you are connecting from
@@ -823,41 +971,41 @@ options to get access to VSC login nodes:</p>
     university you're affiliated with) and log in with your University of Antwerp account.</p>
 <ul>
 <li>
-<p>While this web connection is active new <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> sessions can be
+<p>While this web connection is active new SSH sessions can be
     started.</p>
 </li>
 <li>
-<p>Active <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> sessions will remain active even when this web page
+<p>Active SSH sessions will remain active even when this web page
     is closed.</p>
 </li>
 </ul>
 </li>
 <li>
-<p>Contact your <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> support team (via hpc@uantwerpen.be) and ask them to whitelist your
+<p>Contact your HPC support team (via hpc@uantwerpen.be) and ask them to whitelist your
     IP range (e.g., for industry access, automated processes).</p>
 </li>
 </ul>
-<p>Trying to establish an <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> connection from an IP address that does not
+<p>Trying to establish an SSH connection from an IP address that does not
 adhere to these restrictions will result in an immediate failure to
 connect, with an error message like:</p>
 <pre><code>ssh_exchange_identification: read: Connection reset by peer
 </code></pre>
 
-<h2 id="first-time-connection-to-the-hpc-infrastructure">First Time connection to the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> infrastructure<a class="headerlink" href="#first-time-connection-to-the-hpc-infrastructure" title="Permanent link">#</a></h2>
-<p>If you have any issues connecting to the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> after you've followed these
-steps, see <a href="../troubleshooting/#issues-connecting-to-login-node">Issues connecting to <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr></a> to troubleshoot.
+<h2 id="first-time-connection-to-the-hpc-infrastructure">First Time connection to the HPC infrastructure<a class="headerlink" href="#first-time-connection-to-the-hpc-infrastructure" title="Permanent link">#</a></h2>
+<p>If you have any issues connecting to the UAntwerpen-HPC after you've followed these
+steps, see <a href="../troubleshooting/#issues-connecting-to-login-node">Issues connecting to login node</a> to troubleshoot.
 When connecting from outside Belgium, you need a VPN client to connect
 to the network first.</p>
 <h3 id="connect">Connect<a class="headerlink" href="#connect" title="Permanent link">#</a></h3>
-<p>Open up a terminal and enter the following command to connect to the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.
+<p>Open up a terminal and enter the following command to connect to the UAntwerpen-HPC.
 You can open a terminal by navigation to Applications and then Utilities in the finder and open Terminal.app, or enter Terminal in Spotlight Search.</p>
 <pre><code><b>$ ssh vsc20167@login.hpc.uantwerpen.be</b>
 </code></pre>
 
-<p>Here, user vsc20167 wants to make a connection to the "Leibniz" <abbr title="A group of compute nodes.">cluster</abbr> at University of Antwerp via the login
-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> "login.hpc.uantwerpen.be", so replace vsc20167 with your own VSC id in the above command.</p>
-<p>The first time you make a connection to the <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr>, you will be
-asked to verify the authenticity of the <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr>. Please check
+<p>Here, user vsc20167 wants to make a connection to the "Leibniz" cluster at University of Antwerp via the login
+node "login.hpc.uantwerpen.be", so replace vsc20167 with your own VSC id in the above command.</p>
+<p>The first time you make a connection to the login node, you will be
+asked to verify the authenticity of the login node. Please check
 <a href="../troubleshooting/#warning-message-when">Warning message when first connecting to new host</a>-first-connecting-to-new-host) on how to do this.</p>
 <p>A possible error message you can get if you previously saved your
 private key somewhere else than the default location
@@ -870,7 +1018,7 @@ location of your private key. For example:</p>
 <pre><code><b>$ ssh -i /home/example/my_keys</b>
 </code></pre>
 
-<p><strong>Congratulations, you're on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> infrastructure now!</strong>
+<p><strong>Congratulations, you're on the UAntwerpen-HPC infrastructure now!</strong>
 To find out where you have landed you can print the current working directory:</p>
 <pre><code><b>$ pwd</b>
 /user/antwerpen/201/vsc20167
@@ -878,17 +1026,17 @@ To find out where you have landed you can print the current working directory:</
 
 <p>Your new private home directory is "/user/antwerpen/201/vsc20167". Here you can create your own
 subdirectory structure, copy and prepare your applications, compile and
-test them and submit your jobs on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.</p>
+test them and submit your jobs on the UAntwerpen-HPC.</p>
 <pre><code><b>$ cd /apps/antwerpen/tutorials</b>
 <b>$ ls</b>
 Intro-HPC/
 </code></pre>
 
-<p>This directory currently contains all training material for the <strong><em>Introduction to the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></em></strong>. More
-relevant training material to work with the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> can always be added later in
+<p>This directory currently contains all training material for the <strong><em>Introduction to the UAntwerpen-HPC</em></strong>. More
+relevant training material to work with the UAntwerpen-HPC can always be added later in
 this directory.</p>
 <p>You can now explore the content of this directory with the "ls --l" (<strong>l</strong>ist<strong>s</strong> <strong>l</strong>ong) and the "cd" (<strong>c</strong>hange irectory) commands:</p>
-<p>As we are interested in the use of the <strong><em><abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></em></strong>, move further to <strong><em>Intro-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></em></strong> and explore the
+<p>As we are interested in the use of the <strong><em>HPC</em></strong>, move further to <strong><em>Intro-HPC</em></strong> and explore the
 contents up to 2 levels deep:</p>
 <pre><code><b>$ cd Intro-HPC</b>
 <b>$ tree -L 2</b>
@@ -910,7 +1058,7 @@ contents up to 2 levels deep:</p>
 <p>This directory contains:</p>
 <ol>
 <li>
-<p>This <strong><em><abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> Tutorial</em></strong> (in either a Mac, <abbr title="An operating system, similar to UNIX.">Linux</abbr> or      Windows version).</p>
+<p>This <strong><em>HPC Tutorial</em></strong> (in either a Mac, Linux or      Windows version).</p>
 </li>
 <li>
 <p>An <strong><em>examples</em></strong> subdirectory, containing all the examples that you need in this
@@ -929,9 +1077,9 @@ typed commands.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>For more exhaustive tutorials about <abbr title="An operating system, similar to UNIX.">Linux</abbr> usage, see Appendix <a href="../useful_linux_commands">Useful <abbr title="An operating system, similar to UNIX.">Linux</abbr> Commands</a></p>
+<p>For more exhaustive tutorials about Linux usage, see Appendix <a href="../useful_linux_commands">Useful Linux Commands</a></p>
 </div>
-<p>The first action is to copy the contents of the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> examples directory to
+<p>The first action is to copy the contents of the UAntwerpen-HPC examples directory to
 your home directory, so that you have your own personal copy and that
 you can start using the examples. The "-r" option of the copy command
 will also copy the contents of the sub-directories "<em>recursively</em>".</p>
@@ -1026,7 +1174,7 @@ export LANG="en_US.UTF-8"
 entering text with the arrow keys and type "i" to switch to insert mode. You can easily exit vi by entering: "<span class="keys"><kbd>ESC</kbd></span> :wq" 
 To exit vi without saving your changes, enter "<span class="keys"><kbd>ESC</kbd></span>:q!"</p>
 </div>
-<p>or alternatively (if you are not comfortable with the <abbr title="An operating system, similar to UNIX.">Linux</abbr> editors),
+<p>or alternatively (if you are not comfortable with the Linux editors),
 again on your local machine:</p>
 <pre><code><b>$ echo "export LANGUAGE=\"en_US.UTF-8\"" >> ~/.profile</b>
 <b>$ echo "export LC_ALL=\"en_US.UTF-8\"" >> ~/.profile</b>
@@ -1036,20 +1184,20 @@ again on your local machine:</p>
 
 <p>You can now log out, open a new terminal/shell on your local machine and
 reconnect to the , and you should not get these warnings anymore.</p>
-<h2 id="transfer-files-tofrom-the-hpc">Transfer Files to/from the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr><a class="headerlink" href="#transfer-files-tofrom-the-hpc" title="Permanent link">#</a></h2>
-<p>Before you can do some work, you'll have to <strong>transfer the files</strong> you need from your desktop or department to the <abbr title="A group of compute nodes.">cluster</abbr>. At the end of a job, you might want to transfer some files back.
-The preferred way to transfer files is by using an <abbr title="Secure Copy is a protocol to copy files between distinct machines. SCP or scp is used extensively on HPC clusters to stage in data from outside resources.">scp</abbr> or <abbr title="Secure File Transfer Protocol, used to copy files between distinct machines.">sftp</abbr> via the
+<h2 id="transfer-files-tofrom-the-hpc">Transfer Files to/from the HPC<a class="headerlink" href="#transfer-files-tofrom-the-hpc" title="Permanent link">#</a></h2>
+<p>Before you can do some work, you'll have to <strong>transfer the files</strong> you need from your desktop or department to the cluster. At the end of a job, you might want to transfer some files back.
+The preferred way to transfer files is by using an scp or sftp via the
 secure OpenSSH protocol. macOS ships with an implementation of OpenSSH, so you
 don't need to install any third-party software to use it. Just open a
 terminal window and jump in!</p>
-<h3 id="using-scp">Using <abbr title="Secure Copy is a protocol to copy files between distinct machines. SCP or scp is used extensively on HPC clusters to stage in data from outside resources.">scp</abbr><a class="headerlink" href="#using-scp" title="Permanent link">#</a></h3>
+<h3 id="using-scp">Using scp<a class="headerlink" href="#using-scp" title="Permanent link">#</a></h3>
 <p><strong>Secure copy</strong> or <strong>SCP</strong> is a tool (command) for securely transferring files between a local
-host (= your computer) and a remote host (the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>). It is based on the
-Secure Shell (<abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr>) protocol. The <strong><abbr title="Secure Copy is a protocol to copy files between distinct machines. SCP or scp is used extensively on HPC clusters to stage in data from outside resources.">scp</abbr></strong> command is the equivalent of the <strong>cp</strong> (i.e.,
+host (= your computer) and a remote host (the UAntwerpen-HPC). It is based on the
+Secure Shell (SSH) protocol. The <strong>scp</strong> command is the equivalent of the <strong>cp</strong> (i.e.,
 <strong>c</strong>o<strong>p</strong>y) command, but can copy files to or from remote machines.</p>
 <p>It's easier to copy files directly to <code>$VSC_DATA</code> and <code>$VSC_SCRATCH</code> if
 you have symlinks to them in your home directory. See<!--- change url once deployed! --->
-<a href="localhost:8000/Antwerpen/macOS/intro-Linux/uploading_files/#symlinks-for-datascratch">the chapter titled "Uploading/downloading/editing files", section "Symlinks for data/<abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr>" in the intro to <abbr title="An operating system, similar to UNIX.">Linux</abbr></a>
+<a href="localhost:8000/Antwerpen/macOS/intro-Linux/uploading_files/#symlinks-for-datascratch">the chapter titled "Uploading/downloading/editing files", section "Symlinks for data/scratch" in the intro to Linux</a>
  for how to do this.</p>
 <p>Open an additional terminal window and check that you're working on your
 local machine.</p>
@@ -1057,10 +1205,10 @@ local machine.</p>
 <local-machine-name>
 </code></pre>
 
-<p>If you're still using the terminal that is connected to the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>, close the
+<p>If you're still using the terminal that is connected to the UAntwerpen-HPC, close the
 connection by typing "exit" in the terminal window.</p>
 <p>For example, we will copy the (local) file "<em>localfile.txt</em>" to your
-home directory on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> <abbr title="A group of compute nodes.">cluster</abbr>. We first generate a small dummy
+home directory on the UAntwerpen-HPC cluster. We first generate a small dummy
 "<em>localfile.txt</em>", which contains the word "Hello". Use your own VSC
 account, which is something like "vsc20167". Don't forget the colon (<code>:</code>) at the
 end: if you forget it, it will just create a file named vsc20167@login.hpc.uantwerpen.be on your
@@ -1074,7 +1222,7 @@ $ scp localfile.txt vsc20167@login.hpc.uantwerpen.be
 localfile.txt     100%   6     0.0KB/s     00:00
 </code></pre>
 
-<p>Connect to the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> via another terminal, print the working directory (to
+<p>Connect to the UAntwerpen-HPC via another terminal, print the working directory (to
 make sure you're in the home directory) and check whether the file has
 arrived:</p>
 <pre><code><b>$ pwd</b>
@@ -1089,9 +1237,9 @@ drwxrwxr-x 10
 Hello
 </cod></pre>
 
-<p>The <strong><abbr title="Secure Copy is a protocol to copy files between distinct machines. SCP or scp is used extensively on HPC clusters to stage in data from outside resources.">scp</abbr></strong> command can also be used to copy files from the <abbr title="A group of compute nodes.">cluster</abbr> to your
-local machine. Let us copy the remote file "intro-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-macOS-Antwerpen.pdf" from your "docs" 
-subdirectory on the <abbr title="A group of compute nodes.">cluster</abbr> to your local computer.</p>
+<p>The <strong>scp</strong> command can also be used to copy files from the cluster to your
+local machine. Let us copy the remote file "intro-HPC-macOS-Antwerpen.pdf" from your "docs" 
+subdirectory on the cluster to your local computer.</p>
 <p>First, we will confirm that the file is indeed in the "docs"
 subdirectory. On the terminal on the , enter:</p>
 <pre><code><b>$ cd ~/docs</b>
@@ -1110,7 +1258,7 @@ total 899
 -rw-r--r-- 1 user staff      6 Sep 18 09:37 localfile.txt
 </code></pre>
 
-<p>The file has been copied from the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> to your local computer.</p>
+<p>The file has been copied from the HPC to your local computer.</p>
 <p>It's also possible to copy entire directories (and their contents) with
 the <code>-r</code> flag. For example, if we want to copy the local directory
 <code>dataset</code> to <code>$VSC_SCRATCH</code>, we can use the following command (assuming
@@ -1124,21 +1272,21 @@ the following error:</p>
 dataset: not a regular file
 </code></pre>
 
-<h3 id="using-sftp">Using <abbr title="Secure File Transfer Protocol, used to copy files between distinct machines.">sftp</abbr><a class="headerlink" href="#using-sftp" title="Permanent link">#</a></h3>
-<p>The <strong><abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> File Transfer Protocol</strong> (also <strong>Secure File Transfer Protocol</strong>, or <strong>SFTP</strong>) is a network protocol that provides file access, file
+<h3 id="using-sftp">Using sftp<a class="headerlink" href="#using-sftp" title="Permanent link">#</a></h3>
+<p>The <strong>SSH File Transfer Protocol</strong> (also <strong>Secure File Transfer Protocol</strong>, or <strong>SFTP</strong>) is a network protocol that provides file access, file
 transfer and file management functionalities over any reliable data
 stream. It was designed as an extension of the Secure Shell protocol
-(<abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr>) version 2.0. This protocol assumes that it is run over a secure
-channel, such as <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr>, that the server has already authenticated the
+(SSH) version 2.0. This protocol assumes that it is run over a secure
+channel, such as SSH, that the server has already authenticated the
 client, and that the identity of the client user is available to the
 protocol.</p>
-<p>The <abbr title="Secure File Transfer Protocol, used to copy files between distinct machines.">sftp</abbr> is an equivalent of the ftp command, with the difference that
+<p>The sftp is an equivalent of the ftp command, with the difference that
 it uses the secure ssh protocol to connect to the clusters.</p>
-<p>One easy way of starting a <abbr title="Secure File Transfer Protocol, used to copy files between distinct machines.">sftp</abbr> session is</p>
+<p>One easy way of starting a sftp session is</p>
 <pre><code><b>$ sftp vsc20167@login.hpc.uantwerpen.be</b>
 </code></pre>
 
-<p>Typical and popular commands inside an <abbr title="Secure File Transfer Protocol, used to copy files between distinct machines.">sftp</abbr> session are:</p>
+<p>Typical and popular commands inside an sftp session are:</p>
 <table>
 <thead>
 <tr>
@@ -1149,19 +1297,19 @@ it uses the secure ssh protocol to connect to the clusters.</p>
 <tbody>
 <tr>
 <td align="left"><strong>cd ~/exmples/fibo</strong></td>
-<td align="left">Move to the examples/fibo subdirectory on the (i.e., the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> remote machine)</td>
+<td align="left">Move to the examples/fibo subdirectory on the (i.e., the UAntwerpen-HPC remote machine)</td>
 </tr>
 <tr>
 <td align="left"><strong>ls</strong></td>
-<td align="left">Get a list of the files in the current directory on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.</td>
+<td align="left">Get a list of the files in the current directory on the UAntwerpen-HPC.</td>
 </tr>
 <tr>
 <td align="left"><strong>get fibo.py</strong></td>
-<td align="left">Copy the file "fibo.py" from the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></td>
+<td align="left">Copy the file "fibo.py" from the UAntwerpen-HPC</td>
 </tr>
 <tr>
-<td align="left"><strong>get tutorial/<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.pdf</strong></td>
-<td align="left">Copy the file "<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.pdf" from the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>, which is in the "tutorial" subdirectory.</td>
+<td align="left"><strong>get tutorial/HPC.pdf</strong></td>
+<td align="left">Copy the file "HPC.pdf" from the UAntwerpen-HPC, which is in the "tutorial" subdirectory.</td>
 </tr>
 <tr>
 <td align="left"><strong>lcd test</strong></td>
@@ -1177,7 +1325,7 @@ it uses the secure ssh protocol to connect to the clusters.</p>
 </tr>
 <tr>
 <td align="left"><strong>put test.py</strong></td>
-<td align="left">Copy the local file test.py to the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.</td>
+<td align="left">Copy the local file test.py to the UAntwerpen-HPC.</td>
 </tr>
 <tr>
 <td align="left"><strong>put test1.py test2.py</strong></td>
@@ -1185,7 +1333,7 @@ it uses the secure ssh protocol to connect to the clusters.</p>
 </tr>
 <tr>
 <td align="left"><strong>bye</strong></td>
-<td align="left">Quit the <abbr title="Secure File Transfer Protocol, used to copy files between distinct machines.">sftp</abbr> session</td>
+<td align="left">Quit the sftp session</td>
 </tr>
 <tr>
 <td align="left"><strong>mget *.cc</strong></td>
@@ -1193,7 +1341,7 @@ it uses the secure ssh protocol to connect to the clusters.</p>
 </tr>
 <tr>
 <td align="left"><strong>mput *.h</strong></td>
-<td align="left">Copy all the local files with extension ".h" to the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.</td>
+<td align="left">Copy all the local files with extension ".h" to the UAntwerpen-HPC.</td>
 </tr>
 <tr>
 <td align="left"><a href=""></a></td>
@@ -1212,14 +1360,14 @@ installed from <a href="https://cyberduck.io">https://cyberduck.io</a>.</p>
     window. A new window will open.</p>
 </li>
 <li>
-<p>In the drop-down menu on top, select "SFTP (<abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> File Transfer Protocol)".</p>
+<p>In the drop-down menu on top, select "SFTP (SSH File Transfer Protocol)".</p>
 </li>
 <li>
 <p>In the "Server" field, type in <code>login.hpc.uantwerpen.be</code>. In the "Username" field, type in
     your VSC account id (this looks like <code>vsc20167</code>).</p>
 </li>
 <li>
-<p>Select the location of your <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> <em>private</em> key in the "<abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> Private Key" field.</p>
+<p>Select the location of your SSH <em>private</em> key in the "SSH Private Key" field.</p>
 </li>
 <li>
 <p>Finally, type in a name for the bookmark in the "Nickname" field and
@@ -1231,8 +1379,7 @@ installed from <a href="https://cyberduck.io">https://cyberduck.io</a>.</p>
 resembles an open book) and double-click on the bookmark you just
 created.</p>
 <h3 id="fast-file-transfer-for-large-datasets">Fast file transfer for large datasets<a class="headerlink" href="#fast-file-transfer-for-large-datasets" title="Permanent link">#</a></h3>
-<p>See <a href="#">the section on <code>rsync</code> in chapter 5 of the <abbr title="An operating system, similar to UNIX.">Linux</abbr> intro
-manual</a>.</p>
+<p>See <a href="../linux-tutorial/uploading_files/#copying-faster-with-rsync">the section on <code>rsync</code> in chapter 5 of the Linux intro manual</a>.</p>
 
               
             </article>
@@ -1313,3 +1460,18 @@ manual</a>.</p>
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

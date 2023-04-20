@@ -552,6 +552,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-tutorial/getting_started/" class="md-nav__link">
+        Linux tutorial
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1017,7 +1031,7 @@ will compile <code>example.m</code> with the MATLAB files in <code>examplelib</c
 include all files in the <code>datafiles</code> directory in the binary it
 produces.</p>
 <h3 id="memory-issues-during-compilation">Memory issues during compilation<a class="headerlink" href="#memory-issues-during-compilation" title="Permanent link">#</a></h3>
-<p>If you are seeing Java <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> issues during the compilation of your
+<p>If you are seeing Java memory issues during the compilation of your
 MATLAB program on the login nodes, consider tweaking the default maximum
 heap size (128M) of Java using the <code>_JAVA_OPTIONS</code> environment variable
 with:</p>
@@ -1025,10 +1039,10 @@ with:</p>
 </code></pre>
 
 <p>The MATLAB compiler spawns multiple Java processes, and because of the
-default <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> limits that are in effect on the login nodes, this might
+default memory limits that are in effect on the login nodes, this might
 lead to a crash of the compiler if it's trying to create to many Java
 processes. If we lower the heap size, more Java processes will be able
-to fit in <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>.</p>
+to fit in memory.</p>
 <p>Another possible issue is that the heap size is too small. This could
 result in errors like:</p>
 <pre><code>Error: Out of memory
@@ -1093,7 +1107,7 @@ $ <b>export MATLAB_CACHE_SIZE=1024M </b>
 <code>/tmp/testdirectory</code>.</p>
 <h2 id="matlab-job-script">MATLAB job script<a class="headerlink" href="#matlab-job-script" title="Permanent link">#</a></h2>
 <p>All of the tweaks needed to get MATLAB working have been implemented in
-an example job script. This job script is also available on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.</p>
+an example job script. This job script is also available on the HPC.</p>
 <!-- %TODO: where? -->
 
 <div style="text-align: center;">-- jobscript.sh --</div>
@@ -1204,3 +1218,18 @@ module load MATLAB/2018a
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

@@ -539,6 +539,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -564,12 +592,132 @@
       
       
         <label class="md-nav__link" for="__nav_15">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_16" type="checkbox" id="__nav_16" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16">
           Appendices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Appendices" data-md-level="1">
-        <label class="md-nav__title" for="__nav_15">
+        <label class="md-nav__title" for="__nav_16">
           <span class="md-nav__icon md-icon"></span>
           Appendices
         </label>
@@ -685,8 +833,8 @@
 
 
 <h1 id="job-script-examples">Job script examples<a class="headerlink" href="#job-script-examples" title="Permanent link">#</a></h1>
-<h2 id="single-core-job">Single-<abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> job<a class="headerlink" href="#single-core-job" title="Permanent link">#</a></h2>
-<p>Here's an example of a single-<abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> job script:</p>
+<h2 id="single-core-job">Single-core job<a class="headerlink" href="#single-core-job" title="Permanent link">#</a></h2>
+<p>Here's an example of a single-core job script:</p>
 <p style="text-align: center">single_core.sh</p>
 
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
@@ -724,8 +872,8 @@ cp output.txt <span class="nv">$VSC_DATA</span>/output_<span class="si">${</span
     <code>$VSC_DATA</code>. For a list of possible storage locations, see subsection <a href="../running_jobs_with_input_output_data/#pre-defined-user-directories"> Pre-defined user directories</a>.</p>
 </li>
 </ol>
-<h2 id="multi-core-job">Multi-<abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> job<a class="headerlink" href="#multi-core-job" title="Permanent link">#</a></h2>
-<p>Here's an example of a multi-<abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> job script that uses <code>mympirun</code>:</p>
+<h2 id="multi-core-job">Multi-core job<a class="headerlink" href="#multi-core-job" title="Permanent link">#</a></h2>
+<p>Here's an example of a multi-core job script that uses <code>mympirun</code>:</p>
 <p style="text-align: center">multi_core.sh</p>
 
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
@@ -739,12 +887,12 @@ module load vsc-mympirun      <span class="c1">## We don&#39;t use a version her
 mpicc mpi_hello.c -o mpi_hello
 mympirun ./mpi_hello
 </code></pre></div>
-<p>An example <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> hello world program can be downloaded from
+<p>An example MPI hello world program can be downloaded from
 <a href="https://github.com/hpcugent/vsc-mympirun/blob/master/testscripts/mpi_helloworld.c">https://github.com/hpcugent/vsc-mympirun/blob/master/testscripts/mpi_helloworld.c</a>.</p>
 <h2 id="running-a-command-with-a-maximum-time-limit">Running a command with a maximum time limit<a class="headerlink" href="#running-a-command-with-a-maximum-time-limit" title="Permanent link">#</a></h2>
 <p>If you want to run a job, but you are not sure it will finish before the
-job runs out of <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> and you want to copy data back before, you have
-to stop the main command before the <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> runs out and copy the data
+job runs out of walltime and you want to copy data back before, you have
+to stop the main command before the walltime runs out and copy the data
 back.</p>
 <p>This can be done with the <code>timeout</code> command. This command sets a limit
 of time a program can run for, and when this limit is exceeded, it kills
@@ -865,12 +1013,21 @@ sleeps a specified amount of minutes:</p>
     
       <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

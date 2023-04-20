@@ -562,6 +562,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="linux-tutorial/getting_started/" class="md-nav__link">
+        Linux tutorial
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -799,9 +813,11 @@
 
 
 <h1 id="welcome">Welcome<a class="headerlink" href="#welcome" title="Permanent link">#</a></h1>
-<p>Welcome to the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent infrastructure documentation!</p>
+<p>Welcome to the HPC-UGent infrastructure documentation!</p>
 <p>Use the menu on the left to navigate, or use the search box on the top right.</p>
-<p>If you still have any questions, you can <a href="https://www.ugent.be/hpc/en/support">contact the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent team</a>.</p>
+<p>If you still have any questions, you can <a href="https://www.ugent.be/hpc/en/support">contact the HPC-UGent team</a>.</p>
+<p>This is the documentation from the point of view of a Linux user.
+To switch to the documentation for another operating system, click <a href="../#force_select_OS">here</a>.</p>
 
               
             </article>
@@ -867,3 +883,18 @@
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

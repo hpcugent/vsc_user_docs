@@ -525,6 +525,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -550,12 +578,132 @@
       
       
         <label class="md-nav__link" for="__nav_15">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_16" type="checkbox" id="__nav_16" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16">
           Appendices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Appendices" data-md-level="1">
-        <label class="md-nav__title" for="__nav_15">
+        <label class="md-nav__title" for="__nav_16">
           <span class="md-nav__icon md-icon"></span>
           Appendices
         </label>
@@ -666,7 +814,7 @@
 <p>Are there any errors in the script?</p>
 </li>
 <li>
-<p>Are the required <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> loaded?</p>
+<p>Are the required modules loaded?</p>
 </li>
 <li>
 <p>Is the correct executable used?</p>
@@ -681,7 +829,7 @@
 <p>Number of requested cores</p>
 </li>
 <li>
-<p>Amount of requested <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr></p>
+<p>Amount of requested memory</p>
 </li>
 <li>
 <p>Requested network type</p>
@@ -689,21 +837,21 @@
 </ul>
 </li>
 <li>
-<p>Check your jobs at runtime. You could login to the <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> and check
+<p>Check your jobs at runtime. You could login to the node and check
     the proper execution of your jobs with, e.g., <code>top</code> or <code>vmstat</code>.
     Alternatively you could run an interactive job (<code>qsub -I</code>).</p>
 </li>
 <li>
-<p>Try to benchmark the software for scaling issues when using <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> or
+<p>Try to benchmark the software for scaling issues when using MPI or
     for I/O issues.</p>
 </li>
 <li>
-<p>Use the <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> file system (<code>$VSC_SCRATCH_NODE</code>, which is mapped to
+<p>Use the scratch file system (<code>$VSC_SCRATCH_NODE</code>, which is mapped to
     the local /tmp) whenever possible. Local disk I/O is always much
     faster as it does not have to use the network.</p>
 </li>
 <li>
-<p>When your job starts, it will log on to the <abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr>(s) and
+<p>When your job starts, it will log on to the compute node(s) and
     start executing the commands in the job script. It will start in
     your home directory <code>$VSC_HOME</code>, so going to the current directory
     with <code>cd $PBS_O_WORKDIR</code> is the first thing which needs to be done.
@@ -723,19 +871,19 @@
     how this is done.</p>
 </li>
 <li>
-<p>The runtime is limited by the maximum <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> of the queues. For
+<p>The runtime is limited by the maximum walltime of the queues. For
     longer walltimes, use checkpointing.</p>
 </li>
 <li>
-<p>Requesting many processors could imply long <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr> times. It's
+<p>Requesting many processors could imply long queue times. It's
     advised to only request the resources you'll be able to use.</p>
 </li>
 <li>
-<p>For all multi-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> jobs, please use a <abbr title="A group of compute nodes.">cluster</abbr> that has an
-    "<abbr title="A high speed switched fabric computer network communications link used in HPC.">InfiniBand</abbr>" interconnect network.</p>
+<p>For all multi-node jobs, please use a cluster that has an
+    "InfiniBand" interconnect network.</p>
 </li>
 <li>
-<p>And above all, do not hesitate to contact the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> staff at hpc@uantwerpen.be. We're here
+<p>And above all, do not hesitate to contact the UAntwerpen-HPC staff at hpc@uantwerpen.be. We're here
     to help you.</p>
 </li>
 </ol>
@@ -775,13 +923,13 @@
       
       
         
-        <a href="../quick_reference_guide/" class="md-footer__link md-footer__link--next" aria-label="Next: Appendix A - HPC Quick Reference Guide" rel="next">
+        <a href="../VNC/" class="md-footer__link md-footer__link--next" aria-label="Next: Graphical applications with VNC" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Appendix A - HPC Quick Reference Guide
+              Graphical applications with VNC
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -819,3 +967,18 @@
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

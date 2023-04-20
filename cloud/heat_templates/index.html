@@ -552,15 +552,15 @@
                 
 
 
-<h1 id="orchestration-using-heat">Orchestration Using <abbr title="Heat is the OpenStack orchestration service, which can manage multiple composite cloud applications using templates, through both an OpenStack-native REST API and a CloudFormation-compatible Query API.">Heat</abbr><a class="headerlink" href="#orchestration-using-heat" title="Permanent link">#</a></h1>
-<p><abbr title="Heat is the OpenStack orchestration service, which can manage multiple composite cloud applications using templates, through both an OpenStack-native REST API and a CloudFormation-compatible Query API.">Heat</abbr> is the name of the <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> orchestration engine, which can manage complete
+<h1 id="orchestration-using-heat">Orchestration Using Heat<a class="headerlink" href="#orchestration-using-heat" title="Permanent link">#</a></h1>
+<p>Heat is the name of the OpenStack orchestration engine, which can manage complete
 configurations of all servers, volumes, users, networks and routers that
 make up a cloud application. Instead of managing every component
 separately, we can create, start, stop or clean up our complete
-application in a single step. In <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr>, such a collection of
-resources is called a <em><abbr title="In the context of *OpenStack*, a stack is a collection of cloud resources which can be managed using the *Heat* orchestration engine.">stack</abbr></em>.</p>
-<p><abbr title="Heat is the OpenStack orchestration service, which can manage multiple composite cloud applications using templates, through both an OpenStack-native REST API and a CloudFormation-compatible Query API.">Heat</abbr> has its own dashboard interface, which you can find under the tab. Official
-documentation for <abbr title="Heat is the OpenStack orchestration service, which can manage multiple composite cloud applications using templates, through both an OpenStack-native REST API and a CloudFormation-compatible Query API.">Heat</abbr> and its dashboard interface can be found at the
+application in a single step. In OpenStack, such a collection of
+resources is called a <em>stack</em>.</p>
+<p>Heat has its own dashboard interface, which you can find under the tab. Official
+documentation for Heat and its dashboard interface can be found at the
 following locations:</p>
 <ul>
 <li>
@@ -570,21 +570,21 @@ following locations:</p>
 <p><a href="https://docs.openstack.org/heat-dashboard/latest">https://docs.openstack.org/heat-dashboard/latest</a></p>
 </li>
 </ul>
-<h2 id="heat-orchestration-template"><abbr title="A Heat Orchestration Template (*HOT*) is a text file which describes the infrastructure for a cloud application. Because *HOT* files are text files in a yaml-based format, they are readable and writable by humans, and can be managed using a version control system. *HOT* is one of the template formats supported by Heat, along with the older CloudFormation-compatible *CFN* format.">Heat Orchestration Template</abbr><a class="headerlink" href="#heat-orchestration-template" title="Permanent link">#</a></h2>
-<p>A <em><abbr title="In the context of *OpenStack*, a stack is a collection of cloud resources which can be managed using the *Heat* orchestration engine.">stack</abbr>'s</em>
+<h2 id="heat-orchestration-template">Heat Orchestration Template<a class="headerlink" href="#heat-orchestration-template" title="Permanent link">#</a></h2>
+<p>A <em>stack's</em>
 resources and their mutual dependencies can be specified in a text file,
 called a
-<abbr title="A Heat Orchestration Template (*HOT*) is a text file which describes the infrastructure for a cloud application. Because *HOT* files are text files in a yaml-based format, they are readable and writable by humans, and can be managed using a version control system. *HOT* is one of the template formats supported by Heat, along with the older CloudFormation-compatible *CFN* format.">Heat Orchestration Template</abbr>. The syntax of these
-templates conforms to the <em><abbr title="A human-readable text-based data serialization format.">yaml</abbr></em> standard, for which many text editors
+Heat Orchestration Template. The syntax of these
+templates conforms to the <em>yaml</em> standard, for which many text editors
 provide specialized editing modes. The <a href="https://docs.openstack.org/heat/\osversion/template_guide">Template
 Guide</a> in
-the <abbr title="Heat is the OpenStack orchestration service, which can manage multiple composite cloud applications using templates, through both an OpenStack-native REST API and a CloudFormation-compatible Query API.">Heat</abbr> documentation contains a specification of the <em>HOT</em> format, as well as information on how to describe the various types of
+the Heat documentation contains a specification of the <em>HOT</em> format, as well as information on how to describe the various types of
 resources in a template.</p>
 <p>VSC provides some example templates at
 <a href="https://github.com/hpcugent/openstack-templates">github.com/hpcugent/openstack-templates</a>,
 which can serve as a starting point for your own templates, or as
 examples.</p>
-<p>The following example describes a <abbr title="In the context of *OpenStack*, a stack is a collection of cloud resources which can be managed using the *Heat* orchestration engine.">stack</abbr> consisting of a single VM:</p>
+<p>The following example describes a stack consisting of a single VM:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">heat_template_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2018-08-31</span><span class="w"></span>
 
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;</span><span class="w"> </span>
@@ -644,20 +644,20 @@ or (in recent version) the name of the version.</p>
 <p>Providing a description is optional, but recommended.</p>
 <p><strong>parameters</strong></p>
 <p>Another optional section, <code>parameters</code> allow users to configure
-various properties when instantiating a new <abbr title="In the context of *OpenStack*, a stack is a collection of cloud resources which can be managed using the *Heat* orchestration engine.">stack</abbr>, without having to
+various properties when instantiating a new stack, without having to
 edit the template itself. A parameter value can be used elsewhere in
 the template using the function <code>get_param</code>. In this example, we use
-parameters to choose an <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> key, instance size ("flavor"), image,
+parameters to choose an SSH key, instance size ("flavor"), image,
 and a network.</p>
 <p><strong>resources</strong></p>
 <p>This section contains all the resources used by the Stack. In this
 case, there is just a single VM instance (OS::Nova::Server).</p>
 <p>Optional additional sections are <strong>paremeter_groups</strong>, <strong>outputs</strong>, and .</p>
 <h2 id="the-template-generator">The Template Generator<a class="headerlink" href="#the-template-generator" title="Permanent link">#</a></h2>
-<p>The <abbr title="Heat is the OpenStack orchestration service, which can manage multiple composite cloud applications using templates, through both an OpenStack-native REST API and a CloudFormation-compatible Query API.">Heat</abbr> dashboard provides a graphical interface where users can draw
+<p>The Heat dashboard provides a graphical interface where users can draw
 templates by dragging resources onto a canvas, and connecting them.
 Users can then download a template generated from this interface, or
-immediately instantiate it as a <abbr title="In the context of *OpenStack*, a stack is a collection of cloud resources which can be managed using the *Heat* orchestration engine.">stack</abbr>.</p>
+immediately instantiate it as a stack.</p>
 <p>Currently, there are a number of issues with the template generator,
 which require manual edits to the generated templates. Therefore, the
 template generator is currently not very useful. We will update this
@@ -669,7 +669,7 @@ launch, suspend, resume and delete stacks.</p>
 <p>The overview page contains a list of all currently existing stacks
 (either running or suspended), and buttons to perform the following
 actions:</p>
-<h3 id="launch-a-stack">Launch a <abbr title="In the context of *OpenStack*, a stack is a collection of cloud resources which can be managed using the *Heat* orchestration engine.">stack</abbr><a class="headerlink" href="#launch-a-stack" title="Permanent link">#</a></h3>
+<h3 id="launch-a-stack">Launch a stack<a class="headerlink" href="#launch-a-stack" title="Permanent link">#</a></h3>
 <ol>
 <li>Click to open the following wizard:</li>
 </ol>
@@ -677,7 +677,7 @@ actions:</p>
 <ol>
 <li>
 <p>Provide a template and --- optionally --- an environment for the
-    <abbr title="In the context of *OpenStack*, a stack is a collection of cloud resources which can be managed using the *Heat* orchestration engine.">stack</abbr>.</p>
+    stack.</p>
 <ol>
 <li><strong>Template Source</strong></li>
 </ol>
@@ -693,7 +693,7 @@ actions:</p>
 </li>
 <li>
 <p><strong>URL</strong></p>
-<p>Provide a URL to have <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> download the
+<p>Provide a URL to have OpenStack download the
 template from that location.</p>
 <p>In our example, we provide a URL from the
 repository https://github.com/hpcugent/openstack-templates,
@@ -704,35 +704,35 @@ URL, <code>https://raw.githubusercontent.com/</code>....</p>
 <li>
 <p><strong>Environment Source</strong></p>
 <p>Optionally, you can also provide an environment file. This is
-another [<abbr title="A human-readable text-based data serialization format.">yaml</abbr>]{.smallcaps} file, which contains customizations
-for your <abbr title="Heat is the OpenStack orchestration service, which can manage multiple composite cloud applications using templates, through both an OpenStack-native REST API and a CloudFormation-compatible Query API.">Heat</abbr> templates, such as default values for parameters,
+another [yaml]{.smallcaps} file, which contains customizations
+for your Heat templates, such as default values for parameters,
 or custom resource types you have created (see
 '<a href="https://docs.openstack.org/heat/\osversion/template_guide/environment.html">Environments</a>'
-in the <abbr title="Heat is the OpenStack orchestration service, which can manage multiple composite cloud applications using templates, through both an OpenStack-native REST API and a CloudFormation-compatible Query API.">Heat</abbr> template guide). You can provide a <strong>File</strong> or choose <strong>Direct Input</strong>.</p>
+in the Heat template guide). You can provide a <strong>File</strong> or choose <strong>Direct Input</strong>.</p>
 </li>
 </ol>
 </li>
 <li>
-<p>If you click <strong>Next</strong>, <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr> will process the template. You can now
-    enter a name for the <abbr title="In the context of *OpenStack*, a stack is a collection of cloud resources which can be managed using the *Heat* orchestration engine.">stack</abbr>, and provide values for all the template
+<p>If you click <strong>Next</strong>, OpenStack will process the template. You can now
+    enter a name for the stack, and provide values for all the template
     parameters:</p>
 </li>
 </ol>
 <p><img alt="image" src="../img/launch_stack_parameters.png" /></p>
 <ol>
-<li>Click <strong>Launch</strong> to instantiate the <abbr title="In the context of *OpenStack*, a stack is a collection of cloud resources which can be managed using the *Heat* orchestration engine.">stack</abbr>.</li>
+<li>Click <strong>Launch</strong> to instantiate the stack.</li>
 </ol>
 <h3 id="preview-stack">Preview Stack<a class="headerlink" href="#preview-stack" title="Permanent link">#</a></h3>
 <p>starts a wizard similar to the "Launch Stack" wizard, but completing the
 wizard will only make the system perform a sanity check of your
-template, without instantiating the <abbr title="In the context of *OpenStack*, a stack is a collection of cloud resources which can be managed using the *Heat* orchestration engine.">stack</abbr>. If the check passes, you can
-inspect the parameters of the <abbr title="In the context of *OpenStack*, a stack is a collection of cloud resources which can be managed using the *Heat* orchestration engine.">stack</abbr> that would be created. The wizard
+template, without instantiating the stack. If the check passes, you can
+inspect the parameters of the stack that would be created. The wizard
 does not allow you to enter input parameter values, so any mandatory
 input parameters should be provided in an environment.</p>
 <h3 id="delete-stacks">Delete Stacks<a class="headerlink" href="#delete-stacks" title="Permanent link">#</a></h3>
 <p>deletes all selected stacks from the list .</p>
-<p>Deleting a <abbr title="In the context of *OpenStack*, a stack is a collection of cloud resources which can be managed using the *Heat* orchestration engine.">stack</abbr> also deletes all of the resources (volumes, ports)
-created by that <abbr title="In the context of *OpenStack*, a stack is a collection of cloud resources which can be managed using the *Heat* orchestration engine.">stack</abbr>, unless a different policy was set in the property
+<p>Deleting a stack also deletes all of the resources (volumes, ports)
+created by that stack, unless a different policy was set in the property
 for those resources (see the <a href="https://docs.openstack.org/heat/\osversion/template_guide/hot_spec.html#resources-section">Resources
 section</a>
 in the HOT specification).</p>
@@ -741,7 +741,7 @@ in the HOT specification).</p>
 <p><strong>Check Stacks</strong> verifies if the resources for selected stacks are still running.</p>
 <p><strong>Suspend Stacks</strong> suspends all resources of the selected stacks.</p>
 <p><strong>Resume Stacks</strong> resumes the selected (suspended) stacks.</p>
-<p>You can quickly suspend, resume or delete a single <abbr title="In the context of *OpenStack*, a stack is a collection of cloud resources which can be managed using the *Heat* orchestration engine.">stack</abbr> using the
+<p>You can quickly suspend, resume or delete a single stack using the
 drop-down menu in the <strong>Actions</strong> column of the overview. This menu also contains
 the option <strong>Change Stack Template</strong>, which allows you to update a Stack by providing a new
 template.</p>

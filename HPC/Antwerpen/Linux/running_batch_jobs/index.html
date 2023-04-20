@@ -722,6 +722,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -747,12 +775,132 @@
       
       
         <label class="md-nav__link" for="__nav_15">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_16" type="checkbox" id="__nav_16" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16">
           Appendices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Appendices" data-md-level="1">
-        <label class="md-nav__title" for="__nav_15">
+        <label class="md-nav__title" for="__nav_16">
           <span class="md-nav__icon md-icon"></span>
           Appendices
         </label>
@@ -1053,39 +1201,39 @@
 
 
 <h1 id="running-batch-jobs">Running batch jobs<a class="headerlink" href="#running-batch-jobs" title="Permanent link">#</a></h1>
-<p>In order to have access to the compute nodes of a <abbr title="A group of compute nodes.">cluster</abbr>, you have to
+<p>In order to have access to the compute nodes of a cluster, you have to
 use the job system. The system software that handles your batch jobs
-consists of two pieces: the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr>- and resource manager <strong>TORQUE</strong> and the
-scheduler <strong><abbr title="Moab is a job scheduler, which allocates resources for jobs that are requesting resources.">Moab</abbr></strong>. Together, TORQUE and <abbr title="Moab is a job scheduler, which allocates resources for jobs that are requesting resources.">Moab</abbr> provide a suite of commands for
+consists of two pieces: the queue- and resource manager <strong>TORQUE</strong> and the
+scheduler <strong>Moab</strong>. Together, TORQUE and Moab provide a suite of commands for
 submitting jobs, altering some of the properties of waiting jobs (such
 as reordering or deleting them), monitoring their progress and killing
 ones that are having problems or are no longer needed. Only the most
 commonly used commands are mentioned here.</p>
 <p><img alt="image" src="../img/ch4-pbs-overview.png" style="display: block; margin: 0 auto" /></p>
-<p>When you connect to the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>, you have access to (one of) the <strong>login nodes</strong> of the
-<abbr title="A group of compute nodes.">cluster</abbr>. There you can prepare the work you want to get done on the
-<abbr title="A group of compute nodes.">cluster</abbr> by, e.g., installing or compiling programs, setting up data
+<p>When you connect to the UAntwerpen-HPC, you have access to (one of) the <strong>login nodes</strong> of the
+cluster. There you can prepare the work you want to get done on the
+cluster by, e.g., installing or compiling programs, setting up data
 sets, etc. The computations however, should not be performed on this
-<abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr>. The actual work is done on the <abbr title="A group of compute nodes.">cluster</abbr>'s <strong>compute nodes</strong>. Each <abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr> contains a number of <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr> <strong>cores</strong>. The compute nodes are managed by the job scheduling software (<abbr title="Moab is a job scheduler, which allocates resources for jobs that are requesting resources.">Moab</abbr>) and a Resource Manager (TORQUE), which
+login node. The actual work is done on the cluster's <strong>compute nodes</strong>. Each compute node contains a number of CPU <strong>cores</strong>. The compute nodes are managed by the job scheduling software (Moab) and a Resource Manager (TORQUE), which
 decides when and on which compute nodes the jobs can run. It is usually
 not necessary to log on to the compute nodes directly 
 . Users can (and should) monitor
 their jobs periodically as they run, but do not have to remain connected
-to the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> the entire time.</p>
+to the UAntwerpen-HPC the entire time.</p>
 <p>The documentation in this "Running batch jobs" section includes a
 description of the general features of job scripts, how to submit them
 for execution and how to monitor their progress.</p>
 <h2 id="modules">Modules<a class="headerlink" href="#modules" title="Permanent link">#</a></h2>
-<p>Software installation and maintenance on a UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> <abbr title="A group of compute nodes.">cluster</abbr> such as the VSC
+<p>Software installation and maintenance on a UAntwerpen-HPC cluster such as the VSC
 clusters poses a number of challenges not encountered on a workstation
-or a departmental <abbr title="A group of compute nodes.">cluster</abbr>. We therefore need a system on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>, which is
+or a departmental cluster. We therefore need a system on the UAntwerpen-HPC, which is
 able to easily activate or deactivate the software packages that you
 require for your program execution.</p>
 <h3 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">#</a></h3>
-<p>The program environment on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> is controlled by pre-defined settings,
+<p>The program environment on the UAntwerpen-HPC is controlled by pre-defined settings,
 which are stored in environment (or shell) variables. For more
-information about environment variables, see <a href="">the chapter "Getting started", section "Variables" in the intro to <abbr title="An operating system, similar to UNIX.">Linux</abbr></a>.</p>
-<p>All the software packages that are installed on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> <abbr title="A group of compute nodes.">cluster</abbr> require
+information about environment variables, see <a href="">the chapter "Getting started", section "Variables" in the intro to Linux</a>.</p>
+<p>All the software packages that are installed on the UAntwerpen-HPC cluster require
 different settings. These packages include compilers, interpreters,
 mathematical software such as MATLAB and SAS, as well as other
 applications and libraries.</p>
@@ -1124,8 +1272,8 @@ next sections.</p>
 <p>There is also a shorter <code>ml</code> command that does exactly the same as the
 <code>module</code> command and is easier to type. Whenever you see a <code>module</code>
 command, you can replace <code>module</code> with <code>ml</code>.</p>
-<h3 id="available-modules">Available <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr><a class="headerlink" href="#available-modules" title="Permanent link">#</a></h3>
-<p>A large number of software packages are installed on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> clusters. A
+<h3 id="available-modules">Available modules<a class="headerlink" href="#available-modules" title="Permanent link">#</a></h3>
+<p>A large number of software packages are installed on the UAntwerpen-HPC clusters. A
 list of all currently available software can be obtained by typing:</p>
 <pre><code><b>$ module available</b>
 </code></pre>
@@ -1147,7 +1295,7 @@ bzip2/1.0.6-intel-2015a
 </code></pre>
 
 <p>Or when you want to check whether some specific software, some compiler
-or some application (e.g., LAMMPS) is installed on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>.</p>
+or some application (e.g., LAMMPS) is installed on the UAntwerpen-HPC.</p>
 <pre><code>$ <b>module av 2>&1 | grep -i -e "LAMMPS"</b>
 LAMMPS/9Dec14-intel-2015a
 LAMMPS/30Oct14-intel-2014a
@@ -1158,27 +1306,27 @@ LAMMPS/5Sep14-intel-2014a
 looked for a case-insensitive name with the "-i" option.</p>
 <p>This gives a full list of software packages that can be loaded.</p>
 <p><strong>The casing of module names is important</strong>: lowercase and uppercase letters matter in module names.</p>
-<h3 id="organisation-of-modules-in-toolchains">Organisation of <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> in toolchains<a class="headerlink" href="#organisation-of-modules-in-toolchains" title="Permanent link">#</a></h3>
-<p>The amount of <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> on the VSC systems can be overwhelming, and it is
-not always immediately clear which <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> can be loaded safely together
+<h3 id="organisation-of-modules-in-toolchains">Organisation of modules in toolchains<a class="headerlink" href="#organisation-of-modules-in-toolchains" title="Permanent link">#</a></h3>
+<p>The amount of modules on the VSC systems can be overwhelming, and it is
+not always immediately clear which modules can be loaded safely together
 if you need to combine multiple programs in a single job to get your
 work done.</p>
-<p>Therefore the VSC has defined so-called **. A toolchain contains a C/C++
-and Fortran compiler, a <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> library and some basic math libraries for
+<p>Therefore the VSC has defined so-called <strong>toolchains</strong>. A toolchain contains a C/C++
+and Fortran compiler, a MPI library and some basic math libraries for
 (dense matrix) linear algebra and FFT. Two toolchains are defined on
 most VSC systems. One, the <code>intel</code> toolchain, consists of the Intel
-compilers, <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> library and math libraries. The other one, the <code>foss</code>
+compilers, MPI library and math libraries. The other one, the <code>foss</code>
 toolchain, consists of Open Source components: the GNU compilers,
 OpenMPI, OpenBLAS and the standard LAPACK and ScaLAPACK libraries for
 the linear algebra operations and the FFTW library for FFT. The
 toolchains are refreshed twice a year, which is reflected in their name.</p>
-<p>E.g., <code>foss/2023a</code> is the first version of the <code>foss</code> toolchain in 2023.</p>
+<p>E.g., <code>foss/{{ current_year }}a</code> is the first version of the <code>foss</code> toolchain in {{ current_year }}.</p>
 <p>The toolchains are then used to compile a lot of the software installed
 on the VSC clusters. You can recognise those packages easily as they all
 contain the name of the toolchain after the version number in their name
 (e.g., <code>Python/2.7.12-intel-2016b</code>). Only packages compiled with the
 same toolchain name and version can work together without conflicts.</p>
-<h3 id="loading-and-unloading-modules">Loading and unloading <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr><a class="headerlink" href="#loading-and-unloading-modules" title="Permanent link">#</a></h3>
+<h3 id="loading-and-unloading-modules">Loading and unloading modules<a class="headerlink" href="#loading-and-unloading-modules" title="Permanent link">#</a></h3>
 <h4 id="module-load">module load<a class="headerlink" href="#module-load" title="Permanent link">#</a></h4>
 <p>To "activate" a software package, you load the corresponding module file
 using the <code>module load</code> command:</p>
@@ -1201,10 +1349,10 @@ can be combined as follows:</p>
 <pre><code><b>$ module load example/1.2.3 secondexample/2.7-intel-2016b</b>
 </code></pre>
 
-<p>This will load the two <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> as well as their dependencies (unless
-there are conflicts between both <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr>).</p>
+<p>This will load the two modules as well as their dependencies (unless
+there are conflicts between both modules).</p>
 <h4 id="module-list">module list<a class="headerlink" href="#module-list" title="Permanent link">#</a></h4>
-<p>Obviously, you need to be able to keep track of the <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> that are
+<p>Obviously, you need to be able to keep track of the modules that are
 currently loaded. Assuming you have run the <code>module load</code> commands
 stated above, you will get the following:</p>
 <pre><code><b>$ module list</b>
@@ -1216,20 +1364,20 @@ Currently Loaded Modulefiles:
 5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26
 </code></pre>
 
-<p>You can also just use the <code>ml</code> command without arguments to list loaded <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr>.</p>
-<p>It is important to note at this point that other <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> (e.g.,
+<p>You can also just use the <code>ml</code> command without arguments to list loaded modules.</p>
+<p>It is important to note at this point that other modules (e.g.,
 <code>intel/2016b</code>) are also listed, although the user did not explicitly
 load them. This is because <code>secondexample/2.7-intel-2016b</code> depends on it
 (as indicated in its name), and the system administrator specified that
 the <code>intel/2016b</code> module should be loaded whenever <em>this</em>
 <code>secondexample</code> module is loaded. There are advantages and disadvantages
-to this, so be aware of automatically loaded <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> whenever things go wrong: they may have something to do with it!</p>
+to this, so be aware of automatically loaded modules whenever things go wrong: they may have something to do with it!</p>
 <h4 id="module-unload">module unload<a class="headerlink" href="#module-unload" title="Permanent link">#</a></h4>
 <p>To unload a module, one can use the <code>module unload</code> command. It works
 consistently with the <code>load</code> command, and reverses the latter's effect.
 However, the dependencies of the package are NOT automatically unloaded;
 you will have to unload the packages one by one. When the
-<code>secondexample</code> module is unloaded, only the following <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> remain:</p>
+<code>secondexample</code> module is unloaded, only the following modules remain:</p>
 <pre><code><b>$ module unload secondexample</b>
 <b>$ module list</b>
 Currently Loaded Modulefiles: 
@@ -1243,30 +1391,30 @@ Currently Loaded Modulefiles:
 <p>To unload the <code>secondexample</code> module, you can also use
 <code>ml -secondexample</code>.</p>
 <p>Notice that the version was not specified: there can only be one version
-of a module loaded at a time, so unloading <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> by name is not
-ambiguous. However, checking the list of currently loaded <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> is
+of a module loaded at a time, so unloading modules by name is not
+ambiguous. However, checking the list of currently loaded modules is
 always a good idea, since unloading a module that is currently not
 loaded will <em>not</em> result in an error.</p>
-<h3 id="purging-all-modules">Purging all <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr><a class="headerlink" href="#purging-all-modules" title="Permanent link">#</a></h3>
-<p>In order to unload all <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> at once, and hence be sure to start in a
+<h3 id="purging-all-modules">Purging all modules<a class="headerlink" href="#purging-all-modules" title="Permanent link">#</a></h3>
+<p>In order to unload all modules at once, and hence be sure to start in a
 clean state, you can use:</p>
 <pre><code><b>$ module purge</b>
 </code></pre>
 
 <p>However, on some VSC clusters you may
-be left with a very empty list of available <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> after executing
+be left with a very empty list of available modules after executing
 <code>module purge</code>. On those systems, <code>module av</code> will show you a list of
-<abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> containing the name of a <abbr title="A group of compute nodes.">cluster</abbr> or a particular feature of a
-section of the <abbr title="A group of compute nodes.">cluster</abbr>, and loading the appropriate module will restore
+modules containing the name of a cluster or a particular feature of a
+section of the cluster, and loading the appropriate module will restore
 the module list applicable to that particular system.</p>
 <h3 id="using-explicit-version-numbers">Using explicit version numbers<a class="headerlink" href="#using-explicit-version-numbers" title="Permanent link">#</a></h3>
-<p>Once a module has been installed on the <abbr title="A group of compute nodes.">cluster</abbr>, the executables or
+<p>Once a module has been installed on the cluster, the executables or
 libraries it comprises are never modified. This policy ensures that the
 user's programs will run consistently, at least if the user specifies a
 specific version. <strong>Failing to specify a version may result in unexpected behviour.</strong></p>
 <p>Consider the following example: the user decides to use the <code>example</code>
 module and at that point in time, just a single version 1.2.3 is
-installed on the <abbr title="A group of compute nodes.">cluster</abbr>. The user loads the module using:</p>
+installed on the cluster. The user loads the module using:</p>
 <pre><code><b>$ module load example</b>
 </code></pre>
 
@@ -1278,7 +1426,7 @@ installed on the <abbr title="A group of compute nodes.">cluster</abbr>. The use
 is installed, 4.5.6. From then on, the user's <code>load</code> command will load
 the latter version, rather than the intended one, which may lead to
 unexpected problems. See for example <a href="../troubleshooting/#module-conflicts">the following section on Module Conflicts</a>.</p>
-<p>Consider the following <code>example</code> <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr>:</p>
+<p>Consider the following <code>example</code> modules:</p>
 <pre><code><b>$ module avail example/</b>
 example/1.2.3 
 example/4.5.6
@@ -1302,8 +1450,8 @@ failed: conflict example
 
 <p>Note: A <code>module swap</code> command combines the appropriate <code>module unload</code>
 and <code>module load</code> commands.</p>
-<h3 id="search-for-modules">Search for <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr><a class="headerlink" href="#search-for-modules" title="Permanent link">#</a></h3>
-<p>With the <code>module spider</code> command, you can search for <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr>:</p>
+<h3 id="search-for-modules">Search for modules<a class="headerlink" href="#search-for-modules" title="Permanent link">#</a></h3>
+<p>With the <code>module spider</code> command, you can search for modules:</p>
 <pre><code><b>$ module spider example</b>
 --------------------------------------------------------------------------------
   example:
@@ -1352,13 +1500,13 @@ Help:
   This is just an example - Homepage: https://example.com/
 </code></pre>
 
-<h3 id="save-and-load-collections-of-modules">Save and load collections of <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr><a class="headerlink" href="#save-and-load-collections-of-modules" title="Permanent link">#</a></h3>
-<p>If you have a set of <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> that you need to load often, you can save
-these in a <em>collection</em>. This will enable you to load all the <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr>
+<h3 id="save-and-load-collections-of-modules">Save and load collections of modules<a class="headerlink" href="#save-and-load-collections-of-modules" title="Permanent link">#</a></h3>
+<p>If you have a set of modules that you need to load often, you can save
+these in a <em>collection</em>. This will enable you to load all the modules
 you need with a single command.</p>
 <p>In each <code>module</code> command shown below, you can replace <code>module</code> with
 <code>ml</code>.</p>
-<p>First, load all <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> you want to include in the collections:</p>
+<p>First, load all modules you want to include in the collections:</p>
 <pre><code><b>$ module load example/1.2.3 secondexample/2.7-intel-2016b</b>
 </code></pre>
 
@@ -1368,7 +1516,7 @@ collection is named <code>my-collection</code>.</p>
 </code></pre>
 
 <p>Later, for example in a jobscript or a new session, you can load all
-these <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> with <code>module restore</code>:</p>
+these modules with <code>module restore</code>:</p>
 <pre><code><b>$ module restore my-collection</b>
 </code></pre>
 
@@ -1379,7 +1527,7 @@ Named collection list (For LMOD_SYSTEM_NAME = "CO7-sandybridge"):
   1) my-collection
 </code></pre>
 
-<p>To get a list of all <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> a collection will load, you can use the
+<p>To get a list of all modules a collection will load, you can use the
 <code>module describe</code> command:</p>
 <pre><code><b>$ module describe my-collection</b>
 1) example/1.2.3                                        6) imkl/11.3.3.210-iimpi-2016b 
@@ -1411,7 +1559,7 @@ setenv("EBEXTSLISTPYTHON","setuptools-23.1.0,pip-8.1.2,nose-1.3.7,numpy-1.11.1,s
 equivalent.</p>
 <p>Here you can see that the <code>Python/2.7.12-intel-2016b</code> comes with a whole
 bunch of extensions: <code>numpy</code>, <code>scipy</code>, ...</p>
-<p>You can also see the <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> the <code>Python/2.7.12-intel-2016b</code> module
+<p>You can also see the modules the <code>Python/2.7.12-intel-2016b</code> module
 loads: <code>intel/2016b</code>, <code>bzip2/1.0.6-intel-2016b</code>, ...</p>
 <!-- ::: prompt
 module-whatis Description: Python is a programming language that lets
@@ -1428,8 +1576,8 @@ bunch of extensions: `numpy`, `scipy`, ...
 You can also see the modules the `Python/3.2.5-foss-2014a` module loads:
 `foss/2014a`, `bzip2/1.0.6-foss-2014a`, ...  -->
 <p>If you're not sure what all of this means: don't worry, you don't have to know; just load the module and try to use the software.</p>
-<h2 id="getting-system-information-about-the-hpc-infrastructure">Getting system information about the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> infrastructure<a class="headerlink" href="#getting-system-information-about-the-hpc-infrastructure" title="Permanent link">#</a></h2>
-<h3 id="checking-the-general-status-of-the-hpc-infrastructure">Checking the general status of the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> infrastructure<a class="headerlink" href="#checking-the-general-status-of-the-hpc-infrastructure" title="Permanent link">#</a></h3>
+<h2 id="getting-system-information-about-the-hpc-infrastructure">Getting system information about the HPC infrastructure<a class="headerlink" href="#getting-system-information-about-the-hpc-infrastructure" title="Permanent link">#</a></h2>
+<h3 id="checking-the-general-status-of-the-hpc-infrastructure">Checking the general status of the HPC infrastructure<a class="headerlink" href="#checking-the-general-status-of-the-hpc-infrastructure" title="Permanent link">#</a></h3>
 <p>To check how much jobs are running in what queues, you can use the
 <code>qstat -q</code> command:</p>
 <pre><code><b>$ qstat -q</b>
@@ -1445,14 +1593,14 @@ q24h               --      --    24:00:00   --    0   0 --   E R
                                                 337  82
 </code></pre>
 
-<p>Here, there are 316 jobs running on the <code>long</code> <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr>, and 77 jobs
-queued. We can also see that the <code>long</code> <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr> allows a maximum wall time
+<p>Here, there are 316 jobs running on the <code>long</code> queue, and 77 jobs
+queued. We can also see that the <code>long</code> queue allows a maximum wall time
 of 72 hours.</p>
-<h3 id="getting-cluster-state">Getting <abbr title="A group of compute nodes.">cluster</abbr> state<a class="headerlink" href="#getting-cluster-state" title="Permanent link">#</a></h3>
+<h3 id="getting-cluster-state">Getting cluster state<a class="headerlink" href="#getting-cluster-state" title="Permanent link">#</a></h3>
 <p>You can check <a href="http://hpc.ugent.be/clusterstate">http://hpc.ugent.be/clusterstate</a> to see information
 about the clusters: you can see the nodes that are down, free, partially
 filled with jobs, completely filled with jobs, ....</p>
-<p>You can also get this information in text form (per <abbr title="A group of compute nodes.">cluster</abbr> separately)
+<p>You can also get this information in text form (per cluster separately)
 with the <code>pbsmon</code> command:</p>
 <pre><code><b>$ module swap cluster /kirlia</b>
 <b>$ pbsmon</b>
@@ -1475,10 +1623,10 @@ Node type:
  ppn=36, mem=751GB
 </code></pre>
 
-<p><code>pbsmon</code> only outputs details of the <abbr title="A group of compute nodes.">cluster</abbr> corresponding to the
-currently loaded <code>cluster</code> module see <a href="./#specifying-the-cluster-on-which-to-run">the section on Specifying the <abbr title="A group of compute nodes.">cluster</abbr> on which to run</a>.
-It also shows details about the nodes in a <abbr title="A group of compute nodes.">cluster</abbr>. In the example, all
-nodes have 36 cores and 751 GB of <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>.</p>
+<p><code>pbsmon</code> only outputs details of the cluster corresponding to the
+currently loaded <code>cluster</code> module see <a href="./#specifying-the-cluster-on-which-to-run">the section on Specifying the cluster on which to run</a>.
+It also shows details about the nodes in a cluster. In the example, all
+nodes have 36 cores and 751 GB of memory.</p>
 <h2 id="defining-and-submitting-your-job">Defining and submitting your job<a class="headerlink" href="#defining-and-submitting-your-job" title="Permanent link">#</a></h2>
 <p>Usually, you will want to have your program running in batch mode, as
 opposed to interactively as you may be accustomed to. The point is that
@@ -1488,8 +1636,8 @@ buttons during program execution. All the necessary input or required
 options have to be specified on the command line, or needs to be put in
 input or configuration files.</p>
 <p>As an example, we will run a Perl script, which you will find in the
-examples subdirectory on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>. When you received an account to the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> a subdirectory with examples was automatically generated for you.</p>
-<p>Remember that you have copied the contents of the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> examples directory
+examples subdirectory on the UAntwerpen-HPC. When you received an account to the UAntwerpen-HPC a subdirectory with examples was automatically generated for you.</p>
+<p>Remember that you have copied the contents of the HPC examples directory
 to your home directory, so that you have your <strong>own personal</strong> copy (editable and
 over-writable) and that you can start using the examples. If you haven't
 done so already, run these commands now:</p>
@@ -1502,12 +1650,12 @@ command:</p>
 <pre><code><b>$ cd ~/examples/Running-batch-jobs</b>
 </code></pre>
 
-<p>Each time you want to execute a program on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> you'll need 2 things:</p>
+<p>Each time you want to execute a program on the UAntwerpen-HPC you'll need 2 things:</p>
 <p><strong>The executable</strong>  The program to execute from the end-user, together with its
     peripheral input files, databases and/or command options.</p>
 <p><strong>A batch job script</strong> , which will define the computer resource requirements of the
     program, the required additional software packages and which will
-    start the actual executable. The UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> needs to know:</p>
+    start the actual executable. The UAntwerpen-HPC needs to know:</p>
 <pre><code>1.  the type of compute nodes;
 
 2.  the number of CPUs;
@@ -1522,7 +1670,7 @@ command:</p>
 
 6.  what executable to start, and its arguments.
 </code></pre>
-<p>Later on, the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> user shall have to define (or to adapt) his/her own job
+<p>Later on, the UAntwerpen-HPC user shall have to define (or to adapt) his/her own job
 scripts. For now, all required job scripts for the exercises are
 provided for you in the examples subdirectories.</p>
 <p>List and check the contents with:</p>
@@ -1539,13 +1687,13 @@ script (named "fibo.pbs").</p>
 <p>The Perl script calculates the first 30 Fibonacci numbers.</p>
 </li>
 <li>
-<p>The job script is actually a standard Unix/<abbr title="An operating system, similar to UNIX.">Linux</abbr> shell script that
+<p>The job script is actually a standard Unix/Linux shell script that
     contains a few extra comments at the beginning that specify
     directives to PBS. These comments all begin with <strong>#PBS</strong>.</p>
 </li>
 </ol>
 <p>We will first execute the program locally (i.e., on your current
-login-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>), so that you can see what the program does.</p>
+login-node), so that you can see what the program does.</p>
 <p>On the command line, you would run this using:</p>
 <pre><code><b>$ ./fibo.pl</b>
 [0] -> 0
@@ -1581,16 +1729,16 @@ login-<abbr title="A node attribute is a non-quantitative aspect of a node. Attr
 </code></pre>
 
 <p><u>Remark</u>: Recall that you have now executed the Perl script locally on one of
-the login-nodes of the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> <abbr title="A group of compute nodes.">cluster</abbr>. Of course, this is not our final
+the login-nodes of the UAntwerpen-HPC cluster. Of course, this is not our final
 intention; we want to run the script on any of the compute nodes. Also,
 it is not considered as good practice, if you "abuse" the login-nodes
 for testing your scripts and executables. It will be explained later on
-how you can reserve your own compute-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> (by opening an interactive
+how you can reserve your own compute-node (by opening an interactive
 session) to test your software. But for the sake of acquiring a good
 understanding of what is happening, you are pardoned for this example
 since these jobs require very little computing power.</p>
 <p>The job script contains a description of the job by specifying the
-command that need to be executed on the <abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr>:</p>
+command that need to be executed on the compute node:</p>
 <p><center>-- fibo.pbs --</center></p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
 <span class="nb">cd</span> <span class="nv">$PBS_O_WORKDIR</span>
@@ -1598,27 +1746,27 @@ command that need to be executed on the <abbr title="The computational units on 
 </code></pre></div>
 <p>So, jobs are submitted as scripts (bash, Perl, Python, etc.), which
 specify the parameters related to the jobs such as expected runtime
-(<abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>), e-mail notification, etc. These parameters can also be
+(walltime), e-mail notification, etc. These parameters can also be
 specified on the command line.</p>
-<p>This job script that can now be submitted to the <abbr title="A group of compute nodes.">cluster</abbr>'s job system
+<p>This job script that can now be submitted to the cluster's job system
 for execution, using the qsub (Queue SUBmit) command:</p>
 <pre><code><b>$ qsub fibo.pbs</b>
 433253.leibniz
 </code></pre>
 
-<p>The qsub command returns a job identifier on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> <abbr title="A group of compute nodes.">cluster</abbr>. The
+<p>The qsub command returns a job identifier on the HPC cluster. The
 important part is the number (e.g., "433253.leibniz "); this is a unique identifier for
 the job and can be used to monitor and manage your job.</p>
-<p><u>Remark</u>: the <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> that were loaded when you submitted the job will <em>not</em> be
+<p><u>Remark</u>: the modules that were loaded when you submitted the job will <em>not</em> be
 loaded when the job is started. You should always specify the
 <code>module load</code> statements that are required for your job in the job
 script itself.</p>
 <p>To faciliate this, you can use a pre-defined module collection which you
-can restore using <code>module restore</code>, see <a href="./#save-and-load-collections-of-modules">the section on Save and load collections of <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr></a> for more information.</p>
-<p>Your job is now waiting in the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr> for a free workernode to start on.</p>
+can restore using <code>module restore</code>, see <a href="./#save-and-load-collections-of-modules">the section on Save and load collections of modules</a> for more information.</p>
+<p>Your job is now waiting in the queue for a free workernode to start on.</p>
 <p>Go and drink some coffee ... but not too long. If you get impatient you
 can start reading the next section for more information on how to
-monitor jobs in the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr>.</p>
+monitor jobs in the queue.</p>
 <p>After your job was started, and ended, check the contents of the
 directory:</p>
 <pre><code><b>$ ls -l</b>
@@ -1668,7 +1816,7 @@ running:</p>
 <pre><code><b>$ qstat -n 12345</b>
 </code></pre>
 
-<p>To remove a job from the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr> so that it will not run, or to stop a job
+<p>To remove a job from the queue so that it will not run, or to stop a job
 that is already running.</p>
 <pre><code><b>$ qdel 12345</b>
 </code></pre>
@@ -1687,8 +1835,8 @@ Job ID      Name    User      Time Use S Queue
 <p><strong>Job ID</strong>      the job's unique identifier</p>
 <p><strong>Name</strong>        the name of the job</p>
 <p><strong>User</strong>        the user that owns the job</p>
-<p><strong>Time Use</strong>    the elapsed <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> for the job</p>
-<p><strong>Queue</strong>       the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr> the job is in</p>
+<p><strong>Time Use</strong>    the elapsed walltime for the job</p>
+<p><strong>Queue</strong>       the queue the job is in</p>
 <p>The state S can be any of the following:</p>
 <table>
 <thead>
@@ -1724,11 +1872,11 @@ Job ID      Name    User      Time Use S Queue
 that the system or an administrator has put the job on hold, very likely
 because something is wrong with it. Check with your helpdesk to see why
 this is the case.</p>
-<h2 id="examining-the-queue">Examining the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr><a class="headerlink" href="#examining-the-queue" title="Permanent link">#</a></h2>
-<p>As we learned above, <abbr title="Moab is a job scheduler, which allocates resources for jobs that are requesting resources.">Moab</abbr> is the software application that actually
+<h2 id="examining-the-queue">Examining the queue<a class="headerlink" href="#examining-the-queue" title="Permanent link">#</a></h2>
+<p>As we learned above, Moab is the software application that actually
 decides when to run your job and what resources your job will run on.</p>
-<p>You can look at the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr> by using the PBS command or the <abbr title="Moab is a job scheduler, which allocates resources for jobs that are requesting resources.">Moab</abbr> command.
-By default, will display the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr> ordered by , whereas will display
+<p>You can look at the queue by using the PBS command or the Moab command.
+By default, will display the queue ordered by , whereas will display
 jobs grouped by their state ("running", "idle", or "hold") then ordered
 by priority. Therefore, is often more useful. Note however that at some
 VSC-sites, these commands show only your jobs or may be even disabled to
@@ -1759,7 +1907,7 @@ Total jobs: 540
 <dt>Active jobs</dt>
 <dd>
 <p>are jobs that are running or starting and that consume computer
-resources. The amount of time remaining (w.r.t. <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>, sorted to
+resources. The amount of time remaining (w.r.t. walltime, sorted to
 earliest completion time) and the start time are displayed. This
 will give you an idea about the foreseen completion time. These jobs
 could be in a number of states:</p>
@@ -1788,7 +1936,7 @@ allocated resources, not executing)</p>
 <p>are jobs that are waiting in the queues and are considered eligible
 for both scheduling and backfilling. They are all in the idle job
 state and do not violate any fairness policies or do not have any
-job holds in place. The requested <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> is displayed, and the
+job holds in place. The requested walltime is displayed, and the
 list is ordered by job priority.</p>
 </dd>
 <dt>Blocked jobs</dt>
@@ -1827,7 +1975,7 @@ default values will be assumed that are almost never appropriate for
 real jobs.</p>
 <p>It is important to estimate the resources you need to successfully run
 your program, such as the amount of time the job will require, the
-amount of <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> it needs, the number of CPUs it will run on, etc. This
+amount of memory it needs, the number of CPUs it will run on, etc. This
 may take some work, but it is necessary to ensure your jobs will run
 properly.</p>
 <h3 id="generic-resource-requirements">Generic resource requirements<a class="headerlink" href="#generic-resource-requirements" title="Permanent link">#</a></h3>
@@ -1837,33 +1985,33 @@ we list the most commonly used ones below.</p>
 </code></pre>
 
 <p>For the simplest cases, only the amount of maximum estimated execution
-time (called "<abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>") is really important. Here, the job requests 2
-hours, 30 minutes. As soon as the job exceeds the requested <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>, it
+time (called "walltime") is really important. Here, the job requests 2
+hours, 30 minutes. As soon as the job exceeds the requested walltime, it
 will be "killed" (terminated) by the job scheduler. There is no harm if
 you <em>slightly</em> overestimate the maximum execution time. If you omit this
-option, the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr> manager will not complain but use a default value (one
+option, the queue manager will not complain but use a default value (one
 hour on most clusters).</p>
 <p>If you want to run some final steps (for example to copy files back)
-before the <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> kills your main process, you have to kill the main
-command yourself before the <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> runs out and then copy the file
+before the walltime kills your main process, you have to kill the main
+command yourself before the walltime runs out and then copy the file
 back. See <a href="../jobscript_examples/#running-a-command-with-a-maximum-time-limit">the section on Running a command with a maximum time limit</a> for how to do this.</p>
 <pre><code><b>$ qsub -l mem=4gb</b>
 </code></pre>
 
-<p>The job requests 4 GB of RAM <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>. As soon as the job tries to use
-more <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>, it will be "killed" (terminated) by the job scheduler.
-There is no harm if you <em>slightly</em> overestimate the requested <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>.</p>
+<p>The job requests 4 GB of RAM memory. As soon as the job tries to use
+more memory, it will be "killed" (terminated) by the job scheduler.
+There is no harm if you <em>slightly</em> overestimate the requested memory.</p>
 <pre><code><b>$ qsub -l nodes=5:ppn=2</b>
 </code></pre>
 
-<p>The job requests 5 compute nodes with two cores on each <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> (ppn stands
-for "processors per <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>", where "processors" here actually means
-"<abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr> cores").</p>
+<p>The job requests 5 compute nodes with two cores on each node (ppn stands
+for "processors per node", where "processors" here actually means
+"CPU cores").</p>
 <pre><code><b>$ qsub -l nodes=1:westmere</b>
 </code></pre>
 
-<p>The job requests just one <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>, but it should have an Intel Westmere
-<abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>. A list with site-specific properties can be found in the next
+<p>The job requests just one node, but it should have an Intel Westmere
+processor. A list with site-specific properties can be found in the next
 section or in the User Portal ("VSC hardware" section)<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> of the VSC
 website.</p>
 <p>These options can either be specified on the command line, e.g.</p>
@@ -1881,8 +2029,8 @@ could be modified to:</p>
 <p>Note that the resources requested on the command line will override
 those specified in the PBS file.</p>
 <h3 id="node-specific-properties">Node-specific properties<a class="headerlink" href="#node-specific-properties" title="Permanent link">#</a></h3>
-<p>The following table contains some <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>-specific properties that can be
-used to make sure the job will run on nodes with a specific <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr> or
+<p>The following table contains some node-specific properties that can be
+used to make sure the job will run on nodes with a specific CPU or
 interconnect. Note that these properties may vary over the different VSC
 sites.</p>
 <hr />
@@ -1892,8 +2040,8 @@ sites.</p>
   mem256       only use nodes with 256GB of RAM (hopper and leibniz)
   tesla, gpu   only use nodes with the NVIDUA P100 GPU (leibniz)</p>
 <hr />
-<p>Since both hopper and leibniz are homogeneous with respect to <abbr title="A processing unit. A processor is a consumable resource. A processor can be a CPU or a (GP)GPU.">processor</abbr>
-architecture, the <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr> architecture properties are not really needed and
+<p>Since both hopper and leibniz are homogeneous with respect to processor
+architecture, the CPU architecture properties are not really needed and
 only defined for compatibility with other VSC clusters.</p>
 <hr />
 <p>shanghai     only use AMD Shanghai processors (AMD 2378)
@@ -1954,11 +2102,11 @@ complete:</p>
 and you will get an e-mail informing you about this error.</p>
 <p>::: flattext
 PBS Job Id: Job Name: fibo.pbs Exec host: Aborted by PBS Server Job
-exceeded some resource limit (<abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>, mem, etc.). Job was aborted. See
+exceeded some resource limit (walltime, mem, etc.). Job was aborted. See
 Administrator for help
 :::</p>
 <h3 id="generate-your-own-e-mail-notifications">Generate your own e-mail notifications<a class="headerlink" href="#generate-your-own-e-mail-notifications" title="Permanent link">#</a></h3>
-<p>You can instruct the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> to send an e-mail to your e-mail address whenever a
+<p>You can instruct the UAntwerpen-HPC to send an e-mail to your e-mail address whenever a
 job <strong>b</strong>egins, <strong>e</strong>nds and/or <strong>a</strong>borts, by adding the following lines to the job
 script <code>fibo.pbs</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">#PBS -m b </span>
@@ -2090,12 +2238,21 @@ job (regardless of success or failure).</p>
     
       <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

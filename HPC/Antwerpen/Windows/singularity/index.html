@@ -482,6 +482,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -507,12 +535,132 @@
       
       
         <label class="md-nav__link" for="__nav_15">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_16" type="checkbox" id="__nav_16" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16">
           Appendices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Appendices" data-md-level="1">
-        <label class="md-nav__title" for="__nav_15">
+        <label class="md-nav__title" for="__nav_16">
           <span class="md-nav__icon md-icon"></span>
           Appendices
         </label>
@@ -681,7 +829,7 @@
 operating-system-level virtualization (also known as containerisation).</p>
 <p>One of the main uses of Singularity is to bring containers and
 reproducibility to scientific computing and the high-performance
-computing (<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>) world. Using Singularity containers, developers can work
+computing (HPC) world. Using Singularity containers, developers can work
 in reproducible environments of their choosing and design, and these
 complete environments can easily be copied and executed on other
 platforms.</p>
@@ -693,7 +841,7 @@ infrastructure.</p>
 <p>Some restrictions have been put in place on the use of Singularity. This
 is mainly done for performance reasons and to avoid that the use of
 Singularity impacts other users on the system.</p>
-<p>The Singularity image file must be located on either one of the <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr>
+<p>The Singularity image file must be located on either one of the scratch
 filesystems, the local disk of the workernode you are using or
 <code>/dev/shm</code>. The centrally provided <code>singularity</code> command will refuse to
 run using images that are located elsewhere, in particular on the
@@ -702,8 +850,8 @@ run using images that are located elsewhere, in particular on the
 URL (e.g., <code>shub://...</code> or <code>docker://...</code>) will not work.</p>
 <p>If these limitations are a problem for you, please let us know via .</p>
 <h2 id="available-filesystems">Available filesystems<a class="headerlink" href="#available-filesystems" title="Permanent link">#</a></h2>
-<p>All <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent shared filesystems will be readily available in a
-Singularity container, including the home, data and <abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> filesystems,
+<p>All HPC-UGent shared filesystems will be readily available in a
+Singularity container, including the home, data and scratch filesystems,
 and they will be accessible via the familiar <code>$VSC_HOME</code>, <code>$VSC_DATA*</code>
 and <code>$VSC_SCRATCH*</code> environment variables.</p>
 <h2 id="singularity-images">Singularity Images<a class="headerlink" href="#singularity-images" title="Permanent link">#</a></h2>
@@ -717,9 +865,9 @@ restrictions.</p>
 <ul>
 <li>
 <p>You can only create Singularity images on RHEL 8 machines. The
-    current RHEL 8 systems are <code>gligar08</code> <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr>, <code>doduo</code> <abbr title="A group of compute nodes.">cluster</abbr>,
-    and <code>slaking</code> <abbr title="A group of compute nodes.">cluster</abbr>. The created images can be used on any
-    <abbr title="A group of compute nodes.">cluster</abbr>.</p>
+    current RHEL 8 systems are <code>gligar08</code> login node, <code>doduo</code> cluster,
+    and <code>slaking</code> cluster. The created images can be used on any
+    cluster.</p>
 </li>
 <li>
 <p>Due to the nature of <code>--fakeroot</code> option, we recommend to write your
@@ -754,8 +902,8 @@ Singularity image yourself</p>
 :::</p>
 <p>You can download <code>linear_regression.py</code> from <a href="https://github.com/tensorflow/tensorflow/blob/r1.12/tensorflow/examples/get_started/regression/linear_regression.py">the official Tensorflow
 repository</a>.</p>
-<h2 id="mpi-example"><abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> example<a class="headerlink" href="#mpi-example" title="Permanent link">#</a></h2>
-<p>It is also possible to execute <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> jobs within a container, but the
+<h2 id="mpi-example">MPI example<a class="headerlink" href="#mpi-example" title="Permanent link">#</a></h2>
+<p>It is also possible to execute MPI jobs within a container, but the
 following requirements apply:</p>
 <ul>
 <li>
@@ -763,7 +911,7 @@ following requirements apply:</p>
     the <code>infiniband-diags</code>, <code>libmlx5-1</code> and <code>libmlx4-1</code> OS packages)</p>
 </li>
 <li>
-<p>Use <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> within the container (install the <code>environment-modules</code>
+<p>Use modules within the container (install the <code>environment-modules</code>
     or <code>lmod</code> package in your container)</p>
 </li>
 <li>
@@ -780,11 +928,11 @@ following requirements apply:</p>
 <code>$VSC_SCRATCH</code></p>
 <p>::: prompt
 :::</p>
-<p>For example to compile an <a href="https://github.com/open-mpi/ompi/blob/master/examples/ring_c.c"><abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>
+<p>For example to compile an <a href="https://github.com/open-mpi/ompi/blob/master/examples/ring_c.c">MPI
 example</a>:</p>
 <p>::: prompt
 :::</p>
-<p>Example <abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr> job script:</p>
+<p>Example MPI job script:</p>
 
               
             </article>
@@ -829,3 +977,18 @@ example</a>:</p>
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

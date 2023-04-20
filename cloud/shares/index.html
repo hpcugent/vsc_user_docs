@@ -485,13 +485,13 @@
 
 
 <h1 id="shared-file-systems-using-manila">Shared file systems using Manila<a class="headerlink" href="#shared-file-systems-using-manila" title="Permanent link">#</a></h1>
-<p><abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr>'s Manila service makes it possible to create and manage shared
-<abbr title="Network File System, a protocol for sharing file systems across a network, often used on Unix(-like) operating systems.">nfs</abbr> file systems
+<p>OpenStack's Manila service makes it possible to create and manage shared
+nfs file systems
 for virtual machines. This service is not automatically enabled for
 every VSC cloud project, so you should contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#108;&#111;&#117;&#100;&#64;&#118;&#115;&#99;&#101;&#110;&#116;&#114;&#117;&#109;&#46;&#98;&#101;">&#99;&#108;&#111;&#117;&#100;&#64;&#118;&#115;&#99;&#101;&#110;&#116;&#114;&#117;&#109;&#46;&#98;&#101;</a> if you want
 to use shared file systems in your project.</p>
 <h2 id="creating-a-shared-file-system">Creating a Shared File System<a class="headerlink" href="#creating-a-shared-file-system" title="Permanent link">#</a></h2>
-<p>Creating a shared file system using the <abbr title="Horizon is the name of the *OpenStack Dashboard*.">Horizon</abbr> interface is quite
+<p>Creating a shared file system using the Horizon interface is quite
 straightforward:</p>
 <ol>
 <li>
@@ -515,7 +515,7 @@ straightforward:</p>
 </li>
 <li>
 <p><strong>Share Protocol</strong></p>
-<p>Use the default <abbr title="Network File System, a protocol for sharing file systems across a network, often used on Unix(-like) operating systems.">nfs</abbr> protocol.</p>
+<p>Use the default nfs protocol.</p>
 </li>
 <li>
 <p><strong>Size (GiB)</strong></p>
@@ -542,15 +542,15 @@ as well.</p>
 <p>Click <strong>Create</strong> to complete this step.</p>
 </li>
 </ul>
-<p>At this point, the shared file system exists within <abbr title="OpenStack (https://www.openstack.org) is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers">OpenStack</abbr>, but it
+<p>At this point, the shared file system exists within OpenStack, but it
 cannot be used until we define access rules for it.</p>
-<h2 id="defining-nfs-access-rules">Defining <abbr title="Network File System, a protocol for sharing file systems across a network, often used on Unix(-like) operating systems.">nfs</abbr> access rules<a class="headerlink" href="#defining-nfs-access-rules" title="Permanent link">#</a></h2>
+<h2 id="defining-nfs-access-rules">Defining nfs access rules<a class="headerlink" href="#defining-nfs-access-rules" title="Permanent link">#</a></h2>
 <p>You must define rules that define which machines on the network may
 obtain read or write access to your shared file system. By default, in
 absence of any rules, a shared file system cannot be accessed by anyone.</p>
 <ol>
 <li>
-<p>Open the drop-down menu in the <strong>Actions</strong> column for your <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr>,
+<p>Open the drop-down menu in the <strong>Actions</strong> column for your share,
     and click <strong>Manage Rules</strong>.</p>
 </li>
 <li>
@@ -609,13 +609,13 @@ you can access it from an instance with a matching ip. In order to be
 able to mount the shared file system, your instance needs</p>
 <ul>
 <li>
-<p>a <abbr title="Network File System, a protocol for sharing file systems across a network, often used on Unix(-like) operating systems.">nfs</abbr> client,
+<p>a nfs client,
     installed by default on images provided by the VSC cloud, and</p>
 </li>
 <li>
 <p>access to the <strong>_nfs</strong> network. Because your instance likely has to
     connect to the <strong>_vm</strong> network as well, your VM should have two
-    <abbr title="Network Interface Controller, a (virtualized) hardware component that connects a computer to a network.">nic</abbr>'s. Again,
+    nic's. Again,
     this is taken care of in the default images.</p>
 </li>
 </ul>

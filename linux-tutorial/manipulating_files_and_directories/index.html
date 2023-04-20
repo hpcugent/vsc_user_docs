@@ -557,7 +557,7 @@
 
 
 <h1 id="manipulating-files-and-directories">Manipulating files and directories<a class="headerlink" href="#manipulating-files-and-directories" title="Permanent link">#</a></h1>
-<p>Being able to manage your data is an important part of using the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>
+<p>Being able to manage your data is an important part of using the HPC
 infrastructure. The bread and butter commands for doing this are
 mentioned here. It might seem annoyingly terse at first, but with
 practice you will realise that it's very practical to have such common
@@ -705,7 +705,7 @@ for all files in a directory structure to have the same permissions.</p>
 <p>However, this means that all users in <code>mygroup</code> can add or remove files.
 This could be problematic if you only wanted one person to be allowed to
 help you administer the files in the project. We need a new group. To do
-this in the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> environment, we need to use access control lists (ACLs):</p>
+this in the HPC environment, we need to use access control lists (ACLs):</p>
 <pre><code>$ <b>setfacl -m u:otheruser:w Project_GoldenDragon</b>
 $ <b>ls -l Project_GoldenDragon</b>
 drwxr-x---+ 2 vsc40000 mygroup 40 Apr 12 15:00 Project_GoldenDragon
@@ -724,7 +724,7 @@ you should be aware it exists.</p>
 used frequently. This means they will use less space and thus you get
 more out of your quota. Some types of files (e.g., CSV files with a lot
 of numbers) compress as much as 9:1. The most commonly used compression
-format on <abbr title="An operating system, similar to UNIX.">Linux</abbr> is gzip. To compress a file using gzip, we use:</p>
+format on Linux is gzip. To compress a file using gzip, we use:</p>
 <pre><code>$ <b>ls -lh myfile</b>
 -rw-r--r--. 1 vsc40000 vsc40000 4.1M Dec 2 11:14 myfile
 $ <b>gzip myfile</b>

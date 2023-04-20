@@ -875,7 +875,7 @@ one.txt
 
 <h2 id="command-piping">Command piping<a class="headerlink" href="#command-piping" title="Permanent link">#</a></h2>
 <p>Part of the power of the command line is to string multiple commands
-together to create useful results. The <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> of these is the pipe: <code>|</code>.
+together to create useful results. The core of these is the pipe: <code>|</code>.
 For example, to see the number of files in a directory, we can pipe the
 (<code>stdout</code>) output of <code>ls</code> to <code>wc</code> (<strong>w</strong>ord <strong>c</strong>ount, but can also be used to
 count the number of lines with the <code>-l</code> flag).</p>
@@ -1172,7 +1172,7 @@ every time you log in.</p>
     environment variables, etc.)</p>
 </li>
 <li>
-<p>selecting a specific <abbr title="A group of compute nodes.">cluster</abbr> to run on with
+<p>selecting a specific cluster to run on with
     <code>module swap cluster/...</code></p>
 </li>
 </ul>
@@ -1188,8 +1188,8 @@ every time you log in.</p>
     over when you tested the script.</p>
 </li>
 </ul>
-<h2 id="scripting-for-the-cluster">Scripting for the <abbr title="A group of compute nodes.">cluster</abbr><a class="headerlink" href="#scripting-for-the-cluster" title="Permanent link">#</a></h2>
-<p>When writing scripts to be submitted on the <abbr title="A group of compute nodes.">cluster</abbr> there are some
+<h2 id="scripting-for-the-cluster">Scripting for the cluster<a class="headerlink" href="#scripting-for-the-cluster" title="Permanent link">#</a></h2>
+<p>When writing scripts to be submitted on the cluster there are some
 tricks you need to keep in mind.</p>
 <h3 id="example-job-script">Example job script<a class="headerlink" href="#example-job-script" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
@@ -1218,18 +1218,18 @@ cp <span class="nv">$WORKDIR</span>/<span class="nv">$PBS_ARRAYID</span>.txt <sp
 </code></pre></div>
 <h3 id="pbs-pragmas">PBS pragmas<a class="headerlink" href="#pbs-pragmas" title="Permanent link">#</a></h3>
 <p>The scheduler needs to know about the requirements of the script, for
-example: how much <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> will it use, and how long will it run. These
+example: how much memory will it use, and how long will it run. These
 things can be specified inside a script with what we call PBS pragmas.</p>
-<p>This pragma (a pragma is a special comment) tells PBS to use 1 <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> and <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr>:
+<p>This pragma (a pragma is a special comment) tells PBS to use 1 node and core:
 <div class="highlight"><pre><span></span><code><span class="c1">#PBS -l nodes=1:ppn=1 # single-core</span>
 </code></pre></div></p>
 <p>For parallel software, you can request multiple cores (OpenMP) and/or
-multiple nodes (<abbr title="MPI stands for Message-Passing Interface. It supports a parallel programming method designed for distributed memory systems, but can also be used well on shared memory systems.">MPI</abbr>). <em>Only use this when the software you
+multiple nodes (MPI). <em>Only use this when the software you
 use is capable of working in parallel</em>. Here is an example:
 <div class="highlight"><pre><span></span><code><span class="c1">#PBS -l nodes=1:ppn=16  # single-node, multi-core</span>
 <span class="c1">#PBS -l nodes=5:ppn=16  # multi-node</span>
 </code></pre></div></p>
-<p>We intend to submit it on the long <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr>:
+<p>We intend to submit it on the long queue:
 <div class="highlight"><pre><span></span><code><span class="c1">#PBS -q long</span>
 </code></pre></div></p>
 <p>We request a total running time of 48 hours (2 days).

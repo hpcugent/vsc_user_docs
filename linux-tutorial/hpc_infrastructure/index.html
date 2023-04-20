@@ -448,19 +448,19 @@
                 
 
 
-<h1 id="more-on-the-hpc-infrastructure">More on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> infrastructure<a class="headerlink" href="#more-on-the-hpc-infrastructure" title="Permanent link">#</a></h1>
+<h1 id="more-on-the-hpc-infrastructure">More on the HPC infrastructure<a class="headerlink" href="#more-on-the-hpc-infrastructure" title="Permanent link">#</a></h1>
 <h2 id="filesystems">Filesystems<a class="headerlink" href="#filesystems" title="Permanent link">#</a></h2>
-<p>Multiple different shared filesystems are available on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>
+<p>Multiple different shared filesystems are available on the HPC
 infrastructure, each with their own purpose. See section
-<a href="https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#where-to-store-your-data-on-the-hpc">Where to store your data on the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr></a>
+<a href="https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#where-to-store-your-data-on-the-hpc">Where to store your data on the HPC</a>
 for a list of available locations.</p>
 <h3 id="vo-storage">VO storage<a class="headerlink" href="#vo-storage" title="Permanent link">#</a></h3>
 <p>If you are a member of a (non-default) virtual organisation (VO), see section
 <a href="https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#virtual-organisations">Virtual Organisations</a>,
 you have access to additional directories (with more quota) on the data and
-<abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> filesystems, which you can <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr> with other members in the VO.</p>
+scratch filesystems, which you can share with other members in the VO.</p>
 <h3 id="quota">Quota<a class="headerlink" href="#quota" title="Permanent link">#</a></h3>
-<p>Space is limited on the <abbr title="A group of compute nodes.">cluster</abbr>'s storage. To check your quota, see section
+<p>Space is limited on the cluster's storage. To check your quota, see section
 <a href="https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#pre-defined-quotas">Pre-defined quota</a>.</p>
 <p>To figure out where your quota is being spent, the <code>du</code> (isk sage)
 command can come in useful:</p>
@@ -480,18 +480,18 @@ data are stored, since that will:</p>
 </li>
 </ol>
 <h2 id="modules">Modules<a class="headerlink" href="#modules" title="Permanent link">#</a></h2>
-<p>Software is provided through so-called environment <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr>.</p>
+<p>Software is provided through so-called environment modules.</p>
 <p>The most commonly used commands are:</p>
 <ol>
 <li>
-<p><code>module avail</code>: show <em>all</em> available <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr></p>
+<p><code>module avail</code>: show <em>all</em> available modules</p>
 </li>
 <li>
-<p><code>module avail &lt;software name&gt;</code>: show available <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> for a
+<p><code>module avail &lt;software name&gt;</code>: show available modules for a
     specific software name</p>
 </li>
 <li>
-<p><code>module list</code>: show list of loaded <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr></p>
+<p><code>module list</code>: show list of loaded modules</p>
 </li>
 <li>
 <p><code>module load &lt;module name&gt;</code>: load a particular module</p>
@@ -500,7 +500,7 @@ data are stored, since that will:</p>
 <p>More information is available in section
 <a href="https://docs.hpc.ugent.be/running_batch_jobs/#modules">Modules</a>.</p>
 <h2 id="using-the-clusters">Using the clusters<a class="headerlink" href="#using-the-clusters" title="Permanent link">#</a></h2>
-<p>The use the clusters beyond the <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr>(s) which have limited resources, you
+<p>The use the clusters beyond the login node(s) which have limited resources, you
 should create job scripts and submit them to the clusters.</p>
 <p>Detailed information is available in section
 <a href="https://docs.hpc.ugent.be/running_batch_jobs/#defining-and-submitting-your-job">submitting your job</a>.</p>
@@ -510,13 +510,13 @@ Python, and prints the numbers to a <em>unique</em> output file in
 <code>$VSC_SCRATCH</code>.</p>
 <p>Hint: <code>python -c "print(sum(range(1, 101)))"</code></p>
 <ul>
-<li>How many <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> are available for Python version 3.6.4?</li>
-<li>How many <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> get loaded when you load the <code>Python/3.6.4-intel-2018a</code> module?</li>
-<li>Which <code>cluster</code> <abbr title="HPC uses an open source software package called &quot;Environment Modules&quot; (Modules for short) which allows you to add various path definitions to your shell environment.">modules</abbr> are available?</li>
+<li>How many modules are available for Python version 3.6.4?</li>
+<li>How many modules get loaded when you load the <code>Python/3.6.4-intel-2018a</code> module?</li>
+<li>Which <code>cluster</code> modules are available?</li>
 </ul>
 <!-- -->
 <ul>
-<li>What's the full path to your personal home/data/<abbr title="Supercomputers generally have what is called scratch space: storage available for temporary use. Use the scratch filesystem when, for example you are downloading and uncompressed applications, reading and writing input/output data during a batch job, or when you work with large datasets. Scratch is generally a lot faster than the Data or Home filesystem.">scratch</abbr> directories?</li>
+<li>What's the full path to your personal home/data/scratch directories?</li>
 <li>Determine how large your personal directories are.</li>
 <li>What's the difference between the size reported by <code>du -sh $HOME</code> and by <code>ls -ld $HOME</code>?</li>
 </ul>

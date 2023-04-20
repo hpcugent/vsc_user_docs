@@ -585,6 +585,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -610,12 +638,132 @@
       
       
         <label class="md-nav__link" for="__nav_15">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_16" type="checkbox" id="__nav_16" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16">
           Appendices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Appendices" data-md-level="1">
-        <label class="md-nav__title" for="__nav_15">
+        <label class="md-nav__title" for="__nav_16">
           <span class="md-nav__icon md-icon"></span>
           Appendices
         </label>
@@ -785,10 +933,10 @@
 </code></pre>
 
 <p>This occurs when your job did not complete within the requested
-<abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>. See
+walltime. See
 section on <a href="../fine_tuning_job_specifications/#specifying-walltime">Specifying Walltime</a> for more information
-about how to request the <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>. It is recommended to use
-<em>checkpointing</em> if the job requires <strong>72 hours</strong> of <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> or more to be executed.</p>
+about how to request the walltime. It is recommended to use
+<em>checkpointing</em> if the job requires <strong>72 hours</strong> of walltime or more to be executed.</p>
 <!-- FIXME: Refer to Checkpointing section. -->
 
 <h2 id="out-of-quota-issues">Out of quota issues<a class="headerlink" href="#out-of-quota-issues" title="Permanent link">#</a></h2>
@@ -799,9 +947,9 @@ remove) the data to a different storage endpoint (or request more quota)
 to be able to write to the disk and then resubmit the jobs. </p>
 <!-- FIXME: Add how to request quota section -->
 
-<h2 id="sec:connecting-issues">Issues connecting to <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr><a class="headerlink" href="#sec:connecting-issues" title="Permanent link">#</a></h2>
-<p>If you are confused about the <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> public/private key pair concept, maybe
-the key/lock analogy in <a href="../account/#how-do-ssh-keys-work">How do <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> keys work?</a> can help.</p>
+<h2 id="sec:connecting-issues">Issues connecting to login node<a class="headerlink" href="#sec:connecting-issues" title="Permanent link">#</a></h2>
+<p>If you are confused about the SSH public/private key pair concept, maybe
+the key/lock analogy in <a href="../account/#how-do-ssh-keys-work">How do SSH keys work?</a> can help.</p>
 <p>If you have errors that look like:</p>
 <pre><code>vsc20167@login.hpc.uantwerpen.be: Permission denied
 </code></pre>
@@ -827,13 +975,13 @@ things to do that should help:</p>
     <a href="https://account.vscentrum.be/">https://account.vscentrum.be/</a>.</p>
 </li>
 <li>
-<p>You previously connected to the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> from another machine, but now have
+<p>You previously connected to the UAntwerpen-HPC from another machine, but now have
     another machine? Please follow the procedure for adding additional
-    keys in section <a href="../account/#adding-multiple-ssh-public-keys-optional">Adding multiple <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> public keys</a>. You may need to wait for
-    15-20 minutes until the <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> public key(s) you added become active.</p>
+    keys in section <a href="../account/#adding-multiple-ssh-public-keys-optional">Adding multiple SSH public keys</a>. You may need to wait for
+    15-20 minutes until the SSH public key(s) you added become active.</p>
 </li>
 <li>
-<p>When using an <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> key
+<p>When using an SSH key
 in a non-default location, make sure you supply the path of the
 private key (and not the path of the public key) to <code>ssh</code>.
 <code>id_rsa.pub</code> is the usual filename of the public key, <code>id_rsa</code> is
@@ -846,7 +994,7 @@ section <a href="../connecting/#connect">Connect</a>)</p>
     you added on <a href="https://account.vscentrum.be/">https://account.vscentrum.be/</a>.</p>
 </li>
 <li>
-<p>Please do not use someone else's private keys. You must never <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr>
+<p>Please do not use someone else's private keys. You must never share
     your private key, they're called <em>private</em> for a good reason.</p>
 </li>
 </ol>
@@ -894,12 +1042,12 @@ qsub: script is written in DOS/Windows text format
 </code></pre>
 
 <p>It's probably because you transferred the files from a Windows computer.
-See the <a href="https://hpcugent.github.io/vsc_user_docs/linux-tutorial/uploading_files/#dos2unix">section about <code>dos2unix</code> in <abbr title="An operating system, similar to UNIX.">Linux</abbr> tutorial</a> to fix this error.</p>
+See the <a href="https://hpcugent.github.io/vsc_user_docs/linux-tutorial/uploading_files/#dos2unix">section about <code>dos2unix</code> in Linux tutorial</a> to fix this error.</p>
 <h2 id="warning-message-when-first-connecting-to-new-host">Warning message when first connecting to new host<a class="headerlink" href="#warning-message-when-first-connecting-to-new-host" title="Permanent link">#</a></h2>
 <p>If it does, type <strong><em>yes</em></strong>. If it doesn't, please contact support: hpc@uantwerpen.be.</p>
-<p>The first time you make a connection to the <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr>, a Security
+<p>The first time you make a connection to the login node, a Security
 Alert will appear and you will be asked to verify the authenticity of the
-<abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr>.</p>
+login node.</p>
 <p>Make sure the fingerprint in the alert matches one of the following:</p>
 <pre><code>- ssh-rsa 2048 5a:40:9d:2a:f4:b7:6c:87:0d:87:30:07:9d:ea:80:11
 - sha-rsa 2048 SHA256:W8HRHTZpPd2GIhoNU2xj2oUKhcFr2bjIzZsKzY+1PCA
@@ -916,23 +1064,23 @@ It is safe to ignore this <code>255</code> versus <code>256</code> difference, b
 <strong>identical</strong>.</p>
 <p><img alt="image" src="../img/ch2-putty-verify-authenticity.png" style="display: block; margin: 0 auto" /></p>
 <h2 id="memory-limits">Memory limits<a class="headerlink" href="#memory-limits" title="Permanent link">#</a></h2>
-<p>To avoid jobs allocating too much <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>, there are <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> limits in
-place by default. It is possible to specify higher <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> limits if your
+<p>To avoid jobs allocating too much memory, there are memory limits in
+place by default. It is possible to specify higher memory limits if your
 jobs require this.</p>
-<h3 id="how-will-i-know-if-memory-limits-are-the-cause-of-my-problem">How will I know if <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> limits are the cause of my problem?<a class="headerlink" href="#how-will-i-know-if-memory-limits-are-the-cause-of-my-problem" title="Permanent link">#</a></h3>
-<p>If your program fails with a <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr>-related issue, there is a good
-chance it failed because of the <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> limits and you should increase
-the <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> limits for your job.</p>
+<h3 id="how-will-i-know-if-memory-limits-are-the-cause-of-my-problem">How will I know if memory limits are the cause of my problem?<a class="headerlink" href="#how-will-i-know-if-memory-limits-are-the-cause-of-my-problem" title="Permanent link">#</a></h3>
+<p>If your program fails with a memory-related issue, there is a good
+chance it failed because of the memory limits and you should increase
+the memory limits for your job.</p>
 <p>Examples of these error messages are: <code>malloc failed</code>, <code>Out of memory</code>,
 <code>Could not allocate memory</code> or in Java:
 <code>Could not reserve enough space for object heap</code>. Your program can also
 run into a <code>Segmentation fault</code> (or <code>segfault</code>) or crash due to bus
 errors.</p>
-<p>You can check the amount of virtual <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> (in Kb) that is available to
+<p>You can check the amount of virtual memory (in Kb) that is available to
 you via the <code>ulimit -v</code> command <em>in your job script</em>.</p>
-<h3 id="how-do-i-specify-the-amount-of-memory-i-need">How do I specify the amount of <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> I need?<a class="headerlink" href="#how-do-i-specify-the-amount-of-memory-i-need" title="Permanent link">#</a></h3>
-<p>See <a href="../running_batch_jobs/#generic-resource-requirements">Generic resource requirements</a> to set <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> and other requirements, see <a href="../fine_tuning_job_specifications/#specifying-memory-requirements">Specifying <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> requirements</a> to finetune the amount of
-<abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> you request.</p>
+<h3 id="how-do-i-specify-the-amount-of-memory-i-need">How do I specify the amount of memory I need?<a class="headerlink" href="#how-do-i-specify-the-amount-of-memory-i-need" title="Permanent link">#</a></h3>
+<p>See <a href="../running_batch_jobs/#generic-resource-requirements">Generic resource requirements</a> to set memory and other requirements, see <a href="../fine_tuning_job_specifications/#specifying-memory-requirements">Specifying memory requirements</a> to finetune the amount of
+memory you request.</p>
 <!-- % See issue #248 to fix Java. This is software specific.
 % See issue #196 to fix MATLAB. This is software specific. -->
 
@@ -1015,3 +1163,18 @@ you via the <code>ulimit -v</code> command <em>in your job script</em>.</p>
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

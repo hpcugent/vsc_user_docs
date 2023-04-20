@@ -482,6 +482,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -507,12 +535,132 @@
       
       
         <label class="md-nav__link" for="__nav_15">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_16" type="checkbox" id="__nav_16" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16">
           Appendices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Appendices" data-md-level="1">
-        <label class="md-nav__title" for="__nav_15">
+        <label class="md-nav__title" for="__nav_16">
           <span class="md-nav__icon md-icon"></span>
           Appendices
         </label>
@@ -633,26 +781,26 @@
                 
 
 
-<h1 id="ch:interactive_ugent"><abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent interactive and debug <abbr title="A group of compute nodes.">cluster</abbr><a class="headerlink" href="#ch:interactive_ugent" title="Permanent link">#</a></h1>
+<h1 id="ch:interactive_ugent">HPC-UGent interactive and debug cluster<a class="headerlink" href="#ch:interactive_ugent" title="Permanent link">#</a></h1>
 <h2 id="sec:interactive_ugent_pupose">Purpose<a class="headerlink" href="#sec:interactive_ugent_pupose" title="Permanent link">#</a></h2>
-<p>The purpose of this <abbr title="A group of compute nodes.">cluster</abbr> is to give the user an environment where
-there should be no waiting in the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr> to get access to a limited
+<p>The purpose of this cluster is to give the user an environment where
+there should be no waiting in the queue to get access to a limited
 number of resources. This environment allows a user to immediatelty
 start working, and is the ideal place for interactive work such as
 development, debugging and light production workloads (typically
 sufficient for training and/or courses).
 <br></br>This enviroment should be seen as an extension of the login nodes,
-instead of a dedicated compute resource. The interactive <abbr title="A group of compute nodes.">cluster</abbr> is
-<em>overcommitted</em>, which means that more <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr> cores can be requested for
-jobs than physically exist in the <abbr title="A group of compute nodes.">cluster</abbr>. Obviously, the performance of
-this <abbr title="A group of compute nodes.">cluster</abbr> heavily depends on the workloads and the actual overcommit
+instead of a dedicated compute resource. The interactive cluster is
+<em>overcommitted</em>, which means that more CPU cores can be requested for
+jobs than physically exist in the cluster. Obviously, the performance of
+this cluster heavily depends on the workloads and the actual overcommit
 usage. Be aware that jobs can slow down or speed up during their
 execution.
-<br></br>Due to the restrictions and sharing of the <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr> resources (see
-section <a href="./#restrictions-and-overcommit-factor">Restrictions and overcommit factor</a>) jobs on this <abbr title="A group of compute nodes.">cluster</abbr>
+<br></br>Due to the restrictions and sharing of the CPU resources (see
+section <a href="./#restrictions-and-overcommit-factor">Restrictions and overcommit factor</a>) jobs on this cluster
 should normally start more or less immediately. The tradeoff is that
 performance must not be an issue for the submitted jobs. This means that
-typical workloads for this <abbr title="A group of compute nodes.">cluster</abbr> should be limited to:</p>
+typical workloads for this cluster should be limited to:</p>
 <ul>
 <li>
 <p>Interactive jobs (see
@@ -660,7 +808,7 @@ typical workloads for this <abbr title="A group of compute nodes.">cluster</abbr
 </li>
 <li>
 <p>Cluster desktop sessions (see
-    chapter <a href="../web_portal/#using-the-hpc-ugent-web-portal">Using the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent web portal</a>)</p>
+    chapter <a href="../web_portal/#using-the-hpc-ugent-web-portal">Using the HPC-UGent web portal</a>)</p>
 </li>
 <li>
 <p>Jobs requiring few resources</p>
@@ -673,7 +821,7 @@ typical workloads for this <abbr title="A group of compute nodes.">cluster</abbr
 </li>
 </ul>
 <h2 id="submitting-jobs">Submitting jobs<a class="headerlink" href="#submitting-jobs" title="Permanent link">#</a></h2>
-<p>To submit jobs to the <abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>-UGent interactive and debug <abbr title="A group of compute nodes.">cluster</abbr> nicknamed
+<p>To submit jobs to the HPC-UGent interactive and debug cluster nicknamed
 <code>slaking</code>, first use:</p>
 <pre><code>$ <b>module swap cluster/slaking</b>
 </code></pre>
@@ -681,26 +829,26 @@ typical workloads for this <abbr title="A group of compute nodes.">cluster</abbr
 <p>Then use the familiar <code>qsub</code>, <code>qstat</code>, etc. commands (see
 chapter <a href="../running_batch_jobs/#running-batch-jobs">Running batch jobs</a>).</p>
 <h3 id="restrictions-and-overcommit-factor">Restrictions and overcommit factor<a class="headerlink" href="#restrictions-and-overcommit-factor" title="Permanent link">#</a></h3>
-<p>Some limits are in place for this <abbr title="A group of compute nodes.">cluster</abbr>:</p>
+<p>Some limits are in place for this cluster:</p>
 <ul>
 <li>
-<p>each user may have at most 5 jobs in the <abbr title="PBS/TORQUE queues, or &quot;classes&quot; as Moab refers to them, represent groups of computing resources with specific parameters. A queue with a 12-hour runtime or &quot;walltime&quot; would allow jobs requesting 12 hours or less to use this queue.">queue</abbr> (both running and
+<p>each user may have at most 5 jobs in the queue (both running and
     waiting to run);</p>
 </li>
 <li>
 <p>at most 3 jobs per user can be running at the same time;</p>
 </li>
 <li>
-<p>running jobs may allocate no more than 8 <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr> cores and no more than
-    27200 MiB of <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> in total, per user;</p>
+<p>running jobs may allocate no more than 8 CPU cores and no more than
+    27200 MiB of memory in total, per user;</p>
 </li>
 </ul>
-<p>In addition, the <abbr title="A group of compute nodes.">cluster</abbr> has an overcommit factor of 6. This means that
+<p>In addition, the cluster has an overcommit factor of 6. This means that
 6 times more cores can be allocated than physically exist.
-Simultaneously, the default <abbr title="A quantity of physical memory (RAM). Memory is provided by compute nodes. It is required as a constraint or consumed as a consumable resource by jobs. Within Moab, memory is tracked and reported in megabytes (MB).">memory</abbr> per <abbr title="An individual compute unit inside a CPU. A CPU typically contains one or more cores.">core</abbr> is 6 times less than what
-would be available on a non-overcommitted <abbr title="A group of compute nodes.">cluster</abbr>.</p>
+Simultaneously, the default memory per core is 6 times less than what
+would be available on a non-overcommitted cluster.</p>
 <p>Please note that based on the (historical) workload of the interactive
-and debug <abbr title="A group of compute nodes.">cluster</abbr>, the above restrictions and the overcommitment ratio
+and debug cluster, the above restrictions and the overcommitment ratio
 might change without prior notice.</p>
 
               
@@ -743,12 +891,21 @@ might change without prior notice.</p>
     
       <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

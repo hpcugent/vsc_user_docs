@@ -571,6 +571,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -596,12 +624,132 @@
       
       
         <label class="md-nav__link" for="__nav_15">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_16" type="checkbox" id="__nav_16" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16">
           Appendices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Appendices" data-md-level="1">
-        <label class="md-nav__title" for="__nav_15">
+        <label class="md-nav__title" for="__nav_16">
           <span class="md-nav__icon md-icon"></span>
           Appendices
         </label>
@@ -761,8 +909,8 @@ they are submitted to PBS via the command <strong>qsub</strong>. Where an intera
 differs is that it does not require a job script, the required PBS
 directives can be specified on the command line.</p>
 <p>Interactive jobs can be useful to debug certain job scripts or programs,
-but should not be the main use of the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>. Waiting for user input takes a
-very long time in the life of a <abbr title="A central processing unit. A CPU is a consumable resource. A compute node typically contains one or more CPUs">CPU</abbr> and does not make efficient usage of
+but should not be the main use of the UAntwerpen-HPC. Waiting for user input takes a
+very long time in the life of a CPU and does not make efficient usage of
 the computing resources.</p>
 <p>The syntax for <em>qsub</em> for submitting an interactive PBS job is:</p>
 <pre><code><b>$ qsub -I <... pbs directives ...></b>
@@ -778,7 +926,7 @@ the computing resources.</p>
 ln2.leibniz.uantwerpen.vsc
 </code></pre>
 
-<p>This means that you're now working on the <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr> <code>ln2.leibniz.uantwerpen.vsc</code> of the <abbr title="A group of compute nodes.">cluster</abbr>.</p>
+<p>This means that you're now working on the login node <code>ln2.leibniz.uantwerpen.vsc</code> of the cluster.</p>
 <p>The most basic way to start an interactive job is the following:</p>
 <pre><code><b>$ qsub -I</b>
 qsub: waiting for job 433253.leibniz to start
@@ -789,8 +937,8 @@ qsub: job 433253.leibniz ready
 <ol>
 <li>
 <p>The "<em>qsub"</em> command (with the interactive -I flag) waits until a
-    <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> is assigned to your interactive session, connects to the
-    <abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr> and shows you the terminal prompt on that <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>.</p>
+    node is assigned to your interactive session, connects to the
+    compute node and shows you the terminal prompt on that node.</p>
 </li>
 <li>
 <p>You'll see that your directory structure of your home directory has
@@ -799,13 +947,13 @@ qsub: job 433253.leibniz ready
     available on all login nodes and all compute nodes on all clusters.</p>
 </li>
 </ol>
-<p>In order to know on which compute-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> you're working, enter again:</p>
+<p>In order to know on which compute-node you're working, enter again:</p>
 <pre><code><b>$ hostname -f</b>
 r1c02cn3.leibniz.antwerpen.vsc
 </code></pre>
 
-<p>Note that we are now working on the compute-<abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> called "<em>r1c02cn3.leibniz.antwerpen.vsc</em>". This is the
-<abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr>, which was assigned to us by the scheduler after issuing
+<p>Note that we are now working on the compute-node called "<em>r1c02cn3.leibniz.antwerpen.vsc</em>". This is the
+compute node, which was assigned to us by the scheduler after issuing
 the "<em>qsub -I</em>" command.</p>
 <p>This computer name looks strange, but bears some logic in it. It
 provides the system administrators with information where to find the
@@ -819,7 +967,7 @@ computer in the computer room.</p>
 <p>"c3" is enclosure/chassis #3.</p>
 </li>
 <li>
-<p>"cn08" is <abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr> #08.</p>
+<p>"cn08" is compute node #08.</p>
 </li>
 </ol>
 <p>With this naming convention, the system administrator can easily find
@@ -857,31 +1005,31 @@ Duration:  0 seconds.
 <pre><code><b>$ exit</b>
 </code></pre>
 
-<p>Note that you can now use this allocated <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr> for 1 hour. After this
+<p>Note that you can now use this allocated node for 1 hour. After this
 hour you will be automatically disconnected. You can change this "usage
-time" by explicitly specifying a "<abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>", i.e., the time that you
-want to work on this <abbr title="A node attribute is a non-quantitative aspect of a node. Attributes typically describe the node itself or possibly aspects of various node resources such as processors or memory. While it is probably not optimal to aggregate node and resource attributes together in this manner, it is common practice. Common node attributes include processor architecture, operating system, and processor speed. Jobs often specify that resources be allocated from nodes possessing certain node attributes.">node</abbr>. (Think of <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> as the time elapsed when
+time" by explicitly specifying a "walltime", i.e., the time that you
+want to work on this node. (Think of walltime as the time elapsed when
 watching the clock on the wall.)</p>
 <p>You can work for 3 hours by:</p>
 <pre><code><b>$ qsub -I -l walltime=03:00:00</b>
 </code></pre>
 
-<p>If the <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> of the job is exceeded, the (interactive) job will be
-killed and your connection to the <abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr> will be closed. So do
-make sure to provide adequate <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> and that you save your data
+<p>If the walltime of the job is exceeded, the (interactive) job will be
+killed and your connection to the compute node will be closed. So do
+make sure to provide adequate walltime and that you save your data
 before your (wall)time is up (exceeded)! When you do not specify a
-<abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr>, you get a default <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> of 1 hour.</p>
+walltime, you get a default walltime of 1 hour.</p>
 <h2 id="interactive-jobs-with-graphical-support">Interactive jobs, with graphical support<a class="headerlink" href="#interactive-jobs-with-graphical-support" title="Permanent link">#</a></h2>
 <h3 id="software-installation">Software Installation<a class="headerlink" href="#software-installation" title="Permanent link">#</a></h3>
-<p>To display graphical applications from a <abbr title="An operating system, similar to UNIX.">Linux</abbr> computer (such as the VSC
+<p>To display graphical applications from a Linux computer (such as the VSC
 clusters) on your machine, you need to install an X Window server on
 your local computer.</p>
 <p>An X Window server is packaged by default on most
-<abbr title="An operating system, similar to UNIX.">Linux</abbr> distributions. If you have a graphical user interface this
+Linux distributions. If you have a graphical user interface this
 generally means that you are using an X Window server.</p>
 <p>The X Window system (commonly known as <strong>X11</strong>, based on its current major
 version being 11, or shortened to simply <strong>X</strong>) is the system-level software
-infrastructure for the windowing GUI on <abbr title="An operating system, similar to UNIX.">Linux</abbr>, BSD and other UNIX-like
+infrastructure for the windowing GUI on Linux, BSD and other UNIX-like
 operating systems. It was designed to handle both local displays, as
 well as displays sent across a network. More formally, it is a computer
 software system and network protocol that provides a basis for graphical
@@ -889,22 +1037,22 @@ user interfaces (GUIs) and rich input device capability for networked
 computers.</p>
 <h3 id="connect-with-x-forwarding">Connect with X-forwarding<a class="headerlink" href="#connect-with-x-forwarding" title="Permanent link">#</a></h3>
 <p>In order to get the graphical output of your application (which is
-running on a <abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr> on the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr>) transferred to your personal screen,
-you will need to reconnect to the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> with X-forwarding enabled, which is
+running on a compute node on the UAntwerpen-HPC) transferred to your personal screen,
+you will need to reconnect to the UAntwerpen-HPC with X-forwarding enabled, which is
 done with the "-X" option.</p>
 <p><center>
 <img alt="image" src="../img/ch5-interactive-mode.png" />
 </center></p>
-<p>First exit and reconnect to the UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> with X-forwarding enabled:</p>
+<p>First exit and reconnect to the UAntwerpen-HPC with X-forwarding enabled:</p>
 <pre><code><b>$ exit</b>
 <b>$ ssh --X vsc20167@login.hpc.uantwerpen.be</b>
 <b>$ hostname -f</b>
 ln2.leibniz.uantwerpen.vsc
 </code></pre>
 
-<p>We first check whether our GUIs on the <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr> are decently forwarded
+<p>We first check whether our GUIs on the login node are decently forwarded
 to your screen on your local machine. An easy way to test it is by
-running a small X-application on the <abbr title="On HPC clusters, login nodes serve multiple functions. From a login node you can submit and monitor batch jobs, analyse computational results, run editors, plots, debuggers, compilers, do housekeeping chores as adjust shell settings, copy files and in general manage your account. You connect to these servers when want to start working on the HPC Infrastructure.">login node</abbr>. Type:</p>
+running a small X-application on the login node. Type:</p>
 <pre><code><b>$ xclock</b>
 </code></pre>
 
@@ -912,7 +1060,7 @@ running a small X-application on the <abbr title="On HPC clusters, login nodes s
 <p><center>
 <img alt="image" src="../img/img0507.png" />
 </center></p>
-<p>You can close your clock and connect further to a <abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr> with
+<p>You can close your clock and connect further to a compute node with
 again your X-forwarding enabled:</p>
 <pre><code><b>$ qsub -I -X</b>
 qsub: waiting for job 433253.leibniz to start
@@ -948,7 +1096,7 @@ screen, but also asks you to click a button.</p>
 </code></pre></div>
 <h3 id="run-your-interactive-application">Run your interactive application<a class="headerlink" href="#run-your-interactive-application" title="Permanent link">#</a></h3>
 <p>In this last example, we will show you that you can just work on this
-<abbr title="The computational units on which batch or interactive jobs are processed. A compute node is pretty much comparable to a single personal computer. It contains one or more sockets, each holding a single CPU. Some nodes also contain one or more GPGPUs. The compute node is equipped with memory (RAM) that is accessible by all its CPUs.">compute node</abbr>, just as if you were working locally on your desktop. We
+compute node, just as if you were working locally on your desktop. We
 will run the Fibonacci example of the previous chapter again, but now in
 full interactive mode in MATLAB.</p>
 <p>::: prompt
@@ -1053,12 +1201,21 @@ fx >>
     
       <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>

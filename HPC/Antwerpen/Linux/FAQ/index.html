@@ -551,6 +551,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -576,12 +604,132 @@
       
       
         <label class="md-nav__link" for="__nav_15">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software-specific Best Practices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoop/" class="md-nav__link">
+        SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_16" type="checkbox" id="__nav_16" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16">
           Appendices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Appendices" data-md-level="1">
-        <label class="md-nav__title" for="__nav_15">
+        <label class="md-nav__title" for="__nav_16">
           <span class="md-nav__icon md-icon"></span>
           Appendices
         </label>
@@ -714,15 +862,15 @@
 <h2 id="when-will-my-job-start">When will my job start?<a class="headerlink" href="#when-will-my-job-start" title="Permanent link">#</a></h2>
 <p>In practice it's
 impossible to predict when your job(s) will start, since most currently
-running jobs will finish before their requested <abbr title="Walltime is the length of time specified in the job script for which the job will run on a batch system, you can visualise walltime as the time measured by a wall mounted clock (or your digital wristwatch). This is a computational resource.">walltime</abbr> expires, and
+running jobs will finish before their requested walltime expires, and
 new jobs by may be submitted by other users that are assigned a higher
 priority than your job(s). You can use the <code>showstart</code> command. For more
 information, see .</p>
-<h2 id="can-i-share-my-account-with-someone-else">Can I <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr> my account with someone else?<a class="headerlink" href="#can-i-share-my-account-with-someone-else" title="Permanent link">#</a></h2>
-<p><strong>NO.</strong> You are not allowed to <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr> your VSC account with anyone else, it is
+<h2 id="can-i-share-my-account-with-someone-else">Can I share my account with someone else?<a class="headerlink" href="#can-i-share-my-account-with-someone-else" title="Permanent link">#</a></h2>
+<p><strong>NO.</strong> You are not allowed to share your VSC account with anyone else, it is
 strictly personal. </p>
 <p>See <a href="https://pintra.uantwerpen.be/bbcswebdav/xid-23610_1">https://pintra.uantwerpen.be/bbcswebdav/xid-23610_1</a> </p>
-<h2 id="can-i-share-my-data-with-other-uantwerpen-hpc-users">Can I <abbr title="A share is a remote, mountable file system. Users can mount and access a share on several hosts at a time.">share</abbr> my data with other UAntwerpen-<abbr title="High Performance Computing, high performance computing and multiple-task computing on a supercomputer.">HPC</abbr> users?<a class="headerlink" href="#can-i-share-my-data-with-other-uantwerpen-hpc-users" title="Permanent link">#</a></h2>
+<h2 id="can-i-share-my-data-with-other-uantwerpen-hpc-users">Can I share my data with other UAntwerpen-HPC users?<a class="headerlink" href="#can-i-share-my-data-with-other-uantwerpen-hpc-users" title="Permanent link">#</a></h2>
 <p>Yes, you can use the <code>chmod</code> or <code>setfacl</code> commands to change permissions
 of files so other users can access the data. For example, the following
 command will enable a user named "otheruser" to read the file named
@@ -733,14 +881,14 @@ $ <b>ls -l dataset.txt</b>
 </code></pre>
 
 <p>For more information about <code>chmod</code> or <code>setfacl</code>, see <a href="https://hpcugent.github.io/vsc_user_docs/linux-tutorial/manipulating_files_and_directories/#changing-permissions-chmod">the section on
-chmod in chapter 3 of the <abbr title="An operating system, similar to UNIX.">Linux</abbr> intro
+chmod in chapter 3 of the Linux intro
 manual</a>.</p>
 <!-- % \section{I no longer work for \university, can I transfer my data to another researcher working at \university}
 % See https://github.com/hpcugent/vsc_user_docs/issues/230 -->
 
-<h2 id="can-i-use-multiple-different-ssh-key-pairs-to-connect-to-my-vsc-account">Can I use multiple different <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> key pairs to connect to my VSC account?<a class="headerlink" href="#can-i-use-multiple-different-ssh-key-pairs-to-connect-to-my-vsc-account" title="Permanent link">#</a></h2>
+<h2 id="can-i-use-multiple-different-ssh-key-pairs-to-connect-to-my-vsc-account">Can I use multiple different SSH key pairs to connect to my VSC account?<a class="headerlink" href="#can-i-use-multiple-different-ssh-key-pairs-to-connect-to-my-vsc-account" title="Permanent link">#</a></h2>
 <p>Yes, and this is recommended when working from different computers.
-Please see <a href="../account/#adding-multiple-ssh-public-keys-optional">Adding multiple <abbr title="Secure Shell (SSH), sometimes known as Secure Socket Shell, is a Unix-based command interface and protocol for securely getting access to a remote computer. It is widely used by network administrators to control Web and other kinds of servers remotely. SSH is actually a suite of three utilities (slogin, ssh, and scp) that are secure versions of the earlier UNIX utilities, rlogin, rsh, and rcp. SSH commands are encrypted and secure in several ways. Both ends of the client/server connection are authenticated using a digital certificate, and passwords are protected by encryption. Popular implementations include OpenSSH on Linux/Mac and Putty on Windows.">SSH</abbr> public keys</a> on how to do this.</p>
+Please see <a href="../account/#adding-multiple-ssh-public-keys-optional">Adding multiple SSH public keys</a> on how to do this.</p>
 <h2 id="i-want-to-use-software-that-is-not-available-on-the-clusters-yet">I want to use software that is not available on the clusters yet<a class="headerlink" href="#i-want-to-use-software-that-is-not-available-on-the-clusters-yet" title="Permanent link">#</a></h2>
 <p>Please send an e-mail to hpc@uantwerpen.be that includes:</p>
 <ul>
@@ -831,12 +979,21 @@ Please see <a href="../account/#adding-multiple-ssh-public-keys-optional">Adding
     
       <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
     
   </body>
 </html>
+<script>
+    if (!! localStorage.getItem('select_OS')) {
+        const classes = ["headerlink", "md-nav__link"]
+        for (i in classes) {
+            var anchors = Array.from(document.getElementsByClassName(classes[i]))
+            anchors.forEach(
+                function (anch) {
+                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
+                    if (!!anch.href) {
+                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
+                    }
+                })
+        }
+    }
+</script>
