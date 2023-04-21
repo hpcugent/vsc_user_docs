@@ -57,18 +57,15 @@ theme:
   name: material
   language: en
   features:
-    #- navigation.tabs
     - navigation.top
     - navigation.expand
-    # - navigation.indexes
     - navigation.tracking
-    # - toc.integrate
     - toc.follow
-    # - content.tabs.link
     - navigation.sections
     - navigation.instant
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
 
 extra:
