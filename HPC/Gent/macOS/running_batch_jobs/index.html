@@ -1873,23 +1873,39 @@ are assigned a higher priority than your job(s).</p>
 <p>The HPC-UGent infrastructure clusters use a fair-share scheduling policy (see <a href="../sites/hpc_policies">HPC Policies</a>). There is no
 guarantee on when a job will start, since it depends on a number of
 factors. One of these factors is the priority of the job, which is
-determined by</p>
+determined by:</p>
 <ul>
 <li>
-<p>historical use: the aim is to balance usage over users, so
+<p>Historical use: the aim is to balance usage over users, so
     infrequent (in terms of total compute time used) users get a higher
     priority</p>
 </li>
 <li>
-<p>requested resources (amount of cores, walltime, memory, ...)</p>
+<p>Requested resources (amount of cores, walltime, memory, ...).
+    The more resources you request, the more likely it is the job(s) will
+    have to wait for a while until those resources become available.</p>
 </li>
 <li>
-<p>time waiting in queue: queued jobs get a higher priority over time</p>
+<p>Time waiting in queue: queued jobs get a higher priority over time.</p>
 </li>
 <li>
-<p>user limits: this avoids having a single user use the entire
+<p>User limits: this avoids having a single user use the entire
     cluster. This means that each user can only use a part of the
     cluster.</p>
+</li>
+<li>
+<p>Whether or not you are a member of a <em>Virtual Organisation</em> (VO).</p>
+<p>Each VO gets assigned a <em>fair share target</em>, which has a big impact
+on the job priority. This is done to let the job scheduler balance usage
+across different research groups.</p>
+<p>If you are not a member of a specific VO, you are sharing a fair share target
+with all other users who are not in a specific VO (which implies being in the (hidden)
+<em>default</em> VO).
+This can have a (strong) negative impact on the priority of your jobs
+compared to the jobs of users who are in a specific VO.</p>
+<p>See <a href="../running_jobs_with_input_output_data/#virtual-organisations">Virtual Organisations</a>
+for more information on how to join a VO, or request the creation of a new VO if there
+is none yet for your research group.</p>
 </li>
 </ul>
 <p>Some other factors are how busy the cluster is, how many workernodes are
