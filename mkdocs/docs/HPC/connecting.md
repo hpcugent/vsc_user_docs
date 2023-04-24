@@ -41,9 +41,8 @@ options to get access to VSC login nodes:
     {%- if site == gent %} See <https://helpdesk.ugent.be/vpn/en/> for more information. {% 
     endif %}
 
--   Register your IP address by accessing
-    <https://firewall.hpc.kuleuven.be> (same URL regardless of the
-    university you're affiliated with) and log in with your {{ university }} account.
+-   Whitelist your IP address automatically by accessing
+    <https://firewall.vscentrum.be> and log in with your {{ university }} account.
 
     -   While this web connection is active new SSH sessions can be
         started.
