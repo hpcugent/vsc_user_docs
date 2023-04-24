@@ -1217,10 +1217,13 @@ LC_ALL=
 <p>A <strong>locale</strong> is a set of parameters that defines the user's language, country and
 any special variant preferences that the user wants to see in their user
 interface. Usually a locale identifier consists of at least a language
-identifier and a region identifier.
-<strong>Note:</strong> If you try to set a non-supported locale, then it will be automatically
+identifier and a region identifier.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you try to set a non-supported locale, then it will be automatically
 set to the default. Currently the default is <code>en_US.UFT-8</code> or <code>en_US</code>,
 depending on whether your originally (non-supported) locale was <code>UTF-8</code> or not.</p>
+</div>
 <p>Open the <code>.bashrc</code> on your local machine with your favourite editor and
 add the following lines:</p>
 <pre><code><b>$ nano ~/.bashrc</b>
@@ -1299,7 +1302,7 @@ drwxrwxr-x 10
 -rw-r--r-- 1 
 <b>$ cat localfile.txt</b>
 Hello
-</cod></pre>
+</code></pre>
 
 <p>The <strong>scp</strong> command can also be used to copy files from the cluster to your
 local machine. Let us copy the remote file "intro-HPC-macOS-Gent.pdf" from your "docs" 
