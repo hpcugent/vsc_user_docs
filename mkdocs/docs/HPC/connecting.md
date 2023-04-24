@@ -41,7 +41,7 @@ options to get access to VSC login nodes:
     {%- if site == gent %} See <https://helpdesk.ugent.be/vpn/en/> for more information. {% 
     endif %}
 
--   Get your IP address automatically whitelisted by accessing
+-   Whitelist your IP address automatically by accessing
     <https://firewall.vscentrum.be> and log in with your {{ university }} account.
 
     -   While this web connection is active new SSH sessions can be
