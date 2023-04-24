@@ -1109,7 +1109,7 @@ follows:</p>
 ./weather<span class="w"> </span>-t<span class="w"> </span><span class="nv">$temperature</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$pressure</span><span class="w"> </span>-v<span class="w"> </span><span class="nv">$volume</span>
 
 <span class="c1"># # This script is submitted to the cluster with the following 2 commands:</span>
-<span class="c1"># module load worker/1.6.8-intel-2018a</span>
+<span class="c1"># module load worker/1.6.12-foss-2021b</span>
 <span class="c1"># wsub -data data.csv -batch weather.pbs</span>
 </code></pre></div>
 <p>Note that:</p>
@@ -1134,7 +1134,7 @@ use 8 CPUs, so the 100 calculations will be done in 1500/8 = 187.5
 minutes, i.e., 4 hours to be on the safe side.</p>
 <p>The job can now be submitted as follows (to check which <code>worker</code> module
 to use, see subsection <a href="../running_batch_jobs/#using-explicit-version-numbers">Using explicit version numbers</a>):</p>
-<pre><code>$ <b>module load worker/1.6.8-intel-2018a</b>
+<pre><code>$ <b>module load worker/1.6.12-foss-2021b</b>
 $ <b>wsub -batch weather.pbs -data data.csv</b>
 total number of work items: 41
 123456</code></pre>
@@ -1260,7 +1260,7 @@ with minimal modifications to the job script:</p>
 </li>
 </ol>
 <p>The job is now submitted as follows:</p>
-<pre><code>$ <b>module load worker/1.6.8-intel-2018a</b>
+<pre><code>$ <b>module load worker/1.6.12-foss-2021b</b>
 $ <b>wsub -t 1-100 -batch test_set.pbs</b>
 total number of work items: 100
 123456</code></pre>
