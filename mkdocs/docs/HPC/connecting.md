@@ -438,9 +438,10 @@ interface. Usually a locale identifier consists of at least a language
 identifier and a region identifier.
 
 {%- if site == gent %}
-**Note:** If you try to set a non-supported locale, then it will be automatically
-set to the default. Currently the default is `en_US.UFT-8` or `en_US`,
-depending on whether your originally (non-supported) locale was `UTF-8` or not.
+!!! Note
+    If you try to set a non-supported locale, then it will be automatically
+    set to the default. Currently the default is `en_US.UFT-8` or `en_US`,
+    depending on whether your originally (non-supported) locale was `UTF-8` or not.
 {% endif %}
 
 {%- if OS != windows %}
@@ -622,7 +623,7 @@ drwxrwxr-x 10
 -rw-r--r-- 1 
 <b>$ cat localfile.txt</b>
 Hello
-</cod></pre>
+</code></pre>
 
 The **scp** command can also be used to copy files from the cluster to your
 local machine. Let us copy the remote file "intro-HPC-{{ OS }}-{{ site }}.pdf" from your "docs" 
