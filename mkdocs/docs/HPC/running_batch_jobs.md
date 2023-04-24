@@ -704,19 +704,37 @@ are assigned a higher priority than your job(s).
 The {{ hpcinfra }} clusters use a fair-share scheduling policy (see [HPC Policies](../sites/hpc_policies)). There is no
 guarantee on when a job will start, since it depends on a number of
 factors. One of these factors is the priority of the job, which is
-determined by
+determined by:
 
--   historical use: the aim is to balance usage over users, so
+-   Historical use: the aim is to balance usage over users, so
     infrequent (in terms of total compute time used) users get a higher
     priority
 
--   requested resources (amount of cores, walltime, memory, ...)
+-   Requested resources (amount of cores, walltime, memory, ...).
+    The more resources you request, the more likely it is the job(s) will
+    have to wait for a while until those resources become available.
 
--   time waiting in queue: queued jobs get a higher priority over time
+-   Time waiting in queue: queued jobs get a higher priority over time.
 
--   user limits: this avoids having a single user use the entire
+-   User limits: this avoids having a single user use the entire
     cluster. This means that each user can only use a part of the
     cluster.
+
+-   Whether or not you are a member of a *Virtual Organisation* (VO).
+
+    Each VO gets assigned a *fair share target*, which has a big impact
+    on the job priority. This is done to let the job scheduler balance usage
+    across different research groups.
+
+    If you are not a member of a specific VO, you are sharing a fair share target
+    with all other users who are not in a specific VO (which implies being in the (hidden)
+    *default* VO).
+    This can have a (strong) negative impact on the priority of your jobs
+    compared to the jobs of users who are in a specific VO.
+
+    See [Virtual Organisations](../running_jobs_with_input_output_data/#virtual-organisations)
+    for more information on how to join a VO, or request the creation of a new VO if there
+    is none yet for your research group.
 
 Some other factors are how busy the cluster is, how many workernodes are
 active, the resources (e.g., number of cores, memory) provided by each
