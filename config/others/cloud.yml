@@ -60,6 +60,7 @@ theme:
     - navigation.top
     - navigation.expand
     - navigation.tracking
+    - navigation.footer
     - toc.follow
     - navigation.sections
     - navigation.instant
