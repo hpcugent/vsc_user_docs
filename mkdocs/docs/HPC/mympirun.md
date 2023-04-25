@@ -77,29 +77,3 @@ this with the `--dry-run` flag:
 <pre><code>$ <b>mympirun --dry-run ./mpi_hello</b>
 mpirun ... -genv I_MPI_FABRICS shm:dapl ... -np 16 ... ./mpi_hello
 </code></pre>
-
-## FAQ
-
-### `mympirun` seems to ignore its arguments
-
-For example, we have a simple script (`./hello.sh`):
-
-```bash
-#!/bin/bash 
-echo "hello world"
-```
-
-And we run it like `mympirun ./hello.sh --output output.txt`.
-
-To our surprise, this doesn't output to the file `output.txt`, but to
-standard out! This is because `mympirun` expects the program name and
-the arguments of the program to be its last arguments. Here, the
-`--output output.txt` arguments are passed to `./hello.sh` instead of to
-`mympirun`. The correct way to run it is:
-
-<pre><code>$ <b>mympirun --output output.txt ./hello.sh</b>
-</code></pre>
-
-### I have other problems/questions
-
-Please don't hesitate to contact {{hpcinfo}}.

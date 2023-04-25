@@ -1,4 +1,4 @@
-# Frequently Asked Questions
+# Frequently Asked Questions (FAQ)
 
 {% if site == gent %}
 
@@ -27,7 +27,7 @@ around half of what it was before. You can also try this with full nodes: 1 node
 A rule of thumb is that you're around the limit when you double the resources but the
 execution time is still ~60-70% of what it was before. That's a signal to stop increasing the core count.
 
-See also: [Running batch jobs](./running_batch_jobs).
+See also: [Running batch jobs](../running_batch_jobs).
 
 ### Which packages are available?
 
@@ -42,8 +42,10 @@ For R, the normal R module has many libraries included. The bundle `R-bundle-Bio
 contains more libraries.
 Use the command `module spider [module]` to find the specifics on these bundles.
 
+{% if site == gent %}
 If the package or library you want is not available, send us a
 [software installation request](https://www.ugent.be/hpc/en/support/software-installation-request).
+{% endif %}
 
 ### How do I choose the job modules?
 
@@ -51,10 +53,13 @@ Modules each come with a suffix that describes the _toolchain_ used to install t
 
 Examples:
 
-* AlphaFold/2.2.2-**foss-2021a**
-* tqdm/4.61.2-**GCCcore-10.3.0**
-* Python/3.9.5-**GCCcore-10.3.0**
-* matplotlib/3.4.2-**foss-2021a**
+*   AlphaFold/2.2.2-**foss-2021a**
+
+*   tqdm/4.61.2-**GCCcore-10.3.0**
+
+*   Python/3.9.5-**GCCcore-10.3.0**
+
+*   matplotlib/3.4.2-**foss-2021a**
 
 Modules from the same toolchain always work together, and modules from a
 \*different version of the same toolchain\* never work together.
@@ -63,8 +68,11 @@ The above set of modules works together: an overview of compatible toolchains ca
 <https://docs.easybuild.io/en/latest/Common-toolchains.html#overview-of-common-toolchains>.
 
 You can use `module avail [search_text]` to see which versions on which toolchains are available to use.
+
+{% if site == gent %}
 If you need something that's not available yet, you can request it through a
 [software installation request](https://www.ugent.be/hpc/en/support/software-installation-request).
+{% endif %}
 
 It is possible to use the modules without specifying a version or toolchain. However,
 this will probably cause incompatible modules to be loaded. Don't do it if you use multiple modules.
@@ -75,12 +83,17 @@ Even if it works now, as more modules get installed on the HPC, your job can sud
 This is a template for a job script, with commonly used parameters.
 The basic parameters should always be used. Some notes on the situational parameters:
 
-* `-l mem`: If no memory parameter is given, the job gets access to an amount of
-memory proportional to the amount of cores requested.
-See also: Job failed: SEGV Segmentation fault
-* `-m/-M`: the `-m` option will send emails to your email address registerd with VSC. Only if you want emails at some other address, you should use the `-M` option.
-* Replace the "`-placeholder text-`" with real entries. This notation is used to ensure `qsub` rejects invalid options.
-* To use a situational parameter, remove 1 '`#`' at the beginning of the line.
+*   `-l mem`: If no memory parameter is given, the job gets access to an amount of
+    memory proportional to the amount of cores requested.
+    See also: [Job failed: SEGV Segmentation fault](#job-failed-segv-segmentation-fault)
+
+*   `-m/-M`: the `-m` option will send emails to your email address registerd with VSC.
+    Only if you want emails at some other address, you should use the `-M` option.
+
+*   Replace the "`-placeholder text-`" with real entries.
+    This notation is used to ensure `qsub` rejects invalid options.
+
+*   To use a situational parameter, remove one '`#`' at the beginning of the line.
 
 ```shell
 #!/bin/bash
@@ -109,7 +122,7 @@ cd $PBS_O_WORKDIR         # Change working directory to the location where the j
 [commands]
 ```
 
-Some [Job script examples](./jobscripts_examples).
+Some [Job script examples](../jobscript_examples).
 
 ## Troubleshooting jobs
 
@@ -129,20 +142,20 @@ _different version of the same toolchain_ never work together.
 An overview of compatible toolchains can be found here:
 <https://docs.easybuild.io/en/latest/Common-toolchains.html#overview-of-common-toolchains>.
 
-See also: How do I choose the job modules?
+See also: [How do I choose the job modules?](#how-do-i-choose-the-job-modules)
 
 ### My job takes longer than 72 hours
 
 The 72 hour walltime limit will not be extended. However, you can work around this barrier:
 
 * Check that all available resources are being used. See also:
-    * How many cores/nodes should I request?
-    * My job is slow
-    * My job isn't using any GPUs
-* Use a faster [cluster](https://www.ugent.be/hpc/en/infrastructure)
-* Divide the job into more parallel processes
-* Divide the job into shorter processes, which you can submit as separate jobs
-* Use the built-in checkpointing of your software
+    * [How many cores/nodes should I request?](#how-many-coresnodes-should-i-request).
+    * [My job is slow](#my-job-runs-slower-than-i-expected).
+    * [My job isn't using any GPUs](#my-job-isnt-using-any-gpus).
+* Use a faster [cluster](https://www.ugent.be/hpc/en/infrastructure).
+* Divide the job into more parallel processes.
+* Divide the job into shorter processes, which you can submit as separate jobs.
+* Use the built-in checkpointing of your software.
 
 ### Job failed: SEGV Segmentation fault
 
@@ -156,7 +169,7 @@ of the total memory on the node.
 
 Try requesting a bit more memory than your proportional share, and see if that solves the issue.
 
-See also: chapter 13.2 of the [user manual](https://www.ugent.be/hpc/en/support/documentation.htm).
+See also: [Specifying memory requirements](../fine_tuning_job_specifications/#specifying-memory-requirements).
 
 ### My compilation/command fails on login node
 
@@ -171,7 +184,7 @@ Then, you are acting as a node on that cluster instead of a login node. Notably,
 cluster will grant such a session immediately, while other clusters might make you wait a bit.
 Example command: `ml sw cluster/slaking && qsub -I -l nodes=1:ppn=8`
 
-See also: chapter 5 of the [user manual](https://www.ugent.be/hpc/en/support/documentation.htm).
+See also: [Running interactive jobs](../running_interactive_jobs).
 
 ### My job isn't using any GPUs
 
@@ -185,7 +198,9 @@ when running `module avail alphafold` on the joltik cluster, you will find versi
 the _foss_ toolchain and the _fossCUDA_ toolchain. Of these, only the _CUDA_ versions will
 use GPU power. When in doubt, CUDA means GPU support.
 
-See also: chapter 21 of the [user manual](https://www.ugent.be/hpc/en/support/documentation.htm).
+{% if site == gent %}
+See also: [HPC-UGent GPU clusters](../gpu_gent).
+{% endif %}
 
 ### My job runs slower than I expected
 
@@ -195,15 +210,15 @@ Is your job using all the available cores you've requested? You can test this by
 decreasing the core amount: If the execution time stays the same, the job was not using all cores.
 Some workloads just don't scale well with more cores. If you expect the job to be very parallelizable
 and you encounter this problem, maybe you missed some settings that enable multicore execution.
-See also: How many cores/nodes should i request?
+See also: [How many cores/nodes should i request?](#how-many-coresnodes-should-i-request)
 
 Does your job have access to the GPUs you requested?
-See also: My job isn't using any GPUs.
+See also: [My job isn't using any GPUs](#my-job-isnt-using-any-gpus)
 
 Not all file locations perform the same. In particular, the \\$VSC\_HOME and \\$VSC\_DATA
 directories are, relatively, very slow to access. Your jobs should rather use the
 \\$VSC_SCRATCH directory, or other fast locations (depending on your needs), described
-in chapter 6.2 of the [user manual](https://www.ugent.be/hpc/en/support/documentation.htm).
+in [Where to store your data on the HPC](../running_jobs_with_input_output_data/#where-to-store-your-data-on-the-hpc).
 As an example how do this: The job can copy the input to the scratch directory, then execute
 the computations, and lastly copy the output back to the data directory.
 Using the home and data directories is especially a problem when UGent isn't your home institution:
@@ -219,7 +234,28 @@ To submit the job, use the `qsub` command rather than `sbatch`. Although both wi
 `qsub` will correctly interpret the `#PBS` parameters inside the job script. `sbatch` might not
 set the job environment up correctly for mympirun/OpenMPI.
 
-See also: chapters 7 and 26 of the [user manual](https://www.ugent.be/hpc/en/support/documentation.htm).
+See also: [Multi core jobs/Parallel Computing](../multi_core_jobs)
+and [Mympirun](../mympirun).
+
+### `mympirun` seems to ignore its arguments
+
+For example, we have a simple script (`./hello.sh`):
+
+```bash
+#!/bin/bash 
+echo "hello world"
+```
+
+And we run it like `mympirun ./hello.sh --output output.txt`.
+
+To our surprise, this doesn't output to the file `output.txt`, but to
+standard out! This is because `mympirun` expects the program name and
+the arguments of the program to be its last arguments. Here, the
+`--output output.txt` arguments are passed to `./hello.sh` instead of to
+`mympirun`. The correct way to run it is:
+
+<pre><code>$ <b>mympirun --output output.txt ./hello.sh</b>
+</code></pre>
 
 ### When will my job start?
 
@@ -304,7 +340,7 @@ Please send an e-mail to {{hpcinfo}} that includes:
 -   Detailed installation instructions
 
 -   The purpose for which you want to install the software
-  
+
 {% endif %}
 
 ### Is my connection compromised? Remote host identification has changed
@@ -339,16 +375,19 @@ You will also find how to hide the warning.
 
 A Virtual Organisation consists of a number of members and moderators. A moderator can:
 
-* Manage the VO members (but can't access/remove their data on the system)
-* See how much storage each member has used, and set limits per member
-* Request additional storage for the VO
+*   Manage the VO members (but can't access/remove their data on the system).
+
+*   See how much storage each member has used, and set limits per member.
+
+*   Request additional storage for the VO.
 
 One person can only be part of one VO, be it as a member or moderator.
 It's possible to leave a VO and join another one. However, it's not
 recommended to keep switching between VO's (to supervise groups, for example).
 
-See also: Chapter 6.7 of the [user manual](https://www.ugent.be/hpc/en/support/documentation.htm).
+See also: [Virtual Organisations](../running_jobs_with_input_output_data/#virtual-organisations).
 
+{% if site == gent %}
 ### My UGent shared drives don't show up
 
 After mounting the UGent shared drives with `kinit your_email@ugent.be`,
@@ -356,13 +395,17 @@ you might not see an entry with your username when listing `ls /UGent`.
 This is normal: try `ls /UGent/your_username` or `cd /UGent/your_username`, and you should be able to access the drives.
 Be sure to use your UGent username and not your VSC username here.
 
-See also: Chapter 6.2.5 of the [user manual](https://www.ugent.be/hpc/en/support/documentation.htm).
+See also: [Your UGent home drive and shares](../running_jobs_with_input_output_data/#your-ugent-home-drive-and-shares).
+{% endif %}
 
 ### I have another question/problem
 
 Who can I contact?
 
-* General questions regarding HPC-UGent and VSC: <hpc@ugent.be>
-* HPC-UGent Tier-2: <hpc@ugent.be>
-* VSC Tier-1: <compute@vscentrum.be>
-* VSC Tier-1 cloud: <cloud@vscentrum.be>
+*   General questions regarding HPC-UGent and VSC: <hpc@ugent.be>
+
+*   HPC-UGent Tier-2: <hpc@ugent.be>
+
+*   VSC Tier-1: <compute@vscentrum.be>
+
+*   VSC Tier-1 cloud: <cloud@vscentrum.be>
