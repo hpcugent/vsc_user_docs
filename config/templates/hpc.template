@@ -110,3 +110,11 @@ theme:
 
 extra:
   OS: {{ os }}
+{% if site == 'Gent' %}
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/HPCUGent
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@HPCUGent
+{% endif %}
+
