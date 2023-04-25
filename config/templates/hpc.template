@@ -14,7 +14,6 @@ nav:
   - XDMoD portal: xdmod.md
   - Troubleshooting: troubleshooting.md
   - HPC Policies: sites/hpc_policies.md
-  - Frequently Asked Questions: FAQ.md
   - Advanced topics:
       - Fine-tuning Job Specifications: fine_tuning_job_specifications.md
       - Multi-job submission: multi_job_submission.md
@@ -37,6 +36,8 @@ nav:
       - mympirun: mympirun.md
       - OpenFOAM: openFOAM.md
       - SCOOP: scoop.md
+  - FAQ:
+      - Frequently Asked Questions: FAQ.md
   - Appendices:
       - Appendix A - HPC Quick Reference Guide: quick_reference_guide.md
       - Appendix B - TORQUE options: torque_options.md
