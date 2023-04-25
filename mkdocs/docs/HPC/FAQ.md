@@ -2,10 +2,10 @@
 
 {% if site == gent %}
 
-New users should consult the [Introduction to HPC](https://www.ugent.be/hpc/en/training/2022/introhpcugent)
-and the [HPC user manual](https://www.ugent.be/hpc/en/support/documentation.htm) to get started.
+New users should consult the [Introduction to HPC](https://www.ugent.be/hpc/en/training/2023/introhpcugent)
+and the [HPC user manual](https://docs.hpc.ugent.be) to get started.
 
-The [HPC user manual](https://www.ugent.be/hpc/en/support/documentation.htm) is a great resource
+The [HPC user manual](https://docs.hpc.ugent.be) is a great resource
 for troubleshooting and looking up specifics.
 
 If you want to use software that's not yet installed on the HPC, send us a
@@ -78,63 +78,19 @@ It is possible to use the modules without specifying a version or toolchain. How
 this will probably cause incompatible modules to be loaded. Don't do it if you use multiple modules.
 Even if it works now, as more modules get installed on the HPC, your job can suddenly break.
 
-### Job script template
-
-This is a template for a job script, with commonly used parameters.
-The basic parameters should always be used. Some notes on the situational parameters:
-
-*   `-l mem`: If no memory parameter is given, the job gets access to an amount of
-    memory proportional to the amount of cores requested.
-    See also: [Job failed: SEGV Segmentation fault](#job-failed-segv-segmentation-fault)
-
-*   `-m/-M`: the `-m` option will send emails to your email address registerd with VSC.
-    Only if you want emails at some other address, you should use the `-M` option.
-
-*   Replace the "`-placeholder text-`" with real entries.
-    This notation is used to ensure `qsub` rejects invalid options.
-
-*   To use a situational parameter, remove one '`#`' at the beginning of the line.
-
-```shell
-#!/bin/bash
-
-# Basic parameters
-#PBS -N jobname           ## Job name
-#PBS -l nodes=1:ppn=2     ## 1 node, 2 processors per node (ppn=all to get a full node)
-#PBS -l walltime=01:00:00 ## Max time your job will run (no more than 72:00:00)
-
-# Situational parameters: remove one '#' at the front to use
-##PBS -l gpus=1            ## GPU amount (only on accelgor or joltik)
-##PBS -l mem=32gb          ## If not used, memory will be available proportional to the max amount
-##PBS -m abe               ## Email notifications (abe=aborted, begin and end)
-##PBS -M -email_address-   ## ONLY if you want to use a different email than your VSC address
-##PBS -A -project-         ## Project name when credits are required (only Tier 1)
-
-##PBS -o -filename-        ## Output log
-##PBS -e -filename-        ## Error log
-
-
-module load [module]
-module load [module]
-
-cd $PBS_O_WORKDIR         # Change working directory to the location where the job was submmitted
-
-[commands]
-```
-
-Some [Job script examples](../jobscript_examples).
-
 ## Troubleshooting jobs
 
 ### My modules don't work together
 
 When incompatible modules are loaded, you might encounter an error like this:
 
-Lmod has detected the following error: A different version of the 'GCC' module
-is already loaded (see output of 'ml').
-You should load another 'foss' module for that is compatible with the currently
-loaded version of 'GCC'.
-Use 'ml spider foss' to get an overview of the available versions.
+```shell
+{{ lmod_error }}
+```
+
+You should load another `foss` module for that is compatible with the currently
+loaded version of `GCC`.
+Use `ml spider foss` to get an overview of the available versions.
 
 Modules from the same toolchain always work together, and modules from a
 _different version of the same toolchain_ never work together.
@@ -159,12 +115,12 @@ The 72 hour walltime limit will not be extended. However, you can work around th
 
 ### Job failed: SEGV Segmentation fault
 
-Any error mentioning SEGV or Segmentation fault/violation has something to do with a memory error.
+Any error mentioning `SEGV` or ` Segmentation fault/violation` has something to do with a memory error.
 If you weren't messing around with memory-unsafe applications or programming, your job probably hit its memory limit.
 
 When there's no memory amount specified in a job script, your job will get access to a proportional
 share of the total memory on the node: If you request a full node, all memory will be available.
-If you request 8 cores on a cluster where nodes have 2x18 cores, you will get 8/36 = 2/9
+If you request `8` cores on a cluster where nodes have `2x18` cores, you will get `8/36 = 2/9`
 of the total memory on the node.
 
 Try requesting a bit more memory than your proportional share, and see if that solves the issue.
@@ -215,9 +171,9 @@ See also: [How many cores/nodes should i request?](#how-many-coresnodes-should-i
 Does your job have access to the GPUs you requested?
 See also: [My job isn't using any GPUs](#my-job-isnt-using-any-gpus)
 
-Not all file locations perform the same. In particular, the \\$VSC\_HOME and \\$VSC\_DATA
+Not all file locations perform the same. In particular, the `$VSC_HOME` and `$VSC_DATA`
 directories are, relatively, very slow to access. Your jobs should rather use the
-\\$VSC_SCRATCH directory, or other fast locations (depending on your needs), described
+`$VSC_SCRATCH` directory, or other fast locations (depending on your needs), described
 in [Where to store your data on the HPC](../running_jobs_with_input_output_data/#where-to-store-your-data-on-the-hpc).
 As an example how do this: The job can copy the input to the scratch directory, then execute
 the computations, and lastly copy the output back to the data directory.
@@ -312,7 +268,7 @@ $ <b>ls -l dataset.txt</b>
 </code></pre>
 
 For more information about `chmod` or `setfacl`, see
-[Linux tutorial](https://hpcugent.github.io/vsc_user_docs/linux-tutorial/manipulating_files_and_directories/#changing-permissions-chmod).
+[Linux tutorial](../linux-tutorial/manipulating_files_and_directories/#changing-permissions-chmod).
 <!-- % \section{I no longer work for \university, can I transfer my data to another researcher working at \university}
 % See https://github.com/hpcugent/vsc_user_docs/issues/230 -->
 
@@ -406,6 +362,6 @@ Who can I contact?
 
 *   HPC-UGent Tier-2: <hpc@ugent.be>
 
-*   VSC Tier-1: <compute@vscentrum.be>
+*   VSC Tier-1 compute: <compute@vscentrum.be>
 
 *   VSC Tier-1 cloud: <cloud@vscentrum.be>

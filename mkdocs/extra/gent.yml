@@ -52,6 +52,10 @@ xtwogoshaone: |
   - ssh-ed25519 255 e3:cc:07:64:78:80:28:ec:b8:a8:8f:49:44:d1:1e:dc:cc:0b:c5:6b
   - ssh-ecdsa 256 67:6c:af:23:cc:a1:72:09:f5:45:f1:60:08:e8:98:ca:31:87:58:6c
 
+lmod_error: |
+  Lmod has detected the following error: A different version of the 'GCC' module
+  is already loaded (see output of 'ml').
+
 tutorialdir: /apps/gent/tutorials
 examplesdir: /apps/gent/tutorials/Intro-HPC/examples
 # Demo user, jobs, nodes, etc

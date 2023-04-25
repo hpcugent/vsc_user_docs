@@ -1,5 +1,49 @@
 # Job script examples
 
+## Simple job script template
+
+This is a template for a job script, with commonly used parameters.
+The basic parameters should always be used. Some notes on the situational parameters:
+
+*   `-l mem`: If no memory parameter is given, the job gets access to an amount of
+    memory proportional to the amount of cores requested.
+    See also: [Job failed: SEGV Segmentation fault](../FAQ/#job-failed-segv-segmentation-fault)
+
+*   `-m/-M`: the `-m` option will send emails to your email address registerd with VSC.
+    Only if you want emails at some other address, you should use the `-M` option.
+
+*   Replace the "`-placeholder text-`" with real entries.
+    This notation is used to ensure `qsub` rejects invalid options.
+
+*   To use a situational parameter, remove one '`#`' at the beginning of the line.
+
+```shell
+#!/bin/bash
+
+# Basic parameters
+#PBS -N jobname           ## Job name
+#PBS -l nodes=1:ppn=2     ## 1 node, 2 processors per node (ppn=all to get a full node)
+#PBS -l walltime=01:00:00 ## Max time your job will run (no more than 72:00:00)
+
+# Situational parameters: remove one '#' at the front to use
+##PBS -l gpus=1            ## GPU amount (only on accelgor or joltik)
+##PBS -l mem=32gb          ## If not used, memory will be available proportional to the max amount
+##PBS -m abe               ## Email notifications (abe=aborted, begin and end)
+##PBS -M -email_address-   ## ONLY if you want to use a different email than your VSC address
+##PBS -A -project-         ## Project name when credits are required (only Tier 1)
+
+##PBS -o -filename-        ## Output log
+##PBS -e -filename-        ## Error log
+
+
+module load [module]
+module load [module]
+
+cd $PBS_O_WORKDIR         # Change working directory to the location where the job was submmitted
+
+[commands]
+```
+
 ## Single-core job
 
 Here's an example of a single-core job script:
