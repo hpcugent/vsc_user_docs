@@ -57,6 +57,7 @@ theme:
     - navigation.expand
     # - navigation.indexes
     - navigation.tracking
+    - navigation.footer
     # - toc.integrate
     - toc.follow
     # - content.tabs.link
@@ -64,6 +65,7 @@ theme:
     - navigation.instant
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
 
 extra:

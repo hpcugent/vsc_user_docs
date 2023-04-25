@@ -8,6 +8,7 @@ hpc: HPC
 hpcinfra: HPC-UGent infrastructure
 hpcteam: HPC-UGent team
 hpc_support_url: https://www.ugent.be/hpc/en/support
+hpc_support_industry: https://www.ugent.be/hpc/en/industry/industry
 hpcname: hpcugent
 loginnode: login.hpc.ugent.be
 loginhost: gligar07.gastly.os
