@@ -3,10 +3,8 @@
 {% if site == gent %}
 
 New users should consult the [Introduction to HPC](https://www.ugent.be/hpc/en/training/2023/introhpcugent)
-and the [HPC user manual](https://docs.hpc.ugent.be) to get started.
-
-The [HPC user manual](https://docs.hpc.ugent.be) is a great resource
-for troubleshooting and looking up specifics.
+and the [HPC user manual](../index) to get started. This web page
+is a great resource for troubleshooting and looking up specifics.
 
 If you want to use software that's not yet installed on the HPC, send us a
 [software installation request](https://www.ugent.be/hpc/en/support/software-installation-request).
