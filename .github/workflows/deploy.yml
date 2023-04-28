@@ -33,6 +33,10 @@ jobs:
         run: |
           python3 build.py
           find build -type f
+
+          # Gent site indexing registration (for docs.hpc.ugent.be)
+          cp registration/google25178bcae7055950.html HPC/Gent
+
           cp -a pdf/ build/
 
       # equivalent with 'mkdocs gh-deploy'
@@ -47,9 +51,6 @@ jobs:
           # note: index.html is top-level landing page (requires 'assets')
           rm -rf HPC cloud linux-tutorial pdf index.html assets
           mv build/{HPC,cloud,linux-tutorial,pdf,index.html,assets} .
-
-          # Gent site indexing registration (for docs.hpc.ugent.be)
-          cp registration/google25178bcae7055950.html HPC/Gent
 
           # update gh-pages branch
           git add HPC cloud linux-tutorial pdf index.html assets
