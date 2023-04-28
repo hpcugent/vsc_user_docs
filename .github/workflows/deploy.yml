@@ -35,7 +35,7 @@ jobs:
           find build -type f
 
           # Gent site indexing registration (for docs.hpc.ugent.be)
-          cp registration/google25178bcae7055950.html build/HPC/Gent
+          cp registration/gent/* build/HPC/Gent
 
           cp -a pdf/ build/
 
