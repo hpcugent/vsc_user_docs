@@ -7,7 +7,7 @@ and the [HPC user manual](../index) to get started. This web page
 is a great resource for troubleshooting and looking up specifics.
 
 If you want to use software that's not yet installed on the HPC, send us a
-[software installation request](https://www.ugent.be/hpc/en/support/software-installation-request).
+[software installation request]({{ hpc_software_install }}).
 
 Overview of HPC-UGent Tier-2 infrastructure:
 [https://www.ugent.be/hpc/en/infrastructure](https://www.ugent.be/hpc/en/infrastructure)
@@ -42,7 +42,7 @@ Use the command `module spider [module]` to find the specifics on these bundles.
 
 {% if site == gent %}
 If the package or library you want is not available, send us a
-[software installation request](https://www.ugent.be/hpc/en/support/software-installation-request).
+[software installation request]({{ hpc_software_install }}).
 {% endif %}
 
 ### How do I choose the job modules?
@@ -69,7 +69,7 @@ You can use `module avail [search_text]` to see which versions on which toolchai
 
 {% if site == gent %}
 If you need something that's not available yet, you can request it through a
-[software installation request](https://www.ugent.be/hpc/en/support/software-installation-request).
+[software installation request]({{ hpc_software_install }}).
 {% endif %}
 
 It is possible to use the modules without specifying a version or toolchain. However,
@@ -208,8 +208,9 @@ the arguments of the program to be its last arguments. Here, the
 `--output output.txt` arguments are passed to `./hello.sh` instead of to
 `mympirun`. The correct way to run it is:
 
-<pre><code>$ <b>mympirun --output output.txt ./hello.sh</b>
-</code></pre>
+```shell
+mympirun --output output.txt ./hello.sh
+```
 
 ### When will my job start?
 
@@ -267,8 +268,6 @@ $ <b>ls -l dataset.txt</b>
 
 For more information about `chmod` or `setfacl`, see
 [Linux tutorial](../linux-tutorial/manipulating_files_and_directories/#changing-permissions-chmod).
-<!-- % \section{I no longer work for \university, can I transfer my data to another researcher working at \university}
-% See https://github.com/hpcugent/vsc_user_docs/issues/230 -->
 
 ### Can I use multiple different SSH key pairs to connect to my VSC account?
 
