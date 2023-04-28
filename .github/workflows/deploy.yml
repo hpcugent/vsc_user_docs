@@ -48,6 +48,9 @@ jobs:
           rm -rf HPC cloud linux-tutorial pdf index.html assets
           mv build/{HPC,cloud,linux-tutorial,pdf,index.html,assets} .
 
+          # Gent site indexing registration (for docs.hpc.ugent.be)
+          cp registration/google25178bcae7055950.html HPC/Gent
+
           # update gh-pages branch
           git add HPC cloud linux-tutorial pdf index.html assets
           git commit -m "deployed rendered docs (${GITHUB_SHA})"
