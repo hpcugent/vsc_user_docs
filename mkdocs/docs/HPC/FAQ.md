@@ -9,8 +9,7 @@ is a great resource for troubleshooting and looking up specifics.
 If you want to use software that's not yet installed on the HPC, send us a
 [software installation request]({{ hpc_software_install }}).
 
-Overview of HPC-UGent Tier-2 infrastructure:
-[https://www.ugent.be/hpc/en/infrastructure](https://www.ugent.be/hpc/en/infrastructure)
+Overview of HPC-UGent Tier-2 [infrastructure]({{ hpc_infrastructure_url }})
 
 {% endif %}
 
@@ -106,7 +105,7 @@ The 72 hour walltime limit will not be extended. However, you can work around th
     * [How many cores/nodes should I request?](#how-many-coresnodes-should-i-request).
     * [My job is slow](#my-job-runs-slower-than-i-expected).
     * [My job isn't using any GPUs](#my-job-isnt-using-any-gpus).
-* Use a faster [cluster](https://www.ugent.be/hpc/en/infrastructure).
+* Use a faster [cluster]({{ hpc_infrastructure_url }}).
 * Divide the job into more parallel processes.
 * Divide the job into shorter processes, which you can submit as separate jobs.
 * Use the built-in checkpointing of your software.
@@ -142,7 +141,7 @@ See also: [Running interactive jobs](../running_interactive_jobs).
 
 ### My job isn't using any GPUs
 
-Only two clusters have GPUs. Check out the [infrastructure overview](https://www.ugent.be/hpc/en/infrastructure),
+Only two clusters have GPUs. Check out the [infrastructure overview]({{ hpc_infrastructure_url }}),
 to see which one suits your needs. Make sure that you manually switch to the GPU cluster _before_ you submit
 the job. Inside the job script, you need to explicitly request the GPUs:
 `#PBS -l nodes=1:ppn=24:gpus=2`
@@ -320,7 +319,7 @@ RSA host key for user has changed and you have requested strict checking.
 Host key verification failed.
 ```
 
-Please follow the instructions at <https://www.ugent.be/hpc/en/infrastructure/migration\_to\_rhel8>
+Please follow the instructions at [migration to RHEL8]({{ hpc_infrastructure_url }}/migration_to_rhel8)
 to ensure it really _is not a hacking attempt_ \- you will find the correct host key to compare.
 You will also find how to hide the warning.
 

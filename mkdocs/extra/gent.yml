@@ -9,6 +9,7 @@ hpcinfra: HPC-UGent infrastructure
 hpcteam: HPC-UGent team
 hpc_support_url: https://www.ugent.be/hpc/en/support
 hpc_support_industry: https://www.ugent.be/hpc/en/industry/industry
+hpc_infrastructure_url: https://www.ugent.be/hpc/en/infrastructure
 hpc_software_install: https://www.ugent.be/hpc/en/support/software-installation-request
 hpcname: hpcugent
 loginnode: login.hpc.ugent.be
