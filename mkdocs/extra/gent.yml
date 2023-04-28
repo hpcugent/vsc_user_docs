@@ -9,6 +9,8 @@ hpcinfra: HPC-UGent infrastructure
 hpcteam: HPC-UGent team
 hpc_support_url: https://www.ugent.be/hpc/en/support
 hpc_support_industry: https://www.ugent.be/hpc/en/industry/industry
+hpc_infrastructure_url: https://www.ugent.be/hpc/en/infrastructure
+hpc_software_install: https://www.ugent.be/hpc/en/support/software-installation-request
 hpcname: hpcugent
 loginnode: login.hpc.ugent.be
 loginhost: gligar07.gastly.os
@@ -51,6 +53,10 @@ xtwogoshaone: |
   - ssh-rsa 2048 53:25:8c:1e:72:8b:ce:87:3e:54:12:44:a7:13:1a:89:e4:15:b6:8e
   - ssh-ed25519 255 e3:cc:07:64:78:80:28:ec:b8:a8:8f:49:44:d1:1e:dc:cc:0b:c5:6b
   - ssh-ecdsa 256 67:6c:af:23:cc:a1:72:09:f5:45:f1:60:08:e8:98:ca:31:87:58:6c
+
+lmod_error: |
+  Lmod has detected the following error: A different version of the 'GCC' module
+  is already loaded (see output of 'ml').
 
 tutorialdir: /apps/gent/tutorials
 examplesdir: /apps/gent/tutorials/Intro-HPC/examples

@@ -1,5 +1,28 @@
 # Job script examples
 
+## Simple job script template
+
+This is a template for a job script, with commonly used parameters.
+The basic parameters should always be used. Some notes on the situational parameters:
+
+*   `-l mem`: If no memory parameter is given, the job gets access to an amount of
+    memory proportional to the amount of cores requested.
+    See also: [Job failed: SEGV Segmentation fault](../FAQ/#job-failed-segv-segmentation-fault)
+
+*   `-m/-M`: the `-m` option will send emails to your email address registerd with VSC.
+    Only if you want emails at some other address, you should use the `-M` option.
+
+*   Replace the "`-placeholder text-`" with real entries.
+    This notation is used to ensure `qsub` rejects invalid options.
+
+*   To use a situational parameter, remove one '`#`' at the beginning of the line.
+
+<p style="text-align: center">simple_jobscript.sh</p>
+
+```shell
+{% include "examples/Job-script-examples/simple_jobscript.sh" %}
+```
+
 ## Single-core job
 
 Here's an example of a single-core job script:
