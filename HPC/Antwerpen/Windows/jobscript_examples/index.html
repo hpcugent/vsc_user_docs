@@ -372,21 +372,6 @@
 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../FAQ/" class="md-nav__link">
-        Frequently Asked Questions
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
     
   
   
@@ -398,17 +383,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
           Advanced topics
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_14">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_13">
           <span class="md-nav__icon md-icon"></span>
           Advanced topics
         </label>
@@ -510,6 +495,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#simple-job-script-template" class="md-nav__link">
+    Simple job script template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#single-core-job" class="md-nav__link">
     Single-core job
   </a>
@@ -604,17 +596,17 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_15" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_14" >
       
       
       
-        <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
           Software-specific Best Practices
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_15">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14">
           <span class="md-nav__icon md-icon"></span>
           Software-specific Best Practices
         </label>
@@ -698,6 +690,59 @@
     <li class="md-nav__item">
       <a href="../scoop/" class="md-nav__link">
         SCOOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_15" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+          FAQ
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          FAQ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        Frequently Asked Questions
       </a>
     </li>
   
@@ -818,6 +863,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#simple-job-script-template" class="md-nav__link">
+    Simple job script template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#single-core-job" class="md-nav__link">
     Single-core job
   </a>
@@ -854,6 +906,54 @@
 
 
 <h1 id="job-script-examples">Job script examples<a class="headerlink" href="#job-script-examples" title="Permanent link">#</a></h1>
+<h2 id="simple-job-script-template">Simple job script template<a class="headerlink" href="#simple-job-script-template" title="Permanent link">#</a></h2>
+<p>This is a template for a job script, with commonly used parameters.
+The basic parameters should always be used. Some notes on the situational parameters:</p>
+<ul>
+<li>
+<p><code>-l mem</code>: If no memory parameter is given, the job gets access to an amount of
+    memory proportional to the amount of cores requested.
+    See also: <a href="../FAQ/#job-failed-segv-segmentation-fault">Job failed: SEGV Segmentation fault</a></p>
+</li>
+<li>
+<p><code>-m/-M</code>: the <code>-m</code> option will send emails to your email address registerd with VSC.
+    Only if you want emails at some other address, you should use the <code>-M</code> option.</p>
+</li>
+<li>
+<p>Replace the "<code>-placeholder text-</code>" with real entries.
+    This notation is used to ensure <code>qsub</code> rejects invalid options.</p>
+</li>
+<li>
+<p>To use a situational parameter, remove one '<code>#</code>' at the beginning of the line.</p>
+</li>
+</ul>
+<p style="text-align: center">simple_jobscript.sh</p>
+
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Basic parameters</span>
+<span class="c1">#PBS -N jobname           ## Job name</span>
+<span class="c1">#PBS -l nodes=1:ppn=2     ## 1 node, 2 processors per node (ppn=all to get a full node)</span>
+<span class="c1">#PBS -l walltime=01:00:00 ## Max time your job will run (no more than 72:00:00)</span>
+
+<span class="c1"># Situational parameters: remove one &#39;#&#39; at the front to use</span>
+<span class="c1">##PBS -l gpus=1            ## GPU amount (only on accelgor or joltik)</span>
+<span class="c1">##PBS -l mem=32gb          ## If not used, memory will be available proportional to the max amount</span>
+<span class="c1">##PBS -m abe               ## Email notifications (abe=aborted, begin and end)</span>
+<span class="c1">##PBS -M -email_address-   ## ONLY if you want to use a different email than your VSC address</span>
+<span class="c1">##PBS -A -project-         ## Project name when credits are required (only Tier 1)</span>
+
+<span class="c1">##PBS -o -filename-        ## Output log</span>
+<span class="c1">##PBS -e -filename-        ## Error log</span>
+
+
+module<span class="w"> </span>load<span class="w"> </span><span class="o">[</span>module<span class="o">]</span>
+module<span class="w"> </span>load<span class="w"> </span><span class="o">[</span>module<span class="o">]</span>
+
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$PBS_O_WORKDIR</span><span class="w">         </span><span class="c1"># Change working directory to the location where the job was submmitted</span>
+
+<span class="o">[</span>commands<span class="o">]</span>
+</code></pre></div>
 <h2 id="single-core-job">Single-core job<a class="headerlink" href="#single-core-job" title="Permanent link">#</a></h2>
 <p>Here's an example of a single-core job script:</p>
 <p style="text-align: center">single_core.sh</p>
