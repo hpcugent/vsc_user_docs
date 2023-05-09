@@ -1,5 +1,6 @@
 import argparse
 import glob
+import gzip
 import os.path
 import os
 import shutil
@@ -10,6 +11,7 @@ from shutil import rmtree
 from jinja2 import Template
 from yaml import safe_load
 from multiprocessing import Pool
+import xml.etree.ElementTree as ET
 
 import pathlib
 
@@ -21,6 +23,8 @@ CONFIG_OTHERS = f"{CONFIG_BASE}/others"
 CONFIG_TEMPLATE = f"{CONFIG_BASE}/templates"
 
 BUILD_YAML = "config/build.yml"
+
+OS_PICK_SUBDIR = 'choose_os'
 
 args = None
 
@@ -80,7 +84,7 @@ def make_mkdocs_yml():
     for site in config['sites']:
         lsite = site.lower()
         fn = f"{MKDOCS_BASE}/os_pick_{site}.yml"
-        post.append([fn, site])
+        post.append([fn, OS_PICK_SUBDIR])
         with open(fn, 'w') as fh:
             fh.write(hpc_templ.render(site=site, lsite=lsite))
 
@@ -136,6 +140,58 @@ def build_pool(ops):
         res = pool.map(build_cmd, cmds, 1)
 
 
+def os_pick_post(ops):
+    for fn, subdir in ops:
+        if not 'os_pick' in fn:
+            continue
+        with open(fn, "r") as file:
+            config = safe_load(file)
+        build_dir = config["extra"]["build_dir"]
+
+        # so how does this work
+        #    os_pick generates a subsite in build_dir/OS_PICK_SUBDIR
+        #        the subsite is always wiped, that's why build_dir itself can't be used
+        #            as it would wipe build_dir/<OS>
+        #        the ugent plugin generates fake .md that are converted into html in build_dir
+        #   so we need to move the content of build_dir/OS_PICK_SUBDIR (eg the sitemap and any redirects)
+        #       to build_dir manually here
+        os_pick_dir = f"{build_dir}/{OS_PICK_SUBDIR}"
+
+        for item in os.listdir(os_pick_dir):
+            shutil.move(os.path.join(os_pick_dir, item) , os.path.join(build_dir, item))
+
+        def parse_sitemap(fn):
+            tree = ET.parse(fn)
+            root = tree.getroot()
+
+            if not root.tag.endswith('}urlset'):
+                raise Exception(f"Unsupported sitemap.xml no urlset root {fn}")
+            if not all([x.tag.endswith('}url') for x in root]):
+                raise Exception(f"Unsupported sitemap.xml other than url elements {fn}")
+
+            return tree, root
+
+        # look for sitemap.xml in build_dir
+        mainsitemap = f'{build_dir}/sitemap.xml'
+        maintree, mainroot = parse_sitemap(mainsitemap)
+
+        # loop over all OSes and merge it in the main sitemap
+        oses = []
+        for plug in config['plugins']:
+            if 'ugent' in plug:
+                oses = plug['ugent']['oses']
+        for oss in oses:
+            _, rt = parse_sitemap(f'{build_dir}/{oss}/sitemap.xml')
+            for url in rt:
+                mainroot.append(url)
+
+        # write out updated sitemap
+        maintree.write(mainsitemap)
+        # create gzipped sitemap
+        with open(mainsitemap, 'rb') as f_in, gzip.open(f'{mainsitemap}.gz', 'wb') as f_out:
+            f_out.writelines(f_in)
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Get args.")
     parser.add_argument("--verbose", "-v", action="store_true", dest="verbose", help="Enable verbose logging.")
@@ -183,6 +239,9 @@ if __name__ == "__main__":
             # Restore original assets.
             shutil.rmtree(assets)
             shutil.move(assets_old, assets)
+
+        # move os_pick build files to site build_dir and merge os_pick site_maps
+        os_pick_post(post)
 
     except BuildException as exc:
         if args.nocleanup:

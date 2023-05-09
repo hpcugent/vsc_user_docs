@@ -1,3 +1,6 @@
+{%- if site == 'Gent' %}
+site_url: https://docs.hpc.ugent.be
+{%- endif %}
 site_name: VSC User Documentation - {{ site }}
 docs_dir: os_pick/docs
 

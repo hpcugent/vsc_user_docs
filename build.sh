@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ "${DEBUG:-0}" -gt 0 ]; then
+    set -x
+fi
+
 DEPSDIR="$PWD/pypkgs"
 if [ "${INSTALLDEPS:-0}" -gt 0 ]; then
     python3 -m pip install --ignore-installed --prefix "$DEPSDIR" -r requirements.txt
