@@ -55,6 +55,13 @@ plugins:
       site: {{ site }}
       os: {{ os }}
       osneutrallinks: True
+{%- if site == 'Gent' %}
+  - redirects:
+      redirect_maps:
+          gpu_gent.md: gpu.md
+          interactive_gent.md: interactive_debug.md
+          crontab_gent.md: crontab.md
+{%- endif %}
   - macros:
       include_yaml:
         - extra/constants.yml

@@ -181,3 +181,15 @@ See example scripts in folder [scripts](computational_macros%2Fscripts).
 See usage in file [account.md](docs%2FHPC%2Fexamples%2FAntwerpen%2FLinux%2FHPC%2Faccount.md).<br>
 Built page can be access only by knowing its location and that is: `<server_name>/Antwerpen/Linux/HPC/examples/Antwerpen/Linux/HPC/account`
 
+## Tips
+
+### Sitemaps
+
+To generate correct sitemap data, you need to set the `site_url` in the `hpc.template` and `os_pick.template`. You must also make sure that
+any `nested sites` (like `HPC`, where every `mkdocs.yml` config generates a single sitemap) have merged sitemap data. For `HPC`, this is already
+taken care of in the `build.py` script.
+
+### Redirects
+
+There is support for the mkdocs redirects module, but in case of HPC docs, you need to set the redirect in
+both the `hpc.template` and the `os_pick.template` and make sure the redirect plugin is configured after the `ugent` one.
