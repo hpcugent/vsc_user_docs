@@ -1,4 +1,4 @@
-# HPC-UGent GPU clusters
+# GPU clusters
 
 ## Submitting jobs
 
