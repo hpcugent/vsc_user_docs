@@ -1,4 +1,4 @@
-# HPC-UGent interactive and debug cluster { #ch:interactive_ugent}
+# Interactive and debug cluster { #ch:interactive_ugent}
 
 ## Purpose { #sec:interactive_ugent_pupose}
 

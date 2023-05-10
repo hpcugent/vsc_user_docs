@@ -1,4 +1,4 @@
-# Cron scripts 
+# Cron scripts
 
 ## Cron scripts configuration
 

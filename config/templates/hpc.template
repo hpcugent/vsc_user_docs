@@ -1,3 +1,6 @@
+{%- if site == 'Gent' %}
+site_url: https://docs.hpc.ugent.be/{{ os }}/
+{%- endif %}
 site_name: VSC User Documentation - {{ site }} ({{ os }})
 docs_dir: docs/HPC
 
@@ -23,12 +26,12 @@ nav:
       - Best Practices: best_practices.md
       - Graphical applications with VNC: VNC.md
       - Graphical applications with X2Go: x2go.md
-{% if site == 'Gent' %}
-      - HPC-UGent GPU clusters: gpu_{{ lsite }}.md
-      - HPC-UGent interactive and debug cluster: interactive_{{ lsite }}.md
-      - Cron scripts: crontab_{{ lsite }}.md
+{%- if site == 'Gent' %}
+      - GPU clusters: gpu.md
+      - Interactive and debug cluster: interactive_debug.md
+      - Cron scripts: crontab.md
       - Linux tutorial: only/gent/linux-tutorial/getting_started.md
-{% endif %}
+{%- endif %}
   - Software-specific Best Practices:
       - Apptainer/Singularity: apptainer.md
       - EasyBuild: easybuild.md
@@ -52,6 +55,13 @@ plugins:
       site: {{ site }}
       os: {{ os }}
       osneutrallinks: True
+{%- if site == 'Gent' %}
+  - redirects:
+      redirect_maps:
+          gpu_gent.md: gpu.md
+          interactive_gent.md: interactive_debug.md
+          crontab_gent.md: crontab.md
+{%- endif %}
   - macros:
       include_yaml:
         - extra/constants.yml

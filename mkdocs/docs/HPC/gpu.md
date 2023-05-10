@@ -1,4 +1,4 @@
-# HPC-UGent GPU clusters
+# GPU clusters
 
 ## Submitting jobs
 
@@ -120,7 +120,7 @@ Use `module avail` to check for centrally installed software.
 The subsections below only cover a couple of installed software
 packages, more are available.
 
-### GROMACS 
+### GROMACS
 
 Please consult `module avail GROMACS` for a list of installed versions.
 
@@ -140,7 +140,7 @@ At least for simple TensorFlow benchmarks, it looks like Horovod is a
 bit faster than usual autodetect multi-GPU TensorFlow without horovod,
 but it comes at the cost of the code modifications to use horovod.
 
-<!-- 
+<!--
 %TODO: use NCCL version (only check is to export NCCL_DEBUG=INFO)
 %TODO: NCCL tuning https://docs.nvidia.com/deeplearning/sdk/nccl-developer-guide/docs/env.html
 %-> joltik: NCCL_NET_GDR_LEVEL=4 -> in environment -->
@@ -156,7 +156,7 @@ versions.
 
 **Note: for running TensorFlow calculations on multiple GPUs and/or on more than one workernode, use `Horovod`, see section [Horovod](./#horovod).**
 
-#### Example TensorFlow job script 
+#### Example TensorFlow job script
 
 <center>-- TensorFlow_GPU.sh --</center>
 ```bash
@@ -169,11 +169,11 @@ versions.
 % KMP_AFFINITY="granularity=fine,verbose,compact,1,0"
 % KMP_SETTINGS=1
 
-%TODO: quid tensocores and bfloat16 etc etc?
+%TODO: quid tensorcores and bfloat16 etc etc?
 
 %TODO: even on single node, horovod is faster (5\%) with nccl? (at least for simple benchmark) -->
 
-### AlphaFold 
+### AlphaFold
 
 Please consult `module avail AlphaFold` for a list of installed
 versions.
@@ -182,7 +182,7 @@ For more information on using AlphaFold, we strongly recommend the
 VIB-UGent course available at
 <https://elearning.bits.vib.be/courses/alphafold>.
 
-## Getting help 
+## Getting help
 
 In case of questions or problems, please contact the {{hpcteam}} via {{hpcinfo}}, and clearly
 indicate that your question relates to the `joltik` cluster by adding

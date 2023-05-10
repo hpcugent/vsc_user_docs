@@ -1,4 +1,4 @@
-{% import 'macros/nb.md' as nb %}
+{% import './macros/nb.md' as nb %}
 # Beyond the basics
 
 Now that you've seen some of the more basic commands, let's take a look
