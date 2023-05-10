@@ -1,253 +1,258 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/FAQ/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/HOD/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/MATLAB/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/VNC/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/account/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/apptainer/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/best_practices/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/checkpointing/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/compiling_your_software/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/connecting/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/crontab/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/easybuild/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/fine_tuning_job_specifications/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/gpu/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/interactive_debug/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/introduction/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/jobscript_examples/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/multi_core_jobs/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/multi_job_submission/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/mympirun/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/openFOAM/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/program_examples/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/quick_reference_guide/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/running_batch_jobs/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/running_interactive_jobs/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/running_jobs_with_input_output_data/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/scoop/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/singularity/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/torque_options/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/troubleshooting/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/useful_linux_commands/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/web_portal/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/x2go/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/xdmod/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/macros/LinuxManualURL/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/macros/nb/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/2023/donphan-gallade/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/linux-tutorial/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/linux-tutorial/beyond_the_basics/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/linux-tutorial/common_pitfalls/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/linux-tutorial/getting_started/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/linux-tutorial/hpc_infrastructure/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/linux-tutorial/manipulating_files_and_directories/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/linux-tutorial/navigating/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/linux-tutorial/uploading_files/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/linux-tutorial/macros/nb/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/sites/available_modules/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/sites/hpc_policies/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-04-28</lastmod>
+         <loc>https://docs.hpc.ugent.be/Windows/sites/antwerpen/available-modules/</loc>
+         <lastmod>2023-05-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Windows/sites/gent/available-modules/</loc>
+         <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
