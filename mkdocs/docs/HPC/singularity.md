@@ -52,12 +52,7 @@ infrastructure. However, if you use the `--fakeroot` option, you can
 make new Singularity images or convert Docker images.
 
 When you make Singularity or convert Docker images you have some
-restrictions.
-
--   You can only create Singularity images on RHEL 8 machines. The
-    current RHEL 8 systems are `gligar08` login node, `doduo` cluster,
-    and `slaking` cluster. The created images can be used on any
-    cluster.
+restrictions:
 
 -   Due to the nature of `--fakeroot` option, we recommend to write your
     singularity image to a globally writable location, like `/tmp`, or

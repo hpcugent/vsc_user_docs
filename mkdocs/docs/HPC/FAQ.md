@@ -133,9 +133,9 @@ This is common with MATLAB compilation and Nextflow. An error caused by the logi
 limitations can look like this: `Aborted (core dumped)`.
 
 It's easy to get around these limitations: start an interactive session on one of the clusters.
-Then, you are acting as a node on that cluster instead of a login node. Notably, the slaking
-cluster will grant such a session immediately, while other clusters might make you wait a bit.
-Example command: `ml sw cluster/slaking && qsub -I -l nodes=1:ppn=8`
+Then, you are acting as a node on that cluster instead of a login node. Notably, the
+[debug/interactive cluster](../interactive_debug) will grant such a session immediately, while other clusters might make you wait a bit.
+Example command: `ml swap cluster/donphan && qsub -I -l nodes=1:ppn=8`
 
 See also: [Running interactive jobs](../running_interactive_jobs).
 

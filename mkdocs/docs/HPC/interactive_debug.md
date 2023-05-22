@@ -36,9 +36,9 @@ typical workloads for this cluster should be limited to:
 ## Submitting jobs
 
 To submit jobs to the HPC-UGent interactive and debug cluster nicknamed
-`slaking`, first use:
+`donphan`, first use:
 
-<pre><code>$ <b>module swap cluster/slaking</b>
+<pre><code>$ <b>module swap cluster/donphan</b>
 </code></pre>
 
 Then use the familiar `qsub`, `qstat`, etc. commands (see
