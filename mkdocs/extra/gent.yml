@@ -75,7 +75,7 @@ othercluster: skitty
 hpcinfo: hpc@ugent.be
 hpcusersml: hpc-users@lists.ugent.be
 hpcannounceml: hpc-announce@lists.ugent.be
-operatingsystem: RHEL 8.6 (kirlia, doduo, accelgor, slaking, joltik, skitty, victini, swalot)
+operatingsystem: RHEL 8.6 (doduo, accelgor, joltik, skitty, victini, swalot, gallade, donphan)
 operatingsystembase: Red Hat Enterprise Linux
 # Special for perfexpert tutorial
 mpirun: vsc-mympirun
