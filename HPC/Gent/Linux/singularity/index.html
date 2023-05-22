@@ -976,20 +976,12 @@ requires admin privileges, which is obviously not available on the
 infrastructure. However, if you use the <code>--fakeroot</code> option, you can
 make new Singularity images or convert Docker images.</p>
 <p>When you make Singularity or convert Docker images you have some
-restrictions.</p>
+restrictions:</p>
 <ul>
-<li>
-<p>You can only create Singularity images on RHEL 8 machines. The
-    current RHEL 8 systems are <code>gligar08</code> login node, <code>doduo</code> cluster,
-    and <code>slaking</code> cluster. The created images can be used on any
-    cluster.</p>
-</li>
-<li>
-<p>Due to the nature of <code>--fakeroot</code> option, we recommend to write your
+<li>Due to the nature of <code>--fakeroot</code> option, we recommend to write your
     singularity image to a globally writable location, like <code>/tmp</code>, or
     <code>/local</code> directories. Once the images is created, you should move it
-    to your desired destination.</p>
-</li>
+    to your desired destination.</li>
 </ul>
 <h3 id="converting-docker-images">Converting Docker images<a class="headerlink" href="#converting-docker-images" title="Permanent link">#</a></h3>
 <p>For more information on converting existing Docker images to Singularity

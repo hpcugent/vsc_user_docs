@@ -844,8 +844,8 @@ running the command:</p>
 <p><center>-- runscript.sh --</center>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
-module<span class="w"> </span>swap<span class="w"> </span>cluster/slaking<span class="w"> </span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">SLURM_CLUSTERS</span><span class="o">=</span><span class="s2">&quot;slaking&quot;</span>
+module<span class="w"> </span>swap<span class="w"> </span>cluster/donphan
+<span class="nb">export</span><span class="w"> </span><span class="nv">SLURM_CLUSTERS</span><span class="o">=</span><span class="s2">&quot;donphan&quot;</span>
 /usr/libexec/jobcli/qsub<span class="w"> </span>~/job_scripts/test.sh<span class="w"> </span>&gt;<span class="p">&amp;</span><span class="w"> </span>~/job.out
 </code></pre></div></p>
 <p>In the previous example a cron script was set to be executed every day

@@ -1363,9 +1363,9 @@ Specifically, the memory and the amount of processes you can use may present an 
 This is common with MATLAB compilation and Nextflow. An error caused by the login session
 limitations can look like this: <code>Aborted (core dumped)</code>.</p>
 <p>It's easy to get around these limitations: start an interactive session on one of the clusters.
-Then, you are acting as a node on that cluster instead of a login node. Notably, the slaking
-cluster will grant such a session immediately, while other clusters might make you wait a bit.
-Example command: <code>ml sw cluster/slaking &amp;&amp; qsub -I -l nodes=1:ppn=8</code></p>
+Then, you are acting as a node on that cluster instead of a login node. Notably, the
+<a href="../interactive_debug">debug/interactive cluster</a> will grant such a session immediately, while other clusters might make you wait a bit.
+Example command: <code>ml swap cluster/donphan &amp;&amp; qsub -I -l nodes=1:ppn=8</code></p>
 <p>See also: <a href="../running_interactive_jobs">Running interactive jobs</a>.</p>
 <h3 id="my-job-isnt-using-any-gpus">My job isn't using any GPUs<a class="headerlink" href="#my-job-isnt-using-any-gpus" title="Permanent link">#</a></h3>
 <p>Only two clusters have GPUs. Check out the <a href="https://www.ugent.be/hpc/en/infrastructure">infrastructure overview</a>,
