@@ -14,6 +14,9 @@ nav:
   - Running jobs with input/output data: running_jobs_with_input_output_data.md
   - Multi core jobs/Parallel Computing: multi_core_jobs.md
   - Using the HPC-UGent web portal: web_portal.md
+{%- if site == 'Gent' %}
+  - Interactive and debug cluster: interactive_debug.md
+{%- endif %}
   - XDMoD portal: xdmod.md
   - Troubleshooting: troubleshooting.md
   - HPC Policies: sites/hpc_policies.md
@@ -28,7 +31,6 @@ nav:
       - Graphical applications with X2Go: x2go.md
 {%- if site == 'Gent' %}
       - GPU clusters: gpu.md
-      - Interactive and debug cluster: interactive_debug.md
       - Cron scripts: crontab.md
       - Linux tutorial: only/gent/linux-tutorial/getting_started.md
 {%- endif %}
