@@ -44,7 +44,7 @@ filesystems, and they will be accessible via the familiar `$VSC_HOME`,
 
 ## Apptainer/Singularity Images
 
-### Creating Appyainer/Singularity images
+### Creating Apptainer/Singularity images
 
 Creating new Apptainer/Singularity images or converting Docker images,
 by default, requires admin privileges, which is obviously not available
