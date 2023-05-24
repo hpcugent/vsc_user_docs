@@ -8,7 +8,7 @@ number of resources. This environment allows a user to immediatelty
 start working, and is the ideal place for interactive work such as
 development, debugging and light production workloads (typically
 sufficient for training and/or courses).
-<br>
+
 This environment should be seen as an extension or even replacement of the login nodes,
 instead of a dedicated compute resource. The interactive cluster is
 *overcommitted*, which means that more CPU cores can be requested for
@@ -16,7 +16,7 @@ jobs than physically exist in the cluster. Obviously, the performance of
 this cluster heavily depends on the workloads and the actual overcommit
 usage. Be aware that jobs can slow down or speed up during their
 execution.
-<br>
+
 Due to the restrictions and sharing of the CPU resources (see
 section [Restrictions and overcommit factor](./#restrictions-and-overcommit-factor)) jobs on this cluster
 should normally start more or less immediately. The tradeoff is that
@@ -72,7 +72,7 @@ might change without prior notice.
 Each node in the `donphan` cluster has a relatively small GPU that is *shared* between all jobs.
 This means that you don't need to reserve it and thus possibly wait for it.
 But this also has a downside for performance and security: jobs might be competing for the same GPU resources (cores, memory or encoders) without
-any preset fairshare and there is no garantee one job cannot access another job's memory
+any preset fairshare and there is no guarantee one job cannot access another job's memory
 (as opposed to having reserved GPUs in the GPU clusters).
 
 All software should behave the same as on the dedicated GPU clusters (e.g. using CUDA or OpenGL acceleration
