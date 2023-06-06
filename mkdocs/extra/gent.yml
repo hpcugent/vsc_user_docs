@@ -69,7 +69,7 @@ scratchdir: /user/scratch/gent/vsc400/vsc40000
 jobid: 123456
 computenode: node3200.victini.gent.vsc
 computenodeshort: node3200
-defaultcluster: victini
+defaultcluster: Doduo
 othercluster: skitty
 # Support
 hpcinfo: hpc@ugent.be
