@@ -440,7 +440,7 @@ This file has been stored in the directory "*~/.ssh/*".
 {%- if OS == macos %}
 !!! tip
     As ".ssh" is an invisible directory, the Finder will not show it by
-    default. The easiest way to access the folder, is by pressing ++cmd+shift+g++ ,
+    default. The easiest way to access the folder, is by pressing ++cmd+shift+g++ (or ++cmd+shift+.++),
     which will allow you to enter the name of a directory, which you would
     like to open in Finder. Here, type "~/.ssh" and press enter.
 {% endif %}
