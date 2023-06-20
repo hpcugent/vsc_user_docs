@@ -33,6 +33,7 @@ nav:
       - GPU clusters: gpu.md
       - Cron scripts: crontab.md
       - Linux tutorial: only/gent/linux-tutorial/getting_started.md
+      - Teaching and training: teaching_training.md
 {%- endif %}
   - Software-specific Best Practices:
       - Apptainer/Singularity: apptainer.md
