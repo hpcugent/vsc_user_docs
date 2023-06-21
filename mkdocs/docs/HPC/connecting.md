@@ -260,7 +260,7 @@ This directory contains:
 
 !!! tip
     Typing `cd ex` followed by ++tab++ (the Tab-key) will generate the `cd examples`
-    command. **Command-line completionn** (also tab completion) is a common feature of the bash command
+    command. **Command-line completion** (also tab completion) is a common feature of the bash command
     line interpreter, in which the program automatically fills in partially
     typed commands.
 
