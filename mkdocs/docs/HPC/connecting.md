@@ -298,7 +298,7 @@ STEVIN HPC-UGent infrastructure status on Thu, 18 Mar 2021 13:30:01
    victini    40      0     54      96     N/A       N/A
     joltik     8      0      2      10     N/A       N/A
      doduo   115      0     13     128     N/A       N/A
-  Accelgor     8      1      0       9     N/A       N/A
+  accelgor     8      1      0       9     N/A       N/A
 
 For a full view of the current loads and queues see:
 https://hpc.ugent.be/clusterstate/ 
