@@ -2,257 +2,257 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/FAQ/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/HOD/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/MATLAB/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/VNC/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/account/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/apptainer/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/best_practices/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/checkpointing/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/compiling_your_software/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/connecting/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/crontab/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/easybuild/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/fine_tuning_job_specifications/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/gpu/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/interactive_debug/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/introduction/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/jobscript_examples/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/multi_core_jobs/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/multi_job_submission/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/mympirun/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/openFOAM/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/program_examples/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/quick_reference_guide/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/running_batch_jobs/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/running_interactive_jobs/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/running_jobs_with_input_output_data/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/scoop/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/singularity/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/torque_options/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/troubleshooting/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/useful_linux_commands/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/web_portal/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/x2go/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/xdmod/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/macros/LinuxManualURL/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/macros/nb/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/2023/donphan-gallade/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/linux-tutorial/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/linux-tutorial/beyond_the_basics/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/linux-tutorial/common_pitfalls/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/linux-tutorial/getting_started/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/linux-tutorial/hpc_infrastructure/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/linux-tutorial/manipulating_files_and_directories/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/linux-tutorial/navigating/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/linux-tutorial/uploading_files/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/linux-tutorial/macros/nb/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/sites/available_modules/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/sites/hpc_policies/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/sites/antwerpen/available-modules/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/sites/gent/available-modules/</loc>
-         <lastmod>2023-06-16</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
