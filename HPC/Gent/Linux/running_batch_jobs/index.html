@@ -1606,9 +1606,11 @@ and <code>module load</code> commands.</p>
 
     You will need to load all module(s) on any one of the lines below before the "example/1.2.3" module is available to load.
 
+        cluster/accelgor
         cluster/doduo 
+        cluster/donphan
+        cluster/gallade
         cluster/joltik 
-        cluster/kirlia 
         cluster/skitty
         cluster/swalot 
         cluster/victini
@@ -1721,21 +1723,21 @@ about the clusters: you can see the nodes that are down, free, partially
 filled with jobs, completely filled with jobs, ....</p>
 <p>You can also get this information in text form (per cluster separately)
 with the <code>pbsmon</code> command:</p>
-<pre><code><b>$ module swap cluster /kirlia</b>
+<pre><code><b>$ module swap cluster/donphan</b>
 <b>$ pbsmon</b>
- 3401 3402 3403 3404 3405 3406 3407
-    J    j    j    J    J    j    J
+ 4001 4002 4003 4004 4005 4006 4007
+    _    j    j    j    _    _    .
 
- 3408 3409 3410 3411 3412 3413 3414
-    J    J    J    J    J    J    J
+ 4008 4009 4010 4011 4012 4013 4014
+    _    _    .    _    _    _    _
 
- 3415 3416
-    J    J
+ 4015 4016
+    _    _
 
-   _ free                 : 0   |   X down                 : 0   |
+   _ free                 : 11  |   X down                 : 0   |
    j partial              : 3   |   x down_on_error        : 0   |
-   J full                 : 13  |   m maintenance          : 0   |
-                                |   . offline              : 0   |
+   J full                 : 0   |   m maintenance          : 0   |
+                                |   . offline              : 2   |
                                 |   o other (R, *, ...)    : 0   |
 
 Node type:
@@ -1971,30 +1973,30 @@ nodes.</p>
 <p>To use other clusters, you can swap the <code>cluster</code> module. This is a
 special module that change what modules are available for you, and what
 cluster your jobs will be queued in.</p>
-<p>By default you are working on victini. To switch to, e.g., skitty you need to redefine
-the environment so you get access to all modules installed on the skitty
-cluster, and to be able to submit jobs to the skitty scheduler so your jobs
-will start on skitty instead of the default victini cluster.</p>
-<pre><code><b>$ module swap cluster/skitty</b>
+<p>By default you are working on <code>doduo</code>. To switch to, e.g., <code>donphan</code> you need to redefine
+the environment so you get access to all modules installed on the <code>donphan</code>
+cluster, and to be able to submit jobs to the <code>donphan</code> scheduler so your jobs
+will start on <code>donphan</code> instead of the default <code>doduo</code> cluster.</p>
+<pre><code><b>$ module swap cluster/donphan</b>
 </code></pre>
 
-<p>Note: the skitty modules may not work directly on the login nodes, because the
-login nodes do not have the same architecture as the skitty cluster, they have
-the same architecture as the victini cluster however, so this is why by default
+<p>Note: the <code>donphan</code> modules may not work directly on the login nodes, because the
+login nodes do not have the same architecture as the <code>donphan</code> cluster, they have
+the same architecture as the <code>doduo</code> cluster however, so this is why by default
 software works on the login nodes. See <a href="../intro-HPC/troubleshooting/#running-software-that-is-incompatible-with-host">the section on Running software that is incompatible with host</a> for why this is and how to fix
 this.</p>
 <p>To list the available cluster modules, you can use the
 <code>module avail cluster/</code> command:</p>
 <pre><code><b>$ module avail cluster/</b>
------------------------------------------------------------------------------------- 
-/etc/modulefiles/vsc
-------------------------------------------------------------------------------------
-   cluster/doduo (S)    cluster/joltik (S)    cluster/kirlia (S)    
-   cluster/skitty (S)    cluster/swalot (S)    cluster/victini (S,L)
+--------------------------------------- /etc/modulefiles/vsc ----------------------------------------
+   cluster/accelgor (S)      cluster/donphan (S)    cluster/skitty  (S)
+   cluster/default           cluster/gallade (S)    cluster/swalot  (S)
+   cluster/doduo    (S,D,)   cluster/joltik  (S)    cluster/victini (S)
 
   Where:
    S:  Module is Sticky, requires --force to unload or purge
    L:  Module is loaded
+   D:  Default Module
 
 If you need software that is not listed, 
 request it via <a href="https://www.ugent.be/hpc/en/support/software-installation-request">https://www.ugent.be/hpc/en/support/software-installation-request</a>

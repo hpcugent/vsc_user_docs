@@ -941,7 +941,7 @@ the case for software installed via modules in general, see <a href="../troubles
 cluster module before loading the <code>hod</code> module and subsequently running
 |hod|.</p>
 <p>For example, this will work as expected:</p>
-<pre><code>$ <b>module swap cluster/skitty</b>
+<pre><code>$ <b>module swap cluster/donphan</b>
 $ <b>module load hod</b>
 $ <b>hod</b>
 hanythingondemand - Run services within an HPC cluster
@@ -987,7 +987,7 @@ will be marked as <code>&lt;job-not-found&gt;</code>.</p>
 <p>You should occasionally clean this up using <code>hod clean</code>:</p>
 <pre><code>$ <b>module list</b>
 Currently Loaded Modulefiles:
-  1) cluster/victini(default)   2) pbs_python/4.6.0            3) vsc-base/2.4.2              4) hod/3.0.0-cli
+  1) cluster/doduo(default)   2) pbs_python/4.6.0            3) vsc-base/2.4.2              4) hod/3.0.0-cli
 
 $ <b>hod list</b>
 Cluster label   Job ID         State                Hosts
@@ -997,12 +997,12 @@ $ <b>hod clean</b>
 Removed cluster localworkdir directory /user/scratch/gent/vsc400/vsc40000/hod/hod/123456 for cluster labeled example1
 Removed cluster info directory /user/home/gent/vsc400/vsc40000/.config/hod.d/wordcount for cluster labeled example1
 
-$ <b>module swap cluster/skitty</b>
+$ <b>module swap cluster/donphan</b>
 Cluster label   Job ID                          State               Hosts
-example2        98765.master19.skitty.gent.vsc  &lt;job-not-found&gt;     &lt;none&gt;
+example2        98765.master19.donphan.gent.vsc &lt;job-not-found&gt;     &lt;none&gt;
 
 $ <b>hod clean</b>
-Removed cluster localworkdir directory /user/scratch/gent/vsc400/vsc40000/hod/hod/98765.master19.skitty.gent.vsc for cluster labeled example2
+Removed cluster localworkdir directory /user/scratch/gent/vsc400/vsc40000/hod/hod/98765.master19.donphan.gent.vsc for cluster labeled example2
 Removed cluster info directory /user/home/gent/vsc400/vsc40000/.config/hod.d/wordcount for cluster labeled example2
 </code></pre>
 <p>Note that <strong>only HOD clusters that were submitted to the currently loaded <code>cluster</code> module will be cleaned up</strong>.</p>

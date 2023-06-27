@@ -1663,21 +1663,21 @@ about the clusters: you can see the nodes that are down, free, partially
 filled with jobs, completely filled with jobs, ....</p>
 <p>You can also get this information in text form (per cluster separately)
 with the <code>pbsmon</code> command:</p>
-<pre><code><b>$ module swap cluster /kirlia</b>
+<pre><code><b>$ module swap cluster/donphan</b>
 <b>$ pbsmon</b>
- 3401 3402 3403 3404 3405 3406 3407
-    J    j    j    J    J    j    J
+ 4001 4002 4003 4004 4005 4006 4007
+    _    j    j    j    _    _    .
 
- 3408 3409 3410 3411 3412 3413 3414
-    J    J    J    J    J    J    J
+ 4008 4009 4010 4011 4012 4013 4014
+    _    _    .    _    _    _    _
 
- 3415 3416
-    J    J
+ 4015 4016
+    _    _
 
-   _ free                 : 0   |   X down                 : 0   |
+   _ free                 : 11  |   X down                 : 0   |
    j partial              : 3   |   x down_on_error        : 0   |
-   J full                 : 13  |   m maintenance          : 0   |
-                                |   . offline              : 0   |
+   J full                 : 0   |   m maintenance          : 0   |
+                                |   . offline              : 2   |
                                 |   o other (R, *, ...)    : 0   |
 
 Node type:

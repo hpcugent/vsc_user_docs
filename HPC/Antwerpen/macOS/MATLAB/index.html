@@ -991,10 +991,10 @@ clusters can not.</p>
 <p>To access the MATLAB compiler, the <code>MATLAB</code> module should be loaded
 first. Make sure you are using the same <code>MATLAB</code> version to compile and
 to run the compiled MATLAB program.</p>
-<pre><code>$ <b>module avail MATLAB</b>
-----------------------/apps/gent/victini/modules/all----------------------
-   MATLAB/2016b    MATLAB/2017b    MATLAB/2018a (D)
-$ <b>module load MATLAB/2018a</b>
+<pre><code>$ <b>module avail MATLAB/</b>
+----------------------/apps/gent/RHEL8/zen2-ib/modules/all----------------------
+   MATLAB/2021b    MATLAB/2022b-r5 (D)
+$ <b>module load MATLAB/2021b</b>
 </code></pre>
 
 <p>After loading the <code>MATLAB</code> module, the <code>mcc</code> command can be used. To get
@@ -1010,7 +1010,7 @@ flag means verbose output). To show how <code>mcc</code> can be used, we use the
 <p>To compile a MATLAB program, use <code>mcc -mv</code>:</p>
 <pre><code><b>mcc -mv example.m</b>
 Opening log file:  /user/antwerpen/201/vsc20167/java.log.34090
-Compiler version: 6.6 (R2018a)
+Compiler version: 8.3 (R2021b)
 Dependency analysis by REQUIREMENTS.
 Parsing file "/user/antwerpen/201/vsc20167/example.m"
     (Referenced from: "Compiler Command Line").
