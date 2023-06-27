@@ -427,25 +427,20 @@ The correct command is `module swap cluster/{{othercluster}}`. See also [Specify
 When running software provided through modules (see [Modules](../running_batch_jobs/#modules)), you may run into
 errors like:
 
-<pre><code>$ <b>module swap cluster/kirlia</b>
-The following have been reloaded with a version change: 
-    1) cluster/victini => cluster/kirlia
+<pre><code>$ <b>module swap cluster/donphan</b>
+The following have been reloaded with a version change:
+  1) cluster/doduo => cluster/donphan         3) env/software/doduo => env/software/donphan
+  2) env/slurm/doduo => env/slurm/donphan     4) env/vsc/doduo => env/vsc/donphan
 
-$ <b>module load Python/2.7.14-intel-2018a</b>
+$ <b>module load Python/3.10.8-GCCcore-12.2.0</b>
 $ <b>python</b>
-
 Please verify that both the operating system and the processor support
 Intel(R) MOVBE, F16C, FMA, BMI, LZCNT and AVX2 instructions.
 </code></pre>
 
 or errors like:
 
-<pre><code>$ <b>module swap cluster/doduo</b>
-
-The following have been reloaded with a version change: 
-    1) cluster/victini => cluster/doduo
-   
-$ <b>module load Python/2.7.14-foss-2018a</b>
+<pre><code>
 $ <b>python</b>
 Illegal instruction
 </code></pre>
@@ -464,17 +459,21 @@ all our modules will get reloaded. This means that all current modules
 will be unloaded and then loaded again, so they'll work on the newly
 loaded cluster. Here's an example of how that would look like:
 
-<pre><code>$ <b>module load Python/2.7.14-intel-2018a</b>
-$ <b>module swap cluster/swalot</b>
+<pre><code>$ <b>module load Python/3.10.8-GCCcore-12.2.0</b>
+$ <b>module swap cluster/donphan</b>
 
 Due to MODULEPATH changes, the following have been reloaded:
-  1) GCCcore/6.4.0                   5) Tcl/8.6.8-GCCcore-6.4.0           9) iccifort/2018.1.163-GCC-6.4.0-2.28    13) impi/2018.1.163-iccifort-2018.1.163-GCC-6.4.0-2.28    17) ncurses/6.0-GCCcore-6.4.0
-  2) GMP/6.1.2-GCCcore-6.4.0         6) binutils/2.28-GCCcore-6.4.0      10) ifort/2018.1.163-GCC-6.4.0-2.28       14) intel/2018a                                           18) zlib/1.2.11-GCCcore-6.4.0
-  3) Python/2.7.14-intel-2018a       7) bzip2/1.0.6-GCCcore-6.4.0        11) iimpi/2018a                           15) libffi/3.2.1-GCCcore-6.4.0
-  4) SQLite/3.21.0-GCCcore-6.4.0     8) icc/2018.1.163-GCC-6.4.0-2.28    12) imkl/2018.1.163-iimpi-2018a           16) libreadline/7.0-GCCcore-6.4.0
+  1) GCCcore/12.2.0                   8) binutils/2.39-GCCcore-12.2.0
+  2) GMP/6.2.1-GCCcore-12.2.0         9) bzip2/1.0.8-GCCcore-12.2.0
+  3) OpenSSL/1.1                     10) libffi/3.4.4-GCCcore-12.2.0
+  4) Python/3.10.8-GCCcore-12.2.0    11) libreadline/8.2-GCCcore-12.2.0
+  5) SQLite/3.39.4-GCCcore-12.2.0    12) ncurses/6.3-GCCcore-12.2.0
+  6) Tcl/8.6.12-GCCcore-12.2.0       13) zlib/1.2.12-GCCcore-12.2.0
+  7) XZ/5.2.7-GCCcore-12.2.0
 
 The following have been reloaded with a version change:
-  1) cluster/victini => cluster/swalot
+  1) cluster/doduo => cluster/donphan         3) env/software/doduo => env/software/donphan
+  2) env/slurm/doduo => env/slurm/donphan     4) env/vsc/doduo => env/vsc/donphan
 </code></pre>
 
 This might result in the same problems as mentioned above. When swapping

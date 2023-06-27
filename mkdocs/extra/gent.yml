@@ -67,10 +67,10 @@ homedir: /user/home/gent/vsc400/vsc40000
 datadir: /user/data/gent/vsc400/vsc40000
 scratchdir: /user/scratch/gent/vsc400/vsc40000
 jobid: 123456
-computenode: node3200.victini.gent.vsc
-computenodeshort: node3200
-defaultcluster: victini
-othercluster: skitty
+computenode: node3501.doduo.gent.vsc
+computenodeshort: node3501
+defaultcluster: doduo
+othercluster: donphan
 # Support
 hpcinfo: hpc@ugent.be
 hpcusersml: hpc-users@lists.ugent.be

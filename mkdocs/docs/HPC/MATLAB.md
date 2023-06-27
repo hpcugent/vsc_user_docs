@@ -29,10 +29,10 @@ To access the MATLAB compiler, the `MATLAB` module should be loaded
 first. Make sure you are using the same `MATLAB` version to compile and
 to run the compiled MATLAB program.
 
-<pre><code>$ <b>module avail MATLAB</b>
-----------------------/apps/gent/victini/modules/all----------------------
-   MATLAB/2016b    MATLAB/2017b    MATLAB/2018a (D)
-$ <b>module load MATLAB/2018a</b>
+<pre><code>$ <b>module avail MATLAB/</b>
+----------------------/apps/gent/RHEL8/zen2-ib/modules/all----------------------
+   MATLAB/2021b    MATLAB/2022b-r5 (D)
+$ <b>module load MATLAB/2021b</b>
 </code></pre>
 
 After loading the `MATLAB` module, the `mcc` command can be used. To get
@@ -52,7 +52,7 @@ To compile a MATLAB program, use `mcc -mv`:
 
 <pre><code><b>mcc -mv example.m</b>
 Opening log file:  {{homedir}}/java.log.34090
-Compiler version: 6.6 (R2018a)
+Compiler version: 8.3 (R2021b)
 Dependency analysis by REQUIREMENTS.
 Parsing file "{{homedir}}/example.m"
 	(Referenced from: "Compiler Command Line").
