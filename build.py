@@ -114,7 +114,7 @@ def build_cmd(cmd):
     print(f">> {cmd}")
     # combine stdout and stderr, so no capture_output; and yse text=True to avoid a bytestream
     process = subprocess.run(cmd, shell=True, text=True, stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
-    if args.verbose or process.returncode != 0:
+    if ' --verbose ' in cmd or process.returncode != 0:
         print(f"{cmd} {process.stdout}")
     if process.returncode != 0:
         raise BuildException(f"{cmd} {process.stdout}")
