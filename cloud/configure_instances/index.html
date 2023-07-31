@@ -12,7 +12,7 @@
         <link rel="prev" href="../flavors/">
       
       
-        <link rel="next" href="../launch_instance/">
+        <link rel="next" href="../manage_volumes/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
@@ -239,6 +239,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../terraform/" class="md-nav__link">
+        Orchestration Using Terraform
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../manage_images/" class="md-nav__link">
         Upload and manage images
       </a>
@@ -386,21 +401,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../launch_instance/" class="md-nav__link">
-        Launch and manage instances
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../manage_volumes/" class="md-nav__link">
         Create and manage volumes
       </a>
@@ -416,23 +416,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../heat_templates/" class="md-nav__link">
-        Orchestration Using Heat
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../terraform/" class="md-nav__link">
-        Orchestration Using Terraform
+      <a href="../launch_instance/" class="md-nav__link">
+        Launch and manage instances (manually)
       </a>
     </li>
   
@@ -656,10 +641,13 @@ which are public IP addresses (193.190.80.0/25 IPs for _vm network) or
 VSC IP addresses (172.24.48.0/20 IPs for _vsc network). Unlike fixed IP
 addresses, floating IP addresses can have their associations modified at
 any time, regardless of the state of the instances involved.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>Do not release the floating IPs assigned to your project. The floating
 IPs are fixed to the project and it is not possible, as regular user, to
 re-allocate floating IPs. Please contact to VSC Tier1 Cloud support if
 you have released your project's floating IPs by mistake.</p>
+</div>
 <p>This section explains how to make your instance accessible via a public
 IP address by two different methods. The preferred method for _vm
 network is to use port forwarding to access multiple instances using the
@@ -678,84 +666,14 @@ reach. For example, if you want to access an instance using SSH, you'll
 need to create a port forwarding rule from a selected port of the
 floating IP, to the port in the _vm network where your instance's SSH
 server is listening (typically port 22).</p>
-<p>You can quickly set up such forwarding rules using
-<code>neutron_port_forward</code>, a command line tool available on the UGent login
-node, <strong>login.hpc.ugent.be</strong>. In order to use it, you must create an
-application credential for the role "User", and save it as an openrc
-file (see section <a href="../access/#application-credentials">application credentials</a>
-on page ). Transfer the openrc file to your
-VSC storage space, so <em>neutron_port_forward</em> can read it. To set up new
-port forwarding rules, run the script providing the path to the openrc
-file as an argument to the <em>-o</em> option, and a file describing your port
-forwarding configuration as argument to the <em>-m</em> option:</p>
-<div class="highlight"><pre><span></span><code>neutron_port_forward<span class="w"> </span>-o<span class="w"> </span>&lt;openrc<span class="w"> </span>file&gt;<span class="w"> </span>-m<span class="w"> </span>&lt;ini-file&gt;
-</code></pre></div>
-<p>The following is an example configuration file:</p>
-<div class="highlight"><pre><span></span><code>[DEFAULT]
-floatingip=193.190.85.40
-network=_vm
-
-[classa]
-pattern=classa-(+̣)
-22=52000:100:22
-5900=55900
-
-[classb]
-pattern=classb-(+̣)
-80=52080
-</code></pre></div>
-<p>Here we define defaults for the floating ip and target network, and two
-classes. Instances are assigned to a class if their name matches the
-regular expression given in <code>pattern</code>. The value of <code>pattern</code> must be a
-valid Python regular expression, and the first capturing group (if any)
-must match an integer.</p>
-<p>Port forwarding rules are given in the form
-<code>target=source(:multiplier:offset)</code>. This will set up a forwarding rule
-from the floating IP port:</p>
-<blockquote>
-<p>(source + multiplier ∗ i + offset) → target ,</p>
-</blockquote>
-<p>where <strong><em>i</em></strong> is the integer matched by the first capturing group, and
-"target" is a port of the fixed IP for the instance in the chosen
-network, in this case the _vm network. "multiplier" and "offset" are
-optional and default to 1 and 0 respectively. In our example, this
-results in the following set of port forwarding rules for the public IP
-address 193.190.85.40:</p>
-<div class="highlight"><pre><span></span><code>  52122   -&gt;   classa-1:22
-  52222   -&gt;   classa-2:22
-  ...     
-  55901   -&gt;   classa-1:5900
-  55902   -&gt;   classa-2:5900
-  ...     
-  52081   -&gt;   classb-1:80
-  52082   -&gt;   classb-2:80
-  ...     
-</code></pre></div>
-<p>This is another basic port forwarding configuration example without
-patterns, in this case just to connect via SSH using external port 52000
-to a running VM called testvm:</p>
-<div class="highlight"><pre><span></span><code>[DEFAULT]
-floatingip=193.190.85.40
-network=_vm
-
-[testvm]
-22=52000
-</code></pre></div>
-<p>You can also see an overview of existing port forwarding rules for the
-ip addresses in your configuration file using
-<em>neutron_port_forward --show</em>. Each rule has an internal id, which you
-can see if you combine the options <em>--show</em> and <em>--id</em> as follows:</p>
-<div class="highlight"><pre><span></span><code>neutron_port_forward<span class="w"> </span>-o<span class="w"> </span>&lt;openrc<span class="w"> </span>file&gt;<span class="w"> </span>-m<span class="w"> </span>&lt;ini-file&gt;<span class="w"> </span>--show<span class="w"> </span>--id
-</code></pre></div>
-<p>To remove port forwarding rules, use the option
-<code>--remove=&lt;list of id's&gt;</code> with a comma-separated list of the id's of the
-rules you want to remove.</p>
-<p>Please note that when you remove and reinstantiate a VM, OpenStack also
-removes the port forwarding rules assigned to this VM automatically. If
-you intantiate again the same VM you should run <code>neutron_port_forward</code>
-and restore the port forwarding rules.</p>
-<p><code>neutron_port_forward</code> provides a few more options and advanced
-features, run the command with the <code>--help</code> option for more information.</p>
+<p>You can quickly set up such forwarding rules using <a href="../terraform/">Terraform</a>.
+We provide several examples to generate automatically several port forwarding rules
+to access to your VMs via SSH and port 22. You can also include more rules for more
+external ports.</p>
+<p>It is also possible to set port forwarding rules using OpenStack client
+(only recommended for testing purposes). Please refer to OpenStack client
+documentation for more
+<a href="https://docs.openstack.org/python-openstackclient/latest/cli/command-objects/floating-ip-port-forwarding.html">information</a></p>
 <h3 id="associate-a-floating-ip">Associate a floating ip<a class="headerlink" href="#associate-a-floating-ip" title="Permanent link">#</a></h3>
 <p>A floating IP address can also be associated to an instance, just like
 the fixed IP addresses. Because this approach uses one of the few
@@ -973,13 +891,13 @@ kept secure by the owner.&#160;<a class="footnote-backref" href="#fnref:1" title
         
         
           
-          <a href="../launch_instance/" class="md-footer__link md-footer__link--next" aria-label="Next: Launch and manage instances" rel="next">
+          <a href="../manage_volumes/" class="md-footer__link md-footer__link--next" aria-label="Next: Create and manage volumes" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Launch and manage instances
+                Create and manage volumes
               </div>
             </div>
             <div class="md-footer__button md-icon">
