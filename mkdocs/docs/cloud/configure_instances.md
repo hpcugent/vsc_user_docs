@@ -63,10 +63,12 @@ VSC IP addresses (172.24.48.0/20 IPs for \_vsc network). Unlike fixed IP
 addresses, floating IP addresses can have their associations modified at
 any time, regardless of the state of the instances involved.
 
-Do not release the floating IPs assigned to your project. The floating
-IPs are fixed to the project and it is not possible, as regular user, to
-re-allocate floating IPs. Please contact to VSC Tier1 Cloud support if
-you have released your project's floating IPs by mistake.
+!!! Warning
+
+    Do not release the floating IPs assigned to your project. The floating
+    IPs are fixed to the project and it is not possible, as regular user, to
+    re-allocate floating IPs. Please contact to VSC Tier1 Cloud support if
+    you have released your project's floating IPs by mistake.
 
 This section explains how to make your instance accessible via a public
 IP address by two different methods. The preferred method for \_vm
@@ -90,106 +92,16 @@ need to create a port forwarding rule from a selected port of the
 floating IP, to the port in the \_vm network where your instance's SSH
 server is listening (typically port 22).
 
-You can quickly set up such forwarding rules using
-`neutron_port_forward`, a command line tool available on the UGent login
-node, **login.hpc.ugent.be**. In order to use it, you must create an
-application credential for the role "User", and save it as an openrc
-file (see section [application credentials](access.md#application-credentials)
-on page ). Transfer the openrc file to your
-VSC storage space, so _neutron_port_forward_ can read it. To set up new
-port forwarding rules, run the script providing the path to the openrc
-file as an argument to the _-o_ option, and a file describing your port
-forwarding configuration as argument to the _-m_ option:
+You can quickly set up such forwarding rules using [Terraform](terraform.md).
+We provide several examples to generate automatically several port forwarding rules
+to access to your VMs via SSH and port 22. You can also include more rules for more
+external ports.
 
+It is also possible to set port forwarding rules using OpenStack client
+(only recommended for testing purposes). Please refer to OpenStack client
+documentation for more
+[information](https://docs.openstack.org/python-openstackclient/latest/cli/command-objects/floating-ip-port-forwarding.html)
 
-
-```shell
-neutron_port_forward -o <openrc file> -m <ini-file>
-```
-
-The following is an example configuration file:
-
-```
-[DEFAULT]
-floatingip=193.190.85.40
-network=_vm
-
-[classa]
-pattern=classa-(+̣)
-22=52000:100:22
-5900=55900
-
-[classb]
-pattern=classb-(+̣)
-80=52080
-```
-
-Here we define defaults for the floating ip and target network, and two
-classes. Instances are assigned to a class if their name matches the
-regular expression given in `pattern`. The value of `pattern` must be a
-valid Python regular expression, and the first capturing group (if any)
-must match an integer.
-
-Port forwarding rules are given in the form
-`target=source(:multiplier:offset)`. This will set up a forwarding rule
-from the floating IP port:
-
- > (source + multiplier ∗ i + offset) → target ,
-
-where **_i_** is the integer matched by the first capturing group, and
-"target" is a port of the fixed IP for the instance in the chosen
-network, in this case the _vm network. "multiplier" and "offset" are
-optional and default to 1 and 0 respectively. In our example, this
-results in the following set of port forwarding rules for the public IP
-address 193.190.85.40:
-
-
-```
-  52122   ->   classa-1:22
-  52222   ->   classa-2:22
-  ...     
-  55901   ->   classa-1:5900
-  55902   ->   classa-2:5900
-  ...     
-  52081   ->   classb-1:80
-  52082   ->   classb-2:80
-  ...     
-```
-
-
-This is another basic port forwarding configuration example without
-patterns, in this case just to connect via SSH using external port 52000
-to a running VM called testvm:
-
-```
-[DEFAULT]
-floatingip=193.190.85.40
-network=_vm
-
-[testvm]
-22=52000
-```
-
-You can also see an overview of existing port forwarding rules for the
-ip addresses in your configuration file using
-_neutron_port_forward --show_. Each rule has an internal id, which you
-can see if you combine the options _--show_ and _--id_ as follows:
-
-```shell
-neutron_port_forward -o <openrc file> -m <ini-file> --show --id
-```
-
-To remove port forwarding rules, use the option
-`--remove=<list of id's>` with a comma-separated list of the id's of the
-rules you want to remove.
-
-Please note that when you remove and reinstantiate a VM, OpenStack also
-removes the port forwarding rules assigned to this VM automatically. If
-you intantiate again the same VM you should run `neutron_port_forward`
-and restore the port forwarding rules.
-
-`neutron_port_forward` provides a few more options and advanced
-features, run the command with the `--help` option for more information.
 
 ### Associate a floating ip
 

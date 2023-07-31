@@ -4,13 +4,12 @@ nav:
   - introduction.md
   - access.md
   - dashboard.md
+  - terraform.md
   - manage_images.md
   - flavors.md
   - configure_instances.md
-  - launch_instance.md
   - manage_volumes.md
-  - heat_templates.md
-  - terraform.md
+  - launch_instance.md
   - shares.md
   - gpus.md
   - appendix.md

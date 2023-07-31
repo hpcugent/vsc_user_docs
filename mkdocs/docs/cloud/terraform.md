@@ -1,23 +1,14 @@
 # Orchestration Using Terraform
 
 HashiCorp Terraform <https://www.terraform.io/> is an
-infrastructure as code tool (IaC), similar to OpenStack
-Heat orchestrator
-(See chapter [using heat](heat_templates.md#orchestration-using-heat)
-). Users can deploy a data center
+infrastructure as code tool (IaC). Users can deploy a data center
 infrastructure using a declarative configuration language known as
 HashiCorp Configuration Language (HCL), or using JSON.
 Terraform has
 some advantages over OpenStack Heat service. It is has a simple syntax, it
 can provision virtual infrastructures across multiple cloud providers
-(not only OpenStack) and it provides important features not supported by
-Heat at this
-moment, like network port forwarding rules (see
+(not only OpenStack) and it provides important features like network port forwarding rules (see
 [floating-ip](configure_instances.md#floating-ip-port-forwarding)).
-This means that with Terraform, scripts
-like `neutron_port_forward` (see
-[port forwarding script](configure_instances.md#floating-ip-port-forwarding)
-) are no longer needed.
 Terraform is
 currently one of the most popular infrastructure automation tools
 available. VSC Cloud also provides some template examples that could be
