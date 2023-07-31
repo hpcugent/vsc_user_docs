@@ -1,4 +1,12 @@
-# Launch and manage instances
+# Launch and manage instances (manually)
+
+
+!!! Note
+
+    Although for testing purposes, you can always instantiate VMs
+    manually using this method, we recommend deploying and manging
+    your VMs (even for small Cloud infrastructures)
+    with [Terraform](terraform.md).
 
 Instances are virtual machines that run inside the cloud. You can launch
 an _instance_ from the following sources:
