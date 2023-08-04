@@ -1,0 +1,41 @@
+name: Run Linter and tests
+on: [push, pull_request]
+# Declare default permissions as read only.
+permissions: read-all
+jobs:
+
+  flake8-lint:
+    runs-on: ubuntu-20.04
+    name: Lint
+    steps:
+      - name: Check out source repository
+        uses: actions/checkout@v3
+      - name: Set up Python environment
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: flake8 Lint
+        uses: py-actions/flake8@v2
+        with:
+          max-line-length: "120"
+          path: "scripts/module_list"
+
+  pytest-tests:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          cd scripts/module_list
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Test with pytest
+        run: |
+          cd scripts/module_list
+          pytest tests
+#         pip install pytest pytest-cov
+#         pytest tests --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
