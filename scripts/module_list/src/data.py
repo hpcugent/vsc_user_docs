@@ -23,20 +23,10 @@ def filter_fn_gent_modules(data: np.ndarray):
 def ugent_clusters():
     return avail(name="cluster/", filter_fn=filter_fn_gent_cluster)
 
-
-def simplify_modules(data):
-    """
-
-    @param modules:
-    @return:
-    """
-    return np.unique([entry.split("/")[0] for entry in data])
-
-
 def data_ugent():
     data = {}
     for cluster in ugent_clusters():
         swap(cluster)
-        data[cluster] = simplify_modules(avail(filter_fn=filter_fn_gent_modules))
+        data[cluster] = avail(filter_fn=filter_fn_gent_modules)
         break
     return data
