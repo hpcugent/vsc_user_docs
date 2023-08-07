@@ -9,8 +9,8 @@ def main():
 
 
 def md():
-    generate_general_overview({})
+    generate_general_overview()
 
 
 if __name__ == '__main__':
-    main()
+    md()

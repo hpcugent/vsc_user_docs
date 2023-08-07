@@ -30,7 +30,7 @@ def simplify_modules(data):
     @param modules:
     @return:
     """
-    return [entry.split("/")[0] for entry in data]
+    return np.unique([entry.split("/")[0] for entry in data])
 
 
 def data_ugent():

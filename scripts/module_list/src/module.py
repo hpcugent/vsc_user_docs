@@ -18,8 +18,6 @@ def module(*args, filter_fn=lambda x: x) -> np.ndarray:
         stdout=subprocess.DEVNULL
     )
 
-    print(proc)
-
     return filter_fn(np.array(proc.stderr.split()))
 
 
