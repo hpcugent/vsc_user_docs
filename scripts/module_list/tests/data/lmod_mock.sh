@@ -1,2 +1,2 @@
 #!/bin/bash
-cat ${TEST} >&2
+cat ${MOCK_FILE} >&2

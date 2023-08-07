@@ -1,14 +1,24 @@
 import os
 
-from src.module import avail
 
+class TestModule:
 
-# content of test_sample.py
-def inc(x):
-    return x + 1
+    # ---------------------------
+    # Class level setup/teardown
+    # ---------------------------
 
+    @classmethod
+    def setup_class(cls):
+        os.environ["LMOD_CMD"] = "data/lmod_mock.sh"
 
-def test_answer():
-    os.environ["LMOD_CMD"] = "data/lmod_mock.sh"
-    os.environ["TEST"] = "data/test.txt"
-    t = avail()
+    # ---------------------------
+    # Module tests
+    # ---------------------------
+
+    def test_avail(self):
+        os.environ["MOCK_FILE"] = "data/mock_avail_0.txt"
+        assert True
+
+    def test_swap(self):
+        os.environ["MOCK_FILE"] = "data/mock_swap_0.txt"
+        assert True
