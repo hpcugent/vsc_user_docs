@@ -11,10 +11,10 @@ class TestMarkdown:
 
     @classmethod
     def setup_class(cls):
-        with open('data/data_simple.pickle', 'rb') as handle:
+        with open('scripts/module_list/tests/data/data_simple.pickle', 'rb') as handle:
             cls.simple_data = simplify_modules(pickle.load(handle))
 
-        with open('data/data_all.pickle', 'rb') as handle:
+        with open('scripts/module_list/tests/data/data_all.pickle', 'rb') as handle:
             cls.all_data = simplify_modules(pickle.load(handle))
 
     # ---------------------------
