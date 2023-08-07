@@ -16,7 +16,7 @@ def module(*args, filter_fn=lambda x: x) -> np.ndarray:
         [lmod, "python", "-t"] + list(args),
         encoding="utf-8",
         stderr=subprocess.PIPE,
-        stdout=subprocess.DEVNULL
+        stdout=subprocess.PIPE
     )
 
     return filter_fn(np.array(proc.stderr.split()))
@@ -41,3 +41,5 @@ def swap(name: str) -> None:
     @param name: Module you want to swap to.
     """
     module("swap", name)
+
+    # EXEC de stdout

@@ -1,6 +1,28 @@
 from mdutils.mdutils import MdUtils
 from .data import data_ugent
 import numpy as np
+import pickle
+from .utils import simplify_modules
+
+
+def generate_table_data(data: dict):
+    """
+    
+    @param data:
+    @return:
+    """
+    all_modules = simplify_modules(np.concatenate(list(data.values())))
+
+    final = np.array([" "])
+    final = np.append(final, list(data.keys()))
+
+    for module in all_modules:
+        final = np.append(final, module)
+
+        for cluster in data:
+            final = np.append(final, "X" if module in data[cluster] else " ")
+
+    return final,  len(data.keys()) + 1, len(all_modules)+1
 
 
 def generate_module_table(data: dict, md_file: MdUtils) -> None:
@@ -10,8 +32,8 @@ def generate_module_table(data: dict, md_file: MdUtils) -> None:
     @param data: Dict with all the data. Keys are the cluster names.
     @param md_file: MdUtils object.
     """
-    all_modules = np.unique(np.concatenate(list(data.values())))
-    md_file.new_table(columns=1, rows=len(all_modules), text=list(all_modules), text_align='center')
+    structured, col, row = generate_table_data(data)
+    md_file.new_table(columns=col, rows=row, text=list(structured), text_align='center')
 
 
 def generate_general_overview() -> None:
