@@ -121,11 +121,11 @@ def generate_table_data(data: dict):
     final = np.array([" "])
     final = np.append(final, list(data.keys()))
 
-    for module in all_modules:
-        final = np.append(final, module)
+    for package in all_modules:
+        final = np.append(final, package)
 
         for cluster in data:
-            final = np.append(final, "X" if module in data[cluster] else " ")
+            final = np.append(final, "X" if package in data[cluster] else " ")
 
     return final, len(data.keys()) + 1, len(all_modules) + 1
 
@@ -152,5 +152,6 @@ def generate_general_overview() -> None:
     md_file.create_md_file()
 
 
-# Generate the overview
-generate_general_overview()
+if __name__ == '__main__':
+    # Generate the overview
+    generate_general_overview()

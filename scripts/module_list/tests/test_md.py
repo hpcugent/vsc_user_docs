@@ -1,7 +1,6 @@
 import pickle
 from mdutils.mdutils import MdUtils
-from src.md_generator import generate_module_table, generate_table_data
-from src.utils import simplify_modules
+from scripts.module_list.module_overview import simplify_modules, generate_table_data, generate_module_table
 
 
 class TestMarkdown:
