@@ -22,10 +22,10 @@ class TestMarkdown:
     # ---------------------------
 
     def test_table_generate_simple(self):
-        table_data = generate_table_data(self.simple_data)
+        generate_table_data(self.simple_data)
 
     def test_table_generate_all(self):
-        table_data = generate_table_data(self.all_data)
+        generate_table_data(self.all_data)
 
     def test_simple(self):
         md_file = MdUtils(file_name='test_simple', title='Overview Modules')
