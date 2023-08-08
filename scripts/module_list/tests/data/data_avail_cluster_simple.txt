@@ -1,0 +1,3 @@
+/etc/modulefiles/vsc:
+cluster/accelgor
+cluster/victini

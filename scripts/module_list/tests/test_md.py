@@ -1,6 +1,6 @@
 import pickle
 from mdutils.mdutils import MdUtils
-from scripts.module_list.module_overview import simplify_modules, generate_table_data, generate_module_table
+from module_overview import simplify_modules, generate_table_data, generate_module_table
 import os
 
 
@@ -10,12 +10,15 @@ class TestMarkdown:
     # Class level setup/teardown
     # ---------------------------
 
+    path = None
+
     @classmethod
     def setup_class(cls):
-        with open('scripts/module_list/tests/data/data_simple.pickle', 'rb') as handle:
+        path = os.path.dirname(os.path.realpath(__file__))
+        with open(path + '/data/data_simple.pickle', 'rb') as handle:
             cls.simple_data = simplify_modules(pickle.load(handle))
 
-        with open('scripts/module_list/tests/data/data_all.pickle', 'rb') as handle:
+        with open(path + '/data/data_all.pickle', 'rb') as handle:
             cls.all_data = simplify_modules(pickle.load(handle))
 
     @classmethod

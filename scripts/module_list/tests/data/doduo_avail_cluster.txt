@@ -1,0 +1,10 @@
+/etc/modulefiles/vsc:
+cluster/accelgor
+cluster/default
+cluster/doduo
+cluster/donphan
+cluster/gallade
+cluster/joltik
+cluster/skitty
+cluster/swalot
+cluster/victini
