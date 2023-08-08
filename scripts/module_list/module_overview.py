@@ -1,5 +1,6 @@
 import os
 import subprocess
+from typing import Union, Tuple
 from mdutils.mdutils import MdUtils
 import numpy as np
 
@@ -52,17 +53,23 @@ def module_swap(name: str) -> None:
 # Fetch data
 # --------------------------------------------------------------------------------------------------------
 
-def filter_fn_gent_cluster(data: np.ndarray):
+def filter_fn_gent_cluster(data: np.ndarray) -> np.ndarray:
+    """
+    Filter function for the output of clusters.
+    @param data: Output
+    @return: Filtered output
+    """
     return data[~np.char.endswith(data, ":") &
-                ~np.char.startswith(data, "env/")
+                ~np.char.startswith(data, "env/") &
+                ~np.char.startswith(data, "cluster/default")
                 ]
 
 
-def filter_fn_gent_modules(data: np.ndarray):
+def filter_fn_gent_modules(data: np.ndarray) -> np.ndarray:
     """
-
-    @param data:
-    @return:
+    Filter function for the output of all modules.
+    @param data: Output
+    @return: Filtered output
     """
     return data[~np.char.endswith(data, ":") &
                 ~np.char.startswith(data, "env/") &
@@ -70,13 +77,24 @@ def filter_fn_gent_modules(data: np.ndarray):
                 ]
 
 
-def ugent_clusters():
+def clusters_ugent() -> np.ndarray:
+    """
+    Returns all the cluster names of the HPC at UGent.
+    @return: cluster names
+    """
+
     return module_avail(name="cluster/", filter_fn=filter_fn_gent_cluster)
 
 
-def data_ugent():
+def modules_ugent() -> dict:
+    """
+    Returns all the module names that are installed on the HPC on UGent.
+    They are grouped by cluster.
+    @return: Dictionary with all the modules per cluster
+    """
+
     data = {}
-    for cluster in ugent_clusters():
+    for cluster in clusters_ugent():
         module_swap(cluster)
         data[cluster] = module_avail(filter_fn=filter_fn_gent_modules)
     return data
@@ -86,12 +104,11 @@ def data_ugent():
 # Util functions
 # --------------------------------------------------------------------------------------------------------
 
-def simplify_modules(data: dict | list | np.ndarray):
+def simplify_modules(data: Union[dict, list, np.ndarray]) -> Union[dict, list, np.ndarray]:
     """
-    Data is a list of modules.
-    It removes the version of the modules and removes the duplicates.
+    It removes the version of the modules and the duplicates.
 
-    @param data:
+    @param data: List of modules
     @return: List of programs.
     """
 
@@ -109,11 +126,12 @@ def simplify_modules(data: dict | list | np.ndarray):
 # Generate markdown
 # --------------------------------------------------------------------------------------------------------
 
-def generate_table_data(data: dict):
+def generate_table_data(data: dict) -> Tuple[np.ndarray, int, int]:
     """
+    Generate the data for the markdown table.
 
-    @param data:
-    @return:
+    @param data: Available data
+    @return: Returns tuple (Table data, #col, #row)
     """
     data = simplify_modules(data)
     all_modules = simplify_modules(np.concatenate(list(data.values())))
@@ -147,7 +165,7 @@ def generate_general_overview() -> None:
     It generates a list of all the available software and indicates on which cluster it is available.
     """
     md_file = MdUtils(file_name='Example_Markdown', title='Overview Moduls')
-    data = data_ugent()
+    data = modules_ugent()
     generate_module_table(data, md_file)
     md_file.create_md_file()
 
