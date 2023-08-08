@@ -44,7 +44,7 @@ require for your program execution.
 
 The program environment on the {{ hpc }} is controlled by pre-defined settings,
 which are stored in environment (or shell) variables. For more
-information about environment variables, see [the chapter "Getting started", section "Variables" in the intro to Linux]().
+information about environment variables, see [the chapter "Getting started", section "Variables" in the intro to Linux](../../linux-tutorial/#variables).
 
 All the software packages that are installed on the {{ hpc }} cluster require
 different settings. These packages include compilers, interpreters,
@@ -238,7 +238,7 @@ the module list applicable to that particular system.
 Once a module has been installed on the cluster, the executables or
 libraries it comprises are never modified. This policy ensures that the
 user's programs will run consistently, at least if the user specifies a
-specific version. **Failing to specify a version may result in unexpected behviour.**
+specific version. **Failing to specify a version may result in unexpected behaviour.**
 
 Consider the following example: the user decides to use the `example`
 module and at that point in time, just a single version 1.2.3 is
@@ -774,7 +774,7 @@ will start on `{{ othercluster }}` instead of the default `{{ defaultcluster }}`
 Note: the `{{ othercluster }}` modules may not work directly on the login nodes, because the
 login nodes do not have the same architecture as the `{{ othercluster }}` cluster, they have
 the same architecture as the `{{ defaultcluster }}` cluster however, so this is why by default
-software works on the login nodes. See [the section on Running software that is incompatible with host](../intro-HPC/troubleshooting/#running-software-that-is-incompatible-with-host) for why this is and how to fix
+software works on the login nodes. See [the section on Running software that is incompatible with host](troubleshooting.md#running-software-that-is-incompatible-with-host) for why this is and how to fix
 this.
 
 To list the available cluster modules, you can use the
