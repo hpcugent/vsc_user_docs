@@ -1,5 +1,8 @@
 # Common Pitfalls
-## Files
+
+This page highlights common pitfalls in Linux usage, offering insights into potential challenges users might face. 
+By understanding these pitfalls, you can avoid unnecessary hurdles.
+
 ### Location
 
 If you receive an error message which contains something like the
@@ -125,8 +128,7 @@ smallest of problems!**
     examples. There is an associated book which gets a lot of good
     reviews
 
-3.  [The Linux Documentation Project](http://www.tldp.org/guides.html) -
-    More guides on various topics relating to the Linux command line
+3.  [The Linux Documentation Project](http://www.tldp.org/guides.html): More guides on various topics relating to the Linux command line
 
 4.  [basic shell
     usage](http://linuxcommand.org/lc3_learning_the_shell.php)
@@ -135,7 +137,5 @@ smallest of problems!**
     beginners](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)
 
 6.  [MOOC](https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-0)
-
-# Q & A
 
 Please don't hesitate to contact in case of questions or problems.

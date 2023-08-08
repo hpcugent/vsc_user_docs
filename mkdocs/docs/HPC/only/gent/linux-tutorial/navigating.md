@@ -1,6 +1,9 @@
 Navigating
 ==========
 
+This chapter serves as a guide to navigating within a Linux shell, giving users essential techniques to traverse directories. 
+A very important skill. 
+
 Current directory: "pwd" and "\$PWD"
 ------------------------------------
 
@@ -203,3 +206,5 @@ Exercises
 
 -   See how home directories are organised. Can you access the home
     directory of other users?
+
+The [next](manipulating_files_and_directories.md) chapter will teach you how to interact with files and directories.
