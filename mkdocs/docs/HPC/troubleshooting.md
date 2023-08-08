@@ -422,8 +422,9 @@ The correct command is `module swap cluster/{{othercluster}}`. See also [Specify
 {% endif %}
 
 {% if site == gent %}
-## Running software that is incompatible with host
+## Illegal instruction
 
+### Running software that is incompatible with host
 When running software provided through modules (see [Modules](../running_batch_jobs/#modules)), you may run into
 errors like:
 
@@ -440,8 +441,7 @@ Intel(R) MOVBE, F16C, FMA, BMI, LZCNT and AVX2 instructions.
 
 or errors like:
 
-<pre><code>
-$ <b>python</b>
+<pre><code>$ <b>python</b>
 Illegal instruction
 </code></pre>
 
@@ -479,4 +479,13 @@ The following have been reloaded with a version change:
 This might result in the same problems as mentioned above. When swapping
 to a different cluster, you can run `module purge` to unload all modules
 to avoid problems (see [Purging all modules](../running_batch_jobs/#purging-all-modules)).
+
+### Multi-job submissions on a non-default cluster
+
+When using multi-job submissions. It could be possible you get following error when you try to run it on a non-default cluster.
+
+<pre><code>$ <b> wsub</b>
+/apps/gent/RHEL8/skylake-ib/software/worker/1.6.13-iimpi-2021b/bin/wsub: line 27: 2152510 <b>Illegal instruction</b>     (core dumped) ${PERL} ${DIR}/../lib/wsub.pl "$@"
+</code></pre>
+
 {% endif %}
