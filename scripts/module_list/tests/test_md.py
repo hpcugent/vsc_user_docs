@@ -1,6 +1,7 @@
 import pickle
 from mdutils.mdutils import MdUtils
 from scripts.module_list.module_overview import simplify_modules, generate_table_data, generate_module_table
+import os
 
 
 class TestMarkdown:
@@ -16,6 +17,11 @@ class TestMarkdown:
 
         with open('scripts/module_list/tests/data/data_all.pickle', 'rb') as handle:
             cls.all_data = simplify_modules(pickle.load(handle))
+
+    @classmethod
+    def teardown_class(cls):
+        os.remove("test_simple.md")
+        os.remove("test_all.md")
 
     # ---------------------------
     # Markdown tests
