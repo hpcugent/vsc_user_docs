@@ -138,12 +138,12 @@ program will now be run for all 100 parameter instances -- 8
 concurrently -- until all computations are done. A computation for such
 a parameter instance is called a work item in Worker parlance.
 
-!!! danger
-    When you want to submit a job on a cluster that is not the default. You need to use:
-    <pre><code>$ <b>module swap env/slurm/\<submit cluster\></b>
+!!! warning
+    When you want to submit a job on a cluster that is not the default cluster. You need to use:
+    <pre><code>$ <b>module swap env/slurm/<submit cluster\></b>
     </code></pre>
     instead of
-    <pre><code>$ <b>module swap cluster/\<submit cluster\> </b></code></pre>
+    <pre><code>$ <b>module swap cluster/<submit cluster\> </b></code></pre>
     More info can be found in [Troubleshooting](troubleshooting.md#multi-job-submissions-on-a-non-default-cluster).
 
 ## The Worker framework: Job arrays
