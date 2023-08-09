@@ -42,9 +42,9 @@ def module_avail(name: str = "", filter_fn=lambda x: x) -> np.ndarray:
 
 def module_swap(name: str) -> None:
     """
-    API to call swap command of module.
+    Function to run "module swap" commands.
 
-    @param name: Module you want to swap to.
+    @param name: Name of module you want to swap to.
     """
     module("swap", name)
 
@@ -55,7 +55,10 @@ def module_swap(name: str) -> None:
 
 def filter_fn_gent_cluster(data: np.ndarray) -> np.ndarray:
     """
-    Filter function for the output of clusters.
+    Filter function for output of "module avail" commands on HPC-UGent infrastructure.
+
+    Filters out lines ending with ':' (which are paths to module files),
+    and lines starting with 'env/' or 'cluster/default', which are not actually software modules
     @param data: Output
     @return: Filtered output
     """
@@ -106,7 +109,7 @@ def modules_ugent() -> dict:
 
 def simplify_modules(data: Union[dict, list, np.ndarray]) -> Union[dict, list, np.ndarray]:
     """
-    It removes the version of the modules and the duplicates.
+    Simplify list of modules by removing versions and duplicates.
 
     @param data: List of modules
     @return: List of programs.
@@ -128,7 +131,7 @@ def simplify_modules(data: Union[dict, list, np.ndarray]) -> Union[dict, list, n
 
 def generate_table_data(data: dict) -> Tuple[np.ndarray, int, int]:
     """
-    Generate the data for the markdown table.
+    Generate data that can be used to construct a MarkDown table.
 
     @param data: Available data
     @return: Returns tuple (Table data, #col, #row)
@@ -164,7 +167,7 @@ def generate_general_overview() -> None:
     Generate the general overview in a markdown file.
     It generates a list of all the available software and indicates on which cluster it is available.
     """
-    md_file = MdUtils(file_name='Example_Markdown', title='Overview Moduls')
+md_file = MdUtils(file_name='module_overview.md', title='Overview of available modules per cluster')
     data = modules_ugent()
     generate_module_table(data, md_file)
     md_file.create_md_file()
