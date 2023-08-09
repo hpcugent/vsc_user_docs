@@ -1,25 +1,25 @@
+import numpy as np
 import os
 import subprocess
-from typing import Union, Tuple
 from mdutils.mdutils import MdUtils
-import numpy as np
+from typing import Union, Tuple
 
 
 # --------------------------------------------------------------------------------------------------------
-# Module bash API
+# Functions to run "module" commands
 # --------------------------------------------------------------------------------------------------------
 
 def module(*args, filter_fn=lambda x: x) -> np.ndarray:
     """
-    API to call the module command.
+    Function to run "module" commands.
 
     @param args: Extra arguments for the module command.
     @param filter_fn: Filter function on the ouput.
-    @return:
+    @return: Array with the output of the module command.
     """
     lmod = os.getenv('LMOD_CMD')
     proc = subprocess.run(
-        [lmod, "python", "-t"] + list(args),
+        [lmod, "python", "--terse"] + list(args),
         encoding="utf-8",
         stderr=subprocess.PIPE,
         stdout=subprocess.PIPE
@@ -30,7 +30,7 @@ def module(*args, filter_fn=lambda x: x) -> np.ndarray:
 
 def module_avail(name: str = "", filter_fn=lambda x: x) -> np.ndarray:
     """
-    API to call the module avail command of Lmod.
+    Function to run "module avail" commands.
 
     @param name: Possible module name.
     @param filter_fn: Filter on the output.
