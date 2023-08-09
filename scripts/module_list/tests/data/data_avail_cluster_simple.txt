@@ -1,3 +1,4 @@
 /etc/modulefiles/vsc:
-cluster/accelgor
-cluster/victini
+cluster/dialga
+cluster/pikachu
+cluster/default
