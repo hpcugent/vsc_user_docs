@@ -40,10 +40,8 @@ class TestMarkdown:
         md_file = MdUtils(file_name='test_simple', title='Overview Modules')
         generate_module_table(self.simple_data, md_file)
         md_file.create_md_file()
-        assert True
 
     def test_all(self):
         md_file = MdUtils(file_name='test_all', title='Overview Modules')
         generate_module_table(self.all_data, md_file)
         md_file.create_md_file()
-        assert True

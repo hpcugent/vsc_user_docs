@@ -1,5 +1,5 @@
 import os
-from module_overview import modules_ugent, clusters_ugent, simplify_modules
+from module_overview import modules_ugent, simplify_modules
 
 
 class TestData:
