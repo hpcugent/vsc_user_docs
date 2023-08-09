@@ -36,7 +36,6 @@ def module_avail(name: str = "", filter_fn=lambda x: x) -> np.ndarray:
     @param filter_fn: Filter on the output.
     @return: List of all available modules of name, or all if name is not given.
     """
-    # return module(f"avail {name if name else ''}", filter_fn=filter_fn)
     return module("avail", name, filter_fn=filter_fn)
 
 
@@ -167,7 +166,7 @@ def generate_general_overview() -> None:
     Generate the general overview in a markdown file.
     It generates a list of all the available software and indicates on which cluster it is available.
     """
-md_file = MdUtils(file_name='module_overview.md', title='Overview of available modules per cluster')
+    md_file = MdUtils(file_name='module_overview.md', title='Overview of available modules per cluster')
     data = modules_ugent()
     generate_module_table(data, md_file)
     md_file.create_md_file()
