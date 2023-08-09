@@ -488,4 +488,18 @@ When using multi-job submissions. It could be possible you get following error w
 /apps/gent/RHEL8/skylake-ib/software/worker/1.6.13-iimpi-2021b/bin/wsub: line 27: 2152510 <b>Illegal instruction</b>     (core dumped) ${PERL} ${DIR}/../lib/wsub.pl "$@"
 </code></pre>
 
+When executing the `module swap cluster/…` command, you are not only changing your environment to submit to the other cluster, but also to use the part of the central software stack that is specific to that cluster. The latter means that you are running worker on top of a Perl installation that is optimized specifically for the CPUs in that cluster workernodes. That installation is not compatible with the CPUs of the login nodes, which explains the "Illegal instruction" error.
+
+We have split up the cluster module into several "submodules" to help deal with this problem.
+By using "module swap `env/slurm/<submit cluster>` instead of `module swap cluster/<submit cluster>` (starting from the default environment where the default cluster is loaded), you can update your environment to submit jobs to the `<submit cluster>`, while still using the software installations that are specific to the default cluster (which are compatible with the login nodes since the default cluster workernodes have the same CPUs).
+
+
+!!! Example
+    if you want to submit a worker job on a different cluster, please use
+    <pre><code>$ <b>module swap env/slurm/\<submit cluster\></b> </code></pre>
+    instead of
+    <pre><code>$ <b>module swap cluster/\<submit cluster\></b> </code></pre>
+
+We recommend using a module `swap cluster/<cluster>` command after submitting. This to "reset" your environment to a sane state, since only having a different `env/slurm/...` module loaded can also lead to some surprises if you're not paying close attention.
+
 {% endif %}
