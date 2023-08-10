@@ -491,9 +491,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#illegal-instruction-error" class="md-nav__link">
+    Illegal instruction error
+  </a>
+  
+    <nav class="md-nav" aria-label="Illegal instruction error">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#running-software-that-is-incompatible-with-host" class="md-nav__link">
     Running software that is incompatible with host
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-job-submissions-on-a-non-default-cluster" class="md-nav__link">
+    Multi-job submissions on a non-default cluster
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1093,9 +1113,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#illegal-instruction-error" class="md-nav__link">
+    Illegal instruction error
+  </a>
+  
+    <nav class="md-nav" aria-label="Illegal instruction error">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#running-software-that-is-incompatible-with-host" class="md-nav__link">
     Running software that is incompatible with host
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-job-submissions-on-a-non-default-cluster" class="md-nav__link">
+    Multi-job submissions on a non-default cluster
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1422,7 +1462,8 @@ If you don't understand the warning or error, contact the helpdesk at hpc@ugent.
 
 <p>This is because there can only be one <code>cluster</code> module active at a time.
 The correct command is <code>module swap cluster/donphan</code>. See also <a href="../running_batch_jobs/#specifying-the-cluster-on-which-to-run">Specifying the cluster on which to run</a>.</p>
-<h2 id="running-software-that-is-incompatible-with-host">Running software that is incompatible with host<a class="headerlink" href="#running-software-that-is-incompatible-with-host" title="Permanent link">#</a></h2>
+<h2 id="illegal-instruction-error"><code>Illegal instruction</code> error<a class="headerlink" href="#illegal-instruction-error" title="Permanent link">#</a></h2>
+<h3 id="running-software-that-is-incompatible-with-host">Running software that is incompatible with host<a class="headerlink" href="#running-software-that-is-incompatible-with-host" title="Permanent link">#</a></h3>
 <p>When running software provided through modules (see <a href="../running_batch_jobs/#modules">Modules</a>), you may run into
 errors like:</p>
 <pre><code>$ <b>module swap cluster/donphan</b>
@@ -1437,8 +1478,7 @@ Intel(R) MOVBE, F16C, FMA, BMI, LZCNT and AVX2 instructions.
 </code></pre>
 
 <p>or errors like:</p>
-<pre><code>
-$ <b>python</b>
+<pre><code>$ <b>python</b>
 Illegal instruction
 </code></pre>
 
@@ -1473,6 +1513,30 @@ The following have been reloaded with a version change:
 <p>This might result in the same problems as mentioned above. When swapping
 to a different cluster, you can run <code>module purge</code> to unload all modules
 to avoid problems (see <a href="../running_batch_jobs/#purging-all-modules">Purging all modules</a>).</p>
+<h3 id="multi-job-submissions-on-a-non-default-cluster">Multi-job submissions on a non-default cluster<a class="headerlink" href="#multi-job-submissions-on-a-non-default-cluster" title="Permanent link">#</a></h3>
+<p>When using a tool that is made available via modules to submit jobs, for example <a href="../multi_job_submission/">Worker</a>,
+you may run into the following error when targeting a non-default cluster:</p>
+<pre><code>$ <b> wsub</b>
+/apps/gent/.../.../software/worker/.../bin/wsub: line 27: 2152510 <b>Illegal instruction</b>     (core dumped) ${PERL} ${DIR}/../lib/wsub.pl "$@"
+</code></pre>
+
+<p>When executing the <code>module swap cluster</code> command, you are not only changing your session environment to submit
+to that specific cluster, but also to use the part of the central software stack that is specific to that cluster.
+In the case of the Worker example above, the latter implies that you are running the <code>wsub</code> command
+on top of a Perl installation that is optimized specifically for the CPUs of the workernodes of that cluster,
+which may not be compatible with the CPUs of the login nodes, triggering the <code>Illegal instruction</code> error.</p>
+<p>The cluster modules are split up into several <code>env/*</code> "submodules" to help deal with this problem.
+For example, by using <code>module swap env/slurm/donphan</code> instead of <code>module swap cluster/donphan</code> (starting from the default environment, the <code>doduo</code> cluster), you can update your environment to submit jobs to <code>donphan</code>, while still using the software installations that are specific to the <code>doduo</code> cluster (which are compatible with the login nodes since the <code>doduo</code> cluster workernodes have the same CPUs).
+The same goes for the other clusters as well of course.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To submit a Worker job to a specific cluster, like the <a href="../interactive_debug/"><code>donphan</code> interactive cluster</a> for instance, use:
+<pre><code>$ <b>module swap env/slurm/donphan</b> </code></pre>
+instead of
+<pre><code>$ <b>module swap cluster/donphan</b> </code></pre></p>
+</div>
+<p>We recommend using a <code>module swap cluster</code> command after submitting the jobs.</p>
+<p>This to "reset" your environment to a sane state, since only having a different <code>env/slurm</code> module loaded can also lead to some surprises if you're not paying close attention.</p>
 
 
 

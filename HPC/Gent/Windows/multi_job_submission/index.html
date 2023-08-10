@@ -1188,6 +1188,15 @@ total number of work items: 41
 program will now be run for all 100 parameter instances -- 8
 concurrently -- until all computations are done. A computation for such
 a parameter instance is called a work item in Worker parlance.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When you attempt to submit a worker job on a non-default cluster, you might encounter an <code>Illegal instruction</code> error. In such cases, the solution is to use a different <code>module swap</code> command. For example, to submit a worker job to the <a href="../interactive_debug/"><code>donphan</code> debug cluster</a> from the login nodes, use:
+<pre><code>$ <b>module swap env/slurm/donphan</b>
+</code></pre>
+instead of
+<pre><code>$ <b>module swap cluster/donphan </b></code></pre>
+We recommend using a <code>module swap cluster</code> command after submitting the jobs. Additional information about this as well as more comprehensive details concerning the 'Illegal instruction' error can be accessed <a href="../troubleshooting/#multi-job-submissions-on-a-non-default-cluster">here</a>.</p>
+</div>
 <h2 id="the-worker-framework-job-arrays">The Worker framework: Job arrays<a class="headerlink" href="#the-worker-framework-job-arrays" title="Permanent link">#</a></h2>
 <p>First go to the right directory:</p>
 <pre><code>$ <b>cd ~/examples/Multi-job-submission/job_array</b></code></pre>
