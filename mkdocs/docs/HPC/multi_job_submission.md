@@ -144,7 +144,7 @@ a parameter instance is called a work item in Worker parlance.
     </code></pre>
     instead of
     <pre><code>$ <b>module swap cluster/<submit cluster\> </b></code></pre>
-    More info can be found in [Troubleshooting](troubleshooting.md#multi-job-submissions-on-a-non-default-cluster).
+More general info on the `Ilegal instruction` error is available [here](troubleshooting.md#multi-job-submissions-on-a-non-default-cluster).
 
 ## The Worker framework: Job arrays
 [//]: # (sec:worker-framework-job-arrays)
