@@ -57,7 +57,7 @@ corresponding private key on his local computer.
 
 Since all VSC clusters use Linux as their main operating system, you
 will need to get acquainted with using the command-line interface and
-using the terminal.
+using the terminal ([see tutorial](../../linux-tutorial)).
 
 {%- if OS == windows %}
 A typical Windows environment does not come with pre-installed software
@@ -426,7 +426,7 @@ and password that is used for accessing e-mail).
 After you log in using your {{ university }} login and password, you will be asked to
 upload the file that contains your public key, i.e., the file
 "id_rsa.pub" which you have generated earlier. Make sure that your
-public key is actually accepted for upload, beacuse if it is in a wrong
+public key is actually accepted for upload, because if it is in a wrong
 format, wrong type or too short, then it will be refused.
 
 {% if OS == windows %}

@@ -341,7 +341,7 @@ done with the "-X" option.
 First exit and reconnect to the {{ hpc }} with X-forwarding enabled:
 
 <pre><code><b>$ exit</b>
-<b>$ ssh --X {{ userid }}@{{ loginnode }}</b>
+<b>$ ssh -X {{ userid }}@{{ loginnode }}</b>
 <b>$ hostname -f</b>
 {{ loginhost }}
 </code></pre>

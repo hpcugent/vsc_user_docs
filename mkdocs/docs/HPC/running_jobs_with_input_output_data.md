@@ -966,7 +966,7 @@ on each of the shared filesystems available:
     directory (see [the section on your scratch space](./#your-scratch-space-vsc_scratch)).
 
 **VO data (`$VSC_DATA_VO`)**:   A directory on the shared *data* filesystem shared by the members of
-    your VO, where additional storage quota can be provided (see ). You
+    your VO, where additional storage quota can be provided (see [the section on requesting more storage space](./#requesting-more-storage-space)). You
     can use this as an alternative to your personal `$VSC_DATA`
     directory (see [the section on your data directory](./#your-data-directory-vsc_data)).
 
