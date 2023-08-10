@@ -42,7 +42,11 @@ def gen_content_from_macros():
             mod_name = f"{scripts}.{stem}"
             mod = importlib.import_module(mod_name)
             fun = getattr(mod, stem)
-            outputs[fn] = fun()
+
+            # set global variable name used in docs as the filename without the .py extension
+            variable_name = path.splitext(fn)[0]
+
+            outputs[variable_name] = fun()
     return outputs
 
 
