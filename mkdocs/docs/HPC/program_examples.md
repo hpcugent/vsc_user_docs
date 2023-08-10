@@ -1,8 +1,12 @@
 {% set exampledir="examples/Program-examples" %}
 # Program examples { #ch:program-examples}
 
+If you have **not done so already** copy our examples to your home directory by running the following command:
+<pre><code><b> cp -r {{ examplesdir }} ~/</b></code></pre>
+<sub>`~`(tilde) refers to your home directory, the directory you arrive by default when you login.</sub>
+
 Go to our examples:
-<pre><code>$ <b>cd ~/{{exampledir}}</b></code></pre>
+<pre><code><b>cd ~/{{exampledir}}</b></code></pre>
 
 Here, we just have put together a number of examples for your
 convenience. We did an effort to put comments inside the source files,
