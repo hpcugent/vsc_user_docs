@@ -1,5 +1,5 @@
 import os
-from module_overview import module_avail, filter_fn_gent_modules, filter_fn_gent_cluster
+from module_overview import module_avail, filter_fn_gent_modules, filter_fn_gent_cluster, module_swap
 
 
 class TestModule:
@@ -10,6 +10,7 @@ class TestModule:
 
     @classmethod
     def setup_class(cls):
+        os.environ["TESTS_PATH"] = cls.path
         os.environ["LMOD_CMD"] = cls.path + "/data/lmod_mock.sh"
 
     # ---------------------------
@@ -41,3 +42,12 @@ class TestModule:
         output = module_avail(name="cluster/", filter_fn=filter_fn_gent_cluster)
         assert len(output) == 2
         assert list(output) == ["cluster/dialga", "cluster/pikachu"]
+
+    def test_swap(self):
+        os.environ["MOCK_FILE_SWAP"] = self.path + "/data/data_swap_CLUSTER.txt"
+        module_swap("cluster/dialga")
+        output1 = module_avail()
+        assert len(output1) == 27
+        module_swap("cluster/pikachu")
+        output2 = module_avail()
+        assert len(output2) == 29

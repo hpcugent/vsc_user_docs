@@ -13,8 +13,9 @@ class TestMarkdown:
 
     @classmethod
     def setup_class(cls):
+        os.environ["TESTS_PATH"] = cls.path
         os.environ["LMOD_CMD"] = cls.path + "/data/lmod_mock.sh"
-        os.environ["MOCK_FILE_AVAIL"] = cls.path + "/data/data_avail_simple_pikachu.txt"
+        os.environ["MOCK_FILE_SWAP"] = cls.path + "/data/data_swap_CLUSTER.txt"
         os.environ["MOCK_FILE_AVAIL_CLUSTER"] = cls.path + "/data/data_avail_cluster_simple.txt"
 
     @classmethod
