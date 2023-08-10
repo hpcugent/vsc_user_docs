@@ -1,3 +1,27 @@
+#
+# Copyright 2009-2023 Ghent University
+#
+# This file is part of vsc_user_docs,
+# originally created by the HPC team of Ghent University (http://ugent.be/hpc/en),
+# with support of Ghent University (http://ugent.be/hpc),
+# the Flemish Supercomputer Centre (VSC) (https://www.vscentrum.be),
+# the Flemish Research Foundation (FWO) (http://www.fwo.be/en)
+# and the Department of Economy, Science and Innovation (EWI) (http://www.ewi-vlaanderen.be/en).
+#
+# https://github.com/hpcugent/vsc_user_docs
+#
+# vsc_user_docs is licensed under a
+# Creative Commons Attribution-ShareAlike 4.0 International License.
+#
+# You should have received a copy of the license along with this
+# work. If not, see <http://creativecommons.org/licenses/by-sa/4.0/>.
+#
+"""
+Python script to convert all available modules in lmod to a markdown list.
+
+@author: Michiel Lachaert (Ghent University)
+"""
+
 import numpy as np
 import os
 import subprocess
