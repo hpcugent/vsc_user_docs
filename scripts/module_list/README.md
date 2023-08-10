@@ -19,20 +19,39 @@ You can run the tests by running the `test.sh` script.
 ./test.sh
 ```
 
-The tests make use of a mocked `$LMOD_CMD` script, you can find it in [tests/data/lmod_mock.sh](tests/data/lmod_mock.sh).
+The tests make use of a mocked `$LMOD_CMD` script, you can find [here](tests/data/lmod_mock.sh).
 
 ### Write tests
-If you want to write more tests and use this script, yuo need to know a few things.
+If you want to write additional tests and use the script effectively, follow these guidelines:
 
-1. The path to the mocked script needs to be set before every test. You can do this in the `setup_class` function.
-2. The output of the command `mock avail cluster/` can be put in a .txt file. 
-   You need to assign to path to that file to the `MOCK_FILE_AVAIL_CLUSTER` variable.
-3. If you want to make use of the swap command, you need to assign the path to the swap files to the `MOCK_FILE_SWAP` variable.
-   You need to put `CLUSTER` into the filename, this will me substituted to the actual cluster name it will swap to.
+1. **Setting up Mocked Script Path:**
+
+   Before each test, ensure that you set the path to the mocked script. 
+   This can be done within the setup_class function.
+   ```python
+   path = os.path.dirname(os.path.realpath(__file__))
    
-   For example:
+   @classmethod
+   def setup_class(cls):
+       os.environ["LMOD_CMD"] = cls.path + "/data/lmod_mock.sh"
    ```
-   os.environ["MOCK_FILE_SWAP"] = cls.path + "/data/data_swap_CLUSTER.txt"
+
+2. **Handling mock avail cluster/ Output:**
+
+   The output of the command `mock avail cluster/` can be put in a `.txt` file. 
+   Set the path to this file in the `MOCK_FILE_AVAIL_CLUSTER` variable.
+   ```python
+   os.environ["MOCK_FILE_AVAIL_CLUSTER"] = path + "/data/data_avail_cluster_simple.txt"
+   ```
+   
+3. **Utilizing the Swap Command:**
+
+   For utilizing the swap command, assign the path to the swap files to the MOCK_FILE_SWAP variable. 
+   Ensure that the filename contains the placeholder CLUSTER, 
+   which will later be replaced with the actual cluster name when performing the swap.
+
+   ```python
+   os.environ["MOCK_FILE_SWAP"] = path + "/data/data_swap_CLUSTER.txt"
    ```
    When trying to swap to, for example, the cluster/dialga cluster.
    It will use the data_swap_dialga.txt file as output for the swap command.
@@ -51,10 +70,10 @@ def setup_class(cls):
 ```
 
 This does multiple things:
-1. It sets the path to the test file in `$TESTS_PATH`
-2. Sets the path to the `lmod_mock.sh` script in `$LMOD_CMD`
-3. Sets the output file for the `module avail cluster/` to the `MOCK_FILE_AVAIL_CLUSTER` variable.
+1. Set the path of the tests folder in `$TESTS_PATH`
+2. Set the path to the `lmod_mock.sh` script in the environment variable `$LMOD_CMD`
+3. Set the output file for the `module avail cluster/` to the `MOCK_FILE_AVAIL_CLUSTER` variable.
    The actual output can be found in the `data/data_avail_cluster_simple.txt` file.
-4. Sets the swap files output to the `MOCK_FILE_SWAP` variable.
+4. Set the swap files output to the `MOCK_FILE_SWAP` variable.
    Files with swap outut will have the `data/data_swap_CLUSTER.txt`.
    For example, `data/data_swap_dialga.txt` could be a possible file.
