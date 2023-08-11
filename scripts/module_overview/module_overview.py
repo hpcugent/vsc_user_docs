@@ -137,6 +137,16 @@ def modules_ugent() -> dict:
 # Util functions
 # --------------------------------------------------------------------------------------------------------
 
+def mod_names_to_software_names(mod_list: np.ndarray) -> np.ndarray:
+    """
+    Convert a list of module names to a list of the software names.
+
+    @param mod_list: List of the module names
+    @return: List of the corresponding software names
+    """
+    return np.unique([entry.split("/")[0] for entry in mod_list])
+
+
 def get_unique_software_names(data: Union[dict, list, np.ndarray]) -> Union[dict, list, np.ndarray]:
     """
     Simplify list of modules by removing versions and duplicates.
@@ -146,11 +156,9 @@ def get_unique_software_names(data: Union[dict, list, np.ndarray]) -> Union[dict
     """
 
     if isinstance(data, dict):
-        simplified_data = {}
-        for cluster in data:
-            simplified_data[cluster] = np.unique([entry.split("/")[0] for entry in data[cluster]])
+        simplified_data = {cluster: mod_names_to_software_names(data[cluster]) for cluster in data}
     else:
-        simplified_data = np.unique([entry.split("/")[0] for entry in data])
+        simplified_data = mod_names_to_software_names(data)
 
     return simplified_data
 
@@ -159,26 +167,27 @@ def get_unique_software_names(data: Union[dict, list, np.ndarray]) -> Union[dict
 # Generate markdown
 # --------------------------------------------------------------------------------------------------------
 
-def generate_table_data(data: dict) -> Tuple[np.ndarray, int, int]:
+def generate_table_data(avail_mods: dict) -> Tuple[np.ndarray, int, int]:
     """
     Generate data that can be used to construct a MarkDown table.
 
-    @param data: Available data
+    @param avail_mods: Available modules
     @return: Returns tuple (Table data, #col, #row)
     """
-    data = get_unique_software_names(data)
-    all_modules = get_unique_software_names(np.concatenate(list(data.values())))
+    avail_mods = get_unique_software_names(avail_mods)
+    all_modules = get_unique_software_names(np.concatenate(list(avail_mods.values())))
 
     final = np.array([" "])
-    final = np.append(final, list(data.keys()))
+    cluster_names = [x.split('/')[1] for x in avail_mods.keys()]
+    final = np.append(final, cluster_names)
 
     for package in all_modules:
         final = np.append(final, package)
 
-        for cluster in data:
-            final = np.append(final, "X" if package in data[cluster] else " ")
+        for cluster in avail_mods:
+            final = np.append(final, "X" if package in avail_mods[cluster] else " ")
 
-    return final, len(data.keys()) + 1, len(all_modules) + 1
+    return final, len(cluster_names) + 1, len(all_modules) + 1
 
 
 def generate_module_table(data: dict, md_file: MdUtils) -> None:

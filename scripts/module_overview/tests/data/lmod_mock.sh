@@ -23,9 +23,9 @@ elif [ "$mod_cmd" = "swap" ]; then
 
   if [ "$cluster" = "cluster" ]; then
     # Substitute CLUSTER by the cluster_name
-    echo "${MOCK_FILE_SWAP}" | sed "s/CLUSTER/${cluster_name}/" | xargs cat >&1
+    cat ${MOCK_FILE_SWAP/CLUSTER/${cluster_name}} >&1
   else
-    echo "Something is wrong"
+    echo "${mod_args} is not a cluster." >&2
     exit 1
   fi
 
