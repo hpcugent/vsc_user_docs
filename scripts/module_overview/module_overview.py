@@ -125,11 +125,15 @@ def modules_ugent() -> dict:
     They are grouped by cluster.
     @return: Dictionary with all the modules per cluster
     """
-
+    print("Start collecting modules:")
     data = {}
     for cluster in clusters_ugent():
+        print(f"\t Collecting available modules for {cluster}... ", end="", flush=True)
         module_swap(cluster)
         data[cluster] = module_avail(filter_fn=filter_fn_gent_modules)
+        print(f"found {len(data[cluster])} modules!")
+
+    print("All data collected!\n")
     return data
 
 
@@ -197,8 +201,10 @@ def generate_module_table(data: dict, md_file: MdUtils) -> None:
     @param data: Dict with all the data. Keys are the cluster names.
     @param md_file: MdUtils object.
     """
+    print("Generating markdown table... ", end="", flush=True)
     structured, col, row = generate_table_data(data)
     md_file.new_table(columns=col, rows=row, text=list(structured), text_align='center')
+    print("Done!")
 
 
 def generate_general_overview() -> None:
