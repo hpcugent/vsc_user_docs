@@ -1,5 +1,11 @@
-name: Run Linter and tests
-on: [push, pull_request]
+name: Module overview script (lint + test)
+on:
+  push:
+    paths:
+      - 'scripts/**'
+  pull_request:
+    paths:
+      - 'scripts/**'
 # Declare default permissions as read only.
 permissions: read-all
 jobs:
@@ -18,7 +24,7 @@ jobs:
         uses: py-actions/flake8@v2
         with:
           max-line-length: "120"
-          path: "scripts/module_list"
+          path: "scripts/module_overview"
 
   pytest-tests:
     runs-on: ubuntu-20.04
