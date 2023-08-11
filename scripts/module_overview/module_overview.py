@@ -1,5 +1,5 @@
 #
-# Copyright 2009-2023 Ghent University
+# Copyright 2023-2023 Ghent University
 #
 # This file is part of vsc_user_docs,
 # originally created by the HPC team of Ghent University (http://ugent.be/hpc/en),
@@ -10,11 +10,18 @@
 #
 # https://github.com/hpcugent/vsc_user_docs
 #
-# vsc_user_docs is licensed under a
-# Creative Commons Attribution-ShareAlike 4.0 International License.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
 #
-# You should have received a copy of the license along with this
-# work. If not, see <http://creativecommons.org/licenses/by-sa/4.0/>.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 """
 Python script to generate an overview of available modules across different clusters, in MarkDown format.
@@ -130,12 +137,12 @@ def modules_ugent() -> dict:
 # Util functions
 # --------------------------------------------------------------------------------------------------------
 
-def simplify_modules(data: Union[dict, list, np.ndarray]) -> Union[dict, list, np.ndarray]:
+def get_unique_software_names(data: Union[dict, list, np.ndarray]) -> Union[dict, list, np.ndarray]:
     """
     Simplify list of modules by removing versions and duplicates.
 
     @param data: List of modules
-    @return: List of programs.
+    @return: List of software names.
     """
 
     if isinstance(data, dict):
@@ -159,8 +166,8 @@ def generate_table_data(data: dict) -> Tuple[np.ndarray, int, int]:
     @param data: Available data
     @return: Returns tuple (Table data, #col, #row)
     """
-    data = simplify_modules(data)
-    all_modules = simplify_modules(np.concatenate(list(data.values())))
+    data = get_unique_software_names(data)
+    all_modules = get_unique_software_names(np.concatenate(list(data.values())))
 
     final = np.array([" "])
     final = np.append(final, list(data.keys()))

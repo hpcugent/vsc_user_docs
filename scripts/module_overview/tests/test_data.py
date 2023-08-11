@@ -1,5 +1,5 @@
 import os
-from module_overview import modules_ugent, simplify_modules
+from module_overview import modules_ugent, get_unique_software_names
 
 
 class TestData:
@@ -24,5 +24,5 @@ class TestData:
         assert len(sol) == 2
         assert len(sol["cluster/dialga"]) == 13
         assert len(sol["cluster/pikachu"]) == 15
-        assert list(simplify_modules(sol["cluster/dialga"])) == ["Markov", "cfd", "science"]
-        assert list(simplify_modules(sol["cluster/pikachu"])) == ["cfd", "llm", "science"]
+        assert list(get_unique_software_names(sol["cluster/dialga"])) == ["Markov", "cfd", "science"]
+        assert list(get_unique_software_names(sol["cluster/pikachu"])) == ["cfd", "llm", "science"]

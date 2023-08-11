@@ -7,6 +7,19 @@ which indicates on which clusters each module is available.
 - Required Python packages are listed in the `requirements.txt`  file.
 - [Lmod](https://github.com/TACC/Lmod) must be available, and `$LMOD_CMD` must specify path to the `lmod` binary.
 
+
+### Creating a virtual environment (optional)
+
+If the required Python packages are not available in your Python setup,
+you can easily create a dedicated virtual environment as follows:
+
+```shell
+python -m venv module_overview_venv
+source module_overview_venv/bin/activate
+pip install -r requirements.txt
+# to exit the virtual environment, run 'deactivate'
+```
+
 ## Usage
 You can run the script with following command:
 
@@ -56,7 +69,7 @@ For mocking the `module swap` command, assign the path to the swap files to the 
    os.environ["MOCK_FILE_SWAP"] = path + "/data/data_swap_CLUSTER.txt"
    ```
     When trying to swap to, for example, the `cluster/pikachu` cluster,
-   it will use the `data_swap_dialga.txt` file as output for the swap command.
+   it will use the `data_swap_pikachu.txt` file as output for the swap command.
    
 ### Example 
 An example of a possible `setup_class` function is given below.
@@ -78,4 +91,4 @@ This does multiple things:
    The actual output can be found in the `data/data_avail_cluster_simple.txt` file.
 4. Set the swap files output to the `MOCK_FILE_SWAP` variable.
    Files with swap outut will have the `data/data_swap_CLUSTER.txt`.
-   For example, `data/data_swap_dialga.txt` could be a possible file.
+   For example, `data/data_swap_pikachu.txt` could be a possible file.
