@@ -17,7 +17,7 @@
 # work. If not, see <http://creativecommons.org/licenses/by-sa/4.0/>.
 #
 """
-Python script to convert all available modules in lmod to a markdown list.
+Python script to generate an overview of available modules across different clusters, in MarkDown format.
 
 @author: Michiel Lachaert (Ghent University)
 """
@@ -56,7 +56,7 @@ def module_avail(name: str = "", filter_fn=lambda x: x) -> np.ndarray:
     """
     Function to run "module avail" commands.
 
-    @param name: Possible module name.
+    @param name: Module name, or empty string to return all available modules.
     @param filter_fn: Filter on the output.
     @return: List of all available modules of name, or all if name is not given.
     """
@@ -93,7 +93,7 @@ def filter_fn_gent_cluster(data: np.ndarray) -> np.ndarray:
 
 def filter_fn_gent_modules(data: np.ndarray) -> np.ndarray:
     """
-    Filter function for the output of all modules.
+    Filter function for the output of all software modules (excl. `cluster` and `env` modules).
     @param data: Output
     @return: Filtered output
     """
@@ -114,7 +114,7 @@ def clusters_ugent() -> np.ndarray:
 
 def modules_ugent() -> dict:
     """
-    Returns all the module names that are installed on the HPC on UGent.
+    Returns names of all software module that are installed on the HPC on UGent.
     They are grouped by cluster.
     @return: Dictionary with all the modules per cluster
     """

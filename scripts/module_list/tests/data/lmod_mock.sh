@@ -11,7 +11,7 @@ if [ "$3" = "avail" ]; then
 
 # Emulated swap command.
 elif [ "$3" = "swap" ]; then
-  #extract te cluster name from the 4th argument
+  # extract the cluster name from the 4th argument
   cluster=$(echo "$4" | cut -d "/" -f 1)
   cluster_name=$(echo "$4" | cut -d "/" -f 2)
 
@@ -25,6 +25,6 @@ elif [ "$3" = "swap" ]; then
 
 
 else
-  echo "Not supported"
+    echo "Module subcommand '${mod_cmd}' not supported yet in $0" >&2
   exit 1
 fi
