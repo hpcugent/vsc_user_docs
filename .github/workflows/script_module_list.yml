@@ -3,9 +3,12 @@ on:
   push:
     paths:
       - 'scripts/**'
+      - './github/**'
   pull_request:
     paths:
       - 'scripts/**'
+      - './github/**'
+
 # Declare default permissions as read only.
 permissions: read-all
 jobs:
@@ -36,7 +39,7 @@ jobs:
           python-version: '3.6'
       - name: Install dependencies
         run: |
-          cd scripts/module_list
+          cd scripts/module_overview
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Test with pytest

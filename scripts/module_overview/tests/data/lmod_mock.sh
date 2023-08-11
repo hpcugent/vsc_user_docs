@@ -1,8 +1,14 @@
 #!/bin/bash
 
+# example: $LMOD_CMD python --terse avail cluster/
+python="$1"
+terse="$2"
+mod_cmd="$3"
+mod_args="$4"
+
 # Emulated avail command.
-if [ "$3" = "avail" ]; then
-  if [ "$4" = "cluster/" ]; then
+if [ $mod_cmd = "avail" ]; then
+  if [ $mod_args = "cluster/" ]; then
     cat "${MOCK_FILE_AVAIL_CLUSTER}" >&2
   else
     cat "${MOCK_FILE_AVAIL}" >&2
@@ -10,12 +16,12 @@ if [ "$3" = "avail" ]; then
 
 
 # Emulated swap command.
-elif [ "$3" = "swap" ]; then
+elif [ $mod_cmd = "swap" ]; then
   # extract the cluster name from the 4th argument
-  cluster=$(echo "$4" | cut -d "/" -f 1)
-  cluster_name=$(echo "$4" | cut -d "/" -f 2)
+  cluster=$(echo $mod_args | cut -d "/" -f 1)
+  cluster_name=$(echo $mod_args | cut -d "/" -f 2)
 
-  if [ "$cluster" = "cluster" ]; then
+  if [ $cluster = "cluster" ]; then
     # Substitute CLUSTER by the cluster_name
     echo "${MOCK_FILE_SWAP}" | sed "s/CLUSTER/${cluster_name}/" | xargs cat >&1
   else
