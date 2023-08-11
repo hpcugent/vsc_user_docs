@@ -111,3 +111,5 @@ information about rsync.
 2.  Upload a file to a subdirectory of your personal `$VSC_DATA` space.
 
 3.  Create a file named `hello.txt` and edit it using `nano`.
+
+Now you have a basic understanding, see next [chapter](beyond_the_basics.md) for some more in depth concepts.

@@ -1,6 +1,7 @@
 site_name: Linux tutorial
 docs_dir: docs/linux-tutorial
 nav:
+  - Introduction: index.md
   - Getting Started: getting_started.md
   - Navigating: navigating.md
   - Manipulating files and directories: manipulating_files_and_directories.md

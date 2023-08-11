@@ -220,3 +220,5 @@ Exercises
     newline
 
 -   How do you get help on using the `man` command?
+
+Next [chapter](navigating.md) teaches you on how to navigate.
