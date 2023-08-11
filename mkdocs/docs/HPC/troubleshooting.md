@@ -2,6 +2,12 @@
 
 # Troubleshooting
 
+## Why does my job not run faster when using more cores and/or nodes?
+
+### More cores
+
+### More nodes
+
 ## Walltime issues
 
 If you get from your job output an error message similar to this:
