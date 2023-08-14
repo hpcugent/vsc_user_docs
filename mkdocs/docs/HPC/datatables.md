@@ -1,9 +1,6 @@
 # Overview
 
-[DataTables](https://www.datatables.net/) is a table enhancing plug-in for the jQuery Javascript library, adding sorting, paging and filtering abilities to plain HTML tables with minimal effort. You can find more information about DataTables from it's [website](https://www.datatables.net/) or [Github](https://github.com/DataTables/DataTables).
-
-
-# Examples
+# Examples 1
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
@@ -65,3 +62,35 @@ function myFunction() {
   }
 }
 </script>
+
+
+# Example 2
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> 
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+
+<script>
+  $(document).ready( function () {
+    $('#myTable2').DataTable();
+} );
+</script>
+
+<table id="myTable2" class="display">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Foo</td>
+            <td>Bar</td>
+        </tr>
+        <tr>
+            <td>Tik</td>
+            <td>Tok</td>
+        </tr>
+    </tbody>
+</table>
