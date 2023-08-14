@@ -1,0 +1,4 @@
+/etc/modulefiles/vsc:
+cluster/dialga
+cluster/pikachu
+cluster/default
