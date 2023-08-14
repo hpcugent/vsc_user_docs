@@ -1183,18 +1183,3 @@ commonly used variables are described here.</p>
     
   </body>
 </html>
-<script>
-    if (!! localStorage.getItem('select_OS')) {
-        const classes = ["headerlink", "md-nav__link"]
-        for (i in classes) {
-            var anchors = Array.from(document.getElementsByClassName(classes[i]))
-            anchors.forEach(
-                function (anch) {
-                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
-                    if (!!anch.href) {
-                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
-                    }
-                })
-        }
-    }
-</script>
