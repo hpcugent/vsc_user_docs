@@ -37,25 +37,3 @@ JS_SCROLL_STR = """
     )
 </script>
 """
-
-# loop over all
-#    <a class="headerlink" from text
-#    <a class="md-nav__link"> from index and TOC
-# strip the OS from the href of all of them if the localstorage has select_OS defined
-JS_OS_NEUTRAL = """
-<script>
-    if (!! localStorage.getItem('select_OS')) {
-        const classes = ["headerlink", "md-nav__link"]
-        for (i in classes) {
-            var anchors = Array.from(document.getElementsByClassName(classes[i]))
-            anchors.forEach(
-                function (anch) {
-                    //console.log("i", i, "class", classes[i], "anch.href", anch.href)
-                    if (!!anch.href) {
-                        anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/")
-                    }
-                })
-        }
-    }
-</script>
-"""
