@@ -2,11 +2,25 @@
 
 # Troubleshooting
 
-## Why does my job not run faster when using more cores and/or nodes?
+## Why doesn't more Nodes lead to faster job execution?
 
-### More cores
+### Nodes
 
-### More nodes
+When attempting to leverage multiple nodes in parallel computing environments to enhance performance, several challenges can arise that prevent the expected speed gains.
+
+Parallelizing code across nodes is fundamentally different from multithreading within a single node. The automatic scalability achieved through multithreading doesn't extend seamlessly to distributing computations across multiple nodes. Just setting `#PBS -l nodes=2:ppn=10` instead of `#PBS -l nodes=1:ppn=10` will only extent your waiting time to get your job running and will not improve the execution time. We suggest that you first try to use more cores before you try to use more nodes.
+
+Utilizing additional nodes isn't as straightforward as merely adding computational resources. Nodes often need to be requested, managed, and synchronized, which introduces complexities in distributing work effectively across the nodes. Luckily, there exist some libraries that do this for you.
+
+Efficiently utilizing multiple nodes often requires the use of Message Passing Interface (MPI) programming. MPI allows nodes to communicate and coordinate, but it also introduces additional complexity.
+
+An example of how you can make beneficial use of multiple nodes can be found [here](multi_core_jobs.md#parallel-computing-with-mpi).
+
+You can also use MPI in Python, some useful packages that are also available on the HPC are:
+
+-   [mpi4py](https://mpi4py.readthedocs.io/en/stable/mpi4py.html)
+-   [Boost.MPI](https://www.boost.org/doc/libs/1_55_0/doc/html/mpi/python.html)
+
 
 ## Walltime issues
 
