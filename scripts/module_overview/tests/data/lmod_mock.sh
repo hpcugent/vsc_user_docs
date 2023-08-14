@@ -1,10 +1,14 @@
 #!/bin/bash
 
+# Return an error when a variable is not set.
+set -u
+
+
 # example: $LMOD_CMD python --terse avail cluster/
 python="$1"
 terse="$2"
 mod_cmd="$3"
-mod_args="$4"
+mod_args="${4:-}"
 
 # Emulated avail command.
 if [ "$mod_cmd" = "avail" ]; then

@@ -1,7 +1,7 @@
 from mdutils.mdutils import MdUtils
 from module_overview import get_unique_software_names, modules_ugent, generate_table_data, generate_module_table
 import os
-import numpy as np
+import filecmp
 
 
 class TestMarkdown:
@@ -30,13 +30,9 @@ class TestMarkdown:
     def test_table_generate_simple(self):
         simple_data = get_unique_software_names(modules_ugent())
         table_data, col, row = generate_table_data(simple_data)
-        all_modules = get_unique_software_names(np.concatenate(list(simple_data.values())))
-        assert col == len(simple_data.keys())+1
-        assert row == len(all_modules)+1
-        assert len(table_data) == (len(simple_data.keys()) * len(all_modules)) + \
-               len(simple_data.keys()) + \
-               len(all_modules) + \
-               1
+        assert col == 3
+        assert row == 5
+        assert len(table_data) == 15
 
     def test_simple(self):
         md_file = MdUtils(file_name='test_simple', title='Overview Modules')
@@ -44,3 +40,4 @@ class TestMarkdown:
         generate_module_table(simple_data, md_file)
         md_file.create_md_file()
         assert os.path.exists("test_simple.md")
+        assert filecmp.cmp(self.path + "/data/test_simple_solution.md", "test_simple.md")
