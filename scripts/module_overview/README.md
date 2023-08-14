@@ -1,11 +1,11 @@
 # Module overview
 
-A script to generate an table overview of all available module files inMarkDown format,
+A script to generate an table overview of all available module files in MarkDown format,
 which indicates on which clusters each module is available.
 
 ## Requirements
-- Required Python packages are listed in the `requirements.txt`  file.
-- [Lmod](https://github.com/TACC/Lmod) must be available, and `$LMOD_CMD` must specify path to the `lmod` binary.
+- Required Python packages are listed in `requirements.txt` and `requirements_tests.txt`
+- [Lmod](https://github.com/TACC/Lmod) must be available, and `$LMOD_CMD` must specify the path to the `lmod` binary.
 
 
 ### Creating a virtual environment (optional)
@@ -17,6 +17,7 @@ you can easily create a dedicated virtual environment as follows:
 python -m venv module_overview_venv
 source module_overview_venv/bin/activate
 pip install -r requirements.txt
+pip install -r requirements_tests.txt
 # to exit the virtual environment, run 'deactivate'
 ```
 
@@ -61,14 +62,14 @@ If you want to write additional tests and use the script effectively, follow the
    
 3. **Mocking the `module swap` command:**
 
-For mocking the `module swap` command, assign the path to the swap files to the `$MOCK_FILE_SWAP` environment variable.
+   For mocking the `module swap` command, assign the path to the swap files to the `$MOCK_FILE_SWAP` environment variable.
    Ensure that the filename contains the placeholder '`CLUSTER`', 
    which will later be replaced with the actual cluster name when performing the swap.
 
    ```python
    os.environ["MOCK_FILE_SWAP"] = path + "/data/data_swap_CLUSTER.txt"
    ```
-    When trying to swap to, for example, the `cluster/pikachu` cluster,
+   When trying to swap to, for example, the `cluster/pikachu` cluster,
    it will use the `data_swap_pikachu.txt` file as output for the swap command.
    
 ### Example 

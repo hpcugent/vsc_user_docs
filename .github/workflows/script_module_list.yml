@@ -3,11 +3,11 @@ on:
   push:
     paths:
       - 'scripts/**'
-      - './github/**'
+      - './.github/**'
   pull_request:
     paths:
       - 'scripts/**'
-      - './github/**'
+      - './.github/**'
 
 # Declare default permissions as read only.
 permissions: read-all
