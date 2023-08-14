@@ -113,6 +113,16 @@ MPI.
     </tr>
 </table>
 
+!!! tip
+    You can request more nodes/cores by adding following line to your run script.
+    ```
+    #PBS -l nodes=1:ppn=10
+    ```
+    This queues a job that claims 1 node and 10 cores.
+
+!!! warning
+    Requesting more nodes does not necessarily mean a performance increase. You can find more about this [here](troubleshooting.md#why-doesnt-more-nodes-lead-to-faster-job-execution).
+
 ## Parallel Computing with threads
 
 Multi-threading is a widespread programming and execution model that
