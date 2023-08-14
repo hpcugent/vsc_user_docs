@@ -1,14 +1,10 @@
-
-
 # Troubleshooting
 
 ## Why doesn't more Nodes lead to faster job execution?
 
-### Nodes
+When attempting to use multiple nodes in your parallelized program to enhance performance, It is a possibility that you notice no performance increase.
 
-When attempting to leverage multiple nodes in parallel computing environments to enhance performance, several challenges can arise that prevent the expected speed gains.
-
-Parallelizing code across nodes is fundamentally different from multithreading within a single node. The automatic scalability achieved through multithreading doesn't extend seamlessly to distributing computations across multiple nodes. Just setting `#PBS -l nodes=2:ppn=10` instead of `#PBS -l nodes=1:ppn=10` will only extent your waiting time to get your job running and will not improve the execution time. We suggest that you first try to use more cores before you try to use more nodes.
+Parallelizing code across nodes is fundamentally different from multithreading within a single node. The scalability achieved through multithreading doesn't extend seamlessly to distributing computations across multiple nodes. This means that just changing `#PBS -l nodes=1:ppn=10` to `#PBS -l nodes=1:ppn=10` will only extent your waiting time to get your job running and will not improve the execution time.
 
 Utilizing additional nodes isn't as straightforward as merely adding computational resources. Nodes often need to be requested, managed, and synchronized, which introduces complexities in distributing work effectively across the nodes. Luckily, there exist some libraries that do this for you.
 
@@ -20,6 +16,8 @@ You can also use MPI in Python, some useful packages that are also available on 
 
 -   [mpi4py](https://mpi4py.readthedocs.io/en/stable/mpi4py.html)
 -   [Boost.MPI](https://www.boost.org/doc/libs/1_55_0/doc/html/mpi/python.html)
+
+we advise to maximize core utilization before considering node expansion. Our [infrastructure](https://www.ugent.be/hpc/en/infrastructure) has clusters with a lot of cores, so we suggest that you first try to use all the cores on 1 node before you expand to more nodes.
 
 
 ## Walltime issues
