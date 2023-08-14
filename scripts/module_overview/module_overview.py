@@ -212,10 +212,12 @@ def generate_general_overview() -> None:
     Generate the general overview in a markdown file.
     It generates a list of all the available software and indicates on which cluster it is available.
     """
-    md_file = MdUtils(file_name='module_overview.md', title='Overview of available modules per cluster')
+    md_fn = 'module_overview.md'
+    md_file = MdUtils(file_name=md_fn, title='Overview of available modules per cluster')
     data = modules_ugent()
     generate_module_table(data, md_file)
     md_file.create_md_file()
+    print(f"Module overview created at {md_fn}")
 
 
 if __name__ == '__main__':
