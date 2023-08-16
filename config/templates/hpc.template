@@ -6,6 +6,7 @@ docs_dir: docs/HPC
 
 nav:
   - Welcome: index.md
+  - datatables: datatables.md
   - Introduction to HPC: introduction.md
   - Getting an HPC Account: account.md
   - Connecting to the HPC infrastructure: connecting.md
@@ -119,6 +120,9 @@ theme:
     - search.highlight
     - search.share
     - content.code.copy
+
+extra_javascript: []
+extra_css: []
 
 extra:
   OS: {{ os }}
