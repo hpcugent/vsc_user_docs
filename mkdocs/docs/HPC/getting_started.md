@@ -47,7 +47,7 @@ Assuming you have already generated SSH keys in the previous step ([Getting Acce
 
 <pre><code>ssh {{userid}}@{{loginnode}}</code></pre>
 
-!!! Warning "User your own userid"
+!!! Warning "User your own VSC account id"
     
     Replace <b>{{userid}}</b> with your VSC account id (see <https://account.vscentrum.be>)
 
@@ -102,7 +102,7 @@ Using the `scp` command, the files can be copied from your local host to your *h
 <pre><code>scp tensorflow_mnist.py run.sh {{userid}}{{ loginnode }}:~ </code></pre>
 <pre><code>ssh  {{userid}}@{{ loginnode }} </code></pre>
 
-!!! Warning "Use your own user id"
+!!! Warning "User your own VSC account id"
     
     Replace <b>{{userid}}</b> with your VSC account id (see <https://account.vscentrum.be>)
 
@@ -169,7 +169,7 @@ $ qsub run.sh
 
 This command returns a job identifier (*{{jobid}}*) on the HPC cluster. This is a unique identifier for the job which can be used to monitor and manage your job.
 
-!!! Warning "Make sure you understand the `module` command"
+!!! Warning "Make sure you understand what the `module` command does"
  
     Note that the module commands only modify environment variables. For instance, running `module swap cluster/{{othercluster}}` will update your shell environment so that `qsub` submits a job to the `{{othercluster}}` cluster, 
     but our active shell session is still running on the login node.
@@ -229,7 +229,7 @@ In our example when running <code>ls</code> in the current directory you should 
     
     run.sh.e{{jobid}} should be empty (no errors or warnings).
 
-!!! Warning "Use correct jobid"
+!!! Warning "Use your own job ID"
 
     Replace <b>{{jobid}}</b> with the jobid you got from the `qstat` command (see above) or simply look for added files in your current directory by running `ls`.
 
