@@ -5,6 +5,7 @@ association: Antwerp University Association (AUHA)
 hpc: UAntwerpen-HPC
 hpcinfra: UAntwerpen-HPC
 hpcteam: UAntwerpen-HPC
+hpcsite: UAntwerpen-HPC
 hpc_support_url: https://www.uantwerpen.be/en/research-facilities/calcua/support/
 hpcname: Leibniz
 loginnode: login.hpc.uantwerpen.be
