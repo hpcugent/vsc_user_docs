@@ -1,6 +1,7 @@
 site_name: Linux tutorial
 docs_dir: docs/linux-tutorial
 nav:
+  - Introduction: index.md
   - Getting Started: getting_started.md
   - Navigating: navigating.md
   - Manipulating files and directories: manipulating_files_and_directories.md
@@ -67,6 +68,18 @@ theme:
     - search.highlight
     - search.share
     - content.code.copy
+  palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: default 
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: blue
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode 
 
 extra:
   build_dir: build

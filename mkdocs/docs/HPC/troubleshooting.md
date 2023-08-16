@@ -422,8 +422,9 @@ The correct command is `module swap cluster/{{othercluster}}`. See also [Specify
 {% endif %}
 
 {% if site == gent %}
-## Running software that is incompatible with host
+## `Illegal instruction` error
 
+### Running software that is incompatible with host
 When running software provided through modules (see [Modules](../running_batch_jobs/#modules)), you may run into
 errors like:
 
@@ -440,8 +441,7 @@ Intel(R) MOVBE, F16C, FMA, BMI, LZCNT and AVX2 instructions.
 
 or errors like:
 
-<pre><code>
-$ <b>python</b>
+<pre><code>$ <b>python</b>
 Illegal instruction
 </code></pre>
 
@@ -479,4 +479,35 @@ The following have been reloaded with a version change:
 This might result in the same problems as mentioned above. When swapping
 to a different cluster, you can run `module purge` to unload all modules
 to avoid problems (see [Purging all modules](../running_batch_jobs/#purging-all-modules)).
+
+### Multi-job submissions on a non-default cluster
+
+When using a tool that is made available via modules to submit jobs, for example [Worker](multi_job_submission.md),
+you may run into the following error when targeting a non-default cluster:
+
+<pre><code>$ <b> wsub</b>
+/apps/gent/.../.../software/worker/.../bin/wsub: line 27: 2152510 <b>Illegal instruction</b>     (core dumped) ${PERL} ${DIR}/../lib/wsub.pl "$@"
+</code></pre>
+
+When executing the `module swap cluster` command, you are not only changing your session environment to submit
+to that specific cluster, but also to use the part of the central software stack that is specific to that cluster.
+In the case of the Worker example above, the latter implies that you are running the `wsub` command
+on top of a Perl installation that is optimized specifically for the CPUs of the workernodes of that cluster,
+which may not be compatible with the CPUs of the login nodes, triggering the `Illegal instruction` error.
+
+The cluster modules are split up into several `env/*` "submodules" to help deal with this problem.
+For example, by using `module swap env/slurm/donphan` instead of `module swap cluster/donphan` (starting from the default environment, the `{{defaultcluster}}` cluster), you can update your environment to submit jobs to `donphan`, while still using the software installations that are specific to the `{{defaultcluster}}` cluster (which are compatible with the login nodes since the `{{defaultcluster}}` cluster workernodes have the same CPUs).
+The same goes for the other clusters as well of course.
+
+
+!!! Tip
+    To submit a Worker job to a specific cluster, like the [`donphan` interactive cluster](interactive_debug.md) for instance, use:
+    <pre><code>$ <b>module swap env/slurm/donphan</b> </code></pre>
+    instead of
+    <pre><code>$ <b>module swap cluster/donphan</b> </code></pre>
+
+We recommend using a `module swap cluster` command after submitting the jobs.
+
+This to "reset" your environment to a sane state, since only having a different `env/slurm` module loaded can also lead to some surprises if you're not paying close attention.
+
 {% endif %}

@@ -273,3 +273,5 @@ you remember:
 
 8.  gzip `hostname.txt`, see how much smaller it becomes, then unzip it
     again.
+
+The next [chapter](uploading_files.md) is on uploading files, especially important when using HPC-infrastructure.

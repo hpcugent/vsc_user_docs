@@ -14,7 +14,7 @@ from mkdocs.structure.files import File, Files
 from mkdocs.structure.pages import Page
 from yaml import safe_load
 
-from constants import JS_SCROLL_STR, OS_PICK_BTN, OS_PICK_STR, JS_OS_NEUTRAL
+from constants import JS_SCROLL_STR, OS_PICK_BTN, OS_PICK_STR
 
 """
 See https://www.mkdocs.org/user-guide/plugins/#developing-plugins for some more information
@@ -237,8 +237,6 @@ class UgentPlugin(BasePlugin):
         """
         if self.os_pick:
             output += JS_SCROLL_STR
-        if self.osneutrallinks:
-            output += JS_OS_NEUTRAL
         return output
 
     def on_post_build(self, config: Config):
