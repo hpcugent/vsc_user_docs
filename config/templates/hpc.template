@@ -7,6 +7,7 @@ docs_dir: docs/HPC
 nav:
   - Welcome: index.md
   - Introduction to HPC: introduction.md
+  - Getting Started: getting_started.md
   - Getting an HPC Account: account.md
   - Connecting to the HPC infrastructure: connecting.md
   - Running batch jobs: running_batch_jobs.md
