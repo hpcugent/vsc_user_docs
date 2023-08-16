@@ -36,12 +36,12 @@ see the [example scripts](https://github.com/hpcugent/vsc_user_docs/tree/main/{{
 There are two options to connect
 
 - Using a terminal to connect via SSH (for power users) (see [First Time connection to the {{ hpcinfra}}](connecting.md#first-time-connection-to-the-hpc-infrastructure))
-- [Using the web portal](web_portal.md#using-the-hpc-ugent-web-portal)
+- [Using the web portal](web_portal.md)
 
 Considering your operating system is **{{OS}}**, 
 
 {%- if OS == linux %}
-it's recommented to make use of the `ssh` command in a terminal to get the most flexibility. 
+it is recommended to make use of the `ssh` command in a terminal to get the most flexibility. 
 
 Assuming you have already generated SSH keys in the previous step ([Getting Access](#getting-access)), and that they are in a default location, you should now be able to login by running the following command:
 
@@ -56,10 +56,10 @@ Assuming you have already generated SSH keys in the previous step ([Getting Acce
     You can also still use the web portal (see [shell access on web portal](web_portal.md#shell-access))
 
 {%- else %}
-{%- if OS == windows %} it's recommended to use the web portal.
-{%- else %} it should be easy to make use of the `ssh` command in a terminal, but the web portal will work too: {%- endif %}
+{%- if OS == windows %} it is recommended to use the web portal.
+{%- else %} it should be easy to make use of the `ssh` command in a terminal, but the web portal will work too. {%- endif %}
 
-This platform offers a convenient way to upload files and gain shell access to the {{hpcinfra}} from a standard web browser (no software installation or configuration required).
+The [web portal](web_portal.md) offers a convenient way to upload files and gain shell access to the {{hpcinfra}} from a standard web browser (no software installation or configuration required).
 
 See [shell access](web_portal.md#shell-access) when using the web portal, or
 [connection to the {{hpcinfra}}](connecting.md#first-time-connection-to-the-hpc-infrastructure) when using a terminal.
@@ -75,7 +75,7 @@ Make sure you can get to a shell access to the {{hpcinfra}} before proceeding wi
 
 ### Transfer your files
 
-Now that you can login, it's time to transfer files from your local computer to your **home directory** on the {{hpcinfra}}.
+Now that you can login, it is time to transfer files from your local computer to your **home directory** on the {{hpcinfra}}.
 
 Download [tensorflow_mnist.py](https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/tensorflow_mnist.py) 
 and [run.sh](https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/run.sh) example scripts to your computer (from [here](https://github.com/hpcugent/vsc_user_docs/tree/main/{{exampleloc}})).
@@ -112,7 +112,7 @@ Using the `scp` command, the files can be copied from your local host to your *h
 
 {%- endif %}
 
-When running `ls` in your session on the {{hpcinfra}}, you should see the two files listed in your home directory(`~`):
+When running `ls` in your session on the {{hpcinfra}}, you should see the two files listed in your home directory (`~`):
 
 ```shell
 $ ls ~
@@ -171,7 +171,7 @@ This command returns a job identifier (*{{jobid}}*) on the HPC cluster. This is 
 
 !!! Warning "Make sure you understand the `module` command"
  
-    Note that the module commands only modify environment variables. For instance, running `module swap cluster/{{othercluster}}` will update your shell environment so that `qsub` submits a job to the {{othercluster}} cluster, 
+    Note that the module commands only modify environment variables. For instance, running `module swap cluster/{{othercluster}}` will update your shell environment so that `qsub` submits a job to the `{{othercluster}}` cluster, 
     but our active shell session is still running on the login node.
     
     It is important to understand that while `module` commands affect your session environment, they do ***not*** change where the commands your are running are being executed: they will still be run on the login node you are on.
@@ -183,7 +183,7 @@ For detailed information about `module` commands, read the [running batch jobs](
 ### Wait for job to be executed
 
 Your job is put into a queue before being executed, so it may take a while before it actually starts.
-(see [when will my job start?](running_batch_jobs.md#when-will-my-job-start) for scheduling policy)
+(see [when will my job start?](running_batch_jobs.md#when-will-my-job-start) for scheduling policy).
 
 You can get an overview of the active jobs using the `qstat` command:
 <pre><code>$ qstat
@@ -222,8 +222,8 @@ By default located in the directory where you issued `qsub`.
 
 In our example when running <code>ls</code> in the current directory you should see 2 new files:
  
-- **run.sh.o{{jobid}}**, containing normal output messages produced by job {{jobid}};
-- **run.sh.e{{jobid}}**, containing error and warning messages produced by job {{jobid}}.
+- **run.sh.o{{jobid}}**, containing *normal output messages* produced by job {{jobid}};
+- **run.sh.e{{jobid}}**, containing *errors and warnings* produced by job {{jobid}}.
 
 !!! Info
     
