@@ -759,3 +759,11 @@ created.
 ### Fast file transfer for large datasets
 
 See [the section on `rsync` in chapter 5 of the Linux intro manual](../linux-tutorial/uploading_files/#copying-faster-with-rsync).
+
+## Changing login nodes
+It could be useful to sometimes switch your login node. For example, to change to login node `gligar07`, you can use following command while connected to the supercomputer `ssh gligar07`. Everytime you login, you can never know which login node you will connect to. Sometimes it could be really usefull to run multiple terminal instances on the same login node. Instead of opening a new ssh connecting each time and connecting to the correct login node, you can also ues a terminal multiplexer like `screen` or `tmux`.
+
+More about how you can use these, can be found here (or somewhere else on the internet):
+
+- [screen](https://www.howtogeek.com/662422/how-to-use-linuxs-screen-command/)
+- [tmux](https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/)
