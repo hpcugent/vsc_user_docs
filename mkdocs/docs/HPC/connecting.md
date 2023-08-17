@@ -764,9 +764,15 @@ created.
 See [the section on `rsync` in chapter 5 of the Linux intro manual](../linux-tutorial/uploading_files/#copying-faster-with-rsync).
 
 ## Changing login nodes
-It could be useful to sometimes switch your login node. For example, to change to login node `gligar07`, you can use following command while connected to the supercomputer `ssh gligar07`. Everytime you login, you can never know which login node you will connect to. Sometimes it could be really usefull to run multiple terminal instances on the same login node. Instead of opening a new ssh connecting each time and connecting to the correct login node, you can also ues a terminal multiplexer like `screen` or `tmux`.
+It can be useful to work on the same login node using multiple terminal sessions. However, when you connect to the HPC (High-Performance Computing) system through SSH, you're directed to a random login node, which might not be the one where you already have an active session. To address this, there is a way to manually switch your active login node.
 
-More about how you can use these, can be found here (or somewhere else on the internet):
+For instance, if you want to switch to the login node named `gligar07`, you can use the following command while you are connected to the HPC:
+```shell
+ssh gligar07
+```
+
+Rather than launching multiple terminals, you can also use a terminal multiplexer like `screen` or `tmux`.
+You can find more information on how to use these tools here (or on other online sources):
 
 - [screen](https://www.howtogeek.com/662422/how-to-use-linuxs-screen-command/)
 - [tmux](https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/)
