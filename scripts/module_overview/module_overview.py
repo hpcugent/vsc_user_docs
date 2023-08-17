@@ -29,6 +29,7 @@ Python script to generate an overview of available modules across different clus
 @author: Michiel Lachaert (Ghent University)
 """
 
+import json
 import numpy as np
 import os
 import subprocess
@@ -207,7 +208,7 @@ def generate_module_table(data: dict, md_file: MdUtils) -> None:
     print("Done!")
 
 
-def generate_general_overview() -> None:
+def generate_markdown_overview() -> None:
     """
     Generate the general overview in a markdown file.
     It generates a list of all the available software and indicates on which cluster it is available.
@@ -220,6 +221,40 @@ def generate_general_overview() -> None:
     print(f"Module overview created at {md_fn}")
 
 
+def generate_overview_json_data(modules: dict) -> dict:
+    """
+    Generate the data for the json overview.
+
+    @param modules: Dict with all the modules per cluster. Keys are the cluster names.
+    @return: Dictionary with the required JSON structure.
+    """
+    json_data = {"clusters": list(modules.keys()), "modules": {}}
+    avail_mods = get_unique_software_names(modules)
+    all_packages = get_unique_software_names(np.concatenate(list(avail_mods.values())))
+
+    for package in all_packages:
+        available = []
+        for cluster in json_data["clusters"]:
+            available.append(package in avail_mods[cluster])
+        json_data["modules"][package] = available
+    return json_data
+
+
+def generate_json_overview() -> None:
+    """
+    Generate the overview in a JSON format.
+    """
+
+    # get data
+    modules = modules_ugent()
+    json_data = generate_overview_json_data(modules)
+
+    # write it to a file
+    with open("json_data.json", 'w') as outfile:
+        json.dump(json_data, outfile)
+
+
 if __name__ == '__main__':
     # Generate the overview
-    generate_general_overview()
+    generate_markdown_overview()
+    generate_json_overview()
