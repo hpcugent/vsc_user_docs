@@ -1,0 +1,94 @@
+{
+    "clusters": [
+        "cluster/accelgor",
+        "cluster/doduo",
+        "cluster/skitty"
+    ],
+    "modules": {
+        "numpy": [
+            true,
+            false,
+            false
+        ],
+        "scipy1": [
+            false,
+            true,
+            true
+        ],
+        "scipy2": [
+            false,
+            true,
+            true
+        ],
+        "scipy3": [
+            false,
+            true,
+            true
+        ],
+        "scipy4": [
+            false,
+            true,
+            true
+        ],
+        "scipy5": [
+            false,
+            true,
+            true
+        ],
+        "scipy6": [
+            false,
+            true,
+            true
+        ],
+        "scipy7": [
+            false,
+            true,
+            true
+        ],
+        "scipy8": [
+            false,
+            true,
+            true
+        ],
+        "scipy9": [
+            false,
+            true,
+            true
+        ],
+        "scipy10": [
+            false,
+            true,
+            true
+        ],
+        "scipy11": [
+            false,
+            true,
+            true
+        ],
+        "scipy12": [
+            false,
+            true,
+            true
+        ],
+        "scipy13": [
+            false,
+            true,
+            true
+        ],
+        "scipy14": [
+            false,
+            true,
+            true
+        ],
+        "scipy15": [
+            false,
+            true,
+            true
+        ],
+        "scipy16": [
+            false,
+            true,
+            true
+        ]
+    }
+}

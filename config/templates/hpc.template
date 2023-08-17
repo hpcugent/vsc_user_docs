@@ -141,7 +141,8 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode 
 
-extra_javascript: []
+extra_javascript:
+    - javascripts/test_populate.js
 extra_css: []
 
 extra:
