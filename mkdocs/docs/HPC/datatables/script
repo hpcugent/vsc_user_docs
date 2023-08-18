@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for ((i = 0 ; i < 2000 ; i++)); do
+	echo "# Title ${i}" >> ${i}file.md
+done

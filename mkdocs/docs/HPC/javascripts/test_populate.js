@@ -1,4 +1,4 @@
-
+const x = "bbb"
 function populate_overview() {
     fetch('../data/json_data.json')
         .then((response) => response.json())
@@ -12,11 +12,10 @@ function populate_overview() {
                 paging: false,
             });
 
-
             // ADD BODY
             let new_rows = [];
             for (const [key, value] of Object.entries(json.modules)) {
-                let new_row = [key];
+                let new_row = ["<a href='../troubleshooting'>" + key + "</a>"];
                 value.forEach(bool => new_row.push(bool ? "x" : "-"));
                 new_rows.push(new_row);
             }
@@ -28,5 +27,6 @@ function populate_overview() {
 document$.subscribe(function() {
     if (document.getElementById("overview_table")) {
         populate_overview()
+        document.getElementById('output').innerHTML = x;
     }
 })
