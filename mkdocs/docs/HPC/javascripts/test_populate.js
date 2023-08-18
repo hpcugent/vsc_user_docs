@@ -1,6 +1,6 @@
 
 function populate_overview() {
-    fetch('../json_data.json')
+    fetch('../data/json_data.json')
         .then((response) => response.json())
         .then((json) => {
             // Add HEADER
@@ -23,40 +23,10 @@ function populate_overview() {
             table.rows.add(new_rows).draw();
         })
 }
-//TODO: remove
-//
-// function populate_js(){
-//     fetch('../json_data.json')
-//         .then((response) => response.json())
-//         .then((json) => {
-//             // Add HEADER
-//             const my_table_head = document.getElementById("thead_table");
-//             let row = my_table_head.insertRow(0);
-//             let cell = row.insertCell(-1);
-//             cell.outerHTML = "<th></th>";
-//             for (const cluster of json.clusters) {
-//               let cell = row.insertCell(-1);
-//               cell.outerHTML = "<th>" + cluster.split("/")[1] + "</th>";
-//             }
-//
-//             // ADD BODY
-//             const my_table_body = document.getElementById("tbody_table");
-//             for (const [key, value] of Object.entries(json.modules)) {
-//                 let row = my_table_body.insertRow(-1);
-//                 // Add package name
-//                 let cell = row.insertCell(-1);
-//                 cell.innerHTML = key;
-//
-//                 //add rest
-//                 for (const b of value) {
-//                     let cell = row.insertCell(-1);
-//                     if (b) {
-//                         cell.innerHTML = "X";
-//                     }
-//                 }
-//               }
-//         });
-// }
 
-// populate_dt()
-// populate_js()
+// only populate table on correct page
+document$.subscribe(function() {
+    if (document.getElementById("overview_table")) {
+        populate_overview()
+    }
+})

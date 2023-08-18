@@ -142,8 +142,11 @@ theme:
         name: Switch to light mode 
 
 extra_javascript:
+    - https://code.jquery.com/jquery-3.7.0.min.js
+    - https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js
     - javascripts/test_populate.js
-extra_css: []
+extra_css:
+    - https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css
 
 extra:
   OS: {{ os }}
