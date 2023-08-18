@@ -8,7 +8,7 @@
 ### Nodes
 When attempting to use multiple nodes in your parallelized program to enhance performance, It is a possibility that you notice no performance increase.
 
-Parallelizing code across nodes is fundamentally different from multithreading within a single node. The scalability achieved through multithreading doesn't extend seamlessly to distributing computations across multiple nodes. This means that just changing `#PBS -l nodes=1:ppn=10` to `#PBS -l nodes=1:ppn=10` will only extent your waiting time to get your job running and will not improve the execution time.
+Parallelizing code across nodes is fundamentally different from multithreading within a single node. The scalability achieved through multithreading doesn't extend seamlessly to distributing computations across multiple nodes. This means that just changing `#PBS -l nodes=1:ppn=10` to `#PBS -l nodes=2:ppn=10` will only extent your waiting time to get your job running and will not improve the execution time.
 
 Utilizing additional nodes isn't as straightforward as merely adding computational resources. Nodes often need to be requested, managed, and synchronized, which introduces complexities in distributing work effectively across the nodes. Luckily, there exist some libraries that do this for you.
 
