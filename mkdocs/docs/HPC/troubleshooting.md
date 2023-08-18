@@ -1,7 +1,11 @@
 # Troubleshooting
 
-## Why doesn't more Nodes lead to faster job execution?
+## Why doesn't more ... lead to a faster job execution?
 
+### Cores
+
+
+### Nodes
 When attempting to use multiple nodes in your parallelized program to enhance performance, It is a possibility that you notice no performance increase.
 
 Parallelizing code across nodes is fundamentally different from multithreading within a single node. The scalability achieved through multithreading doesn't extend seamlessly to distributing computations across multiple nodes. This means that just changing `#PBS -l nodes=1:ppn=10` to `#PBS -l nodes=1:ppn=10` will only extent your waiting time to get your job running and will not improve the execution time.
@@ -147,7 +151,7 @@ and include it in the email.
 
     <center>
     ![image](img/831change01.png)
-    <center>
+    </center>
 
 3.  Then click ++"Load"++ button
 
@@ -343,7 +347,7 @@ Now you can check the authenticity by checking if the line that is at
 the place of the underlined piece of text matches one of the following
 lines:
 
-<pre><code>{{opensshFirstConnect}}</pre></code>
+<pre><code>{{opensshFirstConnect}}</code></pre>
 {% endif %}
 
 {% if site == gent %} 
