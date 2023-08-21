@@ -229,14 +229,16 @@ def generate_overview_json_data(modules: dict) -> dict:
     @return: Dictionary with the required JSON structure.
     """
     json_data = {"clusters": list(modules.keys()), "modules": {}}
-    avail_mods = get_unique_software_names(modules)
-    all_packages = get_unique_software_names(np.concatenate(list(avail_mods.values())))
+    avail_software = get_unique_software_names(modules)
+    all_software = get_unique_software_names(np.concatenate(list(avail_software.values())))
 
-    for package in all_packages:
+    # creates a list of booleans for each software that indicates
+    # if the software is available for the corresponding cluster.
+    for soft in all_software:
         available = []
         for cluster in json_data["clusters"]:
-            available.append(package in avail_mods[cluster])
-        json_data["modules"][package] = available
+            available.append(soft in avail_software[cluster])
+        json_data["modules"][soft] = available
     return json_data
 
 

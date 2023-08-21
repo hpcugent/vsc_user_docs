@@ -6,7 +6,7 @@ docs_dir: docs/HPC
 
 nav:
   - Welcome: index.md
-  - datatables: datatables.md
+  - Overview modules: module_overview.md
   - Introduction to HPC: introduction.md
   - Getting an HPC Account: account.md
   - Connecting to the HPC infrastructure: connecting.md
@@ -144,7 +144,7 @@ theme:
 extra_javascript:
     - https://code.jquery.com/jquery-3.7.0.min.js
     - https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js
-    - javascripts/test_populate.js
+    - javascripts/populate_overview.js
 extra_css:
     - https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css
 
