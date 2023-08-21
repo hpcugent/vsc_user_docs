@@ -3,19 +3,23 @@
 ## Why doesn't more ... lead to a faster job execution?
 
 ### Cores
-When you want to make use of multiple cores, you also need to adapt your code to work with this. A normal, standard program will always run sequentially and you need to adapt it to really make use of the extra cores.
+When you want to make use of multiple cores, you also need to adapt your code to work with this. A normal, standard program will always run sequentially and you need to adapt it to really make use of the extra cores. You will always need to write some code to create, manage or synchronize multiple threads/processes. More on how to implement parallelization for you exact programming language can be found online.
 
-It could also be possible that more cores are simply not needed. You can test this by increasing the amount of cores and look at the speedup this increasement gave you. For example, test with 2, 4, 16, 1/4 of all and all cores.
-
-More on how to do this can be found only by looking how to do it for the relevant programming language. More info about how you can run these on our HPC infrastructure can be found [here](multi_core_jobs.md).
+It could also be possible that more cores are simply not needed. You can test this by increasing the amount of cores and look at the speedup this increase gave you. For example, test with 2, 4, 16, 1/4 of all and all cores.
 
 Some **other reasons** why more cores could lead to no increase could be:
 
-- **Overhead:** When you use multithreading or multiprocessing, you can't expect that double the amount of cores will double the performance. This is due to the fact that it also needs time to create and synchronize the threads or processes. When the overhead gets larger then the actual speedup you receive by parallelization, it will not benefit the performance. This can happen when you split you program in to many pieces to run in parallel.
-- **Amdahl's Law:** Amdahl's law is often used in parallel computing to predict the theoretical speedup when using multiple processors. The law states that "the overall performance improvement gained by optimizing a single part of a system is limited by the fraction of time that the improved part is actually used". For example, if a program needs 20 hours to complete using a single thread, but a one-hour portion of the program cannot be parallelized, therefore only the remaining 19 hours execution time can be parallelized, then regardless of how many threads are devoted to a parallelized execution of this program, the minimum execution time is always more than 1 hour. So when you reach this limit, more cores will not solve your problem.
+- **Overhead:** When you use multithreading or multiprocessing, you can't expect that double the amount of cores will double the performance. This is due to the fact that it also needs time to create, manage and synchronize the threads/processes. When the overhead exceeds the speedup you receive by parallelization, it will not benefit the performance. For example, this can happen when you split you program in to many pieces to run in parallel. Creating a thread/process for this task will take longer than actually running the task itself.
+
+- **Amdahl's Law:** Amdahl's law is often used in parallel computing to predict the theoretical speedup when using multiple processors. The law states that "the overall performance improvement gained by optimizing a single part of a system is limited by the fraction of time that the improved part is actually used". For example, if a program needs 20 hours to complete using a single thread, but a one-hour portion of the program cannot be parallelized, therefore only the remaining 19 hours execution time can be parallelized. Regardless of how many threads are devoted to a parallelized execution of this program, the minimum execution time is always more than 1 hour. So when you reach this theoretical limit, more cores will not solve your problem.
+
 - **Resource contention:** When 2 or more threads/processes want to acces the same resources, they need to wait on each other. This is what we call resource contention. This results in that 1 thread/process will need to wait until the other one is is finished with this resource. When for example, each thread uses the same resource, it will definitely run slower than if it doesn't need to wait for the other threads to finish.
-- **Software Limitations:** A perfect example of a software that is not really optimized for parallel execution is python. Although this has improved over the years. This is due to the fact that threads are implemented in a way that multiple threads can't run at the same time. This is due to the global interpreter lock (GIL). Instead of using threads in python to speedup a CPU bound program, you should use processes instead of threads. These can speedup you're CPU bound programs a lot more IN PYTHON than threads can do, although they are much les efficiënt to create. In other programming languages, you would probably wan't to use threads.
-- **no memory:** When memory bandwith can't keep up with the increased core count, you will also see almost no improvements.
+
+- **Software Limitations:** It could also be that your software is just not really optimized for parallelization. A perfect example of a software that is not really optimized for multithreading is python. Although this has improved over the years. This is due to the fact that threads are implemented in a way that multiple threads can't run at the same time. This is due to the global interpreter lock (GIL). Instead of using multithreading in python to speedup a CPU bound program, you should use multiprocessing instead. This uses processes instead of actual threads. These can speedup you're CPU bound programs a lot more IN PYTHON than threads can do, although they are much les efficiënt to create. In other programming languages, you would probably wan't to use threads.
+
+- **no memory:** When memory bandwidth can't keep up with the increased core count, you will also see almost no improvements.
+
+More info about how you can run these on our HPC infrastructure can be found [here](multi_core_jobs.md).
 
 ### Nodes
 When attempting to use multiple nodes in your parallelized program to enhance performance, It is a possibility that you notice no performance increase.
