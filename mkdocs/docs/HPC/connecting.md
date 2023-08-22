@@ -764,14 +764,26 @@ created.
 See [the section on `rsync` in chapter 5 of the Linux intro manual](../linux-tutorial/uploading_files/#copying-faster-with-rsync).
 
 ## Changing login nodes
-It can be useful to work on the same login node using multiple terminal sessions. However, when you connect to the HPC (High-Performance Computing) system through SSH, you're directed to a random login node, which might not be the one where you already have an active session. To address this, there is a way to manually switch your active login node.
+It can be useful to have control over which login node you are on. However, when you connect to the HPC (High-Performance Computing) system, you are directed to a random login node, which might not be the one where you already have an active session. To address this, there is a way to manually switch your active login node.
 
-For instance, if you want to switch to the login node named `gligar07`, you can use the following command while you are connected to the HPC:
+For instance, if you want to switch to the login node named `{{loginhost}}`, you can use the following command while you are connected to the `{{altloginhost}}` login node on the HPC:
 ```shell
-ssh gligar07
+ssh {{loginhost}}
 ```
+This is also possible the other way around.
 
-Rather than launching multiple terminals, you can also use a terminal multiplexer like `screen` or `tmux`.
+If you want to find out which login host you are connected to, you can use the `hostname` command.
+<pre><code>$ <b>hostname</b> 
+{{loginhost}}
+$ <b>ssh gligar08</b>
+
+$ <b>hostname</b> 
+{{altloginhost}}
+</code></pre>
+
+
+Rather than always starting a new session on the HPC, you can also use a terminal multiplexer like `screen` or `tmux`.
+These can make sessions that 'survives' across disconnects.
 You can find more information on how to use these tools here (or on other online sources):
 
 - [screen](https://www.howtogeek.com/662422/how-to-use-linuxs-screen-command/)
