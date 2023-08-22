@@ -365,6 +365,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changing-login-nodes" class="md-nav__link">
+    Changing login nodes
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -981,6 +988,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#changing-login-nodes" class="md-nav__link">
+    Changing login nodes
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1352,6 +1366,28 @@ It is safe to ignore this <code>255</code> versus <code>256</code> difference, b
 machine to the HPC and back.</p>
 <h3 id="fast-file-transfer-for-large-datasets">Fast file transfer for large datasets<a class="headerlink" href="#fast-file-transfer-for-large-datasets" title="Permanent link">#</a></h3>
 <p>See <a href="../linux-tutorial/uploading_files/#copying-faster-with-rsync">the section on <code>rsync</code> in chapter 5 of the Linux intro manual</a>.</p>
+<h2 id="changing-login-nodes">Changing login nodes<a class="headerlink" href="#changing-login-nodes" title="Permanent link">#</a></h2>
+<p>It can be useful to have control over which login node you are on. However, when you connect to the HPC (High-Performance Computing) system, you are directed to a random login node, which might not be the one where you already have an active session. To address this, there is a way to manually switch your active login node.</p>
+<p>For instance, if you want to switch to the login node named <code>ln2.leibniz.uantwerpen.vsc</code>, you can use the following command while you are connected to the <code>ln1.leibniz.uantwerpen.vsc</code> login node on the HPC:
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>ln2.leibniz.uantwerpen.vsc
+</code></pre></div>
+This is also possible the other way around.</p>
+<p>If you want to find out which login host you are connected to, you can use the <code>hostname</code> command.</p>
+<pre><code>$ <b>hostname</b> 
+ln2.leibniz.uantwerpen.vsc
+$ <b>ssh ln1.leibniz.uantwerpen.vsc</b>
+
+$ <b>hostname</b> 
+ln1.leibniz.uantwerpen.vsc
+</code></pre>
+
+<p>Rather than always starting a new session on the HPC, you can also use a terminal multiplexer like <code>screen</code> or <code>tmux</code>.
+These can make sessions that 'survives' across disconnects.
+You can find more information on how to use these tools here (or on other online sources):</p>
+<ul>
+<li><a href="https://www.howtogeek.com/662422/how-to-use-linuxs-screen-command/">screen</a></li>
+<li><a href="https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/">tmux</a></li>
+</ul>
 
 
 
