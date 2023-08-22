@@ -772,7 +772,7 @@ This is also possible the other way around.
 If you want to find out which login host you are connected to, you can use the `hostname` command.
 <pre><code>$ <b>hostname</b> 
 {{loginhost}}
-$ <b>ssh gligar08</b>
+$ <b>ssh {{altloginhost}}</b>
 
 $ <b>hostname</b> 
 {{altloginhost}}
