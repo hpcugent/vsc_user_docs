@@ -74,6 +74,7 @@ plugins:
           crontab_gent.md: crontab.md
 {%- endif %}
   - macros:
+      on_error_fail: true
       include_yaml:
         - extra/constants.yml
         - extra/{{ lsite }}.yml
