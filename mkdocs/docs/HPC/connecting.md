@@ -6,9 +6,9 @@ Before you can really start using the {{ hpc }} clusters, there are several thin
 you need to do or know:
 
 1.  You need to **log on to the cluster** using an SSH client to one of
-    the login nodes. This will give you command-line access. The
-    software you'll need to use on your client system depends on its
-    operating system.
+    the login nodes or by using the [HPC web portal](web_portal.md).
+    This will give you command-line access. 
+    A standard web browser like Firefox or Chrome for the web portal will suffice. 
 
 2.  Before you can do some work, you'll have to **transfer the files**
     that you need from your desktop computer to the cluster. At the end
@@ -61,6 +61,9 @@ connect, with an error message like:
 </code></pre>
 
 ## First Time connection to the HPC infrastructure
+
+The remaining content in this chapter is primarily focused for people utilizing a terminal with SSH.
+If you are instead using the web portal, the corresponding chapter might be more helpful: [Using the HPC-UGent web portal](web_portal.md).
 
 If you have any issues connecting to the {{ hpc }} after you've followed these
 steps, see [Issues connecting to login node](../troubleshooting/#issues-connecting-to-login-node) to troubleshoot.
