@@ -43,6 +43,12 @@ function populate_overview(json_data) {
             const table = new DataTable('#overview_table', {
                 columns: [...[{"title": "name"}], ...all_clusters],
                 paging: false,
+                columnDefs: [
+                    {
+                        targets: "_all",
+                        className: 'dt-body-center'
+                    }
+                ]
             });
 
 
