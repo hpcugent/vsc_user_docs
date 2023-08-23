@@ -1,0 +1,44 @@
+{
+  "clusters": {
+    "donphan": "cluster/donphan",
+    "joltik": "cluster/joltik",
+    "banette": "cluster/.banette",
+    "shuppet": "cluster/.shuppet",
+    "doduo": "cluster/doduo"
+  },
+  "software": {
+    "TensorFlow": {
+      "2.11.0-foss-2022a-CUDA-11.7.0": [
+        "donphan",
+        "joltik"
+      ],
+      ".default": {
+        "donphan": "2.11.0-foss-2022a-CUDA-11.7.0",
+        "joltik": "2.11.0-foss-2022a-CUDA-11.7.0",
+        "doduo": "2.11.0-foss-2022a"
+      },
+      "2.5.0-fosscuda-2020b": [
+        "joltik"
+      ],
+      "2.6.0-foss-2021a-CUDA-11.3.1": [
+        "joltik"
+      ],
+      "2.4.1-fosscuda-2020b": [
+        "joltik"
+      ],
+      "2.7.1-foss-2021b-CUDA-11.4.1": [
+        "joltik"
+      ],
+      "2.4.1-foss-2020b": [
+        "doduo",
+        "donphan",
+        "joltik"
+      ],
+      "2.11.0-foss-2022a": [
+        "doduo",
+        "donphan",
+        "joltik"
+      ]
+    }
+  }
+}
