@@ -1,0 +1,11 @@
+---
+hide:
+  - toc
+---
+
+detailed overview of multichoose
+================================
+
+| |donphan|victini|joltik|skitty|gallade|accelgor|swalot|doduo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|multichoose/1.0.3-GCCcore-10.2.0|x|x|x|x|-|-|x|x|
