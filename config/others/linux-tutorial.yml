@@ -1,14 +1,7 @@
 site_name: Linux tutorial
-docs_dir: docs/linux-tutorial
+docs_dir: docs/linux
 nav:
-  - Introduction: index.md
-  - Getting Started: getting_started.md
-  - Navigating: navigating.md
-  - Manipulating files and directories: manipulating_files_and_directories.md
-  - Uploading/downloading/editing files: uploading_files.md
-  - Beyond the basics: beyond_the_basics.md
-  - Common Pitfalls: common_pitfalls.md
-  - More on the HPC infrastructure: hpc_infrastructure.md
+  - Welcome: index.md
 
 plugins:
   - search:
