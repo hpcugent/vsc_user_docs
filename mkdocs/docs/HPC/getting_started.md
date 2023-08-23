@@ -13,7 +13,7 @@ To get access to the {{hpcinfra}}, visit [Getting an HPC Account](account.md).
 
 If you have not used Linux before, 
 {%- if site == 'Gent' %}
-now would be a good time to follow our [Linux Tutorial](./only/gent/linux-tutorial/index.md).
+now would be a good time to follow our [Linux Tutorial](linux-tutorial/index.md).
 {%- else %}
 please learn some basics first before continuing. (see [Appendix C - Useful Linux Commands](useful_linux_commands.md))
 {%- endif %}
@@ -216,7 +216,7 @@ By default located in the directory where you issued `qsub`.
 
 !!! Info
 
-    For more information about the stdout and stderr output channels, see this [section](./only/gent/linux-tutorial/beyond_the_basics.md#inputoutput).
+    For more information about the stdout and stderr output channels, see this [section](linux-tutorial/beyond_the_basics.md#inputoutput).
 
 {%- endif %}
 

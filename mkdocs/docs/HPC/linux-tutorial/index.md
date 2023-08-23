@@ -3,7 +3,7 @@
 Welcome to the Linux tutorial, a comprehensive guide designed to give you essential skills for smooth interaction within a Linux environment.
 
 These skills are important to the {{ hpcinfra }}, which operates on {{ operatingsystembase }}.
-For more information see [introduction to HPC](https://docs.hpc.ugent.be/introduction).
+For more information see [introduction to HPC](../introduction.md).
 
 The guide aims to make you familiar with the Linux command line environment quickly.
 
@@ -20,5 +20,5 @@ Do not forget [Common pitfalls](common_pitfalls.md), as this can save you some t
 ### Useful topics
 
 - [More on the HPC infrastructure](hpc_infrastructure.md).
-- [Cron Scripts](https://docs.hpc.ugent.be/crontab): run scripts automatically at periodically fixed times, dates, or intervals.
+- [Cron Scripts](../crontab.md): run scripts automatically at periodically fixed times, dates, or intervals.
 

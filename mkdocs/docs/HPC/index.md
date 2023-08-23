@@ -18,7 +18,7 @@ Use the OS dropdown in the top bar to switch to a different operating system.
 - [Getting Started](getting_started.md)  | [Getting Access](account.md)
 {%- if site == 'Gent' %}
 - [Recording of HPC-UGent intro](https://www.ugent.be/hpc/en/training/introhpcugent-recording)
-- [Linux Tutorial](./only/gent/linux-tutorial/index.md)
+- [Linux Tutorial](linux-tutorial/index.md)
 - [Hardware overview](https://www.ugent.be/hpc/en/infrastructure)
 {%- endif %}
 - [FAQ](FAQ.md) | [Troubleshooting](troubleshooting.md) | [Best practices](./best_practices.md)  

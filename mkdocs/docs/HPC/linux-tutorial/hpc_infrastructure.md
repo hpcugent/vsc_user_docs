@@ -3,20 +3,20 @@
 
 Multiple different shared filesystems are available on the HPC
 infrastructure, each with their own purpose. See section
-[Where to store your data on the {{hpc}}](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#where-to-store-your-data-on-the-hpc)
+[Where to store your data on the {{hpc}}](../running_jobs_with_input_output_data.md#where-to-store-your-data-on-the-hpc)
 for a list of available locations.
 
 {% if site==gent %}
 ### VO storage
 If you are a member of a (non-default) virtual organisation (VO), see section
-[Virtual Organisations](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#virtual-organisations),
+[Virtual Organisations](../running_jobs_with_input_output_data.md#virtual-organisations),
 you have access to additional directories (with more quota) on the data and
 scratch filesystems, which you can share with other members in the VO.
 {% endif %}
 
 ### Quota
 Space is limited on the cluster's storage. To check your quota, see section
-[Pre-defined quota](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#pre-defined-quotas).
+[Pre-defined quota](../running_jobs_with_input_output_data.md#pre-defined-quotas).
 
 To figure out where your quota is being spent, the `du` (isk sage)
 command can come in useful:
@@ -48,14 +48,14 @@ The most commonly used commands are:
 4.  `module load <module name>`: load a particular module
 
 More information is available in section
-[Modules](https://docs.hpc.ugent.be/running_batch_jobs/#modules).
+[Modules](../running_batch_jobs.md#modules).
 
 ## Using the clusters
 The use the clusters beyond the login node(s) which have limited resources, you
 should create job scripts and submit them to the clusters.
 
 Detailed information is available in section
-[submitting your job](https://docs.hpc.ugent.be/running_batch_jobs/#defining-and-submitting-your-job).
+[submitting your job](../running_batch_jobs.md#defining-and-submitting-your-job).
 
 ## Exercises
 
