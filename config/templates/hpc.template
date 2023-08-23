@@ -3,6 +3,7 @@ site_url: https://docs.hpc.ugent.be/{{ os }}/
 {%- endif %}
 site_name: VSC User Documentation - {{ site }} ({{ os }})
 docs_dir: docs/HPC
+repo_url: https://github.com/hpcugent/vsc_user_docs
 
 nav:
   - Welcome: index.md
@@ -113,6 +114,9 @@ markdown_extensions:
 theme:
   name: material
   language: en
+  # This directory allows customization of material theme. Currently used for OS dropdown in header.
+  # See https://squidfunk.github.io/mkdocs-material/customization/#extending-the-theme
+  custom_dir: docs/HPC/overrides 
   features:
     # - navigation.tabs
     - navigation.top
