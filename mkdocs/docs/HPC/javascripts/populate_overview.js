@@ -38,7 +38,7 @@ function populate_overview_new() {
             const all_clusters = Object.entries(json.clusters)
                 .filter(([, value]) => !value.includes("."))
                 .map(x => {
-                    return {"title": x[0]}
+                    return {"title": x[0], "className": 'dt-center'}
                 })
 
             const table = new DataTable('#overview_table', {
