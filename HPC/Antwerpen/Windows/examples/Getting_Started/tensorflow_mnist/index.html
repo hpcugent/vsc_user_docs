@@ -166,6 +166,43 @@
 </div>
     
     
+      <div class="md-header__source">
+        <!-- Original file https://github.com/squidfunk/mkdocs-material/blob/master/material/partials/source.html -->
+<!-- More information see https://squidfunk.github.io/mkdocs-material/customization/ -->
+<!-- This is code FOR OS PICKER NOT FOR INTENTED PURPOSE AS REPO LINK -->
+<div class="md-source">
+  <label for="picker">Your OS:</label>
+  <select name="picker" id="picker" style="border: none; background-color: transparent; color: inherit">
+    <option value="" disabled selected>Choose OS</option>
+    <option value="Linux">Linux</option>
+    <option value="Windows">Windows</option>
+    <option value="macOS">macOS</option>
+  </select>
+</div>
+
+<script>
+  {
+    const selectElement = document.querySelector("#picker");
+    const store_OS = localStorage.getItem("select_OS");
+    // Get url before OS part.
+    const osmatch = window.location.href.match(/^(.*?)\/(Linux|macOS|Windows)\//i);
+    if (store_OS) {
+      // There is a stored OS, so set select to this option.
+      picker.value = JSON.parse(store_OS)[1];
+    }
+
+    selectElement.addEventListener("change", (event) => {
+      if (event.target.value){
+        // Save new OS pick.
+        localStorage.setItem("select_OS", JSON.stringify([osmatch[1], event.target.value]));
+        // Redirect to new OS page.
+        window.location.href = window.location.href.replace(/Linux|MacOS|Windows/i,event.target.value);
+      }
+    });
+  }
+</script>
+      </div>
+    
   </nav>
   
 </header>
@@ -198,6 +235,43 @@
     </a>
     VSC User Documentation - Antwerpen (Windows)
   </label>
+  
+    <div class="md-nav__source">
+      <!-- Original file https://github.com/squidfunk/mkdocs-material/blob/master/material/partials/source.html -->
+<!-- More information see https://squidfunk.github.io/mkdocs-material/customization/ -->
+<!-- This is code FOR OS PICKER NOT FOR INTENTED PURPOSE AS REPO LINK -->
+<div class="md-source">
+  <label for="picker">Your OS:</label>
+  <select name="picker" id="picker" style="border: none; background-color: transparent; color: inherit">
+    <option value="" disabled selected>Choose OS</option>
+    <option value="Linux">Linux</option>
+    <option value="Windows">Windows</option>
+    <option value="macOS">macOS</option>
+  </select>
+</div>
+
+<script>
+  {
+    const selectElement = document.querySelector("#picker");
+    const store_OS = localStorage.getItem("select_OS");
+    // Get url before OS part.
+    const osmatch = window.location.href.match(/^(.*?)\/(Linux|macOS|Windows)\//i);
+    if (store_OS) {
+      // There is a stored OS, so set select to this option.
+      picker.value = JSON.parse(store_OS)[1];
+    }
+
+    selectElement.addEventListener("change", (event) => {
+      if (event.target.value){
+        // Save new OS pick.
+        localStorage.setItem("select_OS", JSON.stringify([osmatch[1], event.target.value]));
+        // Redirect to new OS page.
+        window.location.href = window.location.href.replace(/Linux|MacOS|Windows/i,event.target.value);
+      }
+    });
+  }
+</script>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -833,6 +907,9 @@
               <article class="md-content__inner md-typeset">
                 
                   
+
+  
+  
 
 
   <h1>Index</h1>

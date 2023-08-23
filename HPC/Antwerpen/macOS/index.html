@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome" class="md-skip">
+        <a href="#welcome-to-the-uantwerpen-hpc-documentation" class="md-skip">
           Skip to content
         </a>
       
@@ -173,6 +173,43 @@
 </div>
     
     
+      <div class="md-header__source">
+        <!-- Original file https://github.com/squidfunk/mkdocs-material/blob/master/material/partials/source.html -->
+<!-- More information see https://squidfunk.github.io/mkdocs-material/customization/ -->
+<!-- This is code FOR OS PICKER NOT FOR INTENTED PURPOSE AS REPO LINK -->
+<div class="md-source">
+  <label for="picker">Your OS:</label>
+  <select name="picker" id="picker" style="border: none; background-color: transparent; color: inherit">
+    <option value="" disabled selected>Choose OS</option>
+    <option value="Linux">Linux</option>
+    <option value="Windows">Windows</option>
+    <option value="macOS">macOS</option>
+  </select>
+</div>
+
+<script>
+  {
+    const selectElement = document.querySelector("#picker");
+    const store_OS = localStorage.getItem("select_OS");
+    // Get url before OS part.
+    const osmatch = window.location.href.match(/^(.*?)\/(Linux|macOS|Windows)\//i);
+    if (store_OS) {
+      // There is a stored OS, so set select to this option.
+      picker.value = JSON.parse(store_OS)[1];
+    }
+
+    selectElement.addEventListener("change", (event) => {
+      if (event.target.value){
+        // Save new OS pick.
+        localStorage.setItem("select_OS", JSON.stringify([osmatch[1], event.target.value]));
+        // Redirect to new OS page.
+        window.location.href = window.location.href.replace(/Linux|MacOS|Windows/i,event.target.value);
+      }
+    });
+  }
+</script>
+      </div>
+    
   </nav>
   
 </header>
@@ -188,6 +225,8 @@
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -205,6 +244,43 @@
     </a>
     VSC User Documentation - Antwerpen (macOS)
   </label>
+  
+    <div class="md-nav__source">
+      <!-- Original file https://github.com/squidfunk/mkdocs-material/blob/master/material/partials/source.html -->
+<!-- More information see https://squidfunk.github.io/mkdocs-material/customization/ -->
+<!-- This is code FOR OS PICKER NOT FOR INTENTED PURPOSE AS REPO LINK -->
+<div class="md-source">
+  <label for="picker">Your OS:</label>
+  <select name="picker" id="picker" style="border: none; background-color: transparent; color: inherit">
+    <option value="" disabled selected>Choose OS</option>
+    <option value="Linux">Linux</option>
+    <option value="Windows">Windows</option>
+    <option value="macOS">macOS</option>
+  </select>
+</div>
+
+<script>
+  {
+    const selectElement = document.querySelector("#picker");
+    const store_OS = localStorage.getItem("select_OS");
+    // Get url before OS part.
+    const osmatch = window.location.href.match(/^(.*?)\/(Linux|macOS|Windows)\//i);
+    if (store_OS) {
+      // There is a stored OS, so set select to this option.
+      picker.value = JSON.parse(store_OS)[1];
+    }
+
+    selectElement.addEventListener("change", (event) => {
+      if (event.target.value){
+        // Save new OS pick.
+        localStorage.setItem("select_OS", JSON.stringify([osmatch[1], event.target.value]));
+        // Redirect to new OS page.
+        window.location.href = window.location.href.replace(/Linux|MacOS|Windows/i,event.target.value);
+      }
+    });
+  }
+</script>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -829,7 +905,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -853,15 +931,28 @@
                 
                   
 
+  
+  
 
-<h1 id="welcome">Welcome<a class="headerlink" href="#welcome" title="Permanent link">#</a></h1>
-<p>Welcome to the UAntwerpen-HPC documentation!</p>
+
+<h1 id="welcome-to-the-uantwerpen-hpc-documentation">Welcome to the UAntwerpen-HPC documentation<a class="headerlink" href="#welcome-to-the-uantwerpen-hpc-documentation" title="Permanent link">#</a></h1>
+<hr />
+<p><img align="left" alt="image" src="img/ch0-hpc.png" style="height:383px;width:378px;border-radius:6px" /></p>
 <p>Use the menu on the left to navigate, or use the search box on the top right.</p>
-<p>The current view of the documentation is intended for people using <strong>macOS</strong> as operating system.
-To switch to different operating system (Windows, macOS, Linux), click <a href="../#force_select_OS">here</a>.</p>
+<p>You are viewing documentation intended for people using <strong>macOS</strong>.<br/>
+Use the OS dropdown in the top bar to switch to a different operating system.</p>
+<p><strong>Quick links</strong></p>
+<ul>
+<li><a href="getting_started/">Getting Started</a>  | <a href="account/">Getting Access</a></li>
+<li><a href="FAQ/">FAQ</a> | <a href="troubleshooting/">Troubleshooting</a> | <a href="best_practices/">Best practices</a>  </li>
+</ul>
+<p><br/><br/><br/></p>
+<p>If you find any problems in this documentation, please report them by mail to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#112;&#99;&#64;&#117;&#97;&#110;&#116;&#119;&#101;&#114;&#112;&#101;&#110;&#46;&#98;&#101;">&#104;&#112;&#99;&#64;&#117;&#97;&#110;&#116;&#119;&#101;&#114;&#112;&#101;&#110;&#46;&#98;&#101;</a> or <a href="https://github.com/hpcugent/vsc_user_docs">open a pull request</a>.</p>
 <p>If you still have any questions, you can <a href="https://www.uantwerpen.be/en/research-facilities/calcua/support/">contact the UAntwerpen-HPC</a>.</p>
 
 
+
+  
 
 
 
@@ -882,6 +973,8 @@ To switch to different operating system (Windows, macOS, Linux), click <a href="
         <footer class="md-footer">
   
     
+      
+        
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
