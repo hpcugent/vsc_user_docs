@@ -142,8 +142,11 @@ def modules_ugent() -> dict:
 # Util functions
 # --------------------------------------------------------------------------------------------------------
 
-def mod_name_to_software_name(mod: str) -> str:
-    return mod.split("/", 1)[0]
+def analyze_module(mod: str) -> Tuple:
+    return (
+        mod.split("/", 1)[0],
+        mod.split("/", 1)[1] if "/" in mod else ""
+    )
 
 
 def mod_names_to_software_names(mod_list: np.ndarray) -> np.ndarray:
@@ -153,7 +156,7 @@ def mod_names_to_software_names(mod_list: np.ndarray) -> np.ndarray:
     @param mod_list: List of the module names
     @return: List of the corresponding software names
     """
-    return np.unique([mod_name_to_software_name(mod) for mod in mod_list])
+    return np.unique([analyze_module(mod)[0] for mod in mod_list])
 
 
 def get_unique_software_names(data: Union[dict, list, np.ndarray]) -> Union[dict, list, np.ndarray]:
@@ -227,17 +230,31 @@ def generate_markdown_overview(modules: dict) -> None:
 # --------------------------------------------------------------------------------------------------------
 # Generate JSON
 # --------------------------------------------------------------------------------------------------------
+# -----------
+# OVERVIEW
+# -----------
 
+# FORMAT OVERVIEW JSON
+# {
+#     "clusters": ["cluster/dialga", "cluster/pikachu"],
+#     "modules": {
+#         "Markov": [1, 0],
+#         "cfd": [1, 1],
+#         "llm": [0, 1],
+#         "science": [1, 1]
+#     }
+# }
 def generate_json_overview_data(modules: dict) -> dict:
     """
-    Generate the data for the json overview.
+    Generate the data for the json overview in the above format.
 
-    @param modules: Dict with all the modules per cluster. Keys are the cluster names.
+    @param modules: Dictionary with all the modules per cluster. Keys are the cluster names.
     @return: Dictionary with the required JSON structure.
+
     """
     json_data = {"clusters": list(modules.keys()), "modules": {}}
     avail_software = get_unique_software_names(modules)
-    all_software = get_unique_software_names(np.concatenate(list(avail_software.values())))
+    all_software = get_unique_software_names(np.concatenate(list(modules.values())))
 
     # creates a list of booleans for each software that indicates
     # if the software is available for the corresponding cluster.
@@ -262,53 +279,79 @@ def generate_json_overview(modules: dict) -> None:
         json.dump(json_data, outfile)
 
 
+# -----------
+# DETAILED
+# -----------
+
+# FORMAT DETAILED JSON:
+#
 # {
-#     "clusters": ['gallade', 'joltik']
+#     "clusters": ["dialga", "pikachu"],
 #     "software": {
-#         "TensorFlow":
-#             "clusters": ['gallade', 'joltik'],
-#             "versions":{
-#                 "2.3.1": ['gallade', 'joltik'],
-#                 }
-#             "homepage": ""
-#             "description": ""
-#             "extensions": ['numpy', '']
+#         "cfd": {
+#             "clusters": ["dialga", "pikachu"],
+#             "versions": {
+#                 "2.3.1": ["dialga"],
+#                 "2.3.2": ["dialga", "pikachu"]
+#             },
+#             "homepage": "",
+#             "description": "",
+#             "extensions": ["numpy"]
+#         }
 #     }
 # }
 
 def generate_json_detailed_data(modules: dict) -> dict:
+    """
+    Generate the data for the detailed JSON in the above format.
+
+    @param modules: Dictionary with all the modules per cluster. Keys are the cluster names.
+    @return: Dictionary with the required JSON structure.
+    """
     all_clusters = [cluster.split("/", 1)[1] for cluster in modules]
     json_data = {
         "clusters": all_clusters,
         "software": {}
     }
 
+    # Loop over every module in every cluster
     for cluster in modules:
         cluster_name = cluster.split("/", 1)[1]
         for mod in modules[cluster]:
-            software = mod_name_to_software_name(mod)
+            software, version = analyze_module(mod)
 
-            if software not in json_data["software"]:
-                json_data["software"][software] = {
-                    "clusters": [],
-                    "versions": {},
-                    "homepage": "",
-                    "description": ""
-                }
+            # Exclude modules with no version
+            if version != "":
+                # If the software is not yet present, add it.
+                if software not in json_data["software"]:
+                    json_data["software"][software] = {
+                        "clusters": [],
+                        "versions": {},
+                        "homepage": "",
+                        "description": ""
+                    }
 
-            if mod not in json_data["software"][software]["versions"]:
-                json_data["software"][software]["versions"][mod] = []
+                # If the version is not yet present, add it.
+                if mod not in json_data["software"][software]["versions"]:
+                    json_data["software"][software]["versions"][mod] = []
 
-            if cluster_name not in json_data["software"][software]["clusters"]:
-                json_data["software"][software]["clusters"].append(cluster_name)
+                # If the cluster is not yet present, add it.
+                if cluster_name not in json_data["software"][software]["clusters"]:
+                    json_data["software"][software]["clusters"].append(cluster_name)
 
-            if cluster_name not in json_data["software"][software]["versions"][mod]:
-                json_data["software"][software]["versions"][mod].append(cluster_name)
+                # If the cluster is not yet present, add it.
+                if cluster_name not in json_data["software"][software]["versions"][mod]:
+                    json_data["software"][software]["versions"][mod].append(cluster_name)
 
     return json_data
 
 
 def generate_json_detailed(modules: dict) -> None:
+    """
+    Generate the detailed JSON.
+
+    @param modules: Dictionary with all the modules per cluster. Keys are the cluster names.
+    """
     json_data = generate_json_detailed_data(modules)
     with open("json_data_detail.json", 'w') as outfile:
         json.dump(json_data, outfile)
@@ -319,10 +362,10 @@ def generate_json_detailed(modules: dict) -> None:
 # --------------------------------------------------------------------------------------------------------
 
 def main():
-    # Generate the overviews
+    # Generate the JSON overviews
     modules = modules_ugent()
-    generate_markdown_overview(modules)
     generate_json_overview(modules)
+    generate_json_detailed(modules)
 
 
 if __name__ == '__main__':
