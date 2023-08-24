@@ -265,12 +265,12 @@ $ <b>ls -l dataset.txt</b>
 </code></pre>
 
 For more information about `chmod` or `setfacl`, see
-[Linux tutorial](../linux-tutorial/manipulating_files_and_directories/#changing-permissions-chmod).
+[Linux tutorial](linux-tutorial/manipulating_files_and_directories.md#changing-permissions-chmod).
 
 ### Can I use multiple different SSH key pairs to connect to my VSC account?
 
 Yes, and this is recommended when working from different computers.
-Please see [Adding multiple SSH public keys](../account/#adding-multiple-ssh-public-keys-optional) on how to do this.
+Please see [Adding multiple SSH public keys](account.md#adding-multiple-ssh-public-keys-optional) on how to do this.
 
 ### I want to use software that is not available on the clusters yet
 
@@ -336,7 +336,7 @@ One person can only be part of one VO, be it as a member or moderator.
 It's possible to leave a VO and join another one. However, it's not
 recommended to keep switching between VO's (to supervise groups, for example).
 
-See also: [Virtual Organisations](../running_jobs_with_input_output_data/#virtual-organisations).
+See also: [Virtual Organisations](running_jobs_with_input_output_data.md#virtual-organisations).
 
 {% if site == gent %}
 ### My UGent shared drives don't show up
@@ -346,7 +346,7 @@ you might not see an entry with your username when listing `ls /UGent`.
 This is normal: try `ls /UGent/your_username` or `cd /UGent/your_username`, and you should be able to access the drives.
 Be sure to use your UGent username and not your VSC username here.
 
-See also: [Your UGent home drive and shares](../running_jobs_with_input_output_data/#your-ugent-home-drive-and-shares).
+See also: [Your UGent home drive and shares](running_jobs_with_input_output_data.md#your-ugent-home-drive-and-shares).
 {% endif %}
 
 ### I have another question/problem

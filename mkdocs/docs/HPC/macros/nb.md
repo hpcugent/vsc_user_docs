@@ -1,1 +1,3 @@
-../only/gent/linux-tutorial/macros/nb.md
+{%- macro nb(content) %}
+<span style="white-space: nowrap;">{{content}}</span>
+{% endmacro %}
