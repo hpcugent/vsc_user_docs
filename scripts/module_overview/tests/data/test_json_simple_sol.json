@@ -1,1 +1,1 @@
-{"clusters": ["cluster/dialga", "cluster/pikachu"], "modules": {"Markov": [true, false], "cfd": [true, true], "llm": [false, true], "science": [true, true]}}
+{"clusters": ["cluster/dialga", "cluster/pikachu"], "modules": {"Markov": [1, 0], "cfd": [1, 1], "llm": [0, 1], "science": [1, 1]}}

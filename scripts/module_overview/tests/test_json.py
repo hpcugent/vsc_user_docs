@@ -35,10 +35,10 @@ class TestJSON:
         assert json_data == {
             'clusters': ["cluster/dialga", "cluster/pikachu"],
             'modules': {
-                "Markov": [True, False],
-                "cfd": [True, True],
-                "llm": [False, True],
-                "science": [True, True]
+                "Markov": [1, 0],
+                "cfd": [1, 1],
+                "llm": [0, 1],
+                "science": [1, 1]
             }
         }
 
