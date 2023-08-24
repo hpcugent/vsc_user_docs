@@ -142,6 +142,10 @@ def modules_ugent() -> dict:
 # Util functions
 # --------------------------------------------------------------------------------------------------------
 
+def mod_name_to_software_name(mod: str) -> str:
+    return mod.split("/", 1)[0]
+
+
 def mod_names_to_software_names(mod_list: np.ndarray) -> np.ndarray:
     """
     Convert a list of module names to a list of the software names.
@@ -149,7 +153,7 @@ def mod_names_to_software_names(mod_list: np.ndarray) -> np.ndarray:
     @param mod_list: List of the module names
     @return: List of the corresponding software names
     """
-    return np.unique([entry.split("/")[0] for entry in mod_list])
+    return np.unique([mod_name_to_software_name(mod) for mod in mod_list])
 
 
 def get_unique_software_names(data: Union[dict, list, np.ndarray]) -> Union[dict, list, np.ndarray]:
@@ -208,20 +212,23 @@ def generate_module_table(data: dict, md_file: MdUtils) -> None:
     print("Done!")
 
 
-def generate_markdown_overview() -> None:
+def generate_markdown_overview(modules: dict) -> None:
     """
     Generate the general overview in a markdown file.
     It generates a list of all the available software and indicates on which cluster it is available.
     """
     md_fn = 'module_overview.md'
     md_file = MdUtils(file_name=md_fn, title='Overview of available modules per cluster')
-    data = modules_ugent()
-    generate_module_table(data, md_file)
+    generate_module_table(modules, md_file)
     md_file.create_md_file()
     print(f"Module overview created at {md_fn}")
 
 
-def generate_overview_json_data(modules: dict) -> dict:
+# --------------------------------------------------------------------------------------------------------
+# Generate JSON
+# --------------------------------------------------------------------------------------------------------
+
+def generate_json_overview_data(modules: dict) -> dict:
     """
     Generate the data for the json overview.
 
@@ -242,21 +249,81 @@ def generate_overview_json_data(modules: dict) -> dict:
     return json_data
 
 
-def generate_json_overview() -> None:
+def generate_json_overview(modules: dict) -> None:
     """
     Generate the overview in a JSON format.
     """
 
     # get data
-    modules = modules_ugent()
-    json_data = generate_overview_json_data(modules)
+    json_data = generate_json_overview_data(modules)
 
     # write it to a file
     with open("json_data.json", 'w') as outfile:
         json.dump(json_data, outfile)
 
 
+# {
+#     "clusters": ['gallade', 'joltik']
+#     "software": {
+#         "TensorFlow":
+#             "clusters": ['gallade', 'joltik'],
+#             "versions":{
+#                 "2.3.1": ['gallade', 'joltik'],
+#                 }
+#             "homepage": ""
+#             "description": ""
+#             "extensions": ['numpy', '']
+#     }
+# }
+
+def generate_json_detailed_data(modules: dict) -> dict:
+    all_clusters = [cluster.split("/", 1)[1] for cluster in modules]
+    json_data = {
+        "clusters": all_clusters,
+        "software": {}
+    }
+
+    for cluster in modules:
+        cluster_name = cluster.split("/", 1)[1]
+        for mod in modules[cluster]:
+            software = mod_name_to_software_name(mod)
+
+            if software not in json_data["software"]:
+                json_data["software"][software] = {
+                    "clusters": [],
+                    "versions": {},
+                    "homepage": "",
+                    "description": ""
+                }
+
+            if mod not in json_data["software"][software]["versions"]:
+                json_data["software"][software]["versions"][mod] = []
+
+            if cluster_name not in json_data["software"][software]["clusters"]:
+                json_data["software"][software]["clusters"].append(cluster_name)
+
+            if cluster_name not in json_data["software"][software]["versions"][mod]:
+                json_data["software"][software]["versions"][mod].append(cluster_name)
+
+    return json_data
+
+
+def generate_json_detailed(modules: dict) -> None:
+    json_data = generate_json_detailed_data(modules)
+    with open("json_data_detail.json", 'w') as outfile:
+        json.dump(json_data, outfile)
+
+
+# --------------------------------------------------------------------------------------------------------
+# MAIN
+# --------------------------------------------------------------------------------------------------------
+
+def main():
+    # Generate the overviews
+    modules = modules_ugent()
+    generate_markdown_overview(modules)
+    generate_json_overview(modules)
+
+
 if __name__ == '__main__':
-    # Generate the overview
-    generate_markdown_overview()
-    generate_json_overview()
+    main()

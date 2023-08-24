@@ -1,5 +1,5 @@
 import filecmp
-from module_overview import generate_overview_json_data, generate_json_overview, modules_ugent
+from module_overview import generate_json_overview_data, generate_json_overview, modules_ugent, generate_json_detailed
 import os
 
 
@@ -21,6 +21,7 @@ class TestJSON:
     def teardown_class(cls):
         if os.path.exists("json_data.json"):
             os.remove("json_data.json")
+            os.remove("json_data_detail.json")
 
     # ---------------------------
     # Markdown tests
@@ -28,7 +29,7 @@ class TestJSON:
 
     def test_json_generate_simple(self):
         modules = modules_ugent()
-        json_data = generate_overview_json_data(modules)
+        json_data = generate_json_overview_data(modules)
         assert len(json_data["clusters"]) == 2
         assert len(json_data["modules"]) == 4
         assert list(json_data["clusters"]) == ["cluster/dialga", "cluster/pikachu"]
@@ -43,6 +44,15 @@ class TestJSON:
         }
 
     def test_json_simple(self):
-        generate_json_overview()
+        modules = modules_ugent()
+        generate_json_overview(modules)
         assert os.path.exists("json_data.json")
         assert filecmp.cmp(self.path + "/data/test_json_simple_sol.json", "json_data.json")
+
+    def test_json_detail_simple(self):
+        modules = modules_ugent()
+        generate_json_detailed(modules)
+        assert os.path.exists("json_data_detail.json")
+        assert filecmp.cmp(self.path + "/data/test_json_simple_sol_detail.json", "json_data_detail.json")
+
+
