@@ -6,7 +6,9 @@ docs_dir: docs/HPC
 
 nav:
   - Welcome: index.md
-  - Overview modules: module_overview.md
+  {%- if site == 'Gent' %}
+  - Overview modules: only/gent/module_overview/index.md
+  {%- endif %}
   - Introduction to HPC: introduction.md
   - Getting an HPC Account: account.md
   - Connecting to the HPC infrastructure: connecting.md

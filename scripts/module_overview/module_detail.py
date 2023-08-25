@@ -24,21 +24,42 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 """
-Python script to generate a detail page for the avalable modules across different clusters, in MarkDown format.
+Python script to generate a detail page for the available modules across different clusters, in MarkDown format.
 It generates 1 markdown for each module.
 
 @author: Michiel Lachaert (Ghent University)
 """
-
+import argparse
 import json
 from mdutils import MdUtils
 from natsort import natsorted
 import os
 
 
+def main():
+    parser = argparse.ArgumentParser(description="Get args.")
+    parser.add_argument(
+        "--json",
+        "-j",
+        dest="json",
+        help="Path to the JSON.",
+        required=True
+    )
+    parser.add_argument(
+        "--path",
+        "-p",
+        dest="path",
+        help="Path to the directory where the detail folder will be placed.",
+        required=True
+    )
+
+    args = parser.parse_args()
+    generate_detail_pages(args.json, args.path)
+
+
 def dict_sort(dictionary: dict) -> dict:
     """
-    Sort a dictionary by key
+    Sort a dictionary by key.
 
     @param dictionary: A dictionary
     @return: Sorted dictionary
@@ -56,7 +77,7 @@ def generate_software_table_data(software_data: dict, clusters: list) -> list:
     """
     table_data = [" "] + clusters
 
-    for k, v in software_data.items():
+    for k, v in list(software_data.items())[::-1]:
         row = [k]
 
         for cluster in clusters:
@@ -75,7 +96,7 @@ def generate_software_detail_page(software_name: str, software_data: dict, clust
     @param clusters: List with all the cluster names
     @param path: Path of the directory where the detailed page will be created.
     """
-    filename = f"{path}/{software_name}_detail.md"
+    filename = f"{path}/{software_name}.md"
     md_file = MdUtils(file_name=filename, title=f"detailed overview of {software_name}")
 
     sorted_versions = dict_sort(software_data["versions"])
@@ -94,20 +115,18 @@ def generate_software_detail_page(software_name: str, software_data: dict, clust
         f.write("---\nhide:\n  - toc\n---\n" + read_data)
 
 
-def generate_detail_pages() -> None:
+def generate_detail_pages(json_path, dest_path) -> None:
     """
     Generate all the detailed pages for all the software that is available.
     """
 
-    with open("json_data_detail.json") as json_data:
+    with open(json_path) as json_data:
         data = json.load(json_data)
 
-    path = "/home/milachae/Documents/HPC_Vakantiejob_2023/vsc_user_docs/mkdocs/docs/HPC/detail"
-    os.makedirs(path, exist_ok=True)
     all_clusters = data["clusters"]
     for software, content in data["software"].items():
-        generate_software_detail_page(software, content, all_clusters, path)
+        generate_software_detail_page(software, content, all_clusters, dest_path)
 
 
 if __name__ == '__main__':
-    generate_detail_pages()
+    main()

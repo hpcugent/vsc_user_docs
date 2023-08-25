@@ -29,50 +29,6 @@
 /**
  * A function that populates the table on the module overview page with information about all the available modules.
  */
-// function populate_overview_new() {
-//     fetch("../data/modulemap.json")
-//         .then((response) => response.json())
-//         .then((json) => {
-//             // CONSTRUCT TABLE
-//
-//             const all_clusters = Object.entries(json.clusters)
-//                 .filter(([, value]) => !value.includes("."))
-//                 .map(x => {
-//                     return {"title": x[0], "className": 'dt-center'}
-//                 })
-//
-//             const table = new DataTable('#overview_table', {
-//                 columns: [...[{"title": "name"}], ...all_clusters],
-//                 paging: false,
-//             });
-//
-//
-//             // ADD DATA
-//             let new_rows = [];
-//
-//             // list_avaible contains a list with booleans.
-//             // These booleans indicates if the software is available on the corresponding cluster.
-//             for (const [software, versions] of Object.entries(json.software)) {
-//                 let new_row = [
-//                     `<a href="../detail/${software}_detail">${software}</a>`
-//                 ]
-//
-//                 const available = Object.keys(versions[".default"])
-//                 all_clusters
-//                     .forEach(cluster =>
-//                         new_row.push(available.includes(cluster.title) ? "x" : "-")
-//                     )
-//
-//                 new_rows.push(new_row);
-//             }
-//
-//             table.rows.add(new_rows).draw();
-//         })
-// }
-
-/**
- * A function that populates the table on the module overview page with information about all the available modules.
- */
 function populate_overview(json_data) {
     fetch(json_data)
         .then((response) => response.json())
@@ -95,7 +51,7 @@ function populate_overview(json_data) {
             // list_avaible contains a list with booleans.
             // These booleans indicates if the software is available on the corresponding cluster.
             for (const [software, list_available] of Object.entries(json.modules)) {
-                let new_row = [`<a href="../detail/${software}_detail">${software}</a>`];
+                let new_row = [`<a href="detail/${software}">${software}</a>`];
                 list_available.forEach(bool => new_row.push(bool ? "x" : "-"));
                 new_rows.push(new_row);
             }
@@ -107,6 +63,6 @@ function populate_overview(json_data) {
 // Only start populating the table if the correct page has been loaded.
 document$.subscribe(function() {
     if (document.getElementById("overview_table")) {
-        populate_overview("../data/json_data.json")
+        populate_overview("../module_overview/data/json_data.json")
     }
 })

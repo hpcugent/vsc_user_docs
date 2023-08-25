@@ -38,6 +38,17 @@ from typing import Union, Tuple
 
 
 # --------------------------------------------------------------------------------------------------------
+# MAIN
+# --------------------------------------------------------------------------------------------------------
+
+def main():
+    # Generate the JSON overviews
+    modules = modules_ugent()
+    generate_json_overview(modules)
+    generate_json_detailed(modules)
+
+
+# --------------------------------------------------------------------------------------------------------
 # Functions to run "module" commands
 # --------------------------------------------------------------------------------------------------------
 
@@ -355,17 +366,6 @@ def generate_json_detailed(modules: dict) -> None:
     json_data = generate_json_detailed_data(modules)
     with open("json_data_detail.json", 'w') as outfile:
         json.dump(json_data, outfile)
-
-
-# --------------------------------------------------------------------------------------------------------
-# MAIN
-# --------------------------------------------------------------------------------------------------------
-
-def main():
-    # Generate the JSON overviews
-    modules = modules_ugent()
-    generate_json_overview(modules)
-    generate_json_detailed(modules)
 
 
 if __name__ == '__main__':
