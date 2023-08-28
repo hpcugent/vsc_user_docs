@@ -49,6 +49,20 @@ def main():
 
 
 # --------------------------------------------------------------------------------------------------------
+# Functions to run "ls" commands
+# --------------------------------------------------------------------------------------------------------
+
+def ls(path: str) -> np.ndarray:
+    proc = subprocess.run(
+        ['ls', '-1'] + [path],
+        encoding="utf-8",
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE
+    )
+    return np.array(proc.stdout.split())
+
+
+# --------------------------------------------------------------------------------------------------------
 # Functions to run "module" commands
 # --------------------------------------------------------------------------------------------------------
 
@@ -91,8 +105,57 @@ def module_swap(name: str) -> None:
     module("swap", name)
 
 
+def module_use(path: str) -> None:
+    """
+    Function to run "module use" commands.
+
+    @param path: Path to the directory with all the modules you want to use.
+    """
+    module("use", path)
+
+
+def module_unuse(path: str) -> None:
+    """
+    Function to run "module unuse" commands.
+
+    @param path: Path to the directory with all the modules you want to unuse.
+    """
+    module("unuse", path)
+
+
 # --------------------------------------------------------------------------------------------------------
-# Fetch data
+# Fetch data EESSI
+# --------------------------------------------------------------------------------------------------------
+
+def clusters_EESSI() -> np.ndarray:
+    """
+    Returns all the cluster names of EESSI.
+    @return: cluster names
+    """
+    patterns = [
+        "/cvmfs/pilot.eessi-hpc.org/versions/2023.06/software/linux/*/!(intel|amd)",
+        "/cvmfs/pilot.eessi-hpc.org/versions/2023.06/software/linux/*/{amd,intel}/*"
+    ]
+    clusters = np.array([])
+
+    for path in patterns:
+        clusters = np.concatenate([clusters, ls(path)])
+
+    return clusters
+
+
+def modules_EESSI() -> dict:
+    """
+    Returns names of all software module that are installed on EESSI.
+    They are grouped by cluster.
+    @return: Dictionary with all the modules per cluster
+    """
+    # TODO
+    return {}
+
+
+# --------------------------------------------------------------------------------------------------------
+# Fetch data UGent
 # --------------------------------------------------------------------------------------------------------
 
 def filter_fn_gent_cluster(data: np.ndarray) -> np.ndarray:
