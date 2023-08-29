@@ -44,7 +44,7 @@ from module_detail import generate_detail_pages
 # --------------------------------------------------------------------------------------------------------
 
 def main():
-    current_dir = Path(__file__)
+    current_dir = Path(__file__).resolve()
     project_name = 'vsc_user_docs'
     root_dir = next(
         p for p in current_dir.parents if p.parts[-1] == project_name

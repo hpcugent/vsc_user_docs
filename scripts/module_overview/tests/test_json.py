@@ -45,12 +45,12 @@ class TestJSON:
 
     def test_json_simple(self):
         modules = modules_ugent()
-        generate_json_overview(modules)
+        generate_json_overview(modules, ".")
         assert os.path.exists("json_data.json")
         assert filecmp.cmp(self.path + "/data/test_json_simple_sol.json", "json_data.json")
 
     def test_json_detail_simple(self):
         modules = modules_ugent()
-        generate_json_detailed(modules)
+        generate_json_detailed(modules, ".")
         assert os.path.exists("json_data_detail.json")
         assert filecmp.cmp(self.path + "/data/test_json_simple_sol_detail.json", "json_data_detail.json")
