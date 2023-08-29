@@ -33,7 +33,6 @@ import argparse
 import json
 from mdutils import MdUtils
 from natsort import natsorted
-import os
 
 
 def main():

@@ -30,11 +30,13 @@ Python script to generate an overview of available modules across different clus
 """
 
 import json
+from pathlib import Path
 import numpy as np
 import os
 import subprocess
 from mdutils.mdutils import MdUtils
 from typing import Union, Tuple
+from module_detail import generate_detail_pages
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -42,10 +44,24 @@ from typing import Union, Tuple
 # --------------------------------------------------------------------------------------------------------
 
 def main():
-    # Generate the JSON overviews
+    current_dir = Path(__file__)
+    project_name = 'vsc_user_docs'
+    root_dir = next(
+        p for p in current_dir.parents if p.parts[-1] == project_name
+    )
+    path_data_dir = os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/module_overview/data")
+
+    # Generate the JSON overviews and detail markdown pages.
     modules = modules_ugent()
-    generate_json_overview(modules)
-    generate_json_detailed(modules)
+    print("Generate JSON overview... ", end="", flush=True)
+    generate_json_overview(modules, path_data_dir)
+    print("Done!")
+    print("Generate JSON detailed... ", end="", flush=True)
+    json_path = generate_json_detailed(modules, path_data_dir)
+    print("Done!")
+    print("Generate detailed pages... ", end="", flush=True)
+    generate_detail_pages(json_path, os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/module_overview/detail"))
+    print("Done!")
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -277,17 +293,24 @@ def generate_json_overview_data(modules: dict) -> dict:
     return json_data
 
 
-def generate_json_overview(modules: dict) -> None:
+def generate_json_overview(modules: dict, path_data_dir: str) -> str:
     """
     Generate the overview in a JSON format.
+
+    @param modules: Dictionary with all the modules per cluster. Keys are the cluster names.
+    @param path_data_dir: Path to the directory where the JSON will be placed.
+    @return: Absolute path to the json file.
     """
 
     # get data
     json_data = generate_json_overview_data(modules)
 
+    filepath = os.path.join(path_data_dir, "json_data.json")
     # write it to a file
-    with open("json_data.json", 'w') as outfile:
+    with open(filepath, 'w') as outfile:
         json.dump(json_data, outfile)
+
+    return filepath
 
 
 # -----------
@@ -357,15 +380,20 @@ def generate_json_detailed_data(modules: dict) -> dict:
     return json_data
 
 
-def generate_json_detailed(modules: dict) -> None:
+def generate_json_detailed(modules: dict, path_data_dir: str) -> str:
     """
     Generate the detailed JSON.
 
     @param modules: Dictionary with all the modules per cluster. Keys are the cluster names.
+    @param path_data_dir: Path to the directory where the JSON will be placed.
+    @return: Absolute path to the json file.
     """
     json_data = generate_json_detailed_data(modules)
-    with open("json_data_detail.json", 'w') as outfile:
+    filepath = os.path.join(path_data_dir, "json_data_detail.json")
+    with open(filepath, 'w') as outfile:
         json.dump(json_data, outfile)
+
+    return filepath
 
 
 if __name__ == '__main__':

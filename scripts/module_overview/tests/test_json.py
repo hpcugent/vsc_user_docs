@@ -54,5 +54,3 @@ class TestJSON:
         generate_json_detailed(modules)
         assert os.path.exists("json_data_detail.json")
         assert filecmp.cmp(self.path + "/data/test_json_simple_sol_detail.json", "json_data_detail.json")
-
-
