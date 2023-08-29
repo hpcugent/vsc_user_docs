@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+{{ super() }}
+<script>
+ if (!! localStorage.getItem('select_OS')) {
+    const classes = ["headerlink", "md-nav__link"]
+    for (i in classes) {
+        var anchors = Array.from(document.getElementsByClassName(classes[i]))
+        anchors.forEach(
+            function (anch) {
+                const href = anch.href;
+                if (!!anch.href) {
+                    // Remove OS part and search query in permalinks if it exists. Useful when copying the urls.
+                    anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/").replace(/\?[^#]*/,"")
+                }
+                anch.addEventListener("click",(event) => {
+                    // Redirect to real original target. (with OS,and search query)
+                    event.target.href = href;
+                })
+            })
+    }
+}
+</script>
+{% endblock %}
