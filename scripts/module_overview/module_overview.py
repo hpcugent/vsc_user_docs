@@ -32,6 +32,7 @@ Python script to generate an overview of available modules across different clus
 import json
 from pathlib import Path
 import numpy as np
+import re
 import os
 import subprocess
 from mdutils.mdutils import MdUtils
@@ -84,7 +85,7 @@ def module(*args, filter_fn=lambda x: x) -> np.ndarray:
         stdout=subprocess.PIPE
     )
     exec(proc.stdout)
-    return filter_fn(np.array(proc.stderr.split()))
+    return filter_fn(np.array(proc.stderr.strip().split("\n")))
 
 
 def module_avail(name: str = "", filter_fn=lambda x: x) -> np.ndarray:
@@ -105,6 +106,21 @@ def module_swap(name: str) -> None:
     @param name: Name of module you want to swap to.
     """
     module("swap", name)
+
+
+def module_whatis(name: str) -> dict:
+    """
+    Function to run "module whatis" commands.
+
+    @param name: Name of module you want the whatis info for.
+    """
+    whatis = {}
+    data = module("show", name)
+    for line in data[np.char.startswith(data, "whatis")]:
+        content = re.sub(pattern=r'whatis\((.*)\)', repl='\\1', string=line).strip('"')
+        key, value = tuple(content.split(":", maxsplit=1))
+        whatis[key.strip()] = value.strip()
+    return whatis
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -358,12 +374,17 @@ def generate_json_detailed_data(modules: dict) -> dict:
             if version != "":
                 # If the software is not yet present, add it.
                 if software not in json_data["software"]:
-                    json_data["software"][software] = {
-                        "clusters": [],
-                        "versions": {},
-                        "homepage": "",
-                        "description": ""
-                    }
+                    json_data["software"][software] ={
+                            "clusters": [],
+                            "versions": {}
+                        }
+                    # json_data["software"][software] = {
+                    #     **{
+                    #         "clusters": [],
+                    #         "versions": {}
+                    #     },
+                    #     **module_whatis(software)
+                    # }
 
                 # If the version is not yet present, add it.
                 if mod not in json_data["software"][software]["versions"]:

@@ -98,6 +98,11 @@ def generate_software_detail_page(software_name: str, software_data: dict, clust
     filename = f"{path}/{software_name}.md"
     md_file = MdUtils(file_name=filename, title=f"detailed overview of {software_name}")
 
+    # md_file.new_paragraph(software_data["Description"])
+    # md_file.new_paragraph(software_data["Homepage"])
+    # md_file.new_paragraph(software_data["URL"])
+    # md_file.new_paragraph(software_data["Extensions"])
+
     sorted_versions = dict_sort(software_data["versions"])
     md_file.new_table(
         columns=len(clusters) + 1,
