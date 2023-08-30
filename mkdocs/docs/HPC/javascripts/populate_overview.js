@@ -36,7 +36,7 @@ function populate_overview(json_data) {
         .then((json) => {
             // Set generated time
             const p = document.getElementById("time")
-            p.innerText = `This data is automatically generated ${json.time_generated}`
+            p.innerText = `This data was automatically generated ${json.time_generated}`
 
 
             // CONSTRUCT TABLE
