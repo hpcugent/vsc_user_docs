@@ -36,6 +36,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/</loc>
+         <lastmod>2023-08-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/best_practices/</loc>
          <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>

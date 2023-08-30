@@ -35,6 +35,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/</ns0:loc>
+         <ns0:lastmod>2023-08-30</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/best_practices/</ns0:loc>
          <ns0:lastmod>2023-08-30</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -291,6 +296,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/apptainer/</ns0:loc>
+         <ns0:lastmod>2023-08-30</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/</ns0:loc>
          <ns0:lastmod>2023-08-30</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -555,6 +565,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/</ns0:loc>
+         <ns0:lastmod>2023-08-30</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/best_practices/</ns0:loc>
          <ns0:lastmod>2023-08-30</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -811,6 +826,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/apptainer/</ns0:loc>
+         <ns0:lastmod>2023-08-30</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/</ns0:loc>
          <ns0:lastmod>2023-08-30</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
