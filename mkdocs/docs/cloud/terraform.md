@@ -300,6 +300,19 @@ change in your infrastructure. If for some reason you lost or remove
 these files you will not able to modify or change the current Terraform
 plan (only directly from OpenStack).
 
+
+!!! Warning
+
+    It is possible to execute `./modify_variable.sh` script several times,
+    (for instance, if you have changed the variables within
+    `modify_variable.config` file). This will update your current Terraform
+    deployment. Any Terraform variables change may affect to your current
+    running VM(s) as well, `terrafrom apply` will inform you about this and
+    it will request confirmation. The external ports for port forwarding
+    are generated randomly when you run `modify_variable.sh` by default, but
+    you can keep the current port forwarding rules if you add `-k` option:
+    `./modify_variable.sh -k`
+
 You can also modify and add more resources for the current templates.
 This task is out of the scope of this document, please refer to official
 Terraform documentation to add you own changes
