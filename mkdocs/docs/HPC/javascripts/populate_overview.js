@@ -34,6 +34,11 @@ function populate_overview(json_data) {
     fetch(json_data)
         .then((response) => response.json())
         .then((json) => {
+            // Set generated time
+            const p = document.getElementById("time")
+            p.innerText = `This data is automatically generated ${json.time_generated}`
+
+
             // CONSTRUCT TABLE
 
             // list with all the names of the clusters
