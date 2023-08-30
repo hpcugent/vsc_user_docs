@@ -31,6 +31,17 @@ Brussels University Association, Antwerp University Association and the
 University Colleges-Limburg. The VSC is funded by the Flemish
 Government.
 
+There are two methods for connecting to {{hpcinfra}}:
+
+- Using a terminal to connect via SSH.
+- [Using the web portal](web_portal.md)
+
+The web portal offers a convenient way to upload files and gain shell access to the {{hpcinfra}} from a standard web browser (no software installation or configuration required).
+
+If you would like use a terminal with SSH as this gives you more flexibility continue reading.
+However if you prefer to use the web portal, you can skip ahead to the following section: [Applying for the account](#applying-for-the-account).
+Once you have successfully obtained an account, you can then delve into the details of utilizing the HPC-UGent web portal by reading [Using the HPC-UGent web portal](web_portal.md).
+
 The {{ hpcinfra }} clusters use public/private key pairs for user authentication
 (rather than passwords). Technically, the private key is stored on your
 local computer and always stays there; the public key is stored on the {{ hpc }}.

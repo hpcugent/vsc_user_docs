@@ -29,6 +29,7 @@ Python script to generate an overview of available modules across different clus
 @author: Michiel Lachaert (Ghent University)
 """
 
+import time
 import json
 from pathlib import Path
 import numpy as np
@@ -295,7 +296,11 @@ def generate_json_overview_data(modules: dict) -> dict:
     @return: Dictionary with the required JSON structure.
 
     """
-    json_data = {"clusters": list(modules.keys()), "modules": {}}
+    json_data = {
+        "clusters": list(modules.keys()),
+        "modules": {},
+        "time_generated": time.strftime("%a, %d %b %Y at %H:%M:%S %Z")
+    }
     avail_software = get_unique_software_names(modules)
     all_software = get_unique_software_names(np.concatenate(list(modules.values())))
 

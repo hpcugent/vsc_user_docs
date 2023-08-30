@@ -33,6 +33,11 @@ function populate_overview(json_data) {
     fetch(json_data)
         .then((response) => response.json())
         .then((json) => {
+            // Set generated time
+            const p = document.getElementById("time")
+            p.innerText = `This data was automatically generated ${json.time_generated}`
+
+
             // CONSTRUCT TABLE
 
             // list with all the names of the clusters
@@ -42,6 +47,12 @@ function populate_overview(json_data) {
             const table = new DataTable('#overview_table', {
                 columns: [...[{"title": "name"}], ...all_clusters],
                 paging: false,
+                columnDefs: [
+                    {
+                        targets: "_all",
+                        className: 'dt-body-center'
+                    }
+                ]
             });
 
 
