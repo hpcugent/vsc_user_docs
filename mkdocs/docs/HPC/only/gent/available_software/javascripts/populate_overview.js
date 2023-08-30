@@ -74,6 +74,6 @@ function populate_overview(json_data) {
 // Only start populating the table if the correct page has been loaded.
 document$.subscribe(function() {
     if (document.getElementById("overview_table")) {
-        populate_overview("../module_overview/data/json_data.json")
+        populate_overview("../available_software/data/json_data.json")
     }
 })

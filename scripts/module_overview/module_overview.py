@@ -379,7 +379,7 @@ def generate_json_detailed_data(modules: dict) -> dict:
             if version != "":
                 # If the software is not yet present, add it.
                 if software not in json_data["software"]:
-                    json_data["software"][software] ={
+                    json_data["software"][software] = {
                             "clusters": [],
                             "versions": {}
                         }

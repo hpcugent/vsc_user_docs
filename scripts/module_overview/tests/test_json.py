@@ -1,5 +1,5 @@
 import filecmp
-from module_overview import generate_overview_json_data, generate_json_overview, modules_ugent
+from module_overview import generate_json_overview_data, generate_json_overview, modules_ugent, generate_json_detailed
 import os
 import json
 
@@ -31,20 +31,20 @@ class TestJSON:
 
     def test_json_generate_simple(self):
         modules = modules_ugent()
-        json_data = generate_overview_json_data(modules)
+        json_data = generate_json_overview_data(modules)
         assert len(json_data.keys()) == 3
         assert list(json_data["clusters"]) == ["cluster/dialga", "cluster/pikachu"]
         assert json_data["modules"] == {
-                "Markov": [True, False],
-                "cfd": [True, True],
-                "llm": [False, True],
-                "science": [True, True]
+                "Markov": [1, 0],
+                "cfd": [1, 1],
+                "llm": [0, 1],
+                "science": [1, 1]
             }
-        }
 
     def test_json_simple(self):
-        generate_json_overview()
-        with open("json_data.json") as json_data:
+        modules = modules_ugent()
+        json_path = generate_json_overview(modules, ".")
+        with open(json_path) as json_data:
             data_generated = json.load(json_data)
 
         with open(self.path + "/data/test_json_simple_sol.json") as json_data:

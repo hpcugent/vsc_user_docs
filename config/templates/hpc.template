@@ -147,11 +147,16 @@ theme:
         name: Switch to light mode 
 
 extra_javascript:
+{%- if site == 'Gent' %}
     - https://code.jquery.com/jquery-3.7.0.min.js
     - https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js
-    - javascripts/populate_overview.js
+    - available_software/javascripts/populate_overview.js
+{%- endif %}
+
 extra_css:
+{%- if site == 'Gent' %}
     - https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css
+{%- endif %}
 
 extra:
   OS: {{ os }}
