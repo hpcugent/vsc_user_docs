@@ -803,25 +803,27 @@ The output of the various commands interacting with jobs (`qsub`,
 `stat`, ...) all depend on which `cluster` module is loaded.
 {% endif %}
 
-### cross cluster submission
+### Submitting jobs from one cluster to another
 
-We made it possible to submit to a cluster different from the cluster that your current worker node is on. 
+It is possible to submit jobs from a job to a cluster different than the one your job is running on.
 This could come in handy if, for example, the submit command only works on the current clusters worker nodes, but the job itself can run on other clusters. An example of this is the `wsub` command of `worker`. More technical info why the `wsub` command can only be executed on the {{defaultcluster}} cluster can be found [here](troubleshooting.md#multi-job-submissions-on-a-non-default-cluster).
 
-```shell
-{% include "examples/Multi-job-submission/par_sweep/weather.pbs" %}
-```
+To submit jobs to the `{{othercluster}}` cluster, you can only change what is needed in your session environment to 
+submit jobs to that particular cluster by using `module swap env/slurm/{{othercluster}}` instead of using `module swap cluster/{{othercluster}}`
+(which also actives the modules that are installed specifically for {{othercluster}}, and which may not be compatible with the system you are working on).
+That way, jobs that are submitted will be sent to the `{{othercluster}}` cluster. The same approach can be used to submit jobs to another cluster, of course.
 
-As mentioned before, the `wsub` command will only work on the `{{defaultcluster}}` cluster. But this does not mean that the job itself can't be executed on other clusters. For example if you want to submit to `{{othercluster}}` cluster, you can only change your submit cluster by using `module swap env/surm/{{othercluster}}` instead of `module swap cluster/{{othercluster}}`. The wsub command will then be executed on a {{defaultcluster}} worker node, but the jobs itself will be submitted to the `{{othercluster}}` cluster. It is ofcourse also possible to use an other cluster then `{{othercluster}}`.
 
+Each ``cluster`` module not only loads the corresponding ``env/slurm/...`` module to control where jobs are sent to, but also tow other ``env/...`` modules which control other parts of the environment.
+For example, for the `{{defaultcluster}}` cluster:
 
 We didn't only create the `env/slurm/{{defaultcluster}}` part, but we actually split every cluster in 3 different parts. Here illustrated with the `{{defaultcluster}}` cluster, but this can be changed to every cluster you like.
 
-| `cluster/{{defaultcluster}}`      | performs all the 3 listed below                                                                |
+| `env/` module for `{{defaultcluster}}  | Purpose                                   |
 |---------------------------------|--------------------------------------------------------------------------------------------------|
-| `env/slurm/{{defaultcluster}}`    | Changes the submit cluster of the job.                                                         |
-| `env/software/{{defaultcluster}}` | Changed the `$MODULEPATH`. The modules of this cluster will be in the output of `module avail` |
-| `env/vsc/{{defaultcluster}}`      | Changes the VSC variables.                                                                     |
+| `env/slurm/{{defaultcluster}}`    | Changes the cluster where jobs are sent to.                                          |
+| `env/software/{{defaultcluster}}` | Changes `$MODULEPATH`, which controls which software modules are available for loading. |
+| `env/vsc/{{defaultcluster}}`      | Changes the set of `$VSC_` environment variables that are specific to the `{{defaultcluster}}` cluster |
 
 Although we suggest that you don't use the seperate parts if you don't really need to or don't exactly know what you are doing, since using these seperetly can lead to some weird behaviour if used incorrectly.
 
