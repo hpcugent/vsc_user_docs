@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# Module overview
+# Available software (via modules)
 
 This table gives an overview of all the available software on the different clusters.
 

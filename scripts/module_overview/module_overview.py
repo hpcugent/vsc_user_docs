@@ -237,7 +237,7 @@ def generate_overview_json_data(modules: dict) -> dict:
     for soft in all_software:
         available = []
         for cluster in json_data["clusters"]:
-            available.append(soft in avail_software[cluster])
+            available.append(int(soft in avail_software[cluster]))
         json_data["modules"][soft] = available
     return json_data
 
