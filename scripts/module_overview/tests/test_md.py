@@ -34,10 +34,10 @@ class TestMarkdown:
         assert row == 5
         assert len(table_data) == 15
 
-    def test_simple(self):
+    def test_md_simple(self):
         md_file = MdUtils(file_name='test_simple', title='Overview Modules')
         simple_data = get_unique_software_names(modules_ugent())
         generate_module_table(simple_data, md_file)
         md_file.create_md_file()
         assert os.path.exists("test_simple.md")
-        assert filecmp.cmp(self.path + "/data/test_simple_solution.md", "test_simple.md")
+        assert filecmp.cmp(self.path + "/data/test_md_simple_sol.md", "test_simple.md")
