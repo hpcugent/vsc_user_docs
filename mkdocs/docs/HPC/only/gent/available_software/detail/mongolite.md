@@ -1,0 +1,16 @@
+---
+hide:
+  - toc
+---
+
+detailed overview of mongolite
+==============================
+
+
+This data was automatically generated on Thu, 31 Aug 2023 at 14:42:57 CEST  
+
+| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|mongolite/2.3.0-foss-2020b-R-4.0.4|-|x|x|x|x|x|x|x|
+|mongolite/2.3.0-foss-2020b-R-4.0.3|-|x|x|x|x|x|x|x|
+|mongolite/2.3.0-foss-2020a-R-4.0.0|-|x|x|-|x|x|x|x|

@@ -1,0 +1,15 @@
+---
+hide:
+  - toc
+---
+
+detailed overview of gmsh
+=========================
+
+
+This data was automatically generated on Thu, 31 Aug 2023 at 14:42:57 CEST  
+
+| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|gmsh/4.5.6-intel-2019b-Python-2.7.16|-|x|x|-|x|x|-|x|
+|gmsh/4.5.6-foss-2019b-Python-3.7.4|-|x|x|-|x|x|x|x|

@@ -1,0 +1,14 @@
+---
+hide:
+  - toc
+---
+
+detailed overview of waves2Foam
+===============================
+
+
+This data was automatically generated on Thu, 31 Aug 2023 at 14:42:57 CEST  
+
+| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|waves2Foam/20200703-foss-2019b|-|x|x|-|x|x|-|x|

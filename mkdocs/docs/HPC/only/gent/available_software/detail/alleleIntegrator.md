@@ -1,0 +1,14 @@
+---
+hide:
+  - toc
+---
+
+detailed overview of alleleIntegrator
+=====================================
+
+
+This data was automatically generated on Thu, 31 Aug 2023 at 14:42:57 CEST  
+
+| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|alleleIntegrator/0.8.8-foss-2022a-R-4.2.1|x|x|x|x|x|x|x|x|
