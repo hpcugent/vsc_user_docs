@@ -7,10 +7,12 @@ detailed overview of AlphaFold
 ==============================
 
 
-This data was automatically generated on $Thu, 31 Aug 2023 at 11:08:02 CEST
+This data was automatically generated on Thu, 31 Aug 2023 at 14:15:56 CEST  
+
 | |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |AlphaFold/2.3.4-foss-2022a-ColabFold|-|-|x|-|x|-|-|-|
+|AlphaFold/2.3.4-foss-2022a-CUDA-11.7.0-ColabFold|x|-|-|-|x|-|-|-|
 |AlphaFold/2.3.1-foss-2022a-CUDA-11.7.0|x|-|-|-|x|-|-|-|
 |AlphaFold/2.3.1-foss-2022a|x|x|x|x|x|x|x|x|
 |AlphaFold/2.3.0-foss-2021b-CUDA-11.4.1|x|-|-|-|x|-|-|-|

@@ -7,7 +7,8 @@ detailed overview of stardist
 =============================
 
 
-This data was automatically generated on $Thu, 31 Aug 2023 at 11:08:02 CEST
+This data was automatically generated on Thu, 31 Aug 2023 at 14:15:56 CEST  
+
 | |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |stardist/0.8.3-foss-2021b-CUDA-11.4.1|x|-|-|-|x|-|-|-|
