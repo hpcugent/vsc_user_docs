@@ -257,8 +257,9 @@ def modules_ugent() -> dict:
     for cluster in clusters_ugent():
         print(f"\t Collecting available modules for {cluster}... ", end="", flush=True)
         module_swap(cluster)
-        data[cluster.split("/", maxsplit=1)[1]] = module_avail(filter_fn=filter_fn_gent_modules)
-        print(f"found {len(data[cluster])} modules!")
+        cluster_name = cluster.split("/", maxsplit=1)[1]
+        data[cluster_name] = module_avail(filter_fn=filter_fn_gent_modules)
+        print(f"found {len(data[cluster_name])} modules!")
 
     print("All data collected!\n")
     return data
