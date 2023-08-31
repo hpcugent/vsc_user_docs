@@ -803,6 +803,41 @@ The output of the various commands interacting with jobs (`qsub`,
 `stat`, ...) all depend on which `cluster` module is loaded.
 {% endif %}
 
+### Submitting jobs from one cluster to another
+
+It is possible to submit jobs from a job to a cluster different than the one your job is running on.
+This could come in handy if, for example, the tool used to submit jobs only works on a particular cluster 
+(or only on the login nodes), but the jobs can be run on several clusters.
+An example of this is the `wsub` command of `worker`, see also [here](troubleshooting.md#multi-job-submissions-on-a-non-default-cluster).
+
+To submit jobs to the `{{othercluster}}` cluster, you can change only what is needed in your session environment 
+to submit jobs to that particular cluster by using `module swap env/slurm/{{othercluster}}` instead of using 
+`module swap cluster/{{othercluster}}`.
+The last command also activates the software modules that are installed specifically for {{othercluster}}, 
+which may not be compatible with the system you are working on.
+By only swapping to `env/slurm/donphan`, jobs that are submitted will be sent to the `{{othercluster}}` cluster. 
+The same approach can be used to submit jobs to another cluster, of course.
+
+
+Each `cluster` module not only loads the corresponding `env/slurm/...` module to control where jobs are sent to, 
+but also two other `env/...` modules which control other parts of the environment.
+For example, for the `{{defaultcluster}}` cluster, 
+loading the `cluster/{{defaultcluster}}` module corresponds to loading 3 different `env/` modules:
+
+| `env/` module for `{{defaultcluster}}`| Purpose |
+|---------------------------------------|----------------|
+| `env/slurm/{{defaultcluster}}`        | Changes `$SLURM_CLUSTERS` which specifies the cluster where jobs are sent to. |
+| `env/software/{{defaultcluster}}`     | Changes `$MODULEPATH`, which controls what software modules are available for loading. |
+| `env/vsc/{{defaultcluster}}`          | Changes the set of `$VSC_` environment variables that are specific to the `{{defaultcluster}}` cluster |
+
+We recommend that you do not use these separate `env/` modules directly unless you really need to,
+and only if you understand what they are doing exactly.
+Since mixing `cluster/` and `env/` modules of different clusters can result in surprises if you are not careful.
+
+We also recommend using a `module swap cluster` command after submitting the jobs.
+This to "reset" your environment to a sane state.
+
+
 ## Monitoring and managing your job(s)
 
 Using the job ID that `qsub` returned, there are various ways to monitor
