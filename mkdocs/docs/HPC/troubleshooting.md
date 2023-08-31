@@ -3,6 +3,11 @@
 ## Why doesn't my job run faster when using more nodes and/or cores? { #job_does_not_run_faster }
 Requesting more resources for your job, more specifically using multiple cores and/or nodes, does not automatically imply that your job will run faster. There are various factors that determine to what extent these extra resources can be used and how efficiently they can be used. More information on this in the subsections below.
 
+### How do I know if my software can run in parallel?
+If you are not sure if the software you are using can efficiently use multiple cores or run across multiple nodes, you should check its documentation for instructions on how to run in parallel, or check for options that control how many threads/cores/nodes can be used.
+
+If you can not find any information along those lines, the software you are using can probably only use a single core and thus requesting multiple cores and/or nodes will only result in wasted sources.
+
 ### Using multiple cores
 When you want to make use of multiple cores, you also need to adapt your code to work with this or use software that is capable of using multiple cores.
 Unless particular parallel programming paradigms like [OpenMP](https://www.openmp.org/about/openmp-faq/#WhatIs) threading (shared memory) or [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface) (distributed memory) are used, a program will run sequentially (on a single core).
