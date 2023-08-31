@@ -6,7 +6,7 @@
 
 To transfer files from and to the HPC, see 
 [the section about transferring files of the
-HPC manual](https://docs.hpc.ugent.be/connecting/#transfer-files-tofrom-the-hpc)
+HPC manual](../connecting.md#transfer-files-tofrom-the-hpc)
 
 ### `dos2unix`
 [//]: # (subsec:dos2unix)

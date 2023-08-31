@@ -34,6 +34,11 @@ elif [ "$mod_cmd" = "swap" ]; then
   fi
 
 
+# Emulate show command
+elif [ "$mod_cmd" = "show" ]; then
+      cat "${MOCK_FILE_SHOW}" >&2
+
+
 else
     echo "Module subcommand '${mod_cmd}' not supported yet in $0" >&2
   exit 1

@@ -1,5 +1,5 @@
 import os
-from module_overview import module_avail, filter_fn_gent_modules, filter_fn_gent_cluster, module_swap
+from module_overview import module_avail, filter_fn_gent_modules, filter_fn_gent_cluster, module_swap, module_whatis
 
 
 class TestModule:
@@ -51,3 +51,13 @@ class TestModule:
         module_swap("cluster/pikachu")
         output2 = module_avail()
         assert len(output2) == 29
+
+    def test_whatis(self):
+        os.environ["MOCK_FILE_SHOW"] = self.path + "/data/data_show_science.txt"
+        data = module_whatis("science")
+        assert data == {
+            "Description": "Bundle for scientific software",
+            "Homepage": "https://science.com/",
+            "URL": "https://science.com/",
+            "Extensions": "ext-1.2.3, ext-2.3.4"
+        }

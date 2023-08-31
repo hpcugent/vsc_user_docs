@@ -29,12 +29,16 @@ Python script to generate an overview of available modules across different clus
 @author: Michiel Lachaert (Ghent University)
 """
 
+import time
 import json
+from pathlib import Path
 import numpy as np
+import re
 import os
 import subprocess
 from mdutils.mdutils import MdUtils
 from typing import Union, Tuple
+from module_detail import generate_detail_pages
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -42,10 +46,24 @@ from typing import Union, Tuple
 # --------------------------------------------------------------------------------------------------------
 
 def main():
-    # Generate the JSON overviews
+    current_dir = Path(__file__).resolve()
+    project_name = 'vsc_user_docs'
+    root_dir = next(
+        p for p in current_dir.parents if p.parts[-1] == project_name
+    )
+    path_data_dir = os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/data")
+
+    # Generate the JSON overviews and detail markdown pages.
     modules = modules_ugent()
-    generate_json_overview(modules)
-    generate_json_detailed(modules)
+    print("Generate JSON overview... ", end="", flush=True)
+    generate_json_overview(modules, path_data_dir)
+    print("Done!")
+    print("Generate JSON detailed... ", end="", flush=True)
+    json_path = generate_json_detailed(modules, path_data_dir)
+    print("Done!")
+    print("Generate detailed pages... ", end="", flush=True)
+    generate_detail_pages(json_path, os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/detail"))
+    print("Done!")
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -82,7 +100,7 @@ def module(*args, filter_fn=lambda x: x) -> np.ndarray:
         stdout=subprocess.PIPE
     )
     exec(proc.stdout)
-    return filter_fn(np.array(proc.stderr.split()))
+    return filter_fn(np.array(proc.stderr.strip().split("\n")))
 
 
 def module_avail(name: str = "", filter_fn=lambda x: x) -> np.ndarray:
@@ -121,6 +139,21 @@ def module_unuse(path: str) -> None:
     @param path: Path to the directory with all the modules you want to unuse.
     """
     module("unuse", path)
+
+
+def module_whatis(name: str) -> dict:
+    """
+    Function to run "module whatis" commands.
+
+    @param name: Name of module you want the whatis info for.
+    """
+    whatis = {}
+    data = module("show", name)
+    for line in data[np.char.startswith(data, "whatis")]:
+        content = re.sub(pattern=r'whatis\((.*)\)', repl='\\1', string=line).strip('"')
+        key, value = tuple(content.split(":", maxsplit=1))
+        whatis[key.strip()] = value.strip()
+    return whatis
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -326,7 +359,11 @@ def generate_json_overview_data(modules: dict) -> dict:
     @return: Dictionary with the required JSON structure.
 
     """
-    json_data = {"clusters": list(modules.keys()), "modules": {}}
+    json_data = {
+        "clusters": list(modules.keys()),
+        "modules": {},
+        "time_generated": time.strftime("%a, %d %b %Y at %H:%M:%S %Z")
+    }
     avail_software = get_unique_software_names(modules)
     all_software = get_unique_software_names(np.concatenate(list(modules.values())))
 
@@ -340,17 +377,24 @@ def generate_json_overview_data(modules: dict) -> dict:
     return json_data
 
 
-def generate_json_overview(modules: dict) -> None:
+def generate_json_overview(modules: dict, path_data_dir: str) -> str:
     """
     Generate the overview in a JSON format.
+
+    @param modules: Dictionary with all the modules per cluster. Keys are the cluster names.
+    @param path_data_dir: Path to the directory where the JSON will be placed.
+    @return: Absolute path to the json file.
     """
 
     # get data
     json_data = generate_json_overview_data(modules)
 
+    filepath = os.path.join(path_data_dir, "json_data.json")
     # write it to a file
-    with open("json_data.json", 'w') as outfile:
+    with open(filepath, 'w') as outfile:
         json.dump(json_data, outfile)
+
+    return filepath
 
 
 # -----------
@@ -367,10 +411,7 @@ def generate_json_overview(modules: dict) -> None:
 #             "versions": {
 #                 "2.3.1": ["dialga"],
 #                 "2.3.2": ["dialga", "pikachu"]
-#             },
-#             "homepage": "",
-#             "description": "",
-#             "extensions": ["numpy"]
+#             }
 #         }
 #     }
 # }
@@ -385,7 +426,8 @@ def generate_json_detailed_data(modules: dict) -> dict:
     all_clusters = [cluster.split("/", 1)[1] for cluster in modules]
     json_data = {
         "clusters": all_clusters,
-        "software": {}
+        "software": {},
+        "time_generated": time.strftime("%a, %d %b %Y at %H:%M:%S %Z")
     }
 
     # Loop over every module in every cluster
@@ -400,9 +442,7 @@ def generate_json_detailed_data(modules: dict) -> dict:
                 if software not in json_data["software"]:
                     json_data["software"][software] = {
                         "clusters": [],
-                        "versions": {},
-                        "homepage": "",
-                        "description": ""
+                        "versions": {}
                     }
 
                 # If the version is not yet present, add it.
@@ -420,15 +460,20 @@ def generate_json_detailed_data(modules: dict) -> dict:
     return json_data
 
 
-def generate_json_detailed(modules: dict) -> None:
+def generate_json_detailed(modules: dict, path_data_dir: str) -> str:
     """
     Generate the detailed JSON.
 
     @param modules: Dictionary with all the modules per cluster. Keys are the cluster names.
+    @param path_data_dir: Path to the directory where the JSON will be placed.
+    @return: Absolute path to the json file.
     """
     json_data = generate_json_detailed_data(modules)
-    with open("json_data_detail.json", 'w') as outfile:
+    filepath = os.path.join(path_data_dir, "json_data_detail.json")
+    with open(filepath, 'w') as outfile:
         json.dump(json_data, outfile)
+
+    return filepath
 
 
 if __name__ == '__main__':

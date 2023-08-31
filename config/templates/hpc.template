@@ -3,13 +3,12 @@ site_url: https://docs.hpc.ugent.be/{{ os }}/
 {%- endif %}
 site_name: VSC User Documentation - {{ site }} ({{ os }})
 docs_dir: docs/HPC
+repo_url: https://github.com/hpcugent/vsc_user_docs
 
 nav:
   - Welcome: index.md
-  {%- if site == 'Gent' %}
-  - Overview modules: only/gent/module_overview/index.md
-  {%- endif %}
   - Introduction to HPC: introduction.md
+  - Getting Started: getting_started.md
   - Getting an HPC Account: account.md
   - Connecting to the HPC infrastructure: connecting.md
   - Running batch jobs: running_batch_jobs.md
@@ -36,14 +35,14 @@ nav:
       - GPU clusters: gpu.md
       - Cron scripts: crontab.md
   - Linux tutorial:
-    - Introduction: only/gent/linux-tutorial/index.md
-    - Getting Started: only/gent/linux-tutorial/getting_started.md
-    - Navigating: only/gent/linux-tutorial/navigating.md
-    - Manipulating files and directories: only/gent/linux-tutorial/manipulating_files_and_directories.md
-    - Uploading files: only/gent/linux-tutorial/uploading_files.md
-    - Beyond the basics: only/gent/linux-tutorial/beyond_the_basics.md 
-    - Common pitfalls: only/gent/linux-tutorial/common_pitfalls.md
-    - More on the HPC infrastructure: only/gent/linux-tutorial/hpc_infrastructure.md
+    - Introduction: linux-tutorial/index.md
+    - Getting Started: linux-tutorial/getting_started.md
+    - Navigating: linux-tutorial/navigating.md
+    - Manipulating files and directories: linux-tutorial/manipulating_files_and_directories.md
+    - Uploading files: linux-tutorial/uploading_files.md
+    - Beyond the basics: linux-tutorial/beyond_the_basics.md 
+    - Common pitfalls: linux-tutorial/common_pitfalls.md
+    - More on the HPC infrastructure: linux-tutorial/hpc_infrastructure.md
 {%- endif %}
   - Software-specific Best Practices:
       - Apptainer/Singularity: apptainer.md
@@ -76,6 +75,7 @@ plugins:
           crontab_gent.md: crontab.md
 {%- endif %}
   - macros:
+      on_error_fail: true
       include_yaml:
         - extra/constants.yml
         - extra/{{ lsite }}.yml
@@ -114,6 +114,9 @@ markdown_extensions:
 theme:
   name: material
   language: en
+  # This directory allows customization of material theme. Currently used for OS dropdown in header.
+  # See https://squidfunk.github.io/mkdocs-material/customization/#extending-the-theme
+  custom_dir: docs/HPC/overrides 
   features:
     # - navigation.tabs
     - navigation.top
@@ -144,11 +147,16 @@ theme:
         name: Switch to light mode 
 
 extra_javascript:
+{%- if site == 'Gent' %}
     - https://code.jquery.com/jquery-3.7.0.min.js
     - https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js
-    - javascripts/populate_overview.js
+    - available_software/javascripts/populate_overview.js
+{%- endif %}
+
 extra_css:
+{%- if site == 'Gent' %}
     - https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css
+{%- endif %}
 
 extra:
   OS: {{ os }}
