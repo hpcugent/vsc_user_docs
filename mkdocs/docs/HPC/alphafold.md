@@ -19,14 +19,16 @@ It is therefore recommended to first familiarize yourself with AlphaFold. The fo
 - AlphaFold FAQ: <https://alphafold.com/faq>
 - VSC webpage about AlphaFold: <https://www.vscentrum.be/alphafold>
 - Introductory course on AlphaFold by VIB: <https://elearning.vib.be/courses/alphafold>
-- Recording of "Getting Started with AlphaFold" presentation by Kenneth Hoste, HPC-Ugent (also available on the [VSC webpage](https://www.vscentrum.be/alphafold)).
-    - slides available [here](https://www.vscentrum.be/_files/ugd/5446c2_f19a8723f7f7460ebe990c28a53e56a2.pdf?index=true)
+- "Getting Started with AlphaFold" presentation by Kenneth Hoste (HPC-UGent)
+    - recording available [on YouTube](https://www.youtube.com/watch?v=jP9Qg1yBGcs)
+    - slides available [here (PDF)](https://www.vscentrum.be/_files/ugd/5446c2_f19a8723f7f7460ebe990c28a53e56a2.pdf?index=true)
+    - see also <https://www.vscentrum.be/alphafold>
 
 
 ## Using AlphaFold on {{hpcinfra}}
 
 Several different versions of AlphaFold are installed on both the CPU and GPU HPC-UGent Tier-2 clusters, see the output of `module avail AlphaFold`.
-If running this command on a GPU-cluster, extra CUDA modules will show up:
+If you run this command on a [GPU cluster](gpu.md), additional CUDA modules will show up:
 
 ```shell
 $ module avail AlphaFold
@@ -46,7 +48,6 @@ $ module avail AlphaFold
 
 ```
 
-load the module:
 To use AlphaFold, you should load a particular module, for example:
 
 ```shell
@@ -60,10 +61,9 @@ module load AlphaFold/2.3.1-foss-2022a-CUDA-11.7.0
     When using AlphaFold, you should submit jobs to a GPU cluster for better performance, see [GPU clusters](gpu.md).
     Later in this chapter, you will find a comparison between running AlphaFold on CPUs or GPUs.
 
-Multiple revisions of the large database (~2.5TB) that is also required to run AlphaFold has been made available on the HPC-UGent infrastructure in a central location, 
-so you don't have to download it yourself.
-
-Under: `{{directory}}`
+Multiple revisions of the large database (~2.5TB) that is also required to run AlphaFold have been
+made available on the HPC-UGent infrastructure in a central location ({{directory}}), 
+so you do not have to download it yourself.
 
 ```shell
 $ ls /arcanine/scratch/gent/apps/AlphaFold
@@ -110,23 +110,23 @@ For more information about the script and options see [this section]({{readme}}#
 
 !!! WARNING "READ README"
 
-    It is **strongly** advised to read the official [README]({{readme}}) provided by deepmind before continuing.
+    It is **strongly** advised to read the official [README]({{readme}}) provided by DeepMind before continuing.
     
 
-### Tweaking hhblits and jackhmmer cpu cores
+### Controlling core count for `hhblits` and `jackhmmer`
 
 The Python scripts that are used to run ***hhblits and jackhmmer*** have been tweaked so you can control how many cores are used for these tools,
 rather than hardcoding it to 4 and 8 cores, respectively.
 
 Using the `$ALPHAFOLD_HHBLITS_N_CPU` environment variable, you can specify how many cores should be used for running `hhblits`;
-The default of 4 cores will be used if `$ALPHAFOLD_HHBLITS_N_CPU` is not defined. 
+the default of 4 cores will be used if `$ALPHAFOLD_HHBLITS_N_CPU` is not defined. 
 
-Likewise for jackhmmer: `$ALPHAFOLD_JACKHMMER_N_CPU`.
+Likewise for `jackhmmer`, the core count can be controlled via `$ALPHAFOLD_JACKHMMER_N_CPU`.
 
 !!! Info
 
     Tweaking this might not yield significant benefits, 
-    as there's an observation that these tools exhibit slower performance when utilizing more than 4/8 cores (though this behavior could vary based on the workload).
+    as we have noticed that these tools may exhibit slower performance when utilizing more than 4/8 cores (though this behavior could vary based on the workload).
 
 ### CPU/GPU comparison
 
