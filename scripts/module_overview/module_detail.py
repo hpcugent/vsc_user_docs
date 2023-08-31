@@ -35,6 +35,10 @@ from mdutils import MdUtils
 from natsort import natsorted
 
 
+# --------------------------------------------------------------------------------------------------------
+# MAIN
+# --------------------------------------------------------------------------------------------------------
+
 def main():
     parser = argparse.ArgumentParser(description="Get args.")
     parser.add_argument(
@@ -56,6 +60,9 @@ def main():
     generate_detail_pages(args.json, args.path)
 
 
+# --------------------------------------------------------------------------------------------------------
+# UTIL
+# --------------------------------------------------------------------------------------------------------
 def dict_sort(dictionary: dict) -> dict:
     """
     Sort a dictionary by key.
@@ -65,6 +72,10 @@ def dict_sort(dictionary: dict) -> dict:
     """
     return dict(natsorted(dictionary.items()))
 
+
+# --------------------------------------------------------------------------------------------------------
+# GENERATE MD
+# --------------------------------------------------------------------------------------------------------
 
 def generate_software_table_data(software_data: dict, clusters: list) -> list:
     """
@@ -86,22 +97,20 @@ def generate_software_table_data(software_data: dict, clusters: list) -> list:
     return table_data
 
 
-def generate_software_detail_page(software_name: str, software_data: dict, clusters: list, path: str) -> None:
+def generate_software_detail_page(software_name: str, software_data: dict, time: str, clusters: list, path: str) -> None:
     """
     Generate one software specific detail page.
 
     @param software_name: Name of the software
     @param software_data: Additional information about the software (version, etc...)
+    @param time: Timestamp when the data was generated
     @param clusters: List with all the cluster names
     @param path: Path of the directory where the detailed page will be created.
     """
     filename = f"{path}/{software_name}.md"
     md_file = MdUtils(file_name=filename, title=f"detailed overview of {software_name}")
 
-    # md_file.new_paragraph(software_data["Description"])
-    # md_file.new_paragraph(software_data["Homepage"])
-    # md_file.new_paragraph(software_data["URL"])
-    # md_file.new_paragraph(software_data["Extensions"])
+    md_file.new_paragraph(f"This data was automatically generated on ${time}")
 
     sorted_versions = dict_sort(software_data["versions"])
     md_file.new_table(
@@ -129,7 +138,7 @@ def generate_detail_pages(json_path, dest_path) -> None:
 
     all_clusters = data["clusters"]
     for software, content in data["software"].items():
-        generate_software_detail_page(software, content, all_clusters, dest_path)
+        generate_software_detail_page(software, content, data["time_generated"], all_clusters, dest_path)
 
 
 if __name__ == '__main__':

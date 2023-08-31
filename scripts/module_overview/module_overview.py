@@ -51,7 +51,7 @@ def main():
     root_dir = next(
         p for p in current_dir.parents if p.parts[-1] == project_name
     )
-    path_data_dir = os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/module_overview/data")
+    path_data_dir = os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/data")
 
     # Generate the JSON overviews and detail markdown pages.
     modules = modules_ugent()
@@ -62,7 +62,7 @@ def main():
     json_path = generate_json_detailed(modules, path_data_dir)
     print("Done!")
     print("Generate detailed pages... ", end="", flush=True)
-    generate_detail_pages(json_path, os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/module_overview/detail"))
+    generate_detail_pages(json_path, os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/detail"))
     print("Done!")
 
 
@@ -348,10 +348,7 @@ def generate_json_overview(modules: dict, path_data_dir: str) -> str:
 #             "versions": {
 #                 "2.3.1": ["dialga"],
 #                 "2.3.2": ["dialga", "pikachu"]
-#             },
-#             "homepage": "",
-#             "description": "",
-#             "extensions": ["numpy"]
+#             }
 #         }
 #     }
 # }
@@ -366,7 +363,8 @@ def generate_json_detailed_data(modules: dict) -> dict:
     all_clusters = [cluster.split("/", 1)[1] for cluster in modules]
     json_data = {
         "clusters": all_clusters,
-        "software": {}
+        "software": {},
+        "time_generated": time.strftime("%a, %d %b %Y at %H:%M:%S %Z")
     }
 
     # Loop over every module in every cluster
@@ -383,13 +381,6 @@ def generate_json_detailed_data(modules: dict) -> dict:
                             "clusters": [],
                             "versions": {}
                         }
-                    # json_data["software"][software] = {
-                    #     **{
-                    #         "clusters": [],
-                    #         "versions": {}
-                    #     },
-                    #     **module_whatis(software)
-                    # }
 
                 # If the version is not yet present, add it.
                 if mod not in json_data["software"][software]["versions"]:
