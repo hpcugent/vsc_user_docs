@@ -64,7 +64,7 @@ MPI.
             Fortran/C/C++
         </td>
         <td colspan="1">
-            Limited to shared memory systems, but large shared memory systems for HPC are not uncommon (e.g., SGI UV). Loops and task can be parallelised by simple insertion of compiler directives. Under the hood threads are used. Hybrid approaches exist which use OpenMP to parallelise the work load on each node and MPI (see below) for communication between nodes.
+            Limited to shared memory systems, but large shared memory systems for HPC are not uncommon (e.g., SGI UV). Loops and task can be parallelized by simple insertion of compiler directives. Under the hood threads are used. Hybrid approaches exist which use OpenMP to parallelize the work load on each node and MPI (see below) for communication between nodes.
         </td>
     </tr>
     <tr>
@@ -75,7 +75,7 @@ MPI.
             C/C++
         </td>
         <td colspan="1">
-            Limited to shared memory systems, but may be combined with MPI. Thread management is taken care of by a very clever scheduler enabling the programmer to focus on parallelisation itself. Hybrid approaches exist which use TBB and/or Cilk Plus to parallelise the work load on each node and MPI (see below) for communication between nodes.
+            Limited to shared memory systems, but may be combined with MPI. Thread management is taken care of by a very clever scheduler enabling the programmer to focus on parallelization itself. Hybrid approaches exist which use TBB and/or Cilk Plus to parallelise the work load on each node and MPI (see below) for communication between nodes.
         </td>
     </tr>
     <tr>
@@ -112,6 +112,17 @@ MPI.
         </td>
     </tr>
 </table>
+
+!!! tip
+    You can request more nodes/cores by adding following line to your run script.
+    ```
+    #PBS -l nodes=2:ppn=10
+    ```
+    This queues a job that claims 2 nodes and 10 cores.
+
+!!! warning
+    Just requesting more nodes and/or cores does mean that your job will automatically run faster.
+    You can find more about this [here](troubleshooting.md#job_does_not_run_faster).
 
 ## Parallel Computing with threads
 
