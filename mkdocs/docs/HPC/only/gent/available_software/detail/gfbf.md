@@ -1,0 +1,14 @@
+---
+hide:
+  - toc
+---
+
+detailed overview of gfbf
+=========================
+
+
+This data was automatically generated on $Thu, 31 Aug 2023 at 11:08:02 CEST
+| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|gfbf/2023a|x|x|x|x|x|x|x|x|
+|gfbf/2022b|x|x|x|x|x|x|x|x|
