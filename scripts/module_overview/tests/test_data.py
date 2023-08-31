@@ -22,7 +22,7 @@ class TestData:
     def test_data_ugent(self):
         sol = modules_ugent()
         assert len(sol) == 2
-        assert len(sol["cluster/dialga"]) == 13
-        assert len(sol["cluster/pikachu"]) == 15
-        assert list(get_unique_software_names(sol["cluster/dialga"])) == ["Markov", "cfd", "science"]
-        assert list(get_unique_software_names(sol["cluster/pikachu"])) == ["cfd", "llm", "science"]
+        assert len(sol["dialga"]) == 13
+        assert len(sol["pikachu"]) == 15
+        assert list(get_unique_software_names(sol["dialga"])) == ["Markov", "cfd", "science"]
+        assert list(get_unique_software_names(sol["pikachu"])) == ["cfd", "llm", "science"]

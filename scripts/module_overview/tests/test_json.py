@@ -1,4 +1,3 @@
-import filecmp
 from module_overview import generate_json_overview_data, generate_json_overview, modules_ugent, generate_json_detailed
 import os
 import json
@@ -33,7 +32,7 @@ class TestJSON:
         modules = modules_ugent()
         json_data = generate_json_overview_data(modules)
         assert len(json_data.keys()) == 3
-        assert list(json_data["clusters"]) == ["cluster/dialga", "cluster/pikachu"]
+        assert list(json_data["clusters"]) == ["dialga", "pikachu"]
         assert json_data["modules"] == {
                 "Markov": [1, 0],
                 "cfd": [1, 1],
@@ -56,6 +55,15 @@ class TestJSON:
 
     def test_json_detail_simple(self):
         modules = modules_ugent()
-        generate_json_detailed(modules, ".")
+        json_path = generate_json_detailed(modules, ".")
         assert os.path.exists("json_data_detail.json")
-        assert filecmp.cmp(self.path + "/data/test_json_simple_sol_detail.json", "json_data_detail.json")
+
+        with open(json_path) as json_data:
+            data_generated = json.load(json_data)
+
+        with open(self.path + "/data/test_json_simple_sol_detail.json") as json_data:
+            data_solution = json.load(json_data)
+
+        assert len(data_generated) == 3
+        assert data_generated["clusters"] == data_solution["clusters"]
+        assert data_generated["software"] == data_solution["software"]

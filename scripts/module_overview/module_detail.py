@@ -110,7 +110,8 @@ def generate_software_detail_page(software_name: str, software_data: dict, time:
     filename = f"{path}/{software_name}.md"
     md_file = MdUtils(file_name=filename, title=f"detailed overview of {software_name}")
 
-    md_file.new_paragraph(f"This data was automatically generated on ${time}")
+    md_file.new_paragraph(f"This data was automatically generated on {time}")
+    md_file.new_line()
 
     sorted_versions = dict_sort(software_data["versions"])
     md_file.new_table(
