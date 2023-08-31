@@ -27,7 +27,7 @@ jobs:
         uses: py-actions/flake8@v2
         with:
           max-line-length: "120"
-          path: "scripts/module_overview"
+          path: "scripts/available_software"
 
   pytest-tests:
     runs-on: ubuntu-20.04
@@ -39,11 +39,11 @@ jobs:
           python-version: '3.6'
       - name: Install dependencies
         run: |
-          cd scripts/module_overview
+          cd scripts/available_software
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install -r requirements_tests.txt
       - name: Test with pytest
         run: |
-          cd scripts/module_overview
+          cd scripts/available_software
           ./test.sh
