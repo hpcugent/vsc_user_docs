@@ -2,267 +2,272 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/FAQ/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/HOD/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/MATLAB/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/VNC/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/account/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/alphafold/</loc>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/apptainer/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/best_practices/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/checkpointing/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/compiling_your_software/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/connecting/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/crontab/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/easybuild/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/fine_tuning_job_specifications/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/getting_started/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/gpu/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/interactive_debug/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/introduction/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/jobscript_examples/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/multi_core_jobs/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/multi_job_submission/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/mympirun/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/openFOAM/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/program_examples/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/quick_reference_guide/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/running_batch_jobs/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/running_interactive_jobs/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/running_jobs_with_input_output_data/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/scoop/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/singularity/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/torque_options/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/troubleshooting/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/useful_linux_commands/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/web_portal/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/x2go/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/xdmod/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/examples/Getting_Started/tensorflow_mnist/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/linux-tutorial/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/linux-tutorial/beyond_the_basics/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/linux-tutorial/common_pitfalls/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/linux-tutorial/getting_started/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/linux-tutorial/hpc_infrastructure/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/linux-tutorial/manipulating_files_and_directories/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/linux-tutorial/navigating/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/linux-tutorial/uploading_files/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/macros/LinuxManualURL/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/macros/nb/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/2023/donphan-gallade/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/sites/available_modules/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/sites/hpc_policies/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/sites/antwerpen/available-modules/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/sites/gent/available-modules/</loc>
-         <lastmod>2023-08-30</lastmod>
+         <lastmod>2023-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
