@@ -1,5 +1,5 @@
 from mdutils.mdutils import MdUtils
-from module_overview import get_unique_software_names, modules_ugent, generate_table_data, generate_module_table
+from available_software import get_unique_software_names, modules_ugent, generate_table_data, generate_module_table
 import os
 import filecmp
 

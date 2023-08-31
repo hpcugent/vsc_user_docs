@@ -1,5 +1,5 @@
 import os
-from module_overview import module_avail, filter_fn_gent_modules, filter_fn_gent_cluster, module_swap, module_whatis
+from available_software import module_avail, filter_fn_gent_modules, filter_fn_gent_cluster, module_swap, module_whatis
 
 
 class TestModule:

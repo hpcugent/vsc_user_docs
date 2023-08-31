@@ -1,4 +1,7 @@
-from module_overview import generate_json_overview_data, generate_json_overview, modules_ugent, generate_json_detailed
+from available_software import (generate_json_overview_data,
+                                generate_json_overview,
+                                modules_ugent,
+                                generate_json_detailed)
 import os
 import json
 

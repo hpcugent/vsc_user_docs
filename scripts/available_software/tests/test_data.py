@@ -1,5 +1,5 @@
 import os
-from module_overview import modules_ugent, get_unique_software_names
+from available_software import modules_ugent, get_unique_software_names
 
 
 class TestData:
