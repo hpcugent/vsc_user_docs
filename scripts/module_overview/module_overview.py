@@ -160,7 +160,16 @@ def module_whatis(name: str) -> dict:
 # Fetch data EESSI
 # --------------------------------------------------------------------------------------------------------
 
-def clusters_EESSI() -> np.ndarray:
+def filter_fn_eessi_modules(data: np.ndarray) -> np.ndarray:
+    """
+    Filter function for the output of all software modules for EESSI (excl. `cluster` and `env` modules).
+    @param data: Output
+    @return: Filtered output
+    """
+    return data[~np.char.endswith(data, ":")]
+
+
+def clusters_eessi() -> np.ndarray:
     """
     Returns all the cluster names of EESSI.
     @return: cluster names
@@ -177,14 +186,24 @@ def clusters_EESSI() -> np.ndarray:
     return clusters
 
 
-def modules_EESSI() -> dict:
+def modules_eesi() -> dict:
     """
     Returns names of all software module that are installed on EESSI.
     They are grouped by cluster.
     @return: Dictionary with all the modules per cluster
     """
-    # TODO
-    return {}
+    print("Start collecting modules:")
+    data = {}
+    module_unuse("$MODULEPATH")
+    for cluster in clusters_eessi():
+        print(f"\t Collecting available modules for {cluster}... ", end="", flush=True)
+        module_use(cluster)
+        data[cluster] = module_avail(filter_fn=filter_fn_eessi_modules)
+        print(f"found {len(data[cluster])} modules!")
+        module_unuse(cluster)
+
+    print("All data collected!\n")
+    return data
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -208,7 +227,7 @@ def filter_fn_gent_cluster(data: np.ndarray) -> np.ndarray:
 
 def filter_fn_gent_modules(data: np.ndarray) -> np.ndarray:
     """
-    Filter function for the output of all software modules (excl. `cluster` and `env` modules).
+    Filter function for the output of all software modules for UGent (excl. `cluster` and `env` modules).
     @param data: Output
     @return: Filtered output
     """
@@ -238,7 +257,7 @@ def modules_ugent() -> dict:
     for cluster in clusters_ugent():
         print(f"\t Collecting available modules for {cluster}... ", end="", flush=True)
         module_swap(cluster)
-        data[cluster] = module_avail(filter_fn=filter_fn_gent_modules)
+        data[cluster.split("/", maxsplit=1)[1]] = module_avail(filter_fn=filter_fn_gent_modules)
         print(f"found {len(data[cluster])} modules!")
 
     print("All data collected!\n")
@@ -297,8 +316,7 @@ def generate_table_data(avail_mods: dict) -> Tuple[np.ndarray, int, int]:
     all_modules = get_unique_software_names(np.concatenate(list(avail_mods.values())))
 
     final = np.array([" "])
-    cluster_names = [x.split('/')[1] for x in avail_mods.keys()]
-    final = np.append(final, cluster_names)
+    final = np.append(final, list(avail_mods.keys()))
 
     for package in all_modules:
         final = np.append(final, package)
@@ -306,7 +324,7 @@ def generate_table_data(avail_mods: dict) -> Tuple[np.ndarray, int, int]:
         for cluster in avail_mods:
             final = np.append(final, "X" if package in avail_mods[cluster] else " ")
 
-    return final, len(cluster_names) + 1, len(all_modules) + 1
+    return final, len(avail_mods.keys()) + 1, len(all_modules) + 1
 
 
 def generate_module_table(data: dict, md_file: MdUtils) -> None:
@@ -423,7 +441,7 @@ def generate_json_detailed_data(modules: dict) -> dict:
     @param modules: Dictionary with all the modules per cluster. Keys are the cluster names.
     @return: Dictionary with the required JSON structure.
     """
-    all_clusters = [cluster.split("/", 1)[1] for cluster in modules]
+    all_clusters = list(modules.keys())
     json_data = {
         "clusters": all_clusters,
         "software": {},
@@ -432,7 +450,6 @@ def generate_json_detailed_data(modules: dict) -> dict:
 
     # Loop over every module in every cluster
     for cluster in modules:
-        cluster_name = cluster.split("/", 1)[1]
         for mod in modules[cluster]:
             software, version = analyze_module(mod)
 
@@ -450,12 +467,12 @@ def generate_json_detailed_data(modules: dict) -> dict:
                     json_data["software"][software]["versions"][mod] = []
 
                 # If the cluster is not yet present, add it.
-                if cluster_name not in json_data["software"][software]["clusters"]:
-                    json_data["software"][software]["clusters"].append(cluster_name)
+                if cluster not in json_data["software"][software]["clusters"]:
+                    json_data["software"][software]["clusters"].append(cluster)
 
                 # If the cluster is not yet present, add it.
-                if cluster_name not in json_data["software"][software]["versions"][mod]:
-                    json_data["software"][software]["versions"][mod].append(cluster_name)
+                if cluster not in json_data["software"][software]["versions"][mod]:
+                    json_data["software"][software]["versions"][mod].append(cluster)
 
     return json_data
 

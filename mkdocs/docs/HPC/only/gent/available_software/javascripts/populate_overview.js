@@ -42,7 +42,7 @@ function populate_overview(json_data) {
 
             // list with all the names of the clusters
             const all_clusters = json.clusters.map(x => {
-                    return ({"title": x.split("/")[1]})
+                    return ({"title": x})
                 })
             const table = new DataTable('#overview_table', {
                 columns: [...[{"title": "name"}], ...all_clusters],
