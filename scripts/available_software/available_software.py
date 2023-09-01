@@ -55,6 +55,7 @@ def main():
 
     # Generate the JSON overviews and detail markdown pages.
     modules = modules_eesi()
+    print(modules)
     print("Generate JSON overview... ", end="", flush=True)
     generate_json_overview(modules, path_data_dir)
     print("Done!")
@@ -67,16 +68,17 @@ def main():
 
 
 # --------------------------------------------------------------------------------------------------------
-# Functions to run "ls" commands
+# Functions to run bash commands
 # --------------------------------------------------------------------------------------------------------
 
-def ls(path: str) -> np.ndarray:
+def bash_command(cmd: str) -> np.ndarray:
     proc = subprocess.run(
-        ['ls', '-1'] + [path],
+        ['/bin/bash', '-c', cmd],
         encoding="utf-8",
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
     )
+
     return np.array(proc.stdout.split())
 
 
@@ -174,14 +176,15 @@ def clusters_eessi() -> np.ndarray:
     Returns all the cluster names of EESSI.
     @return: cluster names
     """
-    patterns = [
-        "/cvmfs/pilot.eessi-hpc.org/versions/2023.06/software/linux/*/!(intel|amd)",
-        "/cvmfs/pilot.eessi-hpc.org/versions/2023.06/software/linux/*/{amd,intel}/*"
+    commands = [
+        "find /cvmfs/pilot.eessi-hpc.org/versions/2023.06/software/linux/*/* -maxdepth 0 \\( ! -name 'intel' -a ! "
+        "-name 'amd' \\) -type d",
+        'find /cvmfs/pilot.eessi-hpc.org/versions/2023.06/software/linux/*/{amd,intel}/* -maxdepth 0  -type d'
     ]
     clusters = np.array([])
 
-    for path in patterns:
-        clusters = np.concatenate([clusters, ls(path)])
+    for command in commands:
+        clusters = np.concatenate([clusters, bash_command(command)])
 
     return clusters
 
@@ -197,10 +200,10 @@ def modules_eesi() -> dict:
     module_unuse("$MODULEPATH")
     for cluster in clusters_eessi():
         print(f"\t Collecting available modules for {cluster}... ", end="", flush=True)
-        module_use(cluster)
+        module_use(cluster + "/modules/all/")
         data[cluster] = module_avail(filter_fn=filter_fn_eessi_modules)
         print(f"found {len(data[cluster])} modules!")
-        module_unuse(cluster)
+        module_unuse("$MODULEPATH")
 
     print("All data collected!\n")
     return data
