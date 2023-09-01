@@ -28,7 +28,7 @@ Python script to generate an overview of available modules across different clus
 
 @author: Michiel Lachaert (Ghent University)
 """
-
+import argparse
 import json
 import os
 import re
@@ -46,6 +46,12 @@ from natsort import natsorted
 # --------------------------------------------------------------------------------------------------------
 
 def main():
+    # EESSI command
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--eessi", help="eessi mode",
+                        action="store_true")
+    args = parser.parse_args()
+
     current_dir = Path(__file__).resolve()
     project_name = 'vsc_user_docs'
     root_dir = next(
@@ -54,7 +60,11 @@ def main():
     path_data_dir = os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/data")
 
     # Generate the JSON overviews and detail markdown pages.
-    modules = modules_eesi()
+    if args.eessi:
+        modules = modules_eesi()
+    else:
+        modules = modules_ugent()
+
     print(modules)
     print("Generate JSON overview... ", end="", flush=True)
     generate_json_overview(modules, path_data_dir)
