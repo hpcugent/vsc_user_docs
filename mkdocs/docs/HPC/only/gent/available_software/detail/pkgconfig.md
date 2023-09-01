@@ -3,11 +3,21 @@ hide:
   - toc
 ---
 
-detailed overview of pkgconfig
-==============================
+pkgconfig
+=========
+
+# Available modules
 
 
-This data was automatically generated on Thu, 31 Aug 2023 at 14:42:57 CEST  
+The overview below shows which pkgconfig installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+
+To start using pkgconfig, load one of these modules using a `module load` command like:
+
+```shell
+module load pkgconfig/1.5.5-GCCcore-12.2.0-python
+```
+
+*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

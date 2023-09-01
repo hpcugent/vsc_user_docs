@@ -3,11 +3,21 @@ hide:
   - toc
 ---
 
-detailed overview of libevent
-=============================
+libevent
+========
+
+# Available modules
 
 
-This data was automatically generated on Thu, 31 Aug 2023 at 14:42:57 CEST  
+The overview below shows which libevent installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+
+To start using libevent, load one of these modules using a `module load` command like:
+
+```shell
+module load libevent/2.1.12-GCCcore-12.3.0
+```
+
+*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
