@@ -54,7 +54,7 @@ def main():
     path_data_dir = os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/data")
 
     # Generate the JSON overviews and detail markdown pages.
-    modules = modules_ugent()
+    modules = modules_eesi()
     print("Generate JSON overview... ", end="", flush=True)
     generate_json_overview(modules, path_data_dir)
     print("Done!")
