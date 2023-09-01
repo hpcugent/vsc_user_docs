@@ -1,15 +1,15 @@
 # Available software
 
-Available software is a script that generates an overview of all software that is available on the HPC infrastructure.
+`available_software.py` is a script that generates an overview of all software modules that are available on an HPC system.
 It also generates a detailed overview per software that includes specific software versions.
-To do it, it generates 3 things:
-1. An overview JSON: This JSON is needed to populate the global overview table.
-2. A detailed JSON: This JSON is needed to automatically generate all the detailed markdown pages.
-3. A lot of detailed markdown pages: These are the detailed overview pages per software.
+To do this, it generates 3 things:
+1. `json_data.json`: This JSON file is used to populate the global overview table.
+2. `json_data_detail.json`: This JSON file is used to automatically generate all the detailed markdown pages.
+3. A lot of MarkDown files: These are the detailed overview pages per software.
 
-The generated files will be placed in the [available_software](/mkdocs/docs/HPC/only/gent/available_software) directory.
-More specific the [data](/mkdocs/docs/HPC/only/gent/available_software/data) 
-and [detail](/mkdocs/docs/HPC/only/gent/available_software/detail) subdirecty.
+The generated files will be placed in the [available_software](/mkdocs/docs/HPC/only/gent/available_software) directory,
+more specifically the [data](/mkdocs/docs/HPC/only/gent/available_software/data) 
+and [detail](/mkdocs/docs/HPC/only/gent/available_software/detail) subdirectories.
 
 ## Requirements
 - Required Python packages are listed in `requirements.txt` and `requirements_tests.txt`

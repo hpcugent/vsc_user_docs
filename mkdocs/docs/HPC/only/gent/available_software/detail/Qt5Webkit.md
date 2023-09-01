@@ -3,11 +3,21 @@ hide:
   - toc
 ---
 
-detailed overview of Qt5Webkit
-==============================
+Qt5Webkit
+=========
+
+# Available modules
 
 
-This data was automatically generated on Thu, 31 Aug 2023 at 14:42:57 CEST  
+The overview below shows which Qt5Webkit installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+
+To start using Qt5Webkit, load one of these modules using a `module load` command like:
+
+```shell
+module load Qt5Webkit/5.212.0-alpha4-GCCcore-11.2.0
+```
+
+*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

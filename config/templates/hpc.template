@@ -45,6 +45,7 @@ nav:
     - More on the HPC infrastructure: linux-tutorial/hpc_infrastructure.md
 {%- endif %}
   - Software-specific Best Practices:
+      - AlphaFold: alphafold.md
       - Apptainer/Singularity: apptainer.md
       - EasyBuild: easybuild.md
       - MATLAB: MATLAB.md

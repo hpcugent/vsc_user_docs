@@ -3,11 +3,21 @@ hide:
   - toc
 ---
 
-detailed overview of gnuplot
-============================
+gnuplot
+=======
+
+# Available modules
 
 
-This data was automatically generated on Thu, 31 Aug 2023 at 14:42:57 CEST  
+The overview below shows which gnuplot installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+
+To start using gnuplot, load one of these modules using a `module load` command like:
+
+```shell
+module load gnuplot/5.4.4-GCCcore-11.3.0
+```
+
+*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

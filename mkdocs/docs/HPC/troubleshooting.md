@@ -1,6 +1,98 @@
-
-
 # Troubleshooting
+
+## Why does my job not run faster when using more nodes and/or cores? { #job_does_not_run_faster }
+Requesting more resources for your job, more specifically using multiple cores and/or nodes, 
+does not automatically imply that your job will run faster. 
+There are various factors that determine to what extent these extra resources can be used and how efficiently they can be used. 
+More information on this in the subsections below.
+
+
+### Using multiple cores
+When you want to speed up your jobs by requesting multiple cores, you also need to use software that is actually capable of 
+using them (and use them efficiently, ideally).
+Unless particular a parallel programming paradigm like [OpenMP](https://www.openmp.org/about/openmp-faq/#WhatIs) threading 
+(shared memory) or [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface) (distributed memory) is used, 
+software will run sequentially (on a single core).
+
+To use multiple cores, the software needs to be able to create, manage, and synchronize multiple threads or processes. 
+More on how to implement parallelization for you exact programming language can be found online.
+Note that when using software that only uses *threads* to use multiple cores, there is no point in asking for multiple *nodes*, 
+since with a multi-threading (shared memory) approach you can only use the resources (cores, memory) of a *single* node.
+
+Even if your software is able to use multiple cores, maybe there is no point in going beyond a single core or a handful of cores, 
+for example because the workload you are running is too small or does not parallelize well.
+You can test this by increasing the amount of cores step-wise, and look at the speedup you gain. For example, 
+test with 2, 4, 16, a quarter of, half of, and all available cores.
+
+Other reasons why using more cores may not lead to a (significant) speedup include:
+
+- **Overhead:** When you use multi-threading (OpenMP) or multi-processing (MPI), 
+you should *not* expect that doubling the amount of cores will result in a 2x speedup. 
+This is due to the fact that time is needed to create, manage and synchronize the threads/processes.
+When this "bookkeeping" overhead exceeds the time gained by parallelization, you will not observe any speedup (or even see slower runs).
+For example, this can happen when you split you program in too many (tiny) tasks to run in parallel - 
+creating a thread/process for each task may even take longer than actually running the task itself.
+
+- **[Amdahl's Law](https://en.wikipedia.org/wiki/Amdahl%27s_law)** is often used in parallel computing to predict the maximum achievable (theoretical) speedup when using multiple cores. 
+It states that "*the overall performance improvement gained by optimizing a single part of a system is limited by the fraction of time that the improved part is actually used*". 
+For example, if a program needs 20 hours to complete using a single core, but a one-hour portion of the program can not be parallelized, 
+only the remaining 19 hours of execution time can be sped up using parallelization. 
+Regardless of how many cores are devoted to a parallelized execution of this program, the minimum execution time is always more than 1 hour. 
+So when you reach this theoretical limit, using more cores will not help at all to speed up the computational workload.
+
+- **Resource contention:** When two or more threads/processes want to access the same resource, they need to wait on each other - this is called resource contention. 
+As a result, 1 thread/process will need to wait until the other one is is finished using that resource. 
+When each thread uses the same resource, it will definitely run slower than if it doesn't need to wait for other threads to finish.
+
+- **Software limitations:** It is possible that the software you are using is just not really optimized for parallelization. 
+An example of a software that is not really optimized for multi-threading is Python (although this has improved over the years).
+This is due to the fact that in Python threads are implemented in a way that multiple threads can not run at the same time, due to the [global interpreter lock (GIL)](https://en.wikipedia.org/wiki/Global_interpreter_lock). 
+Instead of using multi-threading in Python to speedup a CPU bound program, you should use multi-processing instead, 
+which uses multiple processes (multiple instances of the same program) instead of multiple threads in a single program instance.
+Using multiple processes can speed up your CPU bound programs a lot more *in Python* than threads can do, even though they are much less efficient to create.
+In other programming languages (which don't have a GIL), you would probably still want to use threads.
+
+- **[Affinity and core pinning](https://www.admin-magazine.com/HPC/Articles/Processor-Affinity-for-OpenMP-and-MPI)**: 
+Even when the software you are using is able to efficiently use multiple cores, you may not see any speedup (or even a significant slowdown).
+This could be due to threads or processes that are not pinned to specific cores and keep hopping around between cores, 
+or because the pinning is done incorrectly and several threads/processes are being pinned to the same core(s), and thus keep "fighting" each other.
+
+- **Lack of sufficient memory**: When there is not enough memory available, or not enough memory bandwidth, 
+it is likely that you will not see a significant speedup when using more cores (since each thread or process most likely requires additional memory).
+
+More info on running multi-core workloads on the {{ hpcinfra }} can be found [here](multi_core_jobs.md).
+
+### Using multiple nodes
+When trying to use multiple (worker)nodes to improve the performance of your workloads, you may not see (significant) speedup.
+
+Parallelizing code across nodes is fundamentally different from leveraging multiple cores via multi-threading within a single node.
+The scalability achieved through multi-threading does not extend seamlessly to distributing computations across multiple nodes.
+This means that just changing `#PBS -l nodes=1:ppn=10` to `#PBS -l nodes=2:ppn=10` may only increase the waiting time to get your job running (because twice as many resources are requested), and will not improve the execution time.
+
+Actually using additional nodes is not as straightforward as merely asking for multiple nodes when submitting your job. The resources on these additional nodes often need to discovered, managed, and synchronized. This introduces complexities in distributing work effectively across the nodes. Luckily, there exist some libraries that do this for you.
+
+Using the resources of multiple nodes is often done using an [Message Passing Interface (MPI)](https://en.wikipedia.org/wiki/Message_Passing_Interface) library.
+MPI allows nodes to communicate and coordinate, but it also introduces additional complexity.
+
+An example of how you can make beneficial use of multiple nodes can be found [here](multi_core_jobs.md#parallel-computing-with-mpi).
+
+You can also use MPI in Python, some useful packages that are also available on the HPC are:
+
+-   [mpi4py](https://mpi4py.readthedocs.io/en/stable/mpi4py.html)
+-   [Boost.MPI](https://www.boost.org/doc/libs/1_55_0/doc/html/mpi/python.html)
+
+We advise to maximize core utilization before considering using multiple nodes.
+Our [infrastructure](https://www.ugent.be/hpc/en/infrastructure) has clusters with a lot of cores per node so we suggest that you first try to use all the cores on 1 node before you expand to more nodes.
+In addition, when running MPI software we strongly advise to use our [mympirun](mympirun.md) tool.
+
+### How do I know if my software can run in parallel?
+If you are not sure if the software you are using can efficiently use multiple cores or run across multiple nodes, 
+you should check its documentation for instructions on how to run in parallel, 
+or check for options that control how many threads/cores/nodes can be used.
+
+If you can not find any information along those lines, the software you are using can probably only use a single core 
+and thus requesting multiple cores and/or nodes will only result in wasted sources.
+
 
 ## Walltime issues
 
@@ -129,7 +221,7 @@ and include it in the email.
 
     <center>
     ![image](img/831change01.png)
-    <center>
+    </center>
 
 3.  Then click ++"Load"++ button
 
@@ -325,7 +417,7 @@ Now you can check the authenticity by checking if the line that is at
 the place of the underlined piece of text matches one of the following
 lines:
 
-<pre><code>{{opensshFirstConnect}}</pre></code>
+<pre><code>{{opensshFirstConnect}}</code></pre>
 {% endif %}
 
 {% if site == gent %} 

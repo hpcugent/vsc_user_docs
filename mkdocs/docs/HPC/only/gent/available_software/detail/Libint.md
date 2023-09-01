@@ -3,11 +3,21 @@ hide:
   - toc
 ---
 
-detailed overview of Libint
-===========================
+Libint
+======
+
+# Available modules
 
 
-This data was automatically generated on Thu, 31 Aug 2023 at 14:42:57 CEST  
+The overview below shows which Libint installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+
+To start using Libint, load one of these modules using a `module load` command like:
+
+```shell
+module load Libint/2.7.2-GCC-12.2.0-lmax-6-cp2k
+```
+
+*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
