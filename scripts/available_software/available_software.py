@@ -244,11 +244,11 @@ def generate_software_table_data(software_data: dict, clusters: list) -> list:
     """
     table_data = [" "] + clusters
 
-    for k, v in list(software_data.items())[::-1]:
-        row = [k]
+    for module_name, available in list(software_data.items())[::-1]:
+        row = [module_name]
 
         for cluster in clusters:
-            row += ("x" if cluster in v else "-")
+            row += ("x" if cluster in available else "-")
         table_data += row
 
     return table_data
@@ -270,13 +270,21 @@ def generate_software_detail_page(
     @param clusters: List with all the cluster names
     @param path: Path of the directory where the detailed page will be created.
     """
-    filename = f"{path}/{software_name}.md"
-    md_file = MdUtils(file_name=filename, title=f"detailed overview of {software_name}")
+    sorted_versions = dict_sort(software_data["versions"])
+    newest_version = list(sorted_versions.keys())[-1]
 
-    md_file.new_paragraph(f"This data was automatically generated on {generated_time}")
+    filename = f"{path}/{software_name}.md"
+    md_file = MdUtils(file_name=filename, title=f"{software_name}")
+    md_file.new_header(level=2, title="Available modules")
+
+    md_file.new_paragraph(f"The overview below shows which {software_name} installations are available per HPC-UGent "
+                          f"Tier-2cluster, ordered based on software version (new to old).")
+    md_file.new_paragraph(f"To start using {software_name}, load one of these modules using a `module load` command "
+                          f"like:")
+    md_file.insert_code(f"module load {newest_version}", language="shell")
+    md_file.new_paragraph(f"(This data was automatically generated on {generated_time})", bold_italics_code="i")
     md_file.new_line()
 
-    sorted_versions = dict_sort(software_data["versions"])
     md_file.new_table(
         columns=len(clusters) + 1,
         rows=len(sorted_versions) + 1,

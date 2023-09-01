@@ -81,6 +81,3 @@ operatingsystembase: Red Hat Enterprise Linux
 # Special for perfexpert tutorial
 mpirun: vsc-mympirun
 hpcuserguide: introduction to UGent-HPC tutorial
-
-tt: abc
-
