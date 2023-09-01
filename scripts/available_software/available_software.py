@@ -275,7 +275,7 @@ def generate_software_detail_page(
 
     filename = f"{path}/{software_name}.md"
     md_file = MdUtils(file_name=filename, title=f"{software_name}")
-    md_file.new_header(level=2, title="Available modules")
+    md_file.new_header(level=1, title="Available modules")
 
     md_file.new_paragraph(f"The overview below shows which {software_name} installations are available per HPC-UGent "
                           f"Tier-2cluster, ordered based on software version (new to old).")
