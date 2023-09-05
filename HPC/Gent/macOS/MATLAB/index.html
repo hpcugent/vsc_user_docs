@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#matlabs" class="md-skip">
+        <a href="#matlab" class="md-skip">
           Skip to content
         </a>
       
@@ -1306,7 +1306,15 @@
   
 
 
-<h1 id="matlabs">MATLABs<a class="headerlink" href="#matlabs" title="Permanent link">#</a></h1>
+<h1 id="matlab">MATLAB<a class="headerlink" href="#matlab" title="Permanent link">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To run a MATLAB program on the HPC-UGent infrastructure <strong>you must compile it first</strong>,
+because the MATLAB license server is not accessible from cluster workernodes
+(except for the interactive debug cluster).</p>
+<p>Compiling MATLAB programs is only possible on the <a href="../interactive_debug/">interactive debug cluster</a>,
+<strong>not</strong> on the HPC-UGent login nodes where resource limits w.r.t. memory and max. number of progress are too strict.</p>
+</div>
 <h2 id="why-is-the-matlab-compiler-required">Why is the MATLAB compiler required?<a class="headerlink" href="#why-is-the-matlab-compiler-required" title="Permanent link">#</a></h2>
 <p>The main reason behind this alternative way of using MATLAB is
 licensing: only a limited number of MATLAB sessions can be active at the
@@ -1456,7 +1464,7 @@ an example job script. This job script is also available on the HPC.</p>
 <span class="c1">#</span>
 
 <span class="c1"># make sure the MATLAB version matches with the one used to compile the MATLAB program!</span>
-module<span class="w"> </span>load<span class="w"> </span>MATLAB/2018a
+module<span class="w"> </span>load<span class="w"> </span>MATLAB/2021b
 
 <span class="c1"># use temporary directory (not $HOME) for (mostly useless) MATLAB log files</span>
 <span class="c1"># subdir in $TMPDIR (if defined, or /tmp otherwise)</span>
