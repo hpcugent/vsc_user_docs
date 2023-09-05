@@ -7,7 +7,7 @@
 #
 
 # make sure the MATLAB version matches with the one used to compile the MATLAB program!
-module load MATLAB/2018a
+module load MATLAB/2021b
 
 # use temporary directory (not $HOME) for (mostly useless) MATLAB log files
 # subdir in $TMPDIR (if defined, or /tmp otherwise)

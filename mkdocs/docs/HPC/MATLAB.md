@@ -1,4 +1,12 @@
-# MATLABs
+# MATLAB
+
+!!! note
+    To run a MATLAB program on the {{ hpcinfra }} **you must compile it first**,
+    because the MATLAB license server is not accessible from cluster workernodes
+    (except for the interactive debug cluster).
+
+    Compiling MATLAB programs is only possible on the [interactive debug cluster](interactive_debug.md),
+    **not** on the {{ hpcsite}} login nodes where resource limits w.r.t. memory and max. number of progress are too strict.
 
 ## Why is the MATLAB compiler required?
 
