@@ -28,7 +28,7 @@ Python script to generate an overview of available modules across different clus
 
 @author: Michiel Lachaert (Ghent University)
 """
-
+import argparse
 import json
 import os
 import re
@@ -46,6 +46,12 @@ from natsort import natsorted
 # --------------------------------------------------------------------------------------------------------
 
 def main():
+    # EESSI command
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--eessi", help="eessi mode",
+                        action="store_true")
+    args = parser.parse_args()
+
     current_dir = Path(__file__).resolve()
     project_name = 'vsc_user_docs'
     root_dir = next(
@@ -54,7 +60,12 @@ def main():
     path_data_dir = os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/data")
 
     # Generate the JSON overviews and detail markdown pages.
-    modules = modules_ugent()
+    if args.eessi:
+        modules = modules_eesi()
+    else:
+        modules = modules_ugent()
+
+    print(modules)
     print("Generate JSON overview... ", end="", flush=True)
     generate_json_overview(modules, path_data_dir)
     print("Done!")
@@ -64,6 +75,21 @@ def main():
     print("Generate detailed pages... ", end="", flush=True)
     generate_detail_pages(json_path, os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/detail"))
     print("Done!")
+
+
+# --------------------------------------------------------------------------------------------------------
+# Functions to run bash commands
+# --------------------------------------------------------------------------------------------------------
+
+def bash_command(cmd: str) -> np.ndarray:
+    proc = subprocess.run(
+        ['/bin/bash', '-c', cmd],
+        encoding="utf-8",
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE
+    )
+
+    return np.array(proc.stdout.split())
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -109,6 +135,24 @@ def module_swap(name: str) -> None:
     module("swap", name)
 
 
+def module_use(path: str) -> None:
+    """
+    Function to run "module use" commands.
+
+    @param path: Path to the directory with all the modules you want to use.
+    """
+    module("use", path)
+
+
+def module_unuse(path: str) -> None:
+    """
+    Function to run "module unuse" commands.
+
+    @param path: Path to the directory with all the modules you want to unuse.
+    """
+    module("unuse", path)
+
+
 def module_whatis(name: str) -> dict:
     """
     Function to run "module whatis" commands.
@@ -125,7 +169,58 @@ def module_whatis(name: str) -> dict:
 
 
 # --------------------------------------------------------------------------------------------------------
-# Fetch data
+# Fetch data EESSI
+# --------------------------------------------------------------------------------------------------------
+
+def filter_fn_eessi_modules(data: np.ndarray) -> np.ndarray:
+    """
+    Filter function for the output of all software modules for EESSI (excl. `cluster` and `env` modules).
+    @param data: Output
+    @return: Filtered output
+    """
+    return data[~np.char.endswith(data, ":")]
+
+
+def clusters_eessi() -> np.ndarray:
+    """
+    Returns all the cluster names of EESSI.
+    @return: cluster names
+    """
+    commands = [
+        "find /cvmfs/pilot.eessi-hpc.org/versions/2023.06/software/linux/*/* -maxdepth 0 \\( ! -name 'intel' -a ! "
+        "-name 'amd' \\) -type d",
+        'find /cvmfs/pilot.eessi-hpc.org/versions/2023.06/software/linux/*/{amd,intel}/* -maxdepth 0  -type d'
+    ]
+    clusters = np.array([])
+
+    for command in commands:
+        clusters = np.concatenate([clusters, bash_command(command)])
+
+    return clusters
+
+
+def modules_eesi() -> dict:
+    """
+    Returns names of all software module that are installed on EESSI.
+    They are grouped by cluster.
+    @return: Dictionary with all the modules per cluster
+    """
+    print("Start collecting modules:")
+    data = {}
+    module_unuse(os.getenv('MODULEPATH'))
+    for cluster in clusters_eessi():
+        print(f"\t Collecting available modules for {cluster}... ", end="", flush=True)
+        module_use(cluster + "/modules/all/")
+        data[cluster] = module_avail(filter_fn=filter_fn_eessi_modules)
+        print(f"found {len(data[cluster])} modules!")
+        module_unuse(os.getenv('MODULEPATH'))
+
+    print("All data collected!\n")
+    return data
+
+
+# --------------------------------------------------------------------------------------------------------
+# Fetch data UGent
 # --------------------------------------------------------------------------------------------------------
 
 def filter_fn_gent_cluster(data: np.ndarray) -> np.ndarray:
@@ -145,7 +240,7 @@ def filter_fn_gent_cluster(data: np.ndarray) -> np.ndarray:
 
 def filter_fn_gent_modules(data: np.ndarray) -> np.ndarray:
     """
-    Filter function for the output of all software modules (excl. `cluster` and `env` modules).
+    Filter function for the output of all software modules for UGent (excl. `cluster` and `env` modules).
     @param data: Output
     @return: Filtered output
     """
@@ -336,7 +431,7 @@ def generate_table_data(avail_mods: dict) -> Tuple[np.ndarray, int, int]:
         for cluster in avail_mods:
             final = np.append(final, "X" if package in avail_mods[cluster] else " ")
 
-    return final, len(list(avail_mods.keys())) + 1, len(all_modules) + 1
+    return final, len(avail_mods.keys()) + 1, len(all_modules) + 1
 
 
 def generate_module_table(data: dict, md_file: MdUtils) -> None:
