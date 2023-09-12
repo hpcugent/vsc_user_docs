@@ -207,13 +207,13 @@ def modules_eesi() -> dict:
     """
     print("Start collecting modules:")
     data = {}
-    module_unuse("$MODULEPATH")
+    module_unuse(os.getenv('MODULEPATH'))
     for cluster in clusters_eessi():
         print(f"\t Collecting available modules for {cluster}... ", end="", flush=True)
         module_use(cluster + "/modules/all/")
         data[cluster] = module_avail(filter_fn=filter_fn_eessi_modules)
         print(f"found {len(data[cluster])} modules!")
-        module_unuse("$MODULEPATH")
+        module_unuse(os.getenv('MODULEPATH'))
 
     print("All data collected!\n")
     return data
