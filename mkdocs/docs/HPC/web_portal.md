@@ -346,3 +346,7 @@ menu item:
 
 Of course, this only affects your own web portal session (not those of
 others).
+
+## Custom apps
+
+* [ABAQUS for CAE course](web_portal_custom_apps/abaqus_cae.md)
