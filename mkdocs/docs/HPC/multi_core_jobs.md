@@ -100,17 +100,6 @@ MPI.
             Mimics a global address space on distributed memory systems, by distributing arrays over many nodes and one sided communication. This library is used a lot for chemical structure calculation codes and was used in one of the first applications that broke the PetaFlop barrier.
         </td>
     </tr>
-    <tr>
-        <td colspan="1">
-            scoop
-        </td>
-        <td colspan="1">
-            Python
-        </td>
-        <td colspan="1">
-            Applies to both shared and distributed memory system. Not extremely advanced, but may present a quick road to parallelisation of Python code.
-        </td>
-    </tr>
 </table>
 
 !!! tip
