@@ -62,7 +62,7 @@ The sooner you make the request, the better.
 
 ## Participants
 
-### UGent Cuurses
+### UGent Courses
 
 Based on the Course Code, we can create VSC accounts for all UGent students that have officially enrolled
 in your UGent course (if they do not have an account already).
