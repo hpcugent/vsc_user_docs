@@ -55,8 +55,10 @@ The end date is used to automatically perform a cleanup when your course/worksho
 - Residual data in the course directories will be deleted
 - Custom Interactive Applications will be disabled
 
-The start date (and time) is used as a target for the HPC-UGent team to set up your course requirements. But note that this target is best-effort, depending on the load of the support team and the complexity of your requirements.
-Requests should be made well in advance, at least several weeks before the actual start of your course. The sooner you make the request, the better.
+The start date (and time) is used as a target for the HPC-UGent team to set up your course requirements.
+But note that this target is best-effort, depending on the load of the support team and the complexity of your requirements.
+Requests should be made well in advance, at least several weeks before the actual start of your course.
+The sooner you make the request, the better.
 
 ## Participants
 
@@ -190,7 +192,7 @@ but this is always best effort, depending on the load of the support team and th
 A caveat for the teacher and students is that students do not learn to work with the generic application,
 and do not see the actual commands or customization code.
 Therefore, per custom interactive application, HPC-UGent will make a dedicated section in the
-[web portal chapter of the HPC user documentation](webportal.md#custom-apps).
+[web portal chapter of the HPC user documentation](web_portal.md#custom-apps).
 This section will briefly explain what happens under the hood of the interactive application.
 We would recommend that you as a teacher take some time to show and explain this to the students.
 Note that the custom interactive application will disappear for students after the indicated end of your course,
