@@ -5,17 +5,18 @@ if [ "${DEBUG:-0}" -gt 0 ]; then
 fi
 
 DEPSDIR="$PWD/pypkgs"
-if [ "${INSTALLDEPS:-0}" -gt 0 ]; then
-    python3 -m pip install --ignore-installed --prefix "$DEPSDIR" -r requirements.txt
-    python3 -m pip install --prefix "$DEPSDIR" "$PWD"/custom_plugin
-    python3 -m pip install --prefix "$DEPSDIR" "$PWD"/computational_macros
-    # not needed for actual page
-    python3 -m pip install --ignore-installed --prefix "$DEPSDIR" linkchecker
-fi
-
 pyver=python$(python3 -c "import sys; print(\"%s.%s\" % sys.version_info[:2])")
 export PYTHONPATH=$DEPSDIR/lib/$pyver/site-packages:$DEPSDIR/lib64/$pyver/site-packages:$PWD/custom_plugin:$PWD/computational_macros:$PYTHONPATH
 export PATH=$DEPSDIR/bin:$PATH
+
+
+if [ "${INSTALLDEPS:-0}" -gt 0 ]; then
+    python3 -m pip install --use-pep517 --ignore-installed --prefix "$DEPSDIR" -r requirements.txt
+    python3 -m pip install --use-pep517 --prefix "$DEPSDIR" "$PWD"/custom_plugin
+    python3 -m pip install --use-pep517 --prefix "$DEPSDIR" "$PWD"/computational_macros
+    # not needed for actual page
+    python3 -m pip install --use-pep517 --ignore-installed --prefix "$DEPSDIR" linkchecker
+fi
 
 python3 build.py "$@"
 
