@@ -34,6 +34,7 @@ nav:
 {%- if site == 'Gent' %}
       - GPU clusters: gpu.md
       - Cron scripts: crontab.md
+      - Teaching and training: teaching_training.md
   - Linux tutorial:
     - Introduction: linux-tutorial/index.md
     - Getting Started: linux-tutorial/getting_started.md
