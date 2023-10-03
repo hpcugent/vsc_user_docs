@@ -1,0 +1,1719 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.hpc.ugent.be/Windows/teaching_training/">
+      
+      
+        <link rel="prev" href="../crontab/">
+      
+      
+        <link rel="next" href="../linux-tutorial/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>Teaching and training - VSC User Documentation - Gent (Windows)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#teaching-and-training" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VSC User Documentation - Gent (Windows)" class="md-header__button md-logo" aria-label="VSC User Documentation - Gent (Windows)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSC User Documentation - Gent (Windows)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Teaching and training
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <!-- Original file https://github.com/squidfunk/mkdocs-material/blob/master/material/partials/source.html -->
+<!-- More information see https://squidfunk.github.io/mkdocs-material/customization/ -->
+<!-- This is code FOR OS PICKER NOT FOR INTENTED PURPOSE AS REPO LINK -->
+<div class="md-source">
+  <label for="picker">Your OS:</label>
+  <select name="picker" id="picker" style="border: none; background-color: var(--md-primary-fg-color); color: inherit">
+    <option value="" disabled selected>Choose OS</option>
+    <option value="Linux">Linux</option>
+    <option value="Windows">Windows</option>
+    <option value="macOS">macOS</option>
+  </select>
+</div>
+
+<script>
+  {
+    const elements = document.querySelectorAll("#picker");
+    const store_OS = localStorage.getItem("select_OS");
+    // Get url before OS part.
+    const osmatch = window.location.href.match(/^(.*?)\/(Linux|macOS|Windows)\//i);
+
+    elements.forEach(e => {
+      e.addEventListener("change", (event) => {
+        if (event.target.value){
+          // Save new OS pick.
+          localStorage.setItem("select_OS", JSON.stringify([osmatch[1], event.target.value]));
+          // Redirect to new OS page.
+          window.location.href = window.location.href.replace(/Linux|MacOS|Windows/i,event.target.value);
+        }
+      });
+      if (store_OS) {
+        // There is a stored OS, so set select to this option.
+        e.value = JSON.parse(store_OS)[1];
+      }
+    })
+  }
+</script>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VSC User Documentation - Gent (Windows)" class="md-nav__button md-logo" aria-label="VSC User Documentation - Gent (Windows)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    VSC User Documentation - Gent (Windows)
+  </label>
+  
+    <div class="md-nav__source">
+      <!-- Original file https://github.com/squidfunk/mkdocs-material/blob/master/material/partials/source.html -->
+<!-- More information see https://squidfunk.github.io/mkdocs-material/customization/ -->
+<!-- This is code FOR OS PICKER NOT FOR INTENTED PURPOSE AS REPO LINK -->
+<div class="md-source">
+  <label for="picker">Your OS:</label>
+  <select name="picker" id="picker" style="border: none; background-color: var(--md-primary-fg-color); color: inherit">
+    <option value="" disabled selected>Choose OS</option>
+    <option value="Linux">Linux</option>
+    <option value="Windows">Windows</option>
+    <option value="macOS">macOS</option>
+  </select>
+</div>
+
+<script>
+  {
+    const elements = document.querySelectorAll("#picker");
+    const store_OS = localStorage.getItem("select_OS");
+    // Get url before OS part.
+    const osmatch = window.location.href.match(/^(.*?)\/(Linux|macOS|Windows)\//i);
+
+    elements.forEach(e => {
+      e.addEventListener("change", (event) => {
+        if (event.target.value){
+          // Save new OS pick.
+          localStorage.setItem("select_OS", JSON.stringify([osmatch[1], event.target.value]));
+          // Redirect to new OS page.
+          window.location.href = window.location.href.replace(/Linux|MacOS|Windows/i,event.target.value);
+        }
+      });
+      if (store_OS) {
+        // There is a stored OS, so set select to this option.
+        e.value = JSON.parse(store_OS)[1];
+      }
+    })
+  }
+</script>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        Introduction to HPC
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        Getting an HPC Account
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connecting/" class="md-nav__link">
+        Connecting to the HPC infrastructure
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_batch_jobs/" class="md-nav__link">
+        Running batch jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_interactive_jobs/" class="md-nav__link">
+        Running interactive jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_jobs_with_input_output_data/" class="md-nav__link">
+        Running jobs with input/output data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_core_jobs/" class="md-nav__link">
+        Multi core jobs/Parallel Computing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_portal/" class="md-nav__link">
+        Using the HPC-UGent web portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interactive_debug/" class="md-nav__link">
+        Interactive and debug cluster
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdmod/" class="md-nav__link">
+        XDMoD portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sites/hpc_policies/" class="md-nav__link">
+        HPC Policies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+          Advanced topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fine_tuning_job_specifications/" class="md-nav__link">
+        Fine-tuning Job Specifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_job_submission/" class="md-nav__link">
+        Multi-job submission
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiling_your_software/" class="md-nav__link">
+        Compiling and testing your software on the HPC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program_examples/" class="md-nav__link">
+        Program examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jobscript_examples/" class="md-nav__link">
+        Job script examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_practices/" class="md-nav__link">
+        Best Practices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpu/" class="md-nav__link">
+        GPU clusters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crontab/" class="md-nav__link">
+        Cron scripts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Teaching and training
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Teaching and training
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#title-and-nickname" class="md-nav__link">
+    Title and nickname
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-and-end-date" class="md-nav__link">
+    Start and end date
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teachers-and-trainers" class="md-nav__link">
+    Teachers and trainers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#participants" class="md-nav__link">
+    Participants
+  </a>
+  
+    <nav class="md-nav" aria-label="Participants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ugent-courses" class="md-nav__link">
+    UGent Courses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trainings-and-workshops" class="md-nav__link">
+    Trainings and workshops
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dedicated-storage" class="md-nav__link">
+    Dedicated storage
+  </a>
+  
+    <nav class="md-nav" aria-label="Dedicated storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shared-and-groups" class="md-nav__link">
+    Shared and groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#course-quota" class="md-nav__link">
+    Course Quota
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#course-data-policy" class="md-nav__link">
+    Course data policy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-requirements-beyond-the-interactive-cluster" class="md-nav__link">
+    Resource requirements beyond the interactive cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specific-software" class="md-nav__link">
+    Specific software
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-interactive-application-in-the-webportal" class="md-nav__link">
+    Custom Interactive Application in the webportal
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_16" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+          Linux tutorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_16">
+          <span class="md-nav__icon md-icon"></span>
+          Linux tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-tutorial/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-tutorial/getting_started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-tutorial/navigating/" class="md-nav__link">
+        Navigating
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-tutorial/manipulating_files_and_directories/" class="md-nav__link">
+        Manipulating files and directories
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-tutorial/uploading_files/" class="md-nav__link">
+        Uploading files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-tutorial/beyond_the_basics/" class="md-nav__link">
+        Beyond the basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-tutorial/common_pitfalls/" class="md-nav__link">
+        Common pitfalls
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-tutorial/hpc_infrastructure/" class="md-nav__link">
+        More on the HPC infrastructure
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_17" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_17">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alphafold/" class="md-nav__link">
+        AlphaFold
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_18" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+          FAQ
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_18">
+          <span class="md-nav__icon md-icon"></span>
+          FAQ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_19" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
+          Appendices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_19">
+          <span class="md-nav__icon md-icon"></span>
+          Appendices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick_reference_guide/" class="md-nav__link">
+        Appendix A - HPC Quick Reference Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torque_options/" class="md-nav__link">
+        Appendix B - TORQUE options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../useful_linux_commands/" class="md-nav__link">
+        Appendix C - Useful Linux Commands
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#title-and-nickname" class="md-nav__link">
+    Title and nickname
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-and-end-date" class="md-nav__link">
+    Start and end date
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teachers-and-trainers" class="md-nav__link">
+    Teachers and trainers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#participants" class="md-nav__link">
+    Participants
+  </a>
+  
+    <nav class="md-nav" aria-label="Participants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ugent-courses" class="md-nav__link">
+    UGent Courses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trainings-and-workshops" class="md-nav__link">
+    Trainings and workshops
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dedicated-storage" class="md-nav__link">
+    Dedicated storage
+  </a>
+  
+    <nav class="md-nav" aria-label="Dedicated storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shared-and-groups" class="md-nav__link">
+    Shared and groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#course-quota" class="md-nav__link">
+    Course Quota
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#course-data-policy" class="md-nav__link">
+    Course data policy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-requirements-beyond-the-interactive-cluster" class="md-nav__link">
+    Resource requirements beyond the interactive cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specific-software" class="md-nav__link">
+    Specific software
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-interactive-application-in-the-webportal" class="md-nav__link">
+    Custom Interactive Application in the webportal
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+  
+  
+
+
+<h1 id="teaching-and-training">Teaching and training<a class="headerlink" href="#teaching-and-training" title="Permanent link">#</a></h1>
+<p>The HPC infrastructure can be used for teaching and training purposes, and
+HPC-UGent provides support for getting you organized.</p>
+<p>As a reminder, both Bachelor and Master students are allowed to use the HPC infrastructure,
+and it is also possible to organize trainings (or workshops).
+But in either case we do recommend preparing a fallback plan in case the HPC infrastructure becomes unavailable,
+e.g. because of an unexpected power failure.</p>
+<p>In general, we advise the use of the HPC webportal in combination with the
+<a href="../interactive_debug/">interactive cluster</a>
+for teaching and training, but deviations are possible upon request.</p>
+<p>In order to prepare things, make a <em>teaching request</em> by <a href="https://www.ugent.be/hpc/en/support">contacting the HPC-UGent team</a>
+with the following information (explained further below):</p>
+<ul>
+<li>Title and nickname</li>
+<li>Start and end date for your course or training</li>
+<li>VSC-ids of all teachers/trainers</li>
+<li>Participants based on UGent Course Code and/or list of VSC-ids</li>
+<li>Optional information<ul>
+<li>Additional storage requirements<ul>
+<li>Shared folder</li>
+<li>Groups folder for collaboration</li>
+<li>Quota</li>
+</ul>
+</li>
+<li>Reservation for resource requirements beyond the interactive cluster</li>
+<li>Ticket number for specific software needed for your course/training</li>
+<li>Details for a custom Interactive Application in the webportal</li>
+</ul>
+</li>
+</ul>
+<p>In addition, it could be beneficial to set up a short Teams call with HPC-UGent team members,
+especially if you are using a complex workflow for your course/workshop.</p>
+<p>Please make these requests well in advance, several weeks before the start of your course/workshop.</p>
+<h2 id="title-and-nickname">Title and nickname<a class="headerlink" href="#title-and-nickname" title="Permanent link">#</a></h2>
+<p>The title of the course or training can be used in e.g. reporting.</p>
+<p>The nickname is a single (short) word or acronym that the students or participants can easily
+recognise, e.g. in the directory structure. In case of UGent courses, this is used next to the
+course code to help identify <a href="./#dedicated-storage">the course directory</a> in the list of all courses one might follow.</p>
+<p>When choosing the nickname, try to make it unique, but this is not enforced nor checked.</p>
+<h2 id="start-and-end-date">Start and end date<a class="headerlink" href="#start-and-end-date" title="Permanent link">#</a></h2>
+<p>The start date (and time) is used as a target for the HPC-UGent team to set up your course requirements.
+But note that this target is best-effort, depending on the load of the support team and the complexity of your requirements.
+Requests should be made well in advance, at least several weeks before the actual start of your course.
+The sooner you make the request, the better.</p>
+<p>The end date is used to automatically perform a cleanup when your course/workshop has finished, 
+as described in the <a href="./#course-data-policy">course data policy</a>:</p>
+<ul>
+<li>Course group and subgroups will be deactivated</li>
+<li>Residual data in the course directories will be archived or deleted</li>
+<li>Custom Interactive Applications will be disabled</li>
+</ul>
+<h2 id="teachers-and-trainers">Teachers and trainers<a class="headerlink" href="#teachers-and-trainers" title="Permanent link">#</a></h2>
+<p>A <em>course group</em> is created with all students or participants, and the teachers or trainers are
+the group moderators (and also member of this group).</p>
+<p>This course group and the moderators group are used to manage the different priviliges:
+moderators have additional privileges over non-moderator members
+e.g. they have read/write access in specific folders, can manage subgroups, ....</p>
+<p>Provide us with a list of all the VSC-ids for the teachers or trainers to indentify the moderators.</p>
+<h2 id="participants">Participants<a class="headerlink" href="#participants" title="Permanent link">#</a></h2>
+<p>The management of the list of students or participants depends if this is a UGent course or a training/workshop. </p>
+<h3 id="ugent-courses">UGent Courses<a class="headerlink" href="#ugent-courses" title="Permanent link">#</a></h3>
+<p>Based on the Course Code, we can create VSC accounts for all UGent students that have officially enrolled
+in your UGent course (if they do not have an account already).
+Students will then no longer have to take steps themselves to request a VSC account.
+The students do need to be officially enrolled, so that they are linked to your UGent Course Code.</p>
+<p>The created VSC accounts will be accounts without an ssh-key.
+This allows the students to use e.g. the portal, but if they require ssh access to the infrastructure,
+they will have to <a href="../account/#adding-multiple-ssh-public-keys-optional">add an SSH key</a> themselves.</p>
+<p>Additionally, for external, non-UGent students the <em>teaching request</em> must contain the list
+of their VSC-ids, so they can be added to the course group.</p>
+<p>A course group will be automatically created for your course, with all VSC accounts of registered students as member.
+Typical format <code>gcourse_&lt;coursecode&gt;_&lt;year&gt;</code>, e.g. <code>gcourse_e071400_2023</code>.
+Teachers are <a href="./#teachers-and-trainers">moderator of this course group</a>, but will not be able to add unregistered students or moderators.
+VSC accounts that are not linked to the Course Code will be automatically removed from the course group.
+To get a student added to the course group, make sure that the student becomes officially enrolled in your course.</p>
+<h3 id="trainings-and-workshops">Trainings and workshops<a class="headerlink" href="#trainings-and-workshops" title="Permanent link">#</a></h3>
+<p>(Currently under construction:)
+For trainings, workshops or courses that do not have a Course Code, you need to provide us with the list of all VSC-ids.
+A group will be made, based on the name of the workshop, with all VSC-ids as member.
+Teachers/trainers will be able to add/remove VSC accounts from this course group.
+But students will have to follow the <a href="../account/">procedure to request a VSC account</a> themselves.
+There will be no automation.</p>
+<h2 id="dedicated-storage">Dedicated storage<a class="headerlink" href="#dedicated-storage" title="Permanent link">#</a></h2>
+<p>For every course, a dedicated course directory will be created on the <em>DATA</em> filesystem
+under <code>/data/gent/courses/&lt;year&gt;/&lt;nickname&gt;_&lt;coursecode&gt;</code> (e.g. <code>/data/gent/courses/2023/cae_e071400</code>).</p>
+<p>This directory will be accessible by all members of your course group.
+(Hence, it is no longer necessary to set up dangerous workarounds e.g. invite course members to your virtual organization.)</p>
+<p>Every course directory will always contain the folders:</p>
+<ul>
+<li><code>input</code><ul>
+<li>ideally suited to distribute input data such as common datasets</li>
+<li>moderators have read/write access</li>
+<li>group members (students) only have read access</li>
+</ul>
+</li>
+<li><code>members</code><ul>
+<li>this directory contains a personal folder for every student in your course <code>members/vsc&lt;01234&gt;</code></li>
+<li>only this specific VSC-id will have read/write access to this folder</li>
+<li>moderators have read access to this folder</li>
+</ul>
+</li>
+</ul>
+<h3 id="shared-and-groups">Shared and groups<a class="headerlink" href="#shared-and-groups" title="Permanent link">#</a></h3>
+<p>Optionally, we can also create these folders:</p>
+<ul>
+<li><code>shared</code><ul>
+<li>this is a folder for sharing files between any and all group members</li>
+<li>all group members and moderators have read/write access</li>
+<li>beware that group members will be able to alter/delete each others files in this folder if they set
+  permissions in specific/non-default ways</li>
+</ul>
+</li>
+<li><code>groups</code><ul>
+<li>a number of <code>groups/group_&lt;01&gt;</code> folders are created under the <code>groups</code> folder</li>
+<li>these folders are suitable if you want to let your students collaborate closely in smaller groups</li>
+<li>each of these <code>group_&lt;01&gt;</code> folders are owned by a dedicated group</li>
+<li>teachers are automatically made moderators of these dedicated groups</li>
+<li>moderators can populate these groups with VSC-ids of group members in the VSC accountpage
+  or ask the students to invite themself via <a href="https://account.vscentrum.be/django/group/edit">group edit</a>.
+  When students invite them self, moderators still need to <a href="https://account.vscentrum.be/django/group/approve">approve the group invites</a>.</li>
+<li>only these VSC-ids will then be able to access a <code>group_&lt;01&gt;</code> folder, and will have read/write access.</li>
+</ul>
+</li>
+</ul>
+<p>If you need any of these additional folders, do indicate under <em>Optional storage requirements</em>
+of your <em>teaching request</em>:</p>
+<ul>
+<li><code>shared</code>: <code>yes</code></li>
+<li><code>subgroups</code>: <code>&lt;number of (sub)groups&gt;</code></li>
+</ul>
+<h3 id="course-quota">Course Quota<a class="headerlink" href="#course-quota" title="Permanent link">#</a></h3>
+<p>There are 4 quota settings that you can choose in your <em>teaching request</em> in the case the defaults are not sufficient:</p>
+<ul>
+<li>overall quota (defaults <em>10 GB volume</em> and <em>20k files</em>) are for the moderators and can be used for e.g. the <code>input</code> folder.</li>
+<li>member quota (defaults <em>5 GB volume</em> and <em>10k files</em>) are per student/participant</li>
+</ul>
+<p>The course data usage is not accounted for the any other quota (like VO quota). It is solely dependant on these settings.</p>
+<h3 id="course-data-policy">Course data policy<a class="headerlink" href="#course-data-policy" title="Permanent link">#</a></h3>
+<p>The data policy for the dedicated course storage is the following:
+on the indicated end date of your course, the course directory will be made read-only to the moderators
+(possibly on the form of an archive zipfile).
+One year after the end date it will be permanently removed.
+We assume that teachers/trainers always have an own copy of the course data as a starting point for a next course.</p>
+<h2 id="resource-requirements-beyond-the-interactive-cluster">Resource requirements beyond the interactive cluster<a class="headerlink" href="#resource-requirements-beyond-the-interactive-cluster" title="Permanent link">#</a></h2>
+<p>We assume that your course requirements are such that the <a href="../interactive_debug/">interactive cluster</a> can be used.
+If these resources are insufficient, you will need to request and motivate a reservation.</p>
+<p>Indicate which cluster you would need and the number of nodes, cores and/or GPUs.
+Also clearly indicate when you would need these resources, i.e. the dates and times of each course session.</p>
+<p>Be aware that students will have no access to the reservation outside the course sessions.
+This might be relevant when requesting a custom application.</p>
+<p>Reservations take away precious resources for all HPC users, so only request this when it is really needed for your course.
+In our experience, the <a href="../interactive_debug/">interactive cluster</a> is more than sufficient for the majority of cases.</p>
+<h2 id="specific-software">Specific software<a class="headerlink" href="#specific-software" title="Permanent link">#</a></h2>
+<p>In case you need software for your course/workshop that is unavailable or that needs to be updated,
+make a separate <a href="https://www.ugent.be/hpc/en/support/software-installation-request">software installation request</a>.
+Add the OTRS ticket number in your <em>teaching request</em>.</p>
+<p>We will try to make the software available before the start of your course/workshop.
+But this is always best effort, depending on the load of the support team and the complexity of your software request.
+Typically, software installation requests must be made at least one month before the course/workshop starts.</p>
+<p>Ideally, courses/workshops rely on software that is already in use (and thus also well tested).</p>
+<h2 id="custom-interactive-application-in-the-webportal">Custom Interactive Application in the webportal<a class="headerlink" href="#custom-interactive-application-in-the-webportal" title="Permanent link">#</a></h2>
+<p>HPC-UGent can create a custom interactive application in the web portal for your course/workshop.
+Typically, this is a generic interactive application such as cluster desktop, Jupyter notebook, ...
+in which a number of options are preset or locked down:
+e.g. the number of cores, software version, cluster selection, autostart code, etc.
+This could make it easier for teachers and students, since students are less prone to making mistakes
+and do not have to spend time copy-pasting specific settings.</p>
+<p>A custom interactive application will only be available to the members of your course group.
+It will appear in the <code>Interactive Apps</code> menu in the webportal, under the section <code>Courses</code>.
+After the indicated end date of your course, this application will be removed.</p>
+<p>If you would like this for your course, provide more details in your <em>teaching request</em>, including:
+- what interactive application would you like to get launched (cluster desktop, Jupyter Notebook, ...)
+- which cluster you want to use
+- how many nodes/cores/GPUs are needed
+- which software modules you are loading
+- custom code you are launching (e.g. autostart a GUI)
+- required environment variables that you are setting
+- ...</p>
+<p>We will try to make the custom interactive application available before the start of your course/workshop,
+but this is always best effort, depending on the load of the support team and the complexity of your request.</p>
+<p>A caveat for the teacher and students is that students do not learn to work with the generic application,
+and do not see the actual commands or customization code.
+Therefore, per custom interactive application, HPC-UGent will make a dedicated section in the
+<a href="../web_portal/#custom-apps">web portal chapter of the HPC user documentation</a>.
+This section will briefly explain what happens under the hood of the interactive application.
+We would recommend that you as a teacher take some time to show and explain this to the students.
+Note that the custom interactive application will disappear for students after the indicated end of your course,
+but the section in the web portal will remain there for several years, for reference.</p>
+
+
+
+
+
+                
+<script>
+ if (!! localStorage.getItem('select_OS')) {
+    const classes = ["headerlink", "md-nav__link"]
+    for (i in classes) {
+        var anchors = Array.from(document.getElementsByClassName(classes[i]))
+        anchors.forEach(
+            function (anch) {
+                const href = anch.href;
+                if (!!anch.href) {
+                    // Remove OS part and search query in permalinks if it exists. Useful when copying the urls.
+                    anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/").replace(/\?[^#]*/,"")
+                }
+                anch.addEventListener("click",(event) => {
+                    // Redirect to real original target. (with OS,and search query)
+                    event.target.href = href;
+                })
+            })
+    }
+}
+</script>
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../crontab/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cron scripts" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Cron scripts
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../linux-tutorial/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Introduction
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/HPCUGent" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/@HPCUGent" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.expand", "navigation.tracking", "navigation.footer", "toc.follow", "navigation.sections", "navigation.instant", "search.suggest", "search.highlight", "search.share", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+      
+        <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+      
+        <script src="../available_software/javascripts/populate_overview.js"></script>
+      
+    
+  </body>
+</html>
