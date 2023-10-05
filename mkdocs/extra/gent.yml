@@ -76,7 +76,7 @@ othercluster: donphan
 hpcinfo: hpc@ugent.be
 hpcusersml: hpc-users@lists.ugent.be
 hpcannounceml: hpc-announce@lists.ugent.be
-operatingsystem: RHEL 8.6 (doduo, accelgor, skitty, swalot, donphan) and RHEL 8.8 (gallade, joltik, victini)
+operatingsystem: RHEL 8.6 (doduo, accelgor, skitty, swalot) and RHEL 8.8 (gallade, joltik, victini, donphan)
 operatingsystembase: Red Hat Enterprise Linux
 # Special for perfexpert tutorial
 mpirun: vsc-mympirun
