@@ -52,7 +52,7 @@ a `shinx` workernode, it is recommended to recompile the software to benefit fro
 The `shinx` cluster is significantly bigger than `swalot` and `victini` in number of cores, and number of cores per workernode,
 but not in number of workernodes. In particular, requesting all cores via `ppn=all` might be something to reconsider.
 
-The amount of available memory per core is `1.9 GiB`, which is lower then the `swalot` ndoes which had `6.2 GiB` per core
+The amount of available memory per core is `1.9 GiB`, which is lower then the `swalot` nodes which had `6.2 GiB` per core
 and the vicitini nodes that had `2.5 GiB` per core.
 
 
