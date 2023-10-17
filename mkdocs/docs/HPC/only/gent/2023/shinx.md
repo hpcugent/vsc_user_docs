@@ -35,7 +35,7 @@ module swap cluster/shinx
 
 You can also start (interactive) sessions on `shinx` using the [HPC-UGent web portal](../../../web_portal.md).
 
-### Differences compared to `swalot` and `slaking`.
+### Differences compared to `swalot` and `victini`.
 
 #### CPUs
 
