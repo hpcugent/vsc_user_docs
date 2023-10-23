@@ -79,6 +79,12 @@ It is not recommended to always set this workaround, only for the specific tools
 
 ## Shinx pilot phase (23/10/2023-20/05/2024)
 
+As usuial with any pilot phase, you need to be member of the `gpilot` group, and to start using this cluster run:
+
+```
+module swap cluster/.shinx
+```
+
 Because the delivery time of the infiniband network is very high, we only expect to have all material end of February 2024.
 However, all the workernodes will already be delivered in the week of 20 October 2023
 
