@@ -69,7 +69,11 @@ optimizations (like GCC's `-march=native`, or Intel compiler's `-xHost`) might s
 ### Other remarks
 
 * Possible issues with `OpenMP` thread pinning: we have seen, especially on `Tier-1 dodrio` cluster, that in certain cases
-thread pinning occurs that also affects
+thread pinning is invoked where it is not expected. Typical symptom is that all the processes that are started are pinned
+to a single core. Always report this issue when it occurs.
+You can try yourself to mitigate this by setting `export OMP_PROC_BIND=false`, but always report it so we can keep track of this problem.
+It is not recommended to always set this workaround, only for the specific tools that are affected.
+
 
 ---
 
