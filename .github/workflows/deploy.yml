@@ -37,8 +37,6 @@ jobs:
           # Gent site indexing registration (for docs.hpc.ugent.be)
           cp registration/gent/* build/HPC/Gent
 
-          cp -a pdf/ build/
-
       # equivalent with 'mkdocs gh-deploy'
       - name: deploy docs
         run: |

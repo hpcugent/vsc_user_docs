@@ -33,7 +33,6 @@ if [ "${WEBSERVER:-0}" -gt 0 ]; then
             else
                 echo "Go to $url"
             fi
-            echo "To have working legacy pdf links, also do a 'cp -a pdf build'"
 
             # run tests
             linkchecker $url
