@@ -1,6 +1,7 @@
 others:
     - linux-tutorial
     - landing_page
+    - pdf
 os:
     - Linux
     - Windows

@@ -1,0 +1,75 @@
+site_name: Legcay PDF documentation is removed
+docs_dir: docs/pdf
+
+plugins:
+  - search:
+      separator: '[\_\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - include-markdown
+  - ugent
+  - macros:
+      include_yaml:
+        - extra/constants.yml
+        - extra/gent.yml
+  - section-index
+  - autorefs
+  # - spellcheck
+  # - mkdocs-nav-enhancements
+  - exclude-search:
+      exclude:
+        - content/HPC/*
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - abbr
+  - pymdownx.snippets:
+      auto_append:
+        - ./includes/abbreviations.md
+  - toc:
+      permalink: "#"
+      baselevel: 1
+      toc_depth: 3
+  - meta
+  - tables
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.keys
+
+theme:
+  name: material
+  language: en
+  features:
+    #- navigation.tabs
+    - navigation.top
+    - navigation.expand
+    # - navigation.indexes
+    - navigation.tracking
+    - navigation.footer
+    # - toc.integrate
+    - toc.follow
+    # - content.tabs.link
+    - navigation.sections
+    - navigation.instant
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+  palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: blue
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
+
+extra:
+  build_dir: build
