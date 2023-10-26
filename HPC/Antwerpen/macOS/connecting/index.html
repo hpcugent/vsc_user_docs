@@ -1127,8 +1127,8 @@ you need to do or know:</p>
 <li>
 <p>You need to <strong>log on to the cluster</strong> using an SSH client to one of
     the login nodes or by using the <a href="../web_portal/">HPC web portal</a>.
-    This will give you command-line access. 
-    A standard web browser like Firefox or Chrome for the web portal will suffice. </p>
+    This will give you command-line access.
+    A standard web browser like Firefox or Chrome for the web portal will suffice.</p>
 </li>
 <li>
 <p>Before you can do some work, you'll have to <strong>transfer the files</strong>
@@ -1238,17 +1238,17 @@ contents up to 2 levels deep:</p>
 <pre><code><b>$ cd Intro-HPC</b>
 <b>$ tree -L 2</b>
 .
-'-- examples 
-    |-- Compiling-and-testing-your-software-on-the-HPC 
-    |-- Fine-tuning-Job-Specifications 
+'-- examples
+    |-- Compiling-and-testing-your-software-on-the-HPC
+    |-- Fine-tuning-Job-Specifications
     |-- Multi-core-jobs-Parallel-Computing
-    |-- Multi-job-submission 
-    |-- Program-examples 
+    |-- Multi-job-submission
+    |-- Program-examples
     |-- Running-batch-jobs
-    |-- Running-jobs-with-input 
+    |-- Running-jobs-with-input
     |-- Running-jobs-with-input-output-data
-    |-- example.pbs 
-    '-- example.sh 
+    |-- example.pbs
+    '-- example.sh
 9 directories, 5 files
 </code></pre>
 
@@ -1368,7 +1368,7 @@ export LANG="en_US.UTF-8"
 <div class="admonition tip">
 <p class="admonition-title">tip: vi</p>
 <p>To start entering text in vi: move to the place you want to start
-entering text with the arrow keys and type "i" to switch to insert mode. You can easily exit vi by entering: "<span class="keys"><kbd>ESC</kbd></span> :wq" 
+entering text with the arrow keys and type "i" to switch to insert mode. You can easily exit vi by entering: "<span class="keys"><kbd>ESC</kbd></span> :wq"
 To exit vi without saving your changes, enter "<span class="keys"><kbd>ESC</kbd></span>:q!"</p>
 </div>
 <p>or alternatively (if you are not comfortable with the Linux editors),
@@ -1393,7 +1393,7 @@ host (= your computer) and a remote host (the UAntwerpen-HPC). It is based on th
 Secure Shell (SSH) protocol. The <strong>scp</strong> command is the equivalent of the <strong>cp</strong> (i.e.,
 <strong>c</strong>o<strong>p</strong>y) command, but can copy files to or from remote machines.</p>
 <p>It's easier to copy files directly to <code>$VSC_DATA</code> and <code>$VSC_SCRATCH</code> if
-you have symlinks to them in your home directory. See<!--- change url once deployed! --->
+you have symlinks to them in your home directory. See <!--- change url once deployed! --->
 <a href="localhost:8000/Antwerpen/macOS/intro-Linux/uploading_files/#symlinks-for-datascratch">the chapter titled "Uploading/downloading/editing files", section "Symlinks for data/scratch" in the intro to Linux</a>
  for how to do this.</p>
 <p>Open an additional terminal window and check that you're working on your
@@ -1425,23 +1425,23 @@ arrived:</p>
 <pre><code><b>$ pwd</b>
 /user/antwerpen/201/vsc20167
 <b>$ ls -l </b>
-total 1536 
-drwxrwxr-x 2 
-drwxrwxr-x 2 
-drwxrwxr-x 10 
--rw-r--r-- 1 
+total 1536
+drwxrwxr-x 2
+drwxrwxr-x 2
+drwxrwxr-x 10
+-rw-r--r-- 1
 <b>$ cat localfile.txt</b>
 Hello
 </code></pre>
 
 <p>The <strong>scp</strong> command can also be used to copy files from the cluster to your
-local machine. Let us copy the remote file "intro-HPC-macOS-Antwerpen.pdf" from your "docs" 
+local machine. Let us copy the remote file "intro-HPC-macOS-Antwerpen.pdf" from your "docs"
 subdirectory on the cluster to your local computer.</p>
 <p>First, we will confirm that the file is indeed in the "docs"
 subdirectory. On the terminal on the , enter:</p>
 <pre><code><b>$ cd ~/docs</b>
 <b>$ ls -l</b>
-total 1536 
+total 1536
 -rw-r--r-- 1 vsc20167 Sep 11 09:53 intro-HPC-macOS-Antwerpen.pdf
 </code></pre>
 
@@ -1450,8 +1450,8 @@ own local computer, enter:</p>
 <pre><code><b>$ scp vsc20167@login.hpc.uantwerpen.be:./docs/intro-HPC-macOS-Antwerpen.pdf .</b>
 intro-HPC-macOS-Antwerpen.pdf 100% 725KB 724.6KB/s 00:01
 <b>$ ls -l</b>
-total 899 
--rw-r--r-- 1 user staff 741995 Sep 18 09:53 
+total 899
+-rw-r--r-- 1 user staff 741995 Sep 18 09:53
 -rw-r--r-- 1 user staff      6 Sep 18 09:37 localfile.txt
 </code></pre>
 
@@ -1584,11 +1584,11 @@ created.</p>
 </code></pre></div>
 This is also possible the other way around.</p>
 <p>If you want to find out which login host you are connected to, you can use the <code>hostname</code> command.</p>
-<pre><code>$ <b>hostname</b> 
+<pre><code>$ <b>hostname</b>
 ln2.leibniz.uantwerpen.vsc
 $ <b>ssh ln1.leibniz.uantwerpen.vsc</b>
 
-$ <b>hostname</b> 
+$ <b>hostname</b>
 ln1.leibniz.uantwerpen.vsc
 </code></pre>
 
