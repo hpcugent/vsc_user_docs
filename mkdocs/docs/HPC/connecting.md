@@ -7,8 +7,8 @@ you need to do or know:
 
 1.  You need to **log on to the cluster** using an SSH client to one of
     the login nodes or by using the [HPC web portal](web_portal.md).
-    This will give you command-line access. 
-    A standard web browser like Firefox or Chrome for the web portal will suffice. 
+    This will give you command-line access.
+    A standard web browser like Firefox or Chrome for the web portal will suffice.
 
 2.  Before you can do some work, you'll have to **transfer the files**
     that you need from your desktop computer to the cluster. At the end
@@ -37,9 +37,8 @@ All other IP domains are blocked by default. If you are connecting from
 an IP address that is not allowed direct access, you have the following
 options to get access to VSC login nodes:
 
--   Use an VPN connection to connect to {{ university }} the network (recommended). 
-    {%- if site == gent %} See <https://helpdesk.ugent.be/vpn/en/> for more information. {% 
-    endif %}
+-   Use an VPN connection to connect to {{ university }} the network (recommended).
+    {%- if site == gent %} See <https://helpdesk.ugent.be/vpn/en/> for more information. {% endif %}
 
 -   Whitelist your IP address automatically by accessing
     <https://firewall.vscentrum.be> and log in with your {{ university }} account.
@@ -80,7 +79,7 @@ You've generated a public/private key pair with PuTTYgen and have an
 approved account on the VSC clusters. The next step is to setup the
 connection to (one of) the {{ hpc }}.
 
-In the screenshots, we show the setup for user 
+In the screenshots, we show the setup for user
 {%- if site == antwerpen %}
 "***vsc20167***"
 {% endif %}
@@ -237,17 +236,17 @@ contents up to 2 levels deep:
 <pre><code><b>$ cd Intro-HPC</b>
 <b>$ tree -L 2</b>
 .
-'-- examples 
-    |-- Compiling-and-testing-your-software-on-the-HPC 
-    |-- Fine-tuning-Job-Specifications 
+'-- examples
+    |-- Compiling-and-testing-your-software-on-the-HPC
+    |-- Fine-tuning-Job-Specifications
     |-- Multi-core-jobs-Parallel-Computing
-    |-- Multi-job-submission 
-    |-- Program-examples 
+    |-- Multi-job-submission
+    |-- Program-examples
     |-- Running-batch-jobs
-    |-- Running-jobs-with-input 
+    |-- Running-jobs-with-input
     |-- Running-jobs-with-input-output-data
-    |-- example.pbs 
-    '-- example.sh 
+    |-- example.pbs
+    '-- example.sh
 9 directories, 5 files
 </code></pre>
 
@@ -304,7 +303,7 @@ STEVIN HPC-UGent infrastructure status on Thu, 18 Mar 2021 13:30:01
   accelgor     8      1      0       9     N/A       N/A
 
 For a full view of the current loads and queues see:
-https://hpc.ugent.be/clusterstate/ 
+https://hpc.ugent.be/clusterstate/
 Updates on current system status and planned maintenance can be found on https://www.ugent.be/hpc/en/infrastructure/status
 </code></pre>
 {% endif %}
@@ -449,7 +448,7 @@ identifier and a region identifier.
 {%- if OS != windows %}
 Open the `.bashrc` on your local machine with your favourite editor and
 add the following lines:
-    
+
 <pre><code><b>$ nano ~/.bashrc</b>
 ...
 export LANGUAGE="en_US.UTF-8"
@@ -461,7 +460,7 @@ export LANG="en_US.UTF-8"
 
 !!! tip "tip: vi"
     To start entering text in vi: move to the place you want to start
-    entering text with the arrow keys and type "i" to switch to insert mode. You can easily exit vi by entering: "++"ESC"++ :wq" 
+    entering text with the arrow keys and type "i" to switch to insert mode. You can easily exit vi by entering: "++"ESC"++ :wq"
     To exit vi without saving your changes, enter "++"ESC"++:q!"
 
 
@@ -583,7 +582,7 @@ Secure Shell (SSH) protocol. The **scp** command is the equivalent of the **cp**
 **c**o**p**y) command, but can copy files to or from remote machines.
 
 It's easier to copy files directly to `$VSC_DATA` and `$VSC_SCRATCH` if
-you have symlinks to them in your home directory. See{{ LinuxManualURL.LinuxManualURL(OS, site) }} for how to do this.
+you have symlinks to them in your home directory. See {{ LinuxManualURL.LinuxManualURL(OS, site) }} for how to do this.
 
 Open an additional terminal window and check that you're working on your
 local machine.
@@ -618,17 +617,17 @@ arrived:
 <pre><code><b>$ pwd</b>
 {{ homedir }}
 <b>$ ls -l </b>
-total 1536 
-drwxrwxr-x 2 
-drwxrwxr-x 2 
-drwxrwxr-x 10 
--rw-r--r-- 1 
+total 1536
+drwxrwxr-x 2
+drwxrwxr-x 2
+drwxrwxr-x 10
+-rw-r--r-- 1
 <b>$ cat localfile.txt</b>
 Hello
 </code></pre>
 
 The **scp** command can also be used to copy files from the cluster to your
-local machine. Let us copy the remote file "intro-HPC-{{ OS }}-{{ site }}.pdf" from your "docs" 
+local machine. Let us copy the remote file "intro-HPC-{{ OS }}-{{ site }}.pdf" from your "docs"
 subdirectory on the cluster to your local computer.
 
 First, we will confirm that the file is indeed in the "docs"
@@ -636,7 +635,7 @@ subdirectory. On the terminal on the , enter:
 
 <pre><code><b>$ cd ~/docs</b>
 <b>$ ls -l</b>
-total 1536 
+total 1536
 -rw-r--r-- 1 {{ userid }} Sep 11 09:53 intro-HPC-{{ OS }}-{{ site }}.pdf
 </code></pre>
 
@@ -646,8 +645,8 @@ own local computer, enter:
 <pre><code><b>$ scp {{ userid }}@{{ loginnode }}:./docs/intro-HPC-{{ OS }}-{{ site }}.pdf .</b>
 intro-HPC-{{ OS }}-{{ site }}.pdf 100% 725KB 724.6KB/s 00:01
 <b>$ ls -l</b>
-total 899 
--rw-r--r-- 1 user staff 741995 Sep 18 09:53 
+total 899
+-rw-r--r-- 1 user staff 741995 Sep 18 09:53
 -rw-r--r-- 1 user staff      6 Sep 18 09:37 localfile.txt
 </code></pre>
 
@@ -773,11 +772,11 @@ ssh {{loginhost}}
 This is also possible the other way around.
 
 If you want to find out which login host you are connected to, you can use the `hostname` command.
-<pre><code>$ <b>hostname</b> 
+<pre><code>$ <b>hostname</b>
 {{loginhost}}
 $ <b>ssh {{altloginhost}}</b>
 
-$ <b>hostname</b> 
+$ <b>hostname</b>
 {{altloginhost}}
 </code></pre>
 
