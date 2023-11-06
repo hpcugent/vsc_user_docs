@@ -40,9 +40,9 @@ You can also start (interactive) sessions on `shinx` using the [HPC-UGent web po
 #### CPUs
 
 The most important difference between `shinx` and `swalot`/`victini` workernodes is in the CPUs:
-while `swalot` and `vicitini` workernodes featured *Intel * CPUs, `shinx` workernodes have `AMD Genoa` CPUs.
+while `swalot` and `victini` workernodes featured *Intel* CPUs, `shinx` workernodes have `AMD Genoa` CPUs.
 
-Although software that was built on a `swalot` or `vicitini` workernode with compiler options that enable architecture-specific
+Although software that was built on a `swalot` or `victini` workernode with compiler options that enable architecture-specific
 optimizations (like GCC's `-march=native`, or Intel compiler's `-xHost`) might still run on
 a `shinx` workernode, it is recommended to recompile the software to benefit from the support for
 `AVX-512` vector instructions (which is missing on `swalot`).
@@ -53,7 +53,7 @@ The `shinx` cluster is significantly bigger than `swalot` and `victini` in numbe
 but not in number of workernodes. In particular, requesting all cores via `ppn=all` might be something to reconsider.
 
 The amount of available memory per core is `1.9 GiB`, which is lower then the `swalot` nodes which had `6.2 GiB` per core
-and the vicitini nodes that had `2.5 GiB` per core.
+and the `victini` nodes that had `2.5 GiB` per core.
 
 
 ### Comparison with `doduo`
