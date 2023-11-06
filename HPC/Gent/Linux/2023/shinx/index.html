@@ -1188,6 +1188,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#using-doduo-software" class="md-nav__link">
+    Using doduo software
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1266,7 +1273,7 @@ It is not recommended to always set this workaround, only for the specific tools
 </ul>
 <hr />
 <h2 id="shinx-pilot-phase-23102023-20052024">Shinx pilot phase (23/10/2023-20/05/2024)<a class="headerlink" href="#shinx-pilot-phase-23102023-20052024" title="Permanent link">#</a></h2>
-<p>As usuial with any pilot phase, you need to be member of the <code>gpilot</code> group, and to start using this cluster run:</p>
+<p>As usual with any pilot phase, you need to be member of the <code>gpilot</code> group, and to start using this cluster run:</p>
 <div class="highlight"><pre><span></span><code>module swap cluster/.shinx
 </code></pre></div>
 <p>Because the delivery time of the infiniband network is very high, we only expect to have all material end of February 2024.
@@ -1319,6 +1326,13 @@ However, all the workernodes will already be delivered in the week of 20 October
 that period, and the testing of the <code>EL9</code> operating system will also take some time.</p>
 </li>
 </ul>
+<h3 id="using-doduo-software">Using <code>doduo</code> software<a class="headerlink" href="#using-doduo-software" title="Permanent link">#</a></h3>
+<p>For benchmarking and/or compatibility testing, you can use try to use <code>doduo</code> software stack by adding
+the following line in the job script before the actual software is loaded:</p>
+<div class="highlight"><pre><span></span><code>module swap env/software/doduo
+</code></pre></div>
+<p>We mainly expect problems with this in stage 2 of the pilot phase (and in later production phase),
+due to the change in OS.</p>
 
 
 
