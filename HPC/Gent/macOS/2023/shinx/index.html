@@ -1246,8 +1246,8 @@ and <code>victini</code>, which will be retired on <strong>Monday 05 February 20
 <h3 id="differences-compared-to-swalot-and-victini">Differences compared to <code>swalot</code> and <code>victini</code>.<a class="headerlink" href="#differences-compared-to-swalot-and-victini" title="Permanent link">#</a></h3>
 <h4 id="cpus">CPUs<a class="headerlink" href="#cpus" title="Permanent link">#</a></h4>
 <p>The most important difference between <code>shinx</code> and <code>swalot</code>/<code>victini</code> workernodes is in the CPUs:
-while <code>swalot</code> and <code>vicitini</code> workernodes featured *Intel * CPUs, <code>shinx</code> workernodes have <code>AMD Genoa</code> CPUs.</p>
-<p>Although software that was built on a <code>swalot</code> or <code>vicitini</code> workernode with compiler options that enable architecture-specific
+while <code>swalot</code> and <code>victini</code> workernodes featured <em>Intel</em> CPUs, <code>shinx</code> workernodes have <code>AMD Genoa</code> CPUs.</p>
+<p>Although software that was built on a <code>swalot</code> or <code>victini</code> workernode with compiler options that enable architecture-specific
 optimizations (like GCC's <code>-march=native</code>, or Intel compiler's <code>-xHost</code>) might still run on
 a <code>shinx</code> workernode, it is recommended to recompile the software to benefit from the support for
 <code>AVX-512</code> vector instructions (which is missing on <code>swalot</code>).</p>
@@ -1255,7 +1255,7 @@ a <code>shinx</code> workernode, it is recommended to recompile the software to 
 <p>The <code>shinx</code> cluster is significantly bigger than <code>swalot</code> and <code>victini</code> in number of cores, and number of cores per workernode,
 but not in number of workernodes. In particular, requesting all cores via <code>ppn=all</code> might be something to reconsider.</p>
 <p>The amount of available memory per core is <code>1.9 GiB</code>, which is lower then the <code>swalot</code> nodes which had <code>6.2 GiB</code> per core
-and the vicitini nodes that had <code>2.5 GiB</code> per core.</p>
+and the <code>victini</code> nodes that had <code>2.5 GiB</code> per core.</p>
 <h3 id="comparison-with-doduo">Comparison with <code>doduo</code><a class="headerlink" href="#comparison-with-doduo" title="Permanent link">#</a></h3>
 <p>As <code>doduo</code> is the current largest CPU cluster of the UGent Tier-2 infrastructure, and it is also based on <code>AMD EPYC</code> CPUs,
 we would like to point out that, roughly speaking, one <code>shinx</code> node is equal to 2 <code>doduo</code> nodes.</p>
