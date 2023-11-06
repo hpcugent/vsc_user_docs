@@ -79,7 +79,7 @@ It is not recommended to always set this workaround, only for the specific tools
 
 ## Shinx pilot phase (23/10/2023-20/05/2024)
 
-As usuial with any pilot phase, you need to be member of the `gpilot` group, and to start using this cluster run:
+As usual with any pilot phase, you need to be member of the `gpilot` group, and to start using this cluster run:
 
 ```
 module swap cluster/.shinx
@@ -121,3 +121,16 @@ As such, we will have an extended pilot phase in 3 stages:
 * We expect to plan a full Tier-2 downtime in May 2024 to cleanup, refactor and renew the core networks
 (ethernet and infiniband) and some core services. It makes no sense to put `shinx` in production before
 that period, and the testing of the `EL9` operating system will also take some time.
+
+
+### Using `doduo` software
+
+For benchmarking and/or compatibility testing, you can use try to use `doduo` software stack by adding
+the following line in the job script before the actual software is loaded:
+
+```
+module swap env/software/doduo
+```
+
+We mainly expect problems with this in stage 2 of the pilot phase (and in later production phase),
+due to the change in OS.
