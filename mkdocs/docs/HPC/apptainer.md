@@ -55,13 +55,20 @@ Due to the nature of `--fakeroot` option, we recommend to write your
 Apptainer/Singularity image to a globally writable location, like
 `/tmp`, or `/local` directories. Once the image is created, you should
 move it to your desired destination. An example to make an
-Apptainer/Singularity container:
+Apptainer/Singularity container image:
 
-<pre><code>$ <b>APPTAINER_CACHEDIR=/tmp/ \
-APPTAINER_TMPDIR=/tmp/ \
-apptainer build --fakeroot /tmp/tensorflow-21.10-tf1-py3.sif \
-docker://nvcr.io/nvidia/tensorflow:21.10-tf1-py3</b>
-</code></pre>
+```shell
+# avoid that Apptainer uses $HOME/.cache
+export APPTAINER_CACHEDIR=/tmp/$USER/apptainer/cache
+# instruct Apptainer to use temp dir on local filessytem
+export APPTAINER_TMPDIR=/tmp/$USER/apptainer/tmpdir
+# specified temp dir must exist, so create it
+mkdir -p $APPTAINER_TMPDIR
+# convert Docker container to Apptainer container image
+apptainer build --fakeroot /tmp/$USER/tf.sif docker://nvcr.io/nvidia/tensorflow:21.10-tf1-py3
+# mv container image to $VSC_SCRATCH
+mv /tmp/$USER/tf.sif $VSC_SCRATCH/tf.sif
+```
 
 ### Converting Docker images
 
