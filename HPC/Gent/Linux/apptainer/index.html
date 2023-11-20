@@ -1361,13 +1361,18 @@ can make new Apptainer/Singularity images or convert Docker images.</p>
 Apptainer/Singularity image to a globally writable location, like
 <code>/tmp</code>, or <code>/local</code> directories. Once the image is created, you should
 move it to your desired destination. An example to make an
-Apptainer/Singularity container:</p>
-<pre><code>$ <b>APPTAINER_CACHEDIR=/tmp/ \
-APPTAINER_TMPDIR=/tmp/ \
-apptainer build --fakeroot /tmp/tensorflow-21.10-tf1-py3.sif \
-docker://nvcr.io/nvidia/tensorflow:21.10-tf1-py3</b>
-</code></pre>
-
+Apptainer/Singularity container image:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># avoid that Apptainer uses $HOME/.cache</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">APPTAINER_CACHEDIR</span><span class="o">=</span>/tmp/<span class="nv">$USER</span>/apptainer/cache
+<span class="c1"># instruct Apptainer to use temp dir on local filessytem</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">APPTAINER_TMPDIR</span><span class="o">=</span>/tmp/<span class="nv">$USER</span>/apptainer/tmpdir
+<span class="c1"># specified temp dir must exist, so create it</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$APPTAINER_TMPDIR</span>
+<span class="c1"># convert Docker container to Apptainer container image</span>
+apptainer<span class="w"> </span>build<span class="w"> </span>--fakeroot<span class="w"> </span>/tmp/<span class="nv">$USER</span>/tf.sif<span class="w"> </span>docker://nvcr.io/nvidia/tensorflow:21.10-tf1-py3
+<span class="c1"># mv container image to $VSC_SCRATCH</span>
+mv<span class="w"> </span>/tmp/<span class="nv">$USER</span>/tf.sif<span class="w"> </span><span class="nv">$VSC_SCRATCH</span>/tf.sif
+</code></pre></div>
 <h3 id="converting-docker-images">Converting Docker images<a class="headerlink" href="#converting-docker-images" title="Permanent link">#</a></h3>
 <p>For more information on converting existing Docker images to
 Apptainer/Singularity images, see
