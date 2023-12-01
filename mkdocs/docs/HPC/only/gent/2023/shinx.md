@@ -100,10 +100,10 @@ As such, we will have an extended pilot phase in 3 stages:
 * Retirement of `swalot cluster` (as of 01 November 2023)
 * Racking of stage 1 nodes
 
-### Stage 1: 17/11/2023-01/03/2024
+### Stage 1: 01/12/2023-01/03/2024
 
 * 2/3 cluster size
-    * 32 nodes
+    * 32 nodes (with max job size of 16 nodes)
     * EDR Infiniband
     * EL8 OS
 
