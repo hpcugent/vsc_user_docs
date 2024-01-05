@@ -22,7 +22,7 @@ def print_cowsay(cowsay):
                    ||----w | \n\
                    ||     ||\
                             "
-	print cowtxt
+	print(cowtxt)
 
 # X-Message
 cmd = "xmessage -buttons yes:1,no:0 -center -timeout 60 \" Do you want to see a cow? \""
