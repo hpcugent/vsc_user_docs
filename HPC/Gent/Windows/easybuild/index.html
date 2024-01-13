@@ -1445,14 +1445,14 @@ versions, combined with a particular toolchain version. Use the
 <a href="http://easybuild.readthedocs.org/en/latest/Concepts_and_Terminology.html#easyconfig-files">http://easybuild.readthedocs.org/en/latest/Concepts_and_Terminology.html#easyconfig-files</a>) are available:</p>
 <pre><code>$ <b>eb -S example-1.2</b>
 CFGS1=/apps/gent/CO7/sandybridge/software/EasyBuild/3.6.2/lib/python2.7/site-packages/easybuild_easyconfigs-3.6.2-py2.7.egg/easybuild/easyconfigs
- * $CFGS1/e/example/example-1.2.1-foss-2023a.eb
- * $CFGS1/e/example/example-1.2.3-foss-2023b.eb
- * $CFGS1/e/example/example-1.2.5-intel-2023a.eb
+ * $CFGS1/e/example/example-1.2.1-foss-2024a.eb
+ * $CFGS1/e/example/example-1.2.3-foss-2024b.eb
+ * $CFGS1/e/example/example-1.2.5-intel-2024a.eb
 </code></pre>
 
 <p>For readily available easyconfigs, just specify the name of the
 easyconfig file to build and install the corresponding software package:</p>
-<pre><code>$ <b>eb example-1.2.1-foss-2023a.eb --robot</b>
+<pre><code>$ <b>eb example-1.2.1-foss-2024a.eb --robot</b>
 </code></pre>
 
 <h3 id="installing-variants-on-supported-software">Installing variants on supported software<a class="headerlink" href="#installing-variants-on-supported-software" title="Permanent link">#</a></h3>
@@ -1461,11 +1461,11 @@ software version, or using a different compiler toolchain, use the
 corresponding <code>--try-X</code> options:</p>
 <p>To try to install <code>example v1.2.6</code>, based on the easyconfig file for
 <code>example v1.2.5</code>:</p>
-<pre><code>$ <b>eb example-1.2.5-intel-2023a.eb --try-software-version=1.2.6</b>
+<pre><code>$ <b>eb example-1.2.5-intel-2024a.eb --try-software-version=1.2.6</b>
 </code></pre>
 
 <p>To try to install example v1.2.5 with a different compiler toolchain:</p>
-<pre><code>$ <b>eb example-1.2.5-intel-2023a.eb --robot --try-toolchain=intel,2023b</b>
+<pre><code>$ <b>eb example-1.2.5-intel-2024a.eb --robot --try-toolchain=intel,2024b</b>
 </code></pre>
 
 <h3 id="install-other-software">Install other software<a class="headerlink" href="#install-other-software" title="Permanent link">#</a></h3>
