@@ -324,8 +324,6 @@ It's also possible to get detailed information about a specific module:
         cluster/gallade
         cluster/joltik 
         cluster/skitty
-        cluster/swalot 
-        cluster/victini
 {% endif -%}
 {% if site != gent -%}
     This module can be loaded directly: module load example/1.2.3
@@ -782,9 +780,8 @@ To list the available cluster modules, you can use the
 
 <pre><code><b>$ module avail cluster/</b>
 --------------------------------------- /etc/modulefiles/vsc ----------------------------------------
-   cluster/accelgor (S)      cluster/donphan (S)    cluster/skitty  (S)
-   cluster/default           cluster/gallade (S)    cluster/swalot  (S)
-   cluster/doduo    (S,D,)   cluster/joltik  (S)    cluster/victini (S)
+   cluster/accelgor (S)    cluster/doduo   (S,L)    cluster/gallade (S)    cluster/skitty  (S)
+   cluster/default         cluster/donphan (S)      cluster/joltik  (S)
 
   Where:
    S:  Module is Sticky, requires --force to unload or purge
