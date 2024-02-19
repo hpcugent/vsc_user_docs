@@ -290,17 +290,17 @@ Upon connecting you will see a login message containing your last login time sta
 
 <pre><code>Last login: Thu Mar 18 13:15:09 2021 from gligarha02.gastly.os
 
-STEVIN HPC-UGent infrastructure status on Thu, 18 Mar 2021 13:30:01
+ STEVIN HPC-UGent infrastructure status on Mon, 19 Feb 2024 10:00:01
+      cluster         - full - free -  part - total - running - queued
+                        nodes  nodes   free   nodes   jobs      jobs
+ -------------------------------------------------------------------------
+           skitty          39      0     26      68      1839     5588
+           joltik           6      0      1      10        29       18
+            doduo          22      0     75     128      1397    11933
+         accelgor           4      3      2       9        18        1
+          donphan           0      0     16      16        16       13
+          gallade           2      0      5      16        19      136
 
-   cluster - full - free -  part - total - running - queued
-             nodes  nodes   free   nodes    jobs      jobs
--------------------------------------------------------------------
-    swalot     9      0    104     126     N/A       N/A
-    skitty    53      0     16      72     N/A       N/A
-   victini    40      0     54      96     N/A       N/A
-    joltik     8      0      2      10     N/A       N/A
-     doduo   115      0     13     128     N/A       N/A
-  accelgor     8      1      0       9     N/A       N/A
 
 For a full view of the current loads and queues see:
 https://hpc.ugent.be/clusterstate/

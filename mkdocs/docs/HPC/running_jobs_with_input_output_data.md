@@ -237,7 +237,7 @@ The following locations are available:
             <t>$VSC_SCRATCH_ARCANINE</t>
         </td>
         <td colspan="1">
-            A separate (smaller) shared scratch filesystem, powered by SSDs. This scratch filesystem is intended for very I/O-intensive workloads. Note that this filesystem is not available on the cluster victini.
+            A separate (smaller) shared scratch filesystem, powered by SSDs. This scratch filesystem is intended for very I/O-intensive workloads.
         </td>
     </tr>
 {% endif %}
