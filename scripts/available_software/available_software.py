@@ -34,7 +34,6 @@ import os
 import re
 import subprocess
 import time
-import math
 from glob import glob
 from pathlib import Path
 from typing import Union, Tuple
@@ -295,7 +294,7 @@ def get_site_packages_ugent(json_data, paths) -> dict:
             site_packages = glob(path)
             if site_packages != []:
                 site_packages = [os.path.basename(x) for x in site_packages]
-                site_packages = [s for s in site_packages if not "." in s]
+                site_packages = [s for s in site_packages if "." not in s]
                 json_data["software"][software]["versions"][mod]["site_packages"] = site_packages
 
     return json_data
@@ -436,7 +435,7 @@ def generate_software_detail_page(
             md_file.new_paragraph("This is a list of site-packages included in the module:")
             packages = ""
             for i, package in enumerate(details['site_packages']):
-                if i != len(details['site_packages']) -1:
+                if i != len(details['site_packages']) - 1:
                     packages += f"{package}, "
                 else:
                     packages += f"{package}"
