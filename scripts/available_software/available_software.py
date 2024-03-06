@@ -65,8 +65,9 @@ def main():
     if args.eessi:
         modules = modules_eessi()
     else:
-        modules = modules_ugent()
+        modules, paths = modules_ugent()
 
+    print(paths)
     print(modules)
     print("Generate JSON overview... ", end="", flush=True)
     generate_json_overview(modules, path_data_dir)
@@ -261,6 +262,15 @@ def filter_fn_gent_modules(data: np.ndarray) -> np.ndarray:
                 ]
 
 
+def filter_fn_gent_software_path(data: np.ndarray) -> np.ndarray:
+    """
+    Filter function for the software path of the cluster
+    @param data: Output
+    @return: Filtered output
+    """
+    return data[np.char.endswith(data, "/modules/all:")]
+
+
 def clusters_ugent() -> np.ndarray:
     """
     Returns all the cluster names of the HPC at UGent.
@@ -308,15 +318,17 @@ def modules_ugent() -> dict:
     """
     print("Start collecting modules:")
     data = {}
+    mapping = {}
     for cluster in clusters_ugent():
         print(f"\t Collecting available modules for {cluster}... ", end="", flush=True)
         module_swap(cluster)
         cluster_name = cluster.split("/", maxsplit=1)[1]
+        mapping[cluster_name] = module_avail(filter_fn=filter_fn_gent_software_path)
         data[cluster_name] = module_avail(filter_fn=filter_fn_gent_modules)
         print(f"found {len(data[cluster_name])} modules!")
 
     print("All data collected!\n")
-    return data
+    return data, mapping
 
 
 # --------------------------------------------------------------------------------------------------------
