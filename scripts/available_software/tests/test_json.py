@@ -1,7 +1,8 @@
 from available_software import (generate_json_overview_data,
                                 generate_json_overview,
                                 modules_ugent,
-                                generate_json_detailed)
+                                generate_json_detailed, 
+                                generate_json_detailed_data)
 import os
 import json
 
@@ -57,8 +58,9 @@ class TestJSON:
         assert data_generated["clusters"] == data_solution["clusters"]
 
     def test_json_detail_simple(self):
-        with open(self.path + "/data/test_json_simple_sol.json") as json_data:
-            json_path = generate_json_detailed(json_data, ".")
+        modules = modules_ugent()[0]
+        json_data = generate_json_detailed_data(modules)
+        json_path = generate_json_detailed(json_data, ".")
         assert os.path.exists("json_data_detail.json")
 
         with open(json_path) as json_data:
