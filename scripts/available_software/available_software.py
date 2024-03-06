@@ -78,7 +78,7 @@ def main():
     if args.eessi:
         json_data = json_data
     else:
-        json_data = get_site_packages_ugent(json_data)
+        json_data = get_site_packages_ugent(json_data, paths)
     print("Generate JSON detailed... ", end="", flush=True)
     json_path = generate_json_detailed(json_data, path_data_dir)
     print("Done!")
@@ -280,26 +280,17 @@ def clusters_ugent() -> np.ndarray:
     return module_avail(name="cluster/", filter_fn=filter_fn_gent_cluster)
 
 
-def get_site_packages_ugent(json_data) -> dict:
+def get_site_packages_ugent(json_data, paths) -> dict:
     """
     Add a list of site-packages to all python packages
     @return: Dictionary with all the modules and their site_packages
     """
-    clusters = json_data['clusters']
     modules = json_data['software']
-    path_mapping = {
-        "doduo": "/apps/gent/RHEL8/zen2-ib/",
-        "accelgor": "/apps/gent/RHEL8/zen3-ampere-ib/",
-        "donphan": "/apps/gent/RHEL8/cascadelake-ampere-ib/",
-        "gallade": "/apps/gent/RHEL8/zen3x-ib/",
-        "joltik": "/apps/gent/RHEL8/cascadelake-volta-ib/",
-        "skitty": "/apps/gent/RHEL8/skylake-ib/",
-    }
 
     for software, details in modules.items():
         for mod in modules[software]['versions']:
             cluster = modules[software]['versions'][mod]['clusters'][0]
-            base_path = path_mapping[cluster] + "software/" + mod
+            base_path = paths[cluster][0][-12] + "software/" + mod
             path = base_path + "/lib/python*/site-packages/*"
             site_packages = glob(path)
             if site_packages != []:
