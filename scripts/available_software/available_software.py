@@ -290,7 +290,7 @@ def get_site_packages_ugent(json_data, paths) -> dict:
     for software, details in modules.items():
         for mod in modules[software]['versions']:
             cluster = modules[software]['versions'][mod]['clusters'][0]
-            base_path = paths[cluster][0][-12] + "software/" + mod
+            base_path = paths[cluster][0][:-12] + "software/" + mod
             path = base_path + "/lib/python*/site-packages/*"
             site_packages = glob(path)
             if site_packages != []:
