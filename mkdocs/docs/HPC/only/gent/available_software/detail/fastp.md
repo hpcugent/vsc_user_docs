@@ -17,11 +17,11 @@ To start using fastp, load one of these modules using a `module load` command li
 module load fastp/0.23.2-GCC-11.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fastp/0.23.2-GCC-11.2.0|x|x|x|-|x|x|x|x|
-|fastp/0.20.1-iccifort-2020.1.217|-|x|x|-|x|-|-|-|
-|fastp/0.20.0-iccifort-2019.5.281|-|x|-|-|-|-|-|-|
-|fastp/0.20.0-GCC-8.3.0|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|fastp/0.23.2-GCC-11.2.0|x|x|x|-|x|x|
+|fastp/0.20.1-iccifort-2020.1.217|-|x|x|-|x|-|
+|fastp/0.20.0-iccifort-2019.5.281|-|x|-|-|-|-|
+|fastp/0.20.0-GCC-8.3.0|-|x|x|-|x|x|

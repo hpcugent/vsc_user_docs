@@ -17,9 +17,9 @@ To start using RStudio-Server, load one of these modules using a `module load` c
 module load RStudio-Server/2022.02.0-443-rhel-x86_64
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RStudio-Server/2022.02.0-443-rhel-x86_64|x|x|x|x|x|-|x|x|
-|RStudio-Server/1.3.959-foss-2020a-Java-11-R-4.0.0|-|-|-|-|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RStudio-Server/2022.02.0-443-rhel-x86_64|x|x|x|x|x|-|
+|RStudio-Server/1.3.959-foss-2020a-Java-11-R-4.0.0|-|-|-|-|-|x|

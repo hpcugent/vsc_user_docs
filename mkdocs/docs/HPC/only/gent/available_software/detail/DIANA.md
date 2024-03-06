@@ -17,9 +17,9 @@ To start using DIANA, load one of these modules using a `module load` command li
 module load DIANA/10.5
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DIANA/10.5|-|x|x|-|x|-|x|-|
-|DIANA/10.4|-|-|x|-|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DIANA/10.5|-|x|x|-|x|-|
+|DIANA/10.4|-|-|x|-|x|-|
