@@ -17,11 +17,11 @@ To start using Anaconda3, load one of these modules using a `module load` comman
 module load Anaconda3/2023.03-1
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Anaconda3/2023.03-1|x|x|x|x|x|x|x|x|
-|Anaconda3/2020.11|-|x|x|-|x|-|x|-|
-|Anaconda3/2020.07|-|x|-|-|-|-|-|-|
-|Anaconda3/2020.02|-|x|x|-|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Anaconda3/2023.03-1|x|x|x|x|x|x|
+|Anaconda3/2020.11|-|x|x|-|x|-|
+|Anaconda3/2020.07|-|x|-|-|-|-|
+|Anaconda3/2020.02|-|x|x|-|x|-|

@@ -17,8 +17,8 @@ To start using manta, load one of these modules using a `module load` command li
 module load manta/1.6.0-gompi-2020a-Python-2.7.18
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|manta/1.6.0-gompi-2020a-Python-2.7.18|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|manta/1.6.0-gompi-2020a-Python-2.7.18|-|x|x|-|x|x|

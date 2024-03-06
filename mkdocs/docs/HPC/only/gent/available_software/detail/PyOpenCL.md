@@ -14,12 +14,15 @@ The overview below shows which PyOpenCL installations are available per HPC-UGen
 To start using PyOpenCL, load one of these modules using a `module load` command like:
 
 ```shell
-module load PyOpenCL/2021.2.13-foss-2021b-CUDA-11.4.1
+module load PyOpenCL/2023.1.4-foss-2023a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyOpenCL/2021.2.13-foss-2021b-CUDA-11.4.1|x|-|-|-|x|-|-|-|
-|PyOpenCL/2021.1.2-foss-2020b|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyOpenCL/2023.1.4-foss-2023a|x|x|x|x|x|x|
+|PyOpenCL/2023.1.4-foss-2022a-CUDA-11.7.0|x|-|-|-|x|-|
+|PyOpenCL/2023.1.4-foss-2022a|x|x|x|x|x|x|
+|PyOpenCL/2021.2.13-foss-2021b-CUDA-11.4.1|x|-|-|-|x|-|
+|PyOpenCL/2021.1.2-foss-2020b|-|x|x|x|x|x|

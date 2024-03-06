@@ -17,9 +17,9 @@ To start using any2fasta, load one of these modules using a `module load` comman
 module load any2fasta/0.4.2-GCCcore-10.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|any2fasta/0.4.2-GCCcore-10.2.0|-|x|x|-|x|x|x|x|
-|any2fasta/0.4.2-GCCcore-8.3.0|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|any2fasta/0.4.2-GCCcore-10.2.0|-|x|x|-|x|x|
+|any2fasta/0.4.2-GCCcore-8.3.0|-|x|x|-|x|x|

@@ -17,8 +17,8 @@ To start using NLMpy, load one of these modules using a `module load` command li
 module load NLMpy/0.1.5-intel-2019b-Python-3.7.4
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NLMpy/0.1.5-intel-2019b-Python-3.7.4|-|x|-|-|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NLMpy/0.1.5-intel-2019b-Python-3.7.4|-|x|-|-|-|x|

@@ -17,12 +17,12 @@ To start using kim-api, load one of these modules using a `module load` command 
 module load kim-api/2.3.0-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|kim-api/2.3.0-GCCcore-11.2.0|x|x|x|-|x|x|x|x|
-|kim-api/2.2.1-GCCcore-10.3.0|-|x|x|-|x|x|x|x|
-|kim-api/2.1.3-intel-2020a|-|x|x|-|x|x|x|x|
-|kim-api/2.1.3-intel-2019b|-|x|x|-|x|x|-|x|
-|kim-api/2.1.3-foss-2019b|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|kim-api/2.3.0-GCCcore-11.2.0|x|x|x|-|x|x|
+|kim-api/2.2.1-GCCcore-10.3.0|-|x|x|-|x|x|
+|kim-api/2.1.3-intel-2020a|-|x|x|-|x|x|
+|kim-api/2.1.3-intel-2019b|-|x|x|-|x|x|
+|kim-api/2.1.3-foss-2019b|-|x|x|-|x|x|

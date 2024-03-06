@@ -14,11 +14,12 @@ The overview below shows which VBZ-Compression installations are available per H
 To start using VBZ-Compression, load one of these modules using a `module load` command like:
 
 ```shell
-module load VBZ-Compression/1.0.1-gompi-2020b
+module load VBZ-Compression/1.0.3-gompi-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VBZ-Compression/1.0.1-gompi-2020b|-|-|x|x|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|VBZ-Compression/1.0.3-gompi-2022a|x|x|x|x|x|x|
+|VBZ-Compression/1.0.1-gompi-2020b|-|-|x|x|x|x|

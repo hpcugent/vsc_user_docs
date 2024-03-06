@@ -17,9 +17,9 @@ To start using FLAIR, load one of these modules using a `module load` command li
 module load FLAIR/1.5.1-20200630-foss-2019b-Python-3.7.4
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FLAIR/1.5.1-20200630-foss-2019b-Python-3.7.4|-|x|x|-|x|-|-|-|
-|FLAIR/1.5-foss-2019b-Python-3.7.4|-|x|x|-|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FLAIR/1.5.1-20200630-foss-2019b-Python-3.7.4|-|x|x|-|x|-|
+|FLAIR/1.5-foss-2019b-Python-3.7.4|-|x|x|-|x|-|
