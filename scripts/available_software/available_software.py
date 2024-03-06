@@ -34,6 +34,8 @@ import os
 import re
 import subprocess
 import time
+import math
+from glob import glob
 from pathlib import Path
 from typing import Union, Tuple
 import numpy as np
@@ -59,9 +61,9 @@ def main():
     )
     path_data_dir = os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/data")
 
-    # Generate the JSON overviews and detail markdown pages.
+    # Generate the JSON overviews
     if args.eessi:
-        modules = modules_eesi()
+        modules = modules_eessi()
     else:
         modules = modules_ugent()
 
@@ -69,9 +71,18 @@ def main():
     print("Generate JSON overview... ", end="", flush=True)
     generate_json_overview(modules, path_data_dir)
     print("Done!")
+
+    # Generate the JSON detail
+    json_data = generate_json_detailed_data(modules)
+    if args.eessi:
+        json_data = json_data
+    else:
+        json_data = get_site_packages_ugent(json_data)
     print("Generate JSON detailed... ", end="", flush=True)
-    json_path = generate_json_detailed(modules, path_data_dir)
+    json_path = generate_json_detailed(json_data, path_data_dir)
     print("Done!")
+
+    # Generate detail markdown pages
     print("Generate detailed pages... ", end="", flush=True)
     generate_detail_pages(json_path, os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/detail"))
     print("Done!")
@@ -199,7 +210,7 @@ def clusters_eessi() -> np.ndarray:
     return clusters
 
 
-def modules_eesi() -> dict:
+def modules_eessi() -> dict:
     """
     Returns names of all software module that are installed on EESSI.
     They are grouped by cluster.
@@ -257,6 +268,36 @@ def clusters_ugent() -> np.ndarray:
     """
 
     return module_avail(name="cluster/", filter_fn=filter_fn_gent_cluster)
+
+
+def get_site_packages_ugent(json_data) -> dict:
+    """
+    Add a list of site-packages to all python packages
+    @return: Dictionary with all the modules and their site_packages
+    """
+    clusters = json_data['clusters']
+    modules = json_data['software']
+    path_mapping = {
+        "doduo": "/apps/gent/RHEL8/zen2-ib/",
+        "accelgor": "/apps/gent/RHEL8/zen3-ampere-ib/",
+        "donphan": "/apps/gent/RHEL8/cascadelake-ampere-ib/",
+        "gallade": "/apps/gent/RHEL8/zen3x-ib/",
+        "joltik": "/apps/gent/RHEL8/cascadelake-volta-ib/",
+        "skitty": "/apps/gent/RHEL8/skylake-ib/",
+    }
+
+    for software, details in modules.items():
+        for mod in modules[software]['versions']:
+            cluster = modules[software]['versions'][mod]['clusters'][0]
+            base_path = path_mapping[cluster] + "software/" + mod
+            path = base_path + "/lib/python*/site-packages/*"
+            site_packages = glob(path)
+            if site_packages != []:
+                site_packages = [os.path.basename(x) for x in site_packages]
+                site_packages = [s for s in site_packages if not "." in s]
+                json_data["software"][software]["versions"][mod]["site_packages"] = site_packages
+
+    return json_data
 
 
 def modules_ugent() -> dict:
@@ -343,7 +384,7 @@ def generate_software_table_data(software_data: dict, clusters: list) -> list:
         row = [module_name]
 
         for cluster in clusters:
-            row += ("x" if cluster in available else "-")
+            row += ("x" if cluster in available["clusters"] else "-")
         table_data += row
 
     return table_data
@@ -385,6 +426,20 @@ def generate_software_detail_page(
         rows=len(sorted_versions) + 1,
         text=generate_software_table_data(sorted_versions, clusters)
     )
+
+    for version, details in list(sorted_versions.items())[::-1]:
+        print(details)
+        if 'site_packages' in details:
+            print(version)
+            md_file.new_paragraph(f"### {version}")
+            md_file.new_paragraph("This is a list of site-packages included in the module:")
+            packages = ""
+            for i, package in enumerate(details['site_packages']):
+                if i != len(details['site_packages']) -1:
+                    packages += f"{package}, "
+                else:
+                    packages += f"{package}"
+            md_file.new_paragraph(f"{packages}")
 
     md_file.create_md_file()
 
@@ -570,20 +625,20 @@ def generate_json_detailed_data(modules: dict) -> dict:
 
                 # If the version is not yet present, add it.
                 if mod not in json_data["software"][software]["versions"]:
-                    json_data["software"][software]["versions"][mod] = []
+                    json_data["software"][software]["versions"][mod] = {'clusters': []}
 
                 # If the cluster is not yet present, add it.
                 if cluster not in json_data["software"][software]["clusters"]:
                     json_data["software"][software]["clusters"].append(cluster)
 
                 # If the cluster is not yet present, add it.
-                if cluster not in json_data["software"][software]["versions"][mod]:
-                    json_data["software"][software]["versions"][mod].append(cluster)
+                if cluster not in json_data["software"][software]["versions"][mod]["clusters"]:
+                    json_data["software"][software]["versions"][mod]["clusters"].append(cluster)
 
     return json_data
 
 
-def generate_json_detailed(modules: dict, path_data_dir: str) -> str:
+def generate_json_detailed(json_data: dict, path_data_dir: str) -> str:
     """
     Generate the detailed JSON.
 
@@ -591,7 +646,6 @@ def generate_json_detailed(modules: dict, path_data_dir: str) -> str:
     @param path_data_dir: Path to the directory where the JSON will be placed.
     @return: Absolute path to the json file.
     """
-    json_data = generate_json_detailed_data(modules)
     filepath = os.path.join(path_data_dir, "json_data_detail.json")
     with open(filepath, 'w') as outfile:
         json.dump(json_data, outfile)
