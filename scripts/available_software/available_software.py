@@ -428,9 +428,7 @@ def generate_software_detail_page(
     )
 
     for version, details in list(sorted_versions.items())[::-1]:
-        print(details)
         if 'site_packages' in details:
-            print(version)
             md_file.new_paragraph(f"### {version}")
             md_file.new_paragraph("This is a list of site-packages included in the module:")
             packages = ""
