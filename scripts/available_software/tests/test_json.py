@@ -1,7 +1,7 @@
 from available_software import (generate_json_overview_data,
                                 generate_json_overview,
                                 modules_ugent,
-                                generate_json_detailed, 
+                                generate_json_detailed,
                                 generate_json_detailed_data)
 import os
 import json
