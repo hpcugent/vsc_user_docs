@@ -32,7 +32,7 @@ class TestJSON:
     # ---------------------------
 
     def test_json_generate_simple(self):
-        modules = modules_ugent()
+        modules = modules_ugent()[0]
         json_data = generate_json_overview_data(modules)
         assert len(json_data.keys()) == 3
         assert list(json_data["clusters"]) == ["dialga", "pikachu"]
@@ -44,7 +44,7 @@ class TestJSON:
             }
 
     def test_json_simple(self):
-        modules = modules_ugent()
+        modules = modules_ugent()[0]
         json_path = generate_json_overview(modules, ".")
         with open(json_path) as json_data:
             data_generated = json.load(json_data)
@@ -57,7 +57,7 @@ class TestJSON:
         assert data_generated["clusters"] == data_solution["clusters"]
 
     def test_json_detail_simple(self):
-        modules = modules_ugent()
+        modules = modules_ugent()[0]
         json_path = generate_json_detailed(modules, ".")
         assert os.path.exists("json_data_detail.json")
 
