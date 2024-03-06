@@ -57,8 +57,8 @@ class TestJSON:
         assert data_generated["clusters"] == data_solution["clusters"]
 
     def test_json_detail_simple(self):
-        modules = modules_ugent()[0]
-        json_path = generate_json_detailed(modules, ".")
+        with open(self.path + "/data/test_json_simple_sol.json") as json_data:
+            json_path = generate_json_detailed(json_data, ".")
         assert os.path.exists("json_data_detail.json")
 
         with open(json_path) as json_data:
