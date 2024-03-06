@@ -295,6 +295,7 @@ def get_site_packages_ugent(json_data, paths) -> dict:
             if site_packages != []:
                 site_packages = [os.path.basename(x) for x in site_packages]
                 site_packages = [s for s in site_packages if "." not in s]
+                site_packages = [s for s in site_packages if "__" not in s]
                 json_data["software"][software]["versions"][mod]["site_packages"] = site_packages
 
     return json_data
