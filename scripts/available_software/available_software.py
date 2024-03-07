@@ -459,8 +459,9 @@ def generate_software_detail_page(
 
     filename = f"{path}/{software_name}.md"
     md_file = MdUtils(file_name=filename, title=f"{software_name}")
-    description = software_data['description']
-    md_file.new_paragraph(f"{description}")
+    if 'description' in software_data.keys():
+        description = software_data['description']
+        md_file.new_paragraph(f"{description}")
     if 'homepage' in software_data.keys():
         homepage = software_data['homepage']
         md_file.new_paragraph(f"{homepage}")
