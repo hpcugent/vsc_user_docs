@@ -321,10 +321,10 @@ def get_extra_info_ugent(json_data, paths) -> dict:
                 continue
             if mod in ["imkl/2020.4.304-NVHPC-21.2"]:
                 base_path = "/apps/gent/RHEL8/cascadelake-volta-ib/modules/all/"
-            elif mod in ['OpenFold/1.0.1-foss-2022a-CUDA-11.7.0', 
-                         'OpenMM/7.7.0-foss-2022a-CUDA-11.7.0', 
-                         'PyTorch-Lightning/1.7.7-foss-2022a-CUDA-11.7.0', 
-                         'PyTorch/1.12.1-foss-2022a-CUDA-11.7.0', 
+            elif mod in ['OpenFold/1.0.1-foss-2022a-CUDA-11.7.0',
+                         'OpenMM/7.7.0-foss-2022a-CUDA-11.7.0',
+                         'PyTorch-Lightning/1.7.7-foss-2022a-CUDA-11.7.0',
+                         'PyTorch/1.12.1-foss-2022a-CUDA-11.7.0',
                          'Triton/1.1.1-foss-2022a-CUDA-11.7.0']:
                 base_path = "/apps/gent/RHEL8/cascadelake-ampere-ib/modules/all/"
             elif cluster == "donphan":
