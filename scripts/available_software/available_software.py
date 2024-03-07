@@ -77,7 +77,7 @@ def main():
     if args.eessi:
         json_data = json_data
     else:
-        json_data = get_site_packages_ugent(json_data, paths)
+        json_data = get_extra_info_ugent(json_data, paths)
     print("Generate JSON detailed... ", end="", flush=True)
     json_path = generate_json_detailed(json_data, path_data_dir)
     print("Done!")
@@ -176,6 +176,35 @@ def module_whatis(name: str) -> dict:
         content = re.sub(pattern=r'whatis\((.*)\)', repl='\\1', string=line).strip('"')
         key, value = tuple(content.split(":", maxsplit=1))
         whatis[key.strip()] = value.strip()
+    return whatis
+
+
+def module_info(info: str) -> dict:
+    """
+    Function to parse through lua file.
+
+    @param info: String with the contents of the lua file.
+    """
+    whatis = {}
+    data = np.array(info.split("\n"))
+    # index of start description to handle multi lined description
+    i = np.flatnonzero(np.char.startswith(data, "whatis([==[Description"))[0]
+    if np.char.endswith(data[i], "]==])"):
+        content = re.sub(pattern=r'whatis\(\[==\[(.*)\]==\]\)', repl='\\1', string=data[i]).strip('"')
+    else:
+        description = re.sub(pattern=r'whatis\(\[==\[(.*)', repl='\\1', string=data[i]).strip('"')
+        while not np.char.endswith(data[i], "]==])"):
+            i += 1
+            description += data[i]
+        content = re.sub(pattern=r'(.*)\]==\]\)', repl='\\1', string=description).strip('"')
+    key, value = tuple(content.split(":", maxsplit=1))
+    whatis[key.strip()] = value.strip()
+
+    for line in data[np.char.startswith(data, "whatis")]:
+        if not np.char.startswith(line, "whatis([==[Description"):
+            content = re.sub(pattern=r'whatis\(\[==\[(.*)\]==\]\)', repl='\\1', string=line).strip('"')
+            key, value = tuple(content.split(":", maxsplit=1))
+            whatis[key.strip()] = value.strip()
     return whatis
 
 
@@ -279,25 +308,44 @@ def clusters_ugent() -> np.ndarray:
     return module_avail(name="cluster/", filter_fn=filter_fn_gent_cluster)
 
 
-def get_site_packages_ugent(json_data, paths) -> dict:
+def get_extra_info_ugent(json_data, paths) -> dict:
     """
-    Add a list of site-packages to all python packages
+    add a list of extentions to all modules with extensions
     @return: Dictionary with all the modules and their site_packages
     """
     modules = json_data['software']
-
-    for software, details in modules.items():
+    for software in modules:
         for mod in modules[software]['versions']:
+            print(mod)
             cluster = modules[software]['versions'][mod]['clusters'][0]
-            base_path = paths[cluster][0][:-12] + "software/" + mod
-            path = base_path + "/lib/python*/site-packages/*"
-            site_packages = glob(path)
-            if site_packages != []:
-                site_packages = [os.path.basename(x) for x in site_packages]
-                site_packages = [s for s in site_packages if "." not in s]
-                site_packages = [s for s in site_packages if "__" not in s]
-                json_data["software"][software]["versions"][mod]["site_packages"] = site_packages
-
+            print(cluster)
+            if software == "Java":
+                # Java has a strange naming sceme which causes probplems
+                continue
+            if mod in ["imkl/2020.4.304-NVHPC-21.2"]:
+                base_path = "/apps/gent/RHEL8/cascadelake-volta-ib/modules/all/"
+            elif mod in ['OpenFold/1.0.1-foss-2022a-CUDA-11.7.0', 'OpenMM/7.7.0-foss-2022a-CUDA-11.7.0', 'PyTorch-Lightning/1.7.7-foss-2022a-CUDA-11.7.0', 'PyTorch/1.12.1-foss-2022a-CUDA-11.7.0', 'Triton/1.1.1-foss-2022a-CUDA-11.7.0']:
+                base_path = "/apps/gent/RHEL8/cascadelake-ampere-ib/modules/all/"
+            elif cluster == "donphan":
+                base_path = "/apps/gent/RHEL8/cascadelake-ib/modules/all/"
+            elif cluster == "joltik":
+                base_path = "/apps/gent/RHEL8/cascadelake-volta-ib/modules/all/"
+            else:
+                base_path = paths[cluster][0][:-1] + "/"
+            path = base_path + mod + ".lua"
+            print(path)
+            file = open(path, "r")
+            info = file.read()
+            if info != "":
+                whatis = module_info(info)
+                print(whatis)
+                #module_swap("cluster/" + cluster)
+                #whatis = module_whatis(mod)
+                json_data['software'][software]['description'] = whatis['Description']
+                if "Homepage" in whatis.keys():
+                    json_data['software'][software]['homepage'] = whatis['Homepage']
+                if "Extensions" in whatis.keys():
+                    json_data["software"][software]["versions"][mod]["extensions"] = whatis['Extensions']
     return json_data
 
 
