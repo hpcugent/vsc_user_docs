@@ -34,7 +34,6 @@ import os
 import re
 import subprocess
 import time
-from glob import glob
 from pathlib import Path
 from typing import Union, Tuple
 import numpy as np
@@ -316,15 +315,17 @@ def get_extra_info_ugent(json_data, paths) -> dict:
     modules = json_data['software']
     for software in modules:
         for mod in modules[software]['versions']:
-            print(mod)
             cluster = modules[software]['versions'][mod]['clusters'][0]
-            print(cluster)
             if software == "Java":
                 # Java has a strange naming sceme which causes probplems
                 continue
             if mod in ["imkl/2020.4.304-NVHPC-21.2"]:
                 base_path = "/apps/gent/RHEL8/cascadelake-volta-ib/modules/all/"
-            elif mod in ['OpenFold/1.0.1-foss-2022a-CUDA-11.7.0', 'OpenMM/7.7.0-foss-2022a-CUDA-11.7.0', 'PyTorch-Lightning/1.7.7-foss-2022a-CUDA-11.7.0', 'PyTorch/1.12.1-foss-2022a-CUDA-11.7.0', 'Triton/1.1.1-foss-2022a-CUDA-11.7.0']:
+            elif mod in ['OpenFold/1.0.1-foss-2022a-CUDA-11.7.0', 
+                         'OpenMM/7.7.0-foss-2022a-CUDA-11.7.0', 
+                         'PyTorch-Lightning/1.7.7-foss-2022a-CUDA-11.7.0', 
+                         'PyTorch/1.12.1-foss-2022a-CUDA-11.7.0', 
+                         'Triton/1.1.1-foss-2022a-CUDA-11.7.0']:
                 base_path = "/apps/gent/RHEL8/cascadelake-ampere-ib/modules/all/"
             elif cluster == "donphan":
                 base_path = "/apps/gent/RHEL8/cascadelake-ib/modules/all/"
@@ -333,14 +334,10 @@ def get_extra_info_ugent(json_data, paths) -> dict:
             else:
                 base_path = paths[cluster][0][:-1] + "/"
             path = base_path + mod + ".lua"
-            print(path)
             file = open(path, "r")
             info = file.read()
             if info != "":
                 whatis = module_info(info)
-                print(whatis)
-                #module_swap("cluster/" + cluster)
-                #whatis = module_whatis(mod)
                 json_data['software'][software]['description'] = whatis['Description']
                 if "Homepage" in whatis.keys():
                     json_data['software'][software]['homepage'] = whatis['Homepage']
