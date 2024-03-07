@@ -6,6 +6,10 @@ hide:
 SuperLU
 =======
 
+
+SuperLU is a general purpose library for the direct solution of large, sparse, nonsymmetric systems of linear equations on high performance machines.
+
+https://crd-legacy.lbl.gov/~xiaoye/SuperLU/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using SuperLU, load one of these modules using a `module load` command 
 module load SuperLU/5.2.2-intel-2020a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SuperLU/5.2.2-intel-2020a|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SuperLU/5.2.2-intel-2020a|-|x|x|-|x|x|

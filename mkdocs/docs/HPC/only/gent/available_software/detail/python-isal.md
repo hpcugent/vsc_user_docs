@@ -6,6 +6,10 @@ hide:
 python-isal
 ===========
 
+
+Faster zlib and gzip compatible compression and decompression by providing python bindings for the isa-l library.
+
+https://github.com/pycompression/python-isal
 # Available modules
 
 
@@ -17,11 +21,11 @@ To start using python-isal, load one of these modules using a `module load` comm
 module load python-isal/1.1.0-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|python-isal/1.1.0-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
-|python-isal/0.11.1-GCCcore-11.2.0|x|x|x|-|x|x|x|x|
-|python-isal/0.11.1-GCCcore-10.2.0|-|x|x|x|x|x|x|x|
-|python-isal/0.11.0-GCCcore-10.3.0|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|python-isal/1.1.0-GCCcore-11.3.0|x|x|x|x|x|x|
+|python-isal/0.11.1-GCCcore-11.2.0|x|x|x|-|x|x|
+|python-isal/0.11.1-GCCcore-10.2.0|-|x|x|x|x|x|
+|python-isal/0.11.0-GCCcore-10.3.0|x|x|x|-|x|x|

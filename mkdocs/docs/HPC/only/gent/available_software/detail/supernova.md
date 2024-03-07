@@ -6,6 +6,10 @@ hide:
 supernova
 =========
 
+
+Supernova is a software package for de novo assembly from Chromium Linked-Reads that are made from a single whole-genome library from an individual DNA source
+
+https://support.10xgenomics.com/de-novo-assembly/software/overview/latest/welcome
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using supernova, load one of these modules using a `module load` comman
 module load supernova/2.0.1
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|supernova/2.0.1|-|-|-|-|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|supernova/2.0.1|-|-|-|-|-|x|

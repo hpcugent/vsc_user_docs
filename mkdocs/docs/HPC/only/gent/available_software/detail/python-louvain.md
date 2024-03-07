@@ -6,6 +6,10 @@ hide:
 python-louvain
 ==============
 
+
+Louvain algorithm for community detection
+
+https://pypi.org/project/python-louvain
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using python-louvain, load one of these modules using a `module load` c
 module load python-louvain/0.16-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|python-louvain/0.16-foss-2022a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|python-louvain/0.16-foss-2022a|x|x|x|x|x|x|

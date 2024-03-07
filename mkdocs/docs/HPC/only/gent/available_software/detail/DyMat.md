@@ -6,6 +6,10 @@ hide:
 DyMat
 =====
 
+
+Read and process result files from Dymola and OpenModelica with Python.
+
+https://www.j-raedler.de/projects/DyMat
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using DyMat, load one of these modules using a `module load` command li
 module load DyMat/0.7-foss-2021b-2020-12-12
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DyMat/0.7-foss-2021b-2020-12-12|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DyMat/0.7-foss-2021b-2020-12-12|x|x|x|-|x|x|

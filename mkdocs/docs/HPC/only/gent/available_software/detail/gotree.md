@@ -6,6 +6,10 @@ hide:
 gotree
 ======
 
+
+GoTree is a set of command line tools to manipulate phylogenetic trees.
+
+https://github.com/evolbioinfo/gotree
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using gotree, load one of these modules using a `module load` command l
 module load gotree/0.4.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gotree/0.4.0|-|-|x|-|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|gotree/0.4.0|-|-|x|-|x|-|

@@ -6,6 +6,10 @@ hide:
 RE2
 ===
 
+
+RE2 is a fast, safe, thread-friendly alternative to backtracking regularexpression engines like those used in PCRE, Perl, and Python. It is a C++library.
+
+https://github.com/google/re2
 # Available modules
 
 
@@ -14,13 +18,14 @@ The overview below shows which RE2 installations are available per HPC-UGent Tie
 To start using RE2, load one of these modules using a `module load` command like:
 
 ```shell
-module load RE2/2023-03-01-GCCcore-12.2.0
+module load RE2/2023-08-01-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RE2/2023-03-01-GCCcore-12.2.0|x|x|x|x|x|x|x|x|
-|RE2/2022-06-01-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
-|RE2/2022-02-01-GCCcore-11.2.0|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RE2/2023-08-01-GCCcore-12.3.0|x|x|x|x|x|x|
+|RE2/2023-03-01-GCCcore-12.2.0|x|x|x|x|x|x|
+|RE2/2022-06-01-GCCcore-11.3.0|x|x|x|x|x|x|
+|RE2/2022-02-01-GCCcore-11.2.0|x|x|x|x|x|x|

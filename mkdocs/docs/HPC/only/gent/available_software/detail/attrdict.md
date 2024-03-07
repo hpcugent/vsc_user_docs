@@ -6,6 +6,10 @@ hide:
 attrdict
 ========
 
+
+AttrDict is a Python library that provides mapping objects that allow their elements to be accessed both as keys and as attributes.
+
+https://github.com/bcj/AttrDict
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using attrdict, load one of these modules using a `module load` command
 module load attrdict/2.0.1-GCCcore-8.3.0-Python-3.7.4
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|attrdict/2.0.1-GCCcore-8.3.0-Python-3.7.4|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|attrdict/2.0.1-GCCcore-8.3.0-Python-3.7.4|-|x|x|-|x|x|

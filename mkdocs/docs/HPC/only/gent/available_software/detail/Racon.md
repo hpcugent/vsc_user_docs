@@ -6,6 +6,10 @@ hide:
 Racon
 =====
 
+
+Ultrafast consensus module for raw de novo genome assembly of long uncorrected reads.
+
+https://github.com/lbcb-sci/racon
 # Available modules
 
 
@@ -14,16 +18,17 @@ The overview below shows which Racon installations are available per HPC-UGent T
 To start using Racon, load one of these modules using a `module load` command like:
 
 ```shell
-module load Racon/1.5.0-GCCcore-11.3.0
+module load Racon/1.5.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Racon/1.5.0-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
-|Racon/1.5.0-GCCcore-11.2.0|x|x|x|-|x|x|x|x|
-|Racon/1.4.21-GCCcore-10.3.0|x|x|x|-|x|x|x|x|
-|Racon/1.4.21-GCCcore-10.2.0|-|x|x|x|x|x|x|x|
-|Racon/1.4.13-GCCcore-9.3.0|-|x|x|-|x|x|x|x|
-|Racon/1.4.13-GCCcore-8.3.0|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Racon/1.5.0-GCCcore-12.3.0|x|x|x|x|x|x|
+|Racon/1.5.0-GCCcore-11.3.0|x|x|x|x|x|x|
+|Racon/1.5.0-GCCcore-11.2.0|x|x|x|-|x|x|
+|Racon/1.4.21-GCCcore-10.3.0|x|x|x|-|x|x|
+|Racon/1.4.21-GCCcore-10.2.0|-|x|x|x|x|x|
+|Racon/1.4.13-GCCcore-9.3.0|-|x|x|-|x|x|
+|Racon/1.4.13-GCCcore-8.3.0|-|x|x|-|x|x|

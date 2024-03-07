@@ -6,6 +6,10 @@ hide:
 VSEARCH
 =======
 
+
+VSEARCH supports de novo and reference based chimera detection, clustering, full-length and prefix dereplication, rereplication, reverse complementation, masking, all-vs-all pairwise global alignment, exact and global alignment searching, shuffling, subsampling and sorting. It also supports FASTQ file analysis, filtering, conversion and merging of paired-end reads.
+
+https://github.com/torognes/vsearch
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using VSEARCH, load one of these modules using a `module load` command 
 module load VSEARCH/2.22.1-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VSEARCH/2.22.1-GCC-11.3.0|x|x|x|x|x|x|x|x|
-|VSEARCH/2.18.0-GCC-10.2.0|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|VSEARCH/2.22.1-GCC-11.3.0|x|x|x|x|x|x|
+|VSEARCH/2.18.0-GCC-10.2.0|-|x|x|x|x|x|

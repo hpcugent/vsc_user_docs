@@ -6,6 +6,10 @@ hide:
 PartitionFinder
 ===============
 
+
+PartitionFinder 2 is a Python program for simultaneouslychoosing partitioning schemes and models of molecular evolution for phylogeneticanalyses of DNA, protein, and morphological data. You can PartitionFinder 2before running a phylogenetic analysis, in order to decide how to divide upyour sequence data into separate blocks before analysis, and to simultaneouslyperform model selection on each of those blocks.
+
+https://www.robertlanfear.com/partitionfinder
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using PartitionFinder, load one of these modules using a `module load` 
 module load PartitionFinder/2.1.1-intel-2019b-Python-2.7.16
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PartitionFinder/2.1.1-intel-2019b-Python-2.7.16|-|x|-|-|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PartitionFinder/2.1.1-intel-2019b-Python-2.7.16|-|x|-|-|-|x|

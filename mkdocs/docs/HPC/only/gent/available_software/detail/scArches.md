@@ -6,6 +6,10 @@ hide:
 scArches
 ========
 
+
+Single-cell architecture surgery (scArches) is a package for reference-based analysis of single-cell data.
+
+https://github.com/theislab/scarches
 # Available modules
 
 
@@ -17,9 +21,22 @@ To start using scArches, load one of these modules using a `module load` command
 module load scArches/0.5.6-foss-2021a-CUDA-11.3.1
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scArches/0.5.6-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|-|-|
-|scArches/0.5.6-foss-2021a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|scArches/0.5.6-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|
+|scArches/0.5.6-foss-2021a|x|x|x|x|x|x|
+
+
+### scArches/0.5.6-foss-2021a-CUDA-11.3.1
+
+This is a list of extensions included in the module:
+
+gdown-4.6.0, muon-0.1.2, newick-1.4.0, scArches-0.5.6, scHPL-1.0.2, sklearn-0.0
+
+### scArches/0.5.6-foss-2021a
+
+This is a list of extensions included in the module:
+
+gdown-4.6.0, muon-0.1.2, newick-1.4.0, scArches-0.5.6, scHPL-1.0.2, sklearn-0.0

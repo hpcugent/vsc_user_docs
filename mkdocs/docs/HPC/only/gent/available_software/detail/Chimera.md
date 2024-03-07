@@ -6,6 +6,10 @@ hide:
 Chimera
 =======
 
+
+UCSF Chimera is a highly extensible program for interactive visualization  and analysis of molecular structures and related data, including density maps, supramolecular  assemblies, sequence alignments, docking results, trajectories, and conformational ensembles.
+
+https://www.cgl.ucsf.edu/chimera/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using Chimera, load one of these modules using a `module load` command 
 module load Chimera/1.16-linux_x86_64
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Chimera/1.16-linux_x86_64|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Chimera/1.16-linux_x86_64|x|x|x|-|x|x|

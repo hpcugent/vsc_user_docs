@@ -6,6 +6,10 @@ hide:
 coverage
 ========
 
+
+Coverage.py is a tool for measuring code coverage of Python programs. It monitors your program, noting which parts of the code have been executed, then analyzes the source to identify code that could have been executed but was not.
+
+https://coverage.readthedocs.io
 # Available modules
 
 
@@ -14,11 +18,12 @@ The overview below shows which coverage installations are available per HPC-UGen
 To start using coverage, load one of these modules using a `module load` command like:
 
 ```shell
-module load coverage/5.5-GCCcore-10.2.0
+module load coverage/7.2.7-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|coverage/5.5-GCCcore-10.2.0|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|coverage/7.2.7-GCCcore-11.3.0|x|x|x|x|x|x|
+|coverage/5.5-GCCcore-10.2.0|-|x|x|-|x|x|

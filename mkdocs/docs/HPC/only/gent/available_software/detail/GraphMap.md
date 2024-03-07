@@ -6,6 +6,10 @@ hide:
 GraphMap
 ========
 
+
+A highly sensitive and accurate mapper for long, error-prone reads
+
+https://github.com/isovic/graphmap
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using GraphMap, load one of these modules using a `module load` command
 module load GraphMap/0.5.2-foss-2019b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GraphMap/0.5.2-foss-2019b|-|-|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GraphMap/0.5.2-foss-2019b|-|-|x|-|x|x|

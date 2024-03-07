@@ -6,6 +6,10 @@ hide:
 Primer3
 =======
 
+
+Primer3 is a widely used program for designing PCR primers (PCR = 'Polymerase Chain Reaction'). PCR is an essential and ubiquitous tool in genetics and molecular biology. Primer3 can also design hybridization probes and sequencing primers.
+
+https://primer3.org/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using Primer3, load one of these modules using a `module load` command 
 module load Primer3/2.5.0-GCC-9.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Primer3/2.5.0-GCC-9.3.0|-|x|x|-|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Primer3/2.5.0-GCC-9.3.0|-|x|x|-|x|-|

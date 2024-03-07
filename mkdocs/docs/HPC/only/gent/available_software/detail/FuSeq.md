@@ -6,6 +6,10 @@ hide:
 FuSeq
 =====
 
+
+FuSeq is a novel method to discover fusion genes from paired-end RNA sequencing data.
+
+https://github.com/nghiavtr/FuSeq
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using FuSeq, load one of these modules using a `module load` command li
 module load FuSeq/1.1.2-gompi-2019b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FuSeq/1.1.2-gompi-2019b|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FuSeq/1.1.2-gompi-2019b|-|x|x|-|x|x|

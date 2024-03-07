@@ -6,6 +6,10 @@ hide:
 canu
 ====
 
+
+Canu is a fork of the Celera Assembler designed for high-noise single-molecule sequencing
+
+https://canu.readthedocs.io
 # Available modules
 
 
@@ -17,11 +21,11 @@ To start using canu, load one of these modules using a `module load` command lik
 module load canu/2.2-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|canu/2.2-GCCcore-11.2.0|x|x|x|-|x|x|x|x|
-|canu/2.2-GCCcore-10.3.0|-|x|x|-|x|x|x|x|
-|canu/2.1.1-GCCcore-10.2.0|-|x|x|-|x|x|x|x|
-|canu/1.9-GCCcore-8.3.0-Java-11|-|-|x|-|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|canu/2.2-GCCcore-11.2.0|x|x|x|-|x|x|
+|canu/2.2-GCCcore-10.3.0|-|x|x|-|x|x|
+|canu/2.1.1-GCCcore-10.2.0|-|x|x|-|x|x|
+|canu/1.9-GCCcore-8.3.0-Java-11|-|-|x|-|x|-|

@@ -6,6 +6,10 @@ hide:
 Fiji
 ====
 
+
+Fiji is an image processing package—a 'batteries-included' distribution of ImageJ, bundling a lot of plugins which facilitate scientific image analysis.This release is based on ImageJ-2.1.0 and Fiji-2.1.1
+
+https://fiji.sc
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using Fiji, load one of these modules using a `module load` command lik
 module load Fiji/2.9.0-Java-1.8
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Fiji/2.9.0-Java-1.8|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Fiji/2.9.0-Java-1.8|x|x|x|-|x|x|

@@ -6,6 +6,10 @@ hide:
 Sailfish
 ========
 
+
+Sailfish is a software tool that implements a novel, alignment-free algorithm for the estimation of isoform abundances directly from a set of reference sequences and RNA-seq reads.
+
+http://www.cs.cmu.edu/~ckingsf/software/sailfish/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using Sailfish, load one of these modules using a `module load` command
 module load Sailfish/0.10.1-gompi-2019b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Sailfish/0.10.1-gompi-2019b|-|x|-|-|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Sailfish/0.10.1-gompi-2019b|-|x|-|-|-|x|

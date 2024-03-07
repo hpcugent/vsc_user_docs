@@ -6,6 +6,10 @@ hide:
 Trimmomatic
 ===========
 
+
+Trimmomatic performs a variety of useful trimming tasks for illumina  paired-end and single ended data.The selection of trimming steps and their associated  parameters are supplied on the command line.
+
+http://www.usadellab.org/cms/?page=trimmomatic
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using Trimmomatic, load one of these modules using a `module load` comm
 module load Trimmomatic/0.39-Java-11
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Trimmomatic/0.39-Java-11|x|x|x|x|x|x|x|x|
-|Trimmomatic/0.38-Java-1.8|-|-|-|-|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Trimmomatic/0.39-Java-11|x|x|x|x|x|x|
+|Trimmomatic/0.38-Java-1.8|-|-|-|-|-|x|

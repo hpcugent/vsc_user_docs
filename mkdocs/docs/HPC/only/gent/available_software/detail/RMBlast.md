@@ -6,6 +6,10 @@ hide:
 RMBlast
 =======
 
+
+RMBlast is a RepeatMasker compatible version of the standard NCBI BLAST suite. The primary difference between this distribution and the NCBI distribution is the addition of a new program 'rmblastn' for use with RepeatMasker and RepeatModeler.
+
+https://www.repeatmasker.org/RMBlast.html
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using RMBlast, load one of these modules using a `module load` command 
 module load RMBlast/2.11.0-gompi-2020b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RMBlast/2.11.0-gompi-2020b|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RMBlast/2.11.0-gompi-2020b|x|x|x|x|x|x|

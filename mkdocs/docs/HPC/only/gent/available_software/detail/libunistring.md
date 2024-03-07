@@ -6,6 +6,10 @@ hide:
 libunistring
 ============
 
+
+This library provides functions for manipulating Unicode strings and for manipulating C strings according to the Unicode standard.
+
+https://www.gnu.org/software/libunistring/
 # Available modules
 
 
@@ -17,11 +21,11 @@ To start using libunistring, load one of these modules using a `module load` com
 module load libunistring/1.0-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libunistring/1.0-GCCcore-11.2.0|x|x|x|x|x|x|x|x|
-|libunistring/0.9.10-GCCcore-10.3.0|x|x|x|-|x|x|x|x|
-|libunistring/0.9.10-GCCcore-9.3.0|-|x|x|-|x|x|x|x|
-|libunistring/0.9.10-GCCcore-8.3.0|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libunistring/1.0-GCCcore-11.2.0|x|x|x|x|x|x|
+|libunistring/0.9.10-GCCcore-10.3.0|x|x|x|-|x|x|
+|libunistring/0.9.10-GCCcore-9.3.0|-|x|x|-|x|x|
+|libunistring/0.9.10-GCCcore-8.3.0|-|x|x|-|x|x|

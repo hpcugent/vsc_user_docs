@@ -6,6 +6,10 @@ hide:
 imbalanced-learn
 ================
 
+
+imbalanced-learn is a Python package offering a number of re-sampling techniques commonly used in datasets showing strong between-class imbalance.
+
+https://github.com/scikit-learn-contrib/imbalanced-learn
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using imbalanced-learn, load one of these modules using a `module load`
 module load imbalanced-learn/0.10.1-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|imbalanced-learn/0.10.1-foss-2022a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|imbalanced-learn/0.10.1-foss-2022a|x|x|x|x|x|x|
+
+
+### imbalanced-learn/0.10.1-foss-2022a
+
+This is a list of extensions included in the module:
+
+imbalanced-learn-0.10.1, joblib-1.2.0

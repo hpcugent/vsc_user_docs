@@ -6,6 +6,10 @@ hide:
 finder
 ======
 
+
+finder is a gene annotator pipeline which automates the process of downloading short reads,aligning them and using the assembled transcripts to generate gene annotations.
+
+https://github.com/sagnikbanerjee15/Finder/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using finder, load one of these modules using a `module load` command l
 module load finder/1.1.0-foss-2021b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|finder/1.1.0-foss-2021b|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|finder/1.1.0-foss-2021b|x|x|x|x|x|x|

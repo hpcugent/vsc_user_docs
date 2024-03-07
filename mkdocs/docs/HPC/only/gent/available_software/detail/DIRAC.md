@@ -6,6 +6,10 @@ hide:
 DIRAC
 =====
 
+
+DIRAC: Program for Atomic and Molecular Direct Iterative Relativistic All-electron Calculations
+
+http://www.diracprogram.org
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using DIRAC, load one of these modules using a `module load` command li
 module load DIRAC/19.0-intel-2020a-Python-2.7.18-mpi-int64
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DIRAC/19.0-intel-2020a-Python-2.7.18-mpi-int64|-|x|x|-|x|-|x|-|
-|DIRAC/19.0-intel-2020a-Python-2.7.18-int64|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DIRAC/19.0-intel-2020a-Python-2.7.18-mpi-int64|-|x|x|-|x|-|
+|DIRAC/19.0-intel-2020a-Python-2.7.18-int64|-|x|x|-|x|x|

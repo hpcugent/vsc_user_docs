@@ -6,6 +6,10 @@ hide:
 parasail
 ========
 
+
+parasail is a SIMD C (C99) library containing implementations of the Smith-Waterman (local), Needleman-Wunsch (global), and semi-global pairwise sequence alignment algorithms.
+
+https://github.com/jeffdaily/parasail
 # Available modules
 
 
@@ -17,15 +21,15 @@ To start using parasail, load one of these modules using a `module load` command
 module load parasail/2.6-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|parasail/2.6-GCC-11.3.0|x|x|x|x|x|x|x|x|
-|parasail/2.5-GCC-11.2.0|x|x|x|-|x|x|x|x|
-|parasail/2.4.3-GCC-10.3.0|x|x|x|-|x|x|x|x|
-|parasail/2.4.3-GCC-10.2.0|-|-|x|-|x|-|-|-|
-|parasail/2.4.2-iccifort-2020.1.217|-|x|x|-|x|x|x|x|
-|parasail/2.4.1-intel-2019b|-|x|x|-|x|x|-|x|
-|parasail/2.4.1-foss-2019b|-|x|-|-|-|-|-|-|
-|parasail/2.4.1-GCC-8.3.0|-|-|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|parasail/2.6-GCC-11.3.0|x|x|x|x|x|x|
+|parasail/2.5-GCC-11.2.0|x|x|x|-|x|x|
+|parasail/2.4.3-GCC-10.3.0|x|x|x|-|x|x|
+|parasail/2.4.3-GCC-10.2.0|-|-|x|-|x|-|
+|parasail/2.4.2-iccifort-2020.1.217|-|x|x|-|x|x|
+|parasail/2.4.1-intel-2019b|-|x|x|-|x|x|
+|parasail/2.4.1-foss-2019b|-|x|-|-|-|-|
+|parasail/2.4.1-GCC-8.3.0|-|-|x|-|x|x|

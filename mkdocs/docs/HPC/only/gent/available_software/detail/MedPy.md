@@ -6,6 +6,10 @@ hide:
 MedPy
 =====
 
+
+MedPy is a library and script collection for medical image processing in Python, providing basic functionalities for reading, writing and manipulating large images of arbitrary dimensionality. Its main contributions are n-dimensional versions of popular image filters, a collection of image feature extractors, ready to be used with scikit-learn, and an exhaustive n-dimensional graph-cut package.
+
+https://pypi.org/project/MedPy/
 # Available modules
 
 
@@ -17,10 +21,10 @@ To start using MedPy, load one of these modules using a `module load` command li
 module load MedPy/0.4.0-fosscuda-2020b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MedPy/0.4.0-fosscuda-2020b|x|-|-|-|x|-|-|-|
-|MedPy/0.4.0-foss-2020b|-|x|x|x|x|x|x|x|
-|MedPy/0.4.0-foss-2019b-Python-3.7.4|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MedPy/0.4.0-fosscuda-2020b|x|-|-|-|x|-|
+|MedPy/0.4.0-foss-2020b|-|x|x|x|x|x|
+|MedPy/0.4.0-foss-2019b-Python-3.7.4|-|x|x|-|x|x|

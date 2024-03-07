@@ -6,6 +6,10 @@ hide:
 NLMpy
 =====
 
+
+NLMpy is a Python package for the creation of neutral landscape models that are widely used in the modelling of ecological patterns and processes across landscapes.
+
+https://pypi.org/project/nlmpy
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using NLMpy, load one of these modules using a `module load` command li
 module load NLMpy/0.1.5-intel-2019b-Python-3.7.4
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NLMpy/0.1.5-intel-2019b-Python-3.7.4|-|x|-|-|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NLMpy/0.1.5-intel-2019b-Python-3.7.4|-|x|-|-|-|x|

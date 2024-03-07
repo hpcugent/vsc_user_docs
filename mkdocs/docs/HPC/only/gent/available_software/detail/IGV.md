@@ -6,6 +6,10 @@ hide:
 IGV
 ===
 
+
+This package contains command line utilities for preprocessing, computing feature count density (coverage),  sorting, and indexing data files.
+
+https://www.broadinstitute.org/software/igv/
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using IGV, load one of these modules using a `module load` command like
 module load IGV/2.9.4-Java-11
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|IGV/2.9.4-Java-11|-|x|x|-|x|x|x|x|
-|IGV/2.8.0-Java-11|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|IGV/2.9.4-Java-11|-|x|x|-|x|x|
+|IGV/2.8.0-Java-11|-|x|x|-|x|x|

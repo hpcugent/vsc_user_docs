@@ -6,6 +6,10 @@ hide:
 libdap
 ======
 
+
+A C++ SDK which contains an implementation of DAP 2.0 and DAP4.0. This includes both Client- and Server-side support classes.
+
+https://www.opendap.org/software/libdap
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using libdap, load one of these modules using a `module load` command l
 module load libdap/3.20.7-GCCcore-10.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libdap/3.20.7-GCCcore-10.3.0|-|x|x|-|x|x|x|x|
-|libdap/3.20.6-GCCcore-8.3.0|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libdap/3.20.7-GCCcore-10.3.0|-|x|x|-|x|x|
+|libdap/3.20.6-GCCcore-8.3.0|-|x|x|-|x|x|

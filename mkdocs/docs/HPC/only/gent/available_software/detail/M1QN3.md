@@ -6,6 +6,10 @@ hide:
 M1QN3
 =====
 
+
+A solver of large-scale unconstrained minimization problems
+
+https://who.rocq.inria.fr/Jean-Charles.Gilbert/modulopt/optimization-routines/m1qn3/m1qn3.html
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using M1QN3, load one of these modules using a `module load` command li
 module load M1QN3/3.3-GCC-10.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|M1QN3/3.3-GCC-10.3.0|-|x|x|-|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|M1QN3/3.3-GCC-10.3.0|-|x|x|-|x|-|

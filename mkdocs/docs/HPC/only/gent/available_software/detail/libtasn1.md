@@ -6,6 +6,10 @@ hide:
 libtasn1
 ========
 
+
+Libtasn1 is the ASN.1 library used by GnuTLS, GNU Shishi and some other packages. It was written by Fabio Fiorina, and has been shipped as part of GnuTLS for some time but is now a proper GNU package.
+
+https://www.gnu.org/software/libtasn1/
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using libtasn1, load one of these modules using a `module load` command
 module load libtasn1/4.18.0-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libtasn1/4.18.0-GCCcore-11.2.0|x|x|x|x|x|x|x|x|
-|libtasn1/4.17.0-GCCcore-10.3.0|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libtasn1/4.18.0-GCCcore-11.2.0|x|x|x|x|x|x|
+|libtasn1/4.17.0-GCCcore-10.3.0|x|x|x|-|x|x|

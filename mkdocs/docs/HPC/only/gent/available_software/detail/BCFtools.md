@@ -6,6 +6,10 @@ hide:
 BCFtools
 ========
 
+
+Samtools is a suite of programs for interacting with high-throughput sequencing data. BCFtools - Reading/writing BCF2/VCF/gVCF files and calling/filtering/summarising SNP and short indel sequence variants
+
+https://www.htslib.org/
 # Available modules
 
 
@@ -14,17 +18,19 @@ The overview below shows which BCFtools installations are available per HPC-UGen
 To start using BCFtools, load one of these modules using a `module load` command like:
 
 ```shell
-module load BCFtools/1.15.1-GCC-11.3.0
+module load BCFtools/1.18-GCC-12.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BCFtools/1.15.1-GCC-11.3.0|x|x|x|x|x|x|x|x|
-|BCFtools/1.14-GCC-11.2.0|x|x|x|x|x|x|x|x|
-|BCFtools/1.12-GCC-10.3.0|x|x|x|-|x|x|x|x|
-|BCFtools/1.12-GCC-10.2.0|-|x|x|-|x|-|x|-|
-|BCFtools/1.11-GCC-10.2.0|x|x|x|x|x|x|x|x|
-|BCFtools/1.10.2-iccifort-2019.5.281|-|x|x|-|x|x|-|x|
-|BCFtools/1.10.2-GCC-8.3.0|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BCFtools/1.18-GCC-12.3.0|x|x|x|x|x|x|
+|BCFtools/1.17-GCC-12.2.0|x|x|x|x|x|x|
+|BCFtools/1.15.1-GCC-11.3.0|x|x|x|x|x|x|
+|BCFtools/1.14-GCC-11.2.0|x|x|x|x|x|x|
+|BCFtools/1.12-GCC-10.3.0|x|x|x|-|x|x|
+|BCFtools/1.12-GCC-10.2.0|-|x|x|-|x|-|
+|BCFtools/1.11-GCC-10.2.0|x|x|x|x|x|x|
+|BCFtools/1.10.2-iccifort-2019.5.281|-|x|x|-|x|x|
+|BCFtools/1.10.2-GCC-8.3.0|-|x|x|-|x|x|

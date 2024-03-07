@@ -6,6 +6,10 @@ hide:
 FastQC
 ======
 
+
+FastQC is a quality control application for high throughputsequence data. It reads in sequence data in a variety of formats and can eitherprovide an interactive application to review the results of several differentQC checks, or create an HTML based report which can be integrated into apipeline.
+
+https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using FastQC, load one of these modules using a `module load` command l
 module load FastQC/0.11.9-Java-11
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FastQC/0.11.9-Java-11|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FastQC/0.11.9-Java-11|x|x|x|x|x|x|

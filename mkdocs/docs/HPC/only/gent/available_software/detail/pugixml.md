@@ -6,6 +6,10 @@ hide:
 pugixml
 =======
 
+
+pugixml is a light-weight C++ XML processing library
+
+https://pugixml.org/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using pugixml, load one of these modules using a `module load` command 
 module load pugixml/1.12.1-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pugixml/1.12.1-GCCcore-11.2.0|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pugixml/1.12.1-GCCcore-11.2.0|x|x|x|x|x|x|

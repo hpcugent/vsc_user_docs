@@ -6,6 +6,10 @@ hide:
 TEtranscripts
 =============
 
+
+TEtranscripts and TEcount takes RNA-seq (and similar data) and annotates readsto both genes & transposable elements.TEtranscripts then performs differential analysis using DESeq2.
+
+https://github.com/mhammell-laboratory/TEtranscripts
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using TEtranscripts, load one of these modules using a `module load` co
 module load TEtranscripts/2.2.0-foss-2020a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TEtranscripts/2.2.0-foss-2020a|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|TEtranscripts/2.2.0-foss-2020a|-|x|x|-|x|x|
+
+
+### TEtranscripts/2.2.0-foss-2020a
+
+This is a list of extensions included in the module:
+
+argparse-1.4.0, TEtranscripts-2.2.0

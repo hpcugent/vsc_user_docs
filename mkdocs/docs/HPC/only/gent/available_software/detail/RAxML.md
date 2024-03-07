@@ -6,6 +6,10 @@ hide:
 RAxML
 =====
 
+
+RAxML search algorithm for maximum likelihood based inference of phylogenetic trees.
+
+https://github.com/stamatak/standard-RAxML
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using RAxML, load one of these modules using a `module load` command li
 module load RAxML/8.2.12-iimpi-2021b-hybrid-avx2
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RAxML/8.2.12-iimpi-2021b-hybrid-avx2|x|x|x|-|x|x|x|x|
-|RAxML/8.2.12-iimpi-2019b-hybrid-avx2|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RAxML/8.2.12-iimpi-2021b-hybrid-avx2|x|x|x|-|x|x|
+|RAxML/8.2.12-iimpi-2019b-hybrid-avx2|-|x|x|-|x|x|

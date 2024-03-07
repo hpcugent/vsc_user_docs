@@ -6,6 +6,10 @@ hide:
 pairtools
 =========
 
+
+pairtools is a simple and fast command-line framework to process sequencing data from a Hi-C experiment.
+
+https://github.com/mirnylab/pairtools
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using pairtools, load one of these modules using a `module load` comman
 module load pairtools/0.3.0-foss-2021b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pairtools/0.3.0-foss-2021b|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pairtools/0.3.0-foss-2021b|x|x|x|-|x|x|

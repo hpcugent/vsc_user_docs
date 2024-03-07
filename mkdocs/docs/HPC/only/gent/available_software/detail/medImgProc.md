@@ -6,6 +6,10 @@ hide:
 medImgProc
 ==========
 
+
+Motion correction, explicit spatio-temporal regularization of motion tracking, random specklesenhancement, and segmentation.
+
+https://github.com/WeiXuanChan/motionSegmentation
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using medImgProc, load one of these modules using a `module load` comma
 module load medImgProc/2.5.7-foss-2019b-Python-3.7.4
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|medImgProc/2.5.7-foss-2019b-Python-3.7.4|-|x|-|-|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|medImgProc/2.5.7-foss-2019b-Python-3.7.4|-|x|-|-|-|x|
+
+
+### medImgProc/2.5.7-foss-2019b-Python-3.7.4
+
+This is a list of extensions included in the module:
+
+imageio-2.8.0, medImgProc-2.5.7, phasepack-1.5, PyWavelets-1.1.1, trimesh-3.6.15

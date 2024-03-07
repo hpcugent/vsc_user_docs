@@ -6,6 +6,10 @@ hide:
 libgpg-error
 ============
 
+
+Libgpg-error is a small library that defines common error values for all GnuPG components.
+
+https://gnupg.org/related_software/libgpg-error/index.html
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using libgpg-error, load one of these modules using a `module load` com
 module load libgpg-error/1.42-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libgpg-error/1.42-GCCcore-11.2.0|x|x|x|x|x|x|x|x|
-|libgpg-error/1.42-GCCcore-10.3.0|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libgpg-error/1.42-GCCcore-11.2.0|x|x|x|x|x|x|
+|libgpg-error/1.42-GCCcore-10.3.0|x|x|x|-|x|x|

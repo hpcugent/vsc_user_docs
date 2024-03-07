@@ -6,6 +6,10 @@ hide:
 TRUST4
 ======
 
+
+Tcr Receptor Utilities for Solid Tissue (TRUST) is acomputational tool to analyze TCR and BCR sequences using unselected RNAsequencing data, profiled from solid tissues, including tumors. TRUST4 performsde novo assembly on V, J, C genes including the hypervariablecomplementarity-determining region 3 (CDR3) and reports consensus of BCR/TCRsequences. TRUST4 then realigns the contigs to IMGT reference gene sequences toreport the corresponding information. TRUST4 supports both single-end andpaired-end sequencing data with any read length.
+
+https://github.com/liulab-dfci/TRUST4
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using TRUST4, load one of these modules using a `module load` command l
 module load TRUST4/1.0.6-GCC-11.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TRUST4/1.0.6-GCC-11.2.0|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|TRUST4/1.0.6-GCC-11.2.0|x|x|x|-|x|x|

@@ -6,6 +6,10 @@ hide:
 nvtop
 =====
 
+
+htop-like GPU usage monitor
+
+https://github.com/Syllo/nvtop
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using nvtop, load one of these modules using a `module load` command li
 module load nvtop/1.2.1-GCCcore-10.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nvtop/1.2.1-GCCcore-10.3.0|x|-|-|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|nvtop/1.2.1-GCCcore-10.3.0|x|-|-|-|-|-|

@@ -6,6 +6,10 @@ hide:
 rasterstats
 ===========
 
+
+rasterstats is a Python module for summarizing geospatial raster datasets based on vector geometries.
+
+https://github.com/perrygeo/python-rasterstats
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using rasterstats, load one of these modules using a `module load` comm
 module load rasterstats/0.15.0-foss-2020a-Python-3.8.2
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rasterstats/0.15.0-foss-2020a-Python-3.8.2|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|rasterstats/0.15.0-foss-2020a-Python-3.8.2|-|x|x|-|x|x|
+
+
+### rasterstats/0.15.0-foss-2020a-Python-3.8.2
+
+This is a list of extensions included in the module:
+
+affine-2.3.0, cligj-0.5.0, rasterstats-0.15.0, simplejson-3.17.2

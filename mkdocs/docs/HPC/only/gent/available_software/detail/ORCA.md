@@ -6,6 +6,10 @@ hide:
 ORCA
 ====
 
+
+ORCA is a flexible, efficient and easy-to-use general purpose tool for quantum chemistry with specific emphasis on spectroscopic properties of open-shell molecules. It features a wide variety of standard quantum chemical methods ranging from semiempirical methods to DFT to single- and multireference correlated ab initio methods. It can also treat environmental and relativistic effects.
+
+https://orcaforum.kofo.mpg.de
 # Available modules
 
 
@@ -17,12 +21,12 @@ To start using ORCA, load one of these modules using a `module load` command lik
 module load ORCA/5.0.4-gompi-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ORCA/5.0.4-gompi-2022a|x|x|x|x|x|x|x|x|
-|ORCA/5.0.3-gompi-2021b|x|x|x|x|x|x|x|x|
-|ORCA/5.0.2-gompi-2021b|x|x|x|x|x|x|x|x|
-|ORCA/4.2.1-gompi-2019b|-|x|x|-|x|x|-|x|
-|ORCA/4.2.0-gompi-2019b|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ORCA/5.0.4-gompi-2022a|x|x|x|x|x|x|
+|ORCA/5.0.3-gompi-2021b|x|x|x|x|x|x|
+|ORCA/5.0.2-gompi-2021b|x|x|x|x|x|x|
+|ORCA/4.2.1-gompi-2019b|-|x|x|-|x|x|
+|ORCA/4.2.0-gompi-2019b|-|x|x|-|x|x|

@@ -6,6 +6,10 @@ hide:
 GDGraph
 =======
 
+
+GDGraph is a Perl package to generate charts
+
+https://metacpan.org/release/GDGraph
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using GDGraph, load one of these modules using a `module load` command 
 module load GDGraph/1.56-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GDGraph/1.56-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GDGraph/1.56-GCCcore-11.3.0|x|x|x|x|x|x|
+
+
+### GDGraph/1.56-GCCcore-11.3.0
+
+This is a list of extensions included in the module:
+
+ExtUtils::PkgConfig-1.16, GD-2.76, GD::Graph-1.56, GD::Text-0.86

@@ -6,6 +6,10 @@ hide:
 FusionCatcher
 =============
 
+
+FusionCatcher searches for novel/known somatic fusion genes, translocations,and chimeras in RNA-seq data (paired-end or single-end reads from Illumina NGSplatforms like Solexa/HiSeq/NextSeq/MiSeq/MiniSeq) from diseased samples.
+
+https://github.com/ndaniel/fusioncatcher
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using FusionCatcher, load one of these modules using a `module load` co
 module load FusionCatcher/1.30-foss-2019b-Python-2.7.16
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FusionCatcher/1.30-foss-2019b-Python-2.7.16|-|x|x|-|x|x|-|x|
-|FusionCatcher/1.20-foss-2019b-Python-2.7.16|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FusionCatcher/1.30-foss-2019b-Python-2.7.16|-|x|x|-|x|x|
+|FusionCatcher/1.20-foss-2019b-Python-2.7.16|-|x|x|-|x|x|

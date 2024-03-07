@@ -6,6 +6,10 @@ hide:
 cuteSV
 ======
 
+
+cuteSV uses tailored methods to collect the signatures of various types of SVs and employs a clustering-and-refinement method to analyze the signatures to implement sensitive SV detection.
+
+https://github.com/tjiangHIT/cuteSV
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using cuteSV, load one of these modules using a `module load` command l
 module load cuteSV/2.0.3-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cuteSV/2.0.3-foss-2022a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|cuteSV/2.0.3-foss-2022a|x|x|x|x|x|x|
+
+
+### cuteSV/2.0.3-foss-2022a
+
+This is a list of extensions included in the module:
+
+cigar-0.1.3, cuteSV-2.0.3

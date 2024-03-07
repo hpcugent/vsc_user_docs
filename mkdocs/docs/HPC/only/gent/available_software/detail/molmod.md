@@ -6,6 +6,10 @@ hide:
 molmod
 ======
 
+
+MolMod is a Python library with many compoments that are useful to write molecular modeling programs.
+
+https://molmod.github.io/molmod/
 # Available modules
 
 
@@ -17,10 +21,10 @@ To start using molmod, load one of these modules using a `module load` command l
 module load molmod/1.4.5-intel-2020a-Python-3.8.2
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|molmod/1.4.5-intel-2020a-Python-3.8.2|x|x|x|x|x|x|x|x|
-|molmod/1.4.5-intel-2019b-Python-3.7.4|-|x|x|-|x|x|-|x|
-|molmod/1.4.5-foss-2019b-Python-3.7.4|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|molmod/1.4.5-intel-2020a-Python-3.8.2|x|x|x|x|x|x|
+|molmod/1.4.5-intel-2019b-Python-3.7.4|-|x|x|-|x|x|
+|molmod/1.4.5-foss-2019b-Python-3.7.4|-|x|x|-|x|x|

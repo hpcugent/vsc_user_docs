@@ -6,6 +6,10 @@ hide:
 longread_umi
 ============
 
+
+A collection of scripts for processing longread UMI data.
+
+https://github.com/SorenKarst/longread_umi
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using longread_umi, load one of these modules using a `module load` com
 module load longread_umi/0.3.2-foss-2020b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|longread_umi/0.3.2-foss-2020b|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|longread_umi/0.3.2-foss-2020b|-|x|x|x|x|x|

@@ -6,6 +6,10 @@ hide:
 Aspera-CLI
 ==========
 
+
+IBM Aspera Command-Line Interface (the Aspera CLI) isa collection of Aspera tools for performing high-speed, secure datatransfers from the command line. The Aspera CLI is for users andorganizations who want to automate their transfer workflows.
+
+https://asperasoft.com
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using Aspera-CLI, load one of these modules using a `module load` comma
 module load Aspera-CLI/3.9.6.1467.159c5b1
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Aspera-CLI/3.9.6.1467.159c5b1|-|x|x|-|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Aspera-CLI/3.9.6.1467.159c5b1|-|x|x|-|x|-|

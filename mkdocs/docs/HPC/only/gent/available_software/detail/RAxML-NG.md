@@ -6,6 +6,10 @@ hide:
 RAxML-NG
 ========
 
+
+RAxML-NG is a phylogenetic tree inference tool whichuses maximum-likelihood (ML) optimality criterion. Its search heuristic is based on iteratively performing a series of Subtree Pruning and Regrafting (SPR) moves, which allows to quickly navigate to the best-known ML tree.
+
+https://github.com/amkozlov/raxml-ng
 # Available modules
 
 
@@ -14,13 +18,14 @@ The overview below shows which RAxML-NG installations are available per HPC-UGen
 To start using RAxML-NG, load one of these modules using a `module load` command like:
 
 ```shell
-module load RAxML-NG/1.0.3-GCC-10.2.0
+module load RAxML-NG/1.2.0-GCC-12.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RAxML-NG/1.0.3-GCC-10.2.0|-|x|x|-|x|-|x|-|
-|RAxML-NG/0.9.0-gompi-2019b|-|x|x|-|x|x|-|x|
-|RAxML-NG/0.9.0-GCC-8.3.0|-|-|x|-|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RAxML-NG/1.2.0-GCC-12.3.0|x|x|x|x|x|x|
+|RAxML-NG/1.0.3-GCC-10.2.0|-|x|x|-|x|-|
+|RAxML-NG/0.9.0-gompi-2019b|-|x|x|-|x|x|
+|RAxML-NG/0.9.0-GCC-8.3.0|-|-|x|-|x|-|

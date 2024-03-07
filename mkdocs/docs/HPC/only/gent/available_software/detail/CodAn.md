@@ -6,6 +6,10 @@ hide:
 CodAn
 =====
 
+
+CodAn (Coding sequence Annotator) is a computational tool designed to characterize the CDS and UTRregions on transcripts from any Eukaryote species.
+
+https://github.com/pedronachtigall/CodAn
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using CodAn, load one of these modules using a `module load` command li
 module load CodAn/1.2-foss-2021b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CodAn/1.2-foss-2021b|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CodAn/1.2-foss-2021b|x|x|x|x|x|x|

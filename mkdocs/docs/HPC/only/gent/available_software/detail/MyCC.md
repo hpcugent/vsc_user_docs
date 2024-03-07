@@ -6,6 +6,10 @@ hide:
 MyCC
 ====
 
+
+MyCC is built and delivered as a tailored solution for metagenomics sequencesclassfication.
+
+https://sourceforge.net/projects/sb2nhri/files/MyCC/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using MyCC, load one of these modules using a `module load` command lik
 module load MyCC/2017-03-01-intel-2019b-Python-2.7.16
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MyCC/2017-03-01-intel-2019b-Python-2.7.16|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MyCC/2017-03-01-intel-2019b-Python-2.7.16|-|x|x|-|x|x|

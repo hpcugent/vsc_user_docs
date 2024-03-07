@@ -6,6 +6,10 @@ hide:
 Gdk-Pixbuf
 ==========
 
+
+The Gdk Pixbuf is a toolkit for image loading and pixel buffer manipulation. It is used by GTK+ 2 and GTK+ 3 to load and manipulate images. In the past it was distributed as part of GTK+ 2 but it was split off into a separate package in preparation for the change to GTK+ 3.
+
+https://developer.gnome.org/gdk-pixbuf/stable/
 # Available modules
 
 
@@ -14,16 +18,17 @@ The overview below shows which Gdk-Pixbuf installations are available per HPC-UG
 To start using Gdk-Pixbuf, load one of these modules using a `module load` command like:
 
 ```shell
-module load Gdk-Pixbuf/2.42.10-GCCcore-12.2.0
+module load Gdk-Pixbuf/2.42.10-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Gdk-Pixbuf/2.42.10-GCCcore-12.2.0|x|x|x|x|x|x|x|x|
-|Gdk-Pixbuf/2.42.8-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
-|Gdk-Pixbuf/2.42.6-GCCcore-11.2.0|x|x|x|x|x|x|x|x|
-|Gdk-Pixbuf/2.42.6-GCCcore-10.3.0|x|x|x|x|x|x|x|x|
-|Gdk-Pixbuf/2.40.0-GCCcore-10.2.0|-|x|x|x|x|x|x|x|
-|Gdk-Pixbuf/2.38.2-GCCcore-8.3.0|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Gdk-Pixbuf/2.42.10-GCCcore-12.3.0|x|x|x|x|x|x|
+|Gdk-Pixbuf/2.42.10-GCCcore-12.2.0|x|x|x|x|x|x|
+|Gdk-Pixbuf/2.42.8-GCCcore-11.3.0|x|x|x|x|x|x|
+|Gdk-Pixbuf/2.42.6-GCCcore-11.2.0|x|x|x|x|x|x|
+|Gdk-Pixbuf/2.42.6-GCCcore-10.3.0|x|x|x|x|x|x|
+|Gdk-Pixbuf/2.40.0-GCCcore-10.2.0|x|x|x|x|x|x|
+|Gdk-Pixbuf/2.38.2-GCCcore-8.3.0|-|x|x|-|x|x|

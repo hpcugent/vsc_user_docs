@@ -6,6 +6,10 @@ hide:
 Sniffles
 ========
 
+
+A fast structural variant caller for long-read sequencing, Sniffles2 accurately detect SVs on germline, somatic and population-level for PacBio and Oxford Nanopore read data.
+
+https://github.com/fritzsedlazeck/Sniffles
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using Sniffles, load one of these modules using a `module load` command
 module load Sniffles/2.0.7-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Sniffles/2.0.7-GCC-11.3.0|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Sniffles/2.0.7-GCC-11.3.0|x|x|x|x|x|x|
+
+
+### Sniffles/2.0.7-GCC-11.3.0
+
+This is a list of extensions included in the module:
+
+Sniffles-2.0.7

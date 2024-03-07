@@ -6,6 +6,10 @@ hide:
 smooth-topk
 ===========
 
+
+Smooth Loss Functions for Deep Top-k Classification
+
+https://github.com/oval-group/smooth-topk
 # Available modules
 
 
@@ -17,9 +21,22 @@ To start using smooth-topk, load one of these modules using a `module load` comm
 module load smooth-topk/1.0-20210817-foss-2021a-CUDA-11.3.1
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|smooth-topk/1.0-20210817-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|-|-|
-|smooth-topk/1.0-20210817-foss-2021a|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|smooth-topk/1.0-20210817-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|
+|smooth-topk/1.0-20210817-foss-2021a|-|x|x|-|x|x|
+
+
+### smooth-topk/1.0-20210817-foss-2021a-CUDA-11.3.1
+
+This is a list of extensions included in the module:
+
+logger-1.4, smooth-topk-1.0-20210817
+
+### smooth-topk/1.0-20210817-foss-2021a
+
+This is a list of extensions included in the module:
+
+logger-1.4, smooth-topk-1.0-20210817

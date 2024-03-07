@@ -6,6 +6,10 @@ hide:
 MBROLA
 ======
 
+
+MBROLA is a speech synthesizer based on the concatenation of diphones.It takes a list of phonemes as input, together with prosodic information(duration of phonemes and a piecewise linear description of pitch),and produces speech samples on 16 bits (linear),at the sampling frequency of the diphone database.MBROLA voices project provides list of MBROLA speech synthesizer voices.It is intended to provide easier collaboration andautomatic updates for individual users and packagers.
+
+['https://github.com/numediart/MBROLA', 'https://github.com/numediart/MBROLA-voices']
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using MBROLA, load one of these modules using a `module load` command l
 module load MBROLA/3.3-GCCcore-9.3.0-voices-20200330
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MBROLA/3.3-GCCcore-9.3.0-voices-20200330|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MBROLA/3.3-GCCcore-9.3.0-voices-20200330|-|x|x|-|x|x|

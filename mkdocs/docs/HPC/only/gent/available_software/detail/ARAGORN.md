@@ -6,6 +6,10 @@ hide:
 ARAGORN
 =======
 
+
+a program to detect tRNA genes and tmRNA genes in nucleotide sequences
+
+http://mbio-serv2.mbioekol.lu.se/ARAGORN/
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using ARAGORN, load one of these modules using a `module load` command 
 module load ARAGORN/1.2.41-foss-2021b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ARAGORN/1.2.41-foss-2021b|x|x|x|-|x|x|x|x|
-|ARAGORN/1.2.38-iccifort-2019.5.281|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ARAGORN/1.2.41-foss-2021b|x|x|x|-|x|x|
+|ARAGORN/1.2.38-iccifort-2019.5.281|-|x|x|-|x|x|

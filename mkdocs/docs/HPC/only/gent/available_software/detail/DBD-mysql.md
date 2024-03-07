@@ -6,6 +6,10 @@ hide:
 DBD-mysql
 =========
 
+
+Perl binding for MySQL
+
+https://metacpan.org/pod/distribution/DBD-mysql/lib/DBD/mysql.pm
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using DBD-mysql, load one of these modules using a `module load` comman
 module load DBD-mysql/4.050-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DBD-mysql/4.050-GCC-11.3.0|x|x|x|x|x|x|x|x|
-|DBD-mysql/4.050-GCC-11.2.0|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DBD-mysql/4.050-GCC-11.3.0|x|x|x|x|x|x|
+|DBD-mysql/4.050-GCC-11.2.0|x|x|x|-|x|x|

@@ -6,6 +6,10 @@ hide:
 BEDTools
 ========
 
+
+BEDTools: a powerful toolset for genome arithmetic.The BEDTools utilities allow one to address common genomics tasks such as finding feature overlaps andcomputing coverage.The utilities are largely based on four widely-used file formats: BED, GFF/GTF, VCF, and SAM/BAM.
+
+https://bedtools.readthedocs.io/
 # Available modules
 
 
@@ -14,17 +18,18 @@ The overview below shows which BEDTools installations are available per HPC-UGen
 To start using BEDTools, load one of these modules using a `module load` command like:
 
 ```shell
-module load BEDTools/2.30.0-GCC-12.2.0
+module load BEDTools/2.31.0-GCC-12.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BEDTools/2.30.0-GCC-12.2.0|x|x|x|x|x|x|x|x|
-|BEDTools/2.30.0-GCC-11.3.0|x|x|x|x|x|x|x|x|
-|BEDTools/2.30.0-GCC-11.2.0|x|x|x|x|x|x|x|x|
-|BEDTools/2.30.0-GCC-10.2.0|-|x|x|x|x|x|x|x|
-|BEDTools/2.29.2-GCC-9.3.0|-|x|x|-|x|x|x|x|
-|BEDTools/2.29.2-GCC-8.3.0|-|x|x|-|x|x|x|x|
-|BEDTools/2.19.1-GCC-8.3.0|-|-|-|-|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BEDTools/2.31.0-GCC-12.3.0|x|x|x|x|x|x|
+|BEDTools/2.30.0-GCC-12.2.0|x|x|x|x|x|x|
+|BEDTools/2.30.0-GCC-11.3.0|x|x|x|x|x|x|
+|BEDTools/2.30.0-GCC-11.2.0|x|x|x|x|x|x|
+|BEDTools/2.30.0-GCC-10.2.0|-|x|x|x|x|x|
+|BEDTools/2.29.2-GCC-9.3.0|-|x|x|-|x|x|
+|BEDTools/2.29.2-GCC-8.3.0|-|x|x|-|x|x|
+|BEDTools/2.19.1-GCC-8.3.0|-|-|-|-|-|x|

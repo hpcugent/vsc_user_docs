@@ -6,6 +6,10 @@ hide:
 STREAM
 ======
 
+
+The STREAM benchmark is a simple synthetic benchmark program that measures sustainable memory bandwidth (in MB/s) and the corresponding computation rate for simple vector kernels.
+
+https://www.cs.virginia.edu/stream/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using STREAM, load one of these modules using a `module load` command l
 module load STREAM/5.10-GCC-9.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|STREAM/5.10-GCC-9.3.0|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|STREAM/5.10-GCC-9.3.0|-|x|x|-|x|x|

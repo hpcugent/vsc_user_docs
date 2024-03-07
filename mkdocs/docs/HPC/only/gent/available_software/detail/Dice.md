@@ -6,6 +6,10 @@ hide:
 Dice
 ====
 
+
+Dice contains code for performing SHCI, VMC, GFMC, DMC, FCIQMC, stochastic MRCIand SC-NEVPT2, and AFQMC calculations with a focus on ab initio systems.
+
+https://github.com/sanshar/Dice
 # Available modules
 
 
@@ -14,11 +18,12 @@ The overview below shows which Dice installations are available per HPC-UGent Ti
 To start using Dice, load one of these modules using a `module load` command like:
 
 ```shell
-module load Dice/20221025-foss-2022a
+module load Dice/20240101-foss-2022b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Dice/20221025-foss-2022a|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Dice/20240101-foss-2022b|x|x|x|x|x|x|
+|Dice/20221025-foss-2022a|-|x|x|x|x|x|

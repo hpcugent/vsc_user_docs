@@ -6,6 +6,10 @@ hide:
 iodata
 ======
 
+
+Python library for reading, writing, and converting computational chemistry file formats and generating input files.
+
+https://github.com/theochem/iodata
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using iodata, load one of these modules using a `module load` command l
 module load iodata/1.0.0a2-intel-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|iodata/1.0.0a2-intel-2022a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|iodata/1.0.0a2-intel-2022a|x|x|x|x|x|x|

@@ -6,6 +6,10 @@ hide:
 file
 ====
 
+
+The file command is 'a file type guesser', that is, a command-line tool that tells you in words what kind of data a file contains.
+
+https://www.darwinsys.com/file/
 # Available modules
 
 
@@ -17,12 +21,12 @@ To start using file, load one of these modules using a `module load` command lik
 module load file/5.43-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|file/5.43-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
-|file/5.41-GCCcore-11.2.0|x|x|x|x|x|x|x|x|
-|file/5.39-GCCcore-10.2.0|-|x|x|x|x|x|x|x|
-|file/5.38-GCCcore-9.3.0|-|x|x|-|x|x|x|x|
-|file/5.38-GCCcore-8.3.0|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|file/5.43-GCCcore-11.3.0|x|x|x|x|x|x|
+|file/5.41-GCCcore-11.2.0|x|x|x|x|x|x|
+|file/5.39-GCCcore-10.2.0|-|x|x|x|x|x|
+|file/5.38-GCCcore-9.3.0|-|x|x|-|x|x|
+|file/5.38-GCCcore-8.3.0|-|x|x|-|x|x|

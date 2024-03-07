@@ -6,6 +6,10 @@ hide:
 Qt5
 ===
 
+
+Qt is a comprehensive cross-platform C++ application framework.
+
+https://qt.io/
 # Available modules
 
 
@@ -14,17 +18,18 @@ The overview below shows which Qt5 installations are available per HPC-UGent Tie
 To start using Qt5, load one of these modules using a `module load` command like:
 
 ```shell
-module load Qt5/5.15.7-GCCcore-12.2.0
+module load Qt5/5.15.10-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Qt5/5.15.7-GCCcore-12.2.0|x|x|x|x|x|x|x|x|
-|Qt5/5.15.5-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
-|Qt5/5.15.2-GCCcore-11.2.0|x|x|x|x|x|x|x|x|
-|Qt5/5.15.2-GCCcore-10.3.0|x|x|x|x|x|x|x|x|
-|Qt5/5.14.2-GCCcore-10.2.0|x|x|x|x|x|x|x|x|
-|Qt5/5.14.1-GCCcore-9.3.0|-|x|x|-|x|x|x|x|
-|Qt5/5.13.1-GCCcore-8.3.0|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Qt5/5.15.10-GCCcore-12.3.0|x|x|x|x|x|x|
+|Qt5/5.15.7-GCCcore-12.2.0|x|x|x|x|x|x|
+|Qt5/5.15.5-GCCcore-11.3.0|x|x|x|x|x|x|
+|Qt5/5.15.2-GCCcore-11.2.0|x|x|x|x|x|x|
+|Qt5/5.15.2-GCCcore-10.3.0|x|x|x|x|x|x|
+|Qt5/5.14.2-GCCcore-10.2.0|x|x|x|x|x|x|
+|Qt5/5.14.1-GCCcore-9.3.0|-|x|x|-|x|x|
+|Qt5/5.13.1-GCCcore-8.3.0|x|x|x|-|x|x|

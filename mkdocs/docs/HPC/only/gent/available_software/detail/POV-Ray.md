@@ -6,6 +6,10 @@ hide:
 POV-Ray
 =======
 
+
+The Persistence of Vision Raytracer, or POV-Ray, is a ray tracing program which generates images from a text-based scene description, and is available for a variety of computer platforms. POV-Ray is a high-quality, Free Software tool for creating stunning three-dimensional graphics. The source code is available for those wanting to do their own ports.
+
+https://www.povray.org/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using POV-Ray, load one of these modules using a `module load` command 
 module load POV-Ray/3.7.0.8-GCC-10.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|POV-Ray/3.7.0.8-GCC-10.2.0|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|POV-Ray/3.7.0.8-GCC-10.2.0|-|x|x|x|x|x|

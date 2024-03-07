@@ -6,6 +6,10 @@ hide:
 KrakenUniq
 ==========
 
+
+KrakenUniq: confident and fast metagenomics classification using unique k-mer counts
+
+https://github.com/fbreitwieser/krakenuniq/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using KrakenUniq, load one of these modules using a `module load` comma
 module load KrakenUniq/1.0.3-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|KrakenUniq/1.0.3-GCC-11.3.0|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|KrakenUniq/1.0.3-GCC-11.3.0|x|x|x|x|x|x|

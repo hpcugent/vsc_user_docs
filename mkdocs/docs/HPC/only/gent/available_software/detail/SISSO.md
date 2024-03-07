@@ -6,6 +6,10 @@ hide:
 SISSO
 =====
 
+
+A data-driven method combining symbolic regression and compressed sensing toward accurate & interpretable models.
+
+https://github.com/rouyang2017/SISSO
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using SISSO, load one of these modules using a `module load` command li
 module load SISSO/3.1-20220324-iimpi-2021b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SISSO/3.1-20220324-iimpi-2021b|x|x|x|-|x|x|x|x|
-|SISSO/3.0.2-iimpi-2021b|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SISSO/3.1-20220324-iimpi-2021b|x|x|x|-|x|x|
+|SISSO/3.0.2-iimpi-2021b|x|x|x|-|x|x|

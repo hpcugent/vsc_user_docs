@@ -6,6 +6,10 @@ hide:
 CONCOCT
 =======
 
+
+Clustering cONtigs with COverage and ComposiTion (CONCOCT) is aprogram for unsupervised binning of metagenomic contigs by using nucleotidecomposition, coverage data in multiple samples and linkage data from paired endreads.
+
+https://concoct.readthedocs.io
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using CONCOCT, load one of these modules using a `module load` command 
 module load CONCOCT/1.1.0-foss-2020b-Python-2.7.18
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CONCOCT/1.1.0-foss-2020b-Python-2.7.18|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CONCOCT/1.1.0-foss-2020b-Python-2.7.18|-|x|x|x|x|x|

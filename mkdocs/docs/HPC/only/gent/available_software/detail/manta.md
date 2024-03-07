@@ -6,6 +6,10 @@ hide:
 manta
 =====
 
+
+Manta calls structural variants (SVs) and indels from mapped paired-end sequencing reads.It is optimized for analysis of germline variation in small sets of individuals andsomatic variation in tumor/normal sample pairs. Manta discovers, assembles andscores large-scale SVs, medium-sized indels and large insertions within asingle efficient workflow.
+
+https://github.com/Illumina/manta
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using manta, load one of these modules using a `module load` command li
 module load manta/1.6.0-gompi-2020a-Python-2.7.18
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|manta/1.6.0-gompi-2020a-Python-2.7.18|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|manta/1.6.0-gompi-2020a-Python-2.7.18|-|x|x|-|x|x|

@@ -6,6 +6,10 @@ hide:
 Trim_Galore
 ===========
 
+
+Trim Galore is a wrapper around Cutadapt and FastQC toconsistently apply adapter and quality trimming to FastQ files, with extrafunctionality for RRBS data.
+
+https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
 # Available modules
 
 
@@ -17,10 +21,10 @@ To start using Trim_Galore, load one of these modules using a `module load` comm
 module load Trim_Galore/0.6.6-GCC-10.2.0-Python-2.7.18
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Trim_Galore/0.6.6-GCC-10.2.0-Python-2.7.18|-|x|x|x|x|x|x|x|
-|Trim_Galore/0.6.5-GCCcore-8.3.0-Java-11-Python-3.7.4|-|x|x|-|x|x|-|x|
-|Trim_Galore/0.6.5-GCCcore-8.3.0-Java-11-Python-2.7.16|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Trim_Galore/0.6.6-GCC-10.2.0-Python-2.7.18|-|x|x|x|x|x|
+|Trim_Galore/0.6.5-GCCcore-8.3.0-Java-11-Python-3.7.4|-|x|x|-|x|x|
+|Trim_Galore/0.6.5-GCCcore-8.3.0-Java-11-Python-2.7.16|-|x|x|-|x|x|

@@ -6,6 +6,10 @@ hide:
 DIANA
 =====
 
+
+DIANA (DIsplacement ANAlyzer) is an extensive multi-purpose finite element software package that is dedicated, but not exclusive, to a wide range of problems arising in Civil engineering including structural, geotechnical, tunnelling, earthquake disciplines and oil & gas engineering.
+
+https://dianafea.com/content/diana
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using DIANA, load one of these modules using a `module load` command li
 module load DIANA/10.5
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DIANA/10.5|-|x|x|-|x|-|x|-|
-|DIANA/10.4|-|-|x|-|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DIANA/10.5|-|x|x|-|x|-|
+|DIANA/10.4|-|-|x|-|x|-|

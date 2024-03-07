@@ -6,6 +6,10 @@ hide:
 MetaPhlAn
 =========
 
+
+MetaPhlAn is a computational tool for profiling the composition of microbial communities from metagenomic shotgun sequencing data
+
+https://github.com/biobakery/MetaPhlAn
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using MetaPhlAn, load one of these modules using a `module load` comman
 module load MetaPhlAn/4.0.6-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MetaPhlAn/4.0.6-foss-2022a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MetaPhlAn/4.0.6-foss-2022a|x|x|x|x|x|x|
+
+
+### MetaPhlAn/4.0.6-foss-2022a
+
+This is a list of extensions included in the module:
+
+hclust2-1.0.0, MetaPhlAn-4.0.6

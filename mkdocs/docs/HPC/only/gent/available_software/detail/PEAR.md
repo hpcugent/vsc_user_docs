@@ -6,6 +6,10 @@ hide:
 PEAR
 ====
 
+
+PEAR is an ultrafast, memory-efficient and highly accurate pair-end read merger.  It is fully parallelized and can run with as low as just a few kilobytes of memory.
+
+https://cme.h-its.org/exelixis/web/software/pear/
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using PEAR, load one of these modules using a `module load` command lik
 module load PEAR/0.9.11-GCCcore-9.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PEAR/0.9.11-GCCcore-9.3.0|-|x|x|-|x|x|x|x|
-|PEAR/0.9.11-GCC-11.3.0|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PEAR/0.9.11-GCCcore-9.3.0|-|x|x|-|x|x|
+|PEAR/0.9.11-GCC-11.3.0|x|x|x|x|x|x|

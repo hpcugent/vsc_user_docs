@@ -6,6 +6,10 @@ hide:
 MinPath
 =======
 
+
+MinPath (Minimal set of Pathways) is a parsimony approach for biological pathway reconstructions using protein family predictions, achieving a more conservative, yet more faithful, estimation of the biological pathways for a query dataset.
+
+https://omics.informatics.indiana.edu/MinPath
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using MinPath, load one of these modules using a `module load` command 
 module load MinPath/1.6-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MinPath/1.6-GCCcore-11.2.0|x|x|x|-|x|x|x|x|
-|MinPath/1.4-intel-2019b-Python-2.7.16|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MinPath/1.6-GCCcore-11.2.0|x|x|x|-|x|x|
+|MinPath/1.4-intel-2019b-Python-2.7.16|-|x|x|-|x|x|

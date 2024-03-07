@@ -6,6 +6,10 @@ hide:
 XCrySDen
 ========
 
+
+XCrySDen is a crystalline and molecular structure visualisation program aiming at display of isosurfacesand contours, which can be superimposed on crystalline structures and interactively rotated and manipulated.It also possesses some tools for analysis of properties in reciprocal space such as interactive selectionof k-paths in the Brillouin zone for the band-structure plots, and visualisation of Fermi surfaces.
+
+http://www.xcrysden.org/
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using XCrySDen, load one of these modules using a `module load` command
 module load XCrySDen/1.6.2-intel-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|XCrySDen/1.6.2-intel-2022a|x|x|x|-|x|x|x|x|
-|XCrySDen/1.6.2-foss-2022a|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|XCrySDen/1.6.2-intel-2022a|x|x|x|-|x|x|
+|XCrySDen/1.6.2-foss-2022a|x|x|x|-|x|x|

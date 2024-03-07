@@ -6,6 +6,10 @@ hide:
 NanoStat
 ========
 
+
+Calculate various statistics from a long read sequencing dataset in fastq, bam or albacore sequencing summary format.
+
+https://github.com/wdecoster/nanostat
 # Available modules
 
 
@@ -17,9 +21,22 @@ To start using NanoStat, load one of these modules using a `module load` command
 module load NanoStat/1.6.0-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NanoStat/1.6.0-foss-2022a|x|x|x|x|x|x|x|x|
-|NanoStat/1.6.0-foss-2021a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NanoStat/1.6.0-foss-2022a|x|x|x|x|x|x|
+|NanoStat/1.6.0-foss-2021a|x|x|x|x|x|x|
+
+
+### NanoStat/1.6.0-foss-2022a
+
+This is a list of extensions included in the module:
+
+NanoStat-1.6.0
+
+### NanoStat/1.6.0-foss-2021a
+
+This is a list of extensions included in the module:
+
+NanoStat-1.6.0

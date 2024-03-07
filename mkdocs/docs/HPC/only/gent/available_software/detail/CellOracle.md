@@ -6,6 +6,10 @@ hide:
 CellOracle
 ==========
 
+
+CellOracle is a Python library for in silico gene perturbation analyses using single-cell omics dataand Gene Regulatory Network models.
+
+https://github.com/morris-lab/CellOracle
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using CellOracle, load one of these modules using a `module load` comma
 module load CellOracle/0.12.0-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CellOracle/0.12.0-foss-2022a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CellOracle/0.12.0-foss-2022a|x|x|x|x|x|x|
+
+
+### CellOracle/0.12.0-foss-2022a
+
+This is a list of extensions included in the module:
+
+celloracle-0.12.0, jupyter-1.0.0, jupyter-console-6.4.4

@@ -6,6 +6,10 @@ hide:
 Filtlong
 ========
 
+
+Filtlong is a tool for filtering long reads by quality. It can take a set of long reads and produce a smaller, better subset. It uses both read length (longer is better) and read identity (higher is better) when choosing which reads pass the filter
+
+https://github.com/rrwick/Filtlong
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using Filtlong, load one of these modules using a `module load` command
 module load Filtlong/0.2.0-GCC-10.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Filtlong/0.2.0-GCC-10.2.0|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Filtlong/0.2.0-GCC-10.2.0|-|x|x|x|x|x|

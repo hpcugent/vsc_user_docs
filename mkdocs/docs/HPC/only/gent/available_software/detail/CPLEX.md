@@ -6,6 +6,10 @@ hide:
 CPLEX
 =====
 
+
+IBM ILOG CPLEX Optimizer's mathematical programming technology enables analytical decision support for improving efficiency, reducing costs, and increasing profitability.
+
+https://www.ibm.com/analytics/cplex-optimizer
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using CPLEX, load one of these modules using a `module load` command li
 module load CPLEX/12.10-GCCcore-8.3.0-Python-3.7.4
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CPLEX/12.10-GCCcore-8.3.0-Python-3.7.4|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CPLEX/12.10-GCCcore-8.3.0-Python-3.7.4|x|x|x|x|x|x|

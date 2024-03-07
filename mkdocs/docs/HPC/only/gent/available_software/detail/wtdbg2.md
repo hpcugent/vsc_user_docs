@@ -6,6 +6,10 @@ hide:
 wtdbg2
 ======
 
+
+Wtdbg2 is a de novo sequence assembler for long noisy reads produced by PacBio or Oxford Nanopore Technologies (ONT). It assembles raw reads without error correction and then builds the consensus from intermediate assembly output.
+
+https://github.com/ruanjue/wtdbg2
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using wtdbg2, load one of these modules using a `module load` command l
 module load wtdbg2/2.5-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|wtdbg2/2.5-GCCcore-11.2.0|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|wtdbg2/2.5-GCCcore-11.2.0|x|x|x|-|x|x|

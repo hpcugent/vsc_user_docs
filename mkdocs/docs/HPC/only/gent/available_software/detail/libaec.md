@@ -6,6 +6,10 @@ hide:
 libaec
 ======
 
+
+Libaec provides fast lossless compression of 1 up to 32 bit wide signed or unsigned integers(samples). The library achieves best results for low entropy data as often encountered in space imaginginstrument data or numerical model output from weather or climate simulations. While floating point representationsare not directly supported, they can also be efficiently coded by grouping exponents and mantissa.
+
+https://gitlab.dkrz.de/k202009/libaec
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using libaec, load one of these modules using a `module load` command l
 module load libaec/1.0.6-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libaec/1.0.6-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libaec/1.0.6-GCCcore-11.3.0|x|x|x|x|x|x|

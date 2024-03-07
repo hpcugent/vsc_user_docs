@@ -6,6 +6,10 @@ hide:
 Blender
 =======
 
+
+Blender is the free and open source 3D creation suite. It supports the entirety of the 3D pipeline-modeling, rigging, animation, simulation, rendering, compositing and motion tracking, even video editing and game creation.
+
+https://www.blender.org/
 # Available modules
 
 
@@ -17,12 +21,12 @@ To start using Blender, load one of these modules using a `module load` command 
 module load Blender/3.5.0-linux-x86_64-CUDA-11.7.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Blender/3.5.0-linux-x86_64-CUDA-11.7.0|x|x|x|x|x|x|x|x|
-|Blender/3.3.1-linux-x86_64-CUDA-11.7.0|x|-|-|-|x|-|-|-|
-|Blender/3.3.1-linux-x86_64|x|x|x|-|x|x|x|x|
-|Blender/2.81-intel-2019b-Python-3.7.4|-|x|x|-|x|x|-|x|
-|Blender/2.81-foss-2019b-Python-3.7.4|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Blender/3.5.0-linux-x86_64-CUDA-11.7.0|x|x|x|x|x|x|
+|Blender/3.3.1-linux-x86_64-CUDA-11.7.0|x|-|-|-|x|-|
+|Blender/3.3.1-linux-x86_64|x|x|x|-|x|x|
+|Blender/2.81-intel-2019b-Python-3.7.4|-|x|x|-|x|x|
+|Blender/2.81-foss-2019b-Python-3.7.4|-|x|x|-|x|x|

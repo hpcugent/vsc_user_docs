@@ -6,6 +6,10 @@ hide:
 Trinity
 =======
 
+
+Trinity represents a novel method for the efficient and robust de novo reconstruction of transcriptomes from RNA-Seq data. Trinity combines three independent software modules: Inchworm, Chrysalis, and Butterfly, applied sequentially to process large volumes of RNA-Seq reads.
+
+https://trinityrnaseq.github.io
 # Available modules
 
 
@@ -17,11 +21,11 @@ To start using Trinity, load one of these modules using a `module load` command 
 module load Trinity/2.15.1-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Trinity/2.15.1-foss-2022a|x|x|x|x|x|x|x|x|
-|Trinity/2.10.0-foss-2019b-Python-3.7.4|-|x|x|-|x|x|-|x|
-|Trinity/2.9.1-foss-2019b-Python-2.7.16|-|x|x|-|x|x|-|x|
-|Trinity/2.8.5-GCC-8.3.0-Java-11|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Trinity/2.15.1-foss-2022a|x|x|x|x|x|x|
+|Trinity/2.10.0-foss-2019b-Python-3.7.4|-|x|x|-|x|x|
+|Trinity/2.9.1-foss-2019b-Python-2.7.16|-|x|x|-|x|x|
+|Trinity/2.8.5-GCC-8.3.0-Java-11|-|x|x|-|x|x|

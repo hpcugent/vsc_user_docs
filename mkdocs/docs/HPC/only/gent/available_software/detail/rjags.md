@@ -6,6 +6,10 @@ hide:
 rjags
 =====
 
+
+The rjags package is an interface to the JAGS library.
+
+https://cran.r-project.org/web/packages/rjags
 # Available modules
 
 
@@ -17,10 +21,10 @@ To start using rjags, load one of these modules using a `module load` command li
 module load rjags/4-13-foss-2022a-R-4.2.1
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rjags/4-13-foss-2022a-R-4.2.1|x|x|x|x|x|x|x|x|
-|rjags/4-13-foss-2021b-R-4.2.0|x|x|x|-|x|x|x|x|
-|rjags/4-10-foss-2020b-R-4.0.3|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|rjags/4-13-foss-2022a-R-4.2.1|x|x|x|x|x|x|
+|rjags/4-13-foss-2021b-R-4.2.0|x|x|x|-|x|x|
+|rjags/4-10-foss-2020b-R-4.0.3|x|x|x|x|x|x|

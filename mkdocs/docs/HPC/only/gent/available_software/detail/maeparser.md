@@ -6,6 +6,10 @@ hide:
 maeparser
 =========
 
+
+maeparser is a parser for Schrodinger Maestro files.
+
+https://github.com/schrodinger/maeparser
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using maeparser, load one of these modules using a `module load` comman
 module load maeparser/1.3.0-iimpi-2020a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|maeparser/1.3.0-iimpi-2020a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|maeparser/1.3.0-iimpi-2020a|x|x|x|x|x|x|

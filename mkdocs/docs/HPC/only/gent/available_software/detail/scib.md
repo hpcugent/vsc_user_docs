@@ -6,6 +6,10 @@ hide:
 scib
 ====
 
+
+Benchmarking atlas-level data integration in single-cell genomics.
+
+https://github.com/theislab/scib
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using scib, load one of these modules using a `module load` command lik
 module load scib/1.1.3-foss-2021a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scib/1.1.3-foss-2021a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|scib/1.1.3-foss-2021a|x|x|x|x|x|x|

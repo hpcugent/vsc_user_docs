@@ -6,6 +6,10 @@ hide:
 GATB-Core
 =========
 
+
+GATB-Core is a high-performance and low memory footprint C++ library that provides a set of highly efficient algorithms to analyse NGS data sets
+
+https://gatb.inria.fr/software/gatb-core
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using GATB-Core, load one of these modules using a `module load` comman
 module load GATB-Core/1.4.2-gompi-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GATB-Core/1.4.2-gompi-2022a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GATB-Core/1.4.2-gompi-2022a|x|x|x|x|x|x|

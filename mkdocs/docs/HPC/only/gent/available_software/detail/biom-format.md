@@ -6,6 +6,10 @@ hide:
 biom-format
 ===========
 
+
+The BIOM file format (canonically pronounced biome) is designed to be a general-use format for representing biological sample by observation contingency tables. BIOM is a recognized standard for the Earth Microbiome Project and is a Genomics Standards Consortium supported project.
+
+https://biom-format.org
 # Available modules
 
 
@@ -17,10 +21,10 @@ To start using biom-format, load one of these modules using a `module load` comm
 module load biom-format/2.1.15-foss-2022b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|biom-format/2.1.15-foss-2022b|x|x|x|x|x|x|x|x|
-|biom-format/2.1.14-foss-2022a|x|x|x|x|x|x|x|x|
-|biom-format/2.1.12-foss-2021b|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|biom-format/2.1.15-foss-2022b|x|x|x|x|x|x|
+|biom-format/2.1.14-foss-2022a|x|x|x|x|x|x|
+|biom-format/2.1.12-foss-2021b|x|x|x|-|x|x|

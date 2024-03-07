@@ -6,6 +6,10 @@ hide:
 g2lib
 =====
 
+
+Library contains GRIB2 encoder/decoder and search/indexing routines.
+
+https://www.nco.ncep.noaa.gov/pmb/codes/GRIB2/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using g2lib, load one of these modules using a `module load` command li
 module load g2lib/3.1.0-GCCcore-8.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|g2lib/3.1.0-GCCcore-8.3.0|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|g2lib/3.1.0-GCCcore-8.3.0|-|x|x|-|x|x|

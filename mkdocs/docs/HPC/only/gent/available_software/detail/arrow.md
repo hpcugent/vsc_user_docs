@@ -6,6 +6,10 @@ hide:
 arrow
 =====
 
+
+R interface to the Apache Arrow C++ library
+
+https://cran.r-project.org/web/packages/arrow
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using arrow, load one of these modules using a `module load` command li
 module load arrow/0.17.1-foss-2020a-R-4.0.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|arrow/0.17.1-foss-2020a-R-4.0.0|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|arrow/0.17.1-foss-2020a-R-4.0.0|-|x|x|-|x|x|

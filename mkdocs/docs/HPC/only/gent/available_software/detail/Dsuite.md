@@ -6,6 +6,10 @@ hide:
 Dsuite
 ======
 
+
+Fast calculation of the ABBA-BABA statistics across many populations/species
+
+https://github.com/millanek/Dsuite
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using Dsuite, load one of these modules using a `module load` command l
 module load Dsuite/20210718-intel-compilers-2021.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Dsuite/20210718-intel-compilers-2021.2.0|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Dsuite/20210718-intel-compilers-2021.2.0|-|x|x|-|x|x|

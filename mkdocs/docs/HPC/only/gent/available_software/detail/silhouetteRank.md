@@ -6,6 +6,10 @@ hide:
 silhouetteRank
 ==============
 
+
+silhouetteRank is a tool for finding spatially variable genes based on computing silhouette coefficient from binarized spatial gene expression data
+
+https://pypi.org/project/silhouetteRank
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using silhouetteRank, load one of these modules using a `module load` c
 module load silhouetteRank/1.0.5.13-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|silhouetteRank/1.0.5.13-foss-2022a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|silhouetteRank/1.0.5.13-foss-2022a|x|x|x|x|x|x|

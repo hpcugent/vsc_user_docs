@@ -6,6 +6,10 @@ hide:
 DualSPHysics
 ============
 
+
+DualSPHysics is based on the Smoothed Particle Hydrodynamics model named SPHysics. The code is developed to study free-surface flow phenomena where Eulerian methods can be difficult to apply, such as waves or impact of dam-breaks on off-shore structures. DualSPHysics is a set of C++, CUDA and Java codes designed to deal with real-life engineering problems.
+
+https://dual.sphysics.org/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using DualSPHysics, load one of these modules using a `module load` com
 module load DualSPHysics/5.0.175-GCC-11.2.0-CUDA-11.4.1
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DualSPHysics/5.0.175-GCC-11.2.0-CUDA-11.4.1|x|-|-|-|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DualSPHysics/5.0.175-GCC-11.2.0-CUDA-11.4.1|x|-|-|-|x|-|

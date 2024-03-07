@@ -6,6 +6,10 @@ hide:
 Bio-DB-HTS
 ==========
 
+
+Read files using HTSlib including BAM/CRAM, Tabix and BCF database files
+
+https://metacpan.org/release/Bio-DB-HTS
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using Bio-DB-HTS, load one of these modules using a `module load` comma
 module load Bio-DB-HTS/3.01-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Bio-DB-HTS/3.01-GCC-11.3.0|x|x|x|-|x|x|x|x|
-|Bio-DB-HTS/3.01-GCC-11.2.0|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Bio-DB-HTS/3.01-GCC-11.3.0|x|x|x|-|x|x|
+|Bio-DB-HTS/3.01-GCC-11.2.0|x|x|x|-|x|x|

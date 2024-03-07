@@ -6,6 +6,10 @@ hide:
 RStudio-Server
 ==============
 
+
+This is the RStudio Server version.RStudio is a set of integrated tools designed to help you be more productive with R.The server can be started with:  rserver --server-daemonize=0 --www-port 8787 --rsession-which-r=$(which R)
+
+https://www.rstudio.com/
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using RStudio-Server, load one of these modules using a `module load` c
 module load RStudio-Server/2022.02.0-443-rhel-x86_64
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RStudio-Server/2022.02.0-443-rhel-x86_64|x|x|x|x|x|-|x|x|
-|RStudio-Server/1.3.959-foss-2020a-Java-11-R-4.0.0|-|-|-|-|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RStudio-Server/2022.02.0-443-rhel-x86_64|x|x|x|x|x|-|
+|RStudio-Server/1.3.959-foss-2020a-Java-11-R-4.0.0|-|-|-|-|-|x|

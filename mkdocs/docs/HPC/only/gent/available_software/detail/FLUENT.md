@@ -6,6 +6,10 @@ hide:
 FLUENT
 ======
 
+
+ANSYS FLUENT software contains the broad physical modeling capabilities neededto model flow, turbulence, heat transfer, and reactions for industrial applications ranging fromair flow over an aircraft wing to combustion in a furnace, from bubble columns to oil platforms,from blood flow to semiconductor manufacturing, and from clean room design to wastewater treatment plants.
+
+https://www.ansys.com/products/fluids/ansys-fluent
 # Available modules
 
 
@@ -17,11 +21,11 @@ To start using FLUENT, load one of these modules using a `module load` command l
 module load FLUENT/2023R1
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FLUENT/2023R1|x|x|x|x|x|x|x|x|
-|FLUENT/2022R1|-|x|x|-|x|x|x|x|
-|FLUENT/2021R2|-|x|x|x|x|x|x|x|
-|FLUENT/2019R3|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FLUENT/2023R1|x|x|x|x|x|x|
+|FLUENT/2022R1|-|x|x|-|x|x|
+|FLUENT/2021R2|x|x|x|x|x|x|
+|FLUENT/2019R3|-|x|x|-|x|x|

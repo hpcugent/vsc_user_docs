@@ -6,6 +6,10 @@ hide:
 CPC2
 ====
 
+
+a fast and accurate coding potential calculator based on sequence intrinsic features
+
+http://cpc2.gao-lab.org/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using CPC2, load one of these modules using a `module load` command lik
 module load CPC2/1.0.1-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CPC2/1.0.1-foss-2022a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CPC2/1.0.1-foss-2022a|x|x|x|x|x|x|

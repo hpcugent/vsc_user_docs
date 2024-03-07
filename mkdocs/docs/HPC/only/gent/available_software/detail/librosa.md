@@ -6,6 +6,10 @@ hide:
 librosa
 =======
 
+
+Python module for audio and music processing
+
+https://librosa.github.io
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using librosa, load one of these modules using a `module load` command 
 module load librosa/0.7.2-foss-2019b-Python-3.7.4
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|librosa/0.7.2-foss-2019b-Python-3.7.4|-|-|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|librosa/0.7.2-foss-2019b-Python-3.7.4|-|-|x|-|x|x|
+
+
+### librosa/0.7.2-foss-2019b-Python-3.7.4
+
+This is a list of extensions included in the module:
+
+audioread-2.1.8, librosa-0.7.2, resampy-0.2.2, SoundFile-0.10.3.post1

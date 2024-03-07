@@ -6,6 +6,10 @@ hide:
 waves2Foam
 ==========
 
+
+The library waves2Foam is a toolbox used to generate and absorb free surface water waves.
+
+https://openfoamwiki.net/index.php/Contrib/waves2Foam
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using waves2Foam, load one of these modules using a `module load` comma
 module load waves2Foam/20200703-foss-2019b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|waves2Foam/20200703-foss-2019b|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|waves2Foam/20200703-foss-2019b|-|x|x|-|x|x|

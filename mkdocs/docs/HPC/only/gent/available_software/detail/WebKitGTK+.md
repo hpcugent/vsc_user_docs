@@ -6,6 +6,10 @@ hide:
 WebKitGTK+
 ==========
 
+
+WebKitGTK+ is a full-featured port of the WebKitrendering engine, suitable for projects requiring any kind of webintegration, from hybrid HTML/CSS applications to full-fledged webbrowsers. It offers WebKit's full functionality and is useful in a widerange of systems from desktop computers to embedded systems like phones,tablets, and televisions.
+
+https://webkitgtk.org/
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using WebKitGTK+, load one of these modules using a `module load` comma
 module load WebKitGTK+/2.37.1-GCC-11.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|WebKitGTK+/2.37.1-GCC-11.2.0|x|x|x|x|x|x|x|x|
-|WebKitGTK+/2.27.4-GCC-10.3.0|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|WebKitGTK+/2.37.1-GCC-11.2.0|x|x|x|x|x|x|
+|WebKitGTK+/2.27.4-GCC-10.3.0|x|x|x|-|x|x|

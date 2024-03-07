@@ -6,6 +6,10 @@ hide:
 libtool
 =======
 
+
+GNU libtool is a generic library support script. Libtool hides the complexity of using shared libraries behind a consistent, portable interface.
+
+http://www.gnu.org/software/libtool
 # Available modules
 
 
@@ -14,20 +18,21 @@ The overview below shows which libtool installations are available per HPC-UGent
 To start using libtool, load one of these modules using a `module load` command like:
 
 ```shell
-module load libtool/2.4.7-GCCcore-12.3.0
+module load libtool/2.4.7-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libtool/2.4.7-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|libtool/2.4.7-GCCcore-12.2.0|x|x|x|x|x|x|x|x|
-|libtool/2.4.7-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
-|libtool/2.4.7|x|x|x|x|x|x|x|x|
-|libtool/2.4.6-GCCcore-11.2.0|x|x|x|x|x|x|x|x|
-|libtool/2.4.6-GCCcore-10.3.0|x|x|x|x|x|x|x|x|
-|libtool/2.4.6-GCCcore-10.2.0|x|x|x|x|x|x|x|x|
-|libtool/2.4.6-GCCcore-9.3.0|x|x|x|x|x|x|x|x|
-|libtool/2.4.6-GCCcore-8.3.0|x|x|x|x|x|x|x|x|
-|libtool/2.4.6-GCCcore-8.2.0|-|x|-|-|-|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libtool/2.4.7-GCCcore-13.2.0|x|x|x|x|x|x|
+|libtool/2.4.7-GCCcore-12.3.0|x|x|x|x|x|x|
+|libtool/2.4.7-GCCcore-12.2.0|x|x|x|x|x|x|
+|libtool/2.4.7-GCCcore-11.3.0|x|x|x|x|x|x|
+|libtool/2.4.7|x|x|x|x|x|x|
+|libtool/2.4.6-GCCcore-11.2.0|x|x|x|x|x|x|
+|libtool/2.4.6-GCCcore-10.3.0|x|x|x|x|x|x|
+|libtool/2.4.6-GCCcore-10.2.0|x|x|x|x|x|x|
+|libtool/2.4.6-GCCcore-9.3.0|x|x|x|x|x|x|
+|libtool/2.4.6-GCCcore-8.3.0|x|x|x|x|x|x|
+|libtool/2.4.6-GCCcore-8.2.0|-|x|-|-|-|-|

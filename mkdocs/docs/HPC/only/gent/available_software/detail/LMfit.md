@@ -6,6 +6,10 @@ hide:
 LMfit
 =====
 
+
+Lmfit provides a high-level interface to non-linear optimization and curve fitting problems for Python
+
+https://lmfit.github.io/lmfit-py
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using LMfit, load one of these modules using a `module load` command li
 module load LMfit/1.0.0-intel-2019b-Python-3.7.4
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LMfit/1.0.0-intel-2019b-Python-3.7.4|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LMfit/1.0.0-intel-2019b-Python-3.7.4|-|x|x|-|x|x|
+
+
+### LMfit/1.0.0-intel-2019b-Python-3.7.4
+
+This is a list of extensions included in the module:
+
+asteval-0.9.18, lmfit-1.0.0, uncertainties-3.1.2

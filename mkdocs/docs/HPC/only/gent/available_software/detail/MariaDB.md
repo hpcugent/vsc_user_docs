@@ -6,6 +6,10 @@ hide:
 MariaDB
 =======
 
+
+MariaDB is an enhanced, drop-in replacement for MySQL.Included engines: myISAM, Aria, InnoDB, RocksDB, TokuDB, OQGraph, Mroonga.
+
+https://mariadb.org/
 # Available modules
 
 
@@ -17,12 +21,12 @@ To start using MariaDB, load one of these modules using a `module load` command 
 module load MariaDB/10.9.3-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MariaDB/10.9.3-GCC-11.3.0|x|x|x|x|x|x|x|x|
-|MariaDB/10.6.4-GCC-11.2.0|x|x|x|-|x|x|x|x|
-|MariaDB/10.6.4-GCC-10.3.0|x|x|x|-|x|x|x|x|
-|MariaDB/10.5.8-GCC-10.2.0|-|x|x|x|x|x|x|x|
-|MariaDB/10.4.13-gompi-2019b|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MariaDB/10.9.3-GCC-11.3.0|x|x|x|x|x|x|
+|MariaDB/10.6.4-GCC-11.2.0|x|x|x|x|x|x|
+|MariaDB/10.6.4-GCC-10.3.0|x|x|x|-|x|x|
+|MariaDB/10.5.8-GCC-10.2.0|-|x|x|x|x|x|
+|MariaDB/10.4.13-gompi-2019b|-|x|x|-|x|x|

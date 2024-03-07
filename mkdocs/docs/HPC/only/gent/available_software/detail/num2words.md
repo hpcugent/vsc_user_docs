@@ -6,6 +6,10 @@ hide:
 num2words
 =========
 
+
+Modules to convert numbers to words. 42 --> forty-two
+
+https://github.com/savoirfairelinux/num2words
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using num2words, load one of these modules using a `module load` comman
 module load num2words/0.5.10-GCCcore-10.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|num2words/0.5.10-GCCcore-10.3.0|x|-|-|-|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|num2words/0.5.10-GCCcore-10.3.0|x|-|-|-|x|-|

@@ -6,6 +6,10 @@ hide:
 Stacks
 ======
 
+
+Stacks is a software pipeline for building loci from short-read sequences, such as those generated on the Illumina platform. Stacks was developed to work with restriction enzyme-based data, such as RAD-seq, for the purpose of building genetic maps and conducting population genomics and phylogeography.
+
+http://catchenlab.life.illinois.edu/stacks
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using Stacks, load one of these modules using a `module load` command l
 module load Stacks/2.53-iccifort-2019.5.281
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Stacks/2.53-iccifort-2019.5.281|-|x|x|-|x|-|-|-|
-|Stacks/2.5-iccifort-2019.5.281|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Stacks/2.53-iccifort-2019.5.281|-|x|x|-|x|-|
+|Stacks/2.5-iccifort-2019.5.281|-|x|x|-|x|x|

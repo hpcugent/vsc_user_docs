@@ -6,6 +6,10 @@ hide:
 GlimmerHMM
 ==========
 
+
+GlimmerHMM is a new gene finder based on a Generalized Hidden Markov Model. Although the gene finder conforms to the overall mathematical framework of a GHMM, additionally it incorporates splice site models adapted from the GeneSplicer program and a decision tree adapted from GlimmerM. It also utilizes Interpolated Markov Models for the coding and noncoding models.
+
+https://ccb.jhu.edu/software/glimmerhmm
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using GlimmerHMM, load one of these modules using a `module load` comma
 module load GlimmerHMM/3.0.4c-GCC-10.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GlimmerHMM/3.0.4c-GCC-10.2.0|-|x|x|x|x|x|x|x|
-|GlimmerHMM/3.0.4c-GCC-8.3.0|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GlimmerHMM/3.0.4c-GCC-10.2.0|-|x|x|x|x|x|
+|GlimmerHMM/3.0.4c-GCC-8.3.0|-|x|x|-|x|x|

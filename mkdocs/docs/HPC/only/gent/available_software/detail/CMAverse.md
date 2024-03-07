@@ -6,6 +6,10 @@ hide:
 CMAverse
 ========
 
+
+The R package CMAverse provides a suite of functions for reproducible causal mediation analysisincluding cmdag for DAG visualization, cmest for statistical modeling and cmsens for sensitivity analysis.
+
+https://bs1125.github.io/CMAverse/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using CMAverse, load one of these modules using a `module load` command
 module load CMAverse/20220112-foss-2021b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CMAverse/20220112-foss-2021b|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CMAverse/20220112-foss-2021b|x|x|x|-|x|x|

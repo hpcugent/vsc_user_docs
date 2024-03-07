@@ -6,6 +6,10 @@ hide:
 GIMP
 ====
 
+
+GIMP is a cross-platform image editor available for GNU/Linux, OS X, Windows and more operating systems.
+
+https://www.gimp.org
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using GIMP, load one of these modules using a `module load` command lik
 module load GIMP/2.10.24-GCC-10.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GIMP/2.10.24-GCC-10.3.0|-|x|x|-|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GIMP/2.10.24-GCC-10.3.0|-|x|x|-|x|-|

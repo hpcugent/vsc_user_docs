@@ -6,6 +6,10 @@ hide:
 vitessceR
 =========
 
+
+Vitessce is a visual integration tool for exploration of spatial single-cell experiments.
+
+https://github.com/vitessce/vitessceR
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using vitessceR, load one of these modules using a `module load` comman
 module load vitessceR/0.99.0-20230110-foss-2022a-R-4.2.1
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|vitessceR/0.99.0-20230110-foss-2022a-R-4.2.1|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|vitessceR/0.99.0-20230110-foss-2022a-R-4.2.1|x|x|x|x|x|x|
+
+
+### vitessceR/0.99.0-20230110-foss-2022a-R-4.2.1
+
+This is a list of extensions included in the module:
+
+plumber-1.2.1, sodium-1.2.1, vitessceR-0.99.0-20230110

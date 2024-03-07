@@ -6,6 +6,10 @@ hide:
 LPeg
 ====
 
+
+LPeg is a new pattern-matching library for Lua, based on Parsing Expression Grammars (PEGs).
+
+http://www.inf.puc-rio.br/~roberto/lpeg/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using LPeg, load one of these modules using a `module load` command lik
 module load LPeg/1.0.2-GCCcore-10.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LPeg/1.0.2-GCCcore-10.2.0|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LPeg/1.0.2-GCCcore-10.2.0|-|x|x|-|x|x|

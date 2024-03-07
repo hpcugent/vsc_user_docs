@@ -6,6 +6,10 @@ hide:
 iccifort
 ========
 
+
+Intel C, C++ & Fortran compilers
+
+https://software.intel.com/en-us/intel-compilers/
 # Available modules
 
 
@@ -17,10 +21,10 @@ To start using iccifort, load one of these modules using a `module load` command
 module load iccifort/2020.4.304
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|iccifort/2020.4.304|x|x|x|x|x|x|x|x|
-|iccifort/2020.1.217|x|x|x|x|x|x|x|x|
-|iccifort/2019.5.281|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|iccifort/2020.4.304|x|x|x|x|x|x|
+|iccifort/2020.1.217|x|x|x|x|x|x|
+|iccifort/2019.5.281|-|x|x|-|x|x|

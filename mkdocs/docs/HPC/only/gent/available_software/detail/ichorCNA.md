@@ -6,6 +6,10 @@ hide:
 ichorCNA
 ========
 
+
+ichorCNA is a tool for estimating the fraction of tumor in cell-free DNA from ultra-low-pass wholegenome sequencing
+
+https://github.com/broadinstitute/ichorCNA/wiki
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using ichorCNA, load one of these modules using a `module load` command
 module load ichorCNA/0.3.2-20191219-foss-2020a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ichorCNA/0.3.2-20191219-foss-2020a|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ichorCNA/0.3.2-20191219-foss-2020a|-|x|x|-|x|x|

@@ -6,6 +6,10 @@ hide:
 UFL
 ===
 
+
+The Unified Form Language (UFL) is a domain specific language  for declaration of finite element discretizations of variational forms.  More precisely, it defines a flexible interface for choosing finite element  spaces and defining expressions for weak forms in a notation close to  mathematical notation.
+
+https://bitbucket.org/fenics-project/ufl
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using UFL, load one of these modules using a `module load` command like
 module load UFL/2019.1.0-foss-2019b-Python-3.7.4
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|UFL/2019.1.0-foss-2019b-Python-3.7.4|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|UFL/2019.1.0-foss-2019b-Python-3.7.4|-|x|x|-|x|x|

@@ -6,6 +6,10 @@ hide:
 Zopfli
 ======
 
+
+Zopfli Compression Algorithm is a compression library programmed in C to performvery good, but slow, deflate or zlib compression.
+
+https://github.com/google/zopfli
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using Zopfli, load one of these modules using a `module load` command l
 module load Zopfli/1.0.3-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Zopfli/1.0.3-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Zopfli/1.0.3-GCCcore-11.3.0|x|x|x|x|x|x|

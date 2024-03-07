@@ -6,6 +6,10 @@ hide:
 PyQtGraph
 =========
 
+
+PyQtGraph is a pure-python graphics and GUI library built on PyQt5/PySide2 and numpy.
+
+http://www.pyqtgraph.org/
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using PyQtGraph, load one of these modules using a `module load` comman
 module load PyQtGraph/0.13.3-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyQtGraph/0.13.3-foss-2022a|x|x|x|x|x|x|x|x|
-|PyQtGraph/0.12.3-foss-2021a|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyQtGraph/0.13.3-foss-2022a|x|x|x|x|x|x|
+|PyQtGraph/0.12.3-foss-2021a|-|x|x|-|x|x|

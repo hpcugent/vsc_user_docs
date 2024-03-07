@@ -6,6 +6,10 @@ hide:
 silx
 ====
 
+
+The silx project provides a collection of Python packages to support the development of data assessment, reduction and analysis applications at synchrotron radiation facilities.
+
+http://www.silx.org/
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using silx, load one of these modules using a `module load` command lik
 module load silx/0.14.0-foss-2020b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|silx/0.14.0-foss-2020b|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|silx/0.14.0-foss-2020b|-|x|x|x|x|x|
+
+
+### silx/0.14.0-foss-2020b
+
+This is a list of extensions included in the module:
+
+hdf5plugin-2.3.1, silx-0.14.0

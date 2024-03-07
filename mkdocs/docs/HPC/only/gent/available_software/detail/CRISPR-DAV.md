@@ -6,6 +6,10 @@ hide:
 CRISPR-DAV
 ==========
 
+
+CRISPR-DAV is a pipeline to analyzeamplicon-based NGS data of CRISPR clones in a high throughput manner.
+
+https://github.com/pinetree1/crispr-dav/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using CRISPR-DAV, load one of these modules using a `module load` comma
 module load CRISPR-DAV/2.3.4-foss-2020b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CRISPR-DAV/2.3.4-foss-2020b|-|x|x|x|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CRISPR-DAV/2.3.4-foss-2020b|-|x|x|x|x|-|

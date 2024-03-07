@@ -6,6 +6,10 @@ hide:
 libmypaint
 ==========
 
+
+libmypaint, a.k.a. "brushlib", is a library for making brushstrokes which is used by MyPaint and other projects
+
+https://github.com/mypaint/libmypaint
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using libmypaint, load one of these modules using a `module load` comma
 module load libmypaint/1.6.1-GCCcore-10.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libmypaint/1.6.1-GCCcore-10.3.0|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libmypaint/1.6.1-GCCcore-10.3.0|-|x|x|-|x|x|

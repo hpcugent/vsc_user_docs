@@ -6,6 +6,10 @@ hide:
 Bio-EUtilities
 ==============
 
+
+BioPerl low-level API for retrieving and storing data from NCBI eUtils
+
+https://github.com/bioperl/bio-eutilities
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using Bio-EUtilities, load one of these modules using a `module load` c
 module load Bio-EUtilities/1.76-GCCcore-8.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Bio-EUtilities/1.76-GCCcore-8.3.0|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Bio-EUtilities/1.76-GCCcore-8.3.0|-|x|x|-|x|x|
+
+
+### Bio-EUtilities/1.76-GCCcore-8.3.0
+
+This is a list of extensions included in the module:
+
+base-2.23, Bio::ASN1::EntrezGene-1.73, Bio::DB::EUtilities-1.76, Text::Wrap-2013.0523

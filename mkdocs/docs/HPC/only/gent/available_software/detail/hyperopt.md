@@ -6,6 +6,10 @@ hide:
 hyperopt
 ========
 
+
+Distributed Asynchronous Hyperparameter Optimization in Python
+
+https://github.com/hyperopt/hyperopt
 # Available modules
 
 
@@ -17,9 +21,22 @@ To start using hyperopt, load one of these modules using a `module load` command
 module load hyperopt/0.2.5-fosscuda-2020b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|hyperopt/0.2.5-fosscuda-2020b|-|-|-|-|x|-|-|-|
-|hyperopt/0.2.4-intel-2019b-Python-3.7.4-Java-1.8|-|x|x|-|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|hyperopt/0.2.5-fosscuda-2020b|-|-|-|-|x|-|
+|hyperopt/0.2.4-intel-2019b-Python-3.7.4-Java-1.8|-|x|x|-|x|-|
+
+
+### hyperopt/0.2.5-fosscuda-2020b
+
+This is a list of extensions included in the module:
+
+cloudpickle-1.6.0, hyperopt-0.2.5, lightgbm-3.2.0, py4j-0.10.9.2, pymongo-3.11.3
+
+### hyperopt/0.2.4-intel-2019b-Python-3.7.4-Java-1.8
+
+This is a list of extensions included in the module:
+
+cloudpickle-1.4.1, hyperopt-0.2.4, lightgbm-2.3.1, pymongo-3.10.1, tqdm-4.46.0

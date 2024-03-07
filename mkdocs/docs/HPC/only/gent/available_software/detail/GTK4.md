@@ -6,6 +6,10 @@ hide:
 GTK4
 ====
 
+
+GTK+ is the primary library used to construct user interfaces in GNOME. It provides all the user interface controls, or widgets, used in a common graphical application. Its object-oriented API allows you to construct user interfaces without dealing with the low-level details of drawing and device interaction.
+
+https://docs.gtk.org/gtk4/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using GTK4, load one of these modules using a `module load` command lik
 module load GTK4/4.7.0-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GTK4/4.7.0-GCC-11.3.0|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GTK4/4.7.0-GCC-11.3.0|x|x|x|x|x|x|

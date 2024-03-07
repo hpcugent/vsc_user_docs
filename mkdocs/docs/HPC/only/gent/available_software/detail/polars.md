@@ -6,6 +6,10 @@ hide:
 polars
 ======
 
+
+Lightning-fast DataFrame library for Rust and Python.
+
+https://pola.rs/
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using polars, load one of these modules using a `module load` command l
 module load polars/0.15.6-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|polars/0.15.6-foss-2022a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|polars/0.15.6-foss-2022a|x|x|x|x|x|x|
+
+
+### polars/0.15.6-foss-2022a
+
+This is a list of extensions included in the module:
+
+connectorx-0.3.1, deltalake-0.6.4, maturin-0.14.6, polars-0.15.6, setuptools-65.6.3, setuptools-rust-1.5.2, xlsx2csv-0.8.0

@@ -6,6 +6,10 @@ hide:
 bwa-meth
 ========
 
+
+Fast and accurante alignment of BS-Seq reads.
+
+https://github.com/brentp/bwa-meth
 # Available modules
 
 
@@ -17,9 +21,22 @@ To start using bwa-meth, load one of these modules using a `module load` command
 module load bwa-meth/0.2.6-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bwa-meth/0.2.6-GCC-11.3.0|x|x|x|x|x|x|x|x|
-|bwa-meth/0.2.2-iccifort-2019.5.281|-|x|-|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|bwa-meth/0.2.6-GCC-11.3.0|x|x|x|x|x|x|
+|bwa-meth/0.2.2-iccifort-2019.5.281|-|x|-|-|-|-|
+
+
+### bwa-meth/0.2.6-GCC-11.3.0
+
+This is a list of extensions included in the module:
+
+bwa-meth-0.2.6, toolshed-0.4.6
+
+### bwa-meth/0.2.2-iccifort-2019.5.281
+
+This is a list of extensions included in the module:
+
+bwa-meth-0.2.2, toolshed-0.4.0

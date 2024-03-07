@@ -6,6 +6,10 @@ hide:
 RSeQC
 =====
 
+
+RSeQC provides a number of useful modules that can  comprehensively evaluate high throughput sequence data especially RNA-seq  data. Some basic modules quickly inspect sequence quality, nucleotide  composition bias, PCR bias and GC bias, while RNA-seq specific modules  evaluate sequencing saturation, mapped reads distribution, coverage  uniformity, strand specificity, transcript level RNA integrity etc.
+
+http://rseqc.sourceforge.net/
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using RSeQC, load one of these modules using a `module load` command li
 module load RSeQC/4.0.0-foss-2021b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RSeQC/4.0.0-foss-2021b|x|x|x|-|x|x|x|x|
-|RSeQC/4.0.0-foss-2020a-Python-3.8.2|-|-|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RSeQC/4.0.0-foss-2021b|x|x|x|-|x|x|
+|RSeQC/4.0.0-foss-2020a-Python-3.8.2|-|-|x|-|x|x|

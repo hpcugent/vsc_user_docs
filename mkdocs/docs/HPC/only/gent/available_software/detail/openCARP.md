@@ -6,6 +6,10 @@ hide:
 openCARP
 ========
 
+
+openCARP is an open cardiac electrophysiology simulator for in-silico experiments.
+
+https://opencarp.org
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using openCARP, load one of these modules using a `module load` command
 module load openCARP/6.0-foss-2020b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|openCARP/6.0-foss-2020b|-|x|x|x|x|x|x|x|
-|openCARP/3.2-foss-2020a-Python-3.8.2|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|openCARP/6.0-foss-2020b|-|x|x|x|x|x|
+|openCARP/3.2-foss-2020a-Python-3.8.2|-|x|x|-|x|x|

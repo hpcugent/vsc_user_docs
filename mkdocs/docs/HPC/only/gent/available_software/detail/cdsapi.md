@@ -6,6 +6,10 @@ hide:
 cdsapi
 ======
 
+
+Climate Data Store API
+
+https://pypi.org/project/cdsapi
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using cdsapi, load one of these modules using a `module load` command l
 module load cdsapi/0.5.1-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cdsapi/0.5.1-GCCcore-11.3.0|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|cdsapi/0.5.1-GCCcore-11.3.0|x|x|x|-|x|x|

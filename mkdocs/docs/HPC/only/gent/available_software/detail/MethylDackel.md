@@ -6,6 +6,10 @@ hide:
 MethylDackel
 ============
 
+
+A (mostly) universal methylation extractor for BS-seq experiments.
+
+https://github.com/dpryan79/MethylDackel
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using MethylDackel, load one of these modules using a `module load` com
 module load MethylDackel/0.5.0-iccifort-2019.5.281
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MethylDackel/0.5.0-iccifort-2019.5.281|-|x|x|-|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MethylDackel/0.5.0-iccifort-2019.5.281|-|x|x|-|x|-|

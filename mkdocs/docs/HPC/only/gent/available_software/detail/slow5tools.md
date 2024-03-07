@@ -6,6 +6,10 @@ hide:
 slow5tools
 ==========
 
+
+slow5tools is a toolkit for converting (FAST5 <-> SLOW5), compressing, viewing, indexing and manipulating data in SLOW5 format.
+
+https://hasindu2008.github.io/slow5tools
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using slow5tools, load one of these modules using a `module load` comma
 module load slow5tools/0.4.0-gompi-2021b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|slow5tools/0.4.0-gompi-2021b|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|slow5tools/0.4.0-gompi-2021b|x|x|x|-|x|x|

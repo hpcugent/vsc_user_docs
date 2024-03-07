@@ -6,6 +6,10 @@ hide:
 nghttp2
 =======
 
+
+This is an implementation of the Hypertext Transfer Protocol version 2 in C.The framing layer of HTTP/2 is implemented as a reusable C library. On top of that, we have implemented an HTTP/2 client, server and proxy. We have also developed load test and benchmarking tools for HTTP/2.An HPACK encoder and decoder are available as a public API.
+
+https://github.com/nghttp2/nghttp2
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using nghttp2, load one of these modules using a `module load` command 
 module load nghttp2/1.48.0-GCC-11.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nghttp2/1.48.0-GCC-11.2.0|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|nghttp2/1.48.0-GCC-11.2.0|x|x|x|x|x|x|

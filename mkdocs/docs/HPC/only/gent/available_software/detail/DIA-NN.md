@@ -6,6 +6,10 @@ hide:
 DIA-NN
 ======
 
+
+DIA-NN - a universal software for data-independent acquisition (DIA) proteomics data processing
+
+https://github.com/vdemichev/DiaNN
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using DIA-NN, load one of these modules using a `module load` command l
 module load DIA-NN/1.8.1
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DIA-NN/1.8.1|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DIA-NN/1.8.1|x|x|x|-|x|x|

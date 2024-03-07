@@ -6,6 +6,10 @@ hide:
 nglview
 =======
 
+
+IPython widget to interactively view molecular structures and trajectories.
+
+https://github.com/arose/nglview
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using nglview, load one of these modules using a `module load` command 
 module load nglview/2.7.7-intel-2020a-Python-3.8.2
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nglview/2.7.7-intel-2020a-Python-3.8.2|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|nglview/2.7.7-intel-2020a-Python-3.8.2|x|x|x|x|x|x|
+
+
+### nglview/2.7.7-intel-2020a-Python-3.8.2
+
+This is a list of extensions included in the module:
+
+nglview-2.7.7, widgetsnbextension-3.5.1

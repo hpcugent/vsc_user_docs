@@ -6,6 +6,10 @@ hide:
 PyFoam
 ======
 
+
+A Python library to control OpenFOAM-runs and manipulate OpenFOAM-data.
+
+http://openfoamwiki.net/index.php/Contrib/PyFoam
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using PyFoam, load one of these modules using a `module load` command l
 module load PyFoam/2020.5-foss-2020b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyFoam/2020.5-foss-2020b|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyFoam/2020.5-foss-2020b|-|x|x|x|x|x|

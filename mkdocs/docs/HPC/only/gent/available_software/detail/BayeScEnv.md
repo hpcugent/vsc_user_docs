@@ -6,6 +6,10 @@ hide:
 BayeScEnv
 =========
 
+
+BayeScEnv is a Fst-based, genome-scan method that uses environmental variables to detectlocal adaptation.
+
+https://github.com/devillemereuil/bayescenv
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using BayeScEnv, load one of these modules using a `module load` comman
 module load BayeScEnv/1.1-iccifort-2019.5.281
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BayeScEnv/1.1-iccifort-2019.5.281|-|x|-|-|-|-|-|-|
-|BayeScEnv/1.1-GCC-8.3.0|-|x|x|-|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BayeScEnv/1.1-iccifort-2019.5.281|-|x|-|-|-|-|
+|BayeScEnv/1.1-GCC-8.3.0|-|x|x|-|x|-|

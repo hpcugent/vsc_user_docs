@@ -6,6 +6,10 @@ hide:
 Graphene
 ========
 
+
+Graphene is a thin layer of types for graphic libraries
+
+https://ebassi.github.io/graphene/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using Graphene, load one of these modules using a `module load` command
 module load Graphene/1.10.8-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Graphene/1.10.8-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Graphene/1.10.8-GCCcore-11.3.0|x|x|x|x|x|x|

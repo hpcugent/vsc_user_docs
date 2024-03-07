@@ -6,6 +6,10 @@ hide:
 rMATS-turbo
 ===========
 
+
+rMATS turbo is the C/Cython version of rMATS (refer to http://rnaseq-mats.sourceforge.net).
+
+https://github.com/Xinglab/rmats-turbo
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using rMATS-turbo, load one of these modules using a `module load` comm
 module load rMATS-turbo/4.1.1-foss-2020b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rMATS-turbo/4.1.1-foss-2020b|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|rMATS-turbo/4.1.1-foss-2020b|-|x|x|x|x|x|

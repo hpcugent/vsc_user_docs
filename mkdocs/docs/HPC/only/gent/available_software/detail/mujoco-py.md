@@ -6,6 +6,10 @@ hide:
 mujoco-py
 =========
 
+
+MuJoCo Python Bindings
+
+https://github.com/deepmind/mujoco
 # Available modules
 
 
@@ -17,9 +21,22 @@ To start using mujoco-py, load one of these modules using a `module load` comman
 module load mujoco-py/2.3.7-foss-2023a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mujoco-py/2.3.7-foss-2023a|x|x|x|x|x|x|x|x|
-|mujoco-py/2.1.2.14-foss-2021b|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|mujoco-py/2.3.7-foss-2023a|x|x|x|x|x|x|
+|mujoco-py/2.1.2.14-foss-2021b|x|x|x|x|x|x|
+
+
+### mujoco-py/2.3.7-foss-2023a
+
+This is a list of extensions included in the module:
+
+absl-py-1.4.0, glfw-2.6.2, mujoco-2.3.7
+
+### mujoco-py/2.1.2.14-foss-2021b
+
+This is a list of extensions included in the module:
+
+fasteners-0.17.2, glfw-2.5.0, mujoco-py-2.1.2.14

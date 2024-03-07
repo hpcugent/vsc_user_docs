@@ -6,6 +6,10 @@ hide:
 DendroPy
 ========
 
+
+A Python library for phylogenetics and phylogenetic computing: reading, writing, simulation, processing and manipulation of phylogenetic trees (phylogenies) and characters.
+
+https://pypi.python.org/pypi/DendroPy/
 # Available modules
 
 
@@ -14,16 +18,17 @@ The overview below shows which DendroPy installations are available per HPC-UGen
 To start using DendroPy, load one of these modules using a `module load` command like:
 
 ```shell
-module load DendroPy/4.5.2-GCCcore-11.3.0
+module load DendroPy/4.6.1-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DendroPy/4.5.2-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
-|DendroPy/4.5.2-GCCcore-11.2.0|x|x|x|-|x|x|x|x|
-|DendroPy/4.5.2-GCCcore-10.2.0-Python-2.7.18|-|x|x|x|x|x|x|x|
-|DendroPy/4.5.2-GCCcore-10.2.0|-|x|x|x|x|x|x|x|
-|DendroPy/4.4.0-GCCcore-9.3.0|-|x|x|-|x|x|x|x|
-|DendroPy/4.4.0-GCCcore-8.3.0|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DendroPy/4.6.1-GCCcore-12.3.0|x|x|x|x|x|x|
+|DendroPy/4.5.2-GCCcore-11.3.0|x|x|x|x|x|x|
+|DendroPy/4.5.2-GCCcore-11.2.0|x|x|x|-|x|x|
+|DendroPy/4.5.2-GCCcore-10.2.0-Python-2.7.18|-|x|x|x|x|x|
+|DendroPy/4.5.2-GCCcore-10.2.0|-|x|x|x|x|x|
+|DendroPy/4.4.0-GCCcore-9.3.0|-|x|x|-|x|x|
+|DendroPy/4.4.0-GCCcore-8.3.0|-|x|x|-|x|x|

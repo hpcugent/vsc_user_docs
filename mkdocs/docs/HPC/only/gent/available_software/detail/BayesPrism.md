@@ -6,6 +6,10 @@ hide:
 BayesPrism
 ==========
 
+
+Bayesian cell Proportion Reconstruction Inferred using Statistical Marginalization  (BayesPrism): A Fully Bayesian Inference of Tumor Microenvironment composition and gene expression
+
+https://github.com/Danko-Lab/BayesPrism
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using BayesPrism, load one of these modules using a `module load` comma
 module load BayesPrism/2.0-foss-2022a-R-4.2.1
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BayesPrism/2.0-foss-2022a-R-4.2.1|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BayesPrism/2.0-foss-2022a-R-4.2.1|x|x|x|x|x|x|

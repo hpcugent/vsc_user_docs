@@ -6,6 +6,10 @@ hide:
 FLTK
 ====
 
+
+FLTK is a cross-platform C++ GUI toolkit for UNIX/Linux (X11), Microsoft Windows, and MacOS X. FLTK provides modern GUI functionality without the bloat and supports 3D graphics via OpenGL and its built-in GLUT emulation.
+
+https://www.fltk.org
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using FLTK, load one of these modules using a `module load` command lik
 module load FLTK/1.3.5-GCCcore-10.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FLTK/1.3.5-GCCcore-10.2.0|-|x|x|x|x|x|x|x|
-|FLTK/1.3.5-GCCcore-9.3.0|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FLTK/1.3.5-GCCcore-10.2.0|-|x|x|x|x|x|
+|FLTK/1.3.5-GCCcore-9.3.0|-|x|x|-|x|x|

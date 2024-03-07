@@ -6,6 +6,10 @@ hide:
 CRYSTAL17
 =========
 
+
+The CRYSTAL package performs ab initio calculations of the ground state energy, energy gradient, electronic wave function and properties of periodic systems.
+
+http://www.crystal.unito.it
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using CRYSTAL17, load one of these modules using a `module load` comman
 module load CRYSTAL17/1.0.2-intel-2020a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CRYSTAL17/1.0.2-intel-2020a|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CRYSTAL17/1.0.2-intel-2020a|-|x|x|-|x|x|

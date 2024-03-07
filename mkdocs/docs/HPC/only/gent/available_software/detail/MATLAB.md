@@ -6,6 +6,10 @@ hide:
 MATLAB
 ======
 
+
+MATLAB is a high-level language and interactive environment that enables you to perform computationally intensive tasks faster than with traditional programming languages such as C, C++, and Fortran.
+
+http://www.mathworks.com/products/matlab
 # Available modules
 
 
@@ -17,10 +21,10 @@ To start using MATLAB, load one of these modules using a `module load` command l
 module load MATLAB/2022b-r5
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MATLAB/2022b-r5|x|x|x|x|x|x|x|x|
-|MATLAB/2021b|x|x|x|-|x|x|x|x|
-|MATLAB/2019b|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MATLAB/2022b-r5|x|x|x|x|x|x|
+|MATLAB/2021b|x|x|x|-|x|x|
+|MATLAB/2019b|-|x|x|-|x|x|

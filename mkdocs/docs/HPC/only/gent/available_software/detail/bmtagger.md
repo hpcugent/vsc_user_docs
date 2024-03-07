@@ -6,6 +6,10 @@ hide:
 bmtagger
 ========
 
+
+Best Match Tagger for removing human reads from metagenomics datasets
+
+ftp://ftp.ncbi.nlm.nih.gov/pub/agarwala/bmtagger/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using bmtagger, load one of these modules using a `module load` command
 module load bmtagger/3.101-gompi-2020b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bmtagger/3.101-gompi-2020b|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|bmtagger/3.101-gompi-2020b|-|x|x|x|x|x|

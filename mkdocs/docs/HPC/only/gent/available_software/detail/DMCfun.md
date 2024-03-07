@@ -6,6 +6,10 @@ hide:
 DMCfun
 ======
 
+
+Diffusion Model of Conflict (DMC) in Reaction Time Tasks
+
+https://cran.r-project.org/web/packages/DMCfun
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using DMCfun, load one of these modules using a `module load` command l
 module load DMCfun/1.3.0-foss-2019b-R-3.6.2
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DMCfun/1.3.0-foss-2019b-R-3.6.2|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DMCfun/1.3.0-foss-2019b-R-3.6.2|-|x|x|-|x|x|
+
+
+### DMCfun/1.3.0-foss-2019b-R-3.6.2
+
+This is a list of extensions included in the module:
+
+DEoptim-2.2-5, DMCfun-1.3.0, dplyr-1.0.5, glue-1.4.2, lifecycle-1.0.0, optextras-2019-12.4, optimr-2019-12.16, Rcgmin-2013-2.21, rlang-0.4.10, Rvmmin-2018-4.17, setRNG-2013.9-1, tidyselect-1.1.0, vctrs-0.3.6

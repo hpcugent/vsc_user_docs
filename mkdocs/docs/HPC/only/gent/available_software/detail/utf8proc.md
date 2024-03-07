@@ -6,6 +6,10 @@ hide:
 utf8proc
 ========
 
+
+utf8proc is a small, clean C library that provides Unicode normalization, case-folding, and other operations for data in the UTF-8 encoding.
+
+https://github.com/JuliaStrings/utf8proc
 # Available modules
 
 
@@ -14,13 +18,14 @@ The overview below shows which utf8proc installations are available per HPC-UGen
 To start using utf8proc, load one of these modules using a `module load` command like:
 
 ```shell
-module load utf8proc/2.8.0-GCCcore-12.2.0
+module load utf8proc/2.8.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|utf8proc/2.8.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|
-|utf8proc/2.7.0-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
-|utf8proc/2.6.1-GCCcore-11.2.0|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|utf8proc/2.8.0-GCCcore-12.3.0|x|x|x|x|x|x|
+|utf8proc/2.8.0-GCCcore-12.2.0|x|x|x|x|x|x|
+|utf8proc/2.7.0-GCCcore-11.3.0|x|x|x|x|x|x|
+|utf8proc/2.6.1-GCCcore-11.2.0|x|x|x|x|x|x|

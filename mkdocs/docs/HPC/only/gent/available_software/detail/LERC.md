@@ -6,6 +6,10 @@ hide:
 LERC
 ====
 
+
+LERC is an open-source image or raster format which supports rapid encoding and decodingfor any pixel type (not just RGB or Byte). Users set the maximum compression error per pixel while encoding,so the precision of the original input image is preserved (within user defined error bounds).
+
+https://github.com/Esri/lerc
 # Available modules
 
 
@@ -14,12 +18,13 @@ The overview below shows which LERC installations are available per HPC-UGent Ti
 To start using LERC, load one of these modules using a `module load` command like:
 
 ```shell
-module load LERC/4.0.0-GCCcore-12.2.0
+module load LERC/4.0.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LERC/4.0.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|
-|LERC/4.0.0-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LERC/4.0.0-GCCcore-12.3.0|x|x|x|x|x|x|
+|LERC/4.0.0-GCCcore-12.2.0|x|x|x|x|x|x|
+|LERC/4.0.0-GCCcore-11.3.0|x|x|x|x|x|x|

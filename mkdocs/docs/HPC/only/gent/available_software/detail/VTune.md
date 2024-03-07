@@ -6,6 +6,10 @@ hide:
 VTune
 =====
 
+
+Intel VTune Amplifier XE is the premier performance profiler for C, C++, C#, Fortran, Assembly and Java.
+
+http://software.intel.com/en-us/intel-vtune-amplifier-xe
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using VTune, load one of these modules using a `module load` command li
 module load VTune/2019_update2
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VTune/2019_update2|-|-|-|-|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|VTune/2019_update2|-|-|-|-|-|x|

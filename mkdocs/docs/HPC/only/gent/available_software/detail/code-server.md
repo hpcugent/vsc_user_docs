@@ -6,6 +6,10 @@ hide:
 code-server
 ===========
 
+
+Run VS Code on any machine anywhere and access it in the browser.
+
+https://github.com/cdr/code-server
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using code-server, load one of these modules using a `module load` comm
 module load code-server/4.9.1
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|code-server/4.9.1|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|code-server/4.9.1|x|x|x|x|x|x|

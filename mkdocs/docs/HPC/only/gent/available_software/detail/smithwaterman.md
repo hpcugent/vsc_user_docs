@@ -6,6 +6,10 @@ hide:
 smithwaterman
 =============
 
+
+smith-waterman-gotoh alignment algorithm.
+
+https://github.com/ekg/smithwaterman
 # Available modules
 
 
@@ -14,11 +18,12 @@ The overview below shows which smithwaterman installations are available per HPC
 To start using smithwaterman, load one of these modules using a `module load` command like:
 
 ```shell
-module load smithwaterman/20160702-GCCcore-10.2.0
+module load smithwaterman/20160702-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|smithwaterman/20160702-GCCcore-10.2.0|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|smithwaterman/20160702-GCCcore-11.3.0|x|x|x|x|x|x|
+|smithwaterman/20160702-GCCcore-10.2.0|-|x|x|-|x|x|

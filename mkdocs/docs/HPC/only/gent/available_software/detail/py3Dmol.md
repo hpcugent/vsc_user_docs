@@ -6,6 +6,10 @@ hide:
 py3Dmol
 =======
 
+
+A simple IPython/Jupyter widget to embed an interactive 3Dmol.js viewer in a notebook.
+
+https://github.com/3dmol/3Dmol.js/tree/master/py3Dmol
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using py3Dmol, load one of these modules using a `module load` command 
 module load py3Dmol/2.0.1.post1-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|py3Dmol/2.0.1.post1-GCCcore-11.3.0|x|-|x|-|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|py3Dmol/2.0.1.post1-GCCcore-11.3.0|x|-|x|-|x|-|
+
+
+### py3Dmol/2.0.1.post1-GCCcore-11.3.0
+
+This is a list of extensions included in the module:
+
+py3Dmol-2.0.1.post1

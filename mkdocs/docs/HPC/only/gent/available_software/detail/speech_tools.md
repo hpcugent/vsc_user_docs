@@ -6,6 +6,10 @@ hide:
 speech_tools
 ============
 
+
+The Edinburgh Speech Tools Library is a collection of C++ class,functions and related programs for manipulating the sorts of objectsused in speech processing. It includes support for reading and writingwaveforms, parameter files (LPC, Ceptra, F0) in various formatsand converting between them.It also includes support for linguistic type objects and supportfor various label files and ngrams (with smoothing).
+
+['http://festvox.org/festival/']
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using speech_tools, load one of these modules using a `module load` com
 module load speech_tools/2.5.0-GCCcore-9.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|speech_tools/2.5.0-GCCcore-9.3.0|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|speech_tools/2.5.0-GCCcore-9.3.0|-|x|x|-|x|x|

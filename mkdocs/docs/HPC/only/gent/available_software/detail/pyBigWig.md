@@ -6,6 +6,10 @@ hide:
 pyBigWig
 ========
 
+
+A python extension, written in C, for quick access to bigBed files and access to and creation of bigWig files.
+
+https://github.com/deeptools/pyBigWig
 # Available modules
 
 
@@ -17,11 +21,11 @@ To start using pyBigWig, load one of these modules using a `module load` command
 module load pyBigWig/0.3.18-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pyBigWig/0.3.18-foss-2022a|x|x|x|x|x|x|x|x|
-|pyBigWig/0.3.18-foss-2021b|x|x|x|-|x|x|x|x|
-|pyBigWig/0.3.18-GCCcore-10.2.0|-|x|x|x|x|x|x|x|
-|pyBigWig/0.3.17-GCCcore-9.3.0|-|-|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pyBigWig/0.3.18-foss-2022a|x|x|x|x|x|x|
+|pyBigWig/0.3.18-foss-2021b|x|x|x|-|x|x|
+|pyBigWig/0.3.18-GCCcore-10.2.0|-|x|x|x|x|x|
+|pyBigWig/0.3.17-GCCcore-9.3.0|-|-|x|-|x|x|

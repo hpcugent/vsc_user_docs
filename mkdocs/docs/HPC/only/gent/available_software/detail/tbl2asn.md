@@ -6,6 +6,10 @@ hide:
 tbl2asn
 =======
 
+
+Tbl2asn is a command-line program that automates the creation of sequence records for submission to GenBank
+
+https://www.ncbi.nlm.nih.gov/genbank/tbl2asn2/
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using tbl2asn, load one of these modules using a `module load` command 
 module load tbl2asn/20220427-linux64
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tbl2asn/20220427-linux64|-|x|x|x|x|x|x|x|
-|tbl2asn/25.8-linux64|-|-|-|-|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tbl2asn/20220427-linux64|-|x|x|x|x|x|
+|tbl2asn/25.8-linux64|-|-|-|-|-|x|

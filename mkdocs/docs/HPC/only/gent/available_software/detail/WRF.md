@@ -6,6 +6,10 @@ hide:
 WRF
 ===
 
+
+The Weather Research and Forecasting (WRF) Model is a next-generation mesoscale numerical weather prediction system designed to serve both operational forecasting and atmospheric research needs.
+
+http://www.wrf-model.org
 # Available modules
 
 
@@ -17,10 +21,10 @@ To start using WRF, load one of these modules using a `module load` command like
 module load WRF/4.1.3-intel-2019b-dmpar
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|WRF/4.1.3-intel-2019b-dmpar|-|x|x|-|x|x|x|x|
-|WRF/3.9.1.1-intel-2020b-dmpar|-|x|x|x|x|x|x|x|
-|WRF/3.8.0-intel-2019b-dmpar|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|WRF/4.1.3-intel-2019b-dmpar|-|x|x|-|x|x|
+|WRF/3.9.1.1-intel-2020b-dmpar|-|x|x|x|x|x|
+|WRF/3.8.0-intel-2019b-dmpar|-|x|x|-|x|x|

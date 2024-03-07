@@ -6,6 +6,10 @@ hide:
 HiCMatrix
 =========
 
+
+This library implements the central class of HiCExplorer to manage Hi-C interaction matrices.
+
+https://github.com/deeptools/HiCMatrix
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using HiCMatrix, load one of these modules using a `module load` comman
 module load HiCMatrix/17-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HiCMatrix/17-foss-2022a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HiCMatrix/17-foss-2022a|x|x|x|x|x|x|
+
+
+### HiCMatrix/17-foss-2022a
+
+This is a list of extensions included in the module:
+
+HiCMatrix-17, intervaltree-3.1.0

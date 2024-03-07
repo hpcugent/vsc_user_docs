@@ -6,6 +6,10 @@ hide:
 Hadoop
 ======
 
+
+Hadoop MapReduce by Cloudera
+
+https://archive.cloudera.com/cdh5/cdh/5/
 # Available modules
 
 
@@ -17,10 +21,10 @@ To start using Hadoop, load one of these modules using a `module load` command l
 module load Hadoop/2.10.0-GCCcore-10.2.0-native-Java-1.8
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Hadoop/2.10.0-GCCcore-10.2.0-native-Java-1.8|-|-|x|-|x|-|-|-|
-|Hadoop/2.10.0-GCCcore-10.2.0-native|-|x|-|-|-|-|x|-|
-|Hadoop/2.10.0-GCCcore-8.3.0-native|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Hadoop/2.10.0-GCCcore-10.2.0-native-Java-1.8|-|-|x|-|x|-|
+|Hadoop/2.10.0-GCCcore-10.2.0-native|-|x|-|-|-|-|
+|Hadoop/2.10.0-GCCcore-8.3.0-native|-|x|x|-|x|x|

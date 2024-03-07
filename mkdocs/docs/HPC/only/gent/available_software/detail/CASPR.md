@@ -6,6 +6,10 @@ hide:
 CASPR
 =====
 
+
+Running CASPR is extremely easy and convenient to analyze CRIPR-Cas9 screens using pgRNAs.
+
+https://judithbergada.github.io/CASPR
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using CASPR, load one of these modules using a `module load` command li
 module load CASPR/20200730-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CASPR/20200730-foss-2022a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CASPR/20200730-foss-2022a|x|x|x|x|x|x|

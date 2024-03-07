@@ -6,6 +6,10 @@ hide:
 GDB
 ===
 
+
+The GNU Project Debugger
+
+https://www.gnu.org/software/gdb/gdb.html
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using GDB, load one of these modules using a `module load` command like
 module load GDB/9.1-GCCcore-8.3.0-Python-3.7.4
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GDB/9.1-GCCcore-8.3.0-Python-3.7.4|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GDB/9.1-GCCcore-8.3.0-Python-3.7.4|-|x|x|-|x|x|

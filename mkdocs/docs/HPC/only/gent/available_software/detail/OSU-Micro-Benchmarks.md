@@ -6,6 +6,10 @@ hide:
 OSU-Micro-Benchmarks
 ====================
 
+
+OSU Micro-Benchmarks
+
+https://mvapich.cse.ohio-state.edu/benchmarks/
 # Available modules
 
 
@@ -14,22 +18,25 @@ The overview below shows which OSU-Micro-Benchmarks installations are available 
 To start using OSU-Micro-Benchmarks, load one of these modules using a `module load` command like:
 
 ```shell
-module load OSU-Micro-Benchmarks/5.8-iimpi-2021b
+module load OSU-Micro-Benchmarks/7.2-gompi-2023b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OSU-Micro-Benchmarks/5.8-iimpi-2021b|x|x|x|-|x|x|x|x|
-|OSU-Micro-Benchmarks/5.7.1-iompi-2021a|-|-|x|-|x|x|x|x|
-|OSU-Micro-Benchmarks/5.7.1-iimpi-2021a|-|-|x|-|x|x|x|x|
-|OSU-Micro-Benchmarks/5.7.1-gompi-2021b|x|x|x|-|x|x|x|x|
-|OSU-Micro-Benchmarks/5.7-iimpi-2020b|-|-|x|x|x|x|x|x|
-|OSU-Micro-Benchmarks/5.7-gompi-2020b|-|-|x|x|x|x|x|x|
-|OSU-Micro-Benchmarks/5.6.3-iimpi-2020b|-|x|x|x|x|x|x|x|
-|OSU-Micro-Benchmarks/5.6.3-iimpi-2020a|-|x|x|-|x|x|x|x|
-|OSU-Micro-Benchmarks/5.6.3-iimpi-2019b|-|x|x|-|x|x|x|x|
-|OSU-Micro-Benchmarks/5.6.3-gompi-2020b|-|-|x|x|x|x|x|x|
-|OSU-Micro-Benchmarks/5.6.3-gompi-2020a|-|x|x|-|x|x|x|x|
-|OSU-Micro-Benchmarks/5.6.3-gompi-2019b|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OSU-Micro-Benchmarks/7.2-gompi-2023b|x|x|x|x|x|x|
+|OSU-Micro-Benchmarks/7.1-1-iimpi-2023a|x|x|x|x|x|x|
+|OSU-Micro-Benchmarks/7.1-1-gompi-2023a|-|x|-|-|-|-|
+|OSU-Micro-Benchmarks/5.8-iimpi-2021b|x|x|x|-|x|x|
+|OSU-Micro-Benchmarks/5.7.1-iompi-2021a|-|-|x|-|x|x|
+|OSU-Micro-Benchmarks/5.7.1-iimpi-2021a|-|-|x|-|x|x|
+|OSU-Micro-Benchmarks/5.7.1-gompi-2021b|x|x|x|-|x|x|
+|OSU-Micro-Benchmarks/5.7-iimpi-2020b|-|-|x|x|x|x|
+|OSU-Micro-Benchmarks/5.7-gompi-2020b|-|-|x|x|x|x|
+|OSU-Micro-Benchmarks/5.6.3-iimpi-2020b|-|x|x|x|x|x|
+|OSU-Micro-Benchmarks/5.6.3-iimpi-2020a|-|x|x|-|x|x|
+|OSU-Micro-Benchmarks/5.6.3-iimpi-2019b|-|x|x|-|x|x|
+|OSU-Micro-Benchmarks/5.6.3-gompi-2020b|-|-|x|x|x|x|
+|OSU-Micro-Benchmarks/5.6.3-gompi-2020a|-|x|x|-|x|x|
+|OSU-Micro-Benchmarks/5.6.3-gompi-2019b|-|x|x|-|x|x|

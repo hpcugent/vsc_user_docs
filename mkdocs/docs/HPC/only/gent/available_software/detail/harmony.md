@@ -6,6 +6,10 @@ hide:
 harmony
 =======
 
+
+Harmony is a general-purpose R package with an efficient algorithm for integrating multiple data sets.
+
+https://portals.broadinstitute.org/harmony
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using harmony, load one of these modules using a `module load` command 
 module load harmony/1.0.0-20200224-foss-2020a-R-4.0.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|harmony/1.0.0-20200224-foss-2020a-R-4.0.0|-|x|x|-|x|x|x|x|
-|harmony/0.1.0-20210528-foss-2020b-R-4.0.3|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|harmony/1.0.0-20200224-foss-2020a-R-4.0.0|-|x|x|-|x|x|
+|harmony/0.1.0-20210528-foss-2020b-R-4.0.3|-|x|x|-|x|x|

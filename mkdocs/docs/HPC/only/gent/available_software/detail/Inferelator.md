@@ -6,6 +6,10 @@ hide:
 Inferelator
 ===========
 
+
+Inferelator 3.0 is a package for gene regulatory network inference that is based on regularized regression.
+
+https://github.com/flatironinstitute/inferelator
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using Inferelator, load one of these modules using a `module load` comm
 module load Inferelator/0.6.1-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Inferelator/0.6.1-foss-2022a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Inferelator/0.6.1-foss-2022a|x|x|x|x|x|x|
+
+
+### Inferelator/0.6.1-foss-2022a
+
+This is a list of extensions included in the module:
+
+anndata-0.8.0, inferelator-0.6.1, natsort-8.2.0

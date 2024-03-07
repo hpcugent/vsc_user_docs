@@ -6,6 +6,10 @@ hide:
 monitor
 =======
 
+
+monitor logs cpu and memory usage of a running application
+
+https://github.com/gjbex/monitor
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using monitor, load one of these modules using a `module load` command 
 module load monitor/1.1.2
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|monitor/1.1.2|-|x|x|-|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|monitor/1.1.2|-|x|x|-|x|-|
+
+
+### monitor/1.1.2
+
+This is a list of extensions included in the module:
+
+Data::Dumper-2.183, Getopt::Long-2.52, IO-1.48, List::Util-1.60, Set::Scalar-1.29

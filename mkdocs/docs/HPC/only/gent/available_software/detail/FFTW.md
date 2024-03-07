@@ -6,6 +6,10 @@ hide:
 FFTW
 ====
 
+
+FFTW is a C subroutine library for computing the discrete Fourier transform (DFT) in one or more dimensions, of arbitrary input size, and of both real and complex data.
+
+http://www.fftw.org
 # Available modules
 
 
@@ -17,23 +21,24 @@ To start using FFTW, load one of these modules using a `module load` command lik
 module load FFTW/3.3.10-gompi-2021b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FFTW/3.3.10-gompi-2021b|x|x|x|x|x|x|x|x|
-|FFTW/3.3.10-GCC-12.3.0|x|x|x|x|x|x|x|x|
-|FFTW/3.3.10-GCC-12.2.0|x|x|x|x|x|x|x|x|
-|FFTW/3.3.10-GCC-11.3.0|x|x|x|x|x|x|x|x|
-|FFTW/3.3.9-intel-2021a|-|x|x|-|x|x|x|x|
-|FFTW/3.3.9-gompi-2021a|x|x|x|x|x|x|x|x|
-|FFTW/3.3.8-iomkl-2020a|-|x|-|-|-|-|-|-|
-|FFTW/3.3.8-intelcuda-2020b|-|-|-|-|x|-|-|-|
-|FFTW/3.3.8-intel-2020b|-|x|x|x|x|x|x|x|
-|FFTW/3.3.8-intel-2020a|-|x|x|-|x|x|x|x|
-|FFTW/3.3.8-intel-2019b|-|x|x|-|x|x|x|x|
-|FFTW/3.3.8-iimpi-2020b|-|x|-|-|-|-|-|-|
-|FFTW/3.3.8-gompic-2020b|x|-|-|-|x|-|-|-|
-|FFTW/3.3.8-gompi-2020b|x|x|x|x|x|x|x|x|
-|FFTW/3.3.8-gompi-2020a|-|x|x|-|x|x|x|x|
-|FFTW/3.3.8-gompi-2019b|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FFTW/3.3.10-gompi-2021b|x|x|x|x|x|x|
+|FFTW/3.3.10-GCC-13.2.0|x|x|x|x|x|x|
+|FFTW/3.3.10-GCC-12.3.0|x|x|x|x|x|x|
+|FFTW/3.3.10-GCC-12.2.0|x|x|x|x|x|x|
+|FFTW/3.3.10-GCC-11.3.0|x|x|x|x|x|x|
+|FFTW/3.3.9-intel-2021a|-|x|x|-|x|x|
+|FFTW/3.3.9-gompi-2021a|x|x|x|x|x|x|
+|FFTW/3.3.8-iomkl-2020a|-|x|-|-|-|-|
+|FFTW/3.3.8-intelcuda-2020b|-|-|-|-|x|-|
+|FFTW/3.3.8-intel-2020b|-|x|x|x|x|x|
+|FFTW/3.3.8-intel-2020a|-|x|x|-|x|x|
+|FFTW/3.3.8-intel-2019b|-|x|x|-|x|x|
+|FFTW/3.3.8-iimpi-2020b|-|x|-|-|-|-|
+|FFTW/3.3.8-gompic-2020b|x|-|-|-|x|-|
+|FFTW/3.3.8-gompi-2020b|x|x|x|x|x|x|
+|FFTW/3.3.8-gompi-2020a|-|x|x|-|x|x|
+|FFTW/3.3.8-gompi-2019b|x|x|x|-|x|x|

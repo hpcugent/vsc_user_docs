@@ -6,6 +6,10 @@ hide:
 GPAW-setups
 ===========
 
+
+PAW setup for the GPAW Density Functional Theory package.  Users can install setups manually using 'gpaw install-data' or use setups from this package.  The versions of GPAW and GPAW-setups can be intermixed.
+
+https://wiki.fysik.dtu.dk/gpaw/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using GPAW-setups, load one of these modules using a `module load` comm
 module load GPAW-setups/0.9.20000
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GPAW-setups/0.9.20000|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GPAW-setups/0.9.20000|x|x|x|x|x|x|

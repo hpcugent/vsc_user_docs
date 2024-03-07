@@ -6,6 +6,10 @@ hide:
 MetaBAT
 =======
 
+
+An efficient tool for accurately reconstructing single genomes from complex microbial communities
+
+https://bitbucket.org/berkeleylab/metabat
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using MetaBAT, load one of these modules using a `module load` command 
 module load MetaBAT/2.15-gompi-2021b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MetaBAT/2.15-gompi-2021b|x|x|x|-|x|x|x|x|
-|MetaBAT/2.15-gompi-2020b-Python-2.7.18|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MetaBAT/2.15-gompi-2021b|x|x|x|-|x|x|
+|MetaBAT/2.15-gompi-2020b-Python-2.7.18|-|x|x|x|x|x|

@@ -6,6 +6,10 @@ hide:
 FALCON
 ======
 
+
+Falcon: a set of tools for fast aligning long reads for consensus and assembly
+
+https://github.com/PacificBiosciences/FALCON
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using FALCON, load one of these modules using a `module load` command l
 module load FALCON/1.8.8-intel-2019b-Python-2.7.16
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FALCON/1.8.8-intel-2019b-Python-2.7.16|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FALCON/1.8.8-intel-2019b-Python-2.7.16|-|x|x|-|x|x|
+
+
+### FALCON/1.8.8-intel-2019b-Python-2.7.16
+
+This is a list of extensions included in the module:
+
+FALCON-1.8.8, networkx-1.10, pypeFLOW-20170504

@@ -6,6 +6,10 @@ hide:
 POT
 ===
 
+
+POT (Python Optimal Transport) is a Python library provide several solvers for optimization problems related to Optimal Transport for signal, image processing and machine learning.
+
+https://github.com/rflamary/POT
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using POT, load one of these modules using a `module load` command like
 module load POT/0.9.0-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|POT/0.9.0-foss-2022a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|POT/0.9.0-foss-2022a|x|x|x|x|x|x|
+
+
+### POT/0.9.0-foss-2022a
+
+This is a list of extensions included in the module:
+
+autograd-1.6.2, POT-0.9.0, pymanopt-2.1.1, versioneer-0.28

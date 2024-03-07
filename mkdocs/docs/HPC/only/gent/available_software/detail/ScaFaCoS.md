@@ -6,6 +6,10 @@ hide:
 ScaFaCoS
 ========
 
+
+ScaFaCoS is a library of scalable fast coulomb solvers.
+
+http://www.scafacos.de/
 # Available modules
 
 
@@ -17,10 +21,10 @@ To start using ScaFaCoS, load one of these modules using a `module load` command
 module load ScaFaCoS/1.0.1-intel-2020a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ScaFaCoS/1.0.1-intel-2020a|-|x|x|-|x|x|x|x|
-|ScaFaCoS/1.0.1-foss-2021b|x|x|x|-|x|x|x|x|
-|ScaFaCoS/1.0.1-foss-2021a|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ScaFaCoS/1.0.1-intel-2020a|-|x|x|-|x|x|
+|ScaFaCoS/1.0.1-foss-2021b|x|x|x|-|x|x|
+|ScaFaCoS/1.0.1-foss-2021a|-|x|x|-|x|x|

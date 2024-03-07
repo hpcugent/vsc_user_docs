@@ -6,6 +6,10 @@ hide:
 Coreutils
 =========
 
+
+The GNU Core Utilities are the basic file, shell and text manipulation utilities of the GNU operating system.  These are the core utilities which are expected to exist on every operating system.
+
+https://www.gnu.org/software/coreutils/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using Coreutils, load one of these modules using a `module load` comman
 module load Coreutils/8.32-GCCcore-8.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Coreutils/8.32-GCCcore-8.3.0|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Coreutils/8.32-GCCcore-8.3.0|-|x|x|-|x|x|

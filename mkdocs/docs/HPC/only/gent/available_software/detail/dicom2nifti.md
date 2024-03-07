@@ -6,6 +6,10 @@ hide:
 dicom2nifti
 ===========
 
+
+Python library for converting dicom files to nifti
+
+https://github.com/icometrix/dicom2nifti
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using dicom2nifti, load one of these modules using a `module load` comm
 module load dicom2nifti/2.3.0-fosscuda-2020b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|dicom2nifti/2.3.0-fosscuda-2020b|x|-|-|-|x|-|-|-|
-|dicom2nifti/2.3.0-foss-2020b|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|dicom2nifti/2.3.0-fosscuda-2020b|x|-|-|-|x|-|
+|dicom2nifti/2.3.0-foss-2020b|-|x|x|x|x|x|

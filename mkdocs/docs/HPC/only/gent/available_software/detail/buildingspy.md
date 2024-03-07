@@ -6,6 +6,10 @@ hide:
 buildingspy
 ===========
 
+
+Python modules for automating Modelica simulations and for running unit test for the Buildings library
+
+https://simulationresearch.lbl.gov/modelica/buildingspy
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using buildingspy, load one of these modules using a `module load` comm
 module load buildingspy/4.0.0-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|buildingspy/4.0.0-foss-2022a|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|buildingspy/4.0.0-foss-2022a|x|x|x|-|x|x|
+
+
+### buildingspy/4.0.0-foss-2022a
+
+This is a list of extensions included in the module:
+
+buildingspy-4.0.0, Cerberus-1.3.4, pyfunnel-0.3.0, pytidylib-0.3.2

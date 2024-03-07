@@ -6,6 +6,10 @@ hide:
 adjustText
 ==========
 
+
+A small library for automatically adjustment of text position in matplotlib plots to minimize overlaps.
+
+https://github.com/Phlya/adjustText
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using adjustText, load one of these modules using a `module load` comma
 module load adjustText/0.7.3-foss-2021b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|adjustText/0.7.3-foss-2021b|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|adjustText/0.7.3-foss-2021b|x|x|x|-|x|x|

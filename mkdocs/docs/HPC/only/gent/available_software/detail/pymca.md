@@ -6,6 +6,10 @@ hide:
 pymca
 =====
 
+
+The PyMca X-Ray Fluorescence Toolkit, including PyMca5 and fisx.
+
+https://github.com/vasole/pymca
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using pymca, load one of these modules using a `module load` command li
 module load pymca/5.6.3-foss-2020b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pymca/5.6.3-foss-2020b|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pymca/5.6.3-foss-2020b|-|x|x|x|x|x|
+
+
+### pymca/5.6.3-foss-2020b
+
+This is a list of extensions included in the module:
+
+fisx-1.2.0, pymca-5.6.3

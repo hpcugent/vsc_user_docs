@@ -6,6 +6,10 @@ hide:
 GLFW
 ====
 
+
+GLFW is an Open Source, multi-platform library for OpenGL,OpenGL ES and Vulkan development on the desktop
+
+https://www.glfw.org
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using GLFW, load one of these modules using a `module load` command lik
 module load GLFW/3.3.8-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GLFW/3.3.8-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|GLFW/3.3.4-GCCcore-11.2.0|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GLFW/3.3.8-GCCcore-12.3.0|x|x|x|x|x|x|
+|GLFW/3.3.4-GCCcore-11.2.0|x|x|x|x|x|x|

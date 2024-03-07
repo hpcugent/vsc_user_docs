@@ -6,6 +6,10 @@ hide:
 JasPer
 ======
 
+
+The JasPer Project is an open-source initiative to provide a free software-based reference implementation of the codec specified in the JPEG-2000 Part-1 standard.
+
+https://www.ece.uvic.ca/~frodo/jasper/
 # Available modules
 
 
@@ -14,17 +18,18 @@ The overview below shows which JasPer installations are available per HPC-UGent 
 To start using JasPer, load one of these modules using a `module load` command like:
 
 ```shell
-module load JasPer/4.0.0-GCCcore-12.2.0
+module load JasPer/4.0.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|JasPer/4.0.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|
-|JasPer/2.0.33-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
-|JasPer/2.0.33-GCCcore-11.2.0|x|x|x|x|x|x|x|x|
-|JasPer/2.0.28-GCCcore-10.3.0|x|x|x|x|x|x|x|x|
-|JasPer/2.0.24-GCCcore-10.2.0|x|x|x|x|x|x|x|x|
-|JasPer/2.0.14-GCCcore-9.3.0|-|x|x|-|x|x|x|x|
-|JasPer/2.0.14-GCCcore-8.3.0|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|JasPer/4.0.0-GCCcore-12.3.0|x|x|x|x|x|x|
+|JasPer/4.0.0-GCCcore-12.2.0|x|x|x|x|x|x|
+|JasPer/2.0.33-GCCcore-11.3.0|x|x|x|x|x|x|
+|JasPer/2.0.33-GCCcore-11.2.0|x|x|x|x|x|x|
+|JasPer/2.0.28-GCCcore-10.3.0|x|x|x|x|x|x|
+|JasPer/2.0.24-GCCcore-10.2.0|x|x|x|x|x|x|
+|JasPer/2.0.14-GCCcore-9.3.0|-|x|x|-|x|x|
+|JasPer/2.0.14-GCCcore-8.3.0|x|x|x|-|x|x|

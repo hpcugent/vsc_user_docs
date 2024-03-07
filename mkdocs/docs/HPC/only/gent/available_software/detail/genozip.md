@@ -6,6 +6,10 @@ hide:
 genozip
 =======
 
+
+Genozip is a compressor for genomic files - it compresses FASTQ, SAM/BAM/CRAM, VCF, FASTA and others.
+
+https://genozip.com
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using genozip, load one of these modules using a `module load` command 
 module load genozip/13.0.5-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|genozip/13.0.5-GCCcore-11.2.0|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|genozip/13.0.5-GCCcore-11.2.0|x|x|x|-|x|x|

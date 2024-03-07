@@ -6,6 +6,10 @@ hide:
 sparse-neighbors-search
 =======================
 
+
+A Python/C++ implementation of an approximate nearest neighbor search for sparse data structures based on the idea of local sensitiv hash functions.
+
+https://github.com/joachimwolff/sparse-neighbors-search
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using sparse-neighbors-search, load one of these modules using a `modul
 module load sparse-neighbors-search/0.7-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|sparse-neighbors-search/0.7-foss-2022a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|sparse-neighbors-search/0.7-foss-2022a|x|x|x|x|x|x|
+
+
+### sparse-neighbors-search/0.7-foss-2022a
+
+This is a list of extensions included in the module:
+
+sparse-neighbors-search-0.7

@@ -6,6 +6,10 @@ hide:
 fastai
 ======
 
+
+The fastai deep learning library.
+
+https://www.fast.ai/
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using fastai, load one of these modules using a `module load` command l
 module load fastai/2.7.10-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fastai/2.7.10-foss-2022a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|fastai/2.7.10-foss-2022a|x|x|x|x|x|x|
+
+
+### fastai/2.7.10-foss-2022a
+
+This is a list of extensions included in the module:
+
+fastai-2.7.10, fastcore-1.5.27, fastdownload-0.0.7, fastprogress-1.0.3

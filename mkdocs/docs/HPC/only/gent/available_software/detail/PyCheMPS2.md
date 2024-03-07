@@ -6,6 +6,10 @@ hide:
 PyCheMPS2
 =========
 
+
+PyCheMPS2 is a python interface to CheMPS2, for compilation withoutMPI. CheMPS2 is a scientific library which contains a spin-adaptedimplementation of the density matrix renormalization group (DMRG)for ab initio quantum chemistry.
+
+https://sebwouters.github.io/CheMPS2
 # Available modules
 
 
@@ -14,11 +18,25 @@ The overview below shows which PyCheMPS2 installations are available per HPC-UGe
 To start using PyCheMPS2, load one of these modules using a `module load` command like:
 
 ```shell
-module load PyCheMPS2/1.8.12-foss-2022a
+module load PyCheMPS2/1.8.12-foss-2022b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyCheMPS2/1.8.12-foss-2022a|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyCheMPS2/1.8.12-foss-2022b|x|x|x|x|x|x|
+|PyCheMPS2/1.8.12-foss-2022a|-|x|x|x|x|x|
+
+
+### PyCheMPS2/1.8.12-foss-2022b
+
+This is a list of extensions included in the module:
+
+PyCheMPS2-1.8.12
+
+### PyCheMPS2/1.8.12-foss-2022a
+
+This is a list of extensions included in the module:
+
+PyCheMPS2-1.8.12

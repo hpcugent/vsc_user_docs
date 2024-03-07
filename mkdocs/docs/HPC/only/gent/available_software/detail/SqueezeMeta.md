@@ -6,6 +6,10 @@ hide:
 SqueezeMeta
 ===========
 
+
+SqueezeMeta is a full automatic pipeline for metagenomics/metatranscriptomics, covering all steps of the analysis.
+
+https://github.com/jtamames/SqueezeMeta
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using SqueezeMeta, load one of these modules using a `module load` comm
 module load SqueezeMeta/1.5.0-foss-2021b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SqueezeMeta/1.5.0-foss-2021b|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SqueezeMeta/1.5.0-foss-2021b|x|x|x|-|x|x|

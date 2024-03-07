@@ -6,6 +6,10 @@ hide:
 LncLOOM
 =======
 
+
+LncLOOM is a graph-based framework that uses integerprogramming to identify combinations of short motifs that are deeply conservedin rapidly evolving sequences.
+
+https://github.com/lncLOOM/lncLOOMv2/
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using LncLOOM, load one of these modules using a `module load` command 
 module load LncLOOM/2.0-foss-2020b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LncLOOM/2.0-foss-2020b|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LncLOOM/2.0-foss-2020b|-|x|x|x|x|x|
+
+
+### LncLOOM/2.0-foss-2020b
+
+This is a list of extensions included in the module:
+
+amply-0.1.4, LncLOOM-2.0, PuLP-2.4

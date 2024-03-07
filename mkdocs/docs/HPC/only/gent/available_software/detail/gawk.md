@@ -6,6 +6,10 @@ hide:
 gawk
 ====
 
+
+The awk utility interprets a special-purpose programming language that makes it possible to handlesimple data-reformatting jobs with just a few lines of code.
+
+https://www.gnu.org/software/gawk
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using gawk, load one of these modules using a `module load` command lik
 module load gawk/5.1.0-GCC-10.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gawk/5.1.0-GCC-10.2.0|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|gawk/5.1.0-GCC-10.2.0|-|x|x|x|x|x|

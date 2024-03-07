@@ -6,6 +6,10 @@ hide:
 Sibelia
 =======
 
+
+Sibelia: A comparative genomics tool: It assists biologists in analysing  the genomic variations that correlate with pathogens, or the genomic changes that help  microorganisms adapt in different environments. Sibelia will also be helpful for the  evolutionary and genome rearrangement studies for multiple strains of microorganisms.
+
+http://bioinf.spbau.ru/en/sibelia
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using Sibelia, load one of these modules using a `module load` command 
 module load Sibelia/3.0.7-foss-2020b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Sibelia/3.0.7-foss-2020b|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Sibelia/3.0.7-foss-2020b|-|x|x|x|x|x|

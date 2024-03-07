@@ -6,6 +6,10 @@ hide:
 SLiM
 ====
 
+
+SLiM is an evolutionary simulation framework that combines a powerful engine for population genetic simulations with the capability of modeling arbitrarily complex evolutionary scenarios.
+
+https://messerlab.org/slim
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using SLiM, load one of these modules using a `module load` command lik
 module load SLiM/3.4-GCC-9.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SLiM/3.4-GCC-9.3.0|-|x|x|-|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SLiM/3.4-GCC-9.3.0|-|x|x|-|x|-|

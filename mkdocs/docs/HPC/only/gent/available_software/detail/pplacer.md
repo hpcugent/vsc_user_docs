@@ -6,6 +6,10 @@ hide:
 pplacer
 =======
 
+
+Pplacer places query sequences on a fixed reference phylogenetic tree to maximize phylogenetic likelihood or posterior probability according to a reference alignment. Pplacer is designed to be fast, to give useful information about uncertainty, and to offer advanced visualization and downstream analysis.
+
+http://matsen.fhcrc.org/pplacer/
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using pplacer, load one of these modules using a `module load` command 
 module load pplacer/1.1.alpha19
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pplacer/1.1.alpha19|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pplacer/1.1.alpha19|x|x|x|x|x|x|

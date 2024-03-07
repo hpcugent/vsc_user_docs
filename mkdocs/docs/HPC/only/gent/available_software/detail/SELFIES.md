@@ -6,6 +6,10 @@ hide:
 SELFIES
 =======
 
+
+Robust representation of semantically constrained graphs, in particular for molecules in chemistry
+
+https://github.com/aspuru-guzik-group/selfies
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using SELFIES, load one of these modules using a `module load` command 
 module load SELFIES/2.1.1-GCC-11.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SELFIES/2.1.1-GCC-11.2.0|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SELFIES/2.1.1-GCC-11.2.0|x|x|x|-|x|x|

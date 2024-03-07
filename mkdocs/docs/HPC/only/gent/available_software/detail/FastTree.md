@@ -6,6 +6,10 @@ hide:
 FastTree
 ========
 
+
+FastTree infers approximately-maximum-likelihood phylogenetic trees from alignments of nucleotide or protein sequences. FastTree can handle alignments with up to a million of sequences in a reasonable amount of time and memory.
+
+http://www.microbesonline.org/fasttree/
 # Available modules
 
 
@@ -14,15 +18,16 @@ The overview below shows which FastTree installations are available per HPC-UGen
 To start using FastTree, load one of these modules using a `module load` command like:
 
 ```shell
-module load FastTree/2.1.11-GCCcore-11.3.0
+module load FastTree/2.1.11-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FastTree/2.1.11-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
-|FastTree/2.1.11-GCCcore-11.2.0|x|x|x|-|x|x|x|x|
-|FastTree/2.1.11-GCCcore-10.2.0|-|x|x|x|x|x|x|x|
-|FastTree/2.1.11-GCCcore-9.3.0|-|x|x|-|x|x|x|x|
-|FastTree/2.1.11-GCCcore-8.3.0|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FastTree/2.1.11-GCCcore-12.3.0|x|x|x|x|x|x|
+|FastTree/2.1.11-GCCcore-11.3.0|x|x|x|x|x|x|
+|FastTree/2.1.11-GCCcore-11.2.0|x|x|x|-|x|x|
+|FastTree/2.1.11-GCCcore-10.2.0|-|x|x|x|x|x|
+|FastTree/2.1.11-GCCcore-9.3.0|-|x|x|-|x|x|
+|FastTree/2.1.11-GCCcore-8.3.0|-|x|x|-|x|x|

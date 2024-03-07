@@ -6,6 +6,10 @@ hide:
 Cufflinks
 =========
 
+
+Transcript assembly, differential expression, and differential regulation for RNA-Seq
+
+http://cole-trapnell-lab.github.io/cufflinks/
 # Available modules
 
 
@@ -14,11 +18,12 @@ The overview below shows which Cufflinks installations are available per HPC-UGe
 To start using Cufflinks, load one of these modules using a `module load` command like:
 
 ```shell
-module load Cufflinks/20190706-GCC-10.2.0
+module load Cufflinks/20190706-GCC-11.2.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Cufflinks/20190706-GCC-10.2.0|-|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Cufflinks/20190706-GCC-11.2.0|x|x|x|x|x|x|
+|Cufflinks/20190706-GCC-10.2.0|-|x|x|x|x|x|

@@ -6,6 +6,10 @@ hide:
 GimmeMotifs
 ===========
 
+
+Suite of motif tools, including a motif prediction pipeline for ChIP-seq experiments
+
+https://github.com/vanheeringen-lab/gimmemotifs
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using GimmeMotifs, load one of these modules using a `module load` comm
 module load GimmeMotifs/0.17.2-foss-2022a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GimmeMotifs/0.17.2-foss-2022a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GimmeMotifs/0.17.2-foss-2022a|x|x|x|x|x|x|
+
+
+### GimmeMotifs/0.17.2-foss-2022a
+
+This is a list of extensions included in the module:
+
+biofluff-3.0.4, diskcache-5.4.0, feather-format-0.4.1, gimmemotifs-0.17.2, iteround-1.0.4, logomaker-0.8, loguru-0.6.0, palettable-3.3.0, xdg-6.0.0, xxhash-3.2.0

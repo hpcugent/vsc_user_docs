@@ -6,6 +6,10 @@ hide:
 VCFtools
 ========
 
+
+The aim of VCFtools is to provide  easily accessible methods for working with complex  genetic variation data in the form of VCF files.
+
+https://vcftools.github.io
 # Available modules
 
 
@@ -17,9 +21,9 @@ To start using VCFtools, load one of these modules using a `module load` command
 module load VCFtools/0.1.16-iccifort-2019.5.281
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VCFtools/0.1.16-iccifort-2019.5.281|-|x|x|-|x|x|-|x|
-|VCFtools/0.1.16-GCC-10.2.0|-|x|x|-|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|VCFtools/0.1.16-iccifort-2019.5.281|-|x|x|-|x|x|
+|VCFtools/0.1.16-GCC-10.2.0|-|x|x|-|x|-|

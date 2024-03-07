@@ -6,6 +6,10 @@ hide:
 PICRUSt2
 ========
 
+
+PICRUSt2 (Phylogenetic Investigation of Communities by Reconstruction of Unobserved States) is a software for predicting functional abundances based only on marker gene sequences.
+
+https://github.com/picrust/picrust2
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using PICRUSt2, load one of these modules using a `module load` command
 module load PICRUSt2/2.5.2-foss-2022b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PICRUSt2/2.5.2-foss-2022b|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PICRUSt2/2.5.2-foss-2022b|x|x|x|x|x|x|
+
+
+### PICRUSt2/2.5.2-foss-2022b
+
+This is a list of extensions included in the module:
+
+joblib-1.3.1, PICRUSt2-2.5.2

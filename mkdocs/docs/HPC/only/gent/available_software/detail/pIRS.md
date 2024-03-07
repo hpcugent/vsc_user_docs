@@ -6,6 +6,10 @@ hide:
 pIRS
 ====
 
+
+pIRS (profile based Illumina pair-end Reads Simulator) is a program for simulating paired-end readsfrom a reference genome. It is optimized for simulating reads similar to those generated from the Illumina platform.
+
+https://github.com/galaxy001/pirs
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using pIRS, load one of these modules using a `module load` command lik
 module load pIRS/2.0.2-gompi-2019b
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pIRS/2.0.2-gompi-2019b|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pIRS/2.0.2-gompi-2019b|-|x|x|-|x|x|

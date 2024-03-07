@@ -6,6 +6,10 @@ hide:
 EpiSCORE
 ========
 
+
+Epigenetic cell-type deconvolution from Single-Cell Omic Reference profiles
+
+https://github.com/aet21/EpiSCORE
 # Available modules
 
 
@@ -17,8 +21,8 @@ To start using EpiSCORE, load one of these modules using a `module load` command
 module load EpiSCORE/0.9.5-20220621-foss-2022a-R-4.2.1
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|EpiSCORE/0.9.5-20220621-foss-2022a-R-4.2.1|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|EpiSCORE/0.9.5-20220621-foss-2022a-R-4.2.1|x|x|x|x|x|x|

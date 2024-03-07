@@ -6,6 +6,10 @@ hide:
 GeneMark-ET
 ===========
 
+
+Eukaryotic gene prediction suite with automatic training
+
+http://exon.gatech.edu/GeneMark
 # Available modules
 
 
@@ -17,11 +21,11 @@ To start using GeneMark-ET, load one of these modules using a `module load` comm
 module load GeneMark-ET/4.71-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Thu, 07 Mar 2024 at 18:35:40 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GeneMark-ET/4.71-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
-|GeneMark-ET/4.71-GCCcore-11.2.0|x|x|x|x|x|x|x|x|
-|GeneMark-ET/4.65-GCCcore-10.2.0|x|x|x|x|x|x|x|x|
-|GeneMark-ET/4.57-GCCcore-8.3.0|-|x|x|-|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GeneMark-ET/4.71-GCCcore-11.3.0|x|x|x|x|x|x|
+|GeneMark-ET/4.71-GCCcore-11.2.0|x|x|x|x|x|x|
+|GeneMark-ET/4.65-GCCcore-10.2.0|x|x|x|x|x|x|
+|GeneMark-ET/4.57-GCCcore-8.3.0|-|x|x|-|x|x|
