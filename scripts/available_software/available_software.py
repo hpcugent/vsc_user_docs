@@ -462,6 +462,12 @@ def generate_software_detail_page(
 
     filename = f"{path}/{software_name}.md"
     md_file = MdUtils(file_name=filename, title=f"{software_name}")
+    description = software_data['description']
+    md_file.new_paragraph(f"{description}")
+    if 'homepage' in software_data.keys():
+        homepage = software_data['homepage']
+        md_file.new_paragraph(f"{homepage}")
+
     md_file.new_header(level=1, title="Available modules")
 
     md_file.new_paragraph(f"The overview below shows which {software_name} installations are available per HPC-UGent "
@@ -479,15 +485,10 @@ def generate_software_detail_page(
     )
 
     for version, details in list(sorted_versions.items())[::-1]:
-        if 'site_packages' in details:
+        if 'extensions' in details:
             md_file.new_paragraph(f"### {version}")
-            md_file.new_paragraph("This is a list of site-packages included in the module:")
-            packages = ""
-            for i, package in enumerate(details['site_packages']):
-                if i != len(details['site_packages']) - 1:
-                    packages += f"{package}, "
-                else:
-                    packages += f"{package}"
+            md_file.new_paragraph("This is a list of extensions included in the module:")
+            packages = details['extensions']
             md_file.new_paragraph(f"{packages}")
 
     md_file.create_md_file()
