@@ -14,11 +14,13 @@ The overview below shows which CoinUtils installations are available per HPC-UGe
 To start using CoinUtils, load one of these modules using a `module load` command like:
 
 ```shell
-module load CoinUtils/2.11.6-GCC-11.2.0
+module load CoinUtils/2.11.10-GCC-12.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CoinUtils/2.11.6-GCC-11.2.0|x|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CoinUtils/2.11.10-GCC-12.3.0|x|x|x|x|x|x|
+|CoinUtils/2.11.9-GCC-12.2.0|x|x|x|x|x|x|
+|CoinUtils/2.11.6-GCC-11.2.0|x|x|x|-|x|x|

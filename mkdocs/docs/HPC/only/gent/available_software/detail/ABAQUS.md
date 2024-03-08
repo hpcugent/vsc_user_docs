@@ -17,11 +17,11 @@ To start using ABAQUS, load one of these modules using a `module load` command l
 module load ABAQUS/2023
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ABAQUS/2023|x|x|x|x|x|x|x|x|
-|ABAQUS/2022-hotfix-2214|-|x|x|-|x|x|x|x|
-|ABAQUS/2022|-|x|x|-|x|x|x|x|
-|ABAQUS/2021-hotfix-2132|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ABAQUS/2023|x|x|x|x|x|x|
+|ABAQUS/2022-hotfix-2214|-|x|x|-|x|x|
+|ABAQUS/2022|-|x|x|-|x|x|
+|ABAQUS/2021-hotfix-2132|-|x|x|-|x|x|

@@ -14,11 +14,13 @@ The overview below shows which anndata installations are available per HPC-UGent
 To start using anndata, load one of these modules using a `module load` command like:
 
 ```shell
-module load anndata/0.8.0-foss-2022a
+module load anndata/0.10.5.post1-foss-2023a
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|anndata/0.8.0-foss-2022a|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|anndata/0.10.5.post1-foss-2023a|x|x|x|x|x|x|
+|anndata/0.9.2-foss-2021a|x|x|x|x|x|x|
+|anndata/0.8.0-foss-2022a|x|x|x|x|x|x|

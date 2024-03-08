@@ -17,9 +17,9 @@ To start using ANTLR, load one of these modules using a `module load` command li
 module load ANTLR/2.7.7-GCCcore-10.3.0-Java-11
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ANTLR/2.7.7-GCCcore-10.3.0-Java-11|-|x|x|-|x|x|x|x|
-|ANTLR/2.7.7-GCCcore-8.3.0-Java-11|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ANTLR/2.7.7-GCCcore-10.3.0-Java-11|-|x|x|-|x|x|
+|ANTLR/2.7.7-GCCcore-8.3.0-Java-11|-|x|x|-|x|x|

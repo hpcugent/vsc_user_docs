@@ -17,9 +17,9 @@ To start using MariaDB-connector-c, load one of these modules using a `module lo
 module load MariaDB-connector-c/3.1.7-GCCcore-9.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MariaDB-connector-c/3.1.7-GCCcore-9.3.0|-|x|x|-|x|x|x|x|
-|MariaDB-connector-c/2.3.7-GCCcore-8.3.0|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MariaDB-connector-c/3.1.7-GCCcore-9.3.0|-|x|x|-|x|x|
+|MariaDB-connector-c/2.3.7-GCCcore-8.3.0|-|x|x|-|x|x|

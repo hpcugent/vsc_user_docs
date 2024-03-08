@@ -14,13 +14,14 @@ The overview below shows which Highway installations are available per HPC-UGent
 To start using Highway, load one of these modules using a `module load` command like:
 
 ```shell
-module load Highway/1.0.4-GCCcore-11.3.0
+module load Highway/1.0.4-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Highway/1.0.4-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
-|Highway/1.0.3-GCCcore-12.2.0|x|x|x|x|x|x|x|x|
-|Highway/1.0.3-GCCcore-11.3.0|x|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Highway/1.0.4-GCCcore-12.3.0|x|x|x|x|x|x|
+|Highway/1.0.4-GCCcore-11.3.0|x|x|x|x|x|x|
+|Highway/1.0.3-GCCcore-12.2.0|x|x|x|x|x|x|
+|Highway/1.0.3-GCCcore-11.3.0|x|x|x|x|x|x|

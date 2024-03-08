@@ -17,11 +17,11 @@ To start using FLUENT, load one of these modules using a `module load` command l
 module load FLUENT/2023R1
 ```
 
-*(This data was automatically generated on Fri, 01 Sep 2023 at 08:52:14 CEST)*  
+*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|swalot|victini|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FLUENT/2023R1|x|x|x|x|x|x|x|x|
-|FLUENT/2022R1|-|x|x|-|x|x|x|x|
-|FLUENT/2021R2|-|x|x|x|x|x|x|x|
-|FLUENT/2019R3|-|x|x|-|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FLUENT/2023R1|x|x|x|x|x|x|
+|FLUENT/2022R1|-|x|x|-|x|x|
+|FLUENT/2021R2|x|x|x|x|x|x|
+|FLUENT/2019R3|-|x|x|-|x|x|
