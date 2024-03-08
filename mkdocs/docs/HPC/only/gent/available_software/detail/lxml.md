@@ -6,6 +6,10 @@ hide:
 lxml
 ====
 
+
+The lxml XML toolkit is a Pythonic binding for the C libraries libxml2 and libxslt.
+
+https://lxml.de/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using lxml, load one of these modules using a `module load` command lik
 module load lxml/4.9.3-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

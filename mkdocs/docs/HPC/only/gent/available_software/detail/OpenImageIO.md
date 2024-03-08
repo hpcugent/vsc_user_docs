@@ -6,6 +6,10 @@ hide:
 OpenImageIO
 ===========
 
+
+OpenImageIO is a library for reading and writing images, and a bunch of related classes, utilities, and applications.
+
+https://openimageio.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using OpenImageIO, load one of these modules using a `module load` comm
 module load OpenImageIO/2.0.12-iimpi-2019b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

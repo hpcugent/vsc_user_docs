@@ -6,6 +6,10 @@ hide:
 gzip
 ====
 
+
+gzip (GNU zip) is a popular data compression program as a replacement for compress
+
+https://www.gnu.org/software/gzip/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using gzip, load one of these modules using a `module load` command lik
 module load gzip/1.13-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

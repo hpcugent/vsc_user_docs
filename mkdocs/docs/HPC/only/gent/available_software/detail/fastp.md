@@ -6,6 +6,10 @@ hide:
 fastp
 =====
 
+
+A tool designed to provide fast all-in-one preprocessing for FastQ files. This tool is developed in C++ with multithreading supported to afford high performance.
+
+https://github.com/OpenGene/fastp
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using fastp, load one of these modules using a `module load` command li
 module load fastp/0.23.2-GCC-11.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

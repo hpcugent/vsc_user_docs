@@ -6,6 +6,10 @@ hide:
 HTSlib
 ======
 
+
+A C library for reading/writing high-throughput sequencing data. This package includes the utilities bgzip and tabix
+
+https://www.htslib.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using HTSlib, load one of these modules using a `module load` command l
 module load HTSlib/1.18-GCC-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

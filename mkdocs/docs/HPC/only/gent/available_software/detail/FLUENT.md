@@ -6,6 +6,10 @@ hide:
 FLUENT
 ======
 
+
+ANSYS FLUENT software contains the broad physical modeling capabilities neededto model flow, turbulence, heat transfer, and reactions for industrial applications ranging fromair flow over an aircraft wing to combustion in a furnace, from bubble columns to oil platforms,from blood flow to semiconductor manufacturing, and from clean room design to wastewater treatment plants.
+
+https://www.ansys.com/products/fluids/ansys-fluent
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using FLUENT, load one of these modules using a `module load` command l
 module load FLUENT/2023R1
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

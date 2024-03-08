@@ -6,6 +6,10 @@ hide:
 GPy
 ===
 
+
+GPy is a Gaussian Process (GP) framework written in Python
+
+https://sheffieldml.github.io/GPy
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using GPy, load one of these modules using a `module load` command like
 module load GPy/1.10.0-foss-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |GPy/1.10.0-foss-2021b|x|x|x|-|x|x|
+
+
+### GPy/1.10.0-foss-2021b
+
+This is a list of extensions included in the module:
+
+GPy-1.10.0, paramz-0.9.5

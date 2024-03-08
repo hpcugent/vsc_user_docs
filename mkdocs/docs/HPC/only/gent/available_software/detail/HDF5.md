@@ -6,6 +6,10 @@ hide:
 HDF5
 ====
 
+
+HDF5 is a data model, library, and file format for storing and managing data. It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O and for high volume and complex data.
+
+https://portal.hdfgroup.org/display/support
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using HDF5, load one of these modules using a `module load` command lik
 module load HDF5/1.14.0-gompi-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

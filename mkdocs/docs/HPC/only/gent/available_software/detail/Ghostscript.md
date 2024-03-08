@@ -6,6 +6,10 @@ hide:
 Ghostscript
 ===========
 
+
+Ghostscript is a versatile processor for PostScript data with the ability to render PostScript to different targets. It used to be part of the cups printing stack, but is no longer used for that.
+
+https://ghostscript.com
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Ghostscript, load one of these modules using a `module load` comm
 module load Ghostscript/10.01.2-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

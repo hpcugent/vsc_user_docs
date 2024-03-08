@@ -6,6 +6,10 @@ hide:
 VASP
 ====
 
+
+The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic scalematerials modelling, e.g. electronic structure calculations and quantum-mechanical molecular dynamics,from first principles.
+
+http://www.vasp.at
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using VASP, load one of these modules using a `module load` command lik
 module load VASP/6.4.2-gomkl-2023a-VASPsol-20210413-vtst-197-Wannier90-3.1.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

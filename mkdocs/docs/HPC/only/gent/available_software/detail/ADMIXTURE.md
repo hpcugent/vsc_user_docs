@@ -6,6 +6,10 @@ hide:
 ADMIXTURE
 =========
 
+
+ADMIXTURE is a software tool for maximum likelihood estimation of individual ancestries from multilocus SNP genotype datasets. It uses the same statistical model as STRUCTURE but calculates estimates much more rapidly using a fast numerical optimization algorithm.
+
+https://dalexander.github.io/admixture/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using ADMIXTURE, load one of these modules using a `module load` comman
 module load ADMIXTURE/1.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

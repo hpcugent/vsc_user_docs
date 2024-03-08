@@ -6,6 +6,10 @@ hide:
 HiCExplorer
 ===========
 
+
+HiCexplorer addresses the common tasks of Hi-C analysis from processing to visualization.
+
+http://hicexplorer.readthedocs.org/
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using HiCExplorer, load one of these modules using a `module load` comm
 module load HiCExplorer/3.7.2-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |HiCExplorer/3.7.2-foss-2022a|x|x|x|x|x|x|
+
+
+### HiCExplorer/3.7.2-foss-2022a
+
+This is a list of extensions included in the module:
+
+cleanlab-2.2.0, fit-nbinom-1.1, hic2cool-0.8.3, HiCExplorer-3.7.2, intervaltree-3.1.0, termcolor-1.1.0

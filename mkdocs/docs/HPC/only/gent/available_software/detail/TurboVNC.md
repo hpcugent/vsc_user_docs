@@ -6,6 +6,10 @@ hide:
 TurboVNC
 ========
 
+
+TurboVNC is a derivative of VNC (Virtual Network Computing) that is tuned to provide peak performance for 3D and video workloads.
+
+https://www.turbovnc.org
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using TurboVNC, load one of these modules using a `module load` command
 module load TurboVNC/2.2.6-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

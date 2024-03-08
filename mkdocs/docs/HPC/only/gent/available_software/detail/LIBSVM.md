@@ -6,6 +6,10 @@ hide:
 LIBSVM
 ======
 
+
+LIBSVM is an integrated software for support vector classification, (C-SVC, nu-SVC), regression (epsilon-SVR, nu-SVR) and distribution estimation (one-class SVM). It supports multi-class classification.
+
+https://www.csie.ntu.edu.tw/~cjlin/libsvm/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using LIBSVM, load one of these modules using a `module load` command l
 module load LIBSVM/3.30-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

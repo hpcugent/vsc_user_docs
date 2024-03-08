@@ -6,6 +6,10 @@ hide:
 ResistanceGA
 ============
 
+
+An R package to optimize resistance surfaces using Genetic Algorithms.
+
+https://github.com/wpeterman/ResistanceGA
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using ResistanceGA, load one of these modules using a `module load` com
 module load ResistanceGA/4.2-5-foss-2022a-R-4.2.1
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ResistanceGA/4.2-5-foss-2022a-R-4.2.1|x|x|x|-|x|x|
+
+
+### ResistanceGA/4.2-5-foss-2022a-R-4.2.1
+
+This is a list of extensions included in the module:
+
+GA-3.2.2, JuliaCall-0.17.5, MuMIn-1.47.1, ResistanceGA-4.2-5, spdep-1.2-7, XR-0.7.2, XRJulia-0.9.0

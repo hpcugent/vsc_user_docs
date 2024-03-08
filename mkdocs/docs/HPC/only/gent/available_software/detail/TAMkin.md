@@ -6,6 +6,10 @@ hide:
 TAMkin
 ======
 
+
+TAMkin is a post-processing toolkit for normal mode analysis, thermochemistry and reaction kinetics. It uses a Hessian computation from a standard computational chemistry program as its input.
+
+https://molmod.github.io/tamkin/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using TAMkin, load one of these modules using a `module load` command l
 module load TAMkin/1.2.6-intel-2020a-Python-3.8.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

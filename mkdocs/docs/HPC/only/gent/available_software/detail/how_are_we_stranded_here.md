@@ -6,6 +6,10 @@ hide:
 how_are_we_stranded_here
 ========================
 
+
+Python package for testing strandedness of RNA-Seq fastq files
+
+https://github.com/signalbash/how_are_we_stranded_here
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using how_are_we_stranded_here, load one of these modules using a `modu
 module load how_are_we_stranded_here/1.0.1-foss-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

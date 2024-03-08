@@ -6,6 +6,10 @@ hide:
 NLopt
 =====
 
+
+NLopt is a free/open-source library for nonlinear optimization, providing a common interface for a number of different free optimization routines available online as well as original implementations of various other algorithms.
+
+http://ab-initio.mit.edu/wiki/index.php/NLopt
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using NLopt, load one of these modules using a `module load` command li
 module load NLopt/2.7.1-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

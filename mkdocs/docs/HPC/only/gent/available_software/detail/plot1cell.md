@@ -6,6 +6,10 @@ hide:
 plot1cell
 =========
 
+
+plot1cell: a package for advanced single cell data visualization
+
+https://github.com/HaojiaWu/plot1cell
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using plot1cell, load one of these modules using a `module load` comman
 module load plot1cell/0.0.1-foss-2022b-R-4.2.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

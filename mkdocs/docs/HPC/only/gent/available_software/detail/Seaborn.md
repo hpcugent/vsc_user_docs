@@ -6,6 +6,10 @@ hide:
 Seaborn
 =======
 
+
+Seaborn is a Python visualization library based on matplotlib. It provides a high-level interface for drawing attractive statistical graphics.
+
+https://seaborn.pydata.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Seaborn, load one of these modules using a `module load` command 
 module load Seaborn/0.13.2-gfbf-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

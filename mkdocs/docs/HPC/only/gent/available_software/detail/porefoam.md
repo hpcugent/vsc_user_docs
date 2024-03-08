@@ -6,6 +6,10 @@ hide:
 porefoam
 ========
 
+
+Direct pore-scale simulation of single- and two-phase flow through confined media
+
+https://github.com/ImperialCollegeLondon/porefoam
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using porefoam, load one of these modules using a `module load` command
 module load porefoam/2021-09-21-foss-2020a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

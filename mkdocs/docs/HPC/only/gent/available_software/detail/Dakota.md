@@ -6,6 +6,10 @@ hide:
 Dakota
 ======
 
+
+The Dakota project delivers both state-of-the-art research and robust, usable software for optimization and UQ. Broadly, the Dakota software's advanced parametric analyses enable design exploration, model calibration, risk analysis, and quantification of margins and uncertainty with computational models.
+
+https://dakota.sandia.gov/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Dakota, load one of these modules using a `module load` command l
 module load Dakota/6.16.0-foss-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

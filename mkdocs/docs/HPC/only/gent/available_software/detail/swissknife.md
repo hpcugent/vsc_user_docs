@@ -6,6 +6,10 @@ hide:
 swissknife
 ==========
 
+
+Perl module for reading and writing UniProtKB data in plain text format.
+
+https://sourceforge.net/projects/swissknife/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using swissknife, load one of these modules using a `module load` comma
 module load swissknife/1.80-GCCcore-8.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

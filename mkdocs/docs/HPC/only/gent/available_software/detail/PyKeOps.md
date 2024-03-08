@@ -6,6 +6,10 @@ hide:
 PyKeOps
 =======
 
+
+PyKeOps contains the python bindings (numpy and pytorch) for the cpp/cuda library KeOps.
+
+https://www.kernel-operations.io/keops/python
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using PyKeOps, load one of these modules using a `module load` command 
 module load PyKeOps/2.0-foss-2021a-CUDA-11.3.1
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |PyKeOps/2.0-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|
+
+
+### PyKeOps/2.0-foss-2021a-CUDA-11.3.1
+
+This is a list of extensions included in the module:
+
+dill-0.3.5.1, keopscore-2.0, multiprocess-0.70.13, pykeops-2.0

@@ -6,6 +6,10 @@ hide:
 GraphMap2
 =========
 
+
+A highly sensitive and accurate mapper for long, error-prone reads
+
+https://github.com/lbcb-sci/graphmap2
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using GraphMap2, load one of these modules using a `module load` comman
 module load GraphMap2/0.6.4-foss-2019b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

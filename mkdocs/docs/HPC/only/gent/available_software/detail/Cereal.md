@@ -6,6 +6,10 @@ hide:
 Cereal
 ======
 
+
+cereal is a header-only C++11 serialization library. cereal takes arbitrary data types and reversibly turns them into different representations, such as compact binary encodings, XML, or JSON. cereal was designed to befast, light-weight, and easy to extend - it has no external dependencies and can be easily bundled with other code or used standalone.
+
+https://uscilab.github.io/cereal/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Cereal, load one of these modules using a `module load` command l
 module load Cereal/1.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

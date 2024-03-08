@@ -6,6 +6,10 @@ hide:
 Block
 =====
 
+
+Block implements the density matrix renormalization group (DMRG) algorithm forquantum chemistry.
+
+https://sanshar.github.io/Block/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Block, load one of these modules using a `module load` command li
 module load Block/1.5.3-20200525-foss-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

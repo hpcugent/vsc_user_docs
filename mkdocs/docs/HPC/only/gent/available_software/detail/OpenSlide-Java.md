@@ -6,6 +6,10 @@ hide:
 OpenSlide-Java
 ==============
 
+
+This is a Java binding to OpenSlide.
+
+https://github.com/openslide/openslide-java
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using OpenSlide-Java, load one of these modules using a `module load` c
 module load OpenSlide-Java/0.12.4-GCCcore-12.3.0-Java-17
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

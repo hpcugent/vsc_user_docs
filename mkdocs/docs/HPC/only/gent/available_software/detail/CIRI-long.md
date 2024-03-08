@@ -6,6 +6,10 @@ hide:
 CIRI-long
 =========
 
+
+Circular RNA Identification for Long-Reads Nanopore Sequencing Data
+
+https://github.com/bioinfo-biols/CIRI-long/
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using CIRI-long, load one of these modules using a `module load` comman
 module load CIRI-long/1.0.2-foss-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |CIRI-long/1.0.2-foss-2020b|-|x|x|x|x|x|
+
+
+### CIRI-long/1.0.2-foss-2020b
+
+This is a list of extensions included in the module:
+
+bwapy-0.1.4, CIRI-long-1.0.2, mappy-2.17

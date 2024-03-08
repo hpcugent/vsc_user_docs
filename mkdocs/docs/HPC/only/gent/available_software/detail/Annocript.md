@@ -6,6 +6,10 @@ hide:
 Annocript
 =========
 
+
+Annocript is a pipeline for the annotation of de-novo generated transcriptomes. It executes blast analysis with UniProt, NCBI Conserved Domain Database and Nucleotide division adding also annotations from Gene Ontology, the Enzyme Commission and UniPathways. Annocript also gives information about the longest ORF and the non-coding potential using external software. Annocript is also capable to identify putative long non-coding RNAs by using an heuristic based on homology and sequence features.
+
+https://github.com/frankMusacchia/Annocript
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using Annocript, load one of these modules using a `module load` comman
 module load Annocript/2.0-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Annocript/2.0-foss-2022a|x|x|x|x|x|x|
+
+
+### Annocript/2.0-foss-2022a
+
+This is a list of extensions included in the module:
+
+CGI-4.43

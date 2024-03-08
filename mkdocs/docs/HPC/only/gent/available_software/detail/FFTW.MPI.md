@@ -6,6 +6,10 @@ hide:
 FFTW.MPI
 ========
 
+
+FFTW is a C subroutine library for computing the discrete Fourier transform (DFT)in one or more dimensions, of arbitrary input size, and of both real and complex data.
+
+https://www.fftw.org
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using FFTW.MPI, load one of these modules using a `module load` command
 module load FFTW.MPI/3.3.10-gompi-2023b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

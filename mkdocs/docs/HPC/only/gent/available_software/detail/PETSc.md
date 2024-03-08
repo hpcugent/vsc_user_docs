@@ -6,6 +6,10 @@ hide:
 PETSc
 =====
 
+
+PETSc, pronounced PET-see (the S is silent), is a suite of data structures and routines for the scalable (parallel) solution of scientific applications modeled by partial differential equations.
+
+https://www.mcs.anl.gov/petsc
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using PETSc, load one of these modules using a `module load` command li
 module load PETSc/3.18.4-intel-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 psutil
 ======
 
+
+A cross-platform process and system utilities module for Python
+
+https://github.com/giampaolo/psutil
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using psutil, load one of these modules using a `module load` command l
 module load psutil/5.9.5-GCCcore-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |psutil/5.9.5-GCCcore-12.2.0|x|x|x|x|x|x|
+
+
+### psutil/5.9.5-GCCcore-12.2.0
+
+This is a list of extensions included in the module:
+
+psutil-5.9.5

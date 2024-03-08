@@ -6,6 +6,10 @@ hide:
 cuDNN
 =====
 
+
+The NVIDIA CUDA Deep Neural Network library (cuDNN) isa GPU-accelerated library of primitives for deep neural networks.
+
+https://developer.nvidia.com/cudnn
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using cuDNN, load one of these modules using a `module load` command li
 module load cuDNN/8.9.2.26-CUDA-12.1.1
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

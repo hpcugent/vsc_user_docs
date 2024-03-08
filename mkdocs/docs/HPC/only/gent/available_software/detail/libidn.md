@@ -6,6 +6,10 @@ hide:
 libidn
 ======
 
+
+GNU Libidn is a fully documented implementation of the Stringprep, Punycode and IDNA specifications.Libidn's purpose is to encode and decode internationalized domain names.
+
+http://www.gnu.org/software/libidn
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using libidn, load one of these modules using a `module load` command l
 module load libidn/1.38-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

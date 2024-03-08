@@ -6,6 +6,10 @@ hide:
 Pango
 =====
 
+
+Pango is a library for laying out and rendering of text, with an emphasis on internationalization.Pango can be used anywhere that text layout is needed, though most of the work on Pango so far has been done in thecontext of the GTK+ widget toolkit. Pango forms the core of text and font handling for GTK+-2.x.
+
+https://www.pango.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Pango, load one of these modules using a `module load` command li
 module load Pango/1.50.14-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

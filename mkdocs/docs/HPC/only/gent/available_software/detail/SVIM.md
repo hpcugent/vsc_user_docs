@@ -6,6 +6,10 @@ hide:
 SVIM
 ====
 
+
+SVIM (pronounced swim) is a structural variant caller for third-generation sequencing reads. It is able to detect and classify the following six classes of structural variation: deletions, insertions, inversions, tandem duplications, interspersed duplications and translocations.
+
+https://github.com/eldariont/svim
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using SVIM, load one of these modules using a `module load` command lik
 module load SVIM/2.0.0-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |SVIM/2.0.0-foss-2022a|x|x|x|x|x|x|
+
+
+### SVIM/2.0.0-foss-2022a
+
+This is a list of extensions included in the module:
+
+SVIM-2.0.0

@@ -6,6 +6,10 @@ hide:
 GBprocesS
 =========
 
+
+GBprocesS allows for the extraction of genomic inserts from NGSdata for GBS experiments. Preprocessing is performed in different stages thatare part of a linear pipeline where the steps are performed in order. GBprocesSprovides a flexible way to adjust the functionality to your needs, as theoperations required and the execution order vary depending on the GBS protocolused.
+
+https://gbprocess.readthedocs.io/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using GBprocesS, load one of these modules using a `module load` comman
 module load GBprocesS/4.0.0.post1-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

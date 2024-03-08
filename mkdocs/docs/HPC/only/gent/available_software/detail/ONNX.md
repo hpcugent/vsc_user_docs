@@ -6,6 +6,10 @@ hide:
 ONNX
 ====
 
+
+Open Neural Network Exchange (ONNX) is an open ecosystem that empowers AIdevelopers to choose the right tools as their project evolves. ONNX provides anopen source format for AI models, both deep learning and traditional ML. Itdefines an extensible computation graph model, as well as definitions ofbuilt-in operators and standard data types. Currently we focus on thecapabilities needed for inferencing (scoring).
+
+https://onnx.ai
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using ONNX, load one of these modules using a `module load` command lik
 module load ONNX/1.15.0-foss-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 RagTag
 ======
 
+
+RagTag is a collection of software tools for scaffolding andimproving modern genome assemblies. Tasks include: homology-based misassemblycorrection, homology-based assembly scaffolding and patching, and scaffoldmerging. RagTag also provides command line utilities for working with commongenome assembly file formats.
+
+https://github.com/malonge/RagTag
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using RagTag, load one of these modules using a `module load` command l
 module load RagTag/2.0.1-foss-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

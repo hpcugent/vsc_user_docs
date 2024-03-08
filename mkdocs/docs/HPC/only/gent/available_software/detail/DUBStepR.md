@@ -6,6 +6,10 @@ hide:
 DUBStepR
 ========
 
+
+DUBStepR (Determining the Underlying Basis using Step-wise Regression) is a feature selectionalgorithm for cell type identification in single-cell RNA-sequencing data.
+
+https://github.com/prabhakarlab/DUBStepR
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using DUBStepR, load one of these modules using a `module load` command
 module load DUBStepR/1.2.0-foss-2021b-R-4.1.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

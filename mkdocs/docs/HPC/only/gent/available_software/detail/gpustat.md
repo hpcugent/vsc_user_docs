@@ -6,6 +6,10 @@ hide:
 gpustat
 =======
 
+
+dstat-like utilization monitor for NVIDIA GPUs
+
+https://github.com/wookayin/gpustat
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using gpustat, load one of these modules using a `module load` command 
 module load gpustat/0.6.0-gcccuda-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |gpustat/0.6.0-gcccuda-2020b|-|-|-|-|x|-|
+
+
+### gpustat/0.6.0-gcccuda-2020b
+
+This is a list of extensions included in the module:
+
+blessings-1.7, gpustat-0.6.0, nvidia-ml-py3-7.352.0

@@ -6,6 +6,10 @@ hide:
 FLANN
 =====
 
+
+FLANN is a library for performing fast approximate nearest neighbor searches in high dimensional spaces.
+
+https://github.com/mariusmuja/flann/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using FLANN, load one of these modules using a `module load` command li
 module load FLANN/1.9.2-foss-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

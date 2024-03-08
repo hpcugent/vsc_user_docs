@@ -6,6 +6,10 @@ hide:
 Maven
 =====
 
+
+Binary maven install, Apache Maven is a software project management and comprehension tool. Based onthe concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from acentral piece of information.
+
+https://maven.apache.org/index.html
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Maven, load one of these modules using a `module load` command li
 module load Maven/3.6.3
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

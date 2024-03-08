@@ -6,6 +6,10 @@ hide:
 cython-blis
 ===========
 
+
+Fast BLAS-like operations from Python and Cython, without the tears.Provides the Blis linear algebra routines as a self-contained Python C-extension.
+
+https://github.com/explosion/cython-blis
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using cython-blis, load one of these modules using a `module load` comm
 module load cython-blis/0.9.1-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 regionmask
 ==========
 
+
+regionmask creates masks of geographical regions. It determines to whichgeographic region each grid point belongs.
+
+https://regionmask.readthedocs.io
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using regionmask, load one of these modules using a `module load` comma
 module load regionmask/0.10.0-foss-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |regionmask/0.10.0-foss-2022b|x|x|x|x|x|x|
+
+
+### regionmask/0.10.0-foss-2022b
+
+This is a list of extensions included in the module:
+
+regionmask-0.10.0

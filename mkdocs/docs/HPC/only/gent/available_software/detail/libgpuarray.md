@@ -6,6 +6,10 @@ hide:
 libgpuarray
 ===========
 
+
+Library to manipulate tensors on the GPU.
+
+http://deeplearning.net/software/libgpuarray/
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using libgpuarray, load one of these modules using a `module load` comm
 module load libgpuarray/0.7.6-fosscuda-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libgpuarray/0.7.6-fosscuda-2020b|x|-|-|-|x|-|
+
+
+### libgpuarray/0.7.6-fosscuda-2020b
+
+This is a list of extensions included in the module:
+
+libgpuarray-0.7.6

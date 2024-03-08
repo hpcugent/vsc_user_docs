@@ -6,6 +6,10 @@ hide:
 Meson
 =====
 
+
+Meson is a cross-platform build system designed to be both as fast and as user friendly as possible.
+
+https://mesonbuild.com
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Meson, load one of these modules using a `module load` command li
 module load Meson/1.2.3-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

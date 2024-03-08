@@ -6,6 +6,10 @@ hide:
 Deprecated
 ==========
 
+
+If you need to mark a function or a method as deprecated, you can use the @deprecated decorator.
+
+https://github.com/tantale/deprecated
 # Available modules
 
 
@@ -17,9 +21,22 @@ To start using Deprecated, load one of these modules using a `module load` comma
 module load Deprecated/1.2.13-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Deprecated/1.2.13-foss-2022a|x|x|x|x|x|x|
 |Deprecated/1.2.13-foss-2021a|x|x|x|x|x|x|
+
+
+### Deprecated/1.2.13-foss-2022a
+
+This is a list of extensions included in the module:
+
+Deprecated-1.2.13, wrapt-1.12.1
+
+### Deprecated/1.2.13-foss-2021a
+
+This is a list of extensions included in the module:
+
+Deprecated-1.2.13, wrapt-1.15.0

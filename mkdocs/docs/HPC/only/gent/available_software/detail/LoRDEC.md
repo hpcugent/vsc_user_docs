@@ -6,6 +6,10 @@ hide:
 LoRDEC
 ======
 
+
+Program for correcting sequencing errors in long reads (e.g., PacBio, Oxford Nanopore) using highlyaccurate short reads (e.g., Illumina).
+
+https://www.lirmm.fr/~rivals/lordec
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using LoRDEC, load one of these modules using a `module load` command l
 module load LoRDEC/0.9-gompi-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

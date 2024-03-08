@@ -6,6 +6,10 @@ hide:
 SCons
 =====
 
+
+SCons is a software construction tool.
+
+https://www.scons.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using SCons, load one of these modules using a `module load` command li
 module load SCons/4.5.2-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -28,3 +32,16 @@ module load SCons/4.5.2-GCCcore-12.3.0
 |SCons/4.1.0.post1-GCCcore-10.2.0|-|x|x|-|x|x|
 |SCons/3.1.2-GCCcore-9.3.0|-|x|x|-|x|x|
 |SCons/3.1.1-GCCcore-8.3.0|-|x|x|-|x|x|
+
+
+### SCons/4.5.2-GCCcore-12.3.0
+
+This is a list of extensions included in the module:
+
+SCons-4.5.2
+
+### SCons/4.4.0-GCCcore-11.3.0
+
+This is a list of extensions included in the module:
+
+SCons-4.4.0

@@ -6,6 +6,10 @@ hide:
 DoubletFinder
 =============
 
+
+R package for detecting doublets in single-cell RNA sequencing data
+
+https://github.com/chris-mcginnis-ucsf/DoubletFinder
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using DoubletFinder, load one of these modules using a `module load` co
 module load DoubletFinder/2.0.3-foss-2020a-R-4.0.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

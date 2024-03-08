@@ -6,6 +6,10 @@ hide:
 libev
 =====
 
+
+A full-featured and high-performance (see benchmark) event loop that is loosely modelled after libevent, but without its limitations and bugs. It is used in GNU Virtual Private Ethernet, rxvt-unicode, auditd, the Deliantra MORPG Server and Client, and many other programs.
+
+http://software.schmorp.de/pkg/libev.html
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using libev, load one of these modules using a `module load` command li
 module load libev/4.33-GCC-11.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

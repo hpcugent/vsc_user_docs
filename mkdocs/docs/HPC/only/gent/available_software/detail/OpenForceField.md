@@ -6,6 +6,10 @@ hide:
 OpenForceField
 ==============
 
+
+Simulation and Parameter Estimation in Geophysics - A python package for simulation and gradient based parameter estimation in the context of geophysical applications.
+
+https://github.com/openforcefield/openforcefield/releases
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using OpenForceField, load one of these modules using a `module load` c
 module load OpenForceField/0.7.0-intel-2020a-Python-3.8.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |OpenForceField/0.7.0-intel-2020a-Python-3.8.2|-|x|x|-|x|x|
+
+
+### OpenForceField/0.7.0-intel-2020a-Python-3.8.2
+
+This is a list of extensions included in the module:
+
+bson-0.5.10, msgpack-python-0.5.6, OpenForceField-0.7.0, xmltodict-0.12.0

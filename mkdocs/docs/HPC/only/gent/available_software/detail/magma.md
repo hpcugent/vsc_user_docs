@@ -6,6 +6,10 @@ hide:
 magma
 =====
 
+
+The MAGMA project aims to develop a dense linear algebra library similar to LAPACK but for heterogeneous/hybrid architectures, starting with current Multicore+GPU systems.
+
+https://icl.cs.utk.edu/magma/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using magma, load one of these modules using a `module load` command li
 module load magma/2.7.2-foss-2023a-CUDA-12.1.1
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

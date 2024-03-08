@@ -6,6 +6,10 @@ hide:
 QuickFF
 =======
 
+
+QuickFF is a Python package developed at the Center forMolecular Modeling (CMM) to quickly derive accurate force fields from ab initiocalculations.
+
+https://molmod.github.io/QuickFF/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using QuickFF, load one of these modules using a `module load` command 
 module load QuickFF/2.2.7-intel-2020a-Python-3.8.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

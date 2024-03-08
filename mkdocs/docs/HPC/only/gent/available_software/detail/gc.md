@@ -6,6 +6,10 @@ hide:
 gc
 ==
 
+
+The Boehm-Demers-Weiser conservative garbage collector can be used as a garbage collecting replacement for C malloc or C++ new.
+
+https://hboehm.info/gc/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using gc, load one of these modules using a `module load` command like:
 module load gc/8.2.0-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

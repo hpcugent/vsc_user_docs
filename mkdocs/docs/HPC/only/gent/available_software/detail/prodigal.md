@@ -6,6 +6,10 @@ hide:
 prodigal
 ========
 
+
+Prodigal (Prokaryotic Dynamic Programming Genefinding Algorithm)   is a microbial (bacterial and archaeal) gene finding program developed   at Oak Ridge National Laboratory and the University of Tennessee.
+
+https://github.com/hyattpd/Prodigal/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using prodigal, load one of these modules using a `module load` command
 module load prodigal/2.6.3-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

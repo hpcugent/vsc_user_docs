@@ -6,6 +6,10 @@ hide:
 numexpr
 =======
 
+
+The numexpr package evaluates multiple-operator array expressions many times faster than NumPy can. It accepts the expression as a string, analyzes it, rewrites it more efficiently, and compiles it on the fly into code for its internal virtual machine (VM). Due to its integrated just-in-time (JIT) compiler, it does not require a compiler at runtime.
+
+https://numexpr.readthedocs.io/en/latest/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using numexpr, load one of these modules using a `module load` command 
 module load numexpr/2.7.1-intel-2020a-Python-3.8.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

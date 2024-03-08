@@ -6,6 +6,10 @@ hide:
 MaxBin
 ======
 
+
+MaxBin is software for binning assembled metagenomic sequencesbased on an Expectation-Maximization algorithm.
+
+https://sourceforge.net/projects/maxbin/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using MaxBin, load one of these modules using a `module load` command l
 module load MaxBin/2.2.7-gompi-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

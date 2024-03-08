@@ -6,6 +6,10 @@ hide:
 TranscriptClean
 ===============
 
+
+TranscriptClean is a Python program that corrects mismatches, microindels,and noncanonical splice junctions in long reads that have been mapped to the genome.
+
+https://github.com/mortazavilab/TranscriptClean
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using TranscriptClean, load one of these modules using a `module load` 
 module load TranscriptClean/2.0.2-foss-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

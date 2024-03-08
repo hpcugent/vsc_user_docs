@@ -6,6 +6,10 @@ hide:
 libgit2
 =======
 
+
+libgit2 is a portable, pure C implementation of the Git core methods provided as a re-entrantlinkable library with a solid API, allowing you to write native speed custom Git applications in any languagewhich supports C bindings.
+
+https://libgit2.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using libgit2, load one of these modules using a `module load` command 
 module load libgit2/1.7.1-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 OpenFace
 ========
 
+
+OpenFace – a state-of-the art tool intended for facial landmarkdetection, head pose estimation, facial action unit recognition, and eye-gazeestimation.
+
+https://github.com/TadasBaltrusaitis/OpenFace
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using OpenFace, load one of these modules using a `module load` command
 module load OpenFace/2.2.0-foss-2021a-CUDA-11.3.1
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

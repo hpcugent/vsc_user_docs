@@ -6,6 +6,10 @@ hide:
 ELPA
 ====
 
+
+Eigenvalue SoLvers for Petaflop-Applications .
+
+https://elpa.rzg.mpg.de
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using ELPA, load one of these modules using a `module load` command lik
 module load ELPA/2021.05.001-intel-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

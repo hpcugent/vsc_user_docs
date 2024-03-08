@@ -6,6 +6,10 @@ hide:
 ant
 ===
 
+
+Apache Ant is a Java library and command-line tool whose mission is to drive processes described in build files as targets and extension points dependent upon each other. The main known usage of Ant is the build of Java applications.
+
+https://ant.apache.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using ant, load one of these modules using a `module load` command like
 module load ant/1.10.12-Java-17
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

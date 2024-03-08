@@ -6,6 +6,10 @@ hide:
 CheMPS2
 =======
 
+
+CheMPS2 is a scientific library which contains a spin-adapted implementation of thedensity matrix renormalization group (DMRG) for ab initio quantum chemistry.
+
+https://github.com/SebWouters/CheMPS2
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using CheMPS2, load one of these modules using a `module load` command 
 module load CheMPS2/1.8.12-foss-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

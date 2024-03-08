@@ -6,6 +6,10 @@ hide:
 Trinity
 =======
 
+
+Trinity represents a novel method for the efficient and robust de novo reconstruction of transcriptomes from RNA-Seq data. Trinity combines three independent software modules: Inchworm, Chrysalis, and Butterfly, applied sequentially to process large volumes of RNA-Seq reads.
+
+https://trinityrnaseq.github.io
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Trinity, load one of these modules using a `module load` command 
 module load Trinity/2.15.1-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

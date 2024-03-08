@@ -6,6 +6,10 @@ hide:
 Highway
 =======
 
+
+Highway is a C++ library for SIMD (Single Instruction, Multiple Data), i.e. applying the sameoperation to 'lanes'.
+
+https://github.com/google/highway
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Highway, load one of these modules using a `module load` command 
 module load Highway/1.0.4-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

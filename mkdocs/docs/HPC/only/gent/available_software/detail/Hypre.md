@@ -6,6 +6,10 @@ hide:
 Hypre
 =====
 
+
+Hypre is a library for solving large, sparse linear systems of equations on massively parallel computers. The problems of interest arise in the simulation codes being developed at LLNL and elsewhere to study physical phenomena in the defense, environmental, energy, and biological sciences.
+
+https://computation.llnl.gov/projects/hypre-scalable-linear-solvers-multigrid-methods
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Hypre, load one of these modules using a `module load` command li
 module load Hypre/2.25.0-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

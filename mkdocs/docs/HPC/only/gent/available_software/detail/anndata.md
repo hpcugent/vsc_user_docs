@@ -6,6 +6,10 @@ hide:
 anndata
 =======
 
+
+anndata is a Python package for handling annotated data matrices in memory and on disk, positioned between pandas and xarray
+
+https://github.com/scverse/anndata
 # Available modules
 
 
@@ -17,10 +21,29 @@ To start using anndata, load one of these modules using a `module load` command 
 module load anndata/0.10.5.post1-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |anndata/0.10.5.post1-foss-2023a|x|x|x|x|x|x|
 |anndata/0.9.2-foss-2021a|x|x|x|x|x|x|
 |anndata/0.8.0-foss-2022a|x|x|x|x|x|x|
+
+
+### anndata/0.10.5.post1-foss-2023a
+
+This is a list of extensions included in the module:
+
+anndata-0.10.5.post1, array_api_compat-1.4.1, natsort-8.4.0, packaging-23.2
+
+### anndata/0.9.2-foss-2021a
+
+This is a list of extensions included in the module:
+
+anndata-0.9.2, natsort-8.4.0, setuptools-68.1.2
+
+### anndata/0.8.0-foss-2022a
+
+This is a list of extensions included in the module:
+
+anndata-0.8.0, natsort-8.3.1

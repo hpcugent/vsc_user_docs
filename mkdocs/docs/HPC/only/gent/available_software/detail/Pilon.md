@@ -6,6 +6,10 @@ hide:
 Pilon
 =====
 
+
+Pilon is an automated genome assembly improvement and variant detection tool
+
+https://github.com/broadinstitute/pilon
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Pilon, load one of these modules using a `module load` command li
 module load Pilon/1.23-Java-11
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

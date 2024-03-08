@@ -6,6 +6,10 @@ hide:
 sansa
 =====
 
+
+Structural variant (SV) annotation, a companion to the 'dolly'tool.
+
+https://github.com/dellytools/sansa/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using sansa, load one of these modules using a `module load` command li
 module load sansa/0.0.7-gompi-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

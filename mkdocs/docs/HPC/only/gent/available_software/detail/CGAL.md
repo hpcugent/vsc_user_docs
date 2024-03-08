@@ -6,6 +6,10 @@ hide:
 CGAL
 ====
 
+
+The goal of the CGAL Open Source Project is to provide easy access to efficient and reliable geometric algorithms in the form of a C++ library.
+
+https://www.cgal.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using CGAL, load one of these modules using a `module load` command lik
 module load CGAL/5.6-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

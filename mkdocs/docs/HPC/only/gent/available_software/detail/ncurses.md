@@ -6,6 +6,10 @@ hide:
 ncurses
 =======
 
+
+The Ncurses (new curses) library is a free software emulation of curses in System V Release 4.0, and more. It uses Terminfo format, supports pads and color and multiple highlights and forms characters and function-key mapping, and has all the other SYSV-curses enhancements over BSD Curses.
+
+http://www.gnu.org/software/ncurses/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using ncurses, load one of these modules using a `module load` command 
 module load ncurses/6.4-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

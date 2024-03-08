@@ -6,6 +6,10 @@ hide:
 taxator-tk
 ==========
 
+
+A set of programs for the taxonomic analysis of nucleotide sequence data
+
+https://github.com/fungs/taxator-tk
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using taxator-tk, load one of these modules using a `module load` comma
 module load taxator-tk/1.3.3-gompi-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

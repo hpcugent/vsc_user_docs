@@ -6,6 +6,10 @@ hide:
 imageio
 =======
 
+
+Imageio is a Python library that provides an easy interface to read and write a wide range of image data, including animated images, video, volumetric data, and scientific formats.
+
+https://imageio.github.io
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using imageio, load one of these modules using a `module load` command 
 module load imageio/2.22.2-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

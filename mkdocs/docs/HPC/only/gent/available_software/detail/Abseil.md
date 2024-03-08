@@ -6,6 +6,10 @@ hide:
 Abseil
 ======
 
+
+Abseil is an open-source collection of C++ library code designed to augment theC++ standard library. The Abseil library code is collected from Google's ownC++ code base, has been extensively tested and used in production, and is thesame code we depend on in our daily coding lives.
+
+https://abseil.io/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Abseil, load one of these modules using a `module load` command l
 module load Abseil/20230125.3-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

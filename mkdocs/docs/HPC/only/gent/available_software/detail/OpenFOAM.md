@@ -6,6 +6,10 @@ hide:
 OpenFOAM
 ========
 
+
+OpenFOAM is a free, open source CFD software package. OpenFOAM has an extensive range of features to solve anything from complex fluid flows involving chemical reactions, turbulence and heat transfer, to solid dynamics and electromagnetics.
+
+https://www.openfoam.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using OpenFOAM, load one of these modules using a `module load` command
 module load OpenFOAM/v2206-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

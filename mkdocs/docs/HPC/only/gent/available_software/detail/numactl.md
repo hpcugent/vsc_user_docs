@@ -6,6 +6,10 @@ hide:
 numactl
 =======
 
+
+The numactl program allows you to run your application program on specific cpu's and memory nodes. It does this by supplying a NUMA memory policy to the operating system before running your program. The libnuma library provides convenient ways for you to add NUMA memory policies into your own program.
+
+https://github.com/numactl/numactl
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using numactl, load one of these modules using a `module load` command 
 module load numactl/2.0.16-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

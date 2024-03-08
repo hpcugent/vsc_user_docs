@@ -6,6 +6,10 @@ hide:
 Triton
 ======
 
+
+Triton is a language and compiler for parallel programming. It aims to provide aPython-based programming environment for productively writing custom DNN computekernels capable of running at maximal throughput on modern GPU hardware.
+
+https://triton-lang.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Triton, load one of these modules using a `module load` command l
 module load Triton/1.1.1-foss-2022a-CUDA-11.7.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

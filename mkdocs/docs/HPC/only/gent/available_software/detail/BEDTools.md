@@ -6,6 +6,10 @@ hide:
 BEDTools
 ========
 
+
+BEDTools: a powerful toolset for genome arithmetic.The BEDTools utilities allow one to address common genomics tasks such as finding feature overlaps andcomputing coverage.The utilities are largely based on four widely-used file formats: BED, GFF/GTF, VCF, and SAM/BAM.
+
+https://bedtools.readthedocs.io/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using BEDTools, load one of these modules using a `module load` command
 module load BEDTools/2.31.0-GCC-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

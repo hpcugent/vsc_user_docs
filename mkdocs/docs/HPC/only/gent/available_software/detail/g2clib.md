@@ -6,6 +6,10 @@ hide:
 g2clib
 ======
 
+
+Library contains GRIB2 encoder/decoder ('C' version).
+
+https://www.nco.ncep.noaa.gov/pmb/codes/GRIB2/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using g2clib, load one of these modules using a `module load` command l
 module load g2clib/1.6.0-GCCcore-9.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

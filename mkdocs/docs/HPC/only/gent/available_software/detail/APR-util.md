@@ -6,6 +6,10 @@ hide:
 APR-util
 ========
 
+
+Apache Portable Runtime (APR) util libraries.
+
+https://apr.apache.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using APR-util, load one of these modules using a `module load` command
 module load APR-util/1.6.1-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

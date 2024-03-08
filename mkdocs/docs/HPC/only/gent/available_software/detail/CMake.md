@@ -6,6 +6,10 @@ hide:
 CMake
 =====
 
+
+CMake, the cross-platform, open-source build system.  CMake is a family of tools designed to build, test and package software.
+
+https://www.cmake.org
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using CMake, load one of these modules using a `module load` command li
 module load CMake/3.27.6-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

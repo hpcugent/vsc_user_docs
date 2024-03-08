@@ -6,6 +6,10 @@ hide:
 rickflow
 ========
 
+
+Running and Analyzing OpenMM Jobs
+
+https://gitlab.com/Olllom/rickflow
 # Available modules
 
 
@@ -17,9 +21,22 @@ To start using rickflow, load one of these modules using a `module load` command
 module load rickflow/0.7.0-intel-2019b-Python-3.7.4
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |rickflow/0.7.0-intel-2019b-Python-3.7.4|-|x|x|-|x|x|
 |rickflow/0.7.0-20200529-intel-2019b-Python-3.7.4|-|x|x|-|x|x|
+
+
+### rickflow/0.7.0-intel-2019b-Python-3.7.4
+
+This is a list of extensions included in the module:
+
+mpiplus-0.0.1, openmmtools-0.19.0, pymbar-3.0.5, rickflow-0.7.0
+
+### rickflow/0.7.0-20200529-intel-2019b-Python-3.7.4
+
+This is a list of extensions included in the module:
+
+mpiplus-0.0.1, openmmtools-0.19.0, pymbar-3.0.5, rickflow-0.7.0-20200529

@@ -6,6 +6,10 @@ hide:
 einops
 ======
 
+
+Flexible and powerful tensor operations for readable and reliable code.Supports numpy, pytorch, tensorflow, jax, and others.
+
+https://einops.rocks/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using einops, load one of these modules using a `module load` command l
 module load einops/0.4.1-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

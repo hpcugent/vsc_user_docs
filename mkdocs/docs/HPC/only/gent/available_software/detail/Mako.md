@@ -6,6 +6,10 @@ hide:
 Mako
 ====
 
+
+A super-fast templating language that borrows the best ideas from the existing templating languages
+
+https://www.makotemplates.org
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Mako, load one of these modules using a `module load` command lik
 module load Mako/1.2.4-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -30,3 +34,10 @@ module load Mako/1.2.4-GCCcore-12.3.0
 |Mako/1.1.2-GCCcore-9.3.0|-|x|x|-|x|x|
 |Mako/1.1.0-GCCcore-8.3.0|x|x|x|-|x|x|
 |Mako/1.0.8-GCCcore-8.2.0|-|x|-|-|-|-|
+
+
+### Mako/1.2.4-GCCcore-12.3.0
+
+This is a list of extensions included in the module:
+
+Mako-1.2.4, MarkupSafe-2.1.3

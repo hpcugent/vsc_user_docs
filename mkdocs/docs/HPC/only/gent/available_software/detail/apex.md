@@ -6,6 +6,10 @@ hide:
 apex
 ====
 
+
+A PyTorch Extension: Tools for easy mixed precision and distributed training in Pytorch
+
+https://github.com/nvidia/apex
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using apex, load one of these modules using a `module load` command lik
 module load apex/20210420-fosscuda-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

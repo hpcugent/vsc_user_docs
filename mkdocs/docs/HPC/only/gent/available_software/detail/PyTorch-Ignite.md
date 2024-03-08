@@ -6,6 +6,10 @@ hide:
 PyTorch-Ignite
 ==============
 
+
+Ignite is a high-level library to help with training and evaluating neuralnetworks in PyTorch flexibly and transparently.
+
+https://pytorch-ignite.ai/
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using PyTorch-Ignite, load one of these modules using a `module load` c
 module load PyTorch-Ignite/0.4.12-foss-2022a-CUDA-11.7.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |PyTorch-Ignite/0.4.12-foss-2022a-CUDA-11.7.0|x|-|-|-|x|-|
+
+
+### PyTorch-Ignite/0.4.12-foss-2022a-CUDA-11.7.0
+
+This is a list of extensions included in the module:
+
+pytorch-ignite-0.4.12

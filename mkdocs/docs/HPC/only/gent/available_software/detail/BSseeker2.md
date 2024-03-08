@@ -6,6 +6,10 @@ hide:
 BSseeker2
 =========
 
+
+BS-Seeker2 is a seamless and versatile pipeline for accurately and fast mapping the bisulfite-treatedreads.
+
+http://pellegrini-legacy.mcdb.ucla.edu/bs_seeker2
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using BSseeker2, load one of these modules using a `module load` comman
 module load BSseeker2/2.1.8-iccifort-2019.5.281-Python-2.7.16
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

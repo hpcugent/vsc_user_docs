@@ -6,6 +6,10 @@ hide:
 GATK
 ====
 
+
+The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute to analyse next-generation resequencing data. The toolkit offers a wide variety of tools, with a primary focus on variant discovery and genotyping as well as strong emphasis on data quality assurance. Its robust architecture, powerful processing engine and high-performance computing features make it capable of taking on projects of any size.
+
+https://www.broadinstitute.org/gatk/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using GATK, load one of these modules using a `module load` command lik
 module load GATK/4.4.0.0-GCCcore-12.3.0-Java-17
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 GenomeWorks
 ===========
 
+
+SDK for GPU accelerated genome assembly and analysis
+
+https://github.com/clara-parabricks/GenomeWorks
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using GenomeWorks, load one of these modules using a `module load` comm
 module load GenomeWorks/2021.02.2-fosscuda-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |GenomeWorks/2021.02.2-fosscuda-2020b|-|-|-|-|x|-|
+
+
+### GenomeWorks/2021.02.2-fosscuda-2020b
+
+This is a list of extensions included in the module:
+
+genomeworks-2021.02.2, sortedcollections-2.1.0

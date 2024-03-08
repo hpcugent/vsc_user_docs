@@ -6,6 +6,10 @@ hide:
 Waylandpp
 =========
 
+
+Wayland is an object oriented display protocol, which features request and events. Requests can be seen as method calls on certain objects, whereas events can be seen as signals of an object. This makes the Wayland protocol a perfect candidate for a C++ binding.The goal of this library is to create such a C++ binding for Wayland using the most modern C++ technology currently available, providing an easy to use C++ API to Wayland.
+
+https://github.com/NilsBrause/waylandpp
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Waylandpp, load one of these modules using a `module load` comman
 module load Waylandpp/1.0.0-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 n2v
 ===
 
+
+Learning Denoising from Single Noisy Images
+
+https://github.com/juglab/n2v
 # Available modules
 
 
@@ -17,9 +21,22 @@ To start using n2v, load one of these modules using a `module load` command like
 module load n2v/0.3.2-foss-2022a-CUDA-11.7.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |n2v/0.3.2-foss-2022a-CUDA-11.7.0|x|-|-|-|x|-|
 |n2v/0.3.2-foss-2022a|x|x|x|x|x|x|
+
+
+### n2v/0.3.2-foss-2022a-CUDA-11.7.0
+
+This is a list of extensions included in the module:
+
+n2v-0.3.2
+
+### n2v/0.3.2-foss-2022a
+
+This is a list of extensions included in the module:
+
+n2v-0.3.2

@@ -6,6 +6,10 @@ hide:
 WFA2
 ====
 
+
+The wavefront alignment (WFA) algorithm is an exact gap-affine algorithm that takes advantage of homologous regions between the sequences to accelerate the alignment process.
+
+https://github.com/smarco/WFA2-lib
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using WFA2, load one of these modules using a `module load` command lik
 module load WFA2/2.3.3-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

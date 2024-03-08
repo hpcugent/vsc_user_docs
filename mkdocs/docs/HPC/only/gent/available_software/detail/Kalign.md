@@ -6,6 +6,10 @@ hide:
 Kalign
 ======
 
+
+Kalign is a fast multiple sequence alignment program for biological sequences.
+
+https://github.com/TimoLassmann/kalign
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Kalign, load one of these modules using a `module load` command l
 module load Kalign/3.3.5-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

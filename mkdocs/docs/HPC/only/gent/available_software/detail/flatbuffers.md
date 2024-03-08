@@ -6,6 +6,10 @@ hide:
 flatbuffers
 ===========
 
+
+FlatBuffers: Memory Efficient Serialization Library
+
+https://github.com/google/flatbuffers/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using flatbuffers, load one of these modules using a `module load` comm
 module load flatbuffers/23.5.26-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -29,3 +33,10 @@ module load flatbuffers/23.5.26-GCCcore-12.3.0
 |flatbuffers/1.12.0-GCCcore-10.2.0|x|x|x|x|x|x|
 |flatbuffers/1.12.0-GCCcore-9.3.0|-|x|x|-|x|x|
 |flatbuffers/1.12.0-GCCcore-8.3.0|-|x|x|-|x|x|
+
+
+### flatbuffers/2.0.7-GCCcore-11.3.0
+
+This is a list of extensions included in the module:
+
+flatbuffers-2.0.7

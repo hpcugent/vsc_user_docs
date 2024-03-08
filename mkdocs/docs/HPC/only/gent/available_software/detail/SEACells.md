@@ -6,6 +6,10 @@ hide:
 SEACells
 ========
 
+
+SEACells algorithm for Inference of transcriptional and epigenomic cellular states from single-cell genomics data
+
+https://github.com/dpeerlab/SEACells
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using SEACells, load one of these modules using a `module load` command
 module load SEACells/20230731-foss-2021a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |SEACells/20230731-foss-2021a|x|x|x|x|x|x|
+
+
+### SEACells/20230731-foss-2021a
+
+This is a list of extensions included in the module:
+
+fcsparser-0.2.3, ncls-0.0.67, palantir-1.2, PhenoGraph-1.5.7, progressbar2-4.2.0, pygam-0.8.0, pyranges-0.0.110, pyrle-0.0.33, python-utils-3.7.0, SEACells-20230731, sorted-nearest-0.0.32, typing-extensions-4.7.1, tzlocal-5.0.1

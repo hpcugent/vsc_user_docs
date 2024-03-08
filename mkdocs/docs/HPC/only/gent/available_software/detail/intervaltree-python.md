@@ -6,6 +6,10 @@ hide:
 intervaltree-python
 ===================
 
+
+A mutable, self-balancing interval tree. Queries may be by point, by range overlap, or by range containment.
+
+https://github.com/chaimleib/intervaltree
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using intervaltree-python, load one of these modules using a `module lo
 module load intervaltree-python/3.1.0-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

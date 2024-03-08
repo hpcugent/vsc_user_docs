@@ -6,6 +6,10 @@ hide:
 p11-kit
 =======
 
+
+Provides a way to load and enumerate PKCS#11 modules. Provides a standard configuration setup for installing PKCS#11 modules in such a way that they're discoverable. Also solves problems with coordinating the use of PKCS#11 by different components or libraries living in the same process.
+
+https://p11-glue.freedesktop.org/p11-kit.html
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using p11-kit, load one of these modules using a `module load` command 
 module load p11-kit/0.24.1-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

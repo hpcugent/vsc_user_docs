@@ -6,6 +6,10 @@ hide:
 PyVCF
 =====
 
+
+A Variant Call Format reader for Python.
+
+https://github.com/jamescasbon/PyVCF
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using PyVCF, load one of these modules using a `module load` command li
 module load PyVCF/0.6.8-GCC-8.3.0-Python-2.7.16
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

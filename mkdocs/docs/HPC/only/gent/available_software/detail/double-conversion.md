@@ -6,6 +6,10 @@ hide:
 double-conversion
 =================
 
+
+Efficient binary-decimal and decimal-binary conversion routines for IEEE doubles.
+
+https://github.com/google/double-conversion
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using double-conversion, load one of these modules using a `module load
 module load double-conversion/3.3.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

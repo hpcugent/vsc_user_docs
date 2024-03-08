@@ -6,6 +6,10 @@ hide:
 DBG2OLC
 =======
 
+
+DBG2OLC:Efficient Assembly of Large Genomes Using Long Erroneous Reads of the Third Generation  Sequencing Technologies
+
+https://github.com/yechengxi/DBG2OLC
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using DBG2OLC, load one of these modules using a `module load` command 
 module load DBG2OLC/20200724-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

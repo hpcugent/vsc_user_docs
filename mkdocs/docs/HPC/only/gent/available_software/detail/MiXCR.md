@@ -6,6 +6,10 @@ hide:
 MiXCR
 =====
 
+
+MiXCR is a universal software for fast and accurate extraction of T- and B- cell receptor repertoiresfrom any type of sequencing data.
+
+https://milaboratory.com/software/mixcr
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using MiXCR, load one of these modules using a `module load` command li
 module load MiXCR/4.6.0-Java-17
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 Gblocks
 =======
 
+
+Selection of conserved blocks from multiple alignments for their use in phylogenetic analysis
+
+http://molevol.cmima.csic.es/castresana/Gblocks.html
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Gblocks, load one of these modules using a `module load` command 
 module load Gblocks/0.91b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

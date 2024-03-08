@@ -6,6 +6,10 @@ hide:
 Shapely
 =======
 
+
+Shapely is a BSD-licensed Python package for manipulation and analysis of planar geometric objects.It is based on the widely deployed GEOS (the engine of PostGIS) and JTS (from which GEOS is ported) libraries.
+
+https://github.com/Toblerity/Shapely
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Shapely, load one of these modules using a `module load` command 
 module load Shapely/2.0.1-gfbf-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

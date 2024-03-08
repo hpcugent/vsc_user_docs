@@ -6,6 +6,10 @@ hide:
 GUSHR
 =====
 
+
+Assembly-free construction of UTRs from short read RNA-Seq data on the basis of coding sequence annotation.
+
+https://github.com/Gaius-Augustus/GUSHR
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using GUSHR, load one of these modules using a `module load` command li
 module load GUSHR/2020-09-28-foss-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

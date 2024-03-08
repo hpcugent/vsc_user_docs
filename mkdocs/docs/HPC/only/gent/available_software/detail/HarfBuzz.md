@@ -6,6 +6,10 @@ hide:
 HarfBuzz
 ========
 
+
+HarfBuzz is an OpenType text shaping engine.
+
+https://www.freedesktop.org/wiki/Software/HarfBuzz
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using HarfBuzz, load one of these modules using a `module load` command
 module load HarfBuzz/5.3.1-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

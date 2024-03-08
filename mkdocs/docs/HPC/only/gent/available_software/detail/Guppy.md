@@ -6,6 +6,10 @@ hide:
 Guppy
 =====
 
+
+Guppy is a data processing toolkit that contains the Oxford Nanopore Technologies' basecalling algorithms, and several bioinformatic post-processing features.
+
+https://nanoporetech.com/nanopore-sequencing-data-analysis
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Guppy, load one of these modules using a `module load` command li
 module load Guppy/6.5.7-gpu
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

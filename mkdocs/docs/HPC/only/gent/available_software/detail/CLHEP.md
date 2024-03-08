@@ -6,6 +6,10 @@ hide:
 CLHEP
 =====
 
+
+The CLHEP project is intended to be a set of HEP-specific foundation and utility classes such as random generators, physics vectors, geometry and linear algebra. CLHEP is structured in a set of packages independent of any external package.
+
+https://proj-clhep.web.cern.ch/proj-clhep/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using CLHEP, load one of these modules using a `module load` command li
 module load CLHEP/2.4.6.4-GCC-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

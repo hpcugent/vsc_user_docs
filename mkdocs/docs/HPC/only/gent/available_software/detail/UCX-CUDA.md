@@ -6,6 +6,10 @@ hide:
 UCX-CUDA
 ========
 
+
+Unified Communication XAn open-source production grade communication framework for data centricand high-performance applicationsThis module adds the UCX CUDA support.
+
+http://www.openucx.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using UCX-CUDA, load one of these modules using a `module load` command
 module load UCX-CUDA/1.14.1-GCCcore-12.3.0-CUDA-12.1.1
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

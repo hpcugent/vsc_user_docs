@@ -6,6 +6,10 @@ hide:
 SCGid
 =====
 
+
+A consensus approach to contig filtering and genome prediction from single-cell sequencing libraries
+
+https://github.com/amsesk/SCGid
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using SCGid, load one of these modules using a `module load` command li
 module load SCGid/0.9b0-foss-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |SCGid/0.9b0-foss-2021b|x|x|x|-|x|x|
+
+
+### SCGid/0.9b0-foss-2021b
+
+This is a list of extensions included in the module:
+
+ClaMS-CLI-31012020, ESOM-1.1

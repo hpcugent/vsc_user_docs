@@ -6,6 +6,10 @@ hide:
 libxsmm
 =======
 
+
+LIBXSMM is a library for small dense and small sparse matrix-matrix multiplicationstargeting Intel Architecture (x86).
+
+https://github.com/hfp/libxsmm
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using libxsmm, load one of these modules using a `module load` command 
 module load libxsmm/1.17-GCC-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

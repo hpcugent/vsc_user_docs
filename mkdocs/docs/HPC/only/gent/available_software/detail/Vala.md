@@ -6,6 +6,10 @@ hide:
 Vala
 ====
 
+
+Vala is a programming language using modern high level abstractions without imposing additional runtimerequirements and without using a different ABI compared to applications and libraries written in C.
+
+https://wiki.gnome.org/Projects/Vala
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Vala, load one of these modules using a `module load` command lik
 module load Vala/0.52.4-GCCcore-10.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

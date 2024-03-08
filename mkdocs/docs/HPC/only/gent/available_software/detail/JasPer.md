@@ -6,6 +6,10 @@ hide:
 JasPer
 ======
 
+
+The JasPer Project is an open-source initiative to provide a free software-based reference implementation of the codec specified in the JPEG-2000 Part-1 standard.
+
+https://www.ece.uvic.ca/~frodo/jasper/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using JasPer, load one of these modules using a `module load` command l
 module load JasPer/4.0.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

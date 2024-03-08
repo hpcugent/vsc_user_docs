@@ -6,6 +6,10 @@ hide:
 CSBDeep
 =======
 
+
+CSBDeep is a toolbox for Content-aware Image Restoration (CARE).
+
+https://csbdeep.bioimagecomputing.com/
 # Available modules
 
 
@@ -17,9 +21,22 @@ To start using CSBDeep, load one of these modules using a `module load` command 
 module load CSBDeep/0.7.4-foss-2022a-CUDA-11.7.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |CSBDeep/0.7.4-foss-2022a-CUDA-11.7.0|x|-|-|-|x|-|
 |CSBDeep/0.7.4-foss-2022a|x|x|x|x|x|x|
+
+
+### CSBDeep/0.7.4-foss-2022a-CUDA-11.7.0
+
+This is a list of extensions included in the module:
+
+CSBDeep-0.7.4, tifffile-2023.9.26
+
+### CSBDeep/0.7.4-foss-2022a
+
+This is a list of extensions included in the module:
+
+CSBDeep-0.7.4, tifffile-2023.9.26

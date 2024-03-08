@@ -6,6 +6,10 @@ hide:
 Mono
 ====
 
+
+An open source, cross-platform, implementation of C# and the CLR that is binary compatible with Microsoft.NET.
+
+https://www.mono-project.com/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Mono, load one of these modules using a `module load` command lik
 module load Mono/6.8.0.105-GCCcore-8.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

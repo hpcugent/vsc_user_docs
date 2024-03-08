@@ -6,6 +6,10 @@ hide:
 scanpy
 ======
 
+
+Scanpy is a scalable toolkit for analyzing single-cell gene expression data built jointly with anndata. It includes preprocessing, visualization, clustering, trajectory inference and differential expression testing. The Python-based implementation efficiently deals with datasets of more than one million cells.
+
+https://scanpy.readthedocs.io/en/stable/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using scanpy, load one of these modules using a `module load` command l
 module load scanpy/1.9.8-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -27,3 +31,40 @@ module load scanpy/1.9.8-foss-2023a
 |scanpy/1.8.2-foss-2021b|x|x|x|x|x|x|
 |scanpy/1.8.1-foss-2021a|x|x|x|x|x|x|
 |scanpy/1.8.1-foss-2020b|-|x|x|x|x|x|
+
+
+### scanpy/1.9.8-foss-2023a
+
+This is a list of extensions included in the module:
+
+joblib-1.3.2, legacy_api_wrap-1.4, natsort-8.4.0, packaging-23.2, scanpy-1.9.8, session-info-1.0.0, stdlib_list-0.10.0
+
+### scanpy/1.9.1-foss-2022a
+
+This is a list of extensions included in the module:
+
+anndata-0.8.0, natsort-8.2.0, scanpy-1.9.1, session_info-1.0.0, sinfo-0.3.4, stdlib-list-0.8.0, xlrd-2.0.1
+
+### scanpy/1.9.1-foss-2021b
+
+This is a list of extensions included in the module:
+
+anndata-0.8.0, natsort-8.2.0, pynndescent-0.5.8, scanpy-1.9.1, session_info-1.0.0, sinfo-0.3.4, stdlib-list-0.8.0, umap-learn-0.5.3, xlrd-2.0.1
+
+### scanpy/1.8.2-foss-2021b
+
+This is a list of extensions included in the module:
+
+anndata-0.7.8, natsort-8.0.2, pynndescent-0.5.5, scanpy-1.8.2, sinfo-0.3.4, stdlib-list-0.8.0, umap-learn-0.5.2, xlrd-1.2.0
+
+### scanpy/1.8.1-foss-2021a
+
+This is a list of extensions included in the module:
+
+anndata-0.7.6, natsort-7.1.1, pynndescent-0.5.4, scanpy-1.8.1, sinfo-0.3.4, stdlib-list-0.8.0, umap-learn-0.5.1, xlrd-1.2.0
+
+### scanpy/1.8.1-foss-2020b
+
+This is a list of extensions included in the module:
+
+anndata-0.7.6, natsort-7.1.1, pynndescent-0.5.4, scanpy-1.8.1, sinfo-0.3.4, stdlib-list-0.8.0, umap-learn-0.5.1

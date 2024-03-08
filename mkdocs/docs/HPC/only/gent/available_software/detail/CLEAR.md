@@ -6,6 +6,10 @@ hide:
 CLEAR
 =====
 
+
+Direct comparison of circular and linear RNA expression
+
+https://github.com/YangLab/CLEAR
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using CLEAR, load one of these modules using a `module load` command li
 module load CLEAR/20210117-foss-2021b-Python-2.7.18
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

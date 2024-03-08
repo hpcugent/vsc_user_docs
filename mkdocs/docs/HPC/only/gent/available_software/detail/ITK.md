@@ -6,6 +6,10 @@ hide:
 ITK
 ===
 
+
+Insight Segmentation and Registration Toolkit (ITK) provides an extensive suite of software tools for registering and segmenting multidimensional imaging data.
+
+https://itk.org
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using ITK, load one of these modules using a `module load` command like
 module load ITK/5.2.1-fosscuda-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 worker
 ======
 
+
+The Worker framework has been developed to help deal with parameter exploration experiments that would otherwise result in many jobs, forcing the user resort to scripting to retain her sanity; see also https://vscentrum.be/neutral/documentation/cluster-doc/running-jobs/worker-framework.
+
+https://github.com/gjbex/worker
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using worker, load one of these modules using a `module load` command l
 module load worker/1.6.13-iimpi-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

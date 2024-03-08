@@ -6,6 +6,10 @@ hide:
 help2man
 ========
 
+
+help2man produces simple manual pages from the '--help' and '--version' output of other commands.
+
+https://www.gnu.org/software/help2man/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using help2man, load one of these modules using a `module load` command
 module load help2man/1.49.3-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

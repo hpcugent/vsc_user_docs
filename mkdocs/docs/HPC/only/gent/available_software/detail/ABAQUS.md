@@ -6,6 +6,10 @@ hide:
 ABAQUS
 ======
 
+
+Finite Element Analysis software for modeling, visualization and best-in-class implicit and explicit dynamics FEA.
+
+https://www.simulia.com/products/abaqus_fea.html
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using ABAQUS, load one of these modules using a `module load` command l
 module load ABAQUS/2023
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

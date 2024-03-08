@@ -6,6 +6,10 @@ hide:
 Bio-SearchIO-hmmer
 ==================
 
+
+Code to parse output from hmmsearch, hmmscan, phmmer and nhmmer, compatiblewith both version 2 and version 3 of the HMMER package from http://hmmer.org.
+
+https://metacpan.org/pod/Bio::SearchIO::hmmer3
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Bio-SearchIO-hmmer, load one of these modules using a `module loa
 module load Bio-SearchIO-hmmer/1.7.3-GCC-10.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 libmatheval
 ===========
 
+
+GNU libmatheval is a library (callable from C and Fortran) to parse and evaluate symbolic expressions input as text.
+
+https://www.gnu.org/software/libmatheval/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using libmatheval, load one of these modules using a `module load` comm
 module load libmatheval/1.1.11-GCCcore-9.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

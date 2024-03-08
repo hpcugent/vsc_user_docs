@@ -6,6 +6,10 @@ hide:
 Bowtie
 ======
 
+
+Bowtie is an ultrafast, memory-efficient short read aligner. It aligns short DNA sequences (reads) to the human genome.
+
+http://bowtie-bio.sourceforge.net/index.shtml
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Bowtie, load one of these modules using a `module load` command l
 module load Bowtie/1.3.1-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 Amber
 =====
 
+
+Amber (originally Assisted Model Building with Energy Refinement) is software for performing molecular dynamics and structure prediction.
+
+https://ambermd.org/amber.html
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Amber, load one of these modules using a `module load` command li
 module load Amber/22.4-foss-2022a-AmberTools-22.5-CUDA-11.7.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

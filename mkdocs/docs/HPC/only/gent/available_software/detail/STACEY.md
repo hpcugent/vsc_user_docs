@@ -6,6 +6,10 @@ hide:
 STACEY
 ======
 
+
+The BEAST2 package STACEY can be used for species delimitation and species tree estimation,based on the multispecies coalescent model.
+
+http://www.indriid.com/software.html
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using STACEY, load one of these modules using a `module load` command l
 module load STACEY/1.2.5-GCC-10.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

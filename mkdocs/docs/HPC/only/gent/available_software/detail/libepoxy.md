@@ -6,6 +6,10 @@ hide:
 libepoxy
 ========
 
+
+Epoxy is a library for handling OpenGL function pointer management for you
+
+https://github.com/anholt/libepoxy
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using libepoxy, load one of these modules using a `module load` command
 module load libepoxy/1.5.10-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

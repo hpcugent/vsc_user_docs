@@ -6,6 +6,10 @@ hide:
 GraphicsMagick
 ==============
 
+
+GraphicsMagick is the swiss army knife of image processing.
+
+https://www.graphicsmagick.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using GraphicsMagick, load one of these modules using a `module load` c
 module load GraphicsMagick/1.3.34-foss-2019b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 OpenJPEG
 ========
 
+
+OpenJPEG is an open-source JPEG 2000 codec written in C language. It has been developed in order to promote the use of JPEG 2000, a still-image compression standard from the Joint Photographic Experts Group (JPEG). Since may 2015, it is officially recognized by ISO/IEC and ITU-T as a JPEG 2000 Reference Software.
+
+https://www.openjpeg.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using OpenJPEG, load one of these modules using a `module load` command
 module load OpenJPEG/2.5.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

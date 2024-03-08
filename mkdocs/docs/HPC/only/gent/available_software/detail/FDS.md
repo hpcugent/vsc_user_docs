@@ -6,6 +6,10 @@ hide:
 FDS
 ===
 
+
+Fire Dynamics Simulator (FDS) is a large-eddy simulation (LES) code for low-speed flows, with an emphasis on smoke and heat transport from fires.
+
+https://pages.nist.gov/fds-smv/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using FDS, load one of these modules using a `module load` command like
 module load FDS/6.8.0-intel-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

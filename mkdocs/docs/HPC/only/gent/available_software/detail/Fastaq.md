@@ -6,6 +6,10 @@ hide:
 Fastaq
 ======
 
+
+Python3 scripts to manipulate FASTA and FASTQ files.
+
+https://github.com/sanger-pathogens/Fastaq
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Fastaq, load one of these modules using a `module load` command l
 module load Fastaq/3.17.0-GCC-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 tcsh
 ====
 
+
+Tcsh is an enhanced, but completely compatible version of the Berkeley UNIX C shell (csh). It is a command language interpreter usable both as an interactive login shell and a shell script command processor. It includes a command-line editor, programmable word completion, spelling correction, a history mechanism, job control and a C-like syntax.
+
+https://www.tcsh.org
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using tcsh, load one of these modules using a `module load` command lik
 module load tcsh/6.24.10-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 filevercmp
 ==========
 
+
+filevercmp function as in sort --version-sort.
+
+https://github.com/ekg/filevercmp
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using filevercmp, load one of these modules using a `module load` comma
 module load filevercmp/20191210-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

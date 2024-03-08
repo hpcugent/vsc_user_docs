@@ -6,6 +6,10 @@ hide:
 Tcl
 ===
 
+
+Tcl (Tool Command Language) is a very powerful but easy to learn dynamic programming language, suitable for a very wide range of uses, including web and desktop applications, networking, administration, testing and many more.
+
+http://www.tcl.tk/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Tcl, load one of these modules using a `module load` command like
 module load Tcl/8.6.13-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

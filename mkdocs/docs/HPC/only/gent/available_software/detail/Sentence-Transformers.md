@@ -6,6 +6,10 @@ hide:
 Sentence-Transformers
 =====================
 
+
+Sentence Transformers provides an easy method to compute dense vector representations for sentences, paragraphs, and images
+
+https://github.com/UKPLab/sentence-transformers
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using Sentence-Transformers, load one of these modules using a `module 
 module load Sentence-Transformers/2.2.2-foss-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Sentence-Transformers/2.2.2-foss-2022b|x|x|x|x|x|x|
+
+
+### Sentence-Transformers/2.2.2-foss-2022b
+
+This is a list of extensions included in the module:
+
+sentence-transformers-2.2.2

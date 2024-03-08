@@ -6,6 +6,10 @@ hide:
 MrBayes
 =======
 
+
+MrBayes is a program for Bayesian inference and model choice across a wide range of phylogenetic and evolutionary models.
+
+https://nbisweden.github.io/MrBayes/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using MrBayes, load one of these modules using a `module load` command 
 module load MrBayes/3.2.7-gompi-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

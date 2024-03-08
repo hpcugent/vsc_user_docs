@@ -6,6 +6,10 @@ hide:
 p7zip
 =====
 
+
+p7zip is a quick port of 7z.exe and 7za.exe (CLI version of7zip) for Unix. 7-Zip is a file archiver with highest compression ratio.
+
+https://github.com/jinfeihan57/p7zip/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using p7zip, load one of these modules using a `module load` command li
 module load p7zip/17.03-GCCcore-10.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

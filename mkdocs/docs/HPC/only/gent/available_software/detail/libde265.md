@@ -6,6 +6,10 @@ hide:
 libde265
 ========
 
+
+libde265 is an open source implementation of the h.265 video codec
+
+https://github.com/strukturag/libde265
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using libde265, load one of these modules using a `module load` command
 module load libde265/1.0.11-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

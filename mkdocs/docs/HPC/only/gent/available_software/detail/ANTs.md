@@ -6,6 +6,10 @@ hide:
 ANTs
 ====
 
+
+ANTs extracts information from complex datasets that include imaging. ANTs is useful for managing, interpreting and visualizing multidimensional data.
+
+https://stnava.github.io/ANTs/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using ANTs, load one of these modules using a `module load` command lik
 module load ANTs/2.3.2-foss-2019b-Python-3.7.4
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

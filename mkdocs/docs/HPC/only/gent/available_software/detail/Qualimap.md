@@ -6,6 +6,10 @@ hide:
 Qualimap
 ========
 
+
+Qualimap 2 is a platform-independent application written in Java and R that provides both a Graphical User Inteface (GUI) and a command-line interface to facilitate the quality control of alignment sequencing data and its derivatives like feature counts.
+
+http://qualimap.bioinfo.cipf.es/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Qualimap, load one of these modules using a `module load` command
 module load Qualimap/2.2.1-foss-2020b-R-4.0.3
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

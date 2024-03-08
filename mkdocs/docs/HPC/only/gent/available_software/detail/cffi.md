@@ -6,6 +6,10 @@ hide:
 cffi
 ====
 
+
+C Foreign Function Interface for Python. Interact with almost any C code fromPython, based on C-like declarations that you can often copy-paste from headerfiles or documentation.
+
+https://cffi.readthedocs.io/en/latest/
 # Available modules
 
 
@@ -17,10 +21,29 @@ To start using cffi, load one of these modules using a `module load` command lik
 module load cffi/1.15.1-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |cffi/1.15.1-GCCcore-13.2.0|x|x|x|x|x|x|
 |cffi/1.15.1-GCCcore-12.3.0|x|x|x|x|x|x|
 |cffi/1.15.1-GCCcore-11.3.0|x|x|x|x|x|x|
+
+
+### cffi/1.15.1-GCCcore-13.2.0
+
+This is a list of extensions included in the module:
+
+cffi-1.15.1, pycparser-2.21
+
+### cffi/1.15.1-GCCcore-12.3.0
+
+This is a list of extensions included in the module:
+
+cffi-1.15.1, pycparser-2.21
+
+### cffi/1.15.1-GCCcore-11.3.0
+
+This is a list of extensions included in the module:
+
+cffi-1.15.1, pycparser-2.21

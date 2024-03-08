@@ -6,6 +6,10 @@ hide:
 SPOTPY
 ======
 
+
+SPOTPY is a Python framework that enables the use of Computational optimization techniques forcalibration, uncertainty and sensitivity analysis techniques of almost every (environmental-) model.
+
+https://spotpy.readthedocs.io
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using SPOTPY, load one of these modules using a `module load` command l
 module load SPOTPY/1.5.14-intel-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

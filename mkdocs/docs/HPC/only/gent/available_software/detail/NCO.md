@@ -6,6 +6,10 @@ hide:
 NCO
 ===
 
+
+manipulates and analyzes data stored in netCDF-accessible formats, including DAP, HDF4, and HDF5
+
+https://nco.sourceforge.net
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using NCO, load one of these modules using a `module load` command like
 module load NCO/5.0.6-intel-2019b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

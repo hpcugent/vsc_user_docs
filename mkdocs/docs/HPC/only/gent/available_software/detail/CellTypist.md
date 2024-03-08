@@ -6,6 +6,10 @@ hide:
 CellTypist
 ==========
 
+
+A tool for semi-automatic cell type annotation
+
+https://www.celltypist.org/
 # Available modules
 
 
@@ -17,9 +21,16 @@ To start using CellTypist, load one of these modules using a `module load` comma
 module load CellTypist/1.6.2-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |CellTypist/1.6.2-foss-2023a|x|x|x|x|x|x|
 |CellTypist/1.0.0-foss-2021b|x|x|x|-|x|x|
+
+
+### CellTypist/1.6.2-foss-2023a
+
+This is a list of extensions included in the module:
+
+celltypist-1.6.2

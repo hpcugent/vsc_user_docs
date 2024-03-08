@@ -6,6 +6,10 @@ hide:
 sf
 ==
 
+
+Support for simple features, a standardized way to encode spatial vector data. Binds to GDAL forreading and writing data, to GEOS for geometrical operations, and to PROJ for projection conversions and datumtransformations.
+
+https://cran.r-project.org/package=sf
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using sf, load one of these modules using a `module load` command like:
 module load sf/0.9-5-foss-2020a-R-4.0.0-Python-3.8.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

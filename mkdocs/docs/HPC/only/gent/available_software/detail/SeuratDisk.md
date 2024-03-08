@@ -6,6 +6,10 @@ hide:
 SeuratDisk
 ==========
 
+
+Interfaces for HDF5-based Single Cell File Formats
+
+https://github.com/mojaveazure/seurat-disk
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using SeuratDisk, load one of these modules using a `module load` comma
 module load SeuratDisk/0.0.0.9020-foss-2022a-R-4.2.1
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

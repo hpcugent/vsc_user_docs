@@ -6,6 +6,10 @@ hide:
 MEME
 ====
 
+
+The MEME Suite allows you to: * discover motifs using MEME, DREME (DNA only) or GLAM2 on groups of related DNA or protein sequences, * search sequence databases with motifs using MAST, FIMO, MCAST or GLAM2SCAN, * compare a motif to all motifs in a database of motifs, * associate motifs with Gene Ontology terms via their putative target genes, and * analyse motif enrichment using SpaMo or CentriMo.
+
+https://meme-suite.org/meme/index.html
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using MEME, load one of these modules using a `module load` command lik
 module load MEME/5.5.4-gompi-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 hmmlearn
 ========
 
+
+hmmlearn is a set of algorithms for unsupervised learning and inference of Hidden Markov Models
+
+https://github.com/hmmlearn/hmmlearn
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using hmmlearn, load one of these modules using a `module load` command
 module load hmmlearn/0.3.0-gfbf-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

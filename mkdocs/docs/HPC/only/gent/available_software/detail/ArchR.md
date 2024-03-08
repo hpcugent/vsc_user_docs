@@ -6,6 +6,10 @@ hide:
 ArchR
 =====
 
+
+ArchR is a full-featured R package for processing and analyzing single-cell ATAC-seq data.
+
+https://www.archrproject.com
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using ArchR, load one of these modules using a `module load` command li
 module load ArchR/1.0.2-foss-2023a-R-4.3.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

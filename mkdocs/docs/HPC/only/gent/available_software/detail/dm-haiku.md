@@ -6,6 +6,10 @@ hide:
 dm-haiku
 ========
 
+
+Haiku is a simple neural network library for JAX developed by some of the authors of Sonnet, a neuralnetwork library for TensorFlow.
+
+https://github.com/deepmind/dm-haiku
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using dm-haiku, load one of these modules using a `module load` command
 module load dm-haiku/0.0.9-foss-2021a-CUDA-11.3.1
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |dm-haiku/0.0.9-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|
+
+
+### dm-haiku/0.0.9-foss-2021a-CUDA-11.3.1
+
+This is a list of extensions included in the module:
+
+dm-haiku-0.0.9, jmp-0.0.4

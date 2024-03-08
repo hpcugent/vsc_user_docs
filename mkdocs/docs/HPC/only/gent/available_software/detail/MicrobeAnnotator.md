@@ -6,6 +6,10 @@ hide:
 MicrobeAnnotator
 ================
 
+
+Easy-to-use pipeline for the comprehensive metabolic annotation of microbial genomes.
+
+https://github.com/cruizperez/MicrobeAnnotator
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using MicrobeAnnotator, load one of these modules using a `module load`
 module load MicrobeAnnotator/2.0.5-foss-2021a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |MicrobeAnnotator/2.0.5-foss-2021a|-|x|x|-|x|x|
+
+
+### MicrobeAnnotator/2.0.5-foss-2021a
+
+This is a list of extensions included in the module:
+
+fasta-reader-1.0.0, gff-io-0.0.2, hmmer-0.1.0, importlib_resources-5.4.0, MicrobeAnnotator-2.0.5, pooch-1.5.2, wget-3.2, xopen-1.2.1

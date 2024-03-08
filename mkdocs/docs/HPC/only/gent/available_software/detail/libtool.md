@@ -6,6 +6,10 @@ hide:
 libtool
 =======
 
+
+GNU libtool is a generic library support script. Libtool hides the complexity of using shared libraries behind a consistent, portable interface.
+
+http://www.gnu.org/software/libtool
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using libtool, load one of these modules using a `module load` command 
 module load libtool/2.4.7-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

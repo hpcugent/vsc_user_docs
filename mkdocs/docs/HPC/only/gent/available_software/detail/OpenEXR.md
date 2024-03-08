@@ -6,6 +6,10 @@ hide:
 OpenEXR
 =======
 
+
+OpenEXR is a high dynamic-range (HDR) image file format developed by Industrial Light & Magic for use in computer imaging applications
+
+https://www.openexr.com/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using OpenEXR, load one of these modules using a `module load` command 
 module load OpenEXR/3.1.7-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

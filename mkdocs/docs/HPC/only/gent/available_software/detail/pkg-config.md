@@ -6,6 +6,10 @@ hide:
 pkg-config
 ==========
 
+
+pkg-config is a helper tool used when compiling applications and libraries. It helps you insert the correct compiler options on the command line so an application can use gcc -o test test.c `pkg-config --libs --cflags glib-2.0` for instance, rather than hard-coding values on where to find glib (or other libraries).
+
+http://www.freedesktop.org/wiki/Software/pkg-config/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using pkg-config, load one of these modules using a `module load` comma
 module load pkg-config/0.29.2-GCCcore-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

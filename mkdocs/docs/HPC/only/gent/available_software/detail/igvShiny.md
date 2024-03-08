@@ -6,6 +6,10 @@ hide:
 igvShiny
 ========
 
+
+An htmlwidget version of igv, for RStudio and Shiny apps
+
+https://github.com/gladkia/igvShiny
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using igvShiny, load one of these modules using a `module load` command
 module load igvShiny/20240112-foss-2022a-R-4.2.1
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

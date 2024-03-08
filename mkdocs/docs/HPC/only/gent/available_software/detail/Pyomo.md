@@ -6,6 +6,10 @@ hide:
 Pyomo
 =====
 
+
+Pyomo is a Python-based open-source software package that supports a diverse set of optimization capabilities for formulating and analyzing optimization models.
+
+https://www.pyomo.org/
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using Pyomo, load one of these modules using a `module load` command li
 module load Pyomo/6.4.2-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Pyomo/6.4.2-foss-2022a|x|x|x|-|x|x|
+
+
+### Pyomo/6.4.2-foss-2022a
+
+This is a list of extensions included in the module:
+
+ply-3.11, Pyomo-6.4.2, PyUtilib-6.0.0

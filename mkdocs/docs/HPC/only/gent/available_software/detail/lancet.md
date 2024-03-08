@@ -6,6 +6,10 @@ hide:
 lancet
 ======
 
+
+Lancet is a somatic variant caller (SNVs and indels) for short read data.
+
+https://github.com/nygenome/lancet
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using lancet, load one of these modules using a `module load` command l
 module load lancet/1.1.0-iccifort-2019.5.281
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

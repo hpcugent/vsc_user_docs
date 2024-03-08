@@ -6,6 +6,10 @@ hide:
 StringTie
 =========
 
+
+StringTie is a fast and highly efficient assembler of RNA-Seq alignments into potential transcripts
+
+https://ccb.jhu.edu/software/stringtie/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using StringTie, load one of these modules using a `module load` comman
 module load StringTie/2.2.1-GCC-11.2.0-Python-2.7.18
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

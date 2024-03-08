@@ -6,6 +6,10 @@ hide:
 intervaltree
 ============
 
+
+An interval tree can be used to efficiently find a set of numeric intervals overlapping or containing another interval. This library provides a basic implementation of an interval tree using C++ templates, allowing the insertion of arbitrary types into the tree.
+
+https://github.com/ekg/intervaltree
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using intervaltree, load one of these modules using a `module load` com
 module load intervaltree/0.1-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

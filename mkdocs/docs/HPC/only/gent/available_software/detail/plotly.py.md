@@ -6,6 +6,10 @@ hide:
 plotly.py
 =========
 
+
+An open-source, interactive graphing library for Python
+
+https://plot.ly/python
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using plotly.py, load one of these modules using a `module load` comman
 module load plotly.py/5.16.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -30,3 +34,58 @@ module load plotly.py/5.16.0-GCCcore-12.3.0
 |plotly.py/4.14.3-GCCcore-10.2.0|-|x|x|x|x|x|
 |plotly.py/4.8.1-GCCcore-9.3.0|-|x|x|-|x|x|
 |plotly.py/4.4.1-intel-2019b|-|x|x|-|x|x|
+
+
+### plotly.py/5.16.0-GCCcore-12.3.0
+
+This is a list of extensions included in the module:
+
+packaging-23.1, plotly-5.16.0, tenacity-8.2.3
+
+### plotly.py/5.13.1-GCCcore-12.2.0
+
+This is a list of extensions included in the module:
+
+plotly-5.13.1, tenacity-8.2.2
+
+### plotly.py/5.12.0-GCCcore-11.3.0
+
+This is a list of extensions included in the module:
+
+plotly-5.12.0, tenacity-8.0.1
+
+### plotly.py/5.10.0-GCCcore-11.3.0
+
+This is a list of extensions included in the module:
+
+plotly-5.10.0, tenacity-8.1.0
+
+### plotly.py/5.4.0-GCCcore-11.2.0
+
+This is a list of extensions included in the module:
+
+plotly-5.4.0, tenacity-8.0.1
+
+### plotly.py/5.1.0-GCCcore-10.3.0
+
+This is a list of extensions included in the module:
+
+plotly-5.1.0, tenacity-8.0.1
+
+### plotly.py/4.14.3-GCCcore-10.2.0
+
+This is a list of extensions included in the module:
+
+plotly-4.14.3, retrying-1.3.3
+
+### plotly.py/4.8.1-GCCcore-9.3.0
+
+This is a list of extensions included in the module:
+
+plotly-4.8.1, retrying-1.3.3
+
+### plotly.py/4.4.1-intel-2019b
+
+This is a list of extensions included in the module:
+
+plotly-4.4.1, retrying-1.3.3
