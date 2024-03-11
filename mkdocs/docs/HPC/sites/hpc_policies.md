@@ -24,11 +24,9 @@ The conditions that apply depend on your affiliation.
 
 -   Includes researchers from e.g. INBO, ILVO, RBINS, etc.
 
--   Usage subject to an agreement with Ghent University.
+-   HPC-UGent promotes using the [Tier1 services of the VSC](https://www.vscentrum.be/compute).
 
--   Every institute gets *1,500€* worth of compute time free of charge per year.
-
--   Use your *welkom* account credentials to request a VSC-id and connect.
+-   HPC-UGent can act as a liason.
 
 ### Students
 
@@ -41,44 +39,18 @@ The conditions that apply depend on your affiliation.
 
 ## Access for industry
 
-Researchers and developers from industry are very welcome to use HPC-UGent
-services and infrastructure.
+Researchers and developers from industry can use the services and infrastructure tailored to industry from VSC.
 
 ### Our offer
 
--   Access to state-of-the-art supercomputing infrastructure.
+-   [VSC has a dedicated service geared towards industry](https://www.vscentrum.be/getaccess).
 
--   Dedicated helpdesk and user support.
+-   HPC-UGent can act as a liason to the VSC services.
 
--   On-demand software installation.
+### Research partnership:
 
--   Regular training sessions.
+-   Interested in collaborating in supercomputing with a UGent research group?
 
--   Buy compute time and storage in pay-what-you-use model.
+-   We can help you look for a collaborative partner. Contact {{ hpcinfo }}.
 
--   Advice on using other compute clusters in the VSC network.
-
-### Access models
-
--   Exploratory access:
-    -   Explore our infrastructure and services for a 1-month period.
-    -   No contract needed.
-    -   Free of charge.
-    -   Request your free trial by mail to {{ hpcinfo }}.
-
--   Access via agreement:
-    -   Subject to an agreement between your company and Ghent University.
-    -   Check out a draft contract at [Access for industry]({{ hpc_support_industry }}).
-    -   Pay-what-you-use system: you only pay for the compute time and storage that you actually use.
-    -   All prices are listed in the draft contract.
-    -   Request a quote by mail to {{ hpcinfo }}.
-
--   Getting access:
-    -   Use your *welkom* account credentials to request a VSC-id and connect.
-    -   See also [Access for external parties](https://helpdesk.ugent.be/account/en/externe.php)
-    -   For further details, contact {{ hpcinfo }}.
-
--   Research partnership:
-    -   Interested in collaborating in supercomputing with a UGent research group?
-    -   We can help you look for a collaborative partner. Contact {{ hpcinfo }}.
 {% endif %}
