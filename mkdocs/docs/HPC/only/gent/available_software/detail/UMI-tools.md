@@ -6,6 +6,10 @@ hide:
 UMI-tools
 =========
 
+
+Tools for handling Unique Molecular Identifiers in NGS data sets
+
+https://umi-tools.readthedocs.io
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using UMI-tools, load one of these modules using a `module load` comman
 module load UMI-tools/1.0.1-foss-2019b-Python-3.7.4
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |UMI-tools/1.0.1-foss-2019b-Python-3.7.4|-|x|x|-|x|x|
+
+
+### UMI-tools/1.0.1-foss-2019b-Python-3.7.4
+
+This is a list of extensions included in the module:
+
+regex-2020.4.4, UMI-tools-1.0.1

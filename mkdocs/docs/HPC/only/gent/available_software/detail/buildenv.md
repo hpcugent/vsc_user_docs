@@ -6,6 +6,10 @@ hide:
 buildenv
 ========
 
+
+This module sets a group of environment variables for compilers, linkers, maths libraries, etc., that you can use to easily transition between toolchains when building your software. To query the variables being set please use: module show <this module name>
+
+None
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using buildenv, load one of these modules using a `module load` command
 module load buildenv/default-intel-2019b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

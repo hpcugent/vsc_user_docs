@@ -6,6 +6,10 @@ hide:
 Theano
 ======
 
+
+Theano is a Python library that allows you to define, optimize,and evaluate mathematical expressions involving multi-dimensional arrays efficiently.
+
+https://deeplearning.net/software/theano
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Theano, load one of these modules using a `module load` command l
 module load Theano/1.1.2-intel-2021b-PyMC
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

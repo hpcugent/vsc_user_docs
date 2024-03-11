@@ -6,6 +6,10 @@ hide:
 MitoHiFi
 ========
 
+
+MitoHiFi is a Python workflow that assembles mitogenomes from Pacbio HiFi reads
+
+https://github.com/marcelauliano/MitoHiFi
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using MitoHiFi, load one of these modules using a `module load` command
 module load MitoHiFi/3.2-foss-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |MitoHiFi/3.2-foss-2022b|x|x|x|x|x|x|
+
+
+### MitoHiFi/3.2-foss-2022b
+
+This is a list of extensions included in the module:
+
+dna-features-viewer-3.1.2, MitoHiFi-3.2, mitos-2.1.3

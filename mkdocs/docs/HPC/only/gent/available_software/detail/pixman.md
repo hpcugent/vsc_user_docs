@@ -6,6 +6,10 @@ hide:
 pixman
 ======
 
+
+Pixman is a low-level software library for pixel manipulation, providing features such as image compositing and trapezoid rasterization. Important users of pixman are the cairo graphics library and the X server.
+
+http://www.pixman.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using pixman, load one of these modules using a `module load` command l
 module load pixman/0.42.2-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

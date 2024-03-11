@@ -6,6 +6,10 @@ hide:
 numba
 =====
 
+
+Numba is an Open Source NumPy-aware optimizing compiler forPython sponsored by Continuum Analytics, Inc. It uses the remarkable LLVMcompiler infrastructure to compile Python syntax to machine code.
+
+https://numba.pydata.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using numba, load one of these modules using a `module load` command li
 module load numba/0.58.1-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -37,3 +41,100 @@ module load numba/0.58.1-foss-2023a
 |numba/0.50.0-intel-2020a-Python-3.8.2|-|x|x|-|x|x|
 |numba/0.50.0-foss-2020a-Python-3.8.2|-|x|x|-|x|x|
 |numba/0.47.0-foss-2019b-Python-3.7.4|x|x|x|-|x|x|
+
+
+### numba/0.58.1-foss-2023a
+
+This is a list of extensions included in the module:
+
+llvmlite-0.41.1, numba-0.58.1
+
+### numba/0.58.1-foss-2022b
+
+This is a list of extensions included in the module:
+
+llvmlite-0.41.1, numba-0.58.1
+
+### numba/0.56.4-foss-2022a-CUDA-11.7.0
+
+This is a list of extensions included in the module:
+
+llvmlite-0.39.1, numba-0.56.4
+
+### numba/0.56.4-foss-2022a
+
+This is a list of extensions included in the module:
+
+llvmlite-0.39.1, numba-0.56.4
+
+### numba/0.54.1-intel-2021b
+
+This is a list of extensions included in the module:
+
+llvmlite-0.37.0, numba-0.54.1
+
+### numba/0.54.1-foss-2021b-CUDA-11.4.1
+
+This is a list of extensions included in the module:
+
+llvmlite-0.37.0, numba-0.54.1
+
+### numba/0.54.1-foss-2021b
+
+This is a list of extensions included in the module:
+
+llvmlite-0.37.0, numba-0.54.1
+
+### numba/0.53.1-fosscuda-2020b
+
+This is a list of extensions included in the module:
+
+llvmlite-0.36.0, numba-0.53.1
+
+### numba/0.53.1-foss-2021a
+
+This is a list of extensions included in the module:
+
+llvmlite-0.36.0, numba-0.53.1
+
+### numba/0.53.1-foss-2020b
+
+This is a list of extensions included in the module:
+
+llvmlite-0.36.0, numba-0.53.1
+
+### numba/0.52.0-intel-2020b
+
+This is a list of extensions included in the module:
+
+llvmlite-0.35.0, numba-0.52.0
+
+### numba/0.52.0-fosscuda-2020b
+
+This is a list of extensions included in the module:
+
+llvmlite-0.35.0, numba-0.52.0
+
+### numba/0.52.0-foss-2020b
+
+This is a list of extensions included in the module:
+
+llvmlite-0.35.0, numba-0.52.0
+
+### numba/0.50.0-intel-2020a-Python-3.8.2
+
+This is a list of extensions included in the module:
+
+llvmlite-0.33.0, numba-0.50.0
+
+### numba/0.50.0-foss-2020a-Python-3.8.2
+
+This is a list of extensions included in the module:
+
+llvmlite-0.33.0, numba-0.50.0
+
+### numba/0.47.0-foss-2019b-Python-3.7.4
+
+This is a list of extensions included in the module:
+
+llvmlite-0.31.0, numba-0.47.0

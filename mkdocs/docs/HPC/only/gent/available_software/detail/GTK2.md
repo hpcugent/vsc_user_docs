@@ -6,6 +6,10 @@ hide:
 GTK2
 ====
 
+
+The GTK+ 2 package contains libraries used for creating graphical user interfaces for applications.
+
+https://developer.gnome.org/gtk+/stable/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using GTK2, load one of these modules using a `module load` command lik
 module load GTK2/2.24.33-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

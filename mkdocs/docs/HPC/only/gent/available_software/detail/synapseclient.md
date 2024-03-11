@@ -6,6 +6,10 @@ hide:
 synapseclient
 =============
 
+
+The synapseclient package provides an interface to Synapse, a collaborative, open-source research platform that allows teams to share data, track analyses, and collaborate, providing support for:   integrated presentation of data, code and text   fine grained access control   provenance tracking The synapseclient package lets you communicate with the cloud-hosted Synapse service to access data and create shared data analysis projects from within Python scripts or at the interactive Python console. Other Synapse clients exist for R, Java, and the web. The Python client can also be used from the command line.
+
+https://help.synapse.org/docs/
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using synapseclient, load one of these modules using a `module load` co
 module load synapseclient/3.0.0-GCCcore-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |synapseclient/3.0.0-GCCcore-12.2.0|x|x|x|x|x|x|
+
+
+### synapseclient/3.0.0-GCCcore-12.2.0
+
+This is a list of extensions included in the module:
+
+cryptography-3.3.2, Deprecated-1.2.14, keyring-23.4.1, keyrings.alt-3.1, synapseclient-3.0.0, wrapt-1.14.1

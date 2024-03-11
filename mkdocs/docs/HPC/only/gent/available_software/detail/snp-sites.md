@@ -6,6 +6,10 @@ hide:
 snp-sites
 =========
 
+
+Finds SNP sites from a multi-FASTA alignment file.
+
+https://sanger-pathogens.github.io/snp-sites/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using snp-sites, load one of these modules using a `module load` comman
 module load snp-sites/2.5.1-GCCcore-10.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

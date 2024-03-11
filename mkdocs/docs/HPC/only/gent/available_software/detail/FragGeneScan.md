@@ -6,6 +6,10 @@ hide:
 FragGeneScan
 ============
 
+
+FragGeneScan is an application for finding (fragmented) genes in short reads.
+
+https://omics.informatics.indiana.edu/FragGeneScan/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using FragGeneScan, load one of these modules using a `module load` com
 module load FragGeneScan/1.31-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

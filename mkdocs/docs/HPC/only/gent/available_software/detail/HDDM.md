@@ -6,6 +6,10 @@ hide:
 HDDM
 ====
 
+
+HDDM is a Python toolbox for hierarchical Bayesian parameter estimation of the Drift Diffusion Model (via PyMC).
+
+http://ski.clps.brown.edu/hddm_docs
 # Available modules
 
 
@@ -17,9 +21,22 @@ To start using HDDM, load one of these modules using a `module load` command lik
 module load HDDM/0.7.5-intel-2019b-Python-3.7.4
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |HDDM/0.7.5-intel-2019b-Python-3.7.4|-|x|-|-|-|x|
 |HDDM/0.7.5-intel-2019b-Python-2.7.16|-|x|-|-|-|x|
+
+
+### HDDM/0.7.5-intel-2019b-Python-3.7.4
+
+This is a list of extensions included in the module:
+
+HDDM-0.7.5, kabuki-0.6.2, patsy-0.5.1, pymc-2.3.7
+
+### HDDM/0.7.5-intel-2019b-Python-2.7.16
+
+This is a list of extensions included in the module:
+
+HDDM-0.7.5, kabuki-0.6.2, patsy-0.5.1, pymc-2.3.7

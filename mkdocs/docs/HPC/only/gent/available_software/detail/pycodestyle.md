@@ -6,6 +6,10 @@ hide:
 pycodestyle
 ===========
 
+
+pycodestyle is a tool to check your Python code against some of the style conventions in PEP 8.
+
+https://pycodestyle.readthedocs.io
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using pycodestyle, load one of these modules using a `module load` comm
 module load pycodestyle/2.11.1-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

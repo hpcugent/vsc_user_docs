@@ -6,6 +6,10 @@ hide:
 MACS3
 =====
 
+
+Model Based Analysis for ChIP-Seq data
+
+https://macs3-project.github.io/MACS/
 # Available modules
 
 
@@ -17,9 +21,22 @@ To start using MACS3, load one of these modules using a `module load` command li
 module load MACS3/3.0.1-gfbf-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |MACS3/3.0.1-gfbf-2023a|x|x|x|x|x|x|
 |MACS3/3.0.0-foss-2022b|x|x|x|x|x|x|
+
+
+### MACS3/3.0.1-gfbf-2023a
+
+This is a list of extensions included in the module:
+
+cykhash-2.0.1, MACS3-3.0.1
+
+### MACS3/3.0.0-foss-2022b
+
+This is a list of extensions included in the module:
+
+cykhash-2.0.1, MACS3-3.0.0

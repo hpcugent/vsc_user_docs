@@ -6,6 +6,10 @@ hide:
 NAMD
 ====
 
+
+NAMD is a parallel molecular dynamics code designed for high-performance simulation of large biomolecular systems.
+
+https://www.ks.uiuc.edu/Research/namd/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using NAMD, load one of these modules using a `module load` command lik
 module load NAMD/2.14-foss-2023a-mpi
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

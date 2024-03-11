@@ -6,6 +6,10 @@ hide:
 iimpi
 =====
 
+
+Intel C/C++ and Fortran compilers, alongside Intel MPI.
+
+https://software.intel.com/parallel-studio-xe
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using iimpi, load one of these modules using a `module load` command li
 module load iimpi/2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

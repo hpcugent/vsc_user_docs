@@ -6,6 +6,10 @@ hide:
 snappy
 ======
 
+
+Snappy is a compression/decompression library. It does not aimfor maximum compression, or compatibility with any other compression library;instead, it aims for very high speeds and reasonable compression.
+
+https://github.com/google/snappy
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using snappy, load one of these modules using a `module load` command l
 module load snappy/1.1.10-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 CFITSIO
 =======
 
+
+CFITSIO is a library of C and Fortran subroutines for reading and writing data files inFITS (Flexible Image Transport System) data format.
+
+https://heasarc.gsfc.nasa.gov/fitsio/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using CFITSIO, load one of these modules using a `module load` command 
 module load CFITSIO/4.3.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

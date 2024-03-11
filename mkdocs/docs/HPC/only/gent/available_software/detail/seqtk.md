@@ -6,6 +6,10 @@ hide:
 seqtk
 =====
 
+
+Seqtk is a fast and lightweight tool for processing sequences in the FASTA or FASTQ format. It seamlessly parses both FASTA and FASTQ files which can also be optionally compressed by gzip.
+
+https://github.com/lh3/seqtk/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using seqtk, load one of these modules using a `module load` command li
 module load seqtk/1.4-GCC-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 PCRE2
 =====
 
+
+The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5.
+
+http://www.pcre.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using PCRE2, load one of these modules using a `module load` command li
 module load PCRE2/10.42-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

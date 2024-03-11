@@ -6,6 +6,10 @@ hide:
 HighFive
 ========
 
+
+HighFive is a modern header-only C++11 friendly interface for libhdf5.
+
+https://github.com/BlueBrain/HighFive
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using HighFive, load one of these modules using a `module load` command
 module load HighFive/2.7.1-gompi-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

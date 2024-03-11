@@ -6,6 +6,10 @@ hide:
 beagle-lib
 ==========
 
+
+beagle-lib is a high-performance library that can perform the core calculations at the heart of most Bayesian and Maximum Likelihood phylogenetics packages.
+
+https://github.com/beagle-dev/beagle-lib
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using beagle-lib, load one of these modules using a `module load` comma
 module load beagle-lib/4.0.0-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

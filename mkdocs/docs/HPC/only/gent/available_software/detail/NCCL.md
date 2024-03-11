@@ -6,6 +6,10 @@ hide:
 NCCL
 ====
 
+
+The NVIDIA Collective Communications Library (NCCL) implements multi-GPU and multi-node collectivecommunication primitives that are performance optimized for NVIDIA GPUs.
+
+https://developer.nvidia.com/nccl
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using NCCL, load one of these modules using a `module load` command lik
 module load NCCL/2.18.3-GCCcore-12.3.0-CUDA-12.1.1
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

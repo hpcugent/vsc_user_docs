@@ -6,6 +6,10 @@ hide:
 netCDF
 ======
 
+
+NetCDF (network Common Data Form) is a set of software libraries and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data.
+
+https://www.unidata.ucar.edu/software/netcdf/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using netCDF, load one of these modules using a `module load` command l
 module load netCDF/4.9.2-gompi-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

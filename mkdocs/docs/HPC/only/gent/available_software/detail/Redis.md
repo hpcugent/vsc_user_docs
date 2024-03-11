@@ -6,6 +6,10 @@ hide:
 Redis
 =====
 
+
+Redis is an open source (BSD licensed), in-memory data structure store, used asa database, cache, and message broker. Redis provides data structures such asstrings, hashes, lists, sets, sorted sets with range queries, bitmaps,hyperloglogs, geospatial indexes, and streams. Redis has built-in replication,Lua scripting, LRU eviction, transactions, and different levels of on-diskpersistence, and provides high availability via Redis Sentinel and automaticpartitioning with Redis Cluster.
+
+https://redis.io
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Redis, load one of these modules using a `module load` command li
 module load Redis/7.0.8-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

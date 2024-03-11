@@ -6,6 +6,10 @@ hide:
 alevin-fry
 ==========
 
+
+alevin-fry is an efficient and flexible tool for processing single-cell sequencing data, currently focused on single-cell transcriptomics and feature barcoding.
+
+https://github.com/COMBINE-lab/alevin-fry
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using alevin-fry, load one of these modules using a `module load` comma
 module load alevin-fry/0.4.3-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

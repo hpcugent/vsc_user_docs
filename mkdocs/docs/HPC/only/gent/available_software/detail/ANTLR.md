@@ -6,6 +6,10 @@ hide:
 ANTLR
 =====
 
+
+ANTLR, ANother Tool for Language Recognition, (formerly PCCTS) is a language tool that provides a framework for constructing recognizers, compilers, and translators from grammatical descriptions containing Java, C#, C++, or Python actions.
+
+https://www.antlr2.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using ANTLR, load one of these modules using a `module load` command li
 module load ANTLR/2.7.7-GCCcore-10.3.0-Java-11
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

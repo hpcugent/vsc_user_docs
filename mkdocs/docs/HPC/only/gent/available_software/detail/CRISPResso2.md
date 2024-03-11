@@ -6,6 +6,10 @@ hide:
 CRISPResso2
 ===========
 
+
+CRISPResso2 is a software pipeline designed to enable rapid andintuitive interpretation of genome editing experiments.
+
+https://github.com/pinellolab/CRISPResso2/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using CRISPResso2, load one of these modules using a `module load` comm
 module load CRISPResso2/2.2.1-foss-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

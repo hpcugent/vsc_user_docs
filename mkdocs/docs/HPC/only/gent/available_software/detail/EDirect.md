@@ -6,6 +6,10 @@ hide:
 EDirect
 =======
 
+
+Entrez Direct (EDirect) provides access to the NCBI's suite ofinterconnected databases from a Unix terminal window. Search terms are enteredas command-line arguments. Individual operations are connected with Unix pipesto construct multi-step queries. Selected records can then be retrieved in avariety of formats.
+
+https://www.ncbi.nlm.nih.gov/books/NBK25501/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using EDirect, load one of these modules using a `module load` command 
 module load EDirect/20.5.20231006-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

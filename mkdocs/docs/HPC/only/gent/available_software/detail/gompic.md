@@ -6,6 +6,10 @@ hide:
 gompic
 ======
 
+
+GNU Compiler Collection (GCC) based compiler toolchain along with CUDA toolkit, including OpenMPI for MPI support with CUDA features enabled.
+
+(none)
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using gompic, load one of these modules using a `module load` command l
 module load gompic/2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

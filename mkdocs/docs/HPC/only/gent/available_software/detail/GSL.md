@@ -6,6 +6,10 @@ hide:
 GSL
 ===
 
+
+The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers. The library provides a wide range of mathematical routines such as random number generators, special functions and least-squares fitting.
+
+https://www.gnu.org/software/gsl/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using GSL, load one of these modules using a `module load` command like
 module load GSL/2.7-intel-compilers-2021.4.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

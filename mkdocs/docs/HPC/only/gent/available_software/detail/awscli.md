@@ -6,6 +6,10 @@ hide:
 awscli
 ======
 
+
+Universal Command Line Environment for AWS
+
+https://pypi.python.org/pypi/awscli
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using awscli, load one of these modules using a `module load` command l
 module load awscli/2.11.21-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |awscli/2.11.21-GCCcore-11.3.0|x|x|x|x|x|x|
+
+
+### awscli/2.11.21-GCCcore-11.3.0
+
+This is a list of extensions included in the module:
+
+awscli-2.11.21, awscrt-0.16.16, botocore-1.29.138, distro-1.8.0, jmespath-1.0.1, prompt-toolkit-3.0.38, s3transfer-0.6.1

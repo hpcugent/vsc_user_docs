@@ -6,6 +6,10 @@ hide:
 METIS
 =====
 
+
+METIS is a set of serial programs for partitioning graphs, partitioning finite element meshes, and producing fill reducing orderings for sparse matrices. The algorithms implemented in METIS are based on the multilevel recursive-bisection, multilevel k-way, and multi-constraint partitioning schemes.
+
+http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using METIS, load one of these modules using a `module load` command li
 module load METIS/5.1.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

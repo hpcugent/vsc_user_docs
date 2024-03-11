@@ -6,6 +6,10 @@ hide:
 BAMSurgeon
 ==========
 
+
+Tools for adding mutations to existing .bam files, used for testing mutation callers
+
+https://github.com/adamewing/bamsurgeon
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using BAMSurgeon, load one of these modules using a `module load` comma
 module load BAMSurgeon/1.2-GCC-8.3.0-Python-2.7.16
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

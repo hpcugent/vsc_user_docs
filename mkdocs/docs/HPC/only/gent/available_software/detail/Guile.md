@@ -6,6 +6,10 @@ hide:
 Guile
 =====
 
+
+Guile is a programming language, designed to help programmers create flexible applications that can be extended by users or other programmers with plug-ins, modules, or scripts.
+
+https://www.gnu.org/software/guile/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Guile, load one of these modules using a `module load` command li
 module load Guile/3.0.7-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

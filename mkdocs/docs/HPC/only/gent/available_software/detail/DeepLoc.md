@@ -6,6 +6,10 @@ hide:
 DeepLoc
 =======
 
+
+DeepLoc 2.0 predicts the subcellular localization(s) of eukaryotic proteins
+
+https://services.healthtech.dtu.dk/services/DeepLoc-2.0
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using DeepLoc, load one of these modules using a `module load` command 
 module load DeepLoc/2.0-foss-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |DeepLoc/2.0-foss-2022b|x|x|x|x|x|x|
+
+
+### DeepLoc/2.0-foss-2022b
+
+This is a list of extensions included in the module:
+
+bio-1.6.2, DeepLoc-2.0, gprofiler-official-1.0.0

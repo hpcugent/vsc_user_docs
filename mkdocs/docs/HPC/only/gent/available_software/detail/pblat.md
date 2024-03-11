@@ -6,6 +6,10 @@ hide:
 pblat
 =====
 
+
+When the query file format is fasta, you can specify many threads to process it. It can reduce run time linearly, and use almost equal memory as the original blat program. This is useful when you blat a big query file to a huge reference like human whole genome sequence.
+
+https://github.com/icebert/pblat
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using pblat, load one of these modules using a `module load` command li
 module load pblat/2.5.1-foss-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

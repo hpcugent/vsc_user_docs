@@ -6,6 +6,10 @@ hide:
 torchaudio
 ==========
 
+
+Data manipulation and transformation for audio signalprocessing, powered by PyTorch
+
+https://github.com/pytorch/audio
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using torchaudio, load one of these modules using a `module load` comma
 module load torchaudio/0.12.0-foss-2022a-PyTorch-1.12.0-CUDA-11.7.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

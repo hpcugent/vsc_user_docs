@@ -6,6 +6,10 @@ hide:
 Porechop
 ========
 
+
+Porechop is a tool for finding and removing adapters from Oxford Nanopore reads. Adapters on the ends of reads are trimmed off, and when a read has an adapter in its middle, it is treated as chimeric and chopped into separate reads. Porechop performs thorough alignments to effectively find adapters, even at low sequence identity
+
+https://github.com/rrwick/Porechop
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Porechop, load one of these modules using a `module load` command
 module load Porechop/0.2.4-intel-2019b-Python-3.7.4
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

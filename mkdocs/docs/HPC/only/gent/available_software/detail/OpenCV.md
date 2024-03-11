@@ -6,6 +6,10 @@ hide:
 OpenCV
 ======
 
+
+OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library. OpenCV was built to provide a common infrastructure for computer vision applications and to accelerate the use of machine perception in the commercial products. Includes extra modules for OpenCV from the contrib repository.
+
+https://opencv.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using OpenCV, load one of these modules using a `module load` command l
 module load OpenCV/4.6.0-foss-2022a-contrib
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

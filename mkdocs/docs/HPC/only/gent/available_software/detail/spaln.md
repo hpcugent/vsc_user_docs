@@ -6,6 +6,10 @@ hide:
 spaln
 =====
 
+
+Spaln (space-efficient spliced alignment) is a stand-alone program that maps and aligns a set of cDNA or protein sequences onto a whole genomic sequence in a single job.
+
+https://github.com/ogotoh/spaln
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using spaln, load one of these modules using a `module load` command li
 module load spaln/2.4.13f-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

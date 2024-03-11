@@ -6,6 +6,10 @@ hide:
 slurm-drmaa
 ===========
 
+
+DRMAA for Slurm Workload Manager (Slurm) is an implementation of Open Grid Forum Distributed Resource Management Application API (DRMAA) version 1 for submission and control of jobs to Slurm. Using DRMAA, grid applications builders, portal developers and ISVs can use the same high-level API to link their software with different cluster/resource management systems.
+
+https://github.com/natefoo/slurm-drmaa
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using slurm-drmaa, load one of these modules using a `module load` comm
 module load slurm-drmaa/1.1.3-GCCcore-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

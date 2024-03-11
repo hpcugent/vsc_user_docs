@@ -6,6 +6,10 @@ hide:
 CIRCexplorer2
 =============
 
+
+CIRCexplorer2 is a comprehensive and integrative circular RNA analysis toolset.
+
+http://circexplorer2.readthedocs.io/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using CIRCexplorer2, load one of these modules using a `module load` co
 module load CIRCexplorer2/2.3.8-foss-2021b-Python-2.7.18
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

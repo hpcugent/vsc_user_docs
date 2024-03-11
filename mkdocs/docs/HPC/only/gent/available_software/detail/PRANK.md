@@ -6,6 +6,10 @@ hide:
 PRANK
 =====
 
+
+PRANK is a probabilistic multiple alignment program for DNA,  codon and amino-acid sequences. PRANK is based on a novel algorithm that treats  insertions correctly and avoids over-estimation of the number of deletion events.
+
+http://wasabiapp.org/software/prank/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using PRANK, load one of these modules using a `module load` command li
 module load PRANK/170427-GCC-10.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

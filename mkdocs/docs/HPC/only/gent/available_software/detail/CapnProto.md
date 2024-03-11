@@ -6,6 +6,10 @@ hide:
 CapnProto
 =========
 
+
+Cap’n Proto is an insanely fast data interchange format and capability-based RPC system.
+
+https://capnproto.org
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using CapnProto, load one of these modules using a `module load` comman
 module load CapnProto/1.0.1-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
