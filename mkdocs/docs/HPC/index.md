@@ -21,7 +21,7 @@ Use the OS dropdown in the top bar to switch to a different operating system.
 - [Linux Tutorial](linux-tutorial/index.md)
 - [Hardware overview](https://www.ugent.be/hpc/en/infrastructure)
 {%- endif %}
-- [FAQ](FAQ.md) | [Troubleshooting](troubleshooting.md) | [Best practices](./best_practices.md)  
+- [FAQ](FAQ.md) | [Troubleshooting](troubleshooting.md) | [Best practices](./best_practices.md) | [Known issues](known_issues.md)
 
 <br/><br/><br/>
 
