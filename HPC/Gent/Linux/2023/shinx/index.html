@@ -1182,8 +1182,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#stage-2-01032024-20052024" class="md-nav__link">
-    Stage 2 (01/03/2024-20/05/2024)
+  <a href="#stage-2-19042024-20052024" class="md-nav__link">
+    Stage 2 (19/04/2024-20/05/2024)
   </a>
   
 </li>
@@ -1265,7 +1265,7 @@ optimizations (like GCC's <code>-march=native</code>, or Intel compiler's <code>
 <code>AVX-512</code> vector instructions (which is missing from <code>doduo</code>).</p>
 <h3 id="other-remarks">Other remarks<a class="headerlink" href="#other-remarks" title="Permanent link">#</a></h3>
 <ul>
-<li>Possible issues with <code>OpenMP</code> thread pinning: we have seen, especially on <code>Tier-1 dodrio</code> cluster, that in certain cases
+<li>Possible issues with thread pinning: we have seen, especially on <code>Tier-1 dodrio</code> cluster, that in certain cases
 thread pinning is invoked where it is not expected. Typical symptom is that all the processes that are started are pinned
 to a single core. Always report this issue when it occurs.
 You can try yourself to mitigate this by setting <code>export OMP_PROC_BIND=false</code>, but always report it so we can keep track of this problem.
@@ -1310,13 +1310,13 @@ However, all the workernodes will already be delivered in the week of 20 October
 <li>Racking of last 16 nodes</li>
 <li>Installation of NDR/NDR-200 infiniband network</li>
 </ul>
-<h3 id="stage-2-01032024-20052024">Stage 2 (01/03/2024-20/05/2024)<a class="headerlink" href="#stage-2-01032024-20052024" title="Permanent link">#</a></h3>
+<h3 id="stage-2-19042024-20052024">Stage 2 (19/04/2024-20/05/2024)<a class="headerlink" href="#stage-2-19042024-20052024" title="Permanent link">#</a></h3>
 <ul>
 <li>
 <p>Full size cluster</p>
 <ul>
-<li>48 nodes</li>
-<li>NDR-200 Infiniband</li>
+<li>48 nodes (no job size limit)</li>
+<li>NDR-200 Infiniband (single switch Infiniband topology)</li>
 <li>EL9 OS</li>
 </ul>
 </li>
