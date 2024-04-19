@@ -68,7 +68,7 @@ optimizations (like GCC's `-march=native`, or Intel compiler's `-xHost`) might s
 
 ### Other remarks
 
-* Possible issues with `OpenMP` thread pinning: we have seen, especially on `Tier-1 dodrio` cluster, that in certain cases
+* Possible issues with thread pinning: we have seen, especially on `Tier-1 dodrio` cluster, that in certain cases
 thread pinning is invoked where it is not expected. Typical symptom is that all the processes that are started are pinned
 to a single core. Always report this issue when it occurs.
 You can try yourself to mitigate this by setting `export OMP_PROC_BIND=false`, but always report it so we can keep track of this problem.
@@ -111,11 +111,11 @@ As such, we will have an extended pilot phase in 3 stages:
 * Racking of last 16 nodes
 * Installation of NDR/NDR-200 infiniband network
 
-### Stage 2 (01/03/2024-20/05/2024)
+### Stage 2 (19/04/2024-20/05/2024)
 
 * Full size cluster
-    * 48 nodes
-    * NDR-200 Infiniband
+    * 48 nodes (no job size limit)
+    * NDR-200 Infiniband (single switch Infiniband topology)
     * EL9 OS
 
 * We expect to plan a full Tier-2 downtime in May 2024 to cleanup, refactor and renew the core networks
