@@ -30,10 +30,10 @@ and adding the hash `#force_select_OS` (case-sensitive).
 You can use the `build.sh` wrapper script to take of the steps below,
 all options including `--help` are passed to the `build.py` tool.
 
-Using `INSTALLDEPS=1 build.sh ...` will first install the dependencies in a subdir `pypkgs`,
-and then build the docs. (You typicaly only need to run that once, unless some of the dependencies are updated).
+Make sure to run `export INSTALLDEPS=1` before building for the first time. This will install the dependencies in a subdir `pypkgs`,
+and then build the docs. You typically only need to set this variable once, unless some of the dependencies are updated.
 
-Using `WEBSERVER=1 build.sh ...`, you will first build the docs, and then start a local webserver
+Using `export WEBSERVER=1` before building will first build the docs, and then start a local webserver
 that provides the docs (and if supported by the OS, open a new browser tab with the page loaded).
 
 ### Dependencies
