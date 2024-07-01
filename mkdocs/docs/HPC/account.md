@@ -208,13 +208,13 @@ OpenSSH_7.4p1, OpenSSL 1.0.2k-fips 26 Jan 2017
 To access the clusters and transfer your files, you will use the
 following commands:
 
-1.  ssh-keygen: to generate the ssh keysgenerate a public
+1.  `ssh-keygen`: to generate the SSH key pair (public + private key);
 
-2.  ssh: to open a shell on a remote machine;
+2.  `ssh`: to open a shell on a remote machine;
 
-3.  sftp: a secure equivalent of ftp;
+3.  `sftp`: a secure equivalent of ftp;
 
-4.  scp: a secure equivalent of the remote copy command rcp.
+4.  `scp`: a secure equivalent of the remote copy command rcp.
 
 ### Generate a public/private key pair with OpenSSH
 
