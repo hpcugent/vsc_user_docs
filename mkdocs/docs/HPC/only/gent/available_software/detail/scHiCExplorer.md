@@ -6,6 +6,10 @@ hide:
 scHiCExplorer
 =============
 
+
+The scHiCExplorer is a software to demultiplex, process, correct, normalize, manipulate, analyse andvisualize single-cell Hi-C data.
+
+https://schicexplorer.readthedocs.io
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using scHiCExplorer, load one of these modules using a `module load` co
 module load scHiCExplorer/7-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |scHiCExplorer/7-foss-2022a|x|x|x|x|x|x|
+
+
+### scHiCExplorer/7-foss-2022a
+
+This is a list of extensions included in the module:
+
+scHiCExplorer-7

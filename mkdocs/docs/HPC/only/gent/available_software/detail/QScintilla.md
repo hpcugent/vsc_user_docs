@@ -6,6 +6,10 @@ hide:
 QScintilla
 ==========
 
+
+QScintilla is a port to Qt of Neil Hodgson's Scintilla C++ editor control
+
+https://www.riverbankcomputing.com/software/qscintilla
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using QScintilla, load one of these modules using a `module load` comma
 module load QScintilla/2.11.6-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

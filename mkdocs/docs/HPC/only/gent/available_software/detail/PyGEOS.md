@@ -6,6 +6,10 @@ hide:
 PyGEOS
 ======
 
+
+PyGEOS is a C/Python library with vectorized geometry functions. The geometry operations are done in the open-source geometry library GEOS. PyGEOS wraps these operations in NumPy ufuncs providing a performance improvement when operating on arrays of geometries.
+
+https://pygeos.readthedocs.io
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using PyGEOS, load one of these modules using a `module load` command l
 module load PyGEOS/0.8-foss-2020a-Python-3.8.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 mpi4py
 ======
 
+
+MPI for Python (mpi4py) provides bindings of the Message Passing Interface (MPI) standard for the Python programming language, allowing any Python program to exploit multiple processors.
+
+https://github.com/mpi4py/mpi4py
 # Available modules
 
 
@@ -17,9 +21,22 @@ To start using mpi4py, load one of these modules using a `module load` command l
 module load mpi4py/3.1.4-gompi-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |mpi4py/3.1.4-gompi-2023a|x|x|x|x|x|x|
 |mpi4py/3.1.4-gompi-2022b|x|x|x|x|x|x|
+
+
+### mpi4py/3.1.4-gompi-2023a
+
+This is a list of extensions included in the module:
+
+mpi4py-3.1.4
+
+### mpi4py/3.1.4-gompi-2022b
+
+This is a list of extensions included in the module:
+
+mpi4py-3.1.4

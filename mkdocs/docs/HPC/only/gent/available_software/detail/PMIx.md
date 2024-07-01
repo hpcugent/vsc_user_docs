@@ -6,6 +6,10 @@ hide:
 PMIx
 ====
 
+
+Process Management for Exascale EnvironmentsPMI Exascale (PMIx) represents an attempt toprovide an extended version of the PMI standard specifically designedto support clusters up to and including exascale sizes. The overallobjective of the project is not to branch the existing pseudo-standarddefinitions - in fact, PMIx fully supports both of the existing PMI-1and PMI-2 APIs - but rather to (a) augment and extend those APIs toeliminate some current restrictions that impact scalability, and (b)provide a reference implementation of the PMI-server that demonstratesthe desired level of scalability.
+
+https://pmix.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using PMIx, load one of these modules using a `module load` command lik
 module load PMIx/4.2.6-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 SentencePiece
 =============
 
+
+Unsupervised text tokenizer for Neural Network-based text generation.
+
+https://github.com/google/sentencepiece
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using SentencePiece, load one of these modules using a `module load` co
 module load SentencePiece/0.1.99-GCC-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

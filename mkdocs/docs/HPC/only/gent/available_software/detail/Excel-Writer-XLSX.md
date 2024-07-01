@@ -6,6 +6,10 @@ hide:
 Excel-Writer-XLSX
 =================
 
+
+The Excel::Writer::XLSX module can be used to create an Excel file in the 2007+ XLSX format.Multiple worksheets can be added to a workbook and formatting can be applied to cells. Text, numbers, and formulascan be written to the cells.
+
+https://metacpan.org/pod/Excel::Writer::XLSX
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Excel-Writer-XLSX, load one of these modules using a `module load
 module load Excel-Writer-XLSX/1.09-foss-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

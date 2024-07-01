@@ -6,6 +6,10 @@ hide:
 metaWRAP
 ========
 
+
+MetaWRAP aims to be an easy-to-use metagenomic wrapper suitethat accomplishes the core tasks of metagenomic analysis from start to finish:read quality control, assembly, visualization, taxonomic profiling, extractingdraft genomes (binning), and functional annotation.
+
+https://github.com/bxlab/metaWRAP
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using metaWRAP, load one of these modules using a `module load` command
 module load metaWRAP/1.3-foss-2020b-Python-2.7.18
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

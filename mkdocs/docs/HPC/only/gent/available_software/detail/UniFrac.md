@@ -6,6 +6,10 @@ hide:
 UniFrac
 =======
 
+
+UniFrac is the de facto repository for high-performance phylogenetic diversitycalculations. The methods in this repository are based on an implementation ofthe Strided State UniFrac algorithm which is faster, and uses less memory thanFast UniFrac. Strided State UniFrac supports Unweighted UniFrac, WeightedUniFrac, Generalized UniFrac, Variance Adjusted UniFrac and meta UniFrac, inboth double and single precision (fp32). This repository also includes StackedFaith (manuscript in preparation), a method for calculating Faith's PD that isfaster and uses less memory than the Fast UniFrac-based referenceimplementation.
+
+https://github.com/biocore/unifrac-binaries
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using UniFrac, load one of these modules using a `module load` command 
 module load UniFrac/1.3.2-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

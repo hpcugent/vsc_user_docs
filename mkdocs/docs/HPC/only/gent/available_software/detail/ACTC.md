@@ -6,6 +6,10 @@ hide:
 ACTC
 ====
 
+
+ACTC converts independent triangles into triangle strips or fans.
+
+https://sourceforge.net/projects/actc
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using ACTC, load one of these modules using a `module load` command lik
 module load ACTC/1.1-GCCcore-10.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

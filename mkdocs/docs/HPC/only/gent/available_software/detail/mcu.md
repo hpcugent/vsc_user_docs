@@ -6,6 +6,10 @@ hide:
 mcu
 ===
 
+
+A package for periodic wavefunction and crystallography analysis. mcu is designed to support large scale analysis and topological descriptions for periodic wavefunction.
+
+https://hungqpham.com/mcu/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using mcu, load one of these modules using a `module load` command like
 module load mcu/2021-04-06-gomkl-2021a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

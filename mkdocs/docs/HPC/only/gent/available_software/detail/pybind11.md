@@ -6,6 +6,10 @@ hide:
 pybind11
 ========
 
+
+pybind11 is a lightweight header-only library that exposes C++ types in Python and vice versa, mainly to create Python bindings of existing C++ code.
+
+https://pybind11.readthedocs.io
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using pybind11, load one of these modules using a `module load` command
 module load pybind11/2.11.1-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

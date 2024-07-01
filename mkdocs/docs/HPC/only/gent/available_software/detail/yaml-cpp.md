@@ -6,6 +6,10 @@ hide:
 yaml-cpp
 ========
 
+
+yaml-cpp is a YAML parser and emitter in C++ matching the YAML 1.2 spec
+
+https://github.com/jbeder/yaml-cpp
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using yaml-cpp, load one of these modules using a `module load` command
 module load yaml-cpp/0.7.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

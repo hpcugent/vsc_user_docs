@@ -6,6 +6,10 @@ hide:
 setuptools-rust
 ===============
 
+
+setuptools-rust is a plugin for setuptools to build Rust Python extensionsimplemented with PyO3 or rust-cpython.
+
+https://github.com/PyO3/setuptools-rust
 # Available modules
 
 
@@ -17,9 +21,22 @@ To start using setuptools-rust, load one of these modules using a `module load` 
 module load setuptools-rust/1.8.0-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |setuptools-rust/1.8.0-GCCcore-13.2.0|x|x|x|x|x|x|
 |setuptools-rust/1.6.0-GCCcore-12.3.0|x|x|x|x|x|x|
+
+
+### setuptools-rust/1.8.0-GCCcore-13.2.0
+
+This is a list of extensions included in the module:
+
+semantic_version-2.10.0, setuptools-rust-1.8.0, typing_extensions-4.8.0
+
+### setuptools-rust/1.6.0-GCCcore-12.3.0
+
+This is a list of extensions included in the module:
+
+semantic_version-2.10.0, setuptools-rust-1.6.0, typing_extensions-4.6.3

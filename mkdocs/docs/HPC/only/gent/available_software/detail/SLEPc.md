@@ -6,6 +6,10 @@ hide:
 SLEPc
 =====
 
+
+SLEPc (Scalable Library for Eigenvalue Problem Computations) is a software library for the solution of large scale sparse eigenvalue problems on parallel computers. It is an extension of PETSc and can be used for either standard or generalized eigenproblems, with real or complex arithmetic. It can also be used for computing a partial SVD of a large, sparse, rectangular matrix, and to solve quadratic eigenvalue problems.
+
+https://slepc.upv.es/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using SLEPc, load one of these modules using a `module load` command li
 module load SLEPc/3.18.2-intel-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

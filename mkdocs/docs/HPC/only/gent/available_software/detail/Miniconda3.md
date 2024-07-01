@@ -6,6 +6,10 @@ hide:
 Miniconda3
 ==========
 
+
+Miniconda is a free minimal installer for conda. It is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages.
+
+https://docs.conda.io/en/latest/miniconda.html
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Miniconda3, load one of these modules using a `module load` comma
 module load Miniconda3/23.5.2-0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

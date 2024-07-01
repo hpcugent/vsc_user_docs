@@ -6,6 +6,10 @@ hide:
 libwebp
 =======
 
+
+WebP is a modern image format that provides superiorlossless and lossy compression for images on the web. Using WebP,webmasters and web developers can create smaller, richer images thatmake the web faster.
+
+https://developers.google.com/speed/webp/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using libwebp, load one of these modules using a `module load` command 
 module load libwebp/1.3.1-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

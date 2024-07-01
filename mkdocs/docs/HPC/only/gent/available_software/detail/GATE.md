@@ -6,6 +6,10 @@ hide:
 GATE
 ====
 
+
+GATE is an advanced opensource software developed by the international OpenGATE collaboration and dedicated to the numerical simulations in medical imaging. It currently supports simulations of Emission Tomography (Positron Emission Tomography - PET and Single Photon Emission Computed Tomography - SPECT), and Computed Tomography
+
+http://www.opengatecollaboration.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using GATE, load one of these modules using a `module load` command lik
 module load GATE/9.2-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

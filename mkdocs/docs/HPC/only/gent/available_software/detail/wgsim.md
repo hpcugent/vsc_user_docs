@@ -6,6 +6,10 @@ hide:
 wgsim
 =====
 
+
+Wgsim is a small tool for simulating sequence reads from a reference genome.
+
+https://github.com/lh3/wgsim/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using wgsim, load one of these modules using a `module load` command li
 module load wgsim/20111017-GCC-10.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

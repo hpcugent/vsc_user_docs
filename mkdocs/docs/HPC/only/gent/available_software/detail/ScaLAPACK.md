@@ -6,6 +6,10 @@ hide:
 ScaLAPACK
 =========
 
+
+The ScaLAPACK (or Scalable LAPACK) library includes a subset of LAPACK routines redesigned for distributed memory MIMD parallel computers.
+
+https://www.netlib.org/scalapack/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using ScaLAPACK, load one of these modules using a `module load` comman
 module load ScaLAPACK/2.2.0-gompi-2023b-fb
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

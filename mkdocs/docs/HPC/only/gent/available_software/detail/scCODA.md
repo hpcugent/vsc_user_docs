@@ -6,6 +6,10 @@ hide:
 scCODA
 ======
 
+
+scCODA allows for identification of compositional changes in high-throughput sequencing count data,especially cell compositions from scRNA-seq.
+
+https://github.com/theislab/scCODA
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using scCODA, load one of these modules using a `module load` command l
 module load scCODA/0.1.9-foss-2021a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |scCODA/0.1.9-foss-2021a|x|x|x|x|x|x|
+
+
+### scCODA/0.1.9-foss-2021a
+
+This is a list of extensions included in the module:
+
+scCODA-0.1.9

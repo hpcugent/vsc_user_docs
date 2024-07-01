@@ -6,6 +6,10 @@ hide:
 NewHybrids
 ==========
 
+
+This implements a Gibbs sampler to estimate the posterior probability that genetically sampledindividuals fall into each of a set of user-defined hybrid categories.
+
+https://ib.berkeley.edu/labs/slatkin/eriq/software/software.htm#NewHybs
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using NewHybrids, load one of these modules using a `module load` comma
 module load NewHybrids/1.1_Beta3-GCC-10.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

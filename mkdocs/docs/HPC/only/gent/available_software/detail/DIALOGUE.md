@@ -6,6 +6,10 @@ hide:
 DIALOGUE
 ========
 
+
+DIALOGUE is a dimensionality reduction method that uses cross-cell-type associations to identify multicellular programs (MCPs) and map the cell transcriptome as a function of its environment.
+
+https://github.com/livnatje/DIALOGUE
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using DIALOGUE, load one of these modules using a `module load` command
 module load DIALOGUE/1.0-20230228-foss-2021b-R-4.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

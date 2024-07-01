@@ -6,6 +6,10 @@ hide:
 Tk
 ==
 
+
+Tk is an open source, cross-platform widget toolchain that provides a library of basic elements for building a graphical user interface (GUI) in many different programming languages.
+
+https://www.tcl.tk/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Tk, load one of these modules using a `module load` command like:
 module load Tk/8.6.13-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

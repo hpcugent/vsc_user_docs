@@ -6,6 +6,10 @@ hide:
 lmoments3
 =========
 
+
+Estimate linear moments for statistical distribution functions.
+
+https://github.com/OpenHydrology/lmoments3
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using lmoments3, load one of these modules using a `module load` comman
 module load lmoments3/1.0.6-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |lmoments3/1.0.6-foss-2022a|x|x|x|x|x|x|
+
+
+### lmoments3/1.0.6-foss-2022a
+
+This is a list of extensions included in the module:
+
+lmoments3-1.0.6, versioneer-0.29

@@ -6,6 +6,10 @@ hide:
 GCC
 ===
 
+
+The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Java, and Ada, as well as libraries for these languages (libstdc++, libgcj,...).
+
+https://gcc.gnu.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using GCC, load one of these modules using a `module load` command like
 module load GCC/13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

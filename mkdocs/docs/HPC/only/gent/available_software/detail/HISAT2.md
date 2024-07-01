@@ -6,6 +6,10 @@ hide:
 HISAT2
 ======
 
+
+HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) against the general human population (as well as against a single reference genome).
+
+https://daehwankimlab.github.io/hisat2
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using HISAT2, load one of these modules using a `module load` command l
 module load HISAT2/2.2.1-gompi-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

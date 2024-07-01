@@ -6,6 +6,10 @@ hide:
 RLCard
 ======
 
+
+RLCard is a toolkit for Reinforcement Learning (RL) in card games.
+
+https://www.rlcard.org
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using RLCard, load one of these modules using a `module load` command l
 module load RLCard/1.0.9-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |RLCard/1.0.9-foss-2022a|x|x|x|-|x|x|
+
+
+### RLCard/1.0.9-foss-2022a
+
+This is a list of extensions included in the module:
+
+rlcard-1.0.9, termcolor-1.1.0

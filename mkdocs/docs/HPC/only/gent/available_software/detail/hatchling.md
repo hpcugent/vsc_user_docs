@@ -6,6 +6,10 @@ hide:
 hatchling
 =========
 
+
+Extensible, standards compliant build backend used by Hatch,a modern, extensible Python project manager.
+
+https://hatch.pypa.io
 # Available modules
 
 
@@ -17,9 +21,22 @@ To start using hatchling, load one of these modules using a `module load` comman
 module load hatchling/1.18.0-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |hatchling/1.18.0-GCCcore-13.2.0|x|x|x|x|x|x|
 |hatchling/1.18.0-GCCcore-12.3.0|x|x|x|x|x|x|
+
+
+### hatchling/1.18.0-GCCcore-13.2.0
+
+This is a list of extensions included in the module:
+
+editables-0.5, hatch_fancy_pypi_readme-23.1.0, hatch_vcs-0.3.0, hatchling-1.18.0, packaging-23.2, pathspec-0.11.2, pluggy-1.3.0, setuptools-scm-8.0.4, tomli-2.0.1, trove_classifiers-2023.10.18, typing_extensions-4.8.0
+
+### hatchling/1.18.0-GCCcore-12.3.0
+
+This is a list of extensions included in the module:
+
+editables-0.3, hatch_fancy_pypi_readme-23.1.0, hatch_vcs-0.3.0, hatchling-1.18.0, packaging-23.1, pathspec-0.11.1, pluggy-1.2.0, setuptools_scm-7.1.0, tomli-2.0.1, trove_classifiers-2023.5.24, typing_extensions-4.6.3

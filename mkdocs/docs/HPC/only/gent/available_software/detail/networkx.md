@@ -6,6 +6,10 @@ hide:
 networkx
 ========
 
+
+NetworkX is a Python package for the creation, manipulation,and study of the structure, dynamics, and functions of complex networks.
+
+https://pypi.python.org/pypi/networkx
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using networkx, load one of these modules using a `module load` command
 module load networkx/3.1-gfbf-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 LSD2
 ====
 
+
+Least-squares methods to estimate rates and dates from phylogenies
+
+https://github.com/tothuhien/lsd2
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using LSD2, load one of these modules using a `module load` command lik
 module load LSD2/2.4.1-GCCcore-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

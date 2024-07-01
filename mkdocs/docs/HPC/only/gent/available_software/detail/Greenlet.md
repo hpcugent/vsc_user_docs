@@ -6,6 +6,10 @@ hide:
 Greenlet
 ========
 
+
+The greenlet package is a spin-off of Stackless, a version of CPython thatsupports micro-threads called "tasklets". Tasklets run pseudo-concurrently (typically in a singleor a few OS-level threads) and are synchronized with data exchanges on "channels".A "greenlet", on the other hand, is a still more primitive notion of micro-thread with no implicitscheduling; coroutines, in other words. This is useful when you want to control exactly when your code runs.
+
+https://github.com/python-greenlet/greenlet
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Greenlet, load one of these modules using a `module load` command
 module load Greenlet/2.0.2-foss-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

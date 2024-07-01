@@ -6,6 +6,10 @@ hide:
 SMV
 ===
 
+
+Smokeview is a visualization program that displays output of FDS and CFAST simulations.
+
+https://github.com/firemodels/smv
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using SMV, load one of these modules using a `module load` command like
 module load SMV/6.7.17-iccifort-2020.4.304
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

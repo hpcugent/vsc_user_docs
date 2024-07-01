@@ -6,6 +6,10 @@ hide:
 configurable-http-proxy
 =======================
 
+
+HTTP proxy for node.js including a REST API for updating the routing table. Developed as a part of the Jupyter Hub multi-user server.
+
+https://github.com/jupyterhub/configurable-http-proxy
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using configurable-http-proxy, load one of these modules using a `modul
 module load configurable-http-proxy/4.5.5-GCCcore-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

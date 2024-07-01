@@ -6,6 +6,10 @@ hide:
 WHAM
 ====
 
+
+An implementation of WHAM: the Weighted Histogram Analysis Method
+
+http://membrane.urmc.rochester.edu/?page_id=126
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using WHAM, load one of these modules using a `module load` command lik
 module load WHAM/2.0.10.2-intel-2020a-kj_mol
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 MCL
 ===
 
+
+The MCL algorithm is short for the Markov Cluster Algorithm, a fastand scalable unsupervised cluster algorithm for graphs (also known as networks) basedon simulation of (stochastic) flow in graphs.
+
+https://micans.org/mcl/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using MCL, load one of these modules using a `module load` command like
 module load MCL/22.282-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

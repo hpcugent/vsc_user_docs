@@ -6,6 +6,10 @@ hide:
 NASM
 ====
 
+
+NASM: General-purpose x86 assembler
+
+https://www.nasm.us/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using NASM, load one of these modules using a `module load` command lik
 module load NASM/2.16.01-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 Calib
 =====
 
+
+Calib clusters paired-end reads using their barcodes and sequences. Calib is suitable for ampliconsequencing where a molecule is tagged, then PCR amplified with high depth, also known as Unique Molecule Identifier(UMI) sequencing.
+
+https://github.com/vpc-ccg/calib
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Calib, load one of these modules using a `module load` command li
 module load Calib/0.3.4-GCC-9.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

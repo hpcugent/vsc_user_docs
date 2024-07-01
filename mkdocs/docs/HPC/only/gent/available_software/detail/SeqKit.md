@@ -6,6 +6,10 @@ hide:
 SeqKit
 ======
 
+
+SeqKit - a cross-platform and ultrafast toolkit for FASTA/Q file manipulation
+
+https://bioinf.shenwei.me/seqkit/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using SeqKit, load one of these modules using a `module load` command l
 module load SeqKit/2.1.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

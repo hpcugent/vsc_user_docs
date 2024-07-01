@@ -6,6 +6,10 @@ hide:
 h5py
 ====
 
+
+HDF5 for Python (h5py) is a general-purpose Python interface to the Hierarchical Data Format library, version 5. HDF5 is a versatile, mature scientific software library designed for the fast, flexible storage of enormous amounts of data.
+
+https://www.h5py.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using h5py, load one of these modules using a `module load` command lik
 module load h5py/3.9.0-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

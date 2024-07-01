@@ -6,6 +6,10 @@ hide:
 olaFlow
 =======
 
+
+olaFlow CFD Suite is a free and open source project committed to bringing the latestadvances for the simulation of wave dynamics to the OpenFOAM® and FOAM-extend communities.
+
+https://olaflow.github.io/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using olaFlow, load one of these modules using a `module load` command 
 module load olaFlow/20210820-foss-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

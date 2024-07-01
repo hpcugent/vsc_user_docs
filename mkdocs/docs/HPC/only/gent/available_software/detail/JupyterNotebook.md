@@ -6,6 +6,10 @@ hide:
 JupyterNotebook
 ===============
 
+
+The Jupyter Notebook is the original web application for creating and sharing computational documents. It offers a simple, streamlined, document-centric experience.
+
+https://jupyter.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using JupyterNotebook, load one of these modules using a `module load` 
 module load JupyterNotebook/7.0.3-GCCcore-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

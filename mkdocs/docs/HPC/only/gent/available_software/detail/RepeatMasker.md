@@ -6,6 +6,10 @@ hide:
 RepeatMasker
 ============
 
+
+RepeatMasker is a program that screens DNA sequences for interspersed repeats and low complexity DNA sequences.
+
+https://www.repeatmasker.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using RepeatMasker, load one of these modules using a `module load` com
 module load RepeatMasker/4.1.2-p1-foss-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

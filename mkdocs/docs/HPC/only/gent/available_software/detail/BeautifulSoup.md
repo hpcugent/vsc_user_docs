@@ -6,6 +6,10 @@ hide:
 BeautifulSoup
 =============
 
+
+Beautiful Soup is a Python library designed for quick turnaround projects like screen-scraping.
+
+https://www.crummy.com/software/BeautifulSoup
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using BeautifulSoup, load one of these modules using a `module load` co
 module load BeautifulSoup/4.12.2-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -26,3 +30,34 @@ module load BeautifulSoup/4.12.2-GCCcore-12.3.0
 |BeautifulSoup/4.10.0-GCCcore-11.3.0|x|x|x|x|x|x|
 |BeautifulSoup/4.10.0-GCCcore-11.2.0|x|x|x|-|x|x|
 |BeautifulSoup/4.10.0-GCCcore-10.3.0|x|x|x|x|x|x|
+
+
+### BeautifulSoup/4.12.2-GCCcore-12.3.0
+
+This is a list of extensions included in the module:
+
+BeautifulSoup-4.12.2, soupsieve-2.4.1
+
+### BeautifulSoup/4.11.1-GCCcore-12.2.0
+
+This is a list of extensions included in the module:
+
+BeautifulSoup-4.11.1, hatchling-1.12.2, soupsieve-2.3.2.post1
+
+### BeautifulSoup/4.10.0-GCCcore-11.3.0
+
+This is a list of extensions included in the module:
+
+BeautifulSoup-4.10.0, soupsieve-2.3.1
+
+### BeautifulSoup/4.10.0-GCCcore-11.2.0
+
+This is a list of extensions included in the module:
+
+BeautifulSoup-4.10.0, soupsieve-2.3.1
+
+### BeautifulSoup/4.10.0-GCCcore-10.3.0
+
+This is a list of extensions included in the module:
+
+BeautifulSoup-4.10.0, soupsieve-2.3.1

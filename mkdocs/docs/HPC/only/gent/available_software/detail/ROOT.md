@@ -6,6 +6,10 @@ hide:
 ROOT
 ====
 
+
+The ROOT system provides a set of OO frameworks with all the functionality    needed to handle and analyze large amounts of data in a very efficient way.
+
+https://root.cern.ch/drupal/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using ROOT, load one of these modules using a `module load` command lik
 module load ROOT/6.26.06-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

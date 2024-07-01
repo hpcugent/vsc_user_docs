@@ -6,6 +6,10 @@ hide:
 ncview
 ======
 
+
+Ncview is a visual browser for netCDF format files.Typically you would use ncview to get a quick and easy, push-buttonlook at your netCDF files. You can view simple movies of the data,view along various dimensions, take a look at the actual data values,change color maps, invert the data, etc.
+
+http://meteora.ucsd.edu/~pierce/ncview_home_page.html
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using ncview, load one of these modules using a `module load` command l
 module load ncview/2.1.7-intel-2019b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

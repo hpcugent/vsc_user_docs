@@ -6,6 +6,10 @@ hide:
 Beast
 =====
 
+
+BEAST is a cross-platform program for Bayesian MCMC analysis of molecular  sequences. It is entirely orientated towards rooted, time-measured phylogenies inferred using  strict or relaxed molecular clock models. It can be used as a method of reconstructing phylogenies  but is also a framework for testing evolutionary hypotheses without conditioning on a single  tree topology. BEAST uses MCMC to average over tree space, so that each tree is weighted  proportional to its posterior probability.
+
+http://beast2.org
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Beast, load one of these modules using a `module load` command li
 module load Beast/2.7.3-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

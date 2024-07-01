@@ -6,6 +6,10 @@ hide:
 likwid
 ======
 
+
+Likwid stands for Like I knew what I am doing. This project contributes easy to use command line tools for Linux to support programmers in developing high performance multi threaded programs.
+
+https://github.com/RRZE-HPC/likwid
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using likwid, load one of these modules using a `module load` command l
 module load likwid/5.0.1-GCCcore-8.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

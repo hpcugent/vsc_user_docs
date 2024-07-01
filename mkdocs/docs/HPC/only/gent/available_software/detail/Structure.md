@@ -6,6 +6,10 @@ hide:
 Structure
 =========
 
+
+The program structure is a free software package for using multi-locus genotype data to investigate population structure.
+
+https://web.stanford.edu/group/pritchardlab/structure.html
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Structure, load one of these modules using a `module load` comman
 module load Structure/2.3.4-iccifort-2019.5.281
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

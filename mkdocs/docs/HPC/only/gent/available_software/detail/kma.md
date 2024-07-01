@@ -6,6 +6,10 @@ hide:
 kma
 ===
 
+
+KMA is a mapping method designed to map raw reads directly against redundant databases, in an ultra-fast manner using seed and extend.
+
+https://bitbucket.org/genomicepidemiology/kma
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using kma, load one of these modules using a `module load` command like
 module load kma/1.2.22-intel-2019b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 glibc
 =====
 
+
+The GNU C Library project provides the core libraries for the GNU system and GNU/Linux systems, as well as many other systems that use Linux as the kernel.
+
+https://www.gnu.org/software/libc/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using glibc, load one of these modules using a `module load` command li
 module load glibc/2.30-GCCcore-8.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 Clair3
 ======
 
+
+Clair3 is a germline small variant caller for long-reads.Clair3 makes the best of two major method categories: pileup calling handlesmost variant candidates with speed, and full-alignment tackles complicated candidatesto maximize precision and recall. Clair3 runs fast and has superior performance,especially at lower coverage. Clair3 is simple and modular for easy deployment andintegration.
+
+https://github.com/HKU-BAL/Clair3
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Clair3, load one of these modules using a `module load` command l
 module load Clair3/1.0.4-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

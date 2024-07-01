@@ -6,6 +6,10 @@ hide:
 COLMAP
 ======
 
+
+COLMAP is a general-purpose Structure-from-Motion (SfM) and Multi-View Stereo (MVS) pipelinewith a graphical and command-line interface
+
+https://colmap.github.io
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using COLMAP, load one of these modules using a `module load` command l
 module load COLMAP/3.8-foss-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

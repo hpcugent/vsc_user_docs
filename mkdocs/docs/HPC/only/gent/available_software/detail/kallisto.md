@@ -6,6 +6,10 @@ hide:
 kallisto
 ========
 
+
+kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally of target sequences using high-throughput sequencing reads.
+
+https://pachterlab.github.io/kallisto/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using kallisto, load one of these modules using a `module load` command
 module load kallisto/0.48.0-gompi-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

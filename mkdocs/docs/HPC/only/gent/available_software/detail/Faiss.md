@@ -6,6 +6,10 @@ hide:
 Faiss
 =====
 
+
+Faiss is a library for efficient similarity search and clustering of dense vectors.
+
+https://github.com/facebookresearch/faiss
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Faiss, load one of these modules using a `module load` command li
 module load Faiss/1.7.2-foss-2021a-CUDA-11.3.1
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

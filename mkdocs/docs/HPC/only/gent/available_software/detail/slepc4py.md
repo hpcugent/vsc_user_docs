@@ -6,6 +6,10 @@ hide:
 slepc4py
 ========
 
+
+Python bindings for SLEPc, the Scalable Library for Eigenvalue Problem Computations.
+
+https://bitbucket.org/slepc/slepc4py
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using slepc4py, load one of these modules using a `module load` command
 module load slepc4py/3.17.2-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

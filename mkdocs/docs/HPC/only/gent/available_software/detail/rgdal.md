@@ -6,6 +6,10 @@ hide:
 rgdal
 =====
 
+
+Provides bindings to the 'Geospatial' Data Abstraction Library ('GDAL') (>= 1.11.4 and <= 2.5.0) and access to projection/transformation operations from the 'PROJ.4' library.
+
+https://rgdal.r-forge.r-project.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using rgdal, load one of these modules using a `module load` command li
 module load rgdal/1.5-23-foss-2021a-R-4.1.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

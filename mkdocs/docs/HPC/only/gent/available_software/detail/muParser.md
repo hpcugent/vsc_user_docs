@@ -6,6 +6,10 @@ hide:
 muParser
 ========
 
+
+muParser is an extensible high performance math expression parser library written in C++. It works by transforming a mathematical expression into bytecode and precalculating constant parts of the expression.
+
+https://beltoforion.de/article.php?a=muparser
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using muParser, load one of these modules using a `module load` command
 module load muParser/2.3.4-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

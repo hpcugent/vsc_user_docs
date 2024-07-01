@@ -6,6 +6,10 @@ hide:
 libFLAME
 ========
 
+
+libFLAME is a portable library for dense matrix computations,providing much of the functionality present in LAPACK.
+
+https://developer.amd.com/amd-cpu-libraries/blas-library/#libflame
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using libFLAME, load one of these modules using a `module load` command
 module load libFLAME/5.2.0-GCCcore-10.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

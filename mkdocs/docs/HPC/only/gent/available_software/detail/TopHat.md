@@ -6,6 +6,10 @@ hide:
 TopHat
 ======
 
+
+TopHat is a fast splice junction mapper for RNA-Seq reads.
+
+http://ccb.jhu.edu/software/tophat/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using TopHat, load one of these modules using a `module load` command l
 module load TopHat/2.1.2-iimpi-2020a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

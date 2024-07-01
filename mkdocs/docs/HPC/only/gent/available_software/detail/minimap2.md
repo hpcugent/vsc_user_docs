@@ -6,6 +6,10 @@ hide:
 minimap2
 ========
 
+
+Minimap2 is a fast sequence mapping and alignmentprogram that can find overlaps between long noisy reads, or map longreads or their assemblies to a reference genome optionally with detailedalignment (i.e. CIGAR). At present, it works efficiently with querysequences from a few kilobases to ~100 megabases in length at an errorrate ~15%. Minimap2 outputs in the PAF or the SAM format. On limitedtest data sets, minimap2 is over 20 times faster than most otherlong-read aligners. It will replace BWA-MEM for long reads and contigalignment.
+
+https://github.com/lh3/minimap2
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using minimap2, load one of these modules using a `module load` command
 module load minimap2/2.26-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 Zip
 ===
 
+
+Zip is a compression and file packaging/archive utility.Although highly compatible both with PKWARE's PKZIP and PKUNZIPutilities for MS-DOS and with Info-ZIP's own UnZip, our primary objectiveshave been portability and other-than-MSDOS functionality
+
+http://www.info-zip.org/Zip.html
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Zip, load one of these modules using a `module load` command like
 module load Zip/3.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

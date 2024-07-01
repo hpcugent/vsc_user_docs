@@ -6,6 +6,10 @@ hide:
 Biopython
 =========
 
+
+Biopython is a set of freely available tools for biological computation written in Python by an international team of developers. It is a distributed collaborative effort to develop Python libraries and applications which address the needs of current and future work in bioinformatics.
+
+https://www.biopython.org
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Biopython, load one of these modules using a `module load` comman
 module load Biopython/1.83-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

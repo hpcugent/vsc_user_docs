@@ -6,6 +6,10 @@ hide:
 CD-HIT
 ======
 
+
+CD-HIT is a very widely used program for clustering and comparing protein or nucleotide sequences.
+
+https://github.com/weizhongli/cdhit
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using CD-HIT, load one of these modules using a `module load` command l
 module load CD-HIT/4.8.1-iccifort-2019.5.281
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
