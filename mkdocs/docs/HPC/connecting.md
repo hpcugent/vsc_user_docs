@@ -191,7 +191,7 @@ node "{{ loginnode }}", so replace {{ userid }} with your own VSC id in the abov
 
 The first time you make a connection to the login node, you will be
 asked to verify the authenticity of the login node. Please check
-[Warning message when first connecting to new host](../troubleshooting/#warning-message-when)-first-connecting-to-new-host) on how to do this.
+[Warning message when first connecting to new host](../troubleshooting/#warning-message-when-first-connecting-to-new-host) on how to do this.
 
 A possible error message you can get if you previously saved your
 private key somewhere else than the default location
