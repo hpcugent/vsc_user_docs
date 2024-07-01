@@ -248,7 +248,7 @@ You will need to generate a new key pair, when:
 
 2.  you forgot the passphrase protecting your private key
 
-3.  or your private key was compromised
+3.  your private key was compromised
 
 4.  your key pair is too short or not the right type
 
