@@ -357,7 +357,7 @@ However, you do not need administrative rights to install software in your own u
 
 **What to Do:**
 - If you know how to install the software without using `sudo`, you are welcome to proceed with the installation.
-- If you are unsure how to install the software, you can submit a [software installation request](https://www.ugent.be/hpc/en/support/software-installation-request), and our team will handle the installation for you.
+- If you are unsure how to install the software, you can submit a [software installation request](https://www.ugent.be/hpc/en/support/software-installation-request), and the HPC-UGent support team will handle the installation for you.
 
 
 ### I have another question/problem
