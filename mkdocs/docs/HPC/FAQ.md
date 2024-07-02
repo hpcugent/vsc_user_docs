@@ -350,12 +350,14 @@ See also: [Your UGent home drive and shares](running_jobs_with_input_output_data
 {% endif %}
 
 
-### Why can't I use the `sudo` command?
+### I don't know the password for the `sudo` command
 
-Using `sudo` is not permitted on the VSC HPC systems because regular users do not have administrative rights. 
-However, you do not need administrative rights to install software in your own user space.
+Attempting to use `sudo` will prompt you for a password, 
+but no valid password can be entered as this feature is reserved for HPC administrators only.
 
-**What to Do:**
+However, a lot of tasks can be performed without `sudo`, including installing software, in your own user space.
+
+**Installing software**
 - If you know how to install the software without using `sudo`, you are welcome to proceed with the installation.
 - If you are unsure how to install the software, you can submit a [software installation request](https://www.ugent.be/hpc/en/support/software-installation-request), and the HPC-UGent support team will handle the installation for you.
 
