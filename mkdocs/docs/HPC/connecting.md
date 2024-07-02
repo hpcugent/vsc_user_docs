@@ -606,7 +606,7 @@ remote filesystem by putting a path after the colon.
 <b>$ ls -l </b>
 ...
 -rw-r--r-- 1 user  staff   6 Sep 18 09:37 localfile.txt
-$ scp localfile.txt {{ userid }}@{{ loginnode }}
+$ scp localfile.txt {{ userid }}@{{ loginnode }}:
 localfile.txt     100%   6     0.0KB/s     00:00
 </code></pre>
 
