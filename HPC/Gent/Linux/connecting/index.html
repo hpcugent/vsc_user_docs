@@ -1546,7 +1546,6 @@ LC_NUMERIC=&quot;C&quot;
 LC_TIME=&quot;C&quot;
 LC_ALL=
 </code></pre></div></p>
-</div>
 <p>A <strong>locale</strong> is a set of parameters that defines the user's language, country and
 any special variant preferences that the user wants to see in their user
 interface. Usually a locale identifier consists of at least a language
@@ -1559,15 +1558,14 @@ depending on whether your originally (non-supported) locale was <code>UTF-8</cod
 </div>
 <p>Open the <code>.bashrc</code> on your local machine with your favourite editor and
 add the following lines:</p>
-<pre><code><b>$ nano ~/.bashrc</b>
+<p><pre><code><b>$ nano ~/.bashrc</b>
 ...
 export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 ...
-</code></pre>
-
+</code></pre></p>
 <div class="admonition tip">
 <p class="admonition-title">tip: vi</p>
 <p>To start entering text in vi: move to the place you want to start
@@ -1576,14 +1574,14 @@ To exit vi without saving your changes, enter "<span class="keys"><kbd>ESC</kbd>
 </div>
 <p>or alternatively (if you are not comfortable with the Linux editors),
 again on your local machine:</p>
-<pre><code><b>$ echo "export LANGUAGE=\"en_US.UTF-8\"" >> ~/.profile</b>
-<b>$ echo "export LC_ALL=\"en_US.UTF-8\"" >> ~/.profile</b>
-<b>$ echo "export LC_CTYPE=\"en_US.UTF-8\"" >> ~/.profile</b>
-<b>$ echo "export LANG=\"en_US.UTF-8\"" >> ~/.profile</b>
-</code></pre>
-
+<p><pre><code><b>$ echo "export LANGUAGE=\"en_US.UTF-8\"" &gt;&gt; ~/.profile</b>
+<b>$ echo "export LC_ALL=\"en_US.UTF-8\"" &gt;&gt; ~/.profile</b>
+<b>$ echo "export LC_CTYPE=\"en_US.UTF-8\"" &gt;&gt; ~/.profile</b>
+<b>$ echo "export LANG=\"en_US.UTF-8\"" &gt;&gt; ~/.profile</b>
+</code></pre></p>
 <p>You can now log out, open a new terminal/shell on your local machine and
-reconnect to the , and you should not get these warnings anymore.</p>
+reconnect to the login node, and you should not get these warnings anymore.</p>
+</div>
 <h2 id="transfer-files-tofrom-the-hpc">Transfer Files to/from the HPC<a class="headerlink" href="#transfer-files-tofrom-the-hpc" title="Permanent link">#</a></h2>
 <p>Before you can do some work, you'll have to <strong>transfer the files</strong> you need from your desktop or department to the cluster. At the end of a job, you might want to transfer some files back.
 The preferred way to transfer files is by using an scp or sftp via the
@@ -1641,7 +1639,7 @@ Hello
 local machine. Let us copy the remote file "intro-HPC-Linux-Gent.pdf" from your "docs"
 subdirectory on the cluster to your local computer.</p>
 <p>First, we will confirm that the file is indeed in the "docs"
-subdirectory. On the terminal on the , enter:</p>
+subdirectory. In the terminal on the login node, enter:</p>
 <pre><code><b>$ cd ~/docs</b>
 <b>$ ls -l</b>
 total 1536
