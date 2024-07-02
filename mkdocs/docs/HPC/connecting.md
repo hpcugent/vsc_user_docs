@@ -433,49 +433,49 @@ Connection to {{ loginnode }} closed.
     LC_ALL=
     ```
 
-A **locale** is a set of parameters that defines the user's language, country and
-any special variant preferences that the user wants to see in their user
-interface. Usually a locale identifier consists of at least a language
-identifier and a region identifier.
-
-{%- if site == gent %}
-!!! Note
-    If you try to set a non-supported locale, then it will be automatically
-    set to the default. Currently the default is `en_US.UFT-8` or `en_US`,
-    depending on whether your originally (non-supported) locale was `UTF-8` or not.
-{% endif %}
-
-{%- if OS != windows %}
-Open the `.bashrc` on your local machine with your favourite editor and
-add the following lines:
-
-<pre><code><b>$ nano ~/.bashrc</b>
-...
-export LANGUAGE="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
-export LC_CTYPE="en_US.UTF-8"
-export LANG="en_US.UTF-8"
-...
-</code></pre>
-
-!!! tip "tip: vi"
-    To start entering text in vi: move to the place you want to start
-    entering text with the arrow keys and type "i" to switch to insert mode. You can easily exit vi by entering: "++"ESC"++ :wq"
-    To exit vi without saving your changes, enter "++"ESC"++:q!"
-
-
-or alternatively (if you are not comfortable with the Linux editors),
-again on your local machine:
-
-<pre><code><b>$ echo "export LANGUAGE=\"en_US.UTF-8\"" >> ~/.profile</b>
-<b>$ echo "export LC_ALL=\"en_US.UTF-8\"" >> ~/.profile</b>
-<b>$ echo "export LC_CTYPE=\"en_US.UTF-8\"" >> ~/.profile</b>
-<b>$ echo "export LANG=\"en_US.UTF-8\"" >> ~/.profile</b>
-</code></pre>
-
-You can now log out, open a new terminal/shell on your local machine and
-reconnect to the , and you should not get these warnings anymore.
-{% endif %}
+    A **locale** is a set of parameters that defines the user's language, country and
+    any special variant preferences that the user wants to see in their user
+    interface. Usually a locale identifier consists of at least a language
+    identifier and a region identifier.
+    
+    {%- if site == gent %}
+    !!! Note
+        If you try to set a non-supported locale, then it will be automatically
+        set to the default. Currently the default is `en_US.UFT-8` or `en_US`,
+        depending on whether your originally (non-supported) locale was `UTF-8` or not.
+    {% endif %}
+    
+    {%- if OS != windows %}
+    Open the `.bashrc` on your local machine with your favourite editor and
+    add the following lines:
+    
+    <pre><code><b>$ nano ~/.bashrc</b>
+    ...
+    export LANGUAGE="en_US.UTF-8"
+    export LC_ALL="en_US.UTF-8"
+    export LC_CTYPE="en_US.UTF-8"
+    export LANG="en_US.UTF-8"
+    ...
+    </code></pre>
+    
+    !!! tip "tip: vi"
+        To start entering text in vi: move to the place you want to start
+        entering text with the arrow keys and type "i" to switch to insert mode. You can easily exit vi by entering: "++"ESC"++ :wq"
+        To exit vi without saving your changes, enter "++"ESC"++:q!"
+    
+    
+    or alternatively (if you are not comfortable with the Linux editors),
+    again on your local machine:
+    
+    <pre><code><b>$ echo "export LANGUAGE=\"en_US.UTF-8\"" >> ~/.profile</b>
+    <b>$ echo "export LC_ALL=\"en_US.UTF-8\"" >> ~/.profile</b>
+    <b>$ echo "export LC_CTYPE=\"en_US.UTF-8\"" >> ~/.profile</b>
+    <b>$ echo "export LANG=\"en_US.UTF-8\"" >> ~/.profile</b>
+    </code></pre>
+    
+    You can now log out, open a new terminal/shell on your local machine and
+    reconnect to the login node, and you should not get these warnings anymore.
+    {% endif %}
 
 ## Transfer Files to/from the HPC
 
@@ -631,7 +631,7 @@ local machine. Let us copy the remote file "intro-HPC-{{ OS }}-{{ site }}.pdf" f
 subdirectory on the cluster to your local computer.
 
 First, we will confirm that the file is indeed in the "docs"
-subdirectory. On the terminal on the , enter:
+subdirectory. In the terminal on the login node, enter:
 
 <pre><code><b>$ cd ~/docs</b>
 <b>$ ls -l</b>
