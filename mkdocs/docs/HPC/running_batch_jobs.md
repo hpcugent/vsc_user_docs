@@ -641,7 +641,7 @@ specify the parameters related to the jobs such as expected runtime
 (walltime), e-mail notification, etc. These parameters can also be
 specified on the command line.
 
-This job script that can now be submitted to the cluster's job system
+This job script can now be submitted to the cluster's job system
 for execution, using the qsub (Queue SUBmit) command:
 
 <pre><code><b>$ qsub fibo.pbs</b>
