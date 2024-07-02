@@ -228,7 +228,7 @@ This directory currently contains all training material for the ***Introduction 
 relevant training material to work with the {{ hpc }} can always be added later in
 this directory.
 
-You can now explore the content of this directory with the "ls --l" (**l**ist**s** **l**ong) and the "cd" (**c**hange irectory) commands:
+You can now explore the content of this directory with the "ls --l" (**l**ist**s** **l**ong) and the "cd" (**c**hange **d**irectory) commands:
 
 As we are interested in the use of the ***HPC***, move further to ***Intro-HPC*** and explore the
 contents up to 2 levels deep:
