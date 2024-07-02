@@ -474,7 +474,7 @@ again on your local machine:
 </code></pre>
 
 You can now log out, open a new terminal/shell on your local machine and
-reconnect to the , and you should not get these warnings anymore.
+reconnect to the login node, and you should not get these warnings anymore.
 {% endif %}
 
 ## Transfer Files to/from the HPC
@@ -631,7 +631,7 @@ local machine. Let us copy the remote file "intro-HPC-{{ OS }}-{{ site }}.pdf" f
 subdirectory on the cluster to your local computer.
 
 First, we will confirm that the file is indeed in the "docs"
-subdirectory. On the terminal on the , enter:
+subdirectory. In the terminal on the login node, enter:
 
 <pre><code><b>$ cd ~/docs</b>
 <b>$ ls -l</b>
