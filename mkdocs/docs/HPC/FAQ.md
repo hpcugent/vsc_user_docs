@@ -349,6 +349,20 @@ Be sure to use your UGent username and not your VSC username here.
 See also: [Your UGent home drive and shares](running_jobs_with_input_output_data.md#your-ugent-home-drive-and-shares).
 {% endif %}
 
+
+### I don't know the password for the `sudo` command
+
+Attempting to use `sudo` will prompt you for a password, 
+but no valid password can be entered as this feature is reserved for HPC administrators only.
+
+However, a lot of tasks can be performed without `sudo`, including installing software, in your own user space.
+
+**Installing software**
+
+- If you know how to install the software without using `sudo`, you are welcome to proceed with the installation.
+- If you are unsure how to install the software, you can submit a [software installation request](https://www.ugent.be/hpc/en/support/software-installation-request), and the HPC-UGent support team will handle the installation for you.
+
+
 ### I have another question/problem
 
 Who can I contact?
