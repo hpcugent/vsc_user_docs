@@ -1209,6 +1209,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#why-cant-i-use-the-sudo-command" class="md-nav__link">
+    Why can't I use the sudo command?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#i-have-another-questionproblem" class="md-nav__link">
     I have another question/problem
   </a>
@@ -1510,6 +1517,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#why-cant-i-use-the-sudo-command" class="md-nav__link">
+    Why can't I use the sudo command?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#i-have-another-questionproblem" class="md-nav__link">
     I have another question/problem
   </a>
@@ -1768,6 +1782,19 @@ you might not see an entry with your username when listing <code>ls /UGent</code
 This is normal: try <code>ls /UGent/your_username</code> or <code>cd /UGent/your_username</code>, and you should be able to access the drives.
 Be sure to use your UGent username and not your VSC username here.</p>
 <p>See also: <a href="../running_jobs_with_input_output_data/#your-ugent-home-drive-and-shares">Your UGent home drive and shares</a>.</p>
+<h3 id="why-cant-i-use-the-sudo-command">Why can't I use the <code>sudo</code> command?<a class="headerlink" href="#why-cant-i-use-the-sudo-command" title="Permanent link">#</a></h3>
+<p>When you attempt to use sudo, you will be prompted for a password. 
+However, you cannot enter a valid password because this feature is reserved exclusively for HPC administrators.</p>
+<p><code>sudo</code> is used to execute a command with administrator rights, which would allow you to make system-wide changes.
+You are only able to run commands that make changes to the directories that your VSC account has access to,
+like your home directory, your personal directories like $VSC_DATA and $VSC_SCRATCH, 
+or shared VO/group directories like $VSC_DATA_VO and $VSC_SCRATCH_VO.</p>
+<p>A lot of tasks can be performed without <code>sudo</code>, including installing software in your own account.</p>
+<p><strong>Installing software</strong></p>
+<ul>
+<li>If you know how to install the software without using <code>sudo</code>, you are welcome to proceed with the installation.</li>
+<li>If you are unsure how to install the software, you can submit a <a href="https://www.ugent.be/hpc/en/support/software-installation-request">software installation request</a>, and the HPC-UGent support team will handle the installation for you.</li>
+</ul>
 <h3 id="i-have-another-questionproblem">I have another question/problem<a class="headerlink" href="#i-have-another-questionproblem" title="Permanent link">#</a></h3>
 <p>Who can I contact?</p>
 <ul>
