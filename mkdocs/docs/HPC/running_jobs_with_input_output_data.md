@@ -16,6 +16,12 @@ First go to the directory:
 <pre><code><b>$ cd ~/{{ exampledir }}</b>
 </code></pre>
 
+!!! note
+    If the example directory is not yet present, copy it to your home directory:
+
+    <pre><code><b>$ cp -r {{ examplesdir }} ~/</b></code></pre>
+
+
 List and check the contents with:
 
 <pre><code><b>ls -l</b>
