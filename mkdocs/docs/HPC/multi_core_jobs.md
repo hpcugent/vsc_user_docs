@@ -1,4 +1,4 @@
-{% set exampledir = 'examples/Multi_core_jobs_Parallel_Computing' %}
+{% set exampledir = 'examples/Multi-core-jobs-Parallel-Computing' %}
 
 # Multi core jobs/Parallel Computing 
 
