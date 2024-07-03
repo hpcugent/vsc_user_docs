@@ -350,7 +350,7 @@ See also: [Your UGent home drive and shares](running_jobs_with_input_output_data
 {% endif %}
 
 
-### I don't know the password for the `sudo` command
+### Why can't I use the `sudo` command?
 
 When you attempt to use sudo, you will be prompted for a password. 
 However, you cannot enter a valid password because this feature is reserved exclusively for HPC administrators.
