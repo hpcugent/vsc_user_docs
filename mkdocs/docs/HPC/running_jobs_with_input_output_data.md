@@ -880,7 +880,7 @@ should be well-motivated).
     by the letters `gvo`, followed by 5 digits). 
     {%- endif %}
     {%- if site == brussel -%}
-    the letters `bvo`, followed by 5 digits). 
+    by the letters `bvo`, followed by 5 digits). 
     {%- endif %}
 
 2.  Go to <https://account.vscentrum.be/django/vo/join> and fill in the
