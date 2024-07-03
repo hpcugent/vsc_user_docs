@@ -429,7 +429,7 @@ needed:
 </code></pre>
 
 If you get an error "*Unknown credential cache type while getting
-default ccache*" (or similar) and you use , then please deactivate conda
+default ccache*" (or similar) and you use conda, then please deactivate conda
 before you use the commands in this chapter.
 
 <pre><code><b>$ conda deactivate</b>
