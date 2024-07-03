@@ -100,7 +100,7 @@ Inspect their contents ... and remove the files
 </code></pre>
 
 !!! tip
-    Type `cat H` and press the Tab button (looks like ++tab++), and it **expand** will into
+    Type `cat H` and press the Tab button (looks like ++tab++), and it will **expand** into
     `cat Hello.txt`.
 
 ### Filenames using the name of the job
