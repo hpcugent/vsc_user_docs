@@ -774,7 +774,7 @@ just pass this directory as a parameter. The command below will show the
 disk use in your home directory, even if you are currently in a
 different directory:
 
-<pre><code><b>$ du -h --max-depth 1 $VSC_HOME/*</b>
+<pre><code><b>$ du -h --max-depth 1 $VSC_HOME</b>
 22M {{ homedir }}/dataset01
 36M {{ homedir }}/dataset02
 22M {{ homedir }}/dataset03
