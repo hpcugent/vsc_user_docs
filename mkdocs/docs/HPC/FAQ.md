@@ -352,10 +352,15 @@ See also: [Your UGent home drive and shares](running_jobs_with_input_output_data
 
 ### I don't know the password for the `sudo` command
 
-Attempting to use `sudo` will prompt you for a password, 
-but no valid password can be entered as this feature is reserved for HPC administrators only.
+When you attempt to use sudo, you will be prompted for a password. 
+However, you cannot enter a valid password because this feature is reserved exclusively for HPC administrators.
 
-However, a lot of tasks can be performed without `sudo`, including installing software in your own account.
+`sudo` is used to execute a command with administrator rights, which would allow you to make system-wide changes.
+You are only able to run commands that make changes to the directories that your VSC account has access to,
+like your home directory, your personal directories like $VSC_DATA and $VSC_SCRATCH, 
+or shared VO/group directories like $VSC_DATA_VO and $VSC_SCRATCH_VO.
+
+A lot of tasks can be performed without `sudo`, including installing software in your own account.
 
 **Installing software**
 
