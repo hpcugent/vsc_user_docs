@@ -313,7 +313,7 @@ job, or your batch of jobs).
 You should remove any data from these systems after your processing them
 has finished. There are no guarantees about the time your data will be
 stored on this system, and we plan to clean these automatically on a
-regular base. The maximum allowed age of files on these scratch file
+regular basis. The maximum allowed age of files on these scratch file
 systems depends on the type of scratch, and can be anywhere between a
 day and a few weeks. We don't guarantee that these policies remain
 forever, and may change them if this seems necessary for the healthy
@@ -326,7 +326,7 @@ Each type of scratch has its own use:
     in the node, while on other clusters it will be emulated through
     another file server. In many cases, it will be significantly slower
     than the cluster scratch as it typically consists of just a single
-    disk. Some **drawsbacks** are that the storage can only be accessed on that
+    disk. Some **drawbacks** are that the storage can only be accessed on that
     particular node and that the capacity is often very limited (e.g.,
     100 GB). The performance will depend a lot on the particular
     implementation in the cluster. In many cases, it will be
@@ -584,7 +584,7 @@ In this exercise, you will
 1.  Generate the file "`primes_1.txt`" again as in the previous
     exercise;
 
-2.  open the this file;
+2.  open the file;
 
 3.  read it line by line;
 
@@ -734,7 +734,7 @@ This shows you first the aggregated size of all subdirectories, and
 finally the total size of the current directory "." (this includes files
 stored in the current directory).
 
-If you also want this size to be "human readable" (and not always the
+If you also want this size to be "human-readable" (and not always the
 total number of kilobytes), you add the parameter "-h":
 
 <pre><code><b>$ du -h</b>
