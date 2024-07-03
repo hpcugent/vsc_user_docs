@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=04:00:00
+
+cd $PBS_O_WORKDIR
+./weather -t $temperature -p $pressure -v $volume
+
+# # This script is submitted to the cluster with the following 2 commands:
+# module load worker/1.6.8-intel-2018a
+# wsub -data data.csv -batch weather.pbs

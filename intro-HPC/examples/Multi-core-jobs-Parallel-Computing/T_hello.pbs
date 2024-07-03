@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#PBS -l walltime=00:05:00
+
+  # This is a 8 core job
+#PBS -l nodes=1:ppn=8
+
+  # make sure we are in the right directory in case writing files 
+cd $PBS_O_WORKDIR 
+./T_hello

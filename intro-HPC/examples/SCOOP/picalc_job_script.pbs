@@ -1,0 +1,13 @@
+#!/bin/bash
+#PBS -l nodes=2:ppn=16
+
+module load vsc-mympirun-scoop
+
+# change to directory where job was submitted from
+cd $PBS_O_WORKDIR
+
+# assume picalc.py is in current directory
+export PYTHONPATH=.:$PYTHONPATH
+
+# run 10k batches/workers with a batch size of 5000
+myscoop --scoop-module=picalc 10000 5000

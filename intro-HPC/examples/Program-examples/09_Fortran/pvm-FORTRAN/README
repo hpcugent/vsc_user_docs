@@ -1,0 +1,18 @@
+Compiling PVM programs
+
+module purge
+module load PVM
+make
+
+
+
+Running PVM programs
+
+- master/slave
+
+  qsub pvm-masterslave.sh
+
+
+- spmd
+
+  ...
