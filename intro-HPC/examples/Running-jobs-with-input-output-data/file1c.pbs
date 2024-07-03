@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# redirect standard output (-o) and error (-e)
+#PBS -o stdout.$PBS_JOBID
+#PBS -e stderr.$PBS_JOBID
+
+cd $PBS_O_WORKDIR  
+echo Start Job
+date
+./file1.py
+echo End Job

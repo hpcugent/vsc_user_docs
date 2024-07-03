@@ -1,0 +1,23 @@
+#!/bin/bash -l
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=0:05:00
+#PBS -N FiboJob
+#PBS -m e
+cd $PBS_O_WORKDIR
+./../bin/fibo.py 200
+echo $PBS_O_WORKDIR
+
+# The following reflect the environment where the user ran qsub:
+# PBS_O_HOST    The host where you ran the qsub command.
+# PBS_O_LOGNAME Your user ID where you ran qsub.
+# PBS_O_HOME    Your home directory where you ran qsub.
+# PBS_O_WORKDIR The working directory where you ran qsub.
+#
+# These reflect the environment where the job is executing:
+# PBS_ENVIRONMENT       Set to PBS_BATCH to indicate the job is a batch job, or
+#                 to PBS_INTERACTIVE to indicate the job is a PBS interactive job.
+# PBS_O_QUEUE   The original queue you submitted to.
+# PBS_QUEUE     The queue the job is executing from.
+# PBS_JOBID     The job's PBS identifier.
+# PBS_JOBNAME   The job's name.
+
