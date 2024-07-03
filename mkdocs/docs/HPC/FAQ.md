@@ -355,7 +355,7 @@ See also: [Your UGent home drive and shares](running_jobs_with_input_output_data
 Attempting to use `sudo` will prompt you for a password, 
 but no valid password can be entered as this feature is reserved for HPC administrators only.
 
-However, a lot of tasks can be performed without `sudo`, including installing software, in your own user space.
+However, a lot of tasks can be performed without `sudo`, including installing software in your own account.
 
 **Installing software**
 
