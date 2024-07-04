@@ -104,9 +104,7 @@ If you get from your job output an error message similar to this:
 This occurs when your job did not complete within the requested
 walltime. See
 section on [Specifying Walltime](../fine_tuning_job_specifications/#specifying-walltime) for more information
-about how to request the walltime. It is recommended to use
-*checkpointing* if the job requires **72 hours** of walltime or more to be executed.
-<!-- FIXME: Refer to Checkpointing section. -->
+about how to request the walltime.
 
 ## Out of quota issues
 
