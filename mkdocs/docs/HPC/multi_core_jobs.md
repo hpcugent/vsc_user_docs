@@ -110,7 +110,7 @@ MPI.
     This queues a job that claims 2 nodes and 10 cores.
 
 !!! warning
-    Just requesting more nodes and/or cores does mean that your job will automatically run faster.
+    Just requesting more nodes and/or cores does not mean that your job will automatically run faster.
     You can find more about this [here](troubleshooting.md#job_does_not_run_faster).
 
 ## Parallel Computing with threads
