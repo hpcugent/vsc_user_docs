@@ -132,7 +132,7 @@ Here you can:
         Dir*) in the current directory;
 
     -   upload files or directories from your local workstation into
-        your VSC account, in the currect directory (via *Upload*);
+        your VSC account, in the correct directory (via *Upload*);
 
     -   show hidden files and directories, of which the name starts with
         a dot (`.`) (via *Show Dotfiles*);
@@ -169,7 +169,7 @@ Here you can:
     -   use the *Delete* button to (**permanently!**) remove the selected files and
         directories;
 
-For more information, see aslo
+For more information, see also
 <https://www.osc.edu/resources/online_portals/ondemand/file_transfer_and_management>.
 
 ### Job management
@@ -220,7 +220,7 @@ create new jobs:
 This extensive interface allows you to create jobs from one of the
 available templates, or by copying an existing job.
 
-You can carefuly prepare your job and the corresponding job script via
+You can carefully prepare your job and the corresponding job script via
 the *Job Options* button and by editing the job script (see lower
 right).
 
