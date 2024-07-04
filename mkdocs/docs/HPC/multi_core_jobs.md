@@ -153,6 +153,11 @@ Go to the example directory:
 <pre><code><b>$ cd ~/{{ exampledir }}</b>
 </code></pre>
 
+!!! note
+    If the example directory is not yet present, copy it to your home directory:
+
+    <pre><code><b>$ cp -r {{ examplesdir }} ~/</b></code></pre>
+
 Study the example first:
 
 <div style="text-align: center;">-- T_hello.c --</div>
