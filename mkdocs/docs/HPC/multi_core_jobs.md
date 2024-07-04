@@ -458,7 +458,7 @@ and compile it:
 </code></pre>
 
 mpiicc is a wrapper of the Intel C++ compiler icc to compile MPI
-programs (see the chapter on compilation for details).
+programs (see [the chapter on compilation](./compiling_your_software.md) for details).
 
 Run the parallel program:
 
