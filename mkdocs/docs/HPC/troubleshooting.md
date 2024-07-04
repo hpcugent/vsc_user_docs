@@ -450,6 +450,12 @@ To avoid jobs allocating too much memory, there are memory limits in
 place by default. It is possible to specify higher memory limits if your
 jobs require this.
 
+!!! note
+
+    Memory is not the same as storage. Memory or RAM is used for temporary, 
+    fast access to data when the program is running, while storage is used for long-term data retention.
+    If you are running into problems because you reached your storage quota, see [Out of quota issues](#out-of-quota-issues).
+
 ### How will I know if memory limits are the cause of my problem?
 
 If your program fails with a memory-related issue, there is a good
