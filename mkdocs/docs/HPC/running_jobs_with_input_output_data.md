@@ -762,13 +762,14 @@ for a summary of the current directory:
 If you want to see the size of any file or top-level subdirectory in the
 current directory, you could use the following command:
 
-<pre><code><b>$ du -s -h *</b>
-1.5M ex01-matlab
-512K ex02-python
-768K ex03-python
-768K ex04-python
-256K example.sh
-1.5M intro-HPC.pdf
+<pre><code><b>$ du -h --max-depth 1</b>
+1.5M ./ex01-matlab
+512K ./ex02-python
+768K ./ex03-python
+768K ./ex04-python
+256K ./example.sh
+1.5M ./intro-HPC.pdf
+700M ./.cache
 </code></pre>
 
 Finally, if you don't want to know the size of the data in your current
@@ -777,11 +778,12 @@ just pass this directory as a parameter. The command below will show the
 disk use in your home directory, even if you are currently in a
 different directory:
 
-<pre><code><b>$ du -h $VSC_HOME/*</b>
+<pre><code><b>$ du -h --max-depth 1 $VSC_HOME</b>
 22M {{ homedir }}/dataset01
 36M {{ homedir }}/dataset02
 22M {{ homedir }}/dataset03
 3.5M {{ homedir }}/primes.txt
+24M {{ homedir }}/.cache
 </code></pre>
 
 {% if site == gent %}
