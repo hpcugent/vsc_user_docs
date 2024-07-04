@@ -1185,7 +1185,7 @@ More information on this in the subsections below.</p>
 <h3 id="using-multiple-cores">Using multiple cores<a class="headerlink" href="#using-multiple-cores" title="Permanent link">#</a></h3>
 <p>When you want to speed up your jobs by requesting multiple cores, you also need to use software that is actually capable of 
 using them (and use them efficiently, ideally).
-Unless particular a parallel programming paradigm like <a href="https://www.openmp.org/about/openmp-faq/#WhatIs">OpenMP</a> threading 
+Unless a particular parallel programming paradigm like <a href="https://www.openmp.org/about/openmp-faq/#WhatIs">OpenMP</a> threading 
 (shared memory) or <a href="https://en.wikipedia.org/wiki/Message_Passing_Interface">MPI</a> (distributed memory) is used, 
 software will run sequentially (on a single core).</p>
 <p>To use multiple cores, the software needs to be able to create, manage, and synchronize multiple threads or processes. 
@@ -1203,7 +1203,7 @@ test with 2, 4, 16, a quarter of, half of, and all available cores.</p>
 you should <em>not</em> expect that doubling the amount of cores will result in a 2x speedup. 
 This is due to the fact that time is needed to create, manage and synchronize the threads/processes.
 When this "bookkeeping" overhead exceeds the time gained by parallelization, you will not observe any speedup (or even see slower runs).
-For example, this can happen when you split you program in too many (tiny) tasks to run in parallel - 
+For example, this can happen when you split your program in too many (tiny) tasks to run in parallel - 
 creating a thread/process for each task may even take longer than actually running the task itself.</p>
 </li>
 <li>
@@ -1216,7 +1216,7 @@ So when you reach this theoretical limit, using more cores will not help at all 
 </li>
 <li>
 <p><strong>Resource contention:</strong> When two or more threads/processes want to access the same resource, they need to wait on each other - this is called resource contention. 
-As a result, 1 thread/process will need to wait until the other one is is finished using that resource. 
+As a result, 1 thread/process will need to wait until the other one is finished using that resource. 
 When each thread uses the same resource, it will definitely run slower than if it doesn't need to wait for other threads to finish.</p>
 </li>
 <li>
@@ -1246,7 +1246,7 @@ it is likely that you will not see a significant speedup when using more cores (
 The scalability achieved through multi-threading does not extend seamlessly to distributing computations across multiple nodes.
 This means that just changing <code>#PBS -l nodes=1:ppn=10</code> to <code>#PBS -l nodes=2:ppn=10</code> may only increase the waiting time to get your job running (because twice as many resources are requested), and will not improve the execution time.</p>
 <p>Actually using additional nodes is not as straightforward as merely asking for multiple nodes when submitting your job. The resources on these additional nodes often need to discovered, managed, and synchronized. This introduces complexities in distributing work effectively across the nodes. Luckily, there exist some libraries that do this for you.</p>
-<p>Using the resources of multiple nodes is often done using an <a href="https://en.wikipedia.org/wiki/Message_Passing_Interface">Message Passing Interface (MPI)</a> library.
+<p>Using the resources of multiple nodes is often done using a <a href="https://en.wikipedia.org/wiki/Message_Passing_Interface">Message Passing Interface (MPI)</a> library.
 MPI allows nodes to communicate and coordinate, but it also introduces additional complexity.</p>
 <p>An example of how you can make beneficial use of multiple nodes can be found <a href="../multi_core_jobs/#parallel-computing-with-mpi">here</a>.</p>
 <p>You can also use MPI in Python, some useful packages that are also available on the HPC are:</p>
@@ -1262,7 +1262,7 @@ In addition, when running MPI software we strongly advise to use our <a href="..
 you should check its documentation for instructions on how to run in parallel, 
 or check for options that control how many threads/cores/nodes can be used.</p>
 <p>If you can not find any information along those lines, the software you are using can probably only use a single core 
-and thus requesting multiple cores and/or nodes will only result in wasted sources.</p>
+and thus requesting multiple cores and/or nodes will only result in wasted resources.</p>
 <h2 id="walltime-issues">Walltime issues<a class="headerlink" href="#walltime-issues" title="Permanent link">#</a></h2>
 <p>If you get from your job output an error message similar to this:</p>
 <pre><code>=>> PBS: job killed: walltime <i>&lt;value in seconds&gt; exceeded limit  &lt;value in seconds&gt;</i>
@@ -1271,10 +1271,7 @@ and thus requesting multiple cores and/or nodes will only result in wasted sourc
 <p>This occurs when your job did not complete within the requested
 walltime. See
 section on <a href="../fine_tuning_job_specifications/#specifying-walltime">Specifying Walltime</a> for more information
-about how to request the walltime. It is recommended to use
-<em>checkpointing</em> if the job requires <strong>72 hours</strong> of walltime or more to be executed.</p>
-<!-- FIXME: Refer to Checkpointing section. -->
-
+about how to request the walltime.</p>
 <h2 id="out-of-quota-issues">Out of quota issues<a class="headerlink" href="#out-of-quota-issues" title="Permanent link">#</a></h2>
 <p>Sometimes a job hangs at some point or it stops writing in the disk.
 These errors are usually related to the quota usage. You may have
@@ -1294,7 +1291,7 @@ the key/lock analogy in <a href="../account/#how-do-ssh-keys-work">How do SSH ke
 things to do that should help:</p>
 <ol>
 <li>
-<p>Keep in mind that it an take up to an hour for your VSC account to
+<p>Keep in mind that it can take up to an hour for your VSC account to
     become active after it has been <em>approved</em>; until then, logging in
     to your VSC account will not work.</p>
 </li>
@@ -1383,7 +1380,7 @@ Host key verification failed.
 line 21). To do that, open <code>~/.ssh/known_hosts</code> in an editor, and remove the
 line. This results in <code>ssh</code> "forgetting" the system you are connecting
 to.</p>
-<p>Alternatively you can use the command that might shown by the warning under
+<p>Alternatively you can use the command that might be shown by the warning under
 <code>remove with:</code> and it should be something like this:</p>
 <pre><code>ssh-keygen -f "~/.ssh/known_hosts" -R "login.hpc.uantwerpen.be"
 </code></pre>
@@ -1420,6 +1417,12 @@ lines:</p>
 <p>To avoid jobs allocating too much memory, there are memory limits in
 place by default. It is possible to specify higher memory limits if your
 jobs require this.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Memory is not the same as storage. Memory or RAM is used for temporary, 
+fast access to data when the program is running, while storage is used for long-term data retention.
+If you are running into problems because you reached your storage quota, see <a href="#out-of-quota-issues">Out of quota issues</a>.</p>
+</div>
 <h3 id="how-will-i-know-if-memory-limits-are-the-cause-of-my-problem">How will I know if memory limits are the cause of my problem?<a class="headerlink" href="#how-will-i-know-if-memory-limits-are-the-cause-of-my-problem" title="Permanent link">#</a></h3>
 <p>If your program fails with a memory-related issue, there is a good
 chance it failed because of the memory limits and you should increase
