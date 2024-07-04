@@ -2075,7 +2075,7 @@ needed:</p>
 </code></pre>
 
 <p>If you get an error "<em>Unknown credential cache type while getting
-default ccache</em>" (or similar) and you use , then please deactivate conda
+default ccache</em>" (or similar) and you use conda, then please deactivate conda
 before you use the commands in this chapter.</p>
 <pre><code><b>$ conda deactivate</b>
 </code></pre>
@@ -2336,13 +2336,14 @@ for a summary of the current directory:</p>
 
 <p>If you want to see the size of any file or top-level subdirectory in the
 current directory, you could use the following command:</p>
-<pre><code><b>$ du -s -h *</b>
-1.5M ex01-matlab
-512K ex02-python
-768K ex03-python
-768K ex04-python
-256K example.sh
-1.5M intro-HPC.pdf
+<pre><code><b>$ du -h --max-depth 1</b>
+1.5M ./ex01-matlab
+512K ./ex02-python
+768K ./ex03-python
+768K ./ex04-python
+256K ./example.sh
+1.5M ./intro-HPC.pdf
+700M ./.cache
 </code></pre>
 
 <p>Finally, if you don't want to know the size of the data in your current
@@ -2350,11 +2351,12 @@ directory, but in some other directory (e.g., your data directory), you
 just pass this directory as a parameter. The command below will show the
 disk use in your home directory, even if you are currently in a
 different directory:</p>
-<pre><code><b>$ du -h $VSC_HOME/*</b>
+<pre><code><b>$ du -h --max-depth 1 $VSC_HOME</b>
 22M /user/home/gent/vsc400/vsc40000/dataset01
 36M /user/home/gent/vsc400/vsc40000/dataset02
 22M /user/home/gent/vsc400/vsc40000/dataset03
 3.5M /user/home/gent/vsc400/vsc40000/primes.txt
+24M /user/home/gent/vsc400/vsc40000/.cache
 </code></pre>
 
 <h2 id="groups">Groups<a class="headerlink" href="#groups" title="Permanent link">#</a></h2>

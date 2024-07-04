@@ -1431,7 +1431,7 @@ This queues a job that claims 2 nodes and 10 cores.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Just requesting more nodes and/or cores does mean that your job will automatically run faster.
+<p>Just requesting more nodes and/or cores does not mean that your job will automatically run faster.
 You can find more about this <a href="../troubleshooting/#job_does_not_run_faster">here</a>.</p>
 </div>
 <h2 id="parallel-computing-with-threads">Parallel Computing with threads<a class="headerlink" href="#parallel-computing-with-threads" title="Permanent link">#</a></h2>
@@ -1464,9 +1464,14 @@ time.</p>
 <p>Here is a simple example program that spawns 5 threads, where each one
 runs a simple function that only prints "Hello from thread".</p>
 <p>Go to the example directory:</p>
-<pre><code><b>$ cd ~/examples/Multi_core_jobs_Parallel_Computing</b>
+<pre><code><b>$ cd ~/examples/Multi-core-jobs-Parallel-Computing</b>
 </code></pre>
 
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the example directory is not yet present, copy it to your home directory:</p>
+<p><pre><code><b>$ cp -r /apps/gent/tutorials/Intro-HPC/examples ~/</b></code></pre></p>
+</div>
 <p>Study the example first:</p>
 <div style="text-align: center;">-- T_hello.c --</div>
 
@@ -1935,7 +1940,7 @@ mpirun<span class="w"> </span>./mpi_hello
 </code></pre>
 
 <p>mpiicc is a wrapper of the Intel C++ compiler icc to compile MPI
-programs (see the chapter on compilation for details).</p>
+programs (see <a href="../compiling_your_software/">the chapter on compilation</a> for details).</p>
 <p>Run the parallel program:</p>
 <pre><code><b>$ qsub mpi_hello.pbs</b>
 <b>$ ls -l</b>
@@ -2001,8 +2006,8 @@ instead of
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-</div>
 <p>If you plan engaging in parallel programming using MPI, this book may prove useful: <em>Parallel Programming with MPI. Peter Pacheo. Morgan Kaufmann. 1996.</em></p>
+</div>
 
 
 

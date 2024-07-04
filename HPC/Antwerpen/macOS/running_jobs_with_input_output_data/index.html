@@ -1908,13 +1908,14 @@ for a summary of the current directory:</p>
 
 <p>If you want to see the size of any file or top-level subdirectory in the
 current directory, you could use the following command:</p>
-<pre><code><b>$ du -s -h *</b>
-1.5M ex01-matlab
-512K ex02-python
-768K ex03-python
-768K ex04-python
-256K example.sh
-1.5M intro-HPC.pdf
+<pre><code><b>$ du -h --max-depth 1</b>
+1.5M ./ex01-matlab
+512K ./ex02-python
+768K ./ex03-python
+768K ./ex04-python
+256K ./example.sh
+1.5M ./intro-HPC.pdf
+700M ./.cache
 </code></pre>
 
 <p>Finally, if you don't want to know the size of the data in your current
@@ -1922,11 +1923,12 @@ directory, but in some other directory (e.g., your data directory), you
 just pass this directory as a parameter. The command below will show the
 disk use in your home directory, even if you are currently in a
 different directory:</p>
-<pre><code><b>$ du -h $VSC_HOME/*</b>
+<pre><code><b>$ du -h --max-depth 1 $VSC_HOME</b>
 22M /user/antwerpen/201/vsc20167/dataset01
 36M /user/antwerpen/201/vsc20167/dataset02
 22M /user/antwerpen/201/vsc20167/dataset03
 3.5M /user/antwerpen/201/vsc20167/primes.txt
+24M /user/antwerpen/201/vsc20167/.cache
 </code></pre>
 
 <p>We also want to mention the <code>tree</code> command, as it also provides an easy
