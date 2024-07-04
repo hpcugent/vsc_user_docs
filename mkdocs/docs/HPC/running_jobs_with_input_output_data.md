@@ -330,9 +330,7 @@ Each type of scratch has its own use:
 **Node scratch ($VSC_SCRATCH_NODE).**   Every node has its own scratch space, which is completely separated
     from the other nodes. On some clusters, it will be on a local disk
     in the node, while on other clusters it will be emulated through
-    another file server. In many cases, it will be significantly slower
-    than the cluster scratch as it typically consists of just a single
-    disk. Some **drawbacks** are that the storage can only be accessed on that
+    another file server. Some **drawbacks** are that the storage can only be accessed on that
     particular node and that the capacity is often very limited (e.g.,
     100 GB). The performance will depend a lot on the particular
     implementation in the cluster. In many cases, it will be
