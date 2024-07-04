@@ -10,7 +10,7 @@ More information on this in the subsections below.
 ### Using multiple cores
 When you want to speed up your jobs by requesting multiple cores, you also need to use software that is actually capable of 
 using them (and use them efficiently, ideally).
-Unless particular a parallel programming paradigm like [OpenMP](https://www.openmp.org/about/openmp-faq/#WhatIs) threading 
+Unless a particular parallel programming paradigm like [OpenMP](https://www.openmp.org/about/openmp-faq/#WhatIs) threading 
 (shared memory) or [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface) (distributed memory) is used, 
 software will run sequentially (on a single core).
 
@@ -30,7 +30,7 @@ Other reasons why using more cores may not lead to a (significant) speedup inclu
 you should *not* expect that doubling the amount of cores will result in a 2x speedup. 
 This is due to the fact that time is needed to create, manage and synchronize the threads/processes.
 When this "bookkeeping" overhead exceeds the time gained by parallelization, you will not observe any speedup (or even see slower runs).
-For example, this can happen when you split you program in too many (tiny) tasks to run in parallel - 
+For example, this can happen when you split your program in too many (tiny) tasks to run in parallel - 
 creating a thread/process for each task may even take longer than actually running the task itself.
 
 - **[Amdahl's Law](https://en.wikipedia.org/wiki/Amdahl%27s_law)** is often used in parallel computing to predict the maximum achievable (theoretical) speedup when using multiple cores. 
@@ -41,7 +41,7 @@ Regardless of how many cores are devoted to a parallelized execution of this pro
 So when you reach this theoretical limit, using more cores will not help at all to speed up the computational workload.
 
 - **Resource contention:** When two or more threads/processes want to access the same resource, they need to wait on each other - this is called resource contention. 
-As a result, 1 thread/process will need to wait until the other one is is finished using that resource. 
+As a result, 1 thread/process will need to wait until the other one is finished using that resource. 
 When each thread uses the same resource, it will definitely run slower than if it doesn't need to wait for other threads to finish.
 
 - **Software limitations:** It is possible that the software you are using is just not really optimized for parallelization. 
@@ -71,7 +71,7 @@ This means that just changing `#PBS -l nodes=1:ppn=10` to `#PBS -l nodes=2:ppn=1
 
 Actually using additional nodes is not as straightforward as merely asking for multiple nodes when submitting your job. The resources on these additional nodes often need to discovered, managed, and synchronized. This introduces complexities in distributing work effectively across the nodes. Luckily, there exist some libraries that do this for you.
 
-Using the resources of multiple nodes is often done using an [Message Passing Interface (MPI)](https://en.wikipedia.org/wiki/Message_Passing_Interface) library.
+Using the resources of multiple nodes is often done using a [Message Passing Interface (MPI)](https://en.wikipedia.org/wiki/Message_Passing_Interface) library.
 MPI allows nodes to communicate and coordinate, but it also introduces additional complexity.
 
 An example of how you can make beneficial use of multiple nodes can be found [here](multi_core_jobs.md#parallel-computing-with-mpi).
@@ -91,7 +91,7 @@ you should check its documentation for instructions on how to run in parallel,
 or check for options that control how many threads/cores/nodes can be used.
 
 If you can not find any information along those lines, the software you are using can probably only use a single core 
-and thus requesting multiple cores and/or nodes will only result in wasted sources.
+and thus requesting multiple cores and/or nodes will only result in wasted resources.
 
 
 ## Walltime issues
@@ -136,7 +136,7 @@ If you have errors that look like:
 or you are experiencing problems with connecting, here is a list of
 things to do that should help:
 
-1.  Keep in mind that it an take up to an hour for your VSC account to
+1.  Keep in mind that it can take up to an hour for your VSC account to
     become active after it has been *approved*; until then, logging in
     to your VSC account will not work.
 
@@ -267,7 +267,7 @@ and include it in the email.
 
 Follow the instructions in [Change PuTTY private key for a saved configuration](../troubleshooting/#change-putty-private-key-for-a-saved-configuration) util item 5, then:
 
-1.  Single click on the textbox containig the path to your private key,
+1.  Single click on the textbox containing the path to your private key,
     then select all text (push ++"Ctrl"++ + ++"a"++ ), then copy the location of the
     private key (push ++"Ctrl"++ + ++"c"++)
 
@@ -343,7 +343,7 @@ line 21). To do that, open `~/.ssh/known_hosts` in an editor, and remove the
 line. This results in `ssh` "forgetting" the system you are connecting
 to.
 
-Alternatively you can use the command that might shown by the warning under
+Alternatively you can use the command that might be shown by the warning under
 `remove with:` and it should be something like this:
 
 <pre><code>ssh-keygen -f "~/.ssh/known_hosts" -R "{{loginnode}}"
@@ -363,7 +363,7 @@ one of the following fingerprints:
 
 **Do not click "Yes" until you verified the fingerprint. Do not press "No" in any case.**
 
-If it the fingerprint matches, click "Yes".
+If the fingerprint matches, click "Yes".
 
 If it doesn't (like in the example) or you are in doubt, take a screenshot, press "Cancel" and contact {{ hpcinfo }}.
 
