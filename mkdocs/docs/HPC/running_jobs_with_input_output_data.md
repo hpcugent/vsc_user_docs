@@ -299,7 +299,7 @@ scratch space instead.
 
 {% if site == gent %}
 If you are running out of quota on your
-_$VSC_DATA filesystem you can request to join a VO. See [this section](./#joining-an-existing-vo) on how to do this.
+_$VSC_DATA filesystem you can join an existing VO, or request a new VO. See [the section about virtual organisations](./#virtual-organisations) on how to do this.
 {% endif %}
 
 ### Your scratch space ($VSC_SCRATCH)
