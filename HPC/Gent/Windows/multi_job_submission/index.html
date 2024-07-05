@@ -1340,7 +1340,7 @@ huge amounts of small jobs will create a lot of overhead, and can slow
 down the whole cluster. It would be better to bundle those jobs in
 larger sets. In TORQUE, an experimental feature known as "<em>job arrays</em>"
 existed to allow the creation of multiple jobs with one <em>qsub</em> command,
-but is was not supported by Moab, the current scheduler.</p>
+but is not supported by Moab, the current scheduler.</p>
 <p>The "<strong>Worker framework</strong>" has been developed to address this issue.</p>
 <p>It can handle many small jobs determined by:</p>
 <dl>
@@ -1364,7 +1364,7 @@ scenario that can be reduced to a <strong>MapReduce</strong> approach.<sup id="f
 <p>First go to the right directory:</p>
 <pre><code>$ <b>cd ~/examples/Multi-job-submission/par_sweep</b></code></pre>
 
-<p>Suppose the program the user wishes to run the "<em>weather</em>" program,
+<p>Suppose the user wishes to run the "<em>weather</em>" program,
 which takes three parameters: a temperature, a pressure and a volume. A
 typical call of the program looks like:</p>
 <pre><code>$ <b>./weather -t 20 -p 1.05 -v 4.3</b>
@@ -1720,7 +1720,7 @@ file, can be used:</p>
 
 <p>This will summarise the log file every 60 seconds.</p>
 <h3 id="time-limits-for-work-items">Time limits for work items<a class="headerlink" href="#time-limits-for-work-items" title="Permanent link">#</a></h3>
-<p>Sometimes, the execution of a work item takes long than expected, or
+<p>Sometimes, the execution of a work item takes longer than expected, or
 worse, some work items get stuck in an infinite loop. This situation is
 unfortunate, since it implies that work items that could successfully
 execute are not even started. Again, the Worker framework offers a
@@ -1741,8 +1741,7 @@ volume.</p>
 <p>Also note that "timedrun" is in fact offered in a module of its own, so
 it can be used outside the Worker framework as well.</p>
 <h3 id="resuming-a-worker-job">Resuming a Worker job<a class="headerlink" href="#resuming-a-worker-job" title="Permanent link">#</a></h3>
-<p>Unfortunately, it is not always easy to estimate the walltime for a job,
-and consequently, sometimes the latter is underestimated. When using the
+<p>Unfortunately, walltime is sometimes underestimated. When using the
 Worker framework, this implies that not all work items will have been
 processed. Worker makes it very easy to resume such a job without having
 to figure out which work items did complete successfully, and which
