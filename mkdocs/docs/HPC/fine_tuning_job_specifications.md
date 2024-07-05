@@ -328,9 +328,10 @@ processor : 5
 processor : 6
 processor : 7</code></pre>
 
-<u>Remark</u>: Unless you want information of the login nodes, you'll have to issue
-these commands on one of the workernodes. This is most easily achieved
-in an interactive job, see the chapter on Running interactive jobs.
+!!! note
+    Unless you want information of the login nodes, you'll have to issue
+    these commands on one of the workernodes. This is most easily achieved
+    in an interactive job, see [the chapter on Running interactive jobs](./running_interactive_jobs.md).
 
 In order to specify the number of nodes and the number of processors per
 node in your job script, use:
