@@ -1216,9 +1216,11 @@ int<span class="w"> </span>main<span class="o">(</span><span class="w"> </span>i
 <p>We first need to compile this C-file into an executable with the
 gcc-compiler.</p>
 <p>First, check the command line options for <em>"gcc" (GNU C-Compiler)</em>, then
-we compile and list the contents of the directory again:</p>
+we compile. the <code>O2</code> option enables a moderate level of optimization when compiling the code. 
+It instructs the compiler to optimize the code for better performance without significantly increasing compilation time.
+Finally, list the contents of the directory again:</p>
 <pre><code>$ <b>gcc -help</b>
-$ <b>gcc -o hello hello.c</b>
+$ <b>gcc -O2 -o hello hello.c</b>
 $ <b>ls -l</b>
 total 512
 -rwxrwxr-x 1 vsc20167 7116 Sep 16 11:43 hello*
