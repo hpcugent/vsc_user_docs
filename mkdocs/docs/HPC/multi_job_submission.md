@@ -22,7 +22,7 @@ huge amounts of small jobs will create a lot of overhead, and can slow
 down the whole cluster. It would be better to bundle those jobs in
 larger sets. In TORQUE, an experimental feature known as "*job arrays*"
 existed to allow the creation of multiple jobs with one *qsub* command,
-but is was not supported by Moab, the current scheduler.
+but is not supported by Moab, the current scheduler.
 
 The "**Worker framework**" has been developed to address this issue.
 
@@ -50,7 +50,7 @@ scenario that can be reduced to a **MapReduce** approach.[^1]
 First go to the right directory:
 <pre><code>$ <b>cd ~/examples/Multi-job-submission/par_sweep</b></code></pre>
 
-Suppose the program the user wishes to run the "*weather*" program,
+Suppose the user wishes to run the "*weather*" program,
 which takes three parameters: a temperature, a pressure and a volume. A
 typical call of the program looks like:
 <pre><code>$ <b>./weather -t 20 -p 1.05 -v 4.3</b>
@@ -366,7 +366,7 @@ This will summarise the log file every 60 seconds.
 
 ### Time limits for work items
 
-Sometimes, the execution of a work item takes long than expected, or
+Sometimes, the execution of a work item takes longer than expected, or
 worse, some work items get stuck in an infinite loop. This situation is
 unfortunate, since it implies that work items that could successfully
 execute are not even started. Again, the Worker framework offers a
@@ -392,8 +392,7 @@ it can be used outside the Worker framework as well.
 
 ### Resuming a Worker job
 
-Unfortunately, it is not always easy to estimate the walltime for a job,
-and consequently, sometimes the latter is underestimated. When using the
+Unfortunately, walltime is sometimes underestimated. When using the
 Worker framework, this implies that not all work items will have been
 processed. Worker makes it very easy to resume such a job without having
 to figure out which work items did complete successfully, and which
