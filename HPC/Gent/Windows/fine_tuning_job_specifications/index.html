@@ -1466,7 +1466,7 @@ parameters, which are not necessarily (or rarely) the optimal ones. This
 can slow down the run time of your application, but also block HPC resources
 for other users.</p>
 <p>Specifying the "optimal" Job Parameters requires some knowledge of your
-application (e.g., how many parallel threads does my application uses,
+application (e.g., how many parallel threads does my application use,
 is there a lot of inter-process communication, how much memory does my
 application need) and also some knowledge about the HPC infrastructure
 (e.g., what kind of multi-core processors are available, which nodes
@@ -1521,7 +1521,7 @@ sys 0m0.002s</code></pre>
 taken to be on the safe side.</p>
 <p>It is also wise to check the walltime on different compute nodes or to
 select the "slowest" compute node for your walltime tests. Your estimate
-should appropriate in case your application will run on the "slowest"
+should be appropriate in case your application will run on the "slowest"
 (oldest) compute nodes.</p>
 <p>The walltime can be specified in a job scripts as:</p>
 <pre><code>#PBS -l walltime=3:00:00:00</code></pre>
@@ -1576,7 +1576,7 @@ horizontally to see all processes and their full command lines.</p>
 </dd>
 </dl>
 <pre><code>$ <b>top</b>
-$ <b>htot</b></code></pre>
+$ <b>htop</b></code></pre>
 
 <h3 id="pbs_mem">Setting the memory parameter<a class="headerlink" href="#pbs_mem" title="Permanent link">#</a></h3>
 <p>Once you gathered a good idea of the overall memory consumption of your
@@ -1598,7 +1598,7 @@ are working at full load.</p>
 <h3 id="number-of-processors">Number of processors<a class="headerlink" href="#number-of-processors" title="Permanent link">#</a></h3>
 <p>The number of core and nodes that a user shall request fully depends on
 the architecture of the application. Developers design their
-applications with a strategy for parallelisation in mind. The
+applications with a strategy for parallelization in mind. The
 application can be designed for a certain fixed number or for a
 configurable number of nodes and cores. It is wise to target a specific
 set of compute nodes (e.g., Westmere, Harpertown) for your computing
