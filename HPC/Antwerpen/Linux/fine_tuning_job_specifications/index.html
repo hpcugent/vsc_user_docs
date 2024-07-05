@@ -1585,9 +1585,12 @@ processor : 5
 processor : 6
 processor : 7</code></pre>
 
-<p><u>Remark</u>: Unless you want information of the login nodes, you'll have to issue
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless you want information of the login nodes, you'll have to issue
 these commands on one of the workernodes. This is most easily achieved
-in an interactive job, see the chapter on Running interactive jobs.</p>
+in an interactive job, see <a href="../running_interactive_jobs/">the chapter on Running interactive jobs</a>.</p>
+</div>
 <p>In order to specify the number of nodes and the number of processors per
 node in your job script, use:</p>
 <pre><code>#PBS -l nodes=N:ppn=M</code></pre>
@@ -1745,9 +1748,10 @@ system load during the last <strong>one</strong>-, <strong>five</strong>-, and <
 10:14:05 up 86 days, 12:01, 11 users, load average: 0.60, 0.41, 0.41
 </code></pre>
 
-<p>Now, start a few instances of the "<em>eat_cpu</em>" program in the background,
+<p>Now, compile and start a few instances of the "<em>eat_cpu</em>" program in the background,
 and check the effect on the load again:</p>
-<pre><code>$ <b>./eat_cpu&</b>
+<pre><code>$ <b>gcc -O2 eat_cpu.c -o eat_cpu</b>
+$ <b>./eat_cpu&</b>
 $ <b>./eat_cpu&</b>
 $ <b>./eat_cpu&</b>
 $ <b>uptime</b>
