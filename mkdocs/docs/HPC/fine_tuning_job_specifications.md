@@ -515,9 +515,10 @@ The **uptime** command will show us the average load
 10:14:05 up 86 days, 12:01, 11 users, load average: 0.60, 0.41, 0.41
 </code></pre>
 
-Now, start a few instances of the "*eat_cpu*" program in the background,
+Now, compile and start a few instances of the "*eat_cpu*" program in the background,
 and check the effect on the load again:
-<pre><code>$ <b>./eat_cpu&</b>
+<pre><code>$ <b>gcc eat_cpu.c -o eat_cpu</b>
+$ <b>./eat_cpu&</b>
 $ <b>./eat_cpu&</b>
 $ <b>./eat_cpu&</b>
 $ <b>uptime</b>
