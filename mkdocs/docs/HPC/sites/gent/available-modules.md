@@ -5,7 +5,7 @@
    ABAQUS/2022
    ABAQUS/2023
    ABAQUS/2024-hotfix-2405                                                (D)
-...
+   ...
 </code></pre>
 
 Or when you want to check whether some specific software, some compiler or some
