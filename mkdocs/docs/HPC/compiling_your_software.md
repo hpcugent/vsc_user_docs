@@ -9,7 +9,7 @@ compiled for {{operatingsystem}}. It also means that you first have to install a
 required external software packages on the {{hpc}}.
 
 Most commonly used compilers are already pre-installed on the {{hpc}} and can be
-used straight away. Also many popular external software packages, which
+used straight away. Also, many popular external software packages, which
 are regularly used in the scientific community, are also pre-installed.
 
 ## Check the pre-installed software on the {{hpc}}
@@ -151,7 +151,7 @@ compilation process, even if they seem unimportant so that a code change
 that produces a warning does not go unnoticed.
 
 Let's test this program on the local compute node, which is at your
-disposal after the "qsub --I" command:
+disposal after the `qsub --I` command:
 <pre><code>$ <b>./hello</b>
 Hello #0
 Hello #1
