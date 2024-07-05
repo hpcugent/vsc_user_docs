@@ -127,9 +127,11 @@ We first need to compile this C-file into an executable with the
 gcc-compiler.
 
 First, check the command line options for *"gcc" (GNU C-Compiler)*, then
-we compile and list the contents of the directory again:
+we compile. the `O2` option enables a moderate level of optimization when compiling the code. 
+It instructs the compiler to optimize the code for better performance without significantly increasing compilation time.
+Finally, list the contents of the directory again:
 <pre><code>$ <b>gcc -help</b>
-$ <b>gcc -o hello hello.c</b>
+$ <b>gcc -O2 -o hello hello.c</b>
 $ <b>ls -l</b>
 total 512
 -rwxrwxr-x 1 {{userid}} 7116 Sep 16 11:43 hello*
