@@ -40,14 +40,14 @@ There are 2 main ways to ask for GPUs as part of a job:
     specified via `ppn`) using `-l nodes=X:ppn=Y:gpus=Z` (where the
     `ppn=Y` is optional), or as a separate resource request (similar to
     the amount of memory) via `-l gpus=Z`. Both notations give exactly
-    the same result. The `-l gpus=Z` is convenient is you only need one
+    the same result. The `-l gpus=Z` is convenient if you only need one
     node and you are fine with the default number of cores per GPU. The
     `-l nodes=...:gpus=Z` notation is required if you want to run with
     full control or in multinode cases like MPI jobs. If you do not
     specify the number of GPUs by just using `-l gpus`, you get by
     default 1 GPU.
 
--   As a resource of it's own, via `--gpus X`. In this case however, you
+-   As a resource of its own, via `--gpus X`. In this case however, you
     are *not* guaranteed that the GPUs are on the same node, so your
     script or code must be able to deal with this.
 
@@ -61,7 +61,7 @@ There are 2 main ways to ask for GPUs as part of a job:
 %  need to be processed or increasing the MPI ranks gives a speedup (e.g. when there is a significant portion of CPU work in the code).
 %  Unfortunately, this is not a silver bullet, and might require some experimenting to found out any potential benefits and proper tuning.
 %  TODO: how can a user now that an application is not using the full gpu resources?
-%  TODO this needs testing and there are some constraints (eg one mps job per node and thus one user per node using MPS)
+%  TODO this needs testing and there are some constraints (e.g. one mps job per node and thus one user per node using MPS)
 %  TODO needs proper integration with mypmirun / wurker
 %  TODO add separate section on MPS -->
 
@@ -86,7 +86,7 @@ Some important attention points:
     the MPI tasks, and is different from the usual `mpirun` that is used
     by the `mympirun` wrapper). At some later point, we *might* promote
     the `mypmirun` tool or rename it, to avoid the confusion in the
-    naming).
+    naming.
 
 -   Sharing GPUs requires MPS. The Slurm built-in MPS does not really do
     want you want, so we will provide integration with `mypmirun` and
@@ -95,7 +95,7 @@ Some important attention points:
 -   For parallel work, we are working on a `wurker` wrapper from the
     `vsc-mympirun` module that supports GPU placement and MPS, without
     any limitations wrt the requested resources (i.e. also support the
-    case where GPUs are spread heterogenous over nodes from using the
+    case where GPUs are spread heterogeneous over nodes from using the
     `--gpus Z` option).
 
 -   Both `mypmirun` and `wurker` will try to do the most optimised
@@ -133,7 +133,7 @@ Please consult `module avail Horovod` for a list of installed versions.
 
 Horovod supports TensorFlow, Keras, PyTorch and MxNet (see
 <https://github.com/horovod/horovod#id9>), but should be run as an MPI
-application with `mypmirun`. (Horovod also provides it's own wrapper
+application with `mypmirun`. (Horovod also provides its own wrapper
 `horovodrun`, not sure if it handles placement and others correctly).
 
 At least for simple TensorFlow benchmarks, it looks like Horovod is a
