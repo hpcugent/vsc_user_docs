@@ -213,12 +213,19 @@ It will appear in the `Interactive Apps` menu in the webportal, under the sectio
 After the indicated end date of your course, this application will be removed.
 
 If you would like this for your course, provide more details in your _teaching request_, including:
+
 - what interactive application would you like to get launched (cluster desktop, Jupyter Notebook, ...)
+
 - which cluster you want to use
+
 - how many nodes/cores/GPUs are needed
+
 - which software modules you are loading
+
 - custom code you are launching (e.g. autostart a GUI)
+
 - required environment variables that you are setting
+
 - ...
 
 We will try to make the custom interactive application available before the start of your course/workshop,
