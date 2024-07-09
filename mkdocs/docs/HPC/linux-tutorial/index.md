@@ -7,7 +7,7 @@ For more information see [introduction to HPC](../introduction.md).
 
 The guide aims to make you familiar with the Linux command line environment quickly.
 
-The tutorial goes though the following steps:
+The tutorial goes through the following steps:
 
 1. [Getting Started](getting_started.md)
 2. [Navigating](navigating.md)

@@ -34,7 +34,7 @@ $ <b>cat "some file"</b>
 ...
 </code></pre>
 
-This is especially error prone if you are piping results of `find`:
+This is especially error-prone if you are piping results of `find`:
 <pre><code>$ <b>find . -type f | xargs cat</b>
 No such file or directory name ’some’
 No such file or directory name ’file’

@@ -77,7 +77,7 @@ lost forever, there are no backups, so beware when using this command!
 #### Removing a directory: "rmdir"
 
 You can remove directories using `rm -r directory`, however, this is
-error prone and can ruin your day if you make a mistake in typing. To
+error-prone and can ruin your day if you make a mistake in typing. To
 prevent this type of error, you can remove the contents of a directory
 using `rm` and then finally removing the directory with:
 <pre><code>$ <b>rmdir directory</b>
@@ -103,7 +103,7 @@ The permission types are:
     file
 
 2.  Write - For files, this gives permission to write data to the file.
-    For directories it allows users to add or remove files to a
+    For directories, it allows users to add or remove files to a
     directory.
 
 3.  Execute - For files this gives permission to execute a file as
@@ -143,7 +143,7 @@ total 1
 drwxrwx---. 2 vsc40000 mygroup 40 Apr 12 15:00 Project_GoldenDragon
 </code></pre>
 
-The syntax used here is `g+x` which means roup was given rite
+The syntax used here is `g+x` which means group was given write
 permission. To revoke it again, we use `g-w`. The other roles are `u`
 for user and `o` for other.
 

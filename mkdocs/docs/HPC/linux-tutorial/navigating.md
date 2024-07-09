@@ -21,7 +21,7 @@ Listing files and directories: "ls"
 A very basic and commonly used command is `ls`, which can be used to
 list files and directories.
 
-In it's basic usage, it just prints the names of files and directories
+In its basic usage, it just prints the names of files and directories
 in the current directory. For example:
 <pre><code>$ <b>ls</b>
 afile.txt some_directory
