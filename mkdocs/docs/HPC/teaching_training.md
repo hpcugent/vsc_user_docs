@@ -64,7 +64,7 @@ as described in the [course data policy](./#course-data-policy):
 A _course group_ is created with all students or participants, and the teachers or trainers are
 the group moderators (and also member of this group).
 
-This course group and the moderators group are used to manage the different priviliges:
+This course group and the moderators group are used to manage the different privileges:
 moderators have additional privileges over non-moderator members
 e.g. they have read/write access in specific folders, can manage subgroups, ....
 
@@ -140,7 +140,7 @@ Optionally, we can also create these folders:
     - each of these `group_<01>` folders are owned by a dedicated group
     - teachers are automatically made moderators of these dedicated groups
     - moderators can populate these groups with VSC-ids of group members in the VSC accountpage
-      or ask the students to invite themself via [group edit](https://account.vscentrum.be/django/group/edit).
+      or ask the students to invite themselves via [group edit](https://account.vscentrum.be/django/group/edit).
       When students invite them self, moderators still need to [approve the group invites](https://account.vscentrum.be/django/group/approve).
     - only these VSC-ids will then be able to access a `group_<01>` folder, and will have read/write access.
 
@@ -158,7 +158,7 @@ There are 4 quota settings that you can choose in your _teaching request_ in the
 - overall quota (defaults *10 GB volume* and *20k files*) are for the moderators and can be used for e.g. the `input` folder.
 - member quota (defaults *5 GB volume* and *10k files*) are per student/participant
 
-The course data usage is not accounted for the any other quota (like VO quota). It is solely dependant on these settings.
+The course data usage is not accounted for any other quota (like VO quota). It is solely dependent on these settings.
 
 
 ### Course data policy
@@ -176,7 +176,7 @@ We assume that your course requirements are such that the [interactive cluster](
 If these resources are insufficient, you will need to request and motivate a reservation.
 
 Indicate which cluster you would need and the number of nodes, cores and/or GPUs.
-Also clearly indicate when you would need these resources, i.e. the dates and times of each course session.
+Also, clearly indicate when you would need these resources, i.e. the dates and times of each course session.
 
 Be aware that students will have no access to the reservation outside the course sessions.
 This might be relevant when requesting a custom application.
