@@ -97,10 +97,10 @@ about what's going on).
 To copy large files using `rsync`, you can use the `-P` flag: it enables
 both showing of progress and resuming partially downloaded files.
 
-To copy files from the to your local computer, you can also use `rsync`:
+To copy files to your local computer, you can also use `rsync`:
 <pre><code>$ <b>rsync -rzv vsc40000@login.hpc.ugent.be:data/bioset local_folder</b></code></pre>
-This will copy the folder `bioset` and its contents that on `$VSC_DATA`
-of the to a local folder named `local_folder`.
+This will copy the folder `bioset` and its contents on `$VSC_DATA`
+to a local folder named `local_folder`.
 
 See `man rsync` or <https://linux.die.net/man/1/rsync> for more
 information about rsync.

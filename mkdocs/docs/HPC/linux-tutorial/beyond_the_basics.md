@@ -190,7 +190,7 @@ the limits that have been set, use:
 
 ## Counting: `wc`
 
-To count the number of lines, words, and characters (or bytes) in a file, use `wc` (**w**ord ount):
+To count the number of lines, words, and characters (or bytes) in a file, use `wc` (**w**ord **c**ount):
 <pre><code>$ <b>wc example.txt</b>
       90     468     3189   example.txt
 </code></pre>
