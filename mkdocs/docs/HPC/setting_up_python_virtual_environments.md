@@ -65,9 +65,26 @@ $ python pytorch_poutine_example.py
 ```
 
 !!! warning
-    Activating a venv that was creating on a different cluster can cause issues. 
-    This is because the binaries placed in the venv on creation at cluster `A` might not be compatible with the CPU architecture of cluster `B`.
-    // TODO: Give an example of this
+    Activating a virtual environment (venv) created on a different cluster can cause issues. 
+    This happens because the binaries in the venv from cluster A might not work with the CPU architecture of cluster B.
+    
+    For example, if we create a venv on the skitty cluster,
+
+    ```bash
+    $ module swap cluster/skitty
+    $ qsub -I
+    $ python -m venv myenv
+    ```
+
+    return to the login node by pressing CTRL+D and try to use the virtual environment:
+
+    ```bash
+    $ source myenv/bin/activate
+    $ python
+    Illegal instruction (core dumped)
+    ```
+
+    we are presented with the illigal instruction error. More info on this [here](troubleshooting.md#illegal-instruction-error)
 
 
 ## Creating a virtual environment on a specific cluster
@@ -106,5 +123,56 @@ python myscript.py        # Run your Python script, or any other command within 
 deactivate                # Deactivate the virtual environment
 ```
 
-// TODO troubleshooting for: python: error while loading shared libraries: libpython3.10.so.1.0: cannot open shared object file: No such file or directory. 
-// Happens when making an env with a python module loaded an entering the env without that module bein loaded anymore.
+## Troubleshooting
+
+### Error: cannot open shared object file: No such file or directory
+
+There are two main reasons why this error could occur.
+
+1. you have not loaded the python module that was used to create the virtual environment.
+2. you added or removed modules while in the virtual environment.
+
+#### Entering a virtual environment while the python module used to create it is not active
+
+When you load a python module and use that to make a virtual environment, you need to make sure that the same module 
+is loaded when you enter the environment. This is because the virtual environment keeps a reference to the base python 
+used to create it.
+
+The following commands illustrate this issue:
+
+```bash
+$ module load Python/3.10.8-GCCcore-12.2.0  # Load a python module
+$ python -m venv myenv                      # Create a virtual environment with loaded python module
+$ module purge                              # Remove all loaded modules
+$ source myenv/bin/activate                 # Activate the virtual environment
+$ python                                    # Start python
+python: error while loading shared libraries: libpython3.10.so.1.0: cannot open shared object file: No such file or directory
+```
+
+Here, the virtual environment tries to use the python module that was loaded when the environment was created, which is no longer available.
+The solution is to load the same python module before activating the virtual environment:
+
+```bash
+$ module load Python/3.10.8-GCCcore-12.2.0  # Load the same python module
+$ source myenv/bin/activate                 # Activate the virtual environment
+```
+
+#### modifying modules while in a virtual environment
+
+You must not delete or add modules while in a virtual environment. 
+Adding and removing modules modifies the `$PATH` variable in the current shell. When activating a virtual environment,
+it will store the `$PATH` variable of the shell at that moment. If you modify the `$PATH` variable while in a virtual environment by loading or deleting modules,
+and deactivate the virtual environment, the `$PATH` variable will be reset to the one stored in the virtual environment.
+trying to use those modules will lead to errors:
+
+```bash
+$ module load Python/3.10.8-GCCcore-12.2.0  # Load a python module
+$ python -m venv myenv                      # Create a virtual environment
+$ source myenv/bin/activate                 # Activate the virtual environment (saves state of $PATH)
+$ module purge                              # Unload all modules (modifies the $PATH)
+$ deactivate                                # Deactivate the virtual environment (resets $PATH to saved state)
+$ python                                    # PATH contains a reference to the unloaded module
+python: error while loading shared libraries: libpython3.10.so.1.0: cannot open shared object file: No such file or directory
+```
+
+The solution is to only modify modules when not in a virtual environment.
