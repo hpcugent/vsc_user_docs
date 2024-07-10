@@ -1054,10 +1054,10 @@ they compress well) and the <code>-v</code> enables more verbosity (more details
 about what's going on).</p>
 <p>To copy large files using <code>rsync</code>, you can use the <code>-P</code> flag: it enables
 both showing of progress and resuming partially downloaded files.</p>
-<p>To copy files from the to your local computer, you can also use <code>rsync</code>:</p>
+<p>To copy files to your local computer, you can also use <code>rsync</code>:</p>
 <pre><code>$ <b>rsync -rzv vsc40000@login.hpc.ugent.be:data/bioset local_folder</b></code></pre>
-<p>This will copy the folder <code>bioset</code> and its contents that on <code>$VSC_DATA</code>
-of the to a local folder named <code>local_folder</code>.</p>
+<p>This will copy the folder <code>bioset</code> and its contents on <code>$VSC_DATA</code>
+to a local folder named <code>local_folder</code>.</p>
 <p>See <code>man rsync</code> or <a href="https://linux.die.net/man/1/rsync">https://linux.die.net/man/1/rsync</a> for more
 information about rsync.</p>
 <h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">#</a></h2>

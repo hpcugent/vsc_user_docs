@@ -1452,7 +1452,7 @@ every file inside a given directory). WARNING: files removed will be
 lost forever, there are no backups, so beware when using this command!</p>
 <h4 id="removing-a-directory-rmdir">Removing a directory: "rmdir"<a class="headerlink" href="#removing-a-directory-rmdir" title="Permanent link">#</a></h4>
 <p>You can remove directories using <code>rm -r directory</code>, however, this is
-error prone and can ruin your day if you make a mistake in typing. To
+error-prone and can ruin your day if you make a mistake in typing. To
 prevent this type of error, you can remove the contents of a directory
 using <code>rm</code> and then finally removing the directory with:</p>
 <pre><code>$ <b>rmdir directory</b>
@@ -1481,7 +1481,7 @@ permission groups are:</p>
 </li>
 <li>
 <p>Write - For files, this gives permission to write data to the file.
-    For directories it allows users to add or remove files to a
+    For directories, it allows users to add or remove files to a
     directory.</p>
 </li>
 <li>
@@ -1521,7 +1521,7 @@ total 1
 drwxrwx---. 2 vsc40000 mygroup 40 Apr 12 15:00 Project_GoldenDragon
 </code></pre>
 
-<p>The syntax used here is <code>g+x</code> which means roup was given rite
+<p>The syntax used here is <code>g+x</code> which means group was given write
 permission. To revoke it again, we use <code>g-w</code>. The other roles are <code>u</code>
 for user and <code>o</code> for other.</p>
 <p>You can put multiple changes on the same line:
