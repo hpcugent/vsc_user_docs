@@ -479,13 +479,13 @@ memory you request.
 {% if site == gent %}
 ## Module conflicts
 
-Modules that are loaded together must use the same toolchain version: it
-is impossible to load two versions of the same module. In the following
+Modules that are loaded together must use the same toolchain version or common dependencies. In the following
 example, we try to load a module that uses the `intel-2018a` toolchain
 together with one that uses the `intel-2017a` toolchain:
 
-<pre><code>$ <b>module load Python/2.7.14-intel-2018a</b>
-$ <b>module load  HMMER/3.1b2-intel-2017a</b>
+```bash
+$ module load Python/2.7.14-intel-2018a
+$ module load  HMMER/3.1b2-intel-2017a
 Lmod has detected the following error: A different version of the 'intel' module is already loaded (see output of 'ml'). 
 You should load another 'HMMER' module for that is compatible with the currently loaded version of 'intel'. 
 Use 'ml avail HMMER' to get an overview of the available versions.
@@ -497,13 +497,45 @@ While processing the following module(s):
     ---------------          ---------------
     HMMER/3.1b2-intel-2017a  /apps/gent/CO7/haswell-ib/modules/all/HMMER/3.1b2-intel-2017a.lua
 </code></pre>
+```
 
-This resulted in an error because we tried to load two different
-versions of the `intel` module.
+This resulted in an error because we tried to load two modules with different
+versions of the `intel` toolchain.
 
 To fix this, check if there are other versions of the modules you want to load
 that have the same version of common dependencies. You can list all versions of
 a module with `module avail`: for `HMMER`, this command is `module avail HMMER`.
+
+As a rule of thumb, toolchains in the same row are compatible with each other:
+
+|                |                          |                         |             |
+|----------------|--------------------------|-------------------------|-------------|
+| GCCcore-13.2.0 | GCC-13.2.0               | gfbf-2023b/gompi-2023b  | foss-2023b  |
+| GCCcore-13.2.0 | intel-compilers-2023.2.1 | iimkl-2023b/iimpi-2023b | intel-2023b |
+| GCCcore-12.3.0 | GCC-12.3.0               | gfbf-2023a/gompi-2023a  | foss-2023a  |
+| GCCcore-12.3.0 | intel-compilers-2023.1.0 | iimkl-2023a/iimpi-2023a | intel-2023a |
+| GCCcore-12.2.0 | GCC-12.2.0               | gfbf-2022b/gompi-2022b  | foss-2022b  |
+| GCCcore-12.2.0 | intel-compilers-2022.2.1 | iimkl-2022b/iimpi-2022b | intel-2022b |
+| GCCcore-11.3.0 | GCC-11.3.0               | gfbf-2022a/gompi-2022a  | foss-2022a  |
+| GCCcore-11.3.0 | intel-compilers-2022.1.0 | iimkl-2022a/iimpi-2022a | intel-2022a |
+| GCCcore-11.2.0 | GCC-11.2.0               | gfbf-2021b/gompi-2021b  | foss-2021b  |
+| GCCcore-11.2.0 | intel-compilers-2021.4.0 | iimkl-2021b/iimpi-2021b | intel-2021b |
+| GCCcore-10.3.0 | GCC-10.3.0               | gfbf-2021a/gompi-2021a  | foss-2021a  |
+| GCCcore-10.3.0 | intel-compilers-2021.2.0 | iimkl-2021a/iimpi-2021a | intel-2021a |
+| GCCcore-10.2.0 | GCC-10.2.0               | gfbf-2020b/gompi-2020b  | foss-2020b  |
+| GCCcore-10.2.0 | iccifort-2020.4.304      | iimkl-2020b/iimpi-2020b | intel-2020b |
+
+!!! example
+    we could load the following modules together:
+
+    ```bash
+    ml XGBoost/1.7.2-foss-2022a
+    ml scikit-learn/1.1.2-foss-2022a
+    ml cURL/7.83.0-GCCcore-11.3.0
+    ml JupyterNotebook/6.4.0-GCCcore-11.3.0-IPython-8.5.0
+    ```
+    
+
 
 Another common error is:
 
