@@ -1731,29 +1731,134 @@ memory you request.</p>
 % See issue #196 to fix MATLAB. This is software specific. -->
 
 <h2 id="module-conflicts">Module conflicts<a class="headerlink" href="#module-conflicts" title="Permanent link">#</a></h2>
-<p>Modules that are loaded together must use the same toolchain version: it
-is impossible to load two versions of the same module. In the following
+<p>Modules that are loaded together must use the same toolchain version or common dependencies. In the following
 example, we try to load a module that uses the <code>intel-2018a</code> toolchain
 together with one that uses the <code>intel-2017a</code> toolchain:</p>
-<pre><code>$ <b>module load Python/2.7.14-intel-2018a</b>
-$ <b>module load  HMMER/3.1b2-intel-2017a</b>
-Lmod has detected the following error: A different version of the 'intel' module is already loaded (see output of 'ml'). 
-You should load another 'HMMER' module for that is compatible with the currently loaded version of 'intel'. 
-Use 'ml avail HMMER' to get an overview of the available versions.
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>Python/2.7.14-intel-2018a
+$<span class="w"> </span>module<span class="w"> </span>load<span class="w">  </span>HMMER/3.1b2-intel-2017a
+Lmod<span class="w"> </span>has<span class="w"> </span>detected<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>error:<span class="w"> </span>A<span class="w"> </span>different<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span><span class="s1">&#39;intel&#39;</span><span class="w"> </span>module<span class="w"> </span>is<span class="w"> </span>already<span class="w"> </span>loaded<span class="w"> </span><span class="o">(</span>see<span class="w"> </span>output<span class="w"> </span>of<span class="w"> </span><span class="s1">&#39;ml&#39;</span><span class="o">)</span>.<span class="w"> </span>
+You<span class="w"> </span>should<span class="w"> </span>load<span class="w"> </span>another<span class="w"> </span><span class="s1">&#39;HMMER&#39;</span><span class="w"> </span>module<span class="w"> </span><span class="k">for</span><span class="w"> </span>that<span class="w"> </span>is<span class="w"> </span>compatible<span class="w"> </span>with<span class="w"> </span>the<span class="w"> </span>currently<span class="w"> </span>loaded<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span><span class="s1">&#39;intel&#39;</span>.<span class="w"> </span>
+Use<span class="w"> </span><span class="s1">&#39;ml avail HMMER&#39;</span><span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>an<span class="w"> </span>overview<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>available<span class="w"> </span>versions.
 
-If you don't understand the warning or error, contact the helpdesk at hpc@ugent.be 
-While processing the following module(s):
+If<span class="w"> </span>you<span class="w"> </span>don<span class="err">&#39;</span>t<span class="w"> </span>understand<span class="w"> </span>the<span class="w"> </span>warning<span class="w"> </span>or<span class="w"> </span>error,<span class="w"> </span>contact<span class="w"> </span>the<span class="w"> </span>helpdesk<span class="w"> </span>at<span class="w"> </span>hpc@ugent.be<span class="w"> </span>
+While<span class="w"> </span>processing<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>module<span class="o">(</span>s<span class="o">)</span>:
 
-    Module fullname          Module Filename
-    ---------------          ---------------
-    HMMER/3.1b2-intel-2017a  /apps/gent/CO7/haswell-ib/modules/all/HMMER/3.1b2-intel-2017a.lua
-</code></pre>
-
-<p>This resulted in an error because we tried to load two different
-versions of the <code>intel</code> module.</p>
+<span class="w">    </span>Module<span class="w"> </span>fullname<span class="w">          </span>Module<span class="w"> </span>Filename
+<span class="w">    </span>---------------<span class="w">          </span>---------------
+<span class="w">    </span>HMMER/3.1b2-intel-2017a<span class="w">  </span>/apps/gent/CO7/haswell-ib/modules/all/HMMER/3.1b2-intel-2017a.lua
+&lt;/code&gt;&lt;/pre&gt;
+</code></pre></div>
+<p>This resulted in an error because we tried to load two modules with different
+versions of the <code>intel</code> toolchain.</p>
 <p>To fix this, check if there are other versions of the modules you want to load
 that have the same version of common dependencies. You can list all versions of
 a module with <code>module avail</code>: for <code>HMMER</code>, this command is <code>module avail HMMER</code>.</p>
+<p>As a rule of thumb, toolchains in the same row are compatible with each other:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GCCcore-13.2.0</td>
+<td>GCC-13.2.0</td>
+<td>gfbf-2023b/gompi-2023b</td>
+<td>foss-2023b</td>
+</tr>
+<tr>
+<td>GCCcore-13.2.0</td>
+<td>intel-compilers-2023.2.1</td>
+<td>iimkl-2023b/iimpi-2023b</td>
+<td>intel-2023b</td>
+</tr>
+<tr>
+<td>GCCcore-12.3.0</td>
+<td>GCC-12.3.0</td>
+<td>gfbf-2023a/gompi-2023a</td>
+<td>foss-2023a</td>
+</tr>
+<tr>
+<td>GCCcore-12.3.0</td>
+<td>intel-compilers-2023.1.0</td>
+<td>iimkl-2023a/iimpi-2023a</td>
+<td>intel-2023a</td>
+</tr>
+<tr>
+<td>GCCcore-12.2.0</td>
+<td>GCC-12.2.0</td>
+<td>gfbf-2022b/gompi-2022b</td>
+<td>foss-2022b</td>
+</tr>
+<tr>
+<td>GCCcore-12.2.0</td>
+<td>intel-compilers-2022.2.1</td>
+<td>iimkl-2022b/iimpi-2022b</td>
+<td>intel-2022b</td>
+</tr>
+<tr>
+<td>GCCcore-11.3.0</td>
+<td>GCC-11.3.0</td>
+<td>gfbf-2022a/gompi-2022a</td>
+<td>foss-2022a</td>
+</tr>
+<tr>
+<td>GCCcore-11.3.0</td>
+<td>intel-compilers-2022.1.0</td>
+<td>iimkl-2022a/iimpi-2022a</td>
+<td>intel-2022a</td>
+</tr>
+<tr>
+<td>GCCcore-11.2.0</td>
+<td>GCC-11.2.0</td>
+<td>gfbf-2021b/gompi-2021b</td>
+<td>foss-2021b</td>
+</tr>
+<tr>
+<td>GCCcore-11.2.0</td>
+<td>intel-compilers-2021.4.0</td>
+<td>iimkl-2021b/iimpi-2021b</td>
+<td>intel-2021b</td>
+</tr>
+<tr>
+<td>GCCcore-10.3.0</td>
+<td>GCC-10.3.0</td>
+<td>gfbf-2021a/gompi-2021a</td>
+<td>foss-2021a</td>
+</tr>
+<tr>
+<td>GCCcore-10.3.0</td>
+<td>intel-compilers-2021.2.0</td>
+<td>iimkl-2021a/iimpi-2021a</td>
+<td>intel-2021a</td>
+</tr>
+<tr>
+<td>GCCcore-10.2.0</td>
+<td>GCC-10.2.0</td>
+<td>gfbf-2020b/gompi-2020b</td>
+<td>foss-2020b</td>
+</tr>
+<tr>
+<td>GCCcore-10.2.0</td>
+<td>iccifort-2020.4.304</td>
+<td>iimkl-2020b/iimpi-2020b</td>
+<td>intel-2020b</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>we could load the following modules together:</p>
+<div class="highlight"><pre><span></span><code>ml<span class="w"> </span>XGBoost/1.7.2-foss-2022a
+ml<span class="w"> </span>scikit-learn/1.1.2-foss-2022a
+ml<span class="w"> </span>cURL/7.83.0-GCCcore-11.3.0
+ml<span class="w"> </span>JupyterNotebook/6.4.0-GCCcore-11.3.0-IPython-8.5.0
+</code></pre></div>
+</div>
 <p>Another common error is:</p>
 <pre><code>$ <b>module load cluster/donphan</b>
 Lmod has detected the following error: A different version of the 'cluster' module is already loaded (see output of 'ml').
