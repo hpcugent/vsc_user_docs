@@ -1160,11 +1160,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#shinx-pilot-phase-23102023-20052024" class="md-nav__link">
-    Shinx pilot phase (23/10/2023-20/05/2024)
+  <a href="#shinx-pilot-phase-23102023-15072024" class="md-nav__link">
+    Shinx pilot phase (23/10/2023-15/07/2024)
   </a>
   
-    <nav class="md-nav" aria-label="Shinx pilot phase (23/10/2023-20/05/2024)">
+    <nav class="md-nav" aria-label="Shinx pilot phase (23/10/2023-15/07/2024)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1182,8 +1182,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#stage-2-19042024-20052024" class="md-nav__link">
-    Stage 2 (19/04/2024-20/05/2024)
+  <a href="#stage-2-19042024-15072024" class="md-nav__link">
+    Stage 2 (19/04/2024-15/07/2024)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-3-15072024-" class="md-nav__link">
+    Stage 3 (15/07/2024 - )
   </a>
   
 </li>
@@ -1228,8 +1235,8 @@ it is replacing (<code>swalot</code> and <code>victini</code>).</p>
 <hr />
 <h2 id="shinx-generic-cpu-cluster"><code>shinx</code>: generic CPU cluster<a class="headerlink" href="#shinx-generic-cpu-cluster" title="Permanent link">#</a></h2>
 <p><code>shinx</code> is a new CPU-only cluster.</p>
-<p>It replaces <code>swalot</code>, which will be retired on <strong>Wednesday 01 November 2023</strong>,
-and <code>victini</code>, which will be retired on <strong>Monday 05 February 2024</strong>.</p>
+<p>It replaces <code>swalot</code>, which was retired on <strong>Wednesday 01 November 2023</strong>,
+and <code>victini</code>, which ws retired on <strong>Monday 05 February 2024</strong>.</p>
 <p>It is primarily for regular CPU compute use.</p>
 <p>This cluster consists of 48 workernodes, each with:</p>
 <ul>
@@ -1272,7 +1279,7 @@ You can try yourself to mitigate this by setting <code>export OMP_PROC_BIND=fals
 It is not recommended to always set this workaround, only for the specific tools that are affected.</li>
 </ul>
 <hr />
-<h2 id="shinx-pilot-phase-23102023-20052024">Shinx pilot phase (23/10/2023-20/05/2024)<a class="headerlink" href="#shinx-pilot-phase-23102023-20052024" title="Permanent link">#</a></h2>
+<h2 id="shinx-pilot-phase-23102023-15072024">Shinx pilot phase (23/10/2023-15/07/2024)<a class="headerlink" href="#shinx-pilot-phase-23102023-15072024" title="Permanent link">#</a></h2>
 <p>As usual with any pilot phase, you need to be member of the <code>gpilot</code> group, and to start using this cluster run:</p>
 <div class="highlight"><pre><span></span><code>module swap cluster/.shinx
 </code></pre></div>
@@ -1310,7 +1317,7 @@ However, all the workernodes will already be delivered in the week of 20 October
 <li>Racking of last 16 nodes</li>
 <li>Installation of NDR/NDR-200 infiniband network</li>
 </ul>
-<h3 id="stage-2-19042024-20052024">Stage 2 (19/04/2024-20/05/2024)<a class="headerlink" href="#stage-2-19042024-20052024" title="Permanent link">#</a></h3>
+<h3 id="stage-2-19042024-15072024">Stage 2 (19/04/2024-15/07/2024)<a class="headerlink" href="#stage-2-19042024-15072024" title="Permanent link">#</a></h3>
 <ul>
 <li>
 <p>Full size cluster</p>
@@ -1325,6 +1332,10 @@ However, all the workernodes will already be delivered in the week of 20 October
 (ethernet and infiniband) and some core services. It makes no sense to put <code>shinx</code> in production before
 that period, and the testing of the <code>EL9</code> operating system will also take some time.</p>
 </li>
+</ul>
+<h3 id="stage-3-15072024-">Stage 3 (15/07/2024 - )<a class="headerlink" href="#stage-3-15072024-" title="Permanent link">#</a></h3>
+<ul>
+<li>Cluster in production using EL9 (starting with 9.4). Any user can now submit jobs.</li>
 </ul>
 <h3 id="using-doduo-software">Using <code>doduo</code> software<a class="headerlink" href="#using-doduo-software" title="Permanent link">#</a></h3>
 <p>For benchmarking and/or compatibility testing, you can use try to use <code>doduo</code> software stack by adding
