@@ -8,7 +8,7 @@ This chapter serves as a guide to navigating within a Linux shell.
 
 ## The current directory
 
-To print the current directory, use the `pwd` (**p**rint **w**orking **d**irectory) command:
+To print the current directory, use `pwd` (**p**rint **w**orking **d**irectory) command:
 
 ```bash
 $ pwd
@@ -136,31 +136,6 @@ $ <b>file some_directory</b>
 some_directory: directory
 </code></pre>
 
-## Permissions
-
-Each file and directory has particular *permissions* set on it, which
-can be queried using `ls -l`.
-
-For example:
-
-```
-$ ls -l afile.txt
--rwxrw-r-- 1 vsc40000 agroup 2929176 Apr 12 13:29 afile.sh
-```
-
-Here, the output `-rwxrw-r--` indicates the permissions of the file. It can be broken down into 4 parts:
-
-| type                               | permissions user              | permissions group     | permissions others |
-|------------------------------------|-------------------------------|-----------------------|--------------------|
-| `-`: is a file (`d` for directory) | `rwx`: can read/write/execute | `rw-`: can read/write | `r--`: can read    |
-
-In this example, the file `afile.sh` is a regular file, and the owner `vsc40000` has read/write/execute permissions, 
-users in the group `agroup` have read/write permissions, 
-and all others only have read permissions.
-
-The default permission settings for new files/directories are determined
-by the so-called *umask* setting, and are by default `rw-rw-r--` for files and `rwxrwxr-x` for directories.
-
 ## Finding files/directories: "find"
 
 `find` will crawl a series of directories and lists files matching given
@@ -190,7 +165,7 @@ For more advanced uses of the `find` command, use `man find` to display its **ma
 
 ## Exercises
 
-??? question "Go to `/tmp`, then back to your home directory. How many different ways to do this can you come up with?"
+??? abstract "Go to `/tmp`, then back to your home directory. How many different ways to do this can you come up with?"
     
     Some ways to go from the home directory to `/tmp` and back are:
 
@@ -218,7 +193,7 @@ For more advanced uses of the `find` command, use `man find` to display its **ma
         $ cd $HOME
         ```
     
-??? question "When was your home directory last changed?"
+??? abstract "When was your home directory last changed?"
     
     To find out when your home directory was last changed, you can use the `ls` command,
     along with the `-l` flag to get a detailed listing and the `-a` flag to list hidden files:
@@ -232,7 +207,7 @@ For more advanced uses of the `find` command, use `man find` to display its **ma
     Here, `.` denotes the home directory. The directory was last changed on April 12th at 13:11.
 
 
-??? question "What is the name of the last changed file in `/tmp`?"
+??? abstract "What is the name of the last changed file in `/tmp`?"
     
     The output of the `ls -lt /tmp` command will sort the files in `/tmp` by the time of last change. 
     Check the first letter of the line to determine if it is a file (`-`) or a directory (`d`).
