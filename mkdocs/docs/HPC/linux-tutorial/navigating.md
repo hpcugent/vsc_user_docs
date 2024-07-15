@@ -1,22 +1,25 @@
-Navigating
-==========
+# Navigating
 
-This chapter serves as a guide to navigating within a Linux shell, giving users essential techniques to traverse directories. 
-A very important skill. 
+In its most basic form, the linux file system consists of directories and files. 
+A directory can contain multiple files and subdirectories. 
+In Linux, the current and parent directory are respectively denoted by `.` and `..`.
 
-Current directory: "pwd" and "\$PWD"
-------------------------------------
+This chapter serves as a guide to navigating within a Linux shell.
 
-To print the current directory, use `pwd` or `$PWD`:
-<pre><code>$ <b>cd $HOME</b>
-$ <b>pwd</b>
-/user/home/gent/vsc400/vsc40000
-$ <b>echo "The current directory is: $PWD"</b>
-The current directory is: /user/home/gent/vsc400/vsc40000
-</code></pre>
+## The current directory
 
-Listing files and directories: "ls"
------------------------------------
+To print the current directory, use `pwd` (**p**rint **w**orking **d**irectory) command:
+
+```bash
+$ pwd
+/user/home/gent/vsc400/{{ userid }}
+```
+
+`pwd` prints the working directory starting from the root directory (denoted by `/`). 
+The root directory is the top-level directory in the filesystem hierarchy. 
+After that, each directory is separated by a `/`.
+
+## Listing files and directories: "ls"
 
 A very basic and commonly used command is `ls`, which can be used to
 list files and directories.
@@ -27,53 +30,66 @@ in the current directory. For example:
 afile.txt some_directory
 </code></pre>
 
-When provided an argument, it can be used to list the contents of a
-directory:
+When provided an argument, it can be used to list the contents of a directory:
 <pre><code>$ <b>ls some_directory</b>
 one.txt two.txt
 </code></pre>
 
 
-A couple of commonly used options include:
+options:
+In Linux, the semantics of commands can often be customized by adding *options* (or *flags*). 
+Options are usually preceded by a `-` character.
+
+Some common options for `ls` are:
 
 -   detailed listing using `ls -l`:
-    <pre><code>$ <b>ls -l</b>
-total 4224
--rw-rw-r-- 1 vsc40000 vsc40000 2157404 Apr 12 13:17 afile.txt
-drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory</code></pre>
+    ```bash
+    $ ls -l
+    total 4224
+    -rw-rw-r-- 1 vsc40000 vsc40000 2157404 Apr 12 13:17 afile.txt
+    drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory
+    ```
+    
+    To learn more about the meaning of this output, see TODO
 
 -   To print the size information in human-readable form, use the `-h`
     flag:
-    <pre><code>$ <b>ls -lh</b>
-total 4.1M
--rw-rw-r-- 1 vsc40000 vsc40000 2.1M Apr 12 13:16 afile.txt
-drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory</code></pre>
+    ```bash
+    $ ls -lh
+    total 4.1M
+    -rw-rw-r-- 1 vsc40000 vsc40000 2.1M Apr 12 13:16 afile.txt
+    drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory
+    ``` 
 
 -   also listing hidden files using the `-a` flag:
 
-    <pre><code>$ <b>ls -lah</b>
-total 3.9M
-drwxrwxr-x 3 vsc40000 vsc40000 512 Apr 12 13:11 .
-drwx------ 188 vsc40000 vsc40000 128K Apr 12 12:41 ..
--rw-rw-r-- 1 vsc40000 vsc40000 1.8M Apr 12 13:12 afile.txt
--rw-rw-r-- 1 vsc40000 vsc40000 0 Apr 12 13:11 .hidden_file.txt
-drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory</code></pre>
+    ```bash
+    $ ls -lah
+    total 3.9M
+    drwxrwxr-x 3 vsc40000 vsc40000 512 Apr 12 13:11 .
+    drwx------ 188 vsc40000 vsc40000 128K Apr 12 12:41 ..
+    -rw-rw-r-- 1 vsc40000 vsc40000 1.8M Apr 12 13:12 afile.txt
+    -rw-rw-r-- 1 vsc40000 vsc40000 0 Apr 12 13:11 .hidden_file.txt
+    drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory
+    ```
 
 -   ordering files by the most recent change using `-rt`:
 
-    <pre><code>$ <b>ls -lrth</b>
-total 4.0M
-drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory
--rw-rw-r-- 1 vsc40000 vsc40000 2.0M Apr 12 13:15 afile.txt</code></pre>
+    ```bash
+    $ ls -lrth
+    total 4.0M
+    drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory
+    -rw-rw-r-- 1 vsc40000 vsc40000 2.0M Apr 12 13:15 afile.txt
+    ```
 
-If you try to use `ls` on a file that doesn't exist, you will get a
-clear error message:
-<pre><code>$ <b>ls nosuchfile</b>
+If you try to use `ls` on a file that doesn't exist, you will get a clear error message:
+
+```bash
+$ ls nosuchfile
 ls: cannot access nosuchfile: No such file or directory
-</code></pre>
+```
 
-Changing directory: "cd"
-------------------------
+## Changing directory: "cd"
 
 To change to a different directory, you can use the `cd` command:
 <pre><code>$ <b>cd some_directory</b></code></pre>
@@ -88,8 +104,7 @@ $<b> pwd</b>
 </code></pre>
 
 
-Inspecting file type: "file"
-----------------------------
+## Inspecting file type: "file"
 
 The `file` command can be used to inspect what type of file you're
 dealing with:
@@ -100,8 +115,7 @@ $ <b>file some_directory</b>
 some_directory: directory
 </code></pre>
 
-Absolute vs relative file paths
--------------------------------
+## Absolute vs relative file paths
 
 An *absolute* filepath starts with `/` (or a variable which value starts
 with `/`), which is also called the *root* of the filesystem.
@@ -127,8 +141,7 @@ $ <b>ls ../afile.txt</b>
 ../afile.txt
 </code></pre>
 
-Permissions
------------
+## Permissions
 
 [//]: # (sec:permissions)
 
