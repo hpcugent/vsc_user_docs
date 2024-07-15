@@ -15,8 +15,8 @@ For software installation requests, please use the [request form](https://www.ug
 
 `shinx` is a new CPU-only cluster.
 
-It replaces `swalot`, which will be retired on **Wednesday 01 November 2023**,
-and `victini`, which will be retired on **Monday 05 February 2024**.
+It replaces `swalot`, which was retired on **Wednesday 01 November 2023**,
+and `victini`, which ws retired on **Monday 05 February 2024**.
 
 It is primarily for regular CPU compute use.
 
@@ -77,7 +77,7 @@ It is not recommended to always set this workaround, only for the specific tools
 
 ---
 
-## Shinx pilot phase (23/10/2023-20/05/2024)
+## Shinx pilot phase (23/10/2023-15/07/2024)
 
 As usual with any pilot phase, you need to be member of the `gpilot` group, and to start using this cluster run:
 
@@ -111,7 +111,7 @@ As such, we will have an extended pilot phase in 3 stages:
 * Racking of last 16 nodes
 * Installation of NDR/NDR-200 infiniband network
 
-### Stage 2 (19/04/2024-20/05/2024)
+### Stage 2 (19/04/2024-15/07/2024)
 
 * Full size cluster
     * 48 nodes (no job size limit)
@@ -121,6 +121,11 @@ As such, we will have an extended pilot phase in 3 stages:
 * We expect to plan a full Tier-2 downtime in May 2024 to cleanup, refactor and renew the core networks
 (ethernet and infiniband) and some core services. It makes no sense to put `shinx` in production before
 that period, and the testing of the `EL9` operating system will also take some time.
+
+
+### Stage 3 (15/07/2024 - )
+
+* Cluster in production using EL9 (starting with 9.4). Any user can now submit jobs.
 
 
 ### Using `doduo` software
