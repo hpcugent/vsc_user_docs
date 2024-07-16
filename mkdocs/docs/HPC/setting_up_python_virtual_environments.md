@@ -98,7 +98,7 @@ $ qsub -I
 ```
 
 After some time, a shell will be started on the `skitty` cluster. 
-You can now create a virtual environment as described in [this section](#creating-a-venv).
+You can now create a virtual environment as described in [the first section](#creating-a-venv).
 This virtual environment can be used by jobs running on the `skitty` cluster.
 
 ## Using virtual environments in job scripts
