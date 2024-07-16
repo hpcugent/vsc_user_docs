@@ -8,7 +8,7 @@ This chapter serves as a guide to navigating within a Linux shell.
 
 ## The current directory
 
-To print the current directory, use `pwd` (**p**rint **w**orking **d**irectory) command:
+To print the current directory, use the `pwd` (**p**rint **w**orking **d**irectory) command:
 
 ```bash
 $ pwd
@@ -68,8 +68,6 @@ Some common options for `ls` are:
     -rw-rw-r-- 1 vsc40000 vsc40000 2157404 Apr 12 13:17 afile.txt
     drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory
     ```
-    
-    To learn more about the meaning of this output, see [Permissions](#permissions) below.
 
 -   printing the size information in human-readable form, using the `-h` flag:
     ```
@@ -90,6 +88,9 @@ Some common options for `ls` are:
     -rw-rw-r-- 1 vsc40000 vsc40000 0 Apr 12 13:11 .hidden_file.txt
     drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory
     ```
+    
+    !!! info
+        In Linux, files and directories starting with a `.` are considered hidden files.
 
 -   ordering files by the most recent change using `-t`:
 
