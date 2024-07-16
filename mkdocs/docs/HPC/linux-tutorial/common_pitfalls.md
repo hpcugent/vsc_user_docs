@@ -49,6 +49,29 @@ But, this is tedious, and you can prevent errors by simply colouring
 within the lines and not using spaces in filenames.
 
 ### Missing/mistyped environment variables
+
+A common pitfall is the (accidental) use of non-defined variables.
+Contrary to what you may expect, this does *not* result in error
+messages, but the variable is considered to be *empty* instead.
+
+This may lead to surprising results, for example:
+<pre><code>$ <b>export WORKDIR=/tmp/test</b>
+$ <b>pwd</b>
+/user/home/gent/vsc400/vsc40000
+$ <b>echo $HOME</b>
+/user/home/gent/vsc400/vsc40000
+</code></pre>
+
+!!! tip
+    For job scripts, use `set -e -u` to avoid using empty variables accidentally.
+
+    The `-e` option will result in the script getting stopped if any command
+    fails.
+
+    The `-u` option will result in the script getting stopped if empty
+    variables are used. (see <https://ss64.com/bash/set.html> for a more
+    detailed explanation and more options)
+
 If you use a command like `rm -r` with environment variables you need to
 be careful to make sure that the environment variable exists. If you
 mistype an environment variable then it will resolve into a blank string.
