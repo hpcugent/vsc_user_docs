@@ -84,7 +84,7 @@ $ python pytorch_poutine_example.py
     Illegal instruction (core dumped)
     ```
 
-    we are presented with the illigal instruction error. More info on this [here](troubleshooting.md#illegal-instruction-error)
+    we are presented with the illegal instruction error. More info on this [here](troubleshooting.md#illegal-instruction-error)
 
 
 ## Creating a virtual environment on a specific cluster
