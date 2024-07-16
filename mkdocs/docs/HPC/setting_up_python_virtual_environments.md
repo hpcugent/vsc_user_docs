@@ -44,7 +44,7 @@ $ deactivate
 You can combine packages installed in a venv with modules. The following script uses 
 pytorch (which is available as a module) and Poutyne (which is not available as a module):
 
-```python title="pytorch_poutine_example.py"
+```python title="pytorch_poutine.py"
 import torch
 import poutyne
 
@@ -63,7 +63,7 @@ $ pip install Poutyne
 While in the virtual environment, we can run the script without any issues:
 
 ```bash
-$ python pytorch_poutine_example.py
+$ python pytorch_poutine.py
 ```
 
 
@@ -104,27 +104,67 @@ This virtual environment can be used by jobs running on the `skitty` cluster.
     we are presented with the illegal instruction error. More info on this [here](troubleshooting.md#illegal-instruction-error)
 
 
-## Using virtual environments in job scripts
+## Example Python job
 
-After creating a virtual environment for a cluster, you need to activate it in your job script. 
+This section will combine the concepts discussed in the previous sections to:
+
+1. Create a virtual environment on a specific cluster.
+2. Combine packages installed in the venv with modules.
+3. Submit a job script that uses the virtual environment.
+
+The example script that we will run is the following:
+
+```python title="pytorch_poutine.py"
+import torch
+import poutyne
+
+print(f"The version of PyTorch is: {torch.__version__}")
+print(f"The version of Poutine is: {poutyne.__version__}")
+```
+
+First, we create a virtual environment on the `skitty` cluster:
+
+```bash
+$ module swap cluster/skitty
+$ qsub -I
+# Load module dependencies
+$ ml PyTorch/2.1.2-foss-2023a
+$ python -m venv myenv
+$ source myenv/bin/activate
+# install virtual environment dependencies
+$ pip install Poutyne
+$ deactivate
+```
+
+We exit the interactive shell by pressing `CTRL+D` and create a job script that loads the PyTorch module, 
+enters the venv and executes the script:
 
 ```bash title="jobscript.pbs"
 #!/bin/bash
 
 # Basic parameters
-#PBS -N jobname           ## Job name
-#PBS -l nodes=1:ppn=2     ## 1 node, 2 processors per node (ppn=all to get a full node)
-#PBS -l walltime=01:00:00 ## Max time your job will run (no more than 72:00:00)
+#PBS -N python_job_example    ## Job name
+#PBS -l nodes=1:ppn=1         ## 1 node, 1 processors per node
+#PBS -l walltime=01:00:00     ## Max time your job will run (no more than 72:00:00)
 
-module load [module]
-module load [module]
+ml PyTorch/2.1.2-foss-2023a   # Load the PyTorch module
 
-cd $PBS_O_WORKDIR         # Change working directory to the location where the job was submitted
+cd $PBS_O_WORKDIR             # Change working directory to the location where the job was submitted
 
-source myenv/bin/activate # Activate the virtual environment
-python myscript.py        # Run your Python script, or any other command within the virtual environment
-deactivate                # Deactivate the virtual environment
+source myenv/bin/activate     # Activate the virtual environment
+python pytorch_poutine.py     # Run your Python script, or any other command within the virtual environment
+deactivate                    # Deactivate the virtual environment
 ```
+
+Next, we submit the job script:
+
+```bash
+$ qsub jobscript.pbs
+```
+
+Two files will be created in the directory where the job was submitted: `python_job_example.o[job_id]` and `python_job_example.e[job_id]`.
+The `.o` file contains the output of the job.
+
 
 ## Troubleshooting
 
