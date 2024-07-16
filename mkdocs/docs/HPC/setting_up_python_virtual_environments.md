@@ -4,6 +4,8 @@
 
 Python virtual environments (venv's) are a way to create isolated Python environments.
 You can install packages in a venv without affecting the system Python installation.
+Because a normal user cannot install packages globally, 
+venv's are a way to install packages without needing root access.
 This is useful when you need to use a package that is not available as a module on the HPC cluster.
 
 ## Creating a venv
@@ -64,6 +66,21 @@ While in the virtual environment, we can run the script without any issues:
 $ python pytorch_poutine_example.py
 ```
 
+
+## Creating a virtual environment on a specific cluster
+
+To create a virtual environment for a specific cluster, you need to start an interactive shell on that cluster.
+Let's say you want to create a virtual environment on the `skitty` cluster.
+
+```bash
+$ module swap cluster/skitty
+$ qsub -I
+```
+
+After some time, a shell will be started on the `skitty` cluster. 
+You can now create a virtual environment as described in [the first section](#creating-a-venv).
+This virtual environment can be used by jobs running on the `skitty` cluster.
+
 !!! warning
     Activating a virtual environment (venv) created on a different cluster can cause issues. 
     This happens because the binaries in the venv from cluster A might not work with the CPU architecture of cluster B.
@@ -86,20 +103,6 @@ $ python pytorch_poutine_example.py
 
     we are presented with the illegal instruction error. More info on this [here](troubleshooting.md#illegal-instruction-error)
 
-
-## Creating a virtual environment on a specific cluster
-
-To create a virtual environment for a specific cluster, you need to start an interactive shell on that cluster.
-Let's say you want to create a virtual environment on the `skitty` cluster.
-
-```bash
-$ module swap cluster/skitty
-$ qsub -I
-```
-
-After some time, a shell will be started on the `skitty` cluster. 
-You can now create a virtual environment as described in [the first section](#creating-a-venv).
-This virtual environment can be used by jobs running on the `skitty` cluster.
 
 ## Using virtual environments in job scripts
 
