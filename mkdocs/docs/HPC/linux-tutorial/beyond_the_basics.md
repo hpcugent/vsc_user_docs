@@ -547,7 +547,7 @@ overwrite any pragmas present in the script.
     ls /tmp/t*
     ```
 
-??? abstract "Create a file containing 'My home directory <home> is available using $HOME'."
+??? abstract "Create a file containing 'My home directory [home] is available using $HOME'."
     ```bash
     echo "My home directory $HOME is available using \$HOME" > home_info.txt
     ```
