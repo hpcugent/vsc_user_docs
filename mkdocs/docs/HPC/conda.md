@@ -5,7 +5,7 @@ This section explains why and highlights some common issues.
 
 ## Performance and Optimization
 
-Conda packages are pre-compiled binaries that are designed to work on a wide range of systems. 
+Conda's packages are pre-compiled binaries that are designed to work on a wide range of systems. 
 This means they are not optimized for the specific architecture of HPC clusters, 
 leading to potential performance drawbacks compared to modules compiled specifically for the HPC environment.
 
