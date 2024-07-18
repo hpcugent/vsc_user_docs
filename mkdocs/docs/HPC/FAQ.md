@@ -107,7 +107,6 @@ The 72 hour walltime limit will not be extended. However, you can work around th
 * Use a faster [cluster]({{ hpc_infrastructure_url }}).
 * Divide the job into more parallel processes.
 * Divide the job into shorter processes, which you can submit as separate jobs.
-* Use the built-in checkpointing of your software.
 
 ### Job failed: SEGV Segmentation fault
 
