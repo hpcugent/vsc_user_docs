@@ -31,6 +31,7 @@ nav:
       - Best Practices: best_practices.md
       - Graphical applications with VNC: VNC.md
       - Graphical applications with X2Go: x2go.md
+      - Conda: conda.md
 {%- if site == 'Gent' %}
       - GPU clusters: gpu.md
       - Cron scripts: crontab.md
