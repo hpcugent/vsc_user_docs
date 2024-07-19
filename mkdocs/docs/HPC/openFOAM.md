@@ -285,7 +285,7 @@ specify in `system/controlDict` (see also
 
 -   instruct OpenFOAM to write out results at a reasonable frequency, **certainly *not*** for every single time step}; you can control this using the `writeControl`, `writeInterval`, etc. keywords;
 
--   consider only retaining results for the last couple of steps,
+-   consider only retaining results for the last couple of time steps,
     see the `purgeWrite` keyword;
 
 -   consider writing results for only part of the domain (e.g., a line
