@@ -31,7 +31,7 @@ license, licenses would quickly run out.
 
 Compiling MATLAB code can only be done from the login nodes, because
 only login nodes can access the MATLAB license server, workernodes on
-clusters can not.
+clusters cannot.
 
 To access the MATLAB compiler, the `MATLAB` module should be loaded
 first. Make sure you are using the same `MATLAB` version to compile and
@@ -93,7 +93,7 @@ with:
 <pre><code>$ <b>export _JAVA_OPTIONS="-Xmx64M"</b>
 </code></pre>
 
-The MATLAB compiler spawns multiple Java processes, and because of the
+The MATLAB compiler spawns multiple Java processes. Because of the
 default memory limits that are in effect on the login nodes, this might
 lead to a crash of the compiler if it's trying to create to many Java
 processes. If we lower the heap size, more Java processes will be able
@@ -122,7 +122,7 @@ controlled via the `parpool` function: `parpool(16)` will use 16
 workers. It's best to specify the amount of workers, because otherwise
 you might not harness the full compute power available (if you have too
 few workers), or you might negatively impact performance (if you have
-too much workers). By default, MATLAB uses a fixed number of workers
+too many workers). By default, MATLAB uses a fixed number of workers
 (12).
 
 You should use a number of workers that is equal to the number of cores
@@ -163,7 +163,7 @@ You should remove the directory at the end of your job script:
 ## Cache location
 
 When running, MATLAB will use a cache for performance reasons. This
-location and size of this cache can be changed trough the
+location and size of this cache can be changed through the
 `MCR_CACHE_ROOT` and `MCR_CACHE_SIZE` environment variables.
 
 The snippet below would set the maximum cache size to 1024MB and the
