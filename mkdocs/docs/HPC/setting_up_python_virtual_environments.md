@@ -70,16 +70,16 @@ $ python pytorch_poutine.py
 ## Creating a virtual environment on a specific cluster
 
 To create a virtual environment for a specific cluster, you need to start an interactive shell on that cluster.
-Let's say you want to create a virtual environment on the `skitty` cluster.
+Let's say you want to create a virtual environment on the `shinx` cluster.
 
 ```bash
-$ module swap cluster/skitty
+$ module swap cluster/shinx
 $ qsub -I
 ```
 
-After some time, a shell will be started on the `skitty` cluster. 
+After some time, a shell will be started on the `shinx` cluster. 
 You can now create a virtual environment as described in [the first section](#creating-a-venv).
-This virtual environment can be used by jobs running on the `skitty` cluster.
+This virtual environment can be used by jobs running on the `shinx` cluster.
 
 !!! warning
     Activating a virtual environment (venv) created on a different cluster can cause issues. 
@@ -122,10 +122,10 @@ print(f"The version of PyTorch is: {torch.__version__}")
 print(f"The version of Poutine is: {poutyne.__version__}")
 ```
 
-First, we create a virtual environment on the `skitty` cluster:
+First, we create a virtual environment on the `shinx` cluster:
 
 ```bash
-$ module swap cluster/skitty
+$ module swap cluster/shinx
 $ qsub -I
 # Load module dependencies
 $ ml PyTorch/2.1.2-foss-2023a
