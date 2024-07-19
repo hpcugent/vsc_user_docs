@@ -3,7 +3,7 @@
 Conda is a software package manager for data science that allows unprivileged (non-administrative) users to search, 
 fetch, install, upgrade, use, and manage supported open-source software packages and 
 programming languages/libraries/environments in a directory they have write access to. 
-Conda allows users to create reproducible scientific software environments
+Conda allows users to create reproducible software environments
 
 We do not recommend using conda environments on HPC clusters due to several common issues, 
 which we will explain in this section. However, we do not forbid the use of conda entirely. In certain situations, 
