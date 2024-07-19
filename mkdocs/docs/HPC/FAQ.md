@@ -16,7 +16,7 @@ Overview of HPC-UGent Tier-2 [infrastructure]({{ hpc_infrastructure_url }})
 
 ### How many cores/nodes should I request?
 
-An important factor in this question is how well your task is being parallellized:
+An important factor in this question is how well your task is being parallelized:
 does it actually run faster with more resources? You can test this yourself:
 start with 4 cores, then 8, then 16... The execution time should each time be reduced to
 around half of what it was before. You can also try this with full nodes: 1 node, 2 nodes.
@@ -171,7 +171,7 @@ Not all file locations perform the same. In particular, the `$VSC_HOME` and `$VS
 directories are, relatively, very slow to access. Your jobs should rather use the
 `$VSC_SCRATCH` directory, or other fast locations (depending on your needs), described
 in [Where to store your data on the HPC](../running_jobs_with_input_output_data/#where-to-store-your-data-on-the-hpc).
-As an example how do this: The job can copy the input to the scratch directory, then execute
+As an example how to do this: The job can copy the input to the scratch directory, then execute
 the computations, and lastly copy the output back to the data directory.
 Using the home and data directories is especially a problem when UGent isn't your home institution:
 your files may be stored, for example, in Leuven while you're running a job in Ghent.
@@ -217,12 +217,11 @@ See the explanation about how jobs get prioritized in [When will my job start](.
 
 {% else %}
 
-In practice it's
+In practice, it's
 impossible to predict when your job(s) will start, since most currently
-running jobs will finish before their requested walltime expires, and
-new jobs by may be submitted by other users that are assigned a higher
-priority than your job(s). You can use the `showstart` command. For more
-information, see .
+running jobs will finish before their requested walltime expires. 
+New jobs may be submitted by other users that are assigned a higher
+priority than your job(s). You can use the `showstart` command.
 
 {% endif %}
 
