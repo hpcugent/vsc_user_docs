@@ -54,14 +54,6 @@ A common pitfall is the (accidental) use of non-defined variables.
 Contrary to what you may expect, this does *not* result in error
 messages, but the variable is considered to be *empty* instead.
 
-This may lead to surprising results, for example:
-<pre><code>$ <b>export WORKDIR=/tmp/test</b>
-$ <b>pwd</b>
-/user/home/gent/vsc400/vsc40000
-$ <b>echo $HOME</b>
-/user/home/gent/vsc400/vsc40000
-</code></pre>
-
 !!! tip
     For job scripts, use `set -e -u` to avoid using empty variables accidentally.
 
