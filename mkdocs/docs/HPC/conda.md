@@ -50,3 +50,6 @@ before installing packages into a conda environment.
 
 Conda modifies the .bashrc file in the user's home directory, 
 which can lead to conflicts and unintended side effects in the user's environment setup.
+
+You can avoid the change of the `.bashrc` file by activating the environment with `source activate full/path/to/myenv`
+instead of `conda activate myenv`.
