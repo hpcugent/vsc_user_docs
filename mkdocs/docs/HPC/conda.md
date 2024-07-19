@@ -23,6 +23,9 @@ and are optimized for performance.
 Using Conda in conjunction with centrally installed modules can lead to conflicts and unexpected errors, 
 making it difficult to debug and manage dependencies.
 
+If you do wish to use conda, we recommend only using packages from conda itself, even when they are available as modules.
+This will degrade performance, but will avoid conflicts between conda and module dependencies.
+
 ## Package Availability
 
 Conda has a smaller repository of available packages compared to PyPI, the repository used by pip. 
