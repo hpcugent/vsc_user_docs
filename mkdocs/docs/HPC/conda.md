@@ -26,9 +26,19 @@ This can limit the availability of specific tools or libraries needed for certai
 
 ### Home Directory Usage
 
-Conda installs packages and environments in the user's home directory, 
+by default, conda installs packages in the user's home directory, 
 which can quickly fill up disk quotas due to the large number of files and directories it creates. 
-This is particularly problematic in HPC environments where home directory quotas are often limited.
+This is particularly problematic in the HPC environment where home directory quotas are limited.
+
+If you do wish to use conda, we recommend setting the conda package directory to a location with more storage 
+space. This can be done by running: 
+
+```bash
+export CONDA_PKGS_DIRS=$VSC_DATA/conda_pkgs
+```
+
+before installing packages into a conda environment.
+
 
 ### Modification of Configuration Files
 
