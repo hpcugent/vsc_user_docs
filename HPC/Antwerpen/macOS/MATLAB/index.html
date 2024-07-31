@@ -1116,7 +1116,7 @@ compiler can be used as explained below.</p>
 <h2 id="how-to-compile-matlab-code">How to compile MATLAB code<a class="headerlink" href="#how-to-compile-matlab-code" title="Permanent link">#</a></h2>
 <p>Compiling MATLAB code can only be done from the login nodes, because
 only login nodes can access the MATLAB license server, workernodes on
-clusters can not.</p>
+clusters cannot.</p>
 <p>To access the MATLAB compiler, the <code>MATLAB</code> module should be loaded
 first. Make sure you are using the same <code>MATLAB</code> version to compile and
 to run the compiled MATLAB program.</p>
@@ -1166,7 +1166,7 @@ with:</p>
 <pre><code>$ <b>export _JAVA_OPTIONS="-Xmx64M"</b>
 </code></pre>
 
-<p>The MATLAB compiler spawns multiple Java processes, and because of the
+<p>The MATLAB compiler spawns multiple Java processes. Because of the
 default memory limits that are in effect on the login nodes, this might
 lead to a crash of the compiler if it's trying to create to many Java
 processes. If we lower the heap size, more Java processes will be able
@@ -1190,7 +1190,7 @@ controlled via the <code>parpool</code> function: <code>parpool(16)</code> will 
 workers. It's best to specify the amount of workers, because otherwise
 you might not harness the full compute power available (if you have too
 few workers), or you might negatively impact performance (if you have
-too much workers). By default, MATLAB uses a fixed number of workers
+too many workers). By default, MATLAB uses a fixed number of workers
 (12).</p>
 <p>You should use a number of workers that is equal to the number of cores
 you requested when submitting your job script (the <code>ppn</code> value, see <a href="../running_batch_jobs/#generic-resource-requirements">Generic resource requirements</a>).
@@ -1223,7 +1223,7 @@ $ <b> export MATLAB_LOG_DIR=$ (mktemp -d -p $TMPDIR:-/tmp/$USER)</b>
 
 <h2 id="cache-location">Cache location<a class="headerlink" href="#cache-location" title="Permanent link">#</a></h2>
 <p>When running, MATLAB will use a cache for performance reasons. This
-location and size of this cache can be changed trough the
+location and size of this cache can be changed through the
 <code>MCR_CACHE_ROOT</code> and <code>MCR_CACHE_SIZE</code> environment variables.</p>
 <p>The snippet below would set the maximum cache size to 1024MB and the
 location to <code>/tmp/testdirectory</code>.</p>

@@ -657,6 +657,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-an-orte-daemon-has-unexpectedly-failed-after-launch-and-before-communicating-back-to-mpirun" class="md-nav__link">
+    Error: An ORTE daemon has unexpectedly failed after launch and before communicating back to mpirun
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1301,6 +1321,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-an-orte-daemon-has-unexpectedly-failed-after-launch-and-before-communicating-back-to-mpirun" class="md-nav__link">
+    Error: An ORTE daemon has unexpectedly failed after launch and before communicating back to mpirun
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1802,6 +1842,14 @@ specified:</p>
 #                           command
 </code></pre>
 
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>
+<h3 id="error-an-orte-daemon-has-unexpectedly-failed-after-launch-and-before-communicating-back-to-mpirun">Error: An ORTE daemon has unexpectedly failed after launch and before communicating back to mpirun<a class="headerlink" href="#error-an-orte-daemon-has-unexpectedly-failed-after-launch-and-before-communicating-back-to-mpirun" title="Permanent link">#</a></h3>
+<p>When submitting a Worker job, you might encounter the following error: 
+<code>An ORTE daemon has unexpectedly failed after launch and before communicating back to mpirun</code>.
+This error can occur when the foss toolchain version of worker is loaded. Instead, try loading an iimpi toolchain version of worker.</p>
+<p>to check for the available versions of worker, use the following command:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>module<span class="w"> </span>avail<span class="w"> </span>worker
+</code></pre></div>
 <div class="footnote">
 <hr />
 <ol>
