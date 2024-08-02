@@ -226,6 +226,24 @@ information, see .
 
 {% endif %}
 
+### Why do I get a "No space left on device" error, while there is still available space?
+
+When trying to create files, errors like this can occur:
+
+```shell
+touch: cannot touch 'filename': No space left on device
+```
+
+The error "No space left on device" cann mean two different things: 
+either all allocated memory on the file system in question has been used, 
+or the inode limit has been reached on that file system. An inode can be seen as a "file slot", 
+meaning that when the limit is reached, no more files can be created. There is a standard inode limit in place that will be expanded if needed. 
+The number of inodes used per file system can be checked on <https://account.vscentrum.be>. 
+
+Possible solutions to this problem include cleaning up unused files and directories or 
+[compressing directories with a lot of files into zip- or tar-files](../linux-tutorial/manipulating_files_and_directories/?h=zip#zipping-gzipgunzip-zipunzip). 
+If the problem persists, feel free to contact support [here](./#i-have-another-questionproblem).
+
 ## Other
 
 ### Can I share my account with someone else?
