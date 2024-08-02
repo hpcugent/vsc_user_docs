@@ -1349,7 +1349,7 @@ exceptions, which then results in terminating the simulation. However,
 it does not prevent that illegal operations (like a division by zero)
 are being executed; if <code>NaN</code> values appear in your results, floating
 point errors are occurring.</p>
-<p>As such, <em><em>you should </em>not</em> use this in productions runs. Instead, you should track down the root cause of the floating
+<p>As such, <em><em>you should </em>not</em> use this in production runs. Instead, you should track down the root cause of the floating
 point errors, and try to prevent them from occurring at all.</p>
 <h2 id="openfoam-workflow">OpenFOAM workflow<a class="headerlink" href="#openfoam-workflow" title="Permanent link">#</a></h2>
 <p>The general workflow for OpenFOAM consists of multiple steps. Prior to
@@ -1503,7 +1503,7 @@ specify in <code>system/controlDict</code> (see also
 consider using the local disk of the workernode as working directory
 (accessible via <code>$VSC_SCRATCH_NODE</code>), rather than the shared
 <code>$VSC_SCRATCH</code> filesystem. **Certainly do not use a subdirectory in <code>$VSC_HOME</code> or <code>$VSC_DATA</code>, since these shared filesystems are too slow
-for these type of workloads.</p>
+for these types of workloads.</p>
 <p>These guidelines are especially important for large-scale OpenFOAM
 simulations that involve more than a couple of dozen of processor cores.</p>
 <h2 id="using-own-solvers-with-openfoam">Using own solvers with OpenFOAM<a class="headerlink" href="#using-own-solvers-with-openfoam" title="Permanent link">#</a></h2>
