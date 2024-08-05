@@ -74,7 +74,7 @@ It is possible to use the modules without specifying a version or toolchain. How
 this will probably cause incompatible modules to be loaded. Don't do it if you use multiple modules.
 Even if it works now, as more modules get installed on the HPC, your job can suddenly break.
 
-## Troubleshooting jobs
+## Troubleshooting
 
 ### My modules don't work together
 
