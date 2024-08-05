@@ -74,7 +74,7 @@ It is possible to use the modules without specifying a version or toolchain. How
 this will probably cause incompatible modules to be loaded. Don't do it if you use multiple modules.
 Even if it works now, as more modules get installed on the HPC, your job can suddenly break.
 
-## Troubleshooting jobs
+## Troubleshooting
 
 ### My modules don't work together
 
@@ -225,6 +225,29 @@ priority than your job(s). You can use the `showstart` command. For more
 information, see .
 
 {% endif %}
+
+
+### Why do I get a "No space left on device" error, while I still have storage space left?
+
+When trying to create files, errors like this can occur:
+
+```shell
+No space left on device
+```
+
+The error "`No space left on device`" can mean two different things:
+
+- all available *storage quota* on the file system in question has been used;
+- the *inode limit* has been reached on that file system.
+
+An *inode* can be seen as a "file slot", meaning that when the limit is reached, no more additional files can be created.
+There is a standard inode limit in place that will be increased if needed. 
+The number of inodes used per file system can be checked on [the VSC account page](https://account.vscentrum.be).
+
+Possible solutions to this problem include cleaning up unused files and directories or 
+[compressing directories with a lot of files into zip- or tar-files](../linux-tutorial/manipulating_files_and_directories/?h=zip#zipping-gzipgunzip-zipunzip).
+
+If the problem persists, feel free to [contact support](./#i-have-another-questionproblem).
 
 ## Other
 
