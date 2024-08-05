@@ -13,6 +13,6 @@ cd $PBS_O_WORKDIR
   # load the environment
 
 module purge
-module load intel
+module load foss
 
 mpirun ./mpihello

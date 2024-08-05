@@ -11,6 +11,6 @@ cd $PBS_O_WORKDIR
 
   # load the environment
 
-module load intel
+module load foss
 
 mpirun ./mpi_hello

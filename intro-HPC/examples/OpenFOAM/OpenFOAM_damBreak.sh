@@ -2,7 +2,7 @@
 #PBS -l walltime=1:0:0
 #PBS -l nodes=1:ppn=4
 # check for more recent OpenFOAM modules with 'module avail OpenFOAM'
-module load OpenFOAM/6-intel-2018a
+module load OpenFOAM/11-foss-2023a
 source $FOAM_BASH
 # purposely not specifying a particular version to use most recent mympirun
 module load vsc-mympirun
@@ -15,7 +15,7 @@ export MYMPIRUN_VARIABLESPREFIX=WM_PROJECT,FOAM,MPI
 export WORKDIR=$VSC_SCRATCH_NODE/$PBS_JOBID  # for single-node jobs
 mkdir -p $WORKDIR
 # damBreak tutorial, see also https://cfd.direct/openfoam/user-guide/dambreak
-cp -r $FOAM_TUTORIALS/multiphase/interFoam/laminar/damBreak/damBreak $WORKDIR
+cp -r $FOAM_TUTORIALS/incompressibleVoF/damBreakLaminar/damBreak $WORKDIR
 cd $WORKDIR/damBreak
 echo "working directory: $PWD"
 # pre-processing: generate mesh
