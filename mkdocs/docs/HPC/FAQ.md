@@ -373,6 +373,25 @@ See also: [Your UGent home drive and shares](running_jobs_with_input_output_data
 {% endif %}
 
 
+### How do I find the largest files I should remove to make room on my home directory
+
+To free up space in the home directory, you can make use of the [`du` command](https://docs.hpc.ugent.be/Linux/running_jobs_with_input_output_data/#check-your-quota) to find out what the largest files and subdirectories are:
+
+```shell
+du -h --max-depth 1 $VSC_HOME | egrep '[0-9]{3}M|[0-9]G'
+```
+
+The `du` command returns the size of every file and subdirectory in the $VSC_HOME directory. 
+This output is then piped into an [`egrep`](https://docs.hpc.ugent.be/Linux/linux-tutorial/beyond_the_basics/?h=grep#searching-file-contents-grep), 
+where only entries that are large enough are let through.
+The expression that accomplishes this is `[0-9]{3}M|[0-9]G`, which is structured as follows:
+
+- `[0-9]{3}M` accepts entries with 3 digits followed by an M (So files and subdirectories with a size between 100 and 1023 MB). 
+- `[0-9]G` accepts entries with a digit followed by a G (So files and subdirectories with a size between 1 and 1023 GB).
+
+If an entry complies with either of these conditions, it is let through and printed as output.
+
+
 ### Why can't I use the `sudo` command?
 
 When you attempt to use sudo, you will be prompted for a password. 
