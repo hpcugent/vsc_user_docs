@@ -1076,11 +1076,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting-jobs" class="md-nav__link">
-    Troubleshooting jobs
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
   </a>
   
-    <nav class="md-nav" aria-label="Troubleshooting jobs">
+    <nav class="md-nav" aria-label="Troubleshooting">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1142,6 +1142,13 @@
           <li class="md-nav__item">
   <a href="#when-will-my-job-start" class="md-nav__link">
     When will my job start?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-i-get-a-no-space-left-on-device-error-while-i-still-have-storage-space-left" class="md-nav__link">
+    Why do I get a "No space left on device" error, while I still have storage space left?
   </a>
   
 </li>
@@ -1384,11 +1391,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting-jobs" class="md-nav__link">
-    Troubleshooting jobs
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
   </a>
   
-    <nav class="md-nav" aria-label="Troubleshooting jobs">
+    <nav class="md-nav" aria-label="Troubleshooting">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1450,6 +1457,13 @@
           <li class="md-nav__item">
   <a href="#when-will-my-job-start" class="md-nav__link">
     When will my job start?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-i-get-a-no-space-left-on-device-error-while-i-still-have-storage-space-left" class="md-nav__link">
+    Why do I get a "No space left on device" error, while I still have storage space left?
   </a>
   
 </li>
@@ -1607,7 +1621,7 @@ Use the command <code>module spider [module]</code> to find the specifics on the
 <p>It is possible to use the modules without specifying a version or toolchain. However,
 this will probably cause incompatible modules to be loaded. Don't do it if you use multiple modules.
 Even if it works now, as more modules get installed on the HPC, your job can suddenly break.</p>
-<h2 id="troubleshooting-jobs">Troubleshooting jobs<a class="headerlink" href="#troubleshooting-jobs" title="Permanent link">#</a></h2>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>
 <h3 id="my-modules-dont-work-together">My modules don't work together<a class="headerlink" href="#my-modules-dont-work-together" title="Permanent link">#</a></h3>
 <p>When incompatible modules are loaded, you might encounter an error like this:</p>
 <div class="highlight"><pre><span></span><code>Lmod<span class="w"> </span>has<span class="w"> </span>detected<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>error:<span class="w"> </span>A<span class="w"> </span>different<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span><span class="s1">&#39;GCC&#39;</span><span class="w"> </span>module
@@ -1706,6 +1720,21 @@ the arguments of the program to be its last arguments. Here, the
 </code></pre></div>
 <h3 id="when-will-my-job-start">When will my job start?<a class="headerlink" href="#when-will-my-job-start" title="Permanent link">#</a></h3>
 <p>See the explanation about how jobs get prioritized in <a href="../running_batch_jobs/#when-will-my-job-start">When will my job start</a>. </p>
+<h3 id="why-do-i-get-a-no-space-left-on-device-error-while-i-still-have-storage-space-left">Why do I get a "No space left on device" error, while I still have storage space left?<a class="headerlink" href="#why-do-i-get-a-no-space-left-on-device-error-while-i-still-have-storage-space-left" title="Permanent link">#</a></h3>
+<p>When trying to create files, errors like this can occur:</p>
+<div class="highlight"><pre><span></span><code>No<span class="w"> </span>space<span class="w"> </span>left<span class="w"> </span>on<span class="w"> </span>device
+</code></pre></div>
+<p>The error "<code>No space left on device</code>" can mean two different things:</p>
+<ul>
+<li>all available <em>storage quota</em> on the file system in question has been used;</li>
+<li>the <em>inode limit</em> has been reached on that file system.</li>
+</ul>
+<p>An <em>inode</em> can be seen as a "file slot", meaning that when the limit is reached, no more additional files can be created.
+There is a standard inode limit in place that will be increased if needed. 
+The number of inodes used per file system can be checked on <a href="https://account.vscentrum.be">the VSC account page</a>.</p>
+<p>Possible solutions to this problem include cleaning up unused files and directories or 
+<a href="../linux-tutorial/manipulating_files_and_directories/?h=zip#zipping-gzipgunzip-zipunzip">compressing directories with a lot of files into zip- or tar-files</a>.</p>
+<p>If the problem persists, feel free to <a href="./#i-have-another-questionproblem">contact support</a>.</p>
 <h2 id="other">Other<a class="headerlink" href="#other" title="Permanent link">#</a></h2>
 <h3 id="can-i-share-my-account-with-someone-else">Can I share my account with someone else?<a class="headerlink" href="#can-i-share-my-account-with-someone-else" title="Permanent link">#</a></h3>
 <p><strong>NO.</strong> You are not allowed to share your VSC account with anyone else, it is
