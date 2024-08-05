@@ -236,7 +236,7 @@ touch: cannot touch 'filename': No space left on device
 ```
 
 The error "`No space left on device`" can mean two different things:
-either all allocated memory on the file system in question has been used, 
+either all available *storage quota* on the file system in question has been used, 
 or the inode limit has been reached on that file system. An inode can be seen as a "file slot", 
 meaning that when the limit is reached, no more files can be created. There is a standard inode limit in place that will be expanded if needed. 
 The number of inodes used per file system can be checked on <https://account.vscentrum.be>. 
