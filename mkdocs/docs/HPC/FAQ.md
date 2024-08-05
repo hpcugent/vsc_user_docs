@@ -226,7 +226,8 @@ information, see .
 
 {% endif %}
 
-### Why do I get a "No space left on device" error, while there is still available space?
+
+### Why do I get a "No space left on device" error, while I still have storage space left?
 
 When trying to create files, errors like this can occur:
 
