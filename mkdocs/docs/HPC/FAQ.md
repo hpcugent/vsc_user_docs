@@ -245,7 +245,8 @@ There is a standard inode limit in place that will be increased if needed.
 The number of inodes used per file system can be checked on [the VSC account page](https://account.vscentrum.be).
 
 Possible solutions to this problem include cleaning up unused files and directories or 
-[compressing directories with a lot of files into zip- or tar-files](../linux-tutorial/manipulating_files_and_directories/?h=zip#zipping-gzipgunzip-zipunzip). 
+[compressing directories with a lot of files into zip- or tar-files](../linux-tutorial/manipulating_files_and_directories/?h=zip#zipping-gzipgunzip-zipunzip).
+
 If the problem persists, feel free to [contact support](./#i-have-another-questionproblem).
 
 ## Other
