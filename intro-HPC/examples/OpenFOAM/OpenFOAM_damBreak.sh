@@ -15,7 +15,7 @@ export MYMPIRUN_VARIABLESPREFIX=WM_PROJECT,FOAM,MPI
 export WORKDIR=$VSC_SCRATCH_NODE/$PBS_JOBID  # for single-node jobs
 mkdir -p $WORKDIR
 # damBreak tutorial, see also https://cfd.direct/openfoam/user-guide/dambreak
-cp -r $FOAM_TUTORIALS/multiphase/interFoam/laminar/damBreak/damBreak $WORKDIR
+cp -r $FOAM_TUTORIALS/incompressibleVoF/damBreakLaminar/damBreak $WORKDIR
 cd $WORKDIR/damBreak
 echo "working directory: $PWD"
 # pre-processing: generate mesh
