@@ -388,6 +388,11 @@ The `du` command returns the size of every file and subdirectory in the $VSC_HOM
 The `egrep` command will only let entries that match with the specified regular expression `[0-9]{3}M|[0-9]G` through, which corresponds with files that consume more than 100 MB.
 
 
+### How can I get more storage space
+
+[By default](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#quota) you get 3 GB of storage space for your home directory and 25 GB in the data and scratch filesystems. It is not possible to expand these quota. However it is possible to get more storage space through a [Virtual Organisation](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#virtual-organisations), which will also give you access to the [extra directories](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#vo-directories) related to that VO. The moderator of a VO can [request more storage](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#requesting-more-storage-space) for their VO.
+
+
 ### Why can't I use the `sudo` command?
 
 When you attempt to use sudo, you will be prompted for a password. 
