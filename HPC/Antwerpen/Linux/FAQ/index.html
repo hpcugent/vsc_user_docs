@@ -997,6 +997,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#my-home-directory-is-almost-full-and-i-dont-know-why" class="md-nav__link">
+    My home directory is (almost) full, and I don't know why
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#why-cant-i-use-the-sudo-command" class="md-nav__link">
     Why can't I use the sudo command?
   </a>
@@ -1305,6 +1312,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#my-home-directory-is-almost-full-and-i-dont-know-why" class="md-nav__link">
+    My home directory is (almost) full, and I don't know why
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#why-cant-i-use-the-sudo-command" class="md-nav__link">
     Why can't I use the sudo command?
   </a>
@@ -1575,6 +1589,14 @@ You will also find how to hide the warning.</p>
 It's possible to leave a VO and join another one. However, it's not
 recommended to keep switching between VO's (to supervise groups, for example).</p>
 <p>See also: <a href="../running_jobs_with_input_output_data/#virtual-organisations">Virtual Organisations</a>.</p>
+<h3 id="my-home-directory-is-almost-full-and-i-dont-know-why">My home directory is (almost) full, and I don't know why<a class="headerlink" href="#my-home-directory-is-almost-full-and-i-dont-know-why" title="Permanent link">#</a></h3>
+<p>Your home directory might be full without looking like it due to hidden files.
+Hidden files and subdirectories have a name starting with a dot and do not show up when running <code>ls</code>.
+If you want to check where the storage in your home directory is used, you can make use of the <a href="https://docs.hpc.ugent.be/Linux/running_jobs_with_input_output_data/#check-your-quota"><code>du</code> command</a> to find out what the largest files and subdirectories are:</p>
+<div class="highlight"><pre><span></span><code>du<span class="w"> </span>-h<span class="w"> </span>--max-depth<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nv">$VSC_HOME</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>egrep<span class="w"> </span><span class="s1">&#39;[0-9]{3}M|[0-9]G&#39;</span>
+</code></pre></div>
+<p>The <code>du</code> command returns the size of every file and subdirectory in the $VSC_HOME directory. This output is then piped into an <a href="https://docs.hpc.ugent.be/Linux/linux-tutorial/beyond_the_basics/?h=grep#searching-file-contents-grep"><code>egrep</code></a> to filter the lines to the ones that matter the most.</p>
+<p>The <code>egrep</code> command will only let entries that match with the specified regular expression <code>[0-9]{3}M|[0-9]G</code> through, which corresponds with files that consume more than 100 MB.</p>
 <h3 id="why-cant-i-use-the-sudo-command">Why can't I use the <code>sudo</code> command?<a class="headerlink" href="#why-cant-i-use-the-sudo-command" title="Permanent link">#</a></h3>
 <p>When you attempt to use sudo, you will be prompted for a password. 
 However, you cannot enter a valid password because this feature is reserved exclusively for HPC administrators.</p>
