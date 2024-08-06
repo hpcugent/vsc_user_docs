@@ -373,6 +373,21 @@ See also: [Your UGent home drive and shares](running_jobs_with_input_output_data
 {% endif %}
 
 
+### My home directory is (almost) full, and I don't know why
+
+Your home directory might be full without looking like it due to hidden files.
+Hidden files and subdirectories have a name starting with a dot and do not show up when running `ls`.
+If you want to check where the storage in your home directory is used, you can make use of the [`du` command](https://docs.hpc.ugent.be/Linux/running_jobs_with_input_output_data/#check-your-quota) to find out what the largest files and subdirectories are:
+
+```shell
+du -h --max-depth 1 $VSC_HOME | egrep '[0-9]{3}M|[0-9]G'
+```
+
+The `du` command returns the size of every file and subdirectory in the $VSC_HOME directory. This output is then piped into an [`egrep`](https://docs.hpc.ugent.be/Linux/linux-tutorial/beyond_the_basics/?h=grep#searching-file-contents-grep) to filter the lines to the ones that matter the most.
+
+The `egrep` command will only let entries that match with the specified regular expression `[0-9]{3}M|[0-9]G` through, which corresponds with files that consume more than 100 MB.
+
+
 ### Why can't I use the `sudo` command?
 
 When you attempt to use sudo, you will be prompted for a password. 
