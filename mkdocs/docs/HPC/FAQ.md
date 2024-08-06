@@ -385,7 +385,7 @@ du -h --max-depth 1 $VSC_HOME | egrep '[0-9]{3}M|[0-9]G'
 
 The `du` command returns the size of every file and subdirectory in the $VSC_HOME directory. This output is then piped into an [`egrep`](https://docs.hpc.ugent.be/Linux/linux-tutorial/beyond_the_basics/?h=grep#searching-file-contents-grep) to filter the lines to the ones that matter the most.
 
-The `egrep` command will only let entries that match with the specified regular expression `[0-9]{3}M|[0-9]G` through, which corresponds with files that consume between 100 and 1024 MB or more than 1 GB.
+The `egrep` command will only let entries that match with the specified regular expression `[0-9]{3}M|[0-9]G` through, which corresponds with files that consume more than 100 MB.
 
 
 ### Why can't I use the `sudo` command?
