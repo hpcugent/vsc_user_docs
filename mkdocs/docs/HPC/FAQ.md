@@ -375,7 +375,9 @@ See also: [Your UGent home drive and shares](running_jobs_with_input_output_data
 
 ### My home directory is (almost) full, and I don't know why
 
-Your home directory might be full without looking like it due to hidden files. Hidden files and subdirectories have a name starting with a dot and do not show up when using a normal `ls`. If you want to check where the storage in your home directory is used, you can make use of the [`du` command](https://docs.hpc.ugent.be/Linux/running_jobs_with_input_output_data/#check-your-quota) to find out what the largest files and subdirectories are:
+Your home directory might be full without looking like it due to hidden files.
+Hidden files and subdirectories have a name starting with a dot and do not show up when running `ls`.
+If you want to check where the storage in your home directory is used, you can make use of the [`du` command](https://docs.hpc.ugent.be/Linux/running_jobs_with_input_output_data/#check-your-quota) to find out what the largest files and subdirectories are:
 
 ```shell
 du -h --max-depth 1 $VSC_HOME | egrep '[0-9]{3}M|[0-9]G'
