@@ -390,7 +390,13 @@ The `egrep` command will only let entries that match with the specified regular 
 
 ### How can I get more storage space?
 
-[By default](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#quota) you get 3 GB of storage space for your home directory and 25 GB in the data and scratch filesystems. It is not possible to expand these quota. However it is possible to get more storage space through a [Virtual Organisation](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#virtual-organisations), which will also give you access to the [extra directories](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#vo-directories) related to that VO. The moderator of a VO can [request more storage](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#requesting-more-storage-space) for their VO.
+
+[By default](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#quota) you get 3 GB of storage space for your home directory and 25 GB in your personal directories on both the data (`$VSC_DATA`) and scratch (`$VSC_SCRATCH`) filesystems.
+It is not possible to expand the storage quota for these personal directories.
+
+You can get more storage space through a [Virtual Organisation (VO)](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#virtual-organisations),
+which will give you access to the [additional directories](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#vo-directories) in a subdirectory specific to that VO (`$VSC_DATA_VO` and `$VSC_SCRATCH_VO`).
+The moderators of a VO can [request more storage](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#requesting-more-storage-space) for their VO.
 
 
 ### Why can't I use the `sudo` command?
