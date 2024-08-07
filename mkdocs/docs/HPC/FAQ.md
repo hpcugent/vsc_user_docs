@@ -391,7 +391,7 @@ The `egrep` command will only let entries that match with the specified regular 
 ### How can I get more storage space?
 
 
-[By default](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#quota) you get 3 GB of storage space for your home directory and 25 GB in your personal directories on both the data (`$VSC_DATA`) and scratch (`$VSC_SCRATCH`) filesystems.
+[By default](running_jobs_with_input_output_data.md#quota) you get 3 GB of storage space for your home directory and 25 GB in your personal directories on both the data (`$VSC_DATA`) and scratch (`$VSC_SCRATCH`) filesystems.
 It is not possible to expand the storage quota for these personal directories.
 
 You can get more storage space through a [Virtual Organisation (VO)](https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#virtual-organisations),
