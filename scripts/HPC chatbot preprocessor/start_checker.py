@@ -1,3 +1,5 @@
+# THIS IS NOT AN IMPORTANT FILE, DON'T WORRY ABOUT IT, I JUST USED IT TO TEST SOME THINGS
+
 import os
 
 directory = "C:\\HPC_werk\\Documentation\\local\\vsc_user_docs\\mkdocs\\docs\\HPC"

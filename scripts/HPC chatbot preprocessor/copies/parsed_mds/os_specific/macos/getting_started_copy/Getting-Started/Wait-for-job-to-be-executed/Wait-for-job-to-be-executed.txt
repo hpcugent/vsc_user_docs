@@ -1,0 +1,2 @@
+
+reference: docs.hpc.ugent.be/macOS/getting_started_copy/#wait-for-job-to-be-executed

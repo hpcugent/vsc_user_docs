@@ -22,9 +22,13 @@ import shutil
 
 # Test with actual document
 
+# make a copies directory to store the copies
+if not os.path.exists(".\\copies"):
+    os.mkdir(".\\copies")
+
 # make a copy of one of the md files to test some things
-shutil.copyfile("C:\\HPC_werk\\Documentation\\local\\vsc_user_docs\\mkdocs\\docs\\HPC\\getting_started.md",
-                "C:\\HPC_werk\\Chatbot\\getting_started_copy.md")
+shutil.copyfile("..\\..\\mkdocs\\docs\\HPC\\getting_started.md",
+                ".\\copies\\getting_started_copy.md")
 
 ################### define global variables ###################
 # variable for the filename (which will be changed into something else in the final version)
@@ -34,10 +38,10 @@ filename = "getting_started_copy.md"
 main_title = filename[:-3]
 
 # variable that keeps track of the directories that are used to write in at different levels
-root_dir_generic = "C:\\HPC_werk\\Chatbot\\parsed_mds\\generic\\"
-root_dir_os_specific_linux = "C:\\HPC_werk\\Chatbot\\parsed_mds\\os_specific\\linux\\"
-root_dir_os_specific_windows = "C:\\HPC_werk\\Chatbot\\parsed_mds\\os_specific\\windows\\"
-root_dir_os_specific_macos = "C:\\HPC_werk\\Chatbot\\parsed_mds\\os_specific\\macos\\"
+root_dir_generic = ".\\copies\\parsed_mds\\generic\\"
+root_dir_os_specific_linux = ".\\copies\\parsed_mds\\os_specific\\linux\\"
+root_dir_os_specific_windows = ".\\copies\\parsed_mds\\os_specific\\windows\\"
+root_dir_os_specific_macos = ".\\copies\\parsed_mds\\os_specific\\macos\\"
 curr_dirs = [filename[:-3] for i in range(4)]
 
 # variable to keep track whether we're dealing with OS-specific info or not
@@ -161,6 +165,12 @@ def replace_markdown_markers(curr_line, linklist):
             print(f"[{match[0]}]({match[1]})")
             curr_line = curr_line.replace(f"[{match[0]}]({match[1]})", match[0] + "[" + str(len(linklist) + 1) + "]")
             linklist.append(match[1])
+
+    # TODO:
+    # code-blocks
+    # tips
+    # warnings
+    # etc
 
     return curr_line, linklist
 
@@ -331,7 +341,9 @@ remove_directory_tree(root_dir_os_specific_windows)
 remove_directory_tree(root_dir_os_specific_macos)
 
 # create directories for the source markdown file
+create_directory(".\\copies\\parsed_mds")
 create_directory(root_dir_generic)
+create_directory(".\\copies\\parsed_mds\\os_specific")
 create_directory(root_dir_os_specific_linux)
 create_directory(root_dir_os_specific_windows)
 create_directory(root_dir_os_specific_macos)
@@ -341,7 +353,7 @@ create_directory(root_dir_os_specific_windows + curr_dirs[0])
 create_directory(root_dir_os_specific_macos + curr_dirs[0])
 
 # open the file and store line by line in the right file
-with open("C:\\HPC_werk\\Chatbot\\getting_started_copy.md", 'r') as readfile:
+with open(".\\copies\\" + filename, 'r') as readfile:
 
     for line in readfile:
         title_level, title, directory = check_for_title(line)
