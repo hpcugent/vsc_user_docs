@@ -6,6 +6,10 @@ hide:
 DOLFIN
 ======
 
+
+DOLFIN is the C++/Python interface of FEniCS, providing a consistent PSE  (Problem Solving Environment) for ordinary and partial differential equations.
+
+https://bitbucket.org/fenics-project/dolfin
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using DOLFIN, load one of these modules using a `module load` command l
 module load DOLFIN/2019.1.0.post0-foss-2019b-Python-3.7.4
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

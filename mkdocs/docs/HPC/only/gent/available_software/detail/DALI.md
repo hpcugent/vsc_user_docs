@@ -6,6 +6,10 @@ hide:
 DALI
 ====
 
+
+R-package for the analysis of single-cell TCR/BCR data in the Seurat ecosystem
+
+https://github.com/vibscc/DALI
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using DALI, load one of these modules using a `module load` command lik
 module load DALI/2.1.2-foss-2022b-R-4.2.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

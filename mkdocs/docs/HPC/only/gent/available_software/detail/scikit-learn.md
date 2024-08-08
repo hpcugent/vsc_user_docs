@@ -6,6 +6,10 @@ hide:
 scikit-learn
 ============
 
+
+Scikit-learn integrates machine learning algorithms in the tightly-knit scientific Python world,building upon numpy, scipy, and matplotlib. As a machine-learning module,it provides versatile tools for data mining and analysis in any field of science and engineering.It strives to be simple and efficient, accessible to everybody, and reusable in various contexts.
+
+https://scikit-learn.org/stable/index.html
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using scikit-learn, load one of these modules using a `module load` com
 module load scikit-learn/1.4.0-gfbf-2023b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -40,3 +44,70 @@ module load scikit-learn/1.4.0-gfbf-2023b
 |scikit-learn/0.20.4-intel-2019b-Python-2.7.16|-|x|x|-|x|x|
 |scikit-learn/0.20.4-foss-2021b-Python-2.7.18|x|x|x|x|x|x|
 |scikit-learn/0.20.4-foss-2020b-Python-2.7.18|-|x|x|x|x|x|
+
+
+### scikit-learn/1.4.0-gfbf-2023b
+
+This is a list of extensions included in the module:
+
+scikit-learn-1.4.0, sklearn-0.0
+
+### scikit-learn/1.3.2-gfbf-2023b
+
+This is a list of extensions included in the module:
+
+scikit-learn-1.3.2, sklearn-0.0
+
+### scikit-learn/1.3.1-gfbf-2023a
+
+This is a list of extensions included in the module:
+
+scikit-learn-1.3.1, sklearn-0.0
+
+### scikit-learn/1.2.1-gfbf-2022b
+
+This is a list of extensions included in the module:
+
+scikit-learn-1.2.1, sklearn-0.0
+
+### scikit-learn/1.1.2-intel-2022a
+
+This is a list of extensions included in the module:
+
+scikit-learn-1.1.2, sklearn-0.0
+
+### scikit-learn/1.1.2-foss-2022a
+
+This is a list of extensions included in the module:
+
+scikit-learn-1.1.2, sklearn-0.0
+
+### scikit-learn/1.0.1-intel-2021b
+
+This is a list of extensions included in the module:
+
+scikit-learn-1.0.1, sklearn-0.0
+
+### scikit-learn/1.0.1-foss-2021b
+
+This is a list of extensions included in the module:
+
+scikit-learn-1.0.1, sklearn-0.0
+
+### scikit-learn/0.23.1-intel-2020a-Python-3.8.2
+
+This is a list of extensions included in the module:
+
+flit-2.3.0, flit-core-2.3.0, pytoml-0.1.21, scikit-learn-0.23.1, threadpoolctl-2.1.0
+
+### scikit-learn/0.23.1-foss-2020a-Python-3.8.2
+
+This is a list of extensions included in the module:
+
+flit-2.3.0, flit-core-2.3.0, pytoml-0.1.21, scikit-learn-0.23.1, threadpoolctl-2.1.0
+
+### scikit-learn/0.20.4-foss-2021b-Python-2.7.18
+
+This is a list of extensions included in the module:
+
+scikit-learn-0.20.4, sklearn-0.0

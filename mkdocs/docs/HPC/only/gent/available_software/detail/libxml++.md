@@ -6,6 +6,10 @@ hide:
 libxml++
 ========
 
+
+libxml++ is a C++ wrapper for the libxml XML parser library.
+
+http://libxmlplusplus.sourceforge.net
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using libxml++, load one of these modules using a `module load` command
 module load libxml++/2.42.1-GCC-10.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

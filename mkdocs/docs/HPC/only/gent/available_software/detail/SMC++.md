@@ -6,6 +6,10 @@ hide:
 SMC++
 =====
 
+
+SMC++ is a program for estimating the size history of populations from whole genome sequence data.
+
+https://github.com/popgenmethods/smcpp
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using SMC++, load one of these modules using a `module load` command li
 module load SMC++/1.15.4-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |SMC++/1.15.4-foss-2022a|x|x|x|-|x|x|
+
+
+### SMC++/1.15.4-foss-2022a
+
+This is a list of extensions included in the module:
+
+SMC++-1.15.4

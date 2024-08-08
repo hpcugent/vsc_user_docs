@@ -6,6 +6,10 @@ hide:
 Anaconda3
 =========
 
+
+Built to complement the rich, open source Python community,the Anaconda platform provides an enterprise-ready data analytics platform that empowers companies to adopt a modern open data science analytics architecture.
+
+https://www.anaconda.com
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Anaconda3, load one of these modules using a `module load` comman
 module load Anaconda3/2023.03-1
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

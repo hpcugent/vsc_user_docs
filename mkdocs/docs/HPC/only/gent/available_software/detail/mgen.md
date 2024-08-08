@@ -6,6 +6,10 @@ hide:
 mgen
 ====
 
+
+Convenient matrix generation functions
+
+https://github.com/NOhs/mgen/tree/master
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using mgen, load one of these modules using a `module load` command lik
 module load mgen/1.2.1-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

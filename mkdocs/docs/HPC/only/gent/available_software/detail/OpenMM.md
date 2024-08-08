@@ -6,6 +6,10 @@ hide:
 OpenMM
 ======
 
+
+OpenMM is a toolkit for molecular simulation.
+
+https://openmm.org
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using OpenMM, load one of these modules using a `module load` command l
 module load OpenMM/8.0.0-foss-2022a-CUDA-11.7.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

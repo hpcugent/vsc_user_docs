@@ -6,6 +6,10 @@ hide:
 OpenCoarrays
 ============
 
+
+OpenCoarrays is an open-source software project that supportsthe coarray Fortran (CAF) parallel programming features of the Fortran 2008standard and several features proposed for Fortran 2015 in the draft TechnicalSpecification TS 18508 Additional Parallel Features in Fortran.
+
+https://github.com/sourceryinstitute/opencoarrays
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using OpenCoarrays, load one of these modules using a `module load` com
 module load OpenCoarrays/2.8.0-gompi-2019b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

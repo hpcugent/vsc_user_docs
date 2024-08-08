@@ -6,6 +6,10 @@ hide:
 loomR
 =====
 
+
+An R interface for loom files
+
+https://github.com/mojaveazure/loomR
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using loomR, load one of these modules using a `module load` command li
 module load loomR/0.2.0-20180425-foss-2023a-R-4.3.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

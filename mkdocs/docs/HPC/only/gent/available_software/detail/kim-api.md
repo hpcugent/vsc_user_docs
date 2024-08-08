@@ -6,6 +6,10 @@ hide:
 kim-api
 =======
 
+
+Open Knowledgebase of Interatomic Models.KIM is an API and OpenKIM is a collection of interatomic models (potentials) foratomistic simulations.  This is a library that can be used by simulation programsto get access to the models in the OpenKIM database.This EasyBuild only installs the API, the models can be installed with thepackage openkim-models, or the user can install them manually by running    kim-api-collections-management install user MODELNAMEor    kim-api-collections-management install user OpenKIMto install them all.
+
+https://openkim.org/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using kim-api, load one of these modules using a `module load` command 
 module load kim-api/2.3.0-GCCcore-11.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 Togl
 ====
 
+
+A Tcl/Tk widget for OpenGL rendering.
+
+https://sourceforge.net/projects/togl/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Togl, load one of these modules using a `module load` command lik
 module load Togl/2.0-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

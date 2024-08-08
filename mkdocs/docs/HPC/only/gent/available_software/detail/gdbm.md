@@ -6,6 +6,10 @@ hide:
 gdbm
 ====
 
+
+GNU dbm (or GDBM, for short) is a library of database functions that use extensible hashing and work similar to the standard UNIX dbm. These routines are provided to a programmer needing to create and manipulate a hashed database.
+
+https://www.gnu.org.ua/software/gdbm/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using gdbm, load one of these modules using a `module load` command lik
 module load gdbm/1.18.1-foss-2020a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

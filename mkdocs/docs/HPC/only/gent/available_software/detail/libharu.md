@@ -6,6 +6,10 @@ hide:
 libharu
 =======
 
+
+libHaru is a free, cross platform, open source library forgenerating PDF files.
+
+https://github.com/libharu/libharu/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using libharu, load one of these modules using a `module load` command 
 module load libharu/2.3.0-foss-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

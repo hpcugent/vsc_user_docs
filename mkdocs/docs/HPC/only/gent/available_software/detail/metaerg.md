@@ -6,6 +6,10 @@ hide:
 metaerg
 =======
 
+
+MetaErg is a stand-alone and fully automated metagenomic and metaproteomic data annotation pipeline.
+
+https://github.com/xiaoli-dong/metaerg
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using metaerg, load one of these modules using a `module load` command 
 module load metaerg/1.2.3-intel-2019b-Python-2.7.16
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

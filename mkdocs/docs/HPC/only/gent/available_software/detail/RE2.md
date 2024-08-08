@@ -6,6 +6,10 @@ hide:
 RE2
 ===
 
+
+RE2 is a fast, safe, thread-friendly alternative to backtracking regularexpression engines like those used in PCRE, Perl, and Python. It is a C++library.
+
+https://github.com/google/re2
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using RE2, load one of these modules using a `module load` command like
 module load RE2/2023-08-01-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

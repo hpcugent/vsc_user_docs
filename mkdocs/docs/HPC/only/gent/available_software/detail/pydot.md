@@ -6,6 +6,10 @@ hide:
 pydot
 =====
 
+
+Python interface to Graphviz's Dot language.
+
+https://github.com/pydot/pydot
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using pydot, load one of these modules using a `module load` command li
 module load pydot/1.4.2-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

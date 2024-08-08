@@ -6,6 +6,10 @@ hide:
 WIEN2k
 ======
 
+
+The program package WIEN2k allows to perform electronic structure calculations of solidsusing density functional theory (DFT). It is based on the full-potential (linearized) augmented plane-wave((L)APW) + local orbitals (lo) method, one among the most accurate schemes for band structure calculations.WIEN2k is an all-electron scheme including relativistic effects and has many features.
+
+http://www.wien2k.at/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using WIEN2k, load one of these modules using a `module load` command l
 module load WIEN2k/21.1-intel-2021a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

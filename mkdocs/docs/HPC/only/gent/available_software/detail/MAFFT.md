@@ -6,6 +6,10 @@ hide:
 MAFFT
 =====
 
+
+MAFFT is a multiple sequence alignment program for unix-like operating systems.It offers a range of multiple alignment methods, L-INS-i (accurate; for alignmentof <∼200 sequences), FFT-NS-2 (fast; for alignment of <∼30,000 sequences), etc.
+
+https://mafft.cbrc.jp/alignment/software/source.html
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using MAFFT, load one of these modules using a `module load` command li
 module load MAFFT/7.520-GCC-12.3.0-with-extensions
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

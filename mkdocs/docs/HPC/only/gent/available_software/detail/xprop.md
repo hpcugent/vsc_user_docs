@@ -6,6 +6,10 @@ hide:
 xprop
 =====
 
+
+The xprop utility is for displaying window and font properties in an X server. One window or font is selected using the command line arguments or possibly in the case of a window, by clicking on the desired window. A list of properties is then given, possibly with formatting information.
+
+https://www.x.org/wiki/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using xprop, load one of these modules using a `module load` command li
 module load xprop/1.2.5-GCCcore-10.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

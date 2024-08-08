@@ -6,6 +6,10 @@ hide:
 BRAKER
 ======
 
+
+BRAKER is a pipeline for fully automated prediction of protein coding genes with GeneMark-ES/ET and AUGUSTUS in novel eukaryotic genomes.
+
+https://github.com/Gaius-Augustus/BRAKER
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using BRAKER, load one of these modules using a `module load` command l
 module load BRAKER/2.1.6-foss-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

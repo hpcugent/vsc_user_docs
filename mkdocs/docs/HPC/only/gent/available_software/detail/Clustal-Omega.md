@@ -6,6 +6,10 @@ hide:
 Clustal-Omega
 =============
 
+
+Clustal Omega is a multiple sequence alignment program for proteins. It produces biologically meaningful multiple sequence alignments of divergent sequences. Evolutionary relationships can be seen via viewing Cladograms or Phylograms
+
+http://www.clustal.org/omega/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Clustal-Omega, load one of these modules using a `module load` co
 module load Clustal-Omega/1.2.4-intel-compilers-2021.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

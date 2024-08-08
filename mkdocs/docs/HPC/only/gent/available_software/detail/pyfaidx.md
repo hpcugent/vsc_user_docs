@@ -6,6 +6,10 @@ hide:
 pyfaidx
 =======
 
+
+pyfaidx: efficient pythonic random access to fasta subsequences
+
+https://pypi.python.org/pypi/pyfaidx
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using pyfaidx, load one of these modules using a `module load` command 
 module load pyfaidx/0.7.2.1-GCCcore-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

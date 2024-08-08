@@ -6,6 +6,10 @@ hide:
 FreeImage
 =========
 
+
+FreeImage is an Open Source library project for developers who would like to support popular graphicsimage formats like PNG, BMP, JPEG, TIFF and others as needed by today's multimedia applications. FreeImage is easy touse, fast, multithreading safe.
+
+http://freeimage.sourceforge.net
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using FreeImage, load one of these modules using a `module load` comman
 module load FreeImage/3.18.0-GCCcore-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

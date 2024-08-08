@@ -6,6 +6,10 @@ hide:
 kneaddata
 =========
 
+
+KneadData is a tool designed to perform quality control on metagenomic andmetatranscriptomic sequencing data, especially data from microbiome experiments.
+
+http://huttenhower.sph.harvard.edu/kneaddata
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using kneaddata, load one of these modules using a `module load` comman
 module load kneaddata/0.12.0-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |kneaddata/0.12.0-foss-2022a|x|x|x|x|x|x|
+
+
+### kneaddata/0.12.0-foss-2022a
+
+This is a list of extensions included in the module:
+
+kneaddata-0.12.0

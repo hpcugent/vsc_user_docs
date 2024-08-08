@@ -6,6 +6,10 @@ hide:
 Doxygen
 =======
 
+
+Doxygen is a documentation system for C++, C, Java, Objective-C, Python, IDL (Corba and Microsoft flavors), Fortran, VHDL, PHP, C#, and to some extent D.
+
+https://www.doxygen.org
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Doxygen, load one of these modules using a `module load` command 
 module load Doxygen/1.9.7-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 arpack-ng
 =========
 
+
+ARPACK is a collection of Fortran77 subroutines designed to solve large scale eigenvalue problems.
+
+https://github.com/opencollab/arpack-ng
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using arpack-ng, load one of these modules using a `module load` comman
 module load arpack-ng/3.9.0-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 NGSpeciesID
 ===========
 
+
+NGSpeciesID is a tool for clustering and consensus forming of targeted ONT reads.
+
+https://github.com/ksahlin/NGSpeciesID
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using NGSpeciesID, load one of these modules using a `module load` comm
 module load NGSpeciesID/0.1.2.1-foss-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

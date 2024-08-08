@@ -6,6 +6,10 @@ hide:
 Multiwfn
 ========
 
+
+Multiwfn is an extremely powerful program for realizingi electronic wavefunction analysis, which is a key ingredient of quantum chemistry. Multiwfn is free, open-source, high-efficient, very user-friendly and flexible, it supports almost all of the most important wavefunction analysis methods.
+
+http://sobereva.com/multiwfn/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Multiwfn, load one of these modules using a `module load` command
 module load Multiwfn/3.6-intel-2019b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

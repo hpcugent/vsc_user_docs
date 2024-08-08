@@ -6,6 +6,10 @@ hide:
 MEGAN
 =====
 
+
+MEGAN is a comprehensive toolbox for interactively analyzing microbiome data
+
+http://megan.informatik.uni-tuebingen.de/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using MEGAN, load one of these modules using a `module load` command li
 module load MEGAN/6.25.3-Java-17
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

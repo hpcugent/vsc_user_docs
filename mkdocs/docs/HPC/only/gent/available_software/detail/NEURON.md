@@ -6,6 +6,10 @@ hide:
 NEURON
 ======
 
+
+Empirically-based simulations of neurons and networks of neurons.
+
+https://www.neuron.yale.edu/neuron
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using NEURON, load one of these modules using a `module load` command l
 module load NEURON/7.8.2-foss-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

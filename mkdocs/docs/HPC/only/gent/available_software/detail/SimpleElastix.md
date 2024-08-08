@@ -6,6 +6,10 @@ hide:
 SimpleElastix
 =============
 
+
+Multi-lingual medical image registration library.
+
+https://simpleelastix.github.io
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using SimpleElastix, load one of these modules using a `module load` co
 module load SimpleElastix/1.1.0-foss-2019b-Python-3.7.4
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

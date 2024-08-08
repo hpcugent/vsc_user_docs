@@ -6,6 +6,10 @@ hide:
 libjpeg-turbo
 =============
 
+
+libjpeg-turbo is a fork of the original IJG libjpeg which uses SIMD to accelerate baseline JPEG compression and decompression. libjpeg is a library that implements JPEG image encoding, decoding and transcoding.
+
+https://sourceforge.net/projects/libjpeg-turbo/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using libjpeg-turbo, load one of these modules using a `module load` co
 module load libjpeg-turbo/3.0.1-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

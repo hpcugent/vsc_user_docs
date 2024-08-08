@@ -6,6 +6,10 @@ hide:
 BEDOPS
 ======
 
+
+BEDOPS is an open-source command-line toolkit that performs highly efficient and scalable Boolean and other set operations, statistical calculations, archiving, conversion and other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for distributing whole-genome analyses across a computational cluster.
+
+http://bedops.readthedocs.io/en/latest/index.html
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using BEDOPS, load one of these modules using a `module load` command l
 module load BEDOPS/2.4.41-foss-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 jbigkit
 =======
 
+
+JBIG-KIT is a software implementation of the JBIG1 data compression standard (ITU-T T.82), which was designed for bi-level image data, such as scanned documents.
+
+https://www.cl.cam.ac.uk/~mgk25/jbigkit/
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using jbigkit, load one of these modules using a `module load` command 
 module load jbigkit/2.1-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

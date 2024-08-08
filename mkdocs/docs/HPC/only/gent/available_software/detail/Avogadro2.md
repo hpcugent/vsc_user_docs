@@ -6,6 +6,10 @@ hide:
 Avogadro2
 =========
 
+
+Avogadro is an advanced molecule editor and visualizer designed for cross-platform     use in computational chemistry, molecular modeling, bioinformatics, materials science,     and related areas.
+
+https://two.avogadro.cc/index.html
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using Avogadro2, load one of these modules using a `module load` comman
 module load Avogadro2/1.97.0-linux-x86_64
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

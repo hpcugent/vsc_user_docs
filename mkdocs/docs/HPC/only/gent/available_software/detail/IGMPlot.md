@@ -6,6 +6,10 @@ hide:
 IGMPlot
 =======
 
+
+IGMPlot is a free open-source program developed to identify molecular interactions and prepare data to build 2D and 3D representations of them in the molecular environment.
+
+http://igmplot.univ-reims.fr
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using IGMPlot, load one of these modules using a `module load` command 
 module load IGMPlot/2.4.2-iccifort-2019.5.281
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

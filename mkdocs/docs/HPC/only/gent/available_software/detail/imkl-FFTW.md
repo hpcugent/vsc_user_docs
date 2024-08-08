@@ -6,6 +6,10 @@ hide:
 imkl-FFTW
 =========
 
+
+FFTW interfaces using Intel oneAPI Math Kernel Library
+
+https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onemkl.html
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using imkl-FFTW, load one of these modules using a `module load` comman
 module load imkl-FFTW/2023.1.0-iimpi-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

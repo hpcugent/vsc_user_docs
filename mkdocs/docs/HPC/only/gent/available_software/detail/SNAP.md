@@ -6,6 +6,10 @@ hide:
 SNAP
 ====
 
+
+Scalable Nucleotide Alignment Program -- a fast and accurate read aligner for high-throughput sequencing data
+
+https://www.microsoft.com/en-us/research/project/snap
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using SNAP, load one of these modules using a `module load` command lik
 module load SNAP/2.0.1-GCC-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -6,6 +6,10 @@ hide:
 jupyter-contrib-nbextensions
 ============================
 
+
+A collection of various notebook extensions for Jupyter
+
+https://github.com/ipython-contrib/jupyter_contrib_nbextensions
 # Available modules
 
 
@@ -17,8 +21,15 @@ To start using jupyter-contrib-nbextensions, load one of these modules using a `
 module load jupyter-contrib-nbextensions/0.7.0-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |jupyter-contrib-nbextensions/0.7.0-GCCcore-11.3.0|x|x|x|x|x|x|
+
+
+### jupyter-contrib-nbextensions/0.7.0-GCCcore-11.3.0
+
+This is a list of extensions included in the module:
+
+jupyter_contrib_core-0.4.2, jupyter_contrib_nbextensions-0.7.0, jupyter_highlight_selected_word-0.2.0, jupyter_nbextensions_configurator-0.6.1

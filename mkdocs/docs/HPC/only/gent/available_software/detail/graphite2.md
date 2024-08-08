@@ -6,6 +6,10 @@ hide:
 graphite2
 =========
 
+
+Graphite is a "smart font" system developed specifically to handle the complexities of lesser-known languages of the world.
+
+https://scripts.sil.org/cms/scripts/page.php?site_id=projects&item_id=graphite_home
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using graphite2, load one of these modules using a `module load` comman
 module load graphite2/1.3.14-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

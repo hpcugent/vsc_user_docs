@@ -6,6 +6,10 @@ hide:
 utf8proc
 ========
 
+
+utf8proc is a small, clean C library that provides Unicode normalization, case-folding, and other operations for data in the UTF-8 encoding.
+
+https://github.com/JuliaStrings/utf8proc
 # Available modules
 
 
@@ -17,7 +21,7 @@ To start using utf8proc, load one of these modules using a `module load` command
 module load utf8proc/2.8.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Fri, 08 Mar 2024 at 09:35:19 CET)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
