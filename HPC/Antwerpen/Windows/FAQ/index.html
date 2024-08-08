@@ -1004,6 +1004,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#how-can-i-get-more-storage-space" class="md-nav__link">
+    How can I get more storage space?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#why-cant-i-use-the-sudo-command" class="md-nav__link">
     Why can't I use the sudo command?
   </a>
@@ -1319,6 +1326,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#how-can-i-get-more-storage-space" class="md-nav__link">
+    How can I get more storage space?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#why-cant-i-use-the-sudo-command" class="md-nav__link">
     Why can't I use the sudo command?
   </a>
@@ -1515,7 +1529,7 @@ information, see .</p>
 There is a standard inode limit in place that will be increased if needed. 
 The number of inodes used per file system can be checked on <a href="https://account.vscentrum.be">the VSC account page</a>.</p>
 <p>Possible solutions to this problem include cleaning up unused files and directories or 
-<a href="../linux-tutorial/manipulating_files_and_directories/?h=zip#zipping-gzipgunzip-zipunzip">compressing directories with a lot of files into zip- or tar-files</a>.</p>
+<a href="../linux-tutorial/manipulating_files_and_directories/#zipping-gzipgunzip-zipunzip">compressing directories with a lot of files into zip- or tar-files</a>.</p>
 <p>If the problem persists, feel free to <a href="./#i-have-another-questionproblem">contact support</a>.</p>
 <h2 id="other">Other<a class="headerlink" href="#other" title="Permanent link">#</a></h2>
 <h3 id="can-i-share-my-account-with-someone-else">Can I share my account with someone else?<a class="headerlink" href="#can-i-share-my-account-with-someone-else" title="Permanent link">#</a></h3>
@@ -1592,11 +1606,17 @@ recommended to keep switching between VO's (to supervise groups, for example).</
 <h3 id="my-home-directory-is-almost-full-and-i-dont-know-why">My home directory is (almost) full, and I don't know why<a class="headerlink" href="#my-home-directory-is-almost-full-and-i-dont-know-why" title="Permanent link">#</a></h3>
 <p>Your home directory might be full without looking like it due to hidden files.
 Hidden files and subdirectories have a name starting with a dot and do not show up when running <code>ls</code>.
-If you want to check where the storage in your home directory is used, you can make use of the <a href="https://docs.hpc.ugent.be/Linux/running_jobs_with_input_output_data/#check-your-quota"><code>du</code> command</a> to find out what the largest files and subdirectories are:</p>
+If you want to check where the storage in your home directory is used, you can make use of the <a href="../running_jobs_with_input_output_data/#check-your-quota"><code>du</code> command</a> to find out what the largest files and subdirectories are:</p>
 <div class="highlight"><pre><span></span><code>du<span class="w"> </span>-h<span class="w"> </span>--max-depth<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nv">$VSC_HOME</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>egrep<span class="w"> </span><span class="s1">&#39;[0-9]{3}M|[0-9]G&#39;</span>
 </code></pre></div>
-<p>The <code>du</code> command returns the size of every file and subdirectory in the $VSC_HOME directory. This output is then piped into an <a href="https://docs.hpc.ugent.be/Linux/linux-tutorial/beyond_the_basics/?h=grep#searching-file-contents-grep"><code>egrep</code></a> to filter the lines to the ones that matter the most.</p>
+<p>The <code>du</code> command returns the size of every file and subdirectory in the $VSC_HOME directory. This output is then piped into an <a href="../linux-tutorial/beyond_the_basics/#searching-file-contents-grep"><code>egrep</code></a> to filter the lines to the ones that matter the most.</p>
 <p>The <code>egrep</code> command will only let entries that match with the specified regular expression <code>[0-9]{3}M|[0-9]G</code> through, which corresponds with files that consume more than 100 MB.</p>
+<h3 id="how-can-i-get-more-storage-space">How can I get more storage space?<a class="headerlink" href="#how-can-i-get-more-storage-space" title="Permanent link">#</a></h3>
+<p><a href="../running_jobs_with_input_output_data/#quota">By default</a> you get 3 GB of storage space for your home directory and 25 GB in your personal directories on both the data (<code>$VSC_DATA</code>) and scratch (<code>$VSC_SCRATCH</code>) filesystems.
+It is not possible to expand the storage quota for these personal directories.</p>
+<p>You can get more storage space through a <a href="../running_jobs_with_input_output_data/#virtual-organisations">Virtual Organisation (VO)</a>,
+which will give you access to the <a href="../running_jobs_with_input_output_data/#vo-directories">additional directories</a> in a subdirectory specific to that VO (<code>$VSC_DATA_VO</code> and <code>$VSC_SCRATCH_VO</code>).
+The moderators of a VO can <a href="../running_jobs_with_input_output_data/#requesting-more-storage-space">request more storage</a> for their VO.</p>
 <h3 id="why-cant-i-use-the-sudo-command">Why can't I use the <code>sudo</code> command?<a class="headerlink" href="#why-cant-i-use-the-sudo-command" title="Permanent link">#</a></h3>
 <p>When you attempt to use sudo, you will be prompted for a password. 
 However, you cannot enter a valid password because this feature is reserved exclusively for HPC administrators.</p>
