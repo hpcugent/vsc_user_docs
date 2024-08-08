@@ -20,6 +20,7 @@ nav:
   - Interactive and debug cluster: interactive_debug.md
 {%- endif %}
   - XDMoD portal: xdmod.md
+  - Torque frontend via jobcli: torque_frontend_via_jobcli.md
   - Troubleshooting: troubleshooting.md
   - HPC Policies: sites/hpc_policies.md
   - Advanced topics:
