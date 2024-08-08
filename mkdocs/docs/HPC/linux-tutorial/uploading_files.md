@@ -85,8 +85,8 @@ a lot of distributions.
 For example, to copy a folder with lots of CSV files:
 <pre><code>$ <b>rsync -rzv testfolder vsc40000@login.hpc.ugent.be:data/</b></code></pre>
 
-will copy the folder `testfolder` and its contents to `$VSC_DATA` on the
-, assuming the `data` symlink is present in your home directory, see 
+will copy the folder `testfolder` and its contents to `$VSC_DATA`, 
+assuming the `data` symlink is present in your home directory, see 
 [symlinks section](uploading_files.md#symlinks-for-datascratch).
 
 The `-r` flag means "recursively", the `-z` flag means that compression
@@ -106,10 +106,26 @@ See `man rsync` or <https://linux.die.net/man/1/rsync> for more
 information about rsync.
 
 ## Exercises
-1.  Download the file `/etc/hostname` to your local computer.
 
-2.  Upload a file to a subdirectory of your personal `$VSC_DATA` space.
+??? abstract "Download the file `/etc/hostname` to your local computer."
+    ```bash
+    rsync -rzv vsc40000@login.hpc.ugent.be:/etc/hostname local_folder
+    ```
 
-3.  Create a file named `hello.txt` and edit it using `nano`.
+    Don't forget to change `vsc40000` to your own username.
+
+??? abstract "Upload a file to a subdirectory of your personal `$VSC_DATA` space."
+    ```bash
+    rsync -rzv testfolder vsc40000@login.hpc.ugent.be:$VSC_DATA/subdirectory/
+    ```
+
+    Don't forget to change `vsc40000` to your own username.
+
+??? abstract "Create a file named `hello.txt` and edit it using `nano`."
+    ```bash
+    touch hello.txt
+    nano hello.txt
+    ```
+    The `touch` command creates a new file named `hello.txt`, and the `nano` command opens this file in the nano editor for editing.
 
 Now you have a basic understanding, see next [chapter](beyond_the_basics.md) for some more in depth concepts.
