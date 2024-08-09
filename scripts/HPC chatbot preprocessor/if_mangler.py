@@ -1,41 +1,53 @@
 import re
-import os
-
-
-def create_directory(new_directory):
-    if not os.path.exists(new_directory):
-        os.mkdir(new_directory)
-
-create_directory(".\\if_mangled_files")
 
 # global variable to keep track of latest if-statement scope
-is_os = False
+is_os = 0 # Can be 0, 1 or 2 {0: not in an os-if; 1: in a non-os-if nested in an os-if; 2: in an os-if}
 
 
 def mangle_os_ifs(line):
     global is_os
 
-    match = re.search(r'\{%-\s[^%]*%}', line)
-    if_match = re.search(r'\{%-\sif [^%]*%}', line)
-    if_os_match = re.search(r'\{%-\sif OS == [^%]*%}', line)
+    match = re.search(r'\{%(.*?)%}(.*)', line)
 
-    if match:
-        if if_match:
+    start_index = 0
+    added_length = 0
+
+    while match:
+
+        constr_match = re.search(r'\{%.*?%}', match.string)
+        if_match = re.search(r'if ', match.group(1))
+        if_os_match = re.search(r'if OS == ', match.group(1))
+        endif_match = re.search(r'endif', match.group(1))
+
+        if endif_match:
+            if is_os == 2:
+                line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[
+                                                                                               constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[
+                                                                                                                                                                                                                     constr_match.end() + start_index + added_length - 1:]
+                added_length += 8
+                is_os = 0
+            elif is_os == 1:
+                is_os = 2
+        elif if_match:
             if if_os_match:
-                is_os = True
-                line = line[:match.start() + 1] + "-if-" + line[match.start() + 1:match.end() - 1] + "-if-" + line[match.end() - 1:]
+                line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[
+                                                                                               constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[
+                                                                                                                                                                                                                     constr_match.end() + start_index + added_length - 1:]
+                added_length += 8
+                is_os = 2
             else:
-                is_os = False
+                if is_os == 2:
+                    is_os = 1
+                else:
+                    is_os = 0
         else:
-            if is_os:
-                line = line[:match.start() + 1] + "-if-" + line[match.start() + 1:match.end() - 1] + "-if-" + line[match.end() - 1:]
-
-    match = re.search(r'\{%-\s[^%]*%}', line)
-
-    while match and is_os:
-        line = line[:match.start() + 1] + "-if-" + line[match.start() + 1:match.end() - 1] + "-if-" + line[match.end() - 1:]
-        match = re.search(r'\{%-\s[^%]*%}', line)
-
+            if is_os == 2:
+                line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[
+                                                                                               constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[
+                                                                                                                                                                                                                     constr_match.end() + start_index + added_length - 1:]
+                added_length += 8
+        start_index += constr_match.end()
+        match = re.search(r'\{%(.*?)%}(.*)', match.group(2))
     return line
 
 
