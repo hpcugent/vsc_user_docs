@@ -17,10 +17,6 @@ if not os.path.exists(".\\parsed_mds"):
 if not os.path.exists(".\\if_mangled_files"):
     os.mkdir(".\\if_mangled_files")
 
-# copy the examples to the right location wrt the script in order to allow jinja to work
-if not os.path.exists(".\\examples"):
-    shutil.copytree("..\\..\\mkdocs\\docs\\HPC\\examples", ".\\examples")
-
 ################### define global variables ###################
 
 # variable that keeps track of the source directories
@@ -40,8 +36,10 @@ for source_directory in source_directories:
     for file in files:
         filenames[file] = os.path.join(source_directory, file)
 
+# TODO: find solution for duplicate filenames between linux tutorial and normal files
 
-# filenames = {'account.md': '..\\..\\mkdocs\\docs\\HPC\\account.md'}
+# TODO: problem-files (other layout than normal markdown-files)
+problem_files = ["linux_tutorial\\getting_started.md", "linux_tutorial\\navigating.md"]
 
 
 ################### define functions ###################
@@ -72,9 +70,9 @@ def reset_link_lists():
 
 # function that uses the check_for_title_logic function to create the appropriate directories and update the necessary variables
 def check_for_title(curr_line):
-    global curr_dirs, last_title
+    global curr_dirs, last_title, in_code_block
     logic_output = check_for_title_logic(curr_line)
-    if logic_output == 0:
+    if logic_output == 0 or in_code_block:
         return 0, None, None
     else:
         if last_title is not None:
@@ -97,6 +95,13 @@ def check_for_title(curr_line):
 
         update_lower_curr_dir(curr_dirs[logic_output], logic_output)
         return logic_output, make_valid_title(curr_line[logic_output + 1:-1].replace(' ', '-')), curr_dirs[logic_output]
+
+
+# function used to detect codeblocks and make sure the comments don't get detected as titles
+def detect_in_code_block(curr_line):
+    global in_code_block
+    if '```' in curr_line or (('<pre><code>' in curr_line) ^ ('</code></pre>' in curr_line)):
+        in_code_block = not in_code_block
 
 
 # function that creates directories if needed
@@ -227,6 +232,7 @@ def choose_and_write_to_file(curr_line):
 def add_reference_link(file_location, reference_link):
     with open(file_location, 'a') as write_file:
         write_file.write("\nreference: " + reference_link + "\n")
+    # TODO: fix trailing spaces in filename
 
 
 # function that adds the links that should be at the end of a file
@@ -260,6 +266,7 @@ def make_valid_title(s):
 
 for filename in filenames.keys():
     try:
+    # if True:
         # make a copy of one of the md files to test some things
         shutil.copyfile(filenames[filename],
                         ".\\copies\\" + filename)
@@ -293,13 +300,10 @@ for filename in filenames.keys():
         # variable that shows whether the first title has been reached yet
         after_first_title = False
 
-        ################### actually parse the md file ###################
+        # variable that is used to be sure that we are detecting titles and not comments from codeblocks
+        in_code_block = False
 
-        # remove the old directories if needed
-        remove_directory_tree(root_dir_generic)
-        remove_directory_tree(root_dir_os_specific_linux)
-        remove_directory_tree(root_dir_os_specific_windows)
-        remove_directory_tree(root_dir_os_specific_macos)
+        ################### actually parse the md file ###################
 
         # create directories for the source markdown file
         create_directory(root_dir_generic)
@@ -321,6 +325,8 @@ for filename in filenames.keys():
             for line in readfile:
                 title_level, title, directory = check_for_title(line)
 
+                detect_in_code_block(line)
+
                 # line is a title with a maximum depth of 3
                 if title_level > 0:
                     last_title_level = title_level
@@ -341,6 +347,9 @@ for filename in filenames.keys():
                         choose_and_write_to_file(next_action[2])
 
         # write end of file for the last file
+        # print(root_dir_generic)
+        # print(last_directory)
+        # print(filename)
         write_end_of_file(root_dir_generic + last_directory + "\\" + last_title + ".txt", "", links_generic)
         write_end_of_file(root_dir_os_specific_linux + last_directory + "\\" + last_title + ".txt", "Linux",
                           links_linux)
@@ -348,12 +357,13 @@ for filename in filenames.keys():
                           links_windows)
         write_end_of_file(root_dir_os_specific_macos + last_directory + "\\" + last_title + ".txt", "macOS",
                           links_macos)
-        print("Parsing succeeded for file: " + filename)
         succeeded += 1
     except:
         print("Parsing failed for file: " + filename)
         failed += 1
 
 print("Success ratio: " + str(succeeded/(succeeded + failed) * 100) + "%")
+print("Although this ratio should be taken with a grain of salt as a number of other fixes need to be implemented as well, they just don't cause any errors.")
 
 # TODO: directory cleanup
+# TODO: reconsider maximum depth to be detected as title
