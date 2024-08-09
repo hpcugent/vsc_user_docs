@@ -1,7 +1,7 @@
 import re
 
 # global variable to keep track of latest if-statement scope
-is_os = 0 # Can be 0, 1 or 2 {0: not in an os-if; 1: in a non-os-if nested in an os-if; 2: in an os-if}
+is_os = 0 # Can be 0, 1, 2 or 3 {0: not in an os-if; 1: in a non-os-if nested in an os-if; 2: in an os-if; 3: in an os-if nested in an os-if}
 
 
 def mangle_os_ifs(line):
@@ -26,22 +26,35 @@ def mangle_os_ifs(line):
                                                                                                                                                                                                                      constr_match.end() + start_index + added_length - 1:]
                 added_length += 8
                 is_os = 0
-            elif is_os == 1:
-                is_os = 2
-        elif if_match:
-            if if_os_match:
+            if is_os == 3:
                 line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[
                                                                                                constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[
                                                                                                                                                                                                                      constr_match.end() + start_index + added_length - 1:]
                 added_length += 8
                 is_os = 2
+            elif is_os == 1:
+                is_os = 2
+        elif if_match:
+            if if_os_match:
+                if is_os == 2:
+                    line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[
+                                                                                                   constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[
+                                                                                                                                                                                                                         constr_match.end() + start_index + added_length - 1:]
+                    added_length += 8
+                    is_os = 3
+                else:
+                    line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[
+                                                                                                   constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[
+                                                                                                                                                                                                                         constr_match.end() + start_index + added_length - 1:]
+                    added_length += 8
+                    is_os = 2
             else:
                 if is_os == 2:
                     is_os = 1
                 else:
                     is_os = 0
         else:
-            if is_os == 2:
+            if is_os == 2 or is_os == 3:
                 line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[
                                                                                                constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[
                                                                                                                                                                                                                      constr_match.end() + start_index + added_length - 1:]
