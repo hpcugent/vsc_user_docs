@@ -1,5 +1,5 @@
 import yaml
-from jinja2 import Template
+from jinja2 import Template, FileSystemLoader, Environment, ChoiceLoader
 from if_mangler import mangle_ifs
 
 
@@ -17,7 +17,9 @@ def jinja_parser(filename):
         md_content = md_file.read()
 
     # Use Jinja2 to replace the macros
-    template = Template(md_content)
+    templateloader = ChoiceLoader([FileSystemLoader(searchpath='.\\if_mangled_files'), FileSystemLoader(searchpath="..\\..\\mkdocs\\docs\\HPC")])
+    templateEnv = Environment(loader=templateloader)
+    template = templateEnv.get_template(filename)
     rendered_content = template.render(words_dict)
 
     # Save the rendered content to a new file
