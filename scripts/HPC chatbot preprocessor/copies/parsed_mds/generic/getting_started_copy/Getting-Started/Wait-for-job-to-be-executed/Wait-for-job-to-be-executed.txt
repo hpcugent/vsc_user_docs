@@ -1,0 +1,26 @@
+
+Your job is put into a queue before being executed, so it may take a while before it actually starts.
+(see when will my job start?[1] for scheduling policy).
+
+You can get an overview of the active jobs using the `qstat` command:
+<pre><code>$ qstat
+Job ID     Name             User            Time Use S Queue
+---------- ---------------- --------------- -------- - -------
+{{jobid}}     run.sh           {{userid}}        0:00:00  <b style="color:orange">Q</b> {{othercluster}}
+</code></pre> 
+
+Eventually, after entering `qstat` again you should see that your job has started running:
+<pre><code>$ qstat
+Job ID     Name             User            Time Use S Queue
+---------- ---------------- --------------- -------- - -------
+{{jobid}}     run.sh           {{userid}}        0:00:01  <b style="color:green">R</b> {{othercluster}}
+</code></pre> 
+
+If you don't see your job in the output of the `qstat` command anymore, your job has likely completed.
+
+Read this section[2] on how to interpret the output.
+
+[1]: running_batch_jobs.md#when-will-my-job-start
+[2]: running_batch_jobs.md#monitoring-and-managing-your-jobs
+
+reference: docs.hpc.ugent.be/getting_started_copy/#wait-for-job-to-be-executed

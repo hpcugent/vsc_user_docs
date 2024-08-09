@@ -1,0 +1,18 @@
+it is recommended to make use of the `ssh` command in a terminal to get the most flexibility. 
+
+Assuming you have already generated SSH keys in the previous step (Getting Access[1]), and that they are in a default location, you should now be able to login by running the following command:
+
+<pre><code>ssh {{userid}}@{{loginnode}}</code></pre>
+
+!!! Warning "User your own VSC account id"
+    
+    Replace <b>{{userid}}</b> with your VSC account id (see <https://account.vscentrum.be>)
+
+!!! Tip
+
+    You can also still use the web portal (see shell access on web portal[2])
+
+[1]: #getting-access
+[2]: web_portal.md#shell-access
+
+reference: docs.hpc.ugent.be/Linux/getting_started_copy/#getting-connected

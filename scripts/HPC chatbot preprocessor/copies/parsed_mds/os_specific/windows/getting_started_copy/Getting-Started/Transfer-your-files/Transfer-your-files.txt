@@ -1,0 +1,15 @@
+
+The HPC-UGent web portal[1] provides a file browser that allows uploading files.
+For more information see the file browser section[2].
+
+Upload both files (`run.sh` and `tensorflow-mnist.py`) to your **home directory** and go back to your shell.
+
+!!! Info
+
+    As an alternative, you can use WinSCP (see our section[3])
+
+[1]: https://login.hpc.ugent.be
+[2]: web_portal.md#file-browser
+[3]: connecting.md#winscp
+
+reference: docs.hpc.ugent.be/Windows/getting_started_copy/#transfer-your-files

@@ -1,0 +1,19 @@
+
+There are two options to connect
+
+- Using a terminal to connect via SSH (for power users) (see First Time connection to the HPC-UGent infrastructure[1])
+- Using the web portal[2]
+
+Considering your operating system is **{{OS}}**, 
+
+
+!!! Info
+
+    When having problems see the connection issues section on the troubleshooting page[3].
+
+
+[1]: connecting.md#first-time-connection-to-the-hpc-infrastructure
+[2]: web_portal.md
+[3]: troubleshooting.md#sec:connecting-issues
+
+reference: docs.hpc.ugent.be/getting_started_copy/#getting-connected

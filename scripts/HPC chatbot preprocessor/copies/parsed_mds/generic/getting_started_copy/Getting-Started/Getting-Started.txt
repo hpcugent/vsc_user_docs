@@ -1,0 +1,11 @@
+
+Welcome to the "Getting Started" guide. This chapter will lead you through the initial steps of logging into the HPC-UGent infrastructure and submitting your very first job. We'll also walk you through the process step by step using a practical example.
+
+In addition to this chapter, you might find the recording of the *Introduction to HPC-UGent* training session[1] to be a useful resource.
+
+Before proceeding, read the introduction to HPC[2] to gain an understanding of the HPC-UGent infrastructure and related terminology.
+
+[1]: https://www.ugent.be/hpc/en/training/introhpcugent-recording
+[2]: introduction.md
+
+reference: docs.hpc.ugent.be/getting_started_copy/#getting-started
