@@ -1,6 +1,7 @@
 import os
 import re
 import shutil
+from jinja_parser import jinja_parser
 
 # test_number = int(input("Which test should be run?"))
 #
@@ -26,6 +27,9 @@ import shutil
 if not os.path.exists(".\\copies"):
     os.mkdir(".\\copies")
 
+if not os.path.exists(".\\parsed_mds"):
+    os.mkdir(".\\parsed_mds")
+
 # make a copy of one of the md files to test some things
 shutil.copyfile("..\\..\\mkdocs\\docs\\HPC\\getting_started.md",
                 ".\\copies\\getting_started_copy.md")
@@ -38,10 +42,10 @@ filename = "getting_started_copy.md"
 main_title = filename[:-3]
 
 # variable that keeps track of the directories that are used to write in at different levels
-root_dir_generic = ".\\copies\\parsed_mds\\generic\\"
-root_dir_os_specific_linux = ".\\copies\\parsed_mds\\os_specific\\linux\\"
-root_dir_os_specific_windows = ".\\copies\\parsed_mds\\os_specific\\windows\\"
-root_dir_os_specific_macos = ".\\copies\\parsed_mds\\os_specific\\macos\\"
+root_dir_generic = ".\\parsed_mds\\generic\\"
+root_dir_os_specific_linux = ".\\parsed_mds\\os_specific\\linux\\"
+root_dir_os_specific_windows = ".\\parsed_mds\\os_specific\\windows\\"
+root_dir_os_specific_macos = ".\\parsed_mds\\os_specific\\macos\\"
 curr_dirs = [filename[:-3] for i in range(4)]
 
 # variable to keep track whether we're dealing with OS-specific info or not
@@ -62,17 +66,10 @@ links_linux = []
 links_windows = []
 links_macos = []
 
-# dictionaries to keep track of current OS and location
+# dictionaries to keep track of current OS
 active_OS_if_states = {"linux": "inactive", "windows": "inactive", "macos": "inactive"}
-active_site_if_states = {"Gent": "inactive", "not-Gent": "inactive"}
 
-# variable to keep track of the type of if-statement
-if_type = "OS"
-
-# variable to keep track of the macro-replacements at the top of markdown files
-replacements = {}
-
-# variable that is used to detect whether the first title has been encountered yet
+# variable that shows whether the first title has been reached yet
 after_first_title = False
 
 
@@ -82,13 +79,6 @@ after_first_title = False
 def remove_directory_tree(old_directory):
     if os.path.exists(old_directory):
         shutil.rmtree(old_directory)
-
-
-# function that checks the first lines of a file until a title is found and saves the macro-replacements to the list
-def save_replacements(curr_line):
-    global replacements
-    match = re.search(r'\{% set (.*?)="(.*?)" %}', curr_line)
-    replacements[match.group(1)] = match.group(2)
 
 
 # function that checks whether the current line has a title of level 3 at maximum (returns the level of the title or 0 if the line is not a title)
@@ -151,13 +141,6 @@ def update_lower_curr_dir(curr_directory, level):
 # function that replaces certain markdown structures with the equivalent used on the website
 def replace_markdown_markers(curr_line, linklist):
 
-    # replace {{hpcinfra}}
-    curr_line = re.sub(r'\{\{\s*hpcinfra\s*}}', "HPC-UGent infrastructure", curr_line)
-
-    # replace other replacement macros
-    for macro in replacements.keys():
-        curr_line = re.sub(r'\{\{\s*' + re.escape(macro) + r'\s*}}', replacements[macro], curr_line)
-
     # replace links with a reference
     matches = re.findall(r'\[(.*?)]\((.*?)\)', curr_line)
     if matches:
@@ -177,13 +160,12 @@ def replace_markdown_markers(curr_line, linklist):
 
 # function that checks for if-statements
 def check_if_statements(curr_line):
-    global if_type
 
     # check whether the first part of the line contains information wrt if-statements
-    match = re.search(r'^\{%-\s([^%]*)%}(.*)', curr_line)
+    match = re.search(r'^\{-if-%-\s([^%]*)%-if-}(.*)', curr_line)
 
     # check whether the line contains information wrt if-statements that is not in its first part
-    match_large = re.search(r'^(.*)(\{%-\s[^%]*%})(.*)', curr_line)
+    match_large = re.search(r'^(.*)(\{-if-%-\s[^%]*%-if-})(.*)', curr_line)
 
     if match:
         print("################################################################################")
@@ -202,34 +184,16 @@ def check_if_statements(curr_line):
                 if other_OS != OS and active_OS_if_states[other_OS] == "active":
                     active_OS_if_states[other_OS] = "inactive"
 
-            if_type = "OS"
-
-        # new if-statement wrt site
-        elif re.match(r'if site == ', content):
-            if re.search(r'(?i)gent', content):
-                active_site_if_states["Gent"] = "active"
-                active_site_if_states["not-Gent"] = "inactive"
-            else:
-                active_site_if_states["not-Gent"] = "active"
-                if active_site_if_states["Gent"] == "active":
-                    active_site_if_states["Gent"] = "inactive"
-            if_type = "site"
-
         # endif statement wrt OS
-        elif re.match(r'endif ', content) and if_type == "OS":
+        elif re.match(r'endif ', content):
             if str(1) in active_OS_if_states.values():
                 active_OS_if_states[list(active_OS_if_states.keys())[list(active_OS_if_states.values()).index(str(1))]] = "active"
             else:
                 for key in active_OS_if_states.keys():
                     active_OS_if_states[key] = "inactive"
 
-        # endif statement wrt site
-        elif re.match(r'endif ', content) and if_type == "site":
-            for key in active_site_if_states.keys():
-                active_site_if_states[key] = "inactive"
-
         # else statement wrt OS
-        elif re.match(r'else ', content) and if_type == "OS":
+        elif re.match(r'else ', content):
 
             i = 0
             for i in range(3):
@@ -246,18 +210,7 @@ def check_if_statements(curr_line):
                 position = list(active_OS_if_states.values()).index("inactive")
                 active_OS_if_states[key_list[position]] = "active"
 
-        # else statement wrt site
-        elif re.match(r'else ', content) and if_type == "site":
-
-            # change state of "Gent" and set not-Gent on active
-            if active_site_if_states["Gent"] == "inactive":
-                active_site_if_states["Gent"] = "active"
-            elif active_site_if_states["Gent"] == "active":
-                active_site_if_states["Gent"] = str(0)
-            active_site_if_states["not-Gent"] = "active"
-
         print(active_OS_if_states)
-        print(active_site_if_states)
 
         if len(match.group(2)) != 0:
             extra_message = match.group(2).lstrip()
@@ -273,7 +226,6 @@ def check_if_statements(curr_line):
     elif match_large:
         print("################################################################################")
         print(active_OS_if_states)
-        print(active_site_if_states)
         print(match_large.group(1))
         print(match_large.group(2))
         print("write_text_and_check_extra_message")
@@ -301,15 +253,14 @@ def write_text_to_file(file_name, curr_line):
 # function that decides what file to write text to
 def choose_and_write_to_file(curr_line):
     # check that the line is part of the website for gent
-    if active_site_if_states["Gent"] == "active" or active_site_if_states["Gent"] == "inactive" and active_site_if_states["not-Gent"] == "inactive":
-        if active_OS_if_states["linux"] == "inactive" and active_OS_if_states["windows"] == "inactive" and active_OS_if_states["macos"] == "inactive":
-            write_text_to_file(root_dir_generic + last_directory + "\\" + last_title + ".txt", curr_line)
-        if active_OS_if_states["linux"] == "active":
-            write_text_to_file(root_dir_os_specific_linux + last_directory + "\\" + last_title + ".txt", curr_line)
-        if active_OS_if_states["windows"] == "active":
-            write_text_to_file(root_dir_os_specific_windows + last_directory + "\\" + last_title + ".txt", curr_line)
-        if active_OS_if_states["macos"] == "active":
-            write_text_to_file(root_dir_os_specific_macos + last_directory + "\\" + last_title + ".txt", curr_line)
+    if active_OS_if_states["linux"] == "inactive" and active_OS_if_states["windows"] == "inactive" and active_OS_if_states["macos"] == "inactive":
+        write_text_to_file(root_dir_generic + last_directory + "\\" + last_title + ".txt", curr_line)
+    if active_OS_if_states["linux"] == "active":
+        write_text_to_file(root_dir_os_specific_linux + last_directory + "\\" + last_title + ".txt", curr_line)
+    if active_OS_if_states["windows"] == "active":
+        write_text_to_file(root_dir_os_specific_windows + last_directory + "\\" + last_title + ".txt", curr_line)
+    if active_OS_if_states["macos"] == "active":
+        write_text_to_file(root_dir_os_specific_macos + last_directory + "\\" + last_title + ".txt", curr_line)
 
 
 # function that adds a reference link at the end of every txt file
@@ -325,6 +276,7 @@ def write_end_of_file(file_location, OS, linklist):
 
     # add the links from within the document
     with open(file_location, 'a') as write_file:
+        write_file.write("\n\n")
         for i, link in enumerate(linklist):
             write_file.write("[" + str(i + 1) + "]: " + str(link) + "\n")
 
@@ -341,9 +293,8 @@ remove_directory_tree(root_dir_os_specific_windows)
 remove_directory_tree(root_dir_os_specific_macos)
 
 # create directories for the source markdown file
-create_directory(".\\copies\\parsed_mds")
 create_directory(root_dir_generic)
-create_directory(".\\copies\\parsed_mds\\os_specific")
+create_directory(".\\parsed_mds\\os_specific")
 create_directory(root_dir_os_specific_linux)
 create_directory(root_dir_os_specific_windows)
 create_directory(root_dir_os_specific_macos)
@@ -351,6 +302,9 @@ create_directory(root_dir_generic + curr_dirs[0])
 create_directory(root_dir_os_specific_linux + curr_dirs[0])
 create_directory(root_dir_os_specific_windows + curr_dirs[0])
 create_directory(root_dir_os_specific_macos + curr_dirs[0])
+
+# process the jinja macros
+jinja_parser(filename)
 
 # open the file and store line by line in the right file
 with open(".\\copies\\" + filename, 'r') as readfile:
@@ -366,22 +320,22 @@ with open(".\\copies\\" + filename, 'r') as readfile:
             after_first_title = True
 
         # line is not a title
-        else:
-            if after_first_title:
-                # check for if-statements and write the appropriate lines in the right files
-                next_action = check_if_statements(line)
-                while next_action[0] == "write_text_and_check_extra_message" or next_action[0] == "check_extra_message":
-                    if next_action[0] == "write_text_and_check_extra_message":
-                        choose_and_write_to_file(next_action[2])
-                    next_action = check_if_statements(next_action[1])
-
-                if next_action[0] == "write_text":
+        elif after_first_title:
+            # check for if-statements and write the appropriate lines in the right files
+            next_action = check_if_statements(line)
+            while next_action[0] == "write_text_and_check_extra_message" or next_action[0] == "check_extra_message":
+                if next_action[0] == "write_text_and_check_extra_message":
                     choose_and_write_to_file(next_action[2])
-            else:
-                save_replacements(line)
+                next_action = check_if_statements(next_action[1])
+
+            if next_action[0] == "write_text":
+                choose_and_write_to_file(next_action[2])
 
 # write end of file for the last file
 write_end_of_file(root_dir_generic + last_directory + "\\" + last_title + ".txt", "", links_generic)
 write_end_of_file(root_dir_os_specific_linux + last_directory + "\\" + last_title + ".txt", "Linux", links_linux)
 write_end_of_file(root_dir_os_specific_windows + last_directory + "\\" + last_title + ".txt", "Windows", links_windows)
 write_end_of_file(root_dir_os_specific_macos + last_directory + "\\" + last_title + ".txt", "macOS", links_macos)
+
+
+# TODO: directory cleanup
