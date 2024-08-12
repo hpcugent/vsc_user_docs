@@ -37,11 +37,11 @@ def remove_directory_tree(old_directory):
         shutil.rmtree(old_directory)
 
 
-# function that checks whether the current line has a title of level 3 at maximum (returns the level of the title or 0 if the line is not a title)
+# function that checks whether the current line has a title of level 4 at maximum (returns the level of the title or 0 if the line is not a title)
 def check_for_title_logic(curr_line):
     global curr_dirs
     match = re.match(r'^#+ ', curr_line)
-    if match and len(match.group(0)) <= 4:
+    if match and len(match.group(0)) <= 5:
         return len(match.group(0)) - 1
     else:
         return 0
@@ -64,13 +64,13 @@ def check_for_title(curr_line):
         return 0, None, None
     else:
         if last_title is not None:
-            write_end_of_file(root_dir_generic + last_directory + "\\" + last_title + ".txt", "", links_generic)
+            write_end_of_file(root_dir_generic + last_directory + "\\" + last_title + ".txt", "", links_generic, is_linux_tutorial)
             write_end_of_file(root_dir_os_specific_linux + last_directory + "\\" + last_title + ".txt", "Linux",
-                              links_linux)
+                              links_linux, is_linux_tutorial)
             write_end_of_file(root_dir_os_specific_windows + last_directory + "\\" + last_title + ".txt", "Windows",
-                              links_windows)
+                              links_windows, is_linux_tutorial)
             write_end_of_file(root_dir_os_specific_macos + last_directory + "\\" + last_title + ".txt", "macOS",
-                              links_macos)
+                              links_macos, is_linux_tutorial)
             reset_link_lists()
 
         curr_dirs[logic_output] = curr_dirs[logic_output - 1] + "\\" + make_valid_title(
@@ -124,12 +124,11 @@ def replace_markdown_markers(curr_line, linklist):
 
 # function that checks for if-statements
 def check_if_statements(curr_line):
-    # TODO: adapt regex for annoying inconsistencies
     # check whether the first part of the line contains information wrt if-statements
-    match = re.search(r'^\{-if-%-\s([^%]*)%-if-}(.*)', curr_line)
+    match = re.search(r'^\{-if-%([^%]*)%-if-}(.*)', curr_line)
 
     # check whether the line contains information wrt if-statements that is not in its first part
-    match_large = re.search(r'^(.*)(\{-if-%-\s[^%]*%-if-})(.*)', curr_line)
+    match_large = re.search(r'^(.*)(\{-if-%[^%]*%-if-})(.*)', curr_line)
 
     if match:
         content = match.group(1)
@@ -147,7 +146,7 @@ def check_if_statements(curr_line):
                     active_OS_if_states[other_OS] = "inactive"
 
         # endif statement wrt OS
-        elif re.search(r'endif ', content):
+        elif re.search(r'endif', content):
             if str(1) in active_OS_if_states.values():
                 active_OS_if_states[
                     list(active_OS_if_states.keys())[list(active_OS_if_states.values()).index(str(1))]] = "active"
@@ -156,7 +155,7 @@ def check_if_statements(curr_line):
                     active_OS_if_states[key] = "inactive"
 
         # else statement wrt OS
-        elif re.search(r'else ', content):
+        elif re.search(r'else', content):
 
             i = 0
             for i in range(3):
@@ -220,11 +219,10 @@ def choose_and_write_to_file(curr_line):
 def add_reference_link(file_location, reference_link):
     with open(file_location, 'a') as write_file:
         write_file.write("\nreference: " + reference_link + "\n")
-    # TODO: fix trailing spaces in filename
 
 
 # function that adds the links that should be at the end of a file
-def write_end_of_file(file_location, OS, linklist):
+def write_end_of_file(file_location, OS, linklist, is_linux_tutorial_):
     if len(OS) > 0:
         OS = OS + "/"
 
@@ -234,8 +232,13 @@ def write_end_of_file(file_location, OS, linklist):
         for i, link in enumerate(linklist):
             write_file.write("[" + str(i + 1) + "]: " + str(link) + "\n")
 
+    if is_linux_tutorial_:
+        linux_part = "linux-tutorial/"
+    else:
+        linux_part = ""
+
     # finally add the reference link
-    add_reference_link(file_location, "docs.hpc.ugent.be/" + OS + main_title + "/#" + last_title.lower())
+    add_reference_link(file_location, "docs.hpc.ugent.be/" + OS + linux_part + main_title + "/#" + ''.join(char.lower() for char in last_title if char.isalnum() or char == '-').strip('-'))
 
 
 # function that makes sure all titles can be used as valid filenames
@@ -243,11 +246,14 @@ def make_valid_title(s):
     # Define a regex pattern for invalid characters on both Windows and Linux
     invalid_chars = r'[<>:"/\\|?*\0()]'
 
+    # get rid of extra information between {} brackets
+    s = re.sub(r'\{.*?}', '', s)
+
     # Remove invalid characters
     valid_filename = re.sub(invalid_chars, '', s)
 
     # Strip leading/trailing whitespace
-    valid_filename = valid_filename.strip()
+    valid_filename = valid_filename.strip().strip('-')
 
     return valid_filename
 
@@ -272,19 +278,21 @@ if not os.path.exists(".\\if_mangled_files"):
 
 for filenames in [filenames_generic, filenames_linux]:
     for filename in filenames.keys():
-        # try:
-        if True:
-            # make a copy of one of the md files to test some things
-            if "linux-tutorial" in filenames[filename]:
+        try:
+            ################### define/reset loop specific variables ###################
+
+            # variable that keeps track of whether file is part of the linux tutorial
+            is_linux_tutorial = bool("linux-tutorial" in filenames[filename])
+
+            # make a copy of the original file in order to make sure the original does not get altered
+            if is_linux_tutorial:
                 copy_file = ".\\copies\\linux\\" + filename
             else:
                 copy_file = ".\\copies\\" + filename
             shutil.copyfile(filenames[filename], copy_file)
 
-            ################### define/reset loop specific variables ###################
-
             # variable that keeps track of the directories that are used to write in at different levels
-            if "linux-tutorial" in filenames[filename]:
+            if is_linux_tutorial:
                 root_dir_generic = ".\\parsed_mds\\generic\\linux_tutorial\\"
                 root_dir_os_specific_linux = ".\\parsed_mds\\os_specific\\linux\\linux_tutorial\\"
                 root_dir_os_specific_windows = ".\\parsed_mds\\os_specific\\windows\\linux_tutorial\\"
@@ -299,7 +307,7 @@ for filenames in [filenames_generic, filenames_linux]:
             main_title = filename[:-3]
 
             # variable that keeps track of the directories that are used to write in at different levels
-            curr_dirs = [filename[:-3] for i in range(4)]
+            curr_dirs = [filename[:-3] for i in range(5)]
 
             # variable to keep track whether we're dealing with OS-specific info or not
             OS_specific = False
@@ -353,7 +361,7 @@ for filenames in [filenames_generic, filenames_linux]:
 
                     detect_in_code_block(line)
 
-                    # line is a title with a maximum depth of 3
+                    # line is a title with a maximum depth of 4
                     if title_level > 0:
                         last_title_level = title_level
                         last_title = title
@@ -364,8 +372,7 @@ for filenames in [filenames_generic, filenames_linux]:
                     elif after_first_title:
                         # check for if-statements and write the appropriate lines in the right files
                         next_action = check_if_statements(line)
-                        while next_action[0] == "write_text_and_check_extra_message" or next_action[
-                            0] == "check_extra_message":
+                        while next_action[0] == "write_text_and_check_extra_message" or next_action[0] == "check_extra_message":
                             if next_action[0] == "write_text_and_check_extra_message":
                                 choose_and_write_to_file(next_action[2])
                             next_action = check_if_statements(next_action[1])
@@ -374,21 +381,22 @@ for filenames in [filenames_generic, filenames_linux]:
                             choose_and_write_to_file(next_action[2])
 
             # write end of file for the last file
-            write_end_of_file(root_dir_generic + last_directory + "\\" + last_title + ".txt", "", links_generic)
+            write_end_of_file(root_dir_generic + last_directory + "\\" + last_title + ".txt", "", links_generic, is_linux_tutorial)
             write_end_of_file(root_dir_os_specific_linux + last_directory + "\\" + last_title + ".txt", "Linux",
-                              links_linux)
+                              links_linux, is_linux_tutorial)
             write_end_of_file(root_dir_os_specific_windows + last_directory + "\\" + last_title + ".txt", "Windows",
-                              links_windows)
+                              links_windows, is_linux_tutorial)
             write_end_of_file(root_dir_os_specific_macos + last_directory + "\\" + last_title + ".txt", "macOS",
-                              links_macos)
+                              links_macos, is_linux_tutorial)
             succeeded += 1
-        # except:
-        #     print("Parsing failed for file: " + filename)
-        #     failed += 1
+        except:
+            print("Parsing failed for file: " + filename)
+            failed += 1
 
 print("Success ratio: " + str(succeeded / (succeeded + failed) * 100) + "%")
 print("Although this ratio should be taken with a grain of salt as a number of other fixes need to be implemented as well, they just don't cause any errors.")
 
-# TODO: directory cleanup
-# TODO: reconsider maximum depth to be detected as title
+remove_directory_tree(".\\copies")
+remove_directory_tree(".\\if_mangled_files")
+# TODO: reconsider maximum depth to be detected as title (now at four)
 # TODO: adapt script to be used from command line
