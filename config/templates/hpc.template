@@ -16,6 +16,7 @@ nav:
   - Running jobs with input/output data: running_jobs_with_input_output_data.md
   - Multi core jobs/Parallel Computing: multi_core_jobs.md
   - Using the HPC-UGent web portal: web_portal.md
+  - Using Jupyter Notebooks on the HPC: using_Jupyter_Notebooks_on_the_HPC.md
 {%- if site == 'Gent' %}
   - Interactive and debug cluster: interactive_debug.md
 {%- endif %}
