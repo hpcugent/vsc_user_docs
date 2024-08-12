@@ -1,6 +1,8 @@
 import os
 import re
 import shutil
+import pypandoc
+
 from jinja_parser import jinja_parser
 
 # variables for analytics
@@ -24,10 +26,8 @@ for source_directory in source_directories:
         else:
             filenames_generic[file] = os.path.join(source_directory, file)
 
-# TODO: find solution for duplicate filenames between linux tutorial and normal files
-
-# TODO: problem-files (other layout than normal markdown-files)
-problem_files = ["linux_tutorial\\getting_started.md", "linux_tutorial\\navigating.md"]
+# some files are not written in proper markdown but rather in reST, they will be converted later down the line using pandoc
+problem_files = ["getting_started.md", "navigating.md"]
 
 
 ################### define functions ###################
@@ -272,8 +272,8 @@ if not os.path.exists(".\\if_mangled_files"):
 
 for filenames in [filenames_generic, filenames_linux]:
     for filename in filenames.keys():
-        try:
-        # if True:
+        # try:
+        if True:
             # make a copy of one of the md files to test some things
             if "linux-tutorial" in filenames[filename]:
                 copy_file = ".\\copies\\linux\\" + filename
@@ -341,6 +341,10 @@ for filenames in [filenames_generic, filenames_linux]:
             # process the jinja macros
             jinja_parser(filename, copy_file)
 
+            # convert the files without proper markdown layout into markdown using pandoc
+            if "linux-tutorial" in filenames[filename] and filename in problem_files:
+                pypandoc.convert_file(copy_file, 'markdown', outputfile=copy_file)
+
             # open the file and store line by line in the right file
             with open(copy_file, 'r') as readfile:
 
@@ -378,13 +382,12 @@ for filenames in [filenames_generic, filenames_linux]:
             write_end_of_file(root_dir_os_specific_macos + last_directory + "\\" + last_title + ".txt", "macOS",
                               links_macos)
             succeeded += 1
-        except:
-            print("Parsing failed for file: " + filename)
-            failed += 1
+        # except:
+        #     print("Parsing failed for file: " + filename)
+        #     failed += 1
 
 print("Success ratio: " + str(succeeded / (succeeded + failed) * 100) + "%")
-print(
-    "Although this ratio should be taken with a grain of salt as a number of other fixes need to be implemented as well, they just don't cause any errors.")
+print("Although this ratio should be taken with a grain of salt as a number of other fixes need to be implemented as well, they just don't cause any errors.")
 
 # TODO: directory cleanup
 # TODO: reconsider maximum depth to be detected as title
