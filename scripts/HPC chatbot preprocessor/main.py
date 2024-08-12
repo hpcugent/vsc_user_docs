@@ -7,34 +7,22 @@ from jinja_parser import jinja_parser
 succeeded = 0
 failed = 0
 
-# make the necessary directories
-if not os.path.exists(".\\copies"):
-    os.mkdir(".\\copies")
-
-if not os.path.exists(".\\parsed_mds"):
-    os.mkdir(".\\parsed_mds")
-
-if not os.path.exists(".\\if_mangled_files"):
-    os.mkdir(".\\if_mangled_files")
-
 ################### define global variables ###################
 
 # variable that keeps track of the source directories
 source_directories = ["..\\..\\mkdocs\\docs\\HPC\\", "..\\..\\mkdocs\\docs\\HPC\\linux-tutorial"]
 
-# variable that keeps track of the directories that are used to write in at different levels
-root_dir_generic = ".\\parsed_mds\\generic\\"
-root_dir_os_specific_linux = ".\\parsed_mds\\os_specific\\linux\\"
-root_dir_os_specific_windows = ".\\parsed_mds\\os_specific\\windows\\"
-root_dir_os_specific_macos = ".\\parsed_mds\\os_specific\\macos\\"
-
 # list of all the filenames
-filenames = {}
+filenames_generic = {}
+filenames_linux = {}
 for source_directory in source_directories:
     all_items = os.listdir(source_directory)
     files = [f for f in all_items if os.path.isfile(os.path.join(source_directory, f)) and ".md" in f[-3:]]
     for file in files:
-        filenames[file] = os.path.join(source_directory, file)
+        if "linux-tutorial" in source_directory:
+            filenames_linux[file] = os.path.join(source_directory, file)
+        else:
+            filenames_generic[file] = os.path.join(source_directory, file)
 
 # TODO: find solution for duplicate filenames between linux tutorial and normal files
 
@@ -147,7 +135,7 @@ def check_if_statements(curr_line):
         content = match.group(1)
 
         # new if-statement wrt OS
-        if re.match(r'if OS == ', content):
+        if re.search(r'if OS == ', content):
             OS = content[9:-1]
 
             # set new active OS
@@ -159,7 +147,7 @@ def check_if_statements(curr_line):
                     active_OS_if_states[other_OS] = "inactive"
 
         # endif statement wrt OS
-        elif re.match(r'endif ', content):
+        elif re.search(r'endif ', content):
             if str(1) in active_OS_if_states.values():
                 active_OS_if_states[
                     list(active_OS_if_states.keys())[list(active_OS_if_states.values()).index(str(1))]] = "active"
@@ -168,7 +156,7 @@ def check_if_statements(curr_line):
                     active_OS_if_states[key] = "inactive"
 
         # else statement wrt OS
-        elif re.match(r'else ', content):
+        elif re.search(r'else ', content):
 
             i = 0
             for i in range(3):
@@ -264,106 +252,140 @@ def make_valid_title(s):
     return valid_filename
 
 
-for filename in filenames.keys():
-    try:
-    # if True:
-        # make a copy of one of the md files to test some things
-        shutil.copyfile(filenames[filename],
-                        ".\\copies\\" + filename)
+# remove the directories from a previous run of the parser
+remove_directory_tree(".\\parsed_mds")
+remove_directory_tree(".\\copies")
+remove_directory_tree(".\\if_mangled_files")
 
-        ################### define/reset loop specific variables ###################
+# make the necessary directories
+if not os.path.exists(".\\copies"):
+    os.mkdir(".\\copies")
 
-        # variable for the main title (needed for reference links)
-        main_title = filename[:-3]
+if not os.path.exists(".\\copies\\linux"):
+    os.mkdir(".\\copies\\linux")
 
-        # variable that keeps track of the directories that are used to write in at different levels
-        curr_dirs = [filename[:-3] for i in range(4)]
+if not os.path.exists(".\\parsed_mds"):
+    os.mkdir(".\\parsed_mds")
 
-        # variable to keep track whether we're dealing with OS-specific info or not
-        OS_specific = False
+if not os.path.exists(".\\if_mangled_files"):
+    os.mkdir(".\\if_mangled_files")
 
-        # variable that keeps track of the latest non-zero level title and corresponding directory
-        last_title_level = 1
-        last_title = None
-        last_directory = None
-        last_was_title = False
+for filenames in [filenames_generic, filenames_linux]:
+    for filename in filenames.keys():
+        try:
+        # if True:
+            # make a copy of one of the md files to test some things
+            if "linux-tutorial" in filenames[filename]:
+                copy_file = ".\\copies\\linux\\" + filename
+            else:
+                copy_file = ".\\copies\\" + filename
+            shutil.copyfile(filenames[filename], copy_file)
 
-        # list to keep track of links in the text
-        links_generic = []
-        links_linux = []
-        links_windows = []
-        links_macos = []
+            ################### define/reset loop specific variables ###################
 
-        # dictionaries to keep track of current OS
-        active_OS_if_states = {"linux": "inactive", "windows": "inactive", "macos": "inactive"}
+            # variable that keeps track of the directories that are used to write in at different levels
+            if "linux-tutorial" in filenames[filename]:
+                root_dir_generic = ".\\parsed_mds\\generic\\linux_tutorial\\"
+                root_dir_os_specific_linux = ".\\parsed_mds\\os_specific\\linux\\linux_tutorial\\"
+                root_dir_os_specific_windows = ".\\parsed_mds\\os_specific\\windows\\linux_tutorial\\"
+                root_dir_os_specific_macos = ".\\parsed_mds\\os_specific\\macos\\linux_tutorial\\"
+            else:
+                root_dir_generic = ".\\parsed_mds\\generic\\"
+                root_dir_os_specific_linux = ".\\parsed_mds\\os_specific\\linux\\"
+                root_dir_os_specific_windows = ".\\parsed_mds\\os_specific\\windows\\"
+                root_dir_os_specific_macos = ".\\parsed_mds\\os_specific\\macos\\"
 
-        # variable that shows whether the first title has been reached yet
-        after_first_title = False
+            # variable for the main title (needed for reference links)
+            main_title = filename[:-3]
 
-        # variable that is used to be sure that we are detecting titles and not comments from codeblocks
-        in_code_block = False
+            # variable that keeps track of the directories that are used to write in at different levels
+            curr_dirs = [filename[:-3] for i in range(4)]
 
-        ################### actually parse the md file ###################
+            # variable to keep track whether we're dealing with OS-specific info or not
+            OS_specific = False
 
-        # create directories for the source markdown file
-        create_directory(root_dir_generic)
-        create_directory(".\\parsed_mds\\os_specific")
-        create_directory(root_dir_os_specific_linux)
-        create_directory(root_dir_os_specific_windows)
-        create_directory(root_dir_os_specific_macos)
-        create_directory(root_dir_generic + curr_dirs[0])
-        create_directory(root_dir_os_specific_linux + curr_dirs[0])
-        create_directory(root_dir_os_specific_windows + curr_dirs[0])
-        create_directory(root_dir_os_specific_macos + curr_dirs[0])
+            # variable that keeps track of the latest non-zero level title and corresponding directory
+            last_title_level = 1
+            last_title = None
+            last_directory = None
+            last_was_title = False
 
-        # process the jinja macros
-        jinja_parser(filename)
+            # list to keep track of links in the text
+            links_generic = []
+            links_linux = []
+            links_windows = []
+            links_macos = []
 
-        # open the file and store line by line in the right file
-        with open(".\\copies\\" + filename, 'r') as readfile:
+            # dictionaries to keep track of current OS
+            active_OS_if_states = {"linux": "inactive", "windows": "inactive", "macos": "inactive"}
 
-            for line in readfile:
-                title_level, title, directory = check_for_title(line)
+            # variable that shows whether the first title has been reached yet
+            after_first_title = False
 
-                detect_in_code_block(line)
+            # variable that is used to be sure that we are detecting titles and not comments from codeblocks
+            in_code_block = False
 
-                # line is a title with a maximum depth of 3
-                if title_level > 0:
-                    last_title_level = title_level
-                    last_title = title
-                    last_directory = directory
-                    after_first_title = True
+            ################### actually parse the md file ###################
 
-                # line is not a title
-                elif after_first_title:
-                    # check for if-statements and write the appropriate lines in the right files
-                    next_action = check_if_statements(line)
-                    while next_action[0] == "write_text_and_check_extra_message" or next_action[0] == "check_extra_message":
-                        if next_action[0] == "write_text_and_check_extra_message":
+            # create directories for the source markdown file
+            create_directory(root_dir_generic)
+            create_directory(".\\parsed_mds\\os_specific")
+            create_directory(root_dir_os_specific_linux)
+            create_directory(root_dir_os_specific_windows)
+            create_directory(root_dir_os_specific_macos)
+            create_directory(root_dir_generic + curr_dirs[0])
+            create_directory(root_dir_os_specific_linux + curr_dirs[0])
+            create_directory(root_dir_os_specific_windows + curr_dirs[0])
+            create_directory(root_dir_os_specific_macos + curr_dirs[0])
+
+            # process the jinja macros
+            jinja_parser(filename, copy_file)
+
+            # open the file and store line by line in the right file
+            with open(copy_file, 'r') as readfile:
+
+                for line in readfile:
+                    title_level, title, directory = check_for_title(line)
+
+                    detect_in_code_block(line)
+
+                    # line is a title with a maximum depth of 3
+                    if title_level > 0:
+                        last_title_level = title_level
+                        last_title = title
+                        last_directory = directory
+                        after_first_title = True
+
+                    # line is not a title
+                    elif after_first_title:
+                        # check for if-statements and write the appropriate lines in the right files
+                        next_action = check_if_statements(line)
+                        while next_action[0] == "write_text_and_check_extra_message" or next_action[
+                            0] == "check_extra_message":
+                            if next_action[0] == "write_text_and_check_extra_message":
+                                choose_and_write_to_file(next_action[2])
+                            next_action = check_if_statements(next_action[1])
+
+                        if next_action[0] == "write_text":
                             choose_and_write_to_file(next_action[2])
-                        next_action = check_if_statements(next_action[1])
 
-                    if next_action[0] == "write_text":
-                        choose_and_write_to_file(next_action[2])
+            # write end of file for the last file
+            write_end_of_file(root_dir_generic + last_directory + "\\" + last_title + ".txt", "", links_generic)
+            write_end_of_file(root_dir_os_specific_linux + last_directory + "\\" + last_title + ".txt", "Linux",
+                              links_linux)
+            write_end_of_file(root_dir_os_specific_windows + last_directory + "\\" + last_title + ".txt", "Windows",
+                              links_windows)
+            write_end_of_file(root_dir_os_specific_macos + last_directory + "\\" + last_title + ".txt", "macOS",
+                              links_macos)
+            succeeded += 1
+        except:
+            print("Parsing failed for file: " + filename)
+            failed += 1
 
-        # write end of file for the last file
-        # print(root_dir_generic)
-        # print(last_directory)
-        # print(filename)
-        write_end_of_file(root_dir_generic + last_directory + "\\" + last_title + ".txt", "", links_generic)
-        write_end_of_file(root_dir_os_specific_linux + last_directory + "\\" + last_title + ".txt", "Linux",
-                          links_linux)
-        write_end_of_file(root_dir_os_specific_windows + last_directory + "\\" + last_title + ".txt", "Windows",
-                          links_windows)
-        write_end_of_file(root_dir_os_specific_macos + last_directory + "\\" + last_title + ".txt", "macOS",
-                          links_macos)
-        succeeded += 1
-    except:
-        print("Parsing failed for file: " + filename)
-        failed += 1
-
-print("Success ratio: " + str(succeeded/(succeeded + failed) * 100) + "%")
-print("Although this ratio should be taken with a grain of salt as a number of other fixes need to be implemented as well, they just don't cause any errors.")
+print("Success ratio: " + str(succeeded / (succeeded + failed) * 100) + "%")
+print(
+    "Although this ratio should be taken with a grain of salt as a number of other fixes need to be implemented as well, they just don't cause any errors.")
 
 # TODO: directory cleanup
 # TODO: reconsider maximum depth to be detected as title
+# TODO: adapt script to be used from command line

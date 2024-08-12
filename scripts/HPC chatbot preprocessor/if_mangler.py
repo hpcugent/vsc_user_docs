@@ -66,7 +66,7 @@ def mangle_os_ifs(line):
 
 def mangle_ifs(directory, file):
     with open(".\\if_mangled_files\\" + file, 'w') as write_file:
-        with open(directory + "\\" + file, 'r') as read_file:
+        with open(directory, 'r') as read_file:
             for line in read_file:
                 new_line = mangle_os_ifs(line)
                 write_file.write(new_line)
