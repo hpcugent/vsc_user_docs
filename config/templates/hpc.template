@@ -16,7 +16,6 @@ nav:
   - Running jobs with input/output data: running_jobs_with_input_output_data.md
   - Multi core jobs/Parallel Computing: multi_core_jobs.md
   - Using the HPC-UGent web portal: web_portal.md
-  - Using Jupyter Notebooks on the HPC: jupyter.md
 {%- if site == 'Gent' %}
   - Interactive and debug cluster: interactive_debug.md
 {%- endif %}
@@ -50,6 +49,7 @@ nav:
       - AlphaFold: alphafold.md
       - Apptainer/Singularity: apptainer.md
       - EasyBuild: easybuild.md
+      - Jupyter notebook: jupyter.md
       - MATLAB: MATLAB.md
       - mympirun: mympirun.md
       - OpenFOAM: openFOAM.md
