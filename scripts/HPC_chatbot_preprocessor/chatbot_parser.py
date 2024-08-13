@@ -34,14 +34,24 @@ is_os = 0  # Can be 0, 1, 2 or 3 {0: not in an os-if; 1: in a non-os-if nested i
 
 
 ################### define functions ###################
-# function that removes the previous file structure before starting the process of making a new one
 def remove_directory_tree(old_directory):
+    """
+    function that removes a full directory tree
+
+    :param old_directory: the directory to be removed
+    :return:
+    """
     if os.path.exists(old_directory):
         shutil.rmtree(old_directory)
 
 
-# function that checks whether the current line has a title of level 4 at maximum (returns the level of the title or 0 if the line is not a title)
 def check_for_title_logic(curr_line):
+    """
+    function that checks whether the current line has a title of level 4 at maximum (returns the level of the title or 0 if the line is not a title)
+
+    :param curr_line: the line to be checked for a title
+    :return: depth of the title
+    """
     global curr_dirs
     match = re.match(r'^#+ ', curr_line)
     if match and len(match.group(0)) <= 5:
@@ -50,8 +60,12 @@ def check_for_title_logic(curr_line):
         return 0
 
 
-# function that resets the contents of the link_lists
 def reset_link_lists():
+    """
+    function that resets the contents of the link_lists
+
+    :return:
+    """
     global links_generic, links_linux, links_windows, links_macos
     links_generic = []
     links_linux = []
@@ -59,8 +73,15 @@ def reset_link_lists():
     links_macos = []
 
 
-# function that uses the check_for_title_logic function to create the appropriate directories and update the necessary variables
 def check_for_title(curr_line):
+    """
+    function that uses the check_for_title_logic function to create the appropriate directories and update the necessary variables
+
+    :param curr_line: the line to be checked for a title
+    :return: the depth of the title
+    :return: the title found in the line if any
+    :return: the new directory in which the next file will be written
+    """
     global curr_dirs, last_title, in_code_block
     logic_output = check_for_title_logic(curr_line)
     if logic_output == 0 or in_code_block:
@@ -87,28 +108,51 @@ def check_for_title(curr_line):
         return logic_output, make_valid_title(curr_line[logic_output + 1:-1].replace(' ', '-')), curr_dirs[logic_output]
 
 
-# function used to detect codeblocks and make sure the comments don't get detected as titles
 def detect_in_code_block(curr_line):
+    """
+    function used to detect codeblocks and make sure the comments don't get detected as titles
+
+    :param curr_line: the line in which the start or end of a codeblock needs to be detected
+    :return:
+    """
     global in_code_block
     if '```' in curr_line or (('<pre><code>' in curr_line) ^ ('</code></pre>' in curr_line)):
         in_code_block = not in_code_block
 
 
-# function that creates directories if needed
 def create_directory(new_directory):
+    """
+    function that creates new directories
+
+    :param new_directory: directory to be created
+    :return:
+    """
     if not os.path.exists(new_directory):
         os.mkdir(new_directory)
 
 
-# function that updates the curr_dir variables when needed
 def update_lower_curr_dir(curr_directory, level):
+    """
+    function that updates the curr_dir variables when needed
+
+    :param curr_directory: the current directory to which the lower level current directories need to be updated
+    :param level: the depth of the current directory
+    :return:
+    """
     global curr_dirs
     for i in range(level + 1, 4):
         curr_dirs[i] = curr_directory
 
 
-# function that replaces certain markdown structures with the equivalent used on the website
 def replace_markdown_markers(curr_line, linklist):
+    """
+    function that replaces certain markdown structures with the equivalent used on the website
+
+    :param curr_line: the current line on which markdown structures need to be replaced
+    :param linklist: the list used to store links that need to be printed at the end of the file
+    :return curr_line: the adapted current line
+    :return linklist: the updated linklist
+    """
     # replace links with a reference
     matches = re.findall(r'\[(.*?)]\((.*?)\)', curr_line)
     if matches:
@@ -124,9 +168,14 @@ def replace_markdown_markers(curr_line, linklist):
     return curr_line, linklist
 
 
-# function that let's jinja do its thing to format the files expect for the os-related if-statements
 def jinja_parser(filename, copy_location):
+    """
+    function that let's jinja do its thing to format the files except for the os-related if-statements
 
+    :param filename: the name of the file that needs to be formatted using jinja
+    :param copy_location: the location of the file that needs to be formatted using jinja
+    :return:
+    """
     # YAML file location
     yml_file_path = os.path.join('..', '..', 'mkdocs', 'extra', 'gent.yml')
 
@@ -157,6 +206,12 @@ def jinja_parser(filename, copy_location):
 
 
 def mangle_os_ifs(line):
+    """
+    function that mangles the os-related if-statements. This is needed because we want to keep these if-statements intact after jinja-parsing to build the directory structure.
+
+    :param line: the current line to check for os-related if-statements
+    :return line: the modified line with  mangled os-related if-statements
+    """
     global is_os
 
     match = re.search(r'\{%(.*?)%}(.*)', line)
@@ -217,6 +272,13 @@ def mangle_os_ifs(line):
 
 
 def mangle_ifs(directory, file):
+    """
+    function that writes the if-mangled version of a file to a location where the jinja parser will use it
+
+    :param directory: the directory of the file to be if mangled
+    :param file: the filename of the file to be mangled
+    :return:
+    """
     with open(os.path.join("if_mangled_files",  file), 'w') as write_file:
         with open(directory, 'r') as read_file:
             for line in read_file:
@@ -224,8 +286,19 @@ def mangle_ifs(directory, file):
                 write_file.write(new_line)
 
 
-# function that checks for if-statements
 def check_if_statements(curr_line):
+    """
+    function that checks for if-statements
+
+    :param curr_line: the line to be checked for if-statements to build the directory structure
+    :return: the next action to be done with the line:
+                "done": An if-statement has been found at the start of the line, the active os list has been updated, processing of the current line is finished and a following line can be processed.
+                "check_extra_message": An if-statement has been found at the start of the line, the active os list has been updated, more text has been detected after the if-statement that also needs to be checked.
+                "write_text": No if-statement has been found, write the current line to a file (can also be part of the current line)
+                "write_text_and_check_extra_message": An if statement has been found not at the start of the line. Firstly, write the text up until the if-statement to a file, then check the rest of the line.
+    :return: the extra message to be checked, if any
+    :return: the text to be written to the file, if any
+    """
     # check whether the first part of the line contains information wrt if-statements
     match = re.search(r'^\{-if-%([^%]*)%-if-}(.*)', curr_line)
 
@@ -288,8 +361,14 @@ def check_if_statements(curr_line):
         return "write_text", None, curr_line
 
 
-# function that writes a line to a file
 def write_text_to_file(file_name, curr_line):
+    """
+    function that writes a line to a file
+
+    :param file_name: target file to write the line to
+    :param curr_line: line to be written to the file
+    :return:
+    """
     global links_generic, links_linux, links_windows, links_macos
     with open(file_name, "a") as write_file:
         if "generic" in file_name:
@@ -303,8 +382,13 @@ def write_text_to_file(file_name, curr_line):
         write_file.write(curr_line)
 
 
-# function that decides what file to write text to
 def choose_and_write_to_file(curr_line):
+    """
+    function that decides what file to write text to
+
+    :param curr_line: line to be written to a file
+    :return:
+    """
     # check that the line is part of the website for gent
     if active_OS_if_states["linux"] == "inactive" and active_OS_if_states["windows"] == "inactive" and \
             active_OS_if_states["macos"] == "inactive":
@@ -317,14 +401,28 @@ def choose_and_write_to_file(curr_line):
         write_text_to_file(os.path.join(root_dir_os_specific_macos, last_directory, last_title + ".txt"), curr_line)
 
 
-# function that adds a reference link at the end of every txt file
 def add_reference_link(file_location, reference_link):
+    """
+    function that adds a reference link at the end of every txt file
+
+    :param file_location: the file that needs a reference link
+    :param reference_link: the reference link that needs to be written
+    :return:
+    """
     with open(file_location, 'a') as write_file:
         write_file.write("\nreference: " + reference_link + "\n")
 
 
-# function that adds the links that should be at the end of a file
 def write_end_of_file(file_location, OS, linklist, is_linux_tutorial_):
+    """
+    function that adds the links that should be at the end of a file
+
+    :param file_location: the location of the file
+    :param OS: the OS of the file
+    :param linklist: the links that should be at the end of the file
+    :param is_linux_tutorial_: boolean indicating whether the file is part of the linux tutorial
+    :return:
+    """
     if len(OS) > 0:
         OS = OS + "/"
 
@@ -343,16 +441,21 @@ def write_end_of_file(file_location, OS, linklist, is_linux_tutorial_):
     add_reference_link(file_location, "docs.hpc.ugent.be/" + OS + linux_part + main_title + "/#" + ''.join(char.lower() for char in last_title if char.isalnum() or char == '-').strip('-'))
 
 
-# function that makes sure all titles can be used as valid filenames
-def make_valid_title(s):
+def make_valid_title(title):
+    """
+    function that makes sure all titles can be used as valid filenames
+
+    :param title: the string that will be used as title and filename
+    :return valid_filename: the adapted title that can be used as filename
+    """
     # Define a regex pattern for invalid characters on both Windows and Linux
     invalid_chars = r'[<>:"/\\|?*\0()]'
 
     # get rid of extra information between {} brackets
-    s = re.sub(r'\{.*?}', '', s)
+    s = re.sub(r'\{.*?}', '', title)
 
     # Remove invalid characters
-    valid_filename = re.sub(invalid_chars, '', s)
+    valid_filename = re.sub(invalid_chars, '', title)
 
     # Strip leading/trailing whitespace
     valid_filename = valid_filename.strip().strip('-')
@@ -361,6 +464,10 @@ def make_valid_title(s):
 
 
 def main():
+    """
+    main function
+    :return:
+    """
     global main_title, active_OS_if_states, last_directory, root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos, is_linux_tutorial, in_code_block, last_title, curr_dirs, links_generic, links_linux, links_windows, links_macos
     # remove the directories from a previous run of the parser if they weren't cleaned up properly for some reason
     remove_directory_tree("parsed_mds")
