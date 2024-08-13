@@ -12,7 +12,7 @@ failed = 0
 ################### define global variables ###################
 
 # variable that keeps track of the source directories
-source_directories = [os.path.join("..", "..", "mkdocs", "docs", "HPC")]#, os.path.join("..", "..", "mkdocs", "docs", "HPC", "linux-tutorial")]
+source_directories = [os.path.join("..", "..", "mkdocs", "docs", "HPC"), os.path.join("..", "..", "mkdocs", "docs", "HPC", "linux-tutorial")]
 
 # list of all the filenames
 filenames_generic = {}
