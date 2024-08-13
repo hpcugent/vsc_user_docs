@@ -225,35 +225,27 @@ def mangle_os_ifs(line):
         if_match = re.search(r'if ', match.group(1))
         if_os_match = re.search(r'if OS == ', match.group(1))
         endif_match = re.search(r'endif', match.group(1))
+        pos_first_mangle = constr_match.start() + start_index + added_length + 1
+        pos_second_mangle = constr_match.end() + start_index + added_length - 1
 
+        # this logic isn't flawless, there are number of nested if-constructions that are technically possible that would break this logic, but these don't appear in the documentation as it doesn't make sense to have these
         if endif_match:
-            if is_os == 2:
-                line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[
-                                                                                               constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[
-                                                                                                                                                                                                                     constr_match.end() + start_index + added_length - 1:]
+            if is_os == 2 or is_os == 3:
+                line = line[:pos_first_mangle] + "-if-" + line[pos_first_mangle:pos_second_mangle] + "-if-" + line[pos_second_mangle:]
                 added_length += 8
-                is_os = 0
-            if is_os == 3:
-                line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[
-                                                                                               constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[
-                                                                                                                                                                                                                     constr_match.end() + start_index + added_length - 1:]
-                added_length += 8
-                is_os = 2
+                if is_os == 2:
+                    is_os = 0
+                elif is_os == 3:
+                    is_os = 2
             elif is_os == 1:
                 is_os = 2
         elif if_match:
             if if_os_match:
+                line = line[:pos_first_mangle] + "-if-" + line[pos_first_mangle:pos_second_mangle] + "-if-" + line[pos_second_mangle:]
+                added_length += 8
                 if is_os == 2:
-                    line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[
-                                                                                                   constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[
-                                                                                                                                                                                                                         constr_match.end() + start_index + added_length - 1:]
-                    added_length += 8
                     is_os = 3
                 else:
-                    line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[
-                                                                                                   constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[
-                                                                                                                                                                                                                         constr_match.end() + start_index + added_length - 1:]
-                    added_length += 8
                     is_os = 2
             else:
                 if is_os == 2:
@@ -262,10 +254,9 @@ def mangle_os_ifs(line):
                     is_os = 0
         else:
             if is_os == 2 or is_os == 3:
-                line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[
-                                                                                               constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[
-                                                                                                                                                                                                                     constr_match.end() + start_index + added_length - 1:]
+                line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[constr_match.end() + start_index + added_length - 1:]
                 added_length += 8
+
         start_index += constr_match.end()
         match = re.search(r'\{%(.*?)%}(.*)', match.group(2))
     return line
