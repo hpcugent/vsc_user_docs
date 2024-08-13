@@ -2,8 +2,8 @@ import os
 import re
 import shutil
 import pypandoc
-
-from jinja_parser import jinja_parser
+import yaml
+from jinja2 import FileSystemLoader, Environment, ChoiceLoader
 
 # variables for analytics
 succeeded = 0
@@ -28,6 +28,9 @@ for source_directory in source_directories:
 
 # some files are not written in proper markdown but rather in reST, they will be converted later down the line using pandoc
 problem_files = ["getting_started.md", "navigating.md"]
+
+# global variable to keep track of latest if-statement scope
+is_os = 0 # Can be 0, 1, 2 or 3 {0: not in an os-if; 1: in a non-os-if nested in an os-if; 2: in an os-if; 3: in an os-if nested in an os-if}
 
 
 ################### define functions ###################
@@ -120,6 +123,102 @@ def replace_markdown_markers(curr_line, linklist):
     # etc
 
     return curr_line, linklist
+
+
+# function that let's jinja do its thing to format the files expect for the os-related if-statements
+def jinja_parser(filename, copy_location):
+    # Read the YAML file
+    with open('..\\..\\mkdocs\\extra\\gent.yml', 'r') as yml_file:
+        words_dict = yaml.safe_load(yml_file)
+
+    # ugly fix for index.md error
+    additional_context = {
+        'config': {
+            'repo_url': 'https://github.com/hpcugent/vsc_user_docs'
+        }
+    }
+    combined_context = {**words_dict, **additional_context}
+
+    # Mangle the OS-related if-statements
+    mangle_ifs(copy_location, filename)
+
+    # Use Jinja2 to replace the macros
+    template_loader = ChoiceLoader([FileSystemLoader(searchpath='.\\if_mangled_files'), FileSystemLoader(searchpath="..\\..\\mkdocs\\docs\\HPC")])
+    templateEnv = Environment(loader=template_loader)
+    template = templateEnv.get_template(filename)
+    rendered_content = template.render(combined_context)
+
+    # Save the rendered content to a new file
+    with open(copy_location, 'w', encoding='utf-8', errors='ignore') as output_file:
+        output_file.write(rendered_content)
+
+
+def mangle_os_ifs(line):
+    global is_os
+
+    match = re.search(r'\{%(.*?)%}(.*)', line)
+
+    start_index = 0
+    added_length = 0
+
+    while match:
+
+        constr_match = re.search(r'\{%.*?%}', match.string)
+        if_match = re.search(r'if ', match.group(1))
+        if_os_match = re.search(r'if OS == ', match.group(1))
+        endif_match = re.search(r'endif', match.group(1))
+
+        if endif_match:
+            if is_os == 2:
+                line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[
+                                                                                               constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[
+                                                                                                                                                                                                                     constr_match.end() + start_index + added_length - 1:]
+                added_length += 8
+                is_os = 0
+            if is_os == 3:
+                line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[
+                                                                                               constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[
+                                                                                                                                                                                                                     constr_match.end() + start_index + added_length - 1:]
+                added_length += 8
+                is_os = 2
+            elif is_os == 1:
+                is_os = 2
+        elif if_match:
+            if if_os_match:
+                if is_os == 2:
+                    line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[
+                                                                                                   constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[
+                                                                                                                                                                                                                         constr_match.end() + start_index + added_length - 1:]
+                    added_length += 8
+                    is_os = 3
+                else:
+                    line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[
+                                                                                                   constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[
+                                                                                                                                                                                                                         constr_match.end() + start_index + added_length - 1:]
+                    added_length += 8
+                    is_os = 2
+            else:
+                if is_os == 2:
+                    is_os = 1
+                else:
+                    is_os = 0
+        else:
+            if is_os == 2 or is_os == 3:
+                line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[
+                                                                                               constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[
+                                                                                                                                                                                                                     constr_match.end() + start_index + added_length - 1:]
+                added_length += 8
+        start_index += constr_match.end()
+        match = re.search(r'\{%(.*?)%}(.*)', match.group(2))
+    return line
+
+
+def mangle_ifs(directory, file):
+    with open(".\\if_mangled_files\\" + file, 'w') as write_file:
+        with open(directory, 'r') as read_file:
+            for line in read_file:
+                new_line = mangle_os_ifs(line)
+                write_file.write(new_line)
 
 
 # function that checks for if-statements
@@ -387,8 +486,6 @@ for filenames in [filenames_generic, filenames_linux]:
                           links_windows, is_linux_tutorial)
         write_end_of_file(root_dir_os_specific_macos + last_directory + "\\" + last_title + ".txt", "macOS",
                           links_macos, is_linux_tutorial)
-
-print("Although this ratio should be taken with a grain of salt as a number of other fixes need to be implemented as well, they just don't cause any errors.")
 
 remove_directory_tree(".\\copies")
 remove_directory_tree(".\\if_mangled_files")
