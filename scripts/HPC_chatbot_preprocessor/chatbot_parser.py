@@ -29,9 +29,6 @@ for source_directory in source_directories:
 # some files are not written in proper markdown but rather in reST, they will be converted later down the line using pandoc
 problem_files = ["getting_started.md", "navigating.md"]
 
-# global variable to keep track of latest if-statement scope
-is_os = 0  # Can be 0, 1, 2 or 3 {0: not in an os-if; 1: in a non-os-if nested in an os-if; 2: in an os-if; 3: in an os-if nested in an os-if}
-
 
 ################### define functions ###################
 def remove_directory_tree(old_directory):
@@ -45,57 +42,48 @@ def remove_directory_tree(old_directory):
         shutil.rmtree(old_directory)
 
 
-def check_for_title_logic(curr_line):
-    """
-    function that checks whether the current line has a title of level 4 at maximum (returns the level of the title or 0 if the line is not a title)
-
-    :param curr_line: the line to be checked for a title
-    :return: depth of the title
-    """
-    global curr_dirs
-    match = re.match(r'^#+ ', curr_line)
-    if match and len(match.group(0)) <= 5:
-        return len(match.group(0)) - 1
-    else:
-        return 0
-
-
-def reset_link_lists():
-    """
-    function that resets the contents of the link_lists
-
-    :return:
-    """
-    global links_generic, links_linux, links_windows, links_macos
-    links_generic = []
-    links_linux = []
-    links_windows = []
-    links_macos = []
-
-
-def check_for_title(curr_line):
+def check_for_title(curr_line, main_title, last_directory, last_title, curr_dirs, is_linux_tutorial_, in_code_block_):
     """
     function that uses the check_for_title_logic function to create the appropriate directories and update the necessary variables
 
     :param curr_line: the line to be checked for a title
+    :param main_title: the main title of the file, needed in the case where a file is finished
+    :param last_directory: the most recently encountered directory
+    :param last_title: the most recently encountered title
+    :param curr_dirs: the most recent directories at each title level
+    :param is_linux_tutorial_: boolean to indicate whether the current file is part of the linux tutorial
+    :param in_code_block_: boolean to indicate whether the current line is part of a codeblock
     :return: the depth of the title
     :return: the title found in the line if any
     :return: the new directory in which the next file will be written
     """
-    global curr_dirs, last_title, in_code_block
-    logic_output = check_for_title_logic(curr_line)
-    if logic_output == 0 or in_code_block:
-        return 0, None, None
+    global links_generic, links_linux, links_windows, links_macos
+
+    # detect titles
+    match = re.match(r'^#+ ', curr_line)
+    if match and len(match.group(0)) <= 5:
+        logic_output = len(match.group(0)) - 1
+    else:
+        logic_output = 0
+
+    # make necessary changes if a title has been detected
+    if logic_output == 0 or in_code_block_:
+        return 0, None, None, curr_dirs
     else:
         if last_title is not None:
-            write_end_of_file(os.path.join(root_dir_generic, last_directory, last_title + ".txt"), "", links_generic, is_linux_tutorial)
+            write_end_of_file(os.path.join(root_dir_generic, last_directory, last_title + ".txt"), "", links_generic, is_linux_tutorial_, main_title, last_title)
             write_end_of_file(os.path.join(root_dir_os_specific_linux, last_directory, last_title + ".txt"), "Linux",
-                              links_linux, is_linux_tutorial)
+                              links_linux, is_linux_tutorial_, main_title, last_title)
             write_end_of_file(os.path.join(root_dir_os_specific_windows, last_directory, last_title + ".txt"), "Windows",
-                              links_windows, is_linux_tutorial)
+                              links_windows, is_linux_tutorial_, main_title, last_title)
             write_end_of_file(os.path.join(root_dir_os_specific_macos, last_directory, last_title + ".txt"), "macOS",
-                              links_macos, is_linux_tutorial)
-            reset_link_lists()
+                              links_macos, is_linux_tutorial_, main_title, last_title)
+
+            # reset the link lists
+            links_generic = []
+            links_linux = []
+            links_windows = []
+            links_macos = []
 
         curr_dirs[logic_output] = os.path.join(curr_dirs[logic_output - 1], make_valid_title(curr_line[logic_output + 1:-1].replace(' ', '-')))
 
@@ -104,20 +92,11 @@ def check_for_title(curr_line):
         create_directory(os.path.join(root_dir_os_specific_windows,  curr_dirs[logic_output]))
         create_directory(os.path.join(root_dir_os_specific_macos,  curr_dirs[logic_output]))
 
-        update_lower_curr_dir(curr_dirs[logic_output], logic_output)
-        return logic_output, make_valid_title(curr_line[logic_output + 1:-1].replace(' ', '-')), curr_dirs[logic_output]
+        # update the lower order current directories
+        for i in range(logic_output + 1, 4):
+            curr_dirs[i] = curr_dirs[logic_output]
 
-
-def detect_in_code_block(curr_line):
-    """
-    function used to detect codeblocks and make sure the comments don't get detected as titles
-
-    :param curr_line: the line in which the start or end of a codeblock needs to be detected
-    :return:
-    """
-    global in_code_block
-    if '```' in curr_line or (('<pre><code>' in curr_line) ^ ('</code></pre>' in curr_line)):
-        in_code_block = not in_code_block
+        return logic_output, make_valid_title(curr_line[logic_output + 1:-1].replace(' ', '-')), curr_dirs[logic_output], curr_dirs
 
 
 def create_directory(new_directory):
@@ -129,19 +108,6 @@ def create_directory(new_directory):
     """
     if not os.path.exists(new_directory):
         os.mkdir(new_directory)
-
-
-def update_lower_curr_dir(curr_directory, level):
-    """
-    function that updates the curr_dir variables when needed
-
-    :param curr_directory: the current directory to which the lower level current directories need to be updated
-    :param level: the depth of the current directory
-    :return:
-    """
-    global curr_dirs
-    for i in range(level + 1, 4):
-        curr_dirs[i] = curr_directory
 
 
 def replace_markdown_markers(curr_line, linklist):
@@ -205,14 +171,14 @@ def jinja_parser(filename, copy_location):
         output_file.write(rendered_content)
 
 
-def mangle_os_ifs(line):
+def mangle_os_ifs(line, is_os):
     """
     function that mangles the os-related if-statements. This is needed because we want to keep these if-statements intact after jinja-parsing to build the directory structure.
 
     :param line: the current line to check for os-related if-statements
+    :param is_os: boolean keep track of the current os-state of the if-statements. Can be 0, 1, 2 or 3 {0: not in an os-if; 1: in a non-os-if nested in an os-if; 2: in an os-if; 3: in an os-if nested in an os-if}
     :return line: the modified line with  mangled os-related if-statements
     """
-    global is_os
 
     match = re.search(r'\{%(.*?)%}(.*)', line)
 
@@ -259,7 +225,7 @@ def mangle_os_ifs(line):
 
         start_index += constr_match.end()
         match = re.search(r'\{%(.*?)%}(.*)', match.group(2))
-    return line
+    return line, is_os
 
 
 def mangle_ifs(directory, file):
@@ -270,18 +236,22 @@ def mangle_ifs(directory, file):
     :param file: the filename of the file to be mangled
     :return:
     """
+    # variable to keep track of latest if-statement scope
+    is_os = 0  # Can be 0, 1, 2 or 3 {0: not in an os-if; 1: in a non-os-if nested in an os-if; 2: in an os-if; 3: in an os-if nested in an os-if}
+
     with open(os.path.join("if_mangled_files",  file), 'w') as write_file:
         with open(directory, 'r') as read_file:
             for line in read_file:
-                new_line = mangle_os_ifs(line)
+                new_line, is_os = mangle_os_ifs(line, is_os)
                 write_file.write(new_line)
 
 
-def check_if_statements(curr_line):
+def check_if_statements(curr_line, active_OS_if_states):
     """
     function that checks for if-statements
 
     :param curr_line: the line to be checked for if-statements to build the directory structure
+    :param active_OS_if_states: dictionary keeping track of the active OS states according to the if-statements
     :return: the next action to be done with the line:
                 "done": An if-statement has been found at the start of the line, the active os list has been updated, processing of the current line is finished and a following line can be processed.
                 "check_extra_message": An if-statement has been found at the start of the line, the active os list has been updated, more text has been detected after the if-statement that also needs to be checked.
@@ -373,11 +343,14 @@ def write_text_to_file(file_name, curr_line):
         write_file.write(curr_line)
 
 
-def choose_and_write_to_file(curr_line):
+def choose_and_write_to_file(curr_line, active_OS_if_states, last_directory, last_title):
     """
     function that decides what file to write text to
 
     :param curr_line: line to be written to a file
+    :param active_OS_if_states: dictionary keeping track of which OSes are active according to the if-statements
+    :param last_directory: most recently made directory
+    :param last_title: the most recently encountered title
     :return:
     """
     # check that the line is part of the website for gent
@@ -392,19 +365,7 @@ def choose_and_write_to_file(curr_line):
         write_text_to_file(os.path.join(root_dir_os_specific_macos, last_directory, last_title + ".txt"), curr_line)
 
 
-def add_reference_link(file_location, reference_link):
-    """
-    function that adds a reference link at the end of every txt file
-
-    :param file_location: the file that needs a reference link
-    :param reference_link: the reference link that needs to be written
-    :return:
-    """
-    with open(file_location, 'a') as write_file:
-        write_file.write("\nreference: " + reference_link + "\n")
-
-
-def write_end_of_file(file_location, OS, linklist, is_linux_tutorial_):
+def write_end_of_file(file_location, OS, linklist, is_linux_tutorial_, main_title, last_title):
     """
     function that adds the links that should be at the end of a file
 
@@ -412,6 +373,8 @@ def write_end_of_file(file_location, OS, linklist, is_linux_tutorial_):
     :param OS: the OS of the file
     :param linklist: the links that should be at the end of the file
     :param is_linux_tutorial_: boolean indicating whether the file is part of the linux tutorial
+    :param main_title: the main title of the file, to be used in the reference link
+    :param last_title: the most recently encountered title
     :return:
     """
     if len(OS) > 0:
@@ -429,7 +392,8 @@ def write_end_of_file(file_location, OS, linklist, is_linux_tutorial_):
         linux_part = ""
 
     # finally add the reference link
-    add_reference_link(file_location, "docs.hpc.ugent.be/" + OS + linux_part + main_title + "/#" + ''.join(char.lower() for char in last_title if char.isalnum() or char == '-').strip('-'))
+    with open(file_location, 'a') as write_file:
+        write_file.write("\nreference: docs.hpc.ugent.be/" + OS + linux_part + main_title + "/#" + ''.join(char.lower() for char in last_title if char.isalnum() or char == '-').strip('-') + "\n")
 
 
 def make_valid_title(title):
@@ -459,7 +423,7 @@ def main():
     main function
     :return:
     """
-    global main_title, active_OS_if_states, last_directory, root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos, is_linux_tutorial, in_code_block, last_title, curr_dirs, links_generic, links_linux, links_windows, links_macos
+    global root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos, links_generic, links_linux, links_windows, links_macos
     # remove the directories from a previous run of the parser if they weren't cleaned up properly for some reason
     remove_directory_tree("parsed_mds")
     remove_directory_tree("copies")
@@ -558,9 +522,10 @@ def main():
             with open(copy_file, 'r') as readfile:
 
                 for line in readfile:
-                    title_level, title, directory = check_for_title(line)
+                    title_level, title, directory, curr_dirs = check_for_title(line, main_title, last_directory, last_title, curr_dirs, is_linux_tutorial, in_code_block)
 
-                    detect_in_code_block(line)
+                    if '```' in line or (('<pre><code>' in line) ^ ('</code></pre>' in line)):
+                        in_code_block = not in_code_block
 
                     # line is a title with a maximum depth of 4
                     if title_level > 0:
@@ -572,25 +537,24 @@ def main():
                     # line is not a title
                     elif after_first_title:
                         # check for if-statements and write the appropriate lines in the right files
-                        next_action = check_if_statements(line)
+                        next_action = check_if_statements(line, active_OS_if_states)
                         while next_action[0] == "write_text_and_check_extra_message" or next_action[0] == "check_extra_message":
                             if next_action[0] == "write_text_and_check_extra_message":
-                                choose_and_write_to_file(next_action[2])
-                            next_action = check_if_statements(next_action[1])
+                                choose_and_write_to_file(next_action[2], active_OS_if_states, last_directory, last_title)
+                            next_action = check_if_statements(next_action[1], active_OS_if_states)
 
                         if next_action[0] == "write_text":
-                            choose_and_write_to_file(next_action[2])
+                            choose_and_write_to_file(next_action[2], active_OS_if_states, last_directory, last_title)
 
             # write end of file for the last file
             write_end_of_file(os.path.join(root_dir_generic, last_directory, last_title + ".txt"), "", links_generic,
-                              is_linux_tutorial)
+                              is_linux_tutorial, main_title, last_title)
             write_end_of_file(os.path.join(root_dir_os_specific_linux, last_directory, last_title + ".txt"), "Linux",
-                              links_linux, is_linux_tutorial)
+                              links_linux, is_linux_tutorial, main_title, last_title)
             write_end_of_file(os.path.join(root_dir_os_specific_windows, last_directory, last_title + ".txt"),
-                              "Windows",
-                              links_windows, is_linux_tutorial)
+                              "Windows", links_windows, is_linux_tutorial, main_title, last_title)
             write_end_of_file(os.path.join(root_dir_os_specific_macos, last_directory, last_title + ".txt"), "macOS",
-                              links_macos, is_linux_tutorial)
+                              links_macos, is_linux_tutorial, main_title, last_title)
 
     remove_directory_tree("copies")
     remove_directory_tree("if_mangled_files")
