@@ -1,2 +1,0 @@
-
-reference: docs.hpc.ugent.be/macOS/getting_started_copy/#inspect-your-results

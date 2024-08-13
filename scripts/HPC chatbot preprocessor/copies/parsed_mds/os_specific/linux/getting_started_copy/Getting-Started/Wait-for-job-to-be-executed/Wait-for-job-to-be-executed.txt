@@ -1,2 +1,0 @@
-
-reference: docs.hpc.ugent.be/Linux/getting_started_copy/#wait-for-job-to-be-executed
