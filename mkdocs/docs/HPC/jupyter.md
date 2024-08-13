@@ -16,15 +16,15 @@ Through the web portal you can easily start a Jupyter notebook on a workernode, 
 
 ### Importing libraries
 
-Importing libraries in a notebook running on the HPC isn't as straight forward as on normal notebooks. You can only import libraries that are part of certain modules on the HPC. To find the right module, first look at the toolchain used by the Jupyter notebook version. This can be found when looking at the `JupyterNotebook version` field when creating a new Jupyter notebook session. In the image above `7.2.0` is the notebook version and `GCCcore 13.2.0`is the toolchain used.
+Importing libraries in a notebook running on the HPC isn't as straight forward as on notebooks running on your local machine. You can only import libraries that are part of certain modules on the HPC. To find the right module, first look at the toolchain used by the Jupyter notebook version. This can be found when looking at the `JupyterNotebook version` field when creating a new Jupyter notebook session. In the image above `7.2.0` is the notebook version and `GCCcore 13.2.0`is the toolchain used.
 
-After checking the toolchain, you can search the correct module using a shell environment. you can do this by clicking on Clusters>_login Shell Access in the web portal.
+After checking the toolchain, you can search the correct module using a shell environment. you can do this by clicking on `Clusters`>`_login Shell Access` in the web portal.
 
 <center>
 ![image](img/ood_jupyter_open_shell.png)
 </center>
 
-Using `module available` will print all modules in which your library is included. For example if you want to use  `SciPy, it will look like this:
+Using `module available` followed by a library name will print all modules in which your library is included. For example if you want to make use of SciPy, it will look like this:
 
 ```shell 
 $ module available Scipy
@@ -86,7 +86,7 @@ setenv("EBEXTSLISTSCIPYMINBUNDLE","numpy-1.26.2,ply-3.11,gast-0.5.4,beniget-0.4.
 ```
 This prints a lot of information about the module, including all libraries that are part of it. It also shows which toolchain is used in the line `load("Python/3.11.5-GCCcore-13.2.0")`.
 
-Because this is the same toolchain as the one used by the Jupyter notebook version in this example, we can include this module without errors. To do this, add the line `module load "module"` in the `Custom code`-field:
+Because this is the same toolchain as the one used by the Jupyter notebook version in this example, we can include this module without errors. To do this, add the line `module load "module_name"` in the `Custom code`-field:
 
 <center>
 ![image](img/ood_jupyter_custom_code.png)
@@ -122,7 +122,7 @@ and eventually the status will change to *Running*, and you will be able to conn
 ![image](img/ood_jupyter_running.png)
 </center>
 
-This will launch the Jupyter environment in a new browser tab, where you can open an existing notebook by navigating to the directory where it located and clicking it, or using the *New* menu on the top right:
+This will launch the Jupyter environment in a new browser tab, where you can open an existing notebook by navigating to the directory where it is located and clicking it. You can also create a new notebook by clicking on `File`>`New`>`Notebook`:
 
 <center>
 ![image](img/ood_jupyter_new_notebook.png)
