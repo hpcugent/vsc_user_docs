@@ -12,7 +12,7 @@ failed = 0
 ################### define global variables ###################
 
 # variable that keeps track of the source directories
-source_directories = [os.path.join("..", "..", "mkdocs", "docs", "HPC"), os.path.join("..", "..", "mkdocs", "docs", "HPC", "linux-tutorial")]
+source_directories = [os.path.join("..", "..", "mkdocs", "docs", "HPC")]#, os.path.join("..", "..", "mkdocs", "docs", "HPC", "linux-tutorial")]
 
 # list of all the filenames
 filenames_generic = {}
@@ -189,7 +189,7 @@ def mangle_os_ifs(line, is_os):
 
         constr_match = re.search(r'\{%.*?%}', match.string)
         if_match = re.search(r'if ', match.group(1))
-        if_os_match = re.search(r'if OS == ', match.group(1))
+        if_os_match = re.search(r'if OS ', match.group(1))
         endif_match = re.search(r'endif', match.group(1))
         pos_first_mangle = constr_match.start() + start_index + added_length + 1
         pos_second_mangle = constr_match.end() + start_index + added_length - 1
@@ -228,18 +228,18 @@ def mangle_os_ifs(line, is_os):
     return line, is_os
 
 
-def mangle_ifs(directory, file):
+def mangle_ifs(directory, filename):
     """
     function that writes the if-mangled version of a file to a location where the jinja parser will use it
 
     :param directory: the directory of the file to be if mangled
-    :param file: the filename of the file to be mangled
+    :param filename: the filename of the file to be mangled
     :return:
     """
     # variable to keep track of latest if-statement scope
     is_os = 0  # Can be 0, 1, 2 or 3 {0: not in an os-if; 1: in a non-os-if nested in an os-if; 2: in an os-if; 3: in an os-if nested in an os-if}
 
-    with open(os.path.join("if_mangled_files",  file), 'w') as write_file:
+    with open(os.path.join("if_mangled_files",  filename), 'w') as write_file:
         with open(directory, 'r') as read_file:
             for line in read_file:
                 new_line, is_os = mangle_os_ifs(line, is_os)
@@ -261,17 +261,17 @@ def check_if_statements(curr_line, active_OS_if_states):
     :return: the text to be written to the file, if any
     """
     # check whether the first part of the line contains information wrt if-statements
-    match = re.search(r'^\{-if-%([^%]*)%-if-}(.*)', curr_line)
+    match = re.search(r'^\{-if-%(.*?)%-if-}(.*)', curr_line)
 
     # check whether the line contains information wrt if-statements that is not in its first part
-    match_large = re.search(r'^(.*)(\{-if-%[^%]*%-if-})(.*)', curr_line)
+    match_large = re.search(r'^(.*)(\{-if-%.*?%-if-})(.*)', curr_line)
 
     if match:
         content = match.group(1)
 
         # new if-statement wrt OS
         if re.search(r'if OS == ', content):
-            OS = content[9:-1]
+            OS = content.split()[-1]
 
             # set new active OS
             active_OS_if_states[OS] = "active"
@@ -280,6 +280,17 @@ def check_if_statements(curr_line, active_OS_if_states):
             for other_OS in active_OS_if_states.keys():
                 if other_OS != OS and active_OS_if_states[other_OS] == "active":
                     active_OS_if_states[other_OS] = "inactive"
+
+        elif re.search(r'if OS != ', content):
+            OS = content.split()[-1]
+
+            # set new active OS
+            active_OS_if_states[OS] = "inactive"
+
+            # set other inactive ones on active
+            for other_OS in active_OS_if_states.keys():
+                if other_OS != OS and active_OS_if_states[other_OS] == "inactive":
+                    active_OS_if_states[other_OS] = "active"
 
         # endif statement wrt OS
         elif re.search(r'endif', content):
@@ -556,8 +567,8 @@ def main():
             write_end_of_file(os.path.join(root_dir_os_specific_macos, last_directory, last_title + ".txt"), "macOS",
                               links_macos, is_linux_tutorial, main_title, last_title)
 
-    remove_directory_tree("copies")
-    remove_directory_tree("if_mangled_files")
+    # remove_directory_tree("copies")
+    # remove_directory_tree("if_mangled_files")
 
 
 main()
