@@ -12,7 +12,7 @@ failed = 0
 ################### define global variables ###################
 
 # variable that keeps track of the source directories
-source_directories = ["..\\..\\mkdocs\\docs\\HPC\\", "..\\..\\mkdocs\\docs\\HPC\\linux-tutorial"]
+source_directories = [os.path.join("..", "..", "mkdocs", "docs", "HPC"), os.path.join("..", "..", "mkdocs", "docs", "HPC", "linux-tutorial")]
 
 # list of all the filenames
 filenames_generic = {}
@@ -67,22 +67,21 @@ def check_for_title(curr_line):
         return 0, None, None
     else:
         if last_title is not None:
-            write_end_of_file(root_dir_generic + last_directory + "\\" + last_title + ".txt", "", links_generic, is_linux_tutorial)
-            write_end_of_file(root_dir_os_specific_linux + last_directory + "\\" + last_title + ".txt", "Linux",
+            write_end_of_file(os.path.join(root_dir_generic, last_directory, last_title + ".txt"), "", links_generic, is_linux_tutorial)
+            write_end_of_file(os.path.join(root_dir_os_specific_linux, last_directory, last_title + ".txt"), "Linux",
                               links_linux, is_linux_tutorial)
-            write_end_of_file(root_dir_os_specific_windows + last_directory + "\\" + last_title + ".txt", "Windows",
+            write_end_of_file(os.path.join(root_dir_os_specific_windows, last_directory, last_title + ".txt"), "Windows",
                               links_windows, is_linux_tutorial)
-            write_end_of_file(root_dir_os_specific_macos + last_directory + "\\" + last_title + ".txt", "macOS",
+            write_end_of_file(os.path.join(root_dir_os_specific_macos, last_directory, last_title + ".txt"), "macOS",
                               links_macos, is_linux_tutorial)
             reset_link_lists()
 
-        curr_dirs[logic_output] = curr_dirs[logic_output - 1] + "\\" + make_valid_title(
-            curr_line[logic_output + 1:-1].replace(' ', '-'))
+        curr_dirs[logic_output] = os.path.join(curr_dirs[logic_output - 1], make_valid_title(curr_line[logic_output + 1:-1].replace(' ', '-')))
 
-        create_directory(root_dir_generic + curr_dirs[logic_output])
-        create_directory(root_dir_os_specific_linux + curr_dirs[logic_output])
-        create_directory(root_dir_os_specific_windows + curr_dirs[logic_output])
-        create_directory(root_dir_os_specific_macos + curr_dirs[logic_output])
+        create_directory(os.path.join(root_dir_generic,  curr_dirs[logic_output]))
+        create_directory(os.path.join(root_dir_os_specific_linux,  curr_dirs[logic_output]))
+        create_directory(os.path.join(root_dir_os_specific_windows,  curr_dirs[logic_output]))
+        create_directory(os.path.join(root_dir_os_specific_macos,  curr_dirs[logic_output]))
 
         update_lower_curr_dir(curr_dirs[logic_output], logic_output)
         return logic_output, make_valid_title(curr_line[logic_output + 1:-1].replace(' ', '-')), curr_dirs[logic_output]
@@ -127,8 +126,12 @@ def replace_markdown_markers(curr_line, linklist):
 
 # function that let's jinja do its thing to format the files expect for the os-related if-statements
 def jinja_parser(filename, copy_location):
+
+    # YAML file location
+    yml_file_path = os.path.join('..', '..', 'mkdocs', 'extra', 'gent.yml')
+
     # Read the YAML file
-    with open('..\\..\\mkdocs\\extra\\gent.yml', 'r') as yml_file:
+    with open(yml_file_path, 'r') as yml_file:
         words_dict = yaml.safe_load(yml_file)
 
     # ugly fix for index.md error
@@ -143,7 +146,7 @@ def jinja_parser(filename, copy_location):
     mangle_ifs(copy_location, filename)
 
     # Use Jinja2 to replace the macros
-    template_loader = ChoiceLoader([FileSystemLoader(searchpath='.\\if_mangled_files'), FileSystemLoader(searchpath="..\\..\\mkdocs\\docs\\HPC")])
+    template_loader = ChoiceLoader([FileSystemLoader(searchpath='if_mangled_files'), FileSystemLoader(searchpath=os.path.join("..", "..", "mkdocs", "docs", "HPC"))])
     templateEnv = Environment(loader=template_loader)
     template = templateEnv.get_template(filename)
     rendered_content = template.render(combined_context)
@@ -214,7 +217,7 @@ def mangle_os_ifs(line):
 
 
 def mangle_ifs(directory, file):
-    with open(".\\if_mangled_files\\" + file, 'w') as write_file:
+    with open(os.path.join("if_mangled_files",  file), 'w') as write_file:
         with open(directory, 'r') as read_file:
             for line in read_file:
                 new_line = mangle_os_ifs(line)
@@ -305,13 +308,13 @@ def choose_and_write_to_file(curr_line):
     # check that the line is part of the website for gent
     if active_OS_if_states["linux"] == "inactive" and active_OS_if_states["windows"] == "inactive" and \
             active_OS_if_states["macos"] == "inactive":
-        write_text_to_file(root_dir_generic + last_directory + "\\" + last_title + ".txt", curr_line)
+        write_text_to_file(os.path.join(root_dir_generic, last_directory, last_title + ".txt"), curr_line)
     if active_OS_if_states["linux"] == "active":
-        write_text_to_file(root_dir_os_specific_linux + last_directory + "\\" + last_title + ".txt", curr_line)
+        write_text_to_file(os.path.join(root_dir_os_specific_linux, last_directory, last_title + ".txt"), curr_line)
     if active_OS_if_states["windows"] == "active":
-        write_text_to_file(root_dir_os_specific_windows + last_directory + "\\" + last_title + ".txt", curr_line)
+        write_text_to_file(os.path.join(root_dir_os_specific_windows, last_directory, last_title + ".txt"), curr_line)
     if active_OS_if_states["macos"] == "active":
-        write_text_to_file(root_dir_os_specific_macos + last_directory + "\\" + last_title + ".txt", curr_line)
+        write_text_to_file(os.path.join(root_dir_os_specific_macos, last_directory, last_title + ".txt"), curr_line)
 
 
 # function that adds a reference link at the end of every txt file
@@ -356,25 +359,26 @@ def make_valid_title(s):
 
     return valid_filename
 
+
 def main():
     global main_title, active_OS_if_states, last_directory, root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos, is_linux_tutorial, in_code_block, last_title, curr_dirs, links_generic, links_linux, links_windows, links_macos
     # remove the directories from a previous run of the parser if they weren't cleaned up properly for some reason
-    remove_directory_tree(".\\parsed_mds")
-    remove_directory_tree(".\\copies")
-    remove_directory_tree(".\\if_mangled_files")
+    remove_directory_tree("parsed_mds")
+    remove_directory_tree("copies")
+    remove_directory_tree("if_mangled_files")
 
     # make the necessary directories
-    if not os.path.exists(".\\copies"):
-        os.mkdir(".\\copies")
+    if not os.path.exists("copies"):
+        os.mkdir("copies")
 
-    if not os.path.exists(".\\copies\\linux"):
-        os.mkdir(".\\copies\\linux")
+    if not os.path.exists(os.path.join("copies", "linux")):
+        os.mkdir(os.path.join("copies", "linux"))
 
-    if not os.path.exists(".\\parsed_mds"):
-        os.mkdir(".\\parsed_mds")
+    if not os.path.exists("parsed_mds"):
+        os.mkdir("parsed_mds")
 
-    if not os.path.exists(".\\if_mangled_files"):
-        os.mkdir(".\\if_mangled_files")
+    if not os.path.exists("if_mangled_files"):
+        os.mkdir("if_mangled_files")
 
     for filenames in [filenames_generic, filenames_linux]:
         for filename in filenames.keys():
@@ -385,22 +389,22 @@ def main():
 
             # make a copy of the original file in order to make sure the original does not get altered
             if is_linux_tutorial:
-                copy_file = ".\\copies\\linux\\" + filename
+                copy_file = os.path.join("copies", "linux",  filename)
             else:
-                copy_file = ".\\copies\\" + filename
+                copy_file = os.path.join("copies", filename)
             shutil.copyfile(filenames[filename], copy_file)
 
             # variable that keeps track of the directories that are used to write in at different levels
             if is_linux_tutorial:
-                root_dir_generic = ".\\parsed_mds\\generic\\linux_tutorial\\"
-                root_dir_os_specific_linux = ".\\parsed_mds\\os_specific\\linux\\linux_tutorial\\"
-                root_dir_os_specific_windows = ".\\parsed_mds\\os_specific\\windows\\linux_tutorial\\"
-                root_dir_os_specific_macos = ".\\parsed_mds\\os_specific\\macos\\linux_tutorial\\"
+                root_dir_generic = os.path.join("parsed_mds", "generic", "linux_tutorial")
+                root_dir_os_specific_linux = os.path.join("parsed_mds", "os_specific", "linux", "linux_tutorial")
+                root_dir_os_specific_windows = os.path.join("parsed_mds", "os_specific", "windows", "linux_tutorial")
+                root_dir_os_specific_macos = os.path.join("parsed_mds", "os_specific", "macos", "linux_tutorial")
             else:
-                root_dir_generic = ".\\parsed_mds\\generic\\"
-                root_dir_os_specific_linux = ".\\parsed_mds\\os_specific\\linux\\"
-                root_dir_os_specific_windows = ".\\parsed_mds\\os_specific\\windows\\"
-                root_dir_os_specific_macos = ".\\parsed_mds\\os_specific\\macos\\"
+                root_dir_generic = os.path.join("parsed_mds", "generic")
+                root_dir_os_specific_linux = os.path.join("parsed_mds", "os_specific", "linux")
+                root_dir_os_specific_windows = os.path.join("parsed_mds", "os_specific", "windows")
+                root_dir_os_specific_macos = os.path.join("parsed_mds", "os_specific", "macos")
 
             # variable for the main title (needed for reference links)
             main_title = filename[:-3]
@@ -436,14 +440,14 @@ def main():
 
             # create directories for the source markdown file
             create_directory(root_dir_generic)
-            create_directory(".\\parsed_mds\\os_specific")
+            create_directory(os.path.join("parsed_mds", "os_specific"))
             create_directory(root_dir_os_specific_linux)
             create_directory(root_dir_os_specific_windows)
             create_directory(root_dir_os_specific_macos)
-            create_directory(root_dir_generic + curr_dirs[0])
-            create_directory(root_dir_os_specific_linux + curr_dirs[0])
-            create_directory(root_dir_os_specific_windows + curr_dirs[0])
-            create_directory(root_dir_os_specific_macos + curr_dirs[0])
+            create_directory(os.path.join(root_dir_generic, curr_dirs[0]))
+            create_directory(os.path.join(root_dir_os_specific_linux, curr_dirs[0]))
+            create_directory(os.path.join(root_dir_os_specific_windows, curr_dirs[0]))
+            create_directory(os.path.join(root_dir_os_specific_macos, curr_dirs[0]))
 
             # process the jinja macros
             jinja_parser(filename, copy_file)
@@ -480,16 +484,18 @@ def main():
                             choose_and_write_to_file(next_action[2])
 
             # write end of file for the last file
-            write_end_of_file(root_dir_generic + last_directory + "\\" + last_title + ".txt", "", links_generic, is_linux_tutorial)
-            write_end_of_file(root_dir_os_specific_linux + last_directory + "\\" + last_title + ".txt", "Linux",
+            write_end_of_file(os.path.join(root_dir_generic, last_directory, last_title + ".txt"), "", links_generic,
+                              is_linux_tutorial)
+            write_end_of_file(os.path.join(root_dir_os_specific_linux, last_directory, last_title + ".txt"), "Linux",
                               links_linux, is_linux_tutorial)
-            write_end_of_file(root_dir_os_specific_windows + last_directory + "\\" + last_title + ".txt", "Windows",
+            write_end_of_file(os.path.join(root_dir_os_specific_windows, last_directory, last_title + ".txt"),
+                              "Windows",
                               links_windows, is_linux_tutorial)
-            write_end_of_file(root_dir_os_specific_macos + last_directory + "\\" + last_title + ".txt", "macOS",
+            write_end_of_file(os.path.join(root_dir_os_specific_macos, last_directory, last_title + ".txt"), "macOS",
                               links_macos, is_linux_tutorial)
 
-    remove_directory_tree(".\\copies")
-    remove_directory_tree(".\\if_mangled_files")
+    remove_directory_tree("copies")
+    remove_directory_tree("if_mangled_files")
 
 
 main()
