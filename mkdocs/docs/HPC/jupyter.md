@@ -8,7 +8,7 @@ A [Jupyter notebook](https://jupyter.org/) is an interactive, web-based environm
 
 ### Starting a notebook using the web portal
 
-Through the web portal you can easily start a Jupyter notebook on a workernode, via the *Jupyter Notebook* button under the *Interactive Apps* menu item.
+Through the [HPC-UGent web portal](web_portal.md) you can easily start a Jupyter notebook on a workernode, via the *Jupyter Notebook* button under the *Interactive Apps* menu item.
 
 <center>
 ![image](img/ood_start_jupyter.png)
