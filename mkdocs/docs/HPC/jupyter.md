@@ -6,7 +6,7 @@ A [Jupyter notebook](https://jupyter.org/) is an interactive, web-based environm
 
 ## Using Jupyter Notebooks on the HPC
 
-### Starting a notebook using the web portal
+### Launching a notebook using the web portal
 
 Through the [HPC-UGent web portal](web_portal.md) you can easily start a Jupyter notebook on a workernode, via the *Jupyter Notebook* button under the *Interactive Apps* menu item.
 
@@ -14,11 +14,35 @@ Through the [HPC-UGent web portal](web_portal.md) you can easily start a Jupyter
 ![image](img/ood_start_jupyter.png)
 </center>
 
-### Importing libraries
+After starting the Jupyter notebook using the *Launch* button, you will see it being added in state *Queued* in the overview of interactive sessions (see *My Interactive Sessions* menu item):
+
+<center>
+![image](img/ood_jupyter_queued.png)
+</center>
+
+When your job hosting the Jupyter notebook starts running, the status will first change the *Starting*:
+
+<center>
+![image](img/ood_jupyter_starting.png)
+</center>
+
+and eventually the status will change to *Running*, and you will be able to connect to the Jupyter environment using the blue *Connect to Jupyter* button:
+
+<center>
+![image](img/ood_jupyter_running.png)
+</center>
+
+This will launch the Jupyter environment in a new browser tab, where you can open an existing notebook by navigating to the directory where it is located and clicking it. You can also create a new notebook by clicking on `File`>`New`>`Notebook`:
+
+<center>
+![image](img/ood_jupyter_new_notebook.png)
+</center>
+
+### Using extra Python packages
 
 Importing libraries in a notebook running on the HPC isn't as straight forward as on notebooks running on your local machine. You can only import libraries that are part of certain modules on the HPC. To find the right module, first look at the toolchain used by the Jupyter notebook version. This can be found when looking at the `JupyterNotebook version` field when creating a new Jupyter notebook session. In the image above `7.2.0` is the notebook version and `GCCcore 13.2.0`is the toolchain used.
 
-After checking the toolchain, you can search the correct module using a shell environment. you can do this by clicking on `Clusters`>`_login Shell Access` in the web portal.
+After checking the toolchain, you can search the correct module using a shell environment. You can do this by clicking on `Clusters`>`_login Shell Access` in the web portal.
 
 <center>
 ![image](img/ood_jupyter_open_shell.png)
@@ -101,29 +125,3 @@ Lmod has detected the following error:  ...
 
 $ module load SciPy-bundle/2023.11-gfbf-2023b # Now no errors are thrown since this module uses the same toolchain as the notebook
 ```
-
-### Launching the notebook
-
-After starting the Jupyter notebook using the *Launch* button, you will see it being added in state *Queued* in the overview of interactive sessions (see *My Interactive Sessions* menu item):
-
-<center>
-![image](img/ood_jupyter_queued.png)
-</center>
-
-When your job hosting the Jupyter notebook starts running, the status will first change the *Starting*:
-
-<center>
-![image](img/ood_jupyter_starting.png)
-</center>
-
-and eventually the status will change to *Running*, and you will be able to connect to the Jupyter environment using the blue *Connect to Jupyter* button:
-
-<center>
-![image](img/ood_jupyter_running.png)
-</center>
-
-This will launch the Jupyter environment in a new browser tab, where you can open an existing notebook by navigating to the directory where it is located and clicking it. You can also create a new notebook by clicking on `File`>`New`>`Notebook`:
-
-<center>
-![image](img/ood_jupyter_new_notebook.png)
-</center>
