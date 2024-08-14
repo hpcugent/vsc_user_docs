@@ -15,7 +15,7 @@
     
     
       
-        <title>Getting started - VSC User Documentation - Antwerpen (Windows)</title>
+        <title>Getting Started - VSC User Documentation - Antwerpen (Windows)</title>
       
     
     
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting started
+              Getting Started
             
           </span>
         </div>
@@ -1037,30 +1037,28 @@
 <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">#</a></h1>
 <h2 id="logging-in">Logging in<a class="headerlink" href="#logging-in" title="Permanent link">#</a></h2>
 <p>To get started with the HPC-UGent infrastructure, you need to obtain a
-VSC account, see <a href="../../account/">HPC manual</a>.
-<strong>Keep in mind that you must keep your private key to yourself!</strong></p>
+VSC account, see <a href="../../account/">HPC manual</a>. <strong>Keep in mind that you
+must keep your private key to yourself!</strong></p>
 <p>You can look at your public/private key pair as a lock and a key: you
 give us the lock (your public key), we put it on the door, and then you
 can use your key to open the door and get access to the HPC
 infrastructure. <strong>Anyone who has your key can use your VSC account!</strong></p>
-<p>Details on connecting to the HPC infrastructure are available in
-<a href="../../connecting/">HPC manual connecting section</a>.</p>
+<p>Details on connecting to the HPC infrastructure are available in <a href="../../connecting/">HPC
+manual connecting section</a>.</p>
 <h2 id="getting-help">Getting help<a class="headerlink" href="#getting-help" title="Permanent link">#</a></h2>
 <p>To get help:</p>
 <ol>
-<li>
-<p>use the documentation available on the system, through the <code>help</code>,
-    <code>info</code> and <code>man</code> commands (use <code>q</code> to exit).
-    <div class="highlight"><pre><span></span><code>help cd
-info ls
-man cp
-</code></pre></div></p>
-</li>
+<li>use the documentation available on the system, through the
+    <code>help</code>, <code>info</code> and <code>man</code> commands (use <code>q</code> to exit).
+    <div class="highlight"><pre><span></span><code>help cd 
+info ls 
+man cp 
+</code></pre></div></li>
 <li>
 <p>use Google</p>
 </li>
 <li>
-<p>contact <a href="mailto:hpc@uantwerpen.be">hpc@uantwerpen.be</a> in case 
+<p>contact <a href="mailto:hpc@uantwerpen.be">hpc@uantwerpen.be</a> in case
 of problems or questions (even for basic things!)</p>
 </li>
 </ol>
@@ -1069,23 +1067,24 @@ of problems or questions (even for basic things!)</p>
 will be error output or a message explaining you this. Read this
 carefully and try to act on it. Try googling the error first to find any
 possible solution, but if you can't come up with something in 15
-minutes, don't hesitate to mail <a href="mailto:hpc@uantwerpen.be">hpc@uantwerpen.be</a>.</p>
+minutes, don't hesitate to mail 
+<a href="mailto:hpc@uantwerpen.be">hpc@uantwerpen.be</a>.</p>
 <h2 id="basic-terminal-usage">Basic terminal usage<a class="headerlink" href="#basic-terminal-usage" title="Permanent link">#</a></h2>
 <p>The basic interface is the so-called shell prompt, typically ending with
 <code>$</code> (for <code>bash</code> shells).</p>
-<p>You use the shell by executing commands, and hitting <code>&lt;enter&gt;</code>. For
-example:</p>
-<pre><code>$<b> echo hello</b>
-hello
-</code></pre>
+<p>You use the shell by executing commands, and hitting
+<code>&lt;enter&gt;</code>. For example: </p>
+<pre><code>$<b> echo hello 
+</b> hello </code></pre>
 
-<p>You can go to the start or end of the command line using <code>Ctrl-A</code> or
-<code>Ctrl-E</code>.</p>
-<p>To go through previous commands, use <code>&lt;up&gt;</code> and <code>&lt;down&gt;</code>, rather than
-retyping them.</p>
+<p>You can go to the start or end of the command line using
+<code>Ctrl-A</code> or <code>Ctrl-E</code>.</p>
+<p>To go through previous commands, use <code>&lt;up&gt;</code> and
+<code>&lt;down&gt;</code>, rather than retyping them.</p>
 <h3 id="command-history">Command history<a class="headerlink" href="#command-history" title="Permanent link">#</a></h3>
 <p>A powerful feature is that you can "search" through your command
-history, either using the <code>history</code> command, or using <code>Ctrl-R</code>:</p>
+history, either using the <code>history</code> command, or using
+<code>Ctrl-R</code>: </p>
 <pre><code>$<b> history</b>
     1 echo hello
 
@@ -1095,58 +1094,60 @@ history, either using the <code>history</code> command, or using <code>Ctrl-R</c
 
 <h3 id="stopping-commands">Stopping commands<a class="headerlink" href="#stopping-commands" title="Permanent link">#</a></h3>
 <p>If for any reason you want to stop a command from executing, press
-<code>Ctrl-C</code>. For example, if a command is taking too long, or you want to
-rerun it with different arguments.</p>
+<code>Ctrl-C</code>. For example, if a command is taking too long, or
+you want to rerun it with different arguments.</p>
 <h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">#</a></h2>
 <p>At the prompt we also have access to shell variables, which have both a
 <em>name</em> and a <em>value</em>.</p>
 <p>They can be thought of as placeholders for things we need to remember.</p>
 <p>For example, to print the path to your home directory, we can use the
 shell variable named <code>HOME</code>:</p>
-<pre><code>$<b> echo $HOME</b>
+<pre><code>$<b> echo $HOME</b> 
 /user/home/gent/vsc400/vsc40000
 </code></pre>
 
 <p>This prints the value of this variable.</p>
 <h3 id="defining-variables">Defining variables<a class="headerlink" href="#defining-variables" title="Permanent link">#</a></h3>
 <p>There are several variables already defined for you when you start your
-session, such as <code>$HOME</code> which contains the path to your home directory.</p>
+session, such as <code>$HOME</code> which contains the path to your
+home directory.</p>
 <p>For a full overview of defined environment variables in your current
-session, you can use the <code>env</code> command. You can sort this output with
-<code>sort</code> to make it easier to search in:</p>
-<pre><code>$<b> env | sort</b>
+session, you can use the <code>env</code> command. You can sort this
+output with <code>sort</code> to make it easier to search in:</p>
+<pre><code>$<b> env | sort</b> 
 ...
-HOME=/user/home/gent/vsc400/vsc40000
-...
-</code></pre>
+HOME=/user/home/gent/vsc400/vsc40000 
+... </code></pre>
 
-<p>You can also use the <code>grep</code> command to search for a piece of text. The
-following command will output all VSC-specific variable names and their
-values:</p>
+<p>You can also use the <code>grep</code> command to search for a piece of
+text. The following command will output all VSC-specific variable names
+and their values:</p>
 <pre><code>$ <b>env | sort | grep VSC</b></code></pre>
 
-<p>But we can also define our own. this is done with the <code>export</code> command
-(note: variables are always all-caps as a convention):</p>
+<p>But we can also define our own. this is done with the
+<code>export</code> command (note: variables are always all-caps as a
+convention):</p>
 <pre><code>$ <b>export MYVARIABLE="value"</b></code></pre>
 
-<p>It is important you don't include spaces around the <code>=</code> sign. Also note
-the lack of <code>$</code> sign in front of the variable name.</p>
-<p>If we then do</p>
+<p>It is important you don't include spaces around the <code>=</code>
+sign. Also note the lack of <code>$</code> sign in front of the
+variable name.</p>
+<p>If we then do </p>
 <pre><code>$ <b>echo $MYVARIABLE</b></code></pre>
 
-<p>this will output <code>value</code>. Note that the quotes are not included, they
-were only used when defining the variable to escape potential spaces in
-the value.</p>
+<p>this will output <code>value</code>. Note that the quotes are not
+included, they were only used when defining the variable to escape
+potential spaces in the value.</p>
 <h4 id="changing-your-prompt-using-ps1">Changing your prompt using <code>$PS1</code><a class="headerlink" href="#changing-your-prompt-using-ps1" title="Permanent link">#</a></h4>
 <p>You can change what your prompt looks like by redefining the
 special-purpose variable <code>$PS1</code>.</p>
 <p>For example: to include the current location in your prompt:</p>
 <pre><code>$ <b>export PS1='\w $'</b>
-~ $ cd test
-~/test $
-</code></pre>
+~ $ cd test 
+~/test $ </code></pre>
 
-<p>Note that <code>~</code> is short representation of your home directory.</p>
+<p>Note that <code>~</code> is short representation of your home
+directory.</p>
 <p>To make this persistent across session, you can define this custom value
 for <code>$PS1</code> in your <code>.profile</code> startup script:</p>
 <pre><code>$ <b>echo 'export PS1="\w $ " ' >> ~/.profile</b></code></pre>
@@ -1155,64 +1156,52 @@ for <code>$PS1</code> in your <code>.profile</code> startup script:</p>
 <p>One common pitfall is the (accidental) use of non-defined variables.
 Contrary to what you may expect, this does <em>not</em> result in error
 messages, but the variable is considered to be <em>empty</em> instead.</p>
-<p>This may lead to surprising results, for example:</p>
-<pre><code>$ <b>export WORKDIR=/tmp/test</b>
+<p>This may lead to surprising results, for example: </p>
+<pre><code>$ <b>export WORKDIR=/tmp/test</b> 
 $ <b>pwd</b>
-/user/home/gent/vsc400/vsc40000
+/user/home/gent/vsc400/vsc40000 
 $ <b>echo $HOME</b>
-/user/home/gent/vsc400/vsc40000
-</code></pre>
+/user/home/gent/vsc400/vsc40000 </code></pre>
 
 <p>To understand what's going on here, see the section on <code>cd</code> below.</p>
-<p>The moral here is: <strong>be very careful to not use empty variables unintentionally</strong>.</p>
-<p><strong>Tip for job scripts: use <code>set -e -u</code> to avoid using empty variables accidentally.</strong></p>
-<p>The <code>-e</code> option will result in the script getting stopped if any command
-fails.</p>
-<p>The <code>-u</code> option will result in the script getting stopped if empty
-variables are used. (see <a href="https://ss64.com/bash/set.html">https://ss64.com/bash/set.html</a> for a more
-detailed explanation and more options)</p>
-<p>More information can be found at <a href="http://www.tldp.org/LDP/abs/html/variables.html">http://www.tldp.org/LDP/abs/html/variables.html</a>.</p>
+<p>The moral here is: <strong>be very careful to not use empty variables
+unintentionally</strong>.</p>
+<p><strong>Tip for job scripts: use <code>set -e -u</code> to avoid using empty variables
+accidentally.</strong></p>
+<p>The <code>-e</code> option will result in the script getting stopped if
+any command fails.</p>
+<p>The <code>-u</code> option will result in the script getting stopped if
+empty variables are used. (see <a href="https://ss64.com/bash/set.html">https://ss64.com/bash/set.html</a> for
+a more detailed explanation and more options)</p>
+<p>More information can be found at
+<a href="http://www.tldp.org/LDP/abs/html/variables.html">http://www.tldp.org/LDP/abs/html/variables.html</a>.</p>
 <h3 id="restoring-your-default-environment">Restoring your default environment<a class="headerlink" href="#restoring-your-default-environment" title="Permanent link">#</a></h3>
-<p>If you've made a mess of your environment, you shouldn't waste too much
-time trying to fix it. Just log out and log in again and you will be
-given a pristine environment.</p>
+<p>If you've made a mess of your environment, you shouldn't waste too
+much time trying to fix it. Just log out and log in again and you will
+be given a pristine environment.</p>
 <h2 id="basic-system-information">Basic system information<a class="headerlink" href="#basic-system-information" title="Permanent link">#</a></h2>
 <p>Basic information about the system you are logged into can be obtained
 in a variety of ways.</p>
-<p>We limit ourselves to determining the hostname:</p>
-<pre><code>$ <b>hostname</b>
+<p>We limit ourselves to determining the hostname: </p>
+<pre><code>$ <b>hostname</b> 
 gligar01.gligar.os
 
-$ <b>echo $HOSTNAME</b>
-gligar01.gligar.os
+$ <b>echo $HOSTNAME</b> 
+gligar01.gligar.os 
 </code></pre>
 
 <p>And querying some basic information about the Linux kernel:</p>
-<pre><code>$ <b>uname -a</b>
+<pre><code>$ <b>uname -a </b>
 Linux gligar01.gligar.os 2.6.32-573.8.1.el6.ug.x86_64 #1 SMP Mon Nov 16 15:12:09
-    CET 2015 x86_64 x86_64 x86_64 GNU/Linux
-</code></pre>
+    CET 2015 x86_64 x86_64 x86_64 GNU/Linux </code></pre>
 
 <h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">#</a></h2>
 <ul>
-<li>
-<p>Print the full path to your home directory</p>
-</li>
-<li>
-<p>Determine the name of the environment variable to your personal
-    scratch directory</p>
-</li>
-<li>
-<p>What's the name of the system you're logged into? Is it the same for
-    everyone?</p>
-</li>
-<li>
-<p>Figure out how to print the value of a variable without including a
-    newline</p>
-</li>
-<li>
-<p>How do you get help on using the <code>man</code> command?</p>
-</li>
+<li>Print the full path to your home directory</li>
+<li>Determine the name of the environment variable to your personal scratch directory</li>
+<li>What's the name of the system you\'re logged into? Is it the same for everyone?</li>
+<li>Figure out how to print the value of a variable without including a newline</li>
+<li>How do you get help on using the <code>man</code> command?</li>
 </ul>
 <p>Next <a href="../navigating/">chapter</a> teaches you on how to navigate.</p>
 
