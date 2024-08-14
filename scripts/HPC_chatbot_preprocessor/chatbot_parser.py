@@ -354,9 +354,6 @@ def write_text_to_file(file_name, curr_line, link_lists):
             curr_line, links_macos = replace_markdown_markers(curr_line, link_lists[3])
         write_file.write(curr_line)
 
-        # if re.search(r'<.*?>', curr_line):
-        #     print(curr_line)
-
     return link_lists
 
 
@@ -587,8 +584,8 @@ def main():
             for OS in ["", "Linux", "Windows", "macOS"]:
                 write_end_of_file(os.path.join(root_dir_generic, last_directory, last_title + ".txt"), OS, links_generic, is_linux_tutorial, main_title, last_title)
 
-    # remove_directory_tree("copies")
-    # remove_directory_tree("if_mangled_files")
+    remove_directory_tree("copies")
+    remove_directory_tree("if_mangled_files")
 
 
 print("WARNING: This script generates a file structure that contains rather long filepaths. Depending on where the script is ran, some of these paths might exceed the maximum length allowed by the system resulting in problems opening the files.")
