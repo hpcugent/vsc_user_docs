@@ -98,10 +98,37 @@ def replace_markdown_markers(curr_line, linklist):
             curr_line = curr_line.replace(f"[{match[0]}]({match[1]})", match[0] + "[" + str(len(linklist) + 1) + "]")
             linklist.append(match[1])
 
-    # TODO: code-blocks
-    # TODO: tips
-    # TODO: warnings
-    # etc
+    # codeblock (with ``` -> always stands on a separate line, so line can be dropped)
+    if '```' in curr_line:
+        curr_line = ""
+
+    # structures within <>
+    match = re.findall(r'<(.*?)>', curr_line)
+    if match:
+        for i, content in enumerate(match):
+            exception_words = ['SEQUENCE', 'vsc40000', 'Session', 'OUTPUT_DIR', 'jobname', 'jobid', 'hostname', 'Enjoy the day!', 'stdout', 'stderr', 'coursecode', 'year', 'nickname', '01', 'number of ', 'user', 'home', 'software', 'module']
+            if '#include' in curr_line:
+                pass
+            elif '.' in content:
+                curr_line = re.sub(f'<{content}>', f"{content}", curr_line)
+            elif '***' in content:
+                curr_line = re.sub(r'<\*\*\*', "", re.sub(r'\*\*\*\\>', "", curr_line))
+            elif '-' in content and ' ' not in content:
+                curr_line = re.sub(f'<{content}>', f"{content}", curr_line)
+            # sometimes normal words are between <> brackets and should be excluded (ugly fix)
+            elif any(substring in content for substring in exception_words):
+                pass
+            # special cases that messed up the formatting (ugly fix)
+            elif ' files</b' in content:
+                curr_line = re.sub(r'</b>', "", curr_line)
+            elif '<>' in curr_line:
+                pass
+            else:
+                curr_line = re.sub(r'<.*?>', "", curr_line)
+
+    # structures with !!! (info, tips, warnings)
+    if '!!!' in curr_line:
+        curr_line = re.sub(r'!!!', "", curr_line)
 
     return curr_line, linklist
 
@@ -326,6 +353,9 @@ def write_text_to_file(file_name, curr_line, link_lists):
         else:
             curr_line, links_macos = replace_markdown_markers(curr_line, link_lists[3])
         write_file.write(curr_line)
+
+        # if re.search(r'<.*?>', curr_line):
+        #     print(curr_line)
 
     return link_lists
 
@@ -567,6 +597,7 @@ def main():
     # remove_directory_tree("if_mangled_files")
 
 
+print("WARNING: This script generates a file structure that contains rather long filepaths. Depending on where the script is ran, some of these paths might exceed the maximum length allowed by the system resulting in problems opening the files.")
 main()
 # TODO: reconsider maximum depth to be detected as title (now at four)
 # TODO: adapt script to be used from command line
