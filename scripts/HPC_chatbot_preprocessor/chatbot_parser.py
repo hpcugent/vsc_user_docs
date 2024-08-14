@@ -28,7 +28,7 @@ def check_for_title(curr_line, main_title, last_directory, last_title, curr_dirs
     :param last_title: the most recently encountered title
     :param curr_dirs: the most recent directories at each title level
     :param root_dirs: a list containing the root directories
-    param link_lists: a list containing all four link_lists with the links that will be printed at the bottom of a file
+    :param link_lists: a list containing all four link_lists with the links that will be printed at the bottom of a file
     :param is_linux_tutorial_: boolean to indicate whether the current file is part of the linux tutorial
     :param in_code_block_: boolean to indicate whether the current line is part of a codeblock
     :return: the depth of the title
@@ -427,7 +427,7 @@ def make_valid_title(title):
     invalid_chars = r'[<>:"/\\|?*\0()]'
 
     # get rid of extra information between {} brackets
-    s = re.sub(r'\{.*?}', '', title)
+    title = re.sub(r'\{.*?}', '', title)
 
     # Remove invalid characters
     valid_filename = re.sub(invalid_chars, '', title)
@@ -513,16 +513,11 @@ def main():
             main_title = filename[:-3]
 
             # variable that keeps track of the directories that are used to write in at different levels
-            curr_dirs = [filename[:-3] for i in range(5)]
-
-            # variable to keep track whether we're dealing with OS-specific info or not
-            OS_specific = False
+            curr_dirs = [filename[:-3] for _ in range(5)]
 
             # variable that keeps track of the latest non-zero level title and corresponding directory
-            last_title_level = 1
             last_title = None
             last_directory = None
-            last_was_title = False
 
             # list to keep track of links in the text
             links_generic = []
@@ -572,7 +567,6 @@ def main():
 
                     # line is a title with a maximum depth of 4
                     if title_level > 0:
-                        last_title_level = title_level
                         last_title = title
                         last_directory = directory
                         after_first_title = True
