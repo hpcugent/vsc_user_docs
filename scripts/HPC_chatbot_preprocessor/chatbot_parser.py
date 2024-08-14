@@ -48,29 +48,23 @@ def check_for_title(curr_line, main_title, last_directory, last_title, curr_dirs
     if logic_output == 0 or in_code_block_:
         return 0, None, None, curr_dirs, link_lists
     else:
+
+        # if a new title is detected, write the end of the previous file
         if last_title is not None:
-            write_end_of_file(os.path.join(root_dirs[0], last_directory, last_title + ".txt"), "", link_lists[0], is_linux_tutorial_, main_title, last_title)
-            write_end_of_file(os.path.join(root_dirs[1], last_directory, last_title + ".txt"), "Linux",
-                              link_lists[1], is_linux_tutorial_, main_title, last_title)
-            write_end_of_file(os.path.join(root_dirs[2], last_directory, last_title + ".txt"), "Windows",
-                              link_lists[2], is_linux_tutorial_, main_title, last_title)
-            write_end_of_file(os.path.join(root_dirs[3], last_directory, last_title + ".txt"), "macOS",
-                              link_lists[3], is_linux_tutorial_, main_title, last_title)
+            for i, OS in enumerate(["", "Linux", "Windows", "macOS"]):
+                write_end_of_file(os.path.join(root_dirs[i], last_directory, last_title + ".txt"), OS, link_lists[i], is_linux_tutorial_, main_title, last_title)
 
-            # reset the link lists
-            link_lists[0] = []
-            link_lists[1] = []
-            link_lists[2] = []
-            link_lists[3] = []
+            # reset the link lists for each OS
+            for i in range(4):
+                link_lists[i] = []
 
+        # make a new directory corresponding with the new title
         curr_dirs[logic_output] = os.path.join(curr_dirs[logic_output - 1], make_valid_title(curr_line[logic_output + 1:-1].replace(' ', '-')))
 
-        create_directory(os.path.join(root_dirs[0],  curr_dirs[logic_output]))
-        create_directory(os.path.join(root_dirs[1],  curr_dirs[logic_output]))
-        create_directory(os.path.join(root_dirs[2],  curr_dirs[logic_output]))
-        create_directory(os.path.join(root_dirs[3],  curr_dirs[logic_output]))
+        for i in range(4):
+            create_directory(os.path.join(root_dirs[i],  curr_dirs[logic_output]))
 
-        # update the lower order current directories
+        # update the higher order current directories
         for i in range(logic_output + 1, 4):
             curr_dirs[i] = curr_dirs[logic_output]
 
@@ -152,6 +146,7 @@ def jinja_parser(filename, copy_location):
 def mangle_os_ifs(line, is_os):
     """
     function that mangles the os-related if-statements. This is needed because we want to keep these if-statements intact after jinja-parsing to build the directory structure.
+    We don't want to mangle all if-related statements (such as else and endif) so we need to keep track of the context of the last few if-statements.
 
     :param line: the current line to check for os-related if-statements
     :param is_os: boolean keep track of the current os-state of the if-statements. Can be 0, 1, 2 or 3 {0: not in an os-if; 1: in a non-os-if nested in an os-if; 2: in an os-if; 3: in an os-if nested in an os-if}
@@ -198,7 +193,7 @@ def mangle_os_ifs(line, is_os):
                     is_os = 0
         else:
             if is_os == 2 or is_os == 3:
-                line = line[:constr_match.start() + start_index + added_length + 1] + "-if-" + line[constr_match.start() + start_index + added_length + 1:constr_match.end() + start_index + added_length - 1] + "-if-" + line[constr_match.end() + start_index + added_length - 1:]
+                line = line[:pos_first_mangle] + "-if-" + line[pos_first_mangle:pos_second_mangle] + "-if-" + line[pos_second_mangle:]
                 added_length += 8
 
         start_index += constr_match.end()
@@ -247,7 +242,7 @@ def check_if_statements(curr_line, active_OS_if_states):
     if match:
         content = match.group(1)
 
-        # new if-statement wrt OS
+        # new if-statement wrt OS with '=='
         if re.search(r'if OS == ', content):
             OS = content.split()[-1]
 
@@ -259,6 +254,7 @@ def check_if_statements(curr_line, active_OS_if_states):
                 if other_OS != OS and active_OS_if_states[other_OS] == "active":
                     active_OS_if_states[other_OS] = "inactive"
 
+        # new if-statement wrt OS with '!='
         elif re.search(r'if OS != ', content):
             OS = content.split()[-1]
 
@@ -347,8 +343,7 @@ def choose_and_write_to_file(curr_line, active_OS_if_states, last_directory, las
     :return link_lists: an updated link_lists
     """
     # check that the line is part of the website for gent
-    if active_OS_if_states["linux"] == "inactive" and active_OS_if_states["windows"] == "inactive" and \
-            active_OS_if_states["macos"] == "inactive":
+    if active_OS_if_states["linux"] == "inactive" and active_OS_if_states["windows"] == "inactive" and active_OS_if_states["macos"] == "inactive":
         link_lists = write_text_to_file(os.path.join(root_dirs[0], last_directory, last_title + ".txt"), curr_line, link_lists)
     if active_OS_if_states["linux"] == "active":
         link_lists = write_text_to_file(os.path.join(root_dirs[1], last_directory, last_title + ".txt"), curr_line, link_lists)
@@ -457,6 +452,7 @@ def main():
     # some files are not written in proper markdown but rather in reST, they will be converted later down the line using pandoc (temporary, should be taken out when the original files have been converted to proper markdown)
     problem_files = ["getting_started.md", "navigating.md"]
 
+    # for loops over all files
     for filenames in [filenames_generic, filenames_linux]:
         for filename in filenames.keys():
             ################### define/reset loop specific variables ###################
@@ -540,6 +536,7 @@ def main():
                 for line in readfile:
                     title_level, title, directory, curr_dirs, link_lists = check_for_title(line, main_title, last_directory, last_title, curr_dirs, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists, is_linux_tutorial, in_code_block)
 
+                    # detect codeblocks to make sure titles aren't detected in them
                     if '```' in line or (('<pre><code>' in line) ^ ('</code></pre>' in line)):
                         in_code_block = not in_code_block
 
@@ -563,14 +560,8 @@ def main():
                             link_lists = choose_and_write_to_file(next_action[2], active_OS_if_states, last_directory, last_title, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists)
 
             # write end of file for the last file
-            write_end_of_file(os.path.join(root_dir_generic, last_directory, last_title + ".txt"), "", links_generic,
-                              is_linux_tutorial, main_title, last_title)
-            write_end_of_file(os.path.join(root_dir_os_specific_linux, last_directory, last_title + ".txt"), "Linux",
-                              links_linux, is_linux_tutorial, main_title, last_title)
-            write_end_of_file(os.path.join(root_dir_os_specific_windows, last_directory, last_title + ".txt"),
-                              "Windows", links_windows, is_linux_tutorial, main_title, last_title)
-            write_end_of_file(os.path.join(root_dir_os_specific_macos, last_directory, last_title + ".txt"), "macOS",
-                              links_macos, is_linux_tutorial, main_title, last_title)
+            for OS in ["", "Linux", "Windows", "macOS"]:
+                write_end_of_file(os.path.join(root_dir_generic, last_directory, last_title + ".txt"), OS, links_generic, is_linux_tutorial, main_title, last_title)
 
     # remove_directory_tree("copies")
     # remove_directory_tree("if_mangled_files")
