@@ -590,5 +590,4 @@ def main():
 
 print("WARNING: This script generates a file structure that contains rather long filepaths. Depending on where the script is ran, some of these paths might exceed the maximum length allowed by the system resulting in problems opening the files.")
 main()
-# TODO: reconsider maximum depth to be detected as title (now at four)
-# TODO: adapt script to be used from command line
+print("Parsing finished successfully")
