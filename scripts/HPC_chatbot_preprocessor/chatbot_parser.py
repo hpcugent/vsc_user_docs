@@ -273,7 +273,7 @@ def mangle_os_ifs(line, is_os):
 
         # this logic isn't flawless, there are number of nested if-constructions that are technically possible that would break this logic, but these don't appear in the documentation as it doesn't make sense to have these
         if endif_match:
-            if is_os == OS_IF or is_os == OS_IF_IN_OS_IF:
+            if is_os in (OS_IF, OS_IF_IN_OS_IF):
                 line = PART_BEFORE_MANGLING + IF_MANGLED_PART + PART_BETWEEN_MANGLING + IF_MANGLED_PART + PART_AFTER_MANGLING
                 added_length += 2 * len(IF_MANGLED_PART)
                 if is_os == OS_IF:
@@ -298,7 +298,7 @@ def mangle_os_ifs(line, is_os):
                     is_os = NON_OS_IF
                     
         else:
-            if is_os == OS_IF or is_os == OS_IF_IN_OS_IF:
+            if is_os in (OS_IF, OS_IF_IN_OS_IF):
                 line = PART_BEFORE_MANGLING + IF_MANGLED_PART + PART_BETWEEN_MANGLING + IF_MANGLED_PART + PART_AFTER_MANGLING
                 added_length += 2 * len(IF_MANGLED_PART)
 
