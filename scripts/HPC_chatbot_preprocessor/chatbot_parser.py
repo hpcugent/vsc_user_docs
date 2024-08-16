@@ -6,19 +6,55 @@ import yaml
 from itertools import chain
 from jinja2 import FileSystemLoader, Environment, ChoiceLoader
 
+#################### define macro's ####################
+# directories
+PARSED_MDS = "parsed_mds"
+COPIES = "copies"
+IF_MANGLED_FILES = "if_mangled_files"
+LINUX_TUTORIAL = "linux-tutorial"
+RETURN_DIR = ".."
+MKDOCS_DIR = "mkdocs"
+DOCS_DIR = "docs"
+HPC_DIR = "HPC"
+EXTRA_DIR = "extra"
+GENERIC_DIR = "generic"
+OS_SPECIFIC_DIR = "os_specific"
+
+# OSes
+LINUX = "linux"
+WINDOWS = "windows"
+MACOS = "macos"
+
+# urls
+REPO_URL = 'https://github.com/hpcugent/vsc_user_docs'
+DOCS_URL = "docs.hpc.ugent.be"
+
+# OS-related if-states
+ACTIVE = "active"
+INACTIVE = "inactive"
+
+# if mangler states
+NON_OS_IF = 0
+NON_OS_IF_IN_OS_IF = 1
+OS_IF = 2
+OS_IF_IN_OS_IF = 3
+
+# if mangler macros
+IF_MANGLED_PART = "-if-"
+
+# actions
+DONE = "done"
+WRITE_TEXT = "write_text"
+CHECK_EXTRA_MESSAGE = "check_extra_message"
+WRITE_TEXT_AND_CHECK_EXTRA_MESSAGE = "write_text_and_check_extra_message"
+
+# JSON attributes
+CONTENT = "content"
+LINKS = "links"
+REFERENCE_LINK = "reference_link"
+
 
 ################### define functions ###################
-def remove_directory_tree(old_directory):
-    """
-    function that removes a full directory tree
-
-    :param old_directory: the directory to be removed
-    :return:
-    """
-    if os.path.exists(old_directory):
-        shutil.rmtree(old_directory)
-
-
 def check_for_title(curr_line, main_title, last_directory, last_title, curr_dirs, root_dirs, link_lists, is_linux_tutorial_, in_code_block_):
     """
     function that uses the check_for_title_logic function to create the appropriate directories and update the necessary variables
@@ -63,24 +99,13 @@ def check_for_title(curr_line, main_title, last_directory, last_title, curr_dirs
         curr_dirs[logic_output] = os.path.join(curr_dirs[logic_output - 1], make_valid_title(curr_line[logic_output + 1:-1].replace(' ', '-')))
 
         for i in range(4):
-            create_directory(os.path.join(root_dirs[i],  curr_dirs[logic_output]))
+            os.makedirs(os.path.join(root_dirs[i],  curr_dirs[logic_output]), exist_ok=True)
 
         # update the higher order current directories
         for i in range(logic_output + 1, 4):
             curr_dirs[i] = curr_dirs[logic_output]
 
         return logic_output, make_valid_title(curr_line[logic_output + 1:-1].replace(' ', '-')), curr_dirs[logic_output], curr_dirs, link_lists
-
-
-def create_directory(new_directory):
-    """
-    function that creates new directories
-
-    :param new_directory: directory to be created
-    :return:
-    """
-    if not os.path.exists(new_directory):
-        os.mkdir(new_directory)
 
 
 def replace_markdown_markers(curr_line, linklist, in_code_block):
@@ -183,16 +208,16 @@ def jinja_parser(filename, copy_location):
     :return:
     """
     # YAML file location
-    yml_file_path = os.path.join('..', '..', 'mkdocs', 'extra', 'gent.yml')
+    yml_file_path = os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, EXTRA_DIR, 'gent.yml')
 
     # Read the YAML file
     with open(yml_file_path, 'r') as yml_file:
         words_dict = yaml.safe_load(yml_file)
 
-    # ugly fix for index.md error
+    # ugly fix for index.md error that occurs because of the macro "config.repo_url" in mkdocs/docs/HPC/index.md
     additional_context = {
         'config': {
-            'repo_url': 'https://github.com/hpcugent/vsc_user_docs'
+            'repo_url': REPO_URL
         }
     }
     combined_context = {**words_dict, **additional_context}
@@ -201,7 +226,7 @@ def jinja_parser(filename, copy_location):
     mangle_ifs(copy_location, filename)
 
     # Use Jinja2 to replace the macros
-    template_loader = ChoiceLoader([FileSystemLoader(searchpath='if_mangled_files'), FileSystemLoader(searchpath=os.path.join("..", "..", "mkdocs", "docs", "HPC"))])
+    template_loader = ChoiceLoader([FileSystemLoader(searchpath=IF_MANGLED_FILES), FileSystemLoader(searchpath=os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR))])
     templateEnv = Environment(loader=template_loader)
     template = templateEnv.get_template(filename)
     rendered_content = template.render(combined_context)
@@ -217,7 +242,11 @@ def mangle_os_ifs(line, is_os):
     We don't want to mangle all if-related statements (such as else and endif) so we need to keep track of the context of the last few if-statements.
 
     :param line: the current line to check for os-related if-statements
-    :param is_os: boolean keep track of the current os-state of the if-statements. Can be 0, 1, 2 or 3 {0: not in an os-if; 1: in a non-os-if nested in an os-if; 2: in an os-if; 3: in an os-if nested in an os-if}
+    :param is_os: variable keep track of the current os-state of the if-statements. Can be NON_OS_IF, NON_OS_IF_IN_OS_IF, OS_IF or OS_IF_IN_OS_IF 
+        NON_OS_IF: not in an os-if
+        NON_OS_IF_IN_OS_IF: in a non-os-if nested in an os-if
+        OS_IF: in an os-if
+        OS_IF_IN_OS_IF: in an os-if nested in an os-if}
     :return line: the modified line with  mangled os-related if-statements
     """
 
@@ -232,37 +261,46 @@ def mangle_os_ifs(line, is_os):
         if_match = re.search(r'if ', match.group(1))
         if_os_match = re.search(r'if OS ', match.group(1))
         endif_match = re.search(r'endif', match.group(1))
+
+        # mangle positions
         pos_first_mangle = constr_match.start() + start_index + added_length + 1
         pos_second_mangle = constr_match.end() + start_index + added_length - 1
 
+        # different parts of the original string
+        PART_BEFORE_MANGLING = line[:pos_first_mangle]
+        PART_BETWEEN_MANGLING = line[pos_first_mangle:pos_second_mangle]
+        PART_AFTER_MANGLING = line[pos_second_mangle:]
+
         # this logic isn't flawless, there are number of nested if-constructions that are technically possible that would break this logic, but these don't appear in the documentation as it doesn't make sense to have these
         if endif_match:
-            if is_os == 2 or is_os == 3:
-                line = line[:pos_first_mangle] + "-if-" + line[pos_first_mangle:pos_second_mangle] + "-if-" + line[pos_second_mangle:]
-                added_length += 8
-                if is_os == 2:
-                    is_os = 0
-                elif is_os == 3:
-                    is_os = 2
-            elif is_os == 1:
-                is_os = 2
+            if is_os == OS_IF or is_os == OS_IF_IN_OS_IF:
+                line = PART_BEFORE_MANGLING + IF_MANGLED_PART + PART_BETWEEN_MANGLING + IF_MANGLED_PART + PART_AFTER_MANGLING
+                added_length += 2 * len(IF_MANGLED_PART)
+                if is_os == OS_IF:
+                    is_os = NON_OS_IF
+                elif is_os == OS_IF_IN_OS_IF:
+                    is_os = OS_IF
+            elif is_os == NON_OS_IF_IN_OS_IF:
+                is_os = OS_IF
+                
         elif if_match:
             if if_os_match:
-                line = line[:pos_first_mangle] + "-if-" + line[pos_first_mangle:pos_second_mangle] + "-if-" + line[pos_second_mangle:]
-                added_length += 8
-                if is_os == 2:
-                    is_os = 3
+                line = PART_BEFORE_MANGLING + IF_MANGLED_PART + PART_BETWEEN_MANGLING + IF_MANGLED_PART + PART_AFTER_MANGLING
+                added_length += 2 * len(IF_MANGLED_PART)
+                if is_os == OS_IF:
+                    is_os = OS_IF_IN_OS_IF
                 else:
-                    is_os = 2
+                    is_os = OS_IF
             else:
-                if is_os == 2:
-                    is_os = 1
+                if is_os == OS_IF:
+                    is_os = NON_OS_IF_IN_OS_IF
                 else:
-                    is_os = 0
+                    is_os = NON_OS_IF
+                    
         else:
-            if is_os == 2 or is_os == 3:
-                line = line[:pos_first_mangle] + "-if-" + line[pos_first_mangle:pos_second_mangle] + "-if-" + line[pos_second_mangle:]
-                added_length += 8
+            if is_os == OS_IF or is_os == OS_IF_IN_OS_IF:
+                line = PART_BEFORE_MANGLING + IF_MANGLED_PART + PART_BETWEEN_MANGLING + IF_MANGLED_PART + PART_AFTER_MANGLING
+                added_length += 2 * len(IF_MANGLED_PART)
 
         start_index += constr_match.end()
         match = re.search(r'\{%(.*?)%}(.*)', match.group(2))
@@ -278,9 +316,9 @@ def mangle_ifs(directory, filename):
     :return:
     """
     # variable to keep track of latest if-statement scope
-    is_os = 0  # Can be 0, 1, 2 or 3 {0: not in an os-if; 1: in a non-os-if nested in an os-if; 2: in an os-if; 3: in an os-if nested in an os-if}
+    is_os = NON_OS_IF
 
-    with open(os.path.join("if_mangled_files",  filename), 'w') as write_file:
+    with open(os.path.join(IF_MANGLED_FILES,  filename), 'w') as write_file:
         with open(directory, 'r') as read_file:
             for line in read_file:
                 new_line, is_os = mangle_os_ifs(line, is_os)
@@ -294,18 +332,18 @@ def check_if_statements(curr_line, active_OS_if_states):
     :param curr_line: the line to be checked for if-statements to build the directory structure
     :param active_OS_if_states: dictionary keeping track of the active OS states according to the if-statements
     :return: the next action to be done with the line:
-                "done": An if-statement has been found at the start of the line, the active os list has been updated, processing of the current line is finished and a following line can be processed.
-                "check_extra_message": An if-statement has been found at the start of the line, the active os list has been updated, more text has been detected after the if-statement that also needs to be checked.
-                "write_text": No if-statement has been found, write the current line to a file (can also be part of the current line)
-                "write_text_and_check_extra_message": An if statement has been found not at the start of the line. Firstly, write the text up until the if-statement to a file, then check the rest of the line.
+                DONE: An if-statement has been found at the start of the line, the active os list has been updated, processing of the current line is finished and a following line can be processed.
+                CHECK_EXTRA_MESSAGE: An if-statement has been found at the start of the line, the active os list has been updated, more text has been detected after the if-statement that also needs to be checked.
+                WRITE_TEXT: No if-statement has been found, write the current line to a file (can also be part of the current line)
+                WRITE_TEXT_AND_CHECK_EXTRA_MESSAGE: An if statement has been found not at the start of the line. Firstly, write the text up until the if-statement to a file, then check the rest of the line.
     :return: the extra message to be checked, if any
     :return: the text to be written to the file, if any
     """
     # check whether the first part of the line contains information wrt if-statements
-    match = re.search(r'^\{-if-%(.*?)%-if-}(.*)', curr_line)
+    match = re.search(r'^\{' + IF_MANGLED_PART + '%(.*?)%' + IF_MANGLED_PART + '}(.*)', curr_line)
 
     # check whether the line contains information wrt if-statements that is not in its first part
-    match_large = re.search(r'^(.*)(\{-if-%.*?%-if-})(.*)', curr_line)
+    match_large = re.search(r'^(.*)(\{' + IF_MANGLED_PART + '%.*?%' + IF_MANGLED_PART + '})(.*)', curr_line)
 
     if match:
         content = match.group(1)
@@ -315,33 +353,33 @@ def check_if_statements(curr_line, active_OS_if_states):
             OS = content.split()[-1]
 
             # set new active OS
-            active_OS_if_states[OS] = "active"
+            active_OS_if_states[OS] = ACTIVE
 
             # set other active ones on inactive
             for other_OS in active_OS_if_states.keys():
-                if other_OS != OS and active_OS_if_states[other_OS] == "active":
-                    active_OS_if_states[other_OS] = "inactive"
+                if other_OS != OS and active_OS_if_states[other_OS] == ACTIVE:
+                    active_OS_if_states[other_OS] = INACTIVE
 
         # new if-statement wrt OS with '!='
         elif re.search(r'if OS != ', content):
             OS = content.split()[-1]
 
             # set new active OS
-            active_OS_if_states[OS] = "inactive"
+            active_OS_if_states[OS] = INACTIVE
 
             # set other inactive ones on active
             for other_OS in active_OS_if_states.keys():
-                if other_OS != OS and active_OS_if_states[other_OS] == "inactive":
-                    active_OS_if_states[other_OS] = "active"
+                if other_OS != OS and active_OS_if_states[other_OS] == INACTIVE:
+                    active_OS_if_states[other_OS] = ACTIVE
 
         # endif statement wrt OS
         elif re.search(r'endif', content):
             if str(1) in active_OS_if_states.values():
                 active_OS_if_states[
-                    list(active_OS_if_states.keys())[list(active_OS_if_states.values()).index(str(1))]] = "active"
+                    list(active_OS_if_states.keys())[list(active_OS_if_states.values()).index(str(1))]] = ACTIVE
             else:
                 for key in active_OS_if_states.keys():
-                    active_OS_if_states[key] = "inactive"
+                    active_OS_if_states[key] = INACTIVE
 
         # else statement wrt OS
         elif re.search(r'else', content):
@@ -353,26 +391,26 @@ def check_if_statements(curr_line, active_OS_if_states):
 
             # set the previously active one on inactive until the next endif
             key_list = list(active_OS_if_states.keys())
-            position = list(active_OS_if_states.values()).index("active")
+            position = list(active_OS_if_states.values()).index(ACTIVE)
             active_OS_if_states[key_list[position]] = str(i)
 
             # set inactive ones on active
-            while "inactive" in active_OS_if_states.values():
-                position = list(active_OS_if_states.values()).index("inactive")
-                active_OS_if_states[key_list[position]] = "active"
+            while INACTIVE in active_OS_if_states.values():
+                position = list(active_OS_if_states.values()).index(INACTIVE)
+                active_OS_if_states[key_list[position]] = ACTIVE
 
         if len(match.group(2)) != 0:
             extra_message = match.group(2).lstrip()
-            return "check_extra_message", extra_message, None
+            return CHECK_EXTRA_MESSAGE, extra_message, None
 
         else:
-            return "done", None, None
+            return DONE, None, None
 
     elif match_large:
-        return "write_text_and_check_extra_message", match_large.group(2), match_large.group(1)
+        return WRITE_TEXT_AND_CHECK_EXTRA_MESSAGE, match_large.group(2), match_large.group(1)
 
     else:
-        return "write_text", None, curr_line
+        return WRITE_TEXT, None, curr_line
 
 
 def write_text_to_file(file_name, curr_line, link_lists, in_code_block):
@@ -393,19 +431,19 @@ def write_text_to_file(file_name, curr_line, link_lists, in_code_block):
         else:
             data = {}
 
-        if "generic" in file_name:
+        if GENERIC_DIR in file_name:
             curr_line, link_lists[0] = replace_markdown_markers(curr_line, link_lists[0], in_code_block)
-        elif "linux" in file_name:
+        elif LINUX in file_name:
             curr_line, link_lists[1] = replace_markdown_markers(curr_line, link_lists[1], in_code_block)
-        elif "windows" in file_name:
+        elif WINDOWS in file_name:
             curr_line, link_lists[2] = replace_markdown_markers(curr_line, link_lists[2], in_code_block)
         else:
             curr_line, link_lists[3] = replace_markdown_markers(curr_line, link_lists[3], in_code_block)
 
-        if 'content' in data:
-            data['content'] += curr_line
+        if CONTENT in data:
+            data[CONTENT] += curr_line
         else:
-            data['content'] = curr_line
+            data[CONTENT] = curr_line
 
         with open(file_name, "w") as write_file:
             json.dump(data, write_file, indent=4)
@@ -427,13 +465,13 @@ def choose_and_write_to_file(curr_line, active_OS_if_states, last_directory, las
     :return link_lists: an updated link_lists
     """
     # check that the line is part of the website for gent
-    if active_OS_if_states["linux"] == "inactive" and active_OS_if_states["windows"] == "inactive" and active_OS_if_states["macos"] == "inactive":
+    if active_OS_if_states[LINUX] == INACTIVE and active_OS_if_states[WINDOWS] == INACTIVE and active_OS_if_states[MACOS] == INACTIVE:
         link_lists = write_text_to_file(os.path.join(root_dirs[0], last_directory, last_title + ".json"), curr_line, link_lists, in_code_block)
-    if active_OS_if_states["linux"] == "active":
+    if active_OS_if_states[LINUX] == ACTIVE:
         link_lists = write_text_to_file(os.path.join(root_dirs[1], last_directory, last_title + ".json"), curr_line, link_lists, in_code_block)
-    if active_OS_if_states["windows"] == "active":
+    if active_OS_if_states[WINDOWS] == ACTIVE:
         link_lists = write_text_to_file(os.path.join(root_dirs[2], last_directory, last_title + ".json"), curr_line, link_lists, in_code_block)
-    if active_OS_if_states["macos"] == "active":
+    if active_OS_if_states[MACOS] == ACTIVE:
         link_lists = write_text_to_file(os.path.join(root_dirs[3], last_directory, last_title + ".json"), curr_line, link_lists, in_code_block)
 
     return link_lists
@@ -461,17 +499,17 @@ def write_end_of_file(file_location, OS, linklist, is_linux_tutorial_, main_titl
             data = json.load(read_file)
 
         # add the links from within the document
-        data['links'] = {}
+        data[LINKS] = {}
         for i, link in enumerate(linklist):
-            data['links'][str(i + 1)] = str(link)
+            data[LINKS][str(i + 1)] = str(link)
 
         if is_linux_tutorial_:
-            linux_part = "linux-tutorial/"
+            linux_part = LINUX_TUTORIAL + "/"
         else:
             linux_part = ""
 
         # add the reference link
-        data['reference_link'] = ("docs.hpc.ugent.be/" + OS + linux_part + main_title + "/#" + ''.join(char.lower() for char in last_title if char.isalnum() or char == '-').strip('-'))
+        data[REFERENCE_LINK] = (DOCS_URL + "/" + OS + linux_part + main_title + "/#" + ''.join(char.lower() for char in last_title if char.isalnum() or char == '-').strip('-'))
 
         with open(file_location, 'w') as write_file:
             json.dump(data, write_file, indent=4)
@@ -505,28 +543,28 @@ def main():
     :return:
     """
     # remove the directories from a previous run of the parser if they weren't cleaned up properly for some reason
-    remove_directory_tree("parsed_mds")
-    remove_directory_tree("copies")
-    remove_directory_tree("if_mangled_files")
+    shutil.rmtree(PARSED_MDS)
+    shutil.rmtree(COPIES)
+    shutil.rmtree(IF_MANGLED_FILES)
 
     # make the necessary directories
-    if not os.path.exists("copies"):
-        os.mkdir("copies")
+    if not os.path.exists(COPIES):
+        os.mkdir(COPIES)
 
-    if not os.path.exists(os.path.join("copies", "linux")):
-        os.mkdir(os.path.join("copies", "linux"))
+    if not os.path.exists(os.path.join(COPIES, LINUX_TUTORIAL)):
+        os.mkdir(os.path.join(COPIES, LINUX_TUTORIAL))
 
-    if not os.path.exists("parsed_mds"):
-        os.mkdir("parsed_mds")
+    if not os.path.exists(PARSED_MDS):
+        os.mkdir(PARSED_MDS)
 
-    if not os.path.exists("if_mangled_files"):
-        os.mkdir("if_mangled_files")
+    if not os.path.exists(IF_MANGLED_FILES):
+        os.mkdir(IF_MANGLED_FILES)
 
     ################### define loop-invariant variables ###################
 
     # variable that keeps track of the source directories
-    source_directories = [os.path.join("..", "..", "mkdocs", "docs", "HPC"),
-                          os.path.join("..", "..", "mkdocs", "docs", "HPC", "linux-tutorial")]
+    source_directories = [os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR),
+                          os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR, LINUX_TUTORIAL)]
 
     # list of all the filenames
     filenames_generic = {}
@@ -535,7 +573,7 @@ def main():
         all_items = os.listdir(source_directory)
         files = [f for f in all_items if os.path.isfile(os.path.join(source_directory, f)) and ".md" in f[-3:]]
         for file in files:
-            if "linux-tutorial" in source_directory:
+            if LINUX_TUTORIAL in source_directory:
                 filenames_linux[file] = os.path.join(source_directory, file)
             else:
                 filenames_generic[file] = os.path.join(source_directory, file)
@@ -546,26 +584,26 @@ def main():
             ################### define/reset loop specific variables ###################
 
             # variable that keeps track of whether file is part of the linux tutorial
-            is_linux_tutorial = bool("linux-tutorial" in filenames[filename])
+            is_linux_tutorial = bool(LINUX_TUTORIAL in filenames[filename])
 
             # make a copy of the original file in order to make sure the original does not get altered
             if is_linux_tutorial:
-                copy_file = os.path.join("copies", "linux",  filename)
+                copy_file = os.path.join(COPIES, LINUX_TUTORIAL,  filename)
             else:
-                copy_file = os.path.join("copies", filename)
+                copy_file = os.path.join(COPIES, filename)
             shutil.copyfile(filenames[filename], copy_file)
 
             # variable that keeps track of the directories that are used to write in at different levels
             if is_linux_tutorial:
-                root_dir_generic = os.path.join("parsed_mds", "generic", "linux_tutorial")
-                root_dir_os_specific_linux = os.path.join("parsed_mds", "os_specific", "linux", "linux_tutorial")
-                root_dir_os_specific_windows = os.path.join("parsed_mds", "os_specific", "windows", "linux_tutorial")
-                root_dir_os_specific_macos = os.path.join("parsed_mds", "os_specific", "macos", "linux_tutorial")
+                root_dir_generic = os.path.join(PARSED_MDS, GENERIC_DIR, LINUX_TUTORIAL)
+                root_dir_os_specific_linux = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, LINUX, LINUX_TUTORIAL)
+                root_dir_os_specific_windows = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, WINDOWS, LINUX_TUTORIAL)
+                root_dir_os_specific_macos = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, MACOS, LINUX_TUTORIAL)
             else:
-                root_dir_generic = os.path.join("parsed_mds", "generic")
-                root_dir_os_specific_linux = os.path.join("parsed_mds", "os_specific", "linux")
-                root_dir_os_specific_windows = os.path.join("parsed_mds", "os_specific", "windows")
-                root_dir_os_specific_macos = os.path.join("parsed_mds", "os_specific", "macos")
+                root_dir_generic = os.path.join(PARSED_MDS, GENERIC_DIR)
+                root_dir_os_specific_linux = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, LINUX)
+                root_dir_os_specific_windows = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, WINDOWS)
+                root_dir_os_specific_macos = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, MACOS)
             root_dirs = [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos]
 
             # variable for the main title (needed for reference links)
@@ -586,7 +624,7 @@ def main():
             link_lists = [links_generic, links_linux, links_windows, links_macos]
 
             # dictionaries to keep track of current OS
-            active_OS_if_states = {"linux": "inactive", "windows": "inactive", "macos": "inactive"}
+            active_OS_if_states = {LINUX: INACTIVE, WINDOWS: INACTIVE, MACOS: INACTIVE}
 
             # variable that shows whether the first title has been reached yet
             after_first_title = False
@@ -597,15 +635,8 @@ def main():
             ################### actually parse the md file ###################
 
             # create directories for the source markdown file
-            create_directory(root_dir_generic)
-            create_directory(os.path.join("parsed_mds", "os_specific"))
-            create_directory(root_dir_os_specific_linux)
-            create_directory(root_dir_os_specific_windows)
-            create_directory(root_dir_os_specific_macos)
-            create_directory(os.path.join(root_dir_generic, curr_dirs[0]))
-            create_directory(os.path.join(root_dir_os_specific_linux, curr_dirs[0]))
-            create_directory(os.path.join(root_dir_os_specific_windows, curr_dirs[0]))
-            create_directory(os.path.join(root_dir_os_specific_macos, curr_dirs[0]))
+            for directory in [root_dir_generic, os.path.join(PARSED_MDS, OS_SPECIFIC_DIR), root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos, os.path.join(root_dir_generic, curr_dirs[0]), os.path.join(root_dir_os_specific_linux, curr_dirs[0]), os.path.join(root_dir_os_specific_windows, curr_dirs[0]), os.path.join(root_dir_os_specific_macos, curr_dirs[0])]:
+                os.makedirs(directory, exist_ok=True)
 
             # process the jinja macros
             jinja_parser(filename, copy_file)
@@ -630,22 +661,23 @@ def main():
                     elif after_first_title:
                         # check for if-statements and write the appropriate lines in the right files
                         next_action = check_if_statements(line, active_OS_if_states)
-                        while next_action[0] == "write_text_and_check_extra_message" or next_action[0] == "check_extra_message":
-                            if next_action[0] == "write_text_and_check_extra_message":
+                        while next_action[0] == WRITE_TEXT_AND_CHECK_EXTRA_MESSAGE or next_action[0] == CHECK_EXTRA_MESSAGE:
+                            if next_action[0] == WRITE_TEXT_AND_CHECK_EXTRA_MESSAGE:
                                 link_lists = choose_and_write_to_file(next_action[2], active_OS_if_states, last_directory, last_title, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists, in_code_block)
                             next_action = check_if_statements(next_action[1], active_OS_if_states)
 
-                        if next_action[0] == "write_text":
+                        if next_action[0] == WRITE_TEXT:
                             link_lists = choose_and_write_to_file(next_action[2], active_OS_if_states, last_directory, last_title, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists, in_code_block)
 
             # write end of file for the last file
             for i, OS in enumerate(["", "Linux", "Windows", "macOS"]):
                 write_end_of_file(os.path.join(root_dirs[i], last_directory, last_title + ".json"), OS, link_lists[i], is_linux_tutorial, main_title, last_title)
 
-    # remove_directory_tree("copies")
-    # remove_directory_tree("if_mangled_files")
+    # remove_directory_tree(COPIES)
+    # remove_directory_tree(IF_MANGLED_FILES)
 
 
+################### run the script ###################
 print("WARNING: This script generates a file structure that contains rather long filepaths. Depending on where the script is ran, some of these paths might exceed the maximum length allowed by the system resulting in problems opening the files.")
 main()
 print("Parsing finished successfully")
