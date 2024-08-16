@@ -246,7 +246,7 @@ def mangle_os_ifs(line, is_os):
         NON_OS_IF: not in an os-if
         NON_OS_IF_IN_OS_IF: in a non-os-if nested in an os-if
         OS_IF: in an os-if
-        OS_IF_IN_OS_IF: in an os-if nested in an os-if}
+        OS_IF_IN_OS_IF: in an os-if nested in an os-if
     :return line: the modified line with  mangled os-related if-statements
     """
 
