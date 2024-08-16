@@ -285,7 +285,7 @@ button if the desktop session is *Running*:
 
 #### Jupyter notebook
 
-See [Jupyter notebook](../jupyter)
+See [dedicated page on Jupyter notebooks](../jupyter)
 
 ## Restarting your web server in case of problems
 
