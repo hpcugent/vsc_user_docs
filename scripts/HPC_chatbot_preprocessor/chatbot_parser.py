@@ -4,6 +4,7 @@ import shutil
 import pypandoc
 import yaml
 from jinja2 import FileSystemLoader, Environment, ChoiceLoader
+from itertools import chain
 
 
 ################### define functions ###################
@@ -91,6 +92,13 @@ def replace_markdown_markers(curr_line, linklist):
     :return curr_line: the adapted current line
     :return linklist: the updated linklist
     """
+
+    # TODO: filter out images before links
+    # replace images with an empty line
+    if re.match(r'!\[image]\(.*?\)', curr_line) or re.match(r'!\[]\(img/.*?.png\)', curr_line):
+        print(curr_line)
+        curr_line = ""
+
     # replace links with a reference
     matches = re.findall(r'\[(.*?)]\((.*?)\)', curr_line)
     if matches:
@@ -106,25 +114,36 @@ def replace_markdown_markers(curr_line, linklist):
     match = re.findall(r'<(.*?)>', curr_line)
     if match:
         for i, content in enumerate(match):
-            exception_words = ['SEQUENCE', 'vsc40000', 'Session', 'OUTPUT_DIR', 'jobname', 'jobid', 'hostname', 'Enjoy the day!', 'stdout', 'stderr', 'coursecode', 'year', 'nickname', '01', 'number of ', 'user', 'home', 'software', 'module']
-            if '#include' in curr_line:
-                pass
-            elif '.' in content:
-                curr_line = re.sub(f'<{content}>', f"{content}", curr_line)
-            elif '***' in content:
-                curr_line = re.sub(r'<\*\*\*', "", re.sub(r'\*\*\*\\>', "", curr_line))
-            elif '-' in content and ' ' not in content:
-                curr_line = re.sub(f'<{content}>', f"{content}", curr_line)
-            # sometimes normal words are between <> brackets and should be excluded (ugly fix)
-            elif any(substring in content for substring in exception_words):
-                pass
-            # special cases that messed up the formatting (ugly fix)
+            syntax_words = ["pre", "b", "code", "sub", "br", "center", "p", "div", "u", "p", "i", "tt", "a", "t", "span"]  # make sure these are always lowercase
+            syntax_words_variations = list(chain.from_iterable([[element, element + "/", "/" + element] for element in syntax_words]))
+            syntax_words_style = [element + " style=.*" for element in syntax_words]
+
+            # add references for every link of format <a href=...>
+            if re.search(r'a href=.*', content):
+                link = content[8:-1]
+                curr_line = re.sub(f'<{content}>', "[" + str(len(linklist) + 1) + "]", curr_line)
+                linklist.append(link)
+
+            # drop the syntax words
+            elif content.lower() in syntax_words_variations:
+                curr_line = re.sub(f'<{content}>', "", curr_line)
+
+            # drop the version of the syntax_words followed by " style="
+            elif any(re.match(pattern, content) for pattern in syntax_words_style):
+                curr_line = re.sub(r'<.*?>', "", curr_line)
+
+            # drop markdown comments
+            elif re.fullmatch(r'!--.*?--', content):
+                curr_line = re.sub(r'<.*?>', "", curr_line)
+
+            # special case (ugly fix)
             elif ' files</b' in content:
                 curr_line = re.sub(r'</b>', "", curr_line)
-            elif '<>' in curr_line:
-                pass
+
+            # keep the rest
             else:
-                curr_line = re.sub(r'<.*?>', "", curr_line)
+                # print("<" + content + ">")
+                pass
 
     # structures with !!! (info, tips, warnings)
     if '!!!' in curr_line:
@@ -505,6 +524,7 @@ def main():
                 root_dir_os_specific_linux = os.path.join("parsed_mds", "os_specific", "linux")
                 root_dir_os_specific_windows = os.path.join("parsed_mds", "os_specific", "windows")
                 root_dir_os_specific_macos = os.path.join("parsed_mds", "os_specific", "macos")
+            root_dirs = [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos]
 
             # variable for the main title (needed for reference links)
             main_title = filename[:-3]
@@ -581,8 +601,8 @@ def main():
                             link_lists = choose_and_write_to_file(next_action[2], active_OS_if_states, last_directory, last_title, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists)
 
             # write end of file for the last file
-            for OS in ["", "Linux", "Windows", "macOS"]:
-                write_end_of_file(os.path.join(root_dir_generic, last_directory, last_title + ".txt"), OS, links_generic, is_linux_tutorial, main_title, last_title)
+            for i, OS in enumerate(["", "Linux", "Windows", "macOS"]):
+                write_end_of_file(os.path.join(root_dirs[i], last_directory, last_title + ".txt"), OS, link_lists[i], is_linux_tutorial, main_title, last_title)
 
     remove_directory_tree("copies")
     remove_directory_tree("if_mangled_files")
