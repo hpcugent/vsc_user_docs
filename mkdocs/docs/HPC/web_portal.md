@@ -285,52 +285,7 @@ button if the desktop session is *Running*:
 
 #### Jupyter notebook
 
-Through the web portal you can easily start a [Jupyter
-notebook](https://jupyter.org/) on a workernode, via the *Jupyter
-Notebook* button under the *Interactive Apps* menu item.
-
-<center>
-![image](img/ood_start_jupyter.png)
-</center>
-
-After starting the Jupyter notebook using the *Launch* button, you will
-see it being added in state *Queued* in the overview of interactive
-sessions (see *My Interactive Sessions* menu item):
-
-<center>
-![image](img/ood_jupyter_queued.png)
-</center>
-
-When your job hosting the Jupyter notebook starts running, the status
-will first change the *Starting*:
-
-<center>
-![image](img/ood_jupyter_starting.png)
-</center>
-
-and eventually the status will change to *Running*, and you will be able
-to connect to the Jupyter environment using the blue *Connect to
-Jupyter* button:
-
-<center>
-![image](img/ood_jupyter_running.png)
-</center>
-
-This will launch the Jupyter environment in a new browser tab, where you
-can open an existing notebook by navigating to the directory where it
-located and clicking it, or using the *New* menu on the top right:
-
-<center>
-![image](img/ood_jupyter_new_notebook.png)
-</center>
-
-Here's an example of a Jupyter notebook in action. Note that several
-non-standard Python packages (like *numpy*, *scipy*, *pandas*,
-*matplotlib*) are readily available:
-
-<center>
-![image](img/ood_jupyter_notebook_example.png)
-</center>
+See [Jupyter notebook](../jupyter)
 
 ## Restarting your web server in case of problems
 
