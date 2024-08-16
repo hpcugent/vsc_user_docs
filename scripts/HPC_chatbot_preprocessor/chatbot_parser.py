@@ -1,9 +1,10 @@
+import json
 import os
 import re
 import shutil
 import yaml
-from jinja2 import FileSystemLoader, Environment, ChoiceLoader
 from itertools import chain
+from jinja2 import FileSystemLoader, Environment, ChoiceLoader
 
 
 ################### define functions ###################
@@ -52,7 +53,7 @@ def check_for_title(curr_line, main_title, last_directory, last_title, curr_dirs
         # if a new title is detected, write the end of the previous file
         if last_title is not None:
             for i, OS in enumerate(["", "Linux", "Windows", "macOS"]):
-                write_end_of_file(os.path.join(root_dirs[i], last_directory, last_title + ".txt"), OS, link_lists[i], is_linux_tutorial_, main_title, last_title)
+                write_end_of_file(os.path.join(root_dirs[i], last_directory, last_title + ".json"), OS, link_lists[i], is_linux_tutorial_, main_title, last_title)
 
             # reset the link lists for each OS
             for i in range(4):
@@ -384,16 +385,30 @@ def write_text_to_file(file_name, curr_line, link_lists, in_code_block):
     :param in_code_block: boolean indicating whether the current line is in a codeblock
     :return link_lists: updated link_lists
     """
-    with open(file_name, "a") as write_file:
-        if "generic" in file_name:
-            curr_line, links_generic = replace_markdown_markers(curr_line, link_lists[0], in_code_block)
-        elif "linux" in file_name:
-            curr_line, links_linux = replace_markdown_markers(curr_line, link_lists[1], in_code_block)
-        elif "windows" in file_name:
-            curr_line, links_windows = replace_markdown_markers(curr_line, link_lists[2], in_code_block)
+
+    if os.path.exists(file_name) or curr_line.strip():
+        if os.path.exists(file_name):
+            with open(file_name, "r") as read_file:
+                data = json.load(read_file)
         else:
-            curr_line, links_macos = replace_markdown_markers(curr_line, link_lists[3], in_code_block)
-        write_file.write(curr_line)
+            data = {}
+
+        if "generic" in file_name:
+            curr_line, link_lists[0] = replace_markdown_markers(curr_line, link_lists[0], in_code_block)
+        elif "linux" in file_name:
+            curr_line, link_lists[1] = replace_markdown_markers(curr_line, link_lists[1], in_code_block)
+        elif "windows" in file_name:
+            curr_line, link_lists[2] = replace_markdown_markers(curr_line, link_lists[2], in_code_block)
+        else:
+            curr_line, link_lists[3] = replace_markdown_markers(curr_line, link_lists[3], in_code_block)
+
+        if 'content' in data:
+            data['content'] += curr_line
+        else:
+            data['content'] = curr_line
+
+        with open(file_name, "w") as write_file:
+            json.dump(data, write_file, indent=4)
 
     return link_lists
 
@@ -413,13 +428,13 @@ def choose_and_write_to_file(curr_line, active_OS_if_states, last_directory, las
     """
     # check that the line is part of the website for gent
     if active_OS_if_states["linux"] == "inactive" and active_OS_if_states["windows"] == "inactive" and active_OS_if_states["macos"] == "inactive":
-        link_lists = write_text_to_file(os.path.join(root_dirs[0], last_directory, last_title + ".txt"), curr_line, link_lists, in_code_block)
+        link_lists = write_text_to_file(os.path.join(root_dirs[0], last_directory, last_title + ".json"), curr_line, link_lists, in_code_block)
     if active_OS_if_states["linux"] == "active":
-        link_lists = write_text_to_file(os.path.join(root_dirs[1], last_directory, last_title + ".txt"), curr_line, link_lists, in_code_block)
+        link_lists = write_text_to_file(os.path.join(root_dirs[1], last_directory, last_title + ".json"), curr_line, link_lists, in_code_block)
     if active_OS_if_states["windows"] == "active":
-        link_lists = write_text_to_file(os.path.join(root_dirs[2], last_directory, last_title + ".txt"), curr_line, link_lists, in_code_block)
+        link_lists = write_text_to_file(os.path.join(root_dirs[2], last_directory, last_title + ".json"), curr_line, link_lists, in_code_block)
     if active_OS_if_states["macos"] == "active":
-        link_lists = write_text_to_file(os.path.join(root_dirs[3], last_directory, last_title + ".txt"), curr_line, link_lists, in_code_block)
+        link_lists = write_text_to_file(os.path.join(root_dirs[3], last_directory, last_title + ".json"), curr_line, link_lists, in_code_block)
 
     return link_lists
 
@@ -436,23 +451,30 @@ def write_end_of_file(file_location, OS, linklist, is_linux_tutorial_, main_titl
     :param last_title: the most recently encountered title
     :return:
     """
-    if len(OS) > 0:
-        OS = OS + "/"
 
-    # add the links from within the document
-    with open(file_location, 'a') as write_file:
-        write_file.write("\n\n")
+    if os.path.exists(file_location):
+
+        if len(OS) > 0:
+            OS = OS + "/"
+
+        with open(file_location, "r") as read_file:
+            data = json.load(read_file)
+
+        # add the links from within the document
+        data['links'] = {}
         for i, link in enumerate(linklist):
-            write_file.write("[" + str(i + 1) + "]: " + str(link) + "\n")
+            data['links'][str(i + 1)] = str(link)
 
-    if is_linux_tutorial_:
-        linux_part = "linux-tutorial/"
-    else:
-        linux_part = ""
+        if is_linux_tutorial_:
+            linux_part = "linux-tutorial/"
+        else:
+            linux_part = ""
 
-    # finally add the reference link
-    with open(file_location, 'a') as write_file:
-        write_file.write("\nreference: docs.hpc.ugent.be/" + OS + linux_part + main_title + "/#" + ''.join(char.lower() for char in last_title if char.isalnum() or char == '-').strip('-') + "\n")
+        # add the reference link
+        data['reference_link'] = ("docs.hpc.ugent.be/" + OS + linux_part + main_title + "/#" + ''.join(char.lower() for char in last_title if char.isalnum() or char == '-').strip('-'))
+
+        with open(file_location, 'w') as write_file:
+            json.dump(data, write_file, indent=4)
 
 
 def make_valid_title(title):
@@ -618,10 +640,10 @@ def main():
 
             # write end of file for the last file
             for i, OS in enumerate(["", "Linux", "Windows", "macOS"]):
-                write_end_of_file(os.path.join(root_dirs[i], last_directory, last_title + ".txt"), OS, link_lists[i], is_linux_tutorial, main_title, last_title)
+                write_end_of_file(os.path.join(root_dirs[i], last_directory, last_title + ".json"), OS, link_lists[i], is_linux_tutorial, main_title, last_title)
 
-    remove_directory_tree("copies")
-    remove_directory_tree("if_mangled_files")
+    # remove_directory_tree("copies")
+    # remove_directory_tree("if_mangled_files")
 
 
 print("WARNING: This script generates a file structure that contains rather long filepaths. Depending on where the script is ran, some of these paths might exceed the maximum length allowed by the system resulting in problems opening the files.")
