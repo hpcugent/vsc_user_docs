@@ -93,10 +93,8 @@ def replace_markdown_markers(curr_line, linklist):
     :return linklist: the updated linklist
     """
 
-    # TODO: filter out images before links
     # replace images with an empty line
-    if re.match(r'!\[image]\(.*?\)', curr_line) or re.match(r'!\[]\(img/.*?.png\)', curr_line):
-        print(curr_line)
+    if re.search(r'(?i)!\[image]\(.*?\)', curr_line) or re.search(r'!\[]\(img/.*?.png\)', curr_line):
         curr_line = ""
 
     # replace links with a reference
@@ -495,9 +493,6 @@ def main():
             else:
                 filenames_generic[file] = os.path.join(source_directory, file)
 
-    # some files are not written in proper markdown but rather in reST, they will be converted later down the line using pandoc (temporary, should be taken out when the original files have been converted to proper markdown)
-    problem_files = ["getting_started.md", "navigating.md"]
-
     # for loops over all files
     for filenames in [filenames_generic, filenames_linux]:
         for filename in filenames.keys():
@@ -567,10 +562,6 @@ def main():
 
             # process the jinja macros
             jinja_parser(filename, copy_file)
-
-            # convert the files without proper markdown layout into markdown using pandoc
-            if "linux-tutorial" in filenames[filename] and filename in problem_files:
-                pypandoc.convert_file(copy_file, 'markdown', outputfile=copy_file)
 
             # open the file and store line by line in the right file
             with open(copy_file, 'r') as readfile:
