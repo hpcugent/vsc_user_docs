@@ -1,7 +1,6 @@
 import os
 import re
 import shutil
-import pypandoc
 import yaml
 from jinja2 import FileSystemLoader, Environment, ChoiceLoader
 from itertools import chain
@@ -83,12 +82,13 @@ def create_directory(new_directory):
         os.mkdir(new_directory)
 
 
-def replace_markdown_markers(curr_line, linklist):
+def replace_markdown_markers(curr_line, linklist, in_code_block):
     """
     function that replaces certain markdown structures with the equivalent used on the website
 
     :param curr_line: the current line on which markdown structures need to be replaced
     :param linklist: the list used to store links that need to be printed at the end of the file
+    :param in_code_block: boolean indicating whether the current line is part of a code block
     :return curr_line: the adapted current line
     :return linklist: the updated linklist
     """
@@ -146,6 +146,29 @@ def replace_markdown_markers(curr_line, linklist):
     # structures with !!! (info, tips, warnings)
     if '!!!' in curr_line:
         curr_line = re.sub(r'!!!', "", curr_line)
+
+    # get rid of other markdown indicators (`, *, +, _)
+    if not in_code_block:
+
+        backquotes = re.findall(r'`(.*?)`', curr_line)
+        if backquotes:
+            for i, content in enumerate(backquotes):
+                curr_line = curr_line.replace(f"`{content}`", content)
+
+        asterisks = re.findall(r'(?<!\\)(\*+)(.+?)\1', curr_line)
+        if asterisks:
+            for i, content in enumerate(asterisks):
+                curr_line = re.sub(r"(\*+)" + content[1] + r"\1", content[1], curr_line)
+
+        pluses = re.findall(r'\+\+(.+?)\+\+', curr_line)
+        if pluses:
+            for i, content in enumerate(pluses):
+                curr_line = re.sub(r"\+\+" + content + r"\+\+", content, curr_line)
+
+        underscores = re.findall(r' (_+)(.+?)\1 ', curr_line)
+        if underscores:
+            for i, content in enumerate(underscores):
+                curr_line = re.sub(r"(_+)" + content[1] + r"\1", content[1], curr_line)
 
     return curr_line, linklist
 
@@ -351,30 +374,31 @@ def check_if_statements(curr_line, active_OS_if_states):
         return "write_text", None, curr_line
 
 
-def write_text_to_file(file_name, curr_line, link_lists):
+def write_text_to_file(file_name, curr_line, link_lists, in_code_block):
     """
     function that writes a line to a file
 
     :param file_name: target file to write the line to
     :param curr_line: line to be written to the file
     :param link_lists: list containing all the links that will be printed at the end of files
+    :param in_code_block: boolean indicating whether the current line is in a codeblock
     :return link_lists: updated link_lists
     """
     with open(file_name, "a") as write_file:
         if "generic" in file_name:
-            curr_line, links_generic = replace_markdown_markers(curr_line, link_lists[0])
+            curr_line, links_generic = replace_markdown_markers(curr_line, link_lists[0], in_code_block)
         elif "linux" in file_name:
-            curr_line, links_linux = replace_markdown_markers(curr_line, link_lists[1])
+            curr_line, links_linux = replace_markdown_markers(curr_line, link_lists[1], in_code_block)
         elif "windows" in file_name:
-            curr_line, links_windows = replace_markdown_markers(curr_line, link_lists[2])
+            curr_line, links_windows = replace_markdown_markers(curr_line, link_lists[2], in_code_block)
         else:
-            curr_line, links_macos = replace_markdown_markers(curr_line, link_lists[3])
+            curr_line, links_macos = replace_markdown_markers(curr_line, link_lists[3], in_code_block)
         write_file.write(curr_line)
 
     return link_lists
 
 
-def choose_and_write_to_file(curr_line, active_OS_if_states, last_directory, last_title, root_dirs, link_lists):
+def choose_and_write_to_file(curr_line, active_OS_if_states, last_directory, last_title, root_dirs, link_lists, in_code_block):
     """
     function that decides what file to write text to
 
@@ -384,17 +408,18 @@ def choose_and_write_to_file(curr_line, active_OS_if_states, last_directory, las
     :param last_title: the most recently encountered title
     :param root_dirs: a list with all root directories
     :param link_lists: list of links that need to be written at the end of the files
+    :param in_code_block: boolean indicating whether the current line is in a code block
     :return link_lists: an updated link_lists
     """
     # check that the line is part of the website for gent
     if active_OS_if_states["linux"] == "inactive" and active_OS_if_states["windows"] == "inactive" and active_OS_if_states["macos"] == "inactive":
-        link_lists = write_text_to_file(os.path.join(root_dirs[0], last_directory, last_title + ".txt"), curr_line, link_lists)
+        link_lists = write_text_to_file(os.path.join(root_dirs[0], last_directory, last_title + ".txt"), curr_line, link_lists, in_code_block)
     if active_OS_if_states["linux"] == "active":
-        link_lists = write_text_to_file(os.path.join(root_dirs[1], last_directory, last_title + ".txt"), curr_line, link_lists)
+        link_lists = write_text_to_file(os.path.join(root_dirs[1], last_directory, last_title + ".txt"), curr_line, link_lists, in_code_block)
     if active_OS_if_states["windows"] == "active":
-        link_lists = write_text_to_file(os.path.join(root_dirs[2], last_directory, last_title + ".txt"), curr_line, link_lists)
+        link_lists = write_text_to_file(os.path.join(root_dirs[2], last_directory, last_title + ".txt"), curr_line, link_lists, in_code_block)
     if active_OS_if_states["macos"] == "active":
-        link_lists = write_text_to_file(os.path.join(root_dirs[3], last_directory, last_title + ".txt"), curr_line, link_lists)
+        link_lists = write_text_to_file(os.path.join(root_dirs[3], last_directory, last_title + ".txt"), curr_line, link_lists, in_code_block)
 
     return link_lists
 
@@ -585,11 +610,11 @@ def main():
                         next_action = check_if_statements(line, active_OS_if_states)
                         while next_action[0] == "write_text_and_check_extra_message" or next_action[0] == "check_extra_message":
                             if next_action[0] == "write_text_and_check_extra_message":
-                                link_lists = choose_and_write_to_file(next_action[2], active_OS_if_states, last_directory, last_title, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists)
+                                link_lists = choose_and_write_to_file(next_action[2], active_OS_if_states, last_directory, last_title, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists, in_code_block)
                             next_action = check_if_statements(next_action[1], active_OS_if_states)
 
                         if next_action[0] == "write_text":
-                            link_lists = choose_and_write_to_file(next_action[2], active_OS_if_states, last_directory, last_title, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists)
+                            link_lists = choose_and_write_to_file(next_action[2], active_OS_if_states, last_directory, last_title, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists, in_code_block)
 
             # write end of file for the last file
             for i, OS in enumerate(["", "Linux", "Windows", "macOS"]):
