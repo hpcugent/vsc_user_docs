@@ -31,7 +31,7 @@ $ deactivate
 ```
 
 !!! note
-    Always prefer to use modules if they are available. 
+    Always prefer to use Python packages that are centrally installed, which are available via the environment modules interface.
     Modules are compiled and optimized for the HPC cluster, while packages installed with `pip` are not.
     To check if a package is available as a module, you can use the following command:
 
