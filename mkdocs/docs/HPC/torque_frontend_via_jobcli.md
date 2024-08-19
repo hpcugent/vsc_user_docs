@@ -8,7 +8,7 @@ The Torque user interface, which consists of commands like `qsub` and `qstat`, w
 
 ## Slurm backend
 
-Just like Torque, [Slurm](https://en.wikipedia.org/wiki/Slurm_Workload_Manager) is a resource manager for submitting and managing jobs on an HPC cluster. Currently, Slurm is the most popular workload manager on HPC systems worldwide, however it makes use of different commands that are less intuitive and user friendly than Torque/PBS.
+[Slurm](https://en.wikipedia.org/wiki/Slurm_Workload_Manager) is a resource manager for submitting and managing jobs on an HPC cluster, similar to Torque (but more advanced/modern in some ways). Currently, Slurm is the most popular workload manager on HPC systems worldwide, but it has a user interface that is different and in some sense less user friendly than Torque/PBS.
 
 ## jobcli
 
