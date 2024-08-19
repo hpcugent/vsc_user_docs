@@ -44,7 +44,7 @@ $ deactivate
 You can combine packages installed in a venv with modules. The following script uses 
 pytorch (which is available as a module) and Poutyne (which is not available as a module):
 
-```python title="pytorch_poutine.py"
+```python title="pytorch_poutyne.py"
 import torch
 import poutyne
 
@@ -63,7 +63,7 @@ $ pip install Poutyne
 While in the virtual environment, we can run the script without any issues:
 
 ```bash
-$ python pytorch_poutine.py
+$ python pytorch_poutyne.py
 ```
 
 
@@ -114,12 +114,12 @@ This section will combine the concepts discussed in the previous sections to:
 
 The example script that we will run is the following:
 
-```python title="pytorch_poutine.py"
+```python title="pytorch_poutyne.py"
 import torch
 import poutyne
 
 print(f"The version of PyTorch is: {torch.__version__}")
-print(f"The version of Poutine is: {poutyne.__version__}")
+print(f"The version of Poutyne is: {poutyne.__version__}")
 ```
 
 First, we create a virtual environment on the `shinx` cluster:
@@ -152,7 +152,7 @@ ml PyTorch/2.1.2-foss-2023a   # Load the PyTorch module
 cd $PBS_O_WORKDIR             # Change working directory to the location where the job was submitted
 
 source myenv/bin/activate     # Activate the virtual environment
-python pytorch_poutine.py     # Run your Python script, or any other command within the virtual environment
+python pytorch_poutyne.py     # Run your Python script, or any other command within the virtual environment
 deactivate                    # Deactivate the virtual environment
 ```
 
