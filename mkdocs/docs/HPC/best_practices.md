@@ -49,8 +49,7 @@
 9.  Submit small jobs by grouping them together. See chapter [Multi-job submission](multi_job_submission.md) for 
     how this is done.
 
-10. The runtime is limited by the maximum walltime of the queues. For
-    longer walltimes, use checkpointing.
+10. The runtime is limited by the maximum walltime of the queues.
 
 11. Requesting many processors could imply long queue times. It's
     advised to only request the resources you'll be able to use.

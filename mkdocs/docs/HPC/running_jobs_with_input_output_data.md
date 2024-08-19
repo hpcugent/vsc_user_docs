@@ -16,6 +16,12 @@ First go to the directory:
 <pre><code><b>$ cd ~/{{ exampledir }}</b>
 </code></pre>
 
+!!! note
+    If the example directory is not yet present, copy it to your home directory:
+
+    <pre><code><b>$ cp -r {{ examplesdir }} ~/</b></code></pre>
+
+
 List and check the contents with:
 
 <pre><code><b>ls -l</b>
@@ -299,7 +305,7 @@ scratch space instead.
 
 {% if site == gent %}
 If you are running out of quota on your
-_$VSC_DATA filesystem you can request a VO. See on how to do this.
+_$VSC_DATA filesystem you can join an existing VO, or request a new VO. See [the section about virtual organisations](./#virtual-organisations) on how to do this.
 {% endif %}
 
 ### Your scratch space ($VSC_SCRATCH)
@@ -324,9 +330,7 @@ Each type of scratch has its own use:
 **Node scratch ($VSC_SCRATCH_NODE).**   Every node has its own scratch space, which is completely separated
     from the other nodes. On some clusters, it will be on a local disk
     in the node, while on other clusters it will be emulated through
-    another file server. In many cases, it will be significantly slower
-    than the cluster scratch as it typically consists of just a single
-    disk. Some **drawbacks** are that the storage can only be accessed on that
+    another file server. Some **drawbacks** are that the storage can only be accessed on that
     particular node and that the capacity is often very limited (e.g.,
     100 GB). The performance will depend a lot on the particular
     implementation in the cluster. In many cases, it will be
@@ -429,7 +433,7 @@ needed:
 </code></pre>
 
 If you get an error "*Unknown credential cache type while getting
-default ccache*" (or similar) and you use , then please deactivate conda
+default ccache*" (or similar) and you use conda, then please deactivate conda
 before you use the commands in this chapter.
 
 <pre><code><b>$ conda deactivate</b>
@@ -758,13 +762,14 @@ for a summary of the current directory:
 If you want to see the size of any file or top-level subdirectory in the
 current directory, you could use the following command:
 
-<pre><code><b>$ du -s -h *</b>
-1.5M ex01-matlab
-512K ex02-python
-768K ex03-python
-768K ex04-python
-256K example.sh
-1.5M intro-HPC.pdf
+<pre><code><b>$ du -h --max-depth 1</b>
+1.5M ./ex01-matlab
+512K ./ex02-python
+768K ./ex03-python
+768K ./ex04-python
+256K ./example.sh
+1.5M ./intro-HPC.pdf
+700M ./.cache
 </code></pre>
 
 Finally, if you don't want to know the size of the data in your current
@@ -773,11 +778,12 @@ just pass this directory as a parameter. The command below will show the
 disk use in your home directory, even if you are currently in a
 different directory:
 
-<pre><code><b>$ du -h $VSC_HOME/*</b>
+<pre><code><b>$ du -h --max-depth 1 $VSC_HOME</b>
 22M {{ homedir }}/dataset01
 36M {{ homedir }}/dataset02
 22M {{ homedir }}/dataset03
 3.5M {{ homedir }}/primes.txt
+24M {{ homedir }}/.cache
 </code></pre>
 
 {% if site == gent %}

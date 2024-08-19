@@ -138,7 +138,7 @@ it does not prevent that illegal operations (like a division by zero)
 are being executed; if `NaN` values appear in your results, floating
 point errors are occurring.
 
-As such, **you should *not* use this in productions runs. Instead, you should track down the root cause of the floating
+As such, **you should *not* use this in production runs. Instead, you should track down the root cause of the floating
 point errors, and try to prevent them from occurring at all.
 
 ## OpenFOAM workflow
@@ -302,7 +302,7 @@ For modest OpenFOAM simulations where a single workernode suffices,
 consider using the local disk of the workernode as working directory
 (accessible via `$VSC_SCRATCH_NODE`), rather than the shared
 `$VSC_SCRATCH` filesystem. **Certainly do not use a subdirectory in `$VSC_HOME` or `$VSC_DATA`, since these shared filesystems are too slow
-for these type of workloads.
+for these types of workloads.
 
 {% if site == gent %}
 For large parallel OpenFOAM simulations on the {{university}} Tier-2 clusters, consider

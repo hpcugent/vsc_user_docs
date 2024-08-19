@@ -10,7 +10,7 @@ More information on this in the subsections below.
 ### Using multiple cores
 When you want to speed up your jobs by requesting multiple cores, you also need to use software that is actually capable of 
 using them (and use them efficiently, ideally).
-Unless particular a parallel programming paradigm like [OpenMP](https://www.openmp.org/about/openmp-faq/#WhatIs) threading 
+Unless a particular parallel programming paradigm like [OpenMP](https://www.openmp.org/about/openmp-faq/#WhatIs) threading 
 (shared memory) or [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface) (distributed memory) is used, 
 software will run sequentially (on a single core).
 
@@ -30,7 +30,7 @@ Other reasons why using more cores may not lead to a (significant) speedup inclu
 you should *not* expect that doubling the amount of cores will result in a 2x speedup. 
 This is due to the fact that time is needed to create, manage and synchronize the threads/processes.
 When this "bookkeeping" overhead exceeds the time gained by parallelization, you will not observe any speedup (or even see slower runs).
-For example, this can happen when you split you program in too many (tiny) tasks to run in parallel - 
+For example, this can happen when you split your program in too many (tiny) tasks to run in parallel - 
 creating a thread/process for each task may even take longer than actually running the task itself.
 
 - **[Amdahl's Law](https://en.wikipedia.org/wiki/Amdahl%27s_law)** is often used in parallel computing to predict the maximum achievable (theoretical) speedup when using multiple cores. 
@@ -41,7 +41,7 @@ Regardless of how many cores are devoted to a parallelized execution of this pro
 So when you reach this theoretical limit, using more cores will not help at all to speed up the computational workload.
 
 - **Resource contention:** When two or more threads/processes want to access the same resource, they need to wait on each other - this is called resource contention. 
-As a result, 1 thread/process will need to wait until the other one is is finished using that resource. 
+As a result, 1 thread/process will need to wait until the other one is finished using that resource. 
 When each thread uses the same resource, it will definitely run slower than if it doesn't need to wait for other threads to finish.
 
 - **Software limitations:** It is possible that the software you are using is just not really optimized for parallelization. 
@@ -71,7 +71,7 @@ This means that just changing `#PBS -l nodes=1:ppn=10` to `#PBS -l nodes=2:ppn=1
 
 Actually using additional nodes is not as straightforward as merely asking for multiple nodes when submitting your job. The resources on these additional nodes often need to discovered, managed, and synchronized. This introduces complexities in distributing work effectively across the nodes. Luckily, there exist some libraries that do this for you.
 
-Using the resources of multiple nodes is often done using an [Message Passing Interface (MPI)](https://en.wikipedia.org/wiki/Message_Passing_Interface) library.
+Using the resources of multiple nodes is often done using a [Message Passing Interface (MPI)](https://en.wikipedia.org/wiki/Message_Passing_Interface) library.
 MPI allows nodes to communicate and coordinate, but it also introduces additional complexity.
 
 An example of how you can make beneficial use of multiple nodes can be found [here](multi_core_jobs.md#parallel-computing-with-mpi).
@@ -91,7 +91,7 @@ you should check its documentation for instructions on how to run in parallel,
 or check for options that control how many threads/cores/nodes can be used.
 
 If you can not find any information along those lines, the software you are using can probably only use a single core 
-and thus requesting multiple cores and/or nodes will only result in wasted sources.
+and thus requesting multiple cores and/or nodes will only result in wasted resources.
 
 
 ## Walltime issues
@@ -104,9 +104,7 @@ If you get from your job output an error message similar to this:
 This occurs when your job did not complete within the requested
 walltime. See
 section on [Specifying Walltime](../fine_tuning_job_specifications/#specifying-walltime) for more information
-about how to request the walltime. It is recommended to use
-*checkpointing* if the job requires **72 hours** of walltime or more to be executed.
-<!-- FIXME: Refer to Checkpointing section. -->
+about how to request the walltime.
 
 ## Out of quota issues
 
@@ -136,7 +134,7 @@ If you have errors that look like:
 or you are experiencing problems with connecting, here is a list of
 things to do that should help:
 
-1.  Keep in mind that it an take up to an hour for your VSC account to
+1.  Keep in mind that it can take up to an hour for your VSC account to
     become active after it has been *approved*; until then, logging in
     to your VSC account will not work.
 
@@ -267,7 +265,7 @@ and include it in the email.
 
 Follow the instructions in [Change PuTTY private key for a saved configuration](../troubleshooting/#change-putty-private-key-for-a-saved-configuration) util item 5, then:
 
-1.  Single click on the textbox containig the path to your private key,
+1.  Single click on the textbox containing the path to your private key,
     then select all text (push ++"Ctrl"++ + ++"a"++ ), then copy the location of the
     private key (push ++"Ctrl"++ + ++"c"++)
 
@@ -343,7 +341,7 @@ line 21). To do that, open `~/.ssh/known_hosts` in an editor, and remove the
 line. This results in `ssh` "forgetting" the system you are connecting
 to.
 
-Alternatively you can use the command that might shown by the warning under
+Alternatively you can use the command that might be shown by the warning under
 `remove with:` and it should be something like this:
 
 <pre><code>ssh-keygen -f "~/.ssh/known_hosts" -R "{{loginnode}}"
@@ -363,7 +361,7 @@ one of the following fingerprints:
 
 **Do not click "Yes" until you verified the fingerprint. Do not press "No" in any case.**
 
-If it the fingerprint matches, click "Yes".
+If the fingerprint matches, click "Yes".
 
 If it doesn't (like in the example) or you are in doubt, take a screenshot, press "Cancel" and contact {{ hpcinfo }}.
 
@@ -450,6 +448,12 @@ To avoid jobs allocating too much memory, there are memory limits in
 place by default. It is possible to specify higher memory limits if your
 jobs require this.
 
+!!! note
+
+    Memory is not the same as storage. Memory or RAM is used for temporary, 
+    fast access to data when the program is running, while storage is used for long-term data retention.
+    If you are running into problems because you reached your storage quota, see [Out of quota issues](#out-of-quota-issues).
+
 ### How will I know if memory limits are the cause of my problem?
 
 If your program fails with a memory-related issue, there is a good
@@ -475,13 +479,13 @@ memory you request.
 {% if site == gent %}
 ## Module conflicts
 
-Modules that are loaded together must use the same toolchain version: it
-is impossible to load two versions of the same module. In the following
+Modules that are loaded together must use the same toolchain version or common dependencies. In the following
 example, we try to load a module that uses the `intel-2018a` toolchain
 together with one that uses the `intel-2017a` toolchain:
 
-<pre><code>$ <b>module load Python/2.7.14-intel-2018a</b>
-$ <b>module load  HMMER/3.1b2-intel-2017a</b>
+```bash
+$ module load Python/2.7.14-intel-2018a
+$ module load  HMMER/3.1b2-intel-2017a
 Lmod has detected the following error: A different version of the 'intel' module is already loaded (see output of 'ml'). 
 You should load another 'HMMER' module for that is compatible with the currently loaded version of 'intel'. 
 Use 'ml avail HMMER' to get an overview of the available versions.
@@ -493,13 +497,45 @@ While processing the following module(s):
     ---------------          ---------------
     HMMER/3.1b2-intel-2017a  /apps/gent/CO7/haswell-ib/modules/all/HMMER/3.1b2-intel-2017a.lua
 </code></pre>
+```
 
-This resulted in an error because we tried to load two different
-versions of the `intel` module.
+This resulted in an error because we tried to load two modules with different
+versions of the `intel` toolchain.
 
 To fix this, check if there are other versions of the modules you want to load
 that have the same version of common dependencies. You can list all versions of
 a module with `module avail`: for `HMMER`, this command is `module avail HMMER`.
+
+As a rule of thumb, toolchains in the same row are compatible with each other:
+
+|                |                          |                         |             |
+|----------------|--------------------------|-------------------------|-------------|
+| GCCcore-13.2.0 | GCC-13.2.0               | gfbf-2023b/gompi-2023b  | foss-2023b  |
+| GCCcore-13.2.0 | intel-compilers-2023.2.1 | iimkl-2023b/iimpi-2023b | intel-2023b |
+| GCCcore-12.3.0 | GCC-12.3.0               | gfbf-2023a/gompi-2023a  | foss-2023a  |
+| GCCcore-12.3.0 | intel-compilers-2023.1.0 | iimkl-2023a/iimpi-2023a | intel-2023a |
+| GCCcore-12.2.0 | GCC-12.2.0               | gfbf-2022b/gompi-2022b  | foss-2022b  |
+| GCCcore-12.2.0 | intel-compilers-2022.2.1 | iimkl-2022b/iimpi-2022b | intel-2022b |
+| GCCcore-11.3.0 | GCC-11.3.0               | gfbf-2022a/gompi-2022a  | foss-2022a  |
+| GCCcore-11.3.0 | intel-compilers-2022.1.0 | iimkl-2022a/iimpi-2022a | intel-2022a |
+| GCCcore-11.2.0 | GCC-11.2.0               | gfbf-2021b/gompi-2021b  | foss-2021b  |
+| GCCcore-11.2.0 | intel-compilers-2021.4.0 | iimkl-2021b/iimpi-2021b | intel-2021b |
+| GCCcore-10.3.0 | GCC-10.3.0               | gfbf-2021a/gompi-2021a  | foss-2021a  |
+| GCCcore-10.3.0 | intel-compilers-2021.2.0 | iimkl-2021a/iimpi-2021a | intel-2021a |
+| GCCcore-10.2.0 | GCC-10.2.0               | gfbf-2020b/gompi-2020b  | foss-2020b  |
+| GCCcore-10.2.0 | iccifort-2020.4.304      | iimkl-2020b/iimpi-2020b | intel-2020b |
+
+!!! example
+    we could load the following modules together:
+
+    ```bash
+    ml XGBoost/1.7.2-foss-2022a
+    ml scikit-learn/1.1.2-foss-2022a
+    ml cURL/7.83.0-GCCcore-11.3.0
+    ml JupyterNotebook/6.4.0-GCCcore-11.3.0-IPython-8.5.0
+    ```
+    
+
 
 Another common error is:
 

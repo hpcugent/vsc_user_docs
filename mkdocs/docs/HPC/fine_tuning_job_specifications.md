@@ -14,7 +14,7 @@ can slow down the run time of your application, but also block {{hpc}} resources
 for other users.
 
 Specifying the "optimal" Job Parameters requires some knowledge of your
-application (e.g., how many parallel threads does my application uses,
+application (e.g., how many parallel threads does my application use,
 is there a lot of inter-process communication, how much memory does my
 application need) and also some knowledge about the {{hpc}} infrastructure
 (e.g., what kind of multi-core processors are available, which nodes
@@ -78,7 +78,7 @@ taken to be on the safe side.
 
 It is also wise to check the walltime on different compute nodes or to
 select the "slowest" compute node for your walltime tests. Your estimate
-should appropriate in case your application will run on the "slowest"
+should be appropriate in case your application will run on the "slowest"
 (oldest) compute nodes.
 
 The walltime can be specified in a job scripts as:
@@ -184,7 +184,7 @@ Whereby:
 3.  The third column shows the memory utilisation, expressed in
     percentages of the full available memory. At full memory
     consumption, 19.2% of the memory was being used by our application.
-    With the *"free"* command, we have previously seen that we had a
+    With the `free` command, we have previously seen that we had a
     node of 16&nbsp;GB in this example. 3&nbsp;GB is indeed more or less 19.2% of
     the full available memory.
 4.  The fourth column shows you the CPU utilisation, expressed in
@@ -240,7 +240,7 @@ htop
     horizontally to see all processes and their full command lines.
 
 <pre><code>$ <b>top</b>
-$ <b>htot</b></code></pre>
+$ <b>htop</b></code></pre>
 
 ### Setting the memory parameter {: #pbs_mem }
 
@@ -295,7 +295,7 @@ are working at full load.
 
 The number of core and nodes that a user shall request fully depends on
 the architecture of the application. Developers design their
-applications with a strategy for parallelisation in mind. The
+applications with a strategy for parallelization in mind. The
 application can be designed for a certain fixed number or for a
 configurable number of nodes and cores. It is wise to target a specific
 set of compute nodes (e.g., Westmere, Harpertown) for your computing
@@ -328,9 +328,10 @@ processor : 5
 processor : 6
 processor : 7</code></pre>
 
-<u>Remark</u>: Unless you want information of the login nodes, you'll have to issue
-these commands on one of the workernodes. This is most easily achieved
-in an interactive job, see the chapter on Running interactive jobs.
+!!! note
+    Unless you want information of the login nodes, you'll have to issue
+    these commands on one of the workernodes. This is most easily achieved
+    in an interactive job, see [the chapter on Running interactive jobs](./running_interactive_jobs.md).
 
 In order to specify the number of nodes and the number of processors per
 node in your job script, use:
@@ -515,9 +516,10 @@ The **uptime** command will show us the average load
 10:14:05 up 86 days, 12:01, 11 users, load average: 0.60, 0.41, 0.41
 </code></pre>
 
-Now, start a few instances of the "*eat_cpu*" program in the background,
+Now, compile and start a few instances of the "*eat_cpu*" program in the background,
 and check the effect on the load again:
-<pre><code>$ <b>./eat_cpu&</b>
+<pre><code>$ <b>gcc -O2 eat_cpu.c -o eat_cpu</b>
+$ <b>./eat_cpu&</b>
 $ <b>./eat_cpu&</b>
 $ <b>./eat_cpu&</b>
 $ <b>uptime</b>

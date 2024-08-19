@@ -1,4 +1,4 @@
-{% set exampledir = 'examples/Multi_core_jobs_Parallel_Computing' %}
+{% set exampledir = 'examples/Multi-core-jobs-Parallel-Computing' %}
 
 # Multi core jobs/Parallel Computing 
 
@@ -110,7 +110,7 @@ MPI.
     This queues a job that claims 2 nodes and 10 cores.
 
 !!! warning
-    Just requesting more nodes and/or cores does mean that your job will automatically run faster.
+    Just requesting more nodes and/or cores does not mean that your job will automatically run faster.
     You can find more about this [here](troubleshooting.md#job_does_not_run_faster).
 
 ## Parallel Computing with threads
@@ -152,6 +152,11 @@ Go to the example directory:
 
 <pre><code><b>$ cd ~/{{ exampledir }}</b>
 </code></pre>
+
+!!! note
+    If the example directory is not yet present, copy it to your home directory:
+
+    <pre><code><b>$ cp -r {{ examplesdir }} ~/</b></code></pre>
 
 Study the example first:
 
@@ -453,7 +458,7 @@ and compile it:
 </code></pre>
 
 mpiicc is a wrapper of the Intel C++ compiler icc to compile MPI
-programs (see the chapter on compilation for details).
+programs (see [the chapter on compilation](./compiling_your_software.md) for details).
 
 Run the parallel program:
 
@@ -525,4 +530,4 @@ absolute amount of concurrency available.
 {% endif %}
 
 !!! tip
-If you plan engaging in parallel programming using MPI, this book may prove useful: *Parallel Programming with MPI. Peter Pacheo. Morgan Kaufmann. 1996.*
+    If you plan engaging in parallel programming using MPI, this book may prove useful: *Parallel Programming with MPI. Peter Pacheo. Morgan Kaufmann. 1996.*

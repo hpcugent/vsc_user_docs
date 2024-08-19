@@ -9,7 +9,7 @@ compiled for {{operatingsystem}}. It also means that you first have to install a
 required external software packages on the {{hpc}}.
 
 Most commonly used compilers are already pre-installed on the {{hpc}} and can be
-used straight away. Also many popular external software packages, which
+used straight away. Also, many popular external software packages, which
 are regularly used in the scientific community, are also pre-installed.
 
 ## Check the pre-installed software on the {{hpc}}
@@ -127,9 +127,11 @@ We first need to compile this C-file into an executable with the
 gcc-compiler.
 
 First, check the command line options for *"gcc" (GNU C-Compiler)*, then
-we compile and list the contents of the directory again:
+we compile. the `O2` option enables a moderate level of optimization when compiling the code. 
+It instructs the compiler to optimize the code for better performance without significantly increasing compilation time.
+Finally, list the contents of the directory again:
 <pre><code>$ <b>gcc -help</b>
-$ <b>gcc -o hello hello.c</b>
+$ <b>gcc -O2 -o hello hello.c</b>
 $ <b>ls -l</b>
 total 512
 -rwxrwxr-x 1 {{userid}} 7116 Sep 16 11:43 hello*
@@ -149,7 +151,7 @@ compilation process, even if they seem unimportant so that a code change
 that produces a warning does not go unnoticed.
 
 Let's test this program on the local compute node, which is at your
-disposal after the "qsub --I" command:
+disposal after the `qsub --I` command:
 <pre><code>$ <b>./hello</b>
 Hello #0
 Hello #1

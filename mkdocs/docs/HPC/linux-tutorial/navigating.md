@@ -40,8 +40,8 @@ another location up or down the filesystem hierarchy.
 
 ## Listing files and directories: "ls"
 
-A very basic and commonly used command is `ls`, which can be used to
-list files and directories.
+A very basic and commonly used command is `ls`, which can be
+used to list files and directories.
 
 In its basic usage, it just prints the names of files and directories
 in the current directory. For example:
@@ -130,17 +130,18 @@ $ pwd
 ## Inspecting files
 
 The `file` command can be used to inspect what type of file you're dealing with:
+
 <pre><code>$ <b>file afile.txt</b>
 afile.txt: ASCII text
 
-$ <b>file some_directory</b>
+$ <b>file some_directory</b> 
 some_directory: directory
 </code></pre>
 
 ## Finding files/directories: "find"
 
-`find` will crawl a series of directories and lists files matching given
-criteria.
+`find` will crawl a series of directories and lists files
+matching given criteria.
 
 For example, to look for the file named `one.txt` in the current directory and its subdirectories:
 
@@ -214,5 +215,5 @@ For more advanced uses of the `find` command, use `man find` to display its **ma
     Check the first letter of the line to determine if it is a file (`-`) or a directory (`d`).
     The first line with `-` is the last changed file in `/tmp`.
 
-
-The [next](manipulating_files_and_directories.md) chapter will teach you how to interact with files and directories.
+The [next](manipulating_files_and_directories.md) chapter will teach
+you how to interact with files and directories.
