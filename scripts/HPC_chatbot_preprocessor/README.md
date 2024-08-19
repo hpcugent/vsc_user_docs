@@ -73,7 +73,7 @@ endif
 
 ###### non-os-related in os-related in os-related
 
-This is an example of a non-os-related if-structure nested in one of the basic allowed if-structures.
+This is an example of a non-os-related if-structure nested in one of the basic allowed if-structures (`OS_IF_IN_OS_IF`).
 
 ```
 if OS != windows:
@@ -89,7 +89,7 @@ This will result in the parser "forgetting" it opened an os-specific if-statemen
 
 ###### os-related in non-os-related in os-related
 
-This is an example of one of the basic allowed if-structures nested in an os-specific if-structure.
+This is an example of the basic allowed if-structure `OS_IF` (indirectly) nested in an os-specific if-structure.
 
 ```
 if OS != windows:
@@ -109,7 +109,7 @@ The script contains a list of html syntax keywords it filters out. If more html 
 ```
 ["pre", "b", "code", "sub", "br", "center", "p", "div", "u", "p", "i", "tt", "a", "t", "span"]
 ```
-The script is also adapted to take into consideration structures like <a href="link"> and retain the link.
+The script is also adapted to take into consideration structures like `<a href="link">` and retain the link.
 
 ### Markdown comments
 
