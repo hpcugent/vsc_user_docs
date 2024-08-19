@@ -71,7 +71,7 @@ $ python pytorch_poutyne.py
 ```
 
 
-## Creating a virtual environment on a specific cluster
+## Creating a virtual environment for a specific cluster
 
 To create a virtual environment for a specific cluster, you need to start an interactive shell on that cluster.
 Let's say you want to create a virtual environment on the `shinx` cluster.
