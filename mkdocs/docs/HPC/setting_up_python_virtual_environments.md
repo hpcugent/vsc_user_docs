@@ -58,6 +58,15 @@ It is now possible to run Python scripts that use the installed packages in the 
     $ module av package_name
     ```
 
+    Some Python packages are installed as extensions of modules. For example, `numpy`, `scipy` and `pandas` are 
+    part of the `SciPy-bundle` module. You can use
+
+    ```bash
+    $ module show <module_name>
+    ```
+
+    to check which extensions are included in a module, if any.
+
 
 ### Deactivating a virtual environment
 
