@@ -464,10 +464,9 @@ def choose_and_write_to_file(curr_line, active_OS_if_states, last_directory, las
     if active_OS_if_states[LINUX] == INACTIVE and active_OS_if_states[WINDOWS] == INACTIVE and active_OS_if_states[MACOS] == INACTIVE:
         link_lists = write_text_to_file(os.path.join(root_dirs[0], last_directory, last_title + ".json"), curr_line, link_lists, in_code_block)
     else:
-        os_list = [LINUX, WINDOWS, MACOS]
-        for i, os_ in enumerate(os_list):
+        for i, os_ in enumerate([LINUX, WINDOWS, MACOS]):
             if active_OS_if_states[os_] == ACTIVE:
-                link_lists = write_text_to_file(os.path.join(root_dirs[i], last_directory, last_title + ".json"),
+                link_lists = write_text_to_file(os.path.join(root_dirs[i + 1], last_directory, last_title + ".json"),
                                                 curr_line, link_lists, in_code_block)
 
     return link_lists
