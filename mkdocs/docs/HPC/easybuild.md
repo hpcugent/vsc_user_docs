@@ -81,7 +81,7 @@ To share custom software installations with members of your VO, replace
 
 Before using EasyBuild, you first need to load the `EasyBuild` module.
 We don't specify a version here (this is an exception, for most other
-modules you should, see [Using explicit version numbers](../running_batch_jobs/#using-explicit-version-numbers)) because newer versions might include important
+modules you should see [Using explicit version numbers](../running_batch_jobs/#using-explicit-version-numbers)) because newer versions might include important
 bug fixes.
 
 <pre><code>module load EasyBuild
@@ -141,9 +141,11 @@ make them accessible for loading:
 </code></pre>
 
 It makes sense to put this `module use` command and all `export`
-commands in your `.bashrc` login script. That way you don't have to type
+commands in your `.bashrc` login script.
+That way, you don't have to type
 these commands every time you want to use EasyBuild or you want to load
-modules generated with EasyBuild. See also [the section on `.bashrc` in
+modules generated with EasyBuild.
+See also [the section on `.bashrc` in
 the "Beyond the basics" chapter of the intro to
 Linux](../linux-tutorial/beyond_the_basics/#bashrc-login-script)
 
