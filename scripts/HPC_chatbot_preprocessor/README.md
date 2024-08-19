@@ -43,7 +43,7 @@ The script uses the if-structures in the source-files to split the documentation
 
 ###### non-os-related in os-related
 
-This is an example of one of the basic allowed if-structures
+This is an example of one of the basic allowed if-structures (`NON_OS_IF_IN_OS_IF`)
 
 ```
 if OS == windows:
@@ -55,7 +55,7 @@ endif
 
 ###### os-related in os-related in non-os-related
 
-This is an example of a basic allowed if-structure nested in a non-os-specific if.
+This is an example of the basic allowed if-structure `OS_IF_IN_OS_IF` nested in a non-os-specific if.
 
 ```
 if site == Gent:
