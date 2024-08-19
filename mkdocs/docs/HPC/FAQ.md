@@ -221,7 +221,9 @@ In practice, it's
 impossible to predict when your job(s) will start, since most currently
 running jobs will finish before their requested walltime expires. 
 New jobs may be submitted by other users that are assigned a higher
-priority than your job(s). You can use the `showstart` command.
+priority than your job(s). 
+You can use the `squeue --start` command to get an estimated start time for your jobs in the queue.
+Keep in mind that this is just an estimate.
 
 {% endif %}
 
