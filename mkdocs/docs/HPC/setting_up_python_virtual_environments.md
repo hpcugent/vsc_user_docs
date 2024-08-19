@@ -15,18 +15,19 @@ This is especially useful when you need to use a package that is not available a
 A Python virtual environment can be created with the following commands:
 
 ```bash
-$ python -m venv myenv      # Create a new venv named myenv
-$ source myenv/bin/activate # Activate the venv
+$ python -m venv myenv      # Create a new virtual environment named myenv
+$ source myenv/bin/activate # Activate the virtual environment
 ```
 
-After activating the venv, you can install packages with `pip`:
+After activating the virtual environment, you can install packages with `pip`:
 
 ```bash
 $ pip install example_package1
 $ pip install example_package2
 ```
 
-It is now possible to run Python scripts that use the installed packages in the venv. To deactivate the venv, run:
+It is now possible to run Python scripts that use the installed packages in the virtual environment. 
+To deactivate it, run:
 
 ```bash
 $ deactivate
@@ -41,9 +42,9 @@ $ deactivate
     $ module av package_name
     ```
 
-## Combining venv's with modules
+## Combining virtual environments with modules
 
-You can combine packages installed in a venv with modules. The following script uses 
+You can combine packages installed in a virtual environment with modules. The following script uses 
 pytorch (which is available as a module) and Poutyne (which is not available as a module):
 
 ```python title="pytorch_poutyne.py"
@@ -53,7 +54,7 @@ import poutyne
 ...
 ```
 
-We load a PyTorch package as a module and install Poutyne in a venv:
+We load a PyTorch package as a module and install Poutyne in a virtual environment:
 
 ```bash
 $ ml PyTorch/2.1.2-foss-2023a
@@ -84,10 +85,10 @@ You can now create a virtual environment as described in [the first section](#cr
 This virtual environment can be used by jobs running on the `shinx` cluster.
 
 !!! warning
-    Activating a virtual environment (venv) created on a different cluster can cause issues. 
-    This happens because the binaries in the venv from cluster A might not work with the CPU architecture of cluster B.
+    Activating a virtual environment created on a different cluster can cause issues. 
+    This happens because the binaries in the virtual environments from cluster A might not work with the CPU architecture of cluster B.
     
-    For example, if we create a venv on the skitty cluster,
+    For example, if we create a virtual environment on the skitty cluster,
 
     ```bash
     $ module swap cluster/skitty
@@ -111,7 +112,7 @@ This virtual environment can be used by jobs running on the `shinx` cluster.
 This section will combine the concepts discussed in the previous sections to:
 
 1. Create a virtual environment on a specific cluster.
-2. Combine packages installed in the venv with modules.
+2. Combine packages installed in the virtual environment with modules.
 3. Submit a job script that uses the virtual environment.
 
 The example script that we will run is the following:
@@ -139,7 +140,7 @@ $ deactivate
 ```
 
 We exit the interactive shell by pressing `CTRL+D` and create a job script that loads the PyTorch module, 
-enters the venv and executes the script:
+enters the virtual environment and executes the script:
 
 ```bash title="jobscript.pbs"
 #!/bin/bash
