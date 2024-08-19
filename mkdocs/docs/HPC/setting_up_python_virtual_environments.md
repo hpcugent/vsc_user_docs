@@ -10,14 +10,31 @@ Because a normal user cannot install packages globally,
 using a virtual environment allows you to install packages locally without needing administrator privileges.
 This is especially useful when you need to use a package that is not available as a module on the HPC cluster.
 
-## Creating a Python virtual environment
+## Managing Python Environments
 
-A Python virtual environment can be created with the following commands:
+This section will explain how to create, activate, use and deactivate Python virtual environments.
+
+### Creating a Python virtual environment
+
+A Python virtual environment can be created with the following command:
 
 ```bash
 $ python -m venv myenv      # Create a new virtual environment named myenv
+```
+
+This command creates a new directory named `myenv` in the current working directory. 
+This directory will contain the packages, scripts, and binaries that are needed to manage the virtual environment.
+
+### Activating a virtual environment
+
+To use the virtual environment, you need to activate it. 
+This will modify the shell environment to use the Python interpreter and packages from the virtual environment.
+
+```bash
 $ source myenv/bin/activate # Activate the virtual environment
 ```
+
+### Installing packages in a virtual environment
 
 After activating the virtual environment, you can install packages with `pip`:
 
@@ -26,12 +43,11 @@ $ pip install example_package1
 $ pip install example_package2
 ```
 
-It is now possible to run Python scripts that use the installed packages in the virtual environment. 
-To deactivate it, run:
+These packages will be scoped to the virtual environment and will not affect the system-wide Python installation, 
+and are only available when the virtual environment is activated.
+No administrator privileges are required to install packages in a virtual environment.
 
-```bash
-$ deactivate
-```
+It is now possible to run Python scripts that use the installed packages in the virtual environment.
 
 !!! note
     Always prefer to use Python packages that are centrally installed, which are available via the environment modules interface.
@@ -42,7 +58,17 @@ $ deactivate
     $ module av package_name
     ```
 
-## Combining virtual environments with modules
+
+### Deactivating a virtual environment
+
+When you are done using the virtual environment, you can deactivate it.
+To do that, run:
+
+```bash
+$ deactivate
+```
+
+## Combining virtual environments with centrally installed modules
 
 You can combine Python packages installed in a virtual environment with environment modules. 
 The following script uses PyTorch (which is available as a module)
