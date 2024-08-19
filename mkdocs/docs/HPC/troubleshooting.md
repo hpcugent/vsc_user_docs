@@ -399,7 +399,7 @@ or
 </code></pre>
 
 It's probably because you transferred the files from a Windows computer.
-See the [section about `dos2unix` in Linux tutorial](https://hpcugent.github.io/vsc_user_docs/linux-tutorial/uploading_files/#dos2unix) to fix this error.
+See the [section about `dos2unix` in Linux tutorial](../linux-tutorial/uploading_files/#dos2unix) to fix this error.
 
 ## Warning message when first connecting to new host
 
