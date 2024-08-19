@@ -12,7 +12,7 @@ The Torque user interface, which consists of commands like `qsub` and `qstat`, w
 
 ## jobcli
 
-Jobcli was developed to make it possible for the {{hpcinfra}} to use a Torque frontend and a Slurm backend. In addition to that, it adds some additional options for Torque commands.
+Jobcli is a Python library that was developed by {{hpcteam}} to make it possible for the {{hpcinfra}} to use a Torque frontend and a Slurm backend. In addition to that, it adds some additional options for Torque commands.
 
 ### help option
 
