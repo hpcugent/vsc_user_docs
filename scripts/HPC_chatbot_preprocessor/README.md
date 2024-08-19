@@ -27,3 +27,95 @@ The script can be ran in a shell environment with the following command:
 ```shell
 python chatbot_parser.py
 ```
+
+## Restrictions on source-files
+
+Due to the nature of the script, some restrictions should be taken into account about the markdown files it can use as input.
+
+
+### Nested if structures
+
+The script uses the if-structures in the source-files to split the documentation into general documentation and os-specific documentation. As such it needs to keep track of which types of if-structures (os-related/non-os-related) it is reading from. When using certain nested if-structures, this will cause problems. The supported nested if-structures are determined by the macros `NON_OS_IF`, `NON_OS_IF_IN_OS_IF`, `OS_IF` and `OS_IF_IN_OS_IF`. So respectively a non-os-related if-structure, a non-os-related if nested in an os-related one, an os-related if-structure and an os-related if-structure nested in another os-related if-structure. All of these are allowed to be nested in an undetermined amount of non-os-related if-structures, but no non-os-related if structures should be nested in them. It is also not allowed to nest any of the allowed structures in more os-related if-structures. 
+
+#### Examples of valid and invalid if-structures
+
+##### Allowed
+
+###### non-os-related in os-related
+
+This is an example of one of the basic allowed if-structures
+
+```
+if OS == windows:
+  if site == Gent:
+    ...
+  endif
+endif
+```
+
+###### os-related in os-related in non-os-related
+
+This is an example of a basic allowed if-structure nested in a non-os-specific if.
+
+```
+if site == Gent:
+  if OS == windows:
+    ...
+  else:
+    if OS == Linux:
+      ...
+    endif
+  endif
+endif
+```
+
+##### Not allowed
+
+###### non-os-related in os-related in os-related
+
+This is an example of a non-os-related if-structure nested in one of the basic allowed if-structures.
+
+```
+if OS != windows:
+  if OS == Linux:
+    if site == Gent:
+      ...
+    endif
+  endif
+endif
+```
+
+This will result in the parser "forgetting" it opened an os-specific if-statement with OS != windows and not properly closing it.
+
+###### os-related in non-os-related in os-related
+
+This is an example of one of the basic allowed if-structures nested in an os-specific if-structure.
+
+```
+if OS != windows:
+  if site == Gent:
+    if OS == Linux:
+      ...
+    endif
+  endif
+endif
+```
+
+This will also result in the parser "forgetting" it opened an os-specific if-statement with OS != windows and not properly closing it.
+
+### Allowed html syntax
+
+The script contains a list of html syntax keywords it filters out. If more html syntax keywords are used in the future, it suffices to add them to this list to adapt the script to filter them out. The current list is:
+```
+["pre", "b", "code", "sub", "br", "center", "p", "div", "u", "p", "i", "tt", "a", "t", "span"]
+```
+The script is also adapted to take into consideration structures like <a href="link"> and retain the link.
+
+### Markdown comments
+
+Any comments within the markdown files (for example TODO's) should follow the following syntax:
+
+```
+<!--your comment-->
+```
+ and should be limited to one line.
