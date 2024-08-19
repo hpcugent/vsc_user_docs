@@ -44,8 +44,8 @@ $ deactivate
 
 ## Combining virtual environments with modules
 
-You can combine packages installed in a virtual environment with modules. The following script uses 
-pytorch (which is available as a module) and Poutyne (which is not available as a module):
+You can combine Python packages installed in a virtual environment with environment modules. 
+The following script uses pytorch (which is available as a module) and Poutyne (which is not available as a module):
 
 ```python title="pytorch_poutyne.py"
 import torch
