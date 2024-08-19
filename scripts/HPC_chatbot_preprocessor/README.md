@@ -32,7 +32,6 @@ python chatbot_parser.py
 
 Due to the nature of the script, some restrictions should be taken into account about the markdown files it can use as input.
 
-
 ### Nested if structures
 
 The script uses the if-structures in the source-files to split the documentation into general documentation and os-specific documentation. As such it needs to keep track of which types of if-structures (os-related/non-os-related) it is reading from. When using certain nested if-structures, this will cause problems. The supported nested if-structures are determined by the macros `NON_OS_IF`, `NON_OS_IF_IN_OS_IF`, `OS_IF` and `OS_IF_IN_OS_IF`. So respectively a non-os-related if-structure, a non-os-related if nested in an os-related one, an os-related if-structure and an os-related if-structure nested in another os-related if-structure. All of these are allowed to be nested in an undetermined amount of non-os-related if-structures, but no non-os-related if structures should be nested in them. It is also not allowed to nest any of the allowed structures in more os-related if-structures. 
@@ -119,3 +118,7 @@ Any comments within the markdown files (for example TODO's) should follow the fo
 <!--your comment-->
 ```
  and should be limited to one line.
+
+### Long filenames
+
+Due to the nature of this script, it can generate directories with very long names. Depending on the operating system, this can cause problems with filepaths being to long resulting in files not being able to open. A possible fix for this is to make sure the filepath to the script is not too long.
