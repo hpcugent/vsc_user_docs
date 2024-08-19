@@ -431,14 +431,10 @@ def write_text_to_file(file_name, curr_line, link_lists, in_code_block):
         else:
             data = {}
 
-        if GENERIC_DIR in file_name:
-            curr_line, link_lists[0] = replace_markdown_markers(curr_line, link_lists[0], in_code_block)
-        elif LINUX in file_name:
-            curr_line, link_lists[1] = replace_markdown_markers(curr_line, link_lists[1], in_code_block)
-        elif WINDOWS in file_name:
-            curr_line, link_lists[2] = replace_markdown_markers(curr_line, link_lists[2], in_code_block)
-        else:
-            curr_line, link_lists[3] = replace_markdown_markers(curr_line, link_lists[3], in_code_block)
+        os_list = [GENERIC_DIR, LINUX, WINDOWS, MACOS]
+        for i, os_ in enumerate(os_list):
+            if os_ in file_name:
+                curr_line, link_lists[i] = replace_markdown_markers(curr_line, link_lists[i], in_code_block)
 
         if CONTENT in data:
             data[CONTENT] += curr_line
@@ -467,12 +463,12 @@ def choose_and_write_to_file(curr_line, active_OS_if_states, last_directory, las
     # check that the line is part of the website for gent
     if active_OS_if_states[LINUX] == INACTIVE and active_OS_if_states[WINDOWS] == INACTIVE and active_OS_if_states[MACOS] == INACTIVE:
         link_lists = write_text_to_file(os.path.join(root_dirs[0], last_directory, last_title + ".json"), curr_line, link_lists, in_code_block)
-    if active_OS_if_states[LINUX] == ACTIVE:
-        link_lists = write_text_to_file(os.path.join(root_dirs[1], last_directory, last_title + ".json"), curr_line, link_lists, in_code_block)
-    if active_OS_if_states[WINDOWS] == ACTIVE:
-        link_lists = write_text_to_file(os.path.join(root_dirs[2], last_directory, last_title + ".json"), curr_line, link_lists, in_code_block)
-    if active_OS_if_states[MACOS] == ACTIVE:
-        link_lists = write_text_to_file(os.path.join(root_dirs[3], last_directory, last_title + ".json"), curr_line, link_lists, in_code_block)
+    else:
+        os_list = [LINUX, WINDOWS, MACOS]
+        for i, os_ in enumerate(os_list):
+            if active_OS_if_states[os_] == ACTIVE:
+                link_lists = write_text_to_file(os.path.join(root_dirs[i], last_directory, last_title + ".json"),
+                                                curr_line, link_lists, in_code_block)
 
     return link_lists
 
