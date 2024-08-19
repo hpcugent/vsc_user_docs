@@ -90,9 +90,11 @@ A typical process looks like:
 
 We assume you've copied your software to the {{hpc}}. The next step is to request
 your private compute node.
-<pre><code>$ <b>qsub -I</b>
+
+```bash
+$ qsub -I
 qsub: waiting for job {{jobid}} to start
-</code></pre>
+```
 
 
 ### Compiling a sequential program in C
