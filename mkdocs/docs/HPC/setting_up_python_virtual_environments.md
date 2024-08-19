@@ -64,7 +64,7 @@ $ source myenv/bin/activate
 $ pip install Poutyne
 ```
 
-While in the virtual environment, we can run the script without any issues:
+While the virtual environment is activated, we can run the script without any issues:
 
 ```bash
 $ python pytorch_poutyne.py
@@ -177,7 +177,7 @@ The `.o` file contains the output of the job.
 There are two main reasons why this error could occur.
 
 1. you have not loaded the python module that was used to create the virtual environment.
-2. you added or removed modules while in the virtual environment.
+2. you added or removed modules while the virtual environment was activated.
 
 #### Entering a virtual environment while the python module used to create it is not active
 
