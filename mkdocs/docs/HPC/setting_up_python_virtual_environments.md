@@ -8,7 +8,7 @@ Because a normal user cannot install packages globally,
 venv's are a way to install packages without needing root access.
 This is useful when you need to use a package that is not available as a module on the HPC cluster.
 
-## Creating a venv
+## Creating a Python virtual environment
 
 A Python virtual environment can be created with the following commands:
 
