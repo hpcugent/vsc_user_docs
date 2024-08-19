@@ -145,4 +145,6 @@ commands in your `.bashrc` login script. That way you don't have to type
 these commands every time you want to use EasyBuild or you want to load
 modules generated with EasyBuild. See also [the section on `.bashrc` in
 the "Beyond the basics" chapter of the intro to
-Linux](https://hpcugent.github.io/vsc_user_docs/linux-tutorial/beyond_the_basics/#bashrc-login-script).
+Linux](../linux-tutorial/beyond_the_basics/#bashrc-login-script)
+
+{{ site_url }}
