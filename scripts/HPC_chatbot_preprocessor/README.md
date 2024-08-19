@@ -1,6 +1,6 @@
 # Chatbot parser
 
-`chatbot_parser.py` is a script that transforms the markdown sourcefiles into a structured directory for a chatbot to be trained on. 
+`chatbot_parser.py` is a script that transforms the markdown sourcefiles into a structured directory as input for a chatbot. 
 
 ## Generated file structure
 
