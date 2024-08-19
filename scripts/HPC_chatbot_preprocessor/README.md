@@ -119,6 +119,6 @@ Any comments within the markdown files (for example TODO's) should follow the fo
 ```
  and should be limited to one line.
 
-### Long filenames
+### Long filepaths
 
-Due to the nature of this script, it can generate directories with very long names. Depending on the operating system, this can cause problems with filepaths being to long resulting in files not being able to open. A possible fix for this is to make sure the filepath to the script is not too long.
+Due to the nature of this script, it can generate large directories with very long names. Depending on the operating system, this can cause problems with filepaths being to long, resulting in files not being able to open. A possible fix for this is to make sure the filepath to the script is not too long.
