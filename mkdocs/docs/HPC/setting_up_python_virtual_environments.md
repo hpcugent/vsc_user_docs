@@ -2,11 +2,13 @@
 
 ## Introduction
 
-A Python virtual environment (`venv` for short) is a way to create an isolated Python environment.
-You can install additional Python packages in a virtual environment without affecting the system Python installation.
-Because a normal user cannot install packages globally, 
-venv's are a way to install packages without needing root access.
-This is useful when you need to use a package that is not available as a module on the HPC cluster.
+A Python virtual environment (venv for short)
+is a tool to create an isolated Python workspace with its own dependencies.
+Within this isolated environment,
+you can install additional Python packages without affecting the system-wide Python installation.
+Because a normal user cannot install packages globally,
+using a virtual environment allows you to install packages locally without needing administrator privileges.
+This is especially useful when you need to use a package that is not available as a module on the HPC cluster.
 
 ## Creating a Python virtual environment
 
