@@ -2,7 +2,9 @@
 
 ## What is Torque
 
-[Torque](https://en.wikipedia.org/wiki/TORQUE) is a resource manager for submitting and managing jobs on an HPC cluster. It is and implementation of [PBS (Portable Batch System)](https://en.wikipedia.org/wiki/Portable_Batch_System). Torque isn't widely used anymore, so the {{hpcinfra}} no longer uses Torque in the backend, however the commands were kept to avoid researchers having to learn other commands.
+[Torque](https://en.wikipedia.org/wiki/TORQUE) is a resource manager for submitting and managing jobs on an HPC cluster. It is an implementation of [PBS (Portable Batch System)](https://en.wikipedia.org/wiki/Portable_Batch_System).
+Torque is not widely used anymore, so the {{hpcinfra}} no longer uses Torque in the backend since 2021 in favor of Slurm.
+The Torque user interface, which consists of commands like `qsub` and `qstat`, were kept however, to avoid that researchers had to learn other commands to submit and manage jobs.
 
 ## Slurm backend
 
