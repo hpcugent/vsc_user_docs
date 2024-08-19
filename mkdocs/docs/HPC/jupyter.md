@@ -40,34 +40,37 @@ This will launch the Jupyter environment in a new browser tab, where you can ope
 
 ### Using extra Python packages
 
-Importing libraries in a notebook running on the HPC isn't as straight forward as on notebooks running on your local machine. You can only import libraries that are part of certain modules on the HPC. To find the right module, first look at the toolchain used by the Jupyter notebook version. This can be found when looking at the `JupyterNotebook version` field when creating a new Jupyter notebook session. In the image above `7.2.0` is the notebook version and `GCCcore 13.2.0`is the toolchain used.
+A number of Python packages are readily available in modules on the HPC. To illustrate how to use them in a Jupyter notebook, we will make use of an example where we want to use numpy in our notebook.
+The first thing we need to do is finding the modules that contain our package of choice. For numpy, this would be the SciPy modules.
 
-After checking the toolchain, you can search the correct module using a shell environment. You can do this by clicking on `Clusters`>`_login Shell Access` in the web portal.
+To find the appropriate modules, it is recommended to use the shell within the web portal under `Clusters`>`>_login Shell Access`.
 
 <center>
 ![image](img/ood_jupyter_open_shell.png)
 </center>
 
-Using `module available` followed by a library name will print all modules in which your library is included. For example if you want to make use of SciPy, it will look like this:
+We can see all available versions of the SciPy module by using `module available SciPy`:
 
 ```shell 
 $ module available Scipy
 
------------------------------------------------------------------------------------ /apps/gent/RHEL8/zen2-ib/modules/all ------------------------------------------------------------------------------------
-   SciPy-bundle/2019.10-foss-2019b-Python-2.7.16     SciPy-bundle/2020.03-intel-2020a-Python-3.8.2    SciPy-bundle/2021.05-gomkl-2021a                 SciPy-bundle/2022.05-intel-2022a
-   SciPy-bundle/2019.10-foss-2019b-Python-3.7.4      SciPy-bundle/2020.03-iomkl-2020a-Python-3.8.2    SciPy-bundle/2021.05-intel-2021a                 SciPy-bundle/2023.02-gfbf-2022b
-   SciPy-bundle/2019.10-intel-2019b-Python-2.7.16    SciPy-bundle/2020.11-foss-2020b-Python-2.7.18    SciPy-bundle/2021.10-foss-2021b-Python-2.7.18    SciPy-bundle/2023.07-gfbf-2023a
-   SciPy-bundle/2019.10-intel-2019b-Python-3.7.4     SciPy-bundle/2020.11-foss-2020b                  SciPy-bundle/2021.10-foss-2021b                  SciPy-bundle/2023.11-gfbf-2023b     (D)
-   SciPy-bundle/2020.03-foss-2020a-Python-3.8.2      SciPy-bundle/2020.11-intel-2020b                 SciPy-bundle/2021.10-intel-2021b                 scipy/1.4.1-foss-2019b-Python-3.7.4
-   SciPy-bundle/2020.03-intel-2020a-Python-2.7.18    SciPy-bundle/2021.05-foss-2021a                  SciPy-bundle/2022.05-foss-2022a
+------------------ /apps/gent/RHEL8/zen2-ib/modules/all ------------------
+    SciPy-bundle/2022.05-foss-2022a    SciPy-bundle/2023.11-gfbf-2023b (D)
+    SciPy-bundle/2023.07-gfbf-2023a
 
   Where:
    D:  Default Module
-
-If you need software that is not listed, request it via https://www.ugent.be/hpc/en/support/software-installation-request
+...
 ```
 
-To check if a module uses the right toolchain, use the `module show` command:
+Not all modules will work for every notebook, we need to use the one that uses the same toolchain as the notebook we want to launch. To find that toolchain, we can look at the `JupyterNotebook version` field when creating a notebook. In our example `7.2.0` is the version of the notebook and `GCCcore 13.2.0` is the toolchain used.
+
+<center>
+![image](img/ood_jupyter_version.png)
+</center>
+
+Most modules' names end with the version of the toolchain used by the module (for example `plotly.py/5.18.0-GCCcore-13.2.0`), however for our SciPy module, that is not the case.
+To find the toolchain used by such a module (and the packages contained within a module), we can make use of `module show <module_name>`:
 
 ```shell
 $ module show SciPy-bundle/2023.11-gfbf-2023b
@@ -108,20 +111,28 @@ prepend_path("LD_LIBRARY_PATH","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2
 prepend_path("LIBRARY_PATH","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2023.11-gfbf-2023b/lib/python3.11/site-packages/numpy/core/lib")
 setenv("EBEXTSLISTSCIPYMINBUNDLE","numpy-1.26.2,ply-3.11,gast-0.5.4,beniget-0.4.1,pythran-0.14.0,versioneer-0.29,scipy-1.11.4,numexpr-2.8.7,Bottleneck-1.3.7,tzdata-2023.3,pandas-2.1.3,mpmath-1.3.0,deap-1.4.1")
 ```
-This prints a lot of information about the module, including all libraries that are part of it. It also shows which toolchain is used in the line `load("Python/3.11.5-GCCcore-13.2.0")`.
 
-Because this is the same toolchain as the one used by the Jupyter notebook version in this example, we can include this module without errors. To do this, add the line `module load "module_name"` in the `Custom code`-field:
+The toolchain used can then for example be found within the line `load("Python/3.11.5-GCCcore-13.2.0")` and the included Python packages under the line `Included extensions`.
+
+It is also recommended to doublecheck the compatibility of the Jupyter notebook version and the extra modules by loading them all in a shell environment. 
+To do so, find the module containing the correct Jupyter notebook version (for our example case this is `JupyterNotebook/7.2.0-GCCcore-13.2.0`) and then use `module load <module_name>` for every module as follows:
+
+```shell
+$ module load JupyterNotebook/7.2.0-GCCcore-13.2.0
+$ module load SciPy-bundle/2023.11-gfbf-2023b
+```
+This throws no errors, since this module uses the same toolchain as the notebook
+
+If we use a different SciPy module that uses an incompatible toolchain, we will get errors when trying to load it.
+
+```shell
+$ module load JupyterNotebook/7.2.0-GCCcore-13.2.0
+$ module load SciPy-bundle/2023.07-gfbf-2023a
+Lmod has detected the following error:  ...
+```
+
+Now that we found the right module for the notebook, add `module load <module_name>` in the `Custom code` field when creating a notebook and you can make use of the packages within that notebook.
 
 <center>
 ![image](img/ood_jupyter_custom_code.png)
 </center>
-
-If you want to check the compatibility of your Jupyter notebook version and modules without launching a notebook, you can load the module of your preferred Jupyter notebook version followed by all the modules for your libraries in a shell environment. If this does not throw any errors, the modules are compatible. For our example, this would look as follows:
-
-```shell
-$ module load JupyterNotebook/7.2.0-GCCcore-13.2.0
-$ module load SciPy-bundle/2023.07-gfbf-2023a # we expect errors since this is a module that uses a different toolchain
-Lmod has detected the following error:  ...
-
-$ module load SciPy-bundle/2023.11-gfbf-2023b # Now no errors are thrown since this module uses the same toolchain as the notebook
-```
