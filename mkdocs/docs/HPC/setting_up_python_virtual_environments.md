@@ -58,7 +58,7 @@ import poutyne
 We load a PyTorch package as a module and install Poutyne in a virtual environment:
 
 ```bash
-$ ml PyTorch/2.1.2-foss-2023a
+$ module load PyTorch/2.1.2-foss-2023a
 $ python -m venv myenv
 $ source myenv/bin/activate
 $ pip install Poutyne
@@ -132,7 +132,7 @@ First, we create a virtual environment on the `shinx` cluster:
 $ module swap cluster/shinx
 $ qsub -I
 # Load module dependencies
-$ ml PyTorch/2.1.2-foss-2023a
+$ module load PyTorch/2.1.2-foss-2023a
 $ python -m venv myenv
 $ source myenv/bin/activate
 # install virtual environment dependencies
@@ -151,7 +151,7 @@ enters the virtual environment and executes the script:
 #PBS -l nodes=1:ppn=1         ## 1 node, 1 processors per node
 #PBS -l walltime=01:00:00     ## Max time your job will run (no more than 72:00:00)
 
-ml PyTorch/2.1.2-foss-2023a   # Load the PyTorch module
+module load PyTorch/2.1.2-foss-2023a   # Load the PyTorch module
 
 cd $PBS_O_WORKDIR             # Change working directory to the location where the job was submitted
 
