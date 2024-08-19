@@ -120,28 +120,6 @@ After some time, a shell will be started on the `shinx` cluster.
 You can now create a virtual environment as described in [the first section](#creating-a-venv).
 This virtual environment can be used by jobs running on the `shinx` cluster.
 
-!!! warning
-    Activating a virtual environment created on a different cluster can cause issues. 
-    This happens because the binaries in the virtual environments from cluster A might not work with the CPU architecture of cluster B.
-    
-    For example, if we create a virtual environment on the skitty cluster,
-
-    ```bash
-    $ module swap cluster/skitty
-    $ qsub -I
-    $ python -m venv myenv
-    ```
-
-    return to the login node by pressing CTRL+D and try to use the virtual environment:
-
-    ```bash
-    $ source myenv/bin/activate
-    $ python
-    Illegal instruction (core dumped)
-    ```
-
-    we are presented with the illegal instruction error. More info on this [here](troubleshooting.md#illegal-instruction-error)
-
 
 ## Example Python job
 
@@ -206,6 +184,30 @@ The `.o` file contains the output of the job.
 
 
 ## Troubleshooting
+
+### Illegal instruction error
+
+Activating a virtual environment created on a different cluster can cause issues. 
+This happens
+because the binaries in the virtual environments from cluster A might not work with the CPU architecture of cluster B.
+
+For example, if we create a virtual environment on the skitty cluster,
+
+```bash
+$ module swap cluster/skitty
+$ qsub -I
+$ python -m venv myenv
+```
+
+return to the login node by pressing CTRL+D and try to use the virtual environment:
+
+```bash
+$ source myenv/bin/activate
+$ python
+Illegal instruction (core dumped)
+```
+
+we are presented with the illegal instruction error. More info on this [here](troubleshooting.md#illegal-instruction-error)
 
 ### Error: cannot open shared object file: No such file or directory
 
