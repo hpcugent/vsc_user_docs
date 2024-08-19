@@ -10,7 +10,7 @@ This is useful when you need to use a package that is not available as a module 
 
 ## Creating a venv
 
-A venv can be created with the following commands:
+A Python virtual environment can be created with the following commands:
 
 ```bash
 $ python -m venv myenv      # Create a new venv named myenv
