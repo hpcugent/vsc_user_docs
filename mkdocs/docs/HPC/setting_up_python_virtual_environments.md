@@ -109,16 +109,16 @@ $ python pytorch_poutyne.py
 ## Creating a virtual environment for a specific cluster
 
 To create a virtual environment for a specific cluster, you need to start an interactive shell on that cluster.
-Let's say you want to create a virtual environment on the `shinx` cluster.
+Let's say you want to create a virtual environment on the `donphan` cluster.
 
 ```bash
-$ module swap cluster/shinx
+$ module swap cluster/donphan
 $ qsub -I
 ```
 
-After some time, a shell will be started on the `shinx` cluster. 
+After some time, a shell will be started on the `donphan` cluster. 
 You can now create a virtual environment as described in [the first section](#creating-a-venv).
-This virtual environment can be used by jobs running on the `shinx` cluster.
+This virtual environment can be used by jobs running on the `donphan` cluster.
 
 
 ## Example Python job
@@ -139,10 +139,10 @@ print(f"The version of PyTorch is: {torch.__version__}")
 print(f"The version of Poutyne is: {poutyne.__version__}")
 ```
 
-First, we create a virtual environment on the `shinx` cluster:
+First, we create a virtual environment on the `donphan` cluster:
 
 ```bash
-$ module swap cluster/shinx
+$ module swap cluster/donphan
 $ qsub -I
 # Load module dependencies
 $ module load PyTorch/2.1.2-foss-2023a
