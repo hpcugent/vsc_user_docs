@@ -267,14 +267,14 @@ def mangle_os_ifs(line, is_os):
         pos_second_mangle = constr_match.end() + start_index + added_length - 1
 
         # different parts of the original string
-        PART_BEFORE_MANGLING = line[:pos_first_mangle]
-        PART_BETWEEN_MANGLING = line[pos_first_mangle:pos_second_mangle]
-        PART_AFTER_MANGLING = line[pos_second_mangle:]
+        part_before_mangling = line[:pos_first_mangle]
+        part_between_mangling = line[pos_first_mangle:pos_second_mangle]
+        part_after_mangling = line[pos_second_mangle:]
 
         # this logic isn't flawless, there are number of nested if-constructions that are technically possible that would break this logic, but these don't appear in the documentation as it doesn't make sense to have these
         if endif_match:
             if is_os in (OS_IF, OS_IF_IN_OS_IF):
-                line = PART_BEFORE_MANGLING + IF_MANGLED_PART + PART_BETWEEN_MANGLING + IF_MANGLED_PART + PART_AFTER_MANGLING
+                line = part_before_mangling + IF_MANGLED_PART + part_between_mangling + IF_MANGLED_PART + part_after_mangling
                 added_length += 2 * len(IF_MANGLED_PART)
                 if is_os == OS_IF:
                     is_os = NON_OS_IF
@@ -285,7 +285,7 @@ def mangle_os_ifs(line, is_os):
                 
         elif if_match:
             if if_os_match:
-                line = PART_BEFORE_MANGLING + IF_MANGLED_PART + PART_BETWEEN_MANGLING + IF_MANGLED_PART + PART_AFTER_MANGLING
+                line = part_before_mangling + IF_MANGLED_PART + part_between_mangling + IF_MANGLED_PART + part_after_mangling
                 added_length += 2 * len(IF_MANGLED_PART)
                 if is_os == OS_IF:
                     is_os = OS_IF_IN_OS_IF
@@ -299,7 +299,7 @@ def mangle_os_ifs(line, is_os):
                     
         else:
             if is_os in (OS_IF, OS_IF_IN_OS_IF):
-                line = PART_BEFORE_MANGLING + IF_MANGLED_PART + PART_BETWEEN_MANGLING + IF_MANGLED_PART + PART_AFTER_MANGLING
+                line = part_before_mangling + IF_MANGLED_PART + part_between_mangling + IF_MANGLED_PART + part_after_mangling
                 added_length += 2 * len(IF_MANGLED_PART)
 
         start_index += constr_match.end()
