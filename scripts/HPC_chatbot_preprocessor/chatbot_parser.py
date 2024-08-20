@@ -4,9 +4,15 @@ import re
 import shutil
 import yaml
 from itertools import chain
-from jinja2 import FileSystemLoader, Environment, ChoiceLoader
+from pathlib import Path
+from jinja2 import FileSystemLoader, Environment, ChoiceLoader, Template
 
 #################### define macro's ####################
+# customizable macros
+MIN_PARAGRAPH_LENGTH = 128
+MAX_TITLE_DEPTH = 4
+INCLUDE_LINKS_IN_PLAINTEXT = True
+
 # directories
 PARSED_MDS = "parsed_mds"
 COPIES = "copies"
@@ -24,10 +30,11 @@ OS_SPECIFIC_DIR = "os_specific"
 LINUX = "linux"
 WINDOWS = "windows"
 MACOS = "macos"
+GENERIC = "generic"
 
 # urls
 REPO_URL = 'https://github.com/hpcugent/vsc_user_docs'
-DOCS_URL = "docs.hpc.ugent.be"
+DOCS_URL = "https://docs.hpc.ugent.be"
 
 # OS-related if-states
 ACTIVE = "active"
@@ -76,7 +83,7 @@ def check_for_title(curr_line, main_title, last_directory, last_title, curr_dirs
 
     # detect titles
     match = re.match(r'^#+ ', curr_line)
-    if match and len(match.group(0)) <= 5:
+    if match and len(match.group(0)) <= MAX_TITLE_DEPTH + 1:
         logic_output = len(match.group(0)) - 1
     else:
         logic_output = 0
@@ -102,19 +109,37 @@ def check_for_title(curr_line, main_title, last_directory, last_title, curr_dirs
             os.makedirs(os.path.join(root_dirs[i],  curr_dirs[logic_output]), exist_ok=True)
 
         # update the higher order current directories
-        for i in range(logic_output + 1, 4):
+        for i in range(logic_output + 1, MAX_TITLE_DEPTH + 1):
             curr_dirs[i] = curr_dirs[logic_output]
 
         return logic_output, make_valid_title(curr_line[logic_output + 1:-1].replace(' ', '-')), curr_dirs[logic_output], curr_dirs, link_lists
 
 
-def replace_markdown_markers(curr_line, linklist, in_code_block):
+def check_for_title_simple(line, in_code_block, curr_dirs):
+
+    # detect titles
+    match = re.match(r'^#+ ', line)
+    if match and len(match.group(0)) <= 5 and not in_code_block:
+        title_length = len(match.group(0)) - 1
+        curr_dirs[title_length] = os.path.join(curr_dirs[title_length - 1], make_valid_title(line[title_length + 1:-1].replace(' ', '-')))
+
+        # update the higher order current directories
+        for i in range(title_length + 1, MAX_TITLE_DEPTH + 1):
+            curr_dirs[i] = curr_dirs[title_length]
+
+        return title_length
+    else:
+        return 0
+
+
+def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
     """
     function that replaces certain markdown structures with the equivalent used on the website
 
     :param curr_line: the current line on which markdown structures need to be replaced
     :param linklist: the list used to store links that need to be printed at the end of the file
     :param in_code_block: boolean indicating whether the current line is part of a code block
+    :param main_title: the main title of the file that is being processed
     :return curr_line: the adapted current line
     :return linklist: the updated linklist
     """
@@ -128,7 +153,13 @@ def replace_markdown_markers(curr_line, linklist, in_code_block):
     if matches:
         for match in matches:
             curr_line = curr_line.replace(f"[{match[0]}]({match[1]})", match[0] + "[" + str(len(linklist) + 1) + "]")
-            linklist.append(match[1])
+            if ".md" not in match[1]:
+                if "#" not in match[1]:
+                    linklist.append(match[1])
+                else:
+                    linklist.append(DOCS_URL + main_title + "/" + match[1])
+            else:
+                linklist.append(DOCS_URL + match[1].replace(".md", "/").replace("index", "").rstrip("/"))
 
     # codeblock (with ``` -> always stands on a separate line, so line can be dropped)
     if '```' in curr_line:
@@ -166,7 +197,6 @@ def replace_markdown_markers(curr_line, linklist, in_code_block):
 
             # keep the rest
             else:
-                # print("<" + content + ">")
                 pass
 
     # structures with !!! (info, tips, warnings)
@@ -197,6 +227,91 @@ def replace_markdown_markers(curr_line, linklist, in_code_block):
                 curr_line = re.sub(r"(_+)" + content[1] + r"\1", content[1], curr_line)
 
     return curr_line, linklist
+
+
+def split_text(file, main_title):
+
+    # start of assuming we haven't encountered a title
+    after_first_title = False
+
+    # start of assuming we are not in a code_block
+    in_code_block = False
+
+    # define initial dictionaries
+    paragraphs_text = {}
+    paragraphs_metadata = {}
+
+    # list to keep track of links in the text
+    link_list = []
+
+    # list to keep track of the order of the subtitles
+    subtitle_order = []
+
+    # variable to keep track of the title level
+    title_level = 0
+
+    # list to keep track of most recent directories on each title level
+    if LINUX_TUTORIAL not in file:
+        curr_dirs = [main_title for _ in range(MAX_TITLE_DEPTH + 1)]
+    else:
+        curr_dirs = [os.path.join(LINUX_TUTORIAL, main_title) for _ in range(MAX_TITLE_DEPTH + 1)]
+
+    with open(file, 'r') as readfile:
+
+        for line in readfile:
+
+            # keep track of title level and directory to write to metadata upon discovering a new subtitle
+            if title_level > 0:
+                last_title_level = title_level
+                last_dir = curr_dirs[last_title_level]
+
+            title_level = check_for_title_simple(line, in_code_block, curr_dirs)
+
+            # detect codeblocks to make sure titles aren't detected in them
+            if '```' in line or (('<pre><code>' in line) ^ ('</code></pre>' in line)):
+                in_code_block = not in_code_block
+
+            # line is a title with a maximum depth of 4
+            if title_level > 0:
+                if after_first_title:
+                    paragraphs_metadata[title] = write_metadata(main_title, title, link_list, last_title_level, last_dir)
+                title = make_valid_title(line[title_level + 1:-1])
+
+                # create an entry for the file in the paragraphs text dictionary
+                paragraphs_text[title] = ""
+
+                after_first_title = True
+                subtitle_order.append(title)
+
+                # reset link_list
+                link_list = []
+
+            # line is not a title
+            elif after_first_title:
+                line, link_list = replace_markdown_markers(line, link_list, in_code_block, main_title)
+                if title in paragraphs_text.keys() and line != "\n":
+                    paragraphs_text[title] += line
+                elif line != "\n":
+                    paragraphs_text[title] = line
+
+    # write metadata for the last file
+    paragraphs_metadata[title] = write_metadata(main_title, title, link_list, title_level, curr_dirs[last_title_level])
+
+    return paragraphs_text, paragraphs_metadata, subtitle_order
+
+
+def write_metadata(main_title, subtitle, links, title_level, directory):
+
+    paragraph_metadata = {'main_title': main_title, 'subtitle': subtitle, 'title_depth': title_level, 'directory': directory}
+
+    if len(links) > 0:
+        paragraph_metadata['links'] = {}
+        for i, link in enumerate(links):
+            paragraph_metadata['links'][str(i)] = link
+
+    paragraph_metadata['parent_title'] = Path(directory).parent.name
+
+    return paragraph_metadata
 
 
 def jinja_parser(filename, copy_location):
@@ -434,7 +549,7 @@ def write_text_to_file(file_name, curr_line, link_lists, in_code_block):
         os_list = [GENERIC_DIR, LINUX, WINDOWS, MACOS]
         for i, os_ in enumerate(os_list):
             if os_ in file_name:
-                curr_line, link_lists[i] = replace_markdown_markers(curr_line, link_lists[i], in_code_block)
+                curr_line, link_lists[i] = replace_markdown_markers(curr_line, link_lists[i], in_code_block, "placeholder")
 
         if CONTENT in data:
             data[CONTENT] += curr_line
@@ -532,6 +647,66 @@ def make_valid_title(title):
     return valid_filename
 
 
+def write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order, title_order_number):
+
+    # make the directory needed for the files that will be written
+    filepath = os.path.join(PARSED_MDS, GENERIC_DIR, paragraphs_metadata[title]["directory"])
+    os.makedirs(filepath)
+
+    write_files(title, paragraphs_text[title], paragraphs_metadata, title_order, title_order_number, filepath, OS=GENERIC)
+
+
+def write_os_specific_file(title, paragraphs_text, paragraphs_metadata, title_order, title_order_number):
+    for i, OS in enumerate([LINUX, WINDOWS, MACOS]):
+
+        # Unmangle if's to use jinja parser
+        paragraphs_text[title] = re.sub(IF_MANGLED_PART, "", paragraphs_text[title])
+
+        # Use jinja to render a different version of the text for each OS
+        template = Template(paragraphs_text[title])
+        text = template.render(OS=OS)
+
+        # define the filepath
+        filepath = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, OS, paragraphs_metadata[title]["directory"])
+        os.makedirs(filepath)
+
+        # write the files
+        write_files(title, text, paragraphs_metadata, title_order, title_order_number, filepath, OS)
+
+
+def write_files(title, text, paragraphs_metadata, title_order, title_order_number, filepath, OS):
+    # write text file
+    with open(os.path.join(filepath, paragraphs_metadata[title]["subtitle"] + ".txt"), 'w') as writefile:
+        writefile.write(text)
+
+    # write metadata
+    metadata = paragraphs_metadata[title]
+
+    if title_order_number != 0:
+        metadata["previous_title"] = title_order[title_order_number - 1]
+    else:
+        metadata["previous_title"] = None
+
+    if title_order_number != len(title_order) - 1:
+        metadata["next_title"] = title_order[title_order_number + 1]
+    else:
+        metadata["next_title"] = None
+
+    metadata["OS"] = OS
+
+    if bool(LINUX_TUTORIAL in paragraphs_metadata[title]["directory"]):
+        linux_part = LINUX_TUTORIAL + "/"
+    else:
+        linux_part = ""
+    if OS == GENERIC:
+        os_part = ""
+    else:
+        os_part = OS + "/"
+    metadata["reference_link"] = DOCS_URL + "/" + os_part + linux_part + paragraphs_metadata[title]["main_title"] + "/#" + ''.join(char.lower() for char in title if char.isalnum() or char == '-').strip('-')
+
+    with open(os.path.join(filepath, paragraphs_metadata[title]["subtitle"] + "_metadata.json"), 'w') as writefile:
+        json.dump(metadata, writefile, indent=4)
+
 def main():
     """
     main function
@@ -557,21 +732,27 @@ def main():
 
     ################### define loop-invariant variables ###################
 
-    # variable that keeps track of the source directories
-    source_directories = [os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR),
-                          os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR, LINUX_TUTORIAL)]
+    # # variable that keeps track of the source directories
+    # source_directories = [os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR),
+    #                       os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR, LINUX_TUTORIAL)]
+    #
+    # # list of all the filenames
+    # filenames_generic = {}
+    # filenames_linux = {}
+    # for source_directory in source_directories:
+    #     all_items = os.listdir(source_directory)
+    #     files = [f for f in all_items if os.path.isfile(os.path.join(source_directory, f)) and ".md" in f[-3:]]
+    #     for file in files:
+    #         if LINUX_TUTORIAL in source_directory:
+    #             filenames_linux[file] = os.path.join(source_directory, file)
+    #         else:
+    #             filenames_generic[file] = os.path.join(source_directory, file)
 
-    # list of all the filenames
+    # Temporary variables to test with just one singular file
     filenames_generic = {}
     filenames_linux = {}
-    for source_directory in source_directories:
-        all_items = os.listdir(source_directory)
-        files = [f for f in all_items if os.path.isfile(os.path.join(source_directory, f)) and ".md" in f[-3:]]
-        for file in files:
-            if LINUX_TUTORIAL in source_directory:
-                filenames_linux[file] = os.path.join(source_directory, file)
-            else:
-                filenames_generic[file] = os.path.join(source_directory, file)
+    filenames_generic["getting_started.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/getting_started.md"
+    filenames_linux["beyond_the_basics.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/linux-tutorial/beyond_the_basics.md"
 
     # for loops over all files
     for filenames in [filenames_generic, filenames_linux]:
@@ -621,6 +802,10 @@ def main():
             # dictionaries to keep track of current OS
             active_OS_if_states = {LINUX: INACTIVE, WINDOWS: INACTIVE, MACOS: INACTIVE}
 
+            # dictionaries to save the paragraphs and metadata before it is written to files
+            paragraphs_text = {}
+            paragraphs_metadata = {}
+
             # variable that shows whether the first title has been reached yet
             after_first_title = False
 
@@ -636,37 +821,56 @@ def main():
             # process the jinja macros
             jinja_parser(filename, copy_file)
 
-            # open the file and store line by line in the right file
-            with open(copy_file, 'r') as readfile:
+            # split the text in paragraphs
+            paragraphs_text, paragraphs_metadata, subtitle_order = split_text(copy_file, main_title)
 
-                for line in readfile:
-                    title_level, title, directory, curr_dirs, link_lists = check_for_title(line, main_title, last_directory, last_title, curr_dirs, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists, is_linux_tutorial, in_code_block)
+            # for every section, either make the whole section generic, or create an os-specific file for each OS
+            for i, subtitle in enumerate(subtitle_order):
 
-                    # detect codeblocks to make sure titles aren't detected in them
-                    if '```' in line or (('<pre><code>' in line) ^ ('</code></pre>' in line)):
-                        in_code_block = not in_code_block
+                # generic
+                if IF_MANGLED_PART not in paragraphs_text[subtitle]:
+                    write_generic_file(subtitle, paragraphs_text, paragraphs_metadata, subtitle_order, i)
 
-                    # line is a title with a maximum depth of 4
-                    if title_level > 0:
-                        last_title = title
-                        last_directory = directory
-                        after_first_title = True
+                # os-specific
+                else:
+                    write_os_specific_file(subtitle, paragraphs_text, paragraphs_metadata, subtitle_order, i)
 
-                    # line is not a title
-                    elif after_first_title:
-                        # check for if-statements and write the appropriate lines in the right files
-                        next_action = check_if_statements(line, active_OS_if_states)
-                        while next_action[0] == WRITE_TEXT_AND_CHECK_EXTRA_MESSAGE or next_action[0] == CHECK_EXTRA_MESSAGE:
-                            if next_action[0] == WRITE_TEXT_AND_CHECK_EXTRA_MESSAGE:
-                                link_lists = choose_and_write_to_file(next_action[2], active_OS_if_states, last_directory, last_title, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists, in_code_block)
-                            next_action = check_if_statements(next_action[1], active_OS_if_states)
 
-                        if next_action[0] == WRITE_TEXT:
-                            link_lists = choose_and_write_to_file(next_action[2], active_OS_if_states, last_directory, last_title, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists, in_code_block)
+            # # open the file and store line by line in the right file
+            # with open(copy_file, 'r') as readfile:
+            #
+            #     for line in readfile:
+            #         title_level, title, directory, curr_dirs, link_lists = check_for_title(line, main_title, last_directory, last_title, curr_dirs, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists, is_linux_tutorial, in_code_block)
+            #
+            #         # detect codeblocks to make sure titles aren't detected in them
+            #         if '```' in line or (('<pre><code>' in line) ^ ('</code></pre>' in line)):
+            #             in_code_block = not in_code_block
+            #
+            #         # line is a title with a maximum depth of 4
+            #         if title_level > 0:
+            #             last_title = title
+            #             last_directory = directory
+            #             after_first_title = True
+            #
+            #         # line is not a title
+            #         elif after_first_title:
+            #             # check for if-statements and write the appropriate lines in the right files
+            #             next_action = check_if_statements(line, active_OS_if_states)
+            #             while next_action[0] == WRITE_TEXT_AND_CHECK_EXTRA_MESSAGE or next_action[0] == CHECK_EXTRA_MESSAGE:
+            #                 if next_action[0] == WRITE_TEXT_AND_CHECK_EXTRA_MESSAGE:
+            #                     link_lists = choose_and_write_to_file(next_action[2], active_OS_if_states, last_directory, last_title, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists, in_code_block)
+            #                 next_action = check_if_statements(next_action[1], active_OS_if_states)
+            #
+            #             if next_action[0] == WRITE_TEXT:
+            #                 link_lists = choose_and_write_to_file(next_action[2], active_OS_if_states, last_directory, last_title, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists, in_code_block)
+            #
+            # # write end of file for the last file
+            # for i, OS in enumerate(["", "Linux", "Windows", "macOS"]):
+            #     write_end_of_file(os.path.join(root_dirs[i], last_directory, last_title + ".json"), OS, link_lists[i], is_linux_tutorial, main_title, last_title)
 
-            # write end of file for the last file
-            for i, OS in enumerate(["", "Linux", "Windows", "macOS"]):
-                write_end_of_file(os.path.join(root_dirs[i], last_directory, last_title + ".json"), OS, link_lists[i], is_linux_tutorial, main_title, last_title)
+            print(paragraphs_text)
+            print(paragraphs_metadata)
+            print(subtitle_order)
 
     # remove_directory_tree(COPIES)
     # remove_directory_tree(IF_MANGLED_FILES)

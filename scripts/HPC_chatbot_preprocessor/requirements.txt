@@ -4,3 +4,4 @@ shutil
 pypandoc
 yaml
 jinja2
+pathlib
