@@ -21,8 +21,9 @@ the computing resources.
 
 The syntax for *qsub* for submitting an interactive PBS job is:
 
-<pre><code><b>$ qsub -I <... pbs directives ...></b>
-</code></pre>
+```
+$ qsub -I <... pbs directives ...>
+```
 
 ## Interactive jobs, without X support
 
@@ -31,18 +32,20 @@ The syntax for *qsub* for submitting an interactive PBS job is:
 
 First of all, in order to know on which computer you're working, enter:
 
-<pre><code><b>$ hostname -f</b>
+```
+$ hostname -f
 {{ loginhost }}
-</code></pre>
+```
 
 This means that you're now working on the login node ` {{ loginhost }} ` of the cluster.
 
 The most basic way to start an interactive job is the following:
 
-<pre><code><b>$ qsub -I</b>
+```
+$ qsub -I
 qsub: waiting for job {{ jobid }} to start
 qsub: job {{ jobid }} ready
-</code></pre>
+```
 
 There are two things of note here.
 
@@ -57,9 +60,10 @@ There are two things of note here.
 
 In order to know on which compute-node you're working, enter again:
 
-<pre><code><b>$ hostname -f</b>
+```
+$ hostname -f
 {{ computenode }}
-</code></pre>
+```
 
 Note that we are now working on the compute-node called "*{{ computenode }}*". This is the
 compute node, which was assigned to us by the scheduler after issuing
@@ -87,10 +91,11 @@ Now, go to the directory of our second interactive example and run the
 program "primes.py". This program will ask you for an upper limit
 ($> 1$) and will print all the primes between 1 and your upper limit:
 
-<pre><code><b>$ cd ~/{{ exampledir }}</b>
-<b>$ ./primes.py</b>
+```
+$ cd ~/{{ exampledir }}
+$ ./primes.py
 This program calculates all primes between 1 and your upper limit.
-Enter your upper limit (>1): <b>50</b>
+Enter your upper limit (>1): 50
 Start Time:  2013-09-11 15:49:06
 [Prime#1] = 1
 [Prime#2] = 2
@@ -110,12 +115,13 @@ Start Time:  2013-09-11 15:49:06
 [Prime#16] = 47
 End Time:  2013-09-11 15:49:06
 Duration:  0 seconds.
-</code></pre>
+```
 
 You can exit the interactive session with:
 
-<pre><code><b>$ exit</b>
-</code></pre>
+```
+$ exit
+```
 
 Note that you can now use this allocated node for 1 hour. After this
 hour you will be automatically disconnected. You can change this "usage
@@ -125,8 +131,9 @@ watching the clock on the wall.)
 
 You can work for 3 hours by:
 
-<pre><code><b>$ qsub -I -l walltime=03:00:00</b>
-</code></pre>
+```
+$ qsub -I -l walltime=03:00:00
+```
 
 If the walltime of the job is exceeded, the (interactive) job will be
 killed and your connection to the compute node will be closed. So do
@@ -160,9 +167,7 @@ Download the latest version of the XQuartz package on:
 <http://xquartz.macosforge.org/landing/> and install the XQuartz.pkg
 package.
 
-<center>
 ![image](img/img0512.png)
-</center>
 
 The installer will take you through the installation procedure, just
 continue clicking ++"Continue"++ on the various screens that will pop-up until your
@@ -171,9 +176,7 @@ installation was successful.
 A reboot is required before XQuartz will correctly open graphical
 applications.
 
-<center>
 ![image](img/img0513.png)
-</center>
 {% endif %}
 {% if OS == windows %}
 ##### Install Xming
@@ -191,9 +194,7 @@ The first task is to install the Xming software.
 4.  When selecting the components that need to be installed, make sure
     to select "*XLaunch wizard*" and "*Normal PuTTY Link SSH client*".
 
-    <center>
     ![image](img/img0500.png)
-    <center>
 
 5.  We suggest to create a Desktop icon for Xming and XLaunch.
 
@@ -206,28 +207,20 @@ And now we can run Xming:
 
 2.  Select ++"Multiple Windows"++. This will open each application in a separate window.
 
-    <center>
     ![image](img/img0501.png)
-    </center>
 
 3.  Select ++"Start no client"++ to make XLaunch wait for other programs (such as PuTTY).
 
-    <center>
     ![image](img/img0502.png)
-    </center>
 
 4.  Select ++"Clipboard"++ to share the clipboard.
 
-    <center>
     ![image](img/img0503.png)
-    </center>
 
 5.  Finally ++"Save configuration"++ into a file. You can keep the default filename and save it
     in your Xming installation directory.
 
-    <center>
     ![image](img/img0504.png)
-    </center>
 
 6.  Now Xming is running in the background ...
     and you can launch a graphical application in your PuTTY terminal.
@@ -237,27 +230,27 @@ And now we can run Xming:
 8.  In order to test the X-server, run "*xclock*". "*xclock*" is the
     standard GUI clock for the X Window System.
 
-<pre><code><b>$ xclock</b>
-</code></pre>
+```
+$ xclock
+```
 
 You should see the XWindow clock application appearing on your Windows
 machine. The "*xclock*" application runs on the login-node of the {{ hpc }}, but
 is displayed on your Windows machine.
 
-<center>
 ![image](img/img0505.png)
-</center>
 
 You can close your clock and connect further to a compute node with
 again your X-forwarding enabled:
 
-<pre><code><b>$ qsub -I -X</b>
+```
+$ qsub -I -X
 qsub: waiting for job {{ jobid }} to start
 qsub: job {{ jobid }} ready
-<b>$ hostname -f</b>
+$ hostname -f
 {{ computenode }}
-<b>$ xclock</b>
-</code></pre>
+$ xclock
+```
 
 and you should see your clock again.
 
@@ -309,9 +302,7 @@ the cluster
 
     2.  In the "*Category*" pane, expand ++"Connection>SSh"++, and select as show below:
 
-        <center>
         ![image](img/img0506.png)
-        </center>
 
     3.  In the ++"Source port"++ field, enter the local port to use (e.g., *5555*).
 
@@ -334,41 +325,40 @@ running on a compute node on the {{ hpc }}) transferred to your personal screen,
 you will need to reconnect to the {{ hpc }} with X-forwarding enabled, which is
 done with the "-X" option.
 
-<center>
 ![image](img/ch5-interactive-mode.png)
-</center>
 
 First exit and reconnect to the {{ hpc }} with X-forwarding enabled:
 
-<pre><code><b>$ exit</b>
-<b>$ ssh -X {{ userid }}@{{ loginnode }}</b>
-<b>$ hostname -f</b>
+```
+$ exit
+$ ssh -X {{ userid }}@{{ loginnode }}
+$ hostname -f
 {{ loginhost }}
-</code></pre>
+```
 
 We first check whether our GUIs on the login node are decently forwarded
 to your screen on your local machine. An easy way to test it is by
 running a small X-application on the login node. Type:
 
-<pre><code><b>$ xclock</b>
-</code></pre>
+```
+$ xclock
+```
 
 And you should see a clock appearing on your screen.
 
-<center>
 ![image](img/img0507.png)
-</center>
 
 You can close your clock and connect further to a compute node with
 again your X-forwarding enabled:
 
-<pre><code><b>$ qsub -I -X</b>
+```
+$ qsub -I -X
 qsub: waiting for job {{ jobid }} to start
 qsub: job {{ jobid }} ready
-<b>$ hostname -f</b>
+$ hostname -f
 {{ computenode }}
-<b>$ xclock</b>
-</code></pre>
+$ xclock
+```
 
 and you should see your clock again.
 {% endif %}
@@ -380,15 +370,14 @@ screen, but also asks you to click a button.
 
 Now run the message program:
 
-<pre><code><b>$ cd ~/{{ exampledir }}</b>
-<b>./message.py</b>
-</code></pre>
+```
+$ cd ~/{{ exampledir }}
+./message.py
+```
 
 You should see the following message appearing.
 
-<center>
 ![image](img/img0508.png)
-</center>
 
 Click any button and see what happens.
 
