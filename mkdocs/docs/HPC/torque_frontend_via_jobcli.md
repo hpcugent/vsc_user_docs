@@ -85,8 +85,8 @@ Job script that would have been submitted:
 ------------------------------------------
 
 #!/bin/bash
-#SBATCH --chdir="/user/gent/464/vsc46416"
-#SBATCH --error="/kyukon/home/gent/464/vsc46416/examples/%x.e%A"
+#SBATCH --chdir="/user/gent/400/{{userid}}"
+#SBATCH --error="/kyukon/home/gent/400/{{userid}}/examples/%x.e%A"
 #SBATCH --export="NONE"
 #SBATCH --get-user-env="60L"
 #SBATCH --job-name="example"
@@ -94,7 +94,7 @@ Job script that would have been submitted:
 #SBATCH --nodes="1"
 #SBATCH --ntasks-per-node="8"
 #SBATCH --ntasks="8"
-#SBATCH --output="/kyukon/home/gent/464/vsc46416/examples/%x.o%A"
+#SBATCH --output="/kyukon/home/gent/400/{{userid}}/examples/%x.o%A"
 #SBATCH --time="02:30:00"
 
 ### (start of lines that were added automatically by jobcli)
@@ -103,7 +103,7 @@ Job script that would have been submitted:
 # qsub --dryrun example.sh -N example
 #
 # directory where submission command was executed:
-# /kyukon/home/gent/464/vsc46416/examples
+# /kyukon/home/gent/400/{{userid}}/examples
 #
 # original script header:
 # #PBS -l nodes=1:ppn=8
@@ -134,8 +134,8 @@ which generates this output:
 ```shell
 DEBUG: Submitting job script location at example.sh
 DEBUG: Generated script header
-#SBATCH --chdir="/user/gent/464/vsc46416"
-#SBATCH --error="/kyukon/home/gent/464/vsc46416/examples/%x.e%A"
+#SBATCH --chdir="/user/gent/400/{{userid}}"
+#SBATCH --error="/kyukon/home/gent/400/{{userid}}/examples/%x.e%A"
 #SBATCH --export="NONE"
 #SBATCH --get-user-env="60L"
 #SBATCH --job-name="example"
@@ -143,7 +143,7 @@ DEBUG: Generated script header
 #SBATCH --nodes="1"
 #SBATCH --ntasks-per-node="8"
 #SBATCH --ntasks="8"
-#SBATCH --output="/kyukon/home/gent/464/vsc46416/examples/%x.o%A"
+#SBATCH --output="/kyukon/home/gent/400/{{userid}}/examples/%x.o%A"
 #SBATCH --time="02:30:00"
 DEBUG: HOOKS: Looking for hooks in directory '/etc/jobcli/hooks'
 DEBUG: HOOKS: Directory '/etc/jobcli/hooks' does not exist, so no hooks there
