@@ -254,6 +254,9 @@ def split_text(file, main_title):
     # variable to keep track of the title level
     title_level = 0
 
+    # variable to allow for if statements to "continue" over multiple paragraphs
+    open_ifs = ""
+
     # list to keep track of most recent directories on each title level
     if LINUX_TUTORIAL not in file:
         curr_dirs = [main_title for _ in range(MAX_TITLE_DEPTH + 1)]
@@ -278,11 +281,12 @@ def split_text(file, main_title):
             # line is a title with a maximum depth of 4
             if title_level > 0:
                 if after_first_title:
+                    paragraphs_text[title], open_ifs = close_ifs(paragraphs_text[title])
                     paragraphs_metadata[title] = write_metadata(main_title, title, link_list, last_title_level, last_dir)
                 title = make_valid_title(line[title_level + 1:-1])
 
                 # create an entry for the file in the paragraphs text dictionary
-                paragraphs_text[title] = ""
+                paragraphs_text[title] = open_ifs
 
                 after_first_title = True
                 subtitle_order.append(title)
@@ -316,6 +320,38 @@ def write_metadata(main_title, subtitle, links, title_level, directory):
     paragraph_metadata['parent_title'] = Path(directory).parent.name
 
     return paragraph_metadata
+
+
+def close_ifs(text):
+    patterns = {
+        'if': r'({' + IF_MANGLED_PART + r'%[-\s]*if\s+OS\s*[!=]=\s*.+?[-\s]*%' + IF_MANGLED_PART + '})',
+        'endif': r'({' + IF_MANGLED_PART + r'%\s*-?\s*endif\s*-?\s*%' + IF_MANGLED_PART + '})',
+        'else': r'({' + IF_MANGLED_PART + r'%\s*-?\s*else\s*-?\s*%' + IF_MANGLED_PART + '})'
+    }
+    if_count = len(re.findall(patterns['if'], text.replace("\n", "")))
+    endif_count = len(re.findall(patterns['endif'], text.replace("\n", "")))
+    if IF_MANGLED_PART not in text or if_count == endif_count:
+        return text, ""
+    else:
+
+        # Find all matches for each pattern
+        matches = []
+        for key, pattern in patterns.items():
+            for match in re.finditer(pattern, text):
+                matches.append(match)
+
+        # sort the matches according to their start index
+        matches.sort(key=lambda x: x.start())
+
+        # extract the strings from the matches
+        open_ifs = []
+        for match in matches:
+            open_ifs.append(match.group(0))
+
+        # Concatenate all matches into a single string
+        open_ifs = ''.join(open_ifs)
+
+        return text + r'{' + IF_MANGLED_PART + '% endif %' + IF_MANGLED_PART + '}', open_ifs
 
 
 def jinja_parser(filename, copy_location):
@@ -380,6 +416,7 @@ def mangle_os_ifs(line, is_os):
         if_match = re.search(r'if ', match.group(1))
         if_os_match = re.search(r'if OS ', match.group(1))
         endif_match = re.search(r'endif', match.group(1))
+        else_match = re.search(r'else', match.group(1))
 
         # mangle positions
         pos_first_mangle = constr_match.start() + start_index + added_length + 1
@@ -416,7 +453,7 @@ def mangle_os_ifs(line, is_os):
                 else:
                     is_os = NON_OS_IF
                     
-        else:
+        elif else_match:
             if is_os in (OS_IF, OS_IF_IN_OS_IF):
                 line = part_before_mangling + IF_MANGLED_PART + part_between_mangling + IF_MANGLED_PART + part_after_mangling
                 added_length += 2 * len(IF_MANGLED_PART)
@@ -655,7 +692,7 @@ def write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order,
 
     # make the directory needed for the files that will be written
     filepath = os.path.join(PARSED_MDS, GENERIC_DIR, paragraphs_metadata[title]["directory"])
-    os.makedirs(filepath)
+    os.makedirs(filepath, exist_ok=True)
 
     write_files(title, paragraphs_text[title], paragraphs_metadata, title_order, title_order_number, filepath, OS=GENERIC)
 
@@ -672,7 +709,7 @@ def write_os_specific_file(title, paragraphs_text, paragraphs_metadata, title_or
 
         # define the filepath
         filepath = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, OS, paragraphs_metadata[title]["directory"])
-        os.makedirs(filepath)
+        os.makedirs(filepath, exist_ok=True)
 
         # write the files
         write_files(title, text, paragraphs_metadata, title_order, title_order_number, filepath, OS)
@@ -761,6 +798,7 @@ def main():
     # for loops over all files
     for filenames in [filenames_generic, filenames_linux]:
         for filename in filenames.keys():
+            # print(filename)
             ################### define/reset loop specific variables ###################
 
             # variable that keeps track of whether file is part of the linux tutorial
@@ -830,6 +868,7 @@ def main():
 
             # for every section, either make the whole section generic, or create an os-specific file for each OS
             for i, subtitle in enumerate(subtitle_order):
+                # print(subtitle)
 
                 # generic
                 if IF_MANGLED_PART not in paragraphs_text[subtitle]:
@@ -871,10 +910,6 @@ def main():
             # # write end of file for the last file
             # for i, OS in enumerate(["", "Linux", "Windows", "macOS"]):
             #     write_end_of_file(os.path.join(root_dirs[i], last_directory, last_title + ".json"), OS, link_lists[i], is_linux_tutorial, main_title, last_title)
-
-            print(paragraphs_text)
-            print(paragraphs_metadata)
-            print(subtitle_order)
 
     # remove_directory_tree(COPIES)
     # remove_directory_tree(IF_MANGLED_FILES)
