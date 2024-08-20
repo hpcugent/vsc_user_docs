@@ -203,6 +203,10 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
     if '!!!' in curr_line:
         curr_line = re.sub(r'!!!', "", curr_line)
 
+    # structures with ??? (collapsable admonitions)
+    if '???' in curr_line:
+        curr_line = re.sub(r'\?\?\?', "", curr_line)
+
     # get rid of other markdown indicators (`, *, +, _)
     if not in_code_block:
 
