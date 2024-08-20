@@ -201,9 +201,10 @@ On all popular Linux distributions, the OpenSSH software is readily
 available, and most often installed by default. You can check whether
 the OpenSSH software is installed by opening a terminal and typing:
 
-<pre><code><b>$ ssh -V</b>
+```
+$ ssh -V
 OpenSSH_7.4p1, OpenSSL 1.0.2k-fips 26 Jan 2017
-</code></pre>
+```
 
 To access the clusters and transfer your files, you will use the
 following commands:
@@ -222,17 +223,20 @@ A key pair might already be present in the default location inside your
 home directory. Therefore, we first check if a key is available with the
 "list short" ("ls") command:
 
-<pre><code><b>$ ls ~/.ssh</b>
-</code></pre>
+```
+$ ls ~/.ssh
+```
 
 If a key-pair is already available, you would normally get:
-<pre><code>authorized_keys     id_rsa      id_rsa.pub      known_hosts
-</code></pre>
+```
+authorized_keys     id_rsa      id_rsa.pub      known_hosts
+```
 
 Otherwise, the command will show:
 
-<pre><code>ls: .ssh: No such file or directory
-</code></pre>
+```
+ls: .ssh: No such file or directory
+```
 
 You can recognise a public/private key pair when a pair of files has the
 same name except for the extension ".pub" added to one of them. In this
@@ -260,13 +264,15 @@ private and should stay private. You should not even copy it to one of
 your other machines, instead, you should create a new public/private key
 pair for each machine.
 
-<pre><code><b>$ ssh-keygen -t rsa -b 4096</b>
+```
+$ ssh-keygen -t rsa -b 4096
+
 Generating public/private rsa key pair. Enter file in which to save the
 key (/home/user/.ssh/id_rsa): Enter passphrase (empty for no
 passphrase): Enter same passphrase again: Your identification has been
 saved in /home/user/.ssh/id_rsa. Your public key has been saved in
 /home/user/.ssh/id_rsa.pub.
-</code></pre>
+```
 
 This will ask you for a file name to store the private and public key,
 and a passphrase to protect your private key. It needs to be emphasised
@@ -335,15 +341,17 @@ to keep and manage the user SSH keys. If you use one of these derivatives you **
 the SSH manager keyring to be able to connect to the HPC cluster. If
 not, SSH client will display an error message (see [Connecting](../connecting)) similar to this:
 
-<pre><code>Agent admitted failure to sign using the key. 
+```
+Agent admitted failure to sign using the key. 
 Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
-</code></pre>
+```
 
 This could be fixed using the `ssh-add` command. You can include the new
 private keys' identities in your keyring with:
 
-<pre><code><b>$ ssh-add</b>
-</code></pre>
+```shell
+$ ssh-add
+```
 
 !!! tip
     Without extra options `ssh-add` adds any key located at `$HOME/.ssh`
@@ -353,8 +361,9 @@ private keys' identities in your keyring with:
 
 Check that your key is available from the keyring with:
 
-<pre><code><b>$ ssh-add -l</b>
-</code></pre>
+```
+$ ssh-add -l
+```
 
 After these changes the key agent will keep your SSH key to connect to
 the clusters as usual.
@@ -466,7 +475,8 @@ account.
 Within one day, you should receive a Welcome e-mail with your VSC
 account details.
 
-<pre><code>Dear (Username), 
+```
+Dear (Username), 
 Your VSC-account has been approved by an administrator.
 Your vsc-username is {{ userid }}
 
@@ -479,7 +489,7 @@ For further info please visit https://www.vscentrum.be/user-portal
 
 Kind regards,
 -- The VSC administrators
-</code></pre>
+```
 
 Now, you can start using the {{ hpc }}. You can always look up your VSC id later
 by visiting <https://account.vscentrum.be>.
