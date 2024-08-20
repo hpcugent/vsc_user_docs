@@ -88,8 +88,9 @@ command, you can replace `module` with `ml`.
 A large number of software packages are installed on the {{ hpc }} clusters. A
 list of all currently available software can be obtained by typing:
 
-<pre><code><b>$ module available</b>
-</code></pre>
+```
+$ module available
+```
 
 It's also possible to execute `module av` or `module avail`, these are
 shorter to type and will do the same thing.
@@ -133,8 +134,9 @@ same toolchain name and version can work together without conflicts.
 To "activate" a software package, you load the corresponding module file
 using the `module load` command:
 
-<pre><code><b>$ module load example</b>
-</code></pre>
+```
+$ module load example
+```
 
 This will load the most recent version of *example*.
 
@@ -145,8 +147,9 @@ lexicographical last after the `/`).
 
 **However, you should specify a particular version to avoid surprises when newer versions are installed:
 
-<pre><code><b>$ module load secondexample/2.7-intel-2016b</b>
-</code></pre>
+```
+$ module load secondexample/2.7-intel-2016b
+```
 
 The `ml` command is a shorthand for `module load`: `ml example/1.2.3` is
 equivalent to `module load example/1.2.3`.
@@ -154,8 +157,9 @@ equivalent to `module load example/1.2.3`.
 Modules need not be loaded one by one; the two `module load` commands
 can be combined as follows:
 
-<pre><code><b>$ module load example/1.2.3 secondexample/2.7-intel-2016b</b>
-</code></pre>
+```
+$ module load example/1.2.3 secondexample/2.7-intel-2016b
+```
 
 This will load the two modules as well as their dependencies (unless
 there are conflicts between both modules).
@@ -166,14 +170,15 @@ Obviously, you need to be able to keep track of the modules that are
 currently loaded. Assuming you have run the `module load` commands
 stated above, you will get the following:
 
-<pre><code><b>$ module list</b>
+```
+$ module list
 Currently Loaded Modulefiles: 
 1) example/1.2.3                                        6) imkl/11.3.3.210-iimpi-2016b 
 2) GCCcore/5.4.0                                        7) intel/2016b 
 3) icc/2016.3.210-GCC-5.4.0-2.26                        8) examplelib/1.2-intel-2016b 
 4) ifort/2016.3.210-GCC-5.4.0-2.26                      9) secondexample/2.7-intel-2016b 
 5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26
-</code></pre>
+```
 
 You can also just use the `ml` command without arguments to list loaded modules.
 
@@ -193,15 +198,16 @@ However, the dependencies of the package are NOT automatically unloaded;
 you will have to unload the packages one by one. When the
 `secondexample` module is unloaded, only the following modules remain:
 
-<pre><code><b>$ module unload secondexample</b>
-<b>$ module list</b>
+```
+$ module unload secondexample
+$ module list
 Currently Loaded Modulefiles: 
 Currently Loaded Modulefiles: 
 1) example/1.2.3                        5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26 
 2) GCCcore/5.4.0                        6) imkl/11.3.3.210-iimpi-2016b 
 3) icc/2016.3.210-GCC-5.4.0-2.26        7) intel/2016b 
 4) ifort/2016.3.210-GCC-5.4.0-2.26      8) examplelib/1.2-intel-2016b
-</code></pre>
+```
 
 To unload the `secondexample` module, you can also use
 `ml -secondexample`.
@@ -217,8 +223,9 @@ loaded will *not* result in an error.
 In order to unload all modules at once, and hence be sure to start in a
 clean state, you can use:
 
-<pre><code><b>$ module purge</b>
-</code></pre>
+```
+$ module purge
+```
 {% if site == gent -%}
 This is always safe: the `cluster` module (the module that specifies
 which cluster jobs will get submitted to) will not be unloaded (because
@@ -244,13 +251,15 @@ Consider the following example: the user decides to use the `example`
 module and at that point in time, just a single version 1.2.3 is
 installed on the cluster. The user loads the module using:
 
-<pre><code><b>$ module load example</b>
-</code></pre>
+```
+$ module load example
+```
 
 rather than
 
-<pre><code><b>$ module load example/1.2.3</b>
-</code></pre>
+```
+$ module load example/1.2.3
+```
 
 Everything works fine, up to the point where a new version of `example`
 is installed, 4.5.6. From then on, the user's `load` command will load
@@ -259,28 +268,23 @@ unexpected problems. See for example [the following section on Module Conflicts]
 
 Consider the following `example` modules:
 
-<pre><code><b>$ module avail example/</b>
+```
+$ module avail example/
 example/1.2.3 
 example/4.5.6
-</code></pre>
+```
 
 Let's now generate a version conflict with the `example` module, and see
 what happens.
 
 
-<pre><code><b>$ module av example/</b>
+```
+$ module av example/
 example/1.2.3       example/4.5.6
-<b>$ module load example/1.2.3  example/4.5.6</b>
+$ module load example/1.2.3  example/4.5.6
 Lmod has detected the following error: A different version of the 'example' module is already loaded (see output of 'ml').
-<b>$ module swap example/4.5.6</b>
-</code></pre>
-
-<!-- ::: prompt
-example/1.2.3 example/4.5.6 example/4.5.6(12):ERROR:150: Module
-'example/4.5.6' conflicts with the currently loaded module(s)
-'example/1.2.3' example/4.5.6(12):ERROR:102: Tcl command execution
-failed: conflict example
-::: -->
+$ module swap example/4.5.6
+```
 
 Note: A `module swap` command combines the appropriate `module unload`
 and `module load` commands.
@@ -289,7 +293,8 @@ and `module load` commands.
 
 With the `module spider` command, you can search for modules:
 
-<pre><code><b>$ module spider example</b>
+```
+$ module spider example
 --------------------------------------------------------------------------------
   example:
 --------------------------------------------------------------------------------
@@ -305,11 +310,12 @@ With the `module spider` command, you can search for modules:
 
     module spider example/1.2.3
 --------------------------------------------------------------------------------
-</code></pre>
+```
 
 It's also possible to get detailed information about a specific module:
 
-<pre><code><b>$ module spider example/1.2.3</b>
+```
+$ module spider example/1.2.3
 ------------------------------------------------------------------------------------------
   example: example/1.2.3
 ------------------------------------------------------------------------------------------
@@ -337,21 +343,23 @@ It's also possible to get detailed information about a specific module:
         More information 
         ================ 
          - Homepage: https://example.com
-</code></pre>
+```
 
 ### Get detailed info
 
 To get a list of all possible commands, type:
 
-<pre><code><b>$ module help</b>
-</code></pre>
+```
+$ module help
+```
 
 Or to get more information about one specific module package:
 
-<pre><code><b>$ module help example/1.2.3</b>
+```
+$ module help example/1.2.3
 ----------- Module Specific Help for 'example/1.2.3' --------------------------- 
   This is just an example - Homepage: https://example.com/
-</code></pre>
+```
 
 ### Save and load collections of modules
 
@@ -364,52 +372,59 @@ In each `module` command shown below, you can replace `module` with
 
 First, load all modules you want to include in the collections:
 
-<pre><code><b>$ module load example/1.2.3 secondexample/2.7-intel-2016b</b>
-</code></pre>
+```
+$ module load example/1.2.3 secondexample/2.7-intel-2016b
+```
 
 Now store it in a collection using `module save`. In this example, the
 collection is named `my-collection`.
 
-<pre><code><b>$ module save my-collection</b>
-</code></pre>
+```
+$ module save my-collection
+```
 
 Later, for example in a jobscript or a new session, you can load all
 these modules with `module restore`:
 
-<pre><code><b>$ module restore my-collection</b>
-</code></pre>
+```
+$ module restore my-collection
+```
 
 You can get a list of all your saved collections with the
 `module savelist` command:
 
-<pre><code><b>$ module savelistr</b>
+```
+$ module savelistr
 Named collection list (For LMOD_SYSTEM_NAME = "CO7-sandybridge"):
   1) my-collection
-</code></pre>
+```
 
 To get a list of all modules a collection will load, you can use the
 `module describe` command:
 
-<pre><code><b>$ module describe my-collection</b>
+```
+$ module describe my-collection
 1) example/1.2.3                                        6) imkl/11.3.3.210-iimpi-2016b 
 2) GCCcore/5.4.0                                        7) intel/2016b 
 3) icc/2016.3.210-GCC-5.4.0-2.26                        8) examplelib/1.2-intel-2016b 
 4) ifort/2016.3.210-GCC-5.4.0-2.26                      9) secondexample/2.7-intel-2016b 
 5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26
-</code></pre>
+```
 
 To remove a collection, remove the corresponding file in
 `$HOME/.lmod.d`:
 
-<pre><code><b>$ rm $HOME/.lmod.d/my-collection</b>
-</code></pre>
+```
+$ rm $HOME/.lmod.d/my-collection
+```
 
 ### Getting module details
 
 To see how a module would change the environment, you can use the
 `module show` command:
 
-<pre><code><b>$ module show Python/2.7.12-intel-2016b</b>
+```
+$ module show Python/2.7.12-intel-2016b
 whatis("Description: Python is a programming language that lets youwork more quickly and integrate your systems more effectively. - Homepage: http://python.org/ ") 
 conflict("Python")
 load("intel/2016b") 
@@ -417,7 +432,7 @@ load("bzip2/1.0.6-intel-2016b")
 ...
 prepend_path(...)
 setenv("EBEXTSLISTPYTHON","setuptools-23.1.0,pip-8.1.2,nose-1.3.7,numpy-1.11.1,scipy-0.17.1,ytz-2016.4", ...)
-</code></pre>
+```
 
 It's also possible to use the `ml show` command instead: they are
 equivalent.
@@ -428,20 +443,6 @@ bunch of extensions: `numpy`, `scipy`, ...
 You can also see the modules the `Python/2.7.12-intel-2016b` module
 loads: `intel/2016b`, `bzip2/1.0.6-intel-2016b`, ...
 
-<!-- ::: prompt
-module-whatis Description: Python is a programming language that lets
-you work more quickly and integrate your systems more effectively. -
-Homepage: http://python.org/ conflict Python module load foss/2014a
-module load bzip2/1.0.6-foss-2014a \... prepend-path \... \... setenv
-EBVERSIONPYTHON 3.2.5 setenv EBEXTSLISTPYTHON
-distribute-0.6.26,pip-1.1,nose-1.1.2,numpy-1.6.1,scipy-0.10.1
-::: -->
-
-<!-- Here you can see that the `Python/3.2.5-foss-2014a` comes with a whole
-bunch of extensions: `numpy`, `scipy`, ...
-
-You can also see the modules the `Python/3.2.5-foss-2014a` module loads:
-`foss/2014a`, `bzip2/1.0.6-foss-2014a`, ...  -->
 If you're not sure what all of this means: don't worry, you don't have to know; just load the module and try to use the software.
 
 ## Getting system information about the HPC infrastructure
@@ -455,7 +456,8 @@ information about scheduled downtime, status of the system, ...
 To check how much jobs are running in what queues, you can use the
 `qstat -q` command:
 
-<pre><code><b>$ qstat -q</b>
+```
+$ qstat -q
 Queue            Memory CPU Time Walltime Node  Run Que Lm  State
 ---------------- ------ -------- -------- ----  --- --- --  -----
 default            --      --       --      --    0   0 --   E R
@@ -466,7 +468,7 @@ q1h                --      --    01:00:00   --    0   1 --   E R
 q24h               --      --    24:00:00   --    0   0 --   E R
                                                ----- -----
                                                 337  82
-</code></pre>
+```
 
 Here, there are 316 jobs running on the `long` queue, and 77 jobs
 queued. We can also see that the `long` queue allows a maximum wall time
@@ -482,8 +484,9 @@ filled with jobs, completely filled with jobs, ....
 You can also get this information in text form (per cluster separately)
 with the `pbsmon` command:
 
-<pre><code><b>$ module swap cluster/donphan</b>
-<b>$ pbsmon</b>
+```
+$ module swap cluster/donphan
+$ pbsmon
  4001 4002 4003 4004 4005 4006 4007
     _    j    j    j    _    _    .
 
@@ -501,7 +504,7 @@ with the `pbsmon` command:
 
 Node type:
  ppn=36, mem=751GB
-</code></pre>
+```
 
 `pbsmon` only outputs details of the cluster corresponding to the
 currently loaded `cluster` module see [the section on Specifying the cluster on which to run](./#specifying-the-cluster-on-which-to-run).
@@ -526,14 +529,16 @@ to your home directory, so that you have your **own personal** copy (editable an
 over-writable) and that you can start using the examples. If you haven't
 done so already, run these commands now:
 
-<pre><code><b>$ cd</b>
-<b>$ cp -r {{ examplesdir }} ~/</b>
-</code></pre>
+```
+$ cd
+$ cp -r {{ examplesdir }} ~/
+```
 
 First go to the directory with the first examples by entering the
 command:
-<pre><code><b>$ cd ~/examples/Running-batch-jobs</b>
-</code></pre>
+```
+$ cd ~/examples/Running-batch-jobs
+```
 
 Each time you want to execute a program on the {{ hpc }} you'll need 2 things:
 
@@ -564,11 +569,12 @@ provided for you in the examples subdirectories.
 
 List and check the contents with:
 
-<pre><code><b>$ ls -l</b>
+```
+$ ls -l
 total 512
 -rw-r--r-- 1 {{ userid }} 193 Sep 11 10:34 fibo.pbs
 -rw-r--r-- 1 {{ userid }} 609 Sep 11 10:25 fibo.pl
-</code></pre>
+```
 
 In this directory you find a Perl script (named "fibo.pl") and a job
 script (named "fibo.pbs").
@@ -584,7 +590,8 @@ login-node), so that you can see what the program does.
 
 On the command line, you would run this using:
 
-<pre><code><b>$ ./fibo.pl</b>
+```
+$ ./fibo.pl
 [0] -> 0
 [1] -> 1
 [2] -> 1
@@ -615,9 +622,9 @@ On the command line, you would run this using:
 [27] -> 196418
 [28] -> 317811
 [29] -> 514229
-</code></pre>
+```
 
-<u>Remark</u>: Recall that you have now executed the Perl script locally on one of
+Remark: Recall that you have now executed the Perl script locally on one of
 the login-nodes of the {{ hpc }} cluster. Of course, this is not our final
 intention; we want to run the script on any of the compute nodes. Also,
 it is not considered as good practice, if you "abuse" the login-nodes
@@ -630,9 +637,7 @@ since these jobs require very little computing power.
 The job script contains a description of the job by specifying the
 command that need to be executed on the compute node:
 
-<center>-- fibo.pbs --</center>
-
-```bash
+```bash title="fibo.pbs"
 {% include "./examples/Running_batch_jobs/fibo.pbs" %}
 ```
 
@@ -644,15 +649,16 @@ specified on the command line.
 This job script can now be submitted to the cluster's job system
 for execution, using the qsub (Queue SUBmit) command:
 
-<pre><code><b>$ qsub fibo.pbs</b>
+```
+$ qsub fibo.pbs
 {{ jobid }}
-</code></pre>
+```
 
 The qsub command returns a job identifier on the HPC cluster. The
 important part is the number (e.g., "{{ jobid }} "); this is a unique identifier for
 the job and can be used to monitor and manage your job.
 
-<u>Remark</u>: the modules that were loaded when you submitted the job will *not* be
+Remark: the modules that were loaded when you submitted the job will *not* be
 loaded when the job is started. You should always specify the
 `module load` statements that are required for your job in the job
 script itself.
@@ -669,19 +675,21 @@ monitor jobs in the queue.
 After your job was started, and ended, check the contents of the
 directory:
 
-<pre><code><b>$ ls -l</b>
+```
+$ ls -l
 total 768
 -rw-r--r-- 1 {{ userid }} {{ userid }}   44 Feb 28 13:33 fibo.pbs
 -rw------- 1 {{ userid }} {{ userid }}    0 Feb 28 13:33 fibo.pbs.e{{ jobid }}
 -rw------- 1 {{ userid }} {{ userid }} 1010 Feb 28 13:33 fibo.pbs.o{{ jobid }}
 -rwxrwxr-x 1 {{ userid }} {{ userid }}  302 Feb 28 13:32 fibo.pl
-</code></pre>
+```
 
 Explore the contents of the 2 new files:
 
-<pre><code><b>$ more fibo.pbs.o{{ jobid }}</b>
-<b>$ more fibo.pbs.e{{ jobid }}</b>
-</code></pre>
+```
+$ more fibo.pbs.o{{ jobid }}
+$ more fibo.pbs.e{{ jobid }}
+```
 
 These files are used to store the standard output and error that would
 otherwise be shown in the terminal window. By default, they have the
@@ -766,8 +774,9 @@ the environment so you get access to all modules installed on the `{{ otherclust
 cluster, and to be able to submit jobs to the `{{ othercluster }}` scheduler so your jobs
 will start on `{{ othercluster }}` instead of the default `{{ defaultcluster }}` cluster.
 
-<pre><code><b>$ module swap cluster/{{ othercluster }}</b>
-</code></pre>
+```
+$ module swap cluster/{{ othercluster }}
+```
 
 Note: the `{{ othercluster }}` modules may not work directly on the login nodes, because the
 login nodes do not have the same architecture as the `{{ othercluster }}` cluster, they have
@@ -778,7 +787,8 @@ this.
 To list the available cluster modules, you can use the
 `module avail cluster/` command:
 
-<pre><code><b>$ module avail cluster/</b>
+```
+$ module avail cluster/
 --------------------------------------- /etc/modulefiles/vsc ----------------------------------------
    cluster/accelgor (S)    cluster/doduo   (S,L)    cluster/gallade (S)    cluster/skitty  (S)
    cluster/default         cluster/donphan (S)      cluster/joltik  (S)
@@ -789,8 +799,8 @@ To list the available cluster modules, you can use the
    D:  Default Module
 
 If you need software that is not listed, 
-request it via <a href="https://www.ugent.be/hpc/en/support/software-installation-request">https://www.ugent.be/hpc/en/support/software-installation-request</a>
-</code></pre>
+request it via https://www.ugent.be/hpc/en/support/software-installation-request
+```
 
 As indicated in the output above, each `cluster` module is a so-called
 sticky module, i.e., it will not be unloaded when `module purge` (see [the section on purging modules](./#purging-all-modules))
@@ -841,8 +851,9 @@ Using the job ID that `qsub` returned, there are various ways to monitor
 the status of your job. In the following commands, replace `12345` with
 the job ID `qsub` returned.
 
-<pre><code><b>$ qstat 12345</b>
-</code></pre>
+```
+$ qstat 12345
+```
 
 {% if site != (gent or brussel) %}
 To show an estimated start time for your job (note that this may be very
@@ -867,25 +878,28 @@ error messages that may prevent your job from starting:
 To show on which compute nodes your job is running, at least, when it is
 running:
 
-<pre><code><b>$ qstat -n 12345</b>
-</code></pre>
+```
+$ qstat -n 12345
+```
 
 To remove a job from the queue so that it will not run, or to stop a job
 that is already running.
 
-<pre><code><b>$ qdel 12345</b>
-</code></pre>
+```
+$ qdel 12345
+```
 
 When you have submitted several jobs (or you just forgot about the job
 ID), you can retrieve the status of all your jobs that are submitted and
 are not yet finished using:
 
-<pre><code><b>$ qstat</b>
+```
+$ qstat
 :
 Job ID      Name    User      Time Use S Queue
 ----------- ------- --------- -------- - -----
 {{ jobid }} ....     mpi  {{ userid }}     0    Q short
-</code></pre>
+```
 
 Here:
 
@@ -1068,8 +1082,9 @@ properly.
 The **qsub** command takes several options to specify the requirements, of which
 we list the most commonly used ones below.
 
-<pre><code><b>$ qsub -l walltime=2:30:00</b>
-</code></pre>
+```
+$ qsub -l walltime=2:30:00
+```
 
 For the simplest cases, only the amount of maximum estimated execution
 time (called "walltime") is really important. Here, the job requests 2
@@ -1088,8 +1103,9 @@ before the walltime kills your main process, you have to kill the main
 command yourself before the walltime runs out and then copy the file
 back. See [the section on Running a command with a maximum time limit](../jobscript_examples/#running-a-command-with-a-maximum-time-limit) for how to do this.
 
-<pre><code><b>$ qsub -l mem=4gb</b>
-</code></pre>
+```
+$ qsub -l mem=4gb
+```
 
 The job requests 4 GB of RAM memory. As soon as the job tries to use
 more memory, it will be "killed" (terminated) by the job scheduler.
@@ -1106,15 +1122,17 @@ per node" and "number of cores in a node" please consult
 <https://www.ugent.be/hpc/en/infrastructure>.
 {% endif %}
 
-<pre><code><b>$ qsub -l nodes=5:ppn=2</b>
-</code></pre>
+```
+$ qsub -l nodes=5:ppn=2
+```
 
 The job requests 5 compute nodes with two cores on each node (ppn stands
 for "processors per node", where "processors" here actually means
 "CPU cores").
 
-<pre><code><b>$ qsub -l nodes=1:westmere</b>
-</code></pre>
+```
+$ qsub -l nodes=1:westmere
+```
 
 The job requests just one node, but it should have an Intel Westmere
 processor. A list with site-specific properties can be found in the next
@@ -1123,8 +1141,9 @@ website.
 
 These options can either be specified on the command line, e.g.
 
-<pre><code><b>$ qsub -l nodes=1:ppn,mem=2gb fibo.pbs</b>
-</code></pre>
+```
+$ qsub -l nodes=1:ppn,mem=2gb fibo.pbs
+```
 
 or in the job script itself using the #PBS-directive, so "fibo.pbs"
 could be modified to:
@@ -1193,13 +1212,14 @@ located by default in the directory where you issued the *qsub* command.
 When you navigate to that directory and list its contents, you should
 see them:
 
-<pre><code><b>$ ls -l</b>
+```
+$ ls -l
 total 1024
 -rw-r--r-- 1 {{ userid }}  609 Sep 11 10:54 fibo.pl
 -rw-r--r-- 1 {{ userid }}   68 Sep 11 10:53 fibo.pbs
 -rw------- 1 {{ userid }}   52 Sep 11 11:03 fibo.pbs.e{{ jobid }}
 -rw------- 1 {{ userid }} 1307 Sep 11 11:03 fibo.pbs.o{{ jobid }}
-</code></pre>
+```
 
 In our case, our job has created both output ('fibo.pbs.') and error
 files ('fibo.pbs.') containing info written to *stdout* and *stderr*
@@ -1207,11 +1227,12 @@ respectively.
 
 Inspect the generated output and error files:
 
-<pre><code><b>$ cat fibo.pbs.o{{ jobid }}</b>
+```
+$ cat fibo.pbs.o{{ jobid }}
 ...
-<b>$ cat fibo.pbs.e{{ jobid }}</b>
+$ cat fibo.pbs.e{{ jobid }}
 ...
-</code></pre>
+```
 
 ## E-mail notifications
 {% if site != gent %} 
@@ -1259,15 +1280,17 @@ or
 These options can also be specified on the command line. Try it and see
 what happens:
 
-<pre><code><b>$ qsub -m abe fibo.pbs</b>
-</code></pre>
+```
+$ qsub -m abe fibo.pbs
+```
 
 The system will use the e-mail address that is connected to your VSC
 account. You can also specify an alternate e-mail address with the `-M`
 option:
 
-<pre><code><b>$ qsub -m b -M john.smith@example.com fibo.pbs</b>
-</code></pre>
+```
+$ qsub -m b -M john.smith@example.com fibo.pbs
+```
 
 will send an e-mail to john.smith@example.com when the job begins.
 
@@ -1279,9 +1302,10 @@ might be a problem as they might both be run at the same time.
 
 So the following example might go wrong:
 
-<pre><code><b>$ qsub job1.sh</b>
-<b>$ qsub job2.sh</b>
-</code></pre>
+```
+$ qsub job1.sh
+$ qsub job2.sh
+```
 
 You can make jobs that depend on other jobs. This can be useful for
 breaking up large jobs into smaller jobs that can be run in a pipeline.
@@ -1289,9 +1313,10 @@ The following example will submit 2 jobs, but the second job (`job2.sh`)
 will be held (`H` status in `qstat`) until the first job successfully
 completes. If the first job fails, the second will be cancelled.
 
-<pre><code><b>$ FIRST_ID=$ (qsub job1.sh)</b>
-<b>$ qsub -W depend=afterok:$FIRST_ID job2.sh</b>
-</code></pre>
+```
+$ FIRST_ID=$ (qsub job1.sh)
+$ qsub -W depend=afterok:$FIRST_ID job2.sh
+```
 
 `afterok` means "After OK", or in other words, after the first job
 successfully completed.
