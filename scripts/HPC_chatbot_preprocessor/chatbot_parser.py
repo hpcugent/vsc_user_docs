@@ -809,17 +809,22 @@ def write_os_specific_file(title, paragraphs_text, paragraphs_metadata, title_or
 
     # check that not all versions are the same
     unique_texts = set(text.values())
-    if len(unique_texts) > 1:
-        for OS in [LINUX, WINDOWS, MACOS]:
-            # define the filepath
-            filepath = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, OS, paragraphs_metadata[title]["directory"])
-            os.makedirs(filepath, exist_ok=True)
-
-            # write the files
-            write_files(title, text[OS], paragraphs_metadata, title_order, title_order_number, filepath, OS)
-    else:
+    if len(unique_texts) == 1:
         paragraphs_text[title] = text[OS]
         write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order, title_order_number)
+    else:
+        for OS in [LINUX, WINDOWS, MACOS]:
+            # check that file actually has some content
+            if len(text[OS]) > 0:
+                # define the filepath
+                filepath = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, OS, paragraphs_metadata[title]["directory"])
+                os.makedirs(filepath, exist_ok=True)
+
+                # write the files
+                write_files(title, text[OS], paragraphs_metadata, title_order, title_order_number, filepath, OS)
+            else:
+                # don't write empty files
+                pass
 
 
 def write_files(title, text, paragraphs_metadata, title_order, title_order_number, filepath, OS):
