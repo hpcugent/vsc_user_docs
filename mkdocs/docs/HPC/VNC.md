@@ -15,21 +15,22 @@ infrastructure from your own computer.
 
 First login on the login node (see [First time connection to the HPC infrastructure](../connecting/#first-time-connection-to-the-hpc-infrastructure), then start `vncserver` with:
 
-<pre><code>$ <b>vncserver -geometry 1920x1080 -localhost</b>
+```
+$ vncserver -geometry 1920x1080 -localhost
 You will require a password to access your desktops.
 
-Password:<b>&lt;enter a secure password&gt;</b>
-Verify:<b>&lt;enter the same password&gt;</b>
-Would you like to enter a view-only password (y/n)? <b>n</b>
+Password: <enter a secure password>
+Verify: <enter the same password>
+Would you like to enter a view-only password (y/n)? n
 A view-only password is not used
 
-New '<b>{{loginhost}}:6</b> ({{userid}})' desktop is {{loginhost}}:6
+New '{{loginhost}}:6 ({{userid}})' desktop is {{loginhost}}:6
 
 Creating default startup script {{homedir}}.vnc/xstartup
 Creating default config {{homedir}}.vnc/config
 Starting applications specified in {{homedir}}.vnc/xstartup
 Log file is {{homedir}}.vnc/{{loginhost}}:6.log
-</code></pre>
+```
 
 **When prompted for a password, make sure to enter a secure password: if someone can guess your password, they will be able to do anything with your account you can!**
 
@@ -46,12 +47,13 @@ each time you want to connect.
 
 You can get a list of running VNC servers on a node with
 
-<pre><code>$ <b>vncserver -list</b>
+```
+$ vncserver -list
 TigerVNC server sessions:
 
 X DISPLAY #	PROCESS ID
 :6		    30713
-</code></pre>
+```
 
 This only displays the running VNC servers on **the login node you run the command on**.
 
@@ -59,11 +61,12 @@ To see what login nodes you are running a VNC server on, you can run the
 `ls .vnc/*.pid` command in your home directory: the files shown have the
 hostname of the login node in the filename:
 
-<pre><code>$ <b>cd $HOME</b>
-$ <b>ls .vnc/*.pid</b>
+```
+$ cd $HOME
+$ ls .vnc/*.pid
 .vnc/{{loginhost}}:6.pid
 .vnc/{{altloginhost}}:8.pid
-</code></pre>
+```
 
 This shows that there is a VNC server running on `{{loginhost}}` on port 5906 and
 another one running `{{altloginhost}}` on port 5908 (see also [Determining the source/destination port](./#determining-the-sourcedestination-port)).
@@ -153,8 +156,9 @@ tunnel, by entering the settings in the and fields in [SSH tunnel](../running_in
 {% else %}
 Execute the following command to set up the SSH tunnel.
 
-<pre><code>$ <b>ssh -L 5906:localhost:12345  {{userid}}@{{loginnode}}</b>
-</code></pre>
+```
+$ ssh -L 5906:localhost:12345  {{userid}}@{{loginnode}}
+```
 
 **Replace the source port `5906`, destination port `12345` and user ID {{userid}} with your own!**
 
@@ -172,9 +176,10 @@ you have picked is actually still available (see [Picking an intermediate port t
 
 You can check using the following command (**do not forget to replace `12345` the value you picked for your intermediate port):
 
-<pre><code>$ <b>netstat -an | grep -i listen | grep tcp | grep 12345</b>
+```
+$ netstat -an | grep -i listen | grep tcp | grep 12345
 $
-</code></pre>
+```
 
 If you see no matching lines, then the port you picked is still
 available, and you can continue.
@@ -182,11 +187,12 @@ available, and you can continue.
 If you see one or more matching lines as shown below,
 **you must disconnect the first SSH tunnel, pick a different intermediate port, and set up the first SSH tunnel again using the new value**.
 
-<pre><code>$ <b>netstat -an | grep -i listen | grep tcp | grep 12345</b>
+```
+$ netstat -an | grep -i listen | grep tcp | grep 12345
 tcp        0      0 0.0.0.0:12345           0.0.0.0:*               LISTEN
 tcp6       0      0 :::12345                :::*                    LISTEN
 $
-</code></pre>
+```
 
 #### Setting up the second SSH tunnel to the correct login node
 
@@ -197,10 +203,11 @@ running (`{{loginhost}}` in our running example, see [Starting a VNC server](./#
 
 To do this, run the following command:
 
-<pre><code>$ <b>ssh -L 12345:localhost:5906 {{loginhost}}</b>
-$ <b>hostname</b>
+```
+$ ssh -L 12345:localhost:5906 {{loginhost}}
+$ hostname
 {{loginhost}}
-</code></pre>
+```
 
 With this, we are forwarding port `12345` on the login node we are
 connected to (which is referred to as `localhost`) through to port
@@ -251,18 +258,20 @@ When prompted for default or empty panel, choose default.
 If you have an empty panel, you can reset your settings with the
 following commands:
 
-<pre><code>$ <b>xfce4-panel --quit ; pkill xfconfd</b>
-$ <b>mkdir ~/.oldxfcesettings</b>
-$ <b>mv ~/.config/xfce4 ~/.oldxfcesettings</b>
-$ <b>xfce4-panel</b>
-</code></pre>
+```
+$ xfce4-panel --quit ; pkill xfconfd
+$ mkdir ~/.oldxfcesettings
+$ mv ~/.config/xfce4 ~/.oldxfcesettings
+$ xfce4-panel
+```
 
 ## Stopping the VNC server 
 
 The VNC server can be killed by running
 
-<pre><code>vncserver -kill :6
-</code></pre>
+```
+vncserver -kill :6
+```
 
 where `6` is the port number we noted down earlier. If you forgot, you
 can get it with `vncserver -list` (see [List running VNC servers](./#list-running-vnc-servers)).
