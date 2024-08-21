@@ -49,8 +49,11 @@ This chapter shows you how to measure:
 5.  Network bottlenecks
 
 First, we allocate a compute node and move to our relevant directory:
-<pre><code>$ <b>qsub -I</b>
-$ <b>cd ~/examples/Fine-tuning-Job-Specifications</b></code></pre>
+
+```
+$ qsub -I
+$ cd ~/examples/Fine-tuning-Job-Specifications
+```
 
 ## Specifying Walltime
 [//]: # (sec:specifying-walltime-requirements)
@@ -67,10 +70,13 @@ execute your executable to the standard error stream. The calculated
 times are reported in seconds.
 
 Test the time command:
-<pre><code>$ <b>time sleep 75</b>
+
+```
+$ time sleep 75
 real 1m15.005s
 user 0m0.001s
-sys 0m0.002s</code></pre>
+sys 0m0.002s
+```
 
 It is a good practice to correctly estimate and specify the run time
 (duration) of an application. Of course, a margin of 10% to 20% can be
@@ -82,10 +88,15 @@ should be appropriate in case your application will run on the "slowest"
 (oldest) compute nodes.
 
 The walltime can be specified in a job scripts as:
-<pre><code>#PBS -l walltime=3:00:00:00</code></pre>
+
+```
+#PBS -l walltime=3:00:00:00
+```
 
 or on the command line
-<pre><code>$ <b>qsub -l walltime=3:00:00:00</b></code></pre>
+```
+$ qsub -l walltime=3:00:00:00
+```
 
 It is recommended to always specify the walltime for a job.
 
@@ -106,9 +117,12 @@ parameter, the amount of gigabytes of memory which needs to be
 allocated.
 
 First compile the program on your machine and then test it for 1 GB:
-<pre><code>$ <b>gcc -o eat_mem eat_mem.c</b>
-$ <b>./eat_mem 1</b>
-Consuming 1 gigabyte of memory.</code></pre>
+
+```
+$ gcc -o eat_mem eat_mem.c
+$ ./eat_mem 1
+Consuming 1 gigabyte of memory.
+```
 {% endif %}
 
 ### Available Memory on the machine
@@ -118,12 +132,15 @@ computer. The "*free*" command displays the total amount of free and
 used physical and swap memory in the system, as well as the buffers used
 by the kernel. We also use the options "-m" to see the results expressed
 in Mega-Bytes and the "-t" option to get totals.
-<pre><code>$ <b>free -m -t</b>
+
+```
+$ free -m -t
                 total   used   free  shared  buffers  cached
 Mem:            16049   4772  11277       0      107     161
 -/+ buffers/cache:      4503  11546
 Swap:           16002   4185  11816
-Total:          32052   8957  23094</code></pre>
+Total:          32052   8957  23094
+```
 
 Important is to note the total amount of memory available in the machine
 (i.e., 16 GB in this example) and the amount of used and free memory
@@ -146,14 +163,18 @@ release.
 
 To start using monitor, first load the appropriate module. Then we study
 the "eat_mem.c" program and compile it:
-<pre><code>$ <b>module load monitor</b>
-$ <b>cat eat_mem.c</b>
-$ <b>gcc -o eat_mem eat_mem.c</b>
-</code></pre>
+
+```
+$ module load monitor
+$ cat eat_mem.c
+$ gcc -o eat_mem eat_mem.c
+```
 
 Starting a program to monitor is very straightforward; you just add the
 "monitor" command before the regular command line.
-<pre><code>$ <b>monitor ./eat_mem 3</b>
+
+```
+$ monitor ./eat_mem 3
 time (s) size (kb) %mem %cpu
 Consuming 3 gigabyte of memory.
 5  252900 1.4 0.6
@@ -172,7 +193,7 @@ Consuming 3 gigabyte of memory.
 70  3167280 19.2 0.2
 75  9264  0 0.5
 80  9264  0 0.4
-</code></pre>
+```
 
 Whereby:
 
@@ -198,24 +219,33 @@ This is the rate at which monitor samples the program's metrics. Since
 monitor's output may interfere with that of the program to monitor, it
 is often convenient to use a&nbsp;log file. The latter can be specified as
 follows:
-<pre><code>$ <b>monitor -l test1.log eat_mem 2</b>
+
+```
+$ monitor -l test1.log eat_mem 2
 Consuming 2 gigabyte of memory.
-$ <b>cat test1.log</b></code></pre>
+$ cat test1.log
+```
 
 For long-running programs, it may be convenient to limit the output to,
 e.g., the last minute of the programs' execution. Since monitor provides
 metrics every 5 seconds, this implies we want to limit the output to the
 last 12 values to cover a minute:
-<pre><code>$ <b>monitor -l test2.log -n 12 eat_mem 4</b>
-Consuming 4 gigabyte of memory.</code></pre>
+
+```
+$ monitor -l test2.log -n 12 eat_mem 4
+Consuming 4 gigabyte of memory.
+```
 
 Note that this option is only available when monitor writes its metrics
 to a&nbsp;log file, not when standard error is used.
 
 The interval at&nbsp;which monitor will show the metrics can be modified by
 specifying delta, the sample rate:
-<pre><code>$ <b>monitor -d 1 ./eat_mem</b>
-Consuming 3 gigabyte of memory.</code></pre>
+
+```
+$ monitor -d 1 ./eat_mem
+Consuming 3 gigabyte of memory.
+```
 
 Monitor will now print the program's metrics every second. Note that the&nbsp;minimum delta value is 1&nbsp;second.
 {% endif %}
@@ -239,8 +269,10 @@ htop
     the machine and allows to scroll the list vertically and
     horizontally to see all processes and their full command lines.
 
-<pre><code>$ <b>top</b>
-$ <b>htop</b></code></pre>
+```
+$ top
+$ htop
+```
 
 ### Setting the memory parameter {: #pbs_mem }
 
@@ -252,19 +284,25 @@ a margin of about 10%.
 The maximum amount of physical memory used by the job per node can be
 specified in a job script as:
 {% else %}
-<u>Sequential or single-node applications:</u>
+Sequential or single-node applications:
 
 The maximum amount of physical memory used by the job can be specified in a job script as:
 {% endif %}
-<pre><code>#PBS -l mem=4gb</code></pre>
+
+```
+#PBS -l mem=4gb
+```
 
 or on the command line
-<pre><code>$ <b>qsub -l mem=4gb</b></code></pre>
+
+```
+$ qsub -l mem=4gb
+```
 
 {% if site!=gent %}
 This setting is ignored if the number of nodes is not&nbsp;1.
 
-<u>Parallel or multi-node applications:</u>
+Parallel or multi-node applications:
 
 When you are running a parallel application over multiple cores, you can
 also specify the memory requirements per processor (pmem). This
@@ -273,10 +311,16 @@ process in the job.
 
 For example, if the job would run four processes and each would use up
 to 2 GB (gigabytes) of memory, then the memory directive would read:
-<pre><code>#PBS -l pmem=2gb</code></pre>
+
+```
+#PBS -l pmem=2gb
+```
 
 or on the command line
-<pre><code>$ <b>qsub -l pmem=2gb</b></code></pre>
+
+```
+$ qsub -l pmem=2gb
+```
 
 (and of course this would need to be combined with a CPU cores directive
 such as nodes=1:ppn=4). In this example, you request 8&nbsp;GB of memory in
@@ -306,7 +350,9 @@ The */proc/cpuinfo* stores info about your CPU architecture like number
 of CPUs, threads, cores, information about CPU caches, CPU family, model
 and much more. So, if you want to detect how many cores are available on
 a specific machine:
-<pre><code>$ <b>less /proc/cpuinfo</b>
+
+```
+$ less /proc/cpuinfo
 processor       : 0
 vendor_id       : GenuineIntel
 cpu family      : 6
@@ -315,10 +361,13 @@ model name      : Intel(R) Xeon(R) CPU  E5420  @ 2.50GHz
 stepping        : 10
 cpu MHz         : 2500.088
 cache size      : 6144 KB
-...</code></pre>
+...
+```
 
 Or if you want to see it in a more readable format, execute:
-<pre><code>$ <b>grep processor /proc/cpuinfo</b>
+
+```
+$ grep processor /proc/cpuinfo
 processor : 0
 processor : 1
 processor : 2
@@ -326,7 +375,8 @@ processor : 3
 processor : 4
 processor : 5
 processor : 6
-processor : 7</code></pre>
+processor : 7
+```
 
 !!! note
     Unless you want information of the login nodes, you'll have to issue
@@ -335,10 +385,16 @@ processor : 7</code></pre>
 
 In order to specify the number of nodes and the number of processors per
 node in your job script, use:
-<pre><code>#PBS -l nodes=N:ppn=M</code></pre>
+
+```
+#PBS -l nodes=N:ppn=M
+```
 
 or with equivalent parameters on the command line
-<pre><code>$ <b>qsub -l nodes=N:ppn=M</b></code></pre>
+
+```
+$ qsub -l nodes=N:ppn=M
+```
 
 This specifies the number of nodes (nodes=N) and the number of
 processors per node (ppn=M) that the job should use. PBS treats a
@@ -347,11 +403,15 @@ node can have ppn=8 as its maximum ppn request.
 {% if site !=antwerpen %}
 You can also use this statement in your job script:
 
-<pre><code>#PBS -l nodes=N:ppn=all</code></pre>
+```
+#PBS -l nodes=N:ppn=all
+```
 
 to request all cores of a node, or
 
-<pre><code>#PBS -l nodes=N:ppn=half</code></pre>
+```
+#PBS -l nodes=N:ppn=half
+```
 
 to request half of them.
 {% endif %}
@@ -369,12 +429,17 @@ The previously used "monitor" tool also shows the overall CPU-load. The
 
 We first load the monitor modules, study the "eat_cpu.c" program and
 compile it:
-<pre><code>$ <b>module load monitor</b>
-$ <b>cat eat_cpu.c</b>
-$ <b>gcc -o eat_cpu eat_cpu.c</b></code></pre>
+
+```
+$ module load monitor
+$ cat eat_cpu.c
+$ gcc -o eat_cpu eat_cpu.c
+```
 
 And then start to monitor the *eat_cpu* program:
-<pre><code>$ <b>monitor -d 1 ./eat_cpu</b>
+
+```
+$ monitor -d 1 ./eat_cpu
 time  (s) size (kb) %mem %cpu
 1  52852  0.3 100
 2  52852  0.3 100
@@ -383,7 +448,8 @@ time  (s) size (kb) %mem %cpu
 5  52852  0.3  99
 6  52852  0.3 100
 7  52852  0.3 100
-8  52852  0.3 100</code></pre>
+8  52852  0.3 100
+```
 
 We notice that it the program keeps its CPU nicely busy at 100%.
 
@@ -399,7 +465,11 @@ programs of this type are running on a computer with n cores, the CPU
 usage can go up to \(\text{n} \times 100\%\).
 {% endif %}
 This could also be monitored with the _**htop**_ command:
-<pre><code>$ <b>htop</b></code></pre>
+
+```
+$ htop
+```
+
 ```
 {% include "examples/Fine-tuning-Job-Specifications/htop-output" %}
 ```
@@ -512,19 +582,23 @@ conventionally appears in the form of three numbers, which represent the
 system load during the last **one**-, **five**-, and **fifteen**-minute periods.
 
 The **uptime** command will show us the average load
-<pre><code>$ <b>uptime</b>
+
+```
+$ uptime
 10:14:05 up 86 days, 12:01, 11 users, load average: 0.60, 0.41, 0.41
-</code></pre>
+```
 
 Now, compile and start a few instances of the "*eat_cpu*" program in the background,
 and check the effect on the load again:
-<pre><code>$ <b>gcc -O2 eat_cpu.c -o eat_cpu</b>
-$ <b>./eat_cpu&</b>
-$ <b>./eat_cpu&</b>
-$ <b>./eat_cpu&</b>
-$ <b>uptime</b>
+
+```
+$ gcc -O2 eat_cpu.c -o eat_cpu
+$ ./eat_cpu&
+$ ./eat_cpu&
+$ ./eat_cpu&
+$ uptime
 10:14:42 up 86 days, 12:02, 11 users, load average: 2.60, 0.93, 0.58
-</code></pre>
+```
 You can also read it in the **htop** command.
 
 ### Fine-tuning your executable and/or job script
@@ -565,14 +639,18 @@ by the *$VSC_SCRATCH_NODE* environment variable.
 {% if site != gent %}
 We first load the monitor modules, study the "eat_disk.c" program and
 compile it:
-<pre><code>$ <b>module load monitor</b>
-$ <b>cat eat_disk.c</b>
-$ <b>gcc -o eat_disk eat_disk.c</b>
-</code></pre>
+
+```
+$ module load monitor
+$ cat eat_disk.c
+$ gcc -o eat_disk eat_disk.c
+```
 
 The *monitor* tool provides an option (-f) to display the size of one or
 more files:
-<pre><code>$ <b>monitor -f $VSC_SCRATCH/test.txt ./eat_disk</b>
+
+```
+$ monitor -f $VSC_SCRATCH/test.txt ./eat_disk
 time (s) size (kb) %mem %cpu
 5  1276  0 38.6 168820736
 10  1276  0 24.8 238026752
@@ -581,7 +659,7 @@ time (s) size (kb) %mem %cpu
 25  1276  0 26.9 614465536
 30  1276  0 27.7 760217600
 ...
-</code></pre>
+```
 
 Here, the size of the file "*test.txt*" in directory $VSC_SCRATCH will
 be monitored. Files can be specified by absolute as well as relative
@@ -623,11 +701,17 @@ specialised high bandwidth, low latency network that enables large
 parallel jobs to run as efficiently as possible.
 
 The parameter to add in your job script would be:
-<pre><code>#PBS -l ib</code></pre>
+
+```
+#PBS -l ib
+```
 
 If for some other reasons, a user is fine with the gigabit Ethernet
 network, he can specify:
-<pre><code>#PBS -l gbe</code></pre>
+
+```
+#PBS -l gbe
+```
 
 {% if site!=gent %}
 ## Some more tips on the Monitor tool
@@ -637,7 +721,10 @@ network, he can specify:
 Many programs, e.g., MATLAB, take command line options. To make sure
 these do not interfere with those of monitor and vice versa, the program
 can for instance be started in the following way:
-<pre><code>$ <b>monitor -delta 60 -- matlab -nojvm -nodisplay computation.m</b></code></pre>
+
+```
+$ monitor -delta 60 -- matlab -nojvm -nodisplay computation.m
+```
 
 The use of `--` will ensure that monitor does not get confused by
 MATLAB's `-nojvm` and `-nodisplay` options.
@@ -660,7 +747,10 @@ value.
 It is also possible to "attach" monitor to a program or process that is
 already running. One simply determines the relevant process ID using the
 ps command, e.g., 18749, and starts monitor:
-<pre><code>$ <b>monitor -p 18749</b></code></pre>
+
+```
+$ monitor -p 18749
+```
 
 Note that this feature can be (ab)used to monitor specific sub-processes.
 {% endif %}
