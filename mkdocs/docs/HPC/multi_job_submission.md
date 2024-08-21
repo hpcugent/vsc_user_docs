@@ -455,6 +455,20 @@ specified:
 #                           command
 </code></pre>
 
+## Troubleshooting
+
+### Error: An ORTE daemon has unexpectedly failed after launch and before communicating back to mpirun
+
+When submitting a Worker job, you might encounter the following error: 
+`An ORTE daemon has unexpectedly failed after launch and before communicating back to mpirun`.
+This error can occur when the foss toolchain version of worker is loaded. Instead, try loading an iimpi toolchain version of worker.
+
+to check for the available versions of worker, use the following command:
+
+```bash
+$ module avail worker
+```
+
 
 [^1]: MapReduce: 'Map' refers to the map pattern in which every item in
     a collection is mapped onto a new value by applying a given

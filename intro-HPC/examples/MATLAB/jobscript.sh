@@ -3,11 +3,10 @@
 #PBS -l walltime=1:0:0
 #
 # Example (single-core) MATLAB job script
-# see http://hpcugent.github.io/vsc_user_docs/
 #
 
 # make sure the MATLAB version matches with the one used to compile the MATLAB program!
-module load MATLAB/2018a
+module load MATLAB/2022b-r5
 
 # use temporary directory (not $HOME) for (mostly useless) MATLAB log files
 # subdir in $TMPDIR (if defined, or /tmp otherwise)

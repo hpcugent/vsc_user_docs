@@ -96,9 +96,9 @@ export ALPHAFOLD_DATA_DIR={{directory}}/{{version}}
 
 ### Running AlphaFold
 
-AlphaFold provides run script called [run_alphafold.py](https://raw.githubusercontent.com/deepmind/alphafold/main/run_alphafold.py)
+AlphaFold provides a script called [run_alphafold.py](https://raw.githubusercontent.com/deepmind/alphafold/main/run_alphafold.py)
 
-A symbolic link named *alphafold* that points to the this script is included,
+A symbolic link named *alphafold* that points to this script is included,
 so you can just use `alphafold` instead of `run_alphafold.py` or `python run_alphafold.py` after loading the AlphaFold module.
 
 The `run_alphafold.py` script has also been slightly modified such that defining the `$ALPHAFOLD_DATA_DIR` (see [above](./#setting-up-the-environment)) is sufficient to pick up all the data provided in that location,
@@ -158,7 +158,7 @@ This highlights the difference between CPU and GPU performance even more.
 The following example comes from the official [Examples section]({{readme}}#examples) in the Alphafold [README]({{readme}}).
 The run command is slightly different (see above: [Running AlphaFold](./running-alphafold)).
 
-Do not forget to setup the environment (see above: [Setting up the environment](./setting-up-the-environment)).
+Do not forget to set up the environment (see above: [Setting up the environment](./setting-up-the-environment)).
 
 ### Folding a monomer
 
@@ -193,7 +193,7 @@ The main difference between using a GPU or CPU in a job script is what module to
 For running AlphaFold on GPU, use an AlphaFold module that mentions `CUDA` (or `cuda`),
 for example `AlphaFold/2.3.1-foss-2022a-CUDA-11.7.0`.
 
-To run the jobs cripts you need to create a file named `T1050.fasta` with the following content:
+To run the job scripts you need to create a file named `T1050.fasta` with the following content:
 
 ```fasta
 >T1050 A7LXT1, Bacteroides Ovatus, 779 residues|

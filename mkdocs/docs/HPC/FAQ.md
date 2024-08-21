@@ -16,7 +16,7 @@ Overview of HPC-UGent Tier-2 [infrastructure]({{ hpc_infrastructure_url }})
 
 ### How many cores/nodes should I request?
 
-An important factor in this question is how well your task is being parallellized:
+An important factor in this question is how well your task is being parallelized:
 does it actually run faster with more resources? You can test this yourself:
 start with 4 cores, then 8, then 16... The execution time should each time be reduced to
 around half of what it was before. You can also try this with full nodes: 1 node, 2 nodes.
@@ -74,7 +74,7 @@ It is possible to use the modules without specifying a version or toolchain. How
 this will probably cause incompatible modules to be loaded. Don't do it if you use multiple modules.
 Even if it works now, as more modules get installed on the HPC, your job can suddenly break.
 
-## Troubleshooting jobs
+## Troubleshooting
 
 ### My modules don't work together
 
@@ -171,7 +171,7 @@ Not all file locations perform the same. In particular, the `$VSC_HOME` and `$VS
 directories are, relatively, very slow to access. Your jobs should rather use the
 `$VSC_SCRATCH` directory, or other fast locations (depending on your needs), described
 in [Where to store your data on the HPC](../running_jobs_with_input_output_data/#where-to-store-your-data-on-the-hpc).
-As an example how do this: The job can copy the input to the scratch directory, then execute
+As an example how to do this: The job can copy the input to the scratch directory, then execute
 the computations, and lastly copy the output back to the data directory.
 Using the home and data directories is especially a problem when UGent isn't your home institution:
 your files may be stored, for example, in Leuven while you're running a job in Ghent.
@@ -217,14 +217,38 @@ See the explanation about how jobs get prioritized in [When will my job start](.
 
 {% else %}
 
-In practice it's
+In practice, it's
 impossible to predict when your job(s) will start, since most currently
-running jobs will finish before their requested walltime expires, and
-new jobs by may be submitted by other users that are assigned a higher
-priority than your job(s). You can use the `showstart` command. For more
-information, see .
+running jobs will finish before their requested walltime expires. 
+New jobs may be submitted by other users that are assigned a higher
+priority than your job(s). 
+You can use the `squeue --start` command to get an estimated start time for your jobs in the queue.
+Keep in mind that this is just an estimate.
 
 {% endif %}
+
+
+### Why do I get a "No space left on device" error, while I still have storage space left?
+
+When trying to create files, errors like this can occur:
+
+```shell
+No space left on device
+```
+
+The error "`No space left on device`" can mean two different things:
+
+- all available *storage quota* on the file system in question has been used;
+- the *inode limit* has been reached on that file system.
+
+An *inode* can be seen as a "file slot", meaning that when the limit is reached, no more additional files can be created.
+There is a standard inode limit in place that will be increased if needed. 
+The number of inodes used per file system can be checked on [the VSC account page](https://account.vscentrum.be).
+
+Possible solutions to this problem include cleaning up unused files and directories or 
+[compressing directories with a lot of files into zip- or tar-files](linux-tutorial/manipulating_files_and_directories.md#zipping-gzipgunzip-zipunzip).
+
+If the problem persists, feel free to [contact support](FAQ.md#i-have-another-questionproblem).
 
 ## Other
 
@@ -348,6 +372,32 @@ Be sure to use your UGent username and not your VSC username here.
 
 See also: [Your UGent home drive and shares](running_jobs_with_input_output_data.md#your-ugent-home-drive-and-shares).
 {% endif %}
+
+
+### My home directory is (almost) full, and I don't know why
+
+Your home directory might be full without looking like it due to hidden files.
+Hidden files and subdirectories have a name starting with a dot and do not show up when running `ls`.
+If you want to check where the storage in your home directory is used, you can make use of the [`du` command](running_jobs_with_input_output_data.md#check-your-quota) to find out what the largest files and subdirectories are:
+
+```shell
+du -h --max-depth 1 $VSC_HOME | egrep '[0-9]{3}M|[0-9]G'
+```
+
+The `du` command returns the size of every file and subdirectory in the $VSC_HOME directory. This output is then piped into an [`egrep`](linux-tutorial/beyond_the_basics.md#searching-file-contents-grep) to filter the lines to the ones that matter the most.
+
+The `egrep` command will only let entries that match with the specified regular expression `[0-9]{3}M|[0-9]G` through, which corresponds with files that consume more than 100 MB.
+
+
+### How can I get more storage space?
+
+
+[By default](running_jobs_with_input_output_data.md#quota) you get 3 GB of storage space for your home directory and 25 GB in your personal directories on both the data (`$VSC_DATA`) and scratch (`$VSC_SCRATCH`) filesystems.
+It is not possible to expand the storage quota for these personal directories.
+
+You can get more storage space through a [Virtual Organisation (VO)](running_jobs_with_input_output_data.md#virtual-organisations),
+which will give you access to the [additional directories](running_jobs_with_input_output_data.md#vo-directories) in a subdirectory specific to that VO (`$VSC_DATA_VO` and `$VSC_SCRATCH_VO`).
+The moderators of a VO can [request more storage](running_jobs_with_input_output_data.md#requesting-more-storage-space) for their VO.
 
 
 ### Why can't I use the `sudo` command?
