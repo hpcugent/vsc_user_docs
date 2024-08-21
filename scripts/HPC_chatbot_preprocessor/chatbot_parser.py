@@ -384,10 +384,28 @@ def close_ifs(text):
         for match in matches:
             open_ifs.append(match.group(0))
 
+        # only include the non-closed if-statements
+        changed = True
+        while changed:
+            changed = False
+            last_if = -1
+            last_else = -1
+            for i, if_part in enumerate(open_ifs):
+                if re.search(patterns['if'], if_part):
+                    last_if = i
+                elif re.search(patterns['else'], if_part):
+                    last_else = i
+                elif re.search(patterns['endif'], if_part):
+                    changed = True
+                    del open_ifs[i]
+                    if last_else > last_if:
+                        del open_ifs[last_else]
+                    del open_ifs[last_if]
+
         # Concatenate all matches into a single string
         open_ifs = ''.join(open_ifs)
 
-        return text + r'{' + IF_MANGLED_PART + '% endif %' + IF_MANGLED_PART + '}', open_ifs
+        return text + (r'{' + IF_MANGLED_PART + '% endif %' + IF_MANGLED_PART + '}')*(if_count - endif_count), open_ifs
 
 
 def jinja_parser(filename, copy_location):
@@ -451,7 +469,7 @@ def mangle_os_ifs(line, is_os):
     We don't want to mangle all if-related statements (such as else and endif) so we need to keep track of the context of the last few if-statements.
 
     :param line: the current line to check for os-related if-statements
-    :param is_os: variable keep track of the current os-state of the if-statements. Can be NON_OS_IF, NON_OS_IF_IN_OS_IF, OS_IF or OS_IF_IN_OS_IF 
+    :param is_os: variable keep track of the current os-state of the if-statements. Can be NON_OS_IF, NON_OS_IF_IN_OS_IF, OS_IF or OS_IF_IN_OS_IF
         NON_OS_IF: not in an os-if
         NON_OS_IF_IN_OS_IF: in a non-os-if nested in an os-if
         OS_IF: in an os-if
@@ -492,7 +510,7 @@ def mangle_os_ifs(line, is_os):
                     is_os = OS_IF
             elif is_os == NON_OS_IF_IN_OS_IF:
                 is_os = OS_IF
-                
+
         elif if_match:
             if if_os_match:
                 line = part_before_mangling + IF_MANGLED_PART + part_between_mangling + IF_MANGLED_PART + part_after_mangling
@@ -506,7 +524,7 @@ def mangle_os_ifs(line, is_os):
                     is_os = NON_OS_IF_IN_OS_IF
                 else:
                     is_os = NON_OS_IF
-                    
+
         elif else_match:
             if is_os in (OS_IF, OS_IF_IN_OS_IF):
                 line = part_before_mangling + IF_MANGLED_PART + part_between_mangling + IF_MANGLED_PART + part_after_mangling
@@ -879,7 +897,7 @@ def main():
     # # Temporary variables to test with just one singular file
     # filenames_generic = {}
     # filenames_linux = {}
-    # filenames_generic["getting_started.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/getting_started.md"
+    # filenames_generic["account.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/account.md"
     # filenames_linux["beyond_the_basics.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/linux-tutorial/beyond_the_basics.md"
 
     # for loops over all files
