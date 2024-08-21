@@ -13,8 +13,3 @@ from chatbot_parser import make_valid_title
 ])
 def test_make_valid_title(input_string, expected):
     assert make_valid_title(input_string) == expected
-
-
-shutil.rmtree("parsed_mds", ignore_errors=True)
-shutil.rmtree("copies", ignore_errors=True)
-shutil.rmtree("if_mangled_files", ignore_errors=True)
