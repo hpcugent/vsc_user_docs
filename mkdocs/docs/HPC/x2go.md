@@ -54,9 +54,7 @@ There are two ways to connect to the login node:
 This is the easier way to setup X2Go, a direct connection to the login
 node.
 
-<center>
 ![image](img/ch19-x2go-configuration-gent.png)
-</center>
 
 
 1.  Include a session name. This will help you to identify the session
@@ -76,9 +74,7 @@ node.
     1.  Click on the "Use RSA/DSA.." folder icon. This will open a file
         browser.
 
-        <center>
         ![image](img/ch19-x2go-ssh-key.png)
-        </center>
 {% if OS == (macos or linux) %}
     2.  You should look for your **private** SSH key generated in [Generating a public/private key pair](../account/#generating-a-publicprivate-key-pair). This file has
         been stored in the directory "*~/.ssh/*" (by default "**id_rsa**"). 
@@ -109,9 +105,7 @@ node.
         copy-pasting support.
 {% endif %}
 
-        <center>
         ![image](img/ch19-x2go-configuration-xterm.png)
-        </center>
 
 1.  **[optional]:** Change the session icon.
 
@@ -123,9 +117,7 @@ This option is useful if you want to resume a previous session or if you
 want to set explicitly the login node to use. In this case you should
 include a few more options. Use the same **Option A** setup but with these changes:
 
-<center>
 ![image](img/ch19-x2go-configuration-gent-proxy.png)
-</center>
 
 1.  Include a session name. This will help you to identify the session
     if you have more than one (in our example "HPC UGent proxy login").
@@ -146,9 +138,7 @@ include a few more options. Use the same **Option A** setup but with these chang
         did for the server configuration (The "RSA/DSA key" field must
         be set in both sections)
 
-        <center>
         ![image](img/ch19-x2go-proxy-key.png)
-        </center>
 
     4.  Click the ++"OK"++ button after these changes.
 
@@ -161,9 +151,7 @@ open session or if you click on the "shutdown" button from X2Go. If you
 want to suspend your session to continue working with it later just
 click on the "pause" icon.
 
-<center>
 ![image](img/ch19-x2go-pause.png)
-</center>
 
 X2Go will keep the session open for you (but only if the login node is
 not rebooted).
@@ -175,8 +163,9 @@ session, you should know which login node were used at first place. You
 can get this information before logging out from your X2Go session. Just
 open a terminal and execute:
 
-<pre><code>$ <b>hostname</b>
-</code></pre>
+```
+$ hostname
+```
 
 ![image](img/ch19-x2go-xterm.png)
 
