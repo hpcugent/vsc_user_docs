@@ -13,6 +13,7 @@ from jinja2 import FileSystemLoader, Environment, ChoiceLoader, FunctionLoader, 
 MIN_PARAGRAPH_LENGTH = 128
 MAX_TITLE_DEPTH = 4
 INCLUDE_LINKS_IN_PLAINTEXT = False
+DEEP_DIRECTORIES = True
 
 # directories
 PARSED_MDS = "parsed_mds"
@@ -64,8 +65,8 @@ TITLE_DEPTH = "title_depth"
 DIRECTORY = "directory"
 LINKS = "links"
 PARENT_TITLE = "parent_title"
-PREVIOUS_TITLE = "previous_title"
-NEXT_TITLE = "next_title"
+PREVIOUS_SUBTITLE = "previous_title"
+NEXT_SUBTITLE = "next_title"
 METADATA_OS = "OS"
 REFERENCE_LINK = "reference_link"
 
@@ -75,8 +76,7 @@ ELSE = "else"
 ENDIF = "endif"
 
 # link indicators
-LINK_BEFORE = r'§link§link§'
-LINK_AFTER = r'§link§link§'
+LINK_MARKER = r'§link§link§'
 
 
 ################### define functions ###################
@@ -94,11 +94,12 @@ def check_for_title(line, in_code_block, curr_dirs):
     match = re.match(r'^#+ ', line)
     if match and len(match.group(0)) <= 5 and not in_code_block:
         title_length = len(match.group(0)) - 1
-        curr_dirs[title_length] = os.path.join(curr_dirs[title_length - 1], make_valid_title(line[title_length + 1:-1].replace(' ', '-')))
+        if DEEP_DIRECTORIES:
+            curr_dirs[title_length] = os.path.join(curr_dirs[title_length - 1], make_valid_title(line[title_length + 1:-1].replace(' ', '-')))
 
-        # update the higher order current directories
-        for i in range(title_length + 1, MAX_TITLE_DEPTH + 1):
-            curr_dirs[i] = curr_dirs[title_length]
+            # update the higher order current directories
+            for i in range(title_length + 1, MAX_TITLE_DEPTH + 1):
+                curr_dirs[i] = curr_dirs[title_length]
 
         return title_length
     else:
@@ -125,7 +126,7 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
     matches = re.findall(r'\[(.*?)]\((.*?)\)', curr_line)
     if matches:
         for match in matches:
-            curr_line = curr_line.replace(f"[{match[0]}]({match[1]})", match[0] + LINK_BEFORE + str(len(linklist)) + LINK_AFTER)
+            curr_line = curr_line.replace(f"[{match[0]}]({match[1]})", match[0] + LINK_MARKER + str(len(linklist)) + LINK_MARKER)
             if ".md" not in match[1]:
                 if "#" not in match[1]:
                     linklist.append(match[1])
@@ -676,12 +677,12 @@ def insert_links(text, links):
 
     present_links = []
     new_links = {}
-    for link_number in re.finditer(LINK_BEFORE + r'([0-9]*?)' + LINK_AFTER, text):
+    for link_number in re.finditer(LINK_MARKER + r'([0-9]*?)' + LINK_MARKER, text):
         present_links.append(link_number.group(1))
         if INCLUDE_LINKS_IN_PLAINTEXT:
-            text = re.sub(LINK_BEFORE + link_number.group(1) + LINK_AFTER, " " + links[link_number.group(1)] + " ", text)
+            text = re.sub(LINK_MARKER + link_number.group(1) + LINK_MARKER, " " + links[link_number.group(1)] + " ", text)
         else:
-            text = re.sub(LINK_BEFORE + link_number.group(1) + LINK_AFTER, "", text)
+            text = re.sub(LINK_MARKER + link_number.group(1) + LINK_MARKER, "", text)
 
     for link_number in links.keys():
         if link_number in present_links:
