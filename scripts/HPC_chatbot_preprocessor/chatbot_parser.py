@@ -5,7 +5,7 @@ import shutil
 import yaml
 from itertools import chain
 from pathlib import Path
-from jinja2 import FileSystemLoader, Environment, ChoiceLoader, Template
+from jinja2 import FileSystemLoader, Environment, ChoiceLoader, FunctionLoader, Template
 
 #################### define macro's ####################
 # customizable macros
@@ -381,7 +381,7 @@ def jinja_parser(filename, copy_location):
     mangle_ifs(copy_location, filename)
 
     # Use Jinja2 to replace the macros
-    template_loader = ChoiceLoader([FileSystemLoader(searchpath=IF_MANGLED_FILES), FileSystemLoader(searchpath=os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR))])
+    template_loader = ChoiceLoader([FileSystemLoader(searchpath=[IF_MANGLED_FILES, os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR)]), FunctionLoader(load_macros)])
     templateEnv = Environment(loader=template_loader)
     template = templateEnv.get_template(filename)
     rendered_content = template.render(combined_context)
@@ -389,6 +389,24 @@ def jinja_parser(filename, copy_location):
     # Save the rendered content to a new file
     with open(copy_location, 'w', encoding='utf-8', errors='ignore') as output_file:
         output_file.write(rendered_content)
+
+
+def load_macros(name):
+    """
+    function used by the jinja FunctionLoader to retrieve templates from the macros folder since the normal FileSystemLoader can't locate them properly
+
+    :param name: name of the package
+    :return:
+    """
+
+    macros_location = os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, "macros")
+
+    if "../macros/" in name:
+        package_name = name.split("../macros/")[1]
+        file_location = os.path.join(macros_location, package_name)
+
+        with open(file_location, 'r') as readfile:
+            return readfile.read()
 
 
 def mangle_os_ifs(line, is_os):
@@ -773,27 +791,27 @@ def main():
 
     ################### define loop-invariant variables ###################
 
-    # # variable that keeps track of the source directories
-    # source_directories = [os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR),
-    #                       os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR, LINUX_TUTORIAL)]
-    #
-    # # list of all the filenames
-    # filenames_generic = {}
-    # filenames_linux = {}
-    # for source_directory in source_directories:
-    #     all_items = os.listdir(source_directory)
-    #     files = [f for f in all_items if os.path.isfile(os.path.join(source_directory, f)) and ".md" in f[-3:]]
-    #     for file in files:
-    #         if LINUX_TUTORIAL in source_directory:
-    #             filenames_linux[file] = os.path.join(source_directory, file)
-    #         else:
-    #             filenames_generic[file] = os.path.join(source_directory, file)
+    # variable that keeps track of the source directories
+    source_directories = [os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR),
+                          os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR, LINUX_TUTORIAL)]
 
-    # Temporary variables to test with just one singular file
+    # list of all the filenames
     filenames_generic = {}
     filenames_linux = {}
-    filenames_generic["getting_started.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/getting_started.md"
-    filenames_linux["beyond_the_basics.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/linux-tutorial/beyond_the_basics.md"
+    for source_directory in source_directories:
+        all_items = os.listdir(source_directory)
+        files = [f for f in all_items if os.path.isfile(os.path.join(source_directory, f)) and ".md" in f[-3:]]
+        for file in files:
+            if LINUX_TUTORIAL in source_directory:
+                filenames_linux[file] = os.path.join(source_directory, file)
+            else:
+                filenames_generic[file] = os.path.join(source_directory, file)
+
+    # # Temporary variables to test with just one singular file
+    # filenames_generic = {}
+    # filenames_linux = {}
+    # filenames_generic["getting_started.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/getting_started.md"
+    # filenames_linux["beyond_the_basics.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/linux-tutorial/beyond_the_basics.md"
 
     # for loops over all files
     for filenames in [filenames_generic, filenames_linux]:
