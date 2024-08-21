@@ -13,6 +13,8 @@ from jinja2 import FileSystemLoader, Environment, ChoiceLoader, FunctionLoader, 
 MIN_PARAGRAPH_LENGTH = 128
 MAX_TITLE_DEPTH = 4
 INCLUDE_LINKS_IN_PLAINTEXT = False
+SPLIT_ON_TITLES = True
+SPLIT_ON_PARAGRAPHS = False
 DEEP_DIRECTORIES = True
 
 # directories
