@@ -791,7 +791,8 @@ def write_os_specific_file(title, paragraphs_text, paragraphs_metadata, title_or
     :param title_order_number: order number of the title of the section that is being written
     :return:
     """
-    for i, OS in enumerate([LINUX, WINDOWS, MACOS]):
+    text = {}
+    for OS in [LINUX, WINDOWS, MACOS]:
 
         # Unmangle if's to use jinja parser
         paragraphs_text[title] = re.sub(IF_MANGLED_PART, "", paragraphs_text[title])
@@ -801,17 +802,24 @@ def write_os_specific_file(title, paragraphs_text, paragraphs_metadata, title_or
 
         # Use jinja to render a different version of the text for each OS
         template = Template(paragraphs_text[title])
-        text = template.render(OS=OS)
+        text[OS] = template.render(OS=OS)
 
         # readjust text to correct overcorrections
-        text = re.sub('"' + OS + '"', OS, text)
+        text[OS] = re.sub('"' + OS + '"', OS, text[OS])
 
-        # define the filepath
-        filepath = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, OS, paragraphs_metadata[title]["directory"])
-        os.makedirs(filepath, exist_ok=True)
+    # check that not all versions are the same
+    unique_texts = set(text.values())
+    if len(unique_texts) > 1:
+        for OS in [LINUX, WINDOWS, MACOS]:
+            # define the filepath
+            filepath = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, OS, paragraphs_metadata[title]["directory"])
+            os.makedirs(filepath, exist_ok=True)
 
-        # write the files
-        write_files(title, text, paragraphs_metadata, title_order, title_order_number, filepath, OS)
+            # write the files
+            write_files(title, text[OS], paragraphs_metadata, title_order, title_order_number, filepath, OS)
+    else:
+        paragraphs_text[title] = text[OS]
+        write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order, title_order_number)
 
 
 def write_files(title, text, paragraphs_metadata, title_order, title_order_number, filepath, OS):
