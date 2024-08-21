@@ -12,7 +12,7 @@ from jinja2 import FileSystemLoader, Environment, ChoiceLoader, FunctionLoader, 
 # customizable macros
 MIN_PARAGRAPH_LENGTH = 128
 MAX_TITLE_DEPTH = 4
-INCLUDE_LINKS_IN_PLAINTEXT = True
+INCLUDE_LINKS_IN_PLAINTEXT = False
 
 # directories
 PARSED_MDS = "parsed_mds"
@@ -59,7 +59,7 @@ WRITE_TEXT_AND_CHECK_EXTRA_MESSAGE = "write_text_and_check_extra_message"
 
 # Metadata attributes
 MAIN_TITLE = "main_title"
-SUBTITLE = "subtitle"
+SUBTITLE = "subtitle (incorrect in some cases, working on a fix)"
 TITLE_DEPTH = "title_depth"
 DIRECTORY = "directory"
 LINKS = "links"
@@ -542,7 +542,7 @@ def make_valid_title(title):
     return valid_filename
 
 
-def write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order, title_order_number):
+def write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order, title_order_number, paragraph_numbers):
     """
     Function that writes text and metadata of a generic (non-os-specific) file
 
@@ -551,6 +551,7 @@ def write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order,
     :param paragraphs_metadata: dictionary containing the metadata for all paragraphs of text
     :param title_order: list containing all subtitles in order
     :param title_order_number: order number of the title of the section that is being written
+    :param paragraph_numbers: dictionary keeping track of the amount of paragraphs that have been written for each OS
     :return:
     """
 
@@ -558,10 +559,10 @@ def write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order,
     filepath = os.path.join(PARSED_MDS, GENERIC_DIR, paragraphs_metadata[title][DIRECTORY])
     os.makedirs(filepath, exist_ok=True)
 
-    write_files(title, paragraphs_text[title], paragraphs_metadata, title_order, title_order_number, filepath, OS=GENERIC)
+    write_files(title, paragraphs_text[title], paragraphs_metadata, title_order, title_order_number, filepath, OS=GENERIC, paragraph_numbers=paragraph_numbers)
 
 
-def write_os_specific_file(title, paragraphs_text, paragraphs_metadata, title_order, title_order_number):
+def write_os_specific_file(title, paragraphs_text, paragraphs_metadata, title_order, title_order_number, paragraph_numbers):
     """
     Function that writes text and metadata of os-specific files
 
@@ -570,6 +571,7 @@ def write_os_specific_file(title, paragraphs_text, paragraphs_metadata, title_or
     :param paragraphs_metadata: dictionary containing the metadata for all paragraphs of text
     :param title_order: list containing all subtitles in order
     :param title_order_number: order number of the title of the section that is being written
+    :param paragraph_numbers: dictionary keeping track of the amount of paragraphs that have been written for each OS
     :return:
     """
     text = {}
@@ -592,7 +594,7 @@ def write_os_specific_file(title, paragraphs_text, paragraphs_metadata, title_or
     unique_texts = set(text.values())
     if len(unique_texts) == 1:
         paragraphs_text[title] = text[OS]
-        write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order, title_order_number)
+        write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order, title_order_number, paragraph_numbers)
     else:
         for OS in [LINUX, WINDOWS, MACOS]:
             # check that file actually has some content
@@ -602,13 +604,13 @@ def write_os_specific_file(title, paragraphs_text, paragraphs_metadata, title_or
                 os.makedirs(filepath, exist_ok=True)
 
                 # write the files
-                write_files(title, text[OS], paragraphs_metadata, title_order, title_order_number, filepath, OS)
+                write_files(title, text[OS], paragraphs_metadata, title_order, title_order_number, filepath, OS, paragraph_numbers=paragraph_numbers)
             else:
                 # don't write empty files
                 pass
 
 
-def write_files(title, text, paragraphs_metadata, title_order, title_order_number, filepath, OS):
+def write_files(title, text, paragraphs_metadata, title_order, title_order_number, filepath, OS, paragraph_numbers):
     """
     Function to write files to a certain filepath
 
@@ -619,13 +621,14 @@ def write_files(title, text, paragraphs_metadata, title_order, title_order_numbe
     :param title_order_number: order number of the title of the section that is being written
     :param filepath: filepath to write files to
     :param OS: OS to be included in the metadata
+    :param paragraph_numbers: dictionary keeping track of the amount of paragraphs that have been written for each OS
     :return:
     """
 
     metadata = copy.deepcopy(paragraphs_metadata[title])
 
     # write text file
-    with open(os.path.join(filepath, paragraphs_metadata[title][SUBTITLE] + ".txt"), 'w') as writefile:
+    with open(os.path.join(filepath, paragraphs_metadata[title][MAIN_TITLE] + "_" + OS + "_paragraph_" + str(paragraph_numbers[OS]) + ".txt"), 'w') as writefile:
         if LINKS in paragraphs_metadata[title].keys():
             adapted_text, metadata[LINKS] = insert_links(text, metadata[LINKS])
             writefile.write(adapted_text)
@@ -655,8 +658,10 @@ def write_files(title, text, paragraphs_metadata, title_order, title_order_numbe
         os_part = OS + "/"
     metadata[REFERENCE_LINK] = DOCS_URL + "/" + os_part + linux_part + paragraphs_metadata[title][MAIN_TITLE] + "/#" + ''.join(char.lower() for char in title if char.isalnum() or char == '-').strip('-')
 
-    with open(os.path.join(filepath, paragraphs_metadata[title][SUBTITLE] + "_metadata.json"), 'w') as writefile:
+    with open(os.path.join(filepath, paragraphs_metadata[title][MAIN_TITLE] + "_" + OS + "_paragraph_" + str(paragraph_numbers[OS]) + "_metadata.json"), 'w') as writefile:
         json.dump(metadata, writefile, indent=4)
+
+    paragraph_numbers[OS] += 1
 
 
 def insert_links(text, links):
@@ -714,22 +719,22 @@ def main():
     source_directories = [os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR),
                           os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR, LINUX_TUTORIAL)]
 
-    # # list of all the filenames
-    # filenames_generic = {}
-    # filenames_linux = {}
-    # for source_directory in source_directories:
-    #     all_items = os.listdir(source_directory)
-    #     files = [f for f in all_items if os.path.isfile(os.path.join(source_directory, f)) and ".md" in f[-3:]]
-    #     for file in files:
-    #         if LINUX_TUTORIAL in source_directory:
-    #             filenames_linux[file] = os.path.join(source_directory, file)
-    #         else:
-    #             filenames_generic[file] = os.path.join(source_directory, file)
-
-    # Temporary variables to test with just one singular file
+    # list of all the filenames
     filenames_generic = {}
     filenames_linux = {}
-    filenames_generic["account.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/account.md"
+    for source_directory in source_directories:
+        all_items = os.listdir(source_directory)
+        files = [f for f in all_items if os.path.isfile(os.path.join(source_directory, f)) and ".md" in f[-3:]]
+        for file in files:
+            if LINUX_TUTORIAL in source_directory:
+                filenames_linux[file] = os.path.join(source_directory, file)
+            else:
+                filenames_generic[file] = os.path.join(source_directory, file)
+
+    # # Temporary variables to test with just one singular file
+    # filenames_generic = {}
+    # filenames_linux = {}
+    # filenames_generic["account.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/account.md"
     # filenames_linux["beyond_the_basics.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/linux-tutorial/beyond_the_basics.md"
 
     # for loops over all files
@@ -765,6 +770,9 @@ def main():
             # variable that keeps track of the directories that are used to write in at different levels
             curr_dirs = [filename[:-3] for _ in range(5)]
 
+            # dictionary that keeps track of the paragraph numbers
+            paragraph_numbers = {GENERIC: 1, LINUX: 1, WINDOWS: 1, MACOS: 1}
+
             ################### actually parse the md file ###################
 
             # create directories for the source markdown file
@@ -783,11 +791,11 @@ def main():
 
                 # generic
                 if IF_MANGLED_PART not in paragraphs_text[subtitle]:
-                    write_generic_file(subtitle, paragraphs_text, paragraphs_metadata, subtitle_order, i)
+                    write_generic_file(subtitle, paragraphs_text, paragraphs_metadata, subtitle_order, i, paragraph_numbers)
 
                 # os-specific
                 else:
-                    write_os_specific_file(subtitle, paragraphs_text, paragraphs_metadata, subtitle_order, i)
+                    write_os_specific_file(subtitle, paragraphs_text, paragraphs_metadata, subtitle_order, i, paragraph_numbers)
 
     shutil.rmtree(COPIES, ignore_errors=True)
     shutil.rmtree(IF_MANGLED_FILES, ignore_errors=True)
