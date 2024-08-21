@@ -656,9 +656,9 @@ def main():
     :return:
     """
     # remove the directories from a previous run of the parser if they weren't cleaned up properly for some reason
-    shutil.rmtree(PARSED_MDS)
-    shutil.rmtree(COPIES)
-    shutil.rmtree(IF_MANGLED_FILES)
+    shutil.rmtree(PARSED_MDS, ignore_errors=True)
+    shutil.rmtree(COPIES, ignore_errors=True)
+    shutil.rmtree(IF_MANGLED_FILES, ignore_errors=True)
 
     # make the necessary directories
     if not os.path.exists(COPIES):
@@ -754,8 +754,8 @@ def main():
                 else:
                     write_os_specific_file(subtitle, paragraphs_text, paragraphs_metadata, subtitle_order, i)
 
-    # remove_directory_tree(COPIES)
-    # remove_directory_tree(IF_MANGLED_FILES)
+    shutil.rmtree(COPIES, ignore_errors=True)
+    shutil.rmtree(IF_MANGLED_FILES, ignore_errors=True)
 
 
 ################### run the script ###################
