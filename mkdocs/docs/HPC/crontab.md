@@ -13,24 +13,26 @@ as usual with your vsc user's account (see section
 
 Check if any cron script is already set in the current login node with:
 
-<pre><code>$ <b>crontab -l</b>
-</code></pre>
+```
+$ crontab -l
+```
 
 At this point you can add/edit (with `vi` editor) any cron script
 running the command:
 
-<pre><code>$ <b>crontab -e</b>
-</code></pre>
+```
+$ crontab -e
+```
 
 #### Example cron job script
 
-<pre><code> 15 5 * * * ~/runscript.sh >& ~/job.out
-</code></pre>
+```
+ 15 5 * * * ~/runscript.sh >& ~/job.out
+```
 
 where `runscript.sh` has these lines in this example:
 
-<center>-- runscript.sh --</center>
-```bash
+```bash title="runscript.sh"
 {% include "./examples/Cron-scripts/runscript.sh" %}
 ```
 
@@ -42,5 +44,6 @@ Please note that you should login into the same login node to edit your
 previously generated crontab tasks. If that is not the case you can
 always jump from one login node to another with:
 
-<pre><code>$ <b>ssh gligar&lt;id&gt;</b>
-</code></pre>
+```
+$ ssh gligar&lt;id&gt;
+```
