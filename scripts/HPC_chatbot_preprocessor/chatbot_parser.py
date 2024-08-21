@@ -640,14 +640,14 @@ def write_files(title, text, paragraphs_metadata, title_order, title_order_numbe
 
     # write metadata
     if title_order_number != 0:
-        metadata[PREVIOUS_TITLE] = title_order[title_order_number - 1]
+        metadata[PREVIOUS_SUBTITLE] = title_order[title_order_number - 1]
     else:
-        metadata[PREVIOUS_TITLE] = None
+        metadata[PREVIOUS_SUBTITLE] = None
 
     if title_order_number != len(title_order) - 1:
-        metadata[NEXT_TITLE] = title_order[title_order_number + 1]
+        metadata[NEXT_SUBTITLE] = title_order[title_order_number + 1]
     else:
-        metadata[NEXT_TITLE] = None
+        metadata[NEXT_SUBTITLE] = None
 
     metadata[METADATA_OS] = OS
 
