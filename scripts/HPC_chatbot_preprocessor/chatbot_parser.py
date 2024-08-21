@@ -401,6 +401,7 @@ def close_ifs(text):
                     if last_else > last_if:
                         del open_ifs[last_else]
                     del open_ifs[last_if]
+                    break
 
         # Concatenate all matches into a single string
         open_ifs = ''.join(open_ifs)
@@ -795,9 +796,15 @@ def write_os_specific_file(title, paragraphs_text, paragraphs_metadata, title_or
         # Unmangle if's to use jinja parser
         paragraphs_text[title] = re.sub(IF_MANGLED_PART, "", paragraphs_text[title])
 
+        # slightly alter if-statements to be able to use predefined macros
+        paragraphs_text[title] = re.sub(OS, '"' + OS + '"', paragraphs_text[title])
+
         # Use jinja to render a different version of the text for each OS
         template = Template(paragraphs_text[title])
         text = template.render(OS=OS)
+
+        # readjust text to correct overcorrections
+        text = re.sub('"' + OS + '"', OS, text)
 
         # define the filepath
         filepath = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, OS, paragraphs_metadata[title]["directory"])
