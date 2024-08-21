@@ -62,58 +62,6 @@ REFERENCE_LINK = "reference_link"
 
 
 ################### define functions ###################
-def check_for_title_xl(curr_line, main_title, last_directory, last_title, curr_dirs, root_dirs, link_lists, is_linux_tutorial_, in_code_block_):
-    """
-    function that uses the check_for_title_logic function to create the appropriate directories and update the necessary variables
-
-    :param curr_line: the line to be checked for a title
-    :param main_title: the main title of the file, needed in the case where a file is finished
-    :param last_directory: the most recently encountered directory
-    :param last_title: the most recently encountered title
-    :param curr_dirs: the most recent directories at each title level
-    :param root_dirs: a list containing the root directories
-    :param link_lists: a list containing all four link_lists with the links that will be printed at the bottom of a file
-    :param is_linux_tutorial_: boolean to indicate whether the current file is part of the linux tutorial
-    :param in_code_block_: boolean to indicate whether the current line is part of a codeblock
-    :return: the depth of the title
-    :return: the title found in the line if any
-    :return: the new directory in which the next file will be written
-    :return link_lists: updated link_lists
-    """
-
-    # detect titles
-    match = re.match(r'^#+ ', curr_line)
-    if match and len(match.group(0)) <= MAX_TITLE_DEPTH + 1:
-        logic_output = len(match.group(0)) - 1
-    else:
-        logic_output = 0
-
-    # make necessary changes if a title has been detected
-    if logic_output == 0 or in_code_block_:
-        return 0, None, None, curr_dirs, link_lists
-    else:
-
-        # if a new title is detected, write the end of the previous file
-        if last_title is not None:
-            for i, OS in enumerate(["", "Linux", "Windows", "macOS"]):
-                write_end_of_file(os.path.join(root_dirs[i], last_directory, last_title + ".json"), OS, link_lists[i], is_linux_tutorial_, main_title, last_title)
-
-            # reset the link lists for each OS
-            for i in range(4):
-                link_lists[i] = []
-
-        # make a new directory corresponding with the new title
-        curr_dirs[logic_output] = os.path.join(curr_dirs[logic_output - 1], make_valid_title(curr_line[logic_output + 1:-1].replace(' ', '-')))
-
-        for i in range(4):
-            os.makedirs(os.path.join(root_dirs[i],  curr_dirs[logic_output]), exist_ok=True)
-
-        # update the higher order current directories
-        for i in range(logic_output + 1, MAX_TITLE_DEPTH + 1):
-            curr_dirs[i] = curr_dirs[logic_output]
-
-        return logic_output, make_valid_title(curr_line[logic_output + 1:-1].replace(' ', '-')), curr_dirs[logic_output], curr_dirs, link_lists
-
 
 def check_for_title(line, in_code_block, curr_dirs):
     """
@@ -554,191 +502,6 @@ def mangle_ifs(directory, filename):
                 write_file.write(new_line)
 
 
-def check_if_statements(curr_line, active_OS_if_states):
-    """
-    function that checks for if-statements
-
-    :param curr_line: the line to be checked for if-statements to build the directory structure
-    :param active_OS_if_states: dictionary keeping track of the active OS states according to the if-statements
-    :return: the next action to be done with the line:
-                DONE: An if-statement has been found at the start of the line, the active os list has been updated, processing of the current line is finished and a following line can be processed.
-                CHECK_EXTRA_MESSAGE: An if-statement has been found at the start of the line, the active os list has been updated, more text has been detected after the if-statement that also needs to be checked.
-                WRITE_TEXT: No if-statement has been found, write the current line to a file (can also be part of the current line)
-                WRITE_TEXT_AND_CHECK_EXTRA_MESSAGE: An if statement has been found not at the start of the line. Firstly, write the text up until the if-statement to a file, then check the rest of the line.
-    :return: the extra message to be checked, if any
-    :return: the text to be written to the file, if any
-    """
-    # check whether the first part of the line contains information wrt if-statements
-    match = re.search(r'^\{' + IF_MANGLED_PART + '%(.*?)%' + IF_MANGLED_PART + '}(.*)', curr_line)
-
-    # check whether the line contains information wrt if-statements that is not in its first part
-    match_large = re.search(r'^(.*)(\{' + IF_MANGLED_PART + '%.*?%' + IF_MANGLED_PART + '})(.*)', curr_line)
-
-    if match:
-        content = match.group(1)
-
-        # new if-statement wrt OS with '=='
-        if re.search(r'if OS == ', content):
-            OS = content.split()[-1]
-
-            # set new active OS
-            active_OS_if_states[OS] = ACTIVE
-
-            # set other active ones on inactive
-            for other_OS in active_OS_if_states.keys():
-                if other_OS != OS and active_OS_if_states[other_OS] == ACTIVE:
-                    active_OS_if_states[other_OS] = INACTIVE
-
-        # new if-statement wrt OS with '!='
-        elif re.search(r'if OS != ', content):
-            OS = content.split()[-1]
-
-            # set new active OS
-            active_OS_if_states[OS] = INACTIVE
-
-            # set other inactive ones on active
-            for other_OS in active_OS_if_states.keys():
-                if other_OS != OS and active_OS_if_states[other_OS] == INACTIVE:
-                    active_OS_if_states[other_OS] = ACTIVE
-
-        # endif statement wrt OS
-        elif re.search(r'endif', content):
-            if str(1) in active_OS_if_states.values():
-                active_OS_if_states[
-                    list(active_OS_if_states.keys())[list(active_OS_if_states.values()).index(str(1))]] = ACTIVE
-            else:
-                for key in active_OS_if_states.keys():
-                    active_OS_if_states[key] = INACTIVE
-
-        # else statement wrt OS
-        elif re.search(r'else', content):
-
-            i = 0
-            for i in range(3):
-                if str(i) not in active_OS_if_states.values():
-                    break
-
-            # set the previously active one on inactive until the next endif
-            key_list = list(active_OS_if_states.keys())
-            position = list(active_OS_if_states.values()).index(ACTIVE)
-            active_OS_if_states[key_list[position]] = str(i)
-
-            # set inactive ones on active
-            while INACTIVE in active_OS_if_states.values():
-                position = list(active_OS_if_states.values()).index(INACTIVE)
-                active_OS_if_states[key_list[position]] = ACTIVE
-
-        if len(match.group(2)) != 0:
-            extra_message = match.group(2).lstrip()
-            return CHECK_EXTRA_MESSAGE, extra_message, None
-
-        else:
-            return DONE, None, None
-
-    elif match_large:
-        return WRITE_TEXT_AND_CHECK_EXTRA_MESSAGE, match_large.group(2), match_large.group(1)
-
-    else:
-        return WRITE_TEXT, None, curr_line
-
-
-def write_text_to_file(file_name, curr_line, link_lists, in_code_block):
-    """
-    function that writes a line to a file
-
-    :param file_name: target file to write the line to
-    :param curr_line: line to be written to the file
-    :param link_lists: list containing all the links that will be printed at the end of files
-    :param in_code_block: boolean indicating whether the current line is in a codeblock
-    :return link_lists: updated link_lists
-    """
-
-    if os.path.exists(file_name) or curr_line.strip():
-        if os.path.exists(file_name):
-            with open(file_name, "r") as read_file:
-                data = json.load(read_file)
-        else:
-            data = {}
-
-        os_list = [GENERIC_DIR, LINUX, WINDOWS, MACOS]
-        for i, os_ in enumerate(os_list):
-            if os_ in file_name:
-                curr_line, link_lists[i] = replace_markdown_markers(curr_line, link_lists[i], in_code_block, "placeholder")
-
-        if CONTENT in data:
-            data[CONTENT] += curr_line
-        else:
-            data[CONTENT] = curr_line
-
-        with open(file_name, "w") as write_file:
-            json.dump(data, write_file, indent=4)
-
-    return link_lists
-
-
-def choose_and_write_to_file(curr_line, active_OS_if_states, last_directory, last_title, root_dirs, link_lists, in_code_block):
-    """
-    function that decides what file to write text to
-
-    :param curr_line: line to be written to a file
-    :param active_OS_if_states: dictionary keeping track of which OSes are active according to the if-statements
-    :param last_directory: most recently made directory
-    :param last_title: the most recently encountered title
-    :param root_dirs: a list with all root directories
-    :param link_lists: list of links that need to be written at the end of the files
-    :param in_code_block: boolean indicating whether the current line is in a code block
-    :return link_lists: an updated link_lists
-    """
-    # check that the line is part of the website for gent
-    if active_OS_if_states[LINUX] == INACTIVE and active_OS_if_states[WINDOWS] == INACTIVE and active_OS_if_states[MACOS] == INACTIVE:
-        link_lists = write_text_to_file(os.path.join(root_dirs[0], last_directory, last_title + ".json"), curr_line, link_lists, in_code_block)
-    else:
-        for i, os_ in enumerate([LINUX, WINDOWS, MACOS]):
-            if active_OS_if_states[os_] == ACTIVE:
-                link_lists = write_text_to_file(os.path.join(root_dirs[i + 1], last_directory, last_title + ".json"),
-                                                curr_line, link_lists, in_code_block)
-
-    return link_lists
-
-
-def write_end_of_file(file_location, OS, linklist, is_linux_tutorial_, main_title, last_title):
-    """
-    function that adds the links that should be at the end of a file
-
-    :param file_location: the location of the file
-    :param OS: the OS of the file
-    :param linklist: the links that should be at the end of the file
-    :param is_linux_tutorial_: boolean indicating whether the file is part of the linux tutorial
-    :param main_title: the main title of the file, to be used in the reference link
-    :param last_title: the most recently encountered title
-    :return:
-    """
-
-    if os.path.exists(file_location):
-
-        if len(OS) > 0:
-            OS = OS + "/"
-
-        with open(file_location, "r") as read_file:
-            data = json.load(read_file)
-
-        # add the links from within the document
-        data[LINKS] = {}
-        for i, link in enumerate(linklist):
-            data[LINKS][str(i + 1)] = str(link)
-
-        if is_linux_tutorial_:
-            linux_part = LINUX_TUTORIAL + "/"
-        else:
-            linux_part = ""
-
-        # add the reference link
-        data[REFERENCE_LINK] = (DOCS_URL + "/" + OS + linux_part + main_title + "/#" + ''.join(char.lower() for char in last_title if char.isalnum() or char == '-').strip('-'))
-
-        with open(file_location, 'w') as write_file:
-            json.dump(data, write_file, indent=4)
-
-
 def make_valid_title(title):
     """
     function that makes sure all titles can be used as valid filenames
@@ -946,37 +709,12 @@ def main():
                 root_dir_os_specific_linux = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, LINUX)
                 root_dir_os_specific_windows = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, WINDOWS)
                 root_dir_os_specific_macos = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, MACOS)
-            root_dirs = [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos]
 
             # variable for the main title (needed for reference links)
             main_title = filename[:-3]
 
             # variable that keeps track of the directories that are used to write in at different levels
             curr_dirs = [filename[:-3] for _ in range(5)]
-
-            # variable that keeps track of the latest non-zero level title and corresponding directory
-            last_title = None
-            last_directory = None
-
-            # list to keep track of links in the text
-            links_generic = []
-            links_linux = []
-            links_windows = []
-            links_macos = []
-            link_lists = [links_generic, links_linux, links_windows, links_macos]
-
-            # dictionaries to keep track of current OS
-            active_OS_if_states = {LINUX: INACTIVE, WINDOWS: INACTIVE, MACOS: INACTIVE}
-
-            # dictionaries to save the paragraphs and metadata before it is written to files
-            paragraphs_text = {}
-            paragraphs_metadata = {}
-
-            # variable that shows whether the first title has been reached yet
-            after_first_title = False
-
-            # variable that is used to be sure that we are detecting titles and not comments from codeblocks
-            in_code_block = False
 
             ################### actually parse the md file ###################
 
@@ -1001,38 +739,6 @@ def main():
                 # os-specific
                 else:
                     write_os_specific_file(subtitle, paragraphs_text, paragraphs_metadata, subtitle_order, i)
-
-            # # open the file and store line by line in the right file
-            # with open(copy_file, 'r') as readfile:
-            #
-            #     for line in readfile:
-            #         title_level, title, directory, curr_dirs, link_lists = check_for_title_xl(line, main_title, last_directory, last_title, curr_dirs, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists, is_linux_tutorial, in_code_block)
-            #
-            #         # detect codeblocks to make sure titles aren't detected in them
-            #         if '```' in line or (('<pre><code>' in line) ^ ('</code></pre>' in line)):
-            #             in_code_block = not in_code_block
-            #
-            #         # line is a title with a maximum depth of 4
-            #         if title_level > 0:
-            #             last_title = title
-            #             last_directory = directory
-            #             after_first_title = True
-            #
-            #         # line is not a title
-            #         elif after_first_title:
-            #             # check for if-statements and write the appropriate lines in the right files
-            #             next_action = check_if_statements(line, active_OS_if_states)
-            #             while next_action[0] == WRITE_TEXT_AND_CHECK_EXTRA_MESSAGE or next_action[0] == CHECK_EXTRA_MESSAGE:
-            #                 if next_action[0] == WRITE_TEXT_AND_CHECK_EXTRA_MESSAGE:
-            #                     link_lists = choose_and_write_to_file(next_action[2], active_OS_if_states, last_directory, last_title, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists, in_code_block)
-            #                 next_action = check_if_statements(next_action[1], active_OS_if_states)
-            #
-            #             if next_action[0] == WRITE_TEXT:
-            #                 link_lists = choose_and_write_to_file(next_action[2], active_OS_if_states, last_directory, last_title, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists, in_code_block)
-            #
-            # # write end of file for the last file
-            # for i, OS in enumerate(["", "Linux", "Windows", "macOS"]):
-            #     write_end_of_file(os.path.join(root_dirs[i], last_directory, last_title + ".json"), OS, link_lists[i], is_linux_tutorial, main_title, last_title)
 
     # remove_directory_tree(COPIES)
     # remove_directory_tree(IF_MANGLED_FILES)
