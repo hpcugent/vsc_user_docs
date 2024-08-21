@@ -25,6 +25,7 @@ HPC_DIR = "HPC"
 EXTRA_DIR = "extra"
 GENERIC_DIR = "generic"
 OS_SPECIFIC_DIR = "os_specific"
+MACROS = "macros"
 
 # OSes
 LINUX = "linux"
@@ -55,10 +56,22 @@ WRITE_TEXT = "write_text"
 CHECK_EXTRA_MESSAGE = "check_extra_message"
 WRITE_TEXT_AND_CHECK_EXTRA_MESSAGE = "write_text_and_check_extra_message"
 
-# JSON attributes
-CONTENT = "content"
+# Metadata attributes
+MAIN_TITLE = "main_title"
+SUBTITLE = "subtitle"
+TITLE_DEPTH = "title_depth"
+DIRECTORY = "directory"
 LINKS = "links"
+PARENT_TITLE = "parent_title"
+PREVIOUS_TITLE = "previous_title"
+NEXT_TITLE = "next_title"
+METADATA_OS = "OS"
 REFERENCE_LINK = "reference_link"
+
+# if-structure components
+IF = "if"
+ELSE = "else"
+ENDIF = "endif"
 
 
 ################### define functions ###################
@@ -283,14 +296,14 @@ def write_metadata(main_title, subtitle, links, title_level, directory):
     :return paragraph_metadata: dictionary containing the metadata about the section
     """
 
-    paragraph_metadata = {'main_title': main_title, 'subtitle': subtitle, 'title_depth': title_level, 'directory': directory}
+    paragraph_metadata = {MAIN_TITLE: main_title, SUBTITLE: subtitle, TITLE_DEPTH: title_level, DIRECTORY: directory}
 
     if len(links) > 0:
-        paragraph_metadata['links'] = {}
+        paragraph_metadata[LINKS] = {}
         for i, link in enumerate(links):
-            paragraph_metadata['links'][str(i)] = link
+            paragraph_metadata[LINKS][str(i)] = link
 
-    paragraph_metadata['parent_title'] = Path(directory).parent.name
+    paragraph_metadata[PARENT_TITLE] = Path(directory).parent.name
 
     return paragraph_metadata
 
@@ -308,12 +321,12 @@ def close_ifs(text):
     """
 
     patterns = {
-        'if': r'({' + IF_MANGLED_PART + r'%[-\s]*if\s+OS\s*[!=]=\s*.+?[-\s]*%' + IF_MANGLED_PART + '})',
-        'endif': r'({' + IF_MANGLED_PART + r'%\s*-?\s*endif\s*-?\s*%' + IF_MANGLED_PART + '})',
-        'else': r'({' + IF_MANGLED_PART + r'%\s*-?\s*else\s*-?\s*%' + IF_MANGLED_PART + '})'
+        IF: r'({' + IF_MANGLED_PART + r'%[-\s]*if\s+OS\s*[!=]=\s*.+?[-\s]*%' + IF_MANGLED_PART + '})',
+        ENDIF: r'({' + IF_MANGLED_PART + r'%\s*-?\s*endif\s*-?\s*%' + IF_MANGLED_PART + '})',
+        ELSE: r'({' + IF_MANGLED_PART + r'%\s*-?\s*else\s*-?\s*%' + IF_MANGLED_PART + '})'
     }
-    if_count = len(re.findall(patterns['if'], text.replace("\n", "")))
-    endif_count = len(re.findall(patterns['endif'], text.replace("\n", "")))
+    if_count = len(re.findall(patterns[IF], text.replace("\n", "")))
+    endif_count = len(re.findall(patterns[ENDIF], text.replace("\n", "")))
     if IF_MANGLED_PART not in text or if_count == endif_count:
         return text, ""
     else:
@@ -339,11 +352,11 @@ def close_ifs(text):
             last_if = -1
             last_else = -1
             for i, if_part in enumerate(open_ifs):
-                if re.search(patterns['if'], if_part):
+                if re.search(patterns[IF], if_part):
                     last_if = i
-                elif re.search(patterns['else'], if_part):
+                elif re.search(patterns[ELSE], if_part):
                     last_else = i
-                elif re.search(patterns['endif'], if_part):
+                elif re.search(patterns[ENDIF], if_part):
                     changed = True
                     del open_ifs[i]
                     if last_else > last_if:
@@ -402,10 +415,10 @@ def load_macros(name):
     :return:
     """
 
-    macros_location = os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, "macros")
+    macros_location = os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, MACROS)
 
-    if "../macros/" in name:
-        package_name = name.split("../macros/")[1]
+    if "../" + MACROS + "/" in name:
+        package_name = name.split("../" + MACROS + "/")[1]
         file_location = os.path.join(macros_location, package_name)
 
         with open(file_location, 'r') as readfile:
@@ -537,7 +550,7 @@ def write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order,
     """
 
     # make the directory needed for the files that will be written
-    filepath = os.path.join(PARSED_MDS, GENERIC_DIR, paragraphs_metadata[title]["directory"])
+    filepath = os.path.join(PARSED_MDS, GENERIC_DIR, paragraphs_metadata[title][DIRECTORY])
     os.makedirs(filepath, exist_ok=True)
 
     write_files(title, paragraphs_text[title], paragraphs_metadata, title_order, title_order_number, filepath, OS=GENERIC)
@@ -580,7 +593,7 @@ def write_os_specific_file(title, paragraphs_text, paragraphs_metadata, title_or
             # check that file actually has some content
             if len(text[OS]) > 0:
                 # define the filepath
-                filepath = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, OS, paragraphs_metadata[title]["directory"])
+                filepath = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, OS, paragraphs_metadata[title][DIRECTORY])
                 os.makedirs(filepath, exist_ok=True)
 
                 # write the files
@@ -605,25 +618,25 @@ def write_files(title, text, paragraphs_metadata, title_order, title_order_numbe
     """
 
     # write text file
-    with open(os.path.join(filepath, paragraphs_metadata[title]["subtitle"] + ".txt"), 'w') as writefile:
+    with open(os.path.join(filepath, paragraphs_metadata[title][SUBTITLE] + ".txt"), 'w') as writefile:
         writefile.write(text)
 
     # write metadata
     metadata = paragraphs_metadata[title]
 
     if title_order_number != 0:
-        metadata["previous_title"] = title_order[title_order_number - 1]
+        metadata[PREVIOUS_TITLE] = title_order[title_order_number - 1]
     else:
-        metadata["previous_title"] = None
+        metadata[PREVIOUS_TITLE] = None
 
     if title_order_number != len(title_order) - 1:
-        metadata["next_title"] = title_order[title_order_number + 1]
+        metadata[NEXT_TITLE] = title_order[title_order_number + 1]
     else:
-        metadata["next_title"] = None
+        metadata[NEXT_TITLE] = None
 
-    metadata["OS"] = OS
+    metadata[METADATA_OS] = OS
 
-    if bool(LINUX_TUTORIAL in paragraphs_metadata[title]["directory"]):
+    if bool(LINUX_TUTORIAL in paragraphs_metadata[title][DIRECTORY]):
         linux_part = LINUX_TUTORIAL + "/"
     else:
         linux_part = ""
@@ -631,10 +644,11 @@ def write_files(title, text, paragraphs_metadata, title_order, title_order_numbe
         os_part = ""
     else:
         os_part = OS + "/"
-    metadata["reference_link"] = DOCS_URL + "/" + os_part + linux_part + paragraphs_metadata[title]["main_title"] + "/#" + ''.join(char.lower() for char in title if char.isalnum() or char == '-').strip('-')
+    metadata[REFERENCE_LINK] = DOCS_URL + "/" + os_part + linux_part + paragraphs_metadata[title][MAIN_TITLE] + "/#" + ''.join(char.lower() for char in title if char.isalnum() or char == '-').strip('-')
 
-    with open(os.path.join(filepath, paragraphs_metadata[title]["subtitle"] + "_metadata.json"), 'w') as writefile:
+    with open(os.path.join(filepath, paragraphs_metadata[title][SUBTITLE] + "_metadata.json"), 'w') as writefile:
         json.dump(metadata, writefile, indent=4)
+
 
 def main():
     """
