@@ -62,7 +62,7 @@ REFERENCE_LINK = "reference_link"
 
 
 ################### define functions ###################
-def check_for_title(curr_line, main_title, last_directory, last_title, curr_dirs, root_dirs, link_lists, is_linux_tutorial_, in_code_block_):
+def check_for_title_xl(curr_line, main_title, last_directory, last_title, curr_dirs, root_dirs, link_lists, is_linux_tutorial_, in_code_block_):
     """
     function that uses the check_for_title_logic function to create the appropriate directories and update the necessary variables
 
@@ -115,8 +115,15 @@ def check_for_title(curr_line, main_title, last_directory, last_title, curr_dirs
         return logic_output, make_valid_title(curr_line[logic_output + 1:-1].replace(' ', '-')), curr_dirs[logic_output], curr_dirs, link_lists
 
 
-def check_for_title_simple(line, in_code_block, curr_dirs):
+def check_for_title(line, in_code_block, curr_dirs):
+    """
+    function that checks for titles in the current line. Used by split_text to split the text among the subtitles
 
+    :param line: the current line to be checked for a title
+    :param in_code_block: boolean indicating whether the current line is part of a codeblock to be sure comments aren't counted as titles
+    :param curr_dirs: the current working directories for each level of subtitle, to be updated when a new title is found
+    :return title_length: The amount of hashtags in front of the title on the current line
+    """
     # detect titles
     match = re.match(r'^#+ ', line)
     if match and len(match.group(0)) <= 5 and not in_code_block:
@@ -234,6 +241,14 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
 
 
 def split_text(file, main_title):
+    """
+    Function that splits the text into smaller sections and makes them into two dictionaries containing text and metadata
+    :param file: the filepath of the file to be split
+    :param main_title: the main title of the file
+    :return paragraphs_text: dictionary containing the split sections of text
+    :return paragraphs_metadata: dictionary containing the metadata of each split section of text
+    :return subtitle_order: list containing all encountered subtitles in order of appearance
+    """
 
     # start of assuming we haven't encountered a title
     after_first_title = False
@@ -272,7 +287,7 @@ def split_text(file, main_title):
                 last_title_level = title_level
                 last_dir = curr_dirs[last_title_level]
 
-            title_level = check_for_title_simple(line, in_code_block, curr_dirs)
+            title_level = check_for_title(line, in_code_block, curr_dirs)
 
             # detect codeblocks to make sure titles aren't detected in them
             if '```' in line or (('<pre><code>' in line) ^ ('</code></pre>' in line)):
@@ -309,6 +324,16 @@ def split_text(file, main_title):
 
 
 def write_metadata(main_title, subtitle, links, title_level, directory):
+    """
+    Function that writes metadata about a text section to a dictionary
+
+    :param main_title: The main title of the file containing the section
+    :param subtitle: the title of the section
+    :param links: a list of links contained within the section
+    :param title_level: the depth of the title of the section
+    :param directory: the directory where the section will eventually be written (can either be generic or os-specific)
+    :return paragraph_metadata: dictionary containing the metadata about the section
+    """
 
     paragraph_metadata = {'main_title': main_title, 'subtitle': subtitle, 'title_depth': title_level, 'directory': directory}
 
@@ -323,6 +348,17 @@ def write_metadata(main_title, subtitle, links, title_level, directory):
 
 
 def close_ifs(text):
+    """
+    Function to check whether all if-statements in a section are closed properly. If that is not the case, the function
+    closes all if-statements at the end of the section and returns a prefix for the next section containing all if-statements
+    of the section it is processing. This needs to be done because the start of the next section would also be contained within the
+    last unclosed if-statement of its previous section.
+
+    :param text: the text of the section it checks
+    :return text: the adapted text where all if-statements are closed
+    :return prefix: the prefix for the next section
+    """
+
     patterns = {
         'if': r'({' + IF_MANGLED_PART + r'%[-\s]*if\s+OS\s*[!=]=\s*.+?[-\s]*%' + IF_MANGLED_PART + '})',
         'endif': r'({' + IF_MANGLED_PART + r'%\s*-?\s*endif\s*-?\s*%' + IF_MANGLED_PART + '})',
@@ -707,6 +743,16 @@ def make_valid_title(title):
 
 
 def write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order, title_order_number):
+    """
+    Function that writes text and metadata of a generic (non-os-specific) file
+
+    :param title: title of section
+    :param paragraphs_text: dictionary containing all paragraphs of text
+    :param paragraphs_metadata: dictionary containing the metadata for all paragraphs of text
+    :param title_order: list containing all subtitles in order
+    :param title_order_number: order number of the title of the section that is being written
+    :return:
+    """
 
     # make the directory needed for the files that will be written
     filepath = os.path.join(PARSED_MDS, GENERIC_DIR, paragraphs_metadata[title]["directory"])
@@ -716,6 +762,16 @@ def write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order,
 
 
 def write_os_specific_file(title, paragraphs_text, paragraphs_metadata, title_order, title_order_number):
+    """
+    Function that writes text and metadata of os-specific files
+
+    :param title: title of section
+    :param paragraphs_text: dictionary containing all paragraphs of text
+    :param paragraphs_metadata: dictionary containing the metadata for all paragraphs of text
+    :param title_order: list containing all subtitles in order
+    :param title_order_number: order number of the title of the section that is being written
+    :return:
+    """
     for i, OS in enumerate([LINUX, WINDOWS, MACOS]):
 
         # Unmangle if's to use jinja parser
@@ -734,6 +790,19 @@ def write_os_specific_file(title, paragraphs_text, paragraphs_metadata, title_or
 
 
 def write_files(title, text, paragraphs_metadata, title_order, title_order_number, filepath, OS):
+    """
+    Function to write files to a certain filepath
+
+    :param title: title of the section to be written
+    :param text: section of text to be written
+    :param paragraphs_metadata: dictionary containing the metadata for all paragraphs of text
+    :param title_order: list containing all subtitles in order
+    :param title_order_number: order number of the title of the section that is being written
+    :param filepath: filepath to write files to
+    :param OS: OS to be included in the metadata
+    :return:
+    """
+
     # write text file
     with open(os.path.join(filepath, paragraphs_metadata[title]["subtitle"] + ".txt"), 'w') as writefile:
         writefile.write(text)
@@ -816,7 +885,6 @@ def main():
     # for loops over all files
     for filenames in [filenames_generic, filenames_linux]:
         for filename in filenames.keys():
-            # print(filename)
             ################### define/reset loop specific variables ###################
 
             # variable that keeps track of whether file is part of the linux tutorial
@@ -896,12 +964,11 @@ def main():
                 else:
                     write_os_specific_file(subtitle, paragraphs_text, paragraphs_metadata, subtitle_order, i)
 
-
             # # open the file and store line by line in the right file
             # with open(copy_file, 'r') as readfile:
             #
             #     for line in readfile:
-            #         title_level, title, directory, curr_dirs, link_lists = check_for_title(line, main_title, last_directory, last_title, curr_dirs, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists, is_linux_tutorial, in_code_block)
+            #         title_level, title, directory, curr_dirs, link_lists = check_for_title_xl(line, main_title, last_directory, last_title, curr_dirs, [root_dir_generic, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos], link_lists, is_linux_tutorial, in_code_block)
             #
             #         # detect codeblocks to make sure titles aren't detected in them
             #         if '```' in line or (('<pre><code>' in line) ^ ('</code></pre>' in line)):
