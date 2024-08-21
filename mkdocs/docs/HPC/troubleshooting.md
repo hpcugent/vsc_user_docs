@@ -98,8 +98,9 @@ and thus requesting multiple cores and/or nodes will only result in wasted resou
 
 If you get from your job output an error message similar to this:
 
-<pre><code>=>> PBS: job killed: walltime <i>&lt;value in seconds&gt; exceeded limit  &lt;value in seconds&gt;</i>
-</code></pre>
+```
+=>> PBS: job killed: walltime <value in seconds> exceeded limit  <value in seconds>
+```
 
 This occurs when your job did not complete within the requested
 walltime. See
@@ -119,7 +120,6 @@ option is to request extra quota for your VO to the VO moderator/s. See
 section on [Pre-defined user directories](../running_jobs_with_input_output_data/#pre-defined-user-directories) and [Pre-defined quotas](../running_jobs_with_input_output_data/#pre-defined-quotas) for more information about quotas
 and how to use the storage endpoints in an efficient way.
 {% endif %}
-<!-- FIXME: Add how to request quota section -->
 
 ## Issues connecting to login node { #sec:connecting-issues}
 
@@ -128,8 +128,9 @@ the key/lock analogy in [How do SSH keys work?](../account/#how-do-ssh-keys-work
 
 If you have errors that look like:
 
-<pre><code>{{ userid }}@{{ loginnode }}: Permission denied
-</code></pre>
+```
+{{ userid }}@{{ loginnode }}: Permission denied
+```
 
 or you are experiencing problems with connecting, here is a list of
 things to do that should help:
@@ -150,12 +151,13 @@ things to do that should help:
     2. Use `ssh-add` (see section [Using an SSH agent](../account/#using-an-ssh-agent-optional)) *OR;*
     3. Specify the location of the key in `$HOME/.ssh/config`. You will
                 need to replace the VSC login id in the `User` field with your own:
-                <pre><code>                Host {{ hpcname }}
+                ```
+                Host {{ hpcname }}
                     Hostname {{ loginnode }}
-                    IdentityFile <i>/path/to/private/key</i>
-                    User <i>{{ userid }}</I>
-                </code></pre>
-        Now you can just connect with <tt> ssh {{ hpcname }}</tt>.
+                    IdentityFile /path/to/private/key
+                    User {{ userid }}
+                ```
+        Now you can connect with `ssh {{ hpcname }}`.
 {% endif %}
 
 4.  Please double/triple check your VSC login ID. It should look
@@ -193,8 +195,9 @@ things to do that should help:
 {% if OS == windows %}
 If you are using PuTTY and get this error message:
 
-<pre><code>server unexpectedly closed network connection
-</code></pre>
+```
+server unexpectedly closed network connection
+```
 
 it is possible that the PuTTY version you are using is too old and
 doesn't support some required (security-related) features.
@@ -217,49 +220,35 @@ and include it in the email.
 
 2.  Single click on the saved configuration
 
-    <center>
     ![image](img/831change01.png)
-    </center>
 
 3.  Then click ++"Load"++ button
 
-    <center>
     ![image](img/831change02.png)
-    </center>
 
 4.  Expand SSH category (on the left panel) clicking on the "+" next
     to SSH
 
-    <center>
     ![image](img/831change03.png)
-    </center>
 
 5.  Click on Auth under the SSH category
 
-    <center>
     ![image](img/831change04.png)
-    </center>
 
 6.  On the right panel, click ++"Browse"++ button
 
-    <center>
     ![image](img/831change05.png)
-    </center>
 
 7.  Then search your private key on your computer (with the extension
     ".ppk")
 
 8.  Go back to the top of category, and click Session
 
-    <center>
     ![image](img/831change06.png)
-    </center>
 
 9.  On the right panel, click on ++"Save"++ button
 
-    <center>
     ![image](img/831change07.png)
-    </center>
 
 ### Check whether your private key in PuTTY matches the public key on the accountpage
 
@@ -269,28 +258,20 @@ Follow the instructions in [Change PuTTY private key for a saved configuration](
     then select all text (push ++"Ctrl"++ + ++"a"++ ), then copy the location of the
     private key (push ++"Ctrl"++ + ++"c"++)
 
-    <center>
     ![image](img/832check05.png)
-    </center>
 
 2.  Open PuTTYgen
 
-    <center>
     ![image](img/832check06.png)
-    </center>
 
 3.  Enter menu item "File" and select "Load Private key"
 
-    <center>
     ![image](img/832check07.png)
-    </center>
 
 4.  On the "Load private key" popup, click in the textbox next to
     "File name:", then paste the location of your private key (push ++"Ctrl"++ + ++"v"++), then click ++"Open"++
 
-    <center>
     ![image](img/832check08.png)
-    </center>
 
 5.  Make sure that your Public key from the "Public key for pasting
     into OpenSSH authorized_keys file" textbox is in your "Public
@@ -298,15 +279,14 @@ Follow the instructions in [Change PuTTY private key for a saved configuration](
     (Scroll down to the bottom of "View Account" tab, you will find
     there the "Public keys" section)
 
-    <center>
     ![image](img/832check09.png)
-    </center>
 
 {% else %}
 Please add `-vvv` as a flag to `ssh` like:
 
-<pre><code>ssh -vvv {{ userid }}@{{ loginnode }}
-</code></pre>
+```
+ssh -vvv {{ userid }}@{{ loginnode }}
+```
 
 and include the output of that command in the message.
 {% endif %}
@@ -320,7 +300,8 @@ system you are connecting to has changed.
 
 {% if OS == (linux or macos) %}
 
-<pre><code>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
+```
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
 @     WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!    @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
 IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY! 
@@ -331,10 +312,10 @@ The fingerprint for the ECDSA key sent by the remote host is
 SHA256:1MNKFTfl1T9sm6tTWAo4sn7zyEfiWFLKbk/mlT+7S5s. 
 Please contact your system administrator. 
 Add correct host key in  ~/.ssh/known_hosts to get rid of this message. 
-Offending ECDSA key in  ~/.ssh/known_hosts:<b>21</b>
+Offending ECDSA key in  ~/.ssh/known_hosts:21
 ECDSA host key for {{ loginnode }} has changed and you have requested strict checking.
 Host key verification failed.
-</code></pre>
+```
 
 You will need to remove the line it's complaining about (in the example,
 line 21). To do that, open `~/.ssh/known_hosts` in an editor, and remove the
@@ -344,8 +325,9 @@ to.
 Alternatively you can use the command that might be shown by the warning under
 `remove with:` and it should be something like this:
 
-<pre><code>ssh-keygen -f "~/.ssh/known_hosts" -R "{{loginnode}}"
-</code></pre>
+```
+ssh-keygen -f "~/.ssh/known_hosts" -R "{{loginnode}}"
+```
 
 If the command is not shown, take the file from the "Offending ECDSA key in",
 and the host name from "ECDSA host key for" lines.
@@ -356,8 +338,9 @@ After you've done that, you'll need to connect to the {{ hpc }} again. See [Warn
 You will need to verify that the fingerprint shown in the dialog matches
 one of the following fingerprints:
 
-<pre><code>{{ puttyFirstConnect }}
-</code></pre>
+```
+{{ puttyFirstConnect }}
+```
 
 **Do not click "Yes" until you verified the fingerprint. Do not press "No" in any case.**
 
@@ -367,9 +350,7 @@ If it doesn't (like in the example) or you are in doubt, take a screenshot, pres
 
 {% include "../macros/sshedfingerprintnote.md" %}
 
-<center>
 ![image](img/putty_security_alert.jpg)
-</center>
 
 {% if site == gent %}
 If you use X2Go client, you might get one of the following fingerprints:
@@ -389,14 +370,16 @@ If it doesn't, or you are in doubt, take a screenshot, press "Yes" and contact {
 
 If you get errors like:
 
-<pre><code><b>qsub fibo.pbs</b>
+```
+qsub fibo.pbs
 qsub: script is written in DOS/Windows text format
-</code></pre>
+```
 
 or
 
-<pre><code>sbatch: error: Batch script contains DOS line breaks (\r\n)
-</code></pre>
+```
+sbatch: error: Batch script contains DOS line breaks (\r\n)
+```
 
 It's probably because you transferred the files from a Windows computer.
 See the [section about `dos2unix` in Linux tutorial](https://hpcugent.github.io/vsc_user_docs/linux-tutorial/uploading_files/#dos2unix) to fix this error.
@@ -405,17 +388,20 @@ See the [section about `dos2unix` in Linux tutorial](https://hpcugent.github.io/
 
 {% if OS == (linux or macos) %}
 
-<pre><code><b>ssh {{userid}}@{{loginnode}}</b>
-The authenticity of host {{loginnode}} (&lt;IP-adress&gt;) can't be established. 
-<u>&lt;algorithm&gt; key fingerprint is &lt;hash&gt;</u>
+```
+ssh {{userid}}@{{loginnode}}
+The authenticity of host {{loginnode}} (<IP-adress>) can't be established. 
+<algorithm> key fingerprint is <hash>
 Are you sure you want to continue connecting (yes/no)?
-</code></pre>
+```
 
 Now you can check the authenticity by checking if the line that is at
 the place of the underlined piece of text matches one of the following
 lines:
 
-<pre><code>{{opensshFirstConnect}}</code></pre>
+```
+{{opensshFirstConnect}}
+```
 {% endif %}
 
 {% if site == gent %} 
@@ -473,8 +459,6 @@ you via the `ulimit -v` command *in your job script*.
 
 See [Generic resource requirements](../running_batch_jobs/#generic-resource-requirements) to set memory and other requirements, see [Specifying memory requirements](../fine_tuning_job_specifications/#specifying-memory-requirements) to finetune the amount of
 memory you request.
-<!-- % See issue #248 to fix Java. This is software specific.
-% See issue #196 to fix MATLAB. This is software specific. -->
 
 {% if site == gent %}
 ## Module conflicts
@@ -484,8 +468,9 @@ is impossible to load two versions of the same module. In the following
 example, we try to load a module that uses the `intel-2018a` toolchain
 together with one that uses the `intel-2017a` toolchain:
 
-<pre><code>$ <b>module load Python/2.7.14-intel-2018a</b>
-$ <b>module load  HMMER/3.1b2-intel-2017a</b>
+```
+$ module load Python/2.7.14-intel-2018a
+$ module load  HMMER/3.1b2-intel-2017a
 Lmod has detected the following error: A different version of the 'intel' module is already loaded (see output of 'ml'). 
 You should load another 'HMMER' module for that is compatible with the currently loaded version of 'intel'. 
 Use 'ml avail HMMER' to get an overview of the available versions.
@@ -496,7 +481,7 @@ While processing the following module(s):
     Module fullname          Module Filename
     ---------------          ---------------
     HMMER/3.1b2-intel-2017a  /apps/gent/CO7/haswell-ib/modules/all/HMMER/3.1b2-intel-2017a.lua
-</code></pre>
+```
 
 This resulted in an error because we tried to load two different
 versions of the `intel` module.
@@ -507,11 +492,12 @@ a module with `module avail`: for `HMMER`, this command is `module avail HMMER`.
 
 Another common error is:
 
-<pre><code>$ <b>module load cluster/{{othercluster}}</b>
+```
+$ module load cluster/{{othercluster}}
 Lmod has detected the following error: A different version of the 'cluster' module is already loaded (see output of 'ml').
 
 If you don't understand the warning or error, contact the helpdesk at hpc@ugent.be
-</code></pre>
+```
 
 This is because there can only be one `cluster` module active at a time.
 The correct command is `module swap cluster/{{othercluster}}`. See also [Specifying the cluster on which to run](../running_batch_jobs/#specifying-the-cluster-on-which-to-run).
@@ -524,22 +510,24 @@ The correct command is `module swap cluster/{{othercluster}}`. See also [Specify
 When running software provided through modules (see [Modules](../running_batch_jobs/#modules)), you may run into
 errors like:
 
-<pre><code>$ <b>module swap cluster/donphan</b>
+```
+$ module swap cluster/donphan
 The following have been reloaded with a version change:
   1) cluster/doduo => cluster/donphan         3) env/software/doduo => env/software/donphan
   2) env/slurm/doduo => env/slurm/donphan     4) env/vsc/doduo => env/vsc/donphan
 
-$ <b>module load Python/3.10.8-GCCcore-12.2.0</b>
-$ <b>python</b>
+$ module load Python/3.10.8-GCCcore-12.2.0
+$ python
 Please verify that both the operating system and the processor support
 Intel(R) MOVBE, F16C, FMA, BMI, LZCNT and AVX2 instructions.
-</code></pre>
+```
 
 or errors like:
 
-<pre><code>$ <b>python</b>
+```
+$ python
 Illegal instruction
-</code></pre>
+```
 
 When we swap to a different cluster, the available modules change so
 they work for that cluster. That means that if the cluster and the login
@@ -555,8 +543,9 @@ all our modules will get reloaded. This means that all current modules
 will be unloaded and then loaded again, so they'll work on the newly
 loaded cluster. Here's an example of how that would look like:
 
-<pre><code>$ <b>module load Python/3.10.8-GCCcore-12.2.0</b>
-$ <b>module swap cluster/donphan</b>
+```
+$ module load Python/3.10.8-GCCcore-12.2.0
+$ module swap cluster/donphan
 
 Due to MODULEPATH changes, the following have been reloaded:
   1) GCCcore/12.2.0                   8) binutils/2.39-GCCcore-12.2.0
@@ -570,7 +559,7 @@ Due to MODULEPATH changes, the following have been reloaded:
 The following have been reloaded with a version change:
   1) cluster/doduo => cluster/donphan         3) env/software/doduo => env/software/donphan
   2) env/slurm/doduo => env/slurm/donphan     4) env/vsc/doduo => env/vsc/donphan
-</code></pre>
+```
 
 This might result in the same problems as mentioned above. When swapping
 to a different cluster, you can run `module purge` to unload all modules
@@ -581,9 +570,10 @@ to avoid problems (see [Purging all modules](../running_batch_jobs/#purging-all-
 When using a tool that is made available via modules to submit jobs, for example [Worker](multi_job_submission.md),
 you may run into the following error when targeting a non-default cluster:
 
-<pre><code>$ <b> wsub</b>
-/apps/gent/.../.../software/worker/.../bin/wsub: line 27: 2152510 <b>Illegal instruction</b>     (core dumped) ${PERL} ${DIR}/../lib/wsub.pl "$@"
-</code></pre>
+```
+$  wsub
+/apps/gent/.../.../software/worker/.../bin/wsub: line 27: 2152510 Illegal instruction     (core dumped) ${PERL} ${DIR}/../lib/wsub.pl "$@"
+```
 
 When executing the `module swap cluster` command, you are not only changing your session environment to submit
 to that specific cluster, but also to use the part of the central software stack that is specific to that cluster.
@@ -598,9 +588,13 @@ The same goes for the other clusters as well of course.
 
 !!! Tip
     To submit a Worker job to a specific cluster, like the [`donphan` interactive cluster](interactive_debug.md) for instance, use:
-    <pre><code>$ <b>module swap env/slurm/donphan</b> </code></pre>
+    ```
+    $ module swap env/slurm/donphan 
+    ```
     instead of
-    <pre><code>$ <b>module swap cluster/donphan</b> </code></pre>
+    ```
+    $ module swap cluster/donphan 
+    ```
 
 We recommend using a `module swap cluster` command after submitting the jobs.
 
