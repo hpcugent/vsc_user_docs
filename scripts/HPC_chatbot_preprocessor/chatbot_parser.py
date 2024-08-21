@@ -531,7 +531,7 @@ def make_valid_title(title):
     :return valid_filename: the adapted title that can be used as filename
     """
     # Define a regex pattern for invalid characters on both Windows and Linux
-    invalid_chars = r'[<>:"/\\|?*\0()]'
+    invalid_chars = r'[<>:"/\\|?*\0]'
 
     # get rid of extra information between {} brackets
     title = re.sub(r'\{.*?}', '', title)
@@ -805,6 +805,7 @@ def main():
 
 
 ################### run the script ###################
-print("WARNING: This script generates a file structure that contains rather long filepaths. Depending on where the script is ran, some of these paths might exceed the maximum length allowed by the system resulting in problems opening the files.")
-main()
-print("Parsing finished successfully")
+if __name__ == '__main__':
+    print("WARNING: This script generates a file structure that contains rather long filepaths. Depending on where the script is ran, some of these paths might exceed the maximum length allowed by the system resulting in problems opening the files.")
+    main()
+    print("Parsing finished successfully")
