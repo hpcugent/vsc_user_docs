@@ -1,3 +1,4 @@
+import copy
 import json
 import os
 import re
@@ -73,6 +74,10 @@ IF = "if"
 ELSE = "else"
 ENDIF = "endif"
 
+# link indicators
+LINK_BEFORE = r'§link§link§'
+LINK_AFTER = r'§link§link§'
+
 
 ################### define functions ###################
 
@@ -120,14 +125,14 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
     matches = re.findall(r'\[(.*?)]\((.*?)\)', curr_line)
     if matches:
         for match in matches:
-            curr_line = curr_line.replace(f"[{match[0]}]({match[1]})", match[0] + "[" + str(len(linklist) + 1) + "]")
+            curr_line = curr_line.replace(f"[{match[0]}]({match[1]})", match[0] + LINK_BEFORE + str(len(linklist)) + LINK_AFTER)
             if ".md" not in match[1]:
                 if "#" not in match[1]:
                     linklist.append(match[1])
                 else:
-                    linklist.append(DOCS_URL + main_title + "/" + match[1])
+                    linklist.append(DOCS_URL + "/" + main_title + "/" + match[1])
             else:
-                linklist.append(DOCS_URL + match[1].replace(".md", "/").replace("index", "").rstrip("/"))
+                linklist.append(DOCS_URL + "/" + match[1].replace(".md", "/").replace("index", "").rstrip("/"))
 
     # codeblock (with ``` -> always stands on a separate line, so line can be dropped)
     if '```' in curr_line:
@@ -617,13 +622,17 @@ def write_files(title, text, paragraphs_metadata, title_order, title_order_numbe
     :return:
     """
 
+    metadata = copy.deepcopy(paragraphs_metadata[title])
+
     # write text file
     with open(os.path.join(filepath, paragraphs_metadata[title][SUBTITLE] + ".txt"), 'w') as writefile:
-        writefile.write(text)
+        if LINKS in paragraphs_metadata[title].keys():
+            adapted_text, metadata[LINKS] = insert_links(text, metadata[LINKS])
+            writefile.write(adapted_text)
+        else:
+            writefile.write(text)
 
     # write metadata
-    metadata = paragraphs_metadata[title]
-
     if title_order_number != 0:
         metadata[PREVIOUS_TITLE] = title_order[title_order_number - 1]
     else:
@@ -648,6 +657,32 @@ def write_files(title, text, paragraphs_metadata, title_order, title_order_numbe
 
     with open(os.path.join(filepath, paragraphs_metadata[title][SUBTITLE] + "_metadata.json"), 'w') as writefile:
         json.dump(metadata, writefile, indent=4)
+
+
+def insert_links(text, links):
+    """
+    Function that inserts links in the plaintext or takes out the references to the links depending on the value of INCLUDE_LINKS_IN_PLAINTEXT
+
+    :param text: The plaintext that needs to be adapted
+    :param links: The links that might need to be inserted
+    :return text: The adapted plaintext
+    :return links: The links that were actually present in the text
+    """
+
+    present_links = []
+    new_links = {}
+    for link_number in re.finditer(LINK_BEFORE + r'([0-9]*?)' + LINK_AFTER, text):
+        present_links.append(link_number.group(1))
+        if INCLUDE_LINKS_IN_PLAINTEXT:
+            text = re.sub(LINK_BEFORE + link_number.group(1) + LINK_AFTER, " " + links[link_number.group(1)] + " ", text)
+        else:
+            text = re.sub(LINK_BEFORE + link_number.group(1) + LINK_AFTER, "", text)
+
+    for link_number in links.keys():
+        if link_number in present_links:
+            new_links[len(new_links.keys())] = links[link_number]
+
+    return text, new_links
 
 
 def main():
@@ -679,22 +714,22 @@ def main():
     source_directories = [os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR),
                           os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR, LINUX_TUTORIAL)]
 
-    # list of all the filenames
-    filenames_generic = {}
-    filenames_linux = {}
-    for source_directory in source_directories:
-        all_items = os.listdir(source_directory)
-        files = [f for f in all_items if os.path.isfile(os.path.join(source_directory, f)) and ".md" in f[-3:]]
-        for file in files:
-            if LINUX_TUTORIAL in source_directory:
-                filenames_linux[file] = os.path.join(source_directory, file)
-            else:
-                filenames_generic[file] = os.path.join(source_directory, file)
-
-    # # Temporary variables to test with just one singular file
+    # # list of all the filenames
     # filenames_generic = {}
     # filenames_linux = {}
-    # filenames_generic["account.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/account.md"
+    # for source_directory in source_directories:
+    #     all_items = os.listdir(source_directory)
+    #     files = [f for f in all_items if os.path.isfile(os.path.join(source_directory, f)) and ".md" in f[-3:]]
+    #     for file in files:
+    #         if LINUX_TUTORIAL in source_directory:
+    #             filenames_linux[file] = os.path.join(source_directory, file)
+    #         else:
+    #             filenames_generic[file] = os.path.join(source_directory, file)
+
+    # Temporary variables to test with just one singular file
+    filenames_generic = {}
+    filenames_linux = {}
+    filenames_generic["account.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/account.md"
     # filenames_linux["beyond_the_basics.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/linux-tutorial/beyond_the_basics.md"
 
     # for loops over all files
