@@ -48,30 +48,32 @@ scenario that can be reduced to a **MapReduce** approach.[^1]
 ## The worker Framework: Parameter Sweeps
 
 First go to the right directory:
-<pre><code>$ <b>cd ~/examples/Multi-job-submission/par_sweep</b></code></pre>
+
+```
+$ cd ~/examples/Multi-job-submission/par_sweep
+```
 
 Suppose the user wishes to run the "*weather*" program,
 which takes three parameters: a temperature, a pressure and a volume. A
 typical call of the program looks like:
-<pre><code>$ <b>./weather -t 20 -p 1.05 -v 4.3</b>
-T: 20  P: 1.05  V: 4.3</code></pre>
+
+```
+$ ./weather -t 20 -p 1.05 -v 4.3
+T: 20  P: 1.05  V: 4.3
+```
 
 For the purpose of this exercise, the weather program is just a simple
 bash script, which prints the 3 variables to the standard output and
 waits a bit:
 
-<p style="text-align: center">par_sweep/weather</p>
-
-```shell
+```shell title="par_sweep/weather"
 {% include "examples/Multi-job-submission/par_sweep/weather" %}
 ```
 
 A job script that would run this as a job for the first parameters (p01)
 would then look like:
 
-<p style="text-align: center">par_sweep/weather_p01.pbs</p>
-
-```shell
+```shell title="par_sweep/weather_p01.pbs"
 {% include "examples/Multi-job-submission/par_sweep/weather_p01.pbs" %}
 ```
 
@@ -80,7 +82,10 @@ particular instance of the parameters, i.e., temperature = 20, pressure
 = 1.05, and volume = 4.3.
 
 To submit the job, the user would use:
-<pre><code>$ <b>qsub weather_p01.pbs</b></code></pre>
+
+```
+$ qsub weather_p01.pbs
+```
 However, the user wants to run this program for many parameter
 instances, e.g., he wants to run the program on 100 instances of
 temperature, pressure and volume. The 100 parameter instances can be
@@ -88,14 +93,17 @@ stored in a comma separated value file (.csv) that can be generated
 using a spreadsheet program such as Microsoft Excel or RDBMS or just by
 hand using any text editor (do **not** use a word processor such as Microsoft
 Word). The first few lines of the file "*data.csv*" would look like:
-<pre><code>$ <b>more data.csv</b>
+
+```
+$ more data.csv
 temperature, pressure, volume
 293, 1.0e5, 107
 294, 1.0e5, 106
 295, 1.0e5, 105
 296, 1.0e5, 104
 297, 1.0e5, 103
-...</code></pre>
+...
+```
 
 It has to contain the names of the variables on the first line, followed
 by 100 parameter instances in the current example.
@@ -103,9 +111,7 @@ by 100 parameter instances in the current example.
 In order to make our PBS generic, the PBS file can be modified as
 follows:
 
-<p style="text-align: center">par_sweep/weather.pbs</p>
-
-```shell
+```shell title="par_sweep/weather.pbs"
 {% include "examples/Multi-job-submission/par_sweep/weather.pbs" %}
 ```
 
@@ -128,10 +134,13 @@ minutes, i.e., 4 hours to be on the safe side.
 
 The job can now be submitted as follows (to check which `worker` module
 to use, see subsection [Using explicit version numbers](running_batch_jobs.md#using-explicit-version-numbers)):
-<pre><code>$ <b>module load worker/1.6.12-foss-2021b</b>
-$ <b>wsub -batch weather.pbs -data data.csv</b>
+
+```
+$ module load worker/1.6.12-foss-2021b
+$ wsub -batch weather.pbs -data data.csv
 total number of work items: 41
-{{jobid}}</code></pre>
+{{jobid}}
+```
 
 Note that the PBS file is the value of the -batch option. The weather
 program will now be run for all 100 parameter instances -- 8
@@ -140,17 +149,26 @@ a parameter instance is called a work item in Worker parlance.
 
 !!! warning
     When you attempt to submit a worker job on a non-default cluster, you might encounter an `Illegal instruction` error. In such cases, the solution is to use a different `module swap` command. For example, to submit a worker job to the [`donphan` debug cluster](interactive_debug.md) from the login nodes, use:
-    <pre><code>$ <b>module swap env/slurm/donphan</b>
-    </code></pre>
+    
+    ```
+    $ module swap env/slurm/donphan
+    ```
+
     instead of
-    <pre><code>$ <b>module swap cluster/donphan </b></code></pre>
+        
+    ```
+    $ module swap cluster/donphan 
+    ```
     We recommend using a `module swap cluster` command after submitting the jobs. Additional information about this as well as more comprehensive details concerning the 'Illegal instruction' error can be accessed [here](troubleshooting.md#multi-job-submissions-on-a-non-default-cluster).
 
 ## The Worker framework: Job arrays
 [//]: # (sec:worker-framework-job-arrays)
 
 First go to the right directory:
-<pre><code>$ <b>cd ~/examples/Multi-job-submission/job_array</b></code></pre>
+
+```
+$ cd ~/examples/Multi-job-submission/job_array
+```
 
 As a simple example, assume you have a serial program called *myprog*
 that you want to run on various input files *input\[1-100\]*.
@@ -187,7 +205,10 @@ The details are
     script/program to specialise for that job
 
 The job could have been submitted using:
-<pre><code>$ <b>qsub -t 1-100 my_prog.pbs</b></code></pre>
+
+```
+$ qsub -t 1-100 my_prog.pbs
+```
 
 The effect was that rather than 1 job, the user would actually submit
 100 jobs to the queue system. This was a popular feature of TORQUE, but
@@ -200,9 +221,7 @@ arrays" in its own way.
 
 A typical job script for use with job arrays would look like this:
 
-<p style="text-align: center">job_array/job_array.pbs</p>
-
-```shell 
+```shell title="job_array/job_array.pbs"
 {% include "examples/Multi-job-submission/job_array/job_array.pbs" %}
 ```
 
@@ -213,14 +232,17 @@ with those parameters.
 
 Input for the program is stored in files with names such as input_1.dat,
 input_2.dat, ..., input_100.dat in the ./input subdirectory.
-<pre><code>$ <b>ls ./input</b>
+
+```
+$ ls ./input
 ...
-$ <b>more ./input/input_99.dat</b>
+$ more ./input/input_99.dat
 This is input file \#99
 Parameter #1 = 99
 Parameter #2 = 25.67
 Parameter #3 = Batch
-Parameter #4 = 0x562867</code></pre>
+Parameter #4 = 0x562867
+```
 
 For the sole purpose of this exercise, we have provided a short
 "test_set" program, which reads the "input" files and just copies them
@@ -229,18 +251,14 @@ file. The corresponding output computed by our "*test_set*" program will
 be written to the *"./output*" directory in output_1.dat, output_2.dat,
 ..., output_100.dat. files.
 
-<p style="text-align: center">job_array/test_set</p>
-
-```shell
+```shell title="job_array/test_set"
 {% include "examples/Multi-job-submission/job_array/test_set" %}
 ```
 
 Using the "worker framework", a feature akin to job arrays can be used
 with minimal modifications to the job script:
 
-<p style="text-align: center">job_array/test_set.pbs</p>
-
-```shell
+```shell title="job_array/test_set.pbs"
 {% include "examples/Multi-job-submission/job_array/test_set.pbs" %}
 ```
 
@@ -253,10 +271,13 @@ Note that
     walltime=04:00:00).
 
 The job is now submitted as follows:
-<pre><code>$ <b>module load worker/1.6.12-foss-2021b</b>
-$ <b>wsub -t 1-100 -batch test_set.pbs</b>
+
+```
+$ module load worker/1.6.12-foss-2021b
+$ wsub -t 1-100 -batch test_set.pbs
 total number of work items: 100
-{{jobid}}</code></pre>
+{{jobid}}
+```
 
 The "*test_set*" program will now be run for all 100 input files -- 8
 concurrently -- until all computations are done. Again, a computation
@@ -265,16 +286,18 @@ work item in Worker speak.
 
 Note that in contrast to TORQUE job arrays, a worker job array only
 submits a single job.
-<pre><code>$ <b>qstat</b>
+
+```
+$ qstat
 Job id          Name          User      Time   Use S Queue
 --------------- ------------- --------- ---- ----- - -----
 {{jobid}}  test_set.pbs  {{userid}}          0 Q
 
 And you can now check the generated output files:
-$ <b>more ./output/output_99.dat</b>
+$ more ./output/output_99.dat
 This is output file #99
 Calculations done, no results
-</code></pre>
+```
 
 ## MapReduce: prologues and epilogue
 
@@ -299,33 +322,36 @@ is executed just once after the work on all work items has finished.
 Technically, the master, i.e., the process that is responsible for
 dispatching work and logging progress, executes the prologue and
 epilogue.
-<pre><code>$ <b>cd ~/examples/Multi-job-submission/map_reduce</b></code></pre>
+
+```
+$ cd ~/examples/Multi-job-submission/map_reduce
+```
 
 The script "pre.sh" prepares the data by creating 100 different
 input-files, and the script "post.sh" aggregates (concatenates) the
 data.
 
 First study the scripts:
-<p style="text-align: center">map_reduce/pre.sh</p>
 
-```shell
+```shell title="map_reduce/pre.sh"
 {% include "examples/Multi-job-submission/map_reduce/pre.sh" %}
 ```
 
-<p style="text-align: center">map_reduce/post.sh</p>
-
-```shell
+```shell title="map_reduce/post.sh"
 {% include "examples/Multi-job-submission/map_reduce/post.sh" %}
 ```
 
 
 Then one can submit a MapReduce style job as follows:
-<pre><code>$ <b>wsub</b> -prolog pre.sh -batch test_set.pbs -epilog post.sh -t 1-100
+
+```
+$ wsub -prolog pre.sh -batch test_set.pbs -epilog post.sh -t 1-100
 total number of work items: 100
 {{jobid}}
-$ <b>cat all_output.txt</b>
+$ cat all_output.txt
 ...
-$ <b>rm -r -f ./output/</b></code></pre>
+$ rm -r -f ./output/
+```
 
 Note that the time taken for executing the prologue and the epilogue
 should be added to the job's total walltime.
@@ -356,11 +382,17 @@ from the job's name and the job's ID, i.e., it has the form
 `<jobname>.log<jobid>`. For the running example, this could be
 `run.pbs.log{{jobid}}`, assuming the job's ID is {{jobid}}. To keep an eye on the
 progress, one can use:
-<pre><code>$ <b>tail -f run.pbs.log{{jobid}}</b></code></pre>
+
+```
+$ tail -f run.pbs.log{{jobid}}
+```
 
 Alternatively, `wsummarize`, a Worker command that summarises a log
 file, can be used:
-<pre><code>$ <b>watch -n 60 wsummarize run.pbs.log{{jobid}}</b></code></pre>
+
+```
+$ watch -n 60 wsummarize run.pbs.log{{jobid}}
+```
 
 This will summarise the log file every 60 seconds.
 
@@ -398,13 +430,19 @@ processed. Worker makes it very easy to resume such a job without having
 to figure out which work items did complete successfully, and which
 remain to be computed. Suppose the job that did not complete all its
 work items had ID "445948".
-<pre><code>$ <b>wresume -jobid {{jobid}}</b></code></pre>
+
+```
+$ wresume -jobid {{jobid}}
+```
 
 This will submit a new job that will start to work on the work items
 that were not done yet. Note that it is possible to change almost all
 job parameters when resuming, specifically the requested resources such
 as the number of cores and the walltime.
-<pre><code>$ <b>wresume -l walltime=1:30:00 -jobid {{jobid}}}</b></code></pre>
+
+```
+$ wresume -l walltime=1:30:00 -jobid {{jobid}}}
+```
 
 Work items may fail to complete successfully for a variety of reasons,
 e.g., a data file that is missing, a (minor) programming error, etc.
@@ -413,7 +451,10 @@ done, so resuming a job will only execute work items that did not
 terminate either successfully, or reporting a failure. It is also
 possible to retry work items that failed (preferably after the glitch
 why they failed was fixed).
-<pre><code>$ <b>wresume -jobid {{jobid}} -retry</b></code></pre>
+
+```
+$ wresume -jobid {{jobid}} -retry
+```
 
 By default, a job's prologue is not executed when it is resumed, while
 its epilogue is. "wresume" has options to modify this default behaviour.
@@ -423,7 +464,9 @@ its epilogue is. "wresume" has options to modify this default behaviour.
 This how-to introduces only Worker's basic features. The wsub command
 has some usage information that is printed when the -help option is
 specified:
-<pre><code>$ <b>wsub -help</b>
+
+```
+$ wsub -help
 ### usage: wsub  -batch &lt;batch-file&gt;          
 #                [-data &lt;data-files&gt;]         
 #                [-prolog &lt;prolog-file&gt;]      
@@ -453,7 +496,7 @@ specified:
 #   -t &lt;array-req&gt;        : qsub's PBS array request options, e.g., 1-10
 #   &lt;pbs-qsub-options&gt;    : options passed on to the queue submission
 #                           command
-</code></pre>
+```
 
 ## Troubleshooting
 
