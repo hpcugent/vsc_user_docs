@@ -40,8 +40,9 @@ typical workloads for this cluster should be limited to:
 To submit jobs to the HPC-UGent interactive and debug cluster nicknamed
 `donphan`, first use:
 
-<pre><code>$ <b>module swap cluster/donphan</b>
-</code></pre>
+```
+$ module swap cluster/donphan
+```
 
 Then use the familiar `qsub`, `qstat`, etc. commands (see
 chapter [Running batch jobs](../running_batch_jobs/#running-batch-jobs)).
