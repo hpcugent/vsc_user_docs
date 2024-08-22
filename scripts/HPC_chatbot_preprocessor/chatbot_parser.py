@@ -1,3 +1,4 @@
+import argparse
 import copy
 import json
 import os
@@ -9,13 +10,7 @@ from pathlib import Path
 from jinja2 import FileSystemLoader, Environment, ChoiceLoader, FunctionLoader, Template
 
 #################### define macro's ####################
-# customizable macros
-MIN_PARAGRAPH_LENGTH = 160
-MAX_TITLE_DEPTH = 4
-INCLUDE_LINKS_IN_PLAINTEXT = False
-SPLIT_ON_TITLES = True
-SPLIT_ON_PARAGRAPHS = not SPLIT_ON_TITLES
-DEEP_DIRECTORIES = True and SPLIT_ON_TITLES  # Should always be False if SPLIT_ON_TITLES is False
+# customizable macros (default values are defined at the bottom of the script)
 
 # directories
 PARSED_MDS = "parsed_mds"
@@ -987,6 +982,29 @@ def main():
 
 ################### run the script ###################
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description="Preprocessing script for the chatbot")
+
+    # adding command-line options
+
+    parser.add_argument("-st", "--split_on_titles", type=int, default=1, help="Set to 1 if source files should be split on titles of maximum depth title_depth, set to 0 if source files should be split on paragraphs of minimum length paragraph_length (default: 1)")
+    parser.add_argument("-pl", "--paragraph_length", type=int, default=160, help="Minimum length of a paragraph, only works if split on titles is set to zero (default: 160)")
+    parser.add_argument("-td", "--title_depth", type=int, default=4, help="Maximum depth of titles that divide the source text into sections, only works if split on titles is set to one (default: 4)")
+    parser.add_argument("-l", "--links", action="store_true", help="Add links to the output texts")
+
+    args = parser.parse_args()
+
+    SPLIT_ON_TITLES = bool(args.split_on_titles)
+    MIN_PARAGRAPH_LENGTH = args.paragraph_length
+    MAX_TITLE_DEPTH = args.title_depth
+    INCLUDE_LINKS_IN_PLAINTEXT = args.links
+    SPLIT_ON_PARAGRAPHS = not SPLIT_ON_TITLES
+    DEEP_DIRECTORIES = True and SPLIT_ON_TITLES  # Should always be False if SPLIT_ON_TITLES is False
+
+    print(SPLIT_ON_TITLES)
+    print(MIN_PARAGRAPH_LENGTH)
+    print(MAX_TITLE_DEPTH)
+    print(INCLUDE_LINKS_IN_PLAINTEXT)
+
     print("WARNING: This script generates a file structure that contains rather long filepaths. Depending on where the script is ran, some of these paths might exceed the maximum length allowed by the system resulting in problems opening the files.")
     main()
     print("Parsing finished successfully")
