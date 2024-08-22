@@ -10,7 +10,8 @@ hide: "toc"
 
 Use the menu on the left to navigate, or use the search box on the top right.
 
-You are viewing documentation intended for people using **{{ OS }}**.<br/>
+You are viewing documentation intended for people using **{{ OS }}**.
+
 Use the OS dropdown in the top bar to switch to a different operating system.
 
 **Quick links**
