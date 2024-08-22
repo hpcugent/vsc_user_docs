@@ -16,8 +16,9 @@ Before using HOD, you first need to load the `hod` module. We don't
 specify a version here (this is an exception, for most other modules you
 should, see [Using explicit version numbers](../running_batch_jobs/#using-explicit-version-numbers)) because newer versions might include important bug fixes.
 
-<pre><code>$ <b>module load hod</b>
-</code></pre>
+```
+$ module load hod
+```
 
 ### Compatibility with login nodes
 
@@ -31,16 +32,17 @@ cluster module before loading the `hod` module and subsequently running
 
 For example, this will work as expected:
 
-<pre><code>$ <b>module swap cluster/{{othercluster}}</b>
-$ <b>module load hod</b>
-$ <b>hod</b>
+```
+$ module swap cluster/{{othercluster}}
+$ module load hod
+$ hod
 hanythingondemand - Run services within an HPC cluster
 usage: hod <subcommand> [subcommand options]
 Available subcommands (one of these must be specified!):
     batch           Submit a job to spawn a cluster on a PBS job controller, run a job script, and tear down the cluster when it's done
     clean           Remove stale cluster info.
 ...
-</code></pre>
+```
 
 Note that also modules named `hanythingondemand/*` are available. These
 should however not be used directly, since they may not be compatible
@@ -52,13 +54,14 @@ for).
 The `hod` module will also put a basic configuration in place for HOD,
 by defining a couple of `$HOD_*` environment variables:
 
-<pre><code>$ <b>module load hod</b>
-$ <b>env | grep HOD | sort</b>
+```
+$ module load hod
+$ env | grep HOD | sort
 HOD_BATCH_HOD_MODULE=hanythingondemand/3.2.2-intel-2016b-Python-2.7.12
 HOD_BATCH_WORKDIR=$VSC_SCRATCH/hod
 HOD_CREATE_HOD_MODULE=hanythingondemand/3.2.2-intel-2016b-Python-2.7.12
 HOD_CREATE_WORKDIR=$VSC_SCRATCH/hod
-</code></pre>
+```
 
 By defining these environment variables, we avoid that you have to
 specify `--hod-module` and `--workdir` when using `hod batch` or
@@ -85,26 +88,27 @@ will be marked as `<job-not-found>`.
 
 You should occasionally clean this up using `hod clean`:
 
-<pre><code>$ <b>module list</b>
+```
+$ module list
 Currently Loaded Modulefiles:
   1) cluster/{{defaultcluster}}(default)   2) pbs_python/4.6.0            3) vsc-base/2.4.2              4) hod/3.0.0-cli
 
-$ <b>hod list</b>
+$ hod list
 Cluster label	Job ID		   State                Hosts
 example1        {{jobid}}         &lt;job-not-found&gt;     &lt;none&gt;
 
-$ <b>hod clean</b>
+$ hod clean
 Removed cluster localworkdir directory /user/scratch/gent/vsc400/vsc40000/hod/hod/{{jobid}} for cluster labeled example1
 Removed cluster info directory /user/home/gent/vsc400/vsc40000/.config/hod.d/wordcount for cluster labeled example1
 
-$ <b>module swap cluster/{{othercluster}}</b>
+$ module swap cluster/{{othercluster}}
 Cluster label	Job ID				            State              	Hosts
 example2		98765.master19.{{othercluster}}.gent.vsc	&lt;job-not-found&gt;     &lt;none&gt;
 
-$ <b>hod clean</b>
+$ hod clean
 Removed cluster localworkdir directory /user/scratch/gent/vsc400/vsc40000/hod/hod/98765.master19.{{othercluster}}.gent.vsc for cluster labeled example2
 Removed cluster info directory /user/home/gent/vsc400/vsc40000/.config/hod.d/wordcount for cluster labeled example2
-</code></pre>
+```
 Note that **only HOD clusters that were submitted to the currently loaded `cluster` module will be cleaned up**.
 
 ## Getting help
