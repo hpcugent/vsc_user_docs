@@ -34,8 +34,9 @@ Before you use EasyBuild, you need to configure it:
 
 This is where EasyBuild can find software sources:
 
-<pre><code>$ <b>EASYBUILD_SOURCEPATH=$VSC_DATA/easybuild/sources:/apps/gent/source </b>
-</code></pre>
+```
+$ EASYBUILD_SOURCEPATH=$VSC_DATA/easybuild/sources:/apps/gent/source 
+```
 
 -   the first directory `$VSC_DATA/easybuild/sources` is where EasyBuild
     will (try to) automatically download sources if they're not
@@ -50,8 +51,9 @@ This is where EasyBuild can find software sources:
 This directory is where EasyBuild will build software in. To have good
 performance, this needs to be on a fast filesystem.
 
-<pre><code>$ <b>export EASYBUILD_BUILDPATH=${TMPDIR:-/tmp/$USER}</b>
-</code></pre>
+```
+$ export EASYBUILD_BUILDPATH=${TMPDIR:-/tmp/$USER}
+```
 
 On cluster nodes, you can use the fast, in-memory `/dev/shm/$USER`
 location as a build directory.
@@ -63,8 +65,9 @@ modules) to.
 
 For example, to let it use `$VSC_DATA/easybuild`, use:
 
-<pre><code>$ <b>export EASYBUILD_INSTALLPATH=$VSC_DATA/easybuild/$VSC_OS_LOCAL/$VSC_ARCH_LOCAL$VSC_ARCH_SUFFIX</b>
-</code></pre>
+```
+$ export EASYBUILD_INSTALLPATH=$VSC_DATA/easybuild/$VSC_OS_LOCAL/$VSC_ARCH_LOCAL$VSC_ARCH_SUFFIX
+```
 
 Using the `$VSC_OS_LOCAL`, `$VSC_ARCH` and `$VSC_ARCH_SUFFIX`
 environment variables ensures that your install software to a location
@@ -84,8 +87,9 @@ We don't specify a version here (this is an exception, for most other
 modules you should see [Using explicit version numbers](../running_batch_jobs/#using-explicit-version-numbers)) because newer versions might include important
 bug fixes.
 
-<pre><code>module load EasyBuild
-</code></pre>
+```
+module load EasyBuild
+```
 
 ### Installing supported software
 
@@ -95,18 +99,20 @@ versions, combined with a particular toolchain version. Use the
 (build recipes, see
 <http://easybuild.readthedocs.org/en/latest/Concepts_and_Terminology.html#easyconfig-files>) are available:
 
-<pre><code>$ <b>eb -S example-1.2</b>
+```
+$ eb -S example-1.2
 CFGS1=/apps/gent/CO7/sandybridge/software/EasyBuild/3.6.2/lib/python2.7/site-packages/easybuild_easyconfigs-3.6.2-py2.7.egg/easybuild/easyconfigs
  * $CFGS1/e/example/example-1.2.1-foss-{{ current_year}}a.eb
  * $CFGS1/e/example/example-1.2.3-foss-{{ current_year}}b.eb
  * $CFGS1/e/example/example-1.2.5-intel-{{ current_year}}a.eb
-</code></pre>
+```
 
 For readily available easyconfigs, just specify the name of the
 easyconfig file to build and install the corresponding software package:
 
-<pre><code>$ <b>eb example-1.2.1-foss-{{ current_year}}a.eb --robot</b>
-</code></pre>
+```
+$ eb example-1.2.1-foss-{{ current_year}}a.eb --robot
+```
 
 ### Installing variants on supported software
 
@@ -117,13 +123,15 @@ corresponding `--try-X` options:
 To try to install `example v1.2.6`, based on the easyconfig file for
 `example v1.2.5`:
 
-<pre><code>$ <b>eb example-1.2.5-intel-{{ current_year}}a.eb --try-software-version=1.2.6</b>
-</code></pre>
+```
+$ eb example-1.2.5-intel-{{ current_year}}a.eb --try-software-version=1.2.6
+```
 
 To try to install example v1.2.5 with a different compiler toolchain:
 
-<pre><code>$ <b>eb example-1.2.5-intel-{{ current_year}}a.eb --robot --try-toolchain=intel,{{ current_year}}b</b>
-</code></pre>
+```
+$ eb example-1.2.5-intel-{{ current_year}}a.eb --robot --try-toolchain=intel,{{ current_year}}b
+```
 
 ### Install other software
 
@@ -137,8 +145,9 @@ for more information.
 To use the modules you installed with EasyBuild, extend `$MODULEPATH` to
 make them accessible for loading:
 
-<pre><code>$ <b>module use $EASYBUILD_INSTALLPATH/modules/all</b>
-</code></pre>
+```
+$ module use $EASYBUILD_INSTALLPATH/modules/all
+```
 
 It makes sense to put this `module use` command and all `export`
 commands in your `.bashrc` login script.
@@ -149,4 +158,3 @@ See also [the section on `.bashrc` in
 the "Beyond the basics" chapter of the intro to
 Linux](../linux-tutorial/beyond_the_basics/#bashrc-login-script)
 
-{{ site_url }}
