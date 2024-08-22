@@ -212,6 +212,7 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
 def split_text(file, main_title):
     """
     Function that splits the text into smaller sections and makes them into two dictionaries containing text and metadata
+
     :param file: the filepath of the file to be split
     :param main_title: the main title of the file
     :return paragraphs_text: dictionary containing the split sections of text
@@ -226,6 +227,15 @@ def split_text(file, main_title):
 
 
 def split_on_titles(file, main_title):
+    """
+    Function that splits the text into smaller sections based on the subtitle structure and makes them into two dictionaries containing text and metadata
+
+    :param file: the filepath of the file to be split
+    :param main_title: the main title of the file
+    :return paragraphs_text: dictionary containing the split sections of text
+    :return paragraphs_metadata: dictionary containing the metadata of each split section of text
+    :return subtitle_order: list containing all encountered subtitles in order of appearance
+    """
     # start of assuming we haven't encountered a title
     after_first_title = False
 
@@ -301,6 +311,15 @@ def split_on_titles(file, main_title):
 
 
 def split_on_paragraphs(file, main_title):
+    """
+    Function that splits the text into smaller sections based on the paragraph structure and makes them into two dictionaries containing text and metadata
+
+    :param file: the filepath of the file to be split
+    :param main_title: the main title of the file
+    :return paragraphs_text: dictionary containing the split sections of text
+    :return paragraphs_metadata: dictionary containing the metadata of each split section of text
+    :return subtitle_order: list containing all encountered subtitles in order of appearance
+    """
     # start of assuming we haven't encountered a title and the first paragraph hasn't appeared yet
     after_first_title = False
 
