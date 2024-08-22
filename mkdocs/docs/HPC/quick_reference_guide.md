@@ -3,110 +3,23 @@
 Remember to substitute the usernames, login nodes, file names, ...for
 your own.
 
-<table>
-    <tr>
-        <td colspan="2">
-            <center><b>Login</b></center>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-          Login
-        </td>
-        <td colspan="1">
-          <tt>ssh {{userid}}@{{loginnode}}</tt>
-        </td>
-    </tr>
-    <tr>
-      <td colspan ="1">
-        Where am I?
-      </td>
-      <td colspan="1">
-        <tt>hostname</tt>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Copy to {{hpc}}
-      </td>
-      <td>
-        <tt>scp foo.txt {{userid}}@{{loginnode}}:</tt>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Copy from {{hpc}}
-      </td>
-      <td> 
-        <tt>scp {{userid}}@{{loginnode}}:foo.txt</tt>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Setup ftp session
-      </td>
-      <td>
-        <tt>sftp {{userid}}@{{loginnode}}</tt>
-      </td>
-    </tr>
-</table>
+| **Login**         |                                         |
+|-------------------|-----------------------------------------|
+| Login             | `ssh {{userid}}@{{loginnode}}`          |
+| Where am I?       | `hostname`                              |
+| Copy to {{hpc}}   | `scp foo.txt {{userid}}@{{loginnode}}:` |
+| Copy from {{hpc}} | `scp {{userid}}@{{loginnode}}:foo.txt`  |
+| Setup ftp session | `sftp {{userid}}@{{loginnode}}`         |
 
 
-<table>
-    <tr>
-        <td colspan="2">
-            <center><b>Modules</b></center>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-          List all available modules
-        </td>
-        <td colspan="1">
-         Module avail
-        </td>
-    </tr>
-    <tr>
-      <td colspan ="1">
-        List loaded modules
-      </td>
-      <td colspan="1">
-        module list
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Load module
-      </td>
-      <td>
-        module load example
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Unload module
-      </td>
-      <td> 
-        module unload example
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Unload all modules
-      </td>
-      <td>
-        module purge
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Help on use of module
-      </td>
-      <td>
-        module help
-      </td>
-    </tr>
-</table>
+| **Modules**                |                       |
+|----------------------------|-----------------------|
+| List all available modules | Module avail          |
+| List loaded modules        | module list           |
+| Load module                | module load example   |
+| Unload module              | module unload example |
+| Unload all modules         | module purge          |
+| Help on use of module      | module help           |
 
 <table>
     <tr>
@@ -243,42 +156,10 @@ your own.
     </tr>
 </table>
 
-<table>
-    <tr>
-        <td colspan="2">
-            <center><b>Worker Framework</b></center>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-          Load worker module
-        </td>
-        <td colspan="1">
-         <tt> module load worker/1.6.12-foss-2021b</tt>  Don't forget to specify a version. To list available versions, use <tt>module avail worker/</tt>
-        </td>
-    </tr>
-    <tr>
-      <td colspan ="1">
-        Submit parameter sweep
-      </td>
-      <td colspan="1">
-        <tt>wsub -batch weather.pbs -data data.csv</tt>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Submit job array
-      </td>
-      <td>
-        <tt>wsub -t 1-100 -batch test_set.pbs</tt>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Submit job array with prolog and epilog
-      </td>
-      <td> 
-        <tt>wsub -prolog pre.sh -batch test_set.pbs -epilog post.sh -t 1-100</tt>
-      </td>
-    </tr>
-</table>
+
+| **Worker Framework**                    |                                                                                                                                   |
+|-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| Load worker module                      | `module load worker/1.6.12-foss-2021b`  Don't forget to specify a version. To list available versions, use `module avail worker/` |
+| Submit parameter sweep                  | `wsub -batch weather.pbs -data data.csv`                                                                                          |
+| Submit job array                        | `wsub -t 1-100 -batch test_set.pbs`                                                                                               |
+| Submit job array with prolog and epilog | `wsub -prolog pre.sh -batch test_set.pbs -epilog post.sh -t 1-100`                                                                |
