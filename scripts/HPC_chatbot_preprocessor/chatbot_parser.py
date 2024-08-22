@@ -96,7 +96,7 @@ def check_for_title(line, in_code_block, curr_dirs):
     """
     # detect titles
     match = re.match(r'^#+ ', line)
-    if match and len(match.group(0)) <= 5 and not in_code_block:
+    if match and len(match.group(0)) <= MAX_TITLE_DEPTH + 1 and not in_code_block:
         title_length = len(match.group(0)) - 1
         if DEEP_DIRECTORIES:
             curr_dirs[title_length] = os.path.join(curr_dirs[title_length - 1], make_valid_title(line[title_length + 1:-1].replace(' ', '-')))
