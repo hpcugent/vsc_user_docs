@@ -10,12 +10,12 @@ from jinja2 import FileSystemLoader, Environment, ChoiceLoader, FunctionLoader, 
 
 #################### define macro's ####################
 # customizable macros
-MIN_PARAGRAPH_LENGTH = 128
+MIN_PARAGRAPH_LENGTH = 160
 MAX_TITLE_DEPTH = 4
 INCLUDE_LINKS_IN_PLAINTEXT = False
 SPLIT_ON_TITLES = True
-SPLIT_ON_PARAGRAPHS = False
-DEEP_DIRECTORIES = True
+SPLIT_ON_PARAGRAPHS = not SPLIT_ON_TITLES
+DEEP_DIRECTORIES = True and SPLIT_ON_TITLES  # Should always be False if SPLIT_ON_TITLES is False
 
 # directories
 PARSED_MDS = "parsed_mds"
@@ -219,8 +219,10 @@ def split_text(file, main_title):
     :return subtitle_order: list containing all encountered subtitles in order of appearance
     """
 
-    # start of assuming we haven't encountered a title
+    # start of assuming we haven't encountered a title and the first paragraph hasn't appeared yet
     after_first_title = False
+    after_first_paragraph = False
+    paragraph_number = 1
 
     # start of assuming we are not in a code_block
     in_code_block = False
@@ -241,6 +243,12 @@ def split_text(file, main_title):
     # variable to allow for if statements to "continue" over multiple paragraphs
     open_ifs = ""
 
+    # initialise the first paragraph if SPLIT_ON_PARAGRAPH is True
+    if SPLIT_ON_PARAGRAPHS:
+        title = main_title + "_paragraph_" + str(paragraph_number)
+        paragraphs_text[title] = ""
+        subtitle_order.append(title)
+
     # list to keep track of most recent directories on each title level
     if LINUX_TUTORIAL not in file:
         curr_dirs = [main_title for _ in range(MAX_TITLE_DEPTH + 1)]
@@ -258,18 +266,18 @@ def split_text(file, main_title):
 
             title_level = check_for_title(line, in_code_block, curr_dirs)
 
-            # detect codeblocks to make sure titles aren't detected in them
+            # detect codeblocks to make sure titles and beginnings of paragraphs aren't detected in them
             if '```' in line or (('<pre><code>' in line) ^ ('</code></pre>' in line)):
                 in_code_block = not in_code_block
 
             # line is a title with a maximum depth of 4
-            if title_level > 0:
+            if title_level > 0 and SPLIT_ON_TITLES:
                 if after_first_title:
                     paragraphs_text[title], open_ifs = close_ifs(paragraphs_text[title])
                     paragraphs_metadata[title] = write_metadata(main_title, title, link_list, last_title_level, last_dir)
                 title = make_valid_title(line[title_level + 1:-1])
 
-                # create an entry for the file in the paragraphs text dictionary
+                # create an entry for the next file in the paragraphs text dictionary
                 paragraphs_text[title] = open_ifs
 
                 after_first_title = True
@@ -278,8 +286,27 @@ def split_text(file, main_title):
                 # reset link_list
                 link_list = []
 
-            # line is not a title
-            elif after_first_title:
+            elif title_level > 0 and not SPLIT_ON_TITLES:
+                paragraphs_text[title] += line[title_level + 1:]
+
+            elif SPLIT_ON_PARAGRAPHS and line == "\n" and len(re.sub(r'\{' + IF_MANGLED_PART + '%.*?%' + IF_MANGLED_PART + '}', "", paragraphs_text[title])) >= MIN_PARAGRAPH_LENGTH:
+                # finish the previous file
+                paragraphs_text[title], open_ifs = close_ifs(paragraphs_text[title])
+                paragraphs_metadata[title] = write_metadata(main_title, title, link_list, last_title_level, last_dir)
+
+                # start a new file
+                paragraph_number += 1
+                title = make_valid_title(main_title + "_paragraph_" + str(paragraph_number))
+                subtitle_order.append(title)
+
+                # create an entry for the next file in the paragraphs text dictionary
+                paragraphs_text[title] = open_ifs
+
+                # reset link_list
+                link_list = []
+
+            # line is not a title or the ending of a sufficiently large paragraph
+            elif after_first_title or SPLIT_ON_PARAGRAPHS:
                 line, link_list = replace_markdown_markers(line, link_list, in_code_block, main_title)
                 if title in paragraphs_text.keys() and line != "\n":
                     paragraphs_text[title] += line
