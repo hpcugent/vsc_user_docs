@@ -62,7 +62,7 @@ WRITE_TEXT_AND_CHECK_EXTRA_MESSAGE = "write_text_and_check_extra_message"
 
 # Metadata attributes
 MAIN_TITLE = "main_title"
-SUBTITLE = "subtitle (incorrect in some cases, working on a fix)"
+SUBTITLE = "subtitle"
 TITLE_DEPTH = "title_depth"
 DIRECTORY = "directory"
 LINKS = "links"
@@ -300,11 +300,17 @@ def split_on_titles(file, main_title):
                 # line is a title with a maximum depth of 4
                 if title_level > 0:
                     if after_first_title:
+
+                        # write text of previous file
                         if previous_contained_if:
                             paragraphs_os_text[title] = current_paragraph
                         else:
                             paragraphs_os_free_text[title] = current_paragraph
+
+                        # write metadata of previous file
                         paragraphs_metadata[title] = write_metadata(main_title, title, link_list, last_title_level, last_dir)
+
+                    # make a new title
                     title = make_valid_title(line[title_level + 1:-1])
 
                     # create an entry for the file in the paragraphs text dictionary
@@ -697,11 +703,15 @@ def write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order,
     :return:
     """
 
-    # make the directory needed for the files that will be written
-    filepath = os.path.join(PARSED_MDS, GENERIC_DIR, paragraphs_metadata[title][DIRECTORY])
-    os.makedirs(filepath, exist_ok=True)
+    if len(paragraphs_text[title]) > 0:
+        # make the directory needed for the files that will be written
+        filepath = os.path.join(PARSED_MDS, GENERIC_DIR, paragraphs_metadata[title][DIRECTORY])
+        os.makedirs(filepath, exist_ok=True)
 
-    write_files(title, paragraphs_text[title], paragraphs_metadata, title_order, title_order_number, filepath, OS=GENERIC, paragraph_numbers=paragraph_numbers)
+        write_files(title, paragraphs_text[title], paragraphs_metadata, title_order, title_order_number, filepath, OS=GENERIC, paragraph_numbers=paragraph_numbers)
+    else:
+        # don't write empty files
+        pass
 
 
 def write_os_specific_file(title, paragraphs_text, paragraphs_metadata, title_order, title_order_number, paragraph_numbers):
@@ -835,7 +845,7 @@ def insert_links(text, links):
     return text, new_links
 
 
-def split_and_write_os_specific_section(text, metadata, subtitle_order, i, paragraph_numbers):
+def split_and_write_os_specific_section(text, metadata, subtitle_order, i, paragraph_numbers, all_metadata):
     # add first subtitle in front of section again
     text = "#" * metadata[TITLE_DEPTH] + " " + metadata[SUBTITLE] + "\n" + text
 
@@ -860,12 +870,39 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, i, parag
         # split in right way
         _, os_specific_text, os_specific_metadata, os_subtitle_order = split_text("jinja_file.txt", metadata[MAIN_TITLE])
 
+        # prepare variables to fix metadata
+        total_subtitle_order = subtitle_order[:i] + os_subtitle_order + subtitle_order[i+1:]
+        copy_all_metadata = {**os_specific_metadata, **all_metadata}
+
         # write to files
         for os_i, os_subtitle in enumerate(os_subtitle_order):
-            filepath = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, OS, os_specific_metadata[os_subtitle][DIRECTORY])
-            os.makedirs(filepath, exist_ok=True)
+            # check that file actually has some content
+            if len(os_specific_text[os_subtitle]) > 0:
+                # add the links to the metadata
+                os_specific_metadata[os_subtitle][LINKS] = metadata[LINKS]
 
-            write_files(os_subtitle, os_specific_text[os_subtitle], os_specific_metadata, subtitle_order[:i] + os_subtitle_order + subtitle_order[i+1:], os_i + i, filepath, OS, paragraph_numbers)
+                # fix parent in the metadata
+                parent_i = 0
+                parent_depth = os_specific_metadata[os_subtitle][TITLE_DEPTH] - 1
+                parent = os_specific_metadata[os_subtitle][MAIN_TITLE]
+                while total_subtitle_order[parent_i] != os_subtitle and parent_i != len(total_subtitle_order):
+                    if copy_all_metadata[total_subtitle_order[parent_i]][TITLE_DEPTH] == parent_depth:
+                        parent = total_subtitle_order[parent_i]
+                    parent_i += 1
+                os_specific_metadata[os_subtitle][PARENT_TITLE] = parent
+
+                # fix directory in the metadata
+                os_specific_metadata[os_subtitle][DIRECTORY] = os.path.join(copy_all_metadata[parent][DIRECTORY], os_specific_metadata[os_subtitle][SUBTITLE])
+
+                # make a directory to save the files
+                filepath = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, OS, os_specific_metadata[os_subtitle][DIRECTORY])
+                os.makedirs(filepath, exist_ok=True)
+
+                # write to files
+                write_files(os_subtitle, os_specific_text[os_subtitle], os_specific_metadata, total_subtitle_order, os_i + i, filepath, OS, paragraph_numbers)
+            else:
+                # don't write empty files
+                pass
 
 
 def main():
@@ -893,27 +930,27 @@ def main():
 
     ################### define loop-invariant variables ###################
 
-    # constant that keeps track of the source directories
-    source_directories = [os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR),
-                          os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR, LINUX_TUTORIAL)]
-
-    # list of all the filenames
-    filenames_generic = {}
-    filenames_linux = {}
-    for source_directory in source_directories:
-        all_items = os.listdir(source_directory)
-        files = [f for f in all_items if os.path.isfile(os.path.join(source_directory, f)) and ".md" in f[-3:]]
-        for file in files:
-            if LINUX_TUTORIAL in source_directory:
-                filenames_linux[file] = os.path.join(source_directory, file)
-            else:
-                filenames_generic[file] = os.path.join(source_directory, file)
-
-    # # Temporary variables to test with just one singular file
+    # # constant that keeps track of the source directories
+    # source_directories = [os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR),
+    #                       os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR, LINUX_TUTORIAL)]
+    #
+    # # list of all the filenames
     # filenames_generic = {}
     # filenames_linux = {}
+    # for source_directory in source_directories:
+    #     all_items = os.listdir(source_directory)
+    #     files = [f for f in all_items if os.path.isfile(os.path.join(source_directory, f)) and ".md" in f[-3:]]
+    #     for file in files:
+    #         if LINUX_TUTORIAL in source_directory:
+    #             filenames_linux[file] = os.path.join(source_directory, file)
+    #         else:
+    #             filenames_generic[file] = os.path.join(source_directory, file)
+
+    # Temporary variables to test with just one singular file
+    filenames_generic = {}
+    filenames_linux = {}
     # filenames_generic["account.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/account.md"
-    # filenames_generic["example_text_1.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/scripts/HPC_chatbot_preprocessor/tests/example_files/example_text_1.md"
+    filenames_generic["example_text_1.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/scripts/HPC_chatbot_preprocessor/tests/example_files/example_text_1.md"
     # filenames_linux["beyond_the_basics.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/linux-tutorial/beyond_the_basics.md"
 
     # for loops over all files
@@ -973,7 +1010,7 @@ def main():
 
                 # os-specific
                 else:
-                    split_and_write_os_specific_section(paragraphs_os_text[subtitle], paragraphs_metadata[subtitle], subtitle_order, i, paragraph_numbers)
+                    split_and_write_os_specific_section(paragraphs_os_text[subtitle], paragraphs_metadata[subtitle], subtitle_order, i, paragraph_numbers, paragraphs_metadata)
 
     shutil.rmtree(COPIES, ignore_errors=True)
     shutil.rmtree(IF_MANGLED_FILES, ignore_errors=True)
