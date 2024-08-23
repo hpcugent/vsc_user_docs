@@ -890,17 +890,9 @@ def main():
     shutil.rmtree(IF_MANGLED_FILES, ignore_errors=True)
 
     # make the necessary directories
-    if not os.path.exists(COPIES):
-        os.mkdir(COPIES)
-
-    if not os.path.exists(os.path.join(COPIES, LINUX_TUTORIAL)):
-        os.mkdir(os.path.join(COPIES, LINUX_TUTORIAL))
-
-    if not os.path.exists(PARSED_MDS):
-        os.mkdir(PARSED_MDS)
-
-    if not os.path.exists(IF_MANGLED_FILES):
-        os.mkdir(IF_MANGLED_FILES)
+    for directory in [COPIES, os.path.join(COPIES, LINUX_TUTORIAL), PARSED_MDS, IF_MANGLED_FILES]:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
 
     ################### define loop-invariant variables ###################
 
