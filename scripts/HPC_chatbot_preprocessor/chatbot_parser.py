@@ -994,7 +994,7 @@ def main():
 
 ################### run the script ###################
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Preprocessing script for the chatbot")
+    parser = argparse.ArgumentParser(description="Preprocessing script for the chatbot\n")
 
     # adding command-line options
 
