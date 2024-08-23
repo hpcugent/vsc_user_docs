@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import argparse
 import copy
 import json
@@ -958,9 +960,6 @@ def main():
             # variable that keeps track of the directories that are used to write in at different levels
             curr_dirs = [filename[:-3] for _ in range(5)]
 
-            # dictionary that keeps track of the paragraph numbers
-            paragraph_numbers = {GENERIC: 1, LINUX: 1, WINDOWS: 1, MACOS: 1}
-
             ################### actually parse the md file ###################
 
             # create directories for the source markdown file
@@ -982,7 +981,7 @@ def main():
 
                 # os-specific
                 else:
-                    split_and_write_os_specific_section(paragraphs_os_text[subtitle], paragraphs_metadata[subtitle], subtitle_order, i, paragraph_numbers)
+                    split_and_write_os_specific_section(paragraphs_os_text[subtitle], paragraphs_metadata[subtitle], subtitle_order, i, paragraphs_metadata)
 
     # clean up temporary directories and files
     shutil.rmtree(COPIES, ignore_errors=True)
