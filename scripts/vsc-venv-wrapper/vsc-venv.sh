@@ -24,6 +24,8 @@ usage() {
 
 # ============================ Main functions ============================
 
+# === Create ===
+
 create() {
   local MODULES_SCRIPT="$1" # The modules script to load. Empty if not provided.
 
@@ -50,6 +52,8 @@ create() {
 
 }
 
+# === Activate ===
+
 activate() {
   echo "Activating..."
 
@@ -61,6 +65,8 @@ activate() {
 
   source "$VENV_LOCATION/bin/activate"
 }
+
+# === Install ===
 
 install() {
 
@@ -88,6 +94,8 @@ install() {
   fi
 
 }
+
+# ============================ Main ============================
 
 case "$1" in
   create)     create "$2";;
