@@ -63,6 +63,7 @@ activate() {
 }
 
 install() {
+
   local REQUIREMENTS="$1"
   echo "Installing $REQUIREMENTS..."
 
@@ -72,7 +73,7 @@ install() {
     exit 1
   fi
 
-  # The virtual environment must be activated.
+  # The virtual environment must have been activated before running install.
   # This is equivalent to $VIRTUAL_ENV (which is set by python when activating a venv) being equal to
   # $VENV_LOCATION (the location of the venv specific to the architecture of the target cluster).
   if [ "$VIRTUAL_ENV" != "$VENV_LOCATION" ]; then
