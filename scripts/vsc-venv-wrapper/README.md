@@ -15,7 +15,7 @@ and provides a way
 A virtual environment can be created by running the following command:
 
 ```bash
-vsc-venv create [module_script]
+source vsc-venv create [module_script]
 ```
 
 Here, an optional module script can be provided to load the required modules before creating the virtual environment.
