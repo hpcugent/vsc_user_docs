@@ -3,10 +3,10 @@
 `vsc-venv` is a script that encapsulates the creation and management of Python virtual environments. 
 This avoids multiple issues with the default `venv` command on the HPC. 
 
-One such issue is that a virtual environment created for a specific cluster might not work on another cluster.
-Another problem is that when activating a virtual environment, 
-the same centrally installed modules must be loaded as the ones when the virtual environment was first created.
 
+One issue is that a virtual environment created for one cluster might not work on another. 
+Additionally, when activating a virtual environment, 
+the same centrally installed modules used during its creation must also be loaded.
 the `vsc-venv` command manages multiple virtual environments for different clusters in a transparent way 
 and provides a way 
 
