@@ -1010,7 +1010,7 @@ if __name__ == '__main__':
     INCLUDE_LINKS_IN_PLAINTEXT = args.links
     SPLIT_ON_PARAGRAPHS = not SPLIT_ON_TITLES
     DEEP_DIRECTORIES = True and SPLIT_ON_TITLES  # Should always be False if SPLIT_ON_TITLES is False
-
-    print("WARNING: This script generates a file structure that contains rather long filepaths. Depending on where the script is ran, some of these paths might exceed the maximum length allowed by the system resulting in problems opening the files.")
+    if DEEP_DIRECTORIES:
+        print("WARNING: This script generates a file structure that contains rather long filepaths. Depending on where the script is ran, some of these paths might exceed the maximum length allowed by the system resulting in problems opening the files.")
     main()
     print("Parsing finished successfully")
