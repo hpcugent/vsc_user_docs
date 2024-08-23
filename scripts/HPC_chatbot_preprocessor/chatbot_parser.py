@@ -12,13 +12,13 @@ from pathlib import Path
 from jinja2 import FileSystemLoader, Environment, ChoiceLoader, FunctionLoader, Template
 
 #################### define macro's ####################
-# customizable macros (customization made possible at the bottom of the script)
-SPLIT_ON_TITLES = True
-MIN_PARAGRAPH_LENGTH = 160
-MAX_TITLE_DEPTH = 4
-INCLUDE_LINKS_IN_PLAINTEXT = False
-SPLIT_ON_PARAGRAPHS = not SPLIT_ON_TITLES
-DEEP_DIRECTORIES = True and SPLIT_ON_TITLES  # Should always be False if SPLIT_ON_TITLES is False
+# options
+SPLIT_ON_TITLES = "SPLIT_ON_TITLES"
+MIN_PARAGRAPH_LENGTH = "MIN_PARAGRAPH_LENGTH"
+MAX_TITLE_DEPTH = "MAX_TITLE_DEPTH"
+INCLUDE_LINKS_IN_PLAINTEXT = "INCLUDE_LINKS_IN_PLAINTEXT"
+SPLIT_ON_PARAGRAPHS = "SPLIT_ON_PARAGRAPHS"
+DEEP_DIRECTORIES = "DEEP_DIRECTORIES"
 
 # directories
 PARSED_MDS = "parsed_mds"
@@ -99,24 +99,25 @@ METADATA_EXTENSION = "_metadata"
 
 ################### define functions ###################
 
-def check_for_title(line, in_code_block, curr_dirs):
+def check_for_title(line, in_code_block, curr_dirs, options):
     """
     function that checks for titles in the current line. Used by split_text to split the text among the subtitles
 
     :param line: the current line to be checked for a title
     :param in_code_block: boolean indicating whether the current line is part of a codeblock to be sure comments aren't counted as titles
     :param curr_dirs: the current working directories for each level of subtitle, to be updated when a new title is found
+    :param options: dictionary containing the options given by the user
     :return title_length: The amount of hashtags in front of the title on the current line
     """
     # detect titles
     match = re.match(r'^#+ ', line)
-    if match and len(match.group(0)) <= MAX_TITLE_DEPTH + 1 and not in_code_block:
+    if match and len(match.group(0)) <= options[MAX_TITLE_DEPTH] + 1 and not in_code_block:
         title_length = len(match.group(0)) - 1
-        if DEEP_DIRECTORIES:
+        if options[DEEP_DIRECTORIES]:
             curr_dirs[title_length] = os.path.join(curr_dirs[title_length - 1], make_valid_title(line[title_length + 1:-1].replace(' ', '-')))
 
             # update the higher order current directories
-            for i in range(title_length + 1, MAX_TITLE_DEPTH + 1):
+            for i in range(title_length + 1, options[MAX_TITLE_DEPTH] + 1):
                 curr_dirs[i] = curr_dirs[title_length]
 
         return title_length
@@ -225,12 +226,13 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
     return curr_line, linklist
 
 
-def split_text(file, main_title, current_paragraph_number=-1, OS=GENERIC):
+def split_text(file, main_title, options, current_paragraph_number=-1, OS=GENERIC):
     """
     Function that splits the text into smaller sections and makes them into two dictionaries containing text and metadata
 
     :param file: the filepath of the file to be split
     :param main_title: the main title of the file
+    :param options: dictionary containing the options given by the user
     :param current_paragraph_number: number of the paragraph that is being split, only applicable when splitting an os-specific paragraph on paragraph level
     :param OS: the OS of the file to be split, only applicable when splitting an os-specific paragraph on paragraph level
     :return paragraphs_text: dictionary containing the split sections of text
@@ -238,18 +240,19 @@ def split_text(file, main_title, current_paragraph_number=-1, OS=GENERIC):
     :return subtitle_order: list containing all encountered subtitles in order of appearance
     """
 
-    if SPLIT_ON_TITLES:
-        return split_on_titles(file, main_title)
-    elif SPLIT_ON_PARAGRAPHS:
-        return split_on_paragraphs(file, main_title, current_paragraph_number, OS)
+    if options[SPLIT_ON_TITLES]:
+        return split_on_titles(file, main_title, options)
+    elif options[SPLIT_ON_PARAGRAPHS]:
+        return split_on_paragraphs(file, main_title, options, current_paragraph_number, OS)
 
 
-def split_on_titles(file, main_title):
+def split_on_titles(file, main_title, options):
     """
     Function that splits the text into smaller sections based on the subtitle structure and makes them into two dictionaries containing text and metadata
 
     :param file: the filepath of the file to be split
     :param main_title: the main title of the file
+    :param options: dictionary containing the options given by the user
     :return paragraphs_text: dictionary containing the split sections of text
     :return paragraphs_metadata: dictionary containing the metadata of each split section of text
     :return subtitle_order: list containing all encountered subtitles in order of appearance
@@ -282,9 +285,9 @@ def split_on_titles(file, main_title):
 
     # list to keep track of most recent directories on each title level
     if LINUX_TUTORIAL not in file:
-        curr_dirs = [main_title for _ in range(MAX_TITLE_DEPTH + 1)]
+        curr_dirs = [main_title for _ in range(options[MAX_TITLE_DEPTH] + 1)]
     else:
-        curr_dirs = [os.path.join(LINUX_TUTORIAL, main_title) for _ in range(MAX_TITLE_DEPTH + 1)]
+        curr_dirs = [os.path.join(LINUX_TUTORIAL, main_title) for _ in range(options[MAX_TITLE_DEPTH] + 1)]
 
     with open(file, 'r') as readfile:
 
@@ -296,7 +299,7 @@ def split_on_titles(file, main_title):
             # only split up if current line is in a fully non-os-specific section
             if in_if_statement == 0:
 
-                title_level = check_for_title(line, in_code_block, curr_dirs)
+                title_level = check_for_title(line, in_code_block, curr_dirs, options)
 
                 # detect codeblocks to make sure titles aren't detected in them
                 if '```' in line or (('<pre><code>' in line) ^ ('</code></pre>' in line)):
@@ -355,12 +358,13 @@ def split_on_titles(file, main_title):
     return paragraphs_os_text, paragraphs_os_free_text, paragraphs_metadata, subtitle_order
 
 
-def split_on_paragraphs(file, main_title, current_paragraph_number=-1, OS=GENERIC):
+def split_on_paragraphs(file, main_title, options, current_paragraph_number=-1, OS=GENERIC):
     """
     Function that splits the text into smaller sections based on the paragraph structure and makes them into two dictionaries containing text and metadata
 
     :param file: the filepath of the file to be split
     :param main_title: the main title of the file
+    :param options: dictionary containing the options given by the user
     :param current_paragraph_number: number of the paragraph that is being split, only applicable when splitting an os-specific paragraph
     :param OS: the OS of the file to be split, only applicable when splitting an os-specific paragraph
     :return paragraphs_text: dictionary containing the split sections of text
@@ -398,9 +402,9 @@ def split_on_paragraphs(file, main_title, current_paragraph_number=-1, OS=GENERI
 
     # list to keep track of most recent directories on each title level
     if LINUX_TUTORIAL not in file:
-        curr_dirs = [main_title for _ in range(MAX_TITLE_DEPTH + 1)]
+        curr_dirs = [main_title for _ in range(options[MAX_TITLE_DEPTH] + 1)]
     else:
-        curr_dirs = [os.path.join(LINUX_TUTORIAL, main_title) for _ in range(MAX_TITLE_DEPTH + 1)]
+        curr_dirs = [os.path.join(LINUX_TUTORIAL, main_title) for _ in range(options[MAX_TITLE_DEPTH] + 1)]
 
     with open(file, 'r') as readfile:
 
@@ -413,14 +417,14 @@ def split_on_paragraphs(file, main_title, current_paragraph_number=-1, OS=GENERI
             # only split up if current line is in a fully non-os-specific section
             if in_if_statement == 0:
 
-                title_level = check_for_title(line, in_code_block, curr_dirs)
+                title_level = check_for_title(line, in_code_block, curr_dirs, options)
 
                 # detect codeblocks to make sure titles aren't detected in them
                 if '```' in line or (('<pre><code>' in line) ^ ('</code></pre>' in line)):
                     in_code_block = not in_code_block
 
                 # check whether a new paragraph should be started
-                if line == "\n" and len(re.sub(r'\{' + IF_MANGLED_PART + '%.*?%' + IF_MANGLED_PART + '}', "", current_paragraph)) >= MIN_PARAGRAPH_LENGTH and not in_code_block:
+                if line == "\n" and len(re.sub(r'\{' + IF_MANGLED_PART + '%.*?%' + IF_MANGLED_PART + '}', "", current_paragraph)) >= options[MIN_PARAGRAPH_LENGTH] and not in_code_block:
 
                     # create a title for the previous paragraph
                     if current_paragraph_number == -1:
@@ -678,7 +682,7 @@ def make_valid_title(title):
     return valid_filename
 
 
-def write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order, title_order_number):
+def write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order, title_order_number, options):
     """
     Function that writes text and metadata of a generic (non-os-specific) file
 
@@ -687,6 +691,7 @@ def write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order,
     :param paragraphs_metadata: dictionary containing the metadata for all paragraphs of text
     :param title_order: list containing all subtitles in order
     :param title_order_number: order number of the title of the section that is being written
+    :param options: dictionary containing the options given by the user
     :return:
     """
 
@@ -695,13 +700,13 @@ def write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order,
         filepath = os.path.join(PARSED_MDS, GENERIC_DIR, paragraphs_metadata[title][DIRECTORY])
         os.makedirs(filepath, exist_ok=True)
 
-        write_files(title, paragraphs_text[title], paragraphs_metadata, title_order, title_order_number, filepath, OS=GENERIC)
+        write_files(title, paragraphs_text[title], paragraphs_metadata, title_order, title_order_number, filepath, GENERIC, options)
     else:
         # don't write empty files
         pass
 
 
-def write_files(title, text, paragraphs_metadata, title_order, title_order_number, filepath, OS):
+def write_files(title, text, paragraphs_metadata, title_order, title_order_number, filepath, OS, options):
     """
     Function to write files to a certain filepath
 
@@ -712,6 +717,7 @@ def write_files(title, text, paragraphs_metadata, title_order, title_order_numbe
     :param title_order_number: order number of the title of the section that is being written
     :param filepath: filepath to write files to
     :param OS: OS to be included in the metadata
+    :param options: dictionary containing the options given by the user
     :return:
     """
 
@@ -722,7 +728,7 @@ def write_files(title, text, paragraphs_metadata, title_order, title_order_numbe
     # write text file
     with open(os.path.join(filepath, file_title + ".txt"), 'w') as writefile:
         if LINKS in paragraphs_metadata[title].keys():
-            adapted_text, metadata[LINKS] = insert_links(text, metadata[LINKS])
+            adapted_text, metadata[LINKS] = insert_links(text, metadata[LINKS], options)
             writefile.write(adapted_text)
         else:
             writefile.write(text)
@@ -759,12 +765,13 @@ def write_files(title, text, paragraphs_metadata, title_order, title_order_numbe
         json.dump(metadata, writefile, indent=4)
 
 
-def insert_links(text, links):
+def insert_links(text, links, options):
     """
     Function that inserts links in the plaintext or takes out the references to the links depending on the value of INCLUDE_LINKS_IN_PLAINTEXT
 
     :param text: The plaintext that needs to be adapted
     :param links: The links that might need to be inserted
+    :param options: dictionary containing the options given by the user
     :return text: The adapted plaintext
     :return links: The links that were actually present in the text
     """
@@ -773,7 +780,7 @@ def insert_links(text, links):
     new_links = {}
     for link_number in re.finditer(LINK_MARKER + r'([0-9]*?)' + LINK_MARKER, text):
         present_links.append(link_number.group(1))
-        if INCLUDE_LINKS_IN_PLAINTEXT:
+        if options[INCLUDE_LINKS_IN_PLAINTEXT]:
             text = re.sub(LINK_MARKER + link_number.group(1) + LINK_MARKER, " " + links[link_number.group(1)] + " ", text)
         else:
             text = re.sub(LINK_MARKER + link_number.group(1) + LINK_MARKER, "", text)
@@ -785,7 +792,7 @@ def insert_links(text, links):
     return text, new_links
 
 
-def split_and_write_os_specific_section(text, metadata, subtitle_order, title_order_number, all_metadata):
+def split_and_write_os_specific_section(text, metadata, subtitle_order, title_order_number, all_metadata, options):
     """
     Function that splits os-specific sections into subtitles, parses them using jinja and writes them away
 
@@ -794,6 +801,7 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, title_or
     :param subtitle_order: order of the subtitles generated by the splitter
     :param title_order_number: order number of the section
     :param all_metadata: all metadata generated by the splitter
+    :param options: dictionary containing the options given by the user
     :return:
     """
 
@@ -821,7 +829,7 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, title_or
                     writefile.write(jinja_text)
 
                 # split in right way
-                _, os_specific_text, os_specific_metadata, os_subtitle_order = split_text(TEMP_JINJA_FILE, metadata[MAIN_TITLE], current_paragraph_number=subtitle_order[title_order_number].split('_')[-1], OS=OS)
+                _, os_specific_text, os_specific_metadata, os_subtitle_order = split_text(TEMP_JINJA_FILE, metadata[MAIN_TITLE], options, current_paragraph_number=subtitle_order[title_order_number].split('_')[-1], OS=OS)
 
             else:
                 os.makedirs(LINUX_TUTORIAL, exist_ok=True)
@@ -829,7 +837,7 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, title_or
                     writefile.write(jinja_text)
 
                 # split in right way
-                _, os_specific_text, os_specific_metadata, os_subtitle_order = split_text(os.path.join(LINUX_TUTORIAL, TEMP_JINJA_FILE), metadata[MAIN_TITLE], current_paragraph_number=subtitle_order[title_order_number].split('_')[-1], OS=OS)
+                _, os_specific_text, os_specific_metadata, os_subtitle_order = split_text(os.path.join(LINUX_TUTORIAL, TEMP_JINJA_FILE), metadata[MAIN_TITLE], options, current_paragraph_number=subtitle_order[title_order_number].split('_')[-1], OS=OS)
 
             # prepare variables to fix metadata
             total_subtitle_order = subtitle_order[:title_order_number] + os_subtitle_order + subtitle_order[title_order_number+1:]
@@ -853,13 +861,13 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, title_or
                             parent = total_subtitle_order[parent_i]
                         parent_i += 1
 
-                    if SPLIT_ON_PARAGRAPHS and parent != os_specific_metadata[os_subtitle][MAIN_TITLE]:
+                    if options[SPLIT_ON_PARAGRAPHS] and parent != os_specific_metadata[os_subtitle][MAIN_TITLE]:
                         os_specific_metadata[os_subtitle][PARENT_TITLE] = all_metadata[parent][SUBTITLE]
                     else:
                         os_specific_metadata[os_subtitle][PARENT_TITLE] = parent
 
                     # fix directory in the metadata if needed
-                    if DEEP_DIRECTORIES:
+                    if options[DEEP_DIRECTORIES]:
                         if parent == os_specific_metadata[os_subtitle][MAIN_TITLE]:
                             os_specific_metadata[os_subtitle][DIRECTORY] = os.path.join(parent, os_specific_metadata[os_subtitle][SUBTITLE])
                         else:
@@ -870,7 +878,7 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, title_or
                     os.makedirs(filepath, exist_ok=True)
 
                     # write to files
-                    write_files(os_subtitle, os_specific_text[os_subtitle], os_specific_metadata, total_subtitle_order, os_i + title_order_number, filepath, OS)
+                    write_files(os_subtitle, os_specific_text[os_subtitle], os_specific_metadata, total_subtitle_order, os_i + title_order_number, filepath, OS, options)
                 else:
                     # don't write empty files
                     pass
@@ -884,6 +892,28 @@ def main():
     main function
     :return:
     """
+    parser = argparse.ArgumentParser(description="Preprocessing script for the chatbot\n")
+
+    # adding command-line options
+
+    parser.add_argument("-st", "--split_on_titles", type=int, default=1, help="Set to 1 if source files should be split on titles of maximum depth title_depth, set to 0 if source files should be split on paragraphs of minimum length paragraph_length (default: 1)")
+    parser.add_argument("-pl", "--min_paragraph_length", type=int, default=160, help="Minimum length of a paragraph, only works if split on titles is set to zero (default: 160)")
+    parser.add_argument("-td", "--max_title_depth", type=int, default=4, help="Maximum depth of titles that divide the source text into sections, only works if split on titles is set to one (default: 4)")
+    parser.add_argument("-l", "--links", action="store_true", help="Add links to the output texts")
+    parser.add_argument("-dd", "--deep_directories", action="store_true", help="Generate a nested directory structure following the structure of the subtitles. Only works if split on titles is set to one")
+
+    args = parser.parse_args()
+
+    options = {SPLIT_ON_TITLES: bool(args.split_on_titles),
+               SPLIT_ON_PARAGRAPHS: not args.split_on_titles,
+               MIN_PARAGRAPH_LENGTH: args.min_paragraph_length,
+               MAX_TITLE_DEPTH: args.max_title_depth,
+               INCLUDE_LINKS_IN_PLAINTEXT: args.links,
+               DEEP_DIRECTORIES: args.deep_directories and args.split_on_titles}
+
+    if options[DEEP_DIRECTORIES]:
+        print("WARNING: This script generates a file structure that contains rather long filepaths. Depending on where the script is ran, some of these paths might exceed the maximum length allowed by the system resulting in problems opening the files.")
+
     # remove the directories from a previous run of the parser if they weren't cleaned up properly for some reason
     shutil.rmtree(PARSED_MDS, ignore_errors=True)
     shutil.rmtree(COPIES, ignore_errors=True)
@@ -962,18 +992,18 @@ def main():
             jinja_parser(filename, copy_file)
 
             # split the text in paragraphs
-            paragraphs_os_text, paragraphs_os_free_text, paragraphs_metadata, subtitle_order = split_text(copy_file, main_title)
+            paragraphs_os_text, paragraphs_os_free_text, paragraphs_metadata, subtitle_order = split_text(copy_file, main_title, options)
 
             # for every section, either make the whole section generic, or create an os-specific file for each OS
             for i, subtitle in enumerate(subtitle_order):
 
                 # generic
                 if subtitle in paragraphs_os_free_text.keys():
-                    write_generic_file(subtitle, paragraphs_os_free_text, paragraphs_metadata, subtitle_order, i)
+                    write_generic_file(subtitle, paragraphs_os_free_text, paragraphs_metadata, subtitle_order, i, options)
 
                 # os-specific
                 else:
-                    split_and_write_os_specific_section(paragraphs_os_text[subtitle], paragraphs_metadata[subtitle], subtitle_order, i, paragraphs_metadata)
+                    split_and_write_os_specific_section(paragraphs_os_text[subtitle], paragraphs_metadata[subtitle], subtitle_order, i, paragraphs_metadata, options)
 
     # clean up temporary directories and files
     shutil.rmtree(COPIES, ignore_errors=True)
@@ -982,27 +1012,9 @@ def main():
     if os.path.exists(TEMP_JINJA_FILE):
         os.remove(TEMP_JINJA_FILE)
 
+    print("Parsing finished successfully")
+
 
 ################### run the script ###################
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Preprocessing script for the chatbot\n")
-
-    # adding command-line options
-
-    parser.add_argument("-st", "--split_on_titles", type=int, default=1, help="Set to 1 if source files should be split on titles of maximum depth title_depth, set to 0 if source files should be split on paragraphs of minimum length paragraph_length (default: 1)")
-    parser.add_argument("-pl", "--min_paragraph_length", type=int, default=160, help="Minimum length of a paragraph, only works if split on titles is set to zero (default: 160)")
-    parser.add_argument("-td", "--max_title_depth", type=int, default=4, help="Maximum depth of titles that divide the source text into sections, only works if split on titles is set to one (default: 4)")
-    parser.add_argument("-l", "--links", action="store_true", help="Add links to the output texts")
-
-    args = parser.parse_args()
-
-    SPLIT_ON_TITLES = bool(args.split_on_titles)
-    MIN_PARAGRAPH_LENGTH = args.min_paragraph_length
-    MAX_TITLE_DEPTH = args.max_title_depth
-    INCLUDE_LINKS_IN_PLAINTEXT = args.links
-    SPLIT_ON_PARAGRAPHS = not SPLIT_ON_TITLES
-    DEEP_DIRECTORIES = True and SPLIT_ON_TITLES  # Should always be False if SPLIT_ON_TITLES is False
-    if DEEP_DIRECTORIES:
-        print("WARNING: This script generates a file structure that contains rather long filepaths. Depending on where the script is ran, some of these paths might exceed the maximum length allowed by the system resulting in problems opening the files.")
     main()
-    print("Parsing finished successfully")
