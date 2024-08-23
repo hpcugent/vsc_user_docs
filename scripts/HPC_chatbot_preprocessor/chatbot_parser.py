@@ -10,7 +10,13 @@ from pathlib import Path
 from jinja2 import FileSystemLoader, Environment, ChoiceLoader, FunctionLoader, Template
 
 #################### define macro's ####################
-# customizable macros (default values are defined at the bottom of the script)
+# customizable macros (customization made possible at the bottom of the script)
+SPLIT_ON_TITLES = True
+MIN_PARAGRAPH_LENGTH = 160
+MAX_TITLE_DEPTH = 4
+INCLUDE_LINKS_IN_PLAINTEXT = False
+SPLIT_ON_PARAGRAPHS = not SPLIT_ON_TITLES
+DEEP_DIRECTORIES = True and SPLIT_ON_TITLES  # Should always be False if SPLIT_ON_TITLES is False
 
 # directories
 PARSED_MDS = "parsed_mds"
@@ -31,6 +37,7 @@ LINUX = "linux"
 WINDOWS = "windows"
 MACOS = "macos"
 GENERIC = "generic"
+LINK_OS = {LINUX: "Linux", WINDOWS: "Windows", MACOS: "macOS"}  # OS needs different capitalisation for use in links
 
 # urls
 REPO_URL = 'https://github.com/hpcugent/vsc_user_docs'
@@ -81,6 +88,11 @@ IF_MANGLED_PATTERNS = {
         ELSE: r'({' + IF_MANGLED_PART + r'%\s*-?\s*else\s*-?\s*%' + IF_MANGLED_PART + '})',
         ENDIF: r'({' + IF_MANGLED_PART + r'%\s*-?\s*endif\s*-?\s*%' + IF_MANGLED_PART + '})'
     }
+
+# filenames (and parts of filenames)
+TEMP_JINJA_FILE = "jinja_file.txt"
+_PARAGRAPH_ = "_paragraph_"
+METADATA_EXTENSION = "_metadata"
 
 
 ################### define functions ###################
@@ -211,12 +223,14 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
     return curr_line, linklist
 
 
-def split_text(file, main_title):
+def split_text(file, main_title, current_paragraph_number=-1, OS=GENERIC):
     """
     Function that splits the text into smaller sections and makes them into two dictionaries containing text and metadata
 
     :param file: the filepath of the file to be split
     :param main_title: the main title of the file
+    :param current_paragraph_number: number of the paragraph that is being split, only applicable when splitting an os-specific paragraph on paragraph level
+    :param OS: the OS of the file to be split, only applicable when splitting an os-specific paragraph on paragraph level
     :return paragraphs_text: dictionary containing the split sections of text
     :return paragraphs_metadata: dictionary containing the metadata of each split section of text
     :return subtitle_order: list containing all encountered subtitles in order of appearance
@@ -225,7 +239,7 @@ def split_text(file, main_title):
     if SPLIT_ON_TITLES:
         return split_on_titles(file, main_title)
     elif SPLIT_ON_PARAGRAPHS:
-        return split_on_paragraphs(file, main_title)
+        return split_on_paragraphs(file, main_title, current_paragraph_number, OS)
 
 
 def split_on_titles(file, main_title):
@@ -257,12 +271,6 @@ def split_on_titles(file, main_title):
 
     # list to keep track of the order of the subtitles
     subtitle_order = []
-
-    # variable to keep track of the title level
-    title_level = 0
-
-    # variable to allow for if statements to "continue" over multiple paragraphs
-    open_ifs = ""
 
     # variable to keep track of how many if-statements deep the current line is
     in_if_statement = 0
@@ -309,7 +317,7 @@ def split_on_titles(file, main_title):
                     title = make_valid_title(line[title_level + 1:-1])
 
                     # create an entry for the file in the paragraphs text dictionary
-                    current_paragraph = open_ifs
+                    current_paragraph = ""
 
                     after_first_title = True
                     subtitle_order.append(title)
@@ -345,28 +353,28 @@ def split_on_titles(file, main_title):
     return paragraphs_os_text, paragraphs_os_free_text, paragraphs_metadata, subtitle_order
 
 
-def split_on_paragraphs(file, main_title):
+def split_on_paragraphs(file, main_title, current_paragraph_number=-1, OS=GENERIC):
     """
     Function that splits the text into smaller sections based on the paragraph structure and makes them into two dictionaries containing text and metadata
 
     :param file: the filepath of the file to be split
     :param main_title: the main title of the file
+    :param current_paragraph_number: number of the paragraph that is being split, only applicable when splitting an os-specific paragraph
+    :param OS: the OS of the file to be split, only applicable when splitting an os-specific paragraph
     :return paragraphs_text: dictionary containing the split sections of text
     :return paragraphs_metadata: dictionary containing the metadata of each split section of text
     :return subtitle_order: list containing all encountered subtitles in order of appearance
     """
-    # start of assuming we haven't encountered a title and the first paragraph hasn't appeared yet
-    after_first_title = False
-
-    # first paragraph number
-    paragraph_number = 1
-
     # start of assuming we are not in a code_block
     in_code_block = False
 
     # define initial dictionaries
-    paragraphs_text = {}
+    paragraphs_os_free_text = {}
+    paragraphs_os_text = {}
     paragraphs_metadata = {}
+
+    # variable to keep track of the current paragraph
+    current_paragraph = ""
 
     # list to keep track of links in the text
     link_list = []
@@ -374,13 +382,17 @@ def split_on_paragraphs(file, main_title):
     # list to keep track of the order of the subtitles
     subtitle_order = []
 
-    # variable to keep track of the title level
-    title_level = 0
+    # variable to keep track of how many if-statements deep the current line is
+    in_if_statement = 0
 
-    # initialise the first paragraph
-    title = main_title + "_paragraph_" + str(paragraph_number)
-    paragraphs_text[title] = ""
-    subtitle_order.append(title)
+    # variable to indicate that previous section was one with if-statements
+    previous_contained_if = False
+
+    # paragraph number to add to title
+    paragraph_number = 1
+
+    # metadata title
+    metadata_title = main_title
 
     # list to keep track of most recent directories on each title level
     if LINUX_TUTORIAL not in file:
@@ -392,49 +404,85 @@ def split_on_paragraphs(file, main_title):
 
         for line in readfile:
 
-            # keep track of title level and directory to write to metadata upon discovering a new subtitle
-            if title_level > 0:
-                last_title_level = title_level
-                last_dir = curr_dirs[last_title_level]
+            # detect if-statements starting or ending on the current line
+            in_if_statement += len(re.findall(IF_MANGLED_PATTERNS[IF], line)) - len(
+                re.findall(IF_MANGLED_PATTERNS[ENDIF], line))
 
-            title_level = check_for_title(line, in_code_block, curr_dirs)
+            # only split up if current line is in a fully non-os-specific section
+            if in_if_statement == 0:
 
-            # detect codeblocks to make sure titles and beginnings of paragraphs aren't detected in them
-            if '```' in line or (('<pre><code>' in line) ^ ('</code></pre>' in line)):
-                in_code_block = not in_code_block
+                title_level = check_for_title(line, in_code_block, curr_dirs)
 
-            # line is a title with a maximum depth of 4
-            if title_level > 0:
-                paragraphs_text[title] += line[title_level + 1:]
+                # detect codeblocks to make sure titles aren't detected in them
+                if '```' in line or (('<pre><code>' in line) ^ ('</code></pre>' in line)):
+                    in_code_block = not in_code_block
 
-            elif line == "\n" and len(re.sub(r'\{' + IF_MANGLED_PART + '%.*?%' + IF_MANGLED_PART + '}', "", paragraphs_text[title])) >= MIN_PARAGRAPH_LENGTH:
-                # finish the previous file
-                paragraphs_text[title], open_ifs = close_ifs(paragraphs_text[title])
-                paragraphs_metadata[title] = write_metadata(main_title, title, link_list, last_title_level, last_dir)
+                # check whether a new paragraph should be started
+                if line == "\n" and len(re.sub(r'\{' + IF_MANGLED_PART + '%.*?%' + IF_MANGLED_PART + '}', "", current_paragraph)) >= MIN_PARAGRAPH_LENGTH and not in_code_block:
 
-                # start a new file
-                paragraph_number += 1
-                title = make_valid_title(main_title + "_paragraph_" + str(paragraph_number))
-                subtitle_order.append(title)
+                    # create a title for the previous paragraph
+                    if current_paragraph_number == -1:
+                        paragraph_title = main_title + _PARAGRAPH_ + str(paragraph_number)
+                    else:
+                        paragraph_title = main_title + "_" + OS + _PARAGRAPH_ + str(current_paragraph_number) + '.' + str(paragraph_number)
+                    paragraph_number += 1
 
-                # create an entry for the next file in the paragraphs text dictionary
-                paragraphs_text[title] = open_ifs
+                    # write text of previous file
+                    if previous_contained_if:
+                        paragraphs_os_text[paragraph_title] = current_paragraph
+                    else:
+                        paragraphs_os_free_text[paragraph_title] = current_paragraph
 
-                # reset link_list
-                link_list = []
+                    # write metadata of previous file
+                    paragraphs_metadata[paragraph_title] = write_metadata(main_title, metadata_title, link_list, last_title_level, last_dir)
+                    subtitle_order.append(paragraph_title)
 
-            # line is not a title or the ending of a sufficiently large paragraph
+                    # reset the current paragraph
+                    current_paragraph = ""
+
+                    # reset link_list
+                    link_list = []
+
+                    previous_contained_if = False
+
+                # line is a title with a maximum depth of 4
+                elif title_level > 0:
+
+                    # make a new title
+                    metadata_title = make_valid_title(line[title_level + 1:-1])
+
+                    line, link_list = replace_markdown_markers(line[title_level + 1:], link_list, in_code_block, main_title)
+                    current_paragraph += line
+
+                # line is not a title or the beginning of a new paragraph
+                elif line != "\n" or previous_contained_if:
+                    line, link_list = replace_markdown_markers(line, link_list, in_code_block, main_title)
+                    current_paragraph += line
+
+                # keep track of title level and directory to write to metadata upon discovering a new subtitle
+                if title_level > 0:
+                    last_title_level = title_level
+                    last_dir = curr_dirs[last_title_level]
             else:
+                previous_contained_if = True
                 line, link_list = replace_markdown_markers(line, link_list, in_code_block, main_title)
-                if title in paragraphs_text.keys() and line != "\n":
-                    paragraphs_text[title] += line
-                elif line != "\n":
-                    paragraphs_text[title] = line
+                current_paragraph += line
 
-    # write metadata for the last file
-    paragraphs_metadata[title] = write_metadata(main_title, title, link_list, title_level, curr_dirs[last_title_level])
+    # create a title for the last paragraph
+    if current_paragraph_number == -1:
+        paragraph_title = main_title + _PARAGRAPH_ + str(paragraph_number)
+    else:
+        paragraph_title = main_title + "_" + OS + _PARAGRAPH_ + str(current_paragraph_number) + '.' + str(paragraph_number)
 
-    return paragraphs_text, paragraphs_metadata, subtitle_order
+    # write dictionaries for the last file
+    if previous_contained_if:
+        paragraphs_os_text[paragraph_title] = current_paragraph
+    else:
+        paragraphs_os_free_text[paragraph_title] = current_paragraph
+    paragraphs_metadata[paragraph_title] = write_metadata(main_title, metadata_title, link_list, last_title_level, curr_dirs[last_title_level])
+    subtitle_order.append(paragraph_title)
+
+    return paragraphs_os_text, paragraphs_os_free_text, paragraphs_metadata, subtitle_order
 
 
 def write_metadata(main_title, subtitle, links, title_level, directory):
@@ -459,63 +507,6 @@ def write_metadata(main_title, subtitle, links, title_level, directory):
     paragraph_metadata[PARENT_TITLE] = Path(directory).parent.name
 
     return paragraph_metadata
-
-
-def close_ifs(text):
-    """
-    Function to check whether all if-statements in a section are closed properly. If that is not the case, the function
-    closes all if-statements at the end of the section and returns a prefix for the next section containing all if-statements
-    of the section it is processing. This needs to be done because the start of the next section would also be contained within the
-    last unclosed if-statement of its previous section.
-
-    :param text: the text of the section it checks
-    :return text: the adapted text where all if-statements are closed
-    :return prefix: the prefix for the next section
-    """
-
-    if_count = len(re.findall(IF_MANGLED_PATTERNS[IF], text.replace("\n", "")))
-    endif_count = len(re.findall(IF_MANGLED_PATTERNS[ENDIF], text.replace("\n", "")))
-    if IF_MANGLED_PART not in text or if_count == endif_count:
-        return text, ""
-    else:
-
-        # Find all matches for each pattern
-        matches = []
-        for key, pattern in IF_MANGLED_PATTERNS.items():
-            for match in re.finditer(pattern, text):
-                matches.append(match)
-
-        # sort the matches according to their start index
-        matches.sort(key=lambda x: x.start())
-
-        # extract the strings from the matches
-        open_ifs = []
-        for match in matches:
-            open_ifs.append(match.group(0))
-
-        # only include the non-closed if-statements
-        changed = True
-        while changed:
-            changed = False
-            last_if = -1
-            last_else = -1
-            for i, if_part in enumerate(open_ifs):
-                if re.search(IF_MANGLED_PATTERNS[IF], if_part):
-                    last_if = i
-                elif re.search(IF_MANGLED_PATTERNS[ELSE], if_part):
-                    last_else = i
-                elif re.search(IF_MANGLED_PATTERNS[ENDIF], if_part):
-                    changed = True
-                    del open_ifs[i]
-                    if last_else > last_if:
-                        del open_ifs[last_else]
-                    del open_ifs[last_if]
-                    break
-
-        # Concatenate all matches into a single string
-        open_ifs = ''.join(open_ifs)
-
-        return text + (r'{' + IF_MANGLED_PART + '% endif %' + IF_MANGLED_PART + '}')*(if_count - endif_count), open_ifs
 
 
 def jinja_parser(filename, copy_location):
@@ -596,7 +587,7 @@ def mangle_os_ifs(line, is_os):
 
         constr_match = re.search(r'\{%.*?%}', match.string)
         if_match = re.search(r'if ', match.group(1))
-        if_os_match = re.search(r'if OS ', match.group(1))
+        if_os_match = re.search(r'if OS', match.group(1))
         endif_match = re.search(r'endif', match.group(1))
         else_match = re.search(r'else', match.group(1))
 
@@ -726,7 +717,6 @@ def write_files(title, text, paragraphs_metadata, title_order, title_order_numbe
 
     metadata = copy.deepcopy(paragraphs_metadata[title])
 
-    file_title = paragraphs_metadata[title][MAIN_TITLE] + "_" + OS + "_paragraph_" + str(paragraph_numbers[OS])
     file_title = title
 
     # write text file
@@ -757,10 +747,10 @@ def write_files(title, text, paragraphs_metadata, title_order, title_order_numbe
     if OS == GENERIC:
         os_part = ""
     else:
-        os_part = OS + "/"
-    metadata[REFERENCE_LINK] = DOCS_URL + "/" + os_part + linux_part + paragraphs_metadata[title][MAIN_TITLE] + "/#" + ''.join(char.lower() for char in title if char.isalnum() or char == '-').strip('-')
+        os_part = LINK_OS[OS] + "/"
+    metadata[REFERENCE_LINK] = DOCS_URL + "/" + os_part + linux_part + paragraphs_metadata[title][MAIN_TITLE] + "/#" + ''.join(char.lower() for char in paragraphs_metadata[title][SUBTITLE] if char.isalnum() or char == '-').strip('-')
 
-    with open(os.path.join(filepath, file_title + "_metadata.json"), 'w') as writefile:
+    with open(os.path.join(filepath, file_title + METADATA_EXTENSION + ".json"), 'w') as writefile:
         json.dump(metadata, writefile, indent=4)
 
     paragraph_numbers[OS] += 1
@@ -804,8 +794,6 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, title_or
     :param all_metadata: all metadata generated by the splitter
     :return:
     """
-    # add first subtitle in front of section again
-    text = "#" * metadata[TITLE_DEPTH] + " " + metadata[SUBTITLE] + "\n" + text
 
     # Unmangle if's to use jinja parser
     text = re.sub(IF_MANGLED_PART, "", text)
@@ -819,52 +807,74 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, title_or
         template = Template(text)
         jinja_text = template.render(OS=OS)
 
-        # re-adjust text to correct overcorrections
-        jinja_text = re.sub('"' + OS + '"', OS, jinja_text)
+        # add first subtitle in front of section again
+        if len(jinja_text) != 0:
+            jinja_text = "#" * metadata[TITLE_DEPTH] + " " + metadata[SUBTITLE] + "\n" + jinja_text
 
-        with open("jinja_file.txt", 'w') as writefile:
-            writefile.write(jinja_text)
+            # re-adjust text to correct overcorrections
+            jinja_text = re.sub('"' + OS + '"', OS, jinja_text)
 
-        # split in right way
-        _, os_specific_text, os_specific_metadata, os_subtitle_order = split_text("jinja_file.txt", metadata[MAIN_TITLE])
+            if LINUX_TUTORIAL not in metadata[DIRECTORY]:
+                with open(TEMP_JINJA_FILE, 'w') as writefile:
+                    writefile.write(jinja_text)
 
-        # prepare variables to fix metadata
-        total_subtitle_order = subtitle_order[:title_order_number] + os_subtitle_order + subtitle_order[title_order_number+1:]
-        all_metadata.update(os_specific_metadata)
+                # split in right way
+                _, os_specific_text, os_specific_metadata, os_subtitle_order = split_text(TEMP_JINJA_FILE, metadata[MAIN_TITLE], current_paragraph_number=subtitle_order[title_order_number].split('_')[-1], OS=OS)
 
-        # write to files
-        for os_i, os_subtitle in enumerate(os_subtitle_order):
-            # check that file actually has some content
-            if len(os_specific_text[os_subtitle]) > 0:
-                # add the links to the metadata
-                if LINKS in metadata.keys():
-                    os_specific_metadata[os_subtitle][LINKS] = metadata[LINKS]
-
-                # fix parent in the metadata
-                parent_i = 0
-                parent_depth = os_specific_metadata[os_subtitle][TITLE_DEPTH] - 1
-                parent = os_specific_metadata[os_subtitle][MAIN_TITLE]
-                while total_subtitle_order[parent_i] != os_subtitle and parent_i != len(total_subtitle_order):
-                    if all_metadata[total_subtitle_order[parent_i]][TITLE_DEPTH] == parent_depth:
-                        parent = total_subtitle_order[parent_i]
-                    parent_i += 1
-                os_specific_metadata[os_subtitle][PARENT_TITLE] = parent
-
-                # fix directory in the metadata
-                if parent == os_specific_metadata[os_subtitle][MAIN_TITLE]:
-                    os_specific_metadata[os_subtitle][DIRECTORY] = os.path.join(parent, os_specific_metadata[os_subtitle][SUBTITLE])
-                else:
-                    os_specific_metadata[os_subtitle][DIRECTORY] = os.path.join(all_metadata[parent][DIRECTORY], os_specific_metadata[os_subtitle][SUBTITLE])
-
-                # make a directory to save the files
-                filepath = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, OS, os_specific_metadata[os_subtitle][DIRECTORY])
-                os.makedirs(filepath, exist_ok=True)
-
-                # write to files
-                write_files(os_subtitle, os_specific_text[os_subtitle], os_specific_metadata, total_subtitle_order, os_i + title_order_number, filepath, OS, paragraph_numbers)
             else:
-                # don't write empty files
-                pass
+                os.makedirs(LINUX_TUTORIAL, exist_ok=True)
+                with open(os.path.join(LINUX_TUTORIAL, TEMP_JINJA_FILE), 'w') as writefile:
+                    writefile.write(jinja_text)
+
+                # split in right way
+                _, os_specific_text, os_specific_metadata, os_subtitle_order = split_text(os.path.join(LINUX_TUTORIAL, TEMP_JINJA_FILE), metadata[MAIN_TITLE], current_paragraph_number=subtitle_order[title_order_number].split('_')[-1], OS=OS)
+
+            # prepare variables to fix metadata
+            total_subtitle_order = subtitle_order[:title_order_number] + os_subtitle_order + subtitle_order[title_order_number+1:]
+            all_metadata.update(os_specific_metadata)
+
+            # write to files
+            for os_i, os_subtitle in enumerate(os_subtitle_order):
+                # check that file actually has some content
+                if len(os_specific_text[os_subtitle]) > 0:
+                    # add the links to the metadata
+                    if LINKS in metadata.keys():
+                        os_specific_metadata[os_subtitle][LINKS] = metadata[LINKS]
+
+                    # fix parent in the metadata
+                    parent_i = 0
+                    parent_depth = os_specific_metadata[os_subtitle][TITLE_DEPTH] - 1
+                    parent = os_specific_metadata[os_subtitle][MAIN_TITLE]
+
+                    while total_subtitle_order[parent_i] != os_subtitle and parent_i != len(total_subtitle_order):
+                        if all_metadata[total_subtitle_order[parent_i]][TITLE_DEPTH] == parent_depth:
+                            parent = total_subtitle_order[parent_i]
+                        parent_i += 1
+
+                    if SPLIT_ON_PARAGRAPHS and parent != os_specific_metadata[os_subtitle][MAIN_TITLE]:
+                        os_specific_metadata[os_subtitle][PARENT_TITLE] = all_metadata[parent][SUBTITLE]
+                    else:
+                        os_specific_metadata[os_subtitle][PARENT_TITLE] = parent
+
+                    # fix directory in the metadata if needed
+                    if DEEP_DIRECTORIES:
+                        if parent == os_specific_metadata[os_subtitle][MAIN_TITLE]:
+                            os_specific_metadata[os_subtitle][DIRECTORY] = os.path.join(parent, os_specific_metadata[os_subtitle][SUBTITLE])
+                        else:
+                            os_specific_metadata[os_subtitle][DIRECTORY] = os.path.join(all_metadata[parent][DIRECTORY], os_specific_metadata[os_subtitle][SUBTITLE])
+
+                    # make a directory to save the files
+                    filepath = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, OS, os_specific_metadata[os_subtitle][DIRECTORY])
+                    os.makedirs(filepath, exist_ok=True)
+
+                    # write to files
+                    write_files(os_subtitle, os_specific_text[os_subtitle], os_specific_metadata, total_subtitle_order, os_i + title_order_number, filepath, OS, paragraph_numbers)
+                else:
+                    # don't write empty files
+                    pass
+        else:
+            # don't split empty texts
+            pass
 
 
 def main():
@@ -913,7 +923,7 @@ def main():
     # filenames_linux = {}
     # filenames_generic["account.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/account.md"
     # filenames_generic["example_text_1.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/scripts/HPC_chatbot_preprocessor/tests/example_files/example_text_1.md"
-    # filenames_linux["beyond_the_basics.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/linux-tutorial/beyond_the_basics.md"
+    # filenames_linux["common_pitfalls.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/linux-tutorial/common_pitfalls.md"
 
     # for loops over all files
     for filenames in [filenames_generic, filenames_linux]:
@@ -977,7 +987,9 @@ def main():
     # clean up temporary directories and files
     shutil.rmtree(COPIES, ignore_errors=True)
     shutil.rmtree(IF_MANGLED_FILES, ignore_errors=True)
-    os.remove("jinja_file.txt")
+    shutil.rmtree(LINUX_TUTORIAL, ignore_errors=True)
+    if os.path.exists(TEMP_JINJA_FILE):
+        os.remove(TEMP_JINJA_FILE)
 
 
 ################### run the script ###################
@@ -987,23 +999,18 @@ if __name__ == '__main__':
     # adding command-line options
 
     parser.add_argument("-st", "--split_on_titles", type=int, default=1, help="Set to 1 if source files should be split on titles of maximum depth title_depth, set to 0 if source files should be split on paragraphs of minimum length paragraph_length (default: 1)")
-    parser.add_argument("-pl", "--paragraph_length", type=int, default=160, help="Minimum length of a paragraph, only works if split on titles is set to zero (default: 160)")
-    parser.add_argument("-td", "--title_depth", type=int, default=4, help="Maximum depth of titles that divide the source text into sections, only works if split on titles is set to one (default: 4)")
+    parser.add_argument("-pl", "--min_paragraph_length", type=int, default=160, help="Minimum length of a paragraph, only works if split on titles is set to zero (default: 160)")
+    parser.add_argument("-td", "--max_title_depth", type=int, default=4, help="Maximum depth of titles that divide the source text into sections, only works if split on titles is set to one (default: 4)")
     parser.add_argument("-l", "--links", action="store_true", help="Add links to the output texts")
 
     args = parser.parse_args()
 
     SPLIT_ON_TITLES = bool(args.split_on_titles)
-    MIN_PARAGRAPH_LENGTH = args.paragraph_length
-    MAX_TITLE_DEPTH = args.title_depth
+    MIN_PARAGRAPH_LENGTH = args.min_paragraph_length
+    MAX_TITLE_DEPTH = args.max_title_depth
     INCLUDE_LINKS_IN_PLAINTEXT = args.links
     SPLIT_ON_PARAGRAPHS = not SPLIT_ON_TITLES
     DEEP_DIRECTORIES = True and SPLIT_ON_TITLES  # Should always be False if SPLIT_ON_TITLES is False
-
-    print(SPLIT_ON_TITLES)
-    print(MIN_PARAGRAPH_LENGTH)
-    print(MAX_TITLE_DEPTH)
-    print(INCLUDE_LINKS_IN_PLAINTEXT)
 
     print("WARNING: This script generates a file structure that contains rather long filepaths. Depending on where the script is ran, some of these paths might exceed the maximum length allowed by the system resulting in problems opening the files.")
     main()
