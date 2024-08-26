@@ -14,13 +14,6 @@ usage() {
   return 1
 }
 
-load_modules() {
-  local MODULES_SCRIPT="$1" # The modules script to load. Empty if not provided.
-
-
-
-}
-
 # ============================ Main functions ============================
 
 activate() {
