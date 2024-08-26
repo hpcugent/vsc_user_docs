@@ -1003,19 +1003,19 @@ if __name__ == '__main__':
 
     # adding command-line options
 
-    parser.add_argument("-st", "--split_on_titles", type=int, default=1, help="Set to 1 if source files should be split on titles of maximum depth title_depth, set to 0 if source files should be split on paragraphs of minimum length paragraph_length (default: 1)")
-    parser.add_argument("-pl", "--min_paragraph_length", type=int, default=160, help="Minimum length of a paragraph, only works if split on titles is set to zero (default: 160)")
-    parser.add_argument("-td", "--max_title_depth", type=int, default=4, help="Maximum depth of titles that divide the source text into sections, only works if split on titles is set to one (default: 4)")
+    parser.add_argument("-st", "--split_on_titles", action="store_true", help="Splits the text based on titles and subtitles instead of paragraphs with a minimum length.")
+    parser.add_argument("-pl", "--min_paragraph_length", type=int, default=160, help="Minimum length of a paragraph, only works if split on titles is disabled (default: 160)")
+    parser.add_argument("-td", "--max_title_depth", type=int, default=4, help="Maximum depth of titles that divide the source text into sections, only works if split on titles is enabled (default: 4)")
     parser.add_argument("-l", "--links", action="store_true", help="Add links to the output texts")
-    parser.add_argument("-dd", "--deep_directories", action="store_true", help="Generate a nested directory structure following the structure of the subtitles. Only works if split on titles is set to one")
+    parser.add_argument("-dd", "--deep_directories", action="store_true", help="Generate a nested directory structure following the structure of the subtitles. Only works if split on titles is enabled")
 
     args = parser.parse_args()
 
-    options = {SPLIT_ON_TITLES: bool(args.split_on_titles),
-               SPLIT_ON_PARAGRAPHS: not args.split_on_titles,
-               MIN_PARAGRAPH_LENGTH: args.min_paragraph_length,
-               MAX_TITLE_DEPTH: args.max_title_depth,
-               INCLUDE_LINKS_IN_PLAINTEXT: args.links,
-               DEEP_DIRECTORIES: args.deep_directories and args.split_on_titles}
-    
-    main(options)
+    options_dict = {SPLIT_ON_TITLES: args.split_on_titles,
+                    SPLIT_ON_PARAGRAPHS: not args.split_on_titles,
+                    MIN_PARAGRAPH_LENGTH: args.min_paragraph_length,
+                    MAX_TITLE_DEPTH: args.max_title_depth,
+                    INCLUDE_LINKS_IN_PLAINTEXT: args.links,
+                    DEEP_DIRECTORIES: args.deep_directories and args.split_on_titles}
+
+    main(options_dict)
