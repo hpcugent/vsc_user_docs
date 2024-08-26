@@ -13,12 +13,20 @@ python chatbot_parser.py
 This command has the following possible options:
 
 ```shell
-chatbot_parser.py [-h] [-st SPLIT_ON_TITLES] [-pl MIN_PARAGRAPH_LENGTH] [-td MAX_TITLE_DEPTH] [-l] [-dd]
+chatbot_parser.py [-h] -src SOURCE -dst DESTINATION [-st] [-pl MIN_PARAGRAPH_LENGTH] [-td MAX_TITLE_DEPTH] [-l] [-dd]
 ```
 
 ### `h`/`help`
 
 Display the help message
+
+### `src`/`source`
+
+This is a required option that specifies the source directory of the input files for the script. This location is also used to look for jinja templates when using jinja to parse the source files (such as the `macros` directory within `vsc_user_docs/mkdocs/docs/HPC`).
+
+### `dst`/`destination`
+
+This is a required option that specifies where the output of the script should be written. The script also generates extra intermediate subdirectories, so subdirectories with the following names shouldn't be present in the destination directory: `parsed_mds`, `copies` and `if_mangled_files`. If any of these pose a problem, the name of the intermediate subdirectory used for the script can be changed in the macros at the top of the script.
 
 ### `st`/`split_on_titles`
 

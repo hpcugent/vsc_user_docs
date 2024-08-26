@@ -13,6 +13,8 @@ from jinja2 import FileSystemLoader, Environment, ChoiceLoader, FunctionLoader, 
 
 #################### define macro's ####################
 # options
+SOURCE_DIRECTORY = "SOURCE_DIRECTORY"
+DESTINATION_DIRECTORY = "DESTINATION_DIRECTORY"
 SPLIT_ON_TITLES = "SPLIT_ON_TITLES"
 MIN_PARAGRAPH_LENGTH = "MIN_PARAGRAPH_LENGTH"
 MAX_TITLE_DEPTH = "MAX_TITLE_DEPTH"
@@ -284,10 +286,7 @@ def split_on_titles(file, main_title, options):
     previous_contained_if = False
 
     # list to keep track of most recent directories on each title level
-    if LINUX_TUTORIAL not in file:
-        curr_dirs = [main_title for _ in range(options[MAX_TITLE_DEPTH] + 1)]
-    else:
-        curr_dirs = [os.path.join(LINUX_TUTORIAL, main_title) for _ in range(options[MAX_TITLE_DEPTH] + 1)]
+    curr_dirs = [main_title for _ in range(options[MAX_TITLE_DEPTH] + 1)]
 
     with open(file, 'r') as readfile:
 
@@ -515,12 +514,13 @@ def write_metadata(main_title, subtitle, links, title_level, directory):
     return paragraph_metadata
 
 
-def jinja_parser(filename, copy_location):
+def jinja_parser(filename, copy_location, options):
     """
     function that let's jinja do its thing to format the files except for the os-related if-statements
 
     :param filename: the name of the file that needs to be formatted using jinja
     :param copy_location: the location of the file that needs to be formatted using jinja
+    :param options: dictionary containing the options given by the user
     :return:
     """
     # YAML file location
@@ -539,10 +539,10 @@ def jinja_parser(filename, copy_location):
     combined_context = {**words_dict, **additional_context}
 
     # Mangle the OS-related if-statements
-    mangle_ifs(copy_location, filename)
+    mangle_ifs(copy_location, filename, options)
 
     # Use Jinja2 to replace the macros
-    template_loader = ChoiceLoader([FileSystemLoader(searchpath=[IF_MANGLED_FILES, os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR)]), FunctionLoader(load_macros)])
+    template_loader = ChoiceLoader([FileSystemLoader(searchpath=[os.path.join(options[DESTINATION_DIRECTORY], IF_MANGLED_FILES), options[SOURCE_DIRECTORY], os.path.join(options[SOURCE_DIRECTORY], RETURN_DIR)]), FunctionLoader(load_macros)])
     templateEnv = Environment(loader=template_loader)
     template = templateEnv.get_template(filename)
     rendered_content = template.render(combined_context)
@@ -642,18 +642,19 @@ def mangle_os_ifs(line, is_os):
     return line, is_os
 
 
-def mangle_ifs(directory, filename):
+def mangle_ifs(directory, filename, options):
     """
     function that writes the if-mangled version of a file to a location where the jinja parser will use it
 
     :param directory: the directory of the file to be if mangled
     :param filename: the filename of the file to be mangled
+    :param options: dictionary containing the options given by the user
     :return:
     """
     # variable to keep track of latest if-statement scope
     is_os = NON_OS_IF
 
-    with open(os.path.join(IF_MANGLED_FILES,  filename), 'w') as write_file:
+    with open(os.path.join(options[DESTINATION_DIRECTORY], IF_MANGLED_FILES,  filename), 'w') as write_file:
         with open(directory, 'r') as read_file:
             for line in read_file:
                 new_line, is_os = mangle_os_ifs(line, is_os)
@@ -682,7 +683,7 @@ def make_valid_title(title):
     return valid_filename
 
 
-def write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order, title_order_number, options):
+def write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order, title_order_number, options, is_linux_tutorial):
     """
     Function that writes text and metadata of a generic (non-os-specific) file
 
@@ -692,21 +693,22 @@ def write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order,
     :param title_order: list containing all subtitles in order
     :param title_order_number: order number of the title of the section that is being written
     :param options: dictionary containing the options given by the user
+    :param is_linux_tutorial: boolean indicating whether the current file is part of the linux tutorial
     :return:
     """
 
     if len(paragraphs_text[title]) > 0:
         # make the directory needed for the files that will be written
-        filepath = os.path.join(PARSED_MDS, GENERIC_DIR, paragraphs_metadata[title][DIRECTORY])
+        filepath = os.path.join(options[DESTINATION_DIRECTORY], PARSED_MDS, GENERIC_DIR, paragraphs_metadata[title][DIRECTORY])
         os.makedirs(filepath, exist_ok=True)
 
-        write_files(title, paragraphs_text[title], paragraphs_metadata, title_order, title_order_number, filepath, GENERIC, options)
+        write_files(title, paragraphs_text[title], paragraphs_metadata, title_order, title_order_number, filepath, GENERIC, options, is_linux_tutorial)
     else:
         # don't write empty files
         pass
 
 
-def write_files(title, text, paragraphs_metadata, title_order, title_order_number, filepath, OS, options):
+def write_files(title, text, paragraphs_metadata, title_order, title_order_number, filepath, OS, options, is_linux_tutorial):
     """
     Function to write files to a certain filepath
 
@@ -718,6 +720,7 @@ def write_files(title, text, paragraphs_metadata, title_order, title_order_numbe
     :param filepath: filepath to write files to
     :param OS: OS to be included in the metadata
     :param options: dictionary containing the options given by the user
+    :param is_linux_tutorial: boolean indicating whether the current file is part of the linux tutorial
     :return:
     """
 
@@ -750,7 +753,7 @@ def write_files(title, text, paragraphs_metadata, title_order, title_order_numbe
     metadata[METADATA_OS] = OS
 
     # add reference link
-    if bool(LINUX_TUTORIAL in paragraphs_metadata[title][DIRECTORY]):
+    if is_linux_tutorial:
         linux_part = LINUX_TUTORIAL + "/"
     else:
         linux_part = ""
@@ -792,7 +795,7 @@ def insert_links(text, links, options):
     return text, new_links
 
 
-def split_and_write_os_specific_section(text, metadata, subtitle_order, title_order_number, all_metadata, options):
+def split_and_write_os_specific_section(text, metadata, subtitle_order, title_order_number, all_metadata, options, is_linux_tutorial):
     """
     Function that splits os-specific sections into subtitles, parses them using jinja and writes them away
 
@@ -802,6 +805,7 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, title_or
     :param title_order_number: order number of the section
     :param all_metadata: all metadata generated by the splitter
     :param options: dictionary containing the options given by the user
+    :param is_linux_tutorial: boolean indicating whether the current file is part of the linux tutorial
     :return:
     """
 
@@ -824,20 +828,11 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, title_or
             # re-adjust text to correct overcorrections
             jinja_text = re.sub('"' + OS + '"', OS, jinja_text)
 
-            if LINUX_TUTORIAL not in metadata[DIRECTORY]:
-                with open(TEMP_JINJA_FILE, 'w') as writefile:
-                    writefile.write(jinja_text)
+            with open(TEMP_JINJA_FILE, 'w') as writefile:
+                writefile.write(jinja_text)
 
-                # split in right way
-                _, os_specific_text, os_specific_metadata, os_subtitle_order = split_text(TEMP_JINJA_FILE, metadata[MAIN_TITLE], options, current_paragraph_number=subtitle_order[title_order_number].split('_')[-1], OS=OS)
-
-            else:
-                os.makedirs(LINUX_TUTORIAL, exist_ok=True)
-                with open(os.path.join(LINUX_TUTORIAL, TEMP_JINJA_FILE), 'w') as writefile:
-                    writefile.write(jinja_text)
-
-                # split in right way
-                _, os_specific_text, os_specific_metadata, os_subtitle_order = split_text(os.path.join(LINUX_TUTORIAL, TEMP_JINJA_FILE), metadata[MAIN_TITLE], options, current_paragraph_number=subtitle_order[title_order_number].split('_')[-1], OS=OS)
+            # split in right way
+            _, os_specific_text, os_specific_metadata, os_subtitle_order = split_text(TEMP_JINJA_FILE, metadata[MAIN_TITLE], options, current_paragraph_number=subtitle_order[title_order_number].split('_')[-1], OS=OS)
 
             # prepare variables to fix metadata
             total_subtitle_order = subtitle_order[:title_order_number] + os_subtitle_order + subtitle_order[title_order_number+1:]
@@ -874,11 +869,11 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, title_or
                             os_specific_metadata[os_subtitle][DIRECTORY] = os.path.join(all_metadata[parent][DIRECTORY], os_specific_metadata[os_subtitle][SUBTITLE])
 
                     # make a directory to save the files
-                    filepath = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, OS, os_specific_metadata[os_subtitle][DIRECTORY])
+                    filepath = os.path.join(options[DESTINATION_DIRECTORY], PARSED_MDS, OS_SPECIFIC_DIR, OS, os_specific_metadata[os_subtitle][DIRECTORY])
                     os.makedirs(filepath, exist_ok=True)
 
                     # write to files
-                    write_files(os_subtitle, os_specific_text[os_subtitle], os_specific_metadata, total_subtitle_order, os_i + title_order_number, filepath, OS, options)
+                    write_files(os_subtitle, os_specific_text[os_subtitle], os_specific_metadata, total_subtitle_order, os_i + title_order_number, filepath, OS, options, is_linux_tutorial)
                 else:
                     # don't write empty files
                     pass
@@ -905,32 +900,27 @@ def main(options):
         print("WARNING: This script generates a file structure that contains rather long filepaths. Depending on where the script is ran, some of these paths might exceed the maximum length allowed by the system resulting in problems opening the files.")
 
     # remove the directories from a previous run of the parser if they weren't cleaned up properly for some reason
-    shutil.rmtree(PARSED_MDS, ignore_errors=True)
-    shutil.rmtree(COPIES, ignore_errors=True)
-    shutil.rmtree(IF_MANGLED_FILES, ignore_errors=True)
+    shutil.rmtree(os.path.join(options[DESTINATION_DIRECTORY], PARSED_MDS), ignore_errors=True)
+    shutil.rmtree(os.path.join(options[DESTINATION_DIRECTORY], COPIES), ignore_errors=True)
+    shutil.rmtree(os.path.join(options[DESTINATION_DIRECTORY], IF_MANGLED_FILES), ignore_errors=True)
 
     # make the necessary directories
-    for directory in [COPIES, os.path.join(COPIES, LINUX_TUTORIAL), PARSED_MDS, IF_MANGLED_FILES]:
+    for directory in [COPIES, PARSED_MDS, IF_MANGLED_FILES]:
+        directory = os.path.join(options[DESTINATION_DIRECTORY], directory)
         if not os.path.exists(directory):
             os.makedirs(directory)
 
     ################### define loop-invariant variables ###################
 
     # constant that keeps track of the source directories
-    source_directories = [os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR),
-                          os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, DOCS_DIR, HPC_DIR, LINUX_TUTORIAL)]
+    source_directory = options[SOURCE_DIRECTORY]
 
     # list of all the filenames
-    filenames_generic = {}
-    filenames_linux = {}
-    for source_directory in source_directories:
-        all_items = os.listdir(source_directory)
-        files = [f for f in all_items if os.path.isfile(os.path.join(source_directory, f)) and ".md" in f[-3:]]
-        for file in files:
-            if LINUX_TUTORIAL in source_directory:
-                filenames_linux[file] = os.path.join(source_directory, file)
-            else:
-                filenames_generic[file] = os.path.join(source_directory, file)
+    filenames = {}
+    all_items = os.listdir(source_directory)
+    files = [f for f in all_items if os.path.isfile(os.path.join(source_directory, f)) and ".md" in f[-3:]]
+    for file in files:
+        filenames[file] = os.path.join(source_directory, file)
 
     # # Temporary variables to test with just one singular file
     # filenames_generic = {}
@@ -940,65 +930,55 @@ def main(options):
     # filenames_linux["common_pitfalls.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/linux-tutorial/common_pitfalls.md"
 
     # for loops over all files
-    for filenames in [filenames_generic, filenames_linux]:
-        for filename in filenames.keys():
-            ################### define/reset loop specific variables ###################
+    for filename in filenames.keys():
+        ################### define/reset loop specific variables ###################
 
-            # variable that keeps track of whether file is part of the linux tutorial
-            is_linux_tutorial = bool(LINUX_TUTORIAL in filenames[filename])
+        # boolean indicating whether the current file is part of the linux tutorial
+        is_linux_tutorial = bool(LINUX_TUTORIAL in filenames[filename])
 
-            # make a copy of the original file in order to make sure the original does not get altered
-            if is_linux_tutorial:
-                copy_file = os.path.join(COPIES, LINUX_TUTORIAL,  filename)
+        # make a copy of the original file in order to make sure the original does not get altered
+        copy_file = os.path.join(options[DESTINATION_DIRECTORY], COPIES, filename)
+        shutil.copyfile(filenames[filename], copy_file)
+
+        # variable that keeps track of the directories that are used to write in at different levels
+        root_dir_generic = os.path.join(options[DESTINATION_DIRECTORY], PARSED_MDS, GENERIC_DIR)
+        root_dir_os_specific_linux = os.path.join(options[DESTINATION_DIRECTORY], PARSED_MDS, OS_SPECIFIC_DIR, LINUX)
+        root_dir_os_specific_windows = os.path.join(options[DESTINATION_DIRECTORY], PARSED_MDS, OS_SPECIFIC_DIR, WINDOWS)
+        root_dir_os_specific_macos = os.path.join(options[DESTINATION_DIRECTORY], PARSED_MDS, OS_SPECIFIC_DIR, MACOS)
+
+        # variable for the main title (needed for reference links)
+        main_title = filename[:-3]
+
+        # variable that keeps track of the directories that are used to write in at different levels
+        curr_dirs = [filename[:-3] for _ in range(5)]
+
+        ################### actually parse the md file ###################
+
+        # create directories for the source markdown file
+        for directory in [root_dir_generic, os.path.join(PARSED_MDS, OS_SPECIFIC_DIR), root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos, os.path.join(root_dir_generic, curr_dirs[0]), os.path.join(root_dir_os_specific_linux, curr_dirs[0]), os.path.join(root_dir_os_specific_windows, curr_dirs[0]), os.path.join(root_dir_os_specific_macos, curr_dirs[0])]:
+            os.makedirs(os.path.join(options[DESTINATION_DIRECTORY], directory), exist_ok=True)
+
+        # process the jinja macros
+        jinja_parser(filename, copy_file, options)
+
+        # split the text in paragraphs
+        paragraphs_os_text, paragraphs_os_free_text, paragraphs_metadata, subtitle_order = split_text(copy_file, main_title, options)
+
+        # for every section, either make the whole section generic, or create an os-specific file for each OS
+        for i, subtitle in enumerate(subtitle_order):
+
+            # generic
+            if subtitle in paragraphs_os_free_text.keys():
+                write_generic_file(subtitle, paragraphs_os_free_text, paragraphs_metadata, subtitle_order, i, options, is_linux_tutorial)
+
+            # os-specific
             else:
-                copy_file = os.path.join(COPIES, filename)
-            shutil.copyfile(filenames[filename], copy_file)
-
-            # variable that keeps track of the directories that are used to write in at different levels
-            if is_linux_tutorial:
-                root_dir_generic = os.path.join(PARSED_MDS, GENERIC_DIR, LINUX_TUTORIAL)
-                root_dir_os_specific_linux = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, LINUX, LINUX_TUTORIAL)
-                root_dir_os_specific_windows = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, WINDOWS, LINUX_TUTORIAL)
-                root_dir_os_specific_macos = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, MACOS, LINUX_TUTORIAL)
-            else:
-                root_dir_generic = os.path.join(PARSED_MDS, GENERIC_DIR)
-                root_dir_os_specific_linux = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, LINUX)
-                root_dir_os_specific_windows = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, WINDOWS)
-                root_dir_os_specific_macos = os.path.join(PARSED_MDS, OS_SPECIFIC_DIR, MACOS)
-
-            # variable for the main title (needed for reference links)
-            main_title = filename[:-3]
-
-            # variable that keeps track of the directories that are used to write in at different levels
-            curr_dirs = [filename[:-3] for _ in range(5)]
-
-            ################### actually parse the md file ###################
-
-            # create directories for the source markdown file
-            for directory in [root_dir_generic, os.path.join(PARSED_MDS, OS_SPECIFIC_DIR), root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos, os.path.join(root_dir_generic, curr_dirs[0]), os.path.join(root_dir_os_specific_linux, curr_dirs[0]), os.path.join(root_dir_os_specific_windows, curr_dirs[0]), os.path.join(root_dir_os_specific_macos, curr_dirs[0])]:
-                os.makedirs(directory, exist_ok=True)
-
-            # process the jinja macros
-            jinja_parser(filename, copy_file)
-
-            # split the text in paragraphs
-            paragraphs_os_text, paragraphs_os_free_text, paragraphs_metadata, subtitle_order = split_text(copy_file, main_title, options)
-
-            # for every section, either make the whole section generic, or create an os-specific file for each OS
-            for i, subtitle in enumerate(subtitle_order):
-
-                # generic
-                if subtitle in paragraphs_os_free_text.keys():
-                    write_generic_file(subtitle, paragraphs_os_free_text, paragraphs_metadata, subtitle_order, i, options)
-
-                # os-specific
-                else:
-                    split_and_write_os_specific_section(paragraphs_os_text[subtitle], paragraphs_metadata[subtitle], subtitle_order, i, paragraphs_metadata, options)
+                split_and_write_os_specific_section(paragraphs_os_text[subtitle], paragraphs_metadata[subtitle], subtitle_order, i, paragraphs_metadata, options, is_linux_tutorial)
 
     # clean up temporary directories and files
-    shutil.rmtree(COPIES, ignore_errors=True)
-    shutil.rmtree(IF_MANGLED_FILES, ignore_errors=True)
-    shutil.rmtree(LINUX_TUTORIAL, ignore_errors=True)
+    shutil.rmtree(os.path.join(options[DESTINATION_DIRECTORY], COPIES), ignore_errors=True)
+    shutil.rmtree(os.path.join(options[DESTINATION_DIRECTORY], IF_MANGLED_FILES), ignore_errors=True)
+    shutil.rmtree(os.path.join(options[DESTINATION_DIRECTORY], LINUX_TUTORIAL), ignore_errors=True)
     if os.path.exists(TEMP_JINJA_FILE):
         os.remove(TEMP_JINJA_FILE)
 
@@ -1011,6 +991,8 @@ if __name__ == '__main__':
 
     # adding command-line options
 
+    parser.add_argument("-src", "--source", required=True, type=str, help="The source directory where the original files are located")
+    parser.add_argument("-dst", "--destination", required=True, type=str, help="The destination directory where the processed files should be written to")
     parser.add_argument("-st", "--split_on_titles", action="store_true", help="Splits the text based on titles and subtitles instead of paragraphs with a minimum length.")
     parser.add_argument("-pl", "--min_paragraph_length", type=int, default=160, help="Minimum length of a paragraph, only works if split on titles is disabled (default: 160)")
     parser.add_argument("-td", "--max_title_depth", type=int, default=4, help="Maximum depth of titles that divide the source text into sections, only works if split on titles is enabled (default: 4)")
@@ -1019,7 +1001,9 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    options_dict = {SPLIT_ON_TITLES: args.split_on_titles,
+    options_dict = {SOURCE_DIRECTORY: args.source,
+                    DESTINATION_DIRECTORY: args.destination,
+                    SPLIT_ON_TITLES: args.split_on_titles,
                     SPLIT_ON_PARAGRAPHS: not args.split_on_titles,
                     MIN_PARAGRAPH_LENGTH: args.min_paragraph_length,
                     MAX_TITLE_DEPTH: args.max_title_depth,
