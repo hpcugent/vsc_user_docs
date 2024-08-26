@@ -30,15 +30,15 @@ activate() {
 
   if [ -n "$MODULES_SCRIPT" ]; then
 
-      echo "INFO: loading modules from '$MODULES_SCRIPT'"
+    echo "INFO: loading modules from '$MODULES_SCRIPT'"
 
-      # If the module script could not be loaded, return.
-      if ! source "$MODULES_SCRIPT"; then
-          echo "ERROR: could not load modules from '$MODULES_SCRIPT'"
-          return 1
-  fi
+    # If the module script could not be loaded, return.
+    if ! source "$MODULES_SCRIPT"; then
+        echo "ERROR: could not load modules from '$MODULES_SCRIPT'"
+        return 1
+    fi
 
-  echo "INFO: Modules loaded successfully"
+    echo "INFO: Modules loaded successfully"
 
   else
     echo "INFO: No module script provided. Proceeding without extra modules."
