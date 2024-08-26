@@ -1,5 +1,7 @@
+SCRIPT_NAME=${BASH_SOURCE[0]} # $0 cannot be used as it gives '-bash' when sourced
+
 usage() {
-  echo "Usage: source $0 {activate <requirements.txt> [modules.sh] | deactivate}"
+  echo "Usage: source $SCRIPT_NAME {activate <requirements.txt> [modules.sh] | deactivate}"
   echo ""
   echo "Commands:"
   echo "  activate <requirements_file> [modules_script] Activate the environment using the specified requirements file."
@@ -8,9 +10,9 @@ usage() {
   echo "  deactivate                                    Deactivate the virtual environment."
   echo ""
   echo "Example Usage:"
-  echo "  $ source $0 activate requirements.txt modules.sh"
+  echo "  $ source $SCRIPT_NAME activate requirements.txt modules.sh"
   echo "  $ python my_script.py"
-  echo "  $ source $0 deactivate"
+  echo "  $ source $SCRIPT_NAME deactivate"
   return 1
 }
 
@@ -82,7 +84,7 @@ deactivate_() {
 # ============================ Main ============================
 
 case "$1" in
-  activate)     activate "$2" "$3";;
+  activate)    activate "$2" "$3";;
   deactivate)  deactivate_ ;;
-  *)            usage ;;
+  *)           usage ;;
 esac
