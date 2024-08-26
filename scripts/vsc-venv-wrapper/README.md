@@ -41,3 +41,25 @@ To deactivate the virtual environment, run:
 ```bash
 deactivate
 ```
+
+## Example 
+
+Suppose the following files are present in the directory:
+
+**modules.sh:**
+```bash
+ml Python/3.7.2-GCCcore-8.2.0
+```
+
+and **requirements.txt:**
+```bash
+requests
+```
+
+We run the following commands to make an environment and install the packages.
+
+```bash
+source vsc-venv create modules.sh
+```
+
+This creates a 

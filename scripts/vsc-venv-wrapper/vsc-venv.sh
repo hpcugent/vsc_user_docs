@@ -24,12 +24,11 @@ usage() {
 
 # ============================ Main functions ============================
 
-# === Create ===
-
-create() {
+load_modules() {
   local MODULES_SCRIPT="$1" # The modules script to load. Empty if not provided.
 
-  echo "INFO: Creating virtual environment with modules $MODULES_SCRIPT..."
+  echo "INFO: Purging currently loaded modules. If you want to use modules, provide a modules script."
+  module purge
 
   # If a modules script is provided, try to load it.
   if [ -n "$MODULES_SCRIPT" ]; then
@@ -40,7 +39,19 @@ create() {
         echo "ERROR: could not load modules from '$MODULES_SCRIPT'"
         exit 1
     fi
+
+  else
+    echo "INFO: No module script provided. Proceeding without extra modules."
   fi
+
+}
+
+# === Create ===
+
+create() {
+  local MODULES_SCRIPT="$1" # The modules script to load. Empty if not provided.
+
+  load_modules "$MODULES_SCRIPT"
 
   # Create a virtual environment
   echo "INFO: creating virtual environment at $VENV_LOCATION"
@@ -49,19 +60,21 @@ create() {
     exit 1
   fi
 
-
+  echo "INFO: virtual environment created"
 }
 
 # === Activate ===
 
 activate() {
-  echo "Activating..."
+  echo "INFO: Activating..."
 
   # If the virtual environment does not exist, exit.
   if [ ! -f "$VENV_LOCATION/bin/activate" ]; then
     echo "ERROR: virtual environment does not exist. Run 'create' first."
     exit 1
   fi
+
+
 
   source "$VENV_LOCATION/bin/activate"
 }
@@ -71,7 +84,7 @@ activate() {
 install() {
 
   local REQUIREMENTS="$1"
-  echo "Installing $REQUIREMENTS..."
+  echo "INFO: Installing $REQUIREMENTS..."
 
   # If no requirements file is provided, exit.
   if [ ! -f "$REQUIREMENTS" ]; then
