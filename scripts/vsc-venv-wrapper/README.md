@@ -15,7 +15,7 @@ while guaranteeing the same module environment.
 A virtual environment can be activated by running the following command:
 
 ```bash
-source vsc-venv activate <requirements> [module_script]
+source ./vsc-venv.sh activate <requirements> [module_script]
 ```
 
 Here, `requirements` is the path to a file containing the python dependencies to install in the virtual environment.
@@ -28,7 +28,7 @@ Now, the software can be run and use packages installed in the virtual environme
 To deactivate the virtual environment, run:
 
 ```bash
-source vsc-venv deactivate
+source ./vsc-venv.sh deactivate
 ```
 
 ## Example
@@ -49,7 +49,7 @@ requests
 We run the following commands to enter the environment
 
 ```bash
-source vsc-venv activate requirements.txt modules.sh
+source ./vsc-venv.sh activate requirements.txt modules.sh
 ```
 
 As this creates the virtual environment for the first time, the `venvs` folder is created. 
@@ -60,7 +60,7 @@ Now, python 3.12 is loaded and the user can use the `requests` package.
 To deactivate the virtual environment, run:
 
 ```bash
-source vsc-venv deactivate
+source ./vsc-venv.sh deactivate
 ```
 
 ### joltik
@@ -70,7 +70,7 @@ If we want to create a virtual environment for joltik, we can run the following 
 ```bash
 module swap cluster/joltik
 qsub -I
-source vsc-venv activate requirements.txt modules.sh
+source ./vsc-venv.sh activate requirements.txt modules.sh
 ```
 
 the venvs folder now contains two folders:
