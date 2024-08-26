@@ -1,5 +1,5 @@
 usage() {
-  echo "Usage: $0 {activate <requirements.txt> [modules.sh] | deactivate}"
+  echo "Usage: source $0 {activate <requirements.txt> [modules.sh] | deactivate}"
   echo ""
   echo "Commands:"
   echo "  activate <requirements_file> [modules_script] Activate the environment using the specified requirements file."
@@ -60,7 +60,7 @@ activate() {
   # === Step 5: Install Requirements === #
 
   echo "INFO: installing requirements from '$REQUIREMENTS_FILE'"
-  pip install -r "$REQUIREMENTS_FILE" # This fill finish quickly if the requirements are already installed
+  pip install -r "$REQUIREMENTS_FILE" # This will finish quickly if the requirements are already installed
 
 }
 
