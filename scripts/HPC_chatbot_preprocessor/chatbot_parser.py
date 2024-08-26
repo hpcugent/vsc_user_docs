@@ -86,6 +86,9 @@ ENDIF = "endif"
 # link indicators
 LINK_MARKER = r'§link§link§'
 
+# HTML tags
+HTML_TAGS = ["pre", "b", "code", "sub", "br", "center", "p", "div", "u", "p", "i", "tt", "a", "t", "span"]  # make sure these are always lowercase
+
 # regex patterns
 IF_MANGLED_PATTERNS = {
         IF: r'({' + IF_MANGLED_PART + r'%[-\s]*if\s+OS\s*[!=]=\s*.+?[-\s]*%' + IF_MANGLED_PART + '})',
@@ -164,9 +167,8 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
     match = re.findall(r'<(.*?)>', curr_line)
     if match:
         for i, content in enumerate(match):
-            syntax_words = ["pre", "b", "code", "sub", "br", "center", "p", "div", "u", "p", "i", "tt", "a", "t", "span"]  # make sure these are always lowercase
-            syntax_words_variations = list(chain.from_iterable([[element, element + "/", "/" + element] for element in syntax_words]))
-            syntax_words_style = [element + " style=.*" for element in syntax_words]
+            html_tags_variations = list(chain.from_iterable([[element, element + "/", "/" + element] for element in HTML_TAGS]))
+            html_tags_style = [element + " style=.*" for element in HTML_TAGS]
 
             # add references for every link of format <a href=...>
             if re.search(r'a href=.*', content):
@@ -175,11 +177,11 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
                 linklist.append(link)
 
             # drop the syntax words
-            elif content.lower() in syntax_words_variations:
+            elif content.lower() in html_tags_variations:
                 curr_line = re.sub(f'<{content}>', "", curr_line)
 
-            # drop the version of the syntax_words followed by " style="
-            elif any(re.match(pattern, content) for pattern in syntax_words_style):
+            # drop the version of the HTML_TAGS followed by " style="
+            elif any(re.match(pattern, content) for pattern in html_tags_style):
                 curr_line = re.sub(r'<.*?>', "", curr_line)
 
             # drop markdown comments
@@ -983,7 +985,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Preprocessing script for the chatbot\n")
 
     # adding command-line options
-
     parser.add_argument("-src", "--source", required=True, type=str, help="The source directory where the original files are located")
     parser.add_argument("-dst", "--destination", required=True, type=str, help="The destination directory where the processed files should be written to")
     parser.add_argument("-st", "--split_on_titles", action="store_true", help="Splits the text based on titles and subtitles instead of paragraphs with a minimum length.")
