@@ -78,6 +78,7 @@ activate() {
   echo_info "Installing requirements from '$REQUIREMENTS_FILE'"
   if ! pip install -r "$REQUIREMENTS_FILE"; then # This will finish quickly if the requirements are already installed
     echo_error "Could not install requirements"
+    deactivate
     return 1
   fi
 }
