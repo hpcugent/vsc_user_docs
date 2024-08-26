@@ -10,7 +10,7 @@ usage() {
   echo "Example Usage:"
   echo "  $ source $0 activate requirements.txt modules.sh"
   echo "  $ python my_script.py"
-  echo "  $ $0 deactivate"
+  echo "  $ source $0 deactivate"
   return 1
 }
 
