@@ -890,6 +890,14 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, title_or
 def main(options):
     """
     main function
+
+    :param options: dictionary containing the options specified by the user to run the script:
+                    {SPLIT_ON_TITLES: boolean indicating whether to split on titles,
+                    SPLIT_ON_PARAGRAPHS: boolean indicating whether to split on paragraphs (should always be the opposite of SPLIT_ON_TITLES),
+                    MIN_PARAGRAPH_LENGTH: integer representing the minimum length of a paragraph,
+                    MAX_TITLE_DEPTH: integer representing the maximum depth of a title for it to be used when splitting the text,
+                    INCLUDE_LINKS_IN_PLAINTEXT: boolean indicating whether links should be included in the plaintext,
+                    DEEP_DIRECTORIES: boolean indicating whether the generated directories should be nested by title-structure or not}
     :return:
     """
 
