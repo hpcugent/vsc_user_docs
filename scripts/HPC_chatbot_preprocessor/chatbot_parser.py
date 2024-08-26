@@ -922,13 +922,6 @@ def main(options):
     for file in files:
         filenames[file] = os.path.join(source_directory, file)
 
-    # # Temporary variables to test with just one singular file
-    # filenames_generic = {}
-    # filenames_linux = {}
-    # filenames_generic["account.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/account.md"
-    # filenames_generic["example_text_1.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/scripts/HPC_chatbot_preprocessor/tests/example_files/example_text_1.md"
-    # filenames_linux["common_pitfalls.md"] = "C:/HPC_werk/Documentation/local/vsc_user_docs/mkdocs/docs/HPC/linux-tutorial/common_pitfalls.md"
-
     # for loops over all files
     for filename in filenames.keys():
         ################### define/reset loop specific variables ###################
