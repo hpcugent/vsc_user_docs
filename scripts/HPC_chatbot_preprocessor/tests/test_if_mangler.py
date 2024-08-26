@@ -18,10 +18,10 @@ def test_if_mangler(input_file, output_file):
     os.makedirs(os.path.join("if_mangled_files"), exist_ok=True)
 
     # make filepaths
-    input_file_path = os.path.join("tests", "example_files", "if_mangler_test_files", input_file)
-    expected_output_file_path = os.path.join("tests", "example_files", "if_mangler_test_files", output_file)
+    input_file_path = os.path.join("tests", "test_files", "if_mangler_test_files", input_file)
+    expected_output_file_path = os.path.join("tests", "test_files", "if_mangler_test_files", output_file)
     actual_output_file_path = os.path.join("if_mangled_files", input_file)
-    mangle_ifs(input_file_path, input_file)
+    mangle_ifs(input_file_path, input_file, {"DESTINATION_DIRECTORY": '.'})
 
     # check every line
     with open(expected_output_file_path, "r") as expected_read_file:
