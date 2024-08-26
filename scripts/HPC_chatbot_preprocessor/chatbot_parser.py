@@ -401,11 +401,13 @@ def split_on_paragraphs(file, main_title, options, current_paragraph_number=-1, 
     # metadata title
     metadata_title = main_title
 
+    # TODO: define metadata data if split occurs on paragraphs and last_title and title_level are known (placeholder in place right now)
+    if current_paragraph_number != -1:
+        last_title_level = 5
+        last_dir = "PLACEHOLDER"
+
     # list to keep track of most recent directories on each title level
-    if LINUX_TUTORIAL not in file:
-        curr_dirs = [main_title for _ in range(options[MAX_TITLE_DEPTH] + 1)]
-    else:
-        curr_dirs = [os.path.join(LINUX_TUTORIAL, main_title) for _ in range(options[MAX_TITLE_DEPTH] + 1)]
+    curr_dirs = [main_title for _ in range(options[MAX_TITLE_DEPTH] + 1)]
 
     with open(file, 'r') as readfile:
 
@@ -885,7 +887,7 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, title_or
             pass
 
 
-def main(options):
+def main(options, verbose=True):
     """
     main function
 
@@ -896,10 +898,11 @@ def main(options):
                     MAX_TITLE_DEPTH: integer representing the maximum depth of a title for it to be used when splitting the text,
                     INCLUDE_LINKS_IN_PLAINTEXT: boolean indicating whether links should be included in the plaintext,
                     DEEP_DIRECTORIES: boolean indicating whether the generated directories should be nested by title-structure or not}
+    :param verbose: boolean indicating whether print statements from the main function should be print, only used when for testing
     :return:
     """
 
-    if options[DEEP_DIRECTORIES]:
+    if options[DEEP_DIRECTORIES] and verbose:
         print("WARNING: This script generates a file structure that contains rather long filepaths. Depending on where the script is ran, some of these paths might exceed the maximum length allowed by the system resulting in problems opening the files.")
 
     # remove the directories from a previous run of the parser if they weren't cleaned up properly for some reason
@@ -915,7 +918,7 @@ def main(options):
 
     ################### define loop-invariant variables ###################
 
-    # constant that keeps track of the source directories
+    # constant that keeps track of the source directory
     source_directory = options[SOURCE_DIRECTORY]
 
     # list of all the filenames
@@ -952,7 +955,7 @@ def main(options):
 
         # create directories for the source markdown file
         for directory in [root_dir_generic, os.path.join(PARSED_MDS, OS_SPECIFIC_DIR), root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos, os.path.join(root_dir_generic, curr_dirs[0]), os.path.join(root_dir_os_specific_linux, curr_dirs[0]), os.path.join(root_dir_os_specific_windows, curr_dirs[0]), os.path.join(root_dir_os_specific_macos, curr_dirs[0])]:
-            os.makedirs(directory, exist_ok=True)
+            os.makedirs(os.path.join(options[DESTINATION_DIRECTORY], directory), exist_ok=True)
 
         # process the jinja macros
         jinja_parser(filename, copy_file, options)
@@ -978,7 +981,8 @@ def main(options):
     if os.path.exists(TEMP_JINJA_FILE):
         os.remove(TEMP_JINJA_FILE)
 
-    print("Parsing finished successfully")
+    if verbose:
+        print("Parsing finished successfully")
 
 
 ################### run the script ###################
