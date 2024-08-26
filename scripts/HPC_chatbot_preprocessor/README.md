@@ -1,6 +1,44 @@
 # Chatbot parser
 
-`chatbot_parser.py` is a script that transforms the markdown sourcefiles into a structured directory as input for a chatbot. 
+`chatbot_parser.py` is a script that transforms the markdown sourcefiles into a structured directory as input for a chatbot.
+
+## Usage
+
+The script can be ran in a shell environment with the following command:
+
+```shell
+python chatbot_parser.py
+```
+
+This command has the following possible options:
+
+```shell
+chatbot_parser.py [-h] [-st SPLIT_ON_TITLES] [-pl MIN_PARAGRAPH_LENGTH] [-td MAX_TITLE_DEPTH] [-l] [-dd]
+```
+
+### `h`/`help`
+
+Display the help message
+
+### `st`/`split_on_titles`
+
+Including this option will split the source files based on the titles and subtitles in the markdown text. Not including this option will split the text on paragraphs with a certain minimum length.
+
+### `pl`/`min_paragraph_length`
+
+This option allows the user to configure the minimum length a paragraph must be. Some deviations from this minimum length are possible (for example at the end of a file). The default value for this minimum paragraph length is 160 characters. This options only works if `split_on_titles` is not enabled.
+
+### `td`/`max_title_depth`
+
+This option allows the user to configure the maximum "title depth" (the amount of `#` in front) to be used as borders between sections if `split_on_titles` is enabled. The default value is 4.
+
+### `l`/`links`
+
+Some of the sourcefiles might contain links. Including this option will retain the links in the plaintext. If this option is not included, the links will be dropped from the plaintext.
+
+### `dd`/`deep_directories`
+
+Including this option will make the script generate a "deep directory" where every title encountered will be made into a subdirectory of its parent title (So for example a title with three `#`s will be made a subdirectory of the most recent title with two `#`s). This option only works if `split_on_titles` is enabled.
 
 ## Generated file structure
 
@@ -11,22 +49,17 @@ The generated directory structure is written as a subdirectory of `parsed_mds`. 
 
 Within `os_specific` a further distinction is made for each of the three possible operating systems included in the documentation.
 
-These subdirectories then contain a subdirectory for each individual markdown sourcefile. In the file specific subdirectories, further divisions are made according to the titles and subtitles found in that markdown sourcefile. 
+Both the generic and each of the three os-specific directories then contain a directory for each source file. 
 
-Finally, each of these subtitle-specific subdirectories contains a `.txt` file with the (processed) plaintext of that section and at the end a reference link to the corresponding part of the documentation website on <docs.hpc.ugent.be>.
+If the option `deep_directories` is not enabled, all paragraphs of the source file and their corresponding metadata will be saved in this directory. The (processed) plaintext of the paragraph is written to a `.txt` file and the metadata is written to a `.json` file.
+
+If the option `deep_directories` is enabled, the directory of each source file will contain a subdirectory structure corresponding to the structure of the subtitles at different levels in the source file. Each subtitle in the source file corresponds to a directory nested in the directory of its parent title (So for example a title with three `#`s will be made a subdirectory of the most recent title with two `#`s). 
+
+Finally, each of these subtitle-specific subdirectories contains a `.txt` file with the (processed) plaintext of that section and a `.json` file with the metadata of that section.
 
 ## Requirements
 
 - The required Python packages are listed in `requirements.txt`
-- [Pandoc](https://pandoc.org/installing.html) must be installed and must be added to the system PATH
-
-## Usage
-
-The script can be ran in a shell environment with the following command:
-
-```shell
-python chatbot_parser.py
-```
 
 ## Restrictions on source-files
 
@@ -102,13 +135,9 @@ endif
 
 This will also result in the parser "forgetting" it opened an os-specific if-statement with OS != windows and not properly closing it.
 
-### Allowed html syntax
+### html syntax
 
-The script contains a list of html syntax keywords it filters out. If more html syntax keywords are used in the future, it suffices to add them to this list to adapt the script to filter them out. The current list is:
-```
-["pre", "b", "code", "sub", "br", "center", "p", "div", "u", "p", "i", "tt", "a", "t", "span"]
-```
-The script is also adapted to take into consideration structures like `<a href="link">` and retain the link.
+The input shouldn't contain any html syntax. While some failsafes are in place, the script isn't made with the use case of handling html syntax in mind. 
 
 ### Markdown comments
 
@@ -121,4 +150,4 @@ Any comments within the markdown files (for example TODO's) should follow the fo
 
 ### Long filepaths
 
-Due to the nature of this script, it can generate large directories with very long names. Depending on the operating system, this can cause problems with filepaths being to long, resulting in files not being able to open. A possible fix for this is to make sure the filepath to the script is not too long.
+Due to the nature of this script, it can generate large directories with very long names if `deep_directories` is enabled. Depending on the operating system, this can cause problems with filepaths being to long, resulting in files not being able to open. A possible fix for this is to make sure the filepath to where the script is located is not too long. Another solution is lowering the `max_title_depth` or disabling `deep_directories`.
