@@ -16,35 +16,37 @@ This command has the following possible options:
 chatbot_parser.py [-h] -src SOURCE -dst DESTINATION [-st] [-pl MIN_PARAGRAPH_LENGTH] [-td MAX_TITLE_DEPTH] [-l] [-dd]
 ```
 
-### `h`/`help`
+### Options
+
+#### `h`/`help`
 
 Display the help message
 
-### `src`/`source`
+#### `src`/`source`
 
 This is a required option that specifies the source directory of the input files for the script. This location is also used to look for jinja templates when using jinja to parse the source files (such as the `macros` directory within `vsc_user_docs/mkdocs/docs/HPC`).
 
-### `dst`/`destination`
+#### `dst`/`destination`
 
 This is a required option that specifies where the output of the script should be written. The script also generates extra intermediate subdirectories, so subdirectories with the following names shouldn't be present in the destination directory: `parsed_mds`, `copies` and `if_mangled_files`. If any of these pose a problem, the name of the intermediate subdirectory used for the script can be changed in the macros at the top of the script.
 
-### `st`/`split_on_titles`
+#### `st`/`split_on_titles`
 
 Including this option will split the source files based on the titles and subtitles in the markdown text. Not including this option will split the text on paragraphs with a certain minimum length.
 
-### `pl`/`min_paragraph_length`
+#### `pl`/`min_paragraph_length`
 
 This option allows the user to configure the minimum length a paragraph must be. Some deviations from this minimum length are possible (for example at the end of a file). The default value for this minimum paragraph length is 160 characters. This options only works if `split_on_titles` is not enabled.
 
-### `td`/`max_title_depth`
+#### `td`/`max_title_depth`
 
 This option allows the user to configure the maximum "title depth" (the amount of `#` in front) to be used as borders between sections if `split_on_titles` is enabled. The default value is 4.
 
-### `l`/`links`
+#### `l`/`links`
 
 Some of the sourcefiles might contain links. Including this option will retain the links in the plaintext. If this option is not included, the links will be dropped from the plaintext.
 
-### `dd`/`deep_directories`
+#### `dd`/`deep_directories`
 
 Including this option will make the script generate a "deep directory" where every title encountered will be made into a subdirectory of its parent title (So for example a title with three `#`s will be made a subdirectory of the most recent title with two `#`s). This option only works if `split_on_titles` is enabled.
 
