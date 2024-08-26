@@ -22,6 +22,14 @@ activate() {
 
   VENV_LOCATION=$(realpath -m "venvs/venv-${VSC_OS_LOCAL}-${VSC_ARCH_LOCAL}") # full path of venv
 
+  # === Step 0: Warn user if they have modules loaded === #
+  N_MODULES_LOADED=$(echo "$LOADEDMODULES" | tr ':' '\n' | wc -l)
+  if [ "$N_MODULES_LOADED" -gt 4 ]; then # 4 is the number of modules loaded by default
+    echo "WARNING: You have loaded modules in the current shell.
+    if you want to use these modules, please provide a modules script as the second argument."
+  fi
+
+
   # === Step 1: Purge Modules === #
   echo "INFO: Purging currently loaded modules. If you want to use modules, provide a modules script."
   module purge
