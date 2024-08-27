@@ -216,7 +216,7 @@ There are two main reasons why this error could occur.
 1. you have not loaded the python module that was used to create the virtual environment.
 2. you added or removed modules while the virtual environment was activated.
 
-#### Entering a virtual environment while the python module used to create it is not active
+#### Entering a virtual environment while the Python module used to create it is not active
 
 When you load a python module and use that to make a virtual environment, you need to make sure that the same module 
 is loaded when you enter the environment. This is because the virtual environment keeps a reference to the base python 
