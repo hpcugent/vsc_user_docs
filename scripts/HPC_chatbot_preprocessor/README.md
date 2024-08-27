@@ -36,7 +36,7 @@ Including this option will split the source files based on the titles and subtit
 
 #### `pl`/`min_paragraph_length`
 
-This option allows the user to configure the minimum length a paragraph must be. Some deviations from this minimum length are possible (for example at the end of a file). The default value for this minimum paragraph length is 160 characters. This options only works if `split_on_titles` is not enabled.
+This option allows the user to configure the minimum length a paragraph must be. Some deviations from this minimum length are possible (for example at the end of a file). The default value for this minimum paragraph length is 683 characters. This options only works if `split_on_titles` is not enabled.
 
 #### `td`/`max_title_depth`
 
