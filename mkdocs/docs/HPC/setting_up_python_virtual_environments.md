@@ -27,7 +27,7 @@ This directory will contain the packages, scripts, and binaries that are needed 
 
 ### Activating a virtual environment
 
-To use the virtual environment, you need to activate it. 
+To use the virtual environment, you need to *activate* it. 
 This will modify the shell environment to use the Python interpreter and packages from the virtual environment.
 
 ```bash
