@@ -67,6 +67,21 @@ It is now possible to run Python scripts that use the installed packages in the 
 
     to check which extensions are included in a module (if any).
 
+### Using a virtual environment
+
+Once the environment is activated and packages are installed, 
+you can run Python scripts that use the installed packages:
+
+```python title="example.py"
+import example_package1
+import example_package2
+...
+```
+
+```bash
+python example.py
+```
+
 
 ### Deactivating a virtual environment
 
