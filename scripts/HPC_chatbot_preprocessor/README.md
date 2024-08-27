@@ -149,7 +149,7 @@ This will also result in the parser "forgetting" it opened an os-specific if-sta
 
 The input shouldn't contain any html syntax. While some failsafes are in place, the script isn't made with the use case of handling html syntax in mind. 
 
-### Markdown comments
+### Comments
 
 Any comments within the markdown files (for example TODO's) should follow the following syntax:
 
@@ -157,6 +157,12 @@ Any comments within the markdown files (for example TODO's) should follow the fo
 <!--your comment-->
 ```
  and should be limited to one line.
+
+Comments can be written in such a way that the script will keep them as input for the bot. To do that, the marker `INPUT_FOR_BOT` should be put in front of the content of the comment as such.
+
+```
+<!--INPUT_FOR_BOTyour comment for the bot-->
+```
 
 ### Long filepaths
 

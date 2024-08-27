@@ -83,7 +83,7 @@ IF = "if"
 ELSE = "else"
 ENDIF = "endif"
 
-# link indicators
+# link indicator
 LINK_MARKER = r'§link§link§'
 
 # HTML tags
@@ -100,6 +100,9 @@ IF_MANGLED_PATTERNS = {
 TEMP_JINJA_FILE = "jinja_file.txt"
 _PARAGRAPH_ = "_paragraph_"
 METADATA_EXTENSION = "_metadata"
+
+# Marker for comments for the bot
+INPUT_FOR_BOT = "INPUT_FOR_BOT"
 
 
 ################### define functions ###################
@@ -184,7 +187,11 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
             elif any(re.match(pattern, content) for pattern in html_tags_style):
                 curr_line = re.sub(r'<.*?>', "", curr_line)
 
-            # drop markdown comments
+            # keep comments for bot
+            elif re.fullmatch(r'!--' + INPUT_FOR_BOT + r'.*?--', content):
+                curr_line = re.sub(r'<!--' + INPUT_FOR_BOT + r'(.*?)-->', lambda m: m.group(1), curr_line)
+
+            # drop comments
             elif re.fullmatch(r'!--.*?--', content):
                 curr_line = re.sub(r'<.*?>', "", curr_line)
 
