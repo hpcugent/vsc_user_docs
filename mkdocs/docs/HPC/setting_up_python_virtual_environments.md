@@ -105,6 +105,12 @@ While the virtual environment is activated, we can run the script without any is
 $ python pytorch_poutyne.py
 ```
 
+Deactivate the virtual environment when you are done:
+
+```bash
+$ deactivate
+```
+
 
 ## Creating a virtual environment for a specific cluster
 
