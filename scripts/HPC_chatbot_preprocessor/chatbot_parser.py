@@ -825,10 +825,11 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, title_or
         template = Template(text)
         jinja_text = template.render(OS=OS)
 
-        # add first subtitle in front of section again
         if len(jinja_text) != 0:
-            if options[SPLIT_ON_TITLES]:
-                jinja_text = "#" * metadata[TITLE_DEPTH] + " " + metadata[SUBTITLE] + "\n" + jinja_text
+
+            # add first subtitle in front of section again
+            if options[SPLIT_ON_TITLES] or metadata[SUBTITLE].replace("-", " ") not in jinja_text[:len(metadata[SUBTITLE]) + 1]:
+                jinja_text = "#" * metadata[TITLE_DEPTH] + " " + metadata[SUBTITLE].replace("-", " ") + "\n" + jinja_text
 
             # re-adjust text to correct overcorrections
             jinja_text = re.sub('"' + OS + '"', OS, jinja_text)
