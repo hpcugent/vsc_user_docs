@@ -69,7 +69,7 @@ Not all modules will work for every notebook, we need to use the one that uses t
 ![image](img/ood_jupyter_version.png)
 </center>
 
-Most modules' names end with the version of the toolchain used by the module (for example `plotly.py/5.18.0-GCCcore-13.2.0`), however for our SciPy module, that is not the case.
+Module names include the toolchain that was used to install the module (for example `GCCcore-13.2.0` in `plotly.py/5.18.0-GCCcore-13.2.0`).
 To find the toolchain used by such a module (and the packages contained within a module), we can make use of `module show <module_name>`:
 
 ```shell
