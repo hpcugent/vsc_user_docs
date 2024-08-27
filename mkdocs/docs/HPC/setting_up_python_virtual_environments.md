@@ -36,7 +36,7 @@ $ source myenv/bin/activate                    # Activate the virtual environmen
 
 ### Installing packages in a virtual environment
 
-After activating the virtual environment, you can install packages with `pip`:
+After activating the virtual environment, you can install additional Python packages with `pip install`:
 
 ```bash
 $ pip install example_package1
