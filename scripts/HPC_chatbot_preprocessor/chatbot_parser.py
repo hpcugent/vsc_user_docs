@@ -176,7 +176,7 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
             # add references for every link of format <a href=...>
             if re.search(r'a href=.*', content):
                 link = content[8:-1]
-                curr_line = re.sub(f'<{content}>', "[" + str(len(linklist) + 1) + "]", curr_line)
+                curr_line = re.sub(f'<{content}>', LINK_MARKER + str(len(linklist) + 1) + LINK_MARKER, curr_line)
                 linklist.append(link)
 
             # drop the syntax words
