@@ -73,6 +73,7 @@ If we want to create a virtual environment for joltik, we can run the following 
 ```bash
 module swap cluster/joltik
 qsub -I
+cd my_project
 source ./vsc-venv.sh activate requirements.txt modules.sh
 ```
 
