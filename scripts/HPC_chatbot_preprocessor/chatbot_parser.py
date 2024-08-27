@@ -962,7 +962,7 @@ def main(options, verbose=True):
 
         # create directories for the source markdown file
         for directory in [root_dir_generic, os.path.join(PARSED_MDS, OS_SPECIFIC_DIR), root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos, os.path.join(root_dir_generic, curr_dirs[0]), os.path.join(root_dir_os_specific_linux, curr_dirs[0]), os.path.join(root_dir_os_specific_windows, curr_dirs[0]), os.path.join(root_dir_os_specific_macos, curr_dirs[0])]:
-            os.makedirs(os.path.join(options[DESTINATION_DIRECTORY], directory), exist_ok=True)
+            os.makedirs(directory, exist_ok=True)
 
         # process the jinja macros
         jinja_parser(filename, copy_file, options)
