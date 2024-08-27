@@ -175,6 +175,7 @@ cd $PBS_O_WORKDIR                     # Change working directory to the location
 source myenv/bin/activate             # Activate the virtual environment
 
 python pytorch_poutyne.py             # Run your Python script, or any other command within the virtual environment
+
 deactivate                            # Deactivate the virtual environment
 ```
 
