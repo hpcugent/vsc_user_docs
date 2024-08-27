@@ -158,7 +158,7 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
                 if "#" not in match[1]:
                     linklist.append(match[1])
                 else:
-                    linklist.append(DOCS_URL + "/" + main_title + "/" + match[1])
+                    linklist.append(DOCS_URL + "/" + main_title.replace(".md", "") + "/" + match[1])
             else:
                 linklist.append(DOCS_URL + "/" + match[1].replace(".md", "/").replace("index", "").rstrip("/"))
 
