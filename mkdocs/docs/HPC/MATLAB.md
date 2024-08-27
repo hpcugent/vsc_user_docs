@@ -55,7 +55,7 @@ First, we copy the `magicsquare.m` example that comes with MATLAB to
 `example.m`:
 
 ```
-$ cp $EBROOTMATLAB/extern/examples/compiler/magicsquare.m example.m
+cp $EBROOTMATLAB/extern/examples/compiler/magicsquare.m example.m
 ```
 
 To compile a MATLAB program, use `mcc -mv`:
@@ -94,7 +94,7 @@ heap size (128M) of Java using the `_JAVA_OPTIONS` environment variable
 with:
 
 ```
-$ export _JAVA_OPTIONS="-Xmx64M"
+export _JAVA_OPTIONS="-Xmx64M"
 ```
 
 The MATLAB compiler spawns multiple Java processes. Because of the
@@ -114,7 +114,7 @@ A possible solution to this is by setting the maximum heap size to be
 bigger:
 
 ```
-$ export _JAVA_OPTIONS="-Xmx512M"
+export _JAVA_OPTIONS="-Xmx512M"
 ```
 
 ## Multithreading
@@ -149,7 +149,7 @@ Each time MATLAB is executed, it generates a Java log file in the users
 home directory. The output log directory can be changed using:
 
 ```
-$ MATLAB_LOG_DIR=<OUTPUT_DIR>
+MATLAB_LOG_DIR=<OUTPUT_DIR>
 ```
 
 where `<OUTPUT_DIR>` is the name of the desired output directory. To
@@ -165,7 +165,7 @@ $  export MATLAB_LOG_DIR=$ (mktemp -d -p $TMPDIR:-/tmp/$USER)
 You should remove the directory at the end of your job script:
 
 ```
-$  rm -rf $MATLAB_LOG_DIR
+rm -rf $MATLAB_LOG_DIR
 ```
 
 ## Cache location
@@ -178,8 +178,8 @@ The snippet below would set the maximum cache size to 1024MB and the
 location to `/tmp/testdirectory`.
 
 ```
-$ export MATLAB_CACHE_ROOT=/tmp/testdirectory 
-$ export MATLAB_CACHE_SIZE=1024M 
+export MATLAB_CACHE_ROOT=/tmp/testdirectory 
+export MATLAB_CACHE_SIZE=1024M 
 ```
 
 So when MATLAB is running, it can fill up to 1024MB of cache in

@@ -50,7 +50,7 @@ scenario that can be reduced to a **MapReduce** approach.[^1]
 First go to the right directory:
 
 ```
-$ cd ~/examples/Multi-job-submission/par_sweep
+cd ~/examples/Multi-job-submission/par_sweep
 ```
 
 Suppose the user wishes to run the "*weather*" program,
@@ -84,7 +84,7 @@ particular instance of the parameters, i.e., temperature = 20, pressure
 To submit the job, the user would use:
 
 ```
-$ qsub weather_p01.pbs
+ $ qsub weather_p01.pbs
 ```
 However, the user wants to run this program for many parameter
 instances, e.g., he wants to run the program on 100 instances of
@@ -151,13 +151,13 @@ a parameter instance is called a work item in Worker parlance.
     When you attempt to submit a worker job on a non-default cluster, you might encounter an `Illegal instruction` error. In such cases, the solution is to use a different `module swap` command. For example, to submit a worker job to the [`donphan` debug cluster](interactive_debug.md) from the login nodes, use:
     
     ```
-    $ module swap env/slurm/donphan
+    module swap env/slurm/donphan
     ```
 
     instead of
         
     ```
-    $ module swap cluster/donphan 
+    module swap cluster/donphan
     ```
     We recommend using a `module swap cluster` command after submitting the jobs. Additional information about this as well as more comprehensive details concerning the 'Illegal instruction' error can be accessed [here](troubleshooting.md#multi-job-submissions-on-a-non-default-cluster).
 
@@ -167,7 +167,7 @@ a parameter instance is called a work item in Worker parlance.
 First go to the right directory:
 
 ```
-$ cd ~/examples/Multi-job-submission/job_array
+cd ~/examples/Multi-job-submission/job_array
 ```
 
 As a simple example, assume you have a serial program called *myprog*
@@ -207,7 +207,7 @@ The details are
 The job could have been submitted using:
 
 ```
-$ qsub -t 1-100 my_prog.pbs
+qsub -t 1-100 my_prog.pbs
 ```
 
 The effect was that rather than 1 job, the user would actually submit
@@ -324,7 +324,7 @@ dispatching work and logging progress, executes the prologue and
 epilogue.
 
 ```
-$ cd ~/examples/Multi-job-submission/map_reduce
+cd ~/examples/Multi-job-submission/map_reduce
 ```
 
 The script "pre.sh" prepares the data by creating 100 different
@@ -384,14 +384,14 @@ from the job's name and the job's ID, i.e., it has the form
 progress, one can use:
 
 ```
-$ tail -f run.pbs.log{{jobid}}
+tail -f run.pbs.log{{jobid}}
 ```
 
 Alternatively, `wsummarize`, a Worker command that summarises a log
 file, can be used:
 
 ```
-$ watch -n 60 wsummarize run.pbs.log{{jobid}}
+watch -n 60 wsummarize run.pbs.log{{jobid}}
 ```
 
 This will summarise the log file every 60 seconds.
@@ -432,7 +432,7 @@ remain to be computed. Suppose the job that did not complete all its
 work items had ID "445948".
 
 ```
-$ wresume -jobid {{jobid}}
+wresume -jobid {{jobid}}
 ```
 
 This will submit a new job that will start to work on the work items
@@ -441,7 +441,7 @@ job parameters when resuming, specifically the requested resources such
 as the number of cores and the walltime.
 
 ```
-$ wresume -l walltime=1:30:00 -jobid {{jobid}}}
+wresume -l walltime=1:30:00 -jobid {{jobid}}
 ```
 
 Work items may fail to complete successfully for a variety of reasons,
@@ -453,7 +453,7 @@ possible to retry work items that failed (preferably after the glitch
 why they failed was fixed).
 
 ```
-$ wresume -jobid {{jobid}} -retry
+wresume -jobid {{jobid}} -retry
 ```
 
 By default, a job's prologue is not executed when it is resumed, while

@@ -87,14 +87,14 @@ runs a simple function that only prints "Hello from thread".
 Go to the example directory:
 
 ```
-$ cd ~/{{ exampledir }}
+cd ~/{{ exampledir }}
 ```
 
 !!! note
     If the example directory is not yet present, copy it to your home directory:
 
     ```
-    $ cp -r {{ examplesdir }} ~/
+    cp -r {{ examplesdir }} ~/
     ```
 
 Study the example first:

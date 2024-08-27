@@ -35,7 +35,7 @@ Before you use EasyBuild, you need to configure it:
 This is where EasyBuild can find software sources:
 
 ```
-$ EASYBUILD_SOURCEPATH=$VSC_DATA/easybuild/sources:/apps/gent/source 
+EASYBUILD_SOURCEPATH=$VSC_DATA/easybuild/sources:/apps/gent/source
 ```
 
 -   the first directory `$VSC_DATA/easybuild/sources` is where EasyBuild
@@ -52,7 +52,7 @@ This directory is where EasyBuild will build software in. To have good
 performance, this needs to be on a fast filesystem.
 
 ```
-$ export EASYBUILD_BUILDPATH=${TMPDIR:-/tmp/$USER}
+export EASYBUILD_BUILDPATH=${TMPDIR:-/tmp/$USER}
 ```
 
 On cluster nodes, you can use the fast, in-memory `/dev/shm/$USER`
@@ -66,7 +66,7 @@ modules) to.
 For example, to let it use `$VSC_DATA/easybuild`, use:
 
 ```
-$ export EASYBUILD_INSTALLPATH=$VSC_DATA/easybuild/$VSC_OS_LOCAL/$VSC_ARCH_LOCAL$VSC_ARCH_SUFFIX
+export EASYBUILD_INSTALLPATH=$VSC_DATA/easybuild/$VSC_OS_LOCAL/$VSC_ARCH_LOCAL$VSC_ARCH_SUFFIX
 ```
 
 Using the `$VSC_OS_LOCAL`, `$VSC_ARCH` and `$VSC_ARCH_SUFFIX`
@@ -111,7 +111,7 @@ For readily available easyconfigs, just specify the name of the
 easyconfig file to build and install the corresponding software package:
 
 ```
-$ eb example-1.2.1-foss-{{ current_year}}a.eb --robot
+eb example-1.2.1-foss-2024a.eb --robot
 ```
 
 ### Installing variants on supported software
@@ -124,13 +124,13 @@ To try to install `example v1.2.6`, based on the easyconfig file for
 `example v1.2.5`:
 
 ```
-$ eb example-1.2.5-intel-{{ current_year}}a.eb --try-software-version=1.2.6
+eb example-1.2.5-intel-{{ current_year}}a.eb --try-software-version=1.2.6
 ```
 
 To try to install example v1.2.5 with a different compiler toolchain:
 
 ```
-$ eb example-1.2.5-intel-{{ current_year}}a.eb --robot --try-toolchain=intel,{{ current_year}}b
+eb example-1.2.5-intel-{{ current_year}}a.eb --robot --try-toolchain=intel,{{ current_year}}b
 ```
 
 ### Install other software
@@ -146,7 +146,7 @@ To use the modules you installed with EasyBuild, extend `$MODULEPATH` to
 make them accessible for loading:
 
 ```
-$ module use $EASYBUILD_INSTALLPATH/modules/all
+module use $EASYBUILD_INSTALLPATH/modules/all
 ```
 
 It makes sense to put this `module use` command and all `export`

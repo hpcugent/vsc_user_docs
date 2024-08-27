@@ -41,7 +41,7 @@ To submit jobs to the HPC-UGent interactive and debug cluster nicknamed
 `donphan`, first use:
 
 ```
-$ module swap cluster/donphan
+module swap cluster/donphan
 ```
 
 Then use the familiar `qsub`, `qstat`, etc. commands (see

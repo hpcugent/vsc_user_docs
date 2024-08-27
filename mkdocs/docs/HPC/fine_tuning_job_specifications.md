@@ -51,8 +51,8 @@ This chapter shows you how to measure:
 First, we allocate a compute node and move to our relevant directory:
 
 ```
-$ qsub -I
-$ cd ~/examples/Fine-tuning-Job-Specifications
+qsub -I
+cd ~/examples/Fine-tuning-Job-Specifications
 ```
 
 ## Specifying Walltime
@@ -95,7 +95,7 @@ The walltime can be specified in a job scripts as:
 
 or on the command line
 ```
-$ qsub -l walltime=3:00:00:00
+qsub -l walltime=3:00:00:00
 ```
 
 It is recommended to always specify the walltime for a job.
@@ -269,10 +269,6 @@ htop
     the machine and allows to scroll the list vertically and
     horizontally to see all processes and their full command lines.
 
-```
-$ top
-$ htop
-```
 
 ### Setting the memory parameter {: #pbs_mem }
 
@@ -296,7 +292,7 @@ The maximum amount of physical memory used by the job can be specified in a job 
 or on the command line
 
 ```
-$ qsub -l mem=4gb
+qsub -l mem=4gb
 ```
 
 {% if site!=gent %}
@@ -393,7 +389,7 @@ node in your job script, use:
 or with equivalent parameters on the command line
 
 ```
-$ qsub -l nodes=N:ppn=M
+qsub -l nodes=N:ppn=M
 ```
 
 This specifies the number of nodes (nodes=N) and the number of
@@ -467,9 +463,9 @@ usage can go up to \(\text{n} \times 100\%\).
 This could also be monitored with the _**htop**_ command:
 
 ```
-$ htop
+htop
 ```
-
+Example output:
 ```
 {% include "examples/Fine-tuning-Job-Specifications/htop-output" %}
 ```

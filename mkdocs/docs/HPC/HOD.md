@@ -17,7 +17,7 @@ specify a version here (this is an exception, for most other modules you
 should, see [Using explicit version numbers](../running_batch_jobs/#using-explicit-version-numbers)) because newer versions might include important bug fixes.
 
 ```
-$ module load hod
+module load hod
 ```
 
 ### Compatibility with login nodes

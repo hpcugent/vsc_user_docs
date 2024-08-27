@@ -132,7 +132,7 @@ watching the clock on the wall.)
 You can work for 3 hours by:
 
 ```
-$ qsub -I -l walltime=03:00:00
+qsub -I -l walltime=03:00:00
 ```
 
 If the walltime of the job is exceeded, the (interactive) job will be
@@ -231,7 +231,7 @@ And now we can run Xming:
     standard GUI clock for the X Window System.
 
 ```
-$ xclock
+xclock
 ```
 
 You should see the XWindow clock application appearing on your Windows
@@ -371,7 +371,7 @@ screen, but also asks you to click a button.
 Now run the message program:
 
 ```
-$ cd ~/{{ exampledir }}
+cd ~/{{ exampledir }}
 ./message.py
 ```
 

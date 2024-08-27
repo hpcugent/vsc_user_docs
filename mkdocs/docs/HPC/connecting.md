@@ -186,7 +186,7 @@ You can open a terminal by navigation to Applications and then Utilities in the 
 {% endif %}
 
 ```
-$ ssh {{ userid }}@{{ loginnode }}
+ssh {{ userid }}@{{ loginnode }}
 ```
 
 Here, user {{ userid }} wants to make a connection to the "{{ hpcname }}" cluster at {{ university }} via the login
@@ -208,7 +208,7 @@ In this case, use the `-i` option for the `ssh` command to specify the
 location of your private key. For example:
 
 ```
-$ ssh -i /home/example/my_keys
+ssh -i /home/example/my_keys
 ```
 
 {% endif %}
@@ -266,7 +266,7 @@ This directory contains:
     Tutorial, as well as examples that might be useful for your specific applications.
 
 ```
-$ cd examples
+cd examples
 ```
 
 !!! tip
@@ -285,7 +285,7 @@ you can start using the examples. The "-r" option of the copy command
 will also copy the contents of the sub-directories "*recursively*".
 
 ```
-$ cp -r {{ examplesdir }} ~/
+cp -r {{ examplesdir }} ~/
 ```
 
 {%- if site == gent %}
@@ -293,8 +293,8 @@ $ cp -r {{ examplesdir }} ~/
 Go to your home directory, check your own private examples directory, ... and start working.
 
 ```
-$ cd
-$ ls -l
+cd
+ls -l
 ```
 
 Upon connecting you will see a login message containing your last login time stamp and a basic overview of the current cluster utilisation.
@@ -485,10 +485,10 @@ Connection to {{ loginnode }} closed.
     again on your local machine:
     
     ```
-    $ echo "export LANGUAGE=\"en_US.UTF-8\"" >> ~/.profile
-    $ echo "export LC_ALL=\"en_US.UTF-8\"" >> ~/.profile
-    $ echo "export LC_CTYPE=\"en_US.UTF-8\"" >> ~/.profile
-    $ echo "export LANG=\"en_US.UTF-8\"" >> ~/.profile
+    echo "export LANGUAGE=\"en_US.UTF-8\"" >> ~/.profile
+    echo "export LC_ALL=\"en_US.UTF-8\"" >> ~/.profile
+    echo "export LC_CTYPE=\"en_US.UTF-8\"" >> ~/.profile
+    echo "export LANG=\"en_US.UTF-8\"" >> ~/.profile
     ```
     
     You can now log out, open a new terminal/shell on your local machine and
@@ -681,14 +681,14 @@ the `-r` flag. For example, if we want to copy the local directory
 you've created the `scratch` symlink):
 
 ```
-$ scp -r dataset {{ userid }}@{{ loginnode }}:scratch
+scp -r dataset {{ userid }}@{{ loginnode }}:scratch
 ```
 
 If you don't use the `-r` option to copy a directory, you will run into
 the following error:
 
 ```
-$ scp -r dataset {{ userid }}@{{ loginnode }}:scratch
+$ scp dataset {{ userid }}@{{ loginnode }}:scratch
 dataset: not a regular file
 ```
 
@@ -708,7 +708,7 @@ it uses the secure ssh protocol to connect to the clusters.
 One easy way of starting a sftp session is
 
 ```
-$ sftp {{ userid }}@{{ loginnode }}
+sftp {{ userid }}@{{ loginnode }}
 ```
 
 Typical and popular commands inside an sftp session are:

@@ -164,7 +164,7 @@ can get this information before logging out from your X2Go session. Just
 open a terminal and execute:
 
 ```
-$ hostname
+hostname
 ```
 
 ![image](img/ch19-x2go-xterm.png)

@@ -96,7 +96,7 @@ To prepare your environment for using OpenFOAM, load the `OpenFOAM`
 module you have picked; for example:
 
 ```
-$ module load OpenFOAM/4.1-intel-2017a
+module load OpenFOAM/11-foss-2023a
 ```
 
 ### Sourcing the `$FOAM_BASH` script
@@ -110,7 +110,7 @@ session or job script, you should always run the following command after
 loading an `OpenFOAM` module:
 
 ```
-$ source $FOAM_BASH
+source $FOAM_BASH
 ```
 
 ### Defining utility functions used in tutorial cases
@@ -121,7 +121,7 @@ are used in OpenFOAM tutorials, you also need to `source` the
 `RunFunctions` script:
 
 ```
-$  source $WM_PROJECT_DIR/bin/tools/RunFunctions
+source $WM_PROJECT_DIR/bin/tools/RunFunctions
 ```
 
 Note that this needs to be done **after** sourcing `$FOAM_BASH` to make sure
@@ -134,7 +134,7 @@ the `$FOAM_SIGFPE` environment variable that is defined by the
 `$FOAM_BASH` script as follows:
 
 ```
-$ unset $FOAM_SIGFPE
+unset $FOAM_SIGFPE
 ```
 
 Note that this only prevents OpenFOAM from propagating floating point
@@ -224,7 +224,7 @@ processes used in a parallel OpenFOAM execution, the
 follows, prior to running the OpenFOAM simulation with `mympirun`:
 
 ```
-$ export MYMPIRUN_VARIABLESPREFIX=WM_PROJECT,FOAM,MPI
+export MYMPIRUN_VARIABLESPREFIX=WM_PROJECT,FOAM,MPI
 ```
 
 Whenever you are instructed to use a command like `mpirun -np <N> ...`,
@@ -272,7 +272,7 @@ by minimising the number of processor boundaries.
 To visualise the processor domains, use the following command:
 
 ```
-$ mympirun foamToVTK -parallel -constant -time 0 -excludePatches '(".*.")'
+mympirun foamToVTK -parallel -constant -time 0 -excludePatches '(".*.")'
 ```
 
 and then load the VTK files generated in the `VTK` folder into ParaView.

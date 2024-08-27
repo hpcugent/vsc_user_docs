@@ -157,7 +157,7 @@ tunnel, by entering the settings in the and fields in [SSH tunnel](../running_in
 Execute the following command to set up the SSH tunnel.
 
 ```
-$ ssh -L 5906:localhost:12345  {{userid}}@{{loginnode}}
+ssh -L 5906:localhost:12345  {{userid}}@{{loginnode}}
 ```
 
 **Replace the source port `5906`, destination port `12345` and user ID {{userid}} with your own!**
@@ -177,8 +177,7 @@ you have picked is actually still available (see [Picking an intermediate port t
 You can check using the following command (**do not forget to replace `12345` the value you picked for your intermediate port):
 
 ```
-$ netstat -an | grep -i listen | grep tcp | grep 12345
-$
+netstat -an | grep -i listen | grep tcp | grep 12345
 ```
 
 If you see no matching lines, then the port you picked is still
@@ -259,10 +258,10 @@ If you have an empty panel, you can reset your settings with the
 following commands:
 
 ```
-$ xfce4-panel --quit ; pkill xfconfd
-$ mkdir ~/.oldxfcesettings
-$ mv ~/.config/xfce4 ~/.oldxfcesettings
-$ xfce4-panel
+xfce4-panel --quit ; pkill xfconfd
+mkdir ~/.oldxfcesettings
+mv ~/.config/xfce4 ~/.oldxfcesettings
+xfce4-panel
 ```
 
 ## Stopping the VNC server 

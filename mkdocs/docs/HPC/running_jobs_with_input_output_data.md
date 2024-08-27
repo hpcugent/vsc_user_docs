@@ -14,21 +14,21 @@ and where that you can collect your results.
 First go to the directory:
 
 ```
-$ cd ~/{{ exampledir }}
+cd ~/{{ exampledir }}
 ```
 
 !!! note
     If the example directory is not yet present, copy it to your home directory:
 
     ```
-    $ cp -r {{ examplesdir }} ~/
+cp -r {{ examplesdir }} ~/
     ```
 
 
 List and check the contents with:
 
 ```
-ls -l
+$ ls -l
 total 2304
 -rwxrwxr-x 1 {{ userid }}   682 Sep 13 11:34 file1.py
 -rw-rw-r-- 1 {{ userid }}   212 Sep 13 11:54 file1a.pbs
@@ -69,14 +69,14 @@ paths.
 Submit it:
 
 ```
-$ qsub file1a.pbs
+qsub file1a.pbs
 ```
 
 After the job has finished, inspect the local directory again, i.e., the
 directory where you executed the *qsub* command:
 
 ```
-ls -l
+$ ls -l
 total 3072
 -rw-rw-r-- 1 {{ userid }}   90 Sep 13 13:13 Hello.txt
 -rwxrwxr-x 1 {{ userid }}  693 Sep 13 13:03 file1.py*
@@ -326,7 +326,7 @@ If you want to use the UGent shares longer than 24 hours, you should ask
 a ticket for up to a week by running
 
 ```
-$ kinit yourugentusername@UGENT.BE -r 7d
+kinit yourugentusername@UGENT.BE -r 7
 ```
 
 You can verify your authentication ticket and expiry dates yourself by
@@ -347,14 +347,14 @@ expires.
 To renew your tickets, simply run
 
 ```
-$ kinit -R
+kinit -R
 ```
 
 If you want your ticket to be renewed automatically up to the maximum
 expiry date, you can run
 
 ```
-$ krenew -b -K 60
+krenew -b -K 60
 ```
 
 Each hour the process will check if your ticket should be renewed.
@@ -363,7 +363,7 @@ We strongly advise to disable access to your shares once it is no longer
 needed:
 
 ```
-$ kdestroy
+kdestroy
 ```
 
 If you get an error "*Unknown credential cache type while getting
@@ -371,7 +371,7 @@ default ccache*" (or similar) and you use conda, then please deactivate conda
 before you use the commands in this chapter.
 
 ```
-$ conda deactivate
+conda deactivate
 ```
 
 ### UGent shares with globus
@@ -764,7 +764,7 @@ To change the group of a directory and it's underlying directories and
 files, you can use:
 
 ```
-$ chgrp -R groupname directory
+chgrp -R groupname directory
 ```
 
 ### Joining an existing group

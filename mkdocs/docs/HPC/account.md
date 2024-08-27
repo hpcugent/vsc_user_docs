@@ -224,7 +224,7 @@ home directory. Therefore, we first check if a key is available with the
 "list short" ("ls") command:
 
 ```
-$ ls ~/.ssh
+ls ~/.ssh
 ```
 
 If a key-pair is already available, you would normally get:
@@ -265,13 +265,7 @@ your other machines, instead, you should create a new public/private key
 pair for each machine.
 
 ```
-$ ssh-keygen -t rsa -b 4096
-
-Generating public/private rsa key pair. Enter file in which to save the
-key (/home/user/.ssh/id_rsa): Enter passphrase (empty for no
-passphrase): Enter same passphrase again: Your identification has been
-saved in /home/user/.ssh/id_rsa. Your public key has been saved in
-/home/user/.ssh/id_rsa.pub.
+ssh-keygen -t rsa -b 4096
 ```
 
 This will ask you for a file name to store the private and public key,
@@ -350,7 +344,7 @@ This could be fixed using the `ssh-add` command. You can include the new
 private keys' identities in your keyring with:
 
 ```shell
-$ ssh-add
+ssh-add
 ```
 
 !!! tip
@@ -362,7 +356,7 @@ $ ssh-add
 Check that your key is available from the keyring with:
 
 ```
-$ ssh-add -l
+ssh-add -l
 ```
 
 After these changes the key agent will keep your SSH key to connect to

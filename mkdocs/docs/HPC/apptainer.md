@@ -85,7 +85,7 @@ Copy testing image from `/apps/gent/tutorials/Singularity` to
 `$VSC_SCRATCH`:
 
 ```
-$ cp /apps/gent/tutorials/Singularity/CentOS7_EasyBuild.img $VSC_SCRATCH/
+cp /apps/gent/tutorials/Singularity/CentOS7_EasyBuild.img $VSC_SCRATCH/
 ```
 
 Create a job script like:
@@ -120,7 +120,7 @@ Apptainer/Singularity image yourself
 Copy testing image from `/apps/gent/tutorials` to `$VSC_SCRATCH`:
 
 ```
-$ cp /apps/gent/tutorials/Singularity/Ubuntu14.04_tensorflow.img $VSC_SCRATCH/
+cp /apps/gent/tutorials/Singularity/Ubuntu14.04_tensorflow.img $VSC_SCRATCH/
 ```
 
 ```bash
@@ -161,19 +161,19 @@ Copy the testing image from `/apps/gent/tutorials/Singularity` to
 `$VSC_SCRATCH`
 
 ```
-$ cp /apps/gent/tutorials/Singularity/Debian8_UGentMPI.img $VSC_SCRATCH/
+cp /apps/gent/tutorials/Singularity/Debian8_UGentMPI.img $VSC_SCRATCH/
 ```
 
 For example to compile an [MPI
 example](https://github.com/open-mpi/ompi/blob/master/examples/ring_c.c):
 
 ```
-$ module load intel
-$ apptainer shell $VSC_SCRATCH/Debian8_UGentMPI.img
-$ export LANG=C
-$ export C_INCLUDE_PATH=/usr/include/x86_64-linux-gnu/:$C_INCLUDE_PATH
-$ mpiicc ompi/examples/ring_c.c -o ring_debian
-$ exit
+module load intel
+apptainer shell $VSC_SCRATCH/Debian8_UGentMPI.img
+export LANG=C
+export C_INCLUDE_PATH=/usr/include/x86_64-linux-gnu/:$C_INCLUDE_PATH
+mpiicc ompi/examples/ring_c.c -o ring_debian
+exit
 ```
 
 Example MPI job script:

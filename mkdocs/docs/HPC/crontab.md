@@ -14,14 +14,14 @@ as usual with your vsc user's account (see section
 Check if any cron script is already set in the current login node with:
 
 ```
-$ crontab -l
+crontab -l
 ```
 
 At this point you can add/edit (with `vi` editor) any cron script
 running the command:
 
 ```
-$ crontab -e
+crontab -e
 ```
 
 #### Example cron job script
@@ -45,5 +45,5 @@ previously generated crontab tasks. If that is not the case you can
 always jump from one login node to another with:
 
 ```
-$ ssh gligar&lt;id&gt;
+ssh gligar07    # or gligar08
 ```

@@ -6,14 +6,14 @@ To submit jobs to the `joltik` GPU cluster, where each node provides 4
 NVIDIA V100 GPUs (each with 32GB of GPU memory), use:
 
 ```
-$ module swap cluster/joltik
+module swap cluster/joltik
 ```
 
 To submit to the `accelgor` GPU cluster, where each node provides 4
 NVIDIA A100 GPUs (each with 80GB GPU memory), use:
 
 ```
-$ module swap cluster/accelgor
+module swap cluster/accelgor
 ```
 
 Then use the familiar `qsub`, `qstat`, etc. commands, taking into

@@ -89,7 +89,7 @@ A large number of software packages are installed on the {{ hpc }} clusters. A
 list of all currently available software can be obtained by typing:
 
 ```
-$ module available
+module available
 ```
 
 It's also possible to execute `module av` or `module avail`, these are
@@ -135,7 +135,7 @@ To "activate" a software package, you load the corresponding module file
 using the `module load` command:
 
 ```
-$ module load example
+module load example
 ```
 
 This will load the most recent version of *example*.
@@ -148,7 +148,7 @@ lexicographical last after the `/`).
 **However, you should specify a particular version to avoid surprises when newer versions are installed:
 
 ```
-$ module load secondexample/2.7-intel-2016b
+module load secondexample/2.7-intel-2016b
 ```
 
 The `ml` command is a shorthand for `module load`: `ml example/1.2.3` is
@@ -158,7 +158,7 @@ Modules need not be loaded one by one; the two `module load` commands
 can be combined as follows:
 
 ```
-$ module load example/1.2.3 secondexample/2.7-intel-2016b
+module load example/1.2.3 secondexample/2.7-intel-2016b
 ```
 
 This will load the two modules as well as their dependencies (unless
@@ -224,7 +224,7 @@ In order to unload all modules at once, and hence be sure to start in a
 clean state, you can use:
 
 ```
-$ module purge
+module purge
 ```
 {% if site == gent -%}
 This is always safe: the `cluster` module (the module that specifies
@@ -252,13 +252,13 @@ module and at that point in time, just a single version 1.2.3 is
 installed on the cluster. The user loads the module using:
 
 ```
-$ module load example
+module load example
 ```
 
 rather than
 
 ```
-$ module load example/1.2.3
+module load example/1.2.3
 ```
 
 Everything works fine, up to the point where a new version of `example`
@@ -350,7 +350,7 @@ $ module spider example/1.2.3
 To get a list of all possible commands, type:
 
 ```
-$ module help
+module help
 ```
 
 Or to get more information about one specific module package:
@@ -373,28 +373,28 @@ In each `module` command shown below, you can replace `module` with
 First, load all modules you want to include in the collections:
 
 ```
-$ module load example/1.2.3 secondexample/2.7-intel-2016b
+module load example/1.2.3 secondexample/2.7-intel-2016b
 ```
 
 Now store it in a collection using `module save`. In this example, the
 collection is named `my-collection`.
 
 ```
-$ module save my-collection
+module save my-collection
 ```
 
 Later, for example in a jobscript or a new session, you can load all
 these modules with `module restore`:
 
 ```
-$ module restore my-collection
+module restore my-collection
 ```
 
 You can get a list of all your saved collections with the
 `module savelist` command:
 
 ```
-$ module savelistr
+$ module savelist
 Named collection list (For LMOD_SYSTEM_NAME = "CO7-sandybridge"):
   1) my-collection
 ```
@@ -415,7 +415,7 @@ To remove a collection, remove the corresponding file in
 `$HOME/.lmod.d`:
 
 ```
-$ rm $HOME/.lmod.d/my-collection
+rm $HOME/.lmod.d/my-collection
 ```
 
 ### Getting module details
@@ -530,14 +530,14 @@ over-writable) and that you can start using the examples. If you haven't
 done so already, run these commands now:
 
 ```
-$ cd
-$ cp -r {{ examplesdir }} ~/
+cd
+cp -r {{ examplesdir }} ~/
 ```
 
 First go to the directory with the first examples by entering the
 command:
 ```
-$ cd ~/examples/Running-batch-jobs
+cd ~/examples/Running-batch-jobs
 ```
 
 Each time you want to execute a program on the {{ hpc }} you'll need 2 things:
@@ -775,7 +775,7 @@ cluster, and to be able to submit jobs to the `{{ othercluster }}` scheduler so 
 will start on `{{ othercluster }}` instead of the default `{{ defaultcluster }}` cluster.
 
 ```
-$ module swap cluster/{{ othercluster }}
+module swap cluster/{{ othercluster }}
 ```
 
 Note: the `{{ othercluster }}` modules may not work directly on the login nodes, because the
@@ -852,7 +852,7 @@ the status of your job. In the following commands, replace `12345` with
 the job ID `qsub` returned.
 
 ```
-$ qstat 12345
+qstat 12345
 ```
 
 {% if site != (gent or brussel) %}
@@ -879,14 +879,14 @@ To show on which compute nodes your job is running, at least, when it is
 running:
 
 ```
-$ qstat -n 12345
+qstat -n 12345
 ```
 
 To remove a job from the queue so that it will not run, or to stop a job
 that is already running.
 
 ```
-$ qdel 12345
+qdel 12345
 ```
 
 When you have submitted several jobs (or you just forgot about the job
@@ -1083,7 +1083,7 @@ The **qsub** command takes several options to specify the requirements, of which
 we list the most commonly used ones below.
 
 ```
-$ qsub -l walltime=2:30:00
+qsub -l walltime=2:30:00 ...
 ```
 
 For the simplest cases, only the amount of maximum estimated execution
@@ -1104,7 +1104,7 @@ command yourself before the walltime runs out and then copy the file
 back. See [the section on Running a command with a maximum time limit](../jobscript_examples/#running-a-command-with-a-maximum-time-limit) for how to do this.
 
 ```
-$ qsub -l mem=4gb
+qsub -l mem=4gb ...
 ```
 
 The job requests 4 GB of RAM memory. As soon as the job tries to use
@@ -1123,7 +1123,7 @@ per node" and "number of cores in a node" please consult
 {% endif %}
 
 ```
-$ qsub -l nodes=5:ppn=2
+qsub -l nodes=5:ppn=2 ...
 ```
 
 The job requests 5 compute nodes with two cores on each node (ppn stands
@@ -1131,7 +1131,7 @@ for "processors per node", where "processors" here actually means
 "CPU cores").
 
 ```
-$ qsub -l nodes=1:westmere
+qsub -l nodes=1:westmere
 ```
 
 The job requests just one node, but it should have an Intel Westmere
@@ -1142,7 +1142,7 @@ website.
 These options can either be specified on the command line, e.g.
 
 ```
-$ qsub -l nodes=1:ppn,mem=2gb fibo.pbs
+qsub -l nodes=1:ppn,mem=2gb fibo.pbs
 ```
 
 or in the job script itself using the #PBS-directive, so "fibo.pbs"
@@ -1281,7 +1281,7 @@ These options can also be specified on the command line. Try it and see
 what happens:
 
 ```
-$ qsub -m abe fibo.pbs
+qsub -m abe fibo.pbs
 ```
 
 The system will use the e-mail address that is connected to your VSC
@@ -1289,7 +1289,7 @@ account. You can also specify an alternate e-mail address with the `-M`
 option:
 
 ```
-$ qsub -m b -M john.smith@example.com fibo.pbs
+qsub -m b -M john.smith@example.com fibo.pbs
 ```
 
 will send an e-mail to john.smith@example.com when the job begins.
@@ -1314,7 +1314,7 @@ will be held (`H` status in `qstat`) until the first job successfully
 completes. If the first job fails, the second will be cancelled.
 
 ```
-$ FIRST_ID=$ (qsub job1.sh)
+$ FIRST_ID=$(qsub job1.sh)
 $ qsub -W depend=afterok:$FIRST_ID job2.sh
 ```
 

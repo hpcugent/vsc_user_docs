@@ -46,7 +46,7 @@ either of the following:
 ```
 $ ls --help 
 $ man ls
-$  info ls 
+$ info ls
 ```
 
 (You can exit the last two "manuals" by using the "q" key.) For more
@@ -97,7 +97,7 @@ editing, and name it "foo", and edit it with your favourite editor
 
 {% if site == gent %}
 ```
-$ nano foo
+nano foo
 ```
 {% else %}
 ```
@@ -108,8 +108,8 @@ $ vi foo
 or use the following commands:
 
 ```
-$ echo "echo Hello! This is my hostname:" > foo
-$ echo hostname >> foo
+echo "echo Hello! This is my hostname:" > foo
+echo hostname >> foo
 ```
 
 The easiest ways to run a script is by starting the interpreter and pass
@@ -155,7 +155,7 @@ Finally, we tell the operating system that this script is now
 executable. For this we change its file attributes:
 
 ```
-$  chmod +x foo
+chmod +x foo
 ```
 
 Now you can start your script by simply executing it:

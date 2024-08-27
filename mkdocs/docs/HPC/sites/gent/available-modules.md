@@ -1,5 +1,5 @@
 ```
-$ module av | more
+module avail
 --- /apps/gent/RHEL8/zen2-ib/modules/all ---
    ABAQUS/2021-hotfix-2132
    ABAQUS/2022-hotfix-2214
@@ -13,7 +13,7 @@ Or when you want to check whether some specific software, some compiler or some
 application (e.g., MATLAB) is installed on the {{hpc}}.
 
 ```
-$ module av matlab
+module avail matlab
 --- /apps/gent/RHEL8/zen2-ib/modules/all ---
    LIBSVM-MATLAB/3.30-GCCcore-11.3.0-MATLAB-2022b-r5
    MATLAB/2019b

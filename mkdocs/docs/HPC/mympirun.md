@@ -13,7 +13,7 @@ README](https://github.com/hpcugent/vsc-mympirun/blob/master/README.md).
 Before using `mympirun`, we first need to load its module:
 
 ```
-$ module load vsc-mympirun
+module load vsc-mympirun
 ```
 
 As an exception, we don't specify a version here. The reason is that we

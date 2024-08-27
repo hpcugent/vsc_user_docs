@@ -103,8 +103,8 @@ Go to the examples for chapter
 [Compiling and testing your software on the HPC](compiling_your_software.md#compiling-and-building-on-the-hpc) and load the 
 foss module:
 ```
-$ cd ~/{{exampledir}}
-$ module load foss
+cd ~/{{exampledir}}
+module load foss
 ```
 
 We now list the directory and explore the contents of the "*hello.c*"
@@ -167,12 +167,12 @@ Hello #4
 
 It seems to work, now run it on the {{hpc}}
 ```
-$ qsub hello.pbs
+qsub hello.pbs
 ```
 
 ### Compiling a parallel program in C/MPI
 ```
-$ cd ~/{{exampledir}}
+cd ~/{{exampledir}}
 ```
 
 List the directory and explore the contents of the "*mpihello.c*"
@@ -199,9 +199,9 @@ MPI extensions)*, then we compile and list the contents of the directory
 again:
 
 ```
-$ mpicc --help
-$ mpicc -o mpihello mpihello.c
-$ ls -l
+mpicc --help
+mpicc -o mpihello mpihello.c
+ls -l
 ```
 
 A new file "hello" has been created. Note that this program has
@@ -217,7 +217,7 @@ Hello World from Node 0.
 It seems to work, now run it on the {{hpc}}.
 
 ```
-$ qsub mpihello.pbs
+qsub mpihello.pbs
 ```
 
 ### Compiling a parallel program in Intel Parallel Studio Cluster Edition
@@ -227,7 +227,7 @@ Studio Cluster Edition compilers. We stay in the examples directory for
 this chapter:
 
 ```
-$ cd ~/{{exampledir}}
+cd ~/{{exampledir}}
 ```
 
 
@@ -236,15 +236,15 @@ Parallel Studio Cluster Edition. First, clear the modules (purge) and
 then load the latest "intel" module:
 
 ```
-$ module purge
-$ module load intel
+module purge
+module load intel
 ```
 
 Then, compile and list the contents of the directory again. The Intel
 equivalent of mpicc is mpiicc.
 ```
-$ mpiicc -o mpihello mpihello.c
-$ ls -l
+mpiicc -o mpihello mpihello.c
+ls -l
 ```
 
 Note that the old "mpihello" file has been overwritten. Let's test this
@@ -257,7 +257,7 @@ Hello World from Node 0.
 It seems to work, now run it on the {{hpc}}.
 
 ```
-$ qsub mpihello.pbs
+qsub mpihello.pbs
 ```
 
 Note: The {{association}} only has a license for the Intel Parallel Studio Cluster

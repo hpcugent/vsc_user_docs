@@ -371,7 +371,7 @@ If it doesn't, or you are in doubt, take a screenshot, press "Yes" and contact {
 If you get errors like:
 
 ```
-qsub fibo.pbs
+$ qsub fibo.pbs
 qsub: script is written in DOS/Windows text format
 ```
 
@@ -389,7 +389,7 @@ See the [section about `dos2unix` in Linux tutorial](../linux-tutorial/uploading
 {% if OS == (linux or macos) %}
 
 ```
-ssh {{userid}}@{{loginnode}}
+$ ssh {{userid}}@{{loginnode}}
 The authenticity of host {{loginnode}} (<IP-adress>) can't be established. 
 <algorithm> key fingerprint is <hash>
 Are you sure you want to continue connecting (yes/no)?
