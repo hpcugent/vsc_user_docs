@@ -52,7 +52,7 @@ To find the appropriate modules, it is recommended to use the shell within the w
 We can see all available versions of the SciPy module by using `module available SciPy`:
 
 ```shell 
-$ module available Scipy
+$ module available SciPy-bundle
 
 ------------------ /apps/gent/RHEL8/zen2-ib/modules/all ------------------
     SciPy-bundle/2022.05-foss-2022a    SciPy-bundle/2023.11-gfbf-2023b (D)
