@@ -31,7 +31,7 @@ To use the virtual environment, you need to activate it.
 This will modify the shell environment to use the Python interpreter and packages from the virtual environment.
 
 ```bash
-$ source myenv/bin/activate # Activate the virtual environment
+$ source myenv/bin/activate                    # Activate the virtual environment
 ```
 
 ### Installing packages in a virtual environment
