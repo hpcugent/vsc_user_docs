@@ -41,7 +41,7 @@ This will launch the Jupyter environment in a new browser tab, where you can ope
 ### Using extra Python packages
 
 A number of Python packages are readily available in modules on the HPC. To illustrate how to use them in a Jupyter notebook, we will make use of an example where we want to use numpy in our notebook.
-The first thing we need to do is finding the modules that contain our package of choice. For numpy, this would be the SciPy modules.
+The first thing we need to do is finding the modules that contain our package of choice. For numpy, this would be the `SciPy-bundle` modules.
 
 To find the appropriate modules, it is recommended to use the shell within the web portal under `Clusters`>`>_login Shell Access`.
 
