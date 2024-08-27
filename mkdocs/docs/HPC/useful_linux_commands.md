@@ -108,7 +108,7 @@ $ vi foo
 or use the following commands:
 
 ```
-echo "echo Hello! This is my hostname:" > foo
+echo "echo 'Hello! This is my hostname:'" > foo
 echo hostname >> foo
 ```
 
@@ -144,7 +144,9 @@ $ which bash
 We edit our script and change it with this information:
 
 ```bash
-#!/bin/bash echo \"Hello! This is my hostname:\" hostname
+#!/bin/bash
+echo "Hello! This is my hostname:"
+hostname
 ```
 
 Note that the "shebang" must be the first line of your script! Now the
