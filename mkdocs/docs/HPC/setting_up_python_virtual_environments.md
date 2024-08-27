@@ -221,7 +221,7 @@ we are presented with the illegal instruction error. More info on this [here](tr
 There are two main reasons why this error could occur.
 
 1. You have not loaded the `Python` module that was used to create the virtual environment.
-2. you loaded or unloaded modules while the virtual environment was activated.
+2. You loaded or unloaded modules while the virtual environment was activated.
 
 #### Entering a virtual environment while the Python module used to create it is not active
 
