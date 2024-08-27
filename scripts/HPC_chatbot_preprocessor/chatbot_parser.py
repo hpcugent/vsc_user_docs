@@ -899,7 +899,9 @@ def main(options, verbose=True):
     main function
 
     :param options: dictionary containing the options specified by the user to run the script:
-                    {SPLIT_ON_TITLES: boolean indicating whether to split on titles,
+                    {SOURCE_DIRECTORY: The source directory where the original files are located,
+                    DESTINATION_DIRECTORY: The destination directory where the processed files should be written to,
+                    SPLIT_ON_TITLES: boolean indicating whether to split on titles,
                     SPLIT_ON_PARAGRAPHS: boolean indicating whether to split on paragraphs (should always be the opposite of SPLIT_ON_TITLES),
                     MIN_PARAGRAPH_LENGTH: integer representing the minimum length of a paragraph,
                     MAX_TITLE_DEPTH: integer representing the maximum depth of a title for it to be used when splitting the text,
