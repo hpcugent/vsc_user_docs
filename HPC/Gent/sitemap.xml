@@ -155,6 +155,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/torque_frontend_via_jobcli/</ns0:loc>
+         <ns0:lastmod>2024-08-27</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/torque_options/</ns0:loc>
          <ns0:lastmod>2024-08-27</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -8506,6 +8511,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/teaching_training/</ns0:loc>
+         <ns0:lastmod>2024-08-27</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/torque_frontend_via_jobcli/</ns0:loc>
          <ns0:lastmod>2024-08-27</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -16865,6 +16875,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/torque_frontend_via_jobcli/</ns0:loc>
+         <ns0:lastmod>2024-08-27</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/torque_options/</ns0:loc>
          <ns0:lastmod>2024-08-27</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -25216,6 +25231,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/teaching_training/</ns0:loc>
+         <ns0:lastmod>2024-08-27</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/torque_frontend_via_jobcli/</ns0:loc>
          <ns0:lastmod>2024-08-27</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
