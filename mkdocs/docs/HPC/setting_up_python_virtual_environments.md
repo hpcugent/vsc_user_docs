@@ -214,7 +214,7 @@ we are presented with the illegal instruction error. More info on this [here](tr
 There are two main reasons why this error could occur.
 
 1. you have not loaded the python module that was used to create the virtual environment.
-2. you added or removed modules while the virtual environment was activated.
+2. you loaded or unloaded modules while the virtual environment was activated.
 
 #### Entering a virtual environment while the Python module used to create it is not active
 
@@ -227,7 +227,7 @@ The following commands illustrate this issue:
 ```bash
 $ module load Python/3.10.8-GCCcore-12.2.0  # Load a python module
 $ python -m venv myenv                      # Create a virtual environment with loaded python module
-$ module purge                              # Remove all loaded modules (WRONG!)
+$ module purge                              # unload all modules (WRONG!)
 $ source myenv/bin/activate                 # Activate the virtual environment
 $ python                                    # Start python
 python: error while loading shared libraries: libpython3.10.so.1.0: cannot open shared object file: No such file or directory
@@ -244,11 +244,11 @@ $ source myenv/bin/activate                 # Activate the virtual environment
 
 #### Modifying modules while in a virtual environment
 
-You must not delete or add modules while in a virtual environment. 
-Adding and removing modules modifies the `$PATH` variable in the current shell. When activating a virtual environment,
-it will store the `$PATH` variable of the shell at that moment. If you modify the `$PATH` variable while in a virtual environment by loading or deleting modules,
+You must not load or unload modules while in a virtual environment. 
+Loading and unloading modules modifies the `$PATH` variable in the current shell. When activating a virtual environment,
+it will store the `$PATH` variable of the shell at that moment. If you modify the `$PATH` variable while in a virtual environment by loading or unloading modules,
 and deactivate the virtual environment, the `$PATH` variable will be reset to the one stored in the virtual environment.
-trying to use those modules will lead to errors:
+Trying to use those modules will lead to errors:
 
 ```bash
 $ module load Python/3.10.8-GCCcore-12.2.0  # Load a python module
