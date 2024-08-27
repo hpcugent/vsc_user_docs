@@ -19,7 +19,7 @@ This section will explain how to create, activate, use and deactivate Python vir
 A Python virtual environment can be created with the following command:
 
 ```bash
-$ python -m venv myenv      # Create a new virtual environment named myenv
+$ python -m venv myenv      # Create a new virtual environment named 'myenv'
 ```
 
 This command creates a new directory named `myenv` in the current working directory. 
