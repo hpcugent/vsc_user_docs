@@ -34,10 +34,16 @@ activate() {
 
   # === Step 0: Warn user if they have modules loaded === #
 
-  n_loaded_modules=$(echo "$LOADEDMODULES" | tr ':' '\n' | wc -l)
-  if [ "$n_loaded_modules" -gt 4 ]; then # 4 is the number of modules loaded by default
-    echo_warning "You have loaded modules in the current shell. These modules will be purged."
+  loaded_modules=($(echo "$LOADEDMODULES" | tr ':' '\n' | grep -v -E '^(env|cluster)/')) # Remove env and cluster modules
+  n_loaded_modules="${#loaded_modules[@]}"
+  if [ "$n_loaded_modules" -gt 0 ]; then
+    echo_warning "You have $n_loaded_modules loaded modules in the current shell. These modules will be purged."
     echo_warning "If you want to use these modules, please provide a modules script as the second argument."
+
+    echo_warning "Loaded modules:"
+    for module in "${loaded_modules[@]}"; do
+      echo_warning "  $module"
+    done
   fi
 
 
