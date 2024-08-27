@@ -242,7 +242,7 @@ $ module load Python/3.10.8-GCCcore-12.2.0  # Load the same python module
 $ source myenv/bin/activate                 # Activate the virtual environment
 ```
 
-#### modifying modules while in a virtual environment
+#### Modifying modules while in a virtual environment
 
 You must not delete or add modules while in a virtual environment. 
 Adding and removing modules modifies the `$PATH` variable in the current shell. When activating a virtual environment,
