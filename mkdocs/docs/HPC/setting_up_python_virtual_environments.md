@@ -227,13 +227,14 @@ The following commands illustrate this issue:
 ```bash
 $ module load Python/3.10.8-GCCcore-12.2.0  # Load a python module
 $ python -m venv myenv                      # Create a virtual environment with loaded python module
-$ module purge                              # Remove all loaded modules
+$ module purge                              # Remove all loaded modules (WRONG!)
 $ source myenv/bin/activate                 # Activate the virtual environment
 $ python                                    # Start python
 python: error while loading shared libraries: libpython3.10.so.1.0: cannot open shared object file: No such file or directory
 ```
 
-Here, the virtual environment tries to use the python module that was loaded when the environment was created, which is no longer available.
+Here, the virtual environment tries to use the python module that was loaded when the environment was created.
+Since we used `module purge`, that module is no longer available.
 The solution is to load the same python module before activating the virtual environment:
 
 ```bash
