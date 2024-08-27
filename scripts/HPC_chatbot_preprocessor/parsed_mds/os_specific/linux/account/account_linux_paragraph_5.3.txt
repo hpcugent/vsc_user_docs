@@ -1,0 +1,17 @@
+4.  scp: a secure equivalent of the remote copy command rcp.
+Generate a public/private key pair with OpenSSH
+A key pair might already be present in the default location inside your
+home directory. Therefore, we first check if a key is available with the
+"list short" ("ls") command:
+$ ls ~/.ssh
+If a key-pair is already available, you would normally get:
+authorized_keys     id_rsa      id_rsa.pub      known_hosts
+Otherwise, the command will show:
+ls: .ssh: No such file or directory
+You can recognise a public/private key pair when a pair of files has the
+same name except for the extension ".pub" added to one of them. In this
+particular case, the private key is "id_rsa" and public key is
+"id_rsa.pub". You may have multiple keys (not necessarily in the
+directory "~/.ssh") if you or your operating system requires this. Be
+aware that your existing key pair might be too short, or not the right
+type.

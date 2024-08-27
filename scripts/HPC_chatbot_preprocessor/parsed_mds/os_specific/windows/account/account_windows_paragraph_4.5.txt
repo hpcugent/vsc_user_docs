@@ -1,0 +1,7 @@
+5.  Save both the public and private keys in a folder on your personal
+    computer (We recommend to create and put them in the folder
+    "C:\\Users\\%USERNAME%\\AppData\\Local\\PuTTY\\.ssh") with the
+    buttons "Save public key" and "Save private key". We recommend using the name "id_rsa.pub" for the public key, and
+    "id_rsa.ppk" for the private key.
+If you use another program to generate a key pair, please remember that
+they need to be in the OpenSSH format to access the HPC clusters.

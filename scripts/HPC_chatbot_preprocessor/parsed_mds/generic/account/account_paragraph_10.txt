@@ -1,0 +1,19 @@
+Welcome e-mail
+Within one day, you should receive a Welcome e-mail with your VSC
+account details.
+Dear (Username), 
+Your VSC-account has been approved by an administrator.
+Your vsc-username is vsc40000
+Your account should be fully active within one hour.
+To check or update your account information please visit
+https://account.vscentrum.be/
+For further info please visit https://www.vscentrum.be/user-portal
+Kind regards,
+-- The VSC administrators
+
+Now, you can start using the HPC. You can always look up your VSC id later
+by visiting <https://account.vscentrum.be>.
+Adding multiple SSH public keys (optional)
+In case you are connecting from different computers to the login nodes,
+it is advised to use separate SSH public keys to do so. You should
+follow these steps.

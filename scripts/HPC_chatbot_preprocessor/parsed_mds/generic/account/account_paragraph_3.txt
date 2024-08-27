@@ -1,0 +1,11 @@
+The HPC-UGent infrastructure clusters use public/private key pairs for user authentication
+(rather than passwords). Technically, the private key is stored on your
+local computer and always stays there; the public key is stored on the HPC.
+Access to the HPC is granted to anyone who can prove to have access to the
+corresponding private key on his local computer.
+How do SSH keys work?
+-   an SSH public/private key pair can be seen as a lock and a key
+-   the SSH public key is equivalent with a lock: you give it to the
+    VSC and they put it on the door that gives access to your account.
+-   the SSH private key is like a physical key: you don't hand it out
+    to other people.

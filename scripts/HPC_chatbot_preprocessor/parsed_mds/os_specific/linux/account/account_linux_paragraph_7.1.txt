@@ -1,0 +1,14 @@
+Using an SSH agent (optional)
+Most recent Unix derivatives include by default an SSH agent ("gnome-keyring-daemon" in most cases)  
+to keep and manage the user SSH keys. If you use one of these derivatives you must include the new keys into
+the SSH manager keyring to be able to connect to the HPC cluster. If
+not, SSH client will display an error message (see Connecting) similar to this:
+Agent admitted failure to sign using the key. 
+Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+This could be fixed using the ssh-add command. You can include the new
+private keys' identities in your keyring with:
+$ ssh-add
+ tip
+    Without extra options ssh-add adds any key located at $HOME/.ssh
+    directory, but you can specify the private key location path as
+    argument, as example: ssh-add /path/to/my/id_rsa.

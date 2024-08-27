@@ -1,0 +1,14 @@
+Now we will copy the file to the local machine. On the terminal on your
+own local computer, enter:
+$ scp vsc40000@login.hpc.ugent.be:./docs/intro-HPC--Gent.pdf .
+intro-HPC--Gent.pdf 100% 725KB 724.6KB/s 00:01
+$ ls -l
+total 899
+-rw-r--r-- 1 user staff 741995 Sep 18 09:53
+-rw-r--r-- 1 user staff      6 Sep 18 09:37 localfile.txt
+The file has been copied from the HPC to your local computer.
+It's also possible to copy entire directories (and their contents) with
+the -r flag. For example, if we want to copy the local directory
+dataset to $VSC_SCRATCH, we can use the following command (assuming
+you've created the scratch symlink):
+$ scp -r dataset vsc40000@login.hpc.ugent.be:scratch

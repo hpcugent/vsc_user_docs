@@ -1,0 +1,11 @@
+Applying for the account
+This file has been stored in the directory "~/.ssh/".
+ tip
+    As ".ssh" is an invisible directory, the Finder will not show it by
+    default. The easiest way to access the folder, is by pressing ++cmd+shift+g++ (or ++cmd+shift+"."++),
+    which will allow you to enter the name of a directory, which you would
+    like to open in Finder. Here, type "~/.ssh" and press enter.
+After you have uploaded your public key you will receive an e-mail with
+a link to confirm your e-mail address. After confirming your e-mail
+address the VSC staff will review and if applicable approve your
+account.

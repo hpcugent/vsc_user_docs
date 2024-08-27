@@ -1,0 +1,14 @@
+{
+    "main_title": "account",
+    "subtitle": "Using-an-SSH-agent-(optional)",
+    "title_depth": 3,
+    "directory": "account",
+    "parent_title": "Getting-ready-to-request-an-account",
+    "links": {
+        "0": "../connecting"
+    },
+    "previous_title": "account_paragraph_6",
+    "next_title": "account_linux_paragraph_7.2",
+    "OS": "linux",
+    "reference_link": "https://docs.hpc.ugent.be/Linux/account/#using-an-ssh-agent-optional"
+}

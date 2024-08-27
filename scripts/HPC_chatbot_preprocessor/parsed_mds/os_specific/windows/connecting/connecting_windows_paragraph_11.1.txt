@@ -1,0 +1,11 @@
+Transfer Files to/from the HPC
+Before you can do some work, you'll have to transfer the files you need from your desktop or department to the cluster. At the end of a job, you might want to transfer some files back.
+WinSCP
+To transfer files to and from the cluster, we recommend the use of
+WinSCP, a graphical file management tool which can transfer files using
+secure protocols such as SFTP and SCP. WinSCP is freely available from
+<http://www.winscp.net>.
+To transfer your files using WinSCP,
+1.  Open the program
+2.  The "Login" menu is shown automatically (if it is closed, click "New Session" to open it again). Fill in the necessary fields under "Session"
+    1.  Click "New Site".

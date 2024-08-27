@@ -1,0 +1,14 @@
+{
+    "main_title": "account",
+    "subtitle": "How-do-SSH-keys-work",
+    "title_depth": 3,
+    "directory": "account",
+    "parent_title": "Getting-ready-to-request-an-account",
+    "links": {
+        "0": "../../linux-tutorial"
+    },
+    "previous_title": "account_paragraph_3",
+    "next_title": "account_paragraph_5",
+    "OS": "linux",
+    "reference_link": "https://docs.hpc.ugent.be/Linux/account/#how-do-ssh-keys-work"
+}

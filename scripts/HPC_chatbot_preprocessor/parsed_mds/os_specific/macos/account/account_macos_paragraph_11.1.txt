@@ -1,0 +1,11 @@
+Adding multiple SSH public keys (optional)
+1.  Create a new public/private SSH key pair from the new computer.
+    Repeat the process described in
+    section Generate a public/private key pair with OpenSSH.
+2.  Go to <https://account.vscentrum.be/django/account/edit>
+3.  Upload the new SSH public key using the Add public key section. Make sure that your
+    public key is actually saved, because a public key will be refused
+    if it is too short, wrong type, or in a wrong format.
+4.  (optional) If you lost your key, you can delete the old key on the
+    same page. You should keep at least one valid public SSH key in your
+    account.

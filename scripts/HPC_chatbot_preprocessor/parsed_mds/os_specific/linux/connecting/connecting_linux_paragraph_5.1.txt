@@ -1,0 +1,12 @@
+First Time connection to the HPC infrastructure
+Connect
+Open up a terminal and enter the following command to connect to the HPC.
+$ ssh vsc40000@login.hpc.ugent.be
+Here, user vsc40000 wants to make a connection to the "hpcugent" cluster at UGent via the login
+node "login.hpc.ugent.be", so replace vsc40000 with your own VSC id in the above command.
+The first time you make a connection to the login node, you will be
+asked to verify the authenticity of the login node. Please check
+Warning message when first connecting to new host on how to do this.
+A possible error message you can get if you previously saved your
+private key somewhere else than the default location
+($HOME/.ssh/id_rsa):

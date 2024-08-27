@@ -1,0 +1,6 @@
+5.  Finally, type in a name for the bookmark in the "Nickname" field and
+    close the window by pressing on the red circle in the top left
+    corner of the window.
+To open the connection, click on the "Bookmarks" icon (which
+resembles an open book) and double-click on the bookmark you just
+created.

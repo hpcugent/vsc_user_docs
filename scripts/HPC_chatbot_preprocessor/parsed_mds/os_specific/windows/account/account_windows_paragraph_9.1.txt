@@ -1,0 +1,7 @@
+Applying for the account
+This file should have been stored in the directory
+"C:\\Users\\%USERNAME%\\AppData\\Local\\PuTTY\\.ssh"
+After you have uploaded your public key you will receive an e-mail with
+a link to confirm your e-mail address. After confirming your e-mail
+address the VSC staff will review and if applicable approve your
+account.

@@ -1,0 +1,11 @@
+{
+    "main_title": "account",
+    "subtitle": "Using-an-SSH-agent-(optional)",
+    "title_depth": 3,
+    "directory": "account",
+    "parent_title": "Getting-ready-to-request-an-account",
+    "previous_title": "account_paragraph_5",
+    "next_title": "account_windows_paragraph_6.2",
+    "OS": "windows",
+    "reference_link": "https://docs.hpc.ugent.be/Windows/account/#using-an-ssh-agent-optional"
+}

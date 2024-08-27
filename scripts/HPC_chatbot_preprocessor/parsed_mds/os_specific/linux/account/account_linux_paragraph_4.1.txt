@@ -1,0 +1,10 @@
+How do SSH keys work
+-   anyone who has the key (and the optional password) can unlock the
+    door and log in to the account.
+-   the door to your VSC account is special: it can have multiple
+    locks (SSH public keys) attached to it, and you only need to open
+    one lock with the corresponding key (SSH private key) to open
+    the door (log in to the account).
+Since all VSC clusters use Linux as their main operating system, you
+will need to get acquainted with using the command-line interface and
+using the terminal (see tutorial).

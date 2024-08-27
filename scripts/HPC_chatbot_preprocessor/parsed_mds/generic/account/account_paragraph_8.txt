@@ -1,0 +1,13 @@
+Applying for the account
+Visit <https://account.vscentrum.be/>
+You will be redirected to our WAYF (Where Are You From) service where
+you have to select your "Home Organisation".
+Select "UGent" in the dropdown box and optionally select "Save my preference"
+and "permanently".
+Click "Confirm"
+You will now be taken to the authentication page of your institute.
+After you log in using your UGent login and password, you will be asked to
+upload the file that contains your public key, i.e., the file
+"id_rsa.pub" which you have generated earlier. Make sure that your
+public key is actually accepted for upload, because if it is in a wrong
+format, wrong type or too short, then it will be refused.
