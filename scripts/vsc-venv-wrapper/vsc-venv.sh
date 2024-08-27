@@ -25,7 +25,7 @@ echo_error() { echo -e "\e[31m[ERROR] $1\e[0m"; }
 
 activate() {
   local requirements_file modules_script
-  local venv_location n_loaded_modules
+  local venv_location n_loaded_modules python_version
 
   requirements_file="$1"
   modules_script="$2"
@@ -71,7 +71,12 @@ activate() {
 
   # === Step 3: Create Virtual Environment if not yet present === #
 
-  echo_info "Creating virtual environment at $venv_location"
+  if [ "$(which python)" = "/usr/bin/python" ]; then
+    echo_warning "System python used. Consider loading a specific python module through the modules script."
+  fi
+
+  python_version=$(python --version)
+  echo_info "Using $python_version to create virtual environment at $venv_location"
   # Will automatically make the venvs folder and venv, does nothing if they already exist
   if ! python -m venv "$venv_location"; then
     echo_error "Could not create virtual environment"
