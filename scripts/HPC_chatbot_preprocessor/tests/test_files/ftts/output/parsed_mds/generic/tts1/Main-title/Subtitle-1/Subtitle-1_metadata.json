@@ -1,0 +1,11 @@
+{
+    "main_title": "tts1",
+    "subtitle": "Subtitle-1",
+    "title_depth": 2,
+    "directory": "tts1\\Main-title\\Subtitle-1",
+    "parent_title": "Main-title",
+    "previous_title": "Main-title",
+    "next_title": "Subtitle-2-g",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/tts1/#subtitle-1"
+}

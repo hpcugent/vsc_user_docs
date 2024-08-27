@@ -1,0 +1,14 @@
+{
+    "main_title": "tps1",
+    "subtitle": "OS-specific-sections",
+    "title_depth": 2,
+    "directory": "tps1",
+    "parent_title": "Main-title",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/linuxmacos"
+    },
+    "previous_title": "tps1_paragraph_1",
+    "next_title": "tps1_linux_paragraph_2.2",
+    "OS": "linux",
+    "reference_link": "https://docs.hpc.ugent.be/Linux/tps1/#os-specific-sections"
+}
