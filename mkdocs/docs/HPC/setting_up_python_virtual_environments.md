@@ -51,7 +51,7 @@ It is now possible to run Python scripts that use the installed packages in the 
 
 !!! note
     Always prefer to use Python packages that are centrally installed, which are available via the environment modules interface.
-    Modules are compiled and optimized for the HPC cluster, while packages installed with `pip` are not.
+    Software installations available via the modules interface are compiled and optimized for the HPC cluster, while packages installed with `pip` are not.
     To check if a package is available as a module, you can use the following command:
 
     ```bash
