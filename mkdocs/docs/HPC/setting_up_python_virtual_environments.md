@@ -166,17 +166,16 @@ We now create a job script that loads the PyTorch module, enters the virtual env
 #!/bin/bash
 
 # Basic parameters
-#PBS -N python_job_example    ## Job name
-#PBS -l nodes=1:ppn=1         ## 1 node, 1 processors per node
-#PBS -l walltime=01:00:00     ## Max time your job will run (no more than 72:00:00)
+#PBS -N python_job_example            ## Job name
+#PBS -l nodes=1:ppn=1                 ## 1 node, 1 processors per node
+#PBS -l walltime=01:00:00             ## Max time your job will run (no more than 72:00:00)
 
-module load PyTorch/2.1.2-foss-2023a   # Load the PyTorch module
+module load PyTorch/2.1.2-foss-2023a  # Load the PyTorch module
+cd $PBS_O_WORKDIR                     # Change working directory to the location where the job was submitted
+source myenv/bin/activate             # Activate the virtual environment
 
-cd $PBS_O_WORKDIR             # Change working directory to the location where the job was submitted
-
-source myenv/bin/activate     # Activate the virtual environment
-python pytorch_poutyne.py     # Run your Python script, or any other command within the virtual environment
-deactivate                    # Deactivate the virtual environment
+python pytorch_poutyne.py             # Run your Python script, or any other command within the virtual environment
+deactivate                            # Deactivate the virtual environment
 ```
 
 Next, we submit the job script:
