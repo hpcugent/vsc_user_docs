@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A Python virtual environment (venv for short)
+A Python virtual environment ("venv" for short)
 is a tool to create an isolated Python workspace with its own dependencies.
 Within this isolated environment,
 you can install additional Python packages without affecting the system-wide Python installation.
