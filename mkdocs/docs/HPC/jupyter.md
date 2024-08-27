@@ -63,7 +63,7 @@ $ module available SciPy-bundle
 ...
 ```
 
-Not all modules will work for every notebook, we need to use the one that uses the same toolchain as the notebook we want to launch. To find that toolchain, we can look at the `JupyterNotebook version` field when creating a notebook. In our example `7.2.0` is the version of the notebook and `GCCcore 13.2.0` is the toolchain used.
+Not all modules will work for every notebook, we need to use the one that uses the same toolchain as the notebook we want to launch. To find that toolchain, we can look at the `JupyterNotebook version` field when creating a notebook. In our example `7.2.0` is the version of the notebook and `GCCcore/13.2.0` is the toolchain used.
 
 <center>
 ![image](img/ood_jupyter_version.png)
