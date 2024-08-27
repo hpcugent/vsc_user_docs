@@ -1497,9 +1497,9 @@ large number of utilities to monitor the performance of its components.</p>
 <li>Network bottlenecks</li>
 </ol>
 <p>First, we allocate a compute node and move to our relevant directory:</p>
-<pre><code>$ <b>qsub -I</b>
-$ <b>cd ~/examples/Fine-tuning-Job-Specifications</b></code></pre>
-
+<div class="highlight"><pre><span></span><code>qsub -I
+cd ~/examples/Fine-tuning-Job-Specifications
+</code></pre></div>
 <h2 id="specifying-walltime">Specifying Walltime<a class="headerlink" href="#specifying-walltime" title="Permanent link">#</a></h2>
 <p>One of the most important and also easiest parameters to measure is the
 duration of your program. This information is needed to specify the
@@ -1511,11 +1511,11 @@ elapsed, the time consumed by system overhead, and the time used to
 execute your executable to the standard error stream. The calculated
 times are reported in seconds.</p>
 <p>Test the time command:</p>
-<pre><code>$ <b>time sleep 75</b>
+<div class="highlight"><pre><span></span><code>$ time sleep 75
 real 1m15.005s
 user 0m0.001s
-sys 0m0.002s</code></pre>
-
+sys 0m0.002s
+</code></pre></div>
 <p>It is a good practice to correctly estimate and specify the run time
 (duration) of an application. Of course, a margin of 10% to 20% can be
 taken to be on the safe side.</p>
@@ -1524,11 +1524,11 @@ select the "slowest" compute node for your walltime tests. Your estimate
 should be appropriate in case your application will run on the "slowest"
 (oldest) compute nodes.</p>
 <p>The walltime can be specified in a job scripts as:</p>
-<pre><code>#PBS -l walltime=3:00:00:00</code></pre>
-
-<p>or on the command line</p>
-<pre><code>$ <b>qsub -l walltime=3:00:00:00</b></code></pre>
-
+<div class="highlight"><pre><span></span><code>#PBS -l walltime=3:00:00:00
+</code></pre></div>
+<p>or on the command line
+<div class="highlight"><pre><span></span><code>qsub -l walltime=3:00:00:00
+</code></pre></div></p>
 <p>It is recommended to always specify the walltime for a job.</p>
 <h2 id="specifying-memory-requirements">Specifying memory requirements<a class="headerlink" href="#specifying-memory-requirements" title="Permanent link">#</a></h2>
 <p>In many situations, it is useful to monitor the amount of memory an
@@ -1543,13 +1543,13 @@ computer. The "<em>free</em>" command displays the total amount of free and
 used physical and swap memory in the system, as well as the buffers used
 by the kernel. We also use the options "-m" to see the results expressed
 in Mega-Bytes and the "-t" option to get totals.</p>
-<pre><code>$ <b>free -m -t</b>
+<div class="highlight"><pre><span></span><code>$ free -m -t
                 total   used   free  shared  buffers  cached
 Mem:            16049   4772  11277       0      107     161
 -/+ buffers/cache:      4503  11546
 Swap:           16002   4185  11816
-Total:          32052   8957  23094</code></pre>
-
+Total:          32052   8957  23094
+</code></pre></div>
 <p>Important is to note the total amount of memory available in the machine
 (i.e., 16 GB in this example) and the amount of used and free memory
 (i.e., 4.7 GB is used and another 11.2 GB is free here).</p>
@@ -1575,20 +1575,17 @@ the machine and allows to scroll the list vertically and
 horizontally to see all processes and their full command lines.</p>
 </dd>
 </dl>
-<pre><code>$ <b>top</b>
-$ <b>htop</b></code></pre>
-
 <h3 id="pbs_mem">Setting the memory parameter<a class="headerlink" href="#pbs_mem" title="Permanent link">#</a></h3>
 <p>Once you gathered a good idea of the overall memory consumption of your
 application, you can define it in your job script. It is wise to foresee
 a margin of about 10%.</p>
 <p>The maximum amount of physical memory used by the job per node can be
 specified in a job script as:</p>
-<pre><code>#PBS -l mem=4gb</code></pre>
-
+<div class="highlight"><pre><span></span><code>#PBS -l mem=4gb
+</code></pre></div>
 <p>or on the command line</p>
-<pre><code>$ <b>qsub -l mem=4gb</b></code></pre>
-
+<div class="highlight"><pre><span></span><code>qsub -l mem=4gb
+</code></pre></div>
 <h2 id="specifying-processors-requirements">Specifying processors requirements<a class="headerlink" href="#specifying-processors-requirements" title="Permanent link">#</a></h2>
 <p>Users are encouraged to fully utilise all the available cores on a
 certain compute node. Once the required numbers of cores and nodes are
@@ -1608,7 +1605,7 @@ processors on these compute nodes.</p>
 of CPUs, threads, cores, information about CPU caches, CPU family, model
 and much more. So, if you want to detect how many cores are available on
 a specific machine:</p>
-<pre><code>$ <b>less /proc/cpuinfo</b>
+<div class="highlight"><pre><span></span><code>$ less /proc/cpuinfo
 processor       : 0
 vendor_id       : GenuineIntel
 cpu family      : 6
@@ -1617,10 +1614,10 @@ model name      : Intel(R) Xeon(R) CPU  E5420  @ 2.50GHz
 stepping        : 10
 cpu MHz         : 2500.088
 cache size      : 6144 KB
-...</code></pre>
-
+...
+</code></pre></div>
 <p>Or if you want to see it in a more readable format, execute:</p>
-<pre><code>$ <b>grep processor /proc/cpuinfo</b>
+<div class="highlight"><pre><span></span><code>$ grep processor /proc/cpuinfo
 processor : 0
 processor : 1
 processor : 2
@@ -1628,8 +1625,8 @@ processor : 3
 processor : 4
 processor : 5
 processor : 6
-processor : 7</code></pre>
-
+processor : 7
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Unless you want information of the login nodes, you'll have to issue
@@ -1638,28 +1635,30 @@ in an interactive job, see <a href="../running_interactive_jobs/">the chapter on
 </div>
 <p>In order to specify the number of nodes and the number of processors per
 node in your job script, use:</p>
-<pre><code>#PBS -l nodes=N:ppn=M</code></pre>
-
+<div class="highlight"><pre><span></span><code>#PBS -l nodes=N:ppn=M
+</code></pre></div>
 <p>or with equivalent parameters on the command line</p>
-<pre><code>$ <b>qsub -l nodes=N:ppn=M</b></code></pre>
-
+<div class="highlight"><pre><span></span><code>qsub -l nodes=N:ppn=M
+</code></pre></div>
 <p>This specifies the number of nodes (nodes=N) and the number of
 processors per node (ppn=M) that the job should use. PBS treats a
 processor core as a processor, so a system with eight cores per compute
 node can have ppn=8 as its maximum ppn request.</p>
 <p>You can also use this statement in your job script:</p>
-<pre><code>#PBS -l nodes=N:ppn=all</code></pre>
-
+<div class="highlight"><pre><span></span><code>#PBS -l nodes=N:ppn=all
+</code></pre></div>
 <p>to request all cores of a node, or</p>
-<pre><code>#PBS -l nodes=N:ppn=half</code></pre>
-
+<div class="highlight"><pre><span></span><code>#PBS -l nodes=N:ppn=half
+</code></pre></div>
 <p>to request half of them.</p>
 <p>Note that unless a job has some inherent parallelism of its own through
 something like MPI or OpenMP, requesting more than a single processor on
 a single node is usually wasteful and can impact the job start time.</p>
 <h3 id="monitoring-the-cpu-utilisation">Monitoring the CPU-utilisation<a class="headerlink" href="#monitoring-the-cpu-utilisation" title="Permanent link">#</a></h3>
 <p>This could also be monitored with the <em><strong>htop</strong></em> command:</p>
-<pre><code>$ <b>htop</b></code></pre>
+<p><div class="highlight"><pre><span></span><code>htop
+</code></pre></div>
+Example output:
 <div class="highlight"><pre><span></span><code>  1  [|||   11.0%]   5  [||     3.0%]     9  [||     3.0%]   13 [       0.0%]
   2  [|||||100.0%]   6  [       0.0%]     10 [       0.0%]   14 [       0.0%]
   3  [||     4.9%]   7  [||     9.1%]     11 [       0.0%]   15 [       0.0%]
@@ -1672,7 +1671,7 @@ a single node is usually wasteful and can impact the job start time.</p>
 22350 vsc00000   20   0 1729M 1071M   704 R 98.0  1.7 27:15.59 bwa index
  7703 root        0 -20 10.1G 1289M 70156 S 11.0  2.0 36h10:11 /usr/lpp/mmfs/bin
 27905 vsc00000   20   0  123M  2800  1556 R  7.0  0.0  0:17.51 htop
-</code></pre></div>
+</code></pre></div></p>
 <p>The advantage of htop is that it shows you the cpu utilisation for all
 processors as well as the details per application. A nice exercise is to
 start 4 instances of the "cpu_eat" program in 4 different terminals, and
@@ -1764,20 +1763,19 @@ eight cores for these purposes.</p>
 conventionally appears in the form of three numbers, which represent the
 system load during the last <strong>one</strong>-, <strong>five</strong>-, and <strong>fifteen</strong>-minute periods.</p>
 <p>The <strong>uptime</strong> command will show us the average load</p>
-<pre><code>$ <b>uptime</b>
+<div class="highlight"><pre><span></span><code>$ uptime
 10:14:05 up 86 days, 12:01, 11 users, load average: 0.60, 0.41, 0.41
-</code></pre>
-
+</code></pre></div>
 <p>Now, compile and start a few instances of the "<em>eat_cpu</em>" program in the background,
 and check the effect on the load again:</p>
-<pre><code>$ <b>gcc -O2 eat_cpu.c -o eat_cpu</b>
-$ <b>./eat_cpu&</b>
-$ <b>./eat_cpu&</b>
-$ <b>./eat_cpu&</b>
-$ <b>uptime</b>
+<p><div class="highlight"><pre><span></span><code>$ gcc -O2 eat_cpu.c -o eat_cpu
+$ ./eat_cpu&amp;
+$ ./eat_cpu&amp;
+$ ./eat_cpu&amp;
+$ uptime
 10:14:42 up 86 days, 12:02, 11 users, load average: 2.60, 0.93, 0.58
-</code></pre>
-<p>You can also read it in the <strong>htop</strong> command.</p>
+</code></pre></div>
+You can also read it in the <strong>htop</strong> command.</p>
 <h3 id="fine-tuning-your-executable-andor-job-script_1">Fine-tuning your executable and/or job script<a class="headerlink" href="#fine-tuning-your-executable-andor-job-script_1" title="Permanent link">#</a></h3>
 <p>It is good practice to perform a number of run time stress tests, and to
 check the system load of your nodes. We (and all other users of the HPC)
@@ -1837,11 +1835,12 @@ request nodes with an "InfiniBand" network. The InfiniBand is a
 specialised high bandwidth, low latency network that enables large
 parallel jobs to run as efficiently as possible.</p>
 <p>The parameter to add in your job script would be:</p>
-<pre><code>#PBS -l ib</code></pre>
-
+<div class="highlight"><pre><span></span><code>#PBS -l ib
+</code></pre></div>
 <p>If for some other reasons, a user is fine with the gigabit Ethernet
 network, he can specify:</p>
-<pre><code>#PBS -l gbe</code></pre>
+<div class="highlight"><pre><span></span><code>#PBS -l gbe
+</code></pre></div>
 
 
 

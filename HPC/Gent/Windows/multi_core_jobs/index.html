@@ -1349,79 +1349,41 @@ specific libraries that incorporate parallel capabilities. The next
 three sections explore some common approaches: (raw) threads, OpenMP and
 MPI.</p>
 <table>
-    <tr>
-        <td colspan="3">
-            <center><b>Parallel programming approaches</b></center>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            <b>Tool</b>
-        </td>
-        <td colspan="1">
-            <b>Available languages binding</b>
-        </td>
-        <td colspan="1">
-            <b>Limitations</b>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            Raw threads pthreads, boost:: threading, ...
-        </td>
-        <td colspan="1">
-            Threading libraries are available for all common programming languages
-        </td>
-        <td colspan="1">
-            Threading libraries are available for all common programming languages & Threads are limited to shared memory systems. They are more often used on single node systems rather than for HPC. Thread management is hard.
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            OpenMP
-        </td>
-        <td colspan="1">
-            Fortran/C/C++
-        </td>
-        <td colspan="1">
-            Limited to shared memory systems, but large shared memory systems for HPC are not uncommon (e.g., SGI UV). Loops and task can be parallelized by simple insertion of compiler directives. Under the hood threads are used. Hybrid approaches exist which use OpenMP to parallelize the work load on each node and MPI (see below) for communication between nodes.
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            Lightweight threads with clever scheduling, Intel TBB, Intel Cilk Plus
-        </td>
-        <td colspan="1">
-            C/C++
-        </td>
-        <td colspan="1">
-            Limited to shared memory systems, but may be combined with MPI. Thread management is taken care of by a very clever scheduler enabling the programmer to focus on parallelization itself. Hybrid approaches exist which use TBB and/or Cilk Plus to parallelise the work load on each node and MPI (see below) for communication between nodes.
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            MPI
-        </td>
-        <td colspan="1">
-            Fortran/C/C++, Python
-        </td>
-        <td colspan="1">
-            Applies to both distributed and shared memory systems. Cooperation between different nodes or cores is managed by explicit calls to library routines handling communication routines.
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            Global Arrays library 
-        </td>
-        <td colspan="1">
-            C/C++, Python
-        </td>
-        <td colspan="1">
-            Mimics a global address space on distributed memory systems, by distributing arrays over many nodes and one sided communication. This library is used a lot for chemical structure calculation codes and was used in one of the first applications that broke the PetaFlop barrier.
-        </td>
-    </tr>
+<thead>
+<tr>
+<th><strong>Tool</strong></th>
+<th><strong>Available languages binding</strong></th>
+<th><strong>Limitations</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raw threads (pthreads, boost::threading, ...)</td>
+<td>Threading libraries are available for all common programming languages</td>
+<td>Threading libraries are available for all common programming languages &amp; Threads are limited to shared memory systems. They are more often used on single node systems rather than for HPC. Thread management is hard.</td>
+</tr>
+<tr>
+<td>OpenMP</td>
+<td>Fortran/C/C++</td>
+<td>Limited to shared memory systems, but large shared memory systems for HPC are not uncommon (e.g., SGI UV). Loops and task can be parallelized by simple insertion of compiler directives. Under the hood threads are used. Hybrid approaches exist which use OpenMP to parallelize the work load on each node and MPI (see below) for communication between nodes.</td>
+</tr>
+<tr>
+<td>Lightweight threads with clever scheduling, Intel TBB, Intel Cilk Plus</td>
+<td>C/C++</td>
+<td>Limited to shared memory systems, but may be combined with MPI. Thread management is taken care of by a very clever scheduler enabling the programmer to focus on parallelization itself. Hybrid approaches exist which use TBB and/or Cilk Plus to parallelise the work load on each node and MPI (see below) for communication between nodes.</td>
+</tr>
+<tr>
+<td>MPI</td>
+<td>Fortran/C/C++, Python</td>
+<td>Applies to both distributed and shared memory systems. Cooperation between different nodes or cores is managed by explicit calls to library routines handling communication routines.</td>
+</tr>
+<tr>
+<td>Global Arrays library</td>
+<td>C/C++, Python</td>
+<td>Mimics a global address space on distributed memory systems, by distributing arrays over many nodes and one sided communication. This library is used a lot for chemical structure calculation codes and was used in one of the first applications that broke the PetaFlop barrier.</td>
+</tr>
+</tbody>
 </table>
-
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>You can request more nodes/cores by adding following line to your run script.
@@ -1464,18 +1426,16 @@ time.</p>
 <p>Here is a simple example program that spawns 5 threads, where each one
 runs a simple function that only prints "Hello from thread".</p>
 <p>Go to the example directory:</p>
-<pre><code><b>$ cd ~/examples/Multi-core-jobs-Parallel-Computing</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>cd ~/examples/Multi-core-jobs-Parallel-Computing
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the example directory is not yet present, copy it to your home directory:</p>
-<p><pre><code><b>$ cp -r /apps/gent/tutorials/Intro-HPC/examples ~/</b></code></pre></p>
+<div class="highlight"><pre><span></span><code>cp -r /apps/gent/tutorials/Intro-HPC/examples ~/
+</code></pre></div>
 </div>
 <p>Study the example first:</p>
-<div style="text-align: center;">-- T_hello.c --</div>
-
-<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<div class="highlight"><span class="filename">T_hello.c</span><pre><span></span><code><span class="cm">/*</span>
 <span class="cm"> * VSC        : Flemish Supercomputing Centre</span>
 <span class="cm"> * Tutorial   : Introduction to HPC</span>
 <span class="cm"> * Description: Showcase of working with threads</span>
@@ -1518,9 +1478,9 @@ runs a simple function that only prints "Hello from thread".</p>
 </code></pre></div>
 <p>And compile it (whilst including the thread library) and run and test it
 on the login-node:</p>
-<pre><code><b>$ module load GCC</b>
-<b>$ gcc -o T_hello T_hello.c -lpthread</b>
-<b>$ ./T_hello</b>
+<div class="highlight"><pre><span></span><code>$ module load GCC
+$ gcc -o T_hello T_hello.c -lpthread
+$ ./T_hello
 spawning thread 0
 spawning thread 1
 spawning thread 2
@@ -1531,12 +1491,11 @@ spawning thread 3
 spawning thread 4
 Hello from thread 3!
 Hello from thread 4!
-</code></pre>
-
+</code></pre></div>
 <p>Now, run it on the cluster and check the output:</p>
-<pre><code><b>$ qsub T_hello.pbs</b>
+<div class="highlight"><pre><span></span><code>$ qsub T_hello.pbs
 123456
-<b>$ more T_hello.pbs.o123456</b>
+$ more T_hello.pbs.o123456
 spawning thread 0
 spawning thread 1
 spawning thread 2
@@ -1547,8 +1506,7 @@ spawning thread 3
 spawning thread 4
 Hello from thread 3!
 Hello from thread 4!
-</code></pre>
-
+</code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>If you plan engaging in parallel programming using threads, this book
@@ -1596,8 +1554,7 @@ nloops variables as private.</p>
 <p>Parallelising for loops is really simple (see code below). By default,
 loop iteration counters in OpenMP loop constructs (in this case the i
 variable) in the for loop are set to private variables.</p>
-<p><center>-- omp1.c --</center></p>
-<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<div class="highlight"><span class="filename">omp1.c</span><pre><span></span><code><span class="cm">/*</span>
 <span class="cm"> * VSC        : Flemish Supercomputing Centre</span>
 <span class="cm"> * Tutorial   : Introduction to HPC</span>
 <span class="cm"> * Description: Showcase program for OMP loops</span>
@@ -1628,9 +1585,9 @@ variable) in the for loop are set to private variables.</p>
 </code></pre></div>
 <p>And compile it (whilst including the "<em>openmp</em>" library) and run and
 test it on the login-node:</p>
-<pre><code><b>$ module load GCC</b>
-<b>$ gcc -fopenmp -o omp1 omp1.c</b>
-<b>$ ./omp1</b>
+<div class="highlight"><pre><span></span><code>$ module load GCC
+$ gcc -fopenmp -o omp1 omp1.c
+$ ./omp1
 Thread 6 performed 125 iterations of the loop.
 Thread 7 performed 125 iterations of the loop.
 Thread 5 performed 125 iterations of the loop.
@@ -1639,11 +1596,10 @@ Thread 0 performed 125 iterations of the loop.
 Thread 2 performed 125 iterations of the loop.
 Thread 3 performed 125 iterations of the loop.
 Thread 1 performed 125 iterations of the loop.
-</code></pre>
-
+</code></pre></div>
 <p>Now run it in the cluster and check the result again.</p>
-<pre><code><b>$ qsub omp1.pbs</b>
-<b>$ cat omp1.pbs.o*</b>
+<div class="highlight"><pre><span></span><code>$ qsub omp1.pbs
+$ cat omp1.pbs.o*
 Thread 1 performed 125 iterations of the loop.
 Thread 4 performed 125 iterations of the loop.
 Thread 3 performed 125 iterations of the loop.
@@ -1652,8 +1608,7 @@ Thread 5 performed 125 iterations of the loop.
 Thread 7 performed 125 iterations of the loop.
 Thread 2 performed 125 iterations of the loop.
 Thread 6 performed 125 iterations of the loop.
-</code></pre>
-
+</code></pre></div>
 <h3 id="critical-code">Critical Code<a class="headerlink" href="#critical-code" title="Permanent link">#</a></h3>
 <p>Using OpenMP you can specify something called a "critical" section of
 code. This is code that is performed by all threads, but is only
@@ -1661,8 +1616,7 @@ performed <strong>one thread at a time</strong> (i.e., in serial). This provides
 you do things like updating a global variable with local results from
 each thread, and you don't have to worry about things like other threads
 writing to that global variable at the same time (a collision).</p>
-<p><center>-- omp2.c --</center></p>
-<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<div class="highlight"><span class="filename">omp2.c</span><pre><span></span><code><span class="cm">/*</span>
 <span class="cm"> * VSC        : Flemish Supercomputing Centre</span>
 <span class="cm"> * Tutorial   : Introduction to HPC</span>
 <span class="cm"> * Description: OpenMP Test Program</span>
@@ -1703,9 +1657,9 @@ writing to that global variable at the same time (a collision).</p>
 </code></pre></div>
 <p>And compile it (whilst including the "<em>openmp</em>" library) and run and
 test it on the login-node:</p>
-<pre><code><b>$ module load GCC</b>
-<b>$ gcc -fopenmp -o omp2 omp2.c</b>
-<b>$ ./omp2</b>
+<div class="highlight"><pre><span></span><code>$ module load GCC
+$ gcc -fopenmp -o omp2 omp2.c
+$ ./omp2
 Thread 3 is adding its iterations (12500) to sum (0), total is now 12500.
 Thread 7 is adding its iterations (12500) to sum (12500), total is now 25000.
 Thread 5 is adding its iterations (12500) to sum (25000), total is now 37500.
@@ -1715,11 +1669,10 @@ Thread 4 is adding its iterations (12500) to sum (62500), total is now 75000.
 Thread 1 is adding its iterations (12500) to sum (75000), total is now 87500.
 Thread 0 is adding its iterations (12500) to sum (87500), total is now 100000.
 Total # loop iterations is 100000
-</code></pre>
-
+</code></pre></div>
 <p>Now run it in the cluster and check the result again.</p>
-<pre><code><b>$ qsub omp2.pbs</b>
-<b>$ cat omp2.pbs.o*</b>
+<div class="highlight"><pre><span></span><code>$ qsub omp2.pbs
+$ cat omp2.pbs.o*
 Thread 2 is adding its iterations (12500) to sum (0), total is now 12500.
 Thread 0 is adding its iterations (12500) to sum (12500), total is now 25000.
 Thread 1 is adding its iterations (12500) to sum (25000), total is now 37500.
@@ -1729,8 +1682,7 @@ Thread 3 is adding its iterations (12500) to sum (62500), total is now 75000.
 Thread 5 is adding its iterations (12500) to sum (75000), total is now 87500.
 Thread 6 is adding its iterations (12500) to sum (87500), total is now 100000.
 Total # loop iterations is 100000
-</code></pre>
-
+</code></pre></div>
 <h3 id="reduction">Reduction<a class="headerlink" href="#reduction" title="Permanent link">#</a></h3>
 <p>Reduction refers to the process of combining the results of several
 sub-calculations into a final result. This is a very common paradigm
@@ -1739,9 +1691,7 @@ others is very popular). Indeed we used this paradigm in the code
 example above, where we used the "critical code" directive to accomplish
 this. The map-reduce paradigm is so common that OpenMP has a specific
 directive that allows you to more easily implement this.</p>
-<div style="text-align: center;">-- omp3.c --</div>
-
-<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<div class="highlight"><span class="filename">omp3.c</span><pre><span></span><code><span class="cm">/*</span>
 <span class="cm"> * VSC        : Flemish Supercomputing Centre</span>
 <span class="cm"> * Tutorial   : Introduction to HPC</span>
 <span class="cm"> * Description: OpenMP Test Program</span>
@@ -1775,18 +1725,16 @@ directive that allows you to more easily implement this.</p>
 </code></pre></div>
 <p>And compile it (whilst including the "<em>openmp</em>" library) and run and
 test it on the login-node:</p>
-<pre><code><b>$ module load GCC</b>
-<b>$ gcc -fopenmp -o omp3 omp3.c</b>
-<b>$ ./omp3</b>
+<div class="highlight"><pre><span></span><code>$ module load GCC
+$ gcc -fopenmp -o omp3 omp3.c
+$ ./omp3
 Total # loop iterations is 100000
-</code></pre>
-
+</code></pre></div>
 <p>Now run it in the cluster and check the result again.</p>
-<pre><code><b>$ qsub omp3.pbs</b>
-<b>$ cat omp3.pbs.o*</b>
+<div class="highlight"><pre><span></span><code>$ qsub omp3.pbs
+$ cat omp3.pbs.o*
 Total # loop iterations is 100000
-</code></pre>
-
+</code></pre></div>
 <h3 id="other-openmp-directives">Other OpenMP directives<a class="headerlink" href="#other-openmp-directives" title="Permanent link">#</a></h3>
 <p>There are a host of other directives you can issue using OpenMP.</p>
 <p>Some other clauses of interest are:</p>
@@ -1850,9 +1798,7 @@ long as they are networked together.</p>
 send a "Hello" message to each processor, manipulate it trivially,
 return the results to the main process, and print the messages.</p>
 <p>Study the MPI-programme and the PBS-file:</p>
-<div style="text-align: center;">-- mpi_hello.c --</div>
-
-<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<div class="highlight"><span class="filename">mpi_hello.c</span><pre><span></span><code><span class="cm">/*</span>
 <span class="cm"> * VSC        : Flemish Supercomputing Centre</span>
 <span class="cm"> * Tutorial   : Introduction to HPC</span>
 <span class="cm"> * Description: &quot;Hello World&quot; MPI Test Program</span>
@@ -1915,9 +1861,7 @@ return the results to the main process, and print the messages.</p>
 <span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w"> </span><span class="p">}</span>
 </code></pre></div>
-<div style="text-align: center;">-- mpi_hello.pbs --</div>
-
-<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="highlight"><span class="filename">mpi_hello.pbs</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 <span class="c1">#PBS -N mpihello</span>
 <span class="c1">#PBS -l walltime=00:05:00</span>
@@ -1935,22 +1879,21 @@ module<span class="w"> </span>load<span class="w"> </span>intel
 mpirun<span class="w"> </span>./mpi_hello
 </code></pre></div>
 <p>and compile it:</p>
-<pre><code><b>$ module load intel</b>
-<b>$ mpiicc -o mpi_hello mpi_hello.c</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>$ module load intel
+$ mpiicc -o mpi_hello mpi_hello.c
+</code></pre></div>
 <p>mpiicc is a wrapper of the Intel C++ compiler icc to compile MPI
 programs (see <a href="../compiling_your_software/">the chapter on compilation</a> for details).</p>
 <p>Run the parallel program:</p>
-<pre><code><b>$ qsub mpi_hello.pbs</b>
-<b>$ ls -l</b>
+<div class="highlight"><pre><span></span><code>$ qsub mpi_hello.pbs
+$ ls -l
 total 1024
 -rwxrwxr-x 1 vsc40000 8746 Sep 16 14:19 mpi_hello*
 -rw-r--r-- 1 vsc40000 1626 Sep 16 14:18 mpi_hello.c
 -rw------- 1 vsc40000    0 Sep 16 14:22 mpi_hello.o123456
 -rw------- 1 vsc40000  697 Sep 16 14:22 mpi_hello.o123456
 -rw-r--r-- 1 vsc40000  304 Sep 16 14:22 mpi_hello.pbs
-<b>$ cat mpi_hello.o123456</b>
+$ cat mpi_hello.o123456
 0: We have 16 processors
 0: Hello 1! Processor 1 reporting for duty
 0: Hello 2! Processor 2 reporting for duty
@@ -1967,8 +1910,7 @@ total 1024
 0: Hello 13! Processor 13 reporting for duty
 0: Hello 14! Processor 14 reporting for duty
 0: Hello 15! Processor 15 reporting for duty
-</code></pre>
-
+</code></pre></div>
 <p>The runtime environment for the MPI implementation used (often called
 mpirun or mpiexec) spawns multiple copies of the program, with the total
 number of copies determining the number of process <em>ranks</em> in

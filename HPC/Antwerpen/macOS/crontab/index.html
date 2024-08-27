@@ -949,34 +949,30 @@ duplication.</p>
 as usual with your vsc user's account (see section
 <a href="../connecting/#connecting-to-the-hpc-infrastructure">Connecting</a>).</p>
 <p>Check if any cron script is already set in the current login node with:</p>
-<pre><code>$ <b>crontab -l</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>crontab -l
+</code></pre></div>
 <p>At this point you can add/edit (with <code>vi</code> editor) any cron script
 running the command:</p>
-<pre><code>$ <b>crontab -e</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>crontab -e
+</code></pre></div>
 <h4 id="example-cron-job-script">Example cron job script<a class="headerlink" href="#example-cron-job-script" title="Permanent link">#</a></h4>
-<pre><code> 15 5 * * * ~/runscript.sh >& ~/job.out
-</code></pre>
-
+<div class="highlight"><pre><span></span><code> 15 5 * * * ~/runscript.sh &gt;&amp; ~/job.out
+</code></pre></div>
 <p>where <code>runscript.sh</code> has these lines in this example:</p>
-<p><center>-- runscript.sh --</center>
-<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="highlight"><span class="filename">runscript.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 module<span class="w"> </span>swap<span class="w"> </span>cluster/donphan
 <span class="nb">export</span><span class="w"> </span><span class="nv">SLURM_CLUSTERS</span><span class="o">=</span><span class="s2">&quot;donphan&quot;</span>
 /usr/libexec/jobcli/qsub<span class="w"> </span>~/job_scripts/test.sh<span class="w"> </span>&gt;<span class="p">&amp;</span><span class="w"> </span>~/job.out
-</code></pre></div></p>
+</code></pre></div>
 <p>In the previous example a cron script was set to be executed every day
 at 5:15 am. More information about crontab and cron scheduling format at
 <a href="https://www.redhat.com/sysadmin/automate-linux-tasks-cron">https://www.redhat.com/sysadmin/automate-linux-tasks-cron</a>.</p>
 <p>Please note that you should login into the same login node to edit your
 previously generated crontab tasks. If that is not the case you can
 always jump from one login node to another with:</p>
-<pre><code>$ <b>ssh gligar&lt;id&gt;</b>
-</code></pre>
+<div class="highlight"><pre><span></span><code>ssh gligar07    # or gligar08
+</code></pre></div>
 
 
 

@@ -1545,9 +1545,8 @@ or check for options that control how many threads/cores/nodes can be used.</p>
 and thus requesting multiple cores and/or nodes will only result in wasted resources.</p>
 <h2 id="walltime-issues">Walltime issues<a class="headerlink" href="#walltime-issues" title="Permanent link">#</a></h2>
 <p>If you get from your job output an error message similar to this:</p>
-<pre><code>=>> PBS: job killed: walltime <i>&lt;value in seconds&gt; exceeded limit  &lt;value in seconds&gt;</i>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>=&gt;&gt; PBS: job killed: walltime &lt;value in seconds&gt; exceeded limit  &lt;value in seconds&gt;
+</code></pre></div>
 <p>This occurs when your job did not complete within the requested
 walltime. See
 section on <a href="../fine_tuning_job_specifications/#specifying-walltime">Specifying Walltime</a> for more information
@@ -1562,15 +1561,12 @@ to be able to write to the disk and then resubmit the jobs. </p>
 option is to request extra quota for your VO to the VO moderator/s. See
 section on <a href="../running_jobs_with_input_output_data/#pre-defined-user-directories">Pre-defined user directories</a> and <a href="../running_jobs_with_input_output_data/#pre-defined-quotas">Pre-defined quotas</a> for more information about quotas
 and how to use the storage endpoints in an efficient way.</p>
-<!-- FIXME: Add how to request quota section -->
-
 <h2 id="sec:connecting-issues">Issues connecting to login node<a class="headerlink" href="#sec:connecting-issues" title="Permanent link">#</a></h2>
 <p>If you are confused about the SSH public/private key pair concept, maybe
 the key/lock analogy in <a href="../account/#how-do-ssh-keys-work">How do SSH keys work?</a> can help.</p>
 <p>If you have errors that look like:</p>
-<pre><code>vsc40000@login.hpc.ugent.be: Permission denied
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>vsc40000@login.hpc.ugent.be: Permission denied
+</code></pre></div>
 <p>or you are experiencing problems with connecting, here is a list of
 things to do that should help:</p>
 <ol>
@@ -1594,12 +1590,12 @@ things to do that should help:</p>
 <li>Use <code>ssh-add</code> (see section <a href="../account/#using-an-ssh-agent-optional">Using an SSH agent</a>) <em>OR;</em></li>
 <li>Specify the location of the key in <code>$HOME/.ssh/config</code>. You will
             need to replace the VSC login id in the <code>User</code> field with your own:
-            <pre><code>                Host hpcugent
-                Hostname login.hpc.ugent.be
-                IdentityFile <i>/path/to/private/key</i>
-                User <i>vsc40000</I>
-            </code></pre>
-    Now you can just connect with <tt> ssh hpcugent</tt>.</li>
+            <div class="highlight"><pre><span></span><code>Host hpcugent
+    Hostname login.hpc.ugent.be
+    IdentityFile /path/to/private/key
+    User vsc40000
+</code></pre></div>
+    Now you can connect with <code>ssh hpcugent</code>.</li>
 </ol>
 </li>
 <li>
@@ -1635,16 +1631,15 @@ section <a href="../connecting/#connect">Connect</a>)</p>
 <p>If you've tried all applicable items above and it doesn't solve your
 problem, please contact hpc@ugent.be and include the following information:</p>
 <p>Please add <code>-vvv</code> as a flag to <code>ssh</code> like:</p>
-<pre><code>ssh -vvv vsc40000@login.hpc.ugent.be
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>ssh -vvv vsc40000@login.hpc.ugent.be
+</code></pre></div>
 <p>and include the output of that command in the message.</p>
 <h2 id="security-warning-about-invalid-host-key">Security warning about invalid host key<a class="headerlink" href="#security-warning-about-invalid-host-key" title="Permanent link">#</a></h2>
 <p>If you get a warning that looks like the one below, it is possible that
 someone is trying to intercept the connection between you and the system
 you are connecting to. Another possibility is that the host key of the
 system you are connecting to has changed.</p>
-<pre><code>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
+<div class="highlight"><pre><span></span><code>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
 @     WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!    @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
 IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY! 
@@ -1655,53 +1650,47 @@ The fingerprint for the ECDSA key sent by the remote host is
 SHA256:1MNKFTfl1T9sm6tTWAo4sn7zyEfiWFLKbk/mlT+7S5s. 
 Please contact your system administrator. 
 Add correct host key in  ~/.ssh/known_hosts to get rid of this message. 
-Offending ECDSA key in  ~/.ssh/known_hosts:<b>21</b>
+Offending ECDSA key in  ~/.ssh/known_hosts:21
 ECDSA host key for login.hpc.ugent.be has changed and you have requested strict checking.
 Host key verification failed.
-</code></pre>
-
+</code></pre></div>
 <p>You will need to remove the line it's complaining about (in the example,
 line 21). To do that, open <code>~/.ssh/known_hosts</code> in an editor, and remove the
 line. This results in <code>ssh</code> "forgetting" the system you are connecting
 to.</p>
 <p>Alternatively you can use the command that might be shown by the warning under
 <code>remove with:</code> and it should be something like this:</p>
-<pre><code>ssh-keygen -f "~/.ssh/known_hosts" -R "login.hpc.ugent.be"
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>ssh-keygen -f &quot;~/.ssh/known_hosts&quot; -R &quot;login.hpc.ugent.be&quot;
+</code></pre></div>
 <p>If the command is not shown, take the file from the "Offending ECDSA key in",
 and the host name from "ECDSA host key for" lines.</p>
 <p>After you've done that, you'll need to connect to the HPC again. See <a href="./#warning-message-when-first-connecting-to-new-host">Warning message when first connecting to new host</a> to verify the fingerprints.</p>
 <h2 id="doswindows-text-format">DOS/Windows text format<a class="headerlink" href="#doswindows-text-format" title="Permanent link">#</a></h2>
 <p>If you get errors like:</p>
-<pre><code><b>qsub fibo.pbs</b>
+<div class="highlight"><pre><span></span><code>$ qsub fibo.pbs
 qsub: script is written in DOS/Windows text format
-</code></pre>
-
+</code></pre></div>
 <p>or</p>
-<pre><code>sbatch: error: Batch script contains DOS line breaks (\r\n)
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>sbatch: error: Batch script contains DOS line breaks (\r\n)
+</code></pre></div>
 <p>It's probably because you transferred the files from a Windows computer.
 See the <a href="../linux-tutorial/uploading_files/#dos2unix">section about <code>dos2unix</code> in Linux tutorial</a> to fix this error.</p>
 <h2 id="warning-message-when-first-connecting-to-new-host">Warning message when first connecting to new host<a class="headerlink" href="#warning-message-when-first-connecting-to-new-host" title="Permanent link">#</a></h2>
-<pre><code><b>ssh vsc40000@login.hpc.ugent.be</b>
-The authenticity of host login.hpc.ugent.be (&lt;IP-adress&gt;) can't be established. 
-<u>&lt;algorithm&gt; key fingerprint is &lt;hash&gt;</u>
+<div class="highlight"><pre><span></span><code>$ ssh vsc40000@login.hpc.ugent.be
+The authenticity of host login.hpc.ugent.be (&lt;IP-adress&gt;) can&#39;t be established. 
+&lt;algorithm&gt; key fingerprint is &lt;hash&gt;
 Are you sure you want to continue connecting (yes/no)?
-</code></pre>
-
+</code></pre></div>
 <p>Now you can check the authenticity by checking if the line that is at
 the place of the underlined piece of text matches one of the following
 lines:</p>
-<pre><code>RSA key fingerprint is 10:2f:31:21:04:75:cb:ed:67:e0:d5:0c:a1:5a:f4:78
+<div class="highlight"><pre><span></span><code>RSA key fingerprint is 10:2f:31:21:04:75:cb:ed:67:e0:d5:0c:a1:5a:f4:78
 RSA key fingerprint is SHA256:W8Wz0/FkkCR2ulN7+w8tNI9M0viRgFr2YlHrhKD2Dd0
 ECDSA key fingerprint is e6:d2:9c:d8:e7:59:45:03:4a:1f:dc:96:62:29:9c:5f
 ECDSA key fingerprint is SHA256:C8TVx0w8UjGgCQfCmEUaOPxJGNMqv2PXLyBNODe5eOQ
 ED25519 key fingerprint is 19:28:76:94:52:9d:ff:7d:fb:8b:27:b6:d7:69:42:eb
 ED25519 key fingerprint is SHA256:8AJg3lPN27y6i+um7rFx3xoy42U8ZgqNe4LsEycHILA
-</code></pre>
-
+</code></pre></div>
 <p>If it does, type <strong><em>yes</em></strong>. If it doesn't, please contact support: hpc@ugent.be.</p>
 <h2 id="memory-limits">Memory limits<a class="headerlink" href="#memory-limits" title="Permanent link">#</a></h2>
 <p>To avoid jobs allocating too much memory, there are memory limits in
@@ -1727,9 +1716,6 @@ you via the <code>ulimit -v</code> command <em>in your job script</em>.</p>
 <h3 id="how-do-i-specify-the-amount-of-memory-i-need">How do I specify the amount of memory I need?<a class="headerlink" href="#how-do-i-specify-the-amount-of-memory-i-need" title="Permanent link">#</a></h3>
 <p>See <a href="../running_batch_jobs/#generic-resource-requirements">Generic resource requirements</a> to set memory and other requirements, see <a href="../fine_tuning_job_specifications/#specifying-memory-requirements">Specifying memory requirements</a> to finetune the amount of
 memory you request.</p>
-<!-- % See issue #248 to fix Java. This is software specific.
-% See issue #196 to fix MATLAB. This is software specific. -->
-
 <h2 id="module-conflicts">Module conflicts<a class="headerlink" href="#module-conflicts" title="Permanent link">#</a></h2>
 <p>Modules that are loaded together must use the same toolchain version or common dependencies. In the following
 example, we try to load a module that uses the <code>intel-2018a</code> toolchain
@@ -1746,7 +1732,6 @@ While<span class="w"> </span>processing<span class="w"> </span>the<span class="w
 <span class="w">    </span>Module<span class="w"> </span>fullname<span class="w">          </span>Module<span class="w"> </span>Filename
 <span class="w">    </span>---------------<span class="w">          </span>---------------
 <span class="w">    </span>HMMER/3.1b2-intel-2017a<span class="w">  </span>/apps/gent/CO7/haswell-ib/modules/all/HMMER/3.1b2-intel-2017a.lua
-&lt;/code&gt;&lt;/pre&gt;
 </code></pre></div>
 <p>This resulted in an error because we tried to load two modules with different
 versions of the <code>intel</code> toolchain.</p>
@@ -1860,34 +1845,31 @@ ml<span class="w"> </span>JupyterNotebook/6.4.0-GCCcore-11.3.0-IPython-8.5.0
 </code></pre></div>
 </div>
 <p>Another common error is:</p>
-<pre><code>$ <b>module load cluster/donphan</b>
-Lmod has detected the following error: A different version of the 'cluster' module is already loaded (see output of 'ml').
+<div class="highlight"><pre><span></span><code>$ module load cluster/donphan
+Lmod has detected the following error: A different version of the &#39;cluster&#39; module is already loaded (see output of &#39;ml&#39;).
 
-If you don't understand the warning or error, contact the helpdesk at hpc@ugent.be
-</code></pre>
-
+If you don&#39;t understand the warning or error, contact the helpdesk at hpc@ugent.be
+</code></pre></div>
 <p>This is because there can only be one <code>cluster</code> module active at a time.
 The correct command is <code>module swap cluster/donphan</code>. See also <a href="../running_batch_jobs/#specifying-the-cluster-on-which-to-run">Specifying the cluster on which to run</a>.</p>
 <h2 id="illegal-instruction-error"><code>Illegal instruction</code> error<a class="headerlink" href="#illegal-instruction-error" title="Permanent link">#</a></h2>
 <h3 id="running-software-that-is-incompatible-with-host">Running software that is incompatible with host<a class="headerlink" href="#running-software-that-is-incompatible-with-host" title="Permanent link">#</a></h3>
 <p>When running software provided through modules (see <a href="../running_batch_jobs/#modules">Modules</a>), you may run into
 errors like:</p>
-<pre><code>$ <b>module swap cluster/donphan</b>
+<div class="highlight"><pre><span></span><code>$ module swap cluster/donphan
 The following have been reloaded with a version change:
-  1) cluster/doduo => cluster/donphan         3) env/software/doduo => env/software/donphan
-  2) env/slurm/doduo => env/slurm/donphan     4) env/vsc/doduo => env/vsc/donphan
+  1) cluster/doduo =&gt; cluster/donphan         3) env/software/doduo =&gt; env/software/donphan
+  2) env/slurm/doduo =&gt; env/slurm/donphan     4) env/vsc/doduo =&gt; env/vsc/donphan
 
-$ <b>module load Python/3.10.8-GCCcore-12.2.0</b>
-$ <b>python</b>
+$ module load Python/3.10.8-GCCcore-12.2.0
+$ python
 Please verify that both the operating system and the processor support
 Intel(R) MOVBE, F16C, FMA, BMI, LZCNT and AVX2 instructions.
-</code></pre>
-
+</code></pre></div>
 <p>or errors like:</p>
-<pre><code>$ <b>python</b>
+<div class="highlight"><pre><span></span><code>$ python
 Illegal instruction
-</code></pre>
-
+</code></pre></div>
 <p>When we swap to a different cluster, the available modules change so
 they work for that cluster. That means that if the cluster and the login
 nodes have a different CPU architecture, software loaded using modules
@@ -1899,8 +1881,8 @@ the login nodes and have the same CPU architecture.</p>
 all our modules will get reloaded. This means that all current modules
 will be unloaded and then loaded again, so they'll work on the newly
 loaded cluster. Here's an example of how that would look like:</p>
-<pre><code>$ <b>module load Python/3.10.8-GCCcore-12.2.0</b>
-$ <b>module swap cluster/donphan</b>
+<div class="highlight"><pre><span></span><code>$ module load Python/3.10.8-GCCcore-12.2.0
+$ module swap cluster/donphan
 
 Due to MODULEPATH changes, the following have been reloaded:
   1) GCCcore/12.2.0                   8) binutils/2.39-GCCcore-12.2.0
@@ -1912,20 +1894,18 @@ Due to MODULEPATH changes, the following have been reloaded:
   7) XZ/5.2.7-GCCcore-12.2.0
 
 The following have been reloaded with a version change:
-  1) cluster/doduo => cluster/donphan         3) env/software/doduo => env/software/donphan
-  2) env/slurm/doduo => env/slurm/donphan     4) env/vsc/doduo => env/vsc/donphan
-</code></pre>
-
+  1) cluster/doduo =&gt; cluster/donphan         3) env/software/doduo =&gt; env/software/donphan
+  2) env/slurm/doduo =&gt; env/slurm/donphan     4) env/vsc/doduo =&gt; env/vsc/donphan
+</code></pre></div>
 <p>This might result in the same problems as mentioned above. When swapping
 to a different cluster, you can run <code>module purge</code> to unload all modules
 to avoid problems (see <a href="../running_batch_jobs/#purging-all-modules">Purging all modules</a>).</p>
 <h3 id="multi-job-submissions-on-a-non-default-cluster">Multi-job submissions on a non-default cluster<a class="headerlink" href="#multi-job-submissions-on-a-non-default-cluster" title="Permanent link">#</a></h3>
 <p>When using a tool that is made available via modules to submit jobs, for example <a href="../multi_job_submission/">Worker</a>,
 you may run into the following error when targeting a non-default cluster:</p>
-<pre><code>$ <b> wsub</b>
-/apps/gent/.../.../software/worker/.../bin/wsub: line 27: 2152510 <b>Illegal instruction</b>     (core dumped) ${PERL} ${DIR}/../lib/wsub.pl "$@"
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>$  wsub
+/apps/gent/.../.../software/worker/.../bin/wsub: line 27: 2152510 Illegal instruction     (core dumped) ${PERL} ${DIR}/../lib/wsub.pl &quot;$@&quot;
+</code></pre></div>
 <p>When executing the <code>module swap cluster</code> command, you are not only changing your session environment to submit
 to that specific cluster, but also to use the part of the central software stack that is specific to that cluster.
 In the case of the Worker example above, the latter implies that you are running the <code>wsub</code> command
@@ -1937,9 +1917,11 @@ The same goes for the other clusters as well of course.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>To submit a Worker job to a specific cluster, like the <a href="../interactive_debug/"><code>donphan</code> interactive cluster</a> for instance, use:
-<pre><code>$ <b>module swap env/slurm/donphan</b> </code></pre>
+<div class="highlight"><pre><span></span><code>$ module swap env/slurm/donphan 
+</code></pre></div>
 instead of
-<pre><code>$ <b>module swap cluster/donphan</b> </code></pre></p>
+<div class="highlight"><pre><span></span><code>$ module swap cluster/donphan 
+</code></pre></div></p>
 </div>
 <p>We recommend using a <code>module swap cluster</code> command after submitting the jobs.</p>
 <p>This to "reset" your environment to a sane state, since only having a different <code>env/slurm</code> module loaded can also lead to some surprises if you're not paying close attention.</p>

@@ -1204,9 +1204,8 @@ training session are available at
 <p>Before using HOD, you first need to load the <code>hod</code> module. We don't
 specify a version here (this is an exception, for most other modules you
 should, see <a href="../running_batch_jobs/#using-explicit-version-numbers">Using explicit version numbers</a>) because newer versions might include important bug fixes.</p>
-<pre><code>$ <b>module load hod</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module load hod
+</code></pre></div>
 <h3 id="compatibility-with-login-nodes">Compatibility with login nodes<a class="headerlink" href="#compatibility-with-login-nodes" title="Permanent link">#</a></h3>
 <p>The <code>hod</code> modules are constructed such that they can be used on the HPC-UGent infrastructure
 login nodes, regardless of which <code>cluster</code> module is loaded (this is not
@@ -1215,17 +1214,16 @@ the case for software installed via modules in general, see <a href="../troubles
 cluster module before loading the <code>hod</code> module and subsequently running
 |hod|.</p>
 <p>For example, this will work as expected:</p>
-<pre><code>$ <b>module swap cluster/donphan</b>
-$ <b>module load hod</b>
-$ <b>hod</b>
+<div class="highlight"><pre><span></span><code>$ module swap cluster/donphan
+$ module load hod
+$ hod
 hanythingondemand - Run services within an HPC cluster
-usage: hod <subcommand> [subcommand options]
+usage: hod &lt;subcommand&gt; [subcommand options]
 Available subcommands (one of these must be specified!):
-    batch           Submit a job to spawn a cluster on a PBS job controller, run a job script, and tear down the cluster when it's done
+    batch           Submit a job to spawn a cluster on a PBS job controller, run a job script, and tear down the cluster when it&#39;s done
     clean           Remove stale cluster info.
 ...
-</code></pre>
-
+</code></pre></div>
 <p>Note that also modules named <code>hanythingondemand/*</code> are available. These
 should however not be used directly, since they may not be compatible
 with the login nodes (depending on which cluster they were installed
@@ -1233,14 +1231,13 @@ for).</p>
 <h3 id="standard-hod-configuration">Standard HOD configuration<a class="headerlink" href="#standard-hod-configuration" title="Permanent link">#</a></h3>
 <p>The <code>hod</code> module will also put a basic configuration in place for HOD,
 by defining a couple of <code>$HOD_*</code> environment variables:</p>
-<pre><code>$ <b>module load hod</b>
-$ <b>env | grep HOD | sort</b>
+<div class="highlight"><pre><span></span><code>$ module load hod
+$ env | grep HOD | sort
 HOD_BATCH_HOD_MODULE=hanythingondemand/3.2.2-intel-2016b-Python-2.7.12
 HOD_BATCH_WORKDIR=$VSC_SCRATCH/hod
 HOD_CREATE_HOD_MODULE=hanythingondemand/3.2.2-intel-2016b-Python-2.7.12
 HOD_CREATE_WORKDIR=$VSC_SCRATCH/hod
-</code></pre>
-
+</code></pre></div>
 <p>By defining these environment variables, we avoid that you have to
 specify <code>--hod-module</code> and <code>--workdir</code> when using <code>hod batch</code> or
 <code>hod create</code>, since they are strictly required.</p>
@@ -1259,27 +1256,27 @@ because the job hosting an interactive HOD cluster submitted via
 <p>These HOD clusters will still show up in the output of <code>hod list</code>, and
 will be marked as <code>&lt;job-not-found&gt;</code>.</p>
 <p>You should occasionally clean this up using <code>hod clean</code>:</p>
-<pre><code>$ <b>module list</b>
+<p><div class="highlight"><pre><span></span><code>$ module list
 Currently Loaded Modulefiles:
   1) cluster/doduo(default)   2) pbs_python/4.6.0            3) vsc-base/2.4.2              4) hod/3.0.0-cli
 
-$ <b>hod list</b>
+$ hod list
 Cluster label   Job ID         State                Hosts
-example1        123456         &lt;job-not-found&gt;     &lt;none&gt;
+example1        123456         &amp;lt;job-not-found&amp;gt;     &amp;lt;none&amp;gt;
 
-$ <b>hod clean</b>
+$ hod clean
 Removed cluster localworkdir directory /user/scratch/gent/vsc400/vsc40000/hod/hod/123456 for cluster labeled example1
 Removed cluster info directory /user/home/gent/vsc400/vsc40000/.config/hod.d/wordcount for cluster labeled example1
 
-$ <b>module swap cluster/donphan</b>
+$ module swap cluster/donphan
 Cluster label   Job ID                          State               Hosts
-example2        98765.master19.donphan.gent.vsc &lt;job-not-found&gt;     &lt;none&gt;
+example2        98765.master19.donphan.gent.vsc &amp;lt;job-not-found&amp;gt;     &amp;lt;none&amp;gt;
 
-$ <b>hod clean</b>
+$ hod clean
 Removed cluster localworkdir directory /user/scratch/gent/vsc400/vsc40000/hod/hod/98765.master19.donphan.gent.vsc for cluster labeled example2
 Removed cluster info directory /user/home/gent/vsc400/vsc40000/.config/hod.d/wordcount for cluster labeled example2
-</code></pre>
-<p>Note that <strong>only HOD clusters that were submitted to the currently loaded <code>cluster</code> module will be cleaned up</strong>.</p>
+</code></pre></div>
+Note that <strong>only HOD clusters that were submitted to the currently loaded <code>cluster</code> module will be cleaned up</strong>.</p>
 <h2 id="getting-help">Getting help<a class="headerlink" href="#getting-help" title="Permanent link">#</a></h2>
 <p>If you have any questions, or are experiencing problems using HOD, you
 have a couple of options:</p>

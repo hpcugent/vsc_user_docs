@@ -1179,9 +1179,8 @@ might be reasons to install the software yourself:</p>
 <p>Before you use EasyBuild, you need to configure it:</p>
 <h3 id="path-to-sources">Path to sources<a class="headerlink" href="#path-to-sources" title="Permanent link">#</a></h3>
 <p>This is where EasyBuild can find software sources:</p>
-<pre><code>$ <b>EASYBUILD_SOURCEPATH=$VSC_DATA/easybuild/sources:/apps/gent/source </b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>EASYBUILD_SOURCEPATH=$VSC_DATA/easybuild/sources:/apps/gent/source
+</code></pre></div>
 <ul>
 <li>
 <p>the first directory <code>$VSC_DATA/easybuild/sources</code> is where EasyBuild
@@ -1197,18 +1196,16 @@ might be reasons to install the software yourself:</p>
 <h3 id="build-directory">Build directory<a class="headerlink" href="#build-directory" title="Permanent link">#</a></h3>
 <p>This directory is where EasyBuild will build software in. To have good
 performance, this needs to be on a fast filesystem.</p>
-<pre><code>$ <b>export EASYBUILD_BUILDPATH=${TMPDIR:-/tmp/$USER}</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>export EASYBUILD_BUILDPATH=${TMPDIR:-/tmp/$USER}
+</code></pre></div>
 <p>On cluster nodes, you can use the fast, in-memory <code>/dev/shm/$USER</code>
 location as a build directory.</p>
 <h3 id="software-install-location">Software install location<a class="headerlink" href="#software-install-location" title="Permanent link">#</a></h3>
 <p>This is where EasyBuild will install the software (and accompanying
 modules) to.</p>
 <p>For example, to let it use <code>$VSC_DATA/easybuild</code>, use:</p>
-<pre><code>$ <b>export EASYBUILD_INSTALLPATH=$VSC_DATA/easybuild/$VSC_OS_LOCAL/$VSC_ARCH_LOCAL$VSC_ARCH_SUFFIX</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>export EASYBUILD_INSTALLPATH=$VSC_DATA/easybuild/$VSC_OS_LOCAL/$VSC_ARCH_LOCAL$VSC_ARCH_SUFFIX
+</code></pre></div>
 <p>Using the <code>$VSC_OS_LOCAL</code>, <code>$VSC_ARCH</code> and <code>$VSC_ARCH_SUFFIX</code>
 environment variables ensures that your install software to a location
 that is specific to the cluster you are building for.</p>
@@ -1220,42 +1217,37 @@ may not work on the cluster you want to use the software on (see also <a href=".
 <h2 id="using-easybuild">Using EasyBuild<a class="headerlink" href="#using-easybuild" title="Permanent link">#</a></h2>
 <p>Before using EasyBuild, you first need to load the <code>EasyBuild</code> module.
 We don't specify a version here (this is an exception, for most other
-modules you should, see <a href="../running_batch_jobs/#using-explicit-version-numbers">Using explicit version numbers</a>) because newer versions might include important
+modules you should see <a href="../running_batch_jobs/#using-explicit-version-numbers">Using explicit version numbers</a>) because newer versions might include important
 bug fixes.</p>
-<pre><code>module load EasyBuild
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module load EasyBuild
+</code></pre></div>
 <h3 id="installing-supported-software">Installing supported software<a class="headerlink" href="#installing-supported-software" title="Permanent link">#</a></h3>
 <p>EasyBuild provides a large collection of readily available software
 versions, combined with a particular toolchain version. Use the
 <code>--search</code> (or <code>-S</code>) functionality to see which different 'easyconfigs'
 (build recipes, see
 <a href="http://easybuild.readthedocs.org/en/latest/Concepts_and_Terminology.html#easyconfig-files">http://easybuild.readthedocs.org/en/latest/Concepts_and_Terminology.html#easyconfig-files</a>) are available:</p>
-<pre><code>$ <b>eb -S example-1.2</b>
+<div class="highlight"><pre><span></span><code>$ eb -S example-1.2
 CFGS1=/apps/gent/CO7/sandybridge/software/EasyBuild/3.6.2/lib/python2.7/site-packages/easybuild_easyconfigs-3.6.2-py2.7.egg/easybuild/easyconfigs
  * $CFGS1/e/example/example-1.2.1-foss-2024a.eb
  * $CFGS1/e/example/example-1.2.3-foss-2024b.eb
  * $CFGS1/e/example/example-1.2.5-intel-2024a.eb
-</code></pre>
-
+</code></pre></div>
 <p>For readily available easyconfigs, just specify the name of the
 easyconfig file to build and install the corresponding software package:</p>
-<pre><code>$ <b>eb example-1.2.1-foss-2024a.eb --robot</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>eb example-1.2.1-foss-2024a.eb --robot
+</code></pre></div>
 <h3 id="installing-variants-on-supported-software">Installing variants on supported software<a class="headerlink" href="#installing-variants-on-supported-software" title="Permanent link">#</a></h3>
 <p>To install small variants on supported software, e.g., a different
 software version, or using a different compiler toolchain, use the
 corresponding <code>--try-X</code> options:</p>
 <p>To try to install <code>example v1.2.6</code>, based on the easyconfig file for
 <code>example v1.2.5</code>:</p>
-<pre><code>$ <b>eb example-1.2.5-intel-2024a.eb --try-software-version=1.2.6</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>eb example-1.2.5-intel-2024a.eb --try-software-version=1.2.6
+</code></pre></div>
 <p>To try to install example v1.2.5 with a different compiler toolchain:</p>
-<pre><code>$ <b>eb example-1.2.5-intel-2024a.eb --robot --try-toolchain=intel,2024b</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>eb example-1.2.5-intel-2024a.eb --robot --try-toolchain=intel,2024b
+</code></pre></div>
 <h3 id="install-other-software">Install other software<a class="headerlink" href="#install-other-software" title="Permanent link">#</a></h3>
 <p>To install other, not yet supported, software, you will need to provide
 the required easyconfig files yourself. See
@@ -1264,16 +1256,16 @@ for more information.</p>
 <h2 id="using-the-installed-modules">Using the installed modules<a class="headerlink" href="#using-the-installed-modules" title="Permanent link">#</a></h2>
 <p>To use the modules you installed with EasyBuild, extend <code>$MODULEPATH</code> to
 make them accessible for loading:</p>
-<pre><code>$ <b>module use $EASYBUILD_INSTALLPATH/modules/all</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module use $EASYBUILD_INSTALLPATH/modules/all
+</code></pre></div>
 <p>It makes sense to put this <code>module use</code> command and all <code>export</code>
-commands in your <code>.bashrc</code> login script. That way you don't have to type
+commands in your <code>.bashrc</code> login script.
+That way, you don't have to type
 these commands every time you want to use EasyBuild or you want to load
-modules generated with EasyBuild. See also <a href="../linux-tutorial/beyond_the_basics/#bashrc-login-script">the section on <code>.bashrc</code> in
+modules generated with EasyBuild.
+See also <a href="../linux-tutorial/beyond_the_basics/#bashrc-login-script">the section on <code>.bashrc</code> in
 the "Beyond the basics" chapter of the intro to
 Linux</a></p>
-<p>{{ site_url }}</p>
 
 
 

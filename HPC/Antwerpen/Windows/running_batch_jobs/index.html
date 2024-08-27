@@ -1483,13 +1483,12 @@ command, you can replace <code>module</code> with <code>ml</code>.</p>
 <h3 id="available-modules">Available modules<a class="headerlink" href="#available-modules" title="Permanent link">#</a></h3>
 <p>A large number of software packages are installed on the UAntwerpen-HPC clusters. A
 list of all currently available software can be obtained by typing:</p>
-<pre><code><b>$ module available</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module available
+</code></pre></div>
 <p>It's also possible to execute <code>module av</code> or <code>module avail</code>, these are
 shorter to type and will do the same thing.</p>
 <p>This will give some output such as:</p>
-<pre><code>$ <b>module av 2>&1 | more</b>
+<div class="highlight"><pre><span></span><code>$ module av 2&gt;&amp;1 | more
 ------------- /apps/antwerpen/modules/hopper/2015a/all ------------
 ABINIT/7.10.2-intel-2015a
 ADF/2014.05
@@ -1500,16 +1499,14 @@ Boost/1.57.0-intel-2015a-Python-2.7.9
 bzip2/1.0.6-foss-2015a
 bzip2/1.0.6-intel-2015a
 ...
-</code></pre>
-
+</code></pre></div>
 <p>Or when you want to check whether some specific software, some compiler
 or some application (e.g., LAMMPS) is installed on the UAntwerpen-HPC.</p>
-<pre><code>$ <b>module av 2>&1 | grep -i -e "LAMMPS"</b>
+<div class="highlight"><pre><span></span><code>$ module av 2&gt;&amp;1 | grep -i -e &quot;LAMMPS&quot;
 LAMMPS/9Dec14-intel-2015a
 LAMMPS/30Oct14-intel-2014a
 LAMMPS/5Sep14-intel-2014a
-</code></pre>
-
+</code></pre></div>
 <p>As you are not aware of the capitals letters in the module name, we
 looked for a case-insensitive name with the "-i" option.</p>
 <p>This gives a full list of software packages that can be loaded.</p>
@@ -1538,40 +1535,36 @@ same toolchain name and version can work together without conflicts.</p>
 <h4 id="module-load">module load<a class="headerlink" href="#module-load" title="Permanent link">#</a></h4>
 <p>To "activate" a software package, you load the corresponding module file
 using the <code>module load</code> command:</p>
-<pre><code><b>$ module load example</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module load example
+</code></pre></div>
 <p>This will load the most recent version of <em>example</em>.</p>
 <p>For some packages, multiple versions are installed; the load command
 will automatically choose the default version (if it was set by the
 system administrators) or the most recent version otherwise (i.e., the
 lexicographical last after the <code>/</code>).</p>
 <p>**However, you should specify a particular version to avoid surprises when newer versions are installed:</p>
-<pre><code><b>$ module load secondexample/2.7-intel-2016b</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module load secondexample/2.7-intel-2016b
+</code></pre></div>
 <p>The <code>ml</code> command is a shorthand for <code>module load</code>: <code>ml example/1.2.3</code> is
 equivalent to <code>module load example/1.2.3</code>.</p>
 <p>Modules need not be loaded one by one; the two <code>module load</code> commands
 can be combined as follows:</p>
-<pre><code><b>$ module load example/1.2.3 secondexample/2.7-intel-2016b</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module load example/1.2.3 secondexample/2.7-intel-2016b
+</code></pre></div>
 <p>This will load the two modules as well as their dependencies (unless
 there are conflicts between both modules).</p>
 <h4 id="module-list">module list<a class="headerlink" href="#module-list" title="Permanent link">#</a></h4>
 <p>Obviously, you need to be able to keep track of the modules that are
 currently loaded. Assuming you have run the <code>module load</code> commands
 stated above, you will get the following:</p>
-<pre><code><b>$ module list</b>
+<div class="highlight"><pre><span></span><code>$ module list
 Currently Loaded Modulefiles: 
 1) example/1.2.3                                        6) imkl/11.3.3.210-iimpi-2016b 
 2) GCCcore/5.4.0                                        7) intel/2016b 
 3) icc/2016.3.210-GCC-5.4.0-2.26                        8) examplelib/1.2-intel-2016b 
 4) ifort/2016.3.210-GCC-5.4.0-2.26                      9) secondexample/2.7-intel-2016b 
 5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26
-</code></pre>
-
+</code></pre></div>
 <p>You can also just use the <code>ml</code> command without arguments to list loaded modules.</p>
 <p>It is important to note at this point that other modules (e.g.,
 <code>intel/2016b</code>) are also listed, although the user did not explicitly
@@ -1586,16 +1579,15 @@ consistently with the <code>load</code> command, and reverses the latter's effec
 However, the dependencies of the package are NOT automatically unloaded;
 you will have to unload the packages one by one. When the
 <code>secondexample</code> module is unloaded, only the following modules remain:</p>
-<pre><code><b>$ module unload secondexample</b>
-<b>$ module list</b>
+<div class="highlight"><pre><span></span><code>$ module unload secondexample
+$ module list
 Currently Loaded Modulefiles: 
 Currently Loaded Modulefiles: 
 1) example/1.2.3                        5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26 
 2) GCCcore/5.4.0                        6) imkl/11.3.3.210-iimpi-2016b 
 3) icc/2016.3.210-GCC-5.4.0-2.26        7) intel/2016b 
 4) ifort/2016.3.210-GCC-5.4.0-2.26      8) examplelib/1.2-intel-2016b
-</code></pre>
-
+</code></pre></div>
 <p>To unload the <code>secondexample</code> module, you can also use
 <code>ml -secondexample</code>.</p>
 <p>Notice that the version was not specified: there can only be one version
@@ -1606,9 +1598,8 @@ loaded will <em>not</em> result in an error.</p>
 <h3 id="purging-all-modules">Purging all modules<a class="headerlink" href="#purging-all-modules" title="Permanent link">#</a></h3>
 <p>In order to unload all modules at once, and hence be sure to start in a
 clean state, you can use:</p>
-<pre><code><b>$ module purge</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module purge
+</code></pre></div>
 <p>However, on some VSC clusters you may
 be left with a very empty list of available modules after executing
 <code>module purge</code>. On those systems, <code>module av</code> will show you a list of
@@ -1623,44 +1614,33 @@ specific version. <strong>Failing to specify a version may result in unexpected 
 <p>Consider the following example: the user decides to use the <code>example</code>
 module and at that point in time, just a single version 1.2.3 is
 installed on the cluster. The user loads the module using:</p>
-<pre><code><b>$ module load example</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module load example
+</code></pre></div>
 <p>rather than</p>
-<pre><code><b>$ module load example/1.2.3</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module load example/1.2.3
+</code></pre></div>
 <p>Everything works fine, up to the point where a new version of <code>example</code>
 is installed, 4.5.6. From then on, the user's <code>load</code> command will load
 the latter version, rather than the intended one, which may lead to
 unexpected problems. See for example <a href="../troubleshooting/#module-conflicts">the following section on Module Conflicts</a>.</p>
 <p>Consider the following <code>example</code> modules:</p>
-<pre><code><b>$ module avail example/</b>
+<div class="highlight"><pre><span></span><code>$ module avail example/
 example/1.2.3 
 example/4.5.6
-</code></pre>
-
+</code></pre></div>
 <p>Let's now generate a version conflict with the <code>example</code> module, and see
 what happens.</p>
-<pre><code><b>$ module av example/</b>
+<div class="highlight"><pre><span></span><code>$ module av example/
 example/1.2.3       example/4.5.6
-<b>$ module load example/1.2.3  example/4.5.6</b>
-Lmod has detected the following error: A different version of the 'example' module is already loaded (see output of 'ml').
-<b>$ module swap example/4.5.6</b>
-</code></pre>
-
-<!-- ::: prompt
-example/1.2.3 example/4.5.6 example/4.5.6(12):ERROR:150: Module
-'example/4.5.6' conflicts with the currently loaded module(s)
-'example/1.2.3' example/4.5.6(12):ERROR:102: Tcl command execution
-failed: conflict example
-::: -->
-
+$ module load example/1.2.3  example/4.5.6
+Lmod has detected the following error: A different version of the &#39;example&#39; module is already loaded (see output of &#39;ml&#39;).
+$ module swap example/4.5.6
+</code></pre></div>
 <p>Note: A <code>module swap</code> command combines the appropriate <code>module unload</code>
 and <code>module load</code> commands.</p>
 <h3 id="search-for-modules">Search for modules<a class="headerlink" href="#search-for-modules" title="Permanent link">#</a></h3>
 <p>With the <code>module spider</code> command, you can search for modules:</p>
-<pre><code><b>$ module spider example</b>
+<div class="highlight"><pre><span></span><code>$ module spider example
 --------------------------------------------------------------------------------
   example:
 --------------------------------------------------------------------------------
@@ -1671,15 +1651,14 @@ and <code>module load</code> commands.</p>
         example/1.2.3 
         example/4.5.6
 --------------------------------------------------------------------------------
-  For detailed information about a specific "example" module (including how to load the modules) use the module's full name. 
+  For detailed information about a specific &quot;example&quot; module (including how to load the modules) use the module&#39;s full name. 
   For example:
 
     module spider example/1.2.3
 --------------------------------------------------------------------------------
-</code></pre>
-
+</code></pre></div>
 <p>It's also possible to get detailed information about a specific module:</p>
-<pre><code><b>$ module spider example/1.2.3</b>
+<div class="highlight"><pre><span></span><code>$ module spider example/1.2.3
 ------------------------------------------------------------------------------------------
   example: example/1.2.3
 ------------------------------------------------------------------------------------------
@@ -1695,19 +1674,16 @@ Help:
         More information 
         ================ 
          - Homepage: https://example.com
-</code></pre>
-
+</code></pre></div>
 <h3 id="get-detailed-info">Get detailed info<a class="headerlink" href="#get-detailed-info" title="Permanent link">#</a></h3>
 <p>To get a list of all possible commands, type:</p>
-<pre><code><b>$ module help</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module help
+</code></pre></div>
 <p>Or to get more information about one specific module package:</p>
-<pre><code><b>$ module help example/1.2.3</b>
------------ Module Specific Help for 'example/1.2.3' --------------------------- 
+<div class="highlight"><pre><span></span><code>$ module help example/1.2.3
+----------- Module Specific Help for &#39;example/1.2.3&#39; --------------------------- 
   This is just an example - Homepage: https://example.com/
-</code></pre>
-
+</code></pre></div>
 <h3 id="save-and-load-collections-of-modules">Save and load collections of modules<a class="headerlink" href="#save-and-load-collections-of-modules" title="Permanent link">#</a></h3>
 <p>If you have a set of modules that you need to load often, you can save
 these in a <em>collection</em>. This will enable you to load all the modules
@@ -1715,80 +1691,59 @@ you need with a single command.</p>
 <p>In each <code>module</code> command shown below, you can replace <code>module</code> with
 <code>ml</code>.</p>
 <p>First, load all modules you want to include in the collections:</p>
-<pre><code><b>$ module load example/1.2.3 secondexample/2.7-intel-2016b</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module load example/1.2.3 secondexample/2.7-intel-2016b
+</code></pre></div>
 <p>Now store it in a collection using <code>module save</code>. In this example, the
 collection is named <code>my-collection</code>.</p>
-<pre><code><b>$ module save my-collection</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module save my-collection
+</code></pre></div>
 <p>Later, for example in a jobscript or a new session, you can load all
 these modules with <code>module restore</code>:</p>
-<pre><code><b>$ module restore my-collection</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module restore my-collection
+</code></pre></div>
 <p>You can get a list of all your saved collections with the
 <code>module savelist</code> command:</p>
-<pre><code><b>$ module savelistr</b>
-Named collection list (For LMOD_SYSTEM_NAME = "CO7-sandybridge"):
+<div class="highlight"><pre><span></span><code>$ module savelist
+Named collection list (For LMOD_SYSTEM_NAME = &quot;CO7-sandybridge&quot;):
   1) my-collection
-</code></pre>
-
+</code></pre></div>
 <p>To get a list of all modules a collection will load, you can use the
 <code>module describe</code> command:</p>
-<pre><code><b>$ module describe my-collection</b>
+<div class="highlight"><pre><span></span><code>$ module describe my-collection
 1) example/1.2.3                                        6) imkl/11.3.3.210-iimpi-2016b 
 2) GCCcore/5.4.0                                        7) intel/2016b 
 3) icc/2016.3.210-GCC-5.4.0-2.26                        8) examplelib/1.2-intel-2016b 
 4) ifort/2016.3.210-GCC-5.4.0-2.26                      9) secondexample/2.7-intel-2016b 
 5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26
-</code></pre>
-
+</code></pre></div>
 <p>To remove a collection, remove the corresponding file in
 <code>$HOME/.lmod.d</code>:</p>
-<pre><code><b>$ rm $HOME/.lmod.d/my-collection</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>rm $HOME/.lmod.d/my-collection
+</code></pre></div>
 <h3 id="getting-module-details">Getting module details<a class="headerlink" href="#getting-module-details" title="Permanent link">#</a></h3>
 <p>To see how a module would change the environment, you can use the
 <code>module show</code> command:</p>
-<pre><code><b>$ module show Python/2.7.12-intel-2016b</b>
-whatis("Description: Python is a programming language that lets youwork more quickly and integrate your systems more effectively. - Homepage: http://python.org/ ") 
-conflict("Python")
-load("intel/2016b") 
-load("bzip2/1.0.6-intel-2016b") 
+<div class="highlight"><pre><span></span><code>$ module show Python/2.7.12-intel-2016b
+whatis(&quot;Description: Python is a programming language that lets youwork more quickly and integrate your systems more effectively. - Homepage: http://python.org/ &quot;) 
+conflict(&quot;Python&quot;)
+load(&quot;intel/2016b&quot;) 
+load(&quot;bzip2/1.0.6-intel-2016b&quot;) 
 ...
 prepend_path(...)
-setenv("EBEXTSLISTPYTHON","setuptools-23.1.0,pip-8.1.2,nose-1.3.7,numpy-1.11.1,scipy-0.17.1,ytz-2016.4", ...)
-</code></pre>
-
+setenv(&quot;EBEXTSLISTPYTHON&quot;,&quot;setuptools-23.1.0,pip-8.1.2,nose-1.3.7,numpy-1.11.1,scipy-0.17.1,ytz-2016.4&quot;, ...)
+</code></pre></div>
 <p>It's also possible to use the <code>ml show</code> command instead: they are
 equivalent.</p>
 <p>Here you can see that the <code>Python/2.7.12-intel-2016b</code> comes with a whole
 bunch of extensions: <code>numpy</code>, <code>scipy</code>, ...</p>
 <p>You can also see the modules the <code>Python/2.7.12-intel-2016b</code> module
 loads: <code>intel/2016b</code>, <code>bzip2/1.0.6-intel-2016b</code>, ...</p>
-<!-- ::: prompt
-module-whatis Description: Python is a programming language that lets
-you work more quickly and integrate your systems more effectively. -
-Homepage: http://python.org/ conflict Python module load foss/2014a
-module load bzip2/1.0.6-foss-2014a \... prepend-path \... \... setenv
-EBVERSIONPYTHON 3.2.5 setenv EBEXTSLISTPYTHON
-distribute-0.6.26,pip-1.1,nose-1.1.2,numpy-1.6.1,scipy-0.10.1
-::: -->
-
-<!-- Here you can see that the `Python/3.2.5-foss-2014a` comes with a whole
-bunch of extensions: `numpy`, `scipy`, ...
-
-You can also see the modules the `Python/3.2.5-foss-2014a` module loads:
-`foss/2014a`, `bzip2/1.0.6-foss-2014a`, ...  -->
 <p>If you're not sure what all of this means: don't worry, you don't have to know; just load the module and try to use the software.</p>
 <h2 id="getting-system-information-about-the-hpc-infrastructure">Getting system information about the HPC infrastructure<a class="headerlink" href="#getting-system-information-about-the-hpc-infrastructure" title="Permanent link">#</a></h2>
 <h3 id="checking-the-general-status-of-the-hpc-infrastructure">Checking the general status of the HPC infrastructure<a class="headerlink" href="#checking-the-general-status-of-the-hpc-infrastructure" title="Permanent link">#</a></h3>
 <p>To check how much jobs are running in what queues, you can use the
 <code>qstat -q</code> command:</p>
-<pre><code><b>$ qstat -q</b>
+<div class="highlight"><pre><span></span><code>$ qstat -q
 Queue            Memory CPU Time Walltime Node  Run Que Lm  State
 ---------------- ------ -------- -------- ----  --- --- --  -----
 default            --      --       --      --    0   0 --   E R
@@ -1799,8 +1754,7 @@ q1h                --      --    01:00:00   --    0   1 --   E R
 q24h               --      --    24:00:00   --    0   0 --   E R
                                                ----- -----
                                                 337  82
-</code></pre>
-
+</code></pre></div>
 <p>Here, there are 316 jobs running on the <code>long</code> queue, and 77 jobs
 queued. We can also see that the <code>long</code> queue allows a maximum wall time
 of 72 hours.</p>
@@ -1810,8 +1764,8 @@ about the clusters: you can see the nodes that are down, free, partially
 filled with jobs, completely filled with jobs, ....</p>
 <p>You can also get this information in text form (per cluster separately)
 with the <code>pbsmon</code> command:</p>
-<pre><code><b>$ module swap cluster/donphan</b>
-<b>$ pbsmon</b>
+<div class="highlight"><pre><span></span><code>$ module swap cluster/donphan
+$ pbsmon
  4001 4002 4003 4004 4005 4006 4007
     _    j    j    j    _    _    .
 
@@ -1829,8 +1783,7 @@ with the <code>pbsmon</code> command:</p>
 
 Node type:
  ppn=36, mem=751GB
-</code></pre>
-
+</code></pre></div>
 <p><code>pbsmon</code> only outputs details of the cluster corresponding to the
 currently loaded <code>cluster</code> module see <a href="./#specifying-the-cluster-on-which-to-run">the section on Specifying the cluster on which to run</a>.
 It also shows details about the nodes in a cluster. In the example, all
@@ -1849,15 +1802,13 @@ examples subdirectory on the UAntwerpen-HPC. When you received an account to the
 to your home directory, so that you have your <strong>own personal</strong> copy (editable and
 over-writable) and that you can start using the examples. If you haven't
 done so already, run these commands now:</p>
-<pre><code><b>$ cd</b>
-<b>$ cp -r /apps/antwerpen/tutorials/Intro-HPC/examples ~/</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>cd
+cp -r /apps/antwerpen/tutorials/Intro-HPC/examples ~/
+</code></pre></div>
 <p>First go to the directory with the first examples by entering the
-command:</p>
-<pre><code><b>$ cd ~/examples/Running-batch-jobs</b>
-</code></pre>
-
+command:
+<div class="highlight"><pre><span></span><code>cd ~/examples/Running-batch-jobs
+</code></pre></div></p>
 <p>Each time you want to execute a program on the UAntwerpen-HPC you'll need 2 things:</p>
 <p><strong>The executable</strong>  The program to execute from the end-user, together with its
     peripheral input files, databases and/or command options.</p>
@@ -1882,12 +1833,11 @@ command:</p>
 scripts. For now, all required job scripts for the exercises are
 provided for you in the examples subdirectories.</p>
 <p>List and check the contents with:</p>
-<pre><code><b>$ ls -l</b>
+<div class="highlight"><pre><span></span><code>$ ls -l
 total 512
 -rw-r--r-- 1 vsc20167 193 Sep 11 10:34 fibo.pbs
 -rw-r--r-- 1 vsc20167 609 Sep 11 10:25 fibo.pl
-</code></pre>
-
+</code></pre></div>
 <p>In this directory you find a Perl script (named "fibo.pl") and a job
 script (named "fibo.pbs").</p>
 <ol>
@@ -1903,40 +1853,39 @@ script (named "fibo.pbs").</p>
 <p>We will first execute the program locally (i.e., on your current
 login-node), so that you can see what the program does.</p>
 <p>On the command line, you would run this using:</p>
-<pre><code><b>$ ./fibo.pl</b>
-[0] -> 0
-[1] -> 1
-[2] -> 1
-[3] -> 2
-[4] -> 3
-[5] -> 5
-[6] -> 8
-[7] -> 13
-[8] -> 21
-[9] -> 34
-[10] -> 55
-[11] -> 89
-[12] -> 144
-[13] -> 233
-[14] -> 377
-[15] -> 610
-[16] -> 987
-[17] -> 1597
-[18] -> 2584
-[19] -> 4181
-[20] -> 6765
-[21] -> 10946
-[22] -> 17711
-[23] -> 28657
-[24] -> 46368
-[25] -> 75025
-[26] -> 121393
-[27] -> 196418
-[28] -> 317811
-[29] -> 514229
-</code></pre>
-
-<p><u>Remark</u>: Recall that you have now executed the Perl script locally on one of
+<div class="highlight"><pre><span></span><code>$ ./fibo.pl
+[0] -&gt; 0
+[1] -&gt; 1
+[2] -&gt; 1
+[3] -&gt; 2
+[4] -&gt; 3
+[5] -&gt; 5
+[6] -&gt; 8
+[7] -&gt; 13
+[8] -&gt; 21
+[9] -&gt; 34
+[10] -&gt; 55
+[11] -&gt; 89
+[12] -&gt; 144
+[13] -&gt; 233
+[14] -&gt; 377
+[15] -&gt; 610
+[16] -&gt; 987
+[17] -&gt; 1597
+[18] -&gt; 2584
+[19] -&gt; 4181
+[20] -&gt; 6765
+[21] -&gt; 10946
+[22] -&gt; 17711
+[23] -&gt; 28657
+[24] -&gt; 46368
+[25] -&gt; 75025
+[26] -&gt; 121393
+[27] -&gt; 196418
+[28] -&gt; 317811
+[29] -&gt; 514229
+</code></pre></div>
+<p>Remark: Recall that you have now executed the Perl script locally on one of
 the login-nodes of the UAntwerpen-HPC cluster. Of course, this is not our final
 intention; we want to run the script on any of the compute nodes. Also,
 it is not considered as good practice, if you "abuse" the login-nodes
@@ -1947,8 +1896,7 @@ understanding of what is happening, you are pardoned for this example
 since these jobs require very little computing power.</p>
 <p>The job script contains a description of the job by specifying the
 command that need to be executed on the compute node:</p>
-<p><center>-- fibo.pbs --</center></p>
-<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
+<div class="highlight"><span class="filename">fibo.pbs</span><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
 <span class="nb">cd</span><span class="w"> </span><span class="nv">$PBS_O_WORKDIR</span>
 ./fibo.pl
 </code></pre></div>
@@ -1958,14 +1906,13 @@ specify the parameters related to the jobs such as expected runtime
 specified on the command line.</p>
 <p>This job script can now be submitted to the cluster's job system
 for execution, using the qsub (Queue SUBmit) command:</p>
-<pre><code><b>$ qsub fibo.pbs</b>
+<div class="highlight"><pre><span></span><code>$ qsub fibo.pbs
 433253.leibniz
-</code></pre>
-
+</code></pre></div>
 <p>The qsub command returns a job identifier on the HPC cluster. The
 important part is the number (e.g., "433253.leibniz "); this is a unique identifier for
 the job and can be used to monitor and manage your job.</p>
-<p><u>Remark</u>: the modules that were loaded when you submitted the job will <em>not</em> be
+<p>Remark: the modules that were loaded when you submitted the job will <em>not</em> be
 loaded when the job is started. You should always specify the
 <code>module load</code> statements that are required for your job in the job
 script itself.</p>
@@ -1977,19 +1924,17 @@ can start reading the next section for more information on how to
 monitor jobs in the queue.</p>
 <p>After your job was started, and ended, check the contents of the
 directory:</p>
-<pre><code><b>$ ls -l</b>
+<div class="highlight"><pre><span></span><code>$ ls -l
 total 768
 -rw-r--r-- 1 vsc20167 vsc20167   44 Feb 28 13:33 fibo.pbs
 -rw------- 1 vsc20167 vsc20167    0 Feb 28 13:33 fibo.pbs.e433253.leibniz
 -rw------- 1 vsc20167 vsc20167 1010 Feb 28 13:33 fibo.pbs.o433253.leibniz
 -rwxrwxr-x 1 vsc20167 vsc20167  302 Feb 28 13:32 fibo.pl
-</code></pre>
-
+</code></pre></div>
 <p>Explore the contents of the 2 new files:</p>
-<pre><code><b>$ more fibo.pbs.o433253.leibniz</b>
-<b>$ more fibo.pbs.e433253.leibniz</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>$ more fibo.pbs.o433253.leibniz
+$ more fibo.pbs.e433253.leibniz
+</code></pre></div>
 <p>These files are used to store the standard output and error that would
 otherwise be shown in the terminal window. By default, they have the
 same name as that of the PBS script, i.e., "fibo.pbs" as base name,
@@ -2046,9 +1991,8 @@ This to "reset" your environment to a sane state.</p>
 <p>Using the job ID that <code>qsub</code> returned, there are various ways to monitor
 the status of your job. In the following commands, replace <code>12345</code> with
 the job ID <code>qsub</code> returned.</p>
-<pre><code><b>$ qstat 12345</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>qstat 12345
+</code></pre></div>
 <p>To show an estimated start time for your job (note that this may be very
 inaccurate, the margin of error on this figure can be bigger then 100%
 due to a sample in a population of 1.) This command is not available on
@@ -2064,24 +2008,21 @@ error messages that may prevent your job from starting:</p>
 :::</p>
 <p>To show on which compute nodes your job is running, at least, when it is
 running:</p>
-<pre><code><b>$ qstat -n 12345</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>qstat -n 12345
+</code></pre></div>
 <p>To remove a job from the queue so that it will not run, or to stop a job
 that is already running.</p>
-<pre><code><b>$ qdel 12345</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>qdel 12345
+</code></pre></div>
 <p>When you have submitted several jobs (or you just forgot about the job
 ID), you can retrieve the status of all your jobs that are submitted and
 are not yet finished using:</p>
-<pre><code><b>$ qstat</b>
+<div class="highlight"><pre><span></span><code>$ qstat
 :
 Job ID      Name    User      Time Use S Queue
 ----------- ------- --------- -------- - -----
 433253.leibniz ....     mpi  vsc20167     0    Q short
-</code></pre>
-
+</code></pre></div>
 <p>Here:</p>
 <p><strong>Job ID</strong>      the job's unique identifier</p>
 <p><strong>Name</strong>        the name of the job</p>
@@ -2232,9 +2173,8 @@ properly.</p>
 <h3 id="generic-resource-requirements">Generic resource requirements<a class="headerlink" href="#generic-resource-requirements" title="Permanent link">#</a></h3>
 <p>The <strong>qsub</strong> command takes several options to specify the requirements, of which
 we list the most commonly used ones below.</p>
-<pre><code><b>$ qsub -l walltime=2:30:00</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>qsub -l walltime=2:30:00 ...
+</code></pre></div>
 <p>For the simplest cases, only the amount of maximum estimated execution
 time (called "walltime") is really important. Here, the job requests 2
 hours, 30 minutes. As soon as the job exceeds the requested walltime, it
@@ -2246,29 +2186,25 @@ hour on most clusters).</p>
 before the walltime kills your main process, you have to kill the main
 command yourself before the walltime runs out and then copy the file
 back. See <a href="../jobscript_examples/#running-a-command-with-a-maximum-time-limit">the section on Running a command with a maximum time limit</a> for how to do this.</p>
-<pre><code><b>$ qsub -l mem=4gb</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>qsub -l mem=4gb ...
+</code></pre></div>
 <p>The job requests 4 GB of RAM memory. As soon as the job tries to use
 more memory, it will be "killed" (terminated) by the job scheduler.
 There is no harm if you <em>slightly</em> overestimate the requested memory.</p>
-<pre><code><b>$ qsub -l nodes=5:ppn=2</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>qsub -l nodes=5:ppn=2 ...
+</code></pre></div>
 <p>The job requests 5 compute nodes with two cores on each node (ppn stands
 for "processors per node", where "processors" here actually means
 "CPU cores").</p>
-<pre><code><b>$ qsub -l nodes=1:westmere</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>qsub -l nodes=1:westmere
+</code></pre></div>
 <p>The job requests just one node, but it should have an Intel Westmere
 processor. A list with site-specific properties can be found in the next
 section or in the User Portal ("VSC hardware" section)<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> of the VSC
 website.</p>
 <p>These options can either be specified on the command line, e.g.</p>
-<pre><code><b>$ qsub -l nodes=1:ppn,mem=2gb fibo.pbs</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>qsub -l nodes=1:ppn,mem=2gb fibo.pbs
+</code></pre></div>
 <p>or in the job script itself using the #PBS-directive, so "fibo.pbs"
 could be modified to:</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash -l</span>
@@ -2320,24 +2256,22 @@ you should see the standard output and error of your job in two files,
 located by default in the directory where you issued the <em>qsub</em> command.</p>
 <p>When you navigate to that directory and list its contents, you should
 see them:</p>
-<pre><code><b>$ ls -l</b>
+<div class="highlight"><pre><span></span><code>$ ls -l
 total 1024
 -rw-r--r-- 1 vsc20167  609 Sep 11 10:54 fibo.pl
 -rw-r--r-- 1 vsc20167   68 Sep 11 10:53 fibo.pbs
 -rw------- 1 vsc20167   52 Sep 11 11:03 fibo.pbs.e433253.leibniz
 -rw------- 1 vsc20167 1307 Sep 11 11:03 fibo.pbs.o433253.leibniz
-</code></pre>
-
+</code></pre></div>
 <p>In our case, our job has created both output ('fibo.pbs.') and error
 files ('fibo.pbs.') containing info written to <em>stdout</em> and <em>stderr</em>
 respectively.</p>
 <p>Inspect the generated output and error files:</p>
-<pre><code><b>$ cat fibo.pbs.o433253.leibniz</b>
+<div class="highlight"><pre><span></span><code>$ cat fibo.pbs.o433253.leibniz
 ...
-<b>$ cat fibo.pbs.e433253.leibniz</b>
+$ cat fibo.pbs.e433253.leibniz
 ...
-</code></pre>
-
+</code></pre></div>
 <h2 id="e-mail-notifications">E-mail notifications<a class="headerlink" href="#e-mail-notifications" title="Permanent link">#</a></h2>
 <h3 id="upon-job-failure">Upon job failure<a class="headerlink" href="#upon-job-failure" title="Permanent link">#</a></h3>
 <p>Whenever a job fails, an e-mail will be sent to the e-mail address
@@ -2369,34 +2303,30 @@ script <code>fibo.pbs</code>:</p>
 </code></pre></div>
 <p>These options can also be specified on the command line. Try it and see
 what happens:</p>
-<pre><code><b>$ qsub -m abe fibo.pbs</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>qsub -m abe fibo.pbs
+</code></pre></div>
 <p>The system will use the e-mail address that is connected to your VSC
 account. You can also specify an alternate e-mail address with the <code>-M</code>
 option:</p>
-<pre><code><b>$ qsub -m b -M john.smith@example.com fibo.pbs</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>qsub -m b -M john.smith@example.com fibo.pbs
+</code></pre></div>
 <p>will send an e-mail to john.smith@example.com when the job begins.</p>
 <h2 id="running-a-job-after-another-job">Running a job after another job<a class="headerlink" href="#running-a-job-after-another-job" title="Permanent link">#</a></h2>
 <p>If you submit two jobs expecting that should be run one after another
 (for example because the first generates a file the second needs), there
 might be a problem as they might both be run at the same time.</p>
 <p>So the following example might go wrong:</p>
-<pre><code><b>$ qsub job1.sh</b>
-<b>$ qsub job2.sh</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>$ qsub job1.sh
+$ qsub job2.sh
+</code></pre></div>
 <p>You can make jobs that depend on other jobs. This can be useful for
 breaking up large jobs into smaller jobs that can be run in a pipeline.
 The following example will submit 2 jobs, but the second job (<code>job2.sh</code>)
 will be held (<code>H</code> status in <code>qstat</code>) until the first job successfully
 completes. If the first job fails, the second will be cancelled.</p>
-<pre><code><b>$ FIRST_ID=$ (qsub job1.sh)</b>
-<b>$ qsub -W depend=afterok:$FIRST_ID job2.sh</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>$ FIRST_ID=$(qsub job1.sh)
+$ qsub -W depend=afterok:$FIRST_ID job2.sh
+</code></pre></div>
 <p><code>afterok</code> means "After OK", or in other words, after the first job
 successfully completed.</p>
 <p>It's also possible to use <code>afternotok</code> ("After not OK") to run the

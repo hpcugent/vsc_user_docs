@@ -1652,26 +1652,24 @@ channels:</p>
 </ol>
 <h3 id="redirecting-stdout">Redirecting <code>stdout</code><a class="headerlink" href="#redirecting-stdout" title="Permanent link">#</a></h3>
 <p><code>&gt;</code> writes the (<code>stdout</code>) output of a command to a file and <em>overwrites</em>
-whatever was in the file before.</p>
-<pre><code>$ <b>echo hello > somefile</b>
-$ <b>cat somefile</b>
+whatever was in the file before.
+<div class="highlight"><pre><span></span><code>$ echo hello &gt; somefile
+$ cat somefile
 hello
-$ <b>echo hello2 > somefile</b>
-$ <b>cat somefile</b>
+$ echo hello2 &gt; somefile
+$ cat somefile
 hello2
-</code></pre>
-
+</code></pre></div></p>
 <p><code>&gt;&gt;</code> appends the (<code>stdout</code>) output of a command to a file; it does not
-clobber whatever was in the file before:</p>
-<pre><code>$ <b>echo hello > somefile</b>
-$ <b>cat somefile</b> 
+clobber whatever was in the file before:
+<div class="highlight"><pre><span></span><code>$ echo hello &gt; somefile
+$ cat somefile 
 hello
-$ <b>echo hello2 >> somefile</b>
+$ echo hello2 &gt;&gt; somefile
 $ cat somefile
 hello
 hello2
-</code></pre>
-
+</code></pre></div></p>
 <h3 id="reading-from-stdin">Reading from <code>stdin</code><a class="headerlink" href="#reading-from-stdin" title="Permanent link">#</a></h3>
 <p><code>&lt;</code> reads a file from standard input (piped or typed input). So you
 would use this to simulate typing into a terminal. <code>&lt; somefile.txt</code> is
@@ -1680,50 +1678,46 @@ largely equivalent to <code>cat somefile.txt |</code>.</p>
 command and store the results in a file, so you don't have to repeat it
 while you refine your command line. For example, if you have a large
 directory structure you might save a list of all the files you're
-interested in and then reading in the file list when you are done:</p>
-<pre><code>$ <b>find . -name .txt > files</b>
-$ <b>xargs grep banana < files</b>
-</code></pre>
-
+interested in and then reading in the file list when you are done:
+<div class="highlight"><pre><span></span><code>$ find . -name .txt &gt; files
+$ xargs grep banana &lt; files
+</code></pre></div></p>
 <h3 id="redirecting-stderr">Redirecting <code>stderr</code><a class="headerlink" href="#redirecting-stderr" title="Permanent link">#</a></h3>
 <p>To redirect the <code>stderr</code> output (warnings, messages), you can use <code>2&gt;</code>,
-just like <code>&gt;</code></p>
-<pre><code>$ <b>ls one.txt nosuchfile.txt 2> errors.txt</b>
+just like <code>&gt;</code>
+<div class="highlight"><pre><span></span><code>$ ls one.txt nosuchfile.txt 2&gt; errors.txt
 one.txt
-$ <b>cat errors.txt</b>
+$ cat errors.txt
 ls: nosuchfile.txt: No such file or directory
-</code></pre>
-
+</code></pre></div></p>
 <h3 id="combining-stdout-and-stderr">Combining <code>stdout</code> and <code>stderr</code><a class="headerlink" href="#combining-stdout-and-stderr" title="Permanent link">#</a></h3>
 <p>To combine both output channels (<code>stdout</code> and <code>stderr</code>) and redirect
-them to a single file, you can use <code>&amp;&gt;</code></p>
-<pre><code>$ <b>ls one.txt nosuchfile.txt &> ls.out</b>
-$ <b>cat ls.out</b>
+them to a single file, you can use <code>&amp;&gt;</code>
+<div class="highlight"><pre><span></span><code>$ ls one.txt nosuchfile.txt &amp;&gt; ls.out
+$ cat ls.out
 ls: nosuchfile.txt: No such file or directory
 one.txt
-</code></pre>
-
+</code></pre></div></p>
 <h2 id="command-piping">Command piping<a class="headerlink" href="#command-piping" title="Permanent link">#</a></h2>
 <p>Part of the power of the command line is to string multiple commands
 together to create useful results. The core of these is the pipe: <code>|</code>.
 For example, to see the number of files in a directory, we can pipe the
 (<code>stdout</code>) output of <code>ls</code> to <code>wc</code> (<strong>w</strong>ord <strong>c</strong>ount, but can also be used to
-count the number of lines with the <code>-l</code> flag).</p>
-<pre><code>$ <b>ls | wc -l</b>
+count the number of lines with the <code>-l</code> flag).
+<div class="highlight"><pre><span></span><code>$ ls | wc -l
     42
-</code></pre>
-
+</code></pre></div></p>
 <p>A common pattern is to pipe the output of a command to <code>less</code> so you
-can examine or search the output:</p>
-<pre><code>$ <b>find . | less</b></code></pre>
-
-<p>Or to look through your command history:</p>
-<pre><code>$ <b>history | less</b></code></pre>
-
+can examine or search the output:
+<div class="highlight"><pre><span></span><code>$ find . | less
+</code></pre></div></p>
+<p>Or to look through your command history:
+<div class="highlight"><pre><span></span><code>$ history | less
+</code></pre></div></p>
 <p>You can put multiple pipes in the same line. For example, which <code>cp</code>
-commands have we run?</p>
-<pre><code>$ <b>history | grep cp | less</b></code></pre>
-
+commands have we run?
+<div class="highlight"><pre><span></span><code>$ history | grep cp | less
+</code></pre></div></p>
 <h2 id="shell-expansion">Shell expansion<a class="headerlink" href="#shell-expansion" title="Permanent link">#</a></h2>
 <p>The shell will expand certain things, including:</p>
 <ol>
@@ -1754,15 +1748,15 @@ commands have we run?</p>
 <h3 id="ps-and-pstree"><code>ps</code> and <code>pstree</code><a class="headerlink" href="#ps-and-pstree" title="Permanent link">#</a></h3>
 <p><code>ps</code> lists processes running. By default, it will only show you the
 processes running in the local shell. To see all of your processes
-running on the system, use:</p>
-<pre><code>$ <b>ps -fu $USER</b></code></pre>
-
-<p>To see all the processes:</p>
-<pre><code>$ <b>ps -elf</b></code></pre>
-
-<p>To see all the processes in a forest view, use:</p>
-<pre><code>$ <b>ps auxf</b></code></pre>
-
+running on the system, use:
+<div class="highlight"><pre><span></span><code>$ ps -fu $USER
+</code></pre></div></p>
+<p>To see all the processes:
+<div class="highlight"><pre><span></span><code>$ ps -elf
+</code></pre></div></p>
+<p>To see all the processes in a forest view, use:
+<div class="highlight"><pre><span></span><code>$ ps auxf
+</code></pre></div></p>
 <p>The last two will spit out a lot of data, so get in the habit of piping
 it to <code>less</code>.</p>
 <p><code>pstree</code> is another way to dump a tree/forest view. It looks better than
@@ -1774,19 +1768,17 @@ together as we will see in the next section.</p>
 <p><code>ps</code> isn't very useful unless you can manipulate the processes. We do
 this using the <code>kill</code> command. Kill will send a message
 (<a href="https://en.wikipedia.org/wiki/Unix_signal#POSIX_signals">SIGINT</a>) to
-the process to ask it to stop.</p>
-<pre><code>$ <b>kill 1234</b>
-$ <b>kill $(pgrep misbehaving_process)</b>
-</code></pre>
-
+the process to ask it to stop.
+<div class="highlight"><pre><span></span><code>$ kill 1234
+$ kill $(pgrep misbehaving_process)
+</code></pre></div></p>
 <p>Usually, this ends the process, giving it the opportunity to flush data
 to files, etc. However, if the process ignored your signal, you can send
 it a different message
 (<a href="https://en.wikipedia.org/wiki/Unix_signal#POSIX_signals">SIGKILL</a>)
-which the OS will use to unceremoniously terminate the process:</p>
-<pre><code>$ <b>kill -9 1234</b>
-</code></pre>
-
+which the OS will use to unceremoniously terminate the process:
+<div class="highlight"><pre><span></span><code>$ kill -9 1234
+</code></pre></div></p>
 <h3 id="top"><code>top</code><a class="headerlink" href="#top" title="Permanent link">#</a></h3>
 <p><code>top</code> is a tool to see the current status of the system. You've probably
 used something similar in Task Manager on Windows or Activity Monitor in
@@ -1807,32 +1799,29 @@ performance analysis</a>.</p>
 <h3 id="ulimit">ulimit<a class="headerlink" href="#ulimit" title="Permanent link">#</a></h3>
 <p><code>ulimit</code> is a utility to get or set user limits on the machine. For
 example, you may be limited to a certain number of processes. To see all
-the limits that have been set, use:</p>
-<pre><code>$ <b>ulimit -a</b></code></pre>
-
+the limits that have been set, use:
+<div class="highlight"><pre><span></span><code>$ ulimit -a
+</code></pre></div></p>
 <h2 id="counting-wc">Counting: <code>wc</code><a class="headerlink" href="#counting-wc" title="Permanent link">#</a></h2>
-<p>To count the number of lines, words, and characters (or bytes) in a file, use <code>wc</code> (<strong>w</strong>ord <strong>c</strong>ount):</p>
-<pre><code>$ <b>wc example.txt</b>
+<p>To count the number of lines, words, and characters (or bytes) in a file, use <code>wc</code> (<strong>w</strong>ord <strong>c</strong>ount):
+<div class="highlight"><pre><span></span><code>$ wc example.txt
       90     468     3189   example.txt
-</code></pre>
-
+</code></pre></div></p>
 <p>The output indicates that the file named <code>example.txt</code> contains 90
 lines, 468 words, and 3189 characters/bytes.</p>
-<p>To only count the number of lines, use <code>wc -l</code>:</p>
-<pre><code>$ <b>wc -l example.txt</b>
+<p>To only count the number of lines, use <code>wc -l</code>:
+<div class="highlight"><pre><span></span><code>$ wc -l example.txt
       90    example.txt
-</code></pre>
-
+</code></pre></div></p>
 <h2 id="searching-file-contents-grep">Searching file contents: <code>grep</code><a class="headerlink" href="#searching-file-contents-grep" title="Permanent link">#</a></h2>
 <p><code>grep</code> is an important command. It was originally an abbreviation for
 "globally search a regular expression and print" but it's entered the
 common computing lexicon and people use 'grep' to mean searching for
-anything. To use grep, you give a pattern and a list of files.</p>
-<pre><code>$ <b>grep banana fruit.txt</b>
-$ <b>grep banana fruit_bowl1.txt fruit_bowl2.txt</b>
-$ <b>grep banana fruit*txt</b>
-</code></pre>
-
+anything. To use grep, you give a pattern and a list of files.
+<div class="highlight"><pre><span></span><code>$ grep banana fruit.txt
+$ grep banana fruit_bowl1.txt fruit_bowl2.txt
+$ grep banana fruit*txt
+</code></pre></div></p>
 <p><code>grep</code> also lets you search for <a href="https://en.wikipedia.org/wiki/Regular_expression">Regular
 Expressions</a>, but
 these are not in scope for this introductory text.</p>
@@ -1842,17 +1831,17 @@ useful glue when you mix it with <code>grep</code> because <code>grep</code> can
 lines where a string occurs and <code>cut</code> can pull out a particular field.
 For example, to pull the first column (<code>-f 1</code>, the first <strong>f</strong>ield) from (an
 unquoted) CSV (comma-separated values, so <code>-d ','</code>: <strong>d</strong>elimited by <code>,</code>)
-file, you can use the following:</p>
-<pre><code>$ <b>cut -f 1 -d ',' mydata.csv</b></code></pre>
-
+file, you can use the following:
+<div class="highlight"><pre><span></span><code>$ cut -f 1 -d &#39;,&#39; mydata.csv
+</code></pre></div></p>
 <h2 id="sed"><code>sed</code><a class="headerlink" href="#sed" title="Permanent link">#</a></h2>
 <p><code>sed</code> is the stream editor. It is used to replace text in a file or
 piped stream. In this way, it works like grep, but instead of just
 searching, it can also edit files. This is like "Search and Replace" in
 a text editor. <code>sed</code> has a lot of features, but almost everyone uses the
-extremely basic version of string replacement:</p>
-<pre><code>$ <b>sed 's/oldtext/newtext/g' myfile.txt</b></code></pre>
-
+extremely basic version of string replacement:
+<div class="highlight"><pre><span></span><code>$ sed &#39;s/oldtext/newtext/g&#39; myfile.txt
+</code></pre></div></p>
 <p>By default, sed will just print the results. If you want to edit the
 file inplace, use <code>-i</code>, but be very careful that the results will be
 what you want before you go around <strong>destroying your data</strong>!</p>
@@ -1865,12 +1854,13 @@ whitespace. For example, if you have padded fields then
 <code>cut -f 4 -d ' '</code> will almost certainly give you a headache as there
 might be an uncertain number of spaces between each field. <code>awk</code> does
 better whitespace splitting. So, pulling out the fourth field in a
-whitespace delimited file is as follows:</p>
-<pre><code>$ <b>awk '{print $4}' mydata.dat</b></code></pre>
-
+whitespace delimited file is as follows:
+<div class="highlight"><pre><span></span><code>$ awk &#39;{print $4}&#39; mydata.dat
+</code></pre></div></p>
 <p>You can use <code>-F ':'</code> to change the delimiter (F for field separator).</p>
-<p>The next example is used to sum numbers from a field:</p>
-<pre><code>$ <b>awk -F ',' '{sum += $1} END {print sum}' mydata.csv</b></code></pre>
+<p>The next example is used to sum numbers from a field:
+<div class="highlight"><pre><span></span><code>$ awk -F &#39;,&#39; &#39;{sum += $1} END {print sum}&#39; mydata.csv
+</code></pre></div></p>
 <h2 id="basic-shell-scripting">Basic Shell Scripting<a class="headerlink" href="#basic-shell-scripting" title="Permanent link">#</a></h2>
 <p>The basic premise of a script is to execute automate the execution of
 multiple commands. If you find yourself repeating the same commands over
@@ -1943,11 +1933,10 @@ options? You most likely can simplify your script by using a loop.</p>
 <h3 id="subcommands">Subcommands<a class="headerlink" href="#subcommands" title="Permanent link">#</a></h3>
 <p>Subcommands are used all the time in shell scripts. What they
 do is storing the output of a command in a variable. So this can later
-be used in a conditional or a loop for example.</p>
-<pre><code>CURRENTDIR=`pwd`  # using backticks
+be used in a conditional or a loop for example.
+<div class="highlight"><pre><span></span><code>CURRENTDIR=`pwd`  # using backticks
 CURRENTDIR=$(pwd)  # recommended (easier to type)
-</code></pre>
-
+</code></pre></div></p>
 <p>In the above example you can see the 2 different methods of using a
 subcommand. <code>pwd</code> will output the current working directory, and its
 output will be stored in the CURRENTDIR variable. The recommended way to
@@ -1956,22 +1945,22 @@ use subcommands is with the <code>$()</code> syntax.</p>
 <p>Sometimes some things go wrong and a command or script you ran causes an
 error. How do you properly deal with these situations?</p>
 <p>Firstly a useful thing to know for debugging and testing is that you can
-run any command like this:</p>
-<pre><code>command 2>&1 output.log   # one single output file, both output and errors</code></pre>
-
+run any command like this:
+<div class="highlight"><pre><span></span><code>command 2&gt;&amp;1 output.log   # one single output file, both output and errors
+</code></pre></div></p>
 <p>If you add <code>2&gt;&amp;1 output.log</code> at the end of any command, it will combine
 <code>stdout</code> and <code>stderr</code>, outputting it into a single file named
 <code>output.log</code>.</p>
-<p>If you want regular and error output separated you can use:</p>
-<pre><code>command > output.log 2> output.err  # errors in a separate file</code></pre>
-
+<p>If you want regular and error output separated you can use:
+<div class="highlight"><pre><span></span><code>command &gt; output.log 2&gt; output.err  # errors in a separate file
+</code></pre></div></p>
 <p>this will write regular output to <code>output.log</code> and error output to
 <code>output.err</code>.</p>
 <p>You can then look for the errors with <code>less</code> or search for specific text
 with <code>grep</code>.</p>
-<p>In scripts, you can use:</p>
-<pre><code>set -e</code></pre>
-
+<p>In scripts, you can use:
+<div class="highlight"><pre><span></span><code>set -e
+</code></pre></div></p>
 <p>This will tell the shell to stop executing any subsequent commands when
 a single command in the script fails. This is most convenient as most
 likely this causes the rest of the script to fail as well.</p>

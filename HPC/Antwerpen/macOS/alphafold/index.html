@@ -1319,14 +1319,13 @@ for example <code>AlphaFold/2.3.1-foss-2022a-CUDA-11.7.0</code>.</p>
 <p><div class="highlight"><pre><span></span><code>&gt;T1050 A7LXT1, Bacteroides Ovatus, 779 residues|
 MASQSYLFKHLEVSDGLSNNSVNTIYKDRDGFMWFGTTTGLNRYDGYTFKIYQHAENEPGSLPDNYITDIVEMPDGRFWINTARGYVLFDKERDYFITDVTGFMKNLESWGVPEQVFVDREGNTWLSVAGEGCYRYKEGGKRLFFSYTEHSLPEYGVTQMAECSDGILLIYNTGLLVCLDRATLAIKWQSDEIKKYIPGGKTIELSLFVDRDNCIWAYSLMGIWAYDCGTKSWRTDLTGIWSSRPDVIIHAVAQDIEGRIWVGKDYDGIDVLEKETGKVTSLVAHDDNGRSLPHNTIYDLYADRDGVMWVGTYKKGVSYYSESIFKFNMYEWGDITCIEQADEDRLWLGTNDHGILLWNRSTGKAEPFWRDAEGQLPNPVVSMLKSKDGKLWVGTFNGGLYCMNGSQVRSYKEGTGNALASNNVWALVEDDKGRIWIASLGGGLQCLEPLSGTFETYTSNNSALLENNVTSLCWVDDNTLFFGTASQGVGTMDMRTREIKKIQGQSDSMKLSNDAVNHVYKDSRGLVWIATREGLNVYDTRRHMFLDLFPVVEAKGNFIAAITEDQERNMWVSTSRKVIRVTVASDGKGSYLFDSRAYNSEDGLQNCDFNQRSIKTLHNGIIAIGGLYGVNIFAPDHIRYNKMLPNVMFTGLSLFDEAVKVGQSYGGRVLIEKELNDVENVEFDYKQNIFSVSFASDNYNLPEKTQYMYKLEGFNNDWLTLPVGVHNVTFTNLAPGKYVLRVKAINSDGYVGIKEATLGIVVNPPFKLAAALQHHHHHH
 </code></pre></div>
-<sub>source: <a href="https://www.predictioncenter.org/casp14/target.cgi?target=T1050&amp;view=sequence">https://www.predictioncenter.org/casp14/target.cgi?target=T1050&amp;view=sequence</a></sub></p>
+source: <a href="https://www.predictioncenter.org/casp14/target.cgi?target=T1050&amp;view=sequence">https://www.predictioncenter.org/casp14/target.cgi?target=T1050&amp;view=sequence</a></p>
 <h3 id="job-script-for-running-alphafold-on-gpu">Job script for running AlphaFold on GPU<a class="headerlink" href="#job-script-for-running-alphafold-on-gpu" title="Permanent link">#</a></h3>
 <p>Job script that runs AlphaFold on GPU using 1 V100 GPU + 8 cores.</p>
 <p>Swap to the <code>joltik</code> GPU before submitting it:</p>
 <div class="highlight"><pre><span></span><code>module<span class="w"> </span>swap<span class="w"> </span>cluster/joltik
 </code></pre></div>
-<p><center>-- AlphaFold-gpu-joltik.sh --</center></p>
-<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="highlight"><span class="filename">AlphaFold-gpu-joltik.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
 <span class="c1">#PBS -N AlphaFold-gpu-joltik</span>
 <span class="c1">#PBS -l nodes=1:ppn=8,gpus=1</span>
 <span class="c1">#PBS -l walltime=10:0:0</span>
@@ -1349,8 +1348,7 @@ alphafold<span class="w"> </span>--fasta_paths<span class="o">=</span>T1050.fast
 </code></pre></div>
 <h3 id="job-script-for-running-alphafold-cpu-only">Job script for running AlphaFold CPU-only<a class="headerlink" href="#job-script-for-running-alphafold-cpu-only" title="Permanent link">#</a></h3>
 <p>Jobscript that runs AlphaFold on CPU using 24 cores on one node.</p>
-<p><center>-- AlphaFold-cpu-doduo.sh --</center></p>
-<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="highlight"><span class="filename">AlphaFold-cpu-doduo.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
 <span class="c1">#PBS -N AlphaFold-cpu-doduo</span>
 <span class="c1">#PBS -l nodes=1:ppn=24</span>
 <span class="c1">#PBS -l walltime=72:0:0</span>

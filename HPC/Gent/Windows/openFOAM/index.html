@@ -1504,7 +1504,7 @@ OpenFOAM, there are a couple of things to take into account.</p>
 <p>First of all, you need to pick and load one of the available <code>OpenFOAM</code>
 modules. To get an overview of the available modules, run
 '<code>module avail OpenFOAM</code>'. For example:</p>
-<pre><code>$ <b>module avail OpenFOAM</b>
+<div class="highlight"><pre><span></span><code>$ module avail OpenFOAM
 ------------------ /apps/gent/CO7/sandybridge/modules/all ------------------
    OpenFOAM/v1712-foss-2017b     OpenFOAM/4.1-intel-2017a
    OpenFOAM/v1712-intel-2017b    OpenFOAM/5.0-intel-2017a
@@ -1514,8 +1514,7 @@ modules. To get an overview of the available modules, run
    OpenFOAM/2.4.0-intel-2017a    OpenFOAM/5.0-20180108-intel-2018a
    OpenFOAM/3.0.1-intel-2016b    OpenFOAM/6-intel-2018a            (D)
    OpenFOAM/4.0-intel-2016b
-</code></pre>
-
+</code></pre></div>
 <p>To pick a module, take into account the differences between the
 different OpenFOAM versions w.r.t. features and API (see also <a href="./#different-openfoam-releases">Different OpenFOAM releases</a>). If
 multiple modules are available that fulfill your requirements, give
@@ -1525,9 +1524,8 @@ example, prefer a module that includes <code>intel-2024b</code> in its name over
 that includes <code>intel-2024a</code>.</p>
 <p>To prepare your environment for using OpenFOAM, load the <code>OpenFOAM</code>
 module you have picked; for example:</p>
-<pre><code>$ <b>module load OpenFOAM/4.1-intel-2017a</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module load OpenFOAM/11-foss-2023a
+</code></pre></div>
 <h3 id="sourcing-the-foam_bash-script">Sourcing the <code>$FOAM_BASH</code> script<a class="headerlink" href="#sourcing-the-foam_bash-script" title="Permanent link">#</a></h3>
 <p>OpenFOAM provides a script that you should <code>source</code> to further prepare
 the environment. This script will define some additional environment
@@ -1536,26 +1534,23 @@ define an environment variable named <code>FOAM_BASH</code> that specifies the
 location to this script. Assuming you are using <code>bash</code> in your shell
 session or job script, you should always run the following command after
 loading an <code>OpenFOAM</code> module:</p>
-<pre><code>$ <b>source $FOAM_BASH</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>source $FOAM_BASH
+</code></pre></div>
 <h3 id="defining-utility-functions-used-in-tutorial-cases">Defining utility functions used in tutorial cases<a class="headerlink" href="#defining-utility-functions-used-in-tutorial-cases" title="Permanent link">#</a></h3>
 <p>If you would like to use the <code>getApplication</code>, <code>runApplication</code>,
 <code>runParallel</code>, <code>cloneCase</code> and/or <code>compileApplication</code> functions that
 are used in OpenFOAM tutorials, you also need to <code>source</code> the
 <code>RunFunctions</code> script:</p>
-<pre><code>$ <b> source $WM_PROJECT_DIR/bin/tools/RunFunctions</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>source $WM_PROJECT_DIR/bin/tools/RunFunctions
+</code></pre></div>
 <p>Note that this needs to be done <strong>after</strong> sourcing <code>$FOAM_BASH</code> to make sure
 <code>$WM_PROJECT_DIR</code> is defined.</p>
 <h3 id="dealing-with-floating-point-errors">Dealing with floating-point errors<a class="headerlink" href="#dealing-with-floating-point-errors" title="Permanent link">#</a></h3>
 <p>If you are seeing <code>Floating Point Exception</code> errors, you can undefine
 the <code>$FOAM_SIGFPE</code> environment variable that is defined by the
 <code>$FOAM_BASH</code> script as follows:</p>
-<pre><code>$ <b>unset $FOAM_SIGFPE</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>unset $FOAM_SIGFPE
+</code></pre></div>
 <p>Note that this only prevents OpenFOAM from propagating floating point
 exceptions, which then results in terminating the simulation. However,
 it does not prevent that illegal operations (like a division by zero)
@@ -1632,9 +1627,8 @@ were defined by the <code>$FOAM_BASH</code> script, see <a href="./#preparing-th
 processes used in a parallel OpenFOAM execution, the
 <code>$MYMPIRUN_VARIABLESPREFIX</code> environment variable must be defined as
 follows, prior to running the OpenFOAM simulation with <code>mympirun</code>:</p>
-<pre><code>$ <b>export MYMPIRUN_VARIABLESPREFIX=WM_PROJECT,FOAM,MPI</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>export MYMPIRUN_VARIABLESPREFIX=WM_PROJECT,FOAM,MPI
+</code></pre></div>
 <p>Whenever you are instructed to use a command like <code>mpirun -np &lt;N&gt; ...</code>,
 use <code>mympirun ...</code> instead; <code>mympirun</code> will automatically detect the
 number of processor cores that are available (see also <a href="../mympirun/#controlling-number-of-processes">Controlling number of processes</a>).</p>
@@ -1646,9 +1640,8 @@ processor core.</p>
 make sure that the number of subdomains matches the number of processor
 cores that will be used by <code>mympirun</code>. If not, you may run into an error
 message like:</p>
-<pre><code>number of processor directories = 4 is not equal to the number of processors = 16
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>number of processor directories = 4 is not equal to the number of processors = 16
+</code></pre></div>
 <p>In this case, the case was decomposed in 4 subdomains, while the
 OpenFOAM simulation was started with 16 processes through <code>mympirun</code>. To
 match the number of subdomains and the number of processor cores used by
@@ -1674,9 +1667,8 @@ on the performance of a parallel OpenFOAM simulation. Good decomposition
 methods (like <code>metis</code> or <code>scotch</code>) try to limit communication overhead
 by minimising the number of processor boundaries.</p>
 <p>To visualise the processor domains, use the following command:</p>
-<pre><code>$ <b>mympirun foamToVTK -parallel -constant -time 0 -excludePatches '(".*.")'</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>mympirun foamToVTK -parallel -constant -time 0 -excludePatches &#39;(&quot;.*.&quot;)&#39;
+</code></pre></div>
 <p>and then load the VTK files generated in the <code>VTK</code> folder into ParaView.</p>
 <h2 id="running-openfoam-on-a-shared-filesystem">Running OpenFOAM on a shared filesystem<a class="headerlink" href="#running-openfoam-on-a-shared-filesystem" title="Permanent link">#</a></h2>
 <p>OpenFOAM is known to significantly stress shared filesystems, since a
@@ -1703,7 +1695,7 @@ specify in <code>system/controlDict</code> (see also
 </li>
 <li>
 <p>if you do not plan to change the parameters of the OpenFOAM
-    simulation while it is running, <strong>set <tt>runTimeModifiable</tt> to <tt>false</tt></strong> to avoid that OpenFOAM re-reads each
+    simulation while it is running, set <strong>runTimeModifiable</strong> to <strong>false</strong> to avoid that OpenFOAM re-reads each
     of the <code>system/*Dict</code> files at every time step;</p>
 </li>
 <li>
@@ -1726,8 +1718,7 @@ simulations that involve more than a couple of dozen of processor cores.</p>
 <h2 id="example-openfoam-job-script">Example OpenFOAM job script<a class="headerlink" href="#example-openfoam-job-script" title="Permanent link">#</a></h2>
 <p>Example job script for <code>damBreak</code> OpenFOAM tutorial (see also
 <a href="https://cfd.direct/openfoam/user-guide/dambreak">https://cfd.direct/openfoam/user-guide/dambreak</a>):</p>
-<p><center>-- OpenFOAM_damBreak.sh --</center>
-<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="highlight"><span class="filename">OpenFOAM_damBreak.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
 <span class="c1">#PBS -l walltime=1:0:0</span>
 <span class="c1">#PBS -l nodes=1:ppn=4</span>
 <span class="c1"># check for more recent OpenFOAM modules with &#39;module avail OpenFOAM&#39;</span>
@@ -1772,7 +1763,7 @@ cp<span class="w"> </span>-a<span class="w"> </span>*.out<span class="w"> </span
 <span class="c1"># clean up working directory</span>
 <span class="nb">cd</span><span class="w"> </span><span class="nv">$HOME</span>
 rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$WORKDIR</span>
-</code></pre></div></p>
+</code></pre></div>
 
 
 

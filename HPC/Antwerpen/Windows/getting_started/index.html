@@ -1115,8 +1115,8 @@ For more information see the <a href="../web_portal/#file-browser">file browser 
 <p>As an alternative, you can use WinSCP (see <a href="../connecting/#winscp">our section</a>)</p>
 </div>
 <p>When running <code>ls</code> in your session on the UAntwerpen-HPC, you should see the two files listed in your home directory (<code>~</code>):</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ls<span class="w"> </span>~
-run.sh<span class="w"> </span>tensorflow_mnist.py
+<div class="highlight"><pre><span></span><code>$ ls ~
+run.sh tensorflow_mnist.py
 </code></pre></div>
 <p>When you do not see these files, make sure you uploaded the files to your <strong>home directory</strong>.</p>
 <h3 id="submitting-a-job">Submitting a job<a class="headerlink" href="#submitting-a-job" title="Permanent link">#</a></h3>
@@ -1125,14 +1125,13 @@ run.sh<span class="w"> </span>tensorflow_mnist.py
 the software that is used (via <code>module load</code> statements), 
 and the steps that should be executed to run the calculation.</p>
 <p>Our job script looks like this:</p>
-<p><center>-- run.sh --</center></p>
-<p><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<p><div class="highlight"><span class="filename">run.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 module<span class="w"> </span>load<span class="w"> </span>TensorFlow/2.11.0-foss-2022a
 
 python<span class="w"> </span>tensorflow_mnist.py
 </code></pre></div>
-<sub>As you can see this job script will run the Python script named <strong>tensorflow_mnist.py</strong>.</sub></p>
+As you can see this job script will run the Python script named <strong>tensorflow_mnist.py</strong>.</p>
 <p>The jobs you submit are per default executed on <strong>cluser/{{ defaultcluster }}</strong>, you can swap to another cluster by issuing the following command.</p>
 <div class="highlight"><pre><span></span><code>module<span class="w"> </span>swap<span class="w"> </span>cluster/<span class="o">{{</span><span class="w"> </span>othercluster<span class="w"> </span><span class="o">}}</span>
 </code></pre></div>
@@ -1141,8 +1140,8 @@ python<span class="w"> </span>tensorflow_mnist.py
 <p>When submitting jobs with limited amount of resources, it is recommended to use the <a href="../interactive_debug/#interactive-and-debug-cluster">debug/interactive cluster</a>: <code>donphan</code>.</p>
 </div>
 <p>This job script can now be submitted to the cluster's job system for execution, using the qsub (<strong>q</strong>ueue <strong>sub</strong>mit) command:</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>qsub<span class="w"> </span>run.sh
-<span class="m">433253</span>.leibniz
+<div class="highlight"><pre><span></span><code>$ qsub run.sh
+433253.leibniz
 </code></pre></div>
 <p>This command returns a job identifier (<em>433253.leibniz</em>) on the HPC cluster. This is a unique identifier for the job which can be used to monitor and manage your job.</p>
 <div class="admonition warning">
@@ -1156,20 +1155,18 @@ but our active shell session is still running on the login node.</p>
 <h3 id="wait-for-job-to-be-executed">Wait for job to be executed<a class="headerlink" href="#wait-for-job-to-be-executed" title="Permanent link">#</a></h3>
 <p>Your job is put into a queue before being executed, so it may take a while before it actually starts.
 (see <a href="../running_batch_jobs/#when-will-my-job-start">when will my job start?</a> for scheduling policy).</p>
-<p>You can get an overview of the active jobs using the <code>qstat</code> command:</p>
-<pre><code>$ qstat
+<p>You can get an overview of the active jobs using the <code>qstat</code> command:
+<div class="highlight"><pre><span></span><code>$ qstat
 Job ID     Name             User            Time Use S Queue
 ---------- ---------------- --------------- -------- - -------
-433253.leibniz     run.sh           vsc20167        0:00:00  <b style="color:orange">Q</b> {{ othercluster }}
-</code></pre>
-
-<p>Eventually, after entering <code>qstat</code> again you should see that your job has started running:</p>
-<pre><code>$ qstat
+433253.leibniz     run.sh           vsc20167        0:00:00  Q {{ othercluster }}
+</code></pre></div></p>
+<p>Eventually, after entering <code>qstat</code> again you should see that your job has started running:
+<div class="highlight"><pre><span></span><code>$ qstat
 Job ID     Name             User            Time Use S Queue
 ---------- ---------------- --------------- -------- - -------
-433253.leibniz     run.sh           vsc20167        0:00:01  <b style="color:green">R</b> {{ othercluster }}
-</code></pre>
-
+433253.leibniz     run.sh           vsc20167        0:00:01  R {{ othercluster }}
+</code></pre></div></p>
 <p>If you don't see your job in the output of the <code>qstat</code> command anymore, your job has likely completed.</p>
 <p>Read <a href="../running_batch_jobs/#monitoring-and-managing-your-jobs">this section</a> on how to interpret the output.</p>
 <h3 id="inspect-your-results">Inspect your results<a class="headerlink" href="#inspect-your-results" title="Permanent link">#</a></h3>
@@ -1190,7 +1187,7 @@ Job ID     Name             User            Time Use S Queue
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Use your own job ID</p>
-<p>Replace <b>433253.leibniz</b> with the jobid you got from the <code>qstat</code> command (see above) or simply look for added files in your current directory by running <code>ls</code>.</p>
+<p>Replace <strong>433253.leibniz</strong> with the jobid you got from the <code>qstat</code> command (see above) or simply look for added files in your current directory by running <code>ls</code>.</p>
 </div>
 <p>When examining the contents of <code>run.sh.o433253.leibniz</code> you will see something like this:
 <div class="highlight"><pre><span></span><code>Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz

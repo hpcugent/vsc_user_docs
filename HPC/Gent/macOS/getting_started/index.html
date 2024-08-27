@@ -1319,26 +1319,26 @@ see the <a href="https://github.com/hpcugent/vsc_user_docs/tree/main/mkdocs/docs
 <p>Now that you can login, it is time to transfer files from your local computer to your <strong>home directory</strong> on the HPC-UGent infrastructure.</p>
 <p>Download <a href="https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist/tensorflow_mnist.py">tensorflow_mnist.py</a> 
 and <a href="https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist/run.sh">run.sh</a> example scripts to your computer (from <a href="https://github.com/hpcugent/vsc_user_docs/tree/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist">here</a>).</p>
-<p>On your local machine you can run:</p>
-<pre><code>curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist/tensorflow_mnist.py
-curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist/run.sh
-</code></pre>
-
-<p>Using the <code>scp</code> command, the files can be copied from your local host to your <em>home directory</em> (<code>~</code>) on the remote host (HPC).</p>
-<pre><code>scp tensorflow_mnist.py run.sh vsc40000login.hpc.ugent.be:~ </code></pre>
-<pre><code>ssh  vsc40000@login.hpc.ugent.be </code></pre>
-
+<p>On your local machine you can run:
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-OL<span class="w"> </span>https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist/tensorflow_mnist.py
+curl<span class="w"> </span>-OL<span class="w"> </span>https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist/run.sh
+</code></pre></div></p>
+<p>Using the <code>scp</code> command, the files can be copied from your local host to your <em>home directory</em> (<code>~</code>) on the remote host (HPC).
+<div class="highlight"><pre><span></span><code>scp<span class="w"> </span>tensorflow_mnist.py<span class="w"> </span>run.sh<span class="w"> </span>vsc40000login.hpc.ugent.be:~
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w">  </span>vsc40000@login.hpc.ugent.be
+</code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">User your own VSC account id</p>
-<p>Replace <b>vsc40000</b> with your VSC account id (see <a href="https://account.vscentrum.be">https://account.vscentrum.be</a>)</p>
+<p>Replace <strong>vsc40000</strong> with your VSC account id (see <a href="https://account.vscentrum.be">https://account.vscentrum.be</a>)</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>For more information about transfering files or <code>scp</code>, see <a href="../connecting/#transfer-files-tofrom-the-hpc">tranfer files from/to hpc</a>.</p>
 </div>
 <p>When running <code>ls</code> in your session on the HPC-UGent infrastructure, you should see the two files listed in your home directory (<code>~</code>):</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ls<span class="w"> </span>~
-run.sh<span class="w"> </span>tensorflow_mnist.py
+<div class="highlight"><pre><span></span><code>$ ls ~
+run.sh tensorflow_mnist.py
 </code></pre></div>
 <p>When you do not see these files, make sure you uploaded the files to your <strong>home directory</strong>.</p>
 <h3 id="submitting-a-job">Submitting a job<a class="headerlink" href="#submitting-a-job" title="Permanent link">#</a></h3>
@@ -1347,14 +1347,13 @@ run.sh<span class="w"> </span>tensorflow_mnist.py
 the software that is used (via <code>module load</code> statements), 
 and the steps that should be executed to run the calculation.</p>
 <p>Our job script looks like this:</p>
-<p><center>-- run.sh --</center></p>
-<p><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<p><div class="highlight"><span class="filename">run.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 module<span class="w"> </span>load<span class="w"> </span>TensorFlow/2.11.0-foss-2022a
 
 python<span class="w"> </span>tensorflow_mnist.py
 </code></pre></div>
-<sub>As you can see this job script will run the Python script named <strong>tensorflow_mnist.py</strong>.</sub></p>
+As you can see this job script will run the Python script named <strong>tensorflow_mnist.py</strong>.</p>
 <p>The jobs you submit are per default executed on <strong>cluser/doduo</strong>, you can swap to another cluster by issuing the following command.</p>
 <div class="highlight"><pre><span></span><code>module<span class="w"> </span>swap<span class="w"> </span>cluster/donphan
 </code></pre></div>
@@ -1364,8 +1363,8 @@ python<span class="w"> </span>tensorflow_mnist.py
 <p>To get a list of all clusters and their hardware, see <a href="https://www.ugent.be/hpc/en/infrastructure">https://www.ugent.be/hpc/en/infrastructure</a>.</p>
 </div>
 <p>This job script can now be submitted to the cluster's job system for execution, using the qsub (<strong>q</strong>ueue <strong>sub</strong>mit) command:</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>qsub<span class="w"> </span>run.sh
-<span class="m">123456</span>
+<div class="highlight"><pre><span></span><code>$ qsub run.sh
+123456
 </code></pre></div>
 <p>This command returns a job identifier (<em>123456</em>) on the HPC cluster. This is a unique identifier for the job which can be used to monitor and manage your job.</p>
 <div class="admonition warning">
@@ -1379,20 +1378,18 @@ but our active shell session is still running on the login node.</p>
 <h3 id="wait-for-job-to-be-executed">Wait for job to be executed<a class="headerlink" href="#wait-for-job-to-be-executed" title="Permanent link">#</a></h3>
 <p>Your job is put into a queue before being executed, so it may take a while before it actually starts.
 (see <a href="../running_batch_jobs/#when-will-my-job-start">when will my job start?</a> for scheduling policy).</p>
-<p>You can get an overview of the active jobs using the <code>qstat</code> command:</p>
-<pre><code>$ qstat
+<p>You can get an overview of the active jobs using the <code>qstat</code> command:
+<div class="highlight"><pre><span></span><code>$ qstat
 Job ID     Name             User            Time Use S Queue
 ---------- ---------------- --------------- -------- - -------
-123456     run.sh           vsc40000        0:00:00  <b style="color:orange">Q</b> donphan
-</code></pre>
-
-<p>Eventually, after entering <code>qstat</code> again you should see that your job has started running:</p>
-<pre><code>$ qstat
+123456     run.sh           vsc40000        0:00:00  Q donphan
+</code></pre></div></p>
+<p>Eventually, after entering <code>qstat</code> again you should see that your job has started running:
+<div class="highlight"><pre><span></span><code>$ qstat
 Job ID     Name             User            Time Use S Queue
 ---------- ---------------- --------------- -------- - -------
-123456     run.sh           vsc40000        0:00:01  <b style="color:green">R</b> donphan
-</code></pre>
-
+123456     run.sh           vsc40000        0:00:01  R donphan
+</code></pre></div></p>
 <p>If you don't see your job in the output of the <code>qstat</code> command anymore, your job has likely completed.</p>
 <p>Read <a href="../running_batch_jobs/#monitoring-and-managing-your-jobs">this section</a> on how to interpret the output.</p>
 <h3 id="inspect-your-results">Inspect your results<a class="headerlink" href="#inspect-your-results" title="Permanent link">#</a></h3>
@@ -1417,7 +1414,7 @@ Job ID     Name             User            Time Use S Queue
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Use your own job ID</p>
-<p>Replace <b>123456</b> with the jobid you got from the <code>qstat</code> command (see above) or simply look for added files in your current directory by running <code>ls</code>.</p>
+<p>Replace <strong>123456</strong> with the jobid you got from the <code>qstat</code> command (see above) or simply look for added files in your current directory by running <code>ls</code>.</p>
 </div>
 <p>When examining the contents of <code>run.sh.o123456</code> you will see something like this:
 <div class="highlight"><pre><span></span><code>Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz

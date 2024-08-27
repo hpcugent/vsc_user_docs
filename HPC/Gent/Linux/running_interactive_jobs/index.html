@@ -1293,26 +1293,23 @@ but should not be the main use of the HPC-UGent infrastructure. Waiting for user
 very long time in the life of a CPU and does not make efficient usage of
 the computing resources.</p>
 <p>The syntax for <em>qsub</em> for submitting an interactive PBS job is:</p>
-<pre><code><b>$ qsub -I <... pbs directives ...></b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>$ qsub -I &lt;... pbs directives ...&gt;
+</code></pre></div>
 <h2 id="interactive-jobs-without-x-support">Interactive jobs, without X support<a class="headerlink" href="#interactive-jobs-without-x-support" title="Permanent link">#</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Find the code in "~/examples/Running_interactive_jobs"</p>
 </div>
 <p>First of all, in order to know on which computer you're working, enter:</p>
-<pre><code><b>$ hostname -f</b>
+<div class="highlight"><pre><span></span><code>$ hostname -f
 gligar07.gastly.os
-</code></pre>
-
+</code></pre></div>
 <p>This means that you're now working on the login node <code>gligar07.gastly.os</code> of the cluster.</p>
 <p>The most basic way to start an interactive job is the following:</p>
-<pre><code><b>$ qsub -I</b>
+<div class="highlight"><pre><span></span><code>$ qsub -I
 qsub: waiting for job 123456 to start
 qsub: job 123456 ready
-</code></pre>
-
+</code></pre></div>
 <p>There are two things of note here.</p>
 <ol>
 <li>
@@ -1328,20 +1325,19 @@ qsub: job 123456 ready
 </li>
 </ol>
 <p>In order to know on which compute-node you're working, enter again:</p>
-<pre><code><b>$ hostname -f</b>
+<div class="highlight"><pre><span></span><code>$ hostname -f
 node3501.doduo.gent.vsc
-</code></pre>
-
+</code></pre></div>
 <p>Note that we are now working on the compute-node called "<em>node3501.doduo.gent.vsc</em>". This is the
 compute node, which was assigned to us by the scheduler after issuing
 the "<em>qsub -I</em>" command.</p>
 <p>Now, go to the directory of our second interactive example and run the
 program "primes.py". This program will ask you for an upper limit
 ($&gt; 1$) and will print all the primes between 1 and your upper limit:</p>
-<pre><code><b>$ cd ~/examples/Running_interactive_jobs</b>
-<b>$ ./primes.py</b>
+<div class="highlight"><pre><span></span><code>$ cd ~/examples/Running_interactive_jobs
+$ ./primes.py
 This program calculates all primes between 1 and your upper limit.
-Enter your upper limit (>1): <b>50</b>
+Enter your upper limit (&gt;1): 50
 Start Time:  2013-09-11 15:49:06
 [Prime#1] = 1
 [Prime#2] = 2
@@ -1361,21 +1357,18 @@ Start Time:  2013-09-11 15:49:06
 [Prime#16] = 47
 End Time:  2013-09-11 15:49:06
 Duration:  0 seconds.
-</code></pre>
-
+</code></pre></div>
 <p>You can exit the interactive session with:</p>
-<pre><code><b>$ exit</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>$ exit
+</code></pre></div>
 <p>Note that you can now use this allocated node for 1 hour. After this
 hour you will be automatically disconnected. You can change this "usage
 time" by explicitly specifying a "walltime", i.e., the time that you
 want to work on this node. (Think of walltime as the time elapsed when
 watching the clock on the wall.)</p>
 <p>You can work for 3 hours by:</p>
-<pre><code><b>$ qsub -I -l walltime=03:00:00</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>qsub -I -l walltime=03:00:00
+</code></pre></div>
 <p>If the walltime of the job is exceeded, the (interactive) job will be
 killed and your connection to the compute node will be closed. So do
 make sure to provide adequate walltime and that you save your data
@@ -1402,50 +1395,40 @@ computers.</p>
 running on a compute node on the HPC) transferred to your personal screen,
 you will need to reconnect to the HPC with X-forwarding enabled, which is
 done with the "-X" option.</p>
-<p><center>
-<img alt="image" src="../img/ch5-interactive-mode.png" />
-</center></p>
+<p><img alt="image" src="../img/ch5-interactive-mode.png" /></p>
 <p>First exit and reconnect to the HPC with X-forwarding enabled:</p>
-<pre><code><b>$ exit</b>
-<b>$ ssh -X vsc40000@login.hpc.ugent.be</b>
-<b>$ hostname -f</b>
+<div class="highlight"><pre><span></span><code>$ exit
+$ ssh -X vsc40000@login.hpc.ugent.be
+$ hostname -f
 gligar07.gastly.os
-</code></pre>
-
+</code></pre></div>
 <p>We first check whether our GUIs on the login node are decently forwarded
 to your screen on your local machine. An easy way to test it is by
 running a small X-application on the login node. Type:</p>
-<pre><code><b>$ xclock</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>$ xclock
+</code></pre></div>
 <p>And you should see a clock appearing on your screen.</p>
-<p><center>
-<img alt="image" src="../img/img0507.png" />
-</center></p>
+<p><img alt="image" src="../img/img0507.png" /></p>
 <p>You can close your clock and connect further to a compute node with
 again your X-forwarding enabled:</p>
-<pre><code><b>$ qsub -I -X</b>
+<div class="highlight"><pre><span></span><code>$ qsub -I -X
 qsub: waiting for job 123456 to start
 qsub: job 123456 ready
-<b>$ hostname -f</b>
+$ hostname -f
 node3501.doduo.gent.vsc
-<b>$ xclock</b>
-</code></pre>
-
+$ xclock
+</code></pre></div>
 <p>and you should see your clock again.</p>
 <h3 id="run-simple-example">Run simple example<a class="headerlink" href="#run-simple-example" title="Permanent link">#</a></h3>
 <p>We have developed a little interactive program that shows the
 communication in 2 directions. It will send information to your local
 screen, but also asks you to click a button.</p>
 <p>Now run the message program:</p>
-<pre><code><b>$ cd ~/examples/Running_interactive_jobs</b>
-<b>./message.py</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>cd ~/examples/Running_interactive_jobs
+./message.py
+</code></pre></div>
 <p>You should see the following message appearing.</p>
-<p><center>
-<img alt="image" src="../img/img0508.png" />
-</center></p>
+<p><img alt="image" src="../img/img0508.png" /></p>
 <p>Click any button and see what happens.</p>
 <div class="highlight"><pre><span></span><code>-----------------------
 &lt; Enjoy the day! Mooh &gt;

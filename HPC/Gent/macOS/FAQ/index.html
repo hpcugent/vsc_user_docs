@@ -1604,7 +1604,7 @@ to get started, which is a great resource for learning the basics, troubleshooti
 <p>Overview of HPC-UGent Tier-2 <a href="https://www.ugent.be/hpc/en/infrastructure">infrastructure</a></p>
 <h2 id="composing-a-job">Composing a job<a class="headerlink" href="#composing-a-job" title="Permanent link">#</a></h2>
 <h3 id="how-many-coresnodes-should-i-request">How many cores/nodes should I request?<a class="headerlink" href="#how-many-coresnodes-should-i-request" title="Permanent link">#</a></h3>
-<p>An important factor in this question is how well your task is being parallellized:
+<p>An important factor in this question is how well your task is being parallelized:
 does it actually run faster with more resources? You can test this yourself:
 start with 4 cores, then 8, then 16... The execution time should each time be reduced to
 around half of what it was before. You can also try this with full nodes: 1 node, 2 nodes.
@@ -1720,7 +1720,7 @@ See also: <a href="#my-job-isnt-using-any-gpus">My job isn't using any GPUs</a><
 directories are, relatively, very slow to access. Your jobs should rather use the
 <code>$VSC_SCRATCH</code> directory, or other fast locations (depending on your needs), described
 in <a href="../running_jobs_with_input_output_data/#where-to-store-your-data-on-the-hpc">Where to store your data on the HPC</a>.
-As an example how do this: The job can copy the input to the scratch directory, then execute
+As an example how to do this: The job can copy the input to the scratch directory, then execute
 the computations, and lastly copy the output back to the data directory.
 Using the home and data directories is especially a problem when UGent isn't your home institution:
 your files may be stored, for example, in Leuven while you're running a job in Ghent.</p>
@@ -1776,11 +1776,10 @@ space, see <a href="../running_jobs_with_input_output_data/#virtual-organisation
 of files so other users can access the data. For example, the following
 command will enable a user named "otheruser" to read the file named
 <code>dataset.txt</code>. See</p>
-<pre><code>$ <b>setfacl -m u:otheruser:r dataset.txt</b>
-$ <b>ls -l dataset.txt</b>
+<div class="highlight"><pre><span></span><code>$ setfacl -m u:otheruser:r dataset.txt
+$ ls -l dataset.txt
 -rwxr-x---+ 2 vsc40000 mygroup      40 Apr 12 15:00 dataset.txt
-</code></pre>
-
+</code></pre></div>
 <p>For more information about <code>chmod</code> or <code>setfacl</code>, see
 <a href="../linux-tutorial/manipulating_files_and_directories/#changing-permissions-chmod">Linux tutorial</a>.</p>
 <h3 id="can-i-use-multiple-different-ssh-key-pairs-to-connect-to-my-vsc-account">Can I use multiple different SSH key pairs to connect to my VSC account?<a class="headerlink" href="#can-i-use-multiple-different-ssh-key-pairs-to-connect-to-my-vsc-account" title="Permanent link">#</a></h3>

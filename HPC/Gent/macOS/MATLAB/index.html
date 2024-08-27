@@ -1336,12 +1336,11 @@ clusters cannot.</p>
 <p>To access the MATLAB compiler, the <code>MATLAB</code> module should be loaded
 first. Make sure you are using the same <code>MATLAB</code> version to compile and
 to run the compiled MATLAB program.</p>
-<pre><code>$ <b>module avail MATLAB/</b>
+<div class="highlight"><pre><span></span><code>$ module avail MATLAB/
 ----------------------/apps/gent/RHEL8/zen2-ib/modules/all----------------------
    MATLAB/2021b    MATLAB/2022b-r5 (D)
-$ <b>module load MATLAB/2021b</b>
-</code></pre>
-
+$ module load MATLAB/2021b
+</code></pre></div>
 <p>After loading the <code>MATLAB</code> module, the <code>mcc</code> command can be used. To get
 help on <code>mcc</code>, you can run <code>mcc -?</code>.</p>
 <p>To compile a standalone application, the <code>-m</code> flag is used (the <code>-v</code>
@@ -1349,21 +1348,19 @@ flag means verbose output). To show how <code>mcc</code> can be used, we use the
 <code>magicsquare</code> example that comes with MATLAB.</p>
 <p>First, we copy the <code>magicsquare.m</code> example that comes with MATLAB to
 <code>example.m</code>:</p>
-<pre><code>$ <b>cp $EBROOTMATLAB/extern/examples/compiler/magicsquare.m example.m</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>cp $EBROOTMATLAB/extern/examples/compiler/magicsquare.m example.m
+</code></pre></div>
 <p>To compile a MATLAB program, use <code>mcc -mv</code>:</p>
-<pre><code><b>mcc -mv example.m</b>
+<div class="highlight"><pre><span></span><code>mcc -mv example.m
 Opening log file:  /user/home/gent/vsc400/vsc40000/java.log.34090
 Compiler version: 8.3 (R2021b)
 Dependency analysis by REQUIREMENTS.
-Parsing file "/user/home/gent/vsc400/vsc40000/example.m"
-    (Referenced from: "Compiler Command Line").
+Parsing file &quot;/user/home/gent/vsc400/vsc40000/example.m&quot;
+    (Referenced from: &quot;Compiler Command Line&quot;).
 Deleting 0 temporary MEX authorization files.
-Generating file "/user/home/gent/vsc400/vsc40000/readme.txt".
-Generating file "run\_example.sh".
-</code></pre>
-
+Generating file &quot;/user/home/gent/vsc400/vsc40000/readme.txt&quot;.
+Generating file &quot;run\_example.sh&quot;.
+</code></pre></div>
 <h3 id="libraries">Libraries<a class="headerlink" href="#libraries" title="Permanent link">#</a></h3>
 <p>To compile a MATLAB program that <em>needs a library</em>, you can use the
 <code>-I library_path</code> flag. This will tell the compiler to also look for
@@ -1379,9 +1376,8 @@ produces.</p>
 MATLAB program on the login nodes, consider tweaking the default maximum
 heap size (128M) of Java using the <code>_JAVA_OPTIONS</code> environment variable
 with:</p>
-<pre><code>$ <b>export _JAVA_OPTIONS="-Xmx64M"</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>export _JAVA_OPTIONS=&quot;-Xmx64M&quot;
+</code></pre></div>
 <p>The MATLAB compiler spawns multiple Java processes. Because of the
 default memory limits that are in effect on the login nodes, this might
 lead to a crash of the compiler if it's trying to create to many Java
@@ -1389,14 +1385,12 @@ processes. If we lower the heap size, more Java processes will be able
 to fit in memory.</p>
 <p>Another possible issue is that the heap size is too small. This could
 result in errors like:</p>
-<pre><code>Error: Out of memory
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>Error: Out of memory
+</code></pre></div>
 <p>A possible solution to this is by setting the maximum heap size to be
 bigger:</p>
-<pre><code>$ <b>export _JAVA_OPTIONS="-Xmx512M"</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>export _JAVA_OPTIONS=&quot;-Xmx512M&quot;
+</code></pre></div>
 <h2 id="multithreading">Multithreading<a class="headerlink" href="#multithreading" title="Permanent link">#</a></h2>
 <p>MATLAB can only use the cores in a single workernode (unless the
 Distributed Computing toolbox is used, see
@@ -1412,8 +1406,7 @@ too many workers). By default, MATLAB uses a fixed number of workers
 you requested when submitting your job script (the <code>ppn</code> value, see <a href="../running_batch_jobs/#generic-resource-requirements">Generic resource requirements</a>).
 You can determine the right number of workers to use via the following
 code snippet in your MATLAB program:</p>
-<div style="text-align: center;">-- parpool.m --</div>
-<div class="highlight"><pre><span></span><code><span class="c">% specify the right number of workers (as many as there are cores available in the job) when creating the parpool</span>
+<div class="highlight"><span class="filename">parpool.m</span><pre><span></span><code><span class="c">% specify the right number of workers (as many as there are cores available in the job) when creating the parpool</span>
 <span class="n">c</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">parcluster</span><span class="p">(</span><span class="s">&#39;local&#39;</span><span class="p">)</span>
 <span class="n">pool</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">parpool</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">NumWorkers</span><span class="p">)</span>
 </code></pre></div>
@@ -1422,31 +1415,27 @@ documentation</a>.</p>
 <h2 id="java-output-logs">Java output logs<a class="headerlink" href="#java-output-logs" title="Permanent link">#</a></h2>
 <p>Each time MATLAB is executed, it generates a Java log file in the users
 home directory. The output log directory can be changed using:</p>
-<pre><code>$ <b>MATLAB_LOG_DIR=<i>&lt;OUTPUT_DIR&gt;</i></b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>MATLAB_LOG_DIR=&lt;OUTPUT_DIR&gt;
+</code></pre></div>
 <p>where <code>&lt;OUTPUT_DIR&gt;</code> is the name of the desired output directory. To
 create and use a temporary directory for these logs:</p>
-<pre><code># create unique temporary directory in $TMPDIR (or /tmp/$USER if
+<div class="highlight"><pre><span></span><code># create unique temporary directory in $TMPDIR (or /tmp/$USER if
 $TMPDIR is not defined)
 # instruct MATLAB to use this directory for log files by setting $MATLAB_LOG_DIR
-$ <b> export MATLAB_LOG_DIR=$ (mktemp -d -p $TMPDIR:-/tmp/$USER)</b>
-</code></pre>
-
+$  export MATLAB_LOG_DIR=$ (mktemp -d -p $TMPDIR:-/tmp/$USER)
+</code></pre></div>
 <p>You should remove the directory at the end of your job script:</p>
-<pre><code>$ <b> rm -rf $MATLAB_LOG_DIR</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>rm -rf $MATLAB_LOG_DIR
+</code></pre></div>
 <h2 id="cache-location">Cache location<a class="headerlink" href="#cache-location" title="Permanent link">#</a></h2>
 <p>When running, MATLAB will use a cache for performance reasons. This
 location and size of this cache can be changed through the
 <code>MCR_CACHE_ROOT</code> and <code>MCR_CACHE_SIZE</code> environment variables.</p>
 <p>The snippet below would set the maximum cache size to 1024MB and the
 location to <code>/tmp/testdirectory</code>.</p>
-<pre><code>$ <b>export MATLAB_CACHE_ROOT=/tmp/testdirectory </b>
-$ <b>export MATLAB_CACHE_SIZE=1024M </b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>export MATLAB_CACHE_ROOT=/tmp/testdirectory 
+export MATLAB_CACHE_SIZE=1024M 
+</code></pre></div>
 <p>So when MATLAB is running, it can fill up to 1024MB of cache in
 <code>/tmp/testdirectory</code>.</p>
 <h2 id="matlab-job-script">MATLAB job script<a class="headerlink" href="#matlab-job-script" title="Permanent link">#</a></h2>
@@ -1454,8 +1443,7 @@ $ <b>export MATLAB_CACHE_SIZE=1024M </b>
 an example job script. This job script is also available on the HPC.</p>
 <!-- %TODO: where? -->
 
-<div style="text-align: center;">-- jobscript.sh --</div>
-<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="highlight"><span class="filename">jobscript.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
 <span class="c1">#PBS -l nodes=1:ppn=1</span>
 <span class="c1">#PBS -l walltime=1:0:0</span>
 <span class="c1">#</span>

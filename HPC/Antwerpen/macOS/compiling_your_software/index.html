@@ -1079,7 +1079,7 @@ are regularly used in the scientific community, are also pre-installed.</p>
 <h2 id="check-the-pre-installed-software-on-the-uantwerpen-hpc">Check the pre-installed software on the UAntwerpen-HPC<a class="headerlink" href="#check-the-pre-installed-software-on-the-uantwerpen-hpc" title="Permanent link">#</a></h2>
 <p>In order to check all the available modules and their version numbers,
 which are pre-installed on the UAntwerpen-HPC enter:</p>
-<pre><code>$ <b>module av 2>&1 | more</b>
+<div class="highlight"><pre><span></span><code>$ module av 2&gt;&amp;1 | more
 ------------- /apps/antwerpen/modules/hopper/2015a/all ------------
 ABINIT/7.10.2-intel-2015a
 ADF/2014.05
@@ -1090,16 +1090,14 @@ Boost/1.57.0-intel-2015a-Python-2.7.9
 bzip2/1.0.6-foss-2015a
 bzip2/1.0.6-intel-2015a
 ...
-</code></pre>
-
+</code></pre></div>
 <p>Or when you want to check whether some specific software, some compiler
 or some application (e.g., LAMMPS) is installed on the UAntwerpen-HPC.</p>
-<pre><code>$ <b>module av 2>&1 | grep -i -e "LAMMPS"</b>
+<div class="highlight"><pre><span></span><code>$ module av 2&gt;&amp;1 | grep -i -e &quot;LAMMPS&quot;
 LAMMPS/9Dec14-intel-2015a
 LAMMPS/30Oct14-intel-2014a
 LAMMPS/5Sep14-intel-2014a
-</code></pre>
-
+</code></pre></div>
 <p>As you are not aware of the capitals letters in the module name, we
 looked for a case-insensitive name with the "-i" option.</p>
 <p>When your required application is not available on the UAntwerpen-HPC please contact
@@ -1170,31 +1168,26 @@ be able to run on any other compute-node.</p>
 </ol>
 <p>We assume you've copied your software to the UAntwerpen-HPC. The next step is to request
 your private compute node.</p>
-<pre><code>$ <b>qsub -I</b>
-qsub: waiting for job 433253.leibniz to start
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>qsub<span class="w"> </span>-I
+qsub:<span class="w"> </span>waiting<span class="w"> </span><span class="k">for</span><span class="w"> </span>job<span class="w"> </span><span class="m">433253</span>.leibniz<span class="w"> </span>to<span class="w"> </span>start
+</code></pre></div>
 <h3 id="compiling-a-sequential-program-in-c">Compiling a sequential program in C<a class="headerlink" href="#compiling-a-sequential-program-in-c" title="Permanent link">#</a></h3>
 <p>Go to the examples for chapter 
 <a href="./#compiling-and-building-on-the-hpc">Compiling and testing your software on the HPC</a> and load the 
-foss module:</p>
-<pre><code>$ <b>cd ~/examples/Compiling-and-testing-your-software-on-the-HPC</b>
-$ <b>module load foss</b>
-</code></pre>
-
+foss module:
+<div class="highlight"><pre><span></span><code>cd ~/examples/Compiling-and-testing-your-software-on-the-HPC
+module load foss
+</code></pre></div></p>
 <p>We now list the directory and explore the contents of the "<em>hello.c</em>"
-program:</p>
-<pre><code>$ <b>ls -l</b>
+program:
+<div class="highlight"><pre><span></span><code>$ ls -l
 total 512
 -rw-r--r-- 1 vsc20167 214 Sep 16 09:42 hello.c
 -rw-r--r-- 1 vsc20167 130 Sep 16 11:39 hello.pbs*
 -rw-r--r-- 1 vsc20167 359 Sep 16 13:55 mpihello.c
 -rw-r--r-- 1 vsc20167 304 Sep 16 13:55 mpihello.pbs
-</code></pre>
-
-<p style="text-align: center">hello.c</p>
-
-<div class="highlight"><pre><span></span><code>/*
+</code></pre></div></p>
+<div class="highlight"><span class="filename">hello.c</span><pre><span></span><code>/*
 <span class="w"> </span>*<span class="w"> </span>VSC<span class="w">        </span>:<span class="w"> </span>Flemish<span class="w"> </span>Supercomputing<span class="w"> </span>Centre
 <span class="w"> </span>*<span class="w"> </span>Tutorial<span class="w">   </span>:<span class="w"> </span>Introduction<span class="w"> </span>to<span class="w"> </span>HPC
 <span class="w"> </span>*<span class="w"> </span>Description:<span class="w"> </span>Print<span class="w"> </span><span class="m">500</span><span class="w"> </span>numbers,<span class="w"> </span>whilst<span class="w"> </span>waiting<span class="w"> </span><span class="m">1</span><span class="w"> </span>second<span class="w"> </span><span class="k">in</span><span class="w"> </span>between
@@ -1218,16 +1211,15 @@ gcc-compiler.</p>
 <p>First, check the command line options for <em>"gcc" (GNU C-Compiler)</em>, then
 we compile. the <code>O2</code> option enables a moderate level of optimization when compiling the code. 
 It instructs the compiler to optimize the code for better performance without significantly increasing compilation time.
-Finally, list the contents of the directory again:</p>
-<pre><code>$ <b>gcc -help</b>
-$ <b>gcc -O2 -o hello hello.c</b>
-$ <b>ls -l</b>
+Finally, list the contents of the directory again:
+<div class="highlight"><pre><span></span><code>$ gcc -help
+$ gcc -O2 -o hello hello.c
+$ ls -l
 total 512
 -rwxrwxr-x 1 vsc20167 7116 Sep 16 11:43 hello*
 -rw-r--r-- 1 vsc20167  214 Sep 16 09:42 hello.c
 -rwxr-xr-x 1 vsc20167  130 Sep 16 11:39 hello.pbs*
-</code></pre>
-
+</code></pre></div></p>
 <p>A new file "hello" has been created. Note that this file has "execute"
 rights, i.e., it is an executable. More often than not, calling gcc --
 or any other compiler for that matter -- will provide you with a list of
@@ -1239,36 +1231,32 @@ features, etc. It is good practice to remove all warnings from a
 compilation process, even if they seem unimportant so that a code change
 that produces a warning does not go unnoticed.</p>
 <p>Let's test this program on the local compute node, which is at your
-disposal after the <code>qsub --I</code> command:</p>
-<pre><code>$ <b>./hello</b>
+disposal after the <code>qsub --I</code> command:
+<div class="highlight"><pre><span></span><code>$ ./hello
 Hello #0
 Hello #1
 Hello #2
 Hello #3
 Hello #4
 ...
-</code></pre>
-
-<p>It seems to work, now run it on the UAntwerpen-HPC</p>
-<pre><code>$ <b>qsub hello.pbs</b></code></pre>
-
+</code></pre></div></p>
+<p>It seems to work, now run it on the UAntwerpen-HPC
+<div class="highlight"><pre><span></span><code>qsub hello.pbs
+</code></pre></div></p>
 <h3 id="compiling-a-parallel-program-in-cmpi">Compiling a parallel program in C/MPI<a class="headerlink" href="#compiling-a-parallel-program-in-cmpi" title="Permanent link">#</a></h3>
-<pre><code>$ <b>cd ~/examples/Compiling-and-testing-your-software-on-the-HPC</b></code></pre>
-
+<div class="highlight"><pre><span></span><code>cd ~/examples/Compiling-and-testing-your-software-on-the-HPC
+</code></pre></div>
 <p>List the directory and explore the contents of the "<em>mpihello.c</em>"
-program:</p>
-<pre><code>$ <b>ls -l</b>
+program:
+<div class="highlight"><pre><span></span><code>$ ls -l
 total 512
 total 512
 -rw-r--r-- 1 vsc20167 214 Sep 16 09:42 hello.c
 -rw-r--r-- 1 vsc20167 130 Sep 16 11:39 hello.pbs*
 -rw-r--r-- 1 vsc20167 359 Sep 16 13:55 mpihello.c
 -rw-r--r-- 1 vsc20167 304 Sep 16 13:55 mpihello.pbs
-</code></pre>
-
-<p style="text-align: center">mpihello.c</p>
-
-<div class="highlight"><pre><span></span><code>/*
+</code></pre></div></p>
+<div class="highlight"><span class="filename">mpihello.c</span><pre><span></span><code>/*
 <span class="w"> </span>*<span class="w"> </span>VSC<span class="w">        </span>:<span class="w"> </span>Flemish<span class="w"> </span>Supercomputing<span class="w"> </span>Centre
 <span class="w"> </span>*<span class="w"> </span>Tutorial<span class="w">   </span>:<span class="w"> </span>Introduction<span class="w"> </span>to<span class="w"> </span>HPC
 <span class="w"> </span>*<span class="w"> </span>Description:<span class="w"> </span>Example<span class="w"> </span>program,<span class="w"> </span>to<span class="w"> </span>compile<span class="w"> </span>with<span class="w"> </span>MPI
@@ -1296,45 +1284,44 @@ library calls.</p>
 <p>Then, check the command line options for <em>"mpicc" (GNU C-Compiler with
 MPI extensions)</em>, then we compile and list the contents of the directory
 again:</p>
-<pre><code>$ <b>mpicc --help</b>
-$ <b>mpicc -o mpihello mpihello.c</b>
-$ <b>ls -l</b></code></pre>
-
+<div class="highlight"><pre><span></span><code>mpicc --help
+mpicc -o mpihello mpihello.c
+ls -l
+</code></pre></div>
 <p>A new file "hello" has been created. Note that this program has
 "execute" rights.</p>
 <p>Let's test this program on the "login" node first:</p>
-<pre><code>$ <b>./mpihello</b>
-Hello World from Node 0.</code></pre>
-
+<div class="highlight"><pre><span></span><code>$ ./mpihello
+Hello World from Node 0.
+</code></pre></div>
 <p>It seems to work, now run it on the UAntwerpen-HPC.</p>
-<pre><code>$ <b>qsub mpihello.pbs</b></code></pre>
-
+<div class="highlight"><pre><span></span><code>qsub mpihello.pbs
+</code></pre></div>
 <h3 id="compiling-a-parallel-program-in-intel-parallel-studio-cluster-edition">Compiling a parallel program in Intel Parallel Studio Cluster Edition<a class="headerlink" href="#compiling-a-parallel-program-in-intel-parallel-studio-cluster-edition" title="Permanent link">#</a></h3>
 <p>We will now compile the same program, but using the Intel Parallel
 Studio Cluster Edition compilers. We stay in the examples directory for
 this chapter:</p>
-<pre><code>$ <b>cd ~/examples/Compiling-and-testing-your-software-on-the-HPC</b></code></pre>
-
+<div class="highlight"><pre><span></span><code>cd ~/examples/Compiling-and-testing-your-software-on-the-HPC
+</code></pre></div>
 <p>We will compile this C/MPI -file into an executable with the Intel
 Parallel Studio Cluster Edition. First, clear the modules (purge) and
 then load the latest "intel" module:</p>
-<pre><code>$ <b>module purge</b>
-$ <b>module load intel</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module purge
+module load intel
+</code></pre></div>
 <p>Then, compile and list the contents of the directory again. The Intel
-equivalent of mpicc is mpiicc.</p>
-<pre><code>$ <b>mpiicc -o mpihello mpihello.c</b>
-$ <b>ls -l</b></code></pre>
-
+equivalent of mpicc is mpiicc.
+<div class="highlight"><pre><span></span><code>mpiicc -o mpihello mpihello.c
+ls -l
+</code></pre></div></p>
 <p>Note that the old "mpihello" file has been overwritten. Let's test this
-program on the "login" node first:</p>
-<pre><code>$ <b>./mpihello</b>
-Hello World from Node 0.</code></pre>
-
+program on the "login" node first:
+<div class="highlight"><pre><span></span><code>$ ./mpihello
+Hello World from Node 0.
+</code></pre></div></p>
 <p>It seems to work, now run it on the UAntwerpen-HPC.</p>
-<pre><code>$ <b>qsub mpihello.pbs</b></code></pre>
-
+<div class="highlight"><pre><span></span><code>qsub mpihello.pbs
+</code></pre></div>
 <p>Note: The Antwerp University Association (AUHA) only has a license for the Intel Parallel Studio Cluster
 Edition for a fixed number of users. As such, it might happen that you
 have to wait a few minutes before a floating license becomes available
@@ -1342,47 +1329,47 @@ for your use.</p>
 <p>Note: The Intel Parallel Studio Cluster Edition contains equivalent
 compilers for all GNU compilers. Hereafter the overview for C, C++ and
 Fortran compilers.</p>
-<div style="text-align: center; width: 100%">
 <table>
 <thead>
-  <tr>
-    <th></th>
-    <th colspan="2"><b>Sequential Program</b></th>
-    <th colspan="2"><b>Parallel Program (with MPI)</b></th>
-  </tr>
+<tr>
+<th></th>
+<th><strong>Sequential Program</strong></th>
+<th></th>
+<th><strong>Parallel Program (with MPI)</strong></th>
+<th></th>
+</tr>
 </thead>
 <tbody>
-  <tr>
-    <td></td>
-    <td><b>GNU</b></td>
-    <td><b>Intel</b></td>
-    <td><b>GNU</b></td>
-    <td><b>Intel</b></td>
-  </tr>
-  <tr>
-    <td><b>C</b></td>
-    <td>gcc</td>
-    <td>icc</td>
-    <td>mpicc</td>
-    <td>mpiicc</td>
-  </tr>
-  <tr>
-    <td><b>C++</b></td>
-    <td>g++</td>
-    <td>icpc</td>
-    <td>mpicxx</td>
-    <td>mpiicpc</td>
-  </tr>
-  <tr>
-    <td><b>Fortran</b></td>
-    <td>gfortran</td>
-    <td>ifort</td>
-    <td>mpif90</td>
-    <td>mpiifort</td>
-  </tr>
+<tr>
+<td></td>
+<td><strong>GNU</strong></td>
+<td><strong>Intel</strong></td>
+<td><strong>GNU</strong></td>
+<td><strong>Intel</strong></td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>gcc</td>
+<td>icc</td>
+<td>mpicc</td>
+<td>mpiicc</td>
+</tr>
+<tr>
+<td><strong>C++</strong></td>
+<td>g++</td>
+<td>icpc</td>
+<td>mpicxx</td>
+<td>mpiicpc</td>
+</tr>
+<tr>
+<td><strong>Fortran</strong></td>
+<td>gfortran</td>
+<td>ifort</td>
+<td>mpif90</td>
+<td>mpiifort</td>
+</tr>
 </tbody>
 </table>
-</div>
 
 
 

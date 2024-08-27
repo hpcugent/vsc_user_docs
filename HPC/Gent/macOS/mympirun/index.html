@@ -1273,9 +1273,8 @@ description of all options, see the <a href="https://github.com/hpcugent/vsc-mym
 README</a>.</p>
 <h2 id="basic-usage">Basic usage<a class="headerlink" href="#basic-usage" title="Permanent link">#</a></h2>
 <p>Before using <code>mympirun</code>, we first need to load its module:</p>
-<pre><code>$ <b>module load vsc-mympirun</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module load vsc-mympirun
+</code></pre></div>
 <p>As an exception, we don't specify a version here. The reason is that we
 want to ensure that the latest version of the <code>mympirun</code> script is
 always used, since it may include important bug fixes or improvements.</p>
@@ -1299,15 +1298,14 @@ processing.</p>
 <p>The <code>--hybrid</code> option requires a positive number. This number specifies
 the number of processes started on each available physical <em>node</em>. It
 will ignore the number of available <em>cores</em> per node.</p>
-<pre><code>$ <b>echo $PBS_NUM_NODES</b>
+<div class="highlight"><pre><span></span><code>$ echo $PBS_NUM_NODES
 2
-$ <b>mympirun --hybrid 2 ./mpihello</b>
+$ mympirun --hybrid 2 ./mpihello
 Hello world from processor node3400.doduo.os, rank 1 out of 4 processors 
 Hello world from processor node3401.doduo.os, rank 3 out of 4 processors 
 Hello world from processor node3401.doduo.os, rank 2 out of 4 processors 
 Hello world from processor node3400.doduo.os, rank 0 out of 4 processors
-</code></pre>
-
+</code></pre></div>
 <h3 id="other-options">Other options<a class="headerlink" href="#other-options" title="Permanent link">#</a></h3>
 <p>There's also <code>--universe</code>, which sets the exact amount of processes
 started by <code>mympirun</code>; <code>--double</code>, which uses double the amount of
@@ -1321,9 +1319,9 @@ for a detailed explanation of these options.</p>
 <p>You can do a so-called "dry run", which doesn't have any side-effects,
 but just prints the command that <code>mympirun</code> would execute. You enable
 this with the <code>--dry-run</code> flag:</p>
-<pre><code>$ <b>mympirun --dry-run ./mpi_hello</b>
+<div class="highlight"><pre><span></span><code>$ mympirun --dry-run ./mpi_hello
 mpirun ... -genv I_MPI_FABRICS shm:dapl ... -np 16 ... ./mpi_hello
-</code></pre>
+</code></pre></div>
 
 
 

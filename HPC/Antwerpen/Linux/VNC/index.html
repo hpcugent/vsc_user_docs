@@ -1115,22 +1115,21 @@ infrastructure from your own computer.</p>
 <p><strong>Please carefully follow the instructions below, since the procedure to connect to a VNC server running on the HPC infrastructure is not trivial, due to security constraints.</strong></p>
 <h2 id="starting-a-vnc-server">Starting a VNC server<a class="headerlink" href="#starting-a-vnc-server" title="Permanent link">#</a></h2>
 <p>First login on the login node (see <a href="../connecting/#first-time-connection-to-the-hpc-infrastructure">First time connection to the HPC infrastructure</a>, then start <code>vncserver</code> with:</p>
-<pre><code>$ <b>vncserver -geometry 1920x1080 -localhost</b>
+<div class="highlight"><pre><span></span><code>$ vncserver -geometry 1920x1080 -localhost
 You will require a password to access your desktops.
 
-Password:<b>&lt;enter a secure password&gt;</b>
-Verify:<b>&lt;enter the same password&gt;</b>
-Would you like to enter a view-only password (y/n)? <b>n</b>
+Password: &lt;enter a secure password&gt;
+Verify: &lt;enter the same password&gt;
+Would you like to enter a view-only password (y/n)? n
 A view-only password is not used
 
-New '<b>ln2.leibniz.uantwerpen.vsc:6</b> (vsc20167)' desktop is ln2.leibniz.uantwerpen.vsc:6
+New &#39;ln2.leibniz.uantwerpen.vsc:6 (vsc20167)&#39; desktop is ln2.leibniz.uantwerpen.vsc:6
 
 Creating default startup script /user/antwerpen/201/vsc20167.vnc/xstartup
 Creating default config /user/antwerpen/201/vsc20167.vnc/config
 Starting applications specified in /user/antwerpen/201/vsc20167.vnc/xstartup
 Log file is /user/antwerpen/201/vsc20167.vnc/ln2.leibniz.uantwerpen.vsc:6.log
-</code></pre>
-
+</code></pre></div>
 <p><strong>When prompted for a password, make sure to enter a secure password: if someone can guess your password, they will be able to do anything with your account you can!</strong></p>
 <p>Note down the details in bold: the hostname (in the example: <code>ln2.leibniz.uantwerpen.vsc</code>) and the
 (partial) port number (in the example: <code>6</code>).</p>
@@ -1141,23 +1140,21 @@ logout and go home without a problem (like the terminal equivalent
 each time you want to connect.</p>
 <h2 id="list-running-vnc-servers">List running VNC servers<a class="headerlink" href="#list-running-vnc-servers" title="Permanent link">#</a></h2>
 <p>You can get a list of running VNC servers on a node with</p>
-<pre><code>$ <b>vncserver -list</b>
+<div class="highlight"><pre><span></span><code>$ vncserver -list
 TigerVNC server sessions:
 
 X DISPLAY # PROCESS ID
 :6          30713
-</code></pre>
-
+</code></pre></div>
 <p>This only displays the running VNC servers on <strong>the login node you run the command on</strong>.</p>
 <p>To see what login nodes you are running a VNC server on, you can run the
 <code>ls .vnc/*.pid</code> command in your home directory: the files shown have the
 hostname of the login node in the filename:</p>
-<pre><code>$ <b>cd $HOME</b>
-$ <b>ls .vnc/*.pid</b>
+<div class="highlight"><pre><span></span><code>$ cd $HOME
+$ ls .vnc/*.pid
 .vnc/ln2.leibniz.uantwerpen.vsc:6.pid
 .vnc/ln1.leibniz.uantwerpen.vsc:8.pid
-</code></pre>
-
+</code></pre></div>
 <p>This shows that there is a VNC server running on <code>ln2.leibniz.uantwerpen.vsc</code> on port 5906 and
 another one running <code>ln1.leibniz.uantwerpen.vsc</code> on port 5908 (see also <a href="./#determining-the-sourcedestination-port">Determining the source/destination port</a>).</p>
 <h2 id="connecting-to-a-vnc-server">Connecting to a VNC server<a class="headerlink" href="#connecting-to-a-vnc-server" title="Permanent link">#</a></h2>
@@ -1222,9 +1219,8 @@ than $1025$).</p>
 </li>
 </ul>
 <p>Execute the following command to set up the SSH tunnel.</p>
-<pre><code>$ <b>ssh -L 5906:localhost:12345  vsc20167@login.hpc.uantwerpen.be</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>ssh -L 5906:localhost:12345  vsc20167@login.hpc.uantwerpen.be
+</code></pre></div>
 <p><strong>Replace the source port <code>5906</code>, destination port <code>12345</code> and user ID vsc20167 with your own!</strong></p>
 <p>With this, we have forwarded port <code>5906</code> on our workstation to port
 <code>12345</code> on the login node we are connected to.</p>
@@ -1233,31 +1229,27 @@ than $1025$).</p>
 <p>Before continuing, it's good to check whether the intermediate port that
 you have picked is actually still available (see <a href="./#picking-an-intermediate-port-to-connect-to-the-right-login-node">Picking an intermediate port to connect to the right login node</a>).</p>
 <p>You can check using the following command (**do not forget to replace <code>12345</code> the value you picked for your intermediate port):</p>
-<pre><code>$ <b>netstat -an | grep -i listen | grep tcp | grep 12345</b>
-$
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>netstat -an | grep -i listen | grep tcp | grep 12345
+</code></pre></div>
 <p>If you see no matching lines, then the port you picked is still
 available, and you can continue.</p>
 <p>If you see one or more matching lines as shown below,
 <strong>you must disconnect the first SSH tunnel, pick a different intermediate port, and set up the first SSH tunnel again using the new value</strong>.</p>
-<pre><code>$ <b>netstat -an | grep -i listen | grep tcp | grep 12345</b>
+<div class="highlight"><pre><span></span><code>$ netstat -an | grep -i listen | grep tcp | grep 12345
 tcp        0      0 0.0.0.0:12345           0.0.0.0:*               LISTEN
 tcp6       0      0 :::12345                :::*                    LISTEN
 $
-</code></pre>
-
+</code></pre></div>
 <h4 id="setting-up-the-second-ssh-tunnel-to-the-correct-login-node">Setting up the second SSH tunnel to the correct login node<a class="headerlink" href="#setting-up-the-second-ssh-tunnel-to-the-correct-login-node" title="Permanent link">#</a></h4>
 <p>In the session on the login node you created by setting up an SSH tunnel
 from your workstation to <code>login.hpc.uantwerpen.be</code>, you now need to set up the second SSH
 tunnel to "patch through" to the login node where your VNC server is
 running (<code>ln2.leibniz.uantwerpen.vsc</code> in our running example, see <a href="./#starting-a-vnc-server">Starting a VNC server</a>).</p>
 <p>To do this, run the following command:</p>
-<pre><code>$ <b>ssh -L 12345:localhost:5906 ln2.leibniz.uantwerpen.vsc</b>
-$ <b>hostname</b>
+<div class="highlight"><pre><span></span><code>$ ssh -L 12345:localhost:5906 ln2.leibniz.uantwerpen.vsc
+$ hostname
 ln2.leibniz.uantwerpen.vsc
-</code></pre>
-
+</code></pre></div>
 <p>With this, we are forwarding port <code>12345</code> on the login node we are
 connected to (which is referred to as <code>localhost</code>) through to port
 <code>5906</code> on our target login node (<code>ln2.leibniz.uantwerpen.vsc</code>).</p>
@@ -1279,17 +1271,15 @@ server.</p>
 <p>When prompted for default or empty panel, choose default.</p>
 <p>If you have an empty panel, you can reset your settings with the
 following commands:</p>
-<pre><code>$ <b>xfce4-panel --quit ; pkill xfconfd</b>
-$ <b>mkdir ~/.oldxfcesettings</b>
-$ <b>mv ~/.config/xfce4 ~/.oldxfcesettings</b>
-$ <b>xfce4-panel</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>xfce4-panel --quit ; pkill xfconfd
+mkdir ~/.oldxfcesettings
+mv ~/.config/xfce4 ~/.oldxfcesettings
+xfce4-panel
+</code></pre></div>
 <h2 id="stopping-the-vnc-server">Stopping the VNC server<a class="headerlink" href="#stopping-the-vnc-server" title="Permanent link">#</a></h2>
 <p>The VNC server can be killed by running</p>
-<pre><code>vncserver -kill :6
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>vncserver -kill :6
+</code></pre></div>
 <p>where <code>6</code> is the port number we noted down earlier. If you forgot, you
 can get it with <code>vncserver -list</code> (see <a href="./#list-running-vnc-servers">List running VNC servers</a>).</p>
 <h2 id="i-forgot-the-password-what-now">I forgot the password, what now?<a class="headerlink" href="#i-forgot-the-password-what-now" title="Permanent link">#</a></h2>

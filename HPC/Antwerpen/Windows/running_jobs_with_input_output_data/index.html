@@ -1306,16 +1306,17 @@ and where that you can collect your results.</p>
 <h2 id="the-current-directory-and-output-and-error-files">The current directory and output and error files<a class="headerlink" href="#the-current-directory-and-output-and-error-files" title="Permanent link">#</a></h2>
 <h3 id="default-file-names">Default file names<a class="headerlink" href="#default-file-names" title="Permanent link">#</a></h3>
 <p>First go to the directory:</p>
-<pre><code><b>$ cd ~/examples/Running_jobs_with_input_output_data</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>cd ~/examples/Running_jobs_with_input_output_data
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the example directory is not yet present, copy it to your home directory:</p>
-<p><pre><code><b>$ cp -r /apps/antwerpen/tutorials/Intro-HPC/examples ~/</b></code></pre></p>
+<p>```</p>
 </div>
+<p>cp -r /apps/antwerpen/tutorials/Intro-HPC/examples ~/
+    ```</p>
 <p>List and check the contents with:</p>
-<pre><code><b>ls -l</b>
+<div class="highlight"><pre><span></span><code>$ ls -l
 total 2304
 -rwxrwxr-x 1 vsc20167   682 Sep 13 11:34 file1.py
 -rw-rw-r-- 1 vsc20167   212 Sep 13 11:54 file1a.pbs
@@ -1325,12 +1326,10 @@ total 2304
 -rwxrwxr-x 1 vsc20167  2393 Sep 13 10:40 file2.py
 -rw-r--r-- 1 vsc20167  1393 Sep 13 10:41 file3.pbs
 -rwxrwxr-x 1 vsc20167  2393 Sep 13 10:40 file3.py
-</code></pre>
-
+</code></pre></div>
 <p>Now, let us inspect the contents of the first executable (which is just
 a Python script with execute permission).</p>
-<p><center>-- file1.py --</center>
-<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<div class="highlight"><span class="filename">file1.py</span><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 <span class="c1">#</span>
 <span class="c1"># VSC        : Flemish Supercomputing Centre</span>
 <span class="c1"># Tutorial   : Introduction to HPC</span>
@@ -1356,7 +1355,7 @@ a Python script with execute permission).</p>
 <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;This is NO ERROR or WARNING.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;I am just writing to &lt;stderr&gt;.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Cheers!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div></p>
+</code></pre></div>
 <p>The code of the Python script, is self explanatory:</p>
 <ol>
 <li>
@@ -1371,8 +1370,7 @@ a Python script with execute permission).</p>
 </li>
 </ol>
 <p>Check the contents of the first job script:</p>
-<p><center>-- file1a.pbs --</center>
-<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="highlight"><span class="filename">file1a.pbs</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 <span class="c1">#PBS -l walltime=00:05:00</span>
 
@@ -1385,17 +1383,16 @@ a Python script with execute permission).</p>
 date
 ./file1.py
 <span class="nb">echo</span><span class="w"> </span>End<span class="w"> </span>Job
-</code></pre></div></p>
+</code></pre></div>
 <p>You'll see that there are NO specific PBS directives for the placement
 of the output files. All output files are just written to the standard
 paths.</p>
 <p>Submit it:</p>
-<pre><code><b>$ qsub file1a.pbs</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>qsub file1a.pbs
+</code></pre></div>
 <p>After the job has finished, inspect the local directory again, i.e., the
 directory where you executed the <em>qsub</em> command:</p>
-<pre><code><b>ls -l</b>
+<div class="highlight"><pre><span></span><code>$ ls -l
 total 3072
 -rw-rw-r-- 1 vsc20167   90 Sep 13 13:13 Hello.txt
 -rwxrwxr-x 1 vsc20167  693 Sep 13 13:03 file1.py*
@@ -1408,8 +1405,7 @@ total 3072
 -rwxrwxr-x 1 vsc20167 2393 Sep 13 10:40 file2.py*
 -rw-r--r-- 1 vsc20167 1393 Sep 13 10:41 file3.pbs
 -rwxrwxr-x 1 vsc20167 2393 Sep 13 10:40 file3.py*
-</code></pre>
-
+</code></pre></div>
 <p>Some observations:</p>
 <ol>
 <li>
@@ -1425,12 +1421,11 @@ total 3072
 </li>
 </ol>
 <p>Inspect their contents ... and remove the files</p>
-<pre><code><b>$ cat Hello.txt</b>
-<b>$ cat file1a.pbs.o433253.leibniz</b>
-<b>$ cat file1a.pbs.e433253.leibniz</b>
-<b>$ rm Hello.txt file1a.pbs.o433253.leibniz file1a.pbs.e433253.leibniz</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>$ cat Hello.txt
+$ cat file1a.pbs.o433253.leibniz
+$ cat file1a.pbs.e433253.leibniz
+$ rm Hello.txt file1a.pbs.o433253.leibniz file1a.pbs.e433253.leibniz
+</code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Type <code>cat H</code> and press the Tab button (looks like <span class="keys"><kbd class="key-tab">Tab</kbd></span>), and it will <strong>expand</strong> into
@@ -1438,8 +1433,7 @@ total 3072
 </div>
 <h3 id="filenames-using-the-name-of-the-job">Filenames using the name of the job<a class="headerlink" href="#filenames-using-the-name-of-the-job" title="Permanent link">#</a></h3>
 <p>Check the contents of the job script and execute it.</p>
-<p><center>-- file1b.pbs --</center>
-<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="highlight"><span class="filename">file1b.pbs</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 <span class="c1">#   Specify the &quot;name&quot; of the job</span>
 <span class="c1">#PBS -N my_serial_job         </span>
@@ -1449,14 +1443,13 @@ total 3072
 date
 ./file1.py
 <span class="nb">echo</span><span class="w"> </span>End<span class="w"> </span>Job
-</code></pre></div></p>
+</code></pre></div>
 <p>Inspect the contents again ... and remove the generated files:</p>
-<pre><code><b>$ ls</b>
+<div class="highlight"><pre><span></span><code>$ ls
 Hello.txt file1a.pbs file1c.pbs file2.pbs file3.pbs my_serial_job.e433253.leibniz
 file1.py* file1b.pbs file2.py* file3.py* my_serial_job.o433253.leibniz
-<b>$ rm Hello.txt my_serial_job.*</b>
-</code></pre>
-
+$ rm Hello.txt my_serial_job.*
+</code></pre></div>
 <p>Here, the option "<code>-N</code>" was used to explicitly assign a name to the job.
 This overwrote the JOBNAME variable, and resulted in a different name
 for the <em>stdout</em> and <em>stderr</em> files. This name is also shown in the
@@ -1465,8 +1458,7 @@ defaults to the name of the job script.</p>
 <h3 id="user-defined-file-names">User-defined file names<a class="headerlink" href="#user-defined-file-names" title="Permanent link">#</a></h3>
 <p>You can also specify the name of <em>stdout</em> and <em>stderr</em> files explicitly
 by adding two lines in the job script, as in our third example:</p>
-<p><center>-- file1c.pbs --</center>
-<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="highlight"><span class="filename">file1c.pbs</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># redirect standard output (-o) and error (-e)</span>
 <span class="c1">#PBS -o stdout.$PBS_JOBID</span>
@@ -1477,7 +1469,7 @@ by adding two lines in the job script, as in our third example:</p>
 date
 ./file1.py
 <span class="nb">echo</span><span class="w"> </span>End<span class="w"> </span>Job
-</code></pre></div></p>
+</code></pre></div>
 <h2 id="where-to-store-your-data-on-the-hpc">Where to store your data on the HPC<a class="headerlink" href="#where-to-store-your-data-on-the-hpc" title="Permanent link">#</a></h2>
 <p>The UAntwerpen-HPC cluster offers their users several locations to store their data.
 Most of the data will reside on the shared storage system, but all
@@ -1489,81 +1481,47 @@ store your data depends on the purpose, but also the size and type of
 usage of the data.</p>
 <p>The following locations are available:</p>
 <table>
-    <tr>
-        <td colspan="1">
-            <b>Variable</b>
-        </td>
-        <td colspan="1">
-            <b>Description</b>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <center><i>Long-term storage slow filesystem, intended for smaller files</i></center>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            <t>$VSC_HOME</t>
-        </td>
-        <td colspan="1">
-            For your configuration files and other small files, see <a href="./#your-home-directory-vsc_home">the section on your home directory.</a>
-            The default directory is <tt>user/Antwerpen/xxx/vsc20167</tt>.
-            The same file system is accessible from all sites, i.e., you'll see the same contents in $VSC_HOME on all sites.
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            <t>$VSC_DATA</t>
-        </td>
-        <td colspan="1">
-            A bigger "workspace", for <b>datasets</b>, results, logfiles, etc. see <a href="./#your-data-directory-vsc_data">the section on your data directory.</a>
-            The default directory is <tt>data/Antwerpen/xxx/vsc20167</tt>.
-            The same file system is accessible from all sites.
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <center><i>Fast temporary storage</i></center>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            <t>$VSC_SCRATCH_NODE</t>
-        </td>
-        <td colspan="1">
-            For <b>temporary</b> or transient data on the local compute node, where fast access is important; see <a href="./#your-scratch-space-vsc_scratch">the section on your scratch space.</a>
-            This space is available per node. The default directory is <tt>/tmp</tt>. On different nodes, you'll see different content.
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            <t>$VSC_SCRATCH</t>
-        </td>
-        <td colspan="1">
-            For <b>temporary</b> or transient data that has to be accessible from all nodes of a cluster (including the login nodes) <br>
-            The default directory is <tt>scratch/Antwerpen/xxx/vsc20167</tt>. This directory is cluster- or site-specific: On different sites, and sometimes on different clusters on the same site, you'll get a different directory with different content.
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            <t>$VSC_SCRATCH_SITE</t>
-        </td>
-        <td colspan="1">
-            Currently the same as $VSC_SCRATCH, but could be used for a scratch space shared accross all clusters at a site in the future. See <a href="./#your-scratch-space-vsc_scratch">the section on your scratch space.</a>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            <t>$VSC_SCRATCH_GLOBAL</t>
-        </td>
-        <td colspan="1">
-            Currently the same as $VSC_SCRATCH, but could be used for a scratch space shared accross all clusters of the VSC in the future. See <a href="./#your-scratch-space-vsc_scratch">the section on your scratch space.</a>
-        </td>
-    </tr>
-
+<thead>
+<tr>
+<th><strong>Variable</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><em>Long-term storage slow filesystem, intended for smaller files</em></td>
+</tr>
+<tr>
+<td><code>$VSC_HOME</code></td>
+<td>For your configuration files and other small files, see <a href="./#your-home-directory-vsc_home">the section on your home directory.</a> The default directory is <code>user/Antwerpen/xxx/vsc20167</code>. The same file system is accessible from all sites, i.e., you'll see the same contents in $VSC_HOME on all sites.</td>
+</tr>
+<tr>
+<td><code>$VSC_DATA</code></td>
+<td>A bigger "workspace", for <strong>datasets</strong>, results, logfiles, etc. see <a href="./#your-data-directory-vsc_data">the section on your data directory.</a> The default directory is <code>data/Antwerpen/xxx/vsc20167</code>. The same file system is accessible from all sites.</td>
+</tr>
+<tr>
+<td></td>
+<td><em>Fast temporary storage</em></td>
+</tr>
+<tr>
+<td><code>$VSC_SCRATCH_NODE</code></td>
+<td>For <strong>temporary</strong> or transient data on the local compute node, where fast access is important; see <a href="./#your-scratch-space-vsc_scratch">the section on your scratch space.</a> This space is available per node. The default directory is <code>/tmp</code>. On different nodes, you'll see different content.</td>
+</tr>
+<tr>
+<td><code>$VSC_SCRATCH</code></td>
+<td>For <strong>temporary</strong> or transient data that has to be accessible from all nodes of a cluster (including the login nodes). The default directory is <code>scratch/Antwerpen/xxx/vsc20167</code>. This directory is cluster- or site-specific: On different sites, and sometimes on different clusters on the same site, you'll get a different directory with different content.</td>
+</tr>
+<tr>
+<td><code>$VSC_SCRATCH_SITE</code></td>
+<td>Currently the same as $VSC_SCRATCH, but could be used for a scratch space shared across all clusters at a site in the future. See <a href="./#your-scratch-space-vsc_scratch">the section on your scratch space.</a></td>
+</tr>
+<tr>
+<td><code>$VSC_SCRATCH_GLOBAL</code></td>
+<td>Currently the same as $VSC_SCRATCH, but could be used for a scratch space shared across all clusters of the VSC in the future. See <a href="./#your-scratch-space-vsc_scratch">the section on your scratch space.</a></td>
+</tr>
+</tbody>
 </table>
-
 <p>Since these directories are not necessarily mounted on the same
 locations over all sites, you should always (try to) use the environment
 variables that have been created.</p>
@@ -1745,16 +1703,15 @@ directory. In order to generate some CPU- and disk-I/O load, we will</p>
 <p>Check the Python and the PBS file, and submit the job: Remember that
 this is already a more serious (disk-I/O and computational intensive)
 job, which takes approximately 3 minutes on the UAntwerpen-HPC.</p>
-<pre><code><b>$ cat file2.py</b>
-<b>$ cat file2.pbs</b>
-<b>$ qsub file2.pbs</b>
-<b>$ qstat</b>
-<b>$ ls -l</b>
-<b>$ echo $VSC_SCRATCH</b>
-<b>$ ls -l $VSC_SCRATCH</b>
-<b>$ more $VSC_SCRATCH/primes_1.txt</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>$ cat file2.py
+$ cat file2.pbs
+$ qsub file2.pbs
+$ qstat
+$ ls -l
+$ echo $VSC_SCRATCH
+$ ls -l $VSC_SCRATCH
+$ more $VSC_SCRATCH/primes_1.txt
+</code></pre></div>
 <h2 id="reading-input-files">Reading Input files<a class="headerlink" href="#reading-input-files" title="Permanent link">#</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1784,13 +1741,13 @@ job, which takes approximately 3 minutes on the UAntwerpen-HPC.</p>
 </li>
 </ol>
 <p>Check the Python and the PBS file, and submit the job:</p>
-<pre><code><b>$ cat file3.py</b>
-<b>$ cat file3.pbs</b>
-<b>$ qsub file3.pbs</b>
-<b>$ qstat</b>
-<b>$ ls -l</b>
-<b>$ more $VSC_SCRATCH/primes_2.txt</b>
-</code></pre>
+<div class="highlight"><pre><span></span><code>$ cat file3.py
+$ cat file3.pbs
+$ qsub file3.pbs
+$ qstat
+$ ls -l
+$ more $VSC_SCRATCH/primes_2.txt
+</code></pre></div>
 <h2 id="how-much-disk-space-do-i-get">How much disk space do I get?<a class="headerlink" href="#how-much-disk-space-do-i-get" title="Permanent link">#</a></h2>
 <h3 id="quota">Quota<a class="headerlink" href="#quota" title="Permanent link">#</a></h3>
 <p>The available disk space on the UAntwerpen-HPC is limited. The actual disk capacity,
@@ -1846,25 +1803,23 @@ or log files. Keeping your environment clean will never do any harm.</p>
 -->
 
 <p>The "<code>show_quota</code>" command has been developed to show you the status of
-your quota in a readable format:</p>
-<pre><code>$ <b>show_quota</b>
+your quota in a readable format:
+<div class="highlight"><pre><span></span><code>$ show_quota
 VSC_DATA:    used 81MB (0%)  quota 25600MB
 VSC_HOME:    used 33MB (1%)  quota 3072MB
 VSC_SCRATCH:   used 28MB (0%)  quota 25600MB
 VSC_SCRATCH_GLOBAL: used 28MB (0%)  quota 25600MB
 VSC_SCRATCH_SITE:   used 28MB (0%)  quota 25600MB
-</code></pre>
-
-<p>or on the UAntwerp clusters</p>
-<pre><code>$ <b>module load scripts</b>
-$ <b>show_quota</b>
+</code></pre></div></p>
+<p>or on the UAntwerp clusters
+<div class="highlight"><pre><span></span><code>$ module load scripts
+$ show_quota
 VSC_DATA:    used 81MB (0%)  quota 25600MB
 VSC_HOME:    used 33MB (1%)  quota 3072MB
 VSC_SCRATCH:   used 28MB (0%)  quota 25600MB
 VSC_SCRATCH_GLOBAL: used 28MB (0%)  quota 25600MB
 VSC_SCRATCH_SITE:   used 28MB (0%)  quota 25600MB
-</code></pre>
-
+</code></pre></div></p>
 <p>With this command, you can follow up the consumption of your total disk
 quota easily, as it is expressed in percentages. Depending of on which
 cluster you are running the script, it may not be able to show the quota
@@ -1875,40 +1830,37 @@ your account is a KU&nbsp;Leuven, UAntwerpen or VUB account.</p>
 directories are responsible for the consumption of your disk space. You
 can check the size of all subdirectories in the current directory with
 the "<code>du</code>" (<strong>Disk Usage</strong>) command:</p>
-<pre><code><b>$ du</b>
+<div class="highlight"><pre><span></span><code>$ du
 256 ./ex01-matlab/log
 1536 ./ex01-matlab
 768 ./ex04-python
 512 ./ex02-python
 768 ./ex03-python
 5632
-</code></pre>
-
+</code></pre></div>
 <p>This shows you first the aggregated size of all subdirectories, and
 finally the total size of the current directory "." (this includes files
 stored in the current directory).</p>
 <p>If you also want this size to be "human-readable" (and not always the
 total number of kilobytes), you add the parameter "-h":</p>
-<pre><code><b>$ du -h</b>
+<div class="highlight"><pre><span></span><code>$ du -h
 256K ./ex01-matlab/log
 1.5M ./ex01-matlab
 768K ./ex04-python
 512K ./ex02-python
 768K ./ex03-python
 5.5M .
-</code></pre>
-
+</code></pre></div>
 <p>If the number of lower level subdirectories starts to grow too big, you
 may not want to see the information at that depth; you could just ask
 for a summary of the current directory:</p>
-<pre><code><b>$ du -s</b>
+<div class="highlight"><pre><span></span><code>$ du -s
 5632 .
-<b>$ du -s -h</b>
-</code></pre>
-
+$ du -s -h
+</code></pre></div>
 <p>If you want to see the size of any file or top-level subdirectory in the
 current directory, you could use the following command:</p>
-<pre><code><b>$ du -h --max-depth 1</b>
+<div class="highlight"><pre><span></span><code>$ du -h --max-depth 1
 1.5M ./ex01-matlab
 512K ./ex02-python
 768K ./ex03-python
@@ -1916,29 +1868,26 @@ current directory, you could use the following command:</p>
 256K ./example.sh
 1.5M ./intro-HPC.pdf
 700M ./.cache
-</code></pre>
-
+</code></pre></div>
 <p>Finally, if you don't want to know the size of the data in your current
 directory, but in some other directory (e.g., your data directory), you
 just pass this directory as a parameter. The command below will show the
 disk use in your home directory, even if you are currently in a
 different directory:</p>
-<pre><code><b>$ du -h --max-depth 1 $VSC_HOME</b>
+<div class="highlight"><pre><span></span><code>$ du -h --max-depth 1 $VSC_HOME
 22M /user/antwerpen/201/vsc20167/dataset01
 36M /user/antwerpen/201/vsc20167/dataset02
 22M /user/antwerpen/201/vsc20167/dataset03
 3.5M /user/antwerpen/201/vsc20167/primes.txt
 24M /user/antwerpen/201/vsc20167/.cache
-</code></pre>
-
+</code></pre></div>
 <p>We also want to mention the <code>tree</code> command, as it also provides an easy
 manner to see which files consumed your available quotas. <em>Tree</em> is a
 recursive directory-listing program that produces a depth indented
 listing of files.</p>
 <p>Try:</p>
-<pre><code><b>$ tree -s -d</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>$ tree -s -d
+</code></pre></div>
 <p>However, we urge you to only use the <code>du</code> and <code>tree</code> commands when you
 really need them as they can put a heavy strain on the file system and
 thus slow down file operations on the cluster for all other users.</p>
@@ -1950,9 +1899,8 @@ hour for the changes to propagate throughout the entire HPC
 infrastructure.</p>
 <p>To change the group of a directory and it's underlying directories and
 files, you can use:</p>
-<pre><code><b>$ chgrp -R groupname directory</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>chgrp -R groupname directory
+</code></pre></div>
 <h3 id="joining-an-existing-group">Joining an existing group<a class="headerlink" href="#joining-an-existing-group" title="Permanent link">#</a></h3>
 <ol>
 <li>
@@ -2000,10 +1948,9 @@ other members to moderator and remove other moderators.</p>
 <p>You can get details about the current state of groups on the HPC
 infrastructure with the following command (<code>example</code> is the name of the
 group we want to inspect):</p>
-<pre><code><b>$ getent group example</b>
+<div class="highlight"><pre><span></span><code>$ getent group example
 example:*:1234567:vsc40001,vsc40002,vsc40003
-</code></pre>
-
+</code></pre></div>
 <p>We can see that the VSC id number is 1234567 and that there are three
 members in the group: <code>vsc40001</code>, <code>vsc40002</code> and <code>vsc40003</code>.</p>
 

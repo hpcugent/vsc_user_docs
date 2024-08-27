@@ -1413,10 +1413,9 @@ third-party software to use it. Just open a terminal window and jump in!</p>
 <p>On all popular Linux distributions, the OpenSSH software is readily
 available, and most often installed by default. You can check whether
 the OpenSSH software is installed by opening a terminal and typing:</p>
-<pre><code><b>$ ssh -V</b>
+<div class="highlight"><pre><span></span><code>$ ssh -V
 OpenSSH_7.4p1, OpenSSL 1.0.2k-fips 26 Jan 2017
-</code></pre>
-
+</code></pre></div>
 <p>To access the clusters and transfer your files, you will use the
 following commands:</p>
 <ol>
@@ -1437,17 +1436,14 @@ following commands:</p>
 <p>A key pair might already be present in the default location inside your
 home directory. Therefore, we first check if a key is available with the
 "list short" ("ls") command:</p>
-<pre><code><b>$ ls ~/.ssh</b>
-</code></pre>
-
-<p>If a key-pair is already available, you would normally get:</p>
-<pre><code>authorized_keys     id_rsa      id_rsa.pub      known_hosts
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>ls ~/.ssh
+</code></pre></div>
+<p>If a key-pair is already available, you would normally get:
+<div class="highlight"><pre><span></span><code>authorized_keys     id_rsa      id_rsa.pub      known_hosts
+</code></pre></div></p>
 <p>Otherwise, the command will show:</p>
-<pre><code>ls: .ssh: No such file or directory
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>ls: .ssh: No such file or directory
+</code></pre></div>
 <p>You can recognise a public/private key pair when a pair of files has the
 same name except for the extension ".pub" added to one of them. In this
 particular case, the private key is "id_rsa" and public key is
@@ -1477,14 +1473,8 @@ the passphrase. Be sure to never give away your private key, it is
 private and should stay private. You should not even copy it to one of
 your other machines, instead, you should create a new public/private key
 pair for each machine.</p>
-<pre><code><b>$ ssh-keygen -t rsa -b 4096</b>
-Generating public/private rsa key pair. Enter file in which to save the
-key (/home/user/.ssh/id_rsa): Enter passphrase (empty for no
-passphrase): Enter same passphrase again: Your identification has been
-saved in /home/user/.ssh/id_rsa. Your public key has been saved in
-/home/user/.ssh/id_rsa.pub.
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>ssh-keygen -t rsa -b 4096
+</code></pre></div>
 <p>This will ask you for a file name to store the private and public key,
 and a passphrase to protect your private key. It needs to be emphasised
 that you really should choose the passphrase wisely! The system will ask
@@ -1496,15 +1486,13 @@ you want to access the cluster or transfer your files.</p>
 to keep and manage the user SSH keys. If you use one of these derivatives you <strong>must</strong> include the new keys into
 the SSH manager keyring to be able to connect to the HPC cluster. If
 not, SSH client will display an error message (see <a href="../connecting">Connecting</a>) similar to this:</p>
-<pre><code>Agent admitted failure to sign using the key. 
+<div class="highlight"><pre><span></span><code>Agent admitted failure to sign using the key. 
 Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
-</code></pre>
-
+</code></pre></div>
 <p>This could be fixed using the <code>ssh-add</code> command. You can include the new
 private keys' identities in your keyring with:</p>
-<pre><code><b>$ ssh-add</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>ssh-add
+</code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Without extra options <code>ssh-add</code> adds any key located at <code>$HOME/.ssh</code>
@@ -1512,9 +1500,8 @@ directory, but you can specify the private key location path as
 argument, as example: <code>ssh-add /path/to/my/id_rsa</code>.</p>
 </div>
 <p>Check that your key is available from the keyring with:</p>
-<pre><code><b>$ ssh-add -l</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>ssh-add -l
+</code></pre></div>
 <p>After these changes the key agent will keep your SSH key to connect to
 the clusters as usual.</p>
 <div class="admonition tip">
@@ -1558,7 +1545,7 @@ account.</p>
 <h3 id="welcome-e-mail">Welcome e-mail<a class="headerlink" href="#welcome-e-mail" title="Permanent link">#</a></h3>
 <p>Within one day, you should receive a Welcome e-mail with your VSC
 account details.</p>
-<pre><code>Dear (Username), 
+<div class="highlight"><pre><span></span><code>Dear (Username), 
 Your VSC-account has been approved by an administrator.
 Your vsc-username is vsc40000
 
@@ -1571,8 +1558,7 @@ For further info please visit https://www.vscentrum.be/user-portal
 
 Kind regards,
 -- The VSC administrators
-</code></pre>
-
+</code></pre></div>
 <p>Now, you can start using the HPC. You can always look up your VSC id later
 by visiting <a href="https://account.vscentrum.be">https://account.vscentrum.be</a>.</p>
 <h3 id="adding-multiple-ssh-public-keys-optional">Adding multiple SSH public keys (optional)<a class="headerlink" href="#adding-multiple-ssh-public-keys-optional" title="Permanent link">#</a></h3>

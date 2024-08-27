@@ -1131,7 +1131,7 @@
 
   <h1>Available modules</h1>
 
-<pre><code>$ <b>module av 2>&1 | more</b>
+<div class="highlight"><pre><span></span><code>$ module av 2&gt;&amp;1 | more
 ------------- /apps/antwerpen/modules/hopper/2015a/all ------------
 ABINIT/7.10.2-intel-2015a
 ADF/2014.05
@@ -1142,16 +1142,14 @@ Boost/1.57.0-intel-2015a-Python-2.7.9
 bzip2/1.0.6-foss-2015a
 bzip2/1.0.6-intel-2015a
 ...
-</code></pre>
-
+</code></pre></div>
 <p>Or when you want to check whether some specific software, some compiler
 or some application (e.g., LAMMPS) is installed on the HPC.</p>
-<pre><code>$ <b>module av 2>&1 | grep -i -e "LAMMPS"</b>
+<div class="highlight"><pre><span></span><code>$ module av 2&gt;&amp;1 | grep -i -e &quot;LAMMPS&quot;
 LAMMPS/9Dec14-intel-2015a
 LAMMPS/30Oct14-intel-2014a
 LAMMPS/5Sep14-intel-2014a
-</code></pre>
-
+</code></pre></div>
 <p>As you are not aware of the capitals letters in the module name, we
 looked for a case-insensitive name with the "-i" option.</p>
 

@@ -1265,9 +1265,8 @@ or check for options that control how many threads/cores/nodes can be used.</p>
 and thus requesting multiple cores and/or nodes will only result in wasted resources.</p>
 <h2 id="walltime-issues">Walltime issues<a class="headerlink" href="#walltime-issues" title="Permanent link">#</a></h2>
 <p>If you get from your job output an error message similar to this:</p>
-<pre><code>=>> PBS: job killed: walltime <i>&lt;value in seconds&gt; exceeded limit  &lt;value in seconds&gt;</i>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>=&gt;&gt; PBS: job killed: walltime &lt;value in seconds&gt; exceeded limit  &lt;value in seconds&gt;
+</code></pre></div>
 <p>This occurs when your job did not complete within the requested
 walltime. See
 section on <a href="../fine_tuning_job_specifications/#specifying-walltime">Specifying Walltime</a> for more information
@@ -1278,15 +1277,12 @@ These errors are usually related to the quota usage. You may have
 reached your quota limit at some storage endpoint. You should move (or
 remove) the data to a different storage endpoint (or request more quota)
 to be able to write to the disk and then resubmit the jobs. </p>
-<!-- FIXME: Add how to request quota section -->
-
 <h2 id="sec:connecting-issues">Issues connecting to login node<a class="headerlink" href="#sec:connecting-issues" title="Permanent link">#</a></h2>
 <p>If you are confused about the SSH public/private key pair concept, maybe
 the key/lock analogy in <a href="../account/#how-do-ssh-keys-work">How do SSH keys work?</a> can help.</p>
 <p>If you have errors that look like:</p>
-<pre><code>vsc20167@login.hpc.uantwerpen.be: Permission denied
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>vsc20167@login.hpc.uantwerpen.be: Permission denied
+</code></pre></div>
 <p>or you are experiencing problems with connecting, here is a list of
 things to do that should help:</p>
 <ol>
@@ -1310,12 +1306,12 @@ things to do that should help:</p>
 <li>Use <code>ssh-add</code> (see section <a href="../account/#using-an-ssh-agent-optional">Using an SSH agent</a>) <em>OR;</em></li>
 <li>Specify the location of the key in <code>$HOME/.ssh/config</code>. You will
             need to replace the VSC login id in the <code>User</code> field with your own:
-            <pre><code>                Host Leibniz
-                Hostname login.hpc.uantwerpen.be
-                IdentityFile <i>/path/to/private/key</i>
-                User <i>vsc20167</I>
-            </code></pre>
-    Now you can just connect with <tt> ssh Leibniz</tt>.</li>
+            <div class="highlight"><pre><span></span><code>Host Leibniz
+    Hostname login.hpc.uantwerpen.be
+    IdentityFile /path/to/private/key
+    User vsc20167
+</code></pre></div>
+    Now you can connect with <code>ssh Leibniz</code>.</li>
 </ol>
 </li>
 <li>
@@ -1351,16 +1347,15 @@ section <a href="../connecting/#connect">Connect</a>)</p>
 <p>If you've tried all applicable items above and it doesn't solve your
 problem, please contact hpc@uantwerpen.be and include the following information:</p>
 <p>Please add <code>-vvv</code> as a flag to <code>ssh</code> like:</p>
-<pre><code>ssh -vvv vsc20167@login.hpc.uantwerpen.be
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>ssh -vvv vsc20167@login.hpc.uantwerpen.be
+</code></pre></div>
 <p>and include the output of that command in the message.</p>
 <h2 id="security-warning-about-invalid-host-key">Security warning about invalid host key<a class="headerlink" href="#security-warning-about-invalid-host-key" title="Permanent link">#</a></h2>
 <p>If you get a warning that looks like the one below, it is possible that
 someone is trying to intercept the connection between you and the system
 you are connecting to. Another possibility is that the host key of the
 system you are connecting to has changed.</p>
-<pre><code>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
+<div class="highlight"><pre><span></span><code>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
 @     WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!    @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
 IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY! 
@@ -1371,47 +1366,42 @@ The fingerprint for the ECDSA key sent by the remote host is
 SHA256:1MNKFTfl1T9sm6tTWAo4sn7zyEfiWFLKbk/mlT+7S5s. 
 Please contact your system administrator. 
 Add correct host key in  ~/.ssh/known_hosts to get rid of this message. 
-Offending ECDSA key in  ~/.ssh/known_hosts:<b>21</b>
+Offending ECDSA key in  ~/.ssh/known_hosts:21
 ECDSA host key for login.hpc.uantwerpen.be has changed and you have requested strict checking.
 Host key verification failed.
-</code></pre>
-
+</code></pre></div>
 <p>You will need to remove the line it's complaining about (in the example,
 line 21). To do that, open <code>~/.ssh/known_hosts</code> in an editor, and remove the
 line. This results in <code>ssh</code> "forgetting" the system you are connecting
 to.</p>
 <p>Alternatively you can use the command that might be shown by the warning under
 <code>remove with:</code> and it should be something like this:</p>
-<pre><code>ssh-keygen -f "~/.ssh/known_hosts" -R "login.hpc.uantwerpen.be"
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>ssh-keygen -f &quot;~/.ssh/known_hosts&quot; -R &quot;login.hpc.uantwerpen.be&quot;
+</code></pre></div>
 <p>If the command is not shown, take the file from the "Offending ECDSA key in",
 and the host name from "ECDSA host key for" lines.</p>
 <p>After you've done that, you'll need to connect to the UAntwerpen-HPC again. See <a href="./#warning-message-when-first-connecting-to-new-host">Warning message when first connecting to new host</a> to verify the fingerprints.</p>
 <h2 id="doswindows-text-format">DOS/Windows text format<a class="headerlink" href="#doswindows-text-format" title="Permanent link">#</a></h2>
 <p>If you get errors like:</p>
-<pre><code><b>qsub fibo.pbs</b>
+<div class="highlight"><pre><span></span><code>$ qsub fibo.pbs
 qsub: script is written in DOS/Windows text format
-</code></pre>
-
+</code></pre></div>
 <p>or</p>
-<pre><code>sbatch: error: Batch script contains DOS line breaks (\r\n)
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>sbatch: error: Batch script contains DOS line breaks (\r\n)
+</code></pre></div>
 <p>It's probably because you transferred the files from a Windows computer.
 See the <a href="../linux-tutorial/uploading_files/#dos2unix">section about <code>dos2unix</code> in Linux tutorial</a> to fix this error.</p>
 <h2 id="warning-message-when-first-connecting-to-new-host">Warning message when first connecting to new host<a class="headerlink" href="#warning-message-when-first-connecting-to-new-host" title="Permanent link">#</a></h2>
-<pre><code><b>ssh vsc20167@login.hpc.uantwerpen.be</b>
-The authenticity of host login.hpc.uantwerpen.be (&lt;IP-adress&gt;) can't be established. 
-<u>&lt;algorithm&gt; key fingerprint is &lt;hash&gt;</u>
+<div class="highlight"><pre><span></span><code>$ ssh vsc20167@login.hpc.uantwerpen.be
+The authenticity of host login.hpc.uantwerpen.be (&lt;IP-adress&gt;) can&#39;t be established. 
+&lt;algorithm&gt; key fingerprint is &lt;hash&gt;
 Are you sure you want to continue connecting (yes/no)?
-</code></pre>
-
+</code></pre></div>
 <p>Now you can check the authenticity by checking if the line that is at
 the place of the underlined piece of text matches one of the following
 lines:</p>
-<pre><code>{{ opensshFirstConnect }}</code></pre>
-
+<div class="highlight"><pre><span></span><code>{{ opensshFirstConnect }}
+</code></pre></div>
 <p>If it does, type <strong><em>yes</em></strong>. If it doesn't, please contact support: hpc@uantwerpen.be.</p>
 <h2 id="memory-limits">Memory limits<a class="headerlink" href="#memory-limits" title="Permanent link">#</a></h2>
 <p>To avoid jobs allocating too much memory, there are memory limits in
@@ -1437,8 +1427,6 @@ you via the <code>ulimit -v</code> command <em>in your job script</em>.</p>
 <h3 id="how-do-i-specify-the-amount-of-memory-i-need">How do I specify the amount of memory I need?<a class="headerlink" href="#how-do-i-specify-the-amount-of-memory-i-need" title="Permanent link">#</a></h3>
 <p>See <a href="../running_batch_jobs/#generic-resource-requirements">Generic resource requirements</a> to set memory and other requirements, see <a href="../fine_tuning_job_specifications/#specifying-memory-requirements">Specifying memory requirements</a> to finetune the amount of
 memory you request.</p>
-<!-- % See issue #248 to fix Java. This is software specific.
-% See issue #196 to fix MATLAB. This is software specific. -->
 
 
 

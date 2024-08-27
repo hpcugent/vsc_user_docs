@@ -942,273 +942,166 @@
 <p>Remember to substitute the usernames, login nodes, file names, ...for
 your own.</p>
 <table>
-    <tr>
-        <td colspan="2">
-            <center><b>Login</b></center>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-          Login
-        </td>
-        <td colspan="1">
-          <tt>ssh vsc20167@login.hpc.uantwerpen.be</tt>
-        </td>
-    </tr>
-    <tr>
-      <td colspan ="1">
-        Where am I?
-      </td>
-      <td colspan="1">
-        <tt>hostname</tt>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Copy to UAntwerpen-HPC
-      </td>
-      <td>
-        <tt>scp foo.txt vsc20167@login.hpc.uantwerpen.be:</tt>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Copy from UAntwerpen-HPC
-      </td>
-      <td> 
-        <tt>scp vsc20167@login.hpc.uantwerpen.be:foo.txt</tt>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Setup ftp session
-      </td>
-      <td>
-        <tt>sftp vsc20167@login.hpc.uantwerpen.be</tt>
-      </td>
-    </tr>
+<thead>
+<tr>
+<th><strong>Login</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Login</td>
+<td><code>ssh vsc20167@login.hpc.uantwerpen.be</code></td>
+</tr>
+<tr>
+<td>Where am I?</td>
+<td><code>hostname</code></td>
+</tr>
+<tr>
+<td>Copy to UAntwerpen-HPC</td>
+<td><code>scp foo.txt vsc20167@login.hpc.uantwerpen.be:</code></td>
+</tr>
+<tr>
+<td>Copy from UAntwerpen-HPC</td>
+<td><code>scp vsc20167@login.hpc.uantwerpen.be:foo.txt</code></td>
+</tr>
+<tr>
+<td>Setup ftp session</td>
+<td><code>sftp vsc20167@login.hpc.uantwerpen.be</code></td>
+</tr>
+</tbody>
 </table>
-
 <table>
-    <tr>
-        <td colspan="2">
-            <center><b>Modules</b></center>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-          List all available modules
-        </td>
-        <td colspan="1">
-         Module avail
-        </td>
-    </tr>
-    <tr>
-      <td colspan ="1">
-        List loaded modules
-      </td>
-      <td colspan="1">
-        module list
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Load module
-      </td>
-      <td>
-        module load example
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Unload module
-      </td>
-      <td> 
-        module unload example
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Unload all modules
-      </td>
-      <td>
-        module purge
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Help on use of module
-      </td>
-      <td>
-        module help
-      </td>
-    </tr>
+<thead>
+<tr>
+<th><strong>Modules</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>List all available modules</td>
+<td>Module avail</td>
+</tr>
+<tr>
+<td>List loaded modules</td>
+<td>module list</td>
+</tr>
+<tr>
+<td>Load module</td>
+<td>module load example</td>
+</tr>
+<tr>
+<td>Unload module</td>
+<td>module unload example</td>
+</tr>
+<tr>
+<td>Unload all modules</td>
+<td>module purge</td>
+</tr>
+<tr>
+<td>Help on use of module</td>
+<td>module help</td>
+</tr>
+</tbody>
 </table>
-
 <table>
-    <tr>
-        <td colspan="2">
-            <center><b>Jobs</b></center>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-          Submit job with job script <tt>script.pbs</tt>
-        </td>
-        <td colspan="1">
-          <tt>qsub script.pbs</tt>
-        </td>
-    </tr>
-    <tr>
-      <td colspan ="1">
-        Status of job with ID 12345
-      </td>
-      <td colspan="1">
-        <tt>qstat 12345</tt>
-      </td>
-    </tr>
-
-    <tr>
-      <td colspan ="1">
-        Possible start time of job with ID 12345 (not available everywhere)
-      </td>
-      <td colspan="1">
-        <tt>showstart 12345</tt>
-      </td>
-    </tr>
-    <tr>
-      <td colspan ="1">
-        Check job with ID 12345 (not available everywhere)
-      </td>
-      <td colspan="1">
-        <tt>checkjob 12345</tt>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Show compute node of job with ID 12345
-      </td>
-      <td>
-        <tt>qstat -n 12345</tt>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Delete job with ID 12345
-      </td>
-      <td> 
-        <tt>qdel 12345</tt>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Status of all your jobs
-      </td>
-      <td>
-        <tt>qstat</tt>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Detailed status of your jobs + a list nodes they are running on
-      </td>
-      <td>
-        <tt>qstat -na</tt>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Show all jobs on queue (not available everywhere)
-      </td>
-      <td>
-        <tt>showq</tt>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Submit Interactive job
-      </td>
-      <td>
-        <tt>qsub -I</tt>
-      </td>
-    </tr>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>qsub script.pbs</code></td>
+<td>Submit job with job script <code>script.pbs</code></td>
+</tr>
+<tr>
+<td><code>qstat 12345</code></td>
+<td>Status of job with ID 12345</td>
+</tr>
+<tr>
+<td><code>showstart 12345</code></td>
+<td>Possible start time of job with ID 12345 (not available everywhere)</td>
+</tr>
+<tr>
+<td><code>checkjob 12345</code></td>
+<td>Check job with ID 12345 (not available everywhere)</td>
+</tr>
+<tr>
+<td><code>qstat -n 12345</code></td>
+<td>Show compute node of job with ID 12345</td>
+</tr>
+<tr>
+<td><code>qdel 12345</code></td>
+<td>Delete job with ID 12345</td>
+</tr>
+<tr>
+<td><code>qstat</code></td>
+<td>Status of all your jobs</td>
+</tr>
+<tr>
+<td><code>qstat -na</code></td>
+<td>Detailed status of your jobs + a list of nodes they are running on</td>
+</tr>
+<tr>
+<td><code>showq</code></td>
+<td>Show all jobs on queue (not available everywhere)</td>
+</tr>
+<tr>
+<td><code>qsub -I</code></td>
+<td>Submit Interactive job</td>
+</tr>
+</tbody>
 </table>
-
 <table>
-    <tr>
-        <td colspan="2">
-            <center><b>Disk quota</b></center>
-        </td>
-    </tr>
-
-    <tr>
-        <td colspan="1">
-          Check your disk quota
-        </td>
-        <td colspan="1">
-          <tt>mmlsquota</tt>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-          Check your disk quota nice
-        </td>
-        <td colspan="1">
-          <tt>show_quota.py</tt>
-        </td>
-    </tr>
-
-    <tr>
-      <td colspan ="1">
-        Disk usage in current directory (<tt>.<tt>)
-      </td>
-      <td colspan="1">
-        <tt>du -h</tt>
-      </td>
-    </tr>
+<thead>
+<tr>
+<th><strong>Disk quota</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Check your disk quota</td>
+<td><code>mmlsquota</code></td>
+</tr>
+<tr>
+<td>Check your disk quota nice</td>
+<td><code>show_quota.py</code></td>
+</tr>
+<tr>
+<td>Disk usage in current directory (<code>.</code>)</td>
+<td><code>du -h</code></td>
+</tr>
+</tbody>
 </table>
-
 <table>
-    <tr>
-        <td colspan="2">
-            <center><b>Worker Framework</b></center>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-          Load worker module
-        </td>
-        <td colspan="1">
-         <tt> module load worker/1.6.12-foss-2021b</tt>  Don't forget to specify a version. To list available versions, use <tt>module avail worker/</tt>
-        </td>
-    </tr>
-    <tr>
-      <td colspan ="1">
-        Submit parameter sweep
-      </td>
-      <td colspan="1">
-        <tt>wsub -batch weather.pbs -data data.csv</tt>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Submit job array
-      </td>
-      <td>
-        <tt>wsub -t 1-100 -batch test_set.pbs</tt>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Submit job array with prolog and epilog
-      </td>
-      <td> 
-        <tt>wsub -prolog pre.sh -batch test_set.pbs -epilog post.sh -t 1-100</tt>
-      </td>
-    </tr>
+<thead>
+<tr>
+<th><strong>Worker Framework</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Load worker module</td>
+<td><code>module load worker/1.6.12-foss-2021b</code>  Don't forget to specify a version. To list available versions, use <code>module avail worker/</code></td>
+</tr>
+<tr>
+<td>Submit parameter sweep</td>
+<td><code>wsub -batch weather.pbs -data data.csv</code></td>
+</tr>
+<tr>
+<td>Submit job array</td>
+<td><code>wsub -t 1-100 -batch test_set.pbs</code></td>
+</tr>
+<tr>
+<td>Submit job array with prolog and epilog</td>
+<td><code>wsub -prolog pre.sh -batch test_set.pbs -epilog post.sh -t 1-100</code></td>
+</tr>
+</tbody>
 </table>
 
 

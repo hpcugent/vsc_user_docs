@@ -1305,9 +1305,8 @@ or check for options that control how many threads/cores/nodes can be used.</p>
 and thus requesting multiple cores and/or nodes will only result in wasted resources.</p>
 <h2 id="walltime-issues">Walltime issues<a class="headerlink" href="#walltime-issues" title="Permanent link">#</a></h2>
 <p>If you get from your job output an error message similar to this:</p>
-<pre><code>=>> PBS: job killed: walltime <i>&lt;value in seconds&gt; exceeded limit  &lt;value in seconds&gt;</i>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>=&gt;&gt; PBS: job killed: walltime &lt;value in seconds&gt; exceeded limit  &lt;value in seconds&gt;
+</code></pre></div>
 <p>This occurs when your job did not complete within the requested
 walltime. See
 section on <a href="../fine_tuning_job_specifications/#specifying-walltime">Specifying Walltime</a> for more information
@@ -1318,15 +1317,12 @@ These errors are usually related to the quota usage. You may have
 reached your quota limit at some storage endpoint. You should move (or
 remove) the data to a different storage endpoint (or request more quota)
 to be able to write to the disk and then resubmit the jobs. </p>
-<!-- FIXME: Add how to request quota section -->
-
 <h2 id="sec:connecting-issues">Issues connecting to login node<a class="headerlink" href="#sec:connecting-issues" title="Permanent link">#</a></h2>
 <p>If you are confused about the SSH public/private key pair concept, maybe
 the key/lock analogy in <a href="../account/#how-do-ssh-keys-work">How do SSH keys work?</a> can help.</p>
 <p>If you have errors that look like:</p>
-<pre><code>vsc20167@login.hpc.uantwerpen.be: Permission denied
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>vsc20167@login.hpc.uantwerpen.be: Permission denied
+</code></pre></div>
 <p>or you are experiencing problems with connecting, here is a list of
 things to do that should help:</p>
 <ol>
@@ -1369,9 +1365,8 @@ filename should end in <code>.ppk</code> (not in <code>.pub</code>). </p>
 </li>
 </ol>
 <p>If you are using PuTTY and get this error message:</p>
-<pre><code>server unexpectedly closed network connection
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>server unexpectedly closed network connection
+</code></pre></div>
 <p>it is possible that the PuTTY version you are using is too old and
 doesn't support some required (security-related) features.</p>
 <p>Make sure you are using the latest PuTTY version if you are encountering
@@ -1388,34 +1383,24 @@ and include it in the email.</p>
 </li>
 <li>
 <p>Single click on the saved configuration</p>
-<p><center>
-<img alt="image" src="../img/831change01.png" />
-</center></p>
+<p><img alt="image" src="../img/831change01.png" /></p>
 </li>
 <li>
 <p>Then click <span class="keys"><kbd>Load</kbd></span> button</p>
-<p><center>
-<img alt="image" src="../img/831change02.png" />
-</center></p>
+<p><img alt="image" src="../img/831change02.png" /></p>
 </li>
 <li>
 <p>Expand SSH category (on the left panel) clicking on the "+" next
     to SSH</p>
-<p><center>
-<img alt="image" src="../img/831change03.png" />
-</center></p>
+<p><img alt="image" src="../img/831change03.png" /></p>
 </li>
 <li>
 <p>Click on Auth under the SSH category</p>
-<p><center>
-<img alt="image" src="../img/831change04.png" />
-</center></p>
+<p><img alt="image" src="../img/831change04.png" /></p>
 </li>
 <li>
 <p>On the right panel, click <span class="keys"><kbd>Browse</kbd></span> button</p>
-<p><center>
-<img alt="image" src="../img/831change05.png" />
-</center></p>
+<p><img alt="image" src="../img/831change05.png" /></p>
 </li>
 <li>
 <p>Then search your private key on your computer (with the extension
@@ -1423,15 +1408,11 @@ and include it in the email.</p>
 </li>
 <li>
 <p>Go back to the top of category, and click Session</p>
-<p><center>
-<img alt="image" src="../img/831change06.png" />
-</center></p>
+<p><img alt="image" src="../img/831change06.png" /></p>
 </li>
 <li>
 <p>On the right panel, click on <span class="keys"><kbd>Save</kbd></span> button</p>
-<p><center>
-<img alt="image" src="../img/831change07.png" />
-</center></p>
+<p><img alt="image" src="../img/831change07.png" /></p>
 </li>
 </ol>
 <h3 id="check-whether-your-private-key-in-putty-matches-the-public-key-on-the-accountpage">Check whether your private key in PuTTY matches the public key on the accountpage<a class="headerlink" href="#check-whether-your-private-key-in-putty-matches-the-public-key-on-the-accountpage" title="Permanent link">#</a></h3>
@@ -1441,28 +1422,20 @@ and include it in the email.</p>
 <p>Single click on the textbox containing the path to your private key,
     then select all text (push <span class="keys"><kbd>Ctrl</kbd></span> + <span class="keys"><kbd>a</kbd></span> ), then copy the location of the
     private key (push <span class="keys"><kbd>Ctrl</kbd></span> + <span class="keys"><kbd>c</kbd></span>)</p>
-<p><center>
-<img alt="image" src="../img/832check05.png" />
-</center></p>
+<p><img alt="image" src="../img/832check05.png" /></p>
 </li>
 <li>
 <p>Open PuTTYgen</p>
-<p><center>
-<img alt="image" src="../img/832check06.png" />
-</center></p>
+<p><img alt="image" src="../img/832check06.png" /></p>
 </li>
 <li>
 <p>Enter menu item "File" and select "Load Private key"</p>
-<p><center>
-<img alt="image" src="../img/832check07.png" />
-</center></p>
+<p><img alt="image" src="../img/832check07.png" /></p>
 </li>
 <li>
 <p>On the "Load private key" popup, click in the textbox next to
     "File name:", then paste the location of your private key (push <span class="keys"><kbd>Ctrl</kbd></span> + <span class="keys"><kbd>v</kbd></span>), then click <span class="keys"><kbd>Open</kbd></span></p>
-<p><center>
-<img alt="image" src="../img/832check08.png" />
-</center></p>
+<p><img alt="image" src="../img/832check08.png" /></p>
 </li>
 <li>
 <p>Make sure that your Public key from the "Public key for pasting
@@ -1470,9 +1443,7 @@ and include it in the email.</p>
     keys" section on the accountpage <a href="https://account.vscentrum.be">https://account.vscentrum.be</a>.
     (Scroll down to the bottom of "View Account" tab, you will find
     there the "Public keys" section)</p>
-<p><center>
-<img alt="image" src="../img/832check09.png" />
-</center></p>
+<p><img alt="image" src="../img/832check09.png" /></p>
 </li>
 </ol>
 <h2 id="security-warning-about-invalid-host-key">Security warning about invalid host key<a class="headerlink" href="#security-warning-about-invalid-host-key" title="Permanent link">#</a></h2>
@@ -1482,15 +1453,13 @@ you are connecting to. Another possibility is that the host key of the
 system you are connecting to has changed.</p>
 <p>You will need to verify that the fingerprint shown in the dialog matches
 one of the following fingerprints:</p>
-<pre><code>- ssh-rsa 2048 5a:40:9d:2a:f4:b7:6c:87:0d:87:30:07:9d:ea:80:11
+<div class="highlight"><pre><span></span><code>- ssh-rsa 2048 5a:40:9d:2a:f4:b7:6c:87:0d:87:30:07:9d:ea:80:11
 - sha-rsa 2048 SHA256:W8HRHTZpPd2GIhoNU2xj2oUKhcFr2bjIzZsKzY+1PCA
 - ssh-ecdsa 256 f9:4f:19:9b:fb:40:c5:6c:6f:b9:64:2e:33:0a:8d:26
 - ssh-ecdsa 256 SHA256:DlsP+jFrTqSdr9VquUpDj17Uy99zFdFN/LxVhaQQzbo
 - ssh-ed25519 255 df:0c:61:b9:26:51:0f:b4:ca:43:ac:f6:ee:d2:a1:29
 - ssh-ed25519 255 SHA256:+vlrkJui34B4iumxGVHd447K3W8wzgE1n1h2/Ic0WlE
-
-</code></pre>
-
+</code></pre></div>
 <p><strong>Do not click "Yes" until you verified the fingerprint. Do not press "No" in any case.</strong></p>
 <p>If the fingerprint matches, click "Yes".</p>
 <p>If it doesn't (like in the example) or you are in doubt, take a screenshot, press "Cancel" and contact hpc@uantwerpen.be.</p>
@@ -1498,19 +1467,15 @@ one of the following fingerprints:</p>
 rather than <code>ssh-ed25519 256</code> (or vice versa), depending on the PuTTY version you are using.
 It is safe to ignore this <code>255</code> versus <code>256</code> difference, but the part after should be
 <strong>identical</strong>.</p>
-<p><center>
-<img alt="image" src="../img/putty_security_alert.jpg" />
-</center></p>
+<p><img alt="image" src="../img/putty_security_alert.jpg" /></p>
 <h2 id="doswindows-text-format">DOS/Windows text format<a class="headerlink" href="#doswindows-text-format" title="Permanent link">#</a></h2>
 <p>If you get errors like:</p>
-<pre><code><b>qsub fibo.pbs</b>
+<div class="highlight"><pre><span></span><code>$ qsub fibo.pbs
 qsub: script is written in DOS/Windows text format
-</code></pre>
-
+</code></pre></div>
 <p>or</p>
-<pre><code>sbatch: error: Batch script contains DOS line breaks (\r\n)
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>sbatch: error: Batch script contains DOS line breaks (\r\n)
+</code></pre></div>
 <p>It's probably because you transferred the files from a Windows computer.
 See the <a href="../linux-tutorial/uploading_files/#dos2unix">section about <code>dos2unix</code> in Linux tutorial</a> to fix this error.</p>
 <h2 id="warning-message-when-first-connecting-to-new-host">Warning message when first connecting to new host<a class="headerlink" href="#warning-message-when-first-connecting-to-new-host" title="Permanent link">#</a></h2>
@@ -1519,14 +1484,13 @@ See the <a href="../linux-tutorial/uploading_files/#dos2unix">section about <cod
 Alert will appear and you will be asked to verify the authenticity of the
 login node.</p>
 <p>Make sure the fingerprint in the alert matches one of the following:</p>
-<pre><code>- ssh-rsa 2048 5a:40:9d:2a:f4:b7:6c:87:0d:87:30:07:9d:ea:80:11
+<div class="highlight"><pre><span></span><code>- ssh-rsa 2048 5a:40:9d:2a:f4:b7:6c:87:0d:87:30:07:9d:ea:80:11
 - sha-rsa 2048 SHA256:W8HRHTZpPd2GIhoNU2xj2oUKhcFr2bjIzZsKzY+1PCA
 - ssh-ecdsa 256 f9:4f:19:9b:fb:40:c5:6c:6f:b9:64:2e:33:0a:8d:26
 - ssh-ecdsa 256 SHA256:DlsP+jFrTqSdr9VquUpDj17Uy99zFdFN/LxVhaQQzbo
 - ssh-ed25519 255 df:0c:61:b9:26:51:0f:b4:ca:43:ac:f6:ee:d2:a1:29
 - ssh-ed25519 255 SHA256:+vlrkJui34B4iumxGVHd447K3W8wzgE1n1h2/Ic0WlE
-</code></pre>
-
+</code></pre></div>
 <p>If it does, press <strong><em>Yes</em></strong>, if it doesn't, please contact hpc@uantwerpen.be.</p>
 <p><em>Note:</em> it is possible that the <code>ssh-ed25519</code> fingerprint starts with <code>ssh-ed25519 255</code>
 rather than <code>ssh-ed25519 256</code> (or vice versa), depending on the PuTTY version you are using.
@@ -1557,8 +1521,6 @@ you via the <code>ulimit -v</code> command <em>in your job script</em>.</p>
 <h3 id="how-do-i-specify-the-amount-of-memory-i-need">How do I specify the amount of memory I need?<a class="headerlink" href="#how-do-i-specify-the-amount-of-memory-i-need" title="Permanent link">#</a></h3>
 <p>See <a href="../running_batch_jobs/#generic-resource-requirements">Generic resource requirements</a> to set memory and other requirements, see <a href="../fine_tuning_job_specifications/#specifying-memory-requirements">Specifying memory requirements</a> to finetune the amount of
 memory you request.</p>
-<!-- % See issue #248 to fix Java. This is software specific.
-% See issue #196 to fix MATLAB. This is software specific. -->
 
 
 

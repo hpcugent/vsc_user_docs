@@ -988,31 +988,27 @@ directory, or you have mistyped the file name or path.</p>
 different <code>$VSC_*</code> variables.</p>
 <h3 id="spaces">Spaces<a class="headerlink" href="#spaces" title="Permanent link">#</a></h3>
 <p>Filenames should <strong>not</strong> contain any spaces! If you have a long filename you
-should use underscores or dashes (e.g., <code>very_long_filename</code>).</p>
-<pre><code>$ <b>cat some file</b>
-No such file or directory 'some'
-</code></pre>
-
+should use underscores or dashes (e.g., <code>very_long_filename</code>).
+<div class="highlight"><pre><span></span><code>$ cat some file
+No such file or directory &#39;some&#39;
+</code></pre></div></p>
 <p>Spaces are permitted, however they result in surprising behaviour. To
 cat the file <code>'some file'</code> as above, you can escape the space with a
-backslash ("<code>\</code>") or you can put the filename in quotes:</p>
-<pre><code>$ <b>cat some\ file</b>
+backslash ("<code>\</code>") or you can put the filename in quotes:
+<div class="highlight"><pre><span></span><code>$ cat some\ file
 ...
-$ <b>cat "some file"</b>
+$ cat &quot;some file&quot;
 ...
-</code></pre>
-
-<p>This is especially error-prone if you are piping results of <code>find</code>:</p>
-<pre><code>$ <b>find . -type f | xargs cat</b>
+</code></pre></div></p>
+<p>This is especially error-prone if you are piping results of <code>find</code>:
+<div class="highlight"><pre><span></span><code>$ find . -type f | xargs cat
 No such file or directory name ’some’
 No such file or directory name ’file’
-</code></pre>
-
-<p>This can be worked around using the <code>-print0</code> flag:</p>
-<pre><code>$ <b>find . -type f -print0 | xargs -0 cat</b>
+</code></pre></div></p>
+<p>This can be worked around using the <code>-print0</code> flag:
+<div class="highlight"><pre><span></span><code>$ find . -type f -print0 | xargs -0 cat
 ...
-</code></pre>
-
+</code></pre></div></p>
 <p>But, this is tedious, and you can prevent errors by simply colouring
 within the lines and not using spaces in filenames.</p>
 <h3 id="missingmistyped-environment-variables">Missing/mistyped environment variables<a class="headerlink" href="#missingmistyped-environment-variables" title="Permanent link">#</a></h3>
@@ -1020,31 +1016,31 @@ within the lines and not using spaces in filenames.</p>
 be careful to make sure that the environment variable exists. If you
 mistype an environment variable then it will resolve into a blank string.
 This means the following resolves to <code>rm -r ~/*</code> which will remove every
-file in your home directory!</p>
-<pre><code>$ <b>rm -r ~/$PROJETC/*</b></code></pre>
-
+file in your home directory!
+<div class="highlight"><pre><span></span><code>$ rm -r ~/$PROJETC/*
+</code></pre></div></p>
 <h3 id="typing-dangerous-commands">Typing dangerous commands<a class="headerlink" href="#typing-dangerous-commands" title="Permanent link">#</a></h3>
 <p>A good habit when typing dangerous commands is to precede the line with
 <code>#</code>, the comment character. This will let you type out the command
 without fear of accidentally hitting enter and running something
-unintended.</p>
-<pre><code>$ <b>#rm -r ~/$POROJETC/*</b></code></pre>
-<p>Then you can go back to the beginning of the line (<code>Ctrl-A</code>) and remove
+unintended.
+<div class="highlight"><pre><span></span><code>$ #rm -r ~/$POROJETC/*
+</code></pre></div>
+Then you can go back to the beginning of the line (<code>Ctrl-A</code>) and remove
 the first character (<code>Ctrl-D</code>) to run the command. You can also just
 press enter to put the command in your history so you can come back to
 it later (e.g., while you go check the spelling of your environment
 variables).</p>
 <h3 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">#</a></h3>
-<pre><code>$ <b>ls -l script.sh # File with correct permissions</b>
+<div class="highlight"><pre><span></span><code>$ ls -l script.sh # File with correct permissions
 -rwxr-xr-x 1 vsc40000 vsc40000 2983 Jan 30 09:13 script.sh
-$ <b>ls -l script.sh # File with incorrect permissions</b>
+$ ls -l script.sh # File with incorrect permissions
 -rw-r--r-- 1 vsc40000 vsc40000 2983 Jan 30 09:13 script.sh
-</code></pre>
-
+</code></pre></div>
 <p>Before submitting the script, you'll need to add execute permissions to
-make sure it can be executed:</p>
-<pre><code>$ <b>chmod +x script_name.sh</b></code></pre>
-
+make sure it can be executed:
+<div class="highlight"><pre><span></span><code>$ chmod +x script_name.sh
+</code></pre></div></p>
 <h2 id="help">Help<a class="headerlink" href="#help" title="Permanent link">#</a></h2>
 <p>If you stumble upon an error, don't panic! Read the error output, it
 might contain a clue as to what went wrong. You can copy the error
@@ -1053,13 +1049,13 @@ filenames). It can help if you surround your search terms in double
 quotes (for example <code>"No such file or directory"</code>), that way Google will
 consider the error as one thing, and won't show results just containing
 these words in random order.</p>
-<p>If you need help about a certain command, you should consult its so-called "man page":</p>
-<pre><code>$ <b>man command</b></code></pre>
-
+<p>If you need help about a certain command, you should consult its so-called "man page":
+<div class="highlight"><pre><span></span><code>$ man command
+</code></pre></div></p>
 <p>This will open the manual of this command. This manual contains detailed
 explanation of all the options the command has. Exiting the manual is
 done by pressing 'q'.</p>
-<p><strong>Don't be afraid to contact <a href="mailto:hpc@uantwerpen.be">hpc@uantwerpen.be</a>. They are here to help and will do so for even the 
+<p><strong>Don't be afraid to contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#112;&#99;&#64;&#117;&#97;&#110;&#116;&#119;&#101;&#114;&#112;&#101;&#110;&#46;&#98;&#101;">&#104;&#112;&#99;&#64;&#117;&#97;&#110;&#116;&#119;&#101;&#114;&#112;&#101;&#110;&#46;&#98;&#101;</a>. They are here to help and will do so for even the 
 smallest of problems!</strong></p>
 <h1 id="more-information">More information<a class="headerlink" href="#more-information" title="Permanent link">#</a></h1>
 <ol>

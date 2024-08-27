@@ -939,12 +939,13 @@
 
 
 <h1 id="ch:program-examples">Program examples<a class="headerlink" href="#ch:program-examples" title="Permanent link">#</a></h1>
-<p>If you have <strong>not done so already</strong> copy our examples to your home directory by running the following command:</p>
-<pre><code><b> cp -r /apps/antwerpen/tutorials/Intro-HPC/examples ~/</b></code></pre>
-<p><sub><code>~</code>(tilde) refers to your home directory, the directory you arrive by default when you login.</sub></p>
-<p>Go to our examples:</p>
-<pre><code><b>cd ~/examples/Program-examples</b></code></pre>
-
+<p>If you have <strong>not done so already</strong> copy our examples to your home directory by running the following command:
+<div class="highlight"><pre><span></span><code> cp -r /apps/antwerpen/tutorials/Intro-HPC/examples ~/
+</code></pre></div></p>
+<p><code>~</code>(tilde) refers to your home directory, the directory you arrive by default when you login.</p>
+<p>Go to our examples:
+<div class="highlight"><pre><span></span><code>cd ~/examples/Program-examples
+</code></pre></div></p>
 <p>Here, we just have put together a number of examples for your
 convenience. We did an effort to put comments inside the source files,
 so the source code files are (should be) self-explanatory.</p>
@@ -1029,24 +1030,47 @@ so the source code files are (should be) self-explanatory.</p>
 <td>Get and print environment information</td>
 </tr>
 <tr>
-<td>omp_bug1.c<br/>omp_bug1fix.c<br/> omp_bug2.c<br/>  omp_bug3.c<br/>  omp_bug4.c<br/>  omp_bug4fix<br/>  omp_bug5.c<br/>  omp_bug5fix.c<br/> omp_bug6.c</td>
-<td>omp_bug1.f<br/>  omp_bug1fix.f<br/>  omp_bug2.f<br/>  omp_bug3.f<br/>  omp_bug4.f<br/>  omp_bug4fix<br/>  omp_bug5.f<br/>  omp_bug5fix.f<br/>  omp_bug6.f<br/></td>
+<td>omp_bug*</td>
+<td>omp_bug*</td>
 <td>Programs with bugs and their solution</td>
 </tr>
 </tbody>
 </table>
 <p>Compile by any of the following commands:</p>
 <table>
-    <tr>
-        <th>C:</th>
-        <td>icc -openmp omp_hello.c -o hello\newline pgcc -mp omp_hello.c -o hello\newline gcc -fopenmp omp_hello.c -o hello</td>
-    </tr>
-    <tr>
-        <th>Fortran:</th>
-        <td>ifort -openmp omp_hello.f -o hello\newline pgf90 -mp omp_hello.f -o hello\newline gfortran -fopenmp omp_hello.f -o hello</td>
-    </tr>
+<thead>
+<tr>
+<th><strong>Language</strong></th>
+<th><strong>Commands</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>C:</strong></td>
+<td>icc -openmp omp_hello.c -o hello</td>
+</tr>
+<tr>
+<td></td>
+<td>pgcc -mp omp_hello.c -o hello</td>
+</tr>
+<tr>
+<td></td>
+<td>gcc -fopenmp omp_hello.c -o hello</td>
+</tr>
+<tr>
+<td><strong>Fortran:</strong></td>
+<td>ifort -openmp omp_hello.f -o hello</td>
+</tr>
+<tr>
+<td></td>
+<td>pgf90 -mp omp_hello.f -o hello</td>
+</tr>
+<tr>
+<td></td>
+<td>gfortran -fopenmp omp_hello.f -o hello</td>
+</tr>
+</tbody>
 </table>
-
 <p>Be invited to explore the examples.</p>
 
 

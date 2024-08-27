@@ -1292,9 +1292,8 @@ see also <a href="https://kuantingchen04.github.io/line-endings/">https://kuanti
 sbatch: error: instead of expected UNIX line breaks (\n).
 </code></pre></div>
 <p>To fix this problem, you should run the <code>dos2unix</code> command on the file:</p>
-<pre><code>$ <b>dos2unix filename</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>$ dos2unix filename
+</code></pre></div>
 <h2 id="symlinks-for-datascratch">Symlinks for data/scratch<a class="headerlink" href="#symlinks-for-datascratch" title="Permanent link">#</a></h2>
 <p>As we end up in the home directory when connecting, it would be
 convenient if we could access our data and VO storage. To facilitate
@@ -1302,16 +1301,15 @@ this we will create symlinks to them in our home directory.
 This will create 4 symbolic links 
 (they're like "shortcuts" on your desktop)
  pointing to the respective storages:</p>
-<pre><code>$ <b>cd $HOME</b>
-$ <b>ln -s $VSC_SCRATCH scratch</b>
-$ <b>ln -s $VSC_DATA data</b>
-$ <b>ls -l scratch data</b>
-lrwxrwxrwx 1 vsc40000 vsc40000 31 Mar 27 2009 data ->
+<div class="highlight"><pre><span></span><code>$ cd $HOME
+$ ln -s $VSC_SCRATCH scratch
+$ ln -s $VSC_DATA data
+$ ls -l scratch data
+lrwxrwxrwx 1 vsc40000 vsc40000 31 Mar 27 2009 data -&gt;
     /user/data/gent/vsc400/vsc40000
-lrwxrwxrwx 1 vsc40000 vsc40000 34 Jun 5 2012 scratch ->
+lrwxrwxrwx 1 vsc40000 vsc40000 34 Jun 5 2012 scratch -&gt;
     /user/scratch/gent/vsc400/vsc40000
-</code></pre>
-
+</code></pre></div>
 <h2 id="editing-with-nano">Editing with <code>nano</code><a class="headerlink" href="#editing-with-nano" title="Permanent link">#</a></h2>
 <p>Nano is the simplest editor available on Linux. To open Nano, just type
 <code>nano</code>. To edit a file, you use <code>nano the_file_to_edit.txt</code>. You will be
@@ -1340,9 +1338,9 @@ only sending the differences between files.</p>
 <p>You will need to run <code>rsync</code> from a computer where it is installed.
 Installing <code>rsync</code> is the easiest on Linux: it comes pre-installed with
 a lot of distributions.</p>
-<p>For example, to copy a folder with lots of CSV files:</p>
-<pre><code>$ <b>rsync -rzv testfolder vsc40000@login.hpc.ugent.be:data/</b></code></pre>
-
+<p>For example, to copy a folder with lots of CSV files:
+<div class="highlight"><pre><span></span><code>$ rsync -rzv testfolder vsc40000@login.hpc.ugent.be:data/
+</code></pre></div></p>
 <p>will copy the folder <code>testfolder</code> and its contents to <code>$VSC_DATA</code> on the
 , assuming the <code>data</code> symlink is present in your home directory, see 
 <a href="./#symlinks-for-datascratch">symlinks section</a>.</p>
@@ -1352,9 +1350,10 @@ they compress well) and the <code>-v</code> enables more verbosity (more details
 about what's going on).</p>
 <p>To copy large files using <code>rsync</code>, you can use the <code>-P</code> flag: it enables
 both showing of progress and resuming partially downloaded files.</p>
-<p>To copy files to your local computer, you can also use <code>rsync</code>:</p>
-<pre><code>$ <b>rsync -rzv vsc40000@login.hpc.ugent.be:data/bioset local_folder</b></code></pre>
-<p>This will copy the folder <code>bioset</code> and its contents on <code>$VSC_DATA</code>
+<p>To copy files to your local computer, you can also use <code>rsync</code>:
+<div class="highlight"><pre><span></span><code>$ rsync -rzv vsc40000@login.hpc.ugent.be:data/bioset local_folder
+</code></pre></div>
+This will copy the folder <code>bioset</code> and its contents on <code>$VSC_DATA</code>
 to a local folder named <code>local_folder</code>.</p>
 <p>See <code>man rsync</code> or <a href="https://linux.die.net/man/1/rsync">https://linux.die.net/man/1/rsync</a> for more
 information about rsync.</p>

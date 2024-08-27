@@ -1382,9 +1382,8 @@ Apptainer/Singularity images, see
 <h2 id="execute-our-own-script-within-our-container">Execute our own script within our container<a class="headerlink" href="#execute-our-own-script-within-our-container" title="Permanent link">#</a></h2>
 <p>Copy testing image from <code>/apps/gent/tutorials/Singularity</code> to
 <code>$VSC_SCRATCH</code>:</p>
-<pre><code>$ <b>cp /apps/gent/tutorials/Singularity/CentOS7_EasyBuild.img $VSC_SCRATCH/</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>cp /apps/gent/tutorials/Singularity/CentOS7_EasyBuild.img $VSC_SCRATCH/
+</code></pre></div>
 <p>Create a job script like:</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/sh</span>
 
@@ -1407,9 +1406,8 @@ factor<span class="w"> </span><span class="m">1234567</span>
 Docker image (see <a href="https://hub.docker.com/r/tensorflow/tensorflow">https://hub.docker.com/r/tensorflow/tensorflow</a>) to a
 Apptainer/Singularity image yourself</p>
 <p>Copy testing image from <code>/apps/gent/tutorials</code> to <code>$VSC_SCRATCH</code>:</p>
-<pre><code>$ <b>cp /apps/gent/tutorials/Singularity/Ubuntu14.04_tensorflow.img $VSC_SCRATCH/</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>cp /apps/gent/tutorials/Singularity/Ubuntu14.04_tensorflow.img $VSC_SCRATCH/
+</code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/sh</span>
 <span class="c1">#</span>
 <span class="c1">#</span>
@@ -1447,19 +1445,17 @@ following requirements apply:</p>
 </ul>
 <p>Copy the testing image from <code>/apps/gent/tutorials/Singularity</code> to
 <code>$VSC_SCRATCH</code></p>
-<pre><code>$ <b>cp /apps/gent/tutorials/Singularity/Debian8_UGentMPI.img $VSC_SCRATCH/</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>cp /apps/gent/tutorials/Singularity/Debian8_UGentMPI.img $VSC_SCRATCH/
+</code></pre></div>
 <p>For example to compile an <a href="https://github.com/open-mpi/ompi/blob/master/examples/ring_c.c">MPI
 example</a>:</p>
-<pre><code>$ <b>module load intel</b>
-$ <b>apptainer shell $VSC_SCRATCH/Debian8_UGentMPI.img</b>
-$ <b>export LANG=C</b>
-$ <b>export C_INCLUDE_PATH=/usr/include/x86_64-linux-gnu/:$C_INCLUDE_PATH</b>
-$ <b>mpiicc ompi/examples/ring_c.c -o ring_debian</b>
-$ <b>exit</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module load intel
+apptainer shell $VSC_SCRATCH/Debian8_UGentMPI.img
+export LANG=C
+export C_INCLUDE_PATH=/usr/include/x86_64-linux-gnu/:$C_INCLUDE_PATH
+mpiicc ompi/examples/ring_c.c -o ring_debian
+exit
+</code></pre></div>
 <p>Example MPI job script:</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/sh</span>
 

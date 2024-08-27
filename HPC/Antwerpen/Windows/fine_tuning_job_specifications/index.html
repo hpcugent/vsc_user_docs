@@ -1353,9 +1353,9 @@ large number of utilities to monitor the performance of its components.</p>
 <li>Network bottlenecks</li>
 </ol>
 <p>First, we allocate a compute node and move to our relevant directory:</p>
-<pre><code>$ <b>qsub -I</b>
-$ <b>cd ~/examples/Fine-tuning-Job-Specifications</b></code></pre>
-
+<div class="highlight"><pre><span></span><code>qsub -I
+cd ~/examples/Fine-tuning-Job-Specifications
+</code></pre></div>
 <h2 id="specifying-walltime">Specifying Walltime<a class="headerlink" href="#specifying-walltime" title="Permanent link">#</a></h2>
 <p>One of the most important and also easiest parameters to measure is the
 duration of your program. This information is needed to specify the
@@ -1367,11 +1367,11 @@ elapsed, the time consumed by system overhead, and the time used to
 execute your executable to the standard error stream. The calculated
 times are reported in seconds.</p>
 <p>Test the time command:</p>
-<pre><code>$ <b>time sleep 75</b>
+<div class="highlight"><pre><span></span><code>$ time sleep 75
 real 1m15.005s
 user 0m0.001s
-sys 0m0.002s</code></pre>
-
+sys 0m0.002s
+</code></pre></div>
 <p>It is a good practice to correctly estimate and specify the run time
 (duration) of an application. Of course, a margin of 10% to 20% can be
 taken to be on the safe side.</p>
@@ -1380,11 +1380,11 @@ select the "slowest" compute node for your walltime tests. Your estimate
 should be appropriate in case your application will run on the "slowest"
 (oldest) compute nodes.</p>
 <p>The walltime can be specified in a job scripts as:</p>
-<pre><code>#PBS -l walltime=3:00:00:00</code></pre>
-
-<p>or on the command line</p>
-<pre><code>$ <b>qsub -l walltime=3:00:00:00</b></code></pre>
-
+<div class="highlight"><pre><span></span><code>#PBS -l walltime=3:00:00:00
+</code></pre></div>
+<p>or on the command line
+<div class="highlight"><pre><span></span><code>qsub -l walltime=3:00:00:00
+</code></pre></div></p>
 <p>It is recommended to always specify the walltime for a job.</p>
 <h2 id="specifying-memory-requirements">Specifying memory requirements<a class="headerlink" href="#specifying-memory-requirements" title="Permanent link">#</a></h2>
 <p>In many situations, it is useful to monitor the amount of memory an
@@ -1398,23 +1398,23 @@ and then releases memory, for the purpose of this test. It has one
 parameter, the amount of gigabytes of memory which needs to be
 allocated.</p>
 <p>First compile the program on your machine and then test it for 1 GB:</p>
-<pre><code>$ <b>gcc -o eat_mem eat_mem.c</b>
-$ <b>./eat_mem 1</b>
-Consuming 1 gigabyte of memory.</code></pre>
-
+<div class="highlight"><pre><span></span><code>$ gcc -o eat_mem eat_mem.c
+$ ./eat_mem 1
+Consuming 1 gigabyte of memory.
+</code></pre></div>
 <h3 id="available-memory-on-the-machine">Available Memory on the machine<a class="headerlink" href="#available-memory-on-the-machine" title="Permanent link">#</a></h3>
 <p>The first point is to be aware of the available free memory in your
 computer. The "<em>free</em>" command displays the total amount of free and
 used physical and swap memory in the system, as well as the buffers used
 by the kernel. We also use the options "-m" to see the results expressed
 in Mega-Bytes and the "-t" option to get totals.</p>
-<pre><code>$ <b>free -m -t</b>
+<div class="highlight"><pre><span></span><code>$ free -m -t
                 total   used   free  shared  buffers  cached
 Mem:            16049   4772  11277       0      107     161
 -/+ buffers/cache:      4503  11546
 Swap:           16002   4185  11816
-Total:          32052   8957  23094</code></pre>
-
+Total:          32052   8957  23094
+</code></pre></div>
 <p>Important is to note the total amount of memory available in the machine
 (i.e., 16 GB in this example) and the amount of used and free memory
 (i.e., 4.7 GB is used and another 11.2 GB is free here).</p>
@@ -1428,14 +1428,13 @@ single node jobs are supported, MPI support may be added in a future
 release.</p>
 <p>To start using monitor, first load the appropriate module. Then we study
 the "eat_mem.c" program and compile it:</p>
-<pre><code>$ <b>module load monitor</b>
-$ <b>cat eat_mem.c</b>
-$ <b>gcc -o eat_mem eat_mem.c</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>$ module load monitor
+$ cat eat_mem.c
+$ gcc -o eat_mem eat_mem.c
+</code></pre></div>
 <p>Starting a program to monitor is very straightforward; you just add the
 "monitor" command before the regular command line.</p>
-<pre><code>$ <b>monitor ./eat_mem 3</b>
+<div class="highlight"><pre><span></span><code>$ monitor ./eat_mem 3
 time (s) size (kb) %mem %cpu
 Consuming 3 gigabyte of memory.
 5  252900 1.4 0.6
@@ -1454,8 +1453,7 @@ Consuming 3 gigabyte of memory.
 70  3167280 19.2 0.2
 75  9264  0 0.5
 80  9264  0 0.4
-</code></pre>
-
+</code></pre></div>
 <p>Whereby:</p>
 <ol>
 <li>The first column shows you the elapsed time in seconds. By default,
@@ -1479,24 +1477,24 @@ standard error.</p>
 monitor's output may interfere with that of the program to monitor, it
 is often convenient to use a&nbsp;log file. The latter can be specified as
 follows:</p>
-<pre><code>$ <b>monitor -l test1.log eat_mem 2</b>
+<div class="highlight"><pre><span></span><code>$ monitor -l test1.log eat_mem 2
 Consuming 2 gigabyte of memory.
-$ <b>cat test1.log</b></code></pre>
-
+$ cat test1.log
+</code></pre></div>
 <p>For long-running programs, it may be convenient to limit the output to,
 e.g., the last minute of the programs' execution. Since monitor provides
 metrics every 5 seconds, this implies we want to limit the output to the
 last 12 values to cover a minute:</p>
-<pre><code>$ <b>monitor -l test2.log -n 12 eat_mem 4</b>
-Consuming 4 gigabyte of memory.</code></pre>
-
+<div class="highlight"><pre><span></span><code>$ monitor -l test2.log -n 12 eat_mem 4
+Consuming 4 gigabyte of memory.
+</code></pre></div>
 <p>Note that this option is only available when monitor writes its metrics
 to a&nbsp;log file, not when standard error is used.</p>
 <p>The interval at&nbsp;which monitor will show the metrics can be modified by
 specifying delta, the sample rate:</p>
-<pre><code>$ <b>monitor -d 1 ./eat_mem</b>
-Consuming 3 gigabyte of memory.</code></pre>
-
+<div class="highlight"><pre><span></span><code>$ monitor -d 1 ./eat_mem
+Consuming 3 gigabyte of memory.
+</code></pre></div>
 <p>Monitor will now print the program's metrics every second. Note that the&nbsp;minimum delta value is 1&nbsp;second.</p>
 <p>Alternative options to monitor the memory consumption are the "<em>top</em>" or the "<em>htop</em>" command.</p>
 <dl>
@@ -1514,33 +1512,30 @@ the machine and allows to scroll the list vertically and
 horizontally to see all processes and their full command lines.</p>
 </dd>
 </dl>
-<pre><code>$ <b>top</b>
-$ <b>htop</b></code></pre>
-
 <h3 id="pbs_mem">Setting the memory parameter<a class="headerlink" href="#pbs_mem" title="Permanent link">#</a></h3>
 <p>Once you gathered a good idea of the overall memory consumption of your
 application, you can define it in your job script. It is wise to foresee
 a margin of about 10%.</p>
-<p><u>Sequential or single-node applications:</u></p>
+<p>Sequential or single-node applications:</p>
 <p>The maximum amount of physical memory used by the job can be specified in a job script as:</p>
-<pre><code>#PBS -l mem=4gb</code></pre>
-
+<div class="highlight"><pre><span></span><code>#PBS -l mem=4gb
+</code></pre></div>
 <p>or on the command line</p>
-<pre><code>$ <b>qsub -l mem=4gb</b></code></pre>
-
+<div class="highlight"><pre><span></span><code>qsub -l mem=4gb
+</code></pre></div>
 <p>This setting is ignored if the number of nodes is not&nbsp;1.</p>
-<p><u>Parallel or multi-node applications:</u></p>
+<p>Parallel or multi-node applications:</p>
 <p>When you are running a parallel application over multiple cores, you can
 also specify the memory requirements per processor (pmem). This
 directive specifies the maximum amount of physical memory used by any
 process in the job.</p>
 <p>For example, if the job would run four processes and each would use up
 to 2 GB (gigabytes) of memory, then the memory directive would read:</p>
-<pre><code>#PBS -l pmem=2gb</code></pre>
-
+<div class="highlight"><pre><span></span><code>#PBS -l pmem=2gb
+</code></pre></div>
 <p>or on the command line</p>
-<pre><code>$ <b>qsub -l pmem=2gb</b></code></pre>
-
+<div class="highlight"><pre><span></span><code>$ qsub -l pmem=2gb
+</code></pre></div>
 <p>(and of course this would need to be combined with a CPU cores directive
 such as nodes=1:ppn=4). In this example, you request 8&nbsp;GB of memory in
 total on the node.</p>
@@ -1563,7 +1558,7 @@ processors on these compute nodes.</p>
 of CPUs, threads, cores, information about CPU caches, CPU family, model
 and much more. So, if you want to detect how many cores are available on
 a specific machine:</p>
-<pre><code>$ <b>less /proc/cpuinfo</b>
+<div class="highlight"><pre><span></span><code>$ less /proc/cpuinfo
 processor       : 0
 vendor_id       : GenuineIntel
 cpu family      : 6
@@ -1572,10 +1567,10 @@ model name      : Intel(R) Xeon(R) CPU  E5420  @ 2.50GHz
 stepping        : 10
 cpu MHz         : 2500.088
 cache size      : 6144 KB
-...</code></pre>
-
+...
+</code></pre></div>
 <p>Or if you want to see it in a more readable format, execute:</p>
-<pre><code>$ <b>grep processor /proc/cpuinfo</b>
+<div class="highlight"><pre><span></span><code>$ grep processor /proc/cpuinfo
 processor : 0
 processor : 1
 processor : 2
@@ -1583,8 +1578,8 @@ processor : 3
 processor : 4
 processor : 5
 processor : 6
-processor : 7</code></pre>
-
+processor : 7
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Unless you want information of the login nodes, you'll have to issue
@@ -1593,11 +1588,11 @@ in an interactive job, see <a href="../running_interactive_jobs/">the chapter on
 </div>
 <p>In order to specify the number of nodes and the number of processors per
 node in your job script, use:</p>
-<pre><code>#PBS -l nodes=N:ppn=M</code></pre>
-
+<div class="highlight"><pre><span></span><code>#PBS -l nodes=N:ppn=M
+</code></pre></div>
 <p>or with equivalent parameters on the command line</p>
-<pre><code>$ <b>qsub -l nodes=N:ppn=M</b></code></pre>
-
+<div class="highlight"><pre><span></span><code>qsub -l nodes=N:ppn=M
+</code></pre></div>
 <p>This specifies the number of nodes (nodes=N) and the number of
 processors per node (ppn=M) that the job should use. PBS treats a
 processor core as a processor, so a system with eight cores per compute
@@ -1612,12 +1607,12 @@ a single node is usually wasteful and can impact the job start time.</p>
 "<em>cpu</em>".</p>
 <p>We first load the monitor modules, study the "eat_cpu.c" program and
 compile it:</p>
-<pre><code>$ <b>module load monitor</b>
-$ <b>cat eat_cpu.c</b>
-$ <b>gcc -o eat_cpu eat_cpu.c</b></code></pre>
-
+<div class="highlight"><pre><span></span><code>$ module load monitor
+$ cat eat_cpu.c
+$ gcc -o eat_cpu eat_cpu.c
+</code></pre></div>
 <p>And then start to monitor the <em>eat_cpu</em> program:</p>
-<pre><code>$ <b>monitor -d 1 ./eat_cpu</b>
+<div class="highlight"><pre><span></span><code>$ monitor -d 1 ./eat_cpu
 time  (s) size (kb) %mem %cpu
 1  52852  0.3 100
 2  52852  0.3 100
@@ -1626,8 +1621,8 @@ time  (s) size (kb) %mem %cpu
 5  52852  0.3  99
 6  52852  0.3 100
 7  52852  0.3 100
-8  52852  0.3 100</code></pre>
-
+8  52852  0.3 100
+</code></pre></div>
 <p>We notice that it the program keeps its CPU nicely busy at 100%.</p>
 <p>Some processes spawn one or more sub-processes. In that case, the
 metrics shown by monitor are aggregated over the process and all of its
@@ -1639,7 +1634,9 @@ as a surprise that the CPU usage is reported as larger than 100%. When
 programs of this type are running on a computer with n cores, the CPU
 usage can go up to (\text{n} \times 100\%).</p>
 <p>This could also be monitored with the <em><strong>htop</strong></em> command:</p>
-<pre><code>$ <b>htop</b></code></pre>
+<p><div class="highlight"><pre><span></span><code>htop
+</code></pre></div>
+Example output:
 <div class="highlight"><pre><span></span><code>  1  [|||   11.0%]   5  [||     3.0%]     9  [||     3.0%]   13 [       0.0%]
   2  [|||||100.0%]   6  [       0.0%]     10 [       0.0%]   14 [       0.0%]
   3  [||     4.9%]   7  [||     9.1%]     11 [       0.0%]   15 [       0.0%]
@@ -1652,7 +1649,7 @@ usage can go up to (\text{n} \times 100\%).</p>
 22350 vsc00000   20   0 1729M 1071M   704 R 98.0  1.7 27:15.59 bwa index
  7703 root        0 -20 10.1G 1289M 70156 S 11.0  2.0 36h10:11 /usr/lpp/mmfs/bin
 27905 vsc00000   20   0  123M  2800  1556 R  7.0  0.0  0:17.51 htop
-</code></pre></div>
+</code></pre></div></p>
 <p>The advantage of htop is that it shows you the cpu utilisation for all
 processors as well as the details per application. A nice exercise is to
 start 4 instances of the "cpu_eat" program in 4 different terminals, and
@@ -1744,20 +1741,19 @@ eight cores for these purposes.</p>
 conventionally appears in the form of three numbers, which represent the
 system load during the last <strong>one</strong>-, <strong>five</strong>-, and <strong>fifteen</strong>-minute periods.</p>
 <p>The <strong>uptime</strong> command will show us the average load</p>
-<pre><code>$ <b>uptime</b>
+<div class="highlight"><pre><span></span><code>$ uptime
 10:14:05 up 86 days, 12:01, 11 users, load average: 0.60, 0.41, 0.41
-</code></pre>
-
+</code></pre></div>
 <p>Now, compile and start a few instances of the "<em>eat_cpu</em>" program in the background,
 and check the effect on the load again:</p>
-<pre><code>$ <b>gcc -O2 eat_cpu.c -o eat_cpu</b>
-$ <b>./eat_cpu&</b>
-$ <b>./eat_cpu&</b>
-$ <b>./eat_cpu&</b>
-$ <b>uptime</b>
+<p><div class="highlight"><pre><span></span><code>$ gcc -O2 eat_cpu.c -o eat_cpu
+$ ./eat_cpu&amp;
+$ ./eat_cpu&amp;
+$ ./eat_cpu&amp;
+$ uptime
 10:14:42 up 86 days, 12:02, 11 users, load average: 2.60, 0.93, 0.58
-</code></pre>
-<p>You can also read it in the <strong>htop</strong> command.</p>
+</code></pre></div>
+You can also read it in the <strong>htop</strong> command.</p>
 <h3 id="fine-tuning-your-executable-andor-job-script_1">Fine-tuning your executable and/or job script<a class="headerlink" href="#fine-tuning-your-executable-andor-job-script_1" title="Permanent link">#</a></h3>
 <p>It is good practice to perform a number of run time stress tests, and to
 check the system load of your nodes. We (and all other users of the UAntwerpen-HPC)
@@ -1788,14 +1784,13 @@ storage (i.e., the /tmp directory) on the compute node, which is defined
 by the <em>$VSC_SCRATCH_NODE</em> environment variable.</p>
 <p>We first load the monitor modules, study the "eat_disk.c" program and
 compile it:</p>
-<pre><code>$ <b>module load monitor</b>
-$ <b>cat eat_disk.c</b>
-$ <b>gcc -o eat_disk eat_disk.c</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>$ module load monitor
+$ cat eat_disk.c
+$ gcc -o eat_disk eat_disk.c
+</code></pre></div>
 <p>The <em>monitor</em> tool provides an option (-f) to display the size of one or
 more files:</p>
-<pre><code>$ <b>monitor -f $VSC_SCRATCH/test.txt ./eat_disk</b>
+<div class="highlight"><pre><span></span><code>$ monitor -f $VSC_SCRATCH/test.txt ./eat_disk
 time (s) size (kb) %mem %cpu
 5  1276  0 38.6 168820736
 10  1276  0 24.8 238026752
@@ -1804,8 +1799,7 @@ time (s) size (kb) %mem %cpu
 25  1276  0 26.9 614465536
 30  1276  0 27.7 760217600
 ...
-</code></pre>
-
+</code></pre></div>
 <p>Here, the size of the file "<em>test.txt</em>" in directory $VSC_SCRATCH will
 be monitored. Files can be specified by absolute as well as relative
 path, and multiple files are separated by ",".</p>
@@ -1840,19 +1834,19 @@ request nodes with an "InfiniBand" network. The InfiniBand is a
 specialised high bandwidth, low latency network that enables large
 parallel jobs to run as efficiently as possible.</p>
 <p>The parameter to add in your job script would be:</p>
-<pre><code>#PBS -l ib</code></pre>
-
+<div class="highlight"><pre><span></span><code>#PBS -l ib
+</code></pre></div>
 <p>If for some other reasons, a user is fine with the gigabit Ethernet
 network, he can specify:</p>
-<pre><code>#PBS -l gbe</code></pre>
-
+<div class="highlight"><pre><span></span><code>#PBS -l gbe
+</code></pre></div>
 <h2 id="some-more-tips-on-the-monitor-tool">Some more tips on the Monitor tool<a class="headerlink" href="#some-more-tips-on-the-monitor-tool" title="Permanent link">#</a></h2>
 <h3 id="command-lines-arguments">Command Lines arguments<a class="headerlink" href="#command-lines-arguments" title="Permanent link">#</a></h3>
 <p>Many programs, e.g., MATLAB, take command line options. To make sure
 these do not interfere with those of monitor and vice versa, the program
 can for instance be started in the following way:</p>
-<pre><code>$ <b>monitor -delta 60 -- matlab -nojvm -nodisplay computation.m</b></code></pre>
-
+<div class="highlight"><pre><span></span><code>$ monitor -delta 60 -- matlab -nojvm -nodisplay computation.m
+</code></pre></div>
 <p>The use of <code>--</code> will ensure that monitor does not get confused by
 MATLAB's <code>-nojvm</code> and <code>-nodisplay</code> options.</p>
 <h3 id="exit-code">Exit Code<a class="headerlink" href="#exit-code" title="Permanent link">#</a></h3>
@@ -1869,8 +1863,8 @@ value.</p>
 <p>It is also possible to "attach" monitor to a program or process that is
 already running. One simply determines the relevant process ID using the
 ps command, e.g., 18749, and starts monitor:</p>
-<pre><code>$ <b>monitor -p 18749</b></code></pre>
-
+<div class="highlight"><pre><span></span><code>$ monitor -p 18749
+</code></pre></div>
 <p>Note that this feature can be (ab)used to monitor specific sub-processes.</p>
 
 

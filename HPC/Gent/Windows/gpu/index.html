@@ -1378,14 +1378,12 @@
 <h2 id="submitting-jobs">Submitting jobs<a class="headerlink" href="#submitting-jobs" title="Permanent link">#</a></h2>
 <p>To submit jobs to the <code>joltik</code> GPU cluster, where each node provides 4
 NVIDIA V100 GPUs (each with 32GB of GPU memory), use:</p>
-<pre><code>$ <b>module swap cluster/joltik</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module swap cluster/joltik
+</code></pre></div>
 <p>To submit to the <code>accelgor</code> GPU cluster, where each node provides 4
 NVIDIA A100 GPUs (each with 80GB GPU memory), use:</p>
-<pre><code>$ <b>module swap cluster/accelgor</b>
-</code></pre>
-
+<div class="highlight"><pre><span></span><code>module swap cluster/accelgor
+</code></pre></div>
 <p>Then use the familiar <code>qsub</code>, <code>qstat</code>, etc. commands, taking into
 account the guidelines outlined in
 section <a href="./#requesting-gpu-resources">Requesting (GPU) resources</a>.</p>
@@ -1517,8 +1515,7 @@ but it comes at the cost of the code modifications to use horovod.</p>
 versions.</p>
 <p><strong>Note: for running TensorFlow calculations on multiple GPUs and/or on more than one workernode, use <code>Horovod</code>, see section <a href="./#horovod">Horovod</a>.</strong></p>
 <h4 id="example-tensorflow-job-script">Example TensorFlow job script<a class="headerlink" href="#example-tensorflow-job-script" title="Permanent link">#</a></h4>
-<p><center>-- TensorFlow_GPU.sh --</center>
-<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="highlight"><span class="filename">TensorFlow_GPU.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
 <span class="c1">#PBS -l walltime=5:0:0</span>
 <span class="c1">#PBS -l nodes=1:ppn=quarter:gpus=1</span>
 
@@ -1526,7 +1523,7 @@ module<span class="w"> </span>load<span class="w"> </span>TensorFlow/2.6.0-foss-
 
 <span class="nb">cd</span><span class="w"> </span><span class="nv">$PBS_O_WORKDIR</span>
 python<span class="w"> </span>example.py
-</code></pre></div></p>
+</code></pre></div>
 <!-- %TODO: add intel cpu params (only for cpu, but mention it anyway) and data format (channel_first  / NCHW)
 % OMP_NUM_THREADS=$PBS_VARIABLE_FOR_CORES
 % KMP_BLOCKTIME=0
