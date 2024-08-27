@@ -24,16 +24,20 @@ echo_error() { echo -e "\e[31m[ERROR] $1\e[0m"; }
 # ============================ Main functions ============================
 
 activate() {
-  REQUIREMENTS_FILE="$1"
-  MODULES_SCRIPT="$2"
+  local requirements_file modules_script
+  local venv_location n_loaded_modules
 
-  VENV_LOCATION=$(realpath -m "venvs/venv-${VSC_OS_LOCAL}-${VSC_ARCH_LOCAL}") # full path of venv
+  requirements_file="$1"
+  modules_script="$2"
+
+  venv_location=$(realpath -m "venvs/venv-${VSC_OS_LOCAL}-${VSC_ARCH_LOCAL}") # full path of venv
 
   # === Step 0: Warn user if they have modules loaded === #
 
-  N_LOADED_MODULES=$(echo "$LOADEDMODULES" | tr ':' '\n' | wc -l)
-  if [ "$N_LOADED_MODULES" -gt 4 ]; then # 4 is the number of modules loaded by default
-    echo_warning "You have loaded modules in the current shell. If you want to use these modules, please provide a modules script as the second argument."
+  n_loaded_modules=$(echo "$LOADEDMODULES" | tr ':' '\n' | wc -l)
+  if [ "$n_loaded_modules" -gt 4 ]; then # 4 is the number of modules loaded by default
+    echo_warning "You have loaded modules in the current shell. These modules will be purged."
+    echo_warning "If you want to use these modules, please provide a modules script as the second argument."
   fi
 
 
@@ -44,12 +48,12 @@ activate() {
 
   # === Step 2: Load Modules if module script present === #
 
-  if [ -n "$MODULES_SCRIPT" ]; then # If module script not empty
+  if [ -n "$modules_script" ]; then # If module script not empty
 
-    echo_info "Loading modules from '$MODULES_SCRIPT'"
+    echo_info "Loading modules from '$modules_script'"
 
-    if ! source "$MODULES_SCRIPT"; then # If the module script could not be loaded
-        echo_error "Could not load modules from '$MODULES_SCRIPT'"
+    if ! source "$modules_script"; then # If the module script could not be loaded
+        echo_error "Could not load modules from '$modules_script'"
         return 1
     fi
 
@@ -61,9 +65,9 @@ activate() {
 
   # === Step 3: Create Virtual Environment if not yet present === #
 
-  echo_info "Creating virtual environment at $VENV_LOCATION"
+  echo_info "Creating virtual environment at $venv_location"
   # Will automatically make the venvs folder and venv, does nothing if they already exist
-  if ! python -m venv "$VENV_LOCATION"; then
+  if ! python -m venv "$venv_location"; then
     echo_error "Could not create virtual environment"
     return 1
   fi
@@ -71,12 +75,12 @@ activate() {
   # === Step 4: Activate Virtual Environment === #
 
   echo_info "Activating virtual environment"
-  source "$VENV_LOCATION/bin/activate"
+  source "$venv_location/bin/activate"
 
   # === Step 5: Install Requirements === #
 
-  echo_info "Installing requirements from '$REQUIREMENTS_FILE'"
-  if ! pip install -r "$REQUIREMENTS_FILE"; then # This will finish quickly if the requirements are already installed
+  echo_info "Installing requirements from '$requirements_file'"
+  if ! pip install -r "$requirements_file"; then # This will finish quickly if the requirements are already installed
     echo_error "Could not install requirements"
     deactivate
     return 1
