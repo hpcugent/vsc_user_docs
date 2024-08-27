@@ -65,7 +65,7 @@ It is now possible to run Python scripts that use the installed packages in the 
     $ module show <module_name>
     ```
 
-    to check which extensions are included in a module, if any.
+    to check which extensions are included in a module (if any).
 
 
 ### Deactivating a virtual environment
