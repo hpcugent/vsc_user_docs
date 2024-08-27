@@ -159,8 +159,8 @@ $ pip install Poutyne
 $ deactivate
 ```
 
-We exit the interactive shell by pressing `CTRL+D` and create a job script that loads the PyTorch module, 
-enters the virtual environment and executes the script:
+Type `exit` to exit the interactive shell. 
+We now create a job script that loads the PyTorch module, enters the virtual environment and executes the script:
 
 ```bash title="jobscript.pbs"
 #!/bin/bash
