@@ -42,9 +42,12 @@ ml Python/3.12.3-GCCcore-13.3.0
 ```
 
 and **requirements.txt:**
-```bash
+```
 requests
 ```
+
+For more info on the `requirements.txt` file, 
+see the [pip documentation](https://pip.pypa.io/en/stable/reference/requirements-file-format/).
 
 We run the following commands to enter the environment
 
