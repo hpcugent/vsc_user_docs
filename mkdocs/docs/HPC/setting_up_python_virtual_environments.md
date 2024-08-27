@@ -22,7 +22,7 @@ A Python virtual environment can be created with the following command:
 $ python -m venv myenv      # Create a new virtual environment named 'myenv'
 ```
 
-This command creates a new directory named `myenv` in the current working directory. 
+This command creates a new subdirectory named `myenv` in the current working directory. 
 This directory will contain the packages, scripts, and binaries that are needed to manage the virtual environment.
 
 ### Activating a virtual environment
