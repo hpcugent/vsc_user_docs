@@ -59,15 +59,12 @@ extremely fast solution for all their data processing needs.
 
 The {{ hpc }} consists of:
 
-<center>
+| In technical terms                          | ... in human terms                            |
+|:--------------------------------------------|:----------------------------------------------|
+| over 280 nodes and over 11000 cores         | ... or the equivalent of 2750 quad-core PCs   |
+| over 500 Terabyte of online storage         | ... or the equivalent of over 60000 DVDs      |
+| up to 100 Gbit InfiniBand fiber connections | ... or allowing to transfer 3 DVDs per second |
 
-|In technical terms                           | ... in human terms                             |
-|:--------------------------------------------|:---------------------------------------------- |
-| over 280 nodes and over 11000 cores         |  ... or the equivalent of 2750 quad-core PCs   |
-| over 500 Terabyte of online storage         |  ... or the equivalent of over 60000 DVDs      |
-| up to 100 Gbit InfiniBand fiber connections |  ... or allowing to transfer 3 DVDs per second |
-
-</center>
 
 {%- endif %}
 

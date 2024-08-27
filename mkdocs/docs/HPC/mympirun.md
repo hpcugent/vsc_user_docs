@@ -12,8 +12,9 @@ README](https://github.com/hpcugent/vsc-mympirun/blob/master/README.md).
 
 Before using `mympirun`, we first need to load its module:
 
-<pre><code>$ <b>module load vsc-mympirun</b>
-</code></pre>
+```
+module load vsc-mympirun
+```
 
 As an exception, we don't specify a version here. The reason is that we
 want to ensure that the latest version of the `mympirun` script is
@@ -47,14 +48,15 @@ The `--hybrid` option requires a positive number. This number specifies
 the number of processes started on each available physical *node*. It
 will ignore the number of available *cores* per node.
 
-<pre><code>$ <b>echo $PBS_NUM_NODES</b>
+```
+$ echo $PBS_NUM_NODES
 2
-$ <b>mympirun --hybrid 2 ./mpihello</b>
+$ mympirun --hybrid 2 ./mpihello
 Hello world from processor node3400.doduo.os, rank 1 out of 4 processors 
 Hello world from processor node3401.doduo.os, rank 3 out of 4 processors 
 Hello world from processor node3401.doduo.os, rank 2 out of 4 processors 
 Hello world from processor node3400.doduo.os, rank 0 out of 4 processors
-</code></pre>
+```
 
 ### Other options
 
@@ -74,6 +76,7 @@ You can do a so-called "dry run", which doesn't have any side-effects,
 but just prints the command that `mympirun` would execute. You enable
 this with the `--dry-run` flag:
 
-<pre><code>$ <b>mympirun --dry-run ./mpi_hello</b>
+```
+$ mympirun --dry-run ./mpi_hello
 mpirun ... -genv I_MPI_FABRICS shm:dapl ... -np 16 ... ./mpi_hello
-</code></pre>
+```
