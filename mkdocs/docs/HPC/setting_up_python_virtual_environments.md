@@ -126,6 +126,14 @@ After some time, a shell will be started on the `donphan` cluster.
 You can now create a virtual environment as described in [the first section](#creating-a-venv).
 This virtual environment can be used by jobs running on the `donphan` cluster.
 
+!!! note "Naming a virtual environment"
+    When naming a virtual environment, it is recommended to include the name of the cluster it was created for.
+    We can use the `$VSC_INSTITUTE_CLUSTER` variable to get the name of the current cluster.
+
+    ```bash
+    $ python -m venv myenv_${VSC_INSTITUTE_CLUSTER}
+    ```
+
 
 ## Example Python job
 
