@@ -839,7 +839,7 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, title_or
         if len(jinja_text) != 0:
 
             # add first subtitle in front of section again
-            if options[SPLIT_ON_TITLES] or metadata[SUBTITLE].replace("-", " ") not in jinja_text[:len(metadata[SUBTITLE]) + 1]:
+            if options[SPLIT_ON_TITLES] or metadata[SUBTITLE] not in make_valid_title(jinja_text[:len(metadata[SUBTITLE]) + 1]):
                 jinja_text = "#" * metadata[TITLE_DEPTH] + " " + metadata[SUBTITLE].replace("-", " ") + "\n" + jinja_text
             else:
                 jinja_text = "#" * metadata[TITLE_DEPTH] + " " + jinja_text
