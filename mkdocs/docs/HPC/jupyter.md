@@ -69,7 +69,7 @@ Not all modules will work for every notebook, we need to use the one that uses t
 ![image](img/ood_jupyter_version.png)
 </center>
 
-Module names include the toolchain that was used to install the module (for example `GCCcore-13.2.0` in `plotly.py/5.18.0-GCCcore-13.2.0`).
+Module names include the toolchain that was used to install the module (for example `gfbf-2023b` in `SciPy-bundle/2023.11-gfbf-2023b`). To see which modules are compatible with each other, check the table on the [page about Module conflicts](troubleshooting.md#module-conflicts).
 To find the toolchain used by such a module (and the packages contained within a module), we can make use of `module show <module_name>`:
 
 ```shell
@@ -121,9 +121,9 @@ To do so, find the module containing the correct Jupyter notebook version (for o
 $ module load JupyterNotebook/7.2.0-GCCcore-13.2.0
 $ module load SciPy-bundle/2023.11-gfbf-2023b
 ```
-This throws no errors, since this module uses the same toolchain as the notebook
+This throws no errors, since this module uses a toolchain that is compatible with the toolchain used by the notebook
 
-If we use a different SciPy module that uses an incompatible toolchain, we will get errors when trying to load it.
+If we use a different SciPy module that uses an incompatible toolchain, we will get a module load conflict when trying to load it (For more info on these errors, see [here](troubleshooting.md#module-conflicts)).
 
 ```shell
 $ module load JupyterNotebook/7.2.0-GCCcore-13.2.0
