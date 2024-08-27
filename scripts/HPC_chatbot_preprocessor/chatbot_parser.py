@@ -805,7 +805,7 @@ def insert_links(text, links, options):
 
     for link_number in links.keys():
         if link_number in present_links:
-            new_links[len(new_links.keys())] = links[link_number]
+            new_links[str(len(new_links.keys()))] = links[link_number]
 
     return text, new_links
 
