@@ -20,9 +20,10 @@ Space is limited on the cluster's storage. To check your quota, see section
 
 To figure out where your quota is being spent, the `du` (isk sage)
 command can come in useful:
-<pre><code>$ <b>du -sh test</b>
+```
+$ du -sh test
 59M test
-</code></pre>
+```
 
 Do *not* (frequently) run `du` on directories where large amounts of
 data are stored, since that will:
@@ -68,7 +69,7 @@ Hint: `python -c "print(sum(range(1, 101)))"`
 -   How many modules are available for Python version 3.6.4?
 -   How many modules get loaded when you load the `Python/3.6.4-intel-2018a` module?
 -   Which `cluster` modules are available?
-<!-- -->
+
 -   What's the full path to your personal home/data/scratch directories?
 -   Determine how large your personal directories are.
 -   What's the difference between the size reported by `du -sh $HOME` and by `ls -ld $HOME`?

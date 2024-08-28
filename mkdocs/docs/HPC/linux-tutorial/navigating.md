@@ -7,12 +7,13 @@ important skill.
 ## Current directory: "pwd" and "$PWD"
 
 To print the current directory, use `pwd` or `\$PWD`:
-<pre><code>$ <b>cd $HOME</b> 
-$ <b>pwd</b>
+```
+$ cd $HOME 
+$ pwd
 /user/home/gent/vsc400/vsc40000 
-$ <b>echo "The current directory is: $PWD"</b> 
+$ echo "The current directory is: $PWD" 
 The current directory is: /user/home/gent/vsc400/vsc40000
-</code></pre>
+```
 
 ## Listing files and directories: "ls"
 
@@ -20,78 +21,99 @@ A very basic and commonly used command is `ls`, which can be
 used to list files and directories.
 
 In its basic usage, it just prints the names of files and directories in
-the current directory. For example: <pre><code>$ <b>ls</b>
-afile.txt some_directory </code></pre>
+the current directory. For example: 
+```
+$ ls
+afile.txt some_directory 
+```
 
 When provided an argument, it can be used to list the contents of a
-directory: <pre><code>$ <b>ls some_directory</b> 
-one.txt two.txt </code></pre>
+directory: 
+```
+$ ls some_directory 
+one.txt two.txt
+```
 
 A couple of commonly used options include:
 
 - detailed listing using `ls -l`:
 
-:   <pre><code>$ <b>ls -l</b>
-	total 4224 
-	-rw-rw-r-- 1 vsc40000 vsc40000 2157404 Apr 12 13:17 afile.txt 
-	drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory</code></pre>
+    ```
+    $ ls -l
+        total 4224 
+        -rw-rw-r-- 1 vsc40000 vsc40000 2157404 Apr 12 13:17 afile.txt 
+        drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory
+    ```
 
 - To print the size information in human-readable form, use the `-h` flag:
 
-:   <pre><code>$ <b>ls -lh</b>
-	total 4.1M 
-	-rw-rw-r-- 1 vsc40000 vsc40000 2.1M Apr 12 13:16 afile.txt
-	drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory</code></pre>
+    ```
+    $ ls -lh
+        total 4.1M 
+        -rw-rw-r-- 1 vsc40000 vsc40000 2.1M Apr 12 13:16 afile.txt
+        drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory
+    ```
 
 - also listing hidden files using the `-a` flag:
 
-:   <pre><code>$ <b>ls -lah</b>
-	total 3.9M 
-	drwxrwxr-x 3 vsc40000 vsc40000 512 Apr 12 13:11 .
-	drwx------ 188 vsc40000 vsc40000 128K Apr 12 12:41 .. 
-	-rw-rw-r-- 1 vsc40000 vsc40000 1.8M Apr 12 13:12 afile.txt 
-	-rw-rw-r-- 1 vsc40000 vsc40000 0 Apr 12 13:11 .hidden_file.txt 
-	drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory</code></pre>
+    ```
+    $ ls -lah
+        total 3.9M 
+        drwxrwxr-x 3 vsc40000 vsc40000 512 Apr 12 13:11 .
+        drwx------ 188 vsc40000 vsc40000 128K Apr 12 12:41 .. 
+        -rw-rw-r-- 1 vsc40000 vsc40000 1.8M Apr 12 13:12 afile.txt 
+        -rw-rw-r-- 1 vsc40000 vsc40000 0 Apr 12 13:11 .hidden_file.txt 
+        drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory
+    ```
 
 - ordering files by the most recent change using `-rt`:
 
-:   <pre><code>$ <b>ls -lrth</b>
-	total 4.0M 
-	drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory 
-	-rw-rw-r-- 1 vsc40000 vsc40000 2.0M Apr 12 13:15 afile.txt</code></pre>
+    ```
+    $ ls -lrth
+        total 4.0M 
+        drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory 
+        -rw-rw-r-- 1 vsc40000 vsc40000 2.0M Apr 12 13:15 afile.txt
+    ```
 
 If you try to use `ls` on a file that doesn't exist, you
 will get a clear error message: 
-<pre><code>$ <b>ls nosuchfile</b> 
+
+```
+$ ls nosuchfile 
 ls: cannot access nosuchfile: No such file or directory
-</code></pre>
+```
 
 ## Changing directory: "cd"
 
 To change to a different directory, you can use the `cd`
 command: 
-<pre><code>$ <b>cd some_directory</b></code></pre>
+```
+$ cd some_directory
+```
 
 To change back to the previous directory you were in, there's a
 shortcut: `cd -`
 
 Using `cd` without an argument results in returning back to
 your home directory: 
-<pre><code>$ <b>cd</b> 
-$<b> pwd</b>
-/user/home/gent/vsc400/vsc40000 </code></pre>
+```
+$ cd 
+$ pwd
+/user/home/gent/vsc400/vsc40000 
+```
 
 ## Inspecting file type: "file"
 
 The `file` command can be used to inspect what type of file
 you're dealing with: 
 
-<pre><code>$ <b>file afile.txt</b>
+```
+$ file afile.txt
 afile.txt: ASCII text
 
-$ <b>file some_directory</b> 
+$ file some_directory 
 some_directory: directory
-</code></pre>
+```
 
 ## Absolute vs relative file paths
 
@@ -118,9 +140,11 @@ There are two special relative paths worth mentioning:
 You can also use `..` when constructing relative paths, for
 example: 
 
-<pre><code>$ <b>cd $HOME/some_directory</b> 
-$ <b>ls ../afile.txt</b> 
-../afile.txt </code></pre>
+```
+$ cd $HOME/some_directory 
+$ ls ../afile.txt 
+../afile.txt 
+```
 
 ## Permissions
 
@@ -130,8 +154,10 @@ Each file and directory has particular *permissions* set on it, which
 can be queried using `ls -l`.
 
 For example: 
-<pre><code>$ <b>ls -l afile.txt</b> 
--rw-rw-r-- 1 vsc40000 agroup 2929176 Apr 12 13:29 afile.txt </code></pre>
+```
+$ ls -l afile.txt 
+-rw-rw-r-- 1 vsc40000 agroup 2929176 Apr 12 13:29 afile.txt 
+```
 
 The `-rwxrw-r--` specifies both the type of file
 (`-` for files, `d` for directories (see first
@@ -164,19 +190,23 @@ later in this manual.
 matching given criteria.
 
 For example, to look for the file named `one.txt`: 
-<pre><code>$ <b>cd $HOME</b> 
-$ <b>find . -name one.txt</b>
-./some_directory/one.txt </code></pre>
+```
+$ cd $HOME 
+$ find . -name one.txt
+./some_directory/one.txt 
+```
 
 To look for files using incomplete names, you can use a wildcard
 `*`; note that you need to escape the `*` to
 avoid that Bash *expands* it into `afile.txt` by adding
 double quotes: 
-<pre><code>$ <b>find . -name "*.txt"</b>
+```
+$ find . -name "*.txt"
 ./.hidden_file.txt 
 ./afile.txt 
 ./some_directory/one.txt
-./some_directory/two.txt </code></pre>
+./some_directory/two.txt 
+```
 
 A more advanced use of the `find` command is to use the
 `-exec` flag to perform actions on the found file(s), rather

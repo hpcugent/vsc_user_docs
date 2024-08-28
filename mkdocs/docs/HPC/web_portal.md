@@ -12,11 +12,7 @@ required to connect to your VSC account via this web portal.\
 Please note that we do recommend to use our interactive and debug
 cluster (see chapter [interactive and debug cluster](./interactive_debug.md)) with `OoD`.
 
-To connect to the HPC-UGent infrastructure via the web portal, visit:
-
-<center>
-<https://login.hpc.ugent.be>
-</center>
+To connect to the HPC-UGent infrastructure via the web portal, visit <https://login.hpc.ugent.be>
 
 Note that you may only see a "*Submitting...*" message appear for a
 couple of seconds, which is perfectly normal.
@@ -66,9 +62,7 @@ requested to let the web portal access some of your personal information
 (VSC login ID, account status, login shell and institute name), as shown
 in this screenshot below:
 
-<center>
 ![image](img/ood_permission.png)
-</center>
 
 **Please click "Authorize" here.**
 
@@ -79,9 +73,7 @@ afterwards.
 
 Once logged in, you should see this start page:
 
-<center>
 ![image](img/ood_start.png)
-</center>
 
 This page includes a menu bar at the top, with buttons on the left
 providing access to the different features supported by the web portal,
@@ -92,9 +84,7 @@ high-level overview of the HPC-UGent Tier-2 clusters.
 If your browser window is too narrow, the menu is available at the top
 right through the "hamburger" icon:
 
-<center>
 ![image](img/ood_hamburger.png)
-</center>
 
 ## Features
 
@@ -112,9 +102,7 @@ The drop-down menu provides short-cuts to the different `$VSC_*`
 directories and filesystems you have access to. Selecting one of the
 directories will open a new browser tab with the *File Explorer*:
 
-<center>
 ![image](img/ood_file_explorer.png)
-</center>
 
 Here you can:
 
@@ -188,9 +176,7 @@ Jobs* menu item under *Jobs*.
 A new browser tab will be opened that shows all your current queued
 and/or running jobs:
 
-<center>
 ![image](img/ood_active_jobs.png)
-</center>
 
 You can control which jobs are shown using the *Filter* input area, or
 select a particular cluster from the drop-down menu *All Clusters*, both
@@ -213,9 +199,7 @@ To submit new jobs, you can use the *Job Composer* menu item under
 *Jobs*. This will open a new browser tab providing an interface to
 create new jobs:
 
-<center>
 ![image](img/ood_job_composer.png)
-</center>
 
 This extensive interface allows you to create jobs from one of the
 available templates, or by copying an existing job.
@@ -232,9 +216,7 @@ Don't forget to actually submit your job to the system via the green
 In addition, you can inspect provided job templates, copy them or even
 create your own templates via the *Templates* button on the top:
 
-<center>
 ![image](img/ood_job_templates.png)
-</center>
 
 ### Shell access
 
@@ -242,9 +224,7 @@ Through the *Shell Access* button that is available under the *Clusters*
 menu item, you can easily open a terminal (shell) session into your VSC
 account, straight from your browser!
 
-<center>
 ![image](img/ood_shell.png)
-</center>
 
 Using this interface requires being familiar with a Linux shell
 environment (see
@@ -263,9 +243,7 @@ terminal multiplexer tool like `screen` or `tmux`).
 
 To create a graphical desktop environment, use on of the *desktop on... node* buttons under *Interactive Apps* menu item. For example:
 
-<center>
 ![image](img/ood_launch_desktop.png)
-</center>
 
 You can either start a desktop environment on a login node for some
 lightweight tasks, or on a workernode of one of the HPC-UGent Tier-2
@@ -279,9 +257,7 @@ To access the desktop environment, click the *My Interactive Sessions*
 menu item at the top, and then use the *Launch desktop on \... node*
 button if the desktop session is *Running*:
 
-<center>
 ![image](img/ood_desktop_running.png)
-</center>
 
 #### Jupyter notebook
 
@@ -295,9 +271,7 @@ web server running in your VSC account.
 You can do this via the *Restart Web Server* button under the *Help*
 menu item:
 
-<center>
 ![image](img/ood_help_restart_web_server.png)
-</center>
 
 Of course, this only affects your own web portal session (not those of
 others).

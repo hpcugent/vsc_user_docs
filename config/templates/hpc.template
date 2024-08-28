@@ -23,6 +23,7 @@ nav:
   - Troubleshooting: troubleshooting.md
   - HPC Policies: sites/hpc_policies.md
   - Advanced topics:
+      - Torque frontend via jobcli: torque_frontend_via_jobcli.md
       - Fine-tuning Job Specifications: fine_tuning_job_specifications.md
       - Multi-job submission: multi_job_submission.md
       - Compiling and testing your software on the HPC: compiling_your_software.md

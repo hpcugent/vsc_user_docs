@@ -37,11 +37,12 @@ To access the MATLAB compiler, the `MATLAB` module should be loaded
 first. Make sure you are using the same `MATLAB` version to compile and
 to run the compiled MATLAB program.
 
-<pre><code>$ <b>module avail MATLAB/</b>
+```
+$ module avail MATLAB/
 ----------------------/apps/gent/RHEL8/zen2-ib/modules/all----------------------
    MATLAB/2021b    MATLAB/2022b-r5 (D)
-$ <b>module load MATLAB/2021b</b>
-</code></pre>
+$ module load MATLAB/2021b
+```
 
 After loading the `MATLAB` module, the `mcc` command can be used. To get
 help on `mcc`, you can run `mcc -?`.
@@ -53,12 +54,14 @@ flag means verbose output). To show how `mcc` can be used, we use the
 First, we copy the `magicsquare.m` example that comes with MATLAB to
 `example.m`:
 
-<pre><code>$ <b>cp $EBROOTMATLAB/extern/examples/compiler/magicsquare.m example.m</b>
-</code></pre>
+```
+cp $EBROOTMATLAB/extern/examples/compiler/magicsquare.m example.m
+```
 
 To compile a MATLAB program, use `mcc -mv`:
 
-<pre><code><b>mcc -mv example.m</b>
+```
+mcc -mv example.m
 Opening log file:  {{homedir}}/java.log.34090
 Compiler version: 8.3 (R2021b)
 Dependency analysis by REQUIREMENTS.
@@ -67,7 +70,7 @@ Parsing file "{{homedir}}/example.m"
 Deleting 0 temporary MEX authorization files.
 Generating file "{{homedir}}/readme.txt".
 Generating file "run\_example.sh".
-</code></pre>
+```
 
 ### Libraries
 
@@ -90,8 +93,9 @@ MATLAB program on the login nodes, consider tweaking the default maximum
 heap size (128M) of Java using the `_JAVA_OPTIONS` environment variable
 with:
 
-<pre><code>$ <b>export _JAVA_OPTIONS="-Xmx64M"</b>
-</code></pre>
+```
+export _JAVA_OPTIONS="-Xmx64M"
+```
 
 The MATLAB compiler spawns multiple Java processes. Because of the
 default memory limits that are in effect on the login nodes, this might
@@ -102,14 +106,16 @@ to fit in memory.
 Another possible issue is that the heap size is too small. This could
 result in errors like:
 
-<pre><code>Error: Out of memory
-</code></pre>
+```
+Error: Out of memory
+```
 
 A possible solution to this is by setting the maximum heap size to be
 bigger:
 
-<pre><code>$ <b>export _JAVA_OPTIONS="-Xmx512M"</b>
-</code></pre>
+```
+export _JAVA_OPTIONS="-Xmx512M"
+```
 
 ## Multithreading
 
@@ -130,8 +136,7 @@ you requested when submitting your job script (the `ppn` value, see [Generic res
 You can determine the right number of workers to use via the following
 code snippet in your MATLAB program:
 
-<div style="text-align: center;">-- parpool.m --</div>
-```matlab
+```matlab title="parpool.m"
 {% include "./examples/MATLAB/parpool.m" %}
 ```
 
@@ -143,22 +148,25 @@ documentation](https://nl.mathworks.com/help/distcomp/parpool.html).
 Each time MATLAB is executed, it generates a Java log file in the users
 home directory. The output log directory can be changed using:
 
-<pre><code>$ <b>MATLAB_LOG_DIR=<i>&lt;OUTPUT_DIR&gt;</i></b>
-</code></pre>
+```
+MATLAB_LOG_DIR=<OUTPUT_DIR>
+```
 
 where `<OUTPUT_DIR>` is the name of the desired output directory. To
 create and use a temporary directory for these logs:
 
-<pre><code># create unique temporary directory in $TMPDIR (or /tmp/$USER if
+```
+# create unique temporary directory in $TMPDIR (or /tmp/$USER if
 $TMPDIR is not defined)
 # instruct MATLAB to use this directory for log files by setting $MATLAB_LOG_DIR
-$ <b> export MATLAB_LOG_DIR=$ (mktemp -d -p $TMPDIR:-/tmp/$USER)</b>
-</code></pre>
+$  export MATLAB_LOG_DIR=$ (mktemp -d -p $TMPDIR:-/tmp/$USER)
+```
 
 You should remove the directory at the end of your job script:
 
-<pre><code>$ <b> rm -rf $MATLAB_LOG_DIR</b>
-</code></pre>
+```
+rm -rf $MATLAB_LOG_DIR
+```
 
 ## Cache location
 
@@ -169,9 +177,10 @@ location and size of this cache can be changed through the
 The snippet below would set the maximum cache size to 1024MB and the
 location to `/tmp/testdirectory`.
 
-<pre><code>$ <b>export MATLAB_CACHE_ROOT=/tmp/testdirectory </b>
-$ <b>export MATLAB_CACHE_SIZE=1024M </b>
-</code></pre>
+```
+export MATLAB_CACHE_ROOT=/tmp/testdirectory 
+export MATLAB_CACHE_SIZE=1024M 
+```
 
 So when MATLAB is running, it can fill up to 1024MB of cache in
 `/tmp/testdirectory`.
@@ -182,7 +191,6 @@ All of the tweaks needed to get MATLAB working have been implemented in
 an example job script. This job script is also available on the HPC.
 <!-- %TODO: where? -->
 
-<div style="text-align: center;">-- jobscript.sh --</div>
-```bash
+```bash title="jobscript.sh"
 {% include "./examples/MATLAB/jobscript.sh" %}
 ```
