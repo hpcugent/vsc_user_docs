@@ -1,0 +1,1536 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../openFOAM/">
+      
+      
+        <link rel="next" href="../FAQ/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>Python virtual environments - VSC User Documentation - Antwerpen (macOS)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python-virtual-environments-venvs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VSC User Documentation - Antwerpen (macOS)" class="md-header__button md-logo" aria-label="VSC User Documentation - Antwerpen (macOS)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSC User Documentation - Antwerpen (macOS)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python virtual environments
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <!-- Original file https://github.com/squidfunk/mkdocs-material/blob/master/material/partials/source.html -->
+<!-- More information see https://squidfunk.github.io/mkdocs-material/customization/ -->
+<!-- This is code FOR OS PICKER NOT FOR INTENTED PURPOSE AS REPO LINK -->
+<div class="md-source">
+  <label for="picker">Your OS:</label>
+  <select name="picker" id="picker" style="border: none; background-color: var(--md-primary-fg-color); color: inherit">
+    <option value="" disabled selected>Choose OS</option>
+    <option value="Linux">Linux</option>
+    <option value="Windows">Windows</option>
+    <option value="macOS">macOS</option>
+  </select>
+</div>
+
+<script>
+  {
+    const elements = document.querySelectorAll("#picker");
+    const store_OS = localStorage.getItem("select_OS");
+    // Get url before OS part.
+    const osmatch = window.location.href.match(/^(.*?)\/(Linux|macOS|Windows)\//i);
+
+    elements.forEach(e => {
+      e.addEventListener("change", (event) => {
+        if (event.target.value){
+          // Save new OS pick.
+          localStorage.setItem("select_OS", JSON.stringify([osmatch[1], event.target.value]));
+          // Redirect to new OS page.
+          window.location.href = window.location.href.replace(/Linux|MacOS|Windows/i,event.target.value);
+        }
+      });
+      if (store_OS) {
+        // There is a stored OS, so set select to this option.
+        e.value = JSON.parse(store_OS)[1];
+      }
+    })
+  }
+</script>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VSC User Documentation - Antwerpen (macOS)" class="md-nav__button md-logo" aria-label="VSC User Documentation - Antwerpen (macOS)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    VSC User Documentation - Antwerpen (macOS)
+  </label>
+  
+    <div class="md-nav__source">
+      <!-- Original file https://github.com/squidfunk/mkdocs-material/blob/master/material/partials/source.html -->
+<!-- More information see https://squidfunk.github.io/mkdocs-material/customization/ -->
+<!-- This is code FOR OS PICKER NOT FOR INTENTED PURPOSE AS REPO LINK -->
+<div class="md-source">
+  <label for="picker">Your OS:</label>
+  <select name="picker" id="picker" style="border: none; background-color: var(--md-primary-fg-color); color: inherit">
+    <option value="" disabled selected>Choose OS</option>
+    <option value="Linux">Linux</option>
+    <option value="Windows">Windows</option>
+    <option value="macOS">macOS</option>
+  </select>
+</div>
+
+<script>
+  {
+    const elements = document.querySelectorAll("#picker");
+    const store_OS = localStorage.getItem("select_OS");
+    // Get url before OS part.
+    const osmatch = window.location.href.match(/^(.*?)\/(Linux|macOS|Windows)\//i);
+
+    elements.forEach(e => {
+      e.addEventListener("change", (event) => {
+        if (event.target.value){
+          // Save new OS pick.
+          localStorage.setItem("select_OS", JSON.stringify([osmatch[1], event.target.value]));
+          // Redirect to new OS page.
+          window.location.href = window.location.href.replace(/Linux|MacOS|Windows/i,event.target.value);
+        }
+      });
+      if (store_OS) {
+        // There is a stored OS, so set select to this option.
+        e.value = JSON.parse(store_OS)[1];
+      }
+    })
+  }
+</script>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        Introduction to HPC
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        Getting an HPC Account
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connecting/" class="md-nav__link">
+        Connecting to the HPC infrastructure
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_batch_jobs/" class="md-nav__link">
+        Running batch jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_interactive_jobs/" class="md-nav__link">
+        Running interactive jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_jobs_with_input_output_data/" class="md-nav__link">
+        Running jobs with input/output data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_core_jobs/" class="md-nav__link">
+        Multi core jobs/Parallel Computing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_portal/" class="md-nav__link">
+        Using the HPC-UGent web portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xdmod/" class="md-nav__link">
+        XDMoD portal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sites/hpc_policies/" class="md-nav__link">
+        HPC Policies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_14" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+          Advanced topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torque_frontend_via_jobcli/" class="md-nav__link">
+        Torque frontend via jobcli
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fine_tuning_job_specifications/" class="md-nav__link">
+        Fine-tuning Job Specifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_job_submission/" class="md-nav__link">
+        Multi-job submission
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiling_your_software/" class="md-nav__link">
+        Compiling and testing your software on the HPC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program_examples/" class="md-nav__link">
+        Program examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jobscript_examples/" class="md-nav__link">
+        Job script examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_practices/" class="md-nav__link">
+        Best Practices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNC/" class="md-nav__link">
+        Graphical applications with VNC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x2go/" class="md-nav__link">
+        Graphical applications with X2Go
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+          Software-specific Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Software-specific Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alphafold/" class="md-nav__link">
+        AlphaFold
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        Apptainer/Singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        EasyBuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MATLAB/" class="md-nav__link">
+        MATLAB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mympirun/" class="md-nav__link">
+        mympirun
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openFOAM/" class="md-nav__link">
+        OpenFOAM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Python virtual environments
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Python virtual environments
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-python-environments" class="md-nav__link">
+    Managing Python Environments
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing Python Environments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-python-virtual-environment" class="md-nav__link">
+    Creating a Python virtual environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activating-a-virtual-environment" class="md-nav__link">
+    Activating a virtual environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-packages-in-a-virtual-environment" class="md-nav__link">
+    Installing packages in a virtual environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-virtual-environment" class="md-nav__link">
+    Using a virtual environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deactivating-a-virtual-environment" class="md-nav__link">
+    Deactivating a virtual environment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-virtual-environments-with-centrally-installed-modules" class="md-nav__link">
+    Combining virtual environments with centrally installed modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-virtual-environment-for-a-specific-cluster" class="md-nav__link">
+    Creating a virtual environment for a specific cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-python-job" class="md-nav__link">
+    Example Python job
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#illegal-instruction-error" class="md-nav__link">
+    Illegal instruction error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-glibc-not-found" class="md-nav__link">
+    Error: GLIBC not found
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-cannot-open-shared-object-file-no-such-file-or-directory" class="md-nav__link">
+    Error: cannot open shared object file: No such file or directory
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_16" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+          FAQ
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_16">
+          <span class="md-nav__icon md-icon"></span>
+          FAQ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_17" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+          Appendices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_17">
+          <span class="md-nav__icon md-icon"></span>
+          Appendices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick_reference_guide/" class="md-nav__link">
+        Appendix A - HPC Quick Reference Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torque_options/" class="md-nav__link">
+        Appendix B - TORQUE options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../useful_linux_commands/" class="md-nav__link">
+        Appendix C - Useful Linux Commands
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-python-environments" class="md-nav__link">
+    Managing Python Environments
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing Python Environments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-python-virtual-environment" class="md-nav__link">
+    Creating a Python virtual environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activating-a-virtual-environment" class="md-nav__link">
+    Activating a virtual environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-packages-in-a-virtual-environment" class="md-nav__link">
+    Installing packages in a virtual environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-virtual-environment" class="md-nav__link">
+    Using a virtual environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deactivating-a-virtual-environment" class="md-nav__link">
+    Deactivating a virtual environment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-virtual-environments-with-centrally-installed-modules" class="md-nav__link">
+    Combining virtual environments with centrally installed modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-virtual-environment-for-a-specific-cluster" class="md-nav__link">
+    Creating a virtual environment for a specific cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-python-job" class="md-nav__link">
+    Example Python job
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#illegal-instruction-error" class="md-nav__link">
+    Illegal instruction error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-glibc-not-found" class="md-nav__link">
+    Error: GLIBC not found
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-cannot-open-shared-object-file-no-such-file-or-directory" class="md-nav__link">
+    Error: cannot open shared object file: No such file or directory
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+  
+  
+
+
+<h1 id="python-virtual-environments-venvs">Python Virtual Environments (venv's)<a class="headerlink" href="#python-virtual-environments-venvs" title="Permanent link">#</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h2>
+<p>A Python virtual environment ("venv" for short)
+is a tool to create an isolated Python workspace.
+Within this isolated environment,
+you can install additional Python packages without affecting the system-wide Python installation.
+Because a normal user cannot install packages globally,
+using a virtual environment allows you to install packages locally without needing administrator privileges.
+This is especially useful when you need to use a package that is not available as a module on the HPC cluster.</p>
+<h2 id="managing-python-environments">Managing Python Environments<a class="headerlink" href="#managing-python-environments" title="Permanent link">#</a></h2>
+<p>This section will explain how to create, activate, use and deactivate Python virtual environments.</p>
+<h3 id="creating-a-python-virtual-environment">Creating a Python virtual environment<a class="headerlink" href="#creating-a-python-virtual-environment" title="Permanent link">#</a></h3>
+<p>A Python virtual environment can be created with the following command:</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>myenv<span class="w">      </span><span class="c1"># Create a new virtual environment named &#39;myenv&#39;</span>
+</code></pre></div>
+<p>This command creates a new subdirectory named <code>myenv</code> in the current working directory. 
+This directory will contain the packages, scripts, and binaries that are needed to manage the virtual environment.</p>
+<h3 id="activating-a-virtual-environment">Activating a virtual environment<a class="headerlink" href="#activating-a-virtual-environment" title="Permanent link">#</a></h3>
+<p>To use the virtual environment, you need to <em>activate</em> it. 
+This will modify the shell environment to use the Python interpreter and packages from the virtual environment.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>myenv/bin/activate<span class="w">                    </span><span class="c1"># Activate the virtual environment</span>
+</code></pre></div>
+<h3 id="installing-packages-in-a-virtual-environment">Installing packages in a virtual environment<a class="headerlink" href="#installing-packages-in-a-virtual-environment" title="Permanent link">#</a></h3>
+<p>After activating the virtual environment, you can install additional Python packages with <code>pip install</code>:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>example_package1
+pip<span class="w"> </span>install<span class="w"> </span>example_package2
+</code></pre></div>
+<p>These packages will be scoped to the virtual environment and will not affect the system-wide Python installation, 
+and are only available when the virtual environment is activated.
+No administrator privileges are required to install packages in a virtual environment.</p>
+<p>It is now possible to run Python scripts that use the installed packages in the virtual environment.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Always prefer to use Python packages that are centrally installed, which are available via the environment modules interface.
+Software installations available via the modules interface are compiled and optimized for the HPC cluster, while packages installed with <code>pip</code> are not.
+To check if a package is available as a module, you can use the following command:</p>
+<div class="highlight"><pre><span></span><code>module<span class="w"> </span>av<span class="w"> </span>package_name
+</code></pre></div>
+<p>Some Python packages are installed as extensions of modules. For example, <code>numpy</code>, <code>scipy</code> and <code>pandas</code> are 
+part of the <code>SciPy-bundle</code> module. You can use</p>
+<div class="highlight"><pre><span></span><code>module<span class="w"> </span>show<span class="w"> </span>module_name
+</code></pre></div>
+<p>to check which extensions are included in a module (if any).</p>
+</div>
+<h3 id="using-a-virtual-environment">Using a virtual environment<a class="headerlink" href="#using-a-virtual-environment" title="Permanent link">#</a></h3>
+<p>Once the environment is activated and packages are installed, 
+you can run Python scripts that use the installed packages:</p>
+<div class="highlight"><span class="filename">example.py</span><pre><span></span><code><span class="kn">import</span> <span class="nn">example_package1</span>
+<span class="kn">import</span> <span class="nn">example_package2</span>
+<span class="o">...</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>example.py
+</code></pre></div>
+<h3 id="deactivating-a-virtual-environment">Deactivating a virtual environment<a class="headerlink" href="#deactivating-a-virtual-environment" title="Permanent link">#</a></h3>
+<p>When you are done using the virtual environment, you can deactivate it.
+To do that, run:</p>
+<div class="highlight"><pre><span></span><code>deactivate
+</code></pre></div>
+<h2 id="combining-virtual-environments-with-centrally-installed-modules">Combining virtual environments with centrally installed modules<a class="headerlink" href="#combining-virtual-environments-with-centrally-installed-modules" title="Permanent link">#</a></h2>
+<p>You can combine Python packages installed in a virtual environment with environment modules. 
+The following script uses PyTorch (which is available as a module)
+and Poutyne (which we assume is not centrally installed):</p>
+<div class="highlight"><span class="filename">pytorch_poutyne.py</span><pre><span></span><code><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">poutyne</span>
+
+<span class="o">...</span>
+</code></pre></div>
+<p>We load a PyTorch package as a module and install Poutyne in a virtual environment:</p>
+<div class="highlight"><pre><span></span><code>module<span class="w"> </span>load<span class="w"> </span>PyTorch/2.1.2-foss-2023a
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>myenv
+<span class="nb">source</span><span class="w"> </span>myenv/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span>Poutyne
+</code></pre></div>
+<p>While the virtual environment is activated, we can run the script without any issues:</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>pytorch_poutyne.py
+</code></pre></div>
+<p>Deactivate the virtual environment when you are done:</p>
+<div class="highlight"><pre><span></span><code>deactivate
+</code></pre></div>
+<h2 id="creating-a-virtual-environment-for-a-specific-cluster">Creating a virtual environment for a specific cluster<a class="headerlink" href="#creating-a-virtual-environment-for-a-specific-cluster" title="Permanent link">#</a></h2>
+<p>To create a virtual environment for a specific cluster, you need to start an interactive shell on that cluster.
+Let's say you want to create a virtual environment on the <code>donphan</code> cluster.</p>
+<div class="highlight"><pre><span></span><code>module<span class="w"> </span>swap<span class="w"> </span>cluster/donphan
+qsub<span class="w"> </span>-I
+</code></pre></div>
+<p>After some time, a shell will be started on the <code>donphan</code> cluster. 
+You can now create a virtual environment as described in <a href="#creating-a-venv">the first section</a>.
+This virtual environment can be used by jobs running on the <code>donphan</code> cluster.</p>
+<div class="admonition note">
+<p class="admonition-title">Naming a virtual environment</p>
+<p>When naming a virtual environment, it is recommended to include the name of the cluster it was created for.
+We can use the <code>$VSC_INSTITUTE_CLUSTER</code> variable to get the name of the current cluster.</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>myenv_<span class="si">${</span><span class="nv">VSC_INSTITUTE_CLUSTER</span><span class="si">}</span>
+</code></pre></div>
+</div>
+<h2 id="example-python-job">Example Python job<a class="headerlink" href="#example-python-job" title="Permanent link">#</a></h2>
+<p>This section will combine the concepts discussed in the previous sections to:</p>
+<ol>
+<li>Create a virtual environment on a specific cluster.</li>
+<li>Combine packages installed in the virtual environment with modules.</li>
+<li>Submit a job script that uses the virtual environment.</li>
+</ol>
+<p>The example script that we will run is the following:</p>
+<div class="highlight"><span class="filename">pytorch_poutyne.py</span><pre><span></span><code><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">poutyne</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The version of PyTorch is: </span><span class="si">{</span><span class="n">torch</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The version of Poutyne is: </span><span class="si">{</span><span class="n">poutyne</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>First, we create a virtual environment on the <code>donphan</code> cluster:</p>
+<div class="highlight"><pre><span></span><code>module<span class="w"> </span>swap<span class="w"> </span>cluster/donphan
+qsub<span class="w"> </span>-I
+<span class="c1"># Load module dependencies</span>
+module<span class="w"> </span>load<span class="w"> </span>PyTorch/2.1.2-foss-2023a
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>myenv
+<span class="nb">source</span><span class="w"> </span>myenv/bin/activate
+<span class="c1"># install virtual environment dependencies</span>
+pip<span class="w"> </span>install<span class="w"> </span>Poutyne
+deactivate
+</code></pre></div>
+<p>Type <code>exit</code> to exit the interactive shell. 
+We now create a job script that loads the PyTorch module, enters the virtual environment and executes the script:</p>
+<div class="highlight"><span class="filename">jobscript.pbs</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Basic parameters</span>
+<span class="c1">#PBS -N python_job_example            ## Job name</span>
+<span class="c1">#PBS -l nodes=1:ppn=1                 ## 1 node, 1 processors per node</span>
+<span class="c1">#PBS -l walltime=01:00:00             ## Max time your job will run (no more than 72:00:00)</span>
+
+module<span class="w"> </span>load<span class="w"> </span>PyTorch/2.1.2-foss-2023a<span class="w">  </span><span class="c1"># Load the PyTorch module</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$PBS_O_WORKDIR</span><span class="w">                     </span><span class="c1"># Change working directory to the location where the job was submitted</span>
+<span class="nb">source</span><span class="w"> </span>myenv/bin/activate<span class="w">             </span><span class="c1"># Activate the virtual environment</span>
+
+python<span class="w"> </span>pytorch_poutyne.py<span class="w">             </span><span class="c1"># Run your Python script, or any other command within the virtual environment</span>
+
+deactivate<span class="w">                            </span><span class="c1"># Deactivate the virtual environment</span>
+</code></pre></div>
+<p>Next, we submit the job script:</p>
+<div class="highlight"><pre><span></span><code>qsub<span class="w"> </span>jobscript.pbs
+</code></pre></div>
+<p>Two files will be created in the directory where the job was submitted: 
+<code>python_job_example.o433253.leibniz</code> and <code>python_job_example.e{{ job_id }}</code>, where 433253.leibniz is the id of your job.
+The <code>.o</code> file contains the output of the job.</p>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>
+<h3 id="illegal-instruction-error">Illegal instruction error<a class="headerlink" href="#illegal-instruction-error" title="Permanent link">#</a></h3>
+<p>Activating a virtual environment created on a different cluster can cause issues. 
+This happens
+because the binaries in the virtual environments from cluster A might not work with the CPU architecture of cluster B.</p>
+<p>For example, if we create a virtual environment on the skitty cluster,</p>
+<div class="highlight"><pre><span></span><code>module<span class="w"> </span>swap<span class="w"> </span>cluster/skitty
+qsub<span class="w"> </span>-I
+$<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>myenv
+</code></pre></div>
+<p>return to the login node by pressing CTRL+D and try to use the virtual environment:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>myenv/bin/activate
+$<span class="w"> </span>python
+Illegal<span class="w"> </span>instruction<span class="w"> </span><span class="o">(</span>core<span class="w"> </span>dumped<span class="o">)</span>
+</code></pre></div>
+<p>we are presented with the illegal instruction error. More info on this <a href="../troubleshooting/#illegal-instruction-error">here</a></p>
+<h3 id="error-glibc-not-found">Error: GLIBC not found<a class="headerlink" href="#error-glibc-not-found" title="Permanent link">#</a></h3>
+<p>When running a virtual environment across clusters with different major OS versions, 
+you might encounter a variation of the following error:</p>
+<div class="highlight"><pre><span></span><code>python: /lib64/libc.so.6: version `GLIBC_2.34&#39; not found (required by python)
+</code></pre></div>
+<p>Make sure you do not activate a virtual environment created on a different cluster.
+For more information on how to create a virtual environment for a specific cluster, 
+see <a href="#creating-a-virtual-environment-for-a-specific-cluster">Creating a virtual environment for a specific cluster</a>.
+When following these steps, make sure you do not have any modules loaded when starting the interactive job.</p>
+<h3 id="error-cannot-open-shared-object-file-no-such-file-or-directory">Error: cannot open shared object file: No such file or directory<a class="headerlink" href="#error-cannot-open-shared-object-file-no-such-file-or-directory" title="Permanent link">#</a></h3>
+<p>There are two main reasons why this error could occur.</p>
+<ol>
+<li>You have not loaded the <code>Python</code> module that was used to create the virtual environment.</li>
+<li>You loaded or unloaded modules while the virtual environment was activated.</li>
+</ol>
+<h4 id="entering-a-virtual-environment-while-the-python-module-used-to-create-it-is-not-active">Entering a virtual environment while the Python module used to create it is not active<a class="headerlink" href="#entering-a-virtual-environment-while-the-python-module-used-to-create-it-is-not-active" title="Permanent link">#</a></h4>
+<p>If you loaded a <code>Python</code> module when creating a virtual environment, you need to make sure that the same module 
+is loaded when you enter the environment. This is because the virtual environment keeps a reference to the base python 
+used to create it.</p>
+<p>The following commands illustrate this issue:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>Python/3.10.8-GCCcore-12.2.0<span class="w">  </span><span class="c1"># Load a python module</span>
+$<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>myenv<span class="w">                      </span><span class="c1"># Create a virtual environment with loaded python module</span>
+$<span class="w"> </span>module<span class="w"> </span>purge<span class="w">                              </span><span class="c1"># unload all modules (WRONG!)</span>
+$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>myenv/bin/activate<span class="w">                 </span><span class="c1"># Activate the virtual environment</span>
+$<span class="w"> </span>python<span class="w">                                    </span><span class="c1"># Start python</span>
+python:<span class="w"> </span>error<span class="w"> </span><span class="k">while</span><span class="w"> </span>loading<span class="w"> </span>shared<span class="w"> </span>libraries:<span class="w"> </span>libpython3.10.so.1.0:<span class="w"> </span>cannot<span class="w"> </span>open<span class="w"> </span>shared<span class="w"> </span>object<span class="w"> </span>file:<span class="w"> </span>No<span class="w"> </span>such<span class="w"> </span>file<span class="w"> </span>or<span class="w"> </span>directory
+</code></pre></div>
+<p>Here, the virtual environment tries to use the python module that was loaded when the environment was created.
+Since we used <code>module purge</code>, that module is no longer available.
+The solution is to load the same python module before activating the virtual environment:</p>
+<div class="highlight"><pre><span></span><code>module<span class="w"> </span>load<span class="w"> </span>Python/3.10.8-GCCcore-12.2.0<span class="w">  </span><span class="c1"># Load the same python module</span>
+<span class="nb">source</span><span class="w"> </span>myenv/bin/activate<span class="w">                 </span><span class="c1"># Activate the virtual environment</span>
+</code></pre></div>
+<h4 id="modifying-modules-while-in-a-virtual-environment">Modifying modules while in a virtual environment<a class="headerlink" href="#modifying-modules-while-in-a-virtual-environment" title="Permanent link">#</a></h4>
+<p>You must not load or unload modules while in a virtual environment. 
+Loading and unloading modules modifies the <code>$PATH</code> variable in the current shell. When activating a virtual environment,
+it will store the <code>$PATH</code> variable of the shell at that moment. If you modify the <code>$PATH</code> variable while in a virtual environment by loading or unloading modules,
+and deactivate the virtual environment, the <code>$PATH</code> variable will be reset to the one stored in the virtual environment.
+Trying to use those modules will lead to errors:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>Python/3.10.8-GCCcore-12.2.0<span class="w">  </span><span class="c1"># Load a python module</span>
+$<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>myenv<span class="w">                      </span><span class="c1"># Create a virtual environment</span>
+$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>myenv/bin/activate<span class="w">                 </span><span class="c1"># Activate the virtual environment (saves state of $PATH)</span>
+$<span class="w"> </span>module<span class="w"> </span>purge<span class="w">                              </span><span class="c1"># Unload all modules (modifies the $PATH)</span>
+$<span class="w"> </span>deactivate<span class="w">                                </span><span class="c1"># Deactivate the virtual environment (resets $PATH to saved state)</span>
+$<span class="w"> </span>python<span class="w">                                    </span><span class="c1"># PATH contains a reference to the unloaded module</span>
+python:<span class="w"> </span>error<span class="w"> </span><span class="k">while</span><span class="w"> </span>loading<span class="w"> </span>shared<span class="w"> </span>libraries:<span class="w"> </span>libpython3.10.so.1.0:<span class="w"> </span>cannot<span class="w"> </span>open<span class="w"> </span>shared<span class="w"> </span>object<span class="w"> </span>file:<span class="w"> </span>No<span class="w"> </span>such<span class="w"> </span>file<span class="w"> </span>or<span class="w"> </span>directory
+</code></pre></div>
+<p>The solution is to only modify modules when not in a virtual environment.</p>
+
+
+
+
+
+                
+<script>
+ if (!! localStorage.getItem('select_OS')) {
+    const classes = ["headerlink", "md-nav__link"]
+    for (i in classes) {
+        var anchors = Array.from(document.getElementsByClassName(classes[i]))
+        anchors.forEach(
+            function (anch) {
+                const href = anch.href;
+                if (!!anch.href) {
+                    // Remove OS part and search query in permalinks if it exists. Useful when copying the urls.
+                    anch.href = anch.href.replace(/\/(Linux|macOS|Windows)\//i, "/").replace(/\?[^#]*/,"")
+                }
+                anch.addEventListener("click",(event) => {
+                    // Redirect to real original target. (with OS,and search query)
+                    event.target.href = href;
+                })
+            })
+    }
+}
+</script>
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../openFOAM/" class="md-footer__link md-footer__link--prev" aria-label="Previous: OpenFOAM" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                OpenFOAM
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../FAQ/" class="md-footer__link md-footer__link--next" aria-label="Next: Frequently Asked Questions" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Frequently Asked Questions
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.expand", "navigation.tracking", "navigation.footer", "toc.follow", "navigation.sections", "navigation.instant", "search.suggest", "search.highlight", "search.share", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>
