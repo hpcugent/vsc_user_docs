@@ -46,13 +46,13 @@ nav:
     - More on the HPC infrastructure: linux-tutorial/hpc_infrastructure.md
 {%- endif %}
   - Software-specific Best Practices:
-      - Python virtual environments: setting_up_python_virtual_environments.md
       - AlphaFold: alphafold.md
       - Apptainer/Singularity: apptainer.md
       - EasyBuild: easybuild.md
       - MATLAB: MATLAB.md
       - mympirun: mympirun.md
       - OpenFOAM: openFOAM.md
+      - Python virtual environments: setting_up_python_virtual_environments.md
   - FAQ:
       - Frequently Asked Questions: FAQ.md
   - Appendices:
