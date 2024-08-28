@@ -95,6 +95,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/jupyter/</ns0:loc>
+         <ns0:lastmod>2024-08-28</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/known_issues/</ns0:loc>
          <ns0:lastmod>2024-08-28</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -8456,6 +8461,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/jobscript_examples/</ns0:loc>
+         <ns0:lastmod>2024-08-28</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/jupyter/</ns0:loc>
          <ns0:lastmod>2024-08-28</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -16825,6 +16835,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/jupyter/</ns0:loc>
+         <ns0:lastmod>2024-08-28</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/known_issues/</ns0:loc>
          <ns0:lastmod>2024-08-28</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -25186,6 +25201,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/jobscript_examples/</ns0:loc>
+         <ns0:lastmod>2024-08-28</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/jupyter/</ns0:loc>
          <ns0:lastmod>2024-08-28</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
