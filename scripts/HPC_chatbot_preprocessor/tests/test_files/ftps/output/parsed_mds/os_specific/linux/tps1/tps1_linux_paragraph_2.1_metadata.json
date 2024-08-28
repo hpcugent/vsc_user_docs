@@ -1,6 +1,7 @@
 {
     "main_title": "tps1",
     "subtitle": "OS-specific-sections",
+    "source_file": "tests/test_files/ftps/tps1.md",
     "title_depth": 2,
     "directory": "tps1",
     "parent_title": "Main-title",

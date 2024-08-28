@@ -14,7 +14,8 @@ from chatbot_parser import main
       "MIN_PARAGRAPH_LENGTH": 160,
       "MAX_TITLE_DEPTH": 4,
       "INCLUDE_LINKS_IN_PLAINTEXT": False,
-      "DEEP_DIRECTORIES": False}
+      "DEEP_DIRECTORIES": False,
+      "VERBOSE": False}
      ),
     ("tests/test_files/ftts", "tests/test_files/ftts/actual",
      "tests/test_files/ftts/output",
@@ -25,12 +26,13 @@ from chatbot_parser import main
       "MIN_PARAGRAPH_LENGTH": 160,
       "MAX_TITLE_DEPTH": 4,
       "INCLUDE_LINKS_IN_PLAINTEXT": False,
-      "DEEP_DIRECTORIES": True}
+      "DEEP_DIRECTORIES": True,
+      "VERBOSE": False}
      )
 ])
 def test_full_script_generated_directories(input_directory, actual_output_directory, expected_output_directory, options):
     # run the script
-    main(options, verbose=False)
+    main(options)
 
     # Compare directories and files
     for dirpath, dirnames, filenames in os.walk(expected_output_directory):

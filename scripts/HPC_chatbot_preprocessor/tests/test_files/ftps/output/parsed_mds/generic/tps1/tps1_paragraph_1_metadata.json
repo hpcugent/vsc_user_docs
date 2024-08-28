@@ -1,6 +1,7 @@
 {
     "main_title": "tps1",
     "subtitle": "Main-title",
+    "source_file": "tests/test_files/ftps/tps1.md",
     "title_depth": 1,
     "directory": "tps1",
     "links": {

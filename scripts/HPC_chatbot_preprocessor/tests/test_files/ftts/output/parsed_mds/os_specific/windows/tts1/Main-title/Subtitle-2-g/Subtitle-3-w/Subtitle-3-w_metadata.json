@@ -1,6 +1,7 @@
 {
     "main_title": "tts1",
     "subtitle": "Subtitle-3-w",
+    "source_file": "tests/test_files/ftts/tts1.md",
     "title_depth": 3,
     "directory": "tts1\\Main-title\\Subtitle-2-g\\Subtitle-3-w",
     "parent_title": "Subtitle-2-g",

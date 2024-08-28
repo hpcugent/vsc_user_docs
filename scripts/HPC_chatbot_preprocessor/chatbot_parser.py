@@ -21,6 +21,7 @@ MAX_TITLE_DEPTH = "MAX_TITLE_DEPTH"
 INCLUDE_LINKS_IN_PLAINTEXT = "INCLUDE_LINKS_IN_PLAINTEXT"
 SPLIT_ON_PARAGRAPHS = "SPLIT_ON_PARAGRAPHS"
 DEEP_DIRECTORIES = "DEEP_DIRECTORIES"
+VERBOSE = "VERBOSE"
 
 # directories
 PARSED_MDS = "parsed_mds"
@@ -67,6 +68,7 @@ CHECK_EXTRA_MESSAGE = "check_extra_message"
 WRITE_TEXT_AND_CHECK_EXTRA_MESSAGE = "write_text_and_check_extra_message"
 
 # Metadata attributes
+SOURCE_FILE = "source_file"
 MAIN_TITLE = "main_title"
 SUBTITLE = "subtitle"
 TITLE_DEPTH = "title_depth"
@@ -207,7 +209,7 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
     if '???' in curr_line:
         curr_line = re.sub(r'\?\?\?', "", curr_line)
 
-    # get rid of other markdown indicators (`, *, +, _)
+    # get rid of other indicators (`, *, +, _)
     if not in_code_block:
 
         backquotes = re.findall(r'`(.*?)`', curr_line)
@@ -320,7 +322,7 @@ def split_on_titles(file, main_title, options):
                             paragraphs_os_free_text[title] = current_paragraph
 
                         # write metadata of previous file
-                        paragraphs_metadata[title] = write_metadata(main_title, title, link_list, last_title_level, last_dir)
+                        paragraphs_metadata[title] = write_metadata(main_title, title, link_list, last_title_level, last_dir, options[SOURCE_DIRECTORY] + '/' + main_title + '.md')
 
                     # make a new title
                     title = make_valid_title(line[title_level + 1:-1])
@@ -357,7 +359,7 @@ def split_on_titles(file, main_title, options):
         paragraphs_os_text[title] = current_paragraph
     else:
         paragraphs_os_free_text[title] = current_paragraph
-    paragraphs_metadata[title] = write_metadata(main_title, title, link_list, last_title_level, curr_dirs[last_title_level])
+    paragraphs_metadata[title] = write_metadata(main_title, title, link_list, last_title_level, curr_dirs[last_title_level], options[SOURCE_DIRECTORY] + '/' + main_title + '.md')
 
     return paragraphs_os_text, paragraphs_os_free_text, paragraphs_metadata, subtitle_order
 
@@ -407,7 +409,7 @@ def split_on_paragraphs(file, main_title, options, current_paragraph_number=-1, 
     # metadata title
     metadata_title = main_title
 
-    # TODO: define metadata data if split occurs on paragraphs and last_title and title_level are known (placeholder in place right now)
+    # define metadata data if split occurs on paragraphs and last_title and title_level are known (will be replaced later on in the process)
     if current_paragraph_number != -1:
         last_title_level = 4
         last_dir = "PLACEHOLDER"
@@ -467,7 +469,7 @@ def split_on_paragraphs(file, main_title, options, current_paragraph_number=-1, 
                         paragraphs_os_free_text[paragraph_title] = current_paragraph
 
                     # write metadata of previous file
-                    paragraphs_metadata[paragraph_title] = write_metadata(main_title, metadata_title, link_list, last_title_level, last_dir)
+                    paragraphs_metadata[paragraph_title] = write_metadata(main_title, metadata_title, link_list, last_title_level, last_dir, source_file=options[SOURCE_DIRECTORY] + '/' + main_title + '.md')
                     subtitle_order.append(paragraph_title)
 
                     # reset the current paragraph
@@ -512,13 +514,13 @@ def split_on_paragraphs(file, main_title, options, current_paragraph_number=-1, 
         paragraphs_os_text[paragraph_title] = current_paragraph
     else:
         paragraphs_os_free_text[paragraph_title] = current_paragraph
-    paragraphs_metadata[paragraph_title] = write_metadata(main_title, metadata_title, link_list, last_title_level, curr_dirs[last_title_level])
+    paragraphs_metadata[paragraph_title] = write_metadata(main_title, metadata_title, link_list, last_title_level, curr_dirs[last_title_level], source_file=options[SOURCE_DIRECTORY] + '/' + main_title + '.md')
     subtitle_order.append(paragraph_title)
 
     return paragraphs_os_text, paragraphs_os_free_text, paragraphs_metadata, subtitle_order
 
 
-def write_metadata(main_title, subtitle, links, title_level, directory):
+def write_metadata(main_title, subtitle, links, title_level, directory, source_file):
     """
     Function that writes metadata about a text section to a dictionary
 
@@ -527,10 +529,11 @@ def write_metadata(main_title, subtitle, links, title_level, directory):
     :param links: a list of links contained within the section
     :param title_level: the depth of the title of the section
     :param directory: the directory where the section will eventually be written (can either be generic or os-specific)
+    :param source_file: the source file that the section originates from
     :return paragraph_metadata: dictionary containing the metadata about the section
     """
 
-    paragraph_metadata = {MAIN_TITLE: main_title, SUBTITLE: subtitle, TITLE_DEPTH: title_level, DIRECTORY: directory}
+    paragraph_metadata = {MAIN_TITLE: main_title, SUBTITLE: subtitle, SOURCE_FILE: source_file, TITLE_DEPTH: title_level, DIRECTORY: directory}
 
     if len(links) > 0:
         paragraph_metadata[LINKS] = {}
@@ -918,7 +921,7 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, title_or
             pass
 
 
-def main(options, verbose=True):
+def main(options):
     """
     main function
 
@@ -931,11 +934,10 @@ def main(options, verbose=True):
                     MAX_TITLE_DEPTH: integer representing the maximum depth of a title for it to be used when splitting the text,
                     INCLUDE_LINKS_IN_PLAINTEXT: boolean indicating whether links should be included in the plaintext,
                     DEEP_DIRECTORIES: boolean indicating whether the generated directories should be nested by title-structure or not}
-    :param verbose: boolean indicating whether print statements from the main function should be print, only used when for testing
     :return:
     """
 
-    if options[DEEP_DIRECTORIES] and verbose:
+    if options[DEEP_DIRECTORIES] and options[VERBOSE]:
         print("WARNING: This script generates a file structure that contains rather long filepaths. Depending on where the script is ran, some of these paths might exceed the maximum length allowed by the system resulting in problems opening the files.")
 
     # remove the directories from a previous run of the parser if they weren't cleaned up properly for some reason
@@ -963,7 +965,6 @@ def main(options, verbose=True):
 
     # for loops over all files
     for filename in filenames.keys():
-        print("Processing " + filename)
         ################### define/reset loop specific variables ###################
 
         # boolean indicating whether the current file is part of the linux tutorial
@@ -986,6 +987,9 @@ def main(options, verbose=True):
         curr_dirs = [filename[:-3] for _ in range(5)]
 
         ################### actually parse the md file ###################
+
+        if options[VERBOSE]:
+            print("Processing " + filename)
 
         # create directories for the source markdown file
         for directory in [root_dir_generic, os.path.join(PARSED_MDS, OS_SPECIFIC_DIR), root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos, os.path.join(root_dir_generic, curr_dirs[0]), os.path.join(root_dir_os_specific_linux, curr_dirs[0]), os.path.join(root_dir_os_specific_windows, curr_dirs[0]), os.path.join(root_dir_os_specific_macos, curr_dirs[0])]:
@@ -1015,7 +1019,7 @@ def main(options, verbose=True):
     if os.path.exists(TEMP_JINJA_FILE):
         os.remove(TEMP_JINJA_FILE)
 
-    if verbose:
+    if options[VERBOSE]:
         print("Parsing finished successfully")
 
 
@@ -1031,6 +1035,7 @@ if __name__ == '__main__':
     parser.add_argument("-td", "--max_title_depth", type=int, default=4, help="Maximum depth of titles that divide the source text into sections, only works if split on titles is enabled (default: 4)")
     parser.add_argument("-l", "--links", action="store_true", help="Add links to the output texts")
     parser.add_argument("-dd", "--deep_directories", action="store_true", help="Generate a nested directory structure following the structure of the subtitles. Only works if split on titles is enabled")
+    parser.add_argument("-v", "--verbose", action="store_true", help="Run the script with verbose output")
 
     args = parser.parse_args()
 
@@ -1041,6 +1046,7 @@ if __name__ == '__main__':
                     MIN_PARAGRAPH_LENGTH: args.min_paragraph_length,
                     MAX_TITLE_DEPTH: args.max_title_depth,
                     INCLUDE_LINKS_IN_PLAINTEXT: args.links,
-                    DEEP_DIRECTORIES: args.deep_directories and args.split_on_titles}
+                    DEEP_DIRECTORIES: args.deep_directories and args.split_on_titles,
+                    VERBOSE: args.verbose}
 
     main(options_dict)
