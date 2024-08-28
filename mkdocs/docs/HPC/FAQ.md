@@ -283,10 +283,11 @@ of files so other users can access the data. For example, the following
 command will enable a user named "otheruser" to read the file named
 `dataset.txt`. See
 
-<pre><code>$ <b>setfacl -m u:otheruser:r dataset.txt</b>
-$ <b>ls -l dataset.txt</b>
+```
+$ setfacl -m u:otheruser:r dataset.txt
+$ ls -l dataset.txt
 -rwxr-x---+ 2 {{userid}} mygroup      40 Apr 12 15:00 dataset.txt
-</code></pre>
+```
 
 For more information about `chmod` or `setfacl`, see
 [Linux tutorial](linux-tutorial/manipulating_files_and_directories.md#changing-permissions-chmod).

@@ -5,14 +5,16 @@
 To submit jobs to the `joltik` GPU cluster, where each node provides 4
 NVIDIA V100 GPUs (each with 32GB of GPU memory), use:
 
-<pre><code>$ <b>module swap cluster/joltik</b>
-</code></pre>
+```
+module swap cluster/joltik
+```
 
 To submit to the `accelgor` GPU cluster, where each node provides 4
 NVIDIA A100 GPUs (each with 80GB GPU memory), use:
 
-<pre><code>$ <b>module swap cluster/accelgor</b>
-</code></pre>
+```
+module swap cluster/accelgor
+```
 
 Then use the familiar `qsub`, `qstat`, etc. commands, taking into
 account the guidelines outlined in
@@ -158,8 +160,7 @@ versions.
 
 #### Example TensorFlow job script
 
-<center>-- TensorFlow_GPU.sh --</center>
-```bash
+```bash title="TensorFlow_GPU.sh"
 {% include "./examples/HPC-UGent-GPU-clusters/TensorFlow_GPU.sh" %}
 ```
 

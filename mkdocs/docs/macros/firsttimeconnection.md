@@ -3,7 +3,10 @@ Alert will appear and you will be asked to verify the authenticity of the
 login node.
 
 Make sure the fingerprint in the alert matches one of the following:
-<pre><code>{{ puttyFirstConnect }}</code></pre>
+
+```
+{{ puttyFirstConnect }}
+```
 
 If it does, press ***Yes***, if it doesn't, please contact {{ hpcinfo }}.
 
