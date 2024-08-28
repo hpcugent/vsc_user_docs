@@ -106,6 +106,9 @@ METADATA_EXTENSION = "_metadata"
 # Marker for comments for the bot
 INPUT_FOR_BOT = "INPUT_FOR_BOT"
 
+# Standard strings for verbose output
+LINE = "------------------------------------------------------------------------------------------------------\n"
+
 
 ################### define functions ###################
 
@@ -266,6 +269,10 @@ def split_on_titles(file, main_title, options):
     :return paragraphs_metadata: dictionary containing the metadata of each split section of text
     :return subtitle_order: list containing all encountered subtitles in order of appearance
     """
+
+    if options[VERBOSE]:
+        print("Splitting on titles\n")
+
     # start of assuming we haven't encountered a title
     after_first_title = False
 
@@ -302,14 +309,19 @@ def split_on_titles(file, main_title, options):
             # detect if-statements starting or ending on the current line
             in_if_statement += len(re.findall(IF_MANGLED_PATTERNS[IF], line)) - len(re.findall(IF_MANGLED_PATTERNS[ENDIF], line))
 
+            # detect codeblocks to make sure titles aren't detected in them
+            if '```' in line or (('<pre><code>' in line) ^ ('</code></pre>' in line)):
+                in_code_block = not in_code_block
+                if options[VERBOSE]:
+                    if in_code_block:
+                        print("Detected start of a codeblock, not registering titles")
+                    else:
+                        print("Detected end of codeblock, registering titles again")
+
             # only split up if current line is in a fully non-os-specific section
             if in_if_statement == 0:
 
                 title_level = check_for_title(line, in_code_block, curr_dirs, options)
-
-                # detect codeblocks to make sure titles aren't detected in them
-                if '```' in line or (('<pre><code>' in line) ^ ('</code></pre>' in line)):
-                    in_code_block = not in_code_block
 
                 # line is a title with a maximum depth of 4
                 if title_level > 0:
@@ -318,8 +330,12 @@ def split_on_titles(file, main_title, options):
                         # write text of previous file
                         if previous_contained_if:
                             paragraphs_os_text[title] = current_paragraph
+                            if options[VERBOSE]:
+                                print("Saved os-specific chunk with temporary title: " + title + "\n")
                         else:
                             paragraphs_os_free_text[title] = current_paragraph
+                            if options[VERBOSE]:
+                                print("Saved generic chunk with title: " + title + "\n")
 
                         # write metadata of previous file
                         paragraphs_metadata[title] = write_metadata(main_title, title, link_list, last_title_level, last_dir, options[SOURCE_DIRECTORY] + '/' + main_title + '.md')
@@ -357,8 +373,12 @@ def split_on_titles(file, main_title, options):
     # write dictionaries for the last file
     if previous_contained_if:
         paragraphs_os_text[title] = current_paragraph
+        if options[VERBOSE]:
+            print("Saved os-specific chunk with temporary title: " + title + "\n")
     else:
         paragraphs_os_free_text[title] = current_paragraph
+        if options[VERBOSE]:
+            print("Saved generic chunk with title: " + title + "\n")
     paragraphs_metadata[title] = write_metadata(main_title, title, link_list, last_title_level, curr_dirs[last_title_level], options[SOURCE_DIRECTORY] + '/' + main_title + '.md')
 
     return paragraphs_os_text, paragraphs_os_free_text, paragraphs_metadata, subtitle_order
@@ -377,6 +397,10 @@ def split_on_paragraphs(file, main_title, options, current_paragraph_number=-1, 
     :return paragraphs_metadata: dictionary containing the metadata of each split section of text
     :return subtitle_order: list containing all encountered subtitles in order of appearance
     """
+
+    if options[VERBOSE]:
+        print("Splitting on paragraphs\n")
+
     # start of assuming we are not in a code_block
     in_code_block = False
 
@@ -435,22 +459,32 @@ def split_on_paragraphs(file, main_title, options, current_paragraph_number=-1, 
             # detect whether the current line is in a list
             if re.search(r'^(\s*)([*+-]|\d+\.|[a-zA-Z]\.)\s+.*$', line):  # beginning of a list entry
                 in_list = True
-                # print("List entry found")
+                if options[VERBOSE]:
+                    print("First line of new list entry found, not starting new paragraphs: " + line[:-1])
             elif re.search(r'^\s{2,}.+$', line) and in_list:  # middle of a list entry
                 pass
             elif re.search(r'^(\s*)([*+-]|\d+\.|[a-zA-Z]\.)\s+.*$|^\s{2,}.+$|^\n', nxt) and in_list:  # line(s) between list entries
                 pass
+            elif in_list:
+                if options[VERBOSE]:
+                    print("List ended, starting new paragraphs again")
+                in_list = False
             else:
                 in_list = False
+
+            # detect codeblocks to make sure titles aren't detected in them
+            if '```' in line or (('<pre><code>' in line) ^ ('</code></pre>' in line)):
+                in_code_block = not in_code_block
+                if options[VERBOSE]:
+                    if in_code_block:
+                        print("Detected start of a codeblock, not starting new paragraphs")
+                    else:
+                        print("Detected end of codeblock, starting new paragraphs again")
 
             # only split up if current line is in a fully non-os-specific section
             if in_if_statement == 0:
 
                 title_level = check_for_title(line, in_code_block, curr_dirs, options)
-
-                # detect codeblocks to make sure titles aren't detected in them
-                if '```' in line or (('<pre><code>' in line) ^ ('</code></pre>' in line)):
-                    in_code_block = not in_code_block
 
                 # check whether a new paragraph should be started
                 if line == "\n" and len(re.sub(r'\{' + IF_MANGLED_PART + '%.*?%' + IF_MANGLED_PART + '}', "", current_paragraph)) >= options[MIN_PARAGRAPH_LENGTH] and not in_code_block and not in_list:
@@ -465,8 +499,12 @@ def split_on_paragraphs(file, main_title, options, current_paragraph_number=-1, 
                     # write text of previous file
                     if previous_contained_if:
                         paragraphs_os_text[paragraph_title] = current_paragraph
+                        if options[VERBOSE]:
+                            print("Saved os-specific chunk with temporary title: " + paragraph_title + "\n")
                     else:
                         paragraphs_os_free_text[paragraph_title] = current_paragraph
+                        if options[VERBOSE]:
+                            print("Saved generic chunk with title: " + paragraph_title + "\n")
 
                     # write metadata of previous file
                     paragraphs_metadata[paragraph_title] = write_metadata(main_title, metadata_title, link_list, last_title_level, last_dir, source_file=options[SOURCE_DIRECTORY] + '/' + main_title + '.md')
@@ -512,8 +550,12 @@ def split_on_paragraphs(file, main_title, options, current_paragraph_number=-1, 
     # write dictionaries for the last file
     if previous_contained_if:
         paragraphs_os_text[paragraph_title] = current_paragraph
+        if options[VERBOSE]:
+            print("Saved os-specific chunk with temporary title: " + paragraph_title + "\n")
     else:
         paragraphs_os_free_text[paragraph_title] = current_paragraph
+        if options[VERBOSE]:
+            print("Saved generic chunk with title: " + paragraph_title + "\n")
     paragraphs_metadata[paragraph_title] = write_metadata(main_title, metadata_title, link_list, last_title_level, curr_dirs[last_title_level], source_file=options[SOURCE_DIRECTORY] + '/' + main_title + '.md')
     subtitle_order.append(paragraph_title)
 
@@ -557,6 +599,9 @@ def jinja_parser(filename, copy_location, options):
     # YAML file location
     yml_file_path = os.path.join(RETURN_DIR, RETURN_DIR, MKDOCS_DIR, EXTRA_DIR, 'gent.yml')
 
+    if options[VERBOSE]:
+        print("Reading YAML file from location: " + yml_file_path)
+
     # Read the YAML file
     with open(yml_file_path, 'r') as yml_file:
         words_dict = yaml.safe_load(yml_file)
@@ -569,6 +614,9 @@ def jinja_parser(filename, copy_location, options):
     }
     combined_context = {**words_dict, **additional_context}
 
+    if options[VERBOSE]:
+        print("Mangling OS-specific if-statements")
+
     # Mangle the OS-related if-statements
     mangle_ifs(copy_location, filename, options)
 
@@ -577,6 +625,9 @@ def jinja_parser(filename, copy_location, options):
     templateEnv = Environment(loader=template_loader)
     template = templateEnv.get_template(filename)
     rendered_content = template.render(combined_context)
+
+    if options[VERBOSE]:
+        print("jinja parsing finished\nWriting to location: " + copy_location)
 
     # Save the rendered content to a new file
     with open(copy_location, 'w', encoding='utf-8', errors='ignore') as output_file:
@@ -601,7 +652,7 @@ def load_macros(name):
             return readfile.read()
 
 
-def mangle_os_ifs(line, is_os):
+def mangle_os_ifs(line, is_os, options):
     """
     function that mangles the os-related if-statements. This is needed because we want to keep these if-statements intact after jinja-parsing to build the directory structure.
     We don't want to mangle all if-related statements (such as else and endif) so we need to keep track of the context of the last few if-statements.
@@ -612,6 +663,7 @@ def mangle_os_ifs(line, is_os):
         NON_OS_IF_IN_OS_IF: in a non-os-if nested in an os-if
         OS_IF: in an os-if
         OS_IF_IN_OS_IF: in an os-if nested in an os-if
+    :param options: dictionary containing the options given by the user
     :return line: the modified line with  mangled os-related if-statements
     """
 
@@ -640,6 +692,8 @@ def mangle_os_ifs(line, is_os):
         # this logic isn't flawless, there are number of nested if-constructions that are technically possible that would break this logic, but these don't appear in the documentation as it doesn't make sense to have these
         if endif_match:
             if is_os in (OS_IF, OS_IF_IN_OS_IF):
+                if options[VERBOSE]:
+                    print("OS-specific endif statement found in line: " + line[:-1])
                 line = part_before_mangling + IF_MANGLED_PART + part_between_mangling + IF_MANGLED_PART + part_after_mangling
                 added_length += 2 * len(IF_MANGLED_PART)
                 if is_os == OS_IF:
@@ -651,6 +705,8 @@ def mangle_os_ifs(line, is_os):
 
         elif if_match:
             if if_os_match:
+                if options[VERBOSE]:
+                    print("OS-specific if statement found in line:    " + line[:-1])
                 line = part_before_mangling + IF_MANGLED_PART + part_between_mangling + IF_MANGLED_PART + part_after_mangling
                 added_length += 2 * len(IF_MANGLED_PART)
                 if is_os == OS_IF:
@@ -665,6 +721,8 @@ def mangle_os_ifs(line, is_os):
 
         elif else_match:
             if is_os in (OS_IF, OS_IF_IN_OS_IF):
+                if options[VERBOSE]:
+                    print("OS-specific else statement found in line:  " + line[:-1])
                 line = part_before_mangling + IF_MANGLED_PART + part_between_mangling + IF_MANGLED_PART + part_after_mangling
                 added_length += 2 * len(IF_MANGLED_PART)
 
@@ -688,7 +746,7 @@ def mangle_ifs(directory, filename, options):
     with open(os.path.join(options[DESTINATION_DIRECTORY], IF_MANGLED_FILES,  filename), 'w') as write_file:
         with open(directory, 'r') as read_file:
             for line in read_file:
-                new_line, is_os = mangle_os_ifs(line, is_os)
+                new_line, is_os = mangle_os_ifs(line, is_os, options)
                 write_file.write(new_line)
 
 
@@ -732,6 +790,9 @@ def write_generic_file(title, paragraphs_text, paragraphs_metadata, title_order,
         # make the directory needed for the files that will be written
         filepath = os.path.join(options[DESTINATION_DIRECTORY], PARSED_MDS, GENERIC_DIR, paragraphs_metadata[title][DIRECTORY])
         os.makedirs(filepath, exist_ok=True)
+
+        if options[VERBOSE]:
+            print("Writing generic section " + title + " to filepath: " + str(filepath))
 
         write_files(title, paragraphs_text[title], paragraphs_metadata, title_order, title_order_number, filepath, GENERIC, options, is_linux_tutorial)
     else:
@@ -911,6 +972,9 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, title_or
                     filepath = os.path.join(options[DESTINATION_DIRECTORY], PARSED_MDS, OS_SPECIFIC_DIR, OS, os_specific_metadata[os_subtitle][DIRECTORY])
                     os.makedirs(filepath, exist_ok=True)
 
+                    if options[VERBOSE]:
+                        print("Writing os-specific section " + os_subtitle + " to filepath: " + str(filepath))
+
                     # write to files
                     write_files(os_subtitle, os_specific_text[os_subtitle], os_specific_metadata, total_subtitle_order, os_i + title_order_number, filepath, OS, options, is_linux_tutorial)
                 else:
@@ -933,9 +997,13 @@ def main(options):
                     MIN_PARAGRAPH_LENGTH: integer representing the minimum length of a paragraph,
                     MAX_TITLE_DEPTH: integer representing the maximum depth of a title for it to be used when splitting the text,
                     INCLUDE_LINKS_IN_PLAINTEXT: boolean indicating whether links should be included in the plaintext,
-                    DEEP_DIRECTORIES: boolean indicating whether the generated directories should be nested by title-structure or not}
+                    DEEP_DIRECTORIES: boolean indicating whether the generated directories should be nested by title-structure or not,
+                    VERBOSE: enable or disable verbose mode}
     :return:
     """
+
+    if options[VERBOSE]:
+        print("Running chatbot parser with options: " + str(options))
 
     if options[DEEP_DIRECTORIES] and options[VERBOSE]:
         print("WARNING: This script generates a file structure that contains rather long filepaths. Depending on where the script is ran, some of these paths might exceed the maximum length allowed by the system resulting in problems opening the files.")
@@ -976,9 +1044,10 @@ def main(options):
 
         # variable that keeps track of the directories that are used to write in at different levels
         root_dir_generic = os.path.join(options[DESTINATION_DIRECTORY], PARSED_MDS, GENERIC_DIR)
-        root_dir_os_specific_linux = os.path.join(options[DESTINATION_DIRECTORY], PARSED_MDS, OS_SPECIFIC_DIR, LINUX)
-        root_dir_os_specific_windows = os.path.join(options[DESTINATION_DIRECTORY], PARSED_MDS, OS_SPECIFIC_DIR, WINDOWS)
-        root_dir_os_specific_macos = os.path.join(options[DESTINATION_DIRECTORY], PARSED_MDS, OS_SPECIFIC_DIR, MACOS)
+        root_dir_os_specific = os.path.join(options[DESTINATION_DIRECTORY], PARSED_MDS, OS_SPECIFIC_DIR)
+        root_dir_os_specific_linux = os.path.join(root_dir_os_specific, LINUX)
+        root_dir_os_specific_windows = os.path.join(root_dir_os_specific, WINDOWS)
+        root_dir_os_specific_macos = os.path.join(root_dir_os_specific, MACOS)
 
         # variable for the main title (needed for reference links)
         main_title = filename[:-3]
@@ -989,17 +1058,30 @@ def main(options):
         ################### actually parse the md file ###################
 
         if options[VERBOSE]:
-            print("Processing " + filename)
+            print(LINE + "Processing " + filename)
+            print("Location: " + filenames[filename])
+            print("\nMaking directories:")
 
         # create directories for the source markdown file
-        for directory in [root_dir_generic, os.path.join(PARSED_MDS, OS_SPECIFIC_DIR), root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos, os.path.join(root_dir_generic, curr_dirs[0]), os.path.join(root_dir_os_specific_linux, curr_dirs[0]), os.path.join(root_dir_os_specific_windows, curr_dirs[0]), os.path.join(root_dir_os_specific_macos, curr_dirs[0])]:
+        for directory in [root_dir_generic, root_dir_os_specific, root_dir_os_specific_linux, root_dir_os_specific_windows, root_dir_os_specific_macos, os.path.join(root_dir_generic, curr_dirs[0]), os.path.join(root_dir_os_specific_linux, curr_dirs[0]), os.path.join(root_dir_os_specific_windows, curr_dirs[0]), os.path.join(root_dir_os_specific_macos, curr_dirs[0])]:
+            if options[VERBOSE]:
+                print(directory)
             os.makedirs(directory, exist_ok=True)
+
+        if options[VERBOSE]:
+            print("\nParsing the sourcefile with jinja")
 
         # process the jinja macros
         jinja_parser(filename, copy_file, options)
 
+        if options[VERBOSE]:
+            print("\nSplitting the file for the first time (split in sufficiently small generic sections and large os-specific chunks)")
+
         # split the text in paragraphs
         paragraphs_os_text, paragraphs_os_free_text, paragraphs_metadata, subtitle_order = split_text(copy_file, main_title, options)
+
+        if options[VERBOSE]:
+            print("\nFurther splitting os-specific chunks and writing generic and os-specific sections to files with metadata")
 
         # for every section, either make the whole section generic, or create an os-specific file for each OS
         for i, subtitle in enumerate(subtitle_order):
@@ -1012,6 +1094,14 @@ def main(options):
             else:
                 split_and_write_os_specific_section(paragraphs_os_text[subtitle], paragraphs_metadata[subtitle], subtitle_order, i, paragraphs_metadata, options, is_linux_tutorial)
 
+        if options[VERBOSE]:
+            print("\nFinished processing " + filename)
+
+    if options[VERBOSE]:
+        print(LINE + "Cleaning up directories:")
+        print(os.path.join(options[DESTINATION_DIRECTORY], COPIES))
+        print(os.path.join(options[DESTINATION_DIRECTORY], IF_MANGLED_FILES))
+        print(os.path.join(options[DESTINATION_DIRECTORY], LINUX_TUTORIAL))
     # clean up temporary directories and files
     shutil.rmtree(os.path.join(options[DESTINATION_DIRECTORY], COPIES), ignore_errors=True)
     shutil.rmtree(os.path.join(options[DESTINATION_DIRECTORY], IF_MANGLED_FILES), ignore_errors=True)
