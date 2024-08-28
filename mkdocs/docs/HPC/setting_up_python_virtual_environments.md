@@ -19,7 +19,7 @@ This section will explain how to create, activate, use and deactivate Python vir
 A Python virtual environment can be created with the following command:
 
 ```bash
-$ python -m venv myenv      # Create a new virtual environment named 'myenv'
+python -m venv myenv      # Create a new virtual environment named 'myenv'
 ```
 
 This command creates a new subdirectory named `myenv` in the current working directory. 
@@ -31,7 +31,7 @@ To use the virtual environment, you need to *activate* it.
 This will modify the shell environment to use the Python interpreter and packages from the virtual environment.
 
 ```bash
-$ source myenv/bin/activate                    # Activate the virtual environment
+source myenv/bin/activate                    # Activate the virtual environment
 ```
 
 ### Installing packages in a virtual environment
@@ -39,8 +39,8 @@ $ source myenv/bin/activate                    # Activate the virtual environmen
 After activating the virtual environment, you can install additional Python packages with `pip install`:
 
 ```bash
-$ pip install example_package1
-$ pip install example_package2
+pip install example_package1
+pip install example_package2
 ```
 
 These packages will be scoped to the virtual environment and will not affect the system-wide Python installation, 
@@ -55,14 +55,14 @@ It is now possible to run Python scripts that use the installed packages in the 
     To check if a package is available as a module, you can use the following command:
 
     ```bash
-    $ module av package_name
+    module av package_name
     ```
 
     Some Python packages are installed as extensions of modules. For example, `numpy`, `scipy` and `pandas` are 
     part of the `SciPy-bundle` module. You can use
 
     ```bash
-    $ module show <module_name>
+    module show module_name
     ```
 
     to check which extensions are included in a module (if any).
@@ -89,7 +89,7 @@ When you are done using the virtual environment, you can deactivate it.
 To do that, run:
 
 ```bash
-$ deactivate
+deactivate
 ```
 
 ## Combining virtual environments with centrally installed modules
@@ -108,22 +108,22 @@ import poutyne
 We load a PyTorch package as a module and install Poutyne in a virtual environment:
 
 ```bash
-$ module load PyTorch/2.1.2-foss-2023a
-$ python -m venv myenv
-$ source myenv/bin/activate
-$ pip install Poutyne
+module load PyTorch/2.1.2-foss-2023a
+python -m venv myenv
+source myenv/bin/activate
+pip install Poutyne
 ```
 
 While the virtual environment is activated, we can run the script without any issues:
 
 ```bash
-$ python pytorch_poutyne.py
+python pytorch_poutyne.py
 ```
 
 Deactivate the virtual environment when you are done:
 
 ```bash
-$ deactivate
+deactivate
 ```
 
 
@@ -133,8 +133,8 @@ To create a virtual environment for a specific cluster, you need to start an int
 Let's say you want to create a virtual environment on the `donphan` cluster.
 
 ```bash
-$ module swap cluster/donphan
-$ qsub -I
+module swap cluster/donphan
+qsub -I
 ```
 
 After some time, a shell will be started on the `donphan` cluster. 
@@ -146,7 +146,7 @@ This virtual environment can be used by jobs running on the `donphan` cluster.
     We can use the `$VSC_INSTITUTE_CLUSTER` variable to get the name of the current cluster.
 
     ```bash
-    $ python -m venv myenv_${VSC_INSTITUTE_CLUSTER}
+    python -m venv myenv_${VSC_INSTITUTE_CLUSTER}
     ```
 
 
@@ -171,15 +171,15 @@ print(f"The version of Poutyne is: {poutyne.__version__}")
 First, we create a virtual environment on the `donphan` cluster:
 
 ```bash
-$ module swap cluster/donphan
-$ qsub -I
+module swap cluster/donphan
+qsub -I
 # Load module dependencies
-$ module load PyTorch/2.1.2-foss-2023a
-$ python -m venv myenv
-$ source myenv/bin/activate
+module load PyTorch/2.1.2-foss-2023a
+python -m venv myenv
+source myenv/bin/activate
 # install virtual environment dependencies
-$ pip install Poutyne
-$ deactivate
+pip install Poutyne
+deactivate
 ```
 
 Type `exit` to exit the interactive shell. 
@@ -205,7 +205,7 @@ deactivate                            # Deactivate the virtual environment
 Next, we submit the job script:
 
 ```bash
-$ qsub jobscript.pbs
+qsub jobscript.pbs
 ```
 
 Two files will be created in the directory where the job was submitted: 
@@ -224,8 +224,8 @@ because the binaries in the virtual environments from cluster A might not work w
 For example, if we create a virtual environment on the skitty cluster,
 
 ```bash
-$ module swap cluster/skitty
-$ qsub -I
+module swap cluster/skitty
+qsub -I
 $ python -m venv myenv
 ```
 
@@ -283,8 +283,8 @@ Since we used `module purge`, that module is no longer available.
 The solution is to load the same python module before activating the virtual environment:
 
 ```bash
-$ module load Python/3.10.8-GCCcore-12.2.0  # Load the same python module
-$ source myenv/bin/activate                 # Activate the virtual environment
+module load Python/3.10.8-GCCcore-12.2.0  # Load the same python module
+source myenv/bin/activate                 # Activate the virtual environment
 ```
 
 #### Modifying modules while in a virtual environment
