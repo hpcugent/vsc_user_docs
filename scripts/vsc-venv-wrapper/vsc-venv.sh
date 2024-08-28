@@ -47,6 +47,32 @@ load_modules() {
 
 }
 
+# Description:
+#   This function checks if the currently loaded cluster's operating system and architecture are the same
+#   as the current host's OS and architecture.
+#   For example, switching to the shinx cluster on a gallade host will create a mismatch
+#   (RHEL8-zen2 on gligar and RHEL9-zen4 on shinx at the time of writing)
+#
+# Return:
+#   0 (true) - If the loaded cluster's OS and architecture match the host's OS and architecture.
+#   1 (false) - If there is a mismatch between the loaded and current host's OS or architecture.
+is_loaded_cluster_compatible_with_host() {
+  local loaded_cluster_os loaded_cluster_architecture
+  local current_host_os current_host_architecture
+
+  loaded_cluster_os="$VSC_OS_LOCAL"
+  loaded_cluster_architecture="$VSC_ARCH_LOCAL"
+
+  current_host_os=$(ml show env/vsc/"$VSC_DEFAULT_CLUSTER_MODULE" | grep VSC_OS_LOCAL | cut -d'"' -f4)
+  current_host_architecture=$(ml show env/vsc/"$VSC_DEFAULT_CLUSTER_MODULE" | grep VSC_ARCH_LOCAL | cut -d'"' -f4)
+
+  if [ "$loaded_cluster_os-$loaded_cluster_architecture" = "$current_host_os-$current_host_architecture" ]; then
+    return 0
+  else
+    return 1
+  fi
+}
+
 
 # ============================ Main functions ============================
 
@@ -59,7 +85,24 @@ activate() {
 
   venv_location=$(realpath -m "venvs/venv-${VSC_OS_LOCAL}-${VSC_ARCH_LOCAL}") # full path of venv
 
-  # === Step 0: Warn user if they have modules loaded === #
+  # === Step 0: Warn users if os-arch of current host and loaded module do not match === #
+  # use is_loaded_cluster_compatible_with_host
+
+  if ! is_loaded_cluster_compatible_with_host; then
+    local loaded_cluster="$VSC_INSTITUTE_CLUSTER"
+    local host_cluster="$VSC_DEFAULT_CLUSTER_MODULE"
+    echo_warning "The OS or architecture of the current host ($host_cluster) does not match that of the loaded cluster ($loaded_cluster)."
+    echo_warning "Creating or activating a virtual environment on $host_cluster with modules optimized for $loaded_cluster may cause issues."
+    echo_warning "to make a virtual environment on the $loaded_cluster cluster, start an interactive session on that cluster:"
+    echo_warning "  $ module swap cluster/$loaded_cluster"
+    echo_warning "  $ qsub -I"
+    echo_warning "  $ cd /path/to/your/project"
+    echo_warning "Then run the activate command again."
+    echo_warning "Exiting..."
+    return 1
+  fi
+
+  # === Step 1: Warn user if they have modules loaded === #
 
   loaded_modules=($(echo "$LOADEDMODULES" | tr ':' '\n' | grep -v -E '^(env|cluster)/')) # Remove env and cluster modules
   n_loaded_modules="${#loaded_modules[@]}"
@@ -74,12 +117,12 @@ activate() {
   fi
 
 
-  # === Step 1: Purge Modules === #
+  # === Step 2: Purge Modules === #
 
   echo_info "Purging currently loaded modules."
   module purge
 
-  # === Step 2: Load Modules if module script present === #
+  # === Step 3: Load Modules if module script present === #
 
   if [ -n "$modules_file" ]; then # If module script not empty
 
@@ -96,7 +139,7 @@ activate() {
     echo_info "No module file provided. Proceeding without extra modules."
   fi
 
-  # === Step 3: Create Virtual Environment if not yet present === #
+  # === Step 4: Create Virtual Environment if not yet present === #
 
   if [ "$(which python)" = "/usr/bin/python" ]; then
     echo_warning "System python used. Consider loading a specific python module through the modules script."
@@ -110,12 +153,12 @@ activate() {
     return 1
   fi
 
-  # === Step 4: Activate Virtual Environment === #
+  # === Step 5: Activate Virtual Environment === #
 
   echo_info "Activating virtual environment"
   source "$venv_location/bin/activate"
 
-  # === Step 5: Install Requirements === #
+  # === Step 6: Install Requirements === #
 
   echo_info "Installing requirements from '$requirements_file'"
   if ! pip install -r "$requirements_file"; then # This will finish quickly if the requirements are already installed
