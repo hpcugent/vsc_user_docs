@@ -69,50 +69,18 @@ Not all modules will work for every notebook, we need to use the one that uses t
 ![image](img/ood_jupyter_version.png)
 </center>
 
-Module names include the toolchain that was used to install the module (for example `gfbf-2023b` in `SciPy-bundle/2023.11-gfbf-2023b`). To see which modules are compatible with each other, check the table on the [page about Module conflicts](troubleshooting.md#module-conflicts).
-To find the toolchain used by such a module (and the packages contained within a module), we can make use of `module show <module_name>`:
+Module names include the toolchain that was used to install the module (for example `gfbf-2023b` in `SciPy-bundle/2023.11-gfbf-2023b` means that that module uses the toolchain `gfbf/2023`). To see which modules are compatible with each other, you can check the table on the [page about Module conflicts](troubleshooting.md#module-conflicts). Another way to find out which `GCCcore` subtoolchain goes with the particular toolchain of the module (such as `gfbf/2023b`) is to use `module show`. In particular using `module show <toolchain of the module> | grep GCC` (before the module has been loaded) will return this `GCCcore` version.
 
 ```shell
-$ module show SciPy-bundle/2023.11-gfbf-2023b
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-   /apps/gent/RHEL8/zen2-ib/modules/all/SciPy-bundle/2023.11-gfbf-2023b.lua:
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-help([[
-Description
-===========
-Bundle of Python packages for scientific software
-More information
-================
- - Homepage: https://python.org/
-Included extensions
-===================
-beniget-0.4.1, Bottleneck-1.3.7, deap-1.4.1, gast-0.5.4, mpmath-1.3.0,
-numexpr-2.8.7, numpy-1.26.2, pandas-2.1.3, ply-3.11, pythran-0.14.0,
-scipy-1.11.4, tzdata-2023.3, versioneer-0.29
-]])
-whatis("Description: Bundle of Python packages for scientific software")
-whatis("Homepage: https://python.org/")
-whatis("URL: https://python.org/")
-whatis("Extensions: beniget-0.4.1, Bottleneck-1.3.7, deap-1.4.1, gast-0.5.4, mpmath-1.3.0, numexpr-2.8.7, numpy-1.26.2, pandas-2.1.3, ply-3.11, pythran-0.14.0, scipy-1.11.4, tzdata-2023.3, versioneer-0.29")
-conflict("SciPy-bundle")
-load("gfbf/2023b")
-load("Python/3.11.5-GCCcore-13.2.0")
-load("Python-bundle-PyPI/2023.10-GCCcore-13.2.0")
-load("pybind11/2.11.1-GCCcore-13.2.0")
-prepend_path("CMAKE_PREFIX_PATH","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2023.11-gfbf-2023b")
-prepend_path("LIBRARY_PATH","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2023.11-gfbf-2023b/lib")
-prepend_path("PATH","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2023.11-gfbf-2023b/bin")
-setenv("EBROOTSCIPYMINBUNDLE","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2023.11-gfbf-2023b")
-setenv("EBVERSIONSCIPYMINBUNDLE","2023.11")
-setenv("EBDEVELSCIPYMINBUNDLE","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2023.11-gfbf-2023b/easybuild/SciPy-bundle-2023.11-gfbf-2023b-easybuild-devel")
-prepend_path("PYTHONPATH","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2023.11-gfbf-2023b/lib/python3.11/site-packages")
-prepend_path("CPATH","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2023.11-gfbf-2023b/lib/python3.11/site-packages/numpy/core/include")
-prepend_path("LD_LIBRARY_PATH","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2023.11-gfbf-2023b/lib/python3.11/site-packages/numpy/core/lib")
-prepend_path("LIBRARY_PATH","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2023.11-gfbf-2023b/lib/python3.11/site-packages/numpy/core/lib")
-setenv("EBEXTSLISTSCIPYMINBUNDLE","numpy-1.26.2,ply-3.11,gast-0.5.4,beniget-0.4.1,pythran-0.14.0,versioneer-0.29,scipy-1.11.4,numexpr-2.8.7,Bottleneck-1.3.7,tzdata-2023.3,pandas-2.1.3,mpmath-1.3.0,deap-1.4.1")
+$ module show gfbf/2023b | grep GCC
+GNU Compiler Collection (GCC) based compiler toolchain, including
+whatis("Description: GNU Compiler Collection (GCC) based compiler toolchain, including
+load("GCC/13.2.0")
+load("FlexiBLAS/3.3.1-GCC-13.2.0")
+load("FFTW/3.3.10-GCC-13.2.0")
 ```
 
-The toolchain used can then for example be found within the line `load("Python/3.11.5-GCCcore-13.2.0")` and the included Python packages under the line `Included extensions`.
+The toolchain used can then for example be found within the line `load("GCC/13.2.0")` and the included Python packages under the line `Included extensions`.
 
 It is also recommended to doublecheck the compatibility of the Jupyter notebook version and the extra modules by loading them all in a shell environment. 
 To do so, find the module containing the correct Jupyter notebook version (for our example case this is `JupyterNotebook/7.2.0-GCCcore-13.2.0`) and then use `module load <module_name>` for every module as follows:
