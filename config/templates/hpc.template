@@ -23,7 +23,6 @@ nav:
   - Troubleshooting: troubleshooting.md
   - HPC Policies: sites/hpc_policies.md
   - Advanced topics:
-      - Setting Up Python Virtual Environments: setting_up_python_virtual_environments.md
       - Fine-tuning Job Specifications: fine_tuning_job_specifications.md
       - Multi-job submission: multi_job_submission.md
       - Compiling and testing your software on the HPC: compiling_your_software.md
@@ -47,6 +46,7 @@ nav:
     - More on the HPC infrastructure: linux-tutorial/hpc_infrastructure.md
 {%- endif %}
   - Software-specific Best Practices:
+      - Python virtual environments: setting_up_python_virtual_environments.md
       - AlphaFold: alphafold.md
       - Apptainer/Singularity: apptainer.md
       - EasyBuild: easybuild.md
