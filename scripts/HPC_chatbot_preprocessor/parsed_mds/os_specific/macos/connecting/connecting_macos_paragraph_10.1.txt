@@ -14,7 +14,6 @@ First Time connection to the HPC infrastructure
     export LANG="en_US.UTF-8"
     ...
     
-    
      tip "tip: vi"
         To start entering text in vi: move to the place you want to start
         entering text with the arrow keys and type "i" to switch to insert mode. You can easily exit vi by entering: ""ESC" :wq"
@@ -24,11 +23,10 @@ First Time connection to the HPC infrastructure
     or alternatively (if you are not comfortable with the Linux editors),
     again on your local machine:
     
-    $ echo "export LANGUAGE=\"en_US.UTF-8\"" >> ~/.profile
-    $ echo "export LC_ALL=\"en_US.UTF-8\"" >> ~/.profile
-    $ echo "export LC_CTYPE=\"en_US.UTF-8\"" >> ~/.profile
-    $ echo "export LANG=\"en_US.UTF-8\"" >> ~/.profile
-    
+    echo "export LANGUAGE=\"en_US.UTF-8\"" >> ~/.profile
+    echo "export LC_ALL=\"en_US.UTF-8\"" >> ~/.profile
+    echo "export LC_CTYPE=\"en_US.UTF-8\"" >> ~/.profile
+    echo "export LANG=\"en_US.UTF-8\"" >> ~/.profile
     
     You can now log out, open a new terminal/shell on your local machine and
     reconnect to the login node, and you should not get these warnings anymore.

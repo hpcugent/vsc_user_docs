@@ -2,7 +2,7 @@ Generate a public/private key pair with OpenSSH
 A key pair might already be present in the default location inside your
 home directory. Therefore, we first check if a key is available with the
 "list short" ("ls") command:
-$ ls ~/.ssh
+ls ~/.ssh
 If a key-pair is already available, you would normally get:
 authorized_keys     id_rsa      id_rsa.pub      known_hosts
 Otherwise, the command will show:

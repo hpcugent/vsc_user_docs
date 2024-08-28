@@ -1,6 +1,6 @@
 If you don't use the -r option to copy a directory, you will run into
 the following error:
-$ scp -r dataset vsc40000@login.hpc.ugent.be:scratch
+$ scp dataset vsc40000@login.hpc.ugent.be:scratch
 dataset: not a regular file
 Using sftp
 The SSH File Transfer Protocol (also Secure File Transfer Protocol, or SFTP) is a network protocol that provides file access, file

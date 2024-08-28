@@ -33,10 +33,9 @@ to the HPC cluster via the login node "login.hpc.ugent.be".
     login-node of the HPC.
 10. To check you can now "Print the Working Directory" (pwd) and check
     the name of the computer, where you have logged in (hostname):
-        $ pwd
+    $ pwd
     /user/home/gent/vsc400/vsc40000
     $ hostname -f
     gligar07.gastly.os
-    
 11. For future PuTTY sessions, just select your saved session (i.e. "hpcugent")
     from the list, "Load" it and press "Open".

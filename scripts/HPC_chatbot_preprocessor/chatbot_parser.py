@@ -195,10 +195,6 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
             elif re.fullmatch(r'!--.*?--', content):
                 curr_line = re.sub(r'<.*?>', "", curr_line)
 
-            # special case (ugly fix)
-            elif ' files</b' in content:
-                curr_line = re.sub(r'</b>', "", curr_line)
-
             # keep the rest
             else:
                 pass
@@ -224,7 +220,7 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
             for i, content in enumerate(asterisks):
                 curr_line = re.sub(r"(\*+)" + content[1] + r"\1", content[1], curr_line)
 
-        pluses = re.findall(r'\+\+(.+?)\+\+', curr_line)
+        pluses = list(set(re.findall(r'\+\+([^ ]+?)\+\+', curr_line) + re.findall(r'\+\+(".+?")\+\+', curr_line)))
         if pluses:
             for i, content in enumerate(pluses):
                 curr_line = re.sub(r"\+\+" + content + r"\+\+", content, curr_line)
@@ -437,15 +433,13 @@ def split_on_paragraphs(file, main_title, options, current_paragraph_number=-1, 
             # detect whether the current line is in a list
             if re.search(r'^(\s*)([*+-]|\d+\.|[a-zA-Z]\.)\s+.*$', line):  # beginning of a list entry
                 in_list = True
+                # print("List entry found")
             elif re.search(r'^\s{2,}.+$', line) and in_list:  # middle of a list entry
                 pass
             elif re.search(r'^(\s*)([*+-]|\d+\.|[a-zA-Z]\.)\s+.*$|^\s{2,}.+$|^\n', nxt) and in_list:  # line(s) between list entries
                 pass
             else:
                 in_list = False
-
-            if in_list:
-                print(line[:-1])
 
             # only split up if current line is in a fully non-os-specific section
             if in_if_statement == 0:
@@ -969,6 +963,7 @@ def main(options, verbose=True):
 
     # for loops over all files
     for filename in filenames.keys():
+        print("Processing " + filename)
         ################### define/reset loop specific variables ###################
 
         # boolean indicating whether the current file is part of the linux tutorial

@@ -10,7 +10,6 @@ https://account.vscentrum.be/
 For further info please visit https://www.vscentrum.be/user-portal
 Kind regards,
 -- The VSC administrators
-
 Now, you can start using the HPC. You can always look up your VSC id later
 by visiting <https://account.vscentrum.be>.
 Adding multiple SSH public keys (optional)

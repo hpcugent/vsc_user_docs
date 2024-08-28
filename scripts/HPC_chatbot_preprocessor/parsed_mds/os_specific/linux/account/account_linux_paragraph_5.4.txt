@@ -10,9 +10,4 @@ the passphrase. Be sure to never give away your private key, it is
 private and should stay private. You should not even copy it to one of
 your other machines, instead, you should create a new public/private key
 pair for each machine.
-$ ssh-keygen -t rsa -b 4096
-Generating public/private rsa key pair. Enter file in which to save the
-key (/home/user/.ssh/id_rsa): Enter passphrase (empty for no
-passphrase): Enter same passphrase again: Your identification has been
-saved in /home/user/.ssh/id_rsa. Your public key has been saved in
-/home/user/.ssh/id_rsa.pub.
+ssh-keygen -t rsa -b 4096

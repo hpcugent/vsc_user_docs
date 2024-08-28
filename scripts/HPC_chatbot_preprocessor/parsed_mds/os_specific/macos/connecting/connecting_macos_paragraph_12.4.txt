@@ -11,4 +11,4 @@ It's also possible to copy entire directories (and their contents) with
 the -r flag. For example, if we want to copy the local directory
 dataset to $VSC_SCRATCH, we can use the following command (assuming
 you've created the scratch symlink):
-$ scp -r dataset vsc40000@login.hpc.ugent.be:scratch
+scp -r dataset vsc40000@login.hpc.ugent.be:scratch

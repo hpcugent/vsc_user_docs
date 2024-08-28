@@ -1,5 +1,5 @@
 One easy way of starting a sftp session is
-$ sftp vsc40000@login.hpc.ugent.be
+sftp vsc40000@login.hpc.ugent.be
 Typical and popular commands inside an sftp session are:
 |                       |                                                                                      |
 |:--------------------------|:-------------------------------------------------------------------------------------|
