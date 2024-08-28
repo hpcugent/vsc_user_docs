@@ -50,6 +50,7 @@ nav:
       - AlphaFold: alphafold.md
       - Apptainer/Singularity: apptainer.md
       - EasyBuild: easybuild.md
+      - Jupyter notebook: jupyter.md
       - MATLAB: MATLAB.md
       - mympirun: mympirun.md
       - OpenFOAM: openFOAM.md
