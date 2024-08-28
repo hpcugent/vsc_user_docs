@@ -9,3 +9,9 @@ How do SSH keys work?
     VSC and they put it on the door that gives access to your account.
 -   the SSH private key is like a physical key: you don't hand it out
     to other people.
+-   anyone who has the key (and the optional password) can unlock the
+    door and log in to the account.
+-   the door to your VSC account is special: it can have multiple
+    locks (SSH public keys) attached to it, and you only need to open
+    one lock with the corresponding key (SSH private key) to open
+    the door (log in to the account).

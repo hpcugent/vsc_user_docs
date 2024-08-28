@@ -1,9 +1,3 @@
-The PuTTY package consists of several components, but we'll only use
-two:
-1. PuTTY: the Telnet and SSH client itself (to login, see Open a terminal)
-2.  PuTTYgen: an RSA and DSA key generation utility (to generate a key pair,
-    see Generate a public/private key pair)
-Generating a public/private key pair
 Before requesting a VSC account, you need to generate a pair of ssh
 keys. You need 2 keys, a public and a private key. You can visualise the
 public key as a lock to which only you have the key (your private key).
@@ -11,3 +5,25 @@ You can send a copy of your lock to anyone without any problems, because
 only you can open it, as long as you keep your private key secure. To
 generate a public/private key pair, you can use the PuTTYgen key
 generator.
+Start PuTTYgen.exe it and follow these steps:
+1.  In "Parameters" (at the bottom of the window), choose "RSA" and set the number of
+    bits in the key to 4096.
+2.  Click on "Generate". To generate the key, you must move the mouse cursor over
+    the PuTTYgen window (this generates some random data that PuTTYgen
+    uses to generate the key pair). Once the key pair is generated, your
+    public key is shown in the field "Public key for pasting into OpenSSH authorized_keys file".
+3.  Next, it is advised to fill in the "Key comment" field to make it easier
+    identifiable afterwards.
+4.  Next, you should specify a passphrase in the "Key passphrase" field and retype it in
+    the "Confirm passphrase" field. Remember, the passphrase protects the private key against
+    unauthorised use, so it is best to choose one that is not too easy
+    to guess but that you can still remember. Using a passphrase is not
+    required, but we recommend you to use a good passphrase unless you
+    are certain that your computer's hard disk is encrypted with a
+    decent password. (If you are not sure your disk is encrypted, it
+    probably isn't.)
+5.  Save both the public and private keys in a folder on your personal
+    computer (We recommend to create and put them in the folder
+    "C:\\Users\\%USERNAME%\\AppData\\Local\\PuTTY\\.ssh") with the
+    buttons "Save public key" and "Save private key". We recommend using the name "id_rsa.pub" for the public key, and
+    "id_rsa.ppk" for the private key.

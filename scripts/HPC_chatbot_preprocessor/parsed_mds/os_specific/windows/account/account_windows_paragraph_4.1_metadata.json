@@ -1,6 +1,6 @@
 {
     "main_title": "account",
-    "subtitle": "How-do-SSH-keys-work",
+    "subtitle": "Get-PuTTY-A-free-telnetSSH-client",
     "title_depth": 3,
     "directory": "account",
     "parent_title": "Getting-ready-to-request-an-account",
@@ -10,5 +10,5 @@
     "previous_title": "account_paragraph_3",
     "next_title": "account_windows_paragraph_4.2",
     "OS": "windows",
-    "reference_link": "https://docs.hpc.ugent.be/Windows/account/#how-do-ssh-keys-work"
+    "reference_link": "https://docs.hpc.ugent.be/Windows/account/#get-putty-a-free-telnetssh-client"
 }

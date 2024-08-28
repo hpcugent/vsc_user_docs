@@ -9,3 +9,12 @@ To transfer your files using WinSCP,
 1.  Open the program
 2.  The "Login" menu is shown automatically (if it is closed, click "New Session" to open it again). Fill in the necessary fields under "Session"
     1.  Click "New Site".
+    2.  Enter "login.hpc.ugent.be" in the "Host name" field.
+    3.  Enter your "vsc-account" in the "User name" field.
+    4.  Select "SCP" as the "file" protocol.
+    5.  Note that the password field remains empty.
+    6.  Click "Advanced...".
+    7.  Click "SSH > Authentication".
+    8.  Select your private key in the field "Private key file".
+3.  Press the "Save" button, to save the session under "Session > Sites" for future access.
+4.  Finally, when clicking on "Login", you will be asked for your key passphrase.

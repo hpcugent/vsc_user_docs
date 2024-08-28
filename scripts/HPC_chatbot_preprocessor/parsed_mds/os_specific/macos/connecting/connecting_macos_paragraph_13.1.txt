@@ -10,3 +10,6 @@ This is the one-time setup you will need to do before connecting:
 3.  In the "Server" field, type in login.hpc.ugent.be. In the "Username" field, type in
     your VSC account id (this looks like vsc40000).
 4.  Select the location of your SSH private key in the "SSH Private Key" field.
+5.  Finally, type in a name for the bookmark in the "Nickname" field and
+    close the window by pressing on the red circle in the top left
+    corner of the window.

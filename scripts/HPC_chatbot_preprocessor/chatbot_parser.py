@@ -7,7 +7,7 @@ import os
 import re
 import shutil
 import yaml
-from itertools import chain
+from itertools import chain, tee, zip_longest
 from pathlib import Path
 from jinja2 import FileSystemLoader, Environment, ChoiceLoader, FunctionLoader, Template
 
@@ -402,6 +402,9 @@ def split_on_paragraphs(file, main_title, options, current_paragraph_number=-1, 
     # variable to indicate that previous section was one with if-statements
     previous_contained_if = False
 
+    # variable to indicate that the previous line was part of a list
+    in_list = False
+
     # paragraph number to add to title
     paragraph_number = 1
 
@@ -410,7 +413,7 @@ def split_on_paragraphs(file, main_title, options, current_paragraph_number=-1, 
 
     # TODO: define metadata data if split occurs on paragraphs and last_title and title_level are known (placeholder in place right now)
     if current_paragraph_number != -1:
-        last_title_level = 5
+        last_title_level = 4
         last_dir = "PLACEHOLDER"
 
     # list to keep track of most recent directories on each title level
@@ -418,11 +421,31 @@ def split_on_paragraphs(file, main_title, options, current_paragraph_number=-1, 
 
     with open(file, 'r') as readfile:
 
-        for line in readfile:
+        # Create two independent iterators from the original file iterator (needed to check for lists)
+        current_line, next_line = tee(readfile)
+
+        # Advance the next_line iterator by one step, so it is always one step ahead
+        next(next_line, None)
+
+        # Process the lines
+        for line, nxt in zip_longest(current_line, next_line, fillvalue=""):
 
             # detect if-statements starting or ending on the current line
             in_if_statement += len(re.findall(IF_MANGLED_PATTERNS[IF], line)) - len(
                 re.findall(IF_MANGLED_PATTERNS[ENDIF], line))
+
+            # detect whether the current line is in a list
+            if re.search(r'^(\s*)([*+-]|\d+\.|[a-zA-Z]\.)\s+.*$', line):  # beginning of a list entry
+                in_list = True
+            elif re.search(r'^\s{2,}.+$', line) and in_list:  # middle of a list entry
+                pass
+            elif re.search(r'^(\s*)([*+-]|\d+\.|[a-zA-Z]\.)\s+.*$|^\s{2,}.+$|^\n', nxt) and in_list:  # line(s) between list entries
+                pass
+            else:
+                in_list = False
+
+            if in_list:
+                print(line[:-1])
 
             # only split up if current line is in a fully non-os-specific section
             if in_if_statement == 0:
@@ -434,7 +457,7 @@ def split_on_paragraphs(file, main_title, options, current_paragraph_number=-1, 
                     in_code_block = not in_code_block
 
                 # check whether a new paragraph should be started
-                if line == "\n" and len(re.sub(r'\{' + IF_MANGLED_PART + '%.*?%' + IF_MANGLED_PART + '}', "", current_paragraph)) >= options[MIN_PARAGRAPH_LENGTH] and not in_code_block:
+                if line == "\n" and len(re.sub(r'\{' + IF_MANGLED_PART + '%.*?%' + IF_MANGLED_PART + '}', "", current_paragraph)) >= options[MIN_PARAGRAPH_LENGTH] and not in_code_block and not in_list:
 
                     # create a title for the previous paragraph
                     if current_paragraph_number == -1:

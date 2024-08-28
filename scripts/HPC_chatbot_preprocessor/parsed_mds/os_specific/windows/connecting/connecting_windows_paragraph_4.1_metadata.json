@@ -3,13 +3,12 @@
     "subtitle": "Open-a-Terminal",
     "title_depth": 3,
     "directory": "connecting",
-    "parent_title": "Connection-restrictions",
+    "parent_title": "First-Time-connection-to-the-HPC-infrastructure",
     "links": {
-        "0": "https://docs.hpc.ugent.be/web_portal",
-        "1": "https://docs.hpc.ugent.be/connecting/../troubleshooting/#issues-connecting-to-login-node"
+        "0": "https://docs.hpc.ugent.be/connecting/../troubleshooting/#warning-message-when-first-connecting-to-new-host"
     },
     "previous_title": "connecting_paragraph_3",
-    "next_title": "connecting_windows_paragraph_4.2",
+    "next_title": "connecting_paragraph_5",
     "OS": "windows",
     "reference_link": "https://docs.hpc.ugent.be/Windows/connecting/#open-a-terminal"
 }

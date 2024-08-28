@@ -1,10 +1,4 @@
 How do SSH keys work
--   anyone who has the key (and the optional password) can unlock the
-    door and log in to the account.
--   the door to your VSC account is special: it can have multiple
-    locks (SSH public keys) attached to it, and you only need to open
-    one lock with the corresponding key (SSH private key) to open
-    the door (log in to the account).
 Since all VSC clusters use Linux as their main operating system, you
 will need to get acquainted with using the command-line interface and
 using the terminal (see tutorial).
@@ -12,3 +6,10 @@ A typical Windows environment does not come with pre-installed software
 to connect and run command-line executables on a HPC. Some tools need to be
 installed on your Windows machine first, before we can start the actual
 work.
+Get PuTTY: A free telnet/SSH client
+We recommend to use the PuTTY tools package, which is freely available.
+You do not need to install PuTTY, you can download the PuTTY and
+PuTTYgen executable and run it. This can be useful in situations where
+you do not have the required permissions to install software on the
+computer you are using. Alternatively, an installation package is also
+available.

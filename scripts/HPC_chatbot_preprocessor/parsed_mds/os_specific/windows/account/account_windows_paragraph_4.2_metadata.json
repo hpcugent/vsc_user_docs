@@ -1,11 +1,15 @@
 {
     "main_title": "account",
-    "subtitle": "Get-PuTTY-A-free-telnetSSH-client",
+    "subtitle": "Generating-a-publicprivate-key-pair",
     "title_depth": 3,
     "directory": "account",
     "parent_title": "Getting-ready-to-request-an-account",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/account/../connecting/#open-a-terminal",
+        "1": "https://docs.hpc.ugent.be/account/../account/#generating-a-publicprivate-key-pair"
+    },
     "previous_title": "account_windows_paragraph_4.1",
     "next_title": "account_windows_paragraph_4.3",
     "OS": "windows",
-    "reference_link": "https://docs.hpc.ugent.be/Windows/account/#get-putty-a-free-telnetssh-client"
+    "reference_link": "https://docs.hpc.ugent.be/Windows/account/#generating-a-publicprivate-key-pair"
 }

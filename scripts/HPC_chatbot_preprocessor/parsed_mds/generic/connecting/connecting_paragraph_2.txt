@@ -1,8 +1,3 @@
-4.  Often several versions of software packages and libraries are
-    installed, so you need to select the ones you need. To manage
-    different versions efficiently, the VSC clusters use so-called
-    modules, so you will need to select and load the modules that
-    you need.
 Connection restrictions
 Since March 20th 2020, restrictions are in place that limit from where
 you can connect to the VSC HPC infrastructure, in response to security
@@ -12,3 +7,12 @@ networks, and from (most) Belgian commercial internet providers.
 All other IP domains are blocked by default. If you are connecting from
 an IP address that is not allowed direct access, you have the following
 options to get access to VSC login nodes:
+-   Use an VPN connection to connect to UGent the network (recommended).
+-   Whitelist your IP address automatically by accessing
+    <https://firewall.vscentrum.be> and log in with your UGent account.
+    -   While this web connection is active new SSH sessions can be
+        started.
+    -   Active SSH sessions will remain active even when this web page
+        is closed.
+-   Contact your HPC support team (via hpc@ugent.be) and ask them to whitelist your
+    IP range (e.g., for industry access, automated processes).

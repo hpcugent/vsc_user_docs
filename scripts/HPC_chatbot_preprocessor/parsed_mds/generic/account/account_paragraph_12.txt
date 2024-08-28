@@ -1,6 +1,3 @@
-5.  Take into account that it will take some time before the new SSH
-    public key is active in your account on the system; waiting for
-    15-30 minutes should be sufficient.
 Computation Workflow on the HPC
 A typical Computation workflow will be:
 1.  Connect to the HPC

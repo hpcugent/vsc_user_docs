@@ -1,12 +1,3 @@
-    2.  Enter "login.hpc.ugent.be" in the "Host name" field.
-    3.  Enter your "vsc-account" in the "User name" field.
-    4.  Select "SCP" as the "file" protocol.
-    5.  Note that the password field remains empty.
-    6.  Click "Advanced...".
-    7.  Click "SSH > Authentication".
-    8.  Select your private key in the field "Private key file".
-3.  Press the "Save" button, to save the session under "Session > Sites" for future access.
-4.  Finally, when clicking on "Login", you will be asked for your key passphrase.
 The first time you make a connection to the login node, a Security
 Alert will appear and you will be asked to verify the authenticity of the
 login node.
@@ -17,3 +8,4 @@ Make sure the fingerprint in the alert matches one of the following:
 - ssh-ed25519 256 SHA256:8AJg3lPN27y6i+um7rFx3xoy42U8ZgqNe4LsEycHILA
 - ssh-ecdsa 256 e6:d2:9c:d8:e7:59:45:03:4a:1f:dc:96:62:29:9c:5f
 - ssh-ecdsa 256 SHA256:C8TVx0w8UjGgCQfCmEUaOPxJGNMqv2PXLyBNODe5eOQ
+If it does, press Yes, if it doesn't, please contact hpc@ugent.be.

@@ -1,13 +1,12 @@
-Get PuTTY: A free telnet/SSH client
-We recommend to use the PuTTY tools package, which is freely available.
-You do not need to install PuTTY, you can download the PuTTY and
-PuTTYgen executable and run it. This can be useful in situations where
-you do not have the required permissions to install software on the
-computer you are using. Alternatively, an installation package is also
-available.
 You can download PuTTY from the official address:
 <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>. You
 probably want the 64-bits version. If you can install software on your
 computer, you can use the "Package files", if not, you can download and
 use putty.exe and puttygen.exe in the "Alternative binary files"
 section.
+The PuTTY package consists of several components, but we'll only use
+two:
+1. PuTTY: the Telnet and SSH client itself (to login, see Open a terminal)
+2.  PuTTYgen: an RSA and DSA key generation utility (to generate a key pair,
+    see Generate a public/private key pair)
+Generating a public/private key pair

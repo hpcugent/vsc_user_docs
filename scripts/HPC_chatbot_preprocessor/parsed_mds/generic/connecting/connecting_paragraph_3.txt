@@ -1,12 +1,10 @@
--   Use an VPN connection to connect to UGent the network (recommended).
--   Whitelist your IP address automatically by accessing
-    <https://firewall.vscentrum.be> and log in with your UGent account.
-    -   While this web connection is active new SSH sessions can be
-        started.
-    -   Active SSH sessions will remain active even when this web page
-        is closed.
--   Contact your HPC support team (via hpc@ugent.be) and ask them to whitelist your
-    IP range (e.g., for industry access, automated processes).
 Trying to establish an SSH connection from an IP address that does not
 adhere to these restrictions will result in an immediate failure to
 connect, with an error message like:
+ssh_exchange_identification: read: Connection reset by peer
+
+First Time connection to the HPC infrastructure
+The remaining content in this chapter is primarily focused for people utilizing a terminal with SSH.
+If you are instead using the web portal, the corresponding chapter might be more helpful: Using the HPC-UGent web portal.
+If you have any issues connecting to the HPC after you've followed these
+steps, see Issues connecting to login node to troubleshoot.

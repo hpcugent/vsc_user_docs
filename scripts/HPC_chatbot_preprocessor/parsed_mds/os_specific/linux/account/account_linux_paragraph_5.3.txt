@@ -1,4 +1,3 @@
-4.  scp: a secure equivalent of the remote copy command rcp.
 Generate a public/private key pair with OpenSSH
 A key pair might already be present in the default location inside your
 home directory. Therefore, we first check if a key is available with the

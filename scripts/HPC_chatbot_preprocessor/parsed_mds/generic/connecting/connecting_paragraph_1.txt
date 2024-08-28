@@ -11,3 +11,8 @@ you need to do or know:
 3.  Optionally, if you wish to use programs with a **graphical user
     interface**, you will need an X-server on your client system and log
     in to the login nodes with X-forwarding enabled.
+4.  Often several versions of software packages and libraries are
+    installed, so you need to select the ones you need. To manage
+    different versions efficiently, the VSC clusters use so-called
+    modules, so you will need to select and load the modules that
+    you need.
