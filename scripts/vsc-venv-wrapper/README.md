@@ -15,11 +15,11 @@ while guaranteeing the same module environment.
 A virtual environment can be activated by running the following command:
 
 ```bash
-source ./vsc-venv.sh activate <requirements> [module_script]
+source ./vsc-venv.sh activate <requirements> [module_file]
 ```
 
 Here, `requirements` is the path to a file containing the python dependencies to install in the virtual environment.
-An optional module script can be provided to load the required modules before creating the virtual environment.
+An optional module text file can be provided, which lists the modules to load before activating the virtual environment.
 
 Automatically, the modules are loaded and the environment is activated. 
 When running this command for the first time, the dependencies from the requirement file are installed.
@@ -36,9 +36,10 @@ source ./vsc-venv.sh deactivate
 Suppose we are on the login node, and we want to make a virtual environment for doduo, which is loaded by default.
 The following files are present in the current directory:
 
-**modules.sh:**
+**modules.txt:**
 ```bash
-ml Python/3.12.3-GCCcore-13.3.0
+Python/3.12.3-GCCcore-13.3.0
+SciPy-bundle/2024.05-gfbf-2024a
 ```
 
 and **requirements.txt:**
@@ -52,13 +53,13 @@ see the [pip documentation](https://pip.pypa.io/en/stable/reference/requirements
 We run the following commands to enter the environment
 
 ```bash
-source ./vsc-venv.sh activate requirements.txt modules.sh
+source ./vsc-venv.sh activate requirements.txt modules.txt
 ```
 
 As this creates the virtual environment for the first time, the `venvs` folder is created in the current directory. 
 Within this folder, a new folder is created for the virtual environment `venv-RHEL8-zen2`.
 
-Now, python 3.12 is loaded and the user can use the `requests` package.
+Now, python 3.12 is loaded and the user can use the `requests` package, along with the packages from the SciPy bundle.
 
 To deactivate the virtual environment, run:
 
@@ -74,7 +75,7 @@ If we want to create a virtual environment for joltik, we can run the following 
 module swap cluster/joltik
 qsub -I
 cd my_project
-source ./vsc-venv.sh activate requirements.txt modules.sh
+source ./vsc-venv.sh activate requirements.txt modules.txt
 ```
 
 the venvs folder now contains two folders:

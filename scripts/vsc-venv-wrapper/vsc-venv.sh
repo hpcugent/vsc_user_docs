@@ -4,13 +4,13 @@ usage() {
   echo "Usage: source $SCRIPT_NAME {activate <requirements.txt> [modules.sh] | deactivate}"
   echo ""
   echo "Commands:"
-  echo "  activate <requirements_file> [modules_script] Activate the environment using the specified requirements file."
-  echo "                                                Optionally, load modules from the specified script before activating the environment."
+  echo "  activate <requirements_file> [modules_file] Activate the environment using the specified requirements file."
+  echo "                                              Optionally, provide a text file with a list of modules to load."
   echo ""
-  echo "  deactivate                                    Deactivate the virtual environment."
+  echo "  deactivate                                  Deactivate the virtual environment."
   echo ""
   echo "Example Usage:"
-  echo "  $ source $SCRIPT_NAME activate requirements.txt modules.sh"
+  echo "  $ source $SCRIPT_NAME activate requirements.txt modules.txt"
   echo "  $ python my_script.py"
   echo "  $ source $SCRIPT_NAME deactivate"
   return 1
@@ -20,15 +20,42 @@ echo_info() { echo -e "\e[32m[INFO] $1\e[0m"; }
 echo_warning() { echo -e "\e[33m[WARNING] $1\e[0m"; }
 echo_error() { echo -e "\e[31m[ERROR] $1\e[0m"; }
 
+load_modules() {
+  local modules_file lines
+  modules_file="$1"
+
+  if ! mapfile -t lines < "$modules_file"; then # Read the file line by line into an array
+    echo_error "Could not read modules script '$modules_file'"
+    return 1
+  fi
+
+  for line in "${lines[@]}"; do # Loop over each line in the array
+
+    # Skip empty lines
+    if [[ -z "$line" ]]; then
+      continue
+    fi
+
+    if module load "$line"; then
+      echo_info "  ✔ Module '$line' loaded successfully"
+    else
+      echo_error "Could not load module '$line'"
+      return 1
+    fi
+
+  done
+
+}
+
 
 # ============================ Main functions ============================
 
 activate() {
-  local requirements_file modules_script
+  local requirements_file modules_file
   local venv_location n_loaded_modules python_version
 
   requirements_file="$1"
-  modules_script="$2"
+  modules_file="$2"
 
   venv_location=$(realpath -m "venvs/venv-${VSC_OS_LOCAL}-${VSC_ARCH_LOCAL}") # full path of venv
 
@@ -38,7 +65,7 @@ activate() {
   n_loaded_modules="${#loaded_modules[@]}"
   if [ "$n_loaded_modules" -gt 0 ]; then
     echo_warning "You have $n_loaded_modules loaded modules in the current shell. These modules will be purged."
-    echo_warning "If you want to use these modules, please provide a modules script as the second argument."
+    echo_warning "If you want to use these modules, please provide a modules file listing the required modules as the second argument."
 
     echo_warning "Loaded modules:"
     for module in "${loaded_modules[@]}"; do
@@ -54,19 +81,19 @@ activate() {
 
   # === Step 2: Load Modules if module script present === #
 
-  if [ -n "$modules_script" ]; then # If module script not empty
+  if [ -n "$modules_file" ]; then # If module script not empty
 
-    echo_info "Loading modules from '$modules_script'"
+    echo_info "Loading modules from '$modules_file'"
 
-    if ! source "$modules_script"; then # If the module script could not be loaded
-        echo_error "Could not load modules from '$modules_script'"
-        return 1
+    if ! load_modules "$modules_file"; then # If the modules could not be loaded
+      echo_error "Could not load modules from '$modules_file'"
+      return 1
     fi
 
     echo_info "Modules loaded successfully"
 
   else
-    echo_info "No module script provided. Proceeding without extra modules."
+    echo_info "No module file provided. Proceeding without extra modules."
   fi
 
   # === Step 3: Create Virtual Environment if not yet present === #
