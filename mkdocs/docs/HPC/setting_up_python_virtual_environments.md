@@ -239,6 +239,21 @@ Illegal instruction (core dumped)
 
 we are presented with the illegal instruction error. More info on this [here](troubleshooting.md#illegal-instruction-error)
 
+### Error: GLIBC not found
+
+When running a virtual environment across clusters with different major OS versions, 
+you might encounter a variation of the following error:
+
+```
+python: /lib64/libc.so.6: version `GLIBC_2.34' not found (required by python)
+```
+
+Make sure you do not activate a virtual environment created on a different cluster.
+For more information on how to create a virtual environment for a specific cluster, 
+see [Creating a virtual environment for a specific cluster](#creating-a-virtual-environment-for-a-specific-cluster).
+When following these steps, make sure you do not have any modules loaded when starting the interactive job.
+
+
 ### Error: cannot open shared object file: No such file or directory
 
 There are two main reasons why this error could occur.
