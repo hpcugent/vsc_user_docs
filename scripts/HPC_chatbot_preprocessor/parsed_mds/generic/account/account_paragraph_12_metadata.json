@@ -1,6 +1,7 @@
 {
     "main_title": "account",
     "subtitle": "Computation-Workflow-on-the-HPC",
+    "source_file": "../../mkdocs/docs/HPC/account.md",
     "title_depth": 2,
     "directory": "account",
     "parent_title": "",

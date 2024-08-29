@@ -1,6 +1,7 @@
 {
     "main_title": "connecting",
     "subtitle": "Using-sftp",
+    "source_file": "../../mkdocs/docs/HPC/connecting.md",
     "title_depth": 3,
     "directory": "connecting",
     "parent_title": "Transfer-Files-tofrom-the-HPC",
@@ -8,8 +9,8 @@
         "0": "",
         "1": ""
     },
-    "previous_title": "connecting_linux_paragraph_12.5",
-    "next_title": "connecting_linux_paragraph_12.7",
+    "previous_title": "connecting_linux_paragraph_13.5",
+    "next_title": "connecting_linux_paragraph_13.7",
     "OS": "linux",
     "reference_link": "https://docs.hpc.ugent.be/Linux/connecting/#using-sftp"
 }

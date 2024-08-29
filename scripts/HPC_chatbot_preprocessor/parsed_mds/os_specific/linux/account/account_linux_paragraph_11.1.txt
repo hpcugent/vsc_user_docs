@@ -1,4 +1,7 @@
 Adding multiple SSH public keys (optional)
+In case you are connecting from different computers to the login nodes,
+it is advised to use separate SSH public keys to do so. You should
+follow these steps.
 1.  Create a new public/private SSH key pair from the new computer.
     Repeat the process described in
     section Generate a public/private key pair with OpenSSH.

@@ -1,3 +1,17 @@
-To open the connection, click on the "Bookmarks" icon (which
-resembles an open book) and double-click on the bookmark you just
-created.
+$ hostname
+<local-machine-name>
+If you're still using the terminal that is connected to the HPC, close the
+connection by typing "exit" in the terminal window.
+For example, we will copy the (local) file "localfile.txt" to your
+home directory on the HPC cluster. We first generate a small dummy
+"localfile.txt", which contains the word "Hello". Use your own VSC
+account, which is something like "vsc40000". Don't forget the colon (:) at the
+end: if you forget it, it will just create a file named vsc40000@login.hpc.ugent.be on your
+local filesystem. You can even specify where to save the file on the
+remote filesystem by putting a path after the colon.
+$ echo "Hello" > localfile.txt
+$ ls -l 
+...
+-rw-r--r-- 1 user  staff   6 Sep 18 09:37 localfile.txt
+$ scp localfile.txt vsc40000@login.hpc.ugent.be:
+localfile.txt     100%   6     0.0KB/s     00:00

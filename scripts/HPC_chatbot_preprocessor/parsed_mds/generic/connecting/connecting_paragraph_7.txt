@@ -15,7 +15,6 @@ $ tree -L 2
     |-- example.pbs
     '-- example.sh
 9 directories, 5 files
-
 This directory contains:
 1.  This HPC Tutorial (in either a Mac, Linux or      Windows version).
 2.  An examples subdirectory, containing all the examples that you need in this

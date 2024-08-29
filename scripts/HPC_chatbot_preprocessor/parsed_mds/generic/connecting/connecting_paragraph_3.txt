@@ -2,7 +2,6 @@ Trying to establish an SSH connection from an IP address that does not
 adhere to these restrictions will result in an immediate failure to
 connect, with an error message like:
 ssh_exchange_identification: read: Connection reset by peer
-
 First Time connection to the HPC infrastructure
 The remaining content in this chapter is primarily focused for people utilizing a terminal with SSH.
 If you are instead using the web portal, the corresponding chapter might be more helpful: Using the HPC-UGent web portal.

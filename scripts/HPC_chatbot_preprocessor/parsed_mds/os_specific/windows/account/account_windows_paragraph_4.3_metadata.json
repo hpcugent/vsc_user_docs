@@ -1,9 +1,13 @@
 {
     "main_title": "account",
     "subtitle": "Generating-a-publicprivate-key-pair",
+    "source_file": "../../mkdocs/docs/HPC/account.md",
     "title_depth": 3,
     "directory": "account",
     "parent_title": "Getting-ready-to-request-an-account",
+    "links": {
+        "0": ""
+    },
     "previous_title": "account_windows_paragraph_4.2",
     "next_title": "account_windows_paragraph_4.4",
     "OS": "windows",

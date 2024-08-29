@@ -1,3 +1,7 @@
+After you have uploaded your public key you will receive an e-mail with
+a link to confirm your e-mail address. After confirming your e-mail
+address the VSC staff will review and if applicable approve your
+account.
 Welcome e-mail
 Within one day, you should receive a Welcome e-mail with your VSC
 account details.
@@ -12,7 +16,3 @@ Kind regards,
 -- The VSC administrators
 Now, you can start using the HPC. You can always look up your VSC id later
 by visiting <https://account.vscentrum.be>.
-Adding multiple SSH public keys (optional)
-In case you are connecting from different computers to the login nodes,
-it is advised to use separate SSH public keys to do so. You should
-follow these steps.

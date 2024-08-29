@@ -1,6 +1,7 @@
 {
     "main_title": "account",
     "subtitle": "Getting-ready-to-request-an-account",
+    "source_file": "../../mkdocs/docs/HPC/account.md",
     "title_depth": 2,
     "directory": "account",
     "links": {

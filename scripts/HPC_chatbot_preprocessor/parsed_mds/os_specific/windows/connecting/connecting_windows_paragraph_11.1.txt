@@ -1,20 +1,9 @@
-Transfer Files to/from the HPC
-Before you can do some work, you'll have to transfer the files you need from your desktop or department to the cluster. At the end of a job, you might want to transfer some files back.
-WinSCP
-To transfer files to and from the cluster, we recommend the use of
-WinSCP, a graphical file management tool which can transfer files using
-secure protocols such as SFTP and SCP. WinSCP is freely available from
-<http://www.winscp.net>.
-To transfer your files using WinSCP,
-1.  Open the program
-2.  The "Login" menu is shown automatically (if it is closed, click "New Session" to open it again). Fill in the necessary fields under "Session"
-    1.  Click "New Site".
-    2.  Enter "login.hpc.ugent.be" in the "Host name" field.
-    3.  Enter your "vsc-account" in the "User name" field.
-    4.  Select "SCP" as the "file" protocol.
-    5.  Note that the password field remains empty.
-    6.  Click "Advanced...".
-    7.  Click "SSH > Authentication".
-    8.  Select your private key in the field "Private key file".
-3.  Press the "Save" button, to save the session under "Session > Sites" for future access.
-4.  Finally, when clicking on "Login", you will be asked for your key passphrase.
+First Time connection to the HPC infrastructure
+    A locale is a set of parameters that defines the user's language, country and
+    any special variant preferences that the user wants to see in their user
+    interface. Usually a locale identifier consists of at least a language
+    identifier and a region identifier.
+     Note
+        If you try to set a non-supported locale, then it will be automatically
+        set to the default. Currently the default is en_US.UFT-8 or en_US,
+        depending on whether your originally (non-supported) locale was UTF-8 or not.

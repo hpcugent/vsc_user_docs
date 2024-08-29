@@ -1,6 +1,7 @@
 {
     "main_title": "account",
     "subtitle": "Generate-a-publicprivate-key-pair-with-OpenSSH",
+    "source_file": "../../mkdocs/docs/HPC/account.md",
     "title_depth": 3,
     "directory": "account",
     "parent_title": "Getting-ready-to-request-an-account",

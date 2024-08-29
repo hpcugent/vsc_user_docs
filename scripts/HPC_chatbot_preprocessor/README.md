@@ -145,6 +145,17 @@ endif
 
 This will also result in the parser "forgetting" it opened an os-specific if-statement with OS != windows and not properly closing it.
 
+### Non OS-related if-statements
+
+Due to the way jinja parses the sourcefiles, the script slightly alters non os-specific if-statements as well. It expects if-statements of the following form:
+
+```
+{%- if site == gent %}
+{% if site != (gent or brussel) %}
+```
+
+All spaces and the dash are optional. City names don't need to be fully lowercase since the parser will capitalize them properly anyway.
+
 ### html syntax
 
 The input shouldn't contain any html syntax. While some failsafes are in place, the script isn't made with the use case of handling html syntax in mind. 

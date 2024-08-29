@@ -1,11 +1,12 @@
 {
     "main_title": "connecting",
-    "subtitle": "Transfer-Files-tofrom-the-HPC",
+    "subtitle": "First-Time-connection-to-the-HPC-infrastructure",
+    "source_file": "../../mkdocs/docs/HPC/connecting.md",
     "title_depth": 2,
     "directory": "connecting",
     "parent_title": "Connecting-to-the-HPC-infrastructure",
     "previous_title": "connecting_paragraph_10",
     "next_title": "connecting_paragraph_12",
     "OS": "linux",
-    "reference_link": "https://docs.hpc.ugent.be/Linux/connecting/#transfer-files-tofrom-the-hpc"
+    "reference_link": "https://docs.hpc.ugent.be/Linux/connecting/#first-time-connection-to-the-hpc-infrastructure"
 }

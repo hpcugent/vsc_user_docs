@@ -1,6 +1,7 @@
 {
     "main_title": "account",
     "subtitle": "Applying-for-the-account",
+    "source_file": "../../mkdocs/docs/HPC/account.md",
     "title_depth": 2,
     "directory": "account",
     "parent_title": "",

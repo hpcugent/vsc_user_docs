@@ -1,15 +1,12 @@
 Transfer Files tofrom the HPC
-Using a GUI (Cyberduck)
-Cyberduck is a graphical alternative to the scp command. It can be
-installed from <https://cyberduck.io>.
-This is the one-time setup you will need to do before connecting:
-1.  After starting Cyberduck, the Bookmark tab will show up. To add a
-    new bookmark, click on the "+" sign on the bottom left of the
-    window. A new window will open.
-2.  In the drop-down menu on top, select "SFTP (SSH File Transfer Protocol)".
-3.  In the "Server" field, type in login.hpc.ugent.be. In the "Username" field, type in
-    your VSC account id (this looks like vsc40000).
-4.  Select the location of your SSH private key in the "SSH Private Key" field.
-5.  Finally, type in a name for the bookmark in the "Nickname" field and
-    close the window by pressing on the red circle in the top left
-    corner of the window.
+Using scp
+Secure copy or SCP is a tool (command) for securely transferring files between a local
+host (= your computer) and a remote host (the HPC). It is based on the
+Secure Shell (SSH) protocol. The scp command is the equivalent of the cp (i.e.,
+copy) command, but can copy files to or from remote machines.
+It's easier to copy files directly to $VSC_DATA and $VSC_SCRATCH if
+you have symlinks to them in your home directory. See 
+the chapter titled "Uploading/downloading/editing files", section "Symlinks for data/scratch" in the intro to Linux
+ for how to do this.
+Open an additional terminal window and check that you're working on your
+local machine.

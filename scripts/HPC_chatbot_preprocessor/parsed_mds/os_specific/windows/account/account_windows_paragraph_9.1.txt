@@ -1,7 +1,8 @@
 Applying for the account
+After you log in using your UGent login and password, you will be asked to
+upload the file that contains your public key, i.e., the file
+"id_rsa.pub" which you have generated earlier. Make sure that your
+public key is actually accepted for upload, because if it is in a wrong
+format, wrong type or too short, then it will be refused.
 This file should have been stored in the directory
 "C:\\Users\\%USERNAME%\\AppData\\Local\\PuTTY\\.ssh"
-After you have uploaded your public key you will receive an e-mail with
-a link to confirm your e-mail address. After confirming your e-mail
-address the VSC staff will review and if applicable approve your
-account.

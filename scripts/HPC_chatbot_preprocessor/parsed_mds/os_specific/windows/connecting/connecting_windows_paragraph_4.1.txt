@@ -4,6 +4,7 @@ You've generated a public/private key pair with PuTTYgen and have an
 approved account on the VSC clusters. The next step is to setup the
 connection to (one of) the HPC.
 In the screenshots, we show the setup for user
+"vsc20167"
 to the HPC cluster via the login node "login.hpc.ugent.be".
 1.  Start the PuTTY executable putty.exe in your directory
     C:\Program Files (x86)\PuTTY and the configuration screen will pop

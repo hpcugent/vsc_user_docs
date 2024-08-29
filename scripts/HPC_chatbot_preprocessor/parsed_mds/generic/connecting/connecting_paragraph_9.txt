@@ -1,27 +1,19 @@
-$ cp -r /apps/gent/tutorials/Intro-HPC/examples ~/
-
-You can exit the connection at anytime by entering:
-$ exit
-logout
-Connection to login.hpc.ugent.be closed.
-
- tip "tip: Setting your Language right"
-    You may encounter a warning message similar to the following one during connecting:
-    perl: warning: Setting locale failed.
-    perl: warning: Please check that your locale settings:
-    LANGUAGE = (unset),
-    LC_ALL = (unset),
-    LC_CTYPE = "UTF-8",
-    LANG = (unset)
-        are supported and installed on your system.
-    perl: warning: Falling back to the standard locale ("C").
-    or any other error message complaining about the locale.
-    This means that the correct "locale" has not yet been properly specified on your local machine. Try:
-    LANG=
-    LC_COLLATE="C"
-    LC_CTYPE="UTF-8"
-    LC_MESSAGES="C"
-    LC_MONETARY="C"
-    LC_NUMERIC="C"
-    LC_TIME="C"
-    LC_ALL=
+cp -r /apps/gent/tutorials/Intro-HPC/examples ~/
+Go to your home directory, check your own private examples directory, ... and start working.
+cd
+ls -l
+Upon connecting you will see a login message containing your last login time stamp and a basic overview of the current cluster utilisation.
+Last login: Thu Mar 18 13:15:09 2021 from gligarha02.gastly.os
+ STEVIN HPC-UGent infrastructure status on Mon, 19 Feb 2024 10:00:01
+      cluster         - full - free -  part - total - running - queued
+                        nodes  nodes   free   nodes   jobs      jobs
+ -------------------------------------------------------------------------
+           skitty          39      0     26      68      1839     5588
+           joltik           6      0      1      10        29       18
+            doduo          22      0     75     128      1397    11933
+         accelgor           4      3      2       9        18        1
+          donphan           0      0     16      16        16       13
+          gallade           2      0      5      16        19      136
+For a full view of the current loads and queues see:
+https://hpc.ugent.be/clusterstate/
+Updates on current system status and planned maintenance can be found on https://www.ugent.be/hpc/en/infrastructure/status

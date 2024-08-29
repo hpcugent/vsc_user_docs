@@ -620,6 +620,12 @@ def jinja_parser(filename, copy_location, options):
     # Mangle the OS-related if-statements
     mangle_ifs(copy_location, filename, options)
 
+    if options[VERBOSE]:
+        print("Altering other if-statements to parse properly")
+
+    # Alter the other if-statements
+    alter_ifs(filename, options)
+
     # Use Jinja2 to replace the macros
     template_loader = ChoiceLoader([FileSystemLoader(searchpath=[os.path.join(options[DESTINATION_DIRECTORY], IF_MANGLED_FILES), options[SOURCE_DIRECTORY], os.path.join(options[SOURCE_DIRECTORY], RETURN_DIR)]), FunctionLoader(load_macros)])
     templateEnv = Environment(loader=template_loader)
@@ -627,7 +633,7 @@ def jinja_parser(filename, copy_location, options):
     rendered_content = template.render(combined_context)
 
     if options[VERBOSE]:
-        print("jinja parsing finished\nWriting to location: " + copy_location)
+        print("jinja parsing finished\nWriting jinja-parsed file to location: " + copy_location)
 
     # Save the rendered content to a new file
     with open(copy_location, 'w', encoding='utf-8', errors='ignore') as output_file:
@@ -748,6 +754,32 @@ def mangle_ifs(directory, filename, options):
             for line in read_file:
                 new_line, is_os = mangle_os_ifs(line, is_os, options)
                 write_file.write(new_line)
+
+
+def alter_ifs(filename, options):
+    """
+    Function that further adapts the if-statements in a file and writes it to a location where the jinja parser will use it.
+    This is because the jinja parser doesn't seem to be able to handle statements like {% site == gent %} with context {'site': 'Gent'} in this case.
+    These statements get changed to {% site == 'Gent' %} in this function.
+
+    :param filename: the filename of the file to be transformed
+    :param options: dictionary containing the options given by the user
+    :return:
+    """
+
+    with open(os.path.join(options[DESTINATION_DIRECTORY], IF_MANGLED_FILES,  filename), 'r') as read_file:
+        content = read_file.read()
+
+    pattern = r'(\{%-?\s?[a-zA-Z\s]*?[!=]=\s?\(?)([a-zA-Z\s]+(?:\sor\s[a-zA-Z\s]+)*)(\)?\s?%})'
+    content = re.sub(pattern,
+                     lambda match: (f"{match.group(1)}" +
+                                    " or ".join([f"'{city.strip().capitalize()}'" for city in match.group(2).split(" or ")]) +
+                                    f"{match.group(3)}"
+                                    ),
+                     content)
+
+    with open(os.path.join(options[DESTINATION_DIRECTORY], IF_MANGLED_FILES,  filename), 'w') as write_file:
+        write_file.write(content)
 
 
 def make_valid_title(title):

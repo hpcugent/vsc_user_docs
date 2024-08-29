@@ -27,3 +27,11 @@ Start PuTTYgen.exe it and follow these steps:
     "C:\\Users\\%USERNAME%\\AppData\\Local\\PuTTY\\.ssh") with the
     buttons "Save public key" and "Save private key". We recommend using the name "id_rsa.pub" for the public key, and
     "id_rsa.ppk" for the private key.
+6.  Finally, save an "OpenSSH" version of your private key (in
+    particular for later "X2Go" usage, see x2go) by entering the
+    "Conversions" menu and selecting "Export OpenSSH key" (do not select the
+    "force new file format" variant). Save the file in the same location
+    as in the previous step with filename "id_rsa". (If there is no
+    "Conversions" menu, you must update your "puttygen" version. If you
+    want to do this conversion afterwards, you can start with loading an
+    existing "id_rsa.ppk" and only do this conversions export.)

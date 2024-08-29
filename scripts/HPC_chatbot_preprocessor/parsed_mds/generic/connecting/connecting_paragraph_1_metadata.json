@@ -1,6 +1,7 @@
 {
     "main_title": "connecting",
     "subtitle": "Connecting-to-the-HPC-infrastructure",
+    "source_file": "../../mkdocs/docs/HPC/connecting.md",
     "title_depth": 1,
     "directory": "connecting",
     "links": {

@@ -1,6 +1,7 @@
 {
     "main_title": "account",
     "subtitle": "How-do-SSH-keys-work",
+    "source_file": "../../mkdocs/docs/HPC/account.md",
     "title_depth": 3,
     "directory": "account",
     "parent_title": "",
