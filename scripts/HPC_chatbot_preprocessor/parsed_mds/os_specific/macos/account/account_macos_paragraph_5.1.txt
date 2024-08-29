@@ -10,3 +10,6 @@ other secure network services between two networked computers. In short,
 ssh provides a secure connection between 2 computers via insecure
 channels (Network, Internet, telephone lines, ...).
 "Secure" means that:
+1.  the User is authenticated to the System; and
+2.  the System is authenticated to the User; and
+3.  all data is encrypted during transfer.

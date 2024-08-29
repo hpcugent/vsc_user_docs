@@ -1,10 +1,3 @@
-Before requesting a VSC account, you need to generate a pair of ssh
-keys. You need 2 keys, a public and a private key. You can visualise the
-public key as a lock to which only you have the key (your private key).
-You can send a copy of your lock to anyone without any problems, because
-only you can open it, as long as you keep your private key secure. To
-generate a public/private key pair, you can use the PuTTYgen key
-generator.
 Start PuTTYgen.exe it and follow these steps:
 1.  In "Parameters" (at the bottom of the window), choose "RSA" and set the number of
     bits in the key to 4096.

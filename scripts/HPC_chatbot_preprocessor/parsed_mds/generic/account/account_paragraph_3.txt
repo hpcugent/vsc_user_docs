@@ -1,8 +1,3 @@
-The HPC-UGent infrastructure clusters use public/private key pairs for user authentication
-(rather than passwords). Technically, the private key is stored on your
-local computer and always stays there; the public key is stored on the HPC.
-Access to the HPC is granted to anyone who can prove to have access to the
-corresponding private key on his local computer.
 How do SSH keys work?
 -   an SSH public/private key pair can be seen as a lock and a key
 -   the SSH public key is equivalent with a lock: you give it to the
@@ -15,3 +10,6 @@ How do SSH keys work?
     locks (SSH public keys) attached to it, and you only need to open
     one lock with the corresponding key (SSH private key) to open
     the door (log in to the account).
+Since all VSC clusters use Linux as their main operating system, you
+will need to get acquainted with using the command-line interface and
+using the terminal (see tutorial).

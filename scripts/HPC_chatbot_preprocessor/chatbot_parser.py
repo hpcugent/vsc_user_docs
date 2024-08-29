@@ -503,6 +503,8 @@ def split_on_paragraphs(file, main_title, options, is_linux_tutorial, current_pa
                 pass
             elif re.search(r'^(\s*)([*+-]|\d+\.|[a-zA-Z]\.)\s+.*$|^\s{2,}.+$|^\n', nxt) and in_list:  # line(s) between list entries
                 pass
+            elif re.search(r'^(\s*)([*+-]|\d+\.|[a-zA-Z]\.)\s+.*$', nxt):
+                in_list = True
             elif in_list:
                 if options[VERBOSE]:
                     print("List ended, starting new paragraphs again")

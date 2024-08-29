@@ -1,4 +1,0 @@
-How do SSH keys work
-Since all VSC clusters use Linux as their main operating system, you
-will need to get acquainted with using the command-line interface and
-using the terminal (see tutorial).

@@ -4,6 +4,9 @@
     "source_file": "../../mkdocs/docs/HPC/account.md",
     "title_depth": 3,
     "directory": "account",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/linux-tutorial"
+    },
     "parent_title": "",
     "previous_title": "account_paragraph_2",
     "next_title": "account_paragraph_4",

@@ -5,9 +5,6 @@
     "title_depth": 3,
     "directory": "account",
     "parent_title": "Getting-ready-to-request-an-account",
-    "links": {
-        "0": "https://docs.hpc.ugent.be/linux-tutorial"
-    },
     "previous_title": "account_paragraph_3",
     "next_title": "account_windows_paragraph_4.2",
     "OS": "windows",

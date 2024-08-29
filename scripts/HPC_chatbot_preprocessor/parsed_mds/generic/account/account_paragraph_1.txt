@@ -11,3 +11,5 @@ Brussels University Association, Antwerp University Association and the
 University Colleges-Limburg. The VSC is funded by the Flemish
 Government.
 There are two methods for connecting to HPC-UGent infrastructure:
+- Using a terminal to connect via SSH.
+- Using the web portal
