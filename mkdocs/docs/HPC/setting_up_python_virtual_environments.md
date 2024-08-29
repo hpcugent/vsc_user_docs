@@ -64,7 +64,7 @@ It is now possible to run Python scripts that use the installed packages in the 
     
     Compiled libraries with a Python wrapper (*non-pure* Python packages) are better loaded as modules 
     rather than installed in the virtual environment. 
-    Modules are optimized for the HPC cluster’s specific hardware and operating system. 
+    This is because modules are optimized for the HPC cluster’s specific hardware and operating system. 
     If a non-pure Python package isn't available as a module, you can 
     [submit a software installation request](https://www.ugent.be/hpc/en/support/software-installation-request).
     
