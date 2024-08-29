@@ -1461,6 +1461,14 @@ This is especially useful when you need to use a package that is not available a
 </code></pre></div>
 <p>This command creates a new subdirectory named <code>myenv</code> in the current working directory. 
 This directory will contain the packages, scripts, and binaries that are needed to manage the virtual environment.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When you create a virtual environment on top of a loaded Python module, 
+the environment becomes specific to the cluster you're working on. 
+This is because modules are built and optimized for the operating system and CPUs of the cluster.
+This means that you should create a new virtual environment for each cluster you work on. 
+See <a href="#creating-a-virtual-environment-for-a-specific-cluster">Creating a virtual environment for a specific cluster</a> for more information.</p>
+</div>
 <h3 id="activating-a-virtual-environment">Activating a virtual environment<a class="headerlink" href="#activating-a-virtual-environment" title="Permanent link">#</a></h3>
 <p>To use the virtual environment, you need to <em>activate</em> it. 
 This will modify the shell environment to use the Python interpreter and packages from the virtual environment.</p>
@@ -1475,11 +1483,17 @@ pip<span class="w"> </span>install<span class="w"> </span>example_package2
 and are only available when the virtual environment is activated.
 No administrator privileges are required to install packages in a virtual environment.</p>
 <p>It is now possible to run Python scripts that use the installed packages in the virtual environment.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Always prefer to use Python packages that are centrally installed, which are available via the environment modules interface.
-Software installations available via the modules interface are compiled and optimized for the HPC cluster, while packages installed with <code>pip</code> are not.
-To check if a package is available as a module, you can use the following command:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When creating a virtual environment, it's best to install only <em>pure</em> Python 
+packages. Pure Python packages consist solely of Python code and don't require compilation. 
+The installation method of these packages doesn't impact performance since they're not compiled.</p>
+<p>Compiled libraries with a Python wrapper (<em>non-pure</em> Python packages) are better loaded as modules 
+rather than installed in the virtual environment. 
+This is because modules are optimized for the HPC cluster’s specific hardware and operating system. 
+If a non-pure Python package isn't available as a module, you can 
+<a href="https://www.ugent.be/hpc/en/support/software-installation-request">submit a software installation request</a>.</p>
+<p>To check if a package is available as a module, use:</p>
 <div class="highlight"><pre><span></span><code>module<span class="w"> </span>av<span class="w"> </span>package_name
 </code></pre></div>
 <p>Some Python packages are installed as extensions of modules. For example, <code>numpy</code>, <code>scipy</code> and <code>pandas</code> are 
