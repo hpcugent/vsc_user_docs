@@ -292,6 +292,12 @@ Please send an e-mail to {{hpcinfo}} that includes:
 
 -   The purpose for which you want to install the software
 
+If the software is a Python package, you can manually install it in a virtual environment. 
+More information can be found [here](./setting_up_python_virtual_environments.md).
+Note that it is still preferred to submit a software installation request, 
+as the software installed by the HPC team will be optimized for the HPC environment.
+This can lead to dramatic performance improvements.
+
 {% endif %}
 
 ### Is my connection compromised? Remote host identification has changed
