@@ -56,3 +56,14 @@ which can lead to conflicts and unintended side effects in the user's environmen
 
 You can avoid the change of the `.bashrc` file by activating the environment with `source activate full/path/to/myenv`
 instead of `conda activate myenv`.
+
+## Anaconda Licensing
+
+If your organization uses Conda packages from Anaconda channels, 
+be aware that Anaconda may now be actively enforcing its licensing terms. 
+Academic, non-profit, and research institutions that previously used Anaconda software for free may now be required to 
+purchase a commercial license if they have over 200 employees or contractors. 
+Anaconda has sent legal notices to institutions demanding compliance and threatening backdated billing. 
+This shift follows changes in Anaconda’s terms of service, 
+updated in March 2024, and may affect your access to Anaconda’s resources. 
+Ensure your organization reviews its usage and licensing agreements to avoid potential legal issues.
