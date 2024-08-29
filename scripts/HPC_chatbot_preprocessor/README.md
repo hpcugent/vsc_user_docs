@@ -164,6 +164,18 @@ Comments can be written in such a way that the script will keep them as input fo
 <!--INPUT_FOR_BOTyour comment for the bot-->
 ```
 
+This will be reworked to
+ 
+```
+your comment for the bot
+```
+
+in the final output.
+
 ### Long filepaths
 
 Due to the nature of this script, it can generate large directories with very long names if `deep_directories` is enabled. Depending on the operating system, this can cause problems with filepaths being to long, resulting in files not being able to open. A possible fix for this is to make sure the filepath to where the script is located is not too long. Another solution is lowering the `max_title_depth` or disabling `deep_directories`.
+
+### Markdown lists
+
+The parser is made in a way to detect lists and not split them in multiple paragraphs. The kinds of lists it can detect is all lists with denominators `-`, `+`, `*` and list indexed with numbers or letters (one letter per list entry). It can handle  list entries being spread out over multiple lines if there is an indentation of at least two spaces. It can also handle multiple paragraph list entries in this way, as long as the indentation stays.
