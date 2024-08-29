@@ -31,6 +31,7 @@ This directory will contain the packages, scripts, and binaries that are needed 
     This is because modules are built and optimized for the operating system and CPUs of the cluster.
     This means that you should create a new virtual environment for each cluster you work on. 
     See [Creating a virtual environment for a specific cluster](#creating-a-virtual-environment-for-a-specific-cluster) for more information.
+    
 
 ### Activating a virtual environment
 
@@ -56,10 +57,17 @@ No administrator privileges are required to install packages in a virtual enviro
 
 It is now possible to run Python scripts that use the installed packages in the virtual environment.
 
-!!! note
-    Always prefer to use Python packages that are centrally installed, which are available via the environment modules interface.
-    Software installations available via the modules interface are compiled and optimized for the HPC cluster, while packages installed with `pip` are not.
-    To check if a package is available as a module, you can use the following command:
+!!! tip
+    When creating a virtual environment, it's best to install only *pure* Python 
+    packages. Pure Python packages consist solely of Python code and don't require compilation. 
+    The installation method of these packages doesn't impact performance since they're not compiled.
+    
+    Compiled libraries with a Python wrapper (*non-pure* Python packages) are better loaded as modules 
+    rather than installed in the virtual environment. 
+    Modules are optimized for the HPC cluster’s specific hardware and operating system. 
+    If a non-pure Python package isn't available as a module, you can submit a software installation request.
+    
+    To check if a package is available as a module, use:
 
     ```bash
     module av package_name
