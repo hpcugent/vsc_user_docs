@@ -25,6 +25,13 @@ python -m venv myenv      # Create a new virtual environment named 'myenv'
 This command creates a new subdirectory named `myenv` in the current working directory. 
 This directory will contain the packages, scripts, and binaries that are needed to manage the virtual environment.
 
+!!! warning
+    When you create a virtual environment on top of a loaded Python module, 
+    the environment becomes specific to the cluster you're working on. 
+    This is because modules are built and optimized for the operating system and CPUs of the cluster.
+    This means that you should create a new virtual environment for each cluster you work on. 
+    See [Creating a virtual environment for a specific cluster](#creating-a-virtual-environment-for-a-specific-cluster) for more information.
+
 ### Activating a virtual environment
 
 To use the virtual environment, you need to *activate* it. 
