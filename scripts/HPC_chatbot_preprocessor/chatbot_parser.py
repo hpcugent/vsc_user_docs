@@ -104,7 +104,7 @@ _PARAGRAPH_ = "_paragraph_"
 METADATA_EXTENSION = "_metadata"
 
 # Marker for comments for the bot
-INPUT_FOR_BOT = "INPUT_FOR_BOT"
+INPUT_FOR_BOT = "INPUT_FOR_BOT: "
 
 # Standard strings for verbose output
 LINE = "------------------------------------------------------------------------------------------------------\n"
@@ -138,7 +138,46 @@ def check_for_title(line, in_code_block, curr_dirs, options):
         return 0
 
 
-def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
+def make_valid_link(link, main_title, is_linux_tutorial):
+    """
+    Function that converts a string to a valid link to be used in the metadata
+
+    :param link: the input string to be turned into a valid link
+    :param main_title: the main title of the file that contains the link
+    :param is_linux_tutorial: boolean indicating whether the current file is part of the linux tutorial
+    :return link: the valid link
+    """
+
+    # ugly fix for problem with links
+    linux_tutorial_files = ["beyond_the_basics", "common_pitfalls", "getting_started", "hpc_infrastructure", "index", "manipulating_files_and_directories", "navigating", "uploading_files"]
+    if is_linux_tutorial and any([linux_tutorial_files[i] in link for i in range(len(linux_tutorial_files))]):
+        linux_part = LINUX_TUTORIAL + '/'
+    else:
+        linux_part = ""
+
+    if link.startswith('http://') or link.startswith('https://') or link.startswith('mailto:'):
+        pass
+    else:
+        if link.startswith("./"):
+            link = link.replace('./', '')
+        elif link.startswith("../"):
+            link = link.replace('../', '')
+
+        if link.startswith("#"):
+            link = DOCS_URL + '/' + linux_part + main_title + "/" + link
+        elif link.endswith(".md") and ("/" not in link or "." not in link.split("/")[0]):
+            link = DOCS_URL + '/' + linux_part + link.replace(".md", "")
+        elif '.md#' in link:
+            link = DOCS_URL + '/' + linux_part + link.replace(".md", "/")
+        else:
+            link = DOCS_URL + '/' + linux_part + link
+
+    link = link.replace('index/', '').replace('/index', '')
+
+    return link
+
+
+def replace_markdown_markers(curr_line, linklist, in_code_block, main_title, is_linux_tutorial):
     """
     function that replaces certain markdown structures with the equivalent used on the website
 
@@ -146,12 +185,13 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
     :param linklist: the list used to store links that need to be printed at the end of the file
     :param in_code_block: boolean indicating whether the current line is part of a code block
     :param main_title: the main title of the file that is being processed
+    :param is_linux_tutorial: boolean indicating whether the current file is part of the linux tutorial
     :return curr_line: the adapted current line
     :return linklist: the updated linklist
     """
 
     # replace images with an empty line
-    if re.search(r'(?i)!\[image]\(.*?\)', curr_line) or re.search(r'!\[]\(img/.*?.png\)', curr_line):
+    if re.search(r'(?i)!\[image]\(.*?\)', curr_line) or re.search(r'!\[.*?]\(img/.*?\.png\)', curr_line):
         curr_line = ""
 
     # replace links with a reference
@@ -159,13 +199,8 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
     if matches:
         for match in matches:
             curr_line = curr_line.replace(f"[{match[0]}]({match[1]})", match[0] + LINK_MARKER + str(len(linklist)) + LINK_MARKER)
-            if ".md" not in match[1]:
-                if "#" not in match[1]:
-                    linklist.append(match[1])
-                else:
-                    linklist.append(DOCS_URL + "/" + main_title.replace(".md", "") + "/" + match[1])
-            else:
-                linklist.append(DOCS_URL + "/" + match[1].replace(".md", "/").replace("index", "").rstrip("/"))
+
+            linklist.append(make_valid_link(match[1], main_title, is_linux_tutorial))
 
     # codeblock (with ``` -> always stands on a separate line, so line can be dropped)
     if '```' in curr_line:
@@ -238,13 +273,14 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title):
     return curr_line, linklist
 
 
-def split_text(file, main_title, options, current_paragraph_number=-1, OS=GENERIC):
+def split_text(file, main_title, options, is_linux_tutorial, current_paragraph_number=-1, OS=GENERIC):
     """
     Function that splits the text into smaller sections and makes them into two dictionaries containing text and metadata
 
     :param file: the filepath of the file to be split
     :param main_title: the main title of the file
     :param options: dictionary containing the options given by the user
+    :param is_linux_tutorial: boolean indicating whether the current file is part of the linux tutorial
     :param current_paragraph_number: number of the paragraph that is being split, only applicable when splitting an os-specific paragraph on paragraph level
     :param OS: the OS of the file to be split, only applicable when splitting an os-specific paragraph on paragraph level
     :return paragraphs_text: dictionary containing the split sections of text
@@ -253,18 +289,19 @@ def split_text(file, main_title, options, current_paragraph_number=-1, OS=GENERI
     """
 
     if options[SPLIT_ON_TITLES]:
-        return split_on_titles(file, main_title, options)
+        return split_on_titles(file, main_title, options, is_linux_tutorial)
     elif options[SPLIT_ON_PARAGRAPHS]:
-        return split_on_paragraphs(file, main_title, options, current_paragraph_number, OS)
+        return split_on_paragraphs(file, main_title, options, is_linux_tutorial, current_paragraph_number, OS)
 
 
-def split_on_titles(file, main_title, options):
+def split_on_titles(file, main_title, options, is_linux_tutorial):
     """
     Function that splits the text into smaller sections based on the subtitle structure and makes them into two dictionaries containing text and metadata
 
     :param file: the filepath of the file to be split
     :param main_title: the main title of the file
     :param options: dictionary containing the options given by the user
+    :param is_linux_tutorial: boolean indicating whether the current file is part of the linux tutorial
     :return paragraphs_text: dictionary containing the split sections of text
     :return paragraphs_metadata: dictionary containing the metadata of each split section of text
     :return subtitle_order: list containing all encountered subtitles in order of appearance
@@ -356,7 +393,7 @@ def split_on_titles(file, main_title, options):
 
                 # line is not a title
                 elif after_first_title:
-                    line, link_list = replace_markdown_markers(line, link_list, in_code_block, main_title)
+                    line, link_list = replace_markdown_markers(line, link_list, in_code_block, main_title, is_linux_tutorial)
                     if line != "\n":
                         current_paragraph += line
 
@@ -366,7 +403,7 @@ def split_on_titles(file, main_title, options):
                     last_dir = curr_dirs[last_title_level]
             else:
                 previous_contained_if = True
-                line, link_list = replace_markdown_markers(line, link_list, in_code_block, main_title)
+                line, link_list = replace_markdown_markers(line, link_list, in_code_block, main_title, is_linux_tutorial)
                 if line != "\n":
                     current_paragraph += line
 
@@ -384,13 +421,14 @@ def split_on_titles(file, main_title, options):
     return paragraphs_os_text, paragraphs_os_free_text, paragraphs_metadata, subtitle_order
 
 
-def split_on_paragraphs(file, main_title, options, current_paragraph_number=-1, OS=GENERIC):
+def split_on_paragraphs(file, main_title, options, is_linux_tutorial, current_paragraph_number=-1, OS=GENERIC):
     """
     Function that splits the text into smaller sections based on the paragraph structure and makes them into two dictionaries containing text and metadata
 
     :param file: the filepath of the file to be split
     :param main_title: the main title of the file
     :param options: dictionary containing the options given by the user
+    :param is_linux_tutorial: boolean indicating whether the current file is part of the linux tutorial
     :param current_paragraph_number: number of the paragraph that is being split, only applicable when splitting an os-specific paragraph
     :param OS: the OS of the file to be split, only applicable when splitting an os-specific paragraph
     :return paragraphs_text: dictionary containing the split sections of text
@@ -524,12 +562,12 @@ def split_on_paragraphs(file, main_title, options, current_paragraph_number=-1, 
                     # make a new title
                     metadata_title = make_valid_title(line[title_level + 1:-1])
 
-                    line, link_list = replace_markdown_markers(line[title_level + 1:], link_list, in_code_block, main_title)
+                    line, link_list = replace_markdown_markers(line[title_level + 1:], link_list, in_code_block, main_title, is_linux_tutorial)
                     current_paragraph += line
 
                 # line is not a title or the beginning of a new paragraph
                 elif line != "\n" or previous_contained_if:
-                    line, link_list = replace_markdown_markers(line, link_list, in_code_block, main_title)
+                    line, link_list = replace_markdown_markers(line, link_list, in_code_block, main_title, is_linux_tutorial)
                     current_paragraph += line
 
                 # keep track of title level and directory to write to metadata upon discovering a new subtitle
@@ -538,7 +576,7 @@ def split_on_paragraphs(file, main_title, options, current_paragraph_number=-1, 
                     last_dir = curr_dirs[last_title_level]
             else:
                 previous_contained_if = True
-                line, link_list = replace_markdown_markers(line, link_list, in_code_block, main_title)
+                line, link_list = replace_markdown_markers(line, link_list, in_code_block, main_title, is_linux_tutorial)
                 current_paragraph += line
 
     # create a title for the last paragraph
@@ -799,7 +837,7 @@ def make_valid_title(title):
     valid_filename = re.sub(invalid_chars, '', title)
 
     # Strip leading/trailing whitespace
-    valid_filename = valid_filename.strip().strip('-').replace(' ', '-')
+    valid_filename = valid_filename.strip().strip('-').replace(' ', '-').replace("--", "-")
 
     return valid_filename
 
@@ -889,7 +927,10 @@ def write_files(title, text, paragraphs_metadata, title_order, title_order_numbe
         os_part = ""
     else:
         os_part = LINK_OS[OS] + "/"
-    metadata[REFERENCE_LINK] = DOCS_URL + "/" + os_part + linux_part + paragraphs_metadata[title][MAIN_TITLE] + "/#" + ''.join(char.lower() for char in paragraphs_metadata[title][SUBTITLE] if char.isalnum() or char == '-').strip('-')
+    if "index" not in paragraphs_metadata[title][MAIN_TITLE]:
+        metadata[REFERENCE_LINK] = DOCS_URL + "/" + os_part + linux_part + paragraphs_metadata[title][MAIN_TITLE] + "/#" + ''.join(char.lower() for char in paragraphs_metadata[title][SUBTITLE] if char.isalnum() or char == '-').strip('-')
+    else:
+        metadata[REFERENCE_LINK] = DOCS_URL
 
     # write metadata to file
     with open(os.path.join(filepath, file_title + METADATA_EXTENSION + ".json"), 'w') as writefile:
@@ -964,7 +1005,7 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, title_or
                 writefile.write(jinja_text)
 
             # split in right way
-            _, os_specific_text, os_specific_metadata, os_subtitle_order = split_text(TEMP_JINJA_FILE, metadata[MAIN_TITLE], options, current_paragraph_number=subtitle_order[title_order_number].split('_')[-1], OS=OS)
+            _, os_specific_text, os_specific_metadata, os_subtitle_order = split_text(TEMP_JINJA_FILE, metadata[MAIN_TITLE], options, is_linux_tutorial, current_paragraph_number=subtitle_order[title_order_number].split('_')[-1], OS=OS)
 
             # prepare variables to fix metadata
             total_subtitle_order = subtitle_order[:title_order_number] + os_subtitle_order + subtitle_order[title_order_number+1:]
@@ -1110,7 +1151,7 @@ def main(options):
             print("\nSplitting the file for the first time (split in sufficiently small generic sections and large os-specific chunks)")
 
         # split the text in paragraphs
-        paragraphs_os_text, paragraphs_os_free_text, paragraphs_metadata, subtitle_order = split_text(copy_file, main_title, options)
+        paragraphs_os_text, paragraphs_os_free_text, paragraphs_metadata, subtitle_order = split_text(copy_file, main_title, options, is_linux_tutorial)
 
         if options[VERBOSE]:
             print("\nFurther splitting os-specific chunks and writing generic and os-specific sections to files with metadata")

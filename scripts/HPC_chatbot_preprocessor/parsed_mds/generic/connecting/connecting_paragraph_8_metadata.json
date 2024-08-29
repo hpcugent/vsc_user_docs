@@ -5,7 +5,7 @@
     "title_depth": 2,
     "directory": "connecting",
     "links": {
-        "0": "../useful_linux_commands"
+        "0": "https://docs.hpc.ugent.be/useful_linux_commands"
     },
     "parent_title": "",
     "previous_title": "connecting_paragraph_7",

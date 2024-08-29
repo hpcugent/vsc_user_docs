@@ -5,7 +5,7 @@
     "title_depth": 2,
     "directory": "account",
     "links": {
-        "0": "../sites/hpc_policies"
+        "0": "https://docs.hpc.ugent.be/sites/hpc_policies"
     },
     "parent_title": "",
     "previous_title": null,

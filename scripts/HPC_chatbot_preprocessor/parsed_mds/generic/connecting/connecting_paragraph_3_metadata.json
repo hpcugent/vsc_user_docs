@@ -6,7 +6,7 @@
     "directory": "connecting",
     "links": {
         "0": "https://docs.hpc.ugent.be/web_portal",
-        "1": "https://docs.hpc.ugent.be/connecting/../troubleshooting/#issues-connecting-to-login-node"
+        "1": "https://docs.hpc.ugent.be/troubleshooting/#issues-connecting-to-login-node"
     },
     "parent_title": "",
     "previous_title": "connecting_paragraph_2",

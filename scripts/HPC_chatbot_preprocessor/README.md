@@ -172,7 +172,7 @@ Any comments within the markdown files (for example TODO's) should follow the fo
 Comments can be written in such a way that the script will keep them as input for the bot. To do that, the marker `INPUT_FOR_BOT` should be put in front of the content of the comment as such.
 
 ```
-<!--INPUT_FOR_BOTyour comment for the bot-->
+<!--INPUT_FOR_BOT: your comment for the bot-->
 ```
 
 This will be reworked to
@@ -190,3 +190,7 @@ Due to the nature of this script, it can generate large directories with very lo
 ### Markdown lists
 
 The parser is made in a way to detect lists and not split them in multiple paragraphs. The kinds of lists it can detect is all lists with denominators `-`, `+`, `*` and list indexed with numbers or letters (one letter per list entry). It can handle  list entries being spread out over multiple lines if there is an indentation of at least two spaces. It can also handle multiple paragraph list entries in this way, as long as the indentation stays.
+
+### Links
+
+Part of the metadata of the parser are links. In order for the links to be built up in the right way, links to external sites should always start with either `https://` or `http://`.

@@ -6,8 +6,8 @@
     "directory": "account",
     "parent_title": "Getting-ready-to-request-an-account",
     "links": {
-        "0": "https://docs.hpc.ugent.be/account/../account/#generating-a-publicprivate-key-pair",
-        "1": "https://docs.hpc.ugent.be/account/../account/#generating-a-publicprivate-key-pair"
+        "0": "https://docs.hpc.ugent.be/account/#generating-a-publicprivate-key-pair",
+        "1": "https://docs.hpc.ugent.be/account/#generating-a-publicprivate-key-pair"
     },
     "previous_title": "account_windows_paragraph_6.1",
     "next_title": "account_windows_paragraph_6.3",

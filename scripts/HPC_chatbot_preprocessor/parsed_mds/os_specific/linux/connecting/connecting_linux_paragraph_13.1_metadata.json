@@ -6,7 +6,7 @@
     "directory": "connecting",
     "parent_title": "Transfer-Files-tofrom-the-HPC",
     "links": {
-        "0": "https://docs.hpc.ugent.be/connecting/localhost:8000/Gent//intro-Linux/uploading_files/#symlinks-for-datascratch"
+        "0": "https://docs.hpc.ugent.be/localhost:8000/Gent//intro-Linux/uploading_files/#symlinks-for-datascratch"
     },
     "previous_title": "connecting_paragraph_12",
     "next_title": "connecting_linux_paragraph_13.2",
