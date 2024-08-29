@@ -16,7 +16,7 @@ For more general information about the use of Apptainer, please see the
 official documentation at <https://apptainer.org/docs/>.
 
 This documentation only covers aspects of using Apptainer on the
-{{hpcinfra}} infrastructure.
+{{hpcinfra}}.
 
 ## Restrictions on image location
 
