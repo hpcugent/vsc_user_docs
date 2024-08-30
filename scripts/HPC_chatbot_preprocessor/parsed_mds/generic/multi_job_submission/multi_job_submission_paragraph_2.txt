@@ -1,0 +1,48 @@
+$ ./weather -t 20 -p 1.05 -v 4.3
+T: 20  P: 1.05  V: 4.3
+For the purpose of this exercise, the weather program is just a simple
+bash script, which prints the 3 variables to the standard output and
+waits a bit:
+#!/bin/bash
+# Here you could do your calculations
+echo "T: $2  P: $4  V: $6"
+sleep 100
+A job script that would run this as a job for the first parameters (p01)
+would then look like:
+#!/bin/bash
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=01:00:00
+cd $PBS_O_WORKDIR
+./weather -t 20 -p 1.05 -v 4.3
+When submitting this job, the calculation is performed or this
+particular instance of the parameters, i.e., temperature = 20, pressure
+= 1.05, and volume = 4.3.
+To submit the job, the user would use:
+ $ qsub weather_p01.pbs
+However, the user wants to run this program for many parameter
+instances, e.g., he wants to run the program on 100 instances of
+temperature, pressure and volume. The 100 parameter instances can be
+stored in a comma separated value file (.csv) that can be generated
+using a spreadsheet program such as Microsoft Excel or RDBMS or just by
+hand using any text editor (do not use a word processor such as Microsoft
+Word). The first few lines of the file "data.csv" would look like:
+$ more data.csv
+temperature, pressure, volume
+293, 1.0e5, 107
+294, 1.0e5, 106
+295, 1.0e5, 105
+296, 1.0e5, 104
+297, 1.0e5, 103
+...
+It has to contain the names of the variables on the first line, followed
+by 100 parameter instances in the current example.
+In order to make our PBS generic, the PBS file can be modified as
+follows:
+#!/bin/bash
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=04:00:00
+cd $PBS_O_WORKDIR
+./weather -t $temperature -p $pressure -v $volume
+# # This script is submitted to the cluster with the following 2 commands:
+# module load worker/1.6.12-foss-2021b
+# wsub -data data.csv -batch weather.pbs
