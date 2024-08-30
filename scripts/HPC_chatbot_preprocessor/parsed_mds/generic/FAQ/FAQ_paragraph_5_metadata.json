@@ -1,0 +1,19 @@
+{
+    "main_title": "FAQ",
+    "subtitle": "Can-I-share-my-data-with-other-HPC-users",
+    "source_file": "../../mkdocs/docs/HPC/FAQ.md",
+    "title_depth": 3,
+    "directory": "FAQ",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/running_batch_jobs/#when-will-my-job-start",
+        "1": "https://account.vscentrum.be",
+        "2": "https://docs.hpc.ugent.be/linux-tutorial/manipulating_files_and_directories/#zipping-gzipgunzip-zipunzip",
+        "3": "https://docs.hpc.ugent.be/FAQ/#i-have-another-questionproblem",
+        "4": "https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#virtual-organisations"
+    },
+    "parent_title": "",
+    "previous_title": "FAQ_paragraph_4",
+    "next_title": "FAQ_paragraph_6",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/FAQ/#can-i-share-my-data-with-other-hpc-users"
+}

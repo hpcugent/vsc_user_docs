@@ -1,0 +1,42 @@
+Welcome e mail
+Applying for the account
+Visit https://account.vscentrum.be/
+You will be redirected to our WAYF (Where Are You From) service where
+you have to select your "Home Organisation".
+Select "UGent" in the dropdown box and optionally select "Save my preference"
+and "permanently".
+Click "Confirm"
+You will now be taken to the authentication page of your institute.
+You will now have to log in with CAS using your UGent account.
+You either have a login name of maximum 8 characters, or a (non-UGent)
+email address if you are an external user. In case of problems with your
+UGent password, please visit: https://password.ugent.be/. After
+logging in, you may be requested to share your information. Click "Yes,
+continue".
+After you log in using your UGent login and password, you will be asked to
+upload the file that contains your public key, i.e., the file
+"id_rsa.pub" which you have generated earlier. Make sure that your
+public key is actually accepted for upload, because if it is in a wrong
+format, wrong type or too short, then it will be refused.
+This file has been stored in the directory "~/.ssh/".
+ tip
+    As ".ssh" is an invisible directory, the Finder will not show it by
+    default. The easiest way to access the folder, is by pressing ++cmd+shift+g++ (or ++cmd+shift+"."++),
+    which will allow you to enter the name of a directory, which you would
+    like to open in Finder. Here, type "~/.ssh" and press enter.
+After you have uploaded your public key you will receive an e-mail with
+a link to confirm your e-mail address. After confirming your e-mail
+address the VSC staff will review and if applicable approve your
+account.
+Welcome e-mail
+Within one day, you should receive a Welcome e-mail with your VSC
+account details.
+Dear (Username), 
+Your VSC-account has been approved by an administrator.
+Your vsc-username is vsc40000
+Your account should be fully active within one hour.
+To check or update your account information please visit
+https://account.vscentrum.be/
+For further info please visit https://www.vscentrum.be/user-portal
+Kind regards,
+-- The VSC administrators
