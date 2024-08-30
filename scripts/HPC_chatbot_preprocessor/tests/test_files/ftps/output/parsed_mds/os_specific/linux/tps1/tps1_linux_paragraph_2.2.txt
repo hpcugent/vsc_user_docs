@@ -1,3 +1,0 @@
-Non Windows section
-Whereas the Windows version of this section had a lot of unnecessary newlines, this one will just be a short and concise
-section that ends right here.

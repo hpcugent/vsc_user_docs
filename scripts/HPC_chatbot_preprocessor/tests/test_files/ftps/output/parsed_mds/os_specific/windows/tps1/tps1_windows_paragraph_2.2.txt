@@ -1,6 +1,0 @@
-Windows specific section
-Like this.
-And this.
-And also this.
-These section should all be grouped together under the windows specific section of the output. The addition of this long
-section at the end should make sure the combination of sections comes to an end here.
