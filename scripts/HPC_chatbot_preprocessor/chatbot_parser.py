@@ -235,6 +235,10 @@ def replace_markdown_markers(curr_line, linklist, in_code_block, main_title, is_
             elif re.fullmatch(r'!--.*?--', content):
                 curr_line = re.sub(r'<.*?>', "", curr_line)
 
+            # drop the <> around links
+            elif re.match(r'http://', content) or re.match(r'https://', content):
+                curr_line = re.sub(r'<' + content + '>', content, curr_line )
+
             # keep the rest
             else:
                 pass
@@ -527,7 +531,7 @@ def split_on_paragraphs(file, main_title, options, is_linux_tutorial, current_pa
                 title_level = check_for_title(line, in_code_block, curr_dirs, options)
 
                 # check whether a new paragraph should be started
-                if line == "\n" and len(re.sub(r'\{' + IF_MANGLED_PART + '%.*?%' + IF_MANGLED_PART + '}', "", current_paragraph)) >= options[MIN_PARAGRAPH_LENGTH] and not in_code_block and not in_list:
+                if line == "\n" and paragraph_long_enough(re.sub(r'\{' + IF_MANGLED_PART + '%.*?%' + IF_MANGLED_PART + '}', "", current_paragraph), options) and not in_code_block and not in_list:
 
                     # create a title for the previous paragraph
                     if current_paragraph_number == -1:
@@ -600,6 +604,18 @@ def split_on_paragraphs(file, main_title, options, is_linux_tutorial, current_pa
     subtitle_order.append(paragraph_title)
 
     return paragraphs_os_text, paragraphs_os_free_text, paragraphs_metadata, subtitle_order
+
+
+def paragraph_long_enough(paragraph, options):
+    """
+    Function that checks if the paragraph is long enough to be split of
+
+    :param paragraph: current paragraph
+    :param options: dictionary containing the options given by the user
+    :return:
+    """
+    # TODO: change this into something that uses the tokenizer
+    return len(paragraph) >= options[MIN_PARAGRAPH_LENGTH]
 
 
 def write_metadata(main_title, subtitle, links, title_level, directory, source_file):
