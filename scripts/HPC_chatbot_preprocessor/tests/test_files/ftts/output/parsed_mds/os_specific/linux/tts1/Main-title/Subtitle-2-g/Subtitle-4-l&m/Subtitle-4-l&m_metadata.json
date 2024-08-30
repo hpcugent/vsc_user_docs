@@ -3,7 +3,7 @@
     "subtitle": "Subtitle-4-l&m",
     "source_file": "tests/test_files/ftts/tts1.md",
     "title_depth": 3,
-    "directory": "tts1\\Main-title\\Subtitle-2-g\\Subtitle-4-l&m",
+    "directory": "tts1/Main-title/Subtitle-2-g/Subtitle-4-l&m",
     "parent_title": "Subtitle-2-g",
     "links": {
         "0": "https://docs.hpc.ugent.be/generic"
