@@ -634,7 +634,7 @@ def write_metadata(main_title, subtitle, links, title_level, directory, source_f
     :return paragraph_metadata: dictionary containing the metadata about the section
     """
 
-    paragraph_metadata = {MAIN_TITLE: main_title, SUBTITLE: subtitle, SOURCE_FILE: source_file, TITLE_DEPTH: title_level, DIRECTORY: directory}
+    paragraph_metadata = {MAIN_TITLE: main_title, SUBTITLE: subtitle, SOURCE_FILE: source_file, TITLE_DEPTH: title_level, DIRECTORY: Path(directory).as_posix()}
 
     if len(links) > 0:
         paragraph_metadata[LINKS] = {}
@@ -1061,6 +1061,7 @@ def split_and_write_os_specific_section(text, metadata, subtitle_order, title_or
                             os_specific_metadata[os_subtitle][DIRECTORY] = os.path.join(parent, os_specific_metadata[os_subtitle][SUBTITLE])
                         else:
                             os_specific_metadata[os_subtitle][DIRECTORY] = os.path.join(all_metadata[parent][DIRECTORY], os_specific_metadata[os_subtitle][SUBTITLE])
+                        os_specific_metadata[os_subtitle][DIRECTORY] = Path(os_specific_metadata[os_subtitle][DIRECTORY]).as_posix()
 
                     # make a directory to save the files
                     filepath = os.path.join(options[DESTINATION_DIRECTORY], PARSED_MDS, OS_SPECIFIC_DIR, OS, os_specific_metadata[os_subtitle][DIRECTORY])
