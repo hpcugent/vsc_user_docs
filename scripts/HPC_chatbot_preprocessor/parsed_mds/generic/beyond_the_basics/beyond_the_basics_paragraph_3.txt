@@ -1,0 +1,48 @@
+Usually, this ends the process, giving it the opportunity to flush data
+to files, etc. However, if the process ignored your signal, you can send
+it a different message
+(SIGKILL)
+which the OS will use to unceremoniously terminate the process:
+$ kill -9 1234
+top
+top is a tool to see the current status of the system. You've probably
+used something similar in Task Manager on Windows or Activity Monitor in
+macOS. top will update every second and has a few interesting
+commands.
+To see only your processes, type u and your username after starting
+top, (you can also do this with 
+top -u $USER
+). The default is to
+sort the display by %CPU. To change the sort order, use < and >
+like arrow keys.
+There are a lot of configuration options in top, but if you're
+interested in seeing a nicer view, you can run htop instead. Be aware
+that it's not installed everywhere, while top is.
+To exit top, use q (for 'quit').
+For more information, see [Brendan Gregg's excellent site dedicated to
+performance analysis](http://brendangregg.com).
+ulimit
+ulimit is a utility to get or set user limits on the machine. For
+example, you may be limited to a certain number of processes. To see all
+the limits that have been set, use:
+$ ulimit -a
+Counting: wc
+To count the number of lines, words, and characters (or bytes) in a file, use wc (word count):
+$ wc example.txt
+      90     468     3189   example.txt
+The output indicates that the file named example.txt contains 90
+lines, 468 words, and 3189 characters/bytes.
+To only count the number of lines, use wc -l:
+$ wc -l example.txt
+      90    example.txt
+Searching file contents: grep
+grep is an important command. It was originally an abbreviation for
+"globally search a regular expression and print" but it's entered the
+common computing lexicon and people use 'grep' to mean searching for
+anything. To use grep, you give a pattern and a list of files.
+$ grep banana fruit.txt
+$ grep banana fruit_bowl1.txt fruit_bowl2.txt
+$ grep banana fruit*txt
+grep also lets you search for [Regular
+Expressions](https://en.wikipedia.org/wiki/Regular_expression), but
+these are not in scope for this introductory text.

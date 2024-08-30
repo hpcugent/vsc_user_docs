@@ -1,0 +1,43 @@
+Editing with nano
+Uploading/downloading/editing files
+Uploading/downloading files
+[//]: # (sec:uploading-files)
+To transfer files from and to the HPC, see 
+[the section about transferring files of the
+HPC manual](../connecting.md#transfer-files-tofrom-the-hpc)
+dos2unix
+[//]: # (subsec:dos2unix)
+After uploading files from Windows, you may experience some problems due to the difference
+in line endings between Windows (carriage return + line feed) and Linux (line feed only),
+see also https://kuantingchen04.github.io/line-endings/.
+For example, you may see an error when submitting a job script that was edited on Windows:
+sbatch: error: Batch script contains DOS line breaks (\r\n)
+sbatch: error: instead of expected UNIX line breaks (\n).
+To fix this problem, you should run the dos2unix command on the file:
+$ dos2unix filename
+Symlinks for data/scratch
+[//]: # (sec:symlink-for-data)
+As we end up in the home directory when connecting, it would be
+convenient if we could access our data and VO storage. To facilitate
+this we will create symlinks to them in our home directory. 
+This will create 4 symbolic links 
+(they're like "shortcuts" on your desktop)
+ pointing to the respective storages:
+$ cd $HOME
+$ ln -s $VSC_SCRATCH scratch
+$ ln -s $VSC_DATA data
+$ ls -l scratch data
+lrwxrwxrwx 1 vsc40000 vsc40000 31 Mar 27 2009 data ->
+    /user/data/gent/vsc400/vsc40000
+lrwxrwxrwx 1 vsc40000 vsc40000 34 Jun 5 2012 scratch ->
+    /user/scratch/gent/vsc400/vsc40000
+ 
+ Editing with nano
+Nano is the simplest editor available on Linux. To open Nano, just type
+nano. To edit a file, you use nano the_file_to_edit.txt. You will be
+presented with the contents of the file and a menu at the bottom with
+commands like ^O Write Out The ^ is the Control key. So ^O means
+Ctrl-O. The main commands are:
+1.  Open ("Read"): ^R
+2.  Save ("Write Out"): ^O
+3.  Exit: ^X
