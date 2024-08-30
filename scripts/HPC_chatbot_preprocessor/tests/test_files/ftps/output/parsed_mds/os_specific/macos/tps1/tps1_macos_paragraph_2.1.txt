@@ -1,4 +1,0 @@
-OS specific sections
-This is the second section, it is the start of some 
-text specific to OSes that aren't "windows". I feel like there is no need to make this section very long, however I will
-still add a link.
