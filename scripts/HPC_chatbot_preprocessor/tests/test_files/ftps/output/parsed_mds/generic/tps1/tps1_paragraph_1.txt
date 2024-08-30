@@ -1,6 +1,0 @@
-Main title
-This is the first paragraph of text. It is non-os-specific, however it does contain a link.
-It also contains some other Markdown syntax and an
-example code block.
-This intro needs to be sufficiently long as will be explained in the following section (we want to hit the minimum
-character limit for a section).

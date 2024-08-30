@@ -1,7 +1,0 @@
-OS specific sections
-This is the second section, it is the start of some  text specific to windows.
-In this section it is probably no longer needed to test the Markdown syntax again, however I will make it somewhat longer 
-to make sure we get a long section that is over the minimum required length for the next newline character to be 
-classified as the end of this section. I am doing this because for the next sections I want to test whether they will be
-grouped together if they are not long enough to reach the minimum paragraph length on their own. Also, before I forget, 
-let's add a link in this section as well.
