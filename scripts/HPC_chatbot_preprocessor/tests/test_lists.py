@@ -3,7 +3,7 @@ from chatbot_parser import split_on_paragraphs
 
 
 @pytest.mark.parametrize("file, main_title, options, is_linux_tutorial, expected_text", [
-    ("./test_files/list_file/list_test.md",
+    ("./tests/test_files/list_file/list_test.md",
      "list_test.md",
      {
          "SOURCE_DIRECTORY": "./test_files/list_file",
