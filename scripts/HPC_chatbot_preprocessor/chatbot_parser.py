@@ -6,6 +6,7 @@ import json
 import os
 import re
 import shutil
+import tiktoken
 import yaml
 from itertools import chain, tee, zip_longest
 from pathlib import Path
@@ -615,7 +616,12 @@ def paragraph_long_enough(paragraph, options):
     :return:
     """
     # TODO: change this into something that uses the tokenizer
-    return len(paragraph) >= options[MIN_PARAGRAPH_LENGTH]
+    encoding = tiktoken.get_encoding("cl100k_base")
+    token_amount = len(encoding.encode(paragraph))
+
+    print(token_amount)
+
+    return token_amount >= options[MIN_PARAGRAPH_LENGTH]
 
 
 def write_metadata(main_title, subtitle, links, title_level, directory, source_file):
@@ -1144,7 +1150,7 @@ def main(options):
         main_title = filename[:-3]
 
         # variable that keeps track of the directories that are used to write in at different levels
-        curr_dirs = [filename[:-3] for _ in range(5)]
+        curr_dirs = [filename[:-3] for _ in range(options[MAX_TITLE_DEPTH] + 1)]
 
         ################### actually parse the md file ###################
 
@@ -1212,7 +1218,7 @@ if __name__ == '__main__':
     parser.add_argument("-src", "--source", required=True, type=str, help="The source directory where the original files are located")
     parser.add_argument("-dst", "--destination", required=True, type=str, help="The destination directory where the processed files should be written to")
     parser.add_argument("-st", "--split_on_titles", action="store_true", help="Splits the text based on titles and subtitles instead of paragraphs with a minimum length.")
-    parser.add_argument("-pl", "--min_paragraph_length", type=int, default=683, help="Minimum length in characters of a paragraph, only works if split on titles is disabled (default: 683)")
+    parser.add_argument("-pl", "--min_paragraph_length", type=int, default=512, help="Minimum length in characters of a paragraph, only works if split on titles is disabled (default: 683)")
     parser.add_argument("-td", "--max_title_depth", type=int, default=4, help="Maximum depth of titles that divide the source text into sections, only works if split on titles is enabled (default: 4)")
     parser.add_argument("-l", "--links", action="store_true", help="Add links to the output texts")
     parser.add_argument("-dd", "--deep_directories", action="store_true", help="Generate a nested directory structure following the structure of the subtitles. Only works if split on titles is enabled")
