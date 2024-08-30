@@ -615,11 +615,8 @@ def paragraph_long_enough(paragraph, options):
     :param options: dictionary containing the options given by the user
     :return:
     """
-    # TODO: change this into something that uses the tokenizer
     encoding = tiktoken.get_encoding("cl100k_base")
     token_amount = len(encoding.encode(paragraph))
-
-    print(token_amount)
 
     return token_amount >= options[MIN_PARAGRAPH_LENGTH]
 
