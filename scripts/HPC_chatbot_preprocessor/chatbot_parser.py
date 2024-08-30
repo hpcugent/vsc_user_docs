@@ -536,9 +536,9 @@ def split_on_paragraphs(file, main_title, options, is_linux_tutorial, current_pa
 
                     # create a title for the previous paragraph
                     if current_paragraph_number == -1:
-                        paragraph_title = main_title + _PARAGRAPH_ + str(paragraph_number)
+                        paragraph_title = main_title + _PARAGRAPH_ + f"{paragraph_number:03}"
                     else:
-                        paragraph_title = main_title + "_" + OS + _PARAGRAPH_ + str(current_paragraph_number) + '.' + str(paragraph_number)
+                        paragraph_title = main_title + "_" + OS + _PARAGRAPH_ + f"{current_paragraph_number:03}.{paragraph_number:03}"
                     paragraph_number += 1
 
                     # write text of previous file
@@ -588,9 +588,9 @@ def split_on_paragraphs(file, main_title, options, is_linux_tutorial, current_pa
 
     # create a title for the last paragraph
     if current_paragraph_number == -1:
-        paragraph_title = main_title + _PARAGRAPH_ + str(paragraph_number)
+        paragraph_title = main_title + _PARAGRAPH_ + f"{paragraph_number:03}"
     else:
-        paragraph_title = main_title + "_" + OS + _PARAGRAPH_ + str(current_paragraph_number) + '.' + str(paragraph_number)
+        paragraph_title = main_title + "_" + OS + _PARAGRAPH_ + f"{current_paragraph_number:03}.{paragraph_number:03}"
 
     # write dictionaries for the last file
     if previous_contained_if:
