@@ -1,4 +1,0 @@
-Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
-In this case, use the -i option for the ssh command to specify the
-location of your private key. For example:
-ssh -i /home/example/my_keys

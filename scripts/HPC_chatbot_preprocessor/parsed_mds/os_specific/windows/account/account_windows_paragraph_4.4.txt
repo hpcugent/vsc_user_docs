@@ -1,2 +1,0 @@
-If you use another program to generate a key pair, please remember that
-they need to be in the OpenSSH format to access the HPC clusters.

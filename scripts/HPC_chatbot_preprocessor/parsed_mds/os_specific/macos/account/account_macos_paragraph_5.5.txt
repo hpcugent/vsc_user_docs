@@ -1,6 +1,0 @@
-This will ask you for a file name to store the private and public key,
-and a passphrase to protect your private key. It needs to be emphasised
-that you really should choose the passphrase wisely! The system will ask
-you for it every time you want to use the private key that is every time
-you want to access the cluster or transfer your files.
-Without your key pair, you won't be able to apply for a personal VSC account.

@@ -1,7 +1,0 @@
-Applying for the account
-After you log in using your UGent login and password, you will be asked to
-upload the file that contains your public key, i.e., the file
-"id_rsa.pub" which you have generated earlier. Make sure that your
-public key is actually accepted for upload, because if it is in a wrong
-format, wrong type or too short, then it will be refused.
-This file has been stored in the directory "~/.ssh/".

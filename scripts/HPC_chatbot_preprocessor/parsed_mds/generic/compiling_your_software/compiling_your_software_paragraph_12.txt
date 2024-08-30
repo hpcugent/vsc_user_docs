@@ -1,9 +1,0 @@
-Note: The Intel Parallel Studio Cluster Edition contains equivalent
-compilers for all GNU compilers. Hereafter the overview for C, C++ and
-Fortran compilers.
-|             | Sequential Program |           | **Parallel Program (with MPI)** |           |
-|-------------|------------------------|-----------|---------------------------------|-----------|
-|             | GNU                | Intel | GNU                         | Intel |
-| C       | gcc                    | icc       | mpicc                           | mpiicc    |
-| **C++**     | g++                    | icpc      | mpicxx                          | mpiicpc   |
-| Fortran | gfortran               | ifort     | mpif90                          | mpiifort  |

@@ -1,5 +1,0 @@
-Now you can connect to the login nodes as usual. The SSH agent will know
-which SSH key should be used and you do not have to type the SSH
-passwords each time, this task is done by Pageant agent automatically.
-It is also possible to use WinSCP with Pageant, see
-<https://winscp.net/eng/docs/ui_pageant> for more details.
