@@ -5,8 +5,8 @@
     "title_depth": 3,
     "directory": "tps1",
     "parent_title": "OS-specific-sections",
-    "previous_title": "tps1_linux_paragraph_2.1",
-    "next_title": "tps1_paragraph_3",
+    "previous_title": "tps1_linux_paragraph_002.001",
+    "next_title": "tps1_paragraph_003",
     "OS": "linux",
     "reference_link": "https://docs.hpc.ugent.be/Linux/tps1/#non-windows-section"
 }

@@ -165,7 +165,7 @@ def make_valid_link(link, main_title, is_linux_tutorial):
             link = link.replace('../', '')
 
         if link.startswith("#"):
-            link = DOCS_URL + '/' + linux_part + main_title + "/" + link
+            link = DOCS_URL + '/' + linux_part + main_title.replace(".md", "") + "/" + link
         elif link.endswith(".md") and ("/" not in link or "." not in link.split("/")[0]):
             link = DOCS_URL + '/' + linux_part + link.replace(".md", "")
         elif '.md#' in link:

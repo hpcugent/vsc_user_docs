@@ -10,14 +10,14 @@ from chatbot_parser import replace_markdown_markers
     # image 2
     ("![](img/Look-at-this-photograph.png)", [], False, "", "", []),
     # link 1 (outside docs)
-    ("A line with a [link](a-nice-link.com)", ["another-link.be"], False, "",
-     "A line with a link§link§link§1§link§link§", ["another-link.be", "a-nice-link.com"]),
+    ("A line with a [link](https://a-nice-link.com)", ["https://another-link.be"], False, "",
+     "A line with a link§link§link§1§link§link§", ["https://another-link.be", "https://a-nice-link.com"]),
     # link 2 (another document within the docs)
-    ("A line with a [link to the docs](account.md#welcome-e-mail)", ["another-link.be"], False, "",
-     "A line with a link to the docs§link§link§1§link§link§", ["another-link.be", "https://docs.hpc.ugent.be/account/#welcome-e-mail"]),
+    ("A line with a [link to the docs](account.md#welcome-e-mail)", ["https://another-link.be"], False, "",
+     "A line with a link to the docs§link§link§1§link§link§", ["https://another-link.be", "https://docs.hpc.ugent.be/account/#welcome-e-mail"]),
     # link 3 (the same document)
-    ("A line with a [link to the same doc](#welcome-e-mail)", ["another-link.be"], False, "account.md",
-     "A line with a link to the same doc§link§link§1§link§link§", ["another-link.be", "https://docs.hpc.ugent.be/account/#welcome-e-mail"]),
+    ("A line with a [link to the same doc](#welcome-e-mail)", ["https://another-link.be"], False, "account.md",
+     "A line with a link to the same doc§link§link§1§link§link§", ["https://another-link.be", "https://docs.hpc.ugent.be/account/#welcome-e-mail"]),
     # codeblock
     ("```shell", [], True, "", "", []),
     # html syntax 1 (normal syntax)
@@ -28,7 +28,7 @@ from chatbot_parser import replace_markdown_markers
     # html syntax 3 (style)
     ("<p style='text-align: center'>A line with style</p>", [], False, "", "A line with style", []),
     # Bot comment
-    ("<!--INPUT_FOR_BOTSomething about the following table-->", [], False, "", "Something about the following table", []),
+    ("<!--INPUT_FOR_BOT: Something about the following table-->", [], False, "", "Something about the following table", []),
     # non-Bot comment
     ("<!--Something else about the following table-->", [], False, "", "", []),
     # something else with <>
@@ -43,4 +43,4 @@ from chatbot_parser import replace_markdown_markers
     ("`Line` **with** ++slightly++ _less_ *markdown* _++syntax++_", [], True, "", "`Line` **with** ++slightly++ _less_ *markdown* _++syntax++_", [])
 ])
 def test_replace_markdown_markers(input_line, input_linklist, in_code_block, main_title, expected_line, expected_linklist):
-    assert replace_markdown_markers(input_line, input_linklist, in_code_block, main_title) == (expected_line, expected_linklist)
+    assert replace_markdown_markers(input_line, input_linklist, in_code_block, main_title, False) == (expected_line, expected_linklist)

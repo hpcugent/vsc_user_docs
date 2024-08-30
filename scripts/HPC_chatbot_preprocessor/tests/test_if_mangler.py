@@ -21,7 +21,7 @@ def test_if_mangler(input_file, output_file):
     input_file_path = os.path.join("tests", "test_files", "if_mangler_test_files", input_file)
     expected_output_file_path = os.path.join("tests", "test_files", "if_mangler_test_files", output_file)
     actual_output_file_path = os.path.join("if_mangled_files", input_file)
-    mangle_ifs(input_file_path, input_file, {"DESTINATION_DIRECTORY": '.'})
+    mangle_ifs(input_file_path, input_file, {"DESTINATION_DIRECTORY": '.', "VERBOSE": False})
 
     # check every line
     with open(expected_output_file_path, "r") as expected_read_file:

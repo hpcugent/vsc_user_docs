@@ -4,6 +4,8 @@ from urllib import request
 from chatbot_parser import main
 import json
 
+#################################################### IMPORTANT: This test still fails because there are some invalid links in the documentation ####################################################
+
 whitelist = ["mailto:hpc@ugent.be"]
 slow_list = ["https://login.hpc.ugent.be", "https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-0"]
 

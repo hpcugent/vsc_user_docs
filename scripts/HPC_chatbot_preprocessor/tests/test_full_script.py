@@ -11,7 +11,7 @@ from chatbot_parser import main
       "DESTINATION_DIRECTORY": "tests/test_files/ftps/actual",
       "SPLIT_ON_TITLES": False,
       "SPLIT_ON_PARAGRAPHS": True,
-      "MIN_PARAGRAPH_LENGTH": 160,
+      "MIN_PARAGRAPH_LENGTH": 50,
       "MAX_TITLE_DEPTH": 4,
       "INCLUDE_LINKS_IN_PLAINTEXT": False,
       "DEEP_DIRECTORIES": False,
