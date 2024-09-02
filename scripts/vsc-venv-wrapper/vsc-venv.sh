@@ -88,7 +88,7 @@ activate() {
 
   venv_location=$(realpath -m "venvs/venv-${VSC_OS_LOCAL}-${VSC_ARCH_LOCAL}") # full path of venv
 
-  # === Step 0: Warn users if os-arch of current host and loaded module do not match === #
+  # === Warn users if os-arch of current host and loaded module do not match === #
   # use is_loaded_cluster_compatible_with_host
 
   if ! is_loaded_cluster_compatible_with_host; then
@@ -105,7 +105,7 @@ activate() {
     return 1
   fi
 
-  # === Step 1: Warn user if they have modules loaded === #
+  # === Warn user if they have modules loaded === #
 
   loaded_modules=($(echo "$LOADEDMODULES" | tr ':' '\n' | grep -v -E '^(env|cluster)/')) # Remove env and cluster modules
   n_loaded_modules="${#loaded_modules[@]}"
@@ -120,12 +120,12 @@ activate() {
   fi
 
 
-  # === Step 2: Purge Modules === #
+  # === Purge Modules === #
 
   echo_info "Purging currently loaded modules."
   module purge
 
-  # === Step 3: Load Modules if module script present === #
+  # === Load Modules if module script present === #
 
   if [ -n "$modules_file" ]; then # If module script not empty
 
@@ -142,7 +142,7 @@ activate() {
     echo_info "No module file provided. Proceeding without extra modules."
   fi
 
-  # === Step 4: Create Virtual Environment if not yet present === #
+  # === Create Virtual Environment if not yet present === #
 
   if [ "$(which python)" = "/usr/bin/python" ]; then
     echo_warning "System python used. Consider loading a specific Python module through the modules file."
@@ -156,12 +156,12 @@ activate() {
     return 1
   fi
 
-  # === Step 5: Activate Virtual Environment === #
+  # === Activate Virtual Environment === #
 
   echo_info "Activating virtual environment"
   source "$venv_location/bin/activate"
 
-  # === Step 6: Install Requirements === #
+  # === Install Requirements === #
 
   echo_info "Installing requirements from '$requirements_file'"
   if ! pip install -r "$requirements_file"; then # This will finish quickly if the requirements are already installed
