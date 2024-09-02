@@ -36,7 +36,7 @@ load_modules() {
       continue
     fi
 
-    if module load "$line"; then
+    if module load $line; then
       echo_info "  ✔ Module '$line' loaded successfully"
     else
       echo_error "Could not load module '$line'"
