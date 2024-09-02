@@ -129,13 +129,10 @@ activate() {
     for module in "${loaded_modules[@]}"; do
       echo_warning "  $module"
     done
+
+    echo_info "Purging currently loaded modules."
+    module purge
   fi
-
-
-  # === Purge Modules === #
-
-  echo_info "Purging currently loaded modules."
-  module purge
 
   # === Load Modules if module script present === #
 
