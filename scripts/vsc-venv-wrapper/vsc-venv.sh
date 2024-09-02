@@ -142,7 +142,7 @@ activate() {
   # === Step 4: Create Virtual Environment if not yet present === #
 
   if [ "$(which python)" = "/usr/bin/python" ]; then
-    echo_warning "System python used. Consider loading a specific python module through the modules file."
+    echo_warning "System python used. Consider loading a specific Python module through the modules file."
   fi
 
   python_version=$(python --version)
