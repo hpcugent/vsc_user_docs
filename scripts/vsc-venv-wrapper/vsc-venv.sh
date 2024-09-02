@@ -125,11 +125,6 @@ activate() {
     echo_warning "You have $n_loaded_modules loaded modules in the current shell. These modules will be purged."
     echo_warning "If you want to use these modules, please provide a modules file listing the required modules as the second argument."
 
-    echo_warning "Loaded modules:"
-    for module in "${loaded_modules[@]}"; do
-      echo_warning "  $module"
-    done
-
     echo_info "Purging currently loaded modules."
     module purge
   fi
