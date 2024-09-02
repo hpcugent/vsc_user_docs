@@ -212,6 +212,9 @@ activate() {
     deactivate
     return 1
   fi
+
+  echo_info "Requirements installed successfully"
+  echo_info "You can now run your Python scripts"
 }
 
 deactivate_() {
