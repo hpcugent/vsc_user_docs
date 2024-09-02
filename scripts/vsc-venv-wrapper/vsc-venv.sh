@@ -1,7 +1,7 @@
 SCRIPT_NAME=${BASH_SOURCE[0]} # $0 cannot be used as it gives '-bash' when sourced
 
 usage() {
-  echo "Usage: source $SCRIPT_NAME {activate <requirements.txt> [modules.sh] | deactivate}"
+  echo "Usage: source $SCRIPT_NAME {activate <requirements.txt> [modules.txt] | deactivate}"
   echo ""
   echo "Commands:"
   echo "  activate <requirements_file> [modules_file] Activate the environment using the specified requirements file."
