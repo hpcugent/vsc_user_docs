@@ -165,6 +165,17 @@ activate() {
   echo_info "Activating virtual environment"
   source "$venv_location/bin/activate"
 
+  # === Warn user if requirements contain lines without version specifiers === #
+  local version_specifiers="==|>=|<=|!=|<|>|~="
+  local lines_without_versions=$(grep -vE "$version_specifiers" "$requirements_file")
+
+  # Check if the variable is not empty
+  if [ -n "$lines_without_versions" ]; then
+      echo_warning "The following lines do not contain version specifiers:"
+      echo_warning "$lines_without_versions"
+  fi
+
+
   # === Install Requirements === #
 
   echo_info "Installing requirements from '$requirements_file'"
