@@ -15,11 +15,11 @@ while guaranteeing the same module environment.
 A virtual environment can be activated by running the following command:
 
 ```bash
-source ./vsc-venv.sh activate <requirements> [module_file]
+source ./vsc-venv.sh --activate --requirements <requirements> [--modules module_file]
 ```
 
 Here, `requirements` is the path to a file containing the python dependencies to install in the virtual environment.
-An optional module text file can be provided, which lists the modules to load before activating the virtual environment.
+An optional `module_file` can be provided, which lists the modules to load before activating the virtual environment.
 
 Automatically, the modules are loaded and the environment is activated. 
 When running this command for the first time, the dependencies from the requirement file are installed.
@@ -28,7 +28,7 @@ Now, the software can be run and use packages installed in the virtual environme
 To deactivate the virtual environment, run:
 
 ```bash
-source ./vsc-venv.sh deactivate
+source ./vsc-venv.sh --deactivate
 ```
 
 ## Example
@@ -53,7 +53,7 @@ see the [pip documentation](https://pip.pypa.io/en/stable/reference/requirements
 We run the following commands to enter the environment
 
 ```bash
-source ./vsc-venv.sh activate requirements.txt modules.txt
+source ./vsc-venv.sh --activate --requirements requirements.txt --modules modules.txt
 ```
 
 As this creates the virtual environment for the first time, the `venvs` folder is created in the current directory. 
@@ -64,7 +64,7 @@ Now, python 3.12 is loaded and the user can use the `requests` package, along wi
 To deactivate the virtual environment, run:
 
 ```bash
-source ./vsc-venv.sh deactivate
+source ./vsc-venv.sh --deactivate
 ```
 
 ### joltik
@@ -75,7 +75,7 @@ If we want to create a virtual environment for joltik, we can run the following 
 module swap cluster/joltik
 qsub -I
 cd my_project
-source ./vsc-venv.sh activate requirements.txt modules.txt
+source ./vsc-venv.sh --activate --requirements requirements.txt --modules modules.txt
 ```
 
 the venvs folder now contains two folders:
