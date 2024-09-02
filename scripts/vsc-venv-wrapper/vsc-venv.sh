@@ -19,9 +19,9 @@ usage() {
 }
 
 
-echo_info() { echo -e "\e[32m[INFO] $1\e[0m"; }
-echo_warning() { echo -e "\e[33m[WARNING] $1\e[0m"; }
-echo_error() { echo -e "\e[31m[ERROR] $1\e[0m"; }
+echo_info() { echo -e "\e[32m$SCRIPT_NAME: [INFO] $1\e[0m"; }
+echo_warning() { echo -e "\e[33m$SCRIPT_NAME: [WARNING] $1\e[0m"; }
+echo_error() { echo -e "\e[31m$SCRIPT_NAME: [ERROR] $1\e[0m"; }
 
 load_modules() {
   local modules_file lines
