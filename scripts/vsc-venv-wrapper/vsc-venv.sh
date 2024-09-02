@@ -153,16 +153,44 @@ activate() {
 
   # === Create Virtual Environment if not yet present === #
 
+  # Warn user if system python is used
   if [ "$(which python)" = "/usr/bin/python" ]; then
     echo_warning "System python used. Consider loading a specific Python module through the modules file."
   fi
 
-  python_version=$(python --version)
-  echo_info "Using $python_version to create virtual environment at $venv_location"
-  # Will automatically make the venvs folder and venv, does nothing if they already exist
-  if ! python -m venv "$venv_location"; then
-    echo_error "Could not create virtual environment"
-    return 1
+  # Check if venv already exists
+  if [ -f "$venv_location/bin/activate" ]; then
+    # The virtual environment already exists
+    echo_info "Virtual environment already exists at $venv_location"
+
+    # Warn user if a different python module is loaded than the one used to create the virtual environment
+    local current_python venv_python
+    current_python=$(realpath "$(which python)")
+    venv_python=$(realpath -m "$venv_location/bin/python")
+
+    if [ "$current_python" != "$venv_python" ]; then
+      echo_error "The python module used to create the virtual environment is different from the one currently loaded."
+      echo_error "Current python module:  $current_python"
+      echo_error "venv python module:     $venv_python"
+      echo_error "If you changed the python module in $modules_file,"
+      echo_error "please remove the virtual environment that uses the old python with the following command:"
+      echo_error "  $ rm -rf $venv_location"
+      echo_error "After removing the virtual environment, run the activate command again."
+      echo_error "Exiting..."
+      return 1
+    fi
+
+  else
+    # The virtual environment does not exist
+    echo_info "Virtual environment does not exist at $venv_location"
+    python_version=$(python --version)
+    echo_info "Using $python_version to create virtual environment at $venv_location"
+
+    # Will automatically make the venvs folder and venv, does nothing if they already exist
+    if ! python -m venv "$venv_location"; then
+      echo_error "Could not create virtual environment"
+      return 1
+    fi
   fi
 
   # === Activate Virtual Environment === #
