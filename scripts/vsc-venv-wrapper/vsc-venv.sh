@@ -1,5 +1,5 @@
 usage() {
-  echo "Usage: source $SCRIPT_NAME {-a | --activate -r | --requirements <requirements.txt> [-m | --modules <modules.txt>]} | {-d | --deactivate}"
+  echo "Usage: source $SCRIPT_NAME {-a | --activate -r | --requirements <requirements.txt> [-m | --modules <modules.txt>]} | {-d | --deactivate} [-h | --help] [-v | --version]"
   echo ""
   echo "Commands:"
   echo "  -a, --activate          Activate the environment."
@@ -8,6 +8,8 @@ usage() {
   echo ""
   echo "  -d, --deactivate        Deactivate the virtual environment."
   echo ""
+  echo "  -h, --help              Show this help message and exit."
+  echo "  -v, --version           Show the version information and exit."
   echo ""
   echo "Example Usage:"
   echo "  $ source $SCRIPT_NAME --activate --requirements requirements.txt --modules modules.txt"
