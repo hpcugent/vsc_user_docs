@@ -4,7 +4,7 @@ usage() {
   echo "Usage: source $SCRIPT_NAME {activate <requirements.txt> [modules.txt] | deactivate}"
   echo ""
   echo "Commands:"
-  echo "  activate <requirements_file> [modules_file] Activate the environment using the specified requirements file."
+  echo "  activate <requirements.txt> [modules.txt] Activate the environment using the specified requirements file."
   echo "                                              Optionally, provide a text file with a list of modules to load."
   echo ""
   echo "  deactivate                                  Deactivate the virtual environment."
