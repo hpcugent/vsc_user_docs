@@ -25,6 +25,14 @@ Automatically, the modules are loaded and the environment is activated.
 When running this command for the first time, the dependencies from the requirement file are installed.
 
 Now, the software can be run and use packages installed in the virtual environment, along with centrally installed modules.
+
+You can get insights on the current environment using the following commands:
+```
+python --version    # Python version
+pip list            # List of installed Python packages
+module list         # List of loaded modules
+```
+
 To deactivate the virtual environment, run:
 
 ```bash
