@@ -1,20 +1,21 @@
-SCRIPT_NAME=${BASH_SOURCE[0]} # $0 cannot be used as it gives '-bash' when sourced
-
 usage() {
-  echo "Usage: source $SCRIPT_NAME {activate <requirements.txt> [modules.txt] | deactivate}"
+  echo "Usage: source $SCRIPT_NAME {-a | --activate -r | --requirements <requirements.txt> [-m | --modules <modules.txt>]} | {-d | --deactivate}"
   echo ""
   echo "Commands:"
-  echo "  activate <requirements.txt> [modules.txt] Activate the environment using the specified requirements file."
-  echo "                                              Optionally, provide a text file with a list of modules to load."
+  echo "  -a, --activate          Activate the environment."
+  echo "    -r, --requirements    (Required) Specify the requirements file (e.g., requirements.txt)."
+  echo "    -m, --modules         (Optional) Specify a modules file (e.g., modules.txt)."
   echo ""
-  echo "  deactivate                                  Deactivate the virtual environment."
+  echo "  -d, --deactivate        Deactivate the virtual environment."
+  echo ""
   echo ""
   echo "Example Usage:"
-  echo "  $ source $SCRIPT_NAME activate requirements.txt modules.txt"
+  echo "  $ source $SCRIPT_NAME --activate --requirements requirements.txt --modules modules.txt"
   echo "  $ python my_script.py"
-  echo "  $ source $SCRIPT_NAME deactivate"
+  echo "  $ source $SCRIPT_NAME --deactivate"
   return 1
 }
+
 
 echo_info() { echo -e "\e[32m[INFO] $1\e[0m"; }
 echo_warning() { echo -e "\e[33m[WARNING] $1\e[0m"; }
@@ -175,8 +176,22 @@ deactivate_() {
 
 # ============================ Main ============================
 
-case "$1" in
-  activate)    activate "$2" "$3";;
+SCRIPT_NAME=${BASH_SOURCE[0]} # $0 cannot be used as it gives '-bash' when sourced
+
+while [ $# -gt 0 ] ; do
+  case $1 in
+    -a | --activate)      ACTION="activate" ;;
+    -d | --deactivate)    ACTION="deactivate" ;;
+    -r | --requirements)  REQUIREMENTS="$2" ;;
+    -m | --modules)       MODULES="$2" ;;
+    -h | --help)          usage; return 1 ;;
+    -v | --version)       echo "$SCRIPT_NAME v1.0"; return 1;;
+  esac
+  shift
+done
+
+case "$ACTION" in
+  activate)    activate "$REQUIREMENTS" "$MODULES";;
   deactivate)  deactivate_ ;;
   *)           usage ;;
 esac
