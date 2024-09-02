@@ -88,9 +88,13 @@ activate() {
 
   venv_location=$(realpath -m "venvs/venv-${VSC_OS_LOCAL}-${VSC_ARCH_LOCAL}") # full path of venv
 
-  # === Warn users if os-arch of current host and loaded module do not match === #
-  # use is_loaded_cluster_compatible_with_host
+  # === Check if requirements file exists === #
+  if [ ! -f "$requirements_file" ]; then
+    echo_error "Requirements file '$requirements_file' not found"
+    return 1
+  fi
 
+  # === Warn users if os-arch of current host and loaded module do not match === #
   if ! is_loaded_cluster_compatible_with_host; then
     local loaded_cluster="$VSC_INSTITUTE_CLUSTER"
     local host_cluster="$VSC_DEFAULT_CLUSTER_MODULE"
