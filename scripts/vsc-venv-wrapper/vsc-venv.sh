@@ -109,6 +109,14 @@ activate() {
     return 1
   fi
 
+  # === Warn user if they have a virtual environment activated === #
+
+  if [ -n "$VIRTUAL_ENV" ]; then
+    echo_warning "You already have a virtual environment activated."
+    echo_warning "This virtual environment will be deactivated."
+    deactivate_
+  fi
+
   # === Warn user if they have modules loaded === #
 
   loaded_modules=($(echo "$LOADEDMODULES" | tr ':' '\n' | grep -v -E '^(env|cluster)/')) # Remove env and cluster modules
@@ -187,7 +195,7 @@ activate() {
 }
 
 deactivate_() {
-  echo_info "Deactivating..."
+  echo_info "Deactivating virtual environment at $VIRTUAL_ENV"
   deactivate # For now, just use the python `deactivate`
 }
 
