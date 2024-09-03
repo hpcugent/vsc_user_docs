@@ -38,15 +38,15 @@ echo_error() { echo -e "\e[31m$0: [ERROR] $1\e[0m"; }
 main() {
   local github_pat_file="$1"
 
-  gh auth login --with-token < "$github_pat_file"
-
-  # Check if the repo directory already exists. If so, ask user to delete it.
-  if [ -d "$REPO_PATH" ]; then
-      echo_error "Directory $REPO_PATH already exists."
-      echo_error "Please remove it manually:"
-      echo_error "  $ rm -rf $REPO_PATH"
+  # Check if the GitHub Personal Access Token file exists
+  if [ ! -f "$github_pat_file" ]; then
+      echo_error "GitHub Personal Access Token file not found."
+      echo_error "Please provide the path to the file containing the GitHub Personal Access Token."
+      echo_error "Usage: $0 <github_pat_file>"
       exit 1
   fi
+
+  gh auth login --with-token < "$github_pat_file"
 
   # Clone the repository and create a new branch
   git clone $REPO_URL "$REPO_PATH"
