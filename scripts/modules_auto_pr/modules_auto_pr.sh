@@ -74,8 +74,8 @@ git add .
 git commit -m "$COMMIT_MESSAGE"
 
 # Calculate the number of added and removed modules
-N_ADDED_MODULES=$(git show --name-status HEAD | grep -c "^A.*\.md$")
-N_REMOVED_MODULES=$(git show --name-status HEAD | grep -c "^D.*\.md$")
+N_ADDED_MODULES=$(git show --name-status HEAD | grep -e "^A.*\.md$" | wc -l)
+N_REMOVED_MODULES=$(git show --name-status HEAD | grep -e "^D.*\.md$" | wc -l)
 
 # Push the new branch to GitHub
 echo_info "Pushing branch to GitHub..."
