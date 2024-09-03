@@ -47,17 +47,22 @@ cd "$REPO_PATH" || { echo_error "Failed to cd into $REPO_PATH"; exit 1; }
 echo_info "Checking out base branch $BASE_BRANCH..."
 git checkout -b "$BRANCH_NAME" || { echo_error "Failed to create branch $BRANCH_NAME"; exit 1; }
 
-# Create a new file
-echo "This is a new file. The date is $DATE" > $FILE_NAME
+# run available_software.py
+cd scripts/available_software/  || { echo_error "Failed to cd into scripts/available_software/"; exit 1; }
+python -m venv venv             || { echo_error "Failed to create virtual environment"; exit 1; }
+source venv/bin/activate        || { echo_error "Failed to activate virtual environment"; exit 1; }
+pip install requests            || { echo_error "Failed to install requests"; exit 1; }
+python available_software.py    || { echo_error "Failed to run available_software.py"; exit 1; }
 
 # Add and commit the new file
-echo_info "Adding and committing the new file..."
-git add $FILE_NAME
-git commit -m "$COMMIT_MESSAGE"
+echo_info "Adding and committing the new files..."
+cd "$REPO_PATH"                 || { echo_error "Failed to cd into $REPO_PATH"; exit 1; }
+git add .                       || { echo_error "Failed to add files"; exit 1; }
+git commit -m "$COMMIT_MESSAGE" || { echo_error "Failed to commit changes"; exit 1; }
 
 # Push the new branch to GitHub
 echo_info "Pushing branch to GitHub..."
-git push -u origin "$BRANCH_NAME"
+git push -u origin "$BRANCH_NAME" || { echo_error "Failed to push branch $BRANCH_NAME"; exit 1; }
 
 # Create a pull request using GitHub CLI
 echo_info "Creating a pull request..."
