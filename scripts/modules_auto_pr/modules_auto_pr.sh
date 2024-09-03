@@ -7,9 +7,8 @@ set -x  # Print commands and their arguments as they are executed
 #                                            VARIABLES                                             #
 ####################################################################################################
 
-# Variables (replace these with your actual values)
 DATE=$(date +"%Y-%m-%d_%Hh%M")
-REPO_URL="git@github.com:lbarraga/vsc_user_docs.git"
+REPO_URL="git@github.com:hpcugent/vsc_user_docs.git"
 BASE_BRANCH="main"
 BRANCH_NAME="auto_update_modules_$DATE"
 REPO_NAME="vsc_user_docs" # script available_modules.py requires this to be the name. Do not change.
