@@ -32,6 +32,15 @@ Initially there will be only one RHEL 9 login node. As needed a second one will 
 
 When the default cluster (doduo) migrates to RHEL 9 the corresponding login nodes will also become default (when you do `ssh vsc4xxxx@login.hpc.ugent.be`). When they are nog longer needed the old RHEL 8 login nodes will be shut down.
 
+### Limits
+
+To encourage only using the login nodes as an entry portal to the HPC-UGent infrastructure, user limits will be enforced on the RHEL9 login nodes.
+
+This includes (per user):
+* max. of 2 CPU's in use;
+* max. 8 GB of memory in use;
+
+For more intensive tasks you can use the [interative and debug clusters](https://docs.hpc.ugent.be/Linux/interactive_debug/) through the [web portal](https://docs.hpc.ugent.be/Linux/web_portal/).
 
 ## Impact on central software stack
 
