@@ -40,7 +40,7 @@ This includes (per user):
 * max. of 2 CPU's in use;
 * max. 8 GB of memory in use;
 
-For more intensive tasks you can use the [interative and debug clusters](https://docs.hpc.ugent.be/Linux/interactive_debug/) through the [web portal](https://docs.hpc.ugent.be/Linux/web_portal/).
+For more intensive tasks you can use the [interative and debug clusters](https://docs.hpc.ugent.be/interactive_debug/) through the [web portal](https://docs.hpc.ugent.be/web_portal/).
 
 ## Impact on central software stack
 
@@ -81,7 +81,7 @@ for example:
 
     The HPC-UGent Tier-2 clusters running RHEL 8 will be migrated to RHEL 9.
 
-    For more information, see https://docs.hpc.ugent.be/Linux/migration_to_rhel9/
+    For more information, see https://docs.hpc.ugent.be/migration_to_rhel9/
 
     If you have any questions, please contact hpc@ugent.be .
 
