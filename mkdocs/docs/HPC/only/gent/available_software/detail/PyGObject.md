@@ -14,11 +14,12 @@ The overview below shows which PyGObject installations are available per HPC-UGe
 To start using PyGObject, load one of these modules using a `module load` command like:
 
 ```shell
-module load PyGObject/3.42.1-GCCcore-11.3.0
+module load PyGObject/3.46.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:07:41 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyGObject/3.42.1-GCCcore-11.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyGObject/3.46.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|PyGObject/3.42.1-GCCcore-11.3.0|x|x|x|x|x|-|x|

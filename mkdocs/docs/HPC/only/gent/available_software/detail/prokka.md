@@ -17,9 +17,9 @@ To start using prokka, load one of these modules using a `module load` command l
 module load prokka/1.14.5-gompi-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:07:41 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|prokka/1.14.5-gompi-2020b|-|x|x|x|x|x|
-|prokka/1.14.5-gompi-2019b|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|prokka/1.14.5-gompi-2020b|-|x|x|x|x|-|x|
+|prokka/1.14.5-gompi-2019b|-|x|x|-|x|-|x|

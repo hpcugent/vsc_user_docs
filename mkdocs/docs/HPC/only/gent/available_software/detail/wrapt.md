@@ -17,10 +17,10 @@ To start using wrapt, load one of these modules using a `module load` command li
 module load wrapt/1.15.0-gfbf-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:07:41 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|wrapt/1.15.0-gfbf-2023a|x|x|x|x|x|x|
-|wrapt/1.15.0-foss-2022b|x|x|x|x|x|x|
-|wrapt/1.15.0-foss-2022a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|wrapt/1.15.0-gfbf-2023a|x|x|x|x|x|x|x|
+|wrapt/1.15.0-foss-2022b|x|x|x|x|x|-|x|
+|wrapt/1.15.0-foss-2022a|x|x|x|x|x|-|x|

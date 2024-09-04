@@ -17,9 +17,9 @@ To start using InterProScan, load one of these modules using a `module load` com
 module load InterProScan/5.62-94.0-foss-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:07:41 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|InterProScan/5.62-94.0-foss-2022b|x|x|x|x|x|x|
-|InterProScan/5.52-86.0-GCCcore-10.3.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|InterProScan/5.62-94.0-foss-2022b|x|x|x|x|x|-|x|
+|InterProScan/5.52-86.0-GCCcore-10.3.0|-|x|x|-|x|-|x|

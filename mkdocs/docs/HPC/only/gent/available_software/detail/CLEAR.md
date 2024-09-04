@@ -17,8 +17,8 @@ To start using CLEAR, load one of these modules using a `module load` command li
 module load CLEAR/20210117-foss-2021b-Python-2.7.18
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:07:41 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CLEAR/20210117-foss-2021b-Python-2.7.18|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CLEAR/20210117-foss-2021b-Python-2.7.18|x|x|x|x|x|-|x|

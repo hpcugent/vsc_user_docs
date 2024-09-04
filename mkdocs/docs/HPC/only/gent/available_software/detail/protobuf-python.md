@@ -17,15 +17,15 @@ To start using protobuf-python, load one of these modules using a `module load` 
 module load protobuf-python/4.24.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:07:41 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|protobuf-python/4.24.0-GCCcore-12.3.0|x|x|x|x|x|x|
-|protobuf-python/4.23.0-GCCcore-12.2.0|x|x|x|x|x|x|
-|protobuf-python/3.19.4-GCCcore-11.3.0|x|x|x|x|x|x|
-|protobuf-python/3.17.3-GCCcore-11.2.0|x|x|x|x|x|x|
-|protobuf-python/3.17.3-GCCcore-10.3.0|x|x|x|x|x|x|
-|protobuf-python/3.14.0-GCCcore-10.2.0|x|x|x|x|x|x|
-|protobuf-python/3.13.0-foss-2020a-Python-3.8.2|-|x|x|-|x|x|
-|protobuf-python/3.10.0-foss-2019b-Python-3.7.4|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|protobuf-python/4.24.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|protobuf-python/4.23.0-GCCcore-12.2.0|x|x|x|x|x|-|x|
+|protobuf-python/3.19.4-GCCcore-11.3.0|x|x|x|x|x|x|x|
+|protobuf-python/3.17.3-GCCcore-11.2.0|x|x|x|x|x|-|x|
+|protobuf-python/3.17.3-GCCcore-10.3.0|x|x|x|x|x|-|x|
+|protobuf-python/3.14.0-GCCcore-10.2.0|x|x|x|x|x|-|x|
+|protobuf-python/3.13.0-foss-2020a-Python-3.8.2|-|x|x|-|x|-|x|
+|protobuf-python/3.10.0-foss-2019b-Python-3.7.4|-|x|x|-|x|-|x|

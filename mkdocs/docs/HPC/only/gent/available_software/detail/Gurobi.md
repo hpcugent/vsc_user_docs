@@ -17,12 +17,12 @@ To start using Gurobi, load one of these modules using a `module load` command l
 module load Gurobi/11.0.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:07:41 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Gurobi/11.0.0-GCCcore-12.3.0|x|x|x|x|x|x|
-|Gurobi/9.5.2-GCCcore-11.3.0|x|x|x|x|x|x|
-|Gurobi/9.5.0-GCCcore-11.2.0|x|x|x|x|x|x|
-|Gurobi/9.1.1-GCCcore-10.2.0|-|x|x|x|x|x|
-|Gurobi/9.1.0|-|x|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Gurobi/11.0.0-GCCcore-12.3.0|x|x|x|x|x|-|x|
+|Gurobi/9.5.2-GCCcore-11.3.0|x|x|x|x|x|-|x|
+|Gurobi/9.5.0-GCCcore-11.2.0|x|x|x|x|x|-|x|
+|Gurobi/9.1.1-GCCcore-10.2.0|-|x|x|x|x|-|x|
+|Gurobi/9.1.0|-|x|x|-|x|-|-|

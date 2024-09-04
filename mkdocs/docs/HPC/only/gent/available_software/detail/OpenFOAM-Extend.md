@@ -17,10 +17,10 @@ To start using OpenFOAM-Extend, load one of these modules using a `module load` 
 module load OpenFOAM-Extend/4.1-20200408-foss-2019b-Python-2.7.16
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:07:41 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenFOAM-Extend/4.1-20200408-foss-2019b-Python-2.7.16|-|x|x|-|x|x|
-|OpenFOAM-Extend/4.1-20191120-intel-2019b-Python-2.7.16|-|x|x|-|x|-|
-|OpenFOAM-Extend/4.0-intel-2019b-Python-2.7.16|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OpenFOAM-Extend/4.1-20200408-foss-2019b-Python-2.7.16|-|x|x|-|x|-|x|
+|OpenFOAM-Extend/4.1-20191120-intel-2019b-Python-2.7.16|-|x|x|-|x|-|-|
+|OpenFOAM-Extend/4.0-intel-2019b-Python-2.7.16|-|x|x|-|x|-|x|

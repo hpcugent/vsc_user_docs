@@ -17,10 +17,10 @@ To start using Boost.MPI, load one of these modules using a `module load` comman
 module load Boost.MPI/1.81.0-gompi-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:07:41 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Boost.MPI/1.81.0-gompi-2022b|x|x|x|x|x|x|
-|Boost.MPI/1.79.0-gompi-2022a|-|x|x|x|x|x|
-|Boost.MPI/1.77.0-gompi-2021b|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Boost.MPI/1.81.0-gompi-2022b|x|x|x|x|x|-|x|
+|Boost.MPI/1.79.0-gompi-2022a|-|x|x|x|x|-|x|
+|Boost.MPI/1.77.0-gompi-2021b|x|x|x|-|x|-|x|

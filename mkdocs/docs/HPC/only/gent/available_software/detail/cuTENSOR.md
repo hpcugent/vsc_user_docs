@@ -14,11 +14,12 @@ The overview below shows which cuTENSOR installations are available per HPC-UGen
 To start using cuTENSOR, load one of these modules using a `module load` command like:
 
 ```shell
-module load cuTENSOR/1.2.2.5-CUDA-11.1.1
+module load cuTENSOR/2.0.1.2-CUDA-12.1.1
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:07:41 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cuTENSOR/1.2.2.5-CUDA-11.1.1|-|-|-|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|cuTENSOR/2.0.1.2-CUDA-12.1.1|x|-|x|-|x|-|-|
+|cuTENSOR/1.2.2.5-CUDA-11.1.1|-|-|-|-|x|-|-|

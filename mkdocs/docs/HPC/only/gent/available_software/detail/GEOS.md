@@ -14,20 +14,21 @@ The overview below shows which GEOS installations are available per HPC-UGent Ti
 To start using GEOS, load one of these modules using a `module load` command like:
 
 ```shell
-module load GEOS/3.12.0-GCC-12.3.0
+module load GEOS/3.12.1-GCC-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:07:41 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GEOS/3.12.0-GCC-12.3.0|x|x|x|x|x|x|
-|GEOS/3.11.1-GCC-12.2.0|x|x|x|x|x|x|
-|GEOS/3.10.3-GCC-11.3.0|x|x|x|x|x|x|
-|GEOS/3.9.1-iccifort-2020.4.304|-|x|x|x|x|x|
-|GEOS/3.9.1-GCC-11.2.0|x|x|x|x|x|x|
-|GEOS/3.9.1-GCC-10.3.0|x|x|x|x|x|x|
-|GEOS/3.9.1-GCC-10.2.0|-|x|x|x|x|x|
-|GEOS/3.8.1-GCC-9.3.0-Python-3.8.2|-|x|x|-|x|x|
-|GEOS/3.8.0-iccifort-2019.5.281-Python-3.7.4|-|x|x|-|x|x|
-|GEOS/3.8.0-GCC-8.3.0-Python-3.7.4|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GEOS/3.12.1-GCC-13.2.0|x|x|x|x|x|x|x|
+|GEOS/3.12.0-GCC-12.3.0|x|x|x|x|x|x|x|
+|GEOS/3.11.1-GCC-12.2.0|x|x|x|x|x|-|x|
+|GEOS/3.10.3-GCC-11.3.0|x|x|x|x|x|-|x|
+|GEOS/3.9.1-iccifort-2020.4.304|-|x|x|x|x|-|x|
+|GEOS/3.9.1-GCC-11.2.0|x|x|x|x|x|-|x|
+|GEOS/3.9.1-GCC-10.3.0|x|x|x|x|x|-|x|
+|GEOS/3.9.1-GCC-10.2.0|-|x|x|x|x|-|x|
+|GEOS/3.8.1-GCC-9.3.0-Python-3.8.2|-|x|x|-|x|-|x|
+|GEOS/3.8.0-iccifort-2019.5.281-Python-3.7.4|-|x|x|-|x|-|x|
+|GEOS/3.8.0-GCC-8.3.0-Python-3.7.4|-|x|x|-|x|-|x|

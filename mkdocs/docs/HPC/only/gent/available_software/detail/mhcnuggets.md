@@ -17,9 +17,9 @@ To start using mhcnuggets, load one of these modules using a `module load` comma
 module load mhcnuggets/2.3-fosscuda-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:07:41 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mhcnuggets/2.3-fosscuda-2020b|-|-|-|-|x|-|
-|mhcnuggets/2.3-foss-2020b|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|mhcnuggets/2.3-fosscuda-2020b|-|-|-|-|x|-|-|
+|mhcnuggets/2.3-foss-2020b|-|x|x|x|x|-|x|

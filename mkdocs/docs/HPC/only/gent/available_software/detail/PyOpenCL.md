@@ -17,12 +17,12 @@ To start using PyOpenCL, load one of these modules using a `module load` command
 module load PyOpenCL/2023.1.4-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:07:41 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyOpenCL/2023.1.4-foss-2023a|x|x|x|x|x|x|
-|PyOpenCL/2023.1.4-foss-2022a-CUDA-11.7.0|x|-|-|-|x|-|
-|PyOpenCL/2023.1.4-foss-2022a|x|x|x|x|x|x|
-|PyOpenCL/2021.2.13-foss-2021b-CUDA-11.4.1|x|-|-|-|x|-|
-|PyOpenCL/2021.1.2-foss-2020b|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyOpenCL/2023.1.4-foss-2023a|x|x|x|x|x|-|x|
+|PyOpenCL/2023.1.4-foss-2022a-CUDA-11.7.0|x|-|-|-|x|-|-|
+|PyOpenCL/2023.1.4-foss-2022a|x|x|x|x|x|-|x|
+|PyOpenCL/2021.2.13-foss-2021b-CUDA-11.4.1|x|-|-|-|x|-|-|
+|PyOpenCL/2021.1.2-foss-2020b|-|x|x|x|x|-|x|

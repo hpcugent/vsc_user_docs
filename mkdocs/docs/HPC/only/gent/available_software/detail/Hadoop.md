@@ -17,10 +17,10 @@ To start using Hadoop, load one of these modules using a `module load` command l
 module load Hadoop/2.10.0-GCCcore-10.2.0-native-Java-1.8
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:07:41 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Hadoop/2.10.0-GCCcore-10.2.0-native-Java-1.8|-|-|x|-|x|-|
-|Hadoop/2.10.0-GCCcore-10.2.0-native|-|x|-|-|-|-|
-|Hadoop/2.10.0-GCCcore-8.3.0-native|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Hadoop/2.10.0-GCCcore-10.2.0-native-Java-1.8|-|-|x|-|x|-|-|
+|Hadoop/2.10.0-GCCcore-10.2.0-native|-|x|-|-|-|-|-|
+|Hadoop/2.10.0-GCCcore-8.3.0-native|-|x|x|-|x|-|x|

@@ -17,13 +17,13 @@ To start using flatbuffers-python, load one of these modules using a `module loa
 module load flatbuffers-python/23.5.26-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:07:41 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|flatbuffers-python/23.5.26-GCCcore-12.3.0|x|x|x|x|x|x|
-|flatbuffers-python/23.1.4-GCCcore-12.2.0|x|x|x|x|x|x|
-|flatbuffers-python/2.0-GCCcore-11.3.0|x|x|x|x|x|x|
-|flatbuffers-python/2.0-GCCcore-11.2.0|x|x|x|x|x|x|
-|flatbuffers-python/2.0-GCCcore-10.3.0|x|x|x|x|x|x|
-|flatbuffers-python/1.12-GCCcore-10.2.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|flatbuffers-python/23.5.26-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|flatbuffers-python/23.1.4-GCCcore-12.2.0|x|x|x|x|x|-|x|
+|flatbuffers-python/2.0-GCCcore-11.3.0|x|x|x|x|x|x|x|
+|flatbuffers-python/2.0-GCCcore-11.2.0|x|x|x|x|x|-|x|
+|flatbuffers-python/2.0-GCCcore-10.3.0|x|x|x|x|x|-|x|
+|flatbuffers-python/1.12-GCCcore-10.2.0|x|x|x|x|x|-|x|

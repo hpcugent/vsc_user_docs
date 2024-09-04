@@ -17,8 +17,8 @@ To start using Sentence-Transformers, load one of these modules using a `module 
 module load Sentence-Transformers/2.2.2-foss-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:07:41 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Sentence-Transformers/2.2.2-foss-2022b|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Sentence-Transformers/2.2.2-foss-2022b|x|x|x|x|x|-|x|

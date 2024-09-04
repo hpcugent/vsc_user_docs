@@ -14,14 +14,15 @@ The overview below shows which FFTW.MPI installations are available per HPC-UGen
 To start using FFTW.MPI, load one of these modules using a `module load` command like:
 
 ```shell
-module load FFTW.MPI/3.3.10-gompi-2023b
+module load FFTW.MPI/3.3.10-gompi-2024a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:07:41 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FFTW.MPI/3.3.10-gompi-2023b|x|x|x|x|x|x|
-|FFTW.MPI/3.3.10-gompi-2023a|x|x|x|x|x|x|
-|FFTW.MPI/3.3.10-gompi-2022b|x|x|x|x|x|x|
-|FFTW.MPI/3.3.10-gompi-2022a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FFTW.MPI/3.3.10-gompi-2024a|x|x|x|x|x|x|x|
+|FFTW.MPI/3.3.10-gompi-2023b|x|x|x|x|x|x|x|
+|FFTW.MPI/3.3.10-gompi-2023a|x|x|x|x|x|x|x|
+|FFTW.MPI/3.3.10-gompi-2022b|x|x|x|x|x|-|x|
+|FFTW.MPI/3.3.10-gompi-2022a|x|x|x|x|x|x|x|
