@@ -10,8 +10,9 @@ set -u  # Treat unset variables as an error when substituting
 
 TIMESTAMP=$(date +"%Y-%m-%d_%H-%M")
 HUMAN_TIMESTAMP=$(date "+%-d %B %Y, %H:%M")
+FORK_USER="lbarraga"
+FORK_URL="git@github.com:$FORK_USER/vsc_user_docs" # The fork on which the script will run and create the PR from
 REPO_URL="git@github.com:hpcugent/vsc_user_docs" # The repository for which the script will generate the PR
-FORK_URL="git@github.com:lbarraga/vsc_user_docs" # The fork on which the script will run and create the PR from
 BASE_BRANCH="main"
 BRANCH_NAME="auto_update_modules_$TIMESTAMP"
 REPO_NAME="vsc_user_docs" # script available_modules.py requires this to be the name. Do not change.
@@ -59,7 +60,7 @@ main() {
   gh auth login --with-token < "$github_pat_file"
 
   # Clone the repository and create a new branch
-  git clone $FORK_URL "$REPO_PATH"
+  git clone $REPO_URL "$REPO_PATH"
   cd "$REPO_PATH"
   git checkout -b "$BRANCH_NAME"
 
@@ -89,7 +90,7 @@ main() {
     --title "$PR_TITLE" \
     --body  "$(make_pr_body "$N_ADDED_MODULES" "$N_REMOVED_MODULES")" \
     --base  "$BASE_BRANCH" \
-    --head  "$BRANCH_NAME" \
+    --head  "$FORK_USER:$BRANCH_NAME" \
 
   # Clean up
   rm -rf "$REPO_PATH"
