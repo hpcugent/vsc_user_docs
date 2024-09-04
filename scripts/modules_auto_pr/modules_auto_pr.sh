@@ -9,13 +9,14 @@ set -u  # Treat unset variables as an error when substituting
 ####################################################################################################
 
 TIMESTAMP=$(date +"%Y-%m-%d_%H-%M")
+HUMAN_TIMESTAMP=$(date "+%-d %B %Y, %H:%M")
 REPO_URL="git@github.com:hpcugent/vsc_user_docs.git"
 BASE_BRANCH="main"
 BRANCH_NAME="auto_update_modules_$TIMESTAMP"
 REPO_NAME="vsc_user_docs" # script available_modules.py requires this to be the name. Do not change.
 REPO_PATH="/tmp/$VSC_USER/modules_auto_pr_script_$TIMESTAMP/$REPO_NAME"
-COMMIT_MESSAGE="Update Modules"
-PR_TITLE="Auto Update Modules"
+COMMIT_MESSAGE="Update Modules [$HUMAN_TIMESTAMP]"
+PR_TITLE="Auto Update Modules [$HUMAN_TIMESTAMP]"
 
 make_pr_body() {
   local n_added_modules="$1"
