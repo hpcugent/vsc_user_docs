@@ -17,14 +17,14 @@ To start using SPAdes, load one of these modules using a `module load` command l
 module load SPAdes/3.15.5-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 15:51:42 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SPAdes/3.15.5-GCC-11.3.0|x|x|x|x|x|x|
-|SPAdes/3.15.4-GCC-12.3.0|x|x|x|x|x|x|
-|SPAdes/3.15.4-GCC-12.2.0|x|x|x|x|x|x|
-|SPAdes/3.15.3-GCC-11.2.0|x|x|x|-|x|x|
-|SPAdes/3.15.2-GCC-10.2.0-Python-2.7.18|-|x|x|x|x|x|
-|SPAdes/3.15.2-GCC-10.2.0|-|x|x|x|x|x|
-|SPAdes/3.14.1-GCC-9.3.0-Python-3.8.2|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SPAdes/3.15.5-GCC-11.3.0|x|x|x|x|x|-|x|
+|SPAdes/3.15.4-GCC-12.3.0|x|x|x|x|x|x|x|
+|SPAdes/3.15.4-GCC-12.2.0|x|x|x|x|x|-|x|
+|SPAdes/3.15.3-GCC-11.2.0|x|x|x|-|x|-|x|
+|SPAdes/3.15.2-GCC-10.2.0-Python-2.7.18|-|x|x|x|x|-|x|
+|SPAdes/3.15.2-GCC-10.2.0|-|x|x|x|x|-|x|
+|SPAdes/3.14.1-GCC-9.3.0-Python-3.8.2|-|x|x|-|x|-|x|

@@ -17,8 +17,8 @@ To start using libgpuarray, load one of these modules using a `module load` comm
 module load libgpuarray/0.7.6-fosscuda-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 15:51:42 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libgpuarray/0.7.6-fosscuda-2020b|x|-|-|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libgpuarray/0.7.6-fosscuda-2020b|x|-|-|-|x|-|-|

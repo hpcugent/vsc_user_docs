@@ -17,8 +17,8 @@ To start using SeuratWrappers, load one of these modules using a `module load` c
 module load SeuratWrappers/20210528-foss-2020b-R-4.0.3
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 15:51:42 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SeuratWrappers/20210528-foss-2020b-R-4.0.3|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SeuratWrappers/20210528-foss-2020b-R-4.0.3|-|x|x|x|x|-|x|

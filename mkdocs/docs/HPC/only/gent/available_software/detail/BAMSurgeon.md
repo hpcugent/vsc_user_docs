@@ -17,8 +17,8 @@ To start using BAMSurgeon, load one of these modules using a `module load` comma
 module load BAMSurgeon/1.2-GCC-8.3.0-Python-2.7.16
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 15:51:42 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BAMSurgeon/1.2-GCC-8.3.0-Python-2.7.16|-|x|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BAMSurgeon/1.2-GCC-8.3.0-Python-2.7.16|-|x|x|-|x|-|-|

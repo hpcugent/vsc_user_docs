@@ -14,12 +14,13 @@ The overview below shows which NCO installations are available per HPC-UGent Tie
 To start using NCO, load one of these modules using a `module load` command like:
 
 ```shell
-module load NCO/5.0.6-intel-2019b
+module load NCO/5.1.9-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 15:51:42 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NCO/5.0.6-intel-2019b|-|x|x|-|x|x|
-|NCO/5.0.1-foss-2021a|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NCO/5.1.9-foss-2023a|x|x|x|x|x|x|x|
+|NCO/5.0.6-intel-2019b|-|x|x|-|x|-|x|
+|NCO/5.0.1-foss-2021a|-|x|x|-|x|-|x|

@@ -17,10 +17,10 @@ To start using slepc4py, load one of these modules using a `module load` command
 module load slepc4py/3.17.2-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 15:51:42 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|slepc4py/3.17.2-foss-2022a|x|x|x|x|x|x|
-|slepc4py/3.15.1-foss-2021a|-|x|x|-|x|x|
-|slepc4py/3.12.0-foss-2019b-Python-3.7.4|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|slepc4py/3.17.2-foss-2022a|x|x|x|x|x|-|x|
+|slepc4py/3.15.1-foss-2021a|-|x|x|-|x|-|x|
+|slepc4py/3.12.0-foss-2019b-Python-3.7.4|-|x|x|-|x|-|x|

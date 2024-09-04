@@ -14,11 +14,12 @@ The overview below shows which qnorm installations are available per HPC-UGent T
 To start using qnorm, load one of these modules using a `module load` command like:
 
 ```shell
-module load qnorm/0.8.1-foss-2022a
+module load qnorm/0.8.1-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 15:51:42 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|qnorm/0.8.1-foss-2022a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|qnorm/0.8.1-foss-2023a|x|x|x|x|x|x|x|
+|qnorm/0.8.1-foss-2022a|x|x|x|x|x|-|x|

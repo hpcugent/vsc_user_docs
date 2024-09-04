@@ -17,8 +17,8 @@ To start using MyCC, load one of these modules using a `module load` command lik
 module load MyCC/2017-03-01-intel-2019b-Python-2.7.16
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 15:51:42 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MyCC/2017-03-01-intel-2019b-Python-2.7.16|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MyCC/2017-03-01-intel-2019b-Python-2.7.16|-|x|x|-|x|-|x|

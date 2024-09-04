@@ -17,10 +17,11 @@ To start using GMAP-GSNAP, load one of these modules using a `module load` comma
 module load GMAP-GSNAP/2023-04-20-GCC-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 15:51:42 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GMAP-GSNAP/2023-04-20-GCC-12.2.0|x|x|x|x|x|x|
-|GMAP-GSNAP/2023-02-17-GCC-11.3.0|x|x|x|x|x|x|
-|GMAP-GSNAP/2019-09-12-GCC-8.3.0|-|x|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GMAP-GSNAP/2023-04-20-GCC-12.2.0|x|x|x|x|x|-|x|
+|GMAP-GSNAP/2023-02-17-GCC-11.3.0|x|x|x|x|x|-|x|
+|GMAP-GSNAP/2021-12-17-GCC-11.2.0|x|x|x|x|x|-|x|
+|GMAP-GSNAP/2019-09-12-GCC-8.3.0|-|x|x|-|x|-|-|

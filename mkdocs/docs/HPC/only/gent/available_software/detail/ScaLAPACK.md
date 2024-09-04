@@ -14,22 +14,23 @@ The overview below shows which ScaLAPACK installations are available per HPC-UGe
 To start using ScaLAPACK, load one of these modules using a `module load` command like:
 
 ```shell
-module load ScaLAPACK/2.2.0-gompi-2023b-fb
+module load ScaLAPACK/2.2.0-gompi-2024a-fb
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 15:51:42 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ScaLAPACK/2.2.0-gompi-2023b-fb|x|x|x|x|x|x|
-|ScaLAPACK/2.2.0-gompi-2023a-fb|x|x|x|x|x|x|
-|ScaLAPACK/2.2.0-gompi-2022b-fb|x|x|x|x|x|x|
-|ScaLAPACK/2.2.0-gompi-2022a-fb|x|x|x|x|x|x|
-|ScaLAPACK/2.1.0-iimpi-2020b-bf|-|x|-|-|-|-|
-|ScaLAPACK/2.1.0-gompic-2020b|x|-|-|-|x|-|
-|ScaLAPACK/2.1.0-gompi-2021b-fb|x|x|x|x|x|x|
-|ScaLAPACK/2.1.0-gompi-2021a-fb|x|x|x|x|x|x|
-|ScaLAPACK/2.1.0-gompi-2020b-bf|-|x|-|-|-|-|
-|ScaLAPACK/2.1.0-gompi-2020b|x|x|x|x|x|x|
-|ScaLAPACK/2.1.0-gompi-2020a|-|x|x|-|x|x|
-|ScaLAPACK/2.0.2-gompi-2019b|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ScaLAPACK/2.2.0-gompi-2024a-fb|x|x|x|x|x|x|x|
+|ScaLAPACK/2.2.0-gompi-2023b-fb|x|x|x|x|x|x|x|
+|ScaLAPACK/2.2.0-gompi-2023a-fb|x|x|x|x|x|x|x|
+|ScaLAPACK/2.2.0-gompi-2022b-fb|x|x|x|x|x|-|x|
+|ScaLAPACK/2.2.0-gompi-2022a-fb|x|x|x|x|x|x|x|
+|ScaLAPACK/2.1.0-iimpi-2020b-bf|-|x|-|-|-|-|-|
+|ScaLAPACK/2.1.0-gompic-2020b|x|-|-|-|x|-|-|
+|ScaLAPACK/2.1.0-gompi-2021b-fb|x|x|x|x|x|-|x|
+|ScaLAPACK/2.1.0-gompi-2021a-fb|x|x|x|x|x|-|x|
+|ScaLAPACK/2.1.0-gompi-2020b-bf|-|x|-|-|-|-|-|
+|ScaLAPACK/2.1.0-gompi-2020b|x|x|x|x|x|-|x|
+|ScaLAPACK/2.1.0-gompi-2020a|-|x|x|-|x|-|x|
+|ScaLAPACK/2.0.2-gompi-2019b|x|x|x|-|x|-|x|

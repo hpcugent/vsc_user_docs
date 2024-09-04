@@ -14,11 +14,12 @@ The overview below shows which PyGEOS installations are available per HPC-UGent 
 To start using PyGEOS, load one of these modules using a `module load` command like:
 
 ```shell
-module load PyGEOS/0.8-foss-2020a-Python-3.8.2
+module load PyGEOS/0.14-gfbf-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 15:51:42 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyGEOS/0.8-foss-2020a-Python-3.8.2|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyGEOS/0.14-gfbf-2023a|x|x|x|x|x|x|x|
+|PyGEOS/0.8-foss-2020a-Python-3.8.2|-|x|x|-|x|-|x|

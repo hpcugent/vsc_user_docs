@@ -14,11 +14,12 @@ The overview below shows which librosa installations are available per HPC-UGent
 To start using librosa, load one of these modules using a `module load` command like:
 
 ```shell
-module load librosa/0.7.2-foss-2019b-Python-3.7.4
+module load librosa/0.10.1-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 15:51:42 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|librosa/0.7.2-foss-2019b-Python-3.7.4|-|-|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|librosa/0.10.1-foss-2023a|x|x|x|x|x|x|x|
+|librosa/0.7.2-foss-2019b-Python-3.7.4|-|-|x|-|x|-|x|

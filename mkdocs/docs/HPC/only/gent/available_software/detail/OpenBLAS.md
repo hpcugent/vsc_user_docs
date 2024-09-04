@@ -14,19 +14,20 @@ The overview below shows which OpenBLAS installations are available per HPC-UGen
 To start using OpenBLAS, load one of these modules using a `module load` command like:
 
 ```shell
-module load OpenBLAS/0.3.24-GCC-13.2.0
+module load OpenBLAS/0.3.27-GCC-13.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 15:51:42 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenBLAS/0.3.24-GCC-13.2.0|x|x|x|x|x|x|
-|OpenBLAS/0.3.23-GCC-12.3.0|x|x|x|x|x|x|
-|OpenBLAS/0.3.21-GCC-12.2.0|x|x|x|x|x|x|
-|OpenBLAS/0.3.20-GCC-11.3.0|x|x|x|x|x|x|
-|OpenBLAS/0.3.18-GCC-11.2.0|x|x|x|x|x|x|
-|OpenBLAS/0.3.15-GCC-10.3.0|x|x|x|x|x|x|
-|OpenBLAS/0.3.12-GCC-10.2.0|x|x|x|x|x|x|
-|OpenBLAS/0.3.9-GCC-9.3.0|-|x|x|-|x|x|
-|OpenBLAS/0.3.7-GCC-8.3.0|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OpenBLAS/0.3.27-GCC-13.3.0|x|x|x|x|x|x|x|
+|OpenBLAS/0.3.24-GCC-13.2.0|x|x|x|x|x|x|x|
+|OpenBLAS/0.3.23-GCC-12.3.0|x|x|x|x|x|x|x|
+|OpenBLAS/0.3.21-GCC-12.2.0|x|x|x|x|x|-|x|
+|OpenBLAS/0.3.20-GCC-11.3.0|x|x|x|x|x|x|x|
+|OpenBLAS/0.3.18-GCC-11.2.0|x|x|x|x|x|-|x|
+|OpenBLAS/0.3.15-GCC-10.3.0|x|x|x|x|x|-|x|
+|OpenBLAS/0.3.12-GCC-10.2.0|x|x|x|x|x|-|x|
+|OpenBLAS/0.3.9-GCC-9.3.0|-|x|x|-|x|-|x|
+|OpenBLAS/0.3.7-GCC-8.3.0|x|x|x|-|x|-|x|

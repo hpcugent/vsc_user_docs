@@ -17,10 +17,10 @@ To start using Bonito, load one of these modules using a `module load` command l
 module load Bonito/0.4.0-fosscuda-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 15:51:42 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Bonito/0.4.0-fosscuda-2020b|-|-|-|-|x|-|
-|Bonito/0.3.8-fosscuda-2020b|-|-|-|-|x|-|
-|Bonito/0.1.0-foss-2019b-Python-3.7.4|-|x|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Bonito/0.4.0-fosscuda-2020b|-|-|-|-|x|-|-|
+|Bonito/0.3.8-fosscuda-2020b|-|-|-|-|x|-|-|
+|Bonito/0.1.0-foss-2019b-Python-3.7.4|-|x|-|-|-|-|x|

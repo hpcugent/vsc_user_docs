@@ -17,11 +17,11 @@ To start using RE2, load one of these modules using a `module load` command like
 module load RE2/2023-08-01-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 15:51:42 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RE2/2023-08-01-GCCcore-12.3.0|x|x|x|x|x|x|
-|RE2/2023-03-01-GCCcore-12.2.0|x|x|x|x|x|x|
-|RE2/2022-06-01-GCCcore-11.3.0|x|x|x|x|x|x|
-|RE2/2022-02-01-GCCcore-11.2.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RE2/2023-08-01-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|RE2/2023-03-01-GCCcore-12.2.0|x|x|x|x|x|-|x|
+|RE2/2022-06-01-GCCcore-11.3.0|x|x|x|x|x|-|x|
+|RE2/2022-02-01-GCCcore-11.2.0|x|x|x|x|x|-|x|

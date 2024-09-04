@@ -14,12 +14,13 @@ The overview below shows which CellRank installations are available per HPC-UGen
 To start using CellRank, load one of these modules using a `module load` command like:
 
 ```shell
-module load CellRank/2.0.2-foss-2022a
+module load CellRank/2.0.2-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 15:51:42 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CellRank/2.0.2-foss-2022a|x|x|x|x|x|x|
-|CellRank/1.4.0-foss-2021a|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CellRank/2.0.2-foss-2023a|x|x|x|x|x|x|x|
+|CellRank/2.0.2-foss-2022a|x|x|x|x|x|-|x|
+|CellRank/1.4.0-foss-2021a|-|x|x|-|x|-|x|

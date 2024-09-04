@@ -17,8 +17,8 @@ To start using Triton, load one of these modules using a `module load` command l
 module load Triton/1.1.1-foss-2022a-CUDA-11.7.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 15:51:42 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Triton/1.1.1-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Triton/1.1.1-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|-|
