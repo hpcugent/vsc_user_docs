@@ -14,14 +14,16 @@ The overview below shows which pydantic installations are available per HPC-UGen
 To start using pydantic, load one of these modules using a `module load` command like:
 
 ```shell
-module load pydantic/2.5.3-GCCcore-12.3.0
+module load pydantic/2.7.4-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 09:59:34 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pydantic/2.5.3-GCCcore-12.3.0|x|x|x|x|x|x|
-|pydantic/2.5.3-GCCcore-12.2.0|x|x|x|x|x|x|
-|pydantic/1.10.13-GCCcore-12.3.0|x|x|x|x|x|x|
-|pydantic/1.10.4-GCCcore-11.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pydantic/2.7.4-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|pydantic/2.6.4-GCCcore-13.2.0|x|x|x|x|x|-|x|
+|pydantic/2.5.3-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|pydantic/2.5.3-GCCcore-12.2.0|x|x|x|x|x|-|x|
+|pydantic/1.10.13-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|pydantic/1.10.4-GCCcore-11.3.0|x|x|x|x|x|-|x|

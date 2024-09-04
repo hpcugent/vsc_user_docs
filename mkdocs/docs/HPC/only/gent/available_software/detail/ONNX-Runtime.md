@@ -17,8 +17,8 @@ To start using ONNX-Runtime, load one of these modules using a `module load` com
 module load ONNX-Runtime/1.16.3-foss-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 09:59:34 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ONNX-Runtime/1.16.3-foss-2022b|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ONNX-Runtime/1.16.3-foss-2022b|x|x|x|x|x|-|x|

@@ -17,9 +17,9 @@ To start using MEM, load one of these modules using a `module load` command like
 module load MEM/20191023-foss-2020a-R-4.0.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 09:59:34 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MEM/20191023-foss-2020a-R-4.0.0|-|-|x|-|x|-|
-|MEM/20191023-foss-2019b|-|x|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MEM/20191023-foss-2020a-R-4.0.0|-|-|x|-|x|-|-|
+|MEM/20191023-foss-2019b|-|x|x|-|x|-|-|

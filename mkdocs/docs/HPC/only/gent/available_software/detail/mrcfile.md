@@ -14,12 +14,13 @@ The overview below shows which mrcfile installations are available per HPC-UGent
 To start using mrcfile, load one of these modules using a `module load` command like:
 
 ```shell
-module load mrcfile/1.3.0-fosscuda-2020b
+module load mrcfile/1.5.0-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 09:59:34 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mrcfile/1.3.0-fosscuda-2020b|x|-|-|-|x|-|
-|mrcfile/1.3.0-foss-2020b|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|mrcfile/1.5.0-foss-2023a|x|x|x|x|x|x|x|
+|mrcfile/1.3.0-fosscuda-2020b|x|-|-|-|x|-|-|
+|mrcfile/1.3.0-foss-2020b|x|x|x|x|x|-|x|

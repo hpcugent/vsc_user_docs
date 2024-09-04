@@ -14,12 +14,13 @@ The overview below shows which psycopg2 installations are available per HPC-UGen
 To start using psycopg2, load one of these modules using a `module load` command like:
 
 ```shell
-module load psycopg2/2.9.6-GCCcore-11.3.0
+module load psycopg2/2.9.9-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 09:59:34 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|psycopg2/2.9.6-GCCcore-11.3.0|x|x|x|x|x|x|
-|psycopg2/2.9.5-GCCcore-11.2.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|psycopg2/2.9.9-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|psycopg2/2.9.6-GCCcore-11.3.0|x|x|x|x|x|-|x|
+|psycopg2/2.9.5-GCCcore-11.2.0|x|x|x|x|x|-|x|

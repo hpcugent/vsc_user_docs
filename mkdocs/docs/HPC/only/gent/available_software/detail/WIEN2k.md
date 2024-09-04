@@ -17,9 +17,9 @@ To start using WIEN2k, load one of these modules using a `module load` command l
 module load WIEN2k/21.1-intel-2021a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 09:59:34 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|WIEN2k/21.1-intel-2021a|-|x|x|-|x|x|
-|WIEN2k/19.2-intel-2020b|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|WIEN2k/21.1-intel-2021a|-|x|x|-|x|-|x|
+|WIEN2k/19.2-intel-2020b|-|x|x|x|x|-|x|

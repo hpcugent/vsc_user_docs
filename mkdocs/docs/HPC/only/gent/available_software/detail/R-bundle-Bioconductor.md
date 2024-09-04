@@ -17,16 +17,16 @@ To start using R-bundle-Bioconductor, load one of these modules using a `module 
 module load R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 09:59:34 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2|x|x|x|x|x|x|
-|R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2|x|x|x|x|x|x|
-|R-bundle-Bioconductor/3.15-foss-2022a-R-4.2.1|x|x|x|x|x|x|
-|R-bundle-Bioconductor/3.15-foss-2021b-R-4.2.0|x|x|x|x|x|x|
-|R-bundle-Bioconductor/3.14-foss-2021b-R-4.1.2|x|x|x|x|x|x|
-|R-bundle-Bioconductor/3.13-foss-2021a-R-4.1.0|-|x|x|-|x|x|
-|R-bundle-Bioconductor/3.12-foss-2020b-R-4.0.3|x|x|x|x|x|x|
-|R-bundle-Bioconductor/3.11-foss-2020a-R-4.0.0|-|x|x|-|x|x|
-|R-bundle-Bioconductor/3.10-foss-2019b|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2|x|x|x|x|x|x|x|
+|R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2|x|x|x|x|x|x|x|
+|R-bundle-Bioconductor/3.15-foss-2022a-R-4.2.1|x|x|x|x|x|-|x|
+|R-bundle-Bioconductor/3.15-foss-2021b-R-4.2.0|x|x|x|x|x|-|x|
+|R-bundle-Bioconductor/3.14-foss-2021b-R-4.1.2|x|x|x|x|x|-|x|
+|R-bundle-Bioconductor/3.13-foss-2021a-R-4.1.0|-|x|x|-|x|-|x|
+|R-bundle-Bioconductor/3.12-foss-2020b-R-4.0.3|x|x|x|x|x|-|x|
+|R-bundle-Bioconductor/3.11-foss-2020a-R-4.0.0|-|x|x|-|x|-|x|
+|R-bundle-Bioconductor/3.10-foss-2019b|-|x|x|-|x|-|x|

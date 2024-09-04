@@ -14,15 +14,16 @@ The overview below shows which Bowtie installations are available per HPC-UGent 
 To start using Bowtie, load one of these modules using a `module load` command like:
 
 ```shell
-module load Bowtie/1.3.1-GCC-11.3.0
+module load Bowtie/1.3.1-GCC-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 09:59:34 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Bowtie/1.3.1-GCC-11.3.0|x|x|x|x|x|x|
-|Bowtie/1.3.1-GCC-11.2.0|x|x|x|x|x|x|
-|Bowtie/1.3.0-GCC-10.2.0|-|x|x|-|x|-|
-|Bowtie/1.2.3-iccifort-2019.5.281|-|x|-|-|-|-|
-|Bowtie/1.2.3-GCC-8.3.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Bowtie/1.3.1-GCC-12.3.0|x|x|x|x|x|x|x|
+|Bowtie/1.3.1-GCC-11.3.0|x|x|x|x|x|-|x|
+|Bowtie/1.3.1-GCC-11.2.0|x|x|x|x|x|-|x|
+|Bowtie/1.3.0-GCC-10.2.0|-|x|x|-|x|-|-|
+|Bowtie/1.2.3-iccifort-2019.5.281|-|x|-|-|-|-|-|
+|Bowtie/1.2.3-GCC-8.3.0|-|x|x|-|x|-|x|

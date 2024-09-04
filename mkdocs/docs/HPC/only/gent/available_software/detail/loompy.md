@@ -17,12 +17,13 @@ To start using loompy, load one of these modules using a `module load` command l
 module load loompy/3.0.7-intel-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 09:59:34 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|loompy/3.0.7-intel-2021b|x|x|x|-|x|x|
-|loompy/3.0.7-foss-2022a|x|x|x|x|x|x|
-|loompy/3.0.7-foss-2021b|x|x|x|-|x|x|
-|loompy/3.0.7-foss-2021a|x|x|x|x|x|x|
-|loompy/3.0.6-intel-2020b|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|loompy/3.0.7-intel-2021b|x|x|x|-|x|-|x|
+|loompy/3.0.7-foss-2023a|x|x|x|x|x|x|x|
+|loompy/3.0.7-foss-2022a|x|x|x|x|x|-|x|
+|loompy/3.0.7-foss-2021b|x|x|x|-|x|-|x|
+|loompy/3.0.7-foss-2021a|x|x|x|x|x|-|x|
+|loompy/3.0.6-intel-2020b|-|x|x|-|x|-|x|

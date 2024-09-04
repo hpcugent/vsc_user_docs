@@ -17,9 +17,9 @@ To start using LAST, load one of these modules using a `module load` command lik
 module load LAST/1179-GCC-10.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 09:59:34 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LAST/1179-GCC-10.2.0|-|x|x|x|x|x|
-|LAST/1045-intel-2019b|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LAST/1179-GCC-10.2.0|-|x|x|x|x|-|x|
+|LAST/1045-intel-2019b|-|x|x|-|x|-|x|
