@@ -17,8 +17,8 @@ To start using Parsl, load one of these modules using a `module load` command li
 module load Parsl/2023.7.17-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 10:06:00 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Parsl/2023.7.17-GCCcore-11.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Parsl/2023.7.17-GCCcore-11.3.0|x|x|x|x|x|-|x|

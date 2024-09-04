@@ -17,8 +17,8 @@ To start using SRST2, load one of these modules using a `module load` command li
 module load SRST2/0.2.0-20210620-foss-2020b-Python-2.7.18
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 10:06:00 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SRST2/0.2.0-20210620-foss-2020b-Python-2.7.18|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SRST2/0.2.0-20210620-foss-2020b-Python-2.7.18|-|x|x|x|x|-|x|

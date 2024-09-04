@@ -14,17 +14,18 @@ The overview below shows which arpack-ng installations are available per HPC-UGe
 To start using arpack-ng, load one of these modules using a `module load` command like:
 
 ```shell
-module load arpack-ng/3.9.0-foss-2023a
+module load arpack-ng/3.9.0-foss-2023b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 10:06:00 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|arpack-ng/3.9.0-foss-2023a|x|x|x|x|x|x|
-|arpack-ng/3.8.0-foss-2022b|x|x|x|x|x|x|
-|arpack-ng/3.8.0-foss-2022a|x|x|x|x|x|x|
-|arpack-ng/3.8.0-foss-2021b|x|x|x|x|x|x|
-|arpack-ng/3.8.0-foss-2021a|x|x|x|x|x|x|
-|arpack-ng/3.7.0-intel-2020a|-|x|x|-|x|x|
-|arpack-ng/3.7.0-foss-2019b|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|arpack-ng/3.9.0-foss-2023b|x|x|x|x|x|x|x|
+|arpack-ng/3.9.0-foss-2023a|x|x|x|x|x|x|x|
+|arpack-ng/3.8.0-foss-2022b|x|x|x|x|x|x|x|
+|arpack-ng/3.8.0-foss-2022a|x|x|x|x|x|x|x|
+|arpack-ng/3.8.0-foss-2021b|x|x|x|x|x|-|x|
+|arpack-ng/3.8.0-foss-2021a|x|x|x|x|x|-|x|
+|arpack-ng/3.7.0-intel-2020a|-|x|x|-|x|-|x|
+|arpack-ng/3.7.0-foss-2019b|-|x|x|-|x|-|x|

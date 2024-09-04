@@ -17,10 +17,10 @@ To start using cctbx-base, load one of these modules using a `module load` comma
 module load cctbx-base/2023.5-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 10:06:00 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cctbx-base/2023.5-foss-2022a|-|-|x|-|x|-|
-|cctbx-base/2020.8-fosscuda-2020b|x|-|-|-|x|-|
-|cctbx-base/2020.8-foss-2020b|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|cctbx-base/2023.5-foss-2022a|-|-|x|-|x|-|-|
+|cctbx-base/2020.8-fosscuda-2020b|x|-|-|-|x|-|-|
+|cctbx-base/2020.8-foss-2020b|x|x|x|x|x|-|x|

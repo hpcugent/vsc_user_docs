@@ -14,11 +14,12 @@ The overview below shows which polars installations are available per HPC-UGent 
 To start using polars, load one of these modules using a `module load` command like:
 
 ```shell
-module load polars/0.15.6-foss-2022a
+module load polars/0.20.2-gfbf-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 10:06:00 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|polars/0.15.6-foss-2022a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|polars/0.20.2-gfbf-2023a|x|x|x|x|x|x|x|
+|polars/0.15.6-foss-2022a|x|x|x|x|x|-|x|

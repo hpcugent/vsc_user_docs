@@ -17,8 +17,8 @@ To start using treatSens, load one of these modules using a `module load` comman
 module load treatSens/3.0-20201002-foss-2020a-R-4.0.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 10:06:00 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|treatSens/3.0-20201002-foss-2020a-R-4.0.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|treatSens/3.0-20201002-foss-2020a-R-4.0.0|-|x|x|-|x|-|x|

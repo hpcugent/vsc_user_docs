@@ -17,14 +17,14 @@ To start using SCons, load one of these modules using a `module load` command li
 module load SCons/4.5.2-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 10:06:00 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SCons/4.5.2-GCCcore-12.3.0|x|x|x|x|x|x|
-|SCons/4.4.0-GCCcore-11.3.0|-|-|x|-|x|-|
-|SCons/4.2.0-GCCcore-11.2.0|x|x|x|-|x|x|
-|SCons/4.1.0.post1-GCCcore-10.3.0|-|x|x|-|x|x|
-|SCons/4.1.0.post1-GCCcore-10.2.0|-|x|x|-|x|x|
-|SCons/3.1.2-GCCcore-9.3.0|-|x|x|-|x|x|
-|SCons/3.1.1-GCCcore-8.3.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SCons/4.5.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|SCons/4.4.0-GCCcore-11.3.0|-|-|x|-|x|-|-|
+|SCons/4.2.0-GCCcore-11.2.0|x|x|x|-|x|-|x|
+|SCons/4.1.0.post1-GCCcore-10.3.0|-|x|x|-|x|-|x|
+|SCons/4.1.0.post1-GCCcore-10.2.0|-|x|x|-|x|-|x|
+|SCons/3.1.2-GCCcore-9.3.0|-|x|x|-|x|-|x|
+|SCons/3.1.1-GCCcore-8.3.0|-|x|x|-|x|-|x|

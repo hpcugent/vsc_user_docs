@@ -17,8 +17,8 @@ To start using elprep, load one of these modules using a `module load` command l
 module load elprep/5.1.1
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 10:06:00 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|elprep/5.1.1|-|x|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|elprep/5.1.1|-|x|x|-|x|-|-|

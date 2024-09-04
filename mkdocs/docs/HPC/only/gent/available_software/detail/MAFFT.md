@@ -17,17 +17,17 @@ To start using MAFFT, load one of these modules using a `module load` command li
 module load MAFFT/7.520-GCC-12.3.0-with-extensions
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 10:06:00 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MAFFT/7.520-GCC-12.3.0-with-extensions|x|x|x|x|x|x|
-|MAFFT/7.505-GCC-12.2.0-with-extensions|x|x|x|x|x|x|
-|MAFFT/7.505-GCC-11.3.0-with-extensions|x|x|x|x|x|x|
-|MAFFT/7.490-gompi-2021b-with-extensions|x|x|x|-|x|x|
-|MAFFT/7.475-gompi-2020b-with-extensions|-|x|x|x|x|x|
-|MAFFT/7.475-GCC-10.2.0-with-extensions|-|x|x|x|x|x|
-|MAFFT/7.453-iimpi-2020a-with-extensions|-|x|x|-|x|x|
-|MAFFT/7.453-iccifort-2019.5.281-with-extensions|-|x|x|-|x|x|
-|MAFFT/7.453-GCC-9.3.0-with-extensions|-|x|x|-|x|x|
-|MAFFT/7.453-GCC-8.3.0-with-extensions|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MAFFT/7.520-GCC-12.3.0-with-extensions|x|x|x|x|x|x|x|
+|MAFFT/7.505-GCC-12.2.0-with-extensions|x|x|x|x|x|x|x|
+|MAFFT/7.505-GCC-11.3.0-with-extensions|x|x|x|x|x|-|x|
+|MAFFT/7.490-gompi-2021b-with-extensions|x|x|x|x|x|-|x|
+|MAFFT/7.475-gompi-2020b-with-extensions|-|x|x|x|x|-|x|
+|MAFFT/7.475-GCC-10.2.0-with-extensions|-|x|x|x|x|-|x|
+|MAFFT/7.453-iimpi-2020a-with-extensions|-|x|x|-|x|-|x|
+|MAFFT/7.453-iccifort-2019.5.281-with-extensions|-|x|x|-|x|-|x|
+|MAFFT/7.453-GCC-9.3.0-with-extensions|-|x|x|-|x|-|x|
+|MAFFT/7.453-GCC-8.3.0-with-extensions|-|x|x|-|x|-|x|

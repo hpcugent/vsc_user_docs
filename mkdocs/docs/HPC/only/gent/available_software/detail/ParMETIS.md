@@ -17,12 +17,13 @@ To start using ParMETIS, load one of these modules using a `module load` command
 module load ParMETIS/4.0.3-iimpi-2020a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 10:06:00 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ParMETIS/4.0.3-iimpi-2020a|-|x|x|-|x|x|
-|ParMETIS/4.0.3-iimpi-2019b|-|x|x|-|x|x|
-|ParMETIS/4.0.3-gompi-2022a|x|x|x|x|x|x|
-|ParMETIS/4.0.3-gompi-2021a|-|x|x|-|x|x|
-|ParMETIS/4.0.3-gompi-2019b|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ParMETIS/4.0.3-iimpi-2020a|-|x|x|-|x|-|x|
+|ParMETIS/4.0.3-iimpi-2019b|-|x|x|-|x|-|x|
+|ParMETIS/4.0.3-gompi-2022b|x|x|x|x|x|x|x|
+|ParMETIS/4.0.3-gompi-2022a|x|x|x|x|x|-|x|
+|ParMETIS/4.0.3-gompi-2021a|-|x|x|-|x|-|x|
+|ParMETIS/4.0.3-gompi-2019b|-|x|x|-|x|-|x|

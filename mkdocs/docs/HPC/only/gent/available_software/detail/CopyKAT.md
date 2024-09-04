@@ -17,9 +17,9 @@ To start using CopyKAT, load one of these modules using a `module load` command 
 module load CopyKAT/1.1.0-foss-2022b-R-4.2.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 10:06:00 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CopyKAT/1.1.0-foss-2022b-R-4.2.2|x|x|x|x|x|x|
-|CopyKAT/1.1.0-foss-2022a-R-4.2.1|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CopyKAT/1.1.0-foss-2022b-R-4.2.2|x|x|x|x|x|x|x|
+|CopyKAT/1.1.0-foss-2022a-R-4.2.1|x|x|x|x|x|-|x|

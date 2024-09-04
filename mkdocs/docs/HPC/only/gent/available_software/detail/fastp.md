@@ -14,14 +14,15 @@ The overview below shows which fastp installations are available per HPC-UGent T
 To start using fastp, load one of these modules using a `module load` command like:
 
 ```shell
-module load fastp/0.23.2-GCC-11.2.0
+module load fastp/0.23.4-GCC-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 10:06:00 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fastp/0.23.2-GCC-11.2.0|x|x|x|-|x|x|
-|fastp/0.20.1-iccifort-2020.1.217|-|x|x|-|x|-|
-|fastp/0.20.0-iccifort-2019.5.281|-|x|-|-|-|-|
-|fastp/0.20.0-GCC-8.3.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|fastp/0.23.4-GCC-12.2.0|x|x|x|x|x|x|x|
+|fastp/0.23.2-GCC-11.2.0|x|x|x|-|x|-|x|
+|fastp/0.20.1-iccifort-2020.1.217|-|x|x|-|x|-|-|
+|fastp/0.20.0-iccifort-2019.5.281|-|x|-|-|-|-|-|
+|fastp/0.20.0-GCC-8.3.0|-|x|x|-|x|-|x|
