@@ -17,9 +17,9 @@ To start using tbl2asn, load one of these modules using a `module load` command 
 module load tbl2asn/20220427-linux64
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:25:09 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tbl2asn/20220427-linux64|-|x|x|x|x|x|
-|tbl2asn/25.8-linux64|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tbl2asn/20220427-linux64|x|x|x|x|x|-|x|
+|tbl2asn/25.8-linux64|-|-|-|-|-|-|x|

@@ -14,17 +14,18 @@ The overview below shows which typing-extensions installations are available per
 To start using typing-extensions, load one of these modules using a `module load` command like:
 
 ```shell
-module load typing-extensions/4.9.0-GCCcore-12.3.0
+module load typing-extensions/4.10.0-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:25:09 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|typing-extensions/4.9.0-GCCcore-12.3.0|x|x|x|x|x|x|
-|typing-extensions/4.9.0-GCCcore-12.2.0|x|x|x|x|x|x|
-|typing-extensions/4.8.0-GCCcore-12.3.0|x|x|x|x|x|x|
-|typing-extensions/4.3.0-GCCcore-11.3.0|x|x|x|x|x|x|
-|typing-extensions/3.10.0.2-GCCcore-11.2.0|x|x|x|x|x|x|
-|typing-extensions/3.10.0.0-GCCcore-10.3.0|x|x|x|x|x|x|
-|typing-extensions/3.7.4.3-GCCcore-10.2.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|typing-extensions/4.10.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|typing-extensions/4.9.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|typing-extensions/4.9.0-GCCcore-12.2.0|x|x|x|x|x|-|x|
+|typing-extensions/4.8.0-GCCcore-12.3.0|-|x|-|x|-|-|x|
+|typing-extensions/4.3.0-GCCcore-11.3.0|x|x|x|x|x|-|x|
+|typing-extensions/3.10.0.2-GCCcore-11.2.0|x|x|x|x|x|-|x|
+|typing-extensions/3.10.0.0-GCCcore-10.3.0|x|x|x|x|x|-|x|
+|typing-extensions/3.7.4.3-GCCcore-10.2.0|x|x|x|x|x|-|x|

@@ -17,10 +17,10 @@ To start using loomR, load one of these modules using a `module load` command li
 module load loomR/0.2.0-20180425-foss-2023a-R-4.3.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:25:09 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|loomR/0.2.0-20180425-foss-2023a-R-4.3.2|x|x|x|x|x|x|
-|loomR/0.2.0-20180425-foss-2022b-R-4.2.2|x|x|x|x|x|x|
-|loomR/0.2.0-20180425-foss-2022a-R-4.2.1|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|loomR/0.2.0-20180425-foss-2023a-R-4.3.2|x|x|x|x|x|-|x|
+|loomR/0.2.0-20180425-foss-2022b-R-4.2.2|x|x|x|x|x|-|x|
+|loomR/0.2.0-20180425-foss-2022a-R-4.2.1|x|x|x|x|x|-|x|

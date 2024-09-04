@@ -17,21 +17,21 @@ To start using Libint, load one of these modules using a `module load` command l
 module load Libint/2.7.2-GCC-12.3.0-lmax-6-cp2k
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:25:09 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Libint/2.7.2-GCC-12.3.0-lmax-6-cp2k|x|x|x|x|x|x|
-|Libint/2.7.2-GCC-12.2.0-lmax-6-cp2k|x|x|x|x|x|x|
-|Libint/2.7.2-GCC-11.3.0-lmax-6-cp2k|x|x|x|x|x|x|
-|Libint/2.6.0-iimpi-2020b-lmax-6-cp2k|-|x|-|-|-|-|
-|Libint/2.6.0-iimpi-2020a-lmax-6-cp2k|-|x|x|-|x|x|
-|Libint/2.6.0-iccifort-2020.4.304-lmax-6-cp2k|-|x|x|-|x|-|
-|Libint/2.6.0-gompi-2020b-lmax-6-cp2k|-|x|-|-|-|-|
-|Libint/2.6.0-gompi-2020a-lmax-6-cp2k|-|x|x|-|x|x|
-|Libint/2.6.0-GCC-10.3.0-lmax-6-cp2k|-|x|x|x|x|x|
-|Libint/2.6.0-GCC-10.2.0-lmax-6-cp2k|-|x|x|x|x|x|
-|Libint/1.1.6-iomkl-2020a|-|x|-|-|-|-|
-|Libint/1.1.6-intel-2020a|-|x|x|-|x|x|
-|Libint/1.1.6-intel-2019b|-|x|-|-|-|-|
-|Libint/1.1.6-foss-2020a|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Libint/2.7.2-GCC-12.3.0-lmax-6-cp2k|x|x|x|x|x|x|x|
+|Libint/2.7.2-GCC-12.2.0-lmax-6-cp2k|x|x|x|x|x|-|x|
+|Libint/2.7.2-GCC-11.3.0-lmax-6-cp2k|x|x|x|x|x|-|x|
+|Libint/2.6.0-iimpi-2020b-lmax-6-cp2k|-|x|-|-|-|-|-|
+|Libint/2.6.0-iimpi-2020a-lmax-6-cp2k|-|x|x|-|x|-|x|
+|Libint/2.6.0-iccifort-2020.4.304-lmax-6-cp2k|-|x|x|-|x|-|-|
+|Libint/2.6.0-gompi-2020b-lmax-6-cp2k|-|x|-|-|-|-|-|
+|Libint/2.6.0-gompi-2020a-lmax-6-cp2k|-|x|x|-|x|-|x|
+|Libint/2.6.0-GCC-10.3.0-lmax-6-cp2k|-|x|x|x|x|-|x|
+|Libint/2.6.0-GCC-10.2.0-lmax-6-cp2k|-|x|x|x|x|-|x|
+|Libint/1.1.6-iomkl-2020a|-|x|-|-|-|-|-|
+|Libint/1.1.6-intel-2020a|-|x|x|-|x|-|x|
+|Libint/1.1.6-intel-2019b|-|x|-|-|-|-|-|
+|Libint/1.1.6-foss-2020a|-|x|-|-|-|-|-|

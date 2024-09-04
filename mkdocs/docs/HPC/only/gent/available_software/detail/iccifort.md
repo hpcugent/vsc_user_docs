@@ -17,10 +17,10 @@ To start using iccifort, load one of these modules using a `module load` command
 module load iccifort/2020.4.304
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:25:09 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|iccifort/2020.4.304|x|x|x|x|x|x|
-|iccifort/2020.1.217|x|x|x|x|x|x|
-|iccifort/2019.5.281|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|iccifort/2020.4.304|x|x|x|x|x|-|x|
+|iccifort/2020.1.217|x|x|x|x|x|-|x|
+|iccifort/2019.5.281|-|x|x|-|x|-|x|

@@ -17,8 +17,8 @@ To start using Chimera, load one of these modules using a `module load` command 
 module load Chimera/1.16-linux_x86_64
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:25:09 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Chimera/1.16-linux_x86_64|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Chimera/1.16-linux_x86_64|x|x|x|-|x|-|x|

@@ -17,8 +17,8 @@ To start using MOABS, load one of these modules using a `module load` command li
 module load MOABS/1.3.9.6-gompi-2019b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:25:09 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MOABS/1.3.9.6-gompi-2019b|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MOABS/1.3.9.6-gompi-2019b|-|x|x|-|x|-|x|

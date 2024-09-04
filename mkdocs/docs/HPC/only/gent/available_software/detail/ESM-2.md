@@ -17,9 +17,9 @@ To start using ESM-2, load one of these modules using a `module load` command li
 module load ESM-2/2.0.0-foss-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:25:09 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ESM-2/2.0.0-foss-2022b|x|x|x|x|x|x|
-|ESM-2/2.0.0-foss-2021a|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ESM-2/2.0.0-foss-2022b|x|x|x|x|x|-|x|
+|ESM-2/2.0.0-foss-2021a|x|x|x|-|x|-|x|

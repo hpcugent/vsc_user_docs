@@ -17,9 +17,9 @@ To start using hyperopt, load one of these modules using a `module load` command
 module load hyperopt/0.2.5-fosscuda-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:25:09 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|hyperopt/0.2.5-fosscuda-2020b|-|-|-|-|x|-|
-|hyperopt/0.2.4-intel-2019b-Python-3.7.4-Java-1.8|-|x|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|hyperopt/0.2.5-fosscuda-2020b|-|-|-|-|x|-|-|
+|hyperopt/0.2.4-intel-2019b-Python-3.7.4-Java-1.8|-|x|x|-|x|-|-|

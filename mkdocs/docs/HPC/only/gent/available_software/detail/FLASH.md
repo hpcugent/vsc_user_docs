@@ -17,10 +17,10 @@ To start using FLASH, load one of these modules using a `module load` command li
 module load FLASH/2.2.00-foss-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:25:09 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FLASH/2.2.00-foss-2020b|-|x|x|x|x|x|
-|FLASH/2.2.00-GCC-11.2.0|x|x|x|-|x|x|
-|FLASH/1.2.11-GCC-8.3.0|-|x|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FLASH/2.2.00-foss-2020b|-|x|x|x|x|-|x|
+|FLASH/2.2.00-GCC-11.2.0|x|x|x|-|x|-|x|
+|FLASH/1.2.11-GCC-8.3.0|-|x|x|-|x|-|-|

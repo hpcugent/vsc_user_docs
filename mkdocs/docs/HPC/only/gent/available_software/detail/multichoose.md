@@ -17,9 +17,9 @@ To start using multichoose, load one of these modules using a `module load` comm
 module load multichoose/1.0.3-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:25:09 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|multichoose/1.0.3-GCCcore-11.3.0|x|x|x|x|x|x|
-|multichoose/1.0.3-GCCcore-10.2.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|multichoose/1.0.3-GCCcore-11.3.0|x|x|x|x|x|-|x|
+|multichoose/1.0.3-GCCcore-10.2.0|-|x|x|-|x|-|x|

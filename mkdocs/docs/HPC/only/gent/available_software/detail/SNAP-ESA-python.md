@@ -17,9 +17,9 @@ To start using SNAP-ESA-python, load one of these modules using a `module load` 
 module load SNAP-ESA-python/9.0.0-GCCcore-11.2.0-Java-11-Python-2.7.18
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:25:09 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SNAP-ESA-python/9.0.0-GCCcore-11.2.0-Java-11-Python-2.7.18|x|x|x|x|x|-|
-|SNAP-ESA-python/9.0.0-GCCcore-11.2.0-Java-1.8-Python-2.7.18|x|x|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SNAP-ESA-python/9.0.0-GCCcore-11.2.0-Java-11-Python-2.7.18|x|x|x|x|x|-|-|
+|SNAP-ESA-python/9.0.0-GCCcore-11.2.0-Java-1.8-Python-2.7.18|x|x|x|x|-|-|x|

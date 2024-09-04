@@ -17,9 +17,9 @@ To start using taxator-tk, load one of these modules using a `module load` comma
 module load taxator-tk/1.3.3-gompi-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:25:09 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|taxator-tk/1.3.3-gompi-2020b|-|x|-|-|-|-|
-|taxator-tk/1.3.3-GCC-10.2.0|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|taxator-tk/1.3.3-gompi-2020b|-|x|-|-|-|-|-|
+|taxator-tk/1.3.3-GCC-10.2.0|-|x|x|x|x|-|x|

@@ -14,14 +14,15 @@ The overview below shows which ABAQUS installations are available per HPC-UGent 
 To start using ABAQUS, load one of these modules using a `module load` command like:
 
 ```shell
-module load ABAQUS/2023
+module load ABAQUS/2024-hotfix-2405
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:25:09 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ABAQUS/2023|x|x|x|x|x|x|
-|ABAQUS/2022-hotfix-2214|-|x|x|-|x|x|
-|ABAQUS/2022|-|x|x|-|x|x|
-|ABAQUS/2021-hotfix-2132|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ABAQUS/2024-hotfix-2405|x|x|x|x|x|x|x|
+|ABAQUS/2023|x|x|x|x|x|-|x|
+|ABAQUS/2022-hotfix-2214|-|x|x|-|x|-|x|
+|ABAQUS/2022|-|x|x|-|x|-|x|
+|ABAQUS/2021-hotfix-2132|-|x|x|-|x|-|x|

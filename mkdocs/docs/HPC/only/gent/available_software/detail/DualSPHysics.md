@@ -17,8 +17,8 @@ To start using DualSPHysics, load one of these modules using a `module load` com
 module load DualSPHysics/5.0.175-GCC-11.2.0-CUDA-11.4.1
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:25:09 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DualSPHysics/5.0.175-GCC-11.2.0-CUDA-11.4.1|x|-|-|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DualSPHysics/5.0.175-GCC-11.2.0-CUDA-11.4.1|x|-|-|-|x|-|-|
