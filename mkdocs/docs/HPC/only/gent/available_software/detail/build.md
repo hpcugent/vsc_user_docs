@@ -14,11 +14,12 @@ The overview below shows which build installations are available per HPC-UGent T
 To start using build, load one of these modules using a `module load` command like:
 
 ```shell
-module load build/0.10.0-foss-2022a
+module load build/1.0.3-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:48:20 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|build/0.10.0-foss-2022a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|build/1.0.3-foss-2023a|x|x|x|x|x|x|x|
+|build/0.10.0-foss-2022a|x|x|x|x|x|-|x|

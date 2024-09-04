@@ -14,16 +14,17 @@ The overview below shows which spoa installations are available per HPC-UGent Ti
 To start using spoa, load one of these modules using a `module load` command like:
 
 ```shell
-module load spoa/4.0.7-GCC-11.3.0
+module load spoa/4.1.0-GCC-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:48:20 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|spoa/4.0.7-GCC-11.3.0|x|x|x|x|x|x|
-|spoa/4.0.7-GCC-11.2.0|x|x|x|-|x|x|
-|spoa/4.0.7-GCC-10.3.0|x|x|x|-|x|x|
-|spoa/4.0.7-GCC-10.2.0|-|x|x|x|x|x|
-|spoa/4.0.0-GCC-8.3.0|-|x|x|-|x|x|
-|spoa/3.4.0-GCC-10.2.0|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|spoa/4.1.0-GCC-12.3.0|x|x|x|x|x|x|x|
+|spoa/4.0.7-GCC-11.3.0|x|x|x|x|x|-|x|
+|spoa/4.0.7-GCC-11.2.0|x|x|x|-|x|-|x|
+|spoa/4.0.7-GCC-10.3.0|x|x|x|-|x|-|x|
+|spoa/4.0.7-GCC-10.2.0|-|x|x|x|x|-|x|
+|spoa/4.0.0-GCC-8.3.0|-|x|x|-|x|-|x|
+|spoa/3.4.0-GCC-10.2.0|-|x|x|x|x|-|x|

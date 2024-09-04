@@ -17,9 +17,9 @@ To start using DBD-mysql, load one of these modules using a `module load` comman
 module load DBD-mysql/4.050-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:48:20 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DBD-mysql/4.050-GCC-11.3.0|x|x|x|x|x|x|
-|DBD-mysql/4.050-GCC-11.2.0|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DBD-mysql/4.050-GCC-11.3.0|x|x|x|x|x|-|x|
+|DBD-mysql/4.050-GCC-11.2.0|x|x|x|x|x|-|x|

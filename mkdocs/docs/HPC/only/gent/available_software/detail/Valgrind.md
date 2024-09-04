@@ -17,12 +17,12 @@ To start using Valgrind, load one of these modules using a `module load` command
 module load Valgrind/3.20.0-gompi-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:48:20 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Valgrind/3.20.0-gompi-2022a|x|x|x|-|x|x|
-|Valgrind/3.19.0-gompi-2022a|x|x|x|-|x|x|
-|Valgrind/3.18.1-iimpi-2021b|x|x|x|-|x|x|
-|Valgrind/3.18.1-gompi-2021b|x|x|x|-|x|x|
-|Valgrind/3.17.0-gompi-2021a|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Valgrind/3.20.0-gompi-2022a|x|x|x|-|x|-|x|
+|Valgrind/3.19.0-gompi-2022a|x|x|x|-|x|-|x|
+|Valgrind/3.18.1-iimpi-2021b|x|x|x|-|x|-|x|
+|Valgrind/3.18.1-gompi-2021b|x|x|x|-|x|-|x|
+|Valgrind/3.17.0-gompi-2021a|x|x|x|-|x|-|x|

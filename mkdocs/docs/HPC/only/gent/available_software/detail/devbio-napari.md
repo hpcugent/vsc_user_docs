@@ -17,9 +17,9 @@ To start using devbio-napari, load one of these modules using a `module load` co
 module load devbio-napari/0.10.1-foss-2022a-CUDA-11.7.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:48:20 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|devbio-napari/0.10.1-foss-2022a-CUDA-11.7.0|x|-|-|-|x|-|
-|devbio-napari/0.10.1-foss-2022a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|devbio-napari/0.10.1-foss-2022a-CUDA-11.7.0|x|-|-|-|x|-|-|
+|devbio-napari/0.10.1-foss-2022a|x|x|x|x|x|-|x|
