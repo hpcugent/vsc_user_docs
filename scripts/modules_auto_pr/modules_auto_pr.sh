@@ -10,12 +10,10 @@ set -u  # Treat unset variables as an error when substituting
 
 TIMESTAMP=$(date +"%Y-%m-%d_%H-%M")
 HUMAN_TIMESTAMP=$(date "+%-d %B %Y, %H:%M")
-FORK_USER="lbarraga"
-FORK_URL="git@github.com:$FORK_USER/vsc_user_docs" # The fork on which the script will run and create the PR from
 REPO_URL="git@github.com:hpcugent/vsc_user_docs" # The repository for which the script will generate the PR
 BASE_BRANCH="main"
 BRANCH_NAME="auto_update_modules_$TIMESTAMP"
-REPO_NAME="vsc_user_docs" # script available_modules.py requires this to be the name. Do not change.
+REPO_NAME="vsc_user_docs" # name of the cloned repo. script available_modules.py requires this to be the name. Do not change.
 REPO_PATH="/tmp/$USER/modules_auto_pr_script_$TIMESTAMP/$REPO_NAME"
 COMMIT_MESSAGE="Update Modules [$HUMAN_TIMESTAMP]"
 PR_TITLE="Auto Update Modules [$HUMAN_TIMESTAMP]"
@@ -41,6 +39,8 @@ echo_error() { echo -e "\e[31m$0: [ERROR] $1\e[0m"; }
 
 main() {
   local github_pat_file="$1"
+  local fork_user="$2" # The user that owns the fork from which the script will create the PR. e.g. lbarraga
+  local fork_url="git@github.com:$fork_user/vsc_user_docs" # The fork from which the script will create the PR
 
   # Check if the `gh` command is available
   if ! command -v gh &> /dev/null; then
@@ -49,11 +49,10 @@ main() {
       exit 1
   fi
 
-  # Check if the GitHub Personal Access Token file exists
-  if [ ! -f "$github_pat_file" ]; then
-      echo_error "GitHub Personal Access Token file not found."
-      echo_error "Please provide the path to the file containing the GitHub Personal Access Token."
-      echo_error "Usage: $0 <github_pat_file>"
+  # Check if PAT file is present and fork user is provided in one if statement
+  if [ ! -f "$github_pat_file" ] || [ -z "$fork_user" ]; then
+      echo_error "Please provide a valid GitHub Personal Access Token (PAT) file and fork user."
+      echo_error "Usage: $0 <github_pat_file> <fork_user>"
       exit 1
   fi
 
@@ -79,7 +78,7 @@ main() {
   N_REMOVED_MODULES=$(git show --name-status HEAD | grep -e "^D.*\.md$" | wc -l)
 
   # Push the new branch to GitHub
-  git remote add fork $FORK_URL
+  git remote add fork "$fork_url"
   git push fork "$BRANCH_NAME"
 
   # Set the ugent repo as the default remote
@@ -90,10 +89,10 @@ main() {
     --title "$PR_TITLE" \
     --body  "$(make_pr_body "$N_ADDED_MODULES" "$N_REMOVED_MODULES")" \
     --base  "$BASE_BRANCH" \
-    --head  "$FORK_USER:$BRANCH_NAME" \
+    --head  "$fork_user:$BRANCH_NAME" \
 
   # Clean up
   rm -rf "$REPO_PATH"
 }
 
-main "$1"
+main "$1" "$2"

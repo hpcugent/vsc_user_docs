@@ -17,15 +17,16 @@ The script assumes the following:
 - SSH keys need to be present for the GitHub account that owns the fork. This will be used to push the changed to the fork. This is different from the PAT, which is only used to create the pull request.
 - Lmod is installed. This is used by the `available_software.py` script.
 - The GitHub CLI (`gh`) is installed to create the PR. See [the GitHub CLI installation instructions](https://github.com/cli/cli#installation) for more information.
+- the fork is named `vsc_user_docs`
 
 ## Usage
 
 The script should be called with a file containing a
 [GitHub classic personal access token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#personal-access-tokens-classic) 
-as argument:
+and the GitHub name of the user which owns the fork as arguments:
 
 ```shell
-$ ./modules_auto_pr.sh path/to/github/PAT
+$ ./modules_auto_pr.sh path/to/github/PAT <github_username>
 ```
 
 ## Make a classic Personal Access Token
