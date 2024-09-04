@@ -40,6 +40,13 @@ echo_error() { echo -e "\e[31m$0: [ERROR] $1\e[0m"; }
 main() {
   local github_pat_file="$1"
 
+  # Check if the `gh` command is available
+  if ! command -v gh &> /dev/null; then
+      echo_error "The GitHub CLI (gh) is not installed."
+      echo_error "Please install it by following the instructions at https://cli.github.com."
+      exit 1
+  fi
+
   # Check if the GitHub Personal Access Token file exists
   if [ ! -f "$github_pat_file" ]; then
       echo_error "GitHub Personal Access Token file not found."
