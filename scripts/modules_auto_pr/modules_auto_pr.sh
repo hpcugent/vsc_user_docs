@@ -10,7 +10,8 @@ set -u  # Treat unset variables as an error when substituting
 
 TIMESTAMP=$(date +"%Y-%m-%d_%H-%M")
 HUMAN_TIMESTAMP=$(date "+%-d %B %Y, %H:%M")
-REPO_URL="git@github.com:hpcugent/vsc_user_docs.git"
+REPO_URL="git@github.com:hpcugent/vsc_user_docs" # The repository for which the script will generate the PR
+FORK_URL="git@github.com:lbarraga/vsc_user_docs" # The fork on which the script will run and create the PR from
 BASE_BRANCH="main"
 BRANCH_NAME="auto_update_modules_$TIMESTAMP"
 REPO_NAME="vsc_user_docs" # script available_modules.py requires this to be the name. Do not change.
@@ -58,7 +59,7 @@ main() {
   gh auth login --with-token < "$github_pat_file"
 
   # Clone the repository and create a new branch
-  git clone $REPO_URL "$REPO_PATH"
+  git clone $FORK_URL "$REPO_PATH"
   cd "$REPO_PATH"
   git checkout -b "$BRANCH_NAME"
 
@@ -77,10 +78,13 @@ main() {
   N_REMOVED_MODULES=$(git show --name-status HEAD | grep -e "^D.*\.md$" | wc -l)
 
   # Push the new branch to GitHub
-  gh repo set-default $REPO_URL
-  git push -u origin "$BRANCH_NAME"
+  git remote add fork $FORK_URL
+  git push fork "$BRANCH_NAME"
 
-  # Create a pull request using GitHub CLI
+  # Set the ugent repo as the default remote
+  gh repo set-default $REPO_URL
+
+  # Create a pull request using GitHub CLI. Pull request is automatically created into the default repository.
   gh pr create \
     --title "$PR_TITLE" \
     --body  "$(make_pr_body "$N_ADDED_MODULES" "$N_REMOVED_MODULES")" \
