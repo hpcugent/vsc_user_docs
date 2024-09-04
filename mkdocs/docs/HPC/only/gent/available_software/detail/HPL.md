@@ -17,13 +17,14 @@ To start using HPL, load one of these modules using a `module load` command like
 module load HPL/2.3-intel-2019b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:39:04 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HPL/2.3-intel-2019b|-|x|x|-|x|x|
-|HPL/2.3-iibff-2020b|-|x|-|-|-|-|
-|HPL/2.3-gobff-2020b|-|x|-|-|-|-|
-|HPL/2.3-foss-2023b|x|x|x|x|x|x|
-|HPL/2.3-foss-2019b|-|x|x|-|x|x|
-|HPL/2.0.15-intel-2022a-CUDA-11.7.0|x|-|-|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HPL/2.3-intel-2019b|-|x|x|-|x|-|x|
+|HPL/2.3-iibff-2020b|-|x|-|-|-|-|-|
+|HPL/2.3-gobff-2020b|-|x|-|-|-|-|-|
+|HPL/2.3-foss-2024a|x|x|x|x|x|x|x|
+|HPL/2.3-foss-2023b|x|x|x|x|x|-|x|
+|HPL/2.3-foss-2019b|-|x|x|-|x|-|x|
+|HPL/2.0.15-intel-2022a-CUDA-11.7.0|x|-|-|-|x|-|-|

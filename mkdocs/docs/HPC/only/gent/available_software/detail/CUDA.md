@@ -14,19 +14,20 @@ The overview below shows which CUDA installations are available per HPC-UGent Ti
 To start using CUDA, load one of these modules using a `module load` command like:
 
 ```shell
-module load CUDA/12.1.1
+module load CUDA/12.5.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:39:04 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CUDA/12.1.1|x|-|x|-|x|-|
-|CUDA/11.7.0|x|x|x|x|x|x|
-|CUDA/11.4.1|x|-|-|-|x|-|
-|CUDA/11.3.1|x|x|x|-|x|x|
-|CUDA/11.1.1-iccifort-2020.4.304|-|-|-|-|x|-|
-|CUDA/11.1.1-GCC-10.2.0|x|x|x|x|x|x|
-|CUDA/11.0.2-iccifort-2020.1.217|-|-|-|-|x|-|
-|CUDA/10.1.243-iccifort-2019.5.281|-|-|-|-|x|-|
-|CUDA/10.1.243-GCC-8.3.0|x|-|-|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CUDA/12.5.0|x|-|x|-|x|-|-|
+|CUDA/12.1.1|x|-|x|-|x|-|-|
+|CUDA/11.7.0|x|x|x|x|x|-|x|
+|CUDA/11.4.1|x|-|-|-|x|-|-|
+|CUDA/11.3.1|x|x|x|-|x|-|x|
+|CUDA/11.1.1-iccifort-2020.4.304|-|-|-|-|x|-|-|
+|CUDA/11.1.1-GCC-10.2.0|x|x|x|x|x|-|x|
+|CUDA/11.0.2-iccifort-2020.1.217|-|-|-|-|x|-|-|
+|CUDA/10.1.243-iccifort-2019.5.281|-|-|-|-|x|-|-|
+|CUDA/10.1.243-GCC-8.3.0|x|-|-|-|x|-|-|

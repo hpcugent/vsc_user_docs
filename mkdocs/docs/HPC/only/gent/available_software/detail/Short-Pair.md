@@ -17,8 +17,8 @@ To start using Short-Pair, load one of these modules using a `module load` comma
 module load Short-Pair/20170125-foss-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:39:04 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Short-Pair/20170125-foss-2021b|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Short-Pair/20170125-foss-2021b|x|x|x|-|x|-|x|

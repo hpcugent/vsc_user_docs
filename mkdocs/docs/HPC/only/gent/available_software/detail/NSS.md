@@ -14,18 +14,19 @@ The overview below shows which NSS installations are available per HPC-UGent Tie
 To start using NSS, load one of these modules using a `module load` command like:
 
 ```shell
-module load NSS/3.89.1-GCCcore-12.3.0
+module load NSS/3.94-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:39:04 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NSS/3.89.1-GCCcore-12.3.0|x|x|x|x|x|x|
-|NSS/3.85-GCCcore-12.2.0|x|x|x|x|x|x|
-|NSS/3.79-GCCcore-11.3.0|x|x|x|x|x|x|
-|NSS/3.69-GCCcore-11.2.0|x|x|x|x|x|x|
-|NSS/3.65-GCCcore-10.3.0|x|x|x|x|x|x|
-|NSS/3.57-GCCcore-10.2.0|x|x|x|x|x|x|
-|NSS/3.51-GCCcore-9.3.0|-|x|x|-|x|x|
-|NSS/3.45-GCCcore-8.3.0|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NSS/3.94-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|NSS/3.89.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|NSS/3.85-GCCcore-12.2.0|x|x|x|x|x|-|x|
+|NSS/3.79-GCCcore-11.3.0|x|x|x|x|x|-|x|
+|NSS/3.69-GCCcore-11.2.0|x|x|x|x|x|-|x|
+|NSS/3.65-GCCcore-10.3.0|x|x|x|x|x|-|x|
+|NSS/3.57-GCCcore-10.2.0|x|x|x|x|x|-|x|
+|NSS/3.51-GCCcore-9.3.0|-|x|x|-|x|-|x|
+|NSS/3.45-GCCcore-8.3.0|x|x|x|-|x|-|x|

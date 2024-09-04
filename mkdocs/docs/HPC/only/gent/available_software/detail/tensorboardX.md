@@ -17,13 +17,13 @@ To start using tensorboardX, load one of these modules using a `module load` com
 module load tensorboardX/2.6.2.2-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:39:04 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tensorboardX/2.6.2.2-foss-2023a|x|x|x|x|x|x|
-|tensorboardX/2.6.2.2-foss-2022b|x|x|x|x|x|x|
-|tensorboardX/2.5.1-foss-2022a|x|x|x|x|x|x|
-|tensorboardX/2.2-fosscuda-2020b-PyTorch-1.7.1|-|-|-|-|x|-|
-|tensorboardX/2.2-foss-2020b-PyTorch-1.7.1|-|x|x|x|x|x|
-|tensorboardX/2.1-fosscuda-2020b-PyTorch-1.7.1|-|-|-|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tensorboardX/2.6.2.2-foss-2023a|x|x|x|x|x|x|x|
+|tensorboardX/2.6.2.2-foss-2022b|x|x|x|x|x|-|x|
+|tensorboardX/2.5.1-foss-2022a|x|x|x|x|x|x|x|
+|tensorboardX/2.2-fosscuda-2020b-PyTorch-1.7.1|-|-|-|-|x|-|-|
+|tensorboardX/2.2-foss-2020b-PyTorch-1.7.1|-|x|x|x|x|-|x|
+|tensorboardX/2.1-fosscuda-2020b-PyTorch-1.7.1|-|-|-|-|x|-|-|

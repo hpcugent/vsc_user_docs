@@ -17,8 +17,8 @@ To start using SuperLU, load one of these modules using a `module load` command 
 module load SuperLU/5.2.2-intel-2020a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:39:04 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SuperLU/5.2.2-intel-2020a|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SuperLU/5.2.2-intel-2020a|-|x|x|-|x|-|x|

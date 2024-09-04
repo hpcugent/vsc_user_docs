@@ -17,10 +17,10 @@ To start using KMC, load one of these modules using a `module load` command like
 module load KMC/3.2.1-GCC-11.2.0-Python-2.7.18
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:39:04 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|KMC/3.2.1-GCC-11.2.0-Python-2.7.18|x|x|x|x|x|x|
-|KMC/3.2.1-GCC-11.2.0|x|x|x|-|x|x|
-|KMC/3.1.2rc1-GCC-8.3.0-Python-3.7.4|-|x|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|KMC/3.2.1-GCC-11.2.0-Python-2.7.18|x|x|x|x|x|-|x|
+|KMC/3.2.1-GCC-11.2.0|x|x|x|-|x|-|x|
+|KMC/3.1.2rc1-GCC-8.3.0-Python-3.7.4|-|x|x|-|x|-|-|

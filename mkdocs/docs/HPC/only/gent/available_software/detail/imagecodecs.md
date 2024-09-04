@@ -14,11 +14,12 @@ The overview below shows which imagecodecs installations are available per HPC-U
 To start using imagecodecs, load one of these modules using a `module load` command like:
 
 ```shell
-module load imagecodecs/2022.9.26-foss-2022a
+module load imagecodecs/2024.1.1-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:39:04 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|imagecodecs/2022.9.26-foss-2022a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|imagecodecs/2024.1.1-foss-2023a|x|x|x|x|x|-|x|
+|imagecodecs/2022.9.26-foss-2022a|x|x|x|x|x|-|x|

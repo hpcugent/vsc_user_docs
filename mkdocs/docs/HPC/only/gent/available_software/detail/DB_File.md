@@ -14,14 +14,15 @@ The overview below shows which DB_File installations are available per HPC-UGent
 To start using DB_File, load one of these modules using a `module load` command like:
 
 ```shell
-module load DB_File/1.858-GCCcore-11.3.0
+module load DB_File/1.859-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:39:04 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DB_File/1.858-GCCcore-11.3.0|x|x|x|x|x|x|
-|DB_File/1.857-GCCcore-11.2.0|x|x|x|x|x|x|
-|DB_File/1.855-GCCcore-10.2.0|-|x|x|x|x|x|
-|DB_File/1.835-GCCcore-9.3.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DB_File/1.859-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|DB_File/1.858-GCCcore-11.3.0|x|x|x|x|x|-|x|
+|DB_File/1.857-GCCcore-11.2.0|x|x|x|x|x|-|x|
+|DB_File/1.855-GCCcore-10.2.0|-|x|x|x|x|-|x|
+|DB_File/1.835-GCCcore-9.3.0|-|x|x|-|x|-|x|

@@ -17,12 +17,12 @@ To start using picard, load one of these modules using a `module load` command l
 module load picard/2.25.1-Java-11
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:39:04 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|picard/2.25.1-Java-11|x|x|x|x|x|x|
-|picard/2.25.0-Java-11|-|x|x|x|x|x|
-|picard/2.21.6-Java-11|-|x|x|-|x|x|
-|picard/2.21.1-Java-11|-|-|x|-|x|x|
-|picard/2.18.27-Java-1.8|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|picard/2.25.1-Java-11|x|x|x|x|x|-|x|
+|picard/2.25.0-Java-11|-|x|x|x|x|-|x|
+|picard/2.21.6-Java-11|-|x|x|-|x|-|x|
+|picard/2.21.1-Java-11|-|-|x|-|x|-|x|
+|picard/2.18.27-Java-1.8|-|-|-|-|-|-|x|

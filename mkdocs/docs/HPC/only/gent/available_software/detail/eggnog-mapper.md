@@ -17,9 +17,10 @@ To start using eggnog-mapper, load one of these modules using a `module load` co
 module load eggnog-mapper/2.1.10-foss-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:39:04 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|eggnog-mapper/2.1.10-foss-2020b|x|x|x|x|x|x|
-|eggnog-mapper/2.1.4-foss-2020b|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|eggnog-mapper/2.1.10-foss-2020b|x|x|x|x|x|-|x|
+|eggnog-mapper/2.1.7-foss-2021b|x|x|x|x|x|-|x|
+|eggnog-mapper/2.1.4-foss-2020b|-|x|x|x|x|-|x|

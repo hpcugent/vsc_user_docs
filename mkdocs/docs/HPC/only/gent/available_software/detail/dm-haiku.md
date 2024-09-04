@@ -14,11 +14,12 @@ The overview below shows which dm-haiku installations are available per HPC-UGen
 To start using dm-haiku, load one of these modules using a `module load` command like:
 
 ```shell
-module load dm-haiku/0.0.9-foss-2021a-CUDA-11.3.1
+module load dm-haiku/0.0.9-foss-2022a-CUDA-11.7.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:39:04 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|dm-haiku/0.0.9-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|dm-haiku/0.0.9-foss-2022a-CUDA-11.7.0|-|-|x|-|x|-|-|
+|dm-haiku/0.0.9-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|-|

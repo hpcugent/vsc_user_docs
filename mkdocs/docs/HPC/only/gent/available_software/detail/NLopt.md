@@ -14,18 +14,19 @@ The overview below shows which NLopt installations are available per HPC-UGent T
 To start using NLopt, load one of these modules using a `module load` command like:
 
 ```shell
-module load NLopt/2.7.1-GCCcore-12.3.0
+module load NLopt/2.7.1-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:39:04 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NLopt/2.7.1-GCCcore-12.3.0|x|x|x|x|x|x|
-|NLopt/2.7.1-GCCcore-12.2.0|x|x|x|x|x|x|
-|NLopt/2.7.1-GCCcore-11.3.0|x|x|x|x|x|x|
-|NLopt/2.7.0-GCCcore-11.2.0|x|x|x|x|x|x|
-|NLopt/2.7.0-GCCcore-10.3.0|x|x|x|x|x|x|
-|NLopt/2.6.2-GCCcore-10.2.0|x|x|x|x|x|x|
-|NLopt/2.6.1-GCCcore-9.3.0|-|x|x|-|x|x|
-|NLopt/2.6.1-GCCcore-8.3.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NLopt/2.7.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|NLopt/2.7.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|NLopt/2.7.1-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|NLopt/2.7.1-GCCcore-11.3.0|x|x|x|x|x|-|x|
+|NLopt/2.7.0-GCCcore-11.2.0|x|x|x|x|x|-|x|
+|NLopt/2.7.0-GCCcore-10.3.0|x|x|x|x|x|-|x|
+|NLopt/2.6.2-GCCcore-10.2.0|x|x|x|x|x|-|x|
+|NLopt/2.6.1-GCCcore-9.3.0|-|x|x|-|x|-|x|
+|NLopt/2.6.1-GCCcore-8.3.0|-|x|x|-|x|-|x|

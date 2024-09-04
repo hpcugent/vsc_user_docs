@@ -17,10 +17,10 @@ To start using Trim_Galore, load one of these modules using a `module load` comm
 module load Trim_Galore/0.6.6-GCC-10.2.0-Python-2.7.18
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:39:04 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Trim_Galore/0.6.6-GCC-10.2.0-Python-2.7.18|-|x|x|x|x|x|
-|Trim_Galore/0.6.5-GCCcore-8.3.0-Java-11-Python-3.7.4|-|x|x|-|x|x|
-|Trim_Galore/0.6.5-GCCcore-8.3.0-Java-11-Python-2.7.16|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Trim_Galore/0.6.6-GCC-10.2.0-Python-2.7.18|-|x|x|x|x|-|x|
+|Trim_Galore/0.6.5-GCCcore-8.3.0-Java-11-Python-3.7.4|-|x|x|-|x|-|x|
+|Trim_Galore/0.6.5-GCCcore-8.3.0-Java-11-Python-2.7.16|-|x|x|-|x|-|x|

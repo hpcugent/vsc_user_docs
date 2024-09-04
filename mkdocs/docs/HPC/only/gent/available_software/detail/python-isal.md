@@ -14,14 +14,15 @@ The overview below shows which python-isal installations are available per HPC-U
 To start using python-isal, load one of these modules using a `module load` command like:
 
 ```shell
-module load python-isal/1.1.0-GCCcore-11.3.0
+module load python-isal/1.1.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:39:04 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|python-isal/1.1.0-GCCcore-11.3.0|x|x|x|x|x|x|
-|python-isal/0.11.1-GCCcore-11.2.0|x|x|x|-|x|x|
-|python-isal/0.11.1-GCCcore-10.2.0|-|x|x|x|x|x|
-|python-isal/0.11.0-GCCcore-10.3.0|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|python-isal/1.1.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|python-isal/1.1.0-GCCcore-11.3.0|x|x|x|x|x|-|x|
+|python-isal/0.11.1-GCCcore-11.2.0|x|x|x|-|x|-|x|
+|python-isal/0.11.1-GCCcore-10.2.0|-|x|x|x|x|-|x|
+|python-isal/0.11.0-GCCcore-10.3.0|x|x|x|-|x|-|x|
