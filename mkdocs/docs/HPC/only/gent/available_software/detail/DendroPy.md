@@ -17,14 +17,14 @@ To start using DendroPy, load one of these modules using a `module load` command
 module load DendroPy/4.6.1-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:16:39 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DendroPy/4.6.1-GCCcore-12.3.0|x|x|x|x|x|x|
-|DendroPy/4.5.2-GCCcore-11.3.0|x|x|x|x|x|x|
-|DendroPy/4.5.2-GCCcore-11.2.0|x|x|x|-|x|x|
-|DendroPy/4.5.2-GCCcore-10.2.0-Python-2.7.18|-|x|x|x|x|x|
-|DendroPy/4.5.2-GCCcore-10.2.0|-|x|x|x|x|x|
-|DendroPy/4.4.0-GCCcore-9.3.0|-|x|x|-|x|x|
-|DendroPy/4.4.0-GCCcore-8.3.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DendroPy/4.6.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|DendroPy/4.5.2-GCCcore-11.3.0|x|x|x|x|x|x|x|
+|DendroPy/4.5.2-GCCcore-11.2.0|x|x|x|-|x|-|x|
+|DendroPy/4.5.2-GCCcore-10.2.0-Python-2.7.18|-|x|x|x|x|-|x|
+|DendroPy/4.5.2-GCCcore-10.2.0|-|x|x|x|x|-|x|
+|DendroPy/4.4.0-GCCcore-9.3.0|-|x|x|-|x|-|x|
+|DendroPy/4.4.0-GCCcore-8.3.0|-|x|x|-|x|-|x|

@@ -14,11 +14,12 @@ The overview below shows which gawk installations are available per HPC-UGent Ti
 To start using gawk, load one of these modules using a `module load` command like:
 
 ```shell
-module load gawk/5.1.0-GCC-10.2.0
+module load gawk/5.3.0-GCC-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:16:39 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gawk/5.1.0-GCC-10.2.0|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|gawk/5.3.0-GCC-12.3.0|x|x|x|x|x|x|x|
+|gawk/5.1.0-GCC-10.2.0|-|x|x|x|x|-|x|

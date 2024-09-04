@@ -17,9 +17,9 @@ To start using IsoSeq, load one of these modules using a `module load` command l
 module load IsoSeq/4.0.0-linux-x86_64
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:16:39 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|IsoSeq/4.0.0-linux-x86_64|x|x|x|x|x|x|
-|IsoSeq/3.8.2-linux-x86_64|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|IsoSeq/4.0.0-linux-x86_64|x|x|x|x|x|-|x|
+|IsoSeq/3.8.2-linux-x86_64|x|x|x|x|x|-|x|

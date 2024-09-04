@@ -17,9 +17,9 @@ To start using fsom, load one of these modules using a `module load` command lik
 module load fsom/20151117-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:16:39 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fsom/20151117-GCCcore-11.3.0|x|x|x|x|x|x|
-|fsom/20141119-GCCcore-10.2.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|fsom/20151117-GCCcore-11.3.0|x|x|x|x|x|-|x|
+|fsom/20141119-GCCcore-10.2.0|-|x|x|-|x|-|x|

@@ -14,11 +14,12 @@ The overview below shows which scrublet installations are available per HPC-UGen
 To start using scrublet, load one of these modules using a `module load` command like:
 
 ```shell
-module load scrublet/0.2.3-foss-2022a
+module load scrublet/0.2.3-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:16:39 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scrublet/0.2.3-foss-2022a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|scrublet/0.2.3-foss-2023a|x|x|x|x|x|x|x|
+|scrublet/0.2.3-foss-2022a|x|x|x|x|x|-|x|

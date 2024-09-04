@@ -17,8 +17,8 @@ To start using bcl-convert, load one of these modules using a `module load` comm
 module load bcl-convert/4.0.3-2el7.x86_64
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:16:39 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bcl-convert/4.0.3-2el7.x86_64|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|bcl-convert/4.0.3-2el7.x86_64|x|x|x|-|x|-|x|

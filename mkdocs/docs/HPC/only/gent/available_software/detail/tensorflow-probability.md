@@ -14,12 +14,13 @@ The overview below shows which tensorflow-probability installations are availabl
 To start using tensorflow-probability, load one of these modules using a `module load` command like:
 
 ```shell
-module load tensorflow-probability/0.19.0-foss-2022a
+module load tensorflow-probability/0.20.0-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:16:39 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tensorflow-probability/0.19.0-foss-2022a|x|x|x|x|x|x|
-|tensorflow-probability/0.14.0-foss-2021a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tensorflow-probability/0.20.0-foss-2023a|x|x|x|x|x|x|x|
+|tensorflow-probability/0.19.0-foss-2022a|x|x|x|x|x|-|x|
+|tensorflow-probability/0.14.0-foss-2021a|x|x|x|x|x|-|x|

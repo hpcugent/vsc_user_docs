@@ -14,11 +14,12 @@ The overview below shows which TOBIAS installations are available per HPC-UGent 
 To start using TOBIAS, load one of these modules using a `module load` command like:
 
 ```shell
-module load TOBIAS/0.12.12-foss-2021b
+module load TOBIAS/0.16.1-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:16:39 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TOBIAS/0.12.12-foss-2021b|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|TOBIAS/0.16.1-foss-2023a|x|x|x|x|x|x|x|
+|TOBIAS/0.12.12-foss-2021b|x|x|x|-|x|-|x|

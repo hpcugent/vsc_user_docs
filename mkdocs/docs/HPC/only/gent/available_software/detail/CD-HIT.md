@@ -17,13 +17,14 @@ To start using CD-HIT, load one of these modules using a `module load` command l
 module load CD-HIT/4.8.1-iccifort-2019.5.281
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:16:39 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CD-HIT/4.8.1-iccifort-2019.5.281|-|x|x|-|x|x|
-|CD-HIT/4.8.1-GCC-12.2.0|x|x|x|x|x|x|
-|CD-HIT/4.8.1-GCC-11.2.0|x|x|x|-|x|x|
-|CD-HIT/4.8.1-GCC-10.2.0|-|x|x|x|x|x|
-|CD-HIT/4.8.1-GCC-9.3.0|-|x|x|-|x|x|
-|CD-HIT/4.8.1-GCC-8.3.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CD-HIT/4.8.1-iccifort-2019.5.281|-|x|x|-|x|-|x|
+|CD-HIT/4.8.1-GCC-12.3.0|x|x|x|x|x|x|x|
+|CD-HIT/4.8.1-GCC-12.2.0|x|x|x|x|x|-|x|
+|CD-HIT/4.8.1-GCC-11.2.0|x|x|x|-|x|-|x|
+|CD-HIT/4.8.1-GCC-10.2.0|-|x|x|x|x|-|x|
+|CD-HIT/4.8.1-GCC-9.3.0|-|x|x|-|x|-|x|
+|CD-HIT/4.8.1-GCC-8.3.0|-|x|x|-|x|-|x|

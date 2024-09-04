@@ -17,8 +17,8 @@ To start using ProBiS, load one of these modules using a `module load` command l
 module load ProBiS/20230403-gompi-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:16:39 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ProBiS/20230403-gompi-2022b|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ProBiS/20230403-gompi-2022b|x|x|x|x|x|-|x|

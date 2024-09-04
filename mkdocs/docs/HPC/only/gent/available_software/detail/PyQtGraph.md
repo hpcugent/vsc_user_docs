@@ -14,12 +14,13 @@ The overview below shows which PyQtGraph installations are available per HPC-UGe
 To start using PyQtGraph, load one of these modules using a `module load` command like:
 
 ```shell
-module load PyQtGraph/0.13.3-foss-2022a
+module load PyQtGraph/0.13.7-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:16:39 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyQtGraph/0.13.3-foss-2022a|x|x|x|x|x|x|
-|PyQtGraph/0.12.3-foss-2021a|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyQtGraph/0.13.7-foss-2023a|x|x|x|x|x|x|x|
+|PyQtGraph/0.13.3-foss-2022a|x|x|x|x|x|-|x|
+|PyQtGraph/0.12.3-foss-2021a|-|x|x|-|x|-|x|

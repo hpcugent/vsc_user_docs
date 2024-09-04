@@ -17,8 +17,8 @@ To start using pagmo, load one of these modules using a `module load` command li
 module load pagmo/2.17.0-foss-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:16:39 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pagmo/2.17.0-foss-2020b|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pagmo/2.17.0-foss-2020b|-|x|x|x|x|-|x|

@@ -14,12 +14,13 @@ The overview below shows which virtualenv installations are available per HPC-UG
 To start using virtualenv, load one of these modules using a `module load` command like:
 
 ```shell
-module load virtualenv/20.24.6-GCCcore-13.2.0
+module load virtualenv/20.26.2-GCCcore-13.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:16:39 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|virtualenv/20.24.6-GCCcore-13.2.0|x|x|x|x|x|x|
-|virtualenv/20.23.1-GCCcore-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|virtualenv/20.26.2-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|virtualenv/20.24.6-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|virtualenv/20.23.1-GCCcore-12.3.0|x|x|x|x|x|x|x|

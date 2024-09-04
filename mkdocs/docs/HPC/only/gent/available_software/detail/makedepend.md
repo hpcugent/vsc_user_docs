@@ -17,9 +17,9 @@ To start using makedepend, load one of these modules using a `module load` comma
 module load makedepend/1.0.6-GCCcore-10.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 16:16:39 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|makedepend/1.0.6-GCCcore-10.3.0|-|x|x|-|x|x|
-|makedepend/1.0.6-GCCcore-8.3.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|makedepend/1.0.6-GCCcore-10.3.0|-|x|x|-|x|-|x|
+|makedepend/1.0.6-GCCcore-8.3.0|-|x|x|-|x|-|x|
