@@ -17,9 +17,9 @@ To start using LASTZ, load one of these modules using a `module load` command li
 module load LASTZ/1.04.22-GCC-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 18:13:18 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LASTZ/1.04.22-GCC-12.3.0|x|x|x|x|x|x|
-|LASTZ/1.04.03-foss-2019b|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LASTZ/1.04.22-GCC-12.3.0|x|x|x|x|x|-|x|
+|LASTZ/1.04.03-foss-2019b|-|x|x|-|x|-|x|

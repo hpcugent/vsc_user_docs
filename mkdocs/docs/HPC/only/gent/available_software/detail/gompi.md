@@ -14,19 +14,20 @@ The overview below shows which gompi installations are available per HPC-UGent T
 To start using gompi, load one of these modules using a `module load` command like:
 
 ```shell
-module load gompi/2023b
+module load gompi/2024a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 18:13:18 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gompi/2023b|x|x|x|x|x|x|
-|gompi/2023a|x|x|x|x|x|x|
-|gompi/2022b|x|x|x|x|x|x|
-|gompi/2022a|x|x|x|x|x|x|
-|gompi/2021b|x|x|x|x|x|x|
-|gompi/2021a|x|x|x|x|x|x|
-|gompi/2020b|x|x|x|x|x|x|
-|gompi/2020a|-|x|x|x|x|x|
-|gompi/2019b|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|gompi/2024a|x|x|x|x|x|x|x|
+|gompi/2023b|x|x|x|x|x|x|x|
+|gompi/2023a|x|x|x|x|x|x|x|
+|gompi/2022b|x|x|x|x|x|-|x|
+|gompi/2022a|x|x|x|x|x|x|x|
+|gompi/2021b|x|x|x|x|x|-|x|
+|gompi/2021a|x|x|x|x|x|-|x|
+|gompi/2020b|x|x|x|x|x|-|x|
+|gompi/2020a|-|x|x|x|x|-|x|
+|gompi/2019b|x|x|x|x|x|-|x|

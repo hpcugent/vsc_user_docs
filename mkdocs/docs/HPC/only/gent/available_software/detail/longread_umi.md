@@ -14,11 +14,12 @@ The overview below shows which longread_umi installations are available per HPC-
 To start using longread_umi, load one of these modules using a `module load` command like:
 
 ```shell
-module load longread_umi/0.3.2-foss-2020b
+module load longread_umi/0.3.2-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 18:13:18 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|longread_umi/0.3.2-foss-2020b|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|longread_umi/0.3.2-foss-2023a|x|x|x|x|x|x|x|
+|longread_umi/0.3.2-foss-2020b|-|x|x|x|x|-|x|

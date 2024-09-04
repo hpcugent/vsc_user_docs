@@ -17,8 +17,8 @@ To start using Gerris, load one of these modules using a `module load` command l
 module load Gerris/20131206-gompi-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 18:13:18 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Gerris/20131206-gompi-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Gerris/20131206-gompi-2023a|x|x|x|x|x|-|x|

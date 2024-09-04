@@ -17,9 +17,9 @@ To start using NVHPC, load one of these modules using a `module load` command li
 module load NVHPC/21.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 18:13:18 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NVHPC/21.2|x|-|x|-|x|-|
-|NVHPC/20.9|-|-|-|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NVHPC/21.2|x|-|x|-|x|-|-|
+|NVHPC/20.9|-|-|-|-|x|-|-|

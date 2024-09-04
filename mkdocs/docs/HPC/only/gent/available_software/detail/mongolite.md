@@ -17,10 +17,10 @@ To start using mongolite, load one of these modules using a `module load` comman
 module load mongolite/2.3.0-foss-2020b-R-4.0.4
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 18:13:18 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mongolite/2.3.0-foss-2020b-R-4.0.4|-|x|x|x|x|x|
-|mongolite/2.3.0-foss-2020b-R-4.0.3|-|x|x|x|x|x|
-|mongolite/2.3.0-foss-2020a-R-4.0.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|mongolite/2.3.0-foss-2020b-R-4.0.4|-|x|x|x|x|-|x|
+|mongolite/2.3.0-foss-2020b-R-4.0.3|-|x|x|x|x|-|x|
+|mongolite/2.3.0-foss-2020a-R-4.0.0|-|x|x|-|x|-|x|

@@ -17,9 +17,9 @@ To start using g2clib, load one of these modules using a `module load` command l
 module load g2clib/1.6.0-GCCcore-9.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 18:13:18 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|g2clib/1.6.0-GCCcore-9.3.0|-|x|x|-|x|x|
-|g2clib/1.6.0-GCCcore-8.3.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|g2clib/1.6.0-GCCcore-9.3.0|-|x|x|-|x|-|x|
+|g2clib/1.6.0-GCCcore-8.3.0|-|x|x|-|x|-|x|

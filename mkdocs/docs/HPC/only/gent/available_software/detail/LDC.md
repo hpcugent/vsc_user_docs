@@ -17,11 +17,11 @@ To start using LDC, load one of these modules using a `module load` command like
 module load LDC/1.30.0-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 18:13:18 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LDC/1.30.0-GCCcore-11.3.0|x|x|x|x|x|x|
-|LDC/1.25.1-GCCcore-10.2.0|-|x|x|x|x|x|
-|LDC/1.24.0-x86_64|x|x|x|x|x|x|
-|LDC/0.17.6-x86_64|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LDC/1.30.0-GCCcore-11.3.0|x|x|x|x|x|-|x|
+|LDC/1.25.1-GCCcore-10.2.0|-|x|x|x|x|-|x|
+|LDC/1.24.0-x86_64|x|x|x|x|x|-|x|
+|LDC/0.17.6-x86_64|-|x|x|x|x|-|x|

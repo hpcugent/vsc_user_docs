@@ -17,9 +17,9 @@ To start using DIRAC, load one of these modules using a `module load` command li
 module load DIRAC/19.0-intel-2020a-Python-2.7.18-mpi-int64
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 18:13:18 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DIRAC/19.0-intel-2020a-Python-2.7.18-mpi-int64|-|x|x|-|x|-|
-|DIRAC/19.0-intel-2020a-Python-2.7.18-int64|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DIRAC/19.0-intel-2020a-Python-2.7.18-mpi-int64|-|x|x|-|x|-|-|
+|DIRAC/19.0-intel-2020a-Python-2.7.18-int64|-|x|x|-|x|-|x|

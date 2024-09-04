@@ -17,8 +17,8 @@ To start using samblaster, load one of these modules using a `module load` comma
 module load samblaster/0.1.26-GCC-10.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 18:13:18 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|samblaster/0.1.26-GCC-10.2.0|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|samblaster/0.1.26-GCC-10.2.0|-|x|x|x|x|-|x|

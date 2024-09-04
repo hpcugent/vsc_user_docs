@@ -17,11 +17,11 @@ To start using TRF, load one of these modules using a `module load` command like
 module load TRF/4.09.1-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 18:13:18 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TRF/4.09.1-GCCcore-11.3.0|x|x|x|x|x|x|
-|TRF/4.09.1-GCCcore-11.2.0|x|x|x|-|x|x|
-|TRF/4.09.1-GCCcore-10.2.0|x|x|x|x|x|x|
-|TRF/4.09-linux64|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|TRF/4.09.1-GCCcore-11.3.0|x|x|x|x|x|-|x|
+|TRF/4.09.1-GCCcore-11.2.0|x|x|x|-|x|-|x|
+|TRF/4.09.1-GCCcore-10.2.0|x|x|x|x|x|-|x|
+|TRF/4.09-linux64|-|-|-|-|-|-|x|

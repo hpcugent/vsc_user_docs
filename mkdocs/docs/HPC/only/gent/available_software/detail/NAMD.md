@@ -17,9 +17,9 @@ To start using NAMD, load one of these modules using a `module load` command lik
 module load NAMD/2.14-foss-2023a-mpi
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 18:13:18 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NAMD/2.14-foss-2023a-mpi|x|x|x|x|x|x|
-|NAMD/2.14-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NAMD/2.14-foss-2023a-mpi|x|x|x|x|x|-|x|
+|NAMD/2.14-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|-|

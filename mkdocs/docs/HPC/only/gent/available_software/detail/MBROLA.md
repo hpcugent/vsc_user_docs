@@ -17,8 +17,8 @@ To start using MBROLA, load one of these modules using a `module load` command l
 module load MBROLA/3.3-GCCcore-9.3.0-voices-20200330
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 18:13:18 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MBROLA/3.3-GCCcore-9.3.0-voices-20200330|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MBROLA/3.3-GCCcore-9.3.0-voices-20200330|-|x|x|-|x|-|x|

@@ -17,8 +17,8 @@ To start using GIMP, load one of these modules using a `module load` command lik
 module load GIMP/2.10.24-GCC-10.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 18:13:18 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GIMP/2.10.24-GCC-10.3.0|-|x|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GIMP/2.10.24-GCC-10.3.0|-|x|x|-|x|-|-|

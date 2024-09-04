@@ -17,8 +17,8 @@ To start using SMV, load one of these modules using a `module load` command like
 module load SMV/6.7.17-iccifort-2020.4.304
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 18:13:18 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SMV/6.7.17-iccifort-2020.4.304|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SMV/6.7.17-iccifort-2020.4.304|-|x|x|-|x|-|x|

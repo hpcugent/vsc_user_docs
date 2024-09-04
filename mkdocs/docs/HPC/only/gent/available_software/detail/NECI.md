@@ -17,9 +17,9 @@ To start using NECI, load one of these modules using a `module load` command lik
 module load NECI/20230620-foss-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 18:13:18 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NECI/20230620-foss-2022b|x|x|x|x|x|x|
-|NECI/20220711-foss-2022a|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NECI/20230620-foss-2022b|x|x|x|x|x|-|x|
+|NECI/20220711-foss-2022a|-|x|x|x|x|-|x|

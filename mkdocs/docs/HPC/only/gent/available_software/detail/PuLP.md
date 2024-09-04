@@ -17,9 +17,9 @@ To start using PuLP, load one of these modules using a `module load` command lik
 module load PuLP/2.8.0-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Wed, 04 Sep 2024 at 18:13:18 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PuLP/2.8.0-foss-2023a|x|x|x|x|x|x|
-|PuLP/2.7.0-foss-2022b|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PuLP/2.8.0-foss-2023a|x|x|x|x|x|x|x|
+|PuLP/2.7.0-foss-2022b|x|x|x|x|x|-|x|
