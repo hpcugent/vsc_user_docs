@@ -300,6 +300,11 @@ Note that it is still preferred to submit a software installation request,
 as the software installed by the HPC team will be optimized for the HPC environment.
 This can lead to dramatic performance improvements.
 
+!!! warning 
+    Don't install software using `pip install --user` or `pip install --target` with `$PYTHONPATH`
+    as this can lead to conflicts with the software installed by the HPC team. 
+    If you need to install software in your home directory, use a [Python virtual environment](./setting_up_python_virtual_environments.md).
+
 ### Is my connection compromised? Remote host identification has changed
 
 On Monday 25 April 2022, the login nodes received an update to RHEL8.
