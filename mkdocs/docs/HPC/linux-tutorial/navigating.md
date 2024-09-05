@@ -129,6 +129,7 @@ $ pwd
 
 ## Inspecting files
 
+
 The `file` command can be used to inspect what type of file you're dealing with:
 
 ```

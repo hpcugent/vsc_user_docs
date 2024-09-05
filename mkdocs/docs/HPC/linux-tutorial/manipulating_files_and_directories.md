@@ -80,6 +80,7 @@ rm filename
 !!! danger
     There are NO backups, there is no 'trash bin'. If you remove files/directories, they are gone.
 
+
 ## Permissions
 
 Each file and directory has particular *permissions* set on it, which

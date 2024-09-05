@@ -4,6 +4,7 @@ To get started with the HPC-UGent infrastructure, you need to obtain a
 VSC account, see [HPC manual](../account.md). 
 Details on connecting to the HPC infrastructure are available in
 
+
 ## Getting help
 
 To get help:
@@ -104,15 +105,17 @@ HOME=/user/home/gent/vsc400/vsc40000
     This is known as a pipeline. Here, `env | sort` will take the output of `env` and use it as the input for `sort`. 
     This can be extremely useful for chaining together commands and processing data.
 
-You can also use the `grep` command to search for a piece of text. The
-following command will output all VSC-specific variable names and their
-values:
+
+You can also use the `grep` command to search for a piece of
+text. The following command will output all VSC-specific variable names
+and their values:
 
 ```
 $ env | sort | grep VSC
 ```
 
 ### Defining variables
+
 
 It is also possible to define your own variables. This is done with the `export` command:
 
@@ -140,6 +143,7 @@ potential spaces in the value.
 If you've made a mess of your environment, you shouldn't waste too much
 time trying to fix it. Just log out and log in again, and you will be
 given a pristine environment.
+
 
 ## Basic system information
 
