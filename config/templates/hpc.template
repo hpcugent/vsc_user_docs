@@ -54,6 +54,7 @@ nav:
       - MATLAB: MATLAB.md
       - mympirun: mympirun.md
       - OpenFOAM: openFOAM.md
+      - Python: python.md
       - Python virtual environments: setting_up_python_virtual_environments.md
   - FAQ:
       - Frequently Asked Questions: FAQ.md
