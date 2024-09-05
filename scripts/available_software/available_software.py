@@ -54,9 +54,13 @@ def main():
 
     current_dir = Path(__file__).resolve()
     project_name = 'vsc_user_docs'
-    root_dir = next(
+    root_dirs = [
         p for p in current_dir.parents if p.parts[-1] == project_name
-    )
+    ]
+
+    assert len(root_dirs) > 0, f"This script must be called from a child directory of '{project_name}'"
+
+    root_dir = root_dirs[0]
     path_data_dir = os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/data")
 
     # Generate the JSON overviews and detail markdown pages.
