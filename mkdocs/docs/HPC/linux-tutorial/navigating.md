@@ -131,12 +131,13 @@ $ pwd
 
 The `file` command can be used to inspect what type of file you're dealing with:
 
-<pre><code>$ <b>file afile.txt</b>
+```
+$ file afile.txt
 afile.txt: ASCII text
 
-$ <b>file some_directory</b> 
+$ file some_directory 
 some_directory: directory
-</code></pre>
+```
 
 ## Finding files/directories: "find"
 

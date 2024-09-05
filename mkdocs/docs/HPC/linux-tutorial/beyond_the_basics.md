@@ -21,24 +21,26 @@ channels:
 
 `>` writes the (`stdout`) output of a command to a file and *overwrites*
 whatever was in the file before.
-<pre><code>$ <b>echo hello > somefile</b>
-$ <b>cat somefile</b>
+```
+$ echo hello > somefile
+$ cat somefile
 hello
-$ <b>echo hello2 > somefile</b>
-$ <b>cat somefile</b>
+$ echo hello2 > somefile
+$ cat somefile
 hello2
-</code></pre>
+```
 
 `>>` appends the (`stdout`) output of a command to a file; it does not
 clobber whatever was in the file before:
-<pre><code>$ <b>echo hello > somefile</b>
-$ <b>cat somefile</b> 
+```
+$ echo hello > somefile
+$ cat somefile 
 hello
-$ <b>echo hello2 >> somefile</b>
+$ echo hello2 >> somefile
 $ cat somefile
 hello
 hello2
-</code></pre>
+```
 
 ### Reading from `stdin`
 
@@ -51,29 +53,32 @@ command and store the results in a file, so you don't have to repeat it
 while you refine your command line. For example, if you have a large
 directory structure you might save a list of all the files you're
 interested in and then reading in the file list when you are done:
-<pre><code>$ <b>find . -name .txt > files</b>
-$ <b>xargs grep banana < files</b>
-</code></pre>
+```
+$ find . -name .txt > files
+$ xargs grep banana < files
+```
 
 ### Redirecting `stderr`
 
 To redirect the `stderr` output (warnings, messages), you can use `2>`,
 just like `>`
-<pre><code>$ <b>ls one.txt nosuchfile.txt 2> errors.txt</b>
+```
+$ ls one.txt nosuchfile.txt 2> errors.txt
 one.txt
-$ <b>cat errors.txt</b>
+$ cat errors.txt
 ls: nosuchfile.txt: No such file or directory
-</code></pre>
+```
 
 ### Combining `stdout` and `stderr`
 
 To combine both output channels (`stdout` and `stderr`) and redirect
 them to a single file, you can use `&>`
-<pre><code>$ <b>ls one.txt nosuchfile.txt &> ls.out</b>
-$ <b>cat ls.out</b>
+```
+$ ls one.txt nosuchfile.txt &> ls.out
+$ cat ls.out
 ls: nosuchfile.txt: No such file or directory
 one.txt
-</code></pre>
+```
 
 ## Command piping
 
@@ -82,20 +87,27 @@ together to create useful results. The core of these is the pipe: `|`.
 For example, to see the number of files in a directory, we can pipe the
 (`stdout`) output of `ls` to `wc` (**w**ord **c**ount, but can also be used to
 count the number of lines with the `-l` flag).
-<pre><code>$ <b>ls | wc -l</b>
+```
+$ ls | wc -l
 42
-</code></pre>
+```
 
 A common pattern is to pipe the output of a command to `less` so you
 can examine or search the output:
-<pre><code>$ <b>find . | less</b></code></pre>
+```
+$ find . | less
+```
 
 Or to look through your command history:
-<pre><code>$ <b>history | less</b></code></pre>
+```
+$ history | less
+```
 
 You can put multiple pipes in the same line. For example, which `cp`
 commands have we run?
-<pre><code>$ <b>history | grep cp | less</b></code></pre>
+```
+$ history | grep cp | less
+```
 
 ## Shell expansion
 
@@ -124,13 +136,19 @@ The shell will expand certain things, including:
 `ps` lists processes running. By default, it will only show you the
 processes running in the local shell. To see all of your processes
 running on the system, use:
-<pre><code>$ <b>ps -fu $USER</b></code></pre>
+```
+$ ps -fu $USER
+```
 
 To see all the processes:
-<pre><code>$ <b>ps -elf</b></code></pre>
+```
+$ ps -elf
+```
 
 To see all the processes in a forest view, use:
-<pre><code>$ <b>ps auxf</b></code></pre>
+```
+$ ps auxf
+```
 
 The last two will spit out a lot of data, so get in the habit of piping
 it to `less`.
@@ -148,17 +166,19 @@ together as we will see in the next section.
 this using the `kill` command. Kill will send a message
 ([SIGINT](https://en.wikipedia.org/wiki/Unix_signal#POSIX_signals)) to
 the process to ask it to stop.
-<pre><code>$ <b>kill 1234</b>
-$ <b>kill $(pgrep misbehaving_process)</b>
-</code></pre>
+```
+$ kill 1234
+$ kill $(pgrep misbehaving_process)
+```
 
 Usually, this ends the process, giving it the opportunity to flush data
 to files, etc. However, if the process ignored your signal, you can send
 it a different message
 ([SIGKILL](https://en.wikipedia.org/wiki/Unix_signal#POSIX_signals))
 which the OS will use to unceremoniously terminate the process:
-<pre><code>$ <b>kill -9 1234</b>
-</code></pre>
+```
+$ kill -9 1234
+```
 
 ### `top`
 
@@ -186,22 +206,26 @@ performance analysis](http://brendangregg.com).
 `ulimit` is a utility to get or set user limits on the machine. For
 example, you may be limited to a certain number of processes. To see all
 the limits that have been set, use:
-<pre><code>$ <b>ulimit -a</b></code></pre>
+```
+$ ulimit -a
+```
 
 ## Counting: `wc`
 
 To count the number of lines, words, and characters (or bytes) in a file, use `wc` (**w**ord **c**ount):
-<pre><code>$ <b>wc example.txt</b>
+```
+$ wc example.txt
       90     468     3189   example.txt
-</code></pre>
+```
 
 The output indicates that the file named `example.txt` contains 90
 lines, 468 words, and 3189 characters/bytes.
 
 To only count the number of lines, use `wc -l`:
-<pre><code>$ <b>wc -l example.txt</b>
+```
+$ wc -l example.txt
       90    example.txt
-</code></pre>
+```
 
 ## Searching file contents: `grep`
 
@@ -209,10 +233,11 @@ To only count the number of lines, use `wc -l`:
 "globally search a regular expression and print" but it's entered the
 common computing lexicon and people use 'grep' to mean searching for
 anything. To use grep, you give a pattern and a list of files.
-<pre><code>$ <b>grep banana fruit.txt</b>
-$ <b>grep banana fruit_bowl1.txt fruit_bowl2.txt</b>
-$ <b>grep banana fruit*txt</b>
-</code></pre>
+```
+$ grep banana fruit.txt
+$ grep banana fruit_bowl1.txt fruit_bowl2.txt
+$ grep banana fruit*txt
+```
 
 `grep` also lets you search for [Regular
 Expressions](https://en.wikipedia.org/wiki/Regular_expression), but
@@ -226,7 +251,9 @@ lines where a string occurs and `cut` can pull out a particular field.
 For example, to pull the first column (`-f 1`, the first **f**ield) from (an
 unquoted) CSV (comma-separated values, so `-d ','`: **d**elimited by `,`)
 file, you can use the following:
-<pre><code>$ <b>cut -f 1 -d ',' mydata.csv</b></code></pre>
+```
+$ cut -f 1 -d ',' mydata.csv
+```
 
 ## `sed`
 
@@ -235,7 +262,9 @@ piped stream. In this way, it works like grep, but instead of just
 searching, it can also edit files. This is like "Search and Replace" in
 a text editor. `sed` has a lot of features, but almost everyone uses the
 extremely basic version of string replacement:
-<pre><code>$ <b>sed 's/oldtext/newtext/g' myfile.txt</b></code></pre>
+```
+$ sed 's/oldtext/newtext/g' myfile.txt
+```
 
 By default, sed will just print the results. If you want to edit the
 file inplace, use `-i`, but be very careful that the results will be
@@ -254,12 +283,16 @@ whitespace. For example, if you have padded fields then
 might be an uncertain number of spaces between each field. `awk` does
 better whitespace splitting. So, pulling out the fourth field in a
 whitespace delimited file is as follows:
-<pre><code>$ <b>awk '{print $4}' mydata.dat</b></code></pre>
+```
+$ awk '{print $4}' mydata.dat
+```
 
 You can use `-F ':'` to change the delimiter (F for field separator).
 
 The next example is used to sum numbers from a field:
-<pre><code>$ <b>awk -F ',' '{sum += $1} END {print sum}' mydata.csv</b></code></pre>
+```
+$ awk -F ',' '{sum += $1} END {print sum}' mydata.csv
+```
 ## Basic Shell Scripting
 
 The basic premise of a script is to execute automate the execution of
@@ -356,9 +389,10 @@ done
 Subcommands are used all the time in shell scripts. What they
 do is storing the output of a command in a variable. So this can later
 be used in a conditional or a loop for example.
-<pre><code>CURRENTDIR=`pwd`  # using backticks
+```
+CURRENTDIR=`pwd`  # using backticks
 CURRENTDIR=$(pwd)  # recommended (easier to type)
-</code></pre>
+```
 
 In the above example you can see the 2 different methods of using a
 subcommand. `pwd` will output the current working directory, and its
@@ -372,14 +406,18 @@ error. How do you properly deal with these situations?
 
 Firstly a useful thing to know for debugging and testing is that you can
 run any command like this:
-<pre><code>command 2>&1 output.log   # one single output file, both output and errors</code></pre>
+```
+command 2>&1 output.log   # one single output file, both output and errors
+```
 
 If you add `2>&1 output.log` at the end of any command, it will combine
 `stdout` and `stderr`, outputting it into a single file named
 `output.log`.
 
 If you want regular and error output separated you can use:
-<pre><code>command > output.log 2> output.err  # errors in a separate file</code></pre>
+```
+command > output.log 2> output.err  # errors in a separate file
+```
 
 this will write regular output to `output.log` and error output to
 `output.err`.
@@ -388,7 +426,9 @@ You can then look for the errors with `less` or search for specific text
 with `grep`.
 
 In scripts, you can use:
-<pre><code>set -e</code></pre>
+```
+set -e
+```
 
 
 This will tell the shell to stop executing any subsequent commands when

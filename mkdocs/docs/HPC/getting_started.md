@@ -45,11 +45,13 @@ it is recommended to make use of the `ssh` command in a terminal to get the most
 
 Assuming you have already generated SSH keys in the previous step ([Getting Access](#getting-access)), and that they are in a default location, you should now be able to login by running the following command:
 
-<pre><code>ssh {{userid}}@{{loginnode}}</code></pre>
+```shell
+ssh {{userid}}@{{loginnode}}
+```
 
 !!! Warning "User your own VSC account id"
     
-    Replace <b>{{userid}}</b> with your VSC account id (see <https://account.vscentrum.be>)
+    Replace **{{userid}}** with your VSC account id (see <https://account.vscentrum.be>)
 
 !!! Tip
 
@@ -94,17 +96,23 @@ Upload both files (`run.sh` and `tensorflow-mnist.py`) to your **home directory*
 {%- else %}
 
 On your local machine you can run:
-<pre><code>curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/tensorflow_mnist.py
+```shell
+curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/tensorflow_mnist.py
 curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/run.sh
-</code></pre>
+```
 
 Using the `scp` command, the files can be copied from your local host to your *home directory* (`~`) on the remote host (HPC).
-<pre><code>scp tensorflow_mnist.py run.sh {{userid}}{{ loginnode }}:~ </code></pre>
-<pre><code>ssh  {{userid}}@{{ loginnode }} </code></pre>
+```shell
+scp tensorflow_mnist.py run.sh {{userid}}{{ loginnode }}:~
+```
+
+```shell
+ssh  {{userid}}@{{ loginnode }}
+```
 
 !!! Warning "User your own VSC account id"
     
-    Replace <b>{{userid}}</b> with your VSC account id (see <https://account.vscentrum.be>)
+    Replace **{{userid}}** with your VSC account id (see <https://account.vscentrum.be>)
 
 !!! Info
 
@@ -114,7 +122,7 @@ Using the `scp` command, the files can be copied from your local host to your *h
 
 When running `ls` in your session on the {{hpcinfra}}, you should see the two files listed in your home directory (`~`):
 
-```shell
+```
 $ ls ~
 run.sh tensorflow_mnist.py
 ```
@@ -131,17 +139,14 @@ and the steps that should be executed to run the calculation.
 
 Our job script looks like this:
 
-<center>-- run.sh --</center>
-
-```bash
+```bash title="run.sh"
 #!/bin/bash
 
 module load TensorFlow/2.11.0-foss-2022a
 
 python tensorflow_mnist.py
-
 ```
-<sub>As you can see this job script will run the Python script named **tensorflow_mnist.py**.</sub>
+As you can see this job script will run the Python script named **tensorflow_mnist.py**.
 
 
 The jobs you submit are per default executed on **cluser/{{defaultcluster}}**, you can swap to another cluster by issuing the following command.
@@ -162,7 +167,7 @@ module swap cluster/{{othercluster}}
 
 This job script can now be submitted to the cluster's job system for execution, using the qsub (**q**ueue **sub**mit) command:
 
-```shell
+```
 $ qsub run.sh
 {{jobid}}
 ```
@@ -186,18 +191,20 @@ Your job is put into a queue before being executed, so it may take a while befor
 (see [when will my job start?](running_batch_jobs.md#when-will-my-job-start) for scheduling policy).
 
 You can get an overview of the active jobs using the `qstat` command:
-<pre><code>$ qstat
+```
+$ qstat
 Job ID     Name             User            Time Use S Queue
 ---------- ---------------- --------------- -------- - -------
-{{jobid}}     run.sh           {{userid}}        0:00:00  <b style="color:orange">Q</b> {{othercluster}}
-</code></pre> 
+{{jobid}}     run.sh           {{userid}}        0:00:00  Q {{othercluster}}
+```
 
 Eventually, after entering `qstat` again you should see that your job has started running:
-<pre><code>$ qstat
+```
+$ qstat
 Job ID     Name             User            Time Use S Queue
 ---------- ---------------- --------------- -------- - -------
-{{jobid}}     run.sh           {{userid}}        0:00:01  <b style="color:green">R</b> {{othercluster}}
-</code></pre> 
+{{jobid}}     run.sh           {{userid}}        0:00:01  R {{othercluster}}
+```
 
 If you don't see your job in the output of the `qstat` command anymore, your job has likely completed.
 
@@ -220,7 +227,7 @@ By default located in the directory where you issued `qsub`.
 
 {%- endif %}
 
-In our example when running <code>ls</code> in the current directory you should see 2 new files:
+In our example when running `ls` in the current directory you should see 2 new files:
  
 - **run.sh.o{{jobid}}**, containing *normal output messages* produced by job {{jobid}};
 - **run.sh.e{{jobid}}**, containing *errors and warnings* produced by job {{jobid}}.
@@ -231,7 +238,7 @@ In our example when running <code>ls</code> in the current directory you should 
 
 !!! Warning "Use your own job ID"
 
-    Replace <b>{{jobid}}</b> with the jobid you got from the `qstat` command (see above) or simply look for added files in your current directory by running `ls`.
+    Replace **{{jobid}}** with the jobid you got from the `qstat` command (see above) or simply look for added files in your current directory by running `ls`.
 
 When examining the contents of ``run.sh.o{{jobid}}`` you will see something like this:
 ```

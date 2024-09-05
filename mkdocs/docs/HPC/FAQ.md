@@ -16,7 +16,7 @@ Overview of HPC-UGent Tier-2 [infrastructure]({{ hpc_infrastructure_url }})
 
 ### How many cores/nodes should I request?
 
-An important factor in this question is how well your task is being parallellized:
+An important factor in this question is how well your task is being parallelized:
 does it actually run faster with more resources? You can test this yourself:
 start with 4 cores, then 8, then 16... The execution time should each time be reduced to
 around half of what it was before. You can also try this with full nodes: 1 node, 2 nodes.
@@ -171,7 +171,7 @@ Not all file locations perform the same. In particular, the `$VSC_HOME` and `$VS
 directories are, relatively, very slow to access. Your jobs should rather use the
 `$VSC_SCRATCH` directory, or other fast locations (depending on your needs), described
 in [Where to store your data on the HPC](../running_jobs_with_input_output_data/#where-to-store-your-data-on-the-hpc).
-As an example how do this: The job can copy the input to the scratch directory, then execute
+As an example how to do this: The job can copy the input to the scratch directory, then execute
 the computations, and lastly copy the output back to the data directory.
 Using the home and data directories is especially a problem when UGent isn't your home institution:
 your files may be stored, for example, in Leuven while you're running a job in Ghent.
@@ -217,12 +217,13 @@ See the explanation about how jobs get prioritized in [When will my job start](.
 
 {% else %}
 
-In practice it's
+In practice, it's
 impossible to predict when your job(s) will start, since most currently
-running jobs will finish before their requested walltime expires, and
-new jobs by may be submitted by other users that are assigned a higher
-priority than your job(s). You can use the `showstart` command. For more
-information, see .
+running jobs will finish before their requested walltime expires. 
+New jobs may be submitted by other users that are assigned a higher
+priority than your job(s). 
+You can use the `squeue --start` command to get an estimated start time for your jobs in the queue.
+Keep in mind that this is just an estimate.
 
 {% endif %}
 
@@ -282,10 +283,11 @@ of files so other users can access the data. For example, the following
 command will enable a user named "otheruser" to read the file named
 `dataset.txt`. See
 
-<pre><code>$ <b>setfacl -m u:otheruser:r dataset.txt</b>
-$ <b>ls -l dataset.txt</b>
+```
+$ setfacl -m u:otheruser:r dataset.txt
+$ ls -l dataset.txt
 -rwxr-x---+ 2 {{userid}} mygroup      40 Apr 12 15:00 dataset.txt
-</code></pre>
+```
 
 For more information about `chmod` or `setfacl`, see
 [Linux tutorial](linux-tutorial/manipulating_files_and_directories.md#changing-permissions-chmod).
@@ -316,6 +318,12 @@ Please send an e-mail to {{hpcinfo}} that includes:
 -   The purpose for which you want to install the software
 
 {% endif %}
+
+If the software is a Python package, you can manually install it in a virtual environment. 
+More information can be found [here](./setting_up_python_virtual_environments.md).
+Note that it is still preferred to submit a software installation request, 
+as the software installed by the HPC team will be optimized for the HPC environment.
+This can lead to dramatic performance improvements.
 
 ### Is my connection compromised? Remote host identification has changed
 

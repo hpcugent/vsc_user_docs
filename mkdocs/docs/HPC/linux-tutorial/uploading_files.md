@@ -24,8 +24,9 @@ sbatch: error: instead of expected UNIX line breaks (\n).
 
 To fix this problem, you should run the ``dos2unix`` command on the file:
 
-<pre><code>$ <b>dos2unix filename</b>
-</code></pre>
+```
+$ dos2unix filename
+```
 
 ## Symlinks for data/scratch
 [//]: # (sec:symlink-for-data)
@@ -40,15 +41,16 @@ This will create 4 symbolic links {% if OS == windows %}
 (they're like "shortcuts" on your desktop)
 {% endif %} pointing to the respective storages:
 
-<pre><code>$ <b>cd $HOME</b>
-$ <b>ln -s $VSC_SCRATCH scratch</b>
-$ <b>ln -s $VSC_DATA data</b>
-$ <b>ls -l scratch data</b>
+```
+$ cd $HOME
+$ ln -s $VSC_SCRATCH scratch
+$ ln -s $VSC_DATA data
+$ ls -l scratch data
 lrwxrwxrwx 1 vsc40000 vsc40000 31 Mar 27 2009 data ->
     /user/data/gent/vsc400/vsc40000
 lrwxrwxrwx 1 vsc40000 vsc40000 34 Jun 5 2012 scratch ->
     /user/scratch/gent/vsc400/vsc40000
-</code></pre>
+```
  
 
 
@@ -83,7 +85,9 @@ Installing `rsync` is the easiest on Linux: it comes pre-installed with
 a lot of distributions.
 
 For example, to copy a folder with lots of CSV files:
-<pre><code>$ <b>rsync -rzv testfolder vsc40000@login.hpc.ugent.be:data/</b></code></pre>
+```
+$ rsync -rzv testfolder vsc40000@login.hpc.ugent.be:data/
+```
 
 will copy the folder `testfolder` and its contents to `$VSC_DATA`, 
 assuming the `data` symlink is present in your home directory, see 
@@ -98,7 +102,9 @@ To copy large files using `rsync`, you can use the `-P` flag: it enables
 both showing of progress and resuming partially downloaded files.
 
 To copy files to your local computer, you can also use `rsync`:
-<pre><code>$ <b>rsync -rzv vsc40000@login.hpc.ugent.be:data/bioset local_folder</b></code></pre>
+```
+$ rsync -rzv vsc40000@login.hpc.ugent.be:data/bioset local_folder
+```
 This will copy the folder `bioset` and its contents on `$VSC_DATA`
 to a local folder named `local_folder`.
 

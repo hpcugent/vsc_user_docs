@@ -17,7 +17,7 @@ To get help:
     ```
 2.  use Google
 
-3. contact <a href="mailto:{{hpcinfo}}">{{hpcinfo}}</a> in case
+3. contact [{{hpcinfo}}](mailto:{{hpcinfo}}) in case
 of problems or questions (even for basic things!)
 
 ### Errors
@@ -27,7 +27,7 @@ will be error output or a message explaining you this. Read this
 carefully and try to act on it. Try googling the error first to find any
 possible solution, but if you can't come up with something in 15
 minutes, don't hesitate to mail 
-<a href="mailto:{{hpcinfo}}">{{hpcinfo}}</a>.
+[{{hpcinfo}}](mailto:{{hpcinfo}})
 
 ## Basic terminal usage
 
@@ -36,8 +36,11 @@ The basic interface is the so-called shell prompt, typically ending with
 
 You use the shell by executing commands, and hitting
 `<enter>`. For example: 
-<pre><code>$<b> echo hello 
-</b> hello </code></pre>
+
+```
+$ echo hello 
+hello 
+```
 
 You can go to the start or end of the command line using
 `Ctrl-A` or `Ctrl-E`.
@@ -50,12 +53,13 @@ To go through previous commands, use `<up>` and
 A powerful feature is that you can "search" through your command
 history, either using the `history` command, or using
 `Ctrl-R`: 
-<pre><code>$<b> history</b>
+```
+$ history
     1 echo hello
 
 # hit Ctrl-R, type 'echo' 
 (reverse-i-search)`echo': echo hello
-</code></pre>
+```
 
 ### Stopping commands
 
@@ -73,9 +77,10 @@ They can be thought of as placeholders for things we need to remember.
 For example, to print the path to your home directory, we can use the
 shell variable named `HOME`:
 
-<pre><code>$<b> echo $HOME</b> 
+```
+$ echo $HOME 
 /user/home/gent/vsc400/vsc40000
-</code></pre>
+```
 
 This prints the value of this variable.
 
@@ -87,10 +92,12 @@ For a full overview of defined environment variables in your current
 session, you can use the `env` command. You can sort this
 output with `sort` to make it easier to search in:
 
-<pre><code>$<b> env | sort</b> 
+```
+$ env | sort 
 ...
 HOME=/user/home/gent/vsc400/vsc40000 
-... </code></pre>
+... 
+```
 
 !!! info
     In Linux, the pipe operator (`|`) is used to pass output from one command as input to another. 
@@ -101,13 +108,17 @@ You can also use the `grep` command to search for a piece of text. The
 following command will output all VSC-specific variable names and their
 values:
 
-<pre><code>$ <b>env | sort | grep VSC</b></code></pre>
+```
+$ env | sort | grep VSC
+```
 
 ### Defining variables
 
-It is also possible to define your own variables. this is done with the `export` command:
+It is also possible to define your own variables. This is done with the `export` command:
 
-<pre><code>$ <b>export MYVARIABLE="value"</b></code></pre>
+```
+$ export MYVARIABLE="value"
+```
 
 
 !!! note
@@ -116,7 +127,9 @@ It is also possible to define your own variables. this is done with the `export`
 
 
 If we then do 
-<pre><code>$ <b>echo $MYVARIABLE</b></code></pre>
+```
+$ echo $MYVARIABLE
+```
 
 this will output `value`. Note that the quotes are not
 included, they were only used when defining the variable to escape
@@ -134,20 +147,20 @@ Basic information about the system you are logged into can be obtained
 in a variety of ways.
 
 We limit ourselves to determining the hostname: 
-<pre><code>$ <b>hostname</b> 
+```
+$ hostname 
 gligar01.gligar.os
 
-$ <b>echo $HOSTNAME</b> 
+$ echo $HOSTNAME 
 gligar01.gligar.os 
-</code></pre>
+```
 
 And querying some basic information about the Linux kernel:
-<pre><code>$ <b>uname -a </b>
+```
+$ uname -a 
 Linux gligar01.gligar.os 2.6.32-573.8.1.el6.ug.x86_64 #1 SMP Mon Nov 16 15:12:09
-    CET 2015 x86_64 x86_64 x86_64 GNU/Linux
-</code></pre>
-
-
+	CET 2015 x86_64 x86_64 x86_64 GNU/Linux 
+```
 
 ## Exercises
 

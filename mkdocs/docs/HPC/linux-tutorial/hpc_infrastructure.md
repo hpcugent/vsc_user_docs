@@ -20,16 +20,17 @@ Space is limited on the cluster's storage. To check your quota, see section
 
 To figure out where your quota is being spent, the `du` (**d**isk **u**sage)
 command can come in useful:
-<pre><code>$ <b>du -sh test</b>
+```
+$ du -sh test
 59M test
-</code></pre>
+```
 
 Do *not* (frequently) run `du` on directories where large amounts of
 data are stored, since that will:
 
 1.  take a long time
 
-2.  result in increased load on the shared storage since (the metadata
+2.  result in an increased load on the shared storage since (the metadata
     of) every file in those directories will have to be inspected.
 
 ## Modules

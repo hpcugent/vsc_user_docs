@@ -21,29 +21,33 @@ different `$VSC_*` variables.
 
 Filenames should **not** contain any spaces! If you have a long filename you
 should use underscores or dashes (e.g., `very_long_filename`).
-<pre><code>$ <b>cat some file</b>
+```
+$ cat some file
 No such file or directory 'some'
-</code></pre>
+```
 
 Spaces are permitted, however they result in surprising behaviour. To
 cat the file `'some file'` as above, you can escape the space with a
 backslash ("`\ `") or you can put the filename in quotes:
-<pre><code>$ <b>cat some\ file</b>
+```
+$ cat some\ file
 ...
-$ <b>cat "some file"</b>
+$ cat "some file"
 ...
-</code></pre>
+```
 
 This is especially error-prone if you are piping results of `find`:
-<pre><code>$ <b>find . -type f | xargs cat</b>
+```
+$ find . -type f | xargs cat
 No such file or directory name ’some’
 No such file or directory name ’file’
-</code></pre>
+```
 
 This can be worked around using the `-print0` flag:
-<pre><code>$ <b>find . -type f -print0 | xargs -0 cat</b>
+```
+$ find . -type f -print0 | xargs -0 cat
 ...
-</code></pre>
+```
 
 But, this is tedious, and you can prevent errors by simply colouring
 within the lines and not using spaces in filenames.
@@ -69,14 +73,18 @@ be careful to make sure that the environment variable exists. If you
 mistype an environment variable then it will resolve into a blank string.
 This means the following resolves to `rm -r ~/*` which will remove every
 file in your home directory!
-<pre><code>$ <b>rm -r ~/$PROJETC/*</b></code></pre>
+```
+$ rm -r ~/$PROJETC/*
+```
 
 ### Typing dangerous commands
 A good habit when typing dangerous commands is to precede the line with
 `#`, the comment character. This will let you type out the command
 without fear of accidentally hitting enter and running something
 unintended.
-<pre><code>$ <b>#rm -r ~/$POROJETC/*</b></code></pre>
+```
+$ #rm -r ~/$POROJETC/*
+```
 Then you can go back to the beginning of the line (`Ctrl-A`) and remove
 the first character (`Ctrl-D`) to run the command. You can also just
 press enter to put the command in your history so you can come back to
@@ -89,31 +97,36 @@ variables).
 
 After copying files from a windows machine, a file might look funny when
 looking at it on the cluster.
-<pre><code>$ <b>cat script.sh</b>
+```
+$ cat script.sh
 #!/bin/bash^M
 #PBS -l nodes^M
 ...
-</code></pre>
+```
 
 Or you can get errors like:
-<pre><code>$ <b>qsub fibo.pbs</b>
+```
+$ qsub fibo.pbs
 qsub: script is written in DOS/Windows text format
-</code></pre>
+```
 
 See section [dos2unix](uploading_files.md#dos2unix) to fix these errors with `dos2unix`.
 
 {% endif %}
 
 ### Permissions
-<pre><code>$ <b>ls -l script.sh # File with correct permissions</b>
+```
+$ ls -l script.sh # File with correct permissions
 -rwxr-xr-x 1 vsc40000 vsc40000 2983 Jan 30 09:13 script.sh
-$ <b>ls -l script.sh # File with incorrect permissions</b>
+$ ls -l script.sh # File with incorrect permissions
 -rw-r--r-- 1 vsc40000 vsc40000 2983 Jan 30 09:13 script.sh
-</code></pre>
+```
 
 Before submitting the script, you'll need to add execute permissions to
 make sure it can be executed:
-<pre><code>$ <b>chmod +x script_name.sh</b></code></pre>
+```
+$ chmod +x script_name.sh
+```
 
 ## Help
 
@@ -126,13 +139,15 @@ consider the error as one thing, and won't show results just containing
 these words in random order.
 
 If you need help about a certain command, you should consult its so-called "man page":
-<pre><code>$ <b>man command</b></code></pre>
+```
+$ man command
+```
 
 This will open the manual of this command. This manual contains detailed
 explanation of all the options the command has. Exiting the manual is
 done by pressing 'q'.
 
-**Don't be afraid to contact <a href="mailto:{{hpcinfo}}">{{hpcinfo}}</a>. They are here to help and will do so for even the 
+**Don't be afraid to contact <{{hpcinfo}}>. They are here to help and will do so for even the 
 smallest of problems!**
 
 # More information
