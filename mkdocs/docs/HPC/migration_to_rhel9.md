@@ -1,20 +1,28 @@
 
-# Migration ro RHEL9 operation system (Tier-2)
+# Migration to RHEL9 operation system (Tier-2)
 
-During the second half of 2024 we will migrate the oldest HPC-UGent Tier-2 clusters that are using RHEL 8 as operating system to **RHEL9 (Red Hat Enterprise Linux 9)**.
-This includes clusters skitty, joltik, doduo, accelgor, donphan and gallade (see also the [infrastructure overview](https://www.ugent.be/hpc/en/infrastructure)), as well as the Tier-2 login nodes.
+During the second half of 2024 we will migrate the HPC-UGent Tier-2 clusters that 
+are using RHEL 8 as operating system to **RHEL9 (Red Hat Enterprise Linux 9)**.
+This includes clusters skitty, joltik, doduo, accelgor, donphan and gallade 
+(see also the [infrastructure overview](https://www.ugent.be/hpc/en/infrastructure)), 
+as well as the Tier-2 login nodes.
 
 ## Motivation
 
-Migrating to RHEL8 is done to bring all clusters in line with the most recent cluster that are already running RHEL9 (shinx).
+Migrating to RHEL8 is done to bring all clusters in line with the most recent 
+cluster that are already running RHEL9 (shinx).
 
-This makes the maintenance of the HPC-UGent Tier-2 infrastructure significantly easier, since we only need to take into account a single operating system version going forward.
+This makes the maintenance of the HPC-UGent Tier-2 infrastructure significantly easier, 
+since we only need to take into account a single operating system version going forward.
 
-It will also bring you the latest versions in operating system software, with more features and improved security.
+It will also bring you the latest versions in operating system software, with more 
+features and improved security.
 
 ## Impact on the login nodes
 
-As a general rule, your login node should match the operating system of the cluster you are running on. To make this more tranparent, you will be prompted when loading a cluster with a different operation system.
+As a general rule, your login node should match the operating system of the cluster 
+you are running on. To make this more transparent, you will be prompted when loading 
+a cluster with a different operation system.
 
     module swap cluster/shinx
 
@@ -30,29 +38,39 @@ As a general rule, your login node should match the operating system of the clus
 
 Initially there will be only one RHEL 9 login node. As needed a second one will be added.
 
-When the default cluster (doduo) migrates to RHEL 9 the corresponding login nodes will also become default (when you do `ssh vsc4xxxx@login.hpc.ugent.be`). When they are nog longer needed the old RHEL 8 login nodes will be shut down.
+When the default cluster (doduo) migrates to RHEL 9 the corresponding login nodes 
+will also become default (when you do `ssh vsc4xxxx@login.hpc.ugent.be`). 
+When they are nog longer needed the old RHEL 8 login nodes will be shut down.
 
 ### Limits
 
-To encourage only using the login nodes as an entry portal to the HPC-UGent infrastructure, user limits will be enforced on the RHEL9 login nodes.
+To encourage only using the login nodes as an entry portal to the HPC-UGent infrastructure, 
+user limits will be enforced on the RHEL9 login nodes.
 
 This includes (per user):
 * max. of 2 CPU's in use;
 * max. 8 GB of memory in use;
 
-For more intensive tasks you can use the [interative and debug clusters](https://docs.hpc.ugent.be/interactive_debug/) through the [web portal](https://docs.hpc.ugent.be/web_portal/).
+For more intensive tasks you can use the 
+[interative and debug clusters](https://docs.hpc.ugent.be/interactive_debug/) 
+through the [web portal](https://docs.hpc.ugent.be/web_portal/).
 
 ## Impact on central software stack
 
-The migration to RHEL8 as operating system should not impact your workflow, everything will basically be working as it did before (incl. job submission, etc.).
+The migration to RHEL8 as operating system should not impact your workflow, 
+everything will basically be working as it did before (incl. job submission, etc.).
 
 However, there will be impact on the availability of software that is made available via modules.
 
-**Software that was installed with an older compiler toolchain will no longer be available once the clusters have been updated to RHEL9.**
+**Software that was installed with an older compiler toolchain will no 
+longer be available once the clusters have been updated to RHEL9.**
 
-This includes all software installations on top of a toolchain that is older than foss/2023a, gompi/2023a, intel/2023a, iimpi/2023a, GCC(core)/12.3.0.
+This includes all software installations on top of a toolchain that is older than 
+`foss/2023a`, `gompi/2023a`, `intel/2023a`, `iimpi/2023a`, `GCC(core)/12.3.0`.
 
-The `module` command will produce a clear warning when you are loading modules that are using a toolchain that will no longer be available after the cluster has been migrated to RHEL8.
+The `module` command will produce a clear warning when you are loading modules 
+that are using a toolchain that will no longer be available after the cluster 
+has been migrated to RHEL8.
 for example:
 
     foss/2019a:
@@ -85,11 +103,16 @@ for example:
 
     If you have any questions, please contact hpc@ugent.be .
 
-If you require software that is currently only available with an older toolchain on the HPC-UGent Tier-2 clusters that are still running RHEL8, check via "module avail" if a more recent version is installed that you can switch to, or submit a [software installation request](https://www.ugent.be/hpc/en/support/software-installation-request) so we can provide a more recent installation of that software which you can adopt.
+If you require software that is currently only available with an older toolchain 
+on the HPC-UGent Tier-2 clusters that are still running RHEL8, 
+check via `module avail` if a more recent version is installed that you can switch to, 
+or submit a [software installation request](https://www.ugent.be/hpc/en/support/software-installation-request) 
+so we can provide a more recent installation of that software which you can adopt.
 
 ## Planning
 
-We plan to migrate the HPC-UGent Tier-2 clusters that are still using RHEL 8 to RHEL 9 one by one, following the schedule outlined below.
+We plan to migrate the HPC-UGent Tier-2 clusters that are still 
+using RHEL 8 to RHEL 9 one by one, following the schedule outlined below.
 
 | ***cluster*** | ***migration start*** | ***migration completed on*** |
 | --- | ---- | --- |
@@ -97,8 +120,10 @@ We plan to migrate the HPC-UGent Tier-2 clusters that are still using RHEL 8 to 
 | joltik | October 2024 | |
 | accelgor | November 2024 | |
 | gallade | December 2024 | |
-| donphan | january 2025 | |
-| doduo (default cluster) | january 2025 | |
-| login nodes | january 2025 | |
+| donphan | February 2025 | |
+| doduo (default cluster) | February 2025 | |
+| login nodes switch | February 2025 | |
+
+Donphan, doduo and the login node switch will be done at the same time.
 
 We will keep this page up to date when more specific dates have been planned.
