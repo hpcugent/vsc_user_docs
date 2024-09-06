@@ -3,7 +3,7 @@
 
 During the second half of 2024 we will migrate the HPC-UGent Tier-2 clusters that 
 are using RHEL 8 as operating system to **RHEL9 (Red Hat Enterprise Linux 9)**.
-This includes clusters skitty, joltik, doduo, accelgor, donphan and gallade 
+This includes clusters `skitty`, `joltik`, `doduo`, `accelgor`, `donphan` and `gallade` 
 (see also the [infrastructure overview](https://www.ugent.be/hpc/en/infrastructure)), 
 as well as the Tier-2 login nodes.
 
