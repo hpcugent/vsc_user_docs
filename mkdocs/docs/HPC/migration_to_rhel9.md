@@ -44,16 +44,17 @@ When they are no longer needed the old RHEL 8 login nodes will be shut down.
 
 ### Limits
 
-To encourage only using the login nodes as an entry portal to the HPC-UGent infrastructure, 
-user limits will be enforced on the RHEL9 login nodes.
+To encourage only using the login nodes as an entry point to the HPC-UGent infrastructure, 
+user limits will be enforced on the RHEL9 login nodes. (This was already the case for the
+RHEL8 login nodes, but the limits are a bit stricter now.)
 
 This includes (per user):
-* max. of 2 CPU's in use;
-* max. 8 GB of memory in use;
+* max. of 2 CPU's in use
+* max. 8 GB of memory in use
 
 For more intensive tasks you can use the 
 [interative and debug clusters](https://docs.hpc.ugent.be/interactive_debug/) 
-through the [web portal](https://docs.hpc.ugent.be/web_portal/).
+through the [web portal](https://login.hpc.ugent.be).
 
 ## Impact on central software stack
 
@@ -70,8 +71,8 @@ This includes all software installations on top of a toolchain that is older tha
 
 The `module` command will produce a clear warning when you are loading modules 
 that are using a toolchain that will no longer be available after the cluster 
-has been migrated to RHEL8.
-for example:
+has been migrated to RHEL9.
+For example:
 
     foss/2019a:
        ___________________________________
