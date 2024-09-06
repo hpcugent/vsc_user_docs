@@ -110,6 +110,9 @@ check via `module avail` if a more recent version is installed that you can swit
 or submit a [software installation request](https://www.ugent.be/hpc/en/support/software-installation-request) 
 so we can provide a more recent installation of that software which you can adopt.
 
+It is a good idea to test your software on `shinx` to be sure if it still works. 
+We will provide more nodes to test on in the future.
+
 ## Planning
 
 We plan to migrate the HPC-UGent Tier-2 clusters that are still 
@@ -117,7 +120,7 @@ using RHEL 8 to RHEL 9 one by one, following the schedule outlined below.
 
 | ***cluster*** | ***migration start*** | ***migration completed on*** |
 | --- | ---- | --- |
-| skitty | September 2024 | |
+| skitty | 30th of September 2024 | |
 | joltik | October 2024 | |
 | accelgor | November 2024 | |
 | gallade | December 2024 | |
