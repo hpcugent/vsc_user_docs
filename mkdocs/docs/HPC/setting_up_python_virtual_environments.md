@@ -1,5 +1,7 @@
 # Python Virtual Environments (venv's)
 
+This [link](./foo.md) does not work.
+
 ## Introduction
 
 A Python virtual environment ("venv" for short)
