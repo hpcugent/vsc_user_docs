@@ -5,7 +5,7 @@ During the second half of 2024 we will migrate the HPC-UGent Tier-2 clusters tha
 are using RHEL 8 as operating system to **RHEL9 (Red Hat Enterprise Linux 9)**.
 This includes clusters `skitty`, `joltik`, `doduo`, `accelgor`, `donphan` and `gallade` 
 (see also the [infrastructure overview](https://www.ugent.be/hpc/en/infrastructure)), 
-as well as the Tier-2 login nodes.
+as well as switching the Tier-2 login nodes to new ones running RHEL9.
 
 ## Motivation
 
@@ -20,9 +20,9 @@ features and improved security.
 
 ## Impact on the login nodes
 
-As a general rule, your login node should match the operating system of the cluster 
+As a general rule, the OS of your login node should match the operating system of the cluster 
 you are running on. To make this more transparent, you will be prompted when loading 
-a cluster with a different operation system.
+a cluster module with a different operation system.
 
     module swap cluster/shinx
 
@@ -31,7 +31,7 @@ a cluster with a different operation system.
     2) env/slurm/doduo => env/slurm/shinx     4) env/vsc/doduo => env/vsc/shinx
 
     We advise you to log in to a RHEL 9 login node when using the shinx cluster.
-    The banette cluster is using RHEL 9 as operating system,
+    The shinx cluster is using RHEL 9 as operating system,
     while the login node you are logged in to is using RHEL 8.
     To avoid problems with testing installed software or submitting jobs,
     it is recommended to switch to a RHEL 9 login node by running 'ssh login9'.
@@ -40,7 +40,7 @@ Initially there will be only one RHEL 9 login node. As needed a second one will 
 
 When the default cluster (doduo) migrates to RHEL 9 the corresponding login nodes 
 will also become default (when you do `ssh vsc4xxxx@login.hpc.ugent.be`). 
-When they are nog longer needed the old RHEL 8 login nodes will be shut down.
+When they are no longer needed the old RHEL 8 login nodes will be shut down.
 
 ### Limits
 
