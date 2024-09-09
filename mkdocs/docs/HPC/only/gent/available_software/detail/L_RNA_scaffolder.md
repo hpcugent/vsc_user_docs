@@ -17,8 +17,8 @@ To start using L_RNA_scaffolder, load one of these modules using a `module load`
 module load L_RNA_scaffolder/20190530-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|L_RNA_scaffolder/20190530-GCC-11.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|L_RNA_scaffolder/20190530-GCC-11.3.0|x|x|x|x|x|-|x|

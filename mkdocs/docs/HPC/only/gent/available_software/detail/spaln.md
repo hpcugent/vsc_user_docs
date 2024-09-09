@@ -17,11 +17,11 @@ To start using spaln, load one of these modules using a `module load` command li
 module load spaln/2.4.13f-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|spaln/2.4.13f-GCC-11.3.0|x|x|x|x|x|x|
-|spaln/2.4.12-GCC-11.2.0|x|x|x|x|x|x|
-|spaln/2.4.12-GCC-10.2.0|x|x|x|x|x|x|
-|spaln/2.4.03-iccifort-2019.5.281|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|spaln/2.4.13f-GCC-11.3.0|x|x|x|x|x|-|x|
+|spaln/2.4.12-GCC-11.2.0|x|x|x|x|x|-|x|
+|spaln/2.4.12-GCC-10.2.0|x|x|x|x|x|-|x|
+|spaln/2.4.03-iccifort-2019.5.281|-|x|x|-|x|-|x|

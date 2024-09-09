@@ -14,11 +14,12 @@ The overview below shows which HDBSCAN installations are available per HPC-UGent
 To start using HDBSCAN, load one of these modules using a `module load` command like:
 
 ```shell
-module load HDBSCAN/0.8.29-foss-2022a
+module load HDBSCAN/0.8.38.post1-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HDBSCAN/0.8.29-foss-2022a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HDBSCAN/0.8.38.post1-foss-2023a|x|x|x|x|x|x|x|
+|HDBSCAN/0.8.29-foss-2022a|x|x|x|x|x|-|x|

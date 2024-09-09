@@ -17,8 +17,8 @@ To start using GFF3-toolkit, load one of these modules using a `module load` com
 module load GFF3-toolkit/2.1.0-foss-2022a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GFF3-toolkit/2.1.0-foss-2022a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GFF3-toolkit/2.1.0-foss-2022a|x|x|x|x|x|-|x|

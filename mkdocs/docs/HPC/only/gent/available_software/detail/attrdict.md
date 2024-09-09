@@ -17,8 +17,8 @@ To start using attrdict, load one of these modules using a `module load` command
 module load attrdict/2.0.1-GCCcore-8.3.0-Python-3.7.4
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|attrdict/2.0.1-GCCcore-8.3.0-Python-3.7.4|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|attrdict/2.0.1-GCCcore-8.3.0-Python-3.7.4|-|x|x|-|x|-|x|

@@ -17,9 +17,9 @@ To start using FASTX-Toolkit, load one of these modules using a `module load` co
 module load FASTX-Toolkit/0.0.14-GCC-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FASTX-Toolkit/0.0.14-GCC-11.3.0|x|x|x|x|x|x|
-|FASTX-Toolkit/0.0.14-GCC-9.3.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FASTX-Toolkit/0.0.14-GCC-11.3.0|x|x|x|x|x|-|x|
+|FASTX-Toolkit/0.0.14-GCC-9.3.0|-|x|x|-|x|-|x|

@@ -17,8 +17,8 @@ To start using py3Dmol, load one of these modules using a `module load` command 
 module load py3Dmol/2.0.1.post1-GCCcore-11.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|py3Dmol/2.0.1.post1-GCCcore-11.3.0|x|-|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|py3Dmol/2.0.1.post1-GCCcore-11.3.0|x|x|x|x|x|-|x|

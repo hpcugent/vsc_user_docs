@@ -17,10 +17,10 @@ To start using CmdStanR, load one of these modules using a `module load` command
 module load CmdStanR/0.7.1-foss-2023a-R-4.3.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CmdStanR/0.7.1-foss-2023a-R-4.3.2|x|x|x|x|x|x|
-|CmdStanR/0.5.2-foss-2022a-R-4.2.1|x|x|x|x|x|x|
-|CmdStanR/0.5.0-foss-2021b-R-4.1.2|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CmdStanR/0.7.1-foss-2023a-R-4.3.2|x|x|x|x|x|x|x|
+|CmdStanR/0.5.2-foss-2022a-R-4.2.1|x|x|x|x|x|-|x|
+|CmdStanR/0.5.0-foss-2021b-R-4.1.2|x|x|x|-|x|-|x|

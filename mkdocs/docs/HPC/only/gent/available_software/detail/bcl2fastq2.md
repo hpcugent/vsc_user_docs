@@ -14,12 +14,13 @@ The overview below shows which bcl2fastq2 installations are available per HPC-UG
 To start using bcl2fastq2, load one of these modules using a `module load` command like:
 
 ```shell
-module load bcl2fastq2/2.20.0-GCC-11.2.0
+module load bcl2fastq2/2.20.0-GCC-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bcl2fastq2/2.20.0-GCC-11.2.0|x|x|x|-|x|x|
-|bcl2fastq2/2.20.0-GCC-8.3.0|-|x|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|bcl2fastq2/2.20.0-GCC-12.2.0|x|x|x|x|x|x|x|
+|bcl2fastq2/2.20.0-GCC-11.2.0|x|x|x|-|x|-|x|
+|bcl2fastq2/2.20.0-GCC-8.3.0|-|x|x|-|x|-|-|

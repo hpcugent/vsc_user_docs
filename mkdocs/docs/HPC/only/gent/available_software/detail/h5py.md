@@ -14,26 +14,27 @@ The overview below shows which h5py installations are available per HPC-UGent Ti
 To start using h5py, load one of these modules using a `module load` command like:
 
 ```shell
-module load h5py/3.9.0-foss-2023a
+module load h5py/3.11.0-foss-2023b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|h5py/3.9.0-foss-2023a|x|x|x|x|x|x|
-|h5py/3.8.0-foss-2022b|x|x|x|x|x|x|
-|h5py/3.7.0-intel-2022a|x|x|x|x|x|x|
-|h5py/3.7.0-foss-2022a|x|x|x|x|x|x|
-|h5py/3.6.0-intel-2021b|x|x|x|-|x|x|
-|h5py/3.6.0-foss-2021b|x|x|x|x|x|x|
-|h5py/3.2.1-gomkl-2021a|x|x|x|-|x|x|
-|h5py/3.2.1-foss-2021a|x|x|x|x|x|x|
-|h5py/3.1.0-intel-2020b|-|x|x|-|x|x|
-|h5py/3.1.0-fosscuda-2020b|x|-|-|-|x|-|
-|h5py/3.1.0-foss-2020b|x|x|x|x|x|x|
-|h5py/2.10.0-intel-2020a-Python-3.8.2|x|x|x|x|x|x|
-|h5py/2.10.0-intel-2020a-Python-2.7.18|-|x|x|-|x|x|
-|h5py/2.10.0-intel-2019b-Python-3.7.4|-|x|x|-|x|x|
-|h5py/2.10.0-foss-2020a-Python-3.8.2|-|x|x|-|x|x|
-|h5py/2.10.0-foss-2019b-Python-3.7.4|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|h5py/3.11.0-foss-2023b|x|x|x|x|x|x|x|
+|h5py/3.9.0-foss-2023a|x|x|x|x|x|x|x|
+|h5py/3.8.0-foss-2022b|x|x|x|x|x|x|x|
+|h5py/3.7.0-intel-2022a|x|x|x|x|x|-|x|
+|h5py/3.7.0-foss-2022a|x|x|x|x|x|-|x|
+|h5py/3.6.0-intel-2021b|x|x|x|-|x|-|x|
+|h5py/3.6.0-foss-2021b|x|x|x|x|x|-|x|
+|h5py/3.2.1-gomkl-2021a|x|x|x|x|x|-|x|
+|h5py/3.2.1-foss-2021a|x|x|x|x|x|-|x|
+|h5py/3.1.0-intel-2020b|-|x|x|-|x|-|x|
+|h5py/3.1.0-fosscuda-2020b|x|-|-|-|x|-|-|
+|h5py/3.1.0-foss-2020b|x|x|x|x|x|-|x|
+|h5py/2.10.0-intel-2020a-Python-3.8.2|x|x|x|x|x|-|x|
+|h5py/2.10.0-intel-2020a-Python-2.7.18|-|x|x|-|x|-|x|
+|h5py/2.10.0-intel-2019b-Python-3.7.4|-|x|x|-|x|-|x|
+|h5py/2.10.0-foss-2020a-Python-3.8.2|-|x|x|-|x|-|x|
+|h5py/2.10.0-foss-2019b-Python-3.7.4|-|x|x|-|x|-|x|
