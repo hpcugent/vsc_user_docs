@@ -3,6 +3,23 @@ import asyncio
 import argparse
 
 
+# Logic for checking status codes of URLs
+
+async def fetch_status_codes(urls: list[str], timeout: int):
+    """
+    Asynchronously fetch the status codes of each URL in a list.
+
+    :param urls: The URLs to check
+    :param timeout: The maximum time to wait for each request
+    :return: A list of status codes
+    """
+    connector = aiohttp.TCPConnector(limit=None)
+    async with aiohttp.ClientSession(connector=connector) as session:
+        tasks = (fetch_status_code(session, url, timeout) for url in urls)
+        responses = await asyncio.gather(*tasks, return_exceptions=True)
+        return responses
+
+
 async def fetch_status_code(session: aiohttp.ClientSession, url: str, timeout: int) -> int | str:
     """
     Fetch the status code of a URL.
@@ -22,20 +39,7 @@ async def fetch_status_code(session: aiohttp.ClientSession, url: str, timeout: i
     return status
 
 
-async def fetch_status_codes(urls: list[str], timeout: int):
-    """
-    Asynchronously fetch the status codes of each URL in a list.
-
-    :param urls: The URLs to check
-    :param timeout: The maximum time to wait for each request
-    :return: A list of status codes
-    """
-    connector = aiohttp.TCPConnector(limit=None)
-    async with aiohttp.ClientSession(connector=connector) as session:
-        tasks = (fetch_status_code(session, url, timeout) for url in urls)
-        responses = await asyncio.gather(*tasks, return_exceptions=True)
-        return responses
-
+# Logic for reading input files
 
 def read_url_file(filename: str, whitelist: set[str] = None) -> tuple[list[str], list[str]]:
     """
