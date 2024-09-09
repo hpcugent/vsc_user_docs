@@ -14,7 +14,7 @@ async def fetch_status_code(session: aiohttp.ClientSession, url: str, timeout: i
     try:
         async with session.get(url, timeout=timeout) as response:
             status = response.status
-    except aiohttp.TimeoutError:
+    except asyncio.TimeoutError:
         status = "Timeout"
     except aiohttp.ClientError:
         status = "Error"
