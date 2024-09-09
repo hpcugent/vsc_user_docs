@@ -377,7 +377,7 @@ def generate_software_detail_page(
     md_file.new_header(level=1, title="Available modules")
 
     md_file.new_paragraph(f"The overview below shows which {software_name} installations are available per HPC-UGent "
-                          f"Tier-2cluster, ordered based on software version (new to old).")
+                          f"Tier-2 cluster, ordered based on software version (new to old).")
     md_file.new_paragraph(f"To start using {software_name}, load one of these modules using a `module load` command "
                           f"like:")
     md_file.insert_code(f"module load {newest_version}", language="shell")
