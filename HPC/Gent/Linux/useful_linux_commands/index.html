@@ -1496,7 +1496,7 @@ editing, and name it "foo", and edit it with your favourite editor</p>
 <div class="highlight"><pre><span></span><code>nano foo
 </code></pre></div>
 <p>or use the following commands:</p>
-<div class="highlight"><pre><span></span><code>echo &quot;echo Hello! This is my hostname:&quot; &gt; foo
+<div class="highlight"><pre><span></span><code>echo &quot;echo &#39;Hello! This is my hostname:&#39;&quot; &gt; foo
 echo hostname &gt;&gt; foo
 </code></pre></div>
 <p>The easiest ways to run a script is by starting the interpreter and pass
@@ -1521,7 +1521,9 @@ use bash as an interpreter, we get the following path:</p>
 /bin/bash
 </code></pre></div>
 <p>We edit our script and change it with this information:</p>
-<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash echo \&quot;Hello! This is my hostname:\&quot; hostname</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello! This is my hostname:&quot;</span>
+hostname
 </code></pre></div>
 <p>Note that the "shebang" must be the first line of your script! Now the
 operating system knows which program should be started to run the
