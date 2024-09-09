@@ -147,10 +147,10 @@ will be done at the same time.
 
 We will keep this page up to date when more specific dates have been planned.
 
-!!! warning: This planning below is subject to change, some clusters may get migrated
-later than originally planned.
+!!! warning
+    This planning below is subject to change, some clusters may get migrated later than originally planned.
 
-**Please check back regularly.**
+    **Please check back regularly.**
 
 ## Questions
 
