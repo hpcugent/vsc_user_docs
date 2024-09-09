@@ -311,7 +311,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/AGAT/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/AICSImageIO/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ALAMODE/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -336,12 +346,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/AMRFinderPlus/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ANTLR/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ANTs/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/AOCC/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -452,6 +472,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Armadillo/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Arriba/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -616,6 +641,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/BayesOpt/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/BayesPrism/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -666,6 +696,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Bio-FeatureIO/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Bio-SearchIO-hmmer/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -692,6 +727,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Blender/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Blitz%2B%2B/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -881,12 +921,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CNVkit/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/COBRApy/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/COLMAP/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/COMEBin/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CONCOCT/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/COSTA/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -946,12 +1006,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CUTLASS/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CUnit/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CVXOPT/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CalculiX-CrunchiX/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -977,6 +1047,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Casanovo/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Cassiopeia/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1081,7 +1156,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CheckM-Database/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CheckM/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CheckM2/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1126,12 +1211,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Cluster-Buster/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CmdStanR/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CodAn/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CodingQuarry/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1147,6 +1242,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CompareM/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Compass/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1182,6 +1282,16 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CuPy/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CubeLib/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CubeWriter/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1266,6 +1376,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/DL_POLY_4/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/DL_POLY_Classic/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -1312,6 +1427,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Delly/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/DeltaLake/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1371,12 +1491,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/EGA-QuickView/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ELPA/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/EMBOSS/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/EMMAX/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1411,6 +1541,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/EasyMocap/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Eigen/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -1421,7 +1556,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Emacs/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/EpiSCORE/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Evcxr-REPL/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/EvidentialGene/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1432,6 +1582,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Exonerate/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ExpressBetaDiversity/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1452,6 +1607,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/FASTX-Toolkit/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/FDMNES/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1521,6 +1681,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/FLINT/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/FLTK/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -1541,7 +1706,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/FPM/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/FSL/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/FUSE/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1607,6 +1782,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Flask/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Flax/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1736,12 +1916,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/GEM/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/GEMMA/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/GEOS/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/GFF3-toolkit/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/GHC/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1757,6 +1952,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/GLFW/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/GLI/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1936,6 +2136,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/GenomeTools/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/GenomeWorks/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -2051,6 +2256,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Gymnasium/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/HAL/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -2076,6 +2286,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/HERRO/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/HH-suite/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -2092,6 +2307,16 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/HMMER2/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/HOMER/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/HPCG/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -2132,6 +2357,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/HiCMatrix/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/HiGHS/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -2186,12 +2416,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/IEntropy/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/IGMPlot/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/IGV/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/IMB/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -2221,7 +2461,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ISL/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ITK/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ITSTool/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -2311,6 +2561,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Jupyter-bundle/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/JupyterHub/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -2391,6 +2646,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/LASSO-Python/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/LAST/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -2412,6 +2672,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/LIANA%2B/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/LIBSVM-MATLAB/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -2442,6 +2707,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/LPeg/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/LRBinner/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -2566,12 +2836,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MAGIC/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MAGeCK/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MARS/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MATES/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -2591,12 +2871,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MBX/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MCL/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MCR/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MDAnalysis/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MDI/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -2641,7 +2936,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MICOM/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MIGRATE-N/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MLflow/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -2652,6 +2957,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MOABS/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MOFA2/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -2701,6 +3011,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MUSCLE3/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MXNet/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -2727,6 +3042,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Mash/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Mashtree/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -2761,6 +3081,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MeshLab/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Meson/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -2772,6 +3097,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MetaBAT/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/MetaDecoder/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -2896,6 +3226,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/NAG/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/NAMD/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -2971,6 +3306,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/NTL/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/NVHPC/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -3031,6 +3371,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Nilearn/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Nim/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -3061,6 +3406,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/OPARI2/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/OPERA-MS/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -3072,6 +3422,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/OSU-Micro-Benchmarks/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/OTF2/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -3132,6 +3487,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/OpenFold/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/OpenForceField-Toolkit/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -3206,7 +3566,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/OpenStackClient/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Optax/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/OptiX/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Optuna/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/OrfM/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -3217,6 +3597,16 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Osi/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PALM/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PAPI/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -3241,12 +3631,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PDM/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PDT/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PEAR/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PETSc/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PEcAn/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -3321,6 +3726,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PRRTE/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PYTHIA/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Pandoc/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -3376,6 +3791,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PhyML/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PhyloPhlAn/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -3411,7 +3831,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PortAudio/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PortMidi/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PostgreSQL/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PretextMap/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -3427,6 +3862,16 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ProtHint/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ProteinMPNN/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Proteinortho/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -3526,6 +3971,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PyQt-builder/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PyQt5/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -3581,6 +4031,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PyTorch-bundle/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PyTorch/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -3626,6 +4081,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Pygments/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Pylint/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Pyomo/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -3647,6 +4112,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/QCA/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/QCG-PilotJob/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -3696,6 +4166,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Qt6/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/QtKeychain/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -3727,6 +4202,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/QuickFF/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/QuickTree/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -3796,6 +4276,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/RFdiffusion/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/RLCard/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -3856,6 +4341,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Raptor/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Rasqal/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Raven/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -3881,6 +4376,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Redland/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/RegTools/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -3892,6 +4392,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ResistanceGA/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Restrander/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -3926,6 +4431,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Rtree/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Ruby/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -3951,12 +4461,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SCENICplus/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SCGid/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SCOTCH/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SCRIPro/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SCReadCounts/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -3972,6 +4497,21 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SDL2/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SDL2_image/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SDL2_mixer/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SDL2_ttf/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -4002,6 +4542,21 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SHAP/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SIONlib/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SIP/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SIRIUS/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -4071,6 +4626,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SOCI/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SPAdes/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -4081,7 +4641,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SPOOLES/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SPOTPY/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SQLAlchemy/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -4146,7 +4716,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SVDSS2/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SVG/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SVIM/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SVclone/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -4157,6 +4742,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Sabre/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Safetensors/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -4191,7 +4781,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Scalene/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SciPy-bundle/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Score-P/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -4227,6 +4827,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SeqLib/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Seqmagick/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -4281,6 +4886,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SignalP/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SimNIBS/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -4301,6 +4911,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Single-cell-python-bundle/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SingleM/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SlamDunk/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -4316,12 +4936,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SpFFT/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SpaceRanger/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Spark/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SpatialDE/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Sphinx-RTD-Theme/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -4337,6 +4972,16 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Squidpy/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Stable-Baselines3/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Stack/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -4401,6 +5046,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SymEngine-python/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/SymEngine/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Szip/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -4431,7 +5086,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/TF-COMB/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/TOBIAS/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/TOML-Fortran/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -4447,6 +5112,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/TRUST4/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/TXR/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -4506,6 +5176,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Transrate/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/TreeMix/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -4542,6 +5217,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/TurboVNC/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/UCC-CUDA/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -4591,7 +5271,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Umpire/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/UnZip/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Uni-Core/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -4686,6 +5376,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Vim/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/VirSorter2/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -4696,12 +5391,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Visit/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Voro%2B%2B/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/WFA2/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/WGDgc/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -4861,7 +5566,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/absl-py/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/accelerate/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/adjustText/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/affogato/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -4961,6 +5681,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/assimp/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/astropy/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/at-spi2-atk/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -4972,6 +5702,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/atools/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/atropos/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5031,6 +5766,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/bayesian-optimization/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/bcbio-gff/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -5047,6 +5787,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/bcl2fastq2/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/bcrypt/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5077,6 +5822,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/biom-format/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/bitshuffle/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5156,6 +5906,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/cairomm/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/canu/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -5201,12 +5956,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/charm-gems/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/chemprop/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/chewBBACA/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/chromVARmotifs/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5231,6 +5996,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/colorize/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/colossalai/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -5242,6 +6012,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/configurable-http-proxy/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/connected-components-3d/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5266,7 +6041,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/crb-blast/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/cryoDRGN/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/crypt4gh/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5276,12 +6061,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ctffind/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/cuDNN/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/cuSPARSELt/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/cuTENSOR/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/currentNe/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5306,12 +6106,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/datalad/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/dblatex/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/dbus-glib/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/dclone/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/dcm2niix/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5346,7 +6161,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/dftd4/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/dicom2nifti/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/dictys/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5401,7 +6226,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/dx-toolkit/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/dxpy/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/dynesty/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/e3nn/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5411,7 +6251,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/easel/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ebGSEA/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ecBuild/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5442,6 +6292,16 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/elprep/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/empanada-dl/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/empanada-napari/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5486,7 +6346,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/fastfilters/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/fastp/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/fastparquet/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5526,7 +6396,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/fio/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/flair-NLP/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/flash-attention/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5726,6 +6606,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/git-annex/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/git-lfs/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -5762,6 +6647,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/gmsh/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/gnupg-bundle/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5821,6 +6711,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/graph-tool/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/graphite2/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -5837,6 +6732,16 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/groff/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/grpcio/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/gtk-doc/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5861,7 +6766,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/hatch-jupyter-builder/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/hatchling/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/hdWGCNA/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5976,6 +6891,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ilastik-napari/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/imagecodecs/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -6076,6 +6996,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ipympl/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/isoCirc/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -6087,6 +7012,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/jbigkit/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/jedi/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6106,12 +7036,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/jq/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/json-c/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/json-fortran/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/junos-eznc/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/jupyter-contrib-nbextensions/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/jupyter-resource-usage/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6122,6 +7072,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/jupyter-server/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/jupyterlmod/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6396,6 +7351,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/libnsl/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/libobjcryst/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -6531,6 +7491,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/libxml2-python/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/libxml2/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -6562,6 +7527,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/likwid/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/line_profiler/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6636,6 +7606,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/mallard-ducktype/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/manta/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -6666,6 +7641,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/mctc-lib/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/mcu/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -6682,6 +7662,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/meshalyzer/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/meshio/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6706,7 +7691,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/meteogrid/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/methylpy/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/mfqe/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6726,7 +7721,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/micro-sam/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/microctools/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/miniasm/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6737,6 +7742,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/minimap2/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/miniprot/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6756,7 +7766,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ml-collections/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ml_dtypes/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/mm-common/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/mold/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6781,6 +7806,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/motif/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/motionSegmentation/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -6796,7 +7826,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/mpmath/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/mrcfile/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/msgpack-c/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/mstore/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6811,7 +7856,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/multicharge/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/multichoose/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/mumax3/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6827,6 +7882,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/n2v/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/nano/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6856,7 +7916,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/napari-denoiseg/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/napari/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/nbclassic/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6882,6 +7952,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ncview/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/nellie/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6941,6 +8016,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/nifty/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/nlohmann_json/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -6957,6 +8037,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/noise/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/nose3/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6986,6 +8071,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/numdiff/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/numexpr/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -7002,6 +8092,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/olego/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ome-types/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -7096,6 +8191,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/parameterized/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/paramiko/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/parasail/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -7182,6 +8287,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/pkgconfig/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/plinkliftover/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -7286,6 +8396,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/psycopg/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/psycopg2/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -7327,6 +8442,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/pyEGA3/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/pyGAM/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -7391,6 +8511,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/pygame/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/pygmo/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -7436,6 +8561,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/pyperf/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/pyproj/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -7452,6 +8582,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/pysamstats/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/pyseer/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -7501,6 +8636,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/python-blosc/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/python-docx/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/python-elf/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/python-igraph/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -7512,6 +8662,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/python-isal/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/python-libsbml/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -7536,6 +8691,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/python-xxhash/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/pythran/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -7547,6 +8707,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/qnorm/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/rMATS-long/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -7691,6 +8856,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/scCustomize/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/scFEA/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/scGeneFit/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -7736,6 +8911,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/scikit-build-core/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/scikit-build/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -7766,6 +8946,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/scikit-plot/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/scipy/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -7782,6 +8967,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/segemehl/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/segment-anything/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -7842,6 +9032,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/slurm-drmaa/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/smafa/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -7921,12 +9116,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/spdlog/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/speech_tools/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/spektral/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/spglib-python/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/spglib/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/spla/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -7951,12 +9166,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/strace/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/suave/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/submitit/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/supernova/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/svist4get/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -7981,12 +9211,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/sysbench/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/tMAE/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/tRNAscan-SE/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/tabixpp/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/tantan/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -8066,6 +9311,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/torch-em/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/torchaudio/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -8102,6 +9352,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/trimAl/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/trimesh/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -8181,6 +9436,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/vigra/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/virtualenv/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -8217,6 +9477,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/waves2Foam/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/wfdb/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -8306,6 +9571,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/xtensor/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/xxHash/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/xxd/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
@@ -8317,6 +9592,26 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/yaml-cpp/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/yell/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/yelp-tools/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/yelp-xsl/</loc>
+         <lastmod>2024-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/z5py/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
