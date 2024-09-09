@@ -73,7 +73,6 @@ def read_whitelist(filename: str) -> set[str]:
 def main(url_file, timeout, whitelist=None):
     """
     Check status codes of URLs. Output status codes that are not 200 OK.
-    grep -rHoP '<a\s+[^>]*href="http[^"]*' ../../build/HPC | sed 's/:<a.*href="/ /' | sort -k2,2 | uniq -f1
     """
     whitelist = read_whitelist(whitelist)
     paths, urls = read_url_file(url_file, whitelist)
