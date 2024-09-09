@@ -17,8 +17,8 @@ To start using CGmapTools, load one of these modules using a `module load` comma
 module load CGmapTools/0.1.2-intel-2019b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CGmapTools/0.1.2-intel-2019b|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CGmapTools/0.1.2-intel-2019b|-|x|x|-|x|-|x|

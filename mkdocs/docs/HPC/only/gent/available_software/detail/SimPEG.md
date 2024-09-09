@@ -17,10 +17,10 @@ To start using SimPEG, load one of these modules using a `module load` command l
 module load SimPEG/0.18.1-intel-2021b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SimPEG/0.18.1-intel-2021b|x|x|x|-|x|x|
-|SimPEG/0.18.1-foss-2021b|x|x|x|-|x|x|
-|SimPEG/0.14.1-intel-2020a-Python-3.8.2|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SimPEG/0.18.1-intel-2021b|x|x|x|-|x|-|x|
+|SimPEG/0.18.1-foss-2021b|x|x|x|-|x|-|x|
+|SimPEG/0.14.1-intel-2020a-Python-3.8.2|-|x|x|-|x|-|x|

@@ -17,15 +17,15 @@ To start using BEDTools, load one of these modules using a `module load` command
 module load BEDTools/2.31.0-GCC-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BEDTools/2.31.0-GCC-12.3.0|x|x|x|x|x|x|
-|BEDTools/2.30.0-GCC-12.2.0|x|x|x|x|x|x|
-|BEDTools/2.30.0-GCC-11.3.0|x|x|x|x|x|x|
-|BEDTools/2.30.0-GCC-11.2.0|x|x|x|x|x|x|
-|BEDTools/2.30.0-GCC-10.2.0|-|x|x|x|x|x|
-|BEDTools/2.29.2-GCC-9.3.0|-|x|x|-|x|x|
-|BEDTools/2.29.2-GCC-8.3.0|-|x|x|-|x|x|
-|BEDTools/2.19.1-GCC-8.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BEDTools/2.31.0-GCC-12.3.0|x|x|x|x|x|x|x|
+|BEDTools/2.30.0-GCC-12.2.0|x|x|x|x|x|x|x|
+|BEDTools/2.30.0-GCC-11.3.0|x|x|x|x|x|x|x|
+|BEDTools/2.30.0-GCC-11.2.0|x|x|x|x|x|-|x|
+|BEDTools/2.30.0-GCC-10.2.0|-|x|x|x|x|-|x|
+|BEDTools/2.29.2-GCC-9.3.0|-|x|x|-|x|-|x|
+|BEDTools/2.29.2-GCC-8.3.0|-|x|x|-|x|-|x|
+|BEDTools/2.19.1-GCC-8.3.0|-|-|-|-|-|-|x|

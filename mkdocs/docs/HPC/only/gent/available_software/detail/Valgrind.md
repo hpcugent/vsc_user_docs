@@ -14,15 +14,16 @@ The overview below shows which Valgrind installations are available per HPC-UGen
 To start using Valgrind, load one of these modules using a `module load` command like:
 
 ```shell
-module load Valgrind/3.20.0-gompi-2022a
+module load Valgrind/3.21.0-gompi-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Valgrind/3.20.0-gompi-2022a|x|x|x|-|x|x|
-|Valgrind/3.19.0-gompi-2022a|x|x|x|-|x|x|
-|Valgrind/3.18.1-iimpi-2021b|x|x|x|-|x|x|
-|Valgrind/3.18.1-gompi-2021b|x|x|x|-|x|x|
-|Valgrind/3.17.0-gompi-2021a|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Valgrind/3.21.0-gompi-2022b|x|x|x|x|x|x|x|
+|Valgrind/3.20.0-gompi-2022a|x|x|x|-|x|-|x|
+|Valgrind/3.19.0-gompi-2022a|x|x|x|-|x|-|x|
+|Valgrind/3.18.1-iimpi-2021b|x|x|x|-|x|-|x|
+|Valgrind/3.18.1-gompi-2021b|x|x|x|-|x|-|x|
+|Valgrind/3.17.0-gompi-2021a|x|x|x|-|x|-|x|

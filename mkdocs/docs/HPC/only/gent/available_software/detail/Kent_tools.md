@@ -17,11 +17,12 @@ To start using Kent_tools, load one of these modules using a `module load` comma
 module load Kent_tools/20190326-linux.x86_64
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Kent_tools/20190326-linux.x86_64|-|-|x|-|x|-|
-|Kent_tools/422-GCC-11.2.0|x|x|x|x|x|x|
-|Kent_tools/411-GCC-10.2.0|-|x|x|x|x|x|
-|Kent_tools/401-gompi-2019b|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Kent_tools/20190326-linux.x86_64|-|-|x|-|x|-|-|
+|Kent_tools/457-GCC-12.2.0|x|x|x|x|x|x|x|
+|Kent_tools/422-GCC-11.2.0|x|x|x|x|x|-|x|
+|Kent_tools/411-GCC-10.2.0|-|x|x|x|x|-|x|
+|Kent_tools/401-gompi-2019b|-|x|x|-|x|-|x|

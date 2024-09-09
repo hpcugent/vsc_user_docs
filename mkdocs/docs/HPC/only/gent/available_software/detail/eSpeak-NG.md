@@ -17,8 +17,8 @@ To start using eSpeak-NG, load one of these modules using a `module load` comman
 module load eSpeak-NG/1.50-gompi-2020a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|eSpeak-NG/1.50-gompi-2020a|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|eSpeak-NG/1.50-gompi-2020a|-|x|x|-|x|-|x|

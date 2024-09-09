@@ -14,11 +14,12 @@ The overview below shows which kma installations are available per HPC-UGent Tie
 To start using kma, load one of these modules using a `module load` command like:
 
 ```shell
-module load kma/1.2.22-intel-2019b
+module load kma/1.4.12a-GCC-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|kma/1.2.22-intel-2019b|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|kma/1.4.12a-GCC-12.2.0|x|x|x|x|x|x|x|
+|kma/1.2.22-intel-2019b|-|x|x|-|x|-|x|

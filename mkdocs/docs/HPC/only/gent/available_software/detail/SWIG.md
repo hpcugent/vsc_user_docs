@@ -14,18 +14,20 @@ The overview below shows which SWIG installations are available per HPC-UGent Ti
 To start using SWIG, load one of these modules using a `module load` command like:
 
 ```shell
-module load SWIG/4.1.1-GCCcore-12.3.0
+module load SWIG/4.1.1-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SWIG/4.1.1-GCCcore-12.3.0|x|x|x|x|x|x|
-|SWIG/4.0.2-GCCcore-11.3.0|x|x|x|x|x|x|
-|SWIG/4.0.2-GCCcore-11.2.0|x|x|x|x|x|x|
-|SWIG/4.0.2-GCCcore-10.3.0|x|x|x|x|x|x|
-|SWIG/4.0.2-GCCcore-10.2.0|x|x|x|x|x|x|
-|SWIG/4.0.1-GCCcore-9.3.0|x|x|x|x|x|x|
-|SWIG/4.0.1-GCCcore-8.3.0|-|x|x|-|x|x|
-|SWIG/3.0.12-GCCcore-8.3.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SWIG/4.1.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|SWIG/4.1.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|SWIG/4.1.1-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|SWIG/4.0.2-GCCcore-11.3.0|x|x|x|x|x|x|x|
+|SWIG/4.0.2-GCCcore-11.2.0|x|x|x|x|x|-|x|
+|SWIG/4.0.2-GCCcore-10.3.0|x|x|x|x|x|-|x|
+|SWIG/4.0.2-GCCcore-10.2.0|x|x|x|x|x|-|x|
+|SWIG/4.0.1-GCCcore-9.3.0|x|x|x|x|x|-|x|
+|SWIG/4.0.1-GCCcore-8.3.0|-|x|x|-|x|-|x|
+|SWIG/3.0.12-GCCcore-8.3.0|-|x|x|-|x|-|x|

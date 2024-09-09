@@ -14,11 +14,12 @@ The overview below shows which Delly installations are available per HPC-UGent T
 To start using Delly, load one of these modules using a `module load` command like:
 
 ```shell
-module load Delly/0.8.7-gompi-2020b
+module load Delly/1.1.6-GCC-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Delly/0.8.7-gompi-2020b|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Delly/1.1.6-GCC-12.2.0|x|x|x|x|x|x|x|
+|Delly/0.8.7-gompi-2020b|-|x|x|x|x|-|x|

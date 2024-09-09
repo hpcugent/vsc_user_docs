@@ -14,12 +14,13 @@ The overview below shows which time installations are available per HPC-UGent Ti
 To start using time, load one of these modules using a `module load` command like:
 
 ```shell
-module load time/1.9-GCCcore-10.2.0
+module load time/1.9-GCCcore-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|time/1.9-GCCcore-10.2.0|-|x|x|x|x|x|
-|time/1.9-GCCcore-8.3.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|time/1.9-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|time/1.9-GCCcore-10.2.0|-|x|x|x|x|-|x|
+|time/1.9-GCCcore-8.3.0|-|x|x|-|x|-|x|

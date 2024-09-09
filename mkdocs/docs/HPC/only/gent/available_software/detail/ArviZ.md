@@ -17,13 +17,14 @@ To start using ArviZ, load one of these modules using a `module load` command li
 module load ArviZ/0.16.1-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ArviZ/0.16.1-foss-2023a|x|x|x|x|x|x|
-|ArviZ/0.12.1-foss-2021a|x|x|x|x|x|x|
-|ArviZ/0.11.4-intel-2021b|x|x|x|-|x|x|
-|ArviZ/0.11.1-intel-2020b|-|x|x|-|x|x|
-|ArviZ/0.7.0-intel-2019b-Python-3.7.4|-|x|x|-|x|x|
-|ArviZ/0.7.0-foss-2019b-Python-3.7.4|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ArviZ/0.16.1-foss-2023a|x|x|x|x|x|x|x|
+|ArviZ/0.12.1-foss-2021a|x|x|x|x|x|-|x|
+|ArviZ/0.11.4-intel-2021b|x|x|x|x|x|-|x|
+|ArviZ/0.11.4-foss-2021b|x|x|x|x|x|-|x|
+|ArviZ/0.11.1-intel-2020b|-|x|x|-|x|-|x|
+|ArviZ/0.7.0-intel-2019b-Python-3.7.4|-|x|x|-|x|-|x|
+|ArviZ/0.7.0-foss-2019b-Python-3.7.4|-|x|x|-|x|-|x|

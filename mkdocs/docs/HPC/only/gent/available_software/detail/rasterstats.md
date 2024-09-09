@@ -17,8 +17,8 @@ To start using rasterstats, load one of these modules using a `module load` comm
 module load rasterstats/0.15.0-foss-2020a-Python-3.8.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rasterstats/0.15.0-foss-2020a-Python-3.8.2|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|rasterstats/0.15.0-foss-2020a-Python-3.8.2|-|x|x|-|x|-|x|

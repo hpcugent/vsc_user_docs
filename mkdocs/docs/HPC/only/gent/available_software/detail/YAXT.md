@@ -17,9 +17,9 @@ To start using YAXT, load one of these modules using a `module load` command lik
 module load YAXT/0.9.1-gompi-2021a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|YAXT/0.9.1-gompi-2021a|x|x|x|-|x|x|
-|YAXT/0.6.2-iimpi-2019b|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|YAXT/0.9.1-gompi-2021a|x|x|x|-|x|-|x|
+|YAXT/0.6.2-iimpi-2019b|-|x|x|-|x|-|x|

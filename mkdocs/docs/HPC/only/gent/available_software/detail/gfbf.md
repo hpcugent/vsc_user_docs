@@ -17,10 +17,10 @@ To start using gfbf, load one of these modules using a `module load` command lik
 module load gfbf/2023b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gfbf/2023b|x|x|x|x|x|x|
-|gfbf/2023a|x|x|x|x|x|x|
-|gfbf/2022b|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|gfbf/2023b|x|x|x|x|x|x|x|
+|gfbf/2023a|x|x|x|x|x|x|x|
+|gfbf/2022b|x|x|x|x|x|x|x|
