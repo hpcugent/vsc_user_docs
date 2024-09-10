@@ -78,7 +78,7 @@ def main():
     print("Done!")
     print("Generate detailed pages... ", end="", flush=True)
     detail_folder = os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/detail")
-    generated_time_yml = os.path.join(root_dir, "mkdocs/extra/gent.yml") # yml containing the time the data was generated
+    generated_time_yml = os.path.join(root_dir, "mkdocs/extra/gent.yml")  # yml containing time the data was generated
     generate_detail_pages(json_path, detail_folder, generated_time_yml)
     print("Done!")
 
@@ -433,7 +433,8 @@ def update_generated_time_yml(generated_time_yml, generated_time) -> None:
     with open(generated_time_yml, 'w') as file:
         for line in lines:
             if line.startswith(key):
-                line = f"{key}: {generated_time} # This line is automatically updated by scripts/available_modules/available_modules.py\n"
+                comment = "# This line is automatically updated by scripts/available_modules/available_modules.py"
+                line = f"{key}: {generated_time} {comment}\n"
                 replaced = True
             file.write(line)
 
