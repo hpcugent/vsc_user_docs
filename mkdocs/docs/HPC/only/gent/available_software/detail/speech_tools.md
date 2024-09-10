@@ -9,7 +9,7 @@ speech_tools
 # Available modules
 
 
-The overview below shows which speech_tools installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which speech_tools installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using speech_tools, load one of these modules using a `module load` command like:
 
@@ -17,7 +17,7 @@ To start using speech_tools, load one of these modules using a `module load` com
 module load speech_tools/2.5.0-GCCcore-9.3.0
 ```
 
-*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
+*(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
