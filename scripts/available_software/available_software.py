@@ -39,6 +39,7 @@ from typing import Union, Tuple
 import numpy as np
 from mdutils.mdutils import MdUtils
 from natsort import natsorted
+import yaml
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -77,7 +78,9 @@ def main():
     json_path = generate_json_detailed(modules, path_data_dir)
     print("Done!")
     print("Generate detailed pages... ", end="", flush=True)
-    generate_detail_pages(json_path, os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/detail"))
+    detail_folder = os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/detail")
+    generated_time_yml = os.path.join(root_dir, "mkdocs/extra/gent.yml") # yml containing the time the data was generated
+    generate_detail_pages(json_path, detail_folder, generated_time_yml)
     print("Done!")
 
 
@@ -356,7 +359,6 @@ def generate_software_table_data(software_data: dict, clusters: list) -> list:
 def generate_software_detail_page(
         software_name: str,
         software_data: dict,
-        generated_time: str,
         clusters: list,
         path: str
 ) -> None:
@@ -365,7 +367,6 @@ def generate_software_detail_page(
 
     @param software_name: Name of the software
     @param software_data: Additional information about the software (version, etc...)
-    @param generated_time: Timestamp when the data was generated
     @param clusters: List with all the cluster names
     @param path: Path of the directory where the detailed page will be created.
     """
@@ -399,7 +400,7 @@ def generate_software_detail_page(
         f.write("---\nhide:\n  - toc\n---\n" + read_data)
 
 
-def generate_detail_pages(json_path, dest_path) -> None:
+def generate_detail_pages(json_path, dest_path, generated_time_yml) -> None:
     """
     Generate all the detailed pages for all the software that is available.
     """
@@ -407,9 +408,30 @@ def generate_detail_pages(json_path, dest_path) -> None:
     with open(json_path) as json_data:
         data = json.load(json_data)
 
+    # update the time the data was generated
+    update_generated_time_yml(generated_time_yml, data["time_generated"])
+
     all_clusters = data["clusters"]
     for software, content in data["software"].items():
-        generate_software_detail_page(software, content, data["time_generated"], all_clusters, dest_path)
+        generate_software_detail_page(software, content, all_clusters, dest_path)
+
+
+def update_generated_time_yml(generated_time_yml, generated_time) -> None:
+    """
+    Update the time the data was generated in the YAML file.
+
+    @param generated_time_yml: Path to the YAML file containing the field 'modules_last_updated'
+    @param generated_time: Time the data was generated
+    """
+    with open(generated_time_yml, 'r') as file:
+        data = yaml.safe_load(file)
+
+    # Update the 'modules_last_updated' field
+    data['modules_last_updated'] = generated_time  # Set the new date here
+
+    # Write the updated YAML back to the file
+    with open(generated_time_yml, 'w') as file:
+        yaml.safe_dump(data, file)
 
 
 # --------------------------------------------------------------------------------------------------------
