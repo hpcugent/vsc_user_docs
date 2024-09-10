@@ -9,7 +9,7 @@ Bison
 # Available modules
 
 
-The overview below shows which Bison installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which Bison installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using Bison, load one of these modules using a `module load` command like:
 
@@ -17,7 +17,7 @@ To start using Bison, load one of these modules using a `module load` command li
 module load Bison/3.8.2-GCCcore-13.3.0
 ```
 
-*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
+*(This data was automatically generated on Tue, 10 Sep 2024 at 10:06:06 CEST)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -35,7 +35,7 @@ module load Bison/3.8.2-GCCcore-13.3.0
 |Bison/3.5.3-GCCcore-9.3.0|x|x|x|x|x|-|x|
 |Bison/3.5.3|x|x|x|-|x|-|-|
 |Bison/3.3.2-GCCcore-8.3.0|x|x|x|x|x|-|x|
-|Bison/3.3.2|x|x|x|x|x|x|x|
+|Bison/3.3.2|x|x|x|x|x|-|x|
 |Bison/3.0.5-GCCcore-8.2.0|-|x|-|-|-|-|-|
 |Bison/3.0.5|-|x|-|-|-|-|x|
 |Bison/3.0.4|x|x|x|x|x|-|x|

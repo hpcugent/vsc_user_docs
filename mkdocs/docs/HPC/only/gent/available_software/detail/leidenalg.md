@@ -9,7 +9,7 @@ leidenalg
 # Available modules
 
 
-The overview below shows which leidenalg installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which leidenalg installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using leidenalg, load one of these modules using a `module load` command like:
 
@@ -17,12 +17,11 @@ To start using leidenalg, load one of these modules using a `module load` comman
 module load leidenalg/0.10.2-foss-2023a
 ```
 
-*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
+*(This data was automatically generated on Tue, 10 Sep 2024 at 10:06:06 CEST)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |leidenalg/0.10.2-foss-2023a|x|x|x|x|x|x|x|
-|leidenalg/0.10.1-foss-2022b|x|x|x|x|x|x|x|
 |leidenalg/0.9.1-foss-2022a|x|x|x|x|x|x|x|
 |leidenalg/0.8.8-foss-2021b|x|x|x|x|x|-|x|
 |leidenalg/0.8.7-foss-2021a|x|x|x|x|x|-|x|

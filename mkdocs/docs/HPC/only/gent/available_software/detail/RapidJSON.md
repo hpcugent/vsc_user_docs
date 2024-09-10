@@ -9,7 +9,7 @@ RapidJSON
 # Available modules
 
 
-The overview below shows which RapidJSON installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which RapidJSON installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using RapidJSON, load one of these modules using a `module load` command like:
 
@@ -17,11 +17,11 @@ To start using RapidJSON, load one of these modules using a `module load` comman
 module load RapidJSON/1.1.0-GCCcore-12.2.0
 ```
 
-*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
+*(This data was automatically generated on Tue, 10 Sep 2024 at 10:06:06 CEST)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RapidJSON/1.1.0-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|RapidJSON/1.1.0-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |RapidJSON/1.1.0-GCCcore-11.3.0|x|x|x|x|x|-|x|
 |RapidJSON/1.1.0-GCCcore-11.2.0|x|x|x|x|x|-|x|
 |RapidJSON/1.1.0-GCCcore-9.3.0|x|x|x|x|x|-|x|

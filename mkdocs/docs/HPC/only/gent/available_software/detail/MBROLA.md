@@ -9,7 +9,7 @@ MBROLA
 # Available modules
 
 
-The overview below shows which MBROLA installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which MBROLA installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using MBROLA, load one of these modules using a `module load` command like:
 
@@ -17,7 +17,7 @@ To start using MBROLA, load one of these modules using a `module load` command l
 module load MBROLA/3.3-GCCcore-9.3.0-voices-20200330
 ```
 
-*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
+*(This data was automatically generated on Tue, 10 Sep 2024 at 10:06:06 CEST)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

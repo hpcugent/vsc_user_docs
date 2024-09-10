@@ -9,7 +9,7 @@ MAFFT
 # Available modules
 
 
-The overview below shows which MAFFT installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which MAFFT installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using MAFFT, load one of these modules using a `module load` command like:
 
@@ -17,12 +17,12 @@ To start using MAFFT, load one of these modules using a `module load` command li
 module load MAFFT/7.520-GCC-12.3.0-with-extensions
 ```
 
-*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
+*(This data was automatically generated on Tue, 10 Sep 2024 at 10:06:06 CEST)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |MAFFT/7.520-GCC-12.3.0-with-extensions|x|x|x|x|x|x|x|
-|MAFFT/7.505-GCC-12.2.0-with-extensions|x|x|x|x|x|x|x|
+|MAFFT/7.505-GCC-12.2.0-with-extensions|x|x|x|x|x|-|x|
 |MAFFT/7.505-GCC-11.3.0-with-extensions|x|x|x|x|x|-|x|
 |MAFFT/7.490-gompi-2021b-with-extensions|x|x|x|x|x|-|x|
 |MAFFT/7.475-gompi-2020b-with-extensions|-|x|x|x|x|-|x|

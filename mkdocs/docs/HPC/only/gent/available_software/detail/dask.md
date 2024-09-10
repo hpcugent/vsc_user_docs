@@ -9,7 +9,7 @@ dask
 # Available modules
 
 
-The overview below shows which dask installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which dask installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using dask, load one of these modules using a `module load` command like:
 
@@ -17,13 +17,13 @@ To start using dask, load one of these modules using a `module load` command lik
 module load dask/2023.12.1-foss-2023a
 ```
 
-*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
+*(This data was automatically generated on Tue, 10 Sep 2024 at 10:06:06 CEST)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |dask/2023.12.1-foss-2023a|x|x|x|x|x|x|x|
 |dask/2023.9.2-foss-2023a|x|x|x|x|x|x|x|
-|dask/2023.7.1-foss-2022b|x|x|x|x|x|x|x|
+|dask/2023.7.1-foss-2022b|x|x|x|x|x|-|x|
 |dask/2022.10.0-foss-2022a|x|x|x|x|x|x|x|
 |dask/2022.1.0-foss-2021b|x|x|x|x|x|-|x|
 |dask/2021.9.1-foss-2021a|x|x|x|-|x|-|x|

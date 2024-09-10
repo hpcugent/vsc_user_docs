@@ -9,7 +9,7 @@ networkx
 # Available modules
 
 
-The overview below shows which networkx installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which networkx installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using networkx, load one of these modules using a `module load` command like:
 
@@ -17,15 +17,14 @@ To start using networkx, load one of these modules using a `module load` command
 module load networkx/3.2.1-gfbf-2023b
 ```
 
-*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
+*(This data was automatically generated on Tue, 10 Sep 2024 at 10:06:06 CEST)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |networkx/3.2.1-gfbf-2023b|x|x|x|x|x|x|x|
 |networkx/3.1-gfbf-2023a|x|x|x|x|x|x|x|
-|networkx/3.0-gfbf-2022b|x|x|x|x|x|x|x|
+|networkx/3.0-gfbf-2022b|x|x|x|x|x|-|x|
 |networkx/3.0-foss-2022b|x|x|x|x|x|-|x|
-|networkx/2.8.8-gfbf-2022b|x|x|x|x|x|x|x|
 |networkx/2.8.4-intel-2022a|x|x|x|x|x|-|x|
 |networkx/2.8.4-foss-2022a|x|x|x|x|x|x|x|
 |networkx/2.6.3-foss-2021b|x|x|x|x|x|-|x|

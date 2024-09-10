@@ -9,7 +9,7 @@ tcsh
 # Available modules
 
 
-The overview below shows which tcsh installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which tcsh installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using tcsh, load one of these modules using a `module load` command like:
 
@@ -17,12 +17,11 @@ To start using tcsh, load one of these modules using a `module load` command lik
 module load tcsh/6.24.10-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
+*(This data was automatically generated on Tue, 10 Sep 2024 at 10:06:06 CEST)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |tcsh/6.24.10-GCCcore-12.3.0|x|x|x|x|x|-|x|
-|tcsh/6.24.07-GCCcore-12.2.0|x|x|x|x|x|x|x|
 |tcsh/6.22.04-GCCcore-10.3.0|x|-|-|-|x|-|-|
 |tcsh/6.22.03-GCCcore-10.2.0|-|x|x|x|x|-|x|
 |tcsh/6.22.02-GCCcore-8.3.0|-|x|x|-|x|-|x|

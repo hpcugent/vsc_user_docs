@@ -9,7 +9,7 @@ netCDF
 # Available modules
 
 
-The overview below shows which netCDF installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which netCDF installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using netCDF, load one of these modules using a `module load` command like:
 
@@ -17,14 +17,14 @@ To start using netCDF, load one of these modules using a `module load` command l
 module load netCDF/4.9.2-gompi-2023b
 ```
 
-*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
+*(This data was automatically generated on Tue, 10 Sep 2024 at 10:06:06 CEST)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |netCDF/4.9.2-gompi-2023b|x|x|x|x|x|x|x|
 |netCDF/4.9.2-gompi-2023a|x|x|x|x|x|x|x|
 |netCDF/4.9.0-iimpi-2022a|-|-|x|-|x|-|x|
-|netCDF/4.9.0-gompi-2022b|x|x|x|x|x|x|x|
+|netCDF/4.9.0-gompi-2022b|x|x|x|x|x|-|x|
 |netCDF/4.9.0-gompi-2022a|x|x|x|x|x|-|x|
 |netCDF/4.8.1-iimpi-2021b|x|x|x|x|x|-|x|
 |netCDF/4.8.1-gompi-2021b|x|x|x|x|x|-|x|

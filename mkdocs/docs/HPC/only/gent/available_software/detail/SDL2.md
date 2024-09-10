@@ -9,7 +9,7 @@ SDL2
 # Available modules
 
 
-The overview below shows which SDL2 installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which SDL2 installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using SDL2, load one of these modules using a `module load` command like:
 
@@ -17,13 +17,13 @@ To start using SDL2, load one of these modules using a `module load` command lik
 module load SDL2/2.28.5-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
+*(This data was automatically generated on Tue, 10 Sep 2024 at 10:06:06 CEST)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |SDL2/2.28.5-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |SDL2/2.28.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|SDL2/2.26.3-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|SDL2/2.26.3-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |SDL2/2.0.20-GCCcore-11.2.0|x|x|x|x|x|-|x|
 |SDL2/2.0.14-GCCcore-10.3.0|-|x|x|-|x|-|x|
 |SDL2/2.0.14-GCCcore-10.2.0|-|x|x|x|x|-|x|

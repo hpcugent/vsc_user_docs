@@ -9,7 +9,7 @@ STAR
 # Available modules
 
 
-The overview below shows which STAR installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which STAR installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using STAR, load one of these modules using a `module load` command like:
 
@@ -17,7 +17,7 @@ To start using STAR, load one of these modules using a `module load` command lik
 module load STAR/2.7.11b_alpha_2024-02-09-GCC-12.3.0
 ```
 
-*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
+*(This data was automatically generated on Tue, 10 Sep 2024 at 10:06:06 CEST)*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -25,8 +25,6 @@ module load STAR/2.7.11b_alpha_2024-02-09-GCC-12.3.0
 |STAR/2.7.11b-GCC-13.2.0|x|x|x|x|x|x|x|
 |STAR/2.7.11b-GCC-12.3.0|x|x|x|x|x|-|x|
 |STAR/2.7.11a-GCC-12.3.0|x|x|x|x|x|-|x|
-|STAR/2.7.11a-GCC-12.2.0|x|x|x|x|x|x|x|
-|STAR/2.7.10b-GCC-12.2.0|x|x|x|x|x|x|x|
 |STAR/2.7.10b-GCC-11.3.0|x|x|x|x|x|-|x|
 |STAR/2.7.9a-GCC-11.2.0|x|x|x|x|x|-|x|
 |STAR/2.7.6a-GCC-10.2.0|-|x|x|x|x|-|x|
