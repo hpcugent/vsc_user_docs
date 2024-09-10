@@ -381,7 +381,7 @@ def generate_software_detail_page(
     md_file.new_paragraph(f"To start using {software_name}, load one of these modules using a `module load` command "
                           f"like:")
     md_file.insert_code(f"module load {newest_version}", language="shell")
-    md_file.new_paragraph(f"(This data was automatically generated on {generated_time})", bold_italics_code="i")
+    md_file.new_paragraph("(This data was automatically generated on {{modules_last_updated}})", bold_italics_code="i")
     md_file.new_line()
 
     md_file.new_table(
