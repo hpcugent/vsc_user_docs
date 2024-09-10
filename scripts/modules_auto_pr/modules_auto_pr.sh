@@ -78,7 +78,7 @@ main() {
   N_REMOVED_MODULES=$(git show --name-status HEAD | grep -e "^D.*\.md$" | wc -l)
 
   # Push the new branch to GitHub
-  git remote add fork "$fork_url"
+  git remote add fork_${fork_user} "$fork_url"
   git push fork "$BRANCH_NAME"
 
   # Set the ugent repo as the default remote
