@@ -23,7 +23,6 @@ module load OpenMPI/4.1.6-GCC-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |OpenMPI/4.1.6-GCC-13.2.0|x|x|x|x|x|x|x|
 |OpenMPI/4.1.5-GCC-12.3.0|x|x|x|x|x|x|x|
-|OpenMPI/4.1.5-GCC-12.2.0|x|x|x|x|x|x|x|
 |OpenMPI/4.1.4-GCC-12.2.0|x|x|x|x|x|x|x|
 |OpenMPI/4.1.4-GCC-11.3.0|x|x|x|x|x|x|x|
 |OpenMPI/4.1.1-intel-compilers-2021.2.0|x|x|x|x|x|-|x|

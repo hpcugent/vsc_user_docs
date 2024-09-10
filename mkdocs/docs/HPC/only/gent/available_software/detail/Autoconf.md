@@ -33,4 +33,3 @@ module load Autoconf/2.72-GCCcore-13.3.0
 |Autoconf/2.69-GCCcore-9.3.0|x|x|x|x|x|-|x|
 |Autoconf/2.69-GCCcore-8.3.0|x|x|x|x|x|-|x|
 |Autoconf/2.69-GCCcore-8.2.0|-|x|-|-|-|-|-|
-|Autoconf/2.69|x|x|x|x|x|x|x|

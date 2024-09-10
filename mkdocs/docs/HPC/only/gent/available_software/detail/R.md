@@ -23,7 +23,7 @@ module load R/4.4.1-gfbf-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |R/4.4.1-gfbf-2023b|x|x|x|x|x|x|x|
 |R/4.3.2-gfbf-2023a|x|x|x|x|x|x|x|
-|R/4.2.2-foss-2022b|x|x|x|x|x|x|x|
+|R/4.2.2-foss-2022b|x|x|x|x|x|-|x|
 |R/4.2.1-foss-2022a|x|x|x|x|x|-|x|
 |R/4.2.0-foss-2021b|x|x|x|x|x|-|x|
 |R/4.1.2-foss-2021b|x|x|x|x|x|-|x|

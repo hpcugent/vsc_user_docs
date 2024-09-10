@@ -21,4 +21,4 @@ module load regionmask/0.10.0-foss-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|regionmask/0.10.0-foss-2022b|x|x|x|x|x|x|x|
+|regionmask/0.10.0-foss-2022b|x|x|x|x|x|-|x|

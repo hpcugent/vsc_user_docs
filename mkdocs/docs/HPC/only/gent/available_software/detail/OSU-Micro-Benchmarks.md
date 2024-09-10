@@ -21,12 +21,9 @@ module load OSU-Micro-Benchmarks/7.2-gompi-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OSU-Micro-Benchmarks/7.2-gompi-2023b|x|x|x|x|x|x|x|
+|OSU-Micro-Benchmarks/7.2-gompi-2023b|x|x|x|x|x|-|x|
 |OSU-Micro-Benchmarks/7.1-1-iimpi-2023a|x|x|x|x|x|-|x|
 |OSU-Micro-Benchmarks/7.1-1-gompi-2023a|-|x|-|-|-|x|-|
-|OSU-Micro-Benchmarks/6.2-iimpi-2022b|x|x|x|x|x|x|x|
-|OSU-Micro-Benchmarks/6.2-gompi-2022b-CUDA-12.0.0|x|x|x|x|x|x|x|
-|OSU-Micro-Benchmarks/6.2-gompi-2022b|x|x|x|x|x|x|x|
 |OSU-Micro-Benchmarks/5.8-iimpi-2021b|x|x|x|-|x|-|x|
 |OSU-Micro-Benchmarks/5.7.1-iompi-2021a|-|-|x|-|x|-|x|
 |OSU-Micro-Benchmarks/5.7.1-iimpi-2021a|-|-|x|-|x|-|x|

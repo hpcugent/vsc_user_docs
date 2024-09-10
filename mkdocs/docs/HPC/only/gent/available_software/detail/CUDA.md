@@ -22,10 +22,7 @@ module load CUDA/12.5.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |CUDA/12.5.0|x|-|x|-|x|-|-|
-|CUDA/12.3.0|x|x|x|x|x|x|x|
-|CUDA/12.2.0|x|x|x|x|x|x|x|
 |CUDA/12.1.1|x|-|x|-|x|-|-|
-|CUDA/12.0.0|x|x|x|x|x|x|x|
 |CUDA/11.7.0|x|x|x|x|x|-|x|
 |CUDA/11.4.1|x|-|-|-|x|-|-|
 |CUDA/11.3.1|x|x|x|-|x|-|x|

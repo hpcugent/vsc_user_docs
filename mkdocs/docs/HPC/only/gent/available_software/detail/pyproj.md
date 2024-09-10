@@ -22,7 +22,7 @@ module load pyproj/3.6.0-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |pyproj/3.6.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|pyproj/3.5.0-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|pyproj/3.5.0-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |pyproj/3.4.0-GCCcore-11.3.0|x|x|x|x|x|-|x|
 |pyproj/3.3.1-GCCcore-11.2.0|x|x|x|-|x|-|x|
 |pyproj/3.0.1-GCCcore-10.2.0|-|x|x|x|x|-|x|

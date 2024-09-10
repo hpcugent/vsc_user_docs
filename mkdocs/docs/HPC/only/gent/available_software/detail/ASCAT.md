@@ -21,5 +21,5 @@ module load ASCAT/3.1.2-foss-2022b-R-4.2.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ASCAT/3.1.2-foss-2022b-R-4.2.2|x|x|x|x|x|x|x|
+|ASCAT/3.1.2-foss-2022b-R-4.2.2|x|x|x|x|x|-|x|
 |ASCAT/3.1.2-foss-2022a-R-4.2.1|x|x|x|x|x|-|x|

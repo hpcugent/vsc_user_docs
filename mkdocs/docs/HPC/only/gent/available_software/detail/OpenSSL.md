@@ -22,4 +22,4 @@ module load OpenSSL/3
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |OpenSSL/3|x|x|x|x|x|x|x|
-|OpenSSL/1.1|x|x|x|x|x|x|x|
+|OpenSSL/1.1|x|x|x|x|x|-|x|

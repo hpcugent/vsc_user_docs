@@ -23,7 +23,7 @@ module load foss/2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |foss/2023b|x|x|x|x|x|x|x|
 |foss/2023a|x|x|x|x|x|x|x|
-|foss/2022b|x|x|x|x|x|x|x|
+|foss/2022b|x|x|x|x|x|-|x|
 |foss/2022a|x|x|x|x|x|x|x|
 |foss/2021b|x|x|x|x|x|-|x|
 |foss/2021a|x|x|x|x|x|-|x|

@@ -23,7 +23,7 @@ module load libepoxy/1.5.10-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libepoxy/1.5.10-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |libepoxy/1.5.10-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|libepoxy/1.5.10-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|libepoxy/1.5.10-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |libepoxy/1.5.10-GCCcore-11.3.0|x|x|x|x|x|-|x|
 |libepoxy/1.5.8-GCCcore-11.2.0|x|x|x|x|x|-|x|
 |libepoxy/1.5.8-GCCcore-10.3.0|x|x|x|-|x|-|x|

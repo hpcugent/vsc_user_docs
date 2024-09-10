@@ -22,7 +22,7 @@ module load SAMtools/1.18-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |SAMtools/1.18-GCC-12.3.0|x|x|x|x|x|x|x|
-|SAMtools/1.17-GCC-12.2.0|x|x|x|x|x|x|x|
+|SAMtools/1.17-GCC-12.2.0|x|x|x|x|x|-|x|
 |SAMtools/1.16.1-GCC-11.3.0|x|x|x|x|x|x|x|
 |SAMtools/1.15-GCC-11.2.0|x|x|x|-|x|-|x|
 |SAMtools/1.14-GCC-11.2.0|x|x|x|x|x|-|x|

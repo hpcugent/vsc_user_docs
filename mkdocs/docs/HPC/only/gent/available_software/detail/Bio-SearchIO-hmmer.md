@@ -14,12 +14,11 @@ The overview below shows which Bio-SearchIO-hmmer installations are available pe
 To start using Bio-SearchIO-hmmer, load one of these modules using a `module load` command like:
 
 ```shell
-module load Bio-SearchIO-hmmer/1.7.3-GCC-12.2.0
+module load Bio-SearchIO-hmmer/1.7.3-GCC-10.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Bio-SearchIO-hmmer/1.7.3-GCC-12.2.0|x|x|x|x|x|x|x|
 |Bio-SearchIO-hmmer/1.7.3-GCC-10.2.0|-|x|x|x|x|-|x|

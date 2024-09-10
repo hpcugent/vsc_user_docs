@@ -22,4 +22,3 @@ module load FLINT/3.1.1-gfbf-2023b
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |FLINT/3.1.1-gfbf-2023b|x|x|x|x|x|-|x|
-|FLINT/2.9.0-gfbf-2022b|x|x|x|x|x|x|x|

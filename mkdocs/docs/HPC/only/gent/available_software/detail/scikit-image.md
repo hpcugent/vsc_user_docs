@@ -22,7 +22,7 @@ module load scikit-image/0.22.0-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |scikit-image/0.22.0-foss-2023a|x|x|x|x|x|x|x|
-|scikit-image/0.21.0-foss-2022b|x|x|x|x|x|x|x|
+|scikit-image/0.21.0-foss-2022b|x|x|x|x|x|-|x|
 |scikit-image/0.19.3-foss-2022a|x|x|x|x|x|x|x|
 |scikit-image/0.19.1-foss-2021b|x|x|x|x|x|-|x|
 |scikit-image/0.18.3-foss-2021a|x|x|x|-|x|-|x|

@@ -22,7 +22,6 @@ module load spoa/4.1.0-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |spoa/4.1.0-GCC-12.3.0|x|x|x|x|x|x|x|
-|spoa/4.0.7-GCC-12.2.0|x|x|x|x|x|x|x|
 |spoa/4.0.7-GCC-11.3.0|x|x|x|x|x|-|x|
 |spoa/4.0.7-GCC-11.2.0|x|x|x|-|x|-|x|
 |spoa/4.0.7-GCC-10.3.0|x|x|x|-|x|-|x|

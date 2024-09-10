@@ -23,9 +23,8 @@ module load networkx/3.2.1-gfbf-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |networkx/3.2.1-gfbf-2023b|x|x|x|x|x|x|x|
 |networkx/3.1-gfbf-2023a|x|x|x|x|x|x|x|
-|networkx/3.0-gfbf-2022b|x|x|x|x|x|x|x|
+|networkx/3.0-gfbf-2022b|x|x|x|x|x|-|x|
 |networkx/3.0-foss-2022b|x|x|x|x|x|-|x|
-|networkx/2.8.8-gfbf-2022b|x|x|x|x|x|x|x|
 |networkx/2.8.4-intel-2022a|x|x|x|x|x|-|x|
 |networkx/2.8.4-foss-2022a|x|x|x|x|x|x|x|
 |networkx/2.6.3-foss-2021b|x|x|x|x|x|-|x|

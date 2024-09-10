@@ -25,7 +25,7 @@ module load HMMER/3.4-gompi-2023a
 |HMMER/3.3.2-iimpi-2021b|x|x|x|-|x|-|x|
 |HMMER/3.3.2-iimpi-2020b|-|x|x|x|x|-|x|
 |HMMER/3.3.2-gompic-2020b|x|-|-|-|x|-|-|
-|HMMER/3.3.2-gompi-2022b|x|x|x|x|x|x|x|
+|HMMER/3.3.2-gompi-2022b|x|x|x|x|x|-|x|
 |HMMER/3.3.2-gompi-2022a|x|x|x|x|x|x|x|
 |HMMER/3.3.2-gompi-2021b|x|x|x|x|x|-|x|
 |HMMER/3.3.2-gompi-2021a|x|x|x|-|x|-|x|

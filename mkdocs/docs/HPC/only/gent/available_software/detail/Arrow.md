@@ -22,7 +22,7 @@ module load Arrow/14.0.1-gfbf-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Arrow/14.0.1-gfbf-2023a|x|x|x|x|x|x|x|
-|Arrow/11.0.0-gfbf-2022b|x|x|x|x|x|x|x|
+|Arrow/11.0.0-gfbf-2022b|x|x|x|x|x|-|x|
 |Arrow/8.0.0-foss-2022a|x|x|x|x|x|-|x|
 |Arrow/6.0.0-foss-2021b|x|x|x|x|x|-|x|
 |Arrow/6.0.0-foss-2021a|-|x|x|-|x|-|x|

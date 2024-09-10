@@ -21,5 +21,5 @@ module load HTSplotter/2.11-foss-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HTSplotter/2.11-foss-2022b|x|x|x|x|x|x|x|
+|HTSplotter/2.11-foss-2022b|x|x|x|x|x|-|x|
 |HTSplotter/0.15-foss-2022a|x|x|x|x|x|-|x|

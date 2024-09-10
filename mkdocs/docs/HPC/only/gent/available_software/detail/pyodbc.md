@@ -21,4 +21,4 @@ module load pyodbc/4.0.39-foss-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pyodbc/4.0.39-foss-2022b|x|x|x|x|x|x|x|
+|pyodbc/4.0.39-foss-2022b|x|x|x|x|x|-|x|

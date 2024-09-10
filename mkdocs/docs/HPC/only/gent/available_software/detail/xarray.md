@@ -22,7 +22,7 @@ module load xarray/2023.9.0-gfbf-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |xarray/2023.9.0-gfbf-2023a|x|x|x|x|x|x|x|
-|xarray/2023.4.2-gfbf-2022b|x|x|x|x|x|x|x|
+|xarray/2023.4.2-gfbf-2022b|x|x|x|x|x|-|x|
 |xarray/2022.6.0-foss-2022a|x|x|x|x|x|-|x|
 |xarray/0.20.1-intel-2021b|x|x|x|x|x|-|x|
 |xarray/0.20.1-foss-2021b|x|x|x|x|x|-|x|

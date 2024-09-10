@@ -22,5 +22,4 @@ module load Pyomo/6.7.3-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Pyomo/6.7.3-foss-2023a|x|x|x|x|x|x|x|
-|Pyomo/6.5.0-foss-2022b|x|x|x|x|x|x|x|
 |Pyomo/6.4.2-foss-2022a|x|x|x|-|x|-|x|

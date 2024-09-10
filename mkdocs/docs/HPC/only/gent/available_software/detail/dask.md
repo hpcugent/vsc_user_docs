@@ -23,7 +23,7 @@ module load dask/2023.12.1-foss-2023a
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |dask/2023.12.1-foss-2023a|x|x|x|x|x|x|x|
 |dask/2023.9.2-foss-2023a|x|x|x|x|x|x|x|
-|dask/2023.7.1-foss-2022b|x|x|x|x|x|x|x|
+|dask/2023.7.1-foss-2022b|x|x|x|x|x|-|x|
 |dask/2022.10.0-foss-2022a|x|x|x|x|x|x|x|
 |dask/2022.1.0-foss-2021b|x|x|x|x|x|-|x|
 |dask/2021.9.1-foss-2021a|x|x|x|-|x|-|x|

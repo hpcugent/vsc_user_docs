@@ -22,4 +22,3 @@ module load FUSE/3.16.2-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |FUSE/3.16.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|FUSE/3.14.1-GCCcore-12.2.0|x|x|x|x|x|x|x|

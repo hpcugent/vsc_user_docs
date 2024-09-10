@@ -22,7 +22,7 @@ module load Shapely/2.0.1-gfbf-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Shapely/2.0.1-gfbf-2023a|x|x|x|x|x|x|x|
-|Shapely/2.0.1-foss-2022b|x|x|x|x|x|x|x|
+|Shapely/2.0.1-foss-2022b|x|x|x|x|x|-|x|
 |Shapely/1.8a1-iccifort-2020.4.304|-|x|x|x|x|-|x|
 |Shapely/1.8a1-GCC-10.3.0|x|-|-|-|x|-|-|
 |Shapely/1.8a1-GCC-10.2.0|-|x|x|x|x|-|x|

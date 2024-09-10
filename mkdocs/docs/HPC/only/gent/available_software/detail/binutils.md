@@ -39,7 +39,7 @@ module load binutils/2.42-GCCcore-13.3.0
 |binutils/2.34-GCCcore-9.3.0|x|x|x|x|x|-|x|
 |binutils/2.34|x|x|x|x|x|-|x|
 |binutils/2.32-GCCcore-8.3.0|x|x|x|x|x|-|x|
-|binutils/2.32|x|x|x|x|x|x|x|
+|binutils/2.32|x|x|x|x|x|-|x|
 |binutils/2.31.1-GCCcore-8.2.0|-|x|-|-|-|-|-|
 |binutils/2.31.1|-|x|-|-|-|-|x|
 |binutils/2.30|-|-|-|-|-|-|x|

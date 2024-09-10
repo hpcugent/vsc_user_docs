@@ -14,13 +14,11 @@ The overview below shows which GDB installations are available per HPC-UGent Tie
 To start using GDB, load one of these modules using a `module load` command like:
 
 ```shell
-module load GDB/13.2-GCCcore-13.2.0
+module load GDB/9.1-GCCcore-8.3.0-Python-3.7.4
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GDB/13.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|GDB/13.2-GCCcore-12.2.0|x|x|x|x|x|x|x|
 |GDB/9.1-GCCcore-8.3.0-Python-3.7.4|-|x|x|-|x|-|x|

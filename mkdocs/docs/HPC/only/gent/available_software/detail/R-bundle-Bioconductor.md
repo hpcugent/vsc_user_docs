@@ -22,7 +22,7 @@ module load R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2|x|x|x|x|x|x|x|
-|R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2|x|x|x|x|x|x|x|
+|R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2|x|x|x|x|x|-|x|
 |R-bundle-Bioconductor/3.15-foss-2022a-R-4.2.1|x|x|x|x|x|-|x|
 |R-bundle-Bioconductor/3.15-foss-2021b-R-4.2.0|x|x|x|x|x|-|x|
 |R-bundle-Bioconductor/3.14-foss-2021b-R-4.1.2|x|x|x|x|x|-|x|

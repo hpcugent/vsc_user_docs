@@ -22,7 +22,7 @@ module load ont-fast5-api/4.1.2-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ont-fast5-api/4.1.2-foss-2023a|x|x|x|x|x|x|x|
-|ont-fast5-api/4.1.1-foss-2022b|x|x|x|x|x|x|x|
+|ont-fast5-api/4.1.1-foss-2022b|x|x|x|x|x|-|x|
 |ont-fast5-api/4.1.1-foss-2022a|x|x|x|x|x|-|x|
 |ont-fast5-api/4.0.2-foss-2021b|x|x|x|-|x|-|x|
 |ont-fast5-api/4.0.0-foss-2021a|x|x|x|-|x|-|x|

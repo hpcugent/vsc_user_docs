@@ -22,4 +22,3 @@ module load NTL/11.5.1-GCC-13.2.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |NTL/11.5.1-GCC-13.2.0|x|x|x|x|x|-|x|
-|NTL/11.5.1-GCC-12.2.0|x|x|x|x|x|x|x|

@@ -22,4 +22,3 @@ module load libnsl/2.0.1-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libnsl/2.0.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|libnsl/2.0.0-GCCcore-12.2.0|x|x|x|x|x|x|x|

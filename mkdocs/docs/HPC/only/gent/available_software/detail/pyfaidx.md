@@ -22,7 +22,7 @@ module load pyfaidx/0.8.1.1-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |pyfaidx/0.8.1.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|pyfaidx/0.7.2.1-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|pyfaidx/0.7.2.1-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |pyfaidx/0.7.1-GCCcore-11.3.0|x|x|x|x|x|-|x|
 |pyfaidx/0.7.0-GCCcore-11.2.0|x|x|x|-|x|-|x|
 |pyfaidx/0.6.3.1-GCCcore-10.3.0|x|x|x|-|x|-|x|

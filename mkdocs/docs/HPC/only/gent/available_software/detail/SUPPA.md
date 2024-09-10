@@ -21,4 +21,4 @@ module load SUPPA/2.3-20231005-foss-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SUPPA/2.3-20231005-foss-2022b|x|x|x|x|x|x|x|
+|SUPPA/2.3-20231005-foss-2022b|x|x|x|x|x|-|x|

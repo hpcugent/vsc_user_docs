@@ -23,7 +23,7 @@ module load libsodium/1.0.19-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libsodium/1.0.19-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |libsodium/1.0.18-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|libsodium/1.0.18-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|libsodium/1.0.18-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |libsodium/1.0.18-GCCcore-11.3.0|x|x|x|x|x|x|x|
 |libsodium/1.0.18-GCCcore-11.2.0|x|x|x|x|x|-|x|
 |libsodium/1.0.18-GCCcore-10.3.0|x|x|x|x|x|-|x|

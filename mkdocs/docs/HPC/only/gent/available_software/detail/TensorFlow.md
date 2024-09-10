@@ -24,7 +24,7 @@ module load TensorFlow/2.15.1-foss-2023a-CUDA-12.1.1
 |TensorFlow/2.15.1-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
 |TensorFlow/2.15.1-foss-2023a|x|x|x|x|x|x|x|
 |TensorFlow/2.13.0-foss-2023a|x|x|x|x|x|x|x|
-|TensorFlow/2.13.0-foss-2022b|x|x|x|x|x|x|x|
+|TensorFlow/2.13.0-foss-2022b|x|x|x|x|x|-|x|
 |TensorFlow/2.11.0-foss-2022a-CUDA-11.7.0|x|-|x|-|x|-|-|
 |TensorFlow/2.11.0-foss-2022a|x|x|x|x|x|-|x|
 |TensorFlow/2.8.4-foss-2021b|-|-|-|x|-|-|-|

@@ -23,5 +23,4 @@ module load PyZMQ/25.1.2-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |PyZMQ/25.1.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |PyZMQ/25.1.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|PyZMQ/25.1.0-GCCcore-12.2.0|x|x|x|x|x|x|x|
 |PyZMQ/24.0.1-GCCcore-11.3.0|x|x|x|x|x|-|x|

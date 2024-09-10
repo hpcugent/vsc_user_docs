@@ -23,7 +23,7 @@ module load JupyterLab/4.2.0-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |JupyterLab/4.2.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |JupyterLab/4.0.5-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|JupyterLab/4.0.3-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|JupyterLab/4.0.3-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |JupyterLab/3.5.0-GCCcore-11.3.0|x|x|x|x|x|-|x|
 |JupyterLab/3.1.6-GCCcore-11.2.0|x|x|x|-|x|-|x|
 |JupyterLab/3.0.16-GCCcore-10.3.0|x|-|x|-|x|-|-|

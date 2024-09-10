@@ -21,7 +21,7 @@ module load pkg-config/0.29.2-GCCcore-12.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pkg-config/0.29.2-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|pkg-config/0.29.2-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |pkg-config/0.29.2-GCCcore-11.3.0|x|x|x|x|x|x|x|
 |pkg-config/0.29.2-GCCcore-11.2.0|x|x|x|x|x|x|x|
 |pkg-config/0.29.2-GCCcore-10.3.0|x|x|x|x|x|-|x|

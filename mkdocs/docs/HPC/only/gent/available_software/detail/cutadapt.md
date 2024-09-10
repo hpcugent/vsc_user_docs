@@ -22,7 +22,6 @@ module load cutadapt/4.9-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |cutadapt/4.9-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|cutadapt/4.4-GCCcore-12.2.0|x|x|x|x|x|x|x|
 |cutadapt/4.2-GCCcore-11.3.0|x|x|x|x|x|-|x|
 |cutadapt/3.5-GCCcore-11.2.0|x|x|x|-|x|-|x|
 |cutadapt/3.4-GCCcore-10.2.0|-|x|x|x|x|-|x|

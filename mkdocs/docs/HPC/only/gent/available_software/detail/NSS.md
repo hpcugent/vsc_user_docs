@@ -23,7 +23,7 @@ module load NSS/3.94-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |NSS/3.94-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |NSS/3.89.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|NSS/3.85-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|NSS/3.85-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |NSS/3.79-GCCcore-11.3.0|x|x|x|x|x|-|x|
 |NSS/3.69-GCCcore-11.2.0|x|x|x|x|x|-|x|
 |NSS/3.65-GCCcore-10.3.0|x|x|x|x|x|-|x|

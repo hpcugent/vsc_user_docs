@@ -22,7 +22,7 @@ module load Seaborn/0.13.2-gfbf-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Seaborn/0.13.2-gfbf-2023a|x|x|x|x|x|x|x|
-|Seaborn/0.12.2-foss-2022b|x|x|x|x|x|x|x|
+|Seaborn/0.12.2-foss-2022b|x|x|x|x|x|-|x|
 |Seaborn/0.12.1-foss-2022a|x|x|x|x|x|-|x|
 |Seaborn/0.11.2-intel-2021b|x|x|x|x|x|-|x|
 |Seaborn/0.11.2-foss-2021b|x|x|x|x|x|-|x|
