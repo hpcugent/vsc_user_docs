@@ -9,7 +9,7 @@ WHAM
 # Available modules
 
 
-The overview below shows which WHAM installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which WHAM installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using WHAM, load one of these modules using a `module load` command like:
 
@@ -17,7 +17,7 @@ To start using WHAM, load one of these modules using a `module load` command lik
 module load WHAM/2.0.10.2-intel-2020a-kj_mol
 ```
 
-*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
+*(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

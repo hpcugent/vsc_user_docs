@@ -9,7 +9,7 @@ FALCON
 # Available modules
 
 
-The overview below shows which FALCON installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which FALCON installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using FALCON, load one of these modules using a `module load` command like:
 
@@ -17,7 +17,7 @@ To start using FALCON, load one of these modules using a `module load` command l
 module load FALCON/1.8.8-intel-2019b-Python-2.7.16
 ```
 
-*(This data was automatically generated on Mon, 09 Sep 2024 at 14:06:35 CEST)*  
+*(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
