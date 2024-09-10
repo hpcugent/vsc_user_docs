@@ -21,7 +21,7 @@ cd ~/{{ exampledir }}
     If the example directory is not yet present, copy it to your home directory:
 
     ```
-cp -r {{ examplesdir }} ~/
+    cp -r {{ examplesdir }} ~/
     ```
 
 
