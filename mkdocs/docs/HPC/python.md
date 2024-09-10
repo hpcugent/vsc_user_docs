@@ -159,6 +159,9 @@ Now we can run the script:
 $ python script.py
 ```
 
+For more information on how to start an interactive session, 
+see the [Interactive jobs](./running_interactive_jobs.md) page.
+
 ### Job script
 
 To run the script using a job script, 
