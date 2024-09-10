@@ -433,12 +433,14 @@ def update_generated_time_yml(generated_time_yml, generated_time) -> None:
     with open(generated_time_yml, 'w') as file:
         for line in lines:
             if line.startswith(key):
-                line = f"{key}: {generated_time}\n"
+                line = f"{key}: {generated_time} # This line is automatically updated by scripts/available_modules/available_modules.py\n"
                 replaced = True
             file.write(line)
 
     if not replaced:
         print(f"WARNING: Could not find the key '{key}' in the YAML file '{generated_time_yml}'")
+
+
 # --------------------------------------------------------------------------------------------------------
 # Generate overview markdown
 # --------------------------------------------------------------------------------------------------------
