@@ -16,14 +16,14 @@ $ module avail Python/
 For example, to load Python 3.11, you can run:
 
 ```bash
-$ module load Python/3.11.3-GCCcore-12.3.0
+$ module load Python/3.11.5-GCCcore-13.2.0
 ```
 
 This will load Python into your environment:
 
 ```
 $ python --version
-Python 3.11.3
+Python 3.11.5
 ```
 
 ## Python packages as modules
