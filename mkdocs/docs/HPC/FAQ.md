@@ -300,10 +300,17 @@ Note that it is still preferred to submit a software installation request,
 as the software installed by the HPC team will be optimized for the HPC environment.
 This can lead to dramatic performance improvements.
 
-!!! warning 
-    Don't install software using `pip install --user` or `pip install --target` with `$PYTHONPATH`
-    as this can lead to conflicts with the software installed by the HPC team. 
-    If you need to install software in your home directory, use a [Python virtual environment](./setting_up_python_virtual_environments.md).
+!!! warning
+    Do not use `pip install --user` to install software, as this places packages 
+    in `~/.local/lib/python*/site-packages`, potentially causing conflicts with software installed by the HPC team. 
+    
+    Also, avoid using `pip install --prefix` or `pip install --target` with `$PYTHONPATH`, 
+    since `$PYTHONPATH` is a global setting that affects all Python versions.
+    When `$PYTHONPATH` includes directories with packages from different Python versions, it can lead to conflicts. 
+
+    Instead, use a Python virtual environment for package installations in your home directory. 
+    For guidance on setting up virtual environments, 
+    refer to the [Python virtual environments setup guide](./setting_up_python_virtual_environments.md).
 
 ### Is my connection compromised? Remote host identification has changed
 
