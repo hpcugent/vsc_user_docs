@@ -23,7 +23,7 @@ module load IPython/8.17.2-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |IPython/8.17.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |IPython/8.14.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|IPython/8.14.0-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|IPython/8.14.0-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |IPython/8.5.0-GCCcore-11.3.0|x|x|x|x|x|x|x|
 |IPython/7.26.0-GCCcore-11.2.0|x|x|x|x|x|-|x|
 |IPython/7.25.0-GCCcore-10.3.0|x|x|x|x|x|-|x|

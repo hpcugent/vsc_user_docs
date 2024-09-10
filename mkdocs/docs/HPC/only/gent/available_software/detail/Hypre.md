@@ -22,7 +22,6 @@ module load Hypre/2.29.0-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Hypre/2.29.0-foss-2023a|x|x|x|x|x|x|x|
-|Hypre/2.27.0-foss-2022b|x|x|x|x|x|x|x|
 |Hypre/2.25.0-foss-2022a|x|x|x|x|x|-|x|
 |Hypre/2.24.0-intel-2021b|x|x|x|x|x|-|x|
 |Hypre/2.21.0-foss-2021a|-|x|x|-|x|-|x|

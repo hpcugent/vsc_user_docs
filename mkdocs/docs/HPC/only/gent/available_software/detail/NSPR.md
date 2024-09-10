@@ -23,7 +23,7 @@ module load NSPR/4.35-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |NSPR/4.35-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |NSPR/4.35-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|NSPR/4.35-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|NSPR/4.35-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |NSPR/4.34-GCCcore-11.3.0|x|x|x|x|x|-|x|
 |NSPR/4.32-GCCcore-11.2.0|x|x|x|x|x|-|x|
 |NSPR/4.30-GCCcore-10.3.0|x|x|x|x|x|-|x|

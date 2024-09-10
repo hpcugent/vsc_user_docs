@@ -22,9 +22,8 @@ module load HDF5/1.14.3-gompi-2023b
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |HDF5/1.14.3-gompi-2023b|x|x|x|x|x|x|x|
-|HDF5/1.14.0-iimpi-2022b|x|x|x|x|x|x|x|
 |HDF5/1.14.0-gompi-2023a|x|x|x|x|x|x|x|
-|HDF5/1.14.0-gompi-2022b|x|x|x|x|x|x|x|
+|HDF5/1.14.0-gompi-2022b|x|x|x|x|x|-|x|
 |HDF5/1.13.1-gompi-2022a|x|x|x|-|x|-|x|
 |HDF5/1.12.2-iimpi-2022a|x|x|x|x|x|-|x|
 |HDF5/1.12.2-gompi-2022a|x|x|x|x|x|x|x|

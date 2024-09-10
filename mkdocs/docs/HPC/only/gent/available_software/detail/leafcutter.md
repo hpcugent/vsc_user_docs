@@ -21,4 +21,4 @@ module load leafcutter/0.2.9-foss-2022b-R-4.2.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|leafcutter/0.2.9-foss-2022b-R-4.2.2|x|x|x|x|x|x|x|
+|leafcutter/0.2.9-foss-2022b-R-4.2.2|x|x|x|x|x|-|x|

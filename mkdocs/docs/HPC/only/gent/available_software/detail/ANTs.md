@@ -14,12 +14,11 @@ The overview below shows which ANTs installations are available per HPC-UGent Ti
 To start using ANTs, load one of these modules using a `module load` command like:
 
 ```shell
-module load ANTs/2.5.0-foss-2022b
+module load ANTs/2.3.2-foss-2019b-Python-3.7.4
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ANTs/2.5.0-foss-2022b|x|x|x|x|x|x|x|
 |ANTs/2.3.2-foss-2019b-Python-3.7.4|-|x|x|-|x|-|x|

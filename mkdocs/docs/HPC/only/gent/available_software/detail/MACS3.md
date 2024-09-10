@@ -23,5 +23,4 @@ module load MACS3/3.0.1-gfbf-2023a
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |MACS3/3.0.1-gfbf-2023a|x|x|x|x|x|-|x|
 |MACS3/3.0.1-foss-2022b|x|x|x|x|x|-|x|
-|MACS3/3.0.0b2-foss-2022b|x|x|x|x|x|x|x|
 |MACS3/3.0.0-foss-2022b|x|x|x|x|x|-|x|

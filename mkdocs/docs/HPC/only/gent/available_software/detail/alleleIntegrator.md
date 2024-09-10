@@ -21,5 +21,5 @@ module load alleleIntegrator/0.8.8-foss-2022b-R-4.2.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|alleleIntegrator/0.8.8-foss-2022b-R-4.2.2|x|x|x|x|x|x|x|
+|alleleIntegrator/0.8.8-foss-2022b-R-4.2.2|x|x|x|x|x|-|x|
 |alleleIntegrator/0.8.8-foss-2022a-R-4.2.1|x|x|x|x|x|-|x|

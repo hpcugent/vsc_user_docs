@@ -21,4 +21,4 @@ module load drmaa-python/0.7.9-GCCcore-12.2.0-slurm
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|drmaa-python/0.7.9-GCCcore-12.2.0-slurm|x|x|x|x|x|x|x|
+|drmaa-python/0.7.9-GCCcore-12.2.0-slurm|x|x|x|x|x|-|x|

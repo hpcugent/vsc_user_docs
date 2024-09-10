@@ -23,7 +23,7 @@ module load PCRE/8.45-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |PCRE/8.45-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |PCRE/8.45-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|PCRE/8.45-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|PCRE/8.45-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |PCRE/8.45-GCCcore-11.3.0|x|x|x|x|x|x|x|
 |PCRE/8.45-GCCcore-11.2.0|x|x|x|x|x|-|x|
 |PCRE/8.44-GCCcore-10.3.0|x|x|x|x|x|-|x|

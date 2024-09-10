@@ -21,5 +21,5 @@ module load PyCalib/20230531-gfbf-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyCalib/20230531-gfbf-2022b|x|x|x|x|x|x|x|
+|PyCalib/20230531-gfbf-2022b|x|x|x|x|x|-|x|
 |PyCalib/0.1.0.dev0-foss-2021b|x|x|x|x|x|-|x|

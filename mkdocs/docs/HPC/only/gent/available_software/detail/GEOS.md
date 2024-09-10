@@ -23,7 +23,7 @@ module load GEOS/3.12.1-GCC-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |GEOS/3.12.1-GCC-13.2.0|x|x|x|x|x|x|x|
 |GEOS/3.12.0-GCC-12.3.0|x|x|x|x|x|x|x|
-|GEOS/3.11.1-GCC-12.2.0|x|x|x|x|x|x|x|
+|GEOS/3.11.1-GCC-12.2.0|x|x|x|x|x|-|x|
 |GEOS/3.10.3-GCC-11.3.0|x|x|x|x|x|-|x|
 |GEOS/3.9.1-iccifort-2020.4.304|-|x|x|x|x|-|x|
 |GEOS/3.9.1-GCC-11.2.0|x|x|x|x|x|-|x|

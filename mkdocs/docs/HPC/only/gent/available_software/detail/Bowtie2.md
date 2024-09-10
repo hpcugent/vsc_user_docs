@@ -14,14 +14,13 @@ The overview below shows which Bowtie2 installations are available per HPC-UGent
 To start using Bowtie2, load one of these modules using a `module load` command like:
 
 ```shell
-module load Bowtie2/2.5.1-GCC-12.2.0
+module load Bowtie2/2.4.5-GCC-11.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Bowtie2/2.5.1-GCC-12.2.0|x|x|x|x|x|x|x|
 |Bowtie2/2.4.5-GCC-11.3.0|x|x|x|x|x|-|x|
 |Bowtie2/2.4.4-GCC-11.2.0|x|x|x|x|x|-|x|
 |Bowtie2/2.4.2-GCC-10.2.0|-|x|x|x|x|-|x|

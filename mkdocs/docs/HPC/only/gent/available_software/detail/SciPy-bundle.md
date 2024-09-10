@@ -23,7 +23,7 @@ module load SciPy-bundle/2023.11-gfbf-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |SciPy-bundle/2023.11-gfbf-2023b|x|x|x|x|x|x|x|
 |SciPy-bundle/2023.07-gfbf-2023a|x|x|x|x|x|x|x|
-|SciPy-bundle/2023.02-gfbf-2022b|x|x|x|x|x|x|x|
+|SciPy-bundle/2023.02-gfbf-2022b|x|x|x|x|x|-|x|
 |SciPy-bundle/2022.05-intel-2022a|x|x|x|x|x|-|x|
 |SciPy-bundle/2022.05-foss-2022a|x|x|x|x|x|x|x|
 |SciPy-bundle/2021.10-intel-2021b|x|x|x|x|x|-|x|

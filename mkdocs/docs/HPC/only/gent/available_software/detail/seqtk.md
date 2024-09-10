@@ -22,7 +22,6 @@ module load seqtk/1.4-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |seqtk/1.4-GCC-12.3.0|x|x|x|x|x|x|x|
-|seqtk/1.4-GCC-12.2.0|x|x|x|x|x|x|x|
 |seqtk/1.3-GCC-11.2.0|x|x|x|-|x|-|x|
 |seqtk/1.3-GCC-10.2.0|-|x|x|x|x|-|x|
 |seqtk/1.3-GCC-8.3.0|-|x|x|-|x|-|x|

@@ -22,7 +22,6 @@ module load cuDNN/8.9.2.26-CUDA-12.1.1
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |cuDNN/8.9.2.26-CUDA-12.1.1|x|-|x|-|x|-|-|
-|cuDNN/8.8.0.121-CUDA-12.0.0|x|x|x|x|x|x|x|
 |cuDNN/8.4.1.50-CUDA-11.7.0|x|-|x|-|x|-|-|
 |cuDNN/8.2.2.26-CUDA-11.4.1|x|-|-|-|x|-|-|
 |cuDNN/8.2.1.32-CUDA-11.3.1|x|x|x|-|x|-|x|

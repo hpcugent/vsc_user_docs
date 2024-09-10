@@ -22,4 +22,3 @@ module load Structure/2.3.4-iccifort-2019.5.281
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Structure/2.3.4-iccifort-2019.5.281|-|x|-|-|-|-|-|
-|Structure/2.3.4-GCC-12.2.0|x|x|x|x|x|x|x|

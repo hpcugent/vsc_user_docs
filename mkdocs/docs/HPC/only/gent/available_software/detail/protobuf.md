@@ -22,7 +22,7 @@ module load protobuf/24.0-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |protobuf/24.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|protobuf/23.0-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|protobuf/23.0-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |protobuf/3.19.4-GCCcore-11.3.0|x|x|x|x|x|x|x|
 |protobuf/3.17.3-GCCcore-11.2.0|x|x|x|x|x|-|x|
 |protobuf/3.17.3-GCCcore-10.3.0|x|x|x|x|x|-|x|

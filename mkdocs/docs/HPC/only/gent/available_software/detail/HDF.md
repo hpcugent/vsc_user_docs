@@ -23,7 +23,7 @@ module load HDF/4.2.16-2-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |HDF/4.2.16-2-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |HDF/4.2.16-2-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|HDF/4.2.15-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|HDF/4.2.15-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |HDF/4.2.15-GCCcore-11.3.0|x|x|x|x|x|-|x|
 |HDF/4.2.15-GCCcore-11.2.0|x|x|x|x|x|-|x|
 |HDF/4.2.15-GCCcore-10.3.0|x|x|x|x|x|-|x|

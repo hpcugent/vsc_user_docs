@@ -14,14 +14,13 @@ The overview below shows which GL2PS installations are available per HPC-UGent T
 To start using GL2PS, load one of these modules using a `module load` command like:
 
 ```shell
-module load GL2PS/1.4.2-GCCcore-12.2.0
+module load GL2PS/1.4.2-GCCcore-11.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GL2PS/1.4.2-GCCcore-12.2.0|x|x|x|x|x|x|x|
 |GL2PS/1.4.2-GCCcore-11.3.0|x|x|x|x|x|-|x|
 |GL2PS/1.4.2-GCCcore-11.2.0|x|x|x|x|x|-|x|
 |GL2PS/1.4.0-GCCcore-8.3.0|-|x|x|-|x|-|x|

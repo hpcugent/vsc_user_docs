@@ -23,7 +23,7 @@ module load snappy/1.1.10-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |snappy/1.1.10-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |snappy/1.1.10-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|snappy/1.1.9-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|snappy/1.1.9-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |snappy/1.1.9-GCCcore-11.3.0|x|x|x|x|x|-|x|
 |snappy/1.1.9-GCCcore-11.2.0|x|x|x|x|x|-|x|
 |snappy/1.1.8-GCCcore-10.3.0|x|x|x|x|x|-|x|

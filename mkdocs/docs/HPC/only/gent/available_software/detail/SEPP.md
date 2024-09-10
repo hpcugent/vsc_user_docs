@@ -14,14 +14,13 @@ The overview below shows which SEPP installations are available per HPC-UGent Ti
 To start using SEPP, load one of these modules using a `module load` command like:
 
 ```shell
-module load SEPP/4.5.1-foss-2022b
+module load SEPP/4.5.1-foss-2022a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SEPP/4.5.1-foss-2022b|x|x|x|x|x|x|x|
 |SEPP/4.5.1-foss-2022a|x|x|x|x|x|-|x|
 |SEPP/4.5.1-foss-2021b|x|x|x|-|x|-|x|
 |SEPP/4.4.0-foss-2020b|-|x|x|x|x|-|x|

@@ -22,7 +22,7 @@ module load Biopython/1.83-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Biopython/1.83-foss-2023a|x|x|x|x|x|x|x|
-|Biopython/1.81-foss-2022b|x|x|x|x|x|x|x|
+|Biopython/1.81-foss-2022b|x|x|x|x|x|-|x|
 |Biopython/1.79-foss-2022a|x|x|x|x|x|x|x|
 |Biopython/1.79-foss-2021b|x|x|x|x|x|-|x|
 |Biopython/1.79-foss-2021a|x|x|x|x|x|-|x|

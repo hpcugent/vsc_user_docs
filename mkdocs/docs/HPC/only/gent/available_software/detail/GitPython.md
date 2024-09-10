@@ -22,7 +22,7 @@ module load GitPython/3.1.40-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |GitPython/3.1.40-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|GitPython/3.1.31-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|GitPython/3.1.31-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |GitPython/3.1.27-GCCcore-11.3.0|x|x|x|x|x|-|x|
 |GitPython/3.1.24-GCCcore-11.2.0|x|x|x|-|x|-|x|
 |GitPython/3.1.14-GCCcore-10.2.0|-|x|x|x|x|-|x|

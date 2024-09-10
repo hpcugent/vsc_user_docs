@@ -22,7 +22,6 @@ module load python-parasail/1.3.4-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |python-parasail/1.3.4-foss-2023a|x|x|x|x|x|x|x|
-|python-parasail/1.3.4-foss-2022b|x|x|x|x|x|x|x|
 |python-parasail/1.3.3-foss-2022a|x|x|x|x|x|-|x|
 |python-parasail/1.2.4-fosscuda-2020b|-|-|-|-|x|-|-|
 |python-parasail/1.2.4-foss-2021b|x|x|x|-|x|-|x|

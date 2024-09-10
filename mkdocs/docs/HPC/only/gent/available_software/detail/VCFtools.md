@@ -22,5 +22,4 @@ module load VCFtools/0.1.16-iccifort-2019.5.281
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |VCFtools/0.1.16-iccifort-2019.5.281|-|x|x|-|x|-|x|
-|VCFtools/0.1.16-GCC-12.2.0|x|x|x|x|x|x|x|
 |VCFtools/0.1.16-GCC-10.2.0|-|x|x|-|x|-|-|

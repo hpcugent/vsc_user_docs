@@ -22,7 +22,7 @@ module load Fiona/1.9.5-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Fiona/1.9.5-foss-2023a|x|x|x|x|x|x|x|
-|Fiona/1.9.2-foss-2022b|x|x|x|x|x|x|x|
+|Fiona/1.9.2-foss-2022b|x|x|x|x|x|-|x|
 |Fiona/1.8.21-foss-2022a|x|x|x|x|x|-|x|
 |Fiona/1.8.21-foss-2021b|x|x|x|x|x|-|x|
 |Fiona/1.8.20-intel-2020b|-|x|x|-|x|-|x|

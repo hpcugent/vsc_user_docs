@@ -21,4 +21,4 @@ module load TOPAS/3.9-foss-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TOPAS/3.9-foss-2022b|x|x|x|x|x|x|x|
+|TOPAS/3.9-foss-2022b|x|x|x|x|x|-|x|

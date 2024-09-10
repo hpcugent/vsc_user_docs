@@ -22,7 +22,7 @@ module load CGAL/5.6-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |CGAL/5.6-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|CGAL/5.5.2-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|CGAL/5.5.2-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |CGAL/5.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |CGAL/5.2-iimpi-2020b|-|x|-|-|-|-|-|
 |CGAL/5.2-gompi-2020b|x|x|x|x|x|-|x|

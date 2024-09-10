@@ -22,5 +22,4 @@ module load KaHIP/3.16-gompi-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |KaHIP/3.16-gompi-2023a|x|x|x|x|x|x|x|
-|KaHIP/3.14-gompi-2022b|x|x|x|x|x|x|x|
 |KaHIP/3.14-gompi-2022a|-|-|-|x|-|-|-|

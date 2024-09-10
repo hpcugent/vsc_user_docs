@@ -22,7 +22,6 @@ module load spglib-python/2.1.0-gfbf-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |spglib-python/2.1.0-gfbf-2023a|x|x|x|x|x|x|x|
-|spglib-python/2.0.2-gfbf-2022b|x|x|x|x|x|x|x|
 |spglib-python/2.0.0-intel-2022a|x|x|x|x|x|-|x|
 |spglib-python/2.0.0-foss-2022a|x|x|x|x|x|-|x|
 |spglib-python/1.16.3-intel-2021b|x|x|x|-|x|-|x|

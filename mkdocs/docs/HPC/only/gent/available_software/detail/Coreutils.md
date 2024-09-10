@@ -14,12 +14,11 @@ The overview below shows which Coreutils installations are available per HPC-UGe
 To start using Coreutils, load one of these modules using a `module load` command like:
 
 ```shell
-module load Coreutils/9.1-GCCcore-12.2.0
+module load Coreutils/8.32-GCCcore-8.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Coreutils/9.1-GCCcore-12.2.0|x|x|x|x|x|x|x|
 |Coreutils/8.32-GCCcore-8.3.0|-|x|x|-|x|-|x|

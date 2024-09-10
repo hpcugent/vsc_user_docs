@@ -22,7 +22,6 @@ module load parasail/2.6.2-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |parasail/2.6.2-GCC-12.3.0|x|x|x|x|x|x|x|
-|parasail/2.6.2-GCC-12.2.0|x|x|x|x|x|x|x|
 |parasail/2.6-GCC-11.3.0|x|x|x|x|x|-|x|
 |parasail/2.5-GCC-11.2.0|x|x|x|-|x|-|x|
 |parasail/2.4.3-GCC-10.3.0|x|x|x|-|x|-|x|

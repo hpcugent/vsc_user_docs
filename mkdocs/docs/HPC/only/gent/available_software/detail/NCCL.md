@@ -22,7 +22,6 @@ module load NCCL/2.18.3-GCCcore-12.3.0-CUDA-12.1.1
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |NCCL/2.18.3-GCCcore-12.3.0-CUDA-12.1.1|x|-|x|-|x|-|-|
-|NCCL/2.16.2-GCCcore-12.2.0-CUDA-12.0.0|x|x|x|x|x|x|x|
 |NCCL/2.12.12-GCCcore-11.3.0-CUDA-11.7.0|x|-|x|-|x|-|-|
 |NCCL/2.10.3-GCCcore-11.2.0-CUDA-11.4.1|x|-|-|-|x|-|-|
 |NCCL/2.10.3-GCCcore-10.3.0-CUDA-11.3.1|x|-|-|-|x|-|-|

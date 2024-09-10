@@ -14,13 +14,12 @@ The overview below shows which Cereal installations are available per HPC-UGent 
 To start using Cereal, load one of these modules using a `module load` command like:
 
 ```shell
-module load Cereal/1.3.2-GCCcore-12.2.0
+module load Cereal/1.3.2
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Cereal/1.3.2-GCCcore-12.2.0|x|x|x|x|x|x|x|
 |Cereal/1.3.2|x|x|x|x|x|x|x|
 |Cereal/1.3.0|x|x|x|x|x|-|x|

@@ -23,7 +23,7 @@ module load LittleCMS/2.15-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |LittleCMS/2.15-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |LittleCMS/2.15-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|LittleCMS/2.14-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|LittleCMS/2.14-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |LittleCMS/2.13.1-GCCcore-11.3.0|x|x|x|x|x|-|x|
 |LittleCMS/2.12-GCCcore-11.2.0|x|x|x|x|x|-|x|
 |LittleCMS/2.12-GCCcore-10.3.0|x|x|x|x|x|-|x|

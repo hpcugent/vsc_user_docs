@@ -25,7 +25,6 @@ module load ASE/3.22.1-intel-2022a
 |ASE/3.22.1-intel-2021b|x|x|x|-|x|-|x|
 |ASE/3.22.1-gomkl-2021a|x|x|x|x|x|-|x|
 |ASE/3.22.1-gfbf-2023a|x|x|x|x|x|x|x|
-|ASE/3.22.1-gfbf-2022b|x|x|x|x|x|x|x|
 |ASE/3.22.1-foss-2022a|x|x|x|x|x|-|x|
 |ASE/3.22.1-foss-2021b|x|x|x|-|x|-|x|
 |ASE/3.21.1-fosscuda-2020b|-|-|-|-|x|-|-|

@@ -14,12 +14,11 @@ The overview below shows which trimesh installations are available per HPC-UGent
 To start using trimesh, load one of these modules using a `module load` command like:
 
 ```shell
-module load trimesh/3.21.5-gfbf-2022b
+module load trimesh/3.17.1-foss-2022a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|trimesh/3.21.5-gfbf-2022b|x|x|x|x|x|x|x|
 |trimesh/3.17.1-foss-2022a|x|x|x|x|x|x|x|

@@ -25,7 +25,7 @@ module load scikit-learn/1.4.2-gfbf-2023a
 |scikit-learn/1.4.0-gfbf-2023b|x|x|x|x|x|x|x|
 |scikit-learn/1.3.2-gfbf-2023b|x|x|x|x|x|-|x|
 |scikit-learn/1.3.1-gfbf-2023a|x|x|x|x|x|x|x|
-|scikit-learn/1.2.1-gfbf-2022b|x|x|x|x|x|x|x|
+|scikit-learn/1.2.1-gfbf-2022b|x|x|x|x|x|-|x|
 |scikit-learn/1.1.2-intel-2022a|x|x|x|x|x|-|x|
 |scikit-learn/1.1.2-foss-2022a|x|x|x|x|x|x|x|
 |scikit-learn/1.0.1-intel-2021b|x|x|x|x|x|-|x|
