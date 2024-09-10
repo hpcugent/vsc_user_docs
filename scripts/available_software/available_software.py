@@ -418,6 +418,7 @@ def generate_detail_pages(json_path, dest_path, generated_time_yml) -> None:
 def update_generated_time_yml(generated_time_yml, generated_time) -> None:
     """
     Update the time the data was generated in the YAML file.
+    This is done by updating the field 'modules_last_updated'.
 
     @param generated_time_yml: Path to the YAML file containing the field 'modules_last_updated'
     @param generated_time: Time the data was generated
