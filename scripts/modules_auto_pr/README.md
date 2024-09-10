@@ -29,11 +29,24 @@ and the GitHub name of the user which owns the fork as arguments:
 $ ./modules_auto_pr.sh path/to/github/PAT <github_username>
 ```
 
+## Install the github CLI
+
+On the HPC systems, it is best to download a precompiled binary from the 
+[GitHub CLI releases page](https://github.com/cli/cli/releases).
+Look for the download marked amd64, download, unpack and update `$PATH`.
+
+```shell
+$ gh_version="2.55.0"
+$ curl -OL https://github.com/cli/cli/releases/download/v${gh_version}/gh_${gh_version}_linux_amd64.tar.gz
+$ tar xfvz gh_*_linux_amd64.tar.gz
+$ export PATH=$PATH:$(ls -d $PWD/gh_*_linux_amd64/bin)
+```
+
 ## Make a classic Personal Access Token
 
 To make a classic PAT, navigate to the GitHub account setting page (not the repository settings) and go to:
 
-> Developer settings > Personal access tokens > Tokens (classic)
+https://github.com/settings/tokens
 
 click on `Generate new token` and fill in the note field and expiration date. 
 
