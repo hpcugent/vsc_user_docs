@@ -78,10 +78,10 @@ main() {
   N_REMOVED_MODULES=$(git show --name-status HEAD | grep -e "^D.*\.md$" | wc -l)
 
   # Push the new branch to GitHub
-  git remote add fork_${fork_user} "$fork_url"
+  git remote add fork "$fork_url"
   git push fork "$BRANCH_NAME"
 
-  # Set the ugent repo as the default remote
+  # Set the UGent repo as the default remote
   gh repo set-default $REPO_URL
 
   # Create a pull request using GitHub CLI. Pull request is automatically created into the default repository.
