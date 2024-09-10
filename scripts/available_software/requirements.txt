@@ -1,4 +1,3 @@
 mdutils
 numpy
 natsort
-PyYAML

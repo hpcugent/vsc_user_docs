@@ -39,7 +39,7 @@ from typing import Union, Tuple
 import numpy as np
 from mdutils.mdutils import MdUtils
 from natsort import natsorted
-import yaml
+from ruamel.yaml import YAML
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -423,17 +423,17 @@ def update_generated_time_yml(generated_time_yml, generated_time) -> None:
     @param generated_time_yml: Path to the YAML file containing the field 'modules_last_updated'
     @param generated_time: Time the data was generated
     """
+    key = "modules_last_updated"
+
+    # Read the file and replace the specific line
     with open(generated_time_yml, 'r') as file:
-        data = yaml.safe_load(file)
+        lines = file.readlines()
 
-    # Update the 'modules_last_updated' field
-    data['modules_last_updated'] = generated_time  # Set the new date here
-
-    # Write the updated YAML back to the file
     with open(generated_time_yml, 'w') as file:
-        yaml.safe_dump(data, file)
-
-
+        for line in lines:
+            if line.startswith(key):
+                line = f"{key}: {generated_time}\n"
+            file.write(line)
 # --------------------------------------------------------------------------------------------------------
 # Generate overview markdown
 # --------------------------------------------------------------------------------------------------------
