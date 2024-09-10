@@ -33,10 +33,23 @@ Python 3.11.5
     $ module purge
     ```
 
-However, we recommend loading a **Python bundle** module, 
-which already includes a number of commonly used Python packages. 
-Run `module avail Python-bundle-PyPI` to see the available Python bundle modules 
-and `module show <bundle_module>` to see which packages are included in a bundle.
+However, for recent Python modules, there are also companion modules that provide a bunch of Python packages from PyPI, 
+like `Python-bundle-PyPI`, `SciPy-bundle` (which includes numpy, pandas, ...), `matplotlib`, etc.
+Therefore, we recommend loading these modules instead of a standalone Python module.
+
+To check which versions of a python bundle are available, you can run 
+
+```bash
+$ module avail <bundle_name>
+```
+
+You can view the list of included packages in a bundle by running 
+
+```shell
+$ module show <bundle_name>
+```
+
+After loading the module, the available packages can also be consulted by running `pip list`.
 
 ## Python packages as modules
 
