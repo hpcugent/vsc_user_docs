@@ -50,7 +50,8 @@ main() {
   fi
 
   # Check if PAT file is present and fork user is provided in one if statement
-  if [ ! -f "$github_pat_file" ] || [ -z "$fork_user" ]; then
+  # -s checks whether file exists and has non-zero size (is not empty)
+  if [ ! -s "$github_pat_file" ] || [ -z "$fork_user" ]; then
       echo_error "Please provide a valid GitHub Personal Access Token (PAT) file and fork user."
       echo_error "Usage: $0 <github_pat_file> <fork_user>"
       exit 1
