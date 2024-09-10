@@ -26,6 +26,18 @@ $ python --version
 Python 3.11.5
 ```
 
+!!! tip
+    To clear all loaded modules, you can run:
+    
+    ```bash
+    $ module purge
+    ```
+
+However, we recommend loading a **Python bundle** module, 
+which already includes a number of commonly used Python packages. 
+Run `module avail Python-bundle-PyPI` to see the available Python bundle modules 
+and `module show <bundle_module>` to see which packages are included in a bundle.
+
 ## Python packages as modules
 
 Python packages can be divided into two categories: standard library packages and third-party packages.
