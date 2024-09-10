@@ -39,7 +39,7 @@ click on `Generate new token` and fill in the note field and expiration date.
 
 Under `select scopes`, click on `repo` (which will automatically select all the sub-scopes) and `read:org` (which is a sub-scope of `admin:org`).
 
-Click generate token and copy the token to the file.
+Click generate token and copy-paste the token into the file that is passed to the `modules_auto_pr.sh` script (see above)
 
 The reason fine-grained tokens are not used is that they do not yet support writing to a public repository 
 that is not owned by you or an organization that you are not a member of.
