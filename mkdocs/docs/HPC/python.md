@@ -190,3 +190,7 @@ After some time, two files will be created in the directory where the job was su
 `python_job_example.o{{jobid}}` and `python_job_example.e{{jobid}}`, where {{jobid}} is the id of your job.
 The `.o` file contains the output of the job.
 
+## More information
+
+- For more info on Python virtual environments, see the [Setting up Python virtual environments](./setting_up_python_virtual_environments.md) page.
+- To use Jupyter on the HPC systems, see the [Jupyter](./jupyter.md) page.
