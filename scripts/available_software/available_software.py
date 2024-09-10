@@ -39,7 +39,6 @@ from typing import Union, Tuple
 import numpy as np
 from mdutils.mdutils import MdUtils
 from natsort import natsorted
-from ruamel.yaml import YAML
 
 
 # --------------------------------------------------------------------------------------------------------
