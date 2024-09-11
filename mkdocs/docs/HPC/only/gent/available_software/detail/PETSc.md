@@ -21,7 +21,7 @@ module load PETSc/3.20.3-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PETSc/3.20.3-foss-2023a|-|x|x|x|x|x|x|
+|PETSc/3.20.3-foss-2023a|x|x|x|x|x|x|x|
 |PETSc/3.18.4-intel-2021b|x|x|x|x|x|-|x|
 |PETSc/3.17.4-foss-2022a|x|x|x|x|x|-|x|
 |PETSc/3.15.1-foss-2021a|-|x|x|-|x|-|x|
