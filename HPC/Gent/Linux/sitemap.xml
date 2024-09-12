@@ -591,6 +591,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/BRiAl/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/BSMAPz/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -1016,6 +1021,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/CUDD/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/CUTLASS/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -1227,6 +1237,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/CmdStanR/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/CoCoALib/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1492,6 +1507,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/DyMat/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/E-ANTIC/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -2011,6 +2031,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/GMP-ECM/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/GMP/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -2137,6 +2162,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Gdk-Pixbuf/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Geant4-data/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -3016,6 +3046,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/MPFI/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/MPFR/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -3431,7 +3466,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Normaliz/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/OBITools3/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/OCaml/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -4786,12 +4831,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/SYMMETRICA/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Sabre/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Safetensors/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Sagemath/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -4911,6 +4966,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/SharedMeatAxe/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Shasta/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -4962,6 +5022,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/SingleM/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Singular/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5876,6 +5941,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/bliss/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/bmtagger/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -6036,6 +6106,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/cliquer/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/code-cli/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -6081,7 +6156,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/coxeter/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/cppy/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/cppyy/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6142,6 +6227,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/cuteSV/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/cysignals/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6267,6 +6357,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/dtcwt/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/dub/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6511,6 +6606,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/fplll/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/fpylll/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/freebayes/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -6552,6 +6657,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/g2log/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/gap/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6652,6 +6762,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/gflags/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/giac/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -6837,6 +6952,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/help2man/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/hevea/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -7186,6 +7306,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/lcalc/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/leafcutter/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -7242,6 +7367,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/libavif/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/libbraiding/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -7352,6 +7482,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/libheif/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/libhomfly/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -7621,6 +7756,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/lrcalc/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/lrslib/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/lxml/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -7632,6 +7777,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/m4ri/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/m4rie/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -7697,6 +7847,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/maze/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/mcqd/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -7986,6 +8141,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/nauty/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/nbclassic/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -8142,6 +8302,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/nvtop/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/ocamlbuild/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -8351,6 +8516,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/planarity/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/plantri/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -8432,6 +8602,16 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/pretty-yaml/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/primecount/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/primecountpy/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -8791,6 +8971,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/rankwidth/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/rasterio/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -9086,6 +9271,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/sirocco/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/slepc4py/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -9322,6 +9512,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/tcsh/</loc>
+         <lastmod>2024-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/tdlib/</loc>
          <lastmod>2024-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
