@@ -1840,6 +1840,17 @@ More information can be found <a href="../setting_up_python_virtual_environments
 Note that it is still preferred to submit a software installation request, 
 as the software installed by the HPC team will be optimized for the HPC environment.
 This can lead to dramatic performance improvements.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not use <code>pip install --user</code> to install software, as this places packages 
+in <code>~/.local/lib/python*/site-packages</code>, potentially causing conflicts with software installed by the HPC team. </p>
+<p>Also, avoid using <code>pip install --prefix</code> or <code>pip install --target</code> with <code>$PYTHONPATH</code>, 
+since <code>$PYTHONPATH</code> is a global setting that affects all Python versions.
+When <code>$PYTHONPATH</code> includes directories with packages from different Python versions, it can lead to conflicts. </p>
+<p>Instead, use a Python virtual environment for package installations in your home directory. 
+For guidance on setting up virtual environments, 
+refer to the <a href="../setting_up_python_virtual_environments/">Python virtual environments setup guide</a>.</p>
+</div>
 <h3 id="is-my-connection-compromised-remote-host-identification-has-changed">Is my connection compromised? Remote host identification has changed<a class="headerlink" href="#is-my-connection-compromised-remote-host-identification-has-changed" title="Permanent link">#</a></h3>
 <p>On Monday 25 April 2022, the login nodes received an update to RHEL8.
 This means that the host keys of those servers also changed. As a result,
