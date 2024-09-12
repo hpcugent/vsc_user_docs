@@ -130,6 +130,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/python/</ns0:loc>
+         <ns0:lastmod>2024-09-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/quick_reference_guide/</ns0:loc>
          <ns0:lastmod>2024-09-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -9856,6 +9861,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/program_examples/</ns0:loc>
+         <ns0:lastmod>2024-09-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/python/</ns0:loc>
          <ns0:lastmod>2024-09-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -19590,6 +19600,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/python/</ns0:loc>
+         <ns0:lastmod>2024-09-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/quick_reference_guide/</ns0:loc>
          <ns0:lastmod>2024-09-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -29316,6 +29331,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/program_examples/</ns0:loc>
+         <ns0:lastmod>2024-09-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/python/</ns0:loc>
          <ns0:lastmod>2024-09-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
