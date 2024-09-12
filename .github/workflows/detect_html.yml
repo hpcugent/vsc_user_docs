@@ -3,7 +3,7 @@ name: HTML tag detection
 on: [push, pull_request]
 
 jobs:
-  link-check:
+  html-check:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout code
