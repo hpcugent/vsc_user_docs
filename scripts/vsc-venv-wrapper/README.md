@@ -77,7 +77,7 @@ source ./vsc-venv.sh --deactivate
 
 ### joltik
 
-If we want to create a virtual environment for joltik, we can run the following commands:
+If we want to create a virtual environment for another cluster, say donphan, we can use `vsc-venv` in an interactive job:
 
 ```bash
 module swap cluster/joltik
