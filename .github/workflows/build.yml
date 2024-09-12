@@ -25,21 +25,26 @@ jobs:
             python3 -m pip list
             mkdocs --version
 
-      # equivalent of 'mkdocs build', but need to build all flavors of the docs (different site/OS)
       - name: build docs
         run: |
           python3 build.py
           find build -type f
 
-  # Add a job to check links after the docs have been built
+      - name: upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: docs-build
+          path: build
+
   link-check:
     runs-on: ubuntu-20.04
-    needs: build
+    needs: build  # This ensures that the link-check job runs after the build job
     steps:
-      - name: checkout
-        uses: actions/checkout@v3
+      - name: download build artifacts
+        uses: actions/download-artifact@v3
         with:
-          fetch-depth: 0
+          name: docs-build
+          path: build  # Specify the directory where the artifact will be downloaded
 
       - name: check links
         run: |
