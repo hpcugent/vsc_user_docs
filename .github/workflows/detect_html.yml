@@ -9,6 +9,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run grep command
+      - name: Run grep command and fail on match
         run: |
-          grep -Ho '</[^>]*>' mkdocs/docs/HPC/*.md
+          if grep -Ho '</[^>]*>' mkdocs/docs/HPC/*.md; then
+            echo "Error: HTML tags detected in Markdown files!" >&2
+            exit 1
+          else
+            echo "No HTML tags detected in Markdown files."
+          fi
