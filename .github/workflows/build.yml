@@ -29,23 +29,3 @@ jobs:
         run: |
           python3 build.py
           find build -type f
-
-      - name: upload build artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: docs-build
-          path: build
-
-  link-check:
-    runs-on: ubuntu-20.04
-    needs: build  # This ensures that the link-check job runs after the build job
-    steps:
-      - name: download build artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: docs-build
-          path: build  # Specify the directory where the artifact will be downloaded
-
-      - name: check links
-        run: |
-          grep -rHoP "$a_tag_regex" build | sed 's/:<a.*href="/ /' | sort -k2,2 | uniq -f1
