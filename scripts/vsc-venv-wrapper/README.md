@@ -41,7 +41,7 @@ source ./vsc-venv.sh --deactivate
 
 ## Example
 
-Suppose we are on the login node, and we want to make a virtual environment for doduo, which is loaded by default.
+Suppose we are on the HPC-UGent Tier-2 login nodes, and we want to make a virtual environment for doduo, the default cluster.
 The following files are present in the current directory:
 
 **modules.txt:**
