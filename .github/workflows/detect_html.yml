@@ -8,8 +8,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0  # Fetch the entire commit history
 
       - name: Check if no HTML tags are present in markdown files located at mkdocs/docs/HPC/
         run: |
