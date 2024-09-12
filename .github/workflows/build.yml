@@ -1,9 +1,8 @@
----
-# documentation: https://help.github.com/en/articles/workflow-syntax-for-github-actions
 name: build docs (to test changes in PRs)
 on: [push, pull_request]
 permissions:
   contents: read  # to fetch code (actions/checkout)
+
 jobs:
   build:
     runs-on: ubuntu-20.04
@@ -31,3 +30,17 @@ jobs:
         run: |
           python3 build.py
           find build -type f
+
+  # Add a job to check links after the docs have been built
+  link-check:
+    runs-on: ubuntu-20.04
+    needs: build
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: check links
+        run: |
+          grep -rHoP "$a_tag_regex" build | sed 's/:<a.*href="/ /' | sort -k2,2 | uniq -f1
