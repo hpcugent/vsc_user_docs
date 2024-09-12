@@ -16,7 +16,7 @@ A virtual environment can be activated by running the following command:
 
 ```bash
 $ module load vsc-env
-$ source vsc-venv.sh --activate --requirements <requirements> [--modules module_file]
+$ source vsc-venv --activate --requirements <requirements> [--modules module_file]
 ```
 
 Here, `requirements` is the path to a file containing the python dependencies to install in the virtual environment.
@@ -37,7 +37,7 @@ module list         # List of loaded modules
 To deactivate the virtual environment, run:
 
 ```bash
-$ source vsc-venv.sh --deactivate
+$ source vsc-venv --deactivate
 ```
 
 ## Example
@@ -63,7 +63,7 @@ We run the following commands to enter the environment
 
 ```bash
 $ module load vsc-env
-$ source vsc-venv.sh --activate --requirements requirements.txt --modules modules.txt
+$ source vsc-venv --activate --requirements requirements.txt --modules modules.txt
 ```
 
 As this creates the virtual environment for the first time, a `venvs` subdirectory is created in the current directory. 
@@ -74,7 +74,7 @@ Now, Python 3.12 is loaded and both the `numpy` (provided by the `SciPy-bundle` 
 To deactivate the virtual environment, run:
 
 ```bash
-source vsc-venv.sh --deactivate
+source vsc-venv --deactivate
 ```
 
 ### joltik
@@ -86,7 +86,7 @@ $ module swap cluster/donphan
 $ module load vsc-env
 $ qsub -I
 $ cd my_project
-$ source vsc-venv.sh --activate --requirements requirements.txt --modules modules.txt
+$ source vsc-venv --activate --requirements requirements.txt --modules modules.txt
 ```
 
 the venvs folder now contains two folders:
