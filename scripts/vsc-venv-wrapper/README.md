@@ -1,7 +1,7 @@
 # Python Virtual Environment Wrapper Script
 
 `vsc-venv` is a script that encapsulates the creation and management of Python virtual environments. 
-This avoids multiple issues with the default `venv` command on the HPC. 
+This avoids multiple issues with the default `venv` included in Python (`python -m venv`).
 
 
 One issue is that a virtual environment created for one cluster might not work on another. 
