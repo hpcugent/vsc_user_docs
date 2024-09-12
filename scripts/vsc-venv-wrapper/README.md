@@ -24,7 +24,7 @@ An optional `module_file` can be provided, which lists the modules to load befor
 Automatically, the modules are loaded and the environment is activated. 
 When running this command for the first time, the dependencies from the requirements file are installed.
 
-Now, the software can be run and use packages installed in the virtual environment, along with centrally installed modules.
+Now, the software can be run and Python packages installed in the virtual environment can be used, along with software provided via centrally installed modules.
 
 You can get insights on the current environment using the following commands:
 ```
