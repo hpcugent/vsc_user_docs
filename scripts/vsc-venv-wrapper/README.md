@@ -80,7 +80,7 @@ source ./vsc-venv.sh --deactivate
 If we want to create a virtual environment for another cluster, say donphan, we can use `vsc-venv` in an interactive job:
 
 ```bash
-module swap cluster/joltik
+module swap cluster/donphan
 qsub -I
 cd my_project
 source ./vsc-venv.sh --activate --requirements requirements.txt --modules modules.txt
