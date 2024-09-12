@@ -225,11 +225,12 @@ deactivate_() {
 # ============================ Main ============================
 
 SCRIPT_NAME=${BASH_SOURCE[0]} # $0 cannot be used as it gives '-bash' when sourced
+VERSION="1.0"
 
 
 # This script must be sourced
 if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
-    echo_error "This script must be sourced! Check the usage with 'source $(basename $SCRIPT_NAME) --help'"
+    echo_error "This script must be sourced! Check the usage with 'source $(basename "$SCRIPT_NAME") --help'"
     exit 1
 fi
 
@@ -240,7 +241,7 @@ while [ $# -gt 0 ] ; do
     -r | --requirements)  REQUIREMENTS="$2" ;;
     -m | --modules)       MODULES="$2" ;;
     -h | --help)          usage; return 0 ;;
-    -v | --version)       echo "$(basename $SCRIPT_NAME) v${VERSION}"; return 0;;
+    -v | --version)       echo "$(basename "$SCRIPT_NAME") v${VERSION}"; return 0;;
   esac
   shift
 done
