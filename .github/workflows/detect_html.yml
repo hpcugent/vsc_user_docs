@@ -1,6 +1,6 @@
 name: HTML tag detection
 
-on: [push, pull_request]  # Trigger on push or pull request events
+on: [push, pull_request]
 
 jobs:
   link-check:
@@ -11,7 +11,10 @@ jobs:
 
       - name: Run grep command and fail on match
         run: |
-          if grep -Ho '</[^>]*>' mkdocs/docs/HPC/*.md; then
+          # -n: show line number
+          # -H: show filename
+          # -o: show only the matching part of the line
+          if grep -nHo '</[^>]*>' mkdocs/docs/HPC/*.md; then
             echo "Error: HTML tags detected in Markdown files!" >&2
             exit 1
           else
