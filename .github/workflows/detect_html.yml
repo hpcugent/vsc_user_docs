@@ -15,7 +15,6 @@ jobs:
           # -H: show filename
           # -o: show only the matching part of the line
           if grep -nHo '</[^>]*>' mkdocs/docs/HPC/*.md; then
-            echo "Error: HTML tags detected in Markdown files!" >&2
             exit 1
           else
             echo "No HTML tags detected in Markdown files."
