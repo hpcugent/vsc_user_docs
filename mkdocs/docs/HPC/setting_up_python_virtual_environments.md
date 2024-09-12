@@ -10,6 +10,13 @@ Because a normal user cannot install packages globally,
 using a virtual environment allows you to install packages locally without needing administrator privileges.
 This is especially useful when you need to use a package that is not available as a module on the HPC cluster.
 
+!!! tip
+    We recommend using the `vsc-venv` script to manage Python virtual environments.
+    This script is available on the HPC clusters and simplifies the process of creating and managing virtual environments.
+    For more information, see the section on [vsc-venv](#vsc-venv-python-virtual-environment-wrapper-script).
+    If you want to manage virtual environments manually, you can follow the instructions in the rest of this document.
+
+
 ## Managing Python Environments
 
 This section will explain how to create, activate, use and deactivate Python virtual environments.
@@ -107,6 +114,7 @@ To do that, run:
 ```bash
 deactivate
 ```
+
 
 ## Combining virtual environments with centrally installed modules
 
@@ -227,6 +235,106 @@ qsub jobscript.pbs
 Two files will be created in the directory where the job was submitted: 
 `python_job_example.o{{jobid}}` and `python_job_example.e{{job_id}}`, where {{jobid}} is the id of your job.
 The `.o` file contains the output of the job.
+
+
+## vsc-venv: Python Virtual Environment Wrapper Script
+
+`vsc-venv` is a script that encapsulates the creation and management of Python virtual environments. 
+This avoids multiple issues with the default `venv` included in Python (`python -m venv`).
+
+
+One issue is that a virtual environment created for one cluster might not work on another. 
+Additionally, when activating a virtual environment, 
+the same centrally installed modules used during its creation must also be loaded.
+the `vsc-venv` command manages multiple virtual environments for different clusters in a transparent way, 
+while guaranteeing the same module environment.
+
+### Usage
+
+A virtual environment can be activated by running the following command:
+
+```bash
+$ module load vsc-env
+$ source vsc-venv --activate --requirements <requirements> [--modules module_file]
+```
+
+Here, `requirements` is the path to a file containing the python dependencies to install in the virtual environment.
+An optional `module_file` can be provided, which lists the modules to load before activating the virtual environment.
+
+Automatically, the modules are loaded and the environment is activated. 
+When running this command for the first time, the dependencies from the requirements file are installed.
+
+Now, the software can be run and Python packages installed in the virtual environment can be used, along with software provided via centrally installed modules.
+
+You can get insights on the current environment using the following commands:
+```
+python --version    # Python version
+pip list            # List of installed Python packages
+module list         # List of loaded modules
+```
+
+To deactivate the virtual environment, run:
+
+```bash
+$ source vsc-venv --deactivate
+```
+
+### Example
+
+Suppose we are on the HPC-UGent Tier-2 login nodes, and we want to make a virtual environment for doduo, the default cluster.
+The following files are present in the current directory:
+
+**modules.txt:**
+```bash
+Python/3.12.3-GCCcore-13.3.0
+SciPy-bundle/2024.05-gfbf-2024a
+```
+
+and **requirements.txt:**
+```
+requests
+```
+
+For more info on the `requirements.txt` file, 
+see the [pip documentation](https://pip.pypa.io/en/stable/reference/requirements-file-format/).
+
+We run the following commands to enter the environment
+
+```bash
+$ module load vsc-env
+$ source vsc-venv --activate --requirements requirements.txt --modules modules.txt
+```
+
+As this creates the virtual environment for the first time, a `venvs` subdirectory is created in the current directory. 
+Within `venvs/`, an additional subdirectory is created for the virtual environment: `venv-RHEL8-zen2`.
+
+Now, Python 3.12 is loaded and both the `numpy` (provided by the `SciPy-bundle` module) and `requests` Python packages can be used.
+
+To deactivate the virtual environment, run:
+
+```bash
+source vsc-venv --deactivate
+```
+
+#### making a virtual environment for another cluster
+
+If we want to create a virtual environment for another cluster, say donphan, we can use `vsc-venv` in an interactive job:
+
+```bash
+$ module swap cluster/donphan
+$ module load vsc-env
+$ qsub -I
+$ cd my_project
+$ source vsc-venv --activate --requirements requirements.txt --modules modules.txt
+```
+
+the venvs folder now contains two folders:
+
+```bash
+$ ls venvs/
+venv-RHEL8-cascadelake	
+venv-RHEL8-zen2
+```
 
 
 ## Troubleshooting
