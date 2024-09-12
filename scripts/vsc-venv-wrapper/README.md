@@ -64,7 +64,7 @@ We run the following commands to enter the environment
 source ./vsc-venv.sh --activate --requirements requirements.txt --modules modules.txt
 ```
 
-As this creates the virtual environment for the first time, the `venvs` folder is created in the current directory. 
+As this creates the virtual environment for the first time, a `venvs` subdirectory is created in the current directory. 
 Within this folder, a new folder is created for the virtual environment `venv-RHEL8-zen2`.
 
 Now, python 3.12 is loaded and the user can use the `requests` package, along with the packages from the SciPy bundle.
