@@ -239,8 +239,8 @@ while [ $# -gt 0 ] ; do
     -d | --deactivate)    ACTION="deactivate" ;;
     -r | --requirements)  REQUIREMENTS="$2" ;;
     -m | --modules)       MODULES="$2" ;;
-    -h | --help)          usage; return 1 ;;
-    -v | --version)       echo "$SCRIPT_NAME v1.0"; return 1;;
+    -h | --help)          usage; return 0 ;;
+    -v | --version)       echo "$(basename $SCRIPT_NAME) v${VERSION}"; return 0;;
   esac
   shift
 done
