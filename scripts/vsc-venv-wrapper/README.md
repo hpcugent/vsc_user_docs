@@ -22,7 +22,7 @@ Here, `requirements` is the path to a file containing the python dependencies to
 An optional `module_file` can be provided, which lists the modules to load before activating the virtual environment.
 
 Automatically, the modules are loaded and the environment is activated. 
-When running this command for the first time, the dependencies from the requirement file are installed.
+When running this command for the first time, the dependencies from the requirements file are installed.
 
 Now, the software can be run and use packages installed in the virtual environment, along with centrally installed modules.
 
