@@ -9,7 +9,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Check if no HTML tags in Markdown files
+      - name: Check if no HTML tags are present in markdown files located at mkdocs/docs/HPC/
         run: |
           # -n: show line number
           # -H: show filename
