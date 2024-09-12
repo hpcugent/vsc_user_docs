@@ -220,6 +220,8 @@ activate() {
 deactivate_() {
   echo_info "Deactivating virtual environment at $VIRTUAL_ENV"
   deactivate # For now, just use the python `deactivate`
+  echo_info "Purging loaded modules"
+  module purge
 }
 
 # ============================ Main ============================
