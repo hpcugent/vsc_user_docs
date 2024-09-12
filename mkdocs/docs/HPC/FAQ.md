@@ -318,6 +318,12 @@ Please send an e-mail to {{hpcinfo}} that includes:
 
 {% endif %}
 
+If the software is a Python package, you can manually install it in a virtual environment. 
+More information can be found [here](./setting_up_python_virtual_environments.md).
+Note that it is still preferred to submit a software installation request, 
+as the software installed by the HPC team will be optimized for the HPC environment.
+This can lead to dramatic performance improvements.
+
 ### Is my connection compromised? Remote host identification has changed
 
 On Monday 25 April 2022, the login nodes received an update to RHEL8.
