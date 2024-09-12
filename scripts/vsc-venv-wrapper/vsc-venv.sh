@@ -90,7 +90,7 @@ activate() {
 
   # === Check if requirements file exists === #
   if [ ! -f "$requirements_file" ]; then
-    echo_error "Requirements file '$requirements_file' not found"
+    echo_error "Requirements file '$requirements_file' not found, use --requirements or -r to specify correct path"
     return 1
   fi
 
