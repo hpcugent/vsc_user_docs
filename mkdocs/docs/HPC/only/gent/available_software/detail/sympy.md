@@ -21,7 +21,7 @@ module load sympy/1.12-gfbf-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|sympy/1.12-gfbf-2023b|x|x|x|x|x|-|x|
+|sympy/1.12-gfbf-2023b|x|x|x|x|x|x|x|
 |sympy/1.12-gfbf-2023a|x|x|x|x|x|x|x|
 |sympy/1.12-gfbf-2022b|x|x|x|x|x|-|x|
 |sympy/1.11.1-intel-2022a|x|x|x|x|x|-|x|
