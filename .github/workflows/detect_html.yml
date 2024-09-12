@@ -9,7 +9,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run grep command and fail on match
+      - name: Check if no HTML tags in Markdown files
         run: |
           # -n: show line number
           # -H: show filename
