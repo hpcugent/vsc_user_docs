@@ -2,6 +2,8 @@ import aiohttp
 import asyncio
 import argparse
 
+from aiohttp import ClientTimeout
+
 
 # Logic for checking status codes of URLs
 
@@ -12,8 +14,7 @@ async def fetch_status_codes(urls: list[str]):
     :param urls: The URLs to check
     :return: A list of status codes
     """
-    connector = aiohttp.TCPConnector(limit=None)
-    async with aiohttp.ClientSession(connector=connector) as session:
+    async with aiohttp.ClientSession() as session:
         tasks = (fetch_status_code(session, url) for url in urls)
         return await asyncio.gather(*tasks, return_exceptions=True)
 
@@ -31,7 +32,7 @@ async def fetch_status_code(session: aiohttp.ClientSession, url: str) -> int | s
 
 # Logic for reading input files
 
-def read_url_file(filename: str, whitelist: set[str] = None) -> tuple[list[str], list[str]]:
+def read_url_file(filename: str, whitelist: set[str]) -> tuple[list[str], list[str]]:
     """
     Read a file containing URLs to check. The file should contain one URL per line.
 
@@ -44,10 +45,10 @@ def read_url_file(filename: str, whitelist: set[str] = None) -> tuple[list[str],
         for line in file:
             line = line.strip()
             url_file, url = line.split(maxsplit=1)  # Split on first space
-            if not whitelist or url not in whitelist:
+            if url not in whitelist:
                 paths.append(url_file)
                 urls.append(url)
-    return paths, urls
+    return paths * 10, urls * 10
 
 
 def read_whitelist(filename: str) -> set[str]:
