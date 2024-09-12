@@ -67,7 +67,7 @@ source ./vsc-venv.sh --activate --requirements requirements.txt --modules module
 As this creates the virtual environment for the first time, a `venvs` subdirectory is created in the current directory. 
 Within `venvs/`, an additional subdirectory is created for the virtual environment: `venv-RHEL8-zen2`.
 
-Now, python 3.12 is loaded and the user can use the `requests` package, along with the packages from the SciPy bundle.
+Now, Python 3.12 is loaded and both the `numpy` (provided by the `SciPy-bundle` module) and `requests` Python packages can be used.
 
 To deactivate the virtual environment, run:
 
