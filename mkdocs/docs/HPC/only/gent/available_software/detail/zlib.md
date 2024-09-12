@@ -9,28 +9,30 @@ zlib
 # Available modules
 
 
-The overview below shows which zlib installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which zlib installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using zlib, load one of these modules using a `module load` command like:
 
 ```shell
-module load zlib/1.2.13-GCCcore-13.2.0
+module load zlib/1.3.1-GCCcore-13.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|zlib/1.2.13-GCCcore-13.2.0|x|x|x|x|x|x|
-|zlib/1.2.13-GCCcore-12.3.0|x|x|x|x|x|x|
-|zlib/1.2.13|x|x|x|x|x|x|
-|zlib/1.2.12-GCCcore-12.2.0|x|x|x|x|x|x|
-|zlib/1.2.12-GCCcore-11.3.0|x|x|x|x|x|x|
-|zlib/1.2.12|x|x|x|x|x|x|
-|zlib/1.2.11-GCCcore-11.2.0|x|x|x|x|x|x|
-|zlib/1.2.11-GCCcore-10.3.0|x|x|x|x|x|x|
-|zlib/1.2.11-GCCcore-10.2.0|x|x|x|x|x|x|
-|zlib/1.2.11-GCCcore-9.3.0|x|x|x|x|x|x|
-|zlib/1.2.11-GCCcore-8.3.0|x|x|x|x|x|x|
-|zlib/1.2.11-GCCcore-8.2.0|-|x|-|-|-|-|
-|zlib/1.2.11|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|zlib/1.3.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|zlib/1.3.1|x|x|x|x|x|x|x|
+|zlib/1.2.13-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|zlib/1.2.13-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|zlib/1.2.13|x|x|x|x|x|x|x|
+|zlib/1.2.12-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|zlib/1.2.12-GCCcore-11.3.0|x|x|x|x|x|x|x|
+|zlib/1.2.12|x|x|x|x|x|x|x|
+|zlib/1.2.11-GCCcore-11.2.0|x|x|x|x|x|x|x|
+|zlib/1.2.11-GCCcore-10.3.0|x|x|x|x|x|-|x|
+|zlib/1.2.11-GCCcore-10.2.0|x|x|x|x|x|-|x|
+|zlib/1.2.11-GCCcore-9.3.0|x|x|x|x|x|-|x|
+|zlib/1.2.11-GCCcore-8.3.0|x|x|x|x|x|-|x|
+|zlib/1.2.11-GCCcore-8.2.0|-|x|-|-|-|-|-|
+|zlib/1.2.11|x|x|x|x|x|x|x|

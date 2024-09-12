@@ -9,7 +9,7 @@ AlphaFold
 # Available modules
 
 
-The overview below shows which AlphaFold installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which AlphaFold installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using AlphaFold, load one of these modules using a `module load` command like:
 
@@ -17,19 +17,19 @@ To start using AlphaFold, load one of these modules using a `module load` comman
 module load AlphaFold/2.3.4-foss-2022a-ColabFold
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|AlphaFold/2.3.4-foss-2022a-ColabFold|-|-|x|-|x|-|
-|AlphaFold/2.3.4-foss-2022a-CUDA-11.7.0-ColabFold|x|-|-|-|x|-|
-|AlphaFold/2.3.1-foss-2022a-CUDA-11.7.0|x|-|-|-|x|-|
-|AlphaFold/2.3.1-foss-2022a|x|x|x|x|x|x|
-|AlphaFold/2.3.0-foss-2021b-CUDA-11.4.1|x|-|-|-|x|-|
-|AlphaFold/2.2.2-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|
-|AlphaFold/2.2.2-foss-2021a|-|x|x|-|x|x|
-|AlphaFold/2.1.2-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|
-|AlphaFold/2.1.2-foss-2021a|-|x|x|-|x|x|
-|AlphaFold/2.1.1-fosscuda-2020b|x|-|-|-|x|-|
-|AlphaFold/2.0.0-fosscuda-2020b|x|-|-|-|x|-|
-|AlphaFold/2.0.0-foss-2020b|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|AlphaFold/2.3.4-foss-2022a-ColabFold|-|-|x|-|x|-|-|
+|AlphaFold/2.3.4-foss-2022a-CUDA-11.7.0-ColabFold|x|-|x|-|x|-|-|
+|AlphaFold/2.3.1-foss-2022a-CUDA-11.7.0|x|-|-|-|x|-|-|
+|AlphaFold/2.3.1-foss-2022a|x|x|x|x|x|-|x|
+|AlphaFold/2.3.0-foss-2021b-CUDA-11.4.1|x|-|-|-|x|-|-|
+|AlphaFold/2.2.2-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|-|
+|AlphaFold/2.2.2-foss-2021a|-|x|x|-|x|-|x|
+|AlphaFold/2.1.2-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|-|
+|AlphaFold/2.1.2-foss-2021a|-|x|x|-|x|-|x|
+|AlphaFold/2.1.1-fosscuda-2020b|x|-|-|-|x|-|-|
+|AlphaFold/2.0.0-fosscuda-2020b|x|-|-|-|x|-|-|
+|AlphaFold/2.0.0-foss-2020b|-|x|x|x|x|-|x|

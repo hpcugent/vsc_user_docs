@@ -9,7 +9,7 @@ p7zip
 # Available modules
 
 
-The overview below shows which p7zip installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which p7zip installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using p7zip, load one of these modules using a `module load` command like:
 
@@ -17,8 +17,8 @@ To start using p7zip, load one of these modules using a `module load` command li
 module load p7zip/17.03-GCCcore-10.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|p7zip/17.03-GCCcore-10.2.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|p7zip/17.03-GCCcore-10.2.0|-|x|x|-|x|-|x|

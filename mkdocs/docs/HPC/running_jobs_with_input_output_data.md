@@ -13,18 +13,22 @@ and where that you can collect your results.
 
 First go to the directory:
 
-<pre><code><b>$ cd ~/{{ exampledir }}</b>
-</code></pre>
+```
+cd ~/{{ exampledir }}
+```
 
 !!! note
     If the example directory is not yet present, copy it to your home directory:
 
-    <pre><code><b>$ cp -r {{ examplesdir }} ~/</b></code></pre>
+    ```
+    cp -r {{ examplesdir }} ~/
+    ```
 
 
 List and check the contents with:
 
-<pre><code><b>ls -l</b>
+```
+$ ls -l
 total 2304
 -rwxrwxr-x 1 {{ userid }}   682 Sep 13 11:34 file1.py
 -rw-rw-r-- 1 {{ userid }}   212 Sep 13 11:54 file1a.pbs
@@ -34,13 +38,12 @@ total 2304
 -rwxrwxr-x 1 {{ userid }}  2393 Sep 13 10:40 file2.py
 -rw-r--r-- 1 {{ userid }}  1393 Sep 13 10:41 file3.pbs
 -rwxrwxr-x 1 {{ userid }}  2393 Sep 13 10:40 file3.py
-</code></pre>
+```
 
 Now, let us inspect the contents of the first executable (which is just
 a Python script with execute permission).
 
-<center>-- file1.py --</center>
-```python
+```python title="file1.py"
 {% include "./examples/Running_jobs_with_input_output_data/file1.py" %}
 ```
 
@@ -55,8 +58,7 @@ The code of the Python script, is self explanatory:
 
 Check the contents of the first job script:
 
-<center>-- file1a.pbs --</center>
-```bash
+```bash title="file1a.pbs"
 {% include "./examples/Running_jobs_with_input_output_data/file1a.pbs" %}
 ```
 
@@ -66,13 +68,15 @@ paths.
 
 Submit it:
 
-<pre><code><b>$ qsub file1a.pbs</b>
-</code></pre>
+```
+qsub file1a.pbs
+```
 
 After the job has finished, inspect the local directory again, i.e., the
 directory where you executed the *qsub* command:
 
-<pre><code><b>ls -l</b>
+```
+$ ls -l
 total 3072
 -rw-rw-r-- 1 {{ userid }}   90 Sep 13 13:13 Hello.txt
 -rwxrwxr-x 1 {{ userid }}  693 Sep 13 13:03 file1.py*
@@ -85,7 +89,7 @@ total 3072
 -rwxrwxr-x 1 {{ userid }} 2393 Sep 13 10:40 file2.py*
 -rw-r--r-- 1 {{ userid }} 1393 Sep 13 10:41 file3.pbs
 -rwxrwxr-x 1 {{ userid }} 2393 Sep 13 10:40 file3.py*
-</code></pre>
+```
 
 Some observations:
 
@@ -99,11 +103,12 @@ Some observations:
 
 Inspect their contents ... and remove the files
 
-<pre><code><b>$ cat Hello.txt</b>
-<b>$ cat file1a.pbs.o{{ jobid }}</b>
-<b>$ cat file1a.pbs.e{{ jobid }}</b>
-<b>$ rm Hello.txt file1a.pbs.o{{ jobid }} file1a.pbs.e{{ jobid }}</b>
-</code></pre>
+```
+$ cat Hello.txt
+$ cat file1a.pbs.o{{ jobid }}
+$ cat file1a.pbs.e{{ jobid }}
+$ rm Hello.txt file1a.pbs.o{{ jobid }} file1a.pbs.e{{ jobid }}
+```
 
 !!! tip
     Type `cat H` and press the Tab button (looks like ++tab++), and it will **expand** into
@@ -113,18 +118,18 @@ Inspect their contents ... and remove the files
 
 Check the contents of the job script and execute it.
 
-<center>-- file1b.pbs --</center>
-```bash
+```bash title="file1b.pbs"
 {% include "./examples/Running_jobs_with_input_output_data/file1b.pbs" %}
 ```
 
 Inspect the contents again ... and remove the generated files:
 
-<pre><code><b>$ ls</b>
+```
+$ ls
 Hello.txt file1a.pbs file1c.pbs file2.pbs file3.pbs my_serial_job.e{{ jobid }}
 file1.py* file1b.pbs file2.py* file3.py* my_serial_job.o{{ jobid }}
-<b>$ rm Hello.txt my_serial_job.*</b>
-</code></pre>
+$ rm Hello.txt my_serial_job.*
+```
 
 Here, the option "`-N`" was used to explicitly assign a name to the job.
 This overwrote the JOBNAME variable, and resulted in a different name
@@ -137,8 +142,7 @@ defaults to the name of the job script.
 You can also specify the name of *stdout* and *stderr* files explicitly
 by adding two lines in the job script, as in our third example:
 
-<center>-- file1c.pbs --</center>
-```bash
+```bash title="file1c.pbs"
 {% include "./examples/Running_jobs_with_input_output_data/file1c.pbs" %}
 ```
 
@@ -156,98 +160,21 @@ store your data depends on the purpose, but also the size and type of
 usage of the data.
 
 The following locations are available:
-<table>
-    <tr>
-        <td colspan="1">
-            <b>Variable</b>
-        </td>
-        <td colspan="1">
-            <b>Description</b>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <center><i>Long-term storage slow filesystem, intended for smaller files</i></center>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            <t>$VSC_HOME</t>
-        </td>
-        <td colspan="1">
-            For your configuration files and other small files, see <a href="./#your-home-directory-vsc_home">the section on your home directory.</a>
-            The default directory is <tt>user/{{ site }}/xxx/{{ userid }}</tt>.
-            The same file system is accessible from all sites, i.e., you'll see the same contents in $VSC_HOME on all sites.
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            <t>$VSC_DATA</t>
-        </td>
-        <td colspan="1">
-            A bigger "workspace", for <b>datasets</b>, results, logfiles, etc. see <a href="./#your-data-directory-vsc_data">the section on your data directory.</a>
-            The default directory is <tt>data/{{ site }}/xxx/{{ userid }}</tt>.
-            The same file system is accessible from all sites.
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <center><i>Fast temporary storage</i></center>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            <t>$VSC_SCRATCH_NODE</t>
-        </td>
-        <td colspan="1">
-            For <b>temporary</b> or transient data on the local compute node, where fast access is important; see <a href="./#your-scratch-space-vsc_scratch">the section on your scratch space.</a>
-            This space is available per node. The default directory is <tt>/tmp</tt>. On different nodes, you'll see different content.
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            <t>$VSC_SCRATCH</t>
-        </td>
-        <td colspan="1">
-            For <b>temporary</b> or transient data that has to be accessible from all nodes of a cluster (including the login nodes) <br>
-            The default directory is <tt>scratch/{{ site }}/xxx/{{ userid }}</tt>. This directory is cluster- or site-specific: On different sites, and sometimes on different clusters on the same site, you'll get a different directory with different content.
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            <t>$VSC_SCRATCH_SITE</t>
-        </td>
-        <td colspan="1">
-            Currently the same as $VSC_SCRATCH, but could be used for a scratch space shared accross all clusters at a site in the future. See <a href="./#your-scratch-space-vsc_scratch">the section on your scratch space.</a>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            <t>$VSC_SCRATCH_GLOBAL</t>
-        </td>
-        <td colspan="1">
-            Currently the same as $VSC_SCRATCH, but could be used for a scratch space shared accross all clusters of the VSC in the future. See <a href="./#your-scratch-space-vsc_scratch">the section on your scratch space.</a>
-        </td>
-    </tr>
-{% if site == gent %}
-    <tr>
-        <td colspan="1">
-            <t>$VSC_SCRATCH_CLUSTER</t>
-        </td>
-        <td colspan="1">
-            The scratch filesystem closest to the cluster.
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1">
-            <t>$VSC_SCRATCH_ARCANINE</t>
-        </td>
-        <td colspan="1">
-            A separate (smaller) shared scratch filesystem, powered by SSDs. This scratch filesystem is intended for very I/O-intensive workloads.
-        </td>
-    </tr>
+
+| **Variable**            | **Description**                                                                                                                                                                                                                                                                                                                                                        |
+|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|                         | *Long-term storage slow filesystem, intended for smaller files*                                                                                                                                                                                                                                                                                                        |
+| `$VSC_HOME`             | For your configuration files and other small files, see [the section on your home directory.](./#your-home-directory-vsc_home) The default directory is `user/{{ site }}/xxx/{{ userid }}`. The same file system is accessible from all sites, i.e., you'll see the same contents in $VSC_HOME on all sites.                                                           |
+| `$VSC_DATA`             | A bigger "workspace", for **datasets**, results, logfiles, etc. see [the section on your data directory.](./#your-data-directory-vsc_data) The default directory is `data/{{ site }}/xxx/{{ userid }}`. The same file system is accessible from all sites.                                                                                                             |
+|                         |  *Fast temporary storage*                                                                                                                                                                                                                                                                                                                                              |
+| `$VSC_SCRATCH_NODE`     | For **temporary** or transient data on the local compute node, where fast access is important; see [the section on your scratch space.](./#your-scratch-space-vsc_scratch) This space is available per node. The default directory is `/tmp`. On different nodes, you'll see different content.                                                                        |
+| `$VSC_SCRATCH`          | For **temporary** or transient data that has to be accessible from all nodes of a cluster (including the login nodes). The default directory is `scratch/{{ site }}/xxx/{{ userid }}`. This directory is cluster- or site-specific: On different sites, and sometimes on different clusters on the same site, you'll get a different directory with different content. |
+| `$VSC_SCRATCH_SITE`     | Currently the same as $VSC_SCRATCH, but could be used for a scratch space shared across all clusters at a site in the future. See [the section on your scratch space.](./#your-scratch-space-vsc_scratch)                                                                                                                                                              |
+| `$VSC_SCRATCH_GLOBAL`   | Currently the same as $VSC_SCRATCH, but could be used for a scratch space shared across all clusters of the VSC in the future. See [the section on your scratch space.](./#your-scratch-space-vsc_scratch)                                                                                                                                                             |
+ {% if site == gent %}   | `$VSC_SCRATCH_CLUSTER`                                          | The scratch filesystem closest to the cluster.                                                                                                                                                                                                                                                        |
+| `$VSC_SCRATCH_ARCANINE` | A separate (smaller) shared scratch filesystem, powered by SSDs. This scratch filesystem is intended for very I/O-intensive workloads.                                                                                                                                                                                                                                 |
 {% endif %}
-</table>
+
 
 Since these directories are not necessarily mounted on the same
 locations over all sites, you should always (try to) use the environment
@@ -379,15 +306,17 @@ access your UGent home drive and shares. To allow this you need a
 ticket. This requires that you first authenticate yourself with your
 UGent username and password by running:
 
-<pre><code><b>$ kinit yourugentusername@UGENT.BE</b>
+```
+$ kinit yourugentusername@UGENT.BE
 Password for yourugentusername@UGENT.BE:
-</code></pre>
+```
 
 Now you should be able to access your files running
 
-<pre><code><b>$ ls /UGent/yourugentusername</b>
+```
+$ ls /UGent/yourugentusername
 home shares www
-</code></pre>
+```
 
 Please note the shares will only be mounted when you access this folder.
 You should specify your complete username - tab completion will not
@@ -396,48 +325,54 @@ work.
 If you want to use the UGent shares longer than 24 hours, you should ask
 a ticket for up to a week by running
 
-<pre><code><b>$ kinit yourugentusername@UGENT.BE -r 7d</b>
-</code></pre>
+```
+kinit yourugentusername@UGENT.BE -r 7
+```
 
 You can verify your authentication ticket and expiry dates yourself by
 running klist
 
-<pre><code><b>$ klist</b>
+```
+$ klist
 ...
 Valid starting     Expires            Service principal
 14/07/20 15:19:13  15/07/20 01:19:13  krbtgt/UGENT.BE@UGENT.BE
 	renew until 21/07/20 15:19:13
 
-</code></pre>
+```
 
 Your ticket is valid for 10 hours, but you can renew it before it
 expires.
 
 To renew your tickets, simply run
 
-<pre><code><b>$ kinit -R</b>
-</code></pre>
+```
+kinit -R
+```
 
 If you want your ticket to be renewed automatically up to the maximum
 expiry date, you can run
 
-<pre><code><b>$ krenew -b -K 60</b>
-</code></pre>
+```
+krenew -b -K 60
+```
 
 Each hour the process will check if your ticket should be renewed.
 
 We strongly advise to disable access to your shares once it is no longer
 needed:
 
-<pre><code><b>$ kdestroy</b>
-</code></pre>
+```
+kdestroy
+```
 
 If you get an error "*Unknown credential cache type while getting
 default ccache*" (or similar) and you use conda, then please deactivate conda
 before you use the commands in this chapter.
 
-<pre><code><b>$ conda deactivate</b>
-</code></pre>
+```
+conda deactivate
+```
 
 ### UGent shares with globus
 
@@ -447,7 +382,8 @@ endpoint. To do that, you have to ssh to the globus endpoint from a
 loginnode. You will be prompted for your UGent username and password to
 authenticate:
 
-<pre><code><b>$ ssh globus</b>
+```
+$ ssh globus
 UGent username:ugentusername
 Password for ugentusername@UGENT.BE:
 Shares are available in globus endpoint at /UGent/ugentusername/
@@ -460,16 +396,17 @@ Valid starting     Expires            Service principal
 	renew until 05/08/20 15:56:40
 Tickets will be automatically renewed for 1 week
 Connection to globus01 closed.
-</code></pre>
+```
 
 Your shares will then be available at /UGent/ugentusername/ under the
 globus VSC tier2 endpoint. Tickets will be renewed automatically for 1
 week, after which you'll need to run this again. We advise to disable
 access to your shares within globus once access is no longer needed:
 
-<pre><code><b>$ ssh globus01 destroy</b>
+```
+$ ssh globus01 destroy
 Succesfully destroyed session
-</code></pre>
+```
 {% endif %}
 
 ### Pre-defined quotas 
@@ -568,15 +505,16 @@ Check the Python and the PBS file, and submit the job: Remember that
 this is already a more serious (disk-I/O and computational intensive)
 job, which takes approximately 3 minutes on the {{ hpc }}.
 
-<pre><code><b>$ cat file2.py</b>
-<b>$ cat file2.pbs</b>
-<b>$ qsub file2.pbs</b>
-<b>$ qstat</b>
-<b>$ ls -l</b>
-<b>$ echo $VSC_SCRATCH</b>
-<b>$ ls -l $VSC_SCRATCH</b>
-<b>$ more $VSC_SCRATCH/primes_1.txt</b>
-</code></pre>
+```
+$ cat file2.py
+$ cat file2.pbs
+$ qsub file2.pbs
+$ qstat
+$ ls -l
+$ echo $VSC_SCRATCH
+$ ls -l $VSC_SCRATCH
+$ more $VSC_SCRATCH/primes_1.txt
+```
 
 ## Reading Input files
 
@@ -601,13 +539,14 @@ In this exercise, you will
 
 Check the Python and the PBS file, and submit the job:
 
-<pre><code><b>$ cat file3.py</b>
-<b>$ cat file3.pbs</b>
-<b>$ qsub file3.pbs</b>
-<b>$ qstat</b>
-<b>$ ls -l</b>
-<b>$ more $VSC_SCRATCH/primes_2.txt</b>
-</code></pre>
+```
+$ cat file3.py
+$ cat file3.pbs
+$ qsub file3.pbs
+$ qstat
+$ ls -l
+$ more $VSC_SCRATCH/primes_2.txt
+```
 ## How much disk space do I get? 
 
 ### Quota
@@ -694,23 +633,25 @@ into the login nodes of that VSC site).
 {% else %}
 The "`show_quota`" command has been developed to show you the status of
 your quota in a readable format:
-<pre><code>$ <b>show_quota</b>
+```
+$ show_quota
 VSC_DATA:    used 81MB (0%)  quota 25600MB
 VSC_HOME:    used 33MB (1%)  quota 3072MB
 VSC_SCRATCH:   used 28MB (0%)  quota 25600MB
 VSC_SCRATCH_GLOBAL: used 28MB (0%)  quota 25600MB
 VSC_SCRATCH_SITE:   used 28MB (0%)  quota 25600MB
-</code></pre>
+```
 
 or on the UAntwerp clusters
-<pre><code>$ <b>module load scripts</b>
-$ <b>show_quota</b>
+```
+$ module load scripts
+$ show_quota
 VSC_DATA:    used 81MB (0%)  quota 25600MB
 VSC_HOME:    used 33MB (1%)  quota 3072MB
 VSC_SCRATCH:   used 28MB (0%)  quota 25600MB
 VSC_SCRATCH_GLOBAL: used 28MB (0%)  quota 25600MB
 VSC_SCRATCH_SITE:   used 28MB (0%)  quota 25600MB
-</code></pre>
+```
 
 With this command, you can follow up the consumption of your total disk
 quota easily, as it is expressed in percentages. Depending of on which
@@ -725,14 +666,15 @@ directories are responsible for the consumption of your disk space. You
 can check the size of all subdirectories in the current directory with
 the "`du`" (**Disk Usage**) command:
 
-<pre><code><b>$ du</b>
+```
+$ du
 256 ./ex01-matlab/log
 1536 ./ex01-matlab
 768 ./ex04-python
 512 ./ex02-python
 768 ./ex03-python
 5632
-</code></pre>
+```
 
 This shows you first the aggregated size of all subdirectories, and
 finally the total size of the current directory "." (this includes files
@@ -741,28 +683,31 @@ stored in the current directory).
 If you also want this size to be "human-readable" (and not always the
 total number of kilobytes), you add the parameter "-h":
 
-<pre><code><b>$ du -h</b>
+```
+$ du -h
 256K ./ex01-matlab/log
 1.5M ./ex01-matlab
 768K ./ex04-python
 512K ./ex02-python
 768K ./ex03-python
 5.5M .
-</code></pre>
+```
 
 If the number of lower level subdirectories starts to grow too big, you
 may not want to see the information at that depth; you could just ask
 for a summary of the current directory:
 
-<pre><code><b>$ du -s</b>
+```
+$ du -s
 5632 .
-<b>$ du -s -h</b>
-</code></pre>
+$ du -s -h
+```
 
 If you want to see the size of any file or top-level subdirectory in the
 current directory, you could use the following command:
 
-<pre><code><b>$ du -h --max-depth 1</b>
+```
+$ du -h --max-depth 1
 1.5M ./ex01-matlab
 512K ./ex02-python
 768K ./ex03-python
@@ -770,7 +715,7 @@ current directory, you could use the following command:
 256K ./example.sh
 1.5M ./intro-HPC.pdf
 700M ./.cache
-</code></pre>
+```
 
 Finally, if you don't want to know the size of the data in your current
 directory, but in some other directory (e.g., your data directory), you
@@ -778,13 +723,14 @@ just pass this directory as a parameter. The command below will show the
 disk use in your home directory, even if you are currently in a
 different directory:
 
-<pre><code><b>$ du -h --max-depth 1 $VSC_HOME</b>
+```
+$ du -h --max-depth 1 $VSC_HOME
 22M {{ homedir }}/dataset01
 36M {{ homedir }}/dataset02
 22M {{ homedir }}/dataset03
 3.5M {{ homedir }}/primes.txt
 24M {{ homedir }}/.cache
-</code></pre>
+```
 
 {% if site == gent %}
 {% else %}
@@ -796,8 +742,9 @@ listing of files.
 
 Try:
 
-<pre><code><b>$ tree -s -d</b>
-</code></pre>
+```
+$ tree -s -d
+```
 
 However, we urge you to only use the `du` and `tree` commands when you
 really need them as they can put a heavy strain on the file system and
@@ -816,8 +763,9 @@ infrastructure.
 To change the group of a directory and it's underlying directories and
 files, you can use:
 
-<pre><code><b>$ chgrp -R groupname directory</b>
-</code></pre>
+```
+chgrp -R groupname directory
+```
 
 ### Joining an existing group
 
@@ -864,9 +812,10 @@ You can get details about the current state of groups on the HPC
 infrastructure with the following command (`example` is the name of the
 group we want to inspect):
 
-<pre><code><b>$ getent group example</b>
+```
+$ getent group example
 example:*:1234567:vsc40001,vsc40002,vsc40003
-</code></pre>
+```
 
 We can see that the VSC id number is 1234567 and that there are three
 members in the group: `vsc40001`, `vsc40002` and `vsc40003`.

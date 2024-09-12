@@ -9,7 +9,7 @@ Maven
 # Available modules
 
 
-The overview below shows which Maven installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which Maven installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using Maven, load one of these modules using a `module load` command like:
 
@@ -17,9 +17,9 @@ To start using Maven, load one of these modules using a `module load` command li
 module load Maven/3.6.3
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Maven/3.6.3|x|x|x|x|x|x|
-|Maven/3.6.0|-|-|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Maven/3.6.3|x|x|x|x|x|-|x|
+|Maven/3.6.0|-|-|x|-|x|-|-|

@@ -90,9 +90,11 @@ A typical process looks like:
 
 We assume you've copied your software to the {{hpc}}. The next step is to request
 your private compute node.
-<pre><code>$ <b>qsub -I</b>
+
+```bash
+$ qsub -I
 qsub: waiting for job {{jobid}} to start
-</code></pre>
+```
 
 
 ### Compiling a sequential program in C
@@ -100,23 +102,23 @@ qsub: waiting for job {{jobid}} to start
 Go to the examples for chapter 
 [Compiling and testing your software on the HPC](compiling_your_software.md#compiling-and-building-on-the-hpc) and load the 
 foss module:
-<pre><code>$ <b>cd ~/{{exampledir}}</b>
-$ <b>module load foss</b>
-</code></pre>
+```
+cd ~/{{exampledir}}
+module load foss
+```
 
 We now list the directory and explore the contents of the "*hello.c*"
 program:
-<pre><code>$ <b>ls -l</b>
+```
+$ ls -l
 total 512
 -rw-r--r-- 1 {{userid}} 214 Sep 16 09:42 hello.c
 -rw-r--r-- 1 {{userid}} 130 Sep 16 11:39 hello.pbs*
 -rw-r--r-- 1 {{userid}} 359 Sep 16 13:55 mpihello.c
 -rw-r--r-- 1 {{userid}} 304 Sep 16 13:55 mpihello.pbs
-</code></pre>
+```
 
-<p style="text-align: center">hello.c</p>
-
-```shell
+```shell title="hello.c"
 {% include "examples/Compiling-and-testing-your-software-on-the-HPC/hello.c" %}
 ```
 
@@ -130,14 +132,15 @@ First, check the command line options for *"gcc" (GNU C-Compiler)*, then
 we compile. the `O2` option enables a moderate level of optimization when compiling the code. 
 It instructs the compiler to optimize the code for better performance without significantly increasing compilation time.
 Finally, list the contents of the directory again:
-<pre><code>$ <b>gcc -help</b>
-$ <b>gcc -O2 -o hello hello.c</b>
-$ <b>ls -l</b>
+```
+$ gcc -help
+$ gcc -O2 -o hello hello.c
+$ ls -l
 total 512
 -rwxrwxr-x 1 {{userid}} 7116 Sep 16 11:43 hello*
 -rw-r--r-- 1 {{userid}}  214 Sep 16 09:42 hello.c
 -rwxr-xr-x 1 {{userid}}  130 Sep 16 11:39 hello.pbs*
-</code></pre>
+```
 
 A new file "hello" has been created. Note that this file has "execute"
 rights, i.e., it is an executable. More often than not, calling gcc --
@@ -152,35 +155,39 @@ that produces a warning does not go unnoticed.
 
 Let's test this program on the local compute node, which is at your
 disposal after the `qsub --I` command:
-<pre><code>$ <b>./hello</b>
+```
+$ ./hello
 Hello #0
 Hello #1
 Hello #2
 Hello #3
 Hello #4
 ...
-</code></pre>
+```
 
 It seems to work, now run it on the {{hpc}}
-<pre><code>$ <b>qsub hello.pbs</b></code></pre>
+```
+qsub hello.pbs
+```
 
 ### Compiling a parallel program in C/MPI
-<pre><code>$ <b>cd ~/{{exampledir}}</b></code></pre>
+```
+cd ~/{{exampledir}}
+```
 
 List the directory and explore the contents of the "*mpihello.c*"
 program:
-<pre><code>$ <b>ls -l</b>
+```
+$ ls -l
 total 512
 total 512
 -rw-r--r-- 1 {{userid}} 214 Sep 16 09:42 hello.c
 -rw-r--r-- 1 {{userid}} 130 Sep 16 11:39 hello.pbs*
 -rw-r--r-- 1 {{userid}} 359 Sep 16 13:55 mpihello.c
 -rw-r--r-- 1 {{userid}} 304 Sep 16 13:55 mpihello.pbs
-</code></pre>
+```
 
-<p style="text-align: center">mpihello.c</p>
-
-```shell
+```shell title="mpihello.c"
 {% include "examples/Compiling-and-testing-your-software-on-the-HPC/mpihello.c" %}
 ```
 
@@ -191,21 +198,27 @@ Then, check the command line options for *"mpicc" (GNU C-Compiler with
 MPI extensions)*, then we compile and list the contents of the directory
 again:
 
-<pre><code>$ <b>mpicc --help</b>
-$ <b>mpicc -o mpihello mpihello.c</b>
-$ <b>ls -l</b></code></pre>
+```
+mpicc --help
+mpicc -o mpihello mpihello.c
+ls -l
+```
 
 A new file "hello" has been created. Note that this program has
 "execute" rights.
 
 Let's test this program on the "login" node first:
 
-<pre><code>$ <b>./mpihello</b>
-Hello World from Node 0.</code></pre>
+```
+$ ./mpihello
+Hello World from Node 0.
+```
 
 It seems to work, now run it on the {{hpc}}.
 
-<pre><code>$ <b>qsub mpihello.pbs</b></code></pre>
+```
+qsub mpihello.pbs
+```
 
 ### Compiling a parallel program in Intel Parallel Studio Cluster Edition
 
@@ -213,30 +226,39 @@ We will now compile the same program, but using the Intel Parallel
 Studio Cluster Edition compilers. We stay in the examples directory for
 this chapter:
 
-<pre><code>$ <b>cd ~/{{exampledir}}</b></code></pre>
+```
+cd ~/{{exampledir}}
+```
 
 
 We will compile this C/MPI -file into an executable with the Intel
 Parallel Studio Cluster Edition. First, clear the modules (purge) and
 then load the latest "intel" module:
 
-<pre><code>$ <b>module purge</b>
-$ <b>module load intel</b>
-</code></pre>
+```
+module purge
+module load intel
+```
 
 Then, compile and list the contents of the directory again. The Intel
 equivalent of mpicc is mpiicc.
-<pre><code>$ <b>mpiicc -o mpihello mpihello.c</b>
-$ <b>ls -l</b></code></pre>
+```
+mpiicc -o mpihello mpihello.c
+ls -l
+```
 
 Note that the old "mpihello" file has been overwritten. Let's test this
 program on the "login" node first:
-<pre><code>$ <b>./mpihello</b>
-Hello World from Node 0.</code></pre>
+```
+$ ./mpihello
+Hello World from Node 0.
+```
 
 It seems to work, now run it on the {{hpc}}.
 
-<pre><code>$ <b>qsub mpihello.pbs</b></code></pre>
+```
+qsub mpihello.pbs
+```
 
 Note: The {{association}} only has a license for the Intel Parallel Studio Cluster
 Edition for a fixed number of users. As such, it might happen that you
@@ -246,44 +268,10 @@ for your use.
 Note: The Intel Parallel Studio Cluster Edition contains equivalent
 compilers for all GNU compilers. Hereafter the overview for C, C++ and
 Fortran compilers.
-<div style="text-align: center; width: 100%">
-<table>
-<thead>
-  <tr>
-    <th></th>
-    <th colspan="2"><b>Sequential Program</b></th>
-    <th colspan="2"><b>Parallel Program (with MPI)</b></th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td></td>
-    <td><b>GNU</b></td>
-    <td><b>Intel</b></td>
-    <td><b>GNU</b></td>
-    <td><b>Intel</b></td>
-  </tr>
-  <tr>
-    <td><b>C</b></td>
-    <td>gcc</td>
-    <td>icc</td>
-    <td>mpicc</td>
-    <td>mpiicc</td>
-  </tr>
-  <tr>
-    <td><b>C++</b></td>
-    <td>g++</td>
-    <td>icpc</td>
-    <td>mpicxx</td>
-    <td>mpiicpc</td>
-  </tr>
-  <tr>
-    <td><b>Fortran</b></td>
-    <td>gfortran</td>
-    <td>ifort</td>
-    <td>mpif90</td>
-    <td>mpiifort</td>
-  </tr>
-</tbody>
-</table>
-</div>
+
+|             | **Sequential Program** |           | **Parallel Program (with MPI)** |           |
+|-------------|------------------------|-----------|---------------------------------|-----------|
+|             | **GNU**                | **Intel** | **GNU**                         | **Intel** |
+| **C**       | gcc                    | icc       | mpicc                           | mpiicc    |
+| **C++**     | g++                    | icpc      | mpicxx                          | mpiicpc   |
+| **Fortran** | gfortran               | ifort     | mpif90                          | mpiifort  |

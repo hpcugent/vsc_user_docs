@@ -9,16 +9,17 @@ scib
 # Available modules
 
 
-The overview below shows which scib installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which scib installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using scib, load one of these modules using a `module load` command like:
 
 ```shell
-module load scib/1.1.3-foss-2021a
+module load scib/1.1.4-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scib/1.1.3-foss-2021a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|scib/1.1.4-foss-2023a|x|x|x|x|x|x|x|
+|scib/1.1.3-foss-2021a|x|x|x|x|x|-|x|

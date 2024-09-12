@@ -9,16 +9,17 @@ OpenSSL
 # Available modules
 
 
-The overview below shows which OpenSSL installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which OpenSSL installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using OpenSSL, load one of these modules using a `module load` command like:
 
 ```shell
-module load OpenSSL/1.1
+module load OpenSSL/3
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenSSL/1.1|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OpenSSL/3|x|x|x|x|x|x|x|
+|OpenSSL/1.1|x|x|x|x|x|-|x|

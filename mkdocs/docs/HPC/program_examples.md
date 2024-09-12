@@ -2,11 +2,16 @@
 # Program examples { #ch:program-examples}
 
 If you have **not done so already** copy our examples to your home directory by running the following command:
-<pre><code><b> cp -r {{ examplesdir }} ~/</b></code></pre>
-<sub>`~`(tilde) refers to your home directory, the directory you arrive by default when you login.</sub>
+```
+ cp -r {{ examplesdir }} ~/
+```
+
+`~`(tilde) refers to your home directory, the directory you arrive by default when you login.
 
 Go to our examples:
-<pre><code><b>cd ~/{{exampledir}}</b></code></pre>
+```
+cd ~/{{exampledir}}
+```
 
 Here, we just have put together a number of examples for your
 convenience. We did an effort to put comments inside the source files,
@@ -36,27 +41,26 @@ so the source code files are (should be) self-explanatory.
 
 The above 2 OMP directories contain the following examples:
 
-| C Files                                                                                                                                               | Fortran Files                                                                                                                                                  | Description                           |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
-| omp_hello.c                                                                                                                                           | omp_hello.f                                                                                                                                                    | Hello world                           |
-| omp_workshare1.c                                                                                                                                      | omp_workshare1.f                                                                                                                                               | Loop work-sharing                     |
-| omp_workshare2.c                                                                                                                                      | omp_workshare2.f                                                                                                                                               | Sections work-sharing                 |
-| omp_reduction.c                                                                                                                                       | omp_reduction.f                                                                                                                                                | Combined parallel loop reduction      |
-| omp_orphan.c                                                                                                                                          | omp_orphan.f                                                                                                                                                   | Orphaned parallel loop reduction      |
-| omp_mm.c                                                                                                                                              | omp_mm.f                                                                                                                                                       | Matrix multiply                       |
-| omp_getEnvInfo.c                                                                                                                                      | omp_getEnvInfo.f                                                                                                                                               | Get and print environment information |
-| omp_bug1.c<br/>omp_bug1fix.c<br/> omp_bug2.c<br/>  omp_bug3.c<br/>  omp_bug4.c<br/>  omp_bug4fix<br/>  omp_bug5.c<br/>  omp_bug5fix.c<br/> omp_bug6.c | omp_bug1.f<br/>  omp_bug1fix.f<br/>  omp_bug2.f<br/>  omp_bug3.f<br/>  omp_bug4.f<br/>  omp_bug4fix<br/>  omp_bug5.f<br/>  omp_bug5fix.f<br/>  omp_bug6.f<br/> | Programs with bugs and their solution |
+| C Files          | Fortran Files    | Description                           |
+|------------------|------------------|---------------------------------------|
+| omp_hello.c      | omp_hello.f      | Hello world                           |
+| omp_workshare1.c | omp_workshare1.f | Loop work-sharing                     |
+| omp_workshare2.c | omp_workshare2.f | Sections work-sharing                 |
+| omp_reduction.c  | omp_reduction.f  | Combined parallel loop reduction      |
+| omp_orphan.c     | omp_orphan.f     | Orphaned parallel loop reduction      |
+| omp_mm.c         | omp_mm.f         | Matrix multiply                       |
+| omp_getEnvInfo.c | omp_getEnvInfo.f | Get and print environment information |
+| omp_bug*         | omp_bug*         | Programs with bugs and their solution |
 
 Compile by any of the following commands:
-<table>
-    <tr>
-        <th>C:</th>
-        <td>icc -openmp omp_hello.c -o hello\newline pgcc -mp omp_hello.c -o hello\newline gcc -fopenmp omp_hello.c -o hello</td>
-    </tr>
-    <tr>
-        <th>Fortran:</th>
-        <td>ifort -openmp omp_hello.f -o hello\newline pgf90 -mp omp_hello.f -o hello\newline gfortran -fopenmp omp_hello.f -o hello</td>
-    </tr>
-</table>
+
+| **Language** | **Commands**                           |
+|--------------|----------------------------------------|
+| **C:**       | icc -openmp omp_hello.c -o hello       |
+|              | pgcc -mp omp_hello.c -o hello          |
+|              | gcc -fopenmp omp_hello.c -o hello      |
+| **Fortran:** | ifort -openmp omp_hello.f -o hello     |
+|              | pgf90 -mp omp_hello.f -o hello         |
+|              | gfortran -fopenmp omp_hello.f -o hello |
 
 Be invited to explore the examples.

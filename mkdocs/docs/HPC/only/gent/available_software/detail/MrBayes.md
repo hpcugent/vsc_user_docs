@@ -9,7 +9,7 @@ MrBayes
 # Available modules
 
 
-The overview below shows which MrBayes installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which MrBayes installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using MrBayes, load one of these modules using a `module load` command like:
 
@@ -17,9 +17,9 @@ To start using MrBayes, load one of these modules using a `module load` command 
 module load MrBayes/3.2.7-gompi-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MrBayes/3.2.7-gompi-2020b|-|x|x|x|x|x|
-|MrBayes/3.2.6-gompi-2020b|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MrBayes/3.2.7-gompi-2020b|-|x|x|x|x|-|x|
+|MrBayes/3.2.6-gompi-2020b|-|x|x|x|x|-|x|

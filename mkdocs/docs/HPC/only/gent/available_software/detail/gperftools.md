@@ -9,7 +9,7 @@ gperftools
 # Available modules
 
 
-The overview below shows which gperftools installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which gperftools installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using gperftools, load one of these modules using a `module load` command like:
 
@@ -17,11 +17,12 @@ To start using gperftools, load one of these modules using a `module load` comma
 module load gperftools/2.14-GCCcore-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gperftools/2.14-GCCcore-12.2.0|x|x|x|x|x|x|
-|gperftools/2.10-GCCcore-11.3.0|x|x|x|x|x|x|
-|gperftools/2.9.1-GCCcore-10.3.0|x|x|x|-|x|x|
-|gperftools/2.7.90-GCCcore-8.3.0|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|gperftools/2.14-GCCcore-12.2.0|x|x|x|x|x|-|x|
+|gperftools/2.12-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|gperftools/2.10-GCCcore-11.3.0|x|x|x|x|x|-|x|
+|gperftools/2.9.1-GCCcore-10.3.0|x|x|x|-|x|-|x|
+|gperftools/2.7.90-GCCcore-8.3.0|-|x|x|-|x|-|x|

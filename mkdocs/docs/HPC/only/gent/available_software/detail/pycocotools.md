@@ -9,18 +9,19 @@ pycocotools
 # Available modules
 
 
-The overview below shows which pycocotools installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which pycocotools installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using pycocotools, load one of these modules using a `module load` command like:
 
 ```shell
-module load pycocotools/2.0.4-foss-2021a
+module load pycocotools/2.0.7-foss-2023a
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pycocotools/2.0.4-foss-2021a|x|x|x|-|x|x|
-|pycocotools/2.0.1-foss-2019b-Python-3.7.4|-|x|x|-|x|x|
-|pycocotools/2.0.0-foss-2019b-Python-3.7.4|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pycocotools/2.0.7-foss-2023a|x|x|x|x|x|x|x|
+|pycocotools/2.0.4-foss-2021a|x|x|x|-|x|-|x|
+|pycocotools/2.0.1-foss-2019b-Python-3.7.4|-|x|x|-|x|-|x|
+|pycocotools/2.0.0-foss-2019b-Python-3.7.4|-|x|x|-|x|-|x|

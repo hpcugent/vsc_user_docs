@@ -9,17 +9,18 @@ libgcrypt
 # Available modules
 
 
-The overview below shows which libgcrypt installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which libgcrypt installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using libgcrypt, load one of these modules using a `module load` command like:
 
 ```shell
-module load libgcrypt/1.9.3-GCCcore-11.2.0
+module load libgcrypt/1.10.3-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libgcrypt/1.9.3-GCCcore-11.2.0|x|x|x|x|x|x|
-|libgcrypt/1.9.2-GCCcore-10.3.0|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libgcrypt/1.10.3-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|libgcrypt/1.9.3-GCCcore-11.2.0|x|x|x|x|x|-|x|
+|libgcrypt/1.9.2-GCCcore-10.3.0|x|x|x|-|x|-|x|

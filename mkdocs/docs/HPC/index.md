@@ -10,7 +10,8 @@ hide: "toc"
 
 Use the menu on the left to navigate, or use the search box on the top right.
 
-You are viewing documentation intended for people using **{{ OS }}**.<br/>
+You are viewing documentation intended for people using **{{ OS }}**.
+
 Use the OS dropdown in the top bar to switch to a different operating system.
 
 **Quick links**
@@ -20,6 +21,7 @@ Use the OS dropdown in the top bar to switch to a different operating system.
 - [Recording of HPC-UGent intro](https://www.ugent.be/hpc/en/training/introhpcugent-recording)
 - [Linux Tutorial](linux-tutorial/index.md)
 - [Hardware overview](https://www.ugent.be/hpc/en/infrastructure)
+- [Migration of cluster and login nodes to RHEL9 (starting Sept'24)](rhel9.md)
 {%- endif %}
 - [FAQ](FAQ.md) | [Troubleshooting](troubleshooting.md) | [Best practices](./best_practices.md) | [Known issues](known_issues.md)
 

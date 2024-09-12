@@ -9,7 +9,7 @@ MultilevelEstimators
 # Available modules
 
 
-The overview below shows which MultilevelEstimators installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which MultilevelEstimators installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using MultilevelEstimators, load one of these modules using a `module load` command like:
 
@@ -17,8 +17,8 @@ To start using MultilevelEstimators, load one of these modules using a `module l
 module load MultilevelEstimators/0.1.0-GCC-11.2.0-Julia-1.7.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MultilevelEstimators/0.1.0-GCC-11.2.0-Julia-1.7.2|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MultilevelEstimators/0.1.0-GCC-11.2.0-Julia-1.7.2|x|x|x|-|x|-|x|

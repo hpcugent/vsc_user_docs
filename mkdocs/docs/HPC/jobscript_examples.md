@@ -17,18 +17,15 @@ The basic parameters should always be used. Some notes on the situational parame
 
 *   To use a situational parameter, remove one '`#`' at the beginning of the line.
 
-<p style="text-align: center">simple_jobscript.sh</p>
-
-```shell
+```shell title="simple_jobscript.sh"
 {% include "examples/Job-script-examples/simple_jobscript.sh" %}
 ```
 
 ## Single-core job
 
 Here's an example of a single-core job script:
-<p style="text-align: center">single_core.sh</p>
 
-```shell
+```shell title="single_core.sh"
 {% include "examples/Job-script-examples/single_core.sh" %}
 ```
 
@@ -52,9 +49,7 @@ Here's an example of a single-core job script:
 
 Here's an example of a multi-core job script that uses `mympirun`:
 
-<p style="text-align: center">multi_core.sh</p>
-
-```shell
+```shell title="multi_core.sh"
 {% include "examples/Job-script-examples/multi_core.sh" %}
 ```
 
@@ -73,17 +68,13 @@ This can be done with the `timeout` command. This command sets a limit
 of time a program can run for, and when this limit is exceeded, it kills
 the program. Here's an example job script using `timeout`:
 
-<p style="text-align: center">timeout.sh</p>
-
-```shell
+```shell title="timeout.sh"
 {% include "examples/Job-script-examples/timeout.sh" %}
 ```
 
 The example program used in this script is a dummy script that simply
 sleeps a specified amount of minutes:
 
-<p style="text-align: center">example_program.sh</p>
-
-```shell
+```shell title="example_program.sh"
 {% include "examples/Job-script-examples/example_program.sh" %}
 ```

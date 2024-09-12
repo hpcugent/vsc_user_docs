@@ -9,7 +9,7 @@ pblat
 # Available modules
 
 
-The overview below shows which pblat installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which pblat installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using pblat, load one of these modules using a `module load` command like:
 
@@ -17,8 +17,8 @@ To start using pblat, load one of these modules using a `module load` command li
 module load pblat/2.5.1-foss-2022b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pblat/2.5.1-foss-2022b|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pblat/2.5.1-foss-2022b|x|x|x|x|x|-|x|

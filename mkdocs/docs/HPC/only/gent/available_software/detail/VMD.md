@@ -9,7 +9,7 @@ VMD
 # Available modules
 
 
-The overview below shows which VMD installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which VMD installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using VMD, load one of these modules using a `module load` command like:
 
@@ -17,8 +17,8 @@ To start using VMD, load one of these modules using a `module load` command like
 module load VMD/1.9.4a51-foss-2020b
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VMD/1.9.4a51-foss-2020b|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|VMD/1.9.4a51-foss-2020b|-|x|x|x|x|-|x|

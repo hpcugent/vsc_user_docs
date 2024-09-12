@@ -9,7 +9,7 @@ QuickFF
 # Available modules
 
 
-The overview below shows which QuickFF installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which QuickFF installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using QuickFF, load one of these modules using a `module load` command like:
 
@@ -17,9 +17,9 @@ To start using QuickFF, load one of these modules using a `module load` command 
 module load QuickFF/2.2.7-intel-2020a-Python-3.8.2
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|QuickFF/2.2.7-intel-2020a-Python-3.8.2|x|x|x|x|x|x|
-|QuickFF/2.2.4-intel-2020a-Python-3.8.2|-|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|QuickFF/2.2.7-intel-2020a-Python-3.8.2|x|x|x|x|x|-|x|
+|QuickFF/2.2.4-intel-2020a-Python-3.8.2|-|x|x|-|x|-|x|

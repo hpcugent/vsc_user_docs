@@ -71,7 +71,8 @@ First of all, you need to pick and load one of the available `OpenFOAM`
 modules. To get an overview of the available modules, run
 '`module avail OpenFOAM`'. For example:
 
-<pre><code>$ <b>module avail OpenFOAM</b>
+```
+$ module avail OpenFOAM
 ------------------ /apps/gent/CO7/sandybridge/modules/all ------------------
    OpenFOAM/v1712-foss-2017b     OpenFOAM/4.1-intel-2017a
    OpenFOAM/v1712-intel-2017b    OpenFOAM/5.0-intel-2017a
@@ -81,7 +82,7 @@ modules. To get an overview of the available modules, run
    OpenFOAM/2.4.0-intel-2017a    OpenFOAM/5.0-20180108-intel-2018a
    OpenFOAM/3.0.1-intel-2016b    OpenFOAM/6-intel-2018a            (D)
    OpenFOAM/4.0-intel-2016b
-</code></pre>
+```
 
 To pick a module, take into account the differences between the
 different OpenFOAM versions w.r.t. features and API (see also [Different OpenFOAM releases](./#different-openfoam-releases)). If
@@ -94,8 +95,9 @@ that includes `intel-{{ current_year}}a`.
 To prepare your environment for using OpenFOAM, load the `OpenFOAM`
 module you have picked; for example:
 
-<pre><code>$ <b>module load OpenFOAM/4.1-intel-2017a</b>
-</code></pre>
+```
+module load OpenFOAM/11-foss-2023a
+```
 
 ### Sourcing the `$FOAM_BASH` script
 
@@ -107,8 +109,9 @@ location to this script. Assuming you are using `bash` in your shell
 session or job script, you should always run the following command after
 loading an `OpenFOAM` module:
 
-<pre><code>$ <b>source $FOAM_BASH</b>
-</code></pre>
+```
+source $FOAM_BASH
+```
 
 ### Defining utility functions used in tutorial cases
 
@@ -117,8 +120,9 @@ If you would like to use the `getApplication`, `runApplication`,
 are used in OpenFOAM tutorials, you also need to `source` the
 `RunFunctions` script:
 
-<pre><code>$ <b> source $WM_PROJECT_DIR/bin/tools/RunFunctions</b>
-</code></pre>
+```
+source $WM_PROJECT_DIR/bin/tools/RunFunctions
+```
 
 Note that this needs to be done **after** sourcing `$FOAM_BASH` to make sure
 `$WM_PROJECT_DIR` is defined.
@@ -129,8 +133,9 @@ If you are seeing `Floating Point Exception` errors, you can undefine
 the `$FOAM_SIGFPE` environment variable that is defined by the
 `$FOAM_BASH` script as follows:
 
-<pre><code>$ <b>unset $FOAM_SIGFPE</b>
-</code></pre>
+```
+unset $FOAM_SIGFPE
+```
 
 Note that this only prevents OpenFOAM from propagating floating point
 exceptions, which then results in terminating the simulation. However,
@@ -218,8 +223,9 @@ processes used in a parallel OpenFOAM execution, the
 `$MYMPIRUN_VARIABLESPREFIX` environment variable must be defined as
 follows, prior to running the OpenFOAM simulation with `mympirun`:
 
-<pre><code>$ <b>export MYMPIRUN_VARIABLESPREFIX=WM_PROJECT,FOAM,MPI</b>
-</code></pre>
+```
+export MYMPIRUN_VARIABLESPREFIX=WM_PROJECT,FOAM,MPI
+```
 
 Whenever you are instructed to use a command like `mpirun -np <N> ...`,
 use `mympirun ...` instead; `mympirun` will automatically detect the
@@ -236,8 +242,9 @@ make sure that the number of subdomains matches the number of processor
 cores that will be used by `mympirun`. If not, you may run into an error
 message like:
 
-<pre><code>number of processor directories = 4 is not equal to the number of processors = 16
-</code></pre>
+```
+number of processor directories = 4 is not equal to the number of processors = 16
+```
 
 In this case, the case was decomposed in 4 subdomains, while the
 OpenFOAM simulation was started with 16 processes through `mympirun`. To
@@ -264,8 +271,9 @@ by minimising the number of processor boundaries.
 
 To visualise the processor domains, use the following command:
 
-<pre><code>$ <b>mympirun foamToVTK -parallel -constant -time 0 -excludePatches '(".*.")'</b>
-</code></pre>
+```
+mympirun foamToVTK -parallel -constant -time 0 -excludePatches '(".*.")'
+```
 
 and then load the VTK files generated in the `VTK` folder into ParaView.
 
@@ -292,7 +300,7 @@ specify in `system/controlDict` (see also
     of plane) rather than the entire domain;
 
 -   if you do not plan to change the parameters of the OpenFOAM
-    simulation while it is running, **set <tt>runTimeModifiable</tt> to <tt>false</tt>** to avoid that OpenFOAM re-reads each
+    simulation while it is running, set **runTimeModifiable** to **false** to avoid that OpenFOAM re-reads each
     of the `system/*Dict` files at every time step;
 
 -   if the results per individual time step are large, consider setting
@@ -322,7 +330,6 @@ See <https://cfd.direct/openfoam/user-guide/compiling-applications/>.
 Example job script for `damBreak` OpenFOAM tutorial (see also
 <https://cfd.direct/openfoam/user-guide/dambreak>):
 
-<center>-- OpenFOAM_damBreak.sh --</center>
-```bash
+```bash title="OpenFOAM_damBreak.sh"
 {% include "./examples/OpenFOAM/OpenFOAM_damBreak.sh" %}
 ```

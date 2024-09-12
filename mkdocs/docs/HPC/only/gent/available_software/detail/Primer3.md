@@ -9,7 +9,7 @@ Primer3
 # Available modules
 
 
-The overview below shows which Primer3 installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which Primer3 installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
 
 To start using Primer3, load one of these modules using a `module load` command like:
 
@@ -17,8 +17,8 @@ To start using Primer3, load one of these modules using a `module load` command 
 module load Primer3/2.5.0-GCC-9.3.0
 ```
 
-*(This data was automatically generated on Wed, 06 Mar 2024 at 15:51:26 CET)*  
+*(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Primer3/2.5.0-GCC-9.3.0|-|x|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Primer3/2.5.0-GCC-9.3.0|-|x|x|-|x|-|-|
