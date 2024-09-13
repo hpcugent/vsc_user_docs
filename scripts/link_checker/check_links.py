@@ -91,6 +91,10 @@ def main(url_file, whitelist=None):
             print(f'{path} : {url}')
         print()
 
+    # Exit with error code if any non-200 status codes were found
+    if grouped:
+        exit(1)
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Check status codes of URLs')
