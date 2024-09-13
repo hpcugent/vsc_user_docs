@@ -82,12 +82,13 @@ def main(url_file, whitelist=None):
         grouped.setdefault(status, []).append((path, url))
 
     # Print results
+    print("=" * 80)
     ok = grouped.pop(200, [])
     print(f"{len(ok)} links have status code 200 OK.\n")
     for key in grouped.keys():
         print(key)
         for path, url in grouped[key]:
-            print(f'{url}')
+            print(f'{path} : {url}')
         print()
 
 
