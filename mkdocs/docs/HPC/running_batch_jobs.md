@@ -124,7 +124,7 @@ E.g., `foss/{{ current_year}}a` is the first version of the `foss` toolchain in 
 The toolchains are then used to compile a lot of the software installed
 on the VSC clusters. You can recognise those packages easily as they all
 contain the name of the toolchain after the version number in their name
-(e.g., `Python/2.7.12-intel-2016b`). Only packages compiled with the
+(e.g., `Python/3.12.3-GCCcore-13.3.0`). Only packages compiled with the
 same toolchain name and version can work together without conflicts.
 
 ### Loading and unloading modules
