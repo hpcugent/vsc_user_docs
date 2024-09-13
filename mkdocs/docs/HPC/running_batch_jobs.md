@@ -202,11 +202,10 @@ you will have to unload the packages one by one. When the
 $ module unload secondexample
 $ module list
 Currently Loaded Modulefiles: 
-Currently Loaded Modulefiles: 
-1) example/1.2.3                        5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26 
-2) GCCcore/5.4.0                        6) imkl/11.3.3.210-iimpi-2016b 
-3) icc/2016.3.210-GCC-5.4.0-2.26        7) intel/2016b 
-4) ifort/2016.3.210-GCC-5.4.0-2.26      8) examplelib/1.2-intel-2016b
+1) example/1.2.3                        5) impi/5.1.3.181-iccifort-2023.3.210-GCC-5.4.0-2.26 
+2) GCCcore/5.4.0                        6) imkl/11.3.3.210-iimpi-2023a
+3) icc/2023.3.210-GCC-5.4.0-2.26        7) intel/2023a
+4) ifort/2023.3.210-GCC-5.4.0-2.26      8) examplelib/4.5.6-intel-2023a
 ```
 
 To unload the `secondexample` module, you can also use
