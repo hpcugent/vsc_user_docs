@@ -173,11 +173,11 @@ stated above, you will get the following:
 ```
 $ module list
 Currently Loaded Modulefiles: 
-1) example/1.2.3                                        6) imkl/11.3.3.210-iimpi-2016b 
-2) GCCcore/5.4.0                                        7) intel/2016b 
-3) icc/2016.3.210-GCC-5.4.0-2.26                        8) examplelib/1.2-intel-2016b 
-4) ifort/2016.3.210-GCC-5.4.0-2.26                      9) secondexample/2.7-intel-2016b 
-5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26
+1) example/1.2.3                                        6) imkl/11.3.3.210-iimpi-2023a
+2) GCCcore/5.4.0                                        7) intel/2023a
+3) icc/2023.3.210-GCC-5.4.0-2.26                        8) examplelib/1.2-intel-2023a
+4) ifort/2023.3.210-GCC-5.4.0-2.26                      9) secondexample/4.5.6-intel-2023a
+5) impi/5.1.3.181-iccifort-2023.3.210-GCC-5.4.0-2.26
 ```
 
 You can also just use the `ml` command without arguments to list loaded modules.
