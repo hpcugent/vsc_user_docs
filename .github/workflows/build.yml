@@ -35,4 +35,4 @@ jobs:
           cd scripts/link_checker
           pip install -r requirements.txt
           ./generate_links_from_build.sh ../../build > links.txt
-          ./check_links.sh --whitelist whitelist.txt links.txt
+          ./check_links.py --whitelist whitelist.txt links.txt
