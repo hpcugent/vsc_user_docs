@@ -148,7 +148,7 @@ lexicographical last after the `/`).
 **However, you should specify a particular version to avoid surprises when newer versions are installed:
 
 ```
-module load secondexample/1.2.3-intel-2023a
+module load secondexample/4.5.6-intel-2023a
 ```
 
 The `ml` command is a shorthand for `module load`: `ml example/1.2.3` is
@@ -158,7 +158,7 @@ Modules need not be loaded one by one; the two `module load` commands
 can be combined as follows:
 
 ```
-module load example/1.2.3 secondexample/1.2.3-intel-2023a
+module load example/1.2.3 secondexample/4.5.6-intel-2023a
 ```
 
 This will load the two modules as well as their dependencies (unless
