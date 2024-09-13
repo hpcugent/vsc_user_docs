@@ -34,5 +34,5 @@ jobs:
         run: |
           cd scripts/link_checker
           pip install -r requirements.txt
-          ./generate_links_from_build.sh ../../build > links.txt
+          ./generate_links_from_build.sh ../../build/HPC/Gent > links.txt
           python check_links.py --whitelist whitelist.txt links.txt
