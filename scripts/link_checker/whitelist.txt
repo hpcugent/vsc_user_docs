@@ -14,10 +14,6 @@ https://firewall.vscentrum.be
 # 401
 https://pintra.uantwerpen.be/bbcswebdav/xid-23610_1
 
-# Timeout
-https://shieldon.ugent.be/xdmod
-https://shieldon.ugent.be/xdmod/user_manual/index.php
-
 # 403
 http://hpc.ugent.be/clusterstate
 https://linux.die.net/man/1/rsync
