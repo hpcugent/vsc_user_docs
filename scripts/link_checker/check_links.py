@@ -19,7 +19,7 @@ async def fetch_status_codes(urls: list[str]):
         return await asyncio.gather(*tasks, return_exceptions=True)
 
 
-async def fetch_status_code(session: aiohttp.ClientSession, url: str) -> int | str:
+async def fetch_status_code(session: aiohttp.ClientSession, url: str):
     """
     Fetch the status code of a URL.
     :param session: The aiohttp session
