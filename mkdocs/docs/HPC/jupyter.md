@@ -46,7 +46,7 @@ The first thing we need to do is finding the modules that contain our package of
 To find the appropriate modules, it is recommended to use the shell within the web portal under `Clusters`>`>_login Shell Access`.
 
 <center>
-![image](img/ood_jupyter_open_shell.png)
+![image](img/ood_open_shell.png)
 </center>
 
 We can see all available versions of the SciPy module by using `module avail SciPy-bundle`:
