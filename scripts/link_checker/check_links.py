@@ -48,7 +48,7 @@ def read_url_file(filename: str, whitelist: set[str]) -> tuple[list[str], list[s
             if url not in whitelist:
                 paths.append(url_file)
                 urls.append(url)
-    return paths * 10, urls * 10
+    return paths, urls
 
 
 def read_whitelist(filename: str) -> set[str]:
