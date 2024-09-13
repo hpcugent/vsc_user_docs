@@ -372,7 +372,7 @@ In each `module` command shown below, you can replace `module` with
 First, load all modules you want to include in the collections:
 
 ```
-module load example/1.2.3 secondexample/2.7-intel-2016b
+module load example/1.2.3 secondexample/4.5.6-intel-2023a
 ```
 
 Now store it in a collection using `module save`. In this example, the
@@ -423,24 +423,23 @@ To see how a module would change the environment, you can use the
 `module show` command:
 
 ```
-$ module show Python/2.7.12-intel-2016b
-whatis("Description: Python is a programming language that lets youwork more quickly and integrate your systems more effectively. - Homepage: http://python.org/ ") 
-conflict("Python")
-load("intel/2016b") 
-load("bzip2/1.0.6-intel-2016b") 
+$ ml show Python/3.12.3-GCCcore-13.3.0
+help([[
+Description
+===========
+Python is a programming language that lets you work more quickly and integrate your systems more effectively.
 ...
-prepend_path(...)
-setenv("EBEXTSLISTPYTHON","setuptools-23.1.0,pip-8.1.2,nose-1.3.7,numpy-1.11.1,scipy-0.17.1,ytz-2016.4", ...)
+Included extensions
+===================
+flit_core-3.9.0, packaging-24.0, pip-24.0, setuptools-70.0.0,
+setuptools_scm-8.1.0, tomli-2.0.1, typing_extensions-4.11.0, wheel-0.43.0
+...
 ```
 
 It's also possible to use the `ml show` command instead: they are
 equivalent.
 
-Here you can see that the `Python/2.7.12-intel-2016b` comes with a whole
-bunch of extensions: `numpy`, `scipy`, ...
-
-You can also see the modules the `Python/2.7.12-intel-2016b` module
-loads: `intel/2016b`, `bzip2/1.0.6-intel-2016b`, ...
+Here you can see that the `Python/2.7.12-intel-2016b` comes with some extensions: `pip`, `setuptools`, ...
 
 If you're not sure what all of this means: don't worry, you don't have to know; just load the module and try to use the software.
 
