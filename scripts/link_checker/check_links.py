@@ -93,7 +93,10 @@ def main(url_file, whitelist=None):
 
     # Exit with error code if any non-200 status codes were found
     if grouped:
+        print(f"Found {len(urls) - len(ok)} links with non-200 status codes.")
         exit(1)
+    else:
+        print("All links are OK.")
 
 
 if __name__ == '__main__':
