@@ -14,13 +14,14 @@ The overview below shows which worker installations are available per HPC-UGent 
 To start using worker, load one of these modules using a `module load` command like:
 
 ```shell
-module load worker/1.6.13-iimpi-2022b
+module load worker/1.6.13-iimpi-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|worker/1.6.13-iimpi-2023a|x|x|x|x|x|x|x|
 |worker/1.6.13-iimpi-2022b|x|x|x|x|x|-|x|
 |worker/1.6.13-iimpi-2021b|x|x|x|-|x|-|x|
 |worker/1.6.12-foss-2021b|x|x|x|-|x|-|x|
