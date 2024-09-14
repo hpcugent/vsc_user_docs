@@ -21,4 +21,4 @@ module load dub/1.38.1-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|dub/1.38.1-GCCcore-13.2.0|-|x|x|x|x|x|x|
+|dub/1.38.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
