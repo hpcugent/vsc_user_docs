@@ -136,7 +136,7 @@ The job can now be submitted as follows (to check which `worker` module
 to use, see subsection [Using explicit version numbers](running_batch_jobs.md#using-explicit-version-numbers)):
 
 ```
-$ module load worker/1.6.12-foss-2021b
+$ module load worker/1.6.13-iimpi-2023a
 $ wsub -batch weather.pbs -data data.csv
 total number of work items: 41
 {{jobid}}
@@ -273,7 +273,7 @@ Note that
 The job is now submitted as follows:
 
 ```
-$ module load worker/1.6.12-foss-2021b
+$ module load worker/1.6.13-iimpi-2023a
 $ wsub -t 1-100 -batch test_set.pbs
 total number of work items: 100
 {{jobid}}
