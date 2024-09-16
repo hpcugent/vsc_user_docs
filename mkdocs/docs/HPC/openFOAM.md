@@ -53,7 +53,6 @@ Other useful OpenFOAM documentation:
 
 -   <https://github.com/ParticulateFlow/OSCCAR-doc/blob/master/openFoamUserManual_PFM.pdf>
 
--   <http://www.dicat.unige.it/guerrero/openfoam.html>
 
 ## Preparing the environment
 
