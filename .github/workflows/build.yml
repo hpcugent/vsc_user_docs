@@ -1,3 +1,5 @@
+---
+# documentation: https://help.github.com/en/articles/workflow-syntax-for-github-actions
 name: build docs (to test changes in PRs)
 on: [push, pull_request]
 permissions:
@@ -25,6 +27,7 @@ jobs:
             python3 -m pip list
             mkdocs --version
 
+      # equivalent of 'mkdocs build', but need to build all flavors of the docs (different site/OS)
       - name: build docs
         run: |
           python3 build.py
