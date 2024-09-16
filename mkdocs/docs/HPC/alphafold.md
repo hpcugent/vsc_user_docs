@@ -78,7 +78,7 @@ As of writing this documentation the latest version is `20230310`.
     
     The `arcanine scratch` shared filesystem is powered by fast SSD disks, 
     which is recommended for the AlphaFold data, because of random access I/O patterns.
-    See [Pre-defined user directories](http://localhost:8000/HPC/Gent/running_jobs_with_input_output_data/#pre-defined-user-directories) to get more info about the arcanine filesystem.
+    See [Pre-defined user directories](./running_jobs_with_input_output_data.md#pre-defined-user-directories) to get more info about the arcanine filesystem.
 
 The AlphaFold installations we provide have been modified a bit to facilitate the usage on {{hpcinfra}}.
 
