@@ -183,10 +183,10 @@ Currently Loaded Modulefiles:
 You can also just use the `ml` command without arguments to list loaded modules.
 
 It is important to note at this point that other modules (e.g.,
-`intel/2016b`) are also listed, although the user did not explicitly
-load them. This is because `secondexample/2.7-intel-2016b` depends on it
+`intel/2023a`) are also listed, although the user did not explicitly
+load them. This is because `secondexample/4.5.6-intel-2023a` depends on it
 (as indicated in its name), and the system administrator specified that
-the `intel/2016b` module should be loaded whenever *this*
+the `intel/2023a` module should be loaded whenever *this*
 `secondexample` module is loaded. There are advantages and disadvantages
 to this, so be aware of automatically loaded modules whenever things go wrong: they may have something to do with it!
 
