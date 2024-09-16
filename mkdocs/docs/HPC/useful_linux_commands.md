@@ -51,7 +51,7 @@ $ info ls
 
 (You can exit the last two "manuals" by using the "q" key.) For more
 exhaustive tutorials about Linux usage, please refer to the following
-site: <https://www.linux.org/forums/linux-beginner-tutorials.123/>
+site: <https://www.geeksforgeeks.org/linux-tutorial/>
 
 ## How to get started with shell scripts
 
