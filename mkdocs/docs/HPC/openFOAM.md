@@ -18,9 +18,6 @@ available, each with its own versioning scheme:
 
     -   see also <https://openfoam.org/download/history/>
 
--   OpenFOAM versions released via
-    <http://wikki.gridcore.se/foam-extend>: `v3.1`
-
 Make sure you know which flavor of OpenFOAM you want to use, since there
 are important differences between the different versions w.r.t.
 features. If the OpenFOAM version you need is not available yet, see [I want to use software that is not available on the clusters yet](../FAQ/#i-want-to-use-software-that-is-not-available-on-the-clusters-yet).
@@ -37,8 +34,6 @@ more general information on using OpenFOAM, please refer to:
     -   <https://openfoam.com>
 
     -   <https://openfoam.org>
-
-    -   <http://wikki.gridcore.se/foam-extend>
 
 -   OpenFOAM user guides:
 
