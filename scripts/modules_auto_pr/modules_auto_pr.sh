@@ -20,11 +20,12 @@ PR_TITLE="Auto Update Modules [$HUMAN_TIMESTAMP]"
 make_pr_body() {
   local n_added_modules="$1"
   local n_removed_modules="$2"
+  local n_modified_modules="$3"
 
   echo "This is an automated pull request updating the markdown files of all available modules."
   echo ""
   echo "Changes:"
-  echo "- Updated the markdown files of all previously available modules"
+  echo "- Updated $n_modified_modules modules"
   echo "- Added $n_added_modules new modules"
   echo "- Removed $n_removed_modules modules"
 }
@@ -76,6 +77,7 @@ main() {
   # Calculate the number of added and removed modules
   N_ADDED_MODULES=$(git show --name-status HEAD | grep -e "^A.*\.md$" | wc -l)
   N_REMOVED_MODULES=$(git show --name-status HEAD | grep -e "^D.*\.md$" | wc -l)
+  N_MODIFIED_MODULES=$(git show --name-status HEAD | grep -e "^M.*\.md$" | wc -l)
 
   # Push the new branch to GitHub
   git remote add fork "$fork_url"
@@ -85,11 +87,17 @@ main() {
   gh repo set-default $REPO_URL
 
   # Create a pull request using GitHub CLI. Pull request is automatically created into the default repository.
-  gh pr create \
-    --title "$PR_TITLE" \
-    --body  "$(make_pr_body "$N_ADDED_MODULES" "$N_REMOVED_MODULES")" \
-    --base  "$BASE_BRANCH" \
-    --head  "$fork_user:$BRANCH_NAME" \
+  # Make PR if add + del + mod > 0
+  if [ $((N_ADDED_MODULES + N_REMOVED_MODULES + N_MODIFIED_MODULES)) -gt 0 ]; then
+    gh pr create \
+      --title "$PR_TITLE" \
+      --body  "$(make_pr_body "$N_ADDED_MODULES" "$N_REMOVED_MODULES" "$N_MODIFIED_MODULES")" \
+      --base  "$BASE_BRANCH" \
+      --head  "$fork_user:$BRANCH_NAME"
+  else
+    echo_info "No changes detected. Skipping PR creation."
+  fi
+
 
   # Clean up
   rm -rf "$REPO_PATH"
