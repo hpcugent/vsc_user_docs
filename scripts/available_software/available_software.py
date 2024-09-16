@@ -78,8 +78,9 @@ def main():
     print("Done!")
     print("Generate detailed pages... ", end="", flush=True)
     detail_folder = os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/detail")
+    custom_text_folder = os.path.join(root_dir, "mkdocs/docs/HPC/module_custom_text")
     generated_time_yml = os.path.join(root_dir, "mkdocs/extra/gent.yml")  # yml containing time the data was generated
-    generate_detail_pages(json_path, detail_folder, generated_time_yml)
+    generate_detail_pages(json_path, detail_folder, custom_text_folder, generated_time_yml)
     print("Done!")
 
 
@@ -359,6 +360,7 @@ def generate_software_detail_page(
         software_name: str,
         software_data: dict,
         clusters: list,
+        custom_text_folder: str,
         path: str
 ) -> None:
     """
@@ -367,6 +369,7 @@ def generate_software_detail_page(
     @param software_name: Name of the software
     @param software_data: Additional information about the software (version, etc...)
     @param clusters: List with all the cluster names
+    @param custom_text_folder: Path to the folder with custom text for the software
     @param path: Path of the directory where the detailed page will be created.
     """
     sorted_versions = dict_sort(software_data["versions"])
@@ -374,6 +377,9 @@ def generate_software_detail_page(
 
     filename = f"{path}/{software_name}.md"
     md_file = MdUtils(file_name=filename, title=f"{software_name}")
+
+    md_file.write(get_custom_markdown_text(software_name, custom_text_folder))
+
     md_file.new_header(level=1, title="Available modules")
 
     md_file.new_paragraph(f"The overview below shows which {software_name} installations are available per HPC-UGent "
@@ -399,7 +405,30 @@ def generate_software_detail_page(
         f.write("---\nhide:\n  - toc\n---\n" + read_data)
 
 
-def generate_detail_pages(json_path, dest_path, generated_time_yml) -> None:
+def get_custom_markdown_text(module_name: str, custom_text_folder) -> str:
+    """
+    Get the custom Markdown text that will be added to the detailed Markdown pages.
+
+    @return: Custom Markdown text
+    """
+    module_name_md = module_name + ".md"
+    module_name_md_lower = module_name.lower() + ".md"
+
+    if os.path.exists(module_name_md_lower):
+        file_name = module_name_md_lower
+
+    elif os.path.exists(module_name_md):
+        file_name = module_name_md
+
+    else:
+        return ""
+
+    custom_markdown_path = os.path.join(custom_text_folder, file_name)
+    with open(custom_markdown_path, 'r') as f:
+        return f.read()
+
+
+def generate_detail_pages(json_path, dest_path, custom_text_folder, generated_time_yml) -> None:
     """
     Generate all the detailed pages for all the software that is available.
     """
@@ -412,7 +441,7 @@ def generate_detail_pages(json_path, dest_path, generated_time_yml) -> None:
 
     all_clusters = data["clusters"]
     for software, content in data["software"].items():
-        generate_software_detail_page(software, content, all_clusters, dest_path)
+        generate_software_detail_page(software, content, all_clusters, custom_text_folder, dest_path)
 
 
 def update_generated_time_yml(generated_time_yml, generated_time) -> None:
