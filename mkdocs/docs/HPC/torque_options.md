@@ -4,20 +4,21 @@
 
 Below is a list of the most common and useful directives.
 
-|  Option   |  System type  | Description                                                                                                                                                                                                                             |
-|:---------:|:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    -k     |      All      | Send "stdout" and/or "stderr" to your home directory when the job runs <br> **#PBS -k o** or **#PBS -k e** or **#PBS -koe**</br>                                                                                                        |
-|    -l     |      All      | Precedes a resource request, e.g., processors, wallclock                                                                                                                                                                                |
-|    -M     |      All      | Send an e-mail messages to an alternative e-mail address <br> **#PBS -M me@mymail.be**</br>                                                                                                                                             |
-|    -m     |      All      | Send an e-mail address when a job **b**egins execution and/or **e**nds or **a**borts <br> **#PBS -m b** or **#PBS -m be** or **#PBS -m ba**                                                                                             |
-|    mem    | Shared Memory | Memory & Specifies the amount of memory you need for a job. <br>**#PBS -I mem=90gb**                                                                                                                                                    |
-| mpiproces |   Clusters    | Number of processes per node on a cluster. This should equal number of processors on a node in most cases. <br> **#PBS -l mpiprocs=4**                                                                                                  |
-|    -N     |      All      | Give your job a unique name <br>**#PBS -N galaxies1234**</br>                                                                                                                                                                           |
-|  -ncpus   | Shared Memory | The number of processors to use for a shared memory job. <br>**#PBS ncpus=4**</br>                                                                                                                                                      |
-|    -r     |      All      | ontrol whether or not jobs should automatically re-run from the start if the system crashes or is rebooted. Users with check points might not wish this to happen. <br>**#PBS -r n**</br><br>**#PBS -r y**</br>                         |
-|  select   |   Clusters    | Number of compute nodes to use. Usually combined with the mpiprocs directive <br>**#PBS -l select=2**</br>                                                                                                                              |
-|    -V     |      All      | Make sure that the environment in which the job **runs** is the same as the environment in which it was **submitted <br> #PBS -V</br>**                                                                                                 |
-| Walltime  |      All      | The maximum time a job can run before being stopped. If not used a default of a few minutes is used. Use this flag to prevent jobs that go bad running for hundreds of hours. Format is HH:MM:SS <br>**#PBS -l walltime=12:00:00**</br> | 
+|  Option   |  System type  | Description                                                                                              | Jobscript comment                                 |
+|:---------:|:-------------:|:---------------------------------------------------------------------------------------------------------|:--------------------------------------------------|
+|    -k     |      All      | Send "stdout" and/or "stderr" to your home directory when the job runs                                   | **#PBS -k o** or **#PBS -k e** or **#PBS -koe**   |
+|    -l     |      All      | Precedes a resource request, e.g., processors, wallclock                                                 |                                                   |
+|    -M     |      All      | Send an e-mail message to an alternative e-mail address                                                  | **#PBS -M me@mymail.be**                          |
+|    -m     |      All      | Send an e-mail when a job begins execution, ends, or aborts                                              | **#PBS -m b** or **#PBS -m be** or **#PBS -m ba** |
+|    mem    | Shared Memory | Memory & Specifies the amount of memory you need for a job.                                              | **#PBS -I mem=90gb**                              |
+| mpiproces |   Clusters    | Number of processes per node on a cluster. This usually equals the number of processors on a node.       | **#PBS -l mpiprocs=4**                            |
+|    -N     |      All      | Give your job a unique name                                                                              | **#PBS -N galaxies1234**                          |
+|  -ncpus   | Shared Memory | The number of processors to use for a shared memory job.                                                 | **#PBS ncpus=4**                                  |
+|    -r     |      All      | Control whether or not jobs should automatically re-run from the start if the system crashes or reboots. | **#PBS -r n** or **#PBS -r y**                    |
+|  select   |   Clusters    | Number of compute nodes to use. Usually combined with the mpiprocs directive                             | **#PBS -l select=2**                              |
+|    -V     |      All      | Ensure that the environment in which the job runs is the same as the one in which it was submitted       | **#PBS -V**                                       |
+| Walltime  |      All      | Maximum time a job can run before being stopped. Format is HH:MM:SS                                      | **#PBS -l walltime=12:00:00**                     |
+
 
 ## Environment Variables in Batch Job Scripts
 
