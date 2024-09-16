@@ -378,6 +378,7 @@ def generate_software_detail_page(
     filename = f"{path}/{software_name}.md"
     md_file = MdUtils(file_name=filename, title=f"{software_name}")
 
+    md_file.new_line()
     md_file.write(get_custom_markdown_text(software_name, custom_text_folder))
 
     md_file.new_header(level=1, title="Available modules")
