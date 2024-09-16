@@ -278,8 +278,6 @@ what happens.
 
 
 ```
-$ module av example/
-example/1.2.3       example/4.5.6
 $ module load example/1.2.3  example/4.5.6
 Lmod has detected the following error: A different version of the 'example' module is already loaded (see output of 'ml').
 $ module swap example/4.5.6
@@ -403,11 +401,11 @@ To get a list of all modules a collection will load, you can use the
 
 ```
 $ module describe my-collection
-1) example/1.2.3                                        6) imkl/11.3.3.210-iimpi-2016b 
-2) GCCcore/5.4.0                                        7) intel/2016b 
-3) icc/2016.3.210-GCC-5.4.0-2.26                        8) examplelib/1.2-intel-2016b 
-4) ifort/2016.3.210-GCC-5.4.0-2.26                      9) secondexample/2.7-intel-2016b 
-5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26
+1) example/1.2.3                                        6) imkl/11.3.3.210-iimpi-2023a 
+2) GCCcore/5.4.0                                        7) intel/2023a 
+3) icc/2023.3.210-GCC-5.4.0-2.26                        8) examplelib/1.2-intel-2023a 
+4) ifort/2023.3.210-GCC-5.4.0-2.26                      9) secondexample/2.7-intel-2023a 
+5) impi/5.1.3.181-iccifort-2023.3.210-GCC-5.4.0-2.26
 ```
 
 To remove a collection, remove the corresponding file in
@@ -439,7 +437,7 @@ setuptools_scm-8.1.0, tomli-2.0.1, typing_extensions-4.11.0, wheel-0.43.0
 It's also possible to use the `ml show` command instead: they are
 equivalent.
 
-Here you can see that the `Python/2.7.12-intel-2016b` comes with some extensions: `pip`, `setuptools`, ...
+Here you can see that the `Python/3.12.3-intel-2023a` comes with some extensions: `pip`, `setuptools`, ...
 
 If you're not sure what all of this means: don't worry, you don't have to know; just load the module and try to use the software.
 
