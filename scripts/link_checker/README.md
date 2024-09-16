@@ -13,7 +13,7 @@ $ ./link_checker.sh /path/to/mkdocs/build > links.txt
 ```
 
 ```shell
-$ python link_checker.py [--whitelist <whitelist.txt>] [--timeout <timeout_in_seconds>] links.txt
+$ python link_checker.py [--whitelist <whitelist.txt>] links.txt
 ```
 
 The script will not check links that are in the whitelist file. The whitelist file should contain one link per line.
