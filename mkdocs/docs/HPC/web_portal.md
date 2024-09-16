@@ -34,7 +34,7 @@ Through this web portal, you can:
 
 More detailed information is available below, as well as in the [Open
 OnDemand
-documentation](https://osc.github.io/ood-documentation/master/). A
+documentation](https://osc.github.io/ood-documentation/latest/). A
 walkthrough video is available on YouTube
 [here](https://www.youtube.com/watch?v=4-w-4wjlnPk).
 
