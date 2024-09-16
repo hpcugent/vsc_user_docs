@@ -405,25 +405,19 @@ def generate_software_detail_page(
         f.write("---\nhide:\n  - toc\n---\n" + read_data)
 
 
-def get_custom_markdown_text(module_name: str, custom_text_folder) -> str:
+def get_custom_markdown_text(module_name: str, custom_text_folder: str) -> str:
     """
     Get the custom Markdown text that will be added to the detailed Markdown pages.
 
     @return: Custom Markdown text
     """
-    module_name_md = module_name + ".md"
-    module_name_md_lower = module_name.lower() + ".md"
+    custom_markdown_path = os.path.join(custom_text_folder, module_name + ".md")
 
-    if os.path.exists(module_name_md_lower):
-        file_name = module_name_md_lower
-
-    elif os.path.exists(module_name_md):
-        file_name = module_name_md
-
-    else:
+    if not os.path.exists(custom_markdown_path):
         return ""
 
-    custom_markdown_path = os.path.join(custom_text_folder, file_name)
+    print(f"Adding custom text for {module_name} located at {custom_markdown_path}")
+
     with open(custom_markdown_path, 'r') as f:
         return f.read()
 
