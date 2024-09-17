@@ -36,6 +36,7 @@ nav:
       - GPU clusters: gpu.md
       - Cron scripts: crontab.md
       - Teaching and training: teaching_training.md
+      - Available software: ./only/gent/available_software/index.md
   - Linux tutorial:
     - Introduction: linux-tutorial/index.md
     - Getting Started: linux-tutorial/getting_started.md
