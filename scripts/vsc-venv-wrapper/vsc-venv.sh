@@ -224,32 +224,41 @@ deactivate_() {
   module purge
 }
 
+help() {
+  usage
+}
+
+version() {
+  echo "$SCRIPT_NAME v${VERSION}"
+}
+
 # ============================ Main ============================
 
 SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}") # $0 cannot be used as it gives '-bash' when sourced
-VERSION="1.0.1"
-
-
-# This script must be sourced
-if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
-    echo_error "This script must be sourced! Check the usage with 'source $SCRIPT_NAME --help'"
-    exit 1
-fi
+VERSION="1.0.2"
 
 while [ $# -gt 0 ] ; do
   case $1 in
-    -a | --activate)      ACTION="activate" ;;
+    -h | --help)          ACTION="help" ;;
+    -v | --version)       ACTION="version";;
     -d | --deactivate)    ACTION="deactivate" ;;
+    -a | --activate)      ACTION="activate" ;;
     -r | --requirements)  REQUIREMENTS="$2" ;;
     -m | --modules)       MODULES="$2" ;;
-    -h | --help)          usage; return 0 ;;
-    -v | --version)       echo "$SCRIPT_NAME v${VERSION}"; return 0;;
   esac
   shift
 done
 
+# This script must be sourced for activating and deactivating the virtual environment
+if { [[ "$ACTION" == "activate" || "$ACTION" == "deactivate" ]] && [[ "${BASH_SOURCE[0]}" == "${0}" ]]; }; then
+    echo_error "This script must be sourced! Check the usage with 'source $SCRIPT_NAME --help'"
+    exit 1
+fi
+
 case "$ACTION" in
   activate)    activate "$REQUIREMENTS" "$MODULES";;
   deactivate)  deactivate_ ;;
+  help)        help ;;
+  version)     version ;;
   *)           usage ;;
 esac
