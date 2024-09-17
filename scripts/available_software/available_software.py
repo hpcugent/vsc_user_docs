@@ -78,7 +78,7 @@ def main():
     print("Done!")
     print("Generate detailed pages... ", end="", flush=True)
     detail_folder = os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/detail")
-    custom_text_folder = os.path.join(root_dir, "mkdocs/docs/HPC/gent/available_software/custom")
+    custom_text_folder = os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/custom")
     generated_time_yml = os.path.join(root_dir, "mkdocs/extra/gent.yml")  # yml containing time the data was generated
     generate_detail_pages(json_path, detail_folder, custom_text_folder, generated_time_yml)
     print("Done!")
