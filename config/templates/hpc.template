@@ -90,6 +90,7 @@ plugins:
   - exclude-search:
       exclude:
         - content/HPC/*
+        - available_software/custom/*
 
 
 markdown_extensions:
