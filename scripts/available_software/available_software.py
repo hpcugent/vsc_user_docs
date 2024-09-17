@@ -419,7 +419,7 @@ def get_custom_markdown_text(module_name: str, custom_text_folder: str) -> str:
     print(f"Adding custom text for {module_name} located at {custom_markdown_path}")
 
     with open(custom_markdown_path, 'r') as f:
-        return f.read()
+        return "\n" + f.read() + "\n"
 
 
 def generate_detail_pages(json_path, dest_path, custom_text_folder, generated_time_yml) -> None:
