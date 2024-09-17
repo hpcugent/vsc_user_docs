@@ -118,8 +118,7 @@ activate() {
   fi
 
   # === Warn user if they have modules loaded === #
-
-  loaded_modules=($(echo "$LOADEDMODULES" | tr ':' '\n' | grep -v -E '^(env|cluster)/')) # Remove env and cluster modules
+  loaded_modules=($(echo "$LOADEDMODULES" | tr ':' '\n' | grep -v -E '^(env|cluster|vsc-venv)/')) # Remove env, cluster and vsc-venv modules
   n_loaded_modules="${#loaded_modules[@]}"
   if [ "$n_loaded_modules" -gt 0 ]; then
     echo_warning "You have $n_loaded_modules loaded modules in the current shell. These modules will be purged."
@@ -235,7 +234,7 @@ version() {
 # ============================ Main ============================
 
 SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}") # $0 cannot be used as it gives '-bash' when sourced
-VERSION="1.0.2"
+VERSION="1.0.3"
 
 while [ $# -gt 0 ] ; do
   case $1 in
