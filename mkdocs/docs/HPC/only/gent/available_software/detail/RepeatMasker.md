@@ -14,11 +14,12 @@ The overview below shows which RepeatMasker installations are available per HPC-
 To start using RepeatMasker, load one of these modules using a `module load` command like:
 
 ```shell
-module load RepeatMasker/4.1.2-p1-foss-2020b
+module load RepeatMasker/4.1.7-foss-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RepeatMasker/4.1.7-foss-2023a|x|x|x|x|x|x|x|
 |RepeatMasker/4.1.2-p1-foss-2020b|x|x|x|x|x|-|x|

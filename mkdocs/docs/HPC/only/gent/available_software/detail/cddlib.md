@@ -21,4 +21,4 @@ module load cddlib/0.94m-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cddlib/0.94m-GCCcore-13.2.0|x|x|x|-|x|-|-|
+|cddlib/0.94m-GCCcore-13.2.0|x|x|x|x|x|x|x|
