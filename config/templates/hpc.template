@@ -7,6 +7,7 @@ repo_url: https://github.com/hpcugent/vsc_user_docs
 
 nav:
   - Welcome: index.md
+  - Available software: ./only/gent/available_software/index.md
   - Introduction to HPC: introduction.md
   - Getting Started: getting_started.md
   - Getting an HPC Account: account.md
@@ -36,7 +37,6 @@ nav:
       - GPU clusters: gpu.md
       - Cron scripts: crontab.md
       - Teaching and training: teaching_training.md
-      - Available software: ./only/gent/available_software/index.md
   - Linux tutorial:
     - Introduction: linux-tutorial/index.md
     - Getting Started: linux-tutorial/getting_started.md
