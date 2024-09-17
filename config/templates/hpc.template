@@ -7,7 +7,9 @@ repo_url: https://github.com/hpcugent/vsc_user_docs
 
 nav:
   - Welcome: index.md
+{%- if site == 'Gent' %}
   - Available software: ./only/gent/available_software/index.md
+{%- endif %}
   - Introduction to HPC: introduction.md
   - Getting Started: getting_started.md
   - Getting an HPC Account: account.md
