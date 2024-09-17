@@ -243,7 +243,7 @@ The `.o` file contains the output of the job.
 This avoids multiple issues with the default `venv` included in Python (`python -m venv`).
 
 
-One issue is that a virtual environment created for one cluster might not work on another. 
+For instance, a virtual environment created for one cluster might not work on another. 
 Additionally, when activating a virtual environment, 
 the same centrally installed modules used during its creation must also be loaded.
 The `vsc-venv` command manages multiple virtual environments for different clusters in a transparent way, 
@@ -254,11 +254,12 @@ while guaranteeing the same module environment.
 A virtual environment can be activated by running the following command:
 
 ```bash
-$ module load vsc-env
+$ module load vsc-venv
 $ source vsc-venv --activate --requirements requirements.txt [--modules modules.txt]
 ```
 
 Here, `requirements.txt` is the path to a file containing the Python dependencies to install in the virtual environment.
+For more information on the `requirements.txt` file, see the [pip documentation](https://pip.pypa.io/en/stable/reference/requirements-file-format/).
 The optional `--modules` option can be used to provide a `modules.txt` file that lists the modules to load before activating the virtual environment.
 
 Automatically, the modules are loaded and the environment is activated. 
@@ -286,13 +287,13 @@ The following files are present in the current directory:
 
 **modules.txt:**
 ```bash
-Python/3.12.3-GCCcore-13.3.0
-SciPy-bundle/2024.05-gfbf-2024a
+SciPy-bundle/2023.11-gfbf-2023b
+Pillow/10.2.0-GCCcore-13.2.0
 ```
 
 and **requirements.txt:**
 ```
-requests
+beautifulsoup4==4.12.3
 ```
 
 For more info on the `requirements.txt` file, 
@@ -301,19 +302,20 @@ see the [pip documentation](https://pip.pypa.io/en/stable/reference/requirements
 We run the following commands to enter the environment
 
 ```bash
-$ module load vsc-env
+$ module load vsc-venv
 $ source vsc-venv --activate --requirements requirements.txt --modules modules.txt
 ```
 
 As this creates the virtual environment for the first time, a `venvs` subdirectory is created in the current directory. 
 Within `venvs/`, an additional subdirectory is created for the virtual environment: `venv-RHEL8-zen2`.
 
-Now, Python 3.12 is loaded and both the `numpy` (provided by the `SciPy-bundle` module) and `requests` Python packages can be used.
+Now, Python 3.12 is loaded and the `numpy` (provided by the `SciPy-bundle` module), `PIL` (provided by the `Pillow` module),
+and `bs4` Python packages can be used.
 
 To deactivate the virtual environment, run:
 
 ```bash
-source vsc-venv --deactivate
+$ source vsc-venv --deactivate
 ```
 
 #### Making a virtual environment for another cluster
@@ -324,7 +326,7 @@ If we want to create a virtual environment for another cluster, say donphan, we 
 $ module swap cluster/donphan
 $ qsub -I
 $ cd my_project
-$ module load vsc-env
+$ module load vsc-venv
 $ source vsc-venv --activate --requirements requirements.txt --modules modules.txt
 ```
 
