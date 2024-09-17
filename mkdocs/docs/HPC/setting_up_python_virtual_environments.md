@@ -246,7 +246,7 @@ This avoids multiple issues with the default `venv` included in Python (`python 
 One issue is that a virtual environment created for one cluster might not work on another. 
 Additionally, when activating a virtual environment, 
 the same centrally installed modules used during its creation must also be loaded.
-the `vsc-venv` command manages multiple virtual environments for different clusters in a transparent way, 
+The `vsc-venv` command manages multiple virtual environments for different clusters in a transparent way, 
 while guaranteeing the same module environment.
 
 ### Usage
@@ -255,11 +255,11 @@ A virtual environment can be activated by running the following command:
 
 ```bash
 $ module load vsc-env
-$ source vsc-venv --activate --requirements <requirements> [--modules module_file]
+$ source vsc-venv --activate --requirements requirements.txt [--modules modules.txt]
 ```
 
-Here, `requirements` is the path to a file containing the python dependencies to install in the virtual environment.
-An optional `module_file` can be provided, which lists the modules to load before activating the virtual environment.
+Here, `requirements.txt` is the path to a file containing the Python dependencies to install in the virtual environment.
+The optional `--modules` option can be used to provide a `modules.txt` file that lists the modules to load before activating the virtual environment.
 
 Automatically, the modules are loaded and the environment is activated. 
 When running this command for the first time, the dependencies from the requirements file are installed.
@@ -316,15 +316,15 @@ To deactivate the virtual environment, run:
 source vsc-venv --deactivate
 ```
 
-#### making a virtual environment for another cluster
+#### Making a virtual environment for another cluster
 
 If we want to create a virtual environment for another cluster, say donphan, we can use `vsc-venv` in an interactive job:
 
 ```bash
 $ module swap cluster/donphan
-$ module load vsc-env
 $ qsub -I
 $ cd my_project
+$ module load vsc-env
 $ source vsc-venv --activate --requirements requirements.txt --modules modules.txt
 ```
 
