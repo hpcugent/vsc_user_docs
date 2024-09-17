@@ -227,7 +227,7 @@ deactivate_() {
 # ============================ Main ============================
 
 SCRIPT_NAME=${BASH_SOURCE[0]} # $0 cannot be used as it gives '-bash' when sourced
-VERSION="1.0"
+VERSION="1.0.0"
 
 
 # This script must be sourced
