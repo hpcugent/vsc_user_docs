@@ -401,7 +401,7 @@ You can get a list of all your saved collections with the
 
 ```
 $ module savelist
-Named collection list (For LMOD_SYSTEM_NAME = "CO7-sandybridge"):
+Named collection list (For LMOD_SYSTEM_NAME = "<OS>-<CPU-ARCHITECTURE>"):
   1) my-collection
 ```
 
