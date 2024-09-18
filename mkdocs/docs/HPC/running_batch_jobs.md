@@ -433,23 +433,33 @@ To see how a module would change the environment, you can use the
 `module show` command:
 
 ```
-$ ml show Python/3.12.3-GCCcore-13.3.0
+$ module show Python-bundle-PyPI/2024.06-GCCcore-13.3.0
 help([[
 Description
 ===========
-Python is a programming language that lets you work more quickly and integrate your systems more effectively.
+Bundle of Python packages from PyPI
 ...
 Included extensions
 ===================
-flit_core-3.9.0, packaging-24.0, pip-24.0, setuptools-70.0.0,
-setuptools_scm-8.1.0, tomli-2.0.1, typing_extensions-4.11.0, wheel-0.43.0
+alabaster-0.7.16, appdirs-1.4.4, asn1crypto-1.5.1, atomicwrites-1.4.1,
+...
+wcwidth-0.2.13, webencodings-0.5.1, xlrd-2.0.1, zipfile36-0.1.3, zipp-3.19.2
+]])
+...
+load("GCCcore/13.3.0")
+load("Python/3.12.3-GCCcore-13.3.0")
+load("cryptography/42.0.8-GCCcore-13.3.0")
+load("virtualenv/20.26.2-GCCcore-13.3.0")
 ...
 ```
 
-It's also possible to use the `ml show` command instead: they are
-equivalent.
+It's also possible to use the `ml show` command instead: they are equivalent.
 
-Here you can see that the `Python/3.12.3-intel-2023a` comes with some extensions: `pip`, `setuptools`, ...
+Here you can see that the `Python-bundle-PyPI/2024.06-GCCcore-13.3.0` comes with a lot of extensions: `alabaster`, `appdirs`, ...
+These are Python packages which can be used in your Python scripts.
+
+You can also see the modules the `Python-bundle-PyPI/2024.06-GCCcore-13.3.0` module
+loads: `GCCcore/13.3.0`, `Python/3.12.3-GCCcore-13.3.0`, ...
 
 If you're not sure what all of this means: don't worry, you don't have to know; just load the module and try to use the software.
 
