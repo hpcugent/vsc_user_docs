@@ -464,12 +464,12 @@ memory you request.
 ## Module conflicts
 
 Modules that are loaded together must use the same toolchain version or common dependencies. In the following
-example, we try to load a module that uses the `intel-2023a` toolchain
-together with one that uses the `intel-2022a` toolchain:
+example, we try to load a module that uses the `GCCcore-13.3.0` toolchain
+together with one that uses the `GCCcore-13.2.0` toolchain:
 
 ```bash
 $ module load Python/3.12.3-GCCcore-13.3.0
-$ module load  Pillow/8.0.1-GCCcore-10.2.0
+$ ml Pillow/10.2.0-GCCcore-13.2.0
 Lmod has detected the following error:  A different version of the 'GCCcore' module is already loaded (see output of 'ml').
 You should load another 'Pillow' module for that is compatible with the currently loaded version of 'GCCcore'.
 Use 'ml spider Pillow' to get an overview of the available versions.
@@ -477,11 +477,9 @@ Use 'ml spider Pillow' to get an overview of the available versions.
 
 If you don't understand the warning or error, contact the helpdesk at hpc@ugent.be 
 While processing the following module(s):
-    Module fullname              Module Filename
-    ---------------              ---------------
-    Pillow/8.0.1-GCCcore-10.2.0  /apps/gent/RHEL8/zen2-ib/modules/all/Pillow/8.0.1-GCCcore-10.2.0.lua
-
-
+    Module fullname               Module Filename
+    ---------------               ---------------
+    Pillow/10.2.0-GCCcore-13.2.0  /apps/gent/RHEL8/zen2-ib/modules/all/Pillow/10.2.0-GCCcore-13.2.0.lua
 ```
 
 This resulted in an error because we tried to load two modules with different
