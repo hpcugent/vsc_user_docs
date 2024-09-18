@@ -1,18 +1,9 @@
 # Getting Started
 
-## Logging in
-
 To get started with the HPC-UGent infrastructure, you need to obtain a
-VSC account, see [HPC manual](../account.md). **Keep in mind that you
-must keep your private key to yourself!**
+VSC account, see [HPC manual](../account.md). 
+Details on connecting to the HPC infrastructure are available in
 
-You can look at your public/private key pair as a lock and a key: you
-give us the lock (your public key), we put it on the door, and then you
-can use your key to open the door and get access to the HPC
-infrastructure. **Anyone who has your key can use your VSC account!**
-
-Details on connecting to the HPC infrastructure are available in [HPC
-manual connecting section](../connecting.md).
 
 ## Getting help
 
@@ -79,9 +70,7 @@ you want to rerun it with different arguments.
 
 ## Variables
 
-[//]: # (sec:environment-variables())
-
-At the prompt we also have access to shell variables, which have both a
+At the prompt we also have access to *shell variables*, which have both a
 *name* and a *value*.
 
 They can be thought of as placeholders for things we need to remember.
@@ -95,8 +84,6 @@ $ echo $HOME
 ```
 
 This prints the value of this variable.
-
-### Defining variables
 
 There are several variables already defined for you when you start your
 session, such as `$HOME` which contains the path to your
@@ -113,6 +100,12 @@ HOME=/user/home/gent/vsc400/vsc40000
 ... 
 ```
 
+!!! info
+    In Linux, the pipe operator (`|`) is used to pass output from one command as input to another. 
+    This is known as a pipeline. Here, `env | sort` will take the output of `env` and use it as the input for `sort`. 
+    This can be extremely useful for chaining together commands and processing data.
+
+
 You can also use the `grep` command to search for a piece of
 text. The following command will output all VSC-specific variable names
 and their values:
@@ -121,17 +114,20 @@ and their values:
 $ env | sort | grep VSC
 ```
 
-But we can also define our own. this is done with the
-`export` command (note: variables are always all-caps as a
-convention):
+### Defining variables
+
+
+It is also possible to define your own variables. This is done with the `export` command:
 
 ```
 $ export MYVARIABLE="value"
 ```
 
-It is important you don't include spaces around the `=`
-sign. Also note the lack of `$` sign in front of the
-variable name.
+
+!!! note
+    Notice the lack of the `$` sign and spaces around the `=` sign. 
+    By convention, variables should be all-caps.
+
 
 If we then do 
 ```
@@ -142,65 +138,12 @@ this will output `value`. Note that the quotes are not
 included, they were only used when defining the variable to escape
 potential spaces in the value.
 
-#### Changing your prompt using `$PS1`
-
-You can change what your prompt looks like by redefining the
-special-purpose variable `$PS1`.
-
-For example: to include the current location in your prompt:
-```
-$ export PS1='\w $'
-~ $ cd test 
-~/test $ 
-```
-
-Note that `~` is short representation of your home
-directory.
-
-To make this persistent across session, you can define this custom value
-for `$PS1` in your `.profile` startup script:
-```
-$ echo 'export PS1="\w $ " ' >> ~/.profile
-```
-
-### Using non-defined variables
-
-One common pitfall is the (accidental) use of non-defined variables.
-Contrary to what you may expect, this does *not* result in error
-messages, but the variable is considered to be *empty* instead.
-
-This may lead to surprising results, for example: 
-```
-$ export WORKDIR=/tmp/test 
-$ pwd
-/user/home/gent/vsc400/vsc40000 
-$ echo $HOME
-/user/home/gent/vsc400/vsc40000 
-```
-
-To understand what's going on here, see the section on `cd` below.
-
-The moral here is: **be very careful to not use empty variables
-unintentionally**.
-
-**Tip for job scripts: use `set -e -u` to avoid using empty variables
-accidentally.**
-
-The `-e` option will result in the script getting stopped if
-any command fails.
-
-The `-u` option will result in the script getting stopped if
-empty variables are used. (see <https://ss64.com/bash/set.html> for
-a more detailed explanation and more options)
-
-More information can be found at
-<http://www.tldp.org/LDP/abs/html/variables.html>.
-
 ### Restoring your default environment
 
-If you've made a mess of your environment, you shouldn't waste too
-much time trying to fix it. Just log out and log in again and you will
-be given a pristine environment.
+If you've made a mess of your environment, you shouldn't waste too much
+time trying to fix it. Just log out and log in again, and you will be
+given a pristine environment.
+
 
 ## Basic system information
 
@@ -225,10 +168,47 @@ Linux gligar01.gligar.os 2.6.32-573.8.1.el6.ug.x86_64 #1 SMP Mon Nov 16 15:12:09
 
 ## Exercises
 
-- Print the full path to your home directory
-- Determine the name of the environment variable to your personal scratch directory
-- What's the name of the system you\'re logged into? Is it the same for everyone?
-- Figure out how to print the value of a variable without including a newline
-- How do you get help on using the `man` command?
+??? abstract "Print the full path to your home directory"
+    ```bash
+    $ echo $HOME
+    ```
 
-Next [chapter](navigating.md) teaches you on how to navigate.
+??? abstract "Determine the name of the environment variable to your personal scratch directory"
+    ```bash
+    $ env | grep SCRATCH
+    ```
+
+??? abstract "What's the name of the system you're logged into? Is it the same for everyone?"
+    ```bash
+    $ hostname
+    ```
+    
+    Not everyone will be logged in to the same node, so the output will differ.
+
+??? abstract "Figure out how to print the value of a variable without including a newline"
+    
+    We can use the `man` command to find relevant information on the echo command with:
+
+    ```bash
+    $ man echo
+    ```
+
+    We find the following line in the manual:
+
+    ```
+    -n     do not output the trailing newline
+    ```
+    
+    So we can use the `-n` flag to suppress the newline:
+    
+    ```bash
+    $ echo -n $HOME
+    ```
+
+??? abstract "How do you get help on using the `man` command?"
+    
+    ```bash
+    $ man man
+    ```
+
+Next [chapter](navigating.md) teaches you how to navigate the filesystem.

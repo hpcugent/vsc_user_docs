@@ -18,7 +18,7 @@ scratch filesystems, which you can share with other members in the VO.
 Space is limited on the cluster's storage. To check your quota, see section
 [Pre-defined quota](../running_jobs_with_input_output_data.md#pre-defined-quotas).
 
-To figure out where your quota is being spent, the `du` (isk sage)
+To figure out where your quota is being spent, the `du` (**d**isk **u**sage)
 command can come in useful:
 ```
 $ du -sh test
@@ -30,7 +30,7 @@ data are stored, since that will:
 
 1.  take a long time
 
-2.  result in increased load on the shared storage since (the metadata
+2.  result in an increased load on the shared storage since (the metadata
     of) every file in those directories will have to be inspected.
 
 ## Modules
@@ -60,16 +60,69 @@ Detailed information is available in section
 
 ## Exercises
 
-Create and submit a job script that computes the sum of 1-100 using
-Python, and prints the numbers to a *unique* output file in
-`$VSC_SCRATCH`.
+??? abstract "Create and submit a job script that computes the sum of 1-100 using Python, and prints the result to the standard output."
+    
+    We make the following job script:
 
-Hint: `python -c "print(sum(range(1, 101)))"`
+    ```bash title="jobscript.pbs"
+    #!/bin/bash
+    
+    # Basic parameters
+    #PBS -N sum_1_to_100      ## Job name
+    #PBS -l nodes=1:ppn=1     ## 1 node, 1 processor per node
+    #PBS -l walltime=00:00:15 ## Max time your job will run (no more than 72:00:00)
+    
+    module load Python/3.10.4-GCCcore-11.3.0
+    
+    cd $PBS_O_WORKDIR         # Change working directory to the location where the job was submmitted
+    
+    python -c "print(sum(range(1, 101)))"
+    ```
 
--   How many modules are available for Python version 3.6.4?
--   How many modules get loaded when you load the `Python/3.6.4-intel-2018a` module?
--   Which `cluster` modules are available?
+    We optionally switch to a cluster of choice, for example `skitty`:
 
--   What's the full path to your personal home/data/scratch directories?
--   Determine how large your personal directories are.
--   What's the difference between the size reported by `du -sh $HOME` and by `ls -ld $HOME`?
+    ```bashand prints the numbers to a *unique* output file in `$VSC_SCRATCH`.
+    $ module swap cluster/skitty
+    ```
+
+    We submit the job script:
+
+    ```bash
+    $ qsub jobscript.pbs
+    ```
+
+    after some time, two files (`sum_1_to_100.e[JOBID]` and `sum_1_to_100.o[JOBID]`) should appear.
+    The first one contains the error output, and is empty in this case. 
+    The second one contains the output of the Python command.
+
+
+??? abstract "How many modules are available for Python version 3.10?"
+        
+    We can use the `module avail` command to list all available modules.
+    To filter the list for Python 3.10, we can use `module avail Python/3.10`.
+
+    ```bash
+    $ module avail Python/3.10
+    ```
+
+??? abstract "How many modules get loaded when you load the `Python/3.10.4-GCCcore-11.3.0` module?"
+    
+    We can use the `module load` command to load the Python module.
+    After loading the module, we can use the `module list` command to list all loaded modules.
+    
+    ```bash
+    $ module load Python/3.10.4-GCCcore-11.3.0
+    $ module list
+    ```
+    
+    These are the modules the python module depends on.
+
+
+??? abstract "Which `cluster` modules are available?"
+    
+    We can use the `module avail` command to list all available modules.
+    To filter the list for modules with the name `cluster`, we can use `module avail cluster`.
+
+    ```bash
+    $ module avail cluster
+    ```

@@ -72,56 +72,42 @@ directories as files.
 
 ## Removing files: "rm"
 
-Note: there are NO backups, there is no 'trash bin'. If you
-remove files/directories, they are gone.
 ```
-$ rm filename
+rm filename
 ```
-`rm` will remove a file or directory. (`rm -rf directory` will remove
-every file inside a given directory). WARNING: files removed will be
-lost forever, there are no backups, so beware when using this command!
+`rm` will remove a file or directory. (`rm -rf <directory>` will remove every file inside a given directory).
 
-#### Removing a directory: "rmdir"
+!!! danger
+    There are NO backups, there is no 'trash bin'. If you remove files/directories, they are gone.
 
-You can remove directories using `rm -r directory`, however, this is
-error-prone and can ruin your day if you make a mistake in typing. To
-prevent this type of error, you can remove the contents of a directory
-using `rm` and then finally removing the directory with:
+
+## Permissions
+
+Each file and directory has particular *permissions* set on it, which
+can be queried using `ls -l`.
+
+For example:
+
 ```
-$ rmdir directory
+$ ls -l afile.txt
+-rwxrw-r-- 1 vsc40000 agroup 2929176 Apr 12 13:29 afile.sh
 ```
+
+Here, the output `-rwxrw-r--` indicates the permissions of the file. It can be broken down into 4 parts:
+
+| type                               | permissions user              | permissions group     | permissions others |
+|------------------------------------|-------------------------------|-----------------------|--------------------|
+| `-`: is a file (`d` for directory) | `rwx`: can read/write/execute | `rw-`: can read/write | `r--`: can read    |
+
+In this example, the file `afile.sh` is a regular file, and the owner `vsc40000` has read/write/execute permissions, 
+users in the group `agroup` have read/write permissions, 
+and all others only have read permissions.
+
+The default permission settings for new files/directories are determined
+by the so-called *umask* setting, and are by default `rw-rw-r--` for files and `rwxrwxr-x` for directories.
+
 ## Changing permissions: "chmod"
 
-[//]: # (#sec:chmod)
-
-Every file, directory, and link has a set of permissions. These
-permissions consist of permission groups and permission types. The
-permission groups are:
-
-1.  User - a particular user (account)
-
-2.  Group - a particular group of users (may be user-specific group with
-    only one member)
-
-3.  Other - other users in the system
-
-The permission types are:
-
-1.  Read - For files, this gives permission to read the contents of a
-    file
-
-2.  Write - For files, this gives permission to write data to the file.
-    For directories, it allows users to add or remove files to a
-    directory.
-
-3.  Execute - For files this gives permission to execute a file as
-    through it were a script. For directories, it allows users to open
-    the directory and look at the contents.
-
-Any time you run `ls -l` you'll see a familiar line of `-rwx------` or
-similar combination of the letters `r`, `w`, `x` and `-` (dashes). These
-are the permissions for the file or directory. (See also the 
-[previous section on permissions](navigating.md#permissions))
 ```
 $ ls -l
 total 1
@@ -129,21 +115,7 @@ total 1
 drwxr-x---. 2 vsc40000 mygroup 40 Apr 12 15:00 Project_GoldenDragon
 ```
 
-Here, we see that `articleTable.csv` is a file (beginning the line with
-`-`) has read and write permission for the user `vsc40000` (`rw-`), and read
-permission for the group `mygroup` as well as all other users (`r--` and
-`r--`).
-
-The next entry is `Project_GoldenDragon`. We see it is a directory
-because the line begins with a `d`. It also has read, write, and execute
-permission for the `vsc40000` user (`rwx`). So that user can look into the
-directory and add or remove files. Users in the `mygroup` can also look
-into the directory and read the files. But they can't add or remove
-files (`r-x`). Finally, other users can read files in the directory, but
-other users have no permissions to look in the directory at all (`---`).
-
-Maybe we have a colleague who wants to be able to add files to the
-directory. We use `chmod` to change the modifiers to the directory to
+We use `chmod` to change the modifiers to the directory to
 let people in the group write to the directory:
 ```
 $ chmod g+w Project_GoldenDragon
@@ -205,13 +177,14 @@ $ ls -lh myfile.gz
 -rw-r--r--. 1 vsc40000 vsc40000 1.1M Dec 2 11:14 myfile.gz
 ```
 
-Note: if you zip a file, the original file will be removed. If you unzip
-a file, the compressed file will be removed. To keep both, we send the
-data to `stdout` and redirect it to the target file:
-```
-$ gzip -c myfile > myfile.gz
-$ gunzip -c myfile.gz > myfile
-```
+!!! note 
+    If you zip a file, the original file will be removed. If you unzip
+    a file, the compressed file will be removed. To keep both, we send the
+    data to `stdout` and redirect it to the target file:
+    ```
+    $ gzip -c myfile > myfile.gz
+    $ gunzip -c myfile.gz > myfile
+    ```
 
 ### "zip" and "unzip"
 
@@ -272,26 +245,54 @@ $ tar -c source1 source2 source3 -f tarfile.tar
 
 ## Exercises
 
-1.  Create a subdirectory in your home directory named `test` containing
-    a single, empty file named `one.txt`.
 
-2.  Copy `/etc/hostname` into the `test` directory and then check what's
-    in it. Rename the file to `hostname.txt`.
+??? abstract "Create a subdirectory in your home directory named `test` containing a single, empty file named `one.txt`."
+    ```bash
+    mkdir ~/test
+    touch ~/test/one.txt
+    ```
 
-3.  Make a new directory named `another` and copy the entire `test`
-    directory to it. `another/test/one.txt` should then be an empty
-    file.
+??? abstract "Copy `/etc/hostname` into the `test` directory and then check what's in it. Rename the file to `hostname.txt`."
+    ```bash
+    cp /etc/hostname ~/test/
+    cat ~/test/hostname
+    mv ~/test/hostname ~/test/hostname.txt
+    ```
 
-4.  Remove the `another/test` directory with a single command.
+??? abstract "Make a new directory named `another` and copy the entire `test` directory to it. `another/test/one.txt` should then be an empty file."
+    ```bash
+    mkdir ~/another
+    cp -r ~/test ~/another/
+    ```
 
-5.  Rename `test` to `test2`. Move `test2/hostname.txt` to your home
-    directory.
+??? abstract "Remove the `another/test` directory with a single command."
+    ```bash
+    rm -r ~/another/test
+    ```
 
-6.  Change the permission of `test2` so only you can access it.
+??? abstract "Rename `test` to `test2`. Move `test2/hostname.txt` to your home directory."
+    ```bash
+    mv ~/test ~/test2
+    mv ~/test2/hostname.txt ~/
+    ```
 
-7.  Create an empty job script named `job.sh`, and make it executable.
+??? abstract "Change the permission of `test2` so only you can access it."
+    ```bash
+    chmod u+rwx ~/test2  # Add read, write, and execute permissions for the user (owner)
+    chmod go-rwx ~/test2  # Remove read, write, and execute permissions for the group and others
+    ```
 
-8.  gzip `hostname.txt`, see how much smaller it becomes, then unzip it
-    again.
+??? abstract "Create an empty job script named `job.sh`, and make it executable."
+    ```bash
+    touch ~/job.sh
+    chmod +x ~/job.sh
+    ```
+
+??? abstract "gzip `hostname.txt`, see how much smaller it becomes, then unzip it again."
+    ```bash
+    gzip ~/hostname.txt
+    ls -lh ~/hostname.txt.gz
+    gunzip ~/hostname.txt.gz
+    ```
 
 The next [chapter](uploading_files.md) is on uploading files, especially important when using HPC-infrastructure.

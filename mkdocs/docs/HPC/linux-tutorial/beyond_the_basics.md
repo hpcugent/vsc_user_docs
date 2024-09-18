@@ -89,7 +89,7 @@ For example, to see the number of files in a directory, we can pipe the
 count the number of lines with the `-l` flag).
 ```
 $ ls | wc -l
-    42
+42
 ```
 
 A common pattern is to pipe the output of a command to `less` so you
@@ -561,25 +561,45 @@ overwrite any pragmas present in the script.
 
 ## Exercises
 
-1.  Create a file that contains this message: "Hello, I am &lt;user&gt;",
-    where `<user>` is replaced by your username. Don't cheat by using an
-    editor, use a command to create the file.
 
-2.  Use another command to add this line to the same file: "I am on
-    system &lt;hostname&gt; in directory &lt;current&nbsp;directory&gt;". Words
-    between `<>` should be replaced with their value (hint: use
-    environment variables).
+??? abstract "Create a file `hello.txt` that contains this message: 'Hello, I am [user]'"
+    ```bash
+    echo "Hello, I am $USER" > hello.txt
+    ```
 
-3.  How many files and directories are in `/tmp`?
+??? abstract "Use another command to add this line to the same file: 'I am on system [hostname] in directory [current directory]'"
+    ```bash
+    echo "I am on system $(hostname) in directory $(pwd)" >> hello.txt
+    ```
 
-4.  What's the name of the 5th file/directory in alphabetical order in
-    `/tmp`?
+??? abstract "How many files and directories are in /tmp?"
+    ```bash
+    ls /tmp | wc -l
+    ```
 
-5.  List all files that start with `t` in `/tmp`.
+??? abstract "What's the name of the 5th file/directory in alphabetical order in /tmp?"
+    ```bash
+    ls /tmp | sort | head -5 | tail -1
+    ```
 
-6.  Create a file containing "My home directory &lt;home&gt; is available
-    using $HOME". `<home>` should be replaced with your home directory,
-    but `$HOME` should remain as-is.
+??? abstract "List all files that start with 't' in /tmp."
+    ```bash
+    ls /tmp/t*
+    ```
 
-7.  How many processes are you currently running? How many are you
-    allowed to run? Where are they coming from?
+??? abstract "Create a file containing 'My home directory [home] is available using $HOME'."
+    ```bash
+    echo "My home directory $HOME is available using \$HOME" > home_info.txt
+    ```
+
+??? abstract "How many processes are you currently running? How many are you allowed to run? Where are they coming from?"
+    ```bash
+    echo "Number of processes currently running:"
+    ps -u $USER | wc -l
+
+    echo "Maximum number of processes allowed:"
+    ulimit -u
+
+    echo "Processes currently running:"
+    ps -u $USER
+    ```
