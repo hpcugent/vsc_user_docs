@@ -172,12 +172,16 @@ stated above, you will get the following:
 
 ```
 $ module list
-Currently Loaded Modulefiles: 
-1) example/1.2.3                                        6) imkl/11.3.3.210-iimpi-2023a
-2) GCCcore/5.4.0                                        7) intel/2023a
-3) icc/2023.3.210-GCC-5.4.0-2.26                        8) examplelib/1.2-intel-2023a
-4) ifort/2023.3.210-GCC-5.4.0-2.26                      9) secondexample/4.5.6-intel-2023a
-5) impi/5.1.3.181-iccifort-2023.3.210-GCC-5.4.0-2.26
+Currently Loaded Modules:
+  1) env/vsc/<cluster>              (S)   7) binutils/2.40-GCCcore-12.3.0            13) iimpi/2023a
+  2) env/slurm/<cluster>            (S)   8) intel-compilers/2023.1.0                14) imkl-FFTW/2023.1.0-iimpi-2023a
+  3) env/software/<cluster>         (S)   9) numactl/2.0.16-GCCcore-12.3.0           15) intel/2023a
+  4) cluster/<cluster>              (S)  10) UCX/1.14.1-GCCcore-12.3.0               16) secondexample/4.5.6-intel-2023a
+  5) GCCcore/12.3.0                      11) impi/2021.9.0-intel-compilers-2023.1.0  17) example/1.2.3
+  6) zlib/1.2.13-GCCcore-12.3.0          12) imkl/2023.1.0
+
+  Where:
+   S:  Module is Sticky, requires --force to unload or purge
 ```
 
 You can also just use the `ml` command without arguments to list loaded modules.
@@ -196,20 +200,25 @@ To unload a module, one can use the `module unload` command. It works
 consistently with the `load` command, and reverses the latter's effect.
 However, the dependencies of the package are NOT automatically unloaded;
 you will have to unload the packages one by one. When the
-`secondexample` module is unloaded, only the following modules remain:
+`example` module is unloaded, only the following modules remain:
 
 ```
-$ module unload secondexample
+$ module unload example
 $ module list
-Currently Loaded Modulefiles: 
-1) example/1.2.3                        5) impi/5.1.3.181-iccifort-2023.3.210-GCC-5.4.0-2.26 
-2) GCCcore/5.4.0                        6) imkl/11.3.3.210-iimpi-2023a
-3) icc/2023.3.210-GCC-5.4.0-2.26        7) intel/2023a
-4) ifort/2023.3.210-GCC-5.4.0-2.26      8) examplelib/4.5.6-intel-2023a
+Currently Loaded Modules:
+  1) env/vsc/<cluster>              (S)   7) binutils/2.40-GCCcore-12.3.0            13) iimpi/2023a
+  2) env/slurm/<cluster>            (S)   8) intel-compilers/2023.1.0                14) imkl-FFTW/2023.1.0-iimpi-2023a
+  3) env/software/<cluster>         (S)   9) numactl/2.0.16-GCCcore-12.3.0           15) intel/2023a
+  4) cluster/<cluster>              (S)  10) UCX/1.14.1-GCCcore-12.3.0               16) secondexample/4.5.6-intel-2023a
+  5) GCCcore/12.3.0                      11) impi/2021.9.0-intel-compilers-2023.1.0
+  6) zlib/1.2.13-GCCcore-12.3.0          12) imkl/2023.1.0
+
+  Where:
+   S:  Module is Sticky, requires --force to unload or purge
 ```
 
-To unload the `secondexample` module, you can also use
-`ml -secondexample`.
+To unload the `example` module, you can also use
+`ml -example`.
 
 Notice that the version was not specified: there can only be one version
 of a module loaded at a time, so unloading modules by name is not
