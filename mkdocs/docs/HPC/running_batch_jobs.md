@@ -410,15 +410,18 @@ To get a list of all modules a collection will load, you can use the
 
 ```
 $ module describe my-collection
-1) example/1.2.3                                        6) imkl/11.3.3.210-iimpi-2023a 
-2) GCCcore/5.4.0                                        7) intel/2023a 
-3) icc/2023.3.210-GCC-5.4.0-2.26                        8) examplelib/1.2-intel-2023a 
-4) ifort/2023.3.210-GCC-5.4.0-2.26                      9) secondexample/2.7-intel-2023a 
-5) impi/5.1.3.181-iccifort-2023.3.210-GCC-5.4.0-2.26
+Currently Loaded Modules:
+  1) env/vsc/<cluster>              (S)   7) binutils/2.40-GCCcore-12.3.0            13) iimpi/2023a
+  2) env/slurm/<cluster>            (S)   8) intel-compilers/2023.1.0                14) imkl-FFTW/2023.1.0-iimpi-2023a
+  3) env/software/<cluster>         (S)   9) numactl/2.0.16-GCCcore-12.3.0           15) intel/2023a
+  4) cluster/<cluster>              (S)  10) UCX/1.14.1-GCCcore-12.3.0               16) secondexample/4.5.6-intel-2023a
+  5) GCCcore/12.3.0                      11) impi/2021.9.0-intel-compilers-2023.1.0  17) example/1.2.3
+  6) zlib/1.2.13-GCCcore-12.3.0          12) imkl/2023.1.0
+
 ```
 
 To remove a collection, remove the corresponding file in
-`$HOME/.lmod.d`:
+`$HOME/.lmod.d/`:
 
 ```
 rm $HOME/.lmod.d/my-collection
