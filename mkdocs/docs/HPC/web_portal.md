@@ -259,7 +259,7 @@ button if the desktop session is *Running*:
 
 ![image](img/ood_desktop_running.png)
 
-You can also relaunch a desktop session that has ended by clicking the icon on the top-right of the desktop session box:
+It is also possible relaunch a desktop session that has ended by clicking the icon on the top-right of the desktop session box:
 
 ![image](img/ood_relaunch_desktop_session.png)
 
