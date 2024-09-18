@@ -74,19 +74,12 @@ modules. To get an overview of the available modules, run
 ```
 $ module avail OpenFOAM
 
-------------------------------- /apps/gent/RHEL8/cascadelake-ib/modules/all --------------------------------
-   OpenFOAM-Extend/4.0-intel-2019b-Python-2.7.16                 OpenFOAM/2.3.1-intel-2019b
-   OpenFOAM-Extend/4.1-20191120-intel-2019b-Python-2.7.16        OpenFOAM/5.0-20180606-foss-2019b
-   OpenFOAM-Extend/4.1-20200408-foss-2019b-Python-2.7.16         OpenFOAM/6-foss-2019b
-   OpenFOAM-Extend/4.1-20210705-foss-2023a-Python-2.7.18  (D)    OpenFOAM/7-foss-2019b
-   OpenFOAM/v1906-foss-2019b                                     OpenFOAM/7-foss-2019b-20200508
-   OpenFOAM/v1912-foss-2019b                                     OpenFOAM/8-foss-2020a
-   OpenFOAM/v2006-foss-2020a                                     OpenFOAM/8-foss-2020b
-   OpenFOAM/v2012-foss-2020a                                     OpenFOAM/9-foss-2021a
-   OpenFOAM/v2106-foss-2021a                                     OpenFOAM/9-intel-2021a
-   OpenFOAM/v2112-foss-2021b                                     OpenFOAM/10-foss-2022a
-   OpenFOAM/v2206-foss-2022a                                     OpenFOAM/10-foss-2023a
-   OpenFOAM/v2312-foss-2023a                                     OpenFOAM/11-foss-2023a           (D)
+-------------------- /apps/gent/RHEL9/zen4-ib/modules/all ---------------------
+   OpenFOAM-Extend/4.1-20210705-foss-2023a-Python-2.7.18
+   OpenFOAM/v2312-foss-2023a
+   OpenFOAM/10-foss-2023a
+   OpenFOAM/11-foss-2023a
+   OpenFOAM/12-foss-2023a                                (D)
 
   Where:
    D:  Default Module
