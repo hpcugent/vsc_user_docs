@@ -14,6 +14,9 @@ nav:
   - Running batch jobs: running_batch_jobs.md
   - Running interactive jobs: running_interactive_jobs.md
   - Running jobs with input/output data: running_jobs_with_input_output_data.md
+{%- if site == 'Gent' %}
+  - Available software: ./only/gent/available_software/index.md
+{%- endif %}
   - Multi core jobs/Parallel Computing: multi_core_jobs.md
   - Using the HPC-UGent web portal: web_portal.md
 {%- if site == 'Gent' %}
