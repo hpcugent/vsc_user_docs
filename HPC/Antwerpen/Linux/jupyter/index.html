@@ -1100,32 +1100,20 @@
 <h2 id="using-jupyter-notebooks-on-the-hpc">Using Jupyter Notebooks on the HPC<a class="headerlink" href="#using-jupyter-notebooks-on-the-hpc" title="Permanent link">#</a></h2>
 <h3 id="launching-a-notebook-using-the-web-portal">Launching a notebook using the web portal<a class="headerlink" href="#launching-a-notebook-using-the-web-portal" title="Permanent link">#</a></h3>
 <p>Through the <a href="../web_portal/">HPC-UGent web portal</a> you can easily start a Jupyter notebook on a workernode, via the <em>Jupyter Notebook</em> button under the <em>Interactive Apps</em> menu item.</p>
-<p><center>
-<img alt="image" src="../img/ood_start_jupyter.png" />
-</center></p>
+<p><img alt="image" src="../img/ood_start_jupyter.png" /></p>
 <p>After starting the Jupyter notebook using the <em>Launch</em> button, you will see it being added in state <em>Queued</em> in the overview of interactive sessions (see <em>My Interactive Sessions</em> menu item):</p>
-<p><center>
-<img alt="image" src="../img/ood_jupyter_queued.png" />
-</center></p>
+<p><img alt="image" src="../img/ood_jupyter_queued.png" /></p>
 <p>When your job hosting the Jupyter notebook starts running, the status will first change the <em>Starting</em>:</p>
-<p><center>
-<img alt="image" src="../img/ood_jupyter_starting.png" />
-</center></p>
+<p><img alt="image" src="../img/ood_jupyter_starting.png" /></p>
 <p>and eventually the status will change to <em>Running</em>, and you will be able to connect to the Jupyter environment using the blue <em>Connect to Jupyter</em> button:</p>
-<p><center>
-<img alt="image" src="../img/ood_jupyter_running.png" />
-</center></p>
+<p><img alt="image" src="../img/ood_jupyter_running.png" /></p>
 <p>This will launch the Jupyter environment in a new browser tab, where you can open an existing notebook by navigating to the directory where it is located and clicking it. You can also create a new notebook by clicking on <code>File</code>&gt;<code>New</code>&gt;<code>Notebook</code>:</p>
-<p><center>
-<img alt="image" src="../img/ood_jupyter_new_notebook.png" />
-</center></p>
+<p><img alt="image" src="../img/ood_jupyter_new_notebook.png" /></p>
 <h3 id="using-extra-python-packages">Using extra Python packages<a class="headerlink" href="#using-extra-python-packages" title="Permanent link">#</a></h3>
 <p>A number of Python packages are readily available in modules on the HPC. To illustrate how to use them in a Jupyter notebook, we will make use of an example where we want to use numpy in our notebook.
 The first thing we need to do is finding the modules that contain our package of choice. For numpy, this would be the <code>SciPy-bundle</code> modules.</p>
 <p>To find the appropriate modules, it is recommended to use the shell within the web portal under <code>Clusters</code>&gt;<code>&gt;_login Shell Access</code>.</p>
-<p><center>
-<img alt="image" src="../img/ood_open_shell.png" />
-</center></p>
+<p><img alt="image" src="../img/ood_open_shell.png" /></p>
 <p>We can see all available versions of the SciPy module by using <code>module avail SciPy-bundle</code>:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>module<span class="w"> </span>avail<span class="w"> </span>SciPy-bundle
 
@@ -1138,9 +1126,7 @@ The first thing we need to do is finding the modules that contain our package of
 ...
 </code></pre></div>
 <p>Not all modules will work for every notebook, we need to use the one that uses the same toolchain as the notebook we want to launch. To find that toolchain, we can look at the <code>JupyterNotebook version</code> field when creating a notebook. In our example <code>7.2.0</code> is the version of the notebook and <code>GCCcore/13.2.0</code> is the toolchain used.</p>
-<p><center>
-<img alt="image" src="../img/ood_jupyter_version.png" />
-</center></p>
+<p><img alt="image" src="../img/ood_jupyter_version.png" /></p>
 <p>Module names include the toolchain that was used to install the module (for example <code>gfbf-2023b</code> in <code>SciPy-bundle/2023.11-gfbf-2023b</code> means that that module uses the toolchain <code>gfbf/2023</code>). To see which modules are compatible with each other, you can check the table on the <a href="../troubleshooting/#module-conflicts">page about Module conflicts</a>. Another way to find out which <code>GCCcore</code> subtoolchain goes with the particular toolchain of the module (such as <code>gfbf/2023b</code>) is to use <code>module show</code>. In particular using <code>module show &lt;toolchain of the module&gt; | grep GCC</code> (before the module has been loaded) will return this <code>GCCcore</code> version.</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>module<span class="w"> </span>show<span class="w"> </span>gfbf/2023b<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>GCC
 GNU<span class="w"> </span>Compiler<span class="w"> </span>Collection<span class="w"> </span><span class="o">(</span>GCC<span class="o">)</span><span class="w"> </span>based<span class="w"> </span>compiler<span class="w"> </span>toolchain,<span class="w"> </span>including
@@ -1162,9 +1148,7 @@ $<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </sp
 Lmod<span class="w"> </span>has<span class="w"> </span>detected<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>error:<span class="w">  </span>...
 </code></pre></div>
 <p>Now that we found the right module for the notebook, add <code>module load &lt;module_name&gt;</code> in the <code>Custom code</code> field when creating a notebook and you can make use of the packages within that notebook.</p>
-<p><center>
-<img alt="image" src="../img/ood_jupyter_custom_code.png" />
-</center></p>
+<p><img alt="image" src="../img/ood_jupyter_custom_code.png" /></p>
 
 
 

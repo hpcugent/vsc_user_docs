@@ -1290,68 +1290,81 @@
 <th align="center">Option</th>
 <th align="center">System type</th>
 <th align="left">Description</th>
+<th align="left">Jobscript comment</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="center">-k</td>
 <td align="center">All</td>
-<td align="left">Send "stdout" and/or "stderr" to your home directory when the job runs <br> <strong>#PBS -k o</strong> or <strong>#PBS -k e</strong> or <strong>#PBS -koe</strong></br></td>
+<td align="left">Send "stdout" and/or "stderr" to your home directory when the job runs</td>
+<td align="left"><strong>#PBS -k o</strong> or <strong>#PBS -k e</strong> or <strong>#PBS -koe</strong></td>
 </tr>
 <tr>
 <td align="center">-l</td>
 <td align="center">All</td>
 <td align="left">Precedes a resource request, e.g., processors, wallclock</td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="center">-M</td>
 <td align="center">All</td>
-<td align="left">Send an e-mail messages to an alternative e-mail address <br> <strong>#PBS -M me@mymail.be</strong></br></td>
+<td align="left">Send an e-mail message to an alternative e-mail address</td>
+<td align="left"><strong>#PBS -M me@mymail.be</strong></td>
 </tr>
 <tr>
 <td align="center">-m</td>
 <td align="center">All</td>
-<td align="left">Send an e-mail address when a job <strong>b</strong>egins execution and/or <strong>e</strong>nds or <strong>a</strong>borts <br> <strong>#PBS -m b</strong> or <strong>#PBS -m be</strong> or <strong>#PBS -m ba</strong></td>
+<td align="left">Send an e-mail when a job begins execution, ends, or aborts</td>
+<td align="left"><strong>#PBS -m b</strong> or <strong>#PBS -m be</strong> or <strong>#PBS -m ba</strong></td>
 </tr>
 <tr>
 <td align="center">mem</td>
 <td align="center">Shared Memory</td>
-<td align="left">Memory &amp; Specifies the amount of memory you need for a job. <br><strong>#PBS -I mem=90gb</strong></td>
+<td align="left">Memory &amp; Specifies the amount of memory you need for a job.</td>
+<td align="left"><strong>#PBS -I mem=90gb</strong></td>
 </tr>
 <tr>
 <td align="center">mpiproces</td>
 <td align="center">Clusters</td>
-<td align="left">Number of processes per node on a cluster. This should equal number of processors on a node in most cases. <br> <strong>#PBS -l mpiprocs=4</strong></td>
+<td align="left">Number of processes per node on a cluster. This usually equals the number of processors on a node.</td>
+<td align="left"><strong>#PBS -l mpiprocs=4</strong></td>
 </tr>
 <tr>
 <td align="center">-N</td>
 <td align="center">All</td>
-<td align="left">Give your job a unique name <br><strong>#PBS -N galaxies1234</strong></br></td>
+<td align="left">Give your job a unique name</td>
+<td align="left"><strong>#PBS -N galaxies1234</strong></td>
 </tr>
 <tr>
 <td align="center">-ncpus</td>
 <td align="center">Shared Memory</td>
-<td align="left">The number of processors to use for a shared memory job. <br><strong>#PBS ncpus=4</strong></br></td>
+<td align="left">The number of processors to use for a shared memory job.</td>
+<td align="left"><strong>#PBS ncpus=4</strong></td>
 </tr>
 <tr>
 <td align="center">-r</td>
 <td align="center">All</td>
-<td align="left">ontrol whether or not jobs should automatically re-run from the start if the system crashes or is rebooted. Users with check points might not wish this to happen. <br><strong>#PBS -r n</strong></br><br><strong>#PBS -r y</strong></br></td>
+<td align="left">Control whether or not jobs should automatically re-run from the start if the system crashes or reboots.</td>
+<td align="left"><strong>#PBS -r n</strong> or <strong>#PBS -r y</strong></td>
 </tr>
 <tr>
 <td align="center">select</td>
 <td align="center">Clusters</td>
-<td align="left">Number of compute nodes to use. Usually combined with the mpiprocs directive <br><strong>#PBS -l select=2</strong></br></td>
+<td align="left">Number of compute nodes to use. Usually combined with the mpiprocs directive</td>
+<td align="left"><strong>#PBS -l select=2</strong></td>
 </tr>
 <tr>
 <td align="center">-V</td>
 <td align="center">All</td>
-<td align="left">Make sure that the environment in which the job <strong>runs</strong> is the same as the environment in which it was <strong>submitted <br> #PBS -V</br></strong></td>
+<td align="left">Ensure that the environment in which the job runs is the same as the one in which it was submitted</td>
+<td align="left"><strong>#PBS -V</strong></td>
 </tr>
 <tr>
 <td align="center">Walltime</td>
 <td align="center">All</td>
-<td align="left">The maximum time a job can run before being stopped. If not used a default of a few minutes is used. Use this flag to prevent jobs that go bad running for hundreds of hours. Format is HH:MM:SS <br><strong>#PBS -l walltime=12:00:00</strong></br></td>
+<td align="left">Maximum time a job can run before being stopped. Format is HH:MM:SS</td>
+<td align="left"><strong>#PBS -l walltime=12:00:00</strong></td>
 </tr>
 </tbody>
 </table>
