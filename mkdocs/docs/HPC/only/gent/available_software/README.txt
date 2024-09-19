@@ -10,3 +10,5 @@ and the following manually created directories:
 - `javascript/`: contains the javascript that is used to generate the overview table.
 
 For more info on the purpose of these directories, see the README at scripts/available_software/README.md
+
+(this is a txt as to not be included in the mkdocs build)
