@@ -1585,7 +1585,7 @@ toolchains are refreshed twice a year, which is reflected in their name.</p>
 <p>The toolchains are then used to compile a lot of the software installed
 on the VSC clusters. You can recognise those packages easily as they all
 contain the name of the toolchain after the version number in their name
-(e.g., <code>Python/2.7.12-intel-2016b</code>). Only packages compiled with the
+(e.g., <code>Python/3.12.3-GCCcore-13.3.0</code>). Only packages compiled with the
 same toolchain name and version can work together without conflicts.</p>
 <h3 id="loading-and-unloading-modules">Loading and unloading modules<a class="headerlink" href="#loading-and-unloading-modules" title="Permanent link">#</a></h3>
 <h4 id="module-load">module load<a class="headerlink" href="#module-load" title="Permanent link">#</a></h4>
@@ -1599,13 +1599,13 @@ will automatically choose the default version (if it was set by the
 system administrators) or the most recent version otherwise (i.e., the
 lexicographical last after the <code>/</code>).</p>
 <p>**However, you should specify a particular version to avoid surprises when newer versions are installed:</p>
-<div class="highlight"><pre><span></span><code>module load secondexample/2.7-intel-2016b
+<div class="highlight"><pre><span></span><code>module load secondexample/4.5.6-intel-2023a
 </code></pre></div>
 <p>The <code>ml</code> command is a shorthand for <code>module load</code>: <code>ml example/1.2.3</code> is
 equivalent to <code>module load example/1.2.3</code>.</p>
 <p>Modules need not be loaded one by one; the two <code>module load</code> commands
 can be combined as follows:</p>
-<div class="highlight"><pre><span></span><code>module load example/1.2.3 secondexample/2.7-intel-2016b
+<div class="highlight"><pre><span></span><code>module load example/1.2.3 secondexample/4.5.6-intel-2023a
 </code></pre></div>
 <p>This will load the two modules as well as their dependencies (unless
 there are conflicts between both modules).</p>
@@ -1614,19 +1614,23 @@ there are conflicts between both modules).</p>
 currently loaded. Assuming you have run the <code>module load</code> commands
 stated above, you will get the following:</p>
 <div class="highlight"><pre><span></span><code>$ module list
-Currently Loaded Modulefiles: 
-1) example/1.2.3                                        6) imkl/11.3.3.210-iimpi-2016b 
-2) GCCcore/5.4.0                                        7) intel/2016b 
-3) icc/2016.3.210-GCC-5.4.0-2.26                        8) examplelib/1.2-intel-2016b 
-4) ifort/2016.3.210-GCC-5.4.0-2.26                      9) secondexample/2.7-intel-2016b 
-5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26
+Currently Loaded Modules:
+  1) env/vsc/&lt;cluster&gt;              (S)   7) binutils/2.40-GCCcore-12.3.0            13) iimpi/2023a
+  2) env/slurm/&lt;cluster&gt;            (S)   8) intel-compilers/2023.1.0                14) imkl-FFTW/2023.1.0-iimpi-2023a
+  3) env/software/&lt;cluster&gt;         (S)   9) numactl/2.0.16-GCCcore-12.3.0           15) intel/2023a
+  4) cluster/&lt;cluster&gt;              (S)  10) UCX/1.14.1-GCCcore-12.3.0               16) secondexample/4.5.6-intel-2023a
+  5) GCCcore/12.3.0                      11) impi/2021.9.0-intel-compilers-2023.1.0  17) example/1.2.3
+  6) zlib/1.2.13-GCCcore-12.3.0          12) imkl/2023.1.0
+
+  Where:
+   S:  Module is Sticky, requires --force to unload or purge
 </code></pre></div>
 <p>You can also just use the <code>ml</code> command without arguments to list loaded modules.</p>
 <p>It is important to note at this point that other modules (e.g.,
-<code>intel/2016b</code>) are also listed, although the user did not explicitly
-load them. This is because <code>secondexample/2.7-intel-2016b</code> depends on it
+<code>intel/2023a</code>) are also listed, although the user did not explicitly
+load them. This is because <code>secondexample/4.5.6-intel-2023a</code> depends on it
 (as indicated in its name), and the system administrator specified that
-the <code>intel/2016b</code> module should be loaded whenever <em>this</em>
+the <code>intel/2023a</code> module should be loaded whenever <em>this</em>
 <code>secondexample</code> module is loaded. There are advantages and disadvantages
 to this, so be aware of automatically loaded modules whenever things go wrong: they may have something to do with it!</p>
 <h4 id="module-unload">module unload<a class="headerlink" href="#module-unload" title="Permanent link">#</a></h4>
@@ -1634,18 +1638,22 @@ to this, so be aware of automatically loaded modules whenever things go wrong: t
 consistently with the <code>load</code> command, and reverses the latter's effect.
 However, the dependencies of the package are NOT automatically unloaded;
 you will have to unload the packages one by one. When the
-<code>secondexample</code> module is unloaded, only the following modules remain:</p>
-<div class="highlight"><pre><span></span><code>$ module unload secondexample
+<code>example</code> module is unloaded, only the following modules remain:</p>
+<div class="highlight"><pre><span></span><code>$ module unload example
 $ module list
-Currently Loaded Modulefiles: 
-Currently Loaded Modulefiles: 
-1) example/1.2.3                        5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26 
-2) GCCcore/5.4.0                        6) imkl/11.3.3.210-iimpi-2016b 
-3) icc/2016.3.210-GCC-5.4.0-2.26        7) intel/2016b 
-4) ifort/2016.3.210-GCC-5.4.0-2.26      8) examplelib/1.2-intel-2016b
+Currently Loaded Modules:
+  1) env/vsc/&lt;cluster&gt;              (S)   7) binutils/2.40-GCCcore-12.3.0            13) iimpi/2023a
+  2) env/slurm/&lt;cluster&gt;            (S)   8) intel-compilers/2023.1.0                14) imkl-FFTW/2023.1.0-iimpi-2023a
+  3) env/software/&lt;cluster&gt;         (S)   9) numactl/2.0.16-GCCcore-12.3.0           15) intel/2023a
+  4) cluster/&lt;cluster&gt;              (S)  10) UCX/1.14.1-GCCcore-12.3.0               16) secondexample/4.5.6-intel-2023a
+  5) GCCcore/12.3.0                      11) impi/2021.9.0-intel-compilers-2023.1.0
+  6) zlib/1.2.13-GCCcore-12.3.0          12) imkl/2023.1.0
+
+  Where:
+   S:  Module is Sticky, requires --force to unload or purge
 </code></pre></div>
-<p>To unload the <code>secondexample</code> module, you can also use
-<code>ml -secondexample</code>.</p>
+<p>To unload the <code>example</code> module, you can also use
+<code>ml -example</code>.</p>
 <p>Notice that the version was not specified: there can only be one version
 of a module loaded at a time, so unloading modules by name is not
 ambiguous. However, checking the list of currently loaded modules is
@@ -1686,9 +1694,7 @@ example/4.5.6
 </code></pre></div>
 <p>Let's now generate a version conflict with the <code>example</code> module, and see
 what happens.</p>
-<div class="highlight"><pre><span></span><code>$ module av example/
-example/1.2.3       example/4.5.6
-$ module load example/1.2.3  example/4.5.6
+<div class="highlight"><pre><span></span><code>$ module load example/1.2.3  example/4.5.6
 Lmod has detected the following error: A different version of the &#39;example&#39; module is already loaded (see output of &#39;ml&#39;).
 $ module swap example/4.5.6
 </code></pre></div>
@@ -1747,7 +1753,7 @@ you need with a single command.</p>
 <p>In each <code>module</code> command shown below, you can replace <code>module</code> with
 <code>ml</code>.</p>
 <p>First, load all modules you want to include in the collections:</p>
-<div class="highlight"><pre><span></span><code>module load example/1.2.3 secondexample/2.7-intel-2016b
+<div class="highlight"><pre><span></span><code>module load example/1.2.3 secondexample/4.5.6-intel-2023a
 </code></pre></div>
 <p>Now store it in a collection using <code>module save</code>. In this example, the
 collection is named <code>my-collection</code>.</p>
@@ -1760,40 +1766,51 @@ these modules with <code>module restore</code>:</p>
 <p>You can get a list of all your saved collections with the
 <code>module savelist</code> command:</p>
 <div class="highlight"><pre><span></span><code>$ module savelist
-Named collection list (For LMOD_SYSTEM_NAME = &quot;CO7-sandybridge&quot;):
+Named collection list (For LMOD_SYSTEM_NAME = &quot;&lt;OS&gt;-&lt;CPU-ARCHITECTURE&gt;&quot;):
   1) my-collection
 </code></pre></div>
 <p>To get a list of all modules a collection will load, you can use the
 <code>module describe</code> command:</p>
 <div class="highlight"><pre><span></span><code>$ module describe my-collection
-1) example/1.2.3                                        6) imkl/11.3.3.210-iimpi-2016b 
-2) GCCcore/5.4.0                                        7) intel/2016b 
-3) icc/2016.3.210-GCC-5.4.0-2.26                        8) examplelib/1.2-intel-2016b 
-4) ifort/2016.3.210-GCC-5.4.0-2.26                      9) secondexample/2.7-intel-2016b 
-5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26
+Currently Loaded Modules:
+  1) env/vsc/&lt;cluster&gt;              (S)   7) binutils/2.40-GCCcore-12.3.0            13) iimpi/2023a
+  2) env/slurm/&lt;cluster&gt;            (S)   8) intel-compilers/2023.1.0                14) imkl-FFTW/2023.1.0-iimpi-2023a
+  3) env/software/&lt;cluster&gt;         (S)   9) numactl/2.0.16-GCCcore-12.3.0           15) intel/2023a
+  4) cluster/&lt;cluster&gt;              (S)  10) UCX/1.14.1-GCCcore-12.3.0               16) secondexample/4.5.6-intel-2023a
+  5) GCCcore/12.3.0                      11) impi/2021.9.0-intel-compilers-2023.1.0  17) example/1.2.3
+  6) zlib/1.2.13-GCCcore-12.3.0          12) imkl/2023.1.0
 </code></pre></div>
 <p>To remove a collection, remove the corresponding file in
-<code>$HOME/.lmod.d</code>:</p>
+<code>$HOME/.lmod.d/</code>:</p>
 <div class="highlight"><pre><span></span><code>rm $HOME/.lmod.d/my-collection
 </code></pre></div>
 <h3 id="getting-module-details">Getting module details<a class="headerlink" href="#getting-module-details" title="Permanent link">#</a></h3>
 <p>To see how a module would change the environment, you can use the
 <code>module show</code> command:</p>
-<div class="highlight"><pre><span></span><code>$ module show Python/2.7.12-intel-2016b
-whatis(&quot;Description: Python is a programming language that lets youwork more quickly and integrate your systems more effectively. - Homepage: http://python.org/ &quot;) 
-conflict(&quot;Python&quot;)
-load(&quot;intel/2016b&quot;) 
-load(&quot;bzip2/1.0.6-intel-2016b&quot;) 
+<div class="highlight"><pre><span></span><code>$ module show Python-bundle-PyPI/2024.06-GCCcore-13.3.0
+help([[
+Description
+===========
+Bundle of Python packages from PyPI
 ...
-prepend_path(...)
-setenv(&quot;EBEXTSLISTPYTHON&quot;,&quot;setuptools-23.1.0,pip-8.1.2,nose-1.3.7,numpy-1.11.1,scipy-0.17.1,ytz-2016.4&quot;, ...)
+Included extensions
+===================
+alabaster-0.7.16, appdirs-1.4.4, asn1crypto-1.5.1, atomicwrites-1.4.1,
+...
+wcwidth-0.2.13, webencodings-0.5.1, xlrd-2.0.1, zipfile36-0.1.3, zipp-3.19.2
+]])
+...
+load(&quot;GCCcore/13.3.0&quot;)
+load(&quot;Python/3.12.3-GCCcore-13.3.0&quot;)
+load(&quot;cryptography/42.0.8-GCCcore-13.3.0&quot;)
+load(&quot;virtualenv/20.26.2-GCCcore-13.3.0&quot;)
+...
 </code></pre></div>
-<p>It's also possible to use the <code>ml show</code> command instead: they are
-equivalent.</p>
-<p>Here you can see that the <code>Python/2.7.12-intel-2016b</code> comes with a whole
-bunch of extensions: <code>numpy</code>, <code>scipy</code>, ...</p>
-<p>You can also see the modules the <code>Python/2.7.12-intel-2016b</code> module
-loads: <code>intel/2016b</code>, <code>bzip2/1.0.6-intel-2016b</code>, ...</p>
+<p>It's also possible to use the <code>ml show</code> command instead: they are equivalent.</p>
+<p>Here you can see that the <code>Python-bundle-PyPI/2024.06-GCCcore-13.3.0</code> comes with a lot of extensions: <code>alabaster</code>, <code>appdirs</code>, ...
+These are Python packages which can be used in your Python scripts.</p>
+<p>You can also see the modules the <code>Python-bundle-PyPI/2024.06-GCCcore-13.3.0</code> module
+loads: <code>GCCcore/13.3.0</code>, <code>Python/3.12.3-GCCcore-13.3.0</code>, ...</p>
 <p>If you're not sure what all of this means: don't worry, you don't have to know; just load the module and try to use the software.</p>
 <h2 id="getting-system-information-about-the-hpc-infrastructure">Getting system information about the HPC infrastructure<a class="headerlink" href="#getting-system-information-about-the-hpc-infrastructure" title="Permanent link">#</a></h2>
 <h3 id="checking-the-general-status-of-the-hpc-infrastructure">Checking the general status of the HPC infrastructure<a class="headerlink" href="#checking-the-general-status-of-the-hpc-infrastructure" title="Permanent link">#</a></h3>
