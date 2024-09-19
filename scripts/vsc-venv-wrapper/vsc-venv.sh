@@ -1,5 +1,5 @@
 SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}") # $0 cannot be used as it gives '-bash' when sourced
-VERSION="1.0.5"
+VERSION="1.0.6"
 
 usage() {
   echo "Usage: source $SCRIPT_NAME {-a | --activate -r | --requirements <requirements.txt> [-m | --modules <modules.txt>]} | {-d | --deactivate} [-h | --help] [-v | --version]"
@@ -78,6 +78,17 @@ is_loaded_cluster_compatible_with_host() {
   fi
 }
 
+module_purge_keep_vsc_venv() {
+  vsc_venv_module=$(echo "$LOADEDMODULES" | tr ':' '\n' | grep ^vsc-venv/)
+
+  echo_info "Purging currently loaded modules."
+  module purge
+
+  if [ ! -z ${vsc_venv_module} ]; then
+      module load ${vsc_venv_module}
+  fi
+}
+
 
 # ============================ Main functions ============================
 
@@ -126,7 +137,7 @@ activate() {
     echo_warning "If you want to use these modules, please provide a modules file listing the required modules using the --modules or -m flag."
 
     echo_info "Purging currently loaded modules."
-    module purge
+    module_purge_keep_vsc_venv
   fi
 
   # === Load Modules if module script present === #
@@ -221,7 +232,7 @@ deactivate_() {
   echo_info "Deactivating virtual environment at $VIRTUAL_ENV"
   deactivate # For now, just use the python `deactivate`
   echo_info "Purging loaded modules"
-  module purge
+  module_purge_keep_vsc_venv
 }
 
 unknown_action() {
