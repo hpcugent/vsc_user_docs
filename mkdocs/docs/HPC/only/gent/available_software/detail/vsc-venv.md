@@ -14,11 +14,11 @@ The overview below shows which vsc-venv installations are available per HPC-UGen
 To start using vsc-venv, load one of these modules using a `module load` command like:
 
 ```shell
-module load vsc-venv/1.0.0
+module load vsc-venv/1.0.4
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|vsc-venv/1.0.0|x|x|x|x|x|x|x|
+|vsc-venv/1.0.4|-|-|x|-|-|-|-|
