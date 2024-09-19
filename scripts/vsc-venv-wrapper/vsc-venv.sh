@@ -1,5 +1,5 @@
 SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}") # $0 cannot be used as it gives '-bash' when sourced
-VERSION="1.0.4"
+VERSION="1.0.5"
 
 usage() {
   echo "Usage: source $SCRIPT_NAME {-a | --activate -r | --requirements <requirements.txt> [-m | --modules <modules.txt>]} | {-d | --deactivate} [-h | --help] [-v | --version]"
@@ -224,6 +224,12 @@ deactivate_() {
   module purge
 }
 
+unknown_action() {
+  echo_error "Unknown action"
+  usage
+  return 1
+}
+
 help() {
   usage
   return 0
@@ -231,6 +237,7 @@ help() {
 
 version() {
   echo "$SCRIPT_NAME v${VERSION}"
+  return 0
 }
 
 # ============================ Main ============================
@@ -261,5 +268,5 @@ case "$ACTION" in
   deactivate)  deactivate_ ;;
   help)        help ;;
   version)     version ;;
-  *)           usage; echo -e "\nERROR: unknown action" >&2; return 1 ;;
+  *)           unknown_action ;;
 esac
