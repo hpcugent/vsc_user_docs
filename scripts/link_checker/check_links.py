@@ -36,9 +36,9 @@ def read_url_file(filename: str, whitelist: set[str]) -> tuple[list[str], list[s
     """
     Read a file containing URLs to check. The file should contain one URL per line.
 
-    :param filename:
-    :param whitelist:
-    :return:
+    :param filename: The file to read
+    :param whitelist: A set of URLs to ignore
+    :return: A tuple containing a list of paths and a list of URLs
     """
     paths, urls = [], []
     with open(filename, 'r') as file:
