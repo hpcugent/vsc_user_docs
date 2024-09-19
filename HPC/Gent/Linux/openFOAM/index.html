@@ -1508,10 +1508,6 @@ available, each with its own versioning scheme:</p>
 <li>see also <a href="https://openfoam.org/download/history/">https://openfoam.org/download/history/</a></li>
 </ul>
 </li>
-<li>
-<p>OpenFOAM versions released via
-    <a href="http://wikki.gridcore.se/foam-extend">http://wikki.gridcore.se/foam-extend</a>: <code>v3.1</code></p>
-</li>
 </ul>
 <p>Make sure you know which flavor of OpenFOAM you want to use, since there
 are important differences between the different versions w.r.t.
@@ -1530,9 +1526,6 @@ more general information on using OpenFOAM, please refer to:</p>
 </li>
 <li>
 <p><a href="https://openfoam.org">https://openfoam.org</a></p>
-</li>
-<li>
-<p><a href="http://wikki.gridcore.se/foam-extend">http://wikki.gridcore.se/foam-extend</a></p>
 </li>
 </ul>
 </li>
@@ -1561,12 +1554,7 @@ more general information on using OpenFOAM, please refer to:</p>
 </ul>
 <p>Other useful OpenFOAM documentation:</p>
 <ul>
-<li>
-<p><a href="https://github.com/ParticulateFlow/OSCCAR-doc/blob/master/openFoamUserManual_PFM.pdf">https://github.com/ParticulateFlow/OSCCAR-doc/blob/master/openFoamUserManual_PFM.pdf</a></p>
-</li>
-<li>
-<p><a href="http://www.dicat.unige.it/guerrero/openfoam.html">http://www.dicat.unige.it/guerrero/openfoam.html</a></p>
-</li>
+<li><a href="https://github.com/ParticulateFlow/OSCCAR-doc/blob/master/openFoamUserManual_PFM.pdf">https://github.com/ParticulateFlow/OSCCAR-doc/blob/master/openFoamUserManual_PFM.pdf</a></li>
 </ul>
 <h2 id="preparing-the-environment">Preparing the environment<a class="headerlink" href="#preparing-the-environment" title="Permanent link">#</a></h2>
 <p>To prepare the environment of your shell session or job for using
@@ -1747,8 +1735,7 @@ by minimising the number of processor boundaries.</p>
 lot of (small) files are generated during an OpenFOAM simulation. Shared
 filesystems are typically optimised for dealing with (a small number of)
 large files, and are usually a poor match for workloads that involve a
-(very) large number of small files (see also
-<a href="http://www.prace-ri.eu/IMG/pdf/IO-profiling_with_Darshan-2.pdf">http://www.prace-ri.eu/IMG/pdf/IO-profiling_with_Darshan-2.pdf</a>).</p>
+(very) large number of small files.</p>
 <p>Take into account the following guidelines for your OpenFOAM jobs, which
 all relate to input parameters for the OpenFOAM simulation that you can
 specify in <code>system/controlDict</code> (see also
