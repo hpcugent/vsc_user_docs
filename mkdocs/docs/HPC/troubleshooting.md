@@ -469,7 +469,7 @@ together with one that uses the `GCCcore-13.2.0` toolchain:
 
 ```bash
 $ module load Python/3.12.3-GCCcore-13.3.0
-$ ml Pillow/10.2.0-GCCcore-13.2.0
+$ module load Pillow/10.2.0-GCCcore-13.2.0
 Lmod has detected the following error:  A different version of the 'GCCcore' module is already loaded (see output of 'ml').
 You should load another 'Pillow' module for that is compatible with the currently loaded version of 'GCCcore'.
 Use 'ml spider Pillow' to get an overview of the available versions.
