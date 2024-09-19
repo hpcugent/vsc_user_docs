@@ -237,6 +237,8 @@ version() {
 # ============================ Main ============================
 
 ACTION="UNKNOWN"
+MODULES=""
+REQUIREMENTS=""
 while [ $# -gt 0 ] ; do
   case $1 in
     -a | --activate)      ACTION="activate" ;;
