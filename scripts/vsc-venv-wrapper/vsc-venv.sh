@@ -1,5 +1,5 @@
 SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}") # $0 cannot be used as it gives '-bash' when sourced
-VERSION="1.0.3"
+VERSION="1.0.4"
 
 usage() {
   echo "Usage: source $SCRIPT_NAME {-a | --activate -r | --requirements <requirements.txt> [-m | --modules <modules.txt>]} | {-d | --deactivate} [-h | --help] [-v | --version]"
@@ -18,7 +18,6 @@ usage() {
   echo "  $ source $SCRIPT_NAME --activate --requirements requirements.txt --modules modules.txt"
   echo "  $ python my_script.py"
   echo "  $ source $SCRIPT_NAME --deactivate"
-  return 1
 }
 
 
@@ -228,6 +227,7 @@ deactivate_() {
 
 help() {
   usage
+  return 0
 }
 
 version() {
@@ -236,6 +236,7 @@ version() {
 
 # ============================ Main ============================
 
+ACTION="UNKNOWN"
 while [ $# -gt 0 ] ; do
   case $1 in
     -a | --activate)      ACTION="activate" ;;
@@ -259,5 +260,5 @@ case "$ACTION" in
   deactivate)  deactivate_ ;;
   help)        help ;;
   version)     version ;;
-  *)           usage ;;
+  *)           usage; echo -e "\nERROR: unknown action" >&2; return 1 ;;
 esac
