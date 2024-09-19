@@ -1,0 +1,21 @@
+name: HTML tag detection
+
+on: [push, pull_request]
+
+jobs:
+  html-check:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Check if no HTML tags are present in markdown files located at mkdocs/docs/HPC/
+        run: |
+          # -n: show line number
+          # -H: show filename
+          # -o: show only the matching part of the line
+          if grep -nHo '</[^>]*>' mkdocs/docs/HPC/*.md; then
+            exit 1
+          else
+            echo "No HTML tags detected in Markdown files."
+          fi
