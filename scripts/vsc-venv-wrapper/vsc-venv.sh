@@ -1,3 +1,6 @@
+SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}") # $0 cannot be used as it gives '-bash' when sourced
+VERSION="1.0.3"
+
 usage() {
   echo "Usage: source $SCRIPT_NAME {-a | --activate -r | --requirements <requirements.txt> [-m | --modules <modules.txt>]} | {-d | --deactivate} [-h | --help] [-v | --version]"
   echo ""
@@ -233,17 +236,14 @@ version() {
 
 # ============================ Main ============================
 
-SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}") # $0 cannot be used as it gives '-bash' when sourced
-VERSION="1.0.3"
-
 while [ $# -gt 0 ] ; do
   case $1 in
-    -h | --help)          ACTION="help" ;;
-    -v | --version)       ACTION="version";;
-    -d | --deactivate)    ACTION="deactivate" ;;
     -a | --activate)      ACTION="activate" ;;
-    -r | --requirements)  REQUIREMENTS="$2" ;;
+    -d | --deactivate)    ACTION="deactivate" ;;
+    -h | --help)          ACTION="help" ;;
     -m | --modules)       MODULES="$2" ;;
+    -r | --requirements)  REQUIREMENTS="$2" ;;
+    -v | --version)       ACTION="version";;
   esac
   shift
 done
