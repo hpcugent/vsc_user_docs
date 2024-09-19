@@ -9,11 +9,11 @@ The Python script will output all links that return a status code other than 200
 ## Usage
 
 ```shell
-$ ./link_checker.sh /path/to/mkdocs/build > links.txt
+$ ./generate_links_from_build.sh /path/to/mkdocs/build > links.txt
 ```
 
 ```shell
-$ python link_checker.py [--whitelist <whitelist.txt>] links.txt
+$ python check_links.py [--whitelist <whitelist.txt>] links.txt
 ```
 
 The script will not check links that are in the whitelist file. The whitelist file should contain one link per line.
