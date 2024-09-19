@@ -73,15 +73,16 @@ modules. To get an overview of the available modules, run
 
 ```
 $ module avail OpenFOAM
------------------- /apps/gent/CO7/sandybridge/modules/all ------------------
-   OpenFOAM/v1712-foss-2017b     OpenFOAM/4.1-intel-2017a
-   OpenFOAM/v1712-intel-2017b    OpenFOAM/5.0-intel-2017a
-   OpenFOAM/2.2.2-intel-2017a    OpenFOAM/5.0-intel-2017b
-   OpenFOAM/2.2.2-intel-2018a    OpenFOAM/5.0-20180108-foss-2018a
-   OpenFOAM/2.3.1-intel-2017a    OpenFOAM/5.0-20180108-intel-2017b
-   OpenFOAM/2.4.0-intel-2017a    OpenFOAM/5.0-20180108-intel-2018a
-   OpenFOAM/3.0.1-intel-2016b    OpenFOAM/6-intel-2018a            (D)
-   OpenFOAM/4.0-intel-2016b
+
+-------------------- /apps/gent/RHEL9/zen4-ib/modules/all ---------------------
+   OpenFOAM-Extend/4.1-20210705-foss-2023a-Python-2.7.18
+   OpenFOAM/v2312-foss-2023a
+   OpenFOAM/10-foss-2023a
+   OpenFOAM/11-foss-2023a
+   OpenFOAM/12-foss-2023a                                (D)
+
+  Where:
+   D:  Default Module
 ```
 
 To pick a module, take into account the differences between the

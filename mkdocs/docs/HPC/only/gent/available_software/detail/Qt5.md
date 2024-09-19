@@ -14,13 +14,14 @@ The overview below shows which Qt5 installations are available per HPC-UGent Tie
 To start using Qt5, load one of these modules using a `module load` command like:
 
 ```shell
-module load Qt5/5.15.10-GCCcore-12.3.0
+module load Qt5/5.15.13-GCCcore-13.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Qt5/5.15.13-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Qt5/5.15.10-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |Qt5/5.15.7-GCCcore-12.2.0|x|x|x|x|x|-|x|
 |Qt5/5.15.5-GCCcore-11.3.0|x|x|x|x|x|-|x|

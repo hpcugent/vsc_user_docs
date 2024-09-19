@@ -16,7 +16,7 @@ For more general information about the use of Apptainer, please see the
 official documentation at <https://apptainer.org/docs/>.
 
 This documentation only covers aspects of using Apptainer on the
-{{hpcinfra}} infrastructure.
+{{hpcinfra}}.
 
 ## Restrictions on image location
 
@@ -46,26 +46,20 @@ filesystems, and they will be accessible via the familiar `$VSC_HOME`,
 
 ### Creating Apptainer/Singularity images
 
-Creating new Apptainer/Singularity images or converting Docker images,
-by default, requires admin privileges, which is obviously not available
-on the {{hpcinfra}} infrastructure. However, if you use the `--fakeroot` option, you
-can make new Apptainer/Singularity images or convert Docker images.
-
-Due to the nature of `--fakeroot` option, we recommend to write your
-Apptainer/Singularity image to a globally writable location, like
-`/tmp`, or `/local` directories. Once the image is created, you should
-move it to your desired destination. An example to make an
-Apptainer/Singularity container image:
+We recommend writing your Apptainer/Singularity image to a globally writable location, 
+like `/tmp`, or `/local` directories. 
+Once the image is created, you should move it to your desired destination. 
+An example to make an Apptainer/Singularity container image:
 
 ```shell
 # avoid that Apptainer uses $HOME/.cache
 export APPTAINER_CACHEDIR=/tmp/$USER/apptainer/cache
-# instruct Apptainer to use temp dir on local filessytem
+# instruct Apptainer to use temp dir on local filesystem
 export APPTAINER_TMPDIR=/tmp/$USER/apptainer/tmpdir
 # specified temp dir must exist, so create it
 mkdir -p $APPTAINER_TMPDIR
 # convert Docker container to Apptainer container image
-apptainer build --fakeroot /tmp/$USER/tf.sif docker://nvcr.io/nvidia/tensorflow:21.10-tf1-py3
+apptainer build /tmp/$USER/tf.sif docker://nvcr.io/nvidia/tensorflow:21.10-tf1-py3
 # mv container image to $VSC_SCRATCH
 mv /tmp/$USER/tf.sif $VSC_SCRATCH/tf.sif
 ```
@@ -114,7 +108,7 @@ factor 1234567
 ## Tensorflow example
 
 We already have a Tensorflow example image, but you can also convert the
-Docker image (see <https://hub.docker.com/r/tensorflow/tensorflow>) to a
+Docker image (see <https://hub.docker.com/r/tensorflow/tensorflow>) to an
 Apptainer/Singularity image yourself
 
 Copy testing image from `/apps/gent/tutorials` to `$VSC_SCRATCH`:

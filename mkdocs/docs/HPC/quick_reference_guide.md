@@ -44,9 +44,9 @@ your own.
 
 
 
-| **Worker Framework**                    |                                                                                                                                   |
-|-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| Load worker module                      | `module load worker/1.6.12-foss-2021b`  Don't forget to specify a version. To list available versions, use `module avail worker/` |
-| Submit parameter sweep                  | `wsub -batch weather.pbs -data data.csv`                                                                                          |
-| Submit job array                        | `wsub -t 1-100 -batch test_set.pbs`                                                                                               |
-| Submit job array with prolog and epilog | `wsub -prolog pre.sh -batch test_set.pbs -epilog post.sh -t 1-100`                                                                |
+| **Worker Framework**                    |                                                                                                                                    |
+|-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| Load worker module                      | `module load worker/1.6.13-iimpi-2023a`  Don't forget to specify a version. To list available versions, use `module avail worker/` |
+| Submit parameter sweep                  | `wsub -batch weather.pbs -data data.csv`                                                                                           |
+| Submit job array                        | `wsub -t 1-100 -batch test_set.pbs`                                                                                                |
+| Submit job array with prolog and epilog | `wsub -prolog pre.sh -batch test_set.pbs -epilog post.sh -t 1-100`                                                                 |

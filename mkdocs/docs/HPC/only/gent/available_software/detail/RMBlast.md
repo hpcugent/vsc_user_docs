@@ -14,11 +14,12 @@ The overview below shows which RMBlast installations are available per HPC-UGent
 To start using RMBlast, load one of these modules using a `module load` command like:
 
 ```shell
-module load RMBlast/2.11.0-gompi-2020b
+module load RMBlast/2.14.1-gompi-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RMBlast/2.14.1-gompi-2023a|x|x|x|x|x|x|x|
 |RMBlast/2.11.0-gompi-2020b|x|x|x|x|x|-|x|

@@ -464,30 +464,30 @@ memory you request.
 ## Module conflicts
 
 Modules that are loaded together must use the same toolchain version or common dependencies. In the following
-example, we try to load a module that uses the `intel-2018a` toolchain
-together with one that uses the `intel-2017a` toolchain:
+example, we try to load a module that uses the `GCCcore-13.3.0` toolchain
+together with one that uses the `GCCcore-13.2.0` toolchain:
 
 ```bash
-$ module load Python/2.7.14-intel-2018a
-$ module load  HMMER/3.1b2-intel-2017a
-Lmod has detected the following error: A different version of the 'intel' module is already loaded (see output of 'ml'). 
-You should load another 'HMMER' module for that is compatible with the currently loaded version of 'intel'. 
-Use 'ml avail HMMER' to get an overview of the available versions.
+$ module load Python/3.12.3-GCCcore-13.3.0
+$ module load Pillow/10.2.0-GCCcore-13.2.0
+Lmod has detected the following error:  A different version of the 'GCCcore' module is already loaded (see output of 'ml').
+You should load another 'Pillow' module for that is compatible with the currently loaded version of 'GCCcore'.
+Use 'ml spider Pillow' to get an overview of the available versions.
+
 
 If you don't understand the warning or error, contact the helpdesk at hpc@ugent.be 
 While processing the following module(s):
-
-    Module fullname          Module Filename
-    ---------------          ---------------
-    HMMER/3.1b2-intel-2017a  /apps/gent/CO7/haswell-ib/modules/all/HMMER/3.1b2-intel-2017a.lua
+    Module fullname               Module Filename
+    ---------------               ---------------
+    Pillow/10.2.0-GCCcore-13.2.0  /apps/gent/RHEL8/zen2-ib/modules/all/Pillow/10.2.0-GCCcore-13.2.0.lua
 ```
 
 This resulted in an error because we tried to load two modules with different
-versions of the `intel` toolchain.
+versions of the `GCCcore` toolchain.
 
 To fix this, check if there are other versions of the modules you want to load
 that have the same version of common dependencies. You can list all versions of
-a module with `module avail`: for `HMMER`, this command is `module avail HMMER`.
+a module with `module avail`: for `Pillow`, this command is `module avail Pillow`.
 
 As a rule of thumb, toolchains in the same row are compatible with each other:
 
@@ -546,17 +546,9 @@ The following have been reloaded with a version change:
   1) cluster/doduo => cluster/donphan         3) env/software/doduo => env/software/donphan
   2) env/slurm/doduo => env/slurm/donphan     4) env/vsc/doduo => env/vsc/donphan
 
-$ module load Python/3.10.8-GCCcore-12.2.0
+$ module load Python/3.12.3-GCCcore-13.3.0
 $ python
-Please verify that both the operating system and the processor support
-Intel(R) MOVBE, F16C, FMA, BMI, LZCNT and AVX2 instructions.
-```
-
-or errors like:
-
-```
-$ python
-Illegal instruction
+Illegal instruction (core dumped)
 ```
 
 When we swap to a different cluster, the available modules change so
@@ -566,7 +558,7 @@ might not work.
 
 If you want to test software on the login nodes, make sure the
 `cluster/{{defaultcluster}}` module is loaded (with `module swap cluster/{{defaultcluster}}`, see [Specifying the cluster on which to run](../running_batch_jobs/#specifying-the-cluster-on-which-to-run)), since
-the login nodes and have the same CPU architecture.
+the login nodes and {{defaultcluster}} have the same CPU architecture.
 
 If modules are already loaded, and then we swap to a different cluster,
 all our modules will get reloaded. This means that all current modules
@@ -574,21 +566,22 @@ will be unloaded and then loaded again, so they'll work on the newly
 loaded cluster. Here's an example of how that would look like:
 
 ```
-$ module load Python/3.10.8-GCCcore-12.2.0
+$ module load Python/3.12.3-GCCcore-13.3.0
 $ module swap cluster/donphan
 
 Due to MODULEPATH changes, the following have been reloaded:
-  1) GCCcore/12.2.0                   8) binutils/2.39-GCCcore-12.2.0
-  2) GMP/6.2.1-GCCcore-12.2.0         9) bzip2/1.0.8-GCCcore-12.2.0
-  3) OpenSSL/1.1                     10) libffi/3.4.4-GCCcore-12.2.0
-  4) Python/3.10.8-GCCcore-12.2.0    11) libreadline/8.2-GCCcore-12.2.0
-  5) SQLite/3.39.4-GCCcore-12.2.0    12) ncurses/6.3-GCCcore-12.2.0
-  6) Tcl/8.6.12-GCCcore-12.2.0       13) zlib/1.2.12-GCCcore-12.2.0
-  7) XZ/5.2.7-GCCcore-12.2.0
+  1) GCCcore/13.3.0                   7) binutils/2.42-GCCcore-13.3.0
+  2) OpenSSL/3                        8) bzip2/1.0.8-GCCcore-13.3.0
+  3) Python/3.12.3-GCCcore-13.3.0     9) libffi/3.4.5-GCCcore-13.3.0
+  4) SQLite/3.45.3-GCCcore-13.3.0    10) libreadline/8.2-GCCcore-13.3.0
+  5) Tcl/8.6.14-GCCcore-13.3.0       11) ncurses/6.5-GCCcore-13.3.0
+  6) XZ/5.4.5-GCCcore-13.3.0         12) zlib/1.3.1-GCCcore-13.3.0
 
 The following have been reloaded with a version change:
-  1) cluster/doduo => cluster/donphan         3) env/software/doduo => env/software/donphan
-  2) env/slurm/doduo => env/slurm/donphan     4) env/vsc/doduo => env/vsc/donphan
+  1) cluster/doduo => cluster/donphan
+  2) env/slurm/doduo => env/slurm/donphan
+  3) env/software/doduo => env/software/donphan
+  4) env/vsc/doduo => env/vsc/donphan
 ```
 
 This might result in the same problems as mentioned above. When swapping

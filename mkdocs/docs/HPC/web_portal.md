@@ -259,6 +259,10 @@ button if the desktop session is *Running*:
 
 ![image](img/ood_desktop_running.png)
 
+It is also possible to relaunch a desktop session that has ended by clicking the icon on the top-right of the desktop session box:
+
+![image](img/ood_relaunch_desktop_session.png)
+
 #### Jupyter notebook
 
 See [dedicated page on Jupyter notebooks](../jupyter)

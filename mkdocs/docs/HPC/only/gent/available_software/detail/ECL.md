@@ -21,4 +21,4 @@ module load ECL/24.5.10-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ECL/24.5.10-GCCcore-13.2.0|x|x|x|-|x|x|-|
+|ECL/24.5.10-GCCcore-13.2.0|x|x|x|x|x|x|x|
