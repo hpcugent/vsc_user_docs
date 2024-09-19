@@ -909,6 +909,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#vsc-venv-python-virtual-environment-wrapper-script" class="md-nav__link">
+    vsc-venv: Python Virtual Environment Wrapper Script
+  </a>
+  
+    <nav class="md-nav" aria-label="vsc-venv: Python Virtual Environment Wrapper Script">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#troubleshooting" class="md-nav__link">
     Troubleshooting
   </a>
@@ -1194,6 +1221,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#vsc-venv-python-virtual-environment-wrapper-script" class="md-nav__link">
+    vsc-venv: Python Virtual Environment Wrapper Script
+  </a>
+  
+    <nav class="md-nav" aria-label="vsc-venv: Python Virtual Environment Wrapper Script">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#troubleshooting" class="md-nav__link">
     Troubleshooting
   </a>
@@ -1255,6 +1309,13 @@ you can install additional Python packages without affecting the system-wide Pyt
 Because a normal user cannot install packages globally,
 using a virtual environment allows you to install packages locally without needing administrator privileges.
 This is especially useful when you need to use a package that is not available as a module on the HPC cluster.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We recommend using the <code>vsc-venv</code> script to manage Python virtual environments.
+This script is available on the HPC clusters and simplifies the process of creating and managing virtual environments.
+For more information, see the section on <a href="#vsc-venv-python-virtual-environment-wrapper-script">vsc-venv</a>.
+If you want to manage virtual environments manually, you can follow the instructions in the rest of this document.</p>
+</div>
 <h2 id="managing-python-environments">Managing Python Environments<a class="headerlink" href="#managing-python-environments" title="Permanent link">#</a></h2>
 <p>This section will explain how to create, activate, use and deactivate Python virtual environments.</p>
 <h3 id="creating-a-python-virtual-environment">Creating a Python virtual environment<a class="headerlink" href="#creating-a-python-virtual-environment" title="Permanent link">#</a></h3>
@@ -1403,6 +1464,69 @@ deactivate<span class="w">                            </span><span class="c1"># 
 <p>Two files will be created in the directory where the job was submitted: 
 <code>python_job_example.o433253.leibniz</code> and <code>python_job_example.e{{ job_id }}</code>, where 433253.leibniz is the id of your job.
 The <code>.o</code> file contains the output of the job.</p>
+<h2 id="vsc-venv-python-virtual-environment-wrapper-script">vsc-venv: Python Virtual Environment Wrapper Script<a class="headerlink" href="#vsc-venv-python-virtual-environment-wrapper-script" title="Permanent link">#</a></h2>
+<p><code>vsc-venv</code> is a script that encapsulates the creation and management of Python virtual environments. 
+This avoids multiple issues with the default <code>venv</code> included in Python (<code>python -m venv</code>).</p>
+<p>For instance, a virtual environment created for one cluster might not work on another. 
+Additionally, when activating a virtual environment, 
+the same centrally installed modules used during its creation must also be loaded.
+The <code>vsc-venv</code> command manages multiple virtual environments for different clusters in a transparent way, 
+while guaranteeing the same module environment.</p>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">#</a></h3>
+<p>A virtual environment can be activated by running the following command:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>vsc-venv
+$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>vsc-venv<span class="w"> </span>--activate<span class="w"> </span>--requirements<span class="w"> </span>requirements.txt<span class="w"> </span><span class="o">[</span>--modules<span class="w"> </span>modules.txt<span class="o">]</span>
+</code></pre></div>
+<p>Here, <code>requirements.txt</code> is the path to a file containing the Python dependencies to install in the virtual environment.
+For more information on the <code>requirements.txt</code> file, see the <a href="https://pip.pypa.io/en/stable/reference/requirements-file-format/">pip documentation</a>.
+The optional <code>--modules</code> option can be used to provide a <code>modules.txt</code> file that lists the modules to load before activating the virtual environment.</p>
+<p>Automatically, the modules are loaded and the environment is activated. 
+When running this command for the first time, the dependencies from the requirements file are installed.</p>
+<p>Now, the software can be run and Python packages installed in the virtual environment can be used, along with software provided via centrally installed modules.</p>
+<p>You can get insights on the current environment using the following commands:
+<div class="highlight"><pre><span></span><code>python --version    # Python version
+pip list            # List of installed Python packages
+module list         # List of loaded modules
+</code></pre></div></p>
+<p>To deactivate the virtual environment, run:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>vsc-venv<span class="w"> </span>--deactivate
+</code></pre></div>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">#</a></h3>
+<p>Suppose we are on the HPC-UGent Tier-2 login nodes, and we want to make a virtual environment for doduo, the default cluster.
+The following files are present in the current directory:</p>
+<p><strong>modules.txt:</strong>
+<div class="highlight"><pre><span></span><code>SciPy-bundle/2023.11-gfbf-2023b
+Pillow/10.2.0-GCCcore-13.2.0
+</code></pre></div></p>
+<p>and <strong>requirements.txt:</strong>
+<div class="highlight"><pre><span></span><code>beautifulsoup4==4.12.3
+</code></pre></div></p>
+<p>For more info on the <code>requirements.txt</code> file, 
+see the <a href="https://pip.pypa.io/en/stable/reference/requirements-file-format/">pip documentation</a>.</p>
+<p>We run the following commands to enter the environment</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>vsc-venv
+$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>vsc-venv<span class="w"> </span>--activate<span class="w"> </span>--requirements<span class="w"> </span>requirements.txt<span class="w"> </span>--modules<span class="w"> </span>modules.txt
+</code></pre></div>
+<p>As this creates the virtual environment for the first time, a <code>venvs</code> subdirectory is created in the current directory. 
+Within <code>venvs/</code>, an additional subdirectory is created for the virtual environment: <code>venv-RHEL8-zen2</code>.</p>
+<p>Now, Python 3.12 is loaded and the <code>numpy</code> (provided by the <code>SciPy-bundle</code> module), <code>PIL</code> (provided by the <code>Pillow</code> module),
+and <code>bs4</code> Python packages can be used.</p>
+<p>To deactivate the virtual environment, run:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>vsc-venv<span class="w"> </span>--deactivate
+</code></pre></div>
+<h4 id="making-a-virtual-environment-for-another-cluster">Making a virtual environment for another cluster<a class="headerlink" href="#making-a-virtual-environment-for-another-cluster" title="Permanent link">#</a></h4>
+<p>If we want to create a virtual environment for another cluster, say donphan, we can use <code>vsc-venv</code> in an interactive job:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>module<span class="w"> </span>swap<span class="w"> </span>cluster/donphan
+$<span class="w"> </span>qsub<span class="w"> </span>-I
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>my_project
+$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>vsc-venv
+$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>vsc-venv<span class="w"> </span>--activate<span class="w"> </span>--requirements<span class="w"> </span>requirements.txt<span class="w"> </span>--modules<span class="w"> </span>modules.txt
+</code></pre></div>
+<p>the venvs folder now contains two folders:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ls<span class="w"> </span>venvs/
+venv-RHEL8-cascadelake<span class="w">  </span>
+venv-RHEL8-zen2
+</code></pre></div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>
 <h3 id="illegal-instruction-error">Illegal instruction error<a class="headerlink" href="#illegal-instruction-error" title="Permanent link">#</a></h3>
 <p>Activating a virtual environment created on a different cluster can cause issues. 
