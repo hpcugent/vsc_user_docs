@@ -67,7 +67,7 @@ Python, and prints the numbers to a *unique* output file in
 Hint: `python -c "print(sum(range(1, 101)))"`
 
 -   How many modules are available for Python version 3.6.4?
--   How many modules get loaded when you load the `Python/3.6.4-intel-2018a` module?
+-   How many modules get loaded when you load the `Python/3.12.3-GCCcore-13.3.0` module?
 -   Which `cluster` modules are available?
 
 -   What's the full path to your personal home/data/scratch directories?

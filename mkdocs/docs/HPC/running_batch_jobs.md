@@ -124,7 +124,7 @@ E.g., `foss/{{ current_year}}a` is the first version of the `foss` toolchain in 
 The toolchains are then used to compile a lot of the software installed
 on the VSC clusters. You can recognise those packages easily as they all
 contain the name of the toolchain after the version number in their name
-(e.g., `Python/2.7.12-intel-2016b`). Only packages compiled with the
+(e.g., `Python/3.12.3-GCCcore-13.3.0`). Only packages compiled with the
 same toolchain name and version can work together without conflicts.
 
 ### Loading and unloading modules
@@ -148,7 +148,7 @@ lexicographical last after the `/`).
 **However, you should specify a particular version to avoid surprises when newer versions are installed:
 
 ```
-module load secondexample/2.7-intel-2016b
+module load secondexample/4.5.6-intel-2023a
 ```
 
 The `ml` command is a shorthand for `module load`: `ml example/1.2.3` is
@@ -158,7 +158,7 @@ Modules need not be loaded one by one; the two `module load` commands
 can be combined as follows:
 
 ```
-module load example/1.2.3 secondexample/2.7-intel-2016b
+module load example/1.2.3 secondexample/4.5.6-intel-2023a
 ```
 
 This will load the two modules as well as their dependencies (unless
@@ -172,21 +172,25 @@ stated above, you will get the following:
 
 ```
 $ module list
-Currently Loaded Modulefiles: 
-1) example/1.2.3                                        6) imkl/11.3.3.210-iimpi-2016b 
-2) GCCcore/5.4.0                                        7) intel/2016b 
-3) icc/2016.3.210-GCC-5.4.0-2.26                        8) examplelib/1.2-intel-2016b 
-4) ifort/2016.3.210-GCC-5.4.0-2.26                      9) secondexample/2.7-intel-2016b 
-5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26
+Currently Loaded Modules:
+  1) env/vsc/<cluster>              (S)   7) binutils/2.40-GCCcore-12.3.0            13) iimpi/2023a
+  2) env/slurm/<cluster>            (S)   8) intel-compilers/2023.1.0                14) imkl-FFTW/2023.1.0-iimpi-2023a
+  3) env/software/<cluster>         (S)   9) numactl/2.0.16-GCCcore-12.3.0           15) intel/2023a
+  4) cluster/<cluster>              (S)  10) UCX/1.14.1-GCCcore-12.3.0               16) secondexample/4.5.6-intel-2023a
+  5) GCCcore/12.3.0                      11) impi/2021.9.0-intel-compilers-2023.1.0  17) example/1.2.3
+  6) zlib/1.2.13-GCCcore-12.3.0          12) imkl/2023.1.0
+
+  Where:
+   S:  Module is Sticky, requires --force to unload or purge
 ```
 
 You can also just use the `ml` command without arguments to list loaded modules.
 
 It is important to note at this point that other modules (e.g.,
-`intel/2016b`) are also listed, although the user did not explicitly
-load them. This is because `secondexample/2.7-intel-2016b` depends on it
+`intel/2023a`) are also listed, although the user did not explicitly
+load them. This is because `secondexample/4.5.6-intel-2023a` depends on it
 (as indicated in its name), and the system administrator specified that
-the `intel/2016b` module should be loaded whenever *this*
+the `intel/2023a` module should be loaded whenever *this*
 `secondexample` module is loaded. There are advantages and disadvantages
 to this, so be aware of automatically loaded modules whenever things go wrong: they may have something to do with it!
 
@@ -196,21 +200,25 @@ To unload a module, one can use the `module unload` command. It works
 consistently with the `load` command, and reverses the latter's effect.
 However, the dependencies of the package are NOT automatically unloaded;
 you will have to unload the packages one by one. When the
-`secondexample` module is unloaded, only the following modules remain:
+`example` module is unloaded, only the following modules remain:
 
 ```
-$ module unload secondexample
+$ module unload example
 $ module list
-Currently Loaded Modulefiles: 
-Currently Loaded Modulefiles: 
-1) example/1.2.3                        5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26 
-2) GCCcore/5.4.0                        6) imkl/11.3.3.210-iimpi-2016b 
-3) icc/2016.3.210-GCC-5.4.0-2.26        7) intel/2016b 
-4) ifort/2016.3.210-GCC-5.4.0-2.26      8) examplelib/1.2-intel-2016b
+Currently Loaded Modules:
+  1) env/vsc/<cluster>              (S)   7) binutils/2.40-GCCcore-12.3.0            13) iimpi/2023a
+  2) env/slurm/<cluster>            (S)   8) intel-compilers/2023.1.0                14) imkl-FFTW/2023.1.0-iimpi-2023a
+  3) env/software/<cluster>         (S)   9) numactl/2.0.16-GCCcore-12.3.0           15) intel/2023a
+  4) cluster/<cluster>              (S)  10) UCX/1.14.1-GCCcore-12.3.0               16) secondexample/4.5.6-intel-2023a
+  5) GCCcore/12.3.0                      11) impi/2021.9.0-intel-compilers-2023.1.0
+  6) zlib/1.2.13-GCCcore-12.3.0          12) imkl/2023.1.0
+
+  Where:
+   S:  Module is Sticky, requires --force to unload or purge
 ```
 
-To unload the `secondexample` module, you can also use
-`ml -secondexample`.
+To unload the `example` module, you can also use
+`ml -example`.
 
 Notice that the version was not specified: there can only be one version
 of a module loaded at a time, so unloading modules by name is not
@@ -279,8 +287,6 @@ what happens.
 
 
 ```
-$ module av example/
-example/1.2.3       example/4.5.6
 $ module load example/1.2.3  example/4.5.6
 Lmod has detected the following error: A different version of the 'example' module is already loaded (see output of 'ml').
 $ module swap example/4.5.6
@@ -373,7 +379,7 @@ In each `module` command shown below, you can replace `module` with
 First, load all modules you want to include in the collections:
 
 ```
-module load example/1.2.3 secondexample/2.7-intel-2016b
+module load example/1.2.3 secondexample/4.5.6-intel-2023a
 ```
 
 Now store it in a collection using `module save`. In this example, the
@@ -395,7 +401,7 @@ You can get a list of all your saved collections with the
 
 ```
 $ module savelist
-Named collection list (For LMOD_SYSTEM_NAME = "CO7-sandybridge"):
+Named collection list (For LMOD_SYSTEM_NAME = "<OS>-<CPU-ARCHITECTURE>"):
   1) my-collection
 ```
 
@@ -404,15 +410,18 @@ To get a list of all modules a collection will load, you can use the
 
 ```
 $ module describe my-collection
-1) example/1.2.3                                        6) imkl/11.3.3.210-iimpi-2016b 
-2) GCCcore/5.4.0                                        7) intel/2016b 
-3) icc/2016.3.210-GCC-5.4.0-2.26                        8) examplelib/1.2-intel-2016b 
-4) ifort/2016.3.210-GCC-5.4.0-2.26                      9) secondexample/2.7-intel-2016b 
-5) impi/5.1.3.181-iccifort-2016.3.210-GCC-5.4.0-2.26
+Currently Loaded Modules:
+  1) env/vsc/<cluster>              (S)   7) binutils/2.40-GCCcore-12.3.0            13) iimpi/2023a
+  2) env/slurm/<cluster>            (S)   8) intel-compilers/2023.1.0                14) imkl-FFTW/2023.1.0-iimpi-2023a
+  3) env/software/<cluster>         (S)   9) numactl/2.0.16-GCCcore-12.3.0           15) intel/2023a
+  4) cluster/<cluster>              (S)  10) UCX/1.14.1-GCCcore-12.3.0               16) secondexample/4.5.6-intel-2023a
+  5) GCCcore/12.3.0                      11) impi/2021.9.0-intel-compilers-2023.1.0  17) example/1.2.3
+  6) zlib/1.2.13-GCCcore-12.3.0          12) imkl/2023.1.0
+
 ```
 
 To remove a collection, remove the corresponding file in
-`$HOME/.lmod.d`:
+`$HOME/.lmod.d/`:
 
 ```
 rm $HOME/.lmod.d/my-collection
@@ -424,24 +433,33 @@ To see how a module would change the environment, you can use the
 `module show` command:
 
 ```
-$ module show Python/2.7.12-intel-2016b
-whatis("Description: Python is a programming language that lets youwork more quickly and integrate your systems more effectively. - Homepage: http://python.org/ ") 
-conflict("Python")
-load("intel/2016b") 
-load("bzip2/1.0.6-intel-2016b") 
+$ module show Python-bundle-PyPI/2024.06-GCCcore-13.3.0
+help([[
+Description
+===========
+Bundle of Python packages from PyPI
 ...
-prepend_path(...)
-setenv("EBEXTSLISTPYTHON","setuptools-23.1.0,pip-8.1.2,nose-1.3.7,numpy-1.11.1,scipy-0.17.1,ytz-2016.4", ...)
+Included extensions
+===================
+alabaster-0.7.16, appdirs-1.4.4, asn1crypto-1.5.1, atomicwrites-1.4.1,
+...
+wcwidth-0.2.13, webencodings-0.5.1, xlrd-2.0.1, zipfile36-0.1.3, zipp-3.19.2
+]])
+...
+load("GCCcore/13.3.0")
+load("Python/3.12.3-GCCcore-13.3.0")
+load("cryptography/42.0.8-GCCcore-13.3.0")
+load("virtualenv/20.26.2-GCCcore-13.3.0")
+...
 ```
 
-It's also possible to use the `ml show` command instead: they are
-equivalent.
+It's also possible to use the `ml show` command instead: they are equivalent.
 
-Here you can see that the `Python/2.7.12-intel-2016b` comes with a whole
-bunch of extensions: `numpy`, `scipy`, ...
+Here you can see that the `Python-bundle-PyPI/2024.06-GCCcore-13.3.0` comes with a lot of extensions: `alabaster`, `appdirs`, ...
+These are Python packages which can be used in your Python scripts.
 
-You can also see the modules the `Python/2.7.12-intel-2016b` module
-loads: `intel/2016b`, `bzip2/1.0.6-intel-2016b`, ...
+You can also see the modules the `Python-bundle-PyPI/2024.06-GCCcore-13.3.0` module
+loads: `GCCcore/13.3.0`, `Python/3.12.3-GCCcore-13.3.0`, ...
 
 If you're not sure what all of this means: don't worry, you don't have to know; just load the module and try to use the software.
 
