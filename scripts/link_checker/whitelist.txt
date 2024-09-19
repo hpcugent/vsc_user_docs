@@ -1,0 +1,25 @@
+# 500
+https://account.vscentrum.be
+https://account.vscentrum.be/
+https://account.vscentrum.be/django/account/edit
+https://account.vscentrum.be/django/group/approve
+https://account.vscentrum.be/django/group/edit
+https://account.vscentrum.be/django/group/new
+https://account.vscentrum.be/django/vo/
+https://account.vscentrum.be/django/vo/edit
+https://account.vscentrum.be/django/vo/join
+https://account.vscentrum.be/django/vo/new
+https://firewall.vscentrum.be
+
+# 401
+https://pintra.uantwerpen.be/bbcswebdav/xid-23610_1
+
+# Timeout
+https://shieldon.ugent.be/xdmod
+https://shieldon.ugent.be/xdmod/user_manual/index.php
+
+# 403
+http://hpc.ugent.be/clusterstate
+https://linux.die.net/man/1/rsync
+https://linux.die.net/man/1/setfacl
+https://login.hpc.ugent.be

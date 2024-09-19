@@ -18,9 +18,6 @@ available, each with its own versioning scheme:
 
     -   see also <https://openfoam.org/download/history/>
 
--   OpenFOAM versions released via
-    <http://wikki.gridcore.se/foam-extend>: `v3.1`
-
 Make sure you know which flavor of OpenFOAM you want to use, since there
 are important differences between the different versions w.r.t.
 features. If the OpenFOAM version you need is not available yet, see [I want to use software that is not available on the clusters yet](../FAQ/#i-want-to-use-software-that-is-not-available-on-the-clusters-yet).
@@ -37,8 +34,6 @@ more general information on using OpenFOAM, please refer to:
     -   <https://openfoam.com>
 
     -   <https://openfoam.org>
-
-    -   <http://wikki.gridcore.se/foam-extend>
 
 -   OpenFOAM user guides:
 
@@ -58,7 +53,6 @@ Other useful OpenFOAM documentation:
 
 -   <https://github.com/ParticulateFlow/OSCCAR-doc/blob/master/openFoamUserManual_PFM.pdf>
 
--   <http://www.dicat.unige.it/guerrero/openfoam.html>
 
 ## Preparing the environment
 
@@ -284,8 +278,7 @@ OpenFOAM is known to significantly stress shared filesystems, since a
 lot of (small) files are generated during an OpenFOAM simulation. Shared
 filesystems are typically optimised for dealing with (a small number of)
 large files, and are usually a poor match for workloads that involve a
-(very) large number of small files (see also
-<http://www.prace-ri.eu/IMG/pdf/IO-profiling_with_Darshan-2.pdf>).
+(very) large number of small files.
 
 Take into account the following guidelines for your OpenFOAM jobs, which
 all relate to input parameters for the OpenFOAM simulation that you can
