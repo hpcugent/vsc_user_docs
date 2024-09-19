@@ -103,7 +103,6 @@ activate() {
     echo_warning "The OS or architecture of the current host ($host_cluster) does not match that of the loaded cluster ($loaded_cluster)."
     echo_warning "Creating or activating a virtual environment on $host_cluster with modules optimized for $loaded_cluster may cause issues."
     echo_warning "to make a virtual environment on the $loaded_cluster cluster, start an interactive session on that cluster:"
-    echo_warning "  $ module swap cluster/$loaded_cluster"
     echo_warning "  $ qsub -I"
     echo_warning "  $ cd /path/to/your/project"
     echo_warning "Then run the activate command again."
