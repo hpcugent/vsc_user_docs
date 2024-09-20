@@ -115,6 +115,7 @@ activate() {
     echo_warning "Creating or activating a virtual environment on $host_cluster with modules optimized for $loaded_cluster may cause issues."
     echo_warning "to make a virtual environment on the $loaded_cluster cluster, start an interactive session on that cluster:"
     echo_warning "  $ qsub -I"
+    echo_warning "  $ module load vsc-venv"
     echo_warning "  $ cd /path/to/your/project"
     echo_warning "Then run the activate command again."
     echo_warning "Exiting..."
