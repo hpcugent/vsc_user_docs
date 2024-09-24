@@ -14,13 +14,14 @@ The overview below shows which intel installations are available per HPC-UGent T
 To start using intel, load one of these modules using a `module load` command like:
 
 ```shell
-module load intel/2023a
+module load intel/2023b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|intel/2023b|-|-|x|-|x|-|-|
 |intel/2023a|x|x|x|x|x|x|x|
 |intel/2022b|x|x|x|x|x|-|x|
 |intel/2022a|x|x|x|x|x|-|x|
