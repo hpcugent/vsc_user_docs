@@ -21,7 +21,7 @@ module load arrow-R/14.0.1-foss-2023a-R-4.3.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|arrow-R/14.0.1-foss-2023a-R-4.3.2|-|-|-|-|-|x|-|
+|arrow-R/14.0.1-foss-2023a-R-4.3.2|x|x|x|x|x|x|x|
 |arrow-R/14.0.0.2-foss-2023a-R-4.3.2|x|x|x|x|x|-|x|
 |arrow-R/11.0.0.3-foss-2022b-R-4.2.2|x|x|x|x|x|-|x|
 |arrow-R/8.0.0-foss-2022a-R-4.2.1|x|x|x|x|x|-|x|
