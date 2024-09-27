@@ -14,11 +14,12 @@ The overview below shows which WFA2 installations are available per HPC-UGent Ti
 To start using WFA2, load one of these modules using a `module load` command like:
 
 ```shell
-module load WFA2/2.3.3-GCCcore-11.3.0
+module load WFA2/2.3.4-GCCcore-12.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|WFA2/2.3.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |WFA2/2.3.3-GCCcore-11.3.0|x|x|x|x|x|-|x|
