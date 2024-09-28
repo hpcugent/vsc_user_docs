@@ -21,7 +21,7 @@ module load impi/2021.10.0-intel-compilers-2023.2.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|impi/2021.10.0-intel-compilers-2023.2.1|-|-|x|-|x|-|-|
+|impi/2021.10.0-intel-compilers-2023.2.1|x|x|x|x|x|x|x|
 |impi/2021.9.0-intel-compilers-2023.1.0|x|x|x|x|x|x|x|
 |impi/2021.7.1-intel-compilers-2022.2.1|x|x|x|x|x|-|x|
 |impi/2021.6.0-intel-compilers-2022.1.0|x|x|x|x|x|x|x|
