@@ -31,6 +31,7 @@ module load Boost/1.85.0-GCC-13.3.0
 |Boost/1.77.0-GCC-11.2.0|x|x|x|x|x|-|x|
 |Boost/1.76.0-intel-compilers-2021.2.0|-|x|x|-|x|-|x|
 |Boost/1.76.0-GCC-10.3.0|x|x|x|x|x|-|x|
+|Boost/1.75.0-GCC-12.3.0|x|x|x|x|x|x|x|
 |Boost/1.75.0-GCC-11.2.0|x|x|x|x|x|-|x|
 |Boost/1.74.0-iccifort-2020.4.304|-|x|x|x|x|-|x|
 |Boost/1.74.0-GCC-12.3.0|x|x|x|x|x|x|x|
