@@ -21,7 +21,7 @@ module load imkl/2023.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|imkl/2023.2.0|-|-|x|-|x|-|-|
+|imkl/2023.2.0|x|x|x|x|x|x|x|
 |imkl/2023.1.0-gompi-2023a|-|-|x|-|x|-|x|
 |imkl/2023.1.0|x|x|x|x|x|x|x|
 |imkl/2022.2.1|x|x|x|x|x|-|x|
