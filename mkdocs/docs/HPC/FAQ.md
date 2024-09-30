@@ -337,34 +337,6 @@ This can lead to dramatic performance improvements.
     For guidance on setting up virtual environments, 
     refer to the [Python virtual environments setup guide](./setting_up_python_virtual_environments.md).
 
-### Is my connection compromised? Remote host identification has changed
-
-On Monday 25 April 2022, the login nodes received an update to RHEL8.
-This means that the host keys of those servers also changed. As a result,
-you could encounter the following warnings.
-
-MacOS & Linux (on Windows, only the second part is shown):
-
-```shell
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
-Someone could be eavesdropping on you right now (man-in-the-middle attack)!
-It is also possible that a host key has just been changed.
-The fingerprint for the RSA key sent by the remote host is
-xx:xx:xx.
-Please contact your system administrator.
-Add correct host key in /home/hostname/.ssh/known_hosts to get rid of this message.
-Offending RSA key in /var/lib/sss/pubconf/known_hosts:1
-RSA host key for user has changed and you have requested strict checking.
-Host key verification failed.
-```
-
-Please follow the instructions at [migration to RHEL8]({{ hpc_infrastructure_url }}/migration_to_rhel8)
-to ensure it really _is not a hacking attempt_ \- you will find the correct host key to compare.
-You will also find how to hide the warning.
-
 ### VO: how does it work?
 
 A Virtual Organisation consists of a number of members and moderators. A moderator can:
