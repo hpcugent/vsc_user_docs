@@ -21,4 +21,4 @@ module load Delly/0.8.7-gompi-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Delly/0.8.7-gompi-2020b|-|x|x|x|x|-|x|
+|Delly/0.8.7-gompi-2020b|-|x|x|x|x|-|-|

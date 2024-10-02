@@ -21,4 +21,4 @@ module load Yambo/5.1.2-intel-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Yambo/5.1.2-intel-2021b|x|x|x|x|x|-|x|
+|Yambo/5.1.2-intel-2021b|x|x|x|x|x|-|-|

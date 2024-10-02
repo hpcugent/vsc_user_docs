@@ -21,5 +21,5 @@ module load PyRe/5.0.3-20190221-intel-2019b-Python-3.7.4
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyRe/5.0.3-20190221-intel-2019b-Python-3.7.4|-|x|-|-|-|-|x|
-|PyRe/5.0.3-20190221-foss-2019b-Python-3.7.4|-|x|-|-|-|-|x|
+|PyRe/5.0.3-20190221-intel-2019b-Python-3.7.4|-|x|-|-|-|-|-|
+|PyRe/5.0.3-20190221-foss-2019b-Python-3.7.4|-|x|-|-|-|-|-|

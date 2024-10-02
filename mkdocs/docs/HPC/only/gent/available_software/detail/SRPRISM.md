@@ -21,4 +21,4 @@ module load SRPRISM/3.1.2-GCCcore-10.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SRPRISM/3.1.2-GCCcore-10.2.0|-|x|x|x|x|-|x|
+|SRPRISM/3.1.2-GCCcore-10.2.0|-|x|x|x|x|-|-|

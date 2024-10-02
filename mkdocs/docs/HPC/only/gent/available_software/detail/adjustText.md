@@ -23,4 +23,4 @@ module load adjustText/1.1.1-foss-2023a
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |adjustText/1.1.1-foss-2023a|x|x|x|x|x|x|x|
 |adjustText/0.7.3-foss-2023a|x|x|x|x|x|x|x|
-|adjustText/0.7.3-foss-2021b|x|x|x|-|x|-|x|
+|adjustText/0.7.3-foss-2021b|x|x|x|-|x|-|-|

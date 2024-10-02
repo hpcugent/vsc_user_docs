@@ -21,4 +21,4 @@ module load SDSL/2.1.1-20191211-GCCcore-8.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SDSL/2.1.1-20191211-GCCcore-8.3.0|-|x|x|-|x|-|x|
+|SDSL/2.1.1-20191211-GCCcore-8.3.0|-|x|x|-|x|-|-|

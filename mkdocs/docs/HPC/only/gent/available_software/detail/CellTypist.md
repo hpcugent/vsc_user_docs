@@ -22,4 +22,4 @@ module load CellTypist/1.6.2-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |CellTypist/1.6.2-foss-2023a|x|x|x|x|x|x|x|
-|CellTypist/1.0.0-foss-2021b|x|x|x|-|x|-|x|
+|CellTypist/1.0.0-foss-2021b|x|x|x|-|x|-|-|

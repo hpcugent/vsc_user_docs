@@ -21,4 +21,4 @@ module load MaSuRCA/4.1.0-GCC-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MaSuRCA/4.1.0-GCC-11.3.0|x|x|x|x|x|-|x|
+|MaSuRCA/4.1.0-GCC-11.3.0|x|x|x|x|x|-|-|

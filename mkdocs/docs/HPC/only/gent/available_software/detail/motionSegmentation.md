@@ -21,4 +21,4 @@ module load motionSegmentation/2.7.9-foss-2019b-Python-3.7.4
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|motionSegmentation/2.7.9-foss-2019b-Python-3.7.4|-|x|-|-|-|-|x|
+|motionSegmentation/2.7.9-foss-2019b-Python-3.7.4|-|x|-|-|-|-|-|

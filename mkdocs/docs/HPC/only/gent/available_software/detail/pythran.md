@@ -21,4 +21,4 @@ module load pythran/0.9.4.post1-foss-2019b-Python-3.7.4
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pythran/0.9.4.post1-foss-2019b-Python-3.7.4|-|x|x|-|x|-|x|
+|pythran/0.9.4.post1-foss-2019b-Python-3.7.4|-|x|x|-|x|-|-|

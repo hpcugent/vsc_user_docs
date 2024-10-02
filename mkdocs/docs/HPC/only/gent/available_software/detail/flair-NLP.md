@@ -22,4 +22,4 @@ module load flair-NLP/0.11.3-foss-2021a-CUDA-11.3.1
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |flair-NLP/0.11.3-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|-|
-|flair-NLP/0.11.3-foss-2021a|x|x|x|-|x|-|x|
+|flair-NLP/0.11.3-foss-2021a|x|x|x|-|x|-|-|

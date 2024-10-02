@@ -21,4 +21,4 @@ module load PhyloPhlAn/3.0.3-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PhyloPhlAn/3.0.3-foss-2022a|x|x|x|x|x|-|x|
+|PhyloPhlAn/3.0.3-foss-2022a|x|x|x|x|x|-|-|

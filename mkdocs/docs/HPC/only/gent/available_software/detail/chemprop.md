@@ -22,4 +22,4 @@ module load chemprop/1.5.2-foss-2022a-CUDA-11.7.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |chemprop/1.5.2-foss-2022a-CUDA-11.7.0|x|-|-|-|x|-|-|
-|chemprop/1.5.2-foss-2022a|x|x|x|x|x|-|x|
+|chemprop/1.5.2-foss-2022a|x|x|x|x|x|-|-|

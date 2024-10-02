@@ -21,5 +21,5 @@ module load PyOD/0.8.7-intel-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyOD/0.8.7-intel-2020b|-|x|x|-|x|-|x|
-|PyOD/0.8.7-foss-2020b|-|x|x|x|x|-|x|
+|PyOD/0.8.7-intel-2020b|-|x|x|-|x|-|-|
+|PyOD/0.8.7-foss-2020b|-|x|x|x|x|-|-|

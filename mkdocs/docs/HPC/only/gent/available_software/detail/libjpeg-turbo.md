@@ -23,11 +23,11 @@ module load libjpeg-turbo/3.0.1-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libjpeg-turbo/3.0.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |libjpeg-turbo/2.1.5.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|libjpeg-turbo/2.1.4-GCCcore-12.2.0|x|x|x|x|x|x|x|
-|libjpeg-turbo/2.1.3-GCCcore-11.3.0|x|x|x|x|x|x|x|
-|libjpeg-turbo/2.0.6-GCCcore-11.2.0|x|x|x|x|x|-|x|
-|libjpeg-turbo/2.0.6-GCCcore-10.3.0|x|x|x|x|x|-|x|
-|libjpeg-turbo/2.0.5-GCCcore-10.2.0|x|x|x|x|x|-|x|
-|libjpeg-turbo/2.0.4-GCCcore-9.3.0|-|x|x|-|x|-|x|
-|libjpeg-turbo/2.0.3-GCCcore-8.3.0|x|x|x|-|x|-|x|
+|libjpeg-turbo/2.1.4-GCCcore-12.2.0|x|x|x|x|x|x|-|
+|libjpeg-turbo/2.1.3-GCCcore-11.3.0|x|x|x|x|x|x|-|
+|libjpeg-turbo/2.0.6-GCCcore-11.2.0|x|x|x|x|x|-|-|
+|libjpeg-turbo/2.0.6-GCCcore-10.3.0|x|x|x|x|x|-|-|
+|libjpeg-turbo/2.0.5-GCCcore-10.2.0|x|x|x|x|x|-|-|
+|libjpeg-turbo/2.0.4-GCCcore-9.3.0|-|x|x|-|x|-|-|
+|libjpeg-turbo/2.0.3-GCCcore-8.3.0|x|x|x|-|x|-|-|
 |libjpeg-turbo/2.0.2-GCCcore-8.2.0|-|x|-|-|-|-|-|

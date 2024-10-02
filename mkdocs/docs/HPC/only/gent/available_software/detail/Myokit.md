@@ -22,4 +22,4 @@ module load Myokit/1.32.0-fosscuda-2020b
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Myokit/1.32.0-fosscuda-2020b|-|-|-|-|x|-|-|
-|Myokit/1.32.0-foss-2020b|-|x|x|x|x|-|x|
+|Myokit/1.32.0-foss-2020b|-|x|x|x|x|-|-|

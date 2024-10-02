@@ -21,5 +21,5 @@ module load gcccuda/2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gcccuda/2020b|x|x|x|x|x|-|x|
+|gcccuda/2020b|x|x|x|x|x|-|-|
 |gcccuda/2019b|x|-|-|-|x|-|-|

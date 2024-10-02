@@ -22,4 +22,4 @@ module load configurable-http-proxy/4.5.6-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |configurable-http-proxy/4.5.6-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|configurable-http-proxy/4.5.5-GCCcore-12.2.0|x|x|x|x|x|-|x|
+|configurable-http-proxy/4.5.5-GCCcore-12.2.0|x|x|x|x|x|-|-|

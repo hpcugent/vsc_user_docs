@@ -21,4 +21,4 @@ module load Zeo++/0.3-intel-compilers-2023.1.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Zeo++/0.3-intel-compilers-2023.1.0|x|x|x|x|x|-|x|
+|Zeo++/0.3-intel-compilers-2023.1.0|x|x|x|x|x|-|-|

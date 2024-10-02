@@ -21,4 +21,4 @@ module load ProBiS/20230403-gompi-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ProBiS/20230403-gompi-2022b|x|x|x|x|x|-|x|
+|ProBiS/20230403-gompi-2022b|x|x|x|x|x|-|-|

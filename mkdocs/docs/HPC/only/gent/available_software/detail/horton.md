@@ -21,4 +21,4 @@ module load horton/2.1.1-intel-2020a-Python-2.7.18
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|horton/2.1.1-intel-2020a-Python-2.7.18|-|x|x|-|x|-|x|
+|horton/2.1.1-intel-2020a-Python-2.7.18|-|x|x|-|x|-|-|

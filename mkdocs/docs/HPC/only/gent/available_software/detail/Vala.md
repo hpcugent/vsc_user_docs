@@ -21,4 +21,4 @@ module load Vala/0.52.4-GCCcore-10.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Vala/0.52.4-GCCcore-10.3.0|-|x|x|-|x|-|x|
+|Vala/0.52.4-GCCcore-10.3.0|-|x|x|-|x|-|-|

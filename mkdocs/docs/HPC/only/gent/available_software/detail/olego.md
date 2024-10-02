@@ -21,4 +21,4 @@ module load olego/1.1.9-GCC-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|olego/1.1.9-GCC-11.2.0|x|x|x|x|x|-|x|
+|olego/1.1.9-GCC-11.2.0|x|x|x|x|x|-|-|

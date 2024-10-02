@@ -22,4 +22,4 @@ module load ABySS/2.3.7-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ABySS/2.3.7-foss-2023a|x|x|x|x|x|x|x|
-|ABySS/2.1.5-foss-2019b|-|x|x|-|x|-|x|
+|ABySS/2.1.5-foss-2019b|-|x|x|-|x|-|-|

@@ -22,5 +22,5 @@ module load libdap/3.20.11-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libdap/3.20.11-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|libdap/3.20.7-GCCcore-10.3.0|-|x|x|-|x|-|x|
-|libdap/3.20.6-GCCcore-8.3.0|-|x|x|-|x|-|x|
+|libdap/3.20.7-GCCcore-10.3.0|-|x|x|-|x|-|-|
+|libdap/3.20.6-GCCcore-8.3.0|-|x|x|-|x|-|-|

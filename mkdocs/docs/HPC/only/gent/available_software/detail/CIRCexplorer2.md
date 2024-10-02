@@ -21,5 +21,5 @@ module load CIRCexplorer2/2.3.8-foss-2021b-Python-2.7.18
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CIRCexplorer2/2.3.8-foss-2021b-Python-2.7.18|x|x|x|x|x|-|x|
-|CIRCexplorer2/2.3.8-foss-2020b-Python-2.7.18|-|x|x|x|x|-|x|
+|CIRCexplorer2/2.3.8-foss-2021b-Python-2.7.18|x|x|x|x|x|-|-|
+|CIRCexplorer2/2.3.8-foss-2020b-Python-2.7.18|-|x|x|x|x|-|-|

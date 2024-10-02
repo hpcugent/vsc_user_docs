@@ -21,4 +21,4 @@ module load iodata/1.0.0a2-intel-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|iodata/1.0.0a2-intel-2022a|x|x|x|x|x|-|x|
+|iodata/1.0.0a2-intel-2022a|x|x|x|x|x|-|-|

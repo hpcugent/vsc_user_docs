@@ -23,6 +23,6 @@ module load PyOpenCL/2023.1.4-foss-2023a
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |PyOpenCL/2023.1.4-foss-2023a|x|x|x|x|x|-|x|
 |PyOpenCL/2023.1.4-foss-2022a-CUDA-11.7.0|x|-|-|-|x|-|-|
-|PyOpenCL/2023.1.4-foss-2022a|x|x|x|x|x|-|x|
+|PyOpenCL/2023.1.4-foss-2022a|x|x|x|x|x|-|-|
 |PyOpenCL/2021.2.13-foss-2021b-CUDA-11.4.1|x|-|-|-|x|-|-|
-|PyOpenCL/2021.1.2-foss-2020b|-|x|x|x|x|-|x|
+|PyOpenCL/2021.1.2-foss-2020b|-|x|x|x|x|-|-|

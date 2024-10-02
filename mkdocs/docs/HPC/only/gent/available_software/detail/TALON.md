@@ -21,4 +21,4 @@ module load TALON/5.0-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TALON/5.0-foss-2020b|-|x|x|x|x|-|x|
+|TALON/5.0-foss-2020b|-|x|x|x|x|-|-|

@@ -22,4 +22,4 @@ module load Abseil/20230125.3-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Abseil/20230125.3-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|Abseil/20230125.2-GCCcore-12.2.0|x|x|x|x|x|x|x|
+|Abseil/20230125.2-GCCcore-12.2.0|x|x|x|x|x|x|-|

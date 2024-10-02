@@ -21,4 +21,4 @@ module load RTG-Tools/3.12.1-Java-11
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RTG-Tools/3.12.1-Java-11|x|x|x|x|x|-|x|
+|RTG-Tools/3.12.1-Java-11|x|x|x|x|x|-|-|

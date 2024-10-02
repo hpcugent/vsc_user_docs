@@ -21,4 +21,4 @@ module load scHiCExplorer/7-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scHiCExplorer/7-foss-2022a|x|x|x|x|x|-|x|
+|scHiCExplorer/7-foss-2022a|x|x|x|x|x|-|-|

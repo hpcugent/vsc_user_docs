@@ -21,6 +21,6 @@ module load gflags/2.2.2-GCCcore-12.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gflags/2.2.2-GCCcore-12.2.0|x|x|x|x|x|-|x|
-|gflags/2.2.2-GCCcore-11.3.0|x|x|x|x|x|-|x|
-|gflags/2.2.2-GCCcore-8.3.0|-|x|x|-|x|-|x|
+|gflags/2.2.2-GCCcore-12.2.0|x|x|x|x|x|-|-|
+|gflags/2.2.2-GCCcore-11.3.0|x|x|x|x|x|-|-|
+|gflags/2.2.2-GCCcore-8.3.0|-|x|x|-|x|-|-|

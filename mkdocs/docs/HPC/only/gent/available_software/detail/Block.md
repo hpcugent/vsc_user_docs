@@ -21,5 +21,5 @@ module load Block/1.5.3-20200525-foss-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Block/1.5.3-20200525-foss-2022b|x|x|x|x|x|-|x|
-|Block/1.5.3-20200525-foss-2022a|-|x|x|x|x|-|x|
+|Block/1.5.3-20200525-foss-2022b|x|x|x|x|x|-|-|
+|Block/1.5.3-20200525-foss-2022a|-|x|x|x|x|-|-|

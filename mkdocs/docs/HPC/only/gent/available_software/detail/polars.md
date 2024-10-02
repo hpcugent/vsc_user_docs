@@ -22,4 +22,4 @@ module load polars/0.20.2-gfbf-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |polars/0.20.2-gfbf-2023a|x|x|x|x|x|x|x|
-|polars/0.15.6-foss-2022a|x|x|x|x|x|-|x|
+|polars/0.15.6-foss-2022a|x|x|x|x|x|-|-|

@@ -21,4 +21,4 @@ module load biobakery-workflows/3.1-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|biobakery-workflows/3.1-foss-2022a|x|x|x|x|x|-|x|
+|biobakery-workflows/3.1-foss-2022a|x|x|x|x|x|-|-|

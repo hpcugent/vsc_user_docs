@@ -21,4 +21,4 @@ module load NCL/6.6.2-intel-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NCL/6.6.2-intel-2019b|-|-|x|-|x|-|x|
+|NCL/6.6.2-intel-2019b|-|-|x|-|x|-|-|

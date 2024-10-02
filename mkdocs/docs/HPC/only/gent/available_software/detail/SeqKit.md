@@ -23,4 +23,4 @@ module load SeqKit/2.8.2
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |SeqKit/2.8.2|x|x|x|x|x|x|x|
 |SeqKit/2.3.1|x|x|x|x|x|x|x|
-|SeqKit/2.1.0|-|x|x|-|x|-|x|
+|SeqKit/2.1.0|-|x|x|-|x|-|-|

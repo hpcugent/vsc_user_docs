@@ -21,4 +21,4 @@ module load BayeScan/2.1-intel-compilers-2021.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BayeScan/2.1-intel-compilers-2021.2.0|-|x|x|-|x|-|x|
+|BayeScan/2.1-intel-compilers-2021.2.0|-|x|x|-|x|-|-|

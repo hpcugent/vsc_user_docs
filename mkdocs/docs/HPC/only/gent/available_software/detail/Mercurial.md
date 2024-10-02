@@ -21,4 +21,4 @@ module load Mercurial/6.2-GCCcore-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Mercurial/6.2-GCCcore-11.3.0|x|x|x|-|x|-|x|
+|Mercurial/6.2-GCCcore-11.3.0|x|x|x|-|x|-|-|

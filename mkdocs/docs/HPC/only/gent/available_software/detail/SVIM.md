@@ -21,4 +21,4 @@ module load SVIM/2.0.0-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SVIM/2.0.0-foss-2022a|x|x|x|x|x|-|x|
+|SVIM/2.0.0-foss-2022a|x|x|x|x|x|-|-|

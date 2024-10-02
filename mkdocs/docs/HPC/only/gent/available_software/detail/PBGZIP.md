@@ -21,4 +21,4 @@ module load PBGZIP/20160804-GCC-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PBGZIP/20160804-GCC-11.2.0|x|x|x|-|x|-|x|
+|PBGZIP/20160804-GCC-11.2.0|x|x|x|-|x|-|-|

@@ -23,4 +23,4 @@ module load mrcfile/1.5.0-foss-2023a
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |mrcfile/1.5.0-foss-2023a|x|x|x|x|x|x|x|
 |mrcfile/1.3.0-fosscuda-2020b|x|-|-|-|x|-|-|
-|mrcfile/1.3.0-foss-2020b|x|x|x|x|x|-|x|
+|mrcfile/1.3.0-foss-2020b|x|x|x|x|x|-|-|

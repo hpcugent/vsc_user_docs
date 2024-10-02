@@ -21,4 +21,4 @@ module load Bismark/0.23.1-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Bismark/0.23.1-foss-2021b|x|x|x|-|x|-|x|
+|Bismark/0.23.1-foss-2021b|x|x|x|-|x|-|-|

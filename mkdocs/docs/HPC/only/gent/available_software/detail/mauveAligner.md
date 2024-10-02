@@ -21,4 +21,4 @@ module load mauveAligner/4736-gompi-2020a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mauveAligner/4736-gompi-2020a|-|x|x|-|x|-|x|
+|mauveAligner/4736-gompi-2020a|-|x|x|-|x|-|-|

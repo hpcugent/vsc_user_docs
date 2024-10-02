@@ -22,13 +22,13 @@ module load netCDF-Fortran/4.6.1-gompi-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |netCDF-Fortran/4.6.1-gompi-2023a|x|x|x|x|x|x|x|
-|netCDF-Fortran/4.6.0-iimpi-2022a|-|-|x|-|x|-|x|
+|netCDF-Fortran/4.6.0-iimpi-2022a|-|-|x|-|x|-|-|
 |netCDF-Fortran/4.6.0-gompi-2022a|x|-|x|-|x|-|-|
-|netCDF-Fortran/4.5.3-iimpi-2021b|x|x|x|x|x|-|x|
-|netCDF-Fortran/4.5.3-iimpi-2020b|-|x|x|x|x|-|x|
-|netCDF-Fortran/4.5.3-gompi-2021b|x|x|x|x|x|-|x|
-|netCDF-Fortran/4.5.3-gompi-2021a|-|x|x|-|x|-|x|
-|netCDF-Fortran/4.5.2-iimpi-2020a|-|x|x|-|x|-|x|
-|netCDF-Fortran/4.5.2-iimpi-2019b|-|x|x|-|x|-|x|
-|netCDF-Fortran/4.5.2-gompi-2020a|-|x|x|-|x|-|x|
-|netCDF-Fortran/4.5.2-gompi-2019b|-|x|x|-|x|-|x|
+|netCDF-Fortran/4.5.3-iimpi-2021b|x|x|x|x|x|-|-|
+|netCDF-Fortran/4.5.3-iimpi-2020b|-|x|x|x|x|-|-|
+|netCDF-Fortran/4.5.3-gompi-2021b|x|x|x|x|x|-|-|
+|netCDF-Fortran/4.5.3-gompi-2021a|-|x|x|-|x|-|-|
+|netCDF-Fortran/4.5.2-iimpi-2020a|-|x|x|-|x|-|-|
+|netCDF-Fortran/4.5.2-iimpi-2019b|-|x|x|-|x|-|-|
+|netCDF-Fortran/4.5.2-gompi-2020a|-|x|x|-|x|-|-|
+|netCDF-Fortran/4.5.2-gompi-2019b|-|x|x|-|x|-|-|

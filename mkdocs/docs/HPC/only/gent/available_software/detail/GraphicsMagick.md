@@ -21,4 +21,4 @@ module load GraphicsMagick/1.3.34-foss-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GraphicsMagick/1.3.34-foss-2019b|-|x|x|-|x|-|x|
+|GraphicsMagick/1.3.34-foss-2019b|-|x|x|-|x|-|-|

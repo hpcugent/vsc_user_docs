@@ -21,4 +21,4 @@ module load SlamDunk/0.4.3-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SlamDunk/0.4.3-foss-2021b|x|x|x|-|x|-|x|
+|SlamDunk/0.4.3-foss-2021b|x|x|x|-|x|-|-|

@@ -21,4 +21,4 @@ module load attrdict3/2.0.2-GCCcore-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|attrdict3/2.0.2-GCCcore-11.2.0|x|x|x|x|x|-|x|
+|attrdict3/2.0.2-GCCcore-11.2.0|x|x|x|x|x|-|-|

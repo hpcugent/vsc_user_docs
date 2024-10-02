@@ -21,4 +21,4 @@ module load Infernal/1.1.4-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Infernal/1.1.4-foss-2021b|x|x|x|-|x|-|x|
+|Infernal/1.1.4-foss-2021b|x|x|x|-|x|-|-|

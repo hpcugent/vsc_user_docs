@@ -21,4 +21,4 @@ module load CatBoost/1.2-gfbf-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CatBoost/1.2-gfbf-2023a|x|x|x|x|x|-|x|
+|CatBoost/1.2-gfbf-2023a|x|x|x|x|x|-|-|

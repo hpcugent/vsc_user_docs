@@ -22,6 +22,6 @@ module load pycocotools/2.0.7-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |pycocotools/2.0.7-foss-2023a|x|x|x|x|x|x|x|
-|pycocotools/2.0.4-foss-2021a|x|x|x|-|x|-|x|
-|pycocotools/2.0.1-foss-2019b-Python-3.7.4|-|x|x|-|x|-|x|
-|pycocotools/2.0.0-foss-2019b-Python-3.7.4|-|x|x|-|x|-|x|
+|pycocotools/2.0.4-foss-2021a|x|x|x|-|x|-|-|
+|pycocotools/2.0.1-foss-2019b-Python-3.7.4|-|x|x|-|x|-|-|
+|pycocotools/2.0.0-foss-2019b-Python-3.7.4|-|x|x|-|x|-|-|

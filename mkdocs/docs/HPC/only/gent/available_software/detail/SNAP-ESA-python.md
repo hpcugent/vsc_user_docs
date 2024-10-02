@@ -22,4 +22,4 @@ module load SNAP-ESA-python/9.0.0-GCCcore-11.2.0-Java-11-Python-2.7.18
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |SNAP-ESA-python/9.0.0-GCCcore-11.2.0-Java-11-Python-2.7.18|x|x|x|x|x|-|-|
-|SNAP-ESA-python/9.0.0-GCCcore-11.2.0-Java-1.8-Python-2.7.18|x|x|x|x|-|-|x|
+|SNAP-ESA-python/9.0.0-GCCcore-11.2.0-Java-1.8-Python-2.7.18|x|x|x|x|-|-|-|

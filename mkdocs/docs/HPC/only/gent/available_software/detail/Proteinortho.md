@@ -21,4 +21,4 @@ module load Proteinortho/6.2.3-gompi-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Proteinortho/6.2.3-gompi-2021b|x|x|x|x|x|-|x|
+|Proteinortho/6.2.3-gompi-2021b|x|x|x|x|x|-|-|

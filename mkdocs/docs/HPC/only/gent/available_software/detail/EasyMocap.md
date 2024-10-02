@@ -22,4 +22,4 @@ module load EasyMocap/0.2-foss-2022a-CUDA-11.7.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |EasyMocap/0.2-foss-2022a-CUDA-11.7.0|x|-|x|-|x|-|-|
-|EasyMocap/0.2-foss-2022a|x|x|x|x|x|-|x|
+|EasyMocap/0.2-foss-2022a|x|x|x|x|x|-|-|

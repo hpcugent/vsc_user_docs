@@ -21,4 +21,4 @@ module load panaroo/1.2.8-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|panaroo/1.2.8-foss-2020b|-|x|x|x|x|-|x|
+|panaroo/1.2.8-foss-2020b|-|x|x|x|x|-|-|

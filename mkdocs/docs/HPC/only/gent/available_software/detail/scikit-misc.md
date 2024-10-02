@@ -22,4 +22,4 @@ module load scikit-misc/0.3.1-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |scikit-misc/0.3.1-foss-2023a|x|x|x|x|x|x|x|
-|scikit-misc/0.1.4-foss-2021a|x|x|x|x|x|-|x|
+|scikit-misc/0.1.4-foss-2021a|x|x|x|x|x|-|-|

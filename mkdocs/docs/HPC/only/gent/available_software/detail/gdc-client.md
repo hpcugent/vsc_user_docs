@@ -21,4 +21,4 @@ module load gdc-client/1.6.0-GCCcore-10.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gdc-client/1.6.0-GCCcore-10.2.0|x|x|x|x|-|-|x|
+|gdc-client/1.6.0-GCCcore-10.2.0|x|x|x|x|-|-|-|

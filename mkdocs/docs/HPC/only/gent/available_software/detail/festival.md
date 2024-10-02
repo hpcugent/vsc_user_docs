@@ -21,4 +21,4 @@ module load festival/2.5.0-GCCcore-9.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|festival/2.5.0-GCCcore-9.3.0|-|x|x|-|x|-|x|
+|festival/2.5.0-GCCcore-9.3.0|-|x|x|-|x|-|-|

@@ -21,4 +21,4 @@ module load garnett/0.1.20-foss-2020b-R-4.0.3
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|garnett/0.1.20-foss-2020b-R-4.0.3|-|x|x|x|x|-|x|
+|garnett/0.1.20-foss-2020b-R-4.0.3|-|x|x|x|x|-|-|

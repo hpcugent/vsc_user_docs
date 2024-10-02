@@ -21,4 +21,4 @@ module load babl/0.1.86-GCCcore-10.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|babl/0.1.86-GCCcore-10.3.0|-|x|x|-|x|-|x|
+|babl/0.1.86-GCCcore-10.3.0|-|x|x|-|x|-|-|

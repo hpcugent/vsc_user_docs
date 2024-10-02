@@ -21,4 +21,4 @@ module load MESS/0.1.6-foss-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MESS/0.1.6-foss-2019b|-|x|x|-|x|-|x|
+|MESS/0.1.6-foss-2019b|-|x|x|-|x|-|-|

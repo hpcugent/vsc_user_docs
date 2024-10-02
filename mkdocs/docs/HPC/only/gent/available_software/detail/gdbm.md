@@ -21,4 +21,4 @@ module load gdbm/1.18.1-foss-2020a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gdbm/1.18.1-foss-2020a|-|x|x|-|x|-|x|
+|gdbm/1.18.1-foss-2020a|-|x|x|-|x|-|-|

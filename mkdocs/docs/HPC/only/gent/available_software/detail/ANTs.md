@@ -21,4 +21,4 @@ module load ANTs/2.3.2-foss-2019b-Python-3.7.4
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ANTs/2.3.2-foss-2019b-Python-3.7.4|-|x|x|-|x|-|x|
+|ANTs/2.3.2-foss-2019b-Python-3.7.4|-|x|x|-|x|-|-|

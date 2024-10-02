@@ -21,4 +21,4 @@ module load libmypaint/1.6.1-GCCcore-10.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libmypaint/1.6.1-GCCcore-10.3.0|-|x|x|-|x|-|x|
+|libmypaint/1.6.1-GCCcore-10.3.0|-|x|x|-|x|-|-|

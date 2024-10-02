@@ -22,4 +22,4 @@ module load COMEBin/1.0.3-20240310-foss-2022a-CUDA-11.7.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |COMEBin/1.0.3-20240310-foss-2022a-CUDA-11.7.0|x|-|x|-|x|-|-|
-|COMEBin/1.0.3-20240310-foss-2022a|x|x|x|x|x|x|x|
+|COMEBin/1.0.3-20240310-foss-2022a|x|x|x|x|x|x|-|

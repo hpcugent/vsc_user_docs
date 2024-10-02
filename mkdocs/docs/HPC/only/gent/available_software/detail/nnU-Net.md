@@ -22,4 +22,4 @@ module load nnU-Net/1.7.0-fosscuda-2020b
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |nnU-Net/1.7.0-fosscuda-2020b|x|-|-|-|x|-|-|
-|nnU-Net/1.7.0-foss-2020b|-|x|x|x|x|-|x|
+|nnU-Net/1.7.0-foss-2020b|-|x|x|x|x|-|-|

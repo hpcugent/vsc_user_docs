@@ -21,4 +21,4 @@ module load Molekel/5.4.0-Linux_x86_64
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Molekel/5.4.0-Linux_x86_64|x|x|x|-|x|-|x|
+|Molekel/5.4.0-Linux_x86_64|x|x|x|-|x|-|-|

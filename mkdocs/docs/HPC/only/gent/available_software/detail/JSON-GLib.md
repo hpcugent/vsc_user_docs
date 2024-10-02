@@ -21,4 +21,4 @@ module load JSON-GLib/1.6.2-GCCcore-10.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|JSON-GLib/1.6.2-GCCcore-10.3.0|-|x|x|-|x|-|x|
+|JSON-GLib/1.6.2-GCCcore-10.3.0|-|x|x|-|x|-|-|

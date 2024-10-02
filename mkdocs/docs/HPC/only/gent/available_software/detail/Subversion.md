@@ -21,4 +21,4 @@ module load Subversion/1.14.1-GCCcore-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Subversion/1.14.1-GCCcore-11.2.0|x|x|x|-|x|-|x|
+|Subversion/1.14.1-GCCcore-11.2.0|x|x|x|-|x|-|-|

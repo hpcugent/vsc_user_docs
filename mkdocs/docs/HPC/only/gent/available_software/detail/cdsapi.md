@@ -21,4 +21,4 @@ module load cdsapi/0.5.1-GCCcore-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cdsapi/0.5.1-GCCcore-11.3.0|x|x|x|-|x|-|x|
+|cdsapi/0.5.1-GCCcore-11.3.0|x|x|x|-|x|-|-|

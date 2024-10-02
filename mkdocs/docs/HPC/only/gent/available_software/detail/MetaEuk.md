@@ -21,5 +21,5 @@ module load MetaEuk/6-GCC-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MetaEuk/6-GCC-11.2.0|x|x|x|-|x|-|x|
-|MetaEuk/4-GCC-10.2.0|-|x|x|x|x|-|x|
+|MetaEuk/6-GCC-11.2.0|x|x|x|-|x|-|-|
+|MetaEuk/4-GCC-10.2.0|-|x|x|x|x|-|-|

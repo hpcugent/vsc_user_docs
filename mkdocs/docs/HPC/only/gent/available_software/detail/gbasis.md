@@ -21,4 +21,4 @@ module load gbasis/20210904-intel-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gbasis/20210904-intel-2022a|x|x|x|x|x|-|x|
+|gbasis/20210904-intel-2022a|x|x|x|x|x|-|-|

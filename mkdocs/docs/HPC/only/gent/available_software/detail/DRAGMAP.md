@@ -21,4 +21,4 @@ module load DRAGMAP/1.3.0-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DRAGMAP/1.3.0-foss-2021b|x|x|x|-|x|-|x|
+|DRAGMAP/1.3.0-foss-2021b|x|x|x|-|x|-|-|

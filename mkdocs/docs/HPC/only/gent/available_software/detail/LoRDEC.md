@@ -21,4 +21,4 @@ module load LoRDEC/0.9-gompi-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LoRDEC/0.9-gompi-2022a|x|x|x|x|x|-|x|
+|LoRDEC/0.9-gompi-2022a|x|x|x|x|x|-|-|

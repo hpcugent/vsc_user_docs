@@ -21,4 +21,4 @@ module load sceasy/0.0.7-foss-2022a-R-4.2.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|sceasy/0.0.7-foss-2022a-R-4.2.1|x|x|x|x|x|-|x|
+|sceasy/0.0.7-foss-2022a-R-4.2.1|x|x|x|x|x|-|-|

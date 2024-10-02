@@ -21,4 +21,4 @@ module load SBCL/2.2.1-GCCcore-10.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SBCL/2.2.1-GCCcore-10.3.0|x|x|x|-|x|-|x|
+|SBCL/2.2.1-GCCcore-10.3.0|x|x|x|-|x|-|-|

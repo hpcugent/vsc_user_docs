@@ -22,4 +22,4 @@ module load PLY/3.11-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |PLY/3.11-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|PLY/3.11-GCCcore-8.3.0-Python-3.7.4|-|x|x|-|x|-|x|
+|PLY/3.11-GCCcore-8.3.0-Python-3.7.4|-|x|x|-|x|-|-|

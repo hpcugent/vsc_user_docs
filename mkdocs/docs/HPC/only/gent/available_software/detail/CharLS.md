@@ -22,4 +22,4 @@ module load CharLS/2.4.2-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |CharLS/2.4.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|CharLS/2.4.1-GCCcore-11.3.0|x|x|x|x|x|-|x|
+|CharLS/2.4.1-GCCcore-11.3.0|x|x|x|x|x|-|-|

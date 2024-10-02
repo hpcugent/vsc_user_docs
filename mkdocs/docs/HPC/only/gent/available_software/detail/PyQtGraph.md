@@ -22,5 +22,5 @@ module load PyQtGraph/0.13.7-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |PyQtGraph/0.13.7-foss-2023a|x|x|x|x|x|x|x|
-|PyQtGraph/0.13.3-foss-2022a|x|x|x|x|x|-|x|
-|PyQtGraph/0.12.3-foss-2021a|-|x|x|-|x|-|x|
+|PyQtGraph/0.13.3-foss-2022a|x|x|x|x|x|-|-|
+|PyQtGraph/0.12.3-foss-2021a|-|x|x|-|x|-|-|

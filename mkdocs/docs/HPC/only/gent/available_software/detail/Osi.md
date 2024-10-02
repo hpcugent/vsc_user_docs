@@ -22,5 +22,5 @@ module load Osi/0.108.9-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Osi/0.108.9-GCC-12.3.0|x|x|x|x|x|x|x|
-|Osi/0.108.8-GCC-12.2.0|x|x|x|x|x|-|x|
-|Osi/0.108.7-GCC-11.2.0|x|x|x|-|x|-|x|
+|Osi/0.108.8-GCC-12.2.0|x|x|x|x|x|-|-|
+|Osi/0.108.7-GCC-11.2.0|x|x|x|-|x|-|-|

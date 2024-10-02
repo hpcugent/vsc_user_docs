@@ -22,6 +22,6 @@ module load rjags/4-15-foss-2023a-R-4.3.2
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |rjags/4-15-foss-2023a-R-4.3.2|x|x|x|x|x|x|x|
-|rjags/4-13-foss-2022a-R-4.2.1|x|x|x|x|x|-|x|
-|rjags/4-13-foss-2021b-R-4.2.0|x|x|x|-|x|-|x|
-|rjags/4-10-foss-2020b-R-4.0.3|x|x|x|x|x|-|x|
+|rjags/4-13-foss-2022a-R-4.2.1|x|x|x|x|x|-|-|
+|rjags/4-13-foss-2021b-R-4.2.0|x|x|x|-|x|-|-|
+|rjags/4-10-foss-2020b-R-4.0.3|x|x|x|x|x|-|-|

@@ -21,4 +21,4 @@ module load snpEff/5.0e-GCCcore-10.2.0-Java-13
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|snpEff/5.0e-GCCcore-10.2.0-Java-13|-|x|x|-|x|-|x|
+|snpEff/5.0e-GCCcore-10.2.0-Java-13|-|x|x|-|x|-|-|

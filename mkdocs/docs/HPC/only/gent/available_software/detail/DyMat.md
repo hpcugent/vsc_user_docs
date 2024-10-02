@@ -21,4 +21,4 @@ module load DyMat/0.7-foss-2021b-2020-12-12
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DyMat/0.7-foss-2021b-2020-12-12|x|x|x|-|x|-|x|
+|DyMat/0.7-foss-2021b-2020-12-12|x|x|x|-|x|-|-|

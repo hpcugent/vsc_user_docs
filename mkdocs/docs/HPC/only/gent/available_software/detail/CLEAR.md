@@ -21,4 +21,4 @@ module load CLEAR/20210117-foss-2021b-Python-2.7.18
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CLEAR/20210117-foss-2021b-Python-2.7.18|x|x|x|x|x|-|x|
+|CLEAR/20210117-foss-2021b-Python-2.7.18|x|x|x|x|x|-|-|

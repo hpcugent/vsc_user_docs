@@ -21,4 +21,4 @@ module load CGmapTools/0.1.2-intel-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CGmapTools/0.1.2-intel-2019b|-|x|x|-|x|-|x|
+|CGmapTools/0.1.2-intel-2019b|-|x|x|-|x|-|-|

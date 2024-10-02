@@ -21,4 +21,4 @@ module load Bottleneck/1.3.2-foss-2020a-Python-3.8.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Bottleneck/1.3.2-foss-2020a-Python-3.8.2|-|x|x|-|x|-|x|
+|Bottleneck/1.3.2-foss-2020a-Python-3.8.2|-|x|x|-|x|-|-|

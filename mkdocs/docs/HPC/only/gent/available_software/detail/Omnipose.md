@@ -22,4 +22,4 @@ module load Omnipose/0.4.4-foss-2022a-CUDA-11.7.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Omnipose/0.4.4-foss-2022a-CUDA-11.7.0|x|-|-|-|x|-|-|
-|Omnipose/0.4.4-foss-2022a|x|x|x|x|x|-|x|
+|Omnipose/0.4.4-foss-2022a|x|x|x|x|x|-|-|

@@ -21,4 +21,4 @@ module load tRNAscan-SE/2.0.12-GCC-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tRNAscan-SE/2.0.12-GCC-11.2.0|x|x|x|x|x|-|x|
+|tRNAscan-SE/2.0.12-GCC-11.2.0|x|x|x|x|x|-|-|

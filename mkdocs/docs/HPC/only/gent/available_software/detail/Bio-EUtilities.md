@@ -21,4 +21,4 @@ module load Bio-EUtilities/1.76-GCCcore-8.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Bio-EUtilities/1.76-GCCcore-8.3.0|-|x|x|-|x|-|x|
+|Bio-EUtilities/1.76-GCCcore-8.3.0|-|x|x|-|x|-|-|

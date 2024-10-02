@@ -23,5 +23,5 @@ module load RAxML-NG/1.2.0-GCC-12.3.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |RAxML-NG/1.2.0-GCC-12.3.0|x|x|x|x|x|x|x|
 |RAxML-NG/1.0.3-GCC-10.2.0|-|x|x|-|x|-|-|
-|RAxML-NG/0.9.0-gompi-2019b|-|x|x|-|x|-|x|
+|RAxML-NG/0.9.0-gompi-2019b|-|x|x|-|x|-|-|
 |RAxML-NG/0.9.0-GCC-8.3.0|-|-|x|-|x|-|-|

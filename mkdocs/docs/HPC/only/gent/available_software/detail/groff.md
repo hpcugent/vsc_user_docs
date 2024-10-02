@@ -23,10 +23,10 @@ module load groff/1.23.0-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |groff/1.23.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |groff/1.22.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|groff/1.22.4-GCCcore-12.2.0|x|x|x|x|x|x|x|
-|groff/1.22.4-GCCcore-11.3.0|x|x|x|x|x|x|x|
-|groff/1.22.4-GCCcore-11.2.0|x|x|x|x|x|x|x|
-|groff/1.22.4-GCCcore-10.3.0|x|x|x|x|x|-|x|
-|groff/1.22.4-GCCcore-10.2.0|x|x|x|x|x|-|x|
-|groff/1.22.4-GCCcore-9.3.0|x|x|x|x|x|-|x|
-|groff/1.22.4-GCCcore-8.3.0|x|x|x|x|x|-|x|
+|groff/1.22.4-GCCcore-12.2.0|x|x|x|x|x|x|-|
+|groff/1.22.4-GCCcore-11.3.0|x|x|x|x|x|x|-|
+|groff/1.22.4-GCCcore-11.2.0|x|x|x|x|x|x|-|
+|groff/1.22.4-GCCcore-10.3.0|x|x|x|x|x|-|-|
+|groff/1.22.4-GCCcore-10.2.0|x|x|x|x|x|-|-|
+|groff/1.22.4-GCCcore-9.3.0|x|x|x|x|x|-|-|
+|groff/1.22.4-GCCcore-8.3.0|x|x|x|x|x|-|-|
