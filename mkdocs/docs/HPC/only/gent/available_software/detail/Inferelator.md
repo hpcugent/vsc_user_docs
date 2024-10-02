@@ -21,4 +21,4 @@ module load Inferelator/0.6.1-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Inferelator/0.6.1-foss-2022a|x|x|x|x|x|-|x|
+|Inferelator/0.6.1-foss-2022a|x|x|x|x|x|-|-|

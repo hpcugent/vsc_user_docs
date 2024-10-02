@@ -21,5 +21,5 @@ module load NanoComp/1.13.1-intel-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NanoComp/1.13.1-intel-2020b|-|x|x|-|x|-|x|
-|NanoComp/1.10.1-intel-2019b-Python-3.7.4|-|x|x|-|x|-|x|
+|NanoComp/1.13.1-intel-2020b|-|x|x|-|x|-|-|
+|NanoComp/1.10.1-intel-2019b-Python-3.7.4|-|x|x|-|x|-|-|

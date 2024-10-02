@@ -23,5 +23,5 @@ module load CellRank/2.0.2-foss-2023a-CUDA-12.1.1
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |CellRank/2.0.2-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
 |CellRank/2.0.2-foss-2023a|x|x|x|x|x|x|x|
-|CellRank/2.0.2-foss-2022a|x|x|x|x|x|-|x|
-|CellRank/1.4.0-foss-2021a|-|x|x|-|x|-|x|
+|CellRank/2.0.2-foss-2022a|x|x|x|x|x|-|-|
+|CellRank/1.4.0-foss-2021a|-|x|x|-|x|-|-|

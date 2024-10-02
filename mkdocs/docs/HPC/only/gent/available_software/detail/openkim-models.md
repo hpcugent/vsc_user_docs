@@ -21,5 +21,5 @@ module load openkim-models/20190725-intel-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|openkim-models/20190725-intel-2019b|-|x|x|-|x|-|x|
-|openkim-models/20190725-foss-2019b|-|x|x|-|x|-|x|
+|openkim-models/20190725-intel-2019b|-|x|x|-|x|-|-|
+|openkim-models/20190725-foss-2019b|-|x|x|-|x|-|-|

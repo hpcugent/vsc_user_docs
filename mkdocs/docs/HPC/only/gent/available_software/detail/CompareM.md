@@ -21,4 +21,4 @@ module load CompareM/0.1.2-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CompareM/0.1.2-foss-2021b|x|x|x|-|x|-|x|
+|CompareM/0.1.2-foss-2021b|x|x|x|-|x|-|-|

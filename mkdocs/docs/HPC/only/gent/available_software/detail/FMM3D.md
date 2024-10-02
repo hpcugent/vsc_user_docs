@@ -21,5 +21,5 @@ module load FMM3D/20211018-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FMM3D/20211018-foss-2020b|-|x|x|x|x|-|x|
+|FMM3D/20211018-foss-2020b|-|x|x|x|x|-|-|
 |FMM3D/1.0.4-foss-2023a|x|x|x|x|x|x|x|

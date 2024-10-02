@@ -21,4 +21,4 @@ module load MSFragger/4.0-Java-11
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MSFragger/4.0-Java-11|x|x|x|x|x|-|x|
+|MSFragger/4.0-Java-11|x|x|x|x|x|-|-|

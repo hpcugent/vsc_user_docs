@@ -21,4 +21,4 @@ module load grid/20220610-intel-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|grid/20220610-intel-2022a|x|x|x|x|x|-|x|
+|grid/20220610-intel-2022a|x|x|x|x|x|-|-|

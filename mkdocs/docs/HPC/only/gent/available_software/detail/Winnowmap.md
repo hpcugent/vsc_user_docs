@@ -21,4 +21,4 @@ module load Winnowmap/1.0-GCC-8.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Winnowmap/1.0-GCC-8.3.0|-|x|-|-|-|-|x|
+|Winnowmap/1.0-GCC-8.3.0|-|x|-|-|-|-|-|

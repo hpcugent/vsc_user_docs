@@ -21,4 +21,4 @@ module load DUBStepR/1.2.0-foss-2021b-R-4.1.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DUBStepR/1.2.0-foss-2021b-R-4.1.2|x|x|x|-|x|-|x|
+|DUBStepR/1.2.0-foss-2021b-R-4.1.2|x|x|x|-|x|-|-|

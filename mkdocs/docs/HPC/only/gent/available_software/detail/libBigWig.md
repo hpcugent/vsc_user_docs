@@ -21,4 +21,4 @@ module load libBigWig/0.4.4-GCCcore-8.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libBigWig/0.4.4-GCCcore-8.3.0|-|x|x|-|x|-|x|
+|libBigWig/0.4.4-GCCcore-8.3.0|-|x|x|-|x|-|-|

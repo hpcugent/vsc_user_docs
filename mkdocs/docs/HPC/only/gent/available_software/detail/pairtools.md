@@ -21,4 +21,4 @@ module load pairtools/0.3.0-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pairtools/0.3.0-foss-2021b|x|x|x|-|x|-|x|
+|pairtools/0.3.0-foss-2021b|x|x|x|-|x|-|-|

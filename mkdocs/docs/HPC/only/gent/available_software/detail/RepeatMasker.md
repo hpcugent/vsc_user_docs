@@ -22,4 +22,4 @@ module load RepeatMasker/4.1.7-p1-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |RepeatMasker/4.1.7-p1-foss-2023a|x|x|x|x|x|x|x|
-|RepeatMasker/4.1.2-p1-foss-2020b|x|x|x|x|x|-|x|
+|RepeatMasker/4.1.2-p1-foss-2020b|x|x|x|x|x|-|-|

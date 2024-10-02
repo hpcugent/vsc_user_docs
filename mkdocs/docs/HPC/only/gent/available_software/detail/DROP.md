@@ -21,5 +21,5 @@ module load DROP/1.1.0-foss-2020b-R-4.0.3
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DROP/1.1.0-foss-2020b-R-4.0.3|-|x|x|x|x|-|x|
-|DROP/1.0.3-foss-2020b-R-4.0.3|-|x|x|x|x|-|x|
+|DROP/1.1.0-foss-2020b-R-4.0.3|-|x|x|x|x|-|-|
+|DROP/1.0.3-foss-2020b-R-4.0.3|-|x|x|x|x|-|-|

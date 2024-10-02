@@ -22,6 +22,6 @@ module load QtPy/2.4.1-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |QtPy/2.4.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|QtPy/2.3.0-GCCcore-11.3.0|x|x|x|x|x|-|x|
-|QtPy/2.2.1-GCCcore-11.2.0|x|x|x|-|x|-|x|
-|QtPy/1.9.0-GCCcore-10.2.0|-|x|x|x|x|-|x|
+|QtPy/2.3.0-GCCcore-11.3.0|x|x|x|x|x|-|-|
+|QtPy/2.2.1-GCCcore-11.2.0|x|x|x|-|x|-|-|
+|QtPy/1.9.0-GCCcore-10.2.0|-|x|x|x|x|-|-|

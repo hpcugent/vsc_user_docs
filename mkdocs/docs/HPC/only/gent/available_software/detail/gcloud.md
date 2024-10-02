@@ -22,4 +22,4 @@ module load gcloud/472.0.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |gcloud/472.0.0|x|x|x|x|x|x|x|
-|gcloud/382.0.0|-|x|x|-|x|-|x|
+|gcloud/382.0.0|-|x|x|-|x|-|-|

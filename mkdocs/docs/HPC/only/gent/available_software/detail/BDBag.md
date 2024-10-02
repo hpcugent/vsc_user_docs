@@ -21,4 +21,4 @@ module load BDBag/1.6.3-intel-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BDBag/1.6.3-intel-2021b|x|x|x|-|x|-|x|
+|BDBag/1.6.3-intel-2021b|x|x|x|-|x|-|-|

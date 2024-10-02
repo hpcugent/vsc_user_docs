@@ -21,4 +21,4 @@ module load BEDOPS/2.4.41-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BEDOPS/2.4.41-foss-2021b|x|x|x|x|x|-|x|
+|BEDOPS/2.4.41-foss-2021b|x|x|x|x|x|-|-|

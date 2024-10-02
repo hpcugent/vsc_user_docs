@@ -21,4 +21,4 @@ module load CFDEMcoupling/3.8.0-foss-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CFDEMcoupling/3.8.0-foss-2019b|-|x|x|-|x|-|x|
+|CFDEMcoupling/3.8.0-foss-2019b|-|x|x|-|x|-|-|

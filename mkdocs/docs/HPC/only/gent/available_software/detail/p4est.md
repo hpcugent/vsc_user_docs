@@ -21,4 +21,4 @@ module load p4est/2.8-foss-2021a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|p4est/2.8-foss-2021a|-|x|x|-|x|-|x|
+|p4est/2.8-foss-2021a|-|x|x|-|x|-|-|

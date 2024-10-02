@@ -21,6 +21,6 @@ module load FSL/6.0.7.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FSL/6.0.7.2|x|x|x|x|x|-|x|
-|FSL/6.0.5.1-foss-2021a|-|x|x|-|x|-|x|
-|FSL/6.0.3-foss-2019b-Python-3.7.4|-|x|x|-|x|-|x|
+|FSL/6.0.7.2|x|x|x|x|x|-|-|
+|FSL/6.0.5.1-foss-2021a|-|x|x|-|x|-|-|
+|FSL/6.0.3-foss-2019b-Python-3.7.4|-|x|x|-|x|-|-|

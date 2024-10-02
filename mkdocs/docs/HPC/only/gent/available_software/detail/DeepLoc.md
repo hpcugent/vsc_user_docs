@@ -23,4 +23,4 @@ module load DeepLoc/2.0-foss-2023a-CUDA-12.1.1
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |DeepLoc/2.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
 |DeepLoc/2.0-foss-2023a|x|x|x|x|x|x|x|
-|DeepLoc/2.0-foss-2022b|x|x|x|x|x|-|x|
+|DeepLoc/2.0-foss-2022b|x|x|x|x|x|-|-|

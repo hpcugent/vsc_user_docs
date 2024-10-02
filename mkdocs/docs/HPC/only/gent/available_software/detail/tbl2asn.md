@@ -21,5 +21,4 @@ module load tbl2asn/20220427-linux64
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tbl2asn/20220427-linux64|x|x|x|x|x|-|x|
-|tbl2asn/25.8-linux64|-|-|-|-|-|-|x|
+|tbl2asn/20220427-linux64|x|x|x|x|x|-|-|

@@ -21,4 +21,4 @@ module load bcgTree/1.2.0-intel-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bcgTree/1.2.0-intel-2021b|x|x|x|-|x|-|x|
+|bcgTree/1.2.0-intel-2021b|x|x|x|-|x|-|-|

@@ -21,4 +21,4 @@ module load mpath/1.1.3-GCCcore-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mpath/1.1.3-GCCcore-11.3.0|x|x|x|x|x|-|x|
+|mpath/1.1.3-GCCcore-11.3.0|x|x|x|x|x|-|-|

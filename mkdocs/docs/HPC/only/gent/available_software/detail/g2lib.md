@@ -21,4 +21,4 @@ module load g2lib/3.1.0-GCCcore-8.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|g2lib/3.1.0-GCCcore-8.3.0|-|x|x|-|x|-|x|
+|g2lib/3.1.0-GCCcore-8.3.0|-|x|x|-|x|-|-|

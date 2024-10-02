@@ -21,4 +21,4 @@ module load DAS_Tool/1.1.1-foss-2021b-R-4.1.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DAS_Tool/1.1.1-foss-2021b-R-4.1.2|x|x|x|x|x|-|x|
+|DAS_Tool/1.1.1-foss-2021b-R-4.1.2|x|x|x|x|x|-|-|

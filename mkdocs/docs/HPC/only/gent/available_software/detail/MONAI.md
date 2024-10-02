@@ -24,4 +24,4 @@ module load MONAI/1.3.0-foss-2023a-CUDA-12.1.1
 |MONAI/1.3.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
 |MONAI/1.3.0-foss-2023a|x|x|x|x|x|x|x|
 |MONAI/1.0.1-foss-2022a-CUDA-11.7.0|x|-|-|-|x|-|-|
-|MONAI/1.0.1-foss-2022a|x|x|x|x|x|-|x|
+|MONAI/1.0.1-foss-2022a|x|x|x|x|x|-|-|

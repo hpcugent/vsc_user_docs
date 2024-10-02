@@ -22,4 +22,4 @@ module load pyEGA3/5.0.2-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |pyEGA3/5.0.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|pyEGA3/4.0.0-GCCcore-11.2.0|x|x|x|-|x|-|x|
+|pyEGA3/4.0.0-GCCcore-11.2.0|x|x|x|-|x|-|-|

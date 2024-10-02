@@ -21,4 +21,4 @@ module load vConTACT2/0.11.3-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|vConTACT2/0.11.3-foss-2022a|x|x|x|x|x|-|x|
+|vConTACT2/0.11.3-foss-2022a|x|x|x|x|x|-|-|

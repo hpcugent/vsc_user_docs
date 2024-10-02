@@ -21,4 +21,4 @@ module load sansa/0.0.7-gompi-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|sansa/0.0.7-gompi-2020b|-|x|x|x|x|-|x|
+|sansa/0.0.7-gompi-2020b|-|x|x|x|x|-|-|

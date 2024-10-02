@@ -21,7 +21,7 @@ module load AUGUSTUS/3.4.0-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|AUGUSTUS/3.4.0-foss-2021b|x|x|x|x|x|-|x|
-|AUGUSTUS/3.4.0-foss-2020b|x|x|x|x|x|-|x|
-|AUGUSTUS/3.3.3-intel-2019b|-|x|x|-|x|-|x|
-|AUGUSTUS/3.3.3-foss-2019b|-|x|x|-|x|-|x|
+|AUGUSTUS/3.4.0-foss-2021b|x|x|x|x|x|-|-|
+|AUGUSTUS/3.4.0-foss-2020b|x|x|x|x|x|-|-|
+|AUGUSTUS/3.3.3-intel-2019b|-|x|x|-|x|-|-|
+|AUGUSTUS/3.3.3-foss-2019b|-|x|x|-|x|-|-|

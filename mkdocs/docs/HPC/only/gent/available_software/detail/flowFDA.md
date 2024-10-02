@@ -21,4 +21,4 @@ module load flowFDA/0.99-20220602-foss-2022a-R-4.2.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|flowFDA/0.99-20220602-foss-2022a-R-4.2.1|x|x|x|x|x|-|x|
+|flowFDA/0.99-20220602-foss-2022a-R-4.2.1|x|x|x|x|x|-|-|

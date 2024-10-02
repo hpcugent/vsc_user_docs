@@ -21,4 +21,4 @@ module load augur/7.0.2-intel-2019b-Python-3.7.4
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|augur/7.0.2-intel-2019b-Python-3.7.4|-|x|x|-|x|-|x|
+|augur/7.0.2-intel-2019b-Python-3.7.4|-|x|x|-|x|-|-|

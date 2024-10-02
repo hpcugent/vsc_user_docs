@@ -21,4 +21,4 @@ module load python-weka-wrapper3/0.1.11-foss-2019b-Python-3.7.4
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|python-weka-wrapper3/0.1.11-foss-2019b-Python-3.7.4|-|x|x|-|x|-|x|
+|python-weka-wrapper3/0.1.11-foss-2019b-Python-3.7.4|-|x|x|-|x|-|-|

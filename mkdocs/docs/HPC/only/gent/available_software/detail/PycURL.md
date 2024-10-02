@@ -22,4 +22,4 @@ module load PycURL/7.45.2-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |PycURL/7.45.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|PycURL/7.45.2-GCCcore-12.2.0|x|x|x|x|x|-|x|
+|PycURL/7.45.2-GCCcore-12.2.0|x|x|x|x|x|-|-|

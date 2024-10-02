@@ -21,4 +21,4 @@ module load pIRS/2.0.2-gompi-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pIRS/2.0.2-gompi-2019b|-|x|x|-|x|-|x|
+|pIRS/2.0.2-gompi-2019b|-|x|x|-|x|-|-|

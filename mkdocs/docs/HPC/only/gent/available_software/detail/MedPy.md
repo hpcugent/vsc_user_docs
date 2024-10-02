@@ -22,5 +22,5 @@ module load MedPy/0.4.0-fosscuda-2020b
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |MedPy/0.4.0-fosscuda-2020b|x|-|-|-|x|-|-|
-|MedPy/0.4.0-foss-2020b|-|x|x|x|x|-|x|
-|MedPy/0.4.0-foss-2019b-Python-3.7.4|-|x|x|-|x|-|x|
+|MedPy/0.4.0-foss-2020b|-|x|x|x|x|-|-|
+|MedPy/0.4.0-foss-2019b-Python-3.7.4|-|x|x|-|x|-|-|

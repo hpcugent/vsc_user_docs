@@ -22,4 +22,4 @@ module load pycodestyle/2.11.1-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |pycodestyle/2.11.1-foss-2023a|x|x|x|x|x|x|x|
-|pycodestyle/2.11.1-foss-2022a|x|x|x|x|x|-|x|
+|pycodestyle/2.11.1-foss-2022a|x|x|x|x|x|-|-|

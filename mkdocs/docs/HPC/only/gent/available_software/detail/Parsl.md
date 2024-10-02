@@ -21,4 +21,4 @@ module load Parsl/2023.7.17-GCCcore-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Parsl/2023.7.17-GCCcore-11.3.0|x|x|x|x|x|-|x|
+|Parsl/2023.7.17-GCCcore-11.3.0|x|x|x|x|x|-|-|

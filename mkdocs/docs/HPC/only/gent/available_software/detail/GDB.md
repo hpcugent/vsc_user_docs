@@ -21,4 +21,4 @@ module load GDB/9.1-GCCcore-8.3.0-Python-3.7.4
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GDB/9.1-GCCcore-8.3.0-Python-3.7.4|-|x|x|-|x|-|x|
+|GDB/9.1-GCCcore-8.3.0-Python-3.7.4|-|x|x|-|x|-|-|

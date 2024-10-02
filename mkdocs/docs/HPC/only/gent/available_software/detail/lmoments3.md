@@ -21,4 +21,4 @@ module load lmoments3/1.0.6-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|lmoments3/1.0.6-foss-2022a|x|x|x|x|x|-|x|
+|lmoments3/1.0.6-foss-2022a|x|x|x|x|x|-|-|

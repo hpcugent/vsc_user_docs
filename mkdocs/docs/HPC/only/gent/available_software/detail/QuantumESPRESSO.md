@@ -21,5 +21,5 @@ module load QuantumESPRESSO/7.0-intel-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|QuantumESPRESSO/7.0-intel-2021b|x|x|x|-|x|-|x|
-|QuantumESPRESSO/6.5-intel-2019b|-|x|x|-|x|-|x|
+|QuantumESPRESSO/7.0-intel-2021b|x|x|x|-|x|-|-|
+|QuantumESPRESSO/6.5-intel-2019b|-|x|x|-|x|-|-|

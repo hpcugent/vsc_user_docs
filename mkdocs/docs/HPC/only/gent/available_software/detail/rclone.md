@@ -14,11 +14,12 @@ The overview below shows which rclone installations are available per HPC-UGent 
 To start using rclone, load one of these modules using a `module load` command like:
 
 ```shell
-module load rclone/1.65.2
+module load rclone/1.66.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rclone/1.65.2|x|x|x|x|x|-|x|
+|rclone/1.66.0|-|-|-|-|-|x|x|
+|rclone/1.65.2|x|x|x|x|x|x|x|

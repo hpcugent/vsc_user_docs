@@ -21,4 +21,4 @@ module load scGeneFit/1.0.2-foss-2021a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scGeneFit/1.0.2-foss-2021a|-|x|x|-|x|-|x|
+|scGeneFit/1.0.2-foss-2021a|-|x|x|-|x|-|-|

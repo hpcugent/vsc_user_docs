@@ -21,4 +21,4 @@ module load FabIO/0.11.0-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FabIO/0.11.0-foss-2020b|-|x|x|x|x|-|x|
+|FabIO/0.11.0-foss-2020b|-|x|x|x|x|-|-|

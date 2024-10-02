@@ -21,4 +21,4 @@ module load COLMAP/3.8-foss-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|COLMAP/3.8-foss-2022b|x|x|x|x|x|-|x|
+|COLMAP/3.8-foss-2022b|x|x|x|x|x|-|-|

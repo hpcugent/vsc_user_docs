@@ -22,5 +22,5 @@ module load wrapt/1.15.0-gfbf-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |wrapt/1.15.0-gfbf-2023a|x|x|x|x|x|x|x|
-|wrapt/1.15.0-foss-2022b|x|x|x|x|x|-|x|
-|wrapt/1.15.0-foss-2022a|x|x|x|x|x|-|x|
+|wrapt/1.15.0-foss-2022b|x|x|x|x|x|-|-|
+|wrapt/1.15.0-foss-2022a|x|x|x|x|x|-|-|

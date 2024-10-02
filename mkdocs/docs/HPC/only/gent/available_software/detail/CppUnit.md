@@ -21,4 +21,4 @@ module load CppUnit/1.15.1-GCCcore-10.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CppUnit/1.15.1-GCCcore-10.3.0|-|x|x|-|x|-|x|
+|CppUnit/1.15.1-GCCcore-10.3.0|-|x|x|-|x|-|-|

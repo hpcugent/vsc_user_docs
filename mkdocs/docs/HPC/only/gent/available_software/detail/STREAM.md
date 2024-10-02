@@ -21,4 +21,4 @@ module load STREAM/5.10-GCC-9.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|STREAM/5.10-GCC-9.3.0|-|x|x|-|x|-|x|
+|STREAM/5.10-GCC-9.3.0|-|x|x|-|x|-|-|

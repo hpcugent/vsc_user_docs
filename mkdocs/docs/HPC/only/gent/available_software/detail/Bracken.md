@@ -21,5 +21,5 @@ module load Bracken/2.9-GCCcore-10.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Bracken/2.9-GCCcore-10.3.0|x|x|x|x|x|-|x|
-|Bracken/2.7-GCCcore-11.2.0|x|x|x|-|x|-|x|
+|Bracken/2.9-GCCcore-10.3.0|x|x|x|x|x|-|-|
+|Bracken/2.7-GCCcore-11.2.0|x|x|x|-|x|-|-|

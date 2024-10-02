@@ -22,4 +22,4 @@ module load code-server/4.93.1
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |code-server/4.93.1|x|x|x|x|x|x|x|
-|code-server/4.9.1|x|x|x|x|x|-|x|
+|code-server/4.9.1|x|x|x|x|x|-|-|

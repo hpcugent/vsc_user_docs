@@ -21,4 +21,4 @@ module load rstanarm/2.19.3-foss-2019b-R-3.6.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rstanarm/2.19.3-foss-2019b-R-3.6.2|-|x|x|-|x|-|x|
+|rstanarm/2.19.3-foss-2019b-R-3.6.2|-|x|x|-|x|-|-|

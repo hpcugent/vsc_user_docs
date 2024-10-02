@@ -21,4 +21,4 @@ module load STRique/0.4.2-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|STRique/0.4.2-foss-2021b|x|x|x|-|x|-|x|
+|STRique/0.4.2-foss-2021b|x|x|x|-|x|-|-|

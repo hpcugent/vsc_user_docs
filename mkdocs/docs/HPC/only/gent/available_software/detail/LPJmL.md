@@ -21,4 +21,4 @@ module load LPJmL/4.0.003-iimpi-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LPJmL/4.0.003-iimpi-2020b|-|x|x|x|x|-|x|
+|LPJmL/4.0.003-iimpi-2020b|-|x|x|x|x|-|-|

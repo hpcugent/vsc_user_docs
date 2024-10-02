@@ -21,5 +21,5 @@ module load OpenSees/3.2.0-intel-2020a-Python-3.8.2-parallel
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenSees/3.2.0-intel-2020a-Python-3.8.2-parallel|-|x|x|-|x|-|x|
-|OpenSees/3.2.0-intel-2020a-Python-3.8.2|-|x|x|-|x|-|x|
+|OpenSees/3.2.0-intel-2020a-Python-3.8.2-parallel|-|x|x|-|x|-|-|
+|OpenSees/3.2.0-intel-2020a-Python-3.8.2|-|x|x|-|x|-|-|

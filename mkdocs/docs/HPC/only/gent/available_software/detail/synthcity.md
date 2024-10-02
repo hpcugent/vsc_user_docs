@@ -21,4 +21,4 @@ module load synthcity/0.2.4-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|synthcity/0.2.4-foss-2022a|x|x|x|x|x|-|x|
+|synthcity/0.2.4-foss-2022a|x|x|x|x|x|-|-|

@@ -22,4 +22,4 @@ module load kineto/0.4.0-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |kineto/0.4.0-GCC-12.3.0|x|-|x|-|x|-|-|
-|kineto/0.4.0-GCC-11.3.0|x|x|x|x|x|-|x|
+|kineto/0.4.0-GCC-11.3.0|x|x|x|x|x|-|-|

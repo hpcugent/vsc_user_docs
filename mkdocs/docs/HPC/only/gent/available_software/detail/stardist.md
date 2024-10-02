@@ -22,4 +22,4 @@ module load stardist/0.8.3-foss-2021b-CUDA-11.4.1
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |stardist/0.8.3-foss-2021b-CUDA-11.4.1|x|-|-|-|x|-|-|
-|stardist/0.8.3-foss-2021b|x|x|x|x|x|-|x|
+|stardist/0.8.3-foss-2021b|x|x|x|x|x|-|-|

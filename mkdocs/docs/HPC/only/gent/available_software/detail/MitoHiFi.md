@@ -21,4 +21,4 @@ module load MitoHiFi/3.2-foss-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MitoHiFi/3.2-foss-2022b|x|x|x|x|x|-|x|
+|MitoHiFi/3.2-foss-2022b|x|x|x|x|x|-|-|

@@ -23,4 +23,4 @@ module load ONNX-Runtime/1.19.2-foss-2023a-CUDA-12.1.1
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ONNX-Runtime/1.19.2-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
 |ONNX-Runtime/1.19.2-foss-2023a|x|x|x|x|x|x|x|
-|ONNX-Runtime/1.16.3-foss-2022b|x|x|x|x|x|-|x|
+|ONNX-Runtime/1.16.3-foss-2022b|x|x|x|x|x|-|-|

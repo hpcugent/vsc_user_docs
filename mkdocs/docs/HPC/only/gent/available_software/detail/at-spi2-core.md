@@ -22,11 +22,11 @@ module load at-spi2-core/2.50.0-GCCcore-13.2.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |at-spi2-core/2.50.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|at-spi2-core/2.49.91-GCCcore-12.3.0|-|-|x|-|x|x|-|
-|at-spi2-core/2.49.90-GCCcore-12.3.0|x|x|x|x|x|-|x|
-|at-spi2-core/2.46.0-GCCcore-12.2.0|x|x|x|x|x|-|x|
-|at-spi2-core/2.44.1-GCCcore-11.3.0|x|x|x|x|x|-|x|
-|at-spi2-core/2.40.3-GCCcore-11.2.0|x|x|x|x|x|-|x|
-|at-spi2-core/2.40.2-GCCcore-10.3.0|x|x|x|-|x|-|x|
-|at-spi2-core/2.38.0-GCCcore-10.2.0|x|x|x|x|x|-|x|
-|at-spi2-core/2.34.0-GCCcore-8.3.0|-|x|x|-|x|-|x|
+|at-spi2-core/2.49.91-GCCcore-12.3.0|-|-|x|-|x|x|x|
+|at-spi2-core/2.49.90-GCCcore-12.3.0|x|x|x|x|x|-|-|
+|at-spi2-core/2.46.0-GCCcore-12.2.0|x|x|x|x|x|-|-|
+|at-spi2-core/2.44.1-GCCcore-11.3.0|x|x|x|x|x|-|-|
+|at-spi2-core/2.40.3-GCCcore-11.2.0|x|x|x|x|x|-|-|
+|at-spi2-core/2.40.2-GCCcore-10.3.0|x|x|x|-|x|-|-|
+|at-spi2-core/2.38.0-GCCcore-10.2.0|x|x|x|x|x|-|-|
+|at-spi2-core/2.34.0-GCCcore-8.3.0|-|x|x|-|x|-|-|

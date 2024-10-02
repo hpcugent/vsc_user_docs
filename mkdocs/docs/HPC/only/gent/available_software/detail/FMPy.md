@@ -21,4 +21,4 @@ module load FMPy/0.3.2-foss-2021a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FMPy/0.3.2-foss-2021a|-|x|x|-|x|-|x|
+|FMPy/0.3.2-foss-2021a|-|x|x|-|x|-|-|

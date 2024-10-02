@@ -21,8 +21,8 @@ module load boto3/1.34.10-GCCcore-12.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|boto3/1.34.10-GCCcore-12.2.0|x|x|x|x|x|-|x|
+|boto3/1.34.10-GCCcore-12.2.0|x|x|x|x|x|-|-|
 |boto3/1.28.70-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|boto3/1.26.163-GCCcore-12.2.0|x|x|x|x|x|-|x|
-|boto3/1.20.13-GCCcore-11.2.0|x|x|x|-|x|-|x|
-|boto3/1.20.13-GCCcore-10.3.0|x|x|x|-|x|-|x|
+|boto3/1.26.163-GCCcore-12.2.0|x|x|x|x|x|-|-|
+|boto3/1.20.13-GCCcore-11.2.0|x|x|x|-|x|-|-|
+|boto3/1.20.13-GCCcore-10.3.0|x|x|x|-|x|-|-|

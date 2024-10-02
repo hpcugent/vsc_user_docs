@@ -21,4 +21,4 @@ module load pythermalcomfort/2.8.10-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pythermalcomfort/2.8.10-foss-2022a|x|x|x|x|x|-|x|
+|pythermalcomfort/2.8.10-foss-2022a|x|x|x|x|x|-|-|

@@ -21,4 +21,4 @@ module load BayesPrism/2.0-foss-2022a-R-4.2.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BayesPrism/2.0-foss-2022a-R-4.2.1|x|x|x|x|x|-|x|
+|BayesPrism/2.0-foss-2022a-R-4.2.1|x|x|x|x|x|-|-|

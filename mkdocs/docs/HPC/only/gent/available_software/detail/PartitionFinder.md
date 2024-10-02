@@ -21,4 +21,4 @@ module load PartitionFinder/2.1.1-intel-2019b-Python-2.7.16
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PartitionFinder/2.1.1-intel-2019b-Python-2.7.16|-|x|-|-|-|-|x|
+|PartitionFinder/2.1.1-intel-2019b-Python-2.7.16|-|x|-|-|-|-|-|

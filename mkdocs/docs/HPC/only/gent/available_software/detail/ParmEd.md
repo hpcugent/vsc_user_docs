@@ -21,5 +21,5 @@ module load ParmEd/3.2.0-intel-2020a-Python-3.8.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ParmEd/3.2.0-intel-2020a-Python-3.8.2|-|x|x|-|x|-|x|
-|ParmEd/3.2.0-intel-2019b-Python-3.7.4|-|x|x|-|x|-|x|
+|ParmEd/3.2.0-intel-2020a-Python-3.8.2|-|x|x|-|x|-|-|
+|ParmEd/3.2.0-intel-2019b-Python-3.7.4|-|x|x|-|x|-|-|

@@ -21,4 +21,4 @@ module load Clair3/1.0.4-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Clair3/1.0.4-foss-2022a|x|x|x|x|x|-|x|
+|Clair3/1.0.4-foss-2022a|x|x|x|x|x|-|-|

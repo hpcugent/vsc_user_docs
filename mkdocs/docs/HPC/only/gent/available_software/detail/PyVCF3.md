@@ -21,4 +21,4 @@ module load PyVCF3/1.0.3-GCCcore-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyVCF3/1.0.3-GCCcore-11.3.0|x|x|x|x|x|-|x|
+|PyVCF3/1.0.3-GCCcore-11.3.0|x|x|x|x|x|-|-|

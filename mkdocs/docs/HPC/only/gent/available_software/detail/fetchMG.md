@@ -21,4 +21,4 @@ module load fetchMG/1.0-GCCcore-8.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fetchMG/1.0-GCCcore-8.3.0|-|x|x|-|x|-|x|
+|fetchMG/1.0-GCCcore-8.3.0|-|x|x|-|x|-|-|

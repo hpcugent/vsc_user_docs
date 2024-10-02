@@ -22,4 +22,4 @@ module load IsoQuant/3.5.0-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |IsoQuant/3.5.0-foss-2023a|x|x|x|x|x|x|x|
-|IsoQuant/3.3.0-foss-2022b|x|x|x|x|x|-|x|
+|IsoQuant/3.3.0-foss-2022b|x|x|x|x|x|-|-|

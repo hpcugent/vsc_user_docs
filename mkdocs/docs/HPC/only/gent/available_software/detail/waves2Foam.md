@@ -21,4 +21,4 @@ module load waves2Foam/20200703-foss-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|waves2Foam/20200703-foss-2019b|-|x|x|-|x|-|x|
+|waves2Foam/20200703-foss-2019b|-|x|x|-|x|-|-|

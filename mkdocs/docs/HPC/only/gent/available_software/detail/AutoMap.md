@@ -21,4 +21,4 @@ module load AutoMap/1.0-foss-2019b-20200324
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|AutoMap/1.0-foss-2019b-20200324|-|x|x|-|x|-|x|
+|AutoMap/1.0-foss-2019b-20200324|-|x|x|-|x|-|-|

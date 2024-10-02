@@ -21,4 +21,4 @@ module load misha/4.0.10-foss-2020a-R-4.0.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|misha/4.0.10-foss-2020a-R-4.0.0|-|x|x|-|x|-|x|
+|misha/4.0.10-foss-2020a-R-4.0.0|-|x|x|-|x|-|-|

@@ -21,4 +21,4 @@ module load CodAn/1.2-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CodAn/1.2-foss-2021b|x|x|x|x|x|-|x|
+|CodAn/1.2-foss-2021b|x|x|x|x|x|-|-|

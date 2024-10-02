@@ -21,4 +21,4 @@ module load Sailfish/0.10.1-gompi-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Sailfish/0.10.1-gompi-2019b|-|x|-|-|-|-|x|
+|Sailfish/0.10.1-gompi-2019b|-|x|-|-|-|-|-|

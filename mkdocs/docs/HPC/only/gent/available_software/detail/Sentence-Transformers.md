@@ -21,4 +21,4 @@ module load Sentence-Transformers/2.2.2-foss-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Sentence-Transformers/2.2.2-foss-2022b|x|x|x|x|x|-|x|
+|Sentence-Transformers/2.2.2-foss-2022b|x|x|x|x|x|-|-|

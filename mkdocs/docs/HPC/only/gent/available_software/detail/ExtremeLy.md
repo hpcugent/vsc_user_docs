@@ -21,4 +21,4 @@ module load ExtremeLy/2.3.0-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ExtremeLy/2.3.0-foss-2022a|x|x|x|x|x|-|x|
+|ExtremeLy/2.3.0-foss-2022a|x|x|x|x|x|-|-|

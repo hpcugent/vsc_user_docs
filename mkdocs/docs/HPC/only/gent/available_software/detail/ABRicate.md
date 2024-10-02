@@ -21,4 +21,4 @@ module load ABRicate/0.9.9-gompi-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ABRicate/0.9.9-gompi-2019b|-|x|x|-|x|-|x|
+|ABRicate/0.9.9-gompi-2019b|-|x|x|-|x|-|-|

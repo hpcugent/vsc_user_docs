@@ -21,4 +21,4 @@ module load PPanGGOLiN/1.1.136-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PPanGGOLiN/1.1.136-foss-2021b|x|x|x|-|x|-|x|
+|PPanGGOLiN/1.1.136-foss-2021b|x|x|x|-|x|-|-|

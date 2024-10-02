@@ -21,4 +21,4 @@ module load librsvg/2.51.2-GCCcore-10.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|librsvg/2.51.2-GCCcore-10.3.0|-|x|x|-|x|-|x|
+|librsvg/2.51.2-GCCcore-10.3.0|-|x|x|-|x|-|-|

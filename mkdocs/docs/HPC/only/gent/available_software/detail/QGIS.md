@@ -21,4 +21,4 @@ module load QGIS/3.28.1-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|QGIS/3.28.1-foss-2021b|x|x|x|x|x|-|x|
+|QGIS/3.28.1-foss-2021b|x|x|x|x|x|-|-|

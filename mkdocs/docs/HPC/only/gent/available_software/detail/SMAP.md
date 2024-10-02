@@ -21,4 +21,4 @@ module load SMAP/4.6.5-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SMAP/4.6.5-foss-2022a|x|x|x|x|x|-|x|
+|SMAP/4.6.5-foss-2022a|x|x|x|x|x|-|-|

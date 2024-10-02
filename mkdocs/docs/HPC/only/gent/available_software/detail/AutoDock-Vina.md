@@ -21,4 +21,4 @@ module load AutoDock-Vina/1.2.3-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|AutoDock-Vina/1.2.3-foss-2021b|x|x|x|-|x|-|x|
+|AutoDock-Vina/1.2.3-foss-2021b|x|x|x|-|x|-|-|

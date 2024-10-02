@@ -21,4 +21,4 @@ module load sonic/20180202-gompi-2020a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|sonic/20180202-gompi-2020a|-|x|x|-|x|-|x|
+|sonic/20180202-gompi-2020a|-|x|x|-|x|-|-|

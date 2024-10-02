@@ -21,6 +21,6 @@ module load Gaussian/g16_C.01-intel-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Gaussian/g16_C.01-intel-2022a|x|x|x|x|x|-|x|
-|Gaussian/g16_C.01-intel-2019b|-|x|x|-|x|-|x|
-|Gaussian/g16_C.01-iimpi-2020b|x|x|x|x|x|-|x|
+|Gaussian/g16_C.01-intel-2022a|x|x|x|x|x|-|-|
+|Gaussian/g16_C.01-intel-2019b|-|x|x|-|x|-|-|
+|Gaussian/g16_C.01-iimpi-2020b|x|x|x|x|x|-|-|

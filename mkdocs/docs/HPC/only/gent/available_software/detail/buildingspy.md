@@ -21,4 +21,4 @@ module load buildingspy/4.0.0-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|buildingspy/4.0.0-foss-2022a|x|x|x|-|x|-|x|
+|buildingspy/4.0.0-foss-2022a|x|x|x|-|x|-|-|

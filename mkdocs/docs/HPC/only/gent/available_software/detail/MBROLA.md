@@ -21,4 +21,4 @@ module load MBROLA/3.3-GCCcore-9.3.0-voices-20200330
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MBROLA/3.3-GCCcore-9.3.0-voices-20200330|-|x|x|-|x|-|x|
+|MBROLA/3.3-GCCcore-9.3.0-voices-20200330|-|x|x|-|x|-|-|

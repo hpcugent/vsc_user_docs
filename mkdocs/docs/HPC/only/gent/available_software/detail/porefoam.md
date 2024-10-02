@@ -21,4 +21,4 @@ module load porefoam/2021-09-21-foss-2020a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|porefoam/2021-09-21-foss-2020a|-|x|x|-|x|-|x|
+|porefoam/2021-09-21-foss-2020a|-|x|x|-|x|-|-|

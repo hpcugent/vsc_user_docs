@@ -22,4 +22,4 @@ module load mhcnuggets/2.3-fosscuda-2020b
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |mhcnuggets/2.3-fosscuda-2020b|-|-|-|-|x|-|-|
-|mhcnuggets/2.3-foss-2020b|-|x|x|x|x|-|x|
+|mhcnuggets/2.3-foss-2020b|-|x|x|x|x|-|-|

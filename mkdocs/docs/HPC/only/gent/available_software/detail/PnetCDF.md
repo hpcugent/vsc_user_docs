@@ -23,4 +23,4 @@ module load PnetCDF/1.12.3-gompi-2023a
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |PnetCDF/1.12.3-gompi-2023a|x|x|x|x|x|x|x|
 |PnetCDF/1.12.3-gompi-2022a|x|-|x|-|x|-|-|
-|PnetCDF/1.12.3-gompi-2021b|x|x|x|-|x|-|x|
+|PnetCDF/1.12.3-gompi-2021b|x|x|x|-|x|-|-|

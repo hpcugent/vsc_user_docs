@@ -21,4 +21,4 @@ module load QCxMS/5.0.3
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|QCxMS/5.0.3|x|x|x|x|x|-|x|
+|QCxMS/5.0.3|x|x|x|x|x|x|x|

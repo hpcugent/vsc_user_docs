@@ -22,6 +22,6 @@ module load zarr/2.17.1-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |zarr/2.17.1-foss-2023a|x|x|x|x|x|x|x|
-|zarr/2.16.0-foss-2022b|x|x|x|x|x|-|x|
-|zarr/2.13.3-foss-2022a|x|x|x|x|x|-|x|
-|zarr/2.13.3-foss-2021b|x|x|x|x|x|-|x|
+|zarr/2.16.0-foss-2022b|x|x|x|x|x|-|-|
+|zarr/2.13.3-foss-2022a|x|x|x|x|x|-|-|
+|zarr/2.13.3-foss-2021b|x|x|x|x|x|-|-|

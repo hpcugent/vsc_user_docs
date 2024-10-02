@@ -21,4 +21,4 @@ module load powerlaw/1.5-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|powerlaw/1.5-foss-2022a|x|x|x|x|x|-|x|
+|powerlaw/1.5-foss-2022a|x|x|x|x|x|-|-|

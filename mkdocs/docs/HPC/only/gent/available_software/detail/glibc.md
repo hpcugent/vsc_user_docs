@@ -21,4 +21,4 @@ module load glibc/2.30-GCCcore-8.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|glibc/2.30-GCCcore-8.3.0|-|x|-|-|-|-|x|
+|glibc/2.30-GCCcore-8.3.0|-|x|-|-|-|-|-|

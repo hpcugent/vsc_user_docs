@@ -21,4 +21,4 @@ module load MARS/20191101-GCCcore-8.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MARS/20191101-GCCcore-8.3.0|-|x|x|-|x|-|x|
+|MARS/20191101-GCCcore-8.3.0|-|x|x|-|x|-|-|

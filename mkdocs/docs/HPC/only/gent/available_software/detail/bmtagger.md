@@ -21,4 +21,4 @@ module load bmtagger/3.101-gompi-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bmtagger/3.101-gompi-2020b|-|x|x|x|x|-|x|
+|bmtagger/3.101-gompi-2020b|-|x|x|x|x|-|-|

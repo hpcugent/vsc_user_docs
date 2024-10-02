@@ -21,4 +21,4 @@ module load libdrs/3.1.2-foss-2020a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libdrs/3.1.2-foss-2020a|-|x|x|-|x|-|x|
+|libdrs/3.1.2-foss-2020a|-|x|x|-|x|-|-|

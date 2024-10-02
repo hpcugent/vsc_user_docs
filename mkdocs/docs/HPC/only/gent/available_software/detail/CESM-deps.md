@@ -21,4 +21,4 @@ module load CESM-deps/2-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CESM-deps/2-foss-2021b|x|x|x|-|x|-|x|
+|CESM-deps/2-foss-2021b|x|x|x|-|x|-|-|

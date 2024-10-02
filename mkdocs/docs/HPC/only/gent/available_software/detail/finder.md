@@ -21,4 +21,4 @@ module load finder/1.1.0-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|finder/1.1.0-foss-2021b|x|x|x|x|x|-|x|
+|finder/1.1.0-foss-2021b|x|x|x|x|x|-|-|

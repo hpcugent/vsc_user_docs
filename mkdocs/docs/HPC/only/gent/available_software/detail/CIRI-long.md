@@ -21,4 +21,4 @@ module load CIRI-long/1.0.2-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CIRI-long/1.0.2-foss-2020b|-|x|x|x|x|-|x|
+|CIRI-long/1.0.2-foss-2020b|-|x|x|x|x|-|-|

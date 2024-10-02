@@ -21,4 +21,4 @@ module load LUMPY/0.3.1-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LUMPY/0.3.1-foss-2020b|-|x|x|x|x|-|x|
+|LUMPY/0.3.1-foss-2020b|-|x|x|x|x|-|-|

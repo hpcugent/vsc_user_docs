@@ -21,4 +21,4 @@ module load wtdbg2/2.5-GCCcore-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|wtdbg2/2.5-GCCcore-11.2.0|x|x|x|-|x|-|x|
+|wtdbg2/2.5-GCCcore-11.2.0|x|x|x|-|x|-|-|

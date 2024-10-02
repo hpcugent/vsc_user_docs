@@ -21,4 +21,4 @@ module load lavaan/0.6-9-foss-2021a-R-4.1.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|lavaan/0.6-9-foss-2021a-R-4.1.0|-|x|x|-|x|-|x|
+|lavaan/0.6-9-foss-2021a-R-4.1.0|-|x|x|-|x|-|-|

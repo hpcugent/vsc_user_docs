@@ -21,4 +21,4 @@ module load py3Dmol/2.0.1.post1-GCCcore-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|py3Dmol/2.0.1.post1-GCCcore-11.3.0|x|x|x|x|x|-|x|
+|py3Dmol/2.0.1.post1-GCCcore-11.3.0|x|x|x|x|x|-|-|

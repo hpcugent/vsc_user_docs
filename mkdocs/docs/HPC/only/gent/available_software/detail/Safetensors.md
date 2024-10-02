@@ -21,4 +21,4 @@ module load Safetensors/0.4.3-gfbf-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Safetensors/0.4.3-gfbf-2023a|x|-|x|-|x|-|-|
+|Safetensors/0.4.3-gfbf-2023a|x|-|x|-|x|-|x|

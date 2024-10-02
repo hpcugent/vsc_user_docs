@@ -21,4 +21,4 @@ module load Ragout/2.3-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Ragout/2.3-foss-2020b|-|x|x|x|x|-|x|
+|Ragout/2.3-foss-2020b|-|x|x|x|x|-|-|

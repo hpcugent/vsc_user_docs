@@ -21,5 +21,5 @@ module load WIEN2k/21.1-intel-2021a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|WIEN2k/21.1-intel-2021a|-|x|x|-|x|-|x|
-|WIEN2k/19.2-intel-2020b|-|x|x|x|x|-|x|
+|WIEN2k/21.1-intel-2021a|-|x|x|-|x|-|-|
+|WIEN2k/19.2-intel-2020b|-|x|x|x|x|-|-|

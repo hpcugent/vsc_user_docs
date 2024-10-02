@@ -21,4 +21,4 @@ module load Elk/7.0.12-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Elk/7.0.12-foss-2020b|-|x|x|x|x|-|x|
+|Elk/7.0.12-foss-2020b|-|x|x|x|x|-|-|

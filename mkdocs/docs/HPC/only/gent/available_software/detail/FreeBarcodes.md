@@ -21,4 +21,4 @@ module load FreeBarcodes/3.0.a5-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FreeBarcodes/3.0.a5-foss-2021b|x|x|x|-|x|-|x|
+|FreeBarcodes/3.0.a5-foss-2021b|x|x|x|-|x|-|-|

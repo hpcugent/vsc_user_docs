@@ -21,4 +21,4 @@ module load Centrifuge/1.0.4-beta-gompi-2020a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Centrifuge/1.0.4-beta-gompi-2020a|-|x|x|-|x|-|x|
+|Centrifuge/1.0.4-beta-gompi-2020a|-|x|x|-|x|-|-|
