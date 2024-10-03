@@ -21,6 +21,6 @@ module load makedepend/1.0.7-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|makedepend/1.0.7-GCCcore-12.3.0|x|-|x|x|x|x|x|
+|makedepend/1.0.7-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |makedepend/1.0.6-GCCcore-10.3.0|-|x|x|-|x|-|-|
 |makedepend/1.0.6-GCCcore-8.3.0|-|x|x|-|x|-|-|
