@@ -27,11 +27,14 @@
 Python script to generate an overview of available modules across different clusters, in MarkDown format.
 
 @author: Michiel Lachaert (Ghent University)
+@author: Lukas Barragan Torres (Ghent University)
+@author: Kenneth Hoste (Ghent University)
 """
 import argparse
 import json
 import os
 import re
+import shutil
 import subprocess
 import time
 from pathlib import Path
@@ -403,6 +406,9 @@ def generate_detail_pages(json_path, dest_path, generated_time_yml) -> None:
     """
     Generate all the detailed pages for all the software that is available.
     """
+    # cleanup target directory first, to start from scratch, since software may have been removed
+    shutil.rmtree(dest_path)
+    os.makedirs(dest_path)
 
     with open(json_path) as json_data:
         data = json.load(json_data)
