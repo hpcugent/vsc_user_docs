@@ -14,13 +14,14 @@ The overview below shows which IQ-TREE installations are available per HPC-UGent
 To start using IQ-TREE, load one of these modules using a `module load` command like:
 
 ```shell
-module load IQ-TREE/2.2.2.6-gompi-2022b
+module load IQ-TREE/2.3.5-gompi-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|IQ-TREE/2.3.5-gompi-2023a|x|x|x|x|x|-|-|
 |IQ-TREE/2.2.2.6-gompi-2022b|x|x|x|x|x|-|-|
 |IQ-TREE/2.2.2.6-gompi-2022a|x|x|x|x|x|-|-|
 |IQ-TREE/2.2.2.3-gompi-2022a|x|x|x|x|x|-|-|
