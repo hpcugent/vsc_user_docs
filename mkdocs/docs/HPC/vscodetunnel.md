@@ -49,7 +49,7 @@ but the upgrade rate of the App/CLI is very high,
 so it is hard for us to follow it tightly.
 If you suspect that the too old version of CLI might cause problem, please send us a
 [software installation request](https://www.ugent.be/hpc/en/support/software-installation-request)
-for `coder-cli`. 
+for `code-cli`. 
 
 Please do not use `VS Code` to ssh to the login nodes,
 but always use a `VS Code` Tunnel connection,
