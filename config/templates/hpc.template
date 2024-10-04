@@ -59,7 +59,7 @@ nav:
       - OpenFOAM: openFOAM.md
       - Python: python.md
       - Python virtual environments: setting_up_python_virtual_environments.md
-      - VS Code Tunnel: VScode.md
+      - VS Code Tunnel: vscodetunnel.md
   - FAQ:
       - Frequently Asked Questions: FAQ.md
   - Appendices:
