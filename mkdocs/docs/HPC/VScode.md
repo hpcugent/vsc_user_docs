@@ -17,7 +17,7 @@ We do recommend to install remote developent for the VS Code App.
 ## Connection
 
 In the [web portal](./web_portal.md), under the "Interactive Apps" choose VS Code Tunnel,
-select the parameters and launch your job by clicking ++Launch"++
+select the parameters and launch your job by clicking ++"Launch"++
 When your job has started, connect by clicking ++"Connect"++
 
 In the new browser tab or window, for the question
