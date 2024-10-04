@@ -28,6 +28,7 @@ In the new browser tab or window, for the question
 Then follow the instruction to authenticate yourself.
 
 !!! Warning
+
     If you are an UGent user, and you get an error message something like "You do not have access to this"
     during the Microsoft Authentication, then you might have to
     [whitelist yourself](https://dictselfservice.ugent.be/index.php?page=requestform&form=deviceCodeAuth)
