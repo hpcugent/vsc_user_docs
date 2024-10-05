@@ -21,7 +21,7 @@ module load IQ-TREE/2.3.5-gompi-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|IQ-TREE/2.3.5-gompi-2023a|x|x|x|x|x|-|-|
+|IQ-TREE/2.3.5-gompi-2023a|x|x|x|x|x|x|x|
 |IQ-TREE/2.2.2.6-gompi-2022b|x|x|x|x|x|-|-|
 |IQ-TREE/2.2.2.6-gompi-2022a|x|x|x|x|x|-|-|
 |IQ-TREE/2.2.2.3-gompi-2022a|x|x|x|x|x|-|-|
