@@ -1657,6 +1657,14 @@ specified in a job script as:</p>
 <p>or on the command line</p>
 <div class="highlight"><pre><span></span><code>qsub -l mem=4gb
 </code></pre></div>
+<p>If you do not request memory (neither in the job script nor on the command line), the default memory
+that your job will get access is the proportional share of the total avaliable memory on the node:
+If you request a full node, all usable memory will be available.
+If you request <code>N</code> cores on a cluster where nodes have <code>M</code> cores, you will get <code>N/M</code>
+of the total usable memory on the node. For the number of cores and available memory per cluster, please see our
+<a href="https://www.ugent.be/hpc/en/infrastructure">infrastructure</a>, or you can use the <a href="../web_portal/">web portal</a>, open
+the desktop app and there you can browse it per cluster and core using the
+submission form (there is no need to start an actual desktop).</p>
 <h2 id="specifying-processors-requirements">Specifying processors requirements<a class="headerlink" href="#specifying-processors-requirements" title="Permanent link">#</a></h2>
 <p>Users are encouraged to fully utilise all the available cores on a
 certain compute node. Once the required numbers of cores and nodes are
