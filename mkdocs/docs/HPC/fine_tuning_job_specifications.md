@@ -302,7 +302,8 @@ If you request a full node, all usable memory will be available.
 If you request `N` cores on a cluster where nodes have `M` cores, you will get `N/M`
 of the total usable memory on the node. For the number of cores and available memory per cluster, please see our
 [infrastructure](https://www.ugent.be/hpc/en/infrastructure), or you can use the [web portal](./web_portal.md), open
-the desktop app and there you can browse it per cluster and core.
+the desktop app and there you can browse it per cluster and core using the
+submission form (there is no need to start an actual desktop).
 {% endif %}
 
 {% if site!=gent %}
