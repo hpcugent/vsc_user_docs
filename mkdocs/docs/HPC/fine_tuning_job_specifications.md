@@ -295,6 +295,17 @@ or on the command line
 qsub -l mem=4gb
 ```
 
+{% if site==gent %}
+If you do not request memory (neither in the job script nor on the command line), the default memory
+that your job will get access is the proportional share of the total avaliable memory on the node:
+If you request a full node, all usable memory will be available.
+If you request `N` cores on a cluster where nodes have `M` cores, you will get `N/M`
+of the total usable memory on the node. For the number of cores and available memory per cluster, please see our
+[infrastructure](https://www.ugent.be/hpc/en/infrastructure), or you can use the [web portal](./web_portal.md), open
+the desktop app and there you can browse it per cluster and core using the
+submission form (there is no need to start an actual desktop).
+{% endif %}
+
 {% if site!=gent %}
 This setting is ignored if the number of nodes is not&nbsp;1.
 
