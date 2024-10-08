@@ -14,13 +14,14 @@ The overview below shows which GPAW installations are available per HPC-UGent Ti
 To start using GPAW, load one of these modules using a `module load` command like:
 
 ```shell
-module load GPAW/22.8.0-intel-2022a
+module load GPAW/24.6.0-foss-2023a-ASE-3.23.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GPAW/24.6.0-foss-2023a-ASE-3.23.0|x|x|x|x|x|x|x|
 |GPAW/22.8.0-intel-2022a|x|x|x|x|x|-|-|
 |GPAW/22.8.0-intel-2021b|x|x|x|-|x|-|-|
 |GPAW/22.8.0-foss-2021b|x|x|x|-|x|-|-|

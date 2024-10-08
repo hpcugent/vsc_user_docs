@@ -14,13 +14,14 @@ The overview below shows which ASE installations are available per HPC-UGent Tie
 To start using ASE, load one of these modules using a `module load` command like:
 
 ```shell
-module load ASE/3.22.1-intel-2022a
+module load ASE/3.23.0-gfbf-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ASE/3.23.0-gfbf-2023a|x|x|x|x|x|x|x|
 |ASE/3.22.1-intel-2022a|x|x|x|x|x|-|-|
 |ASE/3.22.1-intel-2021b|x|x|x|-|x|-|-|
 |ASE/3.22.1-gomkl-2021a|x|x|x|x|x|-|-|
