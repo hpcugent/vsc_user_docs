@@ -21,7 +21,7 @@ module load git/2.45.1-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|git/2.45.1-GCCcore-13.3.0|x|x|x|x|x|x|-|
+|git/2.45.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |git/2.42.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |git/2.41.0-GCCcore-12.3.0-nodocs|x|x|x|x|x|x|x|
 |git/2.38.1-GCCcore-12.2.0-nodocs|x|x|x|x|x|x|-|
