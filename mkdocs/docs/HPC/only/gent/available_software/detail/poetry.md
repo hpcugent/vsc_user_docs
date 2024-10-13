@@ -21,7 +21,7 @@ module load poetry/1.8.3-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|poetry/1.8.3-GCCcore-13.3.0|x|x|x|x|x|x|-|
+|poetry/1.8.3-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |poetry/1.7.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |poetry/1.6.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |poetry/1.5.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
