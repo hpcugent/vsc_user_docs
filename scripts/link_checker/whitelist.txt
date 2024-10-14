@@ -23,3 +23,10 @@ http://hpc.ugent.be/clusterstate
 https://linux.die.net/man/1/rsync
 https://linux.die.net/man/1/setfacl
 https://login.hpc.ugent.be
+
+# 403 for openfoam.com (unclear why)
+http://openfoam.com
+https://openfoam.com
+http://openfoam.com/history/
+https://wiki.openfoam.com/Tutorials
+https://www.openfoam.com/documentation/user-guide
