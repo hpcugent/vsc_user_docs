@@ -14,11 +14,12 @@ The overview below shows which pblat installations are available per HPC-UGent T
 To start using pblat, load one of these modules using a `module load` command like:
 
 ```shell
-module load pblat/2.5.1-foss-2022b
+module load pblat/2.5.1-foss-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pblat/2.5.1-foss-2023a|x|x|x|x|x|x|x|
 |pblat/2.5.1-foss-2022b|x|x|x|x|x|-|-|
