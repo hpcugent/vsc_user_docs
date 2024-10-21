@@ -135,8 +135,8 @@ using RHEL 8 to RHEL 9 one by one, following the schedule outlined below.
 | ***cluster*** | ***migration start*** | ***migration completed on*** |
 | --- | ---- | --- |
 | `skitty` | Monday 30 September 2024 | Tuesday 1 October 2024 |
-| `joltik` | Monday 21 October 2024 | |
-| `accelgor` | November 2024 | |
+| `joltik` | Monday 21 October 2024 | Tuesday 22 October 2024 |
+| `accelgor` | Tuesday 26 November 2024 | |
 | `gallade` | December 2024 | |
 | `donphan` | February 2025 | |
 | `doduo` (default cluster) | February 2025 | |
