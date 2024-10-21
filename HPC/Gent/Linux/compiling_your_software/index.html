@@ -1364,11 +1364,11 @@
 
 
 <h1 id="compiling-and-testing-your-software-on-the-hpc">Compiling and testing your software on the HPC<a class="headerlink" href="#compiling-and-testing-your-software-on-the-hpc" title="Permanent link">#</a></h1>
-<p>All nodes in the HPC cluster are running the "RHEL 8.8 (accelgor, doduo, donphan, gallade, joltik) and RHEL 9.4 (skitty, shinx)" 
+<p>All nodes in the HPC cluster are running the "RHEL 8.8 (accelgor, doduo, donphan, gallade) and RHEL 9.4 (skitty, shinx, joltik)" 
 Operating system, which is a specific version of Red Hat Enterprise Linux. This means that all the 
 software programs
 (executable) that the end-user wants to run on the HPC first must be
-compiled for RHEL 8.8 (accelgor, doduo, donphan, gallade, joltik) and RHEL 9.4 (skitty, shinx). It also means that you first have to install all the
+compiled for RHEL 8.8 (accelgor, doduo, donphan, gallade) and RHEL 9.4 (skitty, shinx, joltik). It also means that you first have to install all the
 required external software packages on the HPC.</p>
 <p>Most commonly used compilers are already pre-installed on the HPC and can be
 used straight away. Also, many popular external software packages, which
@@ -1424,7 +1424,7 @@ destination machine.</p>
 <p>Whilst programming, it would be wise to stick to certain standards
 (e.g., ISO/ANSI/POSIX). This will ease the porting of your code to other
 platforms.</p>
-<p>Porting your code to the RHEL 8.8 (accelgor, doduo, donphan, gallade, joltik) and RHEL 9.4 (skitty, shinx) platform is the responsibility of the end-user.</p>
+<p>Porting your code to the RHEL 8.8 (accelgor, doduo, donphan, gallade) and RHEL 9.4 (skitty, shinx, joltik) platform is the responsibility of the end-user.</p>
 <h2 id="compiling-and-building-on-the-hpc">Compiling and building on the HPC<a class="headerlink" href="#compiling-and-building-on-the-hpc" title="Permanent link">#</a></h2>
 <p>Compiling refers to the process of translating code written in some
 programming language, e.g., Fortran, C, or C++, to machine code.
@@ -1433,7 +1433,7 @@ resulting from different source files into an executable (or library).
 The text below guides you through some basic problems typical for small
 software projects. For larger projects it is more appropriate to use
 makefiles or even an advanced build system like CMake.</p>
-<p>All the HPC nodes run the same version of the Operating System, i.e. RHEL 8.8 (accelgor, doduo, donphan, gallade, joltik) and RHEL 9.4 (skitty, shinx). So,
+<p>All the HPC nodes run the same version of the Operating System, i.e. RHEL 8.8 (accelgor, doduo, donphan, gallade) and RHEL 9.4 (skitty, shinx, joltik). So,
 it is sufficient to compile your program on any compute node. Once you
 have generated an executable with your compiler, this executable should
 be able to run on any other compute-node.</p>
