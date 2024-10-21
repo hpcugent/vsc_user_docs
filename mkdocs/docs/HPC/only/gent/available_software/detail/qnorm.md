@@ -21,5 +21,5 @@ module load qnorm/0.8.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|qnorm/0.8.1-foss-2023a|x|x|x|x|x|x|x|
-|qnorm/0.8.1-foss-2022a|x|x|x|x|x|-|-|
+|qnorm/0.8.1-foss-2023a|x|x|x|x|-|x|x|
+|qnorm/0.8.1-foss-2022a|x|x|x|x|-|-|-|

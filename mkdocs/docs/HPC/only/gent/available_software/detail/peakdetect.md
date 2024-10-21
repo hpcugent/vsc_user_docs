@@ -21,4 +21,4 @@ module load peakdetect/1.2-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|peakdetect/1.2-foss-2022a|x|x|x|x|x|-|-|
+|peakdetect/1.2-foss-2022a|x|x|x|x|-|-|-|

@@ -21,4 +21,4 @@ module load LncLOOM/2.0-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LncLOOM/2.0-foss-2020b|-|x|x|x|x|-|-|
+|LncLOOM/2.0-foss-2020b|-|x|x|x|-|-|-|

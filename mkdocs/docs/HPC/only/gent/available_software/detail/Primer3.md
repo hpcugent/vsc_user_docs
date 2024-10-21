@@ -21,4 +21,4 @@ module load Primer3/2.5.0-GCC-9.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Primer3/2.5.0-GCC-9.3.0|-|x|x|-|x|-|-|
+|Primer3/2.5.0-GCC-9.3.0|-|x|x|-|-|-|-|

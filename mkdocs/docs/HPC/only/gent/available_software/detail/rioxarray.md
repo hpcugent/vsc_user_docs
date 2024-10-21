@@ -21,4 +21,4 @@ module load rioxarray/0.11.1-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rioxarray/0.11.1-foss-2021b|x|x|x|-|x|-|-|
+|rioxarray/0.11.1-foss-2021b|x|x|x|-|-|-|-|

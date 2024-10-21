@@ -21,4 +21,4 @@ module load CPC2/1.0.1-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CPC2/1.0.1-foss-2022a|x|x|x|x|x|-|-|
+|CPC2/1.0.1-foss-2022a|x|x|x|x|-|-|-|

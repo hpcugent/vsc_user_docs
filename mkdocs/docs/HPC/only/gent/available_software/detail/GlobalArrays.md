@@ -21,5 +21,5 @@ module load GlobalArrays/5.8-iomkl-2021a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GlobalArrays/5.8-iomkl-2021a|x|x|x|x|x|-|-|
-|GlobalArrays/5.8-intel-2021a|-|x|x|-|x|-|-|
+|GlobalArrays/5.8-iomkl-2021a|x|x|x|x|-|-|-|
+|GlobalArrays/5.8-intel-2021a|-|x|x|-|-|-|-|

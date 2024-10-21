@@ -21,5 +21,5 @@ module load PRINSEQ/0.20.4-foss-2021b-Perl-5.34.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PRINSEQ/0.20.4-foss-2021b-Perl-5.34.0|x|x|x|-|x|-|-|
-|PRINSEQ/0.20.4-foss-2020b-Perl-5.32.0|-|x|x|x|x|-|-|
+|PRINSEQ/0.20.4-foss-2021b-Perl-5.34.0|x|x|x|-|-|-|-|
+|PRINSEQ/0.20.4-foss-2020b-Perl-5.32.0|-|x|x|x|-|-|-|

@@ -21,5 +21,5 @@ module load MOOSE/2022-06-10-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MOOSE/2022-06-10-foss-2022a|x|x|x|-|x|-|-|
-|MOOSE/2021-05-18-foss-2019b-Python-3.7.4|-|x|x|-|x|-|-|
+|MOOSE/2022-06-10-foss-2022a|x|x|x|-|-|-|-|
+|MOOSE/2021-05-18-foss-2019b-Python-3.7.4|-|x|x|-|-|-|-|

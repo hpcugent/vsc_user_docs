@@ -21,5 +21,5 @@ module load imgaug/0.4.0-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|imgaug/0.4.0-foss-2021b|x|x|x|-|x|-|-|
-|imgaug/0.4.0-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|-|
+|imgaug/0.4.0-foss-2021b|x|x|x|-|-|-|-|
+|imgaug/0.4.0-foss-2021a-CUDA-11.3.1|x|-|-|-|-|-|-|

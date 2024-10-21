@@ -21,4 +21,4 @@ module load tdlib/0.9.3-GCC-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tdlib/0.9.3-GCC-13.2.0|x|x|x|x|x|x|x|
+|tdlib/0.9.3-GCC-13.2.0|x|x|x|x|-|x|x|

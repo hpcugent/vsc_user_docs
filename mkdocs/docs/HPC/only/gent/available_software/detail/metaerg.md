@@ -21,4 +21,4 @@ module load metaerg/1.2.3-intel-2019b-Python-2.7.16
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|metaerg/1.2.3-intel-2019b-Python-2.7.16|-|x|x|-|x|-|-|
+|metaerg/1.2.3-intel-2019b-Python-2.7.16|-|x|x|-|-|-|-|

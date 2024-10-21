@@ -21,4 +21,4 @@ module load HiCMatrix/17-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HiCMatrix/17-foss-2022a|x|x|x|x|x|-|-|
+|HiCMatrix/17-foss-2022a|x|x|x|x|-|-|-|

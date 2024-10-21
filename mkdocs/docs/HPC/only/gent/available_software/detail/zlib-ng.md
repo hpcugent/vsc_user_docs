@@ -22,4 +22,4 @@ module load zlib-ng/2.1.6-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |zlib-ng/2.1.6-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|zlib-ng/2.0.7-GCCcore-11.3.0|x|x|x|x|x|-|-|
+|zlib-ng/2.0.7-GCCcore-11.3.0|x|x|x|x|-|-|-|

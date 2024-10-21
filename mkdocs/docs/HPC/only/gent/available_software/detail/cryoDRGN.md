@@ -21,5 +21,5 @@ module load cryoDRGN/1.0.0-beta-foss-2021a-CUDA-11.3.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cryoDRGN/1.0.0-beta-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|-|
-|cryoDRGN/0.3.5-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|-|
+|cryoDRGN/1.0.0-beta-foss-2021a-CUDA-11.3.1|x|-|-|-|-|-|-|
+|cryoDRGN/0.3.5-foss-2021a-CUDA-11.3.1|x|-|-|-|-|-|-|

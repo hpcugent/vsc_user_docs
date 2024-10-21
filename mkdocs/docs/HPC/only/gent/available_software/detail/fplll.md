@@ -21,4 +21,4 @@ module load fplll/5.4.5-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fplll/5.4.5-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|fplll/5.4.5-GCCcore-13.2.0|x|x|x|x|-|x|x|

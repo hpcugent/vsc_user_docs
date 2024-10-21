@@ -21,4 +21,4 @@ module load CDAT/8.2.1-foss-2020a-Python-3.8.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CDAT/8.2.1-foss-2020a-Python-3.8.2|-|x|x|-|x|-|-|
+|CDAT/8.2.1-foss-2020a-Python-3.8.2|-|x|x|-|-|-|-|

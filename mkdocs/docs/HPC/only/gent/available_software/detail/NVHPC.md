@@ -21,5 +21,4 @@ module load NVHPC/21.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NVHPC/21.2|x|-|x|-|x|-|-|
-|NVHPC/20.9|-|-|-|-|x|-|-|
+|NVHPC/21.2|x|-|x|-|-|-|-|

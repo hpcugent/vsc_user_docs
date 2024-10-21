@@ -21,4 +21,4 @@ module load DiCE-ML/0.9-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DiCE-ML/0.9-foss-2022a|x|x|x|x|x|-|-|
+|DiCE-ML/0.9-foss-2022a|x|x|x|x|-|-|-|

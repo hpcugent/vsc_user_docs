@@ -21,4 +21,4 @@ module load MBX/1.1.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MBX/1.1.0-foss-2023a|x|x|x|x|x|x|x|
+|MBX/1.1.0-foss-2023a|x|x|x|x|-|x|x|

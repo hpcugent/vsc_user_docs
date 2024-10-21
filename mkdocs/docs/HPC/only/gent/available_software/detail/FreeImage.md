@@ -21,4 +21,4 @@ module load FreeImage/3.18.0-GCCcore-12.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FreeImage/3.18.0-GCCcore-12.2.0|x|x|x|x|x|-|-|
+|FreeImage/3.18.0-GCCcore-12.2.0|x|x|x|x|-|-|-|

@@ -21,4 +21,4 @@ module load MATIO/1.5.17-GCCcore-8.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MATIO/1.5.17-GCCcore-8.3.0|-|x|x|-|x|-|-|
+|MATIO/1.5.17-GCCcore-8.3.0|-|x|x|-|-|-|-|

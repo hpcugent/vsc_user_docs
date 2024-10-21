@@ -21,5 +21,5 @@ module load Megalodon/2.3.5-fosscuda-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Megalodon/2.3.5-fosscuda-2020b|x|-|-|-|x|-|-|
-|Megalodon/2.3.5-foss-2020b|-|x|x|x|x|-|-|
+|Megalodon/2.3.5-fosscuda-2020b|x|-|-|-|-|-|-|
+|Megalodon/2.3.5-foss-2020b|-|x|x|x|-|-|-|

@@ -21,5 +21,5 @@ module load conan/1.60.2-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|conan/1.60.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|conan/1.58.0-GCCcore-11.3.0|x|x|x|x|x|-|-|
+|conan/1.60.2-GCCcore-12.3.0|x|x|x|x|-|x|x|
+|conan/1.58.0-GCCcore-11.3.0|x|x|x|x|-|-|-|

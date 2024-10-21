@@ -21,4 +21,4 @@ module load Gblocks/0.91b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Gblocks/0.91b|x|x|x|x|x|-|x|
+|Gblocks/0.91b|x|x|x|x|-|-|x|

@@ -21,4 +21,4 @@ module load Stellarscope/1.4.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Stellarscope/1.4.1-foss-2023a|x|x|x|x|x|x|x|
+|Stellarscope/1.4.1-foss-2023a|x|x|x|x|-|x|x|

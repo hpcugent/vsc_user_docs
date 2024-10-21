@@ -21,4 +21,4 @@ module load Altair-EDEM/2021.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Altair-EDEM/2021.2|-|x|x|-|x|-|-|
+|Altair-EDEM/2021.2|-|x|x|-|-|-|-|

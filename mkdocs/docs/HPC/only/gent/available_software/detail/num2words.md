@@ -21,4 +21,4 @@ module load num2words/0.5.10-GCCcore-10.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|num2words/0.5.10-GCCcore-10.3.0|x|-|-|-|x|-|-|
+|num2words/0.5.10-GCCcore-10.3.0|x|-|-|-|-|-|-|

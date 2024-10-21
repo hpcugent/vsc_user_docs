@@ -21,5 +21,5 @@ module load bcl2fastq2/2.20.0-GCC-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bcl2fastq2/2.20.0-GCC-11.2.0|x|x|x|-|x|-|-|
-|bcl2fastq2/2.20.0-GCC-8.3.0|-|x|x|-|x|-|-|
+|bcl2fastq2/2.20.0-GCC-11.2.0|x|x|x|-|-|-|-|
+|bcl2fastq2/2.20.0-GCC-8.3.0|-|x|x|-|-|-|-|

@@ -21,5 +21,5 @@ module load GTK2/2.24.33-GCCcore-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GTK2/2.24.33-GCCcore-11.3.0|x|x|x|x|x|-|-|
-|GTK2/2.24.33-GCCcore-10.3.0|-|-|x|-|x|-|-|
+|GTK2/2.24.33-GCCcore-11.3.0|x|x|x|x|-|-|-|
+|GTK2/2.24.33-GCCcore-10.3.0|-|-|x|-|-|-|-|

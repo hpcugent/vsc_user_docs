@@ -21,4 +21,4 @@ module load FastQC/0.11.9-Java-11
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FastQC/0.11.9-Java-11|x|x|x|x|x|-|-|
+|FastQC/0.11.9-Java-11|x|x|x|x|-|-|-|

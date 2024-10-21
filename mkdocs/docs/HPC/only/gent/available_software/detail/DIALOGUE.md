@@ -21,4 +21,4 @@ module load DIALOGUE/1.0-20230228-foss-2021b-R-4.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DIALOGUE/1.0-20230228-foss-2021b-R-4.2.0|x|x|x|x|x|-|-|
+|DIALOGUE/1.0-20230228-foss-2021b-R-4.2.0|x|x|x|x|-|-|-|

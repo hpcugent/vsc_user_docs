@@ -21,5 +21,5 @@ module load PyVCF/0.6.8-GCC-8.3.0-Python-2.7.16
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyVCF/0.6.8-GCC-8.3.0-Python-2.7.16|-|-|x|-|x|-|-|
+|PyVCF/0.6.8-GCC-8.3.0-Python-2.7.16|-|-|x|-|-|-|-|
 |PyVCF/0.6.8-GCC-8.3.0|-|x|-|-|-|-|-|

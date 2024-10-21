@@ -21,4 +21,4 @@ module load PLAMS/1.5.1-intel-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PLAMS/1.5.1-intel-2022a|x|x|x|x|x|-|-|
+|PLAMS/1.5.1-intel-2022a|x|x|x|x|-|-|-|

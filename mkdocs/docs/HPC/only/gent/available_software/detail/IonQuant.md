@@ -21,4 +21,4 @@ module load IonQuant/1.10.12-Java-11
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|IonQuant/1.10.12-Java-11|x|x|x|x|x|-|-|
+|IonQuant/1.10.12-Java-11|x|x|x|x|-|-|-|
