@@ -21,4 +21,4 @@ module load pplacer/1.1.alpha19
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pplacer/1.1.alpha19|x|x|x|x|x|x|x|
+|pplacer/1.1.alpha19|x|x|x|x|-|x|x|

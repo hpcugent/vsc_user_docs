@@ -21,4 +21,4 @@ module load lifelines/0.27.4-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|lifelines/0.27.4-foss-2022a|x|x|x|x|x|-|-|
+|lifelines/0.27.4-foss-2022a|x|x|x|x|-|-|-|

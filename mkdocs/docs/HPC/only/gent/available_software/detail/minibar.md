@@ -21,5 +21,5 @@ module load minibar/20200326-iccifort-2020.1.217-Python-3.8.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|minibar/20200326-iccifort-2020.1.217-Python-3.8.2|-|x|x|-|x|-|-|
-|minibar/20200326-iccifort-2019.5.281-Python-3.7.4|-|x|x|-|x|-|-|
+|minibar/20200326-iccifort-2020.1.217-Python-3.8.2|-|x|x|-|-|-|-|
+|minibar/20200326-iccifort-2019.5.281-Python-3.7.4|-|x|x|-|-|-|-|

@@ -21,4 +21,4 @@ module load PyFoam/2020.5-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyFoam/2020.5-foss-2020b|-|x|x|x|x|-|-|
+|PyFoam/2020.5-foss-2020b|-|x|x|x|-|-|-|

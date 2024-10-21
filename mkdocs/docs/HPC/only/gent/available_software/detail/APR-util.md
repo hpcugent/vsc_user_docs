@@ -21,4 +21,4 @@ module load APR-util/1.6.1-GCCcore-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|APR-util/1.6.1-GCCcore-11.2.0|x|x|x|-|x|-|-|
+|APR-util/1.6.1-GCCcore-11.2.0|x|x|x|-|-|-|-|

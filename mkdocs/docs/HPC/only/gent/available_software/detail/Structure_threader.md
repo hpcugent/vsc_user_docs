@@ -21,4 +21,4 @@ module load Structure_threader/1.3.10-foss-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Structure_threader/1.3.10-foss-2022b|x|x|x|x|x|-|-|
+|Structure_threader/1.3.10-foss-2022b|x|x|x|x|-|-|-|

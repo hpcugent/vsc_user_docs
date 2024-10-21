@@ -22,4 +22,4 @@ module load rclone/1.66.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |rclone/1.66.0|-|-|-|-|-|x|x|
-|rclone/1.65.2|x|x|x|x|x|x|x|
+|rclone/1.65.2|x|x|x|x|-|x|x|

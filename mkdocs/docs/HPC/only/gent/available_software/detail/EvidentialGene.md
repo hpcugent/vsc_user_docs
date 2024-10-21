@@ -21,4 +21,4 @@ module load EvidentialGene/2023.07.15-gompi-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|EvidentialGene/2023.07.15-gompi-2023a|x|x|x|x|x|x|x|
+|EvidentialGene/2023.07.15-gompi-2023a|x|x|x|x|-|x|x|

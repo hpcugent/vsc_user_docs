@@ -21,4 +21,4 @@ module load AutoGeneS/1.0.4-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|AutoGeneS/1.0.4-foss-2020b|-|x|x|x|x|-|-|
+|AutoGeneS/1.0.4-foss-2020b|-|x|x|x|-|-|-|

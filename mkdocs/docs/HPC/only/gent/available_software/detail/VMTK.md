@@ -21,4 +21,4 @@ module load VMTK/1.4.0-foss-2019b-Python-3.7.4
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VMTK/1.4.0-foss-2019b-Python-3.7.4|-|x|x|-|x|-|-|
+|VMTK/1.4.0-foss-2019b-Python-3.7.4|-|x|x|-|-|-|-|

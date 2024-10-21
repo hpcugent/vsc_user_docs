@@ -21,4 +21,4 @@ module load Ceres-Solver/2.2.0-foss-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Ceres-Solver/2.2.0-foss-2022b|x|x|x|x|x|-|-|
+|Ceres-Solver/2.2.0-foss-2022b|x|x|x|x|-|-|-|

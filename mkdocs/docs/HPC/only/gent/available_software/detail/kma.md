@@ -21,4 +21,4 @@ module load kma/1.2.22-intel-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|kma/1.2.22-intel-2019b|-|x|x|-|x|-|-|
+|kma/1.2.22-intel-2019b|-|x|x|-|-|-|-|

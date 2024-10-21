@@ -21,4 +21,4 @@ module load VMD/1.9.4a51-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VMD/1.9.4a51-foss-2020b|-|x|x|x|x|-|-|
+|VMD/1.9.4a51-foss-2020b|-|x|x|x|-|-|-|

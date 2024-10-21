@@ -21,4 +21,4 @@ module load CheckM-Database/2015_01_16
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CheckM-Database/2015_01_16|x|x|x|x|x|x|-|
+|CheckM-Database/2015_01_16|x|x|x|x|-|x|-|

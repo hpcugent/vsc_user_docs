@@ -21,4 +21,4 @@ module load SRST2/0.2.0-20210620-foss-2020b-Python-2.7.18
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SRST2/0.2.0-20210620-foss-2020b-Python-2.7.18|-|x|x|x|x|-|-|
+|SRST2/0.2.0-20210620-foss-2020b-Python-2.7.18|-|x|x|x|-|-|-|

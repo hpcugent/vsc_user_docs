@@ -21,4 +21,4 @@ module load GATB-Core/1.4.2-gompi-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GATB-Core/1.4.2-gompi-2022a|x|x|x|x|x|-|-|
+|GATB-Core/1.4.2-gompi-2022a|x|x|x|x|-|-|-|

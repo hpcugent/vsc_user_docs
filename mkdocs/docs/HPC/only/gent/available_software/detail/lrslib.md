@@ -21,4 +21,4 @@ module load lrslib/7.2-gompi-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|lrslib/7.2-gompi-2023b|x|x|x|x|x|x|x|
+|lrslib/7.2-gompi-2023b|x|x|x|x|-|x|x|

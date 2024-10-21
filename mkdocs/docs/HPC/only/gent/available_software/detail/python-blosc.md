@@ -21,4 +21,4 @@ module load python-blosc/1.11.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|python-blosc/1.11.0-foss-2023a|x|x|x|x|x|x|x|
+|python-blosc/1.11.0-foss-2023a|x|x|x|x|-|x|x|

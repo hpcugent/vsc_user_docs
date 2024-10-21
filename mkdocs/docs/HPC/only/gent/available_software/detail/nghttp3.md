@@ -21,4 +21,4 @@ module load nghttp3/0.6.0-GCCcore-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nghttp3/0.6.0-GCCcore-11.2.0|x|x|x|x|x|-|-|
+|nghttp3/0.6.0-GCCcore-11.2.0|x|x|x|x|-|-|-|

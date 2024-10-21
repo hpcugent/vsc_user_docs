@@ -21,4 +21,4 @@ module load LiBis/20200428-foss-2019b-Python-3.7.4
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LiBis/20200428-foss-2019b-Python-3.7.4|-|x|x|-|x|-|-|
+|LiBis/20200428-foss-2019b-Python-3.7.4|-|x|x|-|-|-|-|

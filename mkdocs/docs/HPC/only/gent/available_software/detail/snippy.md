@@ -21,4 +21,4 @@ module load snippy/4.6.0-GCC-10.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|snippy/4.6.0-GCC-10.2.0|-|x|x|-|x|-|-|
+|snippy/4.6.0-GCC-10.2.0|-|x|x|-|-|-|-|

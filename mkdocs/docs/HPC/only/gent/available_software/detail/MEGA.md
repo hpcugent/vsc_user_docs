@@ -21,4 +21,4 @@ module load MEGA/11.0.10
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MEGA/11.0.10|-|x|x|-|x|-|-|
+|MEGA/11.0.10|-|x|x|-|-|-|-|

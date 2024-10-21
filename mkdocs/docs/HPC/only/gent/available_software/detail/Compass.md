@@ -21,4 +21,4 @@ module load Compass/2024.04-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Compass/2024.04-foss-2021b|x|x|x|x|x|-|-|
+|Compass/2024.04-foss-2021b|x|x|x|x|-|-|-|

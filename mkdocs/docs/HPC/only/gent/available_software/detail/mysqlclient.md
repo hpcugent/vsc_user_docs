@@ -21,4 +21,4 @@ module load mysqlclient/2.1.1-foss-2021a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mysqlclient/2.1.1-foss-2021a|x|x|x|-|x|-|-|
+|mysqlclient/2.1.1-foss-2021a|x|x|x|-|-|-|-|

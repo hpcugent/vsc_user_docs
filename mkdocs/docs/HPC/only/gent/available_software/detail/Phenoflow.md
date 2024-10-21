@@ -21,4 +21,4 @@ module load Phenoflow/1.1.2-20200917-foss-2022a-R-4.2.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Phenoflow/1.1.2-20200917-foss-2022a-R-4.2.1|x|x|x|x|x|-|-|
+|Phenoflow/1.1.2-20200917-foss-2022a-R-4.2.1|x|x|x|x|-|-|-|

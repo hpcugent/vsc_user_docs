@@ -21,4 +21,4 @@ module load mcu/2021-04-06-gomkl-2021a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mcu/2021-04-06-gomkl-2021a|x|x|x|-|x|-|-|
+|mcu/2021-04-06-gomkl-2021a|x|x|x|-|-|-|-|

@@ -21,5 +21,5 @@ module load python-louvain/0.16-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|python-louvain/0.16-foss-2023a|x|x|x|x|x|x|x|
-|python-louvain/0.16-foss-2022a|x|x|x|x|x|-|-|
+|python-louvain/0.16-foss-2023a|x|x|x|x|-|x|x|
+|python-louvain/0.16-foss-2022a|x|x|x|x|-|-|-|

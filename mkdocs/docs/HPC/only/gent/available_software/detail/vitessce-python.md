@@ -21,4 +21,4 @@ module load vitessce-python/20230222-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|vitessce-python/20230222-foss-2022a|x|x|x|x|x|-|-|
+|vitessce-python/20230222-foss-2022a|x|x|x|x|-|-|-|

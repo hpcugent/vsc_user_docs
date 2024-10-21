@@ -21,4 +21,4 @@ module load metaWRAP/1.3-foss-2020b-Python-2.7.18
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|metaWRAP/1.3-foss-2020b-Python-2.7.18|-|x|x|x|x|-|-|
+|metaWRAP/1.3-foss-2020b-Python-2.7.18|-|x|x|x|-|-|-|

@@ -21,5 +21,5 @@ module load PuLP/2.8.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PuLP/2.8.0-foss-2023a|x|x|x|x|x|x|x|
-|PuLP/2.7.0-foss-2022b|x|x|x|x|x|-|-|
+|PuLP/2.8.0-foss-2023a|x|x|x|x|-|x|x|
+|PuLP/2.7.0-foss-2022b|x|x|x|x|-|-|-|

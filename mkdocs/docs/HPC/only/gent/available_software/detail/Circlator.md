@@ -21,4 +21,4 @@ module load Circlator/1.5.5-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Circlator/1.5.5-foss-2023a|x|x|x|x|x|x|x|
+|Circlator/1.5.5-foss-2023a|x|x|x|x|-|x|x|

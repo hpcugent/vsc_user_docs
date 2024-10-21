@@ -21,4 +21,4 @@ module load SeuratWrappers/20210528-foss-2020b-R-4.0.3
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SeuratWrappers/20210528-foss-2020b-R-4.0.3|-|x|x|x|x|-|-|
+|SeuratWrappers/20210528-foss-2020b-R-4.0.3|-|x|x|x|-|-|-|

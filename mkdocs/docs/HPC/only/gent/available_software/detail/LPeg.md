@@ -21,4 +21,4 @@ module load LPeg/1.0.2-GCCcore-10.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LPeg/1.0.2-GCCcore-10.2.0|-|x|x|-|x|-|-|
+|LPeg/1.0.2-GCCcore-10.2.0|-|x|x|-|-|-|-|

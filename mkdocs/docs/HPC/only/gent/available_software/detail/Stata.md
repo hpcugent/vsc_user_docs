@@ -21,4 +21,4 @@ module load Stata/15
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Stata/15|-|x|x|x|x|-|-|
+|Stata/15|-|x|x|x|-|-|-|

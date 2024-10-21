@@ -21,4 +21,4 @@ module load CREST/2.12-gfbf-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CREST/2.12-gfbf-2023a|x|x|x|x|x|x|x|
+|CREST/2.12-gfbf-2023a|x|x|x|x|-|x|x|

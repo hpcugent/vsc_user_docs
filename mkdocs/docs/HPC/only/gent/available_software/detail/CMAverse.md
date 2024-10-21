@@ -21,4 +21,4 @@ module load CMAverse/20220112-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CMAverse/20220112-foss-2021b|x|x|x|-|x|-|-|
+|CMAverse/20220112-foss-2021b|x|x|x|-|-|-|-|

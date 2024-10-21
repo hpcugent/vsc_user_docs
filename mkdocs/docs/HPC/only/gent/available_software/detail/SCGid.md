@@ -21,4 +21,4 @@ module load SCGid/0.9b0-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SCGid/0.9b0-foss-2021b|x|x|x|-|x|-|-|
+|SCGid/0.9b0-foss-2021b|x|x|x|-|-|-|-|

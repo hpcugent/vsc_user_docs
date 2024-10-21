@@ -21,5 +21,5 @@ module load LIBSVM/3.30-GCCcore-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LIBSVM/3.30-GCCcore-11.3.0|x|x|x|x|x|-|-|
-|LIBSVM/3.25-GCCcore-10.2.0|x|x|x|x|x|-|-|
+|LIBSVM/3.30-GCCcore-11.3.0|x|x|x|x|-|-|-|
+|LIBSVM/3.25-GCCcore-10.2.0|x|x|x|x|-|-|-|

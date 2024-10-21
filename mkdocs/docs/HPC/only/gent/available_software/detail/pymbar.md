@@ -21,4 +21,4 @@ module load pymbar/3.0.3-intel-2020a-Python-3.8.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pymbar/3.0.3-intel-2020a-Python-3.8.2|-|x|x|-|x|-|-|
+|pymbar/3.0.3-intel-2020a-Python-3.8.2|-|x|x|-|-|-|-|

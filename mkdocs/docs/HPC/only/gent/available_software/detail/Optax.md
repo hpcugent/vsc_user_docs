@@ -23,4 +23,4 @@ module load Optax/0.2.2-gfbf-2023a-CUDA-12.1.1
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Optax/0.2.2-gfbf-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
 |Optax/0.2.2-gfbf-2023a|x|x|x|x|-|x|x|
-|Optax/0.2.2-foss-2023a|x|x|x|x|x|x|-|
+|Optax/0.2.2-foss-2023a|x|x|x|x|-|x|-|

@@ -21,4 +21,4 @@ module load CheckM2/1.0.2-foss-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CheckM2/1.0.2-foss-2022b|x|x|x|x|x|-|-|
+|CheckM2/1.0.2-foss-2022b|x|x|x|x|-|-|-|

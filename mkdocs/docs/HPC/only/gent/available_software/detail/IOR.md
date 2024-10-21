@@ -21,4 +21,4 @@ module load IOR/3.2.1-gompi-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|IOR/3.2.1-gompi-2019b|-|x|x|-|x|-|-|
+|IOR/3.2.1-gompi-2019b|-|x|x|-|-|-|-|

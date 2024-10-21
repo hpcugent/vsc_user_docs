@@ -21,5 +21,5 @@ module load DIANA/10.5
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DIANA/10.5|-|x|x|-|x|-|-|
-|DIANA/10.4|-|-|x|-|x|-|-|
+|DIANA/10.5|-|x|x|-|-|-|-|
+|DIANA/10.4|-|-|x|-|-|-|-|

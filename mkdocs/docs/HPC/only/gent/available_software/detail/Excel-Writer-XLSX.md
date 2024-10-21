@@ -21,4 +21,4 @@ module load Excel-Writer-XLSX/1.09-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Excel-Writer-XLSX/1.09-foss-2020b|-|x|x|x|x|-|-|
+|Excel-Writer-XLSX/1.09-foss-2020b|-|x|x|x|-|-|-|

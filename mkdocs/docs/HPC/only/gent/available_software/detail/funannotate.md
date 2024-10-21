@@ -21,4 +21,4 @@ module load funannotate/1.8.13-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|funannotate/1.8.13-foss-2021b|x|x|x|x|x|-|-|
+|funannotate/1.8.13-foss-2021b|x|x|x|x|-|-|-|

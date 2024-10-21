@@ -21,4 +21,4 @@ module load DensPart/20220603-intel-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DensPart/20220603-intel-2022a|x|x|x|x|x|-|-|
+|DensPart/20220603-intel-2022a|x|x|x|x|-|-|-|

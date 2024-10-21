@@ -21,4 +21,4 @@ module load MinCED/0.4.2-GCCcore-8.3.0-Java-11
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MinCED/0.4.2-GCCcore-8.3.0-Java-11|-|x|x|-|x|-|-|
+|MinCED/0.4.2-GCCcore-8.3.0-Java-11|-|x|x|-|-|-|-|

@@ -21,5 +21,5 @@ module load cdbfasta/0.99-iccifort-2019.5.281
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cdbfasta/0.99-iccifort-2019.5.281|-|x|x|-|x|-|-|
-|cdbfasta/0.99-GCC-8.3.0|-|x|x|-|x|-|-|
+|cdbfasta/0.99-iccifort-2019.5.281|-|x|x|-|-|-|-|
+|cdbfasta/0.99-GCC-8.3.0|-|x|x|-|-|-|-|

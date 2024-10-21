@@ -21,4 +21,4 @@ module load RnBeads/2.6.0-foss-2020a-R-4.0.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RnBeads/2.6.0-foss-2020a-R-4.0.0|-|x|x|-|x|-|-|
+|RnBeads/2.6.0-foss-2020a-R-4.0.0|-|x|x|-|-|-|-|

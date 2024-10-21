@@ -21,4 +21,4 @@ module load MIGRATE-N/5.0.4-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MIGRATE-N/5.0.4-foss-2021b|x|x|x|-|x|-|-|
+|MIGRATE-N/5.0.4-foss-2021b|x|x|x|-|-|-|-|

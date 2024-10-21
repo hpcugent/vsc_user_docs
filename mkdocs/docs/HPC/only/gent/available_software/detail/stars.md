@@ -21,4 +21,4 @@ module load stars/0.4-3-foss-2020a-R-4.0.0-Python-3.8.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|stars/0.4-3-foss-2020a-R-4.0.0-Python-3.8.2|-|x|x|-|x|-|-|
+|stars/0.4-3-foss-2020a-R-4.0.0-Python-3.8.2|-|x|x|-|-|-|-|

@@ -21,4 +21,4 @@ module load TranscriptClean/2.0.2-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TranscriptClean/2.0.2-foss-2020b|-|x|x|x|x|-|-|
+|TranscriptClean/2.0.2-foss-2020b|-|x|x|x|-|-|-|

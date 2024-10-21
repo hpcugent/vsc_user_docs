@@ -21,4 +21,4 @@ module load z5py/2.0.17-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|z5py/2.0.17-foss-2023a|x|x|x|x|x|x|x|
+|z5py/2.0.17-foss-2023a|x|x|x|x|-|x|x|

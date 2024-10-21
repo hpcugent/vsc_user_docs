@@ -21,4 +21,4 @@ module load shovill/1.1.0-gompi-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|shovill/1.1.0-gompi-2021b|x|x|x|-|x|-|-|
+|shovill/1.1.0-gompi-2021b|x|x|x|-|-|-|-|

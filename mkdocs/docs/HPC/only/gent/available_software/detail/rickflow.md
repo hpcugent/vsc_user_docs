@@ -21,5 +21,5 @@ module load rickflow/0.7.0-intel-2019b-Python-3.7.4
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rickflow/0.7.0-intel-2019b-Python-3.7.4|-|x|x|-|x|-|-|
-|rickflow/0.7.0-20200529-intel-2019b-Python-3.7.4|-|x|x|-|x|-|-|
+|rickflow/0.7.0-intel-2019b-Python-3.7.4|-|x|x|-|-|-|-|
+|rickflow/0.7.0-20200529-intel-2019b-Python-3.7.4|-|x|x|-|-|-|-|

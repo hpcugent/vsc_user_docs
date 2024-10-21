@@ -21,4 +21,4 @@ module load Amber/22.4-foss-2022a-AmberTools-22.5-CUDA-11.7.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Amber/22.4-foss-2022a-AmberTools-22.5-CUDA-11.7.0|x|-|-|-|x|-|-|
+|Amber/22.4-foss-2022a-AmberTools-22.5-CUDA-11.7.0|x|-|-|-|-|-|-|

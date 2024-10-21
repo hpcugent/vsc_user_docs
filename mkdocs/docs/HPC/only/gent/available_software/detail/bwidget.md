@@ -21,4 +21,4 @@ module load bwidget/1.9.15-GCCcore-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bwidget/1.9.15-GCCcore-11.3.0|x|x|x|x|x|-|-|
+|bwidget/1.9.15-GCCcore-11.3.0|x|x|x|x|-|-|-|

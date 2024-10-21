@@ -22,9 +22,9 @@ module load dill/0.3.7-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |dill/0.3.7-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|dill/0.3.7-GCCcore-12.2.0|x|x|x|x|x|x|-|
-|dill/0.3.6-GCCcore-11.3.0|x|x|x|x|x|-|-|
-|dill/0.3.4-GCCcore-11.2.0|x|x|x|x|x|-|-|
-|dill/0.3.4-GCCcore-10.3.0|x|x|x|-|x|-|-|
-|dill/0.3.3-GCCcore-10.2.0|-|x|x|x|x|-|-|
+|dill/0.3.7-GCCcore-12.2.0|x|x|x|x|-|x|-|
+|dill/0.3.6-GCCcore-11.3.0|x|x|x|x|-|-|-|
+|dill/0.3.4-GCCcore-11.2.0|x|x|x|x|-|-|-|
+|dill/0.3.4-GCCcore-10.3.0|x|x|x|-|-|-|-|
+|dill/0.3.3-GCCcore-10.2.0|-|x|x|x|-|-|-|
 |dill/0.3.3-GCCcore-9.3.0|-|x|x|-|-|-|-|

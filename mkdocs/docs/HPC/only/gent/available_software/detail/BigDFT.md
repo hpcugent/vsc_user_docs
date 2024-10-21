@@ -21,4 +21,4 @@ module load BigDFT/1.9.1-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BigDFT/1.9.1-foss-2021b|x|x|x|-|x|-|-|
+|BigDFT/1.9.1-foss-2021b|x|x|x|-|-|-|-|

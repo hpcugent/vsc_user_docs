@@ -21,4 +21,4 @@ module load scikit-extremes/2022.4.10-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scikit-extremes/2022.4.10-foss-2022a|x|x|x|x|x|-|-|
+|scikit-extremes/2022.4.10-foss-2022a|x|x|x|x|-|-|-|

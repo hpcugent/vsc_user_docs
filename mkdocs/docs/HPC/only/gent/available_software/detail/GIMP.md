@@ -21,4 +21,4 @@ module load GIMP/2.10.24-GCC-10.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GIMP/2.10.24-GCC-10.3.0|-|x|x|-|x|-|-|
+|GIMP/2.10.24-GCC-10.3.0|-|x|x|-|-|-|-|

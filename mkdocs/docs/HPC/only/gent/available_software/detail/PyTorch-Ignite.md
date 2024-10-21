@@ -21,4 +21,4 @@ module load PyTorch-Ignite/0.4.12-foss-2022a-CUDA-11.7.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyTorch-Ignite/0.4.12-foss-2022a-CUDA-11.7.0|x|-|-|-|x|-|-|
+|PyTorch-Ignite/0.4.12-foss-2022a-CUDA-11.7.0|x|-|-|-|-|-|-|

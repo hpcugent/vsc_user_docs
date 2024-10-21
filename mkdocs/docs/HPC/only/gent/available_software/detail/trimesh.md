@@ -21,4 +21,4 @@ module load trimesh/3.17.1-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|trimesh/3.17.1-foss-2022a|x|x|x|x|x|x|-|
+|trimesh/3.17.1-foss-2022a|x|x|x|x|-|x|-|

@@ -21,6 +21,6 @@ module load ParMGridGen/1.0-iimpi-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ParMGridGen/1.0-iimpi-2019b|-|x|x|-|x|-|-|
-|ParMGridGen/1.0-gompi-2023a|x|x|x|x|x|x|x|
-|ParMGridGen/1.0-gompi-2019b|-|x|x|-|x|-|-|
+|ParMGridGen/1.0-iimpi-2019b|-|x|x|-|-|-|-|
+|ParMGridGen/1.0-gompi-2023a|x|x|x|x|-|x|x|
+|ParMGridGen/1.0-gompi-2019b|-|x|x|-|-|-|-|

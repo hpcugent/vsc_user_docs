@@ -21,4 +21,4 @@ module load detectron2/0.6-foss-2021a-CUDA-11.3.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|detectron2/0.6-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|-|
+|detectron2/0.6-foss-2021a-CUDA-11.3.1|x|-|-|-|-|-|-|

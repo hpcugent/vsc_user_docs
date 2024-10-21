@@ -21,4 +21,4 @@ module load ngmlr/0.2.7-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ngmlr/0.2.7-foss-2023a|x|x|x|x|x|x|x|
+|ngmlr/0.2.7-foss-2023a|x|x|x|x|-|x|x|

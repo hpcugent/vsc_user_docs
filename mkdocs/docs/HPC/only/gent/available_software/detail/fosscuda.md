@@ -21,4 +21,4 @@ module load fosscuda/2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fosscuda/2020b|x|-|-|-|x|-|-|
+|fosscuda/2020b|x|-|-|-|-|-|-|

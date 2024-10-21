@@ -21,4 +21,4 @@ module load BatMeth2/2.1-foss-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BatMeth2/2.1-foss-2019b|-|x|x|-|x|-|-|
+|BatMeth2/2.1-foss-2019b|-|x|x|-|-|-|-|

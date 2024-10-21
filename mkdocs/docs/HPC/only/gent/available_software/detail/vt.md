@@ -21,4 +21,4 @@ module load vt/0.57721-GCC-10.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|vt/0.57721-GCC-10.2.0|-|x|x|-|x|-|-|
+|vt/0.57721-GCC-10.2.0|-|x|x|-|-|-|-|

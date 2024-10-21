@@ -21,5 +21,5 @@ module load imutils/0.5.4-fosscuda-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|imutils/0.5.4-fosscuda-2020b|x|-|-|-|x|-|-|
-|imutils/0.5.4-foss-2022a-CUDA-11.7.0|x|-|x|-|x|-|-|
+|imutils/0.5.4-fosscuda-2020b|x|-|-|-|-|-|-|
+|imutils/0.5.4-foss-2022a-CUDA-11.7.0|x|-|x|-|-|-|-|

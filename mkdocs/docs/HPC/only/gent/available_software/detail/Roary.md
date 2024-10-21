@@ -21,4 +21,4 @@ module load Roary/3.13.0-foss-2020a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Roary/3.13.0-foss-2020a|-|x|x|-|x|-|-|
+|Roary/3.13.0-foss-2020a|-|x|x|-|-|-|-|

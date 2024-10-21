@@ -21,4 +21,4 @@ module load MetaPhlAn/4.0.6-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MetaPhlAn/4.0.6-foss-2022a|x|x|x|x|x|-|-|
+|MetaPhlAn/4.0.6-foss-2022a|x|x|x|x|-|-|-|

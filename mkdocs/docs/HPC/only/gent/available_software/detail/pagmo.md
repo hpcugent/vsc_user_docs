@@ -21,4 +21,4 @@ module load pagmo/2.17.0-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pagmo/2.17.0-foss-2020b|-|x|x|x|x|-|-|
+|pagmo/2.17.0-foss-2020b|-|x|x|x|-|-|-|

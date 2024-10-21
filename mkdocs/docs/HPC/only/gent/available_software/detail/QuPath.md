@@ -21,4 +21,4 @@ module load QuPath/0.5.0-GCCcore-12.3.0-Java-17
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|QuPath/0.5.0-GCCcore-12.3.0-Java-17|x|x|x|x|x|-|-|
+|QuPath/0.5.0-GCCcore-12.3.0-Java-17|x|x|x|x|-|-|-|

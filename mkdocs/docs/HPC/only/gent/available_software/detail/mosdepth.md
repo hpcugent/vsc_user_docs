@@ -21,4 +21,4 @@ module load mosdepth/0.3.3-GCC-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mosdepth/0.3.3-GCC-11.2.0|x|x|x|-|x|-|-|
+|mosdepth/0.3.3-GCC-11.2.0|x|x|x|-|-|-|-|

@@ -21,4 +21,4 @@ module load gotree/0.4.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gotree/0.4.0|-|-|x|-|x|-|-|
+|gotree/0.4.0|-|-|x|-|-|-|-|

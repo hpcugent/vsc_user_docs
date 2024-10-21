@@ -21,4 +21,4 @@ module load eSpeak-NG/1.50-gompi-2020a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|eSpeak-NG/1.50-gompi-2020a|-|x|x|-|x|-|-|
+|eSpeak-NG/1.50-gompi-2020a|-|x|x|-|-|-|-|

@@ -21,4 +21,4 @@ module load DMCfun/1.3.0-foss-2019b-R-3.6.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DMCfun/1.3.0-foss-2019b-R-3.6.2|-|x|x|-|x|-|-|
+|DMCfun/1.3.0-foss-2019b-R-3.6.2|-|x|x|-|-|-|-|

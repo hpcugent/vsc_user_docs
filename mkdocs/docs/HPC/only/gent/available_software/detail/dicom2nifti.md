@@ -21,5 +21,5 @@ module load dicom2nifti/2.3.0-fosscuda-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|dicom2nifti/2.3.0-fosscuda-2020b|x|-|-|-|x|-|-|
-|dicom2nifti/2.3.0-foss-2020b|-|x|x|x|x|-|-|
+|dicom2nifti/2.3.0-fosscuda-2020b|x|-|-|-|-|-|-|
+|dicom2nifti/2.3.0-foss-2020b|-|x|x|x|-|-|-|

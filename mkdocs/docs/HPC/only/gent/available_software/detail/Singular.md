@@ -21,4 +21,4 @@ module load Singular/4.4.0-gfbf-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Singular/4.4.0-gfbf-2023b|x|x|x|x|x|x|x|
+|Singular/4.4.0-gfbf-2023b|x|x|x|x|-|x|x|

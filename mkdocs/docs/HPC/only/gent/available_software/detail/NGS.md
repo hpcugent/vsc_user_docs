@@ -21,7 +21,7 @@ module load NGS/2.11.2-GCCcore-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NGS/2.11.2-GCCcore-11.2.0|x|x|x|x|x|-|-|
-|NGS/2.10.9-GCCcore-10.2.0|-|x|x|x|x|-|-|
-|NGS/2.10.5-GCCcore-9.3.0|-|x|x|-|x|-|-|
-|NGS/2.10.4-GCCcore-8.3.0-Java-11|-|x|x|-|x|-|-|
+|NGS/2.11.2-GCCcore-11.2.0|x|x|x|x|-|-|-|
+|NGS/2.10.9-GCCcore-10.2.0|-|x|x|x|-|-|-|
+|NGS/2.10.5-GCCcore-9.3.0|-|x|x|-|-|-|-|
+|NGS/2.10.4-GCCcore-8.3.0-Java-11|-|x|x|-|-|-|-|

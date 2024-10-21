@@ -21,5 +21,5 @@ module load smooth-topk/1.0-20210817-foss-2021a-CUDA-11.3.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|smooth-topk/1.0-20210817-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|-|
-|smooth-topk/1.0-20210817-foss-2021a|-|x|x|-|x|-|-|
+|smooth-topk/1.0-20210817-foss-2021a-CUDA-11.3.1|x|-|-|-|-|-|-|
+|smooth-topk/1.0-20210817-foss-2021a|-|x|x|-|-|-|-|

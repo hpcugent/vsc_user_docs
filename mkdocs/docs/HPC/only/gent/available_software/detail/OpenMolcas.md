@@ -21,5 +21,5 @@ module load OpenMolcas/21.06-iomkl-2021a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenMolcas/21.06-iomkl-2021a|x|x|x|x|x|-|-|
-|OpenMolcas/21.06-intel-2021a|-|x|x|-|x|-|-|
+|OpenMolcas/21.06-iomkl-2021a|x|x|x|x|-|-|-|
+|OpenMolcas/21.06-intel-2021a|-|x|x|-|-|-|-|

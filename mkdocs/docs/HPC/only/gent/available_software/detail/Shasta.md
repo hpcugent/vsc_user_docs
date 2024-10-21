@@ -21,4 +21,4 @@ module load Shasta/0.8.0-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Shasta/0.8.0-foss-2020b|-|x|x|x|x|-|-|
+|Shasta/0.8.0-foss-2020b|-|x|x|x|-|-|-|

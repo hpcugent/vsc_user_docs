@@ -21,4 +21,4 @@ module load Dakota/6.16.0-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Dakota/6.16.0-foss-2021b|x|x|x|-|x|-|-|
+|Dakota/6.16.0-foss-2021b|x|x|x|-|-|-|-|

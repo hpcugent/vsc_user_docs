@@ -21,4 +21,4 @@ module load vsc-venv/1.0.6
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|vsc-venv/1.0.6|x|x|x|x|x|x|x|
+|vsc-venv/1.0.6|x|x|x|x|-|x|x|

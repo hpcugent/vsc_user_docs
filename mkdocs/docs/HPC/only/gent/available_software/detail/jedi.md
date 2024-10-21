@@ -21,4 +21,4 @@ module load jedi/0.19.1-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|jedi/0.19.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|jedi/0.19.1-GCCcore-13.2.0|x|x|x|x|-|x|x|

@@ -23,4 +23,4 @@ module load Pint/0.24-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Pint/0.24-GCCcore-13.2.0|-|-|-|-|-|-|x|
 |Pint/0.23-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|Pint/0.22-GCCcore-11.3.0|x|x|x|x|x|-|-|
+|Pint/0.22-GCCcore-11.3.0|x|x|x|x|-|-|-|

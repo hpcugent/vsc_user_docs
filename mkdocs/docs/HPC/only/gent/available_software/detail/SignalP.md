@@ -21,6 +21,6 @@ module load SignalP/6.0h-foss-2023a-fast
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SignalP/6.0h-foss-2023a-fast|x|x|x|x|x|x|x|
+|SignalP/6.0h-foss-2023a-fast|x|x|x|x|-|x|x|
 |SignalP/6.0h-foss-2023a-CUDA-12.1.1-fast|x|-|x|-|x|-|-|
-|SignalP/6.0g-foss-2021b-fast|x|x|x|x|x|-|-|
+|SignalP/6.0g-foss-2021b-fast|x|x|x|x|-|-|-|

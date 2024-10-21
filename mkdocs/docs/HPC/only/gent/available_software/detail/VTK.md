@@ -21,15 +21,15 @@ module load VTK/9.3.0-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VTK/9.3.0-foss-2023b|x|x|x|x|x|x|x|
+|VTK/9.3.0-foss-2023b|x|x|x|x|-|x|x|
 |VTK/9.3.0-foss-2023a|x|x|x|x|x|x|x|
-|VTK/9.2.6-foss-2023a|x|x|x|x|x|x|x|
-|VTK/9.2.2-foss-2022a|x|x|x|x|x|-|-|
-|VTK/9.2.0.rc2-foss-2022a|x|x|x|-|x|-|-|
-|VTK/9.1.0-foss-2021b|x|x|x|-|x|-|-|
-|VTK/9.0.1-fosscuda-2020b|x|-|-|-|x|-|-|
-|VTK/9.0.1-foss-2021a|-|x|x|-|x|-|-|
-|VTK/9.0.1-foss-2020b|-|x|x|x|x|-|-|
-|VTK/8.2.0-foss-2020a-Python-3.8.2|-|x|x|-|x|-|-|
-|VTK/8.2.0-foss-2019b-Python-3.7.4|-|x|x|-|x|-|-|
-|VTK/8.2.0-foss-2019b-Python-2.7.16|-|x|x|-|x|-|-|
+|VTK/9.2.6-foss-2023a|x|x|x|x|-|x|x|
+|VTK/9.2.2-foss-2022a|x|x|x|x|-|-|-|
+|VTK/9.2.0.rc2-foss-2022a|x|x|x|-|-|-|-|
+|VTK/9.1.0-foss-2021b|x|x|x|-|-|-|-|
+|VTK/9.0.1-fosscuda-2020b|x|-|-|-|-|-|-|
+|VTK/9.0.1-foss-2021a|-|x|x|-|-|-|-|
+|VTK/9.0.1-foss-2020b|-|x|x|x|-|-|-|
+|VTK/8.2.0-foss-2020a-Python-3.8.2|-|x|x|-|-|-|-|
+|VTK/8.2.0-foss-2019b-Python-3.7.4|-|x|x|-|-|-|-|
+|VTK/8.2.0-foss-2019b-Python-2.7.16|-|x|x|-|-|-|-|

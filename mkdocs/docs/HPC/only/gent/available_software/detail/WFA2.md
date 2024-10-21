@@ -21,5 +21,5 @@ module load WFA2/2.3.4-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|WFA2/2.3.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|WFA2/2.3.3-GCCcore-11.3.0|x|x|x|x|x|-|-|
+|WFA2/2.3.4-GCCcore-12.3.0|x|x|x|x|-|x|x|
+|WFA2/2.3.3-GCCcore-11.3.0|x|x|x|x|-|-|-|

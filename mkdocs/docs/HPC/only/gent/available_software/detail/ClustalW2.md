@@ -21,4 +21,4 @@ module load ClustalW2/2.1-intel-2020a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ClustalW2/2.1-intel-2020a|-|x|x|-|x|-|-|
+|ClustalW2/2.1-intel-2020a|-|x|x|-|-|-|-|

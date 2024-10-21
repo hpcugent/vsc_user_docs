@@ -21,4 +21,4 @@ module load sbt/1.3.13-Java-1.8
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|sbt/1.3.13-Java-1.8|-|-|x|-|x|-|-|
+|sbt/1.3.13-Java-1.8|-|-|x|-|-|-|-|

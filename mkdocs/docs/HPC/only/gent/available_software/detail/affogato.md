@@ -21,4 +21,4 @@ module load affogato/0.3.3-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|affogato/0.3.3-foss-2023a|x|x|x|x|x|x|x|
+|affogato/0.3.3-foss-2023a|x|x|x|x|-|x|x|

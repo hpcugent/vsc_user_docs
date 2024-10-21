@@ -21,4 +21,4 @@ module load pugixml/1.12.1-GCCcore-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pugixml/1.12.1-GCCcore-11.2.0|x|x|x|x|x|-|-|
+|pugixml/1.12.1-GCCcore-11.2.0|x|x|x|x|-|-|-|

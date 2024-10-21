@@ -21,6 +21,6 @@ module load ABINIT/9.10.3-intel-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ABINIT/9.10.3-intel-2022a|-|-|x|-|x|-|-|
-|ABINIT/9.4.1-intel-2020b|-|x|x|x|x|-|-|
-|ABINIT/9.2.1-intel-2020a|-|x|x|-|x|-|-|
+|ABINIT/9.10.3-intel-2022a|-|-|x|-|-|-|-|
+|ABINIT/9.4.1-intel-2020b|-|x|x|x|-|-|-|
+|ABINIT/9.2.1-intel-2020a|-|x|x|-|-|-|-|

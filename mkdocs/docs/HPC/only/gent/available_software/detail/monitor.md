@@ -21,4 +21,4 @@ module load monitor/1.1.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|monitor/1.1.2|-|x|x|-|x|-|-|
+|monitor/1.1.2|-|x|x|-|-|-|-|

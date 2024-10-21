@@ -21,4 +21,4 @@ module load smafa/0.8.0-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|smafa/0.8.0-GCC-12.3.0|x|x|x|x|x|x|x|
+|smafa/0.8.0-GCC-12.3.0|x|x|x|x|-|x|x|

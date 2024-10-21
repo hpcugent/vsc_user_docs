@@ -22,9 +22,8 @@ module load ITK/5.3.0-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ITK/5.3.0-foss-2023a|x|x|x|x|x|x|x|
-|ITK/5.2.1-fosscuda-2020b|x|-|-|-|x|-|-|
-|ITK/5.2.1-foss-2022a|x|x|x|x|x|-|-|
-|ITK/5.2.1-foss-2020b|-|x|x|x|x|-|-|
-|ITK/5.1.2-fosscuda-2020b|-|-|-|-|x|-|-|
-|ITK/5.0.1-foss-2019b-Python-3.7.4|-|x|x|-|x|-|-|
-|ITK/4.13.1-foss-2019b-Python-3.7.4|-|x|x|-|x|-|-|
+|ITK/5.2.1-fosscuda-2020b|x|-|-|-|-|-|-|
+|ITK/5.2.1-foss-2022a|x|x|x|x|-|-|-|
+|ITK/5.2.1-foss-2020b|-|x|x|x|-|-|-|
+|ITK/5.0.1-foss-2019b-Python-3.7.4|-|x|x|-|-|-|-|
+|ITK/4.13.1-foss-2019b-Python-3.7.4|-|x|x|-|-|-|-|

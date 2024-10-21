@@ -21,5 +21,5 @@ module load GffCompare/0.12.6-GCC-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GffCompare/0.12.6-GCC-11.2.0|x|x|x|x|x|-|-|
-|GffCompare/0.11.6-GCCcore-8.3.0|-|x|x|-|x|-|-|
+|GffCompare/0.12.6-GCC-11.2.0|x|x|x|x|-|-|-|
+|GffCompare/0.11.6-GCCcore-8.3.0|-|x|x|-|-|-|-|

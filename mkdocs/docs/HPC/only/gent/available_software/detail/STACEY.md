@@ -21,4 +21,4 @@ module load STACEY/1.2.5-GCC-10.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|STACEY/1.2.5-GCC-10.2.0|-|x|x|-|x|-|-|
+|STACEY/1.2.5-GCC-10.2.0|-|x|x|-|-|-|-|

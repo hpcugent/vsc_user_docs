@@ -21,4 +21,4 @@ module load CIRIquant/1.1.2-20221201-foss-2021b-Python-2.7.18
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CIRIquant/1.1.2-20221201-foss-2021b-Python-2.7.18|x|x|x|x|x|-|-|
+|CIRIquant/1.1.2-20221201-foss-2021b-Python-2.7.18|x|x|x|x|-|-|-|

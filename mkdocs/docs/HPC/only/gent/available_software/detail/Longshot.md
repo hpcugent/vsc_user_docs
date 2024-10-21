@@ -21,7 +21,7 @@ module load Longshot/1.0.0-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Longshot/1.0.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|Longshot/0.4.5-GCCcore-11.3.0|x|x|x|x|x|-|-|
-|Longshot/0.4.3-GCCcore-10.2.0|-|-|x|-|x|-|-|
+|Longshot/1.0.0-GCCcore-12.3.0|x|x|x|x|-|x|x|
+|Longshot/0.4.5-GCCcore-11.3.0|x|x|x|x|-|-|-|
+|Longshot/0.4.3-GCCcore-10.2.0|-|-|x|-|-|-|-|
 |Longshot/0.4.1-GCCcore-8.3.0|-|x|-|-|-|-|-|

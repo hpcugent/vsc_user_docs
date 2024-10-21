@@ -21,4 +21,4 @@ module load PyKeOps/2.0-foss-2021a-CUDA-11.3.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyKeOps/2.0-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|-|
+|PyKeOps/2.0-foss-2021a-CUDA-11.3.1|x|-|-|-|-|-|-|

@@ -21,4 +21,4 @@ module load OpenCoarrays/2.8.0-gompi-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenCoarrays/2.8.0-gompi-2019b|-|x|x|-|x|-|-|
+|OpenCoarrays/2.8.0-gompi-2019b|-|x|x|-|-|-|-|

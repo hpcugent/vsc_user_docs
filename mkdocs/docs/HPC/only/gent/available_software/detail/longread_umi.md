@@ -21,5 +21,5 @@ module load longread_umi/0.3.2-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|longread_umi/0.3.2-foss-2023a|x|x|x|x|x|x|x|
-|longread_umi/0.3.2-foss-2020b|-|x|x|x|x|-|-|
+|longread_umi/0.3.2-foss-2023a|x|x|x|x|-|x|x|
+|longread_umi/0.3.2-foss-2020b|-|x|x|x|-|-|-|

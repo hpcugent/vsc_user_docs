@@ -21,4 +21,4 @@ module load MEGAN/6.25.3-Java-17
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MEGAN/6.25.3-Java-17|x|x|x|x|x|-|-|
+|MEGAN/6.25.3-Java-17|x|x|x|x|-|-|-|

@@ -21,4 +21,4 @@ module load PyInstaller/6.3.0-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyInstaller/6.3.0-GCCcore-12.3.0|x|x|x|x|x|-|x|
+|PyInstaller/6.3.0-GCCcore-12.3.0|x|x|x|x|-|-|x|

@@ -21,6 +21,5 @@ module load CUDAcore/11.2.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CUDAcore/11.2.1|x|-|x|-|x|-|-|
-|CUDAcore/11.1.1|x|x|x|x|x|-|-|
-|CUDAcore/11.0.2|-|-|-|-|x|-|-|
+|CUDAcore/11.2.1|x|-|x|-|-|-|-|
+|CUDAcore/11.1.1|x|x|x|x|-|-|-|

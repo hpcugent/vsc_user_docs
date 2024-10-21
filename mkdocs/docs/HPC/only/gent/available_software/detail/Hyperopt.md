@@ -21,5 +21,5 @@ module load Hyperopt/0.2.7-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Hyperopt/0.2.7-foss-2022a|x|x|x|x|x|-|-|
-|Hyperopt/0.2.7-foss-2021a|x|x|x|-|x|-|-|
+|Hyperopt/0.2.7-foss-2022a|x|x|x|x|-|-|-|
+|Hyperopt/0.2.7-foss-2021a|x|x|x|-|-|-|-|

@@ -21,4 +21,4 @@ module load TEtranscripts/2.2.0-foss-2020a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TEtranscripts/2.2.0-foss-2020a|-|x|x|-|x|-|-|
+|TEtranscripts/2.2.0-foss-2020a|-|x|x|-|-|-|-|

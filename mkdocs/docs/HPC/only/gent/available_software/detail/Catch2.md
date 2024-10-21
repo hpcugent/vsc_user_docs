@@ -21,7 +21,7 @@ module load Catch2/2.13.10-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Catch2/2.13.10-GCCcore-13.3.0|x|x|x|x|x|x|-|
+|Catch2/2.13.10-GCCcore-13.3.0|x|x|x|x|-|x|-|
 |Catch2/2.13.9-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Catch2/2.13.9-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|Catch2/2.13.9-GCCcore-12.2.0|x|x|x|x|x|x|-|
+|Catch2/2.13.9-GCCcore-12.2.0|x|x|x|x|-|x|-|

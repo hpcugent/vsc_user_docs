@@ -21,4 +21,4 @@ module load vaeda/0.0.30-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|vaeda/0.0.30-foss-2022a|x|x|x|x|x|-|-|
+|vaeda/0.0.30-foss-2022a|x|x|x|x|-|-|-|

@@ -21,4 +21,4 @@ module load PALM/23.10-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PALM/23.10-foss-2023a|x|x|x|x|x|x|x|
+|PALM/23.10-foss-2023a|x|x|x|x|-|x|x|

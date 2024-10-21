@@ -21,4 +21,4 @@ module load LevelDB/1.22-GCCcore-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LevelDB/1.22-GCCcore-11.3.0|x|x|x|x|x|-|-|
+|LevelDB/1.22-GCCcore-11.3.0|x|x|x|x|-|-|-|

@@ -21,4 +21,4 @@ module load Giotto-Suite/3.0.1-foss-2022a-R-4.2.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Giotto-Suite/3.0.1-foss-2022a-R-4.2.1|x|x|x|x|x|-|-|
+|Giotto-Suite/3.0.1-foss-2022a-R-4.2.1|x|x|x|x|-|-|-|

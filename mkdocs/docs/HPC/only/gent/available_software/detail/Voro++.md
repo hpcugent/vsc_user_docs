@@ -21,10 +21,10 @@ module load Voro++/0.4.6-intel-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Voro++/0.4.6-intel-2019b|-|x|x|-|x|-|-|
-|Voro++/0.4.6-foss-2019b|-|x|x|-|x|-|-|
-|Voro++/0.4.6-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|Voro++/0.4.6-intel-2019b|-|x|x|-|-|-|-|
+|Voro++/0.4.6-foss-2019b|-|x|x|-|-|-|-|
+|Voro++/0.4.6-GCCcore-13.2.0|x|x|x|x|-|x|x|
 |Voro++/0.4.6-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|Voro++/0.4.6-GCCcore-11.2.0|x|x|x|-|x|-|-|
-|Voro++/0.4.6-GCCcore-10.3.0|-|x|x|-|x|-|-|
-|Voro++/0.4.6-GCCcore-9.3.0|-|x|x|-|x|-|-|
+|Voro++/0.4.6-GCCcore-11.2.0|x|x|x|-|-|-|-|
+|Voro++/0.4.6-GCCcore-10.3.0|-|x|x|-|-|-|-|
+|Voro++/0.4.6-GCCcore-9.3.0|-|x|x|-|-|-|-|

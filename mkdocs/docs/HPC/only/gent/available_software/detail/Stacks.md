@@ -21,5 +21,5 @@ module load Stacks/2.53-iccifort-2019.5.281
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Stacks/2.53-iccifort-2019.5.281|-|x|x|-|x|-|-|
-|Stacks/2.5-iccifort-2019.5.281|-|x|x|-|x|-|-|
+|Stacks/2.53-iccifort-2019.5.281|-|x|x|-|-|-|-|
+|Stacks/2.5-iccifort-2019.5.281|-|x|x|-|-|-|-|

@@ -21,4 +21,4 @@ module load Calib/0.3.4-GCC-9.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Calib/0.3.4-GCC-9.3.0|-|x|x|-|x|-|-|
+|Calib/0.3.4-GCC-9.3.0|-|x|x|-|-|-|-|

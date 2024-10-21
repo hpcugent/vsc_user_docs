@@ -21,4 +21,4 @@ module load SMV/6.7.17-iccifort-2020.4.304
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SMV/6.7.17-iccifort-2020.4.304|-|x|x|-|x|-|-|
+|SMV/6.7.17-iccifort-2020.4.304|-|x|x|-|-|-|-|

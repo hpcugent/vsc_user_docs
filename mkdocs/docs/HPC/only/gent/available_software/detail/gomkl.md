@@ -21,6 +21,6 @@ module load gomkl/2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gomkl/2023a|x|x|x|x|x|x|x|
-|gomkl/2021a|x|x|x|x|x|-|-|
-|gomkl/2020a|-|x|x|x|x|-|-|
+|gomkl/2023a|x|x|x|x|-|x|x|
+|gomkl/2021a|x|x|x|x|-|-|-|
+|gomkl/2020a|-|x|x|x|-|-|-|

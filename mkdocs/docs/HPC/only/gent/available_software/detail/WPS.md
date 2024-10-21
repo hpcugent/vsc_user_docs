@@ -21,4 +21,4 @@ module load WPS/4.1-intel-2019b-dmpar
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|WPS/4.1-intel-2019b-dmpar|-|x|x|-|x|-|-|
+|WPS/4.1-intel-2019b-dmpar|-|x|x|-|-|-|-|

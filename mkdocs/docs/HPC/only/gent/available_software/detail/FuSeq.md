@@ -21,4 +21,4 @@ module load FuSeq/1.1.2-gompi-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FuSeq/1.1.2-gompi-2019b|-|x|x|-|x|-|-|
+|FuSeq/1.1.2-gompi-2019b|-|x|x|-|-|-|-|

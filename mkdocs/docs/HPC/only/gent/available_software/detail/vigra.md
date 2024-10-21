@@ -21,4 +21,4 @@ module load vigra/1.11.2-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|vigra/1.11.2-foss-2023a|x|x|x|x|x|x|x|
+|vigra/1.11.2-foss-2023a|x|x|x|x|-|x|x|

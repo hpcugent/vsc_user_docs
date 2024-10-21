@@ -21,4 +21,4 @@ module load Multiwfn/3.6-intel-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Multiwfn/3.6-intel-2019b|-|x|x|-|x|-|-|
+|Multiwfn/3.6-intel-2019b|-|x|x|-|-|-|-|

@@ -21,4 +21,4 @@ module load MethylDackel/0.5.0-iccifort-2019.5.281
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MethylDackel/0.5.0-iccifort-2019.5.281|-|x|x|-|x|-|-|
+|MethylDackel/0.5.0-iccifort-2019.5.281|-|x|x|-|-|-|-|

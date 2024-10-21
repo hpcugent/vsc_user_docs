@@ -21,4 +21,4 @@ module load pymca/5.6.3-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pymca/5.6.3-foss-2020b|-|x|x|x|x|-|-|
+|pymca/5.6.3-foss-2020b|-|x|x|x|-|-|-|

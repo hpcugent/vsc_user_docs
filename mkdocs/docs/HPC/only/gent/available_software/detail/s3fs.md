@@ -21,4 +21,4 @@ module load s3fs/2023.12.2-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|s3fs/2023.12.2-foss-2023a|x|x|x|x|x|-|x|
+|s3fs/2023.12.2-foss-2023a|x|x|x|x|-|-|x|

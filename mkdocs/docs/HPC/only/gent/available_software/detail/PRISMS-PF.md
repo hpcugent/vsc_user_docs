@@ -21,4 +21,4 @@ module load PRISMS-PF/2.2-foss-2021a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PRISMS-PF/2.2-foss-2021a|-|x|x|-|x|-|-|
+|PRISMS-PF/2.2-foss-2021a|-|x|x|-|-|-|-|

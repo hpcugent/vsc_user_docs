@@ -21,4 +21,4 @@ module load AdapterRemoval/2.3.3-GCC-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|AdapterRemoval/2.3.3-GCC-11.3.0|x|x|x|-|x|-|-|
+|AdapterRemoval/2.3.3-GCC-11.3.0|x|x|x|-|-|-|-|

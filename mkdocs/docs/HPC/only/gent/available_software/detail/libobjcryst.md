@@ -21,5 +21,5 @@ module load libobjcryst/2021.1.2-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libobjcryst/2021.1.2-foss-2021b|x|x|x|-|x|-|-|
-|libobjcryst/2017.2.3-intel-2020a|-|x|x|-|x|-|-|
+|libobjcryst/2021.1.2-foss-2021b|x|x|x|-|-|-|-|
+|libobjcryst/2017.2.3-intel-2020a|-|x|x|-|-|-|-|

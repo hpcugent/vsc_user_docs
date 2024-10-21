@@ -21,4 +21,4 @@ module load Cassiopeia/2.0.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Cassiopeia/2.0.0-foss-2023a|x|x|x|x|x|x|x|
+|Cassiopeia/2.0.0-foss-2023a|x|x|x|x|-|x|x|

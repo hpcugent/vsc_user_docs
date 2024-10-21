@@ -21,4 +21,4 @@ module load Aspera-CLI/3.9.6.1467.159c5b1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Aspera-CLI/3.9.6.1467.159c5b1|-|x|x|-|x|-|-|
+|Aspera-CLI/3.9.6.1467.159c5b1|-|x|x|-|-|-|-|

@@ -21,4 +21,4 @@ module load NextDenovo/2.5.2-20240510-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NextDenovo/2.5.2-20240510-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|NextDenovo/2.5.2-20240510-GCCcore-12.3.0|x|x|x|x|-|x|x|

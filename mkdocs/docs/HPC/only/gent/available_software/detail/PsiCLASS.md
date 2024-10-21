@@ -21,4 +21,4 @@ module load PsiCLASS/1.0.3-GCC-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PsiCLASS/1.0.3-GCC-11.2.0|x|x|x|x|x|-|-|
+|PsiCLASS/1.0.3-GCC-11.2.0|x|x|x|x|-|-|-|

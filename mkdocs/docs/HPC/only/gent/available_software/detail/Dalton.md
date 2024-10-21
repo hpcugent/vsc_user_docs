@@ -21,4 +21,4 @@ module load Dalton/2020.0-foss-2021a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Dalton/2020.0-foss-2021a|-|x|x|-|x|-|-|
+|Dalton/2020.0-foss-2021a|-|x|x|-|-|-|-|

@@ -21,4 +21,4 @@ module load COSTA/2.2.2-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|COSTA/2.2.2-foss-2023a|x|x|x|x|x|x|x|
+|COSTA/2.2.2-foss-2023a|x|x|x|x|-|x|x|

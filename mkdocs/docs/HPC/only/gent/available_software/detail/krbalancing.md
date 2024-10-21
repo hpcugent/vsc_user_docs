@@ -21,4 +21,4 @@ module load krbalancing/0.5.0b0-GCCcore-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|krbalancing/0.5.0b0-GCCcore-11.3.0|x|x|x|x|x|-|-|
+|krbalancing/0.5.0b0-GCCcore-11.3.0|x|x|x|x|-|-|-|

@@ -21,4 +21,4 @@ module load bamFilters/2022-06-30-GCC-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bamFilters/2022-06-30-GCC-11.3.0|x|x|x|-|x|-|-|
+|bamFilters/2022-06-30-GCC-11.3.0|x|x|x|-|-|-|-|

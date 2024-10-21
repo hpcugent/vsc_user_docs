@@ -21,4 +21,4 @@ module load Raven/1.8.1-GCC-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Raven/1.8.1-GCC-11.2.0|x|x|x|x|x|-|-|
+|Raven/1.8.1-GCC-11.2.0|x|x|x|x|-|-|-|

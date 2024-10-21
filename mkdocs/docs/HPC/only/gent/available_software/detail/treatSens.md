@@ -21,4 +21,4 @@ module load treatSens/3.0-20201002-foss-2020a-R-4.0.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|treatSens/3.0-20201002-foss-2020a-R-4.0.0|-|x|x|-|x|-|-|
+|treatSens/3.0-20201002-foss-2020a-R-4.0.0|-|x|x|-|-|-|-|

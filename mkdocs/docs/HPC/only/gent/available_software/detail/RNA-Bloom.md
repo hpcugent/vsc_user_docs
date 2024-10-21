@@ -21,5 +21,5 @@ module load RNA-Bloom/2.0.1-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RNA-Bloom/2.0.1-GCC-12.3.0|x|x|x|x|x|-|x|
-|RNA-Bloom/1.2.3-GCC-8.3.0|x|x|x|x|x|-|-|
+|RNA-Bloom/2.0.1-GCC-12.3.0|x|x|x|x|-|-|x|
+|RNA-Bloom/1.2.3-GCC-8.3.0|x|x|x|x|-|-|-|

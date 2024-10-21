@@ -21,4 +21,4 @@ module load deal.II/9.3.3-foss-2021a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|deal.II/9.3.3-foss-2021a|-|x|x|-|x|-|-|
+|deal.II/9.3.3-foss-2021a|-|x|x|-|-|-|-|

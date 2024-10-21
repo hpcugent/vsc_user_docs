@@ -21,4 +21,4 @@ module load EMMAX/20100310-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|EMMAX/20100310-foss-2023a|x|x|x|x|x|x|x|
+|EMMAX/20100310-foss-2023a|x|x|x|x|-|x|x|

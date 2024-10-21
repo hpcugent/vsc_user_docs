@@ -21,4 +21,4 @@ module load POV-Ray/3.7.0.8-GCC-10.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|POV-Ray/3.7.0.8-GCC-10.2.0|-|x|x|x|x|-|-|
+|POV-Ray/3.7.0.8-GCC-10.2.0|-|x|x|x|-|-|-|

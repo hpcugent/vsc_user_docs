@@ -21,4 +21,4 @@ module load CRISPR-DAV/2.3.4-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CRISPR-DAV/2.3.4-foss-2020b|-|x|x|x|x|-|-|
+|CRISPR-DAV/2.3.4-foss-2020b|-|x|x|x|-|-|-|

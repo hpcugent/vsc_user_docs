@@ -21,4 +21,4 @@ module load Coreutils/8.32-GCCcore-8.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Coreutils/8.32-GCCcore-8.3.0|-|x|x|-|x|-|-|
+|Coreutils/8.32-GCCcore-8.3.0|-|x|x|-|-|-|-|

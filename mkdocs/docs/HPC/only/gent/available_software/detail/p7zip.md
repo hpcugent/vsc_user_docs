@@ -21,4 +21,4 @@ module load p7zip/17.03-GCCcore-10.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|p7zip/17.03-GCCcore-10.2.0|-|x|x|-|x|-|-|
+|p7zip/17.03-GCCcore-10.2.0|-|x|x|-|-|-|-|

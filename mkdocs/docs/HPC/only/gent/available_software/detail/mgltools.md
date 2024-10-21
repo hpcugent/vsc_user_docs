@@ -21,4 +21,4 @@ module load mgltools/1.5.7
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mgltools/1.5.7|x|x|x|-|x|-|-|
+|mgltools/1.5.7|x|x|x|-|-|-|-|

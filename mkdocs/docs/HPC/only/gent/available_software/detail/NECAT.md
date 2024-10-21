@@ -21,4 +21,4 @@ module load NECAT/0.0.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NECAT/0.0.1-foss-2023a|x|x|x|x|x|x|x|
+|NECAT/0.0.1-foss-2023a|x|x|x|x|-|x|x|
