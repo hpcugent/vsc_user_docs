@@ -21,4 +21,4 @@ module load M1QN3/3.3-GCC-10.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|M1QN3/3.3-GCC-10.3.0|-|x|x|-|x|-|-|
+|M1QN3/3.3-GCC-10.3.0|-|x|x|-|-|-|-|

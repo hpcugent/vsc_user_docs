@@ -21,4 +21,4 @@ module load DualSPHysics/5.0.175-GCC-11.2.0-CUDA-11.4.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DualSPHysics/5.0.175-GCC-11.2.0-CUDA-11.4.1|x|-|-|-|x|-|-|
+|DualSPHysics/5.0.175-GCC-11.2.0-CUDA-11.4.1|x|-|-|-|-|-|-|

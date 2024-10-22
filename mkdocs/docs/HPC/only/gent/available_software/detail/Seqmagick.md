@@ -21,4 +21,4 @@ module load Seqmagick/0.8.6-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Seqmagick/0.8.6-foss-2023a|x|x|x|x|x|x|x|
+|Seqmagick/0.8.6-foss-2023a|x|x|x|x|-|x|x|

@@ -21,4 +21,4 @@ module load TCLAP/1.2.4-GCCcore-10.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TCLAP/1.2.4-GCCcore-10.2.0|-|x|x|-|x|-|-|
+|TCLAP/1.2.4-GCCcore-10.2.0|-|x|x|-|-|-|-|

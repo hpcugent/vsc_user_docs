@@ -21,4 +21,4 @@ module load GUSHR/2020-09-28-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GUSHR/2020-09-28-foss-2021b|x|x|x|x|x|-|-|
+|GUSHR/2020-09-28-foss-2021b|x|x|x|x|-|-|-|

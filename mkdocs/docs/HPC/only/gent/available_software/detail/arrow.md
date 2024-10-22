@@ -21,4 +21,4 @@ module load arrow/0.17.1-foss-2020a-R-4.0.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|arrow/0.17.1-foss-2020a-R-4.0.0|-|x|x|-|x|-|-|
+|arrow/0.17.1-foss-2020a-R-4.0.0|-|x|x|-|-|-|-|

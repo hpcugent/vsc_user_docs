@@ -21,4 +21,4 @@ module load tsne/0.1.8-intel-2019b-Python-2.7.16
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tsne/0.1.8-intel-2019b-Python-2.7.16|-|x|x|-|x|-|-|
+|tsne/0.1.8-intel-2019b-Python-2.7.16|-|x|x|-|-|-|-|

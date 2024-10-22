@@ -21,4 +21,4 @@ module load louvain/0.8.0-foss-2021a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|louvain/0.8.0-foss-2021a|x|x|x|x|x|-|-|
+|louvain/0.8.0-foss-2021a|x|x|x|x|-|-|-|

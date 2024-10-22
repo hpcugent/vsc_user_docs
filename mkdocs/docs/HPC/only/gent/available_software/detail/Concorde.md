@@ -21,4 +21,4 @@ module load Concorde/20031219-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Concorde/20031219-GCC-12.3.0|x|x|x|x|x|-|x|
+|Concorde/20031219-GCC-12.3.0|x|x|x|x|-|-|x|

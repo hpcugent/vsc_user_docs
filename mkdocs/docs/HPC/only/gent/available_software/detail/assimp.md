@@ -21,4 +21,4 @@ module load assimp/5.3.1-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|assimp/5.3.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|assimp/5.3.1-GCCcore-13.2.0|x|x|x|x|-|x|x|

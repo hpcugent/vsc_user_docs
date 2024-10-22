@@ -21,6 +21,6 @@ module load eggnog-mapper/2.1.10-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|eggnog-mapper/2.1.10-foss-2020b|x|x|x|x|x|-|-|
-|eggnog-mapper/2.1.7-foss-2021b|x|x|x|x|x|-|-|
-|eggnog-mapper/2.1.4-foss-2020b|-|x|x|x|x|-|-|
+|eggnog-mapper/2.1.10-foss-2020b|x|x|x|x|-|-|-|
+|eggnog-mapper/2.1.7-foss-2021b|x|x|x|x|-|-|-|
+|eggnog-mapper/2.1.4-foss-2020b|-|x|x|x|-|-|-|

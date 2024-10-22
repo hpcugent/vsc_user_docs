@@ -21,4 +21,4 @@ module load Boost.Python-NumPy/1.79.0-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Boost.Python-NumPy/1.79.0-foss-2022a|-|-|x|-|x|-|-|
+|Boost.Python-NumPy/1.79.0-foss-2022a|-|-|x|-|-|-|-|

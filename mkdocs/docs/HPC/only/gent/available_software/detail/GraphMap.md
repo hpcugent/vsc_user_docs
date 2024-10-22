@@ -21,4 +21,4 @@ module load GraphMap/0.5.2-foss-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GraphMap/0.5.2-foss-2019b|-|-|x|-|x|-|-|
+|GraphMap/0.5.2-foss-2019b|-|-|x|-|-|-|-|

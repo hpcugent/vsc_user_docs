@@ -21,4 +21,4 @@ module load BSMAPz/1.1.1-intel-2019b-Python-2.7.16
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BSMAPz/1.1.1-intel-2019b-Python-2.7.16|-|x|x|-|x|-|-|
+|BSMAPz/1.1.1-intel-2019b-Python-2.7.16|-|x|x|-|-|-|-|

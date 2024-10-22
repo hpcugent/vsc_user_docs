@@ -21,4 +21,4 @@ module load sirocco/2.1.0-GCC-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|sirocco/2.1.0-GCC-13.2.0|x|x|x|x|x|x|x|
+|sirocco/2.1.0-GCC-13.2.0|x|x|x|x|-|x|x|

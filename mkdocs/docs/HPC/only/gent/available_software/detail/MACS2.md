@@ -22,4 +22,4 @@ module load MACS2/2.2.9.1-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |MACS2/2.2.9.1-foss-2023a|x|x|x|x|x|x|x|
-|MACS2/2.2.7.1-foss-2021b|x|x|x|-|x|-|-|
+|MACS2/2.2.7.1-foss-2021b|x|x|x|-|-|-|-|

@@ -21,4 +21,4 @@ module load e3nn/0.3.3-foss-2022a-CUDA-11.7.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|e3nn/0.3.3-foss-2022a-CUDA-11.7.0|-|-|x|-|x|-|-|
+|e3nn/0.3.3-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|-|

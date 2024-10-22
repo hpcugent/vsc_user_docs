@@ -21,4 +21,4 @@ module load Chimera/1.16-linux_x86_64
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Chimera/1.16-linux_x86_64|x|x|x|-|x|-|-|
+|Chimera/1.16-linux_x86_64|x|x|x|-|-|-|-|

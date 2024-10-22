@@ -21,4 +21,4 @@ module load pyGAM/0.9.1-gfbf-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pyGAM/0.9.1-gfbf-2023a|x|x|x|x|x|x|x|
+|pyGAM/0.9.1-gfbf-2023a|x|x|x|x|-|x|x|

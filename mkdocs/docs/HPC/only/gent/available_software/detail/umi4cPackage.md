@@ -21,4 +21,4 @@ module load umi4cPackage/20200116-foss-2020a-R-4.0.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|umi4cPackage/20200116-foss-2020a-R-4.0.0|-|x|x|-|x|-|-|
+|umi4cPackage/20200116-foss-2020a-R-4.0.0|-|x|x|-|-|-|-|

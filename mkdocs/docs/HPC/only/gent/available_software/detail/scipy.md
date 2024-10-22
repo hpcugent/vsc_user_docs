@@ -21,4 +21,4 @@ module load scipy/1.4.1-foss-2019b-Python-3.7.4
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scipy/1.4.1-foss-2019b-Python-3.7.4|-|x|x|-|x|-|-|
+|scipy/1.4.1-foss-2019b-Python-3.7.4|-|x|x|-|-|-|-|

@@ -21,4 +21,4 @@ module load mahotas/1.4.13-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mahotas/1.4.13-foss-2022a|x|x|x|x|x|-|-|
+|mahotas/1.4.13-foss-2022a|x|x|x|x|-|-|-|
