@@ -21,5 +21,5 @@ module load Nipype/1.8.5-foss-2021a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Nipype/1.8.5-foss-2021a|x|x|x|-|x|-|-|
-|Nipype/1.4.2-intel-2019b-Python-3.7.4|-|x|x|-|x|-|-|
+|Nipype/1.8.5-foss-2021a|x|x|x|-|-|-|-|
+|Nipype/1.4.2-intel-2019b-Python-3.7.4|-|x|x|-|-|-|-|

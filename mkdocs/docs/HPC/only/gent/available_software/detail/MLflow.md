@@ -21,4 +21,4 @@ module load MLflow/2.10.2-gfbf-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MLflow/2.10.2-gfbf-2023a|x|x|x|x|x|-|x|
+|MLflow/2.10.2-gfbf-2023a|x|x|x|x|-|-|x|

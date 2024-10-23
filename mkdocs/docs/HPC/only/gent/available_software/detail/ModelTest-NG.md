@@ -21,4 +21,4 @@ module load ModelTest-NG/0.1.7-gompi-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ModelTest-NG/0.1.7-gompi-2021b|x|x|x|-|x|-|-|
+|ModelTest-NG/0.1.7-gompi-2021b|x|x|x|-|-|-|-|

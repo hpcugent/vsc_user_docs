@@ -21,4 +21,4 @@ module load FastViromeExplorer/20180422-foss-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FastViromeExplorer/20180422-foss-2019b|-|x|x|-|x|-|-|
+|FastViromeExplorer/20180422-foss-2019b|-|x|x|-|-|-|-|

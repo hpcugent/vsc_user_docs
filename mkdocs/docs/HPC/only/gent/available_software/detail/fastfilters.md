@@ -21,4 +21,4 @@ module load fastfilters/0.3-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fastfilters/0.3-foss-2023a|x|x|x|x|x|x|x|
+|fastfilters/0.3-foss-2023a|x|x|x|x|-|x|x|

@@ -21,4 +21,4 @@ module load BayesOpt/0.9-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BayesOpt/0.9-GCC-12.3.0|x|x|x|x|x|x|x|
+|BayesOpt/0.9-GCC-12.3.0|x|x|x|x|-|x|x|

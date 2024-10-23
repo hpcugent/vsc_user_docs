@@ -21,4 +21,4 @@ module load Hybpiper/2.1.6-foss-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Hybpiper/2.1.6-foss-2022b|x|x|x|x|x|-|-|
+|Hybpiper/2.1.6-foss-2022b|x|x|x|x|-|-|-|

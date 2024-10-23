@@ -22,5 +22,5 @@ module load spektral/1.3.1-foss-2023a-CUDA-12.1.1
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |spektral/1.3.1-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
-|spektral/1.3.1-foss-2023a|x|x|x|x|x|x|x|
-|spektral/1.2.0-fosscuda-2020b-TensorFlow-2.5.0|x|-|-|-|x|-|-|
+|spektral/1.3.1-foss-2023a|x|x|x|x|-|x|x|
+|spektral/1.2.0-fosscuda-2020b-TensorFlow-2.5.0|x|-|-|-|-|-|-|

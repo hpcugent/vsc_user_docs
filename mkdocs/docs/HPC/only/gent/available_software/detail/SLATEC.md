@@ -21,4 +21,4 @@ module load SLATEC/4.1-GCC-8.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SLATEC/4.1-GCC-8.3.0|-|x|x|-|x|-|-|
+|SLATEC/4.1-GCC-8.3.0|-|x|x|-|-|-|-|

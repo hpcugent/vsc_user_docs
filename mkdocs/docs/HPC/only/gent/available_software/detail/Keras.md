@@ -21,6 +21,5 @@ module load Keras/2.4.3-fosscuda-2020b-TensorFlow-2.5.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Keras/2.4.3-fosscuda-2020b-TensorFlow-2.5.0|x|-|-|-|x|-|-|
-|Keras/2.4.3-fosscuda-2020b|-|-|-|-|x|-|-|
-|Keras/2.4.3-foss-2020b|-|x|x|x|x|-|-|
+|Keras/2.4.3-fosscuda-2020b-TensorFlow-2.5.0|x|-|-|-|-|-|-|
+|Keras/2.4.3-foss-2020b|-|x|x|x|-|-|-|

@@ -21,4 +21,4 @@ module load AMPtk/1.5.4-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|AMPtk/1.5.4-foss-2021b|x|x|x|-|x|-|-|
+|AMPtk/1.5.4-foss-2021b|x|x|x|-|-|-|-|

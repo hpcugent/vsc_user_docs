@@ -22,7 +22,7 @@ module load Boost.Python/1.82.0-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Boost.Python/1.82.0-GCC-12.3.0|x|x|x|x|x|x|x|
-|Boost.Python/1.79.0-GCC-11.3.0|x|x|x|x|x|-|-|
-|Boost.Python/1.77.0-GCC-11.2.0|x|x|x|-|x|-|-|
-|Boost.Python/1.72.0-iimpi-2020a|-|x|x|-|x|-|-|
-|Boost.Python/1.71.0-gompi-2019b|-|x|x|-|x|-|-|
+|Boost.Python/1.79.0-GCC-11.3.0|x|x|x|x|-|-|-|
+|Boost.Python/1.77.0-GCC-11.2.0|x|x|x|-|-|-|-|
+|Boost.Python/1.72.0-iimpi-2020a|-|x|x|-|-|-|-|
+|Boost.Python/1.71.0-gompi-2019b|-|x|x|-|-|-|-|

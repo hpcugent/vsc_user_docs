@@ -21,5 +21,5 @@ module load YAXT/0.9.1-gompi-2021a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|YAXT/0.9.1-gompi-2021a|x|x|x|-|x|-|-|
-|YAXT/0.6.2-iimpi-2019b|-|x|x|-|x|-|-|
+|YAXT/0.9.1-gompi-2021a|x|x|x|-|-|-|-|
+|YAXT/0.6.2-iimpi-2019b|-|x|x|-|-|-|-|

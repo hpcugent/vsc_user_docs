@@ -21,4 +21,4 @@ module load samblaster/0.1.26-GCC-10.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|samblaster/0.1.26-GCC-10.2.0|-|x|x|x|x|-|-|
+|samblaster/0.1.26-GCC-10.2.0|-|x|x|x|-|-|-|

@@ -21,4 +21,4 @@ module load CoCoALib/0.99850-GCC-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CoCoALib/0.99850-GCC-13.2.0|x|x|x|x|x|x|x|
+|CoCoALib/0.99850-GCC-13.2.0|x|x|x|x|-|x|x|

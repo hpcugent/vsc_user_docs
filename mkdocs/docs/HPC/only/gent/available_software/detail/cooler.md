@@ -21,4 +21,4 @@ module load cooler/0.9.1-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cooler/0.9.1-foss-2022a|x|x|x|x|x|-|-|
+|cooler/0.9.1-foss-2022a|x|x|x|x|-|-|-|

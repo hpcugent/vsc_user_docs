@@ -21,4 +21,4 @@ module load libRmath/4.1.0-GCCcore-10.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libRmath/4.1.0-GCCcore-10.2.0|-|x|x|-|x|-|-|
+|libRmath/4.1.0-GCCcore-10.2.0|-|x|x|-|-|-|-|

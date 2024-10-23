@@ -21,4 +21,4 @@ module load FFC/2019.1.0.post0-foss-2019b-Python-3.7.4
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FFC/2019.1.0.post0-foss-2019b-Python-3.7.4|-|x|x|-|x|-|-|
+|FFC/2019.1.0.post0-foss-2019b-Python-3.7.4|-|x|x|-|-|-|-|

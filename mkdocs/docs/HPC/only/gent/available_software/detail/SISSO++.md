@@ -21,4 +21,4 @@ module load SISSO++/1.1-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SISSO++/1.1-foss-2021b|x|x|x|-|x|-|-|
+|SISSO++/1.1-foss-2021b|x|x|x|-|-|-|-|

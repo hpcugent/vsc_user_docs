@@ -21,4 +21,4 @@ module load MyCC/2017-03-01-intel-2019b-Python-2.7.16
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MyCC/2017-03-01-intel-2019b-Python-2.7.16|-|x|x|-|x|-|-|
+|MyCC/2017-03-01-intel-2019b-Python-2.7.16|-|x|x|-|-|-|-|

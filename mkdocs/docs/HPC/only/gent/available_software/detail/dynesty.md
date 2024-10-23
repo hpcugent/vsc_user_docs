@@ -21,4 +21,4 @@ module load dynesty/2.1.3-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|dynesty/2.1.3-foss-2023a|x|x|x|x|x|x|x|
+|dynesty/2.1.3-foss-2023a|x|x|x|x|-|x|x|

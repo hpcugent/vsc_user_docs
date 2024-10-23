@@ -21,6 +21,6 @@ module load iomkl/2021a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|iomkl/2021a|x|x|x|x|x|-|-|
-|iomkl/2020b|x|x|x|x|x|-|-|
+|iomkl/2021a|x|x|x|x|-|-|-|
+|iomkl/2020b|x|x|x|x|-|-|-|
 |iomkl/2020a|-|x|-|-|-|-|-|

@@ -21,4 +21,4 @@ module load BayesAss3-SNPs/1.1-2022.02.19-GCC-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BayesAss3-SNPs/1.1-2022.02.19-GCC-11.2.0|x|x|x|-|x|-|-|
+|BayesAss3-SNPs/1.1-2022.02.19-GCC-11.2.0|x|x|x|-|-|-|-|

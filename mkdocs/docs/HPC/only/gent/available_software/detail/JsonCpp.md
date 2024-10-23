@@ -22,10 +22,10 @@ module load JsonCpp/1.9.5-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |JsonCpp/1.9.5-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|JsonCpp/1.9.5-GCCcore-12.2.0|x|x|x|x|x|-|-|
-|JsonCpp/1.9.5-GCCcore-11.3.0|x|x|x|x|x|-|-|
-|JsonCpp/1.9.4-GCCcore-11.2.0|x|x|x|x|x|-|-|
-|JsonCpp/1.9.4-GCCcore-10.3.0|x|x|x|x|x|-|-|
-|JsonCpp/1.9.4-GCCcore-10.2.0|x|x|x|x|x|-|-|
-|JsonCpp/1.9.4-GCCcore-9.3.0|-|x|x|-|x|-|-|
-|JsonCpp/1.9.3-GCCcore-8.3.0|-|x|x|-|x|-|-|
+|JsonCpp/1.9.5-GCCcore-12.2.0|x|x|x|x|-|-|-|
+|JsonCpp/1.9.5-GCCcore-11.3.0|x|x|x|x|-|-|-|
+|JsonCpp/1.9.4-GCCcore-11.2.0|x|x|x|x|-|-|-|
+|JsonCpp/1.9.4-GCCcore-10.3.0|x|x|x|x|-|-|-|
+|JsonCpp/1.9.4-GCCcore-10.2.0|x|x|x|x|-|-|-|
+|JsonCpp/1.9.4-GCCcore-9.3.0|-|x|x|-|-|-|-|
+|JsonCpp/1.9.3-GCCcore-8.3.0|-|x|x|-|-|-|-|

@@ -21,4 +21,4 @@ module load OCaml/5.1.1-GCC-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OCaml/5.1.1-GCC-13.2.0|x|x|x|x|x|x|x|
+|OCaml/5.1.1-GCC-13.2.0|x|x|x|x|-|x|x|

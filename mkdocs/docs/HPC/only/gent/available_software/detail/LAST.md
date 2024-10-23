@@ -21,5 +21,5 @@ module load LAST/1179-GCC-10.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LAST/1179-GCC-10.2.0|-|x|x|x|x|-|-|
-|LAST/1045-intel-2019b|-|x|x|-|x|-|-|
+|LAST/1179-GCC-10.2.0|-|x|x|x|-|-|-|
+|LAST/1045-intel-2019b|-|x|x|-|-|-|-|

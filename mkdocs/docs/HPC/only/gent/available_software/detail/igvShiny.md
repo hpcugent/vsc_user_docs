@@ -21,4 +21,4 @@ module load igvShiny/20240112-foss-2022a-R-4.2.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|igvShiny/20240112-foss-2022a-R-4.2.1|x|x|x|x|x|-|-|
+|igvShiny/20240112-foss-2022a-R-4.2.1|x|x|x|x|-|-|-|

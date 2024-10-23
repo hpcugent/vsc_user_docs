@@ -21,4 +21,4 @@ module load fastai/2.7.10-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fastai/2.7.10-foss-2022a|x|x|x|x|x|-|-|
+|fastai/2.7.10-foss-2022a|x|x|x|x|-|-|-|

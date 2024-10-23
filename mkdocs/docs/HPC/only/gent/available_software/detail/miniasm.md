@@ -21,4 +21,4 @@ module load miniasm/0.3-20191007-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|miniasm/0.3-20191007-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|miniasm/0.3-20191007-GCCcore-12.3.0|x|x|x|x|-|x|x|

@@ -21,5 +21,5 @@ module load CPPE/0.3.1-GCC-12.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CPPE/0.3.1-GCC-12.2.0|x|x|x|x|x|-|-|
-|CPPE/0.3.1-GCC-11.3.0|-|x|x|x|x|-|-|
+|CPPE/0.3.1-GCC-12.2.0|x|x|x|x|-|-|-|
+|CPPE/0.3.1-GCC-11.3.0|-|x|x|x|-|-|-|

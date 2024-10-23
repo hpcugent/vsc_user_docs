@@ -21,4 +21,4 @@ module load solo/1.3-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|solo/1.3-foss-2022a|x|x|x|x|x|-|-|
+|solo/1.3-foss-2022a|x|x|x|x|-|-|-|

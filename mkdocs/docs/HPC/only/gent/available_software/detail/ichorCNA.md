@@ -21,4 +21,4 @@ module load ichorCNA/0.3.2-20191219-foss-2020a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ichorCNA/0.3.2-20191219-foss-2020a|-|x|x|-|x|-|-|
+|ichorCNA/0.3.2-20191219-foss-2020a|-|x|x|-|-|-|-|
