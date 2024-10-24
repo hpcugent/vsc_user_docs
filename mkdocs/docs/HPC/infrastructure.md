@@ -33,7 +33,7 @@ For basic information on using these clusters, see our
 | gallade (*) | 16 | 2x 64-core AMD EPYC 7773X (Milan-X @ 2.2 GHz) | 940 GiB | 1.5 TB NVME | HDR-100 InfiniBand | RHEL 9 |
 | shinx | 48 | 2x 96-core AMD EPYC 9654 (Genoa @ 2.4 GHz) | 370 GiB | 500GB NVME | NDR-200 InfiniBand | RHEL 9 |
 
-(*) also see this [extra information](donphan-gallade.md#gallade-large-memory-cluster)
+(*) also see this [extra information](only/gent/2023/donphan-gallade.md#gallade-large-memory-cluster)
 
 ### Interactive debug cluster
 
@@ -59,7 +59,7 @@ For more information, see our [documentation](interactive_gent).
 | --- | --- | --- | --- | --- | --- | --- |
 | donphan (*) | 16 | 2 x 18-core Intel Xeon Gold 6240 (Cascade Lake @ 2.6 GHz) + 1x shared NVIDIA Ampere A2 GPU (16GB GPU memory) | 738 GiB | 	1.6 TB NVME | HDR-100 Infiniband | RHEL 8 |
 
-(*) also see this [extra information](donphan-gallade.md#donphan-debuginteractive-cluster)
+(*) also see this [extra information](only/gent/2023/donphan-gallade.md#donphan-debuginteractive-cluster)
 
 ### GPU clusters
 
