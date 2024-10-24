@@ -21,4 +21,4 @@ module load colossalai/0.1.8-foss-2021a-CUDA-11.3.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|colossalai/0.1.8-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|-|
+|colossalai/0.1.8-foss-2021a-CUDA-11.3.1|x|-|-|-|-|-|-|

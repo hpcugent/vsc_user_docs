@@ -23,5 +23,5 @@ module load dm-haiku/0.0.12-foss-2023a-CUDA-12.1.1
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |dm-haiku/0.0.12-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
 |dm-haiku/0.0.12-foss-2023a|x|x|x|x|-|x|x|
-|dm-haiku/0.0.9-foss-2022a-CUDA-11.7.0|-|-|x|-|x|-|-|
-|dm-haiku/0.0.9-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|-|
+|dm-haiku/0.0.9-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|-|
+|dm-haiku/0.0.9-foss-2021a-CUDA-11.3.1|x|-|-|-|-|-|-|

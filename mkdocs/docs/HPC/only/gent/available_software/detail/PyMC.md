@@ -21,6 +21,6 @@ module load PyMC/5.9.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyMC/5.9.0-foss-2023a|x|x|x|x|x|x|x|
-|PyMC/2.3.8-intel-2021b|x|x|x|x|x|-|-|
-|PyMC/2.3.8-foss-2021b|x|x|x|x|x|-|-|
+|PyMC/5.9.0-foss-2023a|x|x|x|x|-|x|x|
+|PyMC/2.3.8-intel-2021b|x|x|x|x|-|-|-|
+|PyMC/2.3.8-foss-2021b|x|x|x|x|-|-|-|

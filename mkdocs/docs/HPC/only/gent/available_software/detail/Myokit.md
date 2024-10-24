@@ -14,12 +14,11 @@ The overview below shows which Myokit installations are available per HPC-UGent 
 To start using Myokit, load one of these modules using a `module load` command like:
 
 ```shell
-module load Myokit/1.32.0-fosscuda-2020b
+module load Myokit/1.32.0-foss-2020b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Myokit/1.32.0-fosscuda-2020b|-|-|-|-|x|-|-|
-|Myokit/1.32.0-foss-2020b|-|x|x|x|x|-|-|
+|Myokit/1.32.0-foss-2020b|-|x|x|x|-|-|-|

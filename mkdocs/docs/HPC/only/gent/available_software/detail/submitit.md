@@ -21,4 +21,4 @@ module load submitit/1.2.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|submitit/1.2.0-foss-2023a|x|x|x|x|x|x|x|
+|submitit/1.2.0-foss-2023a|x|x|x|x|-|x|x|

@@ -21,4 +21,4 @@ module load SSPACE_Basic/2.1.1-GCC-10.2.0-Python-2.7.18
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SSPACE_Basic/2.1.1-GCC-10.2.0-Python-2.7.18|-|x|x|-|x|-|-|
+|SSPACE_Basic/2.1.1-GCC-10.2.0-Python-2.7.18|-|x|x|-|-|-|-|

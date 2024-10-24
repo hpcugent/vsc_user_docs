@@ -21,4 +21,4 @@ module load speech_tools/2.5.0-GCCcore-9.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|speech_tools/2.5.0-GCCcore-9.3.0|-|x|x|-|x|-|-|
+|speech_tools/2.5.0-GCCcore-9.3.0|-|x|x|-|-|-|-|

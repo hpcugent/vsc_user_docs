@@ -21,4 +21,4 @@ module load SLiM/3.4-GCC-9.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SLiM/3.4-GCC-9.3.0|-|x|x|-|x|-|-|
+|SLiM/3.4-GCC-9.3.0|-|x|x|-|-|-|-|

@@ -21,5 +21,5 @@ module load MariaDB-connector-c/3.1.7-GCCcore-9.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MariaDB-connector-c/3.1.7-GCCcore-9.3.0|-|x|x|-|x|-|-|
-|MariaDB-connector-c/2.3.7-GCCcore-8.3.0|-|x|x|-|x|-|-|
+|MariaDB-connector-c/3.1.7-GCCcore-9.3.0|-|x|x|-|-|-|-|
+|MariaDB-connector-c/2.3.7-GCCcore-8.3.0|-|x|x|-|-|-|-|

@@ -21,5 +21,5 @@ module load meshtool/16-GCC-10.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|meshtool/16-GCC-10.2.0|-|x|x|x|x|-|-|
-|meshtool/16-GCC-9.3.0|-|x|x|-|x|-|-|
+|meshtool/16-GCC-10.2.0|-|x|x|x|-|-|-|
+|meshtool/16-GCC-9.3.0|-|x|x|-|-|-|-|

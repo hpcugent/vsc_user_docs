@@ -21,4 +21,4 @@ module load pysamstats/1.1.2-foss-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pysamstats/1.1.2-foss-2020b|-|x|x|x|x|-|-|
+|pysamstats/1.1.2-foss-2020b|-|x|x|x|-|-|-|

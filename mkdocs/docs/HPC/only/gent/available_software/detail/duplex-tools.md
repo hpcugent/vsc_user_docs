@@ -21,6 +21,6 @@ module load duplex-tools/0.3.3-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|duplex-tools/0.3.3-foss-2023a|x|x|x|x|x|x|x|
-|duplex-tools/0.3.3-foss-2022a|x|x|x|x|x|-|-|
-|duplex-tools/0.3.1-foss-2022a|x|x|x|x|x|-|-|
+|duplex-tools/0.3.3-foss-2023a|x|x|x|x|-|x|x|
+|duplex-tools/0.3.3-foss-2022a|x|x|x|x|-|-|-|
+|duplex-tools/0.3.1-foss-2022a|x|x|x|x|-|-|-|

@@ -21,4 +21,4 @@ module load HighFive/2.7.1-gompi-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HighFive/2.7.1-gompi-2023a|x|x|x|x|x|x|x|
+|HighFive/2.7.1-gompi-2023a|x|x|x|x|-|x|x|

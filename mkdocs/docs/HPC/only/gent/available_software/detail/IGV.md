@@ -21,5 +21,5 @@ module load IGV/2.9.4-Java-11
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|IGV/2.9.4-Java-11|-|x|x|-|x|-|-|
-|IGV/2.8.0-Java-11|-|x|x|-|x|-|-|
+|IGV/2.9.4-Java-11|-|x|x|-|-|-|-|
+|IGV/2.8.0-Java-11|-|x|x|-|-|-|-|

@@ -21,4 +21,4 @@ module load PyStan/2.19.1.1-intel-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyStan/2.19.1.1-intel-2020b|-|x|x|-|x|-|-|
+|PyStan/2.19.1.1-intel-2020b|-|x|x|-|-|-|-|

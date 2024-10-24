@@ -21,4 +21,4 @@ module load purge_dups/1.2.5-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|purge_dups/1.2.5-foss-2021b|x|x|x|-|x|-|-|
+|purge_dups/1.2.5-foss-2021b|x|x|x|-|-|-|-|

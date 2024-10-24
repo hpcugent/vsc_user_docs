@@ -21,4 +21,4 @@ module load MOABS/1.3.9.6-gompi-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MOABS/1.3.9.6-gompi-2019b|-|x|x|-|x|-|-|
+|MOABS/1.3.9.6-gompi-2019b|-|x|x|-|-|-|-|

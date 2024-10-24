@@ -21,19 +21,19 @@ module load Java/21.0.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Java/21.0.2|x|x|x|x|x|x|-|
-|Java/21(@Java/21.0.2)|x|x|x|x|x|x|-|
-|Java/17.0.6|x|x|x|x|x|x|x|
-|Java/17(@Java/17.0.6)|x|x|x|x|x|x|x|
-|Java/13.0.2|-|x|x|-|x|-|-|
-|Java/13(@Java/13.0.2)|-|x|x|-|x|-|-|
+|Java/21.0.2|x|x|x|x|-|x|-|
+|Java/21(@Java/21.0.2)|x|x|x|x|-|x|-|
+|Java/17.0.6|x|x|x|x|-|x|x|
+|Java/17(@Java/17.0.6)|x|x|x|x|-|x|x|
+|Java/13.0.2|-|x|x|-|-|-|-|
+|Java/13(@Java/13.0.2)|-|x|x|-|-|-|-|
 |Java/11.0.20|x|x|x|x|x|x|x|
-|Java/11.0.18|x|-|-|x|x|-|-|
-|Java/11.0.16|x|x|x|x|x|-|-|
-|Java/11.0.2|x|x|x|-|x|-|-|
+|Java/11.0.18|x|-|-|x|-|-|-|
+|Java/11.0.16|x|x|x|x|-|-|-|
+|Java/11.0.2|x|x|x|-|-|-|-|
 |Java/11(@Java/11.0.20)|x|x|x|x|x|x|x|
-|Java/1.8.0_311|x|-|x|x|x|-|-|
+|Java/1.8.0_311|x|-|x|x|-|-|-|
 |Java/1.8.0_241|-|x|-|-|-|-|-|
 |Java/1.8.0_221|-|x|-|-|-|-|-|
-|Java/1.8(@Java/1.8.0_311)|x|-|x|x|x|-|-|
+|Java/1.8(@Java/1.8.0_311)|x|-|x|x|-|-|-|
 |Java/1.8(@Java/1.8.0_241)|-|x|-|-|-|-|-|

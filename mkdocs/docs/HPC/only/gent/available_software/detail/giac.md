@@ -21,4 +21,4 @@ module load giac/1.9.0-99-gfbf-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|giac/1.9.0-99-gfbf-2023b|x|x|x|x|x|x|x|
+|giac/1.9.0-99-gfbf-2023b|x|x|x|x|-|x|x|

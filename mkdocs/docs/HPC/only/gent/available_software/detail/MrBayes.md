@@ -21,5 +21,5 @@ module load MrBayes/3.2.7-gompi-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MrBayes/3.2.7-gompi-2020b|-|x|x|x|x|-|-|
-|MrBayes/3.2.6-gompi-2020b|-|x|x|x|x|-|-|
+|MrBayes/3.2.7-gompi-2020b|-|x|x|x|-|-|-|
+|MrBayes/3.2.6-gompi-2020b|-|x|x|x|-|-|-|

@@ -21,4 +21,4 @@ module load VirSorter2/2.2.4-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VirSorter2/2.2.4-foss-2022a|x|x|x|x|x|-|-|
+|VirSorter2/2.2.4-foss-2022a|x|x|x|x|-|-|-|

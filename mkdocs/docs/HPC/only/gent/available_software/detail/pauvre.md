@@ -21,6 +21,6 @@ module load pauvre/0.1924-intel-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pauvre/0.1924-intel-2020b|-|x|x|-|x|-|-|
-|pauvre/0.1923-intel-2019b-Python-3.7.4|-|x|x|-|x|-|-|
-|pauvre/0.2.3-foss-2022a|x|x|x|x|x|-|-|
+|pauvre/0.1924-intel-2020b|-|x|x|-|-|-|-|
+|pauvre/0.1923-intel-2019b-Python-3.7.4|-|x|x|-|-|-|-|
+|pauvre/0.2.3-foss-2022a|x|x|x|x|-|-|-|

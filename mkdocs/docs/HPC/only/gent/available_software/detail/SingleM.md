@@ -21,4 +21,4 @@ module load SingleM/0.16.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SingleM/0.16.0-foss-2023a|x|x|x|x|x|x|x|
+|SingleM/0.16.0-foss-2023a|x|x|x|x|-|x|x|

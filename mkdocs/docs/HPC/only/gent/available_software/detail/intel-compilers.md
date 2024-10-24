@@ -21,9 +21,9 @@ module load intel-compilers/2023.2.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|intel-compilers/2023.2.1|x|x|x|x|x|x|x|
+|intel-compilers/2023.2.1|x|x|x|x|-|x|x|
 |intel-compilers/2023.1.0|x|x|x|x|x|x|x|
-|intel-compilers/2022.2.1|x|x|x|x|x|-|-|
-|intel-compilers/2022.1.0|x|x|x|x|x|x|-|
-|intel-compilers/2021.4.0|x|x|x|x|x|-|-|
-|intel-compilers/2021.2.0|x|x|x|x|x|-|-|
+|intel-compilers/2022.2.1|x|x|x|x|-|-|-|
+|intel-compilers/2022.1.0|x|x|x|x|-|x|-|
+|intel-compilers/2021.4.0|x|x|x|x|-|-|-|
+|intel-compilers/2021.2.0|x|x|x|x|-|-|-|

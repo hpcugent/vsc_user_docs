@@ -21,4 +21,4 @@ module load CASPR/20200730-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CASPR/20200730-foss-2022a|x|x|x|x|x|-|-|
+|CASPR/20200730-foss-2022a|x|x|x|x|-|-|-|

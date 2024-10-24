@@ -21,4 +21,4 @@ module load xtensor/0.24.7-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|xtensor/0.24.7-foss-2023a|x|x|x|x|x|x|x|
+|xtensor/0.24.7-foss-2023a|x|x|x|x|-|x|x|

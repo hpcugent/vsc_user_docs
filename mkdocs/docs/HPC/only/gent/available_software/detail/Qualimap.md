@@ -21,4 +21,4 @@ module load Qualimap/2.2.1-foss-2020b-R-4.0.3
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Qualimap/2.2.1-foss-2020b-R-4.0.3|-|x|x|x|x|-|-|
+|Qualimap/2.2.1-foss-2020b-R-4.0.3|-|x|x|x|-|-|-|

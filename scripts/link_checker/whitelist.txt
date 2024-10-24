@@ -30,3 +30,11 @@ https://openfoam.com
 http://openfoam.com/history/
 https://wiki.openfoam.com/Tutorials
 https://www.openfoam.com/documentation/user-guide
+
+# 403 for nl.mathworks.com (unclear why)
+https://nl.mathworks.com/help/compiler/index.html
+https://nl.mathworks.com/help/distcomp/parpool.html
+https://nl.mathworks.com/products/distriben.html
+
+# SSL error
+https://wiki.gnome.org/Projects/GnomeKeyring/Ssh

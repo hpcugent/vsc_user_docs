@@ -21,4 +21,4 @@ module load MICOM/0.33.2-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MICOM/0.33.2-foss-2023b|x|x|x|x|x|-|x|
+|MICOM/0.33.2-foss-2023b|x|x|x|x|-|-|x|
