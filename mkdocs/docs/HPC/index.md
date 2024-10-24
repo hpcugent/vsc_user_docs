@@ -20,7 +20,7 @@ Use the OS dropdown in the top bar to switch to a different operating system.
 {%- if site == 'Gent' %}
 - [Recording of HPC-UGent intro](https://www.ugent.be/hpc/en/training/introhpcugent-recording)
 - [Linux Tutorial](linux-tutorial/index.md)
-- [Hardware overview](https://www.ugent.be/hpc/en/infrastructure)
+- [Hardware overview](infrastructure.md)
 - [Available software](./only/gent/available_software/index.md)
 - [Migration of cluster and login nodes to RHEL9 (starting Sept'24)](rhel9.md)
 {%- endif %}
