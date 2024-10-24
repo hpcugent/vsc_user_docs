@@ -10,7 +10,11 @@ Science and Innovation (EWI).
 
 ## Tier-2 login nodes
 
-Log in to the HPC-UGent Tier-2 infrastructure using SSH via `login.hpc.ugent.be`.
+Log in to the HPC-UGent Tier-2 infrastructure via [https://login.hpc.ugent.be](https://login.hpc.ugent.be)
+or using SSH via `login.hpc.ugent.be`.
+
+more info on using the web portal you can find [here](web_portal),
+and about connection with SSH [here](connecting).
 
 ## Tier-2 compute clusters
 
