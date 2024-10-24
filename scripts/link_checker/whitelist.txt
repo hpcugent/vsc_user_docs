@@ -35,3 +35,6 @@ https://www.openfoam.com/documentation/user-guide
 https://nl.mathworks.com/help/compiler/index.html
 https://nl.mathworks.com/help/distcomp/parpool.html
 https://nl.mathworks.com/products/distriben.html
+
+# SSL error
+https://wiki.gnome.org/Projects/GnomeKeyring/Ssh
