@@ -13,8 +13,8 @@ Science and Innovation (EWI).
 Log in to the HPC-UGent Tier-2 infrastructure via [https://login.hpc.ugent.be](https://login.hpc.ugent.be)
 or using SSH via `login.hpc.ugent.be`.
 
-more info on using the web portal you can find [here](web_portal.md),
-and about connection with SSH [here](connecting.md).
+more info on using the web portal you can find [here](web_portal),
+and about connection with SSH [here](connecting).
 
 ## Tier-2 compute clusters
 
@@ -33,7 +33,7 @@ For basic information on using these clusters, see our
 | gallade (*) | 16 | 2x 64-core AMD EPYC 7773X (Milan-X @ 2.2 GHz) | 940 GiB | 1.5 TB NVME | HDR-100 InfiniBand | RHEL 9 |
 | shinx | 48 | 2x 96-core AMD EPYC 9654 (Genoa @ 2.4 GHz) | 370 GiB | 500GB NVME | NDR-200 InfiniBand | RHEL 9 |
 
-(*) also see this [extra information](only/gent/2023/donphan-gallade.md#gallade-large-memory-cluster)
+(*) also see this [extra information](./only/gent/2023/donphan-gallade#gallade-large-memory-cluster)
 
 ### Interactive debug cluster
 
@@ -59,7 +59,7 @@ For more information, see our [documentation](interactive_gent).
 | --- | --- | --- | --- | --- | --- | --- |
 | donphan (*) | 16 | 2 x 18-core Intel Xeon Gold 6240 (Cascade Lake @ 2.6 GHz) + 1x shared NVIDIA Ampere A2 GPU (16GB GPU memory) | 738 GiB | 	1.6 TB NVME | HDR-100 Infiniband | RHEL 8 |
 
-(*) also see this [extra information](only/gent/2023/donphan-gallade.md#donphan-debuginteractive-cluster)
+(*) also see this [extra information](./only/gent/2023/donphan-gallade#donphan-debuginteractive-cluster)
 
 ### GPU clusters
 
@@ -89,7 +89,7 @@ For more information on using these clusters, see our documentation.
 
 ^ Storage space for a group of users (Virtual Organisation or VO for short) can be
 increased significantly on request. For more information, see our
-[documentation](running_jobs_with_input_output_data.md#virtual-organisations).
+[documentation](running_jobs_with_input_output_data#virtual-organisations).
 
 ## Infrastructure status
 
