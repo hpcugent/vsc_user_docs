@@ -21,4 +21,4 @@ module load Pygments/2.18.0-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Pygments/2.18.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|Pygments/2.18.0-GCCcore-12.3.0|x|x|x|x|-|x|x|

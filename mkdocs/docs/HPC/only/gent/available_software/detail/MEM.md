@@ -21,5 +21,5 @@ module load MEM/20191023-foss-2020a-R-4.0.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MEM/20191023-foss-2020a-R-4.0.0|-|-|x|-|x|-|-|
-|MEM/20191023-foss-2019b|-|x|x|-|x|-|-|
+|MEM/20191023-foss-2020a-R-4.0.0|-|-|x|-|-|-|-|
+|MEM/20191023-foss-2019b|-|x|x|-|-|-|-|

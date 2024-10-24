@@ -21,4 +21,4 @@ module load legacy-job-wrappers/0.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|legacy-job-wrappers/0.0|-|x|x|-|x|-|-|
+|legacy-job-wrappers/0.0|-|x|x|-|-|-|-|

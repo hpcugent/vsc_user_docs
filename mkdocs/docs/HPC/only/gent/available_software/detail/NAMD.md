@@ -21,5 +21,5 @@ module load NAMD/2.14-foss-2023a-mpi
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NAMD/2.14-foss-2023a-mpi|x|x|x|x|x|-|-|
-|NAMD/2.14-foss-2021a-CUDA-11.3.1|x|-|-|-|x|-|-|
+|NAMD/2.14-foss-2023a-mpi|x|x|x|x|-|-|-|
+|NAMD/2.14-foss-2021a-CUDA-11.3.1|x|-|-|-|-|-|-|

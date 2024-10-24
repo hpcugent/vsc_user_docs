@@ -21,4 +21,4 @@ module load snp-sites/2.5.1-GCCcore-10.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|snp-sites/2.5.1-GCCcore-10.2.0|-|x|x|-|x|-|-|
+|snp-sites/2.5.1-GCCcore-10.2.0|-|x|x|-|-|-|-|

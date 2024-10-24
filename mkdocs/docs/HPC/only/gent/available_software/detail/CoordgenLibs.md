@@ -21,4 +21,4 @@ module load CoordgenLibs/3.0.1-iimpi-2020a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CoordgenLibs/3.0.1-iimpi-2020a|x|x|x|x|x|-|-|
+|CoordgenLibs/3.0.1-iimpi-2020a|x|x|x|x|-|-|-|

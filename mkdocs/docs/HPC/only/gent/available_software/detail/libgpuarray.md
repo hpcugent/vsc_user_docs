@@ -21,4 +21,4 @@ module load libgpuarray/0.7.6-fosscuda-2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libgpuarray/0.7.6-fosscuda-2020b|x|-|-|-|x|-|-|
+|libgpuarray/0.7.6-fosscuda-2020b|x|-|-|-|-|-|-|

@@ -21,5 +21,5 @@ module load autopep8/2.2.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|autopep8/2.2.0-foss-2023a|x|x|x|x|x|x|x|
-|autopep8/2.0.4-foss-2022a|x|x|x|x|x|-|-|
+|autopep8/2.2.0-foss-2023a|x|x|x|x|-|x|x|
+|autopep8/2.0.4-foss-2022a|x|x|x|x|-|-|-|

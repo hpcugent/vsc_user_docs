@@ -21,4 +21,4 @@ module load NetPyNE/1.0.2.1-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NetPyNE/1.0.2.1-foss-2021b|x|x|x|-|x|-|-|
+|NetPyNE/1.0.2.1-foss-2021b|x|x|x|-|-|-|-|

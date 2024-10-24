@@ -21,4 +21,4 @@ module load rasterstats/0.15.0-foss-2020a-Python-3.8.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rasterstats/0.15.0-foss-2020a-Python-3.8.2|-|x|x|-|x|-|-|
+|rasterstats/0.15.0-foss-2020a-Python-3.8.2|-|x|x|-|-|-|-|

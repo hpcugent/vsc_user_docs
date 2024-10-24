@@ -21,4 +21,4 @@ module load SuperLU/5.2.2-intel-2020a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SuperLU/5.2.2-intel-2020a|-|x|x|-|x|-|-|
+|SuperLU/5.2.2-intel-2020a|-|x|x|-|-|-|-|

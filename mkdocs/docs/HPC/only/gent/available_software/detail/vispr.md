@@ -21,4 +21,4 @@ module load vispr/0.4.14-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|vispr/0.4.14-foss-2022a|x|x|x|x|x|-|-|
+|vispr/0.4.14-foss-2022a|x|x|x|x|-|-|-|

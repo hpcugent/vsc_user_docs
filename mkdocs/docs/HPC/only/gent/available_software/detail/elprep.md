@@ -21,4 +21,4 @@ module load elprep/5.1.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|elprep/5.1.1|-|x|x|-|x|-|-|
+|elprep/5.1.1|-|x|x|-|-|-|-|

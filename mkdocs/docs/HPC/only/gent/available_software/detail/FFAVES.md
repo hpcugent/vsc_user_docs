@@ -21,4 +21,4 @@ module load FFAVES/2022.11.1-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FFAVES/2022.11.1-foss-2022a|x|x|x|x|x|-|-|
+|FFAVES/2022.11.1-foss-2022a|x|x|x|x|-|-|-|

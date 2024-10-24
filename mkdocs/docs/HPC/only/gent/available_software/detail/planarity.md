@@ -21,4 +21,4 @@ module load planarity/3.0.2.0-GCC-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|planarity/3.0.2.0-GCC-13.2.0|x|x|x|x|x|x|x|
+|planarity/3.0.2.0-GCC-13.2.0|x|x|x|x|-|x|x|

@@ -21,8 +21,8 @@ module load pigz/2.8-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pigz/2.8-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|pigz/2.7-GCCcore-11.3.0|x|x|x|x|x|-|-|
-|pigz/2.6-GCCcore-11.2.0|x|x|x|x|x|-|-|
-|pigz/2.6-GCCcore-10.2.0|-|x|x|x|x|-|-|
-|pigz/2.4-GCCcore-8.3.0|-|x|x|-|x|-|-|
+|pigz/2.8-GCCcore-12.3.0|x|x|x|x|-|x|x|
+|pigz/2.7-GCCcore-11.3.0|x|x|x|x|-|-|-|
+|pigz/2.6-GCCcore-11.2.0|x|x|x|x|-|-|-|
+|pigz/2.6-GCCcore-10.2.0|-|x|x|x|-|-|-|
+|pigz/2.4-GCCcore-8.3.0|-|x|x|-|-|-|-|

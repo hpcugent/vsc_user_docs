@@ -21,4 +21,4 @@ module load Gymnasium/0.29.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Gymnasium/0.29.1-foss-2023a|x|x|x|x|x|x|x|
+|Gymnasium/0.29.1-foss-2023a|x|x|x|x|-|x|x|

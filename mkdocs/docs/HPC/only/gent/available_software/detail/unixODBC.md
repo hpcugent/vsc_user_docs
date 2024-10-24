@@ -21,5 +21,5 @@ module load unixODBC/2.3.12-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|unixODBC/2.3.12-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|unixODBC/2.3.11-foss-2022b|x|x|x|x|x|-|-|
+|unixODBC/2.3.12-GCCcore-12.3.0|x|x|x|x|-|x|x|
+|unixODBC/2.3.11-foss-2022b|x|x|x|x|-|-|-|

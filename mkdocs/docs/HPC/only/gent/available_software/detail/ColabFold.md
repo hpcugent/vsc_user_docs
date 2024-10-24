@@ -21,5 +21,5 @@ module load ColabFold/1.5.2-foss-2022a-CUDA-11.7.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ColabFold/1.5.2-foss-2022a-CUDA-11.7.0|x|-|-|-|x|-|-|
-|ColabFold/1.5.2-foss-2022a|-|-|x|-|x|-|-|
+|ColabFold/1.5.2-foss-2022a-CUDA-11.7.0|x|-|-|-|-|-|-|
+|ColabFold/1.5.2-foss-2022a|-|-|x|-|-|-|-|

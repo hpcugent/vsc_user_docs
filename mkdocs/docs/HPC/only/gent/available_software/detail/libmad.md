@@ -22,4 +22,4 @@ module load libmad/0.15.1b-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libmad/0.15.1b-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|libmad/0.15.1b-GCCcore-11.3.0|x|x|x|x|x|-|-|
+|libmad/0.15.1b-GCCcore-11.3.0|x|x|x|x|-|-|-|

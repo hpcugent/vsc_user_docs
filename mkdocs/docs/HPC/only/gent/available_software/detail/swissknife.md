@@ -21,4 +21,4 @@ module load swissknife/1.80-GCCcore-8.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|swissknife/1.80-GCCcore-8.3.0|-|x|x|-|x|-|-|
+|swissknife/1.80-GCCcore-8.3.0|-|x|x|-|-|-|-|
