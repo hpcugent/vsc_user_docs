@@ -14,13 +14,14 @@ The overview below shows which eggnog-mapper installations are available per HPC
 To start using eggnog-mapper, load one of these modules using a `module load` command like:
 
 ```shell
-module load eggnog-mapper/2.1.10-foss-2020b
+module load eggnog-mapper/2.1.12-foss-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|eggnog-mapper/2.1.12-foss-2023a|x|x|x|x|-|x|x|
 |eggnog-mapper/2.1.10-foss-2020b|x|x|x|x|-|-|-|
 |eggnog-mapper/2.1.7-foss-2021b|x|x|x|x|-|-|-|
 |eggnog-mapper/2.1.4-foss-2020b|-|x|x|x|-|-|-|

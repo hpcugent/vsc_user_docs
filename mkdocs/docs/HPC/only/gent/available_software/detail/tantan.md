@@ -14,11 +14,12 @@ The overview below shows which tantan installations are available per HPC-UGent 
 To start using tantan, load one of these modules using a `module load` command like:
 
 ```shell
-module load tantan/40-GCC-11.2.0
+module load tantan/50-GCC-12.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tantan/50-GCC-12.3.0|x|x|x|x|-|x|x|
 |tantan/40-GCC-11.2.0|x|x|x|x|-|-|-|
