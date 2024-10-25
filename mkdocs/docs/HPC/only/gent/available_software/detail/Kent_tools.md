@@ -22,6 +22,7 @@ module load Kent_tools/20190326-linux.x86_64
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Kent_tools/20190326-linux.x86_64|-|-|x|-|-|-|-|
+|Kent_tools/468-GCC-12.3.0|x|x|x|x|-|-|-|
 |Kent_tools/422-GCC-11.2.0|x|x|x|x|-|-|-|
 |Kent_tools/411-GCC-10.2.0|-|x|x|x|-|-|-|
 |Kent_tools/401-gompi-2019b|-|x|x|-|-|-|-|
