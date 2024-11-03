@@ -14,11 +14,12 @@ The overview below shows which rioxarray installations are available per HPC-UGe
 To start using rioxarray, load one of these modules using a `module load` command like:
 
 ```shell
-module load rioxarray/0.11.1-foss-2021b
+module load rioxarray/0.15.0-foss-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|rioxarray/0.15.0-foss-2023a|x|x|x|x|-|x|x|
 |rioxarray/0.11.1-foss-2021b|x|x|x|-|-|-|-|
