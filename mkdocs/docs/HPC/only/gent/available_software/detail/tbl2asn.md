@@ -22,4 +22,5 @@ module load tbl2asn/20230713-linux64
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |tbl2asn/20230713-linux64|x|x|x|x|-|-|-|
+|tbl2asn/20230713-GCCcore-12.3.0|x|x|x|x|-|x|x|
 |tbl2asn/20220427-linux64|x|x|x|x|-|-|-|

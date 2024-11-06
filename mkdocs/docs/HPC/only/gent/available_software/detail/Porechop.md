@@ -22,3 +22,4 @@ module load Porechop/0.2.4-intel-2019b-Python-3.7.4
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Porechop/0.2.4-intel-2019b-Python-3.7.4|-|x|x|-|-|-|-|
+|Porechop/0.2.4-20240119-GCCcore-12.3.0|-|x|x|-|-|x|x|
