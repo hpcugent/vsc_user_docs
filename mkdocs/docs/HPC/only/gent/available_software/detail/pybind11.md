@@ -21,7 +21,7 @@ module load pybind11/2.12.0-GCC-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pybind11/2.12.0-GCC-13.3.0|x|x|x|x|-|x|-|
+|pybind11/2.12.0-GCC-13.3.0|x|x|x|x|-|x|x|
 |pybind11/2.11.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |pybind11/2.11.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |pybind11/2.10.3-GCCcore-12.2.0|x|x|x|x|-|x|-|

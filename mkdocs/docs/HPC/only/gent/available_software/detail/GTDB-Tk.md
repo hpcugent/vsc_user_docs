@@ -14,13 +14,14 @@ The overview below shows which GTDB-Tk installations are available per HPC-UGent
 To start using GTDB-Tk, load one of these modules using a `module load` command like:
 
 ```shell
-module load GTDB-Tk/2.3.2-foss-2023a
+module load GTDB-Tk/2.4.0-foss-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GTDB-Tk/2.4.0-foss-2023a|x|x|x|x|x|x|x|
 |GTDB-Tk/2.3.2-foss-2023a|x|x|x|x|-|x|x|
 |GTDB-Tk/2.0.0-intel-2021b|x|x|x|-|-|-|-|
 |GTDB-Tk/1.7.0-intel-2020b|-|x|x|-|-|-|-|
