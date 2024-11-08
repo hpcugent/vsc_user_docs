@@ -21,7 +21,7 @@ module load MAFFT/7.520-GCC-12.3.0-with-extensions
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MAFFT/7.520-GCC-12.3.0-with-extensions|x|x|x|x|-|x|x|
+|MAFFT/7.520-GCC-12.3.0-with-extensions|x|x|x|x|x|x|x|
 |MAFFT/7.505-GCC-12.2.0-with-extensions|x|x|x|x|-|-|-|
 |MAFFT/7.505-GCC-11.3.0-with-extensions|x|x|x|x|-|-|-|
 |MAFFT/7.490-gompi-2021b-with-extensions|x|x|x|x|-|-|-|

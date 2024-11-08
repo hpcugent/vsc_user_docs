@@ -21,6 +21,6 @@ module load FASTA/36.3.8i-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FASTA/36.3.8i-GCC-12.3.0|x|x|x|x|-|x|x|
+|FASTA/36.3.8i-GCC-12.3.0|x|x|x|x|x|x|x|
 |FASTA/36.3.8i-GCC-12.2.0|x|x|x|x|-|-|-|
 |FASTA/36.3.8i-GCC-11.2.0|x|x|x|x|-|-|-|

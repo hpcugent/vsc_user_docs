@@ -21,7 +21,7 @@ module load SuiteSparse/7.1.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SuiteSparse/7.1.0-foss-2023a|x|x|x|x|-|x|x|
+|SuiteSparse/7.1.0-foss-2023a|x|x|x|x|x|x|x|
 |SuiteSparse/5.13.0-foss-2022b-METIS-5.1.0|x|x|x|x|-|-|-|
 |SuiteSparse/5.13.0-foss-2022a-METIS-5.1.0|x|x|x|x|-|-|-|
 |SuiteSparse/5.10.1-intel-2021b-METIS-5.1.0|x|x|x|x|-|-|-|

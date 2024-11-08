@@ -14,11 +14,12 @@ The overview below shows which NTL installations are available per HPC-UGent Tie
 To start using NTL, load one of these modules using a `module load` command like:
 
 ```shell
-module load NTL/11.5.1-GCC-13.2.0
+module load NTL/11.5.1-GCC-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NTL/11.5.1-GCC-13.3.0|x|x|x|x|-|x|x|
 |NTL/11.5.1-GCC-13.2.0|x|x|x|x|-|x|x|

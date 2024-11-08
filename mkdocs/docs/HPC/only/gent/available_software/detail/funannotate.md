@@ -21,5 +21,5 @@ module load funannotate/1.8.17-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|funannotate/1.8.17-foss-2023a|x|x|x|x|-|-|-|
+|funannotate/1.8.17-foss-2023a|x|x|x|x|-|x|x|
 |funannotate/1.8.13-foss-2021b|x|x|x|x|-|-|-|
