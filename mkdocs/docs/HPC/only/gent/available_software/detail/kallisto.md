@@ -21,7 +21,7 @@ module load kallisto/0.51.1-gompi-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|kallisto/0.51.1-gompi-2023a|x|x|x|x|-|x|x|
+|kallisto/0.51.1-gompi-2023a|x|x|x|x|x|x|x|
 |kallisto/0.48.0-gompi-2022a|x|x|x|x|-|-|-|
 |kallisto/0.48.0-gompi-2021b|x|x|x|x|-|-|-|
 |kallisto/0.46.1-intel-2020a|-|x|-|-|-|-|-|

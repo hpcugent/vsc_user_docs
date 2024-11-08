@@ -14,13 +14,14 @@ The overview below shows which lxml installations are available per HPC-UGent Ti
 To start using lxml, load one of these modules using a `module load` command like:
 
 ```shell
-module load lxml/4.9.3-GCCcore-13.2.0
+module load lxml/5.3.0-GCCcore-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|lxml/5.3.0-GCCcore-13.3.0|x|x|x|x|-|x|x|
 |lxml/4.9.3-GCCcore-13.2.0|x|x|x|x|-|x|x|
 |lxml/4.9.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |lxml/4.9.2-GCCcore-12.2.0|x|x|x|x|-|-|-|
