@@ -21,7 +21,7 @@ module load h5py/3.11.0-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|h5py/3.11.0-foss-2023b|x|x|x|x|-|x|x|
+|h5py/3.11.0-foss-2023b|x|x|x|x|x|x|x|
 |h5py/3.9.0-foss-2023a|x|x|x|x|x|x|x|
 |h5py/3.8.0-foss-2022b|x|x|x|x|-|-|-|
 |h5py/3.7.0-intel-2022a|x|x|x|x|-|-|-|

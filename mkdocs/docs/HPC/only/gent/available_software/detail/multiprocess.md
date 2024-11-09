@@ -21,4 +21,4 @@ module load multiprocess/0.70.16-gfbf-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|multiprocess/0.70.16-gfbf-2023b|x|x|x|x|-|x|x|
+|multiprocess/0.70.16-gfbf-2023b|x|x|x|x|x|x|x|
