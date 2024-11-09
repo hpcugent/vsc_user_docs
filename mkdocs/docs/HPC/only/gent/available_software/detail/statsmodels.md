@@ -21,7 +21,7 @@ module load statsmodels/0.14.1-gfbf-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|statsmodels/0.14.1-gfbf-2023b|x|x|x|x|-|x|x|
+|statsmodels/0.14.1-gfbf-2023b|x|x|x|x|x|x|x|
 |statsmodels/0.14.1-gfbf-2023a|x|x|x|x|x|x|x|
 |statsmodels/0.14.0-gfbf-2022b|x|x|x|x|-|-|-|
 |statsmodels/0.13.1-intel-2021b|x|x|x|x|-|-|-|

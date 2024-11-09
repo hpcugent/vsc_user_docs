@@ -21,4 +21,4 @@ module load Mustache/1.3.3-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Mustache/1.3.3-foss-2023b|x|-|x|x|-|x|x|
+|Mustache/1.3.3-foss-2023b|x|x|x|x|x|x|x|
