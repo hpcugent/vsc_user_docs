@@ -14,12 +14,13 @@ The overview below shows which Dice installations are available per HPC-UGent Ti
 To start using Dice, load one of these modules using a `module load` command like:
 
 ```shell
-module load Dice/20240101-foss-2022b
+module load Dice/20240702-foss-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Dice/20240702-foss-2023a|-|-|-|-|-|x|x|
 |Dice/20240101-foss-2022b|x|x|x|x|-|-|-|
 |Dice/20221025-foss-2022a|-|x|x|x|-|-|-|

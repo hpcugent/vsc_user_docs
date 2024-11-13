@@ -14,12 +14,13 @@ The overview below shows which CheMPS2 installations are available per HPC-UGent
 To start using CheMPS2, load one of these modules using a `module load` command like:
 
 ```shell
-module load CheMPS2/1.8.12-foss-2022b
+module load CheMPS2/1.8.12-foss-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CheMPS2/1.8.12-foss-2023a|-|-|-|-|-|x|x|
 |CheMPS2/1.8.12-foss-2022b|x|x|x|x|-|-|-|
 |CheMPS2/1.8.12-foss-2022a|-|x|x|x|-|-|-|

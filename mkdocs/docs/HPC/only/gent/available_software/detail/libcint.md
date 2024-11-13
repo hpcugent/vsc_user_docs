@@ -22,6 +22,7 @@ module load libcint/5.5.0-gfbf-2022b
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libcint/5.5.0-gfbf-2022b|x|x|x|x|-|-|-|
+|libcint/5.4.0-gfbf-2023a|-|-|-|-|-|x|x|
 |libcint/5.1.6-foss-2022a|-|x|x|x|-|-|-|
 |libcint/4.4.0-gomkl-2021a|x|x|x|x|-|-|-|
 |libcint/4.4.0-foss-2021a|x|x|x|x|-|-|-|
