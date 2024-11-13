@@ -22,4 +22,4 @@ module load Flax/0.8.4-gfbf-2023a-CUDA-12.1.1
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Flax/0.8.4-gfbf-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
-|Flax/0.8.4-gfbf-2023a|-|-|-|-|-|-|x|
+|Flax/0.8.4-gfbf-2023a|-|-|-|-|-|x|x|
