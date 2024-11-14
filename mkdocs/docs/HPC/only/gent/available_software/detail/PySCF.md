@@ -21,7 +21,7 @@ module load PySCF/2.7.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PySCF/2.7.0-foss-2023a|-|-|-|-|-|x|x|
+|PySCF/2.7.0-foss-2023a|x|x|x|x|x|x|x|
 |PySCF/2.4.0-foss-2022b|x|x|x|x|-|-|-|
 |PySCF/2.1.1-foss-2022a|-|x|x|x|-|-|-|
 |PySCF/1.7.6-gomkl-2021a|x|x|x|x|-|-|-|

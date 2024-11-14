@@ -21,7 +21,7 @@ module load dm-haiku/0.0.13-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|dm-haiku/0.0.13-foss-2023a|-|x|x|x|-|x|x|
+|dm-haiku/0.0.13-foss-2023a|x|x|x|x|-|x|x|
 |dm-haiku/0.0.12-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
 |dm-haiku/0.0.12-foss-2023a|x|x|x|x|-|x|x|
 |dm-haiku/0.0.9-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|-|

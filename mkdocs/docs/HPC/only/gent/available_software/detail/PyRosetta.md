@@ -21,4 +21,4 @@ module load PyRosetta/4.release-387-gompi-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyRosetta/4.release-387-gompi-2023a|-|x|x|x|-|x|x|
+|PyRosetta/4.release-387-gompi-2023a|x|x|x|x|x|x|x|

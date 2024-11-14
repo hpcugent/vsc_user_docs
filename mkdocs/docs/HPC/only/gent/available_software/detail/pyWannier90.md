@@ -14,12 +14,13 @@ The overview below shows which pyWannier90 installations are available per HPC-U
 To start using pyWannier90, load one of these modules using a `module load` command like:
 
 ```shell
-module load pyWannier90/2021-12-07-gomkl-2021a
+module load pyWannier90/2024-01-28-foss-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pyWannier90/2024-01-28-foss-2023a|x|-|x|-|x|-|x|
 |pyWannier90/2021-12-07-gomkl-2021a|x|x|x|x|-|-|-|
 |pyWannier90/2021-12-07-foss-2021a|x|x|x|x|-|-|-|
