@@ -21,4 +21,4 @@ module load BindCraft/1.1.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BindCraft/1.1.0-foss-2023a|-|-|-|-|-|x|x|
+|BindCraft/1.1.0-foss-2023a|x|x|x|x|-|x|x|

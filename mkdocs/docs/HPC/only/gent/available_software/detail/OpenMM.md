@@ -22,7 +22,7 @@ module load OpenMM/8.0.0-foss-2023a-CUDA-12.1.1
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |OpenMM/8.0.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
-|OpenMM/8.0.0-foss-2023a|x|x|x|x|-|x|x|
+|OpenMM/8.0.0-foss-2023a|x|x|x|x|x|x|x|
 |OpenMM/8.0.0-foss-2022a-CUDA-11.7.0|x|-|x|-|-|-|-|
 |OpenMM/8.0.0-foss-2022a|x|x|x|x|-|-|-|
 |OpenMM/7.7.0-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|-|

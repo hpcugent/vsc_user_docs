@@ -21,7 +21,7 @@ module load libxc/6.2.2-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libxc/6.2.2-GCC-12.3.0|x|x|x|x|-|x|x|
+|libxc/6.2.2-GCC-12.3.0|x|x|x|x|x|x|x|
 |libxc/6.1.0-GCC-12.2.0|x|x|x|x|-|-|-|
 |libxc/5.2.3-intel-compilers-2022.1.0|x|x|x|x|-|-|-|
 |libxc/5.2.3-GCC-11.3.0|x|x|x|x|-|-|-|

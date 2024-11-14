@@ -21,4 +21,4 @@ module load tblis/20230422-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tblis/20230422-foss-2023a|-|x|x|-|-|x|x|
+|tblis/20230422-foss-2023a|x|x|x|x|x|x|x|
