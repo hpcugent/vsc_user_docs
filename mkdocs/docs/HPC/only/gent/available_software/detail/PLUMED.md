@@ -21,7 +21,7 @@ module load PLUMED/2.9.2-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PLUMED/2.9.2-foss-2023b|x|x|x|x|-|x|x|
+|PLUMED/2.9.2-foss-2023b|x|x|x|x|x|x|x|
 |PLUMED/2.9.0-foss-2023a|x|x|x|x|x|x|x|
 |PLUMED/2.9.0-foss-2022b|x|x|x|x|-|-|-|
 |PLUMED/2.8.1-foss-2022a|x|x|x|x|-|-|-|

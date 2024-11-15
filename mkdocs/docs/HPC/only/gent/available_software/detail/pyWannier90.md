@@ -21,6 +21,6 @@ module load pyWannier90/2024-01-28-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pyWannier90/2024-01-28-foss-2023a|x|-|x|-|x|-|x|
+|pyWannier90/2024-01-28-foss-2023a|x|x|x|x|x|x|x|
 |pyWannier90/2021-12-07-gomkl-2021a|x|x|x|x|-|-|-|
 |pyWannier90/2021-12-07-foss-2021a|x|x|x|x|-|-|-|
