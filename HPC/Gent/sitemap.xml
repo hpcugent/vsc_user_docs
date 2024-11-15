@@ -75,6 +75,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/infrastructure/</ns0:loc>
+         <ns0:lastmod>2024-11-15</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/interactive_debug/</ns0:loc>
          <ns0:lastmod>2024-11-15</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -9821,6 +9826,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/gpu/</ns0:loc>
+         <ns0:lastmod>2024-11-15</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/infrastructure/</ns0:loc>
          <ns0:lastmod>2024-11-15</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -19575,6 +19585,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/infrastructure/</ns0:loc>
+         <ns0:lastmod>2024-11-15</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/interactive_debug/</ns0:loc>
          <ns0:lastmod>2024-11-15</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -29321,6 +29336,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/gpu/</ns0:loc>
+         <ns0:lastmod>2024-11-15</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/infrastructure/</ns0:loc>
          <ns0:lastmod>2024-11-15</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>

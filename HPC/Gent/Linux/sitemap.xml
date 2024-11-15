@@ -76,6 +76,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/infrastructure/</loc>
+         <lastmod>2024-11-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/interactive_debug/</loc>
          <lastmod>2024-11-15</lastmod>
          <changefreq>daily</changefreq>
