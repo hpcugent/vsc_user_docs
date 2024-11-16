@@ -14,13 +14,14 @@ The overview below shows which gomkl installations are available per HPC-UGent T
 To start using gomkl, load one of these modules using a `module load` command like:
 
 ```shell
-module load gomkl/2023a
+module load gomkl/2023b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|gomkl/2023b|x|x|x|x|x|x|x|
 |gomkl/2023a|x|x|x|x|-|x|x|
 |gomkl/2021a|x|x|x|x|-|-|-|
 |gomkl/2020a|-|x|x|x|-|-|-|
