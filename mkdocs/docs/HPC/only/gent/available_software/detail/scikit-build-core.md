@@ -21,5 +21,5 @@ module load scikit-build-core/0.9.3-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scikit-build-core/0.9.3-GCCcore-13.2.0|x|-|x|-|x|x|x|
+|scikit-build-core/0.9.3-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |scikit-build-core/0.5.0-GCCcore-12.3.0|x|x|x|x|-|x|x|
