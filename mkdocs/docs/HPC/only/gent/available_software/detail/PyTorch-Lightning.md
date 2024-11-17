@@ -25,6 +25,7 @@ module load PyTorch-Lightning/2.2.1-foss-2023a-CUDA-12.1.1
 |PyTorch-Lightning/2.2.1-foss-2023a|x|x|x|x|-|x|x|
 |PyTorch-Lightning/2.1.3-foss-2023a|x|x|x|x|-|-|-|
 |PyTorch-Lightning/2.1.2-foss-2022b|x|x|x|x|-|-|-|
+|PyTorch-Lightning/1.8.4-foss-2022b|-|x|x|x|-|-|-|
 |PyTorch-Lightning/1.8.4-foss-2022a-CUDA-11.7.0|x|-|-|-|-|-|-|
 |PyTorch-Lightning/1.8.4-foss-2022a|x|x|x|x|-|-|-|
 |PyTorch-Lightning/1.7.7-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|-|
