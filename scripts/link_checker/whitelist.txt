@@ -38,3 +38,10 @@ https://nl.mathworks.com/products/distriben.html
 
 # SSL error
 https://wiki.gnome.org/Projects/GnomeKeyring/Ssh
+
+# randomly gives 503 - 2024-11-18
+https://www.tldp.org/LDP/abs/html/variables.html
+https://www.tldp.org/LDP/Bash-Beginners-Guide/html/
+https://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html
+https://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html
+https://www.tldp.org/guides.html
