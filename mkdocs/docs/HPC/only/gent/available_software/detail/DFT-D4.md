@@ -21,4 +21,4 @@ module load DFT-D4/3.7.0-gomkl-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DFT-D4/3.7.0-gomkl-2023b|x|-|-|-|x|-|x|
+|DFT-D4/3.7.0-gomkl-2023b|x|x|x|x|x|x|x|

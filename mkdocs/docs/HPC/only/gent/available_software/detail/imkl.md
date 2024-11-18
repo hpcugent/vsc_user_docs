@@ -39,6 +39,7 @@ module load imkl/2023.2.0-gompi-2023b
 |imkl/2020.0.166-iompi-2020a|-|x|-|-|-|-|-|
 |imkl/2020.0.166-iimpi-2020b|x|x|-|x|-|-|-|
 |imkl/2020.0.166-iimpi-2020a|-|x|-|-|-|-|-|
+|imkl/2020.0.166-gompi-2023b|x|x|-|x|-|x|-|
 |imkl/2020.0.166-gompi-2023a|x|x|-|x|-|x|-|
 |imkl/2020.0.166-gompi-2020a|-|x|-|-|-|-|-|
 |imkl/2019.5.281-iimpi-2019b|-|x|x|-|-|-|-|

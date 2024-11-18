@@ -23,6 +23,7 @@ module load Redis/7.2.4-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Redis/7.2.4-GCCcore-13.2.0|x|x|x|x|-|x|x|
 |Redis/7.2.3-GCCcore-12.3.0|x|x|x|x|-|x|x|
+|Redis/7.2.3-GCCcore-12.2.0|-|x|x|x|-|-|-|
 |Redis/7.0.8-GCC-11.3.0|x|x|x|x|-|-|-|
 |Redis/6.2.6-GCC-11.2.0|x|x|x|-|-|-|-|
 |Redis/6.2.6-GCC-10.3.0|x|x|x|-|-|-|-|
