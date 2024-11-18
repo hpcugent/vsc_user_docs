@@ -303,7 +303,7 @@ commands you put in there will be executed from the top to bottom.
 
 However, there are some rules you need to abide by.
 
-Here is a [very detailed guide](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/) should you
+Here is a [very detailed guide](https://www.tldp.org/LDP/Bash-Beginners-Guide/html/) should you
 need more information.
 
 ### Shebang
@@ -357,7 +357,7 @@ brackets, the **then** needs to be at the beginning of a line. It is best to jus
 copy this example and modify it.
 
 In the initial example, we used `-d` to test if a directory existed.
-There are [several more checks](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html).
+There are [several more checks](https://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html).
 
 Another useful example, is to test if a variable contains a value (so it's
 not empty):

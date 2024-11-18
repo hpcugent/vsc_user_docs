@@ -194,7 +194,7 @@ empty variables are used. (see <https://ss64.com/bash/set.html> for
 a more detailed explanation and more options)
 
 More information can be found at
-<http://www.tldp.org/LDP/abs/html/variables.html>.
+<https://www.tldp.org/LDP/abs/html/variables.html>.
 
 ### Restoring your default environment
 
