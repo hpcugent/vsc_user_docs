@@ -1356,6 +1356,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/DECAF-synthetic-data/</loc>
+         <lastmod>2024-11-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/DETONATE/</loc>
          <lastmod>2024-11-18</lastmod>
          <changefreq>daily</changefreq>
@@ -2297,6 +2302,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/HERRO/</loc>
+         <lastmod>2024-11-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/HF-Datasets/</loc>
          <lastmod>2024-11-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
