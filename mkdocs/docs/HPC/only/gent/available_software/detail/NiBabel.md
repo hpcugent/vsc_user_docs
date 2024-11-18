@@ -22,6 +22,7 @@ module load NiBabel/5.2.0-gfbf-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |NiBabel/5.2.0-gfbf-2023a|x|x|x|x|x|x|x|
+|NiBabel/5.2.0-gfbf-2022b|-|x|x|x|-|-|-|
 |NiBabel/4.0.2-foss-2022a|x|x|x|x|-|-|-|
 |NiBabel/3.2.1-fosscuda-2020b|x|-|-|-|-|-|-|
 |NiBabel/3.2.1-foss-2021a|x|x|x|-|-|-|-|

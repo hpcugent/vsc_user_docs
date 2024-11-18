@@ -21,4 +21,4 @@ module load multicharge/0.3.0-gomkl-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|multicharge/0.3.0-gomkl-2023b|x|-|-|-|x|-|x|
+|multicharge/0.3.0-gomkl-2023b|x|x|x|x|x|x|x|

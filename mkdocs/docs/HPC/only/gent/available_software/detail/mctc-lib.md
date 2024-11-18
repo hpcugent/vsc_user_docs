@@ -21,4 +21,4 @@ module load mctc-lib/0.3.1-GCC-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mctc-lib/0.3.1-GCC-13.2.0|x|-|-|-|x|-|x|
+|mctc-lib/0.3.1-GCC-13.2.0|x|x|x|x|x|x|x|
