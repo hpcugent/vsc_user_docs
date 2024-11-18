@@ -8,8 +8,8 @@ as well as switching the Tier-2 login nodes to new ones running RHEL 9.
 
 ## Motivation
 
-Migrating to RHEL 8 is done to bring all clusters in line with the most recent
-cluster that are already running RHEL 9 (`shinx`).
+Migrating to RHEL 9 is done to bring all clusters in line with the most recent
+cluster that is already running RHEL 9 (`shinx`).
 
 This makes the maintenance of the HPC-UGent Tier-2 infrastructure significantly easier,
 since we only need to take into account a single operating system version going forward.
