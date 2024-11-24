@@ -74,7 +74,7 @@ For more information on using these clusters, see our documentation.
 | ***cluster name*** | ***# nodes*** | ***Processor architecture & GPUs*** | ***Usable memory/node*** | ***Local diskspace/node*** | ***Interconnect*** | ***Operating system*** |
 | --- | --- | --- | --- | --- | --- | --- |
 | joltik | 10 | 2x 16-core Intel Xeon Gold 6242 (Cascade Lake @ 2.8 GHz) + 4x NVIDIA Volta V100 GPUs (32GB GPU memory) | 256 GiB | 800GB SSD | double EDR Infiniband | RHEL 9 |
-| accelgor | 9 | 2x 24-core AMD EPYC 7413 (Milan @ 2.2 GHz) + 4x NVIDIA Ampere A100 GPUs (80GB GPU memory) | 500 GiB | 180GB SSD | HDR InfiniBand | RHEL 8 |
+| accelgor | 9 | 2x 24-core AMD EPYC 7413 (Milan @ 2.2 GHz) + 4x NVIDIA Ampere A100 GPUs (80GB GPU memory) | 500 GiB | 180GB SSD | HDR InfiniBand | RHEL 9 |
 
 
 ## Tier-2 shared storage
