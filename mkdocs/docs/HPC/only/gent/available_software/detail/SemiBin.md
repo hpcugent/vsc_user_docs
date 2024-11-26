@@ -21,5 +21,5 @@ module load SemiBin/2.0.2-foss-2022a-CUDA-11.7.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SemiBin/2.0.2-foss-2022a-CUDA-11.7.0|x|-|x|-|-|-|-|
-|SemiBin/2.0.2-foss-2022a|x|x|x|x|-|-|-|
+|SemiBin/2.0.2-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|-|
+|SemiBin/2.0.2-foss-2022a|-|x|x|x|-|-|-|

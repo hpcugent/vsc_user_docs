@@ -21,4 +21,4 @@ module load methylpy/1.2.9-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|methylpy/1.2.9-foss-2021b|x|x|x|-|-|-|-|
+|methylpy/1.2.9-foss-2021b|-|x|x|-|-|-|-|

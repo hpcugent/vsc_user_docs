@@ -21,4 +21,4 @@ module load sparse-neighbors-search/0.7-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|sparse-neighbors-search/0.7-foss-2022a|x|x|x|x|-|-|-|
+|sparse-neighbors-search/0.7-foss-2022a|-|x|x|x|-|-|-|

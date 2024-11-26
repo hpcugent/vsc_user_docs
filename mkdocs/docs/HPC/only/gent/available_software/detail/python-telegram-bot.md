@@ -21,4 +21,4 @@ module load python-telegram-bot/20.0a0-GCCcore-10.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|python-telegram-bot/20.0a0-GCCcore-10.2.0|x|x|x|-|-|-|-|
+|python-telegram-bot/20.0a0-GCCcore-10.2.0|-|x|x|-|-|-|-|

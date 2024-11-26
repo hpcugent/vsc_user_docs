@@ -21,4 +21,4 @@ module load Mikado/2.3.4-foss-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Mikado/2.3.4-foss-2022b|x|x|x|x|-|-|-|
+|Mikado/2.3.4-foss-2022b|-|x|x|x|-|-|-|

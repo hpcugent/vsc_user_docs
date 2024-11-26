@@ -21,5 +21,5 @@ module load LibSoup/3.0.7-GCC-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LibSoup/3.0.7-GCC-11.2.0|x|x|x|x|-|-|-|
-|LibSoup/2.74.0-GCCcore-10.3.0|x|x|x|-|-|-|-|
+|LibSoup/3.0.7-GCC-11.2.0|-|x|x|x|-|-|-|
+|LibSoup/2.74.0-GCCcore-10.3.0|-|x|x|-|-|-|-|

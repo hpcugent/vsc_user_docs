@@ -22,7 +22,7 @@ module load Miniconda3/23.10.0-1
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Miniconda3/23.10.0-1|x|x|x|x|-|x|x|
-|Miniconda3/23.5.2-0|x|x|x|x|-|-|-|
-|Miniconda3/22.11.1-1|x|x|x|x|-|-|-|
+|Miniconda3/23.5.2-0|-|x|x|x|-|-|-|
+|Miniconda3/22.11.1-1|-|x|x|x|-|-|-|
 |Miniconda3/4.9.2|-|x|x|-|-|-|-|
 |Miniconda3/4.8.3|-|x|x|-|-|-|-|

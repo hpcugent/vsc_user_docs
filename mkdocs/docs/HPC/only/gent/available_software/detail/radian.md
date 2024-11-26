@@ -21,4 +21,4 @@ module load radian/0.6.9-foss-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|radian/0.6.9-foss-2022b|x|x|x|x|-|-|-|
+|radian/0.6.9-foss-2022b|-|x|x|x|-|-|-|

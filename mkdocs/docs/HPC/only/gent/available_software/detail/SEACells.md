@@ -21,4 +21,4 @@ module load SEACells/20230731-foss-2021a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SEACells/20230731-foss-2021a|x|x|x|x|-|-|-|
+|SEACells/20230731-foss-2021a|-|x|x|x|-|-|-|

@@ -21,4 +21,4 @@ module load E-ANTIC/2.0.2-gfbf-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|E-ANTIC/2.0.2-gfbf-2023b|x|x|x|x|-|x|x|
+|E-ANTIC/2.0.2-gfbf-2023b|-|x|x|x|-|x|x|

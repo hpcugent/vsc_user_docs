@@ -21,4 +21,4 @@ module load Bambi/0.7.1-intel-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Bambi/0.7.1-intel-2021b|x|x|x|-|-|-|-|
+|Bambi/0.7.1-intel-2021b|-|x|x|-|-|-|-|

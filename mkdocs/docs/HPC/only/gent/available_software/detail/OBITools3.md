@@ -21,4 +21,4 @@ module load OBITools3/3.0.1b26-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OBITools3/3.0.1b26-GCCcore-12.3.0|x|x|x|x|-|-|x|
+|OBITools3/3.0.1b26-GCCcore-12.3.0|-|x|x|x|-|-|x|

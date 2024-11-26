@@ -21,4 +21,4 @@ module load APR/1.7.0-GCCcore-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|APR/1.7.0-GCCcore-11.2.0|x|x|x|-|-|-|-|
+|APR/1.7.0-GCCcore-11.2.0|-|x|x|-|-|-|-|

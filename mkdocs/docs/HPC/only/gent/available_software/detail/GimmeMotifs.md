@@ -21,5 +21,5 @@ module load GimmeMotifs/0.17.2-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GimmeMotifs/0.17.2-foss-2023a|x|x|x|x|-|x|x|
-|GimmeMotifs/0.17.2-foss-2022a|x|x|x|x|-|-|-|
+|GimmeMotifs/0.17.2-foss-2023a|-|x|x|x|-|x|x|
+|GimmeMotifs/0.17.2-foss-2022a|-|x|x|x|-|-|-|

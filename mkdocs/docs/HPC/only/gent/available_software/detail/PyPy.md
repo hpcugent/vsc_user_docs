@@ -21,4 +21,4 @@ module load PyPy/7.3.12-3.10
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyPy/7.3.12-3.10|x|x|x|x|-|-|-|
+|PyPy/7.3.12-3.10|-|x|x|x|-|-|-|

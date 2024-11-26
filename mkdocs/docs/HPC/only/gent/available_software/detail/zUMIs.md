@@ -21,4 +21,4 @@ module load zUMIs/2.9.7-foss-2023a-R-4.3.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|zUMIs/2.9.7-foss-2023a-R-4.3.2|x|x|x|x|-|-|x|
+|zUMIs/2.9.7-foss-2023a-R-4.3.2|-|x|x|x|-|-|x|

@@ -21,4 +21,4 @@ module load hiredis/1.0.2-GCCcore-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|hiredis/1.0.2-GCCcore-11.2.0|x|x|x|x|-|-|-|
+|hiredis/1.0.2-GCCcore-11.2.0|-|x|x|x|-|-|-|

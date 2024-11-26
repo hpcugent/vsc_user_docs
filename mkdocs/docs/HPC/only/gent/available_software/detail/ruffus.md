@@ -21,4 +21,4 @@ module load ruffus/2.8.4-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ruffus/2.8.4-foss-2021b|x|x|x|x|-|-|-|
+|ruffus/2.8.4-foss-2021b|-|x|x|x|-|-|-|

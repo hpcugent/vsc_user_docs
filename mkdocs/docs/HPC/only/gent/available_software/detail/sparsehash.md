@@ -21,6 +21,6 @@ module load sparsehash/2.0.4-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|sparsehash/2.0.4-GCCcore-13.3.0|x|x|x|x|-|x|x|
+|sparsehash/2.0.4-GCCcore-13.3.0|-|x|x|x|-|x|x|
 |sparsehash/2.0.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |sparsehash/2.0.3-GCCcore-8.3.0|-|x|x|-|-|-|-|

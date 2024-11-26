@@ -21,4 +21,4 @@ module load libspatialite/5.0.1-GCC-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libspatialite/5.0.1-GCC-11.2.0|x|x|x|x|-|-|-|
+|libspatialite/5.0.1-GCC-11.2.0|-|x|x|x|-|-|-|

@@ -21,4 +21,4 @@ module load EpiSCORE/0.9.5-20220621-foss-2022a-R-4.2.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|EpiSCORE/0.9.5-20220621-foss-2022a-R-4.2.1|x|x|x|x|-|-|-|
+|EpiSCORE/0.9.5-20220621-foss-2022a-R-4.2.1|-|x|x|x|-|-|-|

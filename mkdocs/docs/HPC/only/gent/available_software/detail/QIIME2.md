@@ -21,7 +21,7 @@ module load QIIME2/2023.5.1-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|QIIME2/2023.5.1-foss-2022a|x|x|x|x|-|-|-|
-|QIIME2/2022.11|x|x|x|x|-|-|-|
+|QIIME2/2023.5.1-foss-2022a|-|x|x|x|-|-|-|
+|QIIME2/2022.11|-|x|x|x|-|-|-|
 |QIIME2/2020.11|-|x|x|-|-|-|-|
 |QIIME2/2020.8|-|x|x|-|-|-|-|

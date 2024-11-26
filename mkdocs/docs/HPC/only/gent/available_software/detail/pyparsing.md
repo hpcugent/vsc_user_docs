@@ -21,5 +21,5 @@ module load pyparsing/3.1.1-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pyparsing/3.1.1-GCCcore-12.3.0|x|x|x|x|-|x|x|
+|pyparsing/3.1.1-GCCcore-12.3.0|-|x|x|x|-|x|x|
 |pyparsing/2.4.6-GCCcore-8.3.0-Python-2.7.16|-|x|-|-|-|-|-|

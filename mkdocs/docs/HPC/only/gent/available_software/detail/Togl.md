@@ -21,4 +21,4 @@ module load Togl/2.0-GCCcore-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Togl/2.0-GCCcore-11.3.0|x|x|x|-|-|-|-|
+|Togl/2.0-GCCcore-11.3.0|-|x|x|-|-|-|-|

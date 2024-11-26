@@ -21,4 +21,4 @@ module load CUnit/2.1-3-GCCcore-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CUnit/2.1-3-GCCcore-11.2.0|x|x|x|x|-|-|-|
+|CUnit/2.1-3-GCCcore-11.2.0|-|x|x|x|-|-|-|

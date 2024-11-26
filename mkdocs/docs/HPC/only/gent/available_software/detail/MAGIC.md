@@ -21,4 +21,4 @@ module load MAGIC/3.0.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MAGIC/3.0.0-foss-2023a|x|x|x|x|-|x|x|
+|MAGIC/3.0.0-foss-2023a|-|x|x|x|-|x|x|

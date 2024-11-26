@@ -21,4 +21,4 @@ module load uncertainty-calibration/0.0.9-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|uncertainty-calibration/0.0.9-foss-2021b|x|x|x|-|-|-|-|
+|uncertainty-calibration/0.0.9-foss-2021b|-|x|x|-|-|-|-|

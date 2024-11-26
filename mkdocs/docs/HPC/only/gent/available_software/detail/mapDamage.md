@@ -21,4 +21,4 @@ module load mapDamage/2.2.1-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mapDamage/2.2.1-foss-2021b|x|x|x|-|-|-|-|
+|mapDamage/2.2.1-foss-2021b|-|x|x|-|-|-|-|

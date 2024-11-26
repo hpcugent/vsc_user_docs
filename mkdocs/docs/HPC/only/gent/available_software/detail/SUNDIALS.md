@@ -21,8 +21,8 @@ module load SUNDIALS/6.6.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SUNDIALS/6.6.0-foss-2023a|x|x|x|x|-|x|x|
-|SUNDIALS/6.2.0-intel-2021b|x|x|x|-|-|-|-|
+|SUNDIALS/6.6.0-foss-2023a|-|x|x|x|-|x|x|
+|SUNDIALS/6.2.0-intel-2021b|-|x|x|-|-|-|-|
 |SUNDIALS/5.7.0-intel-2020b|-|x|x|x|-|-|-|
 |SUNDIALS/5.7.0-foss-2020b|-|x|x|x|-|-|-|
 |SUNDIALS/5.1.0-intel-2019b|-|x|x|-|-|-|-|

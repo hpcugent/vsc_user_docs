@@ -22,5 +22,3 @@ module load OpenFold/1.0.1-foss-2022a-CUDA-11.7.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |OpenFold/1.0.1-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|-|
-|OpenFold/1.0.1-foss-2021a-CUDA-11.3.1|x|-|-|-|-|-|-|
-|OpenFold/1.0.0-foss-2021a-CUDA-11.3.1|x|-|-|-|-|-|-|

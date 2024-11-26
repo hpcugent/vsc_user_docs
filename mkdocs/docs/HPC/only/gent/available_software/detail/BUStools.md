@@ -21,4 +21,4 @@ module load BUStools/0.43.1-GCCcore-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BUStools/0.43.1-GCCcore-11.3.0|x|x|x|x|-|-|-|
+|BUStools/0.43.1-GCCcore-11.3.0|-|x|x|x|-|-|-|

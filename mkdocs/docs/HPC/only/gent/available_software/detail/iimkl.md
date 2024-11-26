@@ -21,4 +21,4 @@ module load iimkl/2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|iimkl/2023a|-|-|-|-|x|-|-|
+|iimkl/2023a|x|-|-|-|x|-|-|

@@ -21,4 +21,4 @@ module load cython-blis/0.9.1-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cython-blis/0.9.1-foss-2022a|x|x|x|x|-|-|-|
+|cython-blis/0.9.1-foss-2022a|-|x|x|x|-|-|-|

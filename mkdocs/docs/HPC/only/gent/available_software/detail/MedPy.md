@@ -14,13 +14,12 @@ The overview below shows which MedPy installations are available per HPC-UGent T
 To start using MedPy, load one of these modules using a `module load` command like:
 
 ```shell
-module load MedPy/0.4.0-fosscuda-2020b
+module load MedPy/0.4.0-foss-2020b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MedPy/0.4.0-fosscuda-2020b|x|-|-|-|-|-|-|
 |MedPy/0.4.0-foss-2020b|-|x|x|x|-|-|-|
 |MedPy/0.4.0-foss-2019b-Python-3.7.4|-|x|x|-|-|-|-|

@@ -21,4 +21,4 @@ module load preseq/3.2.0-GCC-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|preseq/3.2.0-GCC-11.3.0|x|x|x|x|-|-|-|
+|preseq/3.2.0-GCC-11.3.0|-|x|x|x|-|-|-|

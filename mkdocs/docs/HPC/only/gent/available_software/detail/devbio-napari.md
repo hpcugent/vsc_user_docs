@@ -14,12 +14,11 @@ The overview below shows which devbio-napari installations are available per HPC
 To start using devbio-napari, load one of these modules using a `module load` command like:
 
 ```shell
-module load devbio-napari/0.10.1-foss-2022a-CUDA-11.7.0
+module load devbio-napari/0.10.1-foss-2022a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|devbio-napari/0.10.1-foss-2022a-CUDA-11.7.0|x|-|-|-|-|-|-|
-|devbio-napari/0.10.1-foss-2022a|x|x|x|x|-|-|-|
+|devbio-napari/0.10.1-foss-2022a|-|x|x|x|-|-|-|

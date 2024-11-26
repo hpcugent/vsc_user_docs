@@ -21,7 +21,7 @@ module load VSEARCH/2.28.1-GCC-10.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VSEARCH/2.28.1-GCC-10.2.0|x|x|x|x|-|-|-|
-|VSEARCH/2.25.0-GCC-12.3.0|x|x|x|x|-|x|x|
-|VSEARCH/2.22.1-GCC-11.3.0|x|x|x|x|-|-|-|
+|VSEARCH/2.28.1-GCC-10.2.0|-|x|x|x|-|-|-|
+|VSEARCH/2.25.0-GCC-12.3.0|-|x|x|x|-|x|x|
+|VSEARCH/2.22.1-GCC-11.3.0|-|x|x|x|-|-|-|
 |VSEARCH/2.18.0-GCC-10.2.0|-|x|x|x|-|-|-|

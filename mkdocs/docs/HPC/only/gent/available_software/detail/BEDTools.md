@@ -22,9 +22,9 @@ module load BEDTools/2.31.0-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |BEDTools/2.31.0-GCC-12.3.0|x|x|x|x|x|x|x|
-|BEDTools/2.30.0-GCC-12.2.0|x|x|x|x|-|-|-|
-|BEDTools/2.30.0-GCC-11.3.0|x|x|x|x|-|x|-|
-|BEDTools/2.30.0-GCC-11.2.0|x|x|x|x|-|-|-|
+|BEDTools/2.30.0-GCC-12.2.0|-|x|x|x|-|-|-|
+|BEDTools/2.30.0-GCC-11.3.0|-|x|x|x|-|x|-|
+|BEDTools/2.30.0-GCC-11.2.0|-|x|x|x|-|-|-|
 |BEDTools/2.30.0-GCC-10.2.0|-|x|x|x|-|-|-|
 |BEDTools/2.29.2-GCC-9.3.0|-|x|x|-|-|-|-|
 |BEDTools/2.29.2-GCC-8.3.0|-|x|x|-|-|-|-|

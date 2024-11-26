@@ -21,4 +21,4 @@ module load ilastik-napari/0.2.4-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ilastik-napari/0.2.4-foss-2023a|x|x|x|x|-|x|x|
+|ilastik-napari/0.2.4-foss-2023a|-|x|x|x|-|x|x|

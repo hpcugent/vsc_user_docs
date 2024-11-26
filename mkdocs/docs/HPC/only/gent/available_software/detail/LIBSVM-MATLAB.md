@@ -21,4 +21,4 @@ module load LIBSVM-MATLAB/3.30-GCCcore-11.3.0-MATLAB-2022b-r5
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LIBSVM-MATLAB/3.30-GCCcore-11.3.0-MATLAB-2022b-r5|x|x|x|x|-|x|-|
+|LIBSVM-MATLAB/3.30-GCCcore-11.3.0-MATLAB-2022b-r5|-|x|x|x|-|x|-|

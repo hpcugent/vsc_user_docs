@@ -21,4 +21,4 @@ module load empanada-dl/0.1.7-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|empanada-dl/0.1.7-foss-2023a|x|x|x|x|-|-|x|
+|empanada-dl/0.1.7-foss-2023a|-|x|x|x|-|-|x|

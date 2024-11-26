@@ -21,6 +21,6 @@ module load NanoStat/1.6.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NanoStat/1.6.0-foss-2023a|x|x|x|x|-|x|x|
-|NanoStat/1.6.0-foss-2022a|x|x|x|x|-|-|-|
-|NanoStat/1.6.0-foss-2021a|x|x|x|x|-|-|-|
+|NanoStat/1.6.0-foss-2023a|-|x|x|x|-|x|x|
+|NanoStat/1.6.0-foss-2022a|-|x|x|x|-|-|-|
+|NanoStat/1.6.0-foss-2021a|-|x|x|x|-|-|-|

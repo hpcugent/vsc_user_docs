@@ -21,4 +21,4 @@ module load SPOTPY/1.5.14-intel-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SPOTPY/1.5.14-intel-2021b|x|x|x|-|-|-|-|
+|SPOTPY/1.5.14-intel-2021b|-|x|x|-|-|-|-|

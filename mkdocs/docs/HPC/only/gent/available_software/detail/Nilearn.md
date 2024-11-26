@@ -21,4 +21,4 @@ module load Nilearn/0.10.3-gfbf-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Nilearn/0.10.3-gfbf-2023a|x|x|x|x|-|-|x|
+|Nilearn/0.10.3-gfbf-2023a|-|x|x|x|-|-|x|

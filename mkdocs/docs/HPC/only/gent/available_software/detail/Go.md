@@ -21,7 +21,7 @@ module load Go/1.22.4
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Go/1.22.4|x|-|x|-|-|-|-|
+|Go/1.22.4|-|-|x|-|-|-|-|
 |Go/1.22.1|x|x|x|x|-|x|x|
 |Go/1.21.6|x|x|x|x|-|x|x|
 |Go/1.21.2|x|x|x|x|-|x|x|

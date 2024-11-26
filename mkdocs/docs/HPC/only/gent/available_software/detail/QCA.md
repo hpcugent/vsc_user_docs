@@ -21,4 +21,4 @@ module load QCA/2.3.5-GCCcore-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|QCA/2.3.5-GCCcore-11.2.0|x|x|x|x|-|-|-|
+|QCA/2.3.5-GCCcore-11.2.0|-|x|x|x|-|-|-|

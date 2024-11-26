@@ -22,5 +22,4 @@ module load XGBoost/1.7.2-foss-2022b
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |XGBoost/1.7.2-foss-2022b|-|x|x|x|-|-|-|
-|XGBoost/1.7.2-foss-2022a-CUDA-11.7.0|x|-|-|-|-|-|-|
-|XGBoost/1.7.2-foss-2022a|x|x|x|x|-|-|-|
+|XGBoost/1.7.2-foss-2022a|-|x|x|x|-|-|-|

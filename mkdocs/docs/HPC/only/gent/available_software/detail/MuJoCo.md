@@ -21,6 +21,6 @@ module load MuJoCo/3.1.4-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MuJoCo/3.1.4-GCCcore-12.3.0|x|x|x|x|-|x|x|
-|MuJoCo/2.3.7-GCCcore-12.3.0|x|x|x|x|-|x|x|
-|MuJoCo/2.1.1-GCCcore-11.2.0|x|x|x|x|-|-|-|
+|MuJoCo/3.1.4-GCCcore-12.3.0|-|x|x|x|-|x|x|
+|MuJoCo/2.3.7-GCCcore-12.3.0|-|x|x|x|-|x|x|
+|MuJoCo/2.1.1-GCCcore-11.2.0|-|x|x|x|-|-|-|

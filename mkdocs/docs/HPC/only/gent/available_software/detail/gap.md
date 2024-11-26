@@ -21,4 +21,4 @@ module load gap/4.13.0-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gap/4.13.0-foss-2023b|x|x|x|x|-|x|x|
+|gap/4.13.0-foss-2023b|-|x|x|x|-|x|x|

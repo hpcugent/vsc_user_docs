@@ -21,4 +21,4 @@ module load cdo-bindings/1.5.7-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cdo-bindings/1.5.7-foss-2021b|x|x|x|x|-|-|-|
+|cdo-bindings/1.5.7-foss-2021b|-|x|x|x|-|-|-|

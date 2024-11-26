@@ -21,4 +21,4 @@ module load yell/2.2.2-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|yell/2.2.2-GCC-12.3.0|x|x|x|x|-|x|x|
+|yell/2.2.2-GCC-12.3.0|-|x|x|x|-|x|x|

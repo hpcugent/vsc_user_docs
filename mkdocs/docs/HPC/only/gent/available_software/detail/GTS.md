@@ -22,9 +22,9 @@ module load GTS/0.7.6-foss-2019b
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |GTS/0.7.6-foss-2019b|-|x|x|-|-|-|-|
-|GTS/0.7.6-GCCcore-13.3.0|x|x|x|x|-|x|x|
-|GTS/0.7.6-GCCcore-12.3.0|x|x|x|x|-|x|x|
-|GTS/0.7.6-GCCcore-11.3.0|x|x|x|x|-|-|-|
-|GTS/0.7.6-GCCcore-11.2.0|x|x|x|x|-|-|-|
-|GTS/0.7.6-GCCcore-10.3.0|x|x|x|x|-|-|-|
+|GTS/0.7.6-GCCcore-13.3.0|-|x|x|x|-|x|x|
+|GTS/0.7.6-GCCcore-12.3.0|-|x|x|x|-|x|x|
+|GTS/0.7.6-GCCcore-11.3.0|-|x|x|x|-|-|-|
+|GTS/0.7.6-GCCcore-11.2.0|-|x|x|x|-|-|-|
+|GTS/0.7.6-GCCcore-10.3.0|-|x|x|x|-|-|-|
 |GTS/0.7.6-GCCcore-10.2.0|-|x|x|x|-|-|-|

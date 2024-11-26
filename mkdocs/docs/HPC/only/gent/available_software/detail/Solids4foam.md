@@ -21,4 +21,4 @@ module load Solids4foam/2.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Solids4foam/2.1-foss-2023a|x|x|x|x|-|x|x|
+|Solids4foam/2.1-foss-2023a|-|x|x|x|-|x|x|

@@ -21,4 +21,4 @@ module load PARI-GP/2.15.5-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PARI-GP/2.15.5-GCCcore-13.2.0|x|x|x|x|-|x|x|
+|PARI-GP/2.15.5-GCCcore-13.2.0|-|x|x|x|-|x|x|
