@@ -21,4 +21,4 @@ module load kb-python/0.27.3-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|kb-python/0.27.3-foss-2022a|x|x|x|x|-|-|-|
+|kb-python/0.27.3-foss-2022a|-|x|x|x|-|-|-|

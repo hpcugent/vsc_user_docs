@@ -21,5 +21,5 @@ module load GST-plugins-bad/1.22.5-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GST-plugins-bad/1.22.5-GCC-12.3.0|x|x|x|x|-|x|x|
-|GST-plugins-bad/1.20.2-GCC-11.3.0|x|x|x|x|-|-|-|
+|GST-plugins-bad/1.22.5-GCC-12.3.0|-|x|x|x|-|x|x|
+|GST-plugins-bad/1.20.2-GCC-11.3.0|-|x|x|x|-|-|-|

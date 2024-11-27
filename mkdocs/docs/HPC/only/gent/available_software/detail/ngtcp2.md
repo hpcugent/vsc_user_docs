@@ -21,4 +21,4 @@ module load ngtcp2/0.7.0-GCC-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ngtcp2/0.7.0-GCC-11.2.0|x|x|x|x|-|-|-|
+|ngtcp2/0.7.0-GCC-11.2.0|-|x|x|x|-|-|-|

@@ -23,8 +23,8 @@ module load libvorbis/1.3.7-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libvorbis/1.3.7-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |libvorbis/1.3.7-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|libvorbis/1.3.7-GCCcore-12.2.0|x|x|x|x|-|-|-|
-|libvorbis/1.3.7-GCCcore-11.3.0|x|x|x|x|-|x|-|
-|libvorbis/1.3.7-GCCcore-11.2.0|x|x|x|x|-|-|-|
-|libvorbis/1.3.7-GCCcore-10.3.0|x|x|x|x|-|-|-|
-|libvorbis/1.3.7-GCCcore-10.2.0|x|x|x|x|-|-|-|
+|libvorbis/1.3.7-GCCcore-12.2.0|-|x|x|x|-|-|-|
+|libvorbis/1.3.7-GCCcore-11.3.0|-|x|x|x|-|x|-|
+|libvorbis/1.3.7-GCCcore-11.2.0|-|x|x|x|-|-|-|
+|libvorbis/1.3.7-GCCcore-10.3.0|-|x|x|x|-|-|-|
+|libvorbis/1.3.7-GCCcore-10.2.0|-|x|x|x|-|-|-|

@@ -22,5 +22,5 @@ module load scib-metrics/0.5.1-foss-2023a-CUDA-12.1.1
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |scib-metrics/0.5.1-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
-|scib-metrics/0.5.1-foss-2023a|x|x|x|x|-|x|x|
-|scib-metrics/0.3.3-foss-2021a|x|x|x|x|-|-|-|
+|scib-metrics/0.5.1-foss-2023a|-|x|x|x|-|x|x|
+|scib-metrics/0.3.3-foss-2021a|-|x|x|x|-|-|-|

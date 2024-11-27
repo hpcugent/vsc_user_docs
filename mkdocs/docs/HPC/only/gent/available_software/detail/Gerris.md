@@ -21,4 +21,4 @@ module load Gerris/20131206-gompi-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Gerris/20131206-gompi-2023a|x|x|x|x|-|-|x|
+|Gerris/20131206-gompi-2023a|-|x|x|x|-|-|x|

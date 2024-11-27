@@ -21,4 +21,4 @@ module load xtb/6.6.1-gfbf-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|xtb/6.6.1-gfbf-2023a|x|x|x|x|-|x|x|
+|xtb/6.6.1-gfbf-2023a|-|x|x|x|-|x|x|

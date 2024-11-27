@@ -21,4 +21,4 @@ module load Bio-FeatureIO/1.6.905-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Bio-FeatureIO/1.6.905-GCCcore-12.3.0|x|x|x|x|-|x|x|
+|Bio-FeatureIO/1.6.905-GCCcore-12.3.0|-|x|x|x|-|x|x|

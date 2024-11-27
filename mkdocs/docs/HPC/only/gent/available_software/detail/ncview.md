@@ -21,5 +21,5 @@ module load ncview/2.1.8-gompi-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ncview/2.1.8-gompi-2023a|x|x|x|x|-|x|x|
+|ncview/2.1.8-gompi-2023a|-|x|x|x|-|x|x|
 |ncview/2.1.7-intel-2019b|-|x|x|-|-|-|-|

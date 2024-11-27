@@ -21,4 +21,4 @@ module load Oases/20180312-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Oases/20180312-GCC-12.3.0|x|x|x|x|-|-|x|
+|Oases/20180312-GCC-12.3.0|-|x|x|x|-|-|x|

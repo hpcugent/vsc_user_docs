@@ -21,4 +21,4 @@ module load CMSeq/1.0.4-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CMSeq/1.0.4-foss-2022a|x|x|x|x|-|-|-|
+|CMSeq/1.0.4-foss-2022a|-|x|x|x|-|-|-|

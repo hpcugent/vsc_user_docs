@@ -22,7 +22,6 @@ module load beagle-lib/4.0.1-GCC-12.3.0-CUDA-12.1.1
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |beagle-lib/4.0.1-GCC-12.3.0-CUDA-12.1.1|x|x|x|x|-|x|x|
-|beagle-lib/4.0.0-GCC-11.3.0|x|x|x|x|-|-|-|
-|beagle-lib/3.1.2-gcccuda-2019b|x|-|-|-|-|-|-|
-|beagle-lib/3.1.2-GCC-11.3.0|x|x|x|-|-|-|-|
+|beagle-lib/4.0.0-GCC-11.3.0|-|x|x|x|-|-|-|
+|beagle-lib/3.1.2-GCC-11.3.0|-|x|x|-|-|-|-|
 |beagle-lib/3.1.2-GCC-10.2.0|-|x|x|x|-|-|-|

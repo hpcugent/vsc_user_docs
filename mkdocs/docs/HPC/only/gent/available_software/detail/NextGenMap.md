@@ -22,4 +22,4 @@ module load NextGenMap/0.5.5-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |NextGenMap/0.5.5-GCC-12.3.0|x|x|x|x|-|x|x|
-|NextGenMap/0.5.5-GCC-11.2.0|x|x|x|-|-|-|-|
+|NextGenMap/0.5.5-GCC-11.2.0|-|x|x|-|-|-|-|

@@ -21,4 +21,4 @@ module load Lighter/1.1.2-GCC-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Lighter/1.1.2-GCC-11.2.0|x|x|x|-|-|-|-|
+|Lighter/1.1.2-GCC-11.2.0|-|x|x|-|-|-|-|

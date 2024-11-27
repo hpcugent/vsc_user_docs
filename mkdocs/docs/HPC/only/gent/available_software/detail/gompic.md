@@ -21,4 +21,4 @@ module load gompic/2020b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gompic/2020b|x|x|-|-|-|-|-|
+|gompic/2020b|-|x|-|-|-|-|-|

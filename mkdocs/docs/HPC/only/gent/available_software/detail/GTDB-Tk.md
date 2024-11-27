@@ -21,9 +21,9 @@ module load GTDB-Tk/2.4.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GTDB-Tk/2.4.0-foss-2023a|x|x|x|x|x|x|x|
-|GTDB-Tk/2.3.2-foss-2023a|x|x|x|x|-|x|x|
-|GTDB-Tk/2.0.0-intel-2021b|x|x|x|-|-|-|-|
+|GTDB-Tk/2.4.0-foss-2023a|-|x|x|x|x|x|x|
+|GTDB-Tk/2.3.2-foss-2023a|-|x|x|x|-|x|x|
+|GTDB-Tk/2.0.0-intel-2021b|-|x|x|-|-|-|-|
 |GTDB-Tk/1.7.0-intel-2020b|-|x|x|-|-|-|-|
 |GTDB-Tk/1.5.0-intel-2020b|-|x|x|-|-|-|-|
 |GTDB-Tk/1.3.0-intel-2020a-Python-3.8.2|-|x|x|-|-|-|-|

@@ -21,4 +21,4 @@ module load PyTensor/2.17.1-gfbf-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyTensor/2.17.1-gfbf-2023a|x|x|x|x|-|x|x|
+|PyTensor/2.17.1-gfbf-2023a|-|x|x|x|-|x|x|

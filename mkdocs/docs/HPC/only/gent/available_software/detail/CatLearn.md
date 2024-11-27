@@ -21,4 +21,4 @@ module load CatLearn/0.6.2-intel-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CatLearn/0.6.2-intel-2022a|x|x|x|x|-|-|-|
+|CatLearn/0.6.2-intel-2022a|-|x|x|x|-|-|-|

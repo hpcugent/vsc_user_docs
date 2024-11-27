@@ -21,4 +21,4 @@ module load VESTA/3.5.8-gtk3
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VESTA/3.5.8-gtk3|x|x|x|-|-|-|-|
+|VESTA/3.5.8-gtk3|-|x|x|-|-|-|-|

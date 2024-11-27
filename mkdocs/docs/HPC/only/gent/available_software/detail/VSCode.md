@@ -21,4 +21,4 @@ module load VSCode/1.85.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VSCode/1.85.0|x|x|x|x|-|-|-|
+|VSCode/1.85.0|-|x|x|x|-|-|-|

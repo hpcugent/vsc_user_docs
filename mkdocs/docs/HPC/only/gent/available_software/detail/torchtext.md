@@ -22,4 +22,4 @@ module load torchtext/0.14.1-foss-2022b-PyTorch-1.13.1
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |torchtext/0.14.1-foss-2022b-PyTorch-1.13.1|-|x|x|x|-|-|-|
-|torchtext/0.14.1-foss-2022a-PyTorch-1.12.0|x|x|x|x|-|-|-|
+|torchtext/0.14.1-foss-2022a-PyTorch-1.12.0|-|x|x|x|-|-|-|

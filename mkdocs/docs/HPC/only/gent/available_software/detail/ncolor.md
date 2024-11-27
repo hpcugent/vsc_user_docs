@@ -21,4 +21,4 @@ module load ncolor/1.2.1-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ncolor/1.2.1-foss-2022a|x|x|x|x|-|-|-|
+|ncolor/1.2.1-foss-2022a|-|x|x|x|-|-|-|

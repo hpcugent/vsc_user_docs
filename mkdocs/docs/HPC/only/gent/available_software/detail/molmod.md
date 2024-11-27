@@ -21,7 +21,7 @@ module load molmod/1.4.8-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|molmod/1.4.8-foss-2023a|x|x|x|x|-|x|x|
-|molmod/1.4.5-intel-2020a-Python-3.8.2|x|x|x|x|-|-|-|
+|molmod/1.4.8-foss-2023a|-|x|x|x|-|x|x|
+|molmod/1.4.5-intel-2020a-Python-3.8.2|-|x|x|x|-|-|-|
 |molmod/1.4.5-intel-2019b-Python-3.7.4|-|x|x|-|-|-|-|
 |molmod/1.4.5-foss-2019b-Python-3.7.4|-|x|x|-|-|-|-|

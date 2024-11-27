@@ -21,4 +21,4 @@ module load SVDSS2/2.0.0-alpha.3-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SVDSS2/2.0.0-alpha.3-GCC-12.3.0|x|x|x|x|-|x|x|
+|SVDSS2/2.0.0-alpha.3-GCC-12.3.0|-|x|x|x|-|x|x|

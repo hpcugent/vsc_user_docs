@@ -21,5 +21,5 @@ module load Trimmomatic/0.39-Java-17
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Trimmomatic/0.39-Java-17|x|x|x|x|-|x|x|
-|Trimmomatic/0.39-Java-11|x|x|x|x|x|x|x|
+|Trimmomatic/0.39-Java-17|-|x|x|x|-|x|x|
+|Trimmomatic/0.39-Java-11|-|x|x|x|x|x|x|

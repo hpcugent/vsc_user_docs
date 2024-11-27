@@ -21,4 +21,4 @@ module load SqueezeMeta/1.5.0-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SqueezeMeta/1.5.0-foss-2021b|x|x|x|-|-|-|-|
+|SqueezeMeta/1.5.0-foss-2021b|-|x|x|-|-|-|-|

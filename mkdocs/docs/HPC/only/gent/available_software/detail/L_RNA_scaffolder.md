@@ -21,4 +21,4 @@ module load L_RNA_scaffolder/20190530-GCC-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|L_RNA_scaffolder/20190530-GCC-11.3.0|x|x|x|x|-|-|-|
+|L_RNA_scaffolder/20190530-GCC-11.3.0|-|x|x|x|-|-|-|

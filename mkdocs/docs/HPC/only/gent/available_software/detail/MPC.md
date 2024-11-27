@@ -21,12 +21,12 @@ module load MPC/1.3.1-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MPC/1.3.1-GCCcore-13.3.0|x|x|x|x|-|x|x|
-|MPC/1.3.1-GCCcore-13.2.0|x|x|x|x|-|x|x|
+|MPC/1.3.1-GCCcore-13.3.0|-|x|x|x|-|x|x|
+|MPC/1.3.1-GCCcore-13.2.0|-|x|x|x|-|x|x|
 |MPC/1.3.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|MPC/1.3.1-GCCcore-12.2.0|x|x|x|x|-|-|-|
-|MPC/1.2.1-GCCcore-11.3.0|x|x|x|x|-|-|-|
-|MPC/1.2.1-GCCcore-11.2.0|x|x|x|x|-|-|-|
+|MPC/1.3.1-GCCcore-12.2.0|-|x|x|x|-|-|-|
+|MPC/1.2.1-GCCcore-11.3.0|-|x|x|x|-|-|-|
+|MPC/1.2.1-GCCcore-11.2.0|-|x|x|x|-|-|-|
 |MPC/1.2.1-GCCcore-10.2.0|-|x|x|x|-|-|-|
 |MPC/1.1.0-GCC-9.3.0|-|x|x|-|-|-|-|
 |MPC/1.1.0-GCC-8.3.0|-|x|x|-|-|-|-|

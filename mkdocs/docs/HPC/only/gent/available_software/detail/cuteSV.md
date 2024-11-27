@@ -21,4 +21,4 @@ module load cuteSV/2.0.3-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cuteSV/2.0.3-foss-2022a|x|x|x|x|-|-|-|
+|cuteSV/2.0.3-foss-2022a|-|x|x|x|-|-|-|

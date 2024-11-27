@@ -21,4 +21,4 @@ module load nghttp2/1.48.0-GCC-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nghttp2/1.48.0-GCC-11.2.0|x|x|x|x|-|-|-|
+|nghttp2/1.48.0-GCC-11.2.0|-|x|x|x|-|-|-|

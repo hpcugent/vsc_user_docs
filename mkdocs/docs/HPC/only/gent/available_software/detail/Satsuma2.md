@@ -21,4 +21,4 @@ module load Satsuma2/20220304-GCC-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Satsuma2/20220304-GCC-11.3.0|x|x|x|-|-|-|-|
+|Satsuma2/20220304-GCC-11.3.0|-|x|x|-|-|-|-|

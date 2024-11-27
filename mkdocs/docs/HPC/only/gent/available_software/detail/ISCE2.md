@@ -21,4 +21,4 @@ module load ISCE2/2.6.3-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ISCE2/2.6.3-foss-2023a|x|x|x|x|-|x|x|
+|ISCE2/2.6.3-foss-2023a|-|x|x|x|-|x|x|

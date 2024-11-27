@@ -21,5 +21,5 @@ module load TurboVNC/2.2.6-GCCcore-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TurboVNC/2.2.6-GCCcore-11.2.0|x|x|x|x|-|-|-|
+|TurboVNC/2.2.6-GCCcore-11.2.0|-|x|x|x|-|-|-|
 |TurboVNC/2.2.3-GCCcore-8.2.0|-|x|-|-|-|-|-|

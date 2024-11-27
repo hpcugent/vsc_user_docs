@@ -21,4 +21,4 @@ module load QD/2.3.17-NVHPC-21.2-20160110
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|QD/2.3.17-NVHPC-21.2-20160110|x|-|x|-|-|-|-|
+|QD/2.3.17-NVHPC-21.2-20160110|-|-|x|-|-|-|-|

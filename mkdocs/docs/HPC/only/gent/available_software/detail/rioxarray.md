@@ -21,5 +21,5 @@ module load rioxarray/0.15.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rioxarray/0.15.0-foss-2023a|x|x|x|x|-|x|x|
-|rioxarray/0.11.1-foss-2021b|x|x|x|-|-|-|-|
+|rioxarray/0.15.0-foss-2023a|-|x|x|x|-|x|x|
+|rioxarray/0.11.1-foss-2021b|-|x|x|-|-|-|-|

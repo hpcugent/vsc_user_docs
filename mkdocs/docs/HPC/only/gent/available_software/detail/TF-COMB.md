@@ -21,4 +21,4 @@ module load TF-COMB/1.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TF-COMB/1.1-foss-2023a|x|x|x|x|-|x|x|
+|TF-COMB/1.1-foss-2023a|-|x|x|x|-|x|x|

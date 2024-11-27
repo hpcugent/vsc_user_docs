@@ -21,7 +21,7 @@ module load BUSCO/5.4.3-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BUSCO/5.4.3-foss-2021b|x|x|x|-|-|-|-|
+|BUSCO/5.4.3-foss-2021b|-|x|x|-|-|-|-|
 |BUSCO/5.1.2-foss-2020b|-|x|x|x|-|-|-|
 |BUSCO/4.1.2-foss-2020b|-|x|x|-|-|-|-|
 |BUSCO/4.0.6-foss-2020b|-|x|x|x|-|-|-|

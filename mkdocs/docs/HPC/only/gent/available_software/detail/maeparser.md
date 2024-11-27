@@ -21,4 +21,4 @@ module load maeparser/1.3.0-iimpi-2020a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|maeparser/1.3.0-iimpi-2020a|x|x|x|x|-|-|-|
+|maeparser/1.3.0-iimpi-2020a|-|x|x|x|-|-|-|

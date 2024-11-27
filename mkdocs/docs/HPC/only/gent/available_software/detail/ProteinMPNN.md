@@ -21,4 +21,4 @@ module load ProteinMPNN/1.0.1-20230627-foss-2022a-CUDA-11.7.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ProteinMPNN/1.0.1-20230627-foss-2022a-CUDA-11.7.0|x|-|x|-|-|-|-|
+|ProteinMPNN/1.0.1-20230627-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|-|

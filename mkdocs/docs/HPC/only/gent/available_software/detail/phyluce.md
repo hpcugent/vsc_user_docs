@@ -21,4 +21,4 @@ module load phyluce/1.7.3-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|phyluce/1.7.3-foss-2023a|x|x|x|x|-|-|-|
+|phyluce/1.7.3-foss-2023a|-|x|x|x|-|-|-|

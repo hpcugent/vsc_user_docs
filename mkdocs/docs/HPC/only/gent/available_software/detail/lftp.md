@@ -21,4 +21,4 @@ module load lftp/4.9.2-GCCcore-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|lftp/4.9.2-GCCcore-11.2.0|x|x|x|-|-|-|-|
+|lftp/4.9.2-GCCcore-11.2.0|-|x|x|-|-|-|-|

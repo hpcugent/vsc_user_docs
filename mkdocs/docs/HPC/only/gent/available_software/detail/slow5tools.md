@@ -21,4 +21,4 @@ module load slow5tools/0.4.0-gompi-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|slow5tools/0.4.0-gompi-2021b|x|x|x|-|-|-|-|
+|slow5tools/0.4.0-gompi-2021b|-|x|x|-|-|-|-|

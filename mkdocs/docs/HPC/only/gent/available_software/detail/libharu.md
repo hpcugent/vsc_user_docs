@@ -21,6 +21,6 @@ module load libharu/2.3.0-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libharu/2.3.0-foss-2021b|x|x|x|-|-|-|-|
+|libharu/2.3.0-foss-2021b|-|x|x|-|-|-|-|
 |libharu/2.3.0-GCCcore-10.3.0|-|x|x|-|-|-|-|
 |libharu/2.3.0-GCCcore-8.3.0|-|x|x|-|-|-|-|

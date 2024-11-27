@@ -21,4 +21,4 @@ module load Rasqal/0.9.33-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Rasqal/0.9.33-GCCcore-12.3.0|x|x|x|x|-|x|x|
+|Rasqal/0.9.33-GCCcore-12.3.0|-|x|x|x|-|x|x|

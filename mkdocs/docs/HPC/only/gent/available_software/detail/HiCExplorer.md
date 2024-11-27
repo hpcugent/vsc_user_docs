@@ -21,4 +21,4 @@ module load HiCExplorer/3.7.2-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HiCExplorer/3.7.2-foss-2022a|x|x|x|x|-|-|-|
+|HiCExplorer/3.7.2-foss-2022a|-|x|x|x|-|-|-|

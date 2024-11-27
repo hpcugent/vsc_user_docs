@@ -24,5 +24,5 @@ module load PostgreSQL/16.1-GCCcore-13.2.0
 |PostgreSQL/16.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |PostgreSQL/16.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |PostgreSQL/15.2-GCCcore-12.2.0|-|x|x|x|-|-|-|
-|PostgreSQL/14.4-GCCcore-11.3.0|x|x|x|x|-|-|-|
-|PostgreSQL/13.4-GCCcore-11.2.0|x|x|x|x|-|-|-|
+|PostgreSQL/14.4-GCCcore-11.3.0|-|x|x|x|-|-|-|
+|PostgreSQL/13.4-GCCcore-11.2.0|-|x|x|x|-|-|-|

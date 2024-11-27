@@ -23,10 +23,10 @@ module load PLUMED/2.9.2-foss-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |PLUMED/2.9.2-foss-2023b|x|x|x|x|x|x|x|
 |PLUMED/2.9.0-foss-2023a|x|x|x|x|x|x|x|
-|PLUMED/2.9.0-foss-2022b|x|x|x|x|-|-|-|
-|PLUMED/2.8.1-foss-2022a|x|x|x|x|-|-|-|
-|PLUMED/2.7.3-foss-2021b|x|x|x|-|-|-|-|
-|PLUMED/2.7.2-foss-2021a|x|x|x|x|-|-|-|
+|PLUMED/2.9.0-foss-2022b|-|x|x|x|-|-|-|
+|PLUMED/2.8.1-foss-2022a|-|x|x|x|-|-|-|
+|PLUMED/2.7.3-foss-2021b|-|x|x|-|-|-|-|
+|PLUMED/2.7.2-foss-2021a|-|x|x|x|-|-|-|
 |PLUMED/2.6.2-intel-2020b|-|x|x|-|-|-|-|
 |PLUMED/2.6.2-foss-2020b|-|x|x|x|-|-|-|
 |PLUMED/2.6.0-iomkl-2020a-Python-3.8.2|-|x|-|-|-|-|-|

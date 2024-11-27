@@ -21,4 +21,4 @@ module load dblatex/0.3.12-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|dblatex/0.3.12-foss-2023a|x|x|x|x|-|x|x|
+|dblatex/0.3.12-foss-2023a|-|x|x|x|-|x|x|

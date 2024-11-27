@@ -21,5 +21,5 @@ module load segemehl/0.3.4-GCC-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|segemehl/0.3.4-GCC-11.2.0|x|x|x|x|-|-|-|
+|segemehl/0.3.4-GCC-11.2.0|-|x|x|x|-|-|-|
 |segemehl/0.3.4-GCC-10.2.0|-|x|x|x|-|-|-|

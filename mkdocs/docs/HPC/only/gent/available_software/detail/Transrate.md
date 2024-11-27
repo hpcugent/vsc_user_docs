@@ -21,4 +21,4 @@ module load Transrate/1.0.3-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Transrate/1.0.3-GCC-12.3.0|x|x|x|x|-|x|x|
+|Transrate/1.0.3-GCC-12.3.0|-|x|x|x|-|x|x|

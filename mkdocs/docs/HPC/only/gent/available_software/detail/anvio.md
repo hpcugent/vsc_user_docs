@@ -21,5 +21,5 @@ module load anvio/8-foss-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|anvio/8-foss-2022b|x|x|x|x|-|-|-|
+|anvio/8-foss-2022b|-|x|x|x|-|-|-|
 |anvio/6.1-intel-2019b-Python-3.7.4|-|x|x|-|-|-|-|

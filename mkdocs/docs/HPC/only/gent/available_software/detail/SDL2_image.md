@@ -21,4 +21,4 @@ module load SDL2_image/2.8.2-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SDL2_image/2.8.2-GCCcore-12.3.0|x|x|x|x|-|x|x|
+|SDL2_image/2.8.2-GCCcore-12.3.0|-|x|x|x|-|x|x|

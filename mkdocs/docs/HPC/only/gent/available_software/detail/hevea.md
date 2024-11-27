@@ -21,4 +21,4 @@ module load hevea/2.36-GCC-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|hevea/2.36-GCC-13.2.0|x|x|x|x|-|x|x|
+|hevea/2.36-GCC-13.2.0|-|x|x|x|-|x|x|

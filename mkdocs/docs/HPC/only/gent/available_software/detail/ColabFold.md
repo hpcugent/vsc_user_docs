@@ -14,12 +14,11 @@ The overview below shows which ColabFold installations are available per HPC-UGe
 To start using ColabFold, load one of these modules using a `module load` command like:
 
 ```shell
-module load ColabFold/1.5.2-foss-2022a-CUDA-11.7.0
+module load ColabFold/1.5.2-foss-2022a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ColabFold/1.5.2-foss-2022a-CUDA-11.7.0|x|-|-|-|-|-|-|
 |ColabFold/1.5.2-foss-2022a|-|-|x|-|-|-|-|

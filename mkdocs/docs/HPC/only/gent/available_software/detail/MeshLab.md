@@ -21,4 +21,4 @@ module load MeshLab/2023.12-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MeshLab/2023.12-GCC-12.3.0|x|x|x|x|-|x|x|
+|MeshLab/2023.12-GCC-12.3.0|-|x|x|x|-|x|x|

@@ -21,4 +21,4 @@ module load CellProfiler/4.2.4-foss-2021a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CellProfiler/4.2.4-foss-2021a|x|x|x|-|-|-|-|
+|CellProfiler/4.2.4-foss-2021a|-|x|x|-|-|-|-|

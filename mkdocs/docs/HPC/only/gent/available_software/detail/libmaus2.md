@@ -21,5 +21,5 @@ module load libmaus2/2.0.813-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libmaus2/2.0.813-GCC-12.3.0|x|x|x|x|-|x|x|
-|libmaus2/2.0.499-GCC-11.3.0|x|x|x|x|-|-|-|
+|libmaus2/2.0.813-GCC-12.3.0|-|x|x|x|-|x|x|
+|libmaus2/2.0.499-GCC-11.3.0|-|x|x|x|-|-|-|

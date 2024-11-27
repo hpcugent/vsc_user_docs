@@ -21,4 +21,4 @@ module load FLANN/1.9.2-foss-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FLANN/1.9.2-foss-2022b|x|x|x|x|-|-|-|
+|FLANN/1.9.2-foss-2022b|-|x|x|x|-|-|-|
