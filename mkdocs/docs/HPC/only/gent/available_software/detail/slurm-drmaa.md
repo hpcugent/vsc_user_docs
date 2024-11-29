@@ -21,4 +21,4 @@ module load slurm-drmaa/1.1.3-GCCcore-12.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|slurm-drmaa/1.1.3-GCCcore-12.2.0|x|x|x|x|-|-|-|
+|slurm-drmaa/1.1.3-GCCcore-12.2.0|-|x|x|x|-|-|-|

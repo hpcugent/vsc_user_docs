@@ -21,11 +21,11 @@ module load XML-LibXML/2.0210-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|XML-LibXML/2.0210-GCCcore-13.2.0|x|x|x|x|-|x|x|
-|XML-LibXML/2.0209-GCCcore-12.3.0|x|x|x|x|-|x|x|
-|XML-LibXML/2.0208-GCCcore-12.2.0|x|x|x|x|-|-|-|
-|XML-LibXML/2.0207-GCCcore-11.3.0|x|x|x|x|-|-|-|
-|XML-LibXML/2.0207-GCCcore-11.2.0|x|x|x|x|-|-|-|
+|XML-LibXML/2.0210-GCCcore-13.2.0|-|x|x|x|-|x|x|
+|XML-LibXML/2.0209-GCCcore-12.3.0|-|x|x|x|-|x|x|
+|XML-LibXML/2.0208-GCCcore-12.2.0|-|x|x|x|-|-|-|
+|XML-LibXML/2.0207-GCCcore-11.3.0|-|x|x|x|-|-|-|
+|XML-LibXML/2.0207-GCCcore-11.2.0|-|x|x|x|-|-|-|
 |XML-LibXML/2.0206-GCCcore-10.2.0|-|x|x|x|-|-|-|
 |XML-LibXML/2.0205-GCCcore-9.3.0|-|x|x|-|-|-|-|
 |XML-LibXML/2.0201-GCCcore-8.3.0|-|x|x|-|-|-|-|

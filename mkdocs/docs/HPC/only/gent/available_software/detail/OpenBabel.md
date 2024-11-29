@@ -21,4 +21,4 @@ module load OpenBabel/3.1.1-iimpi-2020a-Python-3.8.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenBabel/3.1.1-iimpi-2020a-Python-3.8.2|x|x|x|x|-|-|-|
+|OpenBabel/3.1.1-iimpi-2020a-Python-3.8.2|-|x|x|x|-|-|-|

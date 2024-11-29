@@ -21,4 +21,4 @@ module load scPred/1.9.2-foss-2021b-R-4.1.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scPred/1.9.2-foss-2021b-R-4.1.2|x|x|x|-|-|-|-|
+|scPred/1.9.2-foss-2021b-R-4.1.2|-|x|x|-|-|-|-|

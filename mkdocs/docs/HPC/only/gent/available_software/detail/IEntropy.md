@@ -21,4 +21,4 @@ module load IEntropy/2024.06.12-foss-2023a-R-4.3.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|IEntropy/2024.06.12-foss-2023a-R-4.3.2|x|x|x|x|-|-|x|
+|IEntropy/2024.06.12-foss-2023a-R-4.3.2|-|x|x|x|-|-|x|

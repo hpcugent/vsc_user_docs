@@ -22,12 +22,11 @@ module load bokeh/3.2.2-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |bokeh/3.2.2-foss-2023a|x|x|x|x|x|x|x|
-|bokeh/3.2.1-foss-2022b|x|x|x|x|-|-|-|
-|bokeh/2.4.3-foss-2022a|x|x|x|x|-|x|-|
-|bokeh/2.4.2-foss-2021b|x|x|x|x|-|-|-|
-|bokeh/2.4.1-foss-2021a|x|x|x|-|-|-|-|
+|bokeh/3.2.1-foss-2022b|-|x|x|x|-|-|-|
+|bokeh/2.4.3-foss-2022a|-|x|x|x|-|x|-|
+|bokeh/2.4.2-foss-2021b|-|x|x|x|-|-|-|
+|bokeh/2.4.1-foss-2021a|-|x|x|-|-|-|-|
 |bokeh/2.2.3-intel-2020b|-|x|x|-|-|-|-|
-|bokeh/2.2.3-fosscuda-2020b|x|-|-|-|-|-|-|
 |bokeh/2.2.3-foss-2020b|-|x|x|x|-|-|-|
 |bokeh/2.0.2-intel-2020a-Python-3.8.2|-|x|x|-|-|-|-|
 |bokeh/2.0.2-foss-2020a-Python-3.8.2|-|x|x|-|-|-|-|

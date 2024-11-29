@@ -21,4 +21,4 @@ module load RheoTool/5.0-foss-2019b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RheoTool/5.0-foss-2019b|x|x|x|-|-|-|-|
+|RheoTool/5.0-foss-2019b|-|x|x|-|-|-|-|

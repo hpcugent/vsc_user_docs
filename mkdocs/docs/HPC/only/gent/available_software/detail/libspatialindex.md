@@ -21,4 +21,4 @@ module load libspatialindex/1.9.3-GCCcore-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libspatialindex/1.9.3-GCCcore-11.2.0|x|x|x|x|-|-|-|
+|libspatialindex/1.9.3-GCCcore-11.2.0|-|x|x|x|-|-|-|

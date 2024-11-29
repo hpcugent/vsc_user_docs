@@ -21,4 +21,4 @@ module load HOMER/4.11-foss-2023a-R-4.3.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HOMER/4.11-foss-2023a-R-4.3.2|x|x|x|x|-|-|x|
+|HOMER/4.11-foss-2023a-R-4.3.2|-|x|x|x|-|-|x|

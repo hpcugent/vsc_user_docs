@@ -21,4 +21,4 @@ module load SymEngine/0.11.2-gfbf-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SymEngine/0.11.2-gfbf-2023b|x|x|x|x|-|-|x|
+|SymEngine/0.11.2-gfbf-2023b|-|x|x|x|-|-|x|

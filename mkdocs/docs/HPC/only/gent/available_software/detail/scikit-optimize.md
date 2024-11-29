@@ -21,4 +21,4 @@ module load scikit-optimize/0.9.0-foss-2021a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scikit-optimize/0.9.0-foss-2021a|x|x|x|-|-|-|-|
+|scikit-optimize/0.9.0-foss-2021a|-|x|x|-|-|-|-|

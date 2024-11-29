@@ -21,6 +21,6 @@ module load SQLAlchemy/2.0.29-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SQLAlchemy/2.0.29-GCCcore-13.2.0|x|x|x|x|-|x|x|
+|SQLAlchemy/2.0.29-GCCcore-13.2.0|-|x|x|x|-|x|x|
 |SQLAlchemy/2.0.29-GCCcore-12.2.0|-|x|x|x|-|-|-|
 |SQLAlchemy/2.0.25-GCCcore-12.3.0|x|x|x|x|x|x|x|

@@ -21,4 +21,4 @@ module load LIANA+/1.0.1-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LIANA+/1.0.1-foss-2022a|x|x|x|x|-|-|-|
+|LIANA+/1.0.1-foss-2022a|-|x|x|x|-|-|-|

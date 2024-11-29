@@ -21,4 +21,4 @@ module load genozip/13.0.5-GCCcore-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|genozip/13.0.5-GCCcore-11.2.0|x|x|x|-|-|-|-|
+|genozip/13.0.5-GCCcore-11.2.0|-|x|x|-|-|-|-|

@@ -14,13 +14,14 @@ The overview below shows which CellRanger installations are available per HPC-UG
 To start using CellRanger, load one of these modules using a `module load` command like:
 
 ```shell
-module load CellRanger/7.0.0
+module load CellRanger/8.0.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CellRanger/8.0.1|x|x|x|x|-|x|x|
 |CellRanger/7.0.0|-|x|x|x|-|-|-|
 |CellRanger/6.1.2|-|x|x|-|-|-|-|
 |CellRanger/6.0.1|-|x|x|-|-|-|-|

@@ -21,20 +21,20 @@ module load gettext/0.22.5-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gettext/0.22.5-GCCcore-13.3.0|x|x|x|x|-|x|x|
-|gettext/0.22.5|x|x|x|x|-|x|x|
+|gettext/0.22.5-GCCcore-13.3.0|-|x|x|x|-|x|x|
+|gettext/0.22.5|-|x|x|x|-|x|x|
 |gettext/0.22-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |gettext/0.22|x|x|x|x|x|x|x|
 |gettext/0.21.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|gettext/0.21.1-GCCcore-12.2.0|x|x|x|x|-|x|-|
+|gettext/0.21.1-GCCcore-12.2.0|-|x|x|x|-|x|-|
 |gettext/0.21.1|x|x|x|x|x|x|x|
-|gettext/0.21-GCCcore-11.3.0|x|x|x|x|-|x|-|
-|gettext/0.21-GCCcore-11.2.0|x|x|x|x|-|x|-|
-|gettext/0.21-GCCcore-10.3.0|x|x|x|x|-|-|-|
-|gettext/0.21-GCCcore-10.2.0|x|x|x|x|-|-|-|
-|gettext/0.21|x|x|x|x|-|x|-|
-|gettext/0.20.1-GCCcore-9.3.0|x|x|x|x|-|-|-|
-|gettext/0.20.1-GCCcore-8.3.0|x|x|x|-|-|-|-|
-|gettext/0.20.1|x|x|x|x|-|-|-|
+|gettext/0.21-GCCcore-11.3.0|-|x|x|x|-|x|-|
+|gettext/0.21-GCCcore-11.2.0|-|x|x|x|-|x|-|
+|gettext/0.21-GCCcore-10.3.0|-|x|x|x|-|-|-|
+|gettext/0.21-GCCcore-10.2.0|-|x|x|x|-|-|-|
+|gettext/0.21|-|x|x|x|-|x|-|
+|gettext/0.20.1-GCCcore-9.3.0|-|x|x|x|-|-|-|
+|gettext/0.20.1-GCCcore-8.3.0|-|x|x|-|-|-|-|
+|gettext/0.20.1|-|x|x|x|-|-|-|
 |gettext/0.19.8.1-GCCcore-8.2.0|-|x|-|-|-|-|-|
-|gettext/0.19.8.1|x|x|x|x|-|-|-|
+|gettext/0.19.8.1|-|x|x|x|-|-|-|

@@ -21,5 +21,5 @@ module load RAxML/8.2.12-iimpi-2021b-hybrid-avx2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RAxML/8.2.12-iimpi-2021b-hybrid-avx2|x|x|x|-|-|-|-|
+|RAxML/8.2.12-iimpi-2021b-hybrid-avx2|-|x|x|-|-|-|-|
 |RAxML/8.2.12-iimpi-2019b-hybrid-avx2|-|x|x|-|-|-|-|

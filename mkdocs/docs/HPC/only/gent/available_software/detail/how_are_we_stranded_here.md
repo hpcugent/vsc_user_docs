@@ -21,4 +21,4 @@ module load how_are_we_stranded_here/1.0.1-foss-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|how_are_we_stranded_here/1.0.1-foss-2021b|x|x|x|-|-|-|-|
+|how_are_we_stranded_here/1.0.1-foss-2021b|-|x|x|-|-|-|-|

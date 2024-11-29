@@ -21,4 +21,4 @@ module load CatMAP/20220519-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CatMAP/20220519-foss-2022a|x|x|x|x|-|-|-|
+|CatMAP/20220519-foss-2022a|-|x|x|x|-|-|-|

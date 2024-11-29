@@ -21,4 +21,4 @@ module load PICRUSt2/2.5.2-foss-2022b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PICRUSt2/2.5.2-foss-2022b|x|x|x|x|-|-|-|
+|PICRUSt2/2.5.2-foss-2022b|-|x|x|x|-|-|-|

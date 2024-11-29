@@ -21,4 +21,4 @@ module load dclone/2.3-0-foss-2022a-R-4.2.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|dclone/2.3-0-foss-2022a-R-4.2.1|x|x|x|x|-|-|-|
+|dclone/2.3-0-foss-2022a-R-4.2.1|-|x|x|x|-|-|-|

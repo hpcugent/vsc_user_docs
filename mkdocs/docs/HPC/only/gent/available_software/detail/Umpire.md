@@ -21,4 +21,4 @@ module load Umpire/2024.02.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Umpire/2024.02.1-foss-2023a|x|x|x|x|-|x|x|
+|Umpire/2024.02.1-foss-2023a|-|x|x|x|-|x|x|

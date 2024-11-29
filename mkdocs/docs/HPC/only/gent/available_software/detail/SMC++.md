@@ -21,4 +21,4 @@ module load SMC++/1.15.4-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SMC++/1.15.4-foss-2022a|x|x|x|-|-|-|-|
+|SMC++/1.15.4-foss-2022a|-|x|x|-|-|-|-|

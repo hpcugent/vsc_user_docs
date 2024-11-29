@@ -21,5 +21,5 @@ module load Maven/3.6.3
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Maven/3.6.3|x|x|x|x|-|-|-|
+|Maven/3.6.3|-|x|x|x|-|-|-|
 |Maven/3.6.0|-|-|x|-|-|-|-|

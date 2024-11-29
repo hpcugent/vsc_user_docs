@@ -21,4 +21,4 @@ module load argtable/2.13-GCCcore-10.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|argtable/2.13-GCCcore-10.3.0|x|x|x|-|-|-|-|
+|argtable/2.13-GCCcore-10.3.0|-|x|x|-|-|-|-|

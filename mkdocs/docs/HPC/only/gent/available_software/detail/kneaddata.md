@@ -21,4 +21,4 @@ module load kneaddata/0.12.0-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|kneaddata/0.12.0-foss-2022a|x|x|x|x|-|-|-|
+|kneaddata/0.12.0-foss-2022a|-|x|x|x|-|-|-|

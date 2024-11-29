@@ -21,5 +21,5 @@ module load PyWBGT/1.0.0-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyWBGT/1.0.0-foss-2022a|x|x|x|x|-|-|-|
-|PyWBGT/1.0.0-foss-2021b|x|x|x|x|-|-|-|
+|PyWBGT/1.0.0-foss-2022a|-|x|x|x|-|-|-|
+|PyWBGT/1.0.0-foss-2021b|-|x|x|x|-|-|-|

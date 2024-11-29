@@ -21,4 +21,4 @@ module load SpatialDE/1.1.3-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SpatialDE/1.1.3-foss-2022a|x|x|x|x|-|-|-|
+|SpatialDE/1.1.3-foss-2022a|-|x|x|x|-|-|-|

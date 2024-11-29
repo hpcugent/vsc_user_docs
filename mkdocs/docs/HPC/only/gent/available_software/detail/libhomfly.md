@@ -21,4 +21,4 @@ module load libhomfly/1.02r6-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libhomfly/1.02r6-GCCcore-13.2.0|x|x|x|x|-|x|x|
+|libhomfly/1.02r6-GCCcore-13.2.0|-|x|x|x|-|x|x|

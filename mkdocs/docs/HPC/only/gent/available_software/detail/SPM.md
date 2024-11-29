@@ -21,4 +21,4 @@ module load SPM/12.5_r7771-MATLAB-2021b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SPM/12.5_r7771-MATLAB-2021b|x|x|x|-|-|-|-|
+|SPM/12.5_r7771-MATLAB-2021b|-|x|x|-|-|-|-|

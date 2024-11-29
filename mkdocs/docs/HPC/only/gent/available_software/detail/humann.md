@@ -21,4 +21,4 @@ module load humann/3.6-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|humann/3.6-foss-2022a|x|x|x|x|-|-|-|
+|humann/3.6-foss-2022a|-|x|x|x|-|-|-|

@@ -21,5 +21,5 @@ module load Cellpose/2.2.2-foss-2022a-CUDA-11.7.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Cellpose/2.2.2-foss-2022a-CUDA-11.7.0|x|-|x|-|-|-|-|
-|Cellpose/2.2.2-foss-2022a|x|x|x|x|-|-|-|
+|Cellpose/2.2.2-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|-|
+|Cellpose/2.2.2-foss-2022a|-|x|x|x|-|-|-|

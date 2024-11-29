@@ -21,4 +21,4 @@ module load nifty/1.2.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nifty/1.2.1-foss-2023a|x|x|x|x|-|-|x|
+|nifty/1.2.1-foss-2023a|-|x|x|x|-|-|x|

@@ -22,9 +22,9 @@ module load Racon/1.5.0-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Racon/1.5.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|Racon/1.5.0-GCCcore-11.3.0|x|x|x|x|-|-|-|
-|Racon/1.5.0-GCCcore-11.2.0|x|x|x|-|-|-|-|
-|Racon/1.4.21-GCCcore-10.3.0|x|x|x|-|-|-|-|
+|Racon/1.5.0-GCCcore-11.3.0|-|x|x|x|-|-|-|
+|Racon/1.5.0-GCCcore-11.2.0|-|x|x|-|-|-|-|
+|Racon/1.4.21-GCCcore-10.3.0|-|x|x|-|-|-|-|
 |Racon/1.4.21-GCCcore-10.2.0|-|x|x|x|-|-|-|
 |Racon/1.4.13-GCCcore-9.3.0|-|x|x|-|-|-|-|
-|Racon/1.4.13-GCCcore-8.3.0|x|x|x|x|-|-|-|
+|Racon/1.4.13-GCCcore-8.3.0|-|x|x|x|-|-|-|

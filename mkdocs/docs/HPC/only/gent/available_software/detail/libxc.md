@@ -23,13 +23,13 @@ module load libxc/6.2.2-GCC-13.2.0-nofhc
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libxc/6.2.2-GCC-13.2.0-nofhc|x|x|x|x|x|x|x|
 |libxc/6.2.2-GCC-12.3.0|x|x|x|x|x|x|x|
-|libxc/6.1.0-GCC-12.2.0|x|x|x|x|-|-|-|
-|libxc/5.2.3-intel-compilers-2022.1.0|x|x|x|x|-|-|-|
-|libxc/5.2.3-GCC-11.3.0|x|x|x|x|-|-|-|
-|libxc/5.1.6-intel-compilers-2021.4.0|x|x|x|x|-|-|-|
-|libxc/5.1.6-GCC-11.2.0|x|x|x|-|-|-|-|
+|libxc/6.1.0-GCC-12.2.0|-|x|x|x|-|-|-|
+|libxc/5.2.3-intel-compilers-2022.1.0|-|x|x|x|-|-|-|
+|libxc/5.2.3-GCC-11.3.0|-|x|x|x|-|-|-|
+|libxc/5.1.6-intel-compilers-2021.4.0|-|x|x|x|-|-|-|
+|libxc/5.1.6-GCC-11.2.0|-|x|x|-|-|-|-|
 |libxc/5.1.5-intel-compilers-2021.2.0|-|x|x|-|-|-|-|
-|libxc/5.1.5-GCC-10.3.0|x|x|x|x|-|-|-|
+|libxc/5.1.5-GCC-10.3.0|-|x|x|x|-|-|-|
 |libxc/5.1.2-GCC-10.2.0|-|x|x|x|-|-|-|
 |libxc/4.3.4-iccifort-2020.4.304|-|x|x|x|-|-|-|
 |libxc/4.3.4-iccifort-2020.1.217|-|x|x|-|-|-|-|

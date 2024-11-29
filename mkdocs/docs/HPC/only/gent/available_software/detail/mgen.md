@@ -21,4 +21,4 @@ module load mgen/1.2.1-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mgen/1.2.1-foss-2022a|x|x|x|x|-|-|-|
+|mgen/1.2.1-foss-2022a|-|x|x|x|-|-|-|

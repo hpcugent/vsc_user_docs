@@ -21,4 +21,4 @@ module load lcalc/2.0.5-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|lcalc/2.0.5-GCCcore-13.2.0|x|x|x|x|-|x|x|
+|lcalc/2.0.5-GCCcore-13.2.0|-|x|x|x|-|x|x|

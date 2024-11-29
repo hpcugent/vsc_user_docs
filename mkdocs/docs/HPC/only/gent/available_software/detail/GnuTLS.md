@@ -21,5 +21,5 @@ module load GnuTLS/3.7.3-GCCcore-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GnuTLS/3.7.3-GCCcore-11.2.0|x|x|x|x|-|-|-|
+|GnuTLS/3.7.3-GCCcore-11.2.0|-|x|x|x|-|-|-|
 |GnuTLS/3.7.2-GCCcore-10.3.0|-|x|x|-|-|-|-|

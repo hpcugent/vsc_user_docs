@@ -21,4 +21,4 @@ module load SCReadCounts/1.4.0-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SCReadCounts/1.4.0-foss-2023b|x|x|x|x|-|x|x|
+|SCReadCounts/1.4.0-foss-2023b|-|x|x|x|-|x|x|

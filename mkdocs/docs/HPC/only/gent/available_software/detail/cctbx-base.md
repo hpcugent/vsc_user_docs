@@ -22,5 +22,4 @@ module load cctbx-base/2023.5-foss-2022a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |cctbx-base/2023.5-foss-2022a|-|-|x|-|-|-|-|
-|cctbx-base/2020.8-fosscuda-2020b|x|-|-|-|-|-|-|
-|cctbx-base/2020.8-foss-2020b|x|x|x|x|-|-|-|
+|cctbx-base/2020.8-foss-2020b|-|x|x|x|-|-|-|

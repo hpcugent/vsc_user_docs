@@ -21,4 +21,4 @@ module load LinBox/1.7.0-gfbf-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LinBox/1.7.0-gfbf-2023b|x|x|x|x|-|x|x|
+|LinBox/1.7.0-gfbf-2023b|-|x|x|x|-|x|x|

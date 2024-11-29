@@ -21,4 +21,4 @@ module load smfishHmrf/1.3.3-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|smfishHmrf/1.3.3-foss-2022a|x|x|x|x|-|-|-|
+|smfishHmrf/1.3.3-foss-2022a|-|x|x|x|-|-|-|

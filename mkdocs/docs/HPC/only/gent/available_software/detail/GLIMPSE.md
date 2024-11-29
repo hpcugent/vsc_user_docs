@@ -21,5 +21,5 @@ module load GLIMPSE/2.0.0-GCC-12.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GLIMPSE/2.0.0-GCC-12.2.0|x|x|x|x|-|-|-|
-|GLIMPSE/2.0.0-GCC-11.3.0|x|x|x|x|-|-|-|
+|GLIMPSE/2.0.0-GCC-12.2.0|-|x|x|x|-|-|-|
+|GLIMPSE/2.0.0-GCC-11.3.0|-|x|x|x|-|-|-|

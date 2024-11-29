@@ -14,12 +14,11 @@ The overview below shows which flair-NLP installations are available per HPC-UGe
 To start using flair-NLP, load one of these modules using a `module load` command like:
 
 ```shell
-module load flair-NLP/0.11.3-foss-2021a-CUDA-11.3.1
+module load flair-NLP/0.11.3-foss-2021a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|flair-NLP/0.11.3-foss-2021a-CUDA-11.3.1|x|-|-|-|-|-|-|
-|flair-NLP/0.11.3-foss-2021a|x|x|x|-|-|-|-|
+|flair-NLP/0.11.3-foss-2021a|-|x|x|-|-|-|-|

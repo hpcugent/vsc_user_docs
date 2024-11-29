@@ -21,4 +21,4 @@ module load libwpe/1.13.3-GCCcore-11.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libwpe/1.13.3-GCCcore-11.2.0|x|x|x|x|-|-|-|
+|libwpe/1.13.3-GCCcore-11.2.0|-|x|x|x|-|-|-|

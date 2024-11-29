@@ -21,6 +21,6 @@ module load MEME/5.5.7-gompi-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MEME/5.5.7-gompi-2023b|x|x|x|x|-|x|x|
-|MEME/5.5.4-gompi-2022b|x|x|x|x|-|-|-|
-|MEME/5.4.1-gompi-2021b-Python-2.7.18|x|x|x|-|-|-|-|
+|MEME/5.5.7-gompi-2023b|-|x|x|x|-|x|x|
+|MEME/5.5.4-gompi-2022b|-|x|x|x|-|-|-|
+|MEME/5.4.1-gompi-2021b-Python-2.7.18|-|x|x|-|-|-|-|

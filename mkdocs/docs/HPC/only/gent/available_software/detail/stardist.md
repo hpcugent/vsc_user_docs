@@ -14,12 +14,11 @@ The overview below shows which stardist installations are available per HPC-UGen
 To start using stardist, load one of these modules using a `module load` command like:
 
 ```shell
-module load stardist/0.8.3-foss-2021b-CUDA-11.4.1
+module load stardist/0.8.3-foss-2021b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|stardist/0.8.3-foss-2021b-CUDA-11.4.1|x|-|-|-|-|-|-|
-|stardist/0.8.3-foss-2021b|x|x|x|x|-|-|-|
+|stardist/0.8.3-foss-2021b|-|x|x|x|-|-|-|

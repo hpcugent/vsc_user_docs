@@ -21,4 +21,4 @@ module load FDMNES/2024-02-29-gomkl-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FDMNES/2024-02-29-gomkl-2023a|x|x|x|x|-|x|x|
+|FDMNES/2024-02-29-gomkl-2023a|-|x|x|x|-|x|x|

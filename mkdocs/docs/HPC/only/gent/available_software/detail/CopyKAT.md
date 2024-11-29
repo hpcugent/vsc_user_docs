@@ -21,5 +21,5 @@ module load CopyKAT/1.1.0-foss-2022b-R-4.2.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CopyKAT/1.1.0-foss-2022b-R-4.2.2|x|x|x|x|-|-|-|
-|CopyKAT/1.1.0-foss-2022a-R-4.2.1|x|x|x|x|-|-|-|
+|CopyKAT/1.1.0-foss-2022b-R-4.2.2|-|x|x|x|-|-|-|
+|CopyKAT/1.1.0-foss-2022a-R-4.2.1|-|x|x|x|-|-|-|

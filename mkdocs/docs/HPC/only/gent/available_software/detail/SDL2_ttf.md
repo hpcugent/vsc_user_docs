@@ -21,4 +21,4 @@ module load SDL2_ttf/2.22.0-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SDL2_ttf/2.22.0-GCCcore-12.3.0|x|x|x|x|-|x|x|
+|SDL2_ttf/2.22.0-GCCcore-12.3.0|-|x|x|x|-|x|x|

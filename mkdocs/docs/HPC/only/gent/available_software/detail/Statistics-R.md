@@ -21,5 +21,5 @@ module load Statistics-R/0.34-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Statistics-R/0.34-foss-2023a|x|x|x|x|-|x|x|
+|Statistics-R/0.34-foss-2023a|-|x|x|x|-|x|x|
 |Statistics-R/0.34-foss-2020a|-|x|x|-|-|-|-|

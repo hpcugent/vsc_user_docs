@@ -22,5 +22,3 @@ module load timm/1.0.8-foss-2023a-CUDA-12.1.1
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |timm/1.0.8-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
-|timm/0.9.2-foss-2022a-CUDA-11.7.0|x|-|-|-|-|-|-|
-|timm/0.6.13-foss-2022a-CUDA-11.7.0|x|-|-|-|-|-|-|
