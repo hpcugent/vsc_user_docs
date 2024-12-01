@@ -136,19 +136,19 @@ using RHEL 8 to RHEL 9 one by one, following the schedule outlined below.
 | --- | ---- | --- |
 | `skitty` | Monday 30 September 2024 | Tuesday 1 October 2024 |
 | `joltik` | Monday 21 October 2024 | Tuesday 22 October 2024 |
-| `accelgor` | Tuesday 26 November 2024 | |
+| `accelgor` | Tuesday 26 November 2024 | Tuesday 27 November 2024 |
 | `gallade` | Monday 9 December 2024 | |
 | `donphan` | February 2025 | |
 | `doduo` (default cluster) | February 2025 | |
 | login nodes switch | February 2025 | |
 
-Migration the `donphan` and `doduo` clusters to RHEL 9 and switching `login.hpc.ugent.be` to RHEL 9 login nodes
+Migration of the `donphan` and `doduo` clusters to RHEL 9 and switching `login.hpc.ugent.be` to RHEL 9 login nodes
 will be done at the same time.
 
 We will keep this page up to date when more specific dates have been planned.
 
 !!! warning
-    This planning below is subject to change, some clusters may get migrated later than originally planned.
+    This planning above is subject to change, some clusters may get migrated later than originally planned.
 
     **Please check back regularly.**
 
