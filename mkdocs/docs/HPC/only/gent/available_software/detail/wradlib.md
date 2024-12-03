@@ -21,4 +21,4 @@ module load wradlib/2.0.3-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|wradlib/2.0.3-foss-2023a|-|-|-|-|-|-|x|
+|wradlib/2.0.3-foss-2023a|-|x|-|-|-|-|x|
