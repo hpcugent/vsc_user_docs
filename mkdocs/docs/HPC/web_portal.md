@@ -282,14 +282,14 @@ others).
 
 ### Enable debug logging for interactive apps
 
-When investagting an issue with an interactive app (e.g. fails to start), it can be very helpful (or you will be asked to by support)
+When investigating an issue with an interactive app (e.g. failure to start),
+it can be very helpful (or you will be asked to by support)
 to provide more debugging information in the output log file.
 To do so, tick `Show advanced options` button (right above the `Launch` button),
-and tick `Enable extra debugging code to help debug problems` button that appears at top of the page
-(just under the `Cluster` selection).
+and tick `Enable extra debugging code to help debug problems` button that right above it.
 
 Once the issue is resolved, you can do the same steps to untick the `Enable extra debugging code to help debug problems` button again
-or it will add the additional command and output with every interactive app you start, and it is not recommended to do this by default.
+or it will add the additional commands and output with every interactive app you start, and it is not recommended to do this by default.
 
 ## Custom apps
 
