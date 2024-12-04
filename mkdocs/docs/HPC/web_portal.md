@@ -280,6 +280,17 @@ menu item:
 Of course, this only affects your own web portal session (not those of
 others).
 
+### Enable debug logging for interactive apps
+
+When investagting an issue with an interactive app (e.g. fails to start), it can be very helpful (or you will be asked to by support)
+to provide more debugging information in the output log file.
+To do so, tick `Show advanced options` button (right above the `Launch` button),
+and tick `Enable extra debugging code to help debug problems` button that appears at top of the page
+(just under the `Cluster` selection).
+
+Once the issue is resolved, you can do the same steps to untick the `Enable extra debugging code to help debug problems` button again
+or it will add the additional command and output with every interactive app you start, and it is not recommended to do this by default.
+
 ## Custom apps
 
 * [ABAQUS for CAE course](web_portal_custom_apps/abaqus_cae.md)
