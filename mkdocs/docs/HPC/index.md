@@ -22,6 +22,7 @@ Use the OS dropdown in the top bar to switch to a different operating system.
 - [Linux Tutorial](linux-tutorial/index.md)
 - [Hardware overview](infrastructure.md)
 - [Available software](./only/gent/available_software/index.md)
+- [Software installation requests](software_installation_requests.md)
 - [Migration of cluster and login nodes to RHEL9 (starting Sept'24)](rhel9.md)
 {%- endif %}
 - [FAQ](FAQ.md) | [Troubleshooting](troubleshooting.md) | [Best practices](./best_practices.md) | [Known issues](known_issues.md)
