@@ -25,7 +25,7 @@ module load medaka/1.12.1-foss-2023a-CUDA-12.1.1
 |medaka/1.12.1-foss-2023a|-|x|x|x|-|x|x|
 |medaka/1.12.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
 |medaka/1.12.0-foss-2023a|-|x|x|x|-|x|x|
-|medaka/1.11.3-foss-2023a|-|x|x|x|-|x|x|
+|medaka/1.11.3-foss-2023a|x|x|x|x|x|x|x|
 |medaka/1.11.3-foss-2022a|-|x|x|x|-|-|-|
 |medaka/1.9.1-foss-2022a|-|x|x|x|-|-|-|
 |medaka/1.8.1-foss-2022a|-|x|x|x|-|-|-|
