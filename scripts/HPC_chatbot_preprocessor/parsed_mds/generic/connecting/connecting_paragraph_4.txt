@@ -1,0 +1,35 @@
+This directory contains:
+1.  This HPC Tutorial (in either a Mac, Linux or      Windows version).
+2.  An examples subdirectory, containing all the examples that you need in this
+    Tutorial, as well as examples that might be useful for your specific applications.
+cd examples
+ tip
+    Typing cd ex followed by tab (the Tab-key) will generate the cd examples
+    command. Command-line completion (also tab completion) is a common feature of the bash command
+    line interpreter, in which the program automatically fills in partially
+    typed commands.
+ tip
+    For more exhaustive tutorials about Linux usage, see Appendix Useful Linux Commands
+The first action is to copy the contents of the HPC examples directory to
+your home directory, so that you have your own personal copy and that
+you can start using the examples. The "-r" option of the copy command
+will also copy the contents of the sub-directories "recursively".
+cp -r /apps/gent/tutorials/Intro-HPC/examples ~/
+Go to your home directory, check your own private examples directory, ... and start working.
+cd
+ls -l
+Upon connecting you will see a login message containing your last login time stamp and a basic overview of the current cluster utilisation.
+Last login: Thu Mar 18 13:15:09 2021 from gligarha02.gastly.os
+ STEVIN HPC-UGent infrastructure status on Mon, 19 Feb 2024 10:00:01
+      cluster         - full - free -  part - total - running - queued
+                        nodes  nodes   free   nodes   jobs      jobs
+ -------------------------------------------------------------------------
+           skitty          39      0     26      68      1839     5588
+           joltik           6      0      1      10        29       18
+            doduo          22      0     75     128      1397    11933
+         accelgor           4      3      2       9        18        1
+          donphan           0      0     16      16        16       13
+          gallade           2      0      5      16        19      136
+For a full view of the current loads and queues see:
+https://hpc.ugent.be/clusterstate/
+Updates on current system status and planned maintenance can be found on https://www.ugent.be/hpc/en/infrastructure/status
