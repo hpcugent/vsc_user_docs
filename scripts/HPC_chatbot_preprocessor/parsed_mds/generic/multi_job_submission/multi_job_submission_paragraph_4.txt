@@ -1,0 +1,42 @@
+As a simple example, assume you have a serial program called myprog
+that you want to run on various input files *input\[1-100\]*.
+The following bash script would submit these jobs all one by one:
+#!/bin/bash
+for i in `seq 1 100`; do
+  qsub -o output $i -i input $i myprog.pbs
+done
+This, as said before, could be disturbing for the job scheduler.
+Alternatively, TORQUE provides a feature known as job arrays which
+allows the creation of multiple, similar jobs with only one qsub command. This
+feature introduced a new job naming convention that allows users either
+to reference the entire set of jobs as a unit or to reference one
+particular job from the set.
+Under TORQUE, the -t range option is used with qsub to specify a job
+array, where range is a range of numbers (e.g., 1-100 or 2,4-5,7).
+The details are
+1.  a job is submitted for each number in the range;
+2.  individuals jobs are referenced as jobid-number, and the entire
+    array can be referenced as jobid for easy killing etc.; and
+3.  each job has PBS_ARRAYID set to its number which allows the
+    script/program to specialise for that job
+The job could have been submitted using:
+qsub -t 1-100 my_prog.pbs
+The effect was that rather than 1 job, the user would actually submit
+100 jobs to the queue system. This was a popular feature of TORQUE, but
+as this technique puts quite a burden on the scheduler, it is not
+supported by Moab (the current job scheduler).
+To support those users who used the feature and since it offers a
+convenient workflow, the "worker framework" implements the idea of "job
+arrays" in its own way.
+A typical job script for use with job arrays would look like this:
+#!/bin/bash -l
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=00:15:00
+cd $PBS_O_WORKDIR
+INPUT_FILE="input_${PBS_ARRAYID}.dat"
+OUTPUT_FILE="output_${PBS_ARRAYID}.dat"
+my_prog -input ${INPUT_FILE}  -output ${OUTPUT_FILE}
+In our specific example, we have prefabricated 100 input files in the
+"./input" subdirectory. Each of those files contains a number of
+parameters for the "test_set" program, which will perform some tests
+with those parameters.
