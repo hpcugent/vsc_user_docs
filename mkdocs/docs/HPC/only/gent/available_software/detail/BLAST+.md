@@ -21,7 +21,7 @@ module load BLAST+/2.14.1-gompi-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BLAST+/2.14.1-gompi-2023a|-|x|x|x|x|x|x|
+|BLAST+/2.14.1-gompi-2023a|x|x|x|x|x|x|x|
 |BLAST+/2.14.0-gompi-2022b|-|x|x|x|-|-|-|
 |BLAST+/2.13.0-gompi-2022a|-|x|x|x|-|-|-|
 |BLAST+/2.12.0-gompi-2021b|-|x|x|x|-|-|-|
