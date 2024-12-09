@@ -21,7 +21,7 @@ module load help2man/1.49.3-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|help2man/1.49.3-GCCcore-13.3.0|-|x|x|x|-|x|x|
+|help2man/1.49.3-GCCcore-13.3.0|x|x|x|x|-|x|x|
 |help2man/1.49.3-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |help2man/1.49.3-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |help2man/1.49.2-GCCcore-12.2.0|-|x|x|x|-|x|-|

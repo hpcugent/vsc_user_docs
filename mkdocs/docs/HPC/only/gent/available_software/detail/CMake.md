@@ -21,7 +21,7 @@ module load CMake/3.29.3-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CMake/3.29.3-GCCcore-13.3.0|-|x|x|x|-|x|x|
+|CMake/3.29.3-GCCcore-13.3.0|x|x|x|x|-|x|x|
 |CMake/3.27.6-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |CMake/3.26.3-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |CMake/3.24.3-GCCcore-12.2.0|-|x|x|x|-|x|-|

@@ -21,7 +21,7 @@ module load libtool/2.4.7-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libtool/2.4.7-GCCcore-13.3.0|-|x|x|x|-|x|x|
+|libtool/2.4.7-GCCcore-13.3.0|x|x|x|x|-|x|x|
 |libtool/2.4.7-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |libtool/2.4.7-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |libtool/2.4.7-GCCcore-12.2.0|-|x|x|x|-|x|-|

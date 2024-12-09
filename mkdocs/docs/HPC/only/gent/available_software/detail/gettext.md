@@ -21,8 +21,8 @@ module load gettext/0.22.5-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gettext/0.22.5-GCCcore-13.3.0|-|x|x|x|-|x|x|
-|gettext/0.22.5|-|x|x|x|-|x|x|
+|gettext/0.22.5-GCCcore-13.3.0|x|x|x|x|-|x|x|
+|gettext/0.22.5|x|x|x|x|-|x|x|
 |gettext/0.22-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |gettext/0.22|x|x|x|x|x|x|x|
 |gettext/0.21.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
