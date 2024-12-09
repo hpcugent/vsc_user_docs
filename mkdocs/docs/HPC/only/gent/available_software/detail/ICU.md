@@ -21,7 +21,7 @@ module load ICU/75.1-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ICU/75.1-GCCcore-13.3.0|-|x|x|x|-|x|x|
+|ICU/75.1-GCCcore-13.3.0|x|x|x|x|-|x|x|
 |ICU/74.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |ICU/73.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |ICU/72.1-GCCcore-12.2.0|-|x|x|x|-|x|-|
