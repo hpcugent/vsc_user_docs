@@ -21,7 +21,7 @@ module load hypothesis/6.103.1-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|hypothesis/6.103.1-GCCcore-13.3.0|-|x|x|x|-|x|x|
+|hypothesis/6.103.1-GCCcore-13.3.0|x|x|x|x|-|x|x|
 |hypothesis/6.90.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |hypothesis/6.82.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |hypothesis/6.68.2-GCCcore-12.2.0|-|x|x|x|-|x|-|
