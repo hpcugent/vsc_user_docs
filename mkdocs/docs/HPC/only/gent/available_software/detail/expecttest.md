@@ -21,7 +21,7 @@ module load expecttest/0.2.1-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|expecttest/0.2.1-GCCcore-13.2.0|x|x|x|x|-|x|x|
+|expecttest/0.2.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |expecttest/0.1.5-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |expecttest/0.1.3-GCCcore-12.2.0|-|x|x|x|-|-|-|
 |expecttest/0.1.3-GCCcore-11.3.0|-|x|x|x|-|x|-|

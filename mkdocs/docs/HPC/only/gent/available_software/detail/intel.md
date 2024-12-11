@@ -22,7 +22,7 @@ module load intel/2023b
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |intel/2023b|-|x|x|x|-|x|x|
-|intel/2023a|-|x|x|x|-|x|x|
+|intel/2023a|x|x|x|x|x|x|x|
 |intel/2022b|-|x|x|x|-|-|-|
 |intel/2022a|-|x|x|x|-|-|-|
 |intel/2021b|-|x|x|x|-|-|-|

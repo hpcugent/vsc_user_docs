@@ -21,7 +21,7 @@ module load protobuf-python/4.25.3-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|protobuf-python/4.25.3-GCCcore-13.2.0|-|x|x|x|-|x|x|
+|protobuf-python/4.25.3-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |protobuf-python/4.24.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |protobuf-python/4.23.0-GCCcore-12.2.0|-|x|x|x|-|x|-|
 |protobuf-python/3.19.4-GCCcore-11.3.0|-|x|x|x|-|x|-|

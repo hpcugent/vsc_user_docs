@@ -21,7 +21,7 @@ module load matplotlib/3.8.2-gfbf-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|matplotlib/3.8.2-gfbf-2023b|-|x|x|x|-|x|x|
+|matplotlib/3.8.2-gfbf-2023b|x|x|x|x|x|x|x|
 |matplotlib/3.7.2-gfbf-2023a|x|x|x|x|x|x|x|
 |matplotlib/3.7.0-gfbf-2022b|-|x|x|x|-|-|-|
 |matplotlib/3.5.2-intel-2022a|-|x|x|x|-|-|-|

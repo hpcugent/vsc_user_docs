@@ -21,7 +21,7 @@ module load pybedtools/0.10.0-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pybedtools/0.10.0-foss-2023b|-|x|x|x|-|x|x|
+|pybedtools/0.10.0-foss-2023b|x|x|x|x|x|x|x|
 |pybedtools/0.9.1-foss-2023a|x|x|x|x|x|x|x|
 |pybedtools/0.9.0-GCC-12.2.0|-|x|x|x|-|-|-|
 |pybedtools/0.9.0-GCC-11.3.0|-|x|x|x|-|-|-|

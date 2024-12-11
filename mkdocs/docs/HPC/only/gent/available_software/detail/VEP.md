@@ -14,12 +14,13 @@ The overview below shows which VEP installations are available per HPC-UGent Tie
 To start using VEP, load one of these modules using a `module load` command like:
 
 ```shell
-module load VEP/107-GCC-11.3.0
+module load VEP/113.0-GCC-12.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|VEP/113.0-GCC-12.3.0|x|x|x|x|x|x|x|
 |VEP/107-GCC-11.3.0|-|x|x|-|-|-|-|
 |VEP/105-GCC-11.2.0|-|x|x|-|-|-|-|
