@@ -378,12 +378,12 @@ conda deactivate
 
 In order to access your UGent home and shares inside the globus
 endpoint, you first have to generate authentication credentials on the
-endpoint. To do that, you have to ssh to the globus endpoint from a
+endpoint. To do that, you have to ssh to the globus endpoints from a
 loginnode. You will be prompted for your UGent username and password to
 authenticate:
 
 ```
-$ ssh globus
+$ ssh globus01 (also do this for globus02)
 UGent username:ugentusername
 Password for ugentusername@UGENT.BE:
 Shares are available in globus endpoint at /UGent/ugentusername/
