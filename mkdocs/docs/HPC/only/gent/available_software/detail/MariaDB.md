@@ -21,7 +21,7 @@ module load MariaDB/11.6.0-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MariaDB/11.6.0-GCC-12.3.0|-|x|x|x|x|x|x|
+|MariaDB/11.6.0-GCC-12.3.0|x|x|x|x|x|x|x|
 |MariaDB/10.9.3-GCC-11.3.0|-|x|x|x|-|-|-|
 |MariaDB/10.6.4-GCC-11.2.0|-|x|x|x|-|-|-|
 |MariaDB/10.6.4-GCC-10.3.0|-|x|x|-|-|-|-|

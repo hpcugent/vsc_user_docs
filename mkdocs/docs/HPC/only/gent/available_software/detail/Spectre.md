@@ -21,4 +21,4 @@ module load Spectre/0.2.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Spectre/0.2.1-foss-2023a|-|x|x|x|-|x|x|
+|Spectre/0.2.1-foss-2023a|x|x|x|x|-|x|x|

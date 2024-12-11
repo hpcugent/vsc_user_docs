@@ -14,13 +14,14 @@ The overview below shows which FDS installations are available per HPC-UGent Tie
 To start using FDS, load one of these modules using a `module load` command like:
 
 ```shell
-module load FDS/6.8.0-intel-2022b
+module load FDS/6.9.1-intel-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FDS/6.9.1-intel-2023a|x|x|x|x|x|x|x|
 |FDS/6.8.0-intel-2022b|-|x|x|x|-|-|-|
 |FDS/6.7.9-intel-2022a|-|x|x|-|-|-|-|
 |FDS/6.7.7-intel-2021b|-|x|x|-|-|-|-|

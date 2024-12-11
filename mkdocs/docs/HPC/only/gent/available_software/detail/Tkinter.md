@@ -21,7 +21,7 @@ module load Tkinter/3.11.5-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Tkinter/3.11.5-GCCcore-13.2.0|-|x|x|x|-|x|x|
+|Tkinter/3.11.5-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Tkinter/3.11.3-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |Tkinter/3.10.8-GCCcore-12.2.0|-|x|x|x|-|x|-|
 |Tkinter/3.10.4-GCCcore-11.3.0|-|x|x|x|-|x|-|

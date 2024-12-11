@@ -21,4 +21,4 @@ module load bakta/1.10.1-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bakta/1.10.1-foss-2023b|-|x|x|x|-|x|x|
+|bakta/1.10.1-foss-2023b|x|x|x|x|x|x|x|
