@@ -383,7 +383,7 @@ loginnode. You will be prompted for your UGent username and password to
 authenticate:
 
 ```
-$ ssh globus01 (also do this for globus02)
+$ ssh globus01   # also do this for globus02
 UGent username:ugentusername
 Password for ugentusername@UGENT.BE:
 Shares are available in globus endpoint at /UGent/ugentusername/
