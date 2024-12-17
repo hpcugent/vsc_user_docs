@@ -14,13 +14,14 @@ The overview below shows which gompi installations are available per HPC-UGent T
 To start using gompi, load one of these modules using a `module load` command like:
 
 ```shell
-module load gompi/2023b
+module load gompi/2024a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|gompi/2024a|x|x|x|x|-|x|x|
 |gompi/2023b|x|x|x|x|x|x|x|
 |gompi/2023a|x|x|x|x|x|x|x|
 |gompi/2022b|-|x|x|x|-|-|-|

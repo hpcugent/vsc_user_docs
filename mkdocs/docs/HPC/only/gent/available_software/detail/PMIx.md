@@ -21,7 +21,7 @@ module load PMIx/5.0.2-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PMIx/5.0.2-GCCcore-13.3.0|-|x|x|x|-|x|x|
+|PMIx/5.0.2-GCCcore-13.3.0|x|x|x|x|-|x|x|
 |PMIx/4.2.6-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |PMIx/4.2.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |PMIx/4.2.2-GCCcore-12.2.0|-|x|x|x|-|x|-|

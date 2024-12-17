@@ -10,6 +10,7 @@ https://account.vscentrum.be/django/vo/edit
 https://account.vscentrum.be/django/vo/join
 https://account.vscentrum.be/django/vo/new
 https://firewall.vscentrum.be
+https://elearning.bits.vib.be/courses/alphafold
 
 # 401
 https://pintra.uantwerpen.be/bbcswebdav/xid-23610_1

@@ -24,5 +24,6 @@ module load HPL/2.3-intel-2019b
 |HPL/2.3-intel-2019b|-|x|x|-|-|-|-|
 |HPL/2.3-iibff-2020b|-|x|-|-|-|-|-|
 |HPL/2.3-gobff-2020b|-|x|-|-|-|-|-|
+|HPL/2.3-foss-2024a|x|x|x|x|-|x|x|
 |HPL/2.3-foss-2023b|-|x|x|x|-|-|x|
 |HPL/2.3-foss-2019b|-|x|x|-|-|-|-|
