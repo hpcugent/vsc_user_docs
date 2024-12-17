@@ -26,7 +26,7 @@ module load UCX/1.16.0-rc4-GCCcore-13.2.0
 |UCX/1.16.0-rc4-GCCcore-12.2.0|-|x|x|x|-|x|-|
 |UCX/1.16.0-rc4-GCCcore-11.3.0|-|x|x|x|-|x|-|
 |UCX/1.16.0-rc4-GCCcore-11.2.0|-|x|x|x|-|-|-|
-|UCX/1.16.0-GCCcore-13.3.0|-|x|x|x|-|x|x|
+|UCX/1.16.0-GCCcore-13.3.0|x|x|x|x|-|x|x|
 |UCX/1.15.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |UCX/1.14.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |UCX/1.13.1-GCCcore-12.2.0|-|x|x|x|-|x|-|
