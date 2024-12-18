@@ -21,5 +21,5 @@ module load SMV/6.9.5-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SMV/6.9.5-GCCcore-12.3.0|-|x|-|-|-|-|-|
+|SMV/6.9.5-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |SMV/6.7.17-iccifort-2020.4.304|-|x|x|-|-|-|-|
