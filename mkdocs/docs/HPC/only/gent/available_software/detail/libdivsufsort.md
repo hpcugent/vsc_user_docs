@@ -21,4 +21,4 @@ module load libdivsufsort/2.0.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libdivsufsort/2.0.1-foss-2023a|x|x|x|x|-|x|x|
+|libdivsufsort/2.0.1-foss-2023a|x|x|x|x|x|x|x|

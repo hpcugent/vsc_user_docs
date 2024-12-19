@@ -21,7 +21,7 @@ module load elfutils/0.189-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|elfutils/0.189-GCCcore-12.3.0|x|x|x|x|-|x|x|
+|elfutils/0.189-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |elfutils/0.187-GCCcore-11.3.0|-|x|x|x|-|x|-|
 |elfutils/0.185-GCCcore-11.2.0|-|x|x|x|-|-|-|
 |elfutils/0.185-GCCcore-10.3.0|-|x|x|x|-|-|-|

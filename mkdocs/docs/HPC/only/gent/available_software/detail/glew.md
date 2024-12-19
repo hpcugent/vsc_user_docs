@@ -21,7 +21,7 @@ module load glew/2.2.0-GCCcore-12.3.0-osmesa
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|glew/2.2.0-GCCcore-12.3.0-osmesa|x|x|x|x|-|x|x|
+|glew/2.2.0-GCCcore-12.3.0-osmesa|x|x|x|x|x|x|x|
 |glew/2.2.0-GCCcore-12.2.0-egl|-|x|x|x|-|-|-|
 |glew/2.2.0-GCCcore-11.2.0-osmesa|-|x|x|x|-|-|-|
 |glew/2.2.0-GCCcore-11.2.0-egl|-|x|x|x|-|-|-|

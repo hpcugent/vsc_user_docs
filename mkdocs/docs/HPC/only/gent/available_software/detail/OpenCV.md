@@ -21,7 +21,7 @@ module load OpenCV/4.8.1-foss-2023a-contrib
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenCV/4.8.1-foss-2023a-contrib|-|x|x|x|-|x|x|
+|OpenCV/4.8.1-foss-2023a-contrib|x|x|x|x|-|x|x|
 |OpenCV/4.6.0-foss-2022a-contrib|-|x|x|x|-|-|-|
 |OpenCV/4.6.0-foss-2022a-CUDA-11.7.0-contrib|-|-|x|-|-|-|-|
 |OpenCV/4.5.5-foss-2021b-contrib|-|x|x|-|-|-|-|

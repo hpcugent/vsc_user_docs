@@ -21,5 +21,5 @@ module load Graphene/1.10.8-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Graphene/1.10.8-GCCcore-12.3.0|x|x|x|x|-|x|x|
+|Graphene/1.10.8-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |Graphene/1.10.8-GCCcore-11.3.0|-|x|x|x|-|-|-|
