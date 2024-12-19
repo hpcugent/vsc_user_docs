@@ -1,0 +1,36 @@
+#!/bin/bash 
+echo "hello world"
+And we run it like mympirun ./hello.sh --output output.txt.
+To our surprise, this doesn't output to the file output.txt, but to
+standard out! This is because mympirun expects the program name and
+the arguments of the program to be its last arguments. Here, the
+--output output.txt arguments are passed to ./hello.sh instead of to
+mympirun. The correct way to run it is:
+mympirun --output output.txt ./hello.sh
+When will my job start?
+See the explanation about how jobs get prioritized in When will my job start. 
+Why do I get a "No space left on device" error, while I still have storage space left?
+When trying to create files, errors like this can occur:
+No space left on device
+The error "No space left on device" can mean two different things:
+- all available storage quota on the file system in question has been used;
+- the inode limit has been reached on that file system.
+An inode can be seen as a "file slot", meaning that when the limit is reached, no more additional files can be created.
+There is a standard inode limit in place that will be increased if needed. 
+The number of inodes used per file system can be checked on the VSC account page.
+Possible solutions to this problem include cleaning up unused files and directories or 
+compressing directories with a lot of files into zip- or tar-files.
+If the problem persists, feel free to contact support.
+Other
+Can I share my account with someone else?
+NO. You are not allowed to share your VSC account with anyone else, it is
+strictly personal. 
+See
+https://helpdesk.ugent.be/account/en/regels.php. 
+If you want to share data, there are alternatives (like a shared directories in VO
+space, see Virtual organisations).
+Can I share my data with other HPC users?
+Yes, you can use the chmod or setfacl commands to change permissions
+of files so other users can access the data. For example, the following
+command will enable a user named "otheruser" to read the file named
+dataset.txt. See
