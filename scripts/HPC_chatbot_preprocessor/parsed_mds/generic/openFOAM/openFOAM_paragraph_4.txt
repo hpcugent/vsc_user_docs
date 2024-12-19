@@ -1,0 +1,35 @@
+One important aspect to keep in mind for 'offline' pre-processing is
+that the domain decomposition needs to match the number of processor
+cores that are used for the actual simulation, see also Domain decomposition and number of processor cores.
+For post-processing you can either download the simulation results to a
+local workstation, or do the post-processing (interactively) on the HPC
+infrastructure, for example on the login nodes or using an interactive
+session on a workernode. This may be interesting to avoid the overhead
+of downloading the results locally.
+Running OpenFOAM in parallel
+For general information on running OpenFOAM in parallel, see
+https://cfd.direct/openfoam/user-guide/running-applications-parallel/.
+The -parallel option
+When running OpenFOAM in parallel, do not forget to specify the -parallel option, to avoid running the same OpenFOAM
+simulation $N$ times, rather than running it once using $N$ processor
+cores.
+You can check whether OpenFOAM was run in parallel in the output of the
+main command: the OpenFOAM header text should only be included once in
+the output, and it should specify a value different than '1' in the
+nProcs field. Note that most pre- and post-processing utilities like
+blockMesh, decomposePar and reconstructPar can not be run in
+parallel.
+Using mympirun
+It is highly recommended to use the mympirun command when running
+parallel OpenFOAM simulations rather than the standard mpirun command;
+see Mympiprun for more information on mympirun.
+See Basic usage for how to get started with mympirun.
+To pass down the environment variables required to run OpenFOAM (which
+were defined by the $FOAM_BASH script, see Preparing the environment) to each of the MPI
+processes used in a parallel OpenFOAM execution, the
+$MYMPIRUN_VARIABLESPREFIX environment variable must be defined as
+follows, prior to running the OpenFOAM simulation with mympirun:
+export MYMPIRUN_VARIABLESPREFIX=WM_PROJECT,FOAM,MPI
+Whenever you are instructed to use a command like mpirun -np <N> ...,
+use mympirun ... instead; mympirun will automatically detect the
+number of processor cores that are available (see also Controlling number of processes).
