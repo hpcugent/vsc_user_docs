@@ -21,4 +21,4 @@ module load RAPIDS/24.4-foss-2023a-CUDA-12.1.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RAPIDS/24.4-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|-|
+|RAPIDS/24.4-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
