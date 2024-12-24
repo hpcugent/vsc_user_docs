@@ -1,0 +1,12 @@
+{
+    "main_title": "gpu",
+    "subtitle": "Attention-points",
+    "source_file": "../../mkdocs/docs/HPC/gpu.md",
+    "title_depth": 2,
+    "directory": "gpu",
+    "parent_title": "",
+    "previous_title": "gpu_paragraph_1",
+    "next_title": "gpu_paragraph_3",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/gpu/#attention-points"
+}
