@@ -7091,6 +7091,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/juliaup/</loc>
+         <lastmod>2024-12-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/junos-eznc/</loc>
          <lastmod>2024-12-24</lastmod>
          <changefreq>daily</changefreq>
