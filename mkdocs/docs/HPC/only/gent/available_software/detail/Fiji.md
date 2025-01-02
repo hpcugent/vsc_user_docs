@@ -14,11 +14,12 @@ The overview below shows which Fiji installations are available per HPC-UGent Ti
 To start using Fiji, load one of these modules using a `module load` command like:
 
 ```shell
-module load Fiji/2.9.0-Java-1.8
+module load Fiji/2.14.0-Java-11
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Fiji/2.14.0-Java-11|x|x|x|x|-|x|x|
 |Fiji/2.9.0-Java-1.8|-|x|x|-|-|-|-|

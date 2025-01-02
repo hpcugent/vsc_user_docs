@@ -21,7 +21,7 @@ module load Ray-project/2.9.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Ray-project/2.9.1-foss-2023a|-|x|x|x|-|x|x|
+|Ray-project/2.9.1-foss-2023a|x|x|x|x|-|x|x|
 |Ray-project/1.13.0-foss-2021b|-|x|x|-|-|-|-|
 |Ray-project/1.13.0-foss-2021a|-|x|x|-|-|-|-|
 |Ray-project/0.8.4-foss-2019b-Python-3.7.4|-|-|x|-|-|-|-|
