@@ -1526,9 +1526,9 @@ versions, combined with a particular toolchain version. Use the
 <a href="http://easybuild.readthedocs.org/en/latest/Concepts_and_Terminology.html#easyconfig-files">http://easybuild.readthedocs.org/en/latest/Concepts_and_Terminology.html#easyconfig-files</a>) are available:</p>
 <div class="highlight"><pre><span></span><code>$ eb -S example-1.2
 CFGS1=/apps/gent/CO7/sandybridge/software/EasyBuild/3.6.2/lib/python2.7/site-packages/easybuild_easyconfigs-3.6.2-py2.7.egg/easybuild/easyconfigs
- * $CFGS1/e/example/example-1.2.1-foss-2024a.eb
- * $CFGS1/e/example/example-1.2.3-foss-2024b.eb
- * $CFGS1/e/example/example-1.2.5-intel-2024a.eb
+ * $CFGS1/e/example/example-1.2.1-foss-2025a.eb
+ * $CFGS1/e/example/example-1.2.3-foss-2025b.eb
+ * $CFGS1/e/example/example-1.2.5-intel-2025a.eb
 </code></pre></div>
 <p>For readily available easyconfigs, just specify the name of the
 easyconfig file to build and install the corresponding software package:</p>
@@ -1540,10 +1540,10 @@ software version, or using a different compiler toolchain, use the
 corresponding <code>--try-X</code> options:</p>
 <p>To try to install <code>example v1.2.6</code>, based on the easyconfig file for
 <code>example v1.2.5</code>:</p>
-<div class="highlight"><pre><span></span><code>eb example-1.2.5-intel-2024a.eb --try-software-version=1.2.6
+<div class="highlight"><pre><span></span><code>eb example-1.2.5-intel-2025a.eb --try-software-version=1.2.6
 </code></pre></div>
 <p>To try to install example v1.2.5 with a different compiler toolchain:</p>
-<div class="highlight"><pre><span></span><code>eb example-1.2.5-intel-2024a.eb --robot --try-toolchain=intel,2024b
+<div class="highlight"><pre><span></span><code>eb example-1.2.5-intel-2025a.eb --robot --try-toolchain=intel,2025b
 </code></pre></div>
 <h3 id="install-other-software">Install other software<a class="headerlink" href="#install-other-software" title="Permanent link">#</a></h3>
 <p>To install other, not yet supported, software, you will need to provide
