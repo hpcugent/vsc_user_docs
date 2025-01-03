@@ -14,13 +14,14 @@ The overview below shows which Trim_Galore installations are available per HPC-U
 To start using Trim_Galore, load one of these modules using a `module load` command like:
 
 ```shell
-module load Trim_Galore/0.6.6-GCC-10.2.0-Python-2.7.18
+module load Trim_Galore/0.6.10-GCCcore-12.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Trim_Galore/0.6.10-GCCcore-12.3.0|x|x|x|x|-|x|x|
 |Trim_Galore/0.6.6-GCC-10.2.0-Python-2.7.18|-|x|x|x|-|-|-|
 |Trim_Galore/0.6.5-GCCcore-8.3.0-Java-11-Python-3.7.4|-|x|x|-|-|-|-|
 |Trim_Galore/0.6.5-GCCcore-8.3.0-Java-11-Python-2.7.16|-|x|x|-|-|-|-|
