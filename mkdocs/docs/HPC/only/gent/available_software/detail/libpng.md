@@ -14,13 +14,14 @@ The overview below shows which libpng installations are available per HPC-UGent 
 To start using libpng, load one of these modules using a `module load` command like:
 
 ```shell
-module load libpng/1.6.40-GCCcore-13.2.0
+module load libpng/1.6.43-GCCcore-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libpng/1.6.43-GCCcore-13.3.0|x|x|x|x|-|x|x|
 |libpng/1.6.40-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |libpng/1.6.39-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |libpng/1.6.38-GCCcore-12.2.0|-|x|x|x|-|x|-|
