@@ -21,7 +21,7 @@ module load util-linux/2.40-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|util-linux/2.40-GCCcore-13.3.0|-|x|x|x|-|x|x|
+|util-linux/2.40-GCCcore-13.3.0|x|x|x|x|-|x|x|
 |util-linux/2.39-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |util-linux/2.39-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |util-linux/2.38.1-GCCcore-12.2.0|-|x|x|x|-|x|-|

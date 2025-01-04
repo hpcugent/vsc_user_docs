@@ -21,7 +21,7 @@ module load LittleCMS/2.16-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LittleCMS/2.16-GCCcore-13.3.0|-|x|x|x|-|x|x|
+|LittleCMS/2.16-GCCcore-13.3.0|x|x|x|x|-|x|x|
 |LittleCMS/2.15-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |LittleCMS/2.15-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |LittleCMS/2.14-GCCcore-12.2.0|-|x|x|x|-|-|-|

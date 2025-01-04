@@ -14,13 +14,14 @@ The overview below shows which Pillow installations are available per HPC-UGent 
 To start using Pillow, load one of these modules using a `module load` command like:
 
 ```shell
-module load Pillow/10.2.0-GCCcore-13.2.0
+module load Pillow/10.4.0-GCCcore-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Pillow/10.4.0-GCCcore-13.3.0|x|x|x|x|-|x|x|
 |Pillow/10.2.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Pillow/10.0.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |Pillow/9.4.0-GCCcore-12.2.0|-|x|x|x|-|x|-|
