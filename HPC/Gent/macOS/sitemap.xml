@@ -6486,6 +6486,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/fonttools/</loc>
+         <lastmod>2025-01-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/foss/</loc>
          <lastmod>2025-01-04</lastmod>
          <changefreq>daily</changefreq>
