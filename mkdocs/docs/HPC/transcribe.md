@@ -2,6 +2,9 @@
 
 ## What is Transcribe
 
+!!! warning
+    The `Transcribe` application is currently only available to `gpilot` members.
+
 `Transcribe` is a non-interactive application that offers audio transcription based on `OpenAI` `Whisper` (and derivatives thereoff).
 
 The main use case is sporadic transcription of audio or video files. There is intentionally no bulk mode (or API or library)
