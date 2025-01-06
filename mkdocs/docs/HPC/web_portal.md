@@ -267,6 +267,10 @@ It is also possible to relaunch a desktop session that has ended by clicking the
 
 See [dedicated page on Jupyter notebooks](../jupyter)
 
+#### Transcribe
+
+See [dedicated page on audio transcription app Transcribe](../transcribe)
+
 ## Restarting your web server in case of problems
 
 In case of problems with the web portal, it could help to restart the
