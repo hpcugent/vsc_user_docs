@@ -60,6 +60,7 @@ nav:
       - Python: python.md
       - Python virtual environments: setting_up_python_virtual_environments.md
       - VS Code Tunnel: vscodetunnel.md
+      - Transcribe: transcribe.md
   - FAQ:
       - Frequently Asked Questions: FAQ.md
   - Appendices:
