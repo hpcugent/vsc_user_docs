@@ -1771,6 +1771,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/FastK/</loc>
+         <lastmod>2025-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/macOS/available_software/detail/FastME/</loc>
          <lastmod>2025-01-06</lastmod>
          <changefreq>daily</changefreq>
