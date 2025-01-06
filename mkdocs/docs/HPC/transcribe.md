@@ -3,7 +3,7 @@
 ## What is Transcribe
 
 !!! warning
-    The `Transcribe` application is currently only available to `gpilot` members.
+    The `Transcribe` application is currently only available to members of the `gpilot` user group.
 
 `Transcribe` is a non-interactive application that offers audio transcription based on `OpenAI` `Whisper` (and derivatives thereoff).
 
