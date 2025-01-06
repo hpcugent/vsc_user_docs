@@ -2,21 +2,25 @@
 
 ## What is Transcribe
 
+!!! warning
+    The `Transcribe` application is currently only available to members of the `gpilot` user group.
+
 `Transcribe` is a non-interactive application that offers audio transcription based on `OpenAI` `Whisper` (and derivatives thereoff).
 
 The main use case is sporadic transcription of audio or video files. There is intentionally no bulk mode (or API or library)
 to help with large scale projects.
 
 The supported flow is:
- - Upload audio or video file using the `Files` interface of the web portal
- - Configure transcription via the `Interactive Apps` -> `Transcribe` application (currently under `Testing` section at the bottom);
-   you can select `Whisper inputfile` and `Whisper languages`.
- - Launch it and wait. Connecting to the running transcription is entirely optional; there is nothing interactive to do.
-   You will also receive an email when the transcritpion started.
- - Upon completion, you will receive an email with link to the result directory. This info will also be shown in the application session under
-   `My interactive sessions` (but the session data is only available for a week).
+- Upload audio or video file using the `Files` interface of the web portal
+- Configure transcription via the `Interactive Apps` -> `Transcribe` application (currently under `Testing` section at the bottom);
+  you can select `Whisper inputfile` and `Whisper languages`.
+- Launch it and wait. Connecting to the running transcription is entirely optional; there is nothing interactive to do.
+  You will also receive an email when the transcritpion started.
+- Upon completion, you will receive an email with link to the result directory. This info will also be shown in the application session under
+  `My interactive sessions` (but the session data is only available for a week).
 
-   The result directory has a subdirectory per language with the text files and some metadata in JSON format of the transcritpion itself and input file.
+  The result directory has a subdirectory per language with the text files and some metadata in JSON format of the transcritpion itself and input file.
+
 
 This is intentionally kept simple. There is also no risk of loosing previous results
 (although some previous result directories might get renamed when input file names are reused).
