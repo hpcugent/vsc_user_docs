@@ -21,4 +21,4 @@ module load bin2cell/0.3.2-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bin2cell/0.3.2-foss-2023a|x|x|x|x|-|x|x|
+|bin2cell/0.3.2-foss-2023a|x|x|x|x|x|x|x|

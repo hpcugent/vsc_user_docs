@@ -14,13 +14,14 @@ The overview below shows which HDF5 installations are available per HPC-UGent Ti
 To start using HDF5, load one of these modules using a `module load` command like:
 
 ```shell
-module load HDF5/1.14.3-gompi-2023b
+module load HDF5/1.14.5-gompi-2024a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HDF5/1.14.5-gompi-2024a|x|x|x|-|-|x|x|
 |HDF5/1.14.3-gompi-2023b|x|x|x|x|x|x|x|
 |HDF5/1.14.0-gompi-2023a|x|x|x|x|x|x|x|
 |HDF5/1.14.0-gompi-2022b|-|x|x|x|-|-|-|

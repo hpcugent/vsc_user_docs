@@ -14,12 +14,13 @@ The overview below shows which XGBoost installations are available per HPC-UGent
 To start using XGBoost, load one of these modules using a `module load` command like:
 
 ```shell
-module load XGBoost/1.7.2-foss-2022b
+module load XGBoost/2.1.3-gfbf-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|XGBoost/2.1.3-gfbf-2023a|x|x|x|-|-|-|x|
 |XGBoost/1.7.2-foss-2022b|-|x|x|x|-|-|-|
 |XGBoost/1.7.2-foss-2022a|-|x|x|x|-|-|-|
