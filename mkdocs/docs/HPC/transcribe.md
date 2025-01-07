@@ -13,10 +13,13 @@ to help with large scale projects.
 The supported flow is:
 
 - Upload audio or video file using the `Files` interface of the web portal
+
 - Configure transcription via the `Interactive Apps` -> `Transcribe` application (currently under `Testing` section at the bottom);
   you can select `Whisper inputfile` and `Whisper languages`.
+
 - Launch it and wait. Connecting to the running transcription is entirely optional; there is nothing interactive to do.
   You will also receive an email when the transcritpion started.
+
 - Upon completion, you will receive an email with link to the result directory. This info will also be shown in the application session under
   `My interactive sessions` (but the session data is only available for a week).
 
