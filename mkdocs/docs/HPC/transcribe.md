@@ -11,6 +11,7 @@ The main use case is sporadic transcription of audio or video files. There is in
 to help with large scale projects.
 
 The supported flow is:
+
 - Upload audio or video file using the `Files` interface of the web portal
 - Configure transcription via the `Interactive Apps` -> `Transcribe` application (currently under `Testing` section at the bottom);
   you can select `Whisper inputfile` and `Whisper languages`.
