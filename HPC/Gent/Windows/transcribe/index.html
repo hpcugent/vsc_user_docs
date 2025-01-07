@@ -1412,14 +1412,16 @@
 <p><code>Transcribe</code> is a non-interactive application that offers audio transcription based on <code>OpenAI</code> <code>Whisper</code> (and derivatives thereoff).</p>
 <p>The main use case is sporadic transcription of audio or video files. There is intentionally no bulk mode (or API or library)
 to help with large scale projects.</p>
-<p>The supported flow is:
-- Upload audio or video file using the <code>Files</code> interface of the web portal
-- Configure transcription via the <code>Interactive Apps</code> -&gt; <code>Transcribe</code> application (currently under <code>Testing</code> section at the bottom);
-  you can select <code>Whisper inputfile</code> and <code>Whisper languages</code>.
-- Launch it and wait. Connecting to the running transcription is entirely optional; there is nothing interactive to do.
-  You will also receive an email when the transcritpion started.
-- Upon completion, you will receive an email with link to the result directory. This info will also be shown in the application session under
-  <code>My interactive sessions</code> (but the session data is only available for a week).</p>
+<p>The supported flow is:</p>
+<ul>
+<li>Upload audio or video file using the <code>Files</code> interface of the web portal</li>
+<li>Configure transcription via the <code>Interactive Apps</code> -&gt; <code>Transcribe</code> application (currently under <code>Testing</code> section at the bottom);
+  you can select <code>Whisper inputfile</code> and <code>Whisper languages</code>.</li>
+<li>Launch it and wait. Connecting to the running transcription is entirely optional; there is nothing interactive to do.
+  You will also receive an email when the transcritpion started.</li>
+<li>Upon completion, you will receive an email with link to the result directory. This info will also be shown in the application session under
+  <code>My interactive sessions</code> (but the session data is only available for a week).</li>
+</ul>
 <p>The result directory has a subdirectory per language with the text files and some metadata in JSON format of the transcritpion itself and input file.</p>
 <p>This is intentionally kept simple. There is also no risk of loosing previous results
 (although some previous result directories might get renamed when input file names are reused).</p>
