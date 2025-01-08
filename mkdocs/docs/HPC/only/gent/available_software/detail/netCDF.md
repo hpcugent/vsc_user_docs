@@ -21,7 +21,7 @@ module load netCDF/4.9.2-gompi-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|netCDF/4.9.2-gompi-2024a|x|x|x|x|-|x|x|
+|netCDF/4.9.2-gompi-2024a|x|x|x|x|x|x|x|
 |netCDF/4.9.2-gompi-2023b|x|x|x|x|x|x|x|
 |netCDF/4.9.2-gompi-2023a|x|x|x|x|x|x|x|
 |netCDF/4.9.0-iimpi-2022a|-|-|x|-|-|-|-|

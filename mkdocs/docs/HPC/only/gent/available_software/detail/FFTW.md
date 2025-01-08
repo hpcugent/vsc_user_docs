@@ -23,7 +23,7 @@ module load FFTW/3.3.10-iimpi-2022a
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |FFTW/3.3.10-iimpi-2022a|-|x|x|x|-|-|-|
 |FFTW/3.3.10-gompi-2021b|-|x|x|x|-|-|-|
-|FFTW/3.3.10-GCC-13.3.0|x|x|x|x|-|x|x|
+|FFTW/3.3.10-GCC-13.3.0|x|x|x|x|x|x|x|
 |FFTW/3.3.10-GCC-13.2.0|x|x|x|x|x|x|x|
 |FFTW/3.3.10-GCC-12.3.0|x|x|x|x|x|x|x|
 |FFTW/3.3.10-GCC-12.2.0|-|x|x|x|-|x|-|

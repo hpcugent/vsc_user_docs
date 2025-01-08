@@ -21,8 +21,8 @@ module load ncurses/6.5-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ncurses/6.5-GCCcore-13.3.0|x|x|x|x|-|x|x|
-|ncurses/6.5|x|x|x|x|-|x|x|
+|ncurses/6.5-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|ncurses/6.5|x|x|x|x|x|x|x|
 |ncurses/6.4-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |ncurses/6.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |ncurses/6.4|x|x|x|x|x|x|x|

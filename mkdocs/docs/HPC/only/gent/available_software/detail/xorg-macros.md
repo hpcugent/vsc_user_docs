@@ -21,7 +21,7 @@ module load xorg-macros/1.20.1-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|xorg-macros/1.20.1-GCCcore-13.3.0|x|x|x|x|-|x|x|
+|xorg-macros/1.20.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |xorg-macros/1.20.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |xorg-macros/1.20.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |xorg-macros/1.19.3-GCCcore-12.2.0|-|x|x|x|-|x|-|

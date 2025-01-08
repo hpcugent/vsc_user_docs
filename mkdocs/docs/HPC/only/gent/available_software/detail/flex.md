@@ -21,7 +21,7 @@ module load flex/2.6.4-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|flex/2.6.4-GCCcore-13.3.0|x|x|x|x|-|x|x|
+|flex/2.6.4-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |flex/2.6.4-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |flex/2.6.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |flex/2.6.4-GCCcore-12.2.0|-|x|x|x|-|x|-|
