@@ -21,4 +21,4 @@ module load PRRTE/3.0.5-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PRRTE/3.0.5-GCCcore-13.3.0|x|x|x|x|-|x|x|
+|PRRTE/3.0.5-GCCcore-13.3.0|x|x|x|x|x|x|x|

@@ -21,7 +21,7 @@ module load FlexiBLAS/3.4.4-GCC-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FlexiBLAS/3.4.4-GCC-13.3.0|x|x|x|x|-|x|x|
+|FlexiBLAS/3.4.4-GCC-13.3.0|x|x|x|x|x|x|x|
 |FlexiBLAS/3.3.1-GCC-13.2.0|x|x|x|x|x|x|x|
 |FlexiBLAS/3.3.1-GCC-12.3.0|x|x|x|x|x|x|x|
 |FlexiBLAS/3.2.1-GCC-12.2.0|-|x|x|x|-|-|-|

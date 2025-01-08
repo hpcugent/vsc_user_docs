@@ -21,7 +21,7 @@ module load Doxygen/1.11.0-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Doxygen/1.11.0-GCCcore-13.3.0|x|x|x|x|-|x|x|
+|Doxygen/1.11.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |Doxygen/1.9.8-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Doxygen/1.9.7-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |Doxygen/1.9.5-GCCcore-12.2.0|-|x|x|x|-|x|-|

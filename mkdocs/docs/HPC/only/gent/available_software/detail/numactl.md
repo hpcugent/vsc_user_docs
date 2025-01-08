@@ -21,7 +21,7 @@ module load numactl/2.0.18-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|numactl/2.0.18-GCCcore-13.3.0|x|x|x|x|-|x|x|
+|numactl/2.0.18-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |numactl/2.0.16-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |numactl/2.0.16-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |numactl/2.0.16-GCCcore-12.2.0|-|x|x|x|-|x|-|

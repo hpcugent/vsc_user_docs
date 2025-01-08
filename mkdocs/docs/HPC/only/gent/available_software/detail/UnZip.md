@@ -21,7 +21,7 @@ module load UnZip/6.0-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|UnZip/6.0-GCCcore-13.3.0|x|x|x|x|-|x|x|
+|UnZip/6.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |UnZip/6.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |UnZip/6.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |UnZip/6.0-GCCcore-12.2.0|-|x|x|x|-|x|-|
