@@ -21,7 +21,7 @@ module load FFTW.MPI/3.3.10-gompi-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FFTW.MPI/3.3.10-gompi-2024a|x|x|x|x|-|x|x|
+|FFTW.MPI/3.3.10-gompi-2024a|x|x|x|x|x|x|x|
 |FFTW.MPI/3.3.10-gompi-2023b|x|x|x|x|x|x|x|
 |FFTW.MPI/3.3.10-gompi-2023a|x|x|x|x|x|x|x|
 |FFTW.MPI/3.3.10-gompi-2022b|-|x|x|x|-|-|-|

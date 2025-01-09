@@ -21,7 +21,7 @@ module load foss/2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|foss/2024a|x|x|x|x|-|x|x|
+|foss/2024a|x|x|x|x|x|x|x|
 |foss/2023b|x|x|x|x|x|x|x|
 |foss/2023a|x|x|x|x|x|x|x|
 |foss/2022b|-|x|x|x|-|-|-|
