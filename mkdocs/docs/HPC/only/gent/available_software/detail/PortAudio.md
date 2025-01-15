@@ -14,11 +14,12 @@ The overview below shows which PortAudio installations are available per HPC-UGe
 To start using PortAudio, load one of these modules using a `module load` command like:
 
 ```shell
-module load PortAudio/19.7.0-foss-2022a
+module load PortAudio/19.7.0-foss-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PortAudio/19.7.0-foss-2023a|x|-|x|-|x|-|-|
 |PortAudio/19.7.0-foss-2022a|-|x|x|x|-|x|-|
