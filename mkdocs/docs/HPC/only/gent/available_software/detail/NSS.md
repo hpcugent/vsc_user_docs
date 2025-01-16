@@ -21,7 +21,7 @@ module load NSS/3.94-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NSS/3.94-GCCcore-13.2.0|-|x|x|x|-|x|x|
+|NSS/3.94-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |NSS/3.89.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |NSS/3.85-GCCcore-12.2.0|-|x|x|x|-|-|-|
 |NSS/3.79-GCCcore-11.3.0|-|x|x|x|-|-|-|

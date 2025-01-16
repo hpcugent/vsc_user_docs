@@ -21,7 +21,7 @@ module load expat/2.6.2-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|expat/2.6.2-GCCcore-13.3.0|x|x|x|x|-|x|x|
+|expat/2.6.2-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |expat/2.5.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |expat/2.5.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |expat/2.4.9-GCCcore-12.2.0|-|x|x|x|-|x|-|

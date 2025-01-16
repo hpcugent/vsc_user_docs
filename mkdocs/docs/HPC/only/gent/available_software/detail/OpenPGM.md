@@ -21,7 +21,7 @@ module load OpenPGM/5.2.122-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenPGM/5.2.122-GCCcore-13.2.0|-|x|x|x|-|x|x|
+|OpenPGM/5.2.122-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |OpenPGM/5.2.122-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |OpenPGM/5.2.122-GCCcore-12.2.0|-|x|x|x|-|-|-|
 |OpenPGM/5.2.122-GCCcore-11.3.0|-|x|x|x|-|x|-|

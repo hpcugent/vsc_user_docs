@@ -14,11 +14,12 @@ The overview below shows which libspatialindex installations are available per H
 To start using libspatialindex, load one of these modules using a `module load` command like:
 
 ```shell
-module load libspatialindex/1.9.3-GCCcore-11.2.0
+module load libspatialindex/1.9.3-GCCcore-13.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libspatialindex/1.9.3-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |libspatialindex/1.9.3-GCCcore-11.2.0|-|x|x|x|-|-|-|

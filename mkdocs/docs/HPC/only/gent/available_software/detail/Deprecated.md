@@ -22,5 +22,6 @@ module load Deprecated/1.2.14-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Deprecated/1.2.14-foss-2023a|x|x|x|x|x|x|x|
+|Deprecated/1.2.14-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Deprecated/1.2.13-foss-2022a|-|x|x|x|-|-|-|
 |Deprecated/1.2.13-foss-2021a|-|x|x|x|-|-|-|

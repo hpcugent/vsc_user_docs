@@ -33,7 +33,7 @@ module load ncurses/6.5-GCCcore-13.3.0
 |ncurses/6.2-GCCcore-10.3.0|-|x|x|x|-|-|-|
 |ncurses/6.2-GCCcore-10.2.0|-|x|x|x|-|-|-|
 |ncurses/6.2-GCCcore-9.3.0|-|x|x|x|-|-|-|
-|ncurses/6.2|-|x|x|x|x|x|x|
+|ncurses/6.2|x|x|x|x|x|x|x|
 |ncurses/6.1-GCCcore-8.3.0|-|x|x|x|-|-|-|
 |ncurses/6.1-GCCcore-8.2.0|-|x|-|-|-|-|-|
 |ncurses/6.1|-|x|x|x|-|-|-|
