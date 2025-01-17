@@ -1015,6 +1015,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/CTranslate2/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/CUDA-Python/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -2710,6 +2715,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/LIQA/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/LLVM/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -3930,6 +3940,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/PyAV/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/PyBerny/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -4466,6 +4481,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/Roary/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/Rtree/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -5665,6 +5685,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/annovar/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/ant/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -5871,6 +5896,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/bitshuffle/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/black/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -6090,6 +6120,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/cookiecutter/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/cooler/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -6171,6 +6206,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/cuteSV/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/cxxopts/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -8225,6 +8265,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/numpydoc/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/ocamlbuild/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -8825,7 +8870,17 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/python-lsp-server/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/python-parasail/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/python-slugify/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -9026,6 +9081,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/scHiCExplorer/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/scNanoGPS/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -9385,6 +9445,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/tabix/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/tabixpp/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -9456,6 +9521,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/texlive/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/text-unidecode/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -9695,6 +9765,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/whisper-ctranslate2/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/worker/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -9721,6 +9796,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/wtdbg2/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/wurlitzer/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -10891,6 +10971,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/CSBDeep/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/CTranslate2/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -12590,6 +12675,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/LIQA/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/LLVM/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -13810,6 +13900,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/PyAV/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/PyBerny/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -14346,6 +14441,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Roary/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Rtree/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -15545,6 +15645,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/annovar/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/ant/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -15751,6 +15856,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/bitshuffle/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/black/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -15970,6 +16080,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/cookiecutter/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/cooler/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -16051,6 +16166,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/cuteSV/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/cxxopts/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -18105,6 +18225,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/numpydoc/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/ocamlbuild/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -18705,7 +18830,17 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/python-lsp-server/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/python-parasail/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/python-slugify/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -18906,6 +19041,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/scHiCExplorer/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/scNanoGPS/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -19265,6 +19405,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/tabix/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/tabixpp/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -19336,6 +19481,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/texlive/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/text-unidecode/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -19575,6 +19725,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/whisper-ctranslate2/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/worker/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -19601,6 +19756,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/wtdbg2/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/wurlitzer/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -20771,6 +20931,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CSBDeep/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CTranslate2/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -22470,6 +22635,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/LIQA/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/LLVM/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -23690,6 +23860,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PyAV/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/PyBerny/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -24226,6 +24401,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Roary/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Rtree/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -25425,6 +25605,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/annovar/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ant/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -25631,6 +25816,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/bitshuffle/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/black/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -25850,6 +26040,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/cookiecutter/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/cooler/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -25931,6 +26126,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/cuteSV/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/cxxopts/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -27985,6 +28185,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/numpydoc/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ocamlbuild/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -28585,7 +28790,17 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/python-lsp-server/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/python-parasail/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/python-slugify/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -28786,6 +29001,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/scHiCExplorer/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/scNanoGPS/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -29145,6 +29365,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/tabix/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/tabixpp/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -29216,6 +29441,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/texlive/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/text-unidecode/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -29455,6 +29685,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/whisper-ctranslate2/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/worker/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -29481,6 +29716,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/wtdbg2/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/wurlitzer/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -30651,6 +30891,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/CSBDeep/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/CTranslate2/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -32350,6 +32595,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/LIQA/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/LLVM/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -33570,6 +33820,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/PyAV/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/PyBerny/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -34106,6 +34361,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/Roary/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/Rtree/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -35305,6 +35565,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/annovar/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/ant/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -35511,6 +35776,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/bitshuffle/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/black/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -35730,6 +36000,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/cookiecutter/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/cooler/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -35811,6 +36086,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/cuteSV/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/cxxopts/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -37865,6 +38145,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/numpydoc/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/ocamlbuild/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -38465,7 +38750,17 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/python-lsp-server/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/python-parasail/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/python-slugify/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -38666,6 +38961,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/scHiCExplorer/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/scNanoGPS/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -39025,6 +39325,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/tabix/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/tabixpp/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -39096,6 +39401,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/texlive/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/text-unidecode/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -39335,6 +39645,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/whisper-ctranslate2/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/worker/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -39361,6 +39676,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/wtdbg2/</ns0:loc>
+         <ns0:lastmod>2025-01-17</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/wurlitzer/</ns0:loc>
          <ns0:lastmod>2025-01-17</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
