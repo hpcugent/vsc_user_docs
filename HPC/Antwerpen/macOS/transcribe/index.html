@@ -869,6 +869,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#whisper-language" class="md-nav__link">
+    Whisper language
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#cluster" class="md-nav__link">
     Cluster
   </a>
@@ -1119,6 +1126,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#whisper-language" class="md-nav__link">
+    Whisper language
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#cluster" class="md-nav__link">
     Cluster
   </a>
@@ -1178,44 +1192,56 @@
 
 <h1 id="transcribe">Transcribe<a class="headerlink" href="#transcribe" title="Permanent link">#</a></h1>
 <h2 id="what-is-transcribe">What is Transcribe<a class="headerlink" href="#what-is-transcribe" title="Permanent link">#</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The <code>Transcribe</code> application is currently only available to members of the <code>gpilot</code> user group.</p>
-</div>
 <p><code>Transcribe</code> is a non-interactive application that offers audio transcription based on <code>OpenAI</code> <code>Whisper</code> (and derivatives thereoff).</p>
 <p>The main use case is sporadic transcription of audio or video files. There is intentionally no bulk mode (or API or library)
 to help with large scale projects.</p>
 <p>The supported flow is:</p>
 <ul>
-<li>Upload audio or video file using the <code>Files</code> interface of the web portal</li>
-<li>Configure transcription via the <code>Interactive Apps</code> -&gt; <code>Transcribe</code> application (currently under <code>Testing</code> section at the bottom);
-  you can select <code>Whisper inputfile</code> and <code>Whisper languages</code>.</li>
-<li>Launch it and wait. Connecting to the running transcription is entirely optional; there is nothing interactive to do.
-  You will also receive an email when the transcritpion started.</li>
-<li>Upon completion, you will receive an email with link to the result directory. This info will also be shown in the application session under
-  <code>My interactive sessions</code> (but the session data is only available for a week).</li>
+<li>
+<p>Upload audio or video file using the <code>Files</code> interface of the web portal</p>
+</li>
+<li>
+<p>Configure transcription via the <code>Interactive Apps</code> -&gt; <code>Transcribe</code> application (currently under <code>Testing</code> section at the bottom);
+  you can select <code>Whisper inputfile</code>.</p>
+</li>
+<li>
+<p>Launch it and wait. Connecting to the running transcription is entirely optional; there is nothing interactive to do.
+  You will also receive an email when the transcritpion started.</p>
+</li>
+<li>
+<p>Upon completion, you will receive an email with link to the result directory. This info will also be shown in the application session under
+  <code>My interactive sessions</code> (but the session data is only available for a week).</p>
+</li>
 </ul>
 <p>The result directory has a subdirectory per language with the text files and some metadata in JSON format of the transcritpion itself and input file.</p>
 <p>This is intentionally kept simple. There is also no risk of loosing previous results
 (although some previous result directories might get renamed when input file names are reused).</p>
 <h2 id="performance-and-default-settings">Performance and default settings<a class="headerlink" href="#performance-and-default-settings" title="Permanent link">#</a></h2>
 <p>The defaults should give the best balance between quality, performance and time to result.
-You can expect approx 10 minutes of transcription time per language and per hour of input.
+You can expect approx 10 minutes of transcription time per language and per hour of input using the default flavour.
 This combined with an almost immediate start time is the best combination for the intended use case.
 There should be enough resources available to get this result most of the time.</p>
 <h2 id="advanced-options">Advanced options<a class="headerlink" href="#advanced-options" title="Permanent link">#</a></h2>
 <p>There are some advanced options one can choose from. They should not be needed for normal usage.</p>
 <p>They are intended for corner cases, or to compare results between different <code>Whisper</code> models and/or different implementation flavours
 (<code>whisper</code> and <code>whisper-ctranslate2</code>) with respect to speed and quality.</p>
+<h3 id="whisper-language">Whisper language<a class="headerlink" href="#whisper-language" title="Permanent link">#</a></h3>
+<p>Using the <code>Automatic detection</code> (the default), whisper determines the spoken language based on the first 30 seconds of audio.
+If, for some reason, the autodection fails (e.g. the input file starts with silence or some music), you can force one of the languages.</p>
+<p>When selecting more than one, the transcription will be done separately for each language
+(this will also increase your total running time, so you might also want to increase the <code>Time</code>).</p>
+<p>The selected language will also determine the output language. However, this is <strong><em>not</em></strong> meant as a translation feature;
+although the quality is not that bad if your languages have enough similarity.</p>
 <h3 id="cluster">Cluster<a class="headerlink" href="#cluster" title="Permanent link">#</a></h3>
 <p>Changing the cluster from the interactive cluster will give you access to much better GPU,
 but at a penalty of having to wait in the queue of the other cluster typically for a much longer time
 than it will take to complete the transcription on the default cluster.</p>
 <h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">#</a></h2>
-<p>Default settings of 4 cores with at least 10GB of RAM and 1 hour walltime should be enough for most transcriptions.</p>
+<p>Default settings of 4 cores with at least 10GB of RAM and 1 hour (wall)time should be enough for most transcriptions.</p>
 <h3 id="flavour">Flavour<a class="headerlink" href="#flavour" title="Permanent link">#</a></h3>
 <p>We currently support 2 flavours: <code>whisper</code> (the OpenAI reference implementation), and <code>whisper-ctranslate2</code>
-(a faster version with some extras).</p>
+(a faster version with some extras). Benchmarks indicate that <code>whisper-ctranslate2</code> is about 4 times faster than <code>whisper</code>,
+but might have some lower quality.</p>
 <h3 id="model">Model<a class="headerlink" href="#model" title="Permanent link">#</a></h3>
 <p>Default model is <code>large-v3</code>, others can be choosen but should be careful to compare resulting speed and/or quality differences.</p>
 
