@@ -95,7 +95,7 @@ This GPU is *shared* across all jobs running on the workernode, and does not nee
 
 It replaces `kirlia`, which will be retired on **Monday 22 May 2023**.
 
-This cluster consists of 12 workernodes, each with:
+This cluster consists of 16 workernodes, each with:
 
 * 2x 64-core AMD EPYC 7773X (Milan-X @ 2.2 GHz) processor;
 * ~940 GiB of RAM memory;
