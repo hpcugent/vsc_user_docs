@@ -31,7 +31,7 @@ module load CMake/3.29.3-GCCcore-13.3.0
 |CMake/3.21.1-GCCcore-11.2.0|-|x|x|x|-|x|-|
 |CMake/3.20.1-GCCcore-10.3.0|-|x|x|x|-|-|-|
 |CMake/3.18.4-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|CMake/3.18.4|-|x|x|x|x|x|x|
+|CMake/3.18.4|x|x|x|x|x|x|x|
 |CMake/3.16.4-GCCcore-9.3.0|-|x|x|x|-|-|-|
 |CMake/3.15.3-GCCcore-8.3.0|-|x|x|x|-|-|-|
 |CMake/3.13.3-GCCcore-8.2.0|-|x|-|-|-|-|-|

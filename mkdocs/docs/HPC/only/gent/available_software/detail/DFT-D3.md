@@ -22,4 +22,5 @@ module load DFT-D3/3.2.0-intel-compilers-2021.2.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |DFT-D3/3.2.0-intel-compilers-2021.2.0|-|x|x|-|-|-|-|
+|DFT-D3/3.2.0-intel-2023a|x|x|x|x|x|x|x|
 |DFT-D3/3.2.0-iccifort-2020.4.304|-|x|x|x|-|-|-|

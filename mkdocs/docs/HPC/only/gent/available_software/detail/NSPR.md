@@ -21,7 +21,7 @@ module load NSPR/4.35-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NSPR/4.35-GCCcore-13.2.0|-|x|x|x|-|x|x|
+|NSPR/4.35-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |NSPR/4.35-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |NSPR/4.35-GCCcore-12.2.0|-|x|x|x|-|-|-|
 |NSPR/4.34-GCCcore-11.3.0|-|x|x|x|-|-|-|
