@@ -93,7 +93,7 @@ This GPU is *shared* across all jobs running on the workernode, and does not nee
 
 `gallade` is the new large-memory cluster.
 
-It replaces `kirlia`, which will be retired on **Monday 22 May 2023**.
+It replaces `kirlia`, which was retired on **Monday 22 May 2023**.
 
 This cluster consists of 16 workernodes, each with:
 
