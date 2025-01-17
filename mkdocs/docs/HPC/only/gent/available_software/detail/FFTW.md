@@ -14,13 +14,14 @@ The overview below shows which FFTW installations are available per HPC-UGent Ti
 To start using FFTW, load one of these modules using a `module load` command like:
 
 ```shell
-module load FFTW/3.3.10-iimpi-2022a
+module load FFTW/3.3.10-intel-compilers-2023.1.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FFTW/3.3.10-intel-compilers-2023.1.0|x|x|x|x|x|x|x|
 |FFTW/3.3.10-iimpi-2022a|-|x|x|x|-|-|-|
 |FFTW/3.3.10-gompi-2021b|-|x|x|x|-|-|-|
 |FFTW/3.3.10-GCC-13.3.0|x|x|x|x|x|x|x|

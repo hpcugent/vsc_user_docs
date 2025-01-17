@@ -21,6 +21,6 @@ module load virtualenv/20.26.2-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|virtualenv/20.26.2-GCCcore-13.3.0|x|x|x|x|-|x|x|
+|virtualenv/20.26.2-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |virtualenv/20.24.6-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |virtualenv/20.23.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
