@@ -21,4 +21,4 @@ module load cxxopts/3.0.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cxxopts/3.0.0|x|-|x|-|x|-|-|
+|cxxopts/3.0.0|x|-|x|-|x|x|-|
