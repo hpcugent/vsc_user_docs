@@ -21,5 +21,5 @@ module load PortAudio/19.7.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PortAudio/19.7.0-foss-2023a|x|-|x|-|x|-|-|
+|PortAudio/19.7.0-foss-2023a|x|-|x|-|x|x|-|
 |PortAudio/19.7.0-foss-2022a|-|x|x|x|-|x|-|
