@@ -14,13 +14,14 @@ The overview below shows which FLAC installations are available per HPC-UGent Ti
 To start using FLAC, load one of these modules using a `module load` command like:
 
 ```shell
-module load FLAC/1.4.3-GCCcore-13.2.0
+module load FLAC/1.4.3-GCCcore-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FLAC/1.4.3-GCCcore-13.3.0|x|x|x|-|x|x|x|
 |FLAC/1.4.3-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |FLAC/1.4.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |FLAC/1.4.2-GCCcore-12.2.0|-|x|x|x|-|-|-|

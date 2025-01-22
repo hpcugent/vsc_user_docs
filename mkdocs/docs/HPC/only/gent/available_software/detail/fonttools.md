@@ -21,4 +21,4 @@ module load fonttools/4.53.1-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fonttools/4.53.1-GCCcore-13.3.0|x|x|x|x|-|x|x|
+|fonttools/4.53.1-GCCcore-13.3.0|x|x|x|x|x|x|x|

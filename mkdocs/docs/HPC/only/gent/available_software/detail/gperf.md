@@ -21,7 +21,7 @@ module load gperf/3.1-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gperf/3.1-GCCcore-13.3.0|x|x|x|x|-|x|x|
+|gperf/3.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |gperf/3.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |gperf/3.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |gperf/3.1-GCCcore-12.2.0|-|x|x|x|-|x|-|

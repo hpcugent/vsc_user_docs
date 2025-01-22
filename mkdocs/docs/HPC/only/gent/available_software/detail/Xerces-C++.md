@@ -14,13 +14,14 @@ The overview below shows which Xerces-C++ installations are available per HPC-UG
 To start using Xerces-C++, load one of these modules using a `module load` command like:
 
 ```shell
-module load Xerces-C++/3.2.5-GCCcore-13.2.0
+module load Xerces-C++/3.2.5-GCCcore-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Xerces-C++/3.2.5-GCCcore-13.3.0|x|x|x|-|x|x|-|
 |Xerces-C++/3.2.5-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Xerces-C++/3.2.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |Xerces-C++/3.2.4-GCCcore-12.2.0|-|x|x|x|-|-|-|

@@ -21,7 +21,7 @@ module load GEOS/3.12.2-GCC-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GEOS/3.12.2-GCC-13.3.0|-|x|x|x|-|x|x|
+|GEOS/3.12.2-GCC-13.3.0|x|x|x|x|x|x|x|
 |GEOS/3.12.1-GCC-13.2.0|x|x|x|x|x|x|x|
 |GEOS/3.12.0-GCC-12.3.0|x|x|x|x|x|x|x|
 |GEOS/3.11.1-GCC-12.2.0|-|x|x|x|-|-|-|
