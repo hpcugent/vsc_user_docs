@@ -14,13 +14,14 @@ The overview below shows which GSL installations are available per HPC-UGent Tie
 To start using GSL, load one of these modules using a `module load` command like:
 
 ```shell
-module load GSL/2.7-intel-compilers-2021.4.0
+module load GSL/2.8-GCC-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GSL/2.8-GCC-13.3.0|x|x|x|-|x|x|x|
 |GSL/2.7-intel-compilers-2021.4.0|-|x|x|-|-|-|-|
 |GSL/2.7-GCC-13.2.0|x|x|x|x|x|x|x|
 |GSL/2.7-GCC-12.3.0|x|x|x|x|x|x|x|

@@ -21,7 +21,7 @@ module load fontconfig/2.15.0-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fontconfig/2.15.0-GCCcore-13.3.0|x|x|x|x|-|x|x|
+|fontconfig/2.15.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |fontconfig/2.14.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |fontconfig/2.14.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |fontconfig/2.14.1-GCCcore-12.2.0|-|x|x|x|-|x|-|
