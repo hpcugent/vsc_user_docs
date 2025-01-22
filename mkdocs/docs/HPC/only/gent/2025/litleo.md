@@ -45,7 +45,7 @@ budget.
 
 ---
 
-## Shinx pilot phase (24/01/2025-01/03/2025)
+## Litleo pilot phase (24/01/2025-01/03/2025)
 
 As usual with any pilot phase, you need to be member of the `gpilot` group, and to start using this cluster run:
 
