@@ -21,7 +21,7 @@ module load Xerces-C++/3.2.5-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Xerces-C++/3.2.5-GCCcore-13.3.0|x|x|x|-|x|x|-|
+|Xerces-C++/3.2.5-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |Xerces-C++/3.2.5-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Xerces-C++/3.2.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |Xerces-C++/3.2.4-GCCcore-12.2.0|-|x|x|x|-|-|-|

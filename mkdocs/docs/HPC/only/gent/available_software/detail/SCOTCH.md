@@ -21,7 +21,7 @@ module load SCOTCH/7.0.3-gompi-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SCOTCH/7.0.3-gompi-2023a|x|x|x|x|-|x|x|
+|SCOTCH/7.0.3-gompi-2023a|x|x|x|x|x|x|x|
 |SCOTCH/7.0.3-gompi-2022b|-|x|x|x|-|-|-|
 |SCOTCH/7.0.1-gompi-2022a|-|x|x|x|-|-|-|
 |SCOTCH/6.1.2-iimpi-2021b|-|x|x|x|-|-|-|

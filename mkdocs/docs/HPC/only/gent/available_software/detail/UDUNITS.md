@@ -21,7 +21,7 @@ module load UDUNITS/2.2.28-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|UDUNITS/2.2.28-GCCcore-13.3.0|x|x|x|-|x|x|x|
+|UDUNITS/2.2.28-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |UDUNITS/2.2.28-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |UDUNITS/2.2.28-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |UDUNITS/2.2.28-GCCcore-12.2.0|-|x|x|x|-|x|-|

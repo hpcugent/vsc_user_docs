@@ -21,7 +21,7 @@ module load GDAL/3.10.0-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GDAL/3.10.0-foss-2024a|x|x|x|-|x|x|-|
+|GDAL/3.10.0-foss-2024a|x|x|x|x|x|x|x|
 |GDAL/3.9.0-foss-2023b|x|x|x|x|x|x|x|
 |GDAL/3.7.1-foss-2023a|x|x|x|x|x|x|x|
 |GDAL/3.6.2-foss-2022b|-|x|x|x|-|-|-|

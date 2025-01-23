@@ -21,7 +21,7 @@ module load OpenEXR/3.2.4-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenEXR/3.2.4-GCCcore-13.3.0|x|x|x|-|x|x|-|
+|OpenEXR/3.2.4-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |OpenEXR/3.2.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |OpenEXR/3.1.7-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |OpenEXR/3.1.5-GCCcore-12.2.0|-|x|x|x|-|-|-|

@@ -21,7 +21,7 @@ module load arpack-ng/3.9.1-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|arpack-ng/3.9.1-foss-2024a|x|x|x|-|x|x|-|
+|arpack-ng/3.9.1-foss-2024a|x|x|x|x|x|x|x|
 |arpack-ng/3.9.0-foss-2023b|x|x|x|x|x|x|x|
 |arpack-ng/3.9.0-foss-2023a|x|x|x|x|x|x|x|
 |arpack-ng/3.8.0-foss-2022b|-|x|x|x|-|-|-|

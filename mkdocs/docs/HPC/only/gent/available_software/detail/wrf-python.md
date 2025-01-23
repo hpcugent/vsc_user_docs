@@ -22,3 +22,4 @@ module load wrf-python/1.3.4.1-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |wrf-python/1.3.4.1-foss-2023a|-|x|x|x|-|-|x|
+|wrf-python/1.3.4.1-20241111-foss-2024a|x|x|x|x|x|x|x|

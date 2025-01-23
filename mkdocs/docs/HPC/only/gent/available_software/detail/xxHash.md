@@ -21,5 +21,5 @@ module load xxHash/0.8.2-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|xxHash/0.8.2-GCCcore-12.3.0|-|x|x|x|-|-|x|
+|xxHash/0.8.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |xxHash/0.8.1-GCCcore-12.2.0|-|x|x|x|-|-|-|
