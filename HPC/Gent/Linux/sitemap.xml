@@ -2171,6 +2171,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Geneformer/</loc>
+         <lastmod>2025-01-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/GenomeThreader/</loc>
          <lastmod>2025-01-23</lastmod>
          <changefreq>daily</changefreq>
@@ -2352,6 +2357,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/HMMER2/</loc>
+         <lastmod>2025-01-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/HNOCA-tools/</loc>
          <lastmod>2025-01-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
