@@ -21,7 +21,7 @@ module load Wayland/1.23.0-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Wayland/1.23.0-GCCcore-13.3.0|x|x|x|-|x|x|x|
+|Wayland/1.23.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |Wayland/1.22.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Wayland/1.22.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |Wayland/1.21.0-GCCcore-11.2.0|-|x|x|x|-|-|-|

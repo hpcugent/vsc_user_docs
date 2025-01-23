@@ -21,7 +21,7 @@ module load LLVM/18.1.8-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LLVM/18.1.8-GCCcore-13.3.0|x|x|x|-|x|x|x|
+|LLVM/18.1.8-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |LLVM/16.0.6-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |LLVM/16.0.6-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |LLVM/15.0.5-GCCcore-12.2.0|-|x|x|x|-|x|-|

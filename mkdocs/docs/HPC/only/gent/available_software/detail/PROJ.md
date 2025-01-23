@@ -21,7 +21,7 @@ module load PROJ/9.4.1-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PROJ/9.4.1-GCCcore-13.3.0|x|x|x|-|x|x|-|
+|PROJ/9.4.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |PROJ/9.3.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |PROJ/9.2.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |PROJ/9.1.1-GCCcore-12.2.0|-|x|x|x|-|-|-|

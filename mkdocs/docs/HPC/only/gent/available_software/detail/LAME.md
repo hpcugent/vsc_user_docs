@@ -21,7 +21,7 @@ module load LAME/3.100-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LAME/3.100-GCCcore-13.3.0|x|x|x|-|x|x|-|
+|LAME/3.100-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |LAME/3.100-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |LAME/3.100-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |LAME/3.100-GCCcore-12.2.0|-|x|x|x|-|-|-|

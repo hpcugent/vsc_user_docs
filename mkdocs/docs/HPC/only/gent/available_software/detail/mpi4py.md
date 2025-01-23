@@ -14,13 +14,14 @@ The overview below shows which mpi4py installations are available per HPC-UGent 
 To start using mpi4py, load one of these modules using a `module load` command like:
 
 ```shell
-module load mpi4py/3.1.5-gompi-2023b
+module load mpi4py/4.0.1-gompi-2024a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|mpi4py/4.0.1-gompi-2024a|x|x|x|x|x|x|x|
 |mpi4py/3.1.5-gompi-2023b|x|x|x|x|x|x|x|
 |mpi4py/3.1.4-gompi-2023a|x|x|x|x|x|x|x|
 |mpi4py/3.1.4-gompi-2022b|-|x|x|x|-|-|-|

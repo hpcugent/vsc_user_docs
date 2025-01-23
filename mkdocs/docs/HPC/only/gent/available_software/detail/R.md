@@ -21,7 +21,7 @@ module load R/4.4.2-gfbf-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|R/4.4.2-gfbf-2024a|x|x|x|-|x|x|-|
+|R/4.4.2-gfbf-2024a|x|x|x|x|x|x|x|
 |R/4.4.1-gfbf-2023b|x|x|x|x|x|x|x|
 |R/4.3.3-gfbf-2023b|x|-|-|-|x|-|-|
 |R/4.3.2-gfbf-2023a|x|x|x|x|x|x|x|

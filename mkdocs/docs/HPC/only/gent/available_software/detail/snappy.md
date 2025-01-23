@@ -21,7 +21,7 @@ module load snappy/1.1.10-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|snappy/1.1.10-GCCcore-13.3.0|x|x|x|-|x|x|x|
+|snappy/1.1.10-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |snappy/1.1.10-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |snappy/1.1.10-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |snappy/1.1.9-GCCcore-12.2.0|-|x|x|x|-|-|-|

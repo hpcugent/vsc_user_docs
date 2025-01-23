@@ -14,13 +14,14 @@ The overview below shows which netcdf4-python installations are available per HP
 To start using netcdf4-python, load one of these modules using a `module load` command like:
 
 ```shell
-module load netcdf4-python/1.6.4-foss-2023a
+module load netcdf4-python/1.7.1.post2-foss-2024a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|netcdf4-python/1.7.1.post2-foss-2024a|x|x|x|x|x|x|x|
 |netcdf4-python/1.6.4-foss-2023a|x|x|x|x|x|x|x|
 |netcdf4-python/1.6.1-foss-2022a|-|x|x|x|-|-|-|
 |netcdf4-python/1.5.7-intel-2021b|-|x|x|x|-|-|-|
