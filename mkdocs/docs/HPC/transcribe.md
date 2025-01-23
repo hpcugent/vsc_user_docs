@@ -70,3 +70,9 @@ but might have some lower quality.
 ### Model
 
 Default model is `large-v3`, others can be choosen but should be careful to compare resulting speed and/or quality differences.
+
+### Task
+
+From the selected (or auto-detected) source speech language, you can choose to transcribe to the same language or to `English`.
+You can use this last option to translate to English (as opposed to force the detection of the source language as if it was spoken in English).
+
