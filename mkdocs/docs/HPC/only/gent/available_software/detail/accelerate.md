@@ -22,4 +22,4 @@ module load accelerate/0.33.0-foss-2023a-CUDA-12.1.1
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |accelerate/0.33.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
-|accelerate/0.33.0-foss-2023a|-|x|x|x|x|x|x|
+|accelerate/0.33.0-foss-2023a|x|x|x|x|x|x|x|
