@@ -34,6 +34,7 @@ module load OpenFOAM/v2312-foss-2023a
 |OpenFOAM/10-foss-2023a|-|x|x|x|-|x|x|
 |OpenFOAM/10-foss-2022a|-|x|x|x|-|-|-|
 |OpenFOAM/9-intel-2021a|-|x|x|-|-|-|-|
+|OpenFOAM/9-foss-2023a|x|x|x|x|x|x|x|
 |OpenFOAM/9-foss-2021a|-|x|x|x|-|-|-|
 |OpenFOAM/8-intel-2020b|-|x|-|-|-|-|-|
 |OpenFOAM/8-foss-2023a|x|x|x|x|x|x|x|
