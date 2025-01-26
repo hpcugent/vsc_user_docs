@@ -21,4 +21,4 @@ module load DeltaLake/0.15.1-gfbf-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DeltaLake/0.15.1-gfbf-2023a|x|x|x|x|-|x|x|
+|DeltaLake/0.15.1-gfbf-2023a|x|x|x|x|x|x|x|
