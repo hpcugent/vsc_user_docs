@@ -21,7 +21,7 @@ module load EasyBuild/4.9.4
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|EasyBuild/4.9.4|x|x|x|x|-|x|x|
+|EasyBuild/4.9.4|x|x|x|x|x|x|x|
 |EasyBuild/4.9.3|x|x|x|x|-|x|x|
 |EasyBuild/4.9.2|x|x|x|x|-|x|x|
 |EasyBuild/4.9.1|x|x|x|x|-|x|x|
