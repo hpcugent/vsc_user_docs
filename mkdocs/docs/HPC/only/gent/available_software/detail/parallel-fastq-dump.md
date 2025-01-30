@@ -14,13 +14,14 @@ The overview below shows which parallel-fastq-dump installations are available p
 To start using parallel-fastq-dump, load one of these modules using a `module load` command like:
 
 ```shell
-module load parallel-fastq-dump/0.6.7-gompi-2022a
+module load parallel-fastq-dump/0.6.7-gompi-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|parallel-fastq-dump/0.6.7-gompi-2023a|-|x|x|-|x|x|x|
 |parallel-fastq-dump/0.6.7-gompi-2022a|-|x|x|x|-|-|-|
 |parallel-fastq-dump/0.6.7-gompi-2020b|-|x|x|-|-|-|-|
 |parallel-fastq-dump/0.6.6-GCCcore-9.3.0-SRA-Toolkit-3.0.0-Python-3.8.2|-|x|x|-|-|-|-|
