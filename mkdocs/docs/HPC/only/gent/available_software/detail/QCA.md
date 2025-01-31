@@ -14,11 +14,12 @@ The overview below shows which QCA installations are available per HPC-UGent Tie
 To start using QCA, load one of these modules using a `module load` command like:
 
 ```shell
-module load QCA/2.3.5-GCCcore-11.2.0
+module load QCA/2.3.9-GCCcore-12.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|QCA/2.3.9-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |QCA/2.3.5-GCCcore-11.2.0|-|x|x|x|-|-|-|

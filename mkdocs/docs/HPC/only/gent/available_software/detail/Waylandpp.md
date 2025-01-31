@@ -14,11 +14,12 @@ The overview below shows which Waylandpp installations are available per HPC-UGe
 To start using Waylandpp, load one of these modules using a `module load` command like:
 
 ```shell
-module load Waylandpp/1.0.0-GCCcore-11.2.0
+module load Waylandpp/1.0.0-GCCcore-12.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Waylandpp/1.0.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |Waylandpp/1.0.0-GCCcore-11.2.0|-|x|x|x|-|-|-|

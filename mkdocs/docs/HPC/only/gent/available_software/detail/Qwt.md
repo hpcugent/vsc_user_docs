@@ -21,7 +21,7 @@ module load Qwt/6.3.0-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Qwt/6.3.0-GCCcore-12.3.0|-|x|x|x|-|x|x|
+|Qwt/6.3.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |Qwt/6.2.0-GCCcore-11.2.0|-|x|x|x|-|-|-|
 |Qwt/6.2.0-GCCcore-10.3.0|-|x|x|-|-|-|-|
 |Qwt/6.1.4-GCCcore-8.3.0|-|x|x|-|-|-|-|

@@ -14,12 +14,13 @@ The overview below shows which p11-kit installations are available per HPC-UGent
 To start using p11-kit, load one of these modules using a `module load` command like:
 
 ```shell
-module load p11-kit/0.24.1-GCCcore-11.2.0
+module load p11-kit/0.25.3-GCCcore-12.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|p11-kit/0.25.3-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |p11-kit/0.24.1-GCCcore-11.2.0|-|x|x|x|-|-|-|
 |p11-kit/0.24.0-GCCcore-10.3.0|-|x|x|-|-|-|-|
