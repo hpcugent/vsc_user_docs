@@ -14,11 +14,12 @@ The overview below shows which wpebackend-fdo installations are available per HP
 To start using wpebackend-fdo, load one of these modules using a `module load` command like:
 
 ```shell
-module load wpebackend-fdo/1.13.1-GCCcore-11.2.0
+module load wpebackend-fdo/1.15.90-GCCcore-12.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|wpebackend-fdo/1.15.90-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |wpebackend-fdo/1.13.1-GCCcore-11.2.0|-|x|x|x|-|-|-|

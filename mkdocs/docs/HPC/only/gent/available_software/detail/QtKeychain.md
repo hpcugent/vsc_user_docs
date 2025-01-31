@@ -14,11 +14,12 @@ The overview below shows which QtKeychain installations are available per HPC-UG
 To start using QtKeychain, load one of these modules using a `module load` command like:
 
 ```shell
-module load QtKeychain/0.13.2-GCCcore-11.2.0
+module load QtKeychain/0.14.3-GCCcore-12.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|QtKeychain/0.14.3-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |QtKeychain/0.13.2-GCCcore-11.2.0|-|x|x|x|-|-|-|

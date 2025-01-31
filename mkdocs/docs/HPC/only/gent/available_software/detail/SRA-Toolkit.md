@@ -21,7 +21,7 @@ module load SRA-Toolkit/3.0.10-gompi-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SRA-Toolkit/3.0.10-gompi-2023a|-|x|x|x|x|x|x|
+|SRA-Toolkit/3.0.10-gompi-2023a|x|x|x|x|x|x|x|
 |SRA-Toolkit/3.0.3-gompi-2022a|-|x|x|x|-|-|-|
 |SRA-Toolkit/3.0.0-gompi-2021b|-|x|x|x|-|-|-|
 |SRA-Toolkit/3.0.0-centos_linux64|-|x|x|-|-|-|-|

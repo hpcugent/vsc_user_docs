@@ -14,12 +14,13 @@ The overview below shows which wxPython installations are available per HPC-UGen
 To start using wxPython, load one of these modules using a `module load` command like:
 
 ```shell
-module load wxPython/4.2.0-foss-2021b
+module load wxPython/4.2.1-foss-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|wxPython/4.2.1-foss-2023a|x|x|x|x|x|x|x|
 |wxPython/4.2.0-foss-2021b|-|x|x|x|-|-|-|
 |wxPython/4.1.1-foss-2021a|-|x|x|-|-|-|-|
