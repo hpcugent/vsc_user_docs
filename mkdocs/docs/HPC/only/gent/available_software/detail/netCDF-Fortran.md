@@ -22,7 +22,7 @@ module load netCDF-Fortran/4.6.1-gompi-2024a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |netCDF-Fortran/4.6.1-gompi-2024a|x|x|x|x|x|x|x|
-|netCDF-Fortran/4.6.1-gompi-2023a|-|x|x|x|-|x|x|
+|netCDF-Fortran/4.6.1-gompi-2023a|x|x|x|x|-|x|x|
 |netCDF-Fortran/4.6.0-iimpi-2022a|-|-|x|-|-|-|-|
 |netCDF-Fortran/4.6.0-gompi-2022a|-|-|x|-|-|-|-|
 |netCDF-Fortran/4.5.3-iimpi-2021b|-|x|x|x|-|-|-|

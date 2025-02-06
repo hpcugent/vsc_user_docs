@@ -21,6 +21,6 @@ module load PnetCDF/1.12.3-gompi-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PnetCDF/1.12.3-gompi-2023a|-|x|x|x|-|x|x|
+|PnetCDF/1.12.3-gompi-2023a|x|x|x|x|-|x|x|
 |PnetCDF/1.12.3-gompi-2022a|-|-|x|-|-|-|-|
 |PnetCDF/1.12.3-gompi-2021b|-|x|x|-|-|-|-|
