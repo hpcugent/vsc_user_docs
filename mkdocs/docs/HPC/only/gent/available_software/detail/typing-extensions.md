@@ -21,7 +21,7 @@ module load typing-extensions/4.10.0-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|typing-extensions/4.10.0-GCCcore-13.2.0|-|x|x|x|-|x|x|
+|typing-extensions/4.10.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |typing-extensions/4.9.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |typing-extensions/4.9.0-GCCcore-12.2.0|-|x|x|x|-|-|-|
 |typing-extensions/4.8.0-GCCcore-12.3.0|-|x|-|x|-|-|-|
