@@ -44,5 +44,6 @@ module load OpenFOAM/v2312-foss-2023a
 |OpenFOAM/7-foss-2019b-20200508|-|x|x|-|-|-|-|
 |OpenFOAM/7-foss-2019b|-|x|x|-|-|-|-|
 |OpenFOAM/6-foss-2019b|-|x|x|-|-|-|-|
+|OpenFOAM/5.0-20180606-foss-2023a|x|x|x|x|x|x|x|
 |OpenFOAM/5.0-20180606-foss-2019b|-|x|x|-|-|-|-|
 |OpenFOAM/2.3.1-intel-2019b|-|x|x|-|-|-|-|
