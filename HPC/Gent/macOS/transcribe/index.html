@@ -1103,6 +1103,34 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#translation-target-languages" class="md-nav__link">
+    Translation target languages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model" class="md-nav__link">
+    Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flavour" class="md-nav__link">
+    Flavour
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task" class="md-nav__link">
+    Task
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#cluster" class="md-nav__link">
     Cluster
   </a>
@@ -1118,33 +1146,6 @@
   <a href="#resources" class="md-nav__link">
     Resources
   </a>
-  
-    <nav class="md-nav" aria-label="Resources">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#flavour" class="md-nav__link">
-    Flavour
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#model" class="md-nav__link">
-    Model
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#task" class="md-nav__link">
-    Task
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1367,6 +1368,34 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#translation-target-languages" class="md-nav__link">
+    Translation target languages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model" class="md-nav__link">
+    Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flavour" class="md-nav__link">
+    Flavour
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task" class="md-nav__link">
+    Task
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#cluster" class="md-nav__link">
     Cluster
   </a>
@@ -1382,33 +1411,6 @@
   <a href="#resources" class="md-nav__link">
     Resources
   </a>
-  
-    <nav class="md-nav" aria-label="Resources">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#flavour" class="md-nav__link">
-    Flavour
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#model" class="md-nav__link">
-    Model
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#task" class="md-nav__link">
-    Task
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1443,7 +1445,7 @@ to help with large scale projects.</p>
 </li>
 <li>
 <p>Configure transcription via the <code>Interactive Apps</code> -&gt; <code>Transcribe</code> application (currently under <code>Testing</code> section at the bottom);
-  you can select <code>Whisper inputfile</code>.</p>
+  you can select <code>Whisper inputfile</code> and <code>Whisper language</code>.</p>
 </li>
 <li>
 <p>Launch it and wait. Connecting to the running transcription is entirely optional; there is nothing interactive to do.
@@ -1454,40 +1456,51 @@ to help with large scale projects.</p>
   <code>My interactive sessions</code> (but the session data is only available for a week).</p>
 </li>
 </ul>
-<p>The result directory has a subdirectory per language with the text files and some metadata in JSON format of the transcritpion itself and input file.</p>
+<p>The result directory has a subdirectory per language (transcription and optional translation)
+  with the text files and some metadata in JSON format of the transcritpion itself and input file.</p>
 <p>This is intentionally kept simple. There is also no risk of loosing previous results
 (although some previous result directories might get renamed when input file names are reused).</p>
+<p>If you have issues, please report them via the <code>Problems with this session? Submit support ticket</code> link.</p>
 <h2 id="performance-and-default-settings">Performance and default settings<a class="headerlink" href="#performance-and-default-settings" title="Permanent link">#</a></h2>
 <p>The defaults should give the best balance between quality, performance and time to result.
-You can expect approx 10 minutes of transcription time per language and per hour of input using the default flavour.
-This combined with an almost immediate start time is the best combination for the intended use case.
+You can expect approximate 10 minutes of transcription time per hour of input and
+approximate 1 minute per translation language using the default flavour.
+This performance combined with an almost immediate start time is the best combination for the intended use case.
 There should be enough resources available to get this result most of the time.</p>
 <h2 id="advanced-options">Advanced options<a class="headerlink" href="#advanced-options" title="Permanent link">#</a></h2>
 <p>There are some advanced options one can choose from. They should not be needed for normal usage.</p>
 <p>They are intended for corner cases, or to compare results between different <code>Whisper</code> models and/or different implementation flavours
 (<code>whisper</code> and <code>whisper-ctranslate2</code>) with respect to speed and quality.</p>
 <h3 id="whisper-language">Whisper language<a class="headerlink" href="#whisper-language" title="Permanent link">#</a></h3>
-<p>Using the <code>Automatic detection</code> (the default), whisper determines the spoken language based on the first 30 seconds of audio.
-If, for some reason, the autodection fails (e.g. the input file starts with silence or some music), you can force one of the languages.</p>
-<p>When selecting more than one, the transcription will be done separately for each language
-(this will also increase your total running time, so you might also want to increase the <code>Time</code>).</p>
 <p>The selected language will also determine the output language. However, this is <strong><em>not</em></strong> meant as a translation feature;
 although the quality is not that bad if your languages have enough similarity.</p>
+<h3 id="translation-target-languages">Translation target languages<a class="headerlink" href="#translation-target-languages" title="Permanent link">#</a></h3>
+<p>Select one or more languages to translate to. Hold the <code>Ctrl</code> button pressed while clicking to select (or unselect) languages.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Right-to-left languages might generate incorrect subtitles. If you have any examples, you can use the
+<code>Problems with this session? Submit support ticket</code> to report this so we can investigate properly.</p>
+</div>
+<p>The translation is run after the transcription, and is separate from the Whisper based process.
+If you select a language to translate to that is also the <code>Whisper language</code>, there will be no translation generated for it.</p>
+<p>The default languages are <code>Dutch</code> and <code>English</code>.  If e.g. you have a Dutch spoken video (and select Dutch as the <code>Whisper language</code>),
+the end result will be a Dutch transcription and an English translation of the Dutch transcription. (And thus no <code>Dutch-to-Dutch</code> translation.)</p>
+<p>There is thus no need to unselect the languages each time based on changing input languages.</p>
+<h3 id="model">Model<a class="headerlink" href="#model" title="Permanent link">#</a></h3>
+<p>Default model is <code>large-v3</code>, others can be choosen but should be careful to compare resulting speed and/or quality differences.</p>
+<h3 id="flavour">Flavour<a class="headerlink" href="#flavour" title="Permanent link">#</a></h3>
+<p>We currently support 2 flavours: <code>whisper</code> (the OpenAI reference implementation), and <code>whisper-ctranslate2</code>
+(a faster version with some extras). Benchmarks indicate that <code>whisper-ctranslate2</code> is about 4 times faster than <code>whisper</code>,
+but might have some lower quality.</p>
+<h3 id="task">Task<a class="headerlink" href="#task" title="Permanent link">#</a></h3>
+<p>From the selected (or auto-detected) source speech language, you can choose to transcribe to the same language or to <code>English</code>.
+You can use this last option to translate to English (as opposed to force the detection of the source language as if it was spoken in English).</p>
 <h3 id="cluster">Cluster<a class="headerlink" href="#cluster" title="Permanent link">#</a></h3>
 <p>Changing the cluster from the interactive cluster will give you access to much better GPU,
 but at a penalty of having to wait in the queue of the other cluster typically for a much longer time
 than it will take to complete the transcription on the default cluster.</p>
 <h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">#</a></h2>
 <p>Default settings of 4 cores with at least 10GB of RAM and 1 hour (wall)time should be enough for most transcriptions.</p>
-<h3 id="flavour">Flavour<a class="headerlink" href="#flavour" title="Permanent link">#</a></h3>
-<p>We currently support 2 flavours: <code>whisper</code> (the OpenAI reference implementation), and <code>whisper-ctranslate2</code>
-(a faster version with some extras). Benchmarks indicate that <code>whisper-ctranslate2</code> is about 4 times faster than <code>whisper</code>,
-but might have some lower quality.</p>
-<h3 id="model">Model<a class="headerlink" href="#model" title="Permanent link">#</a></h3>
-<p>Default model is <code>large-v3</code>, others can be choosen but should be careful to compare resulting speed and/or quality differences.</p>
-<h3 id="task">Task<a class="headerlink" href="#task" title="Permanent link">#</a></h3>
-<p>From the selected (or auto-detected) source speech language, you can choose to transcribe to the same language or to <code>English</code>.
-You can use this last option to translate to English (as opposed to force the detection of the source language as if it was spoken in English).</p>
 
 
 
