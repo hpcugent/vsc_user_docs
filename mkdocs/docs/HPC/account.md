@@ -143,20 +143,6 @@ Start ***PuTTYgen.exe*** it and follow these steps:
     buttons ++"Save public key"++ and ++"Save private key"++. We recommend using the name **"id_rsa.pub"** for the public key, and
     **"id_rsa.ppk"** for the private key.
 
-{%- if site == gent %}
-6.  Finally, save an "OpenSSH" version of your private key (in
-    particular for later "X2Go" usage, see [x2go]()) by entering the
-    "Conversions" menu and selecting "Export OpenSSH key" (do **not** select the
-    "force new file format" variant). Save the file in the same location
-    as in the previous step with filename **"id_rsa"**. (If there is no
-    "Conversions" menu, you must update your "puttygen" version. If you
-    want to do this conversion afterwards, you can start with loading an
-    existing "id_rsa.ppk" and only do this conversions export.)
-
-    ![image](img/ch2-puttygen-conversions-export_openssh.png){ style="display: block; margin: 0 auto" }
-
-{%- endif %}
-
 If you use another program to generate a key pair, please remember that
 they need to be in the OpenSSH format to access the {{ hpc }} clusters.
 {% endif %}
