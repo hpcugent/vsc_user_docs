@@ -352,18 +352,6 @@ If it doesn't (like in the example) or you are in doubt, take a screenshot, pres
 
 ![image](img/putty_security_alert.jpg)
 
-{% if site == gent %}
-If you use X2Go client, you might get one of the following fingerprints:
-
-{{xtwogoshaone}}
-
-**If you get a message "Host key for server changed", do not click "No" until you verified the fingerprint.**
-
-If the fingerprint matches, click "No", and in the next pop-up screen ("if you accept the new host key..."), press "Yes".
-
-If it doesn't, or you are in doubt, take a screenshot, press "Yes" and contact {{hpcinfo}}.
-
-{% endif %}
 {% endif %}
 
 ## DOS/Windows text format
@@ -404,28 +392,11 @@ lines:
 ```
 {% endif %}
 
-{% if site == gent %} 
-{% if OS == macos %}
-
-If you use X2Go, then you might get another fingerprint, then make sure that the fingerprint
-is displayed is one of the following ones:
-
-{{xtwogoshaone}}
-
-{% endif %}
-{% endif %}
-
 If it does, type ***yes***. If it doesn't, please contact support: {{hpcinfo}}.
 
 {% if OS != (linux or macos) %}
 {% include "../macros/firsttimeconnection.md" %}
 
-{% if site == gent %}
-If you use X2Go, then you might get another fingerprint, then make sure that the fingerprint
-is displayed is one of the following ones:
-
-{{xtwogoshaone}}
-{% endif %}
 {% endif %}
 
 ## Memory limits
