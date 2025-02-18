@@ -1,0 +1,61 @@
+And compile it (whilst including the thread library) and run and test it
+on the login-node:
+$ module load GCC
+$ gcc -o T_hello T_hello.c -lpthread
+$ ./T_hello
+spawning thread 0
+spawning thread 1
+spawning thread 2
+Hello from thread 0!
+Hello from thread 1!
+Hello from thread 2!
+spawning thread 3
+spawning thread 4
+Hello from thread 3!
+Hello from thread 4!
+Now, run it on the cluster and check the output:
+$ qsub T_hello.pbs
+123456
+$ more T_hello.pbs.o123456
+spawning thread 0
+spawning thread 1
+spawning thread 2
+Hello from thread 0!
+Hello from thread 1!
+Hello from thread 2!
+spawning thread 3
+spawning thread 4
+Hello from thread 3!
+Hello from thread 4!
+ tip
+    If you plan engaging in parallel programming using threads, this book
+    may prove useful: *Professional Multicore Programming: Design and Implementation for C++ Developers. Cameron Hughes and Tracey Hughes. Wrox 2008.*
+Parallel Computing with OpenMP
+OpenMP is an API that implements a multi-threaded, shared memory form of
+parallelism. It uses a set of compiler directives (statements that you
+add to your code and that are recognised by your Fortran/C/C++ compiler
+if OpenMP is enabled or otherwise ignored) that are incorporated at
+compile-time to generate a multi-threaded version of your code. You can
+think of Pthreads (above) as doing multi-threaded programming "by hand",
+and OpenMP as a slightly more automated, higher-level API to make your
+program multithreaded. OpenMP takes care of many of the low-level
+details that you would normally have to implement yourself, if you were
+using Pthreads from the ground up.
+An important advantage of OpenMP is that, because it uses compiler
+directives, the original serial version stays intact, and minimal
+changes (in the form of compiler directives) are necessary to turn a
+working serial code into a working parallel code.
+Here is the general code structure of an OpenMP program:
+#include <omp.h>
+main ()  {
+int var1, var2, var3;
+// Serial code
+// Beginning of parallel section. Fork a team of threads.
+// Specify variable scoping
+#pragma omp parallel private(var1, var2) shared(var3)
+  {
+  // Parallel section executed by all threads
+  // All threads join master thread and disband
+  }
+// Resume serial code
+}
