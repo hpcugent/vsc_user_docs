@@ -1,0 +1,8 @@
+Check that your key is available from the keyring with:
+ssh-add -l
+After these changes the key agent will keep your SSH key to connect to
+the clusters as usual.
+ tip
+    You should execute ssh-add command again if you generate a new SSH
+    key.
+Visit <https://wiki.gnome.org/Projects/GnomeKeyring/Ssh> for more information.
