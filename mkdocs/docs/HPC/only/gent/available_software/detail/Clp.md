@@ -21,6 +21,6 @@ module load Clp/1.17.9-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Clp/1.17.9-foss-2023a|-|x|x|x|-|x|x|
+|Clp/1.17.9-foss-2023a|-|x|x|x|x|x|x|
 |Clp/1.17.8-foss-2022b|-|x|x|x|-|-|-|
 |Clp/1.17.7-foss-2021b|-|x|x|-|-|-|-|
