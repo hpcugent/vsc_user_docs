@@ -21,4 +21,4 @@ module load Leptonica/1.85.0-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Leptonica/1.85.0-GCCcore-13.3.0|-|x|x|x|-|x|x|
+|Leptonica/1.85.0-GCCcore-13.3.0|x|x|x|x|x|x|x|

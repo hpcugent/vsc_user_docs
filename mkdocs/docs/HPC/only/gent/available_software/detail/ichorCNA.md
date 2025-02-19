@@ -14,11 +14,12 @@ The overview below shows which ichorCNA installations are available per HPC-UGen
 To start using ichorCNA, load one of these modules using a `module load` command like:
 
 ```shell
-module load ichorCNA/0.3.2-20191219-foss-2020a
+module load ichorCNA/0.3.2-20191219-foss-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ichorCNA/0.3.2-20191219-foss-2023a|x|x|x|x|x|x|x|
 |ichorCNA/0.3.2-20191219-foss-2020a|-|x|x|-|-|-|-|
