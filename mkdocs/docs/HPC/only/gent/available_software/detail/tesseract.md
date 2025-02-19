@@ -21,4 +21,4 @@ module load tesseract/5.5.0-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tesseract/5.5.0-GCCcore-13.3.0|-|x|x|x|-|x|x|
+|tesseract/5.5.0-GCCcore-13.3.0|x|x|x|x|x|x|x|

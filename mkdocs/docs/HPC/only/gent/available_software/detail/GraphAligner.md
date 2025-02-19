@@ -21,4 +21,4 @@ module load GraphAligner/1.0.20-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GraphAligner/1.0.20-foss-2023a|-|x|x|x|x|x|x|
+|GraphAligner/1.0.20-foss-2023a|x|x|x|x|x|x|x|

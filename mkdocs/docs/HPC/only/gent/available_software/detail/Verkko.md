@@ -21,4 +21,4 @@ module load Verkko/2.2.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Verkko/2.2.1-foss-2023a|-|x|x|x|x|x|x|
+|Verkko/2.2.1-foss-2023a|x|x|x|x|x|x|x|
