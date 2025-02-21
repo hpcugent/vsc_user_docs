@@ -22,7 +22,7 @@ module load Flye/2.9.4-GCC-13.2.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Flye/2.9.4-GCC-13.2.0|x|x|x|x|-|x|x|
-|Flye/2.9.3-GCC-12.3.0|x|x|x|x|-|x|x|
+|Flye/2.9.3-GCC-12.3.0|x|x|x|x|x|x|x|
 |Flye/2.9.2-GCC-11.3.0|-|x|x|x|-|-|-|
 |Flye/2.9-intel-compilers-2021.2.0|-|x|x|-|-|-|-|
 |Flye/2.9-GCC-10.3.0|-|x|x|x|-|-|-|

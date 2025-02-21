@@ -22,7 +22,7 @@ module load UCX/1.16.0-rc4-GCCcore-13.2.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |UCX/1.16.0-rc4-GCCcore-13.2.0|-|x|x|x|-|-|x|
-|UCX/1.16.0-rc4-GCCcore-12.3.0|-|x|x|x|-|-|x|
+|UCX/1.16.0-rc4-GCCcore-12.3.0|-|x|x|x|x|-|x|
 |UCX/1.16.0-rc4-GCCcore-12.2.0|-|x|x|x|-|x|-|
 |UCX/1.16.0-rc4-GCCcore-11.3.0|-|x|x|x|-|x|-|
 |UCX/1.16.0-rc4-GCCcore-11.2.0|-|x|x|x|-|-|-|

@@ -23,6 +23,6 @@ module load coverage/7.4.4-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |coverage/7.4.4-GCCcore-13.2.0|x|x|x|x|-|-|x|
 |coverage/7.2.7-GCCcore-11.3.0|-|x|x|x|-|-|-|
-|coverage/7.2.3-GCCcore-12.3.0|x|x|x|x|-|x|x|
+|coverage/7.2.3-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |coverage/7.2.3-GCCcore-12.2.0|-|x|x|x|-|-|-|
 |coverage/5.5-GCCcore-10.2.0|-|x|x|-|-|-|-|

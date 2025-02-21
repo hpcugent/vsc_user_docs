@@ -21,5 +21,5 @@ module load AGAT/1.4.0-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|AGAT/1.4.0-GCC-12.3.0|-|x|x|x|-|x|x|
+|AGAT/1.4.0-GCC-12.3.0|-|x|x|x|x|x|x|
 |AGAT/1.1.0-GCC-12.2.0|-|x|x|x|-|-|-|
