@@ -21,4 +21,4 @@ module load crypt4gh/1.7-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|crypt4gh/1.7-GCC-12.3.0|x|x|x|x|-|x|x|
+|crypt4gh/1.7-GCC-12.3.0|x|x|x|x|x|x|x|

@@ -34,5 +34,5 @@ module load SAMtools/1.19.2-GCC-13.2.0
 |SAMtools/1.10-GCC-9.3.0|-|x|x|-|-|-|-|
 |SAMtools/1.10-GCC-8.3.0|-|x|x|-|-|-|-|
 |SAMtools/0.1.20-intel-2019b|-|x|x|-|-|-|-|
-|SAMtools/0.1.20-GCC-12.3.0|-|x|x|x|-|x|x|
+|SAMtools/0.1.20-GCC-12.3.0|-|x|x|x|x|x|x|
 |SAMtools/0.1.20-GCC-8.3.0|-|x|x|-|-|-|-|

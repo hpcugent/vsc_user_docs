@@ -21,4 +21,4 @@ module load Qt6/6.6.3-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Qt6/6.6.3-GCCcore-13.2.0|-|x|x|x|-|x|x|
+|Qt6/6.6.3-GCCcore-13.2.0|-|x|x|x|x|x|x|

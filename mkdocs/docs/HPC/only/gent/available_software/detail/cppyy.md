@@ -21,4 +21,4 @@ module load cppyy/3.1.2-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cppyy/3.1.2-GCCcore-13.2.0|x|x|x|x|-|x|x|
+|cppyy/3.1.2-GCCcore-13.2.0|x|x|x|x|x|x|x|

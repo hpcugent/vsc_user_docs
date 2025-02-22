@@ -21,4 +21,4 @@ module load primecount/7.14-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|primecount/7.14-GCCcore-13.2.0|-|x|x|x|-|x|x|
+|primecount/7.14-GCCcore-13.2.0|-|x|x|x|x|x|x|

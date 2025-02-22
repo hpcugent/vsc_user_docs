@@ -21,4 +21,4 @@ module load PHYLIP/3.697-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PHYLIP/3.697-GCC-12.3.0|-|x|x|x|-|-|x|
+|PHYLIP/3.697-GCC-12.3.0|-|x|x|x|x|-|x|

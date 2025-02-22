@@ -21,4 +21,4 @@ module load Geant4-data/11.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Geant4-data/11.2|x|x|x|x|-|x|x|
+|Geant4-data/11.2|x|x|x|x|x|x|x|

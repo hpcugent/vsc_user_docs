@@ -21,4 +21,4 @@ module load SYMMETRICA/2.0-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SYMMETRICA/2.0-GCCcore-13.2.0|-|x|x|x|-|x|x|
+|SYMMETRICA/2.0-GCCcore-13.2.0|-|x|x|x|x|x|x|

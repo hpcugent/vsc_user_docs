@@ -21,4 +21,4 @@ module load EGA-QuickView/20240620-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|EGA-QuickView/20240620-GCC-12.3.0|x|x|x|x|-|x|x|
+|EGA-QuickView/20240620-GCC-12.3.0|x|x|x|x|x|x|x|
