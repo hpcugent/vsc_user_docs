@@ -21,4 +21,4 @@ module load miniprot/0.13-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|miniprot/0.13-GCCcore-12.3.0|-|x|x|x|-|x|x|
+|miniprot/0.13-GCCcore-12.3.0|-|x|x|x|x|x|x|

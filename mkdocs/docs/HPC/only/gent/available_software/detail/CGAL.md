@@ -23,7 +23,7 @@ module load CGAL/5.6-GCCcore-12.3.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |CGAL/5.6-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |CGAL/5.5.2-GCCcore-12.2.0|-|x|x|x|-|-|-|
-|CGAL/5.4-GCCcore-12.3.0|x|x|x|x|-|x|x|
+|CGAL/5.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |CGAL/5.2-iimpi-2020b|-|x|-|-|-|-|-|
 |CGAL/5.2-gompi-2020b|-|x|x|x|-|-|-|
 |CGAL/4.14.3-iimpi-2021a|-|x|x|-|-|-|-|

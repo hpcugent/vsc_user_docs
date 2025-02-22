@@ -21,7 +21,7 @@ module load DIAMOND/2.1.9-GCC-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DIAMOND/2.1.9-GCC-13.2.0|x|x|x|x|-|-|x|
+|DIAMOND/2.1.9-GCC-13.2.0|x|x|x|x|x|-|x|
 |DIAMOND/2.1.8-GCC-12.3.0|x|x|x|x|x|x|x|
 |DIAMOND/2.1.8-GCC-12.2.0|-|x|x|x|-|x|-|
 |DIAMOND/2.1.0-GCC-11.3.0|-|x|x|x|-|-|-|

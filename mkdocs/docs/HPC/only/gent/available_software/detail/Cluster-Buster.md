@@ -21,4 +21,4 @@ module load Cluster-Buster/20240927-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Cluster-Buster/20240927-GCC-12.3.0|x|x|x|x|-|x|x|
+|Cluster-Buster/20240927-GCC-12.3.0|x|x|x|x|x|x|x|

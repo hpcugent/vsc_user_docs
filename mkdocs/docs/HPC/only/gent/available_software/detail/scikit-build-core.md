@@ -24,4 +24,4 @@ module load scikit-build-core/0.10.6-GCCcore-13.3.0
 |scikit-build-core/0.10.6-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |scikit-build-core/0.9.3-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |scikit-build-core/0.9.3-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|scikit-build-core/0.5.0-GCCcore-12.3.0|-|x|x|x|-|x|x|
+|scikit-build-core/0.5.0-GCCcore-12.3.0|-|x|x|x|x|x|x|
