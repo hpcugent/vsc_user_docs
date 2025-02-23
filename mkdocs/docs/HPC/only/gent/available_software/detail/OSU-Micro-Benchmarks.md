@@ -23,7 +23,7 @@ module load OSU-Micro-Benchmarks/7.4-iimpi-2024a
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |OSU-Micro-Benchmarks/7.4-iimpi-2024a|x|x|x|x|x|x|x|
 |OSU-Micro-Benchmarks/7.4-gompi-2024a|x|x|x|x|-|x|x|
-|OSU-Micro-Benchmarks/7.2-gompi-2023b|-|x|x|x|-|-|x|
+|OSU-Micro-Benchmarks/7.2-gompi-2023b|-|x|x|x|x|-|x|
 |OSU-Micro-Benchmarks/7.1-1-iimpi-2023a|-|x|x|x|-|-|x|
 |OSU-Micro-Benchmarks/7.1-1-gompi-2023a|-|x|-|-|-|x|-|
 |OSU-Micro-Benchmarks/5.8-iimpi-2021b|-|x|x|-|-|-|-|

@@ -21,4 +21,4 @@ module load CIRCE/0.3.4-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CIRCE/0.3.4-foss-2023a|x|x|x|x|-|x|x|
+|CIRCE/0.3.4-foss-2023a|x|x|x|x|x|x|x|
