@@ -21,7 +21,7 @@ module load ScaFaCoS/1.0.4-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ScaFaCoS/1.0.4-foss-2023b|-|x|x|x|-|x|x|
+|ScaFaCoS/1.0.4-foss-2023b|-|x|x|x|x|x|x|
 |ScaFaCoS/1.0.4-foss-2023a|x|x|x|x|x|x|x|
 |ScaFaCoS/1.0.1-intel-2020a|-|x|x|-|-|-|-|
 |ScaFaCoS/1.0.1-foss-2021b|-|x|x|-|-|-|-|

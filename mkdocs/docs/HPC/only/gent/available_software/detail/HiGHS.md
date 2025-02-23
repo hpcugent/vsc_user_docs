@@ -21,4 +21,4 @@ module load HiGHS/1.7.0-gfbf-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HiGHS/1.7.0-gfbf-2023b|-|x|x|x|-|-|x|
+|HiGHS/1.7.0-gfbf-2023b|-|x|x|x|x|-|x|
