@@ -1560,8 +1560,8 @@ venv-RHEL8-zen2
 <p>Activating a virtual environment created on a different cluster can cause issues. 
 This happens
 because the binaries in the virtual environments from cluster A might not work with the CPU architecture of cluster B.</p>
-<p>For example, if we create a virtual environment on the skitty cluster,</p>
-<div class="highlight"><pre><span></span><code>module<span class="w"> </span>swap<span class="w"> </span>cluster/skitty
+<p>For example, if we create a virtual environment on the gallade cluster,</p>
+<div class="highlight"><pre><span></span><code>module<span class="w"> </span>swap<span class="w"> </span>cluster/gallade
 qsub<span class="w"> </span>-I
 $<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>myenv
 </code></pre></div>
