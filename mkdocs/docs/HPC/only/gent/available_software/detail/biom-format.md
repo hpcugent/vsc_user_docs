@@ -21,7 +21,7 @@ module load biom-format/2.1.16-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|biom-format/2.1.16-foss-2023b|x|x|x|x|-|x|x|
+|biom-format/2.1.16-foss-2023b|x|x|x|x|x|x|x|
 |biom-format/2.1.15-foss-2023a|x|x|x|x|x|x|x|
 |biom-format/2.1.15-foss-2022b|-|x|x|x|-|-|-|
 |biom-format/2.1.14-foss-2022a|-|x|x|x|-|-|-|

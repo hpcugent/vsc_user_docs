@@ -21,7 +21,7 @@ module load igraph/0.10.12-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|igraph/0.10.12-foss-2023b|-|x|x|x|-|x|x|
+|igraph/0.10.12-foss-2023b|-|x|x|x|x|x|x|
 |igraph/0.10.10-foss-2023a|x|x|x|x|x|x|x|
 |igraph/0.10.6-foss-2022b|-|x|x|x|-|-|-|
 |igraph/0.10.3-foss-2022a|-|x|x|x|-|x|-|
