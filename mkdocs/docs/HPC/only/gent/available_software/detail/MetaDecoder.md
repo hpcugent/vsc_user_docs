@@ -21,4 +21,4 @@ module load MetaDecoder/1.0.19-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MetaDecoder/1.0.19-foss-2023b|-|x|x|x|-|-|x|
+|MetaDecoder/1.0.19-foss-2023b|-|x|x|x|x|-|x|

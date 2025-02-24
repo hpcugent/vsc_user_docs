@@ -21,4 +21,4 @@ module load fpylll/0.6.1-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fpylll/0.6.1-foss-2023b|x|x|x|x|-|x|x|
+|fpylll/0.6.1-foss-2023b|x|x|x|x|x|x|x|

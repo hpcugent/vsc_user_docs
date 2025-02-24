@@ -21,6 +21,6 @@ module load NLTK/3.8.1-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NLTK/3.8.1-foss-2023b|-|x|x|x|-|-|x|
+|NLTK/3.8.1-foss-2023b|-|x|x|x|x|-|x|
 |NLTK/3.8.1-foss-2023a|x|x|x|x|x|x|x|
 |NLTK/3.8.1-foss-2022b|-|x|x|x|-|-|-|
