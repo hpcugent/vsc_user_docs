@@ -19,6 +19,6 @@ module load QD/2.3.17-NVHPC-21.2-20160110
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|QD/2.3.17-NVHPC-21.2-20160110|-|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|QD/2.3.17-NVHPC-21.2-20160110|-|-|x|-|-|-|

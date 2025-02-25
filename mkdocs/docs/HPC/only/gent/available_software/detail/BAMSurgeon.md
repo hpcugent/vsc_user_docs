@@ -19,6 +19,6 @@ module load BAMSurgeon/1.2-GCC-8.3.0-Python-2.7.16
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BAMSurgeon/1.2-GCC-8.3.0-Python-2.7.16|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BAMSurgeon/1.2-GCC-8.3.0-Python-2.7.16|-|x|x|-|-|-|

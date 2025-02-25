@@ -19,9 +19,9 @@ module load meson-python/0.16.0-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|meson-python/0.16.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|meson-python/0.15.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|meson-python/0.13.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|meson-python/0.11.0-GCCcore-12.2.0|-|x|x|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|meson-python/0.16.0-GCCcore-13.3.0|x|x|x|x|x|x|
+|meson-python/0.15.0-GCCcore-13.2.0|x|x|x|x|x|x|
+|meson-python/0.13.2-GCCcore-12.3.0|x|x|x|x|x|x|
+|meson-python/0.11.0-GCCcore-12.2.0|-|x|x|x|-|x|

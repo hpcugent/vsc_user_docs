@@ -19,6 +19,6 @@ module load Rgurobi/9.5.0-foss-2021b-R-4.1.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Rgurobi/9.5.0-foss-2021b-R-4.1.2|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Rgurobi/9.5.0-foss-2021b-R-4.1.2|-|x|x|-|-|-|

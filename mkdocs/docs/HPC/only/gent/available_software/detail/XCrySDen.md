@@ -19,7 +19,7 @@ module load XCrySDen/1.6.2-intel-2022a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|XCrySDen/1.6.2-intel-2022a|-|x|x|-|-|-|-|
-|XCrySDen/1.6.2-foss-2022a|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|XCrySDen/1.6.2-intel-2022a|-|x|x|-|-|-|
+|XCrySDen/1.6.2-foss-2022a|-|x|x|-|-|-|

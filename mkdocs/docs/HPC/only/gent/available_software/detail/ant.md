@@ -19,13 +19,13 @@ module load ant/1.10.14-Java-11
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ant/1.10.14-Java-11|x|x|x|x|x|x|x|
-|ant/1.10.12-Java-17|x|x|x|x|x|x|x|
-|ant/1.10.12-Java-11|-|x|x|x|-|x|-|
-|ant/1.10.11-Java-11|-|x|x|x|-|-|-|
-|ant/1.10.9-Java-11|-|x|x|x|-|-|-|
-|ant/1.10.8-Java-11|-|x|x|-|-|-|-|
-|ant/1.10.7-Java-11|-|x|x|-|-|-|-|
-|ant/1.10.6-Java-1.8|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ant/1.10.14-Java-11|x|x|x|x|x|x|
+|ant/1.10.12-Java-17|x|x|x|x|x|x|
+|ant/1.10.12-Java-11|-|x|x|x|-|x|
+|ant/1.10.11-Java-11|-|x|x|x|-|-|
+|ant/1.10.9-Java-11|-|x|x|x|-|-|
+|ant/1.10.8-Java-11|-|x|x|-|-|-|
+|ant/1.10.7-Java-11|-|x|x|-|-|-|
+|ant/1.10.6-Java-1.8|-|x|x|-|-|-|

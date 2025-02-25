@@ -19,7 +19,7 @@ module load CUDAcore/11.2.1
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CUDAcore/11.2.1|-|-|x|-|-|-|-|
-|CUDAcore/11.1.1|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CUDAcore/11.2.1|-|-|x|-|-|-|
+|CUDAcore/11.1.1|-|x|x|x|-|-|

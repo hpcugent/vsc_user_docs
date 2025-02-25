@@ -19,7 +19,7 @@ module load openCARP/6.0-foss-2020b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|openCARP/6.0-foss-2020b|-|x|x|x|-|-|-|
-|openCARP/3.2-foss-2020a-Python-3.8.2|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|openCARP/6.0-foss-2020b|-|x|x|x|-|-|
+|openCARP/3.2-foss-2020a-Python-3.8.2|-|x|x|-|-|-|

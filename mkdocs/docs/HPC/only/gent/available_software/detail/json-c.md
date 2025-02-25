@@ -19,11 +19,11 @@ module load json-c/0.17-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|json-c/0.17-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|json-c/0.17-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|json-c/0.16-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|json-c/0.16-GCCcore-12.2.0|-|x|x|x|-|-|-|
-|json-c/0.15-GCCcore-10.3.0|-|x|x|-|-|-|-|
-|json-c/0.15-GCCcore-10.2.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|json-c/0.17-GCCcore-13.3.0|x|x|x|x|x|x|
+|json-c/0.17-GCCcore-13.2.0|x|x|x|x|x|x|
+|json-c/0.16-GCCcore-12.3.0|x|x|x|x|x|x|
+|json-c/0.16-GCCcore-12.2.0|-|x|x|x|-|-|
+|json-c/0.15-GCCcore-10.3.0|-|x|x|-|-|-|
+|json-c/0.15-GCCcore-10.2.0|-|x|x|x|-|-|

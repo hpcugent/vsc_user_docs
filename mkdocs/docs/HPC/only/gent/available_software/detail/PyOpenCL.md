@@ -19,8 +19,8 @@ module load PyOpenCL/2023.1.4-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyOpenCL/2023.1.4-foss-2023a|-|x|x|x|-|-|x|
-|PyOpenCL/2023.1.4-foss-2022a|-|x|x|x|-|-|-|
-|PyOpenCL/2021.1.2-foss-2020b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyOpenCL/2023.1.4-foss-2023a|-|x|x|x|-|-|
+|PyOpenCL/2023.1.4-foss-2022a|-|x|x|x|-|-|
+|PyOpenCL/2021.1.2-foss-2020b|-|x|x|x|-|-|

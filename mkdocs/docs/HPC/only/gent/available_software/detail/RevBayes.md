@@ -19,7 +19,7 @@ module load RevBayes/1.2.1-gompi-2022a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RevBayes/1.2.1-gompi-2022a|-|x|x|x|-|-|-|
-|RevBayes/1.1.1-GCC-11.2.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RevBayes/1.2.1-gompi-2022a|-|x|x|x|-|-|
+|RevBayes/1.1.1-GCC-11.2.0|-|x|x|-|-|-|

@@ -19,6 +19,6 @@ module load Megalodon/2.3.5-foss-2020b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Megalodon/2.3.5-foss-2020b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Megalodon/2.3.5-foss-2020b|-|x|x|x|-|-|

@@ -19,6 +19,6 @@ module load AMRFinderPlus/3.12.8-gompi-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|AMRFinderPlus/3.12.8-gompi-2023a|-|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|AMRFinderPlus/3.12.8-gompi-2023a|-|x|x|x|x|x|

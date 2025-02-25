@@ -19,7 +19,7 @@ module load NextGenMap/0.5.5-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NextGenMap/0.5.5-GCC-12.3.0|x|x|x|x|x|x|x|
-|NextGenMap/0.5.5-GCC-11.2.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NextGenMap/0.5.5-GCC-12.3.0|x|x|x|x|x|x|
+|NextGenMap/0.5.5-GCC-11.2.0|-|x|x|-|-|-|

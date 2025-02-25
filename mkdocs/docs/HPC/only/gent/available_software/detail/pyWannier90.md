@@ -19,8 +19,8 @@ module load pyWannier90/2024-01-28-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pyWannier90/2024-01-28-foss-2023a|x|x|x|x|x|x|x|
-|pyWannier90/2021-12-07-gomkl-2021a|-|x|x|x|-|-|-|
-|pyWannier90/2021-12-07-foss-2021a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pyWannier90/2024-01-28-foss-2023a|x|x|x|x|x|x|
+|pyWannier90/2021-12-07-gomkl-2021a|-|x|x|x|-|-|
+|pyWannier90/2021-12-07-foss-2021a|-|x|x|x|-|-|

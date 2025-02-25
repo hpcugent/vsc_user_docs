@@ -19,8 +19,8 @@ module load SoX/14.4.2-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SoX/14.4.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|SoX/14.4.2-GCCcore-11.3.0|-|x|x|x|-|-|-|
-|SoX/14.4.2-GCC-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SoX/14.4.2-GCCcore-12.3.0|x|x|x|x|x|x|
+|SoX/14.4.2-GCCcore-11.3.0|-|x|x|x|-|-|
+|SoX/14.4.2-GCC-8.3.0|-|x|x|-|-|-|

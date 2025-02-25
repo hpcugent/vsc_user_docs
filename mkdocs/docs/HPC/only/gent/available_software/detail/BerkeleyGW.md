@@ -19,7 +19,7 @@ module load BerkeleyGW/2.1.0-intel-2019b-Python-3.7.4
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BerkeleyGW/2.1.0-intel-2019b-Python-3.7.4|-|x|x|-|-|-|-|
-|BerkeleyGW/2.1.0-foss-2019b-Python-3.7.4|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BerkeleyGW/2.1.0-intel-2019b-Python-3.7.4|-|x|x|-|-|-|
+|BerkeleyGW/2.1.0-foss-2019b-Python-3.7.4|-|x|x|-|-|-|

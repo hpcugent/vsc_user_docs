@@ -19,9 +19,9 @@ module load HISAT2/2.2.1-gompi-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HISAT2/2.2.1-gompi-2023a|x|x|x|x|x|x|x|
-|HISAT2/2.2.1-gompi-2022a|-|x|x|x|-|-|-|
-|HISAT2/2.2.1-gompi-2021b|-|x|x|x|-|-|-|
-|HISAT2/2.2.1-gompi-2020b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HISAT2/2.2.1-gompi-2023a|x|x|x|x|x|x|
+|HISAT2/2.2.1-gompi-2022a|-|x|x|x|-|-|
+|HISAT2/2.2.1-gompi-2021b|-|x|x|x|-|-|
+|HISAT2/2.2.1-gompi-2020b|-|x|x|x|-|-|

@@ -19,6 +19,6 @@ module load tidymodels/1.1.0-foss-2022b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tidymodels/1.1.0-foss-2022b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tidymodels/1.1.0-foss-2022b|-|x|x|x|-|-|

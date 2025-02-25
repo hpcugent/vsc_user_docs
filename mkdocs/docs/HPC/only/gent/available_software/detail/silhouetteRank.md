@@ -19,6 +19,6 @@ module load silhouetteRank/1.0.5.13-foss-2022a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|silhouetteRank/1.0.5.13-foss-2022a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|silhouetteRank/1.0.5.13-foss-2022a|-|x|x|x|-|-|

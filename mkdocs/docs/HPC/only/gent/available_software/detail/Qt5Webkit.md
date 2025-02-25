@@ -19,7 +19,7 @@ module load Qt5Webkit/5.212.0-alpha4-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Qt5Webkit/5.212.0-alpha4-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|Qt5Webkit/5.212.0-alpha4-GCCcore-11.2.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Qt5Webkit/5.212.0-alpha4-GCCcore-12.3.0|x|x|x|x|x|x|
+|Qt5Webkit/5.212.0-alpha4-GCCcore-11.2.0|-|x|x|x|-|-|

@@ -19,8 +19,8 @@ module load NVHPC/24.9-CUDA-12.6.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NVHPC/24.9-CUDA-12.6.0|-|-|x|-|-|-|-|
-|NVHPC/24.9|-|x|x|x|-|x|x|
-|NVHPC/21.2|-|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NVHPC/24.9-CUDA-12.6.0|-|-|x|-|-|-|
+|NVHPC/24.9|-|x|x|x|-|x|
+|NVHPC/21.2|-|-|x|-|-|-|

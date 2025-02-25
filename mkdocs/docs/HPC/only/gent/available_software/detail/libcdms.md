@@ -19,6 +19,6 @@ module load libcdms/3.1.2-foss-2020a-Python-3.8.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libcdms/3.1.2-foss-2020a-Python-3.8.2|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libcdms/3.1.2-foss-2020a-Python-3.8.2|-|x|x|-|-|-|

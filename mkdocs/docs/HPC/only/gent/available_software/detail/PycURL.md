@@ -19,8 +19,8 @@ module load PycURL/7.45.3-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PycURL/7.45.3-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|PycURL/7.45.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|PycURL/7.45.2-GCCcore-12.2.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PycURL/7.45.3-GCCcore-13.2.0|x|x|x|x|x|x|
+|PycURL/7.45.2-GCCcore-12.3.0|x|x|x|x|x|x|
+|PycURL/7.45.2-GCCcore-12.2.0|-|x|x|x|-|-|

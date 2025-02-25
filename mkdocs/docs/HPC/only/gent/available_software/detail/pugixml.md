@@ -19,7 +19,7 @@ module load pugixml/1.14-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pugixml/1.14-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|pugixml/1.12.1-GCCcore-11.2.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pugixml/1.14-GCCcore-12.3.0|x|x|x|x|x|x|
+|pugixml/1.12.1-GCCcore-11.2.0|-|x|x|x|-|-|

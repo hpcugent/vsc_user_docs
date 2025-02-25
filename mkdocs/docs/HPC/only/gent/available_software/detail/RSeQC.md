@@ -19,7 +19,7 @@ module load RSeQC/4.0.0-foss-2021b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RSeQC/4.0.0-foss-2021b|-|x|x|-|-|-|-|
-|RSeQC/4.0.0-foss-2020a-Python-3.8.2|-|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RSeQC/4.0.0-foss-2021b|-|x|x|-|-|-|
+|RSeQC/4.0.0-foss-2020a-Python-3.8.2|-|-|x|-|-|-|

@@ -19,6 +19,6 @@ module load OpenSlide-Java/0.12.4-GCCcore-12.3.0-Java-17
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenSlide-Java/0.12.4-GCCcore-12.3.0-Java-17|-|x|x|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OpenSlide-Java/0.12.4-GCCcore-12.3.0-Java-17|-|x|x|x|x|-|

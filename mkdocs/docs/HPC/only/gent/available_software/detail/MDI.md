@@ -19,7 +19,7 @@ module load MDI/1.4.29-gompi-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MDI/1.4.29-gompi-2023b|-|x|x|x|x|x|x|
-|MDI/1.4.26-gompi-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MDI/1.4.29-gompi-2023b|-|x|x|x|x|x|
+|MDI/1.4.26-gompi-2023a|x|x|x|x|x|x|

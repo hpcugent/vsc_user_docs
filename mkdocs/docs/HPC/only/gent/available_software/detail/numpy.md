@@ -19,6 +19,6 @@ module load numpy/1.16.6-foss-2023a-Python-2.7.18
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|numpy/1.16.6-foss-2023a-Python-2.7.18|-|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|numpy/1.16.6-foss-2023a-Python-2.7.18|-|x|x|x|-|x|

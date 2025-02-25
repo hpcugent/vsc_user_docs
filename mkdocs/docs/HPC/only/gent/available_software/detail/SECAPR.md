@@ -19,6 +19,6 @@ module load SECAPR/1.1.15-foss-2019b-Python-2.7.16
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SECAPR/1.1.15-foss-2019b-Python-2.7.16|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SECAPR/1.1.15-foss-2019b-Python-2.7.16|-|x|x|-|-|-|

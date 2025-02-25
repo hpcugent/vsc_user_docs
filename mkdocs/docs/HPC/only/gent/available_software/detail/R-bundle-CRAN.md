@@ -19,8 +19,8 @@ module load R-bundle-CRAN/2024.11-foss-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|R-bundle-CRAN/2024.11-foss-2024a|x|x|x|x|x|x|x|
-|R-bundle-CRAN/2024.06-foss-2023b|x|x|x|x|x|x|x|
-|R-bundle-CRAN/2023.12-foss-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|R-bundle-CRAN/2024.11-foss-2024a|x|x|x|x|x|x|
+|R-bundle-CRAN/2024.06-foss-2023b|x|x|x|x|x|x|
+|R-bundle-CRAN/2023.12-foss-2023a|x|x|x|x|x|x|

@@ -19,8 +19,8 @@ module load libavif/1.0.4-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libavif/1.0.4-foss-2023a|-|x|x|x|-|-|-|
-|libavif/1.0.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|libavif/0.11.1-foss-2022a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libavif/1.0.4-foss-2023a|-|x|x|x|-|-|
+|libavif/1.0.4-GCCcore-12.3.0|x|x|x|x|x|x|
+|libavif/0.11.1-foss-2022a|-|x|x|x|-|-|

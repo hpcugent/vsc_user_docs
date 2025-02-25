@@ -19,7 +19,7 @@ module load CellOracle/0.18.0-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CellOracle/0.18.0-foss-2023a|-|x|x|x|-|x|x|
-|CellOracle/0.12.0-foss-2022a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CellOracle/0.18.0-foss-2023a|-|x|x|x|-|x|
+|CellOracle/0.12.0-foss-2022a|-|x|x|x|-|-|

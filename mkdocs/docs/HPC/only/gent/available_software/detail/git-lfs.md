@@ -19,7 +19,7 @@ module load git-lfs/3.5.1
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|git-lfs/3.5.1|x|x|x|x|x|x|x|
-|git-lfs/3.2.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|git-lfs/3.5.1|x|x|x|x|x|x|
+|git-lfs/3.2.0|-|x|x|-|-|-|

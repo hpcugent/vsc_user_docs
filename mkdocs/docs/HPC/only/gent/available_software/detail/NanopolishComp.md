@@ -19,6 +19,6 @@ module load NanopolishComp/0.6.11-foss-2020a-Python-3.8.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NanopolishComp/0.6.11-foss-2020a-Python-3.8.2|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NanopolishComp/0.6.11-foss-2020a-Python-3.8.2|-|x|x|-|-|-|

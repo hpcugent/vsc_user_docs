@@ -19,6 +19,6 @@ module load p7zip/17.03-GCCcore-10.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|p7zip/17.03-GCCcore-10.2.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|p7zip/17.03-GCCcore-10.2.0|-|x|x|-|-|-|

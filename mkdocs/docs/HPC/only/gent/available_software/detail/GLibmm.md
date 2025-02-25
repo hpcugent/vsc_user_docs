@@ -19,7 +19,7 @@ module load GLibmm/2.66.4-GCCcore-10.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GLibmm/2.66.4-GCCcore-10.3.0|-|x|x|-|-|-|-|
-|GLibmm/2.49.7-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GLibmm/2.66.4-GCCcore-10.3.0|-|x|x|-|-|-|
+|GLibmm/2.49.7-GCCcore-8.3.0|-|x|x|-|-|-|

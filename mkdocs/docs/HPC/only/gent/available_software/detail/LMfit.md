@@ -19,6 +19,6 @@ module load LMfit/1.0.0-intel-2019b-Python-3.7.4
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LMfit/1.0.0-intel-2019b-Python-3.7.4|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LMfit/1.0.0-intel-2019b-Python-3.7.4|-|x|x|-|-|-|

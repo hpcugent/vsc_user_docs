@@ -19,9 +19,9 @@ module load AlphaPulldown/2.0.0b4-foss-2022a-CUDA-11.7.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|AlphaPulldown/2.0.0b4-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|-|
-|AlphaPulldown/2.0.0b4-foss-2022a|-|x|x|x|-|-|-|
-|AlphaPulldown/0.30.7-foss-2022a|-|-|x|-|-|-|-|
-|AlphaPulldown/0.30.4-foss-2020b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|AlphaPulldown/2.0.0b4-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|
+|AlphaPulldown/2.0.0b4-foss-2022a|-|x|x|x|-|-|
+|AlphaPulldown/0.30.7-foss-2022a|-|-|x|-|-|-|
+|AlphaPulldown/0.30.4-foss-2020b|-|x|x|x|-|-|

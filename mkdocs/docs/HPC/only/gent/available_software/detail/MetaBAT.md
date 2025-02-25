@@ -19,7 +19,7 @@ module load MetaBAT/2.15-gompi-2021b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MetaBAT/2.15-gompi-2021b|-|x|x|-|-|-|-|
-|MetaBAT/2.15-gompi-2020b-Python-2.7.18|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MetaBAT/2.15-gompi-2021b|-|x|x|-|-|-|
+|MetaBAT/2.15-gompi-2020b-Python-2.7.18|-|x|x|x|-|-|

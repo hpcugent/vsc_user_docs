@@ -19,6 +19,6 @@ module load smooth-topk/1.0-20210817-foss-2021a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|smooth-topk/1.0-20210817-foss-2021a|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|smooth-topk/1.0-20210817-foss-2021a|-|x|x|-|-|-|

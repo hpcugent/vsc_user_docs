@@ -19,7 +19,7 @@ module load imagecodecs/2024.1.1-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|imagecodecs/2024.1.1-foss-2023a|x|x|x|x|x|x|x|
-|imagecodecs/2022.9.26-foss-2022a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|imagecodecs/2024.1.1-foss-2023a|x|x|x|x|x|x|
+|imagecodecs/2022.9.26-foss-2022a|-|x|x|x|-|-|

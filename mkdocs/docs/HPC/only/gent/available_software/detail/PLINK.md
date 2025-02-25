@@ -19,7 +19,7 @@ module load PLINK/2.00a3.1-GCC-11.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PLINK/2.00a3.1-GCC-11.2.0|-|x|x|-|-|-|-|
-|PLINK/1.90-beta-7.4-x86_64|x|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PLINK/2.00a3.1-GCC-11.2.0|-|x|x|-|-|-|
+|PLINK/1.90-beta-7.4-x86_64|x|x|x|x|-|x|

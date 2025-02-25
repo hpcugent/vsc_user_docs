@@ -19,6 +19,6 @@ module load rMATS-long/1.0.0-20240502-foss-2023a-R-4.3.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rMATS-long/1.0.0-20240502-foss-2023a-R-4.3.2|-|x|x|x|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|rMATS-long/1.0.0-20240502-foss-2023a-R-4.3.2|-|x|x|x|-|-|

@@ -19,6 +19,6 @@ module load hyperopt/0.2.4-intel-2019b-Python-3.7.4-Java-1.8
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|hyperopt/0.2.4-intel-2019b-Python-3.7.4-Java-1.8|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|hyperopt/0.2.4-intel-2019b-Python-3.7.4-Java-1.8|-|x|x|-|-|-|

@@ -19,9 +19,9 @@ module load ArchR/1.0.2-foss-2023a-R-4.3.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ArchR/1.0.2-foss-2023a-R-4.3.2|-|x|x|x|-|x|x|
-|ArchR/1.0.2-foss-2022b-R-4.2.2|-|x|x|x|-|-|-|
-|ArchR/1.0.2-20220704-foss-2023a-R-4.3.2|-|x|x|x|-|x|x|
-|ArchR/1.0.1-foss-2021b-R-4.1.2|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ArchR/1.0.2-foss-2023a-R-4.3.2|-|x|x|x|-|x|
+|ArchR/1.0.2-foss-2022b-R-4.2.2|-|x|x|x|-|-|
+|ArchR/1.0.2-20220704-foss-2023a-R-4.3.2|-|x|x|x|-|x|
+|ArchR/1.0.1-foss-2021b-R-4.1.2|-|x|x|-|-|-|

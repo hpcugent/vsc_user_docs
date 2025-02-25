@@ -19,6 +19,6 @@ module load VarScan/2.4.4-Java-11
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VarScan/2.4.4-Java-11|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|VarScan/2.4.4-Java-11|-|x|x|-|-|-|

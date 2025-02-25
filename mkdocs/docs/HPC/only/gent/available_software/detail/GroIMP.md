@@ -19,6 +19,6 @@ module load GroIMP/1.5-Java-1.8
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GroIMP/1.5-Java-1.8|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GroIMP/1.5-Java-1.8|-|x|x|-|-|-|

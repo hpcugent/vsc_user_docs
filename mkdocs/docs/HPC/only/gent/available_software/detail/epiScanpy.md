@@ -19,8 +19,8 @@ module load epiScanpy/0.4.0-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|epiScanpy/0.4.0-foss-2023a|x|x|x|x|x|x|x|
-|epiScanpy/0.4.0-foss-2022a|-|x|x|x|-|-|-|
-|epiScanpy/0.3.1-foss-2021a|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|epiScanpy/0.4.0-foss-2023a|x|x|x|x|x|x|
+|epiScanpy/0.4.0-foss-2022a|-|x|x|x|-|-|
+|epiScanpy/0.3.1-foss-2021a|-|x|x|-|-|-|

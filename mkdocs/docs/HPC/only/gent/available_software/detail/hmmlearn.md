@@ -19,7 +19,7 @@ module load hmmlearn/0.3.0-gfbf-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|hmmlearn/0.3.0-gfbf-2023a|-|x|x|x|-|-|x|
-|hmmlearn/0.3.0-foss-2022b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|hmmlearn/0.3.0-gfbf-2023a|-|x|x|x|-|-|
+|hmmlearn/0.3.0-foss-2022b|-|x|x|x|-|-|

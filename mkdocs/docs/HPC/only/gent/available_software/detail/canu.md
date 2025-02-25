@@ -19,9 +19,9 @@ module load canu/2.2-GCCcore-11.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|canu/2.2-GCCcore-11.2.0|-|x|x|-|-|-|-|
-|canu/2.2-GCCcore-10.3.0|-|x|x|-|-|-|-|
-|canu/2.1.1-GCCcore-10.2.0|-|x|x|-|-|-|-|
-|canu/1.9-GCCcore-8.3.0-Java-11|-|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|canu/2.2-GCCcore-11.2.0|-|x|x|-|-|-|
+|canu/2.2-GCCcore-10.3.0|-|x|x|-|-|-|
+|canu/2.1.1-GCCcore-10.2.0|-|x|x|-|-|-|
+|canu/1.9-GCCcore-8.3.0-Java-11|-|-|x|-|-|-|

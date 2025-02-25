@@ -19,7 +19,7 @@ module load MEM/20191023-foss-2020a-R-4.0.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MEM/20191023-foss-2020a-R-4.0.0|-|-|x|-|-|-|-|
-|MEM/20191023-foss-2019b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MEM/20191023-foss-2020a-R-4.0.0|-|-|x|-|-|-|
+|MEM/20191023-foss-2019b|-|x|x|-|-|-|

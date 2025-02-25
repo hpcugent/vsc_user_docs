@@ -19,6 +19,6 @@ module load rstudio/1.3.959-foss-2020a-Java-11-R-4.0.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rstudio/1.3.959-foss-2020a-Java-11-R-4.0.0|-|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|rstudio/1.3.959-foss-2020a-Java-11-R-4.0.0|-|x|-|-|-|-|

@@ -19,6 +19,6 @@ module load AMAPVox/1.9.4-Java-11
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|AMAPVox/1.9.4-Java-11|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|AMAPVox/1.9.4-Java-11|-|x|x|-|-|-|

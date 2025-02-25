@@ -19,15 +19,15 @@ module load libgeotiff/1.7.3-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libgeotiff/1.7.3-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|libgeotiff/1.7.3-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|libgeotiff/1.7.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|libgeotiff/1.7.1-GCCcore-12.2.0|-|x|x|x|-|-|-|
-|libgeotiff/1.7.1-GCCcore-11.3.0|-|x|x|x|-|-|-|
-|libgeotiff/1.7.0-GCCcore-11.2.0|-|x|x|x|-|-|-|
-|libgeotiff/1.6.0-GCCcore-10.3.0|-|x|x|x|-|-|-|
-|libgeotiff/1.6.0-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|libgeotiff/1.5.1-GCCcore-9.3.0|-|x|x|-|-|-|-|
-|libgeotiff/1.5.1-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libgeotiff/1.7.3-GCCcore-13.3.0|x|x|x|x|x|x|
+|libgeotiff/1.7.3-GCCcore-13.2.0|x|x|x|x|x|x|
+|libgeotiff/1.7.1-GCCcore-12.3.0|x|x|x|x|x|x|
+|libgeotiff/1.7.1-GCCcore-12.2.0|-|x|x|x|-|-|
+|libgeotiff/1.7.1-GCCcore-11.3.0|-|x|x|x|-|-|
+|libgeotiff/1.7.0-GCCcore-11.2.0|-|x|x|x|-|-|
+|libgeotiff/1.6.0-GCCcore-10.3.0|-|x|x|x|-|-|
+|libgeotiff/1.6.0-GCCcore-10.2.0|-|x|x|x|-|-|
+|libgeotiff/1.5.1-GCCcore-9.3.0|-|x|x|-|-|-|
+|libgeotiff/1.5.1-GCCcore-8.3.0|-|x|x|-|-|-|

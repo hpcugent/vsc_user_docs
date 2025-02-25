@@ -19,6 +19,6 @@ module load RDP-Classifier/2.13-Java-11
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RDP-Classifier/2.13-Java-11|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RDP-Classifier/2.13-Java-11|-|x|x|-|-|-|

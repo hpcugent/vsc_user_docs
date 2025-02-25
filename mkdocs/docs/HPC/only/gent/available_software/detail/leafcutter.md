@@ -19,6 +19,6 @@ module load leafcutter/0.2.9-foss-2022b-R-4.2.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|leafcutter/0.2.9-foss-2022b-R-4.2.2|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|leafcutter/0.2.9-foss-2022b-R-4.2.2|-|x|x|x|-|-|

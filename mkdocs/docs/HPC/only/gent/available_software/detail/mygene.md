@@ -19,8 +19,8 @@ module load mygene/3.2.2-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mygene/3.2.2-foss-2023a|x|x|x|x|x|x|x|
-|mygene/3.2.2-foss-2022b|-|x|x|x|-|-|-|
-|mygene/3.2.2-foss-2022a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|mygene/3.2.2-foss-2023a|x|x|x|x|x|x|
+|mygene/3.2.2-foss-2022b|-|x|x|x|-|-|
+|mygene/3.2.2-foss-2022a|-|x|x|x|-|-|

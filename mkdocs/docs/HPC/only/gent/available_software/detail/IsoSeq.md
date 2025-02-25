@@ -19,7 +19,7 @@ module load IsoSeq/4.0.0-linux-x86_64
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|IsoSeq/4.0.0-linux-x86_64|-|x|x|x|-|-|-|
-|IsoSeq/3.8.2-linux-x86_64|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|IsoSeq/4.0.0-linux-x86_64|-|x|x|x|-|-|
+|IsoSeq/3.8.2-linux-x86_64|-|x|x|x|-|-|

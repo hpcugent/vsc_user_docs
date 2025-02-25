@@ -19,11 +19,11 @@ module load NiBabel/5.2.0-gfbf-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NiBabel/5.2.0-gfbf-2023a|x|x|x|x|x|x|x|
-|NiBabel/5.2.0-gfbf-2022b|-|x|x|x|-|-|-|
-|NiBabel/4.0.2-foss-2022a|-|x|x|x|-|-|-|
-|NiBabel/3.2.1-foss-2021a|-|x|x|-|-|-|-|
-|NiBabel/3.2.1-foss-2020b|-|x|x|x|-|-|-|
-|NiBabel/3.1.0-intel-2019b-Python-3.7.4|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NiBabel/5.2.0-gfbf-2023a|x|x|x|x|x|x|
+|NiBabel/5.2.0-gfbf-2022b|-|x|x|x|-|-|
+|NiBabel/4.0.2-foss-2022a|-|x|x|x|-|-|
+|NiBabel/3.2.1-foss-2021a|-|x|x|-|-|-|
+|NiBabel/3.2.1-foss-2020b|-|x|x|x|-|-|
+|NiBabel/3.1.0-intel-2019b-Python-3.7.4|-|x|x|-|-|-|

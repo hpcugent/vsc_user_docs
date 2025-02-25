@@ -19,9 +19,9 @@ module load ProtHint/2.6.0-GCC-11.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ProtHint/2.6.0-GCC-11.3.0|-|x|x|x|-|-|-|
-|ProtHint/2.6.0-GCC-11.2.0|-|x|x|x|-|-|-|
-|ProtHint/2.6.0-GCC-10.2.0|-|x|x|x|-|-|-|
-|ProtHint/2.4.0-iccifort-2019.5.281-Python-3.7.4|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ProtHint/2.6.0-GCC-11.3.0|-|x|x|x|-|-|
+|ProtHint/2.6.0-GCC-11.2.0|-|x|x|x|-|-|
+|ProtHint/2.6.0-GCC-10.2.0|-|x|x|x|-|-|
+|ProtHint/2.4.0-iccifort-2019.5.281-Python-3.7.4|-|x|x|-|-|-|

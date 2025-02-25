@@ -19,6 +19,6 @@ module load alevin-fry/0.4.3-GCCcore-11.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|alevin-fry/0.4.3-GCCcore-11.2.0|-|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|alevin-fry/0.4.3-GCCcore-11.2.0|-|x|-|-|-|-|

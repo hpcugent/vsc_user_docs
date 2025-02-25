@@ -19,8 +19,8 @@ module load any2fasta/0.4.2-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|any2fasta/0.4.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|any2fasta/0.4.2-GCCcore-10.2.0|-|x|x|-|-|-|-|
-|any2fasta/0.4.2-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|any2fasta/0.4.2-GCCcore-12.3.0|x|x|x|x|x|x|
+|any2fasta/0.4.2-GCCcore-10.2.0|-|x|x|-|-|-|
+|any2fasta/0.4.2-GCCcore-8.3.0|-|x|x|-|-|-|

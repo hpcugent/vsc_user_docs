@@ -19,6 +19,6 @@ module load misha/4.0.10-foss-2020a-R-4.0.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|misha/4.0.10-foss-2020a-R-4.0.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|misha/4.0.10-foss-2020a-R-4.0.0|-|x|x|-|-|-|

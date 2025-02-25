@@ -19,8 +19,8 @@ module load antiSMASH/6.0.1-foss-2020b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|antiSMASH/6.0.1-foss-2020b|-|x|x|x|-|-|-|
-|antiSMASH/5.2.0-foss-2020b|-|x|x|x|-|-|-|
-|antiSMASH/5.1.2-foss-2019b-Python-3.7.4|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|antiSMASH/6.0.1-foss-2020b|-|x|x|x|-|-|
+|antiSMASH/5.2.0-foss-2020b|-|x|x|x|-|-|
+|antiSMASH/5.1.2-foss-2019b-Python-3.7.4|-|x|x|-|-|-|

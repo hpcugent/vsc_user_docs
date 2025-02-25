@@ -19,10 +19,10 @@ module load SentencePiece/0.2.0-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SentencePiece/0.2.0-GCC-12.3.0|x|x|x|x|x|x|x|
-|SentencePiece/0.1.99-GCC-12.2.0|-|x|x|x|-|-|-|
-|SentencePiece/0.1.97-GCC-11.3.0|-|x|x|x|-|-|-|
-|SentencePiece/0.1.96-GCC-10.3.0|-|x|x|-|-|-|-|
-|SentencePiece/0.1.85-GCC-8.3.0-Python-3.7.4|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SentencePiece/0.2.0-GCC-12.3.0|x|x|x|x|x|x|
+|SentencePiece/0.1.99-GCC-12.2.0|-|x|x|x|-|-|
+|SentencePiece/0.1.97-GCC-11.3.0|-|x|x|x|-|-|
+|SentencePiece/0.1.96-GCC-10.3.0|-|x|x|-|-|-|
+|SentencePiece/0.1.85-GCC-8.3.0-Python-3.7.4|-|x|x|-|-|-|

@@ -19,7 +19,7 @@ module load fastai/2.7.15-foss-2022b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fastai/2.7.15-foss-2022b|-|x|x|x|-|-|-|
-|fastai/2.7.10-foss-2022a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|fastai/2.7.15-foss-2022b|-|x|x|x|-|-|
+|fastai/2.7.10-foss-2022a|-|x|x|x|-|-|

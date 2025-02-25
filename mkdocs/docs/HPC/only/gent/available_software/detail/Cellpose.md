@@ -19,7 +19,7 @@ module load Cellpose/2.2.2-foss-2022a-CUDA-11.7.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Cellpose/2.2.2-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|-|
-|Cellpose/2.2.2-foss-2022a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Cellpose/2.2.2-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|
+|Cellpose/2.2.2-foss-2022a|-|x|x|x|-|-|

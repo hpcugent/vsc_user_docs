@@ -19,6 +19,6 @@ module load json-fortran/9.0.2-GCC-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|json-fortran/9.0.2-GCC-13.2.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|json-fortran/9.0.2-GCC-13.2.0|x|x|x|x|x|x|

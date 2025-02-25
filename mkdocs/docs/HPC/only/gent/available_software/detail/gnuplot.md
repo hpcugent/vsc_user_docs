@@ -19,12 +19,12 @@ module load gnuplot/5.4.8-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gnuplot/5.4.8-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|gnuplot/5.4.4-GCCcore-11.3.0|-|x|x|x|-|-|-|
-|gnuplot/5.4.2-GCCcore-11.2.0|-|x|x|x|-|-|-|
-|gnuplot/5.4.2-GCCcore-10.3.0|-|x|x|x|-|-|-|
-|gnuplot/5.4.1-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|gnuplot/5.2.8-GCCcore-9.3.0|-|x|x|-|-|-|-|
-|gnuplot/5.2.8-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|gnuplot/5.4.8-GCCcore-12.3.0|x|x|x|x|x|x|
+|gnuplot/5.4.4-GCCcore-11.3.0|-|x|x|x|-|-|
+|gnuplot/5.4.2-GCCcore-11.2.0|-|x|x|x|-|-|
+|gnuplot/5.4.2-GCCcore-10.3.0|-|x|x|x|-|-|
+|gnuplot/5.4.1-GCCcore-10.2.0|-|x|x|x|-|-|
+|gnuplot/5.2.8-GCCcore-9.3.0|-|x|x|-|-|-|
+|gnuplot/5.2.8-GCCcore-8.3.0|-|x|x|-|-|-|

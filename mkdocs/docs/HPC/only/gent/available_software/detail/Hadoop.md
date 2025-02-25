@@ -19,8 +19,8 @@ module load Hadoop/2.10.0-GCCcore-10.2.0-native-Java-1.8
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Hadoop/2.10.0-GCCcore-10.2.0-native-Java-1.8|-|-|x|-|-|-|-|
-|Hadoop/2.10.0-GCCcore-10.2.0-native|-|x|-|-|-|-|-|
-|Hadoop/2.10.0-GCCcore-8.3.0-native|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Hadoop/2.10.0-GCCcore-10.2.0-native-Java-1.8|-|-|x|-|-|-|
+|Hadoop/2.10.0-GCCcore-10.2.0-native|-|x|-|-|-|-|
+|Hadoop/2.10.0-GCCcore-8.3.0-native|-|x|x|-|-|-|

@@ -19,7 +19,7 @@ module load Blosc2/2.8.0-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Blosc2/2.8.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|Blosc2/2.6.1-GCCcore-11.3.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Blosc2/2.8.0-GCCcore-12.3.0|x|x|x|x|x|x|
+|Blosc2/2.6.1-GCCcore-11.3.0|-|x|x|x|-|-|

@@ -19,7 +19,7 @@ module load Pyomo/6.7.3-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Pyomo/6.7.3-foss-2023a|x|x|x|x|x|x|x|
-|Pyomo/6.4.2-foss-2022a|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Pyomo/6.7.3-foss-2023a|x|x|x|x|x|x|
+|Pyomo/6.4.2-foss-2022a|-|x|x|-|-|-|

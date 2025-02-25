@@ -19,6 +19,6 @@ module load task-spooler/1.0.2-GCCcore-11.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|task-spooler/1.0.2-GCCcore-11.3.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|task-spooler/1.0.2-GCCcore-11.3.0|-|x|x|x|-|-|

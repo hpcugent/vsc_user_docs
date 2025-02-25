@@ -19,7 +19,7 @@ module load OpenImageIO/2.0.12-iimpi-2019b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenImageIO/2.0.12-iimpi-2019b|-|x|x|-|-|-|-|
-|OpenImageIO/2.0.12-gompi-2019b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OpenImageIO/2.0.12-iimpi-2019b|-|x|x|-|-|-|
+|OpenImageIO/2.0.12-gompi-2019b|-|x|x|-|-|-|

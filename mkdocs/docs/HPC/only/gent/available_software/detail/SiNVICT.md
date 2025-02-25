@@ -19,6 +19,6 @@ module load SiNVICT/1.0-20180817-GCC-9.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SiNVICT/1.0-20180817-GCC-9.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SiNVICT/1.0-20180817-GCC-9.3.0|-|x|x|-|-|-|

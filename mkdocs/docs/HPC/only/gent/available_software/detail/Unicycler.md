@@ -19,6 +19,6 @@ module load Unicycler/0.4.8-gompi-2020a-Python-3.8.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Unicycler/0.4.8-gompi-2020a-Python-3.8.2|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Unicycler/0.4.8-gompi-2020a-Python-3.8.2|-|x|x|-|-|-|

@@ -19,6 +19,6 @@ module load mauveAligner/4736-gompi-2020a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mauveAligner/4736-gompi-2020a|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|mauveAligner/4736-gompi-2020a|-|x|x|-|-|-|

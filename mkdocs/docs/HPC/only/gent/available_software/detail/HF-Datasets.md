@@ -19,7 +19,7 @@ module load HF-Datasets/2.18.0-gfbf-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HF-Datasets/2.18.0-gfbf-2023a|x|x|x|x|x|x|x|
-|HF-Datasets/2.14.4-gfbf-2022b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HF-Datasets/2.18.0-gfbf-2023a|x|x|x|x|x|x|
+|HF-Datasets/2.14.4-gfbf-2022b|-|x|x|x|-|-|

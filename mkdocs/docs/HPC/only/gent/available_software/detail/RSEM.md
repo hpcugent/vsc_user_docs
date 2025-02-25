@@ -19,8 +19,8 @@ module load RSEM/1.3.3-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RSEM/1.3.3-foss-2023a|-|x|x|x|x|x|x|
-|RSEM/1.3.3-foss-2022a|-|x|x|x|-|-|-|
-|RSEM/1.3.3-foss-2021b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RSEM/1.3.3-foss-2023a|-|x|x|x|x|x|
+|RSEM/1.3.3-foss-2022a|-|x|x|x|-|-|
+|RSEM/1.3.3-foss-2021b|-|x|x|x|-|-|

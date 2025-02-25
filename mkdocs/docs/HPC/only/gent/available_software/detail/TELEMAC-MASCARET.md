@@ -19,6 +19,6 @@ module load TELEMAC-MASCARET/8p3r1-foss-2021b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TELEMAC-MASCARET/8p3r1-foss-2021b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|TELEMAC-MASCARET/8p3r1-foss-2021b|-|x|x|-|-|-|

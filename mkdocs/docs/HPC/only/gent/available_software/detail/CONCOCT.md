@@ -19,6 +19,6 @@ module load CONCOCT/1.1.0-foss-2020b-Python-2.7.18
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CONCOCT/1.1.0-foss-2020b-Python-2.7.18|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CONCOCT/1.1.0-foss-2020b-Python-2.7.18|-|x|x|x|-|-|

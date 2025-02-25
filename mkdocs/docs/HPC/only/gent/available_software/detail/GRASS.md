@@ -19,7 +19,7 @@ module load GRASS/8.4.0-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GRASS/8.4.0-foss-2023a|x|x|x|x|x|x|x|
-|GRASS/8.2.0-foss-2021b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GRASS/8.4.0-foss-2023a|x|x|x|x|x|x|
+|GRASS/8.2.0-foss-2021b|-|x|x|x|-|-|

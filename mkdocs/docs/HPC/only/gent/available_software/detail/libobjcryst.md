@@ -19,7 +19,7 @@ module load libobjcryst/2021.1.2-foss-2021b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libobjcryst/2021.1.2-foss-2021b|-|x|x|-|-|-|-|
-|libobjcryst/2017.2.3-intel-2020a|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libobjcryst/2021.1.2-foss-2021b|-|x|x|-|-|-|
+|libobjcryst/2017.2.3-intel-2020a|-|x|x|-|-|-|

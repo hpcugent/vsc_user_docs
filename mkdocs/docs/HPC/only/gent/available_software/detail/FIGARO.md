@@ -19,6 +19,6 @@ module load FIGARO/1.1.2-intel-2020b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FIGARO/1.1.2-intel-2020b|-|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FIGARO/1.1.2-intel-2020b|-|-|x|-|-|-|

@@ -19,9 +19,9 @@ module load seqtk/1.4-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|seqtk/1.4-GCC-12.3.0|x|x|x|x|x|x|x|
-|seqtk/1.3-GCC-11.2.0|-|x|x|-|-|-|-|
-|seqtk/1.3-GCC-10.2.0|-|x|x|x|-|-|-|
-|seqtk/1.3-GCC-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|seqtk/1.4-GCC-12.3.0|x|x|x|x|x|x|
+|seqtk/1.3-GCC-11.2.0|-|x|x|-|-|-|
+|seqtk/1.3-GCC-10.2.0|-|x|x|x|-|-|
+|seqtk/1.3-GCC-8.3.0|-|x|x|-|-|-|

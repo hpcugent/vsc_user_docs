@@ -19,6 +19,6 @@ module load IEntropy/2024.06.12-foss-2023a-R-4.3.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|IEntropy/2024.06.12-foss-2023a-R-4.3.2|-|x|x|x|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|IEntropy/2024.06.12-foss-2023a-R-4.3.2|-|x|x|x|-|-|

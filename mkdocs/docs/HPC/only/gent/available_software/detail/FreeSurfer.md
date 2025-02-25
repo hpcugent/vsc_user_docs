@@ -19,7 +19,7 @@ module load FreeSurfer/7.3.2-centos8_x86_64
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FreeSurfer/7.3.2-centos8_x86_64|-|x|x|-|-|-|-|
-|FreeSurfer/7.2.0-centos8_x86_64|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FreeSurfer/7.3.2-centos8_x86_64|-|x|x|-|-|-|
+|FreeSurfer/7.2.0-centos8_x86_64|-|x|x|-|-|-|

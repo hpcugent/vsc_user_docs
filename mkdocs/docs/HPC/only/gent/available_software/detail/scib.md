@@ -19,7 +19,7 @@ module load scib/1.1.4-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scib/1.1.4-foss-2023a|x|x|x|x|x|x|x|
-|scib/1.1.3-foss-2021a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|scib/1.1.4-foss-2023a|x|x|x|x|x|x|
+|scib/1.1.3-foss-2021a|-|x|x|x|-|-|

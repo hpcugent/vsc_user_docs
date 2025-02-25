@@ -19,9 +19,9 @@ module load Archive-Zip/1.68-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Archive-Zip/1.68-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|Archive-Zip/1.68-GCCcore-11.3.0|-|x|x|-|-|-|-|
-|Archive-Zip/1.68-GCCcore-11.2.0|-|x|x|-|-|-|-|
-|Archive-Zip/1.68-GCCcore-10.2.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Archive-Zip/1.68-GCCcore-12.3.0|x|x|x|x|x|x|
+|Archive-Zip/1.68-GCCcore-11.3.0|-|x|x|-|-|-|
+|Archive-Zip/1.68-GCCcore-11.2.0|-|x|x|-|-|-|
+|Archive-Zip/1.68-GCCcore-10.2.0|-|x|x|x|-|-|

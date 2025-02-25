@@ -19,7 +19,7 @@ module load pod5-file-format/0.3.10-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pod5-file-format/0.3.10-foss-2023a|x|x|x|x|x|x|x|
-|pod5-file-format/0.1.8-foss-2022a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pod5-file-format/0.3.10-foss-2023a|x|x|x|x|x|x|
+|pod5-file-format/0.1.8-foss-2022a|-|x|x|x|-|-|

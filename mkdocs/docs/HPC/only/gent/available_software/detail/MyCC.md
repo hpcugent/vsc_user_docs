@@ -19,6 +19,6 @@ module load MyCC/2017-03-01-intel-2019b-Python-2.7.16
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MyCC/2017-03-01-intel-2019b-Python-2.7.16|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MyCC/2017-03-01-intel-2019b-Python-2.7.16|-|x|x|-|-|-|

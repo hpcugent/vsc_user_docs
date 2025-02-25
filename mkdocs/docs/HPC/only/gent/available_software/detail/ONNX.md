@@ -19,7 +19,7 @@ module load ONNX/1.15.0-gfbf-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ONNX/1.15.0-gfbf-2023a|x|x|x|x|x|x|x|
-|ONNX/1.15.0-foss-2022b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ONNX/1.15.0-gfbf-2023a|x|x|x|x|x|x|
+|ONNX/1.15.0-foss-2022b|-|x|x|x|-|-|

@@ -19,10 +19,10 @@ module load Salmon/1.10.3-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Salmon/1.10.3-GCC-12.3.0|-|x|x|x|x|x|x|
-|Salmon/1.9.0-GCC-11.3.0|-|x|x|x|-|-|-|
-|Salmon/1.4.0-gompi-2020b|-|x|x|x|-|-|-|
-|Salmon/1.4.0-GCC-11.2.0|-|x|x|x|-|-|-|
-|Salmon/1.1.0-gompi-2019b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Salmon/1.10.3-GCC-12.3.0|-|x|x|x|x|x|
+|Salmon/1.9.0-GCC-11.3.0|-|x|x|x|-|-|
+|Salmon/1.4.0-gompi-2020b|-|x|x|x|-|-|
+|Salmon/1.4.0-GCC-11.2.0|-|x|x|x|-|-|
+|Salmon/1.1.0-gompi-2019b|-|x|x|-|-|-|

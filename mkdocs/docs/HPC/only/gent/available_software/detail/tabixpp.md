@@ -19,8 +19,8 @@ module load tabixpp/1.1.2-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tabixpp/1.1.2-GCC-12.3.0|-|x|x|x|x|x|x|
-|tabixpp/1.1.2-GCC-11.3.0|-|x|x|x|-|-|-|
-|tabixpp/1.1.0-GCC-10.2.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tabixpp/1.1.2-GCC-12.3.0|-|x|x|x|x|x|
+|tabixpp/1.1.2-GCC-11.3.0|-|x|x|x|-|-|
+|tabixpp/1.1.0-GCC-10.2.0|-|x|x|-|-|-|

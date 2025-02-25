@@ -19,8 +19,8 @@ module load SNAP-ESA/10.0.0-Java-11
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SNAP-ESA/10.0.0-Java-11|x|x|x|x|-|x|x|
-|SNAP-ESA/9.0.0-Java-11|-|x|x|x|-|-|-|
-|SNAP-ESA/9.0.0-Java-1.8|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SNAP-ESA/10.0.0-Java-11|x|x|x|x|-|x|
+|SNAP-ESA/9.0.0-Java-11|-|x|x|x|-|-|
+|SNAP-ESA/9.0.0-Java-1.8|-|x|x|x|-|-|

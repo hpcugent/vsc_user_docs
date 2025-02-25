@@ -19,6 +19,6 @@ module load OpenForceField-Toolkit/0.16.0-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenForceField-Toolkit/0.16.0-foss-2023a|-|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OpenForceField-Toolkit/0.16.0-foss-2023a|-|x|x|x|-|x|

@@ -19,7 +19,7 @@ module load cicero/1.3.8-foss-2022a-R-4.2.1-Monocle3
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cicero/1.3.8-foss-2022a-R-4.2.1-Monocle3|-|x|x|x|-|-|-|
-|cicero/1.3.4.11-foss-2020b-R-4.0.3-Monocle3|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|cicero/1.3.8-foss-2022a-R-4.2.1-Monocle3|-|x|x|x|-|-|
+|cicero/1.3.4.11-foss-2020b-R-4.0.3-Monocle3|-|x|x|x|-|-|

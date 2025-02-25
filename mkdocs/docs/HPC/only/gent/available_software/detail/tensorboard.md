@@ -19,9 +19,9 @@ module load tensorboard/2.15.1-gfbf-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tensorboard/2.15.1-gfbf-2023a|x|x|x|x|x|x|x|
-|tensorboard/2.15.1-gfbf-2022b|-|x|x|x|-|-|-|
-|tensorboard/2.10.0-foss-2022a|-|x|x|x|-|x|-|
-|tensorboard/2.8.0-foss-2021a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tensorboard/2.15.1-gfbf-2023a|x|x|x|x|x|x|
+|tensorboard/2.15.1-gfbf-2022b|-|x|x|x|-|-|
+|tensorboard/2.10.0-foss-2022a|-|x|x|x|-|x|
+|tensorboard/2.8.0-foss-2021a|-|x|x|x|-|-|

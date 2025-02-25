@@ -19,8 +19,8 @@ module load WIEN2k/24.1-intel-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|WIEN2k/24.1-intel-2023a|x|x|x|x|x|x|x|
-|WIEN2k/21.1-intel-2021a|-|x|x|-|-|-|-|
-|WIEN2k/19.2-intel-2020b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|WIEN2k/24.1-intel-2023a|x|x|x|x|x|x|
+|WIEN2k/21.1-intel-2021a|-|x|x|-|-|-|
+|WIEN2k/19.2-intel-2020b|-|x|x|x|-|-|

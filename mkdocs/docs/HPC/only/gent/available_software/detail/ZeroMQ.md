@@ -19,14 +19,14 @@ module load ZeroMQ/4.3.5-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ZeroMQ/4.3.5-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|ZeroMQ/4.3.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|ZeroMQ/4.3.4-GCCcore-12.2.0|-|x|x|x|-|-|-|
-|ZeroMQ/4.3.4-GCCcore-11.3.0|-|x|x|x|-|x|-|
-|ZeroMQ/4.3.4-GCCcore-11.2.0|-|x|x|x|-|-|-|
-|ZeroMQ/4.3.4-GCCcore-10.3.0|-|x|x|x|-|-|-|
-|ZeroMQ/4.3.3-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|ZeroMQ/4.3.2-GCCcore-9.3.0|-|x|x|x|-|-|-|
-|ZeroMQ/4.3.2-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ZeroMQ/4.3.5-GCCcore-13.2.0|x|x|x|x|x|x|
+|ZeroMQ/4.3.4-GCCcore-12.3.0|x|x|x|x|x|x|
+|ZeroMQ/4.3.4-GCCcore-12.2.0|-|x|x|x|-|-|
+|ZeroMQ/4.3.4-GCCcore-11.3.0|-|x|x|x|-|x|
+|ZeroMQ/4.3.4-GCCcore-11.2.0|-|x|x|x|-|-|
+|ZeroMQ/4.3.4-GCCcore-10.3.0|-|x|x|x|-|-|
+|ZeroMQ/4.3.3-GCCcore-10.2.0|-|x|x|x|-|-|
+|ZeroMQ/4.3.2-GCCcore-9.3.0|-|x|x|x|-|-|
+|ZeroMQ/4.3.2-GCCcore-8.3.0|-|x|x|-|-|-|

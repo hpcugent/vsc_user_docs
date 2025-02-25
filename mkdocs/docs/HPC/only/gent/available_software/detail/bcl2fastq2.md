@@ -19,7 +19,7 @@ module load bcl2fastq2/2.20.0-GCC-11.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bcl2fastq2/2.20.0-GCC-11.2.0|-|x|x|-|-|-|-|
-|bcl2fastq2/2.20.0-GCC-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|bcl2fastq2/2.20.0-GCC-11.2.0|-|x|x|-|-|-|
+|bcl2fastq2/2.20.0-GCC-8.3.0|-|x|x|-|-|-|

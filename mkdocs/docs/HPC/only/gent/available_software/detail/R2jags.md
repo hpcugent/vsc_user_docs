@@ -19,6 +19,6 @@ module load R2jags/0.7-1-foss-2022a-R-4.2.1
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|R2jags/0.7-1-foss-2022a-R-4.2.1|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|R2jags/0.7-1-foss-2022a-R-4.2.1|-|x|x|x|-|-|

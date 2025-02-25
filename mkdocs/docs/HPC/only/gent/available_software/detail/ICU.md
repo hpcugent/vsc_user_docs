@@ -19,15 +19,15 @@ module load ICU/75.1-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ICU/75.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|ICU/74.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|ICU/73.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|ICU/72.1-GCCcore-12.2.0|-|x|x|x|-|x|-|
-|ICU/71.1-GCCcore-11.3.0|-|x|x|x|-|x|-|
-|ICU/69.1-GCCcore-11.2.0|-|x|x|x|-|-|-|
-|ICU/69.1-GCCcore-10.3.0|-|x|x|x|-|-|-|
-|ICU/67.1-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|ICU/66.1-GCCcore-9.3.0|-|x|x|-|-|-|-|
-|ICU/64.2-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ICU/75.1-GCCcore-13.3.0|x|x|x|x|x|x|
+|ICU/74.1-GCCcore-13.2.0|x|x|x|x|x|x|
+|ICU/73.2-GCCcore-12.3.0|x|x|x|x|x|x|
+|ICU/72.1-GCCcore-12.2.0|-|x|x|x|-|x|
+|ICU/71.1-GCCcore-11.3.0|-|x|x|x|-|x|
+|ICU/69.1-GCCcore-11.2.0|-|x|x|x|-|-|
+|ICU/69.1-GCCcore-10.3.0|-|x|x|x|-|-|
+|ICU/67.1-GCCcore-10.2.0|-|x|x|x|-|-|
+|ICU/66.1-GCCcore-9.3.0|-|x|x|-|-|-|
+|ICU/64.2-GCCcore-8.3.0|-|x|x|-|-|-|

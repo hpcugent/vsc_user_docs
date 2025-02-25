@@ -19,7 +19,7 @@ module load code-cli/1.93.1-x64
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|code-cli/1.93.1-x64|x|x|x|x|-|x|x|
-|code-cli/1.85.1-x64|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|code-cli/1.93.1-x64|x|x|x|x|-|x|
+|code-cli/1.85.1-x64|-|x|x|x|-|-|

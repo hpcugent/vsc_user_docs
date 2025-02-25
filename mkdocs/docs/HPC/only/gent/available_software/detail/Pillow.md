@@ -19,16 +19,16 @@ module load Pillow/10.4.0-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Pillow/10.4.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|Pillow/10.2.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|Pillow/10.0.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|Pillow/9.4.0-GCCcore-12.2.0|-|x|x|x|-|x|-|
-|Pillow/9.1.1-GCCcore-11.3.0|-|x|x|x|-|x|-|
-|Pillow/8.3.2-GCCcore-11.2.0|-|x|x|x|-|-|-|
-|Pillow/8.3.1-GCCcore-11.2.0|-|x|x|-|-|-|-|
-|Pillow/8.2.0-GCCcore-10.3.0|-|x|x|x|-|-|-|
-|Pillow/8.0.1-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|Pillow/7.0.0-GCCcore-9.3.0-Python-3.8.2|-|x|x|-|-|-|-|
-|Pillow/6.2.1-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Pillow/10.4.0-GCCcore-13.3.0|x|x|x|x|x|x|
+|Pillow/10.2.0-GCCcore-13.2.0|x|x|x|x|x|x|
+|Pillow/10.0.0-GCCcore-12.3.0|x|x|x|x|x|x|
+|Pillow/9.4.0-GCCcore-12.2.0|-|x|x|x|-|x|
+|Pillow/9.1.1-GCCcore-11.3.0|-|x|x|x|-|x|
+|Pillow/8.3.2-GCCcore-11.2.0|-|x|x|x|-|-|
+|Pillow/8.3.1-GCCcore-11.2.0|-|x|x|-|-|-|
+|Pillow/8.2.0-GCCcore-10.3.0|-|x|x|x|-|-|
+|Pillow/8.0.1-GCCcore-10.2.0|-|x|x|x|-|-|
+|Pillow/7.0.0-GCCcore-9.3.0-Python-3.8.2|-|x|x|-|-|-|
+|Pillow/6.2.1-GCCcore-8.3.0|-|x|x|-|-|-|

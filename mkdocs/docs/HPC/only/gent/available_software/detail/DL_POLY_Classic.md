@@ -19,7 +19,7 @@ module load DL_POLY_Classic/1.10-intel-2019b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DL_POLY_Classic/1.10-intel-2019b|-|x|x|-|-|-|-|
-|DL_POLY_Classic/1.10-foss-2019b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DL_POLY_Classic/1.10-intel-2019b|-|x|x|-|-|-|
+|DL_POLY_Classic/1.10-foss-2019b|-|x|x|-|-|-|

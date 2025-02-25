@@ -19,6 +19,6 @@ module load AutoMap/1.0-foss-2019b-20200324
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|AutoMap/1.0-foss-2019b-20200324|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|AutoMap/1.0-foss-2019b-20200324|-|x|x|-|-|-|

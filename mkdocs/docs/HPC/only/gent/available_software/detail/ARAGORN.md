@@ -19,7 +19,7 @@ module load ARAGORN/1.2.41-foss-2021b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ARAGORN/1.2.41-foss-2021b|-|x|x|-|-|-|-|
-|ARAGORN/1.2.38-iccifort-2019.5.281|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ARAGORN/1.2.41-foss-2021b|-|x|x|-|-|-|
+|ARAGORN/1.2.38-iccifort-2019.5.281|-|x|x|-|-|-|

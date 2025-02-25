@@ -19,14 +19,14 @@ module load DBus/1.15.8-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DBus/1.15.8-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|DBus/1.15.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|DBus/1.15.2-GCCcore-12.2.0|-|x|x|x|-|-|-|
-|DBus/1.14.0-GCCcore-11.3.0|-|x|x|x|-|-|-|
-|DBus/1.13.18-GCCcore-11.2.0|-|x|x|x|-|-|-|
-|DBus/1.13.18-GCCcore-10.3.0|-|x|x|x|-|-|-|
-|DBus/1.13.18-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|DBus/1.13.12-GCCcore-9.3.0|-|x|x|-|-|-|-|
-|DBus/1.13.12-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DBus/1.15.8-GCCcore-13.2.0|x|x|x|x|x|x|
+|DBus/1.15.4-GCCcore-12.3.0|x|x|x|x|x|x|
+|DBus/1.15.2-GCCcore-12.2.0|-|x|x|x|-|-|
+|DBus/1.14.0-GCCcore-11.3.0|-|x|x|x|-|-|
+|DBus/1.13.18-GCCcore-11.2.0|-|x|x|x|-|-|
+|DBus/1.13.18-GCCcore-10.3.0|-|x|x|x|-|-|
+|DBus/1.13.18-GCCcore-10.2.0|-|x|x|x|-|-|
+|DBus/1.13.12-GCCcore-9.3.0|-|x|x|-|-|-|
+|DBus/1.13.12-GCCcore-8.3.0|-|x|x|-|-|-|

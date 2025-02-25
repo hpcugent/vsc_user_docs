@@ -19,6 +19,6 @@ module load Levenshtein/0.24.0-GCCcore-12.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Levenshtein/0.24.0-GCCcore-12.2.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Levenshtein/0.24.0-GCCcore-12.2.0|-|x|x|x|-|-|

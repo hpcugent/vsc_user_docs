@@ -19,6 +19,6 @@ module load horton/2.1.1-intel-2020a-Python-2.7.18
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|horton/2.1.1-intel-2020a-Python-2.7.18|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|horton/2.1.1-intel-2020a-Python-2.7.18|-|x|x|-|-|-|

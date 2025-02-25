@@ -19,9 +19,9 @@ module load HDDM/0.9.9-intel-2021b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HDDM/0.9.9-intel-2021b|-|x|x|x|-|-|-|
-|HDDM/0.9.9-foss-2021b|-|x|x|x|-|-|-|
-|HDDM/0.7.5-intel-2019b-Python-3.7.4|-|x|-|-|-|-|-|
-|HDDM/0.7.5-intel-2019b-Python-2.7.16|-|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HDDM/0.9.9-intel-2021b|-|x|x|x|-|-|
+|HDDM/0.9.9-foss-2021b|-|x|x|x|-|-|
+|HDDM/0.7.5-intel-2019b-Python-3.7.4|-|x|-|-|-|-|
+|HDDM/0.7.5-intel-2019b-Python-2.7.16|-|x|-|-|-|-|

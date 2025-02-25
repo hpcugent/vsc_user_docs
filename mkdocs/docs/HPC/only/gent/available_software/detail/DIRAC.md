@@ -19,7 +19,7 @@ module load DIRAC/19.0-intel-2020a-Python-2.7.18-mpi-int64
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DIRAC/19.0-intel-2020a-Python-2.7.18-mpi-int64|-|x|x|-|-|-|-|
-|DIRAC/19.0-intel-2020a-Python-2.7.18-int64|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DIRAC/19.0-intel-2020a-Python-2.7.18-mpi-int64|-|x|x|-|-|-|
+|DIRAC/19.0-intel-2020a-Python-2.7.18-int64|-|x|x|-|-|-|

@@ -19,10 +19,10 @@ module load coverage/7.4.4-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|coverage/7.4.4-GCCcore-13.2.0|x|x|x|x|x|-|x|
-|coverage/7.2.7-GCCcore-11.3.0|-|x|x|x|-|-|-|
-|coverage/7.2.3-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|coverage/7.2.3-GCCcore-12.2.0|-|x|x|x|-|-|-|
-|coverage/5.5-GCCcore-10.2.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|coverage/7.4.4-GCCcore-13.2.0|x|x|x|x|x|-|
+|coverage/7.2.7-GCCcore-11.3.0|-|x|x|x|-|-|
+|coverage/7.2.3-GCCcore-12.3.0|x|x|x|x|x|x|
+|coverage/7.2.3-GCCcore-12.2.0|-|x|x|x|-|-|
+|coverage/5.5-GCCcore-10.2.0|-|x|x|-|-|-|

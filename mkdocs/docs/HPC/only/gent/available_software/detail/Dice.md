@@ -19,8 +19,8 @@ module load Dice/20240702-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Dice/20240702-foss-2023a|x|x|x|x|x|x|x|
-|Dice/20240101-foss-2022b|-|x|x|x|-|-|-|
-|Dice/20221025-foss-2022a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Dice/20240702-foss-2023a|x|x|x|x|x|x|
+|Dice/20240101-foss-2022b|-|x|x|x|-|-|
+|Dice/20221025-foss-2022a|-|x|x|x|-|-|

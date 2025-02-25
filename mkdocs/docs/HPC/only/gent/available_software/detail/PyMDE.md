@@ -19,7 +19,7 @@ module load PyMDE/0.1.18-foss-2022a-CUDA-11.7.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyMDE/0.1.18-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|-|
-|PyMDE/0.1.18-foss-2022a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyMDE/0.1.18-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|
+|PyMDE/0.1.18-foss-2022a|-|x|x|x|-|-|

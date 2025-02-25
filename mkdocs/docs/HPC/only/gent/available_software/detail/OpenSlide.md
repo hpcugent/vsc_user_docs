@@ -19,10 +19,10 @@ module load OpenSlide/3.4.1-GCCcore-12.3.0-largefiles
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenSlide/3.4.1-GCCcore-12.3.0-largefiles|x|x|x|x|x|x|x|
-|OpenSlide/3.4.1-GCCcore-12.2.0-largefiles|-|x|x|x|-|-|-|
-|OpenSlide/3.4.1-GCCcore-11.3.0-largefiles|-|x|x|x|-|-|-|
-|OpenSlide/3.4.1-GCCcore-11.2.0|-|x|x|-|-|-|-|
-|OpenSlide/3.4.1-GCCcore-10.3.0-largefiles|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OpenSlide/3.4.1-GCCcore-12.3.0-largefiles|x|x|x|x|x|x|
+|OpenSlide/3.4.1-GCCcore-12.2.0-largefiles|-|x|x|x|-|-|
+|OpenSlide/3.4.1-GCCcore-11.3.0-largefiles|-|x|x|x|-|-|
+|OpenSlide/3.4.1-GCCcore-11.2.0|-|x|x|-|-|-|
+|OpenSlide/3.4.1-GCCcore-10.3.0-largefiles|-|x|x|-|-|-|

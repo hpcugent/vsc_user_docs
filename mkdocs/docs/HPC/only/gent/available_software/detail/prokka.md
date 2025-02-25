@@ -19,7 +19,7 @@ module load prokka/1.14.5-gompi-2020b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|prokka/1.14.5-gompi-2020b|-|x|x|x|-|-|-|
-|prokka/1.14.5-gompi-2019b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|prokka/1.14.5-gompi-2020b|-|x|x|x|-|-|
+|prokka/1.14.5-gompi-2019b|-|x|x|-|-|-|

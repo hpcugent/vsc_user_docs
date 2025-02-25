@@ -19,11 +19,11 @@ module load ParMETIS/4.0.3-iimpi-2020a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ParMETIS/4.0.3-iimpi-2020a|-|x|x|-|-|-|-|
-|ParMETIS/4.0.3-iimpi-2019b|-|x|x|-|-|-|-|
-|ParMETIS/4.0.3-gompi-2023a|-|x|x|x|-|x|x|
-|ParMETIS/4.0.3-gompi-2022a|-|x|x|x|-|-|-|
-|ParMETIS/4.0.3-gompi-2021a|-|x|x|-|-|-|-|
-|ParMETIS/4.0.3-gompi-2019b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ParMETIS/4.0.3-iimpi-2020a|-|x|x|-|-|-|
+|ParMETIS/4.0.3-iimpi-2019b|-|x|x|-|-|-|
+|ParMETIS/4.0.3-gompi-2023a|-|x|x|x|-|x|
+|ParMETIS/4.0.3-gompi-2022a|-|x|x|x|-|-|
+|ParMETIS/4.0.3-gompi-2021a|-|x|x|-|-|-|
+|ParMETIS/4.0.3-gompi-2019b|-|x|x|-|-|-|

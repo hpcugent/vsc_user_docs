@@ -19,6 +19,6 @@ module load m4ri/20200125-GCC-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|m4ri/20200125-GCC-13.2.0|-|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|m4ri/20200125-GCC-13.2.0|-|x|x|x|x|x|

@@ -19,9 +19,9 @@ module load iompi/2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|iompi/2023a|x|x|x|x|x|x|x|
-|iompi/2021a|-|x|x|x|-|-|-|
-|iompi/2020b|-|x|x|x|-|-|-|
-|iompi/2020a|-|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|iompi/2023a|x|x|x|x|x|x|
+|iompi/2021a|-|x|x|x|-|-|
+|iompi/2020b|-|x|x|x|-|-|
+|iompi/2020a|-|x|-|-|-|-|

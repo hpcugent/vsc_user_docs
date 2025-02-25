@@ -19,8 +19,8 @@ module load MUMmer/4.0.0rc1-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MUMmer/4.0.0rc1-GCCcore-12.3.0|-|x|x|x|x|x|x|
-|MUMmer/4.0.0beta2-GCCcore-11.2.0|-|x|x|-|-|-|-|
-|MUMmer/4.0.0beta2-GCCcore-10.2.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MUMmer/4.0.0rc1-GCCcore-12.3.0|-|x|x|x|x|x|
+|MUMmer/4.0.0beta2-GCCcore-11.2.0|-|x|x|-|-|-|
+|MUMmer/4.0.0beta2-GCCcore-10.2.0|-|x|x|x|-|-|

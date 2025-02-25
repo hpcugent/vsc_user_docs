@@ -19,7 +19,7 @@ module load nbclassic/1.0.0-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nbclassic/1.0.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|nbclassic/1.0.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|nbclassic/1.0.0-GCCcore-13.2.0|x|x|x|x|x|x|
+|nbclassic/1.0.0-GCCcore-12.3.0|x|x|x|x|x|x|

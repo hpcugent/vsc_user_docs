@@ -19,10 +19,10 @@ module load BLAT/3.7-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BLAT/3.7-GCC-12.3.0|-|x|x|x|x|x|x|
-|BLAT/3.7-GCC-11.3.0|-|x|x|x|-|-|-|
-|BLAT/3.7-GCC-11.2.0|-|x|x|x|-|-|-|
-|BLAT/3.5-GCC-9.3.0|-|x|x|-|-|-|-|
-|BLAT/3.5-GCC-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BLAT/3.7-GCC-12.3.0|-|x|x|x|x|x|
+|BLAT/3.7-GCC-11.3.0|-|x|x|x|-|-|
+|BLAT/3.7-GCC-11.2.0|-|x|x|x|-|-|
+|BLAT/3.5-GCC-9.3.0|-|x|x|-|-|-|
+|BLAT/3.5-GCC-8.3.0|-|x|x|-|-|-|

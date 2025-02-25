@@ -19,8 +19,8 @@ module load PyCheMPS2/1.8.12-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyCheMPS2/1.8.12-foss-2023a|x|x|x|x|x|x|x|
-|PyCheMPS2/1.8.12-foss-2022b|-|x|x|x|-|-|-|
-|PyCheMPS2/1.8.12-foss-2022a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyCheMPS2/1.8.12-foss-2023a|x|x|x|x|x|x|
+|PyCheMPS2/1.8.12-foss-2022b|-|x|x|x|-|-|
+|PyCheMPS2/1.8.12-foss-2022a|-|x|x|x|-|-|

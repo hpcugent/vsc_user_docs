@@ -19,6 +19,6 @@ module load umi4cPackage/20200116-foss-2020a-R-4.0.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|umi4cPackage/20200116-foss-2020a-R-4.0.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|umi4cPackage/20200116-foss-2020a-R-4.0.0|-|x|x|-|-|-|

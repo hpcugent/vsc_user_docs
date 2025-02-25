@@ -19,15 +19,15 @@ module load LibTIFF/4.6.0-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LibTIFF/4.6.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|LibTIFF/4.6.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|LibTIFF/4.5.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|LibTIFF/4.4.0-GCCcore-12.2.0|-|x|x|x|-|x|-|
-|LibTIFF/4.3.0-GCCcore-11.3.0|-|x|x|x|-|x|-|
-|LibTIFF/4.3.0-GCCcore-11.2.0|-|x|x|x|-|-|-|
-|LibTIFF/4.2.0-GCCcore-10.3.0|-|x|x|x|-|-|-|
-|LibTIFF/4.1.0-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|LibTIFF/4.1.0-GCCcore-9.3.0|-|x|x|-|-|-|-|
-|LibTIFF/4.0.10-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LibTIFF/4.6.0-GCCcore-13.3.0|x|x|x|x|x|x|
+|LibTIFF/4.6.0-GCCcore-13.2.0|x|x|x|x|x|x|
+|LibTIFF/4.5.0-GCCcore-12.3.0|x|x|x|x|x|x|
+|LibTIFF/4.4.0-GCCcore-12.2.0|-|x|x|x|-|x|
+|LibTIFF/4.3.0-GCCcore-11.3.0|-|x|x|x|-|x|
+|LibTIFF/4.3.0-GCCcore-11.2.0|-|x|x|x|-|-|
+|LibTIFF/4.2.0-GCCcore-10.3.0|-|x|x|x|-|-|
+|LibTIFF/4.1.0-GCCcore-10.2.0|-|x|x|x|-|-|
+|LibTIFF/4.1.0-GCCcore-9.3.0|-|x|x|-|-|-|
+|LibTIFF/4.0.10-GCCcore-8.3.0|-|x|x|-|-|-|

@@ -19,7 +19,7 @@ module load TOBIAS/0.16.1-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TOBIAS/0.16.1-foss-2023a|-|x|x|x|-|x|x|
-|TOBIAS/0.12.12-foss-2021b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|TOBIAS/0.16.1-foss-2023a|-|x|x|x|-|x|
+|TOBIAS/0.12.12-foss-2021b|-|x|x|-|-|-|

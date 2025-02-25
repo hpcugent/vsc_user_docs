@@ -19,8 +19,8 @@ module load Bio-DB-HTS/3.01-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Bio-DB-HTS/3.01-GCC-12.3.0|x|x|x|x|x|x|x|
-|Bio-DB-HTS/3.01-GCC-11.3.0|-|x|x|-|-|-|-|
-|Bio-DB-HTS/3.01-GCC-11.2.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Bio-DB-HTS/3.01-GCC-12.3.0|x|x|x|x|x|x|
+|Bio-DB-HTS/3.01-GCC-11.3.0|-|x|x|-|-|-|
+|Bio-DB-HTS/3.01-GCC-11.2.0|-|x|x|-|-|-|

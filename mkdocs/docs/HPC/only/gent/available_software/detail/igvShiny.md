@@ -19,6 +19,6 @@ module load igvShiny/20240112-foss-2022a-R-4.2.1
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|igvShiny/20240112-foss-2022a-R-4.2.1|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|igvShiny/20240112-foss-2022a-R-4.2.1|-|x|x|x|-|-|

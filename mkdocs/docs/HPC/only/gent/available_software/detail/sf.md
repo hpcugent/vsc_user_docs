@@ -19,6 +19,6 @@ module load sf/0.9-5-foss-2020a-R-4.0.0-Python-3.8.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|sf/0.9-5-foss-2020a-R-4.0.0-Python-3.8.2|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|sf/0.9-5-foss-2020a-R-4.0.0-Python-3.8.2|-|x|x|-|-|-|

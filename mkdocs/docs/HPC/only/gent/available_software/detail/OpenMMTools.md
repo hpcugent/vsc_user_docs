@@ -19,6 +19,6 @@ module load OpenMMTools/0.20.0-intel-2020a-Python-3.8.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenMMTools/0.20.0-intel-2020a-Python-3.8.2|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OpenMMTools/0.20.0-intel-2020a-Python-3.8.2|-|x|x|-|-|-|

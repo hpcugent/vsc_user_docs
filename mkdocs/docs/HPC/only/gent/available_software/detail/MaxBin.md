@@ -19,7 +19,7 @@ module load MaxBin/2.2.7-gompi-2021b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MaxBin/2.2.7-gompi-2021b|-|x|x|-|-|-|-|
-|MaxBin/2.2.7-gompi-2020b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MaxBin/2.2.7-gompi-2021b|-|x|x|-|-|-|
+|MaxBin/2.2.7-gompi-2020b|-|x|x|x|-|-|

@@ -19,7 +19,7 @@ module load SIP/6.8.3-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SIP/6.8.3-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|SIP/6.8.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SIP/6.8.3-GCCcore-13.2.0|x|x|x|x|x|x|
+|SIP/6.8.1-GCCcore-12.3.0|x|x|x|x|x|x|

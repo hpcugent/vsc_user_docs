@@ -19,8 +19,8 @@ module load WebKitGTK+/2.41.4-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|WebKitGTK+/2.41.4-foss-2023a|x|x|x|x|x|x|x|
-|WebKitGTK+/2.37.1-GCC-11.2.0|-|x|x|x|-|-|-|
-|WebKitGTK+/2.27.4-GCC-10.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|WebKitGTK+/2.41.4-foss-2023a|x|x|x|x|x|x|
+|WebKitGTK+/2.37.1-GCC-11.2.0|-|x|x|x|-|-|
+|WebKitGTK+/2.27.4-GCC-10.3.0|-|x|x|-|-|-|
