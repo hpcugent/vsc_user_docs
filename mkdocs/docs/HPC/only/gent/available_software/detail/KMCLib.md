@@ -19,6 +19,6 @@ module load KMCLib/2.0-a2-foss-2023a-Python-2.7.18
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|KMCLib/2.0-a2-foss-2023a-Python-2.7.18|-|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|KMCLib/2.0-a2-foss-2023a-Python-2.7.18|-|x|x|x|-|x|

@@ -19,8 +19,8 @@ module load psycopg2/2.9.9-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|psycopg2/2.9.9-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|psycopg2/2.9.6-GCCcore-11.3.0|-|x|x|x|-|-|-|
-|psycopg2/2.9.5-GCCcore-11.2.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|psycopg2/2.9.9-GCCcore-12.3.0|x|x|x|x|x|x|
+|psycopg2/2.9.6-GCCcore-11.3.0|-|x|x|x|-|-|
+|psycopg2/2.9.5-GCCcore-11.2.0|-|x|x|x|-|-|

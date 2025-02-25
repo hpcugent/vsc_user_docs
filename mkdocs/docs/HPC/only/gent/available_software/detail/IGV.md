@@ -19,9 +19,9 @@ module load IGV/2.19.1-Java-17
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|IGV/2.19.1-Java-17|x|x|x|x|-|x|x|
-|IGV/2.16.0-Java-11|x|x|x|x|-|x|x|
-|IGV/2.9.4-Java-11|-|x|x|-|-|-|-|
-|IGV/2.8.0-Java-11|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|IGV/2.19.1-Java-17|x|x|x|x|-|x|
+|IGV/2.16.0-Java-11|x|x|x|x|-|x|
+|IGV/2.9.4-Java-11|-|x|x|-|-|-|
+|IGV/2.8.0-Java-11|-|x|x|-|-|-|

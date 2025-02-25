@@ -19,7 +19,7 @@ module load LAST/1179-GCC-10.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LAST/1179-GCC-10.2.0|-|x|x|x|-|-|-|
-|LAST/1045-intel-2019b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LAST/1179-GCC-10.2.0|-|x|x|x|-|-|
+|LAST/1045-intel-2019b|-|x|x|-|-|-|

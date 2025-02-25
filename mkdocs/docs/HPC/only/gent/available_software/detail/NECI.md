@@ -19,8 +19,8 @@ module load NECI/20230620-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NECI/20230620-foss-2023a|x|x|x|x|x|x|x|
-|NECI/20230620-foss-2022b|-|x|x|x|-|-|-|
-|NECI/20220711-foss-2022a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NECI/20230620-foss-2023a|x|x|x|x|x|x|
+|NECI/20230620-foss-2022b|-|x|x|x|-|-|
+|NECI/20220711-foss-2022a|-|x|x|x|-|-|

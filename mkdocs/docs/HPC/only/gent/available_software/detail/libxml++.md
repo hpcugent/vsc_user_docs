@@ -19,7 +19,7 @@ module load libxml++/2.42.1-GCC-10.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libxml++/2.42.1-GCC-10.3.0|-|x|x|-|-|-|-|
-|libxml++/2.40.1-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libxml++/2.42.1-GCC-10.3.0|-|x|x|-|-|-|
+|libxml++/2.40.1-GCCcore-8.3.0|-|x|x|-|-|-|

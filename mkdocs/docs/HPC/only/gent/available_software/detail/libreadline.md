@@ -19,16 +19,16 @@ module load libreadline/8.2-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libreadline/8.2-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|libreadline/8.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|libreadline/8.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|libreadline/8.2-GCCcore-12.2.0|-|x|x|x|-|x|-|
-|libreadline/8.1.2-GCCcore-11.3.0|-|x|x|x|-|x|-|
-|libreadline/8.1-GCCcore-11.2.0|-|x|x|x|-|x|-|
-|libreadline/8.1-GCCcore-10.3.0|-|x|x|x|-|-|-|
-|libreadline/8.0-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|libreadline/8.0-GCCcore-9.3.0|-|x|x|x|-|-|-|
-|libreadline/8.0-GCCcore-8.3.0|-|x|x|x|-|-|-|
-|libreadline/8.0-GCCcore-8.2.0|-|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libreadline/8.2-GCCcore-13.3.0|x|x|x|x|x|x|
+|libreadline/8.2-GCCcore-13.2.0|x|x|x|x|x|x|
+|libreadline/8.2-GCCcore-12.3.0|x|x|x|x|x|x|
+|libreadline/8.2-GCCcore-12.2.0|-|x|x|x|-|x|
+|libreadline/8.1.2-GCCcore-11.3.0|-|x|x|x|-|x|
+|libreadline/8.1-GCCcore-11.2.0|-|x|x|x|-|x|
+|libreadline/8.1-GCCcore-10.3.0|-|x|x|x|-|-|
+|libreadline/8.0-GCCcore-10.2.0|-|x|x|x|-|-|
+|libreadline/8.0-GCCcore-9.3.0|-|x|x|x|-|-|
+|libreadline/8.0-GCCcore-8.3.0|-|x|x|x|-|-|
+|libreadline/8.0-GCCcore-8.2.0|-|x|-|-|-|-|

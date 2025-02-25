@@ -19,7 +19,7 @@ module load awscli/2.17.54-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|awscli/2.17.54-GCCcore-13.2.0|-|x|x|x|x|x|x|
-|awscli/2.11.21-GCCcore-11.3.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|awscli/2.17.54-GCCcore-13.2.0|-|x|x|x|x|x|
+|awscli/2.11.21-GCCcore-11.3.0|-|x|x|x|-|-|

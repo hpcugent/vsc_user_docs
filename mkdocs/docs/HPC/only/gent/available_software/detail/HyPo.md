@@ -19,6 +19,6 @@ module load HyPo/1.0.3-GCC-8.3.0-Python-3.7.4
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HyPo/1.0.3-GCC-8.3.0-Python-3.7.4|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HyPo/1.0.3-GCC-8.3.0-Python-3.7.4|-|x|x|-|-|-|

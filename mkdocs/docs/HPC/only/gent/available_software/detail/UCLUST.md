@@ -19,6 +19,6 @@ module load UCLUST/1.2.22q-i86linux64
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|UCLUST/1.2.22q-i86linux64|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|UCLUST/1.2.22q-i86linux64|-|x|x|-|-|-|

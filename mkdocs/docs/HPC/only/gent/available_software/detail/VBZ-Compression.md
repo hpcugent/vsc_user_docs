@@ -19,8 +19,8 @@ module load VBZ-Compression/1.0.3-gompi-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VBZ-Compression/1.0.3-gompi-2023a|-|x|x|x|-|x|x|
-|VBZ-Compression/1.0.3-gompi-2022a|-|x|x|x|-|-|-|
-|VBZ-Compression/1.0.1-gompi-2020b|-|-|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|VBZ-Compression/1.0.3-gompi-2023a|-|x|x|x|-|x|
+|VBZ-Compression/1.0.3-gompi-2022a|-|x|x|x|-|-|
+|VBZ-Compression/1.0.1-gompi-2020b|-|-|x|x|-|-|

@@ -19,6 +19,6 @@ module load DECAF-synthetic-data/0.1.6-foss-2022b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DECAF-synthetic-data/0.1.6-foss-2022b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DECAF-synthetic-data/0.1.6-foss-2022b|-|x|x|x|-|-|

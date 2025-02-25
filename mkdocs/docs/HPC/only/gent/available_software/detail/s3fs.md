@@ -19,6 +19,6 @@ module load s3fs/2023.12.2-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|s3fs/2023.12.2-foss-2023a|-|x|x|x|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|s3fs/2023.12.2-foss-2023a|-|x|x|x|-|-|

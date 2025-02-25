@@ -19,7 +19,7 @@ module load taxator-tk/1.3.3-gompi-2020b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|taxator-tk/1.3.3-gompi-2020b|-|x|-|-|-|-|-|
-|taxator-tk/1.3.3-GCC-10.2.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|taxator-tk/1.3.3-gompi-2020b|-|x|-|-|-|-|
+|taxator-tk/1.3.3-GCC-10.2.0|-|x|x|x|-|-|

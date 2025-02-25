@@ -19,7 +19,7 @@ module load PyBioLib/1.2.205-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyBioLib/1.2.205-GCCcore-12.3.0|-|x|x|x|x|x|x|
-|PyBioLib/1.1.2250-GCCcore-12.3.0|-|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyBioLib/1.2.205-GCCcore-12.3.0|-|x|x|x|x|x|
+|PyBioLib/1.1.2250-GCCcore-12.3.0|-|x|x|x|x|x|

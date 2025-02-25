@@ -19,6 +19,6 @@ module load USEARCH/11.0.667-i86linux32
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|USEARCH/11.0.667-i86linux32|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|USEARCH/11.0.667-i86linux32|-|x|x|x|-|-|

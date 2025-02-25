@@ -19,10 +19,10 @@ module load BUSCO/5.4.3-foss-2021b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BUSCO/5.4.3-foss-2021b|-|x|x|-|-|-|-|
-|BUSCO/5.1.2-foss-2020b|-|x|x|x|-|-|-|
-|BUSCO/4.1.2-foss-2020b|-|x|x|-|-|-|-|
-|BUSCO/4.0.6-foss-2020b|-|x|x|x|-|-|-|
-|BUSCO/4.0.5-foss-2019b-Python-3.7.4|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BUSCO/5.4.3-foss-2021b|-|x|x|-|-|-|
+|BUSCO/5.1.2-foss-2020b|-|x|x|x|-|-|
+|BUSCO/4.1.2-foss-2020b|-|x|x|-|-|-|
+|BUSCO/4.0.6-foss-2020b|-|x|x|x|-|-|
+|BUSCO/4.0.5-foss-2019b-Python-3.7.4|-|x|x|-|-|-|

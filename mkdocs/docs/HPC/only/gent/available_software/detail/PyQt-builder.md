@@ -19,7 +19,7 @@ module load PyQt-builder/1.16.4-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyQt-builder/1.16.4-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|PyQt-builder/1.15.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyQt-builder/1.16.4-GCCcore-13.2.0|x|x|x|x|x|x|
+|PyQt-builder/1.15.4-GCCcore-12.3.0|x|x|x|x|x|x|

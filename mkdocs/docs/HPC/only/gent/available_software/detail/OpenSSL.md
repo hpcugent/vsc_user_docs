@@ -19,7 +19,7 @@ module load OpenSSL/3
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenSSL/3|x|x|x|x|x|x|x|
-|OpenSSL/1.1|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OpenSSL/3|x|x|x|x|x|x|
+|OpenSSL/1.1|-|x|x|x|-|-|

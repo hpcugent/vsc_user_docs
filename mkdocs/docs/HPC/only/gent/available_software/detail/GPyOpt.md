@@ -19,7 +19,7 @@ module load GPyOpt/1.2.6-intel-2020b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GPyOpt/1.2.6-intel-2020b|-|x|x|-|-|-|-|
-|GPyOpt/1.2.6-foss-2023a|x|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GPyOpt/1.2.6-intel-2020b|-|x|x|-|-|-|
+|GPyOpt/1.2.6-foss-2023a|x|x|x|x|-|x|

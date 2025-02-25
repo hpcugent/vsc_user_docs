@@ -19,9 +19,9 @@ module load RAxML-NG/1.2.0-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RAxML-NG/1.2.0-GCC-12.3.0|-|x|x|x|x|x|x|
-|RAxML-NG/1.0.3-GCC-10.2.0|-|x|x|-|-|-|-|
-|RAxML-NG/0.9.0-gompi-2019b|-|x|x|-|-|-|-|
-|RAxML-NG/0.9.0-GCC-8.3.0|-|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RAxML-NG/1.2.0-GCC-12.3.0|-|x|x|x|x|x|
+|RAxML-NG/1.0.3-GCC-10.2.0|-|x|x|-|-|-|
+|RAxML-NG/0.9.0-gompi-2019b|-|x|x|-|-|-|
+|RAxML-NG/0.9.0-GCC-8.3.0|-|-|x|-|-|-|

@@ -19,7 +19,7 @@ module load popscle/0.1-beta-foss-2019b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|popscle/0.1-beta-foss-2019b|-|x|x|-|-|-|-|
-|popscle/0.1-beta-20210505-GCC-11.3.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|popscle/0.1-beta-foss-2019b|-|x|x|-|-|-|
+|popscle/0.1-beta-20210505-GCC-11.3.0|-|x|x|x|-|-|

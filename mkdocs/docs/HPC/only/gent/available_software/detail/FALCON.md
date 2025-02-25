@@ -19,6 +19,6 @@ module load FALCON/1.8.8-intel-2019b-Python-2.7.16
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FALCON/1.8.8-intel-2019b-Python-2.7.16|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FALCON/1.8.8-intel-2019b-Python-2.7.16|-|x|x|-|-|-|

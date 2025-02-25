@@ -19,9 +19,9 @@ module load MCL/22.282-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MCL/22.282-GCCcore-12.3.0|-|x|x|x|x|x|x|
-|MCL/14.137-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|MCL/14.137-GCCcore-9.3.0|-|x|x|-|-|-|-|
-|MCL/14.137-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MCL/22.282-GCCcore-12.3.0|-|x|x|x|x|x|
+|MCL/14.137-GCCcore-10.2.0|-|x|x|x|-|-|
+|MCL/14.137-GCCcore-9.3.0|-|x|x|-|-|-|
+|MCL/14.137-GCCcore-8.3.0|-|x|x|-|-|-|

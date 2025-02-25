@@ -19,7 +19,7 @@ module load SISSO/3.1-20220324-iimpi-2021b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SISSO/3.1-20220324-iimpi-2021b|-|x|x|-|-|-|-|
-|SISSO/3.0.2-iimpi-2021b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SISSO/3.1-20220324-iimpi-2021b|-|x|x|-|-|-|
+|SISSO/3.0.2-iimpi-2021b|-|x|x|-|-|-|

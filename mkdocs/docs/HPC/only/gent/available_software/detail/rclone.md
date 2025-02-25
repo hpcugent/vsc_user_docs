@@ -19,7 +19,7 @@ module load rclone/1.66.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rclone/1.66.0|x|-|-|-|-|x|x|
-|rclone/1.65.2|x|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|rclone/1.66.0|x|-|-|-|-|x|
+|rclone/1.65.2|x|x|x|x|-|x|

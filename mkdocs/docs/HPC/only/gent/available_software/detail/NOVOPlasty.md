@@ -19,6 +19,6 @@ module load NOVOPlasty/3.7-GCCcore-8.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NOVOPlasty/3.7-GCCcore-8.3.0|-|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NOVOPlasty/3.7-GCCcore-8.3.0|-|x|-|-|-|-|

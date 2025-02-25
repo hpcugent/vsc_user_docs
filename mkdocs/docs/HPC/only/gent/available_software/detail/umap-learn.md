@@ -19,8 +19,8 @@ module load umap-learn/0.5.5-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|umap-learn/0.5.5-foss-2023a|x|x|x|x|x|x|x|
-|umap-learn/0.5.3-foss-2022a|-|x|x|x|-|-|-|
-|umap-learn/0.5.3-foss-2021a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|umap-learn/0.5.5-foss-2023a|x|x|x|x|x|x|
+|umap-learn/0.5.3-foss-2022a|-|x|x|x|-|-|
+|umap-learn/0.5.3-foss-2021a|-|x|x|x|-|-|

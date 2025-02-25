@@ -19,6 +19,6 @@ module load MultilevelEstimators/0.1.0-GCC-11.2.0-Julia-1.7.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MultilevelEstimators/0.1.0-GCC-11.2.0-Julia-1.7.2|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MultilevelEstimators/0.1.0-GCC-11.2.0-Julia-1.7.2|-|x|x|-|-|-|

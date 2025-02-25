@@ -19,11 +19,11 @@ module load libcint/6.1.2-gfbf-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libcint/6.1.2-gfbf-2024a|x|x|x|x|x|x|x|
-|libcint/5.5.0-gfbf-2022b|-|x|x|x|-|-|-|
-|libcint/5.4.0-gfbf-2023a|x|x|x|x|x|x|x|
-|libcint/5.1.6-foss-2022a|-|x|x|x|-|-|-|
-|libcint/4.4.0-gomkl-2021a|-|x|x|x|-|-|-|
-|libcint/4.4.0-foss-2021a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libcint/6.1.2-gfbf-2024a|x|x|x|x|x|x|
+|libcint/5.5.0-gfbf-2022b|-|x|x|x|-|-|
+|libcint/5.4.0-gfbf-2023a|x|x|x|x|x|x|
+|libcint/5.1.6-foss-2022a|-|x|x|x|-|-|
+|libcint/4.4.0-gomkl-2021a|-|x|x|x|-|-|
+|libcint/4.4.0-foss-2021a|-|x|x|x|-|-|

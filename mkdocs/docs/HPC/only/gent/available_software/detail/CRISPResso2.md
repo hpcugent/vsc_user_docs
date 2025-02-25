@@ -19,7 +19,7 @@ module load CRISPResso2/2.2.1-foss-2020b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CRISPResso2/2.2.1-foss-2020b|-|x|x|x|-|-|-|
-|CRISPResso2/2.1.2-foss-2020b-Python-2.7.18|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CRISPResso2/2.2.1-foss-2020b|-|x|x|x|-|-|
+|CRISPResso2/2.1.2-foss-2020b-Python-2.7.18|-|x|x|x|-|-|

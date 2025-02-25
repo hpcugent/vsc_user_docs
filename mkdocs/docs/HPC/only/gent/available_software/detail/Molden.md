@@ -19,7 +19,7 @@ module load Molden/7.3-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Molden/7.3-GCCcore-12.3.0|-|x|x|x|x|x|x|
-|Molden/6.8-GCCcore-10.2.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Molden/7.3-GCCcore-12.3.0|-|x|x|x|x|x|
+|Molden/6.8-GCCcore-10.2.0|-|x|x|-|-|-|

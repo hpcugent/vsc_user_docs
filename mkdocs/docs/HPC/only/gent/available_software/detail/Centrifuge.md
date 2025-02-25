@@ -19,6 +19,6 @@ module load Centrifuge/1.0.4-beta-gompi-2020a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Centrifuge/1.0.4-beta-gompi-2020a|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Centrifuge/1.0.4-beta-gompi-2020a|-|x|x|-|-|-|

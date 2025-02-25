@@ -19,8 +19,8 @@ module load pymatgen/2024.5.1-foss-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pymatgen/2024.5.1-foss-2023b|x|x|x|x|x|x|x|
-|pymatgen/2022.9.21-foss-2022a|-|x|x|-|-|-|-|
-|pymatgen/2022.0.4-foss-2020b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pymatgen/2024.5.1-foss-2023b|x|x|x|x|x|x|
+|pymatgen/2022.9.21-foss-2022a|-|x|x|-|-|-|
+|pymatgen/2022.0.4-foss-2020b|-|x|x|x|-|-|

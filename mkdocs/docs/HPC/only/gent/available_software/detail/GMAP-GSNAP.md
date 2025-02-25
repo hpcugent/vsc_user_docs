@@ -19,10 +19,10 @@ module load GMAP-GSNAP/2023-04-20-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GMAP-GSNAP/2023-04-20-GCC-12.3.0|x|x|x|x|x|x|x|
-|GMAP-GSNAP/2023-04-20-GCC-12.2.0|-|x|x|x|-|-|-|
-|GMAP-GSNAP/2023-02-17-GCC-11.3.0|-|x|x|x|-|-|-|
-|GMAP-GSNAP/2021-12-17-GCC-11.2.0|-|x|x|x|-|-|-|
-|GMAP-GSNAP/2019-09-12-GCC-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GMAP-GSNAP/2023-04-20-GCC-12.3.0|x|x|x|x|x|x|
+|GMAP-GSNAP/2023-04-20-GCC-12.2.0|-|x|x|x|-|-|
+|GMAP-GSNAP/2023-02-17-GCC-11.3.0|-|x|x|x|-|-|
+|GMAP-GSNAP/2021-12-17-GCC-11.2.0|-|x|x|x|-|-|
+|GMAP-GSNAP/2019-09-12-GCC-8.3.0|-|x|x|-|-|-|

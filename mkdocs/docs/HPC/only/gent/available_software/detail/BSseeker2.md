@@ -19,7 +19,7 @@ module load BSseeker2/2.1.8-iccifort-2019.5.281-Python-2.7.16
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BSseeker2/2.1.8-iccifort-2019.5.281-Python-2.7.16|-|x|-|-|-|-|-|
-|BSseeker2/2.1.8-GCC-8.3.0-Python-2.7.16|-|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BSseeker2/2.1.8-iccifort-2019.5.281-Python-2.7.16|-|x|-|-|-|-|
+|BSseeker2/2.1.8-GCC-8.3.0-Python-2.7.16|-|x|-|-|-|-|

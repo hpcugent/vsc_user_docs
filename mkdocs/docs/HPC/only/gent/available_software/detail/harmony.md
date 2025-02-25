@@ -19,7 +19,7 @@ module load harmony/1.0.0-20200224-foss-2020a-R-4.0.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|harmony/1.0.0-20200224-foss-2020a-R-4.0.0|-|x|x|-|-|-|-|
-|harmony/0.1.0-20210528-foss-2020b-R-4.0.3|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|harmony/1.0.0-20200224-foss-2020a-R-4.0.0|-|x|x|-|-|-|
+|harmony/0.1.0-20210528-foss-2020b-R-4.0.3|-|x|x|-|-|-|

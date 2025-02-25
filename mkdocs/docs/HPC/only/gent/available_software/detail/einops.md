@@ -19,9 +19,9 @@ module load einops/0.7.0-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|einops/0.7.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|einops/0.7.0-GCCcore-12.2.0|-|x|x|x|-|-|-|
-|einops/0.4.1-GCCcore-11.3.0|-|x|x|x|-|-|-|
-|einops/0.4.1-GCCcore-10.3.0|-|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|einops/0.7.0-GCCcore-12.3.0|x|x|x|x|x|x|
+|einops/0.7.0-GCCcore-12.2.0|-|x|x|x|-|-|
+|einops/0.4.1-GCCcore-11.3.0|-|x|x|x|-|-|
+|einops/0.4.1-GCCcore-10.3.0|-|-|x|-|-|-|

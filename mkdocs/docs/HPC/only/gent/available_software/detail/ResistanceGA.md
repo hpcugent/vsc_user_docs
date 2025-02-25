@@ -19,6 +19,6 @@ module load ResistanceGA/4.2-5-foss-2022a-R-4.2.1
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ResistanceGA/4.2-5-foss-2022a-R-4.2.1|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ResistanceGA/4.2-5-foss-2022a-R-4.2.1|-|x|x|-|-|-|

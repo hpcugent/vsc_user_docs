@@ -19,7 +19,7 @@ module load Jansson/2.14-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Jansson/2.14-GCC-12.3.0|x|x|x|x|x|x|x|
-|Jansson/2.13.1-GCC-11.2.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Jansson/2.14-GCC-12.3.0|x|x|x|x|x|x|
+|Jansson/2.13.1-GCC-11.2.0|-|x|x|x|-|-|

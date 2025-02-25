@@ -19,7 +19,7 @@ module load cctbx-base/2023.5-foss-2022a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cctbx-base/2023.5-foss-2022a|-|-|x|-|-|-|-|
-|cctbx-base/2020.8-foss-2020b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|cctbx-base/2023.5-foss-2022a|-|-|x|-|-|-|
+|cctbx-base/2020.8-foss-2020b|-|x|x|x|-|-|

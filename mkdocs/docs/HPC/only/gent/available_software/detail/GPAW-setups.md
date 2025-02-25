@@ -19,7 +19,7 @@ module load GPAW-setups/24.1.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GPAW-setups/24.1.0|x|x|x|x|-|x|x|
-|GPAW-setups/0.9.20000|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GPAW-setups/24.1.0|x|x|x|x|-|x|
+|GPAW-setups/0.9.20000|-|x|x|x|-|-|

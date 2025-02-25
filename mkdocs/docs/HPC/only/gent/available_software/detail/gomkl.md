@@ -19,9 +19,9 @@ module load gomkl/2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gomkl/2023b|x|x|x|x|x|x|x|
-|gomkl/2023a|-|x|x|x|-|x|x|
-|gomkl/2021a|-|x|x|x|-|-|-|
-|gomkl/2020a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|gomkl/2023b|x|x|x|x|x|x|
+|gomkl/2023a|-|x|x|x|-|x|
+|gomkl/2021a|-|x|x|x|-|-|
+|gomkl/2020a|-|x|x|x|-|-|

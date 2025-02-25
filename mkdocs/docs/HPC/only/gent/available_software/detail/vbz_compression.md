@@ -19,6 +19,6 @@ module load vbz_compression/1.0.1-gompi-2020b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|vbz_compression/1.0.1-gompi-2020b|-|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|vbz_compression/1.0.1-gompi-2020b|-|x|-|-|-|-|
