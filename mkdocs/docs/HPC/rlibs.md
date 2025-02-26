@@ -8,7 +8,7 @@ Our infrastructure contains different CPU architectures, that are
 not necessarily compatible with each other. Additionally, we have 
 multiple versions of `R` installed with different versions of toolchains, and by default,
 self installed libraries are installed in separate directories based only
-on R major and minor versions.
+on `R` major and minor versions.
 
 In this way, you might use self installed R libraries on incompatible architectures and/or
 compiled with incompatible toolchains, which might lead to hangs or other types of errors.
