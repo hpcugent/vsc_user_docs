@@ -295,17 +295,21 @@ and include the output of that command in the message.
 ## Issues reaching servers from HPC infrastructure
 
 If you have to reach license servers from {{ hpcinfra }} systems or you 
-have to directly load some database here, then it might not work (you will get 
-network connection timed out or network connection refused error). Our
-firewall rules are quite strict, we only allow outging ports 22 (SSH protocol),
+have to directly load some database here, then it might not work
+(you will get errors like `Network connection timed out` or `Network connection refused`).
+
+Our firewall rules are quite strict, we only allow outging ports 22 (SSH protocol),
  80 (HTTP protocol), and 443 (HTTPS protcol), so if your download or license server 
 requires other ports, then we should make a modification in our firewall settings.
 For this, please contact us via <{{ hpcinfo }}>, and send the destination IP and ports. 
 (We only open our firewall for static IP addresses).
 
-It might be possible, that the other end also has firewall, or the license server restricts 
+It is possible that the other end also has firewall, or that the license server restricts 
 the incoming IP addresses. In this case you need the outgoing IP address of our systems,
-which is either `157.193.240.251` (nathpca001.ugent.be) or `157.193.241.251` (nathpcb001.ugent.be).
+which is either of:
+
+- `157.193.240.251` (hostname `nathpca001.ugent.be`), or
+- `157.193.241.251` (hostname `nathpcb001.ugent.be`)
 {% endif %}
 
 ## Security warning about invalid host key
