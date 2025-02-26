@@ -10,7 +10,7 @@ multiple versions of `R` installed with different versions of toolchains, and by
 self installed libraries are installed in separate directories based only
 on `R` major and minor versions.
 
-In this way, you might use self installed R libraries on incompatible architectures and/or
+In this way, you might use self installed `R` libraries on incompatible architectures and/or
 compiled with incompatible toolchains, which might lead to hangs or other types of errors.
 
 When you load a centrally installed `R` module we make sure that self installed libraries 
