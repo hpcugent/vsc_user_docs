@@ -301,7 +301,7 @@ firewall rules are quite strict, we only allow outging ports 22 (SSH protocol),
  80 (HTTP protocol), and 443 (HTTPS protcol), so if your download or license server 
 requires other ports, then we should make a modification in our firewall settings.
 For this, please contact us via <{{ hpcinfo }}>, and send the destination IP and ports. 
-(We only open our fireall for static IP addresses).
+(We only open our firewall for static IP addresses).
 
 It might possible, that the other end has also firewall, or the license server restricts 
 the incoming IP addresses. In this case you need the outgoing IP address of our systems,
