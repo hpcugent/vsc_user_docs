@@ -35,8 +35,10 @@ yourself.
 You can always check the default location(s) of `R` packages by issuing `.libPaths()` command
 in `R`. This command will show the library locations ordered by their priorities. 
 
-Please be aware that if you have installed an `R` packages yourself in the past (before end of February 2025), you might have to 
-reinstall those if you want to use them:
+### Missing R packages intalled before
+
+Please be aware that if you have installed an `R` packages yourself in the past (before end of February 2025),
+you might have to reinstall those if you want to use them:
 - on a different cluster
 - with a different version of `R`
 - with an `R` compiled with a different version of toolchain
