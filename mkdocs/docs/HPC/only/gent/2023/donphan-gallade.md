@@ -27,7 +27,7 @@ This cluster consists of 12 workernodes, each with:
 * ~738 GiB of RAM memory;
 * 1.6TB NVME local disk;
 * HDR-100 InfiniBand interconnect;
-* RHEL8 as operating system;
+* RHEL9 as operating system;
 
 To start using this cluster from a terminal session, first run:
 ```

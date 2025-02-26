@@ -45,5 +45,5 @@ previously generated crontab tasks. If that is not the case you can
 always jump from one login node to another with:
 
 ```
-ssh gligar07    # or gligar08
+ssh gligar09    # or gligar10
 ```
