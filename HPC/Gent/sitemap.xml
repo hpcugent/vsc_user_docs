@@ -1575,11 +1575,6 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
-         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/ESPResSo/</ns0:loc>
-         <ns0:lastmod>2025-02-26</ns0:lastmod>
-         <ns0:changefreq>daily</ns0:changefreq>
-    </ns0:url>
-    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/ETE/</ns0:loc>
          <ns0:lastmod>2025-02-26</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -11671,11 +11666,6 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/ESMPy/</ns0:loc>
-         <ns0:lastmod>2025-02-26</ns0:lastmod>
-         <ns0:changefreq>daily</ns0:changefreq>
-    </ns0:url>
-    <ns0:url>
-         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/ESPResSo/</ns0:loc>
          <ns0:lastmod>2025-02-26</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -21775,11 +21765,6 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
-         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ESPResSo/</ns0:loc>
-         <ns0:lastmod>2025-02-26</ns0:lastmod>
-         <ns0:changefreq>daily</ns0:changefreq>
-    </ns0:url>
-    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/ETE/</ns0:loc>
          <ns0:lastmod>2025-02-26</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -31871,11 +31856,6 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/ESMPy/</ns0:loc>
-         <ns0:lastmod>2025-02-26</ns0:lastmod>
-         <ns0:changefreq>daily</ns0:changefreq>
-    </ns0:url>
-    <ns0:url>
-         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/ESPResSo/</ns0:loc>
          <ns0:lastmod>2025-02-26</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
