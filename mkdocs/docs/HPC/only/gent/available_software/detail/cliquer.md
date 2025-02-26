@@ -21,4 +21,4 @@ module load cliquer/1.21-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cliquer/1.21-GCCcore-13.2.0|x|x|x|x|-|x|x|
+|cliquer/1.21-GCCcore-13.2.0|x|x|x|x|x|x|x|

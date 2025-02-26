@@ -21,7 +21,7 @@ module load Optuna/3.6.1-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Optuna/3.6.1-foss-2023b|-|x|x|x|-|x|x|
+|Optuna/3.6.1-foss-2023b|-|x|x|x|x|x|x|
 |Optuna/3.5.0-foss-2023a|x|x|x|x|x|x|x|
 |Optuna/3.5.0-foss-2022b|-|x|x|x|-|-|-|
 |Optuna/3.1.0-foss-2022a|-|x|x|x|-|-|-|

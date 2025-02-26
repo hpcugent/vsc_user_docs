@@ -21,4 +21,4 @@ module load cysignals/1.11.4-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cysignals/1.11.4-GCCcore-13.2.0|x|x|x|x|-|x|x|
+|cysignals/1.11.4-GCCcore-13.2.0|x|x|x|x|x|x|x|

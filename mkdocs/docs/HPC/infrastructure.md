@@ -28,7 +28,6 @@ For basic information on using these clusters, see our
 
 | ***cluster name*** | ***# nodes*** | ***Processor architecture*** | ***Usable memory/node*** | ***Local diskspace/node*** | ***Interconnect*** | ***Operating system*** |
 | --- | --- | --- | --- | --- | --- | --- |
-| skitty | 72 | 2 x 18-core Intel Xeon Gold 6140 (Skylake @ 2.3 GHz) | 177 GiB | 1 TB & 240 GB SSD | EDR InfiniBand | RHEL 9 |
 | doduo (default cluster) | 128 | 2x 48-core AMD EPYC 7552 (Rome @ 2.2 GHz) | 250 GiB | 180GB SSD | HDR-100 InfiniBand | RHEL 9 |
 | gallade (*) | 16 | 2x 64-core AMD EPYC 7773X (Milan-X @ 2.2 GHz) | 940 GiB | 1.5 TB NVME | HDR-100 InfiniBand | RHEL 9 |
 | shinx | 48 | 2x 96-core AMD EPYC 9654 (Genoa @ 2.4 GHz) | 370 GiB | 500GB NVME | NDR-200 InfiniBand | RHEL 9 |

@@ -21,4 +21,4 @@ module load fasta-reader/3.0.2-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fasta-reader/3.0.2-GCC-12.3.0|x|x|x|x|-|x|x|
+|fasta-reader/3.0.2-GCC-12.3.0|x|x|x|x|x|x|x|

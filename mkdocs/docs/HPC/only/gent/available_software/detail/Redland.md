@@ -21,4 +21,4 @@ module load Redland/1.0.17-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Redland/1.0.17-GCC-12.3.0|-|x|x|x|-|x|x|
+|Redland/1.0.17-GCC-12.3.0|-|x|x|x|x|x|x|

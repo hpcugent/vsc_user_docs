@@ -21,7 +21,7 @@ module load pkgconfig/1.5.5-GCCcore-13.2.0-python
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pkgconfig/1.5.5-GCCcore-13.2.0-python|-|x|x|x|-|x|x|
+|pkgconfig/1.5.5-GCCcore-13.2.0-python|-|x|x|x|x|x|x|
 |pkgconfig/1.5.5-GCCcore-12.3.0-python|x|x|x|x|x|x|x|
 |pkgconfig/1.5.5-GCCcore-12.2.0-python|-|x|x|x|-|x|-|
 |pkgconfig/1.5.5-GCCcore-11.3.0-python|-|x|x|x|-|-|-|

@@ -21,4 +21,4 @@ module load nano/8.1-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nano/8.1-GCCcore-13.3.0|-|x|x|x|-|x|x|
+|nano/8.1-GCCcore-13.3.0|-|x|x|x|x|x|x|

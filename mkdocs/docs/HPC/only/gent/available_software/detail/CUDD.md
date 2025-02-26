@@ -21,4 +21,4 @@ module load CUDD/3.0.0-GCC-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CUDD/3.0.0-GCC-13.2.0|x|x|x|x|-|x|x|
+|CUDD/3.0.0-GCC-13.2.0|x|x|x|x|x|x|x|

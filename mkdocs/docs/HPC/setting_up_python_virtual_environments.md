@@ -347,10 +347,10 @@ Activating a virtual environment created on a different cluster can cause issues
 This happens
 because the binaries in the virtual environments from cluster A might not work with the CPU architecture of cluster B.
 
-For example, if we create a virtual environment on the skitty cluster,
+For example, if we create a virtual environment on the gallade cluster,
 
 ```bash
-module swap cluster/skitty
+module swap cluster/gallade
 qsub -I
 $ python -m venv myenv
 ```

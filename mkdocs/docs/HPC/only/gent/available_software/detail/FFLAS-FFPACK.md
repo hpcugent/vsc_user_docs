@@ -21,4 +21,4 @@ module load FFLAS-FFPACK/2.5.0-gfbf-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FFLAS-FFPACK/2.5.0-gfbf-2023b|x|x|x|x|-|x|x|
+|FFLAS-FFPACK/2.5.0-gfbf-2023b|x|x|x|x|x|x|x|

@@ -21,4 +21,4 @@ module load crb-blast/0.6.9-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|crb-blast/0.6.9-GCC-12.3.0|-|x|x|x|-|x|x|
+|crb-blast/0.6.9-GCC-12.3.0|-|x|x|x|x|x|x|

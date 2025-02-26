@@ -21,4 +21,4 @@ module load Fastaq/3.17.0-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Fastaq/3.17.0-GCC-12.3.0|x|x|x|x|-|x|x|
+|Fastaq/3.17.0-GCC-12.3.0|x|x|x|x|x|x|x|

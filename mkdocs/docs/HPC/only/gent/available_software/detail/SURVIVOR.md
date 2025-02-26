@@ -21,4 +21,4 @@ module load SURVIVOR/1.0.7-20231201-GCC-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SURVIVOR/1.0.7-20231201-GCC-13.3.0|-|x|x|x|-|x|x|
+|SURVIVOR/1.0.7-20231201-GCC-13.3.0|-|x|x|x|x|x|x|

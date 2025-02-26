@@ -306,7 +306,6 @@ Last login: Thu Mar 18 13:15:09 2021 from gligarha02.gastly.os
       cluster         - full - free -  part - total - running - queued
                         nodes  nodes   free   nodes   jobs      jobs
  -------------------------------------------------------------------------
-           skitty          39      0     26      68      1839     5588
            joltik           6      0      1      10        29       18
             doduo          22      0     75     128      1397    11933
          accelgor           4      3      2       9        18        1

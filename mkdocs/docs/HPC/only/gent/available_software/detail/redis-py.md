@@ -21,7 +21,7 @@ module load redis-py/5.0.9-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|redis-py/5.0.9-GCCcore-13.2.0|-|x|x|x|-|x|x|
+|redis-py/5.0.9-GCCcore-13.2.0|-|x|x|x|x|x|x|
 |redis-py/5.0.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |redis-py/5.0.1-GCCcore-12.2.0|-|x|x|x|-|-|-|
 |redis-py/4.5.1-foss-2022a|-|x|x|x|-|-|-|

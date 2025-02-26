@@ -21,5 +21,5 @@ module load TransDecoder/5.7.1-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TransDecoder/5.7.1-GCC-12.3.0|-|x|x|x|-|x|x|
+|TransDecoder/5.7.1-GCC-12.3.0|-|x|x|x|x|x|x|
 |TransDecoder/5.5.0-GCC-10.2.0|-|x|x|-|-|-|-|

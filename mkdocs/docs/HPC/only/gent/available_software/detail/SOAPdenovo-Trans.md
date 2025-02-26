@@ -21,4 +21,4 @@ module load SOAPdenovo-Trans/1.0.5-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SOAPdenovo-Trans/1.0.5-GCC-12.3.0|-|x|x|x|-|-|x|
+|SOAPdenovo-Trans/1.0.5-GCC-12.3.0|-|x|x|x|x|-|x|

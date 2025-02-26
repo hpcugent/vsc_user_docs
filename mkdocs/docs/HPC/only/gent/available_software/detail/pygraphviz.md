@@ -21,4 +21,4 @@ module load pygraphviz/1.11-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pygraphviz/1.11-GCCcore-12.3.0|-|x|x|x|-|x|x|
+|pygraphviz/1.11-GCCcore-12.3.0|-|x|x|x|x|x|x|

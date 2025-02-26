@@ -22,7 +22,7 @@ module load LAMMPS/patch_20Nov2019-intel-2019b
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |LAMMPS/patch_20Nov2019-intel-2019b|-|x|-|-|-|-|-|
-|LAMMPS/29Aug2024-foss-2023b-kokkos|-|x|x|x|-|x|x|
+|LAMMPS/29Aug2024-foss-2023b-kokkos|-|x|x|x|x|x|x|
 |LAMMPS/23Jun2022-foss-2021b-kokkos|-|x|x|-|-|-|-|
 |LAMMPS/23Jun2022-foss-2021a-kokkos|-|x|x|-|-|-|-|
 |LAMMPS/7Aug2019-intel-2019b-Python-3.7.4-kokkos-OCTP|-|x|x|-|-|-|-|

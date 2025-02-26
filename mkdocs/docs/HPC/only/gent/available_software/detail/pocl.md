@@ -21,7 +21,7 @@ module load pocl/4.0-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pocl/4.0-GCC-12.3.0|-|x|x|x|-|-|x|
+|pocl/4.0-GCC-12.3.0|-|x|x|x|x|-|x|
 |pocl/3.0-GCC-11.3.0|-|x|x|-|-|-|-|
 |pocl/1.8-GCC-11.3.0|-|x|x|x|-|-|-|
 |pocl/1.8-GCC-11.2.0|-|x|x|-|-|-|-|

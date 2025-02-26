@@ -21,4 +21,4 @@ module load EDirect/20.5.20231006-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|EDirect/20.5.20231006-GCCcore-12.3.0|x|x|x|x|-|x|x|
+|EDirect/20.5.20231006-GCCcore-12.3.0|x|x|x|x|x|x|x|
