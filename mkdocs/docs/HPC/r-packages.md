@@ -1,14 +1,14 @@
 # R packages
 
 !!! note
-    Please keep in mind, that this is not general documentation
+    Please keep in mind that this is not general documentation
     about installing `R` packages, but specific information about 
     self-installed R packages at the {{ hpcinfra }}.
 
 The {{ hpcinfra }} contains different generations of CPUs, with different microarchitectures, that are
 not necessarily compatible with each other. Additionally, we have 
 multiple versions of `R` installed with different versions of toolchains, and by default,
-self installed libraries are installed in separate directories based only
+self-installed packages are installed in separate directories based only
 on `R` major and minor versions (only using `x.y` for R version `x.y.z`).
 
 In this way, you might use self-installed `R` packages on incompatible CPU microarchitectures and/or
@@ -28,17 +28,18 @@ in your Virtual Organisation), you should set the environment variable `$R_LIBS_
 *before* you load any centrally installed `R` module. In this case, the location of the
 directory for self-installed `R` packages will be
 `$R_LIBS_BASEDIR/local_R_LIBS/$VSC_OS_LOCAL/$VSC_ARCH_LOCAL/<R version>-<toolchain>`.
-If this directory is not writable, you can still be able to use already installed 
+If this directory is not writable, you will still be able to use already installed
 `R` packages from that location, but you will not be able to install `R` packages 
 yourself.
 
 You can always check the default location(s) of `R` packages by issuing `.libPaths()` command
-in `R`. This command will show the library locations ordered by their priorities. 
+in `R`. This command will show the package locations, ordered by their priorities. 
 
 ### Missing R packages intalled before
 
 Please be aware that if you have installed an `R` packages yourself in the past (before end of February 2025),
 you might have to reinstall those if you want to use them:
+
 - on a different cluster
 - with a different version of `R`
 - with an `R` compiled with a different version of toolchain
