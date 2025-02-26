@@ -19,6 +19,6 @@ module load CRYSTAL17/1.0.2-intel-2020a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CRYSTAL17/1.0.2-intel-2020a|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CRYSTAL17/1.0.2-intel-2020a|-|x|x|-|-|-|

@@ -19,7 +19,7 @@ module load MinPath/1.6-GCCcore-11.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MinPath/1.6-GCCcore-11.2.0|-|x|x|-|-|-|-|
-|MinPath/1.4-intel-2019b-Python-2.7.16|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MinPath/1.6-GCCcore-11.2.0|-|x|x|-|-|-|
+|MinPath/1.4-intel-2019b-Python-2.7.16|-|x|x|-|-|-|

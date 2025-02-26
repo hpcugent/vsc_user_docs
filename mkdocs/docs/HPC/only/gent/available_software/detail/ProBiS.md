@@ -19,6 +19,6 @@ module load ProBiS/20230403-gompi-2022b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ProBiS/20230403-gompi-2022b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ProBiS/20230403-gompi-2022b|-|x|x|x|-|-|

@@ -19,6 +19,6 @@ module load bcl-convert/4.0.3-2el7.x86_64
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bcl-convert/4.0.3-2el7.x86_64|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|bcl-convert/4.0.3-2el7.x86_64|-|x|x|-|-|-|

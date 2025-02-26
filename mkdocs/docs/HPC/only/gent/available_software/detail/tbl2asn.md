@@ -19,8 +19,8 @@ module load tbl2asn/20230713-linux64
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tbl2asn/20230713-linux64|-|x|x|x|-|-|-|
-|tbl2asn/20230713-GCCcore-12.3.0|-|x|x|x|x|x|x|
-|tbl2asn/20220427-linux64|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tbl2asn/20230713-linux64|-|x|x|x|-|-|
+|tbl2asn/20230713-GCCcore-12.3.0|-|x|x|x|x|x|
+|tbl2asn/20220427-linux64|-|x|x|x|-|-|

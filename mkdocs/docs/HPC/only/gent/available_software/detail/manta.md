@@ -19,6 +19,6 @@ module load manta/1.6.0-gompi-2020a-Python-2.7.18
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|manta/1.6.0-gompi-2020a-Python-2.7.18|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|manta/1.6.0-gompi-2020a-Python-2.7.18|-|x|x|-|-|-|

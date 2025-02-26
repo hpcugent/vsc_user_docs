@@ -19,7 +19,7 @@ module load buildenv/default-intel-2019b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|buildenv/default-intel-2019b|-|x|x|-|-|-|-|
-|buildenv/default-foss-2019b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|buildenv/default-intel-2019b|-|x|x|-|-|-|
+|buildenv/default-foss-2019b|-|x|x|-|-|-|

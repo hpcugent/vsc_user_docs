@@ -19,6 +19,6 @@ module load columba/1.2-20240326-GCC-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|columba/1.2-20240326-GCC-13.3.0|-|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|columba/1.2-20240326-GCC-13.3.0|-|x|x|x|x|x|

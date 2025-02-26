@@ -19,6 +19,6 @@ module load ColabFold/1.5.2-foss-2022a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ColabFold/1.5.2-foss-2022a|-|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ColabFold/1.5.2-foss-2022a|-|-|x|-|-|-|

@@ -19,6 +19,6 @@ module load imutils/0.5.4-foss-2022a-CUDA-11.7.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|imutils/0.5.4-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|imutils/0.5.4-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|

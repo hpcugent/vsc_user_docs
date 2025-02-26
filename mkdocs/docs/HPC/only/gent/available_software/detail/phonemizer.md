@@ -19,6 +19,6 @@ module load phonemizer/2.2.1-gompi-2020a-Python-3.8.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|phonemizer/2.2.1-gompi-2020a-Python-3.8.2|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|phonemizer/2.2.1-gompi-2020a-Python-3.8.2|-|x|x|-|-|-|

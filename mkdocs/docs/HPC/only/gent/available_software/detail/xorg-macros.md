@@ -19,16 +19,16 @@ module load xorg-macros/1.20.1-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|xorg-macros/1.20.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|xorg-macros/1.20.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|xorg-macros/1.20.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|xorg-macros/1.19.3-GCCcore-12.2.0|-|x|x|x|-|x|-|
-|xorg-macros/1.19.3-GCCcore-11.3.0|-|x|x|x|-|x|-|
-|xorg-macros/1.19.3-GCCcore-11.2.0|-|x|x|x|-|-|-|
-|xorg-macros/1.19.3-GCCcore-10.3.0|-|x|x|x|-|-|-|
-|xorg-macros/1.19.2-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|xorg-macros/1.19.2-GCCcore-9.3.0|-|x|x|x|-|-|-|
-|xorg-macros/1.19.2-GCCcore-8.3.0|-|x|x|x|-|-|-|
-|xorg-macros/1.19.2-GCCcore-8.2.0|-|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|xorg-macros/1.20.1-GCCcore-13.3.0|x|x|x|x|x|x|
+|xorg-macros/1.20.0-GCCcore-13.2.0|x|x|x|x|x|x|
+|xorg-macros/1.20.0-GCCcore-12.3.0|x|x|x|x|x|x|
+|xorg-macros/1.19.3-GCCcore-12.2.0|-|x|x|x|-|x|
+|xorg-macros/1.19.3-GCCcore-11.3.0|-|x|x|x|-|x|
+|xorg-macros/1.19.3-GCCcore-11.2.0|-|x|x|x|-|-|
+|xorg-macros/1.19.3-GCCcore-10.3.0|-|x|x|x|-|-|
+|xorg-macros/1.19.2-GCCcore-10.2.0|-|x|x|x|-|-|
+|xorg-macros/1.19.2-GCCcore-9.3.0|-|x|x|x|-|-|
+|xorg-macros/1.19.2-GCCcore-8.3.0|-|x|x|x|-|-|
+|xorg-macros/1.19.2-GCCcore-8.2.0|-|x|-|-|-|-|

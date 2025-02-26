@@ -19,7 +19,7 @@ module load texinfo/6.7-GCCcore-9.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|texinfo/6.7-GCCcore-9.3.0|-|x|x|-|-|-|-|
-|texinfo/6.7-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|texinfo/6.7-GCCcore-9.3.0|-|x|x|-|-|-|
+|texinfo/6.7-GCCcore-8.3.0|-|x|x|-|-|-|

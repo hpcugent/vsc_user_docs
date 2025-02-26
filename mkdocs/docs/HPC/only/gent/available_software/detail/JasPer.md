@@ -19,15 +19,15 @@ module load JasPer/4.2.4-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|JasPer/4.2.4-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|JasPer/4.0.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|JasPer/4.0.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|JasPer/4.0.0-GCCcore-12.2.0|-|x|x|x|-|-|-|
-|JasPer/2.0.33-GCCcore-11.3.0|-|x|x|x|-|x|-|
-|JasPer/2.0.33-GCCcore-11.2.0|-|x|x|x|-|-|-|
-|JasPer/2.0.28-GCCcore-10.3.0|-|x|x|x|-|-|-|
-|JasPer/2.0.24-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|JasPer/2.0.14-GCCcore-9.3.0|-|x|x|-|-|-|-|
-|JasPer/2.0.14-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|JasPer/4.2.4-GCCcore-13.3.0|x|x|x|x|x|x|
+|JasPer/4.0.0-GCCcore-13.2.0|x|x|x|x|x|x|
+|JasPer/4.0.0-GCCcore-12.3.0|x|x|x|x|x|x|
+|JasPer/4.0.0-GCCcore-12.2.0|-|x|x|x|-|-|
+|JasPer/2.0.33-GCCcore-11.3.0|-|x|x|x|-|x|
+|JasPer/2.0.33-GCCcore-11.2.0|-|x|x|x|-|-|
+|JasPer/2.0.28-GCCcore-10.3.0|-|x|x|x|-|-|
+|JasPer/2.0.24-GCCcore-10.2.0|-|x|x|x|-|-|
+|JasPer/2.0.14-GCCcore-9.3.0|-|x|x|-|-|-|
+|JasPer/2.0.14-GCCcore-8.3.0|-|x|x|-|-|-|

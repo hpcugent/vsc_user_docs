@@ -19,7 +19,7 @@ module load DIANA/10.5
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DIANA/10.5|-|x|x|-|-|-|-|
-|DIANA/10.4|-|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DIANA/10.5|-|x|x|-|-|-|
+|DIANA/10.4|-|-|x|-|-|-|

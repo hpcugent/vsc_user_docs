@@ -19,9 +19,9 @@ module load ruamel.yaml/0.18.6-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ruamel.yaml/0.18.6-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|ruamel.yaml/0.17.32-GCCcore-12.3.0|-|x|x|x|x|x|x|
-|ruamel.yaml/0.17.21-GCCcore-11.3.0|-|x|x|x|-|-|-|
-|ruamel.yaml/0.17.21-GCCcore-11.2.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ruamel.yaml/0.18.6-GCCcore-13.2.0|x|x|x|x|x|x|
+|ruamel.yaml/0.17.32-GCCcore-12.3.0|-|x|x|x|x|x|
+|ruamel.yaml/0.17.21-GCCcore-11.3.0|-|x|x|x|-|-|
+|ruamel.yaml/0.17.21-GCCcore-11.2.0|-|x|x|-|-|-|

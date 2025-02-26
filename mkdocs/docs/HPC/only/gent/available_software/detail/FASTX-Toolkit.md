@@ -19,7 +19,7 @@ module load FASTX-Toolkit/0.0.14-GCC-11.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FASTX-Toolkit/0.0.14-GCC-11.3.0|-|x|x|x|-|-|-|
-|FASTX-Toolkit/0.0.14-GCC-9.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FASTX-Toolkit/0.0.14-GCC-11.3.0|-|x|x|x|-|-|
+|FASTX-Toolkit/0.0.14-GCC-9.3.0|-|x|x|-|-|-|

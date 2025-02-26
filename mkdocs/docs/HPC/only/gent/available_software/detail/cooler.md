@@ -19,7 +19,7 @@ module load cooler/0.10.2-foss-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cooler/0.10.2-foss-2023b|x|x|x|x|x|x|x|
-|cooler/0.9.1-foss-2022a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|cooler/0.10.2-foss-2023b|x|x|x|x|x|x|
+|cooler/0.9.1-foss-2022a|-|x|x|x|-|-|

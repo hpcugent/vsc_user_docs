@@ -19,8 +19,8 @@ module load libvdwxc/0.4.0-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libvdwxc/0.4.0-foss-2023a|-|x|x|x|-|x|x|
-|libvdwxc/0.4.0-foss-2021b|-|x|x|-|-|-|-|
-|libvdwxc/0.4.0-foss-2019b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libvdwxc/0.4.0-foss-2023a|-|x|x|x|-|x|
+|libvdwxc/0.4.0-foss-2021b|-|x|x|-|-|-|
+|libvdwxc/0.4.0-foss-2019b|-|x|x|-|-|-|

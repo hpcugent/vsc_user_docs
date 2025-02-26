@@ -19,7 +19,7 @@ module load Maven/3.6.3
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Maven/3.6.3|-|x|x|x|-|-|-|
-|Maven/3.6.0|-|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Maven/3.6.3|-|x|x|x|-|-|
+|Maven/3.6.0|-|-|x|-|-|-|

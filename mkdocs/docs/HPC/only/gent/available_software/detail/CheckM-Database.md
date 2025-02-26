@@ -19,6 +19,6 @@ module load CheckM-Database/2015_01_16
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CheckM-Database/2015_01_16|-|x|x|x|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CheckM-Database/2015_01_16|-|x|x|x|-|x|

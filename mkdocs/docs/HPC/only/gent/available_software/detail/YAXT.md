@@ -19,7 +19,7 @@ module load YAXT/0.9.1-gompi-2021a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|YAXT/0.9.1-gompi-2021a|-|x|x|-|-|-|-|
-|YAXT/0.6.2-iimpi-2019b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|YAXT/0.9.1-gompi-2021a|-|x|x|-|-|-|
+|YAXT/0.6.2-iimpi-2019b|-|x|x|-|-|-|

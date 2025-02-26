@@ -19,6 +19,6 @@ module load packmol/v20.2.2-iccifort-2020.1.217
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|packmol/v20.2.2-iccifort-2020.1.217|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|packmol/v20.2.2-iccifort-2020.1.217|-|x|x|-|-|-|

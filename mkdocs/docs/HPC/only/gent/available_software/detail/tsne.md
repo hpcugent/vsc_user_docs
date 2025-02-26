@@ -19,6 +19,6 @@ module load tsne/0.1.8-intel-2019b-Python-2.7.16
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tsne/0.1.8-intel-2019b-Python-2.7.16|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tsne/0.1.8-intel-2019b-Python-2.7.16|-|x|x|-|-|-|

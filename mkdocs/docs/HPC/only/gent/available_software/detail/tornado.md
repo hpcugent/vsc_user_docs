@@ -19,7 +19,7 @@ module load tornado/6.4-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tornado/6.4-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|tornado/6.3.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tornado/6.4-GCCcore-13.2.0|x|x|x|x|x|x|
+|tornado/6.3.2-GCCcore-12.3.0|x|x|x|x|x|x|

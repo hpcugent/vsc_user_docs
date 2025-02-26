@@ -19,6 +19,6 @@ module load kaggle/1.6.17-foss-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|kaggle/1.6.17-foss-2023b|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|kaggle/1.6.17-foss-2023b|x|x|x|x|x|x|

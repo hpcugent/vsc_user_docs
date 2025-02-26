@@ -19,8 +19,8 @@ module load vcflib/1.0.9-gfbf-2023a-R-4.3.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|vcflib/1.0.9-gfbf-2023a-R-4.3.2|-|x|x|x|-|x|x|
-|vcflib/1.0.9-foss-2022a-R-4.2.1|-|x|x|x|-|-|-|
-|vcflib/1.0.2-GCC-10.2.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|vcflib/1.0.9-gfbf-2023a-R-4.3.2|-|x|x|x|-|x|
+|vcflib/1.0.9-foss-2022a-R-4.2.1|-|x|x|x|-|-|
+|vcflib/1.0.2-GCC-10.2.0|-|x|x|-|-|-|

@@ -19,7 +19,7 @@ module load torchaudio/0.12.0-foss-2022a-PyTorch-1.12.0-CUDA-11.7.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|torchaudio/0.12.0-foss-2022a-PyTorch-1.12.0-CUDA-11.7.0|-|-|x|-|-|-|-|
-|torchaudio/0.12.0-foss-2022a-PyTorch-1.12.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|torchaudio/0.12.0-foss-2022a-PyTorch-1.12.0-CUDA-11.7.0|-|-|x|-|-|-|
+|torchaudio/0.12.0-foss-2022a-PyTorch-1.12.0|-|x|x|x|-|-|

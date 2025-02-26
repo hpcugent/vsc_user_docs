@@ -19,6 +19,6 @@ module load mumax3/3.10-GCC-12.3.0-CUDA-12.1.1
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mumax3/3.10-GCC-12.3.0-CUDA-12.1.1|-|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|mumax3/3.10-GCC-12.3.0-CUDA-12.1.1|-|-|x|-|-|-|

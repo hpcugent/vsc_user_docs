@@ -19,7 +19,7 @@ module load R-INLA/24.01.18-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|R-INLA/24.01.18-foss-2023a|-|x|x|x|-|-|x|
-|R-INLA/21.05.02-foss-2020b-R-4.0.4|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|R-INLA/24.01.18-foss-2023a|-|x|x|x|-|-|
+|R-INLA/21.05.02-foss-2020b-R-4.0.4|-|x|x|x|-|-|

@@ -19,6 +19,6 @@ module load Dsuite/20210718-intel-compilers-2021.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Dsuite/20210718-intel-compilers-2021.2.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Dsuite/20210718-intel-compilers-2021.2.0|-|x|x|-|-|-|

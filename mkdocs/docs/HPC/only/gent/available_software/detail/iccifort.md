@@ -19,8 +19,8 @@ module load iccifort/2020.4.304
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|iccifort/2020.4.304|-|x|x|x|-|-|-|
-|iccifort/2020.1.217|-|x|x|x|-|-|-|
-|iccifort/2019.5.281|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|iccifort/2020.4.304|-|x|x|x|-|-|
+|iccifort/2020.1.217|-|x|x|x|-|-|
+|iccifort/2019.5.281|-|x|x|-|-|-|

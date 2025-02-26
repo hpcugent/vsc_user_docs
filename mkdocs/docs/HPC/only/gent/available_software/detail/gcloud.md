@@ -19,7 +19,7 @@ module load gcloud/472.0.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gcloud/472.0.0|x|x|x|x|-|x|x|
-|gcloud/382.0.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|gcloud/472.0.0|x|x|x|x|-|x|
+|gcloud/382.0.0|-|x|x|-|-|-|

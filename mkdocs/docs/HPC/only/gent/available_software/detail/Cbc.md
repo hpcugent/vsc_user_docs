@@ -19,7 +19,7 @@ module load Cbc/2.10.11-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Cbc/2.10.11-foss-2023a|x|x|x|x|x|x|x|
-|Cbc/2.10.5-foss-2022b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Cbc/2.10.11-foss-2023a|x|x|x|x|x|x|
+|Cbc/2.10.5-foss-2022b|-|x|x|x|-|-|

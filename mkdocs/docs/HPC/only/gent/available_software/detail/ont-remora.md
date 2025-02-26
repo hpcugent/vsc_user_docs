@@ -19,7 +19,7 @@ module load ont-remora/3.3.0-foss-2023a-CUDA-12.1.1
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ont-remora/3.3.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
-|ont-remora/3.3.0-foss-2023a|-|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ont-remora/3.3.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
+|ont-remora/3.3.0-foss-2023a|-|x|x|x|-|x|

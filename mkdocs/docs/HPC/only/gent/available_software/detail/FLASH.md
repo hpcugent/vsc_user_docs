@@ -19,8 +19,8 @@ module load FLASH/2.2.00-foss-2020b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FLASH/2.2.00-foss-2020b|-|x|x|x|-|-|-|
-|FLASH/2.2.00-GCC-11.2.0|-|x|x|-|-|-|-|
-|FLASH/1.2.11-GCC-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FLASH/2.2.00-foss-2020b|-|x|x|x|-|-|
+|FLASH/2.2.00-GCC-11.2.0|-|x|x|-|-|-|
+|FLASH/1.2.11-GCC-8.3.0|-|x|x|-|-|-|

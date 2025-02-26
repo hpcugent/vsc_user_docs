@@ -19,15 +19,15 @@ module load LittleCMS/2.16-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LittleCMS/2.16-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|LittleCMS/2.15-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|LittleCMS/2.15-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|LittleCMS/2.14-GCCcore-12.2.0|-|x|x|x|-|-|-|
-|LittleCMS/2.13.1-GCCcore-11.3.0|-|x|x|x|-|-|-|
-|LittleCMS/2.12-GCCcore-11.2.0|-|x|x|x|-|-|-|
-|LittleCMS/2.12-GCCcore-10.3.0|-|x|x|x|-|-|-|
-|LittleCMS/2.11-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|LittleCMS/2.9-GCCcore-9.3.0|-|x|x|-|-|-|-|
-|LittleCMS/2.9-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LittleCMS/2.16-GCCcore-13.3.0|x|x|x|x|x|x|
+|LittleCMS/2.15-GCCcore-13.2.0|x|x|x|x|x|x|
+|LittleCMS/2.15-GCCcore-12.3.0|x|x|x|x|x|x|
+|LittleCMS/2.14-GCCcore-12.2.0|-|x|x|x|-|-|
+|LittleCMS/2.13.1-GCCcore-11.3.0|-|x|x|x|-|-|
+|LittleCMS/2.12-GCCcore-11.2.0|-|x|x|x|-|-|
+|LittleCMS/2.12-GCCcore-10.3.0|-|x|x|x|-|-|
+|LittleCMS/2.11-GCCcore-10.2.0|-|x|x|x|-|-|
+|LittleCMS/2.9-GCCcore-9.3.0|-|x|x|-|-|-|
+|LittleCMS/2.9-GCCcore-8.3.0|-|x|x|-|-|-|

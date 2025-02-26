@@ -19,6 +19,6 @@ module load Structure/2.3.4-iccifort-2019.5.281
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Structure/2.3.4-iccifort-2019.5.281|-|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Structure/2.3.4-iccifort-2019.5.281|-|x|-|-|-|-|

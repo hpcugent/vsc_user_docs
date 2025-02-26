@@ -19,8 +19,8 @@ module load lifelines/0.28.0-gfbf-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|lifelines/0.28.0-gfbf-2023a|x|x|x|x|x|x|x|
-|lifelines/0.27.7-foss-2022b|-|x|x|x|-|-|-|
-|lifelines/0.27.4-foss-2022a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|lifelines/0.28.0-gfbf-2023a|x|x|x|x|x|x|
+|lifelines/0.27.7-foss-2022b|-|x|x|x|-|-|
+|lifelines/0.27.4-foss-2022a|-|x|x|x|-|-|

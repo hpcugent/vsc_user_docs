@@ -19,6 +19,6 @@ module load MethylDackel/0.5.0-iccifort-2019.5.281
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MethylDackel/0.5.0-iccifort-2019.5.281|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MethylDackel/0.5.0-iccifort-2019.5.281|-|x|x|-|-|-|

@@ -19,8 +19,8 @@ module load GetOrganelle/1.7.5.3-foss-2021b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GetOrganelle/1.7.5.3-foss-2021b|-|x|x|-|-|-|-|
-|GetOrganelle/1.7.4-pre2-foss-2020b|-|x|x|x|-|-|-|
-|GetOrganelle/1.7.2-foss-2020a-Python-3.8.2|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GetOrganelle/1.7.5.3-foss-2021b|-|x|x|-|-|-|
+|GetOrganelle/1.7.4-pre2-foss-2020b|-|x|x|x|-|-|
+|GetOrganelle/1.7.2-foss-2020a-Python-3.8.2|-|x|x|-|-|-|

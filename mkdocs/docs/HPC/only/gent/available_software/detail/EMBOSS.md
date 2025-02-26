@@ -19,7 +19,7 @@ module load EMBOSS/6.6.0-foss-2021b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|EMBOSS/6.6.0-foss-2021b|-|x|x|-|-|-|-|
-|EMBOSS/6.6.0-GCC-8.3.0-Java-11|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|EMBOSS/6.6.0-foss-2021b|-|x|x|-|-|-|
+|EMBOSS/6.6.0-GCC-8.3.0-Java-11|-|x|x|-|-|-|

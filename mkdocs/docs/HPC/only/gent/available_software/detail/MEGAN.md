@@ -19,6 +19,6 @@ module load MEGAN/6.25.3-Java-17
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MEGAN/6.25.3-Java-17|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MEGAN/6.25.3-Java-17|-|x|x|x|-|-|

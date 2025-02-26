@@ -19,8 +19,8 @@ module load PyTorch-Geometric/1.7.0-foss-2020b-numba-0.53.1
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyTorch-Geometric/1.7.0-foss-2020b-numba-0.53.1|-|x|x|-|-|-|-|
-|PyTorch-Geometric/1.4.2-foss-2019b-Python-3.7.4-PyTorch-1.4.0|-|x|x|-|-|-|-|
-|PyTorch-Geometric/1.3.2-foss-2019b-Python-3.7.4|-|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyTorch-Geometric/1.7.0-foss-2020b-numba-0.53.1|-|x|x|-|-|-|
+|PyTorch-Geometric/1.4.2-foss-2019b-Python-3.7.4-PyTorch-1.4.0|-|x|x|-|-|-|
+|PyTorch-Geometric/1.3.2-foss-2019b-Python-3.7.4|-|x|-|-|-|-|

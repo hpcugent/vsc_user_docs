@@ -19,6 +19,6 @@ module load AMICA/2024.1.19-intel-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|AMICA/2024.1.19-intel-2023a|-|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|AMICA/2024.1.19-intel-2023a|-|x|x|x|x|x|

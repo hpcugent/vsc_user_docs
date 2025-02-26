@@ -19,9 +19,9 @@ module load Jellyfish/2.3.1-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Jellyfish/2.3.1-GCC-12.3.0|-|x|x|x|x|x|x|
-|Jellyfish/2.3.0-GCC-11.3.0|-|x|x|x|-|-|-|
-|Jellyfish/2.3.0-GCC-11.2.0|-|x|x|x|-|-|-|
-|Jellyfish/2.3.0-GCC-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Jellyfish/2.3.1-GCC-12.3.0|-|x|x|x|x|x|
+|Jellyfish/2.3.0-GCC-11.3.0|-|x|x|x|-|-|
+|Jellyfish/2.3.0-GCC-11.2.0|-|x|x|x|-|-|
+|Jellyfish/2.3.0-GCC-8.3.0|-|x|x|-|-|-|

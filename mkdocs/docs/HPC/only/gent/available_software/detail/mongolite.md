@@ -19,8 +19,8 @@ module load mongolite/2.3.0-foss-2020b-R-4.0.4
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mongolite/2.3.0-foss-2020b-R-4.0.4|-|x|x|x|-|-|-|
-|mongolite/2.3.0-foss-2020b-R-4.0.3|-|x|x|x|-|-|-|
-|mongolite/2.3.0-foss-2020a-R-4.0.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|mongolite/2.3.0-foss-2020b-R-4.0.4|-|x|x|x|-|-|
+|mongolite/2.3.0-foss-2020b-R-4.0.3|-|x|x|x|-|-|
+|mongolite/2.3.0-foss-2020a-R-4.0.0|-|x|x|-|-|-|

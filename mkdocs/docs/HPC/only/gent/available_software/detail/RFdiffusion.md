@@ -19,6 +19,6 @@ module load RFdiffusion/1.1.0-foss-2022a-CUDA-11.7.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RFdiffusion/1.1.0-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RFdiffusion/1.1.0-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|

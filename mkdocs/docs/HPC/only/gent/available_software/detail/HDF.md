@@ -19,15 +19,15 @@ module load HDF/4.3.0-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HDF/4.3.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|HDF/4.2.16-2-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|HDF/4.2.16-2-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|HDF/4.2.15-GCCcore-12.2.0|-|x|x|x|-|-|-|
-|HDF/4.2.15-GCCcore-11.3.0|-|x|x|x|-|-|-|
-|HDF/4.2.15-GCCcore-11.2.0|-|x|x|x|-|-|-|
-|HDF/4.2.15-GCCcore-10.3.0|-|x|x|x|-|-|-|
-|HDF/4.2.15-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|HDF/4.2.15-GCCcore-9.3.0|-|-|x|-|-|-|-|
-|HDF/4.2.14-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HDF/4.3.0-GCCcore-13.3.0|x|x|x|x|x|x|
+|HDF/4.2.16-2-GCCcore-13.2.0|x|x|x|x|x|x|
+|HDF/4.2.16-2-GCCcore-12.3.0|x|x|x|x|x|x|
+|HDF/4.2.15-GCCcore-12.2.0|-|x|x|x|-|-|
+|HDF/4.2.15-GCCcore-11.3.0|-|x|x|x|-|-|
+|HDF/4.2.15-GCCcore-11.2.0|-|x|x|x|-|-|
+|HDF/4.2.15-GCCcore-10.3.0|-|x|x|x|-|-|
+|HDF/4.2.15-GCCcore-10.2.0|-|x|x|x|-|-|
+|HDF/4.2.15-GCCcore-9.3.0|-|-|x|-|-|-|
+|HDF/4.2.14-GCCcore-8.3.0|-|x|x|-|-|-|

@@ -19,13 +19,13 @@ module load at-spi2-atk/2.38.0-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|at-spi2-atk/2.38.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|at-spi2-atk/2.38.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|at-spi2-atk/2.38.0-GCCcore-12.2.0|-|x|x|x|-|-|-|
-|at-spi2-atk/2.38.0-GCCcore-11.3.0|-|x|x|x|-|-|-|
-|at-spi2-atk/2.38.0-GCCcore-11.2.0|-|x|x|x|-|-|-|
-|at-spi2-atk/2.38.0-GCCcore-10.3.0|-|x|x|-|-|-|-|
-|at-spi2-atk/2.38.0-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|at-spi2-atk/2.34.1-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|at-spi2-atk/2.38.0-GCCcore-13.2.0|x|x|x|x|x|x|
+|at-spi2-atk/2.38.0-GCCcore-12.3.0|x|x|x|x|x|x|
+|at-spi2-atk/2.38.0-GCCcore-12.2.0|-|x|x|x|-|-|
+|at-spi2-atk/2.38.0-GCCcore-11.3.0|-|x|x|x|-|-|
+|at-spi2-atk/2.38.0-GCCcore-11.2.0|-|x|x|x|-|-|
+|at-spi2-atk/2.38.0-GCCcore-10.3.0|-|x|x|-|-|-|
+|at-spi2-atk/2.38.0-GCCcore-10.2.0|-|x|x|x|-|-|
+|at-spi2-atk/2.34.1-GCCcore-8.3.0|-|x|x|-|-|-|

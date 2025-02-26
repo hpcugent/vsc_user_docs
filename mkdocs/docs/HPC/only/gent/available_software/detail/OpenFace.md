@@ -19,6 +19,6 @@ module load OpenFace/2.2.0-foss-2021a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenFace/2.2.0-foss-2021a|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OpenFace/2.2.0-foss-2021a|-|x|x|-|-|-|

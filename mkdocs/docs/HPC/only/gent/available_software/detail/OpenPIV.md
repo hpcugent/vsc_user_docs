@@ -19,6 +19,6 @@ module load OpenPIV/0.21.8-intel-2019b-Python-3.7.4
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenPIV/0.21.8-intel-2019b-Python-3.7.4|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OpenPIV/0.21.8-intel-2019b-Python-3.7.4|-|x|x|-|-|-|

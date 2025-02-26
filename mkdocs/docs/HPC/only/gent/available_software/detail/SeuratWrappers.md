@@ -19,6 +19,6 @@ module load SeuratWrappers/20210528-foss-2020b-R-4.0.3
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SeuratWrappers/20210528-foss-2020b-R-4.0.3|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SeuratWrappers/20210528-foss-2020b-R-4.0.3|-|x|x|x|-|-|

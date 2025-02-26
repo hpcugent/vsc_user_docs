@@ -19,7 +19,7 @@ module load librosa/0.10.1-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|librosa/0.10.1-foss-2023a|x|x|x|x|x|x|x|
-|librosa/0.7.2-foss-2019b-Python-3.7.4|-|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|librosa/0.10.1-foss-2023a|x|x|x|x|x|x|
+|librosa/0.7.2-foss-2019b-Python-3.7.4|-|-|x|-|-|-|
