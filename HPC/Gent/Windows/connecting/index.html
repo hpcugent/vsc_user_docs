@@ -1533,7 +1533,7 @@ connection to (one of) the HPC.</p>
 <div class="highlight"><pre><span></span><code>$ pwd
 /user/home/gent/vsc400/vsc40000
 $ hostname -f
-gligar07.gastly.os
+gligar09.gastly.os
 </code></pre></div>
 </li>
 <li>
@@ -1742,17 +1742,17 @@ machine to the HPC and back.</p>
 <p>See <a href="../linux-tutorial/uploading_files/#copying-faster-with-rsync">the section on <code>rsync</code> in chapter 5 of the Linux intro manual</a>.</p>
 <h2 id="changing-login-nodes">Changing login nodes<a class="headerlink" href="#changing-login-nodes" title="Permanent link">#</a></h2>
 <p>It can be useful to have control over which login node you are on. However, when you connect to the HPC (High-Performance Computing) system, you are directed to a random login node, which might not be the one where you already have an active session. To address this, there is a way to manually switch your active login node.</p>
-<p>For instance, if you want to switch to the login node named <code>gligar07.gastly.os</code>, you can use the following command while you are connected to the <code>gligar08.gastly.os</code> login node on the HPC:
-<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>gligar07.gastly.os
+<p>For instance, if you want to switch to the login node named <code>gligar09.gastly.os</code>, you can use the following command while you are connected to the <code>gligar10.gastly.os</code> login node on the HPC:
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>gligar09.gastly.os
 </code></pre></div>
 This is also possible the other way around.</p>
 <p>If you want to find out which login host you are connected to, you can use the <code>hostname</code> command.
 <div class="highlight"><pre><span></span><code>$ hostname
-gligar07.gastly.os
-$ ssh gligar08.gastly.os
+gligar09.gastly.os
+$ ssh gligar10.gastly.os
 
 $ hostname
-gligar08.gastly.os
+gligar10.gastly.os
 </code></pre></div></p>
 <p>Rather than always starting a new session on the HPC, you can also use a terminal multiplexer like <code>screen</code> or <code>tmux</code>.
 These can make sessions that 'survives' across disconnects.
