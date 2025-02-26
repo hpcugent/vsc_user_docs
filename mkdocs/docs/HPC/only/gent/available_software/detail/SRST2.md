@@ -19,6 +19,6 @@ module load SRST2/0.2.0-20210620-foss-2020b-Python-2.7.18
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SRST2/0.2.0-20210620-foss-2020b-Python-2.7.18|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SRST2/0.2.0-20210620-foss-2020b-Python-2.7.18|-|x|x|x|-|-|

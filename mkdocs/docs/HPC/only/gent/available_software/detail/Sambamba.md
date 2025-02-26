@@ -19,7 +19,7 @@ module load Sambamba/1.0.1-GCC-11.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Sambamba/1.0.1-GCC-11.3.0|-|x|x|x|-|-|-|
-|Sambamba/0.8.0-GCC-10.2.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Sambamba/1.0.1-GCC-11.3.0|-|x|x|x|-|-|
+|Sambamba/0.8.0-GCC-10.2.0|-|x|x|x|-|-|

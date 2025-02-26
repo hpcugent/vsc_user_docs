@@ -19,7 +19,7 @@ module load MetaEuk/6-GCC-11.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MetaEuk/6-GCC-11.2.0|-|x|x|-|-|-|-|
-|MetaEuk/4-GCC-10.2.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MetaEuk/6-GCC-11.2.0|-|x|x|-|-|-|
+|MetaEuk/4-GCC-10.2.0|-|x|x|x|-|-|

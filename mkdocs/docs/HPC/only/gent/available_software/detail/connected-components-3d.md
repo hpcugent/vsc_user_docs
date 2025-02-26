@@ -19,6 +19,6 @@ module load connected-components-3d/3.14.1-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|connected-components-3d/3.14.1-foss-2023a|x|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|connected-components-3d/3.14.1-foss-2023a|x|x|x|x|-|x|

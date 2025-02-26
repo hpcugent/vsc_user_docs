@@ -19,6 +19,6 @@ module load AmberMini/16.16.0-intel-2020a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|AmberMini/16.16.0-intel-2020a|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|AmberMini/16.16.0-intel-2020a|-|x|x|-|-|-|

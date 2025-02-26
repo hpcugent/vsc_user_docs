@@ -19,6 +19,6 @@ module load bam-readcount/0.8.0-GCC-9.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bam-readcount/0.8.0-GCC-9.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|bam-readcount/0.8.0-GCC-9.3.0|-|x|x|-|-|-|

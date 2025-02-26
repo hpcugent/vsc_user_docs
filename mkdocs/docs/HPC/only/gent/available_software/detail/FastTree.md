@@ -19,12 +19,12 @@ module load FastTree/2.1.11-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FastTree/2.1.11-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|FastTree/2.1.11-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|FastTree/2.1.11-GCCcore-11.3.0|-|x|x|x|-|-|-|
-|FastTree/2.1.11-GCCcore-11.2.0|-|x|x|-|-|-|-|
-|FastTree/2.1.11-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|FastTree/2.1.11-GCCcore-9.3.0|-|x|x|-|-|-|-|
-|FastTree/2.1.11-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FastTree/2.1.11-GCCcore-13.2.0|x|x|x|x|x|x|
+|FastTree/2.1.11-GCCcore-12.3.0|x|x|x|x|x|x|
+|FastTree/2.1.11-GCCcore-11.3.0|-|x|x|x|-|-|
+|FastTree/2.1.11-GCCcore-11.2.0|-|x|x|-|-|-|
+|FastTree/2.1.11-GCCcore-10.2.0|-|x|x|x|-|-|
+|FastTree/2.1.11-GCCcore-9.3.0|-|x|x|-|-|-|
+|FastTree/2.1.11-GCCcore-8.3.0|-|x|x|-|-|-|

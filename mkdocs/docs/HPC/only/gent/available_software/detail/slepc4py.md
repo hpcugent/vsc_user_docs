@@ -19,8 +19,8 @@ module load slepc4py/3.17.2-foss-2022a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|slepc4py/3.17.2-foss-2022a|-|x|x|x|-|-|-|
-|slepc4py/3.15.1-foss-2021a|-|x|x|-|-|-|-|
-|slepc4py/3.12.0-foss-2019b-Python-3.7.4|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|slepc4py/3.17.2-foss-2022a|-|x|x|x|-|-|
+|slepc4py/3.15.1-foss-2021a|-|x|x|-|-|-|
+|slepc4py/3.12.0-foss-2019b-Python-3.7.4|-|x|x|-|-|-|

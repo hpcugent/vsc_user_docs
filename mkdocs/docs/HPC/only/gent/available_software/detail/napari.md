@@ -19,8 +19,8 @@ module load napari/0.4.18-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|napari/0.4.18-foss-2023a|x|x|x|x|x|x|x|
-|napari/0.4.18-foss-2022a|-|x|x|x|-|-|-|
-|napari/0.4.15-foss-2021b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|napari/0.4.18-foss-2023a|x|x|x|x|x|x|
+|napari/0.4.18-foss-2022a|-|x|x|x|-|-|
+|napari/0.4.15-foss-2021b|-|x|x|-|-|-|

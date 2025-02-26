@@ -19,6 +19,6 @@ module load HiCExplorer/3.7.2-foss-2022a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HiCExplorer/3.7.2-foss-2022a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HiCExplorer/3.7.2-foss-2022a|-|x|x|x|-|-|

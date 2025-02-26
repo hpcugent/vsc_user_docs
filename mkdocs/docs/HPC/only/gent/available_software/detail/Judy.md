@@ -19,11 +19,11 @@ module load Judy/1.0.5-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Judy/1.0.5-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|Judy/1.0.5-GCCcore-11.3.0|-|x|x|x|-|-|-|
-|Judy/1.0.5-GCCcore-11.2.0|-|x|x|x|-|-|-|
-|Judy/1.0.5-GCCcore-10.3.0|-|x|x|-|-|-|-|
-|Judy/1.0.5-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|Judy/1.0.5-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Judy/1.0.5-GCCcore-12.3.0|x|x|x|x|x|x|
+|Judy/1.0.5-GCCcore-11.3.0|-|x|x|x|-|-|
+|Judy/1.0.5-GCCcore-11.2.0|-|x|x|x|-|-|
+|Judy/1.0.5-GCCcore-10.3.0|-|x|x|-|-|-|
+|Judy/1.0.5-GCCcore-10.2.0|-|x|x|x|-|-|
+|Judy/1.0.5-GCCcore-8.3.0|-|x|x|-|-|-|

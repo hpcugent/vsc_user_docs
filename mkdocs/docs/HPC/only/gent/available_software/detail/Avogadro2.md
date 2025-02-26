@@ -19,6 +19,6 @@ module load Avogadro2/1.97.0-linux-x86_64
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Avogadro2/1.97.0-linux-x86_64|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Avogadro2/1.97.0-linux-x86_64|-|x|x|-|-|-|

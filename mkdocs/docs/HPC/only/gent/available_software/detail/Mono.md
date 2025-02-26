@@ -19,6 +19,6 @@ module load Mono/6.8.0.105-GCCcore-8.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Mono/6.8.0.105-GCCcore-8.3.0|-|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Mono/6.8.0.105-GCCcore-8.3.0|-|x|-|-|-|-|

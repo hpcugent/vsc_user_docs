@@ -19,6 +19,6 @@ module load NCL/6.6.2-intel-2019b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NCL/6.6.2-intel-2019b|-|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NCL/6.6.2-intel-2019b|-|-|x|-|-|-|

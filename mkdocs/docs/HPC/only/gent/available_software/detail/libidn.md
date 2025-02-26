@@ -19,8 +19,8 @@ module load libidn/1.38-GCCcore-11.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libidn/1.38-GCCcore-11.2.0|-|x|x|x|-|-|-|
-|libidn/1.36-GCCcore-10.3.0|-|x|x|-|-|-|-|
-|libidn/1.35-GCCcore-9.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libidn/1.38-GCCcore-11.2.0|-|x|x|x|-|-|
+|libidn/1.36-GCCcore-10.3.0|-|x|x|-|-|-|
+|libidn/1.35-GCCcore-9.3.0|-|x|x|-|-|-|

@@ -19,6 +19,6 @@ module load MBX/1.1.0-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MBX/1.1.0-foss-2023a|-|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MBX/1.1.0-foss-2023a|-|x|x|x|x|x|

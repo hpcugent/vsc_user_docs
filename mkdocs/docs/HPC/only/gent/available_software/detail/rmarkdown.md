@@ -19,6 +19,6 @@ module load rmarkdown/2.20-foss-2021a-R-4.1.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rmarkdown/2.20-foss-2021a-R-4.1.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|rmarkdown/2.20-foss-2021a-R-4.1.0|-|x|x|x|-|-|

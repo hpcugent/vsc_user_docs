@@ -19,6 +19,6 @@ module load metaWRAP/1.3-foss-2020b-Python-2.7.18
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|metaWRAP/1.3-foss-2020b-Python-2.7.18|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|metaWRAP/1.3-foss-2020b-Python-2.7.18|-|x|x|x|-|-|

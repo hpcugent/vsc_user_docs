@@ -19,6 +19,6 @@ module load MicrobeAnnotator/2.0.5-foss-2021a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MicrobeAnnotator/2.0.5-foss-2021a|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MicrobeAnnotator/2.0.5-foss-2021a|-|x|x|-|-|-|

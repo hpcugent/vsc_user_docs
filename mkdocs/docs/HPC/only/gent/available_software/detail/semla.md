@@ -19,6 +19,6 @@ module load semla/1.1.6-foss-2023a-R-4.3.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|semla/1.1.6-foss-2023a-R-4.3.2|-|x|x|x|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|semla/1.1.6-foss-2023a-R-4.3.2|-|x|x|x|-|-|

@@ -19,8 +19,8 @@ module load libharu/2.3.0-foss-2021b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libharu/2.3.0-foss-2021b|-|x|x|-|-|-|-|
-|libharu/2.3.0-GCCcore-10.3.0|-|x|x|-|-|-|-|
-|libharu/2.3.0-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libharu/2.3.0-foss-2021b|-|x|x|-|-|-|
+|libharu/2.3.0-GCCcore-10.3.0|-|x|x|-|-|-|
+|libharu/2.3.0-GCCcore-8.3.0|-|x|x|-|-|-|

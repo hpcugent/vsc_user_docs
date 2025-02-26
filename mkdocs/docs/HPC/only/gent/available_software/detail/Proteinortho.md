@@ -19,7 +19,7 @@ module load Proteinortho/6.3.2-gompi-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Proteinortho/6.3.2-gompi-2023a|-|x|x|x|x|x|x|
-|Proteinortho/6.2.3-gompi-2021b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Proteinortho/6.3.2-gompi-2023a|-|x|x|x|x|x|
+|Proteinortho/6.2.3-gompi-2021b|-|x|x|x|-|-|

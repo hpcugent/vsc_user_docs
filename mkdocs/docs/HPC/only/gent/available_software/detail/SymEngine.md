@@ -19,6 +19,6 @@ module load SymEngine/0.11.2-gfbf-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SymEngine/0.11.2-gfbf-2023b|-|x|x|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SymEngine/0.11.2-gfbf-2023b|-|x|x|x|x|-|

@@ -19,8 +19,8 @@ module load FASTA/36.3.8i-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FASTA/36.3.8i-GCC-12.3.0|x|x|x|x|x|x|x|
-|FASTA/36.3.8i-GCC-12.2.0|-|x|x|x|-|-|-|
-|FASTA/36.3.8i-GCC-11.2.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FASTA/36.3.8i-GCC-12.3.0|x|x|x|x|x|x|
+|FASTA/36.3.8i-GCC-12.2.0|-|x|x|x|-|-|
+|FASTA/36.3.8i-GCC-11.2.0|-|x|x|x|-|-|

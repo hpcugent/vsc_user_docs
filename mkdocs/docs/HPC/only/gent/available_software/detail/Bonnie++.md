@@ -19,6 +19,6 @@ module load Bonnie++/2.00a-GCC-10.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Bonnie++/2.00a-GCC-10.3.0|-|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Bonnie++/2.00a-GCC-10.3.0|-|x|-|-|-|-|

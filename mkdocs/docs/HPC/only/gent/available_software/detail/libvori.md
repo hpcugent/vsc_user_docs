@@ -19,7 +19,7 @@ module load libvori/220621-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libvori/220621-GCCcore-12.3.0|-|x|x|x|x|x|x|
-|libvori/220621-GCCcore-12.2.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libvori/220621-GCCcore-12.3.0|-|x|x|x|x|x|
+|libvori/220621-GCCcore-12.2.0|-|x|x|x|-|-|

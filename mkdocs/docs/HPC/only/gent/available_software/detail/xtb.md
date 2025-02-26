@@ -19,6 +19,6 @@ module load xtb/6.6.1-gfbf-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|xtb/6.6.1-gfbf-2023a|-|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|xtb/6.6.1-gfbf-2023a|-|x|x|x|-|x|

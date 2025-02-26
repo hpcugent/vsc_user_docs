@@ -19,6 +19,6 @@ module load Sphinx-RTD-Theme/2.0.0-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Sphinx-RTD-Theme/2.0.0-GCCcore-12.3.0|-|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Sphinx-RTD-Theme/2.0.0-GCCcore-12.3.0|-|x|x|x|x|x|

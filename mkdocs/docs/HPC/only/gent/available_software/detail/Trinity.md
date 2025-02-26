@@ -19,11 +19,11 @@ module load Trinity/2.15.2-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Trinity/2.15.2-foss-2023a|-|x|x|x|x|x|x|
-|Trinity/2.15.1-foss-2022a|-|x|x|x|-|-|-|
-|Trinity/2.15.1-foss-2021b|-|x|x|x|-|-|-|
-|Trinity/2.10.0-foss-2019b-Python-3.7.4|-|x|x|-|-|-|-|
-|Trinity/2.9.1-foss-2019b-Python-2.7.16|-|x|x|-|-|-|-|
-|Trinity/2.8.5-GCC-8.3.0-Java-11|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Trinity/2.15.2-foss-2023a|-|x|x|x|x|x|
+|Trinity/2.15.1-foss-2022a|-|x|x|x|-|-|
+|Trinity/2.15.1-foss-2021b|-|x|x|x|-|-|
+|Trinity/2.10.0-foss-2019b-Python-3.7.4|-|x|x|-|-|-|
+|Trinity/2.9.1-foss-2019b-Python-2.7.16|-|x|x|-|-|-|
+|Trinity/2.8.5-GCC-8.3.0-Java-11|-|x|x|-|-|-|

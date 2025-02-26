@@ -19,7 +19,7 @@ module load Nipype/1.8.5-foss-2021a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Nipype/1.8.5-foss-2021a|-|x|x|-|-|-|-|
-|Nipype/1.4.2-intel-2019b-Python-3.7.4|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Nipype/1.8.5-foss-2021a|-|x|x|-|-|-|
+|Nipype/1.4.2-intel-2019b-Python-3.7.4|-|x|x|-|-|-|

@@ -19,19 +19,19 @@ module load medaka/1.12.1-foss-2023a-CUDA-12.1.1
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|medaka/1.12.1-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
-|medaka/1.12.1-foss-2023a|-|x|x|x|-|x|x|
-|medaka/1.12.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|-|
-|medaka/1.12.0-foss-2023a|-|x|x|x|-|x|x|
-|medaka/1.11.3-foss-2023a|x|x|x|x|x|x|x|
-|medaka/1.11.3-foss-2022a|-|x|x|x|-|-|-|
-|medaka/1.9.1-foss-2022a|-|x|x|x|-|-|-|
-|medaka/1.8.1-foss-2022a|-|x|x|x|-|-|-|
-|medaka/1.6.0-foss-2021b|-|x|x|-|-|-|-|
-|medaka/1.4.3-foss-2020b|-|x|x|x|-|-|-|
-|medaka/1.4.3-foss-2019b-Python-3.7.4|-|x|x|-|-|-|-|
-|medaka/1.2.6-foss-2019b-Python-3.7.4|-|x|-|-|-|-|-|
-|medaka/1.1.3-foss-2019b-Python-3.7.4|-|x|x|-|-|-|-|
-|medaka/1.1.1-foss-2019b-Python-3.7.4|-|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|medaka/1.12.1-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
+|medaka/1.12.1-foss-2023a|-|x|x|x|-|x|
+|medaka/1.12.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
+|medaka/1.12.0-foss-2023a|-|x|x|x|-|x|
+|medaka/1.11.3-foss-2023a|x|x|x|x|x|x|
+|medaka/1.11.3-foss-2022a|-|x|x|x|-|-|
+|medaka/1.9.1-foss-2022a|-|x|x|x|-|-|
+|medaka/1.8.1-foss-2022a|-|x|x|x|-|-|
+|medaka/1.6.0-foss-2021b|-|x|x|-|-|-|
+|medaka/1.4.3-foss-2020b|-|x|x|x|-|-|
+|medaka/1.4.3-foss-2019b-Python-3.7.4|-|x|x|-|-|-|
+|medaka/1.2.6-foss-2019b-Python-3.7.4|-|x|-|-|-|-|
+|medaka/1.1.3-foss-2019b-Python-3.7.4|-|x|x|-|-|-|
+|medaka/1.1.1-foss-2019b-Python-3.7.4|-|-|x|-|-|-|

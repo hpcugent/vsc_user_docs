@@ -19,8 +19,8 @@ module load exiv2/0.28.0-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|exiv2/0.28.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|exiv2/0.27.5-GCCcore-11.2.0|-|x|x|x|-|-|-|
-|exiv2/0.27.4-GCCcore-10.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|exiv2/0.28.0-GCCcore-12.3.0|x|x|x|x|x|x|
+|exiv2/0.27.5-GCCcore-11.2.0|-|x|x|x|-|-|
+|exiv2/0.27.4-GCCcore-10.3.0|-|x|x|-|-|-|

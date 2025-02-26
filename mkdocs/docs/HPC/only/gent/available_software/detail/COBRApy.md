@@ -19,6 +19,6 @@ module load COBRApy/0.29.0-foss-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|COBRApy/0.29.0-foss-2023b|-|x|x|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|COBRApy/0.29.0-foss-2023b|-|x|x|x|x|-|

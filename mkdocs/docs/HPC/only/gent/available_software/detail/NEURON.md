@@ -19,7 +19,7 @@ module load NEURON/8.2.6-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NEURON/8.2.6-foss-2023a|x|x|x|x|x|x|x|
-|NEURON/7.8.2-foss-2021b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NEURON/8.2.6-foss-2023a|x|x|x|x|x|x|
+|NEURON/7.8.2-foss-2021b|-|x|x|-|-|-|

@@ -19,24 +19,24 @@ module load HDF5/1.14.5-gompi-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HDF5/1.14.5-gompi-2024a|x|x|x|x|x|x|x|
-|HDF5/1.14.3-gompi-2023b|x|x|x|x|x|x|x|
-|HDF5/1.14.0-gompi-2023a|x|x|x|x|x|x|x|
-|HDF5/1.14.0-gompi-2022b|-|x|x|x|-|-|-|
-|HDF5/1.13.1-gompi-2022a|-|x|x|-|-|-|-|
-|HDF5/1.12.2-iimpi-2022a|-|x|x|x|-|-|-|
-|HDF5/1.12.2-gompi-2022a|-|x|x|x|-|x|-|
-|HDF5/1.12.1-iimpi-2021b|-|x|x|x|-|-|-|
-|HDF5/1.12.1-gompi-2021b|-|x|x|x|-|-|-|
-|HDF5/1.10.8-gompi-2021b|-|x|x|-|-|-|-|
-|HDF5/1.10.7-iompi-2021a|-|x|x|x|-|-|-|
-|HDF5/1.10.7-iimpi-2021a|-|x|x|-|-|-|-|
-|HDF5/1.10.7-iimpi-2020b|-|x|x|x|-|-|-|
-|HDF5/1.10.7-gompi-2021a|-|x|x|x|-|-|-|
-|HDF5/1.10.7-gompi-2020b|-|x|x|x|-|-|-|
-|HDF5/1.10.6-iimpi-2020a|-|x|x|x|-|-|-|
-|HDF5/1.10.6-gompi-2020a|-|x|x|-|-|-|-|
-|HDF5/1.10.5-iimpi-2019b|-|x|x|-|-|-|-|
-|HDF5/1.10.5-gompi-2019b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HDF5/1.14.5-gompi-2024a|x|x|x|x|x|x|
+|HDF5/1.14.3-gompi-2023b|x|x|x|x|x|x|
+|HDF5/1.14.0-gompi-2023a|x|x|x|x|x|x|
+|HDF5/1.14.0-gompi-2022b|-|x|x|x|-|-|
+|HDF5/1.13.1-gompi-2022a|-|x|x|-|-|-|
+|HDF5/1.12.2-iimpi-2022a|-|x|x|x|-|-|
+|HDF5/1.12.2-gompi-2022a|-|x|x|x|-|x|
+|HDF5/1.12.1-iimpi-2021b|-|x|x|x|-|-|
+|HDF5/1.12.1-gompi-2021b|-|x|x|x|-|-|
+|HDF5/1.10.8-gompi-2021b|-|x|x|-|-|-|
+|HDF5/1.10.7-iompi-2021a|-|x|x|x|-|-|
+|HDF5/1.10.7-iimpi-2021a|-|x|x|-|-|-|
+|HDF5/1.10.7-iimpi-2020b|-|x|x|x|-|-|
+|HDF5/1.10.7-gompi-2021a|-|x|x|x|-|-|
+|HDF5/1.10.7-gompi-2020b|-|x|x|x|-|-|
+|HDF5/1.10.6-iimpi-2020a|-|x|x|x|-|-|
+|HDF5/1.10.6-gompi-2020a|-|x|x|-|-|-|
+|HDF5/1.10.5-iimpi-2019b|-|x|x|-|-|-|
+|HDF5/1.10.5-gompi-2019b|-|x|x|-|-|-|

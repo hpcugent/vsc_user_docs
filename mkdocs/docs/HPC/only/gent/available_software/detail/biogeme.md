@@ -19,7 +19,7 @@ module load biogeme/3.2.10-foss-2022a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|biogeme/3.2.10-foss-2022a|-|x|x|-|-|-|-|
-|biogeme/3.2.6-foss-2022a|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|biogeme/3.2.10-foss-2022a|-|x|x|-|-|-|
+|biogeme/3.2.6-foss-2022a|-|x|x|-|-|-|

@@ -19,6 +19,6 @@ module load mysqlclient/2.1.1-foss-2021a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mysqlclient/2.1.1-foss-2021a|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|mysqlclient/2.1.1-foss-2021a|-|x|x|-|-|-|

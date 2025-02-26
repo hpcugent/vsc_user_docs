@@ -19,7 +19,7 @@ module load ntCard/1.2.2-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ntCard/1.2.2-GCC-12.3.0|-|x|x|x|x|-|x|
-|ntCard/1.2.1-GCC-8.3.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ntCard/1.2.2-GCC-12.3.0|-|x|x|x|x|-|
+|ntCard/1.2.1-GCC-8.3.0|-|x|x|x|-|-|

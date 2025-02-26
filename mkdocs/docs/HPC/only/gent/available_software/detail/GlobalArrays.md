@@ -19,7 +19,7 @@ module load GlobalArrays/5.8-iomkl-2021a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GlobalArrays/5.8-iomkl-2021a|-|x|x|x|-|-|-|
-|GlobalArrays/5.8-intel-2021a|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GlobalArrays/5.8-iomkl-2021a|-|x|x|x|-|-|
+|GlobalArrays/5.8-intel-2021a|-|x|x|-|-|-|

@@ -19,7 +19,7 @@ module load plot1cell/0.0.1-foss-2022b-R-4.2.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|plot1cell/0.0.1-foss-2022b-R-4.2.2|-|x|x|x|-|-|-|
-|plot1cell/0.0.1-foss-2022a-R-4.2.1|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|plot1cell/0.0.1-foss-2022b-R-4.2.2|-|x|x|x|-|-|
+|plot1cell/0.0.1-foss-2022a-R-4.2.1|-|x|x|x|-|-|

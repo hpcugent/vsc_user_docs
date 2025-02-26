@@ -19,11 +19,11 @@ module load AUGUSTUS/3.5.0-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|AUGUSTUS/3.5.0-foss-2023a|-|x|x|x|x|x|x|
-|AUGUSTUS/3.5.0-20240612-foss-2023a|-|x|-|-|-|-|-|
-|AUGUSTUS/3.4.0-foss-2021b|-|x|x|x|-|-|-|
-|AUGUSTUS/3.4.0-foss-2020b|-|x|x|x|-|-|-|
-|AUGUSTUS/3.3.3-intel-2019b|-|x|x|-|-|-|-|
-|AUGUSTUS/3.3.3-foss-2019b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|AUGUSTUS/3.5.0-foss-2023a|-|x|x|x|x|x|
+|AUGUSTUS/3.5.0-20240612-foss-2023a|-|x|-|-|-|-|
+|AUGUSTUS/3.4.0-foss-2021b|-|x|x|x|-|-|
+|AUGUSTUS/3.4.0-foss-2020b|-|x|x|x|-|-|
+|AUGUSTUS/3.3.3-intel-2019b|-|x|x|-|-|-|
+|AUGUSTUS/3.3.3-foss-2019b|-|x|x|-|-|-|

@@ -19,6 +19,6 @@ module load LPJmL/4.0.003-iimpi-2020b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LPJmL/4.0.003-iimpi-2020b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LPJmL/4.0.003-iimpi-2020b|-|x|x|x|-|-|

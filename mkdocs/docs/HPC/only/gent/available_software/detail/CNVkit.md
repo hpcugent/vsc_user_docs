@@ -19,6 +19,6 @@ module load CNVkit/0.9.10-foss-2022b-R-4.2.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CNVkit/0.9.10-foss-2022b-R-4.2.2|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CNVkit/0.9.10-foss-2022b-R-4.2.2|-|x|x|x|-|-|

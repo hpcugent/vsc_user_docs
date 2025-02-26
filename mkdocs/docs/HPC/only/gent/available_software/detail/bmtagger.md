@@ -19,6 +19,6 @@ module load bmtagger/3.101-gompi-2020b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bmtagger/3.101-gompi-2020b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|bmtagger/3.101-gompi-2020b|-|x|x|x|-|-|

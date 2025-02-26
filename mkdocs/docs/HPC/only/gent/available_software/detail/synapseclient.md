@@ -19,6 +19,6 @@ module load synapseclient/3.0.0-GCCcore-12.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|synapseclient/3.0.0-GCCcore-12.2.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|synapseclient/3.0.0-GCCcore-12.2.0|-|x|x|x|-|-|

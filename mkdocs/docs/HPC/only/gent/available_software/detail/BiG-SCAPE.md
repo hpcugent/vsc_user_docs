@@ -19,7 +19,7 @@ module load BiG-SCAPE/1.1.9-foss-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BiG-SCAPE/1.1.9-foss-2023b|-|x|x|x|x|x|x|
-|BiG-SCAPE/1.0.1-intel-2019b-Python-3.7.4|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BiG-SCAPE/1.1.9-foss-2023b|-|x|x|x|x|x|
+|BiG-SCAPE/1.0.1-intel-2019b-Python-3.7.4|-|x|x|-|-|-|

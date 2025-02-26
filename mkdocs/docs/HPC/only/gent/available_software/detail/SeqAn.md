@@ -19,8 +19,8 @@ module load SeqAn/2.4.0-GCCcore-11.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SeqAn/2.4.0-GCCcore-11.2.0|-|x|x|-|-|-|-|
-|SeqAn/2.4.0-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|SeqAn/2.4.0-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SeqAn/2.4.0-GCCcore-11.2.0|-|x|x|-|-|-|
+|SeqAn/2.4.0-GCCcore-10.2.0|-|x|x|x|-|-|
+|SeqAn/2.4.0-GCCcore-8.3.0|-|x|x|-|-|-|

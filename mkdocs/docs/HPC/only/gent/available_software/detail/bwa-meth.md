@@ -19,7 +19,7 @@ module load bwa-meth/0.2.6-GCC-11.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bwa-meth/0.2.6-GCC-11.3.0|-|x|x|x|-|-|-|
-|bwa-meth/0.2.2-iccifort-2019.5.281|-|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|bwa-meth/0.2.6-GCC-11.3.0|-|x|x|x|-|-|
+|bwa-meth/0.2.2-iccifort-2019.5.281|-|x|-|-|-|-|

@@ -19,16 +19,16 @@ module load libxml2/2.12.7-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libxml2/2.12.7-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|libxml2/2.11.5-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|libxml2/2.11.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|libxml2/2.10.3-GCCcore-12.2.0|-|x|x|x|-|x|-|
-|libxml2/2.9.13-GCCcore-11.3.0|-|x|x|x|-|x|-|
-|libxml2/2.9.10-GCCcore-11.2.0|-|x|x|x|-|x|-|
-|libxml2/2.9.10-GCCcore-10.3.0|-|x|x|x|-|-|-|
-|libxml2/2.9.10-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|libxml2/2.9.10-GCCcore-9.3.0|-|x|x|x|-|-|-|
-|libxml2/2.9.9-GCCcore-8.3.0|-|x|x|x|-|-|-|
-|libxml2/2.9.8-GCCcore-8.2.0|-|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libxml2/2.12.7-GCCcore-13.3.0|x|x|x|x|x|x|
+|libxml2/2.11.5-GCCcore-13.2.0|x|x|x|x|x|x|
+|libxml2/2.11.4-GCCcore-12.3.0|x|x|x|x|x|x|
+|libxml2/2.10.3-GCCcore-12.2.0|-|x|x|x|-|x|
+|libxml2/2.9.13-GCCcore-11.3.0|-|x|x|x|-|x|
+|libxml2/2.9.10-GCCcore-11.2.0|-|x|x|x|-|x|
+|libxml2/2.9.10-GCCcore-10.3.0|-|x|x|x|-|-|
+|libxml2/2.9.10-GCCcore-10.2.0|-|x|x|x|-|-|
+|libxml2/2.9.10-GCCcore-9.3.0|-|x|x|x|-|-|
+|libxml2/2.9.9-GCCcore-8.3.0|-|x|x|x|-|-|
+|libxml2/2.9.8-GCCcore-8.2.0|-|x|-|-|-|-|

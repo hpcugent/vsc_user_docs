@@ -19,6 +19,6 @@ module load TranscriptClean/2.0.2-foss-2020b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TranscriptClean/2.0.2-foss-2020b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|TranscriptClean/2.0.2-foss-2020b|-|x|x|x|-|-|

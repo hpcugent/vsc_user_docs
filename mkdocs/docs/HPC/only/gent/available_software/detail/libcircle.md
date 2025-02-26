@@ -19,6 +19,6 @@ module load libcircle/0.3-gompi-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libcircle/0.3-gompi-2023a|x|-|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libcircle/0.3-gompi-2023a|x|-|-|-|-|-|

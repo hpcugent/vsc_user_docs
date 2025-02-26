@@ -19,7 +19,7 @@ module load PyCalib/20230531-gfbf-2022b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyCalib/20230531-gfbf-2022b|-|x|x|x|-|-|-|
-|PyCalib/0.1.0.dev0-foss-2021b|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyCalib/20230531-gfbf-2022b|-|x|x|x|-|-|
+|PyCalib/0.1.0.dev0-foss-2021b|-|x|x|x|-|-|

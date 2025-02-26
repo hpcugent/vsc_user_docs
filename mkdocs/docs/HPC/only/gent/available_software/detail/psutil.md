@@ -19,7 +19,7 @@ module load psutil/6.1.0-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|psutil/6.1.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|psutil/5.9.5-GCCcore-12.2.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|psutil/6.1.0-GCCcore-13.2.0|x|x|x|x|x|x|
+|psutil/5.9.5-GCCcore-12.2.0|-|x|x|x|-|-|

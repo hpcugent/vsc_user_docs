@@ -19,6 +19,6 @@ module load lancet/1.1.0-iccifort-2019.5.281
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|lancet/1.1.0-iccifort-2019.5.281|-|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|lancet/1.1.0-iccifort-2019.5.281|-|x|-|-|-|-|

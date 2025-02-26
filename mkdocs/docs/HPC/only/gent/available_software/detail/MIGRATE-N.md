@@ -19,6 +19,6 @@ module load MIGRATE-N/5.0.4-foss-2021b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MIGRATE-N/5.0.4-foss-2021b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MIGRATE-N/5.0.4-foss-2021b|-|x|x|-|-|-|

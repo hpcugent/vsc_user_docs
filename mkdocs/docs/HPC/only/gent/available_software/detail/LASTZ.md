@@ -19,7 +19,7 @@ module load LASTZ/1.04.22-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LASTZ/1.04.22-GCC-12.3.0|-|x|x|x|x|-|-|
-|LASTZ/1.04.03-foss-2019b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LASTZ/1.04.22-GCC-12.3.0|-|x|x|x|x|-|
+|LASTZ/1.04.03-foss-2019b|-|x|x|-|-|-|

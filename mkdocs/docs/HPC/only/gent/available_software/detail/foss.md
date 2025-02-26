@@ -19,15 +19,15 @@ module load foss/2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|foss/2024a|x|x|x|x|x|x|x|
-|foss/2023b|x|x|x|x|x|x|x|
-|foss/2023a|x|x|x|x|x|x|x|
-|foss/2022b|-|x|x|x|-|-|-|
-|foss/2022a|-|x|x|x|-|x|-|
-|foss/2021b|-|x|x|x|-|-|-|
-|foss/2021a|-|x|x|x|-|-|-|
-|foss/2020b|-|x|x|x|-|-|-|
-|foss/2020a|-|x|x|-|-|-|-|
-|foss/2019b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|foss/2024a|x|x|x|x|x|x|
+|foss/2023b|x|x|x|x|x|x|
+|foss/2023a|x|x|x|x|x|x|
+|foss/2022b|-|x|x|x|-|-|
+|foss/2022a|-|x|x|x|-|x|
+|foss/2021b|-|x|x|x|-|-|
+|foss/2021a|-|x|x|x|-|-|
+|foss/2020b|-|x|x|x|-|-|
+|foss/2020a|-|x|x|-|-|-|
+|foss/2019b|-|x|x|-|-|-|

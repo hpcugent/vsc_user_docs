@@ -19,7 +19,7 @@ module load openkim-models/20190725-intel-2019b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|openkim-models/20190725-intel-2019b|-|x|x|-|-|-|-|
-|openkim-models/20190725-foss-2019b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|openkim-models/20190725-intel-2019b|-|x|x|-|-|-|
+|openkim-models/20190725-foss-2019b|-|x|x|-|-|-|

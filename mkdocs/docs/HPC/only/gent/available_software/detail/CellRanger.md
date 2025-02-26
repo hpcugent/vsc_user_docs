@@ -19,11 +19,11 @@ module load CellRanger/8.0.1
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CellRanger/8.0.1|x|x|x|x|-|x|x|
-|CellRanger/7.0.0|-|x|x|x|-|-|-|
-|CellRanger/6.1.2|-|x|x|-|-|-|-|
-|CellRanger/6.0.1|-|x|x|-|-|-|-|
-|CellRanger/4.0.0|-|-|x|-|-|-|-|
-|CellRanger/3.1.0|-|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CellRanger/8.0.1|x|x|x|x|-|x|
+|CellRanger/7.0.0|-|x|x|x|-|-|
+|CellRanger/6.1.2|-|x|x|-|-|-|
+|CellRanger/6.0.1|-|x|x|-|-|-|
+|CellRanger/4.0.0|-|-|x|-|-|-|
+|CellRanger/3.1.0|-|-|x|-|-|-|

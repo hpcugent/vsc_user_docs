@@ -19,7 +19,7 @@ module load WHAM/2.0.10.2-intel-2020a-kj_mol
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|WHAM/2.0.10.2-intel-2020a-kj_mol|-|x|x|-|-|-|-|
-|WHAM/2.0.10.2-intel-2020a|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|WHAM/2.0.10.2-intel-2020a-kj_mol|-|x|x|-|-|-|
+|WHAM/2.0.10.2-intel-2020a|-|x|x|-|-|-|

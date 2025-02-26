@@ -19,8 +19,8 @@ module load plotly-orca/1.3.1-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|plotly-orca/1.3.1-GCCcore-12.3.0|-|x|x|x|x|x|x|
-|plotly-orca/1.3.1-GCCcore-10.2.0|-|x|x|x|-|-|-|
-|plotly-orca/1.3.0-GCCcore-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|plotly-orca/1.3.1-GCCcore-12.3.0|-|x|x|x|x|x|
+|plotly-orca/1.3.1-GCCcore-10.2.0|-|x|x|x|-|-|
+|plotly-orca/1.3.0-GCCcore-8.3.0|-|x|x|-|-|-|

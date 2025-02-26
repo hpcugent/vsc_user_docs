@@ -19,7 +19,7 @@ module load BayeScEnv/1.1-iccifort-2019.5.281
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BayeScEnv/1.1-iccifort-2019.5.281|-|x|-|-|-|-|-|
-|BayeScEnv/1.1-GCC-8.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BayeScEnv/1.1-iccifort-2019.5.281|-|x|-|-|-|-|
+|BayeScEnv/1.1-GCC-8.3.0|-|x|x|-|-|-|

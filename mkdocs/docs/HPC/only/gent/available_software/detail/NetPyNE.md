@@ -19,6 +19,6 @@ module load NetPyNE/1.0.2.1-foss-2021b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NetPyNE/1.0.2.1-foss-2021b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NetPyNE/1.0.2.1-foss-2021b|-|x|x|-|-|-|

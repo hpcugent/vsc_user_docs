@@ -19,6 +19,6 @@ module load GPy/1.10.0-foss-2021b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GPy/1.10.0-foss-2021b|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GPy/1.10.0-foss-2021b|-|x|x|-|-|-|

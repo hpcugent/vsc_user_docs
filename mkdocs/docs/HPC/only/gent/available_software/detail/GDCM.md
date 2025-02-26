@@ -19,6 +19,6 @@ module load GDCM/3.0.21-GCCcore-12.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GDCM/3.0.21-GCCcore-12.2.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GDCM/3.0.21-GCCcore-12.2.0|-|x|x|x|-|-|

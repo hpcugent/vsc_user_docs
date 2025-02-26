@@ -19,7 +19,7 @@ module load InterProScan/5.62-94.0-foss-2022b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|InterProScan/5.62-94.0-foss-2022b|-|x|x|x|-|-|-|
-|InterProScan/5.52-86.0-GCCcore-10.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|InterProScan/5.62-94.0-foss-2022b|-|x|x|x|-|-|
+|InterProScan/5.52-86.0-GCCcore-10.3.0|-|x|x|-|-|-|

@@ -19,7 +19,7 @@ module load QCA/2.3.9-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|QCA/2.3.9-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|QCA/2.3.5-GCCcore-11.2.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|QCA/2.3.9-GCCcore-12.3.0|x|x|x|x|x|x|
+|QCA/2.3.5-GCCcore-11.2.0|-|x|x|x|-|-|

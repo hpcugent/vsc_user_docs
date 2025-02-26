@@ -19,8 +19,8 @@ module load tokenizers/0.15.2-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tokenizers/0.15.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|tokenizers/0.13.3-GCCcore-12.2.0|-|x|x|x|-|-|-|
-|tokenizers/0.12.1-GCCcore-10.3.0|-|x|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tokenizers/0.15.2-GCCcore-12.3.0|x|x|x|x|x|x|
+|tokenizers/0.13.3-GCCcore-12.2.0|-|x|x|x|-|-|
+|tokenizers/0.12.1-GCCcore-10.3.0|-|x|x|-|-|-|

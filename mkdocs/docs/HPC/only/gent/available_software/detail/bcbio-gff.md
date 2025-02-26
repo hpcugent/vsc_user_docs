@@ -19,7 +19,7 @@ module load bcbio-gff/0.7.0-foss-2022b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bcbio-gff/0.7.0-foss-2022b|-|x|x|x|-|-|-|
-|bcbio-gff/0.7.0-foss-2022a|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|bcbio-gff/0.7.0-foss-2022b|-|x|x|x|-|-|
+|bcbio-gff/0.7.0-foss-2022a|-|x|x|x|-|-|

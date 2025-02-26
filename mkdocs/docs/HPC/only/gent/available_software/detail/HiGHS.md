@@ -19,6 +19,6 @@ module load HiGHS/1.7.0-gfbf-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HiGHS/1.7.0-gfbf-2023b|-|x|x|x|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HiGHS/1.7.0-gfbf-2023b|-|x|x|x|x|-|

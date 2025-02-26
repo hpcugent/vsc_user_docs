@@ -19,7 +19,7 @@ module load LibLZF/3.6-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LibLZF/3.6-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|LibLZF/3.6-GCCcore-11.3.0|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LibLZF/3.6-GCCcore-12.3.0|x|x|x|x|x|x|
+|LibLZF/3.6-GCCcore-11.3.0|-|x|x|x|-|-|

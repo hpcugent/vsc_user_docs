@@ -19,7 +19,7 @@ module load jedi/0.19.1-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|jedi/0.19.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|jedi/0.19.0-GCCcore-12.3.0|x|-|x|x|x|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|jedi/0.19.1-GCCcore-13.2.0|x|x|x|x|x|x|
+|jedi/0.19.0-GCCcore-12.3.0|x|-|x|x|x|x|

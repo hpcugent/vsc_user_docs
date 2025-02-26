@@ -19,8 +19,8 @@ module load nichenetr/2.2.0-foss-2024a-R-4.4.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nichenetr/2.2.0-foss-2024a-R-4.4.2|x|x|x|x|x|x|x|
-|nichenetr/2.0.4-foss-2022b-R-4.2.2|-|x|x|x|-|-|-|
-|nichenetr/1.1.1-20230223-foss-2022a-R-4.2.1|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|nichenetr/2.2.0-foss-2024a-R-4.4.2|x|x|x|x|x|x|
+|nichenetr/2.0.4-foss-2022b-R-4.2.2|-|x|x|x|-|-|
+|nichenetr/1.1.1-20230223-foss-2022a-R-4.2.1|-|x|x|x|-|-|

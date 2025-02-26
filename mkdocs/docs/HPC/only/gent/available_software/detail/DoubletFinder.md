@@ -19,8 +19,8 @@ module load DoubletFinder/2.0.3-foss-2020a-R-4.0.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DoubletFinder/2.0.3-foss-2020a-R-4.0.0|-|-|x|-|-|-|-|
-|DoubletFinder/2.0.3-20230819-foss-2022b-R-4.2.2|-|x|x|x|-|-|-|
-|DoubletFinder/2.0.3-20230131-foss-2022a-R-4.2.1|-|x|x|x|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DoubletFinder/2.0.3-foss-2020a-R-4.0.0|-|-|x|-|-|-|
+|DoubletFinder/2.0.3-20230819-foss-2022b-R-4.2.2|-|x|x|x|-|-|
+|DoubletFinder/2.0.3-20230131-foss-2022a-R-4.2.1|-|x|x|x|-|-|

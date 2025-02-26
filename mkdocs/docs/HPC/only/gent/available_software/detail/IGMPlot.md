@@ -19,7 +19,7 @@ module load IGMPlot/2.4.2-iccifort-2019.5.281
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|skitty|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|IGMPlot/2.4.2-iccifort-2019.5.281|-|x|-|-|-|-|-|
-|IGMPlot/2.4.2-GCC-8.3.0|-|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|IGMPlot/2.4.2-iccifort-2019.5.281|-|x|-|-|-|-|
+|IGMPlot/2.4.2-GCC-8.3.0|-|x|-|-|-|-|
