@@ -303,7 +303,7 @@ requires other ports, then we should make a modification in our firewall setting
 For this, please contact us via <{{ hpcinfo }}>, and send the destination IP and ports. 
 (We only open our firewall for static IP addresses).
 
-It might possible, that the other end has also firewall, or the license server restricts 
+It might be possible, that the other end also has firewall, or the license server restricts 
 the incoming IP addresses. In this case you need the outgoing IP address of our systems,
 which is either `157.193.240.251` (nathpca001.ugent.be) or `157.193.241.251` (nathpcb001.ugent.be).
 {% endif %}
