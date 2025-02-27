@@ -43,5 +43,5 @@ you might have to reinstall those if you want to use them:
 - on a different cluster
 - with a different version of `R`
 - with an `R` compiled with a different version of toolchain
-- if the operational system is changed/updated. 
+- if the operation system was changed/updated. 
 
