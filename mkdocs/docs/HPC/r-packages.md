@@ -38,7 +38,7 @@ in `R`. This command will show the package locations, ordered by their prioritie
 ### Missing R packages intalled before
 
 Please be aware that if you have installed `R` packages yourself before February 2025,
-then you have to reinstall all of them. You might have to reinatsll self
+then you have to reinstall all of them. You might have to reinstall self
 installed `R` packages if you want to use them:
 
 - on a different cluster
