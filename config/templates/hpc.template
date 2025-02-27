@@ -59,6 +59,7 @@ nav:
       - OpenFOAM: openFOAM.md
       - Python: python.md
       - Python virtual environments: setting_up_python_virtual_environments.md
+      - R packages: r-packages.md
       - Transcribe: transcribe.md
       - VS Code Tunnel: vscodetunnel.md
   - FAQ:
