@@ -304,7 +304,7 @@ requires other ports, then we should make a modification in our firewall setting
 For this, please contact us via <{{ hpcinfo }}>, and send the destination IP and ports. 
 (We only open our firewall for static IP addresses).
 
-It is possible that the other end also has firewall, or that the license server restricts 
+Take into account that the other end may also has a firewall, or that the license server may restrict 
 the incoming IP addresses. In this case you need the outgoing IP address of our systems,
 which is either of:
 
