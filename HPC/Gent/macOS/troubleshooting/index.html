@@ -584,6 +584,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#issues-reaching-servers-from-hpc-infrastructure" class="md-nav__link">
+    Issues reaching servers from HPC infrastructure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#security-warning-about-invalid-host-key" class="md-nav__link">
     Security warning about invalid host key
   </a>
@@ -1469,6 +1476,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#issues-reaching-servers-from-hpc-infrastructure" class="md-nav__link">
+    Issues reaching servers from HPC infrastructure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#security-warning-about-invalid-host-key" class="md-nav__link">
     Security warning about invalid host key
   </a>
@@ -1730,6 +1744,22 @@ problem, please contact hpc@ugent.be and include the following information:</p>
 <div class="highlight"><pre><span></span><code>ssh -vvv vsc40000@login.hpc.ugent.be
 </code></pre></div>
 <p>and include the output of that command in the message.</p>
+<h2 id="issues-reaching-servers-from-hpc-infrastructure">Issues reaching servers from HPC infrastructure<a class="headerlink" href="#issues-reaching-servers-from-hpc-infrastructure" title="Permanent link">#</a></h2>
+<p>If you have to reach license servers from HPC-UGent infrastructure systems or you 
+have to directly load some database here, then it might not work
+(you will get errors like <code>Network connection timed out</code> or <code>Network connection refused</code>).</p>
+<p>Our firewall rules are quite strict, we only allow outging ports 22 (SSH protocol),
+ 80 (HTTP protocol), and 443 (HTTPS protcol), so if your download or license server 
+requires other ports, then we should make a modification in our firewall settings.
+For this, please contact us via <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#112;&#99;&#64;&#117;&#103;&#101;&#110;&#116;&#46;&#98;&#101;">&#104;&#112;&#99;&#64;&#117;&#103;&#101;&#110;&#116;&#46;&#98;&#101;</a>, and send the destination IP and ports. 
+(We only open our firewall for static IP addresses).</p>
+<p>Take into account that the other end may also has a firewall, or that the license server may restrict 
+the incoming IP addresses. In this case you need the outgoing IP address of our systems,
+which is either of:</p>
+<ul>
+<li><code>157.193.240.251</code> (hostname <code>nathpca001.ugent.be</code>), or</li>
+<li><code>157.193.241.251</code> (hostname <code>nathpcb001.ugent.be</code>)</li>
+</ul>
 <h2 id="security-warning-about-invalid-host-key">Security warning about invalid host key<a class="headerlink" href="#security-warning-about-invalid-host-key" title="Permanent link">#</a></h2>
 <p>If you get a warning that looks like the one below, it is possible that
 someone is trying to intercept the connection between you and the system
