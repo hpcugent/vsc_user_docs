@@ -14,12 +14,11 @@ The overview below shows which imbalanced-learn installations are available per 
 To start using imbalanced-learn, load one of these modules using a `module load` command like:
 
 ```shell
-module load imbalanced-learn/0.12.3-gfbf-2022b
+module load imbalanced-learn/0.12.4-gfbf-2023b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|imbalanced-learn/0.12.3-gfbf-2022b|-|x|x|x|-|-|
-|imbalanced-learn/0.10.1-foss-2022a|-|x|x|x|-|-|
+|imbalanced-learn/0.12.4-gfbf-2023b|x|-|x|x|x|x|

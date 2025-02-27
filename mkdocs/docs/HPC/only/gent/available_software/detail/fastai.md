@@ -14,12 +14,11 @@ The overview below shows which fastai installations are available per HPC-UGent 
 To start using fastai, load one of these modules using a `module load` command like:
 
 ```shell
-module load fastai/2.7.15-foss-2022b
+module load fastai/2.7.18-foss-2023b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fastai/2.7.15-foss-2022b|-|x|x|x|-|-|
-|fastai/2.7.10-foss-2022a|-|x|x|x|-|-|
+|fastai/2.7.18-foss-2023b|x|-|x|x|x|x|

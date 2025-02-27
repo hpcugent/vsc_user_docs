@@ -21,4 +21,4 @@ module load Pilon/1.23-Java-11
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Pilon/1.23-Java-11|-|x|x|x|-|-|
+|Pilon/1.23-Java-11|-|x|-|x|-|-|

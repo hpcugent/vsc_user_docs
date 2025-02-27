@@ -22,5 +22,3 @@ module load Kraken2/2.1.3-gompi-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Kraken2/2.1.3-gompi-2023a|x|x|x|x|x|x|
-|Kraken2/2.1.2-gompi-2021a|-|x|x|x|-|-|
-|Kraken2/2.0.9-beta-gompi-2020a-Perl-5.30.2|-|x|x|-|-|-|

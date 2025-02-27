@@ -22,5 +22,3 @@ module load CheMPS2/1.8.12-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |CheMPS2/1.8.12-foss-2023a|x|x|x|x|x|x|
-|CheMPS2/1.8.12-foss-2022b|-|x|x|x|-|-|
-|CheMPS2/1.8.12-foss-2022a|-|x|x|x|-|-|

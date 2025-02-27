@@ -21,6 +21,4 @@ module load libvdwxc/0.4.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libvdwxc/0.4.0-foss-2023a|-|x|x|x|-|x|
-|libvdwxc/0.4.0-foss-2021b|-|x|x|-|-|-|
-|libvdwxc/0.4.0-foss-2019b|-|x|x|-|-|-|
+|libvdwxc/0.4.0-foss-2023a|-|x|-|x|-|x|

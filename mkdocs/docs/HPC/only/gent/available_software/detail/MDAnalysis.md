@@ -21,6 +21,4 @@ module load MDAnalysis/2.7.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MDAnalysis/2.7.0-foss-2023a|-|x|x|x|-|x|
-|MDAnalysis/2.4.2-foss-2022b|-|x|x|x|-|-|
-|MDAnalysis/2.4.2-foss-2021a|-|x|x|x|-|-|
+|MDAnalysis/2.7.0-foss-2023a|-|x|-|x|-|x|

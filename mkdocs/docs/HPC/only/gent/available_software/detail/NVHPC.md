@@ -14,13 +14,11 @@ The overview below shows which NVHPC installations are available per HPC-UGent T
 To start using NVHPC, load one of these modules using a `module load` command like:
 
 ```shell
-module load NVHPC/24.9-CUDA-12.6.0
+module load NVHPC/24.9
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NVHPC/24.9-CUDA-12.6.0|-|-|x|-|-|-|
-|NVHPC/24.9|-|x|x|x|-|x|
-|NVHPC/21.2|-|-|x|-|-|-|
+|NVHPC/24.9|-|-|-|-|-|x|

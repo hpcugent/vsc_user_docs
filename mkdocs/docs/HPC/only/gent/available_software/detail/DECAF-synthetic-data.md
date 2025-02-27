@@ -14,11 +14,11 @@ The overview below shows which DECAF-synthetic-data installations are available 
 To start using DECAF-synthetic-data, load one of these modules using a `module load` command like:
 
 ```shell
-module load DECAF-synthetic-data/0.1.6-foss-2022b
+module load DECAF-synthetic-data/0.1.6-foss-2023b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DECAF-synthetic-data/0.1.6-foss-2022b|-|x|x|x|-|-|
+|DECAF-synthetic-data/0.1.6-foss-2023b|x|-|x|x|x|x|

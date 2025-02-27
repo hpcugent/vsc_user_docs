@@ -21,4 +21,4 @@ module load napari-denoiseg/0.0.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|napari-denoiseg/0.0.1-foss-2023a|-|x|x|x|-|-|
+|napari-denoiseg/0.0.1-foss-2023a|-|x|-|x|-|-|

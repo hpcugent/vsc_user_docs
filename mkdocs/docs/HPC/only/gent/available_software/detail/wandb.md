@@ -22,5 +22,3 @@ module load wandb/0.16.1-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |wandb/0.16.1-GCC-12.3.0|x|x|x|x|x|x|
-|wandb/0.13.6-GCC-11.3.0|-|x|x|-|-|-|
-|wandb/0.13.4-GCCcore-11.3.0|-|x|x|x|-|-|

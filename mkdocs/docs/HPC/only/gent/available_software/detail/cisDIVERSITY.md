@@ -21,4 +21,4 @@ module load cisDIVERSITY/1.1-foss-2023a-Python-2.7.18
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cisDIVERSITY/1.1-foss-2023a-Python-2.7.18|-|x|x|x|-|x|
+|cisDIVERSITY/1.1-foss-2023a-Python-2.7.18|-|x|-|x|-|x|

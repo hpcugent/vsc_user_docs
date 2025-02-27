@@ -21,4 +21,4 @@ module load cpio/2.15-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cpio/2.15-GCCcore-12.3.0|x|-|-|-|x|-|
+|cpio/2.15-GCCcore-12.3.0|x|x|x|x|x|-|

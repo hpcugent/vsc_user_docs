@@ -22,4 +22,3 @@ module load libev/4.33-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libev/4.33-GCC-12.3.0|x|x|x|x|x|x|
-|libev/4.33-GCC-11.2.0|-|x|x|x|-|-|

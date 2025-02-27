@@ -22,4 +22,3 @@ module load NanoFilt/2.8.0-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |NanoFilt/2.8.0-foss-2023a|x|x|x|x|x|x|
-|NanoFilt/2.6.0-intel-2019b-Python-3.7.4|-|x|x|-|-|-|

@@ -21,8 +21,4 @@ module load RDKit/2024.03.3-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RDKit/2024.03.3-foss-2023a|x|x|x|x|-|x|
-|RDKit/2022.09.4-foss-2022a|-|x|x|x|-|-|
-|RDKit/2022.03.5-foss-2021b|-|x|x|-|-|-|
-|RDKit/2020.09.3-foss-2019b-Python-3.7.4|-|x|x|-|-|-|
-|RDKit/2020.03.3-intel-2020a-Python-3.8.2|-|x|x|-|-|-|
+|RDKit/2024.03.3-foss-2023a|x|x|-|x|-|x|

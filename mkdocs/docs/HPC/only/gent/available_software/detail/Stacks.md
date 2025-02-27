@@ -21,6 +21,4 @@ module load Stacks/2.68-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Stacks/2.68-foss-2023a|-|x|x|x|-|x|
-|Stacks/2.53-iccifort-2019.5.281|-|x|x|-|-|-|
-|Stacks/2.5-iccifort-2019.5.281|-|x|x|-|-|-|
+|Stacks/2.68-foss-2023a|-|x|-|x|-|x|

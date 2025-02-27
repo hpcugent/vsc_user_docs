@@ -22,5 +22,4 @@ module load basemap/1.4.1-foss-2024a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |basemap/1.4.1-foss-2024a|x|x|x|x|x|x|
-|basemap/1.3.9-foss-2023a|x|x|x|x|-|x|
-|basemap/1.2.2-foss-2020a-Python-3.8.2|-|x|x|-|-|-|
+|basemap/1.3.9-foss-2023a|x|x|-|x|-|x|

@@ -14,14 +14,13 @@ The overview below shows which MONAI installations are available per HPC-UGent T
 To start using MONAI, load one of these modules using a `module load` command like:
 
 ```shell
-module load MONAI/1.3.0-foss-2023a-CUDA-12.1.1
+module load MONAI/1.4.0-foss-2023b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MONAI/1.3.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
-|MONAI/1.3.0-foss-2023a|-|x|x|x|-|x|
-|MONAI/1.3.0-foss-2022b|-|x|x|x|-|-|
-|MONAI/1.0.1-foss-2022a|-|x|x|x|-|-|
+|MONAI/1.4.0-foss-2023b|x|-|x|x|x|x|
+|MONAI/1.3.0-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|
+|MONAI/1.3.0-foss-2023a|-|x|-|x|-|x|

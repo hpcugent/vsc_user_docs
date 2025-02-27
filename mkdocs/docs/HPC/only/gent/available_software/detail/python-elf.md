@@ -21,4 +21,4 @@ module load python-elf/0.5.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|python-elf/0.5.1-foss-2023a|-|x|x|x|-|-|
+|python-elf/0.5.1-foss-2023a|-|x|-|x|-|-|

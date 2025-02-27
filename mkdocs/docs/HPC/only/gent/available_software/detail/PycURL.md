@@ -23,4 +23,3 @@ module load PycURL/7.45.3-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |PycURL/7.45.3-GCCcore-13.2.0|x|x|x|x|x|x|
 |PycURL/7.45.2-GCCcore-12.3.0|x|x|x|x|x|x|
-|PycURL/7.45.2-GCCcore-12.2.0|-|x|x|x|-|-|

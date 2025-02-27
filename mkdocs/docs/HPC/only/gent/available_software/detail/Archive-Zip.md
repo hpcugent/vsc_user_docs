@@ -22,6 +22,3 @@ module load Archive-Zip/1.68-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Archive-Zip/1.68-GCCcore-12.3.0|x|x|x|x|x|x|
-|Archive-Zip/1.68-GCCcore-11.3.0|-|x|x|-|-|-|
-|Archive-Zip/1.68-GCCcore-11.2.0|-|x|x|-|-|-|
-|Archive-Zip/1.68-GCCcore-10.2.0|-|x|x|x|-|-|

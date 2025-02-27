@@ -23,11 +23,5 @@ module load tqdm/4.66.2-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |tqdm/4.66.2-GCCcore-13.2.0|x|x|x|x|x|x|
 |tqdm/4.66.1-GCCcore-12.3.0|x|x|x|x|x|x|
-|tqdm/4.64.1-GCCcore-12.2.0|-|x|x|x|-|x|
-|tqdm/4.64.0-GCCcore-11.3.0|-|x|x|x|-|x|
-|tqdm/4.62.3-GCCcore-11.2.0|-|x|x|x|-|-|
-|tqdm/4.61.2-GCCcore-10.3.0|-|x|x|x|-|-|
-|tqdm/4.60.0-GCCcore-10.2.0|-|x|x|-|-|-|
-|tqdm/4.56.2-GCCcore-10.2.0|-|x|x|x|-|-|
-|tqdm/4.47.0-GCCcore-9.3.0|-|x|x|x|-|-|
-|tqdm/4.41.1-GCCcore-8.3.0|-|x|x|-|-|-|
+|tqdm/4.64.1-GCCcore-12.2.0|-|-|-|-|-|x|
+|tqdm/4.64.0-GCCcore-11.3.0|-|-|-|-|-|x|

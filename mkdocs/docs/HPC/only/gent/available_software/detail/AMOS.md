@@ -22,4 +22,3 @@ module load AMOS/3.1.0-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |AMOS/3.1.0-foss-2023a|-|x|x|x|x|x|
-|AMOS/3.1.0-foss-2021b|-|x|x|-|-|-|

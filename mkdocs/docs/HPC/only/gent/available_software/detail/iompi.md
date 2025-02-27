@@ -22,6 +22,3 @@ module load iompi/2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |iompi/2023a|x|x|x|x|x|x|
-|iompi/2021a|-|x|x|x|-|-|
-|iompi/2020b|-|x|x|x|-|-|
-|iompi/2020a|-|x|-|-|-|-|

@@ -21,5 +21,4 @@ module load SCENIC/1.3.0-foss-2023a-R-4.3.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SCENIC/1.3.0-foss-2023a-R-4.3.2|-|x|x|x|-|-|
-|SCENIC/1.2.4-foss-2021a-R-4.1.0|-|x|x|-|-|-|
+|SCENIC/1.3.0-foss-2023a-R-4.3.2|-|x|-|x|-|-|

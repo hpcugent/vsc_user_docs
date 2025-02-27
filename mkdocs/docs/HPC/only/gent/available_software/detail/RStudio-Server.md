@@ -23,6 +23,4 @@ module load RStudio-Server/2024.12.0+467-foss-2024a-Java-17-R-4.4.2
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |RStudio-Server/2024.12.0+467-foss-2024a-Java-17-R-4.4.2|x|x|x|x|x|x|
 |RStudio-Server/2024.09.0+375-foss-2023b-Java-11-R-4.4.1|-|x|x|x|x|x|
-|RStudio-Server/2023.09.1+494-gfbf-2023a-Java-11-R-4.3.2|-|x|x|x|-|-|
 |RStudio-Server/2023.09.1+494-foss-2023a-Java-11-R-4.3.2|-|-|-|-|-|x|
-|RStudio-Server/2022.02.0-443-rhel-x86_64|-|x|x|x|-|-|

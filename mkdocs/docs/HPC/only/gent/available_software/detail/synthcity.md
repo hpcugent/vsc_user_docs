@@ -14,12 +14,11 @@ The overview below shows which synthcity installations are available per HPC-UGe
 To start using synthcity, load one of these modules using a `module load` command like:
 
 ```shell
-module load synthcity/0.2.10-foss-2022b
+module load synthcity/0.2.11-foss-2023b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|synthcity/0.2.10-foss-2022b|-|x|x|x|-|-|
-|synthcity/0.2.4-foss-2022a|-|x|x|x|-|-|
+|synthcity/0.2.11-foss-2023b|x|-|x|x|x|-|

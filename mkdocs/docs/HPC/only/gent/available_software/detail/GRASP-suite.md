@@ -21,4 +21,4 @@ module load GRASP-suite/2023-05-09-Java-17
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GRASP-suite/2023-05-09-Java-17|x|x|x|x|-|x|
+|GRASP-suite/2023-05-09-Java-17|x|x|-|x|-|x|

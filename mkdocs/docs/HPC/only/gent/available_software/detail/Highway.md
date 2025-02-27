@@ -21,8 +21,5 @@ module load Highway/1.0.7-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Highway/1.0.7-GCCcore-13.2.0|-|x|x|x|x|x|
+|Highway/1.0.7-GCCcore-13.2.0|x|x|x|x|x|x|
 |Highway/1.0.4-GCCcore-12.3.0|x|x|x|x|x|x|
-|Highway/1.0.4-GCCcore-11.3.0|-|x|x|x|-|-|
-|Highway/1.0.3-GCCcore-12.2.0|-|x|x|x|-|-|
-|Highway/1.0.3-GCCcore-11.3.0|-|x|x|x|-|-|

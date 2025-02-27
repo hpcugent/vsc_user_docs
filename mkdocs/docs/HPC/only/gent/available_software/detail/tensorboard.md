@@ -14,14 +14,13 @@ The overview below shows which tensorboard installations are available per HPC-U
 To start using tensorboard, load one of these modules using a `module load` command like:
 
 ```shell
-module load tensorboard/2.15.1-gfbf-2023a
+module load tensorboard/2.18.0-gfbf-2023b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tensorboard/2.18.0-gfbf-2023b|x|-|x|x|x|x|
 |tensorboard/2.15.1-gfbf-2023a|x|x|x|x|x|x|
-|tensorboard/2.15.1-gfbf-2022b|-|x|x|x|-|-|
-|tensorboard/2.10.0-foss-2022a|-|x|x|x|-|x|
-|tensorboard/2.8.0-foss-2021a|-|x|x|x|-|-|
+|tensorboard/2.10.0-foss-2022a|-|-|-|-|-|x|

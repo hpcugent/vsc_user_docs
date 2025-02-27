@@ -21,4 +21,4 @@ module load xformers/0.0.23.post1-foss-2023a-CUDA-12.1.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|xformers/0.0.23.post1-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
+|xformers/0.0.23.post1-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|

@@ -14,12 +14,12 @@ The overview below shows which ONNX installations are available per HPC-UGent Ti
 To start using ONNX, load one of these modules using a `module load` command like:
 
 ```shell
-module load ONNX/1.15.0-gfbf-2023a
+module load ONNX/1.17.0-gfbf-2023b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ONNX/1.17.0-gfbf-2023b|x|-|x|x|x|x|
 |ONNX/1.15.0-gfbf-2023a|x|x|x|x|x|x|
-|ONNX/1.15.0-foss-2022b|-|x|x|x|-|-|

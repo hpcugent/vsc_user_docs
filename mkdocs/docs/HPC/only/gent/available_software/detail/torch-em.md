@@ -21,4 +21,4 @@ module load torch-em/0.7.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|torch-em/0.7.1-foss-2023a|-|x|x|x|-|-|
+|torch-em/0.7.1-foss-2023a|-|x|-|x|-|-|

@@ -22,5 +22,3 @@ module load Subread/2.0.6-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Subread/2.0.6-GCC-12.3.0|x|x|x|x|x|x|
-|Subread/2.0.3-GCC-9.3.0|-|x|x|-|-|-|
-|Subread/2.0.0-GCC-8.3.0|-|x|x|-|-|-|

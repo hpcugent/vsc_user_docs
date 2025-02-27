@@ -22,4 +22,3 @@ module load muParser/2.3.4-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |muParser/2.3.4-GCCcore-12.3.0|-|x|x|x|x|-|
-|muParser/2.3.2-GCCcore-10.2.0|-|x|x|x|-|-|
