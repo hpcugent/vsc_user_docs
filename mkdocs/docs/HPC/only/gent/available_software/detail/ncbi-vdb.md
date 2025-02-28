@@ -22,8 +22,3 @@ module load ncbi-vdb/3.0.10-gompi-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ncbi-vdb/3.0.10-gompi-2023a|x|x|x|x|x|x|
-|ncbi-vdb/3.0.2-gompi-2022a|-|x|x|x|-|-|
-|ncbi-vdb/3.0.0-gompi-2021b|-|x|x|x|-|-|
-|ncbi-vdb/2.11.2-gompi-2021b|-|x|x|x|-|-|
-|ncbi-vdb/2.10.9-gompi-2020b|-|x|x|x|-|-|
-|ncbi-vdb/2.10.7-gompi-2020a|-|x|x|-|-|-|

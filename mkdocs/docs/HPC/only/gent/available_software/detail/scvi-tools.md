@@ -23,4 +23,3 @@ module load scvi-tools/1.1.2-foss-2023a-CUDA-12.1.1
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |scvi-tools/1.1.2-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
 |scvi-tools/1.1.2-foss-2023a|x|x|x|x|x|x|
-|scvi-tools/0.16.4-foss-2021a|-|x|x|x|-|-|

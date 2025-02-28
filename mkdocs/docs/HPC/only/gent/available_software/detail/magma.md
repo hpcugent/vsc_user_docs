@@ -22,4 +22,3 @@ module load magma/2.7.2-foss-2023a-CUDA-12.1.1
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |magma/2.7.2-foss-2023a-CUDA-12.1.1|x|-|x|-|x|x|
-|magma/2.6.2-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|

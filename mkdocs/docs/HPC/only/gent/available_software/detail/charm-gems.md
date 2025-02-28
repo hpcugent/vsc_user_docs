@@ -21,4 +21,4 @@ module load charm-gems/1.3.3-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|charm-gems/1.3.3-foss-2023a|x|x|x|x|-|x|
+|charm-gems/1.3.3-foss-2023a|x|x|-|x|-|x|

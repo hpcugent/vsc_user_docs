@@ -22,4 +22,3 @@ module load stardist/0.8.5-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |stardist/0.8.5-foss-2023a|x|x|x|x|x|x|
-|stardist/0.8.3-foss-2021b|-|x|x|x|-|-|

@@ -22,5 +22,3 @@ module load libgpg-error/1.48-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libgpg-error/1.48-GCCcore-12.3.0|x|x|x|x|x|x|
-|libgpg-error/1.42-GCCcore-11.2.0|-|x|x|x|-|-|
-|libgpg-error/1.42-GCCcore-10.3.0|-|x|x|-|-|-|

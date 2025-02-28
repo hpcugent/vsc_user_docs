@@ -14,16 +14,13 @@ The overview below shows which imageio installations are available per HPC-UGent
 To start using imageio, load one of these modules using a `module load` command like:
 
 ```shell
-module load imageio/2.33.1-gfbf-2023a
+module load imageio/2.34.1-gfbf-2023b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|imageio/2.34.1-gfbf-2023b|x|x|x|x|x|x|
 |imageio/2.33.1-gfbf-2023a|x|x|x|x|x|x|
-|imageio/2.31.1-foss-2022b|-|x|x|x|-|-|
-|imageio/2.22.2-foss-2022a|-|x|x|x|-|x|
-|imageio/2.13.5-foss-2021b|-|x|x|x|-|-|
-|imageio/2.10.5-foss-2021a|-|x|x|-|-|-|
-|imageio/2.9.0-intel-2019b-Python-3.7.4|-|x|x|-|-|-|
+|imageio/2.22.2-foss-2022a|-|-|-|-|-|x|

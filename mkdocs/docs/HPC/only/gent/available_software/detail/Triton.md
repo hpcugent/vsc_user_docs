@@ -21,5 +21,4 @@ module load Triton/2.1.0-foss-2023a-CUDA-12.1.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Triton/2.1.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
-|Triton/1.1.1-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|
+|Triton/2.1.0-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|

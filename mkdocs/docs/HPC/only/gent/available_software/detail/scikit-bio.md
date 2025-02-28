@@ -23,5 +23,3 @@ module load scikit-bio/0.6.0-foss-2023a
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |scikit-bio/0.6.0-foss-2023a|x|x|x|x|x|x|
 |scikit-bio/0.5.9-foss-2023a|-|-|-|-|-|x|
-|scikit-bio/0.5.7-foss-2022a|-|x|x|x|-|-|
-|scikit-bio/0.5.7-foss-2021a|-|x|x|x|-|-|

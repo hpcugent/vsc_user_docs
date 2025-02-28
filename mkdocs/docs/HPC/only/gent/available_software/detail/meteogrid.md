@@ -21,4 +21,4 @@ module load meteogrid/20240627-gfbf-2023a-R-4.3.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|meteogrid/20240627-gfbf-2023a-R-4.3.2|-|x|x|x|-|-|
+|meteogrid/20240627-gfbf-2023a-R-4.3.2|-|x|-|x|-|-|

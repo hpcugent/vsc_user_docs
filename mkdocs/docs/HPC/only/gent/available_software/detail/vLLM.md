@@ -21,4 +21,4 @@ module load vLLM/0.4.0-foss-2023a-CUDA-12.1.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|vLLM/0.4.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
+|vLLM/0.4.0-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|

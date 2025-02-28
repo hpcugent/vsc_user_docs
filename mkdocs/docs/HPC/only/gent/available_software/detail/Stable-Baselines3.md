@@ -21,4 +21,4 @@ module load Stable-Baselines3/2.3.2-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Stable-Baselines3/2.3.2-foss-2023a|-|x|x|x|-|x|
+|Stable-Baselines3/2.3.2-foss-2023a|-|x|-|x|-|x|

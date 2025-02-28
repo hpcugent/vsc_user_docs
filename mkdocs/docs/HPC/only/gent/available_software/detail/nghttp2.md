@@ -22,4 +22,3 @@ module load nghttp2/1.58.0-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |nghttp2/1.58.0-GCC-12.3.0|x|x|x|x|x|x|
-|nghttp2/1.48.0-GCC-11.2.0|-|x|x|x|-|-|

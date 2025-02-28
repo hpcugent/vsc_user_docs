@@ -21,5 +21,4 @@ module load TEtranscripts/2.2.3-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TEtranscripts/2.2.3-foss-2023a|x|x|x|x|-|x|
-|TEtranscripts/2.2.0-foss-2020a|-|x|x|-|-|-|
+|TEtranscripts/2.2.3-foss-2023a|x|x|-|x|-|x|

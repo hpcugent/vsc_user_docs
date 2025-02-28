@@ -23,16 +23,4 @@ module load HMMER/3.4-gompi-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |HMMER/3.4-gompi-2023b|x|x|x|x|x|x|
 |HMMER/3.4-gompi-2023a|x|x|x|x|x|x|
-|HMMER/3.3.2-iimpi-2021b|-|x|x|-|-|-|
-|HMMER/3.3.2-iimpi-2020b|-|x|x|x|-|-|
-|HMMER/3.3.2-gompi-2022b|-|x|x|x|-|-|
-|HMMER/3.3.2-gompi-2022a|-|x|x|x|-|x|
-|HMMER/3.3.2-gompi-2021b|-|x|x|x|-|-|
-|HMMER/3.3.2-gompi-2021a|-|x|x|-|-|-|
-|HMMER/3.3.2-gompi-2020b|-|x|x|x|-|-|
-|HMMER/3.3.2-gompi-2020a|-|x|x|-|-|-|
-|HMMER/3.3.2-gompi-2019b|-|x|x|-|-|-|
-|HMMER/3.3.1-iimpi-2020a|-|x|x|-|-|-|
-|HMMER/3.3.1-gompi-2020a|-|x|x|-|-|-|
-|HMMER/3.2.1-iimpi-2019b|-|x|x|-|-|-|
-|HMMER/3.2.1-gompi-2019b|-|x|x|-|-|-|
+|HMMER/3.3.2-gompi-2022a|-|-|-|-|-|x|

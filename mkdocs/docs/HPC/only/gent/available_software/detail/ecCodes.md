@@ -21,8 +21,4 @@ module load ecCodes/2.31.0-gompi-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ecCodes/2.31.0-gompi-2023a|x|x|x|x|-|x|
-|ecCodes/2.27.0-iimpi-2022a|-|-|x|-|-|-|
-|ecCodes/2.24.2-gompi-2021b|-|x|x|x|-|-|
-|ecCodes/2.22.1-gompi-2021a|-|x|x|-|-|-|
-|ecCodes/2.15.0-iimpi-2019b|-|x|x|-|-|-|
+|ecCodes/2.31.0-gompi-2023a|x|x|-|x|-|x|

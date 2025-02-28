@@ -14,12 +14,11 @@ The overview below shows which Porechop installations are available per HPC-UGen
 To start using Porechop, load one of these modules using a `module load` command like:
 
 ```shell
-module load Porechop/0.2.4-intel-2019b-Python-3.7.4
+module load Porechop/0.2.4-20240119-GCCcore-12.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Porechop/0.2.4-intel-2019b-Python-3.7.4|-|x|x|-|-|-|
 |Porechop/0.2.4-20240119-GCCcore-12.3.0|-|x|x|x|x|x|

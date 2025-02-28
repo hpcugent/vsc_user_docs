@@ -21,4 +21,4 @@ module load Trinotate/4.0.2-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Trinotate/4.0.2-foss-2023a|-|x|x|x|-|x|
+|Trinotate/4.0.2-foss-2023a|-|x|-|x|-|x|

@@ -22,5 +22,3 @@ module load HTSeq/2.0.7-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |HTSeq/2.0.7-foss-2023a|-|x|x|x|x|x|
-|HTSeq/2.0.2-foss-2022a|-|x|x|x|-|-|
-|HTSeq/0.11.3-foss-2021b|-|x|x|-|-|-|

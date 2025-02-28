@@ -21,4 +21,4 @@ module load scFEA/1.1-20221109-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scFEA/1.1-20221109-foss-2023a|-|x|x|x|-|x|
+|scFEA/1.1-20221109-foss-2023a|-|x|-|x|-|x|

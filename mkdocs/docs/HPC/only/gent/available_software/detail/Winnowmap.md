@@ -22,4 +22,3 @@ module load Winnowmap/2.03-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Winnowmap/2.03-GCCcore-12.3.0|x|x|x|x|x|x|
-|Winnowmap/1.0-GCC-8.3.0|-|x|-|-|-|-|

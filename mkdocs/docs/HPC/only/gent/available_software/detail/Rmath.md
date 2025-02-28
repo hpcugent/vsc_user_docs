@@ -21,5 +21,4 @@ module load Rmath/4.3.2-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Rmath/4.3.2-foss-2023a|-|x|x|x|-|-|
-|Rmath/4.0.4-foss-2020b|-|x|x|x|-|-|
+|Rmath/4.3.2-foss-2023a|-|x|-|x|-|-|

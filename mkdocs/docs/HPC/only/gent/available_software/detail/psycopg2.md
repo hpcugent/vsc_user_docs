@@ -22,5 +22,3 @@ module load psycopg2/2.9.9-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |psycopg2/2.9.9-GCCcore-12.3.0|x|x|x|x|x|x|
-|psycopg2/2.9.6-GCCcore-11.3.0|-|x|x|x|-|-|
-|psycopg2/2.9.5-GCCcore-11.2.0|-|x|x|x|-|-|

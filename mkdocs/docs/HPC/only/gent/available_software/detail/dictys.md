@@ -21,5 +21,5 @@ module load dictys/1.1.0-foss-2023a-CUDA-12.1.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|dictys/1.1.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
-|dictys/1.1.0-foss-2023a|-|x|x|x|-|x|
+|dictys/1.1.0-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|
+|dictys/1.1.0-foss-2023a|-|x|-|x|-|x|

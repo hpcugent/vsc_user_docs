@@ -22,4 +22,3 @@ module load Jansson/2.14-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Jansson/2.14-GCC-12.3.0|x|x|x|x|x|x|
-|Jansson/2.13.1-GCC-11.2.0|-|x|x|x|-|-|

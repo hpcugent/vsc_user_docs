@@ -22,4 +22,3 @@ module load mm-common/1.0.6-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |mm-common/1.0.6-GCCcore-12.3.0|x|x|x|x|x|x|
-|mm-common/1.0.4-GCCcore-10.3.0|-|x|x|-|-|-|

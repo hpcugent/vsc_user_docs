@@ -22,5 +22,3 @@ module load xproto/7.0.31-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |xproto/7.0.31-GCCcore-12.3.0|-|x|x|x|x|x|
-|xproto/7.0.31-GCCcore-10.3.0|-|x|x|-|-|-|
-|xproto/7.0.31-GCCcore-8.3.0|-|x|x|-|-|-|

@@ -21,5 +21,4 @@ module load alleleCount/4.3.0-GCC-12.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|alleleCount/4.3.0-GCC-12.2.0|-|x|x|x|-|x|
-|alleleCount/4.2.1-GCC-11.3.0|-|x|x|x|-|-|
+|alleleCount/4.3.0-GCC-12.2.0|-|-|-|-|-|x|

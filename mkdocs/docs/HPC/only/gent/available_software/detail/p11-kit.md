@@ -22,5 +22,3 @@ module load p11-kit/0.25.3-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |p11-kit/0.25.3-GCCcore-12.3.0|x|x|x|x|x|x|
-|p11-kit/0.24.1-GCCcore-11.2.0|-|x|x|x|-|-|
-|p11-kit/0.24.0-GCCcore-10.3.0|-|x|x|-|-|-|

@@ -23,10 +23,3 @@ module load pybedtools/0.10.0-foss-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |pybedtools/0.10.0-foss-2023b|x|x|x|x|x|x|
 |pybedtools/0.9.1-foss-2023a|x|x|x|x|x|x|
-|pybedtools/0.9.0-GCC-12.2.0|-|x|x|x|-|-|
-|pybedtools/0.9.0-GCC-11.3.0|-|x|x|x|-|-|
-|pybedtools/0.8.2-GCC-11.2.0-Python-2.7.18|-|x|x|x|-|-|
-|pybedtools/0.8.2-GCC-11.2.0|-|x|x|-|-|-|
-|pybedtools/0.8.2-GCC-10.2.0-Python-2.7.18|-|x|x|x|-|-|
-|pybedtools/0.8.2-GCC-10.2.0|-|x|x|x|-|-|
-|pybedtools/0.8.1-foss-2019b|-|x|x|-|-|-|

@@ -21,4 +21,4 @@ module load setuptools/64.0.3-GCCcore-12.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|setuptools/64.0.3-GCCcore-12.2.0|-|x|x|x|-|x|
+|setuptools/64.0.3-GCCcore-12.2.0|-|-|-|-|-|x|

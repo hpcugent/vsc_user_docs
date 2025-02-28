@@ -22,8 +22,3 @@ module load file/5.43-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |file/5.43-GCCcore-12.3.0|x|x|x|x|x|x|
-|file/5.43-GCCcore-11.3.0|-|x|x|x|-|-|
-|file/5.41-GCCcore-11.2.0|-|x|x|x|-|-|
-|file/5.39-GCCcore-10.2.0|-|x|x|x|-|-|
-|file/5.38-GCCcore-9.3.0|-|x|x|-|-|-|
-|file/5.38-GCCcore-8.3.0|-|x|x|-|-|-|
