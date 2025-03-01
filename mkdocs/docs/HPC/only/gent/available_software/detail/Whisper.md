@@ -21,5 +21,5 @@ module load Whisper/20240930-foss-2023a-CUDA-12.1.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Whisper/20240930-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
-|Whisper/20231117-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
+|Whisper/20240930-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|
+|Whisper/20231117-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|

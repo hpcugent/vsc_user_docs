@@ -22,4 +22,3 @@ module load libwpe/1.16.0-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libwpe/1.16.0-GCCcore-12.3.0|x|x|x|x|x|x|
-|libwpe/1.13.3-GCCcore-11.2.0|-|x|x|x|-|-|

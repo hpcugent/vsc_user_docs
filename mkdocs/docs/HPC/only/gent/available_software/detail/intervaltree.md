@@ -22,5 +22,3 @@ module load intervaltree/0.1-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |intervaltree/0.1-GCCcore-12.3.0|-|x|x|x|x|x|
-|intervaltree/0.1-GCCcore-11.3.0|-|x|x|x|-|-|
-|intervaltree/0.1-GCCcore-10.2.0|-|x|x|-|-|-|

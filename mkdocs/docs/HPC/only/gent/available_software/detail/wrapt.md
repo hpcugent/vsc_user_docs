@@ -24,5 +24,3 @@ module load wrapt/1.16.0-gfbf-2024a
 |wrapt/1.16.0-gfbf-2024a|x|x|x|x|x|x|
 |wrapt/1.16.0-GCCcore-13.2.0|x|x|x|x|x|x|
 |wrapt/1.15.0-gfbf-2023a|x|x|x|x|x|x|
-|wrapt/1.15.0-foss-2022b|-|x|x|x|-|-|
-|wrapt/1.15.0-foss-2022a|-|x|x|x|-|-|

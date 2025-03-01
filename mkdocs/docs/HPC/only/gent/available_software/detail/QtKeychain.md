@@ -22,4 +22,3 @@ module load QtKeychain/0.14.3-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |QtKeychain/0.14.3-GCCcore-12.3.0|x|x|x|x|x|x|
-|QtKeychain/0.13.2-GCCcore-11.2.0|-|x|x|x|-|-|

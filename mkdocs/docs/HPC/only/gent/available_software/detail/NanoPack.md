@@ -21,4 +21,4 @@ module load NanoPack/20230602-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NanoPack/20230602-foss-2023a|-|x|x|x|-|x|
+|NanoPack/20230602-foss-2023a|-|x|-|x|-|x|

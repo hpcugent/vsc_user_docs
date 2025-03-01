@@ -21,4 +21,4 @@ module load Gradle/8.6-Java-17
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Gradle/8.6-Java-17|x|x|x|x|-|x|
+|Gradle/8.6-Java-17|x|x|-|x|-|x|

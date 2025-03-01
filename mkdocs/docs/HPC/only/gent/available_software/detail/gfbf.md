@@ -24,4 +24,3 @@ module load gfbf/2024a
 |gfbf/2024a|x|x|x|x|x|x|
 |gfbf/2023b|x|x|x|x|x|x|
 |gfbf/2023a|x|x|x|x|x|x|
-|gfbf/2022b|-|x|x|x|-|-|

@@ -22,5 +22,3 @@ module load ANTLR/2.7.7-GCCcore-12.3.0-Java-11
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ANTLR/2.7.7-GCCcore-12.3.0-Java-11|x|x|x|x|x|x|
-|ANTLR/2.7.7-GCCcore-10.3.0-Java-11|-|x|x|-|-|-|
-|ANTLR/2.7.7-GCCcore-8.3.0-Java-11|-|x|x|-|-|-|

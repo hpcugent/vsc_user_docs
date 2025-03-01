@@ -22,6 +22,3 @@ module load StringTie/2.2.3-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |StringTie/2.2.3-GCC-12.3.0|-|x|x|x|x|x|
-|StringTie/2.2.1-GCC-11.2.0-Python-2.7.18|-|x|x|x|-|-|
-|StringTie/2.2.1-GCC-11.2.0|-|x|x|x|-|-|
-|StringTie/2.1.1-GCC-8.3.0|-|x|x|-|-|-|

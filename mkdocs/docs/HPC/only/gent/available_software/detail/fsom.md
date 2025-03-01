@@ -22,5 +22,3 @@ module load fsom/20151117-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |fsom/20151117-GCCcore-12.3.0|x|x|x|x|x|x|
-|fsom/20151117-GCCcore-11.3.0|-|x|x|x|-|-|
-|fsom/20141119-GCCcore-10.2.0|-|x|x|-|-|-|

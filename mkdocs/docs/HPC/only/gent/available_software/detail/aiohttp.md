@@ -23,6 +23,4 @@ module load aiohttp/3.9.5-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |aiohttp/3.9.5-GCCcore-13.2.0|x|x|x|x|x|x|
 |aiohttp/3.8.5-GCCcore-12.3.0|x|x|x|x|x|x|
-|aiohttp/3.8.5-GCCcore-12.2.0|-|x|x|x|-|x|
-|aiohttp/3.8.3-GCCcore-11.3.0|-|x|x|x|-|-|
-|aiohttp/3.8.1-GCCcore-11.2.0|-|x|x|-|-|-|
+|aiohttp/3.8.5-GCCcore-12.2.0|-|-|-|-|-|x|

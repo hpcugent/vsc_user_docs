@@ -14,15 +14,11 @@ The overview below shows which Kent_tools installations are available per HPC-UG
 To start using Kent_tools, load one of these modules using a `module load` command like:
 
 ```shell
-module load Kent_tools/20190326-linux.x86_64
+module load Kent_tools/468-GCC-12.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Kent_tools/20190326-linux.x86_64|-|-|x|-|-|-|
 |Kent_tools/468-GCC-12.3.0|-|x|x|x|x|x|
-|Kent_tools/422-GCC-11.2.0|-|x|x|x|-|-|
-|Kent_tools/411-GCC-10.2.0|-|x|x|x|-|-|
-|Kent_tools/401-gompi-2019b|-|x|x|-|-|-|

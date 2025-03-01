@@ -14,12 +14,12 @@ The overview below shows which HF-Datasets installations are available per HPC-U
 To start using HF-Datasets, load one of these modules using a `module load` command like:
 
 ```shell
-module load HF-Datasets/2.18.0-gfbf-2023a
+module load HF-Datasets/3.1.0-gfbf-2023b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HF-Datasets/3.1.0-gfbf-2023b|x|x|x|x|x|x|
 |HF-Datasets/2.18.0-gfbf-2023a|x|x|x|x|x|x|
-|HF-Datasets/2.14.4-gfbf-2022b|-|x|x|x|-|-|

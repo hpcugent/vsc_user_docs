@@ -21,4 +21,4 @@ module load cuSPARSELt/0.6.0.6-CUDA-12.1.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cuSPARSELt/0.6.0.6-CUDA-12.1.1|x|-|x|-|x|-|
+|cuSPARSELt/0.6.0.6-CUDA-12.1.1|x|-|-|-|x|-|

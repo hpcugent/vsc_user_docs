@@ -21,4 +21,4 @@ module load gcsfs/2023.12.2.post1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gcsfs/2023.12.2.post1-foss-2023a|x|x|x|x|-|-|
+|gcsfs/2023.12.2.post1-foss-2023a|x|x|-|x|-|-|

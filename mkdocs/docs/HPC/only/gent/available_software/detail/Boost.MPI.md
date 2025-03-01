@@ -21,8 +21,5 @@ module load Boost.MPI/1.83.0-gompi-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Boost.MPI/1.83.0-gompi-2023b|x|-|-|-|-|-|
+|Boost.MPI/1.83.0-gompi-2023b|x|-|-|x|-|-|
 |Boost.MPI/1.82.0-gompi-2023a|x|x|x|x|x|x|
-|Boost.MPI/1.81.0-gompi-2022b|-|x|x|x|-|-|
-|Boost.MPI/1.79.0-gompi-2022a|-|x|x|x|-|-|
-|Boost.MPI/1.77.0-gompi-2021b|-|x|x|-|-|-|

@@ -22,4 +22,3 @@ module load QGIS/3.40.2-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |QGIS/3.40.2-foss-2023a|x|x|x|x|x|x|
-|QGIS/3.28.1-foss-2021b|-|x|x|x|-|-|

@@ -22,5 +22,3 @@ module load time/1.9-GCCcore-13.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |time/1.9-GCCcore-13.3.0|x|x|x|x|x|x|
-|time/1.9-GCCcore-10.2.0|-|x|x|x|-|-|
-|time/1.9-GCCcore-8.3.0|-|x|x|-|-|-|

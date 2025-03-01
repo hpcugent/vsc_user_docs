@@ -21,4 +21,4 @@ module load pyseer/1.3.12-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pyseer/1.3.12-foss-2023a|-|x|x|x|-|x|
+|pyseer/1.3.12-foss-2023a|-|x|-|x|-|x|

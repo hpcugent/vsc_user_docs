@@ -21,6 +21,4 @@ module load NCO/5.1.9-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NCO/5.1.9-foss-2023a|-|x|x|x|-|x|
-|NCO/5.0.6-intel-2019b|-|x|x|-|-|-|
-|NCO/5.0.1-foss-2021a|-|x|x|-|-|-|
+|NCO/5.1.9-foss-2023a|-|x|-|x|-|x|

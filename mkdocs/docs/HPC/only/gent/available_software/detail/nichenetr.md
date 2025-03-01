@@ -22,5 +22,3 @@ module load nichenetr/2.2.0-foss-2024a-R-4.4.2
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |nichenetr/2.2.0-foss-2024a-R-4.4.2|x|x|x|x|x|x|
-|nichenetr/2.0.4-foss-2022b-R-4.2.2|-|x|x|x|-|-|
-|nichenetr/1.1.1-20230223-foss-2022a-R-4.2.1|-|x|x|x|-|-|

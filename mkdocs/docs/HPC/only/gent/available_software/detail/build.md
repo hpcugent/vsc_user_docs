@@ -22,4 +22,3 @@ module load build/1.0.3-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |build/1.0.3-foss-2023a|x|x|x|x|x|x|
-|build/0.10.0-foss-2022a|-|x|x|x|-|-|

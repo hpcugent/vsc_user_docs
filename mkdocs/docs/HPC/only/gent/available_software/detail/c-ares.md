@@ -22,5 +22,3 @@ module load c-ares/1.19.1-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |c-ares/1.19.1-GCCcore-12.3.0|x|x|x|x|x|x|
-|c-ares/1.18.1-GCCcore-11.2.0|-|x|x|x|-|-|
-|c-ares/1.17.2-GCCcore-10.3.0|-|x|x|-|-|-|
