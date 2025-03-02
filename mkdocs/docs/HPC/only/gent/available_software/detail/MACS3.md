@@ -21,6 +21,4 @@ module load MACS3/3.0.1-gfbf-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MACS3/3.0.1-gfbf-2023a|-|x|x|x|-|-|
-|MACS3/3.0.1-foss-2022b|-|x|x|x|-|-|
-|MACS3/3.0.0-foss-2022b|-|x|x|x|-|-|
+|MACS3/3.0.1-gfbf-2023a|-|x|-|x|-|-|

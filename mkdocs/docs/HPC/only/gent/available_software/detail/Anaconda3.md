@@ -22,8 +22,4 @@ module load Anaconda3/2024.06-1
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Anaconda3/2024.06-1|x|x|x|x|x|x|
-|Anaconda3/2024.02-1|x|x|x|x|-|x|
-|Anaconda3/2023.03-1|-|x|x|x|-|-|
-|Anaconda3/2020.11|-|x|x|-|-|-|
-|Anaconda3/2020.07|-|x|-|-|-|-|
-|Anaconda3/2020.02|-|x|x|-|-|-|
+|Anaconda3/2024.02-1|x|x|-|x|-|x|

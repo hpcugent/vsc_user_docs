@@ -22,4 +22,3 @@ module load iodata/1.0.0a5-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |iodata/1.0.0a5-foss-2023a|x|x|x|x|x|x|
-|iodata/1.0.0a2-intel-2022a|-|x|x|x|-|-|

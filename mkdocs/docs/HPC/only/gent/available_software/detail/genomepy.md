@@ -21,5 +21,4 @@ module load genomepy/0.16.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|genomepy/0.16.1-foss-2023a|x|x|x|x|-|x|
-|genomepy/0.15.0-foss-2022a|-|x|x|x|-|-|
+|genomepy/0.16.1-foss-2023a|x|x|-|x|-|x|

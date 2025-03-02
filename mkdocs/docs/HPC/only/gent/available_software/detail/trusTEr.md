@@ -21,4 +21,4 @@ module load trusTEr/0.1.1-20241025-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|trusTEr/0.1.1-20241025-foss-2023a|x|x|x|x|-|x|
+|trusTEr/0.1.1-20241025-foss-2023a|x|x|-|x|-|x|

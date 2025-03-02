@@ -22,6 +22,3 @@ module load GOATOOLS/1.4.5-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |GOATOOLS/1.4.5-foss-2023a|-|x|x|x|x|x|
-|GOATOOLS/1.3.1-foss-2022a|-|x|x|x|-|-|
-|GOATOOLS/1.3.1-foss-2021b|-|x|x|x|-|-|
-|GOATOOLS/1.1.6-foss-2020b|-|x|x|x|-|-|

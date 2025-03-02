@@ -22,8 +22,4 @@ module load leidenalg/0.10.2-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |leidenalg/0.10.2-foss-2023a|x|x|x|x|x|x|
-|leidenalg/0.9.1-foss-2022a|-|x|x|x|-|x|
-|leidenalg/0.8.8-foss-2021b|-|x|x|x|-|-|
-|leidenalg/0.8.7-foss-2021a|-|x|x|x|-|-|
-|leidenalg/0.8.3-foss-2020b|-|x|x|x|-|-|
-|leidenalg/0.8.2-foss-2020a-Python-3.8.2|-|x|x|-|-|-|
+|leidenalg/0.9.1-foss-2022a|-|-|-|-|-|x|

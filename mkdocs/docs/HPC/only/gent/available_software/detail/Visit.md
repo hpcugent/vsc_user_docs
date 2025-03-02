@@ -21,4 +21,4 @@ module load Visit/3.4.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Visit/3.4.1-foss-2023a|-|x|x|x|-|x|
+|Visit/3.4.1-foss-2023a|-|x|x|x|x|x|

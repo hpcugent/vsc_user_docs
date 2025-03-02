@@ -21,4 +21,4 @@ module load empanada-napari/1.1.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|empanada-napari/1.1.0-foss-2023a|-|x|x|x|-|-|
+|empanada-napari/1.1.0-foss-2023a|-|x|-|x|-|-|

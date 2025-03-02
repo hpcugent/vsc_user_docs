@@ -21,4 +21,4 @@ module load SpFFT/1.1.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SpFFT/1.1.0-foss-2023a|-|x|x|x|-|x|
+|SpFFT/1.1.0-foss-2023a|-|x|-|x|-|x|

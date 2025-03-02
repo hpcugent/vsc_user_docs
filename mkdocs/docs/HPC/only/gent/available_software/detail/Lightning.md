@@ -21,4 +21,4 @@ module load Lightning/2.2.1-foss-2023a-CUDA-12.1.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Lightning/2.2.1-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|
+|Lightning/2.2.1-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|

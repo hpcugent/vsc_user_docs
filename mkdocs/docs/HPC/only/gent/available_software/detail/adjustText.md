@@ -21,6 +21,5 @@ module load adjustText/1.1.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|adjustText/1.1.1-foss-2023a|x|x|x|x|-|x|
+|adjustText/1.1.1-foss-2023a|x|x|-|x|-|x|
 |adjustText/0.7.3-foss-2023a|x|x|x|x|x|x|
-|adjustText/0.7.3-foss-2021b|-|x|x|-|-|-|

@@ -23,4 +23,3 @@ module load scArches/0.6.1-foss-2023a-CUDA-12.1.1
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |scArches/0.6.1-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
 |scArches/0.6.1-foss-2023a|x|x|x|x|x|x|
-|scArches/0.5.6-foss-2021a|-|x|x|x|-|-|

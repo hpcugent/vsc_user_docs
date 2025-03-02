@@ -21,6 +21,4 @@ module load SuperLU_DIST/8.1.2-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SuperLU_DIST/8.1.2-foss-2023a|-|x|x|x|-|x|
-|SuperLU_DIST/8.1.0-foss-2022a|-|-|-|x|-|-|
-|SuperLU_DIST/5.4.0-intel-2020a-trisolve-merge|-|x|x|-|-|-|
+|SuperLU_DIST/8.1.2-foss-2023a|-|x|-|x|-|x|

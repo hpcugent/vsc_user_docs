@@ -24,7 +24,3 @@ module load GATK/4.6.0.0-GCCcore-13.2.0-Java-17
 |GATK/4.6.0.0-GCCcore-13.2.0-Java-17|-|x|x|x|x|x|
 |GATK/4.4.0.0-GCCcore-12.3.0-Java-17|-|x|x|x|x|x|
 |GATK/4.3.0.0-GCCcore-12.3.0-Java-11|x|x|x|x|x|x|
-|GATK/4.3.0.0-GCCcore-11.3.0-Java-11|-|x|x|x|-|-|
-|GATK/4.2.3.0-GCCcore-11.2.0-Java-11|-|x|x|x|-|-|
-|GATK/4.2.0.0-GCCcore-10.2.0-Java-11|-|x|x|x|-|-|
-|GATK/4.1.8.1-GCCcore-9.3.0-Java-1.8|-|x|x|-|-|-|

@@ -21,4 +21,4 @@ module load SIRIUS/7.5.2-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SIRIUS/7.5.2-foss-2023a|-|x|x|x|-|x|
+|SIRIUS/7.5.2-foss-2023a|-|x|-|x|-|x|

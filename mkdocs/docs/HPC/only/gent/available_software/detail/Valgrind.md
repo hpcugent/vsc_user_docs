@@ -22,8 +22,3 @@ module load Valgrind/3.23.0-gompi-2023b
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Valgrind/3.23.0-gompi-2023b|x|x|x|x|x|x|
-|Valgrind/3.20.0-gompi-2022a|-|x|x|-|-|-|
-|Valgrind/3.19.0-gompi-2022a|-|x|x|-|-|-|
-|Valgrind/3.18.1-iimpi-2021b|-|x|x|-|-|-|
-|Valgrind/3.18.1-gompi-2021b|-|x|x|-|-|-|
-|Valgrind/3.17.0-gompi-2021a|-|x|x|-|-|-|

@@ -43,11 +43,7 @@ module load EasyBuild/4.9.4
 |EasyBuild/4.4.2|-|x|x|x|x|-|
 |EasyBuild/4.4.1|-|x|x|x|x|-|
 |EasyBuild/4.4.0|-|x|x|x|x|-|
-|EasyBuild/4.3.4|-|x|x|x|-|-|
-|EasyBuild/4.3.3|-|x|x|x|-|-|
-|EasyBuild/4.3.2|-|x|x|x|-|-|
-|EasyBuild/4.3.1|-|x|x|x|-|-|
-|EasyBuild/4.3.0|-|x|x|x|-|-|
-|EasyBuild/4.2.2|-|x|x|x|-|-|
-|EasyBuild/4.2.1|-|x|x|x|-|-|
-|EasyBuild/4.2.0|-|x|x|x|-|-|
+|EasyBuild/4.3.4|-|x|-|-|-|-|
+|EasyBuild/4.3.3|-|x|-|-|-|-|
+|EasyBuild/4.3.2|-|x|-|-|-|-|
+|EasyBuild/4.3.1|-|x|-|-|-|-|

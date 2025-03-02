@@ -14,13 +14,12 @@ The overview below shows which pycodestyle installations are available per HPC-U
 To start using pycodestyle, load one of these modules using a `module load` command like:
 
 ```shell
-module load pycodestyle/2.11.1-foss-2023a
+module load pycodestyle/2.11.1-foss-2023b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pycodestyle/2.11.1-foss-2023a|-|x|x|x|-|x|
-|pycodestyle/2.11.1-foss-2022b|-|x|x|x|-|-|
-|pycodestyle/2.11.1-foss-2022a|-|x|x|x|-|-|
+|pycodestyle/2.11.1-foss-2023b|x|x|x|x|x|x|
+|pycodestyle/2.11.1-foss-2023a|-|x|-|x|-|x|

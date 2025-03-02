@@ -22,4 +22,3 @@ module load CSBDeep/0.7.4-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |CSBDeep/0.7.4-foss-2023a|x|x|x|x|x|x|
-|CSBDeep/0.7.4-foss-2022a|-|x|x|x|-|-|

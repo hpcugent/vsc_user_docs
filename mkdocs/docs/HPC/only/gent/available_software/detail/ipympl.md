@@ -21,4 +21,4 @@ module load ipympl/0.9.3-gfbf-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ipympl/0.9.3-gfbf-2023a|-|x|x|x|-|x|
+|ipympl/0.9.3-gfbf-2023a|-|x|-|x|-|x|

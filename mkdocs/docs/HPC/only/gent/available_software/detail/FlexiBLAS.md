@@ -24,7 +24,4 @@ module load FlexiBLAS/3.4.4-GCC-13.3.0
 |FlexiBLAS/3.4.4-GCC-13.3.0|x|x|x|x|x|x|
 |FlexiBLAS/3.3.1-GCC-13.2.0|x|x|x|x|x|x|
 |FlexiBLAS/3.3.1-GCC-12.3.0|x|x|x|x|x|x|
-|FlexiBLAS/3.2.1-GCC-12.2.0|-|x|x|x|-|-|
-|FlexiBLAS/3.2.0-GCC-11.3.0|-|x|x|x|-|x|
-|FlexiBLAS/3.0.4-GCC-11.2.0|-|x|x|x|-|-|
-|FlexiBLAS/3.0.4-GCC-10.3.0|-|x|x|x|-|-|
+|FlexiBLAS/3.2.0-GCC-11.3.0|-|-|-|-|-|x|

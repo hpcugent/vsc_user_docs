@@ -24,10 +24,4 @@ module load MPFR/4.2.1-GCCcore-13.3.0
 |MPFR/4.2.1-GCCcore-13.3.0|x|x|x|x|x|x|
 |MPFR/4.2.1-GCCcore-13.2.0|x|x|x|x|x|x|
 |MPFR/4.2.0-GCCcore-12.3.0|x|x|x|x|x|x|
-|MPFR/4.2.0-GCCcore-12.2.0|-|x|x|x|-|-|
-|MPFR/4.1.0-GCCcore-11.3.0|-|x|x|x|-|x|
-|MPFR/4.1.0-GCCcore-11.2.0|-|x|x|x|-|-|
-|MPFR/4.1.0-GCCcore-10.3.0|-|x|x|x|-|-|
-|MPFR/4.1.0-GCCcore-10.2.0|-|x|x|x|-|-|
-|MPFR/4.0.2-GCCcore-9.3.0|-|x|x|-|-|-|
-|MPFR/4.0.2-GCCcore-8.3.0|-|x|x|-|-|-|
+|MPFR/4.1.0-GCCcore-11.3.0|-|-|-|-|-|x|

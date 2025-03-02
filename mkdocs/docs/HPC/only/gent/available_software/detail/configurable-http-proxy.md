@@ -23,4 +23,3 @@ module load configurable-http-proxy/4.6.1-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |configurable-http-proxy/4.6.1-GCCcore-13.2.0|x|x|x|x|x|x|
 |configurable-http-proxy/4.5.6-GCCcore-12.3.0|x|x|x|x|x|x|
-|configurable-http-proxy/4.5.5-GCCcore-12.2.0|-|x|x|x|-|-|
