@@ -13,7 +13,7 @@ complete environments can easily be copied and executed on other
 platforms.
 
 For more general information about the use of Singularity, please see
-the official documentation at <https://www.sylabs.io/docs/>.
+the official documentation at <https://docs.sylabs.io/guides/main/user-guide>.
 
 This documentation only covers aspects of using Singularity on the
 infrastructure.
@@ -63,7 +63,7 @@ restrictions:
 
 For more information on converting existing Docker images to Singularity
 images, see
-<https://www.sylabs.io/guides/3.4/user-guide/singularity_and_docker.html>.
+<https://docs.sylabs.io/guides/main/user-guide/singularity_and_docker.html>.
 
 We strongly recommend the use of Docker Hub, see
 <https://hub.docker.com/> for more information.
