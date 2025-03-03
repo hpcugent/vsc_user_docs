@@ -21,7 +21,4 @@ module load histolab/0.7.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|histolab/0.7.0-foss-2023a|-|x|x|x|-|x|
-|histolab/0.6.0-foss-2022a|-|x|x|x|-|-|
-|histolab/0.4.1-foss-2021b|-|x|x|-|-|-|
-|histolab/0.4.1-foss-2021a|-|x|x|-|-|-|
+|histolab/0.7.0-foss-2023a|-|x|-|x|-|x|

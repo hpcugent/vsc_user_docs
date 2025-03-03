@@ -21,4 +21,4 @@ module load EVidenceModeler/2.1.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|EVidenceModeler/2.1.0-foss-2023a|-|x|x|x|-|x|
+|EVidenceModeler/2.1.0-foss-2023a|-|x|-|x|-|x|

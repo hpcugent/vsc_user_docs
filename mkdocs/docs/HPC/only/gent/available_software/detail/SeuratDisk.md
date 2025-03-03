@@ -21,5 +21,4 @@ module load SeuratDisk/20231104-foss-2023a-R-4.3.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SeuratDisk/20231104-foss-2023a-R-4.3.2|-|x|x|x|-|-|
-|SeuratDisk/0.0.0.9020-foss-2022a-R-4.2.1|-|x|x|-|-|-|
+|SeuratDisk/20231104-foss-2023a-R-4.3.2|-|x|-|x|-|-|

@@ -22,7 +22,3 @@ module load libunistring/1.1-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libunistring/1.1-GCCcore-12.3.0|x|x|x|x|x|x|
-|libunistring/1.0-GCCcore-11.2.0|-|x|x|x|-|-|
-|libunistring/0.9.10-GCCcore-10.3.0|-|x|x|-|-|-|
-|libunistring/0.9.10-GCCcore-9.3.0|-|x|x|-|-|-|
-|libunistring/0.9.10-GCCcore-8.3.0|-|x|x|-|-|-|

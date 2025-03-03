@@ -21,10 +21,6 @@ module load archspec/0.2.5-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|archspec/0.2.5-GCCcore-12.3.0|-|-|-|-|x|-|
+|archspec/0.2.5-GCCcore-12.3.0|-|x|x|x|x|-|
 |archspec/0.2.2-GCCcore-13.2.0|x|x|x|x|x|x|
 |archspec/0.2.1-GCCcore-12.3.0|x|x|x|x|x|x|
-|archspec/0.1.3-GCCcore-11.2.0|-|x|x|-|-|-|
-|archspec/0.1.2-GCCcore-10.3.0|-|x|x|-|-|-|
-|archspec/0.1.0-GCCcore-9.3.0-Python-3.8.2|-|x|x|-|-|-|
-|archspec/0.1.0-GCCcore-8.3.0-Python-3.7.4|-|x|x|-|-|-|

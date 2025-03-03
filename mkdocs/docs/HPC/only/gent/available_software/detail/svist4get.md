@@ -21,4 +21,4 @@ module load svist4get/1.3.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|svist4get/1.3.1-foss-2023a|-|x|x|x|-|x|
+|svist4get/1.3.1-foss-2023a|-|x|-|x|-|x|

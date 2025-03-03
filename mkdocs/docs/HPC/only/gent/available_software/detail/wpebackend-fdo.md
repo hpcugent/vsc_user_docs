@@ -22,4 +22,3 @@ module load wpebackend-fdo/1.15.90-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |wpebackend-fdo/1.15.90-GCCcore-12.3.0|x|x|x|x|x|x|
-|wpebackend-fdo/1.13.1-GCCcore-11.2.0|-|x|x|x|-|-|

@@ -22,4 +22,3 @@ module load Albumentations/1.4.0-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Albumentations/1.4.0-foss-2023a|-|x|x|x|x|x|
-|Albumentations/1.1.0-foss-2021b|-|x|x|-|-|-|

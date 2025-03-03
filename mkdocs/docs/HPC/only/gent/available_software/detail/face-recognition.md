@@ -21,4 +21,4 @@ module load face-recognition/1.3.0-foss-2023a-CUDA-12.1.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|face-recognition/1.3.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
+|face-recognition/1.3.0-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|

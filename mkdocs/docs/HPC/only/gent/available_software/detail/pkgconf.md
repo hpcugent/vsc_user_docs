@@ -24,7 +24,6 @@ module load pkgconf/2.2.0-GCCcore-13.3.0
 |pkgconf/2.2.0-GCCcore-13.3.0|x|x|x|x|x|x|
 |pkgconf/2.0.3-GCCcore-13.2.0|x|x|x|x|x|x|
 |pkgconf/1.9.5-GCCcore-12.3.0|x|x|x|x|x|x|
-|pkgconf/1.9.3-GCCcore-12.2.0|-|x|x|x|-|x|
-|pkgconf/1.8.0-GCCcore-11.3.0|-|x|x|x|-|x|
-|pkgconf/1.8.0-GCCcore-11.2.0|-|x|x|x|-|-|
+|pkgconf/1.9.3-GCCcore-12.2.0|-|-|-|-|-|x|
+|pkgconf/1.8.0-GCCcore-11.3.0|-|-|-|-|-|x|
 |pkgconf/1.8.0|x|x|x|x|x|x|

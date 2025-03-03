@@ -23,10 +23,3 @@ module load FDS/6.9.1-iomkl-2023a
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |FDS/6.9.1-iomkl-2023a|x|x|x|x|x|x|
 |FDS/6.9.1-intel-2023a|x|x|x|x|x|x|
-|FDS/6.8.0-intel-2022b|-|x|x|x|-|-|
-|FDS/6.7.9-intel-2022a|-|x|x|-|-|-|
-|FDS/6.7.7-intel-2021b|-|x|x|-|-|-|
-|FDS/6.7.6-intel-2020b|-|x|x|x|-|-|
-|FDS/6.7.5-intel-2020b|-|-|x|-|-|-|
-|FDS/6.7.5-intel-2020a|-|x|x|-|-|-|
-|FDS/6.7.4-intel-2020a|-|x|x|-|-|-|

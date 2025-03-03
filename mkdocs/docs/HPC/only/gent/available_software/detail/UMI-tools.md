@@ -21,5 +21,4 @@ module load UMI-tools/1.1.4-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|UMI-tools/1.1.4-foss-2023a|-|x|x|x|-|x|
-|UMI-tools/1.0.1-foss-2019b-Python-3.7.4|-|x|x|-|-|-|
+|UMI-tools/1.1.4-foss-2023a|-|x|-|x|-|x|

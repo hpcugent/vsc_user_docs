@@ -21,5 +21,4 @@ module load pyfasta/0.5.2-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pyfasta/0.5.2-foss-2023a|-|x|x|x|-|x|
-|pyfasta/0.5.2-foss-2020b|-|x|x|x|-|-|
+|pyfasta/0.5.2-foss-2023a|-|x|-|x|-|x|

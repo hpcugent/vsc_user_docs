@@ -21,5 +21,4 @@ module load mrcfile/1.5.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mrcfile/1.5.0-foss-2023a|-|x|x|x|-|x|
-|mrcfile/1.3.0-foss-2020b|-|x|x|x|-|-|
+|mrcfile/1.5.0-foss-2023a|-|x|-|x|-|x|

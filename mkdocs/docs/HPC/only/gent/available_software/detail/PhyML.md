@@ -21,4 +21,4 @@ module load PhyML/3.3.20220408-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PhyML/3.3.20220408-foss-2023a|-|x|x|x|-|-|
+|PhyML/3.3.20220408-foss-2023a|-|x|-|x|-|-|

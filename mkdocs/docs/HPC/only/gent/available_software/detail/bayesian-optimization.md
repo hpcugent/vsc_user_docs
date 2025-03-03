@@ -22,4 +22,4 @@ module load bayesian-optimization/2.0.3-foss-2024a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |bayesian-optimization/2.0.3-foss-2024a|x|x|x|x|x|x|
-|bayesian-optimization/1.5.1-foss-2023a|x|x|x|x|-|x|
+|bayesian-optimization/1.5.1-foss-2023a|x|x|-|x|-|x|

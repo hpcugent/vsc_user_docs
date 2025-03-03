@@ -22,5 +22,3 @@ module load tensorflow-probability/0.20.0-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |tensorflow-probability/0.20.0-foss-2023a|x|x|x|x|x|x|
-|tensorflow-probability/0.19.0-foss-2022a|-|x|x|x|-|-|
-|tensorflow-probability/0.14.0-foss-2021a|-|x|x|x|-|-|

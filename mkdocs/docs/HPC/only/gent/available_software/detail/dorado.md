@@ -23,9 +23,7 @@ module load dorado/0.9.1-foss-2023a-CUDA-12.1.1
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |dorado/0.9.1-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
 |dorado/0.9.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
-|dorado/0.8.3-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
-|dorado/0.8.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
-|dorado/0.7.3-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
-|dorado/0.7.0-foss-2023a-CUDA-12.1.1|-|-|x|-|-|-|
-|dorado/0.6.1-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
-|dorado/0.5.1-foss-2022a-CUDA-11.7.0|-|-|x|-|-|-|
+|dorado/0.8.3-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|
+|dorado/0.8.0-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|
+|dorado/0.7.3-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|
+|dorado/0.6.1-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|

@@ -22,8 +22,3 @@ module load HH-suite/3.3.0-gompi-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |HH-suite/3.3.0-gompi-2023a|x|x|x|x|x|x|
-|HH-suite/3.3.0-gompi-2022a|-|x|x|x|-|-|
-|HH-suite/3.3.0-gompi-2021b|-|-|x|-|-|-|
-|HH-suite/3.3.0-gompi-2021a|-|x|x|-|-|-|
-|HH-suite/3.3.0-gompi-2020b|-|x|x|x|-|-|
-|HH-suite/3.2.0-foss-2019b|-|x|x|-|-|-|

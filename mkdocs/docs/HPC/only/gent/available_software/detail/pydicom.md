@@ -14,16 +14,12 @@ The overview below shows which pydicom installations are available per HPC-UGent
 To start using pydicom, load one of these modules using a `module load` command like:
 
 ```shell
-module load pydicom/2.4.4-GCCcore-12.3.0
+module load pydicom/3.0.1-GCCcore-13.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pydicom/3.0.1-GCCcore-13.2.0|x|x|x|x|x|x|
 |pydicom/2.4.4-GCCcore-12.3.0|x|x|x|x|x|x|
-|pydicom/2.4.4-GCCcore-12.2.0|-|x|x|x|-|-|
-|pydicom/2.3.0-GCCcore-11.3.0|-|x|x|x|-|-|
-|pydicom/2.2.2-GCCcore-10.3.0|-|x|x|-|-|-|
-|pydicom/2.1.2-GCCcore-10.2.0|-|x|x|x|-|-|
-|pydicom/1.4.2-GCCcore-8.3.0|-|x|x|-|-|-|

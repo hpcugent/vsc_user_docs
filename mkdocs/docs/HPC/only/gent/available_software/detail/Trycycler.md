@@ -21,5 +21,4 @@ module load Trycycler/0.5.5-foss-2023a-R-4.3.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Trycycler/0.5.5-foss-2023a-R-4.3.2|-|x|x|x|-|-|
-|Trycycler/0.3.3-foss-2020a-Python-3.8.2|-|x|x|-|-|-|
+|Trycycler/0.5.5-foss-2023a-R-4.3.2|-|x|-|x|-|-|

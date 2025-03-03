@@ -22,4 +22,3 @@ module load ngtcp2/1.2.0-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ngtcp2/1.2.0-GCC-12.3.0|x|x|x|x|x|x|
-|ngtcp2/0.7.0-GCC-11.2.0|-|x|x|x|-|-|

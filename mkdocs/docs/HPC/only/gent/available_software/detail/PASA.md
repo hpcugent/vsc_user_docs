@@ -21,5 +21,4 @@ module load PASA/2.5.3-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PASA/2.5.3-foss-2023a|-|x|x|x|-|x|
-|PASA/2.5.3-foss-2022b|-|x|x|x|-|-|
+|PASA/2.5.3-foss-2023a|-|x|-|x|-|x|

@@ -21,4 +21,4 @@ module load noise/1.2.2-gfbf-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|noise/1.2.2-gfbf-2023a|-|x|x|x|-|-|
+|noise/1.2.2-gfbf-2023a|-|x|-|x|-|-|

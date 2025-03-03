@@ -21,4 +21,4 @@ module load tmux/3.2a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tmux/3.2a|-|x|x|-|-|-|
+|tmux/3.2a|-|x|-|x|-|-|

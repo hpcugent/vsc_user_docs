@@ -21,4 +21,4 @@ module load micro-sam/1.0.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|micro-sam/1.0.1-foss-2023a|-|x|x|x|-|-|
+|micro-sam/1.0.1-foss-2023a|-|x|-|x|-|-|

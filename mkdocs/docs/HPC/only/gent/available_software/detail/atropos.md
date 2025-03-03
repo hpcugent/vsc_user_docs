@@ -21,4 +21,4 @@ module load atropos/1.1.32-gompi-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|atropos/1.1.32-gompi-2023a|-|x|x|x|-|x|
+|atropos/1.1.32-gompi-2023a|-|x|-|x|-|x|
