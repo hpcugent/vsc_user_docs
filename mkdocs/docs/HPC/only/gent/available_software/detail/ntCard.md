@@ -22,4 +22,3 @@ module load ntCard/1.2.2-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ntCard/1.2.2-GCC-12.3.0|-|x|x|x|x|-|
-|ntCard/1.2.1-GCC-8.3.0|-|x|x|x|-|-|

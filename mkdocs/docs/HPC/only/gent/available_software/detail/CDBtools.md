@@ -22,4 +22,3 @@ module load CDBtools/0.99-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |CDBtools/0.99-GCC-12.3.0|x|x|x|x|x|x|
-|CDBtools/0.99-GCC-10.2.0|-|x|x|-|-|-|

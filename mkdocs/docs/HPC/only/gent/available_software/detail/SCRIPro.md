@@ -21,4 +21,4 @@ module load SCRIPro/1.0.18-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SCRIPro/1.0.18-foss-2023a|-|x|x|x|-|-|
+|SCRIPro/1.0.18-foss-2023a|-|x|-|x|-|-|

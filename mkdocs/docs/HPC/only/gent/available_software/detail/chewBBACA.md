@@ -22,4 +22,3 @@ module load chewBBACA/3.3.10-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |chewBBACA/3.3.10-foss-2023a|x|x|x|x|x|x|
-|chewBBACA/2.5.5-intel-2020a-Python-3.8.2|-|x|x|-|-|-|

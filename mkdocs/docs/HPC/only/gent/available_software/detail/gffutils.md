@@ -21,5 +21,4 @@ module load gffutils/0.13-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gffutils/0.13-foss-2023a|x|x|x|x|-|x|
-|gffutils/0.12-foss-2022b|-|x|x|x|-|-|
+|gffutils/0.13-foss-2023a|x|x|-|x|-|x|

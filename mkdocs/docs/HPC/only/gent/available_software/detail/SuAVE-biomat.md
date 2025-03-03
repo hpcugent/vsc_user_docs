@@ -21,4 +21,4 @@ module load SuAVE-biomat/2.0.0-20230815-intel-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SuAVE-biomat/2.0.0-20230815-intel-2023a|-|x|x|x|-|-|
+|SuAVE-biomat/2.0.0-20230815-intel-2023a|-|x|-|x|-|-|

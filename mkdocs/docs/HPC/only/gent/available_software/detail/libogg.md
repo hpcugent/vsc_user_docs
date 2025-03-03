@@ -24,8 +24,4 @@ module load libogg/1.3.5-GCCcore-13.3.0
 |libogg/1.3.5-GCCcore-13.3.0|x|x|x|x|x|x|
 |libogg/1.3.5-GCCcore-13.2.0|x|x|x|x|x|x|
 |libogg/1.3.5-GCCcore-12.3.0|x|x|x|x|x|x|
-|libogg/1.3.5-GCCcore-12.2.0|-|x|x|x|-|-|
-|libogg/1.3.5-GCCcore-11.3.0|-|x|x|x|-|x|
-|libogg/1.3.5-GCCcore-11.2.0|-|x|x|x|-|-|
-|libogg/1.3.4-GCCcore-10.3.0|-|x|x|x|-|-|
-|libogg/1.3.4-GCCcore-10.2.0|-|x|x|x|-|-|
+|libogg/1.3.5-GCCcore-11.3.0|-|-|-|-|-|x|

@@ -22,5 +22,3 @@ module load libsigc++/3.6.0-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libsigc++/3.6.0-GCCcore-12.3.0|x|x|x|x|x|x|
-|libsigc++/2.10.8-GCCcore-10.3.0|-|x|x|-|-|-|
-|libsigc++/2.10.2-GCCcore-8.3.0|-|x|x|-|-|-|

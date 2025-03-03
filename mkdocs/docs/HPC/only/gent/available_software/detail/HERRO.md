@@ -21,4 +21,4 @@ module load HERRO/0.1.0_20240808-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HERRO/0.1.0_20240808-foss-2023a|-|x|x|x|-|x|
+|HERRO/0.1.0_20240808-foss-2023a|-|-|-|-|-|x|

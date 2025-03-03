@@ -22,4 +22,3 @@ module load cooler/0.10.2-foss-2023b
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |cooler/0.10.2-foss-2023b|x|x|x|x|x|x|
-|cooler/0.9.1-foss-2022a|-|x|x|x|-|-|

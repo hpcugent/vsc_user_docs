@@ -21,4 +21,4 @@ module load subset-bam/1.1.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|subset-bam/1.1.0|x|x|x|x|-|x|
+|subset-bam/1.1.0|x|x|-|x|-|x|

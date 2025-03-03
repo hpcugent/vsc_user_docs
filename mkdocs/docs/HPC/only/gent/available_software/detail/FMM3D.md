@@ -14,12 +14,11 @@ The overview below shows which FMM3D installations are available per HPC-UGent T
 To start using FMM3D, load one of these modules using a `module load` command like:
 
 ```shell
-module load FMM3D/20211018-foss-2020b
+module load FMM3D/1.0.4-foss-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FMM3D/20211018-foss-2020b|-|x|x|x|-|-|
 |FMM3D/1.0.4-foss-2023a|x|x|x|x|x|x|

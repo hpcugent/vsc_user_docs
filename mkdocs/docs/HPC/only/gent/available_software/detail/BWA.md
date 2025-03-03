@@ -14,18 +14,13 @@ The overview below shows which BWA installations are available per HPC-UGent Tie
 To start using BWA, load one of these modules using a `module load` command like:
 
 ```shell
-module load BWA/0.7.17-iccifort-2019.5.281
+module load BWA/0.7.18-GCCcore-13.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BWA/0.7.17-iccifort-2019.5.281|-|x|-|-|-|-|
+|BWA/0.7.18-GCCcore-13.2.0|x|x|x|x|x|x|
 |BWA/0.7.17-GCCcore-12.3.0|x|x|x|x|x|x|
-|BWA/0.7.17-GCCcore-12.2.0|-|x|x|x|-|-|
-|BWA/0.7.17-GCCcore-11.3.0|-|x|x|x|-|x|
-|BWA/0.7.17-GCCcore-11.2.0|-|x|x|x|-|-|
-|BWA/0.7.17-GCC-10.2.0|-|x|x|x|-|-|
-|BWA/0.7.17-GCC-9.3.0|-|x|x|-|-|-|
-|BWA/0.7.17-GCC-8.3.0|-|x|x|-|-|-|
+|BWA/0.7.17-GCCcore-11.3.0|-|-|-|-|-|x|

@@ -23,5 +23,5 @@ module load MATES/0.1.8-foss-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |MATES/0.1.8-foss-2023b|x|x|x|x|x|x|
 |MATES/0.1.5-foss-2023b|x|x|x|x|x|x|
-|MATES/0.1.2-20240813-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
+|MATES/0.1.2-20240813-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|
 |MATES/0.1.2-20240813-foss-2023a|-|x|x|x|x|x|

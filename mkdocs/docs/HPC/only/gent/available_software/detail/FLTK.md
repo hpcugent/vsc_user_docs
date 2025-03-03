@@ -22,5 +22,3 @@ module load FLTK/1.3.9-GCCcore-13.2.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |FLTK/1.3.9-GCCcore-13.2.0|-|x|x|x|x|x|
-|FLTK/1.3.5-GCCcore-10.2.0|-|x|x|x|-|-|
-|FLTK/1.3.5-GCCcore-9.3.0|-|x|x|-|-|-|

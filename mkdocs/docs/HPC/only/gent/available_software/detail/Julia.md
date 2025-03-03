@@ -21,7 +21,5 @@ module load Julia/1.10.4-linux-x86_64
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Julia/1.10.4-linux-x86_64|-|x|x|x|-|x|
-|Julia/1.9.3-linux-x86_64|-|x|x|x|-|-|
-|Julia/1.7.2-linux-x86_64|-|x|x|x|-|-|
-|Julia/1.6.2-linux-x86_64|-|x|x|-|-|-|
+|Julia/1.10.4-linux-x86_64|-|x|-|x|-|x|
+|Julia/1.9.2-linux-x86_64|-|x|-|x|-|-|

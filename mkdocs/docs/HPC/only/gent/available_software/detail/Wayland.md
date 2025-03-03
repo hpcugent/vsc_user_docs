@@ -24,5 +24,3 @@ module load Wayland/1.23.0-GCCcore-13.3.0
 |Wayland/1.23.0-GCCcore-13.3.0|x|x|x|x|x|x|
 |Wayland/1.22.0-GCCcore-13.2.0|x|x|x|x|x|x|
 |Wayland/1.22.0-GCCcore-12.3.0|x|x|x|x|x|x|
-|Wayland/1.21.0-GCCcore-11.2.0|-|x|x|x|-|-|
-|Wayland/1.20.0-GCCcore-11.3.0|-|x|x|x|-|-|

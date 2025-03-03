@@ -22,5 +22,3 @@ module load DBD-mysql/4.050-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |DBD-mysql/4.050-GCC-12.3.0|x|x|x|x|x|x|
-|DBD-mysql/4.050-GCC-11.3.0|-|x|x|x|-|-|
-|DBD-mysql/4.050-GCC-11.2.0|-|x|x|x|-|-|

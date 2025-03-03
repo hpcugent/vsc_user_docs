@@ -21,6 +21,5 @@ module load SeqKit/2.8.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SeqKit/2.8.2|x|x|x|x|-|x|
-|SeqKit/2.3.1|x|x|x|x|-|x|
-|SeqKit/2.1.0|-|x|x|-|-|-|
+|SeqKit/2.8.2|x|x|-|x|-|x|
+|SeqKit/2.3.1|x|x|-|x|-|x|

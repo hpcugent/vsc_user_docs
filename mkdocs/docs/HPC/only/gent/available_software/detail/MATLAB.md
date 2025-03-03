@@ -22,5 +22,3 @@ module load MATLAB/2022b-r5
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |MATLAB/2022b-r5|x|x|x|x|x|x|
-|MATLAB/2021b|-|x|x|-|-|-|
-|MATLAB/2019b|-|x|x|-|-|-|

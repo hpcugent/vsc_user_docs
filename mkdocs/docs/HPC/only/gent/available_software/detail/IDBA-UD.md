@@ -22,5 +22,3 @@ module load IDBA-UD/1.1.3-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |IDBA-UD/1.1.3-GCCcore-12.3.0|x|x|x|x|x|x|
-|IDBA-UD/1.1.3-GCC-11.2.0|-|x|x|-|-|-|
-|IDBA-UD/1.1.3-GCC-10.2.0|-|x|x|x|-|-|

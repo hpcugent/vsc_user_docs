@@ -22,4 +22,3 @@ module load enchant-2/2.6.5-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |enchant-2/2.6.5-GCCcore-12.3.0|x|x|x|x|x|x|
-|enchant-2/2.3.3-GCCcore-11.2.0|-|x|x|x|-|-|

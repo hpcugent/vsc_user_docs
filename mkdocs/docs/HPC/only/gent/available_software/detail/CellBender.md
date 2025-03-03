@@ -21,5 +21,5 @@ module load CellBender/0.3.0-foss-2023a-CUDA-12.1.1
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CellBender/0.3.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|-|
+|CellBender/0.3.0-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|
 |CellBender/0.3.0-foss-2023a|-|x|x|x|x|x|

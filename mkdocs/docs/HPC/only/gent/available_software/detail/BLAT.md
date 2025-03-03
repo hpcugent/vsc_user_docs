@@ -22,7 +22,3 @@ module load BLAT/3.7-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |BLAT/3.7-GCC-12.3.0|-|x|x|x|x|x|
-|BLAT/3.7-GCC-11.3.0|-|x|x|x|-|-|
-|BLAT/3.7-GCC-11.2.0|-|x|x|x|-|-|
-|BLAT/3.5-GCC-9.3.0|-|x|x|-|-|-|
-|BLAT/3.5-GCC-8.3.0|-|x|x|-|-|-|
