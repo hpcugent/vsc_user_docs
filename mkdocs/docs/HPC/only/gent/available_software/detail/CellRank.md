@@ -22,4 +22,4 @@ module load CellRank/2.0.2-foss-2023a-CUDA-12.1.1
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |CellRank/2.0.2-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|
-|CellRank/2.0.2-foss-2023a|-|x|x|x|x|x|
+|CellRank/2.0.2-foss-2023a|x|x|x|x|x|x|

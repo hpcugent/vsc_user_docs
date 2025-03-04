@@ -21,4 +21,4 @@ module load SCENICplus/1.0a1-20240513-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SCENICplus/1.0a1-20240513-foss-2023a|-|-|-|-|-|x|
+|SCENICplus/1.0a1-20240513-foss-2023a|x|-|x|-|x|x|

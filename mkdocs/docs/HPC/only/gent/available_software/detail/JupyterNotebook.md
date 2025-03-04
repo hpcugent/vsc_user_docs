@@ -23,3 +23,6 @@ module load JupyterNotebook/7.2.0-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |JupyterNotebook/7.2.0-GCCcore-13.2.0|x|x|x|x|x|x|
 |JupyterNotebook/7.0.2-GCCcore-12.3.0|x|x|x|x|x|x|
+|JupyterNotebook/6.4.12-SAGE-10.2|x|x|x|x|x|x|
+|JupyterNotebook/6.4.12-SAGE-10.1|x|x|x|x|x|x|
+|JupyterNotebook/6.4.12-SAGE-9.8|x|x|x|x|x|x|

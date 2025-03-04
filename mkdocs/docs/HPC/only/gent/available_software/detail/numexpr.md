@@ -21,4 +21,4 @@ module load numexpr/2.9.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|numexpr/2.9.0-foss-2023a|-|x|-|x|-|x|
+|numexpr/2.9.0-foss-2023a|x|x|x|x|x|x|

@@ -21,5 +21,5 @@ module load Pandoc/3.1.2
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Pandoc/3.1.2|-|-|-|x|-|x|
+|Pandoc/3.1.2|x|-|x|x|x|x|
 |Pandoc/2.13|-|x|-|x|-|-|
