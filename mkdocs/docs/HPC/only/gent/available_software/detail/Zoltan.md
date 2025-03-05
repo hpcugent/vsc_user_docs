@@ -21,4 +21,4 @@ module load Zoltan/3.901-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Zoltan/3.901-foss-2023a|-|x|-|x|-|x|
+|Zoltan/3.901-foss-2023a|-|x|x|x|x|x|
