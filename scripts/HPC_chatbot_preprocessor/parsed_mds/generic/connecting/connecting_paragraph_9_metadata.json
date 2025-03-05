@@ -1,0 +1,16 @@
+{
+    "main_title": "connecting",
+    "subtitle": "Changing-login-nodes",
+    "source_file": "../../mkdocs/docs/HPC/connecting.md",
+    "title_depth": 2,
+    "directory": "connecting",
+    "links": {
+        "0": "https://www.howtogeek.com/662422/how-to-use-linuxs-screen-command/",
+        "1": "https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/"
+    },
+    "parent_title": "",
+    "previous_title": "connecting_paragraph_8",
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/connecting/#changing-login-nodes"
+}
