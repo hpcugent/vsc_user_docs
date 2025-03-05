@@ -21,4 +21,4 @@ module load ParMETIS/4.0.3-gompi-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ParMETIS/4.0.3-gompi-2023a|-|x|-|x|-|x|
+|ParMETIS/4.0.3-gompi-2023a|-|x|x|x|x|x|

@@ -21,8 +21,8 @@ module load OpenFOAM/v2406-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenFOAM/v2406-foss-2023a|-|x|-|x|-|-|
-|OpenFOAM/v2312-foss-2023a|-|x|-|x|-|x|
+|OpenFOAM/v2406-foss-2023a|-|x|x|x|x|-|
+|OpenFOAM/v2312-foss-2023a|-|x|x|x|x|x|
 |OpenFOAM/v2112-foss-2023a|x|x|x|x|x|x|
 |OpenFOAM/12-foss-2023a|-|x|-|x|-|x|
 |OpenFOAM/11-foss-2023a|-|x|x|x|x|x|

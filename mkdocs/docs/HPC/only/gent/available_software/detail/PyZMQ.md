@@ -14,12 +14,13 @@ The overview below shows which PyZMQ installations are available per HPC-UGent T
 To start using PyZMQ, load one of these modules using a `module load` command like:
 
 ```shell
-module load PyZMQ/25.1.2-GCCcore-13.2.0
+module load PyZMQ/26.2.0-GCCcore-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyZMQ/26.2.0-GCCcore-13.3.0|-|-|x|-|x|-|
 |PyZMQ/25.1.2-GCCcore-13.2.0|x|x|x|x|x|x|
 |PyZMQ/25.1.1-GCCcore-12.3.0|x|x|x|x|x|x|
