@@ -21,4 +21,4 @@ module load ParMGridGen/1.0-gompi-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ParMGridGen/1.0-gompi-2023a|-|x|-|x|-|x|
+|ParMGridGen/1.0-gompi-2023a|-|x|x|x|x|x|
