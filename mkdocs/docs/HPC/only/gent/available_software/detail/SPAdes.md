@@ -21,4 +21,4 @@ module load SPAdes/3.15.4-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SPAdes/3.15.4-GCC-12.3.0|-|x|x|x|x|x|
+|SPAdes/3.15.4-GCC-12.3.0|x|x|x|x|x|x|
