@@ -480,6 +480,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/Bandage/</ns0:loc>
+         <ns0:lastmod>2025-03-06</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/BayesOpt/</ns0:loc>
          <ns0:lastmod>2025-03-06</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -1411,6 +1416,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/Gerris/</ns0:loc>
+         <ns0:lastmod>2025-03-06</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/GetOrganelle/</ns0:loc>
          <ns0:lastmod>2025-03-06</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -7295,6 +7305,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Bandage/</ns0:loc>
+         <ns0:lastmod>2025-03-06</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/BayesOpt/</ns0:loc>
          <ns0:lastmod>2025-03-06</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -8226,6 +8241,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Gerris/</ns0:loc>
+         <ns0:lastmod>2025-03-06</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/GetOrganelle/</ns0:loc>
          <ns0:lastmod>2025-03-06</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -14110,6 +14130,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Bandage/</ns0:loc>
+         <ns0:lastmod>2025-03-06</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/BayesOpt/</ns0:loc>
          <ns0:lastmod>2025-03-06</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -15041,6 +15066,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Gerris/</ns0:loc>
+         <ns0:lastmod>2025-03-06</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/GetOrganelle/</ns0:loc>
          <ns0:lastmod>2025-03-06</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -20925,6 +20955,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/Bandage/</ns0:loc>
+         <ns0:lastmod>2025-03-06</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/BayesOpt/</ns0:loc>
          <ns0:lastmod>2025-03-06</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -21856,6 +21891,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/Gerris/</ns0:loc>
+         <ns0:lastmod>2025-03-06</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/GetOrganelle/</ns0:loc>
          <ns0:lastmod>2025-03-06</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>

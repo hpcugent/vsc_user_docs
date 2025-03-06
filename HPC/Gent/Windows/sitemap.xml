@@ -481,6 +481,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/Bandage/</loc>
+         <lastmod>2025-03-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/BayesOpt/</loc>
          <lastmod>2025-03-06</lastmod>
          <changefreq>daily</changefreq>
@@ -1412,6 +1417,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/Gerris/</loc>
+         <lastmod>2025-03-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/GetOrganelle/</loc>
          <lastmod>2025-03-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
