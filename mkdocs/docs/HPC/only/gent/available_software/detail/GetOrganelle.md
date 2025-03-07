@@ -21,4 +21,4 @@ module load GetOrganelle/1.7.7.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GetOrganelle/1.7.7.1-foss-2023a|x|x|x|-|x|x|
+|GetOrganelle/1.7.7.1-foss-2023a|x|x|x|x|x|x|
