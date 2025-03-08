@@ -21,4 +21,4 @@ module load rasterio/1.3.9-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rasterio/1.3.9-foss-2023a|-|x|-|x|-|x|
+|rasterio/1.3.9-foss-2023a|x|x|x|x|x|x|

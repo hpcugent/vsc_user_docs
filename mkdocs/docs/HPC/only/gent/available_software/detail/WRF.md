@@ -21,4 +21,4 @@ module load WRF/4.6.1-foss-2024a-dmpar
 
 | |accelgor|doduo|donphan|gallade|joltik|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|WRF/4.6.1-foss-2024a-dmpar|x|x|-|-|-|x|
+|WRF/4.6.1-foss-2024a-dmpar|x|x|x|x|x|x|
