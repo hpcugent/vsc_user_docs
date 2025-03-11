@@ -19,7 +19,7 @@ module load SentencePiece/0.2.0-GCC-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SentencePiece/0.2.0-GCC-13.2.0|x|x|x|x|x|x|
-|SentencePiece/0.2.0-GCC-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SentencePiece/0.2.0-GCC-13.2.0|x|x|x|x|x|x|x|
+|SentencePiece/0.2.0-GCC-12.3.0|x|x|x|x|x|x|x|

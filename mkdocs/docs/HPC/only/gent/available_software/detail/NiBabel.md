@@ -19,7 +19,7 @@ module load NiBabel/5.3.2-gfbf-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NiBabel/5.3.2-gfbf-2023b|x|x|x|x|x|x|
-|NiBabel/5.2.0-gfbf-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NiBabel/5.3.2-gfbf-2023b|x|x|x|x|x|x|x|
+|NiBabel/5.2.0-gfbf-2023a|x|x|x|x|x|x|x|

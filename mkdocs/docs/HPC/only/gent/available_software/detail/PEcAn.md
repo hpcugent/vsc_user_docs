@@ -19,6 +19,6 @@ module load PEcAn/1.8.0.9000-foss-2023a-R-4.3.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PEcAn/1.8.0.9000-foss-2023a-R-4.3.2|-|x|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PEcAn/1.8.0.9000-foss-2023a-R-4.3.2|-|x|-|x|-|x|x|

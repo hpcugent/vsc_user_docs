@@ -19,6 +19,6 @@ module load Hypre/2.29.0-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Hypre/2.29.0-foss-2023a|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Hypre/2.29.0-foss-2023a|-|x|x|x|x|x|x|

@@ -19,6 +19,6 @@ module load ReFrame/4.6.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ReFrame/4.6.2|-|x|-|x|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ReFrame/4.6.2|-|x|-|x|-|-|-|

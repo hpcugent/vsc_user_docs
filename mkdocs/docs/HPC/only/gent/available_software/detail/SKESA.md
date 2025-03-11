@@ -19,6 +19,6 @@ module load SKESA/2.4.0-gompi-2023b_saute.1.3.0_2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SKESA/2.4.0-gompi-2023b_saute.1.3.0_2|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SKESA/2.4.0-gompi-2023b_saute.1.3.0_2|x|x|x|x|x|x|x|

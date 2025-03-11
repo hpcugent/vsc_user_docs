@@ -19,7 +19,7 @@ module load pyBigWig/0.3.22-gfbf-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pyBigWig/0.3.22-gfbf-2023a|x|x|x|x|x|x|
-|pyBigWig/0.3.22-foss-2023a|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pyBigWig/0.3.22-gfbf-2023a|x|x|x|x|x|x|x|
+|pyBigWig/0.3.22-foss-2023a|-|-|-|-|-|x|x|

@@ -19,6 +19,6 @@ module load Guppy/6.5.7-cpu
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Guppy/6.5.7-cpu|-|x|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Guppy/6.5.7-cpu|-|x|-|-|-|-|-|

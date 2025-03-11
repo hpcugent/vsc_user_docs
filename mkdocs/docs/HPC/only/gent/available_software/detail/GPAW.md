@@ -19,6 +19,6 @@ module load GPAW/24.6.0-foss-2023a-ASE-3.23.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GPAW/24.6.0-foss-2023a-ASE-3.23.0|-|x|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GPAW/24.6.0-foss-2023a-ASE-3.23.0|-|x|-|x|-|x|x|

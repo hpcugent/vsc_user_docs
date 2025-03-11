@@ -19,10 +19,10 @@ module load Pillow/10.4.0-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Pillow/10.4.0-GCCcore-13.3.0|x|x|x|x|x|x|
-|Pillow/10.2.0-GCCcore-13.2.0|x|x|x|x|x|x|
-|Pillow/10.0.0-GCCcore-12.3.0|x|x|x|x|x|x|
-|Pillow/9.4.0-GCCcore-12.2.0|-|-|-|-|-|x|
-|Pillow/9.1.1-GCCcore-11.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Pillow/10.4.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|Pillow/10.2.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|Pillow/10.0.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|Pillow/9.4.0-GCCcore-12.2.0|-|-|-|-|-|x|x|
+|Pillow/9.1.1-GCCcore-11.3.0|-|-|-|-|-|x|x|

@@ -19,9 +19,9 @@ module load iimpi/2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|iimpi/2024a|x|x|x|x|x|x|
-|iimpi/2023b|-|x|x|x|x|x|
-|iimpi/2023a|x|x|x|x|x|x|
-|iimpi/2022a|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|iimpi/2024a|x|x|x|x|x|x|x|
+|iimpi/2023b|-|x|x|x|x|x|x|
+|iimpi/2023a|x|x|x|x|x|x|x|
+|iimpi/2022a|-|-|-|-|-|x|x|

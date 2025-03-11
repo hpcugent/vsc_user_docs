@@ -19,6 +19,6 @@ module load worker/1.6.13-iimpi-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|worker/1.6.13-iimpi-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|worker/1.6.13-iimpi-2023a|x|x|x|x|x|x|x|

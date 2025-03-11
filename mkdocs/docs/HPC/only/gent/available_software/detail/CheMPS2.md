@@ -19,6 +19,6 @@ module load CheMPS2/1.8.12-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CheMPS2/1.8.12-foss-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CheMPS2/1.8.12-foss-2023a|x|x|x|x|x|x|x|

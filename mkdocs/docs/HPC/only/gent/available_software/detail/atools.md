@@ -19,7 +19,7 @@ module load atools/1.5.1-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|atools/1.5.1-GCCcore-13.2.0|x|x|x|x|x|x|
-|atools/1.5.1-GCCcore-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|atools/1.5.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|atools/1.5.1-GCCcore-12.3.0|x|x|x|x|x|x|x|

@@ -19,6 +19,6 @@ module load parallel-fastq-dump/0.6.7-gompi-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|parallel-fastq-dump/0.6.7-gompi-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|parallel-fastq-dump/0.6.7-gompi-2023a|x|x|x|x|x|x|x|

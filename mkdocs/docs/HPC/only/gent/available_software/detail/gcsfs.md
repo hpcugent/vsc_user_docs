@@ -19,6 +19,6 @@ module load gcsfs/2023.12.2.post1-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gcsfs/2023.12.2.post1-foss-2023a|x|x|-|x|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|gcsfs/2023.12.2.post1-foss-2023a|x|x|-|x|-|-|-|

@@ -19,7 +19,7 @@ module load SeqKit/2.8.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SeqKit/2.8.2|x|x|-|x|-|x|
-|SeqKit/2.3.1|x|x|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SeqKit/2.8.2|x|x|-|x|-|x|x|
+|SeqKit/2.3.1|x|x|-|x|-|x|x|

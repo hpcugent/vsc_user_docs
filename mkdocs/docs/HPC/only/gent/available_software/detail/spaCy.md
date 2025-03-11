@@ -19,7 +19,7 @@ module load spaCy/3.7.5-foss-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|spaCy/3.7.5-foss-2023b|x|x|x|x|x|x|
-|spaCy/3.7.4-foss-2023a|x|-|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|spaCy/3.7.5-foss-2023b|x|x|x|x|x|x|x|
+|spaCy/3.7.4-foss-2023a|x|-|x|-|x|x|x|

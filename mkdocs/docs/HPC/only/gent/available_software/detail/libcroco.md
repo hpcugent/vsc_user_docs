@@ -19,6 +19,6 @@ module load libcroco/0.6.13-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libcroco/0.6.13-GCCcore-13.3.0|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libcroco/0.6.13-GCCcore-13.3.0|-|x|x|x|x|x|x|

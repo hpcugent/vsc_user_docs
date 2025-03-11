@@ -19,6 +19,6 @@ module load WPS/4.6.0-foss-2024a-dmpar
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|WPS/4.6.0-foss-2024a-dmpar|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|WPS/4.6.0-foss-2024a-dmpar|x|x|x|x|x|x|x|

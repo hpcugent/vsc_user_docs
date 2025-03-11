@@ -19,6 +19,6 @@ module load Stellarscope/1.4.1-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Stellarscope/1.4.1-foss-2023a|-|x|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Stellarscope/1.4.1-foss-2023a|-|x|-|x|-|x|x|

@@ -19,6 +19,6 @@ module load ABAQUS/2024-hotfix-2405
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ABAQUS/2024-hotfix-2405|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ABAQUS/2024-hotfix-2405|x|x|x|x|x|x|x|

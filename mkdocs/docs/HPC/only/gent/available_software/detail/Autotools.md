@@ -19,12 +19,12 @@ module load Autotools/20231222-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Autotools/20231222-GCCcore-13.3.0|x|x|x|x|x|x|
-|Autotools/20220317-GCCcore-13.2.0|x|x|x|x|x|x|
-|Autotools/20220317-GCCcore-12.3.0|x|x|x|x|x|x|
-|Autotools/20220317-GCCcore-12.2.0|-|-|-|-|-|x|
-|Autotools/20220317-GCCcore-11.3.0|-|-|-|-|-|x|
-|Autotools/20220317|-|-|-|-|-|x|
-|Autotools/20210726-GCCcore-11.2.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Autotools/20231222-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|Autotools/20220317-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|Autotools/20220317-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|Autotools/20220317-GCCcore-12.2.0|-|-|-|-|-|x|x|
+|Autotools/20220317-GCCcore-11.3.0|-|-|-|-|-|x|x|
+|Autotools/20220317|-|-|-|-|-|x|x|
+|Autotools/20210726-GCCcore-11.2.0|-|-|-|-|-|x|x|

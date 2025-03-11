@@ -19,7 +19,7 @@ module load pytest-xdist/3.3.1-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pytest-xdist/3.3.1-GCCcore-12.3.0|x|x|x|x|x|x|
-|pytest-xdist/2.5.0-GCCcore-11.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pytest-xdist/3.3.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|pytest-xdist/2.5.0-GCCcore-11.3.0|-|-|-|-|-|x|x|

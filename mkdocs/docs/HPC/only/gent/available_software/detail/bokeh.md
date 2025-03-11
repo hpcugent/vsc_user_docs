@@ -19,8 +19,8 @@ module load bokeh/3.4.1-gfbf-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bokeh/3.4.1-gfbf-2023b|x|x|x|x|x|x|
-|bokeh/3.2.2-foss-2023a|x|x|x|x|x|x|
-|bokeh/2.4.3-foss-2022a|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|bokeh/3.4.1-gfbf-2023b|x|x|x|x|x|x|x|
+|bokeh/3.2.2-foss-2023a|x|x|x|x|x|x|x|
+|bokeh/2.4.3-foss-2022a|-|-|-|-|-|x|x|

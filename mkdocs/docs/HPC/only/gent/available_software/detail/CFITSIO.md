@@ -19,8 +19,8 @@ module load CFITSIO/4.4.1-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CFITSIO/4.4.1-GCCcore-13.3.0|x|x|x|x|x|x|
-|CFITSIO/4.3.1-GCCcore-13.2.0|x|x|x|x|x|x|
-|CFITSIO/4.3.0-GCCcore-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CFITSIO/4.4.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|CFITSIO/4.3.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|CFITSIO/4.3.0-GCCcore-12.3.0|x|x|x|x|x|x|x|

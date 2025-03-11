@@ -19,9 +19,9 @@ module load CUDA/12.6.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CUDA/12.6.0|x|-|x|-|x|-|
-|CUDA/12.5.0|x|-|-|-|x|-|
-|CUDA/12.4.0|x|-|-|-|x|-|
-|CUDA/12.1.1|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CUDA/12.6.0|x|-|x|-|x|x|-|
+|CUDA/12.5.0|x|-|-|-|x|x|-|
+|CUDA/12.4.0|x|-|-|-|x|x|-|
+|CUDA/12.1.1|x|x|x|x|x|x|x|

@@ -19,7 +19,7 @@ module load NLTK/3.8.1-foss-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NLTK/3.8.1-foss-2023b|-|x|x|x|x|-|
-|NLTK/3.8.1-foss-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NLTK/3.8.1-foss-2023b|-|x|x|x|x|-|-|
+|NLTK/3.8.1-foss-2023a|x|x|x|x|x|x|x|

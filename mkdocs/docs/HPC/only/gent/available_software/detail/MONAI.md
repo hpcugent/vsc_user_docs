@@ -19,8 +19,8 @@ module load MONAI/1.4.0-foss-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MONAI/1.4.0-foss-2023b|x|x|x|x|x|x|
-|MONAI/1.3.0-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|
-|MONAI/1.3.0-foss-2023a|-|x|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MONAI/1.4.0-foss-2023b|x|x|x|x|x|x|x|
+|MONAI/1.3.0-foss-2023a-CUDA-12.1.1|x|-|-|-|x|x|-|
+|MONAI/1.3.0-foss-2023a|-|x|-|x|-|x|x|

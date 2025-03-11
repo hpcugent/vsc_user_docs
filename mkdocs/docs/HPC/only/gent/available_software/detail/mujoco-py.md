@@ -19,6 +19,6 @@ module load mujoco-py/2.3.7-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mujoco-py/2.3.7-foss-2023a|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|mujoco-py/2.3.7-foss-2023a|-|-|-|-|-|x|x|

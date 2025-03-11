@@ -19,8 +19,8 @@ module load HMMER/3.4-gompi-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HMMER/3.4-gompi-2023b|x|x|x|x|x|x|
-|HMMER/3.4-gompi-2023a|x|x|x|x|x|x|
-|HMMER/3.3.2-gompi-2022a|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HMMER/3.4-gompi-2023b|x|x|x|x|x|x|x|
+|HMMER/3.4-gompi-2023a|x|x|x|x|x|x|x|
+|HMMER/3.3.2-gompi-2022a|-|-|-|-|-|x|x|

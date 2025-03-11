@@ -19,6 +19,6 @@ module load meteogrid/20240627-gfbf-2023a-R-4.3.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|meteogrid/20240627-gfbf-2023a-R-4.3.2|-|x|-|x|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|meteogrid/20240627-gfbf-2023a-R-4.3.2|-|x|-|x|-|-|-|

@@ -19,6 +19,6 @@ module load cisDIVERSITY/1.1-foss-2023a-Python-2.7.18
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cisDIVERSITY/1.1-foss-2023a-Python-2.7.18|-|x|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|cisDIVERSITY/1.1-foss-2023a-Python-2.7.18|-|x|-|x|-|x|x|

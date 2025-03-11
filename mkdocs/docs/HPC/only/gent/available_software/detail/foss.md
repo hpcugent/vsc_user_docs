@@ -19,9 +19,9 @@ module load foss/2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|foss/2024a|x|x|x|x|x|x|
-|foss/2023b|x|x|x|x|x|x|
-|foss/2023a|x|x|x|x|x|x|
-|foss/2022a|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|foss/2024a|x|x|x|x|x|x|x|
+|foss/2023b|x|x|x|x|x|x|x|
+|foss/2023a|x|x|x|x|x|x|x|
+|foss/2022a|-|-|-|-|-|x|x|

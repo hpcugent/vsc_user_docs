@@ -19,6 +19,6 @@ module load cuTENSOR/2.0.1.2-CUDA-12.1.1
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cuTENSOR/2.0.1.2-CUDA-12.1.1|x|-|-|-|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|cuTENSOR/2.0.1.2-CUDA-12.1.1|x|-|-|-|x|x|-|

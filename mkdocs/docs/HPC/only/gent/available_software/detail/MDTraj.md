@@ -19,6 +19,6 @@ module load MDTraj/1.9.9-gfbf-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MDTraj/1.9.9-gfbf-2023a|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MDTraj/1.9.9-gfbf-2023a|-|x|x|x|x|x|x|

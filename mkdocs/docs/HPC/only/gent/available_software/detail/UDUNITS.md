@@ -19,10 +19,10 @@ module load UDUNITS/2.2.28-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|UDUNITS/2.2.28-GCCcore-13.3.0|x|x|x|x|x|x|
-|UDUNITS/2.2.28-GCCcore-13.2.0|x|x|x|x|x|x|
-|UDUNITS/2.2.28-GCCcore-12.3.0|x|x|x|x|x|x|
-|UDUNITS/2.2.28-GCCcore-12.2.0|-|-|-|-|-|x|
-|UDUNITS/2.2.28-GCCcore-11.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|UDUNITS/2.2.28-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|UDUNITS/2.2.28-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|UDUNITS/2.2.28-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|UDUNITS/2.2.28-GCCcore-12.2.0|-|-|-|-|-|x|x|
+|UDUNITS/2.2.28-GCCcore-11.3.0|-|-|-|-|-|x|x|

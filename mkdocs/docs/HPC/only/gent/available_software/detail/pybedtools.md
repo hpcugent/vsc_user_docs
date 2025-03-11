@@ -19,7 +19,7 @@ module load pybedtools/0.10.0-foss-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pybedtools/0.10.0-foss-2023b|x|x|x|x|x|x|
-|pybedtools/0.9.1-foss-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pybedtools/0.10.0-foss-2023b|x|x|x|x|x|x|x|
+|pybedtools/0.9.1-foss-2023a|x|x|x|x|x|x|x|

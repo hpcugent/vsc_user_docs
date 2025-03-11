@@ -19,8 +19,8 @@ module load GDAL/3.10.0-foss-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GDAL/3.10.0-foss-2024a|x|x|x|x|x|x|
-|GDAL/3.9.0-foss-2023b|x|x|x|x|x|x|
-|GDAL/3.7.1-foss-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GDAL/3.10.0-foss-2024a|x|x|x|x|x|x|x|
+|GDAL/3.9.0-foss-2023b|x|x|x|x|x|x|x|
+|GDAL/3.7.1-foss-2023a|x|x|x|x|x|x|x|

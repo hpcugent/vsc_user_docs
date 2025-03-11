@@ -19,6 +19,6 @@ module load OPERA-MS/0.9.0-20240703-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OPERA-MS/0.9.0-20240703-foss-2023a|-|x|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OPERA-MS/0.9.0-20240703-foss-2023a|-|x|-|x|-|x|x|

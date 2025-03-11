@@ -19,9 +19,9 @@ module load Go/1.22.1
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Go/1.22.1|x|x|x|x|x|x|
-|Go/1.21.6|x|x|-|x|-|x|
-|Go/1.21.2|x|x|x|x|x|x|
-|Go/1.17.6|x|x|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Go/1.22.1|x|x|x|x|x|x|x|
+|Go/1.21.6|x|x|-|x|-|x|x|
+|Go/1.21.2|x|x|x|x|x|x|x|
+|Go/1.17.6|x|x|-|x|-|x|x|

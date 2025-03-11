@@ -19,6 +19,6 @@ module load Gaussian/g16_C.02-NVHPC-24.9
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Gaussian/g16_C.02-NVHPC-24.9|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Gaussian/g16_C.02-NVHPC-24.9|-|x|x|x|x|x|x|

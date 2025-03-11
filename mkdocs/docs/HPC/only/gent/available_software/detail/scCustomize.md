@@ -19,6 +19,6 @@ module load scCustomize/2.1.2-foss-2023a-R-4.3.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scCustomize/2.1.2-foss-2023a-R-4.3.2|-|x|-|x|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|scCustomize/2.1.2-foss-2023a-R-4.3.2|-|x|-|x|-|-|-|

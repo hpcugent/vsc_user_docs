@@ -19,7 +19,7 @@ module load IQ-TREE/2.3.6-gompi-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|IQ-TREE/2.3.6-gompi-2023a|x|x|x|x|x|x|
-|IQ-TREE/2.3.5-gompi-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|IQ-TREE/2.3.6-gompi-2023a|x|x|x|x|x|x|x|
+|IQ-TREE/2.3.5-gompi-2023a|x|x|x|x|x|x|x|

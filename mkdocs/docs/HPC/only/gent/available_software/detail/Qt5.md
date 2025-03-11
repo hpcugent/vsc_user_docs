@@ -19,7 +19,7 @@ module load Qt5/5.15.13-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Qt5/5.15.13-GCCcore-13.2.0|x|x|x|x|x|x|
-|Qt5/5.15.10-GCCcore-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Qt5/5.15.13-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|Qt5/5.15.10-GCCcore-12.3.0|x|x|x|x|x|x|x|

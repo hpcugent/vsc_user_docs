@@ -19,9 +19,9 @@ module load tqdm/4.66.2-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tqdm/4.66.2-GCCcore-13.2.0|x|x|x|x|x|x|
-|tqdm/4.66.1-GCCcore-12.3.0|x|x|x|x|x|x|
-|tqdm/4.64.1-GCCcore-12.2.0|-|-|-|-|-|x|
-|tqdm/4.64.0-GCCcore-11.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tqdm/4.66.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|tqdm/4.66.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|tqdm/4.64.1-GCCcore-12.2.0|-|-|-|-|-|x|x|
+|tqdm/4.64.0-GCCcore-11.3.0|-|-|-|-|-|x|x|

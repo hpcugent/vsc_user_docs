@@ -19,10 +19,10 @@ module load DB/18.1.40-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DB/18.1.40-GCCcore-13.2.0|x|x|x|x|x|x|
-|DB/18.1.40-GCCcore-12.3.0|x|x|x|x|x|x|
-|DB/18.1.40-GCCcore-12.2.0|-|-|-|-|-|x|
-|DB/18.1.40-GCCcore-11.3.0|-|-|-|-|-|x|
-|DB/18.1.40-GCCcore-11.2.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DB/18.1.40-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|DB/18.1.40-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|DB/18.1.40-GCCcore-12.2.0|-|-|-|-|-|x|x|
+|DB/18.1.40-GCCcore-11.3.0|-|-|-|-|-|x|x|
+|DB/18.1.40-GCCcore-11.2.0|-|-|-|-|-|x|x|

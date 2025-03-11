@@ -19,10 +19,10 @@ module load ICU/75.1-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ICU/75.1-GCCcore-13.3.0|x|x|x|x|x|x|
-|ICU/74.1-GCCcore-13.2.0|x|x|x|x|x|x|
-|ICU/73.2-GCCcore-12.3.0|x|x|x|x|x|x|
-|ICU/72.1-GCCcore-12.2.0|-|-|-|-|-|x|
-|ICU/71.1-GCCcore-11.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ICU/75.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|ICU/74.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|ICU/73.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|ICU/72.1-GCCcore-12.2.0|-|-|-|-|-|x|x|
+|ICU/71.1-GCCcore-11.3.0|-|-|-|-|-|x|x|

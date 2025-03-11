@@ -19,7 +19,7 @@ module load Shapely/2.0.6-gfbf-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Shapely/2.0.6-gfbf-2024a|x|x|x|x|x|x|
-|Shapely/2.0.1-gfbf-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Shapely/2.0.6-gfbf-2024a|x|x|x|x|x|x|x|
+|Shapely/2.0.1-gfbf-2023a|x|x|x|x|x|x|x|

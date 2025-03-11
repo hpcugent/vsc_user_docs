@@ -19,7 +19,7 @@ module load BCFtools/1.18-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BCFtools/1.18-GCC-12.3.0|x|x|x|x|x|x|
-|BCFtools/1.17-GCC-12.2.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BCFtools/1.18-GCC-12.3.0|x|x|x|x|x|x|x|
+|BCFtools/1.17-GCC-12.2.0|-|-|-|-|-|x|x|

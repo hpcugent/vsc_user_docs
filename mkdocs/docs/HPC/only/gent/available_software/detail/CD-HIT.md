@@ -19,6 +19,6 @@ module load CD-HIT/4.8.1-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CD-HIT/4.8.1-GCC-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CD-HIT/4.8.1-GCC-12.3.0|x|x|x|x|x|x|x|

@@ -19,7 +19,7 @@ module load MuJoCo/3.1.4-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MuJoCo/3.1.4-GCCcore-12.3.0|-|x|x|x|x|x|
-|MuJoCo/2.3.7-GCCcore-12.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MuJoCo/3.1.4-GCCcore-12.3.0|-|x|x|x|x|x|x|
+|MuJoCo/2.3.7-GCCcore-12.3.0|-|-|-|-|-|x|x|

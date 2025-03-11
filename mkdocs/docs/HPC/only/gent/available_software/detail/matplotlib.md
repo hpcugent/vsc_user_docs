@@ -19,9 +19,9 @@ module load matplotlib/3.9.2-gfbf-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|matplotlib/3.9.2-gfbf-2024a|x|x|x|x|x|x|
-|matplotlib/3.8.2-gfbf-2023b|x|x|x|x|x|x|
-|matplotlib/3.7.2-gfbf-2023a|x|x|x|x|x|x|
-|matplotlib/3.5.2-foss-2022a|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|matplotlib/3.9.2-gfbf-2024a|x|x|x|x|x|x|x|
+|matplotlib/3.8.2-gfbf-2023b|x|x|x|x|x|x|x|
+|matplotlib/3.7.2-gfbf-2023a|x|x|x|x|x|x|x|
+|matplotlib/3.5.2-foss-2022a|-|-|-|-|-|x|x|

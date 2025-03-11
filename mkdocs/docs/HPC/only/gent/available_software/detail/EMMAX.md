@@ -19,7 +19,7 @@ module load EMMAX/20120210-GCCcore-13.2.0-intel-binary
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|EMMAX/20120210-GCCcore-13.2.0-intel-binary|x|x|x|x|x|x|
-|EMMAX/20100310-foss-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|EMMAX/20120210-GCCcore-13.2.0-intel-binary|x|x|x|x|x|x|x|
+|EMMAX/20100310-foss-2023a|x|x|x|x|x|x|x|
