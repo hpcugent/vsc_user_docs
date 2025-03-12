@@ -680,6 +680,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/CRISPResso2/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/CRYSTAL23/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -2505,6 +2510,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/Parallel-Hashmap/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/Perl-bundle-CPAN/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -2826,6 +2836,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/RAxML-NG/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/RDFlib/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -3425,6 +3440,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/Unicycler/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/VASP/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -3605,6 +3625,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/YACS/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/Yasm/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -3776,6 +3801,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/bayesian-optimization/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/bcl-convert/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -7505,6 +7535,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/CRISPResso2/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/CRYSTAL23/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -9330,6 +9365,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Parallel-Hashmap/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Perl-bundle-CPAN/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -9651,6 +9691,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/RAxML-NG/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/RDFlib/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -10250,6 +10295,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Unicycler/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/VASP/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -10430,6 +10480,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/YACS/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Yasm/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -10601,6 +10656,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/bayesian-optimization/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/bcl-convert/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -14330,6 +14390,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CRISPResso2/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/CRYSTAL23/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -16155,6 +16220,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Parallel-Hashmap/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Perl-bundle-CPAN/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -16476,6 +16546,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/RAxML-NG/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/RDFlib/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -17075,6 +17150,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Unicycler/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/VASP/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -17255,6 +17335,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/YACS/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/Yasm/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -17426,6 +17511,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/bayesian-optimization/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/bcl-convert/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -21155,6 +21245,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/CRISPResso2/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/CRYSTAL23/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -22980,6 +23075,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/Parallel-Hashmap/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/Perl-bundle-CPAN/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -23301,6 +23401,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/RAxML-NG/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/RDFlib/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -23900,6 +24005,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/Unicycler/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/VASP/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -24080,6 +24190,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/YACS/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/Yasm/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -24251,6 +24366,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/bayesian-optimization/</ns0:loc>
+         <ns0:lastmod>2025-03-12</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/bcl-convert/</ns0:loc>
          <ns0:lastmod>2025-03-12</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>

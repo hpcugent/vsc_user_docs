@@ -681,6 +681,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/CRISPResso2/</loc>
+         <lastmod>2025-03-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/CRYSTAL23/</loc>
          <lastmod>2025-03-12</lastmod>
          <changefreq>daily</changefreq>
@@ -2506,6 +2511,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/Parallel-Hashmap/</loc>
+         <lastmod>2025-03-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/Perl-bundle-CPAN/</loc>
          <lastmod>2025-03-12</lastmod>
          <changefreq>daily</changefreq>
@@ -2827,6 +2837,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/RAxML-NG/</loc>
+         <lastmod>2025-03-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/RDFlib/</loc>
          <lastmod>2025-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -3426,6 +3441,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/Unicycler/</loc>
+         <lastmod>2025-03-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/VASP/</loc>
          <lastmod>2025-03-12</lastmod>
          <changefreq>daily</changefreq>
@@ -3606,6 +3626,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/YACS/</loc>
+         <lastmod>2025-03-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/Yasm/</loc>
          <lastmod>2025-03-12</lastmod>
          <changefreq>daily</changefreq>
@@ -3777,6 +3802,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/bayesian-optimization/</loc>
+         <lastmod>2025-03-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Windows/available_software/detail/bcl-convert/</loc>
          <lastmod>2025-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
