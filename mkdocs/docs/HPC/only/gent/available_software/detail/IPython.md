@@ -19,9 +19,9 @@ module load IPython/8.28.0-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|IPython/8.28.0-GCCcore-13.3.0|-|-|x|-|x|-|
-|IPython/8.17.2-GCCcore-13.2.0|x|x|x|x|x|x|
-|IPython/8.14.0-GCCcore-12.3.0|x|x|x|x|x|x|
-|IPython/8.5.0-GCCcore-11.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|IPython/8.28.0-GCCcore-13.3.0|-|-|x|-|x|-|-|
+|IPython/8.17.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|IPython/8.14.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|IPython/8.5.0-GCCcore-11.3.0|-|-|-|-|-|x|x|

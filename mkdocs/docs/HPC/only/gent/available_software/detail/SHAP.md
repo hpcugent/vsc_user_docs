@@ -19,6 +19,6 @@ module load SHAP/0.46.0-foss-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SHAP/0.46.0-foss-2023b|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SHAP/0.46.0-foss-2023b|x|x|x|x|x|x|x|

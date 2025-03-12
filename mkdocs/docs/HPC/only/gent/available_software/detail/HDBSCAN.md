@@ -19,6 +19,6 @@ module load HDBSCAN/0.8.38.post1-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HDBSCAN/0.8.38.post1-foss-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HDBSCAN/0.8.38.post1-foss-2023a|x|x|x|x|x|x|x|

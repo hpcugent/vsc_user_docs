@@ -19,7 +19,7 @@ module load MUMPS/5.6.1-gomkl-2023a-metis-seq
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MUMPS/5.6.1-gomkl-2023a-metis-seq|-|x|-|x|-|x|
-|MUMPS/5.6.1-foss-2023a-metis|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MUMPS/5.6.1-gomkl-2023a-metis-seq|-|x|-|x|-|x|x|
+|MUMPS/5.6.1-foss-2023a-metis|x|x|x|x|x|x|x|

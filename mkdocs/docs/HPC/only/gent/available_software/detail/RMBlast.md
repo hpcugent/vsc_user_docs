@@ -19,6 +19,6 @@ module load RMBlast/2.14.1-gompi-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RMBlast/2.14.1-gompi-2023a|-|x|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RMBlast/2.14.1-gompi-2023a|-|x|-|x|-|x|x|

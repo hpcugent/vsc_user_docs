@@ -19,6 +19,6 @@ module load mpifileutils/0.11.1-gompi-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mpifileutils/0.11.1-gompi-2023a|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|mpifileutils/0.11.1-gompi-2023a|x|-|-|-|-|-|-|

@@ -19,6 +19,6 @@ module load attr/2.5.1-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|attr/2.5.1-GCCcore-12.3.0|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|attr/2.5.1-GCCcore-12.3.0|x|-|-|-|-|-|-|

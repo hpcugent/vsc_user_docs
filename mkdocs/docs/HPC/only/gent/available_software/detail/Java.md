@@ -19,13 +19,13 @@ module load Java/21.0.5
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Java/21.0.5|x|x|x|x|x|-|
-|Java/21.0.2|-|-|-|-|-|x|
-|Java/21(@Java/21.0.5)|x|x|x|x|x|-|
-|Java/21(@Java/21.0.2)|-|-|-|-|-|x|
-|Java/17.0.6|x|x|x|x|x|x|
-|Java/17(@Java/17.0.6)|x|x|x|x|x|x|
-|Java/11.0.20|x|x|x|x|x|x|
-|Java/11(@Java/11.0.20)|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Java/21.0.5|x|x|x|x|x|-|-|
+|Java/21.0.2|-|-|-|-|-|x|x|
+|Java/21(@Java/21.0.5)|x|x|x|x|x|-|-|
+|Java/21(@Java/21.0.2)|-|-|-|-|-|x|x|
+|Java/17.0.6|x|x|x|x|x|x|x|
+|Java/17(@Java/17.0.6)|x|x|x|x|x|x|x|
+|Java/11.0.20|x|x|x|x|x|x|x|
+|Java/11(@Java/11.0.20)|x|x|x|x|x|x|x|

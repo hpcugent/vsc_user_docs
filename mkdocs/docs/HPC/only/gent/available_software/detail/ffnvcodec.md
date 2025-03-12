@@ -19,8 +19,8 @@ module load ffnvcodec/12.1.14.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ffnvcodec/12.1.14.0|x|x|x|x|x|x|
-|ffnvcodec/12.0.16.0|x|x|x|x|x|x|
-|ffnvcodec/11.1.5.2|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ffnvcodec/12.1.14.0|x|x|x|x|x|x|x|
+|ffnvcodec/12.0.16.0|x|x|x|x|x|x|x|
+|ffnvcodec/11.1.5.2|-|-|-|-|-|x|x|

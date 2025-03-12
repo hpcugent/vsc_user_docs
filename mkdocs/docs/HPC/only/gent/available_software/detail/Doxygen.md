@@ -19,10 +19,10 @@ module load Doxygen/1.11.0-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Doxygen/1.11.0-GCCcore-13.3.0|x|x|x|x|x|x|
-|Doxygen/1.9.8-GCCcore-13.2.0|x|x|x|x|x|x|
-|Doxygen/1.9.7-GCCcore-12.3.0|x|x|x|x|x|x|
-|Doxygen/1.9.5-GCCcore-12.2.0|-|-|-|-|-|x|
-|Doxygen/1.9.4-GCCcore-11.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Doxygen/1.11.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|Doxygen/1.9.8-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|Doxygen/1.9.7-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|Doxygen/1.9.5-GCCcore-12.2.0|-|-|-|-|-|x|x|
+|Doxygen/1.9.4-GCCcore-11.3.0|-|-|-|-|-|x|x|

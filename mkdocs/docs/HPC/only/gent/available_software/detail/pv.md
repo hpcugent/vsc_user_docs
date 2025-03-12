@@ -19,6 +19,6 @@ module load pv/1.7.24-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pv/1.7.24-GCCcore-12.3.0|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pv/1.7.24-GCCcore-12.3.0|-|x|x|x|x|x|x|

@@ -19,7 +19,7 @@ module load VCFtools/0.1.16-GCC-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VCFtools/0.1.16-GCC-13.2.0|x|x|x|x|x|x|
-|VCFtools/0.1.16-GCC-12.3.0|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|VCFtools/0.1.16-GCC-13.2.0|x|x|x|x|x|x|x|
+|VCFtools/0.1.16-GCC-12.3.0|-|x|x|x|x|x|x|

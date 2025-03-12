@@ -19,12 +19,12 @@ module load Autoconf/2.72-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Autoconf/2.72-GCCcore-13.3.0|x|x|x|x|x|x|
-|Autoconf/2.71-GCCcore-13.2.0|x|x|x|x|x|x|
-|Autoconf/2.71-GCCcore-12.3.0|x|x|x|x|x|x|
-|Autoconf/2.71-GCCcore-12.2.0|-|-|-|-|-|x|
-|Autoconf/2.71-GCCcore-11.3.0|-|-|-|-|-|x|
-|Autoconf/2.71-GCCcore-11.2.0|-|-|-|-|-|x|
-|Autoconf/2.71|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Autoconf/2.72-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|Autoconf/2.71-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|Autoconf/2.71-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|Autoconf/2.71-GCCcore-12.2.0|-|-|-|-|-|x|x|
+|Autoconf/2.71-GCCcore-11.3.0|-|-|-|-|-|x|x|
+|Autoconf/2.71-GCCcore-11.2.0|-|-|-|-|-|x|x|
+|Autoconf/2.71|x|x|x|x|x|x|x|

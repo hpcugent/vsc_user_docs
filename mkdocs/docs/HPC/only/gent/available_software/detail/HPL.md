@@ -19,8 +19,8 @@ module load HPL/2.3-intel-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HPL/2.3-intel-2024a|x|x|x|x|x|x|
-|HPL/2.3-foss-2024a|x|x|-|x|-|x|
-|HPL/2.3-foss-2023b|-|x|x|x|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HPL/2.3-intel-2024a|x|x|x|x|x|x|x|
+|HPL/2.3-foss-2024a|x|x|-|x|-|x|x|
+|HPL/2.3-foss-2023b|-|x|x|x|x|-|-|

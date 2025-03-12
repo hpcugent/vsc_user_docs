@@ -19,6 +19,6 @@ module load Trycycler/0.5.5-foss-2023a-R-4.3.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Trycycler/0.5.5-foss-2023a-R-4.3.2|-|x|-|x|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Trycycler/0.5.5-foss-2023a-R-4.3.2|-|x|-|x|-|-|-|

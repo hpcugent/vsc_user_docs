@@ -19,7 +19,7 @@ module load Trimmomatic/0.39-Java-17
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Trimmomatic/0.39-Java-17|-|x|-|x|-|x|
-|Trimmomatic/0.39-Java-11|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Trimmomatic/0.39-Java-17|-|x|-|x|-|x|x|
+|Trimmomatic/0.39-Java-11|-|x|x|x|x|x|x|

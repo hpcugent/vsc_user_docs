@@ -19,7 +19,7 @@ module load DendroPy/4.6.1-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DendroPy/4.6.1-GCCcore-12.3.0|x|x|x|x|x|x|
-|DendroPy/4.5.2-GCCcore-11.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DendroPy/4.6.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|DendroPy/4.5.2-GCCcore-11.3.0|-|-|-|-|-|x|x|

@@ -19,9 +19,9 @@ module load ScaLAPACK/2.2.0-gompi-2024a-fb
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ScaLAPACK/2.2.0-gompi-2024a-fb|x|x|x|x|x|x|
-|ScaLAPACK/2.2.0-gompi-2023b-fb|x|x|x|x|x|x|
-|ScaLAPACK/2.2.0-gompi-2023a-fb|x|x|x|x|x|x|
-|ScaLAPACK/2.2.0-gompi-2022a-fb|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ScaLAPACK/2.2.0-gompi-2024a-fb|x|x|x|x|x|x|x|
+|ScaLAPACK/2.2.0-gompi-2023b-fb|x|x|x|x|x|x|x|
+|ScaLAPACK/2.2.0-gompi-2023a-fb|x|x|x|x|x|x|x|
+|ScaLAPACK/2.2.0-gompi-2022a-fb|-|-|-|-|-|x|x|

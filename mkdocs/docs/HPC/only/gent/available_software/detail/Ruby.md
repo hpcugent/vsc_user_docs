@@ -19,7 +19,7 @@ module load Ruby/3.3.0-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Ruby/3.3.0-GCCcore-12.3.0|x|x|x|x|x|x|
-|Ruby/3.0.3-GCCcore-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Ruby/3.3.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|Ruby/3.0.3-GCCcore-12.3.0|x|x|x|x|x|x|x|

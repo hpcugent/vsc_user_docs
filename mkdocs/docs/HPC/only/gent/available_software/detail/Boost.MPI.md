@@ -19,7 +19,7 @@ module load Boost.MPI/1.83.0-gompi-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Boost.MPI/1.83.0-gompi-2023b|x|-|-|x|-|-|
-|Boost.MPI/1.82.0-gompi-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Boost.MPI/1.83.0-gompi-2023b|x|-|-|x|-|-|-|
+|Boost.MPI/1.82.0-gompi-2023a|x|x|x|x|x|x|x|

@@ -19,6 +19,6 @@ module load lwgrp/1.0.5-gompi-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|lwgrp/1.0.5-gompi-2023a|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|lwgrp/1.0.5-gompi-2023a|x|-|-|-|-|-|-|

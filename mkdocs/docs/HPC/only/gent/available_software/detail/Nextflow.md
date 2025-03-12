@@ -19,7 +19,7 @@ module load Nextflow/24.10.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Nextflow/24.10.2|x|x|x|x|x|x|
-|Nextflow/24.04.2|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Nextflow/24.10.2|x|x|x|x|x|x|x|
+|Nextflow/24.04.2|x|x|x|x|x|x|x|

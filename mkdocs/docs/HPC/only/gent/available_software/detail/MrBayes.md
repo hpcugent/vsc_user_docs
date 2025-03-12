@@ -19,6 +19,6 @@ module load MrBayes/3.2.7-gompi-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MrBayes/3.2.7-gompi-2023a|-|-|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MrBayes/3.2.7-gompi-2023a|-|-|-|x|-|x|x|

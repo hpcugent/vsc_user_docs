@@ -19,9 +19,9 @@ module load snappy/1.2.1-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|snappy/1.2.1-GCCcore-13.3.0|-|x|x|x|x|-|
-|snappy/1.1.10-GCCcore-13.3.0|x|x|x|x|x|x|
-|snappy/1.1.10-GCCcore-13.2.0|x|x|x|x|x|x|
-|snappy/1.1.10-GCCcore-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|snappy/1.2.1-GCCcore-13.3.0|-|x|x|x|x|-|-|
+|snappy/1.1.10-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|snappy/1.1.10-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|snappy/1.1.10-GCCcore-12.3.0|x|x|x|x|x|x|x|

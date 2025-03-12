@@ -19,6 +19,6 @@ module load trimAl/1.4.1-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|trimAl/1.4.1-GCCcore-12.3.0|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|trimAl/1.4.1-GCCcore-12.3.0|-|x|x|x|x|x|x|

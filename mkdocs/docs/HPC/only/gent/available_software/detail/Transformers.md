@@ -19,7 +19,7 @@ module load Transformers/4.44.0-gfbf-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Transformers/4.44.0-gfbf-2023b|x|x|x|x|x|x|
-|Transformers/4.39.3-gfbf-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Transformers/4.44.0-gfbf-2023b|x|x|x|x|x|x|x|
+|Transformers/4.39.3-gfbf-2023a|x|x|x|x|x|x|x|

@@ -19,6 +19,6 @@ module load funannotate/1.8.17-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|funannotate/1.8.17-foss-2023a|-|x|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|funannotate/1.8.17-foss-2023a|-|x|-|x|-|x|x|

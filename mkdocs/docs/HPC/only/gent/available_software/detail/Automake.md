@@ -19,12 +19,12 @@ module load Automake/1.16.5-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Automake/1.16.5-GCCcore-13.3.0|x|x|x|x|x|x|
-|Automake/1.16.5-GCCcore-13.2.0|x|x|x|x|x|x|
-|Automake/1.16.5-GCCcore-12.3.0|x|x|x|x|x|x|
-|Automake/1.16.5-GCCcore-12.2.0|-|-|-|-|-|x|
-|Automake/1.16.5-GCCcore-11.3.0|-|-|-|-|-|x|
-|Automake/1.16.5|-|-|-|-|-|x|
-|Automake/1.16.4-GCCcore-11.2.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Automake/1.16.5-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|Automake/1.16.5-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|Automake/1.16.5-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|Automake/1.16.5-GCCcore-12.2.0|-|-|-|-|-|x|x|
+|Automake/1.16.5-GCCcore-11.3.0|-|-|-|-|-|x|x|
+|Automake/1.16.5|-|-|-|-|-|x|x|
+|Automake/1.16.4-GCCcore-11.2.0|-|-|-|-|-|x|x|

@@ -19,7 +19,7 @@ module load python-isal/1.6.1-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|python-isal/1.6.1-GCCcore-13.2.0|x|x|x|x|x|x|
-|python-isal/1.1.0-GCCcore-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|python-isal/1.6.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|python-isal/1.1.0-GCCcore-12.3.0|x|x|x|x|x|x|x|

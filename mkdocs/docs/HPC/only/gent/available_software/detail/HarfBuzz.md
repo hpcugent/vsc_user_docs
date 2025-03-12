@@ -19,9 +19,9 @@ module load HarfBuzz/9.0.0-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HarfBuzz/9.0.0-GCCcore-13.3.0|x|x|x|x|x|x|
-|HarfBuzz/8.2.2-GCCcore-13.2.0|x|x|x|x|x|x|
-|HarfBuzz/5.3.1-GCCcore-12.3.0|x|x|x|x|x|x|
-|HarfBuzz/4.2.1-GCCcore-11.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HarfBuzz/9.0.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|HarfBuzz/8.2.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|HarfBuzz/5.3.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|HarfBuzz/4.2.1-GCCcore-11.3.0|-|-|-|-|-|x|x|

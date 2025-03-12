@@ -19,7 +19,7 @@ module load leidenalg/0.10.2-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|leidenalg/0.10.2-foss-2023a|x|x|x|x|x|x|
-|leidenalg/0.9.1-foss-2022a|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|leidenalg/0.10.2-foss-2023a|x|x|x|x|x|x|x|
+|leidenalg/0.9.1-foss-2022a|-|-|-|-|-|x|x|

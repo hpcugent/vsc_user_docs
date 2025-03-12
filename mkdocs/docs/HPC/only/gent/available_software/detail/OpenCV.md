@@ -19,6 +19,6 @@ module load OpenCV/4.8.1-foss-2023a-contrib
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenCV/4.8.1-foss-2023a-contrib|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OpenCV/4.8.1-foss-2023a-contrib|x|x|x|x|x|x|x|

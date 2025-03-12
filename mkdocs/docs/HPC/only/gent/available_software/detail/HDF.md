@@ -19,8 +19,8 @@ module load HDF/4.3.0-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HDF/4.3.0-GCCcore-13.3.0|x|x|x|x|x|x|
-|HDF/4.2.16-2-GCCcore-13.2.0|x|x|x|x|x|x|
-|HDF/4.2.16-2-GCCcore-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HDF/4.3.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|HDF/4.2.16-2-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|HDF/4.2.16-2-GCCcore-12.3.0|x|x|x|x|x|x|x|

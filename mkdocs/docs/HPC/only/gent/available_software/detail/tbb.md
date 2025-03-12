@@ -19,8 +19,8 @@ module load tbb/2021.13.0-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tbb/2021.13.0-GCCcore-13.2.0|-|x|x|x|x|x|
-|tbb/2021.11.0-GCCcore-12.3.0|x|x|x|x|x|x|
-|tbb/2020.1-GCCcore-12.3.0|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tbb/2021.13.0-GCCcore-13.2.0|-|x|x|x|x|x|x|
+|tbb/2021.11.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|tbb/2020.1-GCCcore-12.3.0|-|x|x|x|x|x|x|

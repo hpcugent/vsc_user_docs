@@ -19,6 +19,6 @@ module load DeltaLake/0.15.1-gfbf-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DeltaLake/0.15.1-gfbf-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DeltaLake/0.15.1-gfbf-2023a|x|x|x|x|x|x|x|

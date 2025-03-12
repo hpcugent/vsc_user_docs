@@ -19,8 +19,8 @@ module load Wannier90/3.1.0-gomkl-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Wannier90/3.1.0-gomkl-2023b|x|x|x|x|x|x|
-|Wannier90/3.1.0-gomkl-2023a|-|x|-|x|-|x|
-|Wannier90/3.1.0-foss-2023a|-|x|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Wannier90/3.1.0-gomkl-2023b|x|x|x|x|x|x|x|
+|Wannier90/3.1.0-gomkl-2023a|-|x|-|x|-|x|x|
+|Wannier90/3.1.0-foss-2023a|-|x|-|x|-|x|x|

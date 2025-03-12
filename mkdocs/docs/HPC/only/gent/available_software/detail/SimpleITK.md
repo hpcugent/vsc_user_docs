@@ -19,6 +19,6 @@ module load SimpleITK/2.3.1-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SimpleITK/2.3.1-foss-2023a|-|x|-|x|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SimpleITK/2.3.1-foss-2023a|-|x|-|x|-|-|-|

@@ -19,6 +19,6 @@ module load deepTools/3.5.5-gfbf-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|deepTools/3.5.5-gfbf-2023a|x|x|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|deepTools/3.5.5-gfbf-2023a|x|x|-|x|-|x|x|

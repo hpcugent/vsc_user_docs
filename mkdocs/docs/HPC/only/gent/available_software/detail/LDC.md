@@ -19,7 +19,7 @@ module load LDC/1.39.0-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LDC/1.39.0-GCCcore-13.2.0|-|x|x|x|x|x|
-|LDC/1.24.0-x86_64|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LDC/1.39.0-GCCcore-13.2.0|-|x|x|x|x|x|x|
+|LDC/1.24.0-x86_64|-|x|x|x|x|x|x|

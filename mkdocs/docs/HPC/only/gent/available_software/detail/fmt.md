@@ -19,7 +19,7 @@ module load fmt/11.0.2-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fmt/11.0.2-GCCcore-13.3.0|-|x|x|x|x|x|
-|fmt/10.1.0-GCCcore-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|fmt/11.0.2-GCCcore-13.3.0|-|x|x|x|x|x|x|
+|fmt/10.1.0-GCCcore-12.3.0|x|x|x|x|x|x|x|

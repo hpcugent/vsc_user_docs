@@ -19,6 +19,6 @@ module load ExpressBetaDiversity/1.0.10-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ExpressBetaDiversity/1.0.10-GCC-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ExpressBetaDiversity/1.0.10-GCC-12.3.0|x|x|x|x|x|x|x|

@@ -19,10 +19,10 @@ module load libyaml/0.2.5-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libyaml/0.2.5-GCCcore-13.3.0|x|x|x|x|x|x|
-|libyaml/0.2.5-GCCcore-13.2.0|x|x|x|x|x|x|
-|libyaml/0.2.5-GCCcore-12.3.0|x|x|x|x|x|x|
-|libyaml/0.2.5-GCCcore-12.2.0|-|-|-|-|-|x|
-|libyaml/0.2.5-GCCcore-11.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libyaml/0.2.5-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|libyaml/0.2.5-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|libyaml/0.2.5-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|libyaml/0.2.5-GCCcore-12.2.0|-|-|-|-|-|x|x|
+|libyaml/0.2.5-GCCcore-11.3.0|-|-|-|-|-|x|x|

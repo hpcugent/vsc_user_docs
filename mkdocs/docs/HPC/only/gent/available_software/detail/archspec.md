@@ -19,8 +19,8 @@ module load archspec/0.2.5-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|archspec/0.2.5-GCCcore-12.3.0|-|x|x|x|x|-|
-|archspec/0.2.2-GCCcore-13.2.0|x|x|x|x|x|x|
-|archspec/0.2.1-GCCcore-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|archspec/0.2.5-GCCcore-12.3.0|-|x|x|x|x|-|-|
+|archspec/0.2.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|archspec/0.2.1-GCCcore-12.3.0|x|x|x|x|x|x|x|

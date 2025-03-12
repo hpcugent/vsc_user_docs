@@ -19,7 +19,7 @@ module load adjustText/1.1.1-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|adjustText/1.1.1-foss-2023a|x|x|-|x|-|x|
-|adjustText/0.7.3-foss-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|adjustText/1.1.1-foss-2023a|x|x|-|x|-|x|x|
+|adjustText/0.7.3-foss-2023a|x|x|x|x|x|x|x|

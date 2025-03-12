@@ -19,6 +19,6 @@ module load kallisto/0.51.1-gompi-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|kallisto/0.51.1-gompi-2023a|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|kallisto/0.51.1-gompi-2023a|-|x|x|x|x|x|x|

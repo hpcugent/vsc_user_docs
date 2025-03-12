@@ -19,8 +19,8 @@ module load VTK/9.3.0-foss-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VTK/9.3.0-foss-2023b|x|x|x|x|x|x|
-|VTK/9.3.0-foss-2023a|x|x|x|x|x|x|
-|VTK/9.2.6-foss-2023a|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|VTK/9.3.0-foss-2023b|x|x|x|x|x|x|x|
+|VTK/9.3.0-foss-2023a|x|x|x|x|x|x|x|
+|VTK/9.2.6-foss-2023a|-|x|x|x|x|x|x|

@@ -19,10 +19,10 @@ module load GLib/2.80.4-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GLib/2.80.4-GCCcore-13.3.0|x|x|x|x|x|x|
-|GLib/2.78.1-GCCcore-13.2.0|x|x|x|x|x|x|
-|GLib/2.77.1-GCCcore-12.3.0|x|x|x|x|x|x|
-|GLib/2.75.0-GCCcore-12.2.0|-|-|-|-|-|x|
-|GLib/2.72.1-GCCcore-11.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GLib/2.80.4-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|GLib/2.78.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|GLib/2.77.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|GLib/2.75.0-GCCcore-12.2.0|-|-|-|-|-|x|x|
+|GLib/2.72.1-GCCcore-11.3.0|-|-|-|-|-|x|x|

@@ -19,11 +19,11 @@ module load Tcl/8.6.14-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Tcl/8.6.14-GCCcore-13.3.0|x|x|x|x|x|x|
-|Tcl/8.6.13-GCCcore-13.2.0|x|x|x|x|x|x|
-|Tcl/8.6.13-GCCcore-12.3.0|x|x|x|x|x|x|
-|Tcl/8.6.12-GCCcore-12.2.0|-|-|-|-|-|x|
-|Tcl/8.6.12-GCCcore-11.3.0|-|-|-|-|-|x|
-|Tcl/8.6.11-GCCcore-11.2.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Tcl/8.6.14-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|Tcl/8.6.13-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|Tcl/8.6.13-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|Tcl/8.6.12-GCCcore-12.2.0|-|-|-|-|-|x|x|
+|Tcl/8.6.12-GCCcore-11.3.0|-|-|-|-|-|x|x|
+|Tcl/8.6.11-GCCcore-11.2.0|-|-|-|-|-|x|x|

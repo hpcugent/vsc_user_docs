@@ -19,6 +19,6 @@ module load MACS3/3.0.1-gfbf-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MACS3/3.0.1-gfbf-2023a|-|x|-|x|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MACS3/3.0.1-gfbf-2023a|-|x|-|x|-|-|-|
