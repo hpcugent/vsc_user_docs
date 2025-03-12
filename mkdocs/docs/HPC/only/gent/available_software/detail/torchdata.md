@@ -19,6 +19,6 @@ module load torchdata/0.7.1-foss-2023b-PyTorch-2.1.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|torchdata/0.7.1-foss-2023b-PyTorch-2.1.2|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|torchdata/0.7.1-foss-2023b-PyTorch-2.1.2|x|x|x|x|x|x|x|

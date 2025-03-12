@@ -19,8 +19,8 @@ module load BWA/0.7.18-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BWA/0.7.18-GCCcore-13.2.0|x|x|x|x|x|x|
-|BWA/0.7.17-GCCcore-12.3.0|x|x|x|x|x|x|
-|BWA/0.7.17-GCCcore-11.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BWA/0.7.18-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|BWA/0.7.17-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|BWA/0.7.17-GCCcore-11.3.0|-|-|-|-|-|x|x|

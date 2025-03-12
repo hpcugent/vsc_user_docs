@@ -19,8 +19,8 @@ module load arrow-R/17.0.0.1-foss-2024a-R-4.4.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|arrow-R/17.0.0.1-foss-2024a-R-4.4.2|x|x|x|x|x|x|
-|arrow-R/16.1.0-foss-2023b-R-4.4.1|x|x|x|x|x|x|
-|arrow-R/14.0.1-foss-2023a-R-4.3.2|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|arrow-R/17.0.0.1-foss-2024a-R-4.4.2|x|x|x|x|x|x|x|
+|arrow-R/16.1.0-foss-2023b-R-4.4.1|x|x|x|x|x|x|x|
+|arrow-R/14.0.1-foss-2023a-R-4.3.2|x|x|x|x|x|x|x|

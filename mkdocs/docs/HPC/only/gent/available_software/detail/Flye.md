@@ -19,7 +19,7 @@ module load Flye/2.9.4-GCC-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Flye/2.9.4-GCC-13.2.0|x|x|x|x|x|x|
-|Flye/2.9.3-GCC-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Flye/2.9.4-GCC-13.2.0|x|x|x|x|x|x|x|
+|Flye/2.9.3-GCC-12.3.0|x|x|x|x|x|x|x|

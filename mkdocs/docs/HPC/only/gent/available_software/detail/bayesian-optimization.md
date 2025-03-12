@@ -19,7 +19,7 @@ module load bayesian-optimization/2.0.3-foss-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bayesian-optimization/2.0.3-foss-2024a|x|x|x|x|x|x|
-|bayesian-optimization/1.5.1-foss-2023a|x|x|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|bayesian-optimization/2.0.3-foss-2024a|x|x|x|x|x|x|x|
+|bayesian-optimization/1.5.1-foss-2023a|x|x|-|x|-|x|x|

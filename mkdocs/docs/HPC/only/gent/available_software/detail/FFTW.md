@@ -19,11 +19,11 @@ module load FFTW/3.3.10-intel-compilers-2023.1.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FFTW/3.3.10-intel-compilers-2023.1.0|x|x|x|x|x|x|
-|FFTW/3.3.10-GCC-13.3.0|x|x|x|x|x|x|
-|FFTW/3.3.10-GCC-13.2.0|x|x|x|x|x|x|
-|FFTW/3.3.10-GCC-12.3.0|x|x|x|x|x|x|
-|FFTW/3.3.10-GCC-12.2.0|-|-|-|-|-|x|
-|FFTW/3.3.10-GCC-11.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FFTW/3.3.10-intel-compilers-2023.1.0|x|x|x|x|x|x|x|
+|FFTW/3.3.10-GCC-13.3.0|x|x|x|x|x|x|x|
+|FFTW/3.3.10-GCC-13.2.0|x|x|x|x|x|x|x|
+|FFTW/3.3.10-GCC-12.3.0|x|x|x|x|x|x|x|
+|FFTW/3.3.10-GCC-12.2.0|-|-|-|-|-|x|x|
+|FFTW/3.3.10-GCC-11.3.0|-|-|-|-|-|x|x|

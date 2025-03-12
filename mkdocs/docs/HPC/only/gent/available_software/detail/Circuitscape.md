@@ -19,6 +19,6 @@ module load Circuitscape/5.12.3-Julia-1.9.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Circuitscape/5.12.3-Julia-1.9.2|-|x|-|x|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Circuitscape/5.12.3-Julia-1.9.2|-|x|-|x|-|-|-|

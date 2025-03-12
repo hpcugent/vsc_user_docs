@@ -19,7 +19,7 @@ module load file/5.43-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|file/5.43-GCCcore-13.2.0|x|x|x|x|x|x|
-|file/5.43-GCCcore-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|file/5.43-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|file/5.43-GCCcore-12.3.0|x|x|x|x|x|x|x|

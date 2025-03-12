@@ -19,9 +19,9 @@ module load SAMtools/1.19.2-GCC-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SAMtools/1.19.2-GCC-13.2.0|x|x|x|x|x|x|
-|SAMtools/1.18-GCC-12.3.0|x|x|x|x|x|x|
-|SAMtools/1.16.1-GCC-11.3.0|-|-|-|-|-|x|
-|SAMtools/0.1.20-GCC-12.3.0|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SAMtools/1.19.2-GCC-13.2.0|x|x|x|x|x|x|x|
+|SAMtools/1.18-GCC-12.3.0|x|x|x|x|x|x|x|
+|SAMtools/1.16.1-GCC-11.3.0|-|-|-|-|-|x|x|
+|SAMtools/0.1.20-GCC-12.3.0|-|x|x|x|x|x|x|

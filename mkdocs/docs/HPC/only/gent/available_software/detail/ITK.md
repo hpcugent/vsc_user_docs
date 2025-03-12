@@ -19,7 +19,7 @@ module load ITK/5.4.0-foss-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ITK/5.4.0-foss-2023b|x|x|x|x|x|x|
-|ITK/5.3.0-foss-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ITK/5.4.0-foss-2023b|x|x|x|x|x|x|x|
+|ITK/5.3.0-foss-2023a|x|x|x|x|x|x|x|

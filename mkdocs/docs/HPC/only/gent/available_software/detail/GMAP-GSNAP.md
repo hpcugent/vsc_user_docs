@@ -19,6 +19,6 @@ module load GMAP-GSNAP/2023-04-20-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GMAP-GSNAP/2023-04-20-GCC-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GMAP-GSNAP/2023-04-20-GCC-12.3.0|x|x|x|x|x|x|x|

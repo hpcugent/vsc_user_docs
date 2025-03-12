@@ -19,9 +19,9 @@ module load lxml/5.3.0-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|lxml/5.3.0-GCCcore-13.3.0|x|x|x|x|x|x|
-|lxml/4.9.3-GCCcore-13.2.0|x|x|x|x|x|x|
-|lxml/4.9.2-GCCcore-12.3.0|x|x|x|x|x|x|
-|lxml/4.9.1-GCCcore-11.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|lxml/5.3.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|lxml/4.9.3-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|lxml/4.9.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|lxml/4.9.1-GCCcore-11.3.0|-|-|-|-|-|x|x|

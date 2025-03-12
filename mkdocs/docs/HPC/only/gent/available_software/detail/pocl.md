@@ -19,6 +19,6 @@ module load pocl/4.0-GCC-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pocl/4.0-GCC-12.3.0|-|x|x|x|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pocl/4.0-GCC-12.3.0|-|x|x|x|x|-|-|

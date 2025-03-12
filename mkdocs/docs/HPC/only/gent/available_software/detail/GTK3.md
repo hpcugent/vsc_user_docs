@@ -19,7 +19,7 @@ module load GTK3/3.24.39-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GTK3/3.24.39-GCCcore-13.2.0|x|x|x|x|x|x|
-|GTK3/3.24.37-GCCcore-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GTK3/3.24.39-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|GTK3/3.24.37-GCCcore-12.3.0|x|x|x|x|x|x|x|

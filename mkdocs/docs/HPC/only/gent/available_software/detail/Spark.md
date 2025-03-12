@@ -19,7 +19,7 @@ module load Spark/3.5.1-foss-2023a-Java-17
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Spark/3.5.1-foss-2023a-Java-17|-|x|-|x|-|-|
-|Spark/3.5.0-foss-2023a|-|x|-|x|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Spark/3.5.1-foss-2023a-Java-17|-|x|-|x|-|-|-|
+|Spark/3.5.0-foss-2023a|-|x|-|x|-|-|-|

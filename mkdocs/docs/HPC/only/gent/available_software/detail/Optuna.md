@@ -19,7 +19,7 @@ module load Optuna/3.6.1-foss-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Optuna/3.6.1-foss-2023b|x|x|x|x|x|x|
-|Optuna/3.5.0-foss-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Optuna/3.6.1-foss-2023b|x|x|x|x|x|x|x|
+|Optuna/3.5.0-foss-2023a|x|x|x|x|x|x|x|

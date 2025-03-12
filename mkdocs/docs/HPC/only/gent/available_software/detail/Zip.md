@@ -19,8 +19,8 @@ module load Zip/3.0-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Zip/3.0-GCCcore-12.3.0|x|x|x|x|x|x|
-|Zip/3.0-GCCcore-12.2.0|-|-|-|-|-|x|
-|Zip/3.0-GCCcore-11.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Zip/3.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|Zip/3.0-GCCcore-12.2.0|-|-|-|-|-|x|x|
+|Zip/3.0-GCCcore-11.3.0|-|-|-|-|-|x|x|

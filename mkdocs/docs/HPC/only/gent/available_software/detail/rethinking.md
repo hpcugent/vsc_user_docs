@@ -19,6 +19,6 @@ module load rethinking/2.40-20230914-foss-2023a-R-4.3.2
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rethinking/2.40-20230914-foss-2023a-R-4.3.2|-|x|-|x|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|rethinking/2.40-20230914-foss-2023a-R-4.3.2|-|x|-|x|-|-|-|

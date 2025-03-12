@@ -19,7 +19,7 @@ module load ELPA/2023.05.001-intel-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ELPA/2023.05.001-intel-2023a|x|x|x|x|x|x|
-|ELPA/2023.05.001-foss-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ELPA/2023.05.001-intel-2023a|x|x|x|x|x|x|x|
+|ELPA/2023.05.001-foss-2023a|x|x|x|x|x|x|x|

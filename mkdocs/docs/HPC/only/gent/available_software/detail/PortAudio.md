@@ -19,7 +19,7 @@ module load PortAudio/19.7.0-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PortAudio/19.7.0-foss-2023a|x|-|x|-|x|x|
-|PortAudio/19.7.0-foss-2022a|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PortAudio/19.7.0-foss-2023a|x|-|x|-|x|x|x|
+|PortAudio/19.7.0-foss-2022a|-|-|-|-|-|x|x|

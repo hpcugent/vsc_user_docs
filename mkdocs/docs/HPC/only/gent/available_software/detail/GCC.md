@@ -19,10 +19,10 @@ module load GCC/13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GCC/13.3.0|x|x|x|x|x|x|
-|GCC/13.2.0|x|x|x|x|x|x|
-|GCC/12.3.0|x|x|x|x|x|x|
-|GCC/12.2.0|-|-|-|-|-|x|
-|GCC/11.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GCC/13.3.0|x|x|x|x|x|x|x|
+|GCC/13.2.0|x|x|x|x|x|x|x|
+|GCC/12.3.0|x|x|x|x|x|x|x|
+|GCC/12.2.0|-|-|-|-|-|x|x|
+|GCC/11.3.0|-|-|-|-|-|x|x|

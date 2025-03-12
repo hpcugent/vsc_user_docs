@@ -19,7 +19,7 @@ module load at-spi2-atk/2.38.0-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|at-spi2-atk/2.38.0-GCCcore-13.2.0|x|x|x|x|x|x|
-|at-spi2-atk/2.38.0-GCCcore-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|at-spi2-atk/2.38.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|at-spi2-atk/2.38.0-GCCcore-12.3.0|x|x|x|x|x|x|x|

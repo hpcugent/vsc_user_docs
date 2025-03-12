@@ -19,10 +19,10 @@ module load PMIx/5.0.2-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PMIx/5.0.2-GCCcore-13.3.0|x|x|x|x|x|x|
-|PMIx/4.2.6-GCCcore-13.2.0|x|x|x|x|x|x|
-|PMIx/4.2.4-GCCcore-12.3.0|x|x|x|x|x|x|
-|PMIx/4.2.2-GCCcore-12.2.0|-|-|-|-|-|x|
-|PMIx/4.1.2-GCCcore-11.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PMIx/5.0.2-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|PMIx/4.2.6-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|PMIx/4.2.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|PMIx/4.2.2-GCCcore-12.2.0|-|-|-|-|-|x|x|
+|PMIx/4.1.2-GCCcore-11.3.0|-|-|-|-|-|x|x|

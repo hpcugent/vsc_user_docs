@@ -19,6 +19,6 @@ module load Porechop/0.2.4-20240119-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Porechop/0.2.4-20240119-GCCcore-12.3.0|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Porechop/0.2.4-20240119-GCCcore-12.3.0|-|x|x|x|x|x|x|

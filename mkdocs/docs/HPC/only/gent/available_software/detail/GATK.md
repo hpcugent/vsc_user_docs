@@ -19,8 +19,8 @@ module load GATK/4.6.0.0-GCCcore-13.2.0-Java-17
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GATK/4.6.0.0-GCCcore-13.2.0-Java-17|-|x|x|x|x|x|
-|GATK/4.4.0.0-GCCcore-12.3.0-Java-17|-|x|x|x|x|x|
-|GATK/4.3.0.0-GCCcore-12.3.0-Java-11|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GATK/4.6.0.0-GCCcore-13.2.0-Java-17|-|x|x|x|x|x|x|
+|GATK/4.4.0.0-GCCcore-12.3.0-Java-17|-|x|x|x|x|x|x|
+|GATK/4.3.0.0-GCCcore-12.3.0-Java-11|x|x|x|x|x|x|x|

@@ -19,7 +19,7 @@ module load FDS/6.9.1-iomkl-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FDS/6.9.1-iomkl-2023a|x|x|x|x|x|x|
-|FDS/6.9.1-intel-2023a|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FDS/6.9.1-iomkl-2023a|x|x|x|x|x|x|x|
+|FDS/6.9.1-intel-2023a|x|x|x|x|x|x|x|

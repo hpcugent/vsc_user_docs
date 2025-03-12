@@ -19,6 +19,6 @@ module load dtcmp/1.1.4-gompi-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|dtcmp/1.1.4-gompi-2023a|x|-|-|-|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|dtcmp/1.1.4-gompi-2023a|x|-|-|-|-|-|-|

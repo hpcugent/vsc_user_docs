@@ -19,10 +19,10 @@ module load libpng/1.6.43-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libpng/1.6.43-GCCcore-13.3.0|x|x|x|x|x|x|
-|libpng/1.6.40-GCCcore-13.2.0|x|x|x|x|x|x|
-|libpng/1.6.39-GCCcore-12.3.0|x|x|x|x|x|x|
-|libpng/1.6.38-GCCcore-12.2.0|-|-|-|-|-|x|
-|libpng/1.6.37-GCCcore-11.3.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libpng/1.6.43-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|libpng/1.6.40-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|libpng/1.6.39-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|libpng/1.6.38-GCCcore-12.2.0|-|-|-|-|-|x|x|
+|libpng/1.6.37-GCCcore-11.3.0|-|-|-|-|-|x|x|

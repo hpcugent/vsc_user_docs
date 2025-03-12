@@ -19,7 +19,7 @@ module load poppler/24.04.0-GCC-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|poppler/24.04.0-GCC-13.2.0|-|x|x|x|x|x|
-|poppler/23.09.0-GCC-12.3.0|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|poppler/24.04.0-GCC-13.2.0|-|x|x|x|x|x|x|
+|poppler/23.09.0-GCC-12.3.0|-|x|x|x|x|x|x|

@@ -19,6 +19,6 @@ module load CRYSTAL23/1.0.1-intel-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CRYSTAL23/1.0.1-intel-2023b|-|x|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CRYSTAL23/1.0.1-intel-2023b|-|x|-|x|-|x|x|

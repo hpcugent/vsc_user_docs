@@ -19,6 +19,6 @@ module load cp2k-input-tools/0.9.1-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cp2k-input-tools/0.9.1-foss-2023a|x|x|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|cp2k-input-tools/0.9.1-foss-2023a|x|x|-|x|-|x|x|

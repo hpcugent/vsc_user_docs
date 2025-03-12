@@ -19,6 +19,6 @@ module load Valgrind/3.23.0-gompi-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Valgrind/3.23.0-gompi-2023b|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Valgrind/3.23.0-gompi-2023b|x|x|x|x|x|x|x|

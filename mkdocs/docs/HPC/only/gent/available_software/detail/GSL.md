@@ -19,9 +19,9 @@ module load GSL/2.8-GCC-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GSL/2.8-GCC-13.3.0|x|x|x|x|x|x|
-|GSL/2.7-GCC-13.2.0|x|x|x|x|x|x|
-|GSL/2.7-GCC-12.3.0|x|x|x|x|x|x|
-|GSL/2.7-GCC-12.2.0|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GSL/2.8-GCC-13.3.0|x|x|x|x|x|x|x|
+|GSL/2.7-GCC-13.2.0|x|x|x|x|x|x|x|
+|GSL/2.7-GCC-12.3.0|x|x|x|x|x|x|x|
+|GSL/2.7-GCC-12.2.0|-|-|-|-|-|x|x|

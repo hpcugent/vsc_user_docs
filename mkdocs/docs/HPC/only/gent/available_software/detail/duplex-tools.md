@@ -19,6 +19,6 @@ module load duplex-tools/0.3.3-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|duplex-tools/0.3.3-foss-2023a|-|-|-|-|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|duplex-tools/0.3.3-foss-2023a|-|-|-|-|-|x|x|

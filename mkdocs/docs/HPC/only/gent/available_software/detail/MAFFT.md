@@ -19,6 +19,6 @@ module load MAFFT/7.520-GCC-12.3.0-with-extensions
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MAFFT/7.520-GCC-12.3.0-with-extensions|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MAFFT/7.520-GCC-12.3.0-with-extensions|x|x|x|x|x|x|x|

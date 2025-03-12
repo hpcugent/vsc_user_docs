@@ -19,6 +19,6 @@ module load empanada-dl/0.1.7-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|empanada-dl/0.1.7-foss-2023a|-|x|-|x|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|empanada-dl/0.1.7-foss-2023a|-|x|-|x|-|-|-|

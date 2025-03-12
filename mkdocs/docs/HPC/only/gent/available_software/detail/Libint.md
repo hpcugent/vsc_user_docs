@@ -19,6 +19,6 @@ module load Libint/2.7.2-GCC-12.3.0-lmax-6-cp2k
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Libint/2.7.2-GCC-12.3.0-lmax-6-cp2k|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Libint/2.7.2-GCC-12.3.0-lmax-6-cp2k|-|x|x|x|x|x|x|

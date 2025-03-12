@@ -19,7 +19,7 @@ module load configurable-http-proxy/4.6.1-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|configurable-http-proxy/4.6.1-GCCcore-13.2.0|x|x|x|x|x|x|
-|configurable-http-proxy/4.5.6-GCCcore-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|configurable-http-proxy/4.6.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|configurable-http-proxy/4.5.6-GCCcore-12.3.0|x|x|x|x|x|x|x|

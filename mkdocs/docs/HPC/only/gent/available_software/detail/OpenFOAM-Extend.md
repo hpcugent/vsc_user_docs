@@ -19,6 +19,6 @@ module load OpenFOAM-Extend/4.1-20210705-foss-2023a-Python-2.7.18
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenFOAM-Extend/4.1-20210705-foss-2023a-Python-2.7.18|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OpenFOAM-Extend/4.1-20210705-foss-2023a-Python-2.7.18|-|x|x|x|x|x|x|

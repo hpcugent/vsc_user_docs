@@ -19,6 +19,6 @@ module load Velvet/1.2.10-foss-2023a-mt-kmer_191
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Velvet/1.2.10-foss-2023a-mt-kmer_191|-|x|-|x|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Velvet/1.2.10-foss-2023a-mt-kmer_191|-|x|-|x|-|-|-|

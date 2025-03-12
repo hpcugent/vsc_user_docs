@@ -19,7 +19,7 @@ module load Anaconda3/2024.06-1
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Anaconda3/2024.06-1|x|x|x|x|x|x|
-|Anaconda3/2024.02-1|x|x|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Anaconda3/2024.06-1|x|x|x|x|x|x|x|
+|Anaconda3/2024.02-1|x|x|-|x|-|x|x|

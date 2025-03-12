@@ -19,6 +19,6 @@ module load LinBox/1.7.0-gfbf-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LinBox/1.7.0-gfbf-2023b|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LinBox/1.7.0-gfbf-2023b|-|x|x|x|x|x|x|

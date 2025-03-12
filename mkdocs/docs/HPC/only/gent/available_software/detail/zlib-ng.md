@@ -19,7 +19,7 @@ module load zlib-ng/2.2.2-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|zlib-ng/2.2.2-GCCcore-13.2.0|x|x|x|x|x|x|
-|zlib-ng/2.1.6-GCCcore-12.3.0|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|zlib-ng/2.2.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|zlib-ng/2.1.6-GCCcore-12.3.0|x|x|x|x|x|x|x|

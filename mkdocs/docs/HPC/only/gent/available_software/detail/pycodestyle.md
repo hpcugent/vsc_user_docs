@@ -19,7 +19,7 @@ module load pycodestyle/2.11.1-foss-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
-| |accelgor|doduo|donphan|gallade|joltik|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pycodestyle/2.11.1-foss-2023b|x|x|x|x|x|x|
-|pycodestyle/2.11.1-foss-2023a|-|x|-|x|-|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pycodestyle/2.11.1-foss-2023b|x|x|x|x|x|x|x|
+|pycodestyle/2.11.1-foss-2023a|-|x|-|x|-|x|x|
