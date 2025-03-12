@@ -1259,8 +1259,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#litleo-pilot-phase-24012025-01032025" class="md-nav__link">
-    Litleo pilot phase (24/01/2025-01/03/2025)
+  <a href="#litleo-pilot-phase-24012025-11032025" class="md-nav__link">
+    Litleo pilot phase (24/01/2025-11/03/2025)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#litleo-production-phase-11032025-" class="md-nav__link">
+    Litleo production phase (11/03/2025-...)
   </a>
   
 </li>
@@ -1285,10 +1292,6 @@
 
 
 <h1 id="new-tier-2-cluster-litleo">New Tier-2 cluster: <code>litleo</code><a class="headerlink" href="#new-tier-2-cluster-litleo" title="Permanent link">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The <code>litleo</code> cluster is currently only available to members of the <code>gpilot</code> user group.</p>
-</div>
 <p>In December 2024, a new cluster was added to the HPC-UGent Tier-2 infrastructure: <code>litleo</code>.</p>
 <p>If you have any questions on using <code>litleo</code>, you can <a href="https://www.ugent.be/hpc/en/support">contact the HPC-UGent team</a>.</p>
 <p>For software installation requests, please use the <a href="https://www.ugent.be/hpc/en/support/software-installation-request">request form</a>.</p>
@@ -1307,7 +1310,7 @@
 <li>2x NVIDIA H100 NVL (96GB VRAM)</li>
 </ul>
 <p>To start using this cluster from a terminal session, first run:
-<div class="highlight"><pre><span></span><code>module swap cluster/.litleo
+<div class="highlight"><pre><span></span><code>module swap cluster/litleo
 </code></pre></div></p>
 <p>You can also start (interactive) sessions on <code>litleo</code> using the <a href="../../web_portal/">HPC-UGent web portal</a>.</p>
 <h3 id="difference-compared-to-joltik-and-accelgor">Difference compared to <code>joltik</code> and <code>accelgor</code>.<a class="headerlink" href="#difference-compared-to-joltik-and-accelgor" title="Permanent link">#</a></h3>
@@ -1316,11 +1319,12 @@ The motivation comes from historical analysis of GPU usage on the <code>joltik</
 high utilisation of a single GPU per job; combined with cost of the GPUs in 2024. It allowed us get the most out of the
 budget.</p>
 <hr />
-<h2 id="litleo-pilot-phase-24012025-01032025">Litleo pilot phase (24/01/2025-01/03/2025)<a class="headerlink" href="#litleo-pilot-phase-24012025-01032025" title="Permanent link">#</a></h2>
+<h2 id="litleo-pilot-phase-24012025-11032025">Litleo pilot phase (24/01/2025-11/03/2025)<a class="headerlink" href="#litleo-pilot-phase-24012025-11032025" title="Permanent link">#</a></h2>
 <p>As usual with any pilot phase, you need to be member of the <code>gpilot</code> group, and to start using this cluster run:</p>
 <div class="highlight"><pre><span></span><code>module swap cluster/.litleo
 </code></pre></div>
-<p>Shortly after the Tier-2 maintenance in February 2025, the cluster will enter production, without any significant changes.</p>
+<h2 id="litleo-production-phase-11032025-">Litleo production phase (11/03/2025-...)<a class="headerlink" href="#litleo-production-phase-11032025-" title="Permanent link">#</a></h2>
+<p>Shortly after the Tier-2 maintenance in February 2025, the cluster entered production, without any significant changes.</p>
 
 
 
