@@ -53,4 +53,4 @@ https://www.tldp.org/guides.html
 https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-0
 
 # gone?
-http://www.straightrunning.com/XmingNotes
+http://www.straightrunning.com/XmingNotes/
