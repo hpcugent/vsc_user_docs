@@ -1,9 +1,5 @@
 # New Tier-2 cluster: `litleo`
 
-!!! warning
-    The `litleo` cluster is currently only available to members of the `gpilot` user group.
-
-
 In December 2024, a new cluster was added to the HPC-UGent Tier-2 infrastructure: `litleo`.
 
 If you have any questions on using `litleo`, you can [contact the {{ hpcteam }}]({{ hpc_support_url }}).
@@ -31,7 +27,7 @@ This cluster consists of 8 workernodes, each with:
 
 To start using this cluster from a terminal session, first run:
 ```
-module swap cluster/.litleo
+module swap cluster/litleo
 ```
 
 You can also start (interactive) sessions on `litleo` using the [HPC-UGent web portal](../../../web_portal.md).
@@ -45,7 +41,7 @@ budget.
 
 ---
 
-## Litleo pilot phase (24/01/2025-01/03/2025)
+## Litleo pilot phase (24/01/2025-11/03/2025)
 
 As usual with any pilot phase, you need to be member of the `gpilot` group, and to start using this cluster run:
 
@@ -53,4 +49,6 @@ As usual with any pilot phase, you need to be member of the `gpilot` group, and 
 module swap cluster/.litleo
 ```
 
-Shortly after the Tier-2 maintenance in February 2025, the cluster will enter production, without any significant changes.
+## Litleo production phase (11/03/2025-...)
+
+Shortly after the Tier-2 maintenance in February 2025, the cluster entered production, without any significant changes.
