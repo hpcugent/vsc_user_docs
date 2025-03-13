@@ -21,5 +21,5 @@ module load Seaborn/0.13.2-gfbf-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Seaborn/0.13.2-gfbf-2023b|x|-|x|x|x|x|x|
+|Seaborn/0.13.2-gfbf-2023b|x|x|x|x|x|x|x|
 |Seaborn/0.13.2-gfbf-2023a|x|x|x|x|x|x|x|

@@ -22,6 +22,6 @@ module load intel-compilers/2024.2.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |intel-compilers/2024.2.0|x|x|x|x|x|x|x|
-|intel-compilers/2023.2.1|-|x|x|x|x|x|x|
+|intel-compilers/2023.2.1|x|x|x|x|x|x|x|
 |intel-compilers/2023.1.0|x|x|x|x|x|x|x|
 |intel-compilers/2022.1.0|-|-|-|-|-|x|x|

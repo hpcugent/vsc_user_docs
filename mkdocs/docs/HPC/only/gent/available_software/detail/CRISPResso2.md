@@ -21,4 +21,4 @@ module load CRISPResso2/2.3.1-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CRISPResso2/2.3.1-foss-2023b|x|-|x|x|x|x|x|
+|CRISPResso2/2.3.1-foss-2023b|x|x|x|x|x|x|x|
