@@ -24,4 +24,4 @@ module load ASE/3.24.0-gfbf-2024a
 |ASE/3.24.0-gfbf-2024a|-|-|x|-|x|-|-|
 |ASE/3.23.0-gfbf-2023b|-|-|x|-|x|-|-|
 |ASE/3.23.0-gfbf-2023a|-|x|-|x|-|x|x|
-|ASE/3.22.1-gfbf-2023a|-|x|x|x|x|x|x|
+|ASE/3.22.1-gfbf-2023a|x|x|x|x|x|x|x|
