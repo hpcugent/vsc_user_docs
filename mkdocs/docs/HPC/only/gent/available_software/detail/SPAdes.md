@@ -14,11 +14,12 @@ The overview below shows which SPAdes installations are available per HPC-UGent 
 To start using SPAdes, load one of these modules using a `module load` command like:
 
 ```shell
-module load SPAdes/3.15.4-GCC-12.3.0
+module load SPAdes/4.1.0-GCC-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SPAdes/4.1.0-GCC-13.3.0|-|x|x|x|x|x|x|
 |SPAdes/3.15.4-GCC-12.3.0|x|x|x|x|x|x|x|

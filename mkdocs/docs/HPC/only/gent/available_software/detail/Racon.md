@@ -14,11 +14,12 @@ The overview below shows which Racon installations are available per HPC-UGent T
 To start using Racon, load one of these modules using a `module load` command like:
 
 ```shell
-module load Racon/1.5.0-GCCcore-12.3.0
+module load Racon/1.5.0-GCCcore-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Racon/1.5.0-GCCcore-13.3.0|-|x|x|x|x|x|x|
 |Racon/1.5.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
