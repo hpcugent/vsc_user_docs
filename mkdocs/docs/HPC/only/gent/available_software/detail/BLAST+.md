@@ -21,6 +21,6 @@ module load BLAST+/2.16.0-gompi-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BLAST+/2.16.0-gompi-2024a|-|x|x|x|x|x|x|
+|BLAST+/2.16.0-gompi-2024a|x|x|x|x|x|x|x|
 |BLAST+/2.16.0-gompi-2023b|x|x|x|x|x|x|x|
 |BLAST+/2.14.1-gompi-2023a|x|x|x|x|x|x|x|
