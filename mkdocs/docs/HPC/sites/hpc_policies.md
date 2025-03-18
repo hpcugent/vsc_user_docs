@@ -84,7 +84,8 @@ If access to this data is for some reason still needed (by the former user, prom
 #### Request access as voluntary employee
 
 A former user, in accord with the promotor, can request to become a
-[voluntary employee or unpaid postdoctoral staff member](https://ugentbe.sharepoint.com/\:u\:/r/sites/intranet-personeelszaken/SitePages/en/Vrijwillig-medewerker-en-postdoctoraal-onbezoldigd-medewerker.aspx).
+[voluntary employee or unpaid postdoctoral staff member](https://ugentbe.sharepoint.com/:u:/r/sites/intranet-personeelszaken/SitePages/en/Vrijwillig-medewerker-en-postdoctoraal-onbezoldigd-medewerker.aspx).
+
 Please note that the budget holder will be charged an annual fee for every voluntary employee.
 Once the voluntary employee contract is in order, HPC staff can then reinstate the VSC account and restore access to remaining data.
 
