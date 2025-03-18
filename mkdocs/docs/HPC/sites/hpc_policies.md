@@ -1,12 +1,14 @@
 # HPC Policies
 
 {% if site == gent %}
+
+## Access
 Everyone can get access and use the HPC-UGent supercomputing infrastructure and services.
 The conditions that apply depend on your affiliation.
 
-## Access for staff and academics
+### Access for staff and academics
 
-### Researchers and staff affiliated with Flemish university associations
+#### Researchers and staff affiliated with Flemish university associations
 
 -   Includes externally funded researchers registered in the
     personnel database (FWO, SBO, VIB, IMEC, etc.).
@@ -20,15 +22,13 @@ The conditions that apply depend on your affiliation.
 
 -   See [Getting a HPC Account](../../account).
 
-### Researchers and staff affiliated with other Flemish or federal research institutes
-
--   Includes researchers from e.g. INBO, ILVO, RBINS, etc.
+#### Researchers and staff affiliated with other Flemish or federal research institutes
 
 -   HPC-UGent promotes using the [Tier1 services of the VSC](https://www.vscentrum.be/compute).
 
 -   HPC-UGent can act as a liason.
 
-### Students
+#### Students
 
 -   Students can also use HPC-UGent (Bachelor or Master,
     enrolled in an institute mentioned above).
@@ -37,20 +37,21 @@ The conditions that apply depend on your affiliation.
 
 -   Use your university account credentials to request a VSC-id and connect.
 
-## Access for industry
+### Access for industry
 
 Researchers and developers from industry can use the services and infrastructure tailored to industry from VSC.
 
-### Our offer
+#### Our offer
 
 -   [VSC has a dedicated service geared towards industry](https://www.vscentrum.be/getaccess).
 
 -   HPC-UGent can act as a liason to the VSC services.
 
-### Research partnership:
+#### Research partnership:
 
 -   Interested in collaborating in supercomputing with a UGent research group?
 
 -   We can help you look for a collaborative partner. Contact {{ hpcinfo }}.
+
 
 {% endif %}
