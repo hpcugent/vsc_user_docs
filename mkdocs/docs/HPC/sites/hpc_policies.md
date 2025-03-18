@@ -89,19 +89,17 @@ Once the voluntary employee contract is in order, HPC staff can then reinstate t
 
 #### Data transfer by HPC staff
 
-As a very last resort measure, HPC staff can initiate a data transfer to another VSC account when requested by a VO moderator or promotor.
-Please be aware that this is a non-trivial operation for HPC-UGent staff:
+As a very last resort measure, HPC staff can perform a data transfer to another VSC account when requested by a VO moderator or promotor.
+If the former user was member of a VO, we will assume all the data is owned by the VO moderator or promotor (including $VSC_HOME and $VSC_DATA directories).
+
+Please be aware that such a data transfer is a non-trivial operation for HPC-UGent staff:
 
 - it is an entirely manual process
 - it is error-prone
-- it has risks for the storage integrity
-Hence our helpdesk staff needs to be able to dedicate sufficient time and focus to complete this task.
+- it has risks for the storage integrity (since file actions are performed as root)
+- it is very time consuming
 
-This is extremely time consuming and dangerous to the storage integrity.
-If user was in a VO, we will assume all the data is owned by the VO (including HOM/DATA direcotires)
-
-
-
-We will assume a VO moderator and/or promotor 
+Hence, it should be prevented at all times.
+If any of the above-mentioned alternative scenarios are still viable, they will be considered first.
 
 {% endif %}
