@@ -76,7 +76,7 @@ Users are requested to:
 **All user data will no longer be accessible after a user has left university.**
 
 
-### Possible actions after user left university
+### Possible actions after a user left university
 
 When a user does not offload data before leaving university, user data might remain on HPC storage locations without a direct owner.
 If access to this data is for some reason still needed (by the former user, promotor, ...), the following actions could be possible:
@@ -90,8 +90,17 @@ Once the voluntary employee contract is in order, HPC staff can then reinstate t
 #### Data transfer by HPC staff
 
 As a very last resort measure, HPC staff can initiate a data transfer to another VSC account when requested by a VO moderator or promotor.
+Please be aware that this is a non-trivial operation for HPC-UGent staff:
+
+- it is an entirely manual process
+- it is error-prone
+- it has risks for the storage integrity
+Hence our helpdesk staff needs to be able to dedicate sufficient time and focus to complete this task.
+
 This is extremely time consuming and dangerous to the storage integrity.
 If user was in a VO, we will assume all the data is owned by the VO (including HOM/DATA direcotires)
+
+
 
 We will assume a VO moderator and/or promotor 
 
