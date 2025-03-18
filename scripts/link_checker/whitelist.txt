@@ -54,3 +54,6 @@ https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-0
 
 # gone?
 http://www.straightrunning.com/XmingNotes/
+
+# 404 only accessible from UGent network
+https://ugentbe.sharepoint.com/:u:/r/sites/intranet-personeelszaken/SitePages/en/Vrijwillig-medewerker-en-postdoctoraal-onbezoldigd-medewerker.aspx
