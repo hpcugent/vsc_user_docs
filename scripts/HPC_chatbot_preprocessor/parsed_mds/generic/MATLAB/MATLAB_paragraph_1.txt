@@ -1,0 +1,41 @@
+MATLAB
+ note
+    To run a MATLAB program on the HPC-UGent infrastructure you must compile it first,
+    because the MATLAB license server is not accessible from cluster workernodes
+    (except for the interactive debug cluster).
+    Compiling MATLAB programs is only possible on the interactive debug cluster,
+    not on the HPC-UGent login nodes where resource limits w.r.t. memory and max. number of progress are too strict.
+Why is the MATLAB compiler required?
+The main reason behind this alternative way of using MATLAB is
+licensing: only a limited number of MATLAB sessions can be active at the
+same time. However, once the MATLAB program is compiled using the MATLAB
+compiler, the resulting stand-alone executable can be run without
+needing to contact the license server.
+Note that a license is required for the MATLAB Compiler, see
+https://nl.mathworks.com/help/compiler/index.html. If the mcc
+command is provided by the MATLAB installation you are using, the MATLAB
+compiler can be used as explained below.
+Only a limited amount of MATLAB sessions can be active at the same time
+because there are only a limited amount of MATLAB research licenses
+available on the UGent MATLAB license server. If each job would need a
+license, licenses would quickly run out.
+How to compile MATLAB code
+Compiling MATLAB code can only be done from the login nodes, because
+only login nodes can access the MATLAB license server, workernodes on
+clusters cannot.
+To access the MATLAB compiler, the MATLAB module should be loaded
+first. Make sure you are using the same MATLAB version to compile and
+to run the compiled MATLAB program.
+$ module avail MATLAB/
+----------------------/apps/gent/RHEL8/zen2-ib/modules/all----------------------
+   MATLAB/2021b    MATLAB/2022b-r5 (D)
+$ module load MATLAB/2021b
+After loading the MATLAB module, the mcc command can be used. To get
+help on mcc, you can run mcc -?.
+To compile a standalone application, the -m flag is used (the -v
+flag means verbose output). To show how mcc can be used, we use the
+magicsquare example that comes with MATLAB.
+First, we copy the magicsquare.m example that comes with MATLAB to
+example.m:
+cp $EBROOTMATLAB/extern/examples/compiler/magicsquare.m example.m
+To compile a MATLAB program, use mcc -mv:
