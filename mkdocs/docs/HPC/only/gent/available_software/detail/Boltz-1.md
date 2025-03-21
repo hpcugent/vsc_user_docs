@@ -21,4 +21,4 @@ module load Boltz-1/0.4.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Boltz-1/0.4.1-foss-2023a|x|-|x|-|x|x|x|
+|Boltz-1/0.4.1-foss-2023a|x|x|x|-|x|x|x|
