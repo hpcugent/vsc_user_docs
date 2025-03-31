@@ -22,4 +22,4 @@ module load IGV/2.19.1-Java-17
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |IGV/2.19.1-Java-17|x|-|-|-|-|x|x|
-|IGV/2.16.0-Java-11|x|x|-|x|-|x|x|
+|IGV/2.16.0-Java-11|x|x|x|x|x|x|x|
