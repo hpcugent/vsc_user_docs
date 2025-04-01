@@ -23,4 +23,4 @@ module load UCX-CUDA/1.15.0-GCCcore-13.2.0-CUDA-12.5.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |UCX-CUDA/1.15.0-GCCcore-13.2.0-CUDA-12.5.0|x|-|-|-|x|x|-|
 |UCX-CUDA/1.15.0-GCCcore-13.2.0-CUDA-12.4.0|x|-|-|-|x|x|-|
-|UCX-CUDA/1.14.1-GCCcore-12.3.0-CUDA-12.1.1|x|-|x|-|x|x|x|
+|UCX-CUDA/1.14.1-GCCcore-12.3.0-CUDA-12.1.1|x|-|x|x|x|x|x|

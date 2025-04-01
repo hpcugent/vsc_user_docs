@@ -14,13 +14,14 @@ The overview below shows which SAMtools installations are available per HPC-UGen
 To start using SAMtools, load one of these modules using a `module load` command like:
 
 ```shell
-module load SAMtools/1.19.2-GCC-13.2.0
+module load SAMtools/1.21-GCC-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SAMtools/1.21-GCC-13.3.0|x|x|x|x|x|x|x|
 |SAMtools/1.19.2-GCC-13.2.0|x|x|x|x|x|x|x|
 |SAMtools/1.18-GCC-12.3.0|x|x|x|x|x|x|x|
 |SAMtools/1.16.1-GCC-11.3.0|-|-|-|-|-|x|x|

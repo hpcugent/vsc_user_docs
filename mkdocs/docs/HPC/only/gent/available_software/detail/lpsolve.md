@@ -21,4 +21,4 @@ module load lpsolve/5.5.2.11-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|lpsolve/5.5.2.11-GCC-12.3.0|-|x|x|x|x|x|x|
+|lpsolve/5.5.2.11-GCC-12.3.0|x|x|x|x|x|x|x|

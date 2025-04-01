@@ -14,11 +14,12 @@ The overview below shows which Mash installations are available per HPC-UGent Ti
 To start using Mash, load one of these modules using a `module load` command like:
 
 ```shell
-module load Mash/2.3-GCC-12.3.0
+module load Mash/2.3-GCC-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Mash/2.3-GCC-13.3.0|x|-|x|-|x|x|x|
 |Mash/2.3-GCC-12.3.0|-|x|x|x|x|x|x|
