@@ -22,3 +22,4 @@ module load PyHMMER/0.10.15-gompi-2023b
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |PyHMMER/0.10.15-gompi-2023b|x|x|x|x|x|x|x|
+|PyHMMER/0.10.6-gompi-2023a|-|x|x|x|x|x|x|
