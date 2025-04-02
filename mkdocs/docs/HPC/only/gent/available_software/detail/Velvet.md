@@ -22,3 +22,4 @@ module load Velvet/1.2.10-foss-2023a-mt-kmer_191
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Velvet/1.2.10-foss-2023a-mt-kmer_191|-|x|-|x|-|-|-|
+|Velvet/1.2.10-GCC-13.3.0-mt-kmer_191|x|x|x|x|x|x|x|

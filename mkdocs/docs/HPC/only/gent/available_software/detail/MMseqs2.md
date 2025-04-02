@@ -21,4 +21,4 @@ module load MMseqs2/14-7e284-gompi-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MMseqs2/14-7e284-gompi-2023a|-|x|x|x|x|x|x|
+|MMseqs2/14-7e284-gompi-2023a|x|x|x|x|x|x|x|

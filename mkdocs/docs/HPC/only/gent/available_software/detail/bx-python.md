@@ -21,4 +21,4 @@ module load bx-python/0.10.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bx-python/0.10.0-foss-2023a|x|x|-|x|-|x|x|
+|bx-python/0.10.0-foss-2023a|x|x|x|x|x|x|x|

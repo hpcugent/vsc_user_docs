@@ -1,0 +1,24 @@
+---
+hide:
+  - toc
+---
+
+RSeQC
+=====
+
+# Available modules
+
+
+The overview below shows which RSeQC installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
+
+To start using RSeQC, load one of these modules using a `module load` command like:
+
+```shell
+module load RSeQC/5.0.1-foss-2023a
+```
+
+*(This data was automatically generated on {{modules_last_updated}})*  
+
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RSeQC/5.0.1-foss-2023a|x|x|x|x|x|x|x|
