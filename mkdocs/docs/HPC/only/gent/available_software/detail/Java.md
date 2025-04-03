@@ -27,5 +27,7 @@ module load Java/21.0.5
 |Java/21(@Java/21.0.2)|-|-|-|-|-|x|x|
 |Java/17.0.6|x|x|x|x|x|x|x|
 |Java/17(@Java/17.0.6)|x|x|x|x|x|x|x|
+|Java/13.0.2|-|-|x|-|x|-|-|
+|Java/13(@Java/13.0.2)|-|-|x|-|x|-|-|
 |Java/11.0.20|x|x|x|x|x|x|x|
 |Java/11(@Java/11.0.20)|x|x|x|x|x|x|x|
