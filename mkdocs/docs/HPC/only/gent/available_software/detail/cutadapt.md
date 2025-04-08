@@ -22,3 +22,4 @@ module load cutadapt/4.9-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |cutadapt/4.9-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|cutadapt/1.18-GCCcore-12.3.0-Python-2.7.18|-|x|x|-|x|x|x|

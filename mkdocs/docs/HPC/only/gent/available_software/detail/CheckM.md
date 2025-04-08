@@ -22,3 +22,4 @@ module load CheckM/1.2.2-foss-2022a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |CheckM/1.2.2-foss-2022a|-|-|-|-|-|x|x|
+|CheckM/1.0.18-foss-2023a-Python-2.7.18|-|x|x|-|x|x|x|
