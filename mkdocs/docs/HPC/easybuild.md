@@ -97,7 +97,7 @@ EasyBuild provides a large collection of readily available software
 versions, combined with a particular toolchain version. Use the
 `--search` (or `-S`) functionality to see which different 'easyconfigs'
 (build recipes, see
-<http://easybuild.readthedocs.org/en/latest/Concepts_and_Terminology.html#easyconfig-files>) are available:
+<https://docs.easybuild.io/terminology/#easyconfig_files>) are available:
 
 ```
 $ eb -S example-1.2
@@ -137,7 +137,7 @@ eb example-1.2.5-intel-{{ current_year}}a.eb --robot --try-toolchain=intel,{{ cu
 
 To install other, not yet supported, software, you will need to provide
 the required easyconfig files yourself. See
-<https://easybuild.readthedocs.org/en/latest/Writing_easyconfig_files.html>
+<https://docs.easybuild.io/writing-easyconfig-files/>.
 for more information.
 
 ## Using the installed modules
