@@ -676,6 +676,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/CONCOCT/</loc>
+         <lastmod>2025-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/COSTA/</loc>
          <lastmod>2025-04-09</lastmod>
          <changefreq>daily</changefreq>
@@ -2121,6 +2126,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/MaxBin/</loc>
+         <lastmod>2025-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Mesa/</loc>
          <lastmod>2025-04-09</lastmod>
          <changefreq>daily</changefreq>
@@ -2137,6 +2147,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Mesquite/</loc>
+         <lastmod>2025-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/MetaBAT/</loc>
          <lastmod>2025-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -2212,6 +2227,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/NEURON/</loc>
+         <lastmod>2025-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/NGS/</loc>
          <lastmod>2025-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -2846,6 +2866,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/QUAST/</loc>
+         <lastmod>2025-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/Qhull/</loc>
          <lastmod>2025-04-09</lastmod>
          <changefreq>daily</changefreq>
@@ -3161,6 +3186,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/SRPRISM/</loc>
+         <lastmod>2025-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/SSW/</loc>
          <lastmod>2025-04-09</lastmod>
          <changefreq>daily</changefreq>
@@ -3242,6 +3272,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/SentencePiece/</loc>
+         <lastmod>2025-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/SeqAn/</loc>
          <lastmod>2025-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -3806,6 +3841,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/angsd/</loc>
+         <lastmod>2025-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/anndata/</loc>
          <lastmod>2025-04-09</lastmod>
          <changefreq>daily</changefreq>
@@ -3967,6 +4007,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/bliss/</loc>
+         <lastmod>2025-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/bmtagger/</loc>
          <lastmod>2025-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -5466,6 +5511,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/metaWRAP/</loc>
+         <lastmod>2025-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/meteogrid/</loc>
          <lastmod>2025-04-09</lastmod>
          <changefreq>daily</changefreq>
@@ -6562,6 +6612,11 @@
     </url>
     <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/tantan/</loc>
+         <lastmod>2025-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/taxator-tk/</loc>
          <lastmod>2025-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
