@@ -21,4 +21,4 @@ module load taxator-tk/1.5.0-GCC-12.3.0-Python-2.7.18
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|taxator-tk/1.5.0-GCC-12.3.0-Python-2.7.18|-|x|x|-|x|x|x|
+|taxator-tk/1.5.0-GCC-12.3.0-Python-2.7.18|x|x|x|-|x|x|x|

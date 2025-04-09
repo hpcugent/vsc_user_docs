@@ -21,4 +21,4 @@ module load NanoPlot/1.43.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NanoPlot/1.43.0-foss-2023a|-|x|-|x|-|x|x|
+|NanoPlot/1.43.0-foss-2023a|x|x|x|x|x|x|x|

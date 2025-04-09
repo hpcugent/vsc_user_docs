@@ -21,7 +21,7 @@ module load EasyBuild/5.0.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|EasyBuild/5.0.0|x|x|x|-|x|x|x|
+|EasyBuild/5.0.0|x|x|x|x|x|x|x|
 |EasyBuild/4.9.4|x|x|x|x|x|x|x|
 |EasyBuild/4.9.3|x|x|x|x|x|x|x|
 |EasyBuild/4.9.2|x|x|x|x|x|x|x|

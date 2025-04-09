@@ -23,5 +23,5 @@ module load parallel/20240722-GCCcore-13.3.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |parallel/20240722-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |parallel/20240322-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|parallel/20230722-GCCcore-12.3.0|-|x|x|x|x|x|x|
+|parallel/20230722-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |parallel/20230722-GCCcore-12.2.0|-|-|-|-|-|x|x|

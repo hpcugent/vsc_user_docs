@@ -21,4 +21,4 @@ module load nanoQC/0.9.4-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nanoQC/0.9.4-foss-2023a|-|x|-|x|-|x|x|
+|nanoQC/0.9.4-foss-2023a|x|x|x|x|x|x|x|

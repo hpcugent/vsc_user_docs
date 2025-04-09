@@ -21,4 +21,4 @@ module load metaWRAP/1.4-20230728-foss-2023a-Python-2.7.18
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|metaWRAP/1.4-20230728-foss-2023a-Python-2.7.18|-|x|x|-|x|x|x|
+|metaWRAP/1.4-20230728-foss-2023a-Python-2.7.18|x|x|x|-|x|x|x|
