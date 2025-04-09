@@ -27,3 +27,4 @@ module load scikit-learn/1.5.2-gfbf-2024a
 |scikit-learn/1.3.2-gfbf-2023b|-|x|x|x|x|-|-|
 |scikit-learn/1.3.1-gfbf-2023a|x|x|x|x|x|x|x|
 |scikit-learn/1.1.2-foss-2022a|-|-|-|-|-|x|x|
+|scikit-learn/0.20.4-foss-2023a-Python-2.7.18|-|x|x|-|x|x|x|

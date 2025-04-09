@@ -26,3 +26,4 @@ module load Tkinter/3.12.3-GCCcore-13.3.0
 |Tkinter/3.11.3-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |Tkinter/3.10.8-GCCcore-12.2.0|-|-|-|-|-|x|x|
 |Tkinter/3.10.4-GCCcore-11.3.0|-|-|-|-|-|x|x|
+|Tkinter/2.7.18-GCCcore-12.3.0-Python-2.7.18|-|x|x|-|x|x|x|
