@@ -211,7 +211,7 @@ problem, please contact {{ hpcinfo }} and include the following information:
 
 {% if OS == windows %}
 Please create a log file of your SSH session by following the steps in
-[this article](https://my.kualo.com/knowledgebase/?kbcat=0&article=888)
+[this article](https://stackoverflow.com/a/21232019/1467322)
 and include it in the email.
 
 ### Change PuTTY private key for a saved configuration
