@@ -21,4 +21,4 @@ module load QUAST/5.2.0-foss-2023a-Python-2.7.18
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|QUAST/5.2.0-foss-2023a-Python-2.7.18|-|x|x|-|x|x|x|
+|QUAST/5.2.0-foss-2023a-Python-2.7.18|x|x|x|-|x|x|x|

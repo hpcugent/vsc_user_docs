@@ -21,4 +21,4 @@ module load MaxBin/2.2.7-gompi-2023a-Python-2.7.18
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MaxBin/2.2.7-gompi-2023a-Python-2.7.18|-|x|x|-|x|x|x|
+|MaxBin/2.2.7-gompi-2023a-Python-2.7.18|x|x|x|-|x|x|x|

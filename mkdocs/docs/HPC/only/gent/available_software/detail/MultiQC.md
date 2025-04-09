@@ -14,12 +14,13 @@ The overview below shows which MultiQC installations are available per HPC-UGent
 To start using MultiQC, load one of these modules using a `module load` command like:
 
 ```shell
-module load MultiQC/1.22.3-foss-2023b
+module load MultiQC/1.28-foss-2024a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MultiQC/1.28-foss-2024a|-|-|x|-|x|x|x|
 |MultiQC/1.22.3-foss-2023b|-|x|x|x|x|x|x|
 |MultiQC/1.20-foss-2023a|x|x|x|x|x|x|x|

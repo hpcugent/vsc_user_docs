@@ -21,4 +21,4 @@ module load NGS/3.0.1-GCCcore-12.3.0-Java-11
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NGS/3.0.1-GCCcore-12.3.0-Java-11|-|x|x|-|x|x|x|
+|NGS/3.0.1-GCCcore-12.3.0-Java-11|x|x|x|x|x|x|x|

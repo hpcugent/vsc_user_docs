@@ -21,4 +21,4 @@ module load SRPRISM/3.3.2-GCCcore-12.3.0-Java-11
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SRPRISM/3.3.2-GCCcore-12.3.0-Java-11|-|x|x|-|x|x|x|
+|SRPRISM/3.3.2-GCCcore-12.3.0-Java-11|x|x|x|x|x|x|x|

@@ -21,4 +21,4 @@ module load NanoComp/1.24.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NanoComp/1.24.0-foss-2023a|-|x|-|x|-|x|x|
+|NanoComp/1.24.0-foss-2023a|x|x|x|x|x|x|x|

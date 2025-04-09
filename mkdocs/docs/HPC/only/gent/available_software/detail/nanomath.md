@@ -21,4 +21,4 @@ module load nanomath/1.4.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nanomath/1.4.0-foss-2023a|-|x|-|x|-|x|x|
+|nanomath/1.4.0-foss-2023a|x|x|x|x|x|x|x|

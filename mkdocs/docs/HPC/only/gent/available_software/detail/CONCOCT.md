@@ -21,4 +21,4 @@ module load CONCOCT/1.1.0-foss-2023a-Python-2.7.18
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CONCOCT/1.1.0-foss-2023a-Python-2.7.18|-|x|x|-|x|x|x|
+|CONCOCT/1.1.0-foss-2023a-Python-2.7.18|x|x|x|-|x|x|x|

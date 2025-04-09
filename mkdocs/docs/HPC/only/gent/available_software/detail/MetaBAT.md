@@ -21,4 +21,4 @@ module load MetaBAT/2.17-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MetaBAT/2.17-GCC-12.3.0|-|x|x|-|x|x|x|
+|MetaBAT/2.17-GCC-12.3.0|x|x|x|x|x|x|x|
