@@ -4416,6 +4416,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/fastStructure/</loc>
+         <lastmod>2025-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/fastText/</loc>
          <lastmod>2025-04-09</lastmod>
          <changefreq>daily</changefreq>
