@@ -21,7 +21,7 @@ module load pydantic/2.9.1-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pydantic/2.9.1-GCCcore-13.3.0|-|-|x|-|x|x|x|
+|pydantic/2.9.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |pydantic/2.7.4-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |pydantic/2.6.4-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |pydantic/2.5.3-GCCcore-12.3.0|x|x|x|x|x|x|x|
