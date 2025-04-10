@@ -21,6 +21,6 @@ module load plotly.py/5.24.1-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|plotly.py/5.24.1-GCCcore-13.3.0|x|-|x|x|x|x|x|
+|plotly.py/5.24.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |plotly.py/5.18.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |plotly.py/5.16.0-GCCcore-12.3.0|x|x|x|x|x|x|x|

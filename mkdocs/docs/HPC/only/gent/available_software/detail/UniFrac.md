@@ -21,4 +21,4 @@ module load UniFrac/1.4-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|UniFrac/1.4-foss-2023a|-|x|x|x|x|x|x|
+|UniFrac/1.4-foss-2023a|x|x|x|x|x|x|x|
