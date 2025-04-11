@@ -22,5 +22,5 @@ module load ABAQUS/2024-hotfix-2405
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ABAQUS/2024-hotfix-2405|x|x|x|x|x|x|x|
-|ABAQUS/2022-hotfix-2214|-|x|-|-|-|-|-|
-|ABAQUS/2022|-|x|-|-|-|-|-|
+|ABAQUS/2022-hotfix-2214|x|x|x|x|x|x|x|
+|ABAQUS/2022|x|x|x|x|x|x|x|

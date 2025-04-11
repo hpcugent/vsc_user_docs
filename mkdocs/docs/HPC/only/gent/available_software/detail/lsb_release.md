@@ -21,4 +21,4 @@ module load lsb_release/2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|lsb_release/2.0|-|x|-|-|-|-|-|
+|lsb_release/2.0|x|x|x|x|x|x|x|
