@@ -1,0 +1,1 @@
+Make sure you can get to a shell access to the HPC-UGent infrastructure before proceeding with the next steps.
