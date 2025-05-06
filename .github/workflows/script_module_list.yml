@@ -22,7 +22,7 @@ jobs:
       - name: Set up Python environment
         uses: actions/setup-python@v4
         with:
-          python-version: "3.6"
+          python-version: '3.9'
       - name: flake8 Lint
         uses: py-actions/flake8@v2
         with:
@@ -36,7 +36,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.6'
+          python-version: '3.9'
       - name: Install dependencies
         run: |
           cd scripts/available_software
