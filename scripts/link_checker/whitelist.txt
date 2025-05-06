@@ -58,3 +58,11 @@ http://www.straightrunning.com/XmingNotes/
 
 # 404 only accessible from UGent network
 https://ugentbe.sharepoint.com/:u:/r/sites/intranet-personeelszaken/SitePages/en/Vrijwillig-medewerker-en-postdoctoraal-onbezoldigd-medewerker.aspx
+
+# 429
+https://github.com/deepmind/alphafold/blob/main/README.md
+https://github.com/deepmind/alphafold/blob/main/README.md#alphafold-output
+https://github.com/deepmind/alphafold/blob/main/README.md#examples
+https://github.com/deepmind/alphafold/blob/main/README.md#running-alphafold
+https://github.com/hpcugent/vsc-mympirun/blob/master/README.md
+https://github.com/open-mpi/ompi/blob/master/examples/ring_c.c
