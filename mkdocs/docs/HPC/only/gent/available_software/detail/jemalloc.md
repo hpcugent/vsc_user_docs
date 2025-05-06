@@ -21,5 +21,5 @@ module load jemalloc/5.3.0-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|jemalloc/5.3.0-GCCcore-13.3.0|-|x|x|x|x|x|x|
+|jemalloc/5.3.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |jemalloc/5.3.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
