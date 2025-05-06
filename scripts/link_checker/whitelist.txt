@@ -24,6 +24,7 @@ http://hpc.ugent.be/clusterstate
 https://linux.die.net/man/1/rsync
 https://linux.die.net/man/1/setfacl
 https://login.hpc.ugent.be
+https://login.hpc.ugent.be/pun/sys/dashboard/support?category=swreport
 # expired SSL certificate (20250120)
 https://elearning.vib.be/courses/alphafold
 
