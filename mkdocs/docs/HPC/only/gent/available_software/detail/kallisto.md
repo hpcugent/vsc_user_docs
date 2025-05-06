@@ -14,11 +14,12 @@ The overview below shows which kallisto installations are available per HPC-UGen
 To start using kallisto, load one of these modules using a `module load` command like:
 
 ```shell
-module load kallisto/0.51.1-gompi-2023a
+module load kallisto/0.51.1-gompi-2024a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|kallisto/0.51.1-gompi-2024a|x|x|x|x|-|x|x|
 |kallisto/0.51.1-gompi-2023a|-|x|x|x|x|x|x|
