@@ -22,7 +22,7 @@ jobs:
       - name: Set up Python environment
         uses: actions/setup-python@v4
         with:
-          python-version: "3.6"
+          python-version: '3.9'
       - name: flake8 Lint
         uses: py-actions/flake8@v2
         with:
@@ -30,13 +30,13 @@ jobs:
           path: "scripts/available_software"
 
   pytest-tests:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.6'
+          python-version: '3.9'
       - name: Install dependencies
         run: |
           cd scripts/available_software

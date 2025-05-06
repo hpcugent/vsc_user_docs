@@ -8,22 +8,30 @@ To submit a software installation request, please use the available request form
 
 ## Software usage report
 
-By submitting a software installation request, you are committing to sending back a **software usage report**,
-in which the following questions are answered:
+By submitting a software installation request, you are committing to sending back a **software usage report**.
 
-- 1) How many times have you used this software so far?
-- 2) On which system(s) did you use this software?
-- 3) Is the software working as it should? If not, please elaborate.
-- 4) Is the performance of the software as you expect it to be? If not, please elaborate (and consider reporting problems).
-- 5) How often will you be using this software going forward?
-- 6) Describe how this software will help you with future research output.
-- 7) Please provide an example of how to use this software, including the necessary information to run this example (where to get the input files, etc.), so we can consider documenting its usage.
+!!! tip "Use the form, Luke"
+    To submit a software usage report you should use to dedicated form that is available in the HPC-UGent web portal:
 
-**Please provide the report no later than 1 month after the completion of the software installation**,
-taking into account the following:
+    [https://login.hpc.ugent.be/pun/sys/dashboard/support?category=swreport](https://login.hpc.ugent.be/pun/sys/dashboard/support?category=swreport)
 
-* Send us the software usage report **in PDF format**, as attachment in the reply to the support ticket that corresponds to your software installation request;
-* Keep it concise: try to limit the entire report to about one single page;
-* You are welcome to consolidate the answers to the questions above for multiple related software installation requests into a single report.
-  For each additional tool, aim to add no more than half a page extra to the report.
-  Try to provide an example in which all requested software is used together (see last question above).
+A software usage report provides answers to the following questions:
+
+- How many times have you used this software so far?
+- On which system(s) did you use this software?
+- Is the software working as it should? If not, please elaborate.
+- Is the performance of the software as you expect it to be? If not, please elaborate (and consider reporting problems).
+- How often will you be using this software going forward?
+- Describe how this software will help you with future research output.
+- Provide an example of how to use this software, including the necessary information to run this example (where to get the input files, etc.), so we can consider documenting its usage.
+
+!!! abstract "Timing"
+    Please provide the report **no later than 1 month** after the completion of the software installation.
+
+Take into account the following guidelines:
+
+* Make sure to use the correct ticket number in [the form to submit a software usage report](https://login.hpc.ugent.be/pun/sys/dashboard/support?category=swreport);
+* Keep it concise: a couple of sentences per answer is sufficient;
+* Please submit **one software usage report per ticket** that corresponds to an installation request.
+  Do not combine usage reports for multiple requests, unless you requested multiple (related) software installations in
+  a single request (single ticket number).
