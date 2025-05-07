@@ -21,5 +21,5 @@ module load kallisto/0.51.1-gompi-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|kallisto/0.51.1-gompi-2024a|x|x|x|x|-|x|x|
+|kallisto/0.51.1-gompi-2024a|x|x|x|x|x|x|x|
 |kallisto/0.51.1-gompi-2023a|-|x|x|x|x|x|x|

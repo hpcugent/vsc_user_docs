@@ -21,5 +21,5 @@ module load HISAT2/2.2.1-gompi-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HISAT2/2.2.1-gompi-2024a|x|x|x|x|-|x|x|
+|HISAT2/2.2.1-gompi-2024a|x|x|x|x|x|x|x|
 |HISAT2/2.2.1-gompi-2023a|x|x|x|x|x|x|x|
