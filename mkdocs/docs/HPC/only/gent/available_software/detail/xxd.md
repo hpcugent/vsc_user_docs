@@ -21,6 +21,6 @@ module load xxd/9.1.1275-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|xxd/9.1.1275-GCCcore-13.3.0|x|x|x|x|-|x|x|
+|xxd/9.1.1275-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |xxd/9.1.0307-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |xxd/9.0.2112-GCCcore-12.3.0|x|x|x|x|x|x|x|

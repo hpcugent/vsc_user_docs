@@ -22,7 +22,7 @@ module load STAR/2.7.11b_alpha_2024-02-09-GCC-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |STAR/2.7.11b_alpha_2024-02-09-GCC-12.3.0|-|x|x|x|x|x|x|
-|STAR/2.7.11b-GCC-13.3.0|x|x|x|x|-|x|x|
+|STAR/2.7.11b-GCC-13.3.0|x|x|x|x|x|x|x|
 |STAR/2.7.11b-GCC-13.2.0|-|x|x|x|x|x|x|
 |STAR/2.7.11b-GCC-12.3.0|-|x|x|x|x|-|-|
 |STAR/2.7.11a-GCC-12.3.0|x|x|x|x|x|x|x|
