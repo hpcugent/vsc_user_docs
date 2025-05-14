@@ -6336,6 +6336,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/quaqc/</loc>
+         <lastmod>2025-05-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.hpc.ugent.be/Linux/available_software/detail/quarto/</loc>
          <lastmod>2025-05-14</lastmod>
          <changefreq>daily</changefreq>
