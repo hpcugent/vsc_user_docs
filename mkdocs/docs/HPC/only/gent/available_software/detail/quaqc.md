@@ -21,4 +21,4 @@ module load quaqc/1.3d-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|quaqc/1.3d-GCC-12.3.0|-|x|x|x|x|-|-|
+|quaqc/1.3d-GCC-12.3.0|x|x|x|x|x|x|x|

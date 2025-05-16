@@ -21,6 +21,6 @@ module load LAMMPS/29Aug2024-foss-2023b-kokkos
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LAMMPS/29Aug2024-foss-2023b-kokkos|-|x|x|x|x|x|x|
+|LAMMPS/29Aug2024-foss-2023b-kokkos|x|x|x|x|x|x|x|
 |LAMMPS/2Aug2023_update2-foss-2023a-kokkos-CUDA-12.1.1|x|-|-|-|x|x|-|
 |LAMMPS/2Aug2023_update2-foss-2023a-kokkos|-|x|x|x|x|x|x|
