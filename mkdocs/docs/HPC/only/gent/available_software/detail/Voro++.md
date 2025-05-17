@@ -21,5 +21,5 @@ module load Voro++/0.4.6-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Voro++/0.4.6-GCCcore-13.2.0|-|x|x|x|x|x|x|
+|Voro++/0.4.6-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Voro++/0.4.6-GCCcore-12.3.0|x|x|x|x|x|x|x|
