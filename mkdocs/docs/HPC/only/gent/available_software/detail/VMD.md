@@ -21,4 +21,4 @@ module load VMD/1.9.4a57-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VMD/1.9.4a57-foss-2023a|-|-|x|-|x|-|-|
+|VMD/1.9.4a57-foss-2023a|x|x|x|x|x|x|x|
