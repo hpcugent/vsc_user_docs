@@ -14,11 +14,12 @@ The overview below shows which nose3 installations are available per HPC-UGent T
 To start using nose3, load one of these modules using a `module load` command like:
 
 ```shell
-module load nose3/1.3.8-GCCcore-12.3.0
+module load nose3/1.3.8-GCCcore-13.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|nose3/1.3.8-GCCcore-13.2.0|-|x|-|-|-|-|-|
 |nose3/1.3.8-GCCcore-12.3.0|x|x|x|x|x|x|x|

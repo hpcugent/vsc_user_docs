@@ -14,11 +14,12 @@ The overview below shows which QIIME2 installations are available per HPC-UGent 
 To start using QIIME2, load one of these modules using a `module load` command like:
 
 ```shell
-module load QIIME2/2024.10.1-foss-2023a-amplicon
+module load QIIME2/2024.10.1-foss-2023b-amplicon
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|QIIME2/2024.10.1-foss-2023b-amplicon|-|x|-|-|-|-|-|
 |QIIME2/2024.10.1-foss-2023a-amplicon|x|x|x|x|x|x|x|

@@ -22,4 +22,5 @@ module load MAFFT/7.526-GCC-13.3.0-with-extensions
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |MAFFT/7.526-GCC-13.3.0-with-extensions|x|x|x|x|x|x|x|
+|MAFFT/7.526-GCC-13.2.0-with-extensions|-|x|-|-|-|-|-|
 |MAFFT/7.520-GCC-12.3.0-with-extensions|x|x|x|x|x|x|x|
