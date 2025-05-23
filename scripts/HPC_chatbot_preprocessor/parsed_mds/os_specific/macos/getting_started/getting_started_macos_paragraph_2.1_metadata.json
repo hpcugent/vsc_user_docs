@@ -1,0 +1,19 @@
+{
+    "main_title": "getting_started",
+    "subtitle": "Submitting-a-job",
+    "source_file": "../../mkdocs/docs/HPC/getting_started.md",
+    "title_depth": 3,
+    "directory": "getting_started",
+    "parent_title": "getting_started",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/troubleshooting/#sec:connecting-issues",
+        "1": "https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist/tensorflow_mnist.py",
+        "2": "https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist/run.sh",
+        "3": "https://github.com/hpcugent/vsc_user_docs/tree/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist",
+        "4": "https://docs.hpc.ugent.be/connecting/#transfer-files-tofrom-the-hpc"
+    },
+    "previous_title": "getting_started_paragraph_1",
+    "next_title": "getting_started_paragraph_3",
+    "OS": "macos",
+    "reference_link": "https://docs.hpc.ugent.be/macOS/getting_started/#submitting-a-job"
+}
