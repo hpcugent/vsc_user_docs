@@ -1,0 +1,48 @@
+And compile it (whilst including the "openmp" library) and run and
+test it on the login-node:
+$ module load GCC
+$ gcc -fopenmp -o omp3 omp3.c
+$ ./omp3
+Total # loop iterations is 100000
+Now run it in the cluster and check the result again.
+$ qsub omp3.pbs
+$ cat omp3.pbs.o*
+Total # loop iterations is 100000
+Other OpenMP directives
+There are a host of other directives you can issue using OpenMP.
+Some other clauses of interest are:
+1.  barrier: each thread will wait until all threads have reached this
+    point in the code, before proceeding
+2.  nowait: threads will not wait until everybody is finished
+3.  schedule(type, chunk) allows you to specify how tasks are spawned
+    out to threads in a for loop. There are three types of scheduling
+    you can specify
+4.  if: allows you to parallelise only if a certain condition is met
+5.  ... and a host of others
+ tip
+    If you plan engaging in parallel programming using OpenMP, this book may
+    prove useful: *Using OpenMP - Portable Shared Memory Parallel
+    Programming*. By Barbara Chapman Gabriele Jost and Ruud van der Pas
+    Scientific and Engineering Computation. 2005.
+Parallel Computing with MPI
+The Message Passing Interface (MPI) is a standard defining core syntax
+and semantics of library routines that can be used to implement parallel
+programming in C (and in other languages as well). There are several
+implementations of MPI such as Open MPI, Intel MPI, M(VA)PICH and
+LAM/MPI.
+In the context of this tutorial, you can think of MPI, in terms of its
+complexity, scope and control, as sitting in between programming with
+Pthreads, and using a high-level API such as OpenMP. For a Message
+Passing Interface (MPI) application, a parallel task usually consists of
+a single executable running concurrently on multiple processors, with
+communication between the processes. This is shown in the following
+diagram:
+The process numbers 0, 1 and 2 represent the process rank and have
+greater or less significance depending on the processing paradigm. At
+the minimum, Process 0 handles the input/output and determines what
+other processes are running.
+The MPI interface allows you to manage allocation, communication, and
+synchronisation of a set of processes that are mapped onto multiple
+nodes, where each node can be a core within a single CPU, or CPUs within
+a single machine, or even across multiple machines (as long as they are
+networked together).
