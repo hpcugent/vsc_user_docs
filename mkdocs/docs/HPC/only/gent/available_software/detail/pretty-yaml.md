@@ -21,4 +21,4 @@ module load pretty-yaml/24.7.0-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pretty-yaml/24.7.0-GCCcore-12.3.0|-|x|x|x|x|x|x|
+|pretty-yaml/24.7.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
