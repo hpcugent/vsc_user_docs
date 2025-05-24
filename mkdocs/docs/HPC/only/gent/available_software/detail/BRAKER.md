@@ -21,4 +21,4 @@ module load BRAKER/3.0.8-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BRAKER/3.0.8-foss-2023a|-|x|x|x|x|x|x|
+|BRAKER/3.0.8-foss-2023a|x|x|x|x|x|x|x|

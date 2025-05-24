@@ -21,4 +21,4 @@ module load spaln/3.0.6b-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|spaln/3.0.6b-GCC-12.3.0|-|x|x|x|x|x|x|
+|spaln/3.0.6b-GCC-12.3.0|x|x|x|x|x|x|x|
