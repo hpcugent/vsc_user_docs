@@ -22,3 +22,4 @@ module load AUGUSTUS/3.5.0-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |AUGUSTUS/3.5.0-foss-2023a|x|x|x|x|x|x|x|
+|AUGUSTUS/3.5.0-20240612-foss-2023a|x|x|x|x|x|x|x|
