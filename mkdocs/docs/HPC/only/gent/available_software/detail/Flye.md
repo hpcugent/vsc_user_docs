@@ -14,12 +14,13 @@ The overview below shows which Flye installations are available per HPC-UGent Ti
 To start using Flye, load one of these modules using a `module load` command like:
 
 ```shell
-module load Flye/2.9.4-GCC-13.2.0
+module load Flye/2.9.5-GCC-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*  
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Flye/2.9.5-GCC-13.3.0|x|x|x|x|x|x|x|
 |Flye/2.9.4-GCC-13.2.0|x|x|x|x|x|x|x|
 |Flye/2.9.3-GCC-12.3.0|x|x|x|x|x|x|x|
