@@ -24,4 +24,4 @@ module load Go/1.22.1
 |Go/1.22.1|x|x|x|x|x|x|x|
 |Go/1.21.6|x|x|-|x|-|x|x|
 |Go/1.21.2|x|x|x|x|x|x|x|
-|Go/1.17.6|x|x|-|x|-|x|x|
+|Go/1.17.6|x|x|x|x|x|x|x|
