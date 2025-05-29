@@ -21,5 +21,5 @@ module load pydot/3.0.4-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pydot/3.0.4-GCCcore-13.2.0|x|-|x|-|x|x|x|
+|pydot/3.0.4-GCCcore-13.2.0|x|-|x|x|x|x|x|
 |pydot/2.0.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
