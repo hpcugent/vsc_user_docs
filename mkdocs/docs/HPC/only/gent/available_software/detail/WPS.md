@@ -17,7 +17,7 @@ To start using WPS, load one of these modules using a `module load` command like
 module load WPS/4.6.0-foss-2024a-dmpar
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

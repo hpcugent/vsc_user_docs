@@ -17,7 +17,7 @@ To start using jupyter-contrib-nbextensions, load one of these modules using a `
 module load jupyter-contrib-nbextensions/0.7.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

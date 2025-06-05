@@ -17,7 +17,7 @@ To start using Spark, load one of these modules using a `module load` command li
 module load Spark/3.5.1-foss-2023a-Java-17
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

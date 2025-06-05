@@ -17,7 +17,7 @@ To start using scikit-learn, load one of these modules using a `module load` com
 module load scikit-learn/1.5.2-gfbf-2024a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -17,7 +17,7 @@ To start using NCCL, load one of these modules using a `module load` command lik
 module load NCCL/2.18.3-GCCcore-12.3.0-CUDA-12.1.1
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

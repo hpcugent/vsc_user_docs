@@ -17,7 +17,7 @@ To start using OpenForceField-Toolkit, load one of these modules using a `module
 module load OpenForceField-Toolkit/0.16.0-foss-2023a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

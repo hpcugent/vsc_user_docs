@@ -17,7 +17,7 @@ To start using Anaconda3, load one of these modules using a `module load` comman
 module load Anaconda3/2024.06-1
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

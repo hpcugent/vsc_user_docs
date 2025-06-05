@@ -17,7 +17,7 @@ To start using SPAdes, load one of these modules using a `module load` command l
 module load SPAdes/4.1.0-GCC-13.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

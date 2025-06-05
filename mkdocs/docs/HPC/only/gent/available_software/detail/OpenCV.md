@@ -17,7 +17,7 @@ To start using OpenCV, load one of these modules using a `module load` command l
 module load OpenCV/4.8.1-foss-2023a-contrib
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -17,7 +17,7 @@ To start using STAR, load one of these modules using a `module load` command lik
 module load STAR/2.7.11b_alpha_2024-02-09-GCC-12.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

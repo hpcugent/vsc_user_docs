@@ -17,7 +17,7 @@ To start using GMAP-GSNAP, load one of these modules using a `module load` comma
 module load GMAP-GSNAP/2023-04-20-GCC-12.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

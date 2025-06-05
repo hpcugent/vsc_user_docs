@@ -17,7 +17,7 @@ To start using OPERA-MS, load one of these modules using a `module load` command
 module load OPERA-MS/0.9.0-20240703-foss-2023a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

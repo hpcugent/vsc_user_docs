@@ -17,7 +17,7 @@ To start using Libint, load one of these modules using a `module load` command l
 module load Libint/2.7.2-GCC-12.3.0-lmax-6-cp2k
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

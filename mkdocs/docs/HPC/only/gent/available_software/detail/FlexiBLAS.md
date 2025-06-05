@@ -17,7 +17,7 @@ To start using FlexiBLAS, load one of these modules using a `module load` comman
 module load FlexiBLAS/3.4.4-GCC-13.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

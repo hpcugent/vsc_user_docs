@@ -17,7 +17,7 @@ To start using netCDF-Fortran, load one of these modules using a `module load` c
 module load netCDF-Fortran/4.6.1-gompi-2024a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

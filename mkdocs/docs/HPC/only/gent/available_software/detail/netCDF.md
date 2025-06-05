@@ -17,7 +17,7 @@ To start using netCDF, load one of these modules using a `module load` command l
 module load netCDF/4.9.2-gompi-2024a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

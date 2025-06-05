@@ -17,7 +17,7 @@ To start using wrapt, load one of these modules using a `module load` command li
 module load wrapt/1.16.0-gfbf-2024a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

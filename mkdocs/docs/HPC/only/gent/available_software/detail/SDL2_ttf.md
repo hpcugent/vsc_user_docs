@@ -17,7 +17,7 @@ To start using SDL2_ttf, load one of these modules using a `module load` command
 module load SDL2_ttf/2.22.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

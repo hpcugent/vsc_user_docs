@@ -17,7 +17,7 @@ To start using arrow-R, load one of these modules using a `module load` command 
 module load arrow-R/17.0.0.1-foss-2024a-R-4.4.2
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

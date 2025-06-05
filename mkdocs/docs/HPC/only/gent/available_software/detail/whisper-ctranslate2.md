@@ -17,7 +17,7 @@ To start using whisper-ctranslate2, load one of these modules using a `module lo
 module load whisper-ctranslate2/0.5.2-foss-2023a-CUDA-12.6.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

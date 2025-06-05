@@ -17,7 +17,7 @@ To start using GTDB-Tk, load one of these modules using a `module load` command 
 module load GTDB-Tk/2.4.0-foss-2023a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -17,7 +17,7 @@ To start using OpenSlide-Java, load one of these modules using a `module load` c
 module load OpenSlide-Java/0.12.4-GCCcore-12.3.0-Java-17
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

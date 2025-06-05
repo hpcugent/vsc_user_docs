@@ -17,7 +17,7 @@ To start using WIEN2k, load one of these modules using a `module load` command l
 module load WIEN2k/24.1-intel-2023a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

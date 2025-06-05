@@ -17,7 +17,7 @@ To start using torchtext, load one of these modules using a `module load` comman
 module load torchtext/0.16.2-foss-2023b-PyTorch-2.1.2
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

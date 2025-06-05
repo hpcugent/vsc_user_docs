@@ -17,7 +17,7 @@ To start using OpenBLAS, load one of these modules using a `module load` command
 module load OpenBLAS/0.3.27-GCC-13.3.0-seq-iface64
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

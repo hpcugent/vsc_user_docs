@@ -17,7 +17,7 @@ To start using pyWannier90, load one of these modules using a `module load` comm
 module load pyWannier90/2024-01-28-foss-2023a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

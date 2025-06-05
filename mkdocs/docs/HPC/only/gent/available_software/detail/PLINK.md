@@ -17,7 +17,7 @@ To start using PLINK, load one of these modules using a `module load` command li
 module load PLINK/1.90-beta-7.4-x86_64
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

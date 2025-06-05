@@ -17,7 +17,7 @@ To start using Trim_Galore, load one of these modules using a `module load` comm
 module load Trim_Galore/0.6.10-GCCcore-12.3.0-Python-2.7.18
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

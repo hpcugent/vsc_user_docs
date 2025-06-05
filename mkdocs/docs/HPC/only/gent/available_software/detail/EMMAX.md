@@ -17,7 +17,7 @@ To start using EMMAX, load one of these modules using a `module load` command li
 module load EMMAX/20120210-GCCcore-13.2.0-intel-binary
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

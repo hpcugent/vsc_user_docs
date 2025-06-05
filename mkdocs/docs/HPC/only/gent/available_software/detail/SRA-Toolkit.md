@@ -17,7 +17,7 @@ To start using SRA-Toolkit, load one of these modules using a `module load` comm
 module load SRA-Toolkit/3.2.0-gompi-2024a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -17,7 +17,7 @@ To start using SKESA, load one of these modules using a `module load` command li
 module load SKESA/2.4.0-gompi-2024a_saute.1.3.0_2
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

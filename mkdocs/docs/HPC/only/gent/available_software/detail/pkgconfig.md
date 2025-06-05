@@ -17,7 +17,7 @@ To start using pkgconfig, load one of these modules using a `module load` comman
 module load pkgconfig/1.5.5-GCCcore-13.2.0-python
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

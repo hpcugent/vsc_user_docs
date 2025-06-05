@@ -17,7 +17,7 @@ To start using parallel-fastq-dump, load one of these modules using a `module lo
 module load parallel-fastq-dump/0.6.7-gompi-2023a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

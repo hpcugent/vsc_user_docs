@@ -17,7 +17,7 @@ To start using taxator-tk, load one of these modules using a `module load` comma
 module load taxator-tk/1.5.0-GCC-12.3.0-Python-2.7.18
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -17,7 +17,7 @@ To start using OPEN-SURFEX, load one of these modules using a `module load` comm
 module load OPEN-SURFEX/8.1.0-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

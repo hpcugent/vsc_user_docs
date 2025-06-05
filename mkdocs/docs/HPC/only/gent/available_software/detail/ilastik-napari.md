@@ -17,7 +17,7 @@ To start using ilastik-napari, load one of these modules using a `module load` c
 module load ilastik-napari/0.2.4-foss-2023a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

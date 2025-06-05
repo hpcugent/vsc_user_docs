@@ -17,7 +17,7 @@ To start using SCENIC, load one of these modules using a `module load` command l
 module load SCENIC/1.3.0-foss-2023a-R-4.3.2
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

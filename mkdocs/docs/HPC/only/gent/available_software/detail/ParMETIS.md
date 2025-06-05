@@ -17,7 +17,7 @@ To start using ParMETIS, load one of these modules using a `module load` command
 module load ParMETIS/4.0.3-gompi-2023a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

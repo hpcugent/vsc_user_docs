@@ -17,7 +17,7 @@ To start using scCustomize, load one of these modules using a `module load` comm
 module load scCustomize/2.1.2-foss-2023a-R-4.3.2
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -17,7 +17,7 @@ To start using vsc-venv, load one of these modules using a `module load` command
 module load vsc-venv/1.0.6
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
