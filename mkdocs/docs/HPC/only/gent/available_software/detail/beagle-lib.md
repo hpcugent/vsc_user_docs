@@ -17,7 +17,7 @@ To start using beagle-lib, load one of these modules using a `module load` comma
 module load beagle-lib/4.0.1-GCC-12.3.0-CUDA-12.1.1
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

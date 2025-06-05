@@ -17,7 +17,7 @@ To start using StringTie, load one of these modules using a `module load` comman
 module load StringTie/2.2.3-GCC-12.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

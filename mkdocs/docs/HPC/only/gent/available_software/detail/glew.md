@@ -17,7 +17,7 @@ To start using glew, load one of these modules using a `module load` command lik
 module load glew/2.2.0-GCCcore-12.3.0-osmesa
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

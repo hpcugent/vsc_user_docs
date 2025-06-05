@@ -17,7 +17,7 @@ To start using rpy2, load one of these modules using a `module load` command lik
 module load rpy2/3.5.15-foss-2023a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

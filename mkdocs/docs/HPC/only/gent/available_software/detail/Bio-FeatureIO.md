@@ -17,7 +17,7 @@ To start using Bio-FeatureIO, load one of these modules using a `module load` co
 module load Bio-FeatureIO/1.6.905-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

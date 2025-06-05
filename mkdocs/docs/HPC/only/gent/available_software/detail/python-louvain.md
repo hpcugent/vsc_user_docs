@@ -17,7 +17,7 @@ To start using python-louvain, load one of these modules using a `module load` c
 module load python-louvain/0.16-foss-2023a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

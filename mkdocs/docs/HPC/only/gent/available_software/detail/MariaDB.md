@@ -17,7 +17,7 @@ To start using MariaDB, load one of these modules using a `module load` command 
 module load MariaDB/11.6.0-GCC-12.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

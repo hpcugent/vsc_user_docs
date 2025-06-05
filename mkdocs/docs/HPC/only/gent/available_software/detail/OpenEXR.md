@@ -17,7 +17,7 @@ To start using OpenEXR, load one of these modules using a `module load` command 
 module load OpenEXR/3.2.4-GCCcore-13.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

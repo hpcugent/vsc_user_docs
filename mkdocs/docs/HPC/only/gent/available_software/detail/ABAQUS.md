@@ -17,7 +17,7 @@ To start using ABAQUS, load one of these modules using a `module load` command l
 module load ABAQUS/2024-hotfix-2405
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

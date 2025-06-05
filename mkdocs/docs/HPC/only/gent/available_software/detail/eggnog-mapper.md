@@ -17,7 +17,7 @@ To start using eggnog-mapper, load one of these modules using a `module load` co
 module load eggnog-mapper/2.1.12-foss-2023a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

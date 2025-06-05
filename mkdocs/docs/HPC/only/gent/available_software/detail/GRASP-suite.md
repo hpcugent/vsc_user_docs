@@ -17,7 +17,7 @@ To start using GRASP-suite, load one of these modules using a `module load` comm
 module load GRASP-suite/2023-05-09-Java-17
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

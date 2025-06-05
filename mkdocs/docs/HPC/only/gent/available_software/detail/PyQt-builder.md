@@ -17,7 +17,7 @@ To start using PyQt-builder, load one of these modules using a `module load` com
 module load PyQt-builder/1.16.4-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

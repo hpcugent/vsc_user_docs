@@ -17,7 +17,7 @@ To start using NLTK, load one of these modules using a `module load` command lik
 module load NLTK/3.8.1-foss-2023b
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

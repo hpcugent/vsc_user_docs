@@ -17,7 +17,7 @@ To start using cuTENSOR, load one of these modules using a `module load` command
 module load cuTENSOR/2.0.1.2-CUDA-12.1.1
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

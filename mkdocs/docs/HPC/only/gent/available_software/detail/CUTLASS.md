@@ -17,7 +17,7 @@ To start using CUTLASS, load one of these modules using a `module load` command 
 module load CUTLASS/3.4.0-foss-2023a-CUDA-12.1.1
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

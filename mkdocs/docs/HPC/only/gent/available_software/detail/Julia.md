@@ -17,7 +17,7 @@ To start using Julia, load one of these modules using a `module load` command li
 module load Julia/1.10.4-linux-x86_64
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

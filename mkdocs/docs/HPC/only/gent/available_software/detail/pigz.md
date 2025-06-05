@@ -17,7 +17,7 @@ To start using pigz, load one of these modules using a `module load` command lik
 module load pigz/2.8-GCCcore-13.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

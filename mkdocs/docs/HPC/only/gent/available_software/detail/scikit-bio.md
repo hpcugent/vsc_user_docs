@@ -17,7 +17,7 @@ To start using scikit-bio, load one of these modules using a `module load` comma
 module load scikit-bio/0.6.2-foss-2023b
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

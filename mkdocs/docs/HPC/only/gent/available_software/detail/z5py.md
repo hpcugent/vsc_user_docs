@@ -17,7 +17,7 @@ To start using z5py, load one of these modules using a `module load` command lik
 module load z5py/2.0.17-foss-2023a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

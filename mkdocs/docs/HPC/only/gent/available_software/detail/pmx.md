@@ -17,7 +17,7 @@ To start using pmx, load one of these modules using a `module load` command like
 module load pmx/20241209-foss-2023b
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

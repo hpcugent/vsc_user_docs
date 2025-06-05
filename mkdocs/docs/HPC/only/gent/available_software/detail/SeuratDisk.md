@@ -17,7 +17,7 @@ To start using SeuratDisk, load one of these modules using a `module load` comma
 module load SeuratDisk/20231104-foss-2023a-R-4.3.2
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

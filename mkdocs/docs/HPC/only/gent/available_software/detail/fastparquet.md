@@ -17,7 +17,7 @@ To start using fastparquet, load one of these modules using a `module load` comm
 module load fastparquet/2024.11.0-gfbf-2023a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

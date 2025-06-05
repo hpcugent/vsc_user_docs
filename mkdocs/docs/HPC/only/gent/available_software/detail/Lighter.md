@@ -17,7 +17,7 @@ To start using Lighter, load one of these modules using a `module load` command 
 module load Lighter/1.1.3-GCC-13.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

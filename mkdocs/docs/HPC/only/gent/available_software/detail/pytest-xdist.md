@@ -17,7 +17,7 @@ To start using pytest-xdist, load one of these modules using a `module load` com
 module load pytest-xdist/3.3.1-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -17,7 +17,7 @@ To start using planarity, load one of these modules using a `module load` comman
 module load planarity/3.0.2.0-GCC-13.2.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

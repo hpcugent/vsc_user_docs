@@ -17,7 +17,7 @@ To start using SHAP, load one of these modules using a `module load` command lik
 module load SHAP/0.46.0-foss-2023b
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -17,7 +17,7 @@ To start using DECAF-synthetic-data, load one of these modules using a `module l
 module load DECAF-synthetic-data/0.1.6-foss-2023b
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

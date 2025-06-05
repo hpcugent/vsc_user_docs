@@ -17,7 +17,7 @@ To start using Geneformer, load one of these modules using a `module load` comma
 module load Geneformer/0.1.0-20241204-foss-2023a-CUDA-12.1.1
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

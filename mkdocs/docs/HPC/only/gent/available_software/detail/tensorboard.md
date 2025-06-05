@@ -17,7 +17,7 @@ To start using tensorboard, load one of these modules using a `module load` comm
 module load tensorboard/2.18.0-gfbf-2023b
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

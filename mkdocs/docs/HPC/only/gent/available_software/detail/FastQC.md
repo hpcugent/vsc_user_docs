@@ -17,7 +17,7 @@ To start using FastQC, load one of these modules using a `module load` command l
 module load FastQC/0.12.1-Java-11
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

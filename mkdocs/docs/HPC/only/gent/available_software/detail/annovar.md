@@ -17,7 +17,7 @@ To start using annovar, load one of these modules using a `module load` command 
 module load annovar/20200607-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

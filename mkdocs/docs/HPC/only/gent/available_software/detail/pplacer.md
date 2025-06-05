@@ -17,7 +17,7 @@ To start using pplacer, load one of these modules using a `module load` command 
 module load pplacer/1.1.alpha19
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

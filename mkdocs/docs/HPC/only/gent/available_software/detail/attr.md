@@ -17,7 +17,7 @@ To start using attr, load one of these modules using a `module load` command lik
 module load attr/2.5.2-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

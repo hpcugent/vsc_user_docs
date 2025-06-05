@@ -17,7 +17,7 @@ To start using ffnvcodec, load one of these modules using a `module load` comman
 module load ffnvcodec/12.1.14.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

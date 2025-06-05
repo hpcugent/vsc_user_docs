@@ -17,7 +17,7 @@ To start using PyHMMER, load one of these modules using a `module load` command 
 module load PyHMMER/0.10.15-gompi-2023b
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

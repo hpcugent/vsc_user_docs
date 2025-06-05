@@ -17,7 +17,7 @@ To start using VarScan, load one of these modules using a `module load` command 
 module load VarScan/2.4.4-Java-11
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

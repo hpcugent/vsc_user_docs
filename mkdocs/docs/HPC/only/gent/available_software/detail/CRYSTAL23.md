@@ -17,7 +17,7 @@ To start using CRYSTAL23, load one of these modules using a `module load` comman
 module load CRYSTAL23/1.0.1-intel-2023b
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

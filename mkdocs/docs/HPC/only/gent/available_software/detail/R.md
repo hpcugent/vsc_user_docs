@@ -17,7 +17,7 @@ To start using R, load one of these modules using a `module load` command like:
 module load R/4.4.2-gfbf-2024a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

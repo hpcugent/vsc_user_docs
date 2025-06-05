@@ -17,7 +17,7 @@ To start using Safetensors, load one of these modules using a `module load` comm
 module load Safetensors/0.4.4-gfbf-2023b
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

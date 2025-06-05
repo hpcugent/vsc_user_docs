@@ -17,7 +17,7 @@ To start using ECL, load one of these modules using a `module load` command like
 module load ECL/24.5.10-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

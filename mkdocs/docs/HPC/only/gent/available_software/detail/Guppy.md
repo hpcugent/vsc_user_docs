@@ -17,7 +17,7 @@ To start using Guppy, load one of these modules using a `module load` command li
 module load Guppy/6.5.7-cpu
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

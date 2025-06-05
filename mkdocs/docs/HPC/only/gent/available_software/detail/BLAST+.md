@@ -17,7 +17,7 @@ To start using BLAST+, load one of these modules using a `module load` command l
 module load BLAST+/2.16.0-gompi-2024a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -17,7 +17,7 @@ To start using hmmlearn, load one of these modules using a `module load` command
 module load hmmlearn/0.3.0-gfbf-2023a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

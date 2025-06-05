@@ -17,7 +17,7 @@ To start using m4ri, load one of these modules using a `module load` command lik
 module load m4ri/20200125-GCC-13.2.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

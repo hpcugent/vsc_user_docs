@@ -17,7 +17,7 @@ To start using MiXCR, load one of these modules using a `module load` command li
 module load MiXCR/4.6.0-Java-17
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

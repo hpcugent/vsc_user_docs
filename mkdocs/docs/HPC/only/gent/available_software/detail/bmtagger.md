@@ -17,7 +17,7 @@ To start using bmtagger, load one of these modules using a `module load` command
 module load bmtagger/3.101-gompi-2023a-Java-11
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

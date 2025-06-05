@@ -17,7 +17,7 @@ To start using zUMIs, load one of these modules using a `module load` command li
 module load zUMIs/2.9.7-foss-2023a-R-4.3.2
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

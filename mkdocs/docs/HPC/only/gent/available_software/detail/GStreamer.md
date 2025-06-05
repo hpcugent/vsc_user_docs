@@ -17,7 +17,7 @@ To start using GStreamer, load one of these modules using a `module load` comman
 module load GStreamer/1.22.5-GCC-12.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -17,7 +17,7 @@ To start using help2man, load one of these modules using a `module load` command
 module load help2man/1.49.3-GCCcore-13.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

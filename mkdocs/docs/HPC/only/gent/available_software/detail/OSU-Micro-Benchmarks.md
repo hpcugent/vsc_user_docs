@@ -17,7 +17,7 @@ To start using OSU-Micro-Benchmarks, load one of these modules using a `module l
 module load OSU-Micro-Benchmarks/7.4-iimpi-2024a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

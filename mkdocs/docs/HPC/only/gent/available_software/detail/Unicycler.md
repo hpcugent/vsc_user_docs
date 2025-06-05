@@ -17,7 +17,7 @@ To start using Unicycler, load one of these modules using a `module load` comman
 module load Unicycler/0.5.1-gompi-2024a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -17,7 +17,7 @@ To start using ASE, load one of these modules using a `module load` command like
 module load ASE/3.24.0-gfbf-2024a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

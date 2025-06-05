@@ -17,7 +17,7 @@ To start using scvi-tools, load one of these modules using a `module load` comma
 module load scvi-tools/1.1.2-foss-2023a-CUDA-12.1.1
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

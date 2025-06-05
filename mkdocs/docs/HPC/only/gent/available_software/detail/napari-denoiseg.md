@@ -17,7 +17,7 @@ To start using napari-denoiseg, load one of these modules using a `module load` 
 module load napari-denoiseg/0.0.1-foss-2023a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -17,7 +17,7 @@ To start using GLFW, load one of these modules using a `module load` command lik
 module load GLFW/3.3.8-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -17,7 +17,7 @@ To start using Boost.MPI, load one of these modules using a `module load` comman
 module load Boost.MPI/1.83.0-gompi-2023b
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

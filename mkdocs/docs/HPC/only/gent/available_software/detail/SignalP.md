@@ -17,7 +17,7 @@ To start using SignalP, load one of these modules using a `module load` command 
 module load SignalP/6.0h-foss-2023a-fast
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

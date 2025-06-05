@@ -17,7 +17,7 @@ To start using SURVIVOR, load one of these modules using a `module load` command
 module load SURVIVOR/1.0.7-20231201-GCC-13.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

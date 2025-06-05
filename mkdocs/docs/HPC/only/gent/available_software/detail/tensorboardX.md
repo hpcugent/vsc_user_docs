@@ -17,7 +17,7 @@ To start using tensorboardX, load one of these modules using a `module load` com
 module load tensorboardX/2.6.2.2-foss-2023b
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

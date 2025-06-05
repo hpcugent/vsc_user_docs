@@ -17,7 +17,7 @@ To start using ONNX-Runtime, load one of these modules using a `module load` com
 module load ONNX-Runtime/1.19.2-foss-2023a-CUDA-12.6.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -17,7 +17,7 @@ To start using virtualenv, load one of these modules using a `module load` comma
 module load virtualenv/20.26.2-GCCcore-13.3.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

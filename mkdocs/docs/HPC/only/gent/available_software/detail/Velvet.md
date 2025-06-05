@@ -17,7 +17,7 @@ To start using Velvet, load one of these modules using a `module load` command l
 module load Velvet/1.2.10-foss-2023a-mt-kmer_191
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

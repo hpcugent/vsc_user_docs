@@ -17,7 +17,7 @@ To start using ELPA, load one of these modules using a `module load` command lik
 module load ELPA/2023.05.001-intel-2023a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

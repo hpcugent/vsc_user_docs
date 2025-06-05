@@ -17,7 +17,7 @@ To start using code-cli, load one of these modules using a `module load` command
 module load code-cli/1.93.1-x64
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

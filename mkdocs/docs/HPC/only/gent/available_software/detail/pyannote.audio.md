@@ -17,7 +17,7 @@ To start using pyannote.audio, load one of these modules using a `module load` c
 module load pyannote.audio/3.3.2-foss-2023a-CUDA-12.1.1
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

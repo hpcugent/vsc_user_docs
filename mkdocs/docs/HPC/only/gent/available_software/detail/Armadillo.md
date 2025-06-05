@@ -17,7 +17,7 @@ To start using Armadillo, load one of these modules using a `module load` comman
 module load Armadillo/14.0.3-foss-2024a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

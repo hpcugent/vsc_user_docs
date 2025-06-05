@@ -17,7 +17,7 @@ To start using Bonito, load one of these modules using a `module load` command l
 module load Bonito/0.8.1-foss-2023a-CUDA-12.1.1
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

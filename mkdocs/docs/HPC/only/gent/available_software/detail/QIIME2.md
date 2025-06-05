@@ -17,7 +17,7 @@ To start using QIIME2, load one of these modules using a `module load` command l
 module load QIIME2/2024.10.1-foss-2023b-amplicon
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

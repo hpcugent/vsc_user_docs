@@ -17,7 +17,7 @@ To start using matplotlib, load one of these modules using a `module load` comma
 module load matplotlib/3.9.2-gfbf-2024a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

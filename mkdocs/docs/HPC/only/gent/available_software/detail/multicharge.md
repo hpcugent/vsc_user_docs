@@ -17,7 +17,7 @@ To start using multicharge, load one of these modules using a `module load` comm
 module load multicharge/0.3.0-gomkl-2023b
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

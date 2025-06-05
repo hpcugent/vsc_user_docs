@@ -17,7 +17,7 @@ To start using ruamel.yaml, load one of these modules using a `module load` comm
 module load ruamel.yaml/0.18.6-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

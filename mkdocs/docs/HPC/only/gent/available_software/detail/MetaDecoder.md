@@ -17,7 +17,7 @@ To start using MetaDecoder, load one of these modules using a `module load` comm
 module load MetaDecoder/1.0.19-foss-2023b
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

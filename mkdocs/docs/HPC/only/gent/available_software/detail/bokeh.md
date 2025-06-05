@@ -17,7 +17,7 @@ To start using bokeh, load one of these modules using a `module load` command li
 module load bokeh/3.4.1-gfbf-2023b
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

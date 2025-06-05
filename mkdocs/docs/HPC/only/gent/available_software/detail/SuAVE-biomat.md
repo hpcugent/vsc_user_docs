@@ -17,7 +17,7 @@ To start using SuAVE-biomat, load one of these modules using a `module load` com
 module load SuAVE-biomat/2.0.0-20230815-intel-2023a
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

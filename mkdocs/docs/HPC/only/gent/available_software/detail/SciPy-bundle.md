@@ -17,7 +17,7 @@ To start using SciPy-bundle, load one of these modules using a `module load` com
 module load SciPy-bundle/2024.06-foss-2023a-Python-2.7.18
 ```
 
-*(This data was automatically generated on {{modules_last_updated}})*  
+*(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
