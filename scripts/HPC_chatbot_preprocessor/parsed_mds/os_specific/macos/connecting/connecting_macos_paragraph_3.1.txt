@@ -1,0 +1,48 @@
+First Time connection to the HPC infrastructure
+Connect
+Open up a terminal and enter the following command to connect to the HPC.
+You can open a terminal by navigation to Applications and then Utilities in the finder and open Terminal.app, or enter Terminal in Spotlight Search.
+ssh vsc40000@login.hpc.ugent.be
+Here, user vsc40000 wants to make a connection to the "hpcugent" cluster at UGent via the login
+node "login.hpc.ugent.be", so replace vsc40000 with your own VSC id in the above command.
+The first time you make a connection to the login node, you will be
+asked to verify the authenticity of the login node. Please check
+Warning message when first connecting to new host on how to do this.
+A possible error message you can get if you previously saved your
+private key somewhere else than the default location
+($HOME/.ssh/id_rsa):
+Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+In this case, use the -i option for the ssh command to specify the
+location of your private key. For example:
+ssh -i /home/example/my_keys
+Congratulations, you're on the HPC infrastructure now!
+To find out where you have landed you can print the current working directory:
+$ pwd
+/user/home/gent/vsc400/vsc40000
+Your new private home directory is "/user/home/gent/vsc400/vsc40000". Here you can create your own
+subdirectory structure, copy and prepare your applications, compile and
+test them and submit your jobs on the HPC.
+$ cd /apps/gent/tutorials
+$ ls
+Intro-HPC/
+This directory currently contains all training material for the Introduction to the HPC. More
+relevant training material to work with the HPC can always be added later in
+this directory.
+You can now explore the content of this directory with the "ls --l" (lists long) and the "cd" (change directory) commands:
+As we are interested in the use of the HPC, move further to Intro-HPC and explore the
+contents up to 2 levels deep:
+$ cd Intro-HPC
+$ tree -L 2
+.
+'-- examples
+    |-- Compiling-and-testing-your-software-on-the-HPC
+    |-- Fine-tuning-Job-Specifications
+    |-- Multi-core-jobs-Parallel-Computing
+    |-- Multi-job-submission
+    |-- Program-examples
+    |-- Running-batch-jobs
+    |-- Running-jobs-with-input
+    |-- Running-jobs-with-input-output-data
+    |-- example.pbs
+    '-- example.sh
+9 directories, 5 files
