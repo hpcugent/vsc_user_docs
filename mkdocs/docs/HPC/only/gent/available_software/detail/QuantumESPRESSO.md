@@ -21,4 +21,4 @@ module load QuantumESPRESSO/7.4-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|QuantumESPRESSO/7.4-foss-2024a|x|-|x|x|x|x|x|
+|QuantumESPRESSO/7.4-foss-2024a|x|x|x|x|x|x|x|
