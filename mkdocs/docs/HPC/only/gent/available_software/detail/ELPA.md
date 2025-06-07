@@ -21,6 +21,6 @@ module load ELPA/2024.05.001-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ELPA/2024.05.001-foss-2024a|x|-|x|x|x|x|x|
+|ELPA/2024.05.001-foss-2024a|x|x|x|x|x|x|x|
 |ELPA/2023.05.001-intel-2023a|x|x|x|x|x|x|x|
 |ELPA/2023.05.001-foss-2023a|x|x|x|x|x|x|x|
