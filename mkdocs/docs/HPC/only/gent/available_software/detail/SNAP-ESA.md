@@ -21,5 +21,5 @@ module load SNAP-ESA/12.0.0-Java-17
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SNAP-ESA/12.0.0-Java-17|x|-|x|x|x|x|x|
-|SNAP-ESA/10.0.0-Java-11|x|x|-|x|-|x|x|
+|SNAP-ESA/12.0.0-Java-17|x|x|x|x|x|x|x|
+|SNAP-ESA/10.0.0-Java-11|x|x|x|x|x|x|x|
