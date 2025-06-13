@@ -21,4 +21,4 @@ module load porefoam/2023-12-01-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|porefoam/2023-12-01-foss-2023a|-|x|-|-|-|x|x|
+|porefoam/2023-12-01-foss-2023a|x|x|x|x|x|x|x|

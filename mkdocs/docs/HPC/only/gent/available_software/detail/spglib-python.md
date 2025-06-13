@@ -21,6 +21,6 @@ module load spglib-python/2.5.0-gfbf-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|spglib-python/2.5.0-gfbf-2024a|-|-|x|-|x|-|-|
+|spglib-python/2.5.0-gfbf-2024a|x|x|x|x|x|x|x|
 |spglib-python/2.5.0-gfbf-2023b|x|x|x|x|x|x|x|
 |spglib-python/2.1.0-gfbf-2023a|x|x|x|x|x|x|x|

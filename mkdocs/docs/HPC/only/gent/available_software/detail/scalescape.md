@@ -21,4 +21,4 @@ module load scalescape/0.0.0.9000-20220318-foss-2023a-R-4.3.2
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scalescape/0.0.0.9000-20220318-foss-2023a-R-4.3.2|x|-|x|x|x|x|x|
+|scalescape/0.0.0.9000-20220318-foss-2023a-R-4.3.2|x|x|x|x|x|x|x|
