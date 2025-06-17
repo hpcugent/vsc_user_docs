@@ -22,4 +22,5 @@ module load minimap2/2.29-GCCcore-13.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |minimap2/2.29-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|minimap2/2.28-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |minimap2/2.26-GCCcore-12.3.0|x|x|x|x|x|x|x|

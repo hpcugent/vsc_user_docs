@@ -14,11 +14,12 @@ The overview below shows which LIQA installations are available per HPC-UGent Ti
 To start using LIQA, load one of these modules using a `module load` command like:
 
 ```shell
-module load LIQA/1.3.4-foss-2023a
+module load LIQA/1.3.4-foss-2023b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LIQA/1.3.4-foss-2023b|x|x|x|x|x|x|x|
 |LIQA/1.3.4-foss-2023a|x|x|x|x|x|x|x|
