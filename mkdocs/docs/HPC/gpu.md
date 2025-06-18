@@ -177,11 +177,9 @@ versions.
 ### AlphaFold
 
 Please consult `module avail AlphaFold` for a list of installed
-versions.
+versions. 
 
-For more information on using AlphaFold, we strongly recommend the
-VIB-UGent course available at
-<https://elearning.bits.vib.be/courses/alphafold>.
+For more information see [Alphafold](./alphafold)
 
 ## Getting help
 
