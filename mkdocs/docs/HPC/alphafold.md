@@ -18,7 +18,8 @@ It is therefore recommended to first familiarize yourself with AlphaFold. The fo
 - AlphaFold repository: <https://github.com/deepmind/alphafold/tree/main>
 - AlphaFold FAQ: <https://alphafold.com/faq>
 - VSC webpage about AlphaFold: <https://www.vscentrum.be/alphafold>
-- Introductory course on AlphaFold by VIB: <https://elearning.vib.be/courses/alphafold>
+- Introductory course on AlphaFold by VIB: <https://elearning.vib.be/courses/alphafold>,
+  archived version available at <https://web.archive.org/web/20220630130806/https://elearning.bits.vib.be/courses/alphafold/>
 - "Getting Started with AlphaFold" presentation by Kenneth Hoste (HPC-UGent)
     - recording available [on YouTube](https://www.youtube.com/watch?v=jP9Qg1yBGcs)
     - slides available [here (PDF)](https://www.vscentrum.be/_files/ugd/5446c2_f19a8723f7f7460ebe990c28a53e56a2.pdf?index=true)
