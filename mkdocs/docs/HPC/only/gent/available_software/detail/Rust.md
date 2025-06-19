@@ -24,6 +24,7 @@ module load Rust/1.86.0-GCCcore-13.2.0-nightly
 |Rust/1.86.0-GCCcore-13.2.0-nightly|x|x|x|x|x|x|x|
 |Rust/1.78.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |Rust/1.76.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|Rust/1.75.0-GCCcore-12.3.0-nightly|-|x|-|-|-|-|-|
 |Rust/1.75.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |Rust/1.73.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Rust/1.70.0-GCCcore-12.3.0|x|x|x|x|x|x|x|

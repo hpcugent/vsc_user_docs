@@ -14,13 +14,14 @@ The overview below shows which Zip installations are available per HPC-UGent Tie
 To start using Zip, load one of these modules using a `module load` command like:
 
 ```shell
-module load Zip/3.0-GCCcore-12.3.0
+module load Zip/3.0-GCCcore-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Zip/3.0-GCCcore-13.3.0|-|x|-|-|-|-|-|
 |Zip/3.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |Zip/3.0-GCCcore-12.2.0|-|-|-|-|-|x|x|
 |Zip/3.0-GCCcore-11.3.0|-|-|-|-|-|x|x|

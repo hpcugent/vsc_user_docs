@@ -21,4 +21,4 @@ module load scatac_fragment_tools/0.1.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scatac_fragment_tools/0.1.0-foss-2023a|-|x|x|x|x|x|x|
+|scatac_fragment_tools/0.1.0-foss-2023a|x|x|x|x|x|x|x|
