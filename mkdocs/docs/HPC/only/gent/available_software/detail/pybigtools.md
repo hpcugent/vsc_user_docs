@@ -21,4 +21,4 @@ module load pybigtools/0.1.2-gfbf-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pybigtools/0.1.2-gfbf-2023a|-|x|x|x|x|x|x|
+|pybigtools/0.1.2-gfbf-2023a|x|x|x|x|x|x|x|

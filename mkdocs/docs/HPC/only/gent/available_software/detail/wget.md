@@ -14,11 +14,12 @@ The overview below shows which wget installations are available per HPC-UGent Ti
 To start using wget, load one of these modules using a `module load` command like:
 
 ```shell
-module load wget/1.24.5-GCCcore-12.3.0
+module load wget/1.25.0-GCCcore-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|wget/1.25.0-GCCcore-13.3.0|-|x|-|-|-|-|-|
 |wget/1.24.5-GCCcore-12.3.0|x|x|x|x|x|x|x|

@@ -14,11 +14,12 @@ The overview below shows which nsync installations are available per HPC-UGent T
 To start using nsync, load one of these modules using a `module load` command like:
 
 ```shell
-module load nsync/1.26.0-GCCcore-12.3.0
+module load nsync/1.29.2-GCCcore-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|nsync/1.29.2-GCCcore-13.3.0|-|x|-|-|-|-|-|
 |nsync/1.26.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
