@@ -1,0 +1,15 @@
+{
+    "main_title": "known_issues",
+    "subtitle": "Resolution",
+    "source_file": "../../mkdocs/docs/HPC/known_issues.md",
+    "title_depth": 3,
+    "directory": "known_issues",
+    "links": {
+        "0": "https://status.vscentrum.be"
+    },
+    "parent_title": "",
+    "previous_title": "known_issues_paragraph_1",
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/known_issues/#resolution"
+}
