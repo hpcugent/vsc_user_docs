@@ -21,7 +21,7 @@ module load protobuf-python/5.28.0-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|protobuf-python/5.28.0-GCCcore-13.3.0|-|x|-|-|-|-|-|
+|protobuf-python/5.28.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |protobuf-python/4.25.3-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |protobuf-python/4.24.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |protobuf-python/4.23.0-GCCcore-12.2.0|-|-|-|-|-|x|x|

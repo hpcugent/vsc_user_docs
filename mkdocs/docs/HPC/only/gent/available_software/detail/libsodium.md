@@ -21,7 +21,7 @@ module load libsodium/1.0.20-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libsodium/1.0.20-GCCcore-13.3.0|-|x|x|-|x|-|-|
+|libsodium/1.0.20-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |libsodium/1.0.19-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |libsodium/1.0.18-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |libsodium/1.0.18-GCCcore-11.3.0|-|-|-|-|-|x|x|

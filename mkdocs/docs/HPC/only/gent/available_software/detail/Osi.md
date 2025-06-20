@@ -21,5 +21,5 @@ module load Osi/0.108.11-GCC-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Osi/0.108.11-GCC-13.3.0|-|x|-|-|-|-|-|
+|Osi/0.108.11-GCC-13.3.0|x|x|x|x|x|x|x|
 |Osi/0.108.9-GCC-12.3.0|x|x|x|x|x|x|x|

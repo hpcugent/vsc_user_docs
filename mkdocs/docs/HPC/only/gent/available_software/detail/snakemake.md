@@ -21,5 +21,5 @@ module load snakemake/8.27.0-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|snakemake/8.27.0-foss-2024a|-|x|-|-|-|-|-|
+|snakemake/8.27.0-foss-2024a|x|x|x|x|x|x|x|
 |snakemake/8.4.2-foss-2023a|x|x|x|x|x|x|x|

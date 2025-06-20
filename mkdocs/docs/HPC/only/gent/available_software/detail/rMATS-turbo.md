@@ -14,11 +14,12 @@ The overview below shows which rMATS-turbo installations are available per HPC-U
 To start using rMATS-turbo, load one of these modules using a `module load` command like:
 
 ```shell
-module load rMATS-turbo/4.2.0-gfbf-2023a
+module load rMATS-turbo/4.3.0-gfbf-2024a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|rMATS-turbo/4.3.0-gfbf-2024a|x|x|x|x|x|x|x|
 |rMATS-turbo/4.2.0-gfbf-2023a|x|x|x|x|x|x|x|

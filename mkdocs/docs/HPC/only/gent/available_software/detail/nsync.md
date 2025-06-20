@@ -21,5 +21,5 @@ module load nsync/1.29.2-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nsync/1.29.2-GCCcore-13.3.0|-|x|-|-|-|-|-|
+|nsync/1.29.2-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |nsync/1.26.0-GCCcore-12.3.0|x|x|x|x|x|x|x|

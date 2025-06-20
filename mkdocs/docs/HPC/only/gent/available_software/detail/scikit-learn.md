@@ -21,7 +21,7 @@ module load scikit-learn/1.6.1-gfbf-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scikit-learn/1.6.1-gfbf-2024a|-|x|-|-|-|-|-|
+|scikit-learn/1.6.1-gfbf-2024a|x|x|x|x|x|x|x|
 |scikit-learn/1.5.2-gfbf-2024a|x|x|x|x|x|x|x|
 |scikit-learn/1.4.2-gfbf-2023a|-|x|-|x|-|x|x|
 |scikit-learn/1.4.0-gfbf-2023b|x|x|x|x|x|x|x|

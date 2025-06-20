@@ -21,4 +21,4 @@ module load TAMkin/1.2.6-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TAMkin/1.2.6-foss-2023b|x|-|x|x|x|x|x|
+|TAMkin/1.2.6-foss-2023b|x|x|x|x|x|x|x|

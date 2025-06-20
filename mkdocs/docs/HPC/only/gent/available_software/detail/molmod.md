@@ -21,5 +21,5 @@ module load molmod/1.4.8-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|molmod/1.4.8-foss-2023b|x|-|x|x|x|x|x|
+|molmod/1.4.8-foss-2023b|x|x|x|x|x|x|x|
 |molmod/1.4.8-foss-2023a|-|x|-|x|-|x|x|
