@@ -21,4 +21,4 @@ module load LightGBM/4.6.0-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LightGBM/4.6.0-foss-2024a|-|x|-|-|-|-|-|
+|LightGBM/4.6.0-foss-2024a|x|x|x|x|x|x|x|

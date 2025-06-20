@@ -21,4 +21,4 @@ module load QuickFF/2.2.8-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|QuickFF/2.2.8-foss-2023b|x|-|x|x|x|x|x|
+|QuickFF/2.2.8-foss-2023b|x|x|x|x|x|x|x|

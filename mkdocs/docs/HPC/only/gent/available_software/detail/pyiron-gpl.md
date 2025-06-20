@@ -21,4 +21,5 @@ module load pyiron-gpl/0.0.5-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pyiron-gpl/0.0.5-foss-2023b|x|-|x|x|x|x|x|
+|pyiron-gpl/0.0.5-foss-2023b|x|x|x|x|x|x|x|
+|pyiron-gpl/0.0.5-20250512-foss-2023b-mbocus|x|x|x|x|x|x|x|

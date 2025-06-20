@@ -21,5 +21,5 @@ module load CoinUtils/2.11.12-GCC-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CoinUtils/2.11.12-GCC-13.3.0|-|x|-|-|-|-|-|
+|CoinUtils/2.11.12-GCC-13.3.0|x|x|x|x|x|x|x|
 |CoinUtils/2.11.10-GCC-12.3.0|x|x|x|x|x|x|x|

@@ -21,5 +21,5 @@ module load Cgl/0.60.8-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Cgl/0.60.8-foss-2024a|-|x|-|-|-|-|-|
+|Cgl/0.60.8-foss-2024a|x|x|x|x|x|x|x|
 |Cgl/0.60.8-foss-2023a|x|x|x|x|x|x|x|

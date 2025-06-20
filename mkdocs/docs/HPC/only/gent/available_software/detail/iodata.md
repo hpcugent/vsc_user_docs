@@ -21,5 +21,5 @@ module load iodata/1.0.0a5-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|iodata/1.0.0a5-foss-2023b|x|-|x|x|x|x|x|
+|iodata/1.0.0a5-foss-2023b|x|x|x|x|x|x|x|
 |iodata/1.0.0a5-foss-2023a|x|x|x|x|x|x|x|

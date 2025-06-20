@@ -21,6 +21,6 @@ module load GitPython/3.1.43-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GitPython/3.1.43-GCCcore-13.3.0|-|x|-|-|-|-|-|
+|GitPython/3.1.43-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |GitPython/3.1.42-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |GitPython/3.1.40-GCCcore-12.3.0|x|x|x|x|x|x|x|

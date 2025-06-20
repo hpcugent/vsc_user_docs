@@ -21,5 +21,5 @@ module load Clp/1.17.10-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Clp/1.17.10-foss-2024a|-|x|-|-|-|-|-|
+|Clp/1.17.10-foss-2024a|x|x|x|x|x|x|x|
 |Clp/1.17.9-foss-2023a|x|x|x|x|x|x|x|

@@ -21,7 +21,7 @@ module load dask/2024.9.1-gfbf-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|dask/2024.9.1-gfbf-2024a|-|x|-|-|-|-|-|
+|dask/2024.9.1-gfbf-2024a|x|x|x|x|x|x|x|
 |dask/2024.5.1-gfbf-2023b|x|x|x|x|x|x|x|
 |dask/2023.12.1-foss-2023a|x|x|-|x|-|x|x|
 |dask/2023.9.2-foss-2023a|x|x|x|x|x|x|x|
