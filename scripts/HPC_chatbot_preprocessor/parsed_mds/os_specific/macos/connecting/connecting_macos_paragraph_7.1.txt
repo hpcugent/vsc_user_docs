@@ -1,0 +1,42 @@
+Transfer Files tofrom the HPC
+Using scp
+Secure copy or SCP is a tool (command) for securely transferring files between a local
+host (= your computer) and a remote host (the HPC). It is based on the
+Secure Shell (SSH) protocol. The scp command is the equivalent of the cp (i.e.,
+copy) command, but can copy files to or from remote machines.
+It's easier to copy files directly to $VSC_DATA and $VSC_SCRATCH if
+you have symlinks to them in your home directory. See 
+the chapter titled "Uploading/downloading/editing files", section "Symlinks for data/scratch" in the intro to Linux
+ for how to do this.
+Open an additional terminal window and check that you're working on your
+local machine.
+$ hostname
+<local-machine-name>
+If you're still using the terminal that is connected to the HPC, close the
+connection by typing "exit" in the terminal window.
+For example, we will copy the (local) file "localfile.txt" to your
+home directory on the HPC cluster. We first generate a small dummy
+"localfile.txt", which contains the word "Hello". Use your own VSC
+account, which is something like "vsc40000". Don't forget the colon (:) at the
+end: if you forget it, it will just create a file named vsc40000@login.hpc.ugent.be on your
+local filesystem. You can even specify where to save the file on the
+remote filesystem by putting a path after the colon.
+$ echo "Hello" > localfile.txt
+$ ls -l 
+...
+-rw-r--r-- 1 user  staff   6 Sep 18 09:37 localfile.txt
+$ scp localfile.txt vsc40000@login.hpc.ugent.be:
+localfile.txt     100%   6     0.0KB/s     00:00
+Connect to the HPC via another terminal, print the working directory (to
+make sure you're in the home directory) and check whether the file has
+arrived:
+$ pwd
+/user/home/gent/vsc400/vsc40000
+$ ls -l 
+total 1536
+drwxrwxr-x 2
+drwxrwxr-x 2
+drwxrwxr-x 10
+-rw-r--r-- 1
+$ cat localfile.txt
+Hello
