@@ -1,0 +1,59 @@
+#!/bin/bash
+# Check if the input Directory exists
+if [ ! -d "./output" ] ; then
+  echo "The output directory does not exist!"
+  exit
+fi
+# Just concatenate all output files
+touch all_output.txt
+for i in {1..100}; 
+do
+  cat ./output/output_$i.dat >> all_output.txt
+done
+Then one can submit a MapReduce style job as follows:
+$ wsub -prolog pre.sh -batch test_set.pbs -epilog post.sh -t 1-100
+total number of work items: 100
+123456
+$ cat all_output.txt
+...
+$ rm -r -f ./output/
+Note that the time taken for executing the prologue and the epilogue
+should be added to the job's total walltime.
+Some more on the Worker Framework
+Using Worker efficiently
+The "Worker Framework" is implemented using MPI, so it is not restricted
+to a single compute nodes, it scales well to multiple nodes. However,
+remember that jobs requesting a large number of nodes typically spend
+quite some time in the queue.
+The "Worker Framework" will be effective when
+1.  work items, i.e., individual computations, are neither too short,
+    nor too long (i.e., from a few minutes to a few hours); and,
+2.  when the number of work items is larger than the number of CPUs
+    involved in the job (e.g., more than 30 for 8 CPUs).
+Monitoring a worker job
+Since a Worker job will typically run for several hours, it may be
+reassuring to monitor its progress. Worker keeps a log of its activity
+in the directory where the job was submitted. The log's name is derived
+from the job's name and the job's ID, i.e., it has the form
+<jobname>.log<jobid>. For the running example, this could be
+run.pbs.log123456, assuming the job's ID is 123456. To keep an eye on the
+progress, one can use:
+tail -f run.pbs.log123456
+Alternatively, wsummarize, a Worker command that summarises a log
+file, can be used:
+watch -n 60 wsummarize run.pbs.log123456
+This will summarise the log file every 60 seconds.
+Time limits for work items
+Sometimes, the execution of a work item takes longer than expected, or
+worse, some work items get stuck in an infinite loop. This situation is
+unfortunate, since it implies that work items that could successfully
+execute are not even started. Again, the Worker framework offers a
+simple and yet versatile solution. If we want to limit the execution of
+each work item to at most 20 minutes, this can be accomplished by
+modifying the script of the running example.
+#!/bin/bash -l
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=04:00:00
+module load timedrun/1.0
+cd $PBS_O_WORKDIR
+timedrun -t 00:20:00 weather -t $temperature  -p $pressure  -v $volume
