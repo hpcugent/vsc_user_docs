@@ -21,7 +21,7 @@ module load Python/3.13.1-GCCcore-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Python/3.13.1-GCCcore-14.2.0|x|-|x|x|x|x|x|
+|Python/3.13.1-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |Python/3.12.3-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |Python/3.11.5-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Python/3.11.3-GCCcore-12.3.0|x|x|x|x|x|x|x|

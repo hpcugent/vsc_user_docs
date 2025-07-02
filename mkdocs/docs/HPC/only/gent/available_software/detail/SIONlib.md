@@ -21,4 +21,4 @@ module load SIONlib/1.7.7-GCCcore-14.2.0-tools
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SIONlib/1.7.7-GCCcore-14.2.0-tools|x|-|-|x|-|x|x|
+|SIONlib/1.7.7-GCCcore-14.2.0-tools|x|-|x|x|x|x|x|

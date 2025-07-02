@@ -14,13 +14,14 @@ The overview below shows which cffi installations are available per HPC-UGent Ti
 To start using cffi, load one of these modules using a `module load` command like:
 
 ```shell
-module load cffi/1.16.0-GCCcore-13.3.0
+module load cffi/1.17.1-GCCcore-14.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|cffi/1.17.1-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |cffi/1.16.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |cffi/1.15.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |cffi/1.15.1-GCCcore-12.3.0|x|x|x|x|x|x|x|

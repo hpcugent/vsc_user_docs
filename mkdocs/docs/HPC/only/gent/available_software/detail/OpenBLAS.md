@@ -21,7 +21,7 @@ module load OpenBLAS/0.3.29-GCC-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenBLAS/0.3.29-GCC-14.2.0|x|-|x|x|x|x|x|
+|OpenBLAS/0.3.29-GCC-14.2.0|x|x|x|x|x|x|x|
 |OpenBLAS/0.3.27-GCC-13.3.0-seq-iface64|-|x|x|x|x|x|x|
 |OpenBLAS/0.3.27-GCC-13.3.0|x|x|x|x|x|x|x|
 |OpenBLAS/0.3.24-GCC-13.2.0|x|x|x|x|x|x|x|

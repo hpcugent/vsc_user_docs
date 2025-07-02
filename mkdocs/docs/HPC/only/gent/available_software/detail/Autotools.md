@@ -21,7 +21,7 @@ module load Autotools/20240712-GCCcore-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Autotools/20240712-GCCcore-14.2.0|x|-|x|x|x|x|x|
+|Autotools/20240712-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |Autotools/20231222-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |Autotools/20220317-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Autotools/20220317-GCCcore-12.3.0|x|x|x|x|x|x|x|

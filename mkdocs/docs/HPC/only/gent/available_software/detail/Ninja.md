@@ -21,7 +21,7 @@ module load Ninja/1.12.1-GCCcore-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Ninja/1.12.1-GCCcore-14.2.0|x|-|x|x|x|x|x|
+|Ninja/1.12.1-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |Ninja/1.12.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |Ninja/1.11.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Ninja/1.11.1-GCCcore-12.3.0|x|x|x|x|x|x|x|

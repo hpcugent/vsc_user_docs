@@ -21,4 +21,4 @@ module load GOTCHA/1.0.8-GCCcore-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GOTCHA/1.0.8-GCCcore-14.2.0|x|-|-|x|-|x|x|
+|GOTCHA/1.0.8-GCCcore-14.2.0|x|-|x|x|x|x|x|

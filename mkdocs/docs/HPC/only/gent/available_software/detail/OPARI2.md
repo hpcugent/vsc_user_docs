@@ -21,4 +21,4 @@ module load OPARI2/2.0.9-GCCcore-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OPARI2/2.0.9-GCCcore-14.2.0|x|-|-|x|-|x|x|
+|OPARI2/2.0.9-GCCcore-14.2.0|x|-|x|x|x|x|x|

@@ -21,6 +21,6 @@ module load Check/0.15.2-GCCcore-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Check/0.15.2-GCCcore-14.2.0|x|-|-|x|-|x|x|
+|Check/0.15.2-GCCcore-14.2.0|x|-|x|x|x|x|x|
 |Check/0.15.2-GCCcore-13.2.0|x|x|x|x|x|-|-|
 |Check/0.15.2-GCCcore-11.2.0|-|-|-|-|-|x|x|
