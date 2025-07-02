@@ -1,0 +1,55 @@
+You should use a number of workers that is equal to the number of cores
+you requested when submitting your job script (the ppn value, see Generic resource requirements).
+You can determine the right number of workers to use via the following
+code snippet in your MATLAB program:
+% specify the right number of workers (as many as there are cores available in the job) when creating the parpool
+c = parcluster('local')
+pool = parpool(c.NumWorkers)
+See also [the parpool
+documentation](https://nl.mathworks.com/help/distcomp/parpool.html).
+Java output logs
+Each time MATLAB is executed, it generates a Java log file in the users
+home directory. The output log directory can be changed using:
+MATLAB_LOG_DIR=<OUTPUT_DIR>
+where <OUTPUT_DIR> is the name of the desired output directory. To
+create and use a temporary directory for these logs:
+# create unique temporary directory in $TMPDIR (or /tmp/$USER if
+$TMPDIR is not defined)
+# instruct MATLAB to use this directory for log files by setting $MATLAB_LOG_DIR
+$  export MATLAB_LOG_DIR=$ (mktemp -d -p $TMPDIR:-/tmp/$USER)
+You should remove the directory at the end of your job script:
+rm -rf $MATLAB_LOG_DIR
+Cache location
+When running, MATLAB will use a cache for performance reasons. This
+location and size of this cache can be changed through the
+MCR_CACHE_ROOT and MCR_CACHE_SIZE environment variables.
+The snippet below would set the maximum cache size to 1024MB and the
+location to /tmp/testdirectory.
+export MATLAB_CACHE_ROOT=/tmp/testdirectory 
+export MATLAB_CACHE_SIZE=1024M 
+So when MATLAB is running, it can fill up to 1024MB of cache in
+/tmp/testdirectory.
+MATLAB job script
+All of the tweaks needed to get MATLAB working have been implemented in
+an example job script. This job script is also available on the HPC.
+
+#!/bin/bash
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=1:0:0
+#
+# Example (single-core) MATLAB job script
+#
+# make sure the MATLAB version matches with the one used to compile the MATLAB program!
+module load MATLAB/2021b
+# use temporary directory (not $HOME) for (mostly useless) MATLAB log files
+# subdir in $TMPDIR (if defined, or /tmp otherwise)
+export MATLAB_LOG_DIR=$(mktemp -d -p  ${TMPDIR:-/tmp})
+# configure MATLAB Compiler Runtime cache location & size (1GB)
+# use a temporary directory in /dev/shm (i.e. in memory) for performance reasons
+export MCR_CACHE_ROOT=$(mktemp -d -p /dev/shm)
+export MCR_CACHE_SIZE=1024MB
+# change to directory where job script was submitted from
+cd $PBS_O_WORKDIR
+# run compiled example MATLAB program 'example', provide '5' as input argument to the program
+# $EBROOTMATLAB points to MATLAB installation directory
+./run_example.sh $EBROOTMATLAB 5
