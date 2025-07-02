@@ -21,4 +21,4 @@ module load OTF2/3.1.1-GCCcore-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OTF2/3.1.1-GCCcore-14.2.0|x|-|-|x|-|x|x|
+|OTF2/3.1.1-GCCcore-14.2.0|x|-|x|x|x|x|x|

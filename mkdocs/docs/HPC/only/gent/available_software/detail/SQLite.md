@@ -21,7 +21,7 @@ module load SQLite/3.47.2-GCCcore-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SQLite/3.47.2-GCCcore-14.2.0|x|-|x|x|x|x|x|
+|SQLite/3.47.2-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |SQLite/3.45.3-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |SQLite/3.43.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |SQLite/3.42.0-GCCcore-12.3.0|x|x|x|x|x|x|x|

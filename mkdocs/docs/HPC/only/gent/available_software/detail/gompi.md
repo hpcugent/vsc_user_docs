@@ -21,7 +21,7 @@ module load gompi/2025a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gompi/2025a|x|-|x|x|x|x|x|
+|gompi/2025a|x|x|x|x|x|x|x|
 |gompi/2024a|x|x|x|x|x|x|x|
 |gompi/2023b|x|x|x|x|x|x|x|
 |gompi/2023a|x|x|x|x|x|x|x|

@@ -21,4 +21,4 @@ module load CubeWriter/4.9-GCCcore-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CubeWriter/4.9-GCCcore-14.2.0|x|-|-|x|-|x|x|
+|CubeWriter/4.9-GCCcore-14.2.0|x|-|x|x|x|x|x|

@@ -21,4 +21,4 @@ module load CubeLib/4.9-GCCcore-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CubeLib/4.9-GCCcore-14.2.0|x|-|-|x|-|x|x|
+|CubeLib/4.9-GCCcore-14.2.0|x|-|x|x|x|x|x|

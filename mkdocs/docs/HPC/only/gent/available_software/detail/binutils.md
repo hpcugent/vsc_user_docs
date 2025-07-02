@@ -21,7 +21,7 @@ module load binutils/2.42-GCCcore-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|binutils/2.42-GCCcore-14.2.0|x|-|x|x|x|x|x|
+|binutils/2.42-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |binutils/2.42-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |binutils/2.42|x|x|x|x|x|x|x|
 |binutils/2.40-GCCcore-13.2.0|x|x|x|x|x|x|x|

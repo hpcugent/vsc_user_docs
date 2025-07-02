@@ -21,7 +21,7 @@ module load hwloc/2.11.2-GCCcore-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|hwloc/2.11.2-GCCcore-14.2.0|x|-|x|x|x|x|x|
+|hwloc/2.11.2-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |hwloc/2.10.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |hwloc/2.9.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |hwloc/2.9.1-GCCcore-12.3.0|x|x|x|x|x|x|x|

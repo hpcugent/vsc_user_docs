@@ -21,7 +21,7 @@ module load Tcl/8.6.16-GCCcore-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Tcl/8.6.16-GCCcore-14.2.0|x|-|x|x|x|x|x|
+|Tcl/8.6.16-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |Tcl/8.6.14-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |Tcl/8.6.13-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Tcl/8.6.13-GCCcore-12.3.0|x|x|x|x|x|x|x|

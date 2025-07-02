@@ -21,7 +21,7 @@ module load Meson/1.6.1-GCCcore-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Meson/1.6.1-GCCcore-14.2.0|x|-|x|x|x|x|x|
+|Meson/1.6.1-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |Meson/1.4.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |Meson/1.2.3-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Meson/1.1.1-GCCcore-12.3.0|x|x|x|x|x|x|x|

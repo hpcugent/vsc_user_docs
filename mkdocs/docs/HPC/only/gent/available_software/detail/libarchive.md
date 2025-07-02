@@ -21,7 +21,7 @@ module load libarchive/3.7.7-GCCcore-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libarchive/3.7.7-GCCcore-14.2.0|x|-|x|x|x|x|x|
+|libarchive/3.7.7-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |libarchive/3.7.4-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |libarchive/3.7.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |libarchive/3.6.2-GCCcore-12.3.0|x|x|x|x|x|x|x|

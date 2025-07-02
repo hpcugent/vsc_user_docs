@@ -14,13 +14,14 @@ The overview below shows which hypothesis installations are available per HPC-UG
 To start using hypothesis, load one of these modules using a `module load` command like:
 
 ```shell
-module load hypothesis/6.103.1-GCCcore-13.3.0
+module load hypothesis/6.133.2-GCCcore-14.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|hypothesis/6.133.2-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |hypothesis/6.103.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |hypothesis/6.90.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |hypothesis/6.82.0-GCCcore-12.3.0|x|x|x|x|x|x|x|

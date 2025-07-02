@@ -21,7 +21,7 @@ module load OpenMPI/5.0.7-GCC-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenMPI/5.0.7-GCC-14.2.0|x|-|x|x|x|x|x|
+|OpenMPI/5.0.7-GCC-14.2.0|x|x|x|x|x|x|x|
 |OpenMPI/5.0.3-GCC-13.3.0|x|x|x|x|x|x|x|
 |OpenMPI/4.1.6-GCC-13.2.0|x|x|x|x|x|x|x|
 |OpenMPI/4.1.5-intel-compilers-2023.1.0|x|x|x|x|x|x|x|

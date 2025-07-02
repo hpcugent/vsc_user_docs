@@ -21,7 +21,7 @@ module load ScaLAPACK/2.2.2-gompi-2025a-fb
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ScaLAPACK/2.2.2-gompi-2025a-fb|x|-|-|x|-|x|x|
+|ScaLAPACK/2.2.2-gompi-2025a-fb|x|x|x|x|x|x|x|
 |ScaLAPACK/2.2.0-gompi-2024a-fb|x|x|x|x|x|x|x|
 |ScaLAPACK/2.2.0-gompi-2023b-fb|x|x|x|x|x|x|x|
 |ScaLAPACK/2.2.0-gompi-2023a-fb|x|x|x|x|x|x|x|
