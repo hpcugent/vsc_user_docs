@@ -14,12 +14,13 @@ The overview below shows which ArchR installations are available per HPC-UGent T
 To start using ArchR, load one of these modules using a `module load` command like:
 
 ```shell
-module load ArchR/1.0.2-foss-2023a-R-4.3.2
+module load ArchR/1.0.3-foss-2023b-R-4.4.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ArchR/1.0.3-foss-2023b-R-4.4.1|x|-|x|x|x|x|x|
 |ArchR/1.0.2-foss-2023a-R-4.3.2|-|x|-|x|-|x|x|
 |ArchR/1.0.2-20220704-foss-2023a-R-4.3.2|-|-|-|-|-|x|x|
