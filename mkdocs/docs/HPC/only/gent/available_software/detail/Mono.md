@@ -21,4 +21,4 @@ module load Mono/6.12.0.199-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Mono/6.12.0.199-GCCcore-13.3.0|x|-|x|x|x|x|x|
+|Mono/6.12.0.199-GCCcore-13.3.0|x|x|x|x|x|x|x|
