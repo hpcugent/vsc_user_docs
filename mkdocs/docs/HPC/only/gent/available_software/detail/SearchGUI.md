@@ -21,4 +21,4 @@ module load SearchGUI/4.3.9-GCCcore-13.3.0-Java-11
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SearchGUI/4.3.9-GCCcore-13.3.0-Java-11|x|-|x|x|x|x|x|
+|SearchGUI/4.3.9-GCCcore-13.3.0-Java-11|x|x|x|x|x|x|x|
