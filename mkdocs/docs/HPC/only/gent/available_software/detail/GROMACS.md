@@ -32,3 +32,4 @@ module load GROMACS/2024.4-foss-2023b-PLUMED-2.9.2
 |GROMACS/2024.1-foss-2023b|-|-|x|-|x|x|x|
 |GROMACS/2023.3-foss-2023a-PLUMED-2.9.0|-|-|x|-|x|x|x|
 |GROMACS/2023.3-foss-2023a|-|-|x|-|x|x|x|
+|GROMACS/2021.0-foss-2023a-20250409-constant-pH|x|x|x|x|x|x|x|
