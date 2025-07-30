@@ -21,4 +21,4 @@ module load iGUIDE/1.2.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|iGUIDE/1.2.0-foss-2023a|-|x|x|x|x|x|x|
+|iGUIDE/1.2.0-foss-2023a|x|x|x|x|x|x|x|
