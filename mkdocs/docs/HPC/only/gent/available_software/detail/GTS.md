@@ -22,4 +22,4 @@ module load GTS/0.7.6-GCCcore-13.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |GTS/0.7.6-GCCcore-13.3.0|-|x|x|x|x|x|x|
-|GTS/0.7.6-GCCcore-12.3.0|-|x|x|x|x|x|x|
+|GTS/0.7.6-GCCcore-12.3.0|x|x|x|x|x|x|x|

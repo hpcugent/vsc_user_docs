@@ -21,4 +21,4 @@ module load Graphviz/8.1.0-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Graphviz/8.1.0-GCCcore-12.3.0|-|x|x|x|x|x|x|
+|Graphviz/8.1.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
