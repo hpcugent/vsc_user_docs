@@ -1,0 +1,25 @@
+{
+    "main_title": "index",
+    "subtitle": "Welcome-to-the-HPC-UGent-documentation",
+    "source_file": "../../mkdocs/docs/HPC/index.md",
+    "title_depth": 1,
+    "directory": "index",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/getting_started",
+        "1": "https://docs.hpc.ugent.be/account",
+        "2": "https://www.ugent.be/hpc/en/training/introhpcugent-recording",
+        "3": "https://docs.hpc.ugent.be/linux-tutorial",
+        "4": "https://www.ugent.be/hpc/en/infrastructure",
+        "5": "https://docs.hpc.ugent.be/FAQ",
+        "6": "https://docs.hpc.ugent.be/troubleshooting",
+        "7": "https://docs.hpc.ugent.be/best_practices",
+        "8": "https://docs.hpc.ugent.be/known_issues",
+        "9": "https://github.com/hpcugent/vsc_user_docs",
+        "10": "https://www.ugent.be/hpc/en/support"
+    },
+    "parent_title": "",
+    "previous_title": null,
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be"
+}
