@@ -21,6 +21,6 @@ module load gmpy2/2.2.0-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gmpy2/2.2.0-GCCcore-13.3.0|-|x|x|x|x|x|x|
+|gmpy2/2.2.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |gmpy2/2.1.5-GCC-13.2.0|x|x|x|x|x|x|x|
 |gmpy2/2.1.5-GCC-12.3.0|x|x|x|x|x|x|x|

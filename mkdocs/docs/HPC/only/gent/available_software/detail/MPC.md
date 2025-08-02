@@ -21,6 +21,6 @@ module load MPC/1.3.1-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MPC/1.3.1-GCCcore-13.3.0|-|x|x|x|x|x|x|
+|MPC/1.3.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |MPC/1.3.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |MPC/1.3.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
