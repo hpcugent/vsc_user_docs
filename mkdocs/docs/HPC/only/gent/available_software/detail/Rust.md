@@ -21,7 +21,7 @@ module load Rust/1.86.0-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Rust/1.86.0-GCCcore-13.3.0|x|x|x|-|x|x|x|
+|Rust/1.86.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |Rust/1.86.0-GCCcore-13.2.0-nightly|x|x|x|x|x|x|x|
 |Rust/1.85.1-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |Rust/1.78.0-GCCcore-13.3.0|x|x|x|x|x|x|x|

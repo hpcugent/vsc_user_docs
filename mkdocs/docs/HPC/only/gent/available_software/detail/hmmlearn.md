@@ -21,5 +21,5 @@ module load hmmlearn/0.3.3-gfbf-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|hmmlearn/0.3.3-gfbf-2024a|x|-|x|-|x|x|x|
+|hmmlearn/0.3.3-gfbf-2024a|x|x|x|x|x|x|x|
 |hmmlearn/0.3.0-gfbf-2023a|-|x|-|x|-|-|-|

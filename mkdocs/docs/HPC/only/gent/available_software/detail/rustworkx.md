@@ -21,4 +21,4 @@ module load rustworkx/0.16.0-gfbf-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rustworkx/0.16.0-gfbf-2024a|x|-|x|-|x|x|x|
+|rustworkx/0.16.0-gfbf-2024a|x|x|x|x|x|x|x|

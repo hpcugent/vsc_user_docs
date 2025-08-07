@@ -21,6 +21,6 @@ module load multiprocess/0.70.17-gfbf-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|multiprocess/0.70.17-gfbf-2024a|x|-|x|-|x|x|x|
+|multiprocess/0.70.17-gfbf-2024a|x|x|x|x|x|x|x|
 |multiprocess/0.70.16-gfbf-2023b|x|x|x|x|x|x|x|
 |multiprocess/0.70.15-gfbf-2023a|x|x|x|x|x|x|x|

@@ -21,7 +21,7 @@ module load python-igraph/0.11.9-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|python-igraph/0.11.9-foss-2024a|x|-|x|-|x|x|x|
+|python-igraph/0.11.9-foss-2024a|x|x|x|x|x|x|x|
 |python-igraph/0.11.8-foss-2023b|x|x|x|x|x|x|x|
 |python-igraph/0.11.4-foss-2023a|x|x|x|x|x|x|x|
 |python-igraph/0.10.3-foss-2022a|-|-|-|-|-|x|x|

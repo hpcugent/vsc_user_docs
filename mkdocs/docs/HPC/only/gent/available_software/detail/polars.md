@@ -21,6 +21,6 @@ module load polars/1.28.1-gfbf-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|polars/1.28.1-gfbf-2024a|x|x|x|-|x|x|x|
+|polars/1.28.1-gfbf-2024a|x|x|x|x|x|x|x|
 |polars/1.28.1-gfbf-2023b|x|x|x|x|x|x|x|
 |polars/0.20.2-gfbf-2023a|x|x|x|x|x|x|x|
