@@ -21,4 +21,4 @@ module load SnapATAC2/2.9.0-dev0-20250630-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SnapATAC2/2.9.0-dev0-20250630-foss-2024a|x|-|x|-|x|x|x|
+|SnapATAC2/2.9.0-dev0-20250630-foss-2024a|x|x|x|x|x|x|x|
