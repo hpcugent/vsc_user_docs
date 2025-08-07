@@ -1,0 +1,48 @@
+A common pattern is to pipe the output of a command to less so you
+can examine or search the output:
+$ find . | less
+Or to look through your command history:
+$ history | less
+You can put multiple pipes in the same line. For example, which cp
+commands have we run?
+$ history | grep cp | less
+Shell expansion
+The shell will expand certain things, including:
+1.   wildcard: for example ls ttxt will list all files starting
+    with 't' and ending in 'txt'
+2.  tab completion: hit the <tab> key to make the shell complete your
+    command line; works for completing file names, command names, etc.
+3.  $... or ${...}: environment variables will be replaced with
+    their value; example: echo "I am $USER" or echo "I am ${USER}"
+4.  square brackets can be used to list a number of options for a
+    particular characters; 
+example: ls *.[oe][0-9].
+ This will list all
+    files starting with whatever characters (*), then a dot (.),
+    then either an 'o' or an 'e' ([oe]), then a character from '0' to
+    '9' (so any digit) ([0-9]). So this filename will match:
+    anything.o5, but this one won't: anything.o52.
+Process information
+ps and pstree
+ps lists processes running. By default, it will only show you the
+processes running in the local shell. To see all of your processes
+running on the system, use:
+$ ps -fu $USER
+To see all the processes:
+$ ps -elf
+To see all the processes in a forest view, use:
+$ ps auxf
+The last two will spit out a lot of data, so get in the habit of piping
+it to less.
+pstree is another way to dump a tree/forest view. It looks better than
+ps auxf but it has much less information so its value is limited.
+pgrep will find all the processes where the name matches the pattern
+and print the process IDs (PID). This is used in piping the processes
+together as we will see in the next section.
+kill
+ps isn't very useful unless you can manipulate the processes. We do
+this using the kill command. Kill will send a message
+(SIGINT) to
+the process to ask it to stop.
+$ kill 1234
+$ kill $(pgrep misbehaving_process)
