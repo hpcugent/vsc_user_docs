@@ -11,6 +11,11 @@ https://account.vscentrum.be/django/vo/join
 https://account.vscentrum.be/django/vo/new
 https://firewall.vscentrum.be
 https://elearning.bits.vib.be/courses/alphafold
+https://www.openmp.org/about/openmp-faq/#WhatIs
+
+# 504
+https://alphafold.com/
+https://alphafold.com/faq
 
 # 401
 https://pintra.uantwerpen.be/bbcswebdav/xid-23610_1
