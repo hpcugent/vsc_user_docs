@@ -14,11 +14,12 @@ The overview below shows which Geant4 installations are available per HPC-UGent 
 To start using Geant4, load one of these modules using a `module load` command like:
 
 ```shell
-module load Geant4/11.2.2-GCC-12.3.0
+module load Geant4/11.3.0-GCC-13.2.0-Qt5
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Geant4/11.3.0-GCC-13.2.0-Qt5|x|x|x|-|x|x|x|
 |Geant4/11.2.2-GCC-12.3.0|x|x|x|x|x|x|x|
