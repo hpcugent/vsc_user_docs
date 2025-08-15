@@ -21,4 +21,4 @@ module load e3nn/0.4.4-foss-2023a-CUDA-12.1.1
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|e3nn/0.4.4-foss-2023a-CUDA-12.1.1|x|-|-|-|x|-|-|
+|e3nn/0.4.4-foss-2023a-CUDA-12.1.1|x|-|x|-|x|x|-|
