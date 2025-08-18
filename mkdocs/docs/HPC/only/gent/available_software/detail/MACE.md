@@ -14,11 +14,11 @@ The overview below shows which MACE installations are available per HPC-UGent Ti
 To start using MACE, load one of these modules using a `module load` command like:
 
 ```shell
-module load MACE/0.3.8-foss-2023a-CUDA-12.1.1
+module load MACE/0.3.8-foss-2023a-CUDA-12.1.1-ASE-3.24.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MACE/0.3.8-foss-2023a-CUDA-12.1.1|x|-|x|-|x|x|-|
+|MACE/0.3.8-foss-2023a-CUDA-12.1.1-ASE-3.24.0|x|-|x|-|x|x|-|
