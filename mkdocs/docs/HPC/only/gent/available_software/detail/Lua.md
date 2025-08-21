@@ -21,5 +21,5 @@ module load Lua/5.4.6-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Lua/5.4.6-GCCcore-13.2.0|x|x|x|-|x|x|x|
+|Lua/5.4.6-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Lua/5.4.6-GCCcore-12.3.0|x|x|x|x|x|x|x|
