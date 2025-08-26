@@ -14,11 +14,12 @@ The overview below shows which RDKit installations are available per HPC-UGent T
 To start using RDKit, load one of these modules using a `module load` command like:
 
 ```shell
-module load RDKit/2024.03.3-foss-2023a
+module load RDKit/2025.03.4-foss-2025a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RDKit/2025.03.4-foss-2025a|x|x|x|x|x|x|x|
 |RDKit/2024.03.3-foss-2023a|x|x|x|x|x|x|x|
