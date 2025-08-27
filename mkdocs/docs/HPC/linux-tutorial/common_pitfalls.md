@@ -152,6 +152,6 @@ smallest of problems!**
 5.  [Bash for
     beginners](https://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)
 
-6.  [MOOC](https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-0)
+6.  [MOOC](https://www.edx.org/learn/linux/the-linux-foundation-introduction-to-linux)
 
 Please don't hesitate to contact in case of questions or problems.
