@@ -137,7 +137,8 @@ smallest of problems!**
 
 # More information
 
-1.  [Unix Power Tools - A **fantastic ** book about most of these tools](https://www.docstore.mik.ua/orelly/unix/upt/index.htm) (see also [The Second Edition](https://www.docstore.mik.ua/orelly/unix2.1/index.htm))
+1.  [Unix Power Tools - A **fantastic ** book about most of these
+    tools](https://web.archive.org/web/20081219192620/http://docstore.mik.ua/orelly/unix/upt/index.htm) 
 
 2.  <https://linuxcommand.org/>: A great place to start with many
     examples. There is an associated book which gets a lot of good
