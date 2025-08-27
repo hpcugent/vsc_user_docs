@@ -266,7 +266,7 @@ For KU Leuven, see
 For Hasselt University, see <https://www.uhasselt.be/intra/IVC>. 
 {% endif %}
 {% if site == brussel %}
-See <http://www.vub.ac.be/sites/vub/files/reglement-gebruik-ict-infrastructuur.pdf>.
+See <https://www.vub.ac.be/sites/vub/files/reglement-gebruik-ict-infrastructuur.pdf>.
 {% endif %}
 {% if site == antwerpen %}
 See <https://pintra.uantwerpen.be/bbcswebdav/xid-23610_1> 
