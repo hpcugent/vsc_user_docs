@@ -45,6 +45,18 @@ https://nl.mathworks.com/help/compiler/index.html
 https://nl.mathworks.com/help/distcomp/parpool.html
 https://nl.mathworks.com/products/distriben.html
 
+# 402 for Wikipedia (AI scraper limitations?)
+http://en.wikipedia.org/wiki/Supercomputer
+https://en.wikipedia.org/wiki/Supercomputer
+https://en.wikipedia.org/wiki/Amdahl%27s_law
+https://en.wikipedia.org/wiki/Global_interpreter_lock
+https://en.wikipedia.org/wiki/Message_Passing_Interface
+https://en.wikipedia.org/wiki/Portable_Batch_System
+https://en.wikipedia.org/wiki/Regular_expression
+https://en.wikipedia.org/wiki/Slurm_Workload_Manager
+https://en.wikipedia.org/wiki/TORQUE
+https://en.wikipedia.org/wiki/Unix_signal#POSIX_signals
+
 # SSL error
 https://wiki.gnome.org/Projects/GnomeKeyring/Ssh
 

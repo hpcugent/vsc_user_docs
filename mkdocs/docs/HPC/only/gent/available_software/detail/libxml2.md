@@ -14,13 +14,14 @@ The overview below shows which libxml2 installations are available per HPC-UGent
 To start using libxml2, load one of these modules using a `module load` command like:
 
 ```shell
-module load libxml2/2.13.4-GCCcore-14.2.0
+module load libxml2/2.14.3-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libxml2/2.14.3-GCCcore-14.3.0|x|x|x|-|x|x|x|
 |libxml2/2.13.4-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |libxml2/2.12.7-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |libxml2/2.11.5-GCCcore-13.2.0|x|x|x|x|x|x|x|

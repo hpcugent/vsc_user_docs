@@ -14,13 +14,14 @@ The overview below shows which PMIx installations are available per HPC-UGent Ti
 To start using PMIx, load one of these modules using a `module load` command like:
 
 ```shell
-module load PMIx/5.0.6-GCCcore-14.2.0
+module load PMIx/5.0.8-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PMIx/5.0.8-GCCcore-14.3.0|x|x|-|-|-|x|x|
 |PMIx/5.0.6-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |PMIx/5.0.2-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |PMIx/4.2.6-GCCcore-13.2.0|x|x|x|x|x|x|x|

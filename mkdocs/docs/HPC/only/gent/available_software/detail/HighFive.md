@@ -14,11 +14,12 @@ The overview below shows which HighFive installations are available per HPC-UGen
 To start using HighFive, load one of these modules using a `module load` command like:
 
 ```shell
-module load HighFive/2.7.1-gompi-2023a
+module load HighFive/2.10.1-gompi-2024a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HighFive/2.10.1-gompi-2024a|x|x|x|-|x|x|x|
 |HighFive/2.7.1-gompi-2023a|-|x|x|x|x|x|x|

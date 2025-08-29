@@ -14,11 +14,12 @@ The overview below shows which muParser installations are available per HPC-UGen
 To start using muParser, load one of these modules using a `module load` command like:
 
 ```shell
-module load muParser/2.3.4-GCCcore-12.3.0
+module load muParser/2.3.5-GCC-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|muParser/2.3.5-GCC-13.3.0|x|x|x|-|x|x|x|
 |muParser/2.3.4-GCCcore-12.3.0|-|x|x|x|x|-|-|

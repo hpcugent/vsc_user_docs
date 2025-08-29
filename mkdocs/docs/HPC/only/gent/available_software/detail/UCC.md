@@ -14,13 +14,14 @@ The overview below shows which UCC installations are available per HPC-UGent Tie
 To start using UCC, load one of these modules using a `module load` command like:
 
 ```shell
-module load UCC/1.3.0-GCCcore-14.2.0
+module load UCC/1.4.4-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|UCC/1.4.4-GCCcore-14.3.0|x|x|x|-|x|x|x|
 |UCC/1.3.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |UCC/1.3.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |UCC/1.2.0-GCCcore-13.2.0|x|x|x|x|x|x|x|

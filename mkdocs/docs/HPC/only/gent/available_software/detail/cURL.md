@@ -14,13 +14,14 @@ The overview below shows which cURL installations are available per HPC-UGent Ti
 To start using cURL, load one of these modules using a `module load` command like:
 
 ```shell
-module load cURL/8.11.1-GCCcore-14.2.0
+module load cURL/8.14.1-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|cURL/8.14.1-GCCcore-14.3.0|x|x|x|-|x|x|x|
 |cURL/8.11.1-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |cURL/8.7.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |cURL/8.3.0-GCCcore-13.2.0|x|x|x|x|x|x|x|

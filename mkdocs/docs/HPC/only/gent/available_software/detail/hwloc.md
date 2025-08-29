@@ -14,13 +14,14 @@ The overview below shows which hwloc installations are available per HPC-UGent T
 To start using hwloc, load one of these modules using a `module load` command like:
 
 ```shell
-module load hwloc/2.11.2-GCCcore-14.2.0
+module load hwloc/2.12.1-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|hwloc/2.12.1-GCCcore-14.3.0|x|x|-|-|-|x|x|
 |hwloc/2.11.2-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |hwloc/2.10.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |hwloc/2.9.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
