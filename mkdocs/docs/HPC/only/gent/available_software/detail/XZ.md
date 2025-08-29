@@ -14,13 +14,14 @@ The overview below shows which XZ installations are available per HPC-UGent Tier
 To start using XZ, load one of these modules using a `module load` command like:
 
 ```shell
-module load XZ/5.6.3-GCCcore-14.2.0
+module load XZ/5.8.1-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|XZ/5.8.1-GCCcore-14.3.0|x|x|x|-|x|x|x|
 |XZ/5.6.3-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |XZ/5.4.5-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |XZ/5.4.4-GCCcore-13.2.0|x|x|x|x|x|x|x|

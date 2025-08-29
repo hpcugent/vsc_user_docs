@@ -14,13 +14,14 @@ The overview below shows which imkl installations are available per HPC-UGent Ti
 To start using imkl, load one of these modules using a `module load` command like:
 
 ```shell
-module load imkl/2024.2.0
+module load imkl/2025.1.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|imkl/2025.1.0|-|x|-|-|-|-|-|
 |imkl/2024.2.0|x|x|x|x|x|x|x|
 |imkl/2023.2.0-gompi-2023b|x|-|x|-|x|x|x|
 |imkl/2023.2.0|-|x|x|x|x|x|x|

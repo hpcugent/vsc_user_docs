@@ -14,13 +14,14 @@ The overview below shows which pkgconf installations are available per HPC-UGent
 To start using pkgconf, load one of these modules using a `module load` command like:
 
 ```shell
-module load pkgconf/2.3.0-GCCcore-14.2.0
+module load pkgconf/2.4.3-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pkgconf/2.4.3-GCCcore-14.3.0|x|x|x|-|x|x|x|
 |pkgconf/2.3.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |pkgconf/2.2.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |pkgconf/2.0.3-GCCcore-13.2.0|x|x|x|x|x|x|x|

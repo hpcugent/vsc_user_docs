@@ -14,13 +14,14 @@ The overview below shows which GCC installations are available per HPC-UGent Tie
 To start using GCC, load one of these modules using a `module load` command like:
 
 ```shell
-module load GCC/14.2.0
+module load GCC/14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GCC/14.3.0|x|x|x|-|x|x|x|
 |GCC/14.2.0|x|x|x|x|x|x|x|
 |GCC/13.3.0|x|x|x|x|x|x|x|
 |GCC/13.2.0|x|x|x|x|x|x|x|
