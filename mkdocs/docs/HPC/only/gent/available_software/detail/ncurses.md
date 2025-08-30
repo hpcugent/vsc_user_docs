@@ -21,7 +21,7 @@ module load ncurses/6.5-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ncurses/6.5-GCCcore-14.3.0|x|x|x|-|x|x|x|
+|ncurses/6.5-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |ncurses/6.5-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |ncurses/6.5-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |ncurses/6.5|x|x|x|x|x|x|x|

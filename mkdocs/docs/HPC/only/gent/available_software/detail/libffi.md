@@ -21,7 +21,7 @@ module load libffi/3.5.1-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libffi/3.5.1-GCCcore-14.3.0|x|x|x|-|x|x|x|
+|libffi/3.5.1-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |libffi/3.4.5-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |libffi/3.4.5-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |libffi/3.4.4-GCCcore-13.2.0|x|x|x|x|x|x|x|

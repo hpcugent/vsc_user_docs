@@ -21,5 +21,5 @@ module load SUNDIALS/7.3.0-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SUNDIALS/7.3.0-foss-2024a|x|x|x|-|x|x|x|
+|SUNDIALS/7.3.0-foss-2024a|x|x|x|x|x|x|x|
 |SUNDIALS/6.6.0-foss-2023a|-|x|-|x|-|x|x|

@@ -21,5 +21,5 @@ module load Cantera/3.1.0-20250816-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Cantera/3.1.0-20250816-foss-2024a|x|x|x|-|x|x|x|
+|Cantera/3.1.0-20250816-foss-2024a|x|x|x|x|x|x|x|
 |Cantera/3.0.0-foss-2023a|-|x|-|x|-|x|x|

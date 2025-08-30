@@ -21,7 +21,7 @@ module load pkgconf/2.4.3-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pkgconf/2.4.3-GCCcore-14.3.0|x|x|x|-|x|x|x|
+|pkgconf/2.4.3-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |pkgconf/2.3.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |pkgconf/2.2.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |pkgconf/2.0.3-GCCcore-13.2.0|x|x|x|x|x|x|x|

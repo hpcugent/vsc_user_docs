@@ -21,7 +21,7 @@ module load foss/2025b
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|foss/2025b|x|x|-|-|-|-|-|
+|foss/2025b|x|x|x|x|x|x|x|
 |foss/2025a|x|x|x|x|x|x|x|
 |foss/2024a|x|x|x|x|x|x|x|
 |foss/2023b|x|x|x|x|x|x|x|

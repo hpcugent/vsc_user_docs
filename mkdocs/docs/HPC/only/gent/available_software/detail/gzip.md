@@ -21,7 +21,7 @@ module load gzip/1.14-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gzip/1.14-GCCcore-14.3.0|x|x|x|-|x|x|x|
+|gzip/1.14-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |gzip/1.13-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |gzip/1.13-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |gzip/1.13-GCCcore-13.2.0|x|x|x|x|x|x|x|

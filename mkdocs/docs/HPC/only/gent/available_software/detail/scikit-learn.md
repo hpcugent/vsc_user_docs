@@ -14,13 +14,14 @@ The overview below shows which scikit-learn installations are available per HPC-
 To start using scikit-learn, load one of these modules using a `module load` command like:
 
 ```shell
-module load scikit-learn/1.6.1-gfbf-2024a
+module load scikit-learn/1.7.0-gfbf-2025a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|scikit-learn/1.7.0-gfbf-2025a|x|x|x|x|x|x|x|
 |scikit-learn/1.6.1-gfbf-2024a|x|x|x|x|x|x|x|
 |scikit-learn/1.5.2-gfbf-2024a|x|x|x|x|x|x|x|
 |scikit-learn/1.4.2-gfbf-2023a|-|x|-|x|-|x|x|
