@@ -21,5 +21,5 @@ module load Graphviz/12.2.0-GCCcore-13.3.0-minimal
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Graphviz/12.2.0-GCCcore-13.3.0-minimal|x|x|x|-|x|x|x|
+|Graphviz/12.2.0-GCCcore-13.3.0-minimal|x|x|x|x|x|x|x|
 |Graphviz/8.1.0-GCCcore-12.3.0|x|x|x|x|x|x|x|

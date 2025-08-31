@@ -21,7 +21,7 @@ module load libpciaccess/0.18.1-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libpciaccess/0.18.1-GCCcore-14.3.0|x|x|-|-|-|x|x|
+|libpciaccess/0.18.1-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |libpciaccess/0.18.1-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |libpciaccess/0.18.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |libpciaccess/0.17-GCCcore-13.2.0|x|x|x|x|x|x|x|

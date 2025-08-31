@@ -21,7 +21,7 @@ module load libxml2/2.14.3-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libxml2/2.14.3-GCCcore-14.3.0|x|x|x|-|x|x|x|
+|libxml2/2.14.3-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |libxml2/2.13.4-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |libxml2/2.12.7-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |libxml2/2.11.5-GCCcore-13.2.0|x|x|x|x|x|x|x|

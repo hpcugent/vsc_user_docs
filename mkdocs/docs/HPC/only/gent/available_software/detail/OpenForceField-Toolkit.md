@@ -14,11 +14,12 @@ The overview below shows which OpenForceField-Toolkit installations are availabl
 To start using OpenForceField-Toolkit, load one of these modules using a `module load` command like:
 
 ```shell
-module load OpenForceField-Toolkit/0.16.0-foss-2023a
+module load OpenForceField-Toolkit/0.16.9-foss-2025a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OpenForceField-Toolkit/0.16.9-foss-2025a|x|x|x|x|x|x|x|
 |OpenForceField-Toolkit/0.16.0-foss-2023a|-|x|-|x|-|x|x|

@@ -21,5 +21,5 @@ module load AOCL-BLAS/5.1-GCC-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|AOCL-BLAS/5.1-GCC-14.3.0|x|x|x|-|x|x|x|
+|AOCL-BLAS/5.1-GCC-14.3.0|x|x|x|x|x|x|x|
 |AOCL-BLAS/5.0-GCC-14.2.0|x|x|x|x|x|x|x|
