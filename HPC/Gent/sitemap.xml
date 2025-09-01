@@ -530,6 +530,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/BigStitcher-Spark/</ns0:loc>
+         <ns0:lastmod>2025-09-01</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/available_software/detail/BindCraft/</ns0:loc>
          <ns0:lastmod>2025-09-01</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -7956,6 +7961,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/BiG-SCAPE/</ns0:loc>
+         <ns0:lastmod>2025-09-01</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Linux/available_software/detail/BigStitcher-Spark/</ns0:loc>
          <ns0:lastmod>2025-09-01</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
@@ -15390,6 +15400,11 @@
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
     <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/BigStitcher-Spark/</ns0:loc>
+         <ns0:lastmod>2025-09-01</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/macOS/available_software/detail/BindCraft/</ns0:loc>
          <ns0:lastmod>2025-09-01</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
@@ -22816,6 +22831,11 @@
     </ns0:url>
     <ns0:url>
          <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/BiG-SCAPE/</ns0:loc>
+         <ns0:lastmod>2025-09-01</ns0:lastmod>
+         <ns0:changefreq>daily</ns0:changefreq>
+    </ns0:url>
+    <ns0:url>
+         <ns0:loc>https://docs.hpc.ugent.be/Windows/available_software/detail/BigStitcher-Spark/</ns0:loc>
          <ns0:lastmod>2025-09-01</ns0:lastmod>
          <ns0:changefreq>daily</ns0:changefreq>
     </ns0:url>
