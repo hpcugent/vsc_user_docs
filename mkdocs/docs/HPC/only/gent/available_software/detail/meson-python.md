@@ -14,13 +14,14 @@ The overview below shows which meson-python installations are available per HPC-
 To start using meson-python, load one of these modules using a `module load` command like:
 
 ```shell
-module load meson-python/0.18.0-GCCcore-14.2.0
+module load meson-python/0.18.0-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|meson-python/0.18.0-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |meson-python/0.18.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |meson-python/0.16.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |meson-python/0.15.0-GCCcore-13.2.0|x|x|x|x|x|x|x|

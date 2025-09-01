@@ -14,13 +14,14 @@ The overview below shows which zarr installations are available per HPC-UGent Ti
 To start using zarr, load one of these modules using a `module load` command like:
 
 ```shell
-module load zarr/2.18.4-foss-2024a
+module load zarr/3.0.10-foss-2025a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|zarr/3.0.10-foss-2025a|x|x|x|x|x|x|x|
 |zarr/2.18.4-foss-2024a|x|x|x|x|x|x|x|
 |zarr/2.18.3-foss-2023b|x|x|x|x|x|x|x|
 |zarr/2.17.1-foss-2023a|x|x|x|x|x|x|x|

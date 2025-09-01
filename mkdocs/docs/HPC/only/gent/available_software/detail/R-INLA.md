@@ -21,5 +21,5 @@ module load R-INLA/25.06.22-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|R-INLA/25.06.22-foss-2024a|x|x|x|-|x|x|x|
+|R-INLA/25.06.22-foss-2024a|x|x|x|x|x|x|x|
 |R-INLA/24.01.18-foss-2023a|-|x|-|x|-|-|-|

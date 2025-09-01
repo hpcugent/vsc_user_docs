@@ -14,13 +14,14 @@ The overview below shows which hatchling installations are available per HPC-UGe
 To start using hatchling, load one of these modules using a `module load` command like:
 
 ```shell
-module load hatchling/1.27.0-GCCcore-14.2.0
+module load hatchling/1.27.0-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|hatchling/1.27.0-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |hatchling/1.27.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |hatchling/1.24.2-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |hatchling/1.18.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
