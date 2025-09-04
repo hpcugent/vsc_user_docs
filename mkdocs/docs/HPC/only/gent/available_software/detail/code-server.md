@@ -14,11 +14,12 @@ The overview below shows which code-server installations are available per HPC-U
 To start using code-server, load one of these modules using a `module load` command like:
 
 ```shell
-module load code-server/4.93.1
+module load code-server/4.103.2
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|code-server/4.103.2|x|x|x|x|x|x|x|
 |code-server/4.93.1|x|x|x|x|x|x|x|
