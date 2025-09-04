@@ -22,4 +22,5 @@ module load boto3/1.36.16-GCCcore-13.2.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |boto3/1.36.16-GCCcore-13.2.0|x|x|x|x|x|x|x|
+|boto3/1.35.36-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |boto3/1.28.70-GCCcore-12.3.0|x|x|x|x|x|x|x|

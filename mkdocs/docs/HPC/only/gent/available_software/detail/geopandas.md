@@ -14,11 +14,12 @@ The overview below shows which geopandas installations are available per HPC-UGe
 To start using geopandas, load one of these modules using a `module load` command like:
 
 ```shell
-module load geopandas/0.14.2-foss-2023a
+module load geopandas/1.0.1-foss-2024a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|geopandas/1.0.1-foss-2024a|x|x|x|x|x|x|x|
 |geopandas/0.14.2-foss-2023a|x|x|x|x|x|x|x|

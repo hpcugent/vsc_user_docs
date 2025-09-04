@@ -27,5 +27,6 @@ module load Cython/3.1.2-GCCcore-14.3.0
 |Cython/3.0.10-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Cython/3.0.8-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |Cython/3.0.7-GCCcore-12.3.0|x|x|x|x|x|x|x|
+|Cython/0.29.37-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |Cython/0.29.37-GCCcore-12.3.0-Python-2.7.18|x|x|x|-|x|x|x|
 |Cython/0.27.3-GCCcore-12.3.0-Python-2.7.18|x|x|x|x|x|x|x|
