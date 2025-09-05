@@ -137,20 +137,21 @@ smallest of problems!**
 
 # More information
 
-1.  [Unix Power Tools - A **fantastic ** book about most of these tools](http://www.docstore.mik.ua/orelly/unix/upt/index.htm) (see also [The Second Edition](http://www.docstore.mik.ua/orelly/unix2.1/index.htm))
+1.  [Unix Power Tools - A **fantastic ** book about most of these
+    tools](https://web.archive.org/web/20081219192620/http://docstore.mik.ua/orelly/unix/upt/index.htm) 
 
-2.  <http://linuxcommand.org/>: A great place to start with many
+2.  <https://linuxcommand.org/>: A great place to start with many
     examples. There is an associated book which gets a lot of good
     reviews
 
 3.  [The Linux Documentation Project](https://www.tldp.org/guides.html): More guides on various topics relating to the Linux command line
 
 4.  [basic shell
-    usage](http://linuxcommand.org/lc3_learning_the_shell.php)
+    usage](https://linuxcommand.org/lc3_learning_the_shell.php)
 
 5.  [Bash for
     beginners](https://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)
 
-6.  [MOOC](https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-0)
+6.  [MOOC](https://www.edx.org/learn/linux/the-linux-foundation-introduction-to-linux)
 
 Please don't hesitate to contact in case of questions or problems.

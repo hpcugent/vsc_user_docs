@@ -70,7 +70,7 @@ commands like `^O Write Out` The `^` is the Control key. So `^O` means
 
 More advanced editors (beyond the scope of this page) are `vim` and
 `emacs`. A simple tutorial on how to get started with `vim` can be found
-at <http://www.openvim.com/>.
+at <https://www.openvim.com/>.
 
 ## Copying faster with `rsync`
 [//]: # (sec:rsync)

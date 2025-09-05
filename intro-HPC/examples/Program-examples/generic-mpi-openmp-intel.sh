@@ -22,7 +22,7 @@ module load <your package>
 # the value of ppn on the mpirun line
 #
 # more info:
-# http://software.intel.com/en-us/articles/hybrid-applications-intelmpi-openmp/ 
+# https://software.intel.com/en-us/articles/hybrid-applications-intelmpi-openmp/ 
 # https://support.scinet.utoronto.ca/wiki/index.php/GPC_Quickstart#Hybrid_MPI.2FOpenMP_jobs
 
 

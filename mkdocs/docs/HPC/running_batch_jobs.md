@@ -495,7 +495,7 @@ of 72 hours.
 
 ### Getting cluster state
 
-You can check <http://hpc.ugent.be/clusterstate> to see information
+You can check <https://hpc.ugent.be/clusterstate> to see information
 about the clusters: you can see the nodes that are down, free, partially
 filled with jobs, completely filled with jobs, ....
 
