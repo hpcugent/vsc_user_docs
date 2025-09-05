@@ -21,12 +21,11 @@ module load Java/21.0.8
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Java/21.0.8|-|x|x|x|x|x|x|
+|Java/21.0.8|x|x|x|x|x|x|x|
 |Java/21.0.7|x|x|x|x|x|x|x|
 |Java/21.0.5|x|x|x|x|x|-|-|
 |Java/21.0.2|-|-|-|-|-|x|x|
-|Java/21(@Java/21.0.8)|-|x|x|x|x|x|x|
-|Java/21(@Java/21.0.7)|x|-|-|-|-|-|-|
+|Java/21(@Java/21.0.8)|x|x|x|x|x|x|x|
 |Java/17.0.15|x|x|x|x|x|x|x|
 |Java/17.0.6|x|x|x|x|x|x|x|
 |Java/17(@Java/17.0.15)|x|x|x|x|x|x|x|
