@@ -1,0 +1,17 @@
+{
+    "main_title": "known_issues",
+    "subtitle": "Configure-OpenMPI-to-not-use-libfabric-via-environment-variables",
+    "source_file": "../../mkdocs/docs/HPC/known_issues.md",
+    "title_depth": 4,
+    "directory": "known_issues",
+    "links": {
+        "0": "https://www.ugent.be/hpc/en/support",
+        "1": "https://docs.hpc.ugent.be/known_issues/#openmpi_libfabric_operation_not_permitted",
+        "2": "https://docs.hpc.ugent.be/mympirun"
+    },
+    "parent_title": "",
+    "previous_title": null,
+    "next_title": "known_issues_paragraph_2",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/known_issues/#configure-openmpi-to-not-use-libfabric-via-environment-variables"
+}
