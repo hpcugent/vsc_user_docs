@@ -21,4 +21,4 @@ module load PyOpenCL/2023.1.4-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyOpenCL/2023.1.4-foss-2023a|-|x|-|x|-|-|-|
+|PyOpenCL/2023.1.4-foss-2023a|x|x|x|x|x|x|x|
