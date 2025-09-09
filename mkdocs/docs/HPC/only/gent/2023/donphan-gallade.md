@@ -135,4 +135,4 @@ a `gallade` workernode has 128 cores (so ~7.3 GiB per core on average), while a 
 (so ~20.5 GiB per core on average).
 
 It is important to take this aspect into account when submitting jobs to `gallade`, especially when requesting
-all cores via `ppn=all`. You may need to explictly request more memory (see also [here](../../../fine_tuning_job_specifications#pbs_mem)).
+all cores via `ppn=all`. You may need to explictly request more memory (see also [here](../../../fine_tuning_job_specifications.md#pbs_mem)).
