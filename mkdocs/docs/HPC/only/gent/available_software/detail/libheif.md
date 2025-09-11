@@ -23,5 +23,5 @@ module load libheif/1.19.5-GCCcore-13.3.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libheif/1.19.5-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |libheif/1.19.5-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|libheif/1.17.6-GCCcore-12.3.0|-|x|x|x|x|x|x|
+|libheif/1.17.6-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |libheif/1.17.6-GCC-12.3.0|x|-|x|-|x|x|x|

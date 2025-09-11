@@ -32,4 +32,4 @@ module load zlib/1.3.1-GCCcore-14.3.0
 |zlib/1.2.12-GCCcore-11.3.0|-|-|-|-|-|x|x|
 |zlib/1.2.12|-|-|-|-|-|x|x|
 |zlib/1.2.11-GCCcore-11.2.0|-|-|-|-|-|x|x|
-|zlib/1.2.11|-|-|-|-|-|x|x|
+|zlib/1.2.11|x|x|x|-|x|x|x|
