@@ -164,7 +164,7 @@ computers.
 
 {% if OS == macos %}
 Download the latest version of the XQuartz package on:
-<http://xquartz.macosforge.org/landing/> and install the XQuartz.pkg
+<https://xquartz.macosforge.org/landing/> and install the XQuartz.pkg
 package.
 
 ![image](img/img0512.png)
@@ -184,7 +184,7 @@ applications.
 The first task is to install the Xming software.
 
 1.  Download the Xming installer from the following address:
-    <http://www.straightrunning.com/XmingNotes/>. Either download Xming
+    <https://www.straightrunning.com/XmingNotes/>. Either download Xming
     from the **Public Domain Releases** (free) or from the **Website Releases** (after a donation) on the website.
 
 2.  Run the Xming setup program on your Windows desktop.
