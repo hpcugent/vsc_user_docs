@@ -1,0 +1,12 @@
+{
+    "main_title": "interactive_debug",
+    "subtitle": "Shared-GPUs",
+    "source_file": "../../mkdocs/docs/HPC/interactive_debug.md",
+    "title_depth": 3,
+    "directory": "interactive_debug",
+    "parent_title": "",
+    "previous_title": "interactive_debug_paragraph_1",
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/interactive_debug/#shared-gpus"
+}
