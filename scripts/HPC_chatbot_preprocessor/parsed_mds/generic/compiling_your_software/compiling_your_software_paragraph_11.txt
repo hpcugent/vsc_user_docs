@@ -1,0 +1,20 @@
+cd ~/examples/Compiling-and-testing-your-software-on-the-HPC
+We will compile this C/MPI -file into an executable with the Intel
+Parallel Studio Cluster Edition. First, clear the modules (purge) and
+then load the latest "intel" module:
+module purge
+module load intel
+Then, compile and list the contents of the directory again. The Intel
+equivalent of mpicc is mpiicc.
+mpiicc -o mpihello mpihello.c
+ls -l
+Note that the old "mpihello" file has been overwritten. Let's test this
+program on the "login" node first:
+$ ./mpihello
+Hello World from Node 0.
+It seems to work, now run it on the HPC.
+qsub mpihello.pbs
+Note: The AUGent only has a license for the Intel Parallel Studio Cluster
+Edition for a fixed number of users. As such, it might happen that you
+have to wait a few minutes before a floating license becomes available
+for your use.
