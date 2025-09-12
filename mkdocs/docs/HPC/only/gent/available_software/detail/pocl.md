@@ -14,11 +14,12 @@ The overview below shows which pocl installations are available per HPC-UGent Ti
 To start using pocl, load one of these modules using a `module load` command like:
 
 ```shell
-module load pocl/4.0-GCC-12.3.0
+module load pocl/4.0-GCC-12.3.0-CUDA-12.1.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pocl/4.0-GCC-12.3.0-CUDA-12.1.1|x|-|-|-|x|x|-|
 |pocl/4.0-GCC-12.3.0|x|x|x|x|x|x|x|

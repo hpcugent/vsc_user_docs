@@ -33,3 +33,4 @@ module load ncurses/6.5-GCCcore-14.3.0
 |ncurses/6.3|x|x|x|x|x|x|x|
 |ncurses/6.2-GCCcore-11.2.0|-|-|-|-|-|x|x|
 |ncurses/6.2|x|x|x|x|x|x|x|
+|ncurses/5.9|x|x|x|x|x|x|x|
