@@ -1,0 +1,19 @@
+#!/bin/bash
+# EESSI_demo.sh script
+#PBS -N "EESSI_Demo_LAMMPS_lj"
+#PBS -l nodes=1:ppn=4
+#PBS -o EESSI_demo.out
+#PBS -e EESSI_demo.err
+#PBS -l walltime=00:30:00
+
+module --force purge
+export OMPI_MCA_orte_keep_fqdn_hostnames=1
+unset SLURM_EXPORT_ENV  
+
+source /cvmfs/software.eessi.io/versions/2023.06/init/bash
+module load LAMMPS/29Aug2024-foss-2023b-kokkos
+mkdir /tmp/$USER && cd /tmp/$USER
+curl -o in.lj https://raw.githubusercontent.com/lammps/lammps/refs/heads/develop/bench/in.lj
+export OMP_NUM_THREADS=1
+mpirun -np 4 lmp -in in.lj
+rm -r /tmp/$USER
