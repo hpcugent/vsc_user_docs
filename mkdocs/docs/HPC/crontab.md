@@ -22,7 +22,8 @@ running the command:
 <pre><code>$ <b>crontab -e</b>
 </code></pre>
 
-**Warning**: **During maintenance it is possible that your crontab will be wiped. It is recommended to have a back-up of the content in your crontab.**
+!!! Warning
+    During maintenance it is possible that your crontab will be wiped. It is recommended to have a back-up of the content in your crontab.
 
 #### Example cron job script
 
