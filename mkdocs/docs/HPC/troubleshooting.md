@@ -485,7 +485,10 @@ As a rule of thumb, toolchains in the same row are compatible with each other:
 
 |                |                          |                         |             |
 |----------------|--------------------------|-------------------------|-------------|
+| GCCcore-14.3.0 | GCC-14.3.0               | gfbf-2025b/gompi-2025b  | foss-2025b  |
+| GCCcore-14.3.0 | intel-compilers-2025.2.0 | iimkl-2025b/iimpi-2025b | intel-2025b |
 | GCCcore-14.2.0 | GCC-14.2.0               | gfbf-2025a/gompi-2025a  | foss-2025a  |
+| GCCcore-14.2.0 | intel-compilers-2025.1.1 | iimkl-2025a/iimpi-2025a | intel-2025a |
 | GCCcore-13.3.0 | GCC-13.3.0               | gfbf-2024a/gompi-2024a  | foss-2024a  |
 | GCCcore-13.3.0 | intel-compilers-2024.2.0 | iimkl-2024a/iimpi-2024a | intel-2024a |
 | GCCcore-13.2.0 | GCC-13.2.0               | gfbf-2023b/gompi-2023b  | foss-2023b  |
