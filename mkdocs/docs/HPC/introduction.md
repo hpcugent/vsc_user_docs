@@ -422,4 +422,4 @@ chapters [Running interactive jobs]() to [Fine-tuning Job Specifications]() wh
 
 Do not hesitate to contact the {{ hpc }} staff for any help.
 
-[^1]: Wikipedia: <http://en.wikipedia.org/wiki/Supercomputer>
+[^1]: Wikipedia: <https://en.wikipedia.org/wiki/Supercomputer>
