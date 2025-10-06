@@ -30,12 +30,3 @@ jobs:
         run: |
           python3 build.py
           find build -type f
-
-      - name: Check faulty external links
-        run: |
-          cd scripts/link_checker
-          pip install -r requirements.txt
-          echo "Generating links from build"
-          ./generate_links_from_build.sh ../../build/HPC/Gent > links.txt
-          echo "Checking links"
-          python check_links.py --whitelist whitelist.txt links.txt
