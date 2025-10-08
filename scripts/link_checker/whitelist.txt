@@ -25,7 +25,7 @@ https://shieldon.ugent.be/xdmod
 https://shieldon.ugent.be/xdmod/user_manual/index.php
 
 # 403
-http://hpc.ugent.be/clusterstate
+https://hpc.ugent.be/clusterstate
 https://linux.die.net/man/1/rsync
 https://linux.die.net/man/1/setfacl
 https://login.hpc.ugent.be
@@ -34,9 +34,9 @@ https://login.hpc.ugent.be/pun/sys/dashboard/support?category=swreport
 https://elearning.vib.be/courses/alphafold
 
 # 403 for openfoam.com (unclear why)
-http://openfoam.com
 https://openfoam.com
-http://openfoam.com/history/
+https://openfoam.com
+https://openfoam.com/history/
 https://wiki.openfoam.com/Tutorials
 https://www.openfoam.com/documentation/user-guide
 
@@ -46,7 +46,7 @@ https://nl.mathworks.com/help/distcomp/parpool.html
 https://nl.mathworks.com/products/distriben.html
 
 # 402 for Wikipedia (AI scraper limitations?)
-http://en.wikipedia.org/wiki/Supercomputer
+https://en.wikipedia.org/wiki/Supercomputer
 https://en.wikipedia.org/wiki/Supercomputer
 https://en.wikipedia.org/wiki/Amdahl%27s_law
 https://en.wikipedia.org/wiki/Global_interpreter_lock
@@ -71,7 +71,7 @@ https://www.tldp.org/guides.html
 https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-0
 
 # gone?
-http://www.straightrunning.com/XmingNotes/
+https://www.straightrunning.com/XmingNotes/
 
 # 404 only accessible from UGent network
 https://ugentbe.sharepoint.com/:u:/r/sites/intranet-personeelszaken/SitePages/en/Vrijwillig-medewerker-en-postdoctoraal-onbezoldigd-medewerker.aspx

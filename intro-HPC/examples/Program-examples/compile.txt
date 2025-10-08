@@ -43,7 +43,7 @@ Linking with MKL LAPACK:
 Linking with ScaLAPACK:
   -L$(MKLROOT)/lib/intel64 -lmkl_scalapack_ilp64  -Wl,--start-group -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core -lmkl_blacs_intelmpi_ilp64 -Wl,--end-group -lpthread
 
-See also: http://software.intel.com/en-us/articles/intel-mkl-link-line-advisor/
+See also: https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor/
 
 
 MPI example script:
