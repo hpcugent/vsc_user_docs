@@ -199,7 +199,7 @@ that it's not installed everywhere, while `top` is.
 To exit `top`, use `q` (for 'quit').
 
 For more information, see [Brendan Gregg's excellent site dedicated to
-performance analysis](http://brendangregg.com).
+performance analysis](https://brendangregg.com).
 
 ### ulimit
 

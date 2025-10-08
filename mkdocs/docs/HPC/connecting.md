@@ -360,7 +360,7 @@ Last login: Mon Jan 12 18:52:20 2015 from example.kuleuven.be
 * status messages concerning KU Leuven       *
 * services (incl. HPC):                      *
 *                                            *
-*   http://status.kuleuven.be/               *
+*   https://status.kuleuven.be/              *
 *                                            *
 * For VSC user documentation:                *
 *                                            *
@@ -512,7 +512,7 @@ terminal window and jump in!
 To transfer files to and from the cluster, we recommend the use of
 WinSCP, a graphical file management tool which can transfer files using
 secure protocols such as SFTP and SCP. WinSCP is freely available from
-<http://www.winscp.net>.
+<https://www.winscp.net>.
 
 To transfer your files using WinSCP,
 

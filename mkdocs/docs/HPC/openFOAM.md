@@ -8,10 +8,10 @@ provided OpenFOAM installations on the VSC {{hpc}} infrastructure.
 There are currently three different sets of versions of OpenFOAM
 available, each with its own versioning scheme:
 
--   OpenFOAM versions released via <http://openfoam.com>: `v3.0+`,
+-   OpenFOAM versions released via <https://openfoam.com>: `v3.0+`,
     `v1706`
 
-    -   see also <http://openfoam.com/history/>
+    -   see also <https://openfoam.com/history/>
 
 -   OpenFOAM versions released via <https://openfoam.org>: `v4.1`,
     `v5.0`

@@ -33,8 +33,8 @@
 #PBS -l pmem=8G
 
 ## other options can be found on
-## http://www.adaptivecomputing.com/resources/docs/mwm/13.3rmextensions.php
-## http://www.adaptivecomputing.com/resources/docs/mwm/5.3nodeaccess.php
+## https://www.adaptivecomputing.com/resources/docs/mwm/13.3rmextensions.php
+## https://www.adaptivecomputing.com/resources/docs/mwm/5.3nodeaccess.php
 
 
 module purge
