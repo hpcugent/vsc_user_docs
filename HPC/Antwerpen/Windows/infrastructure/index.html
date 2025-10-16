@@ -1101,8 +1101,8 @@ Science and Innovation (EWI).</p>
 <h2 id="tier-2-login-nodes">Tier-2 login nodes<a class="headerlink" href="#tier-2-login-nodes" title="Permanent link">#</a></h2>
 <p>Log in to the HPC-UGent Tier-2 infrastructure via <a href="https://login.hpc.ugent.be">https://login.hpc.ugent.be</a>
 or using SSH via <code>login.hpc.ugent.be</code>.</p>
-<p>more info on using the web portal you can find <a href="web_portal">here</a>,
-and about connection with SSH <a href="connecting">here</a>.</p>
+<p>More info on using the web portal you can find <a href="../web_portal/">here</a>,
+and about connection with SSH <a href="../connecting/">here</a>.</p>
 <h2 id="tier-2-compute-clusters">Tier-2 compute clusters<a class="headerlink" href="#tier-2-compute-clusters" title="Permanent link">#</a></h2>
 <h3 id="cpu-clusters">CPU clusters<a class="headerlink" href="#cpu-clusters" title="Permanent link">#</a></h3>
 <p>The HPC-UGent Tier-2 infrastructure currently included several standard
@@ -1132,7 +1132,7 @@ CPU-only clusters, of different generations (listed from old to new).</p>
 <td>RHEL 9</td>
 </tr>
 <tr>
-<td>gallade (*)</td>
+<td>gallade</td>
 <td>16</td>
 <td>2x 64-core AMD EPYC 7773X (Milan-X @ 2.2 GHz)</td>
 <td>940 GiB</td>
@@ -1151,20 +1151,21 @@ CPU-only clusters, of different generations (listed from old to new).</p>
 </tr>
 </tbody>
 </table>
-<p>(*) also see this <a href="./only/gent/2023/donphan-gallade#gallade-large-memory-cluster">extra information</a></p>
 <h3 id="interactive-debug-cluster">Interactive debug cluster<a class="headerlink" href="#interactive-debug-cluster" title="Permanent link">#</a></h3>
 <p>A special-purpose interactive debug cluster is available,
 where you should always be able to get a job running quickly,
 <strong>without waiting in the queue</strong>.</p>
 <p>Intended usage is mainly for interactive work,
-either via an interactive job or using the <a href="web_portal">HPC-UGent web portal</a>.</p>
+either via an interactive job or using the <a href="../web_portal/">HPC-UGent web portal</a>.</p>
 <p>This cluster is heavily over-provisioned, so jobs may
 run slower if the cluster is used more heavily.</p>
-<p>Strict limits are in place per user:
- * max. 5 jobs in queue
- * max. 3 jobs running
- * max. of 8 cores and 27GB of memory in total for running jobs</p>
-<p>For more information, see our <a href="interactive_gent">documentation</a>.</p>
+<p>Strict limits are in place per user:</p>
+<ul>
+<li>max. 5 jobs in queue</li>
+<li>max. 3 jobs running</li>
+<li>max. of 8 cores and 27GB of memory in total for running jobs</li>
+</ul>
+<p>For more information, see our <a href="../interactive_debug/">documentation</a>.</p>
 <table>
 <thead>
 <tr>
@@ -1282,7 +1283,7 @@ can leverage the GPU resources (like TensorFlow, PyTorch, GROMACS, AlphaFold, et
 </table>
 <p>^ Storage space for a group of users (Virtual Organisation or VO for short) can be
 increased significantly on request. For more information, see our
-<a href="running_jobs_with_input_output_data#virtual-organisations">documentation</a>.</p>
+<a href="../running_jobs_with_input_output_data/#virtual-organisations">documentation</a>.</p>
 <h2 id="infrastructure-status">Infrastructure status<a class="headerlink" href="#infrastructure-status" title="Permanent link">#</a></h2>
 <p><a href="https://www.ugent.be/hpc/en/infrastructure/status">Check the system status</a></p>
 
