@@ -13,8 +13,8 @@ Science and Innovation (EWI).
 Log in to the HPC-UGent Tier-2 infrastructure via [https://login.hpc.ugent.be](https://login.hpc.ugent.be)
 or using SSH via `login.hpc.ugent.be`.
 
-more info on using the web portal you can find [here](web_portal),
-and about connection with SSH [here](connecting).
+More info on using the web portal you can find [here](web_portal.md),
+and about connection with SSH [here](connecting.md).
 
 ## Tier-2 compute clusters
 
@@ -29,10 +29,8 @@ For basic information on using these clusters, see our
 | ***cluster name*** | ***# nodes*** | ***Processor architecture*** | ***Usable memory/node*** | ***Local diskspace/node*** | ***Interconnect*** | ***Operating system*** |
 | --- | --- | --- | --- | --- | --- | --- |
 | doduo (default cluster) | 128 | 2x 48-core AMD EPYC 7552 (Rome @ 2.2 GHz) | 250 GiB | 180GB SSD | HDR-100 InfiniBand | RHEL 9 |
-| gallade (*) | 16 | 2x 64-core AMD EPYC 7773X (Milan-X @ 2.2 GHz) | 940 GiB | 1.5 TB NVME | HDR-100 InfiniBand | RHEL 9 |
+| gallade | 16 | 2x 64-core AMD EPYC 7773X (Milan-X @ 2.2 GHz) | 940 GiB | 1.5 TB NVME | HDR-100 InfiniBand | RHEL 9 |
 | shinx | 48 | 2x 96-core AMD EPYC 9654 (Genoa @ 2.4 GHz) | 370 GiB | 500GB NVME | NDR-200 InfiniBand | RHEL 9 |
-
-(*) also see this [extra information](./only/gent/2023/donphan-gallade#gallade-large-memory-cluster)
 
 ### Interactive debug cluster
 
@@ -42,17 +40,18 @@ where you should always be able to get a job running quickly,
 **without waiting in the queue**.
 
 Intended usage is mainly for interactive work,
-either via an interactive job or using the [HPC-UGent web portal](web_portal).
+either via an interactive job or using the [HPC-UGent web portal](web_portal.md).
 
 This cluster is heavily over-provisioned, so jobs may
 run slower if the cluster is used more heavily.
 
 Strict limits are in place per user:
+
  * max. 5 jobs in queue
  * max. 3 jobs running
  * max. of 8 cores and 27GB of memory in total for running jobs
 
-For more information, see our [documentation](interactive_gent).
+For more information, see our [documentation](interactive_debug.md).
 
 | ***cluster name*** | ***# nodes*** | ***Processor architecture*** | ***Usable memory/node*** | ***Local diskspace/node*** | ***Interconnect*** | ***Operating system*** |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -88,7 +87,7 @@ For more information on using these clusters, see our documentation.
 
 ^ Storage space for a group of users (Virtual Organisation or VO for short) can be
 increased significantly on request. For more information, see our
-[documentation](running_jobs_with_input_output_data#virtual-organisations).
+[documentation](running_jobs_with_input_output_data.md#virtual-organisations).
 
 ## Infrastructure status
 
