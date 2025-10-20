@@ -14,11 +14,12 @@ The overview below shows which NCCL installations are available per HPC-UGent Ti
 To start using NCCL, load one of these modules using a `module load` command like:
 
 ```shell
-module load NCCL/2.18.3-GCCcore-12.3.0-CUDA-12.1.1
+module load NCCL/2.22.3-GCCcore-13.3.0-CUDA-12.6.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NCCL/2.22.3-GCCcore-13.3.0-CUDA-12.6.0|x|-|x|-|x|x|-|
 |NCCL/2.18.3-GCCcore-12.3.0-CUDA-12.1.1|x|-|x|-|x|x|x|

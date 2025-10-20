@@ -22,5 +22,6 @@ module load GDRCopy/2.4.4-GCCcore-14.2.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |GDRCopy/2.4.4-GCCcore-14.2.0|x|-|x|x|x|x|x|
+|GDRCopy/2.4.1-GCCcore-13.3.0|x|-|x|-|x|x|x|
 |GDRCopy/2.4-GCCcore-13.2.0|x|-|x|-|x|x|x|
 |GDRCopy/2.3.1-GCCcore-12.3.0|x|-|x|x|x|x|x|

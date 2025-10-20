@@ -26,4 +26,5 @@ module load ASE/3.25.0-gfbf-2025a
 |ASE/3.24.0-gfbf-2023a|x|-|x|-|x|x|-|
 |ASE/3.23.0-gfbf-2023b|x|x|x|x|x|x|x|
 |ASE/3.23.0-gfbf-2023a|-|x|-|x|-|x|x|
+|ASE/3.22.1-iimkl-2023a|x|x|-|x|-|-|-|
 |ASE/3.22.1-gfbf-2023a|x|x|x|x|x|x|x|

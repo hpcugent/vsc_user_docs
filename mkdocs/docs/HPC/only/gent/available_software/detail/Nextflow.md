@@ -14,13 +14,14 @@ The overview below shows which Nextflow installations are available per HPC-UGen
 To start using Nextflow, load one of these modules using a `module load` command like:
 
 ```shell
-module load Nextflow/25.04.4
+module load Nextflow/25.04.8
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Nextflow/25.04.8|x|x|x|x|x|x|x|
 |Nextflow/25.04.4|x|x|x|x|x|x|x|
 |Nextflow/24.10.2|x|x|x|x|x|x|x|
 |Nextflow/24.04.2|x|x|x|x|x|x|x|

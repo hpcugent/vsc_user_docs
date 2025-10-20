@@ -23,4 +23,5 @@ module load h5py/3.12.1-foss-2024a
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |h5py/3.12.1-foss-2024a|x|x|x|x|x|x|x|
 |h5py/3.11.0-foss-2023b|x|x|x|x|x|x|x|
+|h5py/3.9.0-iomkl-2023a-serial|x|x|x|x|x|x|x|
 |h5py/3.9.0-foss-2023a|x|x|x|x|x|x|x|

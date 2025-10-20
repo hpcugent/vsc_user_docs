@@ -14,11 +14,13 @@ The overview below shows which ORCA installations are available per HPC-UGent Ti
 To start using ORCA, load one of these modules using a `module load` command like:
 
 ```shell
-module load ORCA/6.0.1-gompi-2023b-avx2
+module load ORCA/6.1.0-gompi-2023b-avx2
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ORCA/6.1.0-gompi-2023b-avx2|x|x|x|x|x|x|x|
+|ORCA/6.1.0-gompi-2023b|x|x|x|x|x|x|x|
 |ORCA/6.0.1-gompi-2023b-avx2|x|x|x|x|x|x|x|
