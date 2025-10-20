@@ -24,4 +24,5 @@ module load spglib-python/2.6.0-gfbf-2025a
 |spglib-python/2.6.0-gfbf-2025a|x|x|x|x|x|x|x|
 |spglib-python/2.5.0-gfbf-2024a|x|x|x|x|x|x|x|
 |spglib-python/2.5.0-gfbf-2023b|x|x|x|x|x|x|x|
+|spglib-python/2.1.0-iimkl-2023a|x|x|x|x|x|x|x|
 |spglib-python/2.1.0-gfbf-2023a|x|x|x|x|x|x|x|

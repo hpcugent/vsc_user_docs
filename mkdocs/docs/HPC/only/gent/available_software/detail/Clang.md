@@ -14,13 +14,14 @@ The overview below shows which Clang installations are available per HPC-UGent T
 To start using Clang, load one of these modules using a `module load` command like:
 
 ```shell
-module load Clang/18.1.8-GCCcore-13.3.0
+module load Clang/18.1.8-GCCcore-13.3.0-CUDA-12.6.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Clang/18.1.8-GCCcore-13.3.0-CUDA-12.6.0|x|-|x|-|-|x|-|
 |Clang/18.1.8-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |Clang/17.0.6-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Clang/17.0.0_20230515-GCCcore-12.3.0-CUDA-12.1.1|x|-|x|-|x|x|-|

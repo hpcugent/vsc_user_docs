@@ -26,5 +26,6 @@ module load HDF5/1.14.6-gompi-2025a
 |HDF5/1.14.3-iimpi-2023b|x|x|x|x|x|x|x|
 |HDF5/1.14.3-gompi-2023b|x|x|x|x|x|x|x|
 |HDF5/1.14.0-iompi-2023a|x|x|x|x|x|x|x|
+|HDF5/1.14.0-intel-compilers-2023.1.0-serial|x|x|x|x|x|x|x|
 |HDF5/1.14.0-gompi-2023a|x|x|x|x|x|x|x|
 |HDF5/1.12.2-gompi-2022a|-|-|-|-|-|x|x|

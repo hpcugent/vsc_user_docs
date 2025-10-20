@@ -14,13 +14,14 @@ The overview below shows which HarfBuzz installations are available per HPC-UGen
 To start using HarfBuzz, load one of these modules using a `module load` command like:
 
 ```shell
-module load HarfBuzz/9.0.0-GCCcore-13.3.0
+module load HarfBuzz/11.2.1-GCCcore-14.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HarfBuzz/11.2.1-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |HarfBuzz/9.0.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |HarfBuzz/8.2.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |HarfBuzz/5.3.1-GCCcore-12.3.0|x|x|x|x|x|x|x|

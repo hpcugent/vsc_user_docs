@@ -14,13 +14,14 @@ The overview below shows which libglvnd installations are available per HPC-UGen
 To start using libglvnd, load one of these modules using a `module load` command like:
 
 ```shell
-module load libglvnd/1.7.0-GCCcore-13.3.0
+module load libglvnd/1.7.0-GCCcore-14.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libglvnd/1.7.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |libglvnd/1.7.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |libglvnd/1.7.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |libglvnd/1.6.0-GCCcore-12.3.0|x|x|x|x|x|x|x|

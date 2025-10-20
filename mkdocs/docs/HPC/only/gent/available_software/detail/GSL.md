@@ -23,6 +23,7 @@ module load GSL/2.8-GCC-14.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |GSL/2.8-GCC-14.2.0|x|x|x|x|x|x|x|
 |GSL/2.8-GCC-13.3.0|x|x|x|x|x|x|x|
+|GSL/2.7-intel-compilers-2023.1.0|x|x|x|x|x|x|x|
 |GSL/2.7-GCC-13.2.0|x|x|x|x|x|x|x|
 |GSL/2.7-GCC-12.3.0|x|x|x|x|x|x|x|
 |GSL/2.7-GCC-12.2.0|-|-|-|-|-|x|x|

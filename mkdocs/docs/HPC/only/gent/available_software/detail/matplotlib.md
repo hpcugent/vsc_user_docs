@@ -24,6 +24,7 @@ module load matplotlib/3.10.3-gfbf-2025a
 |matplotlib/3.10.3-gfbf-2025a|x|x|x|x|x|x|x|
 |matplotlib/3.9.2-gfbf-2024a|x|x|x|x|x|x|x|
 |matplotlib/3.8.2-gfbf-2023b|x|x|x|x|x|x|x|
+|matplotlib/3.7.2-iimkl-2023a|x|x|x|x|x|x|x|
 |matplotlib/3.7.2-gfbf-2023a|x|x|x|x|x|x|x|
 |matplotlib/3.5.2-foss-2022a|-|-|-|-|-|x|x|
 |matplotlib/2.2.5-foss-2023a-Python-2.7.18|x|x|x|x|x|x|x|
