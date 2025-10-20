@@ -21,5 +21,5 @@ module load Spark/3.5.1-foss-2023a-Java-17
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Spark/3.5.1-foss-2023a-Java-17|-|x|-|x|-|-|-|
+|Spark/3.5.1-foss-2023a-Java-17|x|x|x|x|x|x|x|
 |Spark/3.5.0-foss-2023a|-|x|-|x|-|-|-|

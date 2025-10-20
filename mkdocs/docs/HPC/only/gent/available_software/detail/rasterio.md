@@ -14,11 +14,12 @@ The overview below shows which rasterio installations are available per HPC-UGen
 To start using rasterio, load one of these modules using a `module load` command like:
 
 ```shell
-module load rasterio/1.3.9-foss-2023a
+module load rasterio/1.4.3-foss-2024a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|rasterio/1.4.3-foss-2024a|x|x|x|x|x|x|x|
 |rasterio/1.3.9-foss-2023a|x|x|x|x|x|x|x|

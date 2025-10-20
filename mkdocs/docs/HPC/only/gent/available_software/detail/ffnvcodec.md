@@ -14,13 +14,14 @@ The overview below shows which ffnvcodec installations are available per HPC-UGe
 To start using ffnvcodec, load one of these modules using a `module load` command like:
 
 ```shell
-module load ffnvcodec/12.2.72.0
+module load ffnvcodec/13.0.19.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ffnvcodec/13.0.19.0|x|x|x|x|x|x|x|
 |ffnvcodec/12.2.72.0|x|x|x|x|x|x|x|
 |ffnvcodec/12.1.14.0|x|x|x|x|x|x|x|
 |ffnvcodec/12.0.16.0|x|x|x|x|x|x|x|

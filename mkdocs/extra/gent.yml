@@ -16,7 +16,7 @@ hpcname: hpcugent
 loginnode: login.hpc.ugent.be
 loginhost: gligar09.gastly.os
 altloginhost: gligar10.gastly.os
-modules_last_updated: Thu, 21 Aug 2025 at 15:46:00 CEST # This line is automatically updated by scripts/available_modules/available_modules.py
+modules_last_updated: Mon, 20 Oct 2025 at 07:58:22 CEST # This line is automatically updated by scripts/available_modules/available_modules.py
 # get these with ssh-keyscan gligar01.ugent.be > file
 # ssh-keygen -l -f file
 # ssh-keygen -l -f file -E md5
@@ -69,7 +69,7 @@ othercluster: donphan
 hpcinfo: hpc@ugent.be
 hpcusersml: hpc-users@lists.ugent.be
 hpcannounceml: hpc-announce@lists.ugent.be
-operatingsystem: RHEL 9.4 (doduo, donphan, gallade, shinx, joltik, accelgor, litleo)
+operatingsystem: RHEL 9.6 (doduo, donphan, gallade, shinx, joltik, accelgor, litleo)
 operatingsystembase: Red Hat Enterprise Linux
 # Special for perfexpert tutorial
 mpirun: vsc-mympirun

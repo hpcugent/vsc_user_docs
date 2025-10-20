@@ -14,13 +14,14 @@ The overview below shows which GDAL installations are available per HPC-UGent Ti
 To start using GDAL, load one of these modules using a `module load` command like:
 
 ```shell
-module load GDAL/3.10.0-foss-2024a
+module load GDAL/3.11.1-foss-2025a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GDAL/3.11.1-foss-2025a|x|x|x|x|x|x|x|
 |GDAL/3.10.0-foss-2024a|x|x|x|x|x|x|x|
 |GDAL/3.9.0-foss-2023b|x|x|x|x|x|x|x|
 |GDAL/3.7.1-foss-2023a|x|x|x|x|x|x|x|

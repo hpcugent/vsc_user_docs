@@ -14,13 +14,14 @@ The overview below shows which GEOS installations are available per HPC-UGent Ti
 To start using GEOS, load one of these modules using a `module load` command like:
 
 ```shell
-module load GEOS/3.12.2-GCC-13.3.0
+module load GEOS/3.13.1-GCC-14.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GEOS/3.13.1-GCC-14.2.0|x|x|x|x|x|x|x|
 |GEOS/3.12.2-GCC-13.3.0|x|x|x|x|x|x|x|
 |GEOS/3.12.1-GCC-13.2.0|x|x|x|x|x|x|x|
 |GEOS/3.12.0-GCC-12.3.0|x|x|x|x|x|x|x|

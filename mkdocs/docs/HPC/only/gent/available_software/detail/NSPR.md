@@ -14,12 +14,13 @@ The overview below shows which NSPR installations are available per HPC-UGent Ti
 To start using NSPR, load one of these modules using a `module load` command like:
 
 ```shell
-module load NSPR/4.35-GCCcore-13.2.0
+module load NSPR/4.36-GCCcore-14.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NSPR/4.36-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |NSPR/4.35-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |NSPR/4.35-GCCcore-12.3.0|x|x|x|x|x|x|x|

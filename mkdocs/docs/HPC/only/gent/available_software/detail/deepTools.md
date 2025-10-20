@@ -21,4 +21,4 @@ module load deepTools/3.5.5-gfbf-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|deepTools/3.5.5-gfbf-2023a|x|x|-|x|-|x|x|
+|deepTools/3.5.5-gfbf-2023a|x|x|x|x|x|x|x|

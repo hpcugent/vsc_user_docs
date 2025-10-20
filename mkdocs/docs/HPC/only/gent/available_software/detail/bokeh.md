@@ -14,13 +14,14 @@ The overview below shows which bokeh installations are available per HPC-UGent T
 To start using bokeh, load one of these modules using a `module load` command like:
 
 ```shell
-module load bokeh/3.6.0-gfbf-2024a
+module load bokeh/3.7.3-gfbf-2025a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|bokeh/3.7.3-gfbf-2025a|x|x|x|x|x|x|x|
 |bokeh/3.6.0-gfbf-2024a|x|x|x|x|x|x|x|
 |bokeh/3.4.1-gfbf-2023b|x|x|x|x|x|x|x|
 |bokeh/3.2.2-foss-2023a|x|x|x|x|x|x|x|

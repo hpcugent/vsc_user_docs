@@ -14,13 +14,14 @@ The overview below shows which libtool installations are available per HPC-UGent
 To start using libtool, load one of these modules using a `module load` command like:
 
 ```shell
-module load libtool/2.5.4-GCCcore-14.2.0
+module load libtool/2.5.4-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libtool/2.5.4-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |libtool/2.5.4-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |libtool/2.4.7-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |libtool/2.4.7-GCCcore-13.2.0|x|x|x|x|x|x|x|
