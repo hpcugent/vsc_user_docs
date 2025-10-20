@@ -67,9 +67,6 @@ https://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html
 https://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html
 https://www.tldp.org/guides.html
 
-# 403
-https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-0
-
 # gone?
 https://www.straightrunning.com/XmingNotes/
 

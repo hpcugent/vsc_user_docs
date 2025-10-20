@@ -360,7 +360,7 @@ Last login: Mon Jan 12 18:52:20 2015 from example.kuleuven.be
 * status messages concerning KU Leuven       *
 * services (incl. HPC):                      *
 *                                            *
-*   https://status.kuleuven.be/              *
+*   https://status.kuleuven.be/               *
 *                                            *
 * For VSC user documentation:                *
 *                                            *
