@@ -60,7 +60,7 @@ or because the pinning is done incorrectly and several threads/processes are bei
 - **Lack of sufficient memory**: When there is not enough memory available, or not enough memory bandwidth, 
 it is likely that you will not see a significant speedup when using more cores (since each thread or process most likely requires additional memory).
 
-More info on running multi-core workloads on the {{ hpcinfra }} can be found [here](multi_core_jobs.md).
+There is more info on [running multi-core workloads](multi_core_jobs.md) on the {{ hpcinfra }}.
 
 ### Using multiple nodes
 When trying to use multiple (worker)nodes to improve the performance of your workloads, you may not see (significant) speedup.
@@ -74,7 +74,7 @@ Actually using additional nodes is not as straightforward as merely asking for m
 Using the resources of multiple nodes is often done using a [Message Passing Interface (MPI)](https://en.wikipedia.org/wiki/Message_Passing_Interface) library.
 MPI allows nodes to communicate and coordinate, but it also introduces additional complexity.
 
-An example of how you can make beneficial use of multiple nodes can be found [here](multi_core_jobs.md#parallel-computing-with-mpi).
+We have an example of [how you can make beneficial use of multiple nodes](multi_core_jobs.md#parallel-computing-with-mpi).
 
 You can also use MPI in Python, some useful packages that are also available on the HPC are:
 
