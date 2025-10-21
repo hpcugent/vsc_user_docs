@@ -79,8 +79,12 @@ Make sure you can get to a shell access to the {{hpcinfra}} before proceeding wi
 
 Now that you can login, it is time to transfer files from your local computer to your **home directory** on the {{hpcinfra}}.
 
-Download [tensorflow_mnist.py](https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/tensorflow_mnist.py) 
-and [run.sh](https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/run.sh) example scripts to your computer (from [here](https://github.com/hpcugent/vsc_user_docs/tree/main/{{exampleloc}})).
+Download following the example scripts to your computer:
+
+- [tensorflow_mnist.py](https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/tensorflow_mnist.py) 
+- [run.sh](https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/run.sh)
+
+You can also find the example scripts in our git repo: [https://github.com/hpcugent/vsc_user_docs/](https://github.com/hpcugent/vsc_user_docs/tree/4c3caefe7ac69f2476079f4b44f033e4e30ba7ab/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist).
 
 {%- if OS == windows %}
 
