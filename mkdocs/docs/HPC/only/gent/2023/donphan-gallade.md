@@ -15,7 +15,7 @@ For software installation requests, please use the [request form](https://www.ug
 
 `donphan` is the new debug/interactive cluster.
 
-It replaces `slaking`, which will be retired on **Monday 22 May 2023**.
+It replaces `slaking`, which was retired on **Monday 22 May 2023**.
 
 It is primarily intended for interactive use: interactive shell sessions, using GUI applications through the
 [HPC-UGent web portal](../../../web_portal.md), etc.
@@ -135,4 +135,6 @@ a `gallade` workernode has 128 cores (so ~7.3 GiB per core on average), while a 
 (so ~20.5 GiB per core on average).
 
 It is important to take this aspect into account when submitting jobs to `gallade`, especially when requesting
-all cores via `ppn=all`. You may need to explictly request more memory (see also [here](../../../fine_tuning_job_specifications#pbs_mem)).
+all cores via `ppn=all`.
+You may need to explictly request more memory by
+[setting the memory parameter](../../../fine_tuning_job_specifications#pbs_mem).
