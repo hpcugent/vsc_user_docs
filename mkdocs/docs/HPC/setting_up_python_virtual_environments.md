@@ -363,7 +363,8 @@ $ python
 Illegal instruction (core dumped)
 ```
 
-we are presented with the illegal instruction error. More info on this [here](troubleshooting.md#illegal-instruction-error)
+we are presented with the illegal instruction error.
+More info on this on the [troubleshooting page](troubleshooting.md#illegal-instruction-error)
 
 ### Error: GLIBC not found
 
