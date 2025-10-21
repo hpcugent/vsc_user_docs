@@ -14,12 +14,14 @@ The overview below shows which CellBender installations are available per HPC-UG
 To start using CellBender, load one of these modules using a `module load` command like:
 
 ```shell
-module load CellBender/0.3.0-foss-2023a-CUDA-12.1.1
+module load CellBender/0.3.2-foss-2023a-CUDA-12.1.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CellBender/0.3.2-foss-2023a-CUDA-12.1.1|x|-|x|-|x|x|-|
+|CellBender/0.3.2-foss-2023a|x|x|x|x|x|x|x|
 |CellBender/0.3.0-foss-2023a-CUDA-12.1.1|x|-|-|-|x|x|-|
 |CellBender/0.3.0-foss-2023a|-|x|x|x|x|x|x|
