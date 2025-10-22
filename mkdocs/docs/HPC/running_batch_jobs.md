@@ -833,7 +833,9 @@ The output of the various commands interacting with jobs (`qsub`,
 It is possible to submit jobs from a job to a cluster different than the one your job is running on.
 This could come in handy if, for example, the tool used to submit jobs only works on a particular cluster 
 (or only on the login nodes), but the jobs can be run on several clusters.
-An example of this is the `wsub` command of `worker`, see also [here](troubleshooting.md#multi-job-submissions-on-a-non-default-cluster).
+An example of this is the `wsub` command of `worker`.
+More info on these commands is in the document on [multi job submission](multi_job_submission.md)
+or on the [troubleshooting page](troubleshooting.md#multi-job-submissions-on-a-non-default-cluster).
 
 To submit jobs to the `{{othercluster}}` cluster, you can change only what is needed in your session environment 
 to submit jobs to that particular cluster by using `module swap env/slurm/{{othercluster}}` instead of using 
