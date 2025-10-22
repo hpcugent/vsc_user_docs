@@ -32,11 +32,9 @@ Through this web portal, you can:
 
 -   open a terminal session directly in your web browser;
 
-More detailed information is available below, as well as in the [Open
-OnDemand
-documentation](https://osc.github.io/ood-documentation/latest/). A
-walkthrough video is available on YouTube
-[here](https://www.youtube.com/watch?v=4-w-4wjlnPk).
+More detailed information is available below, as well as in the
+[Open OnDemand documentation](https://osc.github.io/ood-documentation/latest/).  
+A [walkthrough video](https://www.youtube.com/watch?v=4-w-4wjlnPk) is available on YouTube.
 
 ## Pilot access
 
