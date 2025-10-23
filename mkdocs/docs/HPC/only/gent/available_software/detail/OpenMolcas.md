@@ -21,5 +21,5 @@ module load OpenMolcas/25.06-iomkl-2023a-DMRG-no-MPI
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenMolcas/25.06-iomkl-2023a-DMRG-no-MPI|x|x|-|x|-|-|-|
+|OpenMolcas/25.06-iomkl-2023a-DMRG-no-MPI|x|x|x|x|x|x|x|
 |OpenMolcas/24.10-iomkl-2023a|x|x|x|x|x|x|x|
