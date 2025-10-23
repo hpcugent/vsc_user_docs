@@ -47,7 +47,7 @@ MPI.
 
 !!! warning
     Just requesting more nodes and/or cores does not mean that your job will automatically run faster.
-    You can find more about this [here](troubleshooting.md#job_does_not_run_faster).
+    This is explained on the [troubleshooting page](troubleshooting.md#job_does_not_run_faster).
 
 ## Parallel Computing with threads
 

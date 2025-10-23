@@ -20,8 +20,8 @@ It is therefore recommended to first familiarize yourself with AlphaFold. The fo
 - VSC webpage about AlphaFold: <https://www.vscentrum.be/alphafold>
 - Introductory course on AlphaFold by VIB: <https://elearning.vib.be/courses/alphafold>
 - "Getting Started with AlphaFold" presentation by Kenneth Hoste (HPC-UGent)
-    - recording available [on YouTube](https://www.youtube.com/watch?v=jP9Qg1yBGcs)
-    - slides available [here (PDF)](https://www.vscentrum.be/_files/ugd/5446c2_f19a8723f7f7460ebe990c28a53e56a2.pdf?index=true)
+    - [recording available](https://www.youtube.com/watch?v=jP9Qg1yBGcs) (on YouTube)
+    - [slides available](https://www.vscentrum.be/_files/ugd/5446c2_f19a8723f7f7460ebe990c28a53e56a2.pdf?index=true) (PDF)
     - see also <https://www.vscentrum.be/alphafold>
 
 
@@ -130,8 +130,8 @@ Likewise for `jackhmmer`, the core count can be controlled via `$ALPHAFOLD_JACKH
 
 ### CPU/GPU comparison
 
-The provided timings were obtained by executing the `T1050.fasta` example, as outlined in the Alphafold [README]({{readme}}). 
-For the corresponding jobscripts, they are available [here](./example-jobscripts).
+The provided timings were obtained by executing the `T1050.fasta` example, as outlined in the [Alphafold README]({{readme}}). 
+The [corresponding jobscripts](#example-jobscripts) are available.
 
 Using `--db_preset=full_dbs`, the following runtime data was collected:
 

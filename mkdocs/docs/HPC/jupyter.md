@@ -89,7 +89,9 @@ $ module load SciPy-bundle/2023.11-gfbf-2023b
 ```
 This throws no errors, since this module uses a toolchain that is compatible with the toolchain used by the notebook
 
-If we use a different SciPy module that uses an incompatible toolchain, we will get a module load conflict when trying to load it (For more info on these errors, see [here](troubleshooting.md#module-conflicts)).
+If we use a different SciPy module that uses an incompatible toolchain, 
+we will get a module load conflict when trying to load it 
+(for more info on these errors, consult the [troubleshooting page](troubleshooting.md#module-conflicts)).
 
 ```shell
 $ module load JupyterNotebook/7.2.0-GCCcore-13.2.0
