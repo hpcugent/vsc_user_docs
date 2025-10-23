@@ -1389,9 +1389,12 @@ a parameter instance is called a work item in Worker parlance.</p>
 <div class="highlight"><pre><span></span><code>module swap env/slurm/donphan
 </code></pre></div>
 <p>instead of</p>
-<p><div class="highlight"><pre><span></span><code>module swap cluster/donphan
+<div class="highlight"><pre><span></span><code>module swap cluster/donphan
 </code></pre></div>
-We recommend using a <code>module swap cluster</code> command after submitting the jobs. Additional information about this as well as more comprehensive details concerning the 'Illegal instruction' error can be accessed <a href="../troubleshooting/#multi-job-submissions-on-a-non-default-cluster">here</a>.</p>
+<p>We recommend using a <code>module swap cluster</code> command after submitting the jobs.
+Additional information about this as well as more comprehensive details
+concerning the 'Illegal instruction' error can be found
+on <a href="../troubleshooting/#multi-job-submissions-on-a-non-default-cluster">the troubleshooting page</a>.</p>
 </div>
 <h2 id="the-worker-framework-job-arrays">The Worker framework: Job arrays<a class="headerlink" href="#the-worker-framework-job-arrays" title="Permanent link">#</a></h2>
 <p>First go to the right directory:</p>

@@ -1686,7 +1686,7 @@ or because the pinning is done incorrectly and several threads/processes are bei
 it is likely that you will not see a significant speedup when using more cores (since each thread or process most likely requires additional memory).</p>
 </li>
 </ul>
-<p>More info on running multi-core workloads on the HPC-UGent infrastructure can be found <a href="../multi_core_jobs/">here</a>.</p>
+<p>There is more info on <a href="../multi_core_jobs/">running multi-core workloads</a> on the HPC-UGent infrastructure.</p>
 <h3 id="using-multiple-nodes">Using multiple nodes<a class="headerlink" href="#using-multiple-nodes" title="Permanent link">#</a></h3>
 <p>When trying to use multiple (worker)nodes to improve the performance of your workloads, you may not see (significant) speedup.</p>
 <p>Parallelizing code across nodes is fundamentally different from leveraging multiple cores via multi-threading within a single node.
@@ -1695,7 +1695,7 @@ This means that just changing <code>#PBS -l nodes=1:ppn=10</code> to <code>#PBS 
 <p>Actually using additional nodes is not as straightforward as merely asking for multiple nodes when submitting your job. The resources on these additional nodes often need to discovered, managed, and synchronized. This introduces complexities in distributing work effectively across the nodes. Luckily, there exist some libraries that do this for you.</p>
 <p>Using the resources of multiple nodes is often done using a <a href="https://en.wikipedia.org/wiki/Message_Passing_Interface">Message Passing Interface (MPI)</a> library.
 MPI allows nodes to communicate and coordinate, but it also introduces additional complexity.</p>
-<p>An example of how you can make beneficial use of multiple nodes can be found <a href="../multi_core_jobs/#parallel-computing-with-mpi">here</a>.</p>
+<p>We have an example of <a href="../multi_core_jobs/#parallel-computing-with-mpi">how you can make beneficial use of multiple nodes</a>.</p>
 <p>You can also use MPI in Python, some useful packages that are also available on the HPC are:</p>
 <ul>
 <li><a href="https://mpi4py.readthedocs.io/en/stable/mpi4py.html">mpi4py</a></li>

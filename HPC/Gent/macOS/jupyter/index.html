@@ -1411,7 +1411,9 @@ To do so, find the module containing the correct Jupyter notebook version (for o
 $<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>SciPy-bundle/2023.11-gfbf-2023b
 </code></pre></div>
 This throws no errors, since this module uses a toolchain that is compatible with the toolchain used by the notebook</p>
-<p>If we use a different SciPy module that uses an incompatible toolchain, we will get a module load conflict when trying to load it (For more info on these errors, see <a href="../troubleshooting/#module-conflicts">here</a>).</p>
+<p>If we use a different SciPy module that uses an incompatible toolchain, 
+we will get a module load conflict when trying to load it 
+(for more info on these errors, consult the <a href="../troubleshooting/#module-conflicts">troubleshooting page</a>).</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>JupyterNotebook/7.2.0-GCCcore-13.2.0
 $<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>SciPy-bundle/2023.07-gfbf-2023a
 Lmod<span class="w"> </span>has<span class="w"> </span>detected<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>error:<span class="w">  </span>...

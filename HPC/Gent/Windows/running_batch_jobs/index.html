@@ -2372,7 +2372,9 @@ is used.</p>
 <p>It is possible to submit jobs from a job to a cluster different than the one your job is running on.
 This could come in handy if, for example, the tool used to submit jobs only works on a particular cluster 
 (or only on the login nodes), but the jobs can be run on several clusters.
-An example of this is the <code>wsub</code> command of <code>worker</code>, see also <a href="../troubleshooting/#multi-job-submissions-on-a-non-default-cluster">here</a>.</p>
+An example of this is the <code>wsub</code> command of <code>worker</code>.
+More info on these commands is in the document on <a href="../multi_job_submission/">multi job submission</a>
+or on the <a href="../troubleshooting/#multi-job-submissions-on-a-non-default-cluster">troubleshooting page</a>.</p>
 <p>To submit jobs to the <code>donphan</code> cluster, you can change only what is needed in your session environment 
 to submit jobs to that particular cluster by using <code>module swap env/slurm/donphan</code> instead of using 
 <code>module swap cluster/donphan</code>.

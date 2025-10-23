@@ -1320,7 +1320,7 @@ they are replacing (<code>slaking</code> and <code>kirlia</code>, respectively).
 <hr />
 <h2 id="donphan-debuginteractive-cluster"><code>donphan</code>: debug/interactive cluster<a class="headerlink" href="#donphan-debuginteractive-cluster" title="Permanent link">#</a></h2>
 <p><code>donphan</code> is the new debug/interactive cluster.</p>
-<p>It replaces <code>slaking</code>, which will be retired on <strong>Monday 22 May 2023</strong>.</p>
+<p>It replaces <code>slaking</code>, which was retired on <strong>Monday 22 May 2023</strong>.</p>
 <p>It is primarily intended for interactive use: interactive shell sessions, using GUI applications through the
 <a href="../../web_portal/">HPC-UGent web portal</a>, etc.</p>
 <p>This cluster consists of 12 workernodes, each with:</p>
@@ -1406,7 +1406,9 @@ the average amount of memory per core is significantly lower on <code>gallade</c
 a <code>gallade</code> workernode has 128 cores (so ~7.3 GiB per core on average), while a <code>kirlia</code> workernode had only 36 cores
 (so ~20.5 GiB per core on average).</p>
 <p>It is important to take this aspect into account when submitting jobs to <code>gallade</code>, especially when requesting
-all cores via <code>ppn=all</code>. You may need to explictly request more memory (see also <a href="../../../fine_tuning_job_specifications#pbs_mem">here</a>).</p>
+all cores via <code>ppn=all</code>.
+You may need to explictly request more memory by
+<a href="../../../fine_tuning_job_specifications#pbs_mem">setting the memory parameter</a>.</p>
 
 
 
