@@ -21,4 +21,4 @@ module load autoCAS/3.0.0-iomkl-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|autoCAS/3.0.0-iomkl-2023a|x|x|x|x|x|-|-|
+|autoCAS/3.0.0-iomkl-2023a|x|x|x|x|x|x|x|
