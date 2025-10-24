@@ -1,0 +1,21 @@
+Joins error output with regular output:
+#PBS -j oe
+All of these options can also be specified on the command-line and will
+overwrite any pragmas present in the script.
+Exercises
+1.  Create a file that contains this message: "Hello, I am &lt;user&gt;",
+    where <user> is replaced by your username. Don't cheat by using an
+    editor, use a command to create the file.
+2.  Use another command to add this line to the same file: "I am on
+    system &lt;hostname&gt; in directory &lt;current&nbsp;directory&gt;". Words
+    between <> should be replaced with their value (hint: use
+    environment variables).
+3.  How many files and directories are in /tmp?
+4.  What's the name of the 5th file/directory in alphabetical order in
+    /tmp?
+5.  List all files that start with t in /tmp.
+6.  Create a file containing "My home directory &lt;home&gt; is available
+    using $HOME". <home> should be replaced with your home directory,
+    but $HOME should remain as-is.
+7.  How many processes are you currently running? How many are you
+    allowed to run? Where are they coming from?
