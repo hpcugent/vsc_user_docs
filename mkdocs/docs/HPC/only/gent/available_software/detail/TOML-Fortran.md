@@ -21,4 +21,4 @@ module load TOML-Fortran/0.4.2-GCC-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TOML-Fortran/0.4.2-GCC-13.3.0|x|x|x|-|x|x|x|
+|TOML-Fortran/0.4.2-GCC-13.3.0|x|x|x|x|x|x|x|

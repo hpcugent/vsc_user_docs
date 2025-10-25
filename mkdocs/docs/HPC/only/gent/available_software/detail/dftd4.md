@@ -21,4 +21,4 @@ module load dftd4/3.7.0-gfbf-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|dftd4/3.7.0-gfbf-2024a|x|x|x|-|x|x|x|
+|dftd4/3.7.0-gfbf-2024a|x|x|x|x|x|x|x|
