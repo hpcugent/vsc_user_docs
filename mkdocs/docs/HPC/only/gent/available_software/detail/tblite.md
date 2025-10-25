@@ -21,4 +21,4 @@ module load tblite/0.4.0-gfbf-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tblite/0.4.0-gfbf-2024a|x|x|x|-|x|x|x|
+|tblite/0.4.0-gfbf-2024a|x|x|x|x|x|x|x|
