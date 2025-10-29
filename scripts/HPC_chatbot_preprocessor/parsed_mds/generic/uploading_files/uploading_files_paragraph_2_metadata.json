@@ -1,0 +1,16 @@
+{
+    "main_title": "uploading_files",
+    "subtitle": "Exercises",
+    "source_file": "../../mkdocs/docs/HPC/linux-tutorial/uploading_files.md",
+    "title_depth": 2,
+    "directory": "uploading_files",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/linux-tutorial/uploading_files/#symlinks-for-datascratch",
+        "1": "https://docs.hpc.ugent.be/linux-tutorial/beyond_the_basics"
+    },
+    "parent_title": "",
+    "previous_title": "uploading_files_paragraph_1",
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/linux-tutorial/uploading_files/#exercises"
+}
