@@ -73,9 +73,18 @@ Default model is `large-v3`, others can be choosen but should be careful to comp
 
 ### Flavour
 
-We currently support 2 flavours: `whisper` (the OpenAI reference implementation), and `whisper-ctranslate2`
-(a faster version with some extras). Benchmarks indicate that `whisper-ctranslate2` is about 4 times faster than `whisper`,
-but might have some lower quality.
+We currently support 3 flavours:
+- `whisper` the OpenAI reference implementation
+- `whisper-ctranslate2` a faster version with some extras
+- `WhisperX` a faster version with most features like voice activity detection and speaker diarization
+
+Benchmarks indicate that `whisper-ctranslate2` is about 4 times faster than `whisper`,
+but might have some lower quality. `WhisperX` should be on par with `whisper-ctranslate2`.
+
+### Speaker diarization
+
+Speaker diarization (associate words with speaker) is only available for the `WhisperX` flavour.
+You must both select the flavour and enable this feature to get the diarization working.
 
 ### Task
 
@@ -91,3 +100,4 @@ than it will take to complete the transcription on the default cluster.
 ## Resources
 
 Default settings of 4 cores with at least 10GB of RAM and 1 hour (wall)time should be enough for most transcriptions.
+But don't forget that translations and diarization add to the total runtime.
