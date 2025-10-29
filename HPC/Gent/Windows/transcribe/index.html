@@ -1138,6 +1138,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#speaker-diarization" class="md-nav__link">
+    Speaker diarization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#task" class="md-nav__link">
     Task
   </a>
@@ -1403,6 +1410,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#speaker-diarization" class="md-nav__link">
+    Speaker diarization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#task" class="md-nav__link">
     Task
   </a>
@@ -1503,9 +1517,15 @@ the end result will be a Dutch transcription and an English translation of the D
 <h3 id="model">Model<a class="headerlink" href="#model" title="Permanent link">#</a></h3>
 <p>Default model is <code>large-v3</code>, others can be choosen but should be careful to compare resulting speed and/or quality differences.</p>
 <h3 id="flavour">Flavour<a class="headerlink" href="#flavour" title="Permanent link">#</a></h3>
-<p>We currently support 2 flavours: <code>whisper</code> (the OpenAI reference implementation), and <code>whisper-ctranslate2</code>
-(a faster version with some extras). Benchmarks indicate that <code>whisper-ctranslate2</code> is about 4 times faster than <code>whisper</code>,
-but might have some lower quality.</p>
+<p>We currently support 3 flavours:
+- <code>whisper</code> the OpenAI reference implementation
+- <code>whisper-ctranslate2</code> a faster version with some extras
+- <code>WhisperX</code> a faster version with most features like voice activity detection and speaker diarization</p>
+<p>Benchmarks indicate that <code>whisper-ctranslate2</code> is about 4 times faster than <code>whisper</code>,
+but might have some lower quality. <code>WhisperX</code> should be on par with <code>whisper-ctranslate2</code>.</p>
+<h3 id="speaker-diarization">Speaker diarization<a class="headerlink" href="#speaker-diarization" title="Permanent link">#</a></h3>
+<p>Speaker diarization (associate words with speaker) is only available for the <code>WhisperX</code> flavour.
+You must both select the flavour and enable this feature to get the diarization working.</p>
 <h3 id="task">Task<a class="headerlink" href="#task" title="Permanent link">#</a></h3>
 <p>From the selected (or auto-detected) source speech language, you can choose to transcribe to the same language or to <code>English</code>.
 You can use this last option to translate to English (as opposed to force the detection of the source language as if it was spoken in English).</p>
@@ -1514,7 +1534,8 @@ You can use this last option to translate to English (as opposed to force the de
 but at a penalty of having to wait in the queue of the other cluster typically for a much longer time
 than it will take to complete the transcription on the default cluster.</p>
 <h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">#</a></h2>
-<p>Default settings of 4 cores with at least 10GB of RAM and 1 hour (wall)time should be enough for most transcriptions.</p>
+<p>Default settings of 4 cores with at least 10GB of RAM and 1 hour (wall)time should be enough for most transcriptions.
+But don't forget that translations and diarization add to the total runtime.</p>
 
 
 
