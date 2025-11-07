@@ -23,4 +23,5 @@ module load netCDF-Fortran/4.6.2-gompi-2025a
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |netCDF-Fortran/4.6.2-gompi-2025a|x|x|x|x|x|x|x|
 |netCDF-Fortran/4.6.1-gompi-2024a|x|x|x|x|x|x|x|
+|netCDF-Fortran/4.6.1-gompi-2023b|x|x|x|x|x|x|x|
 |netCDF-Fortran/4.6.1-gompi-2023a|x|x|x|x|x|x|x|

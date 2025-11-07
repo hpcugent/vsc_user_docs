@@ -23,4 +23,5 @@ module load PnetCDF/1.14.0-gompi-2025a
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |PnetCDF/1.14.0-gompi-2025a|x|x|x|x|x|x|x|
 |PnetCDF/1.13.0-gompi-2024a|x|-|x|x|x|x|x|
+|PnetCDF/1.13.0-gompi-2023b|x|x|x|x|x|x|x|
 |PnetCDF/1.12.3-gompi-2023a|x|x|-|x|-|x|x|

@@ -24,5 +24,5 @@ module load CUDA/12.8.0
 |CUDA/12.8.0|x|-|-|-|-|-|-|
 |CUDA/12.6.0|x|-|x|x|x|x|-|
 |CUDA/12.5.0|x|-|-|-|x|x|-|
-|CUDA/12.4.0|x|-|-|-|x|x|-|
+|CUDA/12.4.0|x|-|x|-|x|x|-|
 |CUDA/12.1.1|x|x|x|x|x|x|x|
