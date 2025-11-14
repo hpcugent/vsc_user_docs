@@ -36,6 +36,48 @@ You can run the script with following command:
 python available_software.py
 ```
 
+## Adding custom text to a software page
+
+Some software pages benefit from having additional information. For example, a link to software specific documentation.
+
+Custom markdown file located in `mkdocs/docs/HPC/only/gent/available_software/custom` will be inserted into the detailed software page.
+This file must match the name of the module exactly.
+
+For example:
+
+- `mkdocs/docs/HPC/only/gent/available_software` 
+  - `custom/`
+    - ...
+    - Python.md
+    - ...
+  - `detail/`
+    - ...
+    - Python.md
+    - ...
+
+Where the content of `custom/Python.md` is:
+
+```md
+We have a dedicated page on Python available [here](../../../../python.md).
+For more info on python virtual environments, check out [this page](../../../../setting_up_python_virtual_environments.md)
+```
+
+After running `available_software.py`, the contents of `detail/Python.md` will be 
+
+```md
+Python
+======
+
+We have a dedicated page on Python available [here](../../../../python.md).
+For more info on python virtual environments, check out [this page](../../../../setting_up_python_virtual_environments.md)
+
+# Available modules
+
+
+The overview below shows which Python installations are available per HPC-UGent Tier-2 cluster, ordered based on software version (new to old).
+...
+```
+
 ## Testing
 You can run the tests by running the `test.sh` script.
 ```shell
