@@ -14,13 +14,14 @@ The overview below shows which libde265 installations are available per HPC-UGen
 To start using libde265, load one of these modules using a `module load` command like:
 
 ```shell
-module load libde265/1.0.16-GCCcore-14.2.0
+module load libde265/1.0.16-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libde265/1.0.16-GCCcore-14.3.0|-|-|-|-|-|x|x|
 |libde265/1.0.16-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |libde265/1.0.15-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |libde265/1.0.15-GCCcore-13.2.0|x|x|x|x|x|x|x|
