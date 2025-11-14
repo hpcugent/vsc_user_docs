@@ -1,0 +1,35 @@
+Some background:
+-   The GPUs are constrained to the jobs (like the CPU cores), but do
+    not run in so-called "exclusive" mode.
+-   The GPUs run with the so-called "persistence daemon", so the GPUs is
+    not re-initialised between jobs.
+
+
+Attention points
+Some important attention points:
+-   For MPI jobs, we recommend the (new) wrapper mypmirun from the
+    vsc-mympirun module (pmi is the background mechanism to start
+    the MPI tasks, and is different from the usual mpirun that is used
+    by the mympirun wrapper). At some later point, we might promote
+    the mypmirun tool or rename it, to avoid the confusion in the
+    naming.
+-   Sharing GPUs requires MPS. The Slurm built-in MPS does not really do
+    want you want, so we will provide integration with mypmirun and
+    wurker.
+-   For parallel work, we are working on a wurker wrapper from the
+    vsc-mympirun module that supports GPU placement and MPS, without
+    any limitations wrt the requested resources (i.e. also support the
+    case where GPUs are spread heterogeneous over nodes from using the
+    --gpus Z option).
+-   Both mypmirun and wurker will try to do the most optimised
+    placement of cores and tasks, and will provide 1 (optimal) GPU per
+    task/MPI rank, and set one so-called visible device (i.e.
+    CUDA_VISIBLE_DEVICES only has 1 ID). The actual devices are not
+    constrained to the ranks, so you can access all devices requested in
+    the job. We know that at this moment, this is not working properly, but we are working on this. We advise against trying to fix this yourself.
+  <!-- % TODO: this is still not the case, due to bugs in slurm. For now, you will probably do not get optimal placement and/or more
+  %than one visible device.
+  %TODO: we need an easy way to toggle this behaviour.
+  %TODO: should be configurable from qsub somehow. Or we need to wait for fix or patch it ourself. -->
+<!-- %TODO: add section on mypmirun, but has nothing to do with joltik. It works on all ugent/slurm clusters with and supports intelmpi.
+%Main advantages are single tool instead of per-MPI mpirun flavour, improved accouting and faster startup. -->
