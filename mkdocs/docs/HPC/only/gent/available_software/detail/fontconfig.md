@@ -21,7 +21,7 @@ module load fontconfig/2.17.0-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fontconfig/2.17.0-GCCcore-14.3.0|-|-|-|-|-|x|x|
+|fontconfig/2.17.0-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |fontconfig/2.16.2-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |fontconfig/2.15.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |fontconfig/2.14.2-GCCcore-13.2.0|x|x|x|x|x|x|x|

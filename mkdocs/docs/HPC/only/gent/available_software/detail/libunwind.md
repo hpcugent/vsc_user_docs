@@ -21,7 +21,7 @@ module load libunwind/1.8.2-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libunwind/1.8.2-GCCcore-14.3.0|-|-|-|-|-|x|x|
+|libunwind/1.8.2-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |libunwind/1.8.1-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |libunwind/1.8.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |libunwind/1.6.2-GCCcore-13.2.0|x|x|x|x|x|x|x|

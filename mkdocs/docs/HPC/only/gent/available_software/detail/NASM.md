@@ -21,7 +21,7 @@ module load NASM/2.16.03-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NASM/2.16.03-GCCcore-14.3.0|-|-|-|-|-|x|x|
+|NASM/2.16.03-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |NASM/2.16.03-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |NASM/2.16.03-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |NASM/2.16.01-GCCcore-13.2.0|x|x|x|x|x|x|x|

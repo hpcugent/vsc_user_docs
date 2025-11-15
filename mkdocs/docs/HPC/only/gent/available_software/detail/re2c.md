@@ -21,7 +21,7 @@ module load re2c/4.3-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|re2c/4.3-GCCcore-14.3.0|-|-|-|-|-|x|x|
+|re2c/4.3-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |re2c/4.2-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |re2c/3.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |re2c/3.1-GCCcore-13.2.0|x|x|x|x|x|x|x|

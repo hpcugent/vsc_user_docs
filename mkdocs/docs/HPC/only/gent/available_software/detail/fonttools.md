@@ -21,6 +21,6 @@ module load fonttools/4.58.5-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fonttools/4.58.5-GCCcore-14.3.0|-|-|-|-|-|x|x|
+|fonttools/4.58.5-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |fonttools/4.58.4-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |fonttools/4.53.1-GCCcore-13.3.0|x|x|x|x|x|x|x|

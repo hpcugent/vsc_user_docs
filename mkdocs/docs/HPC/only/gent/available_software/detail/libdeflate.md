@@ -21,7 +21,7 @@ module load libdeflate/1.24-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libdeflate/1.24-GCCcore-14.3.0|-|-|-|-|-|x|x|
+|libdeflate/1.24-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |libdeflate/1.24-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |libdeflate/1.20-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |libdeflate/1.19-GCCcore-13.2.0|x|x|x|x|x|x|x|
