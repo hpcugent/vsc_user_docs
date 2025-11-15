@@ -21,4 +21,4 @@ module load libclc/20.1.8-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libclc/20.1.8-GCCcore-14.3.0|-|-|-|-|-|x|x|
+|libclc/20.1.8-GCCcore-14.3.0|x|x|x|x|x|x|x|

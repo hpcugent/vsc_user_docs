@@ -21,7 +21,7 @@ module load nettle/3.10.2-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nettle/3.10.2-GCCcore-14.3.0|-|-|-|-|-|x|x|
+|nettle/3.10.2-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |nettle/3.10-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |nettle/3.9.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |nettle/3.9.1-GCCcore-12.3.0|x|x|x|x|x|x|x|

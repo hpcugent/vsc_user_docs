@@ -21,4 +21,4 @@ module load OpenGL/2025.09-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenGL/2025.09-GCCcore-14.3.0|-|-|-|-|-|x|x|
+|OpenGL/2025.09-GCCcore-14.3.0|x|x|x|x|x|x|x|

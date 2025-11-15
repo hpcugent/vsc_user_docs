@@ -21,7 +21,7 @@ module load SDL2/2.32.10-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SDL2/2.32.10-GCCcore-14.3.0|-|-|-|-|-|x|x|
+|SDL2/2.32.10-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |SDL2/2.32.8-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |SDL2/2.30.6-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |SDL2/2.28.5-GCCcore-13.2.0|x|x|x|x|x|x|x|

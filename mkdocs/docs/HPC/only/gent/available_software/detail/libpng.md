@@ -21,7 +21,7 @@ module load libpng/1.6.50-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libpng/1.6.50-GCCcore-14.3.0|-|-|-|-|-|x|x|
+|libpng/1.6.50-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |libpng/1.6.48-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |libpng/1.6.43-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |libpng/1.6.40-GCCcore-13.2.0|x|x|x|x|x|x|x|

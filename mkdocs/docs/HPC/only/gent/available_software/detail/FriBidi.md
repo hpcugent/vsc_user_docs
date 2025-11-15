@@ -21,7 +21,7 @@ module load FriBidi/1.0.16-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FriBidi/1.0.16-GCCcore-14.3.0|-|-|-|-|-|x|x|
+|FriBidi/1.0.16-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |FriBidi/1.0.16-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |FriBidi/1.0.15-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |FriBidi/1.0.13-GCCcore-13.2.0|x|x|x|x|x|x|x|

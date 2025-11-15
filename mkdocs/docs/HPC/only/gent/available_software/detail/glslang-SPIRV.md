@@ -21,5 +21,5 @@ module load glslang-SPIRV/15.4.0-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|glslang-SPIRV/15.4.0-GCCcore-14.3.0|-|-|-|-|-|x|x|
+|glslang-SPIRV/15.4.0-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |glslang-SPIRV/15.3.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
