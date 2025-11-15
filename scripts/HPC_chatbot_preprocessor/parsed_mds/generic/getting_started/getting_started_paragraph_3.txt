@@ -1,0 +1,35 @@
+To understand what's going on here, see the section on cd below.
+The moral here is: **be very careful to not use empty variables
+unintentionally**.
+**Tip for job scripts: use set -e -u to avoid using empty variables
+accidentally.**
+The -e option will result in the script getting stopped if
+any command fails.
+The -u option will result in the script getting stopped if
+empty variables are used. (see https://ss64.com/bash/set.html for
+a more detailed explanation and more options)
+More information can be found at
+http://www.tldp.org/LDP/abs/html/variables.html.
+Restoring your default environment
+If you've made a mess of your environment, you shouldn't waste too
+much time trying to fix it. Just log out and log in again and you will
+be given a pristine environment.
+Basic system information
+Basic information about the system you are logged into can be obtained
+in a variety of ways.
+We limit ourselves to determining the hostname: 
+$ hostname 
+gligar01.gligar.os
+$ echo $HOSTNAME 
+gligar01.gligar.os 
+And querying some basic information about the Linux kernel:
+$ uname -a 
+Linux gligar01.gligar.os 2.6.32-573.8.1.el6.ug.x86_64 #1 SMP Mon Nov 16 15:12:09
+	CET 2015 x86_64 x86_64 x86_64 GNU/Linux 
+Exercises
+- Print the full path to your home directory
+- Determine the name of the environment variable to your personal scratch directory
+- What's the name of the system you\'re logged into? Is it the same for everyone?
+- Figure out how to print the value of a variable without including a newline
+- How do you get help on using the man command?
+Next chapter teaches you on how to navigate.
