@@ -19,7 +19,7 @@ understanding of the {{ hpcinfra }} and related terminology.
 
 ## Getting Access
 
-To get access to the {{hpcinfra}}, visit [Getting an HPC Account](account.md).
+To get access to the {{hpcinfra}}, you need [an HPC account](account.md).
 
 If you have not used Linux before,  
 {%- if site == 'Gent' %}
@@ -41,7 +41,7 @@ Linux Commands](useful_linux_commands.md))
 
 We will walk through an illustrative workload to get you started. In this
 example, our objective is to train a deep learning model for recognizing
-hand-written digits (MNIST dataset) using
+handwritten digits (MNIST dataset) using
 [TensorFlow](https://www.tensorflow.org/);
 see the [example scripts](https://github.com/hpcugent/vsc_user_docs/tree/main/{{exampleloc}}).
 
@@ -68,7 +68,7 @@ now be able to login by running the following command:
 ssh {{userid}}@{{loginnode}}
 ```
 
-!!! Warning "User your own VSC account id"
+!!! Warning "Use your own VSC account id"
 
 ```text
 Replace **{{userid}}** with your VSC account id (see
