@@ -25,8 +25,8 @@ If you have not used Linux before,
 {%- if site == 'Gent' %}
 now would be a good time to follow our [Linux Tutorial](linux-tutorial/index.md).
 {%- else %}
-please learn some basics first before continuing. (see [Appendix C - Useful
-Linux Commands](useful_linux_commands.md))
+please learn some basics first before continuing
+(see [Appendix C - Useful Linux Commands](useful_linux_commands.md)).
 {%- endif %}
 
 ### A typical workflow looks like this
