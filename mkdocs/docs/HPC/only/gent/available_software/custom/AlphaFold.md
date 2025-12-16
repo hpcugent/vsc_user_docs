@@ -1,0 +1,1 @@
+We have a dedicated page on AlphaFold available [here](../../../../alphafold.md).
