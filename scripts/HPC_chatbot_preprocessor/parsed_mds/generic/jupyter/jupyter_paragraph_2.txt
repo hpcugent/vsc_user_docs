@@ -1,0 +1,16 @@
+Not all modules will work for every notebook, we need to use the one that uses the same toolchain as the notebook we want to launch. To find that toolchain, we can look at the JupyterNotebook version field when creating a notebook. In our example 7.2.0 is the version of the notebook and GCCcore/13.2.0 is the toolchain used.
+
+
+Module names include the toolchain that was used to install the module (for example gfbf-2023b in SciPy-bundle/2023.11-gfbf-2023b means that that module uses the toolchain gfbf/2023). To see which modules are compatible with each other, you can check the table on the page about Module conflicts. Another way to find out which GCCcore subtoolchain goes with the particular toolchain of the module (such as gfbf/2023b) is to use module show. In particular using module show <toolchain of the module> | grep GCC (before the module has been loaded) will return this GCCcore version.
+$ module show gfbf/2023b | grep GCC
+GNU Compiler Collection (GCC) based compiler toolchain, including
+whatis("Description: GNU Compiler Collection (GCC) based compiler toolchain, including
+load("GCC/13.2.0")
+load("FlexiBLAS/3.3.1-GCC-13.2.0")
+load("FFTW/3.3.10-GCC-13.2.0")
+The toolchain used can then for example be found within the line load("GCC/13.2.0") and the included Python packages under the line Included extensions.
+It is also recommended to doublecheck the compatibility of the Jupyter notebook version and the extra modules by loading them all in a shell environment. 
+To do so, find the module containing the correct Jupyter notebook version (for our example case this is JupyterNotebook/7.2.0-GCCcore-13.2.0) and then use module load <module_name> for every module as follows:
+$ module load JupyterNotebook/7.2.0-GCCcore-13.2.0
+$ module load SciPy-bundle/2023.11-gfbf-2023b
+This throws no errors, since this module uses a toolchain that is compatible with the toolchain used by the notebook

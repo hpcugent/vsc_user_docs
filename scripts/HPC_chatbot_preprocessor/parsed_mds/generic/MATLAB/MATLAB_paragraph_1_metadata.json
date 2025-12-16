@@ -1,0 +1,15 @@
+{
+    "main_title": "MATLAB",
+    "subtitle": "How-to-compile-MATLAB-code",
+    "source_file": "../../mkdocs/docs/HPC/MATLAB.md",
+    "title_depth": 2,
+    "directory": "MATLAB",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/interactive_debug"
+    },
+    "parent_title": "",
+    "previous_title": null,
+    "next_title": "MATLAB_paragraph_2",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/MATLAB/#how-to-compile-matlab-code"
+}

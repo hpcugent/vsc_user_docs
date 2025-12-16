@@ -1,0 +1,4 @@
+Resolution
+We will re-install the affected OpenMPI installations during the scheduled maintenance of 13-17 May 2024
+(see also VSC status page).
+---
