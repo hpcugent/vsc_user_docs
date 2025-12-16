@@ -1,0 +1,14 @@
+Applying for the account
+Visit <https://account.vscentrum.be/>
+You will be redirected to our WAYF (Where Are You From) service where
+you have to select your "Home Organisation".
+Select "UGent" in the dropdown box and optionally select "Save my preference"
+and "permanently".
+Click "Confirm"
+You will now be taken to the authentication page of your institute.
+You will now have to log in with CAS using your UGent account.
+You either have a login name of maximum 8 characters, or a (non-UGent)
+email address if you are an external user. In case of problems with your
+UGent password, please visit: <https://password.ugent.be/>. After
+logging in, you may be requested to share your information. Click "Yes,
+continue".

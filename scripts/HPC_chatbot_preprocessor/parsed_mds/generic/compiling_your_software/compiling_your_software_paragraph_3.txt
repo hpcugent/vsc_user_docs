@@ -1,0 +1,13 @@
+In the simplest case the file or files may simply be copied from one
+machine to the other. However, in many cases the software is installed
+on a computer in a way, which depends upon its detailed hardware,
+software, and setup, with device drivers for particular devices, using
+installed operating system and supporting software components, and using
+different directories.
+In some cases software, usually described as "portable software" is
+specifically designed to run on different computers with compatible
+operating systems and processors without any machine-dependent
+installation; it is sufficient to transfer specified directories and
+their contents. Hardware- and software-specific information is often
+stored in configuration files in specified locations (e.g., the registry
+on machines running MS Windows).

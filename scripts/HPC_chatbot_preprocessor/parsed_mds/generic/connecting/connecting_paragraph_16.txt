@@ -1,0 +1,11 @@
+If you want to find out which login host you are connected to, you can use the hostname command.
+$ hostname
+gligar07.gastly.os
+$ ssh gligar08.gastly.os
+$ hostname
+gligar08.gastly.os
+Rather than always starting a new session on the HPC, you can also use a terminal multiplexer like screen or tmux.
+These can make sessions that 'survives' across disconnects.
+You can find more information on how to use these tools here (or on other online sources):
+- screen
+- tmux
