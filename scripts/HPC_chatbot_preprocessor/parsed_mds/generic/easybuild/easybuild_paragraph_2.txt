@@ -1,0 +1,33 @@
+Make sure you do not build software on the login nodes, since the loaded cluster module determines the
+location of the installed software. Software built on the login nodes
+may not work on the cluster you want to use the software on (see also Running software that is incompatible with host).
+To share custom software installations with members of your VO, replace
+$VSC_DATA with $VSC_DATA_VO in the example above.
+Using EasyBuild
+Before using EasyBuild, you first need to load the EasyBuild module.
+We don't specify a version here (this is an exception, for most other
+modules you should see Using explicit version numbers) because newer versions might include important
+bug fixes.
+module load EasyBuild
+Installing supported software
+EasyBuild provides a large collection of readily available software
+versions, combined with a particular toolchain version. Use the
+--search (or -S) functionality to see which different 'easyconfigs'
+(build recipes, see
+http://easybuild.readthedocs.org/en/latest/Concepts_and_Terminology.html#easyconfig-files) are available:
+$ eb -S example-1.2
+CFGS1=/apps/gent/CO7/sandybridge/software/EasyBuild/3.6.2/lib/python2.7/site-packages/easybuild_easyconfigs-3.6.2-py2.7.egg/easybuild/easyconfigs
+ * $CFGS1/e/example/example-1.2.1-foss-a.eb
+ * $CFGS1/e/example/example-1.2.3-foss-b.eb
+ * $CFGS1/e/example/example-1.2.5-intel-a.eb
+For readily available easyconfigs, just specify the name of the
+easyconfig file to build and install the corresponding software package:
+eb example-1.2.1-foss-2024a.eb --robot
+Installing variants on supported software
+To install small variants on supported software, e.g., a different
+software version, or using a different compiler toolchain, use the
+corresponding --try-X options:
+To try to install example v1.2.6, based on the easyconfig file for
+example v1.2.5:
+eb example-1.2.5-intel-a.eb --try-software-version=1.2.6
+To try to install example v1.2.5 with a different compiler toolchain:

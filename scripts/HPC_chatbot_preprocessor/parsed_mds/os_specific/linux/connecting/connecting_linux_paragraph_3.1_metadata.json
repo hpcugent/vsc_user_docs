@@ -1,0 +1,15 @@
+{
+    "main_title": "connecting",
+    "subtitle": "Connect",
+    "source_file": "../../mkdocs/docs/HPC/connecting.md",
+    "title_depth": 3,
+    "directory": "connecting",
+    "parent_title": "First-Time-connection-to-the-HPC-infrastructure",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/troubleshooting/#warning-message-when-first-connecting-to-new-host"
+    },
+    "previous_title": "connecting_paragraph_2",
+    "next_title": "connecting_paragraph_4",
+    "OS": "linux",
+    "reference_link": "https://docs.hpc.ugent.be/Linux/connecting/#connect"
+}

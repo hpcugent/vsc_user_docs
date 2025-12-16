@@ -1,0 +1,16 @@
+{
+    "main_title": "easybuild",
+    "subtitle": "Installing-variants-on-supported-software",
+    "source_file": "../../mkdocs/docs/HPC/easybuild.md",
+    "title_depth": 3,
+    "directory": "easybuild",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/troubleshooting/#running-software-that-is-incompatible-with-host",
+        "1": "https://docs.hpc.ugent.be/running_batch_jobs/#using-explicit-version-numbers"
+    },
+    "parent_title": "",
+    "previous_title": "easybuild_paragraph_1",
+    "next_title": "easybuild_paragraph_3",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/easybuild/#installing-variants-on-supported-software"
+}
