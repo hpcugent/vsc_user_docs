@@ -1,5 +1,5 @@
 #!/bin/bash
 
-module load TensorFlow/2.11.0-foss-2022a
+module load TensorFlow/2.15.1-foss-2023a
 
 python tensorflow_mnist.py
