@@ -1,0 +1,51 @@
+Getting Started
+Logging in
+To get started with the HPC-UGent infrastructure, you need to obtain a
+VSC account, see HPC manual. **Keep in mind that you
+must keep your private key to yourself!**
+You can look at your public/private key pair as a lock and a key: you
+give us the lock (your public key), we put it on the door, and then you
+can use your key to open the door and get access to the HPC
+infrastructure. Anyone who has your key can use your VSC account!
+Details on connecting to the HPC infrastructure are available in [HPC
+manual connecting section](../connecting.md).
+Getting help
+To get help:
+1.  use the documentation available on the system, through the
+    help, info and man commands (use q to exit).
+    help cd 
+    info ls 
+    man cp 
+2.  use Google
+3. contact hpc@ugent.be in case
+of problems or questions (even for basic things!)
+Errors
+Sometimes when executing a command, an error occurs. Most likely there
+will be error output or a message explaining you this. Read this
+carefully and try to act on it. Try googling the error first to find any
+possible solution, but if you can't come up with something in 15
+minutes, don't hesitate to mail 
+hpc@ugent.be
+Basic terminal usage
+The basic interface is the so-called shell prompt, typically ending with
+$ (for bash shells).
+You use the shell by executing commands, and hitting
+<enter>. For example: 
+$ echo hello 
+hello 
+You can go to the start or end of the command line using
+Ctrl-A or Ctrl-E.
+To go through previous commands, use <up> and
+<down>, rather than retyping them.
+Command history
+A powerful feature is that you can "search" through your command
+history, either using the history command, or using
+Ctrl-R: 
+$ history
+    1 echo hello
+# hit Ctrl-R, type 'echo' 
+(reverse-i-search)`echo': echo hello
+Stopping commands
+If for any reason you want to stop a command from executing, press
+Ctrl-C. For example, if a command is taking too long, or
+you want to rerun it with different arguments.

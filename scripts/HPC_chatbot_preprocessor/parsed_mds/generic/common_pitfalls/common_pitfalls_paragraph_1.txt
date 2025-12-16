@@ -1,0 +1,50 @@
+Common Pitfalls
+This page highlights common pitfalls in Linux usage, offering insights into potential challenges users might face. 
+By understanding these pitfalls, you can avoid unnecessary hurdles.
+Location
+If you receive an error message which contains something like the
+following:
+No such file or directory
+It probably means that you haven't placed your files in the correct
+directory, or you have mistyped the file name or path.
+Try and figure out the correct location using ls, cd and using the
+different $VSC_* variables.
+Spaces
+Filenames should not contain any spaces! If you have a long filename you
+should use underscores or dashes (e.g., very_long_filename).
+$ cat some file
+No such file or directory 'some'
+Spaces are permitted, however they result in surprising behaviour. To
+cat the file 'some file' as above, you can escape the space with a
+backslash ("\ ") or you can put the filename in quotes:
+$ cat some\ file
+...
+$ cat "some file"
+...
+This is especially error-prone if you are piping results of find:
+$ find . -type f | xargs cat
+No such file or directory name ’some’
+No such file or directory name ’file’
+This can be worked around using the -print0 flag:
+$ find . -type f -print0 | xargs -0 cat
+...
+But, this is tedious, and you can prevent errors by simply colouring
+within the lines and not using spaces in filenames.
+Missing/mistyped environment variables
+If you use a command like rm -r with environment variables you need to
+be careful to make sure that the environment variable exists. If you
+mistype an environment variable then it will resolve into a blank string.
+This means the following resolves to rm -r ~/* which will remove every
+file in your home directory!
+$ rm -r ~/$PROJETC/*
+Typing dangerous commands
+A good habit when typing dangerous commands is to precede the line with
+#, the comment character. This will let you type out the command
+without fear of accidentally hitting enter and running something
+unintended.
+$ #rm -r ~/$POROJETC/*
+Then you can go back to the beginning of the line (Ctrl-A) and remove
+the first character (Ctrl-D) to run the command. You can also just
+press enter to put the command in your history so you can come back to
+it later (e.g., while you go check the spelling of your environment
+variables).

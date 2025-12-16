@@ -1,0 +1,15 @@
+{
+    "main_title": "manipulating_files_and_directories",
+    "subtitle": "Exercises",
+    "source_file": "../../mkdocs/docs/HPC/linux-tutorial/manipulating_files_and_directories.md",
+    "title_depth": 2,
+    "directory": "manipulating_files_and_directories",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/linux-tutorial/uploading_files"
+    },
+    "parent_title": "",
+    "previous_title": "manipulating_files_and_directories_paragraph_4",
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/linux-tutorial/manipulating_files_and_directories/#exercises"
+}

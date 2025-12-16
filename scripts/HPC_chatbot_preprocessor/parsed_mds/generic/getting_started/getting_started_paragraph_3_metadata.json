@@ -1,0 +1,15 @@
+{
+    "main_title": "getting_started",
+    "subtitle": "Exercises",
+    "source_file": "../../mkdocs/docs/HPC/linux-tutorial/getting_started.md",
+    "title_depth": 2,
+    "directory": "getting_started",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/linux-tutorial/navigating"
+    },
+    "parent_title": "",
+    "previous_title": "getting_started_paragraph_2",
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/linux-tutorial/getting_started/#exercises"
+}
