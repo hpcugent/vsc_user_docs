@@ -295,4 +295,4 @@ or it will add the additional commands and output with every interactive app you
 
 ## Custom apps
 
-* [ABAQUS for CAE course](web_portal_custom_apps/abaqus_cae.md)
+
