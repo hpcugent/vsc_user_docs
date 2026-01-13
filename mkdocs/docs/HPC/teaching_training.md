@@ -97,12 +97,35 @@ To get a student added to the course group, make sure that the student becomes o
 
 ### Trainings and workshops
 
-(Currently under construction:)
-For trainings, workshops or courses that do not have a Course Code, you need to provide us with the list of all VSC-ids.
+We only allow trainings and workshops organized by and for UGent staff and researchers on the UGent Tier2 systems.
+In addition, if participants for your training or workshop are charged more than a simple service fee,
+the training/workshop should be organized on the [VSC Tier1 system](https://www.vscentrum.be/compute)
+Similarly, trainings/workshops by or for (mainly) non-UGent staff and researchers should be organized on the VSC Tier1 system.
+
+For trainings and workshops on Tier2, you need to provide us with information well in advance.
+[Send a mail to the {{ hpcteam }}]({{ hpc_support_url }}) with the following information:
+
+- Name of the workshop/training
+- Start and end date
+- Website with information about the workshop/training
+- A list of the VSC-ids of all trainers
+- A list of the VSC-ids of all participants
+- Optional information
+    - Additional storage requirements
+        - Shared folder
+        - Groups folder for collaboration
+        - Quota
+    - Reservation for resource requirements beyond the interactive cluster
+    - Ticket number for specific software needed for your course/training
+    - Details for a custom Interactive Application in the webportal
+
+This information should be sent at least 2 weeks before the training/workshop takes place.
+
 A group will be made, based on the name of the workshop, with all VSC-ids as member.
-Teachers/trainers will be able to add/remove VSC accounts from this course group.
+Trainers will be able to add/remove VSC accounts from this course group.
 But students will have to follow the [procedure to request a VSC account](account.md) themselves.
 There will be no automation.
+
 
 
 ## Dedicated storage
@@ -233,9 +256,3 @@ but this is always best effort, depending on the load of the support team and th
 
 A caveat for the teacher and students is that students do not learn to work with the generic application,
 and do not see the actual commands or customization code.
-Therefore, per custom interactive application, HPC-UGent will make a dedicated section in the
-[web portal chapter of the HPC user documentation](web_portal.md#custom-apps).
-This section will briefly explain what happens under the hood of the interactive application.
-We would recommend that you as a teacher take some time to show and explain this to the students.
-Note that the custom interactive application will disappear for students after the indicated end of your course,
-but the section in the web portal will remain there for several years, for reference.
