@@ -98,23 +98,34 @@ To get a student added to the course group, make sure that the student becomes o
 ### Trainings and workshops
 
 We only allow trainings and workshops organized by and for UGent staff and researchers on the UGent Tier2 systems.
-If participants for your training or workshop are charged more than a simple service fee, the training/workshop should be organized on the [VSC Tier1 system](https://www.vscentrum.be/compute)
-Similarly, trainings/workshops by or for (mainly) non-UGent staff and researchers should be organized on the [VSC Tier1 system](https://www.vscentrum.be/compute).
+In addition, if participants for your training or workshop are charged more than a simple service fee,
+the training/workshop should be organized on the [VSC Tier1 system](https://www.vscentrum.be/compute)
+Similarly, trainings/workshops by or for (mainly) non-UGent staff and researchers should be organized on the VSC Tier1 system.
 
 For trainings and workshops on Tier2, you need to provide us with information well in advance.
-[{{Send a mail to the hpcteam }}]({{ hpc_support_url }})
-with the following information:
+[Send a mail to the {{ hpcteam }}]({{ hpc_support_url }}) with the following information:
 
-- a website 
+- Name of the workshop/training
+- Start and end date
+- Website with information about the workshop/training
+- A list of the VSC-ids of all trainers
+- A list of the VSC-ids of all participants
+- Optional information
+    - Additional storage requirements
+        - Shared folder
+        - Groups folder for collaboration
+        - Quota
+    - Reservation for resource requirements beyond the interactive cluster
+    - Ticket number for specific software needed for your course/training
+    - Details for a custom Interactive Application in the webportal
 
 This information should be sent at least 2 weeks before the training/workshop takes place.
-Note that trainings or workshops 
 
-with the list of all VSC-ids.
 A group will be made, based on the name of the workshop, with all VSC-ids as member.
-Teachers/trainers will be able to add/remove VSC accounts from this course group.
+Trainers will be able to add/remove VSC accounts from this course group.
 But students will have to follow the [procedure to request a VSC account](account.md) themselves.
 There will be no automation.
+
 
 
 ## Dedicated storage
