@@ -97,8 +97,20 @@ To get a student added to the course group, make sure that the student becomes o
 
 ### Trainings and workshops
 
-(Currently under construction:)
-For trainings, workshops or courses that do not have a Course Code, you need to provide us with the list of all VSC-ids.
+We only allow trainings and workshops organized by and for UGent staff and researchers on the UGent Tier2 systems.
+If participants for your training or workshop are charged more than a simple service fee, the training/workshop should be organized on the [VSC Tier1 system](https://www.vscentrum.be/compute)
+Similarly, trainings/workshops by or for (mainly) non-UGent staff and researchers should be organized on the [VSC Tier1 system](https://www.vscentrum.be/compute).
+
+For trainings and workshops on Tier2, you need to provide us with information well in advance.
+[{{Send a mail to the hpcteam }}]({{ hpc_support_url }})
+with the following information:
+
+- a website 
+
+This information should be sent at least 2 weeks before the training/workshop takes place.
+Note that trainings or workshops 
+
+with the list of all VSC-ids.
 A group will be made, based on the name of the workshop, with all VSC-ids as member.
 Teachers/trainers will be able to add/remove VSC accounts from this course group.
 But students will have to follow the [procedure to request a VSC account](account.md) themselves.
