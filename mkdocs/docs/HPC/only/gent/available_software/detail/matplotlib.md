@@ -14,13 +14,14 @@ The overview below shows which matplotlib installations are available per HPC-UG
 To start using matplotlib, load one of these modules using a `module load` command like:
 
 ```shell
-module load matplotlib/3.10.3-gfbf-2025a
+module load matplotlib/3.10.5-gfbf-2025b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|matplotlib/3.10.5-gfbf-2025b|x|x|x|x|x|x|x|
 |matplotlib/3.10.3-gfbf-2025a|x|x|x|x|x|x|x|
 |matplotlib/3.9.2-gfbf-2024a|x|x|x|x|x|x|x|
 |matplotlib/3.8.2-gfbf-2023b|x|x|x|x|x|x|x|

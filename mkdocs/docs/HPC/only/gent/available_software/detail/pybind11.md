@@ -23,6 +23,7 @@ module load pybind11/3.0.0-GCC-14.3.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |pybind11/3.0.0-GCC-14.3.0|x|x|x|x|x|x|x|
 |pybind11/2.13.6-GCC-14.2.0|x|x|x|x|x|x|x|
+|pybind11/2.13.6-GCC-13.3.0|x|x|x|x|x|x|x|
 |pybind11/2.12.0-GCC-13.3.0|x|x|x|x|x|x|x|
 |pybind11/2.11.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |pybind11/2.11.1-GCCcore-12.3.0|x|x|x|x|x|x|x|

@@ -22,5 +22,6 @@ module load nglview/3.1.4-foss-2025a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |nglview/3.1.4-foss-2025a|x|x|x|x|x|x|x|
+|nglview/3.1.4-foss-2024a|x|x|x|x|x|x|x|
 |nglview/3.1.4-foss-2023b|x|x|x|x|x|x|x|
 |nglview/3.1.2-foss-2023a|-|x|-|x|-|x|x|

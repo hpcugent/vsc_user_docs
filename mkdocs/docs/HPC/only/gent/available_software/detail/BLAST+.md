@@ -14,13 +14,14 @@ The overview below shows which BLAST+ installations are available per HPC-UGent 
 To start using BLAST+, load one of these modules using a `module load` command like:
 
 ```shell
-module load BLAST+/2.16.0-gompi-2024a
+module load BLAST+/2.17.0-gompi-2025a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BLAST+/2.17.0-gompi-2025a|x|x|x|x|x|x|x|
 |BLAST+/2.16.0-gompi-2024a|x|x|x|x|x|x|x|
 |BLAST+/2.16.0-gompi-2023b|x|x|x|x|x|x|x|
 |BLAST+/2.14.1-gompi-2023a|x|x|x|x|x|x|x|

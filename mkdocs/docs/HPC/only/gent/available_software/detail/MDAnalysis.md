@@ -22,5 +22,6 @@ module load MDAnalysis/2.9.0-foss-2025a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |MDAnalysis/2.9.0-foss-2025a|x|x|x|x|x|x|x|
+|MDAnalysis/2.9.0-foss-2024a|x|x|x|x|x|x|x|
 |MDAnalysis/2.7.0-foss-2023b|x|x|x|x|x|x|x|
 |MDAnalysis/2.7.0-foss-2023a|-|x|-|x|-|x|x|

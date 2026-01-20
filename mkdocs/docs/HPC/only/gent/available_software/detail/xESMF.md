@@ -21,4 +21,4 @@ module load xESMF/0.8.6-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|xESMF/0.8.6-foss-2023a|-|x|-|x|-|x|x|
+|xESMF/0.8.6-foss-2023a|x|x|x|x|x|x|x|

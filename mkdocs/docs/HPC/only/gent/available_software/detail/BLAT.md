@@ -14,11 +14,12 @@ The overview below shows which BLAT installations are available per HPC-UGent Ti
 To start using BLAT, load one of these modules using a `module load` command like:
 
 ```shell
-module load BLAT/3.7-GCC-12.3.0
+module load BLAT/3.7-GCC-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BLAT/3.7-GCC-13.3.0|x|x|x|x|x|x|x|
 |BLAT/3.7-GCC-12.3.0|x|x|x|x|x|x|x|

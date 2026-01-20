@@ -14,11 +14,12 @@ The overview below shows which ArviZ installations are available per HPC-UGent T
 To start using ArviZ, load one of these modules using a `module load` command like:
 
 ```shell
-module load ArviZ/0.16.1-foss-2023a
+module load ArviZ/0.21.0-foss-2024a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ArviZ/0.21.0-foss-2024a|x|x|x|x|x|x|x|
 |ArviZ/0.16.1-foss-2023a|x|x|x|x|x|x|x|

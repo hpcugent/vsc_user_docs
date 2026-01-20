@@ -22,6 +22,7 @@ module load aiohttp/3.12.13-GCCcore-14.2.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |aiohttp/3.12.13-GCCcore-14.2.0|x|x|x|x|x|x|x|
+|aiohttp/3.10.10-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |aiohttp/3.9.5-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |aiohttp/3.8.5-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |aiohttp/3.8.5-GCCcore-12.2.0|-|-|-|-|-|x|x|

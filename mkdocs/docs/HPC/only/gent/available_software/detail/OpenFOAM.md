@@ -14,13 +14,14 @@ The overview below shows which OpenFOAM installations are available per HPC-UGen
 To start using OpenFOAM, load one of these modules using a `module load` command like:
 
 ```shell
-module load OpenFOAM/v2406-foss-2023a
+module load OpenFOAM/v2412_250814-foss-2024a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OpenFOAM/v2412_250814-foss-2024a|x|x|x|x|x|x|x|
 |OpenFOAM/v2406-foss-2023a|-|x|x|x|x|-|-|
 |OpenFOAM/v2312-foss-2023a|-|x|x|x|x|x|x|
 |OpenFOAM/v2206-foss-2023a|x|x|x|x|x|x|x|
