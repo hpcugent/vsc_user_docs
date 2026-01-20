@@ -14,11 +14,12 @@ The overview below shows which StringTie installations are available per HPC-UGe
 To start using StringTie, load one of these modules using a `module load` command like:
 
 ```shell
-module load StringTie/2.2.3-GCC-12.3.0
+module load StringTie/3.0.0-GCC-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|StringTie/3.0.0-GCC-13.3.0|x|x|x|x|x|x|x|
 |StringTie/2.2.3-GCC-12.3.0|-|x|x|x|x|x|x|

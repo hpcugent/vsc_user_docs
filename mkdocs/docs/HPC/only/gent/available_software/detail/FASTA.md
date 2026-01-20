@@ -14,11 +14,12 @@ The overview below shows which FASTA installations are available per HPC-UGent T
 To start using FASTA, load one of these modules using a `module load` command like:
 
 ```shell
-module load FASTA/36.3.8i-GCC-12.3.0
+module load FASTA/36.3.8i-may-2023-GCC-13.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FASTA/36.3.8i-may-2023-GCC-13.3.0|x|x|x|x|x|x|x|
 |FASTA/36.3.8i-GCC-12.3.0|x|x|x|x|x|x|x|

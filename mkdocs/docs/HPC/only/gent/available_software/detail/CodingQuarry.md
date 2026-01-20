@@ -14,11 +14,12 @@ The overview below shows which CodingQuarry installations are available per HPC-
 To start using CodingQuarry, load one of these modules using a `module load` command like:
 
 ```shell
-module load CodingQuarry/2.0-foss-2023a
+module load CodingQuarry/2.0-foss-2024a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CodingQuarry/2.0-foss-2024a|x|x|x|x|x|x|x|
 |CodingQuarry/2.0-foss-2023a|x|x|x|x|x|x|x|

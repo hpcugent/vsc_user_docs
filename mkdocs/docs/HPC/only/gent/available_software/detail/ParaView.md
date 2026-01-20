@@ -22,4 +22,5 @@ module load ParaView/6.0.1-foss-2025a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ParaView/6.0.1-foss-2025a|x|x|x|x|x|x|x|
+|ParaView/5.13.2-foss-2024a|x|x|x|x|x|x|x|
 |ParaView/5.11.2-foss-2023a|x|x|x|x|x|x|x|

@@ -14,11 +14,12 @@ The overview below shows which EVidenceModeler installations are available per H
 To start using EVidenceModeler, load one of these modules using a `module load` command like:
 
 ```shell
-module load EVidenceModeler/2.1.0-foss-2023a
+module load EVidenceModeler/2.1.0-foss-2024a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|EVidenceModeler/2.1.0-foss-2024a|x|x|x|x|x|x|x|
 |EVidenceModeler/2.1.0-foss-2023a|-|x|-|x|-|x|x|

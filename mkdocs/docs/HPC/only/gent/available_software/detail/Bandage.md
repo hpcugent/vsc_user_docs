@@ -14,11 +14,12 @@ The overview below shows which Bandage installations are available per HPC-UGent
 To start using Bandage, load one of these modules using a `module load` command like:
 
 ```shell
-module load Bandage/0.9.0-GCCcore-12.3.0
+module load Bandage/0.9.0-GCCcore-14.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Bandage/0.9.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |Bandage/0.9.0-GCCcore-12.3.0|x|x|x|x|x|x|x|

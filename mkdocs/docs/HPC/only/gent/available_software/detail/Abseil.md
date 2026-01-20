@@ -14,13 +14,14 @@ The overview below shows which Abseil installations are available per HPC-UGent 
 To start using Abseil, load one of these modules using a `module load` command like:
 
 ```shell
-module load Abseil/20240722.0-GCCcore-13.3.0
+module load Abseil/20250512.1-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Abseil/20250512.1-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |Abseil/20240722.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |Abseil/20240116.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Abseil/20230125.3-GCCcore-12.3.0|x|x|x|x|x|x|x|

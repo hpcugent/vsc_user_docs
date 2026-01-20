@@ -22,5 +22,6 @@ module load MDTraj/1.11.0-foss-2025a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |MDTraj/1.11.0-foss-2025a|x|x|x|x|x|x|x|
+|MDTraj/1.10.3-foss-2024a|x|x|x|x|x|x|x|
 |MDTraj/1.10.3-foss-2023b|x|x|x|x|x|x|x|
 |MDTraj/1.9.9-gfbf-2023a|-|x|x|x|x|x|x|

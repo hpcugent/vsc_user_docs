@@ -14,13 +14,14 @@ The overview below shows which h5py installations are available per HPC-UGent Ti
 To start using h5py, load one of these modules using a `module load` command like:
 
 ```shell
-module load h5py/3.12.1-foss-2024a
+module load h5py/3.14.0-foss-2025b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|h5py/3.14.0-foss-2025b|x|x|x|x|x|x|x|
 |h5py/3.12.1-foss-2024a|x|x|x|x|x|x|x|
 |h5py/3.11.0-foss-2023b|x|x|x|x|x|x|x|
 |h5py/3.9.0-iomkl-2023a-serial|x|x|x|x|x|x|x|

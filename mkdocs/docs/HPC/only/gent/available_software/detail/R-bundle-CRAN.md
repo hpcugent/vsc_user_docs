@@ -14,13 +14,14 @@ The overview below shows which R-bundle-CRAN installations are available per HPC
 To start using R-bundle-CRAN, load one of these modules using a `module load` command like:
 
 ```shell
-module load R-bundle-CRAN/2024.11-foss-2024a
+module load R-bundle-CRAN/2025.11-foss-2025b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|R-bundle-CRAN/2025.11-foss-2025b|x|x|x|x|x|x|x|
 |R-bundle-CRAN/2024.11-foss-2024a|x|x|x|x|x|x|x|
 |R-bundle-CRAN/2024.06-foss-2023b|x|x|x|x|x|x|x|
 |R-bundle-CRAN/2023.12-foss-2023a|x|x|x|x|x|x|x|

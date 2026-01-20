@@ -22,4 +22,4 @@ module load netCDF-C++4/4.3.1-gompi-2024a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |netCDF-C++4/4.3.1-gompi-2024a|x|-|x|x|x|x|x|
-|netCDF-C++4/4.3.1-gompi-2023a|x|x|-|x|-|x|x|
+|netCDF-C++4/4.3.1-gompi-2023a|x|x|x|x|x|x|x|
