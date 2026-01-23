@@ -14,12 +14,13 @@ The overview below shows which cuDNN installations are available per HPC-UGent T
 To start using cuDNN, load one of these modules using a `module load` command like:
 
 ```shell
-module load cuDNN/9.5.0.50-CUDA-12.6.0
+module load cuDNN/9.5.1.17-CUDA-12.6.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|cuDNN/9.5.1.17-CUDA-12.6.0|x|-|x|-|x|x|-|
 |cuDNN/9.5.0.50-CUDA-12.6.0|x|-|x|-|x|x|-|
 |cuDNN/8.9.2.26-CUDA-12.1.1|x|-|x|x|x|x|x|
