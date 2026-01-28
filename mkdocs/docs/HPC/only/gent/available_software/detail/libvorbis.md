@@ -22,6 +22,7 @@ module load libvorbis/1.3.7-GCCcore-14.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libvorbis/1.3.7-GCCcore-14.3.0|x|x|x|x|x|x|x|
+|libvorbis/1.3.7-GCCcore-14.2.0|x|x|x|x|x|-|-|
 |libvorbis/1.3.7-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |libvorbis/1.3.7-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |libvorbis/1.3.7-GCCcore-12.3.0|x|x|x|x|x|x|x|
