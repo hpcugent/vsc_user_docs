@@ -22,7 +22,7 @@ module load FLAC/1.5.0-GCCcore-14.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |FLAC/1.5.0-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|FLAC/1.5.0-GCCcore-14.2.0|x|x|x|x|x|-|-|
+|FLAC/1.5.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |FLAC/1.4.3-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |FLAC/1.4.3-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |FLAC/1.4.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
