@@ -22,3 +22,4 @@ module load googlebenchmark/1.9.4-GCCcore-14.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |googlebenchmark/1.9.4-GCCcore-14.3.0|x|x|x|x|x|x|x|
+|googlebenchmark/1.9.4-GCCcore-14.2.0|-|x|-|-|-|-|-|
