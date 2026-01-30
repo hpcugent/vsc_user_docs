@@ -55,7 +55,7 @@ The end date is used to automatically perform a cleanup when your course/worksho
 as described in the [course data policy](./#course-data-policy):
 
 - Course group and subgroups will be deactivated
-- Residual data in the course directories will be archived or deleted
+- Residual data in the course directories will be deleted
 - Custom Interactive Applications will be disabled
 
 
@@ -187,9 +187,7 @@ The course data usage is not accounted for any other quota (like VO quota). It i
 ### Course data policy
 
 The data policy for the dedicated course storage is the following:
-on the indicated end date of your course, the course directory will be made read-only to the moderators
-(possibly on the form of an archive zipfile).
-One year after the end date it will be permanently removed.
+on the indicated end date of your course, the course directory will be permanently removed.
 We assume that teachers/trainers always have an own copy of the course data as a starting point for a next course.
 
 
