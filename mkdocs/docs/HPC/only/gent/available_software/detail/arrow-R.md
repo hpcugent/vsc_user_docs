@@ -22,6 +22,7 @@ module load arrow-R/22.0.0-foss-2025b-R-4.5.2
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |arrow-R/22.0.0-foss-2025b-R-4.5.2|x|x|x|x|x|x|x|
+|arrow-R/22.0.0-foss-2025a-R-4.5.1|x|x|x|x|x|x|x|
 |arrow-R/17.0.0.1-foss-2024a-R-4.4.2|x|x|x|x|x|x|x|
 |arrow-R/16.1.0-foss-2023b-R-4.4.1|x|x|x|x|x|x|x|
 |arrow-R/14.0.1-foss-2023a-R-4.3.2|x|x|x|x|x|x|x|
