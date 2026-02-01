@@ -22,6 +22,7 @@ module load RE2/2025-07-22-GCCcore-14.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |RE2/2025-07-22-GCCcore-14.3.0|x|x|x|x|x|x|x|
+|RE2/2024-07-02-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |RE2/2024-07-02-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |RE2/2024-03-01-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |RE2/2023-08-01-GCCcore-12.3.0|x|x|x|x|x|x|x|

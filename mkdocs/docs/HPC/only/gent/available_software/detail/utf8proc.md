@@ -22,6 +22,7 @@ module load utf8proc/2.10.0-GCCcore-14.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |utf8proc/2.10.0-GCCcore-14.3.0|x|x|x|x|x|x|x|
+|utf8proc/2.10.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |utf8proc/2.9.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |utf8proc/2.9.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |utf8proc/2.8.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
