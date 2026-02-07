@@ -23,6 +23,7 @@ module load hatchling/1.27.0-GCCcore-14.3.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |hatchling/1.27.0-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |hatchling/1.27.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
+|hatchling/1.27.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |hatchling/1.24.2-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |hatchling/1.18.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |hatchling/1.18.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
