@@ -48,3 +48,6 @@ theme:
 
 extra:
   build_dir: build
+  analytics:
+    provider: google
+    property: G-F90YWHY77V
