@@ -1,3 +1,5 @@
+# older setuptools required to avoid trouble with editdistpy, see https://github.com/mammothb/editdistpy/issues/21
+setuptools<82.0.0
 click==8.1.3
 colorama==0.4.6
 editdistpy==0.1.6

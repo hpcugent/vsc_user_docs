@@ -19,9 +19,10 @@ jobs:
 
       - name: install required Python packages
         run: |
-            pip install -r requirements.txt
-            cd custom_plugin && pip install . && cd -
-            cd computational_macros && pip install . && cd -
+            python3 -m pip list
+            pip install --no-build-isolation -r requirements.txt
+            cd custom_plugin && pip install --no-build-isolation . && cd -
+            cd computational_macros && pip install --no-build-isolation . && cd -
             python3 -m pip list
             mkdocs --version
 
