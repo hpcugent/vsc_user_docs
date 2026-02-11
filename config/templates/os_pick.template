@@ -55,3 +55,6 @@ theme:
 
 extra:
   build_dir: build/HPC/{{ site }}
+  analytics:
+    provider: google
+    property: G-F90YWHY77V
