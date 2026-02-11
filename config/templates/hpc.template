@@ -169,6 +169,9 @@ extra_css:
 {%- endif %}
 
 extra:
+  analytics:
+    provider: google
+    property: G-F90YWHY77V
   OS: {{ os }}
 {% if site == 'Gent' %}
   social:
