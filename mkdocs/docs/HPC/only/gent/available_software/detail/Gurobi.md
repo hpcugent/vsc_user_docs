@@ -14,12 +14,13 @@ The overview below shows which Gurobi installations are available per HPC-UGent 
 To start using Gurobi, load one of these modules using a `module load` command like:
 
 ```shell
-module load Gurobi/12.0.0-GCCcore-13.2.0
+module load Gurobi/13.0.1-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Gurobi/13.0.1-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |Gurobi/12.0.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |Gurobi/11.0.0-GCCcore-12.3.0|-|x|x|x|x|-|-|
