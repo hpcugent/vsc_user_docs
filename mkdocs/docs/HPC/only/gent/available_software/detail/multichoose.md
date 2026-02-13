@@ -21,4 +21,4 @@ module load multichoose/1.0.3-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|multichoose/1.0.3-GCCcore-12.3.0|-|x|x|x|x|x|x|
+|multichoose/1.0.3-GCCcore-12.3.0|x|x|x|x|x|x|x|

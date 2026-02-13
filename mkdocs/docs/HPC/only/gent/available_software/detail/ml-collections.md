@@ -14,11 +14,12 @@ The overview below shows which ml-collections installations are available per HP
 To start using ml-collections, load one of these modules using a `module load` command like:
 
 ```shell
-module load ml-collections/0.1.1-foss-2023a
+module load ml-collections/1.1.0-foss-2024a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ml-collections/1.1.0-foss-2024a|x|x|x|x|x|x|x|
 |ml-collections/0.1.1-foss-2023a|x|x|x|x|x|x|x|

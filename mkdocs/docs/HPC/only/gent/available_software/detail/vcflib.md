@@ -21,4 +21,4 @@ module load vcflib/1.0.9-gfbf-2023a-R-4.3.2
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|vcflib/1.0.9-gfbf-2023a-R-4.3.2|-|x|-|x|-|x|x|
+|vcflib/1.0.9-gfbf-2023a-R-4.3.2|x|x|x|x|x|x|x|
