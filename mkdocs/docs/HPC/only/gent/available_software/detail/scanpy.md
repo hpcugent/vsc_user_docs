@@ -14,11 +14,12 @@ The overview below shows which scanpy installations are available per HPC-UGent 
 To start using scanpy, load one of these modules using a `module load` command like:
 
 ```shell
-module load scanpy/1.9.8-foss-2023a
+module load scanpy/1.10.4-foss-2024a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|scanpy/1.10.4-foss-2024a|x|x|x|x|x|x|x|
 |scanpy/1.9.8-foss-2023a|x|x|x|x|x|x|x|

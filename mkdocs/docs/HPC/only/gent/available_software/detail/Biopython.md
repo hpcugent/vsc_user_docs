@@ -27,6 +27,7 @@ module load Biopython/1.86-gfbf-2025b
 |Biopython/1.84-gfbf-2024a|x|x|x|x|x|x|x|
 |Biopython/1.84-foss-2024a|x|x|x|x|x|x|x|
 |Biopython/1.84-foss-2023b|x|x|x|x|x|x|x|
+|Biopython/1.83-gfbf-2023a|x|x|x|x|x|x|x|
 |Biopython/1.83-foss-2023a|x|x|x|x|x|x|x|
 |Biopython/1.79-foss-2022a|-|-|-|-|-|x|x|
 |Biopython/1.76-foss-2023a-Python-2.7.18|x|x|x|-|x|x|x|

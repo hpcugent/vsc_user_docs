@@ -14,11 +14,12 @@ The overview below shows which kineto installations are available per HPC-UGent 
 To start using kineto, load one of these modules using a `module load` command like:
 
 ```shell
-module load kineto/0.4.0-GCC-12.3.0
+module load kineto/20250715-GCC-13.3.0-CUDA-12.6.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|kineto/20250715-GCC-13.3.0-CUDA-12.6.0|x|-|x|-|x|x|-|
 |kineto/0.4.0-GCC-12.3.0|x|-|x|-|x|x|x|
