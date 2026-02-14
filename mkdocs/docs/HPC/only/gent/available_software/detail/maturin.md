@@ -23,6 +23,7 @@ module load maturin/1.9.1-GCCcore-14.3.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |maturin/1.9.1-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |maturin/1.8.3-GCCcore-14.2.0|x|x|x|x|x|x|x|
+|maturin/1.8.3-GCCcore-13.3.0-Rust-1.83.0|x|x|x|x|x|x|x|
 |maturin/1.6.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |maturin/1.5.0-GCCcore-13.2.0-Rust-1.76.0|x|x|x|x|x|x|x|
 |maturin/1.4.0-GCCcore-12.3.0-Rust-1.75.0|x|x|x|x|x|x|x|
