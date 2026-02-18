@@ -22,3 +22,4 @@ module load Faiss/1.7.4-foss-2023a-CUDA-12.1.1
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Faiss/1.7.4-foss-2023a-CUDA-12.1.1|x|-|x|-|x|x|-|
+|Faiss/1.7.4-foss-2023a|x|x|x|x|x|x|x|
