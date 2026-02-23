@@ -129,7 +129,7 @@ ssh  {{userid}}@{{ loginnode }}
 
 When running `ls` in your session on the {{hpcinfra}}, you should see the two files listed in your home directory (`~`):
 
-```
+```bash
 $ ls ~
 run.sh tensorflow_mnist.py
 ```
@@ -174,7 +174,7 @@ module swap cluster/{{othercluster}}
 
 This job script can now be submitted to the cluster's job system for execution, using the qsub (**q**ueue **sub**mit) command:
 
-```
+```bash
 $ qsub run.sh
 {{jobid}}
 ```
@@ -199,7 +199,7 @@ Your job is put into a queue before being executed, so it may take a while befor
 
 You can get an overview of the active jobs using the `qstat` command:
 
-```
+```bash
 $ qstat
 Job ID     Name             User            Time Use S Queue
 ---------- ---------------- --------------- -------- - -------
@@ -208,7 +208,7 @@ Job ID     Name             User            Time Use S Queue
 
 Eventually, after entering `qstat` again you should see that your job has started running:
 
-```
+```bash
 $ qstat
 Job ID     Name             User            Time Use S Queue
 ---------- ---------------- --------------- -------- - -------
@@ -251,7 +251,7 @@ In our example when running `ls` in the current directory you should see 2 new f
 
 When examining the contents of ``run.sh.o{{jobid}}`` you will see something like this:
 
-```
+```bash
 Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
 11493376/11490434 [==============================] - 1s 0us/step
 Epoch 1/5
