@@ -7,7 +7,7 @@ respect-gitignore = true
 line-length = 80
 fixable = []
 unfixable = []
-flavor = "standard"
+flavor = "mkdocs"
 force-exclude = false
 cache = true
 extend-enable = []
@@ -34,4 +34,7 @@ timeout = 30000
 [MD040]
 style = "consistent"
 preferred-aliases = { Shell = "bash" }  # Always use "bash" instead of "sh"
+
+[MD046]
+style = "fenced"  # Options: "consistent", "fenced", "indented"
 
