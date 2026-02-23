@@ -164,13 +164,12 @@ module swap cluster/{{othercluster}}
 
 !!! Tip
 
-    When submitting jobs with limited amount of resources, it is recommended to use the [debug/interactive cluster](interactive_debug.md#interactive-and-debug-cluster): `donphan`. 
+    When submitting jobs with limited amount of resources, it is recommended to
+    use the [debug/interactive
+    cluster](interactive_debug.md#interactive-and-debug-cluster): `donphan`. 
 
-{%- if site == 'Gent' %}
-
-    To get a list of all clusters and their hardware, see <https://www.ugent.be/hpc/en/infrastructure>.
-
-{%- endif %}
+    To get a list of all clusters and their hardware, see
+    <https://www.ugent.be/hpc/en/infrastructure>.
 
 This job script can now be submitted to the cluster's job system for execution, using the qsub (**q**ueue **sub**mit) command:
 
