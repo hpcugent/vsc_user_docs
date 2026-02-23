@@ -101,12 +101,14 @@ Upload both files (`run.sh` and `tensorflow-mnist.py`) to your **home directory*
 {%- else %}
 
 On your local machine you can run:
+
 ```shell
 curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/tensorflow_mnist.py
 curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/run.sh
 ```
 
 Using the `scp` command, the files can be copied from your local host to your *home directory* (`~`) on the remote host (HPC).
+
 ```shell
 scp tensorflow_mnist.py run.sh {{userid}}{{ loginnode }}:~
 ```
@@ -151,6 +153,7 @@ module load TensorFlow/2.15.1-foss-2023a
 
 python tensorflow_mnist.py
 ```
+
 As you can see this job script will run the Python script named **tensorflow_mnist.py**.
 
 The jobs you submit are per default executed on **cluser/{{defaultcluster}}**, you can swap to another cluster by issuing the following command.
@@ -195,6 +198,7 @@ Your job is put into a queue before being executed, so it may take a while befor
 (see [when will my job start?](running_batch_jobs.md#when-will-my-job-start) for scheduling policy).
 
 You can get an overview of the active jobs using the `qstat` command:
+
 ```
 $ qstat
 Job ID     Name             User            Time Use S Queue
@@ -203,6 +207,7 @@ Job ID     Name             User            Time Use S Queue
 ```
 
 Eventually, after entering `qstat` again you should see that your job has started running:
+
 ```
 $ qstat
 Job ID     Name             User            Time Use S Queue
@@ -245,6 +250,7 @@ In our example when running `ls` in the current directory you should see 2 new f
     Replace **{{jobid}}** with the jobid you got from the `qstat` command (see above) or simply look for added files in your current directory by running `ls`.
 
 When examining the contents of ``run.sh.o{{jobid}}`` you will see something like this:
+
 ```
 Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
 11493376/11490434 [==============================] - 1s 0us/step
