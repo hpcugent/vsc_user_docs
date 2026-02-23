@@ -152,7 +152,6 @@ python tensorflow_mnist.py
 ```
 As you can see this job script will run the Python script named **tensorflow_mnist.py**.
 
-
 The jobs you submit are per default executed on **cluser/{{defaultcluster}}**, you can swap to another cluster by issuing the following command.
 
 ```shell
