@@ -19,7 +19,7 @@ now would be a good time to follow our [Linux Tutorial](linux-tutorial/index.md)
 please learn some basics first before continuing. (see [Appendix C - Useful Linux Commands](useful_linux_commands.md))
 {%- endif %}
 
-### A typical workflow looks like this
+### A typical workflow
 
 1.  Connect to the login nodes
 2.  Transfer your files to the {{hpcinfra}}
