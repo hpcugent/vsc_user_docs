@@ -46,7 +46,7 @@ it is recommended to make use of the `ssh` command in a terminal to get the most
 
 Assuming you have already generated SSH keys in the previous step ([Getting Access](#getting-access)), and that they are in a default location, you should now be able to login by running the following command:
 
-```shell
+```bash
 ssh {{userid}}@{{loginnode}}
 ```
 
@@ -102,18 +102,18 @@ Upload both files (`run.sh` and `tensorflow-mnist.py`) to your **home directory*
 
 On your local machine you can run:
 
-```shell
+```bash
 curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/tensorflow_mnist.py
 curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/run.sh
 ```
 
 Using the `scp` command, the files can be copied from your local host to your *home directory* (`~`) on the remote host (HPC).
 
-```shell
+```bash
 scp tensorflow_mnist.py run.sh {{userid}}{{ loginnode }}:~
 ```
 
-```shell
+```bash
 ssh  {{userid}}@{{ loginnode }}
 ```
 
@@ -158,7 +158,7 @@ As you can see this job script will run the Python script named **tensorflow_mni
 
 The jobs you submit are per default executed on **cluser/{{defaultcluster}}**, you can swap to another cluster by issuing the following command.
 
-```shell
+```bash
 module swap cluster/{{othercluster}}
 ```
 
