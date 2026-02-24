@@ -2,7 +2,7 @@
 
 # Getting Started
 
-Welcome to the "Getting Started" guide. This chapter will lead you through the
+Welcome to the “Getting Started” guide. This chapter will lead you through the
 initial steps of logging into the {{hpcinfra}} and submitting your very first
 job. We'll also walk you through the process step by step using a practical
 example.
