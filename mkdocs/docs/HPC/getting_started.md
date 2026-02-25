@@ -196,7 +196,7 @@ module swap cluster/{{othercluster}}
 
     When submitting jobs with limited amount of resources, it is recommended to
     use the [debug/interactive
-    cluster](interactive_debug.md#interactive-and-debug-cluster): `donphan`. 
+    cluster](interactive_debug.md#interactive-and-debug-cluster): `donphan`.
 
     To get a list of all clusters and their hardware, see
     <https://www.ugent.be/hpc/en/infrastructure>.
