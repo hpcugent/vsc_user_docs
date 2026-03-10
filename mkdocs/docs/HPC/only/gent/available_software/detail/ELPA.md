@@ -14,13 +14,14 @@ The overview below shows which ELPA installations are available per HPC-UGent Ti
 To start using ELPA, load one of these modules using a `module load` command like:
 
 ```shell
-module load ELPA/2024.05.001-foss-2024a
+module load ELPA/2025.06.002-NVHPC-25.3-CUDA-12.8.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ELPA/2025.06.002-NVHPC-25.3-CUDA-12.8.0|x|-|-|-|-|-|-|
 |ELPA/2024.05.001-foss-2024a|x|x|x|x|x|x|x|
 |ELPA/2023.05.001-intel-2023a|x|x|x|x|x|x|x|
 |ELPA/2023.05.001-foss-2023a|x|x|x|x|x|x|x|

@@ -14,11 +14,12 @@ The overview below shows which QuantumESPRESSO installations are available per H
 To start using QuantumESPRESSO, load one of these modules using a `module load` command like:
 
 ```shell
-module load QuantumESPRESSO/7.4-foss-2024a
+module load QuantumESPRESSO/7.5-NVHPC-25.3-CUDA-12.8.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|QuantumESPRESSO/7.5-NVHPC-25.3-CUDA-12.8.0|x|-|-|-|-|-|-|
 |QuantumESPRESSO/7.4-foss-2024a|x|x|x|x|x|x|x|
