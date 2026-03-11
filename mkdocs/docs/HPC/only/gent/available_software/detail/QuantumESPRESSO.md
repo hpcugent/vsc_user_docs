@@ -21,5 +21,5 @@ module load QuantumESPRESSO/7.5-NVHPC-25.3-CUDA-12.8.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|QuantumESPRESSO/7.5-NVHPC-25.3-CUDA-12.8.0|x|-|-|-|-|-|-|
+|QuantumESPRESSO/7.5-NVHPC-25.3-CUDA-12.8.0|x|-|x|-|x|x|-|
 |QuantumESPRESSO/7.4-foss-2024a|x|x|x|x|x|x|x|

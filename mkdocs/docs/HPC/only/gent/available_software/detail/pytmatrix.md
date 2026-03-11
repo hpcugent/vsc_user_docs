@@ -21,4 +21,4 @@ module load pytmatrix/0.3.3-gfbf-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pytmatrix/0.3.3-gfbf-2023a|-|x|x|-|x|-|-|
+|pytmatrix/0.3.3-gfbf-2023a|x|x|x|x|x|x|x|

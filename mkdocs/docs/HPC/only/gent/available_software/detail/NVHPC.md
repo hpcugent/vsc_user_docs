@@ -21,5 +21,5 @@ module load NVHPC/25.3-CUDA-12.8.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NVHPC/25.3-CUDA-12.8.0|x|-|-|-|-|-|-|
+|NVHPC/25.3-CUDA-12.8.0|x|-|x|-|x|x|-|
 |NVHPC/24.9|-|x|x|x|x|x|x|

@@ -21,4 +21,4 @@ module load nvidia-compilers/25.3-CUDA-12.8.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nvidia-compilers/25.3-CUDA-12.8.0|x|-|-|-|-|-|-|
+|nvidia-compilers/25.3-CUDA-12.8.0|x|-|x|-|x|x|-|
