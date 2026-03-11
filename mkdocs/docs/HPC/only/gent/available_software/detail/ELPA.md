@@ -21,7 +21,7 @@ module load ELPA/2025.06.002-NVHPC-25.3-CUDA-12.8.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ELPA/2025.06.002-NVHPC-25.3-CUDA-12.8.0|x|-|-|-|-|-|-|
+|ELPA/2025.06.002-NVHPC-25.3-CUDA-12.8.0|x|-|x|-|x|x|-|
 |ELPA/2024.05.001-foss-2024a|x|x|x|x|x|x|x|
 |ELPA/2023.05.001-intel-2023a|x|x|x|x|x|x|x|
 |ELPA/2023.05.001-foss-2023a|x|x|x|x|x|x|x|
