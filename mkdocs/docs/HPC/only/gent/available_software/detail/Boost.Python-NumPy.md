@@ -22,3 +22,4 @@ module load Boost.Python-NumPy/1.88.0-gfbf-2025a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Boost.Python-NumPy/1.88.0-gfbf-2025a|x|x|x|x|x|x|x|
+|Boost.Python-NumPy/1.85.0-gfbf-2024a|x|x|x|x|x|x|x|
