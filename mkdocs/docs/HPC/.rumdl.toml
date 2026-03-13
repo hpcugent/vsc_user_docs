@@ -1,0 +1,40 @@
+[global]
+enable = []
+disable = []
+exclude = []
+include = []
+respect-gitignore = true
+line-length = 80
+fixable = []
+unfixable = []
+flavor = "mkdocs"
+force-exclude = false
+cache = true
+extend-enable = []
+extend-disable = []
+
+[per-file-ignores]
+
+[per-file-flavor]
+
+[code-block-tools]
+enabled = false
+normalize-language = "linguist"
+on-error = "fail"
+on-missing-language-definition = "ignore"
+on-missing-tool-binary = "ignore"
+timeout = 30000
+
+[code-block-tools.languages]
+
+[code-block-tools.language-aliases]
+
+[code-block-tools.tools]
+
+[MD040]
+style = "consistent"
+preferred-aliases = { Shell = "bash" }  # Always use "bash" instead of "sh"
+
+[MD046]
+style = "fenced"  # Options: "consistent", "fenced", "indented"
+
