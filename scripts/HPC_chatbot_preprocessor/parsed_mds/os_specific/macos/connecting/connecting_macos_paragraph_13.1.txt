@@ -1,0 +1,12 @@
+Transfer Files tofrom the HPC
+Using scp
+Secure copy or SCP is a tool (command) for securely transferring files between a local
+host (= your computer) and a remote host (the HPC). It is based on the
+Secure Shell (SSH) protocol. The scp command is the equivalent of the cp (i.e.,
+copy) command, but can copy files to or from remote machines.
+It's easier to copy files directly to $VSC_DATA and $VSC_SCRATCH if
+you have symlinks to them in your home directory. See 
+the chapter titled "Uploading/downloading/editing files", section "Symlinks for data/scratch" in the intro to Linux
+ for how to do this.
+Open an additional terminal window and check that you're working on your
+local machine.
