@@ -14,11 +14,12 @@ The overview below shows which FLUENT installations are available per HPC-UGent 
 To start using FLUENT, load one of these modules using a `module load` command like:
 
 ```shell
-module load FLUENT/2024R2
+module load FLUENT/2025R2
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FLUENT/2025R2|x|x|x|x|x|x|x|
 |FLUENT/2024R2|x|x|x|x|x|x|x|
