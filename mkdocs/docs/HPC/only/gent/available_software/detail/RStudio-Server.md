@@ -21,6 +21,6 @@ module load RStudio-Server/2025.09.2+418-foss-2025a-R-4.5.1
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RStudio-Server/2025.09.2+418-foss-2025a-R-4.5.1|-|x|x|-|x|x|x|
+|RStudio-Server/2025.09.2+418-foss-2025a-R-4.5.1|x|x|x|x|x|x|x|
 |RStudio-Server/2024.09.0+375-foss-2023b-Java-11-R-4.4.1|-|x|x|x|x|x|x|
 |RStudio-Server/2023.09.1+494-foss-2023a-Java-11-R-4.3.2|-|-|-|-|-|x|x|
