@@ -10,7 +10,7 @@ module avail
 ```
 
 Or when you want to check whether some specific software, some compiler or some
-application (e.g., MATLAB) is installed on the {{hpc}}.
+application (e.g., MATLAB) is installed on the {{ hpc }}.
 
 ```
 module avail matlab

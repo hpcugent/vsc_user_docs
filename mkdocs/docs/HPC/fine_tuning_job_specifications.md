@@ -1,7 +1,7 @@
 # Fine-tuning Job Specifications
 [//]: # (ch:fine-tuning-job-specifications)
 
-As {{hpc}} system administrators, we often observe that the {{hpc}} resources are not
+As {{ hpc }} system administrators, we often observe that the {{ hpc }} resources are not
 optimally (or wisely) used. For example, we regularly notice that
 several cores on a computing node are not utilised, due to the fact that
 one sequential program uses only one core on the node. Or users run I/O
@@ -10,18 +10,18 @@ intensive applications on nodes with "slow" network connections.
 Users often tend to run their jobs without specifying specific PBS Job
 parameters. As such, their job will automatically use the default
 parameters, which are not necessarily (or rarely) the optimal ones. This
-can slow down the run time of your application, but also block {{hpc}} resources
+can slow down the run time of your application, but also block {{ hpc }} resources
 for other users.
 
 Specifying the "optimal" Job Parameters requires some knowledge of your
 application (e.g., how many parallel threads does my application use,
 is there a lot of inter-process communication, how much memory does my
-application need) and also some knowledge about the {{hpc}} infrastructure
+application need) and also some knowledge about the {{ hpc }} infrastructure
 (e.g., what kind of multi-core processors are available, which nodes
 have InfiniBand).
 
 There are plenty of monitoring tools on Linux available to the user,
-which are useful to analyse your individual application. The {{hpc}} environment
+which are useful to analyse your individual application. The {{ hpc }} environment
 as a whole often requires different techniques, metrics and time goals,
 which are not discussed here. We will focus on tools that can help to
 optimise your Job Specifications.
@@ -465,7 +465,7 @@ metrics shown by monitor are aggregated over the process and all of its
 sub-processes (recursively). The reported CPU usage is the sum of all
 these processes, and can thus exceed 100%.
 
-Some (well, since this is a {{hpc}} Cluster, we hope most) programs use more
+Some (well, since this is a {{ hpc }} Cluster, we hope most) programs use more
 than one core to perform their computations. Hence, it should not come
 as a surprise that the CPU usage is reported as larger than 100%. When
 programs of this type are running on a computer with n cores, the CPU
@@ -502,7 +502,7 @@ relevant to understanding your overall CPU usage pattern.
 
 It is good practice to perform a number of run time stress tests, and to
 check the CPU utilisation of your nodes. We (and all other users of the
-{{hpc}}) would appreciate that you use the maximum of the CPU resources that
+{{ hpc }}) would appreciate that you use the maximum of the CPU resources that
 are assigned to you and make sure that there are no CPUs in your node
 who are not utilised without reasons.
 
@@ -572,9 +572,9 @@ the applications that you are running.
 
 The optimal number of applications on a machine could be empirically
 calculated by performing a number of stress tests, whilst checking the
-highest throughput. There is however no manner in the {{hpc}} at the moment to
+highest throughput. There is however no manner in the {{ hpc }} at the moment to
 specify the maximum number of applications that shall run per core
-dynamically. The {{hpc}} scheduler will not launch more than one process per
+dynamically. The {{ hpc }} scheduler will not launch more than one process per
 core.
 
 The manner how the cores are spread out over CPUs does not matter for
@@ -611,7 +611,7 @@ You can also read it in the **htop** command.
 ### Fine-tuning your executable and/or job script
 
 It is good practice to perform a number of run time stress tests, and to
-check the system load of your nodes. We (and all other users of the {{hpc}})
+check the system load of your nodes. We (and all other users of the {{ hpc }})
 would appreciate that you use the maximum of the CPU resources that are
 assigned to you and make sure that there are no CPUs in your node who
 are not utilised without reasons.
@@ -636,7 +636,7 @@ And then check again.
 Some programs generate intermediate or output files, the size of which
 may also be a useful metric.
 
-Remember that your available disk space on the {{hpc}} online storage is
+Remember that your available disk space on the {{ hpc }} online storage is
 limited, and that you have environment variables which point to these
 directories available (i.e., *$VSC_DATA*, *$VSC_SCRATCH* and
 *$VSC_DATA*). On top of those, you can also access some temporary
@@ -691,7 +691,7 @@ Several actions can be taken, to avoid storage problems:
 5.  Make sure your programs clean up their temporary files after
     execution.
 6.  Move your output results to your own computer regularly.
-7.  Anyone can request more disk space to the {{hpc}} staff, but you will have
+7.  Anyone can request more disk space to the {{ hpc }} staff, but you will have
     to duly justify your request.
 
 ## Specifying network requirements

@@ -276,7 +276,7 @@ If you want to share data, there are alternatives (like a shared directories in 
 space, see [Virtual organisations](../running_jobs_with_input_output_data/#virtual-organisations)).
 {% endif %}
 
-### Can I share my data with other {{hpc}} users?
+### Can I share my data with other {{ hpc }} users?
 
 Yes, you can use the `chmod` or `setfacl` commands to change permissions
 of files so other users can access the data. For example, the following
@@ -286,7 +286,7 @@ command will enable a user named "otheruser" to read the file named
 ```
 $ setfacl -m u:otheruser:r dataset.txt
 $ ls -l dataset.txt
--rwxr-x---+ 2 {{userid}} mygroup      40 Apr 12 15:00 dataset.txt
+-rwxr-x---+ 2 {{ userid }} mygroup      40 Apr 12 15:00 dataset.txt
 ```
 
 For more information about `chmod` or `setfacl`, see
@@ -304,12 +304,12 @@ Please see [Adding multiple SSH public keys](account.md#adding-multiple-ssh-publ
 Please fill out the details about the software and why you need it in
 this form:
 <https://www.ugent.be/hpc/en/support/software-installation-request>.
-When submitting the form, a mail will be sent to {{hpcinfo}} containing all the
+When submitting the form, a mail will be sent to {{ hpcinfo }} containing all the
 provided information. The HPC team will look into your request as soon
 as possible you and contact you when the installation is done or if
 further information is required. 
 {% else %}
-Please send an e-mail to {{hpcinfo}} that includes:
+Please send an e-mail to {{ hpcinfo }} that includes:
 
 -   What software you want to install and the required version
 

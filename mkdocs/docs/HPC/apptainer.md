@@ -16,7 +16,7 @@ For more general information about the use of Apptainer, please see the
 official documentation at <https://apptainer.org/docs/>.
 
 This documentation only covers aspects of using Apptainer on the
-{{hpcinfra}}.
+{{ hpcinfra }}.
 
 ## Restrictions on image location
 
@@ -33,7 +33,7 @@ run using images that are located elsewhere, in particular on the
 In addition, this implies that running containers images provided via a
 URL (e.g., `shub://...` or `docker://...`) will not work.
 
-If these limitations are a problem for you, please let us know via {{hpcinfo}}.
+If these limitations are a problem for you, please let us know via {{ hpcinfo }}.
 
 ## Available filesystems
 

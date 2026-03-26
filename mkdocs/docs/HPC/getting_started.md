@@ -1,7 +1,7 @@
 {% set exampleloc="mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist" %}
 # Getting Started
 
-Welcome to the "Getting Started" guide. This chapter will lead you through the initial steps of logging into the {{hpcinfra}} and submitting your very first job. We'll also walk you through the process step by step using a practical example.
+Welcome to the "Getting Started" guide. This chapter will lead you through the initial steps of logging into the {{ hpcinfra }} and submitting your very first job. We'll also walk you through the process step by step using a practical example.
 
 In addition to this chapter, you might find the [recording of the *Introduction to HPC-UGent* training session](https://www.ugent.be/hpc/en/training/introhpcugent-recording) to be a useful resource.
 
@@ -9,7 +9,7 @@ Before proceeding, read [the introduction to HPC](introduction.md) to gain an un
 
 ### Getting Access
 
-To get access to the {{hpcinfra}}, visit [Getting an HPC Account](account.md).
+To get access to the {{ hpcinfra }}, visit [Getting an HPC Account](account.md).
 
 If you have not used Linux before, 
 {%- if site == 'Gent' %}
@@ -21,7 +21,7 @@ please learn some basics first before continuing. (see [Appendix C - Useful Linu
 #### A typical workflow looks like this:
 
 1.  Connect to the login nodes 
-2.  Transfer your files to the {{hpcinfra}}
+2.  Transfer your files to the {{ hpcinfra }}
 3.  Optional: compile your code and test it 
 4.  Create a job script and submit your job
 5.  Wait for job to be executed
@@ -29,13 +29,13 @@ please learn some basics first before continuing. (see [Appendix C - Useful Linu
     after downloading them locally.
 
 We will walk through an illustrative workload to get you started. In this example, our objective is to train a deep learning model for recognizing hand-written digits (MNIST dataset) using [TensorFlow](https://www.tensorflow.org/);
-see the [example scripts](https://github.com/hpcugent/vsc_user_docs/tree/main/{{exampleloc}}).
+see the [example scripts](https://github.com/hpcugent/vsc_user_docs/tree/main/{{ exampleloc }}).
 
 ### Getting Connected
 
 There are two options to connect
 
-- Using a terminal to connect via SSH (for power users) (see [First Time connection to the {{ hpcinfra}}](connecting.md#first-time-connection-to-the-hpc-infrastructure))
+- Using a terminal to connect via SSH (for power users) (see [First Time connection to the {{ hpcinfra }}](connecting.md#first-time-connection-to-the-hpc-infrastructure))
 - [Using the web portal](web_portal.md)
 
 Considering your operating system is **{{OS}}**, 
@@ -46,12 +46,12 @@ it is recommended to make use of the `ssh` command in a terminal to get the most
 Assuming you have already generated SSH keys in the previous step ([Getting Access](#getting-access)), and that they are in a default location, you should now be able to login by running the following command:
 
 ```shell
-ssh {{userid}}@{{loginnode}}
+ssh {{ userid }}@{{ loginnode }}
 ```
 
 !!! Warning "User your own VSC account id"
     
-    Replace **{{userid}}** with your VSC account id (see <https://account.vscentrum.be>)
+    Replace **{{ userid }}** with your VSC account id (see <https://account.vscentrum.be>)
 
 !!! Tip
 
@@ -61,12 +61,12 @@ ssh {{userid}}@{{loginnode}}
 {%- if OS == windows %} it is recommended to use the web portal.
 {%- else %} it should be easy to make use of the `ssh` command in a terminal, but the web portal will work too. {%- endif %}
 
-The [web portal](web_portal.md) offers a convenient way to upload files and gain shell access to the {{hpcinfra}} from a standard web browser (no software installation or configuration required).
+The [web portal](web_portal.md) offers a convenient way to upload files and gain shell access to the {{ hpcinfra }} from a standard web browser (no software installation or configuration required).
 
 See [shell access](web_portal.md#shell-access) when using the web portal, or
-[connection to the {{hpcinfra}}](connecting.md#first-time-connection-to-the-hpc-infrastructure) when using a terminal.
+[connection to the {{ hpcinfra }}](connecting.md#first-time-connection-to-the-hpc-infrastructure) when using a terminal.
 
-Make sure you can get to a shell access to the {{hpcinfra}} before proceeding with the next steps.
+Make sure you can get to a shell access to the {{ hpcinfra }} before proceeding with the next steps.
 
 {%- endif %}
 
@@ -77,12 +77,12 @@ Make sure you can get to a shell access to the {{hpcinfra}} before proceeding wi
 
 ### Transfer your files
 
-Now that you can login, it is time to transfer files from your local computer to your **home directory** on the {{hpcinfra}}.
+Now that you can login, it is time to transfer files from your local computer to your **home directory** on the {{ hpcinfra }}.
 
 Download following the example scripts to your computer:
 
-- [tensorflow_mnist.py](https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/tensorflow_mnist.py) 
-- [run.sh](https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/run.sh)
+- [tensorflow_mnist.py](https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{ exampleloc }}/tensorflow_mnist.py) 
+- [run.sh](https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{ exampleloc }}/run.sh)
 
 You can also find the example scripts in our git repo: [https://github.com/hpcugent/vsc_user_docs/](https://github.com/hpcugent/vsc_user_docs/tree/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist).
 
@@ -101,22 +101,22 @@ Upload both files (`run.sh` and `tensorflow-mnist.py`) to your **home directory*
 
 On your local machine you can run:
 ```shell
-curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/tensorflow_mnist.py
-curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/run.sh
+curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{ exampleloc }}/tensorflow_mnist.py
+curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{ exampleloc }}/run.sh
 ```
 
 Using the `scp` command, the files can be copied from your local host to your *home directory* (`~`) on the remote host (HPC).
 ```shell
-scp tensorflow_mnist.py run.sh {{userid}}{{ loginnode }}:~
+scp tensorflow_mnist.py run.sh {{ userid }}{{ loginnode }}:~
 ```
 
 ```shell
-ssh  {{userid}}@{{ loginnode }}
+ssh  {{ userid }}@{{ loginnode }}
 ```
 
 !!! Warning "User your own VSC account id"
     
-    Replace **{{userid}}** with your VSC account id (see <https://account.vscentrum.be>)
+    Replace **{{ userid }}** with your VSC account id (see <https://account.vscentrum.be>)
 
 !!! Info
 
@@ -124,7 +124,7 @@ ssh  {{userid}}@{{ loginnode }}
 
 {%- endif %}
 
-When running `ls` in your session on the {{hpcinfra}}, you should see the two files listed in your home directory (`~`):
+When running `ls` in your session on the {{ hpcinfra }}, you should see the two files listed in your home directory (`~`):
 
 ```
 $ ls ~
@@ -153,10 +153,10 @@ python tensorflow_mnist.py
 As you can see this job script will run the Python script named **tensorflow_mnist.py**.
 
 
-The jobs you submit are per default executed on **cluser/{{defaultcluster}}**, you can swap to another cluster by issuing the following command.
+The jobs you submit are per default executed on **cluser/{{ defaultcluster }}**, you can swap to another cluster by issuing the following command.
 
 ```shell
-module swap cluster/{{othercluster}}
+module swap cluster/{{ othercluster }}
 ```
 
 !!! Tip
@@ -173,19 +173,19 @@ This job script can now be submitted to the cluster's job system for execution, 
 
 ```
 $ qsub run.sh
-{{jobid}}
+{{ jobid }}
 ```
 
-This command returns a job identifier (*{{jobid}}*) on the HPC cluster. This is a unique identifier for the job which can be used to monitor and manage your job.
+This command returns a job identifier (*{{ jobid }}*) on the HPC cluster. This is a unique identifier for the job which can be used to monitor and manage your job.
 
 !!! Warning "Make sure you understand what the `module` command does"
  
-    Note that the module commands only modify environment variables. For instance, running `module swap cluster/{{othercluster}}` will update your shell environment so that `qsub` submits a job to the `{{othercluster}}` cluster, 
+    Note that the module commands only modify environment variables. For instance, running `module swap cluster/{{ othercluster }}` will update your shell environment so that `qsub` submits a job to the `{{ othercluster }}` cluster, 
     but our active shell session is still running on the login node.
     
     It is important to understand that while `module` commands affect your session environment, they do ***not*** change where the commands your are running are being executed: they will still be run on the login node you are on.
     
-    When you submit a job script however, the commands ***in*** the job script will be run on a workernode of the cluster the job was submitted to (like `{{othercluster}}`).
+    When you submit a job script however, the commands ***in*** the job script will be run on a workernode of the cluster the job was submitted to (like `{{ othercluster }}`).
 
 For detailed information about `module` commands, read the [running batch jobs](running_batch_jobs.md) chapter.
 
@@ -199,7 +199,7 @@ You can get an overview of the active jobs using the `qstat` command:
 $ qstat
 Job ID     Name             User            Time Use S Queue
 ---------- ---------------- --------------- -------- - -------
-{{jobid}}     run.sh           {{userid}}        0:00:00  Q {{othercluster}}
+{{ jobid }}     run.sh           {{ userid }}        0:00:00  Q {{ othercluster }}
 ```
 
 Eventually, after entering `qstat` again you should see that your job has started running:
@@ -207,7 +207,7 @@ Eventually, after entering `qstat` again you should see that your job has starte
 $ qstat
 Job ID     Name             User            Time Use S Queue
 ---------- ---------------- --------------- -------- - -------
-{{jobid}}     run.sh           {{userid}}        0:00:01  R {{othercluster}}
+{{ jobid }}     run.sh           {{ userid }}        0:00:01  R {{ othercluster }}
 ```
 
 If you don't see your job in the output of the `qstat` command anymore, your job has likely completed.
@@ -233,18 +233,18 @@ By default located in the directory where you issued `qsub`.
 
 In our example when running `ls` in the current directory you should see 2 new files:
  
-- **run.sh.o{{jobid}}**, containing *normal output messages* produced by job {{jobid}};
-- **run.sh.e{{jobid}}**, containing *errors and warnings* produced by job {{jobid}}.
+- **run.sh.o{{ jobid }}**, containing *normal output messages* produced by job {{ jobid }};
+- **run.sh.e{{ jobid }}**, containing *errors and warnings* produced by job {{ jobid }}.
 
 !!! Info
     
-    run.sh.e{{jobid}} should be empty (no errors or warnings).
+    run.sh.e{{ jobid }} should be empty (no errors or warnings).
 
 !!! Warning "Use your own job ID"
 
-    Replace **{{jobid}}** with the jobid you got from the `qstat` command (see above) or simply look for added files in your current directory by running `ls`.
+    Replace **{{ jobid }}** with the jobid you got from the `qstat` command (see above) or simply look for added files in your current directory by running `ls`.
 
-When examining the contents of ``run.sh.o{{jobid}}`` you will see something like this:
+When examining the contents of ``run.sh.o{{ jobid }}`` you will see something like this:
 ```
 Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
 11493376/11490434 [==============================] - 1s 0us/step

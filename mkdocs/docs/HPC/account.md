@@ -31,12 +31,12 @@ Brussels University Association, Antwerp University Association and the
 University Colleges-Limburg. The VSC is funded by the Flemish
 Government.
 
-There are two methods for connecting to {{hpcinfra}}:
+There are two methods for connecting to {{ hpcinfra }}:
 
 - Using a terminal to connect via SSH.
 - [Using the web portal](web_portal.md)
 
-The web portal offers a convenient way to upload files and gain shell access to the {{hpcinfra}} from a standard web browser (no software installation or configuration required).
+The web portal offers a convenient way to upload files and gain shell access to the {{ hpcinfra }} from a standard web browser (no software installation or configuration required).
 
 If you would like use a terminal with SSH as this gives you more flexibility continue reading.
 However if you prefer to use the web portal, you can skip ahead to the following section: [Applying for the account](#applying-for-the-account).

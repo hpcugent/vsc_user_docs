@@ -139,7 +139,7 @@ to use, see subsection [Using explicit version numbers](running_batch_jobs.md#us
 $ module load worker/1.6.13-iimpi-2023a
 $ wsub -batch weather.pbs -data data.csv
 total number of work items: 41
-{{jobid}}
+{{ jobid }}
 ```
 
 Note that the PBS file is the value of the -batch option. The weather
@@ -280,7 +280,7 @@ The job is now submitted as follows:
 $ module load worker/1.6.13-iimpi-2023a
 $ wsub -t 1-100 -batch test_set.pbs
 total number of work items: 100
-{{jobid}}
+{{ jobid }}
 ```
 
 The "*test_set*" program will now be run for all 100 input files -- 8
@@ -295,7 +295,7 @@ submits a single job.
 $ qstat
 Job id          Name          User      Time   Use S Queue
 --------------- ------------- --------- ---- ----- - -----
-{{jobid}}  test_set.pbs  {{userid}}          0 Q
+{{ jobid }}  test_set.pbs  {{ userid }}          0 Q
 
 And you can now check the generated output files:
 $ more ./output/output_99.dat
@@ -351,7 +351,7 @@ Then one can submit a MapReduce style job as follows:
 ```
 $ wsub -prolog pre.sh -batch test_set.pbs -epilog post.sh -t 1-100
 total number of work items: 100
-{{jobid}}
+{{ jobid }}
 $ cat all_output.txt
 ...
 $ rm -r -f ./output/
@@ -384,18 +384,18 @@ reassuring to monitor its progress. Worker keeps a log of its activity
 in the directory where the job was submitted. The log's name is derived
 from the job's name and the job's ID, i.e., it has the form
 `<jobname>.log<jobid>`. For the running example, this could be
-`run.pbs.log{{jobid}}`, assuming the job's ID is {{jobid}}. To keep an eye on the
+`run.pbs.log{{ jobid }}`, assuming the job's ID is {{ jobid }}. To keep an eye on the
 progress, one can use:
 
 ```
-tail -f run.pbs.log{{jobid}}
+tail -f run.pbs.log{{ jobid }}
 ```
 
 Alternatively, `wsummarize`, a Worker command that summarises a log
 file, can be used:
 
 ```
-watch -n 60 wsummarize run.pbs.log{{jobid}}
+watch -n 60 wsummarize run.pbs.log{{ jobid }}
 ```
 
 This will summarise the log file every 60 seconds.
@@ -436,7 +436,7 @@ remain to be computed. Suppose the job that did not complete all its
 work items had ID "445948".
 
 ```
-wresume -jobid {{jobid}}
+wresume -jobid {{ jobid }}
 ```
 
 This will submit a new job that will start to work on the work items
@@ -445,7 +445,7 @@ job parameters when resuming, specifically the requested resources such
 as the number of cores and the walltime.
 
 ```
-wresume -l walltime=1:30:00 -jobid {{jobid}}
+wresume -l walltime=1:30:00 -jobid {{ jobid }}
 ```
 
 Work items may fail to complete successfully for a variety of reasons,
@@ -457,7 +457,7 @@ possible to retry work items that failed (preferably after the glitch
 why they failed was fixed).
 
 ```
-wresume -jobid {{jobid}} -retry
+wresume -jobid {{ jobid }} -retry
 ```
 
 By default, a job's prologue is not executed when it is resumed, while

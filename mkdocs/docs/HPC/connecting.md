@@ -750,7 +750,7 @@ This should open up a address bar where you can enter a URL.
 Alternatively, look for the "connect to server" option in your file
 browsers menu.
 
-Enter: *sftp://{{ userid }}@{{ loginnode}}/* and press enter.
+Enter: *sftp://{{ userid }}@{{ loginnode }}/* and press enter.
 
 You should now be able to browse files on the {{ hpc }} in your file browser.
 {% endif %}
@@ -790,20 +790,20 @@ See [the section on `rsync` in chapter 5 of the Linux intro manual](../linux-tut
 ## Changing login nodes
 It can be useful to have control over which login node you are on. However, when you connect to the HPC (High-Performance Computing) system, you are directed to a random login node, which might not be the one where you already have an active session. To address this, there is a way to manually switch your active login node.
 
-For instance, if you want to switch to the login node named `{{loginhost}}`, you can use the following command while you are connected to the `{{altloginhost}}` login node on the HPC:
+For instance, if you want to switch to the login node named `{{ loginhost }}`, you can use the following command while you are connected to the `{{ altloginhost }}` login node on the HPC:
 ```shell
-ssh {{loginhost}}
+ssh {{ loginhost }}
 ```
 This is also possible the other way around.
 
 If you want to find out which login host you are connected to, you can use the `hostname` command.
 ```
 $ hostname
-{{loginhost}}
-$ ssh {{altloginhost}}
+{{ loginhost }}
+$ ssh {{ altloginhost }}
 
 $ hostname
-{{altloginhost}}
+{{ altloginhost }}
 ```
 
 

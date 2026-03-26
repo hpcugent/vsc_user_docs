@@ -1,7 +1,7 @@
 # OpenFOAM
 
 In this chapter, we outline best practices for using the centrally
-provided OpenFOAM installations on the VSC {{hpc}} infrastructure.
+provided OpenFOAM installations on the VSC {{ hpc }} infrastructure.
 
 ## Different OpenFOAM releases
 
@@ -25,7 +25,7 @@ features. If the OpenFOAM version you need is not available yet, see [I want to 
 ## Documentation & training material
 
 The best practices outlined here focus specifically on the use of
-OpenFOAM on the VSC {{hpc}} infrastructure. As such, they are intended to
+OpenFOAM on the VSC {{ hpc }} infrastructure. As such, they are intended to
 augment the existing OpenFOAM documentation rather than replace it. For
 more general information on using OpenFOAM, please refer to:
 
@@ -84,8 +84,8 @@ different OpenFOAM versions w.r.t. features and API (see also [Different OpenFOA
 multiple modules are available that fulfill your requirements, give
 preference to those providing a more recent OpenFOAM version, and to the
 ones that were installed with a more recent compiler toolchain; for
-example, prefer a module that includes `intel-{{ current_year}}b` in its name over one
-that includes `intel-{{ current_year}}a`.
+example, prefer a module that includes `intel-{{ current_year }}b` in its name over one
+that includes `intel-{{ current_year }}a`.
 
 To prepare your environment for using OpenFOAM, load the `OpenFOAM`
 module you have picked; for example:
@@ -307,7 +307,7 @@ consider using the local disk of the workernode as working directory
 for these types of workloads.
 
 {% if site == gent %}
-For large parallel OpenFOAM simulations on the {{university}} Tier-2 clusters, consider
+For large parallel OpenFOAM simulations on the {{ university }} Tier-2 clusters, consider
 using the alternative shared scratch filesystem `$VSC_SCRATCH_ARCANINE`
 (see [Pre-defined user directories](../running_jobs_with_input_output_data/#pre-defined-user-directories)).
 {% endif %}

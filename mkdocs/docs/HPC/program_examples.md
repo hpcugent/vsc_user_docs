@@ -10,7 +10,7 @@ If you have **not done so already** copy our examples to your home directory by 
 
 Go to our examples:
 ```
-cd ~/{{exampledir}}
+cd ~/{{ exampledir }}
 ```
 
 Here, we just have put together a number of examples for your

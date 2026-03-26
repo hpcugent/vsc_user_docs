@@ -2,12 +2,12 @@
 
 ## Basic Linux Usage
 
-All the {{hpc}} clusters run some variant of the "{{operatingsystembase}}" operating system. This means
+All the {{ hpc }} clusters run some variant of the "{{ operatingsystembase }}" operating system. This means
 that, when you connect to one of them, you get a command line interface,
 which looks something like this:
 
 ```
-{{userid}}@ln01[203] $
+{{ userid }}@ln01[203] $
 ```
 
 When you see this, we also say you are inside a "shell". The shell will
@@ -88,7 +88,7 @@ following:
 $ echo "Hello! This is my hostname:"
 Hello! This is my hostname:
 $ hostname
-{{loginhost}}
+{{ loginhost }}
 ```
 
 Suppose we want to call this script "foo". You open a new file for
@@ -119,7 +119,7 @@ the script:
 ```
 $ bash foo
 Hello! This is my hostname:
-{{loginhost}}
+{{ loginhost }}
 ```
 
 Congratulations, you just created and started your first shell script!
@@ -164,7 +164,7 @@ Now you can start your script by simply executing it:
 ```
 $ ./foo
 Hello! This is my hostname:
-{{loginhost}}
+{{ loginhost }}
 ```
 
 The same technique can be used for all other scripting languages, like

@@ -601,7 +601,7 @@ The quota of disk space and number of files for each {{ hpc }} user is:
 %% Kurt Lust: I've hidden the first part of this chapter as mmlsquota is only
 %% for GPFS file systems (and not for , e.g., the NetApp in Leuven for home and data)
 %% and as on several clusters, the explicit path is needed.
-% In general it may be useful to see how much space (in KB) and how many files that you are using on any file system.  This information is also shown each time that you log in to the {{hpc}}
+% In general it may be useful to see how much space (in KB) and how many files that you are using on any file system.  This information is also shown each time that you log in to the {{ hpc }}
 
 % \begin{prompt}
 % %\shellcmd{mmlsquota}%

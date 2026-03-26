@@ -27,7 +27,7 @@ To get help:
     ```
 2.  use Google
 
-3. contact [{{hpcinfo}}](mailto:{{hpcinfo}}) in case
+3. contact [{{ hpcinfo }}](mailto:{{ hpcinfo }}) in case
 of problems or questions (even for basic things!)
 
 ### Errors
@@ -37,7 +37,7 @@ will be error output or a message explaining you this. Read this
 carefully and try to act on it. Try googling the error first to find any
 possible solution, but if you can't come up with something in 15
 minutes, don't hesitate to mail 
-[{{hpcinfo}}](mailto:{{hpcinfo}})
+[{{ hpcinfo }}](mailto:{{ hpcinfo }})
 
 ## Basic terminal usage
 

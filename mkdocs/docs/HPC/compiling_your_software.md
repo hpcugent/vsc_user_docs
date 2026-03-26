@@ -1,33 +1,33 @@
 {% set exampledir="examples/Compiling-and-testing-your-software-on-the-HPC" %}
 # Compiling and testing your software on the HPC
 
-All nodes in the {{hpc}} cluster are running the "{{operatingsystem}}" 
-Operating system, which is a specific version of {{operatingsystembase}}. This means that all the 
+All nodes in the {{ hpc }} cluster are running the "{{ operatingsystem }}" 
+Operating system, which is a specific version of {{ operatingsystembase }}. This means that all the 
 software programs
-(executable) that the end-user wants to run on the {{hpc}} first must be
-compiled for {{operatingsystem}}. It also means that you first have to install all the
-required external software packages on the {{hpc}}.
+(executable) that the end-user wants to run on the {{ hpc }} first must be
+compiled for {{ operatingsystem }}. It also means that you first have to install all the
+required external software packages on the {{ hpc }}.
 
-Most commonly used compilers are already pre-installed on the {{hpc}} and can be
+Most commonly used compilers are already pre-installed on the {{ hpc }} and can be
 used straight away. Also, many popular external software packages, which
 are regularly used in the scientific community, are also pre-installed.
 
-## Check the pre-installed software on the {{hpc}}
+## Check the pre-installed software on the {{ hpc }}
 
 In order to check all the available modules and their version numbers,
-which are pre-installed on the {{hpc}} enter:
+which are pre-installed on the {{ hpc }} enter:
 {% include "sites/available_modules.md" %}
 
 
-When your required application is not available on the {{hpc}} please contact
-any {{hpc}} member. Be aware of potential "License Costs". "Open Source"
+When your required application is not available on the {{ hpc }} please contact
+any {{ hpc }} member. Be aware of potential "License Costs". "Open Source"
 software is often preferred.
 
 ## Porting your code
 
 To **port** a software-program is to translate it from the operating system in
 which it was developed (e.g., Windows 7) to another operating system
-(e.g., {{operatingsystembase}} on our {{hpc}}) so that it can be used there. Porting implies some
+(e.g., {{ operatingsystembase }} on our {{ hpc }}) so that it can be used there. Porting implies some
 degree of effort, but not nearly as much as redeveloping the program in
 the new environment. It all depends on how "portable" you wrote your
 code.
@@ -55,9 +55,9 @@ Whilst programming, it would be wise to stick to certain standards
 (e.g., ISO/ANSI/POSIX). This will ease the porting of your code to other
 platforms.
 
-Porting your code to the {{operatingsystem}} platform is the responsibility of the end-user.
+Porting your code to the {{ operatingsystem }} platform is the responsibility of the end-user.
 
-## Compiling and building on the {{hpc}}
+## Compiling and building on the {{ hpc }}
 
 Compiling refers to the process of translating code written in some
 programming language, e.g., Fortran, C, or C++, to machine code.
@@ -67,14 +67,14 @@ The text below guides you through some basic problems typical for small
 software projects. For larger projects it is more appropriate to use
 makefiles or even an advanced build system like CMake.
 
-All the {{hpc}} nodes run the same version of the Operating System, i.e. {{operatingsystem}}. So,
+All the {{ hpc }} nodes run the same version of the Operating System, i.e. {{ operatingsystem }}. So,
 it is sufficient to compile your program on any compute node. Once you
 have generated an executable with your compiler, this executable should
 be able to run on any other compute-node.
 
 A typical process looks like:
 
-1.  Copy your software to the login-node of the {{hpc}}
+1.  Copy your software to the login-node of the {{ hpc }}
 
 2.  Start an interactive session on a compute node;
 
@@ -84,16 +84,16 @@ A typical process looks like:
 
 5.  Generate your job scripts;
 
-6.  Test it on the {{hpc}}
+6.  Test it on the {{ hpc }}
 
 7.  Run it (in parallel);
 
-We assume you've copied your software to the {{hpc}}. The next step is to request
+We assume you've copied your software to the {{ hpc }}. The next step is to request
 your private compute node.
 
 ```bash
 $ qsub -I
-qsub: waiting for job {{jobid}} to start
+qsub: waiting for job {{ jobid }} to start
 ```
 
 
@@ -103,7 +103,7 @@ Go to the examples for chapter
 [Compiling and testing your software on the HPC](compiling_your_software.md#compiling-and-building-on-the-hpc) and load the 
 foss module:
 ```
-cd ~/{{exampledir}}
+cd ~/{{ exampledir }}
 module load foss
 ```
 
@@ -112,10 +112,10 @@ program:
 ```
 $ ls -l
 total 512
--rw-r--r-- 1 {{userid}} 214 Sep 16 09:42 hello.c
--rw-r--r-- 1 {{userid}} 130 Sep 16 11:39 hello.pbs*
--rw-r--r-- 1 {{userid}} 359 Sep 16 13:55 mpihello.c
--rw-r--r-- 1 {{userid}} 304 Sep 16 13:55 mpihello.pbs
+-rw-r--r-- 1 {{ userid }} 214 Sep 16 09:42 hello.c
+-rw-r--r-- 1 {{ userid }} 130 Sep 16 11:39 hello.pbs*
+-rw-r--r-- 1 {{ userid }} 359 Sep 16 13:55 mpihello.c
+-rw-r--r-- 1 {{ userid }} 304 Sep 16 13:55 mpihello.pbs
 ```
 
 ```shell title="hello.c"
@@ -137,9 +137,9 @@ $ gcc -help
 $ gcc -O2 -o hello hello.c
 $ ls -l
 total 512
--rwxrwxr-x 1 {{userid}} 7116 Sep 16 11:43 hello*
--rw-r--r-- 1 {{userid}}  214 Sep 16 09:42 hello.c
--rwxr-xr-x 1 {{userid}}  130 Sep 16 11:39 hello.pbs*
+-rwxrwxr-x 1 {{ userid }} 7116 Sep 16 11:43 hello*
+-rw-r--r-- 1 {{ userid }}  214 Sep 16 09:42 hello.c
+-rwxr-xr-x 1 {{ userid }}  130 Sep 16 11:39 hello.pbs*
 ```
 
 A new file "hello" has been created. Note that this file has "execute"
@@ -165,14 +165,14 @@ Hello #4
 ...
 ```
 
-It seems to work, now run it on the {{hpc}}
+It seems to work, now run it on the {{ hpc }}
 ```
 qsub hello.pbs
 ```
 
 ### Compiling a parallel program in C/MPI
 ```
-cd ~/{{exampledir}}
+cd ~/{{ exampledir }}
 ```
 
 List the directory and explore the contents of the "*mpihello.c*"
@@ -181,10 +181,10 @@ program:
 $ ls -l
 total 512
 total 512
--rw-r--r-- 1 {{userid}} 214 Sep 16 09:42 hello.c
--rw-r--r-- 1 {{userid}} 130 Sep 16 11:39 hello.pbs*
--rw-r--r-- 1 {{userid}} 359 Sep 16 13:55 mpihello.c
--rw-r--r-- 1 {{userid}} 304 Sep 16 13:55 mpihello.pbs
+-rw-r--r-- 1 {{ userid }} 214 Sep 16 09:42 hello.c
+-rw-r--r-- 1 {{ userid }} 130 Sep 16 11:39 hello.pbs*
+-rw-r--r-- 1 {{ userid }} 359 Sep 16 13:55 mpihello.c
+-rw-r--r-- 1 {{ userid }} 304 Sep 16 13:55 mpihello.pbs
 ```
 
 ```shell title="mpihello.c"
@@ -214,7 +214,7 @@ $ ./mpihello
 Hello World from Node 0.
 ```
 
-It seems to work, now run it on the {{hpc}}.
+It seems to work, now run it on the {{ hpc }}.
 
 ```
 qsub mpihello.pbs
@@ -227,7 +227,7 @@ Studio Cluster Edition compilers. We stay in the examples directory for
 this chapter:
 
 ```
-cd ~/{{exampledir}}
+cd ~/{{ exampledir }}
 ```
 
 
@@ -254,13 +254,13 @@ $ ./mpihello
 Hello World from Node 0.
 ```
 
-It seems to work, now run it on the {{hpc}}.
+It seems to work, now run it on the {{ hpc }}.
 
 ```
 qsub mpihello.pbs
 ```
 
-Note: The {{association}} only has a license for the Intel Parallel Studio Cluster
+Note: The {{ association }} only has a license for the Intel Parallel Studio Cluster
 Edition for a fixed number of users. As such, it might happen that you
 have to wait a few minutes before a floating license becomes available
 for your use.

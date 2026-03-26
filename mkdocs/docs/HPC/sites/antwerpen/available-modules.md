@@ -13,7 +13,7 @@ bzip2/1.0.6-intel-2015a
 ```
 
 Or when you want to check whether some specific software, some compiler
-or some application (e.g., LAMMPS) is installed on the {{hpc}}.
+or some application (e.g., LAMMPS) is installed on the {{ hpc }}.
 
 ```
 $ module av 2>&1 | grep -i -e "LAMMPS"

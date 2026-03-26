@@ -28,7 +28,7 @@ section [Requesting (GPU) resources](./#requesting-gpu-resources)).
 
 Note that due to a bug in Slurm you will currently not be able to be
 able to interactively use MPI software that requires access to the GPUs.
-If you need this, please contact use via {{hpcinfo}}.
+If you need this, please contact use via {{ hpcinfo }}.
 
 ## Hardware
 
@@ -185,6 +185,6 @@ VIB-UGent course available at
 
 ## Getting help
 
-In case of questions or problems, please contact the {{hpcteam}} via {{hpcinfo}}, and clearly
+In case of questions or problems, please contact the {{ hpcteam }} via {{ hpcinfo }}, and clearly
 indicate that your question relates to the `joltik` cluster by adding
 `[joltik]` in the email subject.

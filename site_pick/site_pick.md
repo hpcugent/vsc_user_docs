@@ -2,15 +2,15 @@
 # Please select your site:
 
 {%- if ant_home_url %}
-[Antwerpen]({{ant_home_url}}){ .md-button }
+[Antwerpen]({{ ant_home_url }}){ .md-button }
 {%- endif %}
 {%- if gent_home_url %}
-[Gent]({{gent_home_url}}){ .md-button }
+[Gent]({{ gent_home_url }}){ .md-button }
 {%- endif %}
 {%- if brussel_home_url %}
-[Brussel]({{brussel_home_url}}){ .md-button }
+[Brussel]({{ brussel_home_url }}){ .md-button }
 {%- endif %}
 {%- if leuven_home_url %}
-[Leuven]({{leuven_home_url}}){ .md-button }
+[Leuven]({{ leuven_home_url }}){ .md-button }
 {%- endif %}
 {% endmacro %}
