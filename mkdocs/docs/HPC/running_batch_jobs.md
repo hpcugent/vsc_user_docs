@@ -119,7 +119,7 @@ OpenMPI, OpenBLAS and the standard LAPACK and ScaLAPACK libraries for
 the linear algebra operations and the FFTW library for FFT. The
 toolchains are refreshed twice a year, which is reflected in their name.
 
-E.g., `foss/{{ current_year}}a` is the first version of the `foss` toolchain in {{ current_year }}.
+E.g., `foss/{{ current_year }}a` is the first version of the `foss` toolchain in {{ current_year }}.
 
 The toolchains are then used to compile a lot of the software installed
 on the VSC clusters. You can recognise those packages easily as they all
@@ -837,25 +837,25 @@ An example of this is the `wsub` command of `worker`.
 More info on these commands is in the document on [multi job submission](multi_job_submission.md)
 or on the [troubleshooting page](troubleshooting.md#multi-job-submissions-on-a-non-default-cluster).
 
-To submit jobs to the `{{othercluster}}` cluster, you can change only what is needed in your session environment 
-to submit jobs to that particular cluster by using `module swap env/slurm/{{othercluster}}` instead of using 
-`module swap cluster/{{othercluster}}`.
-The last command also activates the software modules that are installed specifically for {{othercluster}}, 
+To submit jobs to the `{{ othercluster }}` cluster, you can change only what is needed in your session environment 
+to submit jobs to that particular cluster by using `module swap env/slurm/{{ othercluster }}` instead of using 
+`module swap cluster/{{ othercluster }}`.
+The last command also activates the software modules that are installed specifically for {{ othercluster }}, 
 which may not be compatible with the system you are working on.
-By only swapping to `env/slurm/donphan`, jobs that are submitted will be sent to the `{{othercluster}}` cluster. 
+By only swapping to `env/slurm/donphan`, jobs that are submitted will be sent to the `{{ othercluster }}` cluster. 
 The same approach can be used to submit jobs to another cluster, of course.
 
 
 Each `cluster` module not only loads the corresponding `env/slurm/...` module to control where jobs are sent to, 
 but also two other `env/...` modules which control other parts of the environment.
-For example, for the `{{defaultcluster}}` cluster, 
-loading the `cluster/{{defaultcluster}}` module corresponds to loading 3 different `env/` modules:
+For example, for the `{{ defaultcluster }}` cluster, 
+loading the `cluster/{{ defaultcluster }}` module corresponds to loading 3 different `env/` modules:
 
-| `env/` module for `{{defaultcluster}}`| Purpose |
+| `env/` module for `{{ defaultcluster }}`| Purpose |
 |---------------------------------------|----------------|
-| `env/slurm/{{defaultcluster}}`        | Changes `$SLURM_CLUSTERS` which specifies the cluster where jobs are sent to. |
-| `env/software/{{defaultcluster}}`     | Changes `$MODULEPATH`, which controls what software modules are available for loading. |
-| `env/vsc/{{defaultcluster}}`          | Changes the set of `$VSC_` environment variables that are specific to the `{{defaultcluster}}` cluster |
+| `env/slurm/{{ defaultcluster }}`        | Changes `$SLURM_CLUSTERS` which specifies the cluster where jobs are sent to. |
+| `env/software/{{ defaultcluster }}`     | Changes `$MODULEPATH`, which controls what software modules are available for loading. |
+| `env/vsc/{{ defaultcluster }}`          | Changes the set of `$VSC_` environment variables that are specific to the `{{ defaultcluster }}` cluster |
 
 We recommend that you do not use these separate `env/` modules directly unless you really need to,
 and only if you understand what they are doing exactly.

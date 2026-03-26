@@ -102,9 +102,9 @@ versions, combined with a particular toolchain version. Use the
 ```
 $ eb -S example-1.2
 CFGS1=/apps/gent/CO7/sandybridge/software/EasyBuild/3.6.2/lib/python2.7/site-packages/easybuild_easyconfigs-3.6.2-py2.7.egg/easybuild/easyconfigs
- * $CFGS1/e/example/example-1.2.1-foss-{{ current_year}}a.eb
- * $CFGS1/e/example/example-1.2.3-foss-{{ current_year}}b.eb
- * $CFGS1/e/example/example-1.2.5-intel-{{ current_year}}a.eb
+ * $CFGS1/e/example/example-1.2.1-foss-{{ current_year }}a.eb
+ * $CFGS1/e/example/example-1.2.3-foss-{{ current_year }}b.eb
+ * $CFGS1/e/example/example-1.2.5-intel-{{ current_year }}a.eb
 ```
 
 For readily available easyconfigs, just specify the name of the
@@ -124,13 +124,13 @@ To try to install `example v1.2.6`, based on the easyconfig file for
 `example v1.2.5`:
 
 ```
-eb example-1.2.5-intel-{{ current_year}}a.eb --try-software-version=1.2.6
+eb example-1.2.5-intel-{{ current_year }}a.eb --try-software-version=1.2.6
 ```
 
 To try to install example v1.2.5 with a different compiler toolchain:
 
 ```
-eb example-1.2.5-intel-{{ current_year}}a.eb --robot --try-toolchain=intel,{{ current_year}}b
+eb example-1.2.5-intel-{{ current_year }}a.eb --robot --try-toolchain=intel,{{ current_year }}b
 ```
 
 ### Install other software

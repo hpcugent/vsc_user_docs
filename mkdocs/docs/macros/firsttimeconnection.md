@@ -5,7 +5,7 @@ login node.
 Make sure the fingerprint in the alert matches one of the following:
 
 ```
-{{ puttyFirstConnect }}
+{{ puttyfirstconnect }}
 ```
 
 If it does, press ***Yes***, if it doesn't, please contact {{ hpcinfo }}.

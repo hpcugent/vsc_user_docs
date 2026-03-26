@@ -10,7 +10,7 @@ See <https://www.vscentrum.be/alphafold> for more information and there you can 
 
 ## Documentation & extra material
 
-This chapter focuses specifically on the use of AlphaFold on the {{hpcinfra}}.
+This chapter focuses specifically on the use of AlphaFold on the {{ hpcinfra }}.
 It is intented to augment the existing AlphaFold documentation rather than replace it.
 It is therefore recommended to first familiarize yourself with AlphaFold. The following resources can be helpful:
 
@@ -25,7 +25,7 @@ It is therefore recommended to first familiarize yourself with AlphaFold. The fo
     - see also <https://www.vscentrum.be/alphafold>
 
 
-## Using AlphaFold on {{hpcinfra}}
+## Using AlphaFold on {{ hpcinfra }}
 
 Several different versions of AlphaFold are installed on both the CPU and GPU HPC-UGent Tier-2 clusters, see the output of `module avail AlphaFold`.
 If you run this command on a [GPU cluster](gpu.md), additional CUDA modules will show up:
@@ -62,7 +62,7 @@ module load AlphaFold/2.3.1-foss-2022a-CUDA-11.7.0
     Later in this chapter, you will find a comparison between running AlphaFold on CPUs or GPUs.
 
 Multiple revisions of the large database (~2.5TB) that is also required to run AlphaFold have been
-made available on the HPC-UGent infrastructure in a central location ({{directory}}), 
+made available on the HPC-UGent infrastructure in a central location ({{ directory }}), 
 so you do not have to download it yourself.
 
 ```shell
@@ -80,19 +80,19 @@ As of writing this documentation the latest version is `20230310`.
     which is recommended for the AlphaFold data, because of random access I/O patterns.
     See [Pre-defined user directories](./running_jobs_with_input_output_data.md#pre-defined-user-directories) to get more info about the arcanine filesystem.
 
-The AlphaFold installations we provide have been modified a bit to facilitate the usage on {{hpcinfra}}.
+The AlphaFold installations we provide have been modified a bit to facilitate the usage on {{ hpcinfra }}.
 
 ### Setting up the environment
 
 The location to the AlphaFold data can be specified via the `$ALPHAFOLD_DATA_DIR` environment variable, so you should define this variable in your AlphaFold job script:
 
 ```shell
-export ALPHAFOLD_DATA_DIR={{directory}}/{{version}}
+export ALPHAFOLD_DATA_DIR={{ directory }}/{{ version }}
 ```
 
 !!! Warning "Use newest version"
     
-    Do not forget to replace `{{version}}` with a more up to date version if available.
+    Do not forget to replace `{{ version }}` with a more up to date version if available.
 
 ### Running AlphaFold
 
@@ -106,11 +106,11 @@ so you don't need to use options like `--data_dir` to specify the location of th
 
 Similarly, the script was also tweaked such that the location to commands like `hhblits,hhsearch,jackhmmer,kalign` are already correctly set, so options like `--hhblits_binary_path` are **not** required.
 
-For more information about the script and options see [this section]({{readme}}#running-alphafold) in the official [README]({{readme}}).
+For more information about the script and options see [this section]({{ readme }}#running-alphafold) in the official [README]({{ readme }}).
 
 !!! WARNING "READ README"
 
-    It is **strongly** advised to read the official [README]({{readme}}) provided by DeepMind before continuing.
+    It is **strongly** advised to read the official [README]({{ readme }}) provided by DeepMind before continuing.
     
 
 ### Controlling core count for `hhblits` and `jackhmmer`
@@ -130,7 +130,7 @@ Likewise for `jackhmmer`, the core count can be controlled via `$ALPHAFOLD_JACKH
 
 ### CPU/GPU comparison
 
-The provided timings were obtained by executing the `T1050.fasta` example, as outlined in the [Alphafold README]({{readme}}). 
+The provided timings were obtained by executing the `T1050.fasta` example, as outlined in the [Alphafold README]({{ readme }}). 
 The [corresponding jobscripts](#example-jobscripts) are available.
 
 Using `--db_preset=full_dbs`, the following runtime data was collected:
@@ -155,7 +155,7 @@ This highlights the difference between CPU and GPU performance even more.
 
 ## Example scenario
 
-The following example comes from the official [Examples section]({{readme}}#examples) in the Alphafold [README]({{readme}}).
+The following example comes from the official [Examples section]({{ readme }}#examples) in the Alphafold [README]({{ readme }}).
 The run command is slightly different (see above: [Running AlphaFold](./running-alphafold)).
 
 Do not forget to set up the environment (see above: [Setting up the environment](./setting-up-the-environment)).
@@ -178,11 +178,11 @@ alphafold
   --output_dir=.
 ```
 
-See [AlphaFold output]({{readme}}#alphafold-output), for information about the outputs.
+See [AlphaFold output]({{ readme }}#alphafold-output), for information about the outputs.
 
 !!! Info
     
-    For more scenarios see the [example section]({{readme}}#examples) in the official [README]({{readme}}).
+    For more scenarios see the [example section]({{ readme }}#examples) in the official [README]({{ readme }}).
     
 
 ## Example jobscripts
@@ -224,4 +224,4 @@ Jobscript that runs AlphaFold on CPU using 24 cores on one node.
 {% include "./examples/AlphaFold/AlphaFold-cpu-doduo.sh" %}
 ```
 
-In case of problems or questions, don't hesitate to contact use at <{{hpcinfo}}>.
+In case of problems or questions, don't hesitate to contact use at <{{ hpcinfo }}>.

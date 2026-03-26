@@ -3,7 +3,7 @@
 
 Multiple different shared filesystems are available on the HPC
 infrastructure, each with their own purpose. See section
-[Where to store your data on the {{hpc}}](../running_jobs_with_input_output_data.md#where-to-store-your-data-on-the-hpc)
+[Where to store your data on the {{ hpc }}](../running_jobs_with_input_output_data.md#where-to-store-your-data-on-the-hpc)
 for a list of available locations.
 
 {% if site==gent %}

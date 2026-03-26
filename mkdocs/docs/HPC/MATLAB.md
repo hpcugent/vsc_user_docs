@@ -6,7 +6,7 @@
     (except for the interactive debug cluster).
 
     Compiling MATLAB programs is only possible on the [interactive debug cluster](interactive_debug.md),
-    **not** on the {{ hpcsite}} login nodes where resource limits w.r.t. memory and max. number of progress are too strict.
+    **not** on the {{ hpcsite }} login nodes where resource limits w.r.t. memory and max. number of progress are too strict.
 
 ## Why is the MATLAB compiler required?
 
@@ -24,7 +24,7 @@ compiler can be used as explained below.
 {% if site == gent %}
 Only a limited amount of MATLAB sessions can be active at the same time
 because there are only a limited amount of MATLAB research licenses
-available on the {{university}} MATLAB license server. If each job would need a
+available on the {{ university }} MATLAB license server. If each job would need a
 license, licenses would quickly run out.
 {% endif %}
 ## How to compile MATLAB code
@@ -62,13 +62,13 @@ To compile a MATLAB program, use `mcc -mv`:
 
 ```
 mcc -mv example.m
-Opening log file:  {{homedir}}/java.log.34090
+Opening log file:  {{ homedir }}/java.log.34090
 Compiler version: 8.3 (R2021b)
 Dependency analysis by REQUIREMENTS.
-Parsing file "{{homedir}}/example.m"
+Parsing file "{{ homedir }}/example.m"
 	(Referenced from: "Compiler Command Line").
 Deleting 0 temporary MEX authorization files.
-Generating file "{{homedir}}/readme.txt".
+Generating file "{{ homedir }}/readme.txt".
 Generating file "run\_example.sh".
 ```
 

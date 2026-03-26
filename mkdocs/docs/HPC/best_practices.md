@@ -57,5 +57,5 @@
 12. For all multi-node jobs, please use a cluster that has an
     "InfiniBand" interconnect network.
 
-13. And above all, do not hesitate to contact the {{hpc}} staff at {{hpcinfo}}. We're here
+13. And above all, do not hesitate to contact the {{ hpc }} staff at {{ hpcinfo }}. We're here
     to help you.

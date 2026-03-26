@@ -5,11 +5,11 @@ your own.
 
 | **Login**         |                                         |
 |-------------------|-----------------------------------------|
-| Login             | `ssh {{userid}}@{{loginnode}}`          |
+| Login             | `ssh {{ userid }}@{{ loginnode }}`          |
 | Where am I?       | `hostname`                              |
-| Copy to {{hpc}}   | `scp foo.txt {{userid}}@{{loginnode}}:` |
-| Copy from {{hpc}} | `scp {{userid}}@{{loginnode}}:foo.txt`  |
-| Setup ftp session | `sftp {{userid}}@{{loginnode}}`         |
+| Copy to {{ hpc }}   | `scp foo.txt {{ userid }}@{{ loginnode }}:` |
+| Copy from {{ hpc }} | `scp {{ userid }}@{{ loginnode }}:foo.txt`  |
+| Setup ftp session | `sftp {{ userid }}@{{ loginnode }}`         |
 
 
 | **Modules**                |                       |

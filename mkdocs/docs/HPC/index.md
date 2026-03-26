@@ -1,7 +1,7 @@
 ---
 hide: "toc"
 ---
-#  Welcome to the {{hpcsite}} documentation
+#  Welcome to the {{ hpcsite }} documentation
 
 ---
 

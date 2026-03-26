@@ -132,7 +132,7 @@ This will open the manual of this command. This manual contains detailed
 explanation of all the options the command has. Exiting the manual is
 done by pressing 'q'.
 
-**Don't be afraid to contact <{{hpcinfo}}>. They are here to help and will do so for even the 
+**Don't be afraid to contact <{{ hpcinfo }}>. They are here to help and will do so for even the 
 smallest of problems!**
 
 # More information

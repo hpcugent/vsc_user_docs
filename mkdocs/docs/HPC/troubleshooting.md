@@ -347,7 +347,7 @@ Alternatively you can use the command that might be shown by the warning under
 `remove with:` and it should be something like this:
 
 ```
-ssh-keygen -f "~/.ssh/known_hosts" -R "{{loginnode}}"
+ssh-keygen -f "~/.ssh/known_hosts" -R "{{ loginnode }}"
 ```
 
 If the command is not shown, take the file from the "Offending ECDSA key in",
@@ -360,7 +360,7 @@ You will need to verify that the fingerprint shown in the dialog matches
 one of the following fingerprints:
 
 ```
-{{ puttyFirstConnect }}
+{{ puttyfirstconnect }}
 ```
 
 **Do not click "Yes" until you verified the fingerprint. Do not press "No" in any case.**
@@ -398,8 +398,8 @@ See the [section about `dos2unix` in Linux tutorial](../linux-tutorial/uploading
 {% if OS == (linux or macos) %}
 
 ```
-$ ssh {{userid}}@{{loginnode}}
-The authenticity of host {{loginnode}} (<IP-adress>) can't be established. 
+$ ssh {{ userid }}@{{ loginnode }}
+The authenticity of host {{ loginnode }} (<IP-adress>) can't be established. 
 <algorithm> key fingerprint is <hash>
 Are you sure you want to continue connecting (yes/no)?
 ```
@@ -409,11 +409,11 @@ the place of the underlined piece of text matches one of the following
 lines:
 
 ```
-{{opensshFirstConnect}}
+{{ opensshfirstconnect }}
 ```
 {% endif %}
 
-If it does, type ***yes***. If it doesn't, please contact support: {{hpcinfo}}.
+If it does, type ***yes***. If it doesn't, please contact support: {{ hpcinfo }}.
 
 {% if OS != (linux or macos) %}
 {% include "../macros/firsttimeconnection.md" %}
@@ -521,14 +521,14 @@ As a rule of thumb, toolchains in the same row are compatible with each other:
 Another common error is:
 
 ```
-$ module load cluster/{{othercluster}}
+$ module load cluster/{{ othercluster }}
 Lmod has detected the following error: A different version of the 'cluster' module is already loaded (see output of 'ml').
 
 If you don't understand the warning or error, contact the helpdesk at hpc@ugent.be
 ```
 
 This is because there can only be one `cluster` module active at a time.
-The correct command is `module swap cluster/{{othercluster}}`. See also [Specifying the cluster on which to run](../running_batch_jobs/#specifying-the-cluster-on-which-to-run).
+The correct command is `module swap cluster/{{ othercluster }}`. See also [Specifying the cluster on which to run](../running_batch_jobs/#specifying-the-cluster-on-which-to-run).
 {% endif %}
 
 {% if site == gent %}
@@ -555,8 +555,8 @@ nodes have a different CPU architecture, software loaded using modules
 might not work.
 
 If you want to test software on the login nodes, make sure the
-`cluster/{{defaultcluster}}` module is loaded (with `module swap cluster/{{defaultcluster}}`, see [Specifying the cluster on which to run](../running_batch_jobs/#specifying-the-cluster-on-which-to-run)), since
-the login nodes and {{defaultcluster}} have the same CPU architecture.
+`cluster/{{ defaultcluster }}` module is loaded (with `module swap cluster/{{ defaultcluster }}`, see [Specifying the cluster on which to run](../running_batch_jobs/#specifying-the-cluster-on-which-to-run)), since
+the login nodes and {{ defaultcluster }} have the same CPU architecture.
 
 If modules are already loaded, and then we swap to a different cluster,
 all our modules will get reloaded. This means that all current modules
@@ -603,7 +603,7 @@ on top of a Perl installation that is optimized specifically for the CPUs of the
 which may not be compatible with the CPUs of the login nodes, triggering the `Illegal instruction` error.
 
 The cluster modules are split up into several `env/*` "submodules" to help deal with this problem.
-For example, by using `module swap env/slurm/donphan` instead of `module swap cluster/donphan` (starting from the default environment, the `{{defaultcluster}}` cluster), you can update your environment to submit jobs to `donphan`, while still using the software installations that are specific to the `{{defaultcluster}}` cluster (which are compatible with the login nodes since the `{{defaultcluster}}` cluster workernodes have the same CPUs).
+For example, by using `module swap env/slurm/donphan` instead of `module swap cluster/donphan` (starting from the default environment, the `{{ defaultcluster }}` cluster), you can update your environment to submit jobs to `donphan`, while still using the software installations that are specific to the `{{ defaultcluster }}` cluster (which are compatible with the login nodes since the `{{ defaultcluster }}` cluster workernodes have the same CPUs).
 The same goes for the other clusters as well of course.
 
 

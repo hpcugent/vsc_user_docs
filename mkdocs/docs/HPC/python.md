@@ -187,7 +187,7 @@ qsub jobscript.pbs
 ```
 
 After some time, two files will be created in the directory where the job was submitted: 
-`python_job_example.o{{jobid}}` and `python_job_example.e{{jobid}}`, where {{jobid}} is the id of your job.
+`python_job_example.o{{ jobid }}` and `python_job_example.e{{ jobid }}`, where {{ jobid }} is the id of your job.
 The `.o` file contains the output of the job.
 
 ## More information
