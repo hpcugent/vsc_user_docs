@@ -1563,7 +1563,12 @@ you are connecting to. Another possibility is that the host key of the
 system you are connecting to has changed.</p>
 <p>You will need to verify that the fingerprint shown in the dialog matches
 one of the following fingerprints:</p>
-<div class="highlight"><pre><span></span><code>{{ puttyfirstconnect }}
+<div class="highlight"><pre><span></span><code>- ssh-rsa 2048 5a:40:9d:2a:f4:b7:6c:87:0d:87:30:07:9d:ea:80:11
+- sha-rsa 2048 SHA256:W8HRHTZpPd2GIhoNU2xj2oUKhcFr2bjIzZsKzY+1PCA
+- ssh-ecdsa 256 f9:4f:19:9b:fb:40:c5:6c:6f:b9:64:2e:33:0a:8d:26
+- ssh-ecdsa 256 SHA256:DlsP+jFrTqSdr9VquUpDj17Uy99zFdFN/LxVhaQQzbo
+- ssh-ed25519 255 df:0c:61:b9:26:51:0f:b4:ca:43:ac:f6:ee:d2:a1:29
+- ssh-ed25519 255 SHA256:+vlrkJui34B4iumxGVHd447K3W8wzgE1n1h2/Ic0WlE
 </code></pre></div>
 <p><strong>Do not click "Yes" until you verified the fingerprint. Do not press "No" in any case.</strong></p>
 <p>If the fingerprint matches, click "Yes".</p>
@@ -1589,7 +1594,12 @@ See the <a href="../linux-tutorial/uploading_files/#dos2unix">section about <cod
 Alert will appear and you will be asked to verify the authenticity of the
 login node.</p>
 <p>Make sure the fingerprint in the alert matches one of the following:</p>
-<div class="highlight"><pre><span></span><code>{{ puttyfirstconnect }}
+<div class="highlight"><pre><span></span><code>- ssh-rsa 2048 5a:40:9d:2a:f4:b7:6c:87:0d:87:30:07:9d:ea:80:11
+- sha-rsa 2048 SHA256:W8HRHTZpPd2GIhoNU2xj2oUKhcFr2bjIzZsKzY+1PCA
+- ssh-ecdsa 256 f9:4f:19:9b:fb:40:c5:6c:6f:b9:64:2e:33:0a:8d:26
+- ssh-ecdsa 256 SHA256:DlsP+jFrTqSdr9VquUpDj17Uy99zFdFN/LxVhaQQzbo
+- ssh-ed25519 255 df:0c:61:b9:26:51:0f:b4:ca:43:ac:f6:ee:d2:a1:29
+- ssh-ed25519 255 SHA256:+vlrkJui34B4iumxGVHd447K3W8wzgE1n1h2/Ic0WlE
 </code></pre></div>
 <p>If it does, press <strong><em>Yes</em></strong>, if it doesn't, please contact hpc@uantwerpen.be.</p>
 <p><em>Note:</em> it is possible that the <code>ssh-ed25519</code> fingerprint starts with <code>ssh-ed25519 255</code>
