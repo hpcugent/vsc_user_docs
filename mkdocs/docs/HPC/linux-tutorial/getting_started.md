@@ -220,7 +220,7 @@ And querying some basic information about the Linux kernel:
 ```
 $ uname -a 
 Linux gligar01.gligar.os 2.6.32-573.8.1.el6.ug.x86_64 #1 SMP Mon Nov 16 15:12:09
-	CET 2015 x86_64 x86_64 x86_64 GNU/Linux 
+    CET 2015 x86_64 x86_64 x86_64 GNU/Linux 
 ```
 
 ## Exercises
