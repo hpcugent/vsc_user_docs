@@ -1,68 +1,70 @@
 # Troubleshooting
 
 ## Why does my job not run faster when using more nodes and/or cores? { #job_does_not_run_faster }
-Requesting more resources for your job, more specifically using multiple cores and/or nodes, 
-does not automatically imply that your job will run faster. 
-There are various factors that determine to what extent these extra resources can be used and how efficiently they can be used. 
+
+Requesting more resources for your job, more specifically using multiple cores and/or nodes,
+does not automatically imply that your job will run faster.
+There are various factors that determine to what extent these extra resources can be used and how efficiently they can be used.
 More information on this in the subsections below.
 
-
 ### Using multiple cores
-When you want to speed up your jobs by requesting multiple cores, you also need to use software that is actually capable of 
+
+When you want to speed up your jobs by requesting multiple cores, you also need to use software that is actually capable of
 using them (and use them efficiently, ideally).
-Unless a particular parallel programming paradigm like [OpenMP](https://www.openmp.org/about/openmp-faq/#WhatIs) threading 
-(shared memory) or [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface) (distributed memory) is used, 
+Unless a particular parallel programming paradigm like [OpenMP](https://www.openmp.org/about/openmp-faq/#WhatIs) threading
+(shared memory) or [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface) (distributed memory) is used,
 software will run sequentially (on a single core).
 
-To use multiple cores, the software needs to be able to create, manage, and synchronize multiple threads or processes. 
+To use multiple cores, the software needs to be able to create, manage, and synchronize multiple threads or processes.
 More on how to implement parallelization for you exact programming language can be found online.
-Note that when using software that only uses *threads* to use multiple cores, there is no point in asking for multiple *nodes*, 
+Note that when using software that only uses *threads* to use multiple cores, there is no point in asking for multiple *nodes*,
 since with a multi-threading (shared memory) approach you can only use the resources (cores, memory) of a *single* node.
 
-Even if your software is able to use multiple cores, maybe there is no point in going beyond a single core or a handful of cores, 
+Even if your software is able to use multiple cores, maybe there is no point in going beyond a single core or a handful of cores,
 for example because the workload you are running is too small or does not parallelize well.
-You can test this by increasing the amount of cores step-wise, and look at the speedup you gain. For example, 
+You can test this by increasing the amount of cores step-wise, and look at the speedup you gain. For example,
 test with 2, 4, 16, a quarter of, half of, and all available cores.
 
 Other reasons why using more cores may not lead to a (significant) speedup include:
 
-- **Overhead:** When you use multi-threading (OpenMP) or multi-processing (MPI), 
-you should *not* expect that doubling the amount of cores will result in a 2x speedup. 
+- **Overhead:** When you use multi-threading (OpenMP) or multi-processing (MPI),
+you should *not* expect that doubling the amount of cores will result in a 2x speedup.
 This is due to the fact that time is needed to create, manage and synchronize the threads/processes.
 When this "bookkeeping" overhead exceeds the time gained by parallelization, you will not observe any speedup (or even see slower runs).
-For example, this can happen when you split your program in too many (tiny) tasks to run in parallel - 
+For example, this can happen when you split your program in too many (tiny) tasks to run in parallel -
 creating a thread/process for each task may even take longer than actually running the task itself.
 
-- **[Amdahl's Law](https://en.wikipedia.org/wiki/Amdahl%27s_law)** is often used in parallel computing to predict the maximum achievable (theoretical) speedup when using multiple cores. 
-It states that "*the overall performance improvement gained by optimizing a single part of a system is limited by the fraction of time that the improved part is actually used*". 
-For example, if a program needs 20 hours to complete using a single core, but a one-hour portion of the program can not be parallelized, 
-only the remaining 19 hours of execution time can be sped up using parallelization. 
-Regardless of how many cores are devoted to a parallelized execution of this program, the minimum execution time is always more than 1 hour. 
+- **[Amdahl's Law](https://en.wikipedia.org/wiki/Amdahl%27s_law)** is often used in parallel computing to predict the maximum achievable (theoretical) speedup when using multiple cores.
+It states that "*the overall performance improvement gained by optimizing a single part of a system is limited by the fraction of time that the improved part is actually used*".
+For example, if a program needs 20 hours to complete using a single core, but a one-hour portion of the program can not be parallelized,
+only the remaining 19 hours of execution time can be sped up using parallelization.
+Regardless of how many cores are devoted to a parallelized execution of this program, the minimum execution time is always more than 1 hour.
 So when you reach this theoretical limit, using more cores will not help at all to speed up the computational workload.
 
-- **Resource contention:** When two or more threads/processes want to access the same resource, they need to wait on each other - this is called resource contention. 
-As a result, 1 thread/process will need to wait until the other one is finished using that resource. 
+- **Resource contention:** When two or more threads/processes want to access the same resource, they need to wait on each other - this is called resource contention.
+As a result, 1 thread/process will need to wait until the other one is finished using that resource.
 When each thread uses the same resource, it will definitely run slower than if it doesn't need to wait for other threads to finish.
 
-- **Software limitations:** It is possible that the software you are using is just not really optimized for parallelization. 
+- **Software limitations:** It is possible that the software you are using is just not really optimized for parallelization.
 An example of a software that is not really optimized for multi-threading is Python (although this has improved over the years).
-This is due to the fact that in Python threads are implemented in a way that multiple threads can not run at the same time, due to the [global interpreter lock (GIL)](https://en.wikipedia.org/wiki/Global_interpreter_lock). 
-Instead of using multi-threading in Python to speedup a CPU bound program, you should use multi-processing instead, 
+This is due to the fact that in Python threads are implemented in a way that multiple threads can not run at the same time, due to the [global interpreter lock (GIL)](https://en.wikipedia.org/wiki/Global_interpreter_lock).
+Instead of using multi-threading in Python to speedup a CPU bound program, you should use multi-processing instead,
 which uses multiple processes (multiple instances of the same program) instead of multiple threads in a single program instance.
 Using multiple processes can speed up your CPU bound programs a lot more *in Python* than threads can do, even though they are much less efficient to create.
 In other programming languages (which don't have a GIL), you would probably still want to use threads.
 
-- **[Affinity and core pinning](https://www.admin-magazine.com/HPC/Articles/Processor-Affinity-for-OpenMP-and-MPI)**: 
+- **[Affinity and core pinning](https://www.admin-magazine.com/HPC/Articles/Processor-Affinity-for-OpenMP-and-MPI)**:
 Even when the software you are using is able to efficiently use multiple cores, you may not see any speedup (or even a significant slowdown).
-This could be due to threads or processes that are not pinned to specific cores and keep hopping around between cores, 
+This could be due to threads or processes that are not pinned to specific cores and keep hopping around between cores,
 or because the pinning is done incorrectly and several threads/processes are being pinned to the same core(s), and thus keep "fighting" each other.
 
-- **Lack of sufficient memory**: When there is not enough memory available, or not enough memory bandwidth, 
+- **Lack of sufficient memory**: When there is not enough memory available, or not enough memory bandwidth,
 it is likely that you will not see a significant speedup when using more cores (since each thread or process most likely requires additional memory).
 
 More info on running multi-core workloads on the {{ hpcinfra }} can be found [here](multi_core_jobs.md).
 
 ### Using multiple nodes
+
 When trying to use multiple (worker)nodes to improve the performance of your workloads, you may not see (significant) speedup.
 
 Parallelizing code across nodes is fundamentally different from leveraging multiple cores via multi-threading within a single node.
@@ -78,27 +80,27 @@ An example of how you can make beneficial use of multiple nodes can be found [he
 
 You can also use MPI in Python, some useful packages that are also available on the HPC are:
 
--   [mpi4py](https://mpi4py.readthedocs.io/en/stable/mpi4py.html)
--   [Boost.MPI](https://www.boost.org/doc/libs/1_55_0/doc/html/mpi/python.html)
+- [mpi4py](https://mpi4py.readthedocs.io/en/stable/mpi4py.html)
+- [Boost.MPI](https://www.boost.org/doc/libs/1_55_0/doc/html/mpi/python.html)
 
 We advise to maximize core utilization before considering using multiple nodes.
 Our [infrastructure](https://www.ugent.be/hpc/en/infrastructure) has clusters with a lot of cores per node so we suggest that you first try to use all the cores on 1 node before you expand to more nodes.
 In addition, when running MPI software we strongly advise to use our [mympirun](mympirun.md) tool.
 
 ### How do I know if my software can run in parallel?
-If you are not sure if the software you are using can efficiently use multiple cores or run across multiple nodes, 
-you should check its documentation for instructions on how to run in parallel, 
+
+If you are not sure if the software you are using can efficiently use multiple cores or run across multiple nodes,
+you should check its documentation for instructions on how to run in parallel,
 or check for options that control how many threads/cores/nodes can be used.
 
-If you can not find any information along those lines, the software you are using can probably only use a single core 
+If you can not find any information along those lines, the software you are using can probably only use a single core
 and thus requesting multiple cores and/or nodes will only result in wasted resources.
-
 
 ## Walltime issues
 
 If you get from your job output an error message similar to this:
 
-```
+```text
 =>> PBS: job killed: walltime <value in seconds> exceeded limit  <value in seconds>
 ```
 
@@ -113,7 +115,7 @@ Sometimes a job hangs at some point or it stops writing in the disk.
 These errors are usually related to the quota usage. You may have
 reached your quota limit at some storage endpoint. You should move (or
 remove) the data to a different storage endpoint (or request more quota)
-to be able to write to the disk and then resubmit the jobs. 
+to be able to write to the disk and then resubmit the jobs.
 {% if site == gent %}
 Another
 option is to request extra quota for your VO to the VO moderator/s. See
@@ -128,53 +130,51 @@ the key/lock analogy in [How do SSH keys work?](../account/#how-do-ssh-keys-work
 
 If you have errors that look like:
 
-```
+```text
 {{ userid }}@{{ loginnode }}: Permission denied
 ```
 
 or you are experiencing problems with connecting, here is a list of
 things to do that should help:
 
-1.  Keep in mind that it can take up to an hour for your VSC account to
+1. Keep in mind that it can take up to an hour for your VSC account to
     become active after it has been *approved*; until then, logging in
     to your VSC account will not work.
 
-2.  Make sure you are connecting from an IP address that is allowed to
+2. Make sure you are connecting from an IP address that is allowed to
     access the VSC login nodes, see
     section [Connection restrictions](../connecting/#connection-restrictions)
     for more information.
 {% if OS == (linux or macos) %}
-3.  Your SSH private key may not be in the default location
+3. Your SSH private key may not be in the default location
     (`$HOME/.ssh/id_rsa`). There are several ways to deal with this
     (using one of these is sufficient):
     1. Use the `ssh -i` (see section [Connect](../connecting/#connect)) *OR;*
     2. Use `ssh-add` (see section [Using an SSH agent](../account/#using-an-ssh-agent-optional)) *OR;*
     3. Specify the location of the key in `$HOME/.ssh/config`. You will
                 need to replace the VSC login id in the `User` field with your own:
-                ```
-                Host {{ hpcname }}
+                ```Host {{ hpcname }}
                     Hostname {{ loginnode }}
                     IdentityFile /path/to/private/key
-                    User {{ userid }}
-                ```
+                    User {{ userid }}```
         Now you can connect with `ssh {{ hpcname }}`.
 {% endif %}
 
-4.  Please double/triple check your VSC login ID. It should look
+4. Please double/triple check your VSC login ID. It should look
     something like *{{ userid }}*: the letters `vsc`, followed by exactly 5 digits.
     Make sure it's the same one as the one on
     <https://account.vscentrum.be/>.
 
-5.  You previously connected to the {{ hpc }} from another machine, but now have
+5. You previously connected to the {{ hpc }} from another machine, but now have
     another machine? Please follow the procedure for adding additional
     keys in section [Adding multiple SSH public keys](../account/#adding-multiple-ssh-public-keys-optional). You may need to wait for
     15-20 minutes until the SSH public key(s) you added become active.
 
-1.  {% if OS == windows %}
-    
+6. {% if OS == windows %}
+
     Make sure you are using the private key (not the public key) when
     trying to connect: If you followed the manual, the private key
-    filename should end in `.ppk` (not in `.pub`). 
+    filename should end in `.ppk` (not in `.pub`).
     {% else %}
 
     When using an SSH key
@@ -185,17 +185,17 @@ things to do that should help:
     section [Connect](../connecting/#connect))
 {% endif %}
 
-1.  If you have multiple private keys on your machine, please make sure
+7. If you have multiple private keys on your machine, please make sure
     you are using the one that corresponds to (one of) the public key(s)
     you added on <https://account.vscentrum.be/>.
 
-2.  Please do not use someone else's private keys. You must never share
+8. Please do not use someone else's private keys. You must never share
     your private key, they're called *private* for a good reason.
 
 {% if OS == windows %}
 If you are using PuTTY and get this error message:
 
-```
+```text
 server unexpectedly closed network connection
 ```
 
@@ -216,37 +216,37 @@ and include it in the email.
 
 ### Change PuTTY private key for a saved configuration
 
-1.  Open PuTTY
+1. Open PuTTY
 
-2.  Single click on the saved configuration
+2. Single click on the saved configuration
 
     ![image](img/831change01.png)
 
-3.  Then click ++"Load"++ button
+3. Then click ++"Load"++ button
 
     ![image](img/831change02.png)
 
-4.  Expand SSH category (on the left panel) clicking on the "+" next
+4. Expand SSH category (on the left panel) clicking on the "+" next
     to SSH
 
     ![image](img/831change03.png)
 
-5.  Click on Auth under the SSH category
+5. Click on Auth under the SSH category
 
     ![image](img/831change04.png)
 
-6.  On the right panel, click ++"Browse"++ button
+6. On the right panel, click ++"Browse"++ button
 
     ![image](img/831change05.png)
 
-7.  Then search your private key on your computer (with the extension
+7. Then search your private key on your computer (with the extension
     ".ppk")
 
-8.  Go back to the top of category, and click Session
+8. Go back to the top of category, and click Session
 
     ![image](img/831change06.png)
 
-9.  On the right panel, click on ++"Save"++ button
+9. On the right panel, click on ++"Save"++ button
 
     ![image](img/831change07.png)
 
@@ -254,26 +254,26 @@ and include it in the email.
 
 Follow the instructions in [Change PuTTY private key for a saved configuration](../troubleshooting/#change-putty-private-key-for-a-saved-configuration) util item 5, then:
 
-1.  Single click on the textbox containing the path to your private key,
+1. Single click on the textbox containing the path to your private key,
     then select all text (push ++"Ctrl"++ + ++"a"++ ), then copy the location of the
     private key (push ++"Ctrl"++ + ++"c"++)
 
     ![image](img/832check05.png)
 
-2.  Open PuTTYgen
+2. Open PuTTYgen
 
     ![image](img/832check06.png)
 
-3.  Enter menu item "File" and select "Load Private key"
+3. Enter menu item "File" and select "Load Private key"
 
     ![image](img/832check07.png)
 
-4.  On the "Load private key" popup, click in the textbox next to
+4. On the "Load private key" popup, click in the textbox next to
     "File name:", then paste the location of your private key (push ++"Ctrl"++ + ++"v"++), then click ++"Open"++
 
     ![image](img/832check08.png)
 
-5.  Make sure that your Public key from the "Public key for pasting
+5. Make sure that your Public key from the "Public key for pasting
     into OpenSSH authorized_keys file" textbox is in your "Public
     keys" section on the accountpage <https://account.vscentrum.be>.
     (Scroll down to the bottom of "View Account" tab, you will find
@@ -284,7 +284,7 @@ Follow the instructions in [Change PuTTY private key for a saved configuration](
 {% else %}
 Please add `-vvv` as a flag to `ssh` like:
 
-```
+```text
 ssh -vvv {{ userid }}@{{ loginnode }}
 ```
 
@@ -292,19 +292,20 @@ and include the output of that command in the message.
 {% endif %}
 
 {% if site == gent %}
+
 ## Issues reaching servers from HPC infrastructure
 
-If you have to reach license servers from {{ hpcinfra }} systems or you 
+If you have to reach license servers from {{ hpcinfra }} systems or you
 have to directly load some database here, then it might not work
 (you will get errors like `Network connection timed out` or `Network connection refused`).
 
 Our firewall rules are quite strict, we only allow outging ports 22 (SSH protocol),
- 80 (HTTP protocol), and 443 (HTTPS protcol), so if your download or license server 
+ 80 (HTTP protocol), and 443 (HTTPS protcol), so if your download or license server
 requires other ports, then we should make a modification in our firewall settings.
-For this, please contact us via <{{ hpcinfo }}>, and send the destination IP and ports. 
+For this, please contact us via <{{ hpcinfo }}>, and send the destination IP and ports.
 (We only open our firewall for static IP addresses).
 
-Take into account that the other end may also has a firewall, or that the license server may restrict 
+Take into account that the other end may also has a firewall, or that the license server may restrict
 the incoming IP addresses. In this case you need the outgoing IP address of our systems,
 which is either of:
 
@@ -321,7 +322,7 @@ system you are connecting to has changed.
 
 {% if OS == (linux or macos) %}
 
-```
+```text
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
 @     WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!    @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
@@ -346,7 +347,7 @@ to.
 Alternatively you can use the command that might be shown by the warning under
 `remove with:` and it should be something like this:
 
-```
+```text
 ssh-keygen -f "~/.ssh/known_hosts" -R "{{loginnode}}"
 ```
 
@@ -359,7 +360,7 @@ After you've done that, you'll need to connect to the {{ hpc }} again. See [Warn
 You will need to verify that the fingerprint shown in the dialog matches
 one of the following fingerprints:
 
-```
+```text
 {{ puttyFirstConnect }}
 ```
 
@@ -379,14 +380,14 @@ If it doesn't (like in the example) or you are in doubt, take a screenshot, pres
 
 If you get errors like:
 
-```
+```text
 $ qsub fibo.pbs
 qsub: script is written in DOS/Windows text format
 ```
 
 or
 
-```
+```text
 sbatch: error: Batch script contains DOS line breaks (\r\n)
 ```
 
@@ -397,7 +398,7 @@ See the [section about `dos2unix` in Linux tutorial](../linux-tutorial/uploading
 
 {% if OS == (linux or macos) %}
 
-```
+```text
 $ ssh {{userid}}@{{loginnode}}
 The authenticity of host {{loginnode}} (<IP-adress>) can't be established. 
 <algorithm> key fingerprint is <hash>
@@ -408,9 +409,10 @@ Now you can check the authenticity by checking if the line that is at
 the place of the underlined piece of text matches one of the following
 lines:
 
-```
+```text
 {{opensshFirstConnect}}
 ```
+
 {% endif %}
 
 If it does, type ***yes***. If it doesn't, please contact support: {{hpcinfo}}.
@@ -428,7 +430,7 @@ jobs require this.
 
 !!! note
 
-    Memory is not the same as storage. Memory or RAM is used for temporary, 
+    Memory is not the same as storage. Memory or RAM is used for temporary,
     fast access to data when the program is running, while storage is used for long-term data retention.
     If you are running into problems because you reached your storage quota, see [Out of quota issues](#out-of-quota-issues).
 
@@ -453,6 +455,7 @@ See [Generic resource requirements](../running_batch_jobs/#generic-resource-requ
 memory you request.
 
 {% if site == gent %}
+
 ## Module conflicts
 
 Modules that are loaded together must use the same toolchain version or common dependencies. In the following
@@ -515,12 +518,10 @@ As a rule of thumb, toolchains in the same row are compatible with each other:
     ml cURL/7.83.0-GCCcore-11.3.0
     ml JupyterNotebook/6.4.0-GCCcore-11.3.0-IPython-8.5.0
     ```
-    
-
 
 Another common error is:
 
-```
+```text
 $ module load cluster/{{othercluster}}
 Lmod has detected the following error: A different version of the 'cluster' module is already loaded (see output of 'ml').
 
@@ -532,13 +533,15 @@ The correct command is `module swap cluster/{{othercluster}}`. See also [Specify
 {% endif %}
 
 {% if site == gent %}
+
 ## `Illegal instruction` error
 
 ### Running software that is incompatible with host
+
 When running software provided through modules (see [Modules](../running_batch_jobs/#modules)), you may run into
 errors like:
 
-```
+```text
 $ module swap cluster/donphan
 The following have been reloaded with a version change:
   1) cluster/doduo => cluster/donphan         3) env/software/doduo => env/software/donphan
@@ -563,7 +566,7 @@ all our modules will get reloaded. This means that all current modules
 will be unloaded and then loaded again, so they'll work on the newly
 loaded cluster. Here's an example of how that would look like:
 
-```
+```text
 $ module load Python/3.12.3-GCCcore-13.3.0
 $ module swap cluster/donphan
 
@@ -591,7 +594,7 @@ to avoid problems (see [Purging all modules](../running_batch_jobs/#purging-all-
 When using a tool that is made available via modules to submit jobs, for example [Worker](multi_job_submission.md),
 you may run into the following error when targeting a non-default cluster:
 
-```
+```text
 $  wsub
 /apps/gent/.../.../software/worker/.../bin/wsub: line 27: 2152510 Illegal instruction     (core dumped) ${PERL} ${DIR}/../lib/wsub.pl "$@"
 ```
@@ -606,15 +609,14 @@ The cluster modules are split up into several `env/*` "submodules" to help deal 
 For example, by using `module swap env/slurm/donphan` instead of `module swap cluster/donphan` (starting from the default environment, the `{{defaultcluster}}` cluster), you can update your environment to submit jobs to `donphan`, while still using the software installations that are specific to the `{{defaultcluster}}` cluster (which are compatible with the login nodes since the `{{defaultcluster}}` cluster workernodes have the same CPUs).
 The same goes for the other clusters as well of course.
 
-
 !!! Tip
     To submit a Worker job to a specific cluster, like the [`donphan` interactive cluster](interactive_debug.md) for instance, use:
     ```
-    $ module swap env/slurm/donphan 
+    $ module swap env/slurm/donphan
     ```
     instead of
     ```
-    $ module swap cluster/donphan 
+    $ module swap cluster/donphan
     ```
 
 We recommend using a `module swap cluster` command after submitting the jobs.
