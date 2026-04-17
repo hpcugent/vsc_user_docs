@@ -14,7 +14,7 @@ things you need to do or know:
 
 1. You need to **log on to the HPC cluster** with your [VSC credentials]().  
    The connection is done by using an SSH client or the [**HPC web
-   portal**](web_portal.md). 
+   portal**](web_portal.md).
    If you do not have VSC credentials yet, fix this now.
 
 1. Before you can do some work, you'll have to **transfer your files**
@@ -61,10 +61,12 @@ options to get access to VSC login nodes:
     IP range (e.g., for industry access, automated processes) to the list of
     trusted IP addresses.
 
-Trying to establish an SSH connection from an unknown IP address 
+Trying to establish an SSH connection from an unknown IP address
 will give an error message like this one:
 
-> ssh_exchange_identification: read: Connection reset by peer
+```ABNF
+ssh_exchange_identification: read: Connection reset by peer
+```
 
 ## First Time connection to the HPC infrastructure
 
@@ -77,12 +79,12 @@ If you want to use the web portal, read following page:
 If you have any issues connecting to the {{ hpc }} after you've followed these
 steps, see [Issues connecting to login
 node](../troubleshooting/#issues-connecting-to-login-node) to troubleshoot.
-
+steps, see [Issues connecting to login
+node](troubleshooting.md#issues-connecting-to-login-node) to troubleshoot.
 
 ### Connect
 
 Open up a terminal and enter the following command to connect to the {{ hpc }}.
-
 
 ```bash
 ssh {{ userid }}@{{ loginnode }}
@@ -93,9 +95,10 @@ cluster at {{ university }} via the login node "{{ loginnode }}", so replace {{
 userid }} with your own VSC id in the above command.
 
 The first time you make a connection to the login node, you will be asked to
-verify the authenticity of the login node. 
+verify the authenticity of the login node.
 
-> The authenticity of host 'login.hpc.ugent.be (157.193.252.74)' can't be established.  
+> The authenticity of host 'login.hpc.ugent.be (157.193.252.74)' can't be
+> established.  
 ED25519 key fingerprint is SHA256:8AJg3lPN27y6i+um7rFx3xoy42U8ZgqNe4LsEycHILA.  
 This key is not known by any other names.  
 Are you sure you want to continue connecting (yes/no/[fingerprint])?  
@@ -111,14 +114,12 @@ private key somewhere else than the default location
 
 > Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
 
-
 In this case, use the `-i` option for the `ssh` command to specify the
 location of your private key. For example:
 
 ```bash
 ssh -i /home/example/my_keys
 ```
-
 
 ## Congratulations, you're on the {{ hpc }} infrastructure now
 
@@ -170,7 +171,7 @@ $ tree -L 2
 
 This directory contains:
 
-1. This ***HPC Tutorial*** 
+1. This ***HPC Tutorial***
 2. An ***examples*** subdirectory, containing all the examples that you need in
    this Tutorial, as well as examples that might be useful for your specific
    applications.
@@ -237,87 +238,6 @@ logout
 Connection to {{ loginnode }} closed.
 ```
 
-$$$ volgende hoort in troubleshooting
-!!! tip "tip: Setting your Language right"
-    You may encounter a warning message similar to the following one during connecting:
-
->   perl: warning: Setting locale failed.  
-    perl: warning: Please check that your locale settings:  
-    LANGUAGE = (unset),  
-    LC_ALL = (unset),  
-    LC_CTYPE = "UTF-8",  
-    LANG = (unset)  
-        are supported and installed on your system.  
-    perl: warning: Falling back to the standard locale ("C").  
-
-    or any other error message complaining about the locale.
-
-    This means that the correct "locale" has not yet been properly specified on your local machine. 
-    You can try to fix that by entering the following:
-
-    ```
-    LANG=
-    LC_COLLATE="C"
-    LC_CTYPE="UTF-8"
-    LC_MESSAGES="C"
-    LC_MONETARY="C"
-    LC_NUMERIC="C"
-    LC_TIME="C"
-    LC_ALL=
-    ```
-
-    A **locale** is a set of parameters that defines the user's language, country and
-    any special variant preferences that the user wants to see in their user
-    interface. Usually a locale identifier consists of at least a language
-    identifier and a region identifier.
-
-    !!! Note
-        If you try to set a non-supported locale, then it will be automatically
-        set to the default. Currently the default is `en_US.UFT-8` or `en_US`,
-        depending on whether your originally (non-supported) locale was `UTF-8` or not.
-
-$$$ FIXME not bashrc but some ssh related file:  ~/.ssh/environment, TEST THIS
-    Open the `.bashrc` on your local machine with an editor such as nano or vi.   
-    Example using **nano**:
-
-    ```bash
-    $ nano ~/.bashrc
-    ```
-
-    Add the following lines at the end of the file:
-
-    ```
-    export LANGUAGE="en_US.UTF-8"
-    export LC_ALL="en_US.UTF-8"
-    export LC_CTYPE="en_US.UTF-8"
-    export LANG="en_US.UTF-8"
-
-    ```
-
-    !!! tip "tip: vi"
-        To start entering text in vi: 
-        move to the place you want to start entering text with the arrow keys  
-        and type "i" to switch to insert mode.  
-        You can easily exit vi by entering: "++"ESC"++ :wq"  
-        To exit vi without saving your changes, enter "++"ESC"++:q!"
-
-    or alternatively (if you are not comfortable with the Linux editors),
-    again on your local machine:
-
-FIXME now in .profile??
-
-
-    ```
-    echo "export LANGUAGE=\"en_US.UTF-8\"" >> ~/.profile
-    echo "export LC_ALL=\"en_US.UTF-8\"" >> ~/.profile
-    echo "export LC_CTYPE=\"en_US.UTF-8\"" >> ~/.profile
-    echo "export LANG=\"en_US.UTF-8\"" >> ~/.profile
-    ```
-
-    You can now log out, open a new terminal/shell on your local machine and
-    reconnect to the login node, and you should not get these warnings anymore.
-
-
 ## Transfer Files to/from the HPC
 
 Before you can do some work, you'll have to **transfer the files** you need
@@ -341,10 +261,9 @@ This should open up a address bar where you can enter a URL.
 Alternatively, look for the "connect to server" option in your file
 managers menu.
 
-Enter: **sftp://{{ userid }}@{{ loginnode }}/** and press enter.
+Enter: **`sftp://{{ userid }}@{{ loginnode }}/`** and press enter.
 
 You should now be able to browse files on the {{ hpc }} in your file browser.
-
 
 ### Using scp
 
@@ -376,11 +295,11 @@ We will copy the (local) file "*localfile.txt*" from your pc to your
 home directory on the (remote) {{ hpc }} cluster.
 
 Note the **#**-signs are used to indicate comments, you do not need to type the
-comments. 
+comments.
 
 First we generate a small dummy file "*localfile.txt*", which contains the word
 "Hello". To create this file we use the tool "echo", which shows some text on
-the screen. We can redirect the output of a command to a file with the **>**-symbol.   
+the screen. We can redirect the output of a command to a file with the **>**-symbol.
 
 ```bash
 $ echo "Hello"  # show the word Hello on the screen
@@ -394,7 +313,7 @@ Hello
 ```
 
 Use your own VSC account, which is something like "{{ userid }}".
- 
+
 Don't forget the colon (**:**) at the end. If you forget it, it will just
 create a file named {{ userid }}@{{ loginnode }} on your local filesystem. You
 can even specify where to save the file on the remote filesystem by putting a
@@ -480,7 +399,7 @@ One easy way of starting a sftp session is
 sftp {{ userid }}@{{ loginnode }}
 ```
 
-After the sftp program is started you get a prompt and you can issue commands. 
+After the sftp program is started you get a prompt and you can issue commands.
 
 Typical and popular commands inside an sftp session are:
 
@@ -509,10 +428,10 @@ intro](../linux-tutorial/uploading_files/#copying-faster-with-rsync).
 
 ## Changing login nodes
 
-It can be useful to have control over which login node you are on. 
+It can be useful to have control over which login node you are on.
 
 However, when you connect to the HPC (High-Performance Computing) system, you
-are directed to a _random_ login node, which might not be the one where you
+are directed to a *random* login node, which might not be the one where you
 already have an active session. To address this, there is a way to manually
 switch your active login node.
 

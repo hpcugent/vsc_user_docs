@@ -2,36 +2,54 @@
 
 ## Why does my job not run faster when using more nodes and/or cores? { #job_does_not_run_faster }
 
-Requesting more resources for your job, more specifically using multiple cores and/or nodes,
-does not automatically imply that your job will run faster.
-There are various factors that determine to what extent these extra resources can be used and how efficiently they can be used.
-More information on this in the subsections below.
+Requesting more resources for your job, more specifically using multiple cores
+and/or nodes, does not automatically imply that your job will run faster.
+
+There are various factors that determine to what extent these extra resources
+can be used and how efficiently they can be used. More information on this in
+the subsections below.
 
 ### Using multiple cores
 
-When you want to speed up your jobs by requesting multiple cores, you also need to use software that is actually capable of
-using them (and use them efficiently, ideally).
-Unless a particular parallel programming paradigm like [OpenMP](https://www.openmp.org/about/openmp-faq/#WhatIs) threading
-(shared memory) or [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface) (distributed memory) is used,
-software will run sequentially (on a single core).
+When you want to speed up your jobs by requesting multiple cores, you also need
+to use software that is actually capable of using them (and use them
+efficiently, ideally).
 
-To use multiple cores, the software needs to be able to create, manage, and synchronize multiple threads or processes.
-More on how to implement parallelization for you exact programming language can be found online.
-Note that when using software that only uses *threads* to use multiple cores, there is no point in asking for multiple *nodes*,
-since with a multi-threading (shared memory) approach you can only use the resources (cores, memory) of a *single* node.
+Unless a particular parallel programming paradigm like
+[OpenMP](https://www.openmp.org/about/openmp-faq/#WhatIs) threading (shared
+memory) or [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface)
+(distributed memory) is used, software will run sequentially (on a single
+core).
 
-Even if your software is able to use multiple cores, maybe there is no point in going beyond a single core or a handful of cores,
-for example because the workload you are running is too small or does not parallelize well.
-You can test this by increasing the amount of cores step-wise, and look at the speedup you gain. For example,
-test with 2, 4, 16, a quarter of, half of, and all available cores.
+To use multiple cores, the software needs to be able to create, manage, and
+synchronize multiple threads or processes.  More on how to implement
+parallelization for you exact programming language can be found online.
 
-Other reasons why using more cores may not lead to a (significant) speedup include:
+Note that when using software that only uses *threads* to use multiple cores,
+there is no point in asking for multiple *nodes*, since with a multi-threading
+(shared memory) approach you can only use the resources (cores, memory) of a
+*single* node.
 
-- **Overhead:** When you use multi-threading (OpenMP) or multi-processing (MPI),
-you should *not* expect that doubling the amount of cores will result in a 2x speedup.
-This is due to the fact that time is needed to create, manage and synchronize the threads/processes.
-When this "bookkeeping" overhead exceeds the time gained by parallelization, you will not observe any speedup (or even see slower runs).
-For example, this can happen when you split your program in too many (tiny) tasks to run in parallel -
+Even if your software is able to use multiple cores, maybe there is no point in
+going beyond a single core or a handful of cores, for example because the
+workload you are running is too small or does not parallelize well.
+
+You can test this by increasing the amount of cores step-wise, and look at the
+speedup you gain. For example, test with 2, 4, 16, a quarter of, half of, and
+all available cores.
+
+Other reasons why using more cores may not lead to a (significant) speedup
+include:
+
+- **Overhead:** When you use multi-threading (OpenMP) or multi-processing
+  (MPI), you should *not* expect that doubling the amount of cores will result
+in a 2x speedup.
+This is due to the fact that time is needed to create, manage and synchronize
+the threads/processes.
+When this "bookkeeping" overhead exceeds the time gained by parallelization,
+you will not observe any speedup (or even see slower runs).
+For example, this can happen when you split your program in too many (tiny)
+tasks to run in parallel -
 creating a thread/process for each task may even take longer than actually running the task itself.
 
 - **[Amdahl's Law](https://en.wikipedia.org/wiki/Amdahl%27s_law)** is often used in parallel computing to predict the maximum achievable (theoretical) speedup when using multiple cores.
@@ -100,7 +118,7 @@ and thus requesting multiple cores and/or nodes will only result in wasted resou
 
 If you get from your job output an error message similar to this:
 
-```text
+```bash
 =>> PBS: job killed: walltime <value in seconds> exceeded limit  <value in seconds>
 ```
 
@@ -116,12 +134,14 @@ These errors are usually related to the quota usage. You may have
 reached your quota limit at some storage endpoint. You should move (or
 remove) the data to a different storage endpoint (or request more quota)
 to be able to write to the disk and then resubmit the jobs.
-{% if site == gent %}
-Another
-option is to request extra quota for your VO to the VO moderator/s. See
-section on [Pre-defined user directories](../running_jobs_with_input_output_data/#pre-defined-user-directories) and [Pre-defined quotas](../running_jobs_with_input_output_data/#pre-defined-quotas) for more information about quotas
-and how to use the storage endpoints in an efficient way.
-{% endif %}
+
+Another option is to request extra quota for your VO to the VO moderator/s. See
+section on [Pre-defined user
+directories](../running_jobs_with_input_output_data/#pre-defined-user-directories)
+and [Pre-defined
+quotas](../running_jobs_with_input_output_data/#pre-defined-quotas) for more
+information about quotas and how to use the storage endpoints in an efficient
+way.
 
 ## Issues connecting to login node { #sec:connecting-issues}
 
@@ -145,20 +165,20 @@ things to do that should help:
     access the VSC login nodes, see
     section [Connection restrictions](../connecting/#connection-restrictions)
     for more information.
-{% if OS == (linux or macos) %}
 3. Your SSH private key may not be in the default location
     (`$HOME/.ssh/id_rsa`). There are several ways to deal with this
     (using one of these is sufficient):
     1. Use the `ssh -i` (see section [Connect](../connecting/#connect)) *OR;*
     2. Use `ssh-add` (see section [Using an SSH agent](../account/#using-an-ssh-agent-optional)) *OR;*
-    3. Specify the location of the key in `$HOME/.ssh/config`. You will
-                need to replace the VSC login id in the `User` field with your own:
-                ```Host {{ hpcname }}
-                    Hostname {{ loginnode }}
-                    IdentityFile /path/to/private/key
-                    User {{ userid }}```
-        Now you can connect with `ssh {{ hpcname }}`.
-{% endif %}
+    3. Specify the location of the key in `$HOME/.ssh/config`. You will need to
+       replace the VSC login id in the `User` field with your own:
+       ```
+        Host {{ hpcname }}
+        Hostname {{ loginnode }}
+        IdentityFile /path/to/private/key
+        User {{ userid }}
+       ```
+       Now you can connect with `ssh {{ hpcname }}`.
 
 4. Please double/triple check your VSC login ID. It should look
     something like *{{ userid }}*: the letters `vsc`, followed by exactly 5 digits.
@@ -170,29 +190,26 @@ things to do that should help:
     keys in section [Adding multiple SSH public keys](../account/#adding-multiple-ssh-public-keys-optional). You may need to wait for
     15-20 minutes until the SSH public key(s) you added become active.
 
-6. {% if OS == windows %}
-
-    Make sure you are using the private key (not the public key) when
+6. If you are using windows make sure you are using the private key (not the public key) when
     trying to connect: If you followed the manual, the private key
     filename should end in `.ppk` (not in `.pub`).
-    {% else %}
 
-    When using an SSH key
-    in a non-default location, make sure you supply the path of the
+    When using an SSH key in a non-default location, make sure you supply the path of the
     private key (and not the path of the public key) to `ssh`.
     `id_rsa.pub` is the usual filename of the public key, `id_rsa` is
     the usual filename of the private key. (See also
     section [Connect](../connecting/#connect))
-{% endif %}
 
 7. If you have multiple private keys on your machine, please make sure
     you are using the one that corresponds to (one of) the public key(s)
     you added on <https://account.vscentrum.be/>.
 
+    It can help to make the name of you keys files more specific. 
+    Exmple: change id_ed25519.pub to id_ed25519_vsc.pub.
+
 8. Please do not use someone else's private keys. You must never share
     your private key, they're called *private* for a good reason.
 
-{% if OS == windows %}
 If you are using PuTTY and get this error message:
 
 ```text
@@ -203,13 +220,13 @@ it is possible that the PuTTY version you are using is too old and
 doesn't support some required (security-related) features.
 
 Make sure you are using the latest PuTTY version if you are encountering
-problems connecting (see [Get PuTTY](../account/#get-putty-a-free-telnetssh-client)). If that doesn't help, please contact {{ hpcinfo }}.
-{% endif %}
+problems connecting (see [Get
+PuTTY](../account/#get-putty-a-free-telnetssh-client)). If that doesn't help,
+please contact {{ hpcinfo }}.
 
 If you've tried all applicable items above and it doesn't solve your
 problem, please contact {{ hpcinfo }} and include the following information:
 
-{% if OS == windows %}
 Please create a log file of your SSH session by following the steps in
 [this article](https://stackoverflow.com/a/21232019/1467322)
 and include it in the email.
@@ -281,37 +298,38 @@ Follow the instructions in [Change PuTTY private key for a saved configuration](
 
     ![image](img/832check09.png)
 
-{% else %}
-Please add `-vvv` as a flag to `ssh` like:
+Make the output of ssh more **v**erbose, add `-vvv` as a flag to `ssh`:
 
 ```text
 ssh -vvv {{ userid }}@{{ loginnode }}
 ```
 
-and include the output of that command in the message.
-{% endif %}
+Look carefully to that output, it contains information that can help you solve
+the problem.
 
-{% if site == gent %}
+Copy that verbose output to your request for help.
 
 ## Issues reaching servers from HPC infrastructure
 
 If you have to reach license servers from {{ hpcinfra }} systems or you
 have to directly load some database here, then it might not work
-(you will get errors like `Network connection timed out` or `Network connection refused`).
+(you will get errors like `Network connection timed out` or `Network connection
+refused`).
 
-Our firewall rules are quite strict, we only allow outging ports 22 (SSH protocol),
- 80 (HTTP protocol), and 443 (HTTPS protcol), so if your download or license server
-requires other ports, then we should make a modification in our firewall settings.
-For this, please contact us via <{{ hpcinfo }}>, and send the destination IP and ports.
+Our firewall rules are quite strict, we only allow outging ports 22 (SSH
+protocol), 80 (HTTP protocol), and 443 (HTTPS protcol), so if your download or
+license server requires other ports, then we should make a modification in our
+firewall settings.
+For this, please contact us via <{{ hpcinfo }}>, and send the destination IP
+and ports.
 (We only open our firewall for static IP addresses).
 
-Take into account that the other end may also has a firewall, or that the license server may restrict
-the incoming IP addresses. In this case you need the outgoing IP address of our systems,
-which is either of:
+Take into account that the other end may also has a firewall, or that the
+license server may restrict the incoming IP addresses. In this case you need
+the outgoing IP address of our systems, which is either of:
 
 - `157.193.240.251` (hostname `nathpca001.ugent.be`), or
 - `157.193.241.251` (hostname `nathpcb001.ugent.be`)
-{% endif %}
 
 ## Security warning about invalid host key
 
@@ -320,15 +338,12 @@ someone is trying to intercept the connection between you and the system
 you are connecting to. Another possibility is that the host key of the
 system you are connecting to has changed.
 
-{% if OS == (linux or macos) %}
-
-```text
+```bash
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
 @     WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!    @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
 IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY! 
-Someone could be
-eavesdropping on you right now (man-in-the-middle attack)! 
+Someone could be eavesdropping on you right now (man-in-the-middle attack)! 
 It is also possible that a host key has just been changed. 
 The fingerprint for the ECDSA key sent by the remote host is
 SHA256:1MNKFTfl1T9sm6tTWAo4sn7zyEfiWFLKbk/mlT+7S5s. 
@@ -340,23 +355,31 @@ Host key verification failed.
 ```
 
 You will need to remove the line it's complaining about (in the example,
-line 21). To do that, open `~/.ssh/known_hosts` in an editor, and remove the
-line. This results in `ssh` "forgetting" the system you are connecting
-to.
+line 21 as indicated by `~/.ssh/known_hosts:21`).
+By default your ssh is configured to has the names and ip addresses of the
+servers you connected to.
+You will not be able to read lines in the known_hosts.
 
-Alternatively you can use the command that might be shown by the warning under
-`remove with:` and it should be something like this:
+This is an example of what it looks like:
 
-```text
-ssh-keygen -f "~/.ssh/known_hosts" -R "{{loginnode}}"
+```bash
+$ cat ~/.ssh/known_hosts
+|1|GOOqYoIUqAQ4Qsun3Lb9yhEY7bc=|wFUz1PicR/NNbqrgKz4NlClxDdI= ---snip---
 ```
 
-If the command is not shown, take the file from the "Offending ECDSA key in",
-and the host name from "ECDSA host key for" lines.
+With the ssh-keygen tool you can lookup and remove names or ip addresses of servers.
+ 
+```bash
+ssh-keygen -F myhost         # shows myhosts's line in the known_hosts file
+ssh-keygen -l -F myhost      # additionally shows myhost's fingerprint
+ssh-keygen -R myhost         # remove myhost's line from known_hosts
+```
 
-After you've done that, you'll need to connect to the {{ hpc }} again. See [Warning message when first connecting to new host](./#warning-message-when-first-connecting-to-new-host) to verify the fingerprints.
+After you've done that, you'll need to connect to the {{ hpc }} again. See
+[Warning message when first connecting to new
+host](./#warning-message-when-first-connecting-to-new-host) to verify the
+fingerprints.
 
-{% else %}
 You will need to verify that the fingerprint shown in the dialog matches
 one of the following fingerprints:
 
@@ -364,39 +387,38 @@ one of the following fingerprints:
 {{ puttyFirstConnect }}
 ```
 
-**Do not click "Yes" until you verified the fingerprint. Do not press "No" in any case.**
+**Do not click "Yes" until you verified the fingerprint. Do not press "No" in
+any case.**
 
 If the fingerprint matches, click "Yes".
 
-If it doesn't (like in the example) or you are in doubt, take a screenshot, press "Cancel" and contact {{ hpcinfo }}.
+If it doesn't (like in the example) or you are in doubt, take a screenshot,
+press "Cancel" and contact {{ hpcinfo }}.
 
 {% include "../macros/sshedfingerprintnote.md" %}
 
 ![image](img/putty_security_alert.jpg)
 
-{% endif %}
-
 ## DOS/Windows text format
 
 If you get errors like:
 
-```text
+```bash
 $ qsub fibo.pbs
 qsub: script is written in DOS/Windows text format
 ```
 
 or
 
-```text
+```bash
 sbatch: error: Batch script contains DOS line breaks (\r\n)
 ```
 
 It's probably because you transferred the files from a Windows computer.
-See the [section about `dos2unix` in Linux tutorial](../linux-tutorial/uploading_files/#dos2unix) to fix this error.
+See the [section about `dos2unix` in Linux
+tutorial](../linux-tutorial/uploading_files/#dos2unix) to fix this error.
 
 ## Warning message when first connecting to new host
-
-{% if OS == (linux or macos) %}
 
 ```text
 $ ssh {{userid}}@{{loginnode}}
@@ -413,14 +435,9 @@ lines:
 {{opensshFirstConnect}}
 ```
 
-{% endif %}
-
 If it does, type ***yes***. If it doesn't, please contact support: {{hpcinfo}}.
 
-{% if OS != (linux or macos) %}
 {% include "../macros/firsttimeconnection.md" %}
-
-{% endif %}
 
 ## Memory limits
 
@@ -431,8 +448,11 @@ jobs require this.
 !!! note
 
     Memory is not the same as storage. Memory or RAM is used for temporary,
-    fast access to data when the program is running, while storage is used for long-term data retention.
-    If you are running into problems because you reached your storage quota, see [Out of quota issues](#out-of-quota-issues).
+    fast access to data when the program is running, while storage is used for
+    long-term data retention.
+
+    If you are running into problems because you reached your storage quota,
+    see [Out of quota issues](#out-of-quota-issues).
 
 ### How will I know if memory limits are the cause of my problem?
 
@@ -451,22 +471,26 @@ you via the `ulimit -v` command *in your job script*.
 
 ### How do I specify the amount of memory I need?
 
-See [Generic resource requirements](../running_batch_jobs/#generic-resource-requirements) to set memory and other requirements, see [Specifying memory requirements](../fine_tuning_job_specifications/#specifying-memory-requirements) to finetune the amount of
-memory you request.
-
-{% if site == gent %}
+See [Generic resource
+requirements](../running_batch_jobs/#generic-resource-requirements) to set
+memory and other requirements, see [Specifying memory
+requirements](../fine_tuning_job_specifications/#specifying-memory-requirements)
+to finetune the amount of memory you request.
 
 ## Module conflicts
 
-Modules that are loaded together must use the same toolchain version or common dependencies. In the following
-example, we try to load a module that uses the `GCCcore-13.3.0` toolchain
-together with one that uses the `GCCcore-13.2.0` toolchain:
+Modules that are loaded together must use the same toolchain version or common
+dependencies. In the following example, we try to load a module that uses the
+`GCCcore-13.3.0` toolchain together with one that uses the `GCCcore-13.2.0`
+toolchain:
 
 ```bash
 $ module load Python/3.12.3-GCCcore-13.3.0
 $ module load Pillow/10.2.0-GCCcore-13.2.0
-Lmod has detected the following error:  A different version of the 'GCCcore' module is already loaded (see output of 'ml').
-You should load another 'Pillow' module for that is compatible with the currently loaded version of 'GCCcore'.
+Lmod has detected the following error:  A different version of the 'GCCcore'
+module is already loaded (see output of 'ml').
+You should load another 'Pillow' module for that is compatible with the
+currently loaded version of 'GCCcore'.
 Use 'ml spider Pillow' to get an overview of the available versions.
 
 
@@ -523,23 +547,24 @@ Another common error is:
 
 ```text
 $ module load cluster/{{othercluster}}
-Lmod has detected the following error: A different version of the 'cluster' module is already loaded (see output of 'ml').
+Lmod has detected the following error: A different version of the 'cluster'
+module is already loaded (see output of 'ml').
 
-If you don't understand the warning or error, contact the helpdesk at hpc@ugent.be
+If you don't understand the warning or error, contact the helpdesk at
+hpc@ugent.be
 ```
 
 This is because there can only be one `cluster` module active at a time.
-The correct command is `module swap cluster/{{othercluster}}`. See also [Specifying the cluster on which to run](../running_batch_jobs/#specifying-the-cluster-on-which-to-run).
-{% endif %}
-
-{% if site == gent %}
+The correct command is `module swap cluster/{{othercluster}}`. See also
+[Specifying the cluster on which to
+run](../running_batch_jobs/#specifying-the-cluster-on-which-to-run).
 
 ## `Illegal instruction` error
 
 ### Running software that is incompatible with host
 
-When running software provided through modules (see [Modules](../running_batch_jobs/#modules)), you may run into
-errors like:
+When running software provided through modules (see
+[Modules](../running_batch_jobs/#modules)), you may run into errors like:
 
 ```text
 $ module swap cluster/donphan
@@ -558,8 +583,10 @@ nodes have a different CPU architecture, software loaded using modules
 might not work.
 
 If you want to test software on the login nodes, make sure the
-`cluster/{{defaultcluster}}` module is loaded (with `module swap cluster/{{defaultcluster}}`, see [Specifying the cluster on which to run](../running_batch_jobs/#specifying-the-cluster-on-which-to-run)), since
-the login nodes and {{defaultcluster}} have the same CPU architecture.
+`cluster/{{defaultcluster}}` module is loaded (with `module swap
+cluster/{{defaultcluster}}`, see [Specifying the cluster on which to
+run](../running_batch_jobs/#specifying-the-cluster-on-which-to-run)), since the
+login nodes and {{defaultcluster}} have the same CPU architecture.
 
 If modules are already loaded, and then we swap to a different cluster,
 all our modules will get reloaded. This means that all current modules
@@ -585,42 +612,61 @@ The following have been reloaded with a version change:
   4) env/vsc/doduo => env/vsc/donphan
 ```
 
-This might result in the same problems as mentioned above. When swapping
-to a different cluster, you can run `module purge` to unload all modules
-to avoid problems (see [Purging all modules](../running_batch_jobs/#purging-all-modules)).
+This might result in the same problems as mentioned above. When swapping to a
+different cluster, you can run `module purge` to unload all modules to avoid
+problems (see [Purging all
+modules](../running_batch_jobs/#purging-all-modules)).
 
 ### Multi-job submissions on a non-default cluster
 
-When using a tool that is made available via modules to submit jobs, for example [Worker](multi_job_submission.md),
-you may run into the following error when targeting a non-default cluster:
+When using a tool that is made available via modules to submit jobs, for
+example [Worker](multi_job_submission.md), you may run into the following error
+when targeting a non-default cluster:
 
 ```text
 $  wsub
-/apps/gent/.../.../software/worker/.../bin/wsub: line 27: 2152510 Illegal instruction     (core dumped) ${PERL} ${DIR}/../lib/wsub.pl "$@"
+/apps/gent/.../.../software/worker/.../bin/wsub: line 27: 2152510
+Illegal instruction
+     (core dumped) ${PERL} ${DIR}/../lib/wsub.pl "$@"
 ```
 
-When executing the `module swap cluster` command, you are not only changing your session environment to submit
-to that specific cluster, but also to use the part of the central software stack that is specific to that cluster.
-In the case of the Worker example above, the latter implies that you are running the `wsub` command
-on top of a Perl installation that is optimized specifically for the CPUs of the workernodes of that cluster,
-which may not be compatible with the CPUs of the login nodes, triggering the `Illegal instruction` error.
+When executing the `module swap cluster` command, you are not only changing
+your session environment to submit to that specific cluster, but also to use
+the part of the central software stack that is specific to that cluster.
 
-The cluster modules are split up into several `env/*` "submodules" to help deal with this problem.
-For example, by using `module swap env/slurm/donphan` instead of `module swap cluster/donphan` (starting from the default environment, the `{{defaultcluster}}` cluster), you can update your environment to submit jobs to `donphan`, while still using the software installations that are specific to the `{{defaultcluster}}` cluster (which are compatible with the login nodes since the `{{defaultcluster}}` cluster workernodes have the same CPUs).
+In the case of the Worker example above, the latter implies that you are
+running the `wsub` command on top of a Perl installation that is optimized
+specifically for the CPUs of the workernodes of that cluster, which may not be
+compatible with the CPUs of the login nodes, triggering the `Illegal
+instruction` error.
+
+The cluster modules are split up into several `env/*` "submodules" to help deal
+with this problem.
+For example, by using `module swap env/slurm/donphan` instead of `module swap
+cluster/donphan` (starting from the default environment, the
+`{{defaultcluster}}` cluster), you can update your environment to submit jobs
+to `donphan`, while still using the software installations that are specific to
+the `{{defaultcluster}}` cluster (which are compatible with the login nodes
+since the `{{defaultcluster}}` cluster workernodes have the same CPUs).
 The same goes for the other clusters as well of course.
 
 !!! Tip
-    To submit a Worker job to a specific cluster, like the [`donphan` interactive cluster](interactive_debug.md) for instance, use:
+    To submit a Worker job to a specific cluster, like the [`donphan`
+    interactive cluster](interactive_debug.md) for instance, use:
+
     ```
     $ module swap env/slurm/donphan
     ```
+
     instead of
+
     ```
     $ module swap cluster/donphan
     ```
 
 We recommend using a `module swap cluster` command after submitting the jobs.
 
-This to "reset" your environment to a sane state, since only having a different `env/slurm` module loaded can also lead to some surprises if you're not paying close attention.
+This to "reset" your environment to a sane state, since only having a different
+`env/slurm` module loaded can also lead to some surprises if you're not paying
+close attention.
 
-{% endif %}

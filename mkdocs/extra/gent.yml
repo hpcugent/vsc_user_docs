@@ -1,4 +1,6 @@
 # University Definitions
+OS: Linux
+os: linux
 site: Gent
 university: UGent
 wayf: UGent
