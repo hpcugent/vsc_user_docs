@@ -23,7 +23,7 @@ module load FFTW/3.3.10-intel-compilers-2023.1.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |FFTW/3.3.10-intel-compilers-2023.1.0|x|x|x|x|x|x|x|
 |FFTW/3.3.10-NVHPC-25.3-CUDA-12.8.0|x|-|x|-|x|x|-|
-|FFTW/3.3.10-GCC-15.2.0|-|x|-|-|-|-|-|
+|FFTW/3.3.10-GCC-15.2.0|x|x|x|x|x|x|x|
 |FFTW/3.3.10-GCC-14.3.0|x|x|x|x|x|x|x|
 |FFTW/3.3.10-GCC-14.2.0|x|x|x|x|x|x|x|
 |FFTW/3.3.10-GCC-13.3.0|x|x|x|x|x|x|x|

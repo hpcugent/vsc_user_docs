@@ -21,7 +21,7 @@ module load libidn2/2.3.8-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libidn2/2.3.8-GCCcore-15.2.0|-|x|-|-|-|-|-|
+|libidn2/2.3.8-GCCcore-15.2.0|x|x|x|x|x|x|x|
 |libidn2/2.3.8-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |libidn2/2.3.8-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |libidn2/2.3.7-GCCcore-14.2.0|x|x|x|x|x|x|x|

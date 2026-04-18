@@ -21,7 +21,7 @@ module load PRRTE/4.1.0-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PRRTE/4.1.0-GCCcore-15.2.0|-|x|-|-|-|-|-|
+|PRRTE/4.1.0-GCCcore-15.2.0|x|x|x|x|x|x|x|
 |PRRTE/3.0.11-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |PRRTE/3.0.8-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |PRRTE/3.0.5-GCCcore-13.3.0|x|x|x|x|x|x|x|
