@@ -21,7 +21,7 @@ module load Automake/1.18.1-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Automake/1.18.1-GCCcore-15.2.0|-|x|-|-|-|-|-|
+|Automake/1.18.1-GCCcore-15.2.0|x|x|x|x|x|x|x|
 |Automake/1.18-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |Automake/1.17-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |Automake/1.16.5-GCCcore-13.3.0|x|x|x|x|x|x|x|

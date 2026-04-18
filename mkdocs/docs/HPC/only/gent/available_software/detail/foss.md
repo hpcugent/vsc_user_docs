@@ -21,7 +21,7 @@ module load foss/2026.1
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|foss/2026.1|-|x|-|-|-|-|-|
+|foss/2026.1|x|x|x|x|x|x|x|
 |foss/2025b|x|x|x|x|x|x|x|
 |foss/2025a|x|x|x|x|x|x|x|
 |foss/2024a|x|x|x|x|x|x|x|

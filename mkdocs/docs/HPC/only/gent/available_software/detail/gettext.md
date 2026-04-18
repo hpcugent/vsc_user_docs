@@ -21,7 +21,7 @@ module load gettext/0.26-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gettext/0.26-GCCcore-15.2.0|-|x|-|-|-|-|-|
+|gettext/0.26-GCCcore-15.2.0|x|x|x|x|x|x|x|
 |gettext/0.25-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |gettext/0.25|x|x|x|x|x|x|x|
 |gettext/0.24-GCCcore-14.2.0|x|x|x|x|x|x|x|
