@@ -23,4 +23,4 @@ module load XlsxWriter/3.2.0-GCCcore-13.3.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |XlsxWriter/3.2.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |XlsxWriter/3.1.9-GCCcore-13.2.0|-|x|x|x|x|-|-|
-|XlsxWriter/3.1.3-GCCcore-12.3.0|-|x|x|x|x|x|x|
+|XlsxWriter/3.1.3-GCCcore-12.3.0|x|x|x|x|x|x|x|
