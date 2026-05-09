@@ -23,4 +23,5 @@ module load multicharge/0.3.1-gfbf-2024a
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |multicharge/0.3.1-gfbf-2024a|x|x|x|x|x|x|x|
 |multicharge/0.3.0-gomkl-2023b|x|x|x|x|x|x|x|
-|multicharge/0.3.0-gfbf-2023a|-|x|-|-|-|-|-|
+|multicharge/0.3.0-gfbf-2023b|x|x|x|x|x|x|x|
+|multicharge/0.3.0-gfbf-2023a|x|x|x|x|x|x|x|
