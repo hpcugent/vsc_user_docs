@@ -21,7 +21,7 @@ module load MUMPS/5.7.3-foss-2023b-metis-seq
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MUMPS/5.7.3-foss-2023b-metis-seq|-|x|-|-|-|-|-|
+|MUMPS/5.7.3-foss-2023b-metis-seq|x|x|x|x|x|x|x|
 |MUMPS/5.7.2-foss-2024a-metis|x|x|x|x|x|x|x|
 |MUMPS/5.6.1-gomkl-2023a-metis-seq|-|x|-|x|-|x|x|
 |MUMPS/5.6.1-foss-2023a-metis|x|x|x|x|x|x|x|
