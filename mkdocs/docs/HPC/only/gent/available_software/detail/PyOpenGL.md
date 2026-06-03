@@ -21,6 +21,6 @@ module load PyOpenGL/3.1.9-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyOpenGL/3.1.9-GCCcore-13.2.0|-|x|-|-|-|-|-|
+|PyOpenGL/3.1.9-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |PyOpenGL/3.1.7-GCCcore-12.3.0|x|x|x|x|x|x|x|
 |PyOpenGL/3.1.6-GCCcore-11.3.0|-|-|-|-|-|x|x|

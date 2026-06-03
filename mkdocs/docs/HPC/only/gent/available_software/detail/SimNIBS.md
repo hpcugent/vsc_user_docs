@@ -21,6 +21,6 @@ module load SimNIBS/4.6.0-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SimNIBS/4.6.0-foss-2023b|-|x|-|-|-|-|-|
-|SimNIBS/4.5.0-foss-2023b|-|x|-|-|-|-|-|
+|SimNIBS/4.6.0-foss-2023b|x|x|x|x|x|x|x|
+|SimNIBS/4.5.0-foss-2023b|x|x|x|x|x|x|x|
 |SimNIBS/4.0.1-foss-2023a|-|x|-|x|-|x|x|
