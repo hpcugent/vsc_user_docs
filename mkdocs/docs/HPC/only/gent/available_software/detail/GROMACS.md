@@ -22,6 +22,7 @@ module load GROMACS/2024.4-foss-2025a-PLUMED-2.9.4
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |GROMACS/2024.4-foss-2025a-PLUMED-2.9.4|x|x|x|x|x|x|x|
+|GROMACS/2024.4-foss-2025a-CUDA-12.8.0-PLUMED-2.9.4|x|-|x|-|x|x|-|
 |GROMACS/2024.4-foss-2023b-PLUMED-2.9.2|x|x|x|x|x|x|x|
 |GROMACS/2024.4-foss-2023b-CUDA-12.4.0-PLUMED-2.9.2|x|-|-|-|x|-|-|
 |GROMACS/2024.4-foss-2023b-CUDA-12.4.0|x|-|-|-|x|x|-|

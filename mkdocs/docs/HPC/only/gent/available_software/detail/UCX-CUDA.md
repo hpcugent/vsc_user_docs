@@ -21,7 +21,7 @@ module load UCX-CUDA/1.18.0-GCCcore-14.2.0-CUDA-12.8.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|UCX-CUDA/1.18.0-GCCcore-14.2.0-CUDA-12.8.0|x|-|-|-|-|-|-|
+|UCX-CUDA/1.18.0-GCCcore-14.2.0-CUDA-12.8.0|x|-|x|-|x|x|-|
 |UCX-CUDA/1.16.0-GCCcore-13.3.0-CUDA-12.6.0|x|-|x|-|x|x|-|
 |UCX-CUDA/1.15.0-GCCcore-13.2.0-CUDA-12.5.0|x|-|-|-|x|x|-|
 |UCX-CUDA/1.15.0-GCCcore-13.2.0-CUDA-12.4.0|x|-|x|-|x|x|-|
