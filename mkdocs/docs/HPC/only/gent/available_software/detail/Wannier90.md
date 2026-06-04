@@ -23,4 +23,6 @@ module load Wannier90/3.1.0-gomkl-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Wannier90/3.1.0-gomkl-2023b|x|x|x|x|x|x|x|
 |Wannier90/3.1.0-gomkl-2023a|-|x|-|x|-|x|x|
+|Wannier90/3.1.0-foss-2025b|x|x|x|x|x|x|x|
 |Wannier90/3.1.0-foss-2023a|-|x|-|x|-|x|x|
+|Wannier90/3.1.0-NVHPC-25.9-CUDA-12.9.1|x|-|x|-|x|x|-|
