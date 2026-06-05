@@ -21,4 +21,4 @@ module load rapids-singlecell/0.10.11-foss-2024a-CUDA-12.6.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rapids-singlecell/0.10.11-foss-2024a-CUDA-12.6.0|-|-|x|-|-|x|-|
+|rapids-singlecell/0.10.11-foss-2024a-CUDA-12.6.0|x|-|x|-|x|x|-|

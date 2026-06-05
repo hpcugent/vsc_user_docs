@@ -21,4 +21,4 @@ module load CUDA-wheel-bundle/12.6.0-gfbf-2024a-CUDA-12.6.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CUDA-wheel-bundle/12.6.0-gfbf-2024a-CUDA-12.6.0|-|-|x|-|-|x|-|
+|CUDA-wheel-bundle/12.6.0-gfbf-2024a-CUDA-12.6.0|x|-|x|-|x|x|-|
