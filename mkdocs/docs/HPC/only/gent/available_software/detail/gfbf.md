@@ -21,7 +21,7 @@ module load gfbf/2026.1
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gfbf/2026.1|-|x|-|-|-|-|-|
+|gfbf/2026.1|x|x|x|x|x|x|x|
 |gfbf/2025b|x|x|x|x|x|x|x|
 |gfbf/2025a|x|x|x|x|x|x|x|
 |gfbf/2024a|x|x|x|x|x|x|x|

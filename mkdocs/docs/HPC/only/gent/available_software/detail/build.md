@@ -21,7 +21,7 @@ module load build/1.4.4-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|build/1.4.4-GCCcore-15.2.0|-|x|-|-|-|-|-|
+|build/1.4.4-GCCcore-15.2.0|x|x|x|x|x|x|x|
 |build/1.3.0-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |build/1.3.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |build/1.2.2.post1-GCCcore-13.3.0|x|x|x|x|x|x|x|

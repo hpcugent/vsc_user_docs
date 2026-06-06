@@ -21,7 +21,7 @@ module load BeautifulSoup/4.14.3-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BeautifulSoup/4.14.3-GCCcore-15.2.0|-|x|-|-|-|-|-|
+|BeautifulSoup/4.14.3-GCCcore-15.2.0|x|x|x|x|x|x|x|
 |BeautifulSoup/4.14.2-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |BeautifulSoup/4.13.4-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |BeautifulSoup/4.12.3-GCCcore-13.3.0|x|x|x|x|x|x|x|

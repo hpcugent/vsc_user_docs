@@ -21,7 +21,7 @@ module load virtualenv/21.3.0-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|virtualenv/21.3.0-GCCcore-15.2.0|-|x|-|-|-|-|-|
+|virtualenv/21.3.0-GCCcore-15.2.0|x|x|x|x|x|x|x|
 |virtualenv/20.32.0-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |virtualenv/20.29.2-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |virtualenv/20.26.2-GCCcore-13.3.0|x|x|x|x|x|x|x|

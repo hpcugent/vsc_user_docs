@@ -21,7 +21,7 @@ module load cffi/2.0.0-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cffi/2.0.0-GCCcore-15.2.0|-|x|-|-|-|-|-|
+|cffi/2.0.0-GCCcore-15.2.0|x|x|x|x|x|x|x|
 |cffi/1.17.1-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |cffi/1.17.1-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |cffi/1.16.0-GCCcore-13.3.0|x|x|x|x|x|x|x|

@@ -21,4 +21,4 @@ module load dulwich/1.2.0-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|dulwich/1.2.0-GCCcore-15.2.0|-|x|-|-|-|-|-|
+|dulwich/1.2.0-GCCcore-15.2.0|x|x|x|x|x|x|x|

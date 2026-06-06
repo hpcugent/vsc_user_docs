@@ -21,4 +21,4 @@ module load rpds-py/0.30.0-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rpds-py/0.30.0-GCCcore-15.2.0|-|x|-|-|-|-|-|
+|rpds-py/0.30.0-GCCcore-15.2.0|x|x|x|x|x|x|x|
