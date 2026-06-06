@@ -21,7 +21,7 @@ module load setuptools-rust/1.12.1-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|setuptools-rust/1.12.1-GCCcore-15.2.0|-|x|-|-|-|-|-|
+|setuptools-rust/1.12.1-GCCcore-15.2.0|x|x|x|x|x|x|x|
 |setuptools-rust/1.11.0-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |setuptools-rust/1.11.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |setuptools-rust/1.9.0-GCCcore-13.3.0|x|x|x|x|x|x|x|

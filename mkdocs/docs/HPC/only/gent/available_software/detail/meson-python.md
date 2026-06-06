@@ -21,7 +21,7 @@ module load meson-python/0.19.0-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|meson-python/0.19.0-GCCcore-15.2.0|-|x|-|-|-|-|-|
+|meson-python/0.19.0-GCCcore-15.2.0|x|x|x|x|x|x|x|
 |meson-python/0.18.0-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |meson-python/0.18.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |meson-python/0.16.0-GCCcore-13.3.0|x|x|x|x|x|x|x|

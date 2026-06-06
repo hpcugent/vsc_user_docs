@@ -21,7 +21,7 @@ module load maturin/1.13.1-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|maturin/1.13.1-GCCcore-15.2.0|-|x|-|-|-|-|-|
+|maturin/1.13.1-GCCcore-15.2.0|x|x|x|x|x|x|x|
 |maturin/1.9.1-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |maturin/1.8.3-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |maturin/1.8.3-GCCcore-13.3.0-Rust-1.83.0|x|x|x|x|x|x|x|

@@ -21,7 +21,7 @@ module load hypothesis/6.153.2-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|hypothesis/6.153.2-GCCcore-15.2.0|-|x|-|-|-|-|-|
+|hypothesis/6.153.2-GCCcore-15.2.0|x|x|x|x|x|x|x|
 |hypothesis/6.136.6-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |hypothesis/6.133.2-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |hypothesis/6.103.1-GCCcore-13.3.0|x|x|x|x|x|x|x|

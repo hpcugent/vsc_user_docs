@@ -21,7 +21,7 @@ module load Python-bundle-PyPI/2026.04-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Python-bundle-PyPI/2026.04-GCCcore-15.2.0|-|x|-|-|-|-|-|
+|Python-bundle-PyPI/2026.04-GCCcore-15.2.0|x|x|x|x|x|x|x|
 |Python-bundle-PyPI/2025.07-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |Python-bundle-PyPI/2025.04-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |Python-bundle-PyPI/2024.06-GCCcore-13.3.0|x|x|x|x|x|x|x|

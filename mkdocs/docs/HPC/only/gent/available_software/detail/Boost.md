@@ -21,7 +21,7 @@ module load Boost/1.90.0-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Boost/1.90.0-GCCcore-15.2.0|-|x|-|-|-|-|-|
+|Boost/1.90.0-GCCcore-15.2.0|x|x|x|x|x|x|x|
 |Boost/1.88.0-GCC-14.3.0|x|x|x|x|x|x|x|
 |Boost/1.88.0-GCC-14.2.0|x|x|x|x|x|x|x|
 |Boost/1.85.0-GCC-13.3.0|x|x|x|x|x|x|x|
