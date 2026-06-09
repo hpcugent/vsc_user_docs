@@ -16,7 +16,7 @@ hpcname: hpcugent
 loginnode: login.hpc.ugent.be
 loginhost: gligar09.gastly.os
 altloginhost: gligar10.gastly.os
-modules_last_updated: Sat, 06 Jun 2026 at 07:58:56 CEST # This line is automatically updated by scripts/available_modules/available_modules.py
+modules_last_updated: Tue, 09 Jun 2026 at 07:58:55 CEST # This line is automatically updated by scripts/available_modules/available_modules.py
 # get these with ssh-keyscan login.hpc.ugent.be > file
 # ssh-keygen -l -f file
 # ssh-keygen -l -f file -E md5
