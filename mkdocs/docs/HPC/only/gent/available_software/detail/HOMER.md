@@ -14,11 +14,12 @@ The overview below shows which HOMER installations are available per HPC-UGent T
 To start using HOMER, load one of these modules using a `module load` command like:
 
 ```shell
-module load HOMER/4.11-foss-2023a-R-4.3.2
+module load HOMER/5.1-foss-2025a-R-4.5.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HOMER/5.1-foss-2025a-R-4.5.1|x|x|x|x|x|x|x|
 |HOMER/4.11-foss-2023a-R-4.3.2|-|x|x|x|x|-|-|
