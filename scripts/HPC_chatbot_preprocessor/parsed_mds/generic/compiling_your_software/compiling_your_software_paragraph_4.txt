@@ -1,0 +1,15 @@
+Software, which is not portable in this sense, will have to be
+transferred with modifications to support the environment on the
+destination machine.
+Whilst programming, it would be wise to stick to certain standards
+(e.g., ISO/ANSI/POSIX). This will ease the porting of your code to other
+platforms.
+Porting your code to the RHEL 8.8 (accelgor, doduo, donphan, gallade, joltik, skitty) platform is the responsibility of the end-user.
+Compiling and building on the HPC
+Compiling refers to the process of translating code written in some
+programming language, e.g., Fortran, C, or C++, to machine code.
+Building is similar, but includes gluing together the machine code
+resulting from different source files into an executable (or library).
+The text below guides you through some basic problems typical for small
+software projects. For larger projects it is more appropriate to use
+makefiles or even an advanced build system like CMake.

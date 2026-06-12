@@ -1,0 +1,12 @@
+{
+    "main_title": "account",
+    "subtitle": "Using-an-SSH-agent-(optional",
+    "source_file": "../../mkdocs/docs/HPC/account.md",
+    "title_depth": 3,
+    "directory": "account",
+    "parent_title": "Getting-ready-to-request-an-account",
+    "previous_title": "account_paragraph_5",
+    "next_title": "account_paragraph_7",
+    "OS": "macos",
+    "reference_link": "https://docs.hpc.ugent.be/macOS/account/#using-an-ssh-agent-optional"
+}

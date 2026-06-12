@@ -1,0 +1,42 @@
+First Time connection to the HPC infrastructure
+Open a Terminal
+You've generated a public/private key pair with PuTTYgen and have an
+approved account on the VSC clusters. The next step is to setup the
+connection to (one of) the HPC.
+In the screenshots, we show the setup for user
+"vsc20167"
+to the HPC cluster via the login node "login.hpc.ugent.be".
+1.  Start the PuTTY executable putty.exe in your directory
+    C:\Program Files (x86)\PuTTY and the configuration screen will pop
+    up. As you will often use the PuTTY tool, we recommend adding a
+    shortcut on your desktop.
+2.  Within the category <Session\>, in the field <Host Name\>, enter the name of the
+    login node of the cluster (i.e., "login.hpc.ugent.be") you want to connect to.
+    
+3.  In the category "Connection > Data", in the field "Auto-login username", put in <vsc40000\> , which is your VSC
+    username that you have received by e-mail after your request was
+    approved.
+    
+4.  In the category "Connection > SSH > Auth", in the field "Private key file for authentication" click on "Browse" and select the private key
+    (i.e., "id_rsa.ppk") that you generated and saved above.
+5.  In the category "Connection > SSH > X11", click the "Enable X11 Forwarding" checkbox.
+6.  Now go back to <Session\>, and fill in "hpcugent" in the "Saved Sessions" field and press "Save" to
+    store the session information.
+    
+7.  Now pressing "Open", will open a terminal window and asks for you
+    passphrase.
+    
+8.  If this is your first time connecting, you will be asked to verify
+    the authenticity of the login node. Please see
+    section Warning message when first connecting to new host
+    on how to do this.
+9.  After entering your correct passphrase, you will be connected to the
+    login-node of the HPC.
+10. To check you can now "Print the Working Directory" (pwd) and check
+    the name of the computer, where you have logged in (hostname):
+    $ pwd
+    /user/home/gent/vsc400/vsc40000
+    $ hostname -f
+    gligar07.gastly.os
+11. For future PuTTY sessions, just select your saved session (i.e. "hpcugent")
+    from the list, "Load" it and press "Open".

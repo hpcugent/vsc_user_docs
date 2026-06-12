@@ -1,0 +1,18 @@
+Connecting to the HPC infrastructure
+Before you can really start using the HPC clusters, there are several things
+you need to do or know:
+1.  You need to log on to the cluster using an SSH client to one of
+    the login nodes or by using the HPC web portal.
+    This will give you command-line access.
+    A standard web browser like Firefox or Chrome for the web portal will suffice.
+2.  Before you can do some work, you'll have to transfer the files
+    that you need from your desktop computer to the cluster. At the end
+    of a job, you might want to transfer some files back.
+3.  Optionally, if you wish to use programs with a **graphical user
+    interface**, you will need an X-server on your client system and log
+    in to the login nodes with X-forwarding enabled.
+4.  Often several versions of software packages and libraries are
+    installed, so you need to select the ones you need. To manage
+    different versions efficiently, the VSC clusters use so-called
+    modules, so you will need to select and load the modules that
+    you need.
