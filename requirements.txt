@@ -21,7 +21,7 @@ mkdocs-redirects==1.2.0
 mkdocs-section-index==0.3.5
 mkdocs-spellcheck==1.0.0
 packaging==23.1
-Pygments==2.15.1
+Pygments==2.20.0
 pymdown-extensions==9.11
 pyparsing==3.0.9
 python-dateutil==2.8.2
