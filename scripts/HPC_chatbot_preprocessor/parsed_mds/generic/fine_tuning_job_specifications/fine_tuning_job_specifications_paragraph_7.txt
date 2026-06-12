@@ -1,0 +1,42 @@
+Monitoring the load
+The load average represents the average system load over a period of time. It
+conventionally appears in the form of three numbers, which represent the
+system load during the last one-, five-, and fifteen-minute periods.
+The uptime command will show us the average load
+$ uptime
+10:14:05 up 86 days, 12:01, 11 users, load average: 0.60, 0.41, 0.41
+Now, compile and start a few instances of the "eat_cpu" program in the background,
+and check the effect on the load again:
+$ gcc -O2 eat_cpu.c -o eat_cpu
+$ ./eat_cpu&
+$ ./eat_cpu&
+$ ./eat_cpu&
+$ uptime
+10:14:42 up 86 days, 12:02, 11 users, load average: 2.60, 0.93, 0.58
+You can also read it in the htop command.
+Fine-tuning your executable and/or job script
+It is good practice to perform a number of run time stress tests, and to
+check the system load of your nodes. We (and all other users of the HPC)
+would appreciate that you use the maximum of the CPU resources that are
+assigned to you and make sure that there are no CPUs in your node who
+are not utilised without reasons.
+But how can you maximise?
+1.  Profile your software to improve its performance.
+2.  Configure your software (e.g., to exactly use the available amount
+    of processors in a node).
+3.  Develop your parallel program in a smart way, so that it fully
+    utilises the available processors.
+4.  Demand a specific type of compute node (e.g., Harpertown, Westmere),
+    which have a specific number of cores.
+5.  Correct your request for CPUs in your job script.
+And then check again.
+Checking File sizes & Disk I/O
+Monitoring File sizes during execution
+Some programs generate intermediate or output files, the size of which
+may also be a useful metric.
+Remember that your available disk space on the HPC online storage is
+limited, and that you have environment variables which point to these
+directories available (i.e., *$VSC_DATA*, *$VSC_SCRATCH* and
+*$VSC_DATA*). On top of those, you can also access some temporary
+storage (i.e., the /tmp directory) on the compute node, which is defined
+by the *$VSC_SCRATCH_NODE* environment variable.

@@ -1,0 +1,21 @@
+{
+    "main_title": "alphafold",
+    "subtitle": "Example-jobscripts",
+    "source_file": "../../mkdocs/docs/HPC/alphafold.md",
+    "title_depth": 2,
+    "directory": "alphafold",
+    "links": {
+        "0": "https://github.com/deepmind/alphafold/blob/main/README.md#examples",
+        "1": "https://github.com/deepmind/alphafold/blob/main/README.md",
+        "2": "https://docs.hpc.ugent.be/running-alphafold",
+        "3": "https://docs.hpc.ugent.be/setting-up-the-environment",
+        "4": "https://github.com/deepmind/alphafold/blob/main/README.md#alphafold-output",
+        "5": "https://github.com/deepmind/alphafold/blob/main/README.md#examples",
+        "6": "https://github.com/deepmind/alphafold/blob/main/README.md"
+    },
+    "parent_title": "",
+    "previous_title": "alphafold_paragraph_3",
+    "next_title": "alphafold_paragraph_5",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/alphafold/#example-jobscripts"
+}

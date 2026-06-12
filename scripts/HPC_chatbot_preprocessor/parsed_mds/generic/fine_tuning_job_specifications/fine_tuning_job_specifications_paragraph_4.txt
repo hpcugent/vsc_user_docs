@@ -1,0 +1,60 @@
+The /proc/cpuinfo stores info about your CPU architecture like number
+of CPUs, threads, cores, information about CPU caches, CPU family, model
+and much more. So, if you want to detect how many cores are available on
+a specific machine:
+$ less /proc/cpuinfo
+processor       : 0
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 23
+model name      : Intel(R) Xeon(R) CPU  E5420  @ 2.50GHz
+stepping        : 10
+cpu MHz         : 2500.088
+cache size      : 6144 KB
+...
+Or if you want to see it in a more readable format, execute:
+$ grep processor /proc/cpuinfo
+processor : 0
+processor : 1
+processor : 2
+processor : 3
+processor : 4
+processor : 5
+processor : 6
+processor : 7
+ note
+    Unless you want information of the login nodes, you'll have to issue
+    these commands on one of the workernodes. This is most easily achieved
+    in an interactive job, see the chapter on Running interactive jobs.
+In order to specify the number of nodes and the number of processors per
+node in your job script, use:
+#PBS -l nodes=N:ppn=M
+or with equivalent parameters on the command line
+qsub -l nodes=N:ppn=M
+This specifies the number of nodes (nodes=N) and the number of
+processors per node (ppn=M) that the job should use. PBS treats a
+processor core as a processor, so a system with eight cores per compute
+node can have ppn=8 as its maximum ppn request.
+You can also use this statement in your job script:
+#PBS -l nodes=N:ppn=all
+to request all cores of a node, or
+#PBS -l nodes=N:ppn=half
+to request half of them.
+Note that unless a job has some inherent parallelism of its own through
+something like MPI or OpenMP, requesting more than a single processor on
+a single node is usually wasteful and can impact the job start time.
+Monitoring the CPU-utilisation
+This could also be monitored with the htop command:
+htop
+Example output:
+  1  [|||   11.0%]   5  [||     3.0%]     9  [||     3.0%]   13 [       0.0%]
+  2  [|||||100.0%]   6  [       0.0%]     10 [       0.0%]   14 [       0.0%]
+  3  [||     4.9%]   7  [||     9.1%]     11 [       0.0%]   15 [       0.0%]
+  4  [||     1.8%]   8  [       0.0%]     12 [       0.0%]   16 [       0.0%]
+  Mem[|||||||||||||||||59211/64512MB]     Tasks: 323, 932 thr; 2 running
+  Swp[||||||||||||      7943/20479MB]     Load average: 1.48 1.46 1.27
+                                          Uptime: 211 days(!), 22:12:58
+  PID USER      PRI  NI  VIRT   RES   SHR S CPU% MEM%   TIME+  Command
+22350 vsc00000   20   0 1729M 1071M   704 R 98.0  1.7 27:15.59 bwa index
+ 7703 root        0 -20 10.1G 1289M 70156 S 11.0  2.0 36h10:11 /usr/lpp/mmfs/bin
+27905 vsc00000   20   0  123M  2800  1556 R  7.0  0.0  0:17.51 htop

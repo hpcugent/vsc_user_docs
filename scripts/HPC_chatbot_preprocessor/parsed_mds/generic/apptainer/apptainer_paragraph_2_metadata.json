@@ -1,0 +1,12 @@
+{
+    "main_title": "apptainer",
+    "subtitle": "Tensorflow-example",
+    "source_file": "../../mkdocs/docs/HPC/apptainer.md",
+    "title_depth": 2,
+    "directory": "apptainer",
+    "parent_title": "",
+    "previous_title": "apptainer_paragraph_1",
+    "next_title": "apptainer_paragraph_3",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/apptainer/#tensorflow-example"
+}

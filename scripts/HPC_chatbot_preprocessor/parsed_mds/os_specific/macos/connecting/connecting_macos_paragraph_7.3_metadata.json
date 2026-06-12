@@ -1,0 +1,16 @@
+{
+    "main_title": "connecting",
+    "subtitle": "Using-sftp",
+    "source_file": "../../mkdocs/docs/HPC/connecting.md",
+    "title_depth": 3,
+    "directory": "connecting",
+    "parent_title": "Transfer-Files-tofrom-the-HPC",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/",
+        "1": "https://docs.hpc.ugent.be/"
+    },
+    "previous_title": "connecting_macos_paragraph_7.2",
+    "next_title": "connecting_paragraph_8",
+    "OS": "macos",
+    "reference_link": "https://docs.hpc.ugent.be/macOS/connecting/#using-sftp"
+}

@@ -1,0 +1,15 @@
+{
+    "main_title": "connecting",
+    "subtitle": "First-Time-connection-to-the-HPC-infrastructure",
+    "source_file": "../../mkdocs/docs/HPC/connecting.md",
+    "title_depth": 2,
+    "directory": "connecting",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/useful_linux_commands"
+    },
+    "parent_title": "",
+    "previous_title": "connecting_paragraph_3",
+    "next_title": "connecting_paragraph_5",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/connecting/#first-time-connection-to-the-hpc-infrastructure"
+}

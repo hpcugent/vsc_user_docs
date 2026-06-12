@@ -1,0 +1,38 @@
+Optimal load
+What is the "optimal load" rule of thumb?
+The load averages tell us whether our physical CPUs are over- or
+under-utilised. The point of perfect utilisation, meaning that the CPUs are always busy and, yet, no
+process ever waits for one, is **the
+average matching the number of CPUs**. Your load should not exceed the number
+of cores available. E.g., if there are four CPUs on a machine and the
+reported one-minute load average is 4.00, the machine has been utilising
+its processors perfectly for the last 60 seconds. The "100% utilisation"
+mark is 1.0 on a single-core system, 2.0 on a dual-core, 4.0 on a
+quad-core, etc. The optimal load shall be between 0.7 and 1.0 per
+processor.
+In general, the intuitive idea of load averages is the higher they rise
+above the number of processors, the more processes are waiting and doing
+nothing, and the lower they fall below the number of processors, the
+more untapped CPU capacity there is.
+Load averages do include any processes or threads waiting on I/O,
+networking, databases or anything else not demanding the CPU. This means
+that the optimal number of applications running on a system at the
+same time, might be more than one per processor.
+The "optimal number of applications" running on one machine at the same time depends on the type of
+the applications that you are running.
+1.  When you are running computational intensive applications, one application per processor will generate
+    the optimal load.
+2.  For I/O intensive applications (e.g., applications which perform a lot of disk-I/O), a higher
+    number of applications can generate the optimal load. While some
+    applications are reading or writing data on disks, the processors
+    can serve other applications.
+The optimal number of applications on a machine could be empirically
+calculated by performing a number of stress tests, whilst checking the
+highest throughput. There is however no manner in the HPC at the moment to
+specify the maximum number of applications that shall run per core
+dynamically. The HPC scheduler will not launch more than one process per
+core.
+The manner how the cores are spread out over CPUs does not matter for
+what regards the load. Two quad-cores perform similar to four
+dual-cores, and again perform similar to eight single-cores. It's all
+eight cores for these purposes.

@@ -1,0 +1,18 @@
+{
+    "main_title": "alphafold",
+    "subtitle": "Running-AlphaFold",
+    "source_file": "../../mkdocs/docs/HPC/alphafold.md",
+    "title_depth": 3,
+    "directory": "alphafold",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/gpu",
+        "1": "http://localhost:8000/HPC/Gent/running_jobs_with_input_output_data/#pre-defined-user-directories",
+        "2": "https://raw.githubusercontent.com/deepmind/alphafold/main/run_alphafold.py",
+        "3": "https://docs.hpc.ugent.be/alphafold/#setting-up-the-environment"
+    },
+    "parent_title": "",
+    "previous_title": "alphafold_paragraph_1",
+    "next_title": "alphafold_paragraph_3",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/alphafold/#running-alphafold"
+}

@@ -1,0 +1,25 @@
+VO: how does it work?
+A Virtual Organisation consists of a number of members and moderators. A moderator can:
+*   Manage the VO members (but can't access/remove their data on the system).
+*   See how much storage each member has used, and set limits per member.
+*   Request additional storage for the VO.
+One person can only be part of one VO, be it as a member or moderator.
+It's possible to leave a VO and join another one. However, it's not
+recommended to keep switching between VO's (to supervise groups, for example).
+See also: Virtual Organisations.
+My UGent shared drives don't show up
+After mounting the UGent shared drives with kinit your_email@ugent.be,
+you might not see an entry with your username when listing ls /UGent.
+This is normal: try ls /UGent/your_username or cd /UGent/your_username, and you should be able to access the drives.
+Be sure to use your UGent username and not your VSC username here.
+See also: Your UGent home drive and shares.
+My home directory is (almost) full, and I don't know why
+Your home directory might be full without looking like it due to hidden files.
+Hidden files and subdirectories have a name starting with a dot and do not show up when running ls.
+If you want to check where the storage in your home directory is used, you can make use of the du command to find out what the largest files and subdirectories are:
+du -h --max-depth 1 $VSC_HOME | egrep '[0-9]{3}M|[0-9]G'
+The du command returns the size of every file and subdirectory in the $VSC_HOME directory. This output is then piped into an egrep to filter the lines to the ones that matter the most.
+The egrep command will only let entries that match with the specified regular expression [0-9]{3}M|[0-9]G through, which corresponds with files that consume more than 100 MB.
+How can I get more storage space?
+By default you get 3 GB of storage space for your home directory and 25 GB in your personal directories on both the data ($VSC_DATA) and scratch ($VSC_SCRATCH) filesystems.
+It is not possible to expand the storage quota for these personal directories.
