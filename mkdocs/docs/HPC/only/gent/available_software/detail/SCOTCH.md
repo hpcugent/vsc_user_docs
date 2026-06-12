@@ -23,4 +23,5 @@ module load SCOTCH/7.0.8-gompi-2025a
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |SCOTCH/7.0.8-gompi-2025a|x|x|x|x|x|x|x|
 |SCOTCH/7.0.6-gompi-2024a|x|x|x|x|x|x|x|
+|SCOTCH/7.0.4-gompi-2023b|x|x|x|x|x|x|x|
 |SCOTCH/7.0.3-gompi-2023a|x|x|x|x|x|x|x|

@@ -23,6 +23,7 @@ module load HDF5/1.14.6-gompi-2025b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |HDF5/1.14.6-gompi-2025b|x|x|x|x|x|x|x|
 |HDF5/1.14.6-gompi-2025a|x|x|x|x|x|x|x|
+|HDF5/1.14.6-NVHPC-25.9-CUDA-12.9.1|x|-|x|-|x|x|-|
 |HDF5/1.14.5-gompi-2024a|x|x|x|x|x|x|x|
 |HDF5/1.14.5-NVHPC-25.3-CUDA-12.8.0|x|-|x|-|x|x|-|
 |HDF5/1.14.3-iimpi-2023b|x|x|x|x|x|x|x|

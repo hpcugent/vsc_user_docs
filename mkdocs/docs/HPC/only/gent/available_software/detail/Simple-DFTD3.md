@@ -22,3 +22,5 @@ module load Simple-DFTD3/1.2.1-gfbf-2024a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Simple-DFTD3/1.2.1-gfbf-2024a|x|x|x|x|x|x|x|
+|Simple-DFTD3/1.2.1-gfbf-2023b|x|x|x|x|x|x|x|
+|Simple-DFTD3/1.2.1-gfbf-2023a|x|x|x|x|x|x|x|

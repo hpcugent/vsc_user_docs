@@ -14,13 +14,14 @@ The overview below shows which gfbf installations are available per HPC-UGent Ti
 To start using gfbf, load one of these modules using a `module load` command like:
 
 ```shell
-module load gfbf/2025b
+module load gfbf/2026.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|gfbf/2026.1|x|x|x|x|x|x|x|
 |gfbf/2025b|x|x|x|x|x|x|x|
 |gfbf/2025a|x|x|x|x|x|x|x|
 |gfbf/2024a|x|x|x|x|x|x|x|

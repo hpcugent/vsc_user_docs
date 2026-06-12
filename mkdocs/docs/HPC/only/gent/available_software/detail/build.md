@@ -14,13 +14,14 @@ The overview below shows which build installations are available per HPC-UGent T
 To start using build, load one of these modules using a `module load` command like:
 
 ```shell
-module load build/1.3.0-GCCcore-14.3.0
+module load build/1.4.4-GCCcore-15.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|build/1.4.4-GCCcore-15.2.0|x|x|x|x|x|x|x|
 |build/1.3.0-GCCcore-14.3.0|x|x|x|x|x|x|x|
 |build/1.3.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |build/1.2.2.post1-GCCcore-13.3.0|x|x|x|x|x|x|x|
