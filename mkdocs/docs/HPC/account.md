@@ -251,8 +251,13 @@ your other machines, instead, you should create a new public/private key
 pair for each machine.
 
 ```
-ssh-keygen -t rsa -b 4096
+ssh-keygen -t ed25519 -a 100
 ```
+
+> This command uses the highly secure Ed25519 curve.  
+The -a 100 increases password hashing rounds for better protection against brute-force attacks on the private key file.  
+This is compliant to the **2026** recommendations of the German "Bundesamt für Sicherheit in der Informationstechnik" (BSI, The Federal Office for Information Security),  
+[BSI TR-02102 Kryptographische Verfahren: Empfehlungen und Schlüssellängen](https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr02102/tr02102_node.html)
 
 This will ask you for a file name to store the private and public key,
 and a passphrase to protect your private key. It needs to be emphasised
