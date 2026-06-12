@@ -1,0 +1,12 @@
+{
+    "main_title": "introduction",
+    "subtitle": "What-operating-systems-can-I-use",
+    "source_file": "../../mkdocs/docs/HPC/introduction.md",
+    "title_depth": 3,
+    "directory": "introduction",
+    "parent_title": "",
+    "previous_title": "introduction_paragraph_2",
+    "next_title": "introduction_paragraph_4",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/introduction/#what-operating-systems-can-i-use"
+}

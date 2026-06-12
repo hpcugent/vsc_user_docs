@@ -1,0 +1,19 @@
+MPI uses the notion of process rather than processor. Program copies are
+mapped to processors by the MPI runtime. In that sense, the parallel
+machine can map to 1 physical processor, or N where N is the total
+number of processors available, or something in between. For maximum
+parallel speedup, more physical processors are used. This example
+adjusts its behaviour to the size of the world N, so it also seeks to
+scale to the runtime configuration without compilation for each size
+variation, although runtime decisions might vary depending on that
+absolute amount of concurrency available.
+ tip
+    mpirun does not always do the optimal core pinning and requires a few
+    extra arguments to be the most efficient possible on a given system. At
+    Ghent we have a wrapper around mpirun called mympirun. See for more
+    information.
+    You will generally just start an MPI program on the by using mympirun
+    instead of
+    mpirun -n <nr of cores> <--other settings> <--other optimisations>
+ tip
+    If you plan engaging in parallel programming using MPI, this book may prove useful: Parallel Programming with MPI. Peter Pacheo. Morgan Kaufmann. 1996.
