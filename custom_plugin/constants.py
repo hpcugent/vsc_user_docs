@@ -10,9 +10,9 @@ hide:
 """
 
 OS_PICK_BTN = """
-{{%- if {} %}}
+{{% if {} %}}
 [{}]({}){{ .md-button }}
-{{%- endif %}}
+{{% endif %}}
 """
 
 # This string enables automatic scrolling to section on some page while using OS picking feature.

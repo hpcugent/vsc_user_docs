@@ -132,6 +132,7 @@ activate() {
 
   # === Warn user if they have modules loaded === #
   loaded_modules=($(echo "$LOADEDMODULES" | tr ':' '\n' | grep -v -E '^(env|cluster|vsc-venv)/')) # Remove env, cluster and vsc-venv modules
+  # {# j2lint: disable=S0 #}
   n_loaded_modules="${#loaded_modules[@]}"
   if [ "$n_loaded_modules" -gt 0 ]; then
     echo_warning "You have $n_loaded_modules loaded modules in the current shell. These modules will be purged."
