@@ -1,0 +1,15 @@
+{
+    "main_title": "beyond_the_basics",
+    "subtitle": "Searching-file-contents-`grep`",
+    "source_file": "../../mkdocs/docs/HPC/linux-tutorial/beyond_the_basics.md",
+    "title_depth": 2,
+    "directory": "beyond_the_basics",
+    "links": {
+        "0": "https://en.wikipedia.org/wiki/Unix_signal#POSIX_signals"
+    },
+    "parent_title": "",
+    "previous_title": "beyond_the_basics_paragraph_2",
+    "next_title": "beyond_the_basics_paragraph_4",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/linux-tutorial/beyond_the_basics/#searching-file-contents-grep"
+}

@@ -1,0 +1,35 @@
+More information
+Permissions
+$ ls -l script.sh # File with correct permissions
+-rwxr-xr-x 1 vsc40000 vsc40000 2983 Jan 30 09:13 script.sh
+$ ls -l script.sh # File with incorrect permissions
+-rw-r--r-- 1 vsc40000 vsc40000 2983 Jan 30 09:13 script.sh
+Before submitting the script, you'll need to add execute permissions to
+make sure it can be executed:
+$ chmod +x script_name.sh
+Help
+If you stumble upon an error, don't panic! Read the error output, it
+might contain a clue as to what went wrong. You can copy the error
+message into Google (selecting a small part of the error without
+filenames). It can help if you surround your search terms in double
+quotes (for example "No such file or directory"), that way Google will
+consider the error as one thing, and won't show results just containing
+these words in random order.
+If you need help about a certain command, you should consult its so-called "man page":
+$ man command
+This will open the manual of this command. This manual contains detailed
+explanation of all the options the command has. Exiting the manual is
+done by pressing 'q'.
+**Don't be afraid to contact <hpc@ugent.be>. They are here to help and will do so for even the 
+smallest of problems!**
+More information
+1.  Unix Power Tools - A fantastic  book about most of these tools (see also The Second Edition)
+2.  http://"linux"command.org/: A great place to start with many
+    examples. There is an associated book which gets a lot of good
+    reviews
+3.  The Linux Documentation Project: More guides on various topics relating to the Linux command line
+4.  [basic shell
+    usage](http://"linux"command.org/lc3_learning_the_shell.php)
+5.  [Bash for
+    beginners](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)
+6.  MOOC

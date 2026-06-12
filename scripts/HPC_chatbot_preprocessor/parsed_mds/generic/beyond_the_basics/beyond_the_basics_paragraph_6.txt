@@ -1,0 +1,53 @@
+In the above example you can see the 2 different methods of using a
+subcommand. pwd will output the current working directory, and its
+output will be stored in the CURRENTDIR variable. The recommended way to
+use subcommands is with the $() syntax.
+Errors
+Sometimes some things go wrong and a command or script you ran causes an
+error. How do you properly deal with these situations?
+Firstly a useful thing to know for debugging and testing is that you can
+run any command like this:
+command 2>&1 output.log   # one single output file, both output and errors
+If you add 2>&1 output.log at the end of any command, it will combine
+stdout and stderr, outputting it into a single file named
+output.log.
+If you want regular and error output separated you can use:
+command > output.log 2> output.err  # errors in a separate file
+this will write regular output to output.log and error output to
+output.err.
+You can then look for the errors with less or search for specific text
+with grep.
+In scripts, you can use:
+set -e
+This will tell the shell to stop executing any subsequent commands when
+a single command in the script fails. This is most convenient as most
+likely this causes the rest of the script to fail as well.
+Advanced error checking
+Sometimes you want to control all the error checking yourself, this is
+also possible. Everytime you run a command, a special variable $? is
+used to denote successful completion of the command. A value other than
+zero signifies something went wrong. So an example use case:
+command_with_possible_error
+exit_code=$?  # capture exit code of last command
+if [ $exit_code -ne 0 ]
+then
+  echo "something went wrong"
+fi
+.bashrc login script
+[//]: # (sec:bashrc-login-script)
+If you have certain commands executed every time you log in (which
+includes every time a job starts), you can add them to your
+$HOME/.bashrc file. This file is a shell script that gets executed
+every time you log in.
+Examples include:
+-   modifying your $PS1 (to tweak your shell prompt)
+-   printing information about the current/jobs environment (echoing
+    environment variables, etc.)
+-   selecting a specific cluster to run on with
+    module swap cluster/...
+Some recommendations:
+-   Avoid using module load statements in your $HOME/.bashrc file
+-   Don't directly edit your .bashrc file: if there's an error in your
+    .bashrc file, you might not be able to log in again. To
+    prevent that, use another file to test your changes, then copy them
+    over when you tested the script.
