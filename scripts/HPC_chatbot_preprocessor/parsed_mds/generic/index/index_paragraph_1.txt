@@ -1,0 +1,17 @@
+---
+hide: "toc"
+---
+ Welcome to the HPC-UGent documentation
+---
+Use the menu on the left to navigate, or use the search box on the top right.
+You are viewing documentation intended for people using *.
+Use the OS dropdown in the top bar to switch to a different operating system.
+Quick links
+- Getting Started  | Getting Access
+- Recording of HPC-UGent intro
+- Linux Tutorial
+- Hardware overview
+- FAQ | Troubleshooting | Best practices | Known issues
+
+If you find any problems in this documentation, please report them by mail to <hpc@ugent.be> or open a pull request.
+If you still have any questions, you can contact the HPC-UGent team.

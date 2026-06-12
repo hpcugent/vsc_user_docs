@@ -1,0 +1,37 @@
+Domain decomposition and number of processor cores
+To run OpenFOAM in parallel, you must decompose the domain into multiple
+subdomains. Each subdomain will be processed by OpenFOAM on one
+processor core.
+Since mympirun will automatically use all available cores, you need to
+make sure that the number of subdomains matches the number of processor
+cores that will be used by mympirun. If not, you may run into an error
+message like:
+number of processor directories = 4 is not equal to the number of processors = 16
+In this case, the case was decomposed in 4 subdomains, while the
+OpenFOAM simulation was started with 16 processes through mympirun. To
+match the number of subdomains and the number of processor cores used by
+mympirun, you should either:
+-   adjust the value for numberOfSubdomains in
+    system/decomposeParDict (and adjust the value for n accordingly
+    in the domain decomposition coefficients), and run decomposePar
+    again; or
+-   submit your job requesting exactly the same number of processor
+    cores as there are subdomains (see the number of processor*
+    directories that were created by decomposePar)
+See Controlling number of processes to control the number of process mympirun will start.
+This is interesting if you require more memory per core than is
+available by default. Note that the decomposition method being used
+(which is specified in system/decomposeParDict) has significant impact
+on the performance of a parallel OpenFOAM simulation. Good decomposition
+methods (like metis or scotch) try to limit communication overhead
+by minimising the number of processor boundaries.
+To visualise the processor domains, use the following command:
+mympirun foamToVTK -parallel -constant -time 0 -excludePatches '(".*.")'
+and then load the VTK files generated in the VTK folder into ParaView.
+Running OpenFOAM on a shared filesystem 
+OpenFOAM is known to significantly stress shared filesystems, since a
+lot of (small) files are generated during an OpenFOAM simulation. Shared
+filesystems are typically optimised for dealing with (a small number of)
+large files, and are usually a poor match for workloads that involve a
+(very) large number of small files (see also
+http://www.prace-ri.eu/IMG/pdf/IO-profiling_with_Darshan-2.pdf).

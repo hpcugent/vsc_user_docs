@@ -1,0 +1,40 @@
+Multi-job submission
+A frequent occurring characteristic of scientific computation is their
+focus on data intensive processing. A typical example is the iterative
+evaluation of a program over different input parameter values, often
+referred to as a "parameter sweep". A Parameter Sweep runs a job a specified number of
+times, as if we sweep the parameter values through a user defined range.
+Users then often want to submit a large numbers of jobs based on the
+same job script but with (i) slightly different parameters settings or
+with (ii) different input files.
+These parameter values can have many forms, we can think about a range
+(e.g., from 1 to 100), or the parameters can be stored line by line in a
+comma-separated file. The users want to run their job once for each
+instance of the parameter values.
+One option could be to launch a lot of separate individual small jobs
+(one for each parameter) on the cluster, but this is not a good idea.
+The cluster scheduler isn't meant to deal with tons of small jobs. Those
+huge amounts of small jobs will create a lot of overhead, and can slow
+down the whole cluster. It would be better to bundle those jobs in
+larger sets. In TORQUE, an experimental feature known as "job arrays"
+existed to allow the creation of multiple jobs with one qsub command,
+but is not supported by Moab, the current scheduler.
+The "Worker framework" has been developed to address this issue.
+It can handle many small jobs determined by:
+parameter variations
+:   i.e., many small jobs determined by a specific parameter set which
+    is stored in a .csv (comma separated value) input file.
+job arrays
+:   i.e., each individual job got a unique numeric identifier.
+Both use cases often have a common root: the user wants to run a program
+with a large number of parameter settings, and the program does not
+allow for aggregation, i.e., it has to be run once for each instance of
+the parameter values.
+However, the Worker Framework's scope is wider: it can be used for any
+scenario that can be reduced to a MapReduce approach.[^1]
+The worker Framework: Parameter Sweeps
+First go to the right directory:
+cd ~/examples/Multi-job-submission/par_sweep
+Suppose the user wishes to run the "weather" program,
+which takes three parameters: a temperature, a pressure and a volume. A
+typical call of the program looks like:

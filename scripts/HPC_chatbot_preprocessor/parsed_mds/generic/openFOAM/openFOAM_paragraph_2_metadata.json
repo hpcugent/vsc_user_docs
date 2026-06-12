@@ -1,0 +1,15 @@
+{
+    "main_title": "openFOAM",
+    "subtitle": "Sourcing-the-`$FOAM_BASH`-script",
+    "source_file": "../../mkdocs/docs/HPC/openFOAM.md",
+    "title_depth": 3,
+    "directory": "openFOAM",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/openFOAM/#different-openfoam-releases"
+    },
+    "parent_title": "",
+    "previous_title": "openFOAM_paragraph_1",
+    "next_title": "openFOAM_paragraph_3",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/openFOAM/#sourcing-the-foambash-script"
+}

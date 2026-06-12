@@ -1,0 +1,6 @@
+If we use a different SciPy module that uses an incompatible toolchain, we will get a module load conflict when trying to load it (For more info on these errors, see here).
+$ module load JupyterNotebook/7.2.0-GCCcore-13.2.0
+$ module load SciPy-bundle/2023.07-gfbf-2023a
+Lmod has detected the following error:  ...
+Now that we found the right module for the notebook, add module load <module_name> in the Custom code field when creating a notebook and you can make use of the packages within that notebook.
+
