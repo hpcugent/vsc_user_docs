@@ -21,5 +21,5 @@ module load MEME/5.5.9-gompi-2025a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MEME/5.5.9-gompi-2025a|x|x|x|-|x|-|-|
+|MEME/5.5.9-gompi-2025a|x|x|x|x|x|x|x|
 |MEME/5.5.7-gompi-2023b|-|x|x|x|x|x|x|
