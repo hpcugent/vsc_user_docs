@@ -14,11 +14,12 @@ The overview below shows which opt-einsum installations are available per HPC-UG
 To start using opt-einsum, load one of these modules using a `module load` command like:
 
 ```shell
-module load opt-einsum/3.4.0-GCCcore-14.2.0
+module load opt-einsum/3.4.0-GCCcore-15.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|opt-einsum/3.4.0-GCCcore-15.2.0|x|x|x|x|x|-|-|
 |opt-einsum/3.4.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
