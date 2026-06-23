@@ -21,7 +21,7 @@ module load ml_dtypes/0.5.4-gfbf-2026.1
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ml_dtypes/0.5.4-gfbf-2026.1|x|x|x|x|x|-|-|
+|ml_dtypes/0.5.4-gfbf-2026.1|x|x|x|x|x|x|x|
 |ml_dtypes/0.5.1-gfbf-2025a|x|x|x|x|x|x|x|
 |ml_dtypes/0.5.0-gfbf-2024a|x|x|x|x|x|x|x|
 |ml_dtypes/0.3.2-gfbf-2023a|x|x|x|x|x|x|x|
