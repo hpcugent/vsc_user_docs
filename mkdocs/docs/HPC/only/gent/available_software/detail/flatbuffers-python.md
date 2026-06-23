@@ -21,7 +21,7 @@ module load flatbuffers-python/25.12.19-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|flatbuffers-python/25.12.19-GCCcore-15.2.0|x|x|x|x|x|-|-|
+|flatbuffers-python/25.12.19-GCCcore-15.2.0|x|x|x|x|x|x|x|
 |flatbuffers-python/25.2.10-GCCcore-14.2.0|x|x|x|x|x|x|x|
 |flatbuffers-python/24.3.25-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |flatbuffers-python/23.5.26-GCCcore-12.3.0|x|x|x|x|x|x|x|
