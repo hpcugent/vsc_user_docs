@@ -22,5 +22,6 @@ module load tokenizers/0.22.1-GCCcore-13.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |tokenizers/0.22.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
+|tokenizers/0.21.4-GCCcore-13.3.0|x|x|x|x|x|x|x|
 |tokenizers/0.19.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
 |tokenizers/0.15.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
