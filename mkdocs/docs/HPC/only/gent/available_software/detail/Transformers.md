@@ -22,5 +22,6 @@ module load Transformers/4.57.1-gfbf-2024a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Transformers/4.57.1-gfbf-2024a|x|x|x|x|x|x|x|
+|Transformers/4.55.0-gfbf-2024a|x|x|x|x|x|x|x|
 |Transformers/4.44.0-gfbf-2023b|x|x|x|x|x|x|x|
 |Transformers/4.39.3-gfbf-2023a|x|x|x|x|x|x|x|
