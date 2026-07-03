@@ -19,7 +19,7 @@ module load Stata/18
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Stata/18|x|x|x|x|x|x|x|
-|Stata/15|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Stata/18|x|x|x|x|x|x|x|x|
+|Stata/15|x|x|x|x|x|x|x|x|

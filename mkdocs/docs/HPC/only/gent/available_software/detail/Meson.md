@@ -19,13 +19,13 @@ module load Meson/1.10.2-GCCcore-15.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Meson/1.10.2-GCCcore-15.2.0|x|x|x|x|x|x|x|
-|Meson/1.8.2-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|Meson/1.6.1-GCCcore-14.2.0|x|x|x|x|x|x|x|
-|Meson/1.4.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|Meson/1.2.3-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|Meson/1.1.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|Meson/0.64.0-GCCcore-12.2.0|-|-|-|-|-|x|x|
-|Meson/0.62.1-GCCcore-11.3.0|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Meson/1.10.2-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|Meson/1.8.2-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|Meson/1.6.1-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|Meson/1.4.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|Meson/1.2.3-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|Meson/1.1.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|Meson/0.64.0-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
+|Meson/0.62.1-GCCcore-11.3.0|-|-|-|-|-|x|x|x|

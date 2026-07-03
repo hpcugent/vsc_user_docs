@@ -19,10 +19,10 @@ module load nglview/4.0-foss-2025b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nglview/4.0-foss-2025b|x|x|x|x|x|x|x|
-|nglview/3.1.4-foss-2025a|x|x|x|x|x|x|x|
-|nglview/3.1.4-foss-2024a|x|x|x|x|x|x|x|
-|nglview/3.1.4-foss-2023b|x|x|x|x|x|x|x|
-|nglview/3.1.2-foss-2023a|-|x|-|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|nglview/4.0-foss-2025b|x|x|x|x|x|x|x|x|
+|nglview/3.1.4-foss-2025a|x|x|x|x|x|x|x|x|
+|nglview/3.1.4-foss-2024a|x|x|x|x|x|x|x|x|
+|nglview/3.1.4-foss-2023b|x|x|x|x|x|x|x|x|
+|nglview/3.1.2-foss-2023a|-|x|-|x|-|x|x|x|

@@ -19,11 +19,11 @@ module load OSU-Micro-Benchmarks/7.5-gompi-2025a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OSU-Micro-Benchmarks/7.5-gompi-2025a|x|-|-|x|-|x|x|
-|OSU-Micro-Benchmarks/7.4-iimpi-2024a|x|x|x|x|x|x|x|
-|OSU-Micro-Benchmarks/7.4-gompi-2024a|x|x|-|x|-|x|x|
-|OSU-Micro-Benchmarks/7.2-gompi-2023b|-|x|x|x|x|-|-|
-|OSU-Micro-Benchmarks/7.1-1-iimpi-2023a|-|x|x|x|x|-|-|
-|OSU-Micro-Benchmarks/7.1-1-gompi-2023a|-|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OSU-Micro-Benchmarks/7.5-gompi-2025a|x|-|-|x|-|x|x|x|
+|OSU-Micro-Benchmarks/7.4-iimpi-2024a|x|x|x|x|x|x|x|x|
+|OSU-Micro-Benchmarks/7.4-gompi-2024a|x|x|-|x|-|x|x|x|
+|OSU-Micro-Benchmarks/7.2-gompi-2023b|-|x|x|x|x|-|-|-|
+|OSU-Micro-Benchmarks/7.1-1-iimpi-2023a|-|x|x|x|x|-|-|-|
+|OSU-Micro-Benchmarks/7.1-1-gompi-2023a|-|x|x|x|x|x|x|x|

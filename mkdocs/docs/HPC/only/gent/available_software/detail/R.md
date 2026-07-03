@@ -19,11 +19,11 @@ module load R/4.5.2-gfbf-2025b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|R/4.5.2-gfbf-2025b|x|x|x|x|x|x|x|
-|R/4.5.1-gfbf-2025a|x|x|x|x|x|x|x|
-|R/4.4.2-gfbf-2024a|x|x|x|x|x|x|x|
-|R/4.4.1-gfbf-2023b|x|x|x|x|x|x|x|
-|R/4.3.3-gfbf-2023b|x|-|x|-|x|-|-|
-|R/4.3.2-gfbf-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|R/4.5.2-gfbf-2025b|x|x|x|x|x|x|x|x|
+|R/4.5.1-gfbf-2025a|x|x|x|x|x|x|x|x|
+|R/4.4.2-gfbf-2024a|x|x|x|x|x|x|x|x|
+|R/4.4.1-gfbf-2023b|x|x|x|x|x|x|x|x|
+|R/4.3.3-gfbf-2023b|x|-|x|-|x|-|-|-|
+|R/4.3.2-gfbf-2023a|x|x|x|x|x|x|x|x|

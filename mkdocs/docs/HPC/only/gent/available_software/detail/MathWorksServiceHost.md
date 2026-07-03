@@ -19,6 +19,6 @@ module load MathWorksServiceHost/2024.13.0.2
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MathWorksServiceHost/2024.13.0.2|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MathWorksServiceHost/2024.13.0.2|x|x|x|x|x|x|x|x|

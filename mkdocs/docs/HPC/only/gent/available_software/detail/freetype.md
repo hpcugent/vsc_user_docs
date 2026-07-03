@@ -19,12 +19,12 @@ module load freetype/2.13.3-GCCcore-14.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|freetype/2.13.3-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|freetype/2.13.3-GCCcore-14.2.0|x|x|x|x|x|x|x|
-|freetype/2.13.2-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|freetype/2.13.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|freetype/2.13.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|freetype/2.12.1-GCCcore-12.2.0|-|-|-|-|-|x|x|
-|freetype/2.12.1-GCCcore-11.3.0|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|freetype/2.13.3-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|freetype/2.13.3-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|freetype/2.13.2-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|freetype/2.13.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|freetype/2.13.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|freetype/2.12.1-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
+|freetype/2.12.1-GCCcore-11.3.0|-|-|-|-|-|x|x|x|

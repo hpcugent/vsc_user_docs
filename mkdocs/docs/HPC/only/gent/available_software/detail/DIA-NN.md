@@ -19,6 +19,6 @@ module load DIA-NN/2.3.2-gfbf-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DIA-NN/2.3.2-gfbf-2024a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DIA-NN/2.3.2-gfbf-2024a|x|x|x|x|x|x|x|x|

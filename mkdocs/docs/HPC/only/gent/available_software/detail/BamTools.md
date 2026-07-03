@@ -19,9 +19,9 @@ module load BamTools/2.5.2-GCC-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BamTools/2.5.2-GCC-13.3.0|x|x|x|x|x|x|x|
-|BamTools/2.5.2-GCC-13.2.0|x|x|x|x|x|x|x|
-|BamTools/2.5.2-GCC-12.3.0|x|x|x|x|x|x|x|
-|BamTools/2.5.2-GCC-11.3.0|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BamTools/2.5.2-GCC-13.3.0|x|x|x|x|x|x|x|x|
+|BamTools/2.5.2-GCC-13.2.0|x|x|x|x|x|x|x|x|
+|BamTools/2.5.2-GCC-12.3.0|x|x|x|x|x|x|x|x|
+|BamTools/2.5.2-GCC-11.3.0|-|-|-|-|-|x|x|x|

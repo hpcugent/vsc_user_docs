@@ -19,10 +19,10 @@ module load NSS/3.114-GCCcore-14.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NSS/3.114-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|NSS/3.113-GCCcore-14.2.0|x|x|x|x|x|x|x|
-|NSS/3.104-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|NSS/3.94-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|NSS/3.89.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|NSS/3.114-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|NSS/3.113-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|NSS/3.104-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|NSS/3.94-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|NSS/3.89.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

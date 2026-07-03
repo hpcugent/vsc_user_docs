@@ -19,10 +19,10 @@ module load PROJ/9.6.2-GCCcore-14.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PROJ/9.6.2-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|PROJ/9.6.2-GCCcore-14.2.0|x|x|x|x|x|x|x|
-|PROJ/9.4.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|PROJ/9.3.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|PROJ/9.2.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PROJ/9.6.2-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|PROJ/9.6.2-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|PROJ/9.4.1-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|PROJ/9.3.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|PROJ/9.2.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

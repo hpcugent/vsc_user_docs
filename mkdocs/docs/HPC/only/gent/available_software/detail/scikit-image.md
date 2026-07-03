@@ -19,9 +19,9 @@ module load scikit-image/0.25.0-foss-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scikit-image/0.25.0-foss-2024a|x|x|x|x|x|x|x|
-|scikit-image/0.24.0-foss-2023b|x|x|x|x|x|x|x|
-|scikit-image/0.22.0-foss-2023a|x|x|x|x|x|x|x|
-|scikit-image/0.19.3-foss-2022a|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|scikit-image/0.25.0-foss-2024a|x|x|x|x|x|x|x|x|
+|scikit-image/0.24.0-foss-2023b|x|x|x|x|x|x|x|x|
+|scikit-image/0.22.0-foss-2023a|x|x|x|x|x|x|x|x|
+|scikit-image/0.19.3-foss-2022a|-|-|-|-|-|x|x|x|

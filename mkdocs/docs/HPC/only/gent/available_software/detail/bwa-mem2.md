@@ -19,8 +19,8 @@ module load bwa-mem2/2.3-GCC-14.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bwa-mem2/2.3-GCC-14.3.0|x|x|x|x|x|x|x|
-|bwa-mem2/2.2.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|bwa-mem2/2.2.1-GCC-13.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|bwa-mem2/2.3-GCC-14.3.0|x|x|x|x|x|x|x|x|
+|bwa-mem2/2.2.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|bwa-mem2/2.2.1-GCC-13.3.0|x|x|x|x|x|x|x|x|
