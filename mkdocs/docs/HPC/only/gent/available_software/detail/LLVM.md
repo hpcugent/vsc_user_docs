@@ -19,17 +19,17 @@ module load LLVM/21.1.8-GCCcore-15.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LLVM/21.1.8-GCCcore-15.2.0|x|x|x|x|x|x|x|
-|LLVM/20.1.8-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|LLVM/20.1.7-GCCcore-14.2.0|x|x|x|x|x|x|x|
-|LLVM/18.1.8-GCCcore-13.3.0-minimal|-|x|-|-|-|-|-|
-|LLVM/18.1.8-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|LLVM/16.0.6-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|LLVM/16.0.6-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|LLVM/15.0.5-GCCcore-12.2.0|-|-|-|-|-|x|x|
-|LLVM/14.0.6-GCCcore-13.3.0-llvmlite|x|x|x|x|x|x|x|
-|LLVM/14.0.6-GCCcore-13.2.0-llvmlite|x|x|x|x|x|x|x|
-|LLVM/14.0.6-GCCcore-12.3.0-llvmlite|x|x|x|x|x|x|x|
-|LLVM/14.0.3-GCCcore-11.3.0|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LLVM/21.1.8-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|LLVM/20.1.8-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|LLVM/20.1.7-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|LLVM/18.1.8-GCCcore-13.3.0-minimal|-|x|-|-|-|-|-|-|
+|LLVM/18.1.8-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|LLVM/16.0.6-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|LLVM/16.0.6-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|LLVM/15.0.5-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
+|LLVM/14.0.6-GCCcore-13.3.0-llvmlite|x|x|x|x|x|x|x|x|
+|LLVM/14.0.6-GCCcore-13.2.0-llvmlite|x|x|x|x|x|x|x|x|
+|LLVM/14.0.6-GCCcore-12.3.0-llvmlite|x|x|x|x|x|x|x|x|
+|LLVM/14.0.3-GCCcore-11.3.0|-|-|-|-|-|x|x|x|

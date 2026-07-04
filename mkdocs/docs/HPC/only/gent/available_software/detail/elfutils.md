@@ -19,8 +19,8 @@ module load elfutils/0.193-GCCcore-14.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|elfutils/0.193-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|elfutils/0.189-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|elfutils/0.187-GCCcore-11.3.0|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|elfutils/0.193-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|elfutils/0.189-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|elfutils/0.187-GCCcore-11.3.0|-|-|-|-|-|x|x|x|

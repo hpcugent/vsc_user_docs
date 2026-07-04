@@ -19,10 +19,10 @@ module load LERC/4.0.0-GCCcore-14.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LERC/4.0.0-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|LERC/4.0.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
-|LERC/4.0.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|LERC/4.0.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|LERC/4.0.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|LERC/4.0.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|LERC/4.0.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|LERC/4.0.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|LERC/4.0.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|LERC/4.0.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

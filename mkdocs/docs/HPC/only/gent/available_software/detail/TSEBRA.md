@@ -19,6 +19,6 @@ module load TSEBRA/1.1.2.5-gfbf-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TSEBRA/1.1.2.5-gfbf-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|TSEBRA/1.1.2.5-gfbf-2023a|x|x|x|x|x|x|x|x|

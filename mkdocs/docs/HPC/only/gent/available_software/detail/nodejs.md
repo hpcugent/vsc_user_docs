@@ -19,10 +19,10 @@ module load nodejs/22.17.1-GCCcore-14.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nodejs/22.17.1-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|nodejs/22.16.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
-|nodejs/20.13.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|nodejs/20.9.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|nodejs/18.17.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|nodejs/22.17.1-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|nodejs/22.16.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|nodejs/20.13.1-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|nodejs/20.9.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|nodejs/18.17.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

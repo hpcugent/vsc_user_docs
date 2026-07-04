@@ -19,8 +19,8 @@ module load spin/0.18-GCCcore-15.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|spin/0.18-GCCcore-15.2.0|x|x|x|x|x|x|x|
-|spin/0.14-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|spin/0.14-GCCcore-14.2.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|spin/0.18-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|spin/0.14-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|spin/0.14-GCCcore-14.2.0|x|x|x|x|x|x|x|x|

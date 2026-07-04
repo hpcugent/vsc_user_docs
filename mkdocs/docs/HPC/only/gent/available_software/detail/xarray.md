@@ -19,8 +19,8 @@ module load xarray/2025.7.0-gfbf-2025a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|xarray/2025.7.0-gfbf-2025a|x|x|x|x|x|x|x|
-|xarray/2024.11.0-gfbf-2024a|x|x|x|x|x|x|x|
-|xarray/2023.9.0-gfbf-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|xarray/2025.7.0-gfbf-2025a|x|x|x|x|x|x|x|x|
+|xarray/2024.11.0-gfbf-2024a|x|x|x|x|x|x|x|x|
+|xarray/2023.9.0-gfbf-2023a|x|x|x|x|x|x|x|x|

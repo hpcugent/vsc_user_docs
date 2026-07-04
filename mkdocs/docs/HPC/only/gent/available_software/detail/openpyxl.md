@@ -19,8 +19,8 @@ module load openpyxl/3.1.5-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|openpyxl/3.1.5-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|openpyxl/3.1.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|openpyxl/3.1.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|openpyxl/3.1.5-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|openpyxl/3.1.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|openpyxl/3.1.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

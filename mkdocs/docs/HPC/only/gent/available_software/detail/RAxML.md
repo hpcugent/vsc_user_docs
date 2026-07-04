@@ -19,6 +19,6 @@ module load RAxML/8.2.13-gompi-2023a-avx2
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RAxML/8.2.13-gompi-2023a-avx2|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RAxML/8.2.13-gompi-2023a-avx2|x|x|x|x|x|x|x|x|

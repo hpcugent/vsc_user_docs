@@ -19,14 +19,14 @@ module load libffi/3.5.2-GCCcore-15.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libffi/3.5.2-GCCcore-15.2.0|x|x|x|x|x|x|x|
-|libffi/3.5.1-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|libffi/3.4.5-GCCcore-14.2.0|x|x|x|x|x|x|x|
-|libffi/3.4.5-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|libffi/3.4.4-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|libffi/3.4.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|libffi/3.4.4-GCCcore-12.2.0|-|-|-|-|-|x|x|
-|libffi/3.4.2-GCCcore-11.3.0|-|-|-|-|-|x|x|
-|libffi/3.4.2-GCCcore-11.2.0|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libffi/3.5.2-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|libffi/3.5.1-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|libffi/3.4.5-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|libffi/3.4.5-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|libffi/3.4.4-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|libffi/3.4.4-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|libffi/3.4.4-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
+|libffi/3.4.2-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|libffi/3.4.2-GCCcore-11.2.0|-|-|-|-|-|x|x|x|

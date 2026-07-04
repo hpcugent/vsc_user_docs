@@ -19,8 +19,8 @@ module load PLUMED/2.9.4-foss-2025a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PLUMED/2.9.4-foss-2025a|x|x|x|x|x|x|x|
-|PLUMED/2.9.2-foss-2023b|x|x|x|x|x|x|x|
-|PLUMED/2.9.0-foss-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PLUMED/2.9.4-foss-2025a|x|x|x|x|x|x|x|x|
+|PLUMED/2.9.2-foss-2023b|x|x|x|x|x|x|x|x|
+|PLUMED/2.9.0-foss-2023a|x|x|x|x|x|x|x|x|

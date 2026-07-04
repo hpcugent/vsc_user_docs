@@ -19,6 +19,6 @@ module load scatac_fragment_tools/0.1.0-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scatac_fragment_tools/0.1.0-foss-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|scatac_fragment_tools/0.1.0-foss-2023a|x|x|x|x|x|x|x|x|

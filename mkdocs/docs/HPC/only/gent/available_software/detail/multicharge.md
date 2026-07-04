@@ -19,10 +19,10 @@ module load multicharge/0.5.0-gfbf-2025b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|multicharge/0.5.0-gfbf-2025b|x|x|x|x|x|x|x|
-|multicharge/0.3.1-gfbf-2024a|x|x|x|x|x|x|x|
-|multicharge/0.3.0-gomkl-2023b|x|x|x|x|x|x|x|
-|multicharge/0.3.0-gfbf-2023b|x|x|x|x|x|x|x|
-|multicharge/0.3.0-gfbf-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|multicharge/0.5.0-gfbf-2025b|x|x|x|x|x|x|x|x|
+|multicharge/0.3.1-gfbf-2024a|x|x|x|x|x|x|x|x|
+|multicharge/0.3.0-gomkl-2023b|x|x|x|x|x|x|x|x|
+|multicharge/0.3.0-gfbf-2023b|x|x|x|x|x|x|x|x|
+|multicharge/0.3.0-gfbf-2023a|x|x|x|x|x|x|x|x|

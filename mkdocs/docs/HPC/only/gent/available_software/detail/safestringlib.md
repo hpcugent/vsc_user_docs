@@ -19,8 +19,8 @@ module load safestringlib/20250325-GCC-14.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|safestringlib/20250325-GCC-14.3.0|x|x|x|x|x|x|x|
-|safestringlib/20241021-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|safestringlib/20240228-GCC-13.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|safestringlib/20250325-GCC-14.3.0|x|x|x|x|x|x|x|x|
+|safestringlib/20241021-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|safestringlib/20240228-GCC-13.3.0|x|x|x|x|x|x|x|x|

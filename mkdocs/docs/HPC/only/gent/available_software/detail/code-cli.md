@@ -19,8 +19,8 @@ module load code-cli/1.104.1
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|code-cli/1.104.1|x|x|x|x|x|x|x|
-|code-cli/1.103.2|x|x|x|x|x|x|x|
-|code-cli/1.93.1-x64|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|code-cli/1.104.1|x|x|x|x|x|x|x|x|
+|code-cli/1.103.2|x|x|x|x|x|x|x|x|
+|code-cli/1.93.1-x64|x|x|x|x|x|x|x|x|

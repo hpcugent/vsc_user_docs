@@ -19,8 +19,8 @@ module load pytest/7.4.2-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pytest/7.4.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|pytest/4.6.11-GCCcore-12.3.0-Python-2.7.18|x|x|x|x|x|x|x|
-|pytest/4.6.11-GCC-12.3.0-Python-2.7.18|-|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pytest/7.4.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|pytest/4.6.11-GCCcore-12.3.0-Python-2.7.18|x|x|x|x|x|x|x|x|
+|pytest/4.6.11-GCC-12.3.0-Python-2.7.18|-|x|x|x|x|x|x|x|

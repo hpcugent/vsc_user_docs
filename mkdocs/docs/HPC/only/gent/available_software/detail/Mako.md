@@ -19,12 +19,12 @@ module load Mako/1.3.10-GCCcore-14.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Mako/1.3.10-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|Mako/1.3.10-GCCcore-14.2.0|x|x|x|x|x|x|x|
-|Mako/1.3.5-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|Mako/1.2.4-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|Mako/1.2.4-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|Mako/1.2.4-GCCcore-12.2.0|-|-|-|-|-|x|x|
-|Mako/1.2.0-GCCcore-11.3.0|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Mako/1.3.10-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|Mako/1.3.10-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|Mako/1.3.5-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|Mako/1.2.4-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|Mako/1.2.4-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|Mako/1.2.4-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
+|Mako/1.2.0-GCCcore-11.3.0|-|-|-|-|-|x|x|x|

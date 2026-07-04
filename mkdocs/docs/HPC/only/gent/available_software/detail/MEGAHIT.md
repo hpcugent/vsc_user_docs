@@ -19,8 +19,8 @@ module load MEGAHIT/1.2.9-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MEGAHIT/1.2.9-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|MEGAHIT/1.2.9-GCCcore-12.3.0-Python-2.7.18|x|x|x|x|x|x|x|
-|MEGAHIT/1.2.9-GCCcore-12.3.0|-|x|x|x|x|-|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MEGAHIT/1.2.9-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|MEGAHIT/1.2.9-GCCcore-12.3.0-Python-2.7.18|x|x|x|x|x|x|x|x|
+|MEGAHIT/1.2.9-GCCcore-12.3.0|-|x|x|x|x|-|-|-|

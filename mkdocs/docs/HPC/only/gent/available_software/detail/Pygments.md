@@ -19,7 +19,7 @@ module load Pygments/2.20.0-GCCcore-15.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Pygments/2.20.0-GCCcore-15.2.0|x|x|x|x|x|x|x|
-|Pygments/2.18.0-GCCcore-12.3.0|-|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Pygments/2.20.0-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|Pygments/2.18.0-GCCcore-12.3.0|-|x|x|x|x|x|x|x|

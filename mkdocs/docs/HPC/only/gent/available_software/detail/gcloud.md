@@ -19,7 +19,7 @@ module load gcloud/548.0.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gcloud/548.0.0|x|x|x|x|x|x|x|
-|gcloud/472.0.0|x|x|-|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|gcloud/548.0.0|x|x|x|x|x|x|x|x|
+|gcloud/472.0.0|x|x|-|x|-|x|x|x|

@@ -19,8 +19,8 @@ module load Cartopy/0.24.1-foss-2025a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Cartopy/0.24.1-foss-2025a|x|x|x|x|x|x|x|
-|Cartopy/0.24.1-foss-2024a|x|x|x|x|x|x|x|
-|Cartopy/0.22.0-foss-2023a|x|x|x|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Cartopy/0.24.1-foss-2025a|x|x|x|x|x|x|x|x|
+|Cartopy/0.24.1-foss-2024a|x|x|x|x|x|x|x|x|
+|Cartopy/0.22.0-foss-2023a|x|x|x|x|-|x|x|x|
