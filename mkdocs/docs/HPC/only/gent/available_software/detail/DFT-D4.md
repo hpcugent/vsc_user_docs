@@ -19,7 +19,7 @@ module load DFT-D4/4.0.2-gfbf-2025b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DFT-D4/4.0.2-gfbf-2025b|x|x|x|x|x|x|x|
-|DFT-D4/3.7.0-gomkl-2023b|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DFT-D4/4.0.2-gfbf-2025b|x|x|x|x|x|x|x|x|
+|DFT-D4/3.7.0-gomkl-2023b|x|x|x|x|x|x|x|x|

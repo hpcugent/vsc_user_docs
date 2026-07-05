@@ -19,9 +19,9 @@ module load SCOTCH/7.0.8-gompi-2025a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SCOTCH/7.0.8-gompi-2025a|x|x|x|x|x|x|x|
-|SCOTCH/7.0.6-gompi-2024a|x|x|x|x|x|x|x|
-|SCOTCH/7.0.4-gompi-2023b|x|x|x|x|x|x|x|
-|SCOTCH/7.0.3-gompi-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SCOTCH/7.0.8-gompi-2025a|x|x|x|x|x|x|x|x|
+|SCOTCH/7.0.6-gompi-2024a|x|x|x|x|x|x|x|x|
+|SCOTCH/7.0.4-gompi-2023b|x|x|x|x|x|x|x|x|
+|SCOTCH/7.0.3-gompi-2023a|x|x|x|x|x|x|x|x|

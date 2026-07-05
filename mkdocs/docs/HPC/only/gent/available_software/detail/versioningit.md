@@ -19,7 +19,7 @@ module load versioningit/3.1.2-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|versioningit/3.1.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|versioningit/3.1.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|versioningit/3.1.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|versioningit/3.1.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

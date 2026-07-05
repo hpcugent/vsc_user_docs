@@ -19,12 +19,12 @@ module load FlexiBLAS/3.5.0-GCC-15.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FlexiBLAS/3.5.0-GCC-15.2.0|x|x|x|x|x|x|x|
-|FlexiBLAS/3.4.5-GCC-14.3.0|x|x|x|x|x|x|x|
-|FlexiBLAS/3.4.5-GCC-14.2.0|x|x|x|x|x|x|x|
-|FlexiBLAS/3.4.4-GCC-13.3.0|x|x|x|x|x|x|x|
-|FlexiBLAS/3.3.1-GCC-13.2.0|x|x|x|x|x|x|x|
-|FlexiBLAS/3.3.1-GCC-12.3.0|x|x|x|x|x|x|x|
-|FlexiBLAS/3.2.0-GCC-11.3.0|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FlexiBLAS/3.5.0-GCC-15.2.0|x|x|x|x|x|x|x|x|
+|FlexiBLAS/3.4.5-GCC-14.3.0|x|x|x|x|x|x|x|x|
+|FlexiBLAS/3.4.5-GCC-14.2.0|x|x|x|x|x|x|x|x|
+|FlexiBLAS/3.4.4-GCC-13.3.0|x|x|x|x|x|x|x|x|
+|FlexiBLAS/3.3.1-GCC-13.2.0|x|x|x|x|x|x|x|x|
+|FlexiBLAS/3.3.1-GCC-12.3.0|x|x|x|x|x|x|x|x|
+|FlexiBLAS/3.2.0-GCC-11.3.0|-|-|-|-|-|x|x|x|

@@ -19,8 +19,8 @@ module load vsc-mympirun/5.5.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|vsc-mympirun/5.5.0|x|x|x|x|x|x|x|
-|vsc-mympirun/5.4.0|x|x|x|x|x|x|x|
-|vsc-mympirun/5.3.1|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|vsc-mympirun/5.5.0|x|x|x|x|x|x|x|x|
+|vsc-mympirun/5.4.0|x|x|x|x|x|x|x|x|
+|vsc-mympirun/5.3.1|-|-|-|-|-|x|x|x|

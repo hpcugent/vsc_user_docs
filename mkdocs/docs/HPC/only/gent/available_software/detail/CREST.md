@@ -19,8 +19,8 @@ module load CREST/3.0.2-gfbf-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CREST/3.0.2-gfbf-2023b|x|x|x|x|x|x|x|
-|CREST/3.0.2-foss-2023a|x|x|x|x|x|x|x|
-|CREST/2.12-gfbf-2023a|-|x|-|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CREST/3.0.2-gfbf-2023b|x|x|x|x|x|x|x|x|
+|CREST/3.0.2-foss-2023a|x|x|x|x|x|x|x|x|
+|CREST/2.12-gfbf-2023a|-|x|-|x|-|x|x|x|

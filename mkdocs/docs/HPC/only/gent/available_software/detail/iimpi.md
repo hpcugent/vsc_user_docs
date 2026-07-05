@@ -19,11 +19,11 @@ module load iimpi/2025b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|iimpi/2025b|x|x|x|x|x|x|x|
-|iimpi/2025a|x|x|x|x|x|x|x|
-|iimpi/2024a|x|x|x|x|x|x|x|
-|iimpi/2023b|x|x|x|x|x|x|x|
-|iimpi/2023a|x|x|x|x|x|x|x|
-|iimpi/2022a|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|iimpi/2025b|x|x|x|x|x|x|x|x|
+|iimpi/2025a|x|x|x|x|x|x|x|x|
+|iimpi/2024a|x|x|x|x|x|x|x|x|
+|iimpi/2023b|x|x|x|x|x|x|x|x|
+|iimpi/2023a|x|x|x|x|x|x|x|x|
+|iimpi/2022a|-|-|-|-|-|x|x|x|

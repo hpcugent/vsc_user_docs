@@ -19,7 +19,7 @@ module load OpenMolcas/25.06-iomkl-2023a-DMRG-no-MPI
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenMolcas/25.06-iomkl-2023a-DMRG-no-MPI|x|x|x|x|x|x|x|
-|OpenMolcas/24.10-iomkl-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OpenMolcas/25.06-iomkl-2023a-DMRG-no-MPI|x|x|x|x|x|x|x|x|
+|OpenMolcas/24.10-iomkl-2023a|x|x|x|x|x|x|x|x|

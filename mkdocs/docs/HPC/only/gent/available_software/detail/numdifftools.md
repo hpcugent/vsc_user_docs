@@ -19,6 +19,6 @@ module load numdifftools/0.9.41-gfbf-2025a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|numdifftools/0.9.41-gfbf-2025a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|numdifftools/0.9.41-gfbf-2025a|x|x|x|x|x|x|x|x|

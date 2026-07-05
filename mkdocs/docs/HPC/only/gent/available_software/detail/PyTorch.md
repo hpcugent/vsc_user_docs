@@ -19,12 +19,12 @@ module load PyTorch/2.9.1-foss-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyTorch/2.9.1-foss-2024a|x|x|x|x|x|x|x|
-|PyTorch/2.7.1-foss-2024a-CUDA-12.6.0|x|-|x|-|x|x|-|
-|PyTorch/2.6.0-foss-2024a|x|x|x|x|x|x|x|
-|PyTorch/2.1.2-foss-2023b|x|x|x|x|x|x|x|
-|PyTorch/2.1.2-foss-2023a-CUDA-12.1.1|x|-|x|-|x|x|-|
-|PyTorch/2.1.2-foss-2023a|x|x|x|x|x|x|x|
-|PyTorch/1.12.0-foss-2022a|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyTorch/2.9.1-foss-2024a|x|x|x|x|x|x|x|x|
+|PyTorch/2.7.1-foss-2024a-CUDA-12.6.0|x|-|x|-|x|x|-|-|
+|PyTorch/2.6.0-foss-2024a|x|x|x|x|x|x|x|x|
+|PyTorch/2.1.2-foss-2023b|x|x|x|x|x|x|x|x|
+|PyTorch/2.1.2-foss-2023a-CUDA-12.1.1|x|-|x|-|x|x|-|-|
+|PyTorch/2.1.2-foss-2023a|x|x|x|x|x|x|x|x|
+|PyTorch/1.12.0-foss-2022a|-|-|-|-|-|x|x|x|

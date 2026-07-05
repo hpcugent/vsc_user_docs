@@ -19,20 +19,20 @@ module load GROMACS/2024.4-foss-2025a-PLUMED-2.9.4
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GROMACS/2024.4-foss-2025a-PLUMED-2.9.4|x|x|x|x|x|x|x|
-|GROMACS/2024.4-foss-2025a-CUDA-12.8.0-PLUMED-2.9.4|x|-|x|-|x|x|-|
-|GROMACS/2024.4-foss-2023b-PLUMED-2.9.2|x|x|x|x|x|x|x|
-|GROMACS/2024.4-foss-2023b-CUDA-12.4.0-PLUMED-2.9.2|x|-|-|-|x|-|-|
-|GROMACS/2024.4-foss-2023b-CUDA-12.4.0|x|-|-|-|x|x|-|
-|GROMACS/2024.4-foss-2023b|x|x|x|x|x|x|x|
-|GROMACS/2024.3-foss-2023b-PLUMED-2.9.2|-|-|-|-|-|x|x|
-|GROMACS/2024.3-foss-2023b-CUDA-12.4.0|x|-|-|-|x|x|-|
-|GROMACS/2024.3-foss-2023b|-|-|-|x|-|x|x|
-|GROMACS/2024.2-foss-2023b-CUDA-12.5.0|x|-|-|-|x|x|-|
-|GROMACS/2024.1-foss-2023b|-|-|x|-|x|x|x|
-|GROMACS/2023.3-foss-2023a-PLUMED-2.9.0|-|-|x|-|x|x|x|
-|GROMACS/2023.3-foss-2023a|-|-|x|-|x|x|x|
-|GROMACS/2021.0-foss-2023a-20250409-constant-pH-CUDA-12.1.1-PLUMED|x|-|x|-|x|x|-|
-|GROMACS/2021.0-foss-2023a-20250409-constant-pH|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GROMACS/2024.4-foss-2025a-PLUMED-2.9.4|x|x|x|x|x|x|x|x|
+|GROMACS/2024.4-foss-2025a-CUDA-12.8.0-PLUMED-2.9.4|x|-|x|-|x|x|-|-|
+|GROMACS/2024.4-foss-2023b-PLUMED-2.9.2|x|x|x|x|x|x|x|x|
+|GROMACS/2024.4-foss-2023b-CUDA-12.4.0-PLUMED-2.9.2|x|-|-|-|x|-|-|-|
+|GROMACS/2024.4-foss-2023b-CUDA-12.4.0|x|-|-|-|x|x|-|-|
+|GROMACS/2024.4-foss-2023b|x|x|x|x|x|x|x|x|
+|GROMACS/2024.3-foss-2023b-PLUMED-2.9.2|-|-|-|-|-|x|x|x|
+|GROMACS/2024.3-foss-2023b-CUDA-12.4.0|x|-|-|-|x|x|-|-|
+|GROMACS/2024.3-foss-2023b|-|-|-|x|-|x|x|x|
+|GROMACS/2024.2-foss-2023b-CUDA-12.5.0|x|-|-|-|x|x|-|-|
+|GROMACS/2024.1-foss-2023b|-|-|x|-|x|x|x|x|
+|GROMACS/2023.3-foss-2023a-PLUMED-2.9.0|-|-|x|-|x|x|x|x|
+|GROMACS/2023.3-foss-2023a|-|-|x|-|x|x|x|x|
+|GROMACS/2021.0-foss-2023a-20250409-constant-pH-CUDA-12.1.1-PLUMED|x|-|x|-|x|x|-|-|
+|GROMACS/2021.0-foss-2023a-20250409-constant-pH|x|x|x|x|x|x|x|x|
