@@ -19,6 +19,6 @@ module load MiXCR/4.6.0-Java-17
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MiXCR/4.6.0-Java-17|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MiXCR/4.6.0-Java-17|x|x|x|x|x|x|x|x|

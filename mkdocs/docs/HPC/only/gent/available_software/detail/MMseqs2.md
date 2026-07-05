@@ -19,7 +19,7 @@ module load MMseqs2/17-b804f-gompi-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MMseqs2/17-b804f-gompi-2024a|x|x|x|x|x|x|x|
-|MMseqs2/14-7e284-gompi-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MMseqs2/17-b804f-gompi-2024a|x|x|x|x|x|x|x|x|
+|MMseqs2/14-7e284-gompi-2023a|x|x|x|x|x|x|x|x|

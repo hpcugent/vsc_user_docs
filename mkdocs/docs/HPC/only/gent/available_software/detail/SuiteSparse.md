@@ -19,7 +19,7 @@ module load SuiteSparse/7.10.1-foss-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SuiteSparse/7.10.1-foss-2024a|x|x|x|x|x|x|x|
-|SuiteSparse/7.1.0-foss-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SuiteSparse/7.10.1-foss-2024a|x|x|x|x|x|x|x|x|
+|SuiteSparse/7.1.0-foss-2023a|x|x|x|x|x|x|x|x|

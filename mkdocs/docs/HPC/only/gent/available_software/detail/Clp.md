@@ -19,7 +19,7 @@ module load Clp/1.17.10-foss-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Clp/1.17.10-foss-2024a|x|x|x|x|x|x|x|
-|Clp/1.17.9-foss-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Clp/1.17.10-foss-2024a|x|x|x|x|x|x|x|x|
+|Clp/1.17.9-foss-2023a|x|x|x|x|x|x|x|x|

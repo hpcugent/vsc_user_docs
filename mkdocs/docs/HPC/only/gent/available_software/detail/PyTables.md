@@ -19,10 +19,10 @@ module load PyTables/3.10.2-foss-2025b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyTables/3.10.2-foss-2025b|x|x|x|x|x|x|x|
-|PyTables/3.10.2-foss-2025a|x|x|x|x|x|x|x|
-|PyTables/3.10.2-foss-2024a|x|x|x|x|x|x|x|
-|PyTables/3.9.2-foss-2023b|x|x|x|x|x|x|x|
-|PyTables/3.8.0-foss-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyTables/3.10.2-foss-2025b|x|x|x|x|x|x|x|x|
+|PyTables/3.10.2-foss-2025a|x|x|x|x|x|x|x|x|
+|PyTables/3.10.2-foss-2024a|x|x|x|x|x|x|x|x|
+|PyTables/3.9.2-foss-2023b|x|x|x|x|x|x|x|x|
+|PyTables/3.8.0-foss-2023a|x|x|x|x|x|x|x|x|

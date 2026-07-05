@@ -19,11 +19,11 @@ module load spglib-python/2.6.0-gfbf-2025b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|spglib-python/2.6.0-gfbf-2025b|x|x|x|x|x|x|x|
-|spglib-python/2.6.0-gfbf-2025a|x|x|x|x|x|x|x|
-|spglib-python/2.5.0-gfbf-2024a|x|x|x|x|x|x|x|
-|spglib-python/2.5.0-gfbf-2023b|x|x|x|x|x|x|x|
-|spglib-python/2.1.0-iimkl-2023a|x|x|x|x|x|x|x|
-|spglib-python/2.1.0-gfbf-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|spglib-python/2.6.0-gfbf-2025b|x|x|x|x|x|x|x|x|
+|spglib-python/2.6.0-gfbf-2025a|x|x|x|x|x|x|x|x|
+|spglib-python/2.5.0-gfbf-2024a|x|x|x|x|x|x|x|x|
+|spglib-python/2.5.0-gfbf-2023b|x|x|x|x|x|x|x|x|
+|spglib-python/2.1.0-iimkl-2023a|x|x|x|x|x|x|x|x|
+|spglib-python/2.1.0-gfbf-2023a|x|x|x|x|x|x|x|x|

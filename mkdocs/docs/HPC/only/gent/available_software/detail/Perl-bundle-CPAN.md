@@ -19,10 +19,10 @@ module load Perl-bundle-CPAN/5.40.2-GCCcore-14.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Perl-bundle-CPAN/5.40.2-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
-|Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|Perl-bundle-CPAN/5.38.0-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Perl-bundle-CPAN/5.40.2-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|Perl-bundle-CPAN/5.38.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

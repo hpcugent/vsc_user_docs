@@ -19,10 +19,10 @@ module load mrcfile/1.5.4-gfbf-2025b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mrcfile/1.5.4-gfbf-2025b|x|x|x|x|x|x|x|
-|mrcfile/1.5.4-gfbf-2025a|x|x|x|x|x|x|x|
-|mrcfile/1.5.4-gfbf-2024a|x|x|x|x|x|x|x|
-|mrcfile/1.5.0-gfbf-2023b|x|x|x|x|x|x|x|
-|mrcfile/1.5.0-foss-2023a|-|x|-|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|mrcfile/1.5.4-gfbf-2025b|x|x|x|x|x|x|x|x|
+|mrcfile/1.5.4-gfbf-2025a|x|x|x|x|x|x|x|x|
+|mrcfile/1.5.4-gfbf-2024a|x|x|x|x|x|x|x|x|
+|mrcfile/1.5.0-gfbf-2023b|x|x|x|x|x|x|x|x|
+|mrcfile/1.5.0-foss-2023a|-|x|-|x|-|x|x|x|

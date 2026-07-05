@@ -19,7 +19,7 @@ module load Geant4-data/11.3
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Geant4-data/11.3|x|x|x|x|x|x|x|
-|Geant4-data/11.2|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Geant4-data/11.3|x|x|x|x|x|x|x|x|
+|Geant4-data/11.2|x|x|x|x|x|x|x|x|

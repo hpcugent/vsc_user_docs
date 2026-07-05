@@ -19,11 +19,11 @@ module load OpenPGM/5.2.122-GCCcore-14.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenPGM/5.2.122-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|OpenPGM/5.2.122-GCCcore-14.2.0|x|x|x|x|x|x|x|
-|OpenPGM/5.2.122-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|OpenPGM/5.2.122-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|OpenPGM/5.2.122-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|OpenPGM/5.2.122-GCCcore-11.3.0|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OpenPGM/5.2.122-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|OpenPGM/5.2.122-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|OpenPGM/5.2.122-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|OpenPGM/5.2.122-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|OpenPGM/5.2.122-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|OpenPGM/5.2.122-GCCcore-11.3.0|-|-|-|-|-|x|x|x|

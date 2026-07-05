@@ -19,7 +19,7 @@ module load tblite/0.4.0-gfbf-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tblite/0.4.0-gfbf-2024a|x|x|x|x|x|x|x|
-|tblite/0.4.0-gfbf-2023b|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tblite/0.4.0-gfbf-2024a|x|x|x|x|x|x|x|x|
+|tblite/0.4.0-gfbf-2023b|x|x|x|x|x|x|x|x|

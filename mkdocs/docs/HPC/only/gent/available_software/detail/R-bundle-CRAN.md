@@ -19,10 +19,10 @@ module load R-bundle-CRAN/2025.11-foss-2025b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|R-bundle-CRAN/2025.11-foss-2025b|x|x|x|x|x|x|x|
-|R-bundle-CRAN/2025.10-foss-2025a|x|x|x|x|x|x|x|
-|R-bundle-CRAN/2024.11-foss-2024a|x|x|x|x|x|x|x|
-|R-bundle-CRAN/2024.06-foss-2023b|x|x|x|x|x|x|x|
-|R-bundle-CRAN/2023.12-foss-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|R-bundle-CRAN/2025.11-foss-2025b|x|x|x|x|x|x|x|x|
+|R-bundle-CRAN/2025.10-foss-2025a|x|x|x|x|x|x|x|x|
+|R-bundle-CRAN/2024.11-foss-2024a|x|x|x|x|x|x|x|x|
+|R-bundle-CRAN/2024.06-foss-2023b|x|x|x|x|x|x|x|x|
+|R-bundle-CRAN/2023.12-foss-2023a|x|x|x|x|x|x|x|x|

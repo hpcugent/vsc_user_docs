@@ -19,7 +19,7 @@ module load KaHIP/3.19-gompi-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|KaHIP/3.19-gompi-2024a|x|x|x|x|x|x|x|
-|KaHIP/3.16-gompi-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|KaHIP/3.19-gompi-2024a|x|x|x|x|x|x|x|x|
+|KaHIP/3.16-gompi-2023a|x|x|x|x|x|x|x|x|

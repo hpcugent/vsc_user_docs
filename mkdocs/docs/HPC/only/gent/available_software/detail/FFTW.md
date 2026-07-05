@@ -19,15 +19,15 @@ module load FFTW/3.3.10-intel-compilers-2023.1.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FFTW/3.3.10-intel-compilers-2023.1.0|x|x|x|x|x|x|x|
-|FFTW/3.3.10-NVHPC-25.3-CUDA-12.8.0|x|-|x|-|x|x|-|
-|FFTW/3.3.10-GCC-15.2.0|x|x|x|x|x|x|x|
-|FFTW/3.3.10-GCC-14.3.0|x|x|x|x|x|x|x|
-|FFTW/3.3.10-GCC-14.2.0|x|x|x|x|x|x|x|
-|FFTW/3.3.10-GCC-13.3.0|x|x|x|x|x|x|x|
-|FFTW/3.3.10-GCC-13.2.0|x|x|x|x|x|x|x|
-|FFTW/3.3.10-GCC-12.3.0|x|x|x|x|x|x|x|
-|FFTW/3.3.10-GCC-12.2.0|-|-|-|-|-|x|x|
-|FFTW/3.3.10-GCC-11.3.0|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FFTW/3.3.10-intel-compilers-2023.1.0|x|x|x|x|x|x|x|x|
+|FFTW/3.3.10-NVHPC-25.3-CUDA-12.8.0|x|-|x|-|x|x|-|-|
+|FFTW/3.3.10-GCC-15.2.0|x|x|x|x|x|x|x|x|
+|FFTW/3.3.10-GCC-14.3.0|x|x|x|x|x|x|x|x|
+|FFTW/3.3.10-GCC-14.2.0|x|x|x|x|x|x|x|x|
+|FFTW/3.3.10-GCC-13.3.0|x|x|x|x|x|x|x|x|
+|FFTW/3.3.10-GCC-13.2.0|x|x|x|x|x|x|x|x|
+|FFTW/3.3.10-GCC-12.3.0|x|x|x|x|x|x|x|x|
+|FFTW/3.3.10-GCC-12.2.0|-|-|-|-|-|x|x|x|
+|FFTW/3.3.10-GCC-11.3.0|-|-|-|-|-|x|x|x|

@@ -19,13 +19,13 @@ module load poetry/2.3.4-GCCcore-15.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|poetry/2.3.4-GCCcore-15.2.0|x|x|x|x|x|x|x|
-|poetry/2.1.3-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|poetry/2.1.2-GCCcore-14.2.0|x|x|x|x|x|x|x|
-|poetry/1.8.3-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|poetry/1.7.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|poetry/1.6.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|poetry/1.5.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|poetry/1.2.2-GCCcore-11.3.0|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|poetry/2.3.4-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|poetry/2.1.3-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|poetry/2.1.2-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|poetry/1.8.3-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|poetry/1.7.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|poetry/1.6.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|poetry/1.5.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|poetry/1.2.2-GCCcore-11.3.0|-|-|-|-|-|x|x|x|

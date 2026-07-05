@@ -19,7 +19,7 @@ module load nanobind/2.9.2-GCCcore-14.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nanobind/2.9.2-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|nanobind/2.5.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|nanobind/2.9.2-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|nanobind/2.5.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

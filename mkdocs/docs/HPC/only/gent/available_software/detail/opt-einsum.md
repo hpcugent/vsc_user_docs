@@ -19,7 +19,7 @@ module load opt-einsum/3.4.0-GCCcore-15.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|opt-einsum/3.4.0-GCCcore-15.2.0|x|x|x|x|x|x|x|
-|opt-einsum/3.4.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|opt-einsum/3.4.0-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|opt-einsum/3.4.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|

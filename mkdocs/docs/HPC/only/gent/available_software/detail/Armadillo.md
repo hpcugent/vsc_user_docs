@@ -19,10 +19,10 @@ module load Armadillo/15.0.1-foss-2025b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Armadillo/15.0.1-foss-2025b|x|x|x|x|x|x|x|
-|Armadillo/14.6.0-foss-2025a|x|x|x|x|x|x|x|
-|Armadillo/14.0.3-foss-2024a|x|x|x|x|x|x|x|
-|Armadillo/12.8.0-foss-2023b|x|x|x|x|x|x|x|
-|Armadillo/12.6.2-foss-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Armadillo/15.0.1-foss-2025b|x|x|x|x|x|x|x|x|
+|Armadillo/14.6.0-foss-2025a|x|x|x|x|x|x|x|x|
+|Armadillo/14.0.3-foss-2024a|x|x|x|x|x|x|x|x|
+|Armadillo/12.8.0-foss-2023b|x|x|x|x|x|x|x|x|
+|Armadillo/12.6.2-foss-2023a|x|x|x|x|x|x|x|x|

@@ -19,7 +19,7 @@ module load StringTie/3.0.0-GCC-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|StringTie/3.0.0-GCC-13.3.0|x|x|x|x|x|x|x|
-|StringTie/2.2.3-GCC-12.3.0|-|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|StringTie/3.0.0-GCC-13.3.0|x|x|x|x|x|x|x|x|
+|StringTie/2.2.3-GCC-12.3.0|-|x|x|x|x|x|x|x|
