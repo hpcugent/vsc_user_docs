@@ -14,13 +14,14 @@ The overview below shows which intel-compilers installations are available per H
 To start using intel-compilers, load one of these modules using a `module load` command like:
 
 ```shell
-module load intel-compilers/2025.2.0
+module load intel-compilers/2025.3.3
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|intel-compilers/2025.3.3|x|x|x|x|x|x|x|x|
 |intel-compilers/2025.2.0|x|x|x|x|x|x|x|x|
 |intel-compilers/2025.1.1|x|x|x|x|x|x|x|x|
 |intel-compilers/2024.2.0|x|x|x|x|x|x|x|x|
