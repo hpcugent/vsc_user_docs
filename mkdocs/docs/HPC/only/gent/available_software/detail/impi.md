@@ -14,13 +14,14 @@ The overview below shows which impi installations are available per HPC-UGent Ti
 To start using impi, load one of these modules using a `module load` command like:
 
 ```shell
-module load impi/2021.16.1-intel-compilers-2025.2.0
+module load impi/2021.17.2-intel-compilers-2025.3.3
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|impi/2021.17.2-intel-compilers-2025.3.3|x|x|x|x|x|x|x|x|
 |impi/2021.16.1-intel-compilers-2025.2.0|x|x|x|x|x|x|x|x|
 |impi/2021.15.0-intel-compilers-2025.1.1|x|x|x|x|x|x|x|x|
 |impi/2021.13.0-intel-compilers-2024.2.0|x|x|x|x|x|x|x|x|

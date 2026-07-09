@@ -14,11 +14,12 @@ The overview below shows which iompi installations are available per HPC-UGent T
 To start using iompi, load one of these modules using a `module load` command like:
 
 ```shell
-module load iompi/2023a
+module load iompi/2025a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|iompi/2025a|x|x|x|x|x|x|x|x|
 |iompi/2023a|x|x|x|x|x|x|x|x|
