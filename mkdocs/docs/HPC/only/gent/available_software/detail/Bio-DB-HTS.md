@@ -21,4 +21,4 @@ module load Bio-DB-HTS/3.01-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Bio-DB-HTS/3.01-GCC-12.3.0|x|x|x|x|x|x|x|x|
+|Bio-DB-HTS/3.01-GCC-12.3.0|x|x|x|x|x|x|x|-|

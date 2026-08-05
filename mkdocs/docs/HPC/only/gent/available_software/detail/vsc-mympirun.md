@@ -22,6 +22,6 @@ module load vsc-mympirun/5.5.1
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |vsc-mympirun/5.5.1|x|x|x|x|x|x|x|x|
-|vsc-mympirun/5.5.0|x|x|x|x|x|x|x|x|
-|vsc-mympirun/5.4.0|x|x|x|x|x|x|x|x|
-|vsc-mympirun/5.3.1|-|-|-|-|-|x|x|x|
+|vsc-mympirun/5.5.0|x|x|x|x|x|x|x|-|
+|vsc-mympirun/5.4.0|x|x|x|x|x|x|x|-|
+|vsc-mympirun/5.3.1|-|-|-|-|-|x|x|-|

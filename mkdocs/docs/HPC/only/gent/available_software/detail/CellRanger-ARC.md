@@ -21,4 +21,4 @@ module load CellRanger-ARC/2.1.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CellRanger-ARC/2.1.0|x|x|x|x|x|x|x|x|
+|CellRanger-ARC/2.1.0|x|x|x|x|x|x|x|-|

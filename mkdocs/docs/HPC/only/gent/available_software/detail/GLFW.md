@@ -21,4 +21,4 @@ module load GLFW/3.3.8-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GLFW/3.3.8-GCCcore-12.3.0|-|-|-|-|-|x|x|x|
+|GLFW/3.3.8-GCCcore-12.3.0|-|-|-|-|-|x|x|-|

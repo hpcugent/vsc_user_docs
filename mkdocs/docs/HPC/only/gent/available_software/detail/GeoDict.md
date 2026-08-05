@@ -21,4 +21,4 @@ module load GeoDict/2024.SP5-gmpich-2024.06
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GeoDict/2024.SP5-gmpich-2024.06|x|x|x|x|x|x|x|x|
+|GeoDict/2024.SP5-gmpich-2024.06|x|x|x|x|x|x|x|-|

@@ -22,4 +22,4 @@ module load gffread/0.12.7-GCCcore-13.2.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |gffread/0.12.7-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
-|gffread/0.12.7-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|gffread/0.12.7-GCCcore-12.3.0|x|x|x|x|x|x|x|-|

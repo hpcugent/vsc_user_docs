@@ -14,11 +14,12 @@ The overview below shows which EPA-ng installations are available per HPC-UGent 
 To start using EPA-ng, load one of these modules using a `module load` command like:
 
 ```shell
-module load EPA-ng/0.3.8-GCC-12.3.0
+module load EPA-ng/0.3.8-gompi-2023a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|EPA-ng/0.3.8-GCC-12.3.0|x|x|x|x|x|x|x|x|
+|EPA-ng/0.3.8-gompi-2023a|-|-|-|-|-|-|-|x|
+|EPA-ng/0.3.8-GCC-12.3.0|x|x|x|x|x|x|x|-|

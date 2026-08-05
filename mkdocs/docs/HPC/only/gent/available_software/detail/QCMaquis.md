@@ -21,4 +21,4 @@ module load QCMaquis/4.0.0-iomkl-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|QCMaquis/4.0.0-iomkl-2023a|x|x|x|x|x|x|x|x|
+|QCMaquis/4.0.0-iomkl-2023a|x|x|x|x|x|x|x|-|

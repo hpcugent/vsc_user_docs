@@ -21,4 +21,4 @@ module load colorize/0.7.7-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|colorize/0.7.7-GCC-12.3.0|-|x|x|x|x|x|x|x|
+|colorize/0.7.7-GCC-12.3.0|-|x|x|x|x|x|x|-|

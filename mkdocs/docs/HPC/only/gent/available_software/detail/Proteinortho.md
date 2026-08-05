@@ -22,4 +22,5 @@ module load Proteinortho/6.3.4-foss-2024a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Proteinortho/6.3.4-foss-2024a|x|x|x|x|x|x|x|x|
-|Proteinortho/6.3.2-gompi-2023a|-|x|x|x|x|x|x|x|
+|Proteinortho/6.3.2-gompi-2023a|-|x|x|x|x|x|x|-|
+|Proteinortho/6.3.2-foss-2023a|-|-|-|-|-|-|-|x|

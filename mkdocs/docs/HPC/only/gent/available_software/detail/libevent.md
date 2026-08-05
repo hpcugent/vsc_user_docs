@@ -27,6 +27,6 @@ module load libevent/2.1.12-GCCcore-15.2.0
 |libevent/2.1.12-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |libevent/2.1.12-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |libevent/2.1.12-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|libevent/2.1.12-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|libevent/2.1.12-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|libevent/2.1.12-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|libevent/2.1.12-GCCcore-11.3.0|-|-|-|-|-|x|x|-|
 |libevent/2.1.12|-|x|-|x|-|-|-|-|

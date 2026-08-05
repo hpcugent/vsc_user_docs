@@ -21,4 +21,4 @@ module load hpc-container-wrapper/0.4.2
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|hpc-container-wrapper/0.4.2|x|x|x|x|x|x|x|x|
+|hpc-container-wrapper/0.4.2|x|x|x|x|x|x|x|-|

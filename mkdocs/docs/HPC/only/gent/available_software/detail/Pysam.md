@@ -25,4 +25,4 @@ module load Pysam/0.22.1-GCC-13.3.0
 |Pysam/0.22.0-GCC-13.2.0|x|x|x|x|x|x|x|x|
 |Pysam/0.22.0-GCC-12.3.0|x|x|x|x|x|x|x|x|
 |Pysam/0.20.0-GCC-12.3.0-Python-2.7.18|x|x|x|-|x|x|x|x|
-|Pysam/0.19.1-GCC-11.3.0|-|-|-|-|-|x|x|x|
+|Pysam/0.19.1-GCC-11.3.0|-|-|-|-|-|x|x|-|

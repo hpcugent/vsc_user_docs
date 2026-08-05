@@ -14,11 +14,13 @@ The overview below shows which GKlib-METIS installations are available per HPC-U
 To start using GKlib-METIS, load one of these modules using a `module load` command like:
 
 ```shell
-module load GKlib-METIS/5.1.1-GCC-13.3.0
+module load GKlib-METIS/5.1.1-GCC-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GKlib-METIS/5.1.1-GCC-14.3.0|-|-|-|-|-|-|-|x|
+|GKlib-METIS/5.1.1-GCC-14.2.0|-|-|-|-|-|-|-|x|
 |GKlib-METIS/5.1.1-GCC-13.3.0|x|x|x|x|x|x|x|x|

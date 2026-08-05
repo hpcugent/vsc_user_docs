@@ -27,4 +27,4 @@ module load gompi/2026.1
 |gompi/2024a|x|x|x|x|x|x|x|x|
 |gompi/2023b|x|x|x|x|x|x|x|x|
 |gompi/2023a|x|x|x|x|x|x|x|x|
-|gompi/2022a|-|-|-|-|-|x|x|x|
+|gompi/2022a|-|-|-|-|-|x|x|-|

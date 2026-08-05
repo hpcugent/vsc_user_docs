@@ -22,14 +22,14 @@ module load EasyBuild/5.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |EasyBuild/5.3.0|x|x|x|x|x|x|x|x|
-|EasyBuild/5.1.2|x|x|x|x|x|x|x|x|
-|EasyBuild/5.1.1|x|x|x|x|x|x|x|x|
-|EasyBuild/5.1.0|x|x|x|x|x|x|x|x|
-|EasyBuild/5.0.0|x|x|x|x|x|x|x|x|
-|EasyBuild/4.9.4|x|x|x|x|x|x|x|x|
-|EasyBuild/4.9.3|x|x|x|x|x|x|x|x|
-|EasyBuild/4.9.2|x|x|x|x|x|x|x|x|
-|EasyBuild/4.9.1|x|x|x|x|x|x|x|x|
+|EasyBuild/5.1.2|x|x|x|x|x|x|x|-|
+|EasyBuild/5.1.1|x|x|x|x|x|x|x|-|
+|EasyBuild/5.1.0|x|x|x|x|x|x|x|-|
+|EasyBuild/5.0.0|x|x|x|x|x|x|x|-|
+|EasyBuild/4.9.4|x|x|x|x|x|x|x|-|
+|EasyBuild/4.9.3|x|x|x|x|x|x|x|-|
+|EasyBuild/4.9.2|x|x|x|x|x|x|x|-|
+|EasyBuild/4.9.1|x|x|x|x|x|x|x|-|
 |EasyBuild/4.9.0|-|x|x|x|x|-|-|-|
 |EasyBuild/4.8.2|-|x|x|x|x|-|-|-|
 |EasyBuild/4.8.1|-|x|x|x|x|-|-|-|

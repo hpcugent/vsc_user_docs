@@ -27,6 +27,6 @@ module load GCCcore/15.2.0
 |GCCcore/13.3.0|x|x|x|x|x|x|x|x|
 |GCCcore/13.2.0|x|x|x|x|x|x|x|x|
 |GCCcore/12.3.0|x|x|x|x|x|x|x|x|
-|GCCcore/12.2.0|-|-|-|-|-|x|x|x|
-|GCCcore/11.3.0|-|-|-|-|-|x|x|x|
-|GCCcore/11.2.0|-|-|-|-|-|x|x|x|
+|GCCcore/12.2.0|-|-|-|-|-|x|x|-|
+|GCCcore/11.3.0|-|-|-|-|-|x|x|-|
+|GCCcore/11.2.0|-|-|-|-|-|x|x|-|

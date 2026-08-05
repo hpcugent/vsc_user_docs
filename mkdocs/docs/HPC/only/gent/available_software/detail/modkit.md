@@ -22,4 +22,4 @@ module load modkit/0.4.1-GCCcore-13.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |modkit/0.4.1-GCCcore-13.3.0|-|x|x|x|x|x|x|x|
-|modkit/0.3.3-GCCcore-12.3.0|-|-|-|x|-|x|x|x|
+|modkit/0.3.3-GCCcore-12.3.0|-|-|-|x|-|x|x|-|

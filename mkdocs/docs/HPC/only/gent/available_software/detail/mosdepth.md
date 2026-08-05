@@ -21,4 +21,4 @@ module load mosdepth/0.3.9-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mosdepth/0.3.9-GCC-12.3.0|-|x|x|x|x|x|x|x|
+|mosdepth/0.3.9-GCC-12.3.0|-|x|x|x|x|x|x|-|

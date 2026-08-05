@@ -22,4 +22,4 @@ module load pyBigWig/0.3.22-gfbf-2023a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |pyBigWig/0.3.22-gfbf-2023a|x|x|x|x|x|x|x|x|
-|pyBigWig/0.3.22-foss-2023a|-|-|-|-|-|x|x|x|
+|pyBigWig/0.3.22-foss-2023a|-|-|-|-|-|x|x|-|

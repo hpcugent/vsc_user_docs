@@ -23,19 +23,19 @@ module load Java/25.36
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Java/25.36|x|x|x|x|x|x|x|x|
 |Java/25(@Java/25.36)|x|x|x|x|x|x|x|x|
-|Java/23.0.2|x|x|x|x|x|x|x|x|
-|Java/23(@Java/23.0.2)|x|x|x|x|x|x|x|x|
+|Java/23.0.2|x|x|x|x|x|x|x|-|
+|Java/23(@Java/23.0.2)|x|x|x|x|x|x|x|-|
 |Java/21.0.8|x|x|x|x|x|x|x|x|
-|Java/21.0.7|x|x|x|x|x|x|x|x|
+|Java/21.0.7|x|x|x|x|x|x|x|-|
 |Java/21.0.5|x|x|x|x|x|-|-|-|
-|Java/21.0.2|-|-|-|-|-|x|x|x|
+|Java/21.0.2|-|-|-|-|-|x|x|-|
 |Java/21(@Java/21.0.8)|x|x|x|x|x|x|x|x|
 |Java/17.0.15|x|x|x|x|x|x|x|x|
-|Java/17.0.6|x|x|x|x|x|x|x|x|
+|Java/17.0.6|x|x|x|x|x|x|x|-|
 |Java/17(@Java/17.0.15)|x|x|x|x|x|x|x|x|
 |Java/13.0.2|-|-|x|-|x|-|-|-|
 |Java/13(@Java/13.0.2)|-|-|x|-|x|-|-|-|
 |Java/11.0.27|x|x|x|x|x|x|x|x|
-|Java/11.0.20|x|x|x|x|x|x|x|x|
-|Java/11(@Java/11.0.27)|-|x|-|-|-|-|-|-|
-|Java/11(@Java/11.0.20)|x|-|x|x|x|x|x|x|
+|Java/11.0.20|x|x|x|x|x|x|x|-|
+|Java/11(@Java/11.0.27)|-|x|-|-|-|-|-|x|
+|Java/11(@Java/11.0.20)|x|-|x|x|x|x|x|-|

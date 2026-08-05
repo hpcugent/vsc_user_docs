@@ -27,4 +27,4 @@ module load BeautifulSoup/4.14.3-GCCcore-15.2.0
 |BeautifulSoup/4.12.3-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |BeautifulSoup/4.12.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |BeautifulSoup/4.12.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|BeautifulSoup/4.10.0-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|BeautifulSoup/4.10.0-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

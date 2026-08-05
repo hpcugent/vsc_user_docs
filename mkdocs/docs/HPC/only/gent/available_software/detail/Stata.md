@@ -21,5 +21,5 @@ module load Stata/18
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Stata/18|x|x|x|x|x|x|x|x|
-|Stata/15|x|x|x|x|x|x|x|x|
+|Stata/18|x|x|x|x|x|x|x|-|
+|Stata/15|x|x|x|x|x|x|x|-|

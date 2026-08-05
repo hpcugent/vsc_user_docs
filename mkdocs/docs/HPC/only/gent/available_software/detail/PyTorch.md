@@ -27,4 +27,4 @@ module load PyTorch/2.9.1-foss-2024a
 |PyTorch/2.1.2-foss-2023b|x|x|x|x|x|x|x|x|
 |PyTorch/2.1.2-foss-2023a-CUDA-12.1.1|x|-|x|-|x|x|-|-|
 |PyTorch/2.1.2-foss-2023a|x|x|x|x|x|x|x|x|
-|PyTorch/1.12.0-foss-2022a|-|-|-|-|-|x|x|x|
+|PyTorch/1.12.0-foss-2022a|-|-|-|-|-|x|x|-|

@@ -21,5 +21,5 @@ module load attr/2.5.2-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|attr/2.5.2-GCCcore-13.2.0|-|x|-|-|-|-|-|-|
-|attr/2.5.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|attr/2.5.2-GCCcore-13.2.0|-|x|-|-|-|-|-|x|
+|attr/2.5.1-GCCcore-12.3.0|x|x|x|x|x|x|x|-|

@@ -21,4 +21,4 @@ module load GlobalArrays/5.8.2-iomkl-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GlobalArrays/5.8.2-iomkl-2023a|x|x|x|x|x|x|x|x|
+|GlobalArrays/5.8.2-iomkl-2023a|x|x|x|x|x|x|x|-|

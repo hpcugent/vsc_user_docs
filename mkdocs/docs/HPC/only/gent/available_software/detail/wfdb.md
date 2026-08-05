@@ -21,4 +21,4 @@ module load wfdb/4.1.2-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|wfdb/4.1.2-foss-2022a|-|-|-|-|-|x|x|x|
+|wfdb/4.1.2-foss-2022a|-|-|-|-|-|x|x|-|

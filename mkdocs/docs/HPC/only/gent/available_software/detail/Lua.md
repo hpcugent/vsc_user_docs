@@ -14,13 +14,14 @@ The overview below shows which Lua installations are available per HPC-UGent Tie
 To start using Lua, load one of these modules using a `module load` command like:
 
 ```shell
-module load Lua/5.4.8-GCCcore-14.2.0
+module load Lua/5.4.8-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Lua/5.4.8-GCCcore-14.3.0|-|-|-|-|-|-|-|x|
 |Lua/5.4.8-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |Lua/5.4.7-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |Lua/5.4.6-GCCcore-13.2.0|x|x|x|x|x|x|x|x|

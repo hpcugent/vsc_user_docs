@@ -22,5 +22,5 @@ module load git-lfs/3.6.1
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |git-lfs/3.6.1|x|x|x|x|x|x|x|x|
-|git-lfs/3.5.1|x|x|x|x|x|x|x|x|
-|git-lfs/3.2.0|x|x|x|x|x|x|x|x|
+|git-lfs/3.5.1|x|x|x|x|x|x|x|-|
+|git-lfs/3.2.0|x|x|x|x|x|x|x|-|

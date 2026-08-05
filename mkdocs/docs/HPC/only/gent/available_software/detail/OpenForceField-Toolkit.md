@@ -21,5 +21,5 @@ module load OpenForceField-Toolkit/0.16.9-foss-2025a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenForceField-Toolkit/0.16.9-foss-2025a|x|x|x|x|x|x|x|x|
+|OpenForceField-Toolkit/0.16.9-foss-2025a|x|x|x|x|x|x|x|-|
 |OpenForceField-Toolkit/0.16.0-foss-2023a|-|x|-|x|-|x|x|x|

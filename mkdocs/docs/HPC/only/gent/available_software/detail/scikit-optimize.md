@@ -21,4 +21,4 @@ module load scikit-optimize/0.10.2-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scikit-optimize/0.10.2-foss-2023a|x|x|x|x|x|x|x|x|
+|scikit-optimize/0.10.2-foss-2023a|x|x|x|x|x|x|x|-|

@@ -23,4 +23,4 @@ module load accelerate/1.0.1-foss-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |accelerate/1.0.1-foss-2023b|x|x|x|x|x|x|x|x|
 |accelerate/0.33.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|x|-|-|
-|accelerate/0.33.0-foss-2023a|x|-|x|x|x|x|x|x|
+|accelerate/0.33.0-foss-2023a|x|-|x|x|x|x|x|-|

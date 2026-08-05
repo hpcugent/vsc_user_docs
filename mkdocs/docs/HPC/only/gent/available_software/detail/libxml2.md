@@ -27,6 +27,6 @@ module load libxml2/2.15.1-GCCcore-15.2.0
 |libxml2/2.12.7-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |libxml2/2.11.5-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |libxml2/2.11.4-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|libxml2/2.10.3-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|libxml2/2.9.13-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
-|libxml2/2.9.10-GCCcore-11.2.0|-|-|-|-|-|x|x|x|
+|libxml2/2.10.3-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|libxml2/2.9.13-GCCcore-11.3.0|-|-|-|-|-|x|x|-|
+|libxml2/2.9.10-GCCcore-11.2.0|-|-|-|-|-|x|x|-|

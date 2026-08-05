@@ -22,4 +22,5 @@ module load JsonCpp/1.9.5-GCCcore-13.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |JsonCpp/1.9.5-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|JsonCpp/1.9.5-GCCcore-13.2.0|-|-|-|-|-|-|-|x|
 |JsonCpp/1.9.5-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

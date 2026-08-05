@@ -21,4 +21,4 @@ module load DETONATE/1.11-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DETONATE/1.11-GCC-12.3.0|-|x|x|x|x|x|x|x|
+|DETONATE/1.11-GCC-12.3.0|-|x|x|x|x|x|x|-|

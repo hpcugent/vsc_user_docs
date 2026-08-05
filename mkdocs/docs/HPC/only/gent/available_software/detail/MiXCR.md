@@ -21,4 +21,4 @@ module load MiXCR/4.6.0-Java-17
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MiXCR/4.6.0-Java-17|x|x|x|x|x|x|x|x|
+|MiXCR/4.6.0-Java-17|x|x|x|x|x|x|x|-|

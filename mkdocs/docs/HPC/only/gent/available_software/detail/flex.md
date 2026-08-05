@@ -27,7 +27,7 @@ module load flex/2.6.4-GCCcore-15.2.0
 |flex/2.6.4-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |flex/2.6.4-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |flex/2.6.4-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|flex/2.6.4-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|flex/2.6.4-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
-|flex/2.6.4-GCCcore-11.2.0|-|-|-|-|-|x|x|x|
+|flex/2.6.4-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|flex/2.6.4-GCCcore-11.3.0|-|-|-|-|-|x|x|-|
+|flex/2.6.4-GCCcore-11.2.0|-|-|-|-|-|x|x|-|
 |flex/2.6.4|x|x|x|x|x|x|x|x|

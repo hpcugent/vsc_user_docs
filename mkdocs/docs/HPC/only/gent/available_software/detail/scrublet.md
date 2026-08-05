@@ -21,4 +21,4 @@ module load scrublet/0.2.3-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scrublet/0.2.3-foss-2023a|x|x|x|x|x|x|x|x|
+|scrublet/0.2.3-foss-2023a|x|x|x|x|x|x|x|-|

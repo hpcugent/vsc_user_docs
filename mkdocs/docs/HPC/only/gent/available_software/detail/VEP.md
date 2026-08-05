@@ -21,4 +21,4 @@ module load VEP/113.0-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VEP/113.0-GCC-12.3.0|x|x|x|x|x|x|x|x|
+|VEP/113.0-GCC-12.3.0|x|x|x|x|x|x|x|-|

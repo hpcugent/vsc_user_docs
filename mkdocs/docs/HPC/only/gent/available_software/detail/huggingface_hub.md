@@ -21,4 +21,4 @@ module load huggingface_hub/0.34.4-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|huggingface_hub/0.34.4-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|huggingface_hub/0.34.4-GCCcore-13.3.0|x|x|x|x|x|x|x|-|

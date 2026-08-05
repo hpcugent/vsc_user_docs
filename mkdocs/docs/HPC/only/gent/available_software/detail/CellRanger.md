@@ -21,5 +21,5 @@ module load CellRanger/8.0.1
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CellRanger/8.0.1|x|x|-|x|-|x|x|x|
-|CellRanger/7.0.0|x|x|x|x|x|x|x|x|
+|CellRanger/8.0.1|x|x|-|x|-|x|x|-|
+|CellRanger/7.0.0|x|x|x|x|x|x|x|-|

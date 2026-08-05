@@ -14,11 +14,12 @@ The overview below shows which flit-core installations are available per HPC-UGe
 To start using flit-core, load one of these modules using a `module load` command like:
 
 ```shell
-module load flit-core/3.12.0-GCCcore-13.3.0
+module load flit-core/3.12.0-GCCcore-14.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|flit-core/3.12.0-GCCcore-14.2.0|-|-|-|-|-|-|-|x|
 |flit-core/3.12.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

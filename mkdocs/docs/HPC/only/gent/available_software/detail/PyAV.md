@@ -21,4 +21,4 @@ module load PyAV/11.0.0-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyAV/11.0.0-GCCcore-12.3.0|x|-|x|-|x|x|x|x|
+|PyAV/11.0.0-GCCcore-12.3.0|x|-|x|-|x|x|x|-|

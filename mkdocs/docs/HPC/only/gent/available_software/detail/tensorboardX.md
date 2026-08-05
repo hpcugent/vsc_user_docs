@@ -24,4 +24,4 @@ module load tensorboardX/2.6.4-foss-2024a
 |tensorboardX/2.6.4-foss-2024a|x|x|x|x|x|x|x|x|
 |tensorboardX/2.6.2.2-foss-2023b|x|x|x|x|x|x|x|x|
 |tensorboardX/2.6.2.2-foss-2023a|x|x|x|x|x|x|x|x|
-|tensorboardX/2.5.1-foss-2022a|-|-|-|-|-|x|x|x|
+|tensorboardX/2.5.1-foss-2022a|-|-|-|-|-|x|x|-|

@@ -27,6 +27,6 @@ module load help2man/1.49.3-GCCcore-15.2.0
 |help2man/1.49.3-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |help2man/1.49.3-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |help2man/1.49.3-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|help2man/1.49.2-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|help2man/1.49.2-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
-|help2man/1.48.3-GCCcore-11.2.0|-|-|-|-|-|x|x|x|
+|help2man/1.49.2-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|help2man/1.49.2-GCCcore-11.3.0|-|-|-|-|-|x|x|-|
+|help2man/1.48.3-GCCcore-11.2.0|-|-|-|-|-|x|x|-|

@@ -27,4 +27,4 @@ module load ScaLAPACK/2.2.2-gompi-2026.1-fb
 |ScaLAPACK/2.2.0-gompi-2024a-fb|x|x|x|x|x|x|x|x|
 |ScaLAPACK/2.2.0-gompi-2023b-fb|x|x|x|x|x|x|x|x|
 |ScaLAPACK/2.2.0-gompi-2023a-fb|x|x|x|x|x|x|x|x|
-|ScaLAPACK/2.2.0-gompi-2022a-fb|-|-|-|-|-|x|x|x|
+|ScaLAPACK/2.2.0-gompi-2022a-fb|-|-|-|-|-|x|x|-|

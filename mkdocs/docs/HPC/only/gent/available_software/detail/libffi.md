@@ -27,6 +27,6 @@ module load libffi/3.5.2-GCCcore-15.2.0
 |libffi/3.4.5-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |libffi/3.4.4-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |libffi/3.4.4-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|libffi/3.4.4-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|libffi/3.4.2-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
-|libffi/3.4.2-GCCcore-11.2.0|-|-|-|-|-|x|x|x|
+|libffi/3.4.4-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|libffi/3.4.2-GCCcore-11.3.0|-|-|-|-|-|x|x|-|
+|libffi/3.4.2-GCCcore-11.2.0|-|-|-|-|-|x|x|-|

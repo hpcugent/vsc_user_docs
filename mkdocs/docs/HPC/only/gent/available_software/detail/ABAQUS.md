@@ -22,7 +22,7 @@ module load ABAQUS/2025
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ABAQUS/2025|x|x|x|x|x|x|x|x|
-|ABAQUS/2024-hotfix-2405|x|x|x|x|x|x|x|x|
-|ABAQUS/2023|x|x|x|x|x|x|x|x|
-|ABAQUS/2022-hotfix-2214|x|x|x|x|x|x|x|x|
-|ABAQUS/2022|x|x|x|x|x|x|x|x|
+|ABAQUS/2024-hotfix-2405|x|x|x|x|x|x|x|-|
+|ABAQUS/2023|x|x|x|x|x|x|x|-|
+|ABAQUS/2022-hotfix-2214|x|x|x|x|x|x|x|-|
+|ABAQUS/2022|x|x|x|x|x|x|x|-|

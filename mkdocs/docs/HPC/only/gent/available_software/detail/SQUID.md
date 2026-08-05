@@ -21,4 +21,4 @@ module load SQUID/1.0.0-foss-2023a-R-4.3.2
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SQUID/1.0.0-foss-2023a-R-4.3.2|x|x|x|x|x|x|x|x|
+|SQUID/1.0.0-foss-2023a-R-4.3.2|x|x|x|x|x|x|x|-|

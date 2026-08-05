@@ -22,5 +22,5 @@ module load umap-learn/0.5.7-foss-2024a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |umap-learn/0.5.7-foss-2024a|x|x|x|x|x|x|x|x|
-|umap-learn/0.5.7-foss-2023b|-|x|-|-|-|-|-|-|
+|umap-learn/0.5.7-foss-2023b|-|x|-|-|-|-|-|x|
 |umap-learn/0.5.5-foss-2023a|x|x|x|x|x|x|x|x|

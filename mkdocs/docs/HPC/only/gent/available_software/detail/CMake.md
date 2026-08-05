@@ -29,8 +29,8 @@ module load CMake/4.2.1-GCCcore-15.2.0
 |CMake/3.29.3-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |CMake/3.27.6-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |CMake/3.26.3-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|CMake/3.24.3-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|CMake/3.24.3-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
-|CMake/3.23.1-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
-|CMake/3.21.1-GCCcore-11.2.0|-|-|-|-|-|x|x|x|
+|CMake/3.24.3-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|CMake/3.24.3-GCCcore-11.3.0|-|-|-|-|-|x|x|-|
+|CMake/3.23.1-GCCcore-11.3.0|-|-|-|-|-|x|x|-|
+|CMake/3.21.1-GCCcore-11.2.0|-|-|-|-|-|x|x|-|
 |CMake/3.18.4|x|x|x|x|x|x|x|x|

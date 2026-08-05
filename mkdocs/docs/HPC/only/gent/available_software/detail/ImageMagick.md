@@ -14,13 +14,14 @@ The overview below shows which ImageMagick installations are available per HPC-U
 To start using ImageMagick, load one of these modules using a `module load` command like:
 
 ```shell
-module load ImageMagick/7.1.2-7-GCCcore-14.3.0
+module load ImageMagick/7.1.2-26-GCCcore-15.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ImageMagick/7.1.2-26-GCCcore-15.2.0|-|-|-|-|-|-|-|x|
 |ImageMagick/7.1.2-7-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |ImageMagick/7.1.1-47-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |ImageMagick/7.1.1-38-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

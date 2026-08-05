@@ -21,4 +21,4 @@ module load AMRFinderPlus/3.12.8-gompi-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|AMRFinderPlus/3.12.8-gompi-2023a|-|x|x|x|x|x|x|x|
+|AMRFinderPlus/3.12.8-gompi-2023a|-|x|x|x|x|x|x|-|

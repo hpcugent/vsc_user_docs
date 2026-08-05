@@ -21,4 +21,4 @@ module load parallel-fastq-dump/0.6.7-gompi-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|parallel-fastq-dump/0.6.7-gompi-2023a|x|x|x|x|x|x|x|x|
+|parallel-fastq-dump/0.6.7-gompi-2023a|x|x|x|x|x|x|x|-|

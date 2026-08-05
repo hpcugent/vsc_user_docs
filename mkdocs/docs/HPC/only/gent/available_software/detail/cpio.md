@@ -24,4 +24,4 @@ module load cpio/2.15-GCCcore-14.2.0
 |cpio/2.15-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |cpio/2.15-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |cpio/2.15-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
-|cpio/2.15-GCCcore-12.3.0|x|x|x|x|x|-|-|-|
+|cpio/2.15-GCCcore-12.3.0|x|x|x|x|x|-|-|x|

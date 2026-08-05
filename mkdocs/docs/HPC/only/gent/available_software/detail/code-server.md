@@ -21,6 +21,6 @@ module load code-server/4.104.1
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|code-server/4.104.1|x|x|x|x|x|x|x|x|
-|code-server/4.103.2|x|x|x|x|x|x|x|x|
-|code-server/4.93.1|x|x|x|x|x|x|x|x|
+|code-server/4.104.1|x|x|x|x|x|x|x|-|
+|code-server/4.103.2|x|x|x|x|x|x|x|-|
+|code-server/4.93.1|x|x|x|x|x|x|x|-|

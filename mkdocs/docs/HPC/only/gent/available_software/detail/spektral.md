@@ -22,4 +22,4 @@ module load spektral/1.3.1-foss-2023a-CUDA-12.1.1
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |spektral/1.3.1-foss-2023a-CUDA-12.1.1|x|-|-|-|x|x|-|-|
-|spektral/1.3.1-foss-2023a|-|x|-|x|-|x|x|x|
+|spektral/1.3.1-foss-2023a|-|x|-|x|-|x|x|-|

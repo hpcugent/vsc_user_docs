@@ -21,4 +21,4 @@ module load Gradio/4.19.0-gfbf-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Gradio/4.19.0-gfbf-2023a|x|-|x|-|x|x|x|x|
+|Gradio/4.19.0-gfbf-2023a|x|-|x|-|x|x|x|-|

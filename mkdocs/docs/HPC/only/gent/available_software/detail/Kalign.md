@@ -22,4 +22,4 @@ module load Kalign/3.4.0-GCCcore-12.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Kalign/3.4.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|Kalign/3.3.5-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|Kalign/3.3.5-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

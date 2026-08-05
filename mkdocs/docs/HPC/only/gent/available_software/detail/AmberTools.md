@@ -21,5 +21,5 @@ module load AmberTools/25.2-foss-2025a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|AmberTools/25.2-foss-2025a|x|x|x|x|x|x|x|x|
+|AmberTools/25.2-foss-2025a|x|x|x|x|x|x|x|-|
 |AmberTools/23.6-foss-2023a|-|x|-|x|-|x|x|x|

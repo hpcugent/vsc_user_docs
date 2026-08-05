@@ -27,7 +27,7 @@ module load Autotools/20250626-GCCcore-15.2.0
 |Autotools/20231222-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |Autotools/20220317-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |Autotools/20220317-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|Autotools/20220317-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|Autotools/20220317-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
-|Autotools/20220317|-|-|-|-|-|x|x|x|
-|Autotools/20210726-GCCcore-11.2.0|-|-|-|-|-|x|x|x|
+|Autotools/20220317-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|Autotools/20220317-GCCcore-11.3.0|-|-|-|-|-|x|x|-|
+|Autotools/20220317|-|-|-|-|-|x|x|-|
+|Autotools/20210726-GCCcore-11.2.0|-|-|-|-|-|x|x|-|

@@ -24,4 +24,4 @@ module load VTK/9.3.1-foss-2024a
 |VTK/9.3.1-foss-2024a|x|x|x|x|x|x|x|x|
 |VTK/9.3.0-foss-2023b|x|x|x|x|x|x|x|x|
 |VTK/9.3.0-foss-2023a|x|x|x|x|x|x|x|x|
-|VTK/9.2.6-foss-2023a|-|x|x|x|x|x|x|x|
+|VTK/9.2.6-foss-2023a|-|x|x|x|x|x|x|-|

@@ -27,6 +27,6 @@ module load expat/2.7.3-GCCcore-15.2.0
 |expat/2.6.2-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |expat/2.5.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |expat/2.5.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|expat/2.4.9-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|expat/2.4.8-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
-|expat/2.4.1-GCCcore-11.2.0|-|-|-|-|-|x|x|x|
+|expat/2.4.9-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|expat/2.4.8-GCCcore-11.3.0|-|-|-|-|-|x|x|-|
+|expat/2.4.1-GCCcore-11.2.0|-|-|-|-|-|x|x|-|

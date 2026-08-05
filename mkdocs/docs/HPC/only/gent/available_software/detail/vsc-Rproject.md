@@ -21,4 +21,4 @@ module load vsc-Rproject/1.0.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|vsc-Rproject/1.0.0|x|x|x|x|x|x|x|x|
+|vsc-Rproject/1.0.0|x|x|x|x|x|x|x|-|

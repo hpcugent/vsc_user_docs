@@ -26,4 +26,4 @@ module load FFmpeg/7.1.2-GCCcore-14.3.0
 |FFmpeg/7.0.2-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |FFmpeg/6.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |FFmpeg/6.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|FFmpeg/4.4.2-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|FFmpeg/4.4.2-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

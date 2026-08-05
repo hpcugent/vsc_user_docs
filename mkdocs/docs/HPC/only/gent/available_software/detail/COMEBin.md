@@ -21,4 +21,4 @@ module load COMEBin/1.0.3-20240310-foss-2022a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|COMEBin/1.0.3-20240310-foss-2022a|-|-|-|-|-|x|x|x|
+|COMEBin/1.0.3-20240310-foss-2022a|-|-|-|-|-|x|x|-|

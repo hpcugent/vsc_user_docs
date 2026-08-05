@@ -14,13 +14,14 @@ The overview below shows which Armadillo installations are available per HPC-UGe
 To start using Armadillo, load one of these modules using a `module load` command like:
 
 ```shell
-module load Armadillo/15.0.1-foss-2025b
+module load Armadillo/15.2.7-foss-2026.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Armadillo/15.2.7-foss-2026.1|-|-|-|-|-|-|-|x|
 |Armadillo/15.0.1-foss-2025b|x|x|x|x|x|x|x|x|
 |Armadillo/14.6.0-foss-2025a|x|x|x|x|x|x|x|x|
 |Armadillo/14.0.3-foss-2024a|x|x|x|x|x|x|x|x|
