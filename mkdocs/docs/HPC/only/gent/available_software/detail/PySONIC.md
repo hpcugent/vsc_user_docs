@@ -21,4 +21,4 @@ module load PySONIC/1.0-20250519-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PySONIC/1.0-20250519-foss-2023a|x|x|x|x|x|x|x|x|
+|PySONIC/1.0-20250519-foss-2023a|x|x|x|x|x|x|x|-|

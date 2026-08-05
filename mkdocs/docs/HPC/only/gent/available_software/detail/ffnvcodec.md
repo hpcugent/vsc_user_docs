@@ -25,4 +25,4 @@ module load ffnvcodec/13.0.19.0
 |ffnvcodec/12.2.72.0|x|x|x|x|x|x|x|x|
 |ffnvcodec/12.1.14.0|x|x|x|x|x|x|x|x|
 |ffnvcodec/12.0.16.0|x|x|x|x|x|x|x|x|
-|ffnvcodec/11.1.5.2|-|-|-|-|-|x|x|x|
+|ffnvcodec/11.1.5.2|-|-|-|-|-|x|x|-|

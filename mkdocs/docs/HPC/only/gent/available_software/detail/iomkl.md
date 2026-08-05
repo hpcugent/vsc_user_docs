@@ -22,4 +22,4 @@ module load iomkl/2025a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |iomkl/2025a|x|x|x|x|x|x|x|x|
-|iomkl/2023a|x|x|x|x|x|x|x|x|
+|iomkl/2023a|x|x|x|x|x|x|x|-|

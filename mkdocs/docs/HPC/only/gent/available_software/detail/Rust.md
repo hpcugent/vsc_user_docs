@@ -30,9 +30,9 @@ module load Rust/1.94.1-GCCcore-15.2.0
 |Rust/1.81.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |Rust/1.78.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |Rust/1.76.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
-|Rust/1.75.0-GCCcore-12.3.0-nightly|-|x|-|-|-|-|-|-|
+|Rust/1.75.0-GCCcore-12.3.0-nightly|-|x|-|-|-|-|-|x|
 |Rust/1.75.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
 |Rust/1.73.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |Rust/1.70.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|Rust/1.65.0-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|Rust/1.60.0-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|Rust/1.65.0-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|Rust/1.60.0-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

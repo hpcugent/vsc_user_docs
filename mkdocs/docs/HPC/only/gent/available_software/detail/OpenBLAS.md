@@ -24,8 +24,8 @@ module load OpenBLAS/0.3.32-GCC-15.2.0
 |OpenBLAS/0.3.32-GCC-15.2.0|x|x|x|x|x|x|x|x|
 |OpenBLAS/0.3.30-GCC-14.3.0|x|x|x|x|x|x|x|x|
 |OpenBLAS/0.3.29-GCC-14.2.0|x|x|x|x|x|x|x|x|
-|OpenBLAS/0.3.27-GCC-13.3.0-seq-iface64|-|x|x|x|x|x|x|x|
+|OpenBLAS/0.3.27-GCC-13.3.0-seq-iface64|-|x|x|x|x|x|x|-|
 |OpenBLAS/0.3.27-GCC-13.3.0|x|x|x|x|x|x|x|x|
 |OpenBLAS/0.3.24-GCC-13.2.0|x|x|x|x|x|x|x|x|
 |OpenBLAS/0.3.23-GCC-12.3.0|x|x|x|x|x|x|x|x|
-|OpenBLAS/0.3.20-GCC-11.3.0|-|-|-|-|-|x|x|x|
+|OpenBLAS/0.3.20-GCC-11.3.0|-|-|-|-|-|x|x|-|

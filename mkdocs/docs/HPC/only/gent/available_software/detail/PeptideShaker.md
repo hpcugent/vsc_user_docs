@@ -21,4 +21,4 @@ module load PeptideShaker/3.0.11-Java-11
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PeptideShaker/3.0.11-Java-11|x|x|x|x|x|x|x|x|
+|PeptideShaker/3.0.11-Java-11|x|x|x|x|x|x|x|-|

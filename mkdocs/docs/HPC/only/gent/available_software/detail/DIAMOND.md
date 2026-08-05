@@ -24,4 +24,4 @@ module load DIAMOND/2.1.11-GCC-13.3.0
 |DIAMOND/2.1.11-GCC-13.3.0|x|x|x|x|x|x|x|x|
 |DIAMOND/2.1.9-GCC-13.2.0|x|x|x|x|x|-|-|-|
 |DIAMOND/2.1.8-GCC-12.3.0|x|x|x|x|x|x|x|x|
-|DIAMOND/2.1.8-GCC-12.2.0|-|-|-|-|-|x|x|x|
+|DIAMOND/2.1.8-GCC-12.2.0|-|-|-|-|-|x|x|-|

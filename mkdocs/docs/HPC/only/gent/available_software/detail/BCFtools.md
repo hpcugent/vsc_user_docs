@@ -24,4 +24,4 @@ module load BCFtools/1.21-GCC-13.3.0
 |BCFtools/1.21-GCC-13.3.0|x|x|x|x|x|x|x|x|
 |BCFtools/1.19-GCC-13.2.0|x|x|x|x|x|x|x|x|
 |BCFtools/1.18-GCC-12.3.0|x|x|x|x|x|x|x|x|
-|BCFtools/1.17-GCC-12.2.0|-|-|-|-|-|x|x|x|
+|BCFtools/1.17-GCC-12.2.0|-|-|-|-|-|x|x|-|

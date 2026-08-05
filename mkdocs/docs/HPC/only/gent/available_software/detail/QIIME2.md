@@ -21,5 +21,5 @@ module load QIIME2/2024.10.1-foss-2023b-amplicon
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|QIIME2/2024.10.1-foss-2023b-amplicon|-|x|-|-|-|-|-|-|
-|QIIME2/2024.10.1-foss-2023a-amplicon|x|x|x|x|x|x|x|x|
+|QIIME2/2024.10.1-foss-2023b-amplicon|-|x|-|-|-|-|-|x|
+|QIIME2/2024.10.1-foss-2023a-amplicon|x|x|x|x|x|x|x|-|

@@ -28,4 +28,4 @@ module load poetry/2.3.4-GCCcore-15.2.0
 |poetry/1.7.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
 |poetry/1.6.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |poetry/1.5.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|poetry/1.2.2-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|poetry/1.2.2-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

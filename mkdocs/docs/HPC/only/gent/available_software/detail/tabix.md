@@ -22,4 +22,4 @@ module load tabix/0.2.6-GCCcore-13.2.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |tabix/0.2.6-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
-|tabix/0.2.6-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|tabix/0.2.6-GCCcore-12.3.0|x|x|x|x|x|x|x|-|

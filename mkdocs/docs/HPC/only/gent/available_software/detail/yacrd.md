@@ -21,4 +21,4 @@ module load yacrd/1.0.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|yacrd/1.0.0-foss-2023a|x|x|x|x|x|x|x|x|
+|yacrd/1.0.0-foss-2023a|x|x|x|x|x|x|x|-|

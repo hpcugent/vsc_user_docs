@@ -22,4 +22,4 @@ module load scNanoGPS/2.0-foss-2023b
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |scNanoGPS/2.0-foss-2023b|x|x|x|x|x|x|x|x|
-|scNanoGPS/1.1-foss-2023a|x|x|x|x|x|x|x|x|
+|scNanoGPS/1.1-foss-2023a|x|x|x|x|x|x|x|-|

@@ -27,7 +27,7 @@ module load Bison/3.8.2-GCCcore-15.2.0
 |Bison/3.8.2-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |Bison/3.8.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |Bison/3.8.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|Bison/3.8.2-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|Bison/3.8.2-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|Bison/3.8.2-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|Bison/3.8.2-GCCcore-11.3.0|-|-|-|-|-|x|x|-|
 |Bison/3.8.2|x|x|x|x|x|x|x|x|
-|Bison/3.7.6-GCCcore-11.2.0|-|-|-|-|-|x|x|x|
+|Bison/3.7.6-GCCcore-11.2.0|-|-|-|-|-|x|x|-|

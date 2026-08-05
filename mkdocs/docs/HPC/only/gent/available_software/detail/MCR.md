@@ -21,4 +21,4 @@ module load MCR/R2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MCR/R2023a|x|x|x|x|x|x|x|x|
+|MCR/R2023a|x|x|x|x|x|x|x|-|

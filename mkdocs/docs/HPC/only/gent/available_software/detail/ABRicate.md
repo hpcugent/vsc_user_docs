@@ -22,4 +22,4 @@ module load ABRicate/1.0.0-gompi-2023b
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ABRicate/1.0.0-gompi-2023b|x|x|x|x|x|x|x|x|
-|ABRicate/1.0.0-gompi-2023a|-|x|x|x|x|x|x|x|
+|ABRicate/1.0.0-gompi-2023a|-|x|x|x|x|x|x|-|

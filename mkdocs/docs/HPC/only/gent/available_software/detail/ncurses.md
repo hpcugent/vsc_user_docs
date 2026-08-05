@@ -29,9 +29,9 @@ module load ncurses/6.6-GCCcore-15.2.0
 |ncurses/6.4-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |ncurses/6.4-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
 |ncurses/6.4|x|x|x|x|x|x|x|x|
-|ncurses/6.3-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|ncurses/6.3-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|ncurses/6.3-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|ncurses/6.3-GCCcore-11.3.0|-|-|-|-|-|x|x|-|
 |ncurses/6.3|x|x|x|x|x|x|x|x|
-|ncurses/6.2-GCCcore-11.2.0|-|-|-|-|-|x|x|x|
+|ncurses/6.2-GCCcore-11.2.0|-|-|-|-|-|x|x|-|
 |ncurses/6.2|x|x|x|x|x|x|x|x|
-|ncurses/5.9|x|x|x|x|x|x|x|x|
+|ncurses/5.9|x|x|x|x|x|x|x|-|

@@ -21,4 +21,4 @@ module load SQuIRE/0.9.9.9a-beta-20220620-foss-2023a-Python-2.7.18
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SQuIRE/0.9.9.9a-beta-20220620-foss-2023a-Python-2.7.18|x|x|x|x|x|x|x|x|
+|SQuIRE/0.9.9.9a-beta-20220620-foss-2023a-Python-2.7.18|x|x|x|x|x|x|x|-|

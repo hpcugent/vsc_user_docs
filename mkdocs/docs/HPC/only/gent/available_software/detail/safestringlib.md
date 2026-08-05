@@ -22,5 +22,5 @@ module load safestringlib/20250325-GCC-14.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |safestringlib/20250325-GCC-14.3.0|x|x|x|x|x|x|x|x|
-|safestringlib/20241021-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|safestringlib/20241021-GCCcore-12.3.0|x|x|x|x|x|x|x|-|
 |safestringlib/20240228-GCC-13.3.0|x|x|x|x|x|x|x|x|

@@ -26,10 +26,10 @@ module load UCX/1.20.0-GCCcore-15.2.0
 |UCX/1.18.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |UCX/1.16.0-rc4-GCCcore-13.2.0|-|x|x|x|x|-|-|-|
 |UCX/1.16.0-rc4-GCCcore-12.3.0|-|x|x|x|x|-|-|-|
-|UCX/1.16.0-rc4-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|UCX/1.16.0-rc4-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|UCX/1.16.0-rc4-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|UCX/1.16.0-rc4-GCCcore-11.3.0|-|-|-|-|-|x|x|-|
 |UCX/1.16.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |UCX/1.15.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |UCX/1.14.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|UCX/1.13.1-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|UCX/1.12.1-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|UCX/1.13.1-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|UCX/1.12.1-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

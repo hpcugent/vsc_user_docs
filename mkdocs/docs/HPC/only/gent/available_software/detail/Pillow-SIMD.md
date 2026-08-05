@@ -24,4 +24,4 @@ module load Pillow-SIMD/10.4.0-GCCcore-13.3.0
 |Pillow-SIMD/10.4.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |Pillow-SIMD/10.4.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |Pillow-SIMD/9.5.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|Pillow-SIMD/9.2.0-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|Pillow-SIMD/9.2.0-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

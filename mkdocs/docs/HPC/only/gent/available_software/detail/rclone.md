@@ -21,6 +21,6 @@ module load rclone/1.68.1
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|rclone/1.68.1|x|x|x|x|x|x|x|x|
-|rclone/1.66.0|x|-|-|x|-|x|x|x|
-|rclone/1.65.2|x|x|-|x|-|x|x|x|
+|rclone/1.68.1|x|x|x|x|x|x|x|-|
+|rclone/1.66.0|x|-|-|x|-|x|x|-|
+|rclone/1.65.2|x|x|-|x|-|x|x|-|

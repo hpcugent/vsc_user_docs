@@ -21,4 +21,4 @@ module load SMV/6.9.5-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SMV/6.9.5-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|SMV/6.9.5-GCCcore-12.3.0|x|x|x|x|x|x|x|-|

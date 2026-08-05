@@ -27,5 +27,5 @@ module load hwloc/2.13.0-GCCcore-15.2.0
 |hwloc/2.10.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |hwloc/2.9.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |hwloc/2.9.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|hwloc/2.8.0-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|hwloc/2.7.1-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|hwloc/2.8.0-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|hwloc/2.7.1-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

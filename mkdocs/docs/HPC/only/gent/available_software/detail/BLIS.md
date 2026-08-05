@@ -27,5 +27,5 @@ module load BLIS/2.0-GCC-15.2.0
 |BLIS/1.0-GCC-13.3.0|x|x|x|x|x|x|x|x|
 |BLIS/0.9.0-GCC-13.2.0|x|x|x|x|x|x|x|x|
 |BLIS/0.9.0-GCC-12.3.0|x|x|x|x|x|x|x|x|
-|BLIS/0.9.0-GCC-12.2.0|-|-|-|-|-|x|x|x|
-|BLIS/0.9.0-GCC-11.3.0|-|-|-|-|-|x|x|x|
+|BLIS/0.9.0-GCC-12.2.0|-|-|-|-|-|x|x|-|
+|BLIS/0.9.0-GCC-11.3.0|-|-|-|-|-|x|x|-|

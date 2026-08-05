@@ -21,4 +21,4 @@ module load CellRanger-ATAC/2.1.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CellRanger-ATAC/2.1.0|x|x|x|x|x|x|x|x|
+|CellRanger-ATAC/2.1.0|x|x|x|x|x|x|x|-|

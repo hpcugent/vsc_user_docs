@@ -24,4 +24,4 @@ module load igraph/0.10.16-foss-2024a
 |igraph/0.10.16-foss-2024a|x|x|x|x|x|x|x|x|
 |igraph/0.10.12-foss-2023b|x|x|x|x|x|x|x|x|
 |igraph/0.10.10-foss-2023a|x|x|x|x|x|x|x|x|
-|igraph/0.10.3-foss-2022a|-|-|-|-|-|x|x|x|
+|igraph/0.10.3-foss-2022a|-|-|-|-|-|x|x|-|

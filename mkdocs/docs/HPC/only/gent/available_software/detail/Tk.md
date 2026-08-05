@@ -14,17 +14,18 @@ The overview below shows which Tk installations are available per HPC-UGent Tier
 To start using Tk, load one of these modules using a `module load` command like:
 
 ```shell
-module load Tk/9.0.1-GCCcore-14.3.0
+module load Tk/9.0.3-GCCcore-15.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Tk/9.0.3-GCCcore-15.2.0|x|x|x|x|x|-|-|x|
 |Tk/9.0.1-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |Tk/8.6.16-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |Tk/8.6.14-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |Tk/8.6.13-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |Tk/8.6.13-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|Tk/8.6.12-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|Tk/8.6.12-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|Tk/8.6.12-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|Tk/8.6.12-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

@@ -21,4 +21,4 @@ module load bcl-convert/4.3.13-2.el8.x86_64
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bcl-convert/4.3.13-2.el8.x86_64|x|x|x|x|x|x|x|x|
+|bcl-convert/4.3.13-2.el8.x86_64|x|x|x|x|x|x|x|-|

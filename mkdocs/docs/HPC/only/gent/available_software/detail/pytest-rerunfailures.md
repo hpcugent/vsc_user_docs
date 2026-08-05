@@ -24,5 +24,5 @@ module load pytest-rerunfailures/15.0-GCCcore-13.3.0
 |pytest-rerunfailures/15.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |pytest-rerunfailures/14.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |pytest-rerunfailures/12.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|pytest-rerunfailures/12.0-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|pytest-rerunfailures/11.1-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|pytest-rerunfailures/12.0-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|pytest-rerunfailures/11.1-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

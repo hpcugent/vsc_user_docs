@@ -21,4 +21,4 @@ module load gmpich/2024.06
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gmpich/2024.06|x|x|x|x|x|x|x|x|
+|gmpich/2024.06|x|x|x|x|x|x|x|-|

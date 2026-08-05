@@ -23,5 +23,6 @@ module load tensorboard/2.18.0-gfbf-2024a
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |tensorboard/2.18.0-gfbf-2024a|x|x|x|x|x|x|x|x|
 |tensorboard/2.18.0-gfbf-2023b|x|x|x|x|x|x|x|x|
+|tensorboard/2.15.1-gfbf-2023b|-|-|-|-|-|-|-|x|
 |tensorboard/2.15.1-gfbf-2023a|x|x|x|x|x|x|x|x|
-|tensorboard/2.10.0-foss-2022a|-|-|-|-|-|x|x|x|
+|tensorboard/2.10.0-foss-2022a|-|-|-|-|-|x|x|-|

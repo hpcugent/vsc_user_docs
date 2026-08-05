@@ -24,4 +24,4 @@ module load imageio/2.36.1-gfbf-2024a
 |imageio/2.36.1-gfbf-2024a|x|x|x|x|x|x|x|x|
 |imageio/2.34.1-gfbf-2023b|x|x|x|x|x|x|x|x|
 |imageio/2.33.1-gfbf-2023a|x|x|x|x|x|x|x|x|
-|imageio/2.22.2-foss-2022a|-|-|-|-|-|x|x|x|
+|imageio/2.22.2-foss-2022a|-|-|-|-|-|x|x|-|

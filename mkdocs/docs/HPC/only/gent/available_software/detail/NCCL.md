@@ -24,4 +24,4 @@ module load NCCL/2.26.2-GCCcore-13.3.0-CUDA-12.6.0
 |NCCL/2.26.2-GCCcore-13.3.0-CUDA-12.6.0|x|-|x|-|x|x|-|-|
 |NCCL/2.22.3-GCCcore-13.3.0-CUDA-12.6.0|x|-|x|-|x|x|-|-|
 |NCCL/2.20.5-GCCcore-13.2.0-CUDA-12.4.0|x|-|x|-|x|x|-|-|
-|NCCL/2.18.3-GCCcore-12.3.0-CUDA-12.1.1|x|-|x|-|x|x|x|x|
+|NCCL/2.18.3-GCCcore-12.3.0-CUDA-12.1.1|x|-|x|-|x|x|x|-|

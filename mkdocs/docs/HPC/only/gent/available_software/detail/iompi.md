@@ -22,4 +22,4 @@ module load iompi/2025a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |iompi/2025a|x|x|x|x|x|x|x|x|
-|iompi/2023a|x|x|x|x|x|x|x|x|
+|iompi/2023a|x|x|x|x|x|x|x|-|

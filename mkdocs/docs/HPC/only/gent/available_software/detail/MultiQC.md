@@ -21,6 +21,7 @@ module load MultiQC/1.28-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MultiQC/1.28-foss-2024a|x|x|x|x|x|x|x|x|
-|MultiQC/1.22.3-foss-2023b|-|x|x|x|x|x|x|x|
-|MultiQC/1.20-foss-2023a|x|x|x|x|x|x|x|x|
+|MultiQC/1.28-foss-2024a|x|x|x|x|x|x|x|-|
+|MultiQC/1.22.3-foss-2023b|-|x|x|x|x|x|x|-|
+|MultiQC/1.20-gfbf-2023a|-|-|-|-|-|-|-|x|
+|MultiQC/1.20-foss-2023a|x|x|x|x|x|x|x|-|

@@ -22,4 +22,4 @@ module load BBMap/39.19-GCC-13.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |BBMap/39.19-GCC-13.3.0|x|x|x|x|x|x|x|x|
-|BBMap/39.19-GCC-12.3.0|x|x|x|x|x|x|x|x|
+|BBMap/39.19-GCC-12.3.0|x|x|x|x|x|x|x|-|

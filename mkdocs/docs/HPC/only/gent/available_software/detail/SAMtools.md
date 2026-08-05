@@ -25,5 +25,5 @@ module load SAMtools/1.22.1-GCC-14.2.0
 |SAMtools/1.21-GCC-13.3.0|x|x|x|x|x|x|x|x|
 |SAMtools/1.19.2-GCC-13.2.0|x|x|x|x|x|x|x|x|
 |SAMtools/1.18-GCC-12.3.0|x|x|x|x|x|x|x|x|
-|SAMtools/1.16.1-GCC-11.3.0|-|-|-|-|-|x|x|x|
+|SAMtools/1.16.1-GCC-11.3.0|-|-|-|-|-|x|x|-|
 |SAMtools/0.1.20-GCC-12.3.0|-|x|x|x|x|x|x|x|

@@ -23,8 +23,8 @@ module load Nextflow/26.04.3
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Nextflow/26.04.3|x|x|x|x|x|x|x|x|
 |Nextflow/26.04.2|x|x|x|x|x|x|x|x|
-|Nextflow/25.10.2|x|x|x|x|x|x|x|x|
-|Nextflow/25.04.8|x|x|x|x|x|x|x|x|
-|Nextflow/25.04.4|x|x|x|x|x|x|x|x|
-|Nextflow/24.10.2|x|x|x|x|x|x|x|x|
-|Nextflow/24.04.2|x|x|x|x|x|x|x|x|
+|Nextflow/25.10.2|x|x|x|x|x|x|x|-|
+|Nextflow/25.04.8|x|x|x|x|x|x|x|-|
+|Nextflow/25.04.4|x|x|x|x|x|x|x|-|
+|Nextflow/24.10.2|x|x|x|x|x|x|x|-|
+|Nextflow/24.04.2|x|x|x|x|x|x|x|-|

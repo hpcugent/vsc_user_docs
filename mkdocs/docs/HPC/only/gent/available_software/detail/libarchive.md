@@ -27,6 +27,6 @@ module load libarchive/3.8.5-GCCcore-15.2.0
 |libarchive/3.7.4-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |libarchive/3.7.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |libarchive/3.6.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|libarchive/3.6.1-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|libarchive/3.6.1-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
-|libarchive/3.5.1-GCCcore-11.2.0|-|-|-|-|-|x|x|x|
+|libarchive/3.6.1-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|libarchive/3.6.1-GCCcore-11.3.0|-|-|-|-|-|x|x|-|
+|libarchive/3.5.1-GCCcore-11.2.0|-|-|-|-|-|x|x|-|

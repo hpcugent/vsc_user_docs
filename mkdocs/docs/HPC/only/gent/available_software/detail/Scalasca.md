@@ -21,4 +21,4 @@ module load Scalasca/2.6.2-gompi-2025a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Scalasca/2.6.2-gompi-2025a|x|-|-|-|-|x|x|x|
+|Scalasca/2.6.2-gompi-2025a|x|-|-|-|-|x|x|-|

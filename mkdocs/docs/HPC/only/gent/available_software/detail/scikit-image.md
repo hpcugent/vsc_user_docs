@@ -24,4 +24,4 @@ module load scikit-image/0.25.0-foss-2024a
 |scikit-image/0.25.0-foss-2024a|x|x|x|x|x|x|x|x|
 |scikit-image/0.24.0-foss-2023b|x|x|x|x|x|x|x|x|
 |scikit-image/0.22.0-foss-2023a|x|x|x|x|x|x|x|x|
-|scikit-image/0.19.3-foss-2022a|-|-|-|-|-|x|x|x|
+|scikit-image/0.19.3-foss-2022a|-|-|-|-|-|x|x|-|

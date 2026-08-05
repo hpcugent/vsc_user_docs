@@ -27,4 +27,4 @@ module load impi/2021.17.2-intel-compilers-2025.3.3
 |impi/2021.13.0-intel-compilers-2024.2.0|x|x|x|x|x|x|x|x|
 |impi/2021.10.0-intel-compilers-2023.2.1|x|x|x|x|x|x|x|x|
 |impi/2021.9.0-intel-compilers-2023.1.0|x|x|x|x|x|x|x|x|
-|impi/2021.6.0-intel-compilers-2022.1.0|-|-|-|-|-|x|x|x|
+|impi/2021.6.0-intel-compilers-2022.1.0|-|-|-|-|-|x|x|-|

@@ -21,4 +21,4 @@ module load python-libsbml/5.20.2-foss-2023b
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|python-libsbml/5.20.2-foss-2023b|-|x|x|x|x|-|-|-|
+|python-libsbml/5.20.2-foss-2023b|-|x|x|x|x|-|-|x|

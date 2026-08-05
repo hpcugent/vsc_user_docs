@@ -24,4 +24,4 @@ module load pkgconfig/1.5.5-GCCcore-13.3.0-python
 |pkgconfig/1.5.5-GCCcore-13.3.0-python|x|x|x|x|x|x|x|x|
 |pkgconfig/1.5.5-GCCcore-13.2.0-python|x|x|x|x|x|x|x|x|
 |pkgconfig/1.5.5-GCCcore-12.3.0-python|x|x|x|x|x|x|x|x|
-|pkgconfig/1.5.5-GCCcore-12.2.0-python|-|-|-|-|-|x|x|x|
+|pkgconfig/1.5.5-GCCcore-12.2.0-python|-|-|-|-|-|x|x|-|

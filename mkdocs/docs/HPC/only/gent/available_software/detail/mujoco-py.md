@@ -21,4 +21,4 @@ module load mujoco-py/2.3.7-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mujoco-py/2.3.7-foss-2023a|-|-|-|-|-|x|x|x|
+|mujoco-py/2.3.7-foss-2023a|-|-|-|-|-|x|x|-|

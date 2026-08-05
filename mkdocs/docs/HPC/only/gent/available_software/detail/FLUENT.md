@@ -22,4 +22,4 @@ module load FLUENT/2025R2
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |FLUENT/2025R2|x|x|x|x|x|x|x|x|
-|FLUENT/2024R2|x|x|x|x|x|x|x|x|
+|FLUENT/2024R2|x|x|x|x|x|x|x|-|

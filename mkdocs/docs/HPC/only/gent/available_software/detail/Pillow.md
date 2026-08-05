@@ -26,5 +26,5 @@ module load Pillow/11.3.0-GCCcore-14.3.0
 |Pillow/10.4.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |Pillow/10.2.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |Pillow/10.0.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|Pillow/9.4.0-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|Pillow/9.1.1-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|Pillow/9.4.0-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|Pillow/9.1.1-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

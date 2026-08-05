@@ -21,4 +21,4 @@ module load TreeMix/1.13-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TreeMix/1.13-GCC-12.3.0|x|x|x|x|x|x|x|x|
+|TreeMix/1.13-GCC-12.3.0|x|x|x|x|x|x|x|-|

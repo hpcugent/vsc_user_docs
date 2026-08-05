@@ -27,7 +27,7 @@ module load Automake/1.18.1-GCCcore-15.2.0
 |Automake/1.16.5-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |Automake/1.16.5-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |Automake/1.16.5-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|Automake/1.16.5-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|Automake/1.16.5-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
-|Automake/1.16.5|-|-|-|-|-|x|x|x|
-|Automake/1.16.4-GCCcore-11.2.0|-|-|-|-|-|x|x|x|
+|Automake/1.16.5-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|Automake/1.16.5-GCCcore-11.3.0|-|-|-|-|-|x|x|-|
+|Automake/1.16.5|-|-|-|-|-|x|x|-|
+|Automake/1.16.4-GCCcore-11.2.0|-|-|-|-|-|x|x|-|

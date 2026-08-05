@@ -27,4 +27,4 @@ module load iimpi/2026.1
 |iimpi/2024a|x|x|x|x|x|x|x|x|
 |iimpi/2023b|x|x|x|x|x|x|x|x|
 |iimpi/2023a|x|x|x|x|x|x|x|x|
-|iimpi/2022a|-|-|-|-|-|x|x|x|
+|iimpi/2022a|-|-|-|-|-|x|x|-|

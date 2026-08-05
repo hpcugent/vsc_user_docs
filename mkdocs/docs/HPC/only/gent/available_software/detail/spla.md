@@ -21,4 +21,4 @@ module load spla/1.6.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|spla/1.6.1-foss-2023a|-|x|-|x|-|x|x|x|
+|spla/1.6.1-foss-2023a|-|x|-|x|-|x|x|-|

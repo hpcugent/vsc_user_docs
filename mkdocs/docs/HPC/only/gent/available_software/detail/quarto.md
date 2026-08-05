@@ -21,4 +21,4 @@ module load quarto/1.5.57-x64
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|quarto/1.5.57-x64|x|x|x|x|x|x|x|x|
+|quarto/1.5.57-x64|x|x|x|x|x|x|x|-|

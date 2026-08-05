@@ -21,5 +21,5 @@ module load Parsl/2024.4.22-GCCcore-13.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Parsl/2024.4.22-GCCcore-13.2.0|-|x|-|-|-|-|-|-|
-|Parsl/2024.4.22-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|Parsl/2024.4.22-GCCcore-13.2.0|-|x|-|-|-|-|-|x|
+|Parsl/2024.4.22-GCCcore-12.3.0|x|x|x|x|x|x|x|-|

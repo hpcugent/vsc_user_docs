@@ -21,6 +21,6 @@ module load code-cli/1.104.1
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|code-cli/1.104.1|x|x|x|x|x|x|x|x|
-|code-cli/1.103.2|x|x|x|x|x|x|x|x|
-|code-cli/1.93.1-x64|x|x|x|x|x|x|x|x|
+|code-cli/1.104.1|x|x|x|x|x|x|x|-|
+|code-cli/1.103.2|x|x|x|x|x|x|x|-|
+|code-cli/1.93.1-x64|x|x|x|x|x|x|x|-|

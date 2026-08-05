@@ -27,5 +27,5 @@ module load PyYAML/6.0.3-GCCcore-15.2.0
 |PyYAML/6.0.2-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |PyYAML/6.0.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |PyYAML/6.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|PyYAML/6.0-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|PyYAML/6.0-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|PyYAML/6.0-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|PyYAML/6.0-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

@@ -21,5 +21,5 @@ module load Valgrind/3.25.0-gompi-2025a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Valgrind/3.25.0-gompi-2025a|x|-|-|-|-|x|x|x|
+|Valgrind/3.25.0-gompi-2025a|x|-|-|-|-|x|x|-|
 |Valgrind/3.23.0-gompi-2023b|x|x|x|x|x|x|x|x|

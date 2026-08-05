@@ -24,6 +24,6 @@ module load DB/18.1.40-GCCcore-13.3.0
 |DB/18.1.40-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |DB/18.1.40-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |DB/18.1.40-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|DB/18.1.40-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|DB/18.1.40-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
-|DB/18.1.40-GCCcore-11.2.0|-|-|-|-|-|x|x|x|
+|DB/18.1.40-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|DB/18.1.40-GCCcore-11.3.0|-|-|-|-|-|x|x|-|
+|DB/18.1.40-GCCcore-11.2.0|-|-|-|-|-|x|x|-|

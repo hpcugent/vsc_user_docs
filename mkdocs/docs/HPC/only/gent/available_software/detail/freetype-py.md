@@ -21,4 +21,4 @@ module load freetype-py/2.4.0-GCCcore-11.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|freetype-py/2.4.0-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|freetype-py/2.4.0-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

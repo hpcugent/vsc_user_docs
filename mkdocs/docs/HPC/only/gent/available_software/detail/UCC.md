@@ -27,5 +27,5 @@ module load UCC/1.7.0-GCCcore-15.2.0
 |UCC/1.3.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |UCC/1.2.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |UCC/1.2.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|UCC/1.1.0-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|UCC/1.0.0-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|UCC/1.1.0-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|UCC/1.0.0-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

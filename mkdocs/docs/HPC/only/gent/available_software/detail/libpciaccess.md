@@ -27,5 +27,5 @@ module load libpciaccess/0.19-GCCcore-15.2.0
 |libpciaccess/0.18.1-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |libpciaccess/0.17-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |libpciaccess/0.17-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|libpciaccess/0.17-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|libpciaccess/0.16-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|libpciaccess/0.17-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|libpciaccess/0.16-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

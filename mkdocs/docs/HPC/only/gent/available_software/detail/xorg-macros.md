@@ -27,5 +27,5 @@ module load xorg-macros/1.20.2-GCCcore-15.2.0
 |xorg-macros/1.20.1-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |xorg-macros/1.20.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |xorg-macros/1.20.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|xorg-macros/1.19.3-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
-|xorg-macros/1.19.3-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|xorg-macros/1.19.3-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|xorg-macros/1.19.3-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

@@ -21,4 +21,4 @@ module load Py4Sci/2025-foss-2025a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Py4Sci/2025-foss-2025a|x|x|x|x|x|x|x|x|
+|Py4Sci/2025-foss-2025a|x|x|x|x|x|x|x|-|

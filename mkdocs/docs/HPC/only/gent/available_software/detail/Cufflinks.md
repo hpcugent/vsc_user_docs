@@ -21,4 +21,4 @@ module load Cufflinks/20190706-GCC-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Cufflinks/20190706-GCC-12.3.0|x|x|x|x|x|x|x|x|
+|Cufflinks/20190706-GCC-12.3.0|x|x|x|x|x|x|x|-|

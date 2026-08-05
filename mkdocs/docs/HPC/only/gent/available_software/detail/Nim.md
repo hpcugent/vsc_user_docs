@@ -21,4 +21,4 @@ module load Nim/2.2.0-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Nim/2.2.0-GCCcore-12.3.0|-|x|x|x|x|x|x|x|
+|Nim/2.2.0-GCCcore-12.3.0|-|x|x|x|x|x|x|-|

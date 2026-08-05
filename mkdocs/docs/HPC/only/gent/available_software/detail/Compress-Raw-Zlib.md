@@ -21,4 +21,4 @@ module load Compress-Raw-Zlib/2.213-GCCcore-12.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Compress-Raw-Zlib/2.213-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|Compress-Raw-Zlib/2.213-GCCcore-12.3.0|x|x|x|x|x|x|x|-|

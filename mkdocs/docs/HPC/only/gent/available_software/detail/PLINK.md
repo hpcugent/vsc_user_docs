@@ -21,4 +21,4 @@ module load PLINK/1.90-beta-7.4-x86_64
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PLINK/1.90-beta-7.4-x86_64|x|x|-|x|-|x|x|x|
+|PLINK/1.90-beta-7.4-x86_64|x|x|-|x|-|x|x|-|

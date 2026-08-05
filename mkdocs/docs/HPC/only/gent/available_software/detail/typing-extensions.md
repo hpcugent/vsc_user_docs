@@ -26,4 +26,4 @@ module load typing-extensions/4.14.1-GCCcore-14.3.0
 |typing-extensions/4.11.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |typing-extensions/4.10.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |typing-extensions/4.9.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|typing-extensions/4.3.0-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
+|typing-extensions/4.3.0-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

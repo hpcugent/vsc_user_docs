@@ -23,4 +23,5 @@ module load setuptools/80.9.0-GCCcore-14.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |setuptools/80.9.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |setuptools/80.9.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
-|setuptools/64.0.3-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
+|setuptools/80.9.0-GCCcore-12.3.0|-|-|-|-|-|-|-|x|
+|setuptools/64.0.3-GCCcore-12.2.0|-|-|-|-|-|x|x|-|

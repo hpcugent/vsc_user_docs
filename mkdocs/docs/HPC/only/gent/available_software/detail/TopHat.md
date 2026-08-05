@@ -21,4 +21,4 @@ module load TopHat/2.1.2-GCC-12.3.0-Python-2.7.18
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TopHat/2.1.2-GCC-12.3.0-Python-2.7.18|x|x|x|x|x|x|x|x|
+|TopHat/2.1.2-GCC-12.3.0-Python-2.7.18|x|x|x|x|x|x|x|-|

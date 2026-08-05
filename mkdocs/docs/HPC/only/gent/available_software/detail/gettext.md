@@ -30,8 +30,8 @@ module load gettext/0.26-GCCcore-15.2.0
 |gettext/0.22-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |gettext/0.22|x|x|x|x|x|x|x|x|
 |gettext/0.21.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|gettext/0.21.1-GCCcore-12.2.0|-|-|-|-|-|x|x|x|
+|gettext/0.21.1-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
 |gettext/0.21.1|x|x|x|x|x|x|x|x|
-|gettext/0.21-GCCcore-11.3.0|-|-|-|-|-|x|x|x|
-|gettext/0.21-GCCcore-11.2.0|-|-|-|-|-|x|x|x|
-|gettext/0.21|-|-|-|-|-|x|x|x|
+|gettext/0.21-GCCcore-11.3.0|-|-|-|-|-|x|x|-|
+|gettext/0.21-GCCcore-11.2.0|-|-|-|-|-|x|x|-|
+|gettext/0.21|-|-|-|-|-|x|x|-|
