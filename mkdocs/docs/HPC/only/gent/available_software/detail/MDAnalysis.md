@@ -14,13 +14,14 @@ The overview below shows which MDAnalysis installations are available per HPC-UG
 To start using MDAnalysis, load one of these modules using a `module load` command like:
 
 ```shell
-module load MDAnalysis/2.10.0-foss-2025b
+module load MDAnalysis/2.10.0-foss-2026.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MDAnalysis/2.10.0-foss-2026.1|x|x|x|x|x|x|x|x|
 |MDAnalysis/2.10.0-foss-2025b|x|x|x|x|x|x|x|x|
 |MDAnalysis/2.9.0-foss-2025a|x|x|x|x|x|x|x|x|
 |MDAnalysis/2.9.0-foss-2024a|x|x|x|x|x|x|x|x|

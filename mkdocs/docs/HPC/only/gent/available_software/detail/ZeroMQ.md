@@ -21,7 +21,7 @@ module load ZeroMQ/4.3.5-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ZeroMQ/4.3.5-GCCcore-15.2.0|-|x|-|-|-|-|-|-|
+|ZeroMQ/4.3.5-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |ZeroMQ/4.3.5-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |ZeroMQ/4.3.5-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |ZeroMQ/4.3.5-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

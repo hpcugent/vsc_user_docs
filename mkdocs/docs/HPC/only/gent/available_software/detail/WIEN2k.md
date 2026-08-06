@@ -21,6 +21,6 @@ module load WIEN2k/24.1-intel-2025b-NMATMAX-55000-NUME-6500
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|WIEN2k/24.1-intel-2025b-NMATMAX-55000-NUME-6500|x|x|x|x|x|x|x|-|
-|WIEN2k/24.1-intel-2025b|x|x|x|x|x|x|x|-|
+|WIEN2k/24.1-intel-2025b-NMATMAX-55000-NUME-6500|x|x|x|x|x|x|x|x|
+|WIEN2k/24.1-intel-2025b|x|x|x|x|x|x|x|x|
 |WIEN2k/24.1-intel-2023a|x|x|x|x|x|x|x|-|

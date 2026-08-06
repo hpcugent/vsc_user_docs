@@ -21,7 +21,7 @@ module load HarfBuzz/14.2.0-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HarfBuzz/14.2.0-GCCcore-15.2.0|x|x|x|-|x|-|-|x|
+|HarfBuzz/14.2.0-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |HarfBuzz/11.4.1-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |HarfBuzz/11.2.1-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |HarfBuzz/9.0.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

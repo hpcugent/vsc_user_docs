@@ -21,7 +21,7 @@ module load CFITSIO/4.6.4-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CFITSIO/4.6.4-GCCcore-15.2.0|-|-|-|-|-|-|-|x|
+|CFITSIO/4.6.4-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |CFITSIO/4.6.2-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |CFITSIO/4.6.2-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |CFITSIO/4.4.1-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

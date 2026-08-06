@@ -21,7 +21,7 @@ module load Tk/9.0.3-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Tk/9.0.3-GCCcore-15.2.0|x|x|x|x|x|-|-|x|
+|Tk/9.0.3-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |Tk/9.0.1-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |Tk/8.6.16-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |Tk/8.6.14-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

@@ -21,7 +21,7 @@ module load Xvfb/21.1.23-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Xvfb/21.1.23-GCCcore-15.2.0|x|x|x|x|x|-|-|x|
+|Xvfb/21.1.23-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |Xvfb/21.1.18-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |Xvfb/21.1.18-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |Xvfb/21.1.14-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

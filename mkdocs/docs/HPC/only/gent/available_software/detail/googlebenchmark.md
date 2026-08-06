@@ -21,6 +21,6 @@ module load googlebenchmark/1.9.5-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|googlebenchmark/1.9.5-GCCcore-15.2.0|-|-|-|-|-|-|-|x|
+|googlebenchmark/1.9.5-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |googlebenchmark/1.9.4-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |googlebenchmark/1.9.4-GCCcore-14.2.0|x|x|x|x|x|x|x|x|

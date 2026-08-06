@@ -21,7 +21,7 @@ module load nlohmann_json/3.12.0-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nlohmann_json/3.12.0-GCCcore-15.2.0|-|-|-|-|-|-|-|x|
+|nlohmann_json/3.12.0-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |nlohmann_json/3.12.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |nlohmann_json/3.12.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |nlohmann_json/3.11.3-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

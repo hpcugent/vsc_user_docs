@@ -14,12 +14,13 @@ The overview below shows which Boost.Python-NumPy installations are available pe
 To start using Boost.Python-NumPy, load one of these modules using a `module load` command like:
 
 ```shell
-module load Boost.Python-NumPy/1.88.0-gfbf-2025a
+module load Boost.Python-NumPy/1.90.0-gfbf-2026.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Boost.Python-NumPy/1.90.0-gfbf-2026.1|x|x|x|x|x|x|x|x|
 |Boost.Python-NumPy/1.88.0-gfbf-2025a|x|x|x|x|x|x|x|x|
 |Boost.Python-NumPy/1.85.0-gfbf-2024a|x|x|x|x|x|x|x|x|

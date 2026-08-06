@@ -21,7 +21,7 @@ module load libsodium/1.0.22-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libsodium/1.0.22-GCCcore-15.2.0|-|x|-|-|-|-|-|-|
+|libsodium/1.0.22-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |libsodium/1.0.20-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |libsodium/1.0.20-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |libsodium/1.0.20-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

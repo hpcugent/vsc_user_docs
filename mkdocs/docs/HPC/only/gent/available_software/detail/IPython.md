@@ -21,7 +21,7 @@ module load IPython/9.14.0-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|IPython/9.14.0-GCCcore-15.2.0|-|x|-|-|-|-|-|-|
+|IPython/9.14.0-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |IPython/9.4.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |IPython/9.3.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |IPython/8.28.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

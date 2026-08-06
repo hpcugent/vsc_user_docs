@@ -21,7 +21,7 @@ module load utf8proc/2.11.3-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|utf8proc/2.11.3-GCCcore-15.2.0|-|-|-|-|-|-|-|x|
+|utf8proc/2.11.3-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |utf8proc/2.10.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |utf8proc/2.10.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |utf8proc/2.9.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

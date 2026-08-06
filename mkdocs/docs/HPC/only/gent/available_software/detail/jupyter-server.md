@@ -21,7 +21,7 @@ module load jupyter-server/2.19.0-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|jupyter-server/2.19.0-GCCcore-15.2.0|-|x|-|-|-|-|-|-|
+|jupyter-server/2.19.0-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |jupyter-server/2.17.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |jupyter-server/2.16.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |jupyter-server/2.14.2-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

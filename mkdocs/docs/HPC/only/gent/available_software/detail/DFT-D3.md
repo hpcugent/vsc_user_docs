@@ -21,5 +21,5 @@ module load DFT-D3/3.2.0-intel-compilers-2025.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|DFT-D3/3.2.0-intel-compilers-2025.2.0|x|x|x|x|x|x|x|-|
+|DFT-D3/3.2.0-intel-compilers-2025.2.0|x|x|x|x|x|x|x|x|
 |DFT-D3/3.2.0-intel-2023a|x|x|x|x|x|x|x|-|

@@ -21,7 +21,7 @@ module load JasPer/4.2.9-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|JasPer/4.2.9-GCCcore-15.2.0|-|-|-|-|-|-|-|x|
+|JasPer/4.2.9-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |JasPer/4.2.8-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |JasPer/4.2.5-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |JasPer/4.2.4-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

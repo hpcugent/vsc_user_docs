@@ -14,11 +14,12 @@ The overview below shows which numdifftools installations are available per HPC-
 To start using numdifftools, load one of these modules using a `module load` command like:
 
 ```shell
-module load numdifftools/0.9.41-gfbf-2025a
+module load numdifftools/0.9.42-gfbf-2026.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|numdifftools/0.9.42-gfbf-2026.1|x|x|x|x|x|x|x|x|
 |numdifftools/0.9.41-gfbf-2025a|x|x|x|x|x|x|x|x|

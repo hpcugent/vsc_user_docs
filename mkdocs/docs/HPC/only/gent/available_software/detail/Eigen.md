@@ -22,6 +22,7 @@ module load Eigen/5.0.0-GCCcore-15.2.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Eigen/5.0.0-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|Eigen/3.4.1-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |Eigen/3.4.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |Eigen/3.4.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |Eigen/3.4.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

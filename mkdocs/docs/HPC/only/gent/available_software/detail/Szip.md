@@ -21,7 +21,7 @@ module load Szip/2.1.1-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Szip/2.1.1-GCCcore-15.2.0|-|-|-|-|-|-|-|x|
+|Szip/2.1.1-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |Szip/2.1.1-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |Szip/2.1.1-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |Szip/2.1.1-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

@@ -21,7 +21,7 @@ module load Pango/1.57.1-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Pango/1.57.1-GCCcore-15.2.0|x|-|x|-|x|-|-|x|
+|Pango/1.57.1-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |Pango/1.57.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |Pango/1.56.3-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |Pango/1.54.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

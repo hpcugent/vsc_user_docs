@@ -21,7 +21,7 @@ module load Imath/3.2.2-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Imath/3.2.2-GCCcore-15.2.0|-|-|-|-|-|-|-|x|
+|Imath/3.2.2-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |Imath/3.1.12-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |Imath/3.1.12-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |Imath/3.1.11-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

@@ -21,7 +21,7 @@ module load GDAL/3.13.0-foss-2026.1
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GDAL/3.13.0-foss-2026.1|-|-|-|-|-|-|-|x|
+|GDAL/3.13.0-foss-2026.1|x|x|x|x|x|x|x|x|
 |GDAL/3.11.3-foss-2025b|x|x|x|x|x|x|x|x|
 |GDAL/3.11.1-foss-2025a|x|x|x|x|x|x|x|x|
 |GDAL/3.10.0-foss-2024a|x|x|x|x|x|x|x|x|
