@@ -21,7 +21,7 @@ module load PostgreSQL/18.4-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PostgreSQL/18.4-GCCcore-15.2.0|-|-|-|-|-|-|-|x|
+|PostgreSQL/18.4-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |PostgreSQL/17.5-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |PostgreSQL/17.5-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |PostgreSQL/16.4-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

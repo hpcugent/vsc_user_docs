@@ -21,7 +21,7 @@ module load JupyterLab/4.5.8-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|JupyterLab/4.5.8-GCCcore-15.2.0|-|x|-|-|-|-|-|-|
+|JupyterLab/4.5.8-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |JupyterLab/4.4.9-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |JupyterLab/4.4.4-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |JupyterLab/4.2.5-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

@@ -14,13 +14,14 @@ The overview below shows which mrcfile installations are available per HPC-UGent
 To start using mrcfile, load one of these modules using a `module load` command like:
 
 ```shell
-module load mrcfile/1.5.4-gfbf-2025b
+module load mrcfile/1.5.4-gfbf-2026.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|mrcfile/1.5.4-gfbf-2026.1|x|x|x|x|x|x|x|x|
 |mrcfile/1.5.4-gfbf-2025b|x|x|x|x|x|x|x|x|
 |mrcfile/1.5.4-gfbf-2025a|x|x|x|x|x|x|x|x|
 |mrcfile/1.5.4-gfbf-2024a|x|x|x|x|x|x|x|x|

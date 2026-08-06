@@ -21,7 +21,7 @@ module load LittleCMS/2.19.1-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LittleCMS/2.19.1-GCCcore-15.2.0|x|x|x|-|x|-|-|x|
+|LittleCMS/2.19.1-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |LittleCMS/2.17-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |LittleCMS/2.17-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |LittleCMS/2.16-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

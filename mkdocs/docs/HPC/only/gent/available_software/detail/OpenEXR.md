@@ -21,7 +21,7 @@ module load OpenEXR/3.4.12-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenEXR/3.4.12-GCCcore-15.2.0|-|-|-|-|-|-|-|x|
+|OpenEXR/3.4.12-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |OpenEXR/3.3.4-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |OpenEXR/3.3.4-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |OpenEXR/3.2.4-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

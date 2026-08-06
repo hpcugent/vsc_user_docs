@@ -21,7 +21,7 @@ module load GEOS/3.14.1-GCC-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GEOS/3.14.1-GCC-15.2.0|x|-|x|-|x|-|-|x|
+|GEOS/3.14.1-GCC-15.2.0|x|x|x|x|x|x|x|x|
 |GEOS/3.13.1-GCC-14.3.0|x|x|x|x|x|x|x|x|
 |GEOS/3.13.1-GCC-14.2.0|x|x|x|x|x|x|x|x|
 |GEOS/3.12.2-GCC-13.3.0|x|x|x|x|x|x|x|x|

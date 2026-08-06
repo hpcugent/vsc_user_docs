@@ -14,11 +14,12 @@ The overview below shows which ipympl installations are available per HPC-UGent 
 To start using ipympl, load one of these modules using a `module load` command like:
 
 ```shell
-module load ipympl/0.9.3-gfbf-2023a
+module load ipympl/0.10.0-gfbf-2026.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ipympl/0.10.0-gfbf-2026.1|x|x|x|x|x|x|x|x|
 |ipympl/0.9.3-gfbf-2023a|x|x|x|x|x|x|x|x|

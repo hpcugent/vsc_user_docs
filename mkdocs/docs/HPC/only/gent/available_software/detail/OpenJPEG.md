@@ -21,7 +21,7 @@ module load OpenJPEG/2.5.4-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenJPEG/2.5.4-GCCcore-15.2.0|-|-|-|-|-|-|-|x|
+|OpenJPEG/2.5.4-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |OpenJPEG/2.5.3-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |OpenJPEG/2.5.3-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |OpenJPEG/2.5.2-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

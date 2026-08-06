@@ -21,7 +21,7 @@ module load libheif/1.22.2-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libheif/1.22.2-GCCcore-15.2.0|-|-|-|-|-|-|-|x|
+|libheif/1.22.2-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |libheif/1.20.2-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |libheif/1.19.8-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |libheif/1.19.5-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

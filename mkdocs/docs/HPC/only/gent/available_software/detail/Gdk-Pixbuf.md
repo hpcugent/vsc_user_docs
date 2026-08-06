@@ -21,7 +21,7 @@ module load Gdk-Pixbuf/2.44.6-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Gdk-Pixbuf/2.44.6-GCCcore-15.2.0|-|-|-|-|-|-|-|x|
+|Gdk-Pixbuf/2.44.6-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |Gdk-Pixbuf/2.42.12-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |Gdk-Pixbuf/2.42.12-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |Gdk-Pixbuf/2.42.11-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

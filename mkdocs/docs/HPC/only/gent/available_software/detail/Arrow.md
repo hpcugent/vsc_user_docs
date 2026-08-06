@@ -21,7 +21,7 @@ module load Arrow/24.0.0-gfbf-2026.1
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Arrow/24.0.0-gfbf-2026.1|-|-|-|-|-|-|-|x|
+|Arrow/24.0.0-gfbf-2026.1|x|x|x|x|x|x|x|x|
 |Arrow/22.0.0-gfbf-2025b|x|x|x|x|x|x|x|x|
 |Arrow/22.0.0-gfbf-2025a|x|x|x|x|x|x|x|x|
 |Arrow/17.0.0-gfbf-2024a|x|x|x|x|x|x|x|x|

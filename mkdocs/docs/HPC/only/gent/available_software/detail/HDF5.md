@@ -21,7 +21,7 @@ module load HDF5/2.1.1-gompi-2026.1
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HDF5/2.1.1-gompi-2026.1|x|x|x|x|x|-|-|x|
+|HDF5/2.1.1-gompi-2026.1|x|x|x|x|x|x|x|x|
 |HDF5/1.14.6-gompi-2025b|x|x|x|x|x|x|x|x|
 |HDF5/1.14.6-gompi-2025a|x|x|x|x|x|x|x|x|
 |HDF5/1.14.6-NVHPC-25.9-CUDA-12.9.1|x|-|x|-|x|x|-|-|

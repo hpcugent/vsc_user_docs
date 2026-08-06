@@ -21,7 +21,7 @@ module load RE2/2025-11-05-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RE2/2025-11-05-GCCcore-15.2.0|-|-|-|-|-|-|-|x|
+|RE2/2025-11-05-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |RE2/2025-07-22-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |RE2/2024-07-02-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |RE2/2024-07-02-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

@@ -14,13 +14,14 @@ The overview below shows which PyTables installations are available per HPC-UGen
 To start using PyTables, load one of these modules using a `module load` command like:
 
 ```shell
-module load PyTables/3.10.2-foss-2025b
+module load PyTables/3.11.1-foss-2026.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyTables/3.11.1-foss-2026.1|x|x|x|x|x|x|x|x|
 |PyTables/3.10.2-foss-2025b|x|x|x|x|x|x|x|x|
 |PyTables/3.10.2-foss-2025a|x|x|x|x|x|x|x|x|
 |PyTables/3.10.2-foss-2024a|x|x|x|x|x|x|x|x|

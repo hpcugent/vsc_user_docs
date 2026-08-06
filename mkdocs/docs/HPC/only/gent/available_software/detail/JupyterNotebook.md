@@ -14,13 +14,14 @@ The overview below shows which JupyterNotebook installations are available per H
 To start using JupyterNotebook, load one of these modules using a `module load` command like:
 
 ```shell
-module load JupyterNotebook/7.4.7-GCCcore-14.3.0
+module load JupyterNotebook/7.5.7-GCCcore-15.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|JupyterNotebook/7.5.7-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |JupyterNotebook/7.4.7-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |JupyterNotebook/7.4.4-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |JupyterNotebook/7.2.3-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

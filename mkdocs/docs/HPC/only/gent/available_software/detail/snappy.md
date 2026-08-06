@@ -21,7 +21,7 @@ module load snappy/1.2.2-GCCcore-15.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|snappy/1.2.2-GCCcore-15.2.0|-|-|-|-|-|-|-|x|
+|snappy/1.2.2-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |snappy/1.2.2-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |snappy/1.2.2-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |snappy/1.2.1-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

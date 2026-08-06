@@ -14,13 +14,14 @@ The overview below shows which spglib-python installations are available per HPC
 To start using spglib-python, load one of these modules using a `module load` command like:
 
 ```shell
-module load spglib-python/2.6.0-gfbf-2025b
+module load spglib-python/2.7.0-gfbf-2026.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|spglib-python/2.7.0-gfbf-2026.1|x|x|x|x|x|x|x|x|
 |spglib-python/2.6.0-gfbf-2025b|x|x|x|x|x|x|x|x|
 |spglib-python/2.6.0-gfbf-2025a|x|x|x|x|x|x|x|x|
 |spglib-python/2.5.0-gfbf-2024a|x|x|x|x|x|x|x|x|
