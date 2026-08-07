@@ -14,12 +14,13 @@ The overview below shows which AmberTools installations are available per HPC-UG
 To start using AmberTools, load one of these modules using a `module load` command like:
 
 ```shell
-module load AmberTools/25.2-foss-2025a
+module load AmberTools/26.1-foss-2026.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|AmberTools/26.1-foss-2026.1|x|x|x|x|x|x|x|x|
 |AmberTools/25.2-foss-2025a|x|x|x|x|x|x|x|-|
 |AmberTools/23.6-foss-2023a|-|x|-|x|-|x|x|x|

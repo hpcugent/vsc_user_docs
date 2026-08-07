@@ -14,12 +14,13 @@ The overview below shows which nanobind installations are available per HPC-UGen
 To start using nanobind, load one of these modules using a `module load` command like:
 
 ```shell
-module load nanobind/2.9.2-GCCcore-14.3.0
+module load nanobind/2.13.0-GCCcore-15.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|nanobind/2.13.0-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |nanobind/2.9.2-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |nanobind/2.5.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
