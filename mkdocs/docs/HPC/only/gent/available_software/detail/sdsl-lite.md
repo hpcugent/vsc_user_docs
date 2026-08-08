@@ -21,5 +21,5 @@ module load sdsl-lite/2.1.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|sdsl-lite/2.1.1-foss-2023a|x|x|x|x|x|x|x|-|
+|sdsl-lite/2.1.1-foss-2023a|x|x|x|x|x|x|x|x|
 |sdsl-lite/2.0.3-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

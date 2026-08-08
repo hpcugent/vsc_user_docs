@@ -22,3 +22,4 @@ module load ANNOVAR/20200607-GCCcore-13.2.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ANNOVAR/20200607-GCCcore-13.2.0|-|-|-|-|-|-|-|x|
+|ANNOVAR/20200607-GCCcore-12.3.0|-|-|-|-|-|-|-|x|

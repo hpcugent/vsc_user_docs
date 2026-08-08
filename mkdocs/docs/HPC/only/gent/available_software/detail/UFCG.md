@@ -21,4 +21,4 @@ module load UFCG/1.0.6-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|UFCG/1.0.6-foss-2023a|x|x|x|x|x|x|x|-|
+|UFCG/1.0.6-foss-2023a|x|x|x|x|x|x|x|x|

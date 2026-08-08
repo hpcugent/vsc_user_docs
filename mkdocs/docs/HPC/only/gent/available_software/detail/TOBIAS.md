@@ -21,4 +21,4 @@ module load TOBIAS/0.16.1-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TOBIAS/0.16.1-foss-2023a|-|x|-|x|-|x|x|-|
+|TOBIAS/0.16.1-foss-2023a|-|x|-|x|-|x|x|x|

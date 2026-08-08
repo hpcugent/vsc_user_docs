@@ -21,4 +21,4 @@ module load Seurat/5.1.0-foss-2023a-R-4.3.2
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Seurat/5.1.0-foss-2023a-R-4.3.2|x|x|-|x|-|x|x|-|
+|Seurat/5.1.0-foss-2023a-R-4.3.2|x|x|-|x|-|x|x|x|

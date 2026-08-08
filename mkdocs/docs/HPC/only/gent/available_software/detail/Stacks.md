@@ -22,3 +22,4 @@ module load Stacks/2.68-foss-2023a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Stacks/2.68-foss-2023a|-|x|-|x|-|x|x|-|
+|Stacks/2.68-GCC-12.3.0|-|-|-|-|-|-|-|x|
