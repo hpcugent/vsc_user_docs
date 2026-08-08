@@ -24,5 +24,5 @@ module load psycopg/3.3.4-GCCcore-15.2.0
 |psycopg/3.3.4-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |psycopg/3.2.9-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |psycopg/3.2.3-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
-|psycopg/3.2.1-GCCcore-12.3.0|-|x|x|x|x|x|x|-|
+|psycopg/3.2.1-GCCcore-12.3.0|-|x|x|x|x|x|x|x|
 |psycopg/3.1.18-GCCcore-13.2.0|x|x|x|x|x|x|x|x|

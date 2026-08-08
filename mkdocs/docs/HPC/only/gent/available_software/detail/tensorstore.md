@@ -21,4 +21,4 @@ module load tensorstore/0.1.65-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tensorstore/0.1.65-foss-2023a|x|x|x|x|x|x|x|-|
+|tensorstore/0.1.65-foss-2023a|x|x|x|x|x|x|x|x|

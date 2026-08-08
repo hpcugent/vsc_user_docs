@@ -21,4 +21,4 @@ module load segment-anything/1.0-foss-2023a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|segment-anything/1.0-foss-2023a|-|x|-|x|-|x|x|-|
+|segment-anything/1.0-foss-2023a|-|x|-|x|-|x|x|x|

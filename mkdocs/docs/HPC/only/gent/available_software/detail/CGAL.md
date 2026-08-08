@@ -26,4 +26,4 @@ module load CGAL/6.0.1-GCCcore-14.3.0
 |CGAL/5.6.1-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |CGAL/5.6.1-GCCcore-13.2.0|-|-|-|-|-|-|-|x|
 |CGAL/5.6-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
-|CGAL/5.4-GCCcore-12.3.0|x|x|x|x|x|x|x|-|
+|CGAL/5.4-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
