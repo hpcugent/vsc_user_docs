@@ -1,0 +1,17 @@
+{
+    "main_title": "multi_job_submission",
+    "subtitle": "The-Worker-framework-Job-arrays",
+    "source_file": "../../mkdocs/docs/HPC/multi_job_submission.md",
+    "title_depth": 2,
+    "directory": "multi_job_submission",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/running_batch_jobs/#using-explicit-version-numbers",
+        "1": "https://docs.hpc.ugent.be/interactive_debug",
+        "2": "https://docs.hpc.ugent.be/troubleshooting/#multi-job-submissions-on-a-non-default-cluster"
+    },
+    "parent_title": "",
+    "previous_title": "multi_job_submission_paragraph_2",
+    "next_title": "multi_job_submission_paragraph_4",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/multi_job_submission/#the-worker-framework-job-arrays"
+}
