@@ -14,16 +14,17 @@ The overview below shows which Go installations are available per HPC-UGent Tier
 To start using Go, load one of these modules using a `module load` command like:
 
 ```shell
-module load Go/1.25.0
+module load Go/1.25.3
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Go/1.25.0|x|x|x|x|x|x|x|
-|Go/1.23.6|x|x|x|x|x|x|x|
-|Go/1.22.1|x|x|x|x|x|x|x|
-|Go/1.21.6|x|x|-|x|-|x|x|
-|Go/1.21.2|x|x|x|x|x|x|x|
-|Go/1.17.6|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Go/1.25.3|x|x|x|x|x|x|x|x|
+|Go/1.25.0|x|x|x|x|x|x|x|x|
+|Go/1.23.6|x|x|x|x|x|x|x|x|
+|Go/1.22.1|x|x|x|x|x|x|x|-|
+|Go/1.21.6|x|x|-|x|-|x|x|-|
+|Go/1.21.2|x|x|x|x|x|x|x|-|
+|Go/1.17.6|x|x|x|x|x|x|x|x|

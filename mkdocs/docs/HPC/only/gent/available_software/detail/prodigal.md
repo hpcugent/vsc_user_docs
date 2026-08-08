@@ -19,9 +19,9 @@ module load prodigal/2.6.3-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|prodigal/2.6.3-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|prodigal/2.6.3-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|prodigal/2.6.3-GCCcore-12.2.0|-|-|-|-|-|x|x|
-|prodigal/2.6.3-GCCcore-11.3.0|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|prodigal/2.6.3-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|prodigal/2.6.3-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|prodigal/2.6.3-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|prodigal/2.6.3-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

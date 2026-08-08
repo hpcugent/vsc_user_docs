@@ -19,8 +19,8 @@ module load IQ-TREE/3.0.1-gompi-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|IQ-TREE/3.0.1-gompi-2024a|x|x|x|x|x|x|x|
-|IQ-TREE/2.3.6-gompi-2023a|x|x|x|x|x|x|x|
-|IQ-TREE/2.3.5-gompi-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|IQ-TREE/3.0.1-gompi-2024a|x|x|x|x|x|x|x|x|
+|IQ-TREE/2.3.6-gompi-2023a|x|x|x|x|x|x|x|-|
+|IQ-TREE/2.3.5-gompi-2023a|x|x|x|x|x|x|x|x|

@@ -19,6 +19,6 @@ module load PeptideShaker/3.0.11-Java-11
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PeptideShaker/3.0.11-Java-11|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PeptideShaker/3.0.11-Java-11|x|x|x|x|x|x|x|-|

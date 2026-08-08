@@ -19,7 +19,7 @@ module load snakemake/8.27.0-foss-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|snakemake/8.27.0-foss-2024a|x|x|x|x|x|x|x|
-|snakemake/8.4.2-foss-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|snakemake/8.27.0-foss-2024a|x|x|x|x|x|x|x|x|
+|snakemake/8.4.2-foss-2023a|x|x|x|x|x|x|x|x|

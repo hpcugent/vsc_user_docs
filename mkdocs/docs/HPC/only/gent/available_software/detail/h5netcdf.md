@@ -19,7 +19,7 @@ module load h5netcdf/1.6.1-foss-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|h5netcdf/1.6.1-foss-2024a|x|x|x|x|x|x|x|
-|h5netcdf/1.2.0-foss-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|h5netcdf/1.6.1-foss-2024a|x|x|x|x|x|x|x|x|
+|h5netcdf/1.2.0-foss-2023a|x|x|x|x|x|x|x|x|

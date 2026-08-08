@@ -14,11 +14,13 @@ The overview below shows which WIEN2k installations are available per HPC-UGent 
 To start using WIEN2k, load one of these modules using a `module load` command like:
 
 ```shell
-module load WIEN2k/24.1-intel-2023a
+module load WIEN2k/24.1-intel-2025b-NMATMAX-55000-NUME-6500
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|WIEN2k/24.1-intel-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|WIEN2k/24.1-intel-2025b-NMATMAX-55000-NUME-6500|x|x|x|x|x|x|x|x|
+|WIEN2k/24.1-intel-2025b|x|x|x|x|x|x|x|x|
+|WIEN2k/24.1-intel-2023a|x|x|x|x|x|x|x|-|

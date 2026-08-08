@@ -19,10 +19,14 @@ module load libxc/7.0.0-nvidia-compilers-25.3-CUDA-12.8.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libxc/7.0.0-nvidia-compilers-25.3-CUDA-12.8.0|x|-|x|-|x|x|-|
-|libxc/6.2.2-intel-compilers-2023.1.0|x|x|x|x|x|x|x|
-|libxc/6.2.2-GCC-13.3.0|x|x|x|x|x|x|x|
-|libxc/6.2.2-GCC-13.2.0-nofhc|x|x|x|x|x|x|x|
-|libxc/6.2.2-GCC-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libxc/7.0.0-nvidia-compilers-25.3-CUDA-12.8.0|x|-|x|-|x|x|-|-|
+|libxc/7.0.0-intel-compilers-2025.2.0|x|x|x|x|x|x|x|x|
+|libxc/7.0.0-intel-compilers-2025.1.1|x|x|x|x|x|x|x|x|
+|libxc/7.0.0-GCC-14.3.0-nofhc|x|x|x|x|x|x|x|x|
+|libxc/7.0.0-GCC-14.2.0|x|x|x|x|x|x|x|x|
+|libxc/6.2.2-intel-compilers-2023.1.0|x|x|x|x|x|x|x|-|
+|libxc/6.2.2-GCC-13.3.0|x|x|x|x|x|x|x|x|
+|libxc/6.2.2-GCC-13.2.0-nofhc|x|x|x|x|x|x|x|x|
+|libxc/6.2.2-GCC-12.3.0|x|x|x|x|x|x|x|x|

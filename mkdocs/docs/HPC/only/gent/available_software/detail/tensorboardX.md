@@ -19,9 +19,9 @@ module load tensorboardX/2.6.4-foss-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tensorboardX/2.6.4-foss-2024a|x|x|x|x|x|x|x|
-|tensorboardX/2.6.2.2-foss-2023b|x|x|x|x|x|x|x|
-|tensorboardX/2.6.2.2-foss-2023a|x|x|x|x|x|x|x|
-|tensorboardX/2.5.1-foss-2022a|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tensorboardX/2.6.4-foss-2024a|x|x|x|x|x|x|x|x|
+|tensorboardX/2.6.2.2-foss-2023b|x|x|x|x|x|x|x|x|
+|tensorboardX/2.6.2.2-foss-2023a|x|x|x|x|x|x|x|x|
+|tensorboardX/2.5.1-foss-2022a|-|-|-|-|-|x|x|-|

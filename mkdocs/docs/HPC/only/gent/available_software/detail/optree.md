@@ -19,6 +19,6 @@ module load optree/0.14.1-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|optree/0.14.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|optree/0.14.1-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

@@ -19,6 +19,6 @@ module load pyperf/2.7.0-GCCcore-12.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pyperf/2.7.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pyperf/2.7.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

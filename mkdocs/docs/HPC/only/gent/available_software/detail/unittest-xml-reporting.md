@@ -19,6 +19,6 @@ module load unittest-xml-reporting/3.1.0-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|unittest-xml-reporting/3.1.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|unittest-xml-reporting/3.1.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
