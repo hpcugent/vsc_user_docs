@@ -1,0 +1,37 @@
+OpenFOAM
+In this chapter, we outline best practices for using the centrally
+provided OpenFOAM installations on the VSC HPC infrastructure.
+Different OpenFOAM releases
+There are currently three different sets of versions of OpenFOAM
+available, each with its own versioning scheme:
+-   OpenFOAM versions released via http://openfoam.com: v3.0+,
+    v1706
+    -   see also http://openfoam.com/history/
+-   OpenFOAM versions released via https://openfoam.org: v4.1,
+    v5.0
+    -   see also https://openfoam.org/download/history/
+-   OpenFOAM versions released via
+    http://wikki.gridcore.se/foam-extend: v3.1
+Make sure you know which flavor of OpenFOAM you want to use, since there
+are important differences between the different versions w.r.t.
+features. If the OpenFOAM version you need is not available yet, see I want to use software that is not available on the clusters yet.
+Documentation & training material
+The best practices outlined here focus specifically on the use of
+OpenFOAM on the VSC HPC infrastructure. As such, they are intended to
+augment the existing OpenFOAM documentation rather than replace it. For
+more general information on using OpenFOAM, please refer to:
+-   OpenFOAM websites:
+    -   https://openfoam.com
+    -   https://openfoam.org
+    -   http://wikki.gridcore.se/foam-extend
+-   OpenFOAM user guides:
+    -   https://www.openfoam.com/documentation/user-guide
+    -   https://cfd.direct/openfoam/user-guide/
+-   OpenFOAM C++ source code guide: https://cpp.openfoam.org
+-   tutorials: https://wiki.openfoam.com/Tutorials
+-   recordings of "Introduction to OpenFOAM" training session at
+    UGent (May 2016):
+    <https://www.youtube.com/playlist?list=PLqxhJj6bcnY9RoIgzeF6xDh5L9bbeK3BL>
+Other useful OpenFOAM documentation:
+-   https://github.com/ParticulateFlow/OSCCAR-doc/blob/master/openFoamUserManual_PFM.pdf
+-   http://www.dicat.unige.it/guerrero/openfoam.html

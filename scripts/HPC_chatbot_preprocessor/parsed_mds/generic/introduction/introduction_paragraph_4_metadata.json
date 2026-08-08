@@ -1,0 +1,22 @@
+{
+    "main_title": "introduction",
+    "subtitle": "What-is-the-next-step",
+    "source_file": "../../mkdocs/docs/HPC/introduction.md",
+    "title_depth": 3,
+    "directory": "introduction",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/connecting/#first-time-connection-to-the-hpc-infrastructure",
+        "1": "https://docs.hpc.ugent.be/connecting/#transfer-files-tofrom-the-hpc",
+        "2": "https://docs.hpc.ugent.be/",
+        "3": "https://docs.hpc.ugent.be/",
+        "4": "https://docs.hpc.ugent.be/account",
+        "5": "https://docs.hpc.ugent.be/connecting",
+        "6": "https://docs.hpc.ugent.be/",
+        "7": "https://docs.hpc.ugent.be/"
+    },
+    "parent_title": "",
+    "previous_title": "introduction_paragraph_3",
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/introduction/#what-is-the-next-step"
+}
