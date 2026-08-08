@@ -1,0 +1,6 @@
+Transfer Files to/from the HPC
+Before you can do some work, you'll have to transfer the files you need from your desktop or department to the cluster. At the end of a job, you might want to transfer some files back.
+The preferred way to transfer files is by using an scp or sftp via the
+secure OpenSSH protocol.  ships with an implementation of OpenSSH, so you
+don't need to install any third-party software to use it. Just open a
+terminal window and jump in!
