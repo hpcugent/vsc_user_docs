@@ -1,0 +1,10 @@
+Hurray 🎉, we trained a deep learning model and achieved 97,64 percent accuracy.
+ Warning
+    When using TensorFlow specifically, you should actually submit jobs to a GPU cluster for better performance, see GPU clusters.
+    For the purpose of this example, we are running a very small TensorFlow workload on a CPU-only cluster.
+Next steps
+- Running interactive jobs
+- Running jobs with input/output data
+- Multi core jobs/Parallel Computing
+- Interactive and debug cluster
+For more examples see Program examples and Job script examples

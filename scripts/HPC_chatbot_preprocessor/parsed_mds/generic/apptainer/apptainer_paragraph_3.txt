@@ -1,0 +1,34 @@
+You can download linear_regression.py from [the official Tensorflow
+repository](https://github.com/tensorflow/tensorflow/blob/r1.12/tensorflow/examples/get_started/regression/linear_regression.py).
+MPI example
+It is also possible to execute MPI jobs within a container, but the
+following requirements apply:
+-   Mellanox IB libraries must be available from the container (install
+    the infiniband-diags, libmlx5-1 and libmlx4-1 OS packages)
+-   Use modules within the container (install the environment-modules
+    or lmod package in your container)
+-   Load the required module(s) before apptainer execution.
+-   Set C_INCLUDE_PATH variable in your container if it is required
+    during compilation time
+    (export C_INCLUDE_PATH=/usr/include/x86_64-linux-gnu/:$C_INCLUDE_PATH
+    for Debian flavours)
+Copy the testing image from /apps/gent/tutorials/Singularity to
+$VSC_SCRATCH
+cp /apps/gent/tutorials/Singularity/Debian8_UGentMPI.img $VSC_SCRATCH/
+For example to compile an [MPI
+example](https://github.com/open-mpi/ompi/blob/master/examples/ring_c.c):
+module load intel
+apptainer shell $VSC_SCRATCH/Debian8_UGentMPI.img
+export LANG=C
+export C_INCLUDE_PATH=/usr/include/x86_64-linux-gnu/:$C_INCLUDE_PATH
+mpiicc ompi/examples/ring_c.c -o ring_debian
+exit
+Example MPI job script:
+#!/bin/sh
+#PBS -N mpi
+#PBS -o apptainermpi.output
+#PBS -e apptainermpi.error
+#PBS -l nodes=2:ppn=15
+#PBS -l walltime=12:00:00
+module load intel vsc-mympirun
+mympirun --impi-fallback apptainer exec $VSC_SCRATCH/Debian8_UGentMPI.img ~/ring_debian

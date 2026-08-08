@@ -1,0 +1,16 @@
+{
+    "main_title": "getting_started",
+    "subtitle": "Inspect-your-results",
+    "source_file": "../../mkdocs/docs/HPC/getting_started.md",
+    "title_depth": 3,
+    "directory": "getting_started",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/running_batch_jobs/#monitoring-and-managing-your-jobs",
+        "1": "https://docs.hpc.ugent.be/linux-tutorial/beyond_the_basics/#inputoutput"
+    },
+    "parent_title": "",
+    "previous_title": "getting_started_paragraph_3",
+    "next_title": "getting_started_paragraph_5",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/getting_started/#inspect-your-results"
+}

@@ -1,0 +1,16 @@
+{
+    "main_title": "fine_tuning_job_specifications",
+    "subtitle": "Specifying-network-requirements",
+    "source_file": "../../mkdocs/docs/HPC/fine_tuning_job_specifications.md",
+    "title_depth": 2,
+    "directory": "fine_tuning_job_specifications",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#how-much-disk-space-do-i-get",
+        "1": "https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#quota"
+    },
+    "parent_title": "",
+    "previous_title": "fine_tuning_job_specifications_paragraph_7",
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/fine_tuning_job_specifications/#specifying-network-requirements"
+}

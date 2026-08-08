@@ -1,0 +1,18 @@
+{
+    "main_title": "FAQ",
+    "subtitle": "My-job-isn't-using-any-GPUs",
+    "source_file": "../../mkdocs/docs/HPC/FAQ.md",
+    "title_depth": 3,
+    "directory": "FAQ",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/fine_tuning_job_specifications/#specifying-memory-requirements",
+        "1": "https://docs.hpc.ugent.be/interactive_debug",
+        "2": "https://docs.hpc.ugent.be/running_interactive_jobs",
+        "3": "https://www.ugent.be/hpc/en/infrastructure"
+    },
+    "parent_title": "",
+    "previous_title": "FAQ_paragraph_2",
+    "next_title": "FAQ_paragraph_4",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/FAQ/#my-job-isnt-using-any-gpus"
+}

@@ -1,0 +1,34 @@
+Computation Workflow on the HPC
+Now, you can start using the HPC. You can always look up your VSC id later
+by visiting https://account.vscentrum.be.
+Adding multiple SSH public keys (optional)
+In case you are connecting from different computers to the login nodes,
+it is advised to use separate SSH public keys to do so. You should
+follow these steps.
+1.  Create a new public/private SSH key pair from Putty. Repeat the
+    process described in
+    section Generate a public/private key pair.
+2.  Go to https://account.vscentrum.be/django/account/edit
+3.  Upload the new SSH public key using the Add public key section. Make sure that your
+    public key is actually saved, because a public key will be refused
+    if it is too short, wrong type, or in a wrong format.
+4.  (optional) If you lost your key, you can delete the old key on the
+    same page. You should keep at least one valid public SSH key in your
+    account.
+5.  Take into account that it will take some time before the new SSH
+    public key is active in your account on the system; waiting for
+    15-30 minutes should be sufficient.
+Computation Workflow on the HPC
+A typical Computation workflow will be:
+1.  Connect to the HPC
+2.  Transfer your files to the HPC
+3.  Compile your code and test it
+4.  Create a job script
+5.  Submit your job
+6.  Wait while
+    1.  your job gets into the queue
+    2.  your job gets executed
+    3.  your job finishes
+7.  Move your results
+We'll take you through the different tasks one by one in the following
+chapters.

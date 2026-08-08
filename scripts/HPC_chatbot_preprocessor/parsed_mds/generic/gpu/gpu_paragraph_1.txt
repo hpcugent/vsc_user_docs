@@ -1,0 +1,48 @@
+GPU clusters
+Submitting jobs
+To submit jobs to the joltik GPU cluster, where each node provides 4
+NVIDIA V100 GPUs (each with 32GB of GPU memory), use:
+module swap cluster/joltik
+To submit to the accelgor GPU cluster, where each node provides 4
+NVIDIA A100 GPUs (each with 80GB GPU memory), use:
+module swap cluster/accelgor
+Then use the familiar qsub, qstat, etc. commands, taking into
+account the guidelines outlined in
+section Requesting (GPU) resources.
+Interactive jobs
+To interactively experiment with GPUs, you can submit an interactive job
+using qsub -I (and request one or more GPUs, see
+section Requesting (GPU) resources).
+Note that due to a bug in Slurm you will currently not be able to be
+able to interactively use MPI software that requires access to the GPUs.
+If you need this, please contact use via hpc@ugent.be.
+Hardware
+See https://www.ugent.be/hpc/en/infrastructure.
+Requesting (GPU) resources
+There are 2 main ways to ask for GPUs as part of a job:
+-   Either as a node property (similar to the number of cores per node
+    specified via ppn) using -l nodes=X:ppn=Y:gpus=Z (where the
+    ppn=Y is optional), or as a separate resource request (similar to
+    the amount of memory) via -l gpus=Z. Both notations give exactly
+    the same result. The -l gpus=Z is convenient if you only need one
+    node and you are fine with the default number of cores per GPU. The
+    -l nodes=...:gpus=Z notation is required if you want to run with
+    full control or in multinode cases like MPI jobs. If you do not
+    specify the number of GPUs by just using -l gpus, you get by
+    default 1 GPU.
+-   As a resource of its own, via --gpus X. In this case however, you
+    are not guaranteed that the GPUs are on the same node, so your
+    script or code must be able to deal with this.
+<!-- %  TODO We are providing a parallel wrapper wurker'' in the vsc-mympirun'' module to help with this
+%  (and with other more usual parallel work, similar to the usual worker'' or atools'' tools).
+%\item As a partial node resource, via -l nodes=...:mps=Z'' or -l mps=Z''.
+%  This triggers the Multi-Process Service (MPS, see https://docs.nvidia.com/deploy/pdf/CUDA_Multi_Process_Service_Overview.pdf),
+%  a way to ask for part of a GPU. The mps= value is a percentage of a GPU, and when submitting the job,
+%  you typically ask for a multiple of 100. The jobscript can then hand out portions of this (e.g. 50 per task) to the actual work.
+%  This is useful when a single application or MPI task cannot utilise a single/full GPU, and there are many other similar tasks that
+%  need to be processed or increasing the MPI ranks gives a speedup (e.g. when there is a significant portion of CPU work in the code).
+%  Unfortunately, this is not a silver bullet, and might require some experimenting to found out any potential benefits and proper tuning.
+%  TODO: how can a user now that an application is not using the full gpu resources?
+%  TODO this needs testing and there are some constraints (e.g. one mps job per node and thus one user per node using MPS)
+%  TODO needs proper integration with mypmirun / wurker
+%  TODO add separate section on MPS -->

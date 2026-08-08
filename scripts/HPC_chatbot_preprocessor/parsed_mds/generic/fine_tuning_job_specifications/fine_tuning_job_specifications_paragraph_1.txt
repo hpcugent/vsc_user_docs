@@ -1,0 +1,42 @@
+Fine-tuning Job Specifications
+[//]: # (ch:fine-tuning-job-specifications)
+As HPC system administrators, we often observe that the HPC resources are not
+optimally (or wisely) used. For example, we regularly notice that
+several cores on a computing node are not utilised, due to the fact that
+one sequential program uses only one core on the node. Or users run I/O
+intensive applications on nodes with "slow" network connections.
+Users often tend to run their jobs without specifying specific PBS Job
+parameters. As such, their job will automatically use the default
+parameters, which are not necessarily (or rarely) the optimal ones. This
+can slow down the run time of your application, but also block HPC resources
+for other users.
+Specifying the "optimal" Job Parameters requires some knowledge of your
+application (e.g., how many parallel threads does my application use,
+is there a lot of inter-process communication, how much memory does my
+application need) and also some knowledge about the HPC infrastructure
+(e.g., what kind of multi-core processors are available, which nodes
+have InfiniBand).
+There are plenty of monitoring tools on Linux available to the user,
+which are useful to analyse your individual application. The HPC environment
+as a whole often requires different techniques, metrics and time goals,
+which are not discussed here. We will focus on tools that can help to
+optimise your Job Specifications.
+Determining the optimal computer resource specifications can be broken
+down into different parts. The first is actually determining which
+metrics are needed and then collecting that data from the hosts. Some of
+the most commonly tracked metrics are CPU usage, memory consumption,
+network bandwidth, and disk I/O stats. These provide different
+indications of how well a system is performing, and may indicate where
+there are potential problems or performance bottlenecks. Once the data
+have actually been acquired, the second task is analysing the data and
+adapting your PBS Job Specifications.
+Another different task is to monitor the behaviour of an application at
+run time and detect anomalies or unexpected behaviour. Linux provides a
+large number of utilities to monitor the performance of its components.
+This chapter shows you how to measure:
+1.  Walltime
+2.  Memory usage
+3.  CPU usage
+4.  Disk (storage) needs
+5.  Network bottlenecks
+First, we allocate a compute node and move to our relevant directory:
