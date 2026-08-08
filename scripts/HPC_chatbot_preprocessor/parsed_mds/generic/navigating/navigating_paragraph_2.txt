@@ -1,0 +1,61 @@
+If you try to use ls on a file that doesn't exist, you
+will get a clear error message: 
+$ ls nosuchfile 
+ls: cannot access nosuchfile: No such file or directory
+Changing directory: "cd"
+To change to a different directory, you can use the cd
+command: 
+$ cd some_directory
+To change back to the previous directory you were in, there's a
+shortcut: cd -
+Using cd without an argument results in returning back to
+your home directory: 
+$ cd 
+$ pwd
+/user/home/gent/vsc400/vsc40000 
+Inspecting file type: "file"
+The file command can be used to inspect what type of file
+you're dealing with: 
+$ file afile.txt
+afile.txt: ASCII text
+$ file some_directory 
+some_directory: directory
+Absolute vs relative file paths
+An absolute filepath starts with / (or a variable which
+value starts with /), which is also called the root of
+the filesystem.
+Example: absolute path to your home directory:
+/user/home/gent/vsc400/vsc40000.
+A relative path starts from the current directory, and points to
+another location up or down the filesystem hierarchy.
+Example: some_directory/one.txt points to the file
+one.txt that is located in the subdirectory named
+some_directory of the current directory.
+There are two special relative paths worth mentioning:
+-   . is a shorthand for the current directory
+-   .. is a shorthand for the parent of the current
+    directory
+You can also use .. when constructing relative paths, for
+example: 
+$ cd $HOME/some_directory 
+$ ls ../afile.txt 
+../afile.txt 
+Permissions
+[//]: # (sec:permissions)
+Each file and directory has particular permissions set on it, which
+can be queried using ls -l.
+For example: 
+$ ls -l afile.txt 
+-rw-rw-r-- 1 vsc40000 agroup 2929176 Apr 12 13:29 afile.txt 
+The -rwxrw-r-- specifies both the type of file
+(- for files, d for directories (see first
+character)), and the permissions for user/group/others:
+1.  each triple of characters indicates whether the read
+    (r), write (w), execute
+    (x) permission bits are set or not
+2.  the 1st part rwx indicates that the owner
+    "vsc40000" of the file has all the rights
+3.  the 2nd part rw- indicates the members of the group
+    "agroup" only have read/write permissions (not execute)
+4.  the 3rd part r-- indicates that other users only
+    have read permissions
