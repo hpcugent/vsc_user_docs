@@ -14,13 +14,14 @@ The overview below shows which VTK installations are available per HPC-UGent Tie
 To start using VTK, load one of these modules using a `module load` command like:
 
 ```shell
-module load VTK/9.3.1-foss-2024a
+module load VTK/9.5.0-foss-2025a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|VTK/9.5.0-foss-2025a|x|x|x|x|x|x|x|x|
 |VTK/9.3.1-foss-2024a|x|x|x|x|x|x|x|x|
 |VTK/9.3.0-foss-2023b|x|x|x|x|x|x|x|x|
 |VTK/9.3.0-foss-2023a|x|x|x|x|x|x|x|x|
