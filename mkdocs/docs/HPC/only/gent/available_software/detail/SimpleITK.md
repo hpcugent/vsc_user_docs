@@ -14,12 +14,13 @@ The overview below shows which SimpleITK installations are available per HPC-UGe
 To start using SimpleITK, load one of these modules using a `module load` command like:
 
 ```shell
-module load SimpleITK/2.5.2-foss-2023b
+module load SimpleITK/2.5.3-foss-2025a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SimpleITK/2.5.3-foss-2025a|x|x|x|x|x|x|x|x|
 |SimpleITK/2.5.2-foss-2023b|x|x|x|x|x|x|x|x|
 |SimpleITK/2.3.1-foss-2023a|x|x|x|x|x|x|x|x|

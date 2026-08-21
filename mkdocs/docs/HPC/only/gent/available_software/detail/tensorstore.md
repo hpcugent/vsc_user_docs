@@ -14,11 +14,12 @@ The overview below shows which tensorstore installations are available per HPC-U
 To start using tensorstore, load one of these modules using a `module load` command like:
 
 ```shell
-module load tensorstore/0.1.65-foss-2023a
+module load tensorstore/0.1.72-gfbf-2024a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tensorstore/0.1.72-gfbf-2024a|x|x|x|x|x|x|x|x|
 |tensorstore/0.1.65-foss-2023a|x|x|x|x|x|x|x|x|
