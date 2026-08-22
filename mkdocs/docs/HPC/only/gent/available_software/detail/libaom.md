@@ -23,6 +23,6 @@ module load libaom/3.14.0-GCCcore-15.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libaom/3.14.0-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |libaom/3.10.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
-|libaom/3.10.0-GCCcore-14.2.0|-|-|-|-|-|-|-|x|
+|libaom/3.10.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |libaom/3.10.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |libaom/3.10.0-GCCcore-13.2.0|-|-|-|-|-|-|-|x|
