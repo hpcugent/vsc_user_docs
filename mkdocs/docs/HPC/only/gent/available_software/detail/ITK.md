@@ -14,12 +14,13 @@ The overview below shows which ITK installations are available per HPC-UGent Tie
 To start using ITK, load one of these modules using a `module load` command like:
 
 ```shell
-module load ITK/5.4.0-foss-2023b
+module load ITK/5.4.5-foss-2025a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ITK/5.4.5-foss-2025a|x|x|x|x|x|x|x|x|
 |ITK/5.4.0-foss-2023b|x|x|x|x|x|x|x|x|
 |ITK/5.3.0-foss-2023a|x|x|x|x|x|x|x|x|
