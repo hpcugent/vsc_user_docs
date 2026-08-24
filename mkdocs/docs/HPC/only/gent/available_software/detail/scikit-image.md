@@ -14,13 +14,14 @@ The overview below shows which scikit-image installations are available per HPC-
 To start using scikit-image, load one of these modules using a `module load` command like:
 
 ```shell
-module load scikit-image/0.25.0-foss-2024a
+module load scikit-image/0.25.0-foss-2025a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|scikit-image/0.25.0-foss-2025a|x|x|x|x|x|x|x|x|
 |scikit-image/0.25.0-foss-2024a|x|x|x|x|x|x|x|x|
 |scikit-image/0.24.0-foss-2023b|x|x|x|x|x|x|x|x|
 |scikit-image/0.22.0-foss-2023a|x|x|x|x|x|x|x|x|

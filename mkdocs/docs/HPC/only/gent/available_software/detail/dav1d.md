@@ -23,6 +23,6 @@ module load dav1d/1.5.3-GCCcore-15.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |dav1d/1.5.3-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |dav1d/1.5.2-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
-|dav1d/1.5.2-GCCcore-14.2.0|-|-|-|-|-|-|-|x|
+|dav1d/1.5.2-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |dav1d/1.5.2-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |dav1d/1.5.2-GCCcore-13.2.0|-|-|-|-|-|-|-|x|
