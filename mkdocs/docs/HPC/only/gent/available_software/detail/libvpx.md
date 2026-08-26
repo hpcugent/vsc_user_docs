@@ -23,6 +23,6 @@ module load libvpx/1.16.0-GCCcore-15.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libvpx/1.16.0-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |libvpx/1.15.2-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
-|libvpx/1.15.2-GCCcore-14.2.0|-|-|-|-|-|-|-|x|
+|libvpx/1.15.2-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |libvpx/1.15.2-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |libvpx/1.15.2-GCCcore-13.2.0|-|-|-|-|-|-|-|x|

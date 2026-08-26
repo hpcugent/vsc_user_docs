@@ -14,11 +14,12 @@ The overview below shows which dm-tree installations are available per HPC-UGent
 To start using dm-tree, load one of these modules using a `module load` command like:
 
 ```shell
-module load dm-tree/0.1.8-GCCcore-12.3.0
+module load dm-tree/0.1.9-gfbf-2024a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|dm-tree/0.1.9-gfbf-2024a|x|x|x|x|x|x|x|x|
 |dm-tree/0.1.8-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
