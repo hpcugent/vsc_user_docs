@@ -14,11 +14,12 @@ The overview below shows which PyWavelets installations are available per HPC-UG
 To start using PyWavelets, load one of these modules using a `module load` command like:
 
 ```shell
-module load PyWavelets/1.8.0-foss-2024a
+module load PyWavelets/1.9.0-foss-2025a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyWavelets/1.9.0-foss-2025a|x|x|x|x|x|x|x|x|
 |PyWavelets/1.8.0-foss-2024a|x|x|x|x|x|x|x|x|

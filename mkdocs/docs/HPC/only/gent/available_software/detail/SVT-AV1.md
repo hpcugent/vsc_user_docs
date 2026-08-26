@@ -23,6 +23,6 @@ module load SVT-AV1/4.1.0-GCCcore-15.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |SVT-AV1/4.1.0-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |SVT-AV1/3.1.2-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
-|SVT-AV1/3.1.2-GCCcore-14.2.0|-|-|-|-|-|-|-|x|
+|SVT-AV1/3.1.2-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |SVT-AV1/3.1.2-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |SVT-AV1/3.1.2-GCCcore-13.2.0|-|-|-|-|-|-|-|x|
