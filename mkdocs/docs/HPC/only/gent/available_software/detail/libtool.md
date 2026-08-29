@@ -24,6 +24,7 @@ module load libtool/2.5.4-GCCcore-15.2.0
 |libtool/2.5.4-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |libtool/2.5.4-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |libtool/2.5.4-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|libtool/2.5.4|x|x|x|x|x|x|x|x|
 |libtool/2.4.7-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |libtool/2.4.7-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |libtool/2.4.7-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

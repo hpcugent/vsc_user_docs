@@ -25,6 +25,7 @@ module load Autoconf/2.72-GCCcore-15.2.0
 |Autoconf/2.72-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |Autoconf/2.72-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |Autoconf/2.72-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|Autoconf/2.72|x|x|x|x|x|x|x|x|
 |Autoconf/2.71-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |Autoconf/2.71-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
 |Autoconf/2.71-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
