@@ -14,13 +14,14 @@ The overview below shows which pytest-rerunfailures installations are available 
 To start using pytest-rerunfailures, load one of these modules using a `module load` command like:
 
 ```shell
-module load pytest-rerunfailures/15.0-GCCcore-13.3.0
+module load pytest-rerunfailures/16.1-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pytest-rerunfailures/16.1-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |pytest-rerunfailures/15.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |pytest-rerunfailures/14.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |pytest-rerunfailures/12.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

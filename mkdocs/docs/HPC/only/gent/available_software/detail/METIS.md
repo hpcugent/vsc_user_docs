@@ -21,7 +21,7 @@ module load METIS/5.1.0-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|METIS/5.1.0-GCCcore-14.3.0|-|-|-|-|-|-|-|x|
+|METIS/5.1.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |METIS/5.1.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |METIS/5.1.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |METIS/5.1.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|

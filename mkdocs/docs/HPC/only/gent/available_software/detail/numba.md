@@ -22,6 +22,7 @@ module load numba/0.65.1-foss-2026.1
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |numba/0.65.1-foss-2026.1|x|x|x|x|x|x|x|x|
+|numba/0.62.0-foss-2025b|x|x|x|x|x|x|x|x|
 |numba/0.62.0-foss-2025a|x|x|x|x|x|x|x|x|
 |numba/0.60.0-foss-2024a|x|x|x|x|x|x|x|x|
 |numba/0.60.0-foss-2023b|x|x|x|x|x|x|x|x|

@@ -14,13 +14,14 @@ The overview below shows which UCX-CUDA installations are available per HPC-UGen
 To start using UCX-CUDA, load one of these modules using a `module load` command like:
 
 ```shell
-module load UCX-CUDA/1.18.0-GCCcore-14.2.0-CUDA-12.8.0
+module load UCX-CUDA/1.19.0-GCCcore-14.3.0-CUDA-12.9.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|UCX-CUDA/1.19.0-GCCcore-14.3.0-CUDA-12.9.1|x|-|-|-|-|-|-|-|
 |UCX-CUDA/1.18.0-GCCcore-14.2.0-CUDA-12.8.0|x|-|x|-|x|x|-|-|
 |UCX-CUDA/1.16.0-GCCcore-13.3.0-CUDA-12.6.0|x|-|x|-|x|x|-|-|
 |UCX-CUDA/1.15.0-GCCcore-13.2.0-CUDA-12.5.0|x|-|-|-|x|x|-|-|

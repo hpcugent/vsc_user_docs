@@ -14,12 +14,13 @@ The overview below shows which tlparse installations are available per HPC-UGent
 To start using tlparse, load one of these modules using a `module load` command like:
 
 ```shell
-module load tlparse/0.4.0-GCCcore-13.3.0
+module load tlparse/0.4.3-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tlparse/0.4.3-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |tlparse/0.4.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |tlparse/0.3.37-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
