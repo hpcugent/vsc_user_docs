@@ -14,13 +14,14 @@ The overview below shows which MUMPS installations are available per HPC-UGent T
 To start using MUMPS, load one of these modules using a `module load` command like:
 
 ```shell
-module load MUMPS/5.8.1-foss-2025a-metis
+module load MUMPS/5.8.1-foss-2025b-metis
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MUMPS/5.8.1-foss-2025b-metis|x|x|x|x|x|x|x|x|
 |MUMPS/5.8.1-foss-2025a-metis|x|x|x|x|x|x|x|x|
 |MUMPS/5.7.3-foss-2023b-metis-seq|x|x|x|x|x|x|x|x|
 |MUMPS/5.7.2-foss-2024a-metis|x|x|x|x|x|x|x|x|
