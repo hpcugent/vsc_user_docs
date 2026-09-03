@@ -21,7 +21,7 @@ module load cuDNN/9.15.0.57-CUDA-12.9.1
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cuDNN/9.15.0.57-CUDA-12.9.1|x|-|-|-|-|-|-|-|
+|cuDNN/9.15.0.57-CUDA-12.9.1|x|-|x|-|x|x|-|-|
 |cuDNN/9.5.1.17-CUDA-12.6.0|x|-|x|-|x|x|-|-|
 |cuDNN/9.5.0.50-CUDA-12.6.0|x|-|x|-|x|x|-|-|
 |cuDNN/8.9.2.26-CUDA-12.1.1|x|-|x|x|x|x|x|-|
