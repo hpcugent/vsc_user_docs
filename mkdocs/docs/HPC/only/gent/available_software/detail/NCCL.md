@@ -21,7 +21,7 @@ module load NCCL/2.27.7-GCCcore-14.3.0-CUDA-12.9.1
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NCCL/2.27.7-GCCcore-14.3.0-CUDA-12.9.1|x|-|-|-|-|-|-|-|
+|NCCL/2.27.7-GCCcore-14.3.0-CUDA-12.9.1|x|-|x|-|x|x|-|-|
 |NCCL/2.26.2-GCCcore-13.3.0-CUDA-12.6.0|x|-|x|-|x|x|-|-|
 |NCCL/2.22.3-GCCcore-13.3.0-CUDA-12.6.0|x|-|x|-|x|x|-|-|
 |NCCL/2.20.5-GCCcore-13.2.0-CUDA-12.4.0|x|-|x|-|x|x|-|-|

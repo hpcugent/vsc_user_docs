@@ -21,6 +21,6 @@ module load magma/2.9.0-foss-2025b-CUDA-12.9.1
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|magma/2.9.0-foss-2025b-CUDA-12.9.1|x|-|-|-|-|-|-|-|
+|magma/2.9.0-foss-2025b-CUDA-12.9.1|x|-|x|-|x|x|-|-|
 |magma/2.9.0-foss-2024a-CUDA-12.6.0|x|-|x|-|x|x|-|-|
 |magma/2.7.2-foss-2023a-CUDA-12.1.1|x|-|x|-|x|x|x|-|
