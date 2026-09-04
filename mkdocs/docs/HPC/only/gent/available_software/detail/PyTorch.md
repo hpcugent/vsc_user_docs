@@ -21,7 +21,7 @@ module load PyTorch/2.9.1-foss-2025b-CUDA-12.9.1
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyTorch/2.9.1-foss-2025b-CUDA-12.9.1|x|-|-|-|-|-|-|-|
+|PyTorch/2.9.1-foss-2025b-CUDA-12.9.1|x|-|-|-|-|x|-|-|
 |PyTorch/2.9.1-foss-2024a|x|x|x|x|x|x|x|x|
 |PyTorch/2.7.1-foss-2024a-CUDA-12.6.0|x|-|x|-|x|x|-|-|
 |PyTorch/2.6.0-foss-2024a|x|x|x|x|x|x|x|x|
