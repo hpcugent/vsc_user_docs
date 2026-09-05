@@ -1,0 +1,15 @@
+Introduction
+Welcome to the Linux tutorial, a comprehensive guide designed to give you essential skills for smooth interaction within a Linux environment.
+These skills are important to the HPC-UGent infrastructure, which operates on Red Hat Enterprise Linux.
+For more information see introduction to HPC.
+The guide aims to make you familiar with the Linux command line environment quickly.
+The tutorial goes through the following steps:
+1. Getting Started
+2. Navigating
+3. Manipulating files and directories
+4. Uploading files
+5. Beyond the basics
+Do not forget Common pitfalls, as this can save you some troubleshooting.
+Useful topics
+- More on the HPC infrastructure.
+- Cron Scripts: run scripts automatically at periodically fixed times, dates, or intervals.

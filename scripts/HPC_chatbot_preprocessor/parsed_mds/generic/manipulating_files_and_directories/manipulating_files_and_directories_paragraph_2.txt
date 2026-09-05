@@ -1,0 +1,43 @@
+Every file, directory, and link has a set of permissions. These
+permissions consist of permission groups and permission types. The
+permission groups are:
+1.  User - a particular user (account)
+2.  Group - a particular group of users (may be user-specific group with
+    only one member)
+3.  Other - other users in the system
+The permission types are:
+1.  Read - For files, this gives permission to read the contents of a
+    file
+2.  Write - For files, this gives permission to write data to the file.
+    For directories, it allows users to add or remove files to a
+    directory.
+3.  Execute - For files this gives permission to execute a file as
+    through it were a script. For directories, it allows users to open
+    the directory and look at the contents.
+Any time you run ls -l you'll see a familiar line of -rwx------ or
+similar combination of the letters r, w, x and - (dashes). These
+are the permissions for the file or directory. (See also the 
+previous section on permissions)
+$ ls -l
+total 1
+-rw-r--r--. 1 vsc40000 mygroup 4283648 Apr 12 15:13 articleTable.csv
+drwxr-x---. 2 vsc40000 mygroup 40 Apr 12 15:00 Project_GoldenDragon
+Here, we see that articleTable.csv is a file (beginning the line with
+-) has read and write permission for the user vsc40000 (rw-), and read
+permission for the group mygroup as well as all other users (r-- and
+r--).
+The next entry is Project_GoldenDragon. We see it is a directory
+because the line begins with a d. It also has read, write, and execute
+permission for the vsc40000 user (rwx). So that user can look into the
+directory and add or remove files. Users in the mygroup can also look
+into the directory and read the files. But they can't add or remove
+files (r-x). Finally, other users can read files in the directory, but
+other users have no permissions to look in the directory at all (---).
+Maybe we have a colleague who wants to be able to add files to the
+directory. We use chmod to change the modifiers to the directory to
+let people in the group write to the directory:
+$ chmod g+w Project_GoldenDragon
+$ ls -l
+total 1
+-rw-r--r--. 1 vsc40000 mygroup 4283648 Apr 12 15:13 articleTable.csv
+drwxrwx---. 2 vsc40000 mygroup 40 Apr 12 15:00 Project_GoldenDragon
