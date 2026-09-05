@@ -19,7 +19,7 @@ module load HighFive/2.10.1-gompi-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HighFive/2.10.1-gompi-2024a|x|x|x|x|x|x|x|
-|HighFive/2.7.1-gompi-2023a|-|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HighFive/2.10.1-gompi-2024a|x|x|x|x|x|x|x|x|
+|HighFive/2.7.1-gompi-2023a|-|x|x|x|x|x|x|x|

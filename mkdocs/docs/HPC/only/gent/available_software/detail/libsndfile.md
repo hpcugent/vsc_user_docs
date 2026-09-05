@@ -14,16 +14,17 @@ The overview below shows which libsndfile installations are available per HPC-UG
 To start using libsndfile, load one of these modules using a `module load` command like:
 
 ```shell
-module load libsndfile/1.2.2-GCCcore-14.3.0
+module load libsndfile/1.2.2-GCCcore-15.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libsndfile/1.2.2-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|libsndfile/1.2.2-GCCcore-14.2.0|x|x|x|x|x|x|x|
-|libsndfile/1.2.2-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|libsndfile/1.2.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|libsndfile/1.2.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|libsndfile/1.1.0-GCCcore-11.3.0|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libsndfile/1.2.2-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|libsndfile/1.2.2-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|libsndfile/1.2.2-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|libsndfile/1.2.2-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|libsndfile/1.2.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|libsndfile/1.2.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|libsndfile/1.1.0-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

@@ -19,7 +19,7 @@ module load picard/3.0.0-Java-17
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|picard/3.0.0-Java-17|x|x|x|x|x|x|x|
-|picard/2.25.1-Java-11|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|picard/3.0.0-Java-17|x|x|x|x|x|x|x|x|
+|picard/2.25.1-Java-11|x|x|x|x|x|x|x|x|
