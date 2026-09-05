@@ -1,4 +1,3 @@
-{% import './macros/nb.md' as nb %}
 # Beyond the basics
 
 Now that you've seen some of the more basic commands, let's take a look
@@ -123,8 +122,11 @@ The shell will expand certain things, including:
     their value; example: `echo "I am $USER"` or `echo "I am ${USER}"`
 
 4.  square brackets can be used to list a number of options for a
-    particular characters; {{nb.nb("example: `ls *.[oe][0-9]`.")}} This will list all
-    files starting with whatever characters (`*`), then a dot (`.`),
+    particular characters. 
+
+    example: `ls *.[oe][0-9]`
+
+    This will list all files starting with whatever characters (`*`), then a dot (`.`),
     then either an 'o' or an 'e' (`[oe]`), then a character from '0' to
     '9' (so any digit) (`[0-9]`). So this filename will match:
     `anything.o5`, but this one won't: `anything.o52`.
@@ -188,7 +190,7 @@ macOS. `top` will update every second and has a few interesting
 commands.
 
 To see only your processes, type `u` and your username after starting
-`top`, (you can also do this with {{nb.nb("`top -u $USER`")}}). The default is to
+`top`, (you can also do this with `top -u $USER`). The default is to
 sort the display by `%CPU`. To change the sort order, use `<` and `>`
 like arrow keys.
 
