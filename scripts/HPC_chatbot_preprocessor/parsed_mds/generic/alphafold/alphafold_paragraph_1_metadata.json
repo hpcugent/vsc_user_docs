@@ -1,0 +1,17 @@
+{
+    "main_title": "alphafold",
+    "subtitle": "Using-AlphaFold-on-HPC-UGent-infrastructure",
+    "source_file": "../../mkdocs/docs/HPC/alphafold.md",
+    "title_depth": 2,
+    "directory": "alphafold",
+    "links": {
+        "0": "https://www.youtube.com/watch?v=jP9Qg1yBGcs",
+        "1": "https://www.vscentrum.be/_files/ugd/5446c2_f19a8723f7f7460ebe990c28a53e56a2.pdf?index=true",
+        "2": "https://docs.hpc.ugent.be/gpu"
+    },
+    "parent_title": "",
+    "previous_title": null,
+    "next_title": "alphafold_paragraph_2",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/alphafold/#using-alphafold-on-hpc-ugent-infrastructure"
+}
