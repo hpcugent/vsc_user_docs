@@ -15,7 +15,7 @@ hpc_software_install: https://www.ugent.be/hpc/en/support/software-installation-
 hpcname: hpcugent
 loginnode: login.hpc.ugent.be
 loginhost: gligar12.gastly.os
-altloginhost: gligar13.gastly.os,gligar14.gastly.os,gligar15.gastly.os
+altloginhost: gligar13.gastly.os
 modules_last_updated: Thu, 09 Apr 2026 at 07:58:58 CEST # This line is automatically updated by scripts/available_modules/available_modules.py
 # get these with ssh-keyscan gligar01.ugent.be > file
 # ssh-keygen -l -f file
