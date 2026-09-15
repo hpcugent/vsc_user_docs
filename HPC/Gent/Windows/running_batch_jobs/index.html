@@ -2349,15 +2349,15 @@ nodes.</p>
 <p>To use other clusters, you can swap the <code>cluster</code> module. This is a
 special module that change what modules are available for you, and what
 cluster your jobs will be queued in.</p>
-<p>By default you are working on <code>doduo</code>. To switch to, e.g., <code>donphan</code> you need to redefine
+<p>By default you are working on <code>skiddo</code>. To switch to, e.g., <code>donphan</code> you need to redefine
 the environment so you get access to all modules installed on the <code>donphan</code>
 cluster, and to be able to submit jobs to the <code>donphan</code> scheduler so your jobs
-will start on <code>donphan</code> instead of the default <code>doduo</code> cluster.</p>
+will start on <code>donphan</code> instead of the default <code>skiddo</code> cluster.</p>
 <div class="highlight"><pre><span></span><code>module swap cluster/donphan
 </code></pre></div>
 <p>Note: the <code>donphan</code> modules may not work directly on the login nodes, because the
 login nodes do not have the same architecture as the <code>donphan</code> cluster, they have
-the same architecture as the <code>doduo</code> cluster however, so this is why by default
+the same architecture as the <code>skiddo</code> cluster however, so this is why by default
 software works on the login nodes. See <a href="../troubleshooting/#running-software-that-is-incompatible-with-host">the section on Running software that is incompatible with host</a> for why this is and how to fix
 this.</p>
 <p>To list the available cluster modules, you can use the
@@ -2396,27 +2396,27 @@ By only swapping to <code>env/slurm/donphan</code>, jobs that are submitted will
 The same approach can be used to submit jobs to another cluster, of course.</p>
 <p>Each <code>cluster</code> module not only loads the corresponding <code>env/slurm/...</code> module to control where jobs are sent to, 
 but also two other <code>env/...</code> modules which control other parts of the environment.
-For example, for the <code>doduo</code> cluster, 
-loading the <code>cluster/doduo</code> module corresponds to loading 3 different <code>env/</code> modules:</p>
+For example, for the <code>skiddo</code> cluster, 
+loading the <code>cluster/skiddo</code> module corresponds to loading 3 different <code>env/</code> modules:</p>
 <table>
 <thead>
 <tr>
-<th><code>env/</code> module for <code>doduo</code></th>
+<th><code>env/</code> module for <code>skiddo</code></th>
 <th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>env/slurm/doduo</code></td>
+<td><code>env/slurm/skiddo</code></td>
 <td>Changes <code>$SLURM_CLUSTERS</code> which specifies the cluster where jobs are sent to.</td>
 </tr>
 <tr>
-<td><code>env/software/doduo</code></td>
+<td><code>env/software/skiddo</code></td>
 <td>Changes <code>$MODULEPATH</code>, which controls what software modules are available for loading.</td>
 </tr>
 <tr>
-<td><code>env/vsc/doduo</code></td>
-<td>Changes the set of <code>$VSC_</code> environment variables that are specific to the <code>doduo</code> cluster</td>
+<td><code>env/vsc/skiddo</code></td>
+<td>Changes the set of <code>$VSC_</code> environment variables that are specific to the <code>skiddo</code> cluster</td>
 </tr>
 </tbody>
 </table>

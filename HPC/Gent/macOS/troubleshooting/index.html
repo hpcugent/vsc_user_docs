@@ -2037,8 +2037,8 @@ they work for that cluster. That means that if the cluster and the login
 nodes have a different CPU architecture, software loaded using modules
 might not work.</p>
 <p>If you want to test software on the login nodes, make sure the
-<code>cluster/doduo</code> module is loaded (with <code>module swap cluster/doduo</code>, see <a href="../running_batch_jobs/#specifying-the-cluster-on-which-to-run">Specifying the cluster on which to run</a>), since
-the login nodes and doduo have the same CPU architecture.</p>
+<code>cluster/skiddo</code> module is loaded (with <code>module swap cluster/skiddo</code>, see <a href="../running_batch_jobs/#specifying-the-cluster-on-which-to-run">Specifying the cluster on which to run</a>), since
+the login nodes and skiddo have the same CPU architecture.</p>
 <p>If modules are already loaded, and then we swap to a different cluster,
 all our modules will get reloaded. This means that all current modules
 will be unloaded and then loaded again, so they'll work on the newly
@@ -2075,7 +2075,7 @@ In the case of the Worker example above, the latter implies that you are running
 on top of a Perl installation that is optimized specifically for the CPUs of the workernodes of that cluster,
 which may not be compatible with the CPUs of the login nodes, triggering the <code>Illegal instruction</code> error.</p>
 <p>The cluster modules are split up into several <code>env/*</code> "submodules" to help deal with this problem.
-For example, by using <code>module swap env/slurm/donphan</code> instead of <code>module swap cluster/donphan</code> (starting from the default environment, the <code>doduo</code> cluster), you can update your environment to submit jobs to <code>donphan</code>, while still using the software installations that are specific to the <code>doduo</code> cluster (which are compatible with the login nodes since the <code>doduo</code> cluster workernodes have the same CPUs).
+For example, by using <code>module swap env/slurm/donphan</code> instead of <code>module swap cluster/donphan</code> (starting from the default environment, the <code>skiddo</code> cluster), you can update your environment to submit jobs to <code>donphan</code>, while still using the software installations that are specific to the <code>skiddo</code> cluster (which are compatible with the login nodes since the <code>skiddo</code> cluster workernodes have the same CPUs).
 The same goes for the other clusters as well of course.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>

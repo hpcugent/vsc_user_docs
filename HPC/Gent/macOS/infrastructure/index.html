@@ -1335,13 +1335,25 @@
 <h2 id="tier2-clusters-of-ghent-university">Tier2 clusters of Ghent University<a class="headerlink" href="#tier2-clusters-of-ghent-university" title="Permanent link">#</a></h2>
 <p>The Stevin computing infrastructure consists of several Tier2 clusters
 which are hosted in the S10 datacenter of Ghent University.</p>
-<p>This infrastructure is co-financed by FWO and Department of Economy,
-Science and Innovation (EWI).</p>
+<p>This infrastructure is co-financed by FWO and the Flemish Government.</p>
 <h2 id="tier-2-login-nodes">Tier-2 login nodes<a class="headerlink" href="#tier-2-login-nodes" title="Permanent link">#</a></h2>
 <p>Log in to the HPC-UGent Tier-2 infrastructure via <a href="https://login.hpc.ugent.be">https://login.hpc.ugent.be</a>
 or using SSH via <code>login.hpc.ugent.be</code>.</p>
 <p>Read more info on <a href="../web_portal/">using the web portal</a>,
 and <a href="../connecting/">about making a connection with SSH</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since mid-september 2026, per-user resource limits are in place on our Tier-2 login nodes, which can be consulted by running the <code>ulimit -a</code> command. </p>
+<p>These limits include:</p>
+<ul>
+<li>max. 2 GB of virtual memory</li>
+<li>max. 496 running processes/threads</li>
+<li>max. 2 hours of CPU time per process</li>
+</ul>
+<p>Processes that exceed any of these limits may be terminated by the operating system or fail to start successfully.</p>
+<p><strong>Please only use the login nodes as an access portal!</strong></p>
+<p>We also provide an <a href="#interactive-debug-cluster">interactive debug cluster</a>, which is specifically intended for testing, debugging, and other interactive work that exceeds the login node limits.</p>
+</div>
 <h2 id="tier-2-compute-clusters">Tier-2 compute clusters<a class="headerlink" href="#tier-2-compute-clusters" title="Permanent link">#</a></h2>
 <h3 id="cpu-clusters">CPU clusters<a class="headerlink" href="#cpu-clusters" title="Permanent link">#</a></h3>
 <p>The HPC-UGent Tier-2 infrastructure currently included several standard
@@ -1362,8 +1374,8 @@ CPU-only clusters, of different generations (listed from old to new).</p>
 </thead>
 <tbody>
 <tr>
-<td>doduo (default cluster)</td>
-<td>128</td>
+<td>doduo</td>
+<td>64</td>
 <td>2x 48-core AMD EPYC 7552 (Rome @ 2.2 GHz)</td>
 <td>250 GiB</td>
 <td>180GB SSD</td>
@@ -1389,7 +1401,7 @@ CPU-only clusters, of different generations (listed from old to new).</p>
 <td>RHEL 9</td>
 </tr>
 <tr>
-<td>skiddo</td>
+<td>skiddo (default cluster)</td>
 <td>28</td>
 <td>2x 128-core AMD EPYC 9755 (Turin  @ 2.7 GHz)</td>
 <td>720 GiB</td>
