@@ -15,6 +15,22 @@ or using SSH via `login.hpc.ugent.be`.
 Read more info on [using the web portal](web_portal.md),
 and [about making a connection with SSH](connecting.md).
 
+!!! note
+    Since mid-september 2026, per-user resource limits are in place on our Tier-2 login nodes, which can be consulted by running the ``ulimit -a`` command. 
+    
+    These limits include:
+
+    * max. 2 GB of virtual memory
+    * max. 496 running processes/threads
+    * max. 2 hours of CPU time per process
+
+    Processes that exceed any of these limits may be terminated by the operating system or fail to start successfully.
+
+     **Please only use the login nodes as an access portal!**
+
+    We also provide an [interactive debug cluster](#interactive-debug-cluster), which is specifically intended for testing, debugging, and other interactive work that exceeds the login node limits.
+
+
 ## Tier-2 compute clusters
 
 ### CPU clusters
