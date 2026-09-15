@@ -210,17 +210,17 @@ in a variety of ways.
 We limit ourselves to determining the hostname: 
 ```
 $ hostname 
-gligar09.gligar.os
+gligar12.gligar.os
 
 $ echo $HOSTNAME 
-gligar09.gligar.os
+gligar12.gligar.os
 ```
 
 And querying some basic information about the Linux kernel:
 ```
-$ uname -a 
-Linux gligar10.gastly.os 5.14.0-570.42.2.el9_6.x86_64 #1 SMP PREEMPT_DYNAMIC
-    Mon Sep 8 12:15:13 EDT 2025 x86_64 x86_64 x86_64 GNU/Linux
+$ uname -a
+Linux gligar12.gastly.os 5.14.0-687.44.1.el9_8.x86_64 #1 SMP PREEMPT_DYNAMIC 
+    Mon Aug 31 23:56:47 EDT 2026 x86_64 x86_64 x86_64 GNU/Linux
 ```
 
 ## Exercises
