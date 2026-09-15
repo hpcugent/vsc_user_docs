@@ -14,12 +14,14 @@ The overview below shows which dotNET-Core installations are available per HPC-U
 To start using dotNET-Core, load one of these modules using a `module load` command like:
 
 ```shell
-module load dotNET-Core/8.0.302
+module load dotNET-Core/8.0.411
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|dotNET-Core/8.0.302|x|x|x|x|x|x|x|
-|dotNET-Core/8.0(@dotNET-Core/8.0.302)|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|dotNET-Core/8.0.411|-|-|-|-|-|-|-|x|
+|dotNET-Core/8.0.302|x|x|x|x|x|x|x|-|
+|dotNET-Core/8.0(@dotNET-Core/8.0.411)|-|-|-|-|-|-|-|x|
+|dotNET-Core/8.0(@dotNET-Core/8.0.302)|x|x|x|x|x|x|x|-|

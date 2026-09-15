@@ -19,6 +19,6 @@ module load BigStitcher-Spark/0.1.0-2025.08.18-foss-2023a-Java-17
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BigStitcher-Spark/0.1.0-2025.08.18-foss-2023a-Java-17|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BigStitcher-Spark/0.1.0-2025.08.18-foss-2023a-Java-17|x|x|x|x|x|x|x|x|

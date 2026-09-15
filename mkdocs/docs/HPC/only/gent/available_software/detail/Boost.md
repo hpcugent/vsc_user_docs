@@ -14,19 +14,21 @@ The overview below shows which Boost installations are available per HPC-UGent T
 To start using Boost, load one of these modules using a `module load` command like:
 
 ```shell
-module load Boost/1.88.0-GCC-14.3.0
+module load Boost/1.90.0-GCCcore-15.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Boost/1.88.0-GCC-14.3.0|x|x|x|x|x|x|x|
-|Boost/1.88.0-GCC-14.2.0|x|x|x|x|x|x|x|
-|Boost/1.85.0-GCC-13.3.0|x|x|x|x|x|x|x|
-|Boost/1.83.0-GCC-13.2.0|x|x|x|x|x|x|x|
-|Boost/1.82.0-intel-compilers-2023.1.0|x|x|x|x|x|x|x|
-|Boost/1.82.0-GCC-12.3.0|x|x|x|x|x|x|x|
-|Boost/1.81.0-GCC-12.2.0|-|-|-|-|-|x|x|
-|Boost/1.75.0-GCC-12.3.0|x|x|x|x|x|x|x|
-|Boost/1.74.0-GCC-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Boost/1.90.0-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|Boost/1.88.0-intel-compilers-2025.1.1|x|x|x|x|x|x|x|x|
+|Boost/1.88.0-GCC-14.3.0|x|x|x|x|x|x|x|x|
+|Boost/1.88.0-GCC-14.2.0|x|x|x|x|x|x|x|x|
+|Boost/1.85.0-GCC-13.3.0|x|x|x|x|x|x|x|x|
+|Boost/1.83.0-GCC-13.2.0|x|x|x|x|x|x|x|x|
+|Boost/1.82.0-intel-compilers-2023.1.0|x|x|x|x|x|x|x|-|
+|Boost/1.82.0-GCC-12.3.0|x|x|x|x|x|x|x|x|
+|Boost/1.81.0-GCC-12.2.0|-|-|-|-|-|x|x|-|
+|Boost/1.75.0-GCC-12.3.0|x|x|x|x|x|x|x|-|
+|Boost/1.74.0-GCC-12.3.0|x|x|x|x|x|x|x|x|

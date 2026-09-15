@@ -19,7 +19,7 @@ module load ollama/0.11.10-GCCcore-14.2.0-CUDA-12.8.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ollama/0.11.10-GCCcore-14.2.0-CUDA-12.8.0|x|-|x|-|x|x|-|
-|ollama/0.11.10-GCCcore-14.2.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ollama/0.11.10-GCCcore-14.2.0-CUDA-12.8.0|x|-|x|-|x|x|-|-|
+|ollama/0.11.10-GCCcore-14.2.0|x|x|x|x|x|x|x|x|

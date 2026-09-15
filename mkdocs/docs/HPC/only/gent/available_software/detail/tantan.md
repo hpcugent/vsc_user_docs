@@ -19,7 +19,7 @@ module load tantan/51-GCC-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tantan/51-GCC-13.3.0|x|x|x|x|x|x|x|
-|tantan/50-GCC-12.3.0|-|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|tantan/51-GCC-13.3.0|x|x|x|x|x|x|x|x|
+|tantan/50-GCC-12.3.0|-|x|x|x|x|x|x|x|

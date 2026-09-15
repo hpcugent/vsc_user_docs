@@ -14,11 +14,12 @@ The overview below shows which optree installations are available per HPC-UGent 
 To start using optree, load one of these modules using a `module load` command like:
 
 ```shell
-module load optree/0.14.1-GCCcore-13.3.0
+module load optree/0.18.0-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|optree/0.14.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|optree/0.18.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|optree/0.14.1-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

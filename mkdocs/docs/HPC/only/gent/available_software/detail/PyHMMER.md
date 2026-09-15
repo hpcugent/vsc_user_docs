@@ -19,7 +19,7 @@ module load PyHMMER/0.10.15-gompi-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyHMMER/0.10.15-gompi-2023b|x|x|x|x|x|x|x|
-|PyHMMER/0.10.6-gompi-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyHMMER/0.10.15-gompi-2023b|x|x|x|x|x|x|x|x|
+|PyHMMER/0.10.6-gompi-2023a|x|x|x|x|x|x|x|-|

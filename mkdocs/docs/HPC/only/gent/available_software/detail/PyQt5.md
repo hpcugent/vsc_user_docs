@@ -19,8 +19,8 @@ module load PyQt5/5.15.11-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyQt5/5.15.11-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|PyQt5/5.15.10-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|PyQt5/5.15.10-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PyQt5/5.15.11-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|PyQt5/5.15.10-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|PyQt5/5.15.10-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
