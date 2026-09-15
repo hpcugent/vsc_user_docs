@@ -61,9 +61,9 @@ homedir: /user/home/gent/vsc400/vsc40000
 datadir: /user/data/gent/vsc400/vsc40000
 scratchdir: /user/scratch/gent/vsc400/vsc40000
 jobid: 123456
-computenode: node3501.doduo.gent.vsc
-computenodeshort: node3501
-defaultcluster: doduo
+computenode: node4201.skiddo.gent.vsc
+computenodeshort: node4201
+defaultcluster: skiddo
 othercluster: donphan
 # Support
 hpcinfo: hpc@ugent.be
