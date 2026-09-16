@@ -1346,11 +1346,11 @@ and <a href="../connecting/">about making a connection with SSH</a>.</p>
 <p>Since mid-september 2026, per-user resource limits are in place on our Tier-2 login nodes, which can be consulted by running the <code>ulimit -a</code> command. </p>
 <p>These limits include:</p>
 <ul>
-<li>max. 2 GB of virtual memory</li>
-<li>max. 496 running processes/threads</li>
+<li>max. 2 GB of virtual memory per session</li>
+<li>max. 496 running processes/threads total across all sessions</li>
 <li>max. 2 hours of CPU time per process</li>
 </ul>
-<p>Processes that exceed any of these limits may be terminated by the operating system or fail to start successfully.</p>
+<p>Processes that exceed any of these limits will be terminated by the operating system or fail to start successfully.</p>
 <p><strong>Please only use the login nodes as an access portal!</strong></p>
 <p>We also provide an <a href="#interactive-debug-cluster">interactive debug cluster</a>, which is specifically intended for testing, debugging, and other interactive work that exceeds the login node limits.</p>
 </div>

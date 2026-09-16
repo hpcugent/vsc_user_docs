@@ -1339,44 +1339,47 @@
 <p>Please keep in mind, that this is not a <code>VS Code</code> manual,
 it is only our recommendation how to connect to the HPC-UGent infrastructure using the <code>VS Code</code> tunnel. </p>
 <p>For <code>VS Code</code> documentation, see <a href="https://code.visualstudio.com/docs">https://code.visualstudio.com/docs</a></p>
-<p>We only support <code>VS Code</code> tunnel access via the <code>VS Code</code> application (installed locally).
-To connect to the <code>VS Code</code> tunnel using the URL via a web browser is not supported,
-since web access might not work from all browser or operational system.
-The only confirmed way to connect via a browser is using Windows 11 and Edge. </p>
+<p>We only support <code>VS Code</code> tunnel access via the <code>VS Code</code> application installed on your local computer.</p>
+<p>Connecting to the <code>VS Code</code> tunnel using the URL via a web browser is not supported, since web access might not work from all browser or operational system.
+The only confirmed way to connect via a browser is using Windows 11 and Edge.</p>
+<p>Please note that right now you can only have <strong>one tunnel per cluster</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please do not use <code>VS Code</code> to ssh to the login nodes, but always use a <code>VS Code</code> Tunnel connection, preferably using the <a href="../interactive_debug/">interactive and debug cluster</a>.</p>
+</div>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
-<p>We do recommend to install the <a href="https://code.visualstudio.com/docs/remote/remote-overview">remote development</a>
-extension pack for the <code>VS Code</code> App.</p>
+<p>We do recommend to install the <a href="https://code.visualstudio.com/docs/remote/remote-overview">remote development</a> extension pack for the <code>VS Code</code> application.</p>
 <h2 id="connection">Connection<a class="headerlink" href="#connection" title="Permanent link">#</a></h2>
-<p>In the <a href="../web_portal/">web portal</a>, under the "Interactive Apps" choose <code>VS Code</code> Tunnel,
+<p>In the <a href="../web_portal/">web portal</a>, under the "Interactive Apps" choose "VS Code Tunnel",
 select the parameters and launch your job by clicking <span class="keys"><kbd>Launch</kbd></span>
 When your job has started, connect by clicking <span class="keys"><kbd>Connect</kbd></span></p>
-<p>In the new browser tab or window, for the question
-<code>How would you like to log in to Visual Studio Code?</code> choose <code>Microsoft Account</code> 
-(using the arrow keys on your keyboard, then hit <span class="keys"><kbd>Enter</kbd></span>).
-Then follow the instruction to authenticate yourself.</p>
+<p>A new browser tab or window will open, showing a terminal session. For the question <code>How would you like to log in to Visual Studio Code?</code> choose <code>Microsoft Account</code> (using the arrow keys on your keyboard, then hit <span class="keys"><kbd>Enter</kbd></span>).</p>
+<p>An URL and authentication code are shown. Click the URL to open it, then enter the authentication code, select your Microsoft account and click <span class="keys"><kbd>Continue</kbd></span>. The tunnel is now ready to be used.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If you are an UGent user, and you get an error message something like "You do not have access to this"
+<p>If you are an UGent user, and you get an error message like "You do not have access to this"
 during the Microsoft Authentication, then you might have to
 <a href="https://dictselfservice.ugent.be/index.php?page=requestform&amp;form=deviceCodeAuth">whitelist yourself</a>
 You can use as motivation "Needed for <code>VS Code</code> tunnel for HPC" (You have to do it only once.)</p>
+<p>The ability to whitelist yourself is only available for UGent staff. Other users should request to be whitelisted via <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#112;&#99;&#64;&#117;&#103;&#101;&#110;&#116;&#46;&#98;&#101;">&#104;&#112;&#99;&#64;&#117;&#103;&#101;&#110;&#116;&#46;&#98;&#101;</a>.</p>
 <p>Please be aware, that it might take up to half an hour until the whitelisting become effective.</p>
 </div>
-<p>If you are not connected automatically to the tunnel, please select "connect to..." and then
-"Connect to Tunnel" using Microsoft Account and select the tunnel named <code>vsc-&lt;your vsc account&gt;-&lt;cluster&gt;</code>.
-Please note that right now you can only have one tunnel per cluster.</p>
+<p>Launch the <code>VS Code</code> application on your local computer and click the button in the bottom left corner to "Open a remote window".</p>
+<p>When asked to "Select an option to open a Remote Window", select "Tunnel", which will automatically install
+the "Remote-tunnels" extension (if not already installed).</p>
+<p>If you are not connected automatically to the tunnel, please select "Connect to..." and then "Connect to Tunnel". When asked "What type of account did you use to start this tunnel", select "Microsoft account". 
+In the newly opened browser tab or window saying "The extension 'Remote - Tunnels' wants to sign in using Microsoft",
+click <span class="keys"><kbd>Allow</kbd></span>.</p>
+<p>Then select the tunnel named <code>vsc-&lt;your vsc account&gt;-&lt;cluster&gt;</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>If you are asked to update <code>VS Code</code> CLI on your remote server, choose <span class="keys"><kbd>Not Now</kbd></span>.
-You do not have permission to update the CLI, as it is centrally installed.
-This means that your <code>VS Code</code> App is newer than the CLI on our systems.
-We update the centrally installed CLI time to time,
-but the upgrade rate of the App/CLI is very high,
-so it is hard for us to follow it tightly.
-If you suspect that the too old version of CLI might cause problem, please send us a
-<a href="https://www.ugent.be/hpc/en/support/software-installation-request">software installation request</a>
-for <code>code-cli</code>. </p>
-<p>Please do not use <code>VS Code</code> to ssh to the login nodes,
-but always use a <code>VS Code</code> Tunnel connection,
-preferably using the <a href="../interactive_debug/">interactive and debug cluster</a> </p>
+You do not have permission to update the CLI, as it is centrally installed on our systems.</p>
+<p>This means that your <code>VS Code</code> application is newer than the CLI on our systems.
+We update the centrally installed CLI from time to time, but the upgrade rate of the application/CLI is very high,
+so it is hard for us to follow it tightly.</p>
+<p>If you suspect that the too old version of CLI might cause problem, please send us a <a href="https://www.ugent.be/hpc/en/support/software-installation-request">software installation request</a> for <code>code-cli</code>. </p>
+</div>
 
 
   
