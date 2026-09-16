@@ -20,11 +20,11 @@ and [about making a connection with SSH](connecting.md).
     
     These limits include:
 
-    * max. 2 GB of virtual memory
-    * max. 496 running processes/threads
+    * max. 2 GB of virtual memory per session
+    * max. 496 running processes/threads total across all sessions
     * max. 2 hours of CPU time per process
 
-    Processes that exceed any of these limits may be terminated by the operating system or fail to start successfully.
+    Processes that exceed any of these limits will be terminated by the operating system or fail to start successfully.
 
      **Please only use the login nodes as an access portal!**
 
