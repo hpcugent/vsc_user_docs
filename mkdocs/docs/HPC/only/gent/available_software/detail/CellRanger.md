@@ -21,6 +21,6 @@ module load CellRanger/10.1.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CellRanger/10.1.0|x|x|x|-|x|x|x|x|
+|CellRanger/10.1.0|x|x|x|x|x|x|x|x|
 |CellRanger/8.0.1|x|x|-|x|-|x|x|x|
 |CellRanger/7.0.0|x|x|x|x|x|x|x|-|
