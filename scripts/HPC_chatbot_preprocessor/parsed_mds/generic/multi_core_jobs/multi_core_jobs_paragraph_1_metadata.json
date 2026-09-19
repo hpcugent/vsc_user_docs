@@ -1,0 +1,12 @@
+{
+    "main_title": "multi_core_jobs",
+    "subtitle": "Why-Parallel-Programming",
+    "source_file": "../../mkdocs/docs/HPC/multi_core_jobs.md",
+    "title_depth": 2,
+    "directory": "multi_core_jobs",
+    "parent_title": "",
+    "previous_title": null,
+    "next_title": "multi_core_jobs_paragraph_2",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/multi_core_jobs/#why-parallel-programming"
+}

@@ -1,0 +1,47 @@
+source $FOAM_BASH
+Defining utility functions used in tutorial cases
+If you would like to use the getApplication, runApplication,
+runParallel, cloneCase and/or compileApplication functions that
+are used in OpenFOAM tutorials, you also need to source the
+RunFunctions script:
+source $WM_PROJECT_DIR/bin/tools/RunFunctions
+Note that this needs to be done after sourcing $FOAM_BASH to make sure
+$WM_PROJECT_DIR is defined.
+Dealing with floating-point errors
+If you are seeing Floating Point Exception errors, you can undefine
+the $FOAM_SIGFPE environment variable that is defined by the
+$FOAM_BASH script as follows:
+unset $FOAM_SIGFPE
+Note that this only prevents OpenFOAM from propagating floating point
+exceptions, which then results in terminating the simulation. However,
+it does not prevent that illegal operations (like a division by zero)
+are being executed; if NaN values appear in your results, floating
+point errors are occurring.
+As such, *you should not* use this in production runs. Instead, you should track down the root cause of the floating
+point errors, and try to prevent them from occurring at all.
+OpenFOAM workflow
+The general workflow for OpenFOAM consists of multiple steps. Prior to
+running the actual simulation, some pre-processing needs to be done:
+-   generate the mesh;
+-   decompose the domain into subdomains using decomposePar (only for
+    parallel OpenFOAM simulations);
+After running the simulation, some post-processing steps are typically
+performed:
+-   reassemble the decomposed domain using reconstructPar (only for
+    parallel OpenFOAM simulations, and optional since some
+    postprocessing can also be done on decomposed cases);
+-   evaluate or further process the simulation results, either visually
+    using ParaView (for example, via the paraFoam tool; use
+    paraFoam -builtin for decomposed cases) or using command-line
+    tools like postProcess; see also
+    https://cfd.direct/openfoam/user-guide/postprocessing.
+Depending on the size of the domain and the desired format of the
+results, these pre- and post-processing steps can be run either
+before/after the job running the actual simulation, either on the HPC
+infrastructure or elsewhere, or as a part of the job that runs the
+OpenFOAM simulation itself.
+Do make sure you are using the same OpenFOAM version in each of the
+steps. Meshing can be done sequentially (i.e., on a single core) using
+for example blockMesh, or in parallel using more advanced meshing
+tools like snappyHexMesh, which is highly recommended for large cases.
+For more details, see https://cfd.direct/openfoam/user-guide/mesh/.

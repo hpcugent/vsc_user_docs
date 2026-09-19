@@ -1,0 +1,19 @@
+{
+    "main_title": "openFOAM",
+    "subtitle": "Using-`mympirun`",
+    "source_file": "../../mkdocs/docs/HPC/openFOAM.md",
+    "title_depth": 3,
+    "directory": "openFOAM",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/openFOAM/#domain-decomposition-and-number-of-processor-cores",
+        "1": "https://docs.hpc.ugent.be/mympirun/#mympirun",
+        "2": "https://docs.hpc.ugent.be/mympirun/#basic-usage",
+        "3": "https://docs.hpc.ugent.be/openFOAM/#preparing-the-environment",
+        "4": "https://docs.hpc.ugent.be/mympirun/#controlling-number-of-processes"
+    },
+    "parent_title": "",
+    "previous_title": "openFOAM_paragraph_3",
+    "next_title": "openFOAM_paragraph_5",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/openFOAM/#using-mympirun"
+}
