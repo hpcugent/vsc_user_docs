@@ -1,0 +1,17 @@
+{
+    "main_title": "connecting",
+    "subtitle": "Open-a-Terminal",
+    "source_file": "../../mkdocs/docs/HPC/connecting.md",
+    "title_depth": 3,
+    "directory": "connecting",
+    "parent_title": "Connection-restrictions",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/web_portal",
+        "1": "https://docs.hpc.ugent.be/troubleshooting/#issues-connecting-to-login-node",
+        "2": "https://docs.hpc.ugent.be/troubleshooting/#warning-message-when-first-connecting-to-new-host"
+    },
+    "previous_title": "connecting_paragraph_1",
+    "next_title": "connecting_paragraph_3",
+    "OS": "windows",
+    "reference_link": "https://docs.hpc.ugent.be/Windows/connecting/#open-a-terminal"
+}

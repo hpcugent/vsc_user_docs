@@ -1,0 +1,18 @@
+{
+    "main_title": "FAQ",
+    "subtitle": "I-have-another-questionproblem",
+    "source_file": "../../mkdocs/docs/HPC/FAQ.md",
+    "title_depth": 3,
+    "directory": "FAQ",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#virtual-organisations",
+        "1": "https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#vo-directories",
+        "2": "https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#requesting-more-storage-space",
+        "3": "https://www.ugent.be/hpc/en/support/software-installation-request"
+    },
+    "parent_title": "",
+    "previous_title": "FAQ_paragraph_7",
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/FAQ/#i-have-another-questionproblem"
+}

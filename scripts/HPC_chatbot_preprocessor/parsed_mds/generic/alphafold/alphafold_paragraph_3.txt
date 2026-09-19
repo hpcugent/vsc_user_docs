@@ -1,0 +1,26 @@
+Similarly, the script was also tweaked such that the location to commands like hhblits,hhsearch,jackhmmer,kalign are already correctly set, so options like --hhblits_binary_path are not required.
+For more information about the script and options see this section in the official README.
+ WARNING "READ README"
+    It is strongly advised to read the official README provided by DeepMind before continuing.
+    
+Controlling core count for hhblits and jackhmmer
+The Python scripts that are used to run hhblits and jackhmmer have been tweaked so you can control how many cores are used for these tools,
+rather than hardcoding it to 4 and 8 cores, respectively.
+Using the $ALPHAFOLD_HHBLITS_N_CPU environment variable, you can specify how many cores should be used for running hhblits;
+the default of 4 cores will be used if $ALPHAFOLD_HHBLITS_N_CPU is not defined. 
+Likewise for jackhmmer, the core count can be controlled via $ALPHAFOLD_JACKHMMER_N_CPU.
+ Info
+    Tweaking this might not yield significant benefits, 
+    as we have noticed that these tools may exhibit slower performance when utilizing more than 4/8 cores (though this behavior could vary based on the workload).
+CPU/GPU comparison
+The provided timings were obtained by executing the T1050.fasta example, as outlined in the Alphafold README. 
+For the corresponding jobscripts, they are available here.
+Using --db_preset=full_dbs, the following runtime data was collected:
+* CPU-only, on doduo, using 24 cores (1 node): 9h 9min
+* CPU-only, on doduo, using 96 cores (1 full node): 12h 22min
+* GPU on joltik, using 1 V100 GPU + 8 cores: 2h 20min
+* GPU on joltik, using 2 V100 GPUs + 16 cores: 2h 16min
+This highlights a couple of important attention points:
+* Running AlphaFold on GPU is significantly faster than CPU-only (close to 4x faster for this particular example).
+ Using more CPU cores may lead to longer* runtimes, so be careful with using full nodes when running AlphaFold CPU-only.
+* Using multiple GPUs results in barely any speedup (for this particular T1050.fasta example).

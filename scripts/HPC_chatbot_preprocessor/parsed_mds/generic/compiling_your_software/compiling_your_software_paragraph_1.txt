@@ -1,0 +1,39 @@
+Compiling and testing your software on the HPC
+All nodes in the HPC cluster are running the "RHEL 8.8 (accelgor, doduo, donphan, gallade, joltik, skitty)" 
+Operating system, which is a specific version of Red Hat Enterprise Linux. This means that all the 
+software programs
+(executable) that the end-user wants to run on the HPC first must be
+compiled for RHEL 8.8 (accelgor, doduo, donphan, gallade, joltik, skitty). It also means that you first have to install all the
+required external software packages on the HPC.
+Most commonly used compilers are already pre-installed on the HPC and can be
+used straight away. Also, many popular external software packages, which
+are regularly used in the scientific community, are also pre-installed.
+Check the pre-installed software on the HPC
+In order to check all the available modules and their version numbers,
+which are pre-installed on the HPC enter:
+When your required application is not available on the HPC please contact
+any HPC member. Be aware of potential "License Costs". "Open Source"
+software is often preferred.
+Porting your code
+To port a software-program is to translate it from the operating system in
+which it was developed (e.g., Windows 7) to another operating system
+(e.g., Red Hat Enterprise Linux on our HPC) so that it can be used there. Porting implies some
+degree of effort, but not nearly as much as redeveloping the program in
+the new environment. It all depends on how "portable" you wrote your
+code.
+In the simplest case the file or files may simply be copied from one
+machine to the other. However, in many cases the software is installed
+on a computer in a way, which depends upon its detailed hardware,
+software, and setup, with device drivers for particular devices, using
+installed operating system and supporting software components, and using
+different directories.
+In some cases software, usually described as "portable software" is
+specifically designed to run on different computers with compatible
+operating systems and processors without any machine-dependent
+installation; it is sufficient to transfer specified directories and
+their contents. Hardware- and software-specific information is often
+stored in configuration files in specified locations (e.g., the registry
+on machines running MS Windows).
+Software, which is not portable in this sense, will have to be
+transferred with modifications to support the environment on the
+destination machine.

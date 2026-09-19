@@ -1,0 +1,20 @@
+{
+    "main_title": "FAQ",
+    "subtitle": "`mympirun`-seems-to-ignore-its-arguments",
+    "source_file": "../../mkdocs/docs/HPC/FAQ.md",
+    "title_depth": 3,
+    "directory": "FAQ",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/gpu_gent",
+        "1": "https://docs.hpc.ugent.be/FAQ/#how-many-coresnodes-should-i-request",
+        "2": "https://docs.hpc.ugent.be/FAQ/#my-job-isnt-using-any-gpus",
+        "3": "https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#where-to-store-your-data-on-the-hpc",
+        "4": "https://docs.hpc.ugent.be/multi_core_jobs",
+        "5": "https://docs.hpc.ugent.be/mympirun"
+    },
+    "parent_title": "",
+    "previous_title": "FAQ_paragraph_3",
+    "next_title": "FAQ_paragraph_5",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/FAQ/#mympirun-seems-to-ignore-its-arguments"
+}

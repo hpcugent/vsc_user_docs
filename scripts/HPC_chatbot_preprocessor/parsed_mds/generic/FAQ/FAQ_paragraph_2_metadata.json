@@ -1,0 +1,20 @@
+{
+    "main_title": "FAQ",
+    "subtitle": "Job-failed-SEGV-Segmentation-fault",
+    "source_file": "../../mkdocs/docs/HPC/FAQ.md",
+    "title_depth": 3,
+    "directory": "FAQ",
+    "links": {
+        "0": "https://www.ugent.be/hpc/en/support/software-installation-request",
+        "1": "https://docs.hpc.ugent.be/FAQ/#how-do-i-choose-the-job-modules",
+        "2": "https://docs.hpc.ugent.be/FAQ/#how-many-coresnodes-should-i-request",
+        "3": "https://docs.hpc.ugent.be/FAQ/#my-job-runs-slower-than-i-expected",
+        "4": "https://docs.hpc.ugent.be/FAQ/#my-job-isnt-using-any-gpus",
+        "5": "https://www.ugent.be/hpc/en/infrastructure"
+    },
+    "parent_title": "",
+    "previous_title": "FAQ_paragraph_1",
+    "next_title": "FAQ_paragraph_3",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/FAQ/#job-failed-segv-segmentation-fault"
+}

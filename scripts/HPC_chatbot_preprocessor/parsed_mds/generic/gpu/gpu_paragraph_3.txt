@@ -1,0 +1,40 @@
+Software with GPU support
+Use module avail to check for centrally installed software.
+The subsections below only cover a couple of installed software
+packages, more are available.
+GROMACS
+Please consult module avail GROMACS for a list of installed versions.
+Horovod
+Horovod can be used for (multi-node) multi-GPU TensorFlow/PyTorch
+calculations.
+Please consult module avail Horovod for a list of installed versions.
+Horovod supports TensorFlow, Keras, PyTorch and MxNet (see
+https://github.com/horovod/horovod#id9), but should be run as an MPI
+application with mypmirun. (Horovod also provides its own wrapper
+horovodrun, not sure if it handles placement and others correctly).
+At least for simple TensorFlow benchmarks, it looks like Horovod is a
+bit faster than usual autodetect multi-GPU TensorFlow without horovod,
+but it comes at the cost of the code modifications to use horovod.
+<!--
+%TODO: use NCCL version (only check is to export NCCL_DEBUG=INFO)
+%TODO: NCCL tuning https://docs.nvidia.com/deeplearning/sdk/nccl-developer-guide/docs/env.html
+%-> joltik: NCCL_NET_GDR_LEVEL=4 -> in environment -->
+PyTorch
+Please consult module avail PyTorch for a list of installed versions.
+TensorFlow
+Please consult module avail TensorFlow for a list of installed
+versions.
+Note: for running TensorFlow calculations on multiple GPUs and/or on more than one workernode, use Horovod, see section Horovod.
+Example TensorFlow job script
+#!/bin/bash
+#PBS -l walltime=5:0:0
+#PBS -l nodes=1:ppn=quarter:gpus=1
+module load TensorFlow/2.6.0-foss-2021a-CUDA-11.3.1
+cd $PBS_O_WORKDIR
+python example.py
+<!-- %TODO: add intel cpu params (only for cpu, but mention it anyway) and data format (channel_first  / NCHW)
+% OMP_NUM_THREADS=$PBS_VARIABLE_FOR_CORES
+% KMP_BLOCKTIME=0
+% KMP_AFFINITY="granularity=fine,verbose,compact,1,0"
+% KMP_SETTINGS=1
+%TODO: quid tensorcores and bfloat16 etc etc?
