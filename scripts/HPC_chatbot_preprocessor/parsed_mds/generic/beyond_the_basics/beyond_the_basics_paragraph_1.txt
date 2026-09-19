@@ -1,0 +1,61 @@
+Beyond the basics
+Now that you've seen some of the more basic commands, let's take a look
+at some of the deeper concepts and commands.
+Input/output
+To redirect output to files, you can use the redirection operators: >,
+>>, &>, and <.
+First, it's important to make a distinction between two different output
+channels:
+1.  stdout: standard output channel, for regular output
+2.  stderr: standard error channel, for errors and warnings
+Redirecting stdout
+> writes the (stdout) output of a command to a file and overwrites
+whatever was in the file before.
+$ echo hello > somefile
+$ cat somefile
+hello
+$ echo hello2 > somefile
+$ cat somefile
+hello2
+>> appends the (stdout) output of a command to a file; it does not
+clobber whatever was in the file before:
+$ echo hello > somefile
+$ cat somefile 
+hello
+$ echo hello2 >> somefile
+$ cat somefile
+hello
+hello2
+Reading from stdin
+< reads a file from standard input (piped or typed input). So you
+would use this to simulate typing into a terminal. < somefile.txt is
+largely equivalent to cat somefile.txt | .
+One common use might be to take the results of a long-running
+command and store the results in a file, so you don't have to repeat it
+while you refine your command line. For example, if you have a large
+directory structure you might save a list of all the files you're
+interested in and then reading in the file list when you are done:
+$ find . -name .txt > files
+$ xargs grep banana < files
+Redirecting stderr
+To redirect the stderr output (warnings, messages), you can use 2>,
+just like >
+$ ls one.txt nosuchfile.txt 2> errors.txt
+one.txt
+$ cat errors.txt
+ls: nosuchfile.txt: No such file or directory
+Combining stdout and stderr
+To combine both output channels (stdout and stderr) and redirect
+them to a single file, you can use &>
+$ ls one.txt nosuchfile.txt &> ls.out
+$ cat ls.out
+ls: nosuchfile.txt: No such file or directory
+one.txt
+Command piping
+Part of the power of the command line is to string multiple commands
+together to create useful results. The core of these is the pipe: |.
+For example, to see the number of files in a directory, we can pipe the
+(stdout) output of ls to wc (word count, but can also be used to
+count the number of lines with the -l flag).
+$ ls | wc -l
+    42

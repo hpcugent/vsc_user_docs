@@ -1,0 +1,52 @@
+Note: if you zip a file, the original file will be removed. If you unzip
+a file, the compressed file will be removed. To keep both, we send the
+data to stdout and redirect it to the target file:
+$ gzip -c myfile > myfile.gz
+$ gunzip -c myfile.gz > myfile
+"zip" and "unzip"
+Windows and macOS seem to favour the zip file format, so it's also
+important to know how to unpack those. We do this using unzip:
+$ unzip myfile.zip
+If we would like to make our own zip archive, we use zip:
+$ zip myfiles.zip myfile1 myfile2 myfile3
+Working with tarballs: "tar"
+Tar stands for "tape archive" and is a way to bundle files together in a
+bigger file.
+You will normally want to unpack these files more often than you make
+them. To unpack a .tar file you use:
+$ tar -xf tarfile.tar
+Often, you will find gzip compressed .tar files on the web. These
+are called tarballs. You can recognize them by the filename ending in
+.tar.gz. You can uncompress these using gunzip and then unpacking
+them using tar. But tar knows how to open them using the -z
+option:
+$ tar -zxf tarfile.tar.gz
+$ tar -zxf tarfile.tgz
+Order of arguments
+Note: Archive programs like zip, tar, and jar use arguments in the
+"opposite direction" of copy commands.
+# cp, ln: &lt;source(s)&gt; &lt;target&gt;
+$ cp source1 source2 source3 target
+$ ln -s source target
+# zip, tar: &lt;target&gt; &lt;source(s)&gt;
+$ zip zipfile.zip source1 source2 source3
+$ tar -cf tarfile.tar source1 source2 source3
+If you use tar with the source files first then the first file will be
+overwritten. You can control the order of arguments of tar if it helps
+you remember:
+$ tar -c source1 source2 source3 -f tarfile.tar
+Exercises
+1.  Create a subdirectory in your home directory named test containing
+    a single, empty file named one.txt.
+2.  Copy /etc/hostname into the test directory and then check what's
+    in it. Rename the file to hostname.txt.
+3.  Make a new directory named another and copy the entire test
+    directory to it. another/test/one.txt should then be an empty
+    file.
+4.  Remove the another/test directory with a single command.
+5.  Rename test to test2. Move test2/hostname.txt to your home
+    directory.
+6.  Change the permission of test2 so only you can access it.
+7.  Create an empty job script named job.sh, and make it executable.
+8.  gzip hostname.txt, see how much smaller it becomes, then unzip it
+    again.

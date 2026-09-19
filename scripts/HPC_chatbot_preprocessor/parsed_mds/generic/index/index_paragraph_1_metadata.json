@@ -1,0 +1,23 @@
+{
+    "main_title": "index",
+    "subtitle": "Useful-topics",
+    "source_file": "../../mkdocs/docs/HPC/linux-tutorial/index.md",
+    "title_depth": 3,
+    "directory": "index",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/introduction",
+        "1": "https://docs.hpc.ugent.be/linux-tutorial/getting_started",
+        "2": "https://docs.hpc.ugent.be/linux-tutorial/navigating",
+        "3": "https://docs.hpc.ugent.be/linux-tutorial/manipulating_files_and_directories",
+        "4": "https://docs.hpc.ugent.be/linux-tutorial/uploading_files",
+        "5": "https://docs.hpc.ugent.be/linux-tutorial/beyond_the_basics",
+        "6": "https://docs.hpc.ugent.be/linux-tutorial/common_pitfalls",
+        "7": "https://docs.hpc.ugent.be/linux-tutorial/hpc_infrastructure",
+        "8": "https://docs.hpc.ugent.be/crontab"
+    },
+    "parent_title": "",
+    "previous_title": null,
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be"
+}
