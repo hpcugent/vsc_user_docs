@@ -1,0 +1,34 @@
+Jupyter notebook
+What is a Jupyter notebook
+A Jupyter notebook is an interactive, web-based environment that allows you to create documents that contain live code, equations, visualizations, and plaintext. The code blocks in these documents can be used to write Python, Java, R and Julia code, among others. The combination of code executions with text and visual outputs make it a useful tool for data analysis, machine learning and educational purposes.
+Using Jupyter Notebooks on the HPC
+Launching a notebook using the web portal
+Through the HPC-UGent web portal you can easily start a Jupyter notebook on a workernode, via the Jupyter Notebook button under the Interactive Apps menu item.
+
+
+After starting the Jupyter notebook using the Launch button, you will see it being added in state Queued in the overview of interactive sessions (see My Interactive Sessions menu item):
+
+
+When your job hosting the Jupyter notebook starts running, the status will first change the Starting:
+
+
+and eventually the status will change to Running, and you will be able to connect to the Jupyter environment using the blue Connect to Jupyter button:
+
+
+This will launch the Jupyter environment in a new browser tab, where you can open an existing notebook by navigating to the directory where it is located and clicking it. You can also create a new notebook by clicking on File>New>Notebook:
+
+
+Using extra Python packages
+A number of Python packages are readily available in modules on the HPC. To illustrate how to use them in a Jupyter notebook, we will make use of an example where we want to use numpy in our notebook.
+The first thing we need to do is finding the modules that contain our package of choice. For numpy, this would be the SciPy-bundle modules.
+To find the appropriate modules, it is recommended to use the shell within the web portal under Clusters>>_login Shell Access.
+
+
+We can see all available versions of the SciPy module by using module avail SciPy-bundle:
+$ module avail SciPy-bundle
+------------------ /apps/gent/RHEL8/zen2-ib/modules/all ------------------
+    SciPy-bundle/2022.05-foss-2022a    SciPy-bundle/2023.11-gfbf-2023b (D)
+    SciPy-bundle/2023.07-gfbf-2023a
+  Where:
+   D:  Default Module
+...
