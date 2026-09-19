@@ -19,8 +19,8 @@ module load biom-format/2.1.16-foss-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|biom-format/2.1.16-foss-2024a|x|x|x|x|x|x|x|
-|biom-format/2.1.16-foss-2023b|x|x|x|x|x|x|x|
-|biom-format/2.1.15-foss-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|biom-format/2.1.16-foss-2024a|x|x|x|x|x|x|x|x|
+|biom-format/2.1.16-foss-2023b|x|x|x|x|x|x|x|x|
+|biom-format/2.1.15-foss-2023a|x|x|x|x|x|x|x|x|

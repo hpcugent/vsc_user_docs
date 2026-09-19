@@ -19,6 +19,6 @@ module load JCuda/12.6.0-CUDA-12.6.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|JCuda/12.6.0-CUDA-12.6.0|x|-|x|-|x|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|JCuda/12.6.0-CUDA-12.6.0|x|-|x|-|x|x|-|-|

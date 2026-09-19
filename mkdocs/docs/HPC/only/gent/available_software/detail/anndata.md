@@ -19,9 +19,9 @@ module load anndata/0.11.4-foss-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|anndata/0.11.4-foss-2024a|x|x|x|x|x|x|x|
-|anndata/0.11.1-foss-2023b|x|x|x|x|x|x|x|
-|anndata/0.10.9-foss-2024a|x|x|x|x|x|x|x|
-|anndata/0.10.5.post1-foss-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|anndata/0.11.4-foss-2024a|x|x|x|x|x|x|x|x|
+|anndata/0.11.1-foss-2023b|x|x|x|x|x|x|x|x|
+|anndata/0.10.9-foss-2024a|x|x|x|x|x|x|x|x|
+|anndata/0.10.5.post1-foss-2023a|x|x|x|x|x|x|x|x|

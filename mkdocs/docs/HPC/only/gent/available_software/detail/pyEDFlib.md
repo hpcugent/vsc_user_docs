@@ -19,6 +19,6 @@ module load pyEDFlib/0.1.42-foss-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pyEDFlib/0.1.42-foss-2024a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pyEDFlib/0.1.42-foss-2024a|x|x|x|x|x|x|x|x|

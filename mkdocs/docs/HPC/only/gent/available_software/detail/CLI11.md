@@ -19,6 +19,6 @@ module load CLI11/2.5.0-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CLI11/2.5.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CLI11/2.5.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

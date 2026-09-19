@@ -19,7 +19,7 @@ module load Subread/2.1.1-GCC-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Subread/2.1.1-GCC-13.2.0|x|x|x|x|x|x|x|
-|Subread/2.0.6-GCC-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Subread/2.1.1-GCC-13.2.0|x|x|x|x|x|x|x|x|
+|Subread/2.0.6-GCC-12.3.0|x|x|x|x|x|x|x|x|
