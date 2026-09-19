@@ -1,0 +1,15 @@
+How do SSH keys work
+To open a Terminal window in macOS, open the Finder and choose
+*\>\> Applications \> Utilities \> Terminal*
+Before requesting an account, you need to generate a pair of ssh keys.
+One popular way to do this on  is using the OpenSSH client included with , which you can then also use to log on to the clusters.
+Test OpenSSH
+Secure Shell (ssh) is a cryptographic network protocol for secure data
+communication, remote command-line login, remote command execution, and
+other secure network services between two networked computers. In short,
+ssh provides a secure connection between 2 computers via insecure
+channels (Network, Internet, telephone lines, ...).
+"Secure" means that:
+1.  the User is authenticated to the System; and
+2.  the System is authenticated to the User; and
+3.  all data is encrypted during transfer.

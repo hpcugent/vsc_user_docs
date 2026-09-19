@@ -1,0 +1,12 @@
+{
+    "main_title": "account",
+    "subtitle": "Generate-a-publicprivate-key-pair-with-OpenSSH",
+    "source_file": "../../mkdocs/docs/HPC/account.md",
+    "title_depth": 3,
+    "directory": "account",
+    "parent_title": "Getting-ready-to-request-an-account",
+    "previous_title": "account_linux_paragraph_5.2",
+    "next_title": "account_linux_paragraph_5.4",
+    "OS": "linux",
+    "reference_link": "https://docs.hpc.ugent.be/Linux/account/#generate-a-publicprivate-key-pair-with-openssh"
+}
