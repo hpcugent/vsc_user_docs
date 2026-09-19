@@ -1,6 +1,6 @@
-{%- if site == 'Gent' %}
+{% if site == 'Gent' %}
 site_url: https://docs.hpc.ugent.be/{{ os }}/
-{%- endif %}
+{% endif %}
 site_name: VSC User Documentation - {{ site }} ({{ os }})
 docs_dir: docs/HPC
 repo_url: https://github.com/hpcugent/vsc_user_docs
@@ -14,14 +14,14 @@ nav:
   - Running batch jobs: running_batch_jobs.md
   - Running interactive jobs: running_interactive_jobs.md
   - Running jobs with input/output data: running_jobs_with_input_output_data.md
-{%- if site == 'Gent' %}
+{% if site == 'Gent' %}
   - Available software: ./only/gent/available_software/index.md
-{%- endif %}
+{% endif %}
   - Multi core jobs/Parallel Computing: multi_core_jobs.md
   - Using the HPC-UGent web portal: web_portal.md
-{%- if site == 'Gent' %}
+{% if site == 'Gent' %}
   - Interactive and debug cluster: interactive_debug.md
-{%- endif %}
+{% endif %}
   - XDMoD portal: xdmod.md
   - Troubleshooting: troubleshooting.md
   - HPC Policies: sites/hpc_policies.md
@@ -35,7 +35,7 @@ nav:
       - Best Practices: best_practices.md
       - Graphical applications with VNC: VNC.md
       - Graphical applications with X2Go: x2go.md
-{%- if site == 'Gent' %}
+{% if site == 'Gent' %}
       - GPU clusters: gpu.md
       - Cron scripts: crontab.md
       - Teaching and training: teaching_training.md
@@ -48,7 +48,7 @@ nav:
     - Beyond the basics: linux-tutorial/beyond_the_basics.md 
     - Common pitfalls: linux-tutorial/common_pitfalls.md
     - More on the HPC infrastructure: linux-tutorial/hpc_infrastructure.md
-{%- endif %}
+{% endif %}
   - Software-specific Best Practices:
       - AlphaFold: alphafold.md
       - Apptainer/Singularity: apptainer.md
@@ -78,13 +78,13 @@ plugins:
       site: {{ site }}
       os: {{ os }}
       osneutrallinks: True
-{%- if site == 'Gent' %}
+{% if site == 'Gent' %}
   - redirects:
       redirect_maps:
           gpu_gent.md: gpu.md
           interactive_gent.md: interactive_debug.md
           crontab_gent.md: crontab.md
-{%- endif %}
+{% endif %}
   - macros:
       on_error_fail: true
       include_yaml:
@@ -157,16 +157,16 @@ theme:
         name: Switch to light mode 
 
 extra_javascript:
-{%- if site == 'Gent' %}
+{% if site == 'Gent' %}
     - https://code.jquery.com/jquery-3.7.0.min.js
     - https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js
     - available_software/javascripts/populate_overview.js
-{%- endif %}
+{% endif %}
 
 extra_css:
-{%- if site == 'Gent' %}
+{% if site == 'Gent' %}
     - https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css
-{%- endif %}
+{% endif %}
 
 extra:
   analytics:
