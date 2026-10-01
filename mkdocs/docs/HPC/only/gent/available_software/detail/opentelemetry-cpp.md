@@ -19,6 +19,6 @@ module load opentelemetry-cpp/1.23.0-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|opentelemetry-cpp/1.23.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|opentelemetry-cpp/1.23.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

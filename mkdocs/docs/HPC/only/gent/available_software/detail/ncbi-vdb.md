@@ -19,8 +19,8 @@ module load ncbi-vdb/3.2.0-gompi-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ncbi-vdb/3.2.0-gompi-2024a|x|x|x|x|x|x|x|
-|ncbi-vdb/3.1.1-gompi-2023b|x|x|x|x|x|x|x|
-|ncbi-vdb/3.0.10-gompi-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ncbi-vdb/3.2.0-gompi-2024a|x|x|x|x|x|x|x|x|
+|ncbi-vdb/3.1.1-gompi-2023b|x|x|x|x|x|x|x|x|
+|ncbi-vdb/3.0.10-gompi-2023a|x|x|x|x|x|x|x|x|

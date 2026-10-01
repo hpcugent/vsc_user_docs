@@ -14,11 +14,12 @@ The overview below shows which pyzstd installations are available per HPC-UGent 
 To start using pyzstd, load one of these modules using a `module load` command like:
 
 ```shell
-module load pyzstd/0.16.2-GCCcore-13.3.0
+module load pyzstd/0.19.0-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pyzstd/0.16.2-GCCcore-13.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pyzstd/0.19.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|pyzstd/0.16.2-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

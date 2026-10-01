@@ -14,11 +14,12 @@ The overview below shows which CRYSTAL23 installations are available per HPC-UGe
 To start using CRYSTAL23, load one of these modules using a `module load` command like:
 
 ```shell
-module load CRYSTAL23/1.0.1-intel-2023b
+module load CRYSTAL23/1.0.1-intel-2025a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CRYSTAL23/1.0.1-intel-2023b|-|x|-|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CRYSTAL23/1.0.1-intel-2025a|x|x|x|x|x|x|x|x|
+|CRYSTAL23/1.0.1-intel-2023b|-|x|-|x|-|x|x|-|

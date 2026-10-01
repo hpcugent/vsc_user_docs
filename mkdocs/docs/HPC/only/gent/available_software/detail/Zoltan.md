@@ -19,7 +19,7 @@ module load Zoltan/3.901-foss-2025a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Zoltan/3.901-foss-2025a|x|x|x|x|x|x|x|
-|Zoltan/3.901-foss-2023a|-|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Zoltan/3.901-foss-2025a|x|x|x|x|x|x|x|x|
+|Zoltan/3.901-foss-2023a|-|x|x|x|x|x|x|x|

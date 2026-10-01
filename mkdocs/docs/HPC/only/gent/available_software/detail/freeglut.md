@@ -14,12 +14,14 @@ The overview below shows which freeglut installations are available per HPC-UGen
 To start using freeglut, load one of these modules using a `module load` command like:
 
 ```shell
-module load freeglut/3.6.0-GCCcore-14.3.0
+module load freeglut/3.8.0-GCCcore-15.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|freeglut/3.6.0-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|freeglut/3.4.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|freeglut/3.8.0-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|freeglut/3.6.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|freeglut/3.4.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|freeglut/3.4.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

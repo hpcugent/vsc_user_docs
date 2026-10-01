@@ -25,7 +25,7 @@ computenodeshort: r1c02cn3
 hpcinfo: hpc@uantwerpen.be
 hpcannounceml: calcua-announce@supersympa.ua.ac.be
 mpirun: mpirun
-puttyFirstConnect: |
+puttyfirstconnect: |
   - ssh-rsa 2048 5a:40:9d:2a:f4:b7:6c:87:0d:87:30:07:9d:ea:80:11
   - sha-rsa 2048 SHA256:W8HRHTZpPd2GIhoNU2xj2oUKhcFr2bjIzZsKzY+1PCA
   - ssh-ecdsa 256 f9:4f:19:9b:fb:40:c5:6c:6f:b9:64:2e:33:0a:8d:26

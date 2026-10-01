@@ -19,6 +19,6 @@ module load nvidia-cutlass/3.8.0.0-gfbf-2024a-CUDA-12.6.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nvidia-cutlass/3.8.0.0-gfbf-2024a-CUDA-12.6.0|x|-|x|-|x|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|nvidia-cutlass/3.8.0.0-gfbf-2024a-CUDA-12.6.0|x|-|x|-|x|x|-|-|

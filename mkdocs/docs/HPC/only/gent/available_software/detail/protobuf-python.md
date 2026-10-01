@@ -14,15 +14,16 @@ The overview below shows which protobuf-python installations are available per H
 To start using protobuf-python, load one of these modules using a `module load` command like:
 
 ```shell
-module load protobuf-python/5.28.0-GCCcore-13.3.0
+module load protobuf-python/6.31.1-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|protobuf-python/5.28.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|protobuf-python/4.25.3-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|protobuf-python/4.24.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|protobuf-python/4.23.0-GCCcore-12.2.0|-|-|-|-|-|x|x|
-|protobuf-python/3.19.4-GCCcore-11.3.0|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|protobuf-python/6.31.1-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|protobuf-python/5.28.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|protobuf-python/4.25.3-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|protobuf-python/4.24.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|protobuf-python/4.23.0-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|protobuf-python/3.19.4-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

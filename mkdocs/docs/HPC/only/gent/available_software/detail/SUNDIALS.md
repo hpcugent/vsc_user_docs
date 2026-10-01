@@ -19,7 +19,7 @@ module load SUNDIALS/7.3.0-foss-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SUNDIALS/7.3.0-foss-2024a|x|x|x|x|x|x|x|
-|SUNDIALS/6.6.0-foss-2023a|-|x|-|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SUNDIALS/7.3.0-foss-2024a|x|x|x|x|x|x|x|x|
+|SUNDIALS/6.6.0-foss-2023a|-|x|-|x|-|x|x|x|
