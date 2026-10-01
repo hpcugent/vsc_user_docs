@@ -1,0 +1,47 @@
+mcc -mv example.m
+Opening log file:  /user/home/gent/vsc400/vsc40000/java.log.34090
+Compiler version: 8.3 (R2021b)
+Dependency analysis by REQUIREMENTS.
+Parsing file "/user/home/gent/vsc400/vsc40000/example.m"
+	(Referenced from: "Compiler Command Line").
+Deleting 0 temporary MEX authorization files.
+Generating file "/user/home/gent/vsc400/vsc40000/readme.txt".
+Generating file "run\_example.sh".
+Libraries
+To compile a MATLAB program that needs a library, you can use the
+-I library_path flag. This will tell the compiler to also look for
+files in library_path.
+It's also possible to use the -a path flag. That will result in all
+files under the path getting added to the final executable.
+For example, the command mcc -mv example.m -I examplelib -a datafiles
+will compile example.m with the MATLAB files in examplelib, and will
+include all files in the datafiles directory in the binary it
+produces.
+Memory issues during compilation
+If you are seeing Java memory issues during the compilation of your
+MATLAB program on the login nodes, consider tweaking the default maximum
+heap size (128M) of Java using the _JAVA_OPTIONS environment variable
+with:
+export _JAVA_OPTIONS="-Xmx64M"
+The MATLAB compiler spawns multiple Java processes. Because of the
+default memory limits that are in effect on the login nodes, this might
+lead to a crash of the compiler if it's trying to create to many Java
+processes. If we lower the heap size, more Java processes will be able
+to fit in memory.
+Another possible issue is that the heap size is too small. This could
+result in errors like:
+Error: Out of memory
+A possible solution to this is by setting the maximum heap size to be
+bigger:
+export _JAVA_OPTIONS="-Xmx512M"
+Multithreading
+MATLAB can only use the cores in a single workernode (unless the
+Distributed Computing toolbox is used, see
+https://nl.mathworks.com/products/distriben.html).
+The amount of workers used by MATLAB for the parallel toolbox can be
+controlled via the parpool function: parpool(16) will use 16
+workers. It's best to specify the amount of workers, because otherwise
+you might not harness the full compute power available (if you have too
+few workers), or you might negatively impact performance (if you have
+too many workers). By default, MATLAB uses a fixed number of workers
+(12).

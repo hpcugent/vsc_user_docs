@@ -1,0 +1,59 @@
+Private versus Shared variables
+By using the private() and shared() clauses, you can specify variables
+within the parallel region as being shared, i.e., visible and accessible by
+all threads simultaneously, or private, i.e., private to each thread, meaning
+each thread will have its own local copy. In the code example below for
+parallelising a for loop, you can see that we specify the thread_id and
+nloops variables as private.
+Parallelising for loops with OpenMP
+Parallelising for loops is really simple (see code below). By default,
+loop iteration counters in OpenMP loop constructs (in this case the i
+variable) in the for loop are set to private variables.
+/*
+ * VSC        : Flemish Supercomputing Centre
+ * Tutorial   : Introduction to HPC
+ * Description: Showcase program for OMP loops
+ */
+/* OpenMP_loop.c  */
+#include <stdio.h>
+#include <omp.h>
+int main(int argc, char **argv)
+{
+  int i, thread_id, nloops;
+#pragma omp parallel private(thread_id, nloops)
+  {
+    nloops = 0;
+#pragma omp for
+    for (i=0; i<1000; ++i)
+    {
+      ++nloops;
+    }
+    thread_id = omp_get_thread_num();
+    printf("Thread %d performed %d iterations of the loop.\n", thread_id, nloops );
+  }
+  return 0;
+}
+And compile it (whilst including the "openmp" library) and run and
+test it on the login-node:
+$ module load GCC
+$ gcc -fopenmp -o omp1 omp1.c
+$ ./omp1
+Thread 6 performed 125 iterations of the loop.
+Thread 7 performed 125 iterations of the loop.
+Thread 5 performed 125 iterations of the loop.
+Thread 4 performed 125 iterations of the loop.
+Thread 0 performed 125 iterations of the loop.
+Thread 2 performed 125 iterations of the loop.
+Thread 3 performed 125 iterations of the loop.
+Thread 1 performed 125 iterations of the loop.
+Now run it in the cluster and check the result again.
+$ qsub omp1.pbs
+$ cat omp1.pbs.o*
+Thread 1 performed 125 iterations of the loop.
+Thread 4 performed 125 iterations of the loop.
+Thread 3 performed 125 iterations of the loop.
+Thread 0 performed 125 iterations of the loop.
+Thread 5 performed 125 iterations of the loop.
+Thread 7 performed 125 iterations of the loop.
+Thread 2 performed 125 iterations of the loop.
+Thread 6 performed 125 iterations of the loop.
