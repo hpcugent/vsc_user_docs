@@ -14,12 +14,13 @@ The overview below shows which at-spi2-core installations are available per HPC-
 To start using at-spi2-core, load one of these modules using a `module load` command like:
 
 ```shell
-module load at-spi2-core/2.50.0-GCCcore-13.2.0
+module load at-spi2-core/2.56.2-GCCcore-15.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|at-spi2-core/2.56.2-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |at-spi2-core/2.50.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |at-spi2-core/2.49.91-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
