@@ -1,0 +1,48 @@
+Scripting for the cluster
+When writing scripts to be submitted on the cluster there are some
+tricks you need to keep in mind.
+Example job script
+#!/bin/bash
+#PBS -l nodes=1:ppn=1
+#PBS -N FreeSurfer_per_subject-time-longitudinal
+#PBS -l walltime=48:00:00
+#PBS -q long
+#PBS -m abe
+#PBS -j oe
+export DATADIR=$VSC_DATA/example
+# $PBS_JOBID is unique for each job, so this creates a unique directory
+export WORKDIR=$VSC_SCRATCH_NODE/$PBS_JOBID
+mkdir -p $WORKDIR
+# copy files to local storage
+cp -a $DATADIR/workfiles $WORKDIR/
+# load software we need
+module load FreeSurfer
+cd $WORKDIR
+# recon-all ... &> output.log  # this command takes too long, let's show a more practical example
+echo $PBS_ARRAYID > $WORKDIR/$PBS_ARRAYID.txt
+# create results directory if necessary
+mkdir -p $DATADIR/results
+# copy work files back
+cp $WORKDIR/$PBS_ARRAYID.txt $DATADIR/results/
+PBS pragmas
+The scheduler needs to know about the requirements of the script, for
+example: how much memory will it use, and how long will it run. These
+things can be specified inside a script with what we call PBS pragmas.
+This pragma (a pragma is a special comment) tells PBS to use 1 node and core:
+#PBS -l nodes=1:ppn=1 # single-core
+For parallel software, you can request multiple cores (OpenMP) and/or
+multiple nodes (MPI). *Only use this when the software you
+use is capable of working in parallel*. Here is an example:
+#PBS -l nodes=1:ppn=16  # single-node, multi-core
+#PBS -l nodes=5:ppn=16  # multi-node
+We intend to submit it on the long queue:
+#PBS -q long
+We request a total running time of 48 hours (2 days).
+#PBS -l walltime=48:00:00
+We specify a desired name of our job:
+#PBS -N FreeSurfer_per_subject-time-longitudinal
+This specifies mail options:
+#PBS -m abe
+1.  a means mail is sent when the job is aborted.
+2.  b means mail is sent when the job begins.
+3.  e means mail is sent when the job ends.
