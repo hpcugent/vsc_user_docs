@@ -1,0 +1,12 @@
+{
+    "main_title": "multi_core_jobs",
+    "subtitle": "Reduction",
+    "source_file": "../../mkdocs/docs/HPC/multi_core_jobs.md",
+    "title_depth": 3,
+    "directory": "multi_core_jobs",
+    "parent_title": "",
+    "previous_title": "multi_core_jobs_paragraph_5",
+    "next_title": "multi_core_jobs_paragraph_7",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/multi_core_jobs/#reduction"
+}

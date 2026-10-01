@@ -1,0 +1,29 @@
+Multi core jobs/Parallel Computing 
+Why Parallel Programming?
+There are two important motivations to engage in parallel programming.
+1.  Firstly, the need to decrease the time to solution: distributing
+    your code over C cores holds the promise of speeding up execution
+    times by a factor C. All modern computers (and probably even your
+    smartphone) are equipped with multi-core processors capable of
+    parallel processing.
+2.  The second reason is problem size: distributing your code over N
+    nodes increases the available memory by a factor N, and thus holds
+    the promise of being able to tackle problems which are N times
+    bigger.
+On a desktop computer, this enables a user to run multiple programs and
+the operating system simultaneously. For scientific computing, this
+means you have the ability in principle of splitting up your
+computations into groups and running each group on its own core.
+There are multiple different ways to achieve parallel programming. The
+table below gives a (non-exhaustive) overview of problem independent
+approaches to parallel programming. In addition there are many problem
+specific libraries that incorporate parallel capabilities. The next
+three sections explore some common approaches: (raw) threads, OpenMP and
+MPI.
+| Tool                                                               | Available languages binding                                        | Limitations                                                                                                                                                                                                                                                                                                                                                    |
+|------------------------------------------------------------------------|------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Raw threads (pthreads, boost::threading, ...)                          | Threading libraries are available for all common programming languages | Threading libraries are available for all common programming languages & Threads are limited to shared memory systems. They are more often used on single node systems rather than for HPC. Thread management is hard.                                                                                                                                       |
+| OpenMP                                                                 | Fortran/C/C++                                                          | Limited to shared memory systems, but large shared memory systems for HPC are not uncommon (e.g., SGI UV). Loops and task can be parallelized by simple insertion of compiler directives. Under the hood threads are used. Hybrid approaches exist which use OpenMP to parallelize the work load on each node and MPI (see below) for communication between nodes. |
+| Lightweight threads with clever scheduling, Intel TBB, Intel Cilk Plus | C/C++                                                                  | Limited to shared memory systems, but may be combined with MPI. Thread management is taken care of by a very clever scheduler enabling the programmer to focus on parallelization itself. Hybrid approaches exist which use TBB and/or Cilk Plus to parallelise the work load on each node and MPI (see below) for communication between nodes.                    |
+| MPI                                                                    | Fortran/C/C++, Python                                                  | Applies to both distributed and shared memory systems. Cooperation between different nodes or cores is managed by explicit calls to library routines handling communication routines.                                                                                                                                                                              |
+| Global Arrays library                                                  | C/C++, Python                                                          | Mimics a global address space on distributed memory systems, by distributing arrays over many nodes and one sided communication. This library is used a lot for chemical structure calculation codes and was used in one of the first applications that broke the PetaFlop barrier.                                                                                |
