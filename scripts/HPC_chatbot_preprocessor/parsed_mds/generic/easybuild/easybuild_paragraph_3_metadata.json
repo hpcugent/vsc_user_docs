@@ -1,0 +1,12 @@
+{
+    "main_title": "easybuild",
+    "subtitle": "Using-the-installed-modules",
+    "source_file": "../../mkdocs/docs/HPC/easybuild.md",
+    "title_depth": 2,
+    "directory": "easybuild",
+    "parent_title": "",
+    "previous_title": "easybuild_paragraph_2",
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/easybuild/#using-the-installed-modules"
+}

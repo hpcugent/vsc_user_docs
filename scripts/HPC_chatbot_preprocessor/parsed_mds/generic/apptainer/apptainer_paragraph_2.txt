@@ -1,0 +1,46 @@
+# avoid that Apptainer uses $HOME/.cache
+export APPTAINER_CACHEDIR=/tmp/$USER/apptainer/cache
+# instruct Apptainer to use temp dir on local filessytem
+export APPTAINER_TMPDIR=/tmp/$USER/apptainer/tmpdir
+# specified temp dir must exist, so create it
+mkdir -p $APPTAINER_TMPDIR
+# convert Docker container to Apptainer container image
+apptainer build --fakeroot /tmp/$USER/tf.sif docker://nvcr.io/nvidia/tensorflow:21.10-tf1-py3
+# mv container image to $VSC_SCRATCH
+mv /tmp/$USER/tf.sif $VSC_SCRATCH/tf.sif
+Converting Docker images
+For more information on converting existing Docker images to
+Apptainer/Singularity images, see
+https://apptainer.org/docs/user/main/docker_and_oci.html.
+We strongly recommend the use of Docker Hub, see
+https://hub.docker.com/ for more information.
+Execute our own script within our container
+Copy testing image from /apps/gent/tutorials/Singularity to
+$VSC_SCRATCH:
+cp /apps/gent/tutorials/Singularity/CentOS7_EasyBuild.img $VSC_SCRATCH/
+Create a job script like:
+#!/bin/sh
+#PBS -o apptainer.output
+#PBS -e apptainer.error
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=12:00:00
+apptainer exec $VSC_SCRATCH/CentOS7_EasyBuild.img ~/my_script.sh
+Create an example myscript.sh:
+#!/bin/bash
+# prime factors
+factor 1234567
+Tensorflow example
+We already have a Tensorflow example image, but you can also convert the
+Docker image (see https://hub.docker.com/r/tensorflow/tensorflow) to a
+Apptainer/Singularity image yourself
+Copy testing image from /apps/gent/tutorials to $VSC_SCRATCH:
+cp /apps/gent/tutorials/Singularity/Ubuntu14.04_tensorflow.img $VSC_SCRATCH/
+#!/bin/sh
+#
+#
+#PBS -o tensorflow.output
+#PBS -e tensorflow.error
+#PBS -l nodes=1:ppn=4
+#PBS -l walltime=12:00:00
+#
+apptainer exec $VSC_SCRATCH/Ubuntu14.04_tensorflow.img python ~/linear_regression.py

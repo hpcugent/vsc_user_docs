@@ -1,0 +1,19 @@
+{
+    "main_title": "alphafold",
+    "subtitle": "CPUGPU-comparison",
+    "source_file": "../../mkdocs/docs/HPC/alphafold.md",
+    "title_depth": 3,
+    "directory": "alphafold",
+    "links": {
+        "0": "https://github.com/deepmind/alphafold/blob/main/README.md#running-alphafold",
+        "1": "https://github.com/deepmind/alphafold/blob/main/README.md",
+        "2": "https://github.com/deepmind/alphafold/blob/main/README.md",
+        "3": "https://github.com/deepmind/alphafold/blob/main/README.md",
+        "4": "https://docs.hpc.ugent.be/example-jobscripts"
+    },
+    "parent_title": "",
+    "previous_title": "alphafold_paragraph_2",
+    "next_title": "alphafold_paragraph_4",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/alphafold/#cpugpu-comparison"
+}
