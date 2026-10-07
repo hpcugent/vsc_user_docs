@@ -14,13 +14,14 @@ The overview below shows which SCOTCH installations are available per HPC-UGent 
 To start using SCOTCH, load one of these modules using a `module load` command like:
 
 ```shell
-module load SCOTCH/7.0.10-gompi-2025b
+module load SCOTCH/7.0.11-gompi-2026.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SCOTCH/7.0.11-gompi-2026.1|x|x|x|x|x|x|x|x|
 |SCOTCH/7.0.10-gompi-2025b|x|x|x|x|x|x|x|x|
 |SCOTCH/7.0.8-gompi-2025a|x|x|x|x|x|x|x|x|
 |SCOTCH/7.0.6-gompi-2024a|x|x|x|x|x|x|x|x|
