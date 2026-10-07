@@ -29,6 +29,7 @@ module load OpenFOAM/v2506-foss-2025b
 |OpenFOAM/v2312-foss-2023a|-|x|x|x|x|x|x|x|
 |OpenFOAM/v2206-foss-2023a|x|x|x|x|x|x|x|x|
 |OpenFOAM/v2112-foss-2023a|x|x|x|x|x|x|x|x|
+|OpenFOAM/14-foss-2026.1|x|x|x|x|x|x|x|x|
 |OpenFOAM/13-foss-2025a|x|x|x|x|x|x|x|x|
 |OpenFOAM/12-foss-2023a|-|x|x|x|x|x|x|x|
 |OpenFOAM/11-foss-2023a|-|x|x|x|x|x|x|x|
