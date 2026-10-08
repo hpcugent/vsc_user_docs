@@ -23,6 +23,7 @@ module load protobuf/35.0-GCCcore-15.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |protobuf/35.0-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |protobuf/31.1-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|protobuf/31.1-GCCcore-14.2.0|-|-|-|-|-|x|-|-|
 |protobuf/28.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |protobuf/25.3-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |protobuf/24.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

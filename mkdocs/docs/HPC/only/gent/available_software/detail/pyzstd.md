@@ -22,4 +22,5 @@ module load pyzstd/0.19.0-GCCcore-14.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |pyzstd/0.19.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|pyzstd/0.19.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |pyzstd/0.16.2-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
