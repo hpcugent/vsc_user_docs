@@ -22,5 +22,6 @@ module load tlparse/0.4.3-GCCcore-14.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |tlparse/0.4.3-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|tlparse/0.4.3-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |tlparse/0.4.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |tlparse/0.3.37-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

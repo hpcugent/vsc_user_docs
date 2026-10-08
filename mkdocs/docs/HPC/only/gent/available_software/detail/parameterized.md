@@ -22,5 +22,6 @@ module load parameterized/0.9.0-GCCcore-14.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |parameterized/0.9.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|parameterized/0.9.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |parameterized/0.9.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |parameterized/0.9.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

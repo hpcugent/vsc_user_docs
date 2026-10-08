@@ -22,4 +22,5 @@ module load unittest-xml-reporting/3.2.0-GCCcore-14.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |unittest-xml-reporting/3.2.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|unittest-xml-reporting/3.1.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |unittest-xml-reporting/3.1.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
