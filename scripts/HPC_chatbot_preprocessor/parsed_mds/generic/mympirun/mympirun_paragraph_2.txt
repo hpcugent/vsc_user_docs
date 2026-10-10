@@ -1,0 +1,15 @@
+Other options
+There's also --universe, which sets the exact amount of processes
+started by mympirun; --double, which uses double the amount of
+processes it normally would; and --multi that does the same as
+--double, but takes a multiplier (instead of the implied factor 2 with
+--double).
+See [vsc-mympirun
+README](https://github.com/hpcugent/vsc-mympirun/blob/master/README.md)
+for a detailed explanation of these options.
+Dry run
+You can do a so-called "dry run", which doesn't have any side-effects,
+but just prints the command that mympirun would execute. You enable
+this with the --dry-run flag:
+$ mympirun --dry-run ./mpi_hello
+mpirun ... -genv I_MPI_FABRICS shm:dapl ... -np 16 ... ./mpi_hello
