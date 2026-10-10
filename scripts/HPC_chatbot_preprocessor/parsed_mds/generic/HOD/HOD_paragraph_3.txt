@@ -1,0 +1,9 @@
+Getting help
+If you have any questions, or are experiencing problems using HOD, you
+have a couple of options:
+-   Subscribe to the HOD mailing list via
+    https://lists.ugent.be/wws/info/hod, and contact the HOD users and
+    developers at hod@lists.ugent.be.
+-   Contact the HPC-UGent team via hpc@ugent.be
+-   Open an issue in the hanythingondemand GitHub repository, via
+    https://github.com/hpcugent/hanythingondemand/issues.

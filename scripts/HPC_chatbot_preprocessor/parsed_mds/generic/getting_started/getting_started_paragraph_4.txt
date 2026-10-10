@@ -1,0 +1,32 @@
+If you don't see your job in the output of the qstat command anymore, your job has likely completed.
+Read this section on how to interpret the output.
+Inspect your results
+When your job finishes it generates 2 output files:
+- One for normal output messages (stdout output channel).
+- One for warning and error messages (stderr output channel).
+By default located in the directory where you issued qsub.
+ Info
+    For more information about the stdout and stderr output channels, see this section.
+In our example when running ls in the current directory you should see 2 new files:
+ 
+- run.sh.o123456, containing normal output messages produced by job 123456;
+- run.sh.e123456, containing errors and warnings produced by job 123456.
+ Info
+    
+    run.sh.e123456 should be empty (no errors or warnings).
+ Warning "Use your own job ID"
+    Replace 123456 with the jobid you got from the qstat command (see above) or simply look for added files in your current directory by running ls.
+When examining the contents of run.sh.o123456 you will see something like this:
+Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
+11493376/11490434 [==============================] - 1s 0us/step
+Epoch 1/5
+1875/1875 [==============================] - 2s 823us/step - loss: 0.2960 - accuracy: 0.9133
+Epoch 2/5
+1875/1875 [==============================] - 1s 771us/step - loss: 0.1427 - accuracy: 0.9571
+Epoch 3/5
+1875/1875 [==============================] - 1s 767us/step - loss: 0.1070 - accuracy: 0.9675
+Epoch 4/5
+1875/1875 [==============================] - 1s 764us/step - loss: 0.0881 - accuracy: 0.9727
+Epoch 5/5
+1875/1875 [==============================] - 1s 764us/step - loss: 0.0741 - accuracy: 0.9768
+313/313 - 0s - loss: 0.0782 - accuracy: 0.9764
