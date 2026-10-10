@@ -1,0 +1,59 @@
+Variables
+[//]: # (sec:environment-variables())
+At the prompt we also have access to shell variables, which have both a
+name and a value.
+They can be thought of as placeholders for things we need to remember.
+For example, to print the path to your home directory, we can use the
+shell variable named HOME:
+$ echo $HOME 
+/user/home/gent/vsc400/vsc40000
+This prints the value of this variable.
+Defining variables
+There are several variables already defined for you when you start your
+session, such as $HOME which contains the path to your
+home directory.
+For a full overview of defined environment variables in your current
+session, you can use the env command. You can sort this
+output with sort to make it easier to search in:
+$ env | sort 
+...
+HOME=/user/home/gent/vsc400/vsc40000 
+... 
+You can also use the grep command to search for a piece of
+text. The following command will output all VSC-specific variable names
+and their values:
+$ env | sort | grep VSC
+But we can also define our own. this is done with the
+export command (note: variables are always all-caps as a
+convention):
+$ export MYVARIABLE="value"
+It is important you don't include spaces around the =
+sign. Also note the lack of $ sign in front of the
+variable name.
+If we then do 
+$ echo $MYVARIABLE
+this will output value. Note that the quotes are not
+included, they were only used when defining the variable to escape
+potential spaces in the value.
+Changing your prompt using $PS1
+You can change what your prompt looks like by redefining the
+special-purpose variable $PS1.
+For example: to include the current location in your prompt:
+$ export PS1='\w $'
+~ $ cd test 
+~/test $ 
+Note that ~ is short representation of your home
+directory.
+To make this persistent across session, you can define this custom value
+for $PS1 in your .profile startup script:
+$ echo 'export PS1="\w $ " ' >> ~/.profile
+Using non-defined variables
+One common pitfall is the (accidental) use of non-defined variables.
+Contrary to what you may expect, this does not result in error
+messages, but the variable is considered to be empty instead.
+This may lead to surprising results, for example: 
+$ export WORKDIR=/tmp/test 
+$ pwd
+/user/home/gent/vsc400/vsc40000 
+$ echo $HOME
+/user/home/gent/vsc400/vsc40000 

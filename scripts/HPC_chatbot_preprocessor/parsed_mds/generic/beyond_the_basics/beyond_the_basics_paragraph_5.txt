@@ -1,0 +1,59 @@
+Here is a very detailed guide should you
+need more information.
+Shebang
+The first line of the script is the so-called shebang (# is sometimes
+called hash and ! is sometimes called bang). This line tells the shell
+which command should execute the script. In most cases, this will
+simply be the shell itself. The line itself looks a bit weird, but you
+can copy-paste this line as you need not worry about it further. It is
+however very important this is the very first line of the script! These
+are all valid shebangs, but you should only use one of them:
+#!/bin/sh
+#!/bin/bash
+#!/usr/bin/env bash
+Conditionals
+Sometimes you only want certain commands to be executed when a certain
+condition is met. For example, only move files to a directory if that
+directory exists. The syntax:
+if [ -d directory ] && [ -f file ]
+then 
+  mv file directory 
+fi
+Or you only want to do something if a file exists:
+if [ -f filename ] 
+then 
+  echo "it exists" 
+fi
+Or only if a certain variable is bigger than one:
+if [ $AMOUNT -gt 1 ]
+then
+  echo "More than one"
+  # more commands
+fi
+Several pitfalls exist with this syntax. You need spaces surrounding the
+brackets, the then needs to be at the beginning of a line. It is best to just
+copy this example and modify it.
+In the initial example, we used -d to test if a directory existed.
+There are several more checks.
+Another useful example, is to test if a variable contains a value (so it's
+not empty):
+if [ -z $PBS_ARRAYID ]
+then
+  echo "Not an array job, quitting."
+  exit 1
+fi
+the -z will check if the length of the variable's value is greater than zero.
+Loops
+Are you copy-pasting commands? Are you doing the same thing with just different
+options? You most likely can simplify your script by using a loop.
+Let's look at a simple example:
+for i in 1 2 3
+do
+  echo $i
+done
+Subcommands
+Subcommands are used all the time in shell scripts. What they
+do is storing the output of a command in a variable. So this can later
+be used in a conditional or a loop for example.
+CURRENTDIR=`pwd`  # using backticks
+CURRENTDIR=$(pwd)  # recommended (easier to type)

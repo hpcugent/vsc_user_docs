@@ -1,0 +1,17 @@
+{
+    "main_title": "getting_started",
+    "subtitle": "Stopping-commands",
+    "source_file": "../../mkdocs/docs/HPC/linux-tutorial/getting_started.md",
+    "title_depth": 3,
+    "directory": "getting_started",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/account",
+        "1": "mailto:hpc@ugent.be",
+        "2": "mailto:hpc@ugent.be"
+    },
+    "parent_title": "",
+    "previous_title": null,
+    "next_title": "getting_started_paragraph_2",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/linux-tutorial/getting_started/#stopping-commands"
+}
