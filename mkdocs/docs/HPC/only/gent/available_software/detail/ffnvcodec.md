@@ -19,10 +19,10 @@ module load ffnvcodec/13.0.19.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ffnvcodec/13.0.19.0|x|x|x|x|x|x|x|
-|ffnvcodec/12.2.72.0|x|x|x|x|x|x|x|
-|ffnvcodec/12.1.14.0|x|x|x|x|x|x|x|
-|ffnvcodec/12.0.16.0|x|x|x|x|x|x|x|
-|ffnvcodec/11.1.5.2|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ffnvcodec/13.0.19.0|x|x|x|x|x|x|x|x|
+|ffnvcodec/12.2.72.0|x|x|x|x|x|x|x|x|
+|ffnvcodec/12.1.14.0|x|x|x|x|x|x|x|x|
+|ffnvcodec/12.0.16.0|x|x|x|x|x|x|x|x|
+|ffnvcodec/11.1.5.2|-|-|-|-|-|x|x|-|

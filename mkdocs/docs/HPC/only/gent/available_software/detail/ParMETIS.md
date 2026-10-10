@@ -14,12 +14,13 @@ The overview below shows which ParMETIS installations are available per HPC-UGen
 To start using ParMETIS, load one of these modules using a `module load` command like:
 
 ```shell
-module load ParMETIS/4.0.3-gompi-2025a
+module load ParMETIS/4.0.3-gompi-2026.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ParMETIS/4.0.3-gompi-2025a|x|x|x|x|x|x|x|
-|ParMETIS/4.0.3-gompi-2023a|-|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ParMETIS/4.0.3-gompi-2026.1|x|x|x|x|x|x|x|x|
+|ParMETIS/4.0.3-gompi-2025a|x|x|x|x|x|x|x|x|
+|ParMETIS/4.0.3-gompi-2023a|-|x|x|x|x|x|x|x|

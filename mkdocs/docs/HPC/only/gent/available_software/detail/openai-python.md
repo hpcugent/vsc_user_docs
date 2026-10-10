@@ -19,7 +19,7 @@ module load openai-python/1.39.0-foss-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|openai-python/1.39.0-foss-2023b|x|x|x|x|x|x|x|
-|openai-python/1.30.5-foss-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|openai-python/1.39.0-foss-2023b|x|x|x|x|x|x|x|x|
+|openai-python/1.30.5-foss-2023a|x|x|x|x|x|x|x|x|

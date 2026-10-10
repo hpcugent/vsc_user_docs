@@ -19,6 +19,6 @@ module load InterProScan/5.73-104.0-GCC-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|InterProScan/5.73-104.0-GCC-13.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|InterProScan/5.73-104.0-GCC-13.3.0|x|x|x|x|x|x|x|x|

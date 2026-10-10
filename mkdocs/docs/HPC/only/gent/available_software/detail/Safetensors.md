@@ -19,8 +19,8 @@ module load Safetensors/0.6.2-gfbf-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Safetensors/0.6.2-gfbf-2024a|x|x|x|x|x|x|x|
-|Safetensors/0.4.4-gfbf-2023b|x|x|x|x|x|x|x|
-|Safetensors/0.4.3-gfbf-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Safetensors/0.6.2-gfbf-2024a|x|x|x|x|x|x|x|x|
+|Safetensors/0.4.4-gfbf-2023b|x|x|x|x|x|x|x|x|
+|Safetensors/0.4.3-gfbf-2023a|x|x|x|x|x|x|x|x|

@@ -14,13 +14,14 @@ The overview below shows which Shapely installations are available per HPC-UGent
 To start using Shapely, load one of these modules using a `module load` command like:
 
 ```shell
-module load Shapely/2.1.1-gfbf-2025a
+module load Shapely/2.1.2-gfbf-2026.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Shapely/2.1.1-gfbf-2025a|x|x|x|x|x|x|x|
-|Shapely/2.0.6-gfbf-2024a|x|x|x|x|x|x|x|
-|Shapely/2.0.1-gfbf-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Shapely/2.1.2-gfbf-2026.1|x|x|x|x|x|x|x|x|
+|Shapely/2.1.1-gfbf-2025a|x|x|x|x|x|x|x|x|
+|Shapely/2.0.6-gfbf-2024a|x|x|x|x|x|x|x|x|
+|Shapely/2.0.1-gfbf-2023a|x|x|x|x|x|x|x|x|

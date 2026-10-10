@@ -19,7 +19,7 @@ module load VSEARCH/2.30.0-GCC-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VSEARCH/2.30.0-GCC-13.2.0|-|x|-|-|-|-|-|
-|VSEARCH/2.25.0-GCC-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|VSEARCH/2.30.0-GCC-13.2.0|-|x|-|-|-|-|-|x|
+|VSEARCH/2.25.0-GCC-12.3.0|x|x|x|x|x|x|x|x|
