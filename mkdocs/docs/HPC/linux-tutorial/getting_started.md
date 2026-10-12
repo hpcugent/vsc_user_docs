@@ -158,9 +158,9 @@ Note that `~` is short representation of your home
 directory.
 
 To make this persistent across session, you can define this custom value
-for `$PS1` in your `.profile` startup script:
+for `$PS1` in your `.bash_profile` startup script:
 ```
-$ echo 'export PS1="\w $ " ' >> ~/.profile
+$ echo 'export PS1="\w $ " ' >> ~/.bash_profile
 ```
 
 ### Using non-defined variables

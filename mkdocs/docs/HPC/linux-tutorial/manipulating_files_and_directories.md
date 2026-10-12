@@ -153,7 +153,7 @@ total 1
 drwxrwx---. 2 vsc40000 mygroup 40 Apr 12 15:00 Project_GoldenDragon
 ```
 
-The syntax used here is `g+x` which means group was given write
+The syntax used here is `g+w` which means group was given write
 permission. To revoke it again, we use `g-w`. The other roles are `u`
 for user and `o` for other.
 
