@@ -22,4 +22,7 @@ module load buildenv/default-intel-2024a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |buildenv/default-intel-2024a|x|x|x|x|x|x|x|x|
+|buildenv/default-foss-2026.1|x|x|x|x|x|x|x|x|
+|buildenv/default-foss-2025b|x|x|x|x|x|x|x|x|
+|buildenv/default-foss-2025a|x|x|x|x|x|x|x|x|
 |buildenv/default-foss-2024a|x|x|x|x|x|x|x|x|
