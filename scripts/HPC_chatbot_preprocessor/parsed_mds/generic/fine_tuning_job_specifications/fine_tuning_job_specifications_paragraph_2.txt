@@ -1,0 +1,44 @@
+qsub -I
+cd ~/examples/Fine-tuning-Job-Specifications
+Specifying Walltime
+[//]: # (sec:specifying-walltime-requirements)
+One of the most important and also easiest parameters to measure is the
+duration of your program. This information is needed to specify the
+walltime.
+The time utility executes and times your application. You can just add the time
+command in front of your normal command line, including your command
+line options. After your executable has finished, time writes the total time
+elapsed, the time consumed by system overhead, and the time used to
+execute your executable to the standard error stream. The calculated
+times are reported in seconds.
+Test the time command:
+$ time sleep 75
+real 1m15.005s
+user 0m0.001s
+sys 0m0.002s
+It is a good practice to correctly estimate and specify the run time
+(duration) of an application. Of course, a margin of 10% to 20% can be
+taken to be on the safe side.
+It is also wise to check the walltime on different compute nodes or to
+select the "slowest" compute node for your walltime tests. Your estimate
+should be appropriate in case your application will run on the "slowest"
+(oldest) compute nodes.
+The walltime can be specified in a job scripts as:
+#PBS -l walltime=3:00:00:00
+or on the command line
+qsub -l walltime=3:00:00:00
+It is recommended to always specify the walltime for a job.
+Specifying memory requirements
+[//]: # (sec:specifying-memory-requirements)
+In many situations, it is useful to monitor the amount of memory an
+application is using. You need this information to determine the
+characteristics of the required compute node, where that application
+should run on. Estimating the amount of memory an application will use
+during execution is often non-trivial, especially when one uses
+third-party software.
+Available Memory on the machine
+The first point is to be aware of the available free memory in your
+computer. The "free" command displays the total amount of free and
+used physical and swap memory in the system, as well as the buffers used
+by the kernel. We also use the options "-m" to see the results expressed
+in Mega-Bytes and the "-t" option to get totals.

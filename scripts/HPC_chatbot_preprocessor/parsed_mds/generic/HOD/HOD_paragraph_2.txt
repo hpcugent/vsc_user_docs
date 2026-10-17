@@ -1,0 +1,34 @@
+By defining these environment variables, we avoid that you have to
+specify --hod-module and --workdir when using hod batch or
+hod create, since they are strictly required.
+If you want to use a different parent working directory for HOD, it
+suffices to either redefine $HOD_BATCH_WORKDIR and
+$HOD_CREATE_WORKDIR, or to specify --workdir (which will override
+the corresponding environment variable).
+Changing the HOD module that is used by the HOD backend (i.e., using
+--hod-module or redefining $HOD_*_HOD_MODULE) is strongly
+discouraged.
+Cleaning up
+After HOD clusters terminate, their local working directory and cluster
+information is typically not cleaned up automatically (for example,
+because the job hosting an interactive HOD cluster submitted via
+hod create runs out of walltime).
+These HOD clusters will still show up in the output of hod list, and
+will be marked as <job-not-found>.
+You should occasionally clean this up using hod clean:
+$ module list
+Currently Loaded Modulefiles:
+  1) cluster/doduo(default)   2) pbs_python/4.6.0            3) vsc-base/2.4.2              4) hod/3.0.0-cli
+$ hod list
+Cluster label	Job ID		   State                Hosts
+example1        123456         &lt;job-not-found&gt;     &lt;none&gt;
+$ hod clean
+Removed cluster localworkdir directory /user/scratch/gent/vsc400/vsc40000/hod/hod/123456 for cluster labeled example1
+Removed cluster info directory /user/home/gent/vsc400/vsc40000/.config/hod.d/wordcount for cluster labeled example1
+$ module swap cluster/donphan
+Cluster label	Job ID				            State              	Hosts
+example2		98765.master19.donphan.gent.vsc	&lt;job-not-found&gt;     &lt;none&gt;
+$ hod clean
+Removed cluster localworkdir directory /user/scratch/gent/vsc400/vsc40000/hod/hod/98765.master19.donphan.gent.vsc for cluster labeled example2
+Removed cluster info directory /user/home/gent/vsc400/vsc40000/.config/hod.d/wordcount for cluster labeled example2
+Note that only HOD clusters that were submitted to the currently loaded cluster module will be cleaned up.

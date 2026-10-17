@@ -1,0 +1,2 @@
+ Tip
+    You can also still use the web portal (see shell access on web portal)
