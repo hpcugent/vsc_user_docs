@@ -19,7 +19,7 @@ module load spoa/4.1.0-GCC-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|spoa/4.1.0-GCC-13.2.0|x|x|x|x|x|x|x|
-|spoa/4.1.0-GCC-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|spoa/4.1.0-GCC-13.2.0|x|x|x|x|x|x|x|x|
+|spoa/4.1.0-GCC-12.3.0|x|x|x|x|x|x|x|x|

@@ -14,12 +14,13 @@ The overview below shows which Valgrind installations are available per HPC-UGen
 To start using Valgrind, load one of these modules using a `module load` command like:
 
 ```shell
-module load Valgrind/3.25.0-gompi-2025a
+module load Valgrind/3.26.0-gompi-2025b-Verrou-2.7.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Valgrind/3.25.0-gompi-2025a|x|-|-|-|-|x|x|
-|Valgrind/3.23.0-gompi-2023b|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Valgrind/3.26.0-gompi-2025b-Verrou-2.7.0|x|x|x|x|x|x|x|x|
+|Valgrind/3.25.0-gompi-2025a|x|-|-|-|-|x|x|-|
+|Valgrind/3.23.0-gompi-2023b|x|x|x|x|x|x|x|x|

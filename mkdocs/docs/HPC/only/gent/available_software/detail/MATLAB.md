@@ -19,8 +19,8 @@ module load MATLAB/2024b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MATLAB/2024b|x|x|x|x|x|x|x|
-|MATLAB/2023a-r1|x|x|x|x|x|x|x|
-|MATLAB/2022b-r5|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MATLAB/2024b|x|x|x|x|x|x|x|x|
+|MATLAB/2023a-r1|x|x|x|x|x|x|x|x|
+|MATLAB/2022b-r5|x|x|x|x|x|x|x|x|

@@ -19,7 +19,7 @@ module load GOATOOLS/1.4.12-foss-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GOATOOLS/1.4.12-foss-2024a|x|x|x|x|x|x|x|
-|GOATOOLS/1.4.5-foss-2023a|-|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GOATOOLS/1.4.12-foss-2024a|x|x|x|x|x|x|x|x|
+|GOATOOLS/1.4.5-foss-2023a|-|x|x|x|x|x|x|x|

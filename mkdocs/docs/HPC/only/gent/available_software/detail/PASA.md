@@ -19,7 +19,7 @@ module load PASA/2.5.3-foss-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PASA/2.5.3-foss-2024a|x|x|x|x|x|x|x|
-|PASA/2.5.3-foss-2023a|-|x|-|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PASA/2.5.3-foss-2024a|x|x|x|x|x|x|x|x|
+|PASA/2.5.3-foss-2023a|-|x|-|x|-|x|x|x|
