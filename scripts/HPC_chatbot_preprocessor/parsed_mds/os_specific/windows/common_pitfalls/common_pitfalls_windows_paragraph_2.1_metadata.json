@@ -1,0 +1,19 @@
+{
+    "main_title": "common_pitfalls",
+    "subtitle": "Copying-files-with-WinSCP",
+    "source_file": "../../mkdocs/docs/HPC/linux-tutorial/common_pitfalls.md",
+    "title_depth": 3,
+    "directory": "common_pitfalls",
+    "parent_title": "common_pitfalls",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/linux-tutorial/uploading_files/#dos2unix",
+        "1": "http://www.docstore.mik.ua/orelly/unix/upt.htm",
+        "2": "http://www.docstore.mik.ua/orelly/unix2.1.htm",
+        "3": "http://www.tldp.org/guides.html",
+        "4": "https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-0"
+    },
+    "previous_title": "common_pitfalls_paragraph_1",
+    "next_title": "common_pitfalls_paragraph_3",
+    "OS": "windows",
+    "reference_link": "https://docs.hpc.ugent.be/Windows/linux-tutorial/common_pitfalls/#copying-files-with-winscp"
+}
