@@ -1,0 +1,55 @@
+Critical Code
+Using OpenMP you can specify something called a "critical" section of
+code. This is code that is performed by all threads, but is only
+performed one thread at a time (i.e., in serial). This provides a convenient way of letting
+you do things like updating a global variable with local results from
+each thread, and you don't have to worry about things like other threads
+writing to that global variable at the same time (a collision).
+/*
+ * VSC        : Flemish Supercomputing Centre
+ * Tutorial   : Introduction to HPC
+ * Description: OpenMP Test Program
+ */
+#include <stdio.h>
+#include <omp.h>
+int main(int argc, char *argv[])
+{
+  int i, thread_id;
+  int glob_nloops, priv_nloops;
+  glob_nloops = 0;
+  // parallelize this chunk of code
+  #pragma omp parallel private(priv_nloops, thread_id)
+  {
+    priv_nloops = 0;
+    thread_id = omp_get_thread_num();
+    // parallelize this for loop
+    #pragma omp for
+    for (i=0; i<100000; ++i)
+    {
+      ++priv_nloops;
+    }
+    // make this a "critical" code section
+    #pragma omp critical
+    {
+      printf("Thread %d is adding its iterations (%d) to sum (%d), ", thread_id, priv_nloops, glob_nloops);
+      glob_nloops += priv_nloops;
+      printf("total is now %d.\n", glob_nloops);
+    }
+  }
+  printf("Total # loop iterations is %d\n", glob_nloops);
+  return 0;
+}
+And compile it (whilst including the "openmp" library) and run and
+test it on the login-node:
+$ module load GCC
+$ gcc -fopenmp -o omp2 omp2.c
+$ ./omp2
+Thread 3 is adding its iterations (12500) to sum (0), total is now 12500.
+Thread 7 is adding its iterations (12500) to sum (12500), total is now 25000.
+Thread 5 is adding its iterations (12500) to sum (25000), total is now 37500.
+Thread 6 is adding its iterations (12500) to sum (37500), total is now 50000.
+Thread 2 is adding its iterations (12500) to sum (50000), total is now 62500.
+Thread 4 is adding its iterations (12500) to sum (62500), total is now 75000.
+Thread 1 is adding its iterations (12500) to sum (75000), total is now 87500.
+Thread 0 is adding its iterations (12500) to sum (87500), total is now 100000.
+Total # loop iterations is 100000

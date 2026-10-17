@@ -1,0 +1,12 @@
+{
+    "main_title": "jobscript_examples",
+    "subtitle": "Running-a-command-with-a-maximum-time-limit",
+    "source_file": "../../mkdocs/docs/HPC/jobscript_examples.md",
+    "title_depth": 2,
+    "directory": "jobscript_examples",
+    "parent_title": "",
+    "previous_title": "jobscript_examples_paragraph_2",
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/jobscript_examples/#running-a-command-with-a-maximum-time-limit"
+}
