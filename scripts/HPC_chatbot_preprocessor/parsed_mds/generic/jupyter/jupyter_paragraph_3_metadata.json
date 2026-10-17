@@ -1,0 +1,15 @@
+{
+    "main_title": "jupyter",
+    "subtitle": "Using-extra-Python-packages",
+    "source_file": "../../mkdocs/docs/HPC/jupyter.md",
+    "title_depth": 3,
+    "directory": "jupyter",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/troubleshooting/#module-conflicts"
+    },
+    "parent_title": "",
+    "previous_title": "jupyter_paragraph_2",
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/jupyter/#using-extra-python-packages"
+}

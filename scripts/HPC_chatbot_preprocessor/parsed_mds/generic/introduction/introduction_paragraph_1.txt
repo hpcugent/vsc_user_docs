@@ -1,0 +1,42 @@
+Introduction to HPC
+What is HPC?
+"High Performance Computing" (HPC) is computing on a "Supercomputer", a computer with at the
+frontline of contemporary processing capacity -- particularly speed of
+calculation and available memory.
+While the supercomputers in the early days (around 1970) used only a few
+processors, in the 1990s machines with thousands of processors began to
+appear and, by the end of the 20th century, massively parallel
+supercomputers with tens of thousands of "off-the-shelf" processors were
+the norm. A large number of dedicated processors are placed in close
+proximity to each other in a computer cluster.
+A computer cluster consists of a set of loosely or tightly connected computers that work
+together so that in many respects they can be viewed as a single system.
+The components of a cluster are usually connected to each other through
+fast local area networks ("LAN") with each node (computer used as a
+server) running its own instance of an operating system. Computer
+clusters emerged as a result of convergence of a number of computing
+trends including the availability of low cost microprocessors,
+high-speed networks, and software for high performance distributed
+computing.
+Compute clusters are usually deployed to improve performance and
+availability over that of a single computer, while typically being more
+cost-effective than single computers of comparable speed or
+availability.
+Supercomputers play an important role in the field of computational
+science, and are used for a wide range of computationally intensive
+tasks in various fields, including quantum mechanics, weather
+forecasting, climate research, oil and gas exploration, molecular
+modelling (computing the structures and properties of chemical
+compounds, biological macromolecules, polymers, and crystals), and
+physical simulations (such as simulations of the early moments of the
+universe, airplane and spacecraft aerodynamics, the detonation of
+nuclear weapons, and nuclear fusion). [^1]
+What is the HPC-UGent infrastructure?
+The HPC is a collection of computers with AMD and/or Intel CPUs, running a
+Linux operating system, shaped like pizza boxes and stored above and
+next to each other in racks, interconnected with copper and fiber
+cables. Their number crunching power is (presently) measured in hundreds
+of billions of floating point operations (gigaflops) and even in
+teraflops.
+The HPC-UGent infrastructure relies on parallel-processing technology to offer UGent researchers an
+extremely fast solution for all their data processing needs.

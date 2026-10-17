@@ -1,0 +1,15 @@
+{
+    "main_title": "quick_reference_guide",
+    "subtitle": "HPC-Quick-Reference-Guide",
+    "source_file": "../../mkdocs/docs/HPC/quick_reference_guide.md",
+    "title_depth": 1,
+    "directory": "quick_reference_guide",
+    "links": {
+        "0": "https://account.vscentrum.be"
+    },
+    "parent_title": "",
+    "previous_title": null,
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/quick_reference_guide/#hpc-quick-reference-guide"
+}
