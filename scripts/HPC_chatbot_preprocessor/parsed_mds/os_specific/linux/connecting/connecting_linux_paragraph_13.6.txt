@@ -1,0 +1,18 @@
+One easy way of starting a sftp session is
+sftp vsc40000@login.hpc.ugent.be
+Typical and popular commands inside an sftp session are:
+|                       |                                                                                      |
+|:--------------------------|:-------------------------------------------------------------------------------------|
+| cd ~/exmples/fibo     | Move to the examples/fibo subdirectory on the (i.e., the HPC remote machine)   |
+| ls                    | Get a list of the files in the current directory on the HPC.                   |
+| get fibo.py           | Copy the file "fibo.py" from the HPC                                           |
+| get tutorial/HPC.pdf  | Copy the file "HPC.pdf" from the HPC, which is in the "tutorial" subdirectory. |
+| lcd test              | Move to the "test" subdirectory on your local machine.                               |
+| lcd ..                | Move up one level in the local directory.                                            |
+| lls                   | Get local directory listing.                                                         |
+| put test.py           | Copy the local file test.py to the HPC.                                        |
+| put test1.py test2.py | Copy the local file test1.py to the and rename it to test2.py.                       |
+| bye                   | Quit the sftp session                                                                |
+| **mget *.cc**             | Copy all the remote files with extension ".cc" to the local directory.               |
+| **mput *.h**              | Copy all the local files with extension ".h" to the HPC.                       |
+|                       |                                                                                      |
