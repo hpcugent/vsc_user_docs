@@ -22,12 +22,13 @@ module load pybind11/3.0.4-GCCcore-15.2.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |pybind11/3.0.4-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
-|pybind11/3.0.0-GCCcore-14.3.0|-|-|x|-|-|-|-|-|
+|pybind11/3.0.0-GCCcore-14.3.0|x|x|x|x|-|x|x|x|
 |pybind11/3.0.0-GCC-14.3.0|x|x|x|x|x|x|x|x|
 |pybind11/2.13.6-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|pybind11/2.13.6-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |pybind11/2.13.6-GCC-14.2.0|x|x|x|x|x|x|x|x|
 |pybind11/2.13.6-GCC-13.3.0|x|x|x|x|x|x|x|x|
-|pybind11/2.12.0-GCCcore-13.3.0|-|-|x|-|-|-|-|-|
+|pybind11/2.12.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |pybind11/2.12.0-GCC-13.3.0|x|x|x|x|x|x|x|x|
 |pybind11/2.11.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |pybind11/2.11.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
