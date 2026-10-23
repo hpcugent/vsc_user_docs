@@ -19,6 +19,6 @@ module load RTG-Tools/3.12.1-Java-11
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RTG-Tools/3.12.1-Java-11|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RTG-Tools/3.12.1-Java-11|x|x|x|x|x|x|x|x|

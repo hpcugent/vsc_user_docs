@@ -19,6 +19,6 @@ module load SpaceBF/0.2.0-2026-01-08-foss-2025a-R-4.5.1
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SpaceBF/0.2.0-2026-01-08-foss-2025a-R-4.5.1|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SpaceBF/0.2.0-2026-01-08-foss-2025a-R-4.5.1|x|x|x|x|x|x|x|x|

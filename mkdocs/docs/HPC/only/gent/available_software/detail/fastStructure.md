@@ -19,6 +19,6 @@ module load fastStructure/1.0-foss-2023a-Python-2.7.18
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fastStructure/1.0-foss-2023a-Python-2.7.18|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|fastStructure/1.0-foss-2023a-Python-2.7.18|x|x|x|x|x|x|x|x|

@@ -19,8 +19,8 @@ module load scikit-bio/0.6.2-foss-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scikit-bio/0.6.2-foss-2023b|-|x|-|-|-|-|-|
-|scikit-bio/0.6.0-foss-2023a|x|x|x|x|x|x|x|
-|scikit-bio/0.5.9-foss-2023a|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|scikit-bio/0.6.2-foss-2023b|-|x|-|-|-|-|-|x|
+|scikit-bio/0.6.0-foss-2023a|x|x|x|x|x|x|x|x|
+|scikit-bio/0.5.9-foss-2023a|-|-|-|-|-|x|x|-|

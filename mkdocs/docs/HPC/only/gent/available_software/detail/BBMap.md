@@ -19,7 +19,7 @@ module load BBMap/39.19-GCC-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BBMap/39.19-GCC-13.3.0|x|x|x|x|x|x|x|
-|BBMap/39.19-GCC-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|BBMap/39.19-GCC-13.3.0|x|x|x|x|x|x|x|x|
+|BBMap/39.19-GCC-12.3.0|x|x|x|x|x|x|x|-|

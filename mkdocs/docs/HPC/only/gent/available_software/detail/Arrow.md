@@ -14,15 +14,16 @@ The overview below shows which Arrow installations are available per HPC-UGent T
 To start using Arrow, load one of these modules using a `module load` command like:
 
 ```shell
-module load Arrow/22.0.0-gfbf-2025b
+module load Arrow/24.0.0-gfbf-2026.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Arrow/22.0.0-gfbf-2025b|x|x|x|x|x|x|x|
-|Arrow/22.0.0-gfbf-2025a|x|x|x|x|x|x|x|
-|Arrow/17.0.0-gfbf-2024a|x|x|x|x|x|x|x|
-|Arrow/16.1.0-gfbf-2023b|x|x|x|x|x|x|x|
-|Arrow/14.0.1-gfbf-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Arrow/24.0.0-gfbf-2026.1|x|x|x|x|x|x|x|x|
+|Arrow/22.0.0-gfbf-2025b|x|x|x|x|x|x|x|x|
+|Arrow/22.0.0-gfbf-2025a|x|x|x|x|x|x|x|x|
+|Arrow/17.0.0-gfbf-2024a|x|x|x|x|x|x|x|x|
+|Arrow/16.1.0-gfbf-2023b|x|x|x|x|x|x|x|x|
+|Arrow/14.0.1-gfbf-2023a|x|x|x|x|x|x|x|x|
