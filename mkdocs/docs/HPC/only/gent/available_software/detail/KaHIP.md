@@ -21,8 +21,8 @@ module load KaHIP/3.19-gompi-2025b
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|KaHIP/3.19-gompi-2025b|-|-|-|-|-|-|-|x|
-|KaHIP/3.19-gompi-2025a|-|-|-|-|-|-|-|x|
+|KaHIP/3.19-gompi-2025b|x|x|x|x|x|x|x|x|
+|KaHIP/3.19-gompi-2025a|x|x|x|x|x|x|x|x|
 |KaHIP/3.19-gompi-2024a|x|x|x|x|x|x|x|x|
 |KaHIP/3.16-gompi-2023b|-|-|-|-|-|-|-|x|
 |KaHIP/3.16-gompi-2023a|x|x|x|x|x|x|x|x|

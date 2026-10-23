@@ -21,8 +21,8 @@ module load OpenFOAM/v2506-foss-2025b
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenFOAM/v2506-foss-2025b|-|-|-|-|-|-|-|x|
-|OpenFOAM/v2506-foss-2025a|-|-|-|-|-|-|-|x|
+|OpenFOAM/v2506-foss-2025b|x|x|x|x|x|x|x|x|
+|OpenFOAM/v2506-foss-2025a|x|x|x|x|x|x|x|x|
 |OpenFOAM/v2412_250814-foss-2024a|x|x|x|x|x|x|x|x|
 |OpenFOAM/v2406-foss-2023b|-|-|-|-|-|-|-|x|
 |OpenFOAM/v2406-foss-2023a|-|x|x|x|x|-|-|x|
