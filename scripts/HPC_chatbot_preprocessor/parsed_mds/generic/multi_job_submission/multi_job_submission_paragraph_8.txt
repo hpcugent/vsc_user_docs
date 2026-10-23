@@ -1,0 +1,63 @@
+Note that it is trivial to set individual time constraints for work
+items by introducing a parameter, and including the values of the latter
+in the CSV file, along with those for the temperature, pressure and
+volume.
+Also note that "timedrun" is in fact offered in a module of its own, so
+it can be used outside the Worker framework as well.
+Resuming a Worker job
+Unfortunately, walltime is sometimes underestimated. When using the
+Worker framework, this implies that not all work items will have been
+processed. Worker makes it very easy to resume such a job without having
+to figure out which work items did complete successfully, and which
+remain to be computed. Suppose the job that did not complete all its
+work items had ID "445948".
+wresume -jobid 123456
+This will submit a new job that will start to work on the work items
+that were not done yet. Note that it is possible to change almost all
+job parameters when resuming, specifically the requested resources such
+as the number of cores and the walltime.
+wresume -l walltime=1:30:00 -jobid 123456
+Work items may fail to complete successfully for a variety of reasons,
+e.g., a data file that is missing, a (minor) programming error, etc.
+Upon resuming a job, the work items that failed are considered to be
+done, so resuming a job will only execute work items that did not
+terminate either successfully, or reporting a failure. It is also
+possible to retry work items that failed (preferably after the glitch
+why they failed was fixed).
+wresume -jobid 123456 -retry
+By default, a job's prologue is not executed when it is resumed, while
+its epilogue is. "wresume" has options to modify this default behaviour.
+Further information
+This how-to introduces only Worker's basic features. The wsub command
+has some usage information that is printed when the -help option is
+specified:
+$ wsub -help
+### usage: wsub  -batch &lt;batch-file&gt;          
+#                [-data &lt;data-files&gt;]         
+#                [-prolog &lt;prolog-file&gt;]      
+#                [-epilog &lt;epilog-file&gt;]      
+#                [-log &lt;log-file&gt;]            
+#                [-mpiverbose]                
+#                [-dryrun] [-verbose]         
+#                [-quiet] [-help]             
+#                [-t &lt;array-req&gt;]             
+#                [&lt;pbs-qsub-options&gt;]
+#
+#   -batch &lt;batch-file&gt;   : batch file template, containing variables to be
+#                           replaced with data from the data file(s) or the
+#                           PBS array request option
+#   -data &lt;data-files&gt;    : comma-separated list of data files (default CSV
+#                           files) used to provide the data for the work
+#                           items
+#   -prolog &lt;prolog-file&gt; : prolog script to be executed before any of the
+#                           work items are executed
+#   -epilog &lt;epilog-file&gt; : epilog script to be executed after all the work
+#                           items are executed
+#   -mpiverbose           : pass verbose flag to the underlying MPI program
+#   -verbose              : feedback information is written to standard error
+#   -dryrun               : run without actually submitting the job, useful
+#   -quiet                : don't show information
+#   -help                 : print this help message
+#   -t &lt;array-req&gt;        : qsub's PBS array request options, e.g., 1-10
+#   &lt;pbs-qsub-options&gt;    : options passed on to the queue submission
+#                           command
