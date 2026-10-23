@@ -1,0 +1,50 @@
+/*
+ * VSC        : Flemish Supercomputing Centre
+ * Tutorial   : Introduction to HPC
+ * Description: Print 500 numbers, whilst waiting 1 second in between
+ */
+#include "stdio.h"
+int main( int argc, char *argv[] )
+{
+  int i;
+  for (i=0; i<500; i++)
+  {
+    printf("Hello #%d\n", i);
+    fflush(stdout);
+    sleep(1);
+  }
+}
+The "hello.c" program is a simple source file, written in C. It'll print
+500 times "Hello #&lt;num&gt;", and waits one second between 2 printouts.
+We first need to compile this C-file into an executable with the
+gcc-compiler.
+First, check the command line options for *"gcc" (GNU C-Compiler)*, then
+we compile. the O2 option enables a moderate level of optimization when compiling the code. 
+It instructs the compiler to optimize the code for better performance without significantly increasing compilation time.
+Finally, list the contents of the directory again:
+$ gcc -help
+$ gcc -O2 -o hello hello.c
+$ ls -l
+total 512
+-rwxrwxr-x 1 vsc40000 7116 Sep 16 11:43 hello*
+-rw-r--r-- 1 vsc40000  214 Sep 16 09:42 hello.c
+-rwxr-xr-x 1 vsc40000  130 Sep 16 11:39 hello.pbs*
+A new file "hello" has been created. Note that this file has "execute"
+rights, i.e., it is an executable. More often than not, calling gcc --
+or any other compiler for that matter -- will provide you with a list of
+errors and warnings referring to mistakes the programmer made, such as
+typos, syntax errors. You will have to correct them first in order to
+make the code compile. Warnings pinpoint less crucial issues that may
+relate to performance problems, using unsafe or obsolete language
+features, etc. It is good practice to remove all warnings from a
+compilation process, even if they seem unimportant so that a code change
+that produces a warning does not go unnoticed.
+Let's test this program on the local compute node, which is at your
+disposal after the qsub --I command:
+$ ./hello
+Hello #0
+Hello #1
+Hello #2
+Hello #3
+Hello #4
+...

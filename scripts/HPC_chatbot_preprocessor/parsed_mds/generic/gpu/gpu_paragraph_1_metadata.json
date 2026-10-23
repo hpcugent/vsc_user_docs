@@ -1,0 +1,16 @@
+{
+    "main_title": "gpu",
+    "subtitle": "Requesting-(GPU)-resources",
+    "source_file": "../../mkdocs/docs/HPC/gpu.md",
+    "title_depth": 2,
+    "directory": "gpu",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/gpu/#requesting-gpu-resources",
+        "1": "https://docs.hpc.ugent.be/gpu/#requesting-gpu-resources"
+    },
+    "parent_title": "",
+    "previous_title": null,
+    "next_title": "gpu_paragraph_2",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/gpu/#requesting-gpu-resources"
+}

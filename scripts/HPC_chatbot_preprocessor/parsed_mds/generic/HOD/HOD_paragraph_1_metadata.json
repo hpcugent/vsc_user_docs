@@ -1,0 +1,16 @@
+{
+    "main_title": "HOD",
+    "subtitle": "Standard-HOD-configuration",
+    "source_file": "../../mkdocs/docs/HPC/HOD.md",
+    "title_depth": 3,
+    "directory": "HOD",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/running_batch_jobs/#using-explicit-version-numbers",
+        "1": "https://docs.hpc.ugent.be/troubleshooting/#running-software-that-is-incompatible-with-host"
+    },
+    "parent_title": "",
+    "previous_title": null,
+    "next_title": "HOD_paragraph_2",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/HOD/#standard-hod-configuration"
+}
