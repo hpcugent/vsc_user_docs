@@ -28,7 +28,7 @@ class TestMarkdown:
     # ---------------------------
 
     def test_table_generate_simple(self):
-        simple_data = get_unique_software_names(modules_ugent())
+        simple_data = get_unique_software_names(modules_ugent()[0])
         table_data, col, row = generate_table_data(simple_data)
         assert col == 3
         assert row == 5
@@ -36,7 +36,7 @@ class TestMarkdown:
 
     def test_md_simple(self):
         md_file = MdUtils(file_name='test_simple', title='Overview Modules')
-        simple_data = get_unique_software_names(modules_ugent())
+        simple_data = get_unique_software_names(modules_ugent()[0])
         generate_module_table(simple_data, md_file)
         md_file.create_md_file()
         assert os.path.exists("test_simple.md")
