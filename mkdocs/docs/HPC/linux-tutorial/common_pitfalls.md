@@ -76,7 +76,7 @@ press enter to put the command in your history so you can come back to
 it later (e.g., while you go check the spelling of your environment
 variables).
 
-{% if OS==windows %}
+{% if OS == windows %}
 
 ### Copying files with WinSCP
 
