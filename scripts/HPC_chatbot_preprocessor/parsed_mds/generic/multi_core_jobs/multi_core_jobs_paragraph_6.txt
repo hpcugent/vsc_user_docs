@@ -1,0 +1,48 @@
+Now run it in the cluster and check the result again.
+$ qsub omp2.pbs
+$ cat omp2.pbs.o*
+Thread 2 is adding its iterations (12500) to sum (0), total is now 12500.
+Thread 0 is adding its iterations (12500) to sum (12500), total is now 25000.
+Thread 1 is adding its iterations (12500) to sum (25000), total is now 37500.
+Thread 4 is adding its iterations (12500) to sum (37500), total is now 50000.
+Thread 7 is adding its iterations (12500) to sum (50000), total is now 62500.
+Thread 3 is adding its iterations (12500) to sum (62500), total is now 75000.
+Thread 5 is adding its iterations (12500) to sum (75000), total is now 87500.
+Thread 6 is adding its iterations (12500) to sum (87500), total is now 100000.
+Total # loop iterations is 100000
+Reduction
+Reduction refers to the process of combining the results of several
+sub-calculations into a final result. This is a very common paradigm
+(and indeed the so-called "map-reduce" framework used by Google and
+others is very popular). Indeed we used this paradigm in the code
+example above, where we used the "critical code" directive to accomplish
+this. The map-reduce paradigm is so common that OpenMP has a specific
+directive that allows you to more easily implement this.
+/*
+ * VSC        : Flemish Supercomputing Centre
+ * Tutorial   : Introduction to HPC
+ * Description: OpenMP Test Program
+ */
+#include <stdio.h>
+#include <omp.h>
+int main(int argc, char *argv[])
+{
+  int i, thread_id;
+  int glob_nloops, priv_nloops;
+  glob_nloops = 0;
+  // parallelize this chunk of code
+  #pragma omp parallel private(priv_nloops, thread_id) reduction(+:glob_nloops)
+  {
+    priv_nloops = 0;
+    thread_id = omp_get_thread_num();
+    // parallelize this for loop
+    #pragma omp for
+    for (i=0; i<100000; ++i)
+    {
+      ++priv_nloops;
+    }
+    glob_nloops += priv_nloops;
+  }
+  printf("Total # loop iterations is %d\n", glob_nloops);
+  return 0;
+}
