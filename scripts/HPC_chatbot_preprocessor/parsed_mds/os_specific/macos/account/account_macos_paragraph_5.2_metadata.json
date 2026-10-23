@@ -1,0 +1,12 @@
+{
+    "main_title": "account",
+    "subtitle": "Test-OpenSSH",
+    "source_file": "../../mkdocs/docs/HPC/account.md",
+    "title_depth": 3,
+    "directory": "account",
+    "parent_title": "Getting-ready-to-request-an-account",
+    "previous_title": "account_macos_paragraph_5.1",
+    "next_title": "account_macos_paragraph_5.3",
+    "OS": "macos",
+    "reference_link": "https://docs.hpc.ugent.be/macOS/account/#test-openssh"
+}

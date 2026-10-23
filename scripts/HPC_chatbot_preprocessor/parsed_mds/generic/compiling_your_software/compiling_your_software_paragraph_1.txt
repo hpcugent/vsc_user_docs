@@ -1,0 +1,10 @@
+Compiling and testing your software on the HPC
+All nodes in the HPC cluster are running the "RHEL 8.8 (accelgor, doduo, donphan, gallade, joltik, skitty)" 
+Operating system, which is a specific version of Red Hat Enterprise Linux. This means that all the 
+software programs
+(executable) that the end-user wants to run on the HPC first must be
+compiled for RHEL 8.8 (accelgor, doduo, donphan, gallade, joltik, skitty). It also means that you first have to install all the
+required external software packages on the HPC.
+Most commonly used compilers are already pre-installed on the HPC and can be
+used straight away. Also, many popular external software packages, which
+are regularly used in the scientific community, are also pre-installed.
