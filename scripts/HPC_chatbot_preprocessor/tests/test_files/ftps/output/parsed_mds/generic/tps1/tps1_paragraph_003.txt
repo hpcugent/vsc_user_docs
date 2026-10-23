@@ -1,0 +1,3 @@
+Conclusion
+Coming up with what to write in test texts is very hard. I think I got the most important test cases in there, but I 
+might add to this if needed.
