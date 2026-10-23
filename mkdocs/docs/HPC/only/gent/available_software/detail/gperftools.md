@@ -21,8 +21,8 @@ module load gperftools/2.17.2-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gperftools/2.17.2-GCCcore-14.3.0|-|-|-|-|-|-|-|x|
-|gperftools/2.16-GCCcore-14.2.0|-|-|-|-|-|-|-|x|
+|gperftools/2.17.2-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|gperftools/2.16-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |gperftools/2.16-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |gperftools/2.13-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |gperftools/2.12-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

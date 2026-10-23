@@ -23,5 +23,6 @@ module load freeglut/3.8.0-GCCcore-15.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |freeglut/3.8.0-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |freeglut/3.6.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|freeglut/3.6.0-GCCcore-14.2.0|-|-|-|-|-|-|-|x|
 |freeglut/3.4.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |freeglut/3.4.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

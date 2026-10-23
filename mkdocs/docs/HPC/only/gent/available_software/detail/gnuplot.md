@@ -22,7 +22,7 @@ module load gnuplot/6.0.5-GCCcore-15.2.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |gnuplot/6.0.5-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
-|gnuplot/6.0.3-GCCcore-14.3.0|-|-|-|-|-|-|-|x|
+|gnuplot/6.0.3-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |gnuplot/6.0.3-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |gnuplot/6.0.1-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |gnuplot/6.0.1-GCCcore-13.2.0|-|-|-|-|-|-|-|x|

@@ -22,7 +22,7 @@ module load CGAL/6.2-GCCcore-15.2.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |CGAL/6.2-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
-|CGAL/6.0.1-GCCcore-14.3.0|-|-|-|-|-|-|-|x|
+|CGAL/6.0.1-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |CGAL/6.0.1-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |CGAL/5.6.1-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |CGAL/5.6.1-GCCcore-13.2.0|-|-|-|-|-|-|-|x|

@@ -22,5 +22,6 @@ module load libepoxy/1.5.10-GCCcore-15.2.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libepoxy/1.5.10-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|libepoxy/1.5.10-GCCcore-14.3.0|-|-|-|-|-|-|-|x|
 |libepoxy/1.5.10-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |libepoxy/1.5.10-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

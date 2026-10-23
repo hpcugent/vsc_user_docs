@@ -22,7 +22,7 @@ module load ParaView/6.1.1-foss-2026.1
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ParaView/6.1.1-foss-2026.1|x|x|x|x|x|x|x|x|
-|ParaView/6.0.1-foss-2025b|-|-|-|-|-|-|-|x|
+|ParaView/6.0.1-foss-2025b|x|x|x|x|x|x|x|x|
 |ParaView/6.0.1-foss-2025a|x|x|x|x|x|x|x|x|
 |ParaView/5.13.2-foss-2024a|x|x|x|x|x|x|x|x|
 |ParaView/5.12.0-foss-2023b|-|-|-|-|-|-|-|x|

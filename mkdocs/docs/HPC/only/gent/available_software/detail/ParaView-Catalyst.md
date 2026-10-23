@@ -22,4 +22,4 @@ module load ParaView-Catalyst/2.1.0-foss-2026.1
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ParaView-Catalyst/2.1.0-foss-2026.1|x|x|x|x|x|x|x|x|
-|ParaView-Catalyst/2.0.0-foss-2025b|-|-|-|-|-|-|-|x|
+|ParaView-Catalyst/2.0.0-foss-2025b|x|x|x|x|x|x|x|x|
