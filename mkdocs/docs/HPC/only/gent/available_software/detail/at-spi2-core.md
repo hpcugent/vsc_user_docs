@@ -22,6 +22,6 @@ module load at-spi2-core/2.56.2-GCCcore-15.2.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |at-spi2-core/2.56.2-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
-|at-spi2-core/2.56.2-GCCcore-14.3.0|-|-|-|-|-|-|-|x|
+|at-spi2-core/2.56.2-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |at-spi2-core/2.50.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |at-spi2-core/2.49.91-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

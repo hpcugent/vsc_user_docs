@@ -22,6 +22,6 @@ module load GTK3/3.24.52-GCCcore-15.2.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |GTK3/3.24.52-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
-|GTK3/3.24.43-GCCcore-14.3.0|-|-|-|-|-|-|-|x|
+|GTK3/3.24.43-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |GTK3/3.24.39-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |GTK3/3.24.37-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

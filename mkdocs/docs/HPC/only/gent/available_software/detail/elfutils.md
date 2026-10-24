@@ -23,6 +23,6 @@ module load elfutils/0.195-GCCcore-15.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |elfutils/0.195-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |elfutils/0.193-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
-|elfutils/0.193-GCCcore-14.2.0|-|-|-|-|-|-|-|x|
+|elfutils/0.193-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |elfutils/0.189-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
 |elfutils/0.187-GCCcore-11.3.0|-|-|-|-|-|x|x|-|
