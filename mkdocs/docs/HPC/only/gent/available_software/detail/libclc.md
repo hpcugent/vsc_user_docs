@@ -23,4 +23,4 @@ module load libclc/21.1.8-GCCcore-15.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libclc/21.1.8-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |libclc/20.1.8-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
-|libclc/20.1.8-GCCcore-14.2.0|-|-|-|-|-|-|-|x|
+|libclc/20.1.8-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
