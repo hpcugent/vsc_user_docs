@@ -1,0 +1,49 @@
+The "test_set" program will now be run for all 100 input files -- 8
+concurrently -- until all computations are done. Again, a computation
+for an individual input file, or, equivalently, an array id, is called a
+work item in Worker speak.
+Note that in contrast to TORQUE job arrays, a worker job array only
+submits a single job.
+$ qstat
+Job id          Name          User      Time   Use S Queue
+--------------- ------------- --------- ---- ----- - -----
+123456  test_set.pbs  vsc40000          0 Q
+And you can now check the generated output files:
+$ more ./output/output_99.dat
+This is output file #99
+Calculations done, no results
+MapReduce: prologues and epilogue
+Often, an embarrassingly parallel computation can be abstracted to three
+simple steps:
+1.  a preparation phase in which the data is split up into smaller, more
+    manageable chunks;
+2.  on these chunks, the same algorithm is applied independently (these
+    are the work items); and
+3.  the results of the computations on those chunks are aggregated into,
+    e.g., a statistical description of some sort.
+The Worker framework directly supports this scenario by using a prologue
+(pre-processing) and an epilogue (post-processing). The former is
+executed just once before work is started on the work items, the latter
+is executed just once after the work on all work items has finished.
+Technically, the master, i.e., the process that is responsible for
+dispatching work and logging progress, executes the prologue and
+epilogue.
+cd ~/examples/Multi-job-submission/map_reduce
+The script "pre.sh" prepares the data by creating 100 different
+input-files, and the script "post.sh" aggregates (concatenates) the
+data.
+First study the scripts:
+#!/bin/bash
+# Check if the input Directory exists
+if [ ! -d "./input" ] ; then
+  mkdir ./input
+fi
+# Just generate all dummy input files
+for i in {1..100}; 
+do
+  echo "This is input file #$i" >  ./input/input_$i.dat 
+  echo "Parameter #1 = $i" >>  ./input/input_$i.dat 
+  echo "Parameter #2 = 25.67" >>  ./input/input_$i.dat
+  echo "Parameter #3 = Batch" >>  ./input/input_$i.dat
+  echo "Parameter #4 = 0x562867" >>  ./input/input_$i.dat
+done
