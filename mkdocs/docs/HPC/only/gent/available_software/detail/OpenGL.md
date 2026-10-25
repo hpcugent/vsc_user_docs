@@ -23,4 +23,4 @@ module load OpenGL/2026.05-GCCcore-15.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |OpenGL/2026.05-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |OpenGL/2025.09-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
-|OpenGL/2025.09-GCCcore-14.2.0|-|-|-|-|-|-|-|x|
+|OpenGL/2025.09-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
