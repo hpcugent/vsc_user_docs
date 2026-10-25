@@ -1,0 +1,34 @@
+Modules from the same toolchain always work together, and modules from a
+\*different version of the same toolchain\* never work together.
+The above set of modules works together: an overview of compatible toolchains can be found here:
+https://docs.easybuild.io/en/latest/Common-toolchains.html#overview-of-common-toolchains.
+You can use module avail [search_text] to see which versions on which toolchains are available to use.
+If you need something that's not available yet, you can request it through a
+software installation request.
+It is possible to use the modules without specifying a version or toolchain. However,
+this will probably cause incompatible modules to be loaded. Don't do it if you use multiple modules.
+Even if it works now, as more modules get installed on the HPC, your job can suddenly break.
+Troubleshooting
+My modules don't work together
+When incompatible modules are loaded, you might encounter an error like this:
+Lmod has detected the following error: A different version of the 'GCC' module
+is already loaded (see output of 'ml').
+You should load another foss module for that is compatible with the currently
+loaded version of GCC.
+Use ml spider foss to get an overview of the available versions.
+Modules from the same toolchain always work together, and modules from a
+_different version of the same toolchain_ never work together.
+An overview of compatible toolchains can be found here:
+https://docs.easybuild.io/en/latest/Common-toolchains.html#overview-of-common-toolchains.
+See also: How do I choose the job modules?
+My job takes longer than 72 hours
+The 72 hour walltime limit will not be extended. However, you can work around this barrier:
+* Check that all available resources are being used. See also:
+    * How many cores/nodes should I request?.
+    * My job is slow.
+    * My job isn't using any GPUs.
+* Use a faster cluster.
+* Divide the job into more parallel processes.
+* Divide the job into shorter processes, which you can submit as separate jobs.
+* Use the built-in checkpointing of your software.
+Job failed: SEGV Segmentation fault

@@ -1,0 +1,19 @@
+{
+    "main_title": "FAQ",
+    "subtitle": "How-do-I-choose-the-job-modules",
+    "source_file": "../../mkdocs/docs/HPC/FAQ.md",
+    "title_depth": 3,
+    "directory": "FAQ",
+    "links": {
+        "0": "https://www.ugent.be/hpc/en/training/2023/introhpcugent",
+        "1": "https://www.ugent.be/hpc/en/support/software-installation-request",
+        "2": "https://www.ugent.be/hpc/en/infrastructure",
+        "3": "https://docs.hpc.ugent.be/running_batch_jobs",
+        "4": "https://www.ugent.be/hpc/en/support/software-installation-request"
+    },
+    "parent_title": "",
+    "previous_title": null,
+    "next_title": "FAQ_paragraph_2",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/FAQ/#how-do-i-choose-the-job-modules"
+}
