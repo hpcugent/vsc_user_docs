@@ -20,7 +20,7 @@ class TestData:
     # ---------------------------
 
     def test_data_ugent(self):
-        sol = modules_ugent()
+        sol = modules_ugent()[0]
         assert len(sol) == 2
         assert len(sol["dialga"]) == 13
         assert len(sol["pikachu"]) == 15
