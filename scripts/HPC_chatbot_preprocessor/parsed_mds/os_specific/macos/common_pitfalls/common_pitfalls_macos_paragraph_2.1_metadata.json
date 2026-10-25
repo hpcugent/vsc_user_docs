@@ -1,0 +1,18 @@
+{
+    "main_title": "common_pitfalls",
+    "subtitle": "More-information",
+    "source_file": "../../mkdocs/docs/HPC/linux-tutorial/common_pitfalls.md",
+    "title_depth": 1,
+    "directory": "common_pitfalls",
+    "parent_title": "common_pitfalls",
+    "links": {
+        "0": "http://www.docstore.mik.ua/orelly/unix/upt.htm",
+        "1": "http://www.docstore.mik.ua/orelly/unix2.1.htm",
+        "2": "http://www.tldp.org/guides.html",
+        "3": "https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-0"
+    },
+    "previous_title": "common_pitfalls_paragraph_1",
+    "next_title": "common_pitfalls_paragraph_3",
+    "OS": "macos",
+    "reference_link": "https://docs.hpc.ugent.be/macOS/linux-tutorial/common_pitfalls/#more-information"
+}
