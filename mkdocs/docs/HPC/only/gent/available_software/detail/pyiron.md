@@ -19,8 +19,8 @@ module load pyiron/0.5.2-foss-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pyiron/0.5.2-foss-2023b|x|x|x|x|x|x|x|
-|pyiron/0.5.2-20251013-foss-2025b|x|x|x|x|x|x|x|
-|pyiron/0.5.2-20250921-foss-2024a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pyiron/0.5.2-foss-2023b|x|x|x|x|x|x|x|x|
+|pyiron/0.5.2-20251013-foss-2025b|x|x|x|x|x|x|x|x|
+|pyiron/0.5.2-20250921-foss-2024a|x|x|x|x|x|x|x|x|

@@ -5,8 +5,7 @@
 The Stevin computing infrastructure consists of several Tier2 clusters
 which are hosted in the S10 datacenter of Ghent University.
 
-This infrastructure is co-financed by FWO and Department of Economy,
-Science and Innovation (EWI).
+This infrastructure is co-financed by FWO and the Flemish Government.
 
 ## Tier-2 login nodes
 
@@ -15,6 +14,22 @@ or using SSH via `login.hpc.ugent.be`.
 
 Read more info on [using the web portal](web_portal.md),
 and [about making a connection with SSH](connecting.md).
+
+!!! note
+    Since mid-september 2026, per-user resource limits are in place on our Tier-2 login nodes, which can be consulted by running the ``ulimit -a`` command. 
+    
+    These limits include:
+
+    * max. 2 GB of virtual memory per session
+    * max. 496 running processes/threads total across all sessions
+    * max. 2 hours of CPU time per process
+
+    Processes that exceed any of these limits will be terminated by the operating system or fail to start successfully.
+
+     **Please only use the login nodes as an access portal!**
+
+    We also provide an [interactive debug cluster](#interactive-debug-cluster), which is specifically intended for testing, debugging, and other interactive work that exceeds the login node limits.
+
 
 ## Tier-2 compute clusters
 
@@ -28,12 +43,12 @@ For basic information on using these clusters, see our
 
 | ***cluster name*** | ***# nodes*** | ***Processor architecture*** | ***Usable memory/node*** | ***Local diskspace/node*** | ***Interconnect*** | ***Operating system*** |
 | --- | --- | --- | --- | --- | --- | --- |
-| doduo (default cluster) | 128 | 2x 48-core AMD EPYC 7552 (Rome @ 2.2 GHz) | 250 GiB | 180GB SSD | HDR-100 InfiniBand | RHEL 9 |
+| doduo | 64 | 2x 48-core AMD EPYC 7552 (Rome @ 2.2 GHz) | 250 GiB | 180GB SSD | HDR-100 InfiniBand | RHEL 9 |
 | gallade | 16 | 2x 64-core AMD EPYC 7773X (Milan-X @ 2.2 GHz) | 940 GiB | 1.5 TB NVME | HDR-100 InfiniBand | RHEL 9 |
 | shinx | 48 | 2x 96-core AMD EPYC 9654 (Genoa @ 2.4 GHz) | 370 GiB | 500GB NVME | NDR-200 InfiniBand | RHEL 9 |
+| skiddo (default cluster) | 28 | 2x 128-core AMD EPYC 9755 (Turin  @ 2.7 GHz) | 720 GiB | 900 GB NVME | NDR-200 InfiniBand | RHEL 9 |
 
 ### Interactive debug cluster
-
 
 A special-purpose interactive debug cluster is available,
 where you should always be able to get a job running quickly,

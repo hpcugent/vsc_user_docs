@@ -19,6 +19,6 @@ module load CubeLib/4.9-GCCcore-14.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CubeLib/4.9-GCCcore-14.2.0|x|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CubeLib/4.9-GCCcore-14.2.0|x|-|x|x|x|x|x|x|

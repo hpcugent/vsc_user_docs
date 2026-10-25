@@ -19,6 +19,6 @@ module load SpaGene/0.1.0-2023-06-04-foss-2025a-R-4.5.1
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SpaGene/0.1.0-2023-06-04-foss-2025a-R-4.5.1|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SpaGene/0.1.0-2023-06-04-foss-2025a-R-4.5.1|x|x|x|x|x|x|x|x|

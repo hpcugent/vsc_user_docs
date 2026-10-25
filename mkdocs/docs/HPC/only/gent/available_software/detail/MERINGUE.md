@@ -19,6 +19,6 @@ module load MERINGUE/1.0-2022-06-07-foss-2025a-R-4.5.1
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MERINGUE/1.0-2022-06-07-foss-2025a-R-4.5.1|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MERINGUE/1.0-2022-06-07-foss-2025a-R-4.5.1|x|x|x|x|x|x|x|x|

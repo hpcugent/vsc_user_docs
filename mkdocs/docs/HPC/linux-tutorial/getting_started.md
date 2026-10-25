@@ -158,9 +158,9 @@ Note that `~` is short representation of your home
 directory.
 
 To make this persistent across session, you can define this custom value
-for `$PS1` in your `.profile` startup script:
+for `$PS1` in your `.bash_profile` startup script:
 ```
-$ echo 'export PS1="\w $ " ' >> ~/.profile
+$ echo 'export PS1="\w $ " ' >> ~/.bash_profile
 ```
 
 ### Using non-defined variables
@@ -210,17 +210,17 @@ in a variety of ways.
 We limit ourselves to determining the hostname: 
 ```
 $ hostname 
-gligar01.gligar.os
+gligar12.gligar.os
 
 $ echo $HOSTNAME 
-gligar01.gligar.os 
+gligar12.gligar.os
 ```
 
 And querying some basic information about the Linux kernel:
 ```
-$ uname -a 
-Linux gligar01.gligar.os 2.6.32-573.8.1.el6.ug.x86_64 #1 SMP Mon Nov 16 15:12:09
-	CET 2015 x86_64 x86_64 x86_64 GNU/Linux 
+$ uname -a
+Linux gligar12.gastly.os 5.14.0-687.44.1.el9_8.x86_64 #1 SMP PREEMPT_DYNAMIC 
+    Mon Aug 31 23:56:47 EDT 2026 x86_64 x86_64 x86_64 GNU/Linux
 ```
 
 ## Exercises

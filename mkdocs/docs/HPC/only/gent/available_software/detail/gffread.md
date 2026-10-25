@@ -19,7 +19,7 @@ module load gffread/0.12.7-GCCcore-13.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gffread/0.12.7-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|gffread/0.12.7-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|gffread/0.12.7-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|gffread/0.12.7-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
