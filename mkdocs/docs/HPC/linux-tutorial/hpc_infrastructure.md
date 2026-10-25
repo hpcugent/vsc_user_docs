@@ -6,7 +6,7 @@ infrastructure, each with their own purpose. See section
 [Where to store your data on the {{ hpc }}](../running_jobs_with_input_output_data.md#where-to-store-your-data-on-the-hpc)
 for a list of available locations.
 
-{% if site==gent %}
+{% if site == gent %}
 ### VO storage
 If you are a member of a (non-default) virtual organisation (VO), see section
 [Virtual Organisations](../running_jobs_with_input_output_data.md#virtual-organisations),
