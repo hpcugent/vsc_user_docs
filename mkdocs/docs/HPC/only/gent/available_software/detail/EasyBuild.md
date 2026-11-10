@@ -14,13 +14,17 @@ The overview below shows which EasyBuild installations are available per HPC-UGe
 To start using EasyBuild, load one of these modules using a `module load` command like:
 
 ```shell
-module load EasyBuild/5.3.0
+module load EasyBuild/5.4.2
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|EasyBuild/5.4.2|x|x|x|x|x|x|x|x|
+|EasyBuild/5.4.1|x|x|x|x|x|x|x|x|
+|EasyBuild/5.4.0|x|x|x|x|x|x|x|x|
+|EasyBuild/5.3.1|x|x|x|x|x|x|x|x|
 |EasyBuild/5.3.0|x|x|x|x|x|x|x|x|
 |EasyBuild/5.1.2|x|x|x|x|x|x|x|-|
 |EasyBuild/5.1.1|x|x|x|x|x|x|x|-|

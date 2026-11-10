@@ -14,12 +14,14 @@ The overview below shows which Optuna installations are available per HPC-UGent 
 To start using Optuna, load one of these modules using a `module load` command like:
 
 ```shell
-module load Optuna/3.6.1-foss-2023b
+module load Optuna/4.6.0-foss-2025b
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Optuna/4.6.0-foss-2025b|x|x|x|x|x|x|x|x|
+|Optuna/4.5.0-foss-2025a|x|x|x|x|x|x|x|x|
 |Optuna/3.6.1-foss-2023b|x|x|x|x|x|x|x|x|
 |Optuna/3.5.0-foss-2023a|x|x|x|x|x|x|x|x|

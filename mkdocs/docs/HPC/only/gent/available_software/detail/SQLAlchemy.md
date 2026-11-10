@@ -23,6 +23,7 @@ module load SQLAlchemy/2.0.51-GCCcore-15.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |SQLAlchemy/2.0.51-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |SQLAlchemy/2.0.41-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|SQLAlchemy/2.0.41-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |SQLAlchemy/2.0.36-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |SQLAlchemy/2.0.29-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |SQLAlchemy/2.0.25-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
