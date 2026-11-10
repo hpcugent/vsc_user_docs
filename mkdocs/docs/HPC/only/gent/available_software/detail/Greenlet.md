@@ -23,6 +23,7 @@ module load Greenlet/3.5.2-GCCcore-15.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Greenlet/3.5.2-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |Greenlet/3.2.3-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|Greenlet/3.2.3-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |Greenlet/3.1.1-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |Greenlet/3.0.3-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |Greenlet/3.0.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

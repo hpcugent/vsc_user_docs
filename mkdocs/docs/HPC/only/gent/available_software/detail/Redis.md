@@ -14,12 +14,14 @@ The overview below shows which Redis installations are available per HPC-UGent T
 To start using Redis, load one of these modules using a `module load` command like:
 
 ```shell
-module load Redis/7.2.4-GCCcore-13.2.0
+module load Redis/8.2.2-GCCcore-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Redis/8.2.2-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|Redis/8.0.2-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |Redis/7.2.4-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |Redis/7.2.3-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
