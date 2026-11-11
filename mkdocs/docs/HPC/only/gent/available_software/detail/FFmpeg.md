@@ -23,6 +23,7 @@ module load FFmpeg/8.1.1-GCCcore-15.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |FFmpeg/8.1.1-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |FFmpeg/7.1.2-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|FFmpeg/7.1.1-GCCcore-14.2.0-CUDA-12.8.0|-|-|x|-|-|-|-|-|
 |FFmpeg/7.1.1-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |FFmpeg/7.0.2-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |FFmpeg/6.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
