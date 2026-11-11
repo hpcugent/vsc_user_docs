@@ -14,12 +14,13 @@ The overview below shows which pyannote.audio installations are available per HP
 To start using pyannote.audio, load one of these modules using a `module load` command like:
 
 ```shell
-module load pyannote.audio/3.3.2-foss-2023a-CUDA-12.1.1
+module load pyannote.audio/4.0.7-foss-2025a-CUDA-12.8.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pyannote.audio/4.0.7-foss-2025a-CUDA-12.8.0|-|-|x|-|-|-|-|-|
 |pyannote.audio/3.3.2-foss-2023a-CUDA-12.1.1|x|-|x|-|x|x|-|-|
 |pyannote.audio/3.3.2-foss-2023a|x|x|x|x|x|x|x|x|
