@@ -21,7 +21,7 @@ module load Pandoc/3.8.2.1
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Pandoc/3.8.2.1|-|x|-|-|-|-|-|-|
+|Pandoc/3.8.2.1|x|x|x|x|x|x|x|x|
 |Pandoc/3.6.2|x|x|x|x|x|x|x|x|
 |Pandoc/3.1.2|x|x|x|x|x|x|x|x|
 |Pandoc/2.13|-|x|-|x|-|-|-|-|

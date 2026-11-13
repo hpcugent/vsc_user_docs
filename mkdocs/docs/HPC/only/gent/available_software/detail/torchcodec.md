@@ -21,4 +21,4 @@ module load torchcodec/0.9.1-foss-2025a-CUDA-12.8.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|torchcodec/0.9.1-foss-2025a-CUDA-12.8.0|-|-|x|-|-|-|-|-|
+|torchcodec/0.9.1-foss-2025a-CUDA-12.8.0|x|-|x|-|x|x|-|-|

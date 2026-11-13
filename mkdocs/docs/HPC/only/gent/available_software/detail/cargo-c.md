@@ -21,4 +21,4 @@ module load cargo-c/0.9.32-GCCcore-13.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cargo-c/0.9.32-GCCcore-13.3.0|-|x|-|-|-|-|-|-|
+|cargo-c/0.9.32-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
