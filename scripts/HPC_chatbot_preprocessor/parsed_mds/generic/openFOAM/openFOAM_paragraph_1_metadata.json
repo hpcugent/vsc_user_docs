@@ -1,0 +1,15 @@
+{
+    "main_title": "openFOAM",
+    "subtitle": "Documentation-&-training-material",
+    "source_file": "../../mkdocs/docs/HPC/openFOAM.md",
+    "title_depth": 2,
+    "directory": "openFOAM",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/FAQ/#i-want-to-use-software-that-is-not-available-on-the-clusters-yet"
+    },
+    "parent_title": "",
+    "previous_title": null,
+    "next_title": "openFOAM_paragraph_2",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/openFOAM/#documentation--training-material"
+}

@@ -1,0 +1,18 @@
+{
+    "main_title": "jobscript_examples",
+    "subtitle": "Running-a-command-with-a-maximum-time-limit",
+    "source_file": "../../mkdocs/docs/HPC/jobscript_examples.md",
+    "title_depth": 2,
+    "directory": "jobscript_examples",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/torque_options",
+        "1": "https://docs.hpc.ugent.be/running_batch_jobs/#modules",
+        "2": "https://docs.hpc.ugent.be/running_jobs_with_input_output_data",
+        "3": "https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#pre-defined-user-directories"
+    },
+    "parent_title": "",
+    "previous_title": "jobscript_examples_paragraph_1",
+    "next_title": "jobscript_examples_paragraph_3",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/jobscript_examples/#running-a-command-with-a-maximum-time-limit"
+}

@@ -1,0 +1,34 @@
+The two parallel programming paradigms most used in HPC are:
+-   OpenMP for shared memory systems (multithreading): on multiple cores
+    of a single node
+-   MPI for distributed memory systems (multiprocessing): on multiple
+    nodes
+Parallel programs are more difficult to write than sequential ones, because concurrency
+introduces several new classes of potential software bugs, of which race
+conditions are the most common. Communication and synchronisation
+between the different subtasks are typically some of the greatest
+obstacles to getting good parallel program performance.
+Sequential programs
+Sequential software does not do calculations in parallel, i.e., it only
+uses one single core of a single workernode. It does not become faster by just throwing more cores at it: it can only use one
+core.
+It is perfectly possible to also run purely sequential programs on the HPC.
+Running your sequential programs on the most modern and fastest
+computers in the HPC can save you a lot of time. But it also might be
+possible to run multiple instances of your program (e.g., with different
+input parameters) on the HPC, in order to solve one overall problem (e.g.,
+to perform a parameter sweep). This is another form of running your
+sequential programs in parallel.
+What programming languages can I use?
+You can use any programming language, any software package and any
+library provided it has a version that runs on Linux, specifically, on
+the version of Linux that is installed on the compute nodes, RHEL 8.8 (accelgor, doduo, donphan, gallade, joltik, skitty).
+For the most common programming languages, a compiler is available on RHEL 8.8 (accelgor, doduo, donphan, gallade, joltik, skitty). Supported and common
+programming languages on the HPC are C/C++, FORTRAN, Java, Perl, Python,
+MATLAB, R, etc.
+Supported and commonly used compilers are GCC and Intel.
+Additional software can be installed "on demand". Please contact the HPC
+staff to see whether the HPC can handle your specific requirements.
+What operating systems can I use? 
+All nodes in the HPC cluster run under RHEL 8.8 (accelgor, doduo, donphan, gallade, joltik, skitty), which is a specific version of Red Hat Enterprise Linux.
+This means that all programs (executables) should be compiled for RHEL 8.8 (accelgor, doduo, donphan, gallade, joltik, skitty).
