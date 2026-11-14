@@ -251,6 +251,12 @@ your other machines, instead, you should create a new public/private key
 pair for each machine.
 
 ```
+ssh-keygen -t ed25519
+```
+
+Or if you prefer older RSA type key:
+
+```
 ssh-keygen -t rsa -b 4096
 ```
 
