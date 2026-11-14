@@ -1,0 +1,11 @@
+Please note that based on the (historical) workload of the interactive
+and debug cluster, the above restrictions and the overcommitment ratio
+might change without prior notice.
+Shared GPUs
+Each node in the donphan cluster has a relatively small GPU that is shared between all jobs.
+This means that you don't need to reserve it and thus possibly wait for it.
+But this also has a downside for performance and security: jobs might be competing for the same GPU resources (cores, memory or encoders) without
+any preset fairshare and there is no guarantee one job cannot access another job's memory
+(as opposed to having reserved GPUs in the GPU clusters).
+All software should behave the same as on the dedicated GPU clusters (e.g. using CUDA or OpenGL acceleration
+from a cluster desktop via the webportal).
