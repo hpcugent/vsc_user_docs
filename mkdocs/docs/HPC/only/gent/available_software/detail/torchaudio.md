@@ -21,4 +21,4 @@ module load torchaudio/2.9.1-foss-2025a-CUDA-12.8.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|torchaudio/2.9.1-foss-2025a-CUDA-12.8.0|-|-|x|-|-|-|-|-|
+|torchaudio/2.9.1-foss-2025a-CUDA-12.8.0|x|-|x|-|x|x|-|-|
