@@ -1,0 +1,15 @@
+Transfer Files tofrom the HPC
+Using a GUI (Cyberduck)
+Cyberduck is a graphical alternative to the scp command. It can be
+installed from <https://cyberduck.io>.
+This is the one-time setup you will need to do before connecting:
+1.  After starting Cyberduck, the Bookmark tab will show up. To add a
+    new bookmark, click on the "+" sign on the bottom left of the
+    window. A new window will open.
+2.  In the drop-down menu on top, select "SFTP (SSH File Transfer Protocol)".
+3.  In the "Server" field, type in login.hpc.ugent.be. In the "Username" field, type in
+    your VSC account id (this looks like vsc40000).
+4.  Select the location of your SSH private key in the "SSH Private Key" field.
+5.  Finally, type in a name for the bookmark in the "Nickname" field and
+    close the window by pressing on the red circle in the top left
+    corner of the window.

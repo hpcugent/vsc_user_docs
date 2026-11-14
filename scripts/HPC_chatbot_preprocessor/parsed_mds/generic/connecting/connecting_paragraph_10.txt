@@ -1,0 +1,24 @@
+You can exit the connection at anytime by entering:
+$ exit
+logout
+Connection to login.hpc.ugent.be closed.
+ tip "tip: Setting your Language right"
+    You may encounter a warning message similar to the following one during connecting:
+    perl: warning: Setting locale failed.
+    perl: warning: Please check that your locale settings:
+    LANGUAGE = (unset),
+    LC_ALL = (unset),
+    LC_CTYPE = "UTF-8",
+    LANG = (unset)
+        are supported and installed on your system.
+    perl: warning: Falling back to the standard locale ("C").
+    or any other error message complaining about the locale.
+    This means that the correct "locale" has not yet been properly specified on your local machine. Try:
+    LANG=
+    LC_COLLATE="C"
+    LC_CTYPE="UTF-8"
+    LC_MESSAGES="C"
+    LC_MONETARY="C"
+    LC_NUMERIC="C"
+    LC_TIME="C"
+    LC_ALL=

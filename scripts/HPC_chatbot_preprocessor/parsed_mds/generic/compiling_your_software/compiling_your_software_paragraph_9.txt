@@ -1,0 +1,32 @@
+It seems to work, now run it on the HPC
+qsub hello.pbs
+Compiling a parallel program in C/MPI
+cd ~/examples/Compiling-and-testing-your-software-on-the-HPC
+List the directory and explore the contents of the "mpihello.c"
+program:
+$ ls -l
+total 512
+total 512
+-rw-r--r-- 1 vsc40000 214 Sep 16 09:42 hello.c
+-rw-r--r-- 1 vsc40000 130 Sep 16 11:39 hello.pbs*
+-rw-r--r-- 1 vsc40000 359 Sep 16 13:55 mpihello.c
+-rw-r--r-- 1 vsc40000 304 Sep 16 13:55 mpihello.pbs
+/*
+ * VSC        : Flemish Supercomputing Centre
+ * Tutorial   : Introduction to HPC
+ * Description: Example program, to compile with MPI
+ */
+#include <stdio.h>
+#include <mpi.h>
+main(int argc, char **argv)
+{
+  int node, i, j;
+  float f;
+  MPI_Init(&argc,&argv);
+  MPI_Comm_rank(MPI_COMM_WORLD, &node);
+   
+  printf("Hello World from Node %d.\n", node);
+  for (i=0; i<=100000; i++)
+    f=i*2.718281828*i+i+i*3.141592654;
+  MPI_Finalize();
+}

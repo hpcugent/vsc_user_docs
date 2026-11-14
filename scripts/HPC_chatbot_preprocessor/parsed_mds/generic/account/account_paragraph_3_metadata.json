@@ -1,0 +1,15 @@
+{
+    "main_title": "account",
+    "subtitle": "How-do-SSH-keys-work",
+    "source_file": "../../mkdocs/docs/HPC/account.md",
+    "title_depth": 3,
+    "directory": "account",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/linux-tutorial"
+    },
+    "parent_title": "",
+    "previous_title": "account_paragraph_2",
+    "next_title": "account_paragraph_4",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/account/#how-do-ssh-keys-work"
+}

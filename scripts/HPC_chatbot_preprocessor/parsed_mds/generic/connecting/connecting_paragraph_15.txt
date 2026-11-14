@@ -1,0 +1,7 @@
+Fast file transfer for large datasets
+See the section on rsync in chapter 5 of the Linux intro manual.
+Changing login nodes
+It can be useful to have control over which login node you are on. However, when you connect to the HPC (High-Performance Computing) system, you are directed to a random login node, which might not be the one where you already have an active session. To address this, there is a way to manually switch your active login node.
+For instance, if you want to switch to the login node named gligar07.gastly.os, you can use the following command while you are connected to the gligar08.gastly.os login node on the HPC:
+ssh gligar07.gastly.os
+This is also possible the other way around.
