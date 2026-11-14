@@ -19,6 +19,6 @@ module load r5py/1.0.6-foss-2024a-Java-21
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|r5py/1.0.6-foss-2024a-Java-21|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|r5py/1.0.6-foss-2024a-Java-21|x|x|x|x|x|x|x|x|

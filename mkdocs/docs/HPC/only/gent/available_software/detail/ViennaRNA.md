@@ -19,6 +19,6 @@ module load ViennaRNA/2.7.2-gfbf-2025b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ViennaRNA/2.7.2-gfbf-2025b|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ViennaRNA/2.7.2-gfbf-2025b|x|x|x|x|x|x|x|x|

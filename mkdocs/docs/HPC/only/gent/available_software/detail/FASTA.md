@@ -19,7 +19,7 @@ module load FASTA/36.3.8i-may-2023-GCC-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FASTA/36.3.8i-may-2023-GCC-13.3.0|x|x|x|x|x|x|x|
-|FASTA/36.3.8i-GCC-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|FASTA/36.3.8i-may-2023-GCC-13.3.0|x|x|x|x|x|x|x|x|
+|FASTA/36.3.8i-GCC-12.3.0|x|x|x|x|x|x|x|x|

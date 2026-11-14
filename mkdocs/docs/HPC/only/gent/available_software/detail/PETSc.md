@@ -14,11 +14,12 @@ The overview below shows which PETSc installations are available per HPC-UGent T
 To start using PETSc, load one of these modules using a `module load` command like:
 
 ```shell
-module load PETSc/3.20.3-foss-2023a
+module load PETSc/3.23.5-foss-2025a
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PETSc/3.20.3-foss-2023a|-|x|-|x|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PETSc/3.23.5-foss-2025a|x|x|x|x|x|x|x|x|
+|PETSc/3.20.3-foss-2023a|-|x|-|x|-|x|x|x|

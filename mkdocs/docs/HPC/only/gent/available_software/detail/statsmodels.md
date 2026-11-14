@@ -19,8 +19,8 @@ module load statsmodels/0.14.4-gfbf-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|statsmodels/0.14.4-gfbf-2024a|x|x|x|x|x|x|x|
-|statsmodels/0.14.1-gfbf-2023b|x|x|x|x|x|x|x|
-|statsmodels/0.14.1-gfbf-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|statsmodels/0.14.4-gfbf-2024a|x|x|x|x|x|x|x|x|
+|statsmodels/0.14.1-gfbf-2023b|x|x|x|x|x|x|x|x|
+|statsmodels/0.14.1-gfbf-2023a|x|x|x|x|x|x|x|x|

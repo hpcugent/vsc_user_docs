@@ -19,6 +19,6 @@ module load pycomlink/0.4.1-foss-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pycomlink/0.4.1-foss-2024a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pycomlink/0.4.1-foss-2024a|x|x|x|x|x|x|x|x|

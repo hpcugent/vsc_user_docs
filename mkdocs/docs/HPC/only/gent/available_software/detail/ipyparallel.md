@@ -19,6 +19,6 @@ module load ipyparallel/9.0.1-foss-2025a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ipyparallel/9.0.1-foss-2025a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ipyparallel/9.0.1-foss-2025a|x|x|x|x|x|x|x|x|

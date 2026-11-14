@@ -14,12 +14,13 @@ The overview below shows which googlebenchmark installations are available per H
 To start using googlebenchmark, load one of these modules using a `module load` command like:
 
 ```shell
-module load googlebenchmark/1.9.4-GCCcore-14.3.0
+module load googlebenchmark/1.9.5-GCCcore-15.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|googlebenchmark/1.9.4-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|googlebenchmark/1.9.4-GCCcore-14.2.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|googlebenchmark/1.9.5-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|googlebenchmark/1.9.4-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|googlebenchmark/1.9.4-GCCcore-14.2.0|x|x|x|x|x|x|x|x|

@@ -19,6 +19,6 @@ module load fast_float/8.1.0-GCCcore-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fast_float/8.1.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|fast_float/8.1.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

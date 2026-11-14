@@ -19,8 +19,8 @@ module load uncertainties/3.2.3-foss-2025b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|uncertainties/3.2.3-foss-2025b|x|x|x|x|x|x|x|
-|uncertainties/3.2.3-foss-2024a|x|x|x|x|x|x|x|
-|uncertainties/3.2.2-foss-2023b|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|uncertainties/3.2.3-foss-2025b|x|x|x|x|x|x|x|x|
+|uncertainties/3.2.3-foss-2024a|x|x|x|x|x|x|x|x|
+|uncertainties/3.2.2-foss-2023b|x|x|x|x|x|x|x|x|

@@ -14,20 +14,23 @@ The overview below shows which HDF5 installations are available per HPC-UGent Ti
 To start using HDF5, load one of these modules using a `module load` command like:
 
 ```shell
-module load HDF5/1.14.6-gompi-2025b
+module load HDF5/2.1.1-gompi-2026.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HDF5/1.14.6-gompi-2025b|x|x|x|x|x|x|x|
-|HDF5/1.14.6-gompi-2025a|x|x|x|x|x|x|x|
-|HDF5/1.14.5-gompi-2024a|x|x|x|x|x|x|x|
-|HDF5/1.14.5-NVHPC-25.3-CUDA-12.8.0|x|-|x|-|x|x|-|
-|HDF5/1.14.3-iimpi-2023b|x|x|x|x|x|x|x|
-|HDF5/1.14.3-gompi-2023b|x|x|x|x|x|x|x|
-|HDF5/1.14.0-iompi-2023a|x|x|x|x|x|x|x|
-|HDF5/1.14.0-intel-compilers-2023.1.0-serial|x|x|x|x|x|x|x|
-|HDF5/1.14.0-gompi-2023a|x|x|x|x|x|x|x|
-|HDF5/1.12.2-gompi-2022a|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|HDF5/2.1.1-gompi-2026.1|x|x|x|x|x|x|x|x|
+|HDF5/1.14.6-intel-compilers-2025.1.1-serial|x|x|x|x|x|x|x|x|
+|HDF5/1.14.6-gompi-2025b|x|x|x|x|x|x|x|x|
+|HDF5/1.14.6-gompi-2025a|x|x|x|x|x|x|x|x|
+|HDF5/1.14.6-NVHPC-25.9-CUDA-12.9.1|x|-|x|-|x|x|-|-|
+|HDF5/1.14.5-gompi-2024a|x|x|x|x|x|x|x|x|
+|HDF5/1.14.5-NVHPC-25.3-CUDA-12.8.0|x|-|x|-|x|x|-|-|
+|HDF5/1.14.3-iimpi-2023b|x|x|x|x|x|x|x|x|
+|HDF5/1.14.3-gompi-2023b|x|x|x|x|x|x|x|x|
+|HDF5/1.14.0-iompi-2023a|x|x|x|x|x|x|x|-|
+|HDF5/1.14.0-intel-compilers-2023.1.0-serial|x|x|x|x|x|x|x|-|
+|HDF5/1.14.0-gompi-2023a|x|x|x|x|x|x|x|x|
+|HDF5/1.12.2-gompi-2022a|-|-|-|-|-|x|x|-|

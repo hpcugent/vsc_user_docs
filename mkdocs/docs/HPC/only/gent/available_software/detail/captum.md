@@ -19,7 +19,7 @@ module load captum/0.8.0-foss-2024a-CUDA-12.6.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|captum/0.8.0-foss-2024a-CUDA-12.6.0|x|-|x|-|x|x|-|
-|captum/0.8.0-foss-2024a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|captum/0.8.0-foss-2024a-CUDA-12.6.0|x|-|x|-|x|x|-|-|
+|captum/0.8.0-foss-2024a|x|x|x|x|x|x|x|x|

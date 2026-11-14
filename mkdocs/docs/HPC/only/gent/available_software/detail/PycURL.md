@@ -14,12 +14,13 @@ The overview below shows which PycURL installations are available per HPC-UGent 
 To start using PycURL, load one of these modules using a `module load` command like:
 
 ```shell
-module load PycURL/7.45.3-GCCcore-13.2.0
+module load PycURL/7.46.0-GCCcore-15.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PycURL/7.45.3-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|PycURL/7.45.2-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|PycURL/7.46.0-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|PycURL/7.45.3-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|PycURL/7.45.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

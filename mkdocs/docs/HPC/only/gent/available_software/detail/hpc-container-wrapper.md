@@ -19,6 +19,6 @@ module load hpc-container-wrapper/0.4.2
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|hpc-container-wrapper/0.4.2|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|hpc-container-wrapper/0.4.2|x|x|x|x|x|x|x|-|

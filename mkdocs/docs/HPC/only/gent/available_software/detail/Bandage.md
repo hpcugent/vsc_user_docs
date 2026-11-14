@@ -19,7 +19,7 @@ module load Bandage/0.9.0-GCCcore-14.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Bandage/0.9.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
-|Bandage/0.9.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Bandage/0.9.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|Bandage/0.9.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

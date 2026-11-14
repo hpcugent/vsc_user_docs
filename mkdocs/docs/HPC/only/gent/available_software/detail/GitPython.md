@@ -19,9 +19,9 @@ module load GitPython/3.1.45-GCCcore-14.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GitPython/3.1.45-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|GitPython/3.1.43-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|GitPython/3.1.42-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|GitPython/3.1.40-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GitPython/3.1.45-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|GitPython/3.1.43-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|GitPython/3.1.42-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|GitPython/3.1.40-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

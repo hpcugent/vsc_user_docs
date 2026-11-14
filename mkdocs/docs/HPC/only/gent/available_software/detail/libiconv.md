@@ -14,17 +14,18 @@ The overview below shows which libiconv installations are available per HPC-UGen
 To start using libiconv, load one of these modules using a `module load` command like:
 
 ```shell
-module load libiconv/1.18-GCCcore-14.3.0
+module load libiconv/1.18-GCCcore-15.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libiconv/1.18-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|libiconv/1.18-GCCcore-14.2.0|x|x|x|x|x|x|x|
-|libiconv/1.17-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|libiconv/1.17-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|libiconv/1.17-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|libiconv/1.17-GCCcore-12.2.0|-|-|-|-|-|x|x|
-|libiconv/1.17-GCCcore-11.3.0|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libiconv/1.18-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|libiconv/1.18-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|libiconv/1.18-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|libiconv/1.17-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|libiconv/1.17-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|libiconv/1.17-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|libiconv/1.17-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|libiconv/1.17-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

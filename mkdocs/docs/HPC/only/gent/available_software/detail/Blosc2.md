@@ -14,15 +14,16 @@ The overview below shows which Blosc2 installations are available per HPC-UGent 
 To start using Blosc2, load one of these modules using a `module load` command like:
 
 ```shell
-module load Blosc2/2.19.0-GCCcore-14.3.0
+module load Blosc2/3.1.2-GCCcore-15.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Blosc2/2.19.0-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|Blosc2/2.19.0-GCCcore-14.2.0|x|x|x|x|x|x|x|
-|Blosc2/2.17.0-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|Blosc2/2.13.2-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|Blosc2/2.8.0-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Blosc2/3.1.2-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|Blosc2/2.19.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|Blosc2/2.19.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|Blosc2/2.17.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|Blosc2/2.13.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|Blosc2/2.8.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

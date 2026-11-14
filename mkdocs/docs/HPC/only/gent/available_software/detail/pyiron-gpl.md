@@ -19,9 +19,9 @@ module load pyiron-gpl/0.0.5-foss-2023b
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pyiron-gpl/0.0.5-foss-2023b|x|x|x|x|x|x|x|
-|pyiron-gpl/0.0.5-20251021-foss-2025b-mbocus|x|x|x|x|x|x|x|
-|pyiron-gpl/0.0.5-20250512-foss-2024a-mbocus|x|x|x|x|x|x|x|
-|pyiron-gpl/0.0.5-20250512-foss-2023b-mbocus|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|pyiron-gpl/0.0.5-foss-2023b|x|x|x|x|x|x|x|x|
+|pyiron-gpl/0.0.5-20251021-foss-2025b-mbocus|x|x|x|x|x|x|x|x|
+|pyiron-gpl/0.0.5-20250512-foss-2024a-mbocus|x|x|x|x|x|x|x|x|
+|pyiron-gpl/0.0.5-20250512-foss-2023b-mbocus|x|x|x|x|x|x|x|x|

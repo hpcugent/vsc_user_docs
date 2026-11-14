@@ -19,6 +19,6 @@ module load dask-labextension/7.0.0-gfbf-2025a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|dask-labextension/7.0.0-gfbf-2025a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|dask-labextension/7.0.0-gfbf-2025a|x|x|x|x|x|x|x|x|

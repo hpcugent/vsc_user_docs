@@ -19,6 +19,6 @@ module load cascadia/0.0.7-foss-2024a-CUDA-12.6.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cascadia/0.0.7-foss-2024a-CUDA-12.6.0|x|-|x|-|x|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|cascadia/0.0.7-foss-2024a-CUDA-12.6.0|x|-|x|-|x|x|-|-|
