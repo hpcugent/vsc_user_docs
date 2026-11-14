@@ -66,19 +66,29 @@ def main():
     root_dir = root_dirs[0]
     path_data_dir = os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/data")
 
-    # Generate the JSON overviews and detail markdown pages.
+    # Generate the JSON overviews
     if args.eessi:
-        modules = modules_eesi()
+        modules = modules_eessi()
     else:
-        modules = modules_ugent()
+        modules, paths = modules_ugent()
 
+    print(paths)
     print(modules)
     print("Generate JSON overview... ", end="", flush=True)
     generate_json_overview(modules, path_data_dir)
     print("Done!")
+
+    # Generate the JSON detail
+    json_data = generate_json_detailed_data(modules)
+    if args.eessi:
+        json_data = json_data
+    else:
+        json_data = get_extra_info_ugent(json_data, paths)
     print("Generate JSON detailed... ", end="", flush=True)
-    json_path = generate_json_detailed(modules, path_data_dir)
+    json_path = generate_json_detailed(json_data, path_data_dir)
     print("Done!")
+
+    # Generate detail markdown pages
     print("Generate detailed pages... ", end="", flush=True)
     detail_folder = os.path.join(root_dir, "mkdocs/docs/HPC/only/gent/available_software/detail")
     generated_time_yml = os.path.join(root_dir, "mkdocs/extra/gent.yml")  # yml containing time the data was generated
@@ -177,6 +187,35 @@ def module_whatis(name: str) -> dict:
     return whatis
 
 
+def module_info(info: str) -> dict:
+    """
+    Function to parse through lua file.
+
+    @param info: String with the contents of the lua file.
+    """
+    whatis = {}
+    data = np.array(info.split("\n"))
+    # index of start description to handle multi lined description
+    i = np.flatnonzero(np.char.startswith(data, "whatis([==[Description"))[0]
+    if np.char.endswith(data[i], "]==])"):
+        content = re.sub(pattern=r'whatis\(\[==\[(.*)\]==\]\)', repl='\\1', string=data[i]).strip('"')
+    else:
+        description = re.sub(pattern=r'whatis\(\[==\[(.*)', repl='\\1', string=data[i]).strip('"')
+        while not np.char.endswith(data[i], "]==])"):
+            i += 1
+            description += data[i]
+        content = re.sub(pattern=r'(.*)\]==\]\)', repl='\\1', string=description).strip('"')
+    key, value = tuple(content.split(":", maxsplit=1))
+    whatis[key.strip()] = value.strip()
+
+    for line in data[np.char.startswith(data, "whatis")]:
+        if not np.char.startswith(line, "whatis([==[Description"):
+            content = re.sub(pattern=r'whatis\(\[==\[(.*)\]==\]\)', repl='\\1', string=line).strip('"')
+            key, value = tuple(content.split(":", maxsplit=1))
+            whatis[key.strip()] = value.strip()
+    return whatis
+
+
 # --------------------------------------------------------------------------------------------------------
 # Fetch data EESSI
 # --------------------------------------------------------------------------------------------------------
@@ -208,7 +247,7 @@ def clusters_eessi() -> np.ndarray:
     return clusters
 
 
-def modules_eesi() -> dict:
+def modules_eessi() -> dict:
     """
     Returns names of all software module that are installed on EESSI.
     They are grouped by cluster.
@@ -259,6 +298,15 @@ def filter_fn_gent_modules(data: np.ndarray) -> np.ndarray:
                 ]
 
 
+def filter_fn_gent_software_path(data: np.ndarray) -> np.ndarray:
+    """
+    Filter function for the software path of the cluster
+    @param data: Output
+    @return: Filtered output
+    """
+    return data[np.char.endswith(data, "/modules/all:")]
+
+
 def clusters_ugent() -> np.ndarray:
     """
     Returns all the cluster names of the HPC at UGent.
@@ -266,6 +314,45 @@ def clusters_ugent() -> np.ndarray:
     """
 
     return module_avail(name="cluster/", filter_fn=filter_fn_gent_cluster)
+
+
+def get_extra_info_ugent(json_data, paths) -> dict:
+    """
+    add a list of extentions to all modules with extensions
+    @return: Dictionary with all the modules and their site_packages
+    """
+    modules = json_data['software']
+    for software in modules:
+        for mod in modules[software]['versions']:
+            cluster = modules[software]['versions'][mod]['clusters'][0]
+            if software == "Java":
+                # Java has a strange naming sceme which causes probplems
+                continue
+            if mod in ["imkl/2020.4.304-NVHPC-21.2"]:
+                base_path = "/apps/gent/RHEL8/cascadelake-volta-ib/modules/all/"
+            elif mod in ['OpenFold/1.0.1-foss-2022a-CUDA-11.7.0',
+                         'OpenMM/7.7.0-foss-2022a-CUDA-11.7.0',
+                         'PyTorch-Lightning/1.7.7-foss-2022a-CUDA-11.7.0',
+                         'PyTorch/1.12.1-foss-2022a-CUDA-11.7.0',
+                         'Triton/1.1.1-foss-2022a-CUDA-11.7.0']:
+                base_path = "/apps/gent/RHEL8/cascadelake-ampere-ib/modules/all/"
+            elif cluster == "donphan":
+                base_path = "/apps/gent/RHEL8/cascadelake-ib/modules/all/"
+            elif cluster == "joltik":
+                base_path = "/apps/gent/RHEL8/cascadelake-volta-ib/modules/all/"
+            else:
+                base_path = paths[cluster][0][:-1] + "/"
+            path = base_path + mod + ".lua"
+            file = open(path, "r")
+            info = file.read()
+            if info != "":
+                whatis = module_info(info)
+                json_data['software'][software]['description'] = whatis['Description']
+                if "Homepage" in whatis.keys():
+                    json_data['software'][software]['homepage'] = whatis['Homepage']
+                if "Extensions" in whatis.keys():
+                    json_data["software"][software]["versions"][mod]["extensions"] = whatis['Extensions']
+    return json_data
 
 
 def modules_ugent() -> dict:
@@ -276,15 +363,17 @@ def modules_ugent() -> dict:
     """
     print("Start collecting modules:")
     data = {}
+    mapping = {}
     for cluster in clusters_ugent():
         print(f"\t Collecting available modules for {cluster}... ", end="", flush=True)
         module_swap(cluster)
         cluster_name = cluster.split("/", maxsplit=1)[1]
+        mapping[cluster_name] = module_avail(filter_fn=filter_fn_gent_software_path)
         data[cluster_name] = module_avail(filter_fn=filter_fn_gent_modules)
         print(f"found {len(data[cluster_name])} modules!")
 
     print("All data collected!\n")
-    return data
+    return data, mapping
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -352,7 +441,7 @@ def generate_software_table_data(software_data: dict, clusters: list) -> list:
         row = [module_name]
 
         for cluster in clusters:
-            row += ("x" if cluster in available else "-")
+            row += ("x" if cluster in available["clusters"] else "-")
         table_data += row
 
     return table_data
@@ -377,6 +466,13 @@ def generate_software_detail_page(
 
     filename = f"{path}/{software_name}.md"
     md_file = MdUtils(file_name=filename, title=f"{software_name}")
+    if 'description' in software_data.keys():
+        description = software_data['description']
+        md_file.new_paragraph(f"{description}")
+    if 'homepage' in software_data.keys():
+        homepage = software_data['homepage']
+        md_file.new_paragraph(f"{homepage}")
+
     md_file.new_header(level=1, title="Available modules")
 
     md_file.new_paragraph(f"The overview below shows which {software_name} installations are available per HPC-UGent "
@@ -392,6 +488,13 @@ def generate_software_detail_page(
         rows=len(sorted_versions) + 1,
         text=generate_software_table_data(sorted_versions, clusters)
     )
+
+    for version, details in list(sorted_versions.items())[::-1]:
+        if 'extensions' in details:
+            md_file.new_paragraph(f"### {version}")
+            md_file.new_paragraph("This is a list of extensions included in the module:")
+            packages = details['extensions']
+            md_file.new_paragraph(f"{packages}")
 
     md_file.create_md_file()
 
@@ -610,20 +713,20 @@ def generate_json_detailed_data(modules: dict) -> dict:
 
                 # If the version is not yet present, add it.
                 if mod not in json_data["software"][software]["versions"]:
-                    json_data["software"][software]["versions"][mod] = []
+                    json_data["software"][software]["versions"][mod] = {'clusters': []}
 
                 # If the cluster is not yet present, add it.
                 if cluster not in json_data["software"][software]["clusters"]:
                     json_data["software"][software]["clusters"].append(cluster)
 
                 # If the cluster is not yet present, add it.
-                if cluster not in json_data["software"][software]["versions"][mod]:
-                    json_data["software"][software]["versions"][mod].append(cluster)
+                if cluster not in json_data["software"][software]["versions"][mod]["clusters"]:
+                    json_data["software"][software]["versions"][mod]["clusters"].append(cluster)
 
     return json_data
 
 
-def generate_json_detailed(modules: dict, path_data_dir: str) -> str:
+def generate_json_detailed(json_data: dict, path_data_dir: str) -> str:
     """
     Generate the detailed JSON.
 
@@ -631,7 +734,6 @@ def generate_json_detailed(modules: dict, path_data_dir: str) -> str:
     @param path_data_dir: Path to the directory where the JSON will be placed.
     @return: Absolute path to the json file.
     """
-    json_data = generate_json_detailed_data(modules)
     filepath = os.path.join(path_data_dir, "json_data_detail.json")
     with open(filepath, 'w') as outfile:
         json.dump(json_data, outfile)
