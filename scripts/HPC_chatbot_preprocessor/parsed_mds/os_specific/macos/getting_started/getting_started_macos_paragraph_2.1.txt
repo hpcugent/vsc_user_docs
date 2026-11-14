@@ -1,0 +1,27 @@
+Submitting a job
+ Info
+    When having problems see the connection issues section on the troubleshooting page.
+Transfer your files
+Now that you can login, it is time to transfer files from your local computer to your home directory on the HPC-UGent infrastructure.
+Download tensorflow_mnist.py 
+and run.sh example scripts to your computer (from here).
+On your local machine you can run:
+curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist/tensorflow_mnist.py
+curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist/run.sh
+Using the scp command, the files can be copied from your local host to your home directory (~) on the remote host (HPC).
+scp tensorflow_mnist.py run.sh vsc40000login.hpc.ugent.be:~
+ssh  vsc40000@login.hpc.ugent.be
+ Warning "User your own VSC account id"
+    
+    Replace vsc40000 with your VSC account id (see https://account.vscentrum.be)
+ Info
+    For more information about transfering files or scp, see tranfer files from/to hpc.
+When running ls in your session on the HPC-UGent infrastructure, you should see the two files listed in your home directory (~):
+$ ls ~
+run.sh tensorflow_mnist.py
+When you do not see these files, make sure you uploaded the files to your home directory.
+Submitting a job
+Jobs are submitted and executed using job scripts. In our case run.sh can be used as a (very minimal) job script.
+A job script is a shell script, a text file that specifies the resources, 
+the software that is used (via module load statements), 
+and the steps that should be executed to run the calculation.

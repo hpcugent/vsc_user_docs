@@ -1,0 +1,37 @@
+$ setfacl -m u:otheruser:r dataset.txt
+$ ls -l dataset.txt
+-rwxr-x---+ 2 vsc40000 mygroup      40 Apr 12 15:00 dataset.txt
+For more information about chmod or setfacl, see
+Linux tutorial.
+Can I use multiple different SSH key pairs to connect to my VSC account?
+Yes, and this is recommended when working from different computers.
+Please see Adding multiple SSH public keys on how to do this.
+I want to use software that is not available on the clusters yet
+Please fill out the details about the software and why you need it in
+this form:
+https://www.ugent.be/hpc/en/support/software-installation-request.
+When submitting the form, a mail will be sent to hpc@ugent.be containing all the
+provided information. The HPC team will look into your request as soon
+as possible you and contact you when the installation is done or if
+further information is required. 
+Is my connection compromised? Remote host identification has changed
+On Monday 25 April 2022, the login nodes received an update to RHEL8.
+This means that the host keys of those servers also changed. As a result,
+you could encounter the following warnings.
+MacOS & Linux (on Windows, only the second part is shown):
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the RSA key sent by the remote host is
+xx:xx:xx.
+Please contact your system administrator.
+Add correct host key in /home/hostname/.ssh/known_hosts to get rid of this message.
+Offending RSA key in /var/lib/sss/pubconf/known_hosts:1
+RSA host key for user has changed and you have requested strict checking.
+Host key verification failed.
+Please follow the instructions at migration to RHEL8
+to ensure it really is not a hacking attempt \- you will find the correct host key to compare.
+You will also find how to hide the warning.

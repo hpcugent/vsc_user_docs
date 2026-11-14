@@ -1,0 +1,12 @@
+{
+    "main_title": "apptainer",
+    "subtitle": "Creating-ApptainerSingularity-images",
+    "source_file": "../../mkdocs/docs/HPC/apptainer.md",
+    "title_depth": 3,
+    "directory": "apptainer",
+    "parent_title": "",
+    "previous_title": null,
+    "next_title": "apptainer_paragraph_2",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/apptainer/#creating-apptainersingularity-images"
+}

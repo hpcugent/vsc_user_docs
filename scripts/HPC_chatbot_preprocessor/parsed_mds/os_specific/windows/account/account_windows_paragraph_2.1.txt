@@ -1,0 +1,64 @@
+How do SSH keys work
+Since all VSC clusters use Linux as their main operating system, you
+will need to get acquainted with using the command-line interface and
+using the terminal (see tutorial).
+A typical Windows environment does not come with pre-installed software
+to connect and run command-line executables on a HPC. Some tools need to be
+installed on your Windows machine first, before we can start the actual
+work.
+Get PuTTY: A free telnet/SSH client
+We recommend to use the PuTTY tools package, which is freely available.
+You do not need to install PuTTY, you can download the PuTTY and
+PuTTYgen executable and run it. This can be useful in situations where
+you do not have the required permissions to install software on the
+computer you are using. Alternatively, an installation package is also
+available.
+You can download PuTTY from the official address:
+https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html. You
+probably want the 64-bits version. If you can install software on your
+computer, you can use the "Package files", if not, you can download and
+use putty.exe and puttygen.exe in the "Alternative binary files"
+section.
+The PuTTY package consists of several components, but we'll only use
+two:
+1. PuTTY: the Telnet and SSH client itself (to login, see Open a terminal)
+2.  PuTTYgen: an RSA and DSA key generation utility (to generate a key pair,
+    see Generate a public/private key pair)
+Generating a public/private key pair
+Before requesting a VSC account, you need to generate a pair of ssh
+keys. You need 2 keys, a public and a private key. You can visualise the
+public key as a lock to which only you have the key (your private key).
+You can send a copy of your lock to anyone without any problems, because
+only you can open it, as long as you keep your private key secure. To
+generate a public/private key pair, you can use the PuTTYgen key
+generator.
+Start PuTTYgen.exe it and follow these steps:
+1.  In "Parameters" (at the bottom of the window), choose "RSA" and set the number of
+    bits in the key to 4096.
+2.  Click on "Generate". To generate the key, you must move the mouse cursor over
+    the PuTTYgen window (this generates some random data that PuTTYgen
+    uses to generate the key pair). Once the key pair is generated, your
+    public key is shown in the field "Public key for pasting into OpenSSH authorized_keys file".
+3.  Next, it is advised to fill in the "Key comment" field to make it easier
+    identifiable afterwards.
+4.  Next, you should specify a passphrase in the "Key passphrase" field and retype it in
+    the "Confirm passphrase" field. Remember, the passphrase protects the private key against
+    unauthorised use, so it is best to choose one that is not too easy
+    to guess but that you can still remember. Using a passphrase is not
+    required, but we recommend you to use a good passphrase unless you
+    are certain that your computer's hard disk is encrypted with a
+    decent password. (If you are not sure your disk is encrypted, it
+    probably isn't.)
+5.  Save both the public and private keys in a folder on your personal
+    computer (We recommend to create and put them in the folder
+    "C:\\Users\\%USERNAME%\\AppData\\Local\\PuTTY\\.ssh") with the
+    buttons "Save public key" and "Save private key". We recommend using the name "id_rsa.pub" for the public key, and
+    "id_rsa.ppk" for the private key.
+6.  Finally, save an "OpenSSH" version of your private key (in
+    particular for later "X2Go" usage, see x2go) by entering the
+    "Conversions" menu and selecting "Export OpenSSH key" (do not select the
+    "force new file format" variant). Save the file in the same location
+    as in the previous step with filename "id_rsa". (If there is no
+    "Conversions" menu, you must update your "puttygen" version. If you
+    want to do this conversion afterwards, you can start with loading an
+    existing "id_rsa.ppk" and only do this conversions export.)

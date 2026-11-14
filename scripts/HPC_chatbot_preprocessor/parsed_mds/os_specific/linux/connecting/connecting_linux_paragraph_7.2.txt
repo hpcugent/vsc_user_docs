@@ -1,0 +1,37 @@
+The scp command can also be used to copy files from the cluster to your
+local machine. Let us copy the remote file "intro-HPC--Gent.pdf" from your "docs"
+subdirectory on the cluster to your local computer.
+First, we will confirm that the file is indeed in the "docs"
+subdirectory. In the terminal on the login node, enter:
+$ cd ~/docs
+$ ls -l
+total 1536
+-rw-r--r-- 1 vsc40000 Sep 11 09:53 intro-HPC--Gent.pdf
+Now we will copy the file to the local machine. On the terminal on your
+own local computer, enter:
+$ scp vsc40000@login.hpc.ugent.be:./docs/intro-HPC--Gent.pdf .
+intro-HPC--Gent.pdf 100% 725KB 724.6KB/s 00:01
+$ ls -l
+total 899
+-rw-r--r-- 1 user staff 741995 Sep 18 09:53
+-rw-r--r-- 1 user staff      6 Sep 18 09:37 localfile.txt
+The file has been copied from the HPC to your local computer.
+It's also possible to copy entire directories (and their contents) with
+the -r flag. For example, if we want to copy the local directory
+dataset to $VSC_SCRATCH, we can use the following command (assuming
+you've created the scratch symlink):
+scp -r dataset vsc40000@login.hpc.ugent.be:scratch
+If you don't use the -r option to copy a directory, you will run into
+the following error:
+$ scp dataset vsc40000@login.hpc.ugent.be:scratch
+dataset: not a regular file
+Using sftp
+The SSH File Transfer Protocol (also Secure File Transfer Protocol, or SFTP) is a network protocol that provides file access, file
+transfer and file management functionalities over any reliable data
+stream. It was designed as an extension of the Secure Shell protocol
+(SSH) version 2.0. This protocol assumes that it is run over a secure
+channel, such as SSH, that the server has already authenticated the
+client, and that the identity of the client user is available to the
+protocol.
+The sftp is an equivalent of the ftp command, with the difference that
+it uses the secure ssh protocol to connect to the clusters.

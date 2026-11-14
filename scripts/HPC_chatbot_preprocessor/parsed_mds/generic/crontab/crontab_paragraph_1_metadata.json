@@ -1,0 +1,15 @@
+{
+    "main_title": "crontab",
+    "subtitle": "Example-cron-job-script",
+    "source_file": "../../mkdocs/docs/HPC/crontab.md",
+    "title_depth": 4,
+    "directory": "crontab",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/connecting/#connecting-to-the-hpc-infrastructure"
+    },
+    "parent_title": "",
+    "previous_title": null,
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/crontab/#example-cron-job-script"
+}

@@ -1,0 +1,33 @@
+Frequently Asked Questions (FAQ)
+New users should consult the Introduction to HPC
+to get started, which is a great resource for learning the basics, troubleshooting, and looking up specifics.
+If you want to use software that's not yet installed on the HPC, send us a
+software installation request.
+Overview of HPC-UGent Tier-2 infrastructure
+Composing a job
+How many cores/nodes should I request?
+An important factor in this question is how well your task is being parallelized:
+does it actually run faster with more resources? You can test this yourself:
+start with 4 cores, then 8, then 16... The execution time should each time be reduced to
+around half of what it was before. You can also try this with full nodes: 1 node, 2 nodes.
+A rule of thumb is that you're around the limit when you double the resources but the
+execution time is still ~60-70% of what it was before. That's a signal to stop increasing the core count.
+See also: Running batch jobs.
+Which packages are available?
+When connected to the HPC, use the commands module avail [search_text] and module spider [module]
+to find installed modules and get information on them.
+Among others, many packages for both Python and R are readily available on the HPC.
+These aren't always easy to find, though, as we've bundled them together.
+Specifically, the module SciPy-bundle includes numpy, pandas, scipy and a few others.
+For R, the normal R module has many libraries included. The bundle R-bundle-Bioconductor
+contains more libraries.
+Use the command module spider [module] to find the specifics on these bundles.
+If the package or library you want is not available, send us a
+software installation request.
+How do I choose the job modules?
+Modules each come with a suffix that describes the toolchain used to install them.
+Examples:
+   AlphaFold/2.2.2-foss-2021a*
+   tqdm/4.61.2-GCCcore-10.3.0*
+   Python/3.9.5-GCCcore-10.3.0*
+   matplotlib/3.4.2-foss-2021a*

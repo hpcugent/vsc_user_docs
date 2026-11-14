@@ -1,0 +1,25 @@
+Changing login nodes
+Using a GUI (Cyberduck)
+Cyberduck is a graphical alternative to the scp command. It can be
+installed from https://cyberduck.io.
+This is the one-time setup you will need to do before connecting:
+1.  After starting Cyberduck, the Bookmark tab will show up. To add a
+    new bookmark, click on the "+" sign on the bottom left of the
+    window. A new window will open.
+2.  In the drop-down menu on top, select "SFTP (SSH File Transfer Protocol)".
+3.  In the "Server" field, type in login.hpc.ugent.be. In the "Username" field, type in
+    your VSC account id (this looks like vsc40000).
+4.  Select the location of your SSH private key in the "SSH Private Key" field.
+5.  Finally, type in a name for the bookmark in the "Nickname" field and
+    close the window by pressing on the red circle in the top left
+    corner of the window.
+To open the connection, click on the "Bookmarks" icon (which
+resembles an open book) and double-click on the bookmark you just
+created.
+Fast file transfer for large datasets
+See the section on rsync in chapter 5 of the Linux intro manual.
+Changing login nodes
+It can be useful to have control over which login node you are on. However, when you connect to the HPC (High-Performance Computing) system, you are directed to a random login node, which might not be the one where you already have an active session. To address this, there is a way to manually switch your active login node.
+For instance, if you want to switch to the login node named gligar07.gastly.os, you can use the following command while you are connected to the gligar08.gastly.os login node on the HPC:
+ssh gligar07.gastly.os
+This is also possible the other way around.

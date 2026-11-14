@@ -1,0 +1,28 @@
+Any error mentioning SEGV or  Segmentation fault/violation has something to do with a memory error.
+If you weren't messing around with memory-unsafe applications or programming, your job probably hit its memory limit.
+When there's no memory amount specified in a job script, your job will get access to a proportional
+share of the total memory on the node: If you request a full node, all memory will be available.
+If you request 8 cores on a cluster where nodes have 2x18 cores, you will get 8/36 = 2/9
+of the total memory on the node.
+Try requesting a bit more memory than your proportional share, and see if that solves the issue.
+See also: Specifying memory requirements.
+My compilation/command fails on login node
+When logging in, you are using a connection to the login nodes. There are somewhat strict
+limitations on what you can do in those sessions: check out the output of ulimit -a.
+Specifically, the memory and the amount of processes you can use may present an issue.
+This is common with MATLAB compilation and Nextflow. An error caused by the login session
+limitations can look like this: Aborted (core dumped).
+It's easy to get around these limitations: start an interactive session on one of the clusters.
+Then, you are acting as a node on that cluster instead of a login node. Notably, the
+debug/interactive cluster will grant such a session immediately, while other clusters might make you wait a bit.
+Example command: ml swap cluster/donphan && qsub -I -l nodes=1:ppn=8
+See also: Running interactive jobs.
+My job isn't using any GPUs
+Only two clusters have GPUs. Check out the infrastructure overview,
+to see which one suits your needs. Make sure that you manually switch to the GPU cluster before you submit
+the job. Inside the job script, you need to explicitly request the GPUs:
+#PBS -l nodes=1:ppn=24:gpus=2
+Some software modules don't have GPU support, even when running on the GPU cluster. For example,
+when running module avail alphafold on the joltik cluster, you will find versions on both
+the foss toolchain and the fossCUDA toolchain. Of these, only the CUDA versions will
+use GPU power. When in doubt, CUDA means GPU support.

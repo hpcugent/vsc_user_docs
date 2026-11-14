@@ -1,0 +1,29 @@
+See also: HPC-UGent GPU clusters.
+My job runs slower than I expected
+There are a few possible causes why a job can perform worse than expected.
+Is your job using all the available cores you've requested? You can test this by increasing and
+decreasing the core amount: If the execution time stays the same, the job was not using all cores.
+Some workloads just don't scale well with more cores. If you expect the job to be very parallelizable
+and you encounter this problem, maybe you missed some settings that enable multicore execution.
+See also: How many cores/nodes should i request?
+Does your job have access to the GPUs you requested?
+See also: My job isn't using any GPUs
+Not all file locations perform the same. In particular, the $VSC_HOME and $VSC_DATA
+directories are, relatively, very slow to access. Your jobs should rather use the
+$VSC_SCRATCH directory, or other fast locations (depending on your needs), described
+in Where to store your data on the HPC.
+As an example how to do this: The job can copy the input to the scratch directory, then execute
+the computations, and lastly copy the output back to the data directory.
+Using the home and data directories is especially a problem when UGent isn't your home institution:
+your files may be stored, for example, in Leuven while you're running a job in Ghent.
+My MPI job fails
+Use mympirun in your job script instead of mpirun. It is a tool that makes sure everything
+gets set up correctly for the HPC infrastructure. You need to load it as a module in your
+job script: module load vsc-mympirun.
+To submit the job, use the qsub command rather than sbatch. Although both will submit a job,
+qsub will correctly interpret the #PBS parameters inside the job script. sbatch might not
+set the job environment up correctly for mympirun/OpenMPI.
+See also: Multi core jobs/Parallel Computing
+and Mympirun.
+mympirun seems to ignore its arguments
+For example, we have a simple script (./hello.sh):

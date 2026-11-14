@@ -1,0 +1,15 @@
+{
+    "main_title": "connecting",
+    "subtitle": "Changing-login-nodes",
+    "source_file": "../../mkdocs/docs/HPC/connecting.md",
+    "title_depth": 2,
+    "directory": "connecting",
+    "parent_title": "connecting",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/linux-tutorial/uploading_files/#copying-faster-with-rsync"
+    },
+    "previous_title": "connecting_paragraph_7",
+    "next_title": "connecting_paragraph_9",
+    "OS": "windows",
+    "reference_link": "https://docs.hpc.ugent.be/Windows/connecting/#changing-login-nodes"
+}

@@ -1,0 +1,12 @@
+{
+    "main_title": "account",
+    "subtitle": "Welcome-e-mail",
+    "source_file": "../../mkdocs/docs/HPC/account.md",
+    "title_depth": 3,
+    "directory": "account",
+    "parent_title": "account",
+    "previous_title": "account_paragraph_4",
+    "next_title": "account_paragraph_6",
+    "OS": "macos",
+    "reference_link": "https://docs.hpc.ugent.be/macOS/account/#welcome-e-mail"
+}

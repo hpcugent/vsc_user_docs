@@ -1,0 +1,37 @@
+Our job script looks like this:
+#!/bin/bash
+module load TensorFlow/2.11.0-foss-2022a
+python tensorflow_mnist.py
+As you can see this job script will run the Python script named tensorflow_mnist.py.
+The jobs you submit are per default executed on cluser/doduo, you can swap to another cluster by issuing the following command.
+module swap cluster/donphan
+ Tip
+    
+    When submitting jobs with limited amount of resources, it is recommended to use the debug/interactive cluster: donphan.
+    To get a list of all clusters and their hardware, see https://www.ugent.be/hpc/en/infrastructure.
+This job script can now be submitted to the cluster's job system for execution, using the qsub (queue submit) command:
+$ qsub run.sh
+123456
+This command returns a job identifier (123456) on the HPC cluster. This is a unique identifier for the job which can be used to monitor and manage your job.
+ Warning "Make sure you understand what the module command does"
+ 
+    Note that the module commands only modify environment variables. For instance, running module swap cluster/donphan will update your shell environment so that qsub submits a job to the donphan cluster, 
+    but our active shell session is still running on the login node.
+    
+    It is important to understand that while module commands affect your session environment, they do not change where the commands your are running are being executed: they will still be run on the login node you are on.
+    
+    When you submit a job script however, the commands in the job script will be run on a workernode of the cluster the job was submitted to (like donphan).
+For detailed information about module commands, read the running batch jobs chapter.
+Wait for job to be executed
+Your job is put into a queue before being executed, so it may take a while before it actually starts.
+(see when will my job start? for scheduling policy).
+You can get an overview of the active jobs using the qstat command:
+$ qstat
+Job ID     Name             User            Time Use S Queue
+---------- ---------------- --------------- -------- - -------
+123456     run.sh           vsc40000        0:00:00  Q donphan
+Eventually, after entering qstat again you should see that your job has started running:
+$ qstat
+Job ID     Name             User            Time Use S Queue
+---------- ---------------- --------------- -------- - -------
+123456     run.sh           vsc40000        0:00:01  R donphan

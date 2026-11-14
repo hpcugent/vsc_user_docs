@@ -1,0 +1,42 @@
+The advantage of htop is that it shows you the cpu utilisation for all
+processors as well as the details per application. A nice exercise is to
+start 4 instances of the "cpu_eat" program in 4 different terminals, and
+inspect the cpu utilisation per processor with monitor and htop.
+If htop reports that your program is taking 75% CPU on a certain processor,
+it means that 75% of the samples taken by top found your process active
+on the CPU. The rest of the time your application was in a wait. (It is
+important to remember that a CPU is a discrete state machine. It really
+can be at only 100%, executing an instruction, or at 0%, waiting for
+something to do. There is no such thing as using 45% of a CPU. The CPU
+percentage is a function of time.) However, it is likely that your
+application's rest periods include waiting to be dispatched on a CPU and
+not on external devices. That part of the wait percentage is then very
+relevant to understanding your overall CPU usage pattern.
+Fine-tuning your executable and/or job script
+It is good practice to perform a number of run time stress tests, and to
+check the CPU utilisation of your nodes. We (and all other users of the
+HPC) would appreciate that you use the maximum of the CPU resources that
+are assigned to you and make sure that there are no CPUs in your node
+who are not utilised without reasons.
+But how can you maximise?
+1.  Configure your software. (e.g., to exactly use the available amount
+    of processors in a node)
+2.  Develop your parallel program in a smart way.
+3.  Demand a specific type of compute node (e.g., Harpertown, Westmere),
+    which have a specific number of cores.
+4.  Correct your request for CPUs in your job script.
+The system load
+On top of the CPU utilisation, it is also important to check the system load.
+The system load is a measure of the amount of computational work that a computer
+system performs.
+The system load is the number of applications running or waiting to run
+on the compute node. In a system with for example four CPUs, a load
+average of 3.61 would indicate that there were, on average, 3.61
+processes ready to run, and each one could be scheduled into a CPU.
+The load averages differ from CPU percentage in two significant ways:
+1.  "load averages" measure the trend of processes waiting to be run
+    (and not only an instantaneous snapshot, as does CPU percentage);
+    and
+2.  "load averages" include all demand for all resources, e.g., CPU
+    and also I/O and network (and not only how much was active at the
+    time of measurement).
