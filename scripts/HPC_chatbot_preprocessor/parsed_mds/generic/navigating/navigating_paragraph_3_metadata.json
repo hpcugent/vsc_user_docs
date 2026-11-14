@@ -1,0 +1,16 @@
+{
+    "main_title": "navigating",
+    "subtitle": "Exercises",
+    "source_file": "../../mkdocs/docs/HPC/linux-tutorial/navigating.md",
+    "title_depth": 2,
+    "directory": "navigating",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/linux-tutorial/manipulating_files_and_directories/#changing-permissions---chmod--sec--chmod",
+        "1": "https://docs.hpc.ugent.be/linux-tutorial/manipulating_files_and_directories"
+    },
+    "parent_title": "",
+    "previous_title": "navigating_paragraph_2",
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/linux-tutorial/navigating/#exercises"
+}

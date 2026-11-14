@@ -1,0 +1,39 @@
+cut
+cut is used to pull fields out of files or pipes streams. It's a
+useful glue when you mix it with grep because grep can find the
+lines where a string occurs and cut can pull out a particular field.
+For example, to pull the first column (-f 1, the first field) from (an
+unquoted) CSV (comma-separated values, so -d ',': delimited by ,)
+file, you can use the following:
+$ cut -f 1 -d ',' mydata.csv
+sed
+sed is the stream editor. It is used to replace text in a file or
+piped stream. In this way, it works like grep, but instead of just
+searching, it can also edit files. This is like "Search and Replace" in
+a text editor. sed has a lot of features, but almost everyone uses the
+extremely basic version of string replacement:
+$ sed 's/oldtext/newtext/g' myfile.txt
+By default, sed will just print the results. If you want to edit the
+file inplace, use -i, but be very careful that the results will be
+what you want before you go around destroying your data!
+awk
+awk is a basic language that builds on sed to do much more advanced
+stream editing. Going in depth is far out of scope of this tutorial, but
+there are two examples that are worth knowing.
+First, cut is very limited in pulling fields apart based on
+whitespace. For example, if you have padded fields then
+cut -f 4 -d ' ' will almost certainly give you a headache as there
+might be an uncertain number of spaces between each field. awk does
+better whitespace splitting. So, pulling out the fourth field in a
+whitespace delimited file is as follows:
+$ awk '{print $4}' mydata.dat
+You can use -F ':' to change the delimiter (F for field separator).
+The next example is used to sum numbers from a field:
+$ awk -F ',' '{sum += $1} END {print sum}' mydata.csv
+Basic Shell Scripting
+The basic premise of a script is to execute automate the execution of
+multiple commands. If you find yourself repeating the same commands over
+and over again, you should consider writing one script to do the same. A
+script is nothing special, it is just a text file like any other. Any
+commands you put in there will be executed from the top to bottom.
+However, there are some rules you need to abide by.

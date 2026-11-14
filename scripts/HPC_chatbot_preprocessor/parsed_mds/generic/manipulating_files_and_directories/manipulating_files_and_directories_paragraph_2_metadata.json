@@ -1,0 +1,15 @@
+{
+    "main_title": "manipulating_files_and_directories",
+    "subtitle": "Changing-permissions-chmod",
+    "source_file": "../../mkdocs/docs/HPC/linux-tutorial/manipulating_files_and_directories.md",
+    "title_depth": 2,
+    "directory": "manipulating_files_and_directories",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/linux-tutorial/navigating/#permissions"
+    },
+    "parent_title": "",
+    "previous_title": "manipulating_files_and_directories_paragraph_1",
+    "next_title": "manipulating_files_and_directories_paragraph_3",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/linux-tutorial/manipulating_files_and_directories/#changing-permissions-chmod"
+}

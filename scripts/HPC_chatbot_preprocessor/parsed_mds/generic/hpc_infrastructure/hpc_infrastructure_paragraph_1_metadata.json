@@ -1,0 +1,19 @@
+{
+    "main_title": "hpc_infrastructure",
+    "subtitle": "Exercises",
+    "source_file": "../../mkdocs/docs/HPC/linux-tutorial/hpc_infrastructure.md",
+    "title_depth": 2,
+    "directory": "hpc_infrastructure",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#where-to-store-your-data-on-the-hpc",
+        "1": "https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#virtual-organisations",
+        "2": "https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#pre-defined-quotas",
+        "3": "https://docs.hpc.ugent.be/running_batch_jobs/#modules",
+        "4": "https://docs.hpc.ugent.be/running_batch_jobs/#defining-and-submitting-your-job"
+    },
+    "parent_title": "",
+    "previous_title": null,
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/linux-tutorial/hpc_infrastructure/#exercises"
+}
