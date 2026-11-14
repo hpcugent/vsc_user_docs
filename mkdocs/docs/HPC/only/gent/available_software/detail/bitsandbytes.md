@@ -21,7 +21,7 @@ module load bitsandbytes/0.49.2-foss-2025a-CUDA-12.8.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|bitsandbytes/0.49.2-foss-2025a-CUDA-12.8.0|-|-|x|-|-|-|-|-|
+|bitsandbytes/0.49.2-foss-2025a-CUDA-12.8.0|x|-|x|-|x|x|-|-|
 |bitsandbytes/0.46.1-foss-2024a-CUDA-12.6.0|x|-|x|-|x|x|-|-|
 |bitsandbytes/0.46.1-foss-2024a|x|x|x|x|x|x|x|x|
 |bitsandbytes/0.43.3-foss-2023a-CUDA-12.1.1|x|-|x|-|x|x|-|-|
