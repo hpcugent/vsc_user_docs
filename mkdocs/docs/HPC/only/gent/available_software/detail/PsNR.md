@@ -21,4 +21,4 @@ module load PsNR/2025-05-08-foss-2024a-PsN-5.6.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PsNR/2025-05-08-foss-2024a-PsN-5.6.0|x|x|x|x|x|x|x|-|
+|PsNR/2025-05-08-foss-2024a-PsN-5.6.0|x|x|x|x|x|x|x|x|
