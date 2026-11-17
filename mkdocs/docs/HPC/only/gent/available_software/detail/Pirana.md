@@ -21,4 +21,4 @@ module load Pirana/25.7.1-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Pirana/25.7.1-foss-2024a|x|x|x|x|x|x|x|-|
+|Pirana/25.7.1-foss-2024a|x|x|x|x|x|x|x|x|
