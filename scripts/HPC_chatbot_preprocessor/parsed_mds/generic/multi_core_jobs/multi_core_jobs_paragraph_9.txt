@@ -1,0 +1,57 @@
+#!/bin/bash
+#PBS -N mpihello
+#PBS -l walltime=00:05:00
+  # assume a 40 core job
+#PBS -l nodes=2:ppn=20
+  # make sure we are in the right directory in case writing files
+cd $PBS_O_WORKDIR
+  # load the environment
+module load intel
+mpirun ./mpi_hello
+and compile it:
+$ module load intel
+$ mpiicc -o mpi_hello mpi_hello.c
+mpiicc is a wrapper of the Intel C++ compiler icc to compile MPI
+programs (see the chapter on compilation for details).
+Run the parallel program:
+$ qsub mpi_hello.pbs
+$ ls -l
+total 1024
+-rwxrwxr-x 1 vsc40000 8746 Sep 16 14:19 mpi_hello*
+-rw-r--r-- 1 vsc40000 1626 Sep 16 14:18 mpi_hello.c
+-rw------- 1 vsc40000    0 Sep 16 14:22 mpi_hello.o123456
+-rw------- 1 vsc40000  697 Sep 16 14:22 mpi_hello.o123456
+-rw-r--r-- 1 vsc40000  304 Sep 16 14:22 mpi_hello.pbs
+$ cat mpi_hello.o123456
+0: We have 16 processors
+0: Hello 1! Processor 1 reporting for duty
+0: Hello 2! Processor 2 reporting for duty
+0: Hello 3! Processor 3 reporting for duty
+0: Hello 4! Processor 4 reporting for duty
+0: Hello 5! Processor 5 reporting for duty
+0: Hello 6! Processor 6 reporting for duty
+0: Hello 7! Processor 7 reporting for duty
+0: Hello 8! Processor 8 reporting for duty
+0: Hello 9! Processor 9 reporting for duty
+0: Hello 10! Processor 10 reporting for duty
+0: Hello 11! Processor 11 reporting for duty
+0: Hello 12! Processor 12 reporting for duty
+0: Hello 13! Processor 13 reporting for duty
+0: Hello 14! Processor 14 reporting for duty
+0: Hello 15! Processor 15 reporting for duty
+The runtime environment for the MPI implementation used (often called
+mpirun or mpiexec) spawns multiple copies of the program, with the total
+number of copies determining the number of process ranks in
+MPI_COMM_WORLD, which is an opaque descriptor for communication between
+the set of processes. A single process, multiple data (SPMD = Single
+Program, Multiple Data) programming model is thereby facilitated, but
+not required; many MPI implementations allow multiple, different,
+executables to be started in the same MPI job. Each process has its own
+rank, the total number of processes in the world, and the ability to
+communicate between them either with point-to-point (send/receive)
+communication, or by collective communication among the group. It is
+enough for MPI to provide an SPMD-style program with MPI_COMM_WORLD, its
+own rank, and the size of the world to allow algorithms to decide what
+to do. In more realistic situations, I/O is more carefully managed than
+in this example. MPI does not guarantee how POSIX I/O would actually
+work on a given system, but it commonly does work, at least from rank 0.
