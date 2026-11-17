@@ -1,0 +1,19 @@
+You will need to generate a new key pair, when:
+1.  you don't have a key pair yet
+2.  you forgot the passphrase protecting your private key
+3.  your private key was compromised
+4.  your key pair is too short or not the right type
+For extra security, the private key itself can be encrypted using a
+"passphrase", to prevent anyone from using your private key even when
+they manage to copy it. You have to "unlock" the private key by typing
+the passphrase. Be sure to never give away your private key, it is
+private and should stay private. You should not even copy it to one of
+your other machines, instead, you should create a new public/private key
+pair for each machine.
+ssh-keygen -t rsa -b 4096
+This will ask you for a file name to store the private and public key,
+and a passphrase to protect your private key. It needs to be emphasised
+that you really should choose the passphrase wisely! The system will ask
+you for it every time you want to use the private key that is every time
+you want to access the cluster or transfer your files.
+Without your key pair, you won't be able to apply for a personal VSC account.

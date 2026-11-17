@@ -1,0 +1,12 @@
+{
+    "main_title": "getting_started",
+    "subtitle": "Getting-Connected",
+    "source_file": "../../mkdocs/docs/HPC/getting_started.md",
+    "title_depth": 3,
+    "directory": "getting_started",
+    "parent_title": "getting_started",
+    "previous_title": "getting_started_macos_paragraph_1.1",
+    "next_title": "getting_started_paragraph_2",
+    "OS": "macos",
+    "reference_link": "https://docs.hpc.ugent.be/macOS/getting_started/#getting-connected"
+}

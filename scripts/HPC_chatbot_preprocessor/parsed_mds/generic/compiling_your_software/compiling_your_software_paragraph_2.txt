@@ -1,0 +1,42 @@
+Whilst programming, it would be wise to stick to certain standards
+(e.g., ISO/ANSI/POSIX). This will ease the porting of your code to other
+platforms.
+Porting your code to the RHEL 8.8 (accelgor, doduo, donphan, gallade, joltik, skitty) platform is the responsibility of the end-user.
+Compiling and building on the HPC
+Compiling refers to the process of translating code written in some
+programming language, e.g., Fortran, C, or C++, to machine code.
+Building is similar, but includes gluing together the machine code
+resulting from different source files into an executable (or library).
+The text below guides you through some basic problems typical for small
+software projects. For larger projects it is more appropriate to use
+makefiles or even an advanced build system like CMake.
+All the HPC nodes run the same version of the Operating System, i.e. RHEL 8.8 (accelgor, doduo, donphan, gallade, joltik, skitty). So,
+it is sufficient to compile your program on any compute node. Once you
+have generated an executable with your compiler, this executable should
+be able to run on any other compute-node.
+A typical process looks like:
+1.  Copy your software to the login-node of the HPC
+2.  Start an interactive session on a compute node;
+3.  Compile it;
+4.  Test it locally;
+5.  Generate your job scripts;
+6.  Test it on the HPC
+7.  Run it (in parallel);
+We assume you've copied your software to the HPC. The next step is to request
+your private compute node.
+$ qsub -I
+qsub: waiting for job 123456 to start
+Compiling a sequential program in C
+Go to the examples for chapter 
+Compiling and testing your software on the HPC and load the 
+foss module:
+cd ~/examples/Compiling-and-testing-your-software-on-the-HPC
+module load foss
+We now list the directory and explore the contents of the "hello.c"
+program:
+$ ls -l
+total 512
+-rw-r--r-- 1 vsc40000 214 Sep 16 09:42 hello.c
+-rw-r--r-- 1 vsc40000 130 Sep 16 11:39 hello.pbs*
+-rw-r--r-- 1 vsc40000 359 Sep 16 13:55 mpihello.c
+-rw-r--r-- 1 vsc40000 304 Sep 16 13:55 mpihello.pbs
