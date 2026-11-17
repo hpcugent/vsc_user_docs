@@ -14,12 +14,13 @@ The overview below shows which SNAP-ESA installations are available per HPC-UGen
 To start using SNAP-ESA, load one of these modules using a `module load` command like:
 
 ```shell
-module load SNAP-ESA/12.0.0-Java-17
+module load SNAP-ESA/13.0.0-Java-17
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SNAP-ESA/12.0.0-Java-17|x|x|x|x|x|x|x|
-|SNAP-ESA/10.0.0-Java-11|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|SNAP-ESA/13.0.0-Java-17|x|x|x|x|x|x|x|x|
+|SNAP-ESA/12.0.0-Java-17|x|x|x|x|x|x|x|-|
+|SNAP-ESA/10.0.0-Java-11|x|x|x|x|x|x|x|-|

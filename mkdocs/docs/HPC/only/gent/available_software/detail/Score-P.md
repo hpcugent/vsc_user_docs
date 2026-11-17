@@ -19,7 +19,7 @@ module load Score-P/9.0-gompi-2025a-CUDA-12.8.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Score-P/9.0-gompi-2025a-CUDA-12.8.0|x|-|-|-|-|-|-|
-|Score-P/9.0-gompi-2025a|x|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Score-P/9.0-gompi-2025a-CUDA-12.8.0|x|-|-|-|-|-|-|-|
+|Score-P/9.0-gompi-2025a|x|-|-|-|-|x|x|-|

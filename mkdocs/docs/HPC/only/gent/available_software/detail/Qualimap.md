@@ -19,6 +19,6 @@ module load Qualimap/2.3-foss-2024a-R-4.4.2
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Qualimap/2.3-foss-2024a-R-4.4.2|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Qualimap/2.3-foss-2024a-R-4.4.2|x|x|x|x|x|x|x|x|

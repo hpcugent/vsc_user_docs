@@ -19,7 +19,8 @@ module load mctc-lib/0.3.1-GCC-13.3.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mctc-lib/0.3.1-GCC-13.3.0|x|x|x|x|x|x|x|
-|mctc-lib/0.3.1-GCC-13.2.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|mctc-lib/0.3.1-GCC-13.3.0|x|x|x|x|x|x|x|x|
+|mctc-lib/0.3.1-GCC-13.2.0|x|x|x|x|x|x|x|x|
+|mctc-lib/0.3.1-GCC-12.3.0|x|x|x|x|x|x|x|x|

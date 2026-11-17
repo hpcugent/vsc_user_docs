@@ -14,12 +14,13 @@ The overview below shows which Flax installations are available per HPC-UGent Ti
 To start using Flax, load one of these modules using a `module load` command like:
 
 ```shell
-module load Flax/0.8.4-gfbf-2023a-CUDA-12.1.1
+module load Flax/0.10.2-gfbf-2024a-CUDA-12.6.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Flax/0.8.4-gfbf-2023a-CUDA-12.1.1|x|-|x|-|x|x|-|
-|Flax/0.8.4-gfbf-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Flax/0.10.2-gfbf-2024a-CUDA-12.6.0|x|-|x|-|x|x|-|-|
+|Flax/0.8.4-gfbf-2023a-CUDA-12.1.1|x|-|x|-|x|x|-|-|
+|Flax/0.8.4-gfbf-2023a|x|x|x|x|x|x|x|x|

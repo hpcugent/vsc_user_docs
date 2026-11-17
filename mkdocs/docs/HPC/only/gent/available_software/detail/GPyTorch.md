@@ -19,7 +19,7 @@ module load GPyTorch/1.14.3-foss-2024a-CUDA-12.6.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GPyTorch/1.14.3-foss-2024a-CUDA-12.6.0|x|-|x|-|x|x|-|
-|GPyTorch/1.14.3-foss-2024a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GPyTorch/1.14.3-foss-2024a-CUDA-12.6.0|x|-|x|-|x|x|-|-|
+|GPyTorch/1.14.3-foss-2024a|x|x|x|x|x|x|x|x|

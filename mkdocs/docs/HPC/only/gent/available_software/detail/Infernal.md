@@ -19,7 +19,8 @@ module load Infernal/1.1.5-gompi-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Infernal/1.1.5-gompi-2024a|x|x|x|x|x|x|x|
-|Infernal/1.1.5-foss-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Infernal/1.1.5-gompi-2024a|x|x|x|x|x|x|x|x|
+|Infernal/1.1.5-gompi-2023a|-|-|-|-|-|-|-|x|
+|Infernal/1.1.5-foss-2023a|x|x|x|x|x|x|x|-|
