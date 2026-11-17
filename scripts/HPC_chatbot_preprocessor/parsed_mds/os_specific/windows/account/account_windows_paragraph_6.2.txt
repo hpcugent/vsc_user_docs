@@ -1,0 +1,11 @@
+At this point the agent does not contain any private key. You should
+include the private key(s) generated in the previous section Generating a public/private key pair.
+1.  Click on "Add key"
+2.  Select the private key file generated in Generating a public/private key pair ("id_rsa.ppk" by default).
+3.  Enter the same SSH key password used to generate the key. After this
+    step the new key will be included in Pageant to manage the SSH
+    connections.
+4.  You can see the SSH key(s) available in the key ring just clicking
+    on "View Keys".
+5.  You can change PuTTY setup to use the SSH agent. Open PuTTY and check
+    Connection > SSH > Auth > Allow agent forwarding.
