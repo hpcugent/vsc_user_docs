@@ -1,0 +1,16 @@
+{
+    "main_title": "beyond_the_basics",
+    "subtitle": "Subcommands",
+    "source_file": "../../mkdocs/docs/HPC/linux-tutorial/beyond_the_basics.md",
+    "title_depth": 3,
+    "directory": "beyond_the_basics",
+    "links": {
+        "0": "http://www.tldp.org/LDP/Bash-Beginners-Guide/html/",
+        "1": "http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html"
+    },
+    "parent_title": "",
+    "previous_title": "beyond_the_basics_paragraph_4",
+    "next_title": "beyond_the_basics_paragraph_6",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/linux-tutorial/beyond_the_basics/#subcommands"
+}
