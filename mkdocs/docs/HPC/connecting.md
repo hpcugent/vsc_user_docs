@@ -26,12 +26,10 @@ you need to do or know:
 
 ## Connection restrictions
 
-Since March 20th 2020, restrictions are in place that limit from where
-you can connect to the VSC HPC infrastructure, in response to security
-incidents involving several European HPC centres.
+From 1st December 2026, restrictions are in place that limit from where
+you can connect to the VSC HPC infrastructure.
 
-VSC login nodes are only directly accessible from within university
-networks, and from (most) Belgian commercial internet providers.
+VSC login nodes are only directly accessible from within {{ university }} network.
 
 All other IP domains are blocked by default. If you are connecting from
 an IP address that is not allowed direct access, you have the following
@@ -50,7 +48,7 @@ options to get access to VSC login nodes:
         is closed.
 
 -   Contact your HPC support team (via {{ hpcinfo }}) and ask them to whitelist your
-    IP range (e.g., for industry access, automated processes).
+    IP range (only for industry access, or automated processes).
 
 Trying to establish an SSH connection from an IP address that does not
 adhere to these restrictions will result in an immediate failure to
