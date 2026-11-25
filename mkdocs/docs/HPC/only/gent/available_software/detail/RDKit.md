@@ -22,6 +22,7 @@ module load RDKit/2026.03.4-foss-2026.1
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |RDKit/2026.03.4-foss-2026.1|x|x|x|x|x|x|x|x|
+|RDKit/2026.03.4-foss-2025b|-|x|-|-|-|-|-|-|
 |RDKit/2025.03.4-foss-2025a|x|x|x|x|x|x|x|x|
 |RDKit/2025.03.3-foss-2024a|x|x|x|x|x|x|x|x|
 |RDKit/2024.03.3-foss-2023a|x|x|x|x|x|x|x|x|

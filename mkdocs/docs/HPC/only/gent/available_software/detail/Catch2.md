@@ -22,6 +22,7 @@ module load Catch2/3.14.0-GCCcore-15.2.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Catch2/3.14.0-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|Catch2/3.11.0-GCCcore-14.3.0|-|x|-|-|-|-|-|-|
 |Catch2/3.8.1-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |Catch2/3.8.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |Catch2/2.13.10-GCCcore-15.2.0|x|x|x|x|x|x|x|x|

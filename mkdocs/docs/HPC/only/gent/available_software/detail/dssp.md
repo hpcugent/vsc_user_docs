@@ -14,11 +14,12 @@ The overview below shows which dssp installations are available per HPC-UGent Ti
 To start using dssp, load one of these modules using a `module load` command like:
 
 ```shell
-module load dssp/4.4.10-GCC-13.3.0
+module load dssp/4.4.10-GCC-14.3.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|dssp/4.4.10-GCC-14.3.0|-|x|-|-|-|-|-|-|
 |dssp/4.4.10-GCC-13.3.0|x|x|x|x|x|x|x|x|

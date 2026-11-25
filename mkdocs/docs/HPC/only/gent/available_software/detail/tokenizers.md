@@ -21,7 +21,7 @@ module load tokenizers/0.22.2-GCCcore-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tokenizers/0.22.2-GCCcore-14.2.0|-|x|x|x|x|x|x|x|
+|tokenizers/0.22.2-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |tokenizers/0.22.1-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |tokenizers/0.21.4-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |tokenizers/0.19.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|

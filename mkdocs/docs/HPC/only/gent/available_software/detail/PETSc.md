@@ -22,4 +22,5 @@ module load PETSc/3.23.5-foss-2025a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |PETSc/3.23.5-foss-2025a|x|x|x|x|x|x|x|x|
+|PETSc/3.23.5-foss-2024a|-|x|-|-|-|-|-|-|
 |PETSc/3.20.3-foss-2023a|-|x|-|x|-|x|x|x|
