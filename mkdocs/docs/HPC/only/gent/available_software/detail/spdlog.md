@@ -21,6 +21,6 @@ module load spdlog/1.15.3-GCCcore-14.2.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|spdlog/1.15.3-GCCcore-14.2.0|-|x|x|x|x|x|x|x|
+|spdlog/1.15.3-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |spdlog/1.15.3-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |spdlog/1.11.0-GCCcore-12.3.0|x|x|x|x|x|x|x|-|

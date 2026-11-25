@@ -21,6 +21,6 @@ module load ONNX/1.21.0-gfbf-2025a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ONNX/1.21.0-gfbf-2025a|-|x|x|x|x|x|x|x|
+|ONNX/1.21.0-gfbf-2025a|x|x|x|x|x|x|x|x|
 |ONNX/1.17.0-gfbf-2023b|x|x|x|x|x|x|x|x|
 |ONNX/1.15.0-gfbf-2023a|x|x|x|x|x|x|x|x|

@@ -22,3 +22,4 @@ module load maeparser/1.3.3-gompi-2026.1
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |maeparser/1.3.3-gompi-2026.1|x|x|x|x|x|x|x|x|
+|maeparser/1.3.3-gompi-2025b|-|x|-|-|-|-|-|-|

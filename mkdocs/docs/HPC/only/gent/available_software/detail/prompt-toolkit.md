@@ -22,4 +22,5 @@ module load prompt-toolkit/3.0.52-GCCcore-15.2.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |prompt-toolkit/3.0.52-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|prompt-toolkit/3.0.52-GCCcore-14.2.0|x|x|x|-|x|x|x|x|
 |prompt-toolkit/3.0.36-GCCcore-12.3.0|-|-|-|-|-|-|-|x|

@@ -23,5 +23,5 @@ module load nanobind/2.13.0-GCCcore-15.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |nanobind/2.13.0-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
 |nanobind/2.9.2-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
-|nanobind/2.9.2-GCCcore-14.2.0|-|x|x|x|x|x|x|x|
+|nanobind/2.9.2-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |nanobind/2.5.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

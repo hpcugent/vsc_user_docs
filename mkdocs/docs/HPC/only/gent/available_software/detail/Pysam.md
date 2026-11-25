@@ -14,13 +14,14 @@ The overview below shows which Pysam installations are available per HPC-UGent T
 To start using Pysam, load one of these modules using a `module load` command like:
 
 ```shell
-module load Pysam/0.22.1-GCC-13.3.0
+module load Pysam/0.23.3-GCC-14.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Pysam/0.23.3-GCC-14.2.0|x|x|x|-|x|x|x|x|
 |Pysam/0.22.1-GCC-13.3.0|x|x|x|x|x|x|x|x|
 |Pysam/0.22.0-GCC-13.2.0|x|x|x|x|x|x|x|x|
 |Pysam/0.22.0-GCC-12.3.0|x|x|x|x|x|x|x|x|
