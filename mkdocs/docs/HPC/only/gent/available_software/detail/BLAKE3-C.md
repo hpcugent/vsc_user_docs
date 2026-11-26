@@ -21,5 +21,5 @@ module load BLAKE3-C/1.8.5-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|BLAKE3-C/1.8.5-GCCcore-14.3.0|-|x|-|-|-|-|-|-|
+|BLAKE3-C/1.8.5-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |BLAKE3-C/1.6.1-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

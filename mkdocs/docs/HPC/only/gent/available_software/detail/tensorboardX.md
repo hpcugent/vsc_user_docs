@@ -21,7 +21,7 @@ module load tensorboardX/2.6.5-foss-2025b
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tensorboardX/2.6.5-foss-2025b|x|x|x|-|x|x|x|x|
+|tensorboardX/2.6.5-foss-2025b|x|x|x|x|x|x|x|x|
 |tensorboardX/2.6.4-foss-2025a|x|x|x|x|x|x|x|x|
 |tensorboardX/2.6.4-foss-2024a|x|x|x|x|x|x|x|x|
 |tensorboardX/2.6.2.2-foss-2023b|x|x|x|x|x|x|x|x|

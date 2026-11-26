@@ -21,6 +21,6 @@ module load libyuv/20251210-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libyuv/20251210-GCCcore-14.3.0|-|x|-|-|-|-|-|-|
+|libyuv/20251210-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |libyuv/20250227-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |libyuv/20241125-GCCcore-13.2.0|x|x|x|x|x|x|x|x|

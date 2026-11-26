@@ -22,5 +22,5 @@ module load SuperLU_DIST/9.1.0-foss-2025a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |SuperLU_DIST/9.1.0-foss-2025a|x|x|x|x|x|x|x|x|
-|SuperLU_DIST/9.1.0-foss-2024a|-|x|-|-|-|-|-|-|
+|SuperLU_DIST/9.1.0-foss-2024a|x|x|x|x|x|x|x|x|
 |SuperLU_DIST/8.1.2-foss-2023a|-|x|-|x|-|x|x|x|

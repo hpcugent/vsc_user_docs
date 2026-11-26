@@ -21,5 +21,5 @@ module load dssp/4.4.10-GCC-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|dssp/4.4.10-GCC-14.3.0|-|x|-|-|-|-|-|-|
+|dssp/4.4.10-GCC-14.3.0|x|x|x|x|x|x|x|x|
 |dssp/4.4.10-GCC-13.3.0|x|x|x|x|x|x|x|x|

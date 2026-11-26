@@ -21,4 +21,4 @@ module load FreeFEM/4.14-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FreeFEM/4.14-foss-2024a|-|x|-|-|-|-|-|-|
+|FreeFEM/4.14-foss-2024a|x|x|x|x|x|x|x|x|

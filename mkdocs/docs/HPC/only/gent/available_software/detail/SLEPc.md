@@ -22,4 +22,4 @@ module load SLEPc/3.23.3-foss-2025a
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |SLEPc/3.23.3-foss-2025a|x|x|x|x|x|x|x|x|
-|SLEPc/3.23.2-foss-2024a|-|x|-|-|-|-|-|-|
+|SLEPc/3.23.2-foss-2024a|x|x|x|x|x|x|x|x|

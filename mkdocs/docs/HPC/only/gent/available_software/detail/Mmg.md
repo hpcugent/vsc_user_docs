@@ -21,4 +21,4 @@ module load Mmg/5.8.0-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Mmg/5.8.0-foss-2024a|-|x|-|-|-|-|-|-|
+|Mmg/5.8.0-foss-2024a|x|x|x|x|x|x|x|x|

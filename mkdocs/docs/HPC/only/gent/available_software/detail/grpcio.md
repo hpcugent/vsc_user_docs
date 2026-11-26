@@ -21,7 +21,7 @@ module load grpcio/1.81.0-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|grpcio/1.81.0-GCCcore-14.3.0|x|x|x|-|x|x|x|x|
+|grpcio/1.81.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |grpcio/1.76.0-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |grpcio/1.70.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |grpcio/1.67.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|

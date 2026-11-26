@@ -21,7 +21,7 @@ module load libavif/1.3.0-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libavif/1.3.0-GCCcore-14.3.0|-|x|-|-|-|-|-|-|
+|libavif/1.3.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |libavif/1.2.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |libavif/1.1.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |libavif/1.0.4-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

@@ -21,5 +21,5 @@ module load libcifpp/7.0.8-GCC-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libcifpp/7.0.8-GCC-14.3.0|-|x|-|-|-|-|-|-|
+|libcifpp/7.0.8-GCC-14.3.0|x|x|x|x|x|x|x|x|
 |libcifpp/7.0.8-GCC-13.3.0|x|x|x|x|x|x|x|x|
