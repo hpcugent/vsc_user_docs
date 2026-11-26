@@ -22,4 +22,4 @@ module load CoordgenLibs/3.0.2-gompi-2026.1
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |CoordgenLibs/3.0.2-gompi-2026.1|x|x|x|x|x|x|x|x|
-|CoordgenLibs/3.0.2-gompi-2025b|-|x|-|-|-|-|-|-|
+|CoordgenLibs/3.0.2-gompi-2025b|x|x|x|x|x|x|x|x|

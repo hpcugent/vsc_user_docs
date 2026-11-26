@@ -21,5 +21,5 @@ module load CTranslate2/4.8.1-foss-2025a-CUDA-12.8.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CTranslate2/4.8.1-foss-2025a-CUDA-12.8.0|-|-|x|-|-|-|-|-|
+|CTranslate2/4.8.1-foss-2025a-CUDA-12.8.0|x|-|x|-|x|x|-|-|
 |CTranslate2/4.5.0-foss-2023a-CUDA-12.6.0|x|-|x|-|x|x|-|-|

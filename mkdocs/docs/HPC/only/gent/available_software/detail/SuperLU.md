@@ -21,4 +21,4 @@ module load SuperLU/6.0.1-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SuperLU/6.0.1-foss-2024a|-|x|-|-|-|-|-|-|
+|SuperLU/6.0.1-foss-2024a|x|x|x|x|x|x|x|x|

@@ -22,6 +22,6 @@ module load c-ares/1.34.6-GCCcore-15.2.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |c-ares/1.34.6-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
-|c-ares/1.34.5-GCCcore-14.3.0|-|x|-|-|-|-|-|-|
+|c-ares/1.34.5-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |c-ares/1.34.5-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |c-ares/1.19.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

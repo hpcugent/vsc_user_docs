@@ -21,7 +21,7 @@ module load tensorboard/2.20.0-gfbf-2025b
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tensorboard/2.20.0-gfbf-2025b|x|x|x|-|x|x|x|x|
+|tensorboard/2.20.0-gfbf-2025b|x|x|x|x|x|x|x|x|
 |tensorboard/2.18.0-gfbf-2024a|x|x|x|x|x|x|x|x|
 |tensorboard/2.18.0-gfbf-2023b|x|x|x|x|x|x|x|x|
 |tensorboard/2.15.1-gfbf-2023b|-|-|-|-|-|-|-|x|

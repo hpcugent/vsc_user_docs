@@ -21,4 +21,4 @@ module load ParMmg/1.5.0-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ParMmg/1.5.0-foss-2024a|-|x|-|-|-|-|-|-|
+|ParMmg/1.5.0-foss-2024a|x|x|x|x|x|x|x|x|

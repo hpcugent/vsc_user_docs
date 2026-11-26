@@ -21,5 +21,5 @@ module load zstandard/0.25.0-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|zstandard/0.25.0-GCCcore-14.3.0|-|x|-|-|-|-|-|-|
+|zstandard/0.25.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |zstandard/0.23.0-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

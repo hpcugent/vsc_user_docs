@@ -21,6 +21,6 @@ module load tensorstore/0.1.76-gfbf-2025b
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tensorstore/0.1.76-gfbf-2025b|-|x|-|-|-|-|-|-|
+|tensorstore/0.1.76-gfbf-2025b|x|x|x|x|x|x|x|x|
 |tensorstore/0.1.72-gfbf-2024a|x|x|x|x|x|x|x|x|
 |tensorstore/0.1.65-foss-2023a|x|x|x|x|x|x|x|x|

@@ -21,5 +21,5 @@ module load libmcfp/1.4.2-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libmcfp/1.4.2-GCCcore-14.3.0|-|x|-|-|-|-|-|-|
+|libmcfp/1.4.2-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |libmcfp/1.3.4-GCCcore-13.3.0|x|x|x|x|x|x|x|x|

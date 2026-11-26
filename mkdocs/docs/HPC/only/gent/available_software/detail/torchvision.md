@@ -14,13 +14,14 @@ The overview below shows which torchvision installations are available per HPC-U
 To start using torchvision, load one of these modules using a `module load` command like:
 
 ```shell
-module load torchvision/0.21.0-foss-2024a
+module load torchvision/0.24.1-foss-2025a-CUDA-12.8.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|torchvision/0.24.1-foss-2025a-CUDA-12.8.0|x|-|-|-|x|x|-|-|
 |torchvision/0.21.0-foss-2024a|x|x|x|x|x|x|x|x|
 |torchvision/0.17.0-foss-2023b|x|x|x|x|x|x|x|x|
 |torchvision/0.16.0-foss-2023a-CUDA-12.1.1|x|-|x|-|x|x|-|-|

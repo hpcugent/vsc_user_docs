@@ -22,7 +22,7 @@ module load ruamel.yaml/0.18.14-GCCcore-14.3.0
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ruamel.yaml/0.18.14-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
-|ruamel.yaml/0.18.14-GCCcore-14.2.0|x|x|x|-|x|x|x|x|
+|ruamel.yaml/0.18.14-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |ruamel.yaml/0.18.6-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |ruamel.yaml/0.18.6-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |ruamel.yaml/0.17.32-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

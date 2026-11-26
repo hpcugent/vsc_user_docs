@@ -21,4 +21,4 @@ module load Ipopt/3.14.17-foss-2024a
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Ipopt/3.14.17-foss-2024a|-|x|-|-|-|-|-|-|
+|Ipopt/3.14.17-foss-2024a|x|x|x|x|x|x|x|x|

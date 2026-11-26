@@ -23,5 +23,5 @@ module load ParMETIS/4.0.3-gompi-2026.1
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ParMETIS/4.0.3-gompi-2026.1|x|x|x|x|x|x|x|x|
 |ParMETIS/4.0.3-gompi-2025a|x|x|x|x|x|x|x|x|
-|ParMETIS/4.0.3-gompi-2024a|-|x|-|-|-|-|-|-|
+|ParMETIS/4.0.3-gompi-2024a|x|x|x|x|x|x|x|x|
 |ParMETIS/4.0.3-gompi-2023a|-|x|x|x|x|x|x|x|

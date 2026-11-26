@@ -14,12 +14,13 @@ The overview below shows which Judy installations are available per HPC-UGent Ti
 To start using Judy, load one of these modules using a `module load` command like:
 
 ```shell
-module load Judy/1.0.5-GCCcore-13.3.0
+module load Judy/1.0.5-GCCcore-14.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Judy/1.0.5-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
 |Judy/1.0.5-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
 |Judy/1.0.5-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

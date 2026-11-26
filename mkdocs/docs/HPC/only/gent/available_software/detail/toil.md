@@ -21,4 +21,4 @@ module load toil/9.5.0-foss-2025a-aws
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|toil/9.5.0-foss-2025a-aws|x|x|x|-|x|x|x|x|
+|toil/9.5.0-foss-2025a-aws|x|x|x|x|x|x|x|x|

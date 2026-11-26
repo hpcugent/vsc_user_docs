@@ -21,5 +21,5 @@ module load pybind11_abseil/202402.0-GCCcore-14.3.0
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pybind11_abseil/202402.0-GCCcore-14.3.0|-|x|-|-|-|-|-|-|
+|pybind11_abseil/202402.0-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
 |pybind11_abseil/202402.0-GCC-13.3.0|x|x|x|x|x|x|x|x|

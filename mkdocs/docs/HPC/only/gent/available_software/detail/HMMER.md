@@ -21,7 +21,7 @@ module load HMMER/3.4-gompi-2025b
 
 | |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HMMER/3.4-gompi-2025b|-|x|-|-|-|-|-|-|
+|HMMER/3.4-gompi-2025b|x|x|x|x|x|x|x|x|
 |HMMER/3.4-gompi-2024a|x|x|x|x|x|x|x|x|
 |HMMER/3.4-gompi-2023b|x|x|x|x|x|x|x|x|
 |HMMER/3.4-gompi-2023a|x|x|x|x|x|x|x|x|
