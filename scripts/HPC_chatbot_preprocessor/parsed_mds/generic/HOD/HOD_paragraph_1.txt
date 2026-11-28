@@ -1,0 +1,43 @@
+Hanythingondemand (HOD)
+Hanythingondemand (or HOD for short) is a tool to run a Hadoop (Yarn)
+cluster on a traditional HPC system.
+Documentation
+The official documentation for HOD version 3.0.0 and newer is available
+at https://hod.readthedocs.org/en/latest/. The slides of the 2016 HOD
+training session are available at
+http://users.ugent.be/~kehoste/hod_20161024.pdf.
+Using HOD
+Before using HOD, you first need to load the hod module. We don't
+specify a version here (this is an exception, for most other modules you
+should, see Using explicit version numbers) because newer versions might include important bug fixes.
+module load hod
+Compatibility with login nodes
+The hod modules are constructed such that they can be used on the HPC-UGent infrastructure
+login nodes, regardless of which cluster module is loaded (this is not
+the case for software installed via modules in general, see Running software that is incompatible with host).
+As such, you should experience no problems if you swap to a different
+cluster module before loading the hod module and subsequently running
+|hod|.
+For example, this will work as expected:
+$ module swap cluster/donphan
+$ module load hod
+$ hod
+hanythingondemand - Run services within an HPC cluster
+usage: hod <subcommand> [subcommand options]
+Available subcommands (one of these must be specified!):
+    batch           Submit a job to spawn a cluster on a PBS job controller, run a job script, and tear down the cluster when it's done
+    clean           Remove stale cluster info.
+...
+Note that also modules named hanythingondemand/* are available. These
+should however not be used directly, since they may not be compatible
+with the login nodes (depending on which cluster they were installed
+for).
+Standard HOD configuration
+The hod module will also put a basic configuration in place for HOD,
+by defining a couple of $HOD_* environment variables:
+$ module load hod
+$ env | grep HOD | sort
+HOD_BATCH_HOD_MODULE=hanythingondemand/3.2.2-intel-2016b-Python-2.7.12
+HOD_BATCH_WORKDIR=$VSC_SCRATCH/hod
+HOD_CREATE_HOD_MODULE=hanythingondemand/3.2.2-intel-2016b-Python-2.7.12
+HOD_CREATE_WORKDIR=$VSC_SCRATCH/hod

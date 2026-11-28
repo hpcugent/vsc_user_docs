@@ -1,0 +1,33 @@
+With --db_preset=casp14, it is clearly more demanding:
+* On doduo, with 24 cores (1 node): still running after 48h...
+* On joltik, 1 V100 GPU + 8 cores: 4h 48min
+This highlights the difference between CPU and GPU performance even more.
+Example scenario
+The following example comes from the official Examples section in the Alphafold README.
+The run command is slightly different (see above: Running AlphaFold).
+Do not forget to set up the environment (see above: Setting up the environment).
+Folding a monomer
+Say we have a monomer with the sequence <SEQUENCE>.
+Create a file monomer.fasta with the following content:
+>sequence_name
+<SEQUENCE>
+Then run the following command in the same directory:
+alphafold 
+  --fasta_paths=monomer.fasta \
+  --max_template_date=2021-11-01 \
+  --model_preset=monomer \
+  --output_dir=.
+See AlphaFold output, for information about the outputs.
+ Info
+    
+    For more scenarios see the example section in the official README.
+    
+Example jobscripts
+The following two example job scripts can be used as a starting point for running AlphaFold.
+The main difference between using a GPU or CPU in a job script is what module to load.
+For running AlphaFold on GPU, use an AlphaFold module that mentions CUDA (or cuda),
+for example AlphaFold/2.3.1-foss-2022a-CUDA-11.7.0.
+To run the job scripts you need to create a file named T1050.fasta with the following content:
+>T1050 A7LXT1, Bacteroides Ovatus, 779 residues|
+MASQSYLFKHLEVSDGLSNNSVNTIYKDRDGFMWFGTTTGLNRYDGYTFKIYQHAENEPGSLPDNYITDIVEMPDGRFWINTARGYVLFDKERDYFITDVTGFMKNLESWGVPEQVFVDREGNTWLSVAGEGCYRYKEGGKRLFFSYTEHSLPEYGVTQMAECSDGILLIYNTGLLVCLDRATLAIKWQSDEIKKYIPGGKTIELSLFVDRDNCIWAYSLMGIWAYDCGTKSWRTDLTGIWSSRPDVIIHAVAQDIEGRIWVGKDYDGIDVLEKETGKVTSLVAHDDNGRSLPHNTIYDLYADRDGVMWVGTYKKGVSYYSESIFKFNMYEWGDITCIEQADEDRLWLGTNDHGILLWNRSTGKAEPFWRDAEGQLPNPVVSMLKSKDGKLWVGTFNGGLYCMNGSQVRSYKEGTGNALASNNVWALVEDDKGRIWIASLGGGLQCLEPLSGTFETYTSNNSALLENNVTSLCWVDDNTLFFGTASQGVGTMDMRTREIKKIQGQSDSMKLSNDAVNHVYKDSRGLVWIATREGLNVYDTRRHMFLDLFPVVEAKGNFIAAITEDQERNMWVSTSRKVIRVTVASDGKGSYLFDSRAYNSEDGLQNCDFNQRSIKTLHNGIIAIGGLYGVNIFAPDHIRYNKMLPNVMFTGLSLFDEAVKVGQSYGGRVLIEKELNDVENVEFDYKQNIFSVSFASDNYNLPEKTQYMYKLEGFNNDWLTLPVGVHNVTFTNLAPGKYVLRVKAINSDGYVGIKEATLGIVVNPPFKLAAALQHHHHHH
+source: <https://www.predictioncenter.org/casp14/target.cgi?target=T1050&view=sequence>

@@ -1,0 +1,15 @@
+{
+    "main_title": "account",
+    "subtitle": "Computation-Workflow-on-the-HPC",
+    "source_file": "../../mkdocs/docs/HPC/account.md",
+    "title_depth": 2,
+    "directory": "account",
+    "parent_title": "account",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/account/#generate-a-publicprivate-key-pair"
+    },
+    "previous_title": "account_paragraph_5",
+    "next_title": null,
+    "OS": "windows",
+    "reference_link": "https://docs.hpc.ugent.be/Windows/account/#computation-workflow-on-the-hpc"
+}

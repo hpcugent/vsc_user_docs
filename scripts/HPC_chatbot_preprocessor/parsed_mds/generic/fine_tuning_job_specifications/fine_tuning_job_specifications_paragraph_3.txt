@@ -1,0 +1,49 @@
+$ free -m -t
+                total   used   free  shared  buffers  cached
+Mem:            16049   4772  11277       0      107     161
+-/+ buffers/cache:      4503  11546
+Swap:           16002   4185  11816
+Total:          32052   8957  23094
+Important is to note the total amount of memory available in the machine
+(i.e., 16 GB in this example) and the amount of used and free memory
+(i.e., 4.7 GB is used and another 11.2 GB is free here).
+It is not a good practice to use swap-space for your computational
+applications. A lot of "swapping" can increase the execution time of
+your application tremendously.
+On the UGent clusters, there is no swap space available for jobs, you
+can only use physical memory, even though "free" will show swap.
+Checking the memory consumption
+To monitor the memory consumption of a running application, you can use the "top" or the "htop" command.
+top
+:   provides an ongoing look at processor activity in real time. It
+    displays a listing of the most CPU-intensive tasks on the system,
+    and can provide an interactive interface for manipulating processes.
+    It can sort the tasks by memory usage, CPU usage and run time.
+htop
+:   is similar to top, but shows the CPU-utilisation for all the CPUs in
+    the machine and allows to scroll the list vertically and
+    horizontally to see all processes and their full command lines.
+Setting the memory parameter {: #pbs_mem }
+Once you gathered a good idea of the overall memory consumption of your
+application, you can define it in your job script. It is wise to foresee
+a margin of about 10%.
+The maximum amount of physical memory used by the job per node can be
+specified in a job script as:
+#PBS -l mem=4gb
+or on the command line
+qsub -l mem=4gb
+Specifying processors requirements
+Users are encouraged to fully utilise all the available cores on a
+certain compute node. Once the required numbers of cores and nodes are
+decently specified, it is also good practice to monitor the CPU
+utilisation on these cores and to make sure that all the assigned nodes
+are working at full load.
+Number of processors
+The number of core and nodes that a user shall request fully depends on
+the architecture of the application. Developers design their
+applications with a strategy for parallelization in mind. The
+application can be designed for a certain fixed number or for a
+configurable number of nodes and cores. It is wise to target a specific
+set of compute nodes (e.g., Westmere, Harpertown) for your computing
+work and then to configure your software to nicely fill up all
+processors on these compute nodes.

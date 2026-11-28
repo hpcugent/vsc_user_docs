@@ -1,0 +1,19 @@
+{
+    "main_title": "FAQ",
+    "subtitle": "How-can-I-get-more-storage-space",
+    "source_file": "../../mkdocs/docs/HPC/FAQ.md",
+    "title_depth": 3,
+    "directory": "FAQ",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#virtual-organisations",
+        "1": "https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#your-ugent-home-drive-and-shares",
+        "2": "https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#check-your-quota",
+        "3": "https://docs.hpc.ugent.be/linux-tutorial/beyond_the_basics/#searching-file-contents-grep",
+        "4": "https://docs.hpc.ugent.be/running_jobs_with_input_output_data/#quota"
+    },
+    "parent_title": "",
+    "previous_title": "FAQ_paragraph_6",
+    "next_title": "FAQ_paragraph_8",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/FAQ/#how-can-i-get-more-storage-space"
+}

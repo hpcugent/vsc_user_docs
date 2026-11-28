@@ -1,0 +1,32 @@
+What is AlphaFold?
+AlphaFold is an AI system developed by DeepMind that predicts a protein’s 3D structure from its amino acid sequence. 
+It aims to achieve accuracy competitive with experimental methods.
+See https://www.vscentrum.be/alphafold for more information and there you can also find a getting started video recording if you prefer that. 
+Documentation & extra material
+This chapter focuses specifically on the use of AlphaFold on the HPC-UGent infrastructure.
+It is intented to augment the existing AlphaFold documentation rather than replace it.
+It is therefore recommended to first familiarize yourself with AlphaFold. The following resources can be helpful:
+- AlphaFold website: https://alphafold.com/
+- AlphaFold repository: https://github.com/deepmind/alphafold/tree/main
+- AlphaFold FAQ: https://alphafold.com/faq
+- VSC webpage about AlphaFold: https://www.vscentrum.be/alphafold
+- Introductory course on AlphaFold by VIB: https://elearning.vib.be/courses/alphafold
+- "Getting Started with AlphaFold" presentation by Kenneth Hoste (HPC-UGent)
+    - recording available on YouTube
+    - slides available here (PDF)
+    - see also https://www.vscentrum.be/alphafold
+Using AlphaFold on HPC-UGent infrastructure
+Several different versions of AlphaFold are installed on both the CPU and GPU HPC-UGent Tier-2 clusters, see the output of module avail AlphaFold.
+If you run this command on a GPU cluster, additional CUDA modules will show up:
+$ module avail AlphaFold
+------------ /apps/gent/RHEL8/cascadelake-volta-ib/modules/all -------------
+   AlphaFold/2.0.0-fosscuda-2020b
+   AlphaFold/2.1.1-fosscuda-2020b
+   AlphaFold/2.1.2-foss-2021a-CUDA-11.3.1
+   AlphaFold/2.2.2-foss-2021a-CUDA-11.3.1
+   AlphaFold/2.3.0-foss-2021b-CUDA-11.4.1
+   AlphaFold/2.3.1-foss-2022a-CUDA-11.7.0
+--------------- /apps/gent/RHEL8/cascadelake-ib/modules/all ----------------
+   AlphaFold/2.0.0-foss-2020b    AlphaFold/2.3.1-foss-2022a
+   AlphaFold/2.1.2-foss-2021a    AlphaFold/2.3.4-foss-2022a-ColabFold (D)
+   AlphaFold/2.2.2-foss-2021a

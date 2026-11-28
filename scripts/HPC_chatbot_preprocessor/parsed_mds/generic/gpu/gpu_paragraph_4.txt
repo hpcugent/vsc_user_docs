@@ -1,0 +1,11 @@
+%TODO: even on single node, horovod is faster (5\%) with nccl? (at least for simple benchmark) -->
+AlphaFold
+Please consult module avail AlphaFold for a list of installed
+versions.
+For more information on using AlphaFold, we strongly recommend the
+VIB-UGent course available at
+https://elearning.bits.vib.be/courses/alphafold.
+Getting help
+In case of questions or problems, please contact the HPC-UGent team via hpc@ugent.be, and clearly
+indicate that your question relates to the joltik cluster by adding
+[joltik] in the email subject.

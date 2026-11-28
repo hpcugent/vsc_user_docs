@@ -1,0 +1,21 @@
+Submitting a job
+ Info
+    When having problems see the connection issues section on the troubleshooting page.
+Transfer your files
+Now that you can login, it is time to transfer files from your local computer to your home directory on the HPC-UGent infrastructure.
+Download tensorflow_mnist.py 
+and run.sh example scripts to your computer (from here).
+The HPC-UGent web portal provides a file browser that allows uploading files.
+For more information see the file browser section.
+Upload both files (run.sh and tensorflow-mnist.py) to your home directory and go back to your shell.
+ Info
+    As an alternative, you can use WinSCP (see our section)
+When running ls in your session on the HPC-UGent infrastructure, you should see the two files listed in your home directory (~):
+$ ls ~
+run.sh tensorflow_mnist.py
+When you do not see these files, make sure you uploaded the files to your home directory.
+Submitting a job
+Jobs are submitted and executed using job scripts. In our case run.sh can be used as a (very minimal) job script.
+A job script is a shell script, a text file that specifies the resources, 
+the software that is used (via module load statements), 
+and the steps that should be executed to run the calculation.

@@ -1,0 +1,25 @@
+{
+    "main_title": "getting_started",
+    "subtitle": "Getting-Connected",
+    "source_file": "../../mkdocs/docs/HPC/getting_started.md",
+    "title_depth": 3,
+    "directory": "getting_started",
+    "parent_title": "getting_started",
+    "links": {
+        "0": "https://www.ugent.be/hpc/en/training/introhpcugent-recording",
+        "1": "https://docs.hpc.ugent.be/introduction",
+        "2": "https://docs.hpc.ugent.be/account",
+        "3": "https://docs.hpc.ugent.be/linux-tutorial",
+        "4": "https://www.tensorflow.org/",
+        "5": "https://github.com/hpcugent/vsc_user_docs/tree/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist",
+        "6": "https://docs.hpc.ugent.be/connecting/#first-time-connection-to-the-hpc-infrastructure",
+        "7": "https://docs.hpc.ugent.be/web_portal",
+        "8": "https://docs.hpc.ugent.be/web_portal",
+        "9": "https://docs.hpc.ugent.be/web_portal/#shell-access",
+        "10": "https://docs.hpc.ugent.be/connecting/#first-time-connection-to-the-hpc-infrastructure"
+    },
+    "previous_title": null,
+    "next_title": "getting_started_macos_paragraph_1.2",
+    "OS": "macos",
+    "reference_link": "https://docs.hpc.ugent.be/macOS/getting_started/#getting-connected"
+}
