@@ -1,6 +1,6 @@
-{%- if site == 'Gent' %}
+{% if site == 'Gent' %}
 site_url: https://docs.hpc.ugent.be
-{%- endif %}
+{% endif %}
 site_name: VSC User Documentation - {{ site }}
 docs_dir: os_pick/docs
 
@@ -12,13 +12,13 @@ plugins:
         - Linux
         - macOS
         - Windows
-{%- if site == 'Gent' %}
+{% if site == 'Gent' %}
   - redirects:
       redirect_maps:
           gpu_gent.md: gpu.md
           interactive_gent.md: interactive_debug.md
           crontab_gent.md: crontab.md
-{%- endif %}
+{% endif %}
   - macros:
       include_yaml:
         - extra/constants.yml
