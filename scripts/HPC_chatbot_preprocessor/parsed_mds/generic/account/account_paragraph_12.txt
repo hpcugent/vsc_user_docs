@@ -1,0 +1,14 @@
+Computation Workflow on the HPC
+A typical Computation workflow will be:
+1.  Connect to the HPC
+2.  Transfer your files to the HPC
+3.  Compile your code and test it
+4.  Create a job script
+5.  Submit your job
+6.  Wait while
+    1.  your job gets into the queue
+    2.  your job gets executed
+    3.  your job finishes
+7.  Move your results
+We'll take you through the different tasks one by one in the following
+chapters.

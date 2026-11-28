@@ -1,0 +1,10 @@
+Transfer Files tofrom the HPC
+Using a GUI
+If you prefer a GUI to transfer files back and forth to the HPC, you can
+use your file browser. Open your file browser and press
+++"Ctrl"+"l"++
+This should open up a address bar where you can enter a URL.
+Alternatively, look for the "connect to server" option in your file
+browsers menu.
+Enter: sftp://vsc40000@login.hpc.ugent.be/ and press enter.
+You should now be able to browse files on the HPC in your file browser.

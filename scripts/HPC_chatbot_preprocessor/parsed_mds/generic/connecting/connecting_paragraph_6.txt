@@ -1,0 +1,14 @@
+Congratulations, you're on the HPC infrastructure now!
+To find out where you have landed you can print the current working directory:
+$ pwd
+/user/home/gent/vsc400/vsc40000
+Your new private home directory is "/user/home/gent/vsc400/vsc40000". Here you can create your own
+subdirectory structure, copy and prepare your applications, compile and
+test them and submit your jobs on the HPC.
+$ cd /apps/gent/tutorials
+$ ls
+Intro-HPC/
+This directory currently contains all training material for the Introduction to the HPC. More
+relevant training material to work with the HPC can always be added later in
+this directory.
+You can now explore the content of this directory with the "ls --l" (lists long) and the "cd" (change directory) commands:
