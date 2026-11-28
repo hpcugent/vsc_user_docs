@@ -1,0 +1,12 @@
+{
+    "main_title": "multi_core_jobs",
+    "subtitle": "Parallel-Computing-with-MPI",
+    "source_file": "../../mkdocs/docs/HPC/multi_core_jobs.md",
+    "title_depth": 2,
+    "directory": "multi_core_jobs",
+    "parent_title": "",
+    "previous_title": "multi_core_jobs_paragraph_9",
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/multi_core_jobs/#parallel-computing-with-mpi"
+}

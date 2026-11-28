@@ -1,0 +1,75 @@
+ tip
+    You can request more nodes/cores by adding following line to your run script.
+    #PBS -l nodes=2:ppn=10
+    This queues a job that claims 2 nodes and 10 cores.
+ warning
+    Just requesting more nodes and/or cores does not mean that your job will automatically run faster.
+    You can find more about this here.
+Parallel Computing with threads
+Multi-threading is a widespread programming and execution model that
+allows multiple threads to exist within the context of a single process.
+These threads share the process' resources, but are able to execute
+independently. The threaded programming model provides developers with a
+useful abstraction of concurrent execution. Multi-threading can also be
+applied to a single process to enable parallel execution on a
+multiprocessing system.
+This advantage of a multithreaded program allows it to operate faster on
+computer systems that have multiple CPUs or across a cluster of machines
+--- because the threads of the program naturally lend themselves to
+truly concurrent execution. In such a case, the programmer needs to be
+careful to avoid race conditions, and other non-intuitive behaviours. In
+order for data to be correctly manipulated, threads will often need to
+synchronise in time in order to process the data in the correct order.
+Threads may also require mutually exclusive operations (often
+implemented using semaphores) in order to prevent common data from being
+simultaneously modified, or read while in the process of being modified.
+Careless use of such primitives can lead to deadlocks.
+Threads are a way that a program can spawn concurrent units of
+processing that can then be delegated by the operating system to
+multiple processing cores. Clearly the advantage of a multithreaded
+program (one that uses multiple threads that are assigned to multiple
+processing cores) is that you can achieve big speedups, as all cores of
+your CPU (and all CPUs if you have more than one) are used at the same
+time.
+Here is a simple example program that spawns 5 threads, where each one
+runs a simple function that only prints "Hello from thread".
+Go to the example directory:
+cd ~/examples/Multi-core-jobs-Parallel-Computing
+ note
+    If the example directory is not yet present, copy it to your home directory:
+    cp -r /apps/gent/tutorials/Intro-HPC/examples ~/
+Study the example first:
+/*
+ * VSC        : Flemish Supercomputing Centre
+ * Tutorial   : Introduction to HPC
+ * Description: Showcase of working with threads
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#define NTHREADS 5
+void *myFun(void *x)
+{
+  int tid;
+  tid = *((int *) x);
+  printf("Hello from thread %d!\n", tid);
+  return NULL;
+}
+int main(int argc, char *argv[])
+{
+  pthread_t threads[NTHREADS];
+  int thread_args[NTHREADS];
+  int rc, i;
+  /* spawn the threads */
+  for (i=0; i<NTHREADS; ++i)
+    {
+      thread_args[i] = i;
+      printf("spawning thread %d\n", i);
+      rc = pthread_create(&threads[i], NULL, myFun, (void *) &thread_args[i]);
+    }
+  /* wait for threads to finish */
+  for (i=0; i<NTHREADS; ++i) {
+    rc = pthread_join(threads[i], NULL);
+  }
+  return 1;
+}

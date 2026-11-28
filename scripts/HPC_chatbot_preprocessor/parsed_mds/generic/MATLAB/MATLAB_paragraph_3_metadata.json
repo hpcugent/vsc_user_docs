@@ -1,0 +1,15 @@
+{
+    "main_title": "MATLAB",
+    "subtitle": "MATLAB-job-script",
+    "source_file": "../../mkdocs/docs/HPC/MATLAB.md",
+    "title_depth": 2,
+    "directory": "MATLAB",
+    "links": {
+        "0": "https://docs.hpc.ugent.be/running_batch_jobs/#generic-resource-requirements"
+    },
+    "parent_title": "",
+    "previous_title": "MATLAB_paragraph_2",
+    "next_title": null,
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/MATLAB/#matlab-job-script"
+}
