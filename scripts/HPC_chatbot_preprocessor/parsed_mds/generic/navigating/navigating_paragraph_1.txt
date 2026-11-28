@@ -1,0 +1,46 @@
+Navigating
+This chapter serves as a guide to navigating within a Linux shell,
+giving users essential techniques to traverse directories. A very
+important skill.
+Current directory: "pwd" and "$PWD"
+To print the current directory, use pwd or \$PWD:
+$ cd $HOME 
+$ pwd
+/user/home/gent/vsc400/vsc40000 
+$ echo "The current directory is: $PWD" 
+The current directory is: /user/home/gent/vsc400/vsc40000
+Listing files and directories: "ls"
+A very basic and commonly used command is ls, which can be
+used to list files and directories.
+In its basic usage, it just prints the names of files and directories in
+the current directory. For example: 
+$ ls
+afile.txt some_directory 
+When provided an argument, it can be used to list the contents of a
+directory: 
+$ ls some_directory 
+one.txt two.txt
+A couple of commonly used options include:
+- detailed listing using ls -l:
+    $ ls -l
+        total 4224 
+        -rw-rw-r-- 1 vsc40000 vsc40000 2157404 Apr 12 13:17 afile.txt 
+        drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory
+- To print the size information in human-readable form, use the -h flag:
+    $ ls -lh
+        total 4.1M 
+        -rw-rw-r-- 1 vsc40000 vsc40000 2.1M Apr 12 13:16 afile.txt
+        drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory
+- also listing hidden files using the -a flag:
+    $ ls -lah
+        total 3.9M 
+        drwxrwxr-x 3 vsc40000 vsc40000 512 Apr 12 13:11 .
+        drwx------ 188 vsc40000 vsc40000 128K Apr 12 12:41 .. 
+        -rw-rw-r-- 1 vsc40000 vsc40000 1.8M Apr 12 13:12 afile.txt 
+        -rw-rw-r-- 1 vsc40000 vsc40000 0 Apr 12 13:11 .hidden_file.txt 
+        drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory
+- ordering files by the most recent change using -rt:
+    $ ls -lrth
+        total 4.0M 
+        drwxrwxr-x 2 vsc40000 vsc40000 512 Apr 12 12:51 some_directory 
+        -rw-rw-r-- 1 vsc40000 vsc40000 2.0M Apr 12 13:15 afile.txt

@@ -1,0 +1,37 @@
+The syntax used here is g+x which means group was given write
+permission. To revoke it again, we use g-w. The other roles are u
+for user and o for other.
+You can put multiple changes on the same line:
+chmod o-rwx,g-rxw,u+rx,u-w somefile will take everyone's permission
+away except the user's ability to read or execute the file.
+You can also use the -R flag to affect all the files within a
+directory, but this is dangerous. It's best to refine your search using
+find and then pass the resulting list to chmod since it's not usual
+for all files in a directory structure to have the same permissions.
+Access control lists (ACLs)
+However, this means that all users in mygroup can add or remove files.
+This could be problematic if you only wanted one person to be allowed to
+help you administer the files in the project. We need a new group. To do
+this in the HPC environment, we need to use access control lists (ACLs):
+$ setfacl -m u:otheruser:w Project_GoldenDragon
+$ ls -l Project_GoldenDragon
+drwxr-x---+ 2 vsc40000 mygroup 40 Apr 12 15:00 Project_GoldenDragon
+This will give the user otheruser permissions to write to
+Project_GoldenDragon
+Now there is a + at the end of the line. This means there is an ACL
+attached to the directory. getfacl Project_GoldenDragon will print the
+ACLs for the directory.
+Note: most people don't use ACLs, but it's sometimes the right thing and
+you should be aware it exists.
+See https://linux.die.net/man/1/setfacl for more information.
+Zipping: "gzip"/"gunzip", "zip"/"unzip"
+Files should usually be stored in a compressed file if they're not being
+used frequently. This means they will use less space and thus you get
+more out of your quota. Some types of files (e.g., CSV files with a lot
+of numbers) compress as much as 9:1. The most commonly used compression
+format on Linux is gzip. To compress a file using gzip, we use:
+$ ls -lh myfile
+-rw-r--r--. 1 vsc40000 vsc40000 4.1M Dec 2 11:14 myfile
+$ gzip myfile
+$ ls -lh myfile.gz
+-rw-r--r--. 1 vsc40000 vsc40000 1.1M Dec 2 11:14 myfile.gz
