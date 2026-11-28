@@ -1,0 +1,50 @@
+The HPC currently consists of:
+Two tools perform the Job management and job scheduling:
+1.  TORQUE: a resource manager (based on PBS);
+2.  Moab: job scheduler and management tools.
+What the HPC infrastucture is not
+The HPC infrastructure is not a magic computer that automatically:
+1.  runs your PC-applications much faster for bigger problems;
+2.  develops your applications;
+3.  solves your bugs;
+4.  does your thinking;
+5.  ...
+6.  allows you to play games even faster.
+The HPC does not replace your desktop computer.
+Is the HPC a solution for my computational needs?
+Batch or interactive mode?
+Typically, the strength of a supercomputer comes from its ability to run
+a huge number of programs (i.e., executables) in parallel without any
+user interaction in real time. This is what is called "running in batch
+mode".
+It is also possible to run programs at the HPC, which require user
+interaction. (pushing buttons, entering input data, etc.). Although
+technically possible, the use of the HPC might not always be the best and
+smartest option to run those interactive programs. Each time some user
+interaction is needed, the computer will wait for user input. The
+available computer resources (CPU, storage, network, etc.) might not be
+optimally used in those cases. A more in-depth analysis with the HPC staff
+can unveil whether the HPC is the desired solution to run interactive
+programs. Interactive mode is typically only useful for creating quick
+visualisations of your data without having to copy your data to your
+desktop and back.
+What are cores, processors and nodes?
+In this manual, the terms core, processor and node will be frequently
+used, so it's useful to understand what they are.
+Modern servers, also referred to as *(worker)nodes* in the context of
+HPC, include one or more sockets, each housing a multi-core
+processor (next to memory, disk(s), network cards, ...). A modern
+processor consists of multiple CPUs or cores that are used to
+execute computations.
+Parallel or sequential programs? 
+Parallel programs
+Parallel computing is a form of computation in which many calculations are carried out
+simultaneously. They are based on the principle that large problems can
+often be divided into smaller ones, which are then solved concurrently
+("in parallel").
+Parallel computers can be roughly classified according to the level at
+which the hardware supports parallelism, with multicore computers having
+multiple processing elements within a single machine, while clusters use
+multiple computers to work on the same task. Parallel computing has
+become the dominant computer architecture, mainly in the form of
+multicore processors.

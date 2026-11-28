@@ -1,0 +1,12 @@
+{
+    "main_title": "MATLAB",
+    "subtitle": "Multithreading",
+    "source_file": "../../mkdocs/docs/HPC/MATLAB.md",
+    "title_depth": 2,
+    "directory": "MATLAB",
+    "parent_title": "",
+    "previous_title": "MATLAB_paragraph_1",
+    "next_title": "MATLAB_paragraph_3",
+    "OS": "generic",
+    "reference_link": "https://docs.hpc.ugent.be/MATLAB/#multithreading"
+}
