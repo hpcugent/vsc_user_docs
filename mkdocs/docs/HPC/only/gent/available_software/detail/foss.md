@@ -14,16 +14,17 @@ The overview below shows which foss installations are available per HPC-UGent Ti
 To start using foss, load one of these modules using a `module load` command like:
 
 ```shell
-module load foss/2025b
+module load foss/2026.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|foss/2025b|x|x|x|x|x|x|x|
-|foss/2025a|x|x|x|x|x|x|x|
-|foss/2024a|x|x|x|x|x|x|x|
-|foss/2023b|x|x|x|x|x|x|x|
-|foss/2023a|x|x|x|x|x|x|x|
-|foss/2022a|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|foss/2026.1|x|x|x|x|x|x|x|x|
+|foss/2025b|x|x|x|x|x|x|x|x|
+|foss/2025a|x|x|x|x|x|x|x|x|
+|foss/2024a|x|x|x|x|x|x|x|x|
+|foss/2023b|x|x|x|x|x|x|x|x|
+|foss/2023a|x|x|x|x|x|x|x|x|
+|foss/2022a|-|-|-|-|-|x|x|-|

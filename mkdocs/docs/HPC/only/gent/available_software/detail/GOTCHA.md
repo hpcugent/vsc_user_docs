@@ -19,6 +19,6 @@ module load GOTCHA/1.0.8-GCCcore-14.2.0
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GOTCHA/1.0.8-GCCcore-14.2.0|x|-|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GOTCHA/1.0.8-GCCcore-14.2.0|x|-|x|x|x|x|x|x|

@@ -19,6 +19,6 @@ module load porefoam/2023-12-01-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|porefoam/2023-12-01-foss-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|porefoam/2023-12-01-foss-2023a|x|x|x|x|x|x|x|x|

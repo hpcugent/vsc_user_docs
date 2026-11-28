@@ -14,20 +14,21 @@ The overview below shows which scikit-learn installations are available per HPC-
 To start using scikit-learn, load one of these modules using a `module load` command like:
 
 ```shell
-module load scikit-learn/1.7.1-gfbf-2025b
+module load scikit-learn/1.8.0-gfbf-2026.1
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scikit-learn/1.7.1-gfbf-2025b|x|x|x|x|x|x|x|
-|scikit-learn/1.7.0-gfbf-2025a|x|x|x|x|x|x|x|
-|scikit-learn/1.6.1-gfbf-2024a|x|x|x|x|x|x|x|
-|scikit-learn/1.5.2-gfbf-2024a|x|x|x|x|x|x|x|
-|scikit-learn/1.4.2-gfbf-2023a|-|x|-|x|-|x|x|
-|scikit-learn/1.4.0-gfbf-2023b|x|x|x|x|x|x|x|
-|scikit-learn/1.3.2-gfbf-2023b|-|x|x|x|x|-|-|
-|scikit-learn/1.3.1-gfbf-2023a|x|x|x|x|x|x|x|
-|scikit-learn/1.1.2-foss-2022a|-|-|-|-|-|x|x|
-|scikit-learn/0.20.4-foss-2023a-Python-2.7.18|x|x|x|-|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|scikit-learn/1.8.0-gfbf-2026.1|x|x|x|x|x|x|x|x|
+|scikit-learn/1.7.1-gfbf-2025b|x|x|x|x|x|x|x|x|
+|scikit-learn/1.7.0-gfbf-2025a|x|x|x|x|x|x|x|x|
+|scikit-learn/1.6.1-gfbf-2024a|x|x|x|x|x|x|x|x|
+|scikit-learn/1.5.2-gfbf-2024a|x|x|x|x|x|x|x|x|
+|scikit-learn/1.4.2-gfbf-2023a|-|x|-|x|-|x|x|-|
+|scikit-learn/1.4.0-gfbf-2023b|x|x|x|x|x|x|x|x|
+|scikit-learn/1.3.2-gfbf-2023b|-|x|x|x|x|-|-|x|
+|scikit-learn/1.3.1-gfbf-2023a|x|x|x|x|x|x|x|x|
+|scikit-learn/1.1.2-foss-2022a|-|-|-|-|-|x|x|-|
+|scikit-learn/0.20.4-foss-2023a-Python-2.7.18|x|x|x|-|x|x|x|x|

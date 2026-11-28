@@ -14,15 +14,16 @@ The overview below shows which hatch-jupyter-builder installations are available
 To start using hatch-jupyter-builder, load one of these modules using a `module load` command like:
 
 ```shell
-module load hatch-jupyter-builder/0.9.1-GCCcore-14.3.0
+module load hatch-jupyter-builder/0.9.1-GCCcore-15.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|hatch-jupyter-builder/0.9.1-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|hatch-jupyter-builder/0.9.1-GCCcore-14.2.0|x|x|x|x|x|x|x|
-|hatch-jupyter-builder/0.9.1-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|hatch-jupyter-builder/0.9.1-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|hatch-jupyter-builder/0.9.1-GCCcore-12.3.0|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|hatch-jupyter-builder/0.9.1-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|hatch-jupyter-builder/0.9.1-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|hatch-jupyter-builder/0.9.1-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|hatch-jupyter-builder/0.9.1-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|hatch-jupyter-builder/0.9.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|hatch-jupyter-builder/0.9.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|

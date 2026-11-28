@@ -14,17 +14,18 @@ The overview below shows which numactl installations are available per HPC-UGent
 To start using numactl, load one of these modules using a `module load` command like:
 
 ```shell
-module load numactl/2.0.19-GCCcore-14.3.0
+module load numactl/2.0.19-GCCcore-15.2.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|numactl/2.0.19-GCCcore-14.3.0|x|x|x|x|x|x|x|
-|numactl/2.0.19-GCCcore-14.2.0|x|x|x|x|x|x|x|
-|numactl/2.0.18-GCCcore-13.3.0|x|x|x|x|x|x|x|
-|numactl/2.0.16-GCCcore-13.2.0|x|x|x|x|x|x|x|
-|numactl/2.0.16-GCCcore-12.3.0|x|x|x|x|x|x|x|
-|numactl/2.0.16-GCCcore-12.2.0|-|-|-|-|-|x|x|
-|numactl/2.0.14-GCCcore-11.3.0|-|-|-|-|-|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|numactl/2.0.19-GCCcore-15.2.0|x|x|x|x|x|x|x|x|
+|numactl/2.0.19-GCCcore-14.3.0|x|x|x|x|x|x|x|x|
+|numactl/2.0.19-GCCcore-14.2.0|x|x|x|x|x|x|x|x|
+|numactl/2.0.18-GCCcore-13.3.0|x|x|x|x|x|x|x|x|
+|numactl/2.0.16-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+|numactl/2.0.16-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+|numactl/2.0.16-GCCcore-12.2.0|-|-|-|-|-|x|x|-|
+|numactl/2.0.14-GCCcore-11.3.0|-|-|-|-|-|x|x|-|

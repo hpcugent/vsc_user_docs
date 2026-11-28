@@ -14,11 +14,12 @@ The overview below shows which CTranslate2 installations are available per HPC-U
 To start using CTranslate2, load one of these modules using a `module load` command like:
 
 ```shell
-module load CTranslate2/4.5.0-foss-2023a-CUDA-12.6.0
+module load CTranslate2/4.8.1-foss-2025a-CUDA-12.8.0
 ```
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CTranslate2/4.5.0-foss-2023a-CUDA-12.6.0|x|-|x|-|x|x|-|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CTranslate2/4.8.1-foss-2025a-CUDA-12.8.0|x|-|x|-|x|x|-|-|
+|CTranslate2/4.5.0-foss-2023a-CUDA-12.6.0|x|-|x|-|x|x|-|-|

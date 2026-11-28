@@ -19,7 +19,7 @@ module load netCDF-C++4/4.3.1-gompi-2024a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|netCDF-C++4/4.3.1-gompi-2024a|x|-|x|x|x|x|x|
-|netCDF-C++4/4.3.1-gompi-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|netCDF-C++4/4.3.1-gompi-2024a|x|-|x|x|x|x|x|-|
+|netCDF-C++4/4.3.1-gompi-2023a|x|x|x|x|x|x|x|x|

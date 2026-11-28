@@ -19,6 +19,6 @@ module load scikit-optimize/0.10.2-foss-2023a
 
 *(This data was automatically generated on {{modules_last_updated}})*
 
-| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scikit-optimize/0.10.2-foss-2023a|x|x|x|x|x|x|x|
+| |accelgor|doduo|donphan|gallade|joltik|litleo|shinx|skiddo|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|scikit-optimize/0.10.2-foss-2023a|x|x|x|x|x|x|x|x|
